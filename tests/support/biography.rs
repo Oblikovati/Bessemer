@@ -18,6 +18,9 @@ pub const CASES: &[(&str, &[u8])] = &[
 ];
 
 pub fn projection(records: &[BiographyRecord]) -> String {
+    if records.is_empty() {
+        return "-".to_owned();
+    }
     records
         .iter()
         .map(record_projection)

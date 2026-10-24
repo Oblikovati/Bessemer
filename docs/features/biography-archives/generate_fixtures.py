@@ -51,7 +51,7 @@ def projection(records):
             for group in snapshot['groups']:
                 fields += [group['path'].encode('utf-8').hex(), str(group['drive_type']), str(group['available_disk_bytes'])]
         rows.append(','.join(fields))
-    return '|'.join(rows)
+    return '|'.join(rows) if rows else '-'
 
 
 def generate():

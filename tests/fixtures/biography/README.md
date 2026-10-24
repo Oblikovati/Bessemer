@@ -8,7 +8,7 @@ records. Its paths are invented.
 
 `expected.tsv` records every stored field and its expanded semantic counterpart,
 as decoded by the Python reference reader. Strings are UTF-8 hex to keep the rows
-unambiguous. The generator is
+unambiguous; `-` denotes an empty record collection. The generator is
 `docs/features/biography-archives/generate_fixtures.py`; it requires the reference
 `solidworks` directory on `PYTHONPATH`. Normal Rust tests embed these fixtures.
 Changes require the reason and biography behavior version in the feature notes.
