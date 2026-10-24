@@ -4,6 +4,7 @@
 
 ### Added
 
+- Added typed face tessellation directory, block, and facet reading, construction, editing, and writing, preserving version-dependent fields, raw arrays, exact floating-point bits, and component links. (#16)
 - Added typed Parasolid binary transmit partition and delta reading, construction, field editing, and writing, with explicit base schemas, both byte orders, layout edits, pointer flags, and exact floating-point bits. (#14)
 - Added typed SolidWorks biography archive reading, construction, record editing, and writing, with retained environment observations and explicit repeated-string expansion and abbreviation. (#12)
 - Added typed SolidWorks header archive reading, construction, graph editing, and writing, preserving shared external references, unknown fields, embedded version overrides, and exact bounding-box bits. (#10)

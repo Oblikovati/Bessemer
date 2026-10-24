@@ -1,8 +1,8 @@
 use crate::Result;
-use crate::archive_codec::{ArchiveCursor, ArchiveString};
+use crate::archive_codec::{ArchiveCursor, ArchiveString, read_box, write_box};
 
 use super::fields::{FieldValue, FieldView, WireKind};
-use super::{HeaderBounds, HeaderBox, SharedFileName, StoredDouble, invalid};
+use super::{HeaderBounds, SharedFileName, invalid};
 
 pub(super) fn read_scalar(cursor: &mut ArchiveCursor<'_>, kind: WireKind) -> Result<FieldValue> {
     match kind {
@@ -34,14 +34,6 @@ fn read_integers<const N: usize>(cursor: &mut ArchiveCursor<'_>) -> Result<[i32;
     Ok(result)
 }
 
-fn read_point(cursor: &mut ArchiveCursor<'_>) -> Result<[StoredDouble; 3]> {
-    let mut point = [StoredDouble::from_bits(0); 3];
-    for coordinate in &mut point {
-        *coordinate = StoredDouble::from_bits(cursor.u64()?);
-    }
-    Ok(point)
-}
-
 fn read_bounds(cursor: &mut ArchiveCursor<'_>) -> Result<HeaderBounds> {
     let has_box = cursor.i32()?;
     if has_box == 0 {
@@ -50,12 +42,7 @@ fn read_bounds(cursor: &mut ArchiveCursor<'_>) -> Result<HeaderBounds> {
             bounds: None,
         });
     }
-    let bounds = HeaderBox {
-        centre: read_point(cursor)?,
-        high: read_point(cursor)?,
-        low: read_point(cursor)?,
-        radius: StoredDouble::from_bits(cursor.u64()?),
-    };
+    let bounds = read_box(cursor)?;
     Ok(HeaderBounds {
         has_box,
         bounds: Some(bounds),
@@ -125,11 +112,6 @@ fn write_bounds(bounds: &HeaderBounds, output: &mut Vec<u8>) -> Result<()> {
     let Some(bounds) = &bounds.bounds else {
         return Ok(());
     };
-    for point in [&bounds.centre, &bounds.high, &bounds.low] {
-        for coordinate in point {
-            output.extend_from_slice(&coordinate.bits().to_le_bytes());
-        }
-    }
-    output.extend_from_slice(&bounds.radius.bits().to_le_bytes());
+    write_box(bounds, output);
     Ok(())
 }

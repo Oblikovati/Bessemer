@@ -17,6 +17,9 @@ revision logs, shared external references, and version-dependent stored fields.
 preserving their raw values and offering explicit repeated-string expansion.
 `bessemer::parasolid` reads and writes binary transmit partitions and rollback
 deltas using explicit base schemas, preserving every typed field and raw flag.
+`bessemer::tessellation` reads and writes complete face tessellation directories,
+blocks, and facet records, including older documented layouts and explicit
+full/lightweight context.
 Complete part, assembly, and drawing model archives, geometric interpretation and
 validation, and semantic CAD editing remain to be implemented; this is not yet
 Corliss feature parity.
@@ -45,6 +48,8 @@ The [biography evidence](docs/features/biography-archives/README.md) covers stor
 environment observations and repeated-string reading and writing.
 See [Parasolid transmit evidence](docs/features/parasolid-transmit/README.md) for
 schema inputs, field coverage, complete-corpus reconstruction, and acceptance limits.
+The [face tessellation evidence](docs/features/face-tessellations/README.md) records
+version coverage, directory links, independent vectors, and native corpus checks.
 
 
 This library is named after Sir Henry Bessemer (1813–1898) an English engineer, inventor, and entrepreneur 

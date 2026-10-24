@@ -18,6 +18,7 @@ pub mod header;
 pub mod history;
 pub mod parasolid;
 mod records;
+pub mod tessellation;
 mod writer;
 
 pub use document::{Document, StreamInfo};

@@ -11,6 +11,10 @@ impl<'a> ArchiveCursor<'a> {
         Self { bytes, offset: 0 }
     }
 
+    pub(crate) fn remaining(&self) -> usize {
+        self.bytes.len() - self.offset
+    }
+
     pub(crate) fn take(&mut self, size: usize) -> Result<&'a [u8]> {
         let span = records::region(self.bytes, self.offset, size).map_err(|mut error| {
             error.operation = "decode archive";

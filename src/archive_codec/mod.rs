@@ -1,4 +1,5 @@
 mod cursor;
+mod geometry;
 mod number;
 mod objects;
 mod preserved;
@@ -15,4 +16,7 @@ pub(crate) fn malformed(cause: impl Into<String>) -> BessemerError {
     BessemerError::new("archive codec", "archive", FailureClass::Invalid, cause)
 }
 
-pub use number::StoredDouble;
+pub use number::{StoredDouble, StoredFloat};
+
+pub use geometry::HeaderBox;
+pub(crate) use geometry::{read_box, write_box};
