@@ -4,6 +4,7 @@
 
 ### Added
 
+- Added packed DIB preview reading, construction, palette and pixel editing, and writing, with checked RLE8 and BGRX decoding, retained raw fields, explicit unwritten pixels, and allocation limits. (#18)
 - Added typed face tessellation directory, block, and facet reading, construction, editing, and writing, preserving version-dependent fields, raw arrays, exact floating-point bits, and component links. (#16)
 - Added typed Parasolid binary transmit partition and delta reading, construction, field editing, and writing, with explicit base schemas, both byte orders, layout edits, pointer flags, and exact floating-point bits. (#14)
 - Added typed SolidWorks biography archive reading, construction, record editing, and writing, with retained environment observations and explicit repeated-string expansion and abbreviation. (#12)
