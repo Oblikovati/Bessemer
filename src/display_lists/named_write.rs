@@ -69,40 +69,19 @@ fn write_planes(
     version: DisplayVersion,
     budget: &mut ViewBudget,
 ) -> Result<()> {
-    budget.nested(planes.len(), "named section planes")?;
-    output.count(planes.len(), "named section planes")?;
-    for plane in planes {
-        write_plane(output, plane, version)?;
-    }
-    Ok(())
-}
-
-fn write_plane(
-    output: &mut DisplayOutput,
-    plane: &NamedSectionPlane,
-    version: DisplayVersion,
-) -> Result<()> {
-    validate_plane_presence(plane, version)?;
-    output.point(&plane.root_point)?;
-    output.point(&plane.normal)?;
-    output.double(plane.unknown_double)?;
-    output.i32(plane.unknown_i0)?;
-    if let Some(pair) = plane.unknown_pair {
-        for word in pair {
-            output.i32(word)?;
-        }
-    }
-    if let Some(word) = plane.unknown_word {
-        output.u32(word)?;
-    }
-    Ok(())
-}
-
-fn validate_plane_presence(plane: &NamedSectionPlane, version: DisplayVersion) -> Result<()> {
-    let pair = version.value() > 0x2001;
-    let word = version.value() > 0x2007;
-    require_presence(plane.unknown_pair.is_some(), pair, "named plane pair")?;
-    require_presence(plane.unknown_word.is_some(), word, "named plane word")
+    super::view_plane::write_list(
+        output,
+        planes,
+        version,
+        budget,
+        super::view_plane::PlaneGates {
+            pair_after: 0x2001,
+            word_after: 0x2007,
+            pair_label: "named plane pair",
+            word_label: "named plane word",
+        },
+        "named section planes",
+    )
 }
 
 fn write_selections(

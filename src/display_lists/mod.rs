@@ -36,3 +36,6 @@ pub use annotation_types::{
     AnnotationSectionPlane, AnnotationView, AnnotationViewContents, AnnotationViewId,
 };
 pub use annotation_views::AnnotationViews;
+
+mod view_plane;
+pub use view_plane::ViewSectionPlane;

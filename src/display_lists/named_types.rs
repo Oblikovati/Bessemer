@@ -1,4 +1,4 @@
-use super::{CompactTransform, StoredDouble};
+use super::CompactTransform;
 use crate::archive_codec::ArchiveString;
 
 /// Per-operation limits for decoded view collections and their nested arrays.
@@ -12,22 +12,8 @@ pub struct DisplayViewLimits {
     pub maximum_nested_entries: usize,
 }
 
-/// A stored section plane and its version-gated unknown fields.
-#[derive(Debug, Clone, PartialEq, Eq)]
-pub struct NamedSectionPlane {
-    /// Stored plane root point.
-    pub root_point: [StoredDouble; 3],
-    /// Stored normal, without normalization.
-    pub normal: [StoredDouble; 3],
-    /// Unknown stored double.
-    pub unknown_double: StoredDouble,
-    /// Unknown first integer.
-    pub unknown_i0: i32,
-    /// Unknown integer pair present above version 0x2001.
-    pub unknown_pair: Option<[i32; 2]>,
-    /// Unknown unsigned word present above version 0x2007.
-    pub unknown_word: Option<u32>,
-}
+/// Named-view plane fields; their presence gates are defined by the named-view serializer.
+pub type NamedSectionPlane = super::ViewSectionPlane;
 
 /// Populated section-selection payload, without interpreting the native part flag.
 #[derive(Debug, Clone, PartialEq, Eq)]

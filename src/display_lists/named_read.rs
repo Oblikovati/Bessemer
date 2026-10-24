@@ -1,11 +1,11 @@
 use super::{
     DisplayVersion, DisplayViewLimits, NamedSectionPlane, NamedSectionSelections,
-    NamedSelectionValues, NamedView, StoredDouble, transform_codec,
+    NamedSelectionValues, NamedView, transform_codec,
     view_support::{ViewBudget, require_size},
 };
 use crate::{
     Result,
-    archive_codec::{ArchiveCursor, ArchiveString, read_point},
+    archive_codec::{ArchiveCursor, ArchiveString},
 };
 
 pub(super) fn read(
@@ -113,31 +113,18 @@ fn read_planes(
     version: DisplayVersion,
     budget: &mut ViewBudget,
 ) -> Result<Vec<NamedSectionPlane>> {
-    let count = cursor.nonnegative_count(60, "named section planes")?;
-    budget.nested(count, "named section planes")?;
-    (0..count).map(|_| read_plane(cursor, version)).collect()
-}
-
-fn read_plane(
-    cursor: &mut ArchiveCursor<'_>,
-    version: DisplayVersion,
-) -> Result<NamedSectionPlane> {
-    Ok(NamedSectionPlane {
-        root_point: read_point(cursor)?,
-        normal: read_point(cursor)?,
-        unknown_double: StoredDouble::from_bits(cursor.u64()?),
-        unknown_i0: cursor.i32()?,
-        unknown_pair: if version.value() > 0x2001 {
-            Some([cursor.i32()?, cursor.i32()?])
-        } else {
-            None
+    super::view_plane::read_list(
+        cursor,
+        version,
+        budget,
+        super::view_plane::PlaneGates {
+            pair_after: 0x2001,
+            word_after: 0x2007,
+            pair_label: "named plane pair",
+            word_label: "named plane word",
         },
-        unknown_word: if version.value() > 0x2007 {
-            Some(cursor.u32()?)
-        } else {
-            None
-        },
-    })
+        "named section planes",
+    )
 }
 
 fn read_selections(
