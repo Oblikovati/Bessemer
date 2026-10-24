@@ -28,7 +28,7 @@ pub(super) fn read(
     Ok(contents)
 }
 
-fn read_contents(
+pub(super) fn read_contents(
     cursor: &mut ArchiveCursor<'_>,
     version: DisplayVersion,
     limits: DisplayViewLimits,

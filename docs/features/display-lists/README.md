@@ -175,6 +175,39 @@ cargo build --release --example rebuild_spatial_views
 python -B -X utf8 docs/features/display-lists/verify_spatial_corpus.py target/pinned-1.99.0/release/examples/rebuild_spatial_views.exe
 ```
 
+## First complete part-stream checkpoint
+
+The unmerged `DisplayArchive` now consumes the owned blank part's complete
+6,316-byte display stream at display/file version 19000. Construction from owned
+typed fields forces exact reconstruction. Fields include the shared class/object
+map, environment and splitters, fonts, lights, visual materials and DSPBR, view
+collections, empty body lists, reference planes and origin, units and empty
+configuration tails. Other versions and unresolved populated bodies return typed
+failures. This checkpoint does not establish complete clause 13 support.
+
+The derived [shared-font fixture](shared-font-fixture.json) aliases its second
+font to the first font's map identity. The independent reader confirms shared
+identity; Rust reconstructs all 6,292 bytes exactly. Pointer roles validate both
+new objects and aliases, preventing an unrelated mapped object from replacing a
+font (#31). Ink configuration dimensions remain independent of absent view rows
+(#30). Archive collection limits include entries inside view packets.
+
+Twelve focused tests cover full reconstruction, shared aliases and invalid roles,
+whole-document edit/reopen/revert, input and snapshot isolation, every byte
+truncation, trailing bytes, schema/path/order mismatches, explicit contexts,
+identity boundaries, all resource limits and concurrent deterministic writes.
+The [independent scalar oracle](blank-scalar-oracle.json) checks 535 font, light
+and material fields against `../inventor-interface`; the existing view oracles
+cover their respective packets. Whole-stream independent field coverage and the
+remaining corpus are still required. Native application and geometry acceptance
+have not been established.
+
+```text
+python -B -X utf8 docs/features/display-lists/generate_alias_fixture.py
+python -B -X utf8 docs/features/display-lists/generate_blank_scalars.py
+cargo test --test display_archive
+```
+
 ## Remaining implementation and integration gate
 
 - Connect the parsed display-list version to explicit part/assembly context,
@@ -182,10 +215,9 @@ python -B -X utf8 docs/features/display-lists/verify_spatial_corpus.py target/pi
 - Reuse existing MFC strings, exact numeric values, class/object maps and face
   tessellation records. Preserve cycles, aliases and object-tag spelling; do not
   reset inherited state between nested serializers.
-- Add typed user environments, splitters, line fonts, buckets and display items,
-  then complete top-level framing. Named, annotation and 3D bodies are verified
-  above; they still need connection to the complete shared archive.
-- Add lights, visual properties, scenes, part/assembly shaded data, decals,
+- Extend environments, splitters, fonts, lights and visual properties beyond
+  the initial version-19000 part layout. Add buckets and display items.
+- Add scenes, populated part/assembly shaded data, decals,
   textured planes, units, ink views and configuration tails. Unknown-meaning
   fields remain explicit raw typed values; unresolved bodies are unsupported.
 - Complete the immutable archive graph, validated owned construction/edits,

@@ -25,7 +25,7 @@ pub(super) fn read(
     Ok(views)
 }
 
-fn read_views(
+pub(super) fn read_views(
     cursor: &mut ArchiveCursor<'_>,
     version: DisplayVersion,
     budget: &mut ViewBudget,

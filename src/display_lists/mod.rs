@@ -47,3 +47,25 @@ mod spatial_write;
 mod view_bitmap;
 pub use spatial_types::{SpatialView, ViewBitmap};
 pub use spatial_views::SpatialViews;
+
+mod archive;
+mod archive_decode;
+mod archive_encode;
+mod archive_error;
+mod archive_objects;
+mod archive_scalars;
+mod archive_types;
+mod archive_view_budget;
+mod modern_dspbr;
+mod modern_lights;
+mod modern_material;
+mod modern_part_tess;
+mod modern_root;
+mod modern_ui;
+pub use archive::DisplayArchive;
+pub use archive_types::{
+    DisplayArchiveContents, DisplayArchiveContext, DisplayArchiveLimits, DisplayClassDescriptor,
+    DisplayDocumentKind, DisplayField, DisplayFieldValue, DisplayObjectTag,
+};
+
+pub use archive_types::{DisplayObjectId, DisplayObjectPointer};
