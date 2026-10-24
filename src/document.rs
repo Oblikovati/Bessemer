@@ -142,15 +142,27 @@ impl Document {
     /// # Ok::<(), Box<dyn std::error::Error>>(())
     /// ```
     pub fn replace_stream(&mut self, name: &str, replacement: Vec<u8>) -> Result<()> {
-        self.entry(name)?;
+        let entry = self.entry(name)?;
         u32::try_from(replacement.len()).map_err(|_| {
             invalid(format!(
                 "replacement length {}; expected <= u32::MAX",
                 replacement.len()
             ))
         })?;
+        if self.matches_original(entry, &replacement) {
+            self.replacements.remove(name);
+            return Ok(());
+        }
         self.replacements.insert(name.to_owned(), replacement);
         Ok(())
+    }
+
+    fn matches_original(&self, entry: &Entry, replacement: &[u8]) -> bool {
+        if entry.expanded as usize != replacement.len() {
+            return false;
+        }
+        compression::expand(&self.original[entry.stored.clone()], entry)
+            .is_ok_and(|original| original == replacement)
     }
 
     /// Serializes the container, preserving the whole original file when no edits exist.

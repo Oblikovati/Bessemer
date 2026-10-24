@@ -150,3 +150,17 @@ fn concurrent_reads_and_edits_match_serial_results() {
     });
     assert_eq!(source.to_bytes().unwrap(), FIXTURES[0].1);
 }
+
+#[test]
+fn native_equivalent_replacements_preserve_every_file_byte() {
+    for (_, bytes) in FIXTURES {
+        let source = Document::from_bytes(bytes).unwrap();
+        for stream in source.streams() {
+            let mut edited = source.clone();
+            edited
+                .replace_stream(stream.name, source.read_stream(stream.name).unwrap())
+                .unwrap();
+            assert_eq!(edited.to_bytes().unwrap(), bytes, "{}", stream.name);
+        }
+    }
+}
