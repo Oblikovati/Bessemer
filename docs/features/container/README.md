@@ -62,7 +62,9 @@ supports the filler-free layout; it is not a live test of this implementation.
 1. Decode previews and XML metadata using the reference reader and owned expected
    outputs. [Compressed-block carriers](../compressed-blocks/README.md) are implemented.
 2. Decode archive primitives and typed model records for parts, assemblies, and
-   drawings. Keep unknown payload bytes available for lossless edits.
+   drawings. [Standalone version histories](../version-history/README.md) and their
+   CString/object-map primitives are implemented. Keep unknown payload bytes
+   available for lossless edits.
 3. Decode Parasolid partitions, bodies, topology, geometry, and rollback deltas.
 4. Add typed edit operations with history and validation contracts. Confirm each
    operation against independent expected results and native application opens.

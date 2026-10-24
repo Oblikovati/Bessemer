@@ -1,17 +1,23 @@
 use std::process::{Command, ExitCode};
 
+mod sanitizer;
+
 fn main() -> ExitCode {
     let gate = std::env::args().nth(1).unwrap_or_default();
-    if !matches!(gate.as_str(), "pr" | "full") {
-        eprintln!("gate {gate:?}; expected pr or full");
-        return ExitCode::FAILURE;
-    }
-    match run_gate() {
+    match requested_gate(&gate) {
         Ok(()) => ExitCode::SUCCESS,
         Err(error) => {
             eprintln!("{error}");
             ExitCode::FAILURE
         }
+    }
+}
+
+fn requested_gate(gate: &str) -> Result<(), String> {
+    match gate {
+        "pr" | "full" => run_gate(),
+        "tsan" => sanitizer::run(),
+        _ => Err(format!("gate {gate:?}; expected pr, full or tsan")),
     }
 }
 
@@ -48,4 +54,14 @@ fn run_cargo(arguments: &[&str]) -> Result<(), String> {
     Err(format!(
         "cargo {arguments:?}: {status}; expected successful exit"
     ))
+}
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn rejects_unknown_gate_without_running_a_process() {
+        let error = super::requested_gate("unknown").unwrap_err();
+        assert!(error.contains("unknown"));
+        assert!(error.contains("expected pr, full or tsan"));
+    }
 }
