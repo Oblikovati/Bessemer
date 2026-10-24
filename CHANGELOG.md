@@ -4,7 +4,7 @@
 
 ### Added
 
-- Added lossless display-list transform, named-view, annotation-view and 3D-view codecs, plus an initial complete version-19000 blank-part stream checkpoint with shared object identities, validated typed edits and writing. Complete display-list corpus support remained under development. (#28)
+- Added lossless display-list transform, named-view, annotation-view and 3D-view codecs, plus complete version-19000 blank-part and blank-assembly stream checkpoints with shared object identities, validated typed edits and writing. Complete display-list corpus support remained under development. (#28)
 
 - Added embedded SolidWorks Inspection project XML reading, construction and writing, with preserved unknown content and a complete drawing Job Number edit example. (#26)
 

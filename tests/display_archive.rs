@@ -1,21 +1,9 @@
 //! First complete native stream checkpoint; unsupported corpus layouts remain explicit.
 use bessemer::{Document, display_lists::*};
+#[path = "support/display_archive.rs"]
+mod archive_support;
+use archive_support::{LIMITS, check_scalar_table, context, decode_document, set_integer};
 const PART: &[u8] = include_bytes!("fixtures/blank-part.SLDPRT");
-const LIMITS: DisplayArchiveLimits = DisplayArchiveLimits {
-    maximum_bytes: 64 * 1024 * 1024,
-    maximum_fields: 100000,
-    maximum_objects: 10000,
-    maximum_depth: 128,
-    maximum_entries: 100000,
-};
-fn context() -> DisplayArchiveContext {
-    DisplayArchiveContext {
-        version: DisplayVersion::new(19000),
-        kind: DisplayDocumentKind::Part,
-        file_version: 19000,
-    }
-}
-
 #[test]
 fn owned_native_part_decodes_every_byte_and_forces_exact_reconstruction() {
     let document = Document::from_bytes(PART).unwrap();
@@ -83,19 +71,7 @@ fn aliased_object_roles_cannot_silently_substitute_an_unrelated_runtime_class() 
 }
 
 fn native_archive() -> DisplayArchive {
-    let document = Document::from_bytes(PART).unwrap();
-    let bytes = document.read_stream("Contents/DisplayLists").unwrap();
-    DisplayArchive::from_bytes(&bytes, context(), LIMITS).unwrap()
-}
-
-fn set_integer(contents: &mut DisplayArchiveContents, path: &str, value: i32) {
-    let field = contents
-        .fields
-        .iter_mut()
-        .find(|field| field.path.as_ref() == path)
-        .unwrap();
-    assert!(matches!(field.value, DisplayFieldValue::I32(_)));
-    field.value = DisplayFieldValue::I32(value);
+    decode_document(PART, DisplayDocumentKind::Part)
 }
 
 #[test]
@@ -318,28 +294,6 @@ fn nested_view_packets_share_the_archive_collection_budget() {
     );
 }
 
-fn scalar_oracle_value(value: &DisplayFieldValue) -> String {
-    match value {
-        DisplayFieldValue::U8(value) => format!("i:{value}"),
-        DisplayFieldValue::U16(value) => format!("i:{value}"),
-        DisplayFieldValue::I16(value) => format!("i:{value}"),
-        DisplayFieldValue::I32(value) => format!("i:{value}"),
-        DisplayFieldValue::U32(value) => format!("i:{value}"),
-        DisplayFieldValue::F32(value) => format!("f:{:016x}", f64::from(value.value()).to_bits()),
-        DisplayFieldValue::F64(value) => format!("f:{:016x}", value.bits()),
-        DisplayFieldValue::Text(value) => format!(
-            "s:{}",
-            value
-                .text()
-                .as_bytes()
-                .iter()
-                .map(|byte| format!("{byte:02x}"))
-                .collect::<String>()
-        ),
-        other => panic!("{other:?}; expected scalar oracle field"),
-    }
-}
-
 #[test]
 fn typed_fonts_lights_and_materials_match_independent_reference_semantics() {
     let archive = native_archive();
@@ -348,17 +302,9 @@ fn typed_fonts_lights_and_materials_match_independent_reference_semantics() {
         include_str!("fixtures/display-lists/blank-part-lights.txt"),
         include_str!("fixtures/display-lists/blank-part-materials.txt"),
     ];
-    let mut checked = 0;
-    for line in tables.into_iter().flat_map(str::lines) {
-        let (path, expected) = line.split_once('=').unwrap();
-        let field = archive
-            .contents()
-            .fields
-            .iter()
-            .find(|field| field.path.as_ref() == path)
-            .unwrap_or_else(|| panic!("missing {path}"));
-        assert_eq!(scalar_oracle_value(&field.value), expected, "{path}");
-        checked += 1;
-    }
+    let checked: usize = tables
+        .into_iter()
+        .map(|table| check_scalar_table(&archive, table))
+        .sum();
     assert_eq!(checked, 535);
 }

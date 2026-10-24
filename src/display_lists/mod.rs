@@ -56,6 +56,8 @@ mod archive_objects;
 mod archive_scalars;
 mod archive_types;
 mod archive_view_budget;
+mod modern_assembly;
+mod modern_component;
 mod modern_dspbr;
 mod modern_lights;
 mod modern_material;

@@ -208,6 +208,43 @@ python -B -X utf8 docs/features/display-lists/generate_blank_scalars.py
 cargo test --test display_archive
 ```
 
+## Complete blank-assembly checkpoint and corpus audit
+
+The same archive reader and writer now consume and reconstruct the owned blank
+assembly's complete 5,446-byte stream. Its component records retain explicit
+identity, transform and bounds, display state, references, dependency lists,
+reference geometry, tessellation numbers, owner/child pointers, hidden-body atoms
+and envelope options. Populated shaded bodies, decals and cross-stream face
+contexts remain implementation work.
+
+Six assembly tests cover exact forced reconstruction, 40 independent component
+and envelope fields, setting edit/reopen/revert with other streams preserved,
+every truncation, impossible counts and a shared-map owner cycle. The
+[cycle fixture](owner-cycle-fixture.json) changes only the original null owner
+pointer to a reference to the object currently being decoded. The independent
+reader verifies identity; this tests archive graph handling, not valid model
+ownership or native application acceptance. Two independently built
+[component fixtures](component-vectors.json) exercise both display-mode layouts,
+populated dependency/tessellation-number/hidden-body arrays, extended collection
+counts, UTF-16 strings, raw flags and transform bits. They match 112 independent
+scalar values and complete byte reconstruction.
+
+The [whole-stream audit](archive-audit.json) records missing work explicitly.
+On Windows x64, Rust 1.99.0 MSVC, 2026-10-25, it reconstructed 2 of the 1,086
+reference-complete native streams. Two separate processes returned identical
+bytes and failures. The corpus manifest matches the component oracles above;
+the next major gaps are populated body tessellation and display items. An audit
+failure is incomplete support, not a passing corpus case. The audit does not
+establish complete-field semantics, geometric validity or application acceptance.
+
+```text
+python -B -X utf8 docs/features/display-lists/generate_owner_cycle.py
+python -B -X utf8 docs/features/display-lists/generate_component_vectors.py
+cargo test --test display_assembly
+cargo build --release --example rebuild_display_archives
+python -B -X utf8 docs/features/display-lists/audit_archive_corpus.py target/pinned-1.99.0/release/examples/rebuild_display_archives.exe
+```
+
 ## Remaining implementation and integration gate
 
 - Connect the parsed display-list version to explicit part/assembly context,

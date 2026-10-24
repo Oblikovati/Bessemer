@@ -4,7 +4,7 @@ use super::{
 };
 use crate::{Result, archive_codec::PreservedContents};
 
-/// Immutable complete display-list stream; initial unmerged checkpoint supports modern part layouts.
+/// Immutable complete display-list stream; the initial checkpoint supports modern part/assembly layouts.
 #[derive(Debug, Clone)]
 pub struct DisplayArchive {
     context: DisplayArchiveContext,

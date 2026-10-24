@@ -77,8 +77,12 @@ fn view(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 fn shaded(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     old_lights(archive)?;
     archive.object("visual_properties", &["moVisualProperties_c"])?;
-    archive.scope("tessellation", super::modern_part_tess::read)?;
+    archive.scope("tessellation", tessellation)?;
     display_scene(archive)?;
+    if archive.context.kind == DisplayDocumentKind::Assembly {
+        archive.u32("envelope_system_options.unknown_color")?;
+        archive.i32("envelope_system_options.unknown_setting")?;
+    }
     ink_dimensions(archive)?;
     let count = archive.i32("configurations.config_count")?;
     if count > 0 {
@@ -90,15 +94,22 @@ fn shaded(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn require_context(context: DisplayArchiveContext) -> Result<()> {
-    if context.version.value() != 19000
-        || context.file_version != 19000
-        || context.kind != DisplayDocumentKind::Part
-    {
+    if context.version.value() != 19000 || context.file_version != 19000 {
         return Err(unsupported(format!(
-            "display context {context:?}; initial full-stream checkpoint requires version/file 19000 and part kind"
+            "display context {context:?}; initial full-stream checkpoint requires display/file version 19000"
         )));
     }
     Ok(())
+}
+
+fn tessellation(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    match archive.context.kind {
+        DisplayDocumentKind::Part => super::modern_part_tess::read(archive),
+        DisplayDocumentKind::Assembly => archive.object_array(
+            "components",
+            &["uoTempAssemblySHDData_c", "uoTempSubAssemblySHDData_c"],
+        ),
+    }
 }
 
 fn root_environment(archive: &mut DisplayDecoder<'_>) -> Result<()> {

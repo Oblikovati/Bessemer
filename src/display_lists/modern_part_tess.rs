@@ -56,7 +56,7 @@ fn empty_decals(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     Ok(())
 }
 
-fn reference_geometry(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+pub(super) fn reference_geometry(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     let high = archive.u32("count_high")?;
     let low = archive.u32("count_low")?;
     let count = (u64::from(high) << 32) | u64::from(low);

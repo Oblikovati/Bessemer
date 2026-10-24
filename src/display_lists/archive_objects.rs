@@ -120,6 +120,11 @@ fn dispatch(archive: &mut DisplayDecoder<'_>, class: &str) -> Result<()> {
         "moAmbientLight_c" | "moLightFeature_c" => super::modern_lights::ambient(archive),
         "moDirectionLight_c" => super::modern_lights::directional(archive),
         "moVisualProperties_c" => super::modern_material::visual(archive),
+        "uoTempAssemblySHDData_c" | "uoTempSubAssemblySHDData_c" => {
+            super::modern_assembly::shaded_component(archive)
+        }
+        "moViewerComponentData_c" => super::modern_component::read(archive),
+        "uoTempPartTessData_c" => super::modern_part_tess::read(archive),
         other => Err(unsupported(format!(
             "runtime class {other:?}; expected an implemented display-list object body"
         ))),
