@@ -16,6 +16,7 @@ mod document;
 mod error;
 pub mod header;
 pub mod history;
+pub mod parasolid;
 mod records;
 mod writer;
 

@@ -62,6 +62,8 @@ chunk. Two separate Rust processes produced identical bytes. Temporary outputs
 were discarded. The local PR gate passed. No new dependency was added.
 
 Native SolidWorks application acceptance, full installed-corpus coverage,
-ThreadSanitizer, and performance benchmarks remain unexecuted for this layer.
+and performance benchmarks remain unexecuted for this layer. The shared full gate
+now runs its tests under ThreadSanitizer, as recorded by the
+[version-history feature](../version-history/README.md).
 Cross-platform verification is recorded by the feature PR's five CI checks.
 The humanizer skill is unavailable; its prose pass remains for maintainer review.
