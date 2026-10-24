@@ -47,7 +47,7 @@ impl FacetCodec for EdgeVertexPairs {
 
 archive_record! {
     /// Complete `gcEdgeFullInfo_c` record, retaining native ignored and unknown fields.
-    FacetEdgeInfo(context, 20, Element) {
+    FacetEdgeInfo(context, 24, Element) {
         /// Omitted when the preceding edge returned one at version 0x3F0F.
         first: optional i32 => !context.skip_edge_first;
         /// Edge-map tag.
