@@ -1,6 +1,6 @@
 //! Compressed-block carriers from SolidWorks specification clause 9.3.
 
-mod decode;
+pub(crate) mod decode;
 mod encode;
 
 use crate::{BessemerError, FailureClass, Result};

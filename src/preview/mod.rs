@@ -2,10 +2,14 @@
 mod codec;
 mod header;
 mod pixels;
+mod png;
 mod rle;
 mod types;
 
 use crate::{BessemerError, FailureClass, Result, archive_codec::PreservedContents};
+pub use png::{
+    ChunkType, PngChunk, PngColor, PngContents, PngHeader, PngLimits, PngPreview, PngRaster,
+};
 pub use types::{BitmapInfoHeader, DibContents, DibPixels, PaletteEntry};
 
 /// Immutable packed DIB archive; a raster budget is mandatory at untrusted boundaries.

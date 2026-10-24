@@ -4,7 +4,8 @@
 [clause 8.1](specification-8.md). This is DIB behavior version 1, tracked by #18.
 It supports the two installed-corpus formats: eight-bit BI_RLE8 and 32-bit BI_RGB
 BGRX. Other bit depths, compression modes and header types return typed
-unsupported errors. PNG streams are a separate clause 8.2 parity task.
+unsupported errors. [PNG previews](../png-previews/README.md) implement the separate
+clause 8.2 datastream.
 
 The immutable archive retains every BITMAPINFOHEADER field, every RGBQUAD byte,
 the complete declared image bytes, absolute-run alignment bytes, and bytes after
