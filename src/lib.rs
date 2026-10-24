@@ -8,6 +8,7 @@
 //! ```
 
 mod archive;
+pub mod block_stream;
 mod compression;
 mod document;
 mod error;
