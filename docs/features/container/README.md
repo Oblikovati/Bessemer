@@ -19,6 +19,15 @@ directory and omits filler, as permitted by clause 15 [W-06]. It does not create
 documents, add or delete streams, or validate the meaning of a replacement payload.
 The caller must supply consistent stream contents.
 
+An identical replacement retains the stream's original compression. Restoring the
+original payload after an intermediate edit removes that pending edit; if no other
+edits remain, serialization returns the original whole file. This fixes issue #5
+in container behavior version 2. Equality checks are bounded by the supplied
+replacement length, and a corrupt original stream can still be explicitly replaced.
+Migration from behavior version 1 to 2 changes only equivalent-edit handling; no
+on-disk migration is needed. The former recompression behavior is retired by this
+recorded migration, and the owned fixture bytes remain unchanged.
+
 ## Evidence
 
 Reference revision: `inventor-interface` commit

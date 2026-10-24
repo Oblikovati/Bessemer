@@ -163,3 +163,40 @@ fn truncated_deflate_with_correct_crc_is_rejected() {
         FailureClass::Integrity
     );
 }
+
+#[test]
+fn equivalent_stream_replacement_preserves_original_compression() {
+    let bytes = two_stream_fixture();
+    let mut document = Document::from_bytes(&bytes).unwrap();
+    document.replace_stream("y", b"hello".to_vec()).unwrap();
+    assert_eq!(document.to_bytes().unwrap(), bytes);
+}
+
+#[test]
+fn reverting_stream_content_restores_the_original_file() {
+    let bytes = two_stream_fixture();
+    let mut document = Document::from_bytes(&bytes).unwrap();
+    document
+        .replace_stream("y", b"different payload".to_vec())
+        .unwrap();
+    document.replace_stream("y", b"hello".to_vec()).unwrap();
+    assert_eq!(document.to_bytes().unwrap(), bytes);
+}
+
+#[test]
+fn replacing_a_corrupt_stream_still_repairs_its_checksum() {
+    let mut bytes = fixture();
+    little_dword(&mut bytes, 22, 0);
+    little_dword(&mut bytes, 62, 0);
+    let mut document = Document::from_bytes(&bytes).unwrap();
+    assert!(document.read_stream("x").is_err());
+    document.replace_stream("x", b"hello".to_vec()).unwrap();
+    let output = document.to_bytes().unwrap();
+    assert_eq!(
+        Document::from_bytes(&output)
+            .unwrap()
+            .read_stream("x")
+            .unwrap(),
+        b"hello"
+    );
+}
