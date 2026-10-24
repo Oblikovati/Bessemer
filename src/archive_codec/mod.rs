@@ -19,4 +19,4 @@ pub(crate) fn malformed(cause: impl Into<String>) -> BessemerError {
 pub use number::{StoredDouble, StoredFloat};
 
 pub use geometry::HeaderBox;
-pub(crate) use geometry::{read_box, write_box};
+pub(crate) use geometry::{read_box, read_point, write_box};

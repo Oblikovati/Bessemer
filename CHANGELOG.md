@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added lossless compact and fixed display-list transform construction, reading, validated field replacement and writing, preserving raw flags and exact floating-point bits. (#28)
+
 - Added embedded SolidWorks Inspection project XML reading, construction and writing, with preserved unknown content and a complete drawing Job Number edit example. (#26)
 
 - Added lossless namespace-aware XML metadata reading, construction, section-scoped property views, immutable text and attribute edits, and writing for all 17 documented stream families, with bounded parsing and preserved Unicode and keyword framing. (#22)
