@@ -43,7 +43,7 @@ pub(super) fn require_presence(actual: bool, expected: bool, label: &str) -> Res
 pub(super) fn invalid(cause: String) -> BessemerError {
     BessemerError {
         operation: "display-list views",
-        entity: "named views".into(),
+        entity: "view collection".into(),
         class: FailureClass::Invalid,
         cause,
     }

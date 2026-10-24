@@ -91,6 +91,49 @@ cargo build --release --example rebuild_named_views
 python -B -X utf8 docs/features/display-lists/verify_named_corpus.py target/pinned-1.99.0/release/examples/rebuild_named_views.exe
 ```
 
+## Verified annotation-view component
+
+`AnnotationViews` implements the complete annotation-view body in 13.4.3, using
+its [captured serializer](reference-annotation-views.md). The outer version gate,
+the per-view unknown flag and the collection-level trailing bitset have distinct
+conditions. An active collection can have zero views and still require the bitset.
+It is not the same layout as named views.
+
+`AnnotationViewId` wraps the stored signed ID once without inventing a restricted
+domain or uniqueness rule. Repeated IDs, raw shown/current flags, both compact
+transforms, second-name and unknown strings, section-plane fields and bitsets
+remain unchanged. Native suffixes and visibility flags are not reconstructed or
+normalized. `DisplayViewLimits` bounds physical/rebuilt bytes, view records and
+cumulative planes. The shared immutable view envelope retains equivalent bytes
+and authentic reverts, including the #29 preserved-prefix budget check.
+
+Twenty-seven independent vectors exercise each version boundary, absent and
+present-empty bodies, collection tails, duplicate IDs, nonboolean flags, all
+conditional fields, noncanonical CString prefixes, embedded NULs, wide text and
+exact special floating-point bits. Seven focused tests cover complete field and
+trace expectations, every truncation, malformed counts, invalid shapes, budgets,
+clone/source isolation, authentic reverts, Send/Sync and concurrent edits.
+
+On Windows x64, Rust 1.99.0 MSVC, 2026-10-25, all 1,086 native annotation collections
+matched independent byte and field oracles: 3,260 views and 874,416 bytes. Every
+one of the 597 distinct versioned bodies force-reconstructed byte for byte; the
+reference field traces also matched all 27 owned vectors. The parent display-
+stream manifest is the same as the transform and named-view corpus above.
+[annotation-verification.json](annotation-verification.json) records fixture,
+reference-snapshot and corpus identities. These are component checks; Bessemer's
+complete display-list archive remains unimplemented.
+
+```text
+python -B -X utf8 docs/features/display-lists/generate_annotation_vectors.py
+cargo test --test display_annotation_views --test display_annotation_trace
+cargo build --release --example rebuild_annotation_views
+python -B -X utf8 docs/features/display-lists/verify_annotation_corpus.py target/pinned-1.99.0/release/examples/rebuild_annotation_views.exe
+```
+
+The named and annotation verifiers share framing, scalar/transform tracing and
+complete-reference-stream scanning. Each still invokes its own native serializer
+and compares the exact semantic fields of that distinct body.
+
 ## Remaining implementation and integration gate
 
 - Connect the parsed display-list version to explicit part/assembly context,
@@ -99,8 +142,8 @@ python -B -X utf8 docs/features/display-lists/verify_named_corpus.py target/pinn
   tessellation records. Preserve cycles, aliases and object-tag spelling; do not
   reset inherited state between nested serializers.
 - Add typed user environments, splitters, line fonts, buckets and display items,
-  then 3D and annotation views and complete top-level framing. The standalone
-  named-view body is verified above.
+  then 3D views and complete top-level framing. Named and annotation bodies
+  are verified above.
 - Add lights, visual properties, scenes, part/assembly shaded data, decals,
   textured planes, units, ink views and configuration tails. Unknown-meaning
   fields remain explicit raw typed values; unresolved bodies are unsupported.

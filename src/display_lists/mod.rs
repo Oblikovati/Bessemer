@@ -27,3 +27,12 @@ mod named_write;
 pub use named_views::NamedViews;
 
 mod view_envelope;
+
+mod annotation_read;
+mod annotation_types;
+mod annotation_views;
+mod annotation_write;
+pub use annotation_types::{
+    AnnotationSectionPlane, AnnotationView, AnnotationViewContents, AnnotationViewId,
+};
+pub use annotation_views::AnnotationViews;
