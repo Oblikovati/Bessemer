@@ -1,10 +1,12 @@
 use std::collections::BTreeMap;
 
 use crate::Result;
-use crate::archive_codec::{ArchiveMapIndex, ArchiveString, StoredDouble};
+use crate::archive_codec::{ArchiveMapIndex, ArchiveString};
 use crate::history::RevisionStamp;
 
-use super::{ExternalFileReference, HeaderRecord, LogRecord, ObjectList, StringArray, invalid};
+use super::{
+    ExternalFileReference, HeaderBox, HeaderRecord, LogRecord, ObjectList, StringArray, invalid,
+};
 
 /// Archive version supplied by the document's `_MO_VERSION_<n>` directory.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -101,19 +103,6 @@ pub enum HeaderReference {
     Null,
     /// Shared object in the archive-wide map.
     Object(HeaderObjectId),
-}
-
-/// The ten doubles of an `mgBBox_c` archive body; lengths are stored in metres.
-#[derive(Debug, Clone, PartialEq, Eq)]
-pub struct HeaderBox {
-    /// Bounding-sphere centre.
-    pub centre: [StoredDouble; 3],
-    /// High corner.
-    pub high: [StoredDouble; 3],
-    /// Low corner.
-    pub low: [StoredDouble; 3],
-    /// Stored sphere radius, without recomputation.
-    pub radius: StoredDouble,
 }
 
 /// Raw box-presence word and its conditional body.
