@@ -38,6 +38,14 @@ fn skipped_fields_are_not_parsed_as_unknown_wire_kinds() {
 }
 
 #[test]
+fn spaces_in_field_names_do_not_turn_field_rows_into_node_headers() {
+    let schema = changed_schema("current_pmark; p; 1 4 0", "current pmark; p; 1 4 0").unwrap();
+    assert_eq!(schema.node_types()[&3].fields[0].name, "current pmark");
+    assert_eq!(schema.node_types()[&3].fields[0].kind, FieldKind::Pointer);
+    assert_eq!(schema.node_types()[&3].fields[0].pointer_class, 4);
+}
+
+#[test]
 fn malformed_schema_headers_duplicates_and_out_of_shape_columns_fail() {
     for (from, to) in [
         ("KEY=SCH_13006;", "KEY=SCH_13006x;"),

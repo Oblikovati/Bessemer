@@ -104,7 +104,10 @@ fn parse_line(
     types: &mut BTreeMap<u16, BaseNodeType>,
 ) -> Result<usize> {
     let row = parse_columns(line)?;
-    if let Some((code, name)) = row.label.split_once(' ') {
+    if let Some((code, name)) = row.label.split_once(' ')
+        && !code.is_empty()
+        && code.bytes().all(|byte| byte.is_ascii_digit())
+    {
         let fields = finish_type(pending.take(), types)?;
         *pending = Some(start_type(code, name, &row)?);
         return Ok(fields);

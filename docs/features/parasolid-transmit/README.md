@@ -119,7 +119,7 @@ and every other stream retained their exact compressed bytes. Separate processes
 produced identical edited documents and identical forced rebuilds of all eight
 vectors. Temporary verification programs and outputs were discarded.
 
-`cargo xtask pr` passed locally with 115 integration tests, 62 documentation
+`cargo xtask pr` passed locally with 116 integration tests, 62 documentation
 examples, and three xtask unit tests. It is the formatting, clippy, build, test,
 and documentation gate, run with the pinned toolchain directory first on `PATH` and a separate
 `target/pinned-1.99.0` directory to avoid mixing local compiler versions. The
