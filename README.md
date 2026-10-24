@@ -20,6 +20,8 @@ deltas using explicit base schemas, preserving every typed field and raw flag.
 `bessemer::tessellation` reads and writes complete face tessellation directories,
 blocks, and facet records, including older documented layouts and explicit
 full/lightweight context.
+`bessemer::metadata` reads and writes all documented XML metadata families, with
+namespace-aware property views, exact source framing and isolated text/attribute edits.
 `bessemer::preview` reads and writes packed DIB previews, decodes RLE8 and BGRX
 pixels, and supports isolated palette and pixel replacement.
 It also reads, constructs, edits, and writes static PNG previews, preserving stored
@@ -56,6 +58,8 @@ The [face tessellation evidence](docs/features/face-tessellations/README.md) rec
 version coverage, directory links, independent vectors, and native corpus checks.
 See [DIB preview evidence](docs/features/dib-previews/README.md) for image formats,
 pixel semantics, limits, and independent decoder checks.
+The [XML metadata evidence](docs/features/xml-metadata/README.md) covers all 17
+stream families, namespace-aware property views, lexical edits and corpus checks.
 The [PNG preview evidence](docs/features/png-previews/README.md) covers chunk
 preservation, ancillary copy rules, full pixel formats, and corpus verification.
 

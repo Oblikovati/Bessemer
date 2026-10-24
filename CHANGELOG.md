@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added lossless namespace-aware XML metadata reading, construction, section-scoped property views, immutable text and attribute edits, and writing for all 17 documented stream families, with bounded parsing and preserved Unicode and keyword framing. (#22)
+
 - Added static PNG preview reading, typed raster construction, sample editing, and writing, with exact chunks, CRC and zlib checks, all color/depth pairs, Adam7, bounded metadata expansion, and ancillary copy rules. (#20)
 - Added packed DIB preview reading, construction, palette and pixel editing, and writing, with checked RLE8 and BGRX decoding, retained raw fields, explicit unwritten pixels, and allocation limits. (#18)
 - Added typed face tessellation directory, block, and facet reading, construction, editing, and writing, preserving version-dependent fields, raw arrays, exact floating-point bits, and component links. (#16)
