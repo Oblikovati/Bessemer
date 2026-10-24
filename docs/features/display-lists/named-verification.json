@@ -1,0 +1,32 @@
+{
+  "status": "named-view component verified; complete display-list archive incomplete",
+  "feature_issue": 28,
+  "regression_issue": 29,
+  "date": "2026-10-24",
+  "platform": "Windows x64",
+  "rust": "1.99.0 MSVC",
+  "native_documents": 1086,
+  "named_view_collections": 1086,
+  "populated_named_views": 99,
+  "native_named_view_bytes": 30432,
+  "distinct_versioned_collections": 41,
+  "display_stream_manifest_sha256": "94047d85dc01ed0f391378374f2c15f5464301bb26990d4214eecdd600723a87",
+  "owned_vectors": 60,
+  "owned_vectors_sha256": "07162532d55b7f5f5f911e42f191cb7d6c3657f8cbfce84d44d2f9cc829dfbff",
+  "reference_excerpt_sha256": "66ddedeeaf7fa684c173448a6d1188bcf835f062c1ca2d2e25102a2fe3b88fcd",
+  "checks": [
+    "forced byte reconstruction of all distinct native collections",
+    "independent decoded field traces for native collections and all owned vectors",
+    "all version conditional boundaries",
+    "each truncation and malformed counts",
+    "byte/view/cumulative nested budgets",
+    "equivalent CString prefix budget regression",
+    "Latin-1 and UTF-16 exact encoded sizes across all CString prefix widths",
+    "source isolation, authentic reverts, concurrent byte identity"
+  ],
+  "excluded": [
+    "Bessemer complete Contents/DisplayLists decoding and writing (pending)",
+    "native SolidWorks application acceptance",
+    "geometric validity"
+  ]
+}

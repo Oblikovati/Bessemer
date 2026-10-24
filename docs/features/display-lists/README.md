@@ -45,15 +45,62 @@ exact bytes. Its private executable copy prevents build collisions. Native sampl
 bytes are read in place and are not redistributed. The owned wire vectors use
 independent Python struct primitives and require no installed application.
 
+## Verified named-view component
+
+`DisplayVersion` normalizes exact `_DL_VERSION_<n>/DLUpdateStamp` markers once.
+Signed negative names become their unsigned 32-bit values; malformed, missing
+and conflicting markers fail explicitly. Model/file versions and add-in version
+strings do not substitute for this context. Equal numeric marker aliases agree.
+
+`NamedViews` reads, constructs, edits and writes the complete named-view body in
+13.4.1. Its [reference snapshot](reference-named-views.md) records all conditional
+fields. Inactive versions have no body, distinct from a present empty collection.
+Typed records retain both compact transforms, CString encodings and prefix widths,
+section planes, raw selection flags and names, and unknown fields and bitsets.
+Version-gated fields must have the exact required shape before publication.
+
+`DisplayViewLimits` bounds bytes, view records and the cumulative nested planes
+and selection-name entries. Counts are checked before allocation. Encoded CString
+sizes are checked without allocating a temporary string. Every prefix width and
+both character encodings have exact-boundary tests. Regression #29 checks that
+equivalent CString edits cannot use shorter canonical prefix sizes to return
+longer preserved source bytes beyond the requested budget.
+
+Sixty independent vectors cover every named-view version boundary, absent and
+empty collections, noncanonical DWORD CString prefixes, wide and Latin-1 text,
+embedded NULs, raw nonboolean flags, planes and selected names. Eleven focused
+tests cover complete field expectations and trace output, every truncation,
+malformed counts, all budgets, invalid shapes, equivalent edits, authentic reverts,
+source isolation, Send/Sync and repeated concurrent edits against serial bytes.
+
+On Windows x64, Rust 1.99.0 MSVC, complete reference parsing of all 1,086 native
+part/assembly streams identified 1,086 named-view collections containing 99 views
+and 30,432 bytes. All 41 distinct versioned collections force-reconstructed byte
+for byte. Native collections and all 60 owned vectors also matched independent
+reference field traces: text, array shapes, signed/unsigned field values and exact
+floating-point bits. The trace covers fields exposed by the reference decoder;
+raw transform presence bytes and discarded Matrix5 integers have separate complete
+wire-vector coverage. [named-verification.json](named-verification.json) records
+manifest and fixture identities. This is component evidence, not full Bessemer
+display-list archive acceptance.
+
+```text
+python -B -X utf8 docs/features/display-lists/generate_named_vectors.py
+cargo test --test display_named_views --test display_named_trace
+cargo build --release --example rebuild_named_views
+python -B -X utf8 docs/features/display-lists/verify_named_corpus.py target/pinned-1.99.0/release/examples/rebuild_named_views.exe
+```
+
 ## Remaining implementation and integration gate
 
-- Parse display-list version names once as unsigned u32, and take explicit part or
-  assembly context, native file version and cross-stream face component IDs.
+- Connect the parsed display-list version to explicit part/assembly context,
+  native file version and cross-stream face component IDs.
 - Reuse existing MFC strings, exact numeric values, class/object maps and face
   tessellation records. Preserve cycles, aliases and object-tag spelling; do not
   reset inherited state between nested serializers.
 - Add typed user environments, splitters, line fonts, buckets and display items,
-  then named, 3D and annotation views and complete top-level framing.
+  then 3D and annotation views and complete top-level framing. The standalone
+  named-view body is verified above.
 - Add lights, visual properties, scenes, part/assembly shaded data, decals,
   textured planes, units, ink views and configuration tails. Unknown-meaning
   fields remain explicit raw typed values; unresolved bodies are unsupported.

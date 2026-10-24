@@ -4,7 +4,7 @@
 
 ### Added
 
-- Added lossless compact and fixed display-list transform construction, reading, validated field replacement and writing, preserving raw flags and exact floating-point bits. (#28)
+- Added lossless display-list transform and named-view construction, reading, validated field replacement and writing, with typed version markers, version-gated fields, bounded parsing, raw flags and exact floating-point bits. (#28)
 
 - Added embedded SolidWorks Inspection project XML reading, construction and writing, with preserved unknown content and a complete drawing Job Number edit example. (#26)
 
