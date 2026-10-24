@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added embedded SolidWorks Inspection project XML reading, construction and writing, with preserved unknown content and a complete drawing Job Number edit example. (#26)
+
 - Added lossless namespace-aware XML metadata reading, construction, section-scoped property views, immutable text and attribute edits, and writing for all 17 documented stream families, with bounded parsing and preserved Unicode and keyword framing. (#22)
 
 - Added static PNG preview reading, typed raster construction, sample editing, and writing, with exact chunks, CRC and zlib checks, all color/depth pairs, Adam7, bounded metadata expansion, and ancillary copy rules. (#20)

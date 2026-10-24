@@ -4,6 +4,8 @@ use crate::Result;
 /// Documented XML stream family; numeric configuration/summary identities are parsed once.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum MetadataFamily {
+    /// Embedded Inspection add-in project, without inferred value semantics.
+    InspectionProject,
     /// Package content-type declarations.
     ContentTypes,
     /// Package relationship declarations.
@@ -89,6 +91,7 @@ fn classify(name: &str) -> Result<MetadataFamily> {
 fn known_family(name: &str) -> Option<MetadataFamily> {
     use MetadataFamily::*;
     match name {
+        "ThirdPty/InspectionXpert" => Some(InspectionProject),
         "[Content_Types].xml" => Some(ContentTypes),
         "_rels/.rels" => Some(Relationships),
         "docProps/core.xml" => Some(CoreProperties),
@@ -164,6 +167,7 @@ impl MetadataFamily {
     fn root_local(self) -> &'static str {
         use MetadataFamily::*;
         match self {
+            InspectionProject => "ExtInspectionProject",
             ContentTypes => "Types",
             Relationships => "Relationships",
             CoreProperties => "coreProperties",
