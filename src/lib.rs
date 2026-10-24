@@ -17,6 +17,7 @@ mod error;
 pub mod header;
 pub mod history;
 pub mod parasolid;
+pub mod preview;
 mod records;
 pub mod tessellation;
 mod writer;

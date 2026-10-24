@@ -20,6 +20,8 @@ deltas using explicit base schemas, preserving every typed field and raw flag.
 `bessemer::tessellation` reads and writes complete face tessellation directories,
 blocks, and facet records, including older documented layouts and explicit
 full/lightweight context.
+`bessemer::preview` reads and writes packed DIB previews, decodes RLE8 and BGRX
+pixels, and supports isolated palette and pixel replacement.
 Complete part, assembly, and drawing model archives, geometric interpretation and
 validation, and semantic CAD editing remain to be implemented; this is not yet
 Corliss feature parity.
@@ -50,6 +52,8 @@ See [Parasolid transmit evidence](docs/features/parasolid-transmit/README.md) fo
 schema inputs, field coverage, complete-corpus reconstruction, and acceptance limits.
 The [face tessellation evidence](docs/features/face-tessellations/README.md) records
 version coverage, directory links, independent vectors, and native corpus checks.
+See [DIB preview evidence](docs/features/dib-previews/README.md) for image formats,
+pixel semantics, limits, and independent decoder checks.
 
 
 This library is named after Sir Henry Bessemer (1813–1898) an English engineer, inventor, and entrepreneur 
