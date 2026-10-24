@@ -15,12 +15,16 @@ pub(crate) fn double(rows: &mut Trace, path: &str, value: StoredDouble) {
 }
 
 pub(crate) fn text(rows: &mut Trace, path: &str, value: &str) {
+    raw_hex(rows, path, value.as_bytes(), "s");
+}
+
+pub(crate) fn raw_hex(rows: &mut Trace, path: &str, value: &[u8], kind: &str) {
     rows.insert(
         path.into(),
         format!(
-            "s:{}",
+            "{kind}:{}",
             value
-                .bytes()
+                .iter()
                 .map(|byte| format!("{byte:02x}"))
                 .collect::<String>()
         ),

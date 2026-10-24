@@ -34,6 +34,13 @@ impl DisplayOutput {
         Ok(())
     }
 
+    pub fn u16(&mut self, value: u16) -> Result<()> {
+        self.append(&value.to_le_bytes())
+    }
+    pub fn bytes(&mut self, values: &[u8]) -> Result<()> {
+        self.append(values)
+    }
+
     pub fn i32(&mut self, value: i32) -> Result<()> {
         self.append(&value.to_le_bytes())
     }

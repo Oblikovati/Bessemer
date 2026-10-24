@@ -134,6 +134,47 @@ The named and annotation verifiers share framing, scalar/transform tracing and
 complete-reference-stream scanning. Each still invokes its own native serializer
 and compares the exact semantic fields of that distinct body.
 
+## Verified 3D-view component
+
+`SpatialViews` implements the complete 3D-view body in 13.4.2 using its
+[captured serializer](reference-spatial-views.md). It preserves both transforms,
+version-gated active flag and strings, all section planes, the data-dependent
+after-plane field, paired late integer/bitset fields and the final text. Named
+and 3D planes share typed `ViewSectionPlane` fields with distinct explicit gates;
+`NamedSectionPlane` remains an alias for compatibility within this development.
+
+`ViewBitmap` is the serialized Win32 BITMAP body, not a packed DIB. It retains
+width, height, row-byte count, plane count, bits per pixel and raw bytes without
+pixel decoding. The native framing test uses the signed height-times-row-bytes
+product, accepting only 0 through 64 MiB inclusive. The product is computed in
+64 bits before conversion or copying. Payload lengths must match exactly; width,
+individual signs and other header values do not introduce inferred constraints.
+Global byte budgets still apply across the whole collection.
+
+Fifty-one independent vectors cover every version boundary, absent and empty
+collections, zero-length and populated bitmaps, both-negative dimension products,
+noncanonical strings, embedded NULs, raw flags and every conditional plane/tail
+field. Ten focused tests cover decoded fields and traces, every truncation,
+malformed/oversized bitmap headers and counts, the inclusive size boundary without
+a large allocation, every optional slot, cumulative budgets, the preserved-prefix
+budget regression, bitmap/input/source isolation, authentic reverts and repeated
+parallel edits against serial bytes.
+
+On Windows x64, Rust 1.99.0 MSVC, 2026-10-25, all 1,086 native collections matched
+byte reconstruction and independent field traces: 22 views and 435,030 bytes.
+Every one of the 11 distinct versioned bodies reconstructed exactly, including
+its raw bitmap bytes. All 51 owned vectors matched the independent reference
+field traces too. [spatial-verification.json](spatial-verification.json) records
+identities. This does not establish pixel semantics, complete Bessemer stream
+acceptance, native application acceptance or geometric validity.
+
+```text
+python -B -X utf8 docs/features/display-lists/generate_spatial_vectors.py
+cargo test --test display_spatial_views --test display_spatial_trace
+cargo build --release --example rebuild_spatial_views
+python -B -X utf8 docs/features/display-lists/verify_spatial_corpus.py target/pinned-1.99.0/release/examples/rebuild_spatial_views.exe
+```
+
 ## Remaining implementation and integration gate
 
 - Connect the parsed display-list version to explicit part/assembly context,
@@ -142,8 +183,8 @@ and compares the exact semantic fields of that distinct body.
   tessellation records. Preserve cycles, aliases and object-tag spelling; do not
   reset inherited state between nested serializers.
 - Add typed user environments, splitters, line fonts, buckets and display items,
-  then 3D views and complete top-level framing. Named and annotation bodies
-  are verified above.
+  then complete top-level framing. Named, annotation and 3D bodies are verified
+  above; they still need connection to the complete shared archive.
 - Add lights, visual properties, scenes, part/assembly shaded data, decals,
   textured planes, units, ink views and configuration tails. Unknown-meaning
   fields remain explicit raw typed values; unresolved bodies are unsupported.

@@ -57,6 +57,8 @@ def trace_scalar(value: object, path: str, rows: dict[str,str]) -> bool:
         rows[path] = "none"
     elif isinstance(value,str):
         rows[path] = "s:"+value.encode().hex()
+    elif isinstance(value,bytes):
+        rows[path] = "b:"+value.hex()
     elif isinstance(value,int):
         rows[path] = f"i:{int(value)}"
     elif isinstance(value,float):
@@ -122,3 +124,10 @@ def verify(executable: str, reader_name: str, fixture: Path, count_views: Callab
         verify_records(local,root,records)
         verify_records(local,root,owned_records(fixture,getattr(dl_doc,reader_name)))
     return evidence
+
+def list_view_count(value:object)->int:
+    if value is None:
+        return 0
+    if isinstance(value,list):
+        return len(value)
+    raise ValueError(f"view result {value!r}; expected None or list")

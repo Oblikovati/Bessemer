@@ -39,3 +39,11 @@ pub use annotation_views::AnnotationViews;
 
 mod view_plane;
 pub use view_plane::ViewSectionPlane;
+
+mod spatial_read;
+mod spatial_types;
+mod spatial_views;
+mod spatial_write;
+mod view_bitmap;
+pub use spatial_types::{SpatialView, ViewBitmap};
+pub use spatial_views::SpatialViews;
