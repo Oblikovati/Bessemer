@@ -25,3 +25,5 @@ mod view_support;
 mod named_views;
 mod named_write;
 pub use named_views::NamedViews;
+
+mod view_envelope;

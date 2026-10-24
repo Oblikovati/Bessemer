@@ -1,12 +1,11 @@
+use super::view_envelope::ViewEnvelope;
 use super::{DisplayVersion, DisplayViewLimits, NamedView, named_read, named_write};
-use crate::{Result, archive_codec::PreservedContents};
+use crate::Result;
 
 /// Immutable complete named-view collection for an explicit display-list version.
 #[derive(Debug, Clone)]
 pub struct NamedViews {
-    version: DisplayVersion,
-    source: PreservedContents<Option<Vec<NamedView>>>,
-    limits: DisplayViewLimits,
+    envelope: ViewEnvelope<Option<Vec<NamedView>>>,
 }
 
 impl NamedViews {
@@ -25,9 +24,14 @@ impl NamedViews {
     ) -> Result<Self> {
         let views = named_read::read(bytes, version, limits)?;
         Ok(Self {
-            version,
-            source: PreservedContents::decoded(bytes, views),
-            limits,
+            envelope: ViewEnvelope::decoded(
+                bytes,
+                views,
+                version,
+                limits,
+                named_write::encode,
+                "preserved named-view bytes",
+            ),
         })
     }
 
@@ -44,11 +48,14 @@ impl NamedViews {
         version: DisplayVersion,
         limits: DisplayViewLimits,
     ) -> Result<Self> {
-        named_write::encode(version, &views, limits)?;
         Ok(Self {
-            version,
-            source: PreservedContents::constructed(views),
-            limits,
+            envelope: ViewEnvelope::new(
+                views,
+                version,
+                limits,
+                named_write::encode,
+                "preserved named-view bytes",
+            )?,
         })
     }
 
@@ -60,7 +67,7 @@ impl NamedViews {
     /// # }
     /// ```
     pub fn contents(&self) -> &Option<Vec<NamedView>> {
-        self.source.current()
+        self.envelope.contents()
     }
 
     /// Returns the parsed unsigned version controlling every conditional field.
@@ -71,7 +78,7 @@ impl NamedViews {
     /// # }
     /// ```
     pub fn version(&self) -> DisplayVersion {
-        self.version
+        self.envelope.version()
     }
 
     /// Validates an owned edit before publishing a source-isolated collection.
@@ -87,20 +94,8 @@ impl NamedViews {
         views: Option<Vec<NamedView>>,
         limits: DisplayViewLimits,
     ) -> Result<Self> {
-        named_write::encode(self.version, &views, limits)?;
-        let source = self.source.edited(views);
-        // #29: CString-equivalent fields can retain a longer authentic prefix encoding.
-        if let Some(bytes) = source.original_bytes() {
-            super::view_support::require_size(
-                bytes.len(),
-                limits.maximum_bytes,
-                "preserved named-view bytes",
-            )?;
-        }
         Ok(Self {
-            version: self.version,
-            source,
-            limits,
+            envelope: self.envelope.edited(views, limits)?,
         })
     }
 
@@ -113,9 +108,6 @@ impl NamedViews {
     /// # }
     /// ```
     pub fn to_bytes(&self) -> Result<Vec<u8>> {
-        if let Some(bytes) = self.source.original_bytes() {
-            return Ok(bytes.to_vec());
-        }
-        named_write::encode(self.version, self.contents(), self.limits)
+        self.envelope.to_bytes()
     }
 }
