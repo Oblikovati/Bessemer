@@ -122,6 +122,15 @@ def generate() -> None:
                 (ROOT / f"{name}.rgba").write_bytes(rgba(width,height,color,depth))
                 rows.append(name+"\n")
     (ROOT / "cases.txt").write_text("".join(rows),encoding="utf-8",newline="\n")
+    write_default_animation()
+
+
+def write_default_animation() -> None:
+    base = png(9,9,6,8,0)
+    position = base.index(b"IDAT")-4
+    control = chunk(b"acTL",struct.pack(">II",1,0))
+    frame = chunk(b"fcTL",struct.pack(">IIIIIHHBB",0,9,9,0,0,1,60,0,0))
+    (ROOT / "default-image-apng.png").write_bytes(base[:position]+control+frame+base[position:])
 
 
 if __name__ == "__main__":

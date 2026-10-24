@@ -8,8 +8,10 @@ the external standard referenced by the SolidWorks schema.
 The reader checks the signature, every chunk length and CRC, IHDR fields, critical
 chunk order, contiguous IDAT framing, required palettes, standard ancillary field
 syntax and ordering, zlib completion and Adler checks, exact scanline lengths,
-filter codes, and palette-index bounds. Unknown critical chunks and APNG animation
-chunks fail explicitly. No partial image is published after a failed check.
+filter codes, and palette-index bounds. Unknown critical chunks fail explicitly.
+APNG extension chunks remain opaque ancillary content; the raster is the default
+static image. Animation frames are not decoded, and pixel edits remove those
+unsafe extension chunks. No partial static image is published after a failed check.
 
 All fifteen legal color/depth combinations are supported: grayscale, RGB, indexed,
 grayscale-alpha and RGBA, including packed samples and 16-bit channels. Both
@@ -81,6 +83,8 @@ them from closed-form channel values, with separate exact sample and RGBA16
 oracles. All 120 were independently accepted by Pillow: grayscale16 samples matched
 exactly, and the other formats matched normalized RGBA high bytes. Exact low-byte
 checks for all 16-bit formats use the closed-form oracles.
+An additional one-frame APNG fixture verifies preservation of extension chunks and
+the default static image, plus removal of unsafe extensions after pixel edits.
 
 Integration tests cover reconstruction, typed construction, edits and authentic
 reverts, standard metadata, malformed framing/CRC/zlib/filter cases, expansion

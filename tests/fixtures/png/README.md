@@ -14,3 +14,5 @@ of big-endian u16 values derived from closed-form pixel expectations. The encode
 images mix all five filters, split zlib across IDATs, include an empty IDAT, and
 retain safe and unsafe unknown ancillary chunks. Indexed cases include palettes
 and transparency; grayscale and RGB cases include transparency keys.
+`default-image-apng.png` adds one-frame animation controls to a valid base PNG;
+tests retain these opaque chunks while decoding the default image.

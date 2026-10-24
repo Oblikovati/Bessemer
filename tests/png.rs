@@ -104,6 +104,38 @@ fn every_zlib_byte_boundary_can_be_an_idat_boundary_including_the_adler_checksum
 }
 
 #[test]
+fn animation_extensions_preserve_the_default_png_image_without_claiming_frame_decoding() {
+    let bytes = fixture("default-image-apng", "png");
+    let source = parse(&bytes);
+    assert_eq!(source.raster(), parse(BASE).raster());
+    assert_eq!(
+        PngPreview::new(source.contents().clone(), LIMITS)
+            .unwrap()
+            .to_bytes()
+            .unwrap(),
+        bytes
+    );
+    let mut samples = source.raster().samples.clone();
+    samples[0] ^= 1;
+    let edited = source.with_samples(samples, LIMITS).unwrap();
+    assert!(
+        !edited
+            .contents()
+            .chunks
+            .iter()
+            .any(|chunk| [*b"acTL", *b"fcTL", *b"fdAT"].contains(&chunk.kind.bytes()))
+    );
+    assert_eq!(
+        edited
+            .with_contents(source.contents().clone(), LIMITS)
+            .unwrap()
+            .to_bytes()
+            .unwrap(),
+        bytes
+    );
+}
+
+#[test]
 fn every_format_encodes_edited_samples_without_losing_depth_or_interlace() {
     for name in include_str!("fixtures/png/cases.txt").lines() {
         let bytes = fixture(name, "png");

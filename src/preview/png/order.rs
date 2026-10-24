@@ -145,11 +145,6 @@ impl ChunkOrder {
 
 fn require_supported(chunk: &PngChunk) -> Result<()> {
     let kind = chunk.kind.bytes();
-    if [*b"acTL", *b"fcTL", *b"fdAT"].contains(&kind) {
-        return Err(unsupported(format!(
-            "animation chunk {kind:?}; expected static PNG without APNG extensions"
-        )));
-    }
     if !chunk.kind.ancillary() && ![*b"IHDR", *b"PLTE", *b"IDAT", *b"IEND"].contains(&kind) {
         return Err(unsupported(format!(
             "unknown critical chunk {kind:?}; expected IHDR, PLTE, IDAT or IEND"

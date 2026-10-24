@@ -23,7 +23,7 @@ fn every_truncation_and_appended_outer_bytes_fail() {
 }
 
 #[test]
-fn required_chunks_order_duplicate_critical_and_animation_cases_fail() {
+fn required_chunks_order_and_duplicate_or_unknown_critical_cases_fail() {
     let source = parse(BASE);
     for kind in [*b"IHDR", *b"IDAT", *b"IEND"] {
         let mut contents = source.contents().clone();
@@ -35,9 +35,9 @@ fn required_chunks_order_duplicate_critical_and_animation_cases_fail() {
         before_image(&mut contents, chunk(kind, &[]));
         assert!(PngPreview::new(contents, LIMITS).is_err());
     }
-    for kind in [*b"ZZZZ", *b"acTL", *b"fcTL", *b"fdAT"] {
+    {
         let mut contents = source.contents().clone();
-        before_image(&mut contents, chunk(kind, &[]));
+        before_image(&mut contents, chunk(*b"ZZZZ", &[]));
         assert_eq!(
             PngPreview::new(contents, LIMITS).unwrap_err().class,
             bessemer::FailureClass::Unsupported
