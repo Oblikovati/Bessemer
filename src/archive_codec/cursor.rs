@@ -61,11 +61,19 @@ impl<'a> ArchiveCursor<'a> {
     }
 
     pub(crate) fn count(&mut self, minimum_size: usize, label: &str) -> Result<usize> {
+        self.checked_count(minimum_size, label, 1)
+    }
+
+    pub(crate) fn nonnegative_count(&mut self, minimum_size: usize, label: &str) -> Result<usize> {
+        self.checked_count(minimum_size, label, 0)
+    }
+
+    fn checked_count(&mut self, minimum_size: usize, label: &str, minimum: i32) -> Result<usize> {
         let count = self.i32()?;
         let available = self.bytes.len() - self.offset;
-        if count < 1 || count as usize > available / minimum_size {
+        if count < minimum || count as usize > available / minimum_size {
             return Err(malformed(format!(
-                "{label} count {count}; expected 1..={} in {available} bytes",
+                "{label} count {count}; expected {minimum}..={} in {available} bytes",
                 available / minimum_size
             )));
         }
