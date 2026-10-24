@@ -11,6 +11,8 @@ untouched stream's compressed bytes. `bessemer::block_stream` also reads and wri
 the compressed-block carriers used by body partitions and add-ins, with explicit
 framing and expansion limits. `bessemer::history` reads and writes standalone version
 histories, including typed stamp edits and shared date-code objects.
+`bessemer::header` reads, constructs, edits, and writes header archives, including
+revision logs, shared external references, and version-dependent stored fields.
 Part, assembly, and drawing models, geometry, and their semantic editing
 are still to be implemented; this is not yet Corliss feature parity.
 
@@ -32,6 +34,8 @@ The [compressed-block evidence](docs/features/compressed-blocks/README.md) recor
 the implemented carrier contract and its verification limits.
 See [version-history evidence](docs/features/version-history/README.md) for archive
 coverage and the installed-corpus verification.
+See [header archive evidence](docs/features/header-archives/README.md) for field
+coverage, version boundaries, graph preservation, and remaining limits.
 
 
 This library is named after Sir Henry Bessemer (1813–1898) an English engineer, inventor, and entrepreneur 

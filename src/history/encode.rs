@@ -73,7 +73,7 @@ impl HistoryWriter {
     }
 }
 
-fn write_stamp(output: &mut Vec<u8>, stamp: &RevisionStamp) -> Result<()> {
+pub(crate) fn write_stamp(output: &mut Vec<u8>, stamp: &RevisionStamp) -> Result<()> {
     for value in [stamp.revision_status, stamp.unknown_0c, stamp.unknown_10] {
         output.extend_from_slice(&value.to_le_bytes());
     }

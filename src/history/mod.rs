@@ -1,11 +1,11 @@
 //! Standalone `_MO_VERSION_<n>/History` archives (specification clause 11.7).
 
-mod decode;
-mod encode;
+pub(crate) mod decode;
+pub(crate) mod encode;
 mod types;
 mod validate;
 
-use std::sync::Arc;
+use crate::archive_codec::PreservedContents;
 
 pub use crate::archive_codec::{ArchiveString, TextEncoding};
 pub use types::{
@@ -15,18 +15,11 @@ pub use types::{
 
 use crate::{BessemerError, FailureClass, Result};
 
-#[derive(Debug, Clone, PartialEq, Eq)]
-struct OriginalHistory {
-    contents: Arc<HistoryContents>,
-    encoded: Vec<u8>,
-}
-
 /// Immutable history graph with byte-preserving no-op serialization.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct VersionHistory {
     root_schema: u16,
-    contents: Arc<HistoryContents>,
-    original: Option<Arc<OriginalHistory>>,
+    contents: PreservedContents<HistoryContents>,
 }
 
 impl VersionHistory {
@@ -40,15 +33,9 @@ impl VersionHistory {
     pub fn from_bytes(bytes: &[u8]) -> Result<Self> {
         let (root_schema, contents) = decode::history(bytes).map_err(decode_context)?;
         validate::contents(&contents)?;
-        let contents = Arc::new(contents);
-        let original = Arc::new(OriginalHistory {
-            contents: contents.clone(),
-            encoded: bytes.to_vec(),
-        });
         Ok(Self {
             root_schema,
-            contents,
-            original: Some(original),
+            contents: PreservedContents::decoded(bytes, contents),
         })
     }
 
@@ -63,8 +50,7 @@ impl VersionHistory {
         validate::contents(&contents)?;
         Ok(Self {
             root_schema,
-            contents: Arc::new(contents),
-            original: None,
+            contents: PreservedContents::constructed(contents),
         })
     }
 
@@ -87,7 +73,7 @@ impl VersionHistory {
     /// # Ok::<(), Box<dyn std::error::Error>>(())
     /// ```
     pub fn contents(&self) -> &HistoryContents {
-        &self.contents
+        self.contents.current()
     }
 
     /// Validates an owned replacement graph and returns an isolated history.
@@ -104,8 +90,7 @@ impl VersionHistory {
         validate::contents(&contents)?;
         Ok(Self {
             root_schema: self.root_schema,
-            contents: Arc::new(contents),
-            original: self.original.clone(),
+            contents: self.contents.edited(contents),
         })
     }
 
@@ -117,12 +102,10 @@ impl VersionHistory {
     /// # Ok::<(), Box<dyn std::error::Error>>(())
     /// ```
     pub fn to_bytes(&self) -> Result<Vec<u8>> {
-        if let Some(original) = &self.original
-            && original.contents == self.contents
-        {
-            return Ok(original.encoded.clone());
+        if let Some(original) = self.contents.original_bytes() {
+            return Ok(original.to_vec());
         }
-        encode::history(self.root_schema, &self.contents)
+        encode::history(self.root_schema, self.contents.current())
     }
 }
 
