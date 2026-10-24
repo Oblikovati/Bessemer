@@ -118,7 +118,7 @@ fn validate_sizes(expanded: usize, stored: usize, available: usize) -> Result<()
     Ok(())
 }
 
-fn inflate_block(stored: &[u8], expected: usize) -> Result<Vec<u8>> {
+pub(crate) fn inflate_block(stored: &[u8], expected: usize) -> Result<Vec<u8>> {
     let mut decoder = Decompress::new(true);
     let mut expanded = vec![0; expected + 1];
     let status = decoder

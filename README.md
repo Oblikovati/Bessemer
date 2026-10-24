@@ -22,6 +22,8 @@ blocks, and facet records, including older documented layouts and explicit
 full/lightweight context.
 `bessemer::preview` reads and writes packed DIB previews, decodes RLE8 and BGRX
 pixels, and supports isolated palette and pixel replacement.
+It also reads, constructs, edits, and writes static PNG previews, preserving stored
+chunks and exact samples across all defined color/depth pairs and Adam7 interlace.
 Complete part, assembly, and drawing model archives, geometric interpretation and
 validation, and semantic CAD editing remain to be implemented; this is not yet
 Corliss feature parity.
@@ -54,6 +56,8 @@ The [face tessellation evidence](docs/features/face-tessellations/README.md) rec
 version coverage, directory links, independent vectors, and native corpus checks.
 See [DIB preview evidence](docs/features/dib-previews/README.md) for image formats,
 pixel semantics, limits, and independent decoder checks.
+The [PNG preview evidence](docs/features/png-previews/README.md) covers chunk
+preservation, ancillary copy rules, full pixel formats, and corpus verification.
 
 
 This library is named after Sir Henry Bessemer (1813–1898) an English engineer, inventor, and entrepreneur 
