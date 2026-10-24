@@ -1,8 +1,7 @@
 {
   "failures": {
     "display-list archive Contents/DisplayLists: Unsupported: display item count 8; populated display item bodies are pending implementation": 185,
-    "display-list archive Contents/DisplayLists: Unsupported: scene type 1; scene bodies are pending implementation": 84,
-    "display-list archive Contents/DisplayLists: Unsupported: reference geometry kind 2; expected implemented origin or plane body": 51,
+    "display-list archive Contents/DisplayLists: Unsupported: scene type 1; scene bodies are pending implementation": 99,
     "display-list archive Contents/DisplayLists: Unsupported: display context version 10000, file version 19000, kind Part; initial full-stream checkpoint requires display/file version 19000": 49,
     "display-list archive Contents/DisplayLists: Unsupported: display context version 9000, file version 19000, kind Part; initial full-stream checkpoint requires display/file version 19000": 23,
     "display-list archive Contents/DisplayLists: Unsupported: display item count 5; populated display item bodies are pending implementation": 20,
@@ -21,13 +20,10 @@
     "display-list archive Contents/DisplayLists: Unsupported: display context version 7000, file version 19000, kind Part; initial full-stream checkpoint requires display/file version 19000": 5,
     "display-list archive Contents/DisplayLists: Unsupported: display item count 20; populated display item bodies are pending implementation": 5,
     "display-list archive Contents/DisplayLists: Unsupported: display item count 14; populated display item bodies are pending implementation": 5,
-    "display-list archive Contents/DisplayLists: Unsupported: reference geometry kind 5; expected implemented origin or plane body": 5,
     "display-list archive Contents/DisplayLists: Unsupported: display item count 9; populated display item bodies are pending implementation": 4,
     "display-list archive Contents/DisplayLists: Unsupported: display item count 11; populated display item bodies are pending implementation": 4,
     "display-list archive Contents/DisplayLists: Unsupported: display item count 3; populated display item bodies are pending implementation": 4,
-    "display-list archive Contents/DisplayLists: Unsupported: reference geometry kind 1; expected implemented origin or plane body": 4,
     "display-list archive Contents/DisplayLists: Unsupported: display item count 1; populated display item bodies are pending implementation": 4,
-    "display-list archive Contents/DisplayLists: Unsupported: reference geometry kind 4; expected implemented origin or plane body": 4,
     "display-list archive Contents/DisplayLists: Unsupported: display item count 51; populated display item bodies are pending implementation": 4,
     "display-list archive Contents/DisplayLists: Unsupported: display context version 10000, file version 19000, kind Assembly; initial full-stream checkpoint requires display/file version 19000": 3,
     "display-list archive Contents/DisplayLists: Unsupported: display item count 68; populated display item bodies are pending implementation": 3,
@@ -97,12 +93,13 @@
     "10000": 52,
     "11000": 1,
     "18000": 22,
-    "19000": 579
+    "19000": 530
   },
+  "independent_reference_fields": 90067,
   "status": "incomplete implementation audit; missing streams are required work",
   "documents": 1086,
   "manifest_sha256": "94047d85dc01ed0f391378374f2c15f5464301bb26990d4214eecdd600723a87",
-  "accepted_count": 404,
+  "accepted_count": 453,
   "two_processes_identical": true,
   "accepted_manifests": [
     "archive-accepted-000.txt",

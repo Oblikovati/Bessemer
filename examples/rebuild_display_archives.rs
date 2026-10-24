@@ -4,35 +4,59 @@ use bessemer::display_lists::{
     DisplayVersion,
 };
 use std::error::Error;
+#[path = "support/archive_scalar_trace.rs"]
+mod archive_scalar_trace;
+#[path = "support/reference_trace.rs"]
+mod reference_trace;
 mod support;
 use support::framing::{require_count, require_finished, take, take_u32};
 
 fn main() -> Result<(), Box<dyn Error>> {
     let arguments: Vec<String> = std::env::args().skip(1).collect();
-    let [source, destination] = arguments.as_slice() else {
-        return Err(format!("{} arguments; expected INPUT OUTPUT", arguments.len()).into());
-    };
-    let output = rebuild(&std::fs::read(source)?)?;
+    let (source, destination, trace_path) = input_paths(&arguments)?;
+    let (output, trace) = rebuild(&std::fs::read(source)?)?;
     std::fs::write(destination, output)?;
+    if let Some(path) = trace_path {
+        std::fs::write(path, trace)?;
+    }
     Ok(())
 }
 
-fn rebuild(bytes: &[u8]) -> Result<Vec<u8>, Box<dyn Error>> {
+fn input_paths(arguments: &[String]) -> Result<(&str, &str, Option<&str>), Box<dyn Error>> {
+    match arguments {
+        [source, destination] => Ok((source, destination, None)),
+        [source, destination, trace] => Ok((source, destination, Some(trace))),
+        _ => Err(format!(
+            "{} arguments; expected INPUT OUTPUT [TRACE]",
+            arguments.len()
+        )
+        .into()),
+    }
+}
+
+fn rebuild(bytes: &[u8]) -> Result<(Vec<u8>, Vec<u8>), Box<dyn Error>> {
     let mut remaining = bytes;
     let count = take_u32(&mut remaining)?;
     require_count(count, remaining.len(), 17)?;
     let mut output = count.to_le_bytes().to_vec();
+    let mut traces = output.clone();
     for _ in 0..count {
         let context = read_context(&mut remaining)?;
         let length = take_u32(&mut remaining)? as usize;
         let payload = take(&mut remaining, length)?;
-        let (status, result) = audit(payload, context);
+        let (status, result, trace) = audit(payload, context);
         output.push(status);
-        output.extend_from_slice(&u32::try_from(result.len())?.to_le_bytes());
-        output.extend_from_slice(&result);
+        append_frame(&mut output, &result)?;
+        append_frame(&mut traces, &trace)?;
     }
     require_finished(remaining)?;
-    Ok(output)
+    Ok((output, traces))
+}
+
+fn append_frame(output: &mut Vec<u8>, bytes: &[u8]) -> Result<(), Box<dyn Error>> {
+    output.extend_from_slice(&u32::try_from(bytes.len())?.to_le_bytes());
+    output.extend_from_slice(bytes);
+    Ok(())
 }
 
 fn read_context(remaining: &mut &[u8]) -> Result<DisplayArchiveContext, Box<dyn Error>> {
@@ -67,14 +91,17 @@ fn component_ids(
     Ok(components)
 }
 
-fn audit(payload: &[u8], context: DisplayArchiveContext) -> (u8, Vec<u8>) {
+fn audit(payload: &[u8], context: DisplayArchiveContext) -> (u8, Vec<u8>, Vec<u8>) {
     match reconstruct(payload, context) {
-        Ok(bytes) => (0, bytes),
-        Err(error) => (1, error.to_string().into_bytes()),
+        Ok((bytes, trace)) => (0, bytes, trace),
+        Err(error) => (1, error.to_string().into_bytes(), Vec::new()),
     }
 }
 
-fn reconstruct(payload: &[u8], context: DisplayArchiveContext) -> Result<Vec<u8>, Box<dyn Error>> {
+fn reconstruct(
+    payload: &[u8],
+    context: DisplayArchiveContext,
+) -> Result<(Vec<u8>, Vec<u8>), Box<dyn Error>> {
     let limits = DisplayArchiveLimits {
         maximum_bytes: 256 * 1024 * 1024,
         maximum_fields: 2_000_000,
@@ -87,5 +114,5 @@ fn reconstruct(payload: &[u8], context: DisplayArchiveContext) -> Result<Vec<u8>
     if rebuilt != payload {
         return Err("reconstructed stream differed; expected complete byte identity".into());
     }
-    Ok(rebuilt)
+    Ok((rebuilt, reference_trace::trace(&parsed)))
 }

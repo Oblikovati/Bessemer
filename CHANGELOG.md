@@ -4,7 +4,7 @@
 
 ### Added
 
-- Added lossless display-list transform and view codecs, plus version-19000 part/assembly archive reading, validated edits and writing with shared object identities, inline facets and explicit external face references. Complete display-list corpus support remained under development. (#28)
+- Added lossless display-list transform and view codecs, plus version-19000 part/assembly archive reading, validated edits and writing with shared object identities, inline facets, explicit external face references and all seven reference-geometry kinds. Complete display-list corpus support remained under development. (#28)
 
 - Added embedded SolidWorks Inspection project XML reading, construction and writing, with preserved unknown content and a complete drawing Job Number edit example. (#26)
 

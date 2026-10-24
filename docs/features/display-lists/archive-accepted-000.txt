@@ -21,12 +21,14 @@ samples/introsw/waste_piping.sldprt
 samples/learn/Carving Knife/Components/Gear Mount.SLDPRT
 samples/learn/Carving Knife/Components/Gear Rod.SLDPRT
 samples/learn/Carving Knife/Components/Gear.SLDPRT
+samples/learn/Carving Knife/Components/Knife Mechanism.SLDASM
 samples/learn/Carving Knife/Components/Left Blade.SLDPRT
 samples/learn/Carving Knife/Components/Left Knife Sleeve.SLDPRT
 samples/learn/Carving Knife/Components/Mirrorknife_guard.SLDPRT
 samples/learn/Carving Knife/Components/motor.SLDPRT
 samples/learn/Carving Knife/Components/Right Blade.SLDPRT
 samples/learn/Carving Knife/Components/Right Knife Sleeve.SLDPRT
+samples/learn/Carving Knife/Components/shaft.SLDPRT
 samples/learn/Garden Trowel/Garden Trowel.SLDASM
 samples/learn/Garden Trowel/Garden Trowel_Garden_Trowel_Handle.SLDPRT
 samples/learn/Garden Trowel/Garden Trowel_Garden_Trowel_Spade.SLDPRT
@@ -51,6 +53,9 @@ samples/learn/U-Joint/crank-knob.sldprt
 samples/learn/U-Joint/crank-shaft.sldprt
 samples/learn/U-Joint/pin.sldprt
 samples/learn/U-Joint/spider.sldprt
+samples/learn/U-Joint/UJoint.SLDASM
+samples/learn/U-Joint/Yoke_female.sldprt
+samples/learn/U-Joint/Yoke_male.sldprt
 samples/Simulation Examples/actuator_casing.sldprt
 samples/Simulation Examples/actuator_piston.sldprt
 samples/Simulation Examples/basketball_hoop.sldasm
@@ -61,13 +66,18 @@ samples/Simulation Examples/bolthole.sldprt
 samples/Simulation Examples/Contact/quarterbolt.sldprt
 samples/Simulation Examples/Contact/quartereyebar.sldasm
 samples/Simulation Examples/Contact/quartereyebar.sldprt
+samples/Simulation Examples/Contact/ringshrinkfit.sldasm
 samples/Simulation Examples/Contact/slider_locker_mechanism.sldasm
+samples/Simulation Examples/crank.sldasm
 samples/Simulation Examples/crankarm.sldprt
 samples/Simulation Examples/crankarmaxle.sldprt
 samples/Simulation Examples/crankpulley.sldprt
 samples/Simulation Examples/Design Scenarios/pulley.sldprt
 samples/Simulation Examples/Drop Test/block_1.sldprt
 samples/Simulation Examples/Drop Test/block_2.sldprt
+samples/Simulation Examples/Dynamics/pdes_e_box_1.sldasm
+samples/Simulation Examples/Dynamics/sop-8.sldprt
+samples/Simulation Examples/Educational Examples/spider.sldasm
 samples/Simulation Examples/Fatigue/front shock clamp.sldprt
 samples/Simulation Examples/filter.sldprt
 samples/Simulation Examples/first branch.sldprt
@@ -94,6 +104,7 @@ samples/Simulation Examples/pb bearing_1.50 bore.sldprt
 samples/Simulation Examples/pin.sldprt
 samples/Simulation Examples/plate-with-hole.sldprt
 samples/Simulation Examples/plunger.sldprt
+samples/Simulation Examples/pulley_bearing.sldprt
 samples/Simulation Examples/regulator.sldprt
 samples/Simulation Examples/remoteload.sldasm
 samples/Simulation Examples/roof.sldprt
@@ -105,9 +116,11 @@ samples/Simulation Examples/Thermal/computer_chip.sldasm
 samples/Simulation Examples/Thermal/liquidjet.sldprt
 samples/Simulation Examples/Thermal/shield.sldprt
 samples/Simulation Examples/trendtracker.sldprt
+samples/Simulation Examples/Verification/b4.sldprt
 samples/Simulation Examples/Verification/beam.sldprt
 samples/Simulation Examples/Verification/buckling_1.sldprt
 samples/Simulation Examples/Verification/buckling_3.sldprt
+samples/Simulation Examples/Verification/buckling_4.sldprt
 samples/Simulation Examples/Verification/buckling_5.sldprt
 samples/Simulation Examples/Verification/coldsphere.sldprt
 samples/Simulation Examples/Verification/f5.sldprt
@@ -138,6 +151,7 @@ samples/Simulation Examples/Verification/nonlinear_static_11.sldprt
 samples/Simulation Examples/Verification/nonlinear_static_12.sldprt
 samples/Simulation Examples/Verification/nonlinear_static_13.sldprt
 samples/Simulation Examples/Verification/nonlinear_static_14.sldprt
+samples/Simulation Examples/Verification/nonlinear_static_15.sldprt
 samples/Simulation Examples/Verification/nonlinear_static_17.sldasm
 samples/Simulation Examples/Verification/nonlinear_static_3.sldprt
 samples/Simulation Examples/Verification/nonlinear_static_4.sldasm
@@ -153,6 +167,7 @@ samples/Simulation Examples/Verification/pinarm.sldprt
 samples/Simulation Examples/Verification/rblock.sldprt
 samples/Simulation Examples/Verification/rigid_punch.sldprt
 samples/Simulation Examples/Verification/s1.sldprt
+samples/Simulation Examples/Verification/s3.sldprt
 samples/Simulation Examples/Verification/s9.sldasm
 samples/Simulation Examples/Verification/static_15.sldprt
 samples/Simulation Examples/Verification/static_16.sldprt
@@ -161,9 +176,13 @@ samples/Simulation Examples/Verification/static_19.sldprt
 samples/Simulation Examples/Verification/static_20.sldasm
 samples/Simulation Examples/Verification/static_21.sldprt
 samples/Simulation Examples/Verification/static_22.sldprt
+samples/Simulation Examples/Verification/static_23.sldprt
 samples/Simulation Examples/Verification/static_24.sldprt
+samples/Simulation Examples/Verification/static_25.sldprt
 samples/Simulation Examples/Verification/static_26.sldprt
 samples/Simulation Examples/Verification/static_27.sldprt
+samples/Simulation Examples/Verification/static_28.sldasm
+samples/Simulation Examples/Verification/static_28.sldprt
 samples/Simulation Examples/Verification/static_29.sldprt
 samples/Simulation Examples/Verification/static_7.sldprt
 samples/Simulation Examples/Verification/static_8.sldprt
@@ -196,6 +215,7 @@ samples/tutorial/api/AdvancedMates/part2.sldprt
 samples/tutorial/api/AdvancedMates/plate.sldprt
 samples/tutorial/api/AdvancedMates/steel disc.sldprt
 samples/tutorial/api/assem1.sldasm
+samples/tutorial/api/assem2.sldasm
 samples/tutorial/api/assem20.sldasm
 samples/tutorial/api/asseminterferencedetection.sldasm
 samples/tutorial/api/assemsubassems.sldasm
@@ -218,17 +238,25 @@ samples/tutorial/api/face_plate_ads_geo.sldprt
 samples/tutorial/api/fpf.sldprt
 samples/tutorial/api/freezebarneedsrebuild2.sldprt
 samples/tutorial/api/interferenceassem.sldasm
+samples/tutorial/api/key pad_1.sldasm
 samples/tutorial/api/MechanicalMates/bracket.sldprt
+samples/tutorial/api/MechanicalMates/cam-follower.sldasm
 samples/tutorial/api/MechanicalMates/cover plate.sldprt
 samples/tutorial/api/MechanicalMates/cover_pllug.sldprt
 samples/tutorial/api/MechanicalMates/crank-arm.sldprt
 samples/tutorial/api/MechanicalMates/crank-knob.sldprt
 samples/tutorial/api/MechanicalMates/crank-shaft.sldprt
 samples/tutorial/api/MechanicalMates/follower_planeface.sldprt
+samples/tutorial/api/MechanicalMates/gearbox.sldasm
+samples/tutorial/api/MechanicalMates/hinge-assy.sldasm
 samples/tutorial/api/MechanicalMates/offset shaft.sldprt
 samples/tutorial/api/MechanicalMates/pinforyoke.sldprt
 samples/tutorial/api/MechanicalMates/spider.sldprt
+samples/tutorial/api/MechanicalMates/universal joint.sldasm
 samples/tutorial/api/MechanicalMates/worm gear shaft.sldprt
+samples/tutorial/api/MechanicalMates/worm gear.sldprt
+samples/tutorial/api/MechanicalMates/yoke_female.sldprt
+samples/tutorial/api/MechanicalMates/yoke_male.sldprt
 samples/tutorial/api/microphonehousing.sldprt
 samples/tutorial/api/mount plate.sldprt
 samples/tutorial/api/mxd_asm.sldasm
@@ -237,6 +265,7 @@ samples/tutorial/api/part3.sldprt
 samples/tutorial/api/patterndrivencomponentpattern.sldasm
 samples/tutorial/api/plate_ads_plusminus.sldprt
 samples/tutorial/api/pplate.sldprt
+samples/tutorial/api/reducing outlet cross inch.sldprt
 samples/tutorial/api/regularexplodestep.sldasm
 samples/tutorial/api/repairassemmates.sldasm
 samples/tutorial/api/replaceview.sldprt
@@ -249,6 +278,8 @@ samples/tutorial/api/squarepad_pink.sldprt
 samples/tutorial/api/squarepad_red.sldprt
 samples/tutorial/api/squarepad_skyblue.sldprt
 samples/tutorial/api/squarepad_yellow.sldprt
+samples/tutorial/api/straight cross inch.sldprt
+samples/tutorial/api/straight tee inch.sldprt
 samples/tutorial/api/surfcut.sldprt
 samples/tutorial/api/testimo1.sldprt
 samples/tutorial/api/testpart1.sldprt
@@ -281,6 +312,8 @@ samples/tutorial/dimxpert/advdimxpert/beater_head.sldprt
 samples/tutorial/dimxpert/advdimxpert/beater_mount.sldprt
 samples/tutorial/dimxpert/advdimxpert/beater_shaft.sldprt
 samples/tutorial/dimxpert/advdimxpert/chain_piece.sldprt
+samples/tutorial/dimxpert/advdimxpert/drum_pedal.sldasm
+samples/tutorial/dimxpert/advdimxpert/foot_board.sldprt
 samples/tutorial/dimxpert/advdimxpert/Hardware/bearing.sldprt
 samples/tutorial/dimxpert/advdimxpert/Hardware/bolt1.sldprt
 samples/tutorial/dimxpert/advdimxpert/Hardware/bolt2.sldprt
@@ -296,6 +329,7 @@ samples/tutorial/dimxpert/bracket_ads_plusminus.sldprt
 samples/tutorial/dimxpert/bracket_auto_manual.sldprt
 samples/tutorial/dimxpert/bracket_auto_plusminus.sldprt
 samples/tutorial/driveworksxpress/leg.sldprt
+samples/tutorial/driveworksxpress/universal beam.sldprt
 samples/tutorial/EDraw/claw/center.sldprt
 samples/tutorial/EDraw/claw/claw-mechanism.sldasm
 samples/tutorial/EDraw/claw/claw.sldprt
@@ -315,6 +349,7 @@ samples/tutorial/mbd/mbdadvanced/beater_head.sldprt
 samples/tutorial/mbd/mbdadvanced/beater_mount.sldprt
 samples/tutorial/mbd/mbdadvanced/beater_shaft.sldprt
 samples/tutorial/mbd/mbdadvanced/chain_piece.sldprt
+samples/tutorial/mbd/mbdadvanced/foot_board.sldprt
 samples/tutorial/mbd/mbdadvanced/Hardware/bearing.sldprt
 samples/tutorial/mbd/mbdadvanced/Hardware/bolt1.sldprt
 samples/tutorial/mbd/mbdadvanced/Hardware/bolt2.sldprt
@@ -332,6 +367,7 @@ samples/tutorial/mbd/mbdoverview/beater_head.sldprt
 samples/tutorial/mbd/mbdoverview/beater_mount.sldprt
 samples/tutorial/mbd/mbdoverview/beater_shaft.sldprt
 samples/tutorial/mbd/mbdoverview/chain_ piece.sldprt
+samples/tutorial/mbd/mbdoverview/foot_board.sldprt
 samples/tutorial/mbd/mbdoverview/Hardware/bearing.sldprt
 samples/tutorial/mbd/mbdoverview/Hardware/bolt1.sldprt
 samples/tutorial/mbd/mbdoverview/Hardware/bolt2.sldprt
@@ -344,6 +380,7 @@ samples/tutorial/mbd/mbdoverview/spring_system_cylinder.sldprt
 samples/tutorial/mbd/mbdoverview/spring_system_piston.sldprt
 samples/tutorial/mbd/mbdoverview/spring_system_shaft_clamp.sldprt
 samples/tutorial/moldedproductdesignadvanced/mousebase.sldprt
+samples/tutorial/moldedproductdesignadvanced/mousemultibody.sldprt
 samples/tutorial/moldedproductdesignadvanced/mousesplit.sldprt
 samples/tutorial/motionstudies/animation/arm left.sldprt
 samples/tutorial/motionstudies/animation/arm right.sldprt
@@ -355,46 +392,9 @@ samples/tutorial/motionstudies/animation/hook.sldprt
 samples/tutorial/motionstudies/animation/link_plunger.sldprt
 samples/tutorial/motionstudies/animation/long bolt_plunger.sldprt
 samples/tutorial/motionstudies/animation/nut_plunger.sldprt
+samples/tutorial/motionstudies/animation/plunger.sldprt
 samples/tutorial/motionstudies/animation/short bolt_plunger.sldprt
 samples/tutorial/motionstudies/camshaft.sldprt
 samples/tutorial/motionstudies/redundancies/bar.sldprt
 samples/tutorial/motionstudies/redundancies/base linkage.sldprt
 samples/tutorial/motionstudies/redundancies/base.sldprt
-samples/tutorial/motionstudies/rocker_shaft.sldprt
-samples/tutorial/motionstudies/valve.sldprt
-samples/tutorial/motionstudies/valve_guide.sldprt
-samples/tutorial/motionstudies/weldingrobot/plate1.sldprt
-samples/tutorial/multibody/multi_inter.sldprt
-samples/tutorial/multibody/multi_local.sldprt
-samples/tutorial/PDMWorks/magnet.sldprt
-samples/tutorial/PDMWorks/membrane.sldprt
-samples/tutorial/PDMWorks/second_speaker.sldprt
-samples/tutorial/routing-pipes/15inschedule40-routeassy1-finalskid.sldprt
-samples/tutorial/routing-pipes/1inschedule40-routeassy1-finalskid.sldprt
-samples/tutorial/routing-pipes/4inschedule40-routeassy1-finalskid.sldprt
-samples/tutorial/routing-pipes/cabinet.sldprt
-samples/tutorial/routing-pipes/door.sldprt
-samples/tutorial/routing-pipes/filter.sldprt
-samples/tutorial/routing-pipes/fittings/cabinet.SLDPRT
-samples/tutorial/routing-pipes/fittings/door.SLDPRT
-samples/tutorial/routing-pipes/fittings/Filter.SLDPRT
-samples/tutorial/routing-pipes/fittings/Regulator.SLDPRT
-samples/tutorial/routing-pipes/pipe.sldprt
-samples/tutorial/routing-pipes/regulator.sldprt
-samples/tutorial/routing-pipes/routes/4in Schedule40-ReducerRoute.sldprt
-samples/tutorial/routing-pipes/routes/6in Schedule40-ReducerRoute.sldprt
-samples/tutorial/routing-pipes/tube - rubber.sldprt
-samples/tutorial/routing-pipes/tube-500x010-routeassy2-finalskid.sldprt
-samples/tutorial/sheetmetal/formtools/cover.sldprt
-samples/tutorial/sheetmetal/formtools/sample_louver.sldprt
-samples/tutorial/smartcomponents/bearing.sldprt
-samples/tutorial/smartcomponents/bearing_trainer.sldprt
-samples/tutorial/smartcomponents/flatwasher.sldprt
-samples/tutorial/smartcomponents/lockwasher.sldprt
-samples/tutorial/smartcomponents/npd bearing.sldprt
-samples/tutorial/smartcomponents/socket head cap screw.sldprt
-samples/tutorial/smartcomponents/stepped_shaft.sldasm
-samples/tutorial/smartcomponents/stepped_shaft.sldprt
-samples/tutorial/swutilities/bracket_a.sldprt
-samples/tutorial/swutilities/bracket_b.sldprt
-samples/tutorial/tolanalyst/introduction/cover plate.sldprt

@@ -27,7 +27,7 @@ pub(crate) fn set_integer(contents: &mut DisplayArchiveContents, path: &str, val
 }
 
 #[path = "../../examples/support/archive_scalar_trace.rs"]
-mod archive_scalar_trace;
+pub(crate) mod archive_scalar_trace;
 
 fn scalar_oracle_value(value: &DisplayFieldValue) -> String {
     archive_scalar_trace::scalar(value)

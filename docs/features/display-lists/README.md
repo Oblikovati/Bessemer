@@ -272,11 +272,12 @@ concurrent deterministic writes. The inline fixture has 37 variable entries per
 facet and 60 outer entries, giving an exact aggregate boundary of 134. The external
 fixture's boundary is 65.
 
-On Windows x64, Rust 1.99.0 MSVC, 2026-10-25, the current
-[whole-stream audit](archive-audit.json) reconstructed 404 of 1,086 complete native
+On Windows x64, Rust 1.99.0 MSVC, 2026-10-25, the shaded-body
+checkpoint reconstructed 404 of 1,086 complete native
 streams. Two processes produced identical bytes and failures; all remaining cases
 returned explicit unsupported layouts. The major remaining gaps include display
-items, scenes, additional reference geometry and earlier versions. This is byte
+items, scenes, additional reference geometry and earlier versions. The geometry
+extension and current audit are recorded below. This is byte
 reconstruction evidence, not complete-field, geometric or application acceptance.
 Successful paths are retained in bounded manifest files referenced by the report.
 The audit rejects lost earlier successes before replacing its evidence; a forced
@@ -295,6 +296,44 @@ cargo test --test display_shaded
 cargo build --release --example rebuild_display_archives --example rebuild_tessellations
 python -B -X utf8 docs/features/display-lists/audit_archive_corpus.py target/pinned-1.99.0/release/examples/rebuild_display_archives.exe
 python -B -X utf8 docs/features/display-lists/verify_reused_facets.py target/pinned-1.99.0/release/examples/rebuild_tessellations.exe
+```
+
+## All modern reference-geometry kinds
+
+At display/file version 19000, the shared collector now reads and writes all seven
+documented kinds: origin, point, axis, plane, coordinate system, CPoint and route
+point. The discriminator is checked once before its body is read. Plane data keeps
+the fixed 120-byte transform overload. The other records retain their raw vectors,
+integers, extra CPoint fields and CString representations without geometric
+normalization. Earlier version-dependent layouts still require implementation.
+
+The [independent reference vectors](reference-vectors.json) replace the collector
+inside an owned complete part stream. They cover every kind, reordered duplicate
+kinds, signaling/quiet NaNs, signed zero, UTF-16 supplementary characters, embedded
+NULs and noncanonical string prefixes. A third vector independently encodes the
+expected nested CPoint edit. The three cases match 388 scalar values and 445 full
+geometry trace fields, including every fixed-transform field.
+
+Eight tests cover complete reconstruction, discriminator failures, high-word-first
+counts, exact aggregate limits, every new collector/footer truncation, missing
+fields, equivalent-text byte limits, independent expected edit bytes, whole-file
+edit/reopen/revert, input isolation and eight concurrent edits against the same
+expected result. The reference module was extracted separately; its existing
+owned fixtures and all 1,025 transform vectors remained unchanged.
+
+The current [whole-stream audit](archive-audit.json) reconstructs 453 of 1,086
+native streams and matches 90,067 independent reference-geometry fields within
+those complete streams. Two processes return identical reconstruction, diagnostics
+and field traces. Failed streams publish no partial trace, and the audit preserves
+all earlier accepted paths. This extends geometry-field verification; complete
+field verification for the rest of each archive, geometry validity and native
+application acceptance remain separate requirements.
+
+```text
+python -B -X utf8 docs/features/display-lists/generate_reference_vectors.py
+cargo test --test display_reference_geometry
+cargo build --release --example rebuild_display_archives
+python -B -X utf8 docs/features/display-lists/audit_archive_corpus.py target/pinned-1.99.0/release/examples/rebuild_display_archives.exe
 ```
 
 ## Remaining implementation and integration gate
