@@ -26,26 +26,12 @@ pub(crate) fn set_integer(contents: &mut DisplayArchiveContents, path: &str, val
     field.value = DisplayFieldValue::I32(value);
 }
 
+#[path = "../../examples/support/archive_scalar_trace.rs"]
+mod archive_scalar_trace;
+
 fn scalar_oracle_value(value: &DisplayFieldValue) -> String {
-    match value {
-        DisplayFieldValue::U8(value) => format!("i:{value}"),
-        DisplayFieldValue::U16(value) => format!("i:{value}"),
-        DisplayFieldValue::I16(value) => format!("i:{value}"),
-        DisplayFieldValue::I32(value) => format!("i:{value}"),
-        DisplayFieldValue::U32(value) => format!("i:{value}"),
-        DisplayFieldValue::F32(value) => format!("f:{:016x}", f64::from(value.value()).to_bits()),
-        DisplayFieldValue::F64(value) => format!("f:{:016x}", value.bits()),
-        DisplayFieldValue::Text(value) => format!(
-            "s:{}",
-            value
-                .text()
-                .as_bytes()
-                .iter()
-                .map(|byte| format!("{byte:02x}"))
-                .collect::<String>()
-        ),
-        other => panic!("{other:?}; expected scalar oracle field"),
-    }
+    archive_scalar_trace::scalar(value)
+        .unwrap_or_else(|| panic!("{value:?}; expected scalar oracle field"))
 }
 
 pub(crate) fn decode_document(bytes: &[u8], kind: DisplayDocumentKind) -> DisplayArchive {
