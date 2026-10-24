@@ -50,8 +50,8 @@ supports the filler-free layout; it is not a live test of this implementation.
 
 ## Remaining interoperability layers
 
-1. Decode previews, compressed-block carriers, and XML metadata using the reference
-   reader and owned expected outputs.
+1. Decode previews and XML metadata using the reference reader and owned expected
+   outputs. [Compressed-block carriers](../compressed-blocks/README.md) are implemented.
 2. Decode archive primitives and typed model records for parts, assemblies, and
    drawings. Keep unknown payload bytes available for lossless edits.
 3. Decode Parasolid partitions, bodies, topology, geometry, and rollback deltas.
