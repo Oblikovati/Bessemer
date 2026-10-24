@@ -8,10 +8,12 @@
 //! ```
 
 mod archive;
+mod archive_codec;
 pub mod block_stream;
 mod compression;
 mod document;
 mod error;
+pub mod history;
 mod records;
 mod writer;
 

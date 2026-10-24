@@ -34,3 +34,7 @@ jobs:
       - uses: actions/checkout@v5
       - run: rustup toolchain install 1.99.0 --profile minimal --component rustfmt,clippy
       - run: cargo xtask full
+      - if: matrix.name == 'Linux x86_64'
+        run: rustup toolchain install nightly-2026-10-23 --profile minimal --component rust-src
+      - if: matrix.name == 'Linux x86_64'
+        run: cargo xtask tsan

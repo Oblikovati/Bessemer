@@ -9,7 +9,9 @@ with size and CRC checks, and replaces existing stream contents. A save without
 edits preserves the whole file byte for byte. An edited save preserves every
 untouched stream's compressed bytes. `bessemer::block_stream` also reads and writes
 the compressed-block carriers used by body partitions and add-ins, with explicit
-framing and expansion limits. Typed models, geometry, and semantic editing
+framing and expansion limits. `bessemer::history` reads and writes standalone version
+histories, including typed stamp edits and shared date-code objects.
+Part, assembly, and drawing models, geometry, and their semantic editing
 are still to be implemented; this is not yet Corliss feature parity.
 
 ```rust
@@ -23,9 +25,13 @@ std::fs::write("copy.sldprt", doc.to_bytes()?)?;
 Run `cargo test` for the owned native fixtures and malformed-input tests.
 `cargo xtask pr` runs formatting, clippy, build, tests, and documentation examples.
 `cargo xtask full` currently runs those same gates across the CI platform matrix.
+The Linux full check also runs `cargo xtask tsan` with the pinned nightly and
+`rust-src`, instrumenting dependencies and the standard library as well as Bessemer.
 See [container evidence and remaining work](docs/features/container/README.md).
 The [compressed-block evidence](docs/features/compressed-blocks/README.md) records
 the implemented carrier contract and its verification limits.
+See [version-history evidence](docs/features/version-history/README.md) for archive
+coverage and the installed-corpus verification.
 
 
 This library is named after Sir Henry Bessemer (1813–1898) an English engineer, inventor, and entrepreneur 
