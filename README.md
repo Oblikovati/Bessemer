@@ -15,8 +15,11 @@ histories, including typed stamp edits and shared date-code objects.
 revision logs, shared external references, and version-dependent stored fields.
 `bessemer::biography` reads and writes product-build and environment records,
 preserving their raw values and offering explicit repeated-string expansion.
-Part, assembly, and drawing models, geometry, and their semantic editing
-are still to be implemented; this is not yet Corliss feature parity.
+`bessemer::parasolid` reads and writes binary transmit partitions and rollback
+deltas using explicit base schemas, preserving every typed field and raw flag.
+Complete part, assembly, and drawing model archives, geometric interpretation and
+validation, and semantic CAD editing remain to be implemented; this is not yet
+Corliss feature parity.
 
 ```rust
 let bytes = std::fs::read("part.sldprt")?;
@@ -40,6 +43,8 @@ See [header archive evidence](docs/features/header-archives/README.md) for field
 coverage, version boundaries, graph preservation, and remaining limits.
 The [biography evidence](docs/features/biography-archives/README.md) covers stored
 environment observations and repeated-string reading and writing.
+See [Parasolid transmit evidence](docs/features/parasolid-transmit/README.md) for
+schema inputs, field coverage, complete-corpus reconstruction, and acceptance limits.
 
 
 This library is named after Sir Henry Bessemer (1813–1898) an English engineer, inventor, and entrepreneur 

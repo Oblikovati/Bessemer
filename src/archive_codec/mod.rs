@@ -1,4 +1,5 @@
 mod cursor;
+mod number;
 mod objects;
 mod preserved;
 mod text;
@@ -13,3 +14,5 @@ use crate::{BessemerError, FailureClass};
 pub(crate) fn malformed(cause: impl Into<String>) -> BessemerError {
     BessemerError::new("archive codec", "archive", FailureClass::Invalid, cause)
 }
+
+pub use number::StoredDouble;

@@ -63,9 +63,12 @@ supports the filler-free layout; it is not a live test of this implementation.
    outputs. [Compressed-block carriers](../compressed-blocks/README.md) are implemented.
 2. Decode archive primitives and typed model records for parts, assemblies, and
    drawings. [Standalone version histories](../version-history/README.md) and their
-   CString/object-map primitives are implemented. Keep unknown payload bytes
-   available for lossless edits.
-3. Decode Parasolid partitions, bodies, topology, geometry, and rollback deltas.
+   CString/object-map primitives are implemented, as are
+   [headers](../header-archives/README.md) and [biographies](../biography-archives/README.md).
+   Keep unknown payload bytes available for lossless edits.
+3. [Parasolid transmit partitions and rollback deltas](../parasolid-transmit/README.md)
+   now have typed codecs. Higher-level topology and geometry interpretation and
+   validation remain to be implemented.
 4. Add typed edit operations with history and validation contracts. Confirm each
    operation against independent expected results and native application opens.
 
