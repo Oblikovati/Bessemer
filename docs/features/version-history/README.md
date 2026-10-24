@@ -105,7 +105,7 @@ Clause 11.7 was checked again in edition 0.100 and its layout remained unchanged
 The checked edition's full raw-file SHA-256 was
 `12655c670ced1e12e6a78a1ce90f33164669ae6de9c30d824b77b158197ff639`.
 The saved UTF-8/LF clause fragment has SHA-256
-`1451a0e871096e6959f4d408891007d8872691755c3edbd5ad53bc9a82817aa0`.
+`fb4034165c5a014ad9ec8eaa8fa66a42ef879ec8419b4addf6512b3690f9d663`.
 
 | Reference reader | SHA-256 |
 | --- | --- |
