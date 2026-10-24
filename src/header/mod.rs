@@ -13,11 +13,11 @@ mod values;
 use crate::archive_codec::PreservedContents;
 use crate::{BessemerError, FailureClass, Result};
 
-pub use crate::archive_codec::{ArchiveString, TextEncoding};
+pub use crate::archive_codec::{ArchiveString, StoredDouble, TextEncoding};
 pub use records::{ExternalFileReference, HeaderRecord, LogRecord, ObjectList, StringArray};
 pub use types::{
     ArchiveVersion, HeaderBounds, HeaderBox, HeaderContents, HeaderNode, HeaderObject,
-    HeaderObjectId, HeaderReference, SharedFileName, StoredDouble,
+    HeaderObjectId, HeaderReference, SharedFileName,
 };
 
 /// Immutable, validated header archive with byte-preserving no-op serialization.
