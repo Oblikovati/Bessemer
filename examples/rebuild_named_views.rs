@@ -62,3 +62,6 @@ fn limits() -> DisplayViewLimits {
         maximum_nested_entries: 2_000_000,
     }
 }
+
+#[path = "support/view_trace.rs"]
+mod view_trace;

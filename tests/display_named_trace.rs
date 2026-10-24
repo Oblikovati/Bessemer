@@ -51,3 +51,6 @@ fn extended_perspective_traces_preserve_signaling_nan_and_negative_zero_field_id
     assert!(trace.contains("root[0].model_to_view_xform.perspective_info.min_far_clip_plane_distance=f:7ff0000000000042\n"));
     assert!(trace.contains("root[0].model_to_view_xform.perspective_info.camera_fov_plane_distance=f:8000000000000000\n"));
 }
+
+#[path = "../examples/support/view_trace.rs"]
+mod view_trace;
