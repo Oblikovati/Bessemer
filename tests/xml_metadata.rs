@@ -278,3 +278,12 @@ fn completed_empty_streams_are_distinct_from_an_empty_root() {
     empty.document = None;
     assert!(root.with_source(empty, LIMITS).unwrap().root().is_none());
 }
+
+#[test]
+fn physical_utf8_fixture_crlf_bytes_survive_repository_checkout() {
+    assert!(PROPERTIES.windows(2).any(|pair| pair == b"\r\n"));
+    let bytes = fixture("properties-utf8-bom.bin");
+    assert_eq!(&bytes[3..], PROPERTIES);
+    let parsed = parse("docProps/custom.xml", PROPERTIES);
+    assert!(parsed.source().document.as_ref().unwrap().contains("\r\n"));
+}
