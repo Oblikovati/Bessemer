@@ -21,3 +21,5 @@ macro_rules! stored_real {
 }
 
 stored_real!(StoredDouble, u64, f64, "bessemer::header::StoredDouble");
+
+stored_real!(StoredFloat, u32, f32, "bessemer::tessellation::StoredFloat");
