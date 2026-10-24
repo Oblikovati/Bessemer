@@ -98,7 +98,7 @@ impl<'a> HistoryReader<'a> {
     }
 }
 
-fn read_stamp(cursor: &mut ArchiveCursor<'_>) -> Result<RevisionStamp> {
+pub(crate) fn read_stamp(cursor: &mut ArchiveCursor<'_>) -> Result<RevisionStamp> {
     Ok(RevisionStamp {
         revision_status: cursor.u16()?,
         unknown_0c: cursor.u16()?,

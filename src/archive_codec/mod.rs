@@ -1,9 +1,11 @@
 mod cursor;
 mod objects;
+mod preserved;
 mod text;
 
 pub(crate) use cursor::ArchiveCursor;
 pub(crate) use objects::{ArchiveClass, ArchiveMapIndex, ObjectReader, ObjectRecord, ObjectWriter};
+pub(crate) use preserved::PreservedContents;
 pub use text::{ArchiveString, TextEncoding};
 
 use crate::{BessemerError, FailureClass};
