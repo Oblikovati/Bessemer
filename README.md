@@ -1,7 +1,27 @@
 ## Bessemer 
 
-Bessemer is a Rust library for reading and writing SolidWorks documents (parts, assemblies, drawings .idw). 
+Bessemer is a Rust library being built to read and write SolidWorks documents
+(parts .sldprt, assemblies .sldasm, and drawings .slddrw).
 CAD kernels use it to exchange data with SolidWorks files. Martensite is its first consumer.
+
+The first implemented layer reads SolidWorks version-4 containers, extracts streams
+with size and CRC checks, and replaces existing stream contents. A save without
+edits preserves the whole file byte for byte. An edited save preserves every
+untouched stream's compressed bytes. Typed models, geometry, and semantic editing
+are still to be implemented; this is not yet Corliss feature parity.
+
+```rust
+let bytes = std::fs::read("part.sldprt")?;
+let mut doc = bessemer::Document::from_bytes(&bytes)?;
+let preview = doc.read_stream_limited("PreviewPNG", 16 * 1024 * 1024)?;
+doc.replace_stream("PreviewPNG", preview)?;
+std::fs::write("copy.sldprt", doc.to_bytes()?)?;
+```
+
+Run `cargo test` for the owned native fixtures and malformed-input tests.
+`cargo xtask pr` runs formatting, clippy, build, tests, and documentation examples.
+`cargo xtask full` currently runs those same gates across the CI platform matrix.
+See [container evidence and remaining work](docs/features/container/README.md).
 
 
 This library is named after Sir Henry Bessemer (1813–1898) an English engineer, inventor, and entrepreneur 

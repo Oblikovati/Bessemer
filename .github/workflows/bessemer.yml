@@ -1,0 +1,36 @@
+name: bessemer
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pr:
+    name: PR gate (Linux x86_64)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - run: rustup toolchain install 1.99.0 --profile minimal --component rustfmt,clippy
+      - run: cargo xtask pr
+  full:
+    name: Full gate (${{ matrix.name }})
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Linux x86_64
+            os: ubuntu-24.04
+          - name: macOS x86_64
+            os: macos-15-intel
+          - name: macOS arm64
+            os: macos-15
+          - name: Windows x64
+            os: windows-2025
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v5
+      - run: rustup toolchain install 1.99.0 --profile minimal --component rustfmt,clippy
+      - run: cargo xtask full
