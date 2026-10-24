@@ -39,6 +39,27 @@ impl<'a> ArchiveCursor<'a> {
         Ok(self.u32()? as i32)
     }
 
+    pub(crate) fn u64(&mut self) -> Result<u64> {
+        let low = u64::from(self.u32()?);
+        Ok(low | (u64::from(self.u32()?) << 32))
+    }
+
+    pub(crate) fn collection_count(&mut self, minimum_size: usize) -> Result<usize> {
+        let short = self.u16()?;
+        let count = if short == u16::MAX {
+            self.u32()?
+        } else {
+            u32::from(short)
+        };
+        let limit = (self.bytes.len() - self.offset) / minimum_size;
+        if count as usize > limit {
+            return Err(malformed(format!(
+                "collection count {count}; expected 0..={limit} for remaining bytes"
+            )));
+        }
+        Ok(count as usize)
+    }
+
     pub(crate) fn count(&mut self, minimum_size: usize, label: &str) -> Result<usize> {
         let count = self.i32()?;
         let available = self.bytes.len() - self.offset;
