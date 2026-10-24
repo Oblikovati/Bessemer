@@ -17,7 +17,7 @@ pub(super) fn read(
     }
 }
 
-fn read_compact(cursor: &mut ArchiveCursor<'_>) -> Result<CompactTransform> {
+pub(super) fn read_compact(cursor: &mut ArchiveCursor<'_>) -> Result<CompactTransform> {
     let has_matrix = cursor.u8()?;
     let matrix = read_optional_matrix(cursor, has_matrix)?;
     let translation = read_point(cursor)?;
@@ -93,6 +93,10 @@ pub(super) fn validate(contents: &TransformContents) -> Result<()> {
     let TransformContents::Compact(compact) = contents else {
         return Ok(());
     };
+    validate_compact(compact)
+}
+
+pub(super) fn validate_compact(compact: &CompactTransform) -> Result<()> {
     require_matrix(compact)?;
     let selector = match compact.perspective {
         PerspectivePayload::Base(_) => 0x10,
@@ -139,7 +143,7 @@ pub(super) fn encode(contents: &TransformContents) -> Vec<u8> {
     output
 }
 
-fn write_compact(compact: &CompactTransform, output: &mut Vec<u8>) {
+pub(super) fn write_compact(compact: &CompactTransform, output: &mut Vec<u8>) {
     output.push(compact.has_matrix);
     if let Some(matrix) = &compact.matrix {
         for row in matrix {
