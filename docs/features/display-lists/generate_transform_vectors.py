@@ -21,9 +21,13 @@ def compact(presence: int, flags: int) -> bytes:
     return result
 
 
+def fixed_transform() -> bytes:
+    return doubles(9)+struct.pack("<ii",-1,2147483647)+doubles(3,9)+doubles(1,12)+struct.pack("<ii",-2147483648,123456789)
+
+
 if __name__ == "__main__":
     records = [(0,compact(presence,flags)) for presence in (0,1,2,255) for flags in range(256)]
-    fixed = doubles(9)+struct.pack("<ii",-1,2147483647)+doubles(3,9)+doubles(1,12)+struct.pack("<ii",-2147483648,123456789)
+    fixed = fixed_transform()
     assert len(fixed) == 120
     records.append((1,fixed))
     output = bytearray(struct.pack("<I",len(records)))

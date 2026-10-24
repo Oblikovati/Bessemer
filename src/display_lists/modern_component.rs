@@ -83,10 +83,7 @@ fn folder(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 
 fn geometry_and_state(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.text("seed_reference_id")?;
-    archive.scope(
-        "ref_geom_data_collector",
-        super::modern_part_tess::reference_geometry,
-    )?;
+    archive.scope("ref_geom_data_collector", super::modern_reference::read)?;
     tessellation_numbers(archive)?;
     archive.text("display_state_name")?;
     archive.i32("routing_assembly")?;

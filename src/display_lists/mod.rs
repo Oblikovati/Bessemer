@@ -73,3 +73,5 @@ pub use archive_types::{
 };
 
 pub use archive_types::{DisplayObjectId, DisplayObjectPointer};
+
+mod modern_reference;
