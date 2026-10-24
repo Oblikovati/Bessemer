@@ -13,10 +13,10 @@ fn owned_native_assembly_decodes_every_byte_and_forces_exact_reconstruction() {
     };
     let document = Document::from_bytes(include_bytes!("fixtures/blank-assembly.SLDASM")).unwrap();
     let bytes = document.read_stream("Contents/DisplayLists").unwrap();
-    let archive = DisplayArchive::from_bytes(&bytes, context, LIMITS).unwrap();
+    let archive = DisplayArchive::from_bytes(&bytes, context.clone(), LIMITS).unwrap();
     assert_eq!(bytes.len(), 5446);
     assert_eq!(archive.to_bytes().unwrap(), bytes);
-    let rebuilt = DisplayArchive::new(archive.contents().clone(), context, LIMITS).unwrap();
+    let rebuilt = DisplayArchive::new(archive.contents().clone(), context.clone(), LIMITS).unwrap();
     assert_eq!(rebuilt.to_bytes().unwrap(), bytes);
 }
 
@@ -34,7 +34,7 @@ fn object_is_registered_before_its_body_so_owner_cycles_preserve_identity() {
         kind: DisplayDocumentKind::Assembly,
         ..context()
     };
-    let archive = DisplayArchive::from_bytes(bytes, context, LIMITS).unwrap();
+    let archive = DisplayArchive::from_bytes(bytes, context.clone(), LIMITS).unwrap();
     let owner = archive
         .contents()
         .fields
@@ -53,7 +53,7 @@ fn object_is_registered_before_its_body_so_owner_cycles_preserve_identity() {
         "uoTempSubAssemblySHDData_c"
     );
     assert_eq!(
-        DisplayArchive::new(archive.contents().clone(), context, LIMITS)
+        DisplayArchive::new(archive.contents().clone(), context.clone(), LIMITS)
             .unwrap()
             .to_bytes()
             .unwrap(),
@@ -146,10 +146,10 @@ fn independently_built_populated_component_records_preserve_both_display_mode_la
         ..context()
     };
     for (bytes, oracle, fields) in fixtures {
-        let archive = DisplayArchive::from_bytes(bytes, context, LIMITS).unwrap();
+        let archive = DisplayArchive::from_bytes(bytes, context.clone(), LIMITS).unwrap();
         assert_eq!(check_scalar_table(&archive, oracle), fields);
         assert_eq!(
-            DisplayArchive::new(archive.contents().clone(), context, LIMITS)
+            DisplayArchive::new(archive.contents().clone(), context.clone(), LIMITS)
                 .unwrap()
                 .to_bytes()
                 .unwrap(),

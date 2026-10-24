@@ -1,8 +1,8 @@
 use super::archive_decode::DisplayDecoder;
-use crate::Result;
+use crate::{Result, archive_codec::ArchiveString};
 
-pub(super) fn read(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    archive.text("comp_id_string")?;
+pub(super) fn read(archive: &mut DisplayDecoder<'_>) -> Result<std::sync::Arc<ArchiveString>> {
+    let component_id = archive.text_value("comp_id_string")?;
     archive.transform("comp_xform")?;
     archive.bounds("comp_bbox")?;
     archive.object("comp_viz_prop", &["moVisualProperties_c"])?;
@@ -16,7 +16,8 @@ pub(super) fn read(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     integers(archive, "gobbled_up_atom_ids")?;
     display_mode(archive)?;
     archive.f64("unknown_190")?;
-    reference(archive)
+    reference(archive)?;
+    Ok(component_id)
 }
 
 fn display_mode(archive: &mut DisplayDecoder<'_>) -> Result<()> {

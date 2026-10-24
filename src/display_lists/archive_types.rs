@@ -3,7 +3,7 @@ use super::{
     NamedView, SpatialView, StoredDouble,
 };
 use crate::archive_codec::{HeaderBox, StoredFloat};
-use std::sync::Arc;
+use std::{collections::BTreeSet, sync::Arc};
 
 /// Explicit document kind supplied by the application; the stream does not store it.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -15,7 +15,7 @@ pub enum DisplayDocumentKind {
 }
 
 /// Native archive context, separate from stored view flags and add-in version strings.
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+#[derive(Debug, Clone, PartialEq, Eq)]
 pub struct DisplayArchiveContext {
     /// Unsigned display-list version.
     pub version: DisplayVersion,
@@ -23,6 +23,8 @@ pub struct DisplayArchiveContext {
     pub kind: DisplayDocumentKind,
     /// Native current-file version, independent of the display-list archive version.
     pub file_version: u32,
+    /// Exact component IDs from the parsed external face directory; empty when absent.
+    pub face_tessellation_components: Arc<BTreeSet<String>>,
 }
 
 /// Operation-local byte, field, object, nesting and aggregate collection limits.
@@ -138,6 +140,15 @@ pub enum DisplayFieldValue {
     AnnotationViews(Option<AnnotationViewContents>),
     /// Complete 3D-view body.
     SpatialViews(Option<Vec<SpatialView>>),
+    /// Complete inline facet container, using the shared tessellation codec.
+    Facet(Box<crate::tessellation::FacetContainer>),
+    /// An omitted inline facet supplied by the declared component's external face block.
+    ExternalFacet {
+        /// Component identity from the external directory.
+        component_id: Arc<ArchiveString>,
+        /// Zero-based face position consumed within this component's part tessellation.
+        index: u32,
+    },
 }
 
 /// One ordered field with a parser-derived scope path.

@@ -18,6 +18,10 @@ impl DisplayOutput {
         self.bytes
     }
 
+    pub fn remaining(&self) -> usize {
+        self.maximum.saturating_sub(self.bytes.len())
+    }
+
     fn reserve(&self, additional: usize) -> Result<()> {
         let length = self.bytes.len().checked_add(additional).ok_or_else(|| {
             invalid(format!(

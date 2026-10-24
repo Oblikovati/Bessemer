@@ -32,8 +32,17 @@ def collect() -> tuple[bytes, list[tuple[str, bytes, int]], str]:
         name = path.relative_to(Path(swcover.SAMPLES)).as_posix()
         records.append((name, raw, archive.version & 0xffffffff))
         manifest.update(name.encode()+b"\0"+raw)
-        framed.extend(struct.pack("<IIBI", archive.version & 0xffffffff, 19000, int(archive.doc_kind == "assembly"), len(raw))+raw)
+        components = sorted(getattr(archive, "face_tess_comp_ids", ()))
+        framed.extend(context_frame(archive.version, archive.doc_kind, components)+struct.pack("<I", len(raw))+raw)
     return struct.pack("<I", len(records))+framed, records, manifest.hexdigest()
+
+
+def context_frame(version: int, kind: str, components: list[str]) -> bytes:
+    framed = struct.pack("<IIBI", version & 0xffffffff, 19000, int(kind == "assembly"), len(components))
+    for component in components:
+        encoded = component.encode()
+        framed += struct.pack("<I", len(encoded))+encoded
+    return framed
 
 
 def results(raw: bytes, records: list[tuple[str, bytes, int]]) -> dict[str, object]:
@@ -73,8 +82,29 @@ def audit(executable: str) -> None:
         assert first == destination.read_bytes()
         report = results(first, records)
     report.update({"status": "incomplete implementation audit; missing streams are required work", "documents": len(records), "manifest_sha256": manifest, "accepted_count": len(report["accepted"]), "two_processes_identical": True})
-    Path(__file__).with_name("archive-audit.json").write_text(json.dumps(report, indent=2)+"\n", encoding="utf-8", newline="\n")
+    write_report(report)
     print(json.dumps({key: value for key, value in report.items() if key not in ("accepted", "failures")}))
+
+
+def accepted_paths(report: dict[str, object]) -> set[str]:
+    if "accepted" in report:
+        return set(report["accepted"])
+    return {name for filename in report["accepted_manifests"] for name in Path(__file__).with_name(filename).read_text(encoding="utf-8").splitlines()}
+
+
+def write_report(report: dict[str, object]) -> None:
+    destination = Path(__file__).with_name("archive-audit.json")
+    previous = json.loads(destination.read_text(encoding="utf-8"))
+    lost = accepted_paths(previous)-set(report["accepted"])
+    assert not lost, f"lost complete reconstruction for {sorted(lost)}; expected previous successes to remain accepted"
+    accepted = report.pop("accepted")
+    manifests: list[str] = []
+    for start in range(0, len(accepted), 400):
+        name = f"archive-accepted-{start//400:03}.txt"
+        Path(__file__).with_name(name).write_text("\n".join(accepted[start:start+400])+"\n", encoding="utf-8", newline="\n")
+        manifests.append(name)
+    report["accepted_manifests"] = manifests
+    destination.write_text(json.dumps(report, indent=2)+"\n", encoding="utf-8", newline="\n")
 
 
 if __name__ == "__main__":

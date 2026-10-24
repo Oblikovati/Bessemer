@@ -116,7 +116,7 @@ impl FacetCodec for FacetEdgePoints {
 
 fn require_elements(
     cursor: &ArchiveCursor<'_>,
-    context: &FacetState,
+    context: &mut FacetState,
     count: usize,
     minimum: usize,
 ) -> Result<()> {

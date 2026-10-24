@@ -20,7 +20,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 fn rebuild(bytes: &[u8]) -> Result<Vec<u8>, Box<dyn Error>> {
     let mut remaining = bytes;
     let count = take_u32(&mut remaining)?;
-    require_count(count, remaining.len(), 13)?;
+    require_count(count, remaining.len(), 17)?;
     let mut output = count.to_le_bytes().to_vec();
     for _ in 0..count {
         let context = read_context(&mut remaining)?;
@@ -45,11 +45,26 @@ fn read_context(remaining: &mut &[u8]) -> Result<DisplayArchiveContext, Box<dyn 
             return Err(format!("document kind {other}; expected part 0 or assembly 1").into());
         }
     };
+    let components = component_ids(remaining)?;
     Ok(DisplayArchiveContext {
         version,
         kind,
         file_version,
+        face_tessellation_components: std::sync::Arc::new(components),
     })
+}
+
+fn component_ids(
+    remaining: &mut &[u8],
+) -> Result<std::collections::BTreeSet<String>, Box<dyn Error>> {
+    let count = take_u32(remaining)?;
+    require_count(count, remaining.len(), 4)?;
+    let mut components = std::collections::BTreeSet::new();
+    for _ in 0..count {
+        let length = take_u32(remaining)? as usize;
+        components.insert(std::str::from_utf8(take(remaining, length)?)?.to_owned());
+    }
+    Ok(components)
 }
 
 fn audit(payload: &[u8], context: DisplayArchiveContext) -> (u8, Vec<u8>) {
@@ -67,7 +82,7 @@ fn reconstruct(payload: &[u8], context: DisplayArchiveContext) -> Result<Vec<u8>
         maximum_depth: 256,
         maximum_entries: 2_000_000,
     };
-    let parsed = DisplayArchive::from_bytes(payload, context, limits)?;
+    let parsed = DisplayArchive::from_bytes(payload, context.clone(), limits)?;
     let rebuilt = DisplayArchive::new(parsed.contents().clone(), context, limits)?.to_bytes()?;
     if rebuilt != payload {
         return Err("reconstructed stream differed; expected complete byte identity".into());

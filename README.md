@@ -28,8 +28,9 @@ pixels, and supports isolated palette and pixel replacement.
 It also reads, constructs, edits, and writes static PNG previews, preserving stored
 chunks and exact samples across all defined color/depth pairs and Adam7 interlace.
 `bessemer::display_lists` currently provides lossless compact/fixed transform and
-versioned named, annotation and 3D-view codecs, plus complete blank-part and
-blank-assembly stream checkpoints. Complete display-list corpus support is in development. See the
+versioned named, annotation and 3D-view codecs, plus part/assembly archive reading,
+validated edits and writing with inline facets and explicit external face references.
+Complete display-list corpus support is in development. See the
 [display-list work and evidence](docs/features/display-lists/README.md).
 Complete part, assembly, and drawing model archives, geometric interpretation and
 validation, and semantic CAD editing remain to be implemented; this is not yet

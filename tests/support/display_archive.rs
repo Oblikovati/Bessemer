@@ -12,6 +12,7 @@ pub(crate) fn context() -> DisplayArchiveContext {
         version: DisplayVersion::new(19000),
         kind: DisplayDocumentKind::Part,
         file_version: 19000,
+        face_tessellation_components: Default::default(),
     }
 }
 

@@ -69,6 +69,10 @@ every byte of 170 directories and 193 blocks: 788 block components, 35,242 faces
 and 150,411,068 extracted bytes. The SHA-256 of sorted relative path, NUL, stream
 name, NUL, and raw bytes was
 `a105ed302113e04c050e436f7fd6f0e224870219b8f95a1bf8106aab9f4a1113`.
+Files were enumerated using sorted Windows `Path` values; streams retained each
+container's central-directory order. Sorting stream names produces a different
+manifest (#32). The display-list reuse verifier reproduces this original order
+and retains the frozen baseline.
 
 The owned fixture generator uses Python wire primitives without calling Rust or
 the reference writer. Its 199 facet vectors cover both sides of every reachable

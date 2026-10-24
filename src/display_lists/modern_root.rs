@@ -8,11 +8,11 @@ use crate::Result;
 
 pub(super) fn read(
     bytes: &[u8],
-    context: DisplayArchiveContext,
+    context: &DisplayArchiveContext,
     limits: DisplayArchiveLimits,
 ) -> Result<DisplayArchiveContents> {
     require_context(context)?;
-    let mut archive = DisplayDecoder::new(bytes, context, limits)?;
+    let mut archive = DisplayDecoder::new(bytes, context.clone(), limits)?;
     let format = archive.i32("dl_format")?;
     if format != 1 {
         return Err(invalid(format!("display-list format {format}; expected 1")));
@@ -93,10 +93,13 @@ fn shaded(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     Ok(())
 }
 
-fn require_context(context: DisplayArchiveContext) -> Result<()> {
+fn require_context(context: &DisplayArchiveContext) -> Result<()> {
     if context.version.value() != 19000 || context.file_version != 19000 {
         return Err(unsupported(format!(
-            "display context {context:?}; initial full-stream checkpoint requires display/file version 19000"
+            "display context version {}, file version {}, kind {:?}; initial full-stream checkpoint requires display/file version 19000",
+            context.version.value(),
+            context.file_version,
+            context.kind
         )));
     }
     Ok(())

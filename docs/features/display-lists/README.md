@@ -214,8 +214,8 @@ The same archive reader and writer now consume and reconstruct the owned blank
 assembly's complete 5,446-byte stream. Its component records retain explicit
 identity, transform and bounds, display state, references, dependency lists,
 reference geometry, tessellation numbers, owner/child pointers, hidden-body atoms
-and envelope options. Populated shaded bodies, decals and cross-stream face
-contexts remain implementation work.
+and envelope options. Populated shaded bodies and external face references are
+covered below; decals and full cross-stream validation remain implementation work.
 
 Six assembly tests cover exact forced reconstruction, 40 independent component
 and envelope fields, setting edit/reopen/revert with other streams preserved,
@@ -230,10 +230,9 @@ counts, UTF-16 strings, raw flags and transform bits. They match 112 independent
 scalar values and complete byte reconstruction.
 
 The [whole-stream audit](archive-audit.json) records missing work explicitly.
-On Windows x64, Rust 1.99.0 MSVC, 2026-10-25, it reconstructed 2 of the 1,086
-reference-complete native streams. Two separate processes returned identical
-bytes and failures. The corpus manifest matches the component oracles above;
-the next major gaps are populated body tessellation and display items. An audit
+Its first assembly checkpoint reconstructed 2 of the 1,086 reference-complete
+native streams. The current result after shaded-body support is recorded below.
+The corpus manifest matches the component oracles above. An audit
 failure is incomplete support, not a passing corpus case. The audit does not
 establish complete-field semantics, geometric validity or application acceptance.
 
@@ -245,6 +244,59 @@ cargo build --release --example rebuild_display_archives
 python -B -X utf8 docs/features/display-lists/audit_archive_corpus.py target/pinned-1.99.0/release/examples/rebuild_display_archives.exe
 ```
 
+## Populated shaded bodies and facet reuse
+
+Version-19000 body, face and body-property records now use the shared object map.
+Inline faces reuse the complete clause-12 `FacetContainer` codec. Variable facet
+array entries share the outer archive's aggregate limit; a sizing pass checks the
+remaining byte budget before encoding each facet payload. The earlier standalone
+facet layouts remain unchanged.
+
+Assembly context now owns the exact component IDs declared by the external face
+directory. Matching components omit inline facets and expose explicit component
+and zero-based face references. These references preserve archive consumption
+order; resolving and validating their external blocks remains a separate required
+cross-stream check. Unknown directory context is not inferred from stream bytes.
+External faces share one immutable operation-owned ID buffer. The allocation
+regression observed two separate six-byte face-ID buffers before the fix and one
+shared buffer afterward; caller and snapshot edits remain isolated (#33). This
+removes the face-count times ID-length copy amplification without changing bytes.
+
+Nine tests use [independently built shaded vectors](shaded-vectors.json) in owned
+part and assembly roots. They cover two inline or external faces, reused class
+tags, raw metadata and transform/facet bits, complete forced reconstruction,
+external-context and reference-index mismatches, aggregate quotas, facet preflight
+byte limits, malformed field shape, equivalent-string preservation budgets,
+every truncation, whole-document edit/reopen/revert, input/context ownership and
+concurrent deterministic writes. The inline fixture has 37 variable entries per
+facet and 60 outer entries, giving an exact aggregate boundary of 134. The external
+fixture's boundary is 65.
+
+On Windows x64, Rust 1.99.0 MSVC, 2026-10-25, the current
+[whole-stream audit](archive-audit.json) reconstructed 404 of 1,086 complete native
+streams. Two processes produced identical bytes and failures; all remaining cases
+returned explicit unsupported layouts. The major remaining gaps include display
+items, scenes, additional reference geometry and earlier versions. This is byte
+reconstruction evidence, not complete-field, geometric or application acceptance.
+Successful paths are retained in bounded manifest files referenced by the report.
+The audit rejects lost earlier successes before replacing its evidence; a forced
+failure test confirmed that the prior report remained unchanged.
+
+The [facet reuse regression](reused-facet-verification.json) reconstructed the
+earlier 170 directories and 193 blocks, covering 35,242 faces and 150,411,068 bytes.
+Its manifest exactly reproduces the frozen clause-12 baseline. The verifier keeps
+the original sorted Windows file order and each container's central-directory
+stream order; sorting stream names had caused a false mismatch (#32). No baseline
+bytes, expected results or tolerances were changed.
+
+```text
+python -B -X utf8 docs/features/display-lists/generate_shaded_vectors.py
+cargo test --test display_shaded
+cargo build --release --example rebuild_display_archives --example rebuild_tessellations
+python -B -X utf8 docs/features/display-lists/audit_archive_corpus.py target/pinned-1.99.0/release/examples/rebuild_display_archives.exe
+python -B -X utf8 docs/features/display-lists/verify_reused_facets.py target/pinned-1.99.0/release/examples/rebuild_tessellations.exe
+```
+
 ## Remaining implementation and integration gate
 
 - Connect the parsed display-list version to explicit part/assembly context,
@@ -254,7 +306,7 @@ python -B -X utf8 docs/features/display-lists/audit_archive_corpus.py target/pin
   reset inherited state between nested serializers.
 - Extend environments, splitters, fonts, lights and visual properties beyond
   the initial version-19000 part layout. Add buckets and display items.
-- Add scenes, populated part/assembly shaded data, decals,
+- Add scenes, remaining shaded-data layouts, decals,
   textured planes, units, ink views and configuration tails. Unknown-meaning
   fields remain explicit raw typed values; unresolved bodies are unsupported.
 - Complete the immutable archive graph, validated owned construction/edits,

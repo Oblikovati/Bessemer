@@ -38,6 +38,12 @@ impl DisplayDecoder<'_> {
         let value = ArchiveString::decode(&mut self.cursor)?;
         self.field(label, Value::Text(value))
     }
+    pub fn text_value(&mut self, label: &str) -> Result<std::sync::Arc<ArchiveString>> {
+        let value = ArchiveString::decode(&mut self.cursor)?;
+        self.field(label, Value::Text(value.clone()))?;
+        // #33: external face metadata shares this owned ID instead of copying it per face.
+        Ok(std::sync::Arc::new(value))
+    }
     pub fn transform(&mut self, label: &str) -> Result<()> {
         let value = super::transform_codec::read_compact(&mut self.cursor)?;
         self.field(label, Value::Transform(value))

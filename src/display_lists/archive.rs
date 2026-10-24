@@ -26,7 +26,7 @@ impl DisplayArchive {
         context: DisplayArchiveContext,
         limits: DisplayArchiveLimits,
     ) -> Result<Self> {
-        let contents = modern_root::read(bytes, context, limits)?;
+        let contents = modern_root::read(bytes, &context, limits)?;
         Ok(Self {
             context,
             source: PreservedContents::decoded(bytes, contents),
@@ -47,7 +47,7 @@ impl DisplayArchive {
         context: DisplayArchiveContext,
         limits: DisplayArchiveLimits,
     ) -> Result<Self> {
-        validate(&contents, context, limits)?;
+        validate(&contents, &context, limits)?;
         Ok(Self {
             context,
             source: PreservedContents::constructed(contents),
@@ -74,7 +74,7 @@ impl DisplayArchive {
     /// # }
     /// ```
     pub fn context(&self) -> DisplayArchiveContext {
-        self.context
+        self.context.clone()
     }
 
     /// Revalidates a complete owned edit before publishing an isolated stream snapshot.
@@ -90,7 +90,7 @@ impl DisplayArchive {
         contents: DisplayArchiveContents,
         limits: DisplayArchiveLimits,
     ) -> Result<Self> {
-        validate(&contents, self.context, limits)?;
+        validate(&contents, &self.context, limits)?;
         let source = self.source.edited(contents);
         if let Some(bytes) = source.original_bytes() {
             super::view_support::require_size(
@@ -100,7 +100,7 @@ impl DisplayArchive {
             )?;
         }
         Ok(Self {
-            context: self.context,
+            context: self.context.clone(),
             source,
             limits,
         })
@@ -118,13 +118,13 @@ impl DisplayArchive {
         if let Some(bytes) = self.source.original_bytes() {
             return Ok(bytes.to_vec());
         }
-        archive_encode::encode(self.contents(), self.context, self.limits)
+        archive_encode::encode(self.contents(), &self.context, self.limits)
     }
 }
 
 fn validate(
     contents: &DisplayArchiveContents,
-    context: DisplayArchiveContext,
+    context: &DisplayArchiveContext,
     limits: DisplayArchiveLimits,
 ) -> Result<()> {
     let encoded = archive_encode::encode(contents, context, limits)?;

@@ -7,7 +7,7 @@ use crate::Result;
 
 pub(super) fn encode(
     contents: &DisplayArchiveContents,
-    context: DisplayArchiveContext,
+    context: &DisplayArchiveContext,
     limits: DisplayArchiveLimits,
 ) -> Result<Vec<u8>> {
     super::view_support::require_size(
@@ -25,7 +25,7 @@ pub(super) fn encode(
 fn write_value(
     output: &mut DisplayOutput,
     value: &Value,
-    context: DisplayArchiveContext,
+    context: &DisplayArchiveContext,
     limits: DisplayArchiveLimits,
 ) -> Result<()> {
     match value {
@@ -38,6 +38,17 @@ fn write_value(
         Value::F64(value) => output.double(*value),
         Value::Text(value) => output.string(value),
         Value::Transform(value) => output.compact(value),
+        _ => write_compound(output, value, context, limits),
+    }
+}
+
+fn write_compound(
+    output: &mut DisplayOutput,
+    value: &Value,
+    context: &DisplayArchiveContext,
+    limits: DisplayArchiveLimits,
+) -> Result<()> {
+    match value {
         Value::FixedTransform(value) => output
             .bytes(&DisplayTransform::new(TransformContents::Fixed(value.clone()))?.to_bytes()),
         Value::Box(value) => {
@@ -46,6 +57,12 @@ fn write_value(
             output.bytes(&bytes)
         }
         Value::ObjectTag(value) => write_tag(output, value),
+        Value::ExternalFacet { .. } => Ok(()),
+        Value::Facet(value) => output.bytes(&crate::tessellation::write_embedded(
+            value,
+            super::modern_body_tess::facet_context(context),
+            output.remaining(),
+        )?),
         _ => write_views(output, value, context, limits),
     }
 }
@@ -53,7 +70,7 @@ fn write_value(
 fn write_views(
     output: &mut DisplayOutput,
     value: &Value,
-    context: DisplayArchiveContext,
+    context: &DisplayArchiveContext,
     limits: DisplayArchiveLimits,
 ) -> Result<()> {
     let limits = super::modern_root::view_limits(limits);

@@ -13,6 +13,7 @@ pub(super) struct DisplayDecoder<'a> {
     pub context: DisplayArchiveContext,
     pub limits: DisplayArchiveLimits,
     pub objects: ObjectReader,
+    pub external_component: Option<(std::sync::Arc<crate::archive_codec::ArchiveString>, u32)>,
     fields: Vec<DisplayField>,
     scopes: Vec<String>,
     loaded_objects: usize,
@@ -36,6 +37,7 @@ impl<'a> DisplayDecoder<'a> {
             context,
             limits,
             objects: ObjectReader::new(),
+            external_component: None,
             fields: Vec::new(),
             scopes: vec!["root".into()],
             loaded_objects: 0,
@@ -85,6 +87,10 @@ impl<'a> DisplayDecoder<'a> {
             .checked_add(count)
             .ok_or_else(|| invalid(format!("{label} total overflow; expected usize")))?;
         super::view_support::require_size(self.entries, self.limits.maximum_entries, label)
+    }
+
+    pub fn available_entries(&self) -> usize {
+        self.limits.maximum_entries.saturating_sub(self.entries)
     }
 
     pub fn finish(self) -> Result<DisplayArchiveContents> {
