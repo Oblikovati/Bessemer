@@ -2,3 +2,6 @@
 *.SLDPRT binary
 *.SLDASM binary
 *.SLDDRW binary
+
+# XML framing fixtures must retain BOMs and exact CR/LF bytes.
+tests/fixtures/xml/*.bin binary
