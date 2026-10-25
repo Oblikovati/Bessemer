@@ -19,7 +19,7 @@ fn complete_rendering_roots_match_independent_fields_and_forced_bytes() {
     );
 }
 
-fn check_rendering_fields(case: OldCase) {
+pub(super) fn check_rendering_fields(case: OldCase) {
     let archive = parsed(case);
     ordinary_text::check_ordinary_gates(case);
     for member in &archive.contents().fields {
@@ -68,14 +68,14 @@ fn full_material_text_edge_and_facet_edits_match_independent_bytes_and_revert() 
     }
 }
 
-fn facet_context(version: u32) -> TessellationContext {
+pub(super) fn facet_context(version: u32) -> TessellationContext {
     TessellationContext {
         archive_version: ArchiveVersion::new(version),
         mode: FacetArchiveMode::Full,
     }
 }
 
-fn expected_facet(version: u32, index: usize, edited: usize) -> FacetArchive {
+pub(super) fn expected_facet(version: u32, index: usize, edited: usize) -> FacetArchive {
     let bytes = facet_bytes(version, index, edited);
     let limits = TessellationLimits {
         maximum_components: 0,

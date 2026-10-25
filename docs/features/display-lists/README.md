@@ -555,3 +555,7 @@ complete roots and four inline part/assembly containers.
 The [legacy rendering checkpoint](legacy-rendering-layouts.md) admits contexts
 from 2388. Its 262 complete roots cover material rendering flags and auxiliary
 facet textures on both sides of their bounds, with four whole-document fixtures.
+
+The [legacy texture checkpoint](legacy-texture-layouts.md) admits contexts from
+2359, covering absent material textures and per-view shaded-edge words with
+190 complete roots and four whole-document fixtures.

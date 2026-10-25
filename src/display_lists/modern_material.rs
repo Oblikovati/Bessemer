@@ -67,7 +67,7 @@ pub(super) fn material(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         "transparency",
         "emission",
     ])?;
-    if archive.i32("has_texture")? != 0 {
+    if archive.context.version.value() > 0x937 && archive.i32("has_texture")? != 0 {
         archive.scope("texture", texture)?;
     }
     material_rendering(archive)
