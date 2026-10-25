@@ -308,3 +308,5 @@ mod external_faces;
 mod legacy_cameras;
 #[path = "support/legacy_panes.rs"]
 mod legacy_panes;
+#[path = "support/legacy_visuals.rs"]
+mod legacy_visuals;

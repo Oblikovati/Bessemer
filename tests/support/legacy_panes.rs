@@ -129,7 +129,7 @@ fn check_legacy_edit(case: OldCase) {
     assert_eq!(source.to_bytes().unwrap(), case.bytes);
 }
 
-fn legacy_edited_contents(
+pub(super) fn legacy_edited_contents(
     source: &DisplayArchive,
     expected: &DisplayArchive,
 ) -> DisplayArchiveContents {

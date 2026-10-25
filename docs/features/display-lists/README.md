@@ -506,3 +506,11 @@ facet objects remain explicit payload failures; empty geometry is preserved dist
 The [legacy pane, line and symbol checkpoint](legacy-panes.md) admits contexts
 from 2999, with 66 additional complete roots and six containers. Old line flags
 retain their full 32-bit words; omitted pane strings and symbol planes stay absent.
+
+The [camera, viewer and text checkpoint](legacy-camera-layouts.md) admits contexts
+from 2902, with 66 additional complete roots and 8192 independent field checks.
+
+The [earlier appearance checkpoint](legacy-visual-layouts.md) admits contexts from
+2891, with 50 complete roots and six containers. Lightweight-rendering words and
+appearance names follow separate presence gates; cache-backed faces remain complete
+through edits, reopen and revert.

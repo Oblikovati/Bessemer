@@ -7,8 +7,13 @@ pub(super) fn visual(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     }
     archive.scope("material", material)?;
     archive.text("addin_identifier")?;
-    archive.i32s(&["valid_only_for_addin", "use_in_sw_lw_rendering"])?;
-    archive.text("appearance_name")?;
+    archive.i32("valid_only_for_addin")?;
+    if archive.context.version.value() > 0xb53 {
+        archive.i32("use_in_sw_lw_rendering")?;
+    }
+    if archive.context.version.value() > 0xb55 {
+        archive.text("appearance_name")?;
+    }
     visual_tail(archive)
 }
 
