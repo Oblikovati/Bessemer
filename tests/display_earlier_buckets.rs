@@ -32,6 +32,8 @@ const BUCKET_ROOT_GROUPS: &[&[u8]] = &[
     include_bytes!("fixtures/display-lists/grouped-buckets-2d.bin"),
     include_bytes!("fixtures/display-lists/window-buckets-3d.bin"),
     include_bytes!("fixtures/display-lists/window-buckets-2d.bin"),
+    include_bytes!("fixtures/display-lists/early-view-buckets-3d.bin"),
+    include_bytes!("fixtures/display-lists/early-view-buckets-2d.bin"),
 ];
 
 fn cases() -> Vec<BucketCase> {
@@ -61,7 +63,7 @@ fn parsed(case: BucketCase) -> DisplayArchive {
 
 #[test]
 fn earlier_buckets_match_independent_fields_and_exact_bytes() {
-    assert_eq!(cases().len(), 280);
+    assert_eq!(cases().len(), 350);
     let mut fields = 0;
     for case in cases() {
         assert!(case.scalars.is_empty());
@@ -87,7 +89,7 @@ fn earlier_buckets_match_independent_fields_and_exact_bytes() {
             case.bytes
         );
     }
-    assert_eq!(fields, 56901);
+    assert_eq!(fields, 69460);
 }
 
 fn edited_mode(archive: &DisplayArchive) -> DisplayArchive {
@@ -141,7 +143,7 @@ fn exact_budgets_charge_earlier_coordinates_and_discarded_objects() {
         let empty = case.scenario % 16 == 2;
         let entries = if empty {
             45
-        } else if case.scenario >= 16 {
+        } else if case.scenario & 16 != 0 {
             86
         } else {
             91
@@ -149,6 +151,20 @@ fn exact_budgets_charge_earlier_coordinates_and_discarded_objects() {
         let entries = entries
             - usize::from(!empty && case.version <= 0x2faa)
             - 2 * usize::from(!empty && case.version <= 0x2789);
+        let entries = if case.scenario >= 64 {
+            entries
+                + if case.version <= 0x1be7 {
+                    0
+                } else if case.version <= 0x1bf4 {
+                    2
+                } else {
+                    6
+                }
+                + if case.version <= 0x1c39 { 0 } else { 6 }
+                - 1
+        } else {
+            entries
+        };
         let objects = if empty {
             43
         } else {

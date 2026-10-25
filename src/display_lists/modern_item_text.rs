@@ -53,6 +53,14 @@ fn simple(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i32("is_right_to_left")?;
     archive.text("text")?;
     simple_widths(archive)?;
+    simple_version_tail(archive)
+}
+
+fn simple_version_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    // #37: the native reader discards this float, but exact writes must retain its four bytes.
+    if (0x1c05..0x1fb5).contains(&archive.context.version.value()) {
+        archive.f32("unknown_v1c05")?;
+    }
     if archive.context.version.value() > 0x2000 {
         archive.i32("is_scale_invariant")?;
     }

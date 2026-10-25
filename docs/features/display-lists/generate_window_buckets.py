@@ -6,6 +6,7 @@ import struct
 from generate_window_boundaries import VERSIONS
 from generate_earlier_buckets import encoded,displaylists,swcontainer
 from generate_earlier_range import write_group
+from generate_version_range import capture_plain
 from window_boundary_patches import environment_reader
 from lower_range_patches import tail_capture
 from mfcobjects import ObjectArchive
@@ -13,17 +14,21 @@ import dl_doc
 import bucket_corpus
 
 
-def root_bytes(document: object, path: Path, raw: bytes, version: int, scenario: int) -> bytes:
+def root_bytes(document: object, path: Path, raw: bytes, version: int, scenario: int, view_payloads: dict[str,bytes] | None = None) -> bytes:
     patches: list[tuple[int,int,bytes]] = []
     original_environment = ObjectArchive.readers["uiUserModelEnv_c"]
     original_annotation = dl_doc.read_AnnotationViewTransform
+    original_views = {name:getattr(dl_doc,name) for name in (view_payloads or {})}
     ObjectArchive.readers["uiUserModelEnv_c"] = environment_reader(original_environment,version,patches)
     dl_doc.read_AnnotationViewTransform = tail_capture(original_annotation,version<=0x1fa8,8,patches)
+    for name,payload in (view_payloads or {}).items():
+        setattr(dl_doc,name,capture_plain(original_views[name],payload,patches))
     try:
         return encoded(document,path,raw,version,scenario,patches)
     finally:
         ObjectArchive.readers["uiUserModelEnv_c"] = original_environment
         dl_doc.read_AnnotationViewTransform = original_annotation
+        for name,reader in original_views.items():setattr(dl_doc,name,reader)
 
 
 def generate(version: int, kind: str, scenario: int) -> tuple[bytes,dict[str,object]]:

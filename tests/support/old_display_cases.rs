@@ -1,6 +1,6 @@
 use bessemer::display_lists::DisplayDocumentKind;
 #[path = "../../examples/support/framing.rs"]
-mod framing;
+pub(crate) mod framing;
 
 #[derive(Clone, Copy)]
 pub(crate) struct OldCase {

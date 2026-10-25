@@ -10,9 +10,14 @@ from old_shaded_wire import visual,part,assembly,item_parts
 from generate_shaded_vectors import ObjectBuilder
 
 
+def simple_text_payload(version: int, float_bits: int = 0x7f800042) -> bytes:
+    raw = doubles(3)+integers(-1)+compact(0,0x40)+doubles(1)+integers(-2)+cstring("early text 鋼",True)+struct.pack("<h",0)
+    raw += struct.pack("<I",float_bits) if 0x1c04<version<0x1fb5 else b""
+    return raw+(integers(-3) if version>0x2000 else b"")
+
+
 def early_items(version: int) -> bytes:
-    text = doubles(3)+integers(-1)+compact(0,0x40)+doubles(1)+integers(-2)+cstring("early text 鋼",True)+struct.pack("<h",0)
-    text += integers(-3) if version>0x2000 else b""
+    text = simple_text_payload(version)
     spline = integers(1)+doubles(1)+(integers(-4) if version>=0x2016 else b"")+doubles(6)
     spline += cstring("spline 鋼",True) if version>=0x1ff8 else b""
     extra = [record(18,text),record(31,spline),record(30,doubles(3)+integers(-5))]

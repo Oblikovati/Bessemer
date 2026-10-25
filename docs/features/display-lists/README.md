@@ -449,3 +449,5 @@ maintainer-side humanizer skill is unavailable; its prose pass remains for revie
 
 - The 8000 interval covers earlier annotation strides, environment/body/unit
   omissions and the documented uncounted-window exclusion; see [window-boundaries.md](window-boundaries.md).
+
+Early complete-root view transitions and Bug #37 are recorded in [early view roots](early-view-roots.md).

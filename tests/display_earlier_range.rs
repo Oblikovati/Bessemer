@@ -32,6 +32,9 @@ const ARCHIVE_ROOT_GROUPS: &[&[u8]] = &[
     include_bytes!("fixtures/display-lists/window-boundary-part.bin"),
     include_bytes!("fixtures/display-lists/window-boundary-assembly.bin"),
     include_bytes!("fixtures/display-lists/early-minimal-annotations.bin"),
+    include_bytes!("fixtures/display-lists/early-view-roots-part.bin"),
+    include_bytes!("fixtures/display-lists/early-view-roots-assembly.bin"),
+    include_bytes!("fixtures/display-lists/earliest-minimal-annotations.bin"),
 ];
 
 fn cases() -> Vec<RangeCase> {
@@ -62,7 +65,7 @@ fn parsed(case: RangeCase) -> DisplayArchive {
 
 #[test]
 fn all_earlier_range_roots_match_independent_material_scene_component_fields_and_bytes() {
-    assert_eq!(cases().len(), 330);
+    assert_eq!(cases().len(), 406);
     let mut fields = 0;
     for case in cases() {
         let archive = parsed(case);
@@ -84,7 +87,7 @@ fn all_earlier_range_roots_match_independent_material_scene_component_fields_and
             case.bytes
         );
     }
-    assert_eq!(fields, 99684);
+    assert_eq!(fields, 123376);
 }
 
 fn has_field(archive: &DisplayArchive, path: &str) -> bool {
@@ -126,7 +129,7 @@ fn truncated_roots_extra_bytes_and_unproven_contexts_do_not_publish_partial_resu
     assert!(DisplayArchive::from_bytes(&trailing, case_context(case), LIMITS).is_err());
 
     let case = selected(12000, DisplayDocumentKind::Part, 128);
-    for version in [0, 7999, 19001, u32::MAX] {
+    for version in [0, 6999, 19001, u32::MAX] {
         let context = DisplayArchiveContext {
             version: DisplayVersion::new(version),
             ..case_context(case)
@@ -224,12 +227,18 @@ fn exact_earlier_root_budgets_cover_missing_collectors_ink_and_configuration_tai
             }
             _ => 0,
         };
+        if (160..192).contains(&case.scenario) {
+            entries = early_simple_text::early_entries(case);
+        }
+        if case.scenario == 168 {
+            entries = 163;
+        }
         if case.scenario % 128 == 8 {
             entries = 152;
         }
         let exact = DisplayArchiveLimits {
             maximum_entries: entries,
-            maximum_objects: if case.scenario % 128 == 8 {
+            maximum_objects: if case.scenario % 128 == 8 || case.scenario == 168 {
                 42
             } else if case.kind == DisplayDocumentKind::Part {
                 52
@@ -427,5 +436,15 @@ mod component_transitions;
 #[path = "support/grouped_component_cases.rs"]
 mod grouped_components;
 
+#[path = "../examples/support/annotation_trace.rs"]
+mod annotation_trace;
+#[path = "support/early_simple_text_cases.rs"]
+mod early_simple_text;
+#[path = "support/early_view_oracles.rs"]
+mod early_view_oracles;
+#[path = "../examples/support/named_trace.rs"]
+mod named_trace;
+#[path = "../examples/support/spatial_trace.rs"]
+mod spatial_trace;
 #[path = "support/window_boundary_cases.rs"]
 mod window_boundaries;

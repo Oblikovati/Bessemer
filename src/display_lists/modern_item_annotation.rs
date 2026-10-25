@@ -31,6 +31,7 @@ pub(super) fn property(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 
 pub(super) fn start(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i32s(&["unknown_00", "unknown_04"])?;
+    annotation_old_ids(archive)?;
     if archive.context.version.value() <= 0x1c49 {
         return Ok(());
     }
@@ -45,6 +46,17 @@ pub(super) fn start(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     Ok(())
 }
 
+fn annotation_old_ids(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if !(0x1c16..0x1c4a).contains(&archive.context.version.value()) {
+        return Ok(());
+    }
+    let count = archive.count("unknown_old_ids.count", 4)?;
+    for index in 0..count {
+        archive.i32(&format!("unknown_old_ids[{index}]"))?;
+    }
+    Ok(())
+}
+
 fn annotation(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i32("unknown_0")?;
     let count = archive.count("unknown_ints.count", 4)?;
@@ -53,7 +65,9 @@ fn annotation(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     }
     let count = archive.count("unknown_points.count", 24)?;
     points(archive, "unknown_points", count)?;
-    strings(archive, "unknown_strings1")?;
+    if archive.context.version.value() > 0x1c4b {
+        strings(archive, "unknown_strings1")?;
+    }
     annotation_suffix(archive)
 }
 
@@ -75,7 +89,8 @@ fn annotation_suffix(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn annotation_minimum(version: u32) -> usize {
-    16 + 4 * usize::from(version > 0x1fa8)
+    12 + 4 * usize::from(version > 0x1c4b)
+        + 4 * usize::from(version > 0x1fa8)
         + 4 * usize::from(version > 0x1fd4)
         + usize::from(version > 0x23fe)
         + 2 * usize::from(version > 0x332b)

@@ -45,5 +45,6 @@ def bucket_encoder(original: object, version: int) -> object:
         raw = original(builder,identity,two_dimensional,empty)
         removed = 4+(2 if empty else 42)*(version<=0x2faa)+4*(version<=0x2f8b)
         removed += (4 if empty else 60) if version<=0x2789 else 0
+        removed += 4*(version<=0x1c3d)
         return raw[:-removed]
     return encode
