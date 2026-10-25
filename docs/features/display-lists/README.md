@@ -464,7 +464,9 @@ Early complete-root view transitions and Bug #37 are recorded in [early view roo
 
 - The 4500 range covers all five older light kinds, appearance words, hidden atoms, weld lists and decal options; see [earliest lights](earliest-lights.md).
 
-- The lower bound is now 4400, with earlier appearance payloads, face words and null legacy wall materials; see [earliest walls](earliest-walls.md). Non-null legacy wall-material bodies remain unresolved and explicitly unsupported.
+- The 4400 range covers earlier appearance payloads, face words and null legacy wall materials; see [earliest walls](earliest-walls.md). Non-null legacy wall-material bodies remain unresolved and explicitly unsupported.
+
+- The lower bound is now 4300, with direct body-property maps, earlier state words and versioned OLE table lists; see [earliest bodies](earliest-bodies.md).
 
 - Archive object lookup now checks revision-scoped handles; see [revision identities](revision-identities.md). Operation history and whole-document coverage remain unfinished.
 

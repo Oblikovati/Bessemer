@@ -17,7 +17,9 @@ pub(super) fn read(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn part_configuration(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    archive.i32("unknown_168")?;
+    if archive.context.version.value() >= 0x10f0 {
+        archive.i32("unknown_168")?;
+    }
     if archive.context.version.value() > 0x12fc {
         archive.i32("is_tessed_for_exploded_view")?;
     }
@@ -25,6 +27,10 @@ fn part_configuration(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         archive.i32("config_id")?;
         archive.text("config_name")?;
     }
+    part_graphics(archive)
+}
+
+fn part_graphics(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     if archive.context.version.value() > 0x2b9d && archive.i32("has_graphics_connect_ref_mgr")? != 0
     {
         archive.object(

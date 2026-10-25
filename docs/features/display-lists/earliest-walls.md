@@ -1,9 +1,11 @@
 # Earliest wall and appearance layouts
 
-Feature #28 now admits display versions 4400–19000, excluding the uncounted-window
+The wall work admitted display versions 4400–19000, excluding the uncounted-window
 interval `0x1FAE`–`0x1FCE`. Full documented-schema parity, earlier contexts and
 unresolved object bodies remain unfinished. Archive verification does not
 establish native application acceptance or geometry validity.
+
+The [earliest body-property work](earliest-bodies.md) later extended the lower bound to 4300.
 
 Four conditions control the new stored layouts:
 

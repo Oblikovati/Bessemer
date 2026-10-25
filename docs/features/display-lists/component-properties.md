@@ -2,7 +2,7 @@
 
 Feature #28 now reads and reconstructs the complete registered
 `moComponentProperty` and `moComponentPropertyHolder` bodies in generic CObject
-positions within admitted display versions 4400–19000. Earlier archive contexts
+positions within admitted display versions 4300–19000. Earlier archive contexts
 remain unsupported. The property pointer has a declared `moComponentProperty`
 role; a generic pointer in the holder may be null, an alias, a nested object or a
 cycle. These archive checks do not establish application or geometric validity.

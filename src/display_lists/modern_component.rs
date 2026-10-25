@@ -36,13 +36,19 @@ fn reference(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     }
     archive.i32("ref_configuration_id")?;
     archive.u32("file_type")?;
+    reference_state(archive)
+}
+
+fn reference_state(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i32s(&[
         "has_pattern_ref",
         "unknown_1a8",
         "reference_id",
         "display_state",
-        "is_virtual_comp",
     ])?;
+    if archive.context.version.value() > 0x110d {
+        archive.i32("is_virtual_comp")?;
+    }
     reference_labels(archive)
 }
 

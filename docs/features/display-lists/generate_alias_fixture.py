@@ -9,8 +9,10 @@ import swcontainer
 import displaylists
 
 
-def collect(document: swcontainer.Document, path: Path, raw: bytes) -> list[tuple[int,int,int,str]]:
+def collect(document: swcontainer.Document, path: Path, raw: bytes, version: int | None = None, external_ids: set[str] | None = None) -> list[tuple[int,int,int,str]]:
     archive = displaylists.archive_for(document,str(path),raw)
+    if version is not None:archive.version = version
+    if external_ids is not None:archive.face_tess_comp_ids = external_ids
     original = archive.object
     records: list[tuple[int,int,int,str]] = []
     def capture(expect: object = None) -> object:

@@ -6,9 +6,8 @@ use crate::Result;
 
 pub(super) fn table(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i32s(&["unknown_0c", "unknown_08"])?;
-    if archive.i32("ole_list_absent")? == 0 {
-        let count = archive.u32("ole_object_num_list.count")?;
-        words(archive, "ole_object_num_list", count as usize)?;
+    if archive.context.version.value() > 0x1115 {
+        table_ole_numbers(archive)?;
     }
     archive.text("table_name")?;
     if archive.context.version.value() > 0x1c56 {
@@ -21,6 +20,14 @@ pub(super) fn table(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         archive.text("view_names_3d_with_scale")?;
     }
     Ok(())
+}
+
+fn table_ole_numbers(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.i32("ole_list_absent")? != 0 {
+        return Ok(());
+    }
+    let count = archive.u32("ole_object_num_list.count")?;
+    words(archive, "ole_object_num_list", count as usize)
 }
 
 pub(super) fn property(archive: &mut DisplayDecoder<'_>) -> Result<()> {

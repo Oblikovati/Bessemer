@@ -14,13 +14,7 @@ pub(super) fn facet_context(context: &DisplayArchiveContext) -> TessellationCont
 pub(super) fn body(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.object_array("faces", &["uoTempFaceTessData_c"])?;
     archive.i32s(&["unknown_20", "unknown_24", "unknown_2c"])?;
-    let count = archive.count("body_prop_infos.count", 6)?;
-    for index in 0..count {
-        archive.scope(&format!("body_prop_infos[{index}]"), |archive| {
-            archive.i32("key")?;
-            archive.object("value", &["uoBodyPropInfo_c"])
-        })?;
-    }
+    body_property_map(archive)?;
     super::modern_decals::list(archive, "decals")?;
     if archive.context.version.value() > 0x2017 {
         archive.text("unknown_str")?;
@@ -29,6 +23,24 @@ pub(super) fn body(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         archive.i32("unknown_68")?;
     }
     Ok(())
+}
+
+fn body_property_map(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    let count = archive.count("body_prop_infos.count", 6)?;
+    for index in 0..count {
+        archive.scope(&format!("body_prop_infos[{index}]"), |archive| {
+            archive.i32("key")?;
+            body_property_pointer(archive)
+        })?;
+    }
+    Ok(())
+}
+
+fn body_property_pointer(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() < 0x10f6 {
+        return archive.object("value.viz_prop", &["moVisualProperties_c"]);
+    }
+    archive.object("value", &["uoBodyPropInfo_c"])
 }
 
 pub(super) fn properties(archive: &mut DisplayDecoder<'_>) -> Result<()> {
