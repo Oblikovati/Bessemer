@@ -22,7 +22,10 @@ pub(super) fn check_font_gates(case: OldCase) {
     legacy_boundary::check_boundary_members(case);
     for index in 13..17 {
         let prefix = format!("root.views[0].display_items.items[{index}].data");
-        assert!(field(&archive, &format!("{prefix}.unknown_28")).is_some());
+        assert_eq!(
+            field(&archive, &format!("{prefix}.unknown_28")).is_some(),
+            case.version > 1326
+        );
         assert_eq!(
             field(&archive, &format!("{prefix}.unknown_30")).is_some(),
             case.version > 2015

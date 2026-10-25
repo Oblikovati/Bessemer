@@ -20,7 +20,7 @@ fn complete_early_text_roots_match_independent_logical_and_physical_fields_and_b
     );
 }
 
-fn check_early_text_members(case: OldCase) {
+pub(super) fn check_early_text_members(case: OldCase) {
     let archive = parsed(case);
     legacy_discard::check_hidden_silhouettes(case);
     for index in 9..13 {

@@ -6,7 +6,7 @@ pub(super) fn view(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     if archive.i32("has_xform")? != 0 {
         archive.transform("xform")?;
     }
-    if archive.i32("has_ghost_dl_xform")? != 0 {
+    if archive.context.version.value() > 0x509 && archive.i32("has_ghost_dl_xform")? != 0 {
         archive.transform("ghost_dl_xform")?;
     }
     view_flags(archive)?;

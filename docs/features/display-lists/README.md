@@ -587,3 +587,7 @@ the seven-version extra edge word, with eight whole-document fixtures.
 The [early text checkpoint](legacy-text-layouts.md) admits contexts from 1645,
 covering omitted text tails, facet edge-ID flags and physical node words despite
 native logical resets, with 262 complete roots and four containers.
+
+The [early UI checkpoint](legacy-ui-layouts.md) admits contexts from 1286, with
+442 complete roots covering secondary splitters, ghost transforms, font/sketch
+suffixes, body metadata and facet edge-type arrays, plus eight containers.

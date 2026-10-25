@@ -33,7 +33,9 @@ fn text(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 fn sketch(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     point(archive, "unknown_00")?;
     archive.transform("xform")?;
-    archive.f64("unknown_a8")?;
+    if archive.context.version.value() > 0x52d {
+        archive.f64("unknown_a8")?;
+    }
     archive.text("text")
 }
 
@@ -43,7 +45,9 @@ fn font(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.f64s(&["unknown_10", "unknown_18"])?;
     archive.u32("unknown_20")?;
     archive.text("unknown_name")?;
-    archive.f64("unknown_28")?;
+    if archive.context.version.value() > 0x52e {
+        archive.f64("unknown_28")?;
+    }
     if archive.context.version.value() > 0x7df {
         archive.f64("unknown_30")?;
     }

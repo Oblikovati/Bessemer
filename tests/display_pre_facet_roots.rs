@@ -359,3 +359,6 @@ mod legacy_discard;
 
 #[path = "support/legacy_text.rs"]
 mod legacy_text;
+
+#[path = "support/legacy_ui.rs"]
+mod legacy_ui;
