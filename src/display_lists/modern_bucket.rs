@@ -52,10 +52,7 @@ fn bucket(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i32s(&["unknown_6f8", "persp_mode"])?;
     archive.f64("cross_hatch_scale")?;
     archive.i32("tess_number")?;
-    let two_dimensional = archive.i32("has_2d_info")? != 0;
-    if two_dimensional {
-        archive.transform("xform_2d")?;
-    }
+    let two_dimensional = bucket_coordinate_scope(archive)?;
     poly_lists(archive, two_dimensional)?;
     super::legacy_bucket_visibility::edge_array(archive, two_dimensional)?;
     archive.scope("dl_bucket", super::modern_items::list)?;
@@ -222,4 +219,15 @@ fn ghost_and_hidden(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         archive.i32("show_hidden_count")?;
     }
     Ok(())
+}
+
+fn bucket_coordinate_scope(archive: &mut DisplayDecoder<'_>) -> Result<bool> {
+    if archive.context.version.value() <= 0x49c {
+        return Ok(false);
+    }
+    let two_dimensional = archive.i32("has_2d_info")? != 0;
+    if two_dimensional {
+        archive.transform("xform_2d")?;
+    }
+    Ok(two_dimensional)
 }

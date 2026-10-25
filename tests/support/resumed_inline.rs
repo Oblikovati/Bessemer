@@ -100,7 +100,7 @@ pub(super) fn resumed_edited_contents(
 fn resumed_edit_field(field: &DisplayField) -> bool {
     matches!(field.value, DisplayFieldValue::Facet(_))
         || field.path.contains(".dl_ghost_bucket.items[")
-        || (field.path.contains(".view_bucket.") && field.path.ends_with(".node_id"))
+        || resumed_polygon_field(&field.path)
         || (field.path.starts_with("root.textured_planes.")
             && matches!(field.value, DisplayFieldValue::Transform(_)))
         || [10, 12, 13, 14, 15, 16, 17, 18].into_iter().any(|index| {
@@ -234,4 +234,11 @@ mod documents;
 
 pub(super) fn check_owned_document(kind: DisplayDocumentKind, raw: &[u8], expected: &[u8]) {
     documents::check_document_edit(kind, raw, expected);
+}
+
+fn resumed_polygon_field(path: &str) -> bool {
+    path.contains(".view_bucket.")
+        && (path.ends_with(".node_id")
+            || path.contains(".points_f32[")
+            || path.contains(".points["))
 }

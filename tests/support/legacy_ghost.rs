@@ -20,11 +20,11 @@ fn complete_early_ghost_roots_match_independent_fields_and_forced_bytes() {
     );
 }
 
-fn check_early_ghost_members(case: OldCase) {
+pub(super) fn check_early_ghost_members(case: OldCase) {
     let archive = parsed(case);
     legacy_ui::check_early_ui_members(case);
     for member in &archive.contents().fields {
-        if let Some(prefix) = member.path.strip_suffix(".has_2d_info") {
+        if let Some(prefix) = member.path.strip_suffix(".tess_number") {
             check_ghost_suffix(&archive, prefix, case.version);
         }
         if let Some(prefix) = member.path.strip_suffix(".bodies.count_word") {

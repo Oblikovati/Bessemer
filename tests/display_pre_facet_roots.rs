@@ -365,3 +365,6 @@ mod legacy_ui;
 
 #[path = "support/legacy_ghost.rs"]
 mod legacy_ghost;
+
+#[path = "support/legacy_scope.rs"]
+mod legacy_scope;

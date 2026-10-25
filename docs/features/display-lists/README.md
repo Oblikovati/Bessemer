@@ -595,3 +595,7 @@ suffixes, body metadata and facet edge-type arrays, plus eight containers.
 The [early ghost-item checkpoint](legacy-ghost-layouts.md) admits contexts from
 1215, with 406 complete roots covering ghost lists, hidden counts, part timestamps
 and older facet arrays and planar words, plus eight whole-document fixtures.
+
+The [early coordinate-scope checkpoint](legacy-scope-layouts.md) admits contexts
+from 1180, with 154 complete roots proving 3D coordinates before the 2D header,
+explicit Z edits, independent facets and eight whole-document fixtures.
