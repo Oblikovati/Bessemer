@@ -48,6 +48,7 @@ pub(super) fn early_entries(case: RangeCase) -> usize {
         62
     };
     prefix + items + shaded - 2 * usize::from(case.version <= 0x1c23)
+        + usize::from(case.scenario >= 192)
 }
 
 fn early_prefix_entries(version: u32) -> usize {

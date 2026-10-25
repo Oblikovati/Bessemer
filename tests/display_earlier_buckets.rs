@@ -34,6 +34,8 @@ const BUCKET_ROOT_GROUPS: &[&[u8]] = &[
     include_bytes!("fixtures/display-lists/window-buckets-2d.bin"),
     include_bytes!("fixtures/display-lists/early-view-buckets-3d.bin"),
     include_bytes!("fixtures/display-lists/early-view-buckets-2d.bin"),
+    include_bytes!("fixtures/display-lists/historical-buckets-3d.bin"),
+    include_bytes!("fixtures/display-lists/historical-buckets-2d.bin"),
 ];
 
 fn cases() -> Vec<BucketCase> {
@@ -63,7 +65,7 @@ fn parsed(case: BucketCase) -> DisplayArchive {
 
 #[test]
 fn earlier_buckets_match_independent_fields_and_exact_bytes() {
-    assert_eq!(cases().len(), 350);
+    assert_eq!(cases().len(), 398);
     let mut fields = 0;
     for case in cases() {
         assert!(case.scalars.is_empty());
@@ -89,7 +91,7 @@ fn earlier_buckets_match_independent_fields_and_exact_bytes() {
             case.bytes
         );
     }
-    assert_eq!(fields, 69460);
+    assert_eq!(fields, 77731);
 }
 
 fn edited_mode(archive: &DisplayArchive) -> DisplayArchive {
@@ -165,6 +167,7 @@ fn exact_budgets_charge_earlier_coordinates_and_discarded_objects() {
         } else {
             entries
         };
+        let entries = entries - 4 * usize::from(!empty && case.version <= 0x184c);
         let objects = if empty {
             43
         } else {
@@ -411,4 +414,21 @@ fn word_component_keys_and_missing_section_flags_keep_their_wire_types() {
     };
     assert!(DisplayArchive::new(archive.contents().clone(), context, LIMITS).is_err());
     assert_eq!(archive.to_bytes().unwrap(), case.bytes);
+}
+
+#[test]
+fn historical_halo_repair_list_is_absent_before_its_version_gate() {
+    for case in cases().into_iter().filter(|case| case.scenario >= 96) {
+        let archive = parsed(case);
+        let present = archive.contents().fields.iter().any(|field| {
+            field.path.as_ref() == "root.views[0].view_bucket.bucket.halo_repair.count"
+        });
+        assert_eq!(
+            present,
+            case.version > 0x184c,
+            "{} {}",
+            case.version,
+            case.scenario
+        );
+    }
 }

@@ -59,16 +59,25 @@ fn dependencies(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn folder(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    archive.i32s(&[
-        "folder_comp",
-        "view_comp_type",
-        "asm_feat_type",
-        "belt_has_part",
-    ])?;
+    archive.i32("folder_comp")?;
+    historical_component_state(archive)?;
     if archive.context.version.value() > 0x23e4 {
         archive.i32s(&["grouped_folder_comp", "grouped_folder_type"])?;
     }
     fixed_and_flexible(archive)
+}
+
+fn historical_component_state(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    for (threshold, label) in [
+        (0x17f3, "view_comp_type"),
+        (0x17f5, "asm_feat_type"),
+        (0x183d, "belt_has_part"),
+    ] {
+        if archive.context.version.value() > threshold {
+            archive.i32(label)?;
+        }
+    }
+    Ok(())
 }
 
 fn fixed_and_flexible(archive: &mut DisplayDecoder<'_>) -> Result<()> {

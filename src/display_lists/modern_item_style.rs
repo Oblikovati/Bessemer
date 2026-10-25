@@ -9,7 +9,11 @@ pub(super) fn read(archive: &mut DisplayDecoder<'_>, kind: i32) -> Result<()> {
     archive.u32("unknown_08")?;
     archive.i32("line_style")?;
     archive.scope("line_width", width)?;
-    archive.i32s(&["line_type", "end_cap", "unknown_20"])
+    archive.i32s(&["line_type", "end_cap"])?;
+    if archive.context.version.value() >= 0x185a {
+        archive.i32("unknown_20")?;
+    }
+    Ok(())
 }
 
 fn width(archive: &mut DisplayDecoder<'_>) -> Result<()> {

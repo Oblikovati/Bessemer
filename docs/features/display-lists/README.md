@@ -451,3 +451,5 @@ maintainer-side humanizer skill is unavailable; its prose pass remains for revie
   omissions and the documented uncounted-window exclusion; see [window-boundaries.md](window-boundaries.md).
 
 Early complete-root view transitions and Bug #37 are recorded in [early view roots](early-view-roots.md).
+
+- The 6000 interval retains historical scene, wall, component, pen and halo-list layouts; see [historical roots](historical-roots.md).

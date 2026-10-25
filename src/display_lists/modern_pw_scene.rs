@@ -89,5 +89,9 @@ fn tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         "pv_rendering_brightness",
         "pv_scene_reflectivity",
     ])?;
-    archive.i32s(&["bg_fit_to_sw_graphics_area", "use_sky_shader"])
+    archive.i32("bg_fit_to_sw_graphics_area")?;
+    if archive.context.version.value() >= 0x17dd {
+        archive.i32("use_sky_shader")?;
+    }
+    Ok(())
 }

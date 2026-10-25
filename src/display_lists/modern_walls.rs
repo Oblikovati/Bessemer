@@ -39,14 +39,23 @@ fn rectangular(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 
 fn circular(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     base(archive)?;
-    for index in 0..3 {
-        archive.f32(&format!("unknown_20[{index}]"))?;
+    if archive.context.version.value() > 0x1827 {
+        for index in 0..3 {
+            archive.f32(&format!("unknown_20[{index}]"))?;
+        }
+        archive.f64("radius")?;
     }
-    archive.f64s(&["radius", "unknown_38"])
+    if archive.context.version.value() >= 0x1842 {
+        archive.f64("unknown_38")?;
+    }
+    Ok(())
 }
 
 fn spherical(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     base(archive)?;
-    super::modern_scene::double_vector(archive, "unknown_20")?;
-    archive.f64("radius")
+    if archive.context.version.value() > 0x1827 {
+        super::modern_scene::double_vector(archive, "unknown_20")?;
+        archive.f64("radius")?;
+    }
+    Ok(())
 }

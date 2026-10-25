@@ -27,12 +27,27 @@ fn floor(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         "ambient_occlusion",
         "background_fit_to_camera_fov",
         "flags",
-        "flatten_floor",
     ])?;
-    archive.f64s(&["environment_size", "flattened_floor_height"])?;
-    archive.i32("accurate_environment_lighting")?;
-    archive.transform("flatten_floor_xform")?;
+    historical_floor(archive)?;
     field_of_view(archive)
+}
+
+fn historical_floor(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    let version = archive.context.version.value();
+    if version > 0x1827 {
+        archive.i32("flatten_floor")?;
+        archive.f64("environment_size")?;
+    }
+    if version > 0x1841 {
+        archive.f64("flattened_floor_height")?;
+    }
+    if version > 0x185e {
+        archive.i32("accurate_environment_lighting")?;
+    }
+    if version > 0x186c {
+        archive.transform("flatten_floor_xform")?;
+    }
+    Ok(())
 }
 
 fn field_of_view(archive: &mut DisplayDecoder<'_>) -> Result<()> {

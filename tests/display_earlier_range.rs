@@ -35,6 +35,8 @@ const ARCHIVE_ROOT_GROUPS: &[&[u8]] = &[
     include_bytes!("fixtures/display-lists/early-view-roots-part.bin"),
     include_bytes!("fixtures/display-lists/early-view-roots-assembly.bin"),
     include_bytes!("fixtures/display-lists/earliest-minimal-annotations.bin"),
+    include_bytes!("fixtures/display-lists/historical-roots-part.bin"),
+    include_bytes!("fixtures/display-lists/historical-roots-assembly.bin"),
 ];
 
 fn cases() -> Vec<RangeCase> {
@@ -65,7 +67,7 @@ fn parsed(case: RangeCase) -> DisplayArchive {
 
 #[test]
 fn all_earlier_range_roots_match_independent_material_scene_component_fields_and_bytes() {
-    assert_eq!(cases().len(), 406);
+    assert_eq!(cases().len(), 454);
     let mut fields = 0;
     for case in cases() {
         let archive = parsed(case);
@@ -87,7 +89,7 @@ fn all_earlier_range_roots_match_independent_material_scene_component_fields_and
             case.bytes
         );
     }
-    assert_eq!(fields, 123376);
+    assert_eq!(fields, 137599);
 }
 
 fn has_field(archive: &DisplayArchive, path: &str) -> bool {
@@ -129,7 +131,7 @@ fn truncated_roots_extra_bytes_and_unproven_contexts_do_not_publish_partial_resu
     assert!(DisplayArchive::from_bytes(&trailing, case_context(case), LIMITS).is_err());
 
     let case = selected(12000, DisplayDocumentKind::Part, 128);
-    for version in [0, 6999, 19001, u32::MAX] {
+    for version in [0, 5999, 19001, u32::MAX] {
         let context = DisplayArchiveContext {
             version: DisplayVersion::new(version),
             ..case_context(case)
@@ -227,7 +229,7 @@ fn exact_earlier_root_budgets_cover_missing_collectors_ink_and_configuration_tai
             }
             _ => 0,
         };
-        if (160..192).contains(&case.scenario) {
+        if case.scenario >= 160 {
             entries = early_simple_text::early_entries(case);
         }
         if case.scenario == 168 {
@@ -448,3 +450,6 @@ mod named_trace;
 mod spatial_trace;
 #[path = "support/window_boundary_cases.rs"]
 mod window_boundaries;
+
+#[path = "support/historical_root_cases.rs"]
+mod historical_roots;

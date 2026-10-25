@@ -149,7 +149,9 @@ fn thread_entry(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 
 fn tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i32("cross_hatch_trimmed")?;
-    poly_list(archive, "halo_repair", false)?;
+    if archive.context.version.value() > 0x184c {
+        poly_list(archive, "halo_repair", false)?;
+    }
     if archive.context.version.value() > 0x1c3d {
         archive.i32("surf_cut_body")?;
     }
