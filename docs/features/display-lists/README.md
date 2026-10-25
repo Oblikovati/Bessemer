@@ -638,3 +638,8 @@ observations across the owned full-root inventory and preserves remaining gaps.
 The [stored-archive edit outcome](edit-history.md) returns exact coverage and
 revision-bound structural field history with each validated edit. Geometry and
 external-block checks are explicitly excluded from that operation's scope.
+
+The [early PW scene regression](early-pw-scenes.md) covers generic thread-map keys
+from 2771, including implicit wall keys, minimum record sizes, background suffix
+gates and shared aliases. Its 130 complete roots and four owned containers also
+pin the corrected reference-helper activity-word handling.

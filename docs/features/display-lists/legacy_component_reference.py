@@ -15,13 +15,21 @@ def activity_reader(original: object) -> object:
         dl_ui.read_mgXform_c = span_reader(saved[1],transforms)
         try:result = original(archive,schema)
         finally:dl_ui.read_gcBucket_c,dl_ui.read_mgXform_c = saved
-        end = buckets[0][1]+4
-        if "xform" in result:end = next(last for first,last in transforms if first==end)
-        raw, = struct.unpack_from("<i",archive.b,end+24)
-        assert result["flags"]==(int(raw!=0) if archive.version<0x394 else raw)
-        result["_stored_activity"] = raw
+        # #42: newer ghost-transform framing changes offsets; its activity is already raw.
+        if archive.version>=0x394:
+            result["_stored_activity"] = result["flags"]
+            return result
+        result["_stored_activity"] = old_activity_word(archive,buckets,transforms,result)
         return result
     return read
+
+
+def old_activity_word(archive: object, buckets: list[tuple[int,int]], transforms: list[tuple[int,int]], result: dict[str,object]) -> int:
+    end = buckets[0][1]+4
+    if "xform" in result:end = next(last for first,last in transforms if first==end)
+    raw, = struct.unpack_from("<i",archive.b,end+24)
+    assert result["flags"]==int(raw!=0)
+    return raw
 
 
 def component_reference(raw: bytes, version: int, kind: str, identities: tuple[str,...]) -> dict[str,object]:

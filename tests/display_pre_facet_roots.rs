@@ -15,6 +15,8 @@ use complete_cases::OldCase;
 mod archive_trace;
 #[path = "../examples/support/bucket_trace.rs"]
 mod bucket_trace;
+#[path = "support/early_pw_scene.rs"]
+mod early_pw_scene;
 #[path = "../examples/support/item_trace.rs"]
 mod item_trace;
 #[path = "support/legacy_component.rs"]

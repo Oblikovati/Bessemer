@@ -107,7 +107,7 @@ fn isolated_plane_edits_match_independent_wire_and_revert_without_source_mutatio
     }
 }
 
-fn replace_named_stream(
+pub(super) fn replace_named_stream(
     original: &bessemer::Document,
     archive: &DisplayArchive,
 ) -> bessemer::Document {

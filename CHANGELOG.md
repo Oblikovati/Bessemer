@@ -29,6 +29,8 @@
 
 ### Fixed
 
+- Restored early PW scene layouts reached through generic bucket thread keys, preserving implicit wall keys, compact wall records and versioned background suffixes. (#41)
+
 - Retained the temporary simple-text float in early display archives, including signaling NaN bits and validated edits. (#37)
 
 - Restored inline part configuration tessellation before display version `0x2B67` and retained the short-lived assembly annotation-visibility prefix. (#36)

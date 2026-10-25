@@ -12,8 +12,8 @@ bytecode cache. Unit tests cover instrumentation, source loading, bounded framin
 and corrupted manifests. Source hashes and observed contexts are persisted in
 `version-predicate-audit.json`.
 
-The recorded run covers 11,183 roots in 134 groups. It recognizes 391 version
-comparisons, with both outcomes observed for 358. The remaining 33 are preserved
+The recorded run covers 11,313 roots in 135 groups. It recognizes 391 version
+comparisons, with both outcomes observed for 362. The remaining 29 are preserved
 as one-sided or unobserved entries rather than counted as covered.
 
 This measures execution of recognized version comparisons, not schema acceptance.
@@ -26,6 +26,10 @@ The first inventory exposed missing fixture formats. Adding version-range,
 legacy-bucket and fixed-context roots recovered existing modern item and 3D view
 witnesses. The audit also exposed a real full-root witness gap for named-view
 suffixes, now covered by [the named-view integration fixtures](named-branch-layouts.md).
+
+The subsequent caller review found that generic bucket thread keys reach PW
+scene objects before root scenes begin. [Early PW scene fixtures](early-pw-scenes.md)
+now exercise four formerly one-sided comparisons and pin the corrected decoder.
 
 Several remaining single-sided comparisons have narrower callers. Root scenes
 start above 3934, so older scene and concept branches cannot be reached through

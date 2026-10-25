@@ -39,6 +39,8 @@ native file-version context. Tangent bucket lists follow that context independen
 of the display-list version.
 `edit_with_history` returns a validated snapshot with exact archive coverage,
 structural field history and explicit geometry/external-link check exclusions.
+Early PW scene objects in bucket thread keys retain their versioned wall records
+and background suffixes.
 Before `0x117F`, scene walls support null legacy-material pointers; non-null
 material bodies remain explicitly unsupported.
 All 1,086 reference-readable part/assembly display-list streams reconstruct
