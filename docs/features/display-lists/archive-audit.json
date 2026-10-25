@@ -2,7 +2,6 @@
   "failures": {
     "display-list archive Contents/DisplayLists: Unsupported: display context version 10000, file version 19000, kind Part; initial full-stream checkpoint requires display/file version 19000": 49,
     "display-list archive Contents/DisplayLists: Unsupported: display context version 9000, file version 19000, kind Part; initial full-stream checkpoint requires display/file version 19000": 23,
-    "display-list archive Contents/DisplayLists: Unsupported: runtime class \"uiViewBucket_c\"; expected an implemented display-list object body": 18,
     "display-list archive Contents/DisplayLists: Unsupported: display context version 18000, file version 19000, kind Part; initial full-stream checkpoint requires display/file version 19000": 12,
     "display-list archive Contents/DisplayLists: Unsupported: display context version 18000, file version 19000, kind Assembly; initial full-stream checkpoint requires display/file version 19000": 10,
     "display-list archive Contents/DisplayLists: Unsupported: display context version 7000, file version 19000, kind Part; initial full-stream checkpoint requires display/file version 19000": 5,
@@ -16,15 +15,16 @@
     "10000": 52,
     "11000": 1,
     "18000": 22,
-    "19000": 22
+    "19000": 4
   },
-  "independent_reference_fields": 215049,
+  "independent_reference_fields": 218275,
   "independent_scene_fields": 157014,
-  "independent_item_fields": 174936,
+  "independent_item_fields": 176509,
+  "independent_bucket_fields": 234395,
   "status": "incomplete implementation audit; missing streams are required work",
   "documents": 1086,
   "manifest_sha256": "94047d85dc01ed0f391378374f2c15f5464301bb26990d4214eecdd600723a87",
-  "accepted_count": 961,
+  "accepted_count": 979,
   "two_processes_identical": true,
   "accepted_manifests": [
     "archive-accepted-000.txt",

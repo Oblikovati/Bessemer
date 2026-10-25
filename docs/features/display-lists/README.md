@@ -377,9 +377,10 @@ python -B -X utf8 docs/features/display-lists/audit_archive_corpus.py target/pin
 
 ## Remaining implementation and integration gate
 
-The [modern display-item checkpoint](display-items.md) extends complete native
-coverage to 961 streams; its fixtures and field-oracle counts supersede the earlier
-checkpoint totals above.
+The [modern display-item checkpoint](display-items.md) and
+[view-bucket checkpoint](view-buckets.md) extend complete native coverage to 979
+streams; their fixtures and field-oracle counts supersede the earlier checkpoint
+totals above.
 
 - Complete whole-document context resolution and cross-stream validation using
   declared document/file/archive versions and the external face directory/blocks.
@@ -387,7 +388,7 @@ checkpoint totals above.
   tessellation records. Preserve cycles, aliases and object-tag spelling; do not
   reset inherited state between nested serializers.
 - Extend environments, splitters, fonts, lights and visual properties beyond
-  the initial version-19000 part layout. Add buckets and earlier display-item layouts.
+  the initial version-19000 part layout. Add earlier bucket and display-item layouts.
 - Add earlier scene and unit layouts, remaining shaded-data layouts, decals,
   textured planes, ink views and configuration tails. Unknown-meaning
   fields remain explicit raw typed values; unresolved bodies are unsupported.

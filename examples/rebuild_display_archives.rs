@@ -6,6 +6,8 @@ use bessemer::display_lists::{
 use std::error::Error;
 #[path = "support/archive_scalar_trace.rs"]
 mod archive_scalar_trace;
+#[path = "support/bucket_trace.rs"]
+mod bucket_trace;
 #[path = "support/item_trace.rs"]
 mod item_trace;
 #[path = "support/reference_trace.rs"]
@@ -131,5 +133,6 @@ fn semantic_trace(archive: &DisplayArchive) -> Vec<u8> {
     let mut trace = reference_trace::trace(archive);
     trace.extend(scene_trace::trace(archive));
     trace.extend(item_trace::trace(archive));
+    trace.extend(bucket_trace::trace(archive));
     trace
 }

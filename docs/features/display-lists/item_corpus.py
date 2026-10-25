@@ -14,4 +14,5 @@ def field_coverage(actual: bytes, expected: bytes, label: str) -> dict[str,int]:
     total = reference_corpus.compare_trace(actual,expected,label)
     scenes = sum(line.startswith(b"root.scene.") for line in actual.splitlines())
     items = sum(b".display_items.items[" in line for line in actual.splitlines())
-    return {"reference":total-scenes-items,"scene":scenes,"items":items}
+    buckets = sum(b".view_bucket." in line for line in actual.splitlines())
+    return {"reference":total-scenes-items-buckets,"scene":scenes,"items":items,"buckets":buckets}

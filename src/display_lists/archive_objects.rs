@@ -142,6 +142,8 @@ fn dispatch(archive: &mut DisplayDecoder<'_>, class: &str) -> Result<()> {
         "uiUserModelEnv_c" => super::modern_ui::environment(archive),
         "uiLineFontMgr_c" => super::modern_ui::fonts(archive),
         "uiLFConfig_c" => super::modern_ui::font(archive),
+        "uiViewBucket_c" => super::modern_bucket::view(archive),
+        "gcBucketEdgeData_c" => super::modern_bucket_poly::edge(archive),
         "moAmbientLight_c" | "moLightFeature_c" => super::modern_lights::ambient(archive),
         "moDirectionLight_c" => super::modern_lights::directional(archive),
         "moVisualProperties_c" => super::modern_material::visual(archive),

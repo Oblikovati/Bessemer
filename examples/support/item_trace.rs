@@ -16,7 +16,7 @@ pub(crate) fn trace(archive: &DisplayArchive) -> Vec<u8> {
         .into_bytes()
 }
 
-fn insert(rows: &mut view_trace::Trace, path: &str, value: &DisplayFieldValue) {
+pub(crate) fn insert(rows: &mut view_trace::Trace, path: &str, value: &DisplayFieldValue) {
     if let Some(value) = archive_scalar_trace::scalar(value) {
         rows.insert(path.into(), value);
     }
