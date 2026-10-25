@@ -31,6 +31,8 @@ mod legacy_zero;
 mod light_trace;
 #[path = "../examples/support/material_trace.rs"]
 mod material_trace;
+#[path = "support/named_branch.rs"]
+mod named_branch;
 #[path = "../examples/support/reference_trace.rs"]
 mod reference_trace;
 #[path = "../examples/support/scene_trace.rs"]

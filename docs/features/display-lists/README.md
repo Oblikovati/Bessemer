@@ -627,3 +627,8 @@ plus eight whole-document fixtures.
 The [version-zero checkpoint](legacy-zero-layouts.md) removes the lower-version
 cutoff, with 1394 complete roots covering the earliest appearance, material,
 light, pane, edge and bucket-list predicates, plus eight whole-document fixtures.
+
+The [named-view integration witnesses](named-branch-layouts.md) exercise later
+section-plane and selection branches in 100 full roots and four whole files.
+The [executed version-predicate audit](version-predicate-audit.md) records branch
+observations across the owned full-root inventory and preserves remaining gaps.
