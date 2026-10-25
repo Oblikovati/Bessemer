@@ -2,6 +2,16 @@ use super::{archive_decode::DisplayDecoder, modern_items::point, modern_scene::w
 use crate::Result;
 
 pub(super) fn view(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() < 18000 {
+        return Err(super::archive_error::unsupported(format!(
+            "view bucket version {}; expected implemented modern polygon layout",
+            archive.context.version.value()
+        )));
+    }
+    modern_view(archive)
+}
+
+fn modern_view(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.scope("bucket", bucket)?;
     if archive.i32("has_xform")? != 0 {
         archive.transform("xform")?;

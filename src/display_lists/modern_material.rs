@@ -9,14 +9,20 @@ pub(super) fn visual(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.text("addin_identifier")?;
     archive.i32s(&["valid_only_for_addin", "use_in_sw_lw_rendering"])?;
     archive.text("appearance_name")?;
+    visual_tail(archive)
+}
+
+fn visual_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i32s(&[
         "hardcoded_facet_display",
         "default_appearance",
         "unknown_78",
         "unknown_7c",
-        "graphic_mesh_color_property",
     ])?;
-    if archive.i32("has_dspbr")? != 0 {
+    if archive.context.version.value() > 0x2794 {
+        archive.i32("graphic_mesh_color_property")?;
+    }
+    if archive.context.version.value() > 0x3f08 && archive.i32("has_dspbr")? != 0 {
         archive.scope("dspbr", super::modern_dspbr::read)?;
     }
     Ok(())
@@ -52,8 +58,14 @@ fn material_rendering(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     if archive.i32("has_rv_app_props")? != 0 {
         archive.scope("rv_app_props", rv)?;
     }
-    archive.text("plm_id")?;
-    if archive.i32("has_texture2")? != 0 {
+    material_extensions(archive)
+}
+
+fn material_extensions(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() > 0x3368 {
+        archive.text("plm_id")?;
+    }
+    if archive.context.version.value() > 0x372a && archive.i32("has_texture2")? != 0 {
         archive.scope("texture2", texture)?;
     }
     archive.scope("user_property", super::modern_lights::user_properties)
@@ -76,7 +88,9 @@ fn texture(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i16("texture_render_mode")?;
     archive.i32("ignore_color_material")?;
     archive.f64s(&["texture_trans_x", "texture_trans_y"])?;
-    archive.i32("for_c_thread")?;
+    if archive.context.version.value() > 0x372a {
+        archive.i32("for_c_thread")?;
+    }
     Ok(())
 }
 
@@ -133,7 +147,7 @@ fn rv_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     ])?;
     archive.text("lxp_filename")?;
     archive.f32("round_sharp_edges")?;
-    if archive.context.version.value() < 0x46ba {
+    if (0x3348..0x46ba).contains(&archive.context.version.value()) {
         archive.scope("unknown_symbol", legacy_symbol)?;
     }
     Ok(())

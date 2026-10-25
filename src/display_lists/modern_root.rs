@@ -36,7 +36,9 @@ fn view_bodies(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.field("named_view_transform", Value::NamedViews(Some(named)))?;
     let spatial = super::spatial_read::read_views(&mut archive.cursor, version, limits)?;
     archive.field("view_3d_transform", Value::SpatialViews(Some(spatial)))?;
-    archive.f64("orig_font_scale")?;
+    if version.value() > 0x3331 {
+        archive.f64("orig_font_scale")?;
+    }
     let annotations = super::annotation_read::read_contents(&mut archive.cursor, version, limits)?;
     archive.field(
         "annotation_view_transform",
@@ -67,11 +69,26 @@ fn shaded(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.object("visual_properties", &["moVisualProperties_c"])?;
     archive.scope("tessellation", tessellation)?;
     display_scene(archive)?;
-    if archive.context.kind == DisplayDocumentKind::Assembly {
+    if archive.context.kind == DisplayDocumentKind::Assembly
+        && archive.context.version.value() > 0x42da
+    {
         archive.u32("envelope_system_options.unknown_color")?;
         archive.i32("envelope_system_options.unknown_setting")?;
     }
     ink_dimensions(archive)?;
+    configuration_footer(archive)
+}
+
+fn configuration_footer(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    let version = archive.context.version.value();
+    let minimum = if archive.context.kind == DisplayDocumentKind::Assembly {
+        0x2403
+    } else {
+        0x2b5e
+    };
+    if version <= minimum {
+        return Ok(());
+    }
     let count = archive.i32("configurations.config_count")?;
     if count > 0 {
         return Err(unsupported(format!(
@@ -82,9 +99,12 @@ fn shaded(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn require_context(context: &DisplayArchiveContext) -> Result<()> {
-    if !(18000..=19000).contains(&context.version.value()) || context.file_version != 19000 {
+    let version = context.version.value();
+    if !(version == 10000 || version == 11000 || (18000..=19000).contains(&version))
+        || context.file_version != 19000
+    {
         return Err(unsupported(format!(
-            "display context version {}, file version {}, kind {:?}; expected display version 18000..=19000 and file version 19000",
+            "display context version {}, file version {}, kind {:?}; expected display version 10000, 11000 or 18000..=19000 and file version 19000",
             context.version.value(),
             context.file_version,
             context.kind
@@ -150,6 +170,9 @@ fn display_scene(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn ink_dimensions(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() <= 0x2f80 {
+        return Ok(());
+    }
     let ink = archive.count("markup_ink_views.view_count", 6)?;
     // #30: the configuration dimension has no row payload when the ink-view count is zero.
     let configs = archive.i32("markup_ink_views.configuration_count")?;

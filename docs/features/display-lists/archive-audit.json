@@ -1,27 +1,22 @@
 {
   "failures": {
-    "display-list archive Contents/DisplayLists: Unsupported: display context version 10000, file version 19000, kind Part; expected display version 18000..=19000 and file version 19000": 49,
-    "display-list archive Contents/DisplayLists: Unsupported: display context version 9000, file version 19000, kind Part; expected display version 18000..=19000 and file version 19000": 23,
-    "display-list archive Contents/DisplayLists: Unsupported: display context version 7000, file version 19000, kind Part; expected display version 18000..=19000 and file version 19000": 5,
-    "display-list archive Contents/DisplayLists: Unsupported: display context version 10000, file version 19000, kind Assembly; expected display version 18000..=19000 and file version 19000": 3,
-    "display-list archive Contents/DisplayLists: Unsupported: display context version 11000, file version 19000, kind Part; expected display version 18000..=19000 and file version 19000": 1
+    "display-list archive Contents/DisplayLists: Unsupported: display context version 9000, file version 19000, kind Part; expected display version 10000, 11000 or 18000..=19000 and file version 19000": 23,
+    "display-list archive Contents/DisplayLists: Unsupported: display context version 7000, file version 19000, kind Part; expected display version 10000, 11000 or 18000..=19000 and file version 19000": 5
   },
   "missing_by_version": {
     "7000": 5,
-    "9000": 23,
-    "10000": 52,
-    "11000": 1
+    "9000": 23
   },
   "independent_reference_fields": 238667,
-  "independent_scene_fields": 164483,
-  "independent_item_fields": 184551,
+  "independent_scene_fields": 183897,
+  "independent_item_fields": 203106,
   "independent_bucket_fields": 234395,
-  "independent_light_fields": 58111,
-  "independent_material_fields": 806122,
+  "independent_light_fields": 61742,
+  "independent_material_fields": 833169,
   "status": "incomplete implementation audit; missing streams are required work",
   "documents": 1086,
   "manifest_sha256": "94047d85dc01ed0f391378374f2c15f5464301bb26990d4214eecdd600723a87",
-  "accepted_count": 1005,
+  "accepted_count": 1058,
   "two_processes_identical": true,
   "accepted_manifests": [
     "archive-accepted-000.txt",

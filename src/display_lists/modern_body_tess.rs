@@ -23,7 +23,9 @@ pub(super) fn body(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     }
     super::modern_decals::empty_list(archive, "decals")?;
     archive.text("unknown_str")?;
-    archive.i32("unknown_68")?;
+    if archive.context.version.value() > 0x2791 {
+        archive.i32("unknown_68")?;
+    }
     Ok(())
 }
 
@@ -59,6 +61,9 @@ pub(super) fn face(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 
 fn face_identity(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i32("unknown_38")?;
+    if archive.context.version.value() <= 0x2bcf {
+        return Ok(());
+    }
     if archive.i32("face_string_empty")? == 0 {
         archive.text("face_string")?;
     }

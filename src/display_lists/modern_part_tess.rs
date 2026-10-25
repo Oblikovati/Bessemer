@@ -17,13 +17,24 @@ pub(super) fn read(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn part_configuration(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    archive.i32s(&["unknown_168", "is_tessed_for_exploded_view", "config_id"])?;
-    archive.text("config_name")?;
-    if archive.i32("has_graphics_connect_ref_mgr")? != 0 {
+    archive.i32s(&["unknown_168", "is_tessed_for_exploded_view"])?;
+    if archive.context.version.value() > 0x2b96 {
+        archive.i32("config_id")?;
+        archive.text("config_name")?;
+    }
+    if archive.context.version.value() > 0x2b9d && archive.i32("has_graphics_connect_ref_mgr")? != 0
+    {
         archive.object(
             "graphics_connect_ref_mgr_data",
             &["moGraphicsConnectRefMgrData_c"],
         )?;
+    }
+    part_geometry(archive)
+}
+
+fn part_geometry(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() <= 0x2ba3 {
+        return Ok(());
     }
     archive.bounds("bbox")?;
     archive.scope(

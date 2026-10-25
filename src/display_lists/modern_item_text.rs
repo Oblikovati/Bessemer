@@ -78,6 +78,9 @@ fn symbol(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.f64s(&["unknown_28", "unknown_30"])?;
     archive.text("unknown_name_68")?;
     archive.text("unknown_name_70")?;
+    if archive.context.version.value() <= 0x371f {
+        return Ok(());
+    }
     let count = archive.i32("items.count")?;
     if count < 0 {
         return Err(invalid(format!(

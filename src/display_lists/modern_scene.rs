@@ -32,12 +32,14 @@ fn floor(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.f64s(&["environment_size", "flattened_floor_height"])?;
     archive.i32("accurate_environment_lighting")?;
     archive.transform("flatten_floor_xform")?;
-    archive.f64("hdr_exposure")?;
-    archive.i32("dspbr_tone_map")?;
     field_of_view(archive)
 }
 
 fn field_of_view(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() > 0x42ec {
+        archive.f64("hdr_exposure")?;
+        archive.i32("dspbr_tone_map")?;
+    }
     if archive.context.version.value() > 0x46ba {
         archive.f64("field_of_view")?;
     }

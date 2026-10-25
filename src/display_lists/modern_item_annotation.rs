@@ -12,7 +12,10 @@ pub(super) fn table(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     }
     archive.text("table_name")?;
     archive.i32s(&["unknown_10", "always_2d"])?;
-    archive.text("view_names_3d_with_scale")
+    if archive.context.version.value() > 0x3332 {
+        archive.text("view_names_3d_with_scale")?;
+    }
+    Ok(())
 }
 
 pub(super) fn property(archive: &mut DisplayDecoder<'_>) -> Result<()> {
@@ -23,11 +26,19 @@ pub(super) fn property(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 
 pub(super) fn start(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i32s(&["unknown_00", "unknown_04"])?;
-    let count = archive.count("edw_annot_data.count", 27)?;
+    let minimum = if archive.context.version.value() > 0x332b {
+        27
+    } else {
+        25
+    };
+    let count = archive.count("edw_annot_data.count", minimum)?;
     for index in 0..count {
         archive.scope(&format!("edw_annot_data[{index}]"), annotation)?;
     }
-    archive.text("id_string")
+    if archive.context.version.value() >= 0x35e9 {
+        archive.text("id_string")?;
+    }
+    Ok(())
 }
 
 fn annotation(archive: &mut DisplayDecoder<'_>) -> Result<()> {
@@ -42,8 +53,11 @@ fn annotation(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i32("unknown_i")?;
     strings(archive, "unknown_strings2")?;
     archive.text("unknown_s3")?;
-    archive.text("unknown_s4")?;
-    archive.text("unknown_s5")
+    if archive.context.version.value() > 0x332b {
+        archive.text("unknown_s4")?;
+        archive.text("unknown_s5")?;
+    }
+    Ok(())
 }
 
 fn strings(archive: &mut DisplayDecoder<'_>, label: &str) -> Result<()> {

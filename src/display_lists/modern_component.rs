@@ -37,13 +37,11 @@ fn reference(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         "display_state",
         "is_virtual_comp",
     ])?;
-    for label in [
-        "comp_ref",
-        "spool_ref",
-        "comp_description",
-        "config_description",
-    ] {
+    for label in ["comp_ref", "spool_ref", "comp_description"] {
         archive.text(label)?;
+    }
+    if archive.context.version.value() > 0x279c {
+        archive.text("config_description")?;
     }
     dependencies(archive)
 }
@@ -68,11 +66,19 @@ fn folder(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         "belt_has_part",
         "grouped_folder_comp",
         "grouped_folder_type",
-        "fixed",
     ])?;
+    fixed_and_flexible(archive)
+}
+
+fn fixed_and_flexible(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() <= 0x279d {
+        return geometry_and_state(archive);
+    }
+    archive.i32("fixed")?;
     archive.u16("solve_status")?;
     archive.i32s(&["temp_fixed", "flexible"])?;
-    if archive.i32("has_graphics_connect_ref_mgr")? != 0 {
+    if archive.context.version.value() > 0x2b88 && archive.i32("has_graphics_connect_ref_mgr")? != 0
+    {
         archive.object(
             "graphics_connect_ref_mgr_data",
             &["moGraphicsConnectRefMgrData_c"],
@@ -82,6 +88,9 @@ fn folder(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn geometry_and_state(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() <= 0x2b9b {
+        return Ok(());
+    }
     archive.text("seed_reference_id")?;
     archive.scope("ref_geom_data_collector", super::modern_reference::read)?;
     tessellation_numbers(archive)?;
