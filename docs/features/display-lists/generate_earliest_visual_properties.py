@@ -5,7 +5,7 @@ import generate_component_properties as properties
 from generate_earlier_range import write_group
 from generate_early_appearance_roots import item_bytes as appearance_items
 from generate_earliest_visuals import entry_count,table_layout
-from earliest_visual_patches import convert
+from earlier_environment_patches import convert
 from implicit_visual_maps import single_properties
 from earliest_tessellation_wire import earlier_tails,header_layout
 
@@ -28,6 +28,9 @@ def base_entries(version: int, kind: str) -> int:
 
 
 def generate(version: int, kind: str, scenario: int) -> tuple[bytes,dict[str,object]]:
+    if version<=0xf5e:
+        from earliest_bucket_properties import generate as bucket_properties
+        return bucket_properties(version,kind,scenario)
     saved = properties.convert,properties.converted,properties.item_bytes,properties.base_entries
     properties.convert = partial(saved[0],base_converter=convert)
     properties.converted,properties.item_bytes,properties.base_entries = converted,items,base_entries
@@ -36,5 +39,5 @@ def generate(version: int, kind: str, scenario: int) -> tuple[bytes,dict[str,obj
 
 
 if __name__ == "__main__":
-    cases = [generate(v,k,s) for v in [4000,0xfca,0xfcb,0xfd7,0xfd8,4100,0x1051,0x1052,4200,4201,4202,0x10ae,0x10af] for k in ["part","assembly"] for s in [0,16]]
+    cases = [generate(v,k,s) for v in [3905,0xf55,0xf56,0xf5b,0xf5c,0xf5e,0xf5f,0xf76,0xf77,4000,0xfca,0xfcb,0xfd7,0xfd8,4100,0x1051,0x1052,4200,4201,4202,0x10ae,0x10af] for k in ["part","assembly"] for s in [0,16]]
     print(write_group("earliest-visual-properties",cases,("displaylists.py",)))

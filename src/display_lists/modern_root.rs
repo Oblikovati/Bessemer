@@ -134,9 +134,9 @@ fn configuration_footer(archive: &mut DisplayDecoder<'_>, views: usize) -> Resul
 fn require_context(context: &DisplayArchiveContext) -> Result<()> {
     let version = context.version.value();
     require_window_independent(version)?;
-    if !(4000..=19000).contains(&version) {
+    if !(3905..=19000).contains(&version) {
         return Err(unsupported(format!(
-            "display context version {}, file version {}, kind {:?}; expected display version 4000..=19000",
+            "display context version {}, file version {}, kind {:?}; expected display version 3905..=19000",
             context.version.value(),
             context.file_version,
             context.kind
@@ -196,10 +196,7 @@ fn display_scene(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     if archive.context.version.value() > 0x11ed {
         archive.i32("detail_mask_12")?;
     }
-    let scene = archive.i32("scene_type")?;
-    if scene == 1 || scene == 2 {
-        archive.scope("scene", super::modern_scene::read)?;
-    }
+    optional_scene_body(archive)?;
     if archive.context.version.value() <= 0x1fb2 {
         return Ok(());
     }
@@ -208,5 +205,16 @@ fn display_scene(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         "units_of_measurement.length_units",
         "units_of_measurement.angle_units",
     ])?;
+    Ok(())
+}
+
+fn optional_scene_body(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() <= 0xf5e {
+        return Ok(());
+    }
+    let scene = archive.i32("scene_type")?;
+    if scene == 1 || scene == 2 {
+        archive.scope("scene", super::modern_scene::read)?;
+    }
     Ok(())
 }

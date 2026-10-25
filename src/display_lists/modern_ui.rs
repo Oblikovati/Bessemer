@@ -6,7 +6,10 @@ pub(super) fn environment(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.scope("splitter_10", splitter)?;
     archive.i32s(&["unknown_1b0", "browser_view_width"])?;
     archive.scope("splitter_e0", splitter)?;
-    archive.i32s(&["unknown_1b8", "unknown_1bc", "unknown_1c0"])?;
+    archive.i32s(&["unknown_1b8", "unknown_1bc"])?;
+    if archive.context.version.value() > 0xf55 {
+        archive.i32("unknown_1c0")?;
+    }
     if archive.context.version.value() >= 0x1ff1 {
         archive.i32("unknown_1c4")?;
     }

@@ -9,10 +9,10 @@ from generate_earliest_components import write_documents
 from early_appearance_patches import rv_source
 from implicit_visual_maps import single_properties
 from earliest_tessellation_wire import earlier_tails,header_layout
-from earliest_visual_patches import convert
+from earlier_environment_patches import convert
 from swarchive import Archive
 
-VERSIONS = [4000,0xfca,0xfcb,0xfd7,0xfd8,4100,0x1051,0x1052,4200,4201,4202,0x1098,0x1099,0x10a1,0x10a2,0x10ae,0x10af,0x10b2,0x10b3,0x10bf,0x10c0,4300]
+VERSIONS = [3905,0xf55,0xf56,0xf5b,0xf5c,0xf5e,0xf5f,0xf76,0xf77,4000,0xfca,0xfcb,0xfd7,0xfd8,4100,0x1051,0x1052,4200,4201,4202,0x1098,0x1099,0x10a1,0x10a2,0x10ae,0x10af,0x10b2,0x10b3,0x10bf,0x10c0,4300]
 
 
 def table_layout(raw: bytes, version: int) -> bytes:
@@ -27,7 +27,8 @@ def converted(document: object, path: object, raw: bytes, version: int, kind: st
 def entry_count(version: int, kind: str, variant: int) -> int:
     maps = 3 if version<=0x10ae else int(version<0x10f6 and variant!=2)
     # Each owned face has two surface-parameter elements, absent through 0x1098.
-    return face_entries(version,kind,variant%2)+maps-4*int(version<=0x1098)
+    # The absent scene has one merged node, two feature nodes, three PW walls and three walls.
+    return face_entries(version,kind,variant%2)+maps-4*int(version<=0x1098)-9*int(version<=0xf5e)
 
 
 def generate(version: int, kind: str, scenario: int = 0) -> tuple[bytes,dict[str,object]]:
@@ -43,9 +44,10 @@ def generate(version: int, kind: str, scenario: int = 0) -> tuple[bytes,dict[str
 if __name__=="__main__":
     totals = []
     for kind in ["part","assembly"]:
-        cases = [generate(v,kind) for v in VERSIONS]+[generate(4000,kind,1),generate(4000,kind,2),generate(4100,kind,1),generate(4100,kind,2),generate(4200,kind,1),generate(4200,kind,2),generate(0x10ae,kind,2)]
+        cases = [generate(v,kind) for v in VERSIONS]+[generate(3905,kind,1),generate(3905,kind,2),generate(4000,kind,1),generate(4000,kind,2),generate(4100,kind,1),generate(4100,kind,2),generate(4200,kind,1),generate(4200,kind,2),generate(0x10ae,kind,2)]
         totals.append(write_group("earliest-visual-"+kind,cases,("displaylists.py",)))
     write_documents(generate,4200,"earliest-visual")
     write_documents(generate,4100,"earliest-appearance")
     write_documents(generate,4000,"earliest-tessellation")
+    write_documents(generate,3905,"earliest-environment")
     print(json.dumps({"fixtures":sum(n for n,_ in totals),"fields":sum(n for _,n in totals)}))

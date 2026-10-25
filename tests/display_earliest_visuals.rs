@@ -77,7 +77,7 @@ fn object_target(archive: &DisplayArchive, path: &str) -> DisplayObjectPointer {
 
 #[test]
 fn all_body_property_roots_match_independent_fields_and_forced_bytes() {
-    assert_eq!(cases().len(), 110);
+    assert_eq!(cases().len(), 168);
     let mut fields = 0;
     for case in cases() {
         let archive = parsed(case);
@@ -102,12 +102,15 @@ fn all_body_property_roots_match_independent_fields_and_forced_bytes() {
             case.bytes
         );
     }
-    assert_eq!(fields, 37742);
+    assert_eq!(fields, 49582);
 }
 
 #[test]
 fn implicit_visual_pointers_preserve_aliases_nulls_and_absent_map_headers() {
-    for case in cases().into_iter().filter(|case| case.version <= 0x10ae) {
+    for case in cases()
+        .into_iter()
+        .filter(|case| case.version <= 0x10ae && (case.version > 0xf5e || case.scenario >= 208))
+    {
         let archive = parsed(case);
         let part = part_prefix(case);
         let paths = [
@@ -240,7 +243,10 @@ fn holder_state_words_begin_at_the_reference_boundary() {
 
 #[test]
 fn early_appearance_layouts_keep_the_old_word_and_omit_unstored_rendering_fields() {
-    for case in cases() {
+    for case in cases()
+        .into_iter()
+        .filter(|case| case.version > 0xf5e || case.scenario >= 208)
+    {
         let archive = parsed(case);
         let suffix_present = |suffix: &str| {
             archive
@@ -371,3 +377,6 @@ fn early_tessellation_rejects_sampled_prefixes_and_trailing_bytes() {
         assert!(DisplayArchive::from_bytes(&extended, case_context(case), LIMITS).is_err());
     }
 }
+
+#[path = "support/earliest_environment.rs"]
+mod earlier_environment;

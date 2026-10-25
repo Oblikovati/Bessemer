@@ -15,4 +15,4 @@ if __name__ == "__main__":
     rows = [row for name,_ in GROUPS for row in json.loads(Path(__file__).with_name(name+".json").read_text())["fixtures"]]
     raw = struct.pack("<I",len(rows))+b"".join(struct.pack("<II",row["aggregate_entries"],row["objects"]) for row in rows)
     Path("tests/fixtures/display-lists/earliest-visual-budgets.bin").write_bytes(raw)
-    verify_groups(sys.argv[1],GROUPS,"earliest-visual-verification.json",["modern_root","modern_decals","modern_assembly","modern_body_tess","modern_part_tess","modern_material","modern_component","modern_item_annotation"])
+    verify_groups(sys.argv[1],GROUPS,"earliest-visual-verification.json",["modern_root","modern_ui","modern_component_properties","modern_decals","modern_assembly","modern_body_tess","modern_part_tess","modern_material","modern_component","modern_item_annotation"])

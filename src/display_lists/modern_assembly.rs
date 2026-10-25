@@ -10,7 +10,13 @@ pub(super) fn shaded_component(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i32("unknown_320")?;
     archive.object_array("children", ASSEMBLY_CLASSES)?;
     archive.object("owner", ASSEMBLY_CLASSES)?;
-    archive.i32("has_shrink_wrap_config")?;
+    component_tail(archive)
+}
+
+fn component_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() > 0xf76 {
+        archive.i32("has_shrink_wrap_config")?;
+    }
     super::modern_decals::list(archive, "decals")?;
     if archive.context.version.value() >= 0x10f0 {
         archive.i32("unknown_370")?;
