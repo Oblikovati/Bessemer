@@ -146,6 +146,8 @@ fn dispatch(archive: &mut DisplayDecoder<'_>, class: &str) -> Result<()> {
         "gcBucketEdgeData_c" => super::modern_bucket_poly::edge(archive),
         "moAmbientLight_c" | "moLightFeature_c" => super::modern_lights::ambient(archive),
         "moDirectionLight_c" => super::modern_lights::directional(archive),
+        "moSpotLight_c" => super::modern_lights::spot(archive),
+        "moPointLight_c" => super::modern_lights::point(archive),
         "moVisualProperties_c" => super::modern_material::visual(archive),
         "moNodeName_c" => archive.text("name"),
         "pwSceneData_c" => super::modern_pw_scene::read(archive),

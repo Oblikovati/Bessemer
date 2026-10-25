@@ -17,6 +17,7 @@ import reference_corpus
 import scene_corpus
 import item_corpus
 import bucket_corpus
+import light_corpus
 
 
 def collect() -> tuple[bytes, list[tuple[str, bytes, int, bytes]], str]:
@@ -34,7 +35,7 @@ def collect() -> tuple[bytes, list[tuple[str, bytes, int, bytes]], str]:
         root = displaylists.display_lists(archive, archive.doc_kind)
         assert archive.p == len(raw)
         name = path.relative_to(Path(swcover.SAMPLES)).as_posix()
-        records.append((name, raw, archive.version & 0xffffffff, reference_corpus.trace(root)+scene_corpus.trace(root)+item_corpus.trace(root)+bucket_corpus.trace(root)))
+        records.append((name, raw, archive.version & 0xffffffff, reference_corpus.trace(root)+scene_corpus.trace(root)+item_corpus.trace(root)+bucket_corpus.trace(root)+light_corpus.trace(root)))
         manifest.update(name.encode()+b"\0"+raw)
         components = sorted(getattr(archive, "face_tess_comp_ids", ()))
         framed.extend(context_frame(archive.version, archive.doc_kind, components)+struct.pack("<I", len(raw))+raw)
@@ -69,7 +70,7 @@ def results(raw: bytes, records: list[tuple[str, bytes, int, bytes]], traces: li
             failures[payload.decode()] += 1
             versions[version] += 1
     assert position == len(raw)
-    return {"accepted": accepted, "failures": dict(failures.most_common()), "missing_by_version": dict(sorted(versions.items())), "independent_reference_fields": fields["reference"], "independent_scene_fields": fields["scene"], "independent_item_fields": fields["items"], "independent_bucket_fields": fields["buckets"]}
+    return {"accepted": accepted, "failures": dict(failures.most_common()), "missing_by_version": dict(sorted(versions.items())), "independent_reference_fields": fields["reference"], "independent_scene_fields": fields["scene"], "independent_item_fields": fields["items"], "independent_bucket_fields": fields["buckets"], "independent_light_fields": fields["lights"]}
 
 
 def audit(executable: str) -> None:

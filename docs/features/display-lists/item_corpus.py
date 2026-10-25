@@ -15,4 +15,5 @@ def field_coverage(actual: bytes, expected: bytes, label: str) -> dict[str,int]:
     scenes = sum(line.startswith(b"root.scene.") for line in actual.splitlines())
     items = sum(b".display_items.items[" in line for line in actual.splitlines())
     buckets = sum(b".view_bucket." in line for line in actual.splitlines())
-    return {"reference":total-scenes-items-buckets,"scene":scenes,"items":items,"buckets":buckets}
+    lights = sum(line.startswith(b"root.old_lights.items[") for line in actual.splitlines())
+    return {"reference":total-scenes-items-buckets-lights,"scene":scenes,"items":items,"buckets":buckets,"lights":lights}

@@ -30,7 +30,7 @@ chunks and exact samples across all defined color/depth pairs and Adam7 interlac
 `bessemer::display_lists` currently provides lossless compact/fixed transform and
 versioned named, annotation and 3D-view codecs, plus part/assembly archive reading,
 validated edits and writing with inline facets, explicit external face references
-and version-19000 reference geometry, scenes, display items and view buckets.
+and version-19000 reference geometry, scenes, display items, view buckets and lights.
 Complete display-list corpus support is in development. See the
 [display-list work and evidence](docs/features/display-lists/README.md).
 Complete part, assembly, and drawing model archives, geometric interpretation and

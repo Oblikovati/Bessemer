@@ -377,10 +377,11 @@ python -B -X utf8 docs/features/display-lists/audit_archive_corpus.py target/pin
 
 ## Remaining implementation and integration gate
 
-The [modern display-item checkpoint](display-items.md) and
-[view-bucket checkpoint](view-buckets.md) extend complete native coverage to 979
-streams; their fixtures and field-oracle counts supersede the earlier checkpoint
-totals above.
+The [modern display-item checkpoint](display-items.md),
+[view-bucket checkpoint](view-buckets.md) and [light checkpoint](lights.md) extend
+complete native coverage to 983 streams, covering every version-19000 stream in
+this corpus. Their fixtures and field-oracle counts supersede the earlier totals
+above. This corpus milestone does not establish complete schema parity.
 
 - Complete whole-document context resolution and cross-stream validation using
   declared document/file/archive versions and the external face directory/blocks.
