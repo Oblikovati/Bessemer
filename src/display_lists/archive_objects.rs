@@ -45,7 +45,7 @@ impl DisplayDecoder<'_> {
         self.array_with_role(label, ObjectRole::CObject)
     }
 
-    fn array_with_role(&mut self, label: &str, role: ObjectRole<'_>) -> Result<()> {
+    pub fn su_count(&mut self, label: &str) -> Result<usize> {
         let short = self.u16(&format!("{label}.count_word"))?;
         let count = if short == u16::MAX {
             self.u32(&format!("{label}.count_dword"))? as usize
@@ -53,6 +53,11 @@ impl DisplayDecoder<'_> {
             short as usize
         };
         self.entries(count, label)?;
+        Ok(count)
+    }
+
+    fn array_with_role(&mut self, label: &str, role: ObjectRole<'_>) -> Result<()> {
+        let count = self.su_count(label)?;
         if count > self.cursor.remaining() / 2 {
             return Err(super::archive_error::invalid(format!(
                 "{label} count {count}; expected object tags fitting remaining bytes"
