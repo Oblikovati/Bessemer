@@ -45,6 +45,7 @@ pub(super) struct FacetState {
     limits: TessellationLimits,
     components: usize,
     faces: usize,
+    element_budget: Option<(usize, usize)>,
 }
 
 impl FacetState {
@@ -57,6 +58,7 @@ impl FacetState {
             limits,
             components: 0,
             faces: 0,
+            element_budget: None,
         }
     }
 
@@ -107,14 +109,48 @@ impl FacetState {
         Ok(())
     }
 
-    pub fn require_count(&self, count: usize, class: CollectionClass) -> Result<()> {
+    pub fn require_count(&mut self, count: usize, class: CollectionClass) -> Result<()> {
         let available = self.available(class);
         if count <= available {
-            return Ok(());
+            return self.charge_elements(count, class);
         }
         Err(invalid(format!(
             "collection count {count}; expected 0..={available} within allocation budget"
         )))
+    }
+
+    pub fn with_element_budget(
+        context: TessellationContext,
+        limits: TessellationLimits,
+        maximum: usize,
+    ) -> Self {
+        Self {
+            element_budget: Some((0, maximum)),
+            ..Self::new(context, limits)
+        }
+    }
+
+    pub fn element_count(&self) -> usize {
+        self.element_budget.map_or(0, |(used, _)| used)
+    }
+
+    fn charge_elements(&mut self, count: usize, class: CollectionClass) -> Result<()> {
+        if !matches!(class, CollectionClass::Element) {
+            return Ok(());
+        }
+        let Some((used, maximum)) = self.element_budget else {
+            return Ok(());
+        };
+        let total = used
+            .checked_add(count)
+            .ok_or_else(|| invalid(format!("facet elements {used} + {count}; expected usize")))?;
+        if total > maximum {
+            return Err(invalid(format!(
+                "facet elements {total}; expected at most {maximum}"
+            )));
+        }
+        self.element_budget = Some((total, maximum));
+        Ok(())
     }
 }
 

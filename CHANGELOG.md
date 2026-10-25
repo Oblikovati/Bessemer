@@ -4,6 +4,14 @@
 
 ### Added
 
+- Added validated display-archive edit outcomes with completion, exact stored-field fidelity, validation coverage, explicit exclusions and revision-bound structural field history. (#28)
+
+- Added complete drawing `Contents/VBLists` reading, validated edits and writing with unsigned model-version context, shared object graphs and shaded part/assembly models. (#38)
+
+- Added exact display-to-face-cache link checks with borrowed facets, explicit coverage and typed failures for missing, invalid or ambiguous targets. (#28)
+
+- Added lossless display-list transform and view codecs, plus part/assembly archive reading, validated edits and writing for unsigned display versions including zero outside the uncounted-window interval `0x1FAE`–`0x1FCE`, with shared object identities, revision-scoped object handles, typed whole-document context resolution, shared line-style, layer-manager and component-property graphs, direct and wrapped body-property maps, inline facets, external face references, all seven reference-geometry kinds, versioned appearance and scene layouts, display-item payloads, versioned view buckets with explicit native file-version context and gated tangent lists, graphics-reference graphs, markup-ink grids, per-configuration data, decals, legacy wall records with null material pointers, textured-plane records with null bitmap pointers and all five old-light classes. Unresolved bodies and window-dependent layouts returned typed failures without opaque fallback. (#28)
+
 - Added embedded SolidWorks Inspection project XML reading, construction and writing, with preserved unknown content and a complete drawing Job Number edit example. (#26)
 
 - Added lossless namespace-aware XML metadata reading, construction, section-scoped property views, immutable text and attribute edits, and writing for all 17 documented stream families, with bounded parsing and preserved Unicode and keyword framing. (#22)
@@ -20,5 +28,11 @@
 - Added SolidWorks version-4 container reading, checked stream extraction, and stream replacement that preserved untouched compressed bytes. (#1)
 
 ### Fixed
+
+- Restored early PW scene layouts reached through generic bucket thread keys, preserving implicit wall keys, compact wall records and versioned background suffixes. (#41)
+
+- Retained the temporary simple-text float in early display archives, including signaling NaN bits and validated edits. (#37)
+
+- Restored inline part configuration tessellation before display version `0x2B67` and retained the short-lived assembly annotation-visibility prefix. (#36)
 
 - Preserved the original file when a stream replacement matched its original content, including after an intermediate edit. (#5)

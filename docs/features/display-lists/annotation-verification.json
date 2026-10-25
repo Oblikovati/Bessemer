@@ -1,0 +1,31 @@
+{
+  "status": "annotation-view component verified; complete display-list archive incomplete",
+  "feature_issue": 28,
+  "date": "2026-10-25",
+  "platform": "Windows x64",
+  "rust": "1.99.0 MSVC",
+  "native_documents": 1086,
+  "annotation_view_collections": 1086,
+  "annotation_views": 3260,
+  "native_annotation_view_bytes": 874416,
+  "distinct_versioned_collections": 597,
+  "display_stream_manifest_sha256": "94047d85dc01ed0f391378374f2c15f5464301bb26990d4214eecdd600723a87",
+  "owned_vectors": 27,
+  "owned_vectors_sha256": "de516a7965812908b3dafb041eab6fa1a7f2c6ec7438f7d8c789de4485abee35",
+  "reference_excerpt_sha256": "8be3fc926a23b321d6cc74a1fc46174513bb32279284845fa346fc26f17a7456",
+  "checks": [
+    "forced reconstruction of every distinct native collection",
+    "independent reference field traces for native collections and all owned vectors",
+    "typed raw annotation IDs without invented uniqueness constraints",
+    "every conditional version boundary and absent/empty collections",
+    "all truncations and malformed counts",
+    "byte/view/cumulative plane budgets",
+    "shared equivalent-CString budget regression",
+    "source isolation, authentic reverts, Send/Sync and repeated concurrent byte identity"
+  ],
+  "exclusions": [
+    "complete Bessemer display-list archive decoding and writing (pending)",
+    "native application acceptance",
+    "geometric validity"
+  ]
+}

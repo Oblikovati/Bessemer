@@ -27,6 +27,33 @@ It also supports embedded `ThirdPty/InspectionXpert` projects and complete Job N
 pixels, and supports isolated palette and pixel replacement.
 It also reads, constructs, edits, and writes static PNG previews, preserving stored
 chunks and exact samples across all defined color/depth pairs and Adam7 interlace.
+`bessemer::display_lists` currently provides lossless compact/fixed transform and
+versioned named, annotation and 3D-view codecs, plus part/assembly archive reading,
+validated edits and writing with inline facets, explicit external face references
+and reference geometry, scenes, display items, view buckets, graphics references,
+markup-ink grids, per-configuration data, decals, null-bitmap textured planes and
+lights for unsigned display versions, including zero, outside the
+uncounted-window interval
+`0x1FAE`–`0x1FCE`, with an explicit
+native file-version context. Tangent bucket lists follow that context independently
+of the display-list version.
+`edit_with_history` returns a validated snapshot with exact archive coverage,
+structural field history and explicit geometry/external-link check exclusions.
+Early PW scene objects in bucket thread keys retain their versioned wall records
+and background suffixes.
+Before `0x117F`, scene walls support null legacy-material pointers; non-null
+material bodies remain explicitly unsupported.
+All 1,086 reference-readable part/assembly display-list streams reconstruct
+exactly. The [display-list acceptance review](docs/features/display-lists/acceptance-review.md)
+records supported layouts, explicit unresolved cases and the integration gate.
+Drawing `Contents/VBLists` supports complete reading, construction, isolated edits
+and writing for unsigned model versions from `0x27CC` onward. All 20 native
+drawing streams
+reconstruct exactly, including 33 shaded models; see the
+[drawing bucket evidence](docs/features/drawing-buckets/README.md). Drawing
+`Contents/DisplayLists` remains unresolved in the reference. High unsigned markers
+follow the [documented version predicates](docs/features/display-lists/unsigned-versions.md).
+
 Complete part, assembly, and drawing model archives, geometric interpretation and
 validation, and semantic CAD editing remain to be implemented; this is not yet
 Corliss feature parity.
@@ -77,3 +104,15 @@ name, contributing innovations in fields ranging from steamship design and sugar
 furnaces and the manufacture of bronze powder. His pioneering process laid the material foundation for the 
 Second Industrial Revolution, enabling the modern expansion of railways, bridges, ocean liners, 
 and skyscrapers worldwide.
+
+Display archives provide `object_handle` and `resolve_object` for revision-scoped
+object lookup. Clones and equivalent edits retain handles; changed edits and
+fresh decodes require new handles. See the [identity contract](docs/features/display-lists/revision-identities.md).
+
+Display-list CObject graphs also retain shared line-style definitions and versioned layer maps; see the [UI object coverage](docs/features/display-lists/ui-objects.md).
+
+Component-property objects and holders retain their embedded fonts, visibility fields, occurrences and shared references; see the [component-property coverage](docs/features/display-lists/component-properties.md).
+
+`DisplayArchiveContext::from_document` resolves exact display-version markers and external component declarations with explicit native file and tessellation versions. See [document context resolution](docs/features/display-lists/document-context.md).
+
+`DisplayArchive::check_external_face_links` checks named cache blocks and resolves requested external facets with explicit coverage. See [external face links](docs/features/display-lists/external-face-links.md).

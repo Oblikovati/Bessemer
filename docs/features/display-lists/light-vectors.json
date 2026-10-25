@@ -1,0 +1,50 @@
+{
+  "context": "version-19000 DisplayLists serializeOldLights; not model-feature light serialization",
+  "fixtures": [
+    {
+      "fixture": "lights-spot",
+      "bytes": 6479,
+      "sha256": "277da1466081f76e68ff800428a3f16895090beac135312ff2467c712888eb9c",
+      "object_id": 49,
+      "object_start": 3507,
+      "object_end": 3868,
+      "semantic_fields": 58,
+      "aggregate_entries": 57
+    },
+    {
+      "fixture": "lights-point",
+      "bytes": 6400,
+      "sha256": "e67e60d615029950af5f1c8a1f2857442814d3d93e9b5feb91b267d054a147a7",
+      "object_id": 49,
+      "object_start": 3507,
+      "object_end": 3789,
+      "semantic_fields": 48,
+      "aggregate_entries": 57
+    },
+    {
+      "fixture": "lights-empty-properties",
+      "bytes": 6421,
+      "sha256": "b56a0a9e10186e83f4bc66ff1f827ce054cbf4cb306ae79feb2f75b6dbb7910a",
+      "object_id": 49,
+      "object_start": 3507,
+      "object_end": 3810,
+      "semantic_fields": 51,
+      "aggregate_entries": 53
+    },
+    {
+      "fixture": "lights-edited",
+      "bytes": 6479,
+      "sha256": "858985afcb963caa62a565098501b7c0a71dbc9267228cbc2f47bad780a71364",
+      "object_id": 49,
+      "object_start": 3507,
+      "object_end": 3868,
+      "semantic_fields": 58,
+      "aggregate_entries": 57
+    }
+  ],
+  "source_hashes": {
+    "dl_light.py": "a5a23b81b19dec625339e487d8fb5bf818391b4a0ccf0188e75802feda03f58c",
+    "displaylists.py": "2016e6267d2d13d08e3f1b1904dfe4c9e4ca06e12a619cecec3189ddf7e337b8",
+    "mfcobjects.py": "eb7ad6c86ed8e4c4bc9e8b5ad6e14c2dbabc4a5ae53bb6cd9686061cef98aa16"
+  }
+}

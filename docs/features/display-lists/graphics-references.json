@@ -1,0 +1,58 @@
+{
+  "scope": "wire graph identity only; no CAD/application validity claim",
+  "fixtures": [
+    {
+      "version": 19000,
+      "kind": "part",
+      "scenario": 0,
+      "bytes": 6618,
+      "sha256": "b34e7b6db07f8f40430a064161ddcf018411278a158b56264f20483d576f413a",
+      "trace_fields": 12
+    },
+    {
+      "version": 19000,
+      "kind": "assembly",
+      "scenario": 0,
+      "bytes": 5748,
+      "sha256": "2b7a1ec8a2d91e418fe1dff57080b463cf06fda088618a1294c2d26b5ac976fb",
+      "trace_fields": 12
+    },
+    {
+      "version": 19000,
+      "kind": "part",
+      "scenario": 2,
+      "bytes": 6363,
+      "sha256": "8b427907ac0980c317203d0ab8962fa86a73da3d328a032cb65ab57c74bbaf2b",
+      "trace_fields": 1
+    },
+    {
+      "version": 19000,
+      "kind": "part",
+      "scenario": 1,
+      "bytes": 6618,
+      "sha256": "cda44c021419308722391782e5789d7cdbb13ae6ac4c70a54c7f8c82ae6d4966",
+      "trace_fields": 12
+    },
+    {
+      "version": 11000,
+      "kind": "part",
+      "scenario": 0,
+      "bytes": 7771,
+      "sha256": "0b2f0b4c9a8dba376908916fc560176c6bf74c7947ac5e799a3058937df12807",
+      "trace_fields": 11
+    }
+  ],
+  "sha256": "beba1d7b0a9d081636260a992532508eb8bf333d155f5003832d0d6ec09ccf24",
+  "plane": {
+    "layout": "root point then normal, six f64, 48 bytes",
+    "evidence_sha256": "472c811ecf07a8d5df3ae3fdd8bbc034952770814c99d01ab618a983931d1998",
+    "module_sha256": "e3e218060ceb4d09724e9956b94cdf4ea371b33072e3d471abe6cb87ec026fde",
+    "function": "mgPlane_c::restore",
+    "address": "0x32102ac0"
+  },
+  "source_hashes": {
+    "dl_tess.py": "b5f460b353ffb057437e05819be9a5c5fb4f7f45a17faad9b1d9372d7da8faa2",
+    "mfcobjects.py": "eb7ad6c86ed8e4c4bc9e8b5ad6e14c2dbabc4a5ae53bb6cd9686061cef98aa16",
+    "swarchive.py": "49daa712eacb3d25077835c0177118e94790d435118f281d03f110e73cf5dbf8"
+  }
+}

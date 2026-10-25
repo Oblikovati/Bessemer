@@ -2,10 +2,13 @@
 mod arrays;
 mod block;
 mod codec;
+mod component_ids;
 mod context;
 mod directory;
 mod edges;
+mod embedded;
 mod envelope;
+pub(crate) use embedded::{read_embedded, write_embedded};
 mod facets;
 mod groups;
 mod indices;

@@ -93,6 +93,27 @@ impl ArchiveString {
         read_text(cursor, count, width, TextEncoding::Utf16)
     }
 
+    pub(crate) fn encoded_size(&self) -> Result<usize> {
+        let count = encoded_count(&self.text, self.encoding)?;
+        let prefix = match self.width {
+            LengthWidth::Byte => 1,
+            LengthWidth::Word => 3,
+            LengthWidth::Dword => 7,
+        };
+        let marker = if self.encoding == TextEncoding::Utf16 {
+            3
+        } else {
+            0
+        };
+        text_byte_count(count, self.encoding)?
+            .checked_add(prefix + marker)
+            .ok_or_else(|| {
+                malformed(format!(
+                    "CString count {count}; expected representable encoded size"
+                ))
+            })
+    }
+
     pub(crate) fn encode(&self, output: &mut Vec<u8>) -> Result<()> {
         let count = encoded_count(&self.text, self.encoding)?;
         if self.encoding == TextEncoding::Utf16 {
