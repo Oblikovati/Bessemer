@@ -27,6 +27,12 @@ fn cases() -> Vec<BucketCase> {
     cases.extend(complete_cases::decode(include_bytes!(
         "fixtures/display-lists/lower-buckets.bin"
     )));
+    cases.extend(complete_cases::decode(include_bytes!(
+        "fixtures/display-lists/transition-buckets-3d.bin"
+    )));
+    cases.extend(complete_cases::decode(include_bytes!(
+        "fixtures/display-lists/transition-buckets-2d.bin"
+    )));
     cases
 }
 
@@ -50,7 +56,7 @@ fn parsed(case: BucketCase) -> DisplayArchive {
 
 #[test]
 fn both_coordinate_scopes_match_independent_fields_on_each_side_of_the_flag_transition() {
-    assert_eq!(cases().len(), 30);
+    assert_eq!(cases().len(), 94);
     let mut fields = 0;
     for case in cases() {
         assert!(case.scalars.is_empty());
@@ -76,7 +82,7 @@ fn both_coordinate_scopes_match_independent_fields_on_each_side_of_the_flag_tran
             case.bytes
         );
     }
-    assert_eq!(fields, 8814);
+    assert_eq!(fields, 26851);
 }
 
 #[test]
@@ -120,7 +126,7 @@ fn edited_mode(archive: &DisplayArchive) -> DisplayArchive {
 
 #[test]
 fn independent_bucket_edit_reopens_with_explicit_context_and_reverts() {
-    for version in [14000, 16000] {
+    for version in [13000, 14000, 16000] {
         let case = selected(version, 16);
         let archive = parsed(case);
         let edited = edited_mode(&archive);
@@ -235,7 +241,7 @@ fn malformed_coordinate_counts_and_arc_shape_changes_fail_without_mutating_input
 
 #[test]
 fn every_populated_prefix_fails_and_owned_parallel_edits_match_the_independent_result() {
-    for version in [14000, 16000] {
+    for version in [13000, 14000, 16000] {
         let case = selected(version, 16);
         for end in 0..case.bytes.len() {
             assert!(
@@ -277,4 +283,50 @@ fn lower_detailing_and_arc_tail_fields_follow_their_distinct_inclusive_boundarie
             case.scenario % 16 != 2 && case.version >= 0x3724
         );
     }
+}
+
+#[test]
+fn transition_raw_words_and_overwritten_silhouette_ids_are_retained_without_normalization() {
+    let root = format!("{ROOT}.bucket.silh.items[0]");
+    for version in [
+        13000, 0x3333, 0x3334, 0x333b, 0x333c, 0x3350, 0x3351, 0x3364,
+    ] {
+        let archive = parsed(selected(version, 0));
+        let has = |path: &str| {
+            archive
+                .contents()
+                .fields
+                .iter()
+                .any(|field| field.path.as_ref() == path)
+        };
+        assert_eq!(has(&format!("{root}.silh_id_high")), version < 0x333c);
+        if version < 0x333c {
+            let raw = format!("{root}.silh_id_high=i:-17\n{root}.silh_id_low=i:42\n");
+            assert_eq!(archive_support::check_scalar_table(&archive, &raw), 2);
+        }
+        if version <= 0x3333 {
+            let trace = String::from_utf8(bucket_trace::trace(&archive)).unwrap();
+            assert!(trace.contains(&format!("{root}.face2_persistent_id=i:-16958\n")));
+        }
+        let path = format!("{root}.arc_data.unknown_68");
+        let field = archive
+            .contents()
+            .fields
+            .iter()
+            .find(|field| field.path.as_ref() == path)
+            .unwrap();
+        assert!(if version <= 0x3350 {
+            matches!(field.value, DisplayFieldValue::I32(-17))
+        } else {
+            matches!(field.value, DisplayFieldValue::U8(255))
+        });
+        assert_eq!(
+            has(&format!("{root}.arc_data.unknown_50[0]")),
+            version <= 0x3350
+        );
+    }
+    let archive = parsed(selected(13000, 0));
+    let prefix = format!("{ROOT}.bucket.cthread_maps[0].entries[0].key");
+    let expected = format!("{prefix}.unknown_legacy[0]=i:-73\n{prefix}.unknown_legacy[1]=i:74\n");
+    assert_eq!(archive_support::check_scalar_table(&archive, &expected), 2);
 }

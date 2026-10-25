@@ -7,6 +7,8 @@ use archive_support::{LIMITS, context};
 #[path = "support/old_display_cases.rs"]
 mod complete_cases;
 use complete_cases::OldCase as RangeCase;
+#[path = "../examples/support/item_trace.rs"]
+mod item_trace;
 #[path = "../examples/support/material_trace.rs"]
 mod material_trace;
 #[path = "../examples/support/scene_trace.rs"]
@@ -20,6 +22,12 @@ fn cases() -> Vec<RangeCase> {
         complete_cases::decode(include_bytes!("fixtures/display-lists/middle-range.bin"));
     cases.extend(complete_cases::decode(include_bytes!(
         "fixtures/display-lists/lower-range.bin"
+    )));
+    cases.extend(complete_cases::decode(include_bytes!(
+        "fixtures/display-lists/transition-range-part.bin"
+    )));
+    cases.extend(complete_cases::decode(include_bytes!(
+        "fixtures/display-lists/transition-range-assembly.bin"
     )));
     cases
 }
@@ -45,12 +53,13 @@ fn parsed(case: RangeCase) -> DisplayArchive {
 
 #[test]
 fn all_middle_range_roots_match_independent_material_scene_component_fields_and_bytes() {
-    assert_eq!(cases().len(), 90);
+    assert_eq!(cases().len(), 160);
     let mut fields = 0;
     for case in cases() {
         let archive = parsed(case);
         let mut trace = material_trace::trace(&archive);
         trace.extend(scene_trace::trace(&archive));
+        trace.extend(item_trace::trace(&archive));
         assert_eq!(trace, case.expected, "{} {:?}", case.version, case.kind);
         fields += case
             .expected
@@ -66,7 +75,7 @@ fn all_middle_range_roots_match_independent_material_scene_component_fields_and_
             case.bytes
         );
     }
-    assert_eq!(fields, 27179);
+    assert_eq!(fields, 49626);
 }
 
 fn has_field(archive: &DisplayArchive, path: &str) -> bool {
@@ -211,6 +220,14 @@ fn full_root_budgets_include_both_inline_facets_at_the_vertex_layout_boundary() 
                 };
             }
         }
+        if case.scenario >= 64 {
+            entries += 12
+                + match case.scenario % 64 {
+                    2 => 99,
+                    3 => 7,
+                    _ => 0,
+                };
+        }
         let objects = if case.kind == DisplayDocumentKind::Part {
             52
         } else {
@@ -260,7 +277,7 @@ fn full_root_budgets_include_both_inline_facets_at_the_vertex_layout_boundary() 
 
 #[test]
 fn truncated_roots_extra_bytes_and_unproven_contexts_do_not_publish_partial_results() {
-    for (version, scenario) in [(14000, 32), (16000, 0)] {
+    for (version, scenario) in [(13000, 64), (14000, 32), (16000, 0)] {
         let case = selected(version, DisplayDocumentKind::Part, scenario);
         for end in 0..case.bytes.len() {
             assert!(
@@ -277,7 +294,7 @@ fn truncated_roots_extra_bytes_and_unproven_contexts_do_not_publish_partial_resu
         assert!(DisplayArchive::from_bytes(&trailing, case_context(case), LIMITS).is_err());
     }
     let case = selected(16000, DisplayDocumentKind::Part, 0);
-    for version in [0, 13999, 19001, u32::MAX] {
+    for version in [0, 12999, 19001, u32::MAX] {
         let context = DisplayArchiveContext {
             version: DisplayVersion::new(version),
             ..case_context(case)
@@ -289,7 +306,7 @@ fn truncated_roots_extra_bytes_and_unproven_contexts_do_not_publish_partial_resu
 
 #[test]
 fn published_middle_range_roots_own_sources_and_parallel_edits_match_independent_bytes() {
-    for (version, scenario) in [(14000, 32), (16000, 0)] {
+    for (version, scenario) in [(13000, 64), (14000, 32), (16000, 0)] {
         let case = selected(version, DisplayDocumentKind::Assembly, scenario);
         let mut source = case.bytes.to_vec();
         let archive = DisplayArchive::from_bytes(&source, case_context(case), LIMITS).unwrap();
@@ -389,5 +406,78 @@ fn fixed_component_tessellation_pairs_do_not_serialize_the_implicit_identifier()
             );
             assert_eq!(archive_support::check_scalar_table(&archive, &oracle), 3);
         }
+    }
+}
+
+#[test]
+fn transition_appearance_and_annotation_fields_are_omitted_at_the_documented_bounds() {
+    for case in cases().into_iter().filter(|case| case.scenario >= 64) {
+        let archive = parsed(case);
+        assert_eq!(
+            has_field(&archive, "root.orig_font_scale"),
+            case.version > 0x3331
+        );
+        assert_eq!(
+            has_field(&archive, "root.visual_properties.material.plm_id"),
+            case.version > 0x3368
+        );
+        assert_eq!(
+            has_field(
+                &archive,
+                "root.visual_properties.material.rv_app_props.unknown_symbol.strings[0]"
+            ),
+            case.kind == DisplayDocumentKind::Part && case.version > 0x3347
+        );
+        let part = if case.kind == DisplayDocumentKind::Part {
+            "root.tessellation"
+        } else {
+            "root.tessellation.components[0].comp_part_tess_data"
+        };
+        assert_eq!(
+            has_field(&archive, &format!("{part}.bodies[0].faces[0].face_pers_id")),
+            case.version > 0x336b
+        );
+        let items = "root.views[0].display_items.items";
+        assert_eq!(
+            has_field(
+                &archive,
+                &format!("{items}[0].data.view_names_3d_with_scale")
+            ),
+            case.version > 0x3332
+        );
+        assert_eq!(
+            has_field(
+                &archive,
+                &format!("{items}[1].data.edw_annot_data[0].unknown_s4")
+            ),
+            case.version > 0x332b
+        );
+        assert_eq!(
+            has_field(&archive, &format!("{items}[1].data.id_string")),
+            case.version >= 0x35e9
+        );
+    }
+}
+
+#[test]
+fn a_hundred_minimal_ink_rows_fit_the_older_five_byte_layout() {
+    for kind in [DisplayDocumentKind::Part, DisplayDocumentKind::Assembly] {
+        let archive = parsed(selected(13000, kind, 66));
+        let expected = "root.markup_ink_views.view_count=i:100\nroot.markup_ink_views.configuration_count=i:0\nroot.markup_ink_views.views[99].unknown_id=i:0\n";
+        assert_eq!(archive_support::check_scalar_table(&archive, expected), 3);
+        assert!(!has_field(
+            &archive,
+            "root.markup_ink_views.views[99].unknown_string"
+        ));
+        let before = parsed(selected(0x332b, kind, 67));
+        let after = parsed(selected(0x332c, kind, 67));
+        assert!(!has_field(
+            &before,
+            "root.markup_ink_views.views[1].unknown_string"
+        ));
+        assert!(has_field(
+            &after,
+            "root.markup_ink_views.views[1].unknown_string"
+        ));
     }
 }

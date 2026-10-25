@@ -120,20 +120,53 @@ pub(super) fn arc_data(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     for label in ["unknown_8", "unknown_20", "unknown_38"] {
         point(archive, label)?;
     }
-    archive.u8("unknown_68")?;
+    if archive.context.version.value() <= 0x3350 {
+        point(archive, "unknown_50")?;
+    }
+    width_flag(archive, "unknown_68")?;
     if archive.context.version.value() >= 0x3724 {
         archive.u8("unknown_6c")?;
     }
-    archive.i32("unknown_70")?;
-    archive.u8("unknown_74")?;
-    archive.i32("unknown_78")?;
+    arc_tail(archive)
+}
+
+fn arc_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() > 0x3336 {
+        archive.i32("unknown_70")?;
+    }
+    if archive.context.version.value() > 0x3344 {
+        width_flag(archive, "unknown_74")?;
+    }
+    if archive.context.version.value() >= 0x3364 {
+        archive.i32("unknown_78")?;
+    }
+    Ok(())
+}
+
+fn width_flag(archive: &mut DisplayDecoder<'_>, label: &str) -> Result<()> {
+    if archive.context.version.value() > 0x3350 {
+        archive.u8(label)?;
+    } else {
+        archive.i32(label)?;
+    }
     Ok(())
 }
 
 pub(super) fn identifiers(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    archive.u32("edge_persistent_id")?;
-    archive.u32("face1_persistent_id")?;
-    archive.u32("face2_persistent_id")?;
+    if archive.context.version.value() > 0x3330 {
+        archive.u32("edge_persistent_id")?;
+        archive.u32("face1_persistent_id")?;
+    }
+    if archive.context.version.value() > 0x3333 {
+        archive.u32("face2_persistent_id")?;
+    }
+    if archive.context.version.value() > 0x3350 {
+        parameters(archive)?;
+    }
+    Ok(())
+}
+
+fn parameters(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i32("unique_disp_id")?;
     archive.f64s(&["mid_point_param0", "mid_point_param1"])
 }
@@ -142,25 +175,57 @@ pub(super) fn edge(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     if archive.context.version.value() < 0x2fac {
         return super::legacy_bucket_poly::edge(archive);
     }
-    point(archive, "start_point")?;
-    point(archive, "end_point")?;
-    archive.i32("body_id")?;
-    archive.text("comp_string")?;
-    archive.u32("face1_persistent_id")?;
-    archive.u32("face2_persistent_id")?;
-    archive.i32s(&["occurence_id", "bucket_index", "bucket_type", "edge_type"])?;
+    edge_geometry(archive)?;
+    archive.i32("occurence_id")?;
+    if archive.context.version.value() < 0x3331 {
+        archive.i32("edge_node")?;
+    }
+    archive.i32s(&["bucket_index", "bucket_type", "edge_type"])?;
     point(archive, "center_point")?;
     edge_tail(archive)
 }
 
+fn edge_geometry(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    point(archive, "start_point")?;
+    point(archive, "end_point")?;
+    archive.i32("body_id")?;
+    if archive.context.version.value() < 0x3331 {
+        archive.i32("face_node")?;
+    }
+    archive.text("comp_string")?;
+    if archive.context.version.value() > 0x3330 {
+        archive.u32("face1_persistent_id")?;
+    }
+    if archive.context.version.value() > 0x3333 {
+        archive.u32("face2_persistent_id")?;
+    }
+    Ok(())
+}
+
 fn edge_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    archive.u8("linear_in_2d")?;
-    archive.u8("is_vertex")?;
-    archive.u32("edge_persistent_id")?;
-    archive.i32("feat_id")?;
-    archive.u8("is_assembly_feat")?;
-    archive.i32("unique_disp_id")?;
-    archive.f64s(&["mid_point_param0", "mid_point_param1"])?;
-    archive.i32("hole_index")?;
+    if archive.context.version.value() < 0x333c {
+        archive.i32s(&["unknown_legacy[0]", "unknown_legacy[1]"])?;
+    }
+    width_flag(archive, "linear_in_2d")?;
+    width_flag(archive, "is_vertex")?;
+    edge_flags(archive)
+}
+
+fn edge_flags(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() > 0x3330 {
+        archive.u32("edge_persistent_id")?;
+    }
+    if archive.context.version.value() > 0x3336 {
+        archive.i32("feat_id")?;
+    }
+    if archive.context.version.value() > 0x3344 {
+        width_flag(archive, "is_assembly_feat")?;
+    }
+    if archive.context.version.value() > 0x3350 {
+        parameters(archive)?;
+    }
+    if archive.context.version.value() > 0x3363 {
+        archive.i32("hole_index")?;
+    }
     Ok(())
 }

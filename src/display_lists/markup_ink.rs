@@ -5,7 +5,8 @@ pub(super) fn read(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     if archive.context.version.value() <= 0x2f80 {
         return Ok(());
     }
-    let views = archive.count("view_count", 6)?;
+    let minimum = 5 + usize::from(archive.context.version.value() > 0x332b);
+    let views = archive.count("view_count", minimum)?;
     let configs = configuration_dimension(archive)?;
     require_rows(archive, views, configs)?;
     for index in 0..views {

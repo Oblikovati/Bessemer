@@ -4,7 +4,7 @@
 
 ### Added
 
-- Added lossless display-list transform and view codecs, plus part/assembly archive reading, validated edits and writing for display versions 7000, 9000, 10000, 11000 and 14000–19000 with shared object identities, inline facets, external face references, all seven reference-geometry kinds, versioned appearance and scene layouts, display-item payloads, versioned view buckets, graphics-reference graphs, markup-ink grids, per-configuration data, decals, textured-plane records with null bitmap pointers and all five old-light classes. Complete display-list schema support remained under development. (#28)
+- Added lossless display-list transform and view codecs, plus part/assembly archive reading, validated edits and writing for display versions 7000, 9000, 10000, 11000 and 13000–19000 with shared object identities, inline facets, external face references, all seven reference-geometry kinds, versioned appearance and scene layouts, display-item payloads, versioned view buckets, graphics-reference graphs, markup-ink grids, per-configuration data, decals, textured-plane records with null bitmap pointers and all five old-light classes. Complete display-list schema support remained under development. (#28)
 
 - Added embedded SolidWorks Inspection project XML reading, construction and writing, with preserved unknown content and a complete drawing Job Number edit example. (#26)
 

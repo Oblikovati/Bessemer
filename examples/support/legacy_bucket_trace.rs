@@ -6,6 +6,8 @@ struct PolygonFlags {
     flags: u32,
     count: i32,
     explicit_layer_flags: bool,
+    silh_high: Option<i32>,
+    silh_low: Option<i32>,
 }
 
 pub(super) fn append(archive: &DisplayArchive, rows: &mut Trace) {
@@ -20,6 +22,7 @@ pub(super) fn append(archive: &DisplayArchive, rows: &mut Trace) {
         if polygon.count > 0 && !polygon.explicit_layer_flags {
             polygon.flags |= 0x300;
         }
+        append_face_id(rows, prefix, &polygon, archive.context().version.value());
         rows.insert(format!("{prefix}.flags"), format!("i:{}", polygon.flags));
     }
 }
@@ -46,10 +49,15 @@ fn append_field<'a>(
 }
 
 fn update(polygon: &mut PolygonFlags, leaf: &str, value: i32) {
-    if leaf == "count" {
-        polygon.count = value;
-        return;
+    match leaf {
+        "silh_id_high" => polygon.silh_high = Some(value),
+        "silh_id_low" => polygon.silh_low = Some(value),
+        "count" => polygon.count = value,
+        _ => update_flags(polygon, leaf, value),
     }
+}
+
+fn update_flags(polygon: &mut PolygonFlags, leaf: &str, value: i32) {
     let Some(bit) = flag_mask(leaf) else {
         return;
     };
@@ -59,6 +67,20 @@ fn update(polygon: &mut PolygonFlags, leaf: &str, value: i32) {
     if value != 0 {
         polygon.flags |= bit;
     }
+}
+
+fn append_face_id(rows: &mut Trace, prefix: &str, polygon: &PolygonFlags, version: u32) {
+    if version > 0x3333 {
+        return;
+    }
+    let (Some(high), Some(low)) = (polygon.silh_high, polygon.silh_low) else {
+        return;
+    };
+    let identifier = i64::from(high) * 1000 + i64::from(low);
+    rows.insert(
+        format!("{prefix}.face2_persistent_id"),
+        format!("i:{identifier}"),
+    );
 }
 
 fn flag_mask(leaf: &str) -> Option<u32> {

@@ -1,0 +1,20 @@
+"""Independent table and EDW annotation bodies at their 0x333x string boundaries."""
+import struct
+from generate_item_vectors import record
+from generate_component_vectors import integers
+from generate_named_vectors import cstring
+from generate_transform_vectors import doubles
+
+
+def annotation(version: int) -> bytes:
+    raw = integers(-7,1,-8,1)+doubles(3)+integers(1)+cstring("edw one 鋼",True)
+    raw += integers(-9,1)+cstring("edw two\0",True)+cstring("tail",True)
+    return raw+(cstring("four",True)+cstring("five😀",True) if version>0x332b else b"")
+
+
+def items(version: int) -> bytes:
+    table = integers(-1,2,-3)+cstring("table 鋼",True)+integers(-4,5)
+    table += cstring("scaled views",True) if version>0x3332 else b""
+    start = integers(-1,2,2)+annotation(version)*2
+    start += cstring("ID 鋼",True) if version>=0x35e9 else b""
+    return struct.pack("<H",2)+record(23,table)+record(29,start)

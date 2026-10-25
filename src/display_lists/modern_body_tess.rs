@@ -69,7 +69,9 @@ fn face_identity(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     if archive.i32("face_string_empty")? == 0 {
         archive.text("face_string")?;
     }
-    archive.i32("face_pers_id")?;
+    if archive.context.version.value() > 0x336b {
+        archive.i32("face_pers_id")?;
+    }
     if archive.context.version.value() >= 0x3743 {
         archive.i32("unknown_78")?;
     }

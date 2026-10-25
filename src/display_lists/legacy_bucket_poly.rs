@@ -37,10 +37,16 @@ fn persistent_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     if archive.context.version.value() < 0x2f63 {
         return Ok(());
     }
+    if archive.context.version.value() < 0x3331 {
+        archive.i32("face_node")?;
+    }
     if archive.i32("has_arc_data")? != 0 {
         archive.scope("arc_data", modern_bucket_poly::arc_data)?;
     }
-    archive.i32("has_silh_data")?;
+    if archive.i32("has_silh_data")? != 0 && archive.context.version.value() < 0x333c {
+        // #28: keep the temporary ID words even where a later stored ID overwrites their meaning.
+        archive.i32s(&["silh_id_high", "silh_id_low"])?;
+    }
     modern_bucket_poly::identifiers(archive)
 }
 

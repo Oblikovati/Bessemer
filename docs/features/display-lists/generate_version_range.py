@@ -29,7 +29,7 @@ def capture_plain(original: Callable[[ShadedArchive],object], replacement: bytes
 def capture_rv(original: Callable[[ShadedArchive],object], version: int, patches: list[Patch]) -> Callable[[ShadedArchive],object]:
     def capture(archive: ShadedArchive) -> object:
         result = original(archive)
-        if version < 0x46ba:
+        if 0x3347 < version < 0x46ba:
             patches.append((archive.p,archive.p,symbol()))
         return result
     return capture

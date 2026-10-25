@@ -16,6 +16,12 @@ pub(crate) fn trace(archive: &DisplayArchive) -> Vec<u8> {
 }
 
 fn visible(path: &str) -> bool {
+    if path.contains("unknown_legacy[")
+        || path.ends_with(".silh_id_high")
+        || path.ends_with(".silh_id_low")
+    {
+        return false;
+    }
     let leaf = path.rsplit('.').next().unwrap_or("");
     !matches!(
         leaf,
