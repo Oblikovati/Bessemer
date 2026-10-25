@@ -32,7 +32,8 @@ versioned named, annotation and 3D-view codecs, plus part/assembly archive readi
 validated edits and writing with inline facets, explicit external face references
 and reference geometry, scenes, display items, view buckets, graphics references,
 markup-ink grids, per-configuration data, decals, null-bitmap textured planes and
-lights for display versions 3196–19000, excluding the uncounted-window interval
+lights for unsigned display versions from 3196 onward, excluding the
+uncounted-window interval
 `0x1FAE`–`0x1FCE`, with an explicit
 native file-version context. Tangent bucket lists follow that context independently
 of the display-list version.
@@ -42,10 +43,12 @@ All 1,086 reference-readable part/assembly display-list streams reconstruct
 exactly; complete documented-schema support remains in development. See the
 [display-list work and evidence](docs/features/display-lists/README.md).
 Drawing `Contents/VBLists` supports complete reading, construction, isolated edits
-and writing for model versions `0x27CC`–19000. All 20 native drawing streams
+and writing for unsigned model versions from `0x27CC` onward. All 20 native
+drawing streams
 reconstruct exactly, including 33 shaded models; see the
 [drawing bucket evidence](docs/features/drawing-buckets/README.md). Drawing
-`Contents/DisplayLists` remains unresolved in the reference.
+`Contents/DisplayLists` remains unresolved in the reference. High unsigned markers
+follow the [documented version predicates](docs/features/display-lists/unsigned-versions.md).
 
 Complete part, assembly, and drawing model archives, geometric interpretation and
 validation, and semantic CAD editing remain to be implemented; this is not yet

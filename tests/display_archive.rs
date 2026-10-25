@@ -226,10 +226,6 @@ fn explicit_context_and_object_identity_boundaries_are_validated() {
             ..context()
         },
         DisplayArchiveContext {
-            version: DisplayVersion::new(19001),
-            ..context()
-        },
-        DisplayArchiveContext {
             kind: DisplayDocumentKind::Assembly,
             ..context()
         },

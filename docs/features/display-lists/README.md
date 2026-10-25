@@ -493,3 +493,7 @@ Edition 0.206 adds complete modern drawing `Contents/VBLists` framing. Its separ
 [implementation and evidence](../drawing-buckets/README.md) reuse the shared
 codecs while preserving the drawing backend facet context. Drawing
 `Contents/DisplayLists` remains unresolved.
+
+The [unsigned-version checkpoint](unsigned-versions.md) removes the artificial
+19000 ceiling, with 85 rich part/assembly roots, 25 drawing streams and three
+signed-alias documents. All earlier unresolved intervals remain excluded.

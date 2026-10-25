@@ -11,9 +11,9 @@ pub(super) fn read(
     limits: DisplayArchiveLimits,
 ) -> Result<DisplayArchiveContents> {
     let version = context.version.value();
-    if !(0x27cc..=19000).contains(&version) {
+    if version <= 0x27cb {
         return Err(unsupported(format!(
-            "drawing VBLists model version {version}; expected modern model version 0x27CC..=19000"
+            "drawing VBLists model version {version}; expected modern model version >=0x27CC"
         )));
     }
     let mut archive = DisplayDecoder::new(bytes, context.clone(), limits)?;

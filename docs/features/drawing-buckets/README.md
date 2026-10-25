@@ -1,9 +1,8 @@
 # Drawing view-bucket archives
 
 Work for #38 implements complete `Contents/VBLists` framing from edition 0.206,
-clauses 13.9–13.11. The supported model archive interval is `0x27CC` through 19000.
-Earlier layouts and versions above the verified shared-codec range return typed
-unsupported errors. Drawing `Contents/DisplayLists` remains unresolved and is a
+clauses 13.9–13.11. The supported model archive interval is `0x27CC` through `u32::MAX`.
+Earlier layouts return typed unsupported errors. Drawing `Contents/DisplayLists` remains unresolved and is a
 separate stream.
 
 `DrawingBucketArchive::from_document` resolves normalized `_MO_VERSION_` markers
@@ -77,3 +76,7 @@ single complete feature PR after the remaining part/assembly schema work is
 ready, with all required CI checks green before merging. No release or version
 bump is included. The maintainer-side humanizer skill was unavailable; the prose
 pass remains for review.
+
+The [unsigned-version checkpoint](../display-lists/unsigned-versions.md) adds 25
+complete high-marker streams and a signed-alias drawing document, retaining all
+39 earlier owned cases.
