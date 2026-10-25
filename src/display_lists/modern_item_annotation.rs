@@ -54,6 +54,10 @@ fn annotation(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     let count = archive.count("unknown_points.count", 24)?;
     points(archive, "unknown_points", count)?;
     strings(archive, "unknown_strings1")?;
+    annotation_suffix(archive)
+}
+
+fn annotation_suffix(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     if archive.context.version.value() > 0x1fa8 {
         archive.i32("unknown_i")?;
     }
