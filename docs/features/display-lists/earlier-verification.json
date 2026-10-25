@@ -1,0 +1,19 @@
+{
+  "fixtures": 123,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "two_processes_identical": true,
+  "all_forced_bytes_match_independent_fixtures": true,
+  "input_sha256": "4d300c9a8991d4e26256e75e2d3866fd4a85446f7075e329a785aa48caccb2c8",
+  "result_sha256": "18fe3660c2488f850fde81ee86ef1b85ccd1da49215390cf3b5d1bca1dd5170e",
+  "trace_sha256": "dce4224c6b82340a78d261c481f05198daa790fd87013640618d4cb919c798f9",
+  "source_sha256": {
+    "modern_root": "2aa5a435d9b101d35c3f87bbf73da1fe2c8c21830566737ef6736cd1624a89dc",
+    "modern_reference": "56ba95aaa315654b537552cf38ca0f13d1e71032952a44da6491e2973501d324",
+    "modern_component": "0e391e9e828da8759b88bff6a97060cf3e2cac2550644774d346710613aa95c2",
+    "modern_part_tess": "35f80d3ce3b5359e4d3b1f4a0b44be30ed69a69938f059620c8a60f988d29645",
+    "modern_bucket": "775446cb72cd7cc3c64793712292da9dcbfaf4e2b5914157a0cda0126f4ec48c",
+    "modern_bucket_poly": "014e876b6aa02ebb4ce84921d308827f6a2fc41bced67f01a602f4f7c3473a77",
+    "legacy_bucket_poly": "76769f6d66ddee7b8e6c82e9606009235834bb9506e42f7a8b0dad03c6f3f326"
+  },
+  "scope": "byte reconstruction and process determinism; field oracles checked separately by integration tests"
+}

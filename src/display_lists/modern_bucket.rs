@@ -159,11 +159,12 @@ fn tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn detailing_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    if archive.context.version.value() <= 0x2f8b {
-        return Ok(());
+    if archive.context.version.value() > 0x2f8b {
+        archive.i32("bucket_data_for_detailing_mode_saved")?;
     }
-    archive.i32("bucket_data_for_detailing_mode_saved")?;
-    archive.scope("dl_model_bucket", super::modern_items::list)?;
+    if archive.context.version.value() > 0x2faa {
+        archive.scope("dl_model_bucket", super::modern_items::list)?;
+    }
     if archive.context.version.value() >= 0x372a {
         archive.i32("needs_post_process_bucket_for_detailing_mode")?;
     }

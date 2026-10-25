@@ -37,6 +37,9 @@ fn persistent_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     if archive.context.version.value() < 0x2f63 {
         return Ok(());
     }
+    if archive.context.version.value() <= 0x2f95 {
+        return archive.object("discarded_edge_data", &["gcBucketEdgeData_c"]);
+    }
     if archive.context.version.value() < 0x3331 {
         archive.i32("face_node")?;
     }
@@ -85,5 +88,6 @@ pub(super) fn edge(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         "bucket_type",
         "edge_type",
     ])?;
-    point(archive, "center_point")
+    point(archive, "center_point")?;
+    modern_bucket_poly::edge_legacy_words(archive)
 }

@@ -11,7 +11,7 @@ def flag(version: int, wide: int, narrow: int) -> bytes:
 
 def arc_payload(version: int) -> bytes:
     raw = doubles(9)+(doubles(3,3) if version<=0x3350 else b"")
-    raw += flag(version,-17,255)
+    raw += flag(version,-17,255) if version>0x2fa9 else b""
     raw += bytes([2]) if version>=0x3724 else b""
     raw += integers(-11) if version>0x3336 else b""
     raw += flag(version,-3,3) if version>0x3344 else b""
@@ -44,8 +44,8 @@ def edge(version: int) -> bytes:
     raw += struct.pack("<I",0xffffffff) if version>0x3330 else b""
     raw += struct.pack("<I",0xfffffffe) if version>0x3333 else b""
     raw += integers(-2)+(integers(-21) if version<0x3331 else b"")+integers(3,-4,5)+doubles(3)
-    raw += integers(-73,74) if version<0x333c else b""
-    raw += flag(version,-17,2)+flag(version,-255,255)
+    raw += integers(-73,74) if 0x2f7a<version<0x333c else b""
+    raw += flag(version,-17,2)+flag(version,-255,255) if version>0x2fac else b""
     raw += struct.pack("<I",0xfffffffd) if version>0x3330 else b""
     raw += integers(-6) if version>0x3336 else b""
     raw += flag(version,-3,3) if version>0x3344 else b""

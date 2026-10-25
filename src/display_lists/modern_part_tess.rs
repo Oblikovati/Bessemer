@@ -37,10 +37,12 @@ fn part_geometry(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         return Ok(());
     }
     archive.bounds("bbox")?;
-    archive.scope(
-        "ref_geom_feature_data_collector",
-        super::modern_reference::read,
-    )?;
+    if archive.context.version.value() > 0x2f5d {
+        archive.scope(
+            "ref_geom_feature_data_collector",
+            super::modern_reference::read,
+        )?;
+    }
     if archive.context.version.value() > 0x3751 {
         archive.u8("show_c_thread")?;
     }

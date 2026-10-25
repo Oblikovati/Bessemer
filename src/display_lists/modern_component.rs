@@ -93,7 +93,9 @@ fn geometry_and_state(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         return Ok(());
     }
     archive.text("seed_reference_id")?;
-    archive.scope("ref_geom_data_collector", super::modern_reference::read)?;
+    if archive.context.version.value() > 0x2f44 {
+        archive.scope("ref_geom_data_collector", super::modern_reference::read)?;
+    }
     tessellation_numbers(archive)?;
     display_state(archive)
 }

@@ -35,10 +35,10 @@ def bucket_bytes(builder: ObjectBuilder, version: int, two_dimensional: bool, sc
         wire.poly = original
 
 
-def complete_root(document: object, path: Path, raw: bytes, version: int, scenario: int) -> bytes:
+def complete_root(document: object, path: Path, raw: bytes, version: int, scenario: int, encoder: object = None) -> bytes:
     start,index = prefix_slot(document,path,raw)
     view = integers(-1)+compact(0,0)+compact(0,0)+cstring("bucket camera 鋼",True)+integers(-2,3,-4)
-    return raw[:start]+view+bucket_bytes(ObjectBuilder(index),version,scenario>=16,scenario%16)+struct.pack("<H",0)+integers(0)
+    return raw[:start]+view+(encoder(ObjectBuilder(index)) if encoder is not None else bucket_bytes(ObjectBuilder(index),version,scenario>=16,scenario%16))+struct.pack("<H",0)+integers(0)
 
 
 def generate(version: int, kind: str, scenario: int) -> tuple[bytes,dict[str,object]]:

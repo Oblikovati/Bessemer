@@ -431,3 +431,6 @@ coverage for the four older supported snapshots while preserving that corpus gat
 `dd0537b3a142d8dda00ef846891efc736a6aac46`; its documentation is evolving. Corliss's
 typed decoded fields and isolated edits inform the public API design. The
 maintainer-side humanizer skill is unavailable; its prose pass remains for review.
+
+- The 12000 range retains discarded edge objects, float coordinates and caller-specific
+  collector gates; see [earlier-range.md](earlier-range.md).

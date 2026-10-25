@@ -123,7 +123,9 @@ pub(super) fn arc_data(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     if archive.context.version.value() <= 0x3350 {
         point(archive, "unknown_50")?;
     }
-    width_flag(archive, "unknown_68")?;
+    if archive.context.version.value() > 0x2fa9 {
+        width_flag(archive, "unknown_68")?;
+    }
     if archive.context.version.value() >= 0x3724 {
         archive.u8("unknown_6c")?;
     }
@@ -203,12 +205,19 @@ fn edge_geometry(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn edge_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    if archive.context.version.value() < 0x333c {
+    edge_legacy_words(archive)?;
+    if archive.context.version.value() > 0x2fac {
+        width_flag(archive, "linear_in_2d")?;
+        width_flag(archive, "is_vertex")?;
+    }
+    edge_flags(archive)
+}
+
+pub(super) fn edge_legacy_words(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if (0x2f7b..0x333c).contains(&archive.context.version.value()) {
         archive.i32s(&["unknown_legacy[0]", "unknown_legacy[1]"])?;
     }
-    width_flag(archive, "linear_in_2d")?;
-    width_flag(archive, "is_vertex")?;
-    edge_flags(archive)
+    Ok(())
 }
 
 fn edge_flags(archive: &mut DisplayDecoder<'_>) -> Result<()> {
