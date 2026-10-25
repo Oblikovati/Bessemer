@@ -518,3 +518,7 @@ through edits, reopen and revert.
 The [earlier add-in and body-property checkpoint](legacy-addin-layouts.md) admits
 contexts from 2796, with 50 complete roots and six containers. It preserves absent
 add-in fields and body-property pointers without inserting default values.
+
+The [implicit-width checkpoint](legacy-width-layouts.md) admits contexts from
+2771, with 34 complete roots and six containers. Unicode text determines implicit
+widths, while later stored counts remain independent of text length.

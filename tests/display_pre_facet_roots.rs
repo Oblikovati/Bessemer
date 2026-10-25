@@ -312,3 +312,5 @@ mod legacy_cameras;
 mod legacy_panes;
 #[path = "support/legacy_visuals.rs"]
 mod legacy_visuals;
+#[path = "support/legacy_widths.rs"]
+mod legacy_widths;

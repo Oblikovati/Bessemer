@@ -51,8 +51,8 @@ fn simple(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     }
     archive.f64("unknown_20")?;
     archive.i32("is_right_to_left")?;
-    archive.text("text")?;
-    simple_widths(archive)?;
+    let text = archive.text_value("text")?;
+    simple_widths(archive, text.text())?;
     simple_version_tail(archive)
 }
 
@@ -73,11 +73,15 @@ fn simple_version_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     Ok(())
 }
 
-fn simple_widths(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+fn simple_widths(archive: &mut DisplayDecoder<'_>, text: &str) -> Result<()> {
     if archive.i16("has_widths")? == 0 {
         return Ok(());
     }
-    let count = archive.i32("width_count")?;
+    let count = if archive.context.version.value() > 0xaeb {
+        i128::from(archive.i32("width_count")?)
+    } else {
+        text.chars().count() as i128
+    };
     if !(0..=1 << 24).contains(&count) {
         return Err(invalid(format!(
             "simple text width count {count}; expected 0..=16777216"
