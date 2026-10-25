@@ -1,4 +1,4 @@
-use super::{archive_decode::DisplayDecoder, archive_error::unsupported};
+use super::archive_decode::DisplayDecoder;
 use crate::Result;
 
 pub(super) fn read(archive: &mut DisplayDecoder<'_>) -> Result<()> {
@@ -12,7 +12,7 @@ pub(super) fn read(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     }
     archive.u32("ddata_time_stamp")?;
     paired_arrays(archive)?;
-    empty_decals(archive)?;
+    super::modern_decals::part(archive)?;
     part_configuration(archive)
 }
 
@@ -52,20 +52,6 @@ fn paired_arrays(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         for index in 0..count {
             archive.i32(&format!("{label}[{index}]"))?;
         }
-    }
-    Ok(())
-}
-
-fn empty_decals(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    if archive.context.version.value() < 0x239d {
-        return super::modern_decals::empty_list(archive, "decals");
-    }
-    let count = archive.u32("decals_map.count")?;
-    archive.entries(count as usize, "decal maps")?;
-    if count != 0 {
-        return Err(unsupported(format!(
-            "decal map count {count}; populated decal bodies are pending implementation"
-        )));
     }
     Ok(())
 }

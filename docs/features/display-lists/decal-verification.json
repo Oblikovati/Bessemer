@@ -1,0 +1,17 @@
+{
+  "fixtures": 14,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "two_processes_identical": true,
+  "all_forced_bytes_match_independent_fixtures": true,
+  "input_sha256": "e83bbbdee6c0b04bd1d5e437fbe0885e6192b30b8703f3780d3d49b4986214d6",
+  "result_sha256": "52cfb95116dc4a053220cc6e4e2f08c2af99813b5c6fa9d1a0100934079d2642",
+  "trace_sha256": "f9f8061b279bea97ee08e7e04f7b64b27661f4eaeba5a4f5c6443d65d967ea28",
+  "source_sha256": {
+    "modern_decals": "2b7172edda09d1054dd0991dbb31748795bb5d4ac298440d864288a8e204eb87",
+    "modern_material": "8e92763b52d26957b7aa36500b9d0e4e51a448b4fe76bee87c4dc560d2a5f2a1",
+    "modern_part_tess": "b5c54c54c5f9b45ddc1611c7bcea4de900537a5b9d8c6699da0ae8c1323339be",
+    "modern_body_tess": "d532a78826612f3634a69c51236b199527bd35da4f99a894a8ba7a70690cf48a",
+    "modern_assembly": "c007a04dabb500ebaea7bcb20853b63a3acdd497bc24b118a9e7635f8654927c"
+  },
+  "scope": "byte reconstruction and process determinism; independent decal scalar oracles are checked by integration tests"
+}

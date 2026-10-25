@@ -30,7 +30,7 @@ fn visual_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     Ok(())
 }
 
-fn material(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+pub(super) fn material(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.text("user_name")?;
     archive.text("id_name")?;
     archive.f64s(&[
@@ -73,7 +73,7 @@ fn material_extensions(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.scope("user_property", super::modern_lights::user_properties)
 }
 
-fn texture(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+pub(super) fn texture(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.f64s(&[
         "unknown_8",
         "unknown_10",

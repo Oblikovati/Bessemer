@@ -395,6 +395,8 @@ coverage for the four older supported snapshots while preserving that corpus gat
   [markup-ink.md](markup-ink.md).
 - Per-configuration bodies, view matrices, visibility pairs and high-word-first
   tails for admitted contexts are covered in [configurations.md](configurations.md).
+- Decal lists, keyed maps, masks, face associations and reused appearance records
+  are covered in [decals.md](decals.md).
 - Complete whole-document context resolution and cross-stream validation using
   declared document/file/archive versions and the external face directory/blocks.
 - Reuse existing MFC strings, exact numeric values, class/object maps and face
@@ -402,7 +404,7 @@ coverage for the four older supported snapshots while preserving that corpus gat
   reset inherited state between nested serializers.
 - Extend environments, splitters, fonts, lights, visual properties, buckets and
   display items to the remaining version and caller contexts.
-- Add earlier scene and unit layouts, remaining shaded-data layouts, decals,
+- Add earlier scene and unit layouts, remaining shaded-data layouts,
   textured planes and earlier configuration layouts. Unknown-meaning
   fields remain explicit raw typed values; unresolved bodies are unsupported.
 - Complete the immutable archive graph, validated owned construction/edits,

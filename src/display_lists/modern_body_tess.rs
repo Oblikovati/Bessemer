@@ -21,7 +21,7 @@ pub(super) fn body(archive: &mut DisplayDecoder<'_>) -> Result<()> {
             archive.object("value", &["uoBodyPropInfo_c"])
         })?;
     }
-    super::modern_decals::empty_list(archive, "decals")?;
+    super::modern_decals::list(archive, "decals")?;
     if archive.context.version.value() > 0x2017 {
         archive.text("unknown_str")?;
     }
