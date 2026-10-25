@@ -17,8 +17,8 @@ Older display items now honor the table, simple-text and pipe-spline gates.
 Version 7000 annotation starts contain only their two base integers. Version 9000
 has annotation subrecords whose minimum size is 24 bytes, before the later string
 was introduced. Annotation-end records retain their integer at both versions.
-Older view-bucket bodies remain explicitly unsupported and are still required
-work.
+Older view-bucket bodies were unsupported at this checkpoint; the subsequent
+[legacy bucket work](legacy-buckets.md) implements the four older supported snapshots.
 
 Seven [independently encoded fixtures](early-shaded.json) cover shaded parts and
 assemblies at both versions, an independently encoded material edit and unshaded
@@ -45,7 +45,7 @@ root display-item, 234,395 view-bucket, 63,310 light and 852,926 material fields
 `94047d85dc01ed0f391378374f2c15f5464301bb26990d4214eecdd600723a87`.
 
 This completes the native corpus reconstruction gate. It does not complete the
-documented schemas. Older buckets, populated decals/configurations and other
+documented schemas. Other bucket contexts, populated decals/configurations and other
 unexercised bodies, other version contexts, whole-document context resolution,
 ordered validation/history, full model archives, geometric validity and native
 application acceptance remain required work. Integration still requires the

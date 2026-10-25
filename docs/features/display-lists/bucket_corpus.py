@@ -27,7 +27,8 @@ def walk(path: str, value: object, rows: dict[str,str], seen: set[int]) -> None:
             walk(f"{path}[{index}]",child,rows,seen)
     elif value is not None and ".view_bucket." in path:
         if isinstance(value,bytes):
-            value = list(struct.unpack("<"+"d"*(len(value)//8),value))
+            width,code = (4,"f") if path.endswith(".points_f32") else (8,"d")
+            value = list(struct.unpack("<"+code*(len(value)//width),value))
         flatten(path,value,rows)
 
 

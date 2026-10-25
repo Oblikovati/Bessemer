@@ -266,7 +266,7 @@ fn global_budgets_cover_old_facets_collections_and_conditional_fields() {
 }
 
 #[test]
-fn unsupported_old_bucket_bodies_never_fall_through_to_the_modern_layout() {
+fn incomplete_old_bucket_declarations_cannot_publish_partial_results() {
     let case = selected(2);
     let archive = parsed(case);
     let mut contents = archive.contents().clone();
@@ -290,8 +290,7 @@ fn unsupported_old_bucket_bodies_never_fall_through_to_the_modern_layout() {
         .with_contents(contents, LIMITS)
         .unwrap_err()
         .to_string();
-    assert!(error.contains("Unsupported"));
-    assert!(error.contains("view bucket version 10000"));
+    assert!(error.contains("Invalid"));
 }
 
 #[test]

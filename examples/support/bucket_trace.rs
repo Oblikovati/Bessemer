@@ -1,5 +1,7 @@
 use crate::{item_trace, view_trace};
 use bessemer::display_lists::DisplayArchive;
+#[path = "legacy_bucket_trace.rs"]
+mod legacy_flags;
 
 pub(crate) fn trace(archive: &DisplayArchive) -> Vec<u8> {
     let mut rows = view_trace::Trace::new();
@@ -8,6 +10,7 @@ pub(crate) fn trace(archive: &DisplayArchive) -> Vec<u8> {
             item_trace::insert(&mut rows, &field.path, &field.value);
         }
     }
+    legacy_flags::append(archive, &mut rows);
     rows.retain(|_, value| !value.starts_with("a:"));
     view_trace::finish(rows)
 }
@@ -30,5 +33,12 @@ fn visible(path: &str) -> bool {
             | "has_texture2"
             | "has_rv_app_props"
             | "has_dspbr"
+            | "smooth"
+            | "new_boundary"
+            | "new_region"
+            | "bos"
+            | "section_cut_new"
+            | "layer_visible"
+            | "layer_printable"
     )
 }

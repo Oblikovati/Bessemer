@@ -15,7 +15,7 @@ def poly(count: int, dimensions: int, kind: int = 1, arc: bool = True, line: boo
         return raw
     raw += doubles(count*dimensions)+bytes([255 if line else 0])
     if line:
-        raw += cstring("line 鋼",True)+struct.pack("<hIii",-3,0x80000000,-4,5)
+        raw += line_property()
     raw += integers(kind)
     if kind in (1,2,3):
         raw += integers(-2 if kind == 2 else 2)+(b"" if kind == 2 else doubles(2))
@@ -23,6 +23,11 @@ def poly(count: int, dimensions: int, kind: int = 1, arc: bool = True, line: boo
     if arc:
         raw += doubles(9)+struct.pack("<BBiBi",255,2,-11,3,-12)
     return raw+struct.pack("<IIIi",0xffffffff,0xfffffffe,0xfffffffd,-13)+doubles(2)
+
+
+def line_property() -> bytes:
+    raw = cstring("line 鋼",True)
+    return raw+struct.pack("<hIii",-3,0x80000000,-4,5)
 
 
 def poly_list(values: list[bytes], negative: bool = False) -> bytes:

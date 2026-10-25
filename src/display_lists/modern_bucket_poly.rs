@@ -12,13 +12,30 @@ pub(super) fn list(archive: &mut DisplayDecoder<'_>, two_dimensional: bool) -> R
 }
 
 fn polygon(archive: &mut DisplayDecoder<'_>, two_dimensional: bool) -> Result<()> {
+    if archive.context.version.value() < 0x2f63 {
+        return super::legacy_bucket_poly::read(archive, two_dimensional);
+    }
     archive.i32s(&["node_id", "occurence"])?;
     let flags = archive.u32("flags")?;
     let count = archive.i32("count")?;
     if count <= 0 {
         return Ok(());
     }
-    coordinates(archive, count as usize, if two_dimensional { 2 } else { 3 })?;
+    polygon_contents(archive, count as usize, two_dimensional, flags)
+}
+
+fn polygon_contents(
+    archive: &mut DisplayDecoder<'_>,
+    count: usize,
+    two_dimensional: bool,
+    flags: u32,
+) -> Result<()> {
+    coordinates(
+        archive,
+        count,
+        if two_dimensional { 2 } else { 3 },
+        CoordinateWidth::Double,
+    )?;
     if archive.u8("has_user_line_property")? != 0 {
         archive.scope("user_line_property", line_property)?;
     }
@@ -40,8 +57,23 @@ fn polygon_tail(archive: &mut DisplayDecoder<'_>, flags: u32) -> Result<()> {
     identifiers(archive)
 }
 
-fn coordinates(archive: &mut DisplayDecoder<'_>, count: usize, dimensions: usize) -> Result<()> {
-    if count > archive.cursor.remaining() / (dimensions * 8) {
+#[derive(Clone, Copy)]
+pub(super) enum CoordinateWidth {
+    Float,
+    Double,
+}
+
+pub(super) fn coordinates(
+    archive: &mut DisplayDecoder<'_>,
+    count: usize,
+    dimensions: usize,
+    width: CoordinateWidth,
+) -> Result<()> {
+    let bytes = match width {
+        CoordinateWidth::Float => 4,
+        CoordinateWidth::Double => 8,
+    };
+    if count > archive.cursor.remaining() / (dimensions * bytes) {
         return Err(super::archive_error::invalid(format!(
             "polygon point count {count}, dimensions {dimensions}; expected coordinates fitting {} bytes",
             archive.cursor.remaining()
@@ -49,12 +81,23 @@ fn coordinates(archive: &mut DisplayDecoder<'_>, count: usize, dimensions: usize
     }
     archive.entries(count * dimensions, "bucket polygon coordinates")?;
     for index in 0..count * dimensions {
-        archive.f64(&format!("points[{index}]"))?;
+        coordinate_value(archive, index, width)?;
     }
     Ok(())
 }
 
-fn type_payload(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+fn coordinate_value(
+    archive: &mut DisplayDecoder<'_>,
+    index: usize,
+    width: CoordinateWidth,
+) -> Result<()> {
+    match width {
+        CoordinateWidth::Float => archive.f32(&format!("points_f32[{index}]")),
+        CoordinateWidth::Double => archive.f64(&format!("points[{index}]")),
+    }
+}
+
+pub(super) fn type_payload(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     let kind = archive.i32("type")?;
     if !(1..=3).contains(&kind) {
         return Ok(());
@@ -66,7 +109,7 @@ fn type_payload(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     Ok(())
 }
 
-fn line_property(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+pub(super) fn line_property(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.text("style_name")?;
     archive.i16("width.standard_width")?;
     archive.f32("width.custom_width")?;
@@ -94,6 +137,9 @@ fn identifiers(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 pub(super) fn edge(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() < 0x2fac {
+        return super::legacy_bucket_poly::edge(archive);
+    }
     point(archive, "start_point")?;
     point(archive, "end_point")?;
     archive.i32("body_id")?;

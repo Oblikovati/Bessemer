@@ -17,8 +17,9 @@ The implementation handles the older field omissions and class tails:
 | Scene | No HDR exposure, tone-map setting or field of view. |
 | Display items | No table 3D-view string, nested symbol list or later annotation strings/ID. A minimal annotation subrecord is 25 bytes. |
 
-Unresolved older view-bucket bodies return `Unsupported` before entering the
-modern polygon reader. They are required future work. Populated configuration,
+Older view-bucket bodies were unsupported at this checkpoint; the subsequent
+[legacy bucket work](legacy-buckets.md) implements them for the four supported
+older snapshots. Populated configuration,
 decal and other previously unresolved bodies remain explicit failures; the reader
 does not skip or retain opaque remainders to claim completion.
 
@@ -46,7 +47,7 @@ fields. Corpus SHA-256 remains
 `94047d85dc01ed0f391378374f2c15f5464301bb26990d4214eecdd600723a87`.
 
 The remaining native failures are five version-7000 and 23 version-9000 streams.
-Those layouts, older buckets, unexercised schema branches, other file contexts,
+Those layouts, other bucket contexts, unexercised schema branches, other file contexts,
 whole-document context resolution and validation, full model archives, geometric
 validity and native application acceptance remain required work. The corpus count
 does not establish complete schema parity.

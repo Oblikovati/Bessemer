@@ -385,13 +385,16 @@ reference-readable part/assembly streams in this corpus. Their fixtures
 and field-oracle counts supersede the earlier totals
 above. This corpus milestone does not establish complete schema parity.
 
+The [legacy bucket checkpoint](legacy-buckets.md) extends the unexercised schema
+coverage for the four older supported snapshots while preserving that corpus gate.
+
 - Complete whole-document context resolution and cross-stream validation using
   declared document/file/archive versions and the external face directory/blocks.
 - Reuse existing MFC strings, exact numeric values, class/object maps and face
   tessellation records. Preserve cycles, aliases and object-tag spelling; do not
   reset inherited state between nested serializers.
-- Extend environments, splitters, fonts, lights and visual properties beyond
-  the supported display versions. Add earlier bucket and display-item layouts.
+- Extend environments, splitters, fonts, lights, visual properties, buckets and
+  display items to the remaining version and caller contexts.
 - Add earlier scene and unit layouts, remaining shaded-data layouts, decals,
   textured planes, ink views and configuration tails. Unknown-meaning
   fields remain explicit raw typed values; unresolved bodies are unsupported.
