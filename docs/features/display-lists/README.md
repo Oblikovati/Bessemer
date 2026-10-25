@@ -477,3 +477,4 @@ Early complete-root view transitions and Bug #37 are recorded in [early view roo
 - Typed document context resolution reads exact markers and bounded face-directory declarations; whole-document byte reconstruction is covered in [document context](document-context.md). Named blocks and requested external facets are checked in [external face links](external-face-links.md).
 
 - The lower bound is now 4200, including implicit face, body and model visual pointers and adjacent viewer, table and material gates; see [earliest visuals](earliest-visuals.md).
+- The 4100 checkpoint adds the pre-`0x1052` appearance layout, with absent rendering fields and the retained old appearance word; the expanded [earliest visuals](earliest-visuals.md) corpus contains 76 roots and four complete containers.

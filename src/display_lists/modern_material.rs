@@ -13,7 +13,7 @@ pub(super) fn visual(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn visual_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    archive.i32s(&["hardcoded_facet_display", "default_appearance"])?;
+    visual_appearance_state(archive)?;
     if archive.context.version.value() > 0x144b {
         archive.i32("unknown_78")?;
     }
@@ -27,6 +27,16 @@ fn visual_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         archive.scope("dspbr", super::modern_dspbr::read)?;
     }
     Ok(())
+}
+
+fn visual_appearance_state(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    archive.i32("hardcoded_facet_display")?;
+    let appearance = if archive.context.version.value() < 0x1052 {
+        "unknown_old_5c"
+    } else {
+        "default_appearance"
+    };
+    archive.i32(appearance).map(|_| ())
 }
 
 pub(super) fn material(archive: &mut DisplayDecoder<'_>) -> Result<()> {
@@ -109,8 +119,10 @@ fn rv(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn rv_color_parameters(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    archive.i32("color_form")?;
-    archive.f32("reflectivity")?;
+    if archive.context.version.value() >= 0x1052 {
+        archive.i32("color_form")?;
+        archive.f32("reflectivity")?;
+    }
     if archive.context.version.value() > 0x10a1 {
         archive.f32("color_mix")?;
     }

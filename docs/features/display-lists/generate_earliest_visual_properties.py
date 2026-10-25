@@ -35,5 +35,5 @@ def generate(version: int, kind: str, scenario: int) -> tuple[bytes,dict[str,obj
 
 
 if __name__ == "__main__":
-    cases = [generate(v,k,s) for v in [4200,4201,4202,0x10ae,0x10af] for k in ["part","assembly"] for s in [0,16]]
+    cases = [generate(v,k,s) for v in [4100,0x1051,0x1052,4200,4201,4202,0x10ae,0x10af] for k in ["part","assembly"] for s in [0,16]]
     print(write_group("earliest-visual-properties",cases,("displaylists.py",)))

@@ -77,7 +77,7 @@ fn object_target(archive: &DisplayArchive, path: &str) -> DisplayObjectPointer {
 
 #[test]
 fn all_body_property_roots_match_independent_fields_and_forced_bytes() {
-    assert_eq!(cases().len(), 54);
+    assert_eq!(cases().len(), 76);
     let mut fields = 0;
     for case in cases() {
         let archive = parsed(case);
@@ -102,7 +102,7 @@ fn all_body_property_roots_match_independent_fields_and_forced_bytes() {
             case.bytes
         );
     }
-    assert_eq!(fields, 18242);
+    assert_eq!(fields, 25870);
 }
 
 #[test]
@@ -235,5 +235,63 @@ fn holder_state_words_begin_at_the_reference_boundary() {
             .filter(|field| field.path.ends_with(".from_sub_assembly"))
             .count();
         assert_eq!(state > 0, case.version >= 0x106a);
+    }
+}
+
+#[test]
+fn early_appearance_layouts_keep_the_old_word_and_omit_unstored_rendering_fields() {
+    for case in cases() {
+        let archive = parsed(case);
+        let suffix_present = |suffix: &str| {
+            archive
+                .contents()
+                .fields
+                .iter()
+                .any(|field| field.path.ends_with(suffix))
+        };
+        assert_eq!(
+            suffix_present(".rv_app_props.color_form"),
+            case.version >= 0x1052
+        );
+        assert_eq!(
+            suffix_present(".rv_app_props.reflectivity"),
+            case.version >= 0x1052
+        );
+        assert_eq!(suffix_present(".unknown_old_5c"), case.version < 0x1052);
+        assert_eq!(
+            suffix_present(".default_appearance"),
+            case.version >= 0x1052
+        );
+    }
+}
+
+#[test]
+fn early_appearance_fields_cannot_be_reinterpreted_across_the_boundary() {
+    for case in cases()
+        .into_iter()
+        .filter(|case| [0x1051, 0x1052].contains(&case.version))
+    {
+        let archive = parsed(case);
+        let version = if case.version == 0x1051 {
+            0x1052
+        } else {
+            0x1051
+        };
+        let context = DisplayArchiveContext {
+            version: DisplayVersion::new(version),
+            ..case_context(case)
+        };
+        assert!(DisplayArchive::new(archive.contents().clone(), context, LIMITS).is_err());
+        assert!(
+            DisplayArchive::from_bytes(
+                case.bytes,
+                case_context(case),
+                DisplayArchiveLimits {
+                    maximum_bytes: case.bytes.len() - 1,
+                    ..LIMITS
+                }
+            )
+            .is_err()
+        );
     }
 }

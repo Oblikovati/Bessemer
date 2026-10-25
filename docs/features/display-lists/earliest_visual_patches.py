@@ -12,6 +12,7 @@ def appearance_reader(original: object, version: int, patches: list[tuple[int,in
         try:result = original(archive)
         finally:archive.cstring = saved
         start = spans[0][1]
+        if version<0x1052:patches.append((start+45,start+53,b""))
         if version<=0x10a1:patches.append((start+53,start+57,b""))
         if version<=0x10bf:patches.append((start+57,start+73,b""))
         return result

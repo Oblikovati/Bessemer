@@ -11,7 +11,7 @@ from implicit_visual_maps import single_properties
 from earliest_visual_patches import convert
 from swarchive import Archive
 
-VERSIONS = [4200,4201,4202,0x1098,0x1099,0x10a1,0x10a2,0x10ae,0x10af,0x10b2,0x10b3,0x10bf,0x10c0,4300]
+VERSIONS = [4100,0x1051,0x1052,4200,4201,4202,0x1098,0x1099,0x10a1,0x10a2,0x10ae,0x10af,0x10b2,0x10b3,0x10bf,0x10c0,4300]
 
 
 def table_layout(raw: bytes, version: int) -> bytes:
@@ -42,8 +42,8 @@ def generate(version: int, kind: str, scenario: int = 0) -> tuple[bytes,dict[str
 if __name__=="__main__":
     totals = []
     for kind in ["part","assembly"]:
-        cases = [generate(v,kind) for v in VERSIONS]+[generate(4200,kind,1),generate(4200,kind,2),generate(0x10ae,kind,2)]
+        cases = [generate(v,kind) for v in VERSIONS]+[generate(4100,kind,1),generate(4100,kind,2),generate(4200,kind,1),generate(4200,kind,2),generate(0x10ae,kind,2)]
         totals.append(write_group("earliest-visual-"+kind,cases,("displaylists.py",)))
     write_documents(generate,4200,"earliest-visual")
+    write_documents(generate,4100,"earliest-appearance")
     print(json.dumps({"fixtures":sum(n for n,_ in totals),"fields":sum(n for _,n in totals)}))
-
