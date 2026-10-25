@@ -41,7 +41,7 @@ def generate(version: int, kind: str, scenario: int) -> tuple[bytes,dict[str,obj
     assert archive.p==len(raw),(version,scenario,archive.p,len(raw))
     trace = bucket_corpus.trace(root)
     framed = struct.pack("<IBBI",version,0,scenario,len(raw))+raw+struct.pack("<I",len(trace))+trace+struct.pack("<I",0)
-    entries = 45 if scenario%16==2 else (86 if scenario>=16 else 91)-(version<=0x2faa)
+    entries = 45 if scenario%16==2 else (86 if scenario>=16 else 91)-(version<=0x2faa)-2*(version<=0x2789)
     row = {"version":version,"kind":kind,"scenario":scenario,"bytes":len(raw),"sha256":hashlib.sha256(raw).hexdigest(),"trace_fields":len(trace.splitlines()),"aggregate_entries":entries,"objects":sum(archive.classes.values())}
     return framed,row
 

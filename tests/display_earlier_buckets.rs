@@ -34,6 +34,12 @@ fn cases() -> Vec<BucketCase> {
     cases.extend(complete_cases::decode(include_bytes!(
         "fixtures/display-lists/precollector-buckets-2d.bin"
     )));
+    cases.extend(complete_cases::decode(include_bytes!(
+        "fixtures/display-lists/component-buckets-3d.bin"
+    )));
+    cases.extend(complete_cases::decode(include_bytes!(
+        "fixtures/display-lists/component-buckets-2d.bin"
+    )));
     cases
 }
 
@@ -57,7 +63,7 @@ fn parsed(case: BucketCase) -> DisplayArchive {
 
 #[test]
 fn earlier_buckets_match_independent_fields_and_exact_bytes() {
-    assert_eq!(cases().len(), 122);
+    assert_eq!(cases().len(), 180);
     let mut fields = 0;
     for case in cases() {
         assert!(case.scalars.is_empty());
@@ -83,7 +89,7 @@ fn earlier_buckets_match_independent_fields_and_exact_bytes() {
             case.bytes
         );
     }
-    assert_eq!(fields, 26865);
+    assert_eq!(fields, 38917);
 }
 
 fn edited_mode(archive: &DisplayArchive) -> DisplayArchive {
@@ -142,7 +148,9 @@ fn exact_budgets_charge_earlier_coordinates_and_discarded_objects() {
         } else {
             91
         };
-        let entries = entries - usize::from(!empty && case.version <= 0x2faa);
+        let entries = entries
+            - usize::from(!empty && case.version <= 0x2faa)
+            - 2 * usize::from(!empty && case.version <= 0x2789);
         let objects = if empty {
             43
         } else {

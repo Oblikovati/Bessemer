@@ -437,3 +437,6 @@ maintainer-side humanizer skill is unavailable; its prose pass remains for revie
 
 - The remaining 11000 interval adds configuration and component boundaries,
   including inline configuration tessellation; see [precollector-range.md](precollector-range.md).
+
+- The 10000 interval retains transient viewer graphs and earlier facet/bucket
+  boundaries; see [component-transition.md](component-transition.md).

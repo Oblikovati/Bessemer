@@ -23,7 +23,7 @@ def polygon_encoder(builder: object, version: int) -> object:
         raw += integers(kind)
         if kind in (1,2,3):
             raw += integers(-2 if kind==2 else 2)+(b"" if kind==2 else doubles(2))
-        raw += integers(-3,-6,0,7,6,-7,-8,9,-10,0,-11)
+        raw += integers(-3,-6,0,7,6,-7)+(integers(-8,9,-10,0,-11) if version>0x2789 else b"")
         if version<0x2f63:
             return raw
         if version<=0x2f95:
@@ -44,5 +44,6 @@ def bucket_encoder(original: object, version: int) -> object:
     def encode(builder: object, identity: int, two_dimensional: bool, empty: bool) -> bytes:
         raw = original(builder,identity,two_dimensional,empty)
         removed = 4+(2 if empty else 42)*(version<=0x2faa)+4*(version<=0x2f8b)
+        removed += (4 if empty else 60) if version<=0x2789 else 0
         return raw[:-removed]
     return encode

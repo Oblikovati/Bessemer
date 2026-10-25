@@ -45,7 +45,7 @@ def entry_budget(version: int, kind: str, variant: int) -> int:
     return result
 
 
-def generate(version: int, kind: str, scenario: int = 0, root_converter: object = converted, entry_counter: object = entry_budget) -> tuple[bytes,dict[str,object]]:
+def generate(version: int, kind: str, scenario: int = 0, root_converter: object = converted, entry_counter: object = entry_budget, extra_trace: object = None) -> tuple[bytes,dict[str,object]]:
     variant = scenario%128
     path,document,raw = source(kind)
     raw = root_converter(document,path,texture_source(document,path,raw),version,kind,variant)
@@ -55,6 +55,7 @@ def generate(version: int, kind: str, scenario: int = 0, root_converter: object 
     assert archive.p==len(raw)
     trace = material_corpus.trace(root)+scene_corpus.trace(root)+item_corpus.trace(root)
     scalar = scalar_trace(root,kind,version)+(configuration_trace(root,kind) if "configurations" in root else b"")+(ink_trace(root) if root["markup_ink_views"] is not None else b"")
+    scalar += extra_trace(root) if extra_trace is not None else b""
     framed = struct.pack("<IBBI",version,kind=="assembly",128+variant,len(raw))+raw+struct.pack("<I",len(trace))+trace+struct.pack("<I",len(scalar))+scalar
     row = {"version":version,"kind":kind,"scenario":128+variant,"bytes":len(raw),"sha256":hashlib.sha256(raw).hexdigest(),"oracle_fields":len(trace.splitlines())+len(scalar.splitlines()),"aggregate_entries":entry_counter(version,kind,variant),"objects":sum(archive.classes.values())}
     return framed,row

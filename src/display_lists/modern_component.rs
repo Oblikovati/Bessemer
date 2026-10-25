@@ -77,7 +77,24 @@ fn fixed_and_flexible(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     }
     archive.i32("fixed")?;
     archive.u16("solve_status")?;
-    archive.i32s(&["temp_fixed", "flexible"])?;
+    if archive.context.version.value() > 0x27b1 {
+        archive.i32("temp_fixed")?;
+    }
+    transient_viewer(archive)?;
+    flexible_state(archive)
+}
+
+fn transient_viewer(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if (0x27b7..0x27e3).contains(&archive.context.version.value()) {
+        archive.object("unknown_obj", &["moViewerComponentData_c"])?;
+    }
+    Ok(())
+}
+
+fn flexible_state(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() > 0x27c1 {
+        archive.i32("flexible")?;
+    }
     if archive.context.version.value() > 0x2b88 && archive.i32("has_graphics_connect_ref_mgr")? != 0
     {
         archive.object(
