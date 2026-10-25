@@ -1,7 +1,7 @@
 //! Region flags retain their physical word only after the documented boundary.
 use super::*;
 
-fn region_cases() -> Vec<OldCase> {
+pub(super) fn region_cases() -> Vec<OldCase> {
     complete_cases::decode(include_bytes!(
         "../fixtures/display-lists/legacy-region-roots.bin"
     ))
@@ -39,7 +39,7 @@ fn region_words_are_absent_until_their_gate_and_keep_noncanonical_signed_values(
     }
 }
 
-fn region_edited_contents(
+pub(super) fn region_edited_contents(
     source: &DisplayArchive,
     expected: &DisplayArchive,
 ) -> DisplayArchiveContents {

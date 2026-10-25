@@ -23,7 +23,7 @@ pub(super) fn read(archive: &mut DisplayDecoder<'_>) -> Result<std::sync::Arc<Ar
 }
 
 fn display_mode(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    if archive.i32("display_mode_data[0]")? == 6 {
+    if archive.context.version.value() <= 0xaa4 || archive.i32("display_mode_data[0]")? == 6 {
         return Ok(());
     }
     archive.i32s(&["display_mode_data[1]", "display_mode_data[2]"])

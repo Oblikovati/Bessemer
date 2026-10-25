@@ -530,3 +530,7 @@ retain their aliases and complete shaded models across the thread-storage bounda
 The [polygon-region checkpoint](legacy-region-layouts.md) admits contexts from
 2725, with 94 complete roots and six containers. Independent oracles retain the
 raw region words as well as their derived flags; earlier layouts omit the words.
+
+The [viewer-mode checkpoint](legacy-mode-layouts.md) admits contexts from 2711,
+with 94 complete roots and six containers. Absent, one-word and three-word mode
+records remain distinct, including complete shape-changing edits.
