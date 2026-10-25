@@ -165,6 +165,15 @@ fn dispatch_tessellation(archive: &mut DisplayDecoder<'_>, class: &str) -> Resul
         "uoTempBodyTessData_c" => super::modern_body_tess::body(archive),
         "uoTempFaceTessData_c" => super::modern_body_tess::face(archive),
         "uoBodyPropInfo_c" => super::modern_body_tess::properties(archive),
+        other => dispatch_graphics(archive, other),
+    }
+}
+
+fn dispatch_graphics(archive: &mut DisplayDecoder<'_>, class: &str) -> Result<()> {
+    match class {
+        "moGraphicsConnectRefMgrData_c" => super::graphics_reference::manager(archive),
+        "moGraphicsMagneticConnectRefData_c" => super::graphics_reference::magnetic(archive),
+        "moGraphicsRefWrapData_c" => super::graphics_reference::wrapper(archive),
         other => Err(unsupported(format!(
             "runtime class {other:?}; expected an implemented display-list object body"
         ))),

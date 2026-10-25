@@ -388,6 +388,9 @@ above. This corpus milestone does not establish complete schema parity.
 The [legacy bucket checkpoint](legacy-buckets.md) extends the unexercised schema
 coverage for the four older supported snapshots while preserving that corpus gate.
 
+- Graphics-reference wire coverage and its independent plane evidence are recorded
+  in [graphics-references.md](graphics-references.md); unresolved faceted-data bodies
+  remain unsupported.
 - Complete whole-document context resolution and cross-stream validation using
   declared document/file/archive versions and the external face directory/blocks.
 - Reuse existing MFC strings, exact numeric values, class/object maps and face

@@ -80,6 +80,7 @@ mod modern_reference;
 mod modern_scene;
 mod modern_walls;
 
+mod graphics_reference;
 mod legacy_bucket_poly;
 mod modern_bucket;
 mod modern_bucket_poly;
