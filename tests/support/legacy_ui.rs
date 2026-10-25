@@ -352,15 +352,33 @@ const FACETS: [(u32, [[&[u8]; 2]; 2]); 12] = [
     ),
 ];
 
-fn check_ui_body_word(archive: &DisplayArchive, path: &str, version: u32) {
+fn check_ui_body_word(archive: &DisplayArchive, path: &str, version: u32) -> bool {
     if !path.contains(".bodies[") {
-        return;
+        return false;
     }
-    let Some(prefix) = path.strip_suffix(".faces.count") else {
-        return;
+    let Some(prefix) = path.strip_suffix(".faces.count_word") else {
+        return false;
     };
     assert_eq!(
         field(archive, &format!("{prefix}.unknown_20")).is_some(),
         version > 1286
     );
+    true
+}
+
+#[test]
+fn body_metadata_assertions_visit_real_count_word_headers_on_both_sides_of_the_gate() {
+    for case in early_ui_cases()
+        .into_iter()
+        .filter(|case| matches!(case.version, 1286 | 1287) && case.scenario == 96)
+    {
+        let archive = parsed(case);
+        let visits = archive
+            .contents()
+            .fields
+            .iter()
+            .filter(|member| check_ui_body_word(&archive, &member.path, case.version))
+            .count();
+        assert_eq!(visits, 1, "version {} kind {:?}", case.version, case.kind);
+    }
 }

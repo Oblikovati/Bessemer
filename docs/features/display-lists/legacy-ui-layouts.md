@@ -49,3 +49,7 @@ and whole containers in two fresh processes.
 This checkpoint admits archive contexts from 1286. Earlier documented layouts
 and unresolved representations remain tracked by #28. Byte fidelity does not
 establish geometric validity or native application acceptance.
+
+The body-field assertion matches the physical `faces.count_word` header. A
+regression checks that one complete body is visited for each part and assembly
+fixture on both sides of `0x506`, preventing a vacuous metadata check. (#40)
