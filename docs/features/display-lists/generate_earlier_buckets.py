@@ -16,6 +16,8 @@ import dl_doc
 
 def encoded(document: object, path: Path, raw: bytes, version: int, scenario: int) -> bytes:
     originals = wire.bucket,wire.view_bucket,wire.poly,wire.edge,dl_doc.read_OrigFontScale
+    original_map = wire.component_map
+    wire.component_map = lambda empty:original_map(empty,version>0x23d7)
     patches: list[tuple[int,int,bytes]] = []
     def encode(builder: object) -> bytes:
         wire.poly = polygon_encoder(builder,version)
@@ -26,6 +28,7 @@ def encoded(document: object, path: Path, raw: bytes, version: int, scenario: in
     try:
         result = complete_root(document,path,raw,version,scenario,encode)
     finally:
+        wire.component_map = original_map
         wire.bucket,wire.view_bucket,wire.poly,wire.edge,dl_doc.read_OrigFontScale = originals
     return apply_patches(result,patches)
 

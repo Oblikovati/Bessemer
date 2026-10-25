@@ -23,7 +23,7 @@ def polygon_encoder(builder: object, version: int) -> object:
         raw += integers(kind)
         if kind in (1,2,3):
             raw += integers(-2 if kind==2 else 2)+(b"" if kind==2 else doubles(2))
-        raw += integers(-3,-6,0,7,6,-7)+(integers(-8,9,-10,0,-11) if version>0x2789 else b"")
+        raw += integers(-3,-6,0,7,6)+(integers(-7) if version>=0x23b4 else b"")+(integers(-8,9,-10,0,-11) if version>0x2789 else b"")
         if version<0x2f63:
             return raw
         if version<=0x2f95:

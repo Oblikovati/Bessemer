@@ -40,11 +40,12 @@ def edge() -> bytes:
     return raw+doubles(2)+integers(-8)
 
 
-def component_map(empty: bool) -> bytes:
+def component_map(empty: bool, wide: bool = True) -> bytes:
     if empty:
         return struct.pack("<H",0)
     raw = struct.pack("<HI",0xffff,2)
-    return raw+integers(-7)+cstring("first 鋼",True)+integers(-7)+cstring("second\0")
+    key = integers(-7) if wide else struct.pack("<H",65529)
+    return raw+key+cstring("first 鋼",True)+key+cstring("second\0")
 
 
 def thread_maps(builder: ObjectBuilder, identity: int, empty: bool) -> bytes:

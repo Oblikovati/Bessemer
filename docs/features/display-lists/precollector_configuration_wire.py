@@ -9,7 +9,7 @@ def configurations(version: int, kind: str, edited: bool = False) -> bytes:
     if kind=="part":
         raw += struct.pack("<H",0)+integers(0,0,0,0,-168,23 if edited else -1) if version<0x2b67 else bytes(2)
     else:
-        raw += bytes(4)
+        raw += bytes(2)+(bytes(2) if version>0x240e else b"")
     minimum,visibility_minimum = (0x2b61,0x2b7f) if kind=="part" else (0x2b6f,0x2b77)
     if version<=minimum:
         return raw

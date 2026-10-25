@@ -40,6 +40,12 @@ fn cases() -> Vec<BucketCase> {
     cases.extend(complete_cases::decode(include_bytes!(
         "fixtures/display-lists/component-buckets-2d.bin"
     )));
+    cases.extend(complete_cases::decode(include_bytes!(
+        "fixtures/display-lists/grouped-buckets-3d.bin"
+    )));
+    cases.extend(complete_cases::decode(include_bytes!(
+        "fixtures/display-lists/grouped-buckets-2d.bin"
+    )));
     cases
 }
 
@@ -63,7 +69,7 @@ fn parsed(case: BucketCase) -> DisplayArchive {
 
 #[test]
 fn earlier_buckets_match_independent_fields_and_exact_bytes() {
-    assert_eq!(cases().len(), 180);
+    assert_eq!(cases().len(), 230);
     let mut fields = 0;
     for case in cases() {
         assert!(case.scalars.is_empty());
@@ -89,7 +95,7 @@ fn earlier_buckets_match_independent_fields_and_exact_bytes() {
             case.bytes
         );
     }
-    assert_eq!(fields, 38917);
+    assert_eq!(fields, 47909);
 }
 
 fn edited_mode(archive: &DisplayArchive) -> DisplayArchive {
@@ -364,5 +370,37 @@ fn discarded_edge_alias_cannot_target_a_view_bucket() {
     field.value = DisplayFieldValue::ObjectTag(replacement);
     let error = archive.with_contents(contents, LIMITS).unwrap_err();
     assert!(error.to_string().contains("gcBucketEdgeData_c"), "{error}");
+    assert_eq!(archive.to_bytes().unwrap(), case.bytes);
+}
+#[test]
+fn word_component_keys_and_missing_section_flags_keep_their_wire_types() {
+    for case in cases().into_iter().filter(|case| case.scenario % 16 == 0) {
+        let archive = parsed(case);
+        let fields = &archive.contents().fields;
+        let key = fields
+            .iter()
+            .find(|field| field.path.as_ref() == format!("{ROOT}.bucket.component_str_map[0].key"))
+            .unwrap();
+        assert_eq!(
+            key.value,
+            if case.version <= 0x23d7 {
+                DisplayFieldValue::U16(65529)
+            } else {
+                DisplayFieldValue::I32(-7)
+            }
+        );
+        assert_eq!(
+            fields.iter().any(|field| field.path.as_ref()
+                == format!("{ROOT}.bucket.silh.items[0].section_cut_new")),
+            case.version >= 0x23b4
+        );
+    }
+    let case = selected(0x23d7, 0);
+    let archive = parsed(case);
+    let context = DisplayArchiveContext {
+        version: DisplayVersion::new(0x23d8),
+        ..case_context(case)
+    };
+    assert!(DisplayArchive::new(archive.contents().clone(), context, LIMITS).is_err());
     assert_eq!(archive.to_bytes().unwrap(), case.bytes);
 }

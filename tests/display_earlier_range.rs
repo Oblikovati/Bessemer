@@ -38,6 +38,13 @@ fn cases() -> Vec<RangeCase> {
     ] {
         cases.extend(complete_cases::decode(bytes));
     }
+    for bytes in [
+        include_bytes!("fixtures/display-lists/grouped-component-part.bin").as_slice(),
+        include_bytes!("fixtures/display-lists/grouped-component-assembly.bin").as_slice(),
+        include_bytes!("fixtures/display-lists/early-assembly-configurations.bin").as_slice(),
+    ] {
+        cases.extend(complete_cases::decode(bytes));
+    }
     cases
 }
 
@@ -62,7 +69,7 @@ fn parsed(case: RangeCase) -> DisplayArchive {
 
 #[test]
 fn all_earlier_range_roots_match_independent_material_scene_component_fields_and_bytes() {
-    assert_eq!(cases().len(), 217);
+    assert_eq!(cases().len(), 274);
     let mut fields = 0;
     for case in cases() {
         let archive = parsed(case);
@@ -84,7 +91,7 @@ fn all_earlier_range_roots_match_independent_material_scene_component_fields_and
             case.bytes
         );
     }
-    assert_eq!(fields, 66849);
+    assert_eq!(fields, 83883);
 }
 
 fn has_field(archive: &DisplayArchive, path: &str) -> bool {
@@ -126,7 +133,7 @@ fn truncated_roots_extra_bytes_and_unproven_contexts_do_not_publish_partial_resu
     assert!(DisplayArchive::from_bytes(&trailing, case_context(case), LIMITS).is_err());
 
     let case = selected(12000, DisplayDocumentKind::Part, 128);
-    for version in [0, 9999, 19001, u32::MAX] {
+    for version in [0, 8999, 19001, u32::MAX] {
         let context = DisplayArchiveContext {
             version: DisplayVersion::new(version),
             ..case_context(case)
@@ -418,3 +425,5 @@ mod early_configurations;
 
 #[path = "support/component_transition_cases.rs"]
 mod component_transitions;
+#[path = "support/grouped_component_cases.rs"]
+mod grouped_components;

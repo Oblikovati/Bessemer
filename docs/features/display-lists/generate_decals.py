@@ -9,8 +9,8 @@ from decal_corpus import trace
 from generate_version_range import apply_patches
 
 
-def generate(version: int, kind: str, scenario: int) -> tuple[bytes,dict[str,object]]:
-    path,document,original,base_entries = source(version,kind)
+def generate(version: int, kind: str, scenario: int, source_factory: object = source) -> tuple[bytes,dict[str,object]]:
+    path,document,original,base_entries = source_factory(version,kind)
     slots,material = locate(document,path,original,version,kind)
     patches = [(start,end,payload(version,material,scenario,mapped,index==0)) for index,(start,end,mapped) in enumerate(slots)]
     raw = apply_patches(original,patches)

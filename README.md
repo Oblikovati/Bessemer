@@ -32,7 +32,7 @@ versioned named, annotation and 3D-view codecs, plus part/assembly archive readi
 validated edits and writing with inline facets, explicit external face references
 and reference geometry, scenes, display items, view buckets, graphics references,
 markup-ink grids, per-configuration data, decals, null-bitmap textured planes and
-lights for display versions 7000, 9000 and 10000–19000 with explicit
+lights for display versions 7000 and 9000–19000 with explicit
 file-version context 19000.
 All 1,086 reference-readable part/assembly display-list streams reconstruct
 exactly; complete documented-schema support remains in development. See the

@@ -7,7 +7,11 @@ fn early_configuration_boundaries_omit_unstored_records_and_visibility_prefixes_
         let part = case.kind == DisplayDocumentKind::Part;
         assert_eq!(
             has_field(&archive, "root.configurations.config_count"),
-            !part || case.version > 0x2b5e
+            if part {
+                case.version > 0x2b5e
+            } else {
+                case.version >= 0x2404
+            }
         );
         if case.scenario % 128 != 4 {
             continue;

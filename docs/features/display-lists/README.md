@@ -440,3 +440,6 @@ maintainer-side humanizer skill is unavailable; its prose pass remains for revie
 
 - The 10000 interval retains transient viewer graphs and earlier facet/bucket
   boundaries; see [component-transition.md](component-transition.md).
+
+- The 9000 interval covers grouped components, word-key bucket maps and the early
+  assembly configuration/decal boundaries; see [grouped-components.md](grouped-components.md).

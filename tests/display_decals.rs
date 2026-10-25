@@ -8,7 +8,11 @@ mod complete_cases;
 use complete_cases::OldCase as DecalCase;
 
 fn cases() -> Vec<DecalCase> {
-    complete_cases::decode(include_bytes!("fixtures/display-lists/decals.bin"))
+    let mut cases = complete_cases::decode(include_bytes!("fixtures/display-lists/decals.bin"));
+    cases.extend(complete_cases::decode(include_bytes!(
+        "fixtures/display-lists/early-decal-transition.bin"
+    )));
+    cases
 }
 
 fn selected(scenario: u8) -> DecalCase {
@@ -36,7 +40,7 @@ fn parsed(case: DecalCase) -> DisplayArchive {
 
 #[test]
 fn all_versioned_decal_lists_and_maps_match_independent_fields_and_forced_bytes() {
-    assert_eq!(cases().len(), 14);
+    assert_eq!(cases().len(), 18);
     let mut compared = 0;
     for case in cases() {
         assert!(case.expected.is_empty());
@@ -50,7 +54,7 @@ fn all_versioned_decal_lists_and_maps_match_independent_fields_and_forced_bytes(
             case.bytes
         );
     }
-    assert_eq!(compared, 7292);
+    assert_eq!(compared, 9436);
 }
 
 fn first_decal(archive: &DisplayArchive) -> String {
@@ -158,6 +162,10 @@ fn independently_encoded_mask_edit_reopens_preserves_other_streams_and_reverts()
 fn budget(case: DecalCase) -> (usize, usize) {
     let assembly = case.kind == DisplayDocumentKind::Assembly;
     match (case.version, case.scenario) {
+        (0x239c | 0x239d, _) => (
+            if assembly { 155 } else { 144 } + 2 * usize::from(case.version >= 0x239d),
+            if assembly { 54 } else { 52 },
+        ),
         (7000, _) => {
             if assembly {
                 (126, 54)
@@ -299,4 +307,36 @@ fn published_decal_archives_own_sources_and_concurrent_edits_match_independent_b
         }
     });
     assert_eq!(archive.to_bytes().unwrap(), case.bytes);
+}
+#[test]
+fn populated_part_decals_switch_from_a_list_to_a_map_at_the_exact_boundary() {
+    for case in cases()
+        .into_iter()
+        .filter(|case| matches!(case.version, 0x239c | 0x239d))
+    {
+        let archive = parsed(case);
+        let part = if case.kind == DisplayDocumentKind::Part {
+            "root.tessellation"
+        } else {
+            "root.tessellation.components[0].comp_part_tess_data"
+        };
+        let contains = |suffix: &str| {
+            archive
+                .contents()
+                .fields
+                .iter()
+                .any(|field| field.path.as_ref() == format!("{part}.{suffix}"))
+        };
+        assert_eq!(contains("decals.count"), case.version < 0x239d);
+        assert_eq!(contains("decals_map[0].key"), case.version >= 0x239d);
+        if case.version >= 0x239d {
+            assert_eq!(
+                archive_support::check_scalar_table(
+                    &archive,
+                    &format!("{part}.decals_map[0].key=i:-7\n{part}.decals_map[1].key=i:-7\n")
+                ),
+                2
+            );
+        }
+    }
 }
