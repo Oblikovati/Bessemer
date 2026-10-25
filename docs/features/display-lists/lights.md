@@ -7,6 +7,9 @@ readers. It covers all five light runtime classes used by DisplayLists'
 base layout and remains separate work; the stream bytes do not identify that
 context by themselves.
 
+The [earliest light layouts](earliest-lights.md) now cover the stored base and
+derived light gates down to display version 4500.
+
 Both new classes reuse the existing light base and property codec. Position,
 target, cone, exponent, falloff, radius, fog and rendering values retain their
 stored bits. Counts with their high bit set retain the reference's completed-empty
@@ -26,8 +29,8 @@ shapes, every new light prefix, exact aggregate entry/field/byte budgets,
 whole-document edit/reopen/revert, untouched streams, source ownership and eight
 concurrent edits.
 
-The [native audit](archive-audit.json) reconstructs 983 of 1,086 reference-readable
-streams: every version-19000 stream in this corpus. It independently checks 56,876
+At this checkpoint, the native audit reconstructed 983 of 1,086 reference-readable
+streams: every version-19000 stream in this corpus. It independently checked 56,876
 light fields alongside 220,518 reference-geometry fields, 158,633 scene fields,
 176,601 root display-item fields and 234,395 view-bucket fields. Both processes
 produce identical bytes, diagnostics and traces, and no previously accepted paths

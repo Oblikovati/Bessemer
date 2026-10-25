@@ -13,7 +13,10 @@ pub(super) fn shaded_component(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i32("has_shrink_wrap_config")?;
     super::modern_decals::list(archive, "decals")?;
     archive.i32("unknown_370")?;
-    super::modern_component::integers(archive, "hidden_body_atoms")
+    if archive.context.version.value() > 0x11af {
+        super::modern_component::integers(archive, "hidden_body_atoms")?;
+    }
+    Ok(())
 }
 
 fn part_tessellation(

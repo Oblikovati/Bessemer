@@ -460,7 +460,9 @@ Early complete-root view transitions and Bug #37 are recorded in [early view roo
 
 - The 4800 range covers component metadata, property fonts, BOS flags and populated decal boundaries; see [earliest components](earliest-components.md).
 
-- The lower bound is now 4600, with face-pair arrays, scene flags, 24-slot property fonts and polyline layouts; see [earliest faces](earliest-faces.md).
+- The 4600 range covers face-pair arrays, scene flags, 24-slot property fonts and polyline layouts; see [earliest faces](earliest-faces.md).
+
+- The lower bound is now 4500, with all five older light kinds, appearance words, hidden atoms, weld lists and decal options; see [earliest lights](earliest-lights.md).
 
 - Archive object lookup now checks revision-scoped handles; see [revision identities](revision-identities.md). Operation history and whole-document coverage remain unfinished.
 

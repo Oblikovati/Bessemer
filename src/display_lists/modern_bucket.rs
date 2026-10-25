@@ -78,6 +78,10 @@ fn poly_lists(archive: &mut DisplayDecoder<'_>, two_dimensional: bool) -> Result
         if archive.context.file_version < 0x224 && matches!(label, "tan_v" | "tan_h") {
             continue;
         }
+        if archive.context.version.value() <= 0x11a5 && matches!(label, "weldbead_v" | "weldbead_h")
+        {
+            continue;
+        }
         poly_list(archive, label, two_dimensional)?;
     }
     Ok(())

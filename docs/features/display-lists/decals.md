@@ -10,8 +10,9 @@ mask type and inversion word, unsigned color mask, texture and material bodies,
 face associations and versioned trailing settings. The new reader reuses the
 existing texture and material codecs. It does not resolve mask paths or load
 external images. Float bits, Unicode, embedded NULs, raw flags and signed states
-are preserved. Mirror offsets are omitted at version 7000 and present in the
-other admitted decal contexts.
+are preserved. Mirror offsets are stored only above version `0x1BBE`.
+The [earliest light layouts](earliest-lights.md) also cover the older underlying
+appearance and original decal-ID word gates.
 
 Unsigned list, map and color counts are checked against physical bytes before
 conversion and budget charging. Face counts must be nonnegative and physically

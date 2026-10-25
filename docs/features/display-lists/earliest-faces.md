@@ -1,9 +1,11 @@
 # Earliest face and scene layouts
 
-Feature #28 now admits display versions 4600–19000, excluding the uncounted-window
+The face work admitted display versions 4600–19000, excluding the uncounted-window
 interval `0x1FAE`–`0x1FCE`. Full documented-schema parity, earlier contexts and
 unresolved object bodies remain unfinished. Archive verification does not
 establish native application acceptance or geometry validity.
+
+The [earliest light work](earliest-lights.md) later extended the lower bound to 4500.
 
 Four documented conditions control independent stored layouts:
 

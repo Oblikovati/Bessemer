@@ -1,0 +1,19 @@
+{
+  "fixtures": 102,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "two_processes_identical": true,
+  "all_forced_bytes_match_independent_fixtures": true,
+  "input_sha256": "6e508ab8417251f954a1c165cb5a814c4b9dd199acef000eb265e73d320ce5f6",
+  "result_sha256": "3903301f0838b311318e7345e82764a5a775a52860692690901dd05fa100b157",
+  "trace_sha256": "505bd8f544ffc164fc97e07d76d832e8d809e7b764b228d88d4670d693cb8725",
+  "source_sha256": {
+    "modern_root": "92aa206c0cf96ff634432a6d75dea4278b0f6fb72e04e6fec03f1bce6dc8a542",
+    "modern_lights": "f8e25abb635c8edfd445a0eccddb9de7b370945371ee05e7f71090802ba479b8",
+    "modern_material": "4987b7fe6dfe4ccab29459f43545c33cbbe7a810342b9ac5aca8196b174061d3",
+    "modern_pw_scene": "583ae94bd7ab4b5409621291f0bd9c927c68185fce5dd719c8dc37175f399e00",
+    "modern_assembly": "482875ed181f3d305072077a73fe70737ffa1bb0274272211e3dbe2cb73cddf7",
+    "modern_bucket": "2c881710cfce28e1c274414c4f15b5d0cbb9f1fa7cb820dabe0b68cab875ae75",
+    "modern_decals": "2b7172edda09d1054dd0991dbb31748795bb5d4ac298440d864288a8e204eb87"
+  },
+  "scope": "byte reconstruction and process determinism; field oracles checked separately by integration tests"
+}

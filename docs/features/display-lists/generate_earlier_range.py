@@ -66,11 +66,12 @@ def write_kind(kind: str) -> tuple[int,int]:
     return write_group(f"earlier-range-{kind}",cases)
 
 
-def write_group(name: str, cases: list[tuple[bytes,dict[str,object]]]) -> tuple[int,int]:
+def write_group(name: str, cases: list[tuple[bytes,dict[str,object]]], extra_sources: tuple[str,...] = ()) -> tuple[int,int]:
     framed = struct.pack("<I",len(cases))+b"".join(raw for raw,_ in cases)
     Path(f"tests/fixtures/display-lists/{name}.bin").write_bytes(framed)
     evidence = {"scope":"complete owned wire roots with explicit file context 19000; CAD validity unclaimed","fixtures":[row for _,row in cases],"sha256":hashlib.sha256(framed).hexdigest()}
-    evidence["source_hashes"] = {name:hashlib.sha256(Path(f"../inventor-interface/solidworks/{name}").read_bytes()).hexdigest() for name in ["dl_doc.py","dl_tess.py","dl_light.py","dl_ui.py","facettess.py","mfcobjects.py"]}
+    sources = ["dl_doc.py","dl_tess.py","dl_light.py","dl_ui.py","facettess.py","mfcobjects.py",*extra_sources]
+    evidence["source_hashes"] = {name:hashlib.sha256(Path(f"../inventor-interface/solidworks/{name}").read_bytes()).hexdigest() for name in sources}
     Path(__file__).with_name(f"{name}.json").write_text(json.dumps(evidence,indent=2)+"\n",encoding="utf-8",newline="\n")
     return len(cases),sum(row.get("oracle_fields",row.get("trace_fields",0)) for _,row in cases)
 

@@ -137,13 +137,17 @@ fn rv_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i32("surface_finish_shader_type")?;
     float3(archive, "appearance_u_dir")?;
     float3(archive, "appearance_v_dir")?;
-    archive.f32s(&[
-        "appearance_trans_x",
-        "appearance_trans_y",
-        "knurl_height_cap",
-        "knurl_angle",
-        "dimple_size",
-    ])?;
+    archive.f32s(&["appearance_trans_x", "appearance_trans_y"])?;
+    rv_surface_details(archive)
+}
+
+fn rv_surface_details(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() > 0x119e {
+        archive.f32s(&["knurl_height_cap", "knurl_angle"])?;
+    }
+    if archive.context.version.value() > 0x11ac {
+        archive.f32("dimple_size")?;
+    }
     rv_historical_dimensions(archive)?;
     if (0x3348..0x46ba).contains(&archive.context.version.value()) {
         archive.scope("unknown_symbol", legacy_symbol)?;

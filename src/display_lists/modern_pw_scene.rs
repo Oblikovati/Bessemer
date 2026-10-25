@@ -84,11 +84,17 @@ fn tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         "use_background_env",
         "background_fit_to_camera_fov",
     ])?;
-    archive.f64s(&[
-        "pv_background_image_brightness",
-        "pv_rendering_brightness",
-        "pv_scene_reflectivity",
-    ])?;
+    historical_rendering(archive)
+}
+
+fn historical_rendering(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() > 0x1194 {
+        archive.f64s(&[
+            "pv_background_image_brightness",
+            "pv_rendering_brightness",
+            "pv_scene_reflectivity",
+        ])?;
+    }
     if archive.context.version.value() > 0x1310 {
         archive.i32("bg_fit_to_sw_graphics_area")?;
     }

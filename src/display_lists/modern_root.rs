@@ -134,9 +134,9 @@ fn configuration_footer(archive: &mut DisplayDecoder<'_>, views: usize) -> Resul
 fn require_context(context: &DisplayArchiveContext) -> Result<()> {
     let version = context.version.value();
     require_window_independent(version)?;
-    if !(4600..=19000).contains(&version) {
+    if !(4500..=19000).contains(&version) {
         return Err(unsupported(format!(
-            "display context version {}, file version {}, kind {:?}; expected display version 4600..=19000",
+            "display context version {}, file version {}, kind {:?}; expected display version 4500..=19000",
             context.version.value(),
             context.file_version,
             context.kind
@@ -191,7 +191,9 @@ fn old_lights(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 
 fn display_scene(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.scope("textured_planes", super::textured_planes::read)?;
-    archive.i32("detail_mask_12")?;
+    if archive.context.version.value() > 0x11ed {
+        archive.i32("detail_mask_12")?;
+    }
     let scene = archive.i32("scene_type")?;
     if scene == 1 || scene == 2 {
         archive.scope("scene", super::modern_scene::read)?;
