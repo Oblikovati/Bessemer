@@ -182,12 +182,7 @@ fn old_lights(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn display_scene(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    let planes = archive.count("textured_planes.count", 36)?;
-    if planes != 0 {
-        return Err(unsupported(format!(
-            "textured plane count {planes}; populated textured planes are pending implementation"
-        )));
-    }
+    archive.scope("textured_planes", super::textured_planes::read)?;
     archive.i32("detail_mask_12")?;
     let scene = archive.i32("scene_type")?;
     if scene == 1 || scene == 2 {

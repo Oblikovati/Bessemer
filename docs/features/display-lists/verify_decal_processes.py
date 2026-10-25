@@ -1,5 +1,6 @@
 """Replay frozen decal roots through the shared two-process byte reconstruction gate."""
 from pathlib import Path
+from collections.abc import Callable
 import hashlib
 import json
 import platform
@@ -10,23 +11,23 @@ from reference_corpus import frame_at
 from verify_configuration_processes import frames,two_processes
 
 
-def frozen_cases() -> list[tuple[dict[str,object],bytes]]:
-    manifest = json.loads(Path(__file__).with_name("decals.json").read_text(encoding="utf-8"))
+def frozen_cases(manifest_path: Path, fixture_path: Path, generator: Callable[[int,str,int],tuple[bytes,dict[str,object]]]) -> list[tuple[dict[str,object],bytes]]:
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     cases,framed = [],[]
     for row in manifest["fixtures"]:
-        raw,actual = generate(row["version"],row["kind"],row["scenario"])
+        raw,actual = generator(row["version"],row["kind"],row["scenario"])
         assert row==actual
         payload,_ = frame_at(raw,6)
         cases.append((dict(row,external_ids=[]),payload))
         framed.append(raw)
     rebuilt = struct.pack("<I",len(cases))+b"".join(framed)
     assert hashlib.sha256(rebuilt).hexdigest()==manifest["sha256"]
-    assert rebuilt==Path("tests/fixtures/display-lists/decals.bin").read_bytes()
+    assert rebuilt==fixture_path.read_bytes()
     return cases
 
 
 def main(executable: str) -> None:
-    cases = frozen_cases()
+    cases = frozen_cases(Path(__file__).with_name("decals.json"),Path("tests/fixtures/display-lists/decals.bin"),generate)
     source,expected = frames(cases)
     trace_hash = two_processes(executable,source,expected)
     modules = ["modern_decals","modern_material","modern_part_tess","modern_body_tess","modern_assembly"]

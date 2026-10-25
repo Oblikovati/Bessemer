@@ -397,6 +397,8 @@ coverage for the four older supported snapshots while preserving that corpus gat
   tails for admitted contexts are covered in [configurations.md](configurations.md).
 - Decal lists, keyed maps, masks, face associations and reused appearance records
   are covered in [decals.md](decals.md).
+- Textured-plane records with null bitmap pointers and complete transforms are
+  covered in [textured-planes.md](textured-planes.md); bitmap bodies remain unresolved.
 - Complete whole-document context resolution and cross-stream validation using
   declared document/file/archive versions and the external face directory/blocks.
 - Reuse existing MFC strings, exact numeric values, class/object maps and face
@@ -405,7 +407,7 @@ coverage for the four older supported snapshots while preserving that corpus gat
 - Extend environments, splitters, fonts, lights, visual properties, buckets and
   display items to the remaining version and caller contexts.
 - Add earlier scene and unit layouts, remaining shaded-data layouts,
-  textured planes and earlier configuration layouts. Unknown-meaning
+  textured-plane bitmap bodies and earlier configuration layouts. Unknown-meaning
   fields remain explicit raw typed values; unresolved bodies are unsupported.
 - Complete the immutable archive graph, validated owned construction/edits,
   revision-scoped identities, authentic reverts, ordered coverage and history.
