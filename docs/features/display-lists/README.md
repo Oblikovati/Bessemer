@@ -461,3 +461,5 @@ Early complete-root view transitions and Bug #37 are recorded in [early view roo
 - Shared line-style and layer-manager CObject bodies retain aliases and versioned map framing; see [UI objects](ui-objects.md).
 
 - Component properties and holders preserve version-sized font arrays and shared cyclic graphs; see [component properties](component-properties.md).
+
+- Typed document context resolution reads exact markers and bounded face-directory declarations; whole-document byte reconstruction is covered in [document context](document-context.md). External block checks remain unfinished.

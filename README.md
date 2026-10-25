@@ -97,3 +97,5 @@ fresh decodes require new handles. See the [identity contract](docs/features/dis
 Display-list CObject graphs also retain shared line-style definitions and versioned layer maps; see the [UI object coverage](docs/features/display-lists/ui-objects.md).
 
 Component-property objects and holders retain their embedded fonts, visibility fields, occurrences and shared references; see the [component-property coverage](docs/features/display-lists/component-properties.md).
+
+`DisplayArchiveContext::from_document` resolves exact display-version markers and external component declarations with explicit native file and tessellation versions. See [document context resolution](docs/features/display-lists/document-context.md).

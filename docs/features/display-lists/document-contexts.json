@@ -1,0 +1,111 @@
+{
+  "scope": "document context declarations; external payload and geometry checks excluded",
+  "fixtures": [
+    {
+      "edited_display_sha256": "c74e065d33842a74287e0dad8f8bad2f620d1c9028bcef71be03072dac97e088",
+      "fixture": "context-inline-part",
+      "kind": "part",
+      "display_version": 19000,
+      "file_version": 547,
+      "directory_version": 19000,
+      "component_ids": [],
+      "external_faces": 0,
+      "sha256": "adfff2e6864e1de28f5f2a559e99d3a64805cd1e241597f6af293e2b4df0af1d"
+    },
+    {
+      "edited_display_sha256": "75af1b4b376608b413416f9b7cf54608f1ad29c7b73123fe345937cb36407df7",
+      "fixture": "context-inline-assembly",
+      "kind": "assembly",
+      "display_version": 19000,
+      "file_version": 548,
+      "directory_version": 19000,
+      "component_ids": [],
+      "external_faces": 0,
+      "sha256": "3b131f0e04462319d33c3698e49341cbe0abd5a91cf857c2fbb920c9f3e0852f"
+    },
+    {
+      "edited_display_sha256": "e2da55601d5604379bfec5463ba7d65f6686b3a1fc4e8296a9194ed36554993b",
+      "fixture": "context-external-modern",
+      "kind": "assembly",
+      "display_version": 19000,
+      "file_version": 19000,
+      "directory_version": 19000,
+      "component_ids": [
+        "Assem1",
+        "assem1",
+        "cache \u92fc"
+      ],
+      "external_faces": 2,
+      "sha256": "3dd6e1de28f046987e638cb0253966e126e7879fa31766e2f78110bb882e691f"
+    },
+    {
+      "edited_display_sha256": "e2da55601d5604379bfec5463ba7d65f6686b3a1fc4e8296a9194ed36554993b",
+      "fixture": "context-external-pair",
+      "kind": "assembly",
+      "display_version": 19000,
+      "file_version": 4294967295,
+      "directory_version": 15132,
+      "component_ids": [
+        "Assem1",
+        "assem1",
+        "cache \u92fc"
+      ],
+      "external_faces": 2,
+      "sha256": "075549d899fe2b0afdbf52ceddf5f380bf10ba9cf7f80d201e19acc0ffa1badf"
+    },
+    {
+      "edited_display_sha256": "75af1b4b376608b413416f9b7cf54608f1ad29c7b73123fe345937cb36407df7",
+      "fixture": "context-empty-directory",
+      "kind": "assembly",
+      "display_version": 19000,
+      "file_version": 0,
+      "directory_version": 19000,
+      "component_ids": [],
+      "external_faces": 0,
+      "sha256": "6d77f8e86c8cbe9d13a47decbc968cc737ef9758e54de1c40bc175510be89613"
+    }
+  ],
+  "marker_cases": [
+    {
+      "fixture": "context-no-marker",
+      "markers": [],
+      "sha256": "96dfa0938f909f9f5ff73532c2252cb655923d349f90ec2cd9bfb9cf825d0a02"
+    },
+    {
+      "fixture": "context-conflict",
+      "markers": [
+        "_DL_VERSION_19000/DLUpdateStamp",
+        "_DL_VERSION_18999/DLUpdateStamp"
+      ],
+      "sha256": "32c2b0491c73201cb1200013549989d8f7d2a4b188417d1946307830285015c8"
+    },
+    {
+      "fixture": "context-invalid-marker",
+      "markers": [
+        "_DL_VERSION_nope/DLUpdateStamp"
+      ],
+      "sha256": "9e38673aa97e43ead9e82338c17a7e9c18deca62cb006b7aae8934bcd1f1a8c6"
+    },
+    {
+      "fixture": "context-signed-aliases",
+      "markers": [
+        "_DL_VERSION_-1/DLUpdateStamp",
+        "_DL_VERSION_4294967295/DLUpdateStamp"
+      ],
+      "sha256": "5bb046b36907b3f9ff42788d37399ae3c4f15b4fb62b93fedee0cc46540825f8"
+    },
+    {
+      "fixture": "context-lookalike",
+      "markers": [
+        "nested/_DL_VERSION_19000/DLUpdateStamp",
+        "_DL_VERSION_19000/notDLUpdateStamp"
+      ],
+      "sha256": "53b94c2bdbb5811cfc88bc59aa0d28148835e776e55913d4206e5b08ff2b5f08"
+    }
+  ],
+  "integrity_case": {
+    "fixture": "context-directory-bad-crc",
+    "sha256": "29bcf57f5ed89d2e00f44bf266508affa081e62bede8b15404235786d542ee29",
+    "expected": "Integrity"
+  }
+}

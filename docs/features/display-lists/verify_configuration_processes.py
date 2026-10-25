@@ -42,7 +42,7 @@ def frames(cases: list[tuple[dict[str,object],bytes]]) -> tuple[bytes,bytes]:
     return bytes(source),bytes(expected)
 
 
-def two_processes(executable: str, source: bytes, expected: bytes) -> str:
+def two_processes(executable: str, source: bytes, expected: bytes, expected_trace: bytes | None = None) -> str:
     with tempfile.TemporaryDirectory(prefix="bessemer-configurations-") as directory:
         root = Path(directory)
         local = root/Path(executable).name
@@ -53,7 +53,9 @@ def two_processes(executable: str, source: bytes, expected: bytes) -> str:
         for _ in range(2):
             subprocess.run([str(local),str(input_path),str(output),str(trace)],check=True)
             assert output.read_bytes()==expected
-            results.append(trace.read_bytes())
+            trace_bytes = trace.read_bytes()
+            if expected_trace is not None:assert trace_bytes==expected_trace
+            results.append(trace_bytes)
         assert results[0]==results[1]
     return hashlib.sha256(results[0]).hexdigest()
 
