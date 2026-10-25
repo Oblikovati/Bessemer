@@ -2,10 +2,7 @@ use super::archive_decode::DisplayDecoder;
 use crate::{Result, archive_codec::ArchiveString};
 
 pub(super) fn read(archive: &mut DisplayDecoder<'_>) -> Result<std::sync::Arc<ArchiveString>> {
-    let component_id = archive.text_value("comp_id_string")?;
-    archive.transform("comp_xform")?;
-    archive.bounds("comp_bbox")?;
-    archive.object("comp_viz_prop", &["moVisualProperties_c"])?;
+    let component_id = identity(archive)?;
     archive.text("ref_configuration")?;
     archive.i32("num_user_comp_bodies")?;
     archive.u32("model_update_stamp")?;
@@ -18,6 +15,14 @@ pub(super) fn read(archive: &mut DisplayDecoder<'_>) -> Result<std::sync::Arc<Ar
         archive.f64("unknown_190")?;
     }
     reference(archive)?;
+    Ok(component_id)
+}
+
+pub(super) fn identity(archive: &mut DisplayDecoder<'_>) -> Result<std::sync::Arc<ArchiveString>> {
+    let component_id = archive.text_value("comp_id_string")?;
+    archive.transform("comp_xform")?;
+    archive.bounds("comp_bbox")?;
+    archive.object("comp_viz_prop", &["moVisualProperties_c"])?;
     Ok(component_id)
 }
 
