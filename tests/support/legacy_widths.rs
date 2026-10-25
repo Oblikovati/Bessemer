@@ -49,7 +49,7 @@ fn astral_combining_empty_and_disabled_text_widths_follow_their_physical_count_l
     }
 }
 
-fn width_edited_contents(
+pub(super) fn width_edited_contents(
     source: &DisplayArchive,
     expected: &DisplayArchive,
 ) -> DisplayArchiveContents {

@@ -133,6 +133,9 @@ fn component_key(archive: &mut DisplayDecoder<'_>, index: u32, word_keys: bool) 
 }
 
 fn thread_maps(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() <= 0xad2 {
+        return Ok(());
+    }
     for index in 0..4 {
         archive.scope(&format!("cthread_maps[{index}]"), thread_entries)?;
     }

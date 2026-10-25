@@ -522,3 +522,7 @@ add-in fields and body-property pointers without inserting default values.
 The [implicit-width checkpoint](legacy-width-layouts.md) admits contexts from
 2771, with 34 complete roots and six containers. Unicode text determines implicit
 widths, while later stored counts remain independent of text length.
+
+The [bucket thread-pattern checkpoint](legacy-thread-layouts.md) admits contexts
+from 2749, with 94 complete roots and six containers. Populated 2D and 3D buckets
+retain their aliases and complete shaded models across the thread-storage boundary.

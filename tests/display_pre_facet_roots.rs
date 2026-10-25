@@ -40,7 +40,9 @@ fn case_context(case: OldCase) -> DisplayArchiveContext {
     DisplayArchiveContext {
         version: DisplayVersion::new(case.version),
         kind: case.kind,
-        face_tessellation_components: if (3..=4).contains(&case.scenario) {
+        face_tessellation_components: if (3..=4).contains(&case.scenario)
+            || (case.kind == DisplayDocumentKind::Assembly && case.scenario >= 64)
+        {
             std::sync::Arc::new(["Assem1".to_owned()].into())
         } else {
             Default::default()
@@ -310,6 +312,8 @@ mod legacy_addins;
 mod legacy_cameras;
 #[path = "support/legacy_panes.rs"]
 mod legacy_panes;
+#[path = "support/legacy_threads.rs"]
+mod legacy_threads;
 #[path = "support/legacy_visuals.rs"]
 mod legacy_visuals;
 #[path = "support/legacy_widths.rs"]

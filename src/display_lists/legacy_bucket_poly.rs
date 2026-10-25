@@ -5,6 +5,14 @@ use super::{
 };
 use crate::Result;
 
+const LEGACY_LAYER_FIELDS: [&str; 5] = [
+    "hatch_layer_id",
+    "command_line_color",
+    "hatch_layer_color",
+    "layer_visible",
+    "layer_printable",
+];
+
 pub(super) fn read(archive: &mut DisplayDecoder<'_>, two_dimensional: bool) -> Result<()> {
     archive.i32s(&["node_id", "occurence", "smooth"])?;
     let count = archive.i32("count")?;
@@ -54,12 +62,10 @@ fn persistent_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn attributes(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    archive.i32s(&[
-        "new_boundary",
-        "atom_id",
-        "new_region",
-        "thread_ptn_xform_id",
-    ])?;
+    archive.i32s(&["new_boundary", "atom_id", "new_region"])?;
+    if archive.context.version.value() > 0xad2 {
+        archive.i32("thread_ptn_xform_id")?;
+    }
     if archive.context.version.value() > 0x12dd {
         archive.i32("bos")?;
     }
@@ -69,13 +75,7 @@ fn attributes(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     if archive.context.version.value() <= 0x2789 {
         return Ok(());
     }
-    archive.i32s(&[
-        "hatch_layer_id",
-        "command_line_color",
-        "hatch_layer_color",
-        "layer_visible",
-        "layer_printable",
-    ])
+    archive.i32s(&LEGACY_LAYER_FIELDS)
 }
 
 pub(super) fn edge(archive: &mut DisplayDecoder<'_>) -> Result<()> {
