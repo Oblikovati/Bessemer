@@ -402,6 +402,8 @@ coverage for the four older supported snapshots while preserving that corpus gat
 - The middle range extends admitted contexts to 16000–19000 with complete facet,
   component, material, scene and bucket boundary fixtures in
   [middle-range.md](middle-range.md).
+- The lower range extends admitted contexts to 14000–19000 with texture, thread,
+  face, component-number and detailing boundaries in [lower-range.md](lower-range.md).
 - Complete whole-document context resolution and cross-stream validation using
   declared document/file/archive versions and the external face directory/blocks.
 - Reuse existing MFC strings, exact numeric values, class/object maps and face

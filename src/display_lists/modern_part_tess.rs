@@ -41,7 +41,9 @@ fn part_geometry(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         "ref_geom_feature_data_collector",
         super::modern_reference::read,
     )?;
-    archive.u8("show_c_thread")?;
+    if archive.context.version.value() > 0x3751 {
+        archive.u8("show_c_thread")?;
+    }
     Ok(())
 }
 

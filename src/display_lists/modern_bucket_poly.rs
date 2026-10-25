@@ -121,7 +121,9 @@ pub(super) fn arc_data(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         point(archive, label)?;
     }
     archive.u8("unknown_68")?;
-    archive.u8("unknown_6c")?;
+    if archive.context.version.value() >= 0x3724 {
+        archive.u8("unknown_6c")?;
+    }
     archive.i32("unknown_70")?;
     archive.u8("unknown_74")?;
     archive.i32("unknown_78")?;

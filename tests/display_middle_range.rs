@@ -1,4 +1,4 @@
-//! Complete part and assembly roots pin every 16000..18000 material/component/facet gate.
+//! Complete part and assembly roots pin the 14000..18000 material/component/facet gates.
 use bessemer::display_lists::*;
 #[path = "support/display_archive.rs"]
 mod archive_support;
@@ -16,7 +16,12 @@ mod scene_trace;
 mod view_trace;
 
 fn cases() -> Vec<RangeCase> {
-    complete_cases::decode(include_bytes!("fixtures/display-lists/middle-range.bin"))
+    let mut cases =
+        complete_cases::decode(include_bytes!("fixtures/display-lists/middle-range.bin"));
+    cases.extend(complete_cases::decode(include_bytes!(
+        "fixtures/display-lists/lower-range.bin"
+    )));
+    cases
 }
 
 fn selected(version: u32, kind: DisplayDocumentKind, scenario: u8) -> RangeCase {
@@ -40,7 +45,7 @@ fn parsed(case: RangeCase) -> DisplayArchive {
 
 #[test]
 fn all_middle_range_roots_match_independent_material_scene_component_fields_and_bytes() {
-    assert_eq!(cases().len(), 42);
+    assert_eq!(cases().len(), 90);
     let mut fields = 0;
     for case in cases() {
         let archive = parsed(case);
@@ -61,7 +66,7 @@ fn all_middle_range_roots_match_independent_material_scene_component_fields_and_
             case.bytes
         );
     }
-    assert_eq!(fields, 13200);
+    assert_eq!(fields, 27179);
 }
 
 fn has_field(archive: &DisplayArchive, path: &str) -> bool {
@@ -125,11 +130,19 @@ fn edited_ambient(archive: &DisplayArchive) -> DisplayArchive {
 
 #[test]
 fn independent_ambient_edit_reopens_in_each_document_kind_and_reverts() {
-    for kind in [DisplayDocumentKind::Part, DisplayDocumentKind::Assembly] {
-        let case = selected(16000, kind, 0);
+    for (version, scenario, kind) in [
+        (14000, 32, DisplayDocumentKind::Part),
+        (14000, 32, DisplayDocumentKind::Assembly),
+        (16000, 0, DisplayDocumentKind::Part),
+        (16000, 0, DisplayDocumentKind::Assembly),
+    ] {
+        let case = selected(version, kind, scenario);
         let archive = parsed(case);
         let edited = edited_ambient(&archive);
-        assert_eq!(edited.to_bytes().unwrap(), selected(16000, kind, 1).bytes);
+        assert_eq!(
+            edited.to_bytes().unwrap(),
+            selected(version, kind, scenario + 1).bytes
+        );
         assert_eq!(
             edited
                 .with_contents(archive.contents().clone(), LIMITS)
@@ -180,11 +193,24 @@ fn independent_ambient_edit_reopens_in_each_document_kind_and_reverts() {
 fn full_root_budgets_include_both_inline_facets_at_the_vertex_layout_boundary() {
     for case in cases() {
         let archive = parsed(case);
-        let entries = if case.kind == DisplayDocumentKind::Part {
+        let mut entries = if case.kind == DisplayDocumentKind::Part {
             149
         } else {
             154
         } - if case.version <= 0x3ee7 { 8 } else { 0 };
+        if case.scenario >= 32 {
+            entries -= if case.version <= 0x3751 { 2 } else { 0 };
+            entries -= if case.version <= 0x3b28 { 16 } else { 0 };
+            if case.kind == DisplayDocumentKind::Assembly {
+                entries += if case.version <= 0x3b1b {
+                    0
+                } else if case.version < 0x3b23 {
+                    1
+                } else {
+                    2
+                };
+            }
+        }
         let objects = if case.kind == DisplayDocumentKind::Part {
             52
         } else {
@@ -234,21 +260,24 @@ fn full_root_budgets_include_both_inline_facets_at_the_vertex_layout_boundary() 
 
 #[test]
 fn truncated_roots_extra_bytes_and_unproven_contexts_do_not_publish_partial_results() {
-    let case = selected(16000, DisplayDocumentKind::Part, 0);
-    for end in 0..case.bytes.len() {
-        assert!(
-            DisplayArchive::from_bytes(&case.bytes[..end], case_context(case), LIMITS).is_err(),
-            "prefix {end}"
-        );
+    for (version, scenario) in [(14000, 32), (16000, 0)] {
+        let case = selected(version, DisplayDocumentKind::Part, scenario);
+        for end in 0..case.bytes.len() {
+            assert!(
+                DisplayArchive::from_bytes(&case.bytes[..end], case_context(case), LIMITS).is_err(),
+                "prefix {end}"
+            );
+        }
+        let archive = parsed(case);
+        let mut contents = archive.contents().clone();
+        archive_support::set_integer(&mut contents, "root.view_count", i32::MAX);
+        assert!(archive.with_contents(contents, LIMITS).is_err());
+        let mut trailing = case.bytes.to_vec();
+        trailing.push(0);
+        assert!(DisplayArchive::from_bytes(&trailing, case_context(case), LIMITS).is_err());
     }
-    let archive = parsed(case);
-    let mut contents = archive.contents().clone();
-    archive_support::set_integer(&mut contents, "root.view_count", i32::MAX);
-    assert!(archive.with_contents(contents, LIMITS).is_err());
-    let mut trailing = case.bytes.to_vec();
-    trailing.push(0);
-    assert!(DisplayArchive::from_bytes(&trailing, case_context(case), LIMITS).is_err());
-    for version in [0, 15999, 19001, u32::MAX] {
+    let case = selected(16000, DisplayDocumentKind::Part, 0);
+    for version in [0, 13999, 19001, u32::MAX] {
         let context = DisplayArchiveContext {
             version: DisplayVersion::new(version),
             ..case_context(case)
@@ -260,20 +289,105 @@ fn truncated_roots_extra_bytes_and_unproven_contexts_do_not_publish_partial_resu
 
 #[test]
 fn published_middle_range_roots_own_sources_and_parallel_edits_match_independent_bytes() {
-    let case = selected(16000, DisplayDocumentKind::Assembly, 0);
-    let mut source = case.bytes.to_vec();
-    let archive = DisplayArchive::from_bytes(&source, case_context(case), LIMITS).unwrap();
-    source.fill(0);
-    std::thread::scope(|scope| {
-        let workers: Vec<_> = (0..8)
-            .map(|_| scope.spawn(|| edited_ambient(&archive).to_bytes().unwrap()))
-            .collect();
-        for worker in workers {
-            assert_eq!(
-                worker.join().unwrap(),
-                selected(16000, DisplayDocumentKind::Assembly, 1).bytes
-            );
+    for (version, scenario) in [(14000, 32), (16000, 0)] {
+        let case = selected(version, DisplayDocumentKind::Assembly, scenario);
+        let mut source = case.bytes.to_vec();
+        let archive = DisplayArchive::from_bytes(&source, case_context(case), LIMITS).unwrap();
+        source.fill(0);
+        std::thread::scope(|scope| {
+            let workers: Vec<_> = (0..8)
+                .map(|_| scope.spawn(|| edited_ambient(&archive).to_bytes().unwrap()))
+                .collect();
+            for worker in workers {
+                assert_eq!(
+                    worker.join().unwrap(),
+                    selected(version, DisplayDocumentKind::Assembly, scenario + 1).bytes
+                );
+            }
+        });
+        assert_eq!(archive.to_bytes().unwrap(), case.bytes);
+    }
+}
+
+#[test]
+fn lower_range_texture_thread_face_and_facet_gates_omit_unstored_fields() {
+    for case in cases().into_iter().filter(|case| case.scenario >= 32) {
+        let archive = parsed(case);
+        assert_eq!(
+            has_field(
+                &archive,
+                "root.visual_properties.material.texture.for_c_thread"
+            ),
+            case.version > 0x372a
+        );
+        assert_eq!(
+            has_field(&archive, "root.visual_properties.material.has_texture2"),
+            case.version > 0x372a
+        );
+        let part = if case.kind == DisplayDocumentKind::Part {
+            "root.tessellation"
+        } else {
+            "root.tessellation.components[0].comp_part_tess_data"
+        };
+        assert_eq!(
+            has_field(&archive, &format!("{part}.show_c_thread")),
+            case.version > 0x3751
+        );
+        assert_eq!(
+            has_field(&archive, &format!("{part}.bodies[0].faces[0].unknown_78")),
+            case.version >= 0x3743
+        );
+        for field in &archive.contents().fields {
+            if let DisplayFieldValue::Facet(facet) = &field.value {
+                assert_eq!(
+                    facet.auxiliary_texture_coords.is_some(),
+                    case.version > 0x3751
+                );
+                assert_eq!(
+                    facet.save_thread_texture_coords.is_some(),
+                    case.version > 0x3757
+                );
+                assert_eq!(facet.late_stamps.is_some(), case.version > 0x3b0d);
+                assert_eq!(facet.edges.is_some(), case.version > 0x3b28);
+            }
         }
-    });
-    assert_eq!(archive.to_bytes().unwrap(), case.bytes);
+    }
+}
+
+#[test]
+fn fixed_component_tessellation_pairs_do_not_serialize_the_implicit_identifier() {
+    let prefix = "root.tessellation.components[0].viewer_comp_data";
+    for version in [14000, 0x3b1b, 0x3b1c, 0x3b1d, 0x3b22, 0x3b23, 15999, 16000] {
+        let archive = parsed(selected(version, DisplayDocumentKind::Assembly, 32));
+        assert_eq!(
+            has_field(&archive, &format!("{prefix}.display_state_name")),
+            version > 0x3b1c
+        );
+        assert_eq!(
+            has_field(
+                &archive,
+                &format!("{prefix}.viewer_comp_tess_numbers.count")
+            ),
+            version >= 0x3b23
+        );
+        assert_eq!(
+            has_field(
+                &archive,
+                &format!("{prefix}.viewer_comp_tess_numbers[0][0]")
+            ),
+            version >= 0x3b23
+        );
+        if 0x3b1b < version && version < 0x3b23 {
+            let oracle = format!(
+                "{prefix}.viewer_comp_tess_numbers[0][1]=i:-91\n{prefix}.viewer_comp_tess_numbers[0][2]=i:92\n"
+            );
+            assert_eq!(archive_support::check_scalar_table(&archive, &oracle), 2);
+        }
+        if version >= 0x3b23 {
+            let oracle = format!(
+                "{prefix}.viewer_comp_tess_numbers.count=i:2\n{prefix}.viewer_comp_tess_numbers[0][0]=i:-1\n{prefix}.viewer_comp_tess_numbers[1][0]=i:-4\n"
+            );
+            assert_eq!(archive_support::check_scalar_table(&archive, &oracle), 3);
+        }
+    }
 }

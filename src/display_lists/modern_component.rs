@@ -95,7 +95,13 @@ fn geometry_and_state(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.text("seed_reference_id")?;
     archive.scope("ref_geom_data_collector", super::modern_reference::read)?;
     tessellation_numbers(archive)?;
-    archive.text("display_state_name")?;
+    display_state(archive)
+}
+
+fn display_state(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() > 0x3b1c {
+        archive.text("display_state_name")?;
+    }
     if archive.context.version.value() > 0x42e7 {
         archive.i32("routing_assembly")?;
     }
@@ -106,6 +112,12 @@ fn geometry_and_state(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn tessellation_numbers(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() <= 0x3b1b {
+        return Ok(());
+    }
+    if archive.context.version.value() < 0x3b23 {
+        return fixed_tessellation_numbers(archive);
+    }
     let count = archive.count("viewer_comp_tess_numbers.count", 12)?;
     for index in 0..count {
         for member in 0..3 {
@@ -113,6 +125,15 @@ fn tessellation_numbers(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         }
     }
     Ok(())
+}
+
+fn fixed_tessellation_numbers(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    // #28: the old ID is -1 in memory; only the other two tuple words are archived.
+    archive.entries(1, "fixed viewer tessellation numbers")?;
+    archive.i32s(&[
+        "viewer_comp_tess_numbers[0][1]",
+        "viewer_comp_tess_numbers[0][2]",
+    ])
 }
 
 pub(super) fn integers(archive: &mut DisplayDecoder<'_>, label: &str) -> Result<()> {

@@ -22,13 +22,18 @@ mod view_trace;
 const ROOT: &str = "root.views[0].view_bucket";
 
 fn cases() -> Vec<BucketCase> {
-    complete_cases::decode(include_bytes!("fixtures/display-lists/middle-buckets.bin"))
+    let mut cases =
+        complete_cases::decode(include_bytes!("fixtures/display-lists/middle-buckets.bin"));
+    cases.extend(complete_cases::decode(include_bytes!(
+        "fixtures/display-lists/lower-buckets.bin"
+    )));
+    cases
 }
 
-fn selected(scenario: u8) -> BucketCase {
+fn selected(version: u32, scenario: u8) -> BucketCase {
     cases()
         .into_iter()
-        .find(|case| case.version == 16000 && case.scenario == scenario)
+        .find(|case| case.version == version && case.scenario == scenario)
         .unwrap()
 }
 
@@ -45,7 +50,7 @@ fn parsed(case: BucketCase) -> DisplayArchive {
 
 #[test]
 fn both_coordinate_scopes_match_independent_fields_on_each_side_of_the_flag_transition() {
-    assert_eq!(cases().len(), 10);
+    assert_eq!(cases().len(), 30);
     let mut fields = 0;
     for case in cases() {
         assert!(case.scalars.is_empty());
@@ -71,7 +76,7 @@ fn both_coordinate_scopes_match_independent_fields_on_each_side_of_the_flag_tran
             case.bytes
         );
     }
-    assert_eq!(fields, 2874);
+    assert_eq!(fields, 8814);
 }
 
 #[test]
@@ -115,39 +120,41 @@ fn edited_mode(archive: &DisplayArchive) -> DisplayArchive {
 
 #[test]
 fn independent_bucket_edit_reopens_with_explicit_context_and_reverts() {
-    let case = selected(16);
-    let archive = parsed(case);
-    let edited = edited_mode(&archive);
-    assert_eq!(edited.to_bytes().unwrap(), selected(17).bytes);
-    assert_eq!(
-        edited
-            .with_contents(archive.contents().clone(), LIMITS)
+    for version in [14000, 16000] {
+        let case = selected(version, 16);
+        let archive = parsed(case);
+        let edited = edited_mode(&archive);
+        assert_eq!(edited.to_bytes().unwrap(), selected(version, 17).bytes);
+        assert_eq!(
+            edited
+                .with_contents(archive.contents().clone(), LIMITS)
+                .unwrap()
+                .to_bytes()
+                .unwrap(),
+            case.bytes
+        );
+        let initial = include_bytes!("fixtures/blank-part.SLDPRT");
+        let native = archive_support::decode_document(initial, DisplayDocumentKind::Part);
+        let mut document = bessemer::Document::from_bytes(initial).unwrap();
+        document
+            .replace_stream("Contents/DisplayLists", edited.to_bytes().unwrap())
+            .unwrap();
+        let reopened = bessemer::Document::from_bytes(&document.to_bytes().unwrap()).unwrap();
+        assert_eq!(
+            DisplayArchive::from_bytes(
+                &reopened.read_stream("Contents/DisplayLists").unwrap(),
+                case_context(case),
+                LIMITS
+            )
             .unwrap()
-            .to_bytes()
-            .unwrap(),
-        case.bytes
-    );
-    let initial = include_bytes!("fixtures/blank-part.SLDPRT");
-    let native = archive_support::decode_document(initial, DisplayDocumentKind::Part);
-    let mut document = bessemer::Document::from_bytes(initial).unwrap();
-    document
-        .replace_stream("Contents/DisplayLists", edited.to_bytes().unwrap())
-        .unwrap();
-    let reopened = bessemer::Document::from_bytes(&document.to_bytes().unwrap()).unwrap();
-    assert_eq!(
-        DisplayArchive::from_bytes(
-            &reopened.read_stream("Contents/DisplayLists").unwrap(),
-            case_context(case),
-            LIMITS
-        )
-        .unwrap()
-        .contents(),
-        edited.contents()
-    );
-    document
-        .replace_stream("Contents/DisplayLists", native.to_bytes().unwrap())
-        .unwrap();
-    assert_eq!(document.to_bytes().unwrap(), initial);
+            .contents(),
+            edited.contents()
+        );
+        document
+            .replace_stream("Contents/DisplayLists", native.to_bytes().unwrap())
+            .unwrap();
+        assert_eq!(document.to_bytes().unwrap(), initial);
+    }
 }
 
 #[test]
@@ -202,7 +209,7 @@ fn exact_budgets_charge_double_coordinates_arc_payloads_and_shared_object_graphs
 
 #[test]
 fn malformed_coordinate_counts_and_arc_shape_changes_fail_without_mutating_inputs() {
-    let case = selected(16);
+    let case = selected(16000, 16);
     let archive = parsed(case);
     for (suffix, value) in [
         ("count", i32::MAX),
@@ -228,23 +235,46 @@ fn malformed_coordinate_counts_and_arc_shape_changes_fail_without_mutating_input
 
 #[test]
 fn every_populated_prefix_fails_and_owned_parallel_edits_match_the_independent_result() {
-    let case = selected(16);
-    for end in 0..case.bytes.len() {
-        assert!(
-            DisplayArchive::from_bytes(&case.bytes[..end], case_context(case), LIMITS).is_err(),
-            "prefix {end}"
+    for version in [14000, 16000] {
+        let case = selected(version, 16);
+        for end in 0..case.bytes.len() {
+            assert!(
+                DisplayArchive::from_bytes(&case.bytes[..end], case_context(case), LIMITS).is_err(),
+                "prefix {end}"
+            );
+        }
+        let mut source = case.bytes.to_vec();
+        let archive = DisplayArchive::from_bytes(&source, case_context(case), LIMITS).unwrap();
+        source.fill(0);
+        std::thread::scope(|scope| {
+            let workers: Vec<_> = (0..8)
+                .map(|_| scope.spawn(|| edited_mode(&archive).to_bytes().unwrap()))
+                .collect();
+            for worker in workers {
+                assert_eq!(worker.join().unwrap(), selected(version, 17).bytes);
+            }
+        });
+        assert_eq!(archive.to_bytes().unwrap(), case.bytes);
+    }
+}
+
+#[test]
+fn lower_detailing_and_arc_tail_fields_follow_their_distinct_inclusive_boundaries() {
+    for case in cases() {
+        let archive = parsed(case);
+        let fields = &archive.contents().fields;
+        let has = |path: &str| fields.iter().any(|field| field.path.as_ref() == path);
+        assert_eq!(has(&format!("{ROOT}.unknown_178")), case.version >= 0x374b);
+        assert_eq!(
+            has(&format!(
+                "{ROOT}.bucket.needs_post_process_bucket_for_detailing_mode"
+            )),
+            case.version >= 0x372a
+        );
+        assert!(has(&format!("{ROOT}.bucket.dl_model_bucket.count_word")));
+        assert_eq!(
+            has(&format!("{ROOT}.bucket.silh.items[0].arc_data.unknown_6c")),
+            case.scenario % 16 != 2 && case.version >= 0x3724
         );
     }
-    let mut source = case.bytes.to_vec();
-    let archive = DisplayArchive::from_bytes(&source, case_context(case), LIMITS).unwrap();
-    source.fill(0);
-    std::thread::scope(|scope| {
-        let workers: Vec<_> = (0..8)
-            .map(|_| scope.spawn(|| edited_mode(&archive).to_bytes().unwrap()))
-            .collect();
-        for worker in workers {
-            assert_eq!(worker.join().unwrap(), selected(17).bytes);
-        }
-    });
-    assert_eq!(archive.to_bytes().unwrap(), case.bytes);
 }

@@ -25,7 +25,9 @@ fn view_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     if archive.i32("has_original_view_bucket_in_detailing_mode")? != 0 {
         archive.scope("original_view_bucket_in_detailing_mode", bucket)?;
     }
-    archive.i32("unknown_178")?;
+    if archive.context.version.value() >= 0x374b {
+        archive.i32("unknown_178")?;
+    }
     Ok(())
 }
 
@@ -162,7 +164,9 @@ fn detailing_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     }
     archive.i32("bucket_data_for_detailing_mode_saved")?;
     archive.scope("dl_model_bucket", super::modern_items::list)?;
-    archive.i32("needs_post_process_bucket_for_detailing_mode")?;
+    if archive.context.version.value() >= 0x372a {
+        archive.i32("needs_post_process_bucket_for_detailing_mode")?;
+    }
     Ok(())
 }
 

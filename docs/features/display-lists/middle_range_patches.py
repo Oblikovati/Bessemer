@@ -62,8 +62,8 @@ def envelope_capture(original: object, version: int, patches: list[tuple[int,int
     return read
 
 
-def convert(document: object, path: object, raw: bytes, version: int, edited: bool) -> bytes:
-    patches: list[tuple[int,int,bytes]] = []
+def convert(document: object, path: object, raw: bytes, version: int, edited: bool, patches: list[tuple[int,int,bytes]] | None = None) -> bytes:
+    patches = [] if patches is None else patches
     bindings = [(dl_light,"read_uoDSPBRProperties_c"),(dl_light,"read_uoRVAppearanceProperties"),(dl_light,"read_scene"),(dl_doc,"read_3DViewTransform"),(dl_tess,"read_moViewerComponentData"),(dl_doc,"read_EnvelopeSystemOptions"),(dl_tess,"facet_container"),(dl_light,"read_uoMaterialProperties")]
     originals = [getattr(module,name) for module,name in bindings]
     replacements = [dspbr_capture(originals[0],version,patches),capture_rv(originals[1],version,patches),scene_capture(originals[2],version,patches),capture_plain(originals[3],collection(version,2),patches),viewer_capture(originals[4],version,patches),envelope_capture(originals[5],version,patches),capture_plain(originals[6],facet_wire(version,-17,False,True),patches),ambient_capture(originals[7],edited,patches)]
