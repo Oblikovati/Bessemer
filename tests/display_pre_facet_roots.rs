@@ -312,6 +312,8 @@ mod legacy_addins;
 mod legacy_cameras;
 #[path = "support/legacy_panes.rs"]
 mod legacy_panes;
+#[path = "support/legacy_regions.rs"]
+mod legacy_regions;
 #[path = "support/legacy_threads.rs"]
 mod legacy_threads;
 #[path = "support/legacy_visuals.rs"]

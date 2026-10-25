@@ -42,7 +42,7 @@ fn thread_maps_and_polygon_transform_ids_follow_the_exact_storage_boundary() {
     }
 }
 
-fn thread_edited_contents(
+pub(super) fn thread_edited_contents(
     source: &DisplayArchive,
     expected: &DisplayArchive,
 ) -> DisplayArchiveContents {

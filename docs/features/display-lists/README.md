@@ -526,3 +526,7 @@ widths, while later stored counts remain independent of text length.
 The [bucket thread-pattern checkpoint](legacy-thread-layouts.md) admits contexts
 from 2749, with 94 complete roots and six containers. Populated 2D and 3D buckets
 retain their aliases and complete shaded models across the thread-storage boundary.
+
+The [polygon-region checkpoint](legacy-region-layouts.md) admits contexts from
+2725, with 94 complete roots and six containers. Independent oracles retain the
+raw region words as well as their derived flags; earlier layouts omit the words.

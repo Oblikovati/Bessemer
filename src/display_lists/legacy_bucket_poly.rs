@@ -62,7 +62,10 @@ fn persistent_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn attributes(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    archive.i32s(&["new_boundary", "atom_id", "new_region"])?;
+    archive.i32s(&["new_boundary", "atom_id"])?;
+    if archive.context.version.value() > 0xabc {
+        archive.i32("new_region")?;
+    }
     if archive.context.version.value() > 0xad2 {
         archive.i32("thread_ptn_xform_id")?;
     }
