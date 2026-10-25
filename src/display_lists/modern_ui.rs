@@ -57,7 +57,9 @@ pub(super) fn fonts(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 pub(super) fn font(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.text("name")?;
     super::modern_item_style::short_width(archive)?;
-    archive.i16("end_cap")?;
+    if archive.context.version.value() >= 0xc9f {
+        archive.i16("end_cap")?;
+    }
     Ok(())
 }
 

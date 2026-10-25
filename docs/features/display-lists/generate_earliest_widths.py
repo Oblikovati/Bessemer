@@ -21,8 +21,8 @@ def width(version: int, positive: bool, edited: bool) -> bytes:
 
 def items(version: int, edited: bool) -> bytes:
     raw = ORIGINAL_ITEMS(version)
-    style = integers(-1,2)+struct.pack("<I",0xffffffff)+integers(-3)+width(version,False,edited)+integers(4,-5)
-    pen = struct.pack("<I",0xffffffff)+width(version,True,edited)+integers(-3,4)+cstring("legacy pen")
+    style = integers(-1,2)+struct.pack("<I",0xffffffff)+integers(-3)+width(version,False,edited)+integers(4)+(integers(-5) if version>0xca5 else b"")
+    pen = struct.pack("<I",0xffffffff)+width(version,True,edited)+integers(-3)+(integers(4) if version>=0xca6 else b"")+cstring("legacy pen")
     count, = struct.unpack_from("<H",raw)
     return struct.pack("<H",count+2)+raw[2:]+record(9,style)+record(12,pen)
 
@@ -38,5 +38,5 @@ def generate(version: int, kind: str, scenario: int = 0) -> tuple[bytes,dict[str
 
 
 if __name__ == "__main__":
-    cases = [generate(v,k,s) for v in [3890,0xf40,0xf41] for k in ["part","assembly"] for s in [0,1]]
+    cases = [generate(v,k,s) for v in [3196,0xca5,0xca6,3890,0xf40,0xf41] for k in ["part","assembly"] for s in [0,1]]
     print(write_group("earliest-width-items",cases,("displaylists.py",)))

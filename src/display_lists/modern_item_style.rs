@@ -9,7 +9,10 @@ pub(super) fn read(archive: &mut DisplayDecoder<'_>, kind: i32) -> Result<()> {
     archive.u32("unknown_08")?;
     archive.i32("line_style")?;
     archive.scope("line_width", width)?;
-    archive.i32s(&["line_type", "end_cap"])?;
+    archive.i32("line_type")?;
+    if archive.context.version.value() > 0xca5 {
+        archive.i32("end_cap")?;
+    }
     if archive.context.version.value() >= 0x185a {
         archive.i32("unknown_20")?;
     }
@@ -34,6 +37,9 @@ pub(super) fn short_width(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 fn user_pen(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.u32("color")?;
     archive.scope("width", width)?;
-    archive.i32s(&["layer_id", "end_cap_style"])?;
+    archive.i32("layer_id")?;
+    if archive.context.version.value() >= 0xca6 {
+        archive.i32("end_cap_style")?;
+    }
     archive.text("style")
 }

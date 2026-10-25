@@ -21,7 +21,7 @@ def bucket(builder: ObjectBuilder, version: int, scenario: int) -> bytes:
     raw += integers(1)+builder.object(class_name,lambda state:body(state,version,class_name,scenario%16))
     value = integers(1)+property_poly(builder,version) if version<0xf41 else bytes(4)
     raw += value+bytes(3*4)
-    return raw+bytes(2*4)+bytes(8*4)+bytes(2)
+    return raw+bytes(2*4)+bytes(8*4)+(bytes(2) if version>0xc90 else b"")
 
 
 def prefix(document: object, path: object, raw: bytes, version: int, kind: str) -> tuple[bytes,int]:
@@ -52,7 +52,8 @@ def reference(raw: bytes, document: object, path: object, version: int, kind: st
     assert archive.p==len(raw) and root["has_shaded_data"]==0
     trace = bucket_corpus.trace(root)
     rows = [line.split(b"=",1) for line in trace.splitlines()]
-    return b"".join(key.replace(b".weight.",b".")+b"="+value+b"\n" for key,value in rows),sum(archive.classes.values())
+    # The reference synthesizes zero caps before 0xC9F; those are not stored fields.
+    return b"".join(key.replace(b".weight.",b".")+b"="+value+b"\n" for key,value in rows if not (version<0xc9f and b".line_fonts[" in key and key.endswith(b".end_cap"))),sum(archive.classes.values())
 
 
 def generate(version: int, kind: str, scenario: int) -> tuple[bytes,dict[str,object]]:

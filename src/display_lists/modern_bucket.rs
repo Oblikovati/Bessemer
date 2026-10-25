@@ -14,7 +14,9 @@ pub(super) fn view(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     for index in 0..count {
         archive.object(&format!("sub_buckets[{index}]"), &["uiViewBucket_c"])?;
     }
-    archive.object("visual_properties", &["moVisualProperties_c"])?;
+    if archive.context.version.value() > 0xc90 {
+        archive.object("visual_properties", &["moVisualProperties_c"])?;
+    }
     view_tail(archive)
 }
 

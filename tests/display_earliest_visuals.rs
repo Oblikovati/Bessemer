@@ -81,7 +81,7 @@ fn object_target(archive: &DisplayArchive, path: &str) -> DisplayObjectPointer {
 
 #[test]
 fn all_body_property_roots_match_independent_fields_and_forced_bytes() {
-    assert_eq!(cases().len(), 404);
+    assert_eq!(cases().len(), 548);
     let mut fields = 0;
     for case in cases() {
         let archive = parsed(case);
@@ -109,7 +109,7 @@ fn all_body_property_roots_match_independent_fields_and_forced_bytes() {
             case.bytes
         );
     }
-    assert_eq!(fields, 78282);
+    assert_eq!(fields, 96706);
 }
 
 #[test]
@@ -408,3 +408,6 @@ mod earlier_shader;
 
 #[path = "support/earliest_light_states.rs"]
 mod earlier_light_states;
+
+#[path = "support/earliest_caps.rs"]
+mod earlier_caps;

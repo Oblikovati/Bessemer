@@ -486,3 +486,5 @@ Early complete-root view transitions and Bug #37 are recorded in [early view roo
 - The 3508 checkpoint adds independently gated visibility, configuration, pattern and hierarchy records. The [earliest visuals](earliest-visuals.md) corpus contains 298 roots and sixteen complete containers, preserving the previous cases.
 - The 3330 checkpoint adds the independently gated facet-display and shader words. The [earliest visuals](earliest-visuals.md) corpus contains 326 roots and eighteen complete containers, retaining the previous cases.
 - The 3238 checkpoint adds early PV and keep-scene light words, with all five old-light classes. The [earliest visuals](earliest-visuals.md) corpus contains 404 roots and twenty complete containers, retaining the previous cases.
+
+The 3196 checkpoint covers front-view, font-cap, pen-cap and bucket-pointer gates. The [earliest visuals](earliest-visuals.md) corpus now contains 548 roots and twenty-two complete containers, retaining all previous cases.

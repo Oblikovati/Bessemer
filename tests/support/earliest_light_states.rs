@@ -73,7 +73,7 @@ fn all_five_classes_keep_their_identity_and_derived_geometry() {
     let selected = cases()
         .into_iter()
         .filter(|case| (224..234).contains(&case.scenario));
-    assert_eq!(selected.clone().count(), 50);
+    assert_eq!(selected.clone().count(), 130);
     for case in selected {
         check_light_class(case);
     }

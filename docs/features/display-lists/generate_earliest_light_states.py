@@ -18,5 +18,5 @@ def generate(version: int, kind: str, scenario: int) -> tuple[bytes,dict[str,obj
 
 
 if __name__ == "__main__":
-    cases = [generate(v,k,s) for v in [3238,0xcc0,0xcc1,0xd01,0xd02] for k in ["part","assembly"] for s in [0,2,4,6,8]]
+    cases = [generate(v,k,s) for v in [3196,0xc90,0xc91,0xc9c,0xc9d,0xc9e,0xc9f,0xca5,3238,0xcc0,0xcc1,0xd01,0xd02] for k in ["part","assembly"] for s in [0,2,4,6,8]]
     print(write_group("earliest-light-state-kinds",cases,("displaylists.py",)))
