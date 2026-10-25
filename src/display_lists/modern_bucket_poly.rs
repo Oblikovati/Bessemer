@@ -112,7 +112,11 @@ pub(super) fn type_payload(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 pub(super) fn line_property(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.text("style_name")?;
     archive.scope("width", super::modern_item_style::width)?;
-    archive.i32s(&["color", "visibility"])
+    archive.i32("color")?;
+    if archive.context.version.value() >= 0xa80 {
+        archive.i32("visibility")?;
+    }
+    Ok(())
 }
 
 pub(super) fn arc_data(archive: &mut DisplayDecoder<'_>) -> Result<()> {

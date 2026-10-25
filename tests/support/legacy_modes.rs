@@ -60,7 +60,7 @@ fn viewer_modes_keep_their_absence_sentinel_and_full_width_payload_shapes() {
     }
 }
 
-fn mode_edited_contents(
+pub(super) fn mode_edited_contents(
     source: &DisplayArchive,
     expected: &DisplayArchive,
 ) -> DisplayArchiveContents {

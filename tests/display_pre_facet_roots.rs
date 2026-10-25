@@ -318,6 +318,8 @@ mod legacy_panes;
 mod legacy_regions;
 #[path = "support/legacy_threads.rs"]
 mod legacy_threads;
+#[path = "support/legacy_visibility.rs"]
+mod legacy_visibility;
 #[path = "support/legacy_visuals.rs"]
 mod legacy_visuals;
 #[path = "support/legacy_widths.rs"]
