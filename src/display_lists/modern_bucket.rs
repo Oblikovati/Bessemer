@@ -94,6 +94,9 @@ fn poly_lists(archive: &mut DisplayDecoder<'_>, two_dimensional: bool) -> Result
         if archive.context.version.value() <= 0x7f0 && label == "solid_fill" {
             continue;
         }
+        if archive.context.version.value() <= 0x753 && matches!(label, "explode_v" | "explode_h") {
+            continue;
+        }
         poly_list(archive, label, two_dimensional)?;
     }
     Ok(())

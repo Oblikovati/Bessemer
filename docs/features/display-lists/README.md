@@ -575,3 +575,7 @@ polygon attributes, body metadata, facet stamps and cone-culling fields.
 The [legacy font checkpoint](legacy-font-layouts.md) admits contexts from 2011,
 with 262 complete roots, explicit font records, solid-fill list boundaries,
 twenty-eight independent facet records and four containers.
+
+The [legacy zone checkpoint](legacy-zone-layouts.md) admits contexts from 1875,
+covering exploded lists, component zones and textured planes with 262 roots,
+2112 independent plane-transform fields and eight whole-document fixtures.

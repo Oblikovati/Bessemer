@@ -17,7 +17,7 @@ fn complete_font_roots_match_independent_fields_and_forced_bytes() {
     );
 }
 
-fn check_font_gates(case: OldCase) {
+pub(super) fn check_font_gates(case: OldCase) {
     let archive = parsed(case);
     legacy_boundary::check_boundary_members(case);
     for index in 13..17 {
@@ -70,7 +70,7 @@ fn font_facet_bytes(version: u32, index: usize, edited: usize) -> &'static [u8] 
     FACETS.iter().find(|row| row.0 == version).unwrap().1[index][edited]
 }
 
-fn expected_font_facet(version: u32, index: usize, edited: usize) -> FacetArchive {
+pub(super) fn expected_font_facet(version: u32, index: usize, edited: usize) -> FacetArchive {
     let limits = TessellationLimits {
         maximum_components: 0,
         maximum_faces: 1,

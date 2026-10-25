@@ -90,19 +90,22 @@ pub(super) fn resumed_edited_contents(
 ) -> DisplayArchiveContents {
     let mut contents = legacy_edges::edge_edited_contents(source, expected);
     for target in &mut contents.fields {
-        if matches!(target.value, DisplayFieldValue::Facet(_))
-            || target.path.contains("display_items.items[10].data.")
-            || target.path.contains("display_items.items[12].data.")
-            || (13..17).any(|index| {
-                target
-                    .path
-                    .contains(&format!("display_items.items[{index}].data."))
-            })
-        {
+        if resumed_edit_field(target) {
             target.value = field(expected, &target.path).unwrap().clone();
         }
     }
     contents
+}
+
+fn resumed_edit_field(field: &DisplayField) -> bool {
+    matches!(field.value, DisplayFieldValue::Facet(_))
+        || (field.path.starts_with("root.textured_planes.")
+            && matches!(field.value, DisplayFieldValue::Transform(_)))
+        || [10, 12, 13, 14, 15, 16].into_iter().any(|index| {
+            field
+                .path
+                .contains(&format!("display_items.items[{index}].data."))
+        })
 }
 
 fn expected_resumed_edit(case: OldCase) -> OldCase {

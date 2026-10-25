@@ -350,3 +350,6 @@ mod legacy_boundary;
 
 #[path = "support/legacy_font.rs"]
 mod legacy_font;
+
+#[path = "support/legacy_zone.rs"]
+mod legacy_zone;

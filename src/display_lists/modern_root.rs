@@ -139,9 +139,9 @@ fn configuration_footer(archive: &mut DisplayDecoder<'_>, views: usize) -> Resul
 fn require_context(context: &DisplayArchiveContext) -> Result<()> {
     let version = context.version.value();
     require_window_independent(version)?;
-    if version < 2011 {
+    if version < 1875 {
         return Err(unsupported(format!(
-            "display context version {}, file version {}, kind {:?}; expected display version >=2011",
+            "display context version {}, file version {}, kind {:?}; expected display version >=1875",
             context.version.value(),
             context.file_version,
             context.kind

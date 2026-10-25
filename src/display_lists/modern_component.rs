@@ -12,8 +12,7 @@ pub(super) fn read(archive: &mut DisplayDecoder<'_>) -> Result<std::sync::Arc<Ar
     archive.u32("model_id")?;
     archive.text("model_name")?;
     archive.text("path_name")?;
-    archive.i32("is_a_zone")?;
-    component_atoms(archive)?;
+    component_zone_and_atoms(archive)?;
     display_mode(archive)?;
     if archive.context.version.value() >= 0xb9b {
         archive.f64("unknown_190")?;
@@ -218,9 +217,12 @@ fn strings(archive: &mut DisplayDecoder<'_>, label: &str) -> Result<()> {
     Ok(())
 }
 
-fn component_atoms(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    if archive.context.version.value() <= 0x864 {
-        return Ok(());
+fn component_zone_and_atoms(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() > 0x768 {
+        archive.i32("is_a_zone")?;
     }
-    integers(archive, "gobbled_up_atom_ids")
+    if archive.context.version.value() > 0x864 {
+        integers(archive, "gobbled_up_atom_ids")?;
+    }
+    Ok(())
 }

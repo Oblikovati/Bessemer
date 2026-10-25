@@ -168,7 +168,7 @@ fn five_version_gates_have_explicit_presence_and_preserve_discarded_symbol_field
 #[test]
 fn context_range_limits_and_cross_gate_shape_requirements_are_explicit() {
     let oldest = selected(18000, false);
-    for version in [0, 2010] {
+    for version in [0, 1874] {
         let error =
             DisplayArchive::from_bytes(oldest.bytes, version_context(version), LIMITS).unwrap_err();
         assert!(error.to_string().contains("Unsupported"));
