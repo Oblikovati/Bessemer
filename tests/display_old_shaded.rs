@@ -4,8 +4,9 @@ use bessemer::display_lists::*;
 mod archive_support;
 use archive_support::archive_scalar_trace;
 use archive_support::{LIMITS, context};
-#[path = "../examples/support/framing.rs"]
-mod framing;
+#[path = "support/old_display_cases.rs"]
+mod old_cases;
+use old_cases::OldCase;
 #[path = "../examples/support/item_trace.rs"]
 mod item_trace;
 #[path = "../examples/support/light_trace.rs"]
@@ -18,49 +19,8 @@ mod scene_trace;
 #[path = "../examples/support/view_trace.rs"]
 mod view_trace;
 
-#[derive(Clone, Copy)]
-struct OldCase {
-    version: u32,
-    kind: DisplayDocumentKind,
-    scenario: u8,
-    bytes: &'static [u8],
-    expected: &'static [u8],
-    scalars: &'static str,
-}
-
-fn blob(remaining: &mut &'static [u8]) -> &'static [u8] {
-    let length = framing::take_u32(remaining).unwrap() as usize;
-    framing::take(remaining, length).unwrap()
-}
-
-fn read_case(remaining: &mut &'static [u8]) -> OldCase {
-    let version = framing::take_u32(remaining).unwrap();
-    let kind = if framing::take(remaining, 1).unwrap()[0] == 0 {
-        DisplayDocumentKind::Part
-    } else {
-        DisplayDocumentKind::Assembly
-    };
-    let scenario = framing::take(remaining, 1).unwrap()[0];
-    let bytes = blob(remaining);
-    let expected = blob(remaining);
-    let scalars = std::str::from_utf8(blob(remaining)).unwrap();
-    OldCase {
-        version,
-        kind,
-        scenario,
-        bytes,
-        expected,
-        scalars,
-    }
-}
-
 fn cases() -> Vec<OldCase> {
-    let mut remaining: &'static [u8] = include_bytes!("fixtures/display-lists/old-shaded.bin");
-    let count = framing::take_u32(&mut remaining).unwrap();
-    framing::require_count(count, remaining.len(), 18).unwrap();
-    let cases = (0..count).map(|_| read_case(&mut remaining)).collect();
-    framing::require_finished(remaining).unwrap();
-    cases
+    old_cases::decode(include_bytes!("fixtures/display-lists/old-shaded.bin"))
 }
 
 fn case_context(case: OldCase) -> DisplayArchiveContext {
