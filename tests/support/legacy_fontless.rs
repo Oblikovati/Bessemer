@@ -88,7 +88,7 @@ fn relocated_graphs_support_complete_independent_edits_and_exact_reverts_without
     }
 }
 
-fn check_fontless_facet(
+pub(super) fn check_fontless_facet(
     case: OldCase,
     facet: &bessemer::tessellation::FacetContainer,
     index: usize,

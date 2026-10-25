@@ -623,3 +623,7 @@ The [font-manager omission checkpoint](legacy-fontless-layouts.md) admits
 contexts from 596, with 618 complete roots proving compact and extended MFC
 relocation, omitted polygon line properties and explicit legacy array widths,
 plus eight whole-document fixtures.
+
+The [version-zero checkpoint](legacy-zero-layouts.md) removes the lower-version
+cutoff, with 1394 complete roots covering the earliest appearance, material,
+light, pane, edge and bucket-list predicates, plus eight whole-document fixtures.

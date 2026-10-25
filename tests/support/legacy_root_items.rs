@@ -211,7 +211,7 @@ fn a_single_global_point_style_edit_matches_independent_wire_and_authentically_r
     }
 }
 
-fn point_style_contents(source: &DisplayArchive) -> DisplayArchiveContents {
+pub(super) fn point_style_contents(source: &DisplayArchive) -> DisplayArchiveContents {
     let mut contents = source.contents().clone();
     let path = "root.old_display_items.items[0].data.point_style";
     let target = contents

@@ -11,7 +11,7 @@ pub(super) fn read(
     context: &DisplayArchiveContext,
     limits: DisplayArchiveLimits,
 ) -> Result<DisplayArchiveContents> {
-    require_context(context)?;
+    require_window_independent(context.version.value())?;
     let mut archive = DisplayDecoder::new(bytes, context.clone(), limits)?;
     let format = archive.i32("dl_format")?;
     if format != 1 {
@@ -141,20 +141,6 @@ fn configuration_footer(archive: &mut DisplayDecoder<'_>, views: usize) -> Resul
     archive.scope("configurations", |archive| {
         super::configurations::read(archive, views)
     })
-}
-
-fn require_context(context: &DisplayArchiveContext) -> Result<()> {
-    let version = context.version.value();
-    require_window_independent(version)?;
-    if version < 596 {
-        return Err(unsupported(format!(
-            "display context version {}, file version {}, kind {:?}; expected display version >=596",
-            context.version.value(),
-            context.file_version,
-            context.kind
-        )));
-    }
-    Ok(())
 }
 
 fn tessellation(archive: &mut DisplayDecoder<'_>) -> Result<()> {

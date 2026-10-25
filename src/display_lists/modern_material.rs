@@ -2,8 +2,10 @@ use super::archive_decode::DisplayDecoder;
 use crate::Result;
 
 pub(super) fn visual(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    for label in ["color", "wire_color", "hlr_color"] {
-        archive.u32(label)?;
+    for (threshold, label) in [(0x90, "color"), (0xd3, "wire_color"), (0xac, "hlr_color")] {
+        if archive.context.version.value() > threshold {
+            archive.u32(label)?;
+        }
     }
     archive.scope("material", material)?;
     visual_addin(archive)?;
@@ -59,14 +61,10 @@ fn visual_appearance_state(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 pub(super) fn material(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.text("user_name")?;
     archive.text("id_name")?;
-    archive.f64s(&[
-        "ambient",
-        "diffuse",
-        "specular",
-        "shininess",
-        "transparency",
-        "emission",
-    ])?;
+    archive.f64s(&["ambient", "diffuse", "specular", "shininess"])?;
+    if archive.context.version.value() > 0x172 {
+        archive.f64s(&["transparency", "emission"])?;
+    }
     if archive.context.version.value() > 0x937 && archive.i32("has_texture")? != 0 {
         archive.scope("texture", texture)?;
     }

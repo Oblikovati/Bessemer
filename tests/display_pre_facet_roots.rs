@@ -25,6 +25,8 @@ mod legacy_curvature;
 mod legacy_fontless;
 #[path = "support/legacy_root_items.rs"]
 mod legacy_root_items;
+#[path = "support/legacy_zero.rs"]
+mod legacy_zero;
 #[path = "../examples/support/light_trace.rs"]
 mod light_trace;
 #[path = "../examples/support/material_trace.rs"]

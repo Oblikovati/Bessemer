@@ -50,7 +50,9 @@ fn pane(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     if archive.context.version.value() > 0x45c {
         archive.u16("hlr_display_quality")?;
     }
-    archive.f64("perspective")?;
+    if archive.context.version.value() > 0x1b5 {
+        archive.f64("perspective")?;
+    }
     if archive.context.version.value() > 0xbda {
         archive.text("unknown_a8")?;
     }

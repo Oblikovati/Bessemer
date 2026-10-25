@@ -6,8 +6,9 @@ pub(super) fn edge_array(archive: &mut DisplayDecoder<'_>, two_dimensional: bool
         return Ok(());
     }
     let minimum = match archive.context.version.value() {
+        0..=0x231 => 20,
         0x744..=0x74a => 28,
-        0..=0xa4a => 24,
+        0x232..=0x743 | 0x74b..=0xa4a => 24,
         _ => 20,
     };
     let count = wall_count(archive, "edge_vis_data.count", minimum)?;
@@ -25,7 +26,10 @@ fn edge_record(archive: &mut DisplayDecoder<'_>, two_dimensional: bool) -> Resul
         // #28: the native reader drops this local; exact reconstruction still needs its word.
         archive.i32("discarded_old_8")?;
     }
-    archive.i32s(&["unknown_8", "unknown_c"])?;
+    archive.i32("unknown_8")?;
+    if archive.context.version.value() > 0x231 {
+        archive.i32("unknown_c")?;
+    }
     if (0x744..=0x74a).contains(&archive.context.version.value()) {
         archive.i32("discarded_v0744")?;
     }

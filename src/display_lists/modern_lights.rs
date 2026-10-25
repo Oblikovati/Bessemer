@@ -7,6 +7,9 @@ pub(super) fn ambient(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     } else {
         current_light_base(archive)?;
     }
+    if archive.context.version.value() <= 0x17c {
+        return Ok(());
+    }
     light_names(archive)
 }
 

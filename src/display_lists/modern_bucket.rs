@@ -55,7 +55,9 @@ fn bucket(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     let two_dimensional = bucket_coordinate_scope(archive)?;
     poly_lists(archive, two_dimensional)?;
     super::legacy_bucket_visibility::edge_array(archive, two_dimensional)?;
-    archive.scope("dl_bucket", super::modern_items::list)?;
+    if archive.context.version.value() > 0x253 {
+        archive.scope("dl_bucket", super::modern_items::list)?;
+    }
     ghost_and_hidden(archive)?;
     component_map(archive)?;
     thread_maps(archive)?;
