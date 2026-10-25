@@ -21,8 +21,12 @@ fn light_names(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     } else {
         "enabled_in_pv"
     };
-    archive.i32(first)?;
-    archive.i32("keep_light_in_scene")?;
+    if archive.context.version.value() > 0xcc0 {
+        archive.i32(first)?;
+    }
+    if archive.context.version.value() > 0xd01 {
+        archive.i32("keep_light_in_scene")?;
+    }
     ambient_rendering(archive)
 }
 

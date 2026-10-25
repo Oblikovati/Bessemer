@@ -31,6 +31,7 @@ fn cases() -> Vec<OldCase> {
         include_bytes!("fixtures/display-lists/earliest-visual-assembly.bin").as_slice(),
         include_bytes!("fixtures/display-lists/earliest-visual-properties.bin").as_slice(),
         include_bytes!("fixtures/display-lists/earliest-width-items.bin").as_slice(),
+        include_bytes!("fixtures/display-lists/earliest-light-state-kinds.bin").as_slice(),
     ]
     .into_iter()
     .flat_map(complete_cases::decode)
@@ -80,7 +81,7 @@ fn object_target(archive: &DisplayArchive, path: &str) -> DisplayObjectPointer {
 
 #[test]
 fn all_body_property_roots_match_independent_fields_and_forced_bytes() {
-    assert_eq!(cases().len(), 326);
+    assert_eq!(cases().len(), 404);
     let mut fields = 0;
     for case in cases() {
         let archive = parsed(case);
@@ -108,7 +109,7 @@ fn all_body_property_roots_match_independent_fields_and_forced_bytes() {
             case.bytes
         );
     }
-    assert_eq!(fields, 67992);
+    assert_eq!(fields, 78282);
 }
 
 #[test]
@@ -404,3 +405,6 @@ mod earlier_component_state;
 
 #[path = "support/earliest_shader.rs"]
 mod earlier_shader;
+
+#[path = "support/earliest_light_states.rs"]
+mod earlier_light_states;

@@ -1,10 +1,12 @@
 # Implicit visual properties
 
-Display versions 3330 through `0x10AE` store single visual-property pointers for faces, bodies and part models. Their wire representation contains no collection count or key. Bessemer preserves the stored pointer and its identity without inventing either field. Later versions retain counted maps, including duplicate keys and null pointers.
+Display versions 3238 through `0x10AE` store single visual-property pointers for faces, bodies and part models. Their wire representation contains no collection count or key. Bessemer preserves the stored pointer and its identity without inventing either field. Later versions retain counted maps, including duplicate keys and null pointers.
 
-The owned corpus contains 142 complete part and assembly roots across the implicit-map boundary and adjacent version gates. It includes null pointers and edited payloads. Independent reference traces cover the material, scene, item and component fields; forced reconstruction checks the complete bytes. A further 172 shared-property roots exercise holder state and reference identities. Exact aggregate budgets account for the four surface-parameter elements absent through `0x1098`.
+The owned corpus contains 154 complete part and assembly roots across the implicit-map boundary and adjacent version gates. It includes null pointers and edited payloads. Independent reference traces cover the material, scene, item and component fields; forced reconstruction checks the complete bytes. A further 188 shared-property roots exercise holder state and reference identities. Exact aggregate budgets account for the four surface-parameter elements absent through `0x1098`.
 
-Eighteen complete containers exercise document context resolution at versions 3330, 3508, 3555, 3800, 3890, 3905, 4000, 4100 and 4200. The earlier fixtures remain unchanged.
+Twenty complete containers exercise document context resolution at versions 3238, 3330, 3508, 3555, 3800, 3890, 3905, 4000, 4100 and 4200. The earlier fixtures remain unchanged.
+
+Fifty additional complete roots cover all five old-light classes on both sides of the early state-word boundaries. `enabled_in_pv` starts after `0xCC0`; `keep_light_in_scene` starts after `0xD01`. Class identities, derived geometry, populated user properties and absent-versus-zero distinctions are checked independently.
 
 Twelve additional display-item roots cover the signed 32-bit line-style and user-pen widths before `0xF41`. Font and visibility widths use signed 16-bit words in that interval. Polygon line properties also use the signed 32-bit form. Those callers store no custom float there. Full-range integer cases, absent custom fields, polygon flags and strict cross-version construction are checked independently.
 
@@ -26,6 +28,6 @@ Viewer display-state words begin after `0x10AE`, table header words after `0x10B
 
 This checkpoint does not establish complete display-list parity. Non-null legacy `moPWMaterialProperties_c` payloads remain unsupported because the reference does not resolve their body layout. Earlier display versions and the documented uncounted-window interval remain excluded.
 
-Regenerate with `generate_earliest_visuals.py`, `generate_earliest_visual_properties.py` and `generate_earliest_widths.py`, then check isolated reconstruction with `verify_earliest_visuals.py`, passing the built `rebuild_display_archives` executable. Integration coverage is in `tests/display_earliest_visuals.rs`.
+Regenerate with `generate_earliest_visuals.py`, `generate_earliest_visual_properties.py`, `generate_earliest_widths.py` and `generate_earliest_light_states.py`, then check isolated reconstruction with `verify_earliest_visuals.py`, passing the built `rebuild_display_archives` executable. Integration coverage is in `tests/display_earliest_visuals.rs`.
 
 The humanizer skill was unavailable; the prose pass remains for review.

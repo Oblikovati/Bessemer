@@ -12,7 +12,7 @@ from earliest_tessellation_wire import earlier_tails,header_layout
 from earliest_state_patches import convert
 from swarchive import Archive
 
-VERSIONS = [3330,0xdb1,0xdb2,0xdb3,3508,0xdca,0xdcb,0xdde,0xddf,0xde2,3555,0xe11,0xe12,0xe54,0xe55,3800,0xf1d,0xf1e,0xf31,3890,0xf40,3905,0xf55,0xf56,0xf5b,0xf5c,0xf5e,0xf5f,0xf76,0xf77,4000,0xfca,0xfcb,0xfd7,0xfd8,4100,0x1051,0x1052,4200,4201,4202,0x1098,0x1099,0x10a1,0x10a2,0x10ae,0x10af,0x10b2,0x10b3,0x10bf,0x10c0,4300]
+VERSIONS = [3238,0xcc0,0xcc1,0xd01,3330,0xdb1,0xdb2,0xdb3,3508,0xdca,0xdcb,0xdde,0xddf,0xde2,3555,0xe11,0xe12,0xe54,0xe55,3800,0xf1d,0xf1e,0xf31,3890,0xf40,3905,0xf55,0xf56,0xf5b,0xf5c,0xf5e,0xf5f,0xf76,0xf77,4000,0xfca,0xfcb,0xfd7,0xfd8,4100,0x1051,0x1052,4200,4201,4202,0x1098,0x1099,0x10a1,0x10a2,0x10ae,0x10af,0x10b2,0x10b3,0x10bf,0x10c0,4300]
 
 
 def table_layout(raw: bytes, version: int) -> bytes:
@@ -44,7 +44,7 @@ def generate(version: int, kind: str, scenario: int = 0) -> tuple[bytes,dict[str
 if __name__=="__main__":
     totals = []
     for kind in ["part","assembly"]:
-        cases = [generate(v,kind) for v in VERSIONS]+[generate(3330,kind,1),generate(3330,kind,2),generate(3508,kind,1),generate(3508,kind,2),generate(3555,kind,1),generate(3555,kind,2),generate(3800,kind,1),generate(3800,kind,2),generate(3890,kind,1),generate(3890,kind,2),generate(3905,kind,1),generate(3905,kind,2),generate(4000,kind,1),generate(4000,kind,2),generate(4100,kind,1),generate(4100,kind,2),generate(4200,kind,1),generate(4200,kind,2),generate(0x10ae,kind,2)]
+        cases = [generate(v,kind) for v in VERSIONS]+[generate(3238,kind,1),generate(3238,kind,2),generate(3330,kind,1),generate(3330,kind,2),generate(3508,kind,1),generate(3508,kind,2),generate(3555,kind,1),generate(3555,kind,2),generate(3800,kind,1),generate(3800,kind,2),generate(3890,kind,1),generate(3890,kind,2),generate(3905,kind,1),generate(3905,kind,2),generate(4000,kind,1),generate(4000,kind,2),generate(4100,kind,1),generate(4100,kind,2),generate(4200,kind,1),generate(4200,kind,2),generate(0x10ae,kind,2)]
         totals.append(write_group("earliest-visual-"+kind,cases,("displaylists.py",)))
     write_documents(generate,4200,"earliest-visual")
     write_documents(generate,4100,"earliest-appearance")
@@ -55,4 +55,5 @@ if __name__=="__main__":
     write_documents(generate,3555,"earliest-state")
     write_documents(generate,3508,"earliest-component-state")
     write_documents(generate,3330,"earliest-shader")
+    write_documents(generate,3238,"earliest-light-state")
     print(json.dumps({"fixtures":sum(n for n,_ in totals),"fields":sum(n for _,n in totals)}))

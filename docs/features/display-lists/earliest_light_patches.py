@@ -14,6 +14,8 @@ def base_reader(original: object, version: int, patches: list[tuple[int,int,byte
         try:result = original(archive,*args,**kwargs)
         finally:archive.cstring = saved
         end = spans[1][1]
+        if version<=0xcc0:patches.append((end,end+4,b""))
+        if version<=0xd01:patches.append((end+4,end+8,b""))
         if version<=0x11a3:patches.append((end+8,end+32,b""))
         if version<=0x11f5:patches.append((archive.p-4,archive.p,b""))
         return result
