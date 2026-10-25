@@ -17,7 +17,7 @@ fn complete_texture_roots_match_independent_fields_and_forced_bytes() {
     );
 }
 
-fn check_texture_gates(case: OldCase) {
+pub(super) fn check_texture_gates(case: OldCase) {
     let archive = parsed(case);
     legacy_rendering::check_rendering_fields(case);
     assert_eq!(

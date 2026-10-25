@@ -559,3 +559,7 @@ facet textures on both sides of their bounds, with four whole-document fixtures.
 The [legacy texture checkpoint](legacy-texture-layouts.md) admits contexts from
 2359, covering absent material textures and per-view shaded-edge words with
 190 complete roots and four whole-document fixtures.
+
+The [legacy environment checkpoint](legacy-environment-layouts.md) admits contexts
+from 2277, covering absent environment-tail and facet-coordinate fields with
+190 complete roots, twenty independent facet records and four containers.

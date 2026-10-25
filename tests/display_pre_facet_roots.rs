@@ -338,3 +338,6 @@ mod legacy_rendering;
 
 #[path = "support/legacy_texture.rs"]
 mod legacy_texture;
+
+#[path = "support/legacy_environment.rs"]
+mod legacy_environment;
