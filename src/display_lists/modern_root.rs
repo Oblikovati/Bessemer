@@ -23,7 +23,7 @@ pub(super) fn read(
         archive.scope(&format!("views[{index}]"), view)?;
     }
     if archive.i32("has_shaded_data")? != 0 {
-        shaded(&mut archive)?;
+        shaded(&mut archive, views)?;
     }
     archive.finish()
 }
@@ -101,7 +101,7 @@ fn view(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.scope("display_items", super::modern_items::list)
 }
 
-fn shaded(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+fn shaded(archive: &mut DisplayDecoder<'_>, views: usize) -> Result<()> {
     old_lights(archive)?;
     archive.object("visual_properties", &["moVisualProperties_c"])?;
     archive.scope("tessellation", tessellation)?;
@@ -113,10 +113,10 @@ fn shaded(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         archive.i32("envelope_system_options.unknown_setting")?;
     }
     archive.scope("markup_ink_views", super::markup_ink::read)?;
-    configuration_footer(archive)
+    configuration_footer(archive, views)
 }
 
-fn configuration_footer(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+fn configuration_footer(archive: &mut DisplayDecoder<'_>, views: usize) -> Result<()> {
     let version = archive.context.version.value();
     let minimum = if archive.context.kind == DisplayDocumentKind::Assembly {
         0x2403
@@ -126,13 +126,9 @@ fn configuration_footer(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     if version <= minimum {
         return Ok(());
     }
-    let count = archive.i32("configurations.config_count")?;
-    if count > 0 {
-        return Err(unsupported(format!(
-            "display configuration count {count}; populated configuration tails are pending implementation"
-        )));
-    }
-    Ok(())
+    archive.scope("configurations", |archive| {
+        super::configurations::read(archive, views)
+    })
 }
 
 fn require_context(context: &DisplayArchiveContext) -> Result<()> {
@@ -153,10 +149,9 @@ fn require_context(context: &DisplayArchiveContext) -> Result<()> {
 fn tessellation(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     match archive.context.kind {
         DisplayDocumentKind::Part => super::modern_part_tess::read(archive),
-        DisplayDocumentKind::Assembly => archive.object_array(
-            "components",
-            &["uoTempAssemblySHDData_c", "uoTempSubAssemblySHDData_c"],
-        ),
+        DisplayDocumentKind::Assembly => {
+            archive.object_array("components", super::modern_assembly::ASSEMBLY_CLASSES)
+        }
     }
 }
 

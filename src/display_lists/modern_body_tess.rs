@@ -85,6 +85,9 @@ fn inline_facet(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn face_source(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.restoring_configurations {
+        return inline_facet(archive);
+    }
     let Some((component_id, index)) = &mut archive.external_component else {
         return inline_facet(archive);
     };

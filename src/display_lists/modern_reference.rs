@@ -2,15 +2,7 @@ use super::{archive_decode::DisplayDecoder, archive_error::invalid};
 use crate::Result;
 
 pub(super) fn read(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    let high = archive.u32("count_high")?;
-    let low = archive.u32("count_low")?;
-    let count = (u64::from(high) << 32) | u64::from(low);
-    if count > archive.cursor.remaining() as u64 / 4 {
-        return Err(invalid(format!(
-            "reference geometry count {count}; expected entries fitting remaining bytes"
-        )));
-    }
-    archive.entries(count as usize, "reference geometry")?;
+    let count = archive.wide_count(4, "reference geometry")?;
     for index in 0..count {
         archive.scope(&format!("entries[{index}]"), reference_item)?;
     }

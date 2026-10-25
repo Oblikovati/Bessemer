@@ -1,7 +1,8 @@
 use super::archive_decode::DisplayDecoder;
 use crate::Result;
 
-const ASSEMBLY_CLASSES: &[&str] = &["uoTempAssemblySHDData_c", "uoTempSubAssemblySHDData_c"];
+pub(super) const ASSEMBLY_CLASSES: &[&str] =
+    &["uoTempAssemblySHDData_c", "uoTempSubAssemblySHDData_c"];
 
 pub(super) fn shaded_component(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     let component_id = archive.scope("viewer_comp_data", super::modern_component::read)?;
@@ -21,6 +22,7 @@ fn part_tessellation(
 ) -> Result<()> {
     let saved = archive.external_component.take();
     if archive.context.kind == super::DisplayDocumentKind::Assembly
+        && !archive.restoring_configurations
         && archive
             .context
             .face_tessellation_components

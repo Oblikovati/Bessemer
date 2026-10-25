@@ -91,4 +91,18 @@ impl DisplayDecoder<'_> {
         self.entries(count as usize, label)?;
         Ok(count as usize)
     }
+
+    pub fn wide_count(&mut self, minimum: usize, context: &str) -> Result<usize> {
+        let high = self.u32("count_high")?;
+        let low = self.u32("count_low")?;
+        let count = (u64::from(high) << 32) | u64::from(low);
+        if count > self.cursor.remaining() as u64 / minimum as u64 {
+            return Err(invalid(format!(
+                "{context} count {count}; expected entries fitting {} remaining bytes at {minimum} bytes per entry",
+                self.cursor.remaining()
+            )));
+        }
+        self.entries(count as usize, context)?;
+        Ok(count as usize)
+    }
 }
