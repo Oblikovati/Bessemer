@@ -24,6 +24,13 @@ fn cases() -> Vec<RangeCase> {
     cases.extend(complete_cases::decode(include_bytes!(
         "fixtures/display-lists/earlier-range-assembly.bin"
     )));
+    for bytes in [
+        include_bytes!("fixtures/display-lists/precollector-range-part.bin").as_slice(),
+        include_bytes!("fixtures/display-lists/precollector-range-assembly.bin").as_slice(),
+        include_bytes!("fixtures/display-lists/precollector-configurations.bin").as_slice(),
+    ] {
+        cases.extend(complete_cases::decode(bytes));
+    }
     cases
 }
 
@@ -48,7 +55,7 @@ fn parsed(case: RangeCase) -> DisplayArchive {
 
 #[test]
 fn all_earlier_range_roots_match_independent_material_scene_component_fields_and_bytes() {
-    assert_eq!(cases().len(), 60);
+    assert_eq!(cases().len(), 155);
     let mut fields = 0;
     for case in cases() {
         let archive = parsed(case);
@@ -70,7 +77,7 @@ fn all_earlier_range_roots_match_independent_material_scene_component_fields_and
             case.bytes
         );
     }
-    assert_eq!(fields, 18768);
+    assert_eq!(fields, 47915);
 }
 
 fn has_field(archive: &DisplayArchive, path: &str) -> bool {
@@ -112,7 +119,7 @@ fn truncated_roots_extra_bytes_and_unproven_contexts_do_not_publish_partial_resu
     assert!(DisplayArchive::from_bytes(&trailing, case_context(case), LIMITS).is_err());
 
     let case = selected(12000, DisplayDocumentKind::Part, 128);
-    for version in [0, 11999, 19001, u32::MAX] {
+    for version in [0, 10999, 19001, u32::MAX] {
         let context = DisplayArchiveContext {
             version: DisplayVersion::new(version),
             ..case_context(case)
@@ -186,6 +193,7 @@ fn exact_earlier_root_budgets_cover_missing_collectors_ink_and_configuration_tai
             140
         };
         entries -= usize::from(case.version <= 0x2f80);
+        entries -= 2 * usize::from(case.version <= 0x2bd0);
         entries -= if case.kind == DisplayDocumentKind::Assembly && case.version <= 0x2f44 {
             4
         } else {
@@ -193,7 +201,16 @@ fn exact_earlier_root_budgets_cover_missing_collectors_ink_and_configuration_tai
         };
         entries += match case.scenario % 128 {
             2 => 99,
-            4 => 7 + 3 * usize::from(case.version > 0x2fa5),
+            4 | 5 => {
+                let (minimum, visibility) = if case.kind == DisplayDocumentKind::Part {
+                    (0x2b61, 0x2b7f)
+                } else {
+                    (0x2b6f, 0x2b77)
+                };
+                2 + 4 * usize::from(case.version > minimum)
+                    + usize::from(case.version > visibility)
+                    + 3 * usize::from(case.version > 0x2fa5)
+            }
             _ => 0,
         };
         let exact = DisplayArchiveLimits {
@@ -233,7 +250,13 @@ fn exact_earlier_root_budgets_cover_missing_collectors_ink_and_configuration_tai
                 ..exact
             },
         ] {
-            assert!(DisplayArchive::from_bytes(case.bytes, case_context(case), limits).is_err());
+            assert!(
+                DisplayArchive::from_bytes(case.bytes, case_context(case), limits).is_err(),
+                "{} {:?} {} limits {limits:?}",
+                case.version,
+                case.kind,
+                case.scenario
+            );
             assert!(
                 archive
                     .with_contents(archive.contents().clone(), limits)
@@ -379,3 +402,6 @@ fn older_cpoint_object_roles_are_explicit_nulls_and_configuration_tail_bounds_ar
         );
     }
 }
+
+#[path = "support/early_configuration_cases.rs"]
+mod early_configurations;

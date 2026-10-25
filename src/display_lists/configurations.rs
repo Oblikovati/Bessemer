@@ -47,6 +47,10 @@ fn body(archive: &mut DisplayDecoder<'_>, count: usize, views: usize) -> Result<
 fn record(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i32("config_id")?;
     if archive.context.kind == DisplayDocumentKind::Part {
+        // #36: early configuration tessellation is an inline value, not a mapped object.
+        if archive.context.version.value() < 0x2b67 {
+            return archive.scope("tessellation", super::modern_part_tess::read);
+        }
         return archive.cobject("tessellation");
     }
     archive.object_array("shd_data", super::modern_assembly::ASSEMBLY_CLASSES)?;

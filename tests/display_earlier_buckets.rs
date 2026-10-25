@@ -28,6 +28,12 @@ fn cases() -> Vec<BucketCase> {
     cases.extend(complete_cases::decode(include_bytes!(
         "fixtures/display-lists/earlier-buckets-2d.bin"
     )));
+    cases.extend(complete_cases::decode(include_bytes!(
+        "fixtures/display-lists/precollector-buckets-3d.bin"
+    )));
+    cases.extend(complete_cases::decode(include_bytes!(
+        "fixtures/display-lists/precollector-buckets-2d.bin"
+    )));
     cases
 }
 
@@ -51,7 +57,7 @@ fn parsed(case: BucketCase) -> DisplayArchive {
 
 #[test]
 fn earlier_buckets_match_independent_fields_and_exact_bytes() {
-    assert_eq!(cases().len(), 54);
+    assert_eq!(cases().len(), 122);
     let mut fields = 0;
     for case in cases() {
         assert!(case.scalars.is_empty());
@@ -77,7 +83,7 @@ fn earlier_buckets_match_independent_fields_and_exact_bytes() {
             case.bytes
         );
     }
-    assert_eq!(fields, 12444);
+    assert_eq!(fields, 26865);
 }
 
 fn edited_mode(archive: &DisplayArchive) -> DisplayArchive {

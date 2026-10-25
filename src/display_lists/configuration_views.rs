@@ -70,6 +70,9 @@ fn matrix_budget(archive: &mut DisplayDecoder<'_>, count: usize, views: usize) -
 }
 
 fn visibility(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() < 0x2b7a {
+        archive.i32("unknown_legacy")?;
+    }
     let count = archive.count("count", 2)?;
     for index in 0..count {
         archive.text(&format!("entries[{index}].view_name"))?;

@@ -434,3 +434,6 @@ maintainer-side humanizer skill is unavailable; its prose pass remains for revie
 
 - The 12000 range retains discarded edge objects, float coordinates and caller-specific
   collector gates; see [earlier-range.md](earlier-range.md).
+
+- The remaining 11000 interval adds configuration and component boundaries,
+  including inline configuration tessellation; see [precollector-range.md](precollector-range.md).
