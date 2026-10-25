@@ -17,8 +17,10 @@ fn visual_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         "hardcoded_facet_display",
         "default_appearance",
         "unknown_78",
-        "unknown_7c",
     ])?;
+    if archive.context.version.value() > 0x2419 {
+        archive.i32("unknown_7c")?;
+    }
     if archive.context.version.value() > 0x2794 {
         archive.i32("graphic_mesh_color_property")?;
     }

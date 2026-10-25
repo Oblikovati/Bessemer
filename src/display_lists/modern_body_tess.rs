@@ -22,7 +22,9 @@ pub(super) fn body(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         })?;
     }
     super::modern_decals::empty_list(archive, "decals")?;
-    archive.text("unknown_str")?;
+    if archive.context.version.value() > 0x2017 {
+        archive.text("unknown_str")?;
+    }
     if archive.context.version.value() > 0x2791 {
         archive.i32("unknown_68")?;
     }

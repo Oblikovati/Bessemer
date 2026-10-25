@@ -4,7 +4,9 @@ use crate::Result;
 pub(super) fn read(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.object("name", &["moNodeName_c"])?;
     archive.i32s(&["update_state", "flags", "id", "flags2"])?;
-    archive.text("tool_tip_name")?;
+    if archive.context.version.value() > 0x23cd {
+        archive.text("tool_tip_name")?;
+    }
     if archive.i32("has_merged_feature_list")? != 0 {
         archive.scope("merged_feature_list", node_list)?;
     }

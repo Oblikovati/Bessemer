@@ -16,11 +16,26 @@ def ref(identity: int) -> bytes:
     return struct.pack("<H",identity)
 
 
-def items() -> bytes:
-    table = integers(-1,2,-3)+cstring("table 鋼",True)+integers(-4,5)
+def items(version: int = 10000) -> bytes:
+    parts = item_parts(version)
+    return struct.pack("<H",len(parts))+b"".join(parts)
+
+
+def item_parts(version: int) -> list[bytes]:
+    table = integers(-1,2,-3)+cstring("table 鋼",True)
+    table += integers(-4) if version>0x1c56 else b""
+    table += integers(5) if version>0x238c else b""
     symbol = doubles(3)+integers(-1)+compact(2,0x20)+doubles(2)+cstring("symbol",True)+cstring("other")
-    annotation = integers(-1,2,3)+(integers(-7,0,0,0,-8,0)+cstring(""))*3
-    return struct.pack("<H",3)+record(23,table)+record(19,symbol)+record(29,annotation)
+    annotation = annotation_start(version)
+    return [record(23,table),record(19,symbol),record(29,annotation)]
+
+
+def annotation_start(version: int) -> bytes:
+    if version<=0x1c49:
+        return integers(-1,2)
+    count = 5 if version==9000 else 3
+    tail = cstring("") if version>0x23fe else b""
+    return integers(-1,2,count)+(integers(-7,0,0,0,-8,0)+tail)*count
 
 
 def texture() -> bytes:
@@ -38,7 +53,8 @@ def visual(version: int, edited: bool) -> bytes:
     raw = struct.pack("<III",0xffffffff,0xfffffffe,0xfffffffd)+cstring("material 鋼",True)+cstring("ID")
     raw += (struct.pack("<d",23.0) if edited else doubles(1))+doubles(5,1)+integers(-1)+texture()
     raw += integers(-2,3,-4,5,-6)+cstring("classification",True)+integers(-7,-8)+appearance()+struct.pack("<I",0)
-    raw += cstring("addin",True)+integers(-9,10)+cstring("appearance",True)+integers(-11,12,-13,14)
+    raw += cstring("addin",True)+integers(-9,10)+cstring("appearance",True)+integers(-11,12,-13)
+    raw += integers(14) if version>0x2419 else b""
     return raw+(integers(-15) if version>0x2794 else b"")
 
 
@@ -50,7 +66,7 @@ def face(version: int) -> bytes:
 def body(builder: ObjectBuilder, version: int, viz: int) -> bytes:
     raw = struct.pack("<H",2)+b"".join(builder.object("uoTempFaceTessData_c",lambda _:face(version)) for _ in range(2))
     raw += integers(-20,-24,-44,1,-1)+builder.object("uoBodyPropInfo_c",lambda _:ref(viz)+integers(-8,6,-16,3))
-    raw += integers(0)+cstring("body 鋼",True)
+    raw += integers(0)+(cstring("body 鋼",True) if version>0x2017 else b"")
     return raw+(integers(-104) if version>0x2791 else b"")
 
 
@@ -67,7 +83,7 @@ def component(version: int, viz: int) -> bytes:
     raw += b"".join(cstring(value,True) for value in ["ref","spool","description"])
     raw += cstring("config description",True) if version>0x279c else b""
     raw += integers(1)+cstring("dependency",True)+integers(1)+cstring("key")+integers(1)+cstring("value",True)
-    raw += integers(-14,15,-16,17,-18,19)
+    raw += integers(-14,15,-16,17)+(integers(-18,19) if version>0x23e4 else b"")
     return raw+(integers(-20)+struct.pack("<H",0xffff)+integers(-21,22) if version>0x279d else b"")
 
 

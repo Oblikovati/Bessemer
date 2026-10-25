@@ -1,22 +1,16 @@
 {
-  "failures": {
-    "display-list archive Contents/DisplayLists: Unsupported: display context version 9000, file version 19000, kind Part; expected display version 10000, 11000 or 18000..=19000 and file version 19000": 23,
-    "display-list archive Contents/DisplayLists: Unsupported: display context version 7000, file version 19000, kind Part; expected display version 10000, 11000 or 18000..=19000 and file version 19000": 5
-  },
-  "missing_by_version": {
-    "7000": 5,
-    "9000": 23
-  },
+  "failures": {},
+  "missing_by_version": {},
   "independent_reference_fields": 238667,
-  "independent_scene_fields": 183897,
-  "independent_item_fields": 203106,
+  "independent_scene_fields": 191971,
+  "independent_item_fields": 268294,
   "independent_bucket_fields": 234395,
-  "independent_light_fields": 61742,
-  "independent_material_fields": 833169,
-  "status": "incomplete implementation audit; missing streams are required work",
+  "independent_light_fields": 63310,
+  "independent_material_fields": 852926,
+  "status": "complete reference corpus reconstruction; documented-schema parity remains incomplete",
   "documents": 1086,
   "manifest_sha256": "94047d85dc01ed0f391378374f2c15f5464301bb26990d4214eecdd600723a87",
-  "accepted_count": 1058,
+  "accepted_count": 1086,
   "two_processes_identical": true,
   "accepted_manifests": [
     "archive-accepted-000.txt",

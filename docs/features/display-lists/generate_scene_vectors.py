@@ -25,10 +25,10 @@ def node_list(payloads: list[bytes], tail: int, extended: bool) -> bytes:
     return count+b"".join(payloads)+integers(tail)
 
 
-def concept(builder: ObjectBuilder, viz: int, empty: bool) -> tuple[bytes,int]:
+def concept(builder: ObjectBuilder, viz: int, empty: bool, version: int = 19000) -> tuple[bytes,int]:
     name_id = builder.next_index+1
     raw = builder.object("moNodeName_c",lambda _:cstring("scene name 鋼",True))
-    raw += integers(-1,2,-3,4)+cstring("tip λ\0",True)+integers(0 if empty else -17)
+    raw += integers(-1,2,-3,4)+(cstring("tip λ\0",True) if version>0x23cd else b"")+integers(0 if empty else -17)
     if not empty:
         raw += node_list([object_ref(name_id)],-71,True)
     raw += object_ref(viz)

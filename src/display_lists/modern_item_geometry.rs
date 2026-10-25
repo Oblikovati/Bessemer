@@ -97,10 +97,15 @@ fn spline(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     let count = archive.count("points.count", 48)?;
     archive.entries(count, "spline vectors")?;
     archive.f64("unknown_10")?;
-    archive.i32("unknown_18")?;
+    if archive.context.version.value() >= 0x2016 {
+        archive.i32("unknown_18")?;
+    }
     points(archive, "points", count)?;
     points(archive, "vectors", count)?;
-    archive.text("display_name")
+    if archive.context.version.value() >= 0x1ff8 {
+        archive.text("display_name")?;
+    }
+    Ok(())
 }
 
 fn center_of_mass(archive: &mut DisplayDecoder<'_>) -> Result<()> {

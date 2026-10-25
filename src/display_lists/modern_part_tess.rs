@@ -57,6 +57,9 @@ fn paired_arrays(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn empty_decals(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() < 0x239d {
+        return super::modern_decals::empty_list(archive, "decals");
+    }
     let count = archive.u32("decals_map.count")?;
     archive.entries(count as usize, "decal maps")?;
     if count != 0 {

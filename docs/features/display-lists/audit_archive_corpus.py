@@ -89,7 +89,8 @@ def audit(executable: str) -> None:
         assert first == destination.read_bytes()
         assert first_trace == trace.read_bytes()
         report = results(first, records, reference_corpus.frames(first_trace))
-    report.update({"status": "incomplete implementation audit; missing streams are required work", "documents": len(records), "manifest_sha256": manifest, "accepted_count": len(report["accepted"]), "two_processes_identical": True})
+    status = "incomplete implementation audit; missing streams are required work" if report["missing_by_version"] else "complete reference corpus reconstruction; documented-schema parity remains incomplete"
+    report.update({"status": status, "documents": len(records), "manifest_sha256": manifest, "accepted_count": len(report["accepted"]), "two_processes_identical": True})
     write_report(report)
     print(json.dumps({key: value for key, value in report.items() if key not in ("accepted", "failures")}))
 

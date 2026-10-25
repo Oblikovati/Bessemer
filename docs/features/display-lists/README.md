@@ -379,9 +379,9 @@ python -B -X utf8 docs/features/display-lists/audit_archive_corpus.py target/pin
 
 The [modern display-item checkpoint](display-items.md),
 [view-bucket checkpoint](view-buckets.md), [light checkpoint](lights.md) and
-[version-range checkpoint](version-range.md) and [older shaded checkpoint](old-shaded.md)
-extend complete native coverage to 1,058 streams, covering every version-10000,
-version-11000, version-18000 and version-19000 stream in this corpus. Their fixtures
+[version-range checkpoint](version-range.md), [older shaded checkpoint](old-shaded.md)
+and [early shaded checkpoint](early-shaded.md) reconstruct all 1,086 complete
+reference-readable part/assembly streams in this corpus. Their fixtures
 and field-oracle counts supersede the earlier totals
 above. This corpus milestone does not establish complete schema parity.
 
@@ -397,9 +397,10 @@ above. This corpus milestone does not establish complete schema parity.
   fields remain explicit raw typed values; unresolved bodies are unsupported.
 - Complete the immutable archive graph, validated owned construction/edits,
   revision-scoped identities, authentic reverts, ordered coverage and history.
-- Run independent complete-field and exact forced-byte oracles for all 1,086
-  streams, owned version/degeneracy vectors, malformed input/budgets, whole-
-  document isolation, process/concurrency comparisons and all five CI checks.
+- Preserve the complete 1,086-stream forced-byte gate and expand independent field
+  oracles to the remaining schema branches. Add their owned version/degeneracy
+  vectors, malformed input/budget checks, whole-document isolation and process/
+  concurrency comparisons, then run all five CI checks.
 - Update the public README and final CHANGELOG entry, review this evidence, create
   one PR, merge when green and remove the finished branch. Native application
   acceptance stays separate from archive validity and geometric validity.

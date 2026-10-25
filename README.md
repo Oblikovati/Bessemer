@@ -31,8 +31,9 @@ chunks and exact samples across all defined color/depth pairs and Adam7 interlac
 versioned named, annotation and 3D-view codecs, plus part/assembly archive reading,
 validated edits and writing with inline facets, explicit external face references
 and reference geometry, scenes, display items, view buckets and lights for display
-versions 10000, 11000 and 18000–19000 with explicit file-version context 19000.
-Complete display-list corpus support is in development. See the
+versions 7000, 9000, 10000, 11000 and 18000–19000 with explicit file-version context 19000.
+All 1,086 reference-readable part/assembly display-list streams reconstruct
+exactly; complete documented-schema support remains in development. See the
 [display-list work and evidence](docs/features/display-lists/README.md).
 Complete part, assembly, and drawing model archives, geometric interpretation and
 validation, and semantic CAD editing remain to be implemented; this is not yet

@@ -11,7 +11,12 @@ pub(super) fn table(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         words(archive, "ole_object_num_list", count as usize)?;
     }
     archive.text("table_name")?;
-    archive.i32s(&["unknown_10", "always_2d"])?;
+    if archive.context.version.value() > 0x1c56 {
+        archive.i32("unknown_10")?;
+    }
+    if archive.context.version.value() > 0x238c {
+        archive.i32("always_2d")?;
+    }
     if archive.context.version.value() > 0x3332 {
         archive.text("view_names_3d_with_scale")?;
     }
@@ -26,10 +31,15 @@ pub(super) fn property(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 
 pub(super) fn start(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i32s(&["unknown_00", "unknown_04"])?;
+    if archive.context.version.value() <= 0x1c49 {
+        return Ok(());
+    }
     let minimum = if archive.context.version.value() > 0x332b {
         27
-    } else {
+    } else if archive.context.version.value() > 0x23fe {
         25
+    } else {
+        24
     };
     let count = archive.count("edw_annot_data.count", minimum)?;
     for index in 0..count {
@@ -52,7 +62,9 @@ fn annotation(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     strings(archive, "unknown_strings1")?;
     archive.i32("unknown_i")?;
     strings(archive, "unknown_strings2")?;
-    archive.text("unknown_s3")?;
+    if archive.context.version.value() > 0x23fe {
+        archive.text("unknown_s3")?;
+    }
     if archive.context.version.value() > 0x332b {
         archive.text("unknown_s4")?;
         archive.text("unknown_s5")?;

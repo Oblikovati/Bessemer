@@ -29,21 +29,58 @@ pub(super) fn read(
 }
 
 fn view_bodies(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    named_transform(archive)?;
+    spatial_transform(archive)?;
+    if archive.context.version.value() > 0x3331 {
+        archive.f64("orig_font_scale")?;
+    }
+    annotation_transform(archive)
+}
+
+fn named_transform(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     let limits = view_limits(archive.limits);
     let version = archive.context.version;
     let mut budget = super::view_support::ViewBudget::new(limits);
-    let named = super::named_read::read_views(&mut archive.cursor, version, &mut budget)?;
-    archive.field("named_view_transform", Value::NamedViews(Some(named)))?;
-    let spatial = super::spatial_read::read_views(&mut archive.cursor, version, limits)?;
-    archive.field("view_3d_transform", Value::SpatialViews(Some(spatial)))?;
-    if version.value() > 0x3331 {
-        archive.f64("orig_font_scale")?;
-    }
-    let annotations = super::annotation_read::read_contents(&mut archive.cursor, version, limits)?;
-    archive.field(
-        "annotation_view_transform",
-        Value::AnnotationViews(Some(annotations)),
-    )
+    let views = if version.value() > 0x1be7 {
+        Some(super::named_read::read_views(
+            &mut archive.cursor,
+            version,
+            &mut budget,
+        )?)
+    } else {
+        None
+    };
+    archive.field("named_view_transform", Value::NamedViews(views))
+}
+
+fn spatial_transform(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    let limits = view_limits(archive.limits);
+    let version = archive.context.version;
+    let views = if version.value() > 0x1c18 {
+        Some(super::spatial_read::read_views(
+            &mut archive.cursor,
+            version,
+            limits,
+        )?)
+    } else {
+        None
+    };
+    archive.field("view_3d_transform", Value::SpatialViews(views))
+}
+
+fn annotation_transform(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    let limits = view_limits(archive.limits);
+    let version = archive.context.version;
+    let views = if version.value() > 0x1c39 {
+        Some(super::annotation_read::read_contents(
+            &mut archive.cursor,
+            version,
+            limits,
+        )?)
+    } else {
+        None
+    };
+    archive.field("annotation_view_transform", Value::AnnotationViews(views))
 }
 
 pub(super) fn view_limits(limits: DisplayArchiveLimits) -> DisplayViewLimits {
@@ -100,11 +137,11 @@ fn configuration_footer(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 
 fn require_context(context: &DisplayArchiveContext) -> Result<()> {
     let version = context.version.value();
-    if !(version == 10000 || version == 11000 || (18000..=19000).contains(&version))
+    if !(matches!(version, 7000 | 9000 | 10000 | 11000) || (18000..=19000).contains(&version))
         || context.file_version != 19000
     {
         return Err(unsupported(format!(
-            "display context version {}, file version {}, kind {:?}; expected display version 10000, 11000 or 18000..=19000 and file version 19000",
+            "display context version {}, file version {}, kind {:?}; expected display version 7000, 9000, 10000, 11000 or 18000..=19000 and file version 19000",
             context.version.value(),
             context.file_version,
             context.kind
@@ -160,6 +197,9 @@ fn display_scene(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     let scene = archive.i32("scene_type")?;
     if scene == 1 || scene == 2 {
         archive.scope("scene", super::modern_scene::read)?;
+    }
+    if archive.context.version.value() <= 0x1fb2 {
+        return Ok(());
     }
     archive.i32s(&[
         "units_of_measurement.unknown_flag",

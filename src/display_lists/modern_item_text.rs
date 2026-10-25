@@ -53,8 +53,13 @@ fn simple(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i32("is_right_to_left")?;
     archive.text("text")?;
     simple_widths(archive)?;
-    archive.i32("is_scale_invariant")?;
-    archive.f64("text_scale")
+    if archive.context.version.value() > 0x2000 {
+        archive.i32("is_scale_invariant")?;
+    }
+    if archive.context.version.value() > 0x239a {
+        archive.f64("text_scale")?;
+    }
+    Ok(())
 }
 
 fn simple_widths(archive: &mut DisplayDecoder<'_>) -> Result<()> {

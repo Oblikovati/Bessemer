@@ -64,9 +64,10 @@ fn folder(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         "view_comp_type",
         "asm_feat_type",
         "belt_has_part",
-        "grouped_folder_comp",
-        "grouped_folder_type",
     ])?;
+    if archive.context.version.value() > 0x23e4 {
+        archive.i32s(&["grouped_folder_comp", "grouped_folder_type"])?;
+    }
     fixed_and_flexible(archive)
 }
 
