@@ -591,3 +591,7 @@ native logical resets, with 262 complete roots and four containers.
 The [early UI checkpoint](legacy-ui-layouts.md) admits contexts from 1286, with
 442 complete roots covering secondary splitters, ghost transforms, font/sketch
 suffixes, body metadata and facet edge-type arrays, plus eight containers.
+
+The [early ghost-item checkpoint](legacy-ghost-layouts.md) admits contexts from
+1215, with 406 complete roots covering ghost lists, hidden counts, part timestamps
+and older facet arrays and planar words, plus eight whole-document fixtures.

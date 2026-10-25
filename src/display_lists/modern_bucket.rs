@@ -59,8 +59,7 @@ fn bucket(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     poly_lists(archive, two_dimensional)?;
     super::legacy_bucket_visibility::edge_array(archive, two_dimensional)?;
     archive.scope("dl_bucket", super::modern_items::list)?;
-    archive.scope("dl_ghost_bucket", super::modern_items::list)?;
-    archive.i32("show_hidden_count")?;
+    ghost_and_hidden(archive)?;
     component_map(archive)?;
     thread_maps(archive)?;
     tail(archive)
@@ -213,4 +212,14 @@ fn legacy_list_omitted(version: u32, label: &str) -> bool {
     (version <= 0x7f0 && label == "solid_fill")
         || (version <= 0x753 && matches!(label, "explode_v" | "explode_h"))
         || (version <= 0x741 && label == "silh_h")
+}
+
+fn ghost_and_hidden(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() > 0x4bf {
+        archive.scope("dl_ghost_bucket", super::modern_items::list)?;
+    }
+    if archive.context.version.value() >= 0x4d4 {
+        archive.i32("show_hidden_count")?;
+    }
+    Ok(())
 }

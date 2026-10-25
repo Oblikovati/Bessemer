@@ -17,7 +17,7 @@ fn complete_early_ui_roots_match_independent_fields_and_forced_bytes() {
     );
 }
 
-fn check_early_ui_members(case: OldCase) {
+pub(super) fn check_early_ui_members(case: OldCase) {
     let archive = parsed(case);
     legacy_text::check_early_text_members(case);
     assert!(field(&archive, "root.user_model_env.splitter_10.rows").is_some());

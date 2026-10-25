@@ -18,7 +18,7 @@ VERSIONS = [3065,0xc57,0xc58,0xc59,0xc6e,0xc6f,0xc7b,0xc7c]
 def scalars(root: dict[str,object], kind: str) -> bytes:
     rows = {}
     flatten("root.has_shaded_data",root["has_shaded_data"],rows)
-    if root["has_shaded_data"] and kind=="part":
+    if root["has_shaded_data"] and kind=="part" and "ddata_time_stamp" in root["tessellation"]:
         # The reference maps the stored u32 FFFFFFFF to its logical -1 time sentinel.
         flatten("root.tessellation.ddata_time_stamp",root["tessellation"]["ddata_time_stamp"] & 0xffffffff,rows)
     if root["has_shaded_data"] and kind=="assembly" and "unknown_320" in root["tessellation"][0]:

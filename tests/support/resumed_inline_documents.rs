@@ -24,23 +24,7 @@ fn resolved_archive(document: &Document, kind: DisplayDocumentKind) -> DisplayAr
     let context =
         DisplayArchiveContext::from_document(document, kind, 19000, directory, limits, 1024 * 1024)
             .unwrap();
-    assert!(matches!(
-        context.version.value(),
-        1286 | 1332
-            | 1645
-            | 1857
-            | 1860
-            | 1875
-            | 1900
-            | 2011
-            | 2078
-            | 2130
-            | 2277
-            | 2359
-            | 2388
-            | 2563
-            | 2596
-    ));
+    assert!(INLINE_DOCUMENT_VERSIONS.contains(&context.version.value()));
     assert!(context.face_tessellation_components.is_empty());
     let raw = document.read_stream("Contents/DisplayLists").unwrap();
     DisplayArchive::from_bytes(&raw, context, LIMITS).unwrap()
@@ -113,3 +97,8 @@ fn complete_inline_part_and_assembly_documents_edit_reopen_and_authentically_rev
         check_document_edit(kind, raw, expected);
     }
 }
+
+const INLINE_DOCUMENT_VERSIONS: [u32; 17] = [
+    1215, 1276, 1286, 1332, 1645, 1857, 1860, 1875, 1900, 2011, 2078, 2130, 2277, 2359, 2388, 2563,
+    2596,
+];

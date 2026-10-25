@@ -362,3 +362,6 @@ mod legacy_text;
 
 #[path = "support/legacy_ui.rs"]
 mod legacy_ui;
+
+#[path = "support/legacy_ghost.rs"]
+mod legacy_ghost;
