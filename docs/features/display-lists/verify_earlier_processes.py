@@ -15,6 +15,10 @@ def verify_groups(executable: str, groups: list[tuple[str,object]], report_name:
     cases = []
     for name,generator in groups:
         cases += frozen_cases(Path(__file__).with_name(name+".json"),Path("tests/fixtures/display-lists")/(name+".bin"),generator)
+    verify_records(executable,cases,report_name,modules)
+
+
+def verify_records(executable: str, cases: list[tuple[dict[str,object],bytes]], report_name: str, modules: list[str]) -> None:
     source,expected = frames(cases)
     trace_hash = two_processes(executable,source,expected)
     provenance = {name:hashlib.sha256(Path(f"src/display_lists/{name}.rs").read_bytes()).hexdigest() for name in modules}
