@@ -542,3 +542,8 @@ visibility words and records why the older holder-name branch is unreachable.
 The [temporary edge and triple checkpoint](legacy-edge-layouts.md) admits contexts
 from 2606, with 206 complete roots and twelve containers. It retains discarded
 edge words, nested view triples and the versioned absence of component string maps.
+
+The [resumed inline-facet checkpoint](resumed-inline-layouts.md) admits contexts
+from 2596 and proves complete inline part and assembly edits before the
+unresolved facet-object interval. Its 130 roots and four containers preserve
+empty and cached layouts across the 2597 boundary.

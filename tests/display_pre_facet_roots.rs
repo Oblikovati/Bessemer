@@ -41,7 +41,8 @@ fn case_context(case: OldCase) -> DisplayArchiveContext {
         version: DisplayVersion::new(case.version),
         kind: case.kind,
         face_tessellation_components: if (3..=4).contains(&case.scenario)
-            || (case.kind == DisplayDocumentKind::Assembly && case.scenario >= 64)
+            || (case.kind == DisplayDocumentKind::Assembly
+                && matches!(case.scenario, 64 | 65 | 80 | 81))
         {
             std::sync::Arc::new(["Assem1".to_owned()].into())
         } else {
@@ -326,3 +327,5 @@ mod legacy_visibility;
 mod legacy_visuals;
 #[path = "support/legacy_widths.rs"]
 mod legacy_widths;
+#[path = "support/resumed_inline.rs"]
+mod resumed_inline;

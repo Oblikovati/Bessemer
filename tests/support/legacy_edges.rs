@@ -66,7 +66,7 @@ fn edge_arrays_discarded_words_component_maps_and_triples_follow_their_separate_
     }
 }
 
-fn edge_edited_contents(
+pub(super) fn edge_edited_contents(
     source: &DisplayArchive,
     expected: &DisplayArchive,
 ) -> DisplayArchiveContents {
