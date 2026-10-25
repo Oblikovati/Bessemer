@@ -19,6 +19,8 @@ mod bucket_trace;
 mod item_trace;
 #[path = "support/legacy_component.rs"]
 mod legacy_component;
+#[path = "support/legacy_curvature.rs"]
+mod legacy_curvature;
 #[path = "../examples/support/light_trace.rs"]
 mod light_trace;
 #[path = "../examples/support/material_trace.rs"]

@@ -205,7 +205,7 @@ fn incomplete_resumed_inline_roots_never_publish_partial_fields() {
     }
 }
 
-fn concurrent_inline_case(case: OldCase) {
+pub(super) fn concurrent_inline_case(case: OldCase) {
     let source = parsed(case);
     std::thread::scope(|scope| {
         for _ in 0..4 {

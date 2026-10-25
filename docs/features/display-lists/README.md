@@ -608,3 +608,8 @@ The [early component checkpoint](legacy-component-layouts.md) admits contexts
 from 903, with 402 complete roots covering direct assembly identity fields,
 browser-word omission, polygon type records and logical view activity, plus
 eight whole-document fixtures.
+
+The [legacy curvature checkpoint](legacy-curvature-layouts.md) admits contexts
+from 773, with 290 complete roots proving legacy array metadata and payload edits,
+the calculated-colour transition and concurrent reconstruction, plus eight
+whole-document fixtures.

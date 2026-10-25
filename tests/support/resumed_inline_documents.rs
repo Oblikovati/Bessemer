@@ -98,7 +98,7 @@ fn complete_inline_part_and_assembly_documents_edit_reopen_and_authentically_rev
     }
 }
 
-const INLINE_DOCUMENT_VERSIONS: [u32; 23] = [
-    903, 931, 989, 998, 1180, 1182, 1215, 1276, 1286, 1332, 1645, 1857, 1860, 1875, 1900, 2011,
-    2078, 2130, 2277, 2359, 2388, 2563, 2596,
+const INLINE_DOCUMENT_VERSIONS: [u32; 25] = [
+    773, 817, 903, 931, 989, 998, 1180, 1182, 1215, 1276, 1286, 1332, 1645, 1857, 1860, 1875, 1900,
+    2011, 2078, 2130, 2277, 2359, 2388, 2563, 2596,
 ];

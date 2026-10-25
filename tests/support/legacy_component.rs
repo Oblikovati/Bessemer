@@ -89,7 +89,7 @@ fn complete_early_component_roots_match_independent_fields_and_forced_bytes() {
     );
 }
 
-fn check_component_members(case: OldCase) {
+pub(super) fn check_component_members(case: OldCase) {
     let archive = parsed(case);
     legacy_model_viz::check_model_viz_members(case);
     for member in &archive.contents().fields {
