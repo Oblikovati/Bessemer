@@ -56,7 +56,7 @@ fn expected_facet(case: OldCase, index: usize, edited: usize) -> FacetArchive {
     .unwrap()
 }
 
-fn check_curvature_facet(case: OldCase, facet: &FacetContainer, index: usize) {
+pub(super) fn check_curvature_facet(case: OldCase, facet: &FacetContainer, index: usize) {
     let edited = usize::from(case.scenario % 16 == 1);
     assert_eq!(
         facet.curvature,

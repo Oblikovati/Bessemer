@@ -103,7 +103,14 @@ fn view(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         archive.i32("edges_in_shaded_mode")?;
     }
     archive.object("view_bucket", &["uiViewBucket_c"])?;
-    archive.scope("display_items", super::modern_items::list)
+    view_items(archive)
+}
+
+fn view_items(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() > 0x304 {
+        archive.scope("display_items", super::modern_items::list)?;
+    }
+    Ok(())
 }
 
 fn shaded(archive: &mut DisplayDecoder<'_>, views: usize) -> Result<()> {
@@ -139,9 +146,9 @@ fn configuration_footer(archive: &mut DisplayDecoder<'_>, views: usize) -> Resul
 fn require_context(context: &DisplayArchiveContext) -> Result<()> {
     let version = context.version.value();
     require_window_independent(version)?;
-    if version < 773 {
+    if version < 767 {
         return Err(unsupported(format!(
-            "display context version {}, file version {}, kind {:?}; expected display version >=773",
+            "display context version {}, file version {}, kind {:?}; expected display version >=767",
             context.version.value(),
             context.file_version,
             context.kind
@@ -172,6 +179,9 @@ fn root_environment(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.bounds("bbox")?;
     if archive.context.version.value() > 0xfca {
         archive.f64("max_model_size")?;
+    }
+    if archive.context.version.value() < 0x305 {
+        archive.scope("old_display_items", super::modern_items::list)?;
     }
     archive.object("user_model_env", &["uiUserModelEnv_c"])?;
     archive.object("line_font_mgr", &["uiLineFontMgr_c"])?;

@@ -88,7 +88,11 @@ pub(super) fn resumed_edited_contents(
     source: &DisplayArchive,
     expected: &DisplayArchive,
 ) -> DisplayArchiveContents {
-    let mut contents = legacy_edges::edge_edited_contents(source, expected);
+    let mut contents = if source.context().version.value() < 773 {
+        legacy_root_items::edited_old_root(source, expected)
+    } else {
+        legacy_edges::edge_edited_contents(source, expected)
+    };
     for target in &mut contents.fields {
         if resumed_edit_field(target) {
             target.value = field(expected, &target.path).unwrap().clone();

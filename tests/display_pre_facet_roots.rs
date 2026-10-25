@@ -21,6 +21,8 @@ mod item_trace;
 mod legacy_component;
 #[path = "support/legacy_curvature.rs"]
 mod legacy_curvature;
+#[path = "support/legacy_root_items.rs"]
+mod legacy_root_items;
 #[path = "../examples/support/light_trace.rs"]
 mod light_trace;
 #[path = "../examples/support/material_trace.rs"]

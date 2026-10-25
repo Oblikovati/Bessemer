@@ -613,3 +613,8 @@ The [legacy curvature checkpoint](legacy-curvature-layouts.md) admits contexts
 from 773, with 290 complete roots proving legacy array metadata and payload edits,
 the calculated-colour transition and concurrent reconstruction, plus eight
 whole-document fixtures.
+
+The [root-owned item checkpoint](legacy-root-items-layouts.md) admits contexts
+from 767, with 282 complete roots covering global and per-view lists, zero-view
+and shared-bucket cases, extended counts and a single-word edit, plus eight
+whole-document fixtures.
