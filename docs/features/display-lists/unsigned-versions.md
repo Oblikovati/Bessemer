@@ -8,7 +8,7 @@ display marker. The library previously imposed an additional upper limit of
 19000 on both complete archive readers. That limit did not follow the documented
 version predicates.
 
-Display-list archives now accept versions from 3196 through `u32::MAX`, excluding
+Display-list archives now accept versions from 3065 through `u32::MAX`, excluding
 the unresolved uncounted-window interval `0x1FAE`–`0x1FCE`. Drawing bucket archives
 accept model versions from `0x27CC` through `u32::MAX`. Earlier unresolved layouts
 remain unsupported. Decoding follows the documented predicates; this change does
@@ -28,6 +28,12 @@ all twelve current-layout configuration variants, including external component
 declarations. Independent reference traces provide 31,270 field expectations.
 The reference's `(id, object)` part-configuration tuples receive named paths for
 comparison; their objects and alias identities remain unchanged.
+
+The shared process verifier now preserves manifest-declared external component
+IDs (#39). It previously supplied an empty list even when declarations were
+present. The corrected input frame hash changes; reconstructed bytes and field
+trace hashes remain identical. A temporary-file regression covers explicit,
+missing and empty declarations, preserving case and Unicode.
 
 The [drawing corpus](../drawing-buckets/unsigned.json) adds 25 complete streams
 at the same markers, with 695 independent drawing-field expectations. The

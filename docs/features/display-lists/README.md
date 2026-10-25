@@ -4,7 +4,7 @@ Development for #28 is on `codex/display-lists`. It is not ready for integration
 The goal remains complete clause 13 part and assembly archive reading, writing,
 construction and isolated edits, with all documented branches and all 1,086 native
 streams verified. No prefix-only archive API or opaque remainder fallback will
-be merged. Drawings and unresolved layouts must fail explicitly.
+be merged. Drawing `Contents/DisplayLists` and unresolved payloads must fail explicitly.
 
 ## Verified foundation
 
@@ -497,3 +497,7 @@ codecs while preserving the drawing backend facet context. Drawing
 The [unsigned-version checkpoint](unsigned-versions.md) removes the artificial
 19000 ceiling, with 85 rich part/assembly roots, 25 drawing streams and three
 signed-alias documents. All earlier unresolved intervals remain excluded.
+
+The [earlier resolved archive checkpoint](pre-facet-roots.md) admits contexts
+from 3065, with 78 complete roots and two containers. Unresolved inline facet
+objects remain explicit payload failures; empty geometry is preserved distinctly.

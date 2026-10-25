@@ -7,7 +7,9 @@ pub(super) const ASSEMBLY_CLASSES: &[&str] =
 pub(super) fn shaded_component(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     let component_id = archive.scope("viewer_comp_data", super::modern_component::read)?;
     part_tessellation(archive, component_id)?;
-    archive.i32("unknown_320")?;
+    if archive.context.version.value() > 0xc6e {
+        archive.i32("unknown_320")?;
+    }
     if archive.context.version.value() > 0xdde {
         archive.object_array("children", ASSEMBLY_CLASSES)?;
         archive.object("owner", ASSEMBLY_CLASSES)?;

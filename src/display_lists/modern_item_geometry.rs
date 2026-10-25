@@ -92,7 +92,10 @@ fn parabola(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     if archive.context.version.value() > 0x13ec {
         archive.i32("unknown_60")?;
     }
-    archive.f64s(&["unknown_80", "unknown_88"])
+    if archive.context.version.value() > 0xc58 {
+        archive.f64s(&["unknown_80", "unknown_88"])?;
+    }
+    Ok(())
 }
 
 fn spline(archive: &mut DisplayDecoder<'_>) -> Result<()> {

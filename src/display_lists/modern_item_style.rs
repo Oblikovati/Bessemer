@@ -37,7 +37,9 @@ pub(super) fn short_width(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 fn user_pen(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.u32("color")?;
     archive.scope("width", width)?;
-    archive.i32("layer_id")?;
+    if archive.context.version.value() > 0xc57 {
+        archive.i32("layer_id")?;
+    }
     if archive.context.version.value() >= 0xca6 {
         archive.i32("end_cap_style")?;
     }
