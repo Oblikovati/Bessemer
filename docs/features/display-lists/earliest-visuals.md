@@ -1,10 +1,10 @@
 # Implicit visual properties
 
-Display versions 3555 through `0x10AE` store single visual-property pointers for faces, bodies and part models. Their wire representation contains no collection count or key. Bessemer preserves the stored pointer and its identity without inventing either field. Later versions retain counted maps, including duplicate keys and null pointers.
+Display versions 3508 through `0x10AE` store single visual-property pointers for faces, bodies and part models. Their wire representation contains no collection count or key. Bessemer preserves the stored pointer and its identity without inventing either field. Later versions retain counted maps, including duplicate keys and null pointers.
 
-The owned corpus contains 114 complete part and assembly roots across the implicit-map boundary and adjacent version gates. It includes null pointers and edited payloads. Independent reference traces cover the material, scene, item and component fields; forced reconstruction checks the complete bytes. A further 132 shared-property roots exercise holder state and reference identities. Exact aggregate budgets account for the four surface-parameter elements absent through `0x1098`.
+The owned corpus contains 130 complete part and assembly roots across the implicit-map boundary and adjacent version gates. It includes null pointers and edited payloads. Independent reference traces cover the material, scene, item and component fields; forced reconstruction checks the complete bytes. A further 156 shared-property roots exercise holder state and reference identities. Exact aggregate budgets account for the four surface-parameter elements absent through `0x1098`.
 
-Fourteen complete containers exercise document context resolution at versions 3555, 3800, 3890, 3905, 4000, 4100 and 4200. The earlier fixtures remain unchanged.
+Sixteen complete containers exercise document context resolution at versions 3508, 3555, 3800, 3890, 3905, 4000, 4100 and 4200. The earlier fixtures remain unchanged.
 
 Twelve additional display-item roots cover the signed 32-bit line-style and user-pen widths before `0xF41`. Font and visibility widths use signed 16-bit words in that interval. Polygon line properties also use the signed 32-bit form. Those callers store no custom float there. Full-range integer cases, absent custom fields, polygon flags and strict cross-version construction are checked independently.
 
@@ -15,6 +15,8 @@ The earlier environment word starts after `0xF55`, embedded property fonts grow 
 Versions through `0xFCA` omit the root model-size double. Versions before `0xFD8` omit face state words and the complete body, part and assembly decal-list headers. These omissions are distinct from stored empty lists.
 
 When an RV body is present, versions before `0x1052` omit its color-form and reflectivity fields. Visual properties store `unknown_old_5c` only from `0xE55` through `0x1051`; later versions store `default_appearance`. Both sides have independently generated roots and reject construction with the other layout.
+
+Assembly visibility begins after `0xDCA`. Configuration ID, file type, children count and owner pointer begin after `0xDDE`; pattern reference and its companion word begin after `0xDE2`. Earlier layouts omit those fields. The fixtures distinguish missing hierarchy records from stored empty arrays and null owners, and reject synthetic empty hierarchy records in the older layouts.
 
 Assembly component reference IDs begin after `0xE11`; part layouts do not change at that boundary. Earlier visual properties omit the appearance word entirely, and owned construction rejects a synthetic zero word.
 

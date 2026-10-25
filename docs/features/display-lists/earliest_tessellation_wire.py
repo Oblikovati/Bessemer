@@ -30,6 +30,9 @@ def decal_reader(original: object, patches: list[tuple[int,int,bytes]]) -> objec
 def assembly_reader(original: object, version: int, patches: list[tuple[int,int,bytes]]) -> object:
     def read(archive: object, schema: int) -> object:
         result = original(archive,schema)
+        if version<=0xdde:
+            assert result["children"]==[] and result["owner"] is None and archive.b[archive.p-12:archive.p-8]==bytes(4)
+            patches.append((archive.p-12,archive.p-8,b""))
         if version<=0xf76:
             assert archive.b[archive.p-8:archive.p-4]==struct.pack("<i",result["has_shrink_wrap_config"])
             patches.append((archive.p-8,archive.p-4,b""))
@@ -59,7 +62,7 @@ def earlier_tails(document: object, path: object, raw: bytes, version: int, kind
     if version>=0xfd8:return raw
     patches = []
     with tail_readers(patches,version):collect(document,path,raw,version,set())
-    assert len(patches)==(4 if kind=="part" else 5+int(version<=0xf76)+int(version<=0xe11))
+    assert len(patches)==(4 if kind=="part" else 5+int(version<=0xf76)+int(version<=0xdde)+sum(version<=limit for limit in [0xdca,0xdde,0xde2,0xe11]))
     return apply_patches(raw,patches)
 
 def header_layout(raw: bytes, version: int) -> bytes:
@@ -71,7 +74,10 @@ def header_layout(raw: bytes, version: int) -> bytes:
 def viewer_reader(original: object, version: int, patches: list[tuple[int,int,bytes]]) -> object:
     def read(archive: object) -> object:
         result = original(archive)
-        assert archive.b[archive.p-4:archive.p]==struct.pack("<i",result["reference_id"])
-        if version<=0xe11:patches.append((archive.p-4,archive.p,b""))
+        labels = ["visible","ref_configuration_id","file_type","has_pattern_ref","unknown_1a8","reference_id"]
+        expected = struct.pack("<iiIiii",*(result[label] for label in labels))
+        assert archive.b[archive.p-24:archive.p]==expected
+        for limit,first,last in [(0xdca,24,20),(0xdde,20,12),(0xde2,12,4),(0xe11,4,0)]:
+            if version<=limit:patches.append((archive.p-first,archive.p-last,b""))
         return result
     return read

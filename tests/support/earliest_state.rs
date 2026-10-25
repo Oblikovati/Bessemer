@@ -17,23 +17,30 @@ fn stored_appearance_words_begin_at_e55() {
     }
 }
 
-#[test]
-fn component_reference_ids_begin_after_e11_without_removing_neighboring_words() {
-    for case in cases()
-        .into_iter()
-        .filter(|case| case.kind == DisplayDocumentKind::Assembly && case.scenario >= 208)
-    {
-        let archive = parsed(case);
-        let prefix = "root.tessellation.components[0].viewer_comp_data";
-        assert!(has_field(&archive, &format!("{prefix}.has_pattern_ref")));
-        assert!(has_field(&archive, &format!("{prefix}.unknown_1a8")));
+fn check_reference_words(case: OldCase) {
+    let archive = parsed(case);
+    let prefix = "root.tessellation.components[0].viewer_comp_data";
+    for (member, limit) in [
+        ("has_pattern_ref", 0xde2),
+        ("unknown_1a8", 0xde2),
+        ("reference_id", 0xe11),
+    ] {
         assert_eq!(
-            has_field(&archive, &format!("{prefix}.reference_id")),
-            case.version > 0xe11
+            has_field(&archive, &format!("{prefix}.{member}")),
+            case.version > limit
         );
     }
 }
 
+#[test]
+fn component_reference_and_pattern_words_follow_independent_boundaries() {
+    let selected = cases()
+        .into_iter()
+        .filter(|case| case.kind == DisplayDocumentKind::Assembly && case.scenario >= 208);
+    for case in selected {
+        check_reference_words(case);
+    }
+}
 fn check_state_context_boundary(case: OldCase, before: u32, after: u32) {
     let archive = parsed(case);
     let version = if case.version == before {

@@ -28,19 +28,25 @@ fn display_mode(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn reference(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    archive.i32("visible")?;
+    if archive.context.version.value() > 0xdca {
+        archive.i32("visible")?;
+    }
     for (threshold, label) in [(0x12d0, "suppressed"), (0x12d3, "comp_type")] {
         if archive.context.version.value() > threshold {
             archive.i32(label)?;
         }
     }
-    archive.i32("ref_configuration_id")?;
-    archive.u32("file_type")?;
+    if archive.context.version.value() > 0xdde {
+        archive.i32("ref_configuration_id")?;
+        archive.u32("file_type")?;
+    }
     reference_state(archive)
 }
 
 fn reference_state(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    archive.i32s(&["has_pattern_ref", "unknown_1a8"])?;
+    if archive.context.version.value() > 0xde2 {
+        archive.i32s(&["has_pattern_ref", "unknown_1a8"])?;
+    }
     if archive.context.version.value() > 0xe11 {
         archive.i32("reference_id")?;
     }
