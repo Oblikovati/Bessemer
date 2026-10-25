@@ -1,6 +1,5 @@
 """Scene semantic traces from the independent object graph, honoring prior declarations."""
 from generate_blank_scalars import flatten
-import reference_corpus
 
 
 def walk(path: str, value: object, rows: dict[str,str], seen: set[int]) -> None:
@@ -32,9 +31,3 @@ def trace(root: dict[str,object]) -> bytes:
     rows: dict[str,str] = {}
     walk("root",root,rows,set())
     return "".join(f"{key}={value}\n" for key,value in sorted(rows.items())).encode()
-
-
-def field_coverage(actual: bytes, expected: bytes, label: str) -> dict[str,int]:
-    total = reference_corpus.compare_trace(actual,expected,label)
-    scenes = sum(line.startswith(b"root.scene.") for line in actual.splitlines())
-    return {"reference":total-scenes,"scene":scenes}

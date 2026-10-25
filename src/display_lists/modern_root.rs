@@ -59,19 +59,7 @@ fn view(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.text("camera_name")?;
     archive.i32s(&["is_active_view", "display_mode", "edges_in_shaded_mode"])?;
     archive.object("view_bucket", &["uiViewBucket_c"])?;
-    let short = archive.u16("display_items.count_word")?;
-    let count = if short == u16::MAX {
-        archive.u32("display_items.count_dword")?
-    } else {
-        u32::from(short)
-    };
-    archive.entries(count as usize, "display items")?;
-    if count != 0 {
-        return Err(unsupported(format!(
-            "display item count {count}; populated display item bodies are pending implementation"
-        )));
-    }
-    Ok(())
+    archive.scope("display_items", super::modern_items::list)
 }
 
 fn shaded(archive: &mut DisplayDecoder<'_>) -> Result<()> {

@@ -79,3 +79,9 @@ mod modern_pw_scene;
 mod modern_reference;
 mod modern_scene;
 mod modern_walls;
+
+mod modern_item_annotation;
+mod modern_item_geometry;
+mod modern_item_style;
+mod modern_item_text;
+mod modern_items;
