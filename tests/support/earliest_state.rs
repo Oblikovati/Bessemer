@@ -5,10 +5,10 @@ use super::*;
 fn stored_appearance_words_begin_at_e55() {
     for case in cases().into_iter().filter(|case| case.scenario >= 208) {
         let archive = parsed(case);
-        assert!(has_field(
-            &archive,
-            "root.visual_properties.hardcoded_facet_display"
-        ));
+        assert_eq!(
+            has_field(&archive, "root.visual_properties.hardcoded_facet_display"),
+            case.version > 0xdb1
+        );
         let path = "root.visual_properties.unknown_old_5c";
         assert_eq!(
             has_field(&archive, path),

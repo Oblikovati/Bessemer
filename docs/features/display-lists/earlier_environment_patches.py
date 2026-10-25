@@ -32,7 +32,7 @@ def convert(document: object, path: object, raw: bytes, version: int, edited: bo
     environment = ObjectArchive.readers["uiUserModelEnv_c"]
     scene = dl_light.read_scene
     rv,texture = dl_light.read_uoRVAppearanceProperties,dl_light.read_uoMaterialTextureProperties
-    dl_light.read_uoRVAppearanceProperties = rv_reader(rv,version,spans)
+    dl_light.read_uoRVAppearanceProperties = rv_reader(rv,version,spans,patches)
     dl_light.read_uoMaterialTextureProperties = texture_reader(texture,version,patches)
     ObjectArchive.readers["uiUserModelEnv_c"] = environment_reader(environment,version,patches)
     dl_light.read_scene = scene_reader(scene,version,spans)
@@ -56,10 +56,11 @@ def maximal_omissions(spans: list[tuple[int,int]]) -> list[tuple[int,int]]:
     return [(start,end) for start,end in unique if not any(first<=start and end<=last and (first,last)!=(start,end) for first,last in unique)]
 
 
-def rv_reader(original: object, version: int, spans: list[tuple[int,int]]) -> object:
+def rv_reader(original: object, version: int, spans: list[tuple[int,int]], patches: list[tuple[int,int,bytes]]) -> object:
     def read(archive: object) -> object:
         start = archive.p-4
         result = original(archive)
+        if version<=0xdb3:patches.append((start-4,start,b""))
         if version<=0xf1d:spans.append((start,archive.p))
         return result
     return read

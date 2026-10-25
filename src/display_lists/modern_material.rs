@@ -30,7 +30,9 @@ fn visual_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn visual_appearance_state(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    archive.i32("hardcoded_facet_display")?;
+    if archive.context.version.value() > 0xdb1 {
+        archive.i32("hardcoded_facet_display")?;
+    }
     if archive.context.version.value() < 0xe55 {
         return Ok(());
     }
@@ -68,7 +70,9 @@ fn material_rendering(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         "use_defined_hatch",
     ])?;
     archive.text("classification")?;
-    archive.i32("use_new_shaders")?;
+    if archive.context.version.value() > 0xdb3 {
+        archive.i32("use_new_shaders")?;
+    }
     if archive.context.version.value() > 0xf1d && archive.i32("has_rv_app_props")? != 0 {
         archive.scope("rv_app_props", rv)?;
     }

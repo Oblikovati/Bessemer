@@ -16,11 +16,7 @@ def visual_reader(original: object, version: int, patches: list[tuple[int,int,by
         finally:
             archive.cstring = saved
             dl_light.read_uoMaterialProperties = material
-        assert len(ends)==1
-        outer_strings = [span for span in spans if span[0]>=ends[0]]
-        start = outer_strings[1][1]+4
-        assert archive.b[start:start+4]==struct.pack("<i",result["default_appearance"])
-        if version<0xe55:patches.append((start,start+4,b""))
+        appearance_omissions(archive,result,spans,ends,version,patches)
         return result
     return read
 
@@ -38,3 +34,15 @@ def material_end_reader(original: object, ends: list[int]) -> object:
         ends.append(archive.p)
         return result
     return read
+
+
+
+def appearance_omissions(archive: object, result: dict[str,object], spans: list[tuple[int,int]], ends: list[int], version: int, patches: list[tuple[int,int,bytes]]) -> None:
+    assert len(ends)==1
+    outer_strings = [span for span in spans if span[0]>=ends[0]]
+    start = outer_strings[1][1]+4
+    assert archive.b[start:start+4]==struct.pack("<i",result["default_appearance"])
+    if version<=0xdb1:
+        assert archive.b[start-4:start]==struct.pack("<i",result["hardcoded_facet_display"])
+        patches.append((start-4,start,b""))
+    if version<0xe55:patches.append((start,start+4,b""))
