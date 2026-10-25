@@ -36,6 +36,8 @@ const BUCKET_ROOT_GROUPS: &[&[u8]] = &[
     include_bytes!("fixtures/display-lists/early-view-buckets-2d.bin"),
     include_bytes!("fixtures/display-lists/historical-buckets-3d.bin"),
     include_bytes!("fixtures/display-lists/historical-buckets-2d.bin"),
+    include_bytes!("fixtures/display-lists/early-appearance-buckets-3d.bin"),
+    include_bytes!("fixtures/display-lists/early-appearance-buckets-2d.bin"),
 ];
 
 fn cases() -> Vec<BucketCase> {
@@ -65,7 +67,7 @@ fn parsed(case: BucketCase) -> DisplayArchive {
 
 #[test]
 fn earlier_buckets_match_independent_fields_and_exact_bytes() {
-    assert_eq!(cases().len(), 398);
+    assert_eq!(cases().len(), 456);
     let mut fields = 0;
     for case in cases() {
         assert!(case.scalars.is_empty());
@@ -91,7 +93,7 @@ fn earlier_buckets_match_independent_fields_and_exact_bytes() {
             case.bytes
         );
     }
-    assert_eq!(fields, 77731);
+    assert_eq!(fields, 87452);
 }
 
 fn edited_mode(archive: &DisplayArchive) -> DisplayArchive {
@@ -426,6 +428,23 @@ fn historical_halo_repair_list_is_absent_before_its_version_gate() {
         assert_eq!(
             present,
             case.version > 0x184c,
+            "{} {}",
+            case.version,
+            case.scenario
+        );
+    }
+}
+
+#[test]
+fn cross_hatch_scalar_follows_the_early_gate_in_both_coordinate_scopes() {
+    for case in cases().into_iter().filter(|case| case.scenario >= 128) {
+        let archive = parsed(case);
+        let present = archive.contents().fields.iter().any(|field| {
+            field.path.as_ref() == "root.views[0].view_bucket.bucket.cross_hatch_trimmed"
+        });
+        assert_eq!(
+            present,
+            case.version > 0x147d,
             "{} {}",
             case.version,
             case.scenario

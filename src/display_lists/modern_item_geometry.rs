@@ -89,7 +89,9 @@ fn parabola(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     triple(archive)?;
     point(archive, "unknown_48")?;
     point(archive, "unknown_68")?;
-    archive.i32("unknown_60")?;
+    if archive.context.version.value() > 0x13ec {
+        archive.i32("unknown_60")?;
+    }
     archive.f64s(&["unknown_80", "unknown_88"])
 }
 
@@ -111,7 +113,12 @@ fn spline(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 fn center_of_mass(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     point(archive, "unknown_00")?;
     archive.i32("style")?;
-    archive.f64("unknown_20")?;
-    archive.i32("unknown_28")?;
-    archive.f64("unknown_30")
+    if archive.context.version.value() > 0x146e {
+        archive.f64("unknown_20")?;
+        archive.i32("unknown_28")?;
+    }
+    if archive.context.version.value() >= 0x1473 {
+        archive.f64("unknown_30")?;
+    }
+    Ok(())
 }

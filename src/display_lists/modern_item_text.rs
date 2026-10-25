@@ -57,6 +57,9 @@ fn simple(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn simple_version_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if (0x1448..0x144a).contains(&archive.context.version.value()) {
+        archive.i32("unknown_v1448")?;
+    }
     // #37: the native reader discards this float, but exact writes must retain its four bytes.
     if (0x1c05..0x1fb5).contains(&archive.context.version.value()) {
         archive.f32("unknown_v1c05")?;

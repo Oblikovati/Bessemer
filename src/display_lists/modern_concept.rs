@@ -3,7 +3,10 @@ use crate::Result;
 
 pub(super) fn read(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.object("name", &["moNodeName_c"])?;
-    archive.i32s(&["update_state", "flags", "id", "flags2"])?;
+    archive.i32s(&["update_state", "flags", "id"])?;
+    if archive.context.version.value() > 0x143a {
+        archive.i32("flags2")?;
+    }
     if archive.context.version.value() > 0x23cd {
         archive.text("tool_tip_name")?;
     }

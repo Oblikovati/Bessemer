@@ -13,11 +13,10 @@ pub(super) fn visual(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn visual_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    archive.i32s(&[
-        "hardcoded_facet_display",
-        "default_appearance",
-        "unknown_78",
-    ])?;
+    archive.i32s(&["hardcoded_facet_display", "default_appearance"])?;
+    if archive.context.version.value() > 0x144b {
+        archive.i32("unknown_78")?;
+    }
     if archive.context.version.value() > 0x2419 {
         archive.i32("unknown_7c")?;
     }
@@ -144,13 +143,24 @@ fn rv_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         "knurl_height_cap",
         "knurl_angle",
         "dimple_size",
-        "default_width",
-        "default_height",
     ])?;
-    archive.text("lxp_filename")?;
-    archive.f32("round_sharp_edges")?;
+    rv_historical_dimensions(archive)?;
     if (0x3348..0x46ba).contains(&archive.context.version.value()) {
         archive.scope("unknown_symbol", legacy_symbol)?;
+    }
+    Ok(())
+}
+
+fn rv_historical_dimensions(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    let version = archive.context.version.value();
+    if version > 0x1415 {
+        archive.f32s(&["default_width", "default_height"])?;
+    }
+    if version > 0x1421 {
+        archive.text("lxp_filename")?;
+    }
+    if version > 0x1462 {
+        archive.f32("round_sharp_edges")?;
     }
     Ok(())
 }

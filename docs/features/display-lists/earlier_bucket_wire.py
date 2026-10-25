@@ -51,5 +51,6 @@ def bucket_encoder(original: object, version: int) -> object:
             halo = wire.poly_list([] if empty else [wire.poly(1,3,9,False,False)])
             assert raw.endswith(halo)
             raw = raw[:-len(halo)]
+        if version<=0x147d:raw = raw[:-4]
         return raw
     return encode
