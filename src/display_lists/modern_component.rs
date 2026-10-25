@@ -15,7 +15,9 @@ pub(super) fn read(archive: &mut DisplayDecoder<'_>) -> Result<std::sync::Arc<Ar
     archive.i32("is_a_zone")?;
     integers(archive, "gobbled_up_atom_ids")?;
     display_mode(archive)?;
-    archive.f64("unknown_190")?;
+    if archive.context.version.value() >= 0xb9b {
+        archive.f64("unknown_190")?;
+    }
     reference(archive)?;
     Ok(component_id)
 }

@@ -46,7 +46,7 @@ fn font(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 
 fn simple(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     point(archive, "unknown_00")?;
-    if archive.i32("is_3d_text")? != 0 {
+    if archive.context.version.value() > 0xb74 && archive.i32("is_3d_text")? != 0 {
         archive.transform("plane_xform")?;
     }
     archive.f64("unknown_20")?;

@@ -95,7 +95,9 @@ fn view(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i32("view_index")?;
     archive.transform("model_view_xform")?;
     archive.transform("pan_zoom_xform")?;
-    archive.text("camera_name")?;
+    if archive.context.version.value() > 0xbb6 {
+        archive.text("camera_name")?;
+    }
     archive.i32s(&["is_active_view", "display_mode", "edges_in_shaded_mode"])?;
     archive.object("view_bucket", &["uiViewBucket_c"])?;
     archive.scope("display_items", super::modern_items::list)
@@ -134,9 +136,9 @@ fn configuration_footer(archive: &mut DisplayDecoder<'_>, views: usize) -> Resul
 fn require_context(context: &DisplayArchiveContext) -> Result<()> {
     let version = context.version.value();
     require_window_independent(version)?;
-    if version < 2999 {
+    if version < 2902 {
         return Err(unsupported(format!(
-            "display context version {}, file version {}, kind {:?}; expected display version >=2999",
+            "display context version {}, file version {}, kind {:?}; expected display version >=2902",
             context.version.value(),
             context.file_version,
             context.kind
