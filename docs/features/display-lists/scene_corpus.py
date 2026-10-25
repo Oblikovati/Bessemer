@@ -8,7 +8,9 @@ def walk(path: str, value: object, rows: dict[str,str], seen: set[int]) -> None:
             return
         seen.add(id(value))
         for key,child in value.items():
-            if key == "wall_info":
+            if key in {"layers","attributes","old_attributes"}:
+                scalar_map(f"{path}.{key}",child,rows)
+            elif key == "wall_info":
                 wall_info(f"{path}.{key}",child,rows,seen)
             elif not key.startswith("_"):
                 suffix = ".entries" if key == "user_property" else ""
@@ -25,6 +27,12 @@ def wall_info(path: str, entries: list[tuple[int,dict[str,object]]], rows: dict[
         if path.startswith("root.scene."):
             flatten(f"{path}[{index}].key",key,rows)
         walk(f"{path}[{index}].value",value,rows,seen)
+
+
+def scalar_map(path: str, entries: list[tuple[int,object]], rows: dict[str,str]) -> None:
+    for index,(key,value) in enumerate(entries):
+        flatten(f"{path}[{index}].key",key,rows)
+        flatten(f"{path}[{index}].value",value,rows)
 
 
 def trace(root: dict[str,object]) -> bytes:

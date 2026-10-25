@@ -97,3 +97,6 @@ mod textured_planes;
 
 mod archive_identity;
 pub use archive_identity::DisplayObjectHandle;
+
+mod modern_layers;
+mod modern_line_style;

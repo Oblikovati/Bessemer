@@ -93,3 +93,5 @@ and skyscrapers worldwide.
 Display archives provide `object_handle` and `resolve_object` for revision-scoped
 object lookup. Clones and equivalent edits retain handles; changed edits and
 fresh decodes require new handles. See the [identity contract](docs/features/display-lists/revision-identities.md).
+
+Display-list CObject graphs also retain shared line-style definitions and versioned layer maps; see the [UI object coverage](docs/features/display-lists/ui-objects.md).

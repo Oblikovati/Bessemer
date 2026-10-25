@@ -150,6 +150,8 @@ fn dispatch(archive: &mut DisplayDecoder<'_>, class: &str) -> Result<()> {
         "moPointLight_c" => super::modern_lights::point(archive),
         "moVisualProperties_c" => super::modern_material::visual(archive),
         "moNodeName_c" => archive.text("name"),
+        "moLineStyle_c" => super::modern_line_style::read(archive),
+        "uiLayerMgr_c" => super::modern_layers::read(archive),
         "pwSceneData_c" => super::modern_pw_scene::read(archive),
         other => dispatch_tessellation(archive, other),
     }

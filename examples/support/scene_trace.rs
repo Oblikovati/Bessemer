@@ -24,6 +24,8 @@ fn visible(path: &str) -> bool {
             "count"
                 | "count_word"
                 | "count_dword"
+                | "count_low"
+                | "count_high"
                 | "has_merged_feature_list"
                 | "has_texture"
                 | "has_texture2"

@@ -457,3 +457,5 @@ Early complete-root view transitions and Bug #37 are recorded in [early view roo
 - The 5000 interval covers early appearance, face-identity and display-item fields; see [early appearances](early-appearances.md).
 
 - Archive object lookup now checks revision-scoped handles; see [revision identities](revision-identities.md). Operation history and whole-document coverage remain unfinished.
+
+- Shared line-style and layer-manager CObject bodies retain aliases and versioned map framing; see [UI objects](ui-objects.md).
