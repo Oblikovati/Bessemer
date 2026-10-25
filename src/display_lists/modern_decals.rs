@@ -2,6 +2,9 @@ use super::{archive_decode::DisplayDecoder, archive_error::invalid, modern_mater
 use crate::Result;
 
 pub(super) fn list(archive: &mut DisplayDecoder<'_>, label: &str) -> Result<()> {
+    if archive.context.version.value() <= 0xfd7 {
+        return Ok(());
+    }
     let count = unsigned_count(archive, &format!("{label}.count"), 1)?;
     for index in 0..count {
         archive.scope(&format!("{label}.items[{index}]"), decal)?;

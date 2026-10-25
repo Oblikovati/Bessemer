@@ -134,9 +134,9 @@ fn configuration_footer(archive: &mut DisplayDecoder<'_>, views: usize) -> Resul
 fn require_context(context: &DisplayArchiveContext) -> Result<()> {
     let version = context.version.value();
     require_window_independent(version)?;
-    if !(4100..=19000).contains(&version) {
+    if !(4000..=19000).contains(&version) {
         return Err(unsupported(format!(
-            "display context version {}, file version {}, kind {:?}; expected display version 4100..=19000",
+            "display context version {}, file version {}, kind {:?}; expected display version 4000..=19000",
             context.version.value(),
             context.file_version,
             context.kind
@@ -165,7 +165,9 @@ fn require_window_independent(version: u32) -> Result<()> {
 
 fn root_environment(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.bounds("bbox")?;
-    archive.f64("max_model_size")?;
+    if archive.context.version.value() > 0xfca {
+        archive.f64("max_model_size")?;
+    }
     archive.object("user_model_env", &["uiUserModelEnv_c"])?;
     archive.object("line_font_mgr", &["uiLineFontMgr_c"])?;
     archive.transform("front_view_transform")?;

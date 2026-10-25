@@ -33,7 +33,8 @@ def map_reader(original: object, spans: list[tuple[int,int]]) -> object:
 
 @contextmanager
 def observed_layout(spans: list[tuple[int,int]]) -> Iterator[None]:
-    names = {"uoTempFaceTessData_c":0x10af,"uoTempBodyTessData_c":0x10f6}
+    names = {"uoTempFaceTessData_c":0x10af,"uoTempBodyTessData_c":0x10f6,
+             "uoTempAssemblySHDData_c":0xfd8,"uoTempSubAssemblySHDData_c":0xfd8}
     classes = {name:ObjectArchive.readers[name] for name in names}
     original_part,original_map = dl_tess.read_uoTempPartTessData,dl_tess._viz_prop_map
     for name,floor in names.items():ObjectArchive.readers[name] = observing_reader(classes[name],floor)

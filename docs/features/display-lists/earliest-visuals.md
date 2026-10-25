@@ -1,10 +1,12 @@
 # Implicit visual properties
 
-Display versions 4100 through `0x10AE` store single visual-property pointers for faces, bodies and part models. Their wire representation contains no collection count or key. Bessemer preserves the stored pointer and its identity without inventing either field. Later versions retain counted maps, including duplicate keys and null pointers.
+Display versions 4000 through `0x10AE` store single visual-property pointers for faces, bodies and part models. Their wire representation contains no collection count or key. Bessemer preserves the stored pointer and its identity without inventing either field. Later versions retain counted maps, including duplicate keys and null pointers.
 
-The owned corpus contains 44 complete part and assembly roots across the implicit-map boundary and adjacent version gates. It includes null pointers and edited payloads. Independent reference traces cover the material, scene, item and component fields; forced reconstruction checks the complete bytes. A further 32 shared-property roots exercise holder state and reference identities. Exact aggregate budgets account for the four surface-parameter elements absent through `0x1098`.
+The owned corpus contains 58 complete part and assembly roots across the implicit-map boundary and adjacent version gates. It includes null pointers and edited payloads. Independent reference traces cover the material, scene, item and component fields; forced reconstruction checks the complete bytes. A further 52 shared-property roots exercise holder state and reference identities. Exact aggregate budgets account for the four surface-parameter elements absent through `0x1098`.
 
-Four complete containers exercise document context resolution at versions 4100 and 4200. The earlier 4200 fixtures remain unchanged.
+Six complete containers exercise document context resolution at versions 4000, 4100 and 4200. The earlier fixtures remain unchanged.
+
+Versions through `0xFCA` omit the root model-size double. Versions before `0xFD8` omit face state words and the complete body, part and assembly decal-list headers. These omissions are distinct from stored empty lists.
 
 Before `0x1052`, rendering records omit color-form and reflectivity fields, and visual properties retain `unknown_old_5c` instead of `default_appearance`. Both sides have independently generated roots and reject construction with the other layout.
 

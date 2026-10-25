@@ -77,7 +77,7 @@ fn object_target(archive: &DisplayArchive, path: &str) -> DisplayObjectPointer {
 
 #[test]
 fn all_body_property_roots_match_independent_fields_and_forced_bytes() {
-    assert_eq!(cases().len(), 76);
+    assert_eq!(cases().len(), 110);
     let mut fields = 0;
     for case in cases() {
         let archive = parsed(case);
@@ -102,7 +102,7 @@ fn all_body_property_roots_match_independent_fields_and_forced_bytes() {
             case.bytes
         );
     }
-    assert_eq!(fields, 25870);
+    assert_eq!(fields, 37742);
 }
 
 #[test]
@@ -293,5 +293,81 @@ fn early_appearance_fields_cannot_be_reinterpreted_across_the_boundary() {
             )
             .is_err()
         );
+    }
+}
+
+fn check_old_part_tail(archive: &DisplayArchive, case: OldCase) {
+    let part = part_prefix(case);
+    let expected = case.version >= 0xfd8;
+    for suffix in [
+        ".bodies[0].faces[0].unknown_34",
+        ".bodies[0].faces[1].unknown_34",
+        ".bodies[0].decals.count",
+        ".decals.count",
+    ] {
+        assert_eq!(has_field(archive, &format!("{part}{suffix}")), expected);
+    }
+}
+
+#[test]
+fn root_size_face_state_and_decal_headers_follow_their_independent_boundaries() {
+    for case in cases() {
+        let archive = parsed(case);
+        assert_eq!(
+            has_field(&archive, "root.max_model_size"),
+            case.version > 0xfca
+        );
+        check_old_part_tail(&archive, case);
+        if case.kind == DisplayDocumentKind::Assembly {
+            let path = "root.tessellation.components[0].decals.count";
+            assert_eq!(has_field(&archive, path), case.version >= 0xfd8);
+        }
+    }
+}
+
+fn opposite_tessellation_boundary(version: u32) -> u32 {
+    match version {
+        0xfca => 0xfcb,
+        0xfcb => 0xfca,
+        0xfd7 => 0xfd8,
+        _ => 0xfd7,
+    }
+}
+
+#[test]
+fn old_tessellation_fields_cannot_be_published_under_the_other_layout() {
+    let boundaries = [0xfca, 0xfcb, 0xfd7, 0xfd8];
+    for case in cases()
+        .into_iter()
+        .filter(|case| boundaries.contains(&case.version))
+    {
+        let archive = parsed(case);
+        let version = opposite_tessellation_boundary(case.version);
+        let context = DisplayArchiveContext {
+            version: DisplayVersion::new(version),
+            ..case_context(case)
+        };
+        assert!(DisplayArchive::new(archive.contents().clone(), context, LIMITS).is_err());
+    }
+}
+
+fn check_early_prefix_samples(case: OldCase) {
+    let tail = case.bytes.len() - 8..case.bytes.len();
+    for length in (0..case.bytes.len()).step_by(97).chain(tail) {
+        let prefix = &case.bytes[..length];
+        assert!(DisplayArchive::from_bytes(prefix, case_context(case), LIMITS).is_err());
+    }
+}
+
+#[test]
+fn early_tessellation_rejects_sampled_prefixes_and_trailing_bytes() {
+    let earliest = cases()
+        .into_iter()
+        .filter(|case| case.version == 4000 && case.scenario == 208);
+    for case in earliest {
+        check_early_prefix_samples(case);
+        let mut extended = case.bytes.to_vec();
+        extended.push(0);
+        assert!(DisplayArchive::from_bytes(&extended, case_context(case), LIMITS).is_err());
     }
 }

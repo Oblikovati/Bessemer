@@ -59,7 +59,9 @@ pub(super) fn properties(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 pub(super) fn face(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     face_source(archive)?;
     face_visual_properties(archive)?;
-    archive.i32("unknown_34")?;
+    if archive.context.version.value() >= 0xfd8 {
+        archive.i32("unknown_34")?;
+    }
     if archive.context.version.value() >= 0x117d {
         archive.i32("unknown_68")?;
     }
