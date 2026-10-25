@@ -459,3 +459,5 @@ Early complete-root view transitions and Bug #37 are recorded in [early view roo
 - Archive object lookup now checks revision-scoped handles; see [revision identities](revision-identities.md). Operation history and whole-document coverage remain unfinished.
 
 - Shared line-style and layer-manager CObject bodies retain aliases and versioned map framing; see [UI objects](ui-objects.md).
+
+- Component properties and holders preserve version-sized font arrays and shared cyclic graphs; see [component properties](component-properties.md).

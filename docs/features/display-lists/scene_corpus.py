@@ -10,6 +10,8 @@ def walk(path: str, value: object, rows: dict[str,str], seen: set[int]) -> None:
         for key,child in value.items():
             if key in {"layers","attributes","old_attributes"}:
                 scalar_map(f"{path}.{key}",child,rows)
+            elif key == "weight":
+                walk(path,child,rows,seen)
             elif key == "wall_info":
                 wall_info(f"{path}.{key}",child,rows,seen)
             elif not key.startswith("_"):

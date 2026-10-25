@@ -32,6 +32,7 @@ fn cases() -> Vec<UiCase> {
     ]
     .into_iter()
     .flat_map(complete_cases::decode)
+    .chain(component_properties::cases())
     .collect()
 }
 
@@ -84,20 +85,41 @@ fn edited(archive: &DisplayArchive, layers: bool) -> DisplayArchive {
     archive.with_contents(contents, LIMITS).unwrap()
 }
 
+fn check_trace(actual: &[u8], expected: &[u8], case: UiCase) {
+    for (index, (actual, expected)) in actual
+        .split(|byte| *byte == b'\n')
+        .zip(expected.split(|byte| *byte == b'\n'))
+        .enumerate()
+    {
+        assert_eq!(
+            std::str::from_utf8(actual).unwrap(),
+            std::str::from_utf8(expected).unwrap(),
+            "{} {:?} {} row {index}",
+            case.version,
+            case.kind,
+            case.scenario
+        );
+    }
+    assert_eq!(
+        actual.len(),
+        expected.len(),
+        "{} {:?} {} trace length",
+        case.version,
+        case.kind,
+        case.scenario
+    );
+}
+
 #[test]
 fn all_ui_objects_match_independent_fields_and_forced_bytes() {
-    assert_eq!(cases().len(), 61);
+    assert_eq!(cases().len(), 149);
     let mut fields = 0;
     for case in cases() {
         let archive = parsed(case);
         let mut trace = material_trace::trace(&archive);
         trace.extend(scene_trace::trace(&archive));
         trace.extend(item_trace::trace(&archive));
-        assert_eq!(
-            trace, case.expected,
-            "{} {:?} {}",
-            case.version, case.kind, case.scenario
-        );
+        check_trace(&trace, case.expected, case);
         fields += case
             .expected
             .iter()
@@ -137,7 +159,7 @@ fn all_ui_objects_match_independent_fields_and_forced_bytes() {
         assert_eq!(alias.target, DisplayObjectPointer::Reference(id));
         assert_eq!(alias.runtime_class, tag.runtime_class);
     }
-    assert_eq!(fields, 87905);
+    assert_eq!(fields, 128607);
 }
 
 #[test]
@@ -233,9 +255,18 @@ fn independent_edits_reopen_preserve_inputs_and_remain_isolated_across_threads()
 }
 
 fn budgets() -> Vec<(usize, usize)> {
+    [
+        include_bytes!("fixtures/display-lists/ui-object-budgets.bin").as_slice(),
+        include_bytes!("fixtures/display-lists/component-property-budgets.bin").as_slice(),
+    ]
+    .into_iter()
+    .flat_map(read_budgets)
+    .collect()
+}
+
+fn read_budgets(bytes: &'static [u8]) -> Vec<(usize, usize)> {
     use complete_cases::framing::{require_count, require_finished, take_u32};
-    let mut remaining: &'static [u8] =
-        include_bytes!("fixtures/display-lists/ui-object-budgets.bin");
+    let mut remaining = bytes;
     let count = take_u32(&mut remaining).unwrap();
     require_count(count, remaining.len(), 8).unwrap();
     let rows = (0..count)
@@ -394,3 +425,6 @@ fn ui_object_document_edits_preserve_other_streams_and_authentically_revert() {
         assert_eq!(output.to_bytes().unwrap(), original_bytes);
     }
 }
+
+#[path = "support/component_property_cases.rs"]
+mod component_properties;

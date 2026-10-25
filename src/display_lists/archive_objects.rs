@@ -157,6 +157,8 @@ fn dispatch(archive: &mut DisplayDecoder<'_>, class: &str) -> Result<()> {
         "moNodeName_c" => archive.text("name"),
         "moLineStyle_c" => super::modern_line_style::read(archive),
         "uiLayerMgr_c" => super::modern_layers::read(archive),
+        "moComponentProperty" => super::modern_component_properties::property(archive),
+        "moComponentPropertyHolder" => super::modern_component_properties::holder(archive),
         "pwSceneData_c" => super::modern_pw_scene::read(archive),
         other => dispatch_tessellation(archive, other),
     }

@@ -16,7 +16,7 @@ pub(super) fn read(archive: &mut DisplayDecoder<'_>, kind: i32) -> Result<()> {
     Ok(())
 }
 
-fn width(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+pub(super) fn width(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i16("standard_width")?;
     archive.f32("custom_width")
 }

@@ -58,3 +58,5 @@ process checks passed. The native audit retained 1,086 accepted documents and
 1,849,563 independent field comparisons with unchanged corpus hash
 `94047d85dc01ed0f391378374f2c15f5464301bb26990d4214eecdd600723a87`.
 Cross-platform CI remains pending the complete feature PR.
+
+The shared test driver also covers [component-property graphs](component-properties.md); its combined corpus now contains 149 roots.
