@@ -10,6 +10,15 @@ pub(super) fn encode(
     context: &DisplayArchiveContext,
     limits: DisplayArchiveLimits,
 ) -> Result<Vec<u8>> {
+    encode_layout(contents, context, limits, false)
+}
+
+pub(super) fn encode_layout(
+    contents: &DisplayArchiveContents,
+    context: &DisplayArchiveContext,
+    limits: DisplayArchiveLimits,
+    drawing: bool,
+) -> Result<Vec<u8>> {
     super::view_support::require_size(
         contents.fields.len(),
         limits.maximum_fields,
@@ -17,7 +26,7 @@ pub(super) fn encode(
     )?;
     let mut output = DisplayOutput::new(limits.maximum_bytes);
     for field in &contents.fields {
-        write_value(&mut output, &field.value, context, limits)?;
+        write_value(&mut output, &field.value, context, limits, drawing)?;
     }
     Ok(output.finish())
 }
@@ -27,6 +36,7 @@ fn write_value(
     value: &Value,
     context: &DisplayArchiveContext,
     limits: DisplayArchiveLimits,
+    drawing: bool,
 ) -> Result<()> {
     match value {
         Value::U8(value) => output.bytes(&[*value]),
@@ -38,7 +48,7 @@ fn write_value(
         Value::F64(value) => output.double(*value),
         Value::Text(value) => output.string(value),
         Value::Transform(value) => output.compact(value),
-        _ => write_compound(output, value, context, limits),
+        _ => write_compound(output, value, context, limits, drawing),
     }
 }
 
@@ -47,6 +57,7 @@ fn write_compound(
     value: &Value,
     context: &DisplayArchiveContext,
     limits: DisplayArchiveLimits,
+    drawing: bool,
 ) -> Result<()> {
     match value {
         Value::FixedTransform(value) => output
@@ -60,7 +71,7 @@ fn write_compound(
         Value::ExternalFacet { .. } => Ok(()),
         Value::Facet(value) => output.bytes(&crate::tessellation::write_embedded(
             value,
-            super::modern_body_tess::facet_context(context),
+            super::modern_body_tess::facet_context(context, drawing),
             output.remaining(),
         )?),
         _ => write_views(output, value, context, limits),

@@ -488,3 +488,8 @@ Early complete-root view transitions and Bug #37 are recorded in [early view roo
 - The 3238 checkpoint adds early PV and keep-scene light words, with all five old-light classes. The [earliest visuals](earliest-visuals.md) corpus contains 404 roots and twenty complete containers, retaining the previous cases.
 
 The 3196 checkpoint covers front-view, font-cap, pen-cap and bucket-pointer gates. The [earliest visuals](earliest-visuals.md) corpus now contains 548 roots and twenty-two complete containers, retaining all previous cases.
+
+Edition 0.206 adds complete modern drawing `Contents/VBLists` framing. Its separate
+[implementation and evidence](../drawing-buckets/README.md) reuse the shared
+codecs while preserving the drawing backend facet context. Drawing
+`Contents/DisplayLists` remains unresolved.

@@ -1,6 +1,5 @@
 use super::{
-    DisplayArchiveContents, DisplayArchiveContext, DisplayArchiveLimits, archive_encode,
-    archive_error::invalid, modern_root,
+    DisplayArchiveContents, DisplayArchiveContext, DisplayArchiveLimits, archive_error::invalid,
 };
 use crate::{Result, archive_codec::PreservedContents};
 
@@ -8,6 +7,7 @@ use crate::{Result, archive_codec::PreservedContents};
 #[derive(Debug, Clone)]
 pub struct DisplayArchive {
     context: DisplayArchiveContext,
+    pub(super) layout: super::archive_layout::ArchiveLayout,
     source: PreservedContents<DisplayArchiveContents>,
     limits: DisplayArchiveLimits,
     pub(super) revision: super::archive_identity::DisplayRevision,
@@ -27,9 +27,24 @@ impl DisplayArchive {
         context: DisplayArchiveContext,
         limits: DisplayArchiveLimits,
     ) -> Result<Self> {
-        let contents = modern_root::read(bytes, &context, limits)?;
+        Self::decode_layout(
+            bytes,
+            context,
+            limits,
+            super::archive_layout::ArchiveLayout::DisplayLists,
+        )
+    }
+
+    pub(super) fn decode_layout(
+        bytes: &[u8],
+        context: DisplayArchiveContext,
+        limits: DisplayArchiveLimits,
+        layout: super::archive_layout::ArchiveLayout,
+    ) -> Result<Self> {
+        let contents = layout.read(bytes, &context, limits)?;
         Ok(Self {
             context,
+            layout,
             source: PreservedContents::decoded(bytes, contents),
             revision: Default::default(),
             limits,
@@ -49,9 +64,24 @@ impl DisplayArchive {
         context: DisplayArchiveContext,
         limits: DisplayArchiveLimits,
     ) -> Result<Self> {
-        validate(&contents, &context, limits)?;
+        Self::construct_layout(
+            contents,
+            context,
+            limits,
+            super::archive_layout::ArchiveLayout::DisplayLists,
+        )
+    }
+
+    pub(super) fn construct_layout(
+        contents: DisplayArchiveContents,
+        context: DisplayArchiveContext,
+        limits: DisplayArchiveLimits,
+        layout: super::archive_layout::ArchiveLayout,
+    ) -> Result<Self> {
+        validate(&contents, &context, limits, layout)?;
         Ok(Self {
             context,
+            layout,
             source: PreservedContents::constructed(contents),
             revision: Default::default(),
             limits,
@@ -93,7 +123,7 @@ impl DisplayArchive {
         contents: DisplayArchiveContents,
         limits: DisplayArchiveLimits,
     ) -> Result<Self> {
-        validate(&contents, &self.context, limits)?;
+        validate(&contents, &self.context, limits, self.layout)?;
         let revision = self.edited_revision(&contents);
         let source = self.source.edited(contents);
         if let Some(bytes) = source.original_bytes() {
@@ -106,6 +136,7 @@ impl DisplayArchive {
         Ok(Self {
             context: self.context.clone(),
             revision,
+            layout: self.layout,
             source,
             limits,
         })
@@ -123,7 +154,8 @@ impl DisplayArchive {
         if let Some(bytes) = self.source.original_bytes() {
             return Ok(bytes.to_vec());
         }
-        archive_encode::encode(self.contents(), &self.context, self.limits)
+        self.layout
+            .encode(self.contents(), &self.context, self.limits)
     }
 }
 
@@ -131,9 +163,10 @@ fn validate(
     contents: &DisplayArchiveContents,
     context: &DisplayArchiveContext,
     limits: DisplayArchiveLimits,
+    layout: super::archive_layout::ArchiveLayout,
 ) -> Result<()> {
-    let encoded = archive_encode::encode(contents, context, limits)?;
-    let parsed = modern_root::read(&encoded, context, limits)?;
+    let encoded = layout.encode(contents, context, limits)?;
+    let parsed = layout.read(&encoded, context, limits)?;
     if &parsed == contents {
         return Ok(());
     }

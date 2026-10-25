@@ -110,3 +110,9 @@ pub use external_face_types::{ExternalFaceLink, ExternalFaceLinkCoverage, Extern
 
 mod external_face_coverage;
 mod external_face_errors;
+
+mod archive_layout;
+mod drawing_bucket_read;
+mod drawing_buckets;
+mod drawing_document;
+pub use drawing_buckets::DrawingBucketArchive;

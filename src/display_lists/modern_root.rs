@@ -176,7 +176,7 @@ fn root_environment(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     view_bodies(archive)
 }
 
-fn old_lights(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+pub(super) fn old_lights(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     let present = archive.i32("old_lights.has_lights")?;
     if present != 0 {
         archive.object_array(

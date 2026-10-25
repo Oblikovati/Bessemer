@@ -4,10 +4,14 @@ use crate::{
     tessellation::{ArchiveVersion, FacetArchiveMode, TessellationContext},
 };
 
-pub(super) fn facet_context(context: &DisplayArchiveContext) -> TessellationContext {
+pub(super) fn facet_context(context: &DisplayArchiveContext, drawing: bool) -> TessellationContext {
     TessellationContext {
         archive_version: ArchiveVersion::new(context.version.value()),
-        mode: FacetArchiveMode::Full,
+        mode: if drawing && context.version.value() >= 0x2be5 {
+            FacetArchiveMode::Lightweight
+        } else {
+            FacetArchiveMode::Full
+        },
     }
 }
 
@@ -123,7 +127,7 @@ fn face_identity(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn inline_facet(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    let context = facet_context(&archive.context);
+    let context = facet_context(&archive.context, archive.drawing_buckets);
     let available = archive.available_entries();
     let (container, entries) =
         crate::tessellation::read_embedded(&mut archive.cursor, context, available)?;
