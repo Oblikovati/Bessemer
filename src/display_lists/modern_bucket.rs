@@ -10,14 +10,19 @@ pub(super) fn view(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         archive.transform("ghost_dl_xform")?;
     }
     view_flags(archive)?;
-    let count = wall_count(archive, "sub_buckets.count", 2)?;
-    for index in 0..count {
-        archive.object(&format!("sub_buckets[{index}]"), &["uiViewBucket_c"])?;
-    }
+    view_sub_buckets(archive)?;
     if archive.context.version.value() > 0xc90 {
         archive.object("visual_properties", &["moVisualProperties_c"])?;
     }
     view_tail(archive)
+}
+
+fn view_sub_buckets(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    let count = wall_count(archive, "sub_buckets.count", 2)?;
+    for index in 0..count {
+        archive.object(&format!("sub_buckets[{index}]"), &["uiViewBucket_c"])?;
+    }
+    Ok(())
 }
 
 fn view_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
