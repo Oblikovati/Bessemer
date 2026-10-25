@@ -304,6 +304,8 @@ fn all_five_old_light_classes_keep_their_identity_in_complete_earlier_roots() {
 
 #[path = "support/pre_facet_external.rs"]
 mod external_faces;
+#[path = "support/legacy_addins.rs"]
+mod legacy_addins;
 #[path = "support/legacy_cameras.rs"]
 mod legacy_cameras;
 #[path = "support/legacy_panes.rs"]

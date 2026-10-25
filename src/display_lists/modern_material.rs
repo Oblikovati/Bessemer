@@ -6,8 +6,7 @@ pub(super) fn visual(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         archive.u32(label)?;
     }
     archive.scope("material", material)?;
-    archive.text("addin_identifier")?;
-    archive.i32("valid_only_for_addin")?;
+    visual_addin(archive)?;
     if archive.context.version.value() > 0xb53 {
         archive.i32("use_in_sw_lw_rendering")?;
     }
@@ -15,6 +14,14 @@ pub(super) fn visual(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         archive.text("appearance_name")?;
     }
     visual_tail(archive)
+}
+
+fn visual_addin(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() <= 0xb2b {
+        return Ok(());
+    }
+    archive.text("addin_identifier")?;
+    archive.i32("valid_only_for_addin").map(|_| ())
 }
 
 fn visual_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {

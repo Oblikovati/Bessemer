@@ -30,6 +30,9 @@ pub(super) fn body(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn body_property_map(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() < 0xb4b {
+        return Ok(());
+    }
     if archive.context.version.value() <= 0x10ae {
         return single_visual_property(archive, "body_prop_infos[0].value.viz_prop");
     }

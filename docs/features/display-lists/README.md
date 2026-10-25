@@ -514,3 +514,7 @@ The [earlier appearance checkpoint](legacy-visual-layouts.md) admits contexts fr
 2891, with 50 complete roots and six containers. Lightweight-rendering words and
 appearance names follow separate presence gates; cache-backed faces remain complete
 through edits, reopen and revert.
+
+The [earlier add-in and body-property checkpoint](legacy-addin-layouts.md) admits
+contexts from 2796, with 50 complete roots and six containers. It preserves absent
+add-in fields and body-property pointers without inserting default values.
