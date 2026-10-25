@@ -40,6 +40,8 @@ def assembly_reader(original: object, version: int, patches: list[tuple[int,int,
 @contextmanager
 def tail_readers(patches: list[tuple[int,int,bytes]], version: int) -> Iterator[None]:
     original_version,original_decals = dl_tess._v,dl_tess._decal_list
+    original_viewer = dl_tess.read_moViewerComponentData
+    dl_tess.read_moViewerComponentData = viewer_reader(original_viewer,version,patches)
     names = ["uoTempFaceTessData_c","uoTempAssemblySHDData_c","uoTempSubAssemblySHDData_c"]
     originals = {name:ObjectArchive.readers[name] for name in names}
     dl_tess._v = lambda archive:max(original_version(archive),0xfd8)
@@ -50,16 +52,26 @@ def tail_readers(patches: list[tuple[int,int,bytes]], version: int) -> Iterator[
     finally:
         dl_tess._v,dl_tess._decal_list = original_version,original_decals
         ObjectArchive.readers.update(originals)
+        dl_tess.read_moViewerComponentData = original_viewer
 
 
 def earlier_tails(document: object, path: object, raw: bytes, version: int, kind: str) -> bytes:
     if version>=0xfd8:return raw
     patches = []
     with tail_readers(patches,version):collect(document,path,raw,version,set())
-    assert len(patches)==(4 if kind=="part" else 5+int(version<=0xf76))
+    assert len(patches)==(4 if kind=="part" else 5+int(version<=0xf76)+int(version<=0xe11))
     return apply_patches(raw,patches)
 
 def header_layout(raw: bytes, version: int) -> bytes:
     # The two root words and six bound doubles precede the optional size double.
     assert raw[:4]==struct.pack("<i",1)
     return raw[:56]+raw[64:] if version<=0xfca else raw
+
+
+def viewer_reader(original: object, version: int, patches: list[tuple[int,int,bytes]]) -> object:
+    def read(archive: object) -> object:
+        result = original(archive)
+        assert archive.b[archive.p-4:archive.p]==struct.pack("<i",result["reference_id"])
+        if version<=0xe11:patches.append((archive.p-4,archive.p,b""))
+        return result
+    return read

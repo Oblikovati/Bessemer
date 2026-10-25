@@ -80,7 +80,7 @@ fn object_target(archive: &DisplayArchive, path: &str) -> DisplayObjectPointer {
 
 #[test]
 fn all_body_property_roots_match_independent_fields_and_forced_bytes() {
-    assert_eq!(cases().len(), 224);
+    assert_eq!(cases().len(), 258);
     let mut fields = 0;
     for case in cases() {
         let archive = parsed(case);
@@ -108,7 +108,7 @@ fn all_body_property_roots_match_independent_fields_and_forced_bytes() {
             case.bytes
         );
     }
-    assert_eq!(fields, 57014);
+    assert_eq!(fields, 60700);
 }
 
 #[test]
@@ -269,7 +269,10 @@ fn early_appearance_layouts_keep_the_old_word_and_omit_unstored_rendering_fields
             suffix_present(".rv_app_props.reflectivity"),
             case.version >= 0x1052
         );
-        assert_eq!(suffix_present(".unknown_old_5c"), case.version < 0x1052);
+        assert_eq!(
+            suffix_present(".unknown_old_5c"),
+            (0xe55..0x1052).contains(&case.version)
+        );
         assert_eq!(
             suffix_present(".default_appearance"),
             case.version >= 0x1052
@@ -392,3 +395,6 @@ mod earlier_widths;
 
 #[path = "support/earliest_materials.rs"]
 mod earlier_materials;
+
+#[path = "support/earliest_state.rs"]
+mod earlier_state;

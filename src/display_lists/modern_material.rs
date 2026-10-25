@@ -31,6 +31,9 @@ fn visual_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 
 fn visual_appearance_state(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i32("hardcoded_facet_display")?;
+    if archive.context.version.value() < 0xe55 {
+        return Ok(());
+    }
     let appearance = if archive.context.version.value() < 0x1052 {
         "unknown_old_5c"
     } else {
