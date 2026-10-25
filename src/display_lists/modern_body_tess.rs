@@ -17,7 +17,10 @@ pub(super) fn facet_context(context: &DisplayArchiveContext, drawing: bool) -> T
 
 pub(super) fn body(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.object_array("faces", &["uoTempFaceTessData_c"])?;
-    archive.i32s(&["unknown_20", "unknown_24", "unknown_2c"])?;
+    archive.i32s(&["unknown_20", "unknown_24"])?;
+    if archive.context.version.value() > 0x852 {
+        archive.i32("unknown_2c")?;
+    }
     body_property_map(archive)?;
     super::modern_decals::list(archive, "decals")?;
     if archive.context.version.value() > 0x2017 {

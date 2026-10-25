@@ -53,7 +53,7 @@ fn complete_environment_text_edge_and_facet_edits_match_independent_bytes_and_re
     }
 }
 
-fn expected_facet(version: u32, index: usize, edited: usize) -> FacetArchive {
+pub(super) fn expected_facet(version: u32, index: usize, edited: usize) -> FacetArchive {
     let bytes = facet_bytes(version, index, edited);
     let limits = TessellationLimits {
         maximum_components: 0,

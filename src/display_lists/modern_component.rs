@@ -13,7 +13,7 @@ pub(super) fn read(archive: &mut DisplayDecoder<'_>) -> Result<std::sync::Arc<Ar
     archive.text("model_name")?;
     archive.text("path_name")?;
     archive.i32("is_a_zone")?;
-    integers(archive, "gobbled_up_atom_ids")?;
+    component_atoms(archive)?;
     display_mode(archive)?;
     if archive.context.version.value() >= 0xb9b {
         archive.f64("unknown_190")?;
@@ -216,4 +216,11 @@ fn strings(archive: &mut DisplayDecoder<'_>, label: &str) -> Result<()> {
         archive.text(&format!("{label}[{index}]"))?;
     }
     Ok(())
+}
+
+fn component_atoms(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() <= 0x864 {
+        return Ok(());
+    }
+    integers(archive, "gobbled_up_atom_ids")
 }

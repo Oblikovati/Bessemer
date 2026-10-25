@@ -341,3 +341,6 @@ mod legacy_texture;
 
 #[path = "support/legacy_environment.rs"]
 mod legacy_environment;
+
+#[path = "support/legacy_model.rs"]
+mod legacy_model;

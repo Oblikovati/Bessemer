@@ -70,6 +70,9 @@ fn part_geometry(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn paired_arrays(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() <= 0x852 {
+        return Ok(());
+    }
     let count = archive.count("unknown_30.count", 8)?;
     archive.entries(count, "unknown_48")?;
     for label in ["unknown_30", "unknown_48"] {

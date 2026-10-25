@@ -563,3 +563,7 @@ The [legacy texture checkpoint](legacy-texture-layouts.md) admits contexts from
 The [legacy environment checkpoint](legacy-environment-layouts.md) admits contexts
 from 2277, covering absent environment-tail and facet-coordinate fields with
 190 complete roots, twenty independent facet records and four containers.
+
+The [legacy model checkpoint](legacy-model-layouts.md) admits contexts from
+2130. Its 226 complete roots cover absent body/part metadata and component atom
+lists, including inline and externally cached models and four containers.
