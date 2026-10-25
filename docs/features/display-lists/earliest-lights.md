@@ -1,9 +1,11 @@
 # Earliest light and appearance layouts
 
-Feature #28 now admits display versions 4500–19000, excluding the uncounted-window
+The light work admitted display versions 4500–19000, excluding the uncounted-window
 interval `0x1FAE`–`0x1FCE`. Full documented-schema parity, earlier contexts and
 unresolved object bodies remain unfinished. These are archive checks, separate
 from native application acceptance and geometry validity.
+
+The [earliest wall work](earliest-walls.md) later extended the lower bound to 4400.
 
 The new conditions cover coupled light, material and assembly layouts:
 

@@ -50,7 +50,10 @@ pub(super) fn face(archive: &mut DisplayDecoder<'_>) -> Result<()> {
             archive.object("value", &["moVisualProperties_c"])
         })?;
     }
-    archive.i32s(&["unknown_34", "unknown_68"])?;
+    archive.i32("unknown_34")?;
+    if archive.context.version.value() >= 0x117d {
+        archive.i32("unknown_68")?;
+    }
     face_pairs(archive)?;
     face_identity(archive)
 }

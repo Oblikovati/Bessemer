@@ -32,10 +32,12 @@ versioned named, annotation and 3D-view codecs, plus part/assembly archive readi
 validated edits and writing with inline facets, explicit external face references
 and reference geometry, scenes, display items, view buckets, graphics references,
 markup-ink grids, per-configuration data, decals, null-bitmap textured planes and
-lights for display versions 4500–19000, excluding the uncounted-window interval
+lights for display versions 4400–19000, excluding the uncounted-window interval
 `0x1FAE`–`0x1FCE`, with an explicit
 native file-version context. Tangent bucket lists follow that context independently
 of the display-list version.
+Before `0x117F`, scene walls support null legacy-material pointers; non-null
+material bodies remain explicitly unsupported.
 All 1,086 reference-readable part/assembly display-list streams reconstruct
 exactly; complete documented-schema support remains in development. See the
 [display-list work and evidence](docs/features/display-lists/README.md).

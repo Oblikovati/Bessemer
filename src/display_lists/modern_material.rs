@@ -118,6 +118,13 @@ fn rv(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 
 fn rv_illumination(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i32("illum_shader_type")?;
+    if archive.context.version.value() >= 0x1165 {
+        rv_shader_settings(archive)?;
+    }
+    rv_tail(archive)
+}
+
+fn rv_shader_settings(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.f32s(&["axis_direction1", "axis_direction2"])?;
     archive.text("unknown_68")?;
     archive.u32("specular_color")?;
@@ -129,10 +136,13 @@ fn rv_illumination(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         "luminous_intensity",
     ])?;
     archive.i32("flags")?;
-    rv_tail(archive)
+    Ok(())
 }
 
 fn rv_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() <= 0x1179 {
+        return rv_surface_details(archive);
+    }
     archive.f32("refraction_roughness")?;
     archive.i32("surface_finish_shader_type")?;
     float3(archive, "appearance_u_dir")?;

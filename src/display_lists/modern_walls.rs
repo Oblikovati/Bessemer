@@ -15,6 +15,10 @@ pub(super) fn read(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn base(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() < 0x117f {
+        archive.object("pw_material", &["moPWMaterialProperties_c"])?;
+        return archive.i32s(&["visible", "reflective"]);
+    }
     archive.i32s(&["visible", "reflective"])?;
     archive.object("viz_prop", &["moVisualProperties_c"])?;
     archive.i32("unknown_10")?;
