@@ -44,8 +44,8 @@ and background suffixes.
 Before `0x117F`, scene walls support null legacy-material pointers; non-null
 material bodies remain explicitly unsupported.
 All 1,086 reference-readable part/assembly display-list streams reconstruct
-exactly; complete documented-schema support remains in development. See the
-[display-list work and evidence](docs/features/display-lists/README.md).
+exactly. The [display-list acceptance review](docs/features/display-lists/acceptance-review.md)
+records supported layouts, explicit unresolved cases and the integration gate.
 Drawing `Contents/VBLists` supports complete reading, construction, isolated edits
 and writing for unsigned model versions from `0x27CC` onward. All 20 native
 drawing streams

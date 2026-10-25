@@ -6,6 +6,8 @@ import platform
 import sys
 from owned_root_inventory import OwnedRoot,inventory_roots
 from predicate_probe import PredicateCollector,ProbedSourceFinder,predicate_report,MODULES
+from registered_class_audit import DisplayClassWitness,observe_classes,registered_readers,dispatched_classes,reader_class_report
+from audit_provenance import audit_source_snapshot,require_unchanged_snapshot
 
 
 def install_probe(reference: Path, collector: PredicateCollector) -> ProbedSourceFinder:
@@ -17,7 +19,7 @@ def install_probe(reference: Path, collector: PredicateCollector) -> ProbedSourc
     return finder
 
 
-def parse_owned_root(root: OwnedRoot, collector: PredicateCollector) -> None:
+def parse_owned_root(root: OwnedRoot, collector: PredicateCollector) -> dict[str,int]:
     import displaylists
     from mfcobjects import ObjectArchive
     archive = ObjectArchive(root.payload,root.version)
@@ -28,6 +30,7 @@ def parse_owned_root(root: OwnedRoot, collector: PredicateCollector) -> None:
     finally:collector.active = None
     if archive.p!=len(root.payload):
         raise ValueError(f"{root.label} ended at {archive.p}; expected {len(root.payload)}")
+    return archive.classes
 
 
 def rust_replay(executable: str, roots: list[OwnedRoot]) -> str:
@@ -43,30 +46,35 @@ def bind_graphics_plane() -> None:
     dl_tess.EXTERN["mgPlane"] = plane_reader
 
 
-def write_report(reference: Path, roots: list[OwnedRoot], collector: PredicateCollector, trace_hash: str) -> None:
+def write_report(reference: Path, roots: list[OwnedRoot], collector: PredicateCollector, trace_hash: str, witnesses: dict[str,DisplayClassWitness], snapshot: dict[str,object]) -> None:
     predicates = predicate_report(collector)
     report = {"scope":"owned full-root execution of version predicates; one-sided and unobserved paths require review",
         "platform":platform.platform(),"roots":len(roots),"groups":len({root.label.split('[')[0] for root in roots}),
         "two_rust_processes_byte_identical":True,"rust_trace_sha256":trace_hash,
         "reference_source_sha256":{name:hashlib.sha256((reference/(name+".py")).read_bytes()).hexdigest() for name in sorted(MODULES)},
         "predicates":len(predicates),"both_outcomes":sum(row["both_outcomes"] for row in predicates),
-        "observations":predicates}
+        "observations":predicates,
+        "source_snapshot":snapshot,"registered_classes":reader_class_report(registered_readers(reference),
+            dispatched_classes(Path("src/display_lists/archive_objects.rs")),witnesses)}
     destination = Path(__file__).with_name("version-predicate-audit.json")
     destination.write_text(json.dumps(report,indent=2)+"\n",encoding="utf-8",newline="\n")
-    print(json.dumps({key:value for key,value in report.items() if key!="observations"}))
+    print(json.dumps({key:value for key,value in report.items() if key not in {"observations","registered_classes","source_snapshot"}}))
 
 
 def main(executable: str) -> None:
     reference = Path("../inventor-interface/solidworks").resolve()
     collector = PredicateCollector()
     install_probe(reference,collector)
+    snapshot = audit_source_snapshot(reference,Path(executable))
     roots = inventory_roots(Path(__file__).parent,Path("tests/fixtures/display-lists"))
     trace_hash = rust_replay(executable,roots)
     bind_graphics_plane()
+    witnesses: dict[str,DisplayClassWitness] = {}
     for index,root in enumerate(roots):
-        parse_owned_root(root,collector)
+        observe_classes(witnesses,root,parse_owned_root(root,collector))
         if index%1000==0:print(json.dumps({"parsed_roots":index+1,"total":len(roots)}),flush=True)
-    write_report(reference,roots,collector,trace_hash)
+    require_unchanged_snapshot(snapshot,audit_source_snapshot(reference,Path(executable)))
+    write_report(reference,roots,collector,trace_hash,witnesses,snapshot)
 
 
 if __name__=="__main__":
