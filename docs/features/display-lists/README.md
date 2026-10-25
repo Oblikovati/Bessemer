@@ -551,3 +551,7 @@ empty and cached layouts across the 2597 boundary.
 The [ordinary text checkpoint](ordinary-text-layouts.md) admits contexts from
 2563, with separate text-width and material-classification boundaries, 158
 complete roots and four inline part/assembly containers.
+
+The [legacy rendering checkpoint](legacy-rendering-layouts.md) admits contexts
+from 2388. Its 262 complete roots cover material rendering flags and auxiliary
+facet textures on both sides of their bounds, with four whole-document fixtures.

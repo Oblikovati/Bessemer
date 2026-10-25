@@ -24,7 +24,7 @@ fn resolved_archive(document: &Document, kind: DisplayDocumentKind) -> DisplayAr
     let context =
         DisplayArchiveContext::from_document(document, kind, 19000, directory, limits, 1024 * 1024)
             .unwrap();
-    assert!(matches!(context.version.value(), 2563 | 2596));
+    assert!(matches!(context.version.value(), 2388 | 2563 | 2596));
     assert!(context.face_tessellation_components.is_empty());
     let raw = document.read_stream("Contents/DisplayLists").unwrap();
     DisplayArchive::from_bytes(&raw, context, LIMITS).unwrap()

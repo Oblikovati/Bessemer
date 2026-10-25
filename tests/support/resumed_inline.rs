@@ -47,7 +47,7 @@ fn independent_facet(enabled: usize, edited: usize) -> FacetArchive {
     FacetArchive::from_bytes(FACET_BYTES[enabled][edited], facet_context(), limits).unwrap()
 }
 
-fn inline_facets(archive: &DisplayArchive) -> Vec<&FacetContainer> {
+pub(super) fn inline_facets(archive: &DisplayArchive) -> Vec<&FacetContainer> {
     archive
         .contents()
         .fields

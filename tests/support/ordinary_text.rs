@@ -16,7 +16,7 @@ fn complete_ordinary_text_roots_match_independent_fields_and_forced_bytes() {
     );
 }
 
-fn check_ordinary_gates(case: OldCase) {
+pub(super) fn check_ordinary_gates(case: OldCase) {
     let archive = parsed(case);
     for index in 9..13 {
         let prefix = format!("root.views[0].display_items.items[{index}].data");
@@ -37,8 +37,11 @@ fn ordinary_widths_and_material_classification_are_absent_through_their_bounds()
 }
 
 fn check_ordinary_edit(case: OldCase) {
+    check_complete_edit(case, expected_ordinary_edit(case));
+}
+
+pub(super) fn check_complete_edit(case: OldCase, expected_case: OldCase) {
     let source = parsed(case);
-    let expected_case = expected_ordinary_edit(case);
     let expected = parsed(expected_case);
     let contents = resumed_inline::resumed_edited_contents(&source, &expected);
     let edited = source.with_contents(contents, LIMITS).unwrap();

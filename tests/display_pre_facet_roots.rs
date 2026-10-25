@@ -332,3 +332,6 @@ mod resumed_inline;
 
 #[path = "support/ordinary_text.rs"]
 mod ordinary_text;
+
+#[path = "support/legacy_rendering.rs"]
+mod legacy_rendering;

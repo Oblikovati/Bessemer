@@ -74,13 +74,7 @@ pub(super) fn material(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn material_rendering(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    archive.i32s(&[
-        "use_advanced_graphics",
-        "use_defined_texture",
-        "use_defined_shader",
-        "use_defined_color",
-        "use_defined_hatch",
-    ])?;
+    material_render_flags(archive)?;
     if archive.context.version.value() > 0xa05 {
         archive.text("classification")?;
     }
@@ -242,5 +236,19 @@ pub(super) fn float3(archive: &mut DisplayDecoder<'_>, prefix: &str) -> Result<(
     for index in 0..3 {
         archive.f32(&format!("{prefix}[{index}]"))?;
     }
+    Ok(())
+}
+
+fn material_render_flags(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() <= 0x954 {
+        return Ok(());
+    }
+    archive.i32s(&[
+        "use_advanced_graphics",
+        "use_defined_texture",
+        "use_defined_shader",
+        "use_defined_color",
+        "use_defined_hatch",
+    ])?;
     Ok(())
 }
