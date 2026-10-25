@@ -74,4 +74,8 @@ pub use archive_types::{
 
 pub use archive_types::{DisplayObjectId, DisplayObjectPointer};
 
+mod modern_concept;
+mod modern_pw_scene;
 mod modern_reference;
+mod modern_scene;
+mod modern_walls;

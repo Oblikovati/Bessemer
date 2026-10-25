@@ -14,6 +14,7 @@ import displaylists
 import swcontainer
 import swcover
 import reference_corpus
+import scene_corpus
 
 
 def collect() -> tuple[bytes, list[tuple[str, bytes, int, bytes]], str]:
@@ -31,7 +32,7 @@ def collect() -> tuple[bytes, list[tuple[str, bytes, int, bytes]], str]:
         root = displaylists.display_lists(archive, archive.doc_kind)
         assert archive.p == len(raw)
         name = path.relative_to(Path(swcover.SAMPLES)).as_posix()
-        records.append((name, raw, archive.version & 0xffffffff, reference_corpus.trace(root)))
+        records.append((name, raw, archive.version & 0xffffffff, reference_corpus.trace(root)+scene_corpus.trace(root)))
         manifest.update(name.encode()+b"\0"+raw)
         components = sorted(getattr(archive, "face_tess_comp_ids", ()))
         framed.extend(context_frame(archive.version, archive.doc_kind, components)+struct.pack("<I", len(raw))+raw)
@@ -53,20 +54,20 @@ def results(raw: bytes, records: list[tuple[str, bytes, int, bytes]], traces: li
     accepted: list[str] = []
     failures: Counter[str] = Counter()
     versions: Counter[int] = Counter()
-    fields = 0
+    fields: Counter[str] = Counter()
     for (name, source, version, expected), trace in zip(records, traces, strict=True):
         status = raw[position]
         payload, position = reference_corpus.frame_at(raw, position+1)
         if status == 0:
             assert payload == source, name
-            fields += reference_corpus.compare_trace(trace, expected, name)
+            fields.update(scene_corpus.field_coverage(trace,expected,name))
             accepted.append(name)
         else:
             assert (status, trace) == (1, b""), f"{name}: failure trace {(status, trace)!r}; expected (1, b'')"
             failures[payload.decode()] += 1
             versions[version] += 1
     assert position == len(raw)
-    return {"accepted": accepted, "failures": dict(failures.most_common()), "missing_by_version": dict(sorted(versions.items())), "independent_reference_fields": fields}
+    return {"accepted": accepted, "failures": dict(failures.most_common()), "missing_by_version": dict(sorted(versions.items())), "independent_reference_fields": fields["reference"], "independent_scene_fields": fields["scene"]}
 
 
 def audit(executable: str) -> None:

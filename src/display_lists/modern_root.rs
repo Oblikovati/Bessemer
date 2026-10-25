@@ -151,9 +151,7 @@ fn display_scene(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i32("detail_mask_12")?;
     let scene = archive.i32("scene_type")?;
     if scene == 1 || scene == 2 {
-        return Err(unsupported(format!(
-            "scene type {scene}; scene bodies are pending implementation"
-        )));
+        archive.scope("scene", super::modern_scene::read)?;
     }
     archive.i32s(&[
         "units_of_measurement.unknown_flag",

@@ -321,7 +321,7 @@ edit/reopen/revert, input isolation and eight concurrent edits against the same
 expected result. The reference module was extracted separately; its existing
 owned fixtures and all 1,025 transform vectors remained unchanged.
 
-The current [whole-stream audit](archive-audit.json) reconstructs 453 of 1,086
+The reference-geometry checkpoint reconstructed 453 of 1,086
 native streams and matches 90,067 independent reference-geometry fields within
 those complete streams. Two processes return identical reconstruction, diagnostics
 and field traces. Failed streams publish no partial trace, and the audit preserves
@@ -336,17 +336,56 @@ cargo build --release --example rebuild_display_archives
 python -B -X utf8 docs/features/display-lists/audit_archive_corpus.py target/pinned-1.99.0/release/examples/rebuild_display_archives.exe
 ```
 
+## Modern scenes and generic object slots
+
+Version-19000 cubical and spherical scenes now read and write their complete
+shared body: concept/node metadata, PhotoWorks scene settings, wall information,
+all three wall shapes, bounds, floor/environment transforms, exposure and field of
+view. Other scene selector values retain their documented absent-body behavior.
+The two wall counts preserve raw nonpositive values while reading empty lists,
+matching the native loading branch. Declared font/material pointers still enforce
+their runtime classes; generic `CObject` slots accept heterogeneous registered
+objects without treating unknown bodies as opaque successes.
+
+Five [independent scene vectors](scene-vectors.json) cover both selectors, all wall
+shapes, duplicate wall keys, noncanonical counts and strings, heterogeneous aliases,
+empty/negative counts, absent scene bodies and an independently encoded exposure
+edit. They match 747 semantic fields. Raw presence/count framing is checked
+separately and every complete stream reconstructs exactly.
+
+Nine tests cover those fields and bytes, object roles and aliases, unknown class
+rejection, exact entry/object budgets, malformed counts and wall kinds, every new
+scene/footer truncation, conditional field shape, equivalent-string byte budgets,
+whole-document edit/reopen/revert, source ownership and eight concurrent edits.
+These generated graph fixtures establish archive behavior; they do not establish
+model ownership or application validity.
+
+The [current native audit](archive-audit.json) reconstructs 552 of 1,086 streams,
+with 117,118 independently checked reference-geometry fields and 80,284 scene
+fields. Both processes return identical bytes, diagnostics and combined field
+traces, and all earlier accepted streams remain accepted. Scene traces follow
+first object declarations so shared aliases do not invent duplicate bodies.
+Earlier scene versions, remaining archive fields, cross-stream validity and
+native application acceptance remain required work.
+
+```text
+python -B -X utf8 docs/features/display-lists/generate_scene_vectors.py
+cargo test --test display_scenes
+cargo build --release --example rebuild_display_archives
+python -B -X utf8 docs/features/display-lists/audit_archive_corpus.py target/pinned-1.99.0/release/examples/rebuild_display_archives.exe
+```
+
 ## Remaining implementation and integration gate
 
-- Connect the parsed display-list version to explicit part/assembly context,
-  native file version and cross-stream face component IDs.
+- Complete whole-document context resolution and cross-stream validation using
+  declared document/file/archive versions and the external face directory/blocks.
 - Reuse existing MFC strings, exact numeric values, class/object maps and face
   tessellation records. Preserve cycles, aliases and object-tag spelling; do not
   reset inherited state between nested serializers.
 - Extend environments, splitters, fonts, lights and visual properties beyond
   the initial version-19000 part layout. Add buckets and display items.
-- Add scenes, remaining shaded-data layouts, decals,
-  textured planes, units, ink views and configuration tails. Unknown-meaning
+- Add earlier scene and unit layouts, remaining shaded-data layouts, decals,
+  textured planes, ink views and configuration tails. Unknown-meaning
   fields remain explicit raw typed values; unresolved bodies are unsupported.
 - Complete the immutable archive graph, validated owned construction/edits,
   revision-scoped identities, authentic reverts, ordered coverage and history.

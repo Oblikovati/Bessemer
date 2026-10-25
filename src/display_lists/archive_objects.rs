@@ -7,12 +7,26 @@ use crate::{
     archive_codec::{ArchiveCursor, ObjectRecord},
 };
 
+#[derive(Clone, Copy)]
+enum ObjectRole<'a> {
+    Declared(&'a [&'a str]),
+    CObject,
+}
+
 impl DisplayDecoder<'_> {
     pub fn object(&mut self, label: &str, expected: &[&str]) -> Result<()> {
+        self.object_with_role(label, ObjectRole::Declared(expected))
+    }
+
+    pub fn cobject(&mut self, label: &str) -> Result<()> {
+        self.object_with_role(label, ObjectRole::CObject)
+    }
+
+    fn object_with_role(&mut self, label: &str, role: ObjectRole<'_>) -> Result<()> {
         let start = self.input.len() - self.cursor.remaining();
         let record = self.objects.object(&mut self.cursor)?;
         let end = self.input.len() - self.cursor.remaining();
-        require_role(&record, expected, label)?;
+        require_role(&record, role, label)?;
         let mut tag = read_tag(&self.input[start..end])?;
         resolve_target(&mut tag, &record)?;
         self.field(label, DisplayFieldValue::ObjectTag(tag))?;
@@ -24,6 +38,14 @@ impl DisplayDecoder<'_> {
     }
 
     pub fn object_array(&mut self, label: &str, expected: &[&str]) -> Result<()> {
+        self.array_with_role(label, ObjectRole::Declared(expected))
+    }
+
+    pub fn cobject_array(&mut self, label: &str) -> Result<()> {
+        self.array_with_role(label, ObjectRole::CObject)
+    }
+
+    fn array_with_role(&mut self, label: &str, role: ObjectRole<'_>) -> Result<()> {
         let short = self.u16(&format!("{label}.count_word"))?;
         let count = if short == u16::MAX {
             self.u32(&format!("{label}.count_dword"))? as usize
@@ -37,13 +59,16 @@ impl DisplayDecoder<'_> {
             )));
         }
         for index in 0..count {
-            self.object(&format!("{label}[{index}]"), expected)?;
+            self.object_with_role(&format!("{label}[{index}]"), role)?;
         }
         Ok(())
     }
 }
 
-fn require_role(record: &ObjectRecord, expected: &[&str], label: &str) -> Result<()> {
+fn require_role(record: &ObjectRecord, role: ObjectRole<'_>, label: &str) -> Result<()> {
+    let ObjectRole::Declared(expected) = role else {
+        return Ok(());
+    };
     let class = match record {
         ObjectRecord::Null => return Ok(()),
         ObjectRecord::New { class, .. } | ObjectRecord::Reference { class, .. } => class,
@@ -120,6 +145,14 @@ fn dispatch(archive: &mut DisplayDecoder<'_>, class: &str) -> Result<()> {
         "moAmbientLight_c" | "moLightFeature_c" => super::modern_lights::ambient(archive),
         "moDirectionLight_c" => super::modern_lights::directional(archive),
         "moVisualProperties_c" => super::modern_material::visual(archive),
+        "moNodeName_c" => archive.text("name"),
+        "pwSceneData_c" => super::modern_pw_scene::read(archive),
+        other => dispatch_tessellation(archive, other),
+    }
+}
+
+fn dispatch_tessellation(archive: &mut DisplayDecoder<'_>, class: &str) -> Result<()> {
+    match class {
         "uoTempAssemblySHDData_c" | "uoTempSubAssemblySHDData_c" => {
             super::modern_assembly::shaded_component(archive)
         }

@@ -1,7 +1,6 @@
 {
   "failures": {
     "display-list archive Contents/DisplayLists: Unsupported: display item count 8; populated display item bodies are pending implementation": 185,
-    "display-list archive Contents/DisplayLists: Unsupported: scene type 1; scene bodies are pending implementation": 99,
     "display-list archive Contents/DisplayLists: Unsupported: display context version 10000, file version 19000, kind Part; initial full-stream checkpoint requires display/file version 19000": 49,
     "display-list archive Contents/DisplayLists: Unsupported: display context version 9000, file version 19000, kind Part; initial full-stream checkpoint requires display/file version 19000": 23,
     "display-list archive Contents/DisplayLists: Unsupported: display item count 5; populated display item bodies are pending implementation": 20,
@@ -93,13 +92,14 @@
     "10000": 52,
     "11000": 1,
     "18000": 22,
-    "19000": 530
+    "19000": 431
   },
-  "independent_reference_fields": 90067,
+  "independent_reference_fields": 117118,
+  "independent_scene_fields": 80284,
   "status": "incomplete implementation audit; missing streams are required work",
   "documents": 1086,
   "manifest_sha256": "94047d85dc01ed0f391378374f2c15f5464301bb26990d4214eecdd600723a87",
-  "accepted_count": 453,
+  "accepted_count": 552,
   "two_processes_identical": true,
   "accepted_manifests": [
     "archive-accepted-000.txt",

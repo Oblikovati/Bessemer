@@ -8,7 +8,15 @@ use std::error::Error;
 mod archive_scalar_trace;
 #[path = "support/reference_trace.rs"]
 mod reference_trace;
+#[path = "support/scene_trace.rs"]
+mod scene_trace;
 mod support;
+#[allow(
+    dead_code,
+    reason = "Shared trace helpers are exercised by view-specific examples and integration tests."
+)]
+#[path = "support/view_trace.rs"]
+mod view_trace;
 use support::framing::{require_count, require_finished, take, take_u32};
 
 fn main() -> Result<(), Box<dyn Error>> {
@@ -114,5 +122,11 @@ fn reconstruct(
     if rebuilt != payload {
         return Err("reconstructed stream differed; expected complete byte identity".into());
     }
-    Ok((rebuilt, reference_trace::trace(&parsed)))
+    Ok((rebuilt, semantic_trace(&parsed)))
+}
+
+fn semantic_trace(archive: &DisplayArchive) -> Vec<u8> {
+    let mut trace = reference_trace::trace(archive);
+    trace.extend(scene_trace::trace(archive));
+    trace
 }
