@@ -93,6 +93,11 @@ pub(super) fn resumed_edited_contents(
         if matches!(target.value, DisplayFieldValue::Facet(_))
             || target.path.contains("display_items.items[10].data.")
             || target.path.contains("display_items.items[12].data.")
+            || (13..17).any(|index| {
+                target
+                    .path
+                    .contains(&format!("display_items.items[{index}].data."))
+            })
         {
             target.value = field(expected, &target.path).unwrap().clone();
         }

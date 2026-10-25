@@ -17,7 +17,7 @@ fn complete_boundary_roots_match_independent_fields_and_forced_bytes() {
     );
 }
 
-fn check_boundary_members(case: OldCase) {
+pub(super) fn check_boundary_members(case: OldCase) {
     let archive = parsed(case);
     legacy_model::check_model_gates(case);
     for member in &archive.contents().fields {

@@ -91,6 +91,9 @@ fn poly_lists(archive: &mut DisplayDecoder<'_>, two_dimensional: bool) -> Result
         {
             continue;
         }
+        if archive.context.version.value() <= 0x7f0 && label == "solid_fill" {
+            continue;
+        }
         poly_list(archive, label, two_dimensional)?;
     }
     Ok(())

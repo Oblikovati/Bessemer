@@ -41,7 +41,11 @@ fn font(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.f64s(&["unknown_10", "unknown_18"])?;
     archive.u32("unknown_20")?;
     archive.text("unknown_name")?;
-    archive.f64s(&["unknown_28", "unknown_30"])
+    archive.f64("unknown_28")?;
+    if archive.context.version.value() > 0x7df {
+        archive.f64("unknown_30")?;
+    }
+    Ok(())
 }
 
 fn simple(archive: &mut DisplayDecoder<'_>) -> Result<()> {

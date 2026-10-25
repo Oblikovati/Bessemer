@@ -571,3 +571,7 @@ lists, including inline and externally cached models and four containers.
 The [legacy boundary checkpoint](legacy-boundary-layouts.md) admits contexts
 from 2078. Its 370 complete roots and forty independent facet records cover
 polygon attributes, body metadata, facet stamps and cone-culling fields.
+
+The [legacy font checkpoint](legacy-font-layouts.md) admits contexts from 2011,
+with 262 complete roots, explicit font records, solid-fill list boundaries,
+twenty-eight independent facet records and four containers.

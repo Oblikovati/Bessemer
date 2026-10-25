@@ -347,3 +347,6 @@ mod legacy_model;
 
 #[path = "support/legacy_boundary.rs"]
 mod legacy_boundary;
+
+#[path = "support/legacy_font.rs"]
+mod legacy_font;
