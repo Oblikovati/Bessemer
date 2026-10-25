@@ -10,6 +10,7 @@ pub struct DisplayArchive {
     context: DisplayArchiveContext,
     source: PreservedContents<DisplayArchiveContents>,
     limits: DisplayArchiveLimits,
+    pub(super) revision: super::archive_identity::DisplayRevision,
 }
 
 impl DisplayArchive {
@@ -30,6 +31,7 @@ impl DisplayArchive {
         Ok(Self {
             context,
             source: PreservedContents::decoded(bytes, contents),
+            revision: Default::default(),
             limits,
         })
     }
@@ -51,6 +53,7 @@ impl DisplayArchive {
         Ok(Self {
             context,
             source: PreservedContents::constructed(contents),
+            revision: Default::default(),
             limits,
         })
     }
@@ -91,6 +94,7 @@ impl DisplayArchive {
         limits: DisplayArchiveLimits,
     ) -> Result<Self> {
         validate(&contents, &self.context, limits)?;
+        let revision = self.edited_revision(&contents);
         let source = self.source.edited(contents);
         if let Some(bytes) = source.original_bytes() {
             super::view_support::require_size(
@@ -101,6 +105,7 @@ impl DisplayArchive {
         }
         Ok(Self {
             context: self.context.clone(),
+            revision,
             source,
             limits,
         })

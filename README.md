@@ -89,3 +89,7 @@ name, contributing innovations in fields ranging from steamship design and sugar
 furnaces and the manufacture of bronze powder. His pioneering process laid the material foundation for the 
 Second Industrial Revolution, enabling the modern expansion of railways, bridges, ocean liners, 
 and skyscrapers worldwide.
+
+Display archives provide `object_handle` and `resolve_object` for revision-scoped
+object lookup. Clones and equivalent edits retain handles; changed edits and
+fresh decodes require new handles. See the [identity contract](docs/features/display-lists/revision-identities.md).
