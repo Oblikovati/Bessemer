@@ -603,3 +603,8 @@ explicit Z edits, independent facets and eight whole-document fixtures.
 The [early model-visual and light checkpoint](legacy-model-viz-layouts.md) admits
 contexts from 989, with 962 complete roots covering model pointers, pane quality,
 facet edge arrays and all five old-light layouts, plus eight containers.
+
+The [early component checkpoint](legacy-component-layouts.md) admits contexts
+from 903, with 402 complete roots covering direct assembly identity fields,
+browser-word omission, polygon type records and logical view activity, plus
+eight whole-document fixtures.

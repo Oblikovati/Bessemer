@@ -11,8 +11,27 @@ pub(crate) fn trace(archive: &DisplayArchive) -> Vec<u8> {
         }
     }
     legacy_flags::append(archive, &mut rows);
+    append_old_activity(archive, &mut rows);
     rows.retain(|_, value| !value.starts_with("a:"));
     view_trace::finish(rows)
+}
+
+fn append_old_activity(archive: &DisplayArchive, rows: &mut view_trace::Trace) {
+    if archive.context().version.value() >= 0x394 {
+        return;
+    }
+    for field in &archive.contents().fields {
+        if field.path.contains(".view_bucket.")
+            && !field.path.contains(".bucket.")
+            && field.path.ends_with(".flags")
+            && let bessemer::display_lists::DisplayFieldValue::I32(word) = field.value
+        {
+            rows.insert(
+                field.path.to_string(),
+                format!("i:{}", i32::from(word != 0)),
+            );
+        }
+    }
 }
 
 fn visible(path: &str) -> bool {

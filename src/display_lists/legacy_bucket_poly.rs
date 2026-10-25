@@ -23,7 +23,9 @@ pub(super) fn read(archive: &mut DisplayDecoder<'_>, two_dimensional: bool) -> R
     if archive.u8("has_user_line_property")? != 0 {
         archive.scope("user_line_property", modern_bucket_poly::line_property)?;
     }
-    modern_bucket_poly::type_payload(archive)?;
+    if archive.context.version.value() > 0x393 {
+        modern_bucket_poly::type_payload(archive)?;
+    }
     attributes(archive)?;
     persistent_tail(archive)
 }

@@ -4,13 +4,19 @@ use crate::Result;
 pub(super) fn environment(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.text("user_name")?;
     archive.scope("splitter_10", splitter)?;
-    archive.i32s(&["unknown_1b0", "browser_view_width"])?;
+    if archive.context.version.value() > 0x387 {
+        archive.i32s(&["unknown_1b0", "browser_view_width"])?;
+    }
     if archive.context.version.value() >= 0x515 {
         archive.scope("splitter_e0", splitter)?;
     }
     if archive.context.version.value() > 0x8e5 {
         archive.i32s(&["unknown_1b8", "unknown_1bc"])?;
     }
+    environment_tail(archive)
+}
+
+fn environment_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     if archive.context.version.value() > 0xf55 {
         archive.i32("unknown_1c0")?;
     }

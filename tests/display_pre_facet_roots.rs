@@ -17,6 +17,8 @@ mod archive_trace;
 mod bucket_trace;
 #[path = "../examples/support/item_trace.rs"]
 mod item_trace;
+#[path = "support/legacy_component.rs"]
+mod legacy_component;
 #[path = "../examples/support/light_trace.rs"]
 mod light_trace;
 #[path = "../examples/support/material_trace.rs"]

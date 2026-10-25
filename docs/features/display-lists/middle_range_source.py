@@ -21,9 +21,13 @@ def source(kind: str) -> tuple[Path,object,bytes]:
 
 
 def component_trace(root: dict[str,object], kind: str) -> bytes:
-    if kind!="assembly":
-        return b""
-    viewer = dict(root["tessellation"][0]["viewer_comp_data"])
+    if kind!="assembly":return b""
+    component = root["tessellation"][0]
+    if "viewer_comp_data" not in component:
+        rows: dict[str,str] = {}
+        flatten("root.tessellation.components[0].comp_id_string",component["comp_id_string"],rows)
+        return "".join(f"{key}={value}\n" for key,value in sorted(rows.items())).encode()
+    viewer = dict(component["viewer_comp_data"])
     for key in ["comp_xform","comp_bbox","comp_viz_prop","ref_geom_data_collector","unknown_obj"]:
         viewer.pop(key,None)
     rows: dict[str,str] = {}

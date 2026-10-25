@@ -5,7 +5,11 @@ pub(super) const ASSEMBLY_CLASSES: &[&str] =
     &["uoTempAssemblySHDData_c", "uoTempSubAssemblySHDData_c"];
 
 pub(super) fn shaded_component(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    let component_id = archive.scope("viewer_comp_data", super::modern_component::read)?;
+    let component_id = if archive.context.version.value() < 0x3a3 {
+        super::modern_component::identity(archive)?
+    } else {
+        archive.scope("viewer_comp_data", super::modern_component::read)?
+    };
     part_tessellation(archive, component_id)?;
     if archive.context.version.value() > 0xc6e {
         archive.i32("unknown_320")?;

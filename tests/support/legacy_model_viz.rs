@@ -21,7 +21,7 @@ fn complete_model_viz_roots_match_independent_fields_and_forced_bytes() {
     );
 }
 
-fn check_model_viz_members(case: OldCase) {
+pub(super) fn check_model_viz_members(case: OldCase) {
     let archive = parsed(case);
     legacy_scope::check_early_scope_members(case);
     for member in &archive.contents().fields {
@@ -87,7 +87,7 @@ fn check_model_viz_facets(case: OldCase) {
     }
 }
 
-fn check_model_viz_facet_record(facet: &FacetContainer, case: OldCase, index: usize) {
+pub(super) fn check_model_viz_facet_record(facet: &FacetContainer, case: OldCase, index: usize) {
     let edited = usize::from(case.scenario % 16 == 1);
     assert_eq!(
         facet,
