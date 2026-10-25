@@ -11,6 +11,7 @@ pub(super) fn view(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     }
     view_flags(archive)?;
     view_sub_buckets(archive)?;
+    super::legacy_bucket_visibility::view_triples(archive)?;
     if archive.context.version.value() > 0xc90 {
         archive.object("visual_properties", &["moVisualProperties_c"])?;
     }
@@ -56,6 +57,7 @@ fn bucket(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         archive.transform("xform_2d")?;
     }
     poly_lists(archive, two_dimensional)?;
+    super::legacy_bucket_visibility::edge_array(archive, two_dimensional)?;
     archive.scope("dl_bucket", super::modern_items::list)?;
     archive.scope("dl_ghost_bucket", super::modern_items::list)?;
     archive.i32("show_hidden_count")?;
@@ -101,6 +103,9 @@ fn poly_list(archive: &mut DisplayDecoder<'_>, label: &str, two_dimensional: boo
 }
 
 fn component_map(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() <= 0xa59 {
+        return Ok(());
+    }
     let word_keys = archive.context.version.value() <= 0x23d7;
     let count = component_count(archive, if word_keys { 3 } else { 5 })?;
     archive.entries(count as usize, "bucket component strings")?;

@@ -85,6 +85,7 @@ mod configuration_views;
 mod configurations;
 mod graphics_reference;
 mod legacy_bucket_poly;
+mod legacy_bucket_visibility;
 mod markup_ink;
 mod modern_bucket;
 mod modern_bucket_poly;

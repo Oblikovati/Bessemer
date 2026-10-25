@@ -42,7 +42,7 @@ fn line_visibility_words_are_absent_before_the_gate_and_keep_all_signed_bits_aft
     }
 }
 
-fn visibility_edited_contents(
+pub(super) fn visibility_edited_contents(
     source: &DisplayArchive,
     expected: &DisplayArchive,
 ) -> DisplayArchiveContents {

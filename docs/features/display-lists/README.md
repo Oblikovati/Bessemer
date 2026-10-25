@@ -538,3 +538,7 @@ records remain distinct, including complete shape-changing edits.
 The [line-visibility checkpoint](legacy-visibility-layouts.md) admits contexts
 from 2650, with 150 complete roots and six containers. It preserves omitted
 visibility words and records why the older holder-name branch is unreachable.
+
+The [temporary edge and triple checkpoint](legacy-edge-layouts.md) admits contexts
+from 2606, with 206 complete roots and twelve containers. It retains discarded
+edge words, nested view triples and the versioned absence of component string maps.
