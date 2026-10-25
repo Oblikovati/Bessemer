@@ -39,7 +39,10 @@ fn pane(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.u16("display_mode")?;
     archive.u16("hlr_display_quality")?;
     archive.f64("perspective")?;
-    archive.text("unknown_a8")
+    if archive.context.version.value() > 0xbda {
+        archive.text("unknown_a8")?;
+    }
+    Ok(())
 }
 
 pub(super) fn fonts(archive: &mut DisplayDecoder<'_>) -> Result<()> {

@@ -69,7 +69,12 @@ fn replace_reopen(original: &Document, archive: &DisplayArchive) -> Document {
     reopened
 }
 
-fn check_edit(version: u32, raw: &[u8], expected: &[u8]) {
+pub(crate) fn check_edit(
+    version: u32,
+    raw: &[u8],
+    expected: &[u8],
+    build_contents: fn(&DisplayArchive, &DisplayArchive) -> DisplayArchiveContents,
+) {
     let original = Document::from_bytes(raw).unwrap();
     let source = resolved_archive(&original);
     assert_eq!(source.context().version.value(), version);
@@ -77,7 +82,7 @@ fn check_edit(version: u32, raw: &[u8], expected: &[u8]) {
     check_document_links(&original, &source);
     let expected = resolved_archive(&Document::from_bytes(expected).unwrap());
     let edited = source
-        .with_contents(edited_contents(&source, &expected), LIMITS)
+        .with_contents(build_contents(&source, &expected), LIMITS)
         .unwrap();
     assert_eq!(edited.to_bytes().unwrap(), expected.to_bytes().unwrap());
     let reopened = replace_reopen(&original, &edited);
@@ -108,6 +113,6 @@ fn check_revert(
 #[test]
 fn complete_older_documents_keep_newer_cache_versions_through_independent_edits_and_reverts() {
     for (version, source, expected) in documents() {
-        check_edit(version, source, expected);
+        check_edit(version, source, expected, edited_contents);
     }
 }

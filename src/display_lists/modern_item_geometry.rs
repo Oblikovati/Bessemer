@@ -27,7 +27,11 @@ fn display_point(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 
 fn line(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     pair(archive)?;
-    archive.u8("unknown_30")?;
+    if archive.context.version.value() <= 0xbf8 {
+        archive.i32("unknown_30")?;
+    } else {
+        archive.u8("unknown_30")?;
+    }
     Ok(())
 }
 

@@ -1,7 +1,8 @@
 # Earlier resolved archives and unresolved facet payloads
 
-Display archive contexts now start at version 3065. The blanket 3196 lower bound
-previously rejected complete archives whose layouts the reference can read.
+The version-3065 checkpoint replaced the blanket 3196 lower bound, which
+rejected complete archives whose layouts the reference can read. The subsequent
+[pane, line and symbol checkpoint](legacy-panes.md) admits contexts from 2999.
 Versions `0xA25` through `0xC7B` contain an unresolved object inside each inline
 facet payload. That remains a typed unsupported error when a facet is present;
 it does not prevent reading an archive with no shaded data, an empty part, or a
@@ -13,8 +14,8 @@ Three stored-field boundaries apply in this interval. User-pen layer IDs start
 after `0xC57`; parabola records gain their two trailing doubles after `0xC58`;
 assembly components gain `unknown_320` after `0xC6E`. Earlier layouts omit those
 fields. Root, font, material, light and other previously covered gates retain
-their existing behavior. Versions below 3065 and the uncounted-window interval
-remain unsupported at the context boundary.
+their existing behavior. At this checkpoint, versions below 3065 and the uncounted-window interval
+remained unsupported at the context boundary.
 
 The [owned corpus](pre-facet-roots.json) contains 94 complete roots across eight
 versions from 3065 through 3196. It covers both document kinds, unshaded roots,

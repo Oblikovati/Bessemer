@@ -8,7 +8,7 @@ display marker. The library previously imposed an additional upper limit of
 19000 on both complete archive readers. That limit did not follow the documented
 version predicates.
 
-Display-list archives now accept versions from 3065 through `u32::MAX`, excluding
+Display-list archives now accept versions from 2999 through `u32::MAX`, excluding
 the unresolved uncounted-window interval `0x1FAE`–`0x1FCE`. Drawing bucket archives
 accept model versions from `0x27CC` through `u32::MAX`. Earlier unresolved layouts
 remain unsupported. Decoding follows the documented predicates; this change does

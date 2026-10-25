@@ -304,3 +304,5 @@ fn all_five_old_light_classes_keep_their_identity_in_complete_earlier_roots() {
 
 #[path = "support/pre_facet_external.rs"]
 mod external_faces;
+#[path = "support/legacy_panes.rs"]
+mod legacy_panes;

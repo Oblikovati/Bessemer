@@ -5,7 +5,7 @@ use bessemer::tessellation::{
 };
 use std::collections::BTreeMap;
 #[path = "pre_facet_external_documents.rs"]
-mod documents;
+pub(super) mod documents;
 #[path = "tessellation.rs"]
 mod tess_support;
 

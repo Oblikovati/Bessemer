@@ -502,3 +502,7 @@ The [earlier resolved archive checkpoint](pre-facet-roots.md) admits contexts
 from 3065, with 94 complete roots and six containers. Cache-backed parts retain
 their non-null objects and exact external face references. Unresolved inline
 facet objects remain explicit payload failures; empty geometry is preserved distinctly.
+
+The [legacy pane, line and symbol checkpoint](legacy-panes.md) admits contexts
+from 2999, with 66 additional complete roots and six containers. Old line flags
+retain their full 32-bit words; omitted pane strings and symbol planes stay absent.

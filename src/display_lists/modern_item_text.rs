@@ -88,7 +88,7 @@ fn simple_widths(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 
 fn symbol(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     point(archive, "unknown_00")?;
-    if archive.i32("is_3d_symbol")? != 0 {
+    if archive.context.version.value() > 0xbbd && archive.i32("is_3d_symbol")? != 0 {
         archive.transform("plane_xform")?;
     }
     archive.f64s(&["unknown_28", "unknown_30"])?;

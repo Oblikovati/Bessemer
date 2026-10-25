@@ -222,7 +222,7 @@ fn explicit_context_and_object_identity_boundaries_are_validated() {
     let bytes = native_archive().to_bytes().unwrap();
     let variants = [
         DisplayArchiveContext {
-            version: DisplayVersion::new(3064),
+            version: DisplayVersion::new(2998),
             ..context()
         },
         DisplayArchiveContext {
