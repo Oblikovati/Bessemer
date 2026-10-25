@@ -146,9 +146,9 @@ fn configuration_footer(archive: &mut DisplayDecoder<'_>, views: usize) -> Resul
 fn require_context(context: &DisplayArchiveContext) -> Result<()> {
     let version = context.version.value();
     require_window_independent(version)?;
-    if version < 767 {
+    if version < 596 {
         return Err(unsupported(format!(
-            "display context version {}, file version {}, kind {:?}; expected display version >=767",
+            "display context version {}, file version {}, kind {:?}; expected display version >=596",
             context.version.value(),
             context.file_version,
             context.kind
@@ -184,7 +184,9 @@ fn root_environment(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         archive.scope("old_display_items", super::modern_items::list)?;
     }
     archive.object("user_model_env", &["uiUserModelEnv_c"])?;
-    archive.object("line_font_mgr", &["uiLineFontMgr_c"])?;
+    if archive.context.version.value() > 0x2fe {
+        archive.object("line_font_mgr", &["uiLineFontMgr_c"])?;
+    }
     if archive.context.version.value() > 0xc9c {
         archive.transform("front_view_transform")?;
     }

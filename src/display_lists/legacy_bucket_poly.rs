@@ -20,7 +20,7 @@ pub(super) fn read(archive: &mut DisplayDecoder<'_>, two_dimensional: bool) -> R
         return Ok(());
     }
     coordinates(archive, count as usize, two_dimensional)?;
-    if archive.u8("has_user_line_property")? != 0 {
+    if archive.context.version.value() > 0x2f8 && archive.u8("has_user_line_property")? != 0 {
         archive.scope("user_line_property", modern_bucket_poly::line_property)?;
     }
     if archive.context.version.value() > 0x393 {
