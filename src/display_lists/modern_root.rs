@@ -112,7 +112,7 @@ fn shaded(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         archive.u32("envelope_system_options.unknown_color")?;
         archive.i32("envelope_system_options.unknown_setting")?;
     }
-    ink_dimensions(archive)?;
+    archive.scope("markup_ink_views", super::markup_ink::read)?;
     configuration_footer(archive)
 }
 
@@ -206,26 +206,5 @@ fn display_scene(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         "units_of_measurement.length_units",
         "units_of_measurement.angle_units",
     ])?;
-    Ok(())
-}
-
-fn ink_dimensions(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    if archive.context.version.value() <= 0x2f80 {
-        return Ok(());
-    }
-    let ink = archive.count("markup_ink_views.view_count", 6)?;
-    // #30: the configuration dimension has no row payload when the ink-view count is zero.
-    let configs = archive.i32("markup_ink_views.configuration_count")?;
-    if configs < 0 {
-        return Err(invalid(format!(
-            "ink configuration count {configs}; expected nonnegative dimension"
-        )));
-    }
-    archive.entries(configs as usize, "ink configuration dimension")?;
-    if ink != 0 {
-        return Err(unsupported(format!(
-            "ink view count {ink}, config count {configs}; ink bodies are pending implementation"
-        )));
-    }
     Ok(())
 }

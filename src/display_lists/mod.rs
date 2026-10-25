@@ -82,6 +82,7 @@ mod modern_walls;
 
 mod graphics_reference;
 mod legacy_bucket_poly;
+mod markup_ink;
 mod modern_bucket;
 mod modern_bucket_poly;
 mod modern_item_annotation;

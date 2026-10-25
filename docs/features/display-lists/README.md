@@ -391,6 +391,8 @@ coverage for the four older supported snapshots while preserving that corpus gat
 - Graphics-reference wire coverage and its independent plane evidence are recorded
   in [graphics-references.md](graphics-references.md); unresolved faceted-data bodies
   remain unsupported.
+- Populated ink grids, empty dimensions and isolated state edits are covered in
+  [markup-ink.md](markup-ink.md).
 - Complete whole-document context resolution and cross-stream validation using
   declared document/file/archive versions and the external face directory/blocks.
 - Reuse existing MFC strings, exact numeric values, class/object maps and face
@@ -399,7 +401,7 @@ coverage for the four older supported snapshots while preserving that corpus gat
 - Extend environments, splitters, fonts, lights, visual properties, buckets and
   display items to the remaining version and caller contexts.
 - Add earlier scene and unit layouts, remaining shaded-data layouts, decals,
-  textured planes, ink views and configuration tails. Unknown-meaning
+  textured planes and configuration tails. Unknown-meaning
   fields remain explicit raw typed values; unresolved bodies are unsupported.
 - Complete the immutable archive graph, validated owned construction/edits,
   revision-scoped identities, authentic reverts, ordered coverage and history.
