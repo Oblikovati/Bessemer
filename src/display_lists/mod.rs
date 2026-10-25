@@ -104,3 +104,9 @@ mod modern_line_style;
 mod modern_component_properties;
 
 mod document_context;
+mod external_face_links;
+mod external_face_types;
+pub use external_face_types::{ExternalFaceLink, ExternalFaceLinkCoverage, ExternalFaceLinks};
+
+mod external_face_coverage;
+mod external_face_errors;

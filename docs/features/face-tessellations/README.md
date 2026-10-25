@@ -31,6 +31,11 @@ the index/hash of each matching directory reference. Its coverage counts disting
 an empty selection from checked references. Unreferenced cache entries are retained.
 It checks one supplied block; it cannot certify that other named blocks exist.
 
+`component_ids()` collects exact component declarations without changing stored
+duplicate records. The display archive's [external face-link check](../display-lists/external-face-links.md)
+uses the directory and supplied blocks to check all named targets and resolve
+requested facets, retaining counts for unused cache entries.
+
 These checks establish archive structure and selected identity links. They do not
 validate topology, geometric consistency, intersections, tolerances, native CAD
 acceptance, or whether a cache edit matches the authoritative model. The API returns

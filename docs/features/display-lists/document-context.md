@@ -24,8 +24,9 @@ number pairs. Reading that directory under the wrong version fails.
 This operation resolves declarations. It does not read external face blocks,
 validate index/hash or face-count links, or certify geometry. A directory may name
 cached components or blocks that are irrelevant to parsing the display stream.
-Whole-document cross-stream validation remains required work; a resolved context
-is not evidence that those checks passed.
+The separate [external face-link check](external-face-links.md) validates named
+blocks and requested cache positions; a resolved context alone is not evidence
+that those checks passed. Geometry validation remains unfinished.
 
 The owned corpus has five complete positive documents, five marker failures or
 alias cases, one directory CRC failure, and independently patched display-stream

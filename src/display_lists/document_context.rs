@@ -53,16 +53,5 @@ fn directory_ids(
     }
     let bytes = document.read_stream_limited(DIRECTORY, maximum_bytes)?;
     let directory = TessellationDirectory::from_bytes(&bytes, context, limits)?;
-    Ok(component_ids(&directory))
-}
-
-fn component_ids(directory: &TessellationDirectory) -> Arc<BTreeSet<String>> {
-    Arc::new(
-        directory
-            .contents()
-            .entries
-            .iter()
-            .map(|entry| entry.component_id.text().to_owned())
-            .collect(),
-    )
+    Ok(Arc::new(directory.component_ids()))
 }

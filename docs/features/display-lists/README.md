@@ -406,8 +406,8 @@ coverage for the four older supported snapshots while preserving that corpus gat
   face, component-number and detailing boundaries in [lower-range.md](lower-range.md).
 - The 13000 range adds older scalar widths, retained silhouette words, appearance,
   annotation and ink boundaries in [transition-range.md](transition-range.md).
-- Complete whole-document context resolution and cross-stream validation using
-  declared document/file/archive versions and the external face directory/blocks.
+- Context resolution and exact external face-cache links now have owned and native
+  checks; broader geometry and native application validation remain unfinished.
 - Reuse existing MFC strings, exact numeric values, class/object maps and face
   tessellation records. Preserve cycles, aliases and object-tag spelling; do not
   reset inherited state between nested serializers.
@@ -462,4 +462,4 @@ Early complete-root view transitions and Bug #37 are recorded in [early view roo
 
 - Component properties and holders preserve version-sized font arrays and shared cyclic graphs; see [component properties](component-properties.md).
 
-- Typed document context resolution reads exact markers and bounded face-directory declarations; whole-document byte reconstruction is covered in [document context](document-context.md). External block checks remain unfinished.
+- Typed document context resolution reads exact markers and bounded face-directory declarations; whole-document byte reconstruction is covered in [document context](document-context.md). Named blocks and requested external facets are checked in [external face links](external-face-links.md).

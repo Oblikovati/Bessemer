@@ -2,6 +2,7 @@
 mod arrays;
 mod block;
 mod codec;
+mod component_ids;
 mod context;
 mod directory;
 mod edges;
