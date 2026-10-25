@@ -70,6 +70,8 @@ fn flag_mask(leaf: &str) -> Option<u32> {
         "section_cut_new" => 0x80,
         "layer_visible" => 0x100,
         "layer_printable" => 0x200,
+        "has_arc_data" => 0x20,
+        "has_silh_data" => 0x10,
         _ => return None,
     })
 }

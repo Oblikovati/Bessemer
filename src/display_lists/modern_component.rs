@@ -96,8 +96,12 @@ fn geometry_and_state(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.scope("ref_geom_data_collector", super::modern_reference::read)?;
     tessellation_numbers(archive)?;
     archive.text("display_state_name")?;
-    archive.i32("routing_assembly")?;
-    archive.u8("top_level_speed_pak")?;
+    if archive.context.version.value() > 0x42e7 {
+        archive.i32("routing_assembly")?;
+    }
+    if archive.context.version.value() >= 0x42f3 {
+        archive.u8("top_level_speed_pak")?;
+    }
     Ok(())
 }
 

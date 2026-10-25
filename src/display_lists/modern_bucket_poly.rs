@@ -12,7 +12,7 @@ pub(super) fn list(archive: &mut DisplayDecoder<'_>, two_dimensional: bool) -> R
 }
 
 fn polygon(archive: &mut DisplayDecoder<'_>, two_dimensional: bool) -> Result<()> {
-    if archive.context.version.value() < 0x2f63 {
+    if archive.context.version.value() <= 0x41a0 {
         return super::legacy_bucket_poly::read(archive, two_dimensional);
     }
     archive.i32s(&["node_id", "occurence"])?;
@@ -116,7 +116,7 @@ pub(super) fn line_property(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i32s(&["color", "visibility"])
 }
 
-fn arc_data(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+pub(super) fn arc_data(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     for label in ["unknown_8", "unknown_20", "unknown_38"] {
         point(archive, label)?;
     }
@@ -128,7 +128,7 @@ fn arc_data(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     Ok(())
 }
 
-fn identifiers(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+pub(super) fn identifiers(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.u32("edge_persistent_id")?;
     archive.u32("face1_persistent_id")?;
     archive.u32("face2_persistent_id")?;

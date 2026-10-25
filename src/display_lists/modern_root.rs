@@ -133,11 +133,11 @@ fn configuration_footer(archive: &mut DisplayDecoder<'_>, views: usize) -> Resul
 
 fn require_context(context: &DisplayArchiveContext) -> Result<()> {
     let version = context.version.value();
-    if !(matches!(version, 7000 | 9000 | 10000 | 11000) || (18000..=19000).contains(&version))
+    if !(matches!(version, 7000 | 9000 | 10000 | 11000) || (16000..=19000).contains(&version))
         || context.file_version != 19000
     {
         return Err(unsupported(format!(
-            "display context version {}, file version {}, kind {:?}; expected display version 7000, 9000, 10000, 11000 or 18000..=19000 and file version 19000",
+            "display context version {}, file version {}, kind {:?}; expected display version 7000, 9000, 10000, 11000 or 16000..=19000 and file version 19000",
             context.version.value(),
             context.file_version,
             context.kind

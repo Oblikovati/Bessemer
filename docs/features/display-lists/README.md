@@ -399,6 +399,9 @@ coverage for the four older supported snapshots while preserving that corpus gat
   are covered in [decals.md](decals.md).
 - Textured-plane records with null bitmap pointers and complete transforms are
   covered in [textured-planes.md](textured-planes.md); bitmap bodies remain unresolved.
+- The middle range extends admitted contexts to 16000–19000 with complete facet,
+  component, material, scene and bucket boundary fixtures in
+  [middle-range.md](middle-range.md).
 - Complete whole-document context resolution and cross-stream validation using
   declared document/file/archive versions and the external face directory/blocks.
 - Reuse existing MFC strings, exact numeric values, class/object maps and face

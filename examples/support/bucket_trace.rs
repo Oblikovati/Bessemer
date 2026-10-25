@@ -40,5 +40,7 @@ fn visible(path: &str) -> bool {
             | "section_cut_new"
             | "layer_visible"
             | "layer_printable"
+            | "has_arc_data"
+            | "has_silh_data"
     )
 }
