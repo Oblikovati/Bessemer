@@ -14,6 +14,8 @@ import grouped_component_patches
 from generate_grouped_components import entry_budget as grouped_entries
 import lower_range_patches
 from generate_lower_range import entry_budget as lower_entries
+from generate_earliest_scene_roots import raw_nan_reader
+from swarchive import Archive
 
 VERSIONS = [5000,0x13ee,0x13ef,0x147b,0x147c,0x23b2,0x23b3,0x3738,0x3739,19000]
 
@@ -38,7 +40,7 @@ def base_entries(version: int, kind: str) -> int:
     return lower_entries(version,kind)
 
 
-def generate(version: int, kind: str, scenario: int) -> tuple[bytes,dict[str,object]]:
+def property_root(version: int, kind: str, scenario: int) -> tuple[bytes,dict[str,object]]:
     class_name = "moComponentPropertyHolder" if scenario>=16 else "moComponentProperty"
     variant = scenario%16
     converter = partial(converted,class_name=class_name,variant=variant)
@@ -46,6 +48,14 @@ def generate(version: int, kind: str, scenario: int) -> tuple[bytes,dict[str,obj
     framed,row = generate_root(version,kind,0,converter,counter,face_identity_trace)
     row["scenario"],row["class_name"] = scenario,class_name
     return framed[:5]+bytes([scenario])+framed[6:],row
+
+
+def generate(version: int, kind: str, scenario: int) -> tuple[bytes,dict[str,object]]:
+    # #35: preserve the frozen signaling payload even when Python's native promotion quiets it.
+    original = Archive.f32
+    Archive.f32 = raw_nan_reader(original)
+    try:return property_root(version,kind,scenario)
+    finally:Archive.f32 = original
 
 
 def write_budgets() -> None:

@@ -1,8 +1,10 @@
 # Earliest scene layouts
 
-Feature #28 now admits display versions 4850–19000, excluding the uncounted-window
+The scene work admitted display versions 4850–19000, excluding the uncounted-window
 interval `0x1FAE`–`0x1FCE`. Earlier contexts and unresolved object bodies remain
 explicitly unsupported. Full documented-schema parity remains unfinished.
+
+The [earliest component work](earliest-components.md) later extended the lower bound to 4800.
 
 The part tessellation word `is_tessed_for_exploded_view` is stored only above
 `0x12FC`; the `pwSceneData_c` word `bg_fit_to_sw_graphics_area` only above `0x1310`.

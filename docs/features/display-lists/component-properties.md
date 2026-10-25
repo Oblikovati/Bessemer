@@ -2,12 +2,12 @@
 
 Feature #28 now reads and reconstructs the complete registered
 `moComponentProperty` and `moComponentPropertyHolder` bodies in generic CObject
-positions within admitted display versions 4850–19000. Earlier archive contexts
+positions within admitted display versions 4800–19000. Earlier archive contexts
 remain unsupported. The property pointer has a declared `moComponentProperty`
 role; a generic pointer in the holder may be null, an alias, a nested object or a
 cycle. These archive checks do not establish application or geometric validity.
 
-Component properties contain 26 embedded font records below `0x13EF`, 30 through
+Component properties contain 25 embedded font records below `0x12CF`, 26 below `0x13EF`, 30 through
 `0x23B2` and 31 afterward. Each reuses the existing CString, line-width and signed
 end-cap reader. Entity visibility retains two unsigned words, the raw byte,
 unsigned flags, layer word and line width. `all_views` remains a raw byte.

@@ -3,7 +3,9 @@ use crate::Result;
 
 pub(super) fn property(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     let version = archive.context.version.value();
-    let fonts = if version < 0x13ef {
+    let fonts = if version < 0x12cf {
+        25
+    } else if version < 0x13ef {
         26
     } else if version < 0x23b3 {
         30

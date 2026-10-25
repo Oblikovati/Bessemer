@@ -59,8 +59,10 @@ fn attributes(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         "atom_id",
         "new_region",
         "thread_ptn_xform_id",
-        "bos",
     ])?;
+    if archive.context.version.value() > 0x12dd {
+        archive.i32("bos")?;
+    }
     if archive.context.version.value() >= 0x23b4 {
         archive.i32("section_cut_new")?;
     }

@@ -32,9 +32,13 @@ def raw_nan_reader(original: object) -> object:
         bits = int.from_bytes(archive.b[start:archive.p],"little")
         if bits&0x7f800000!=0x7f800000 or bits&0x7fffff==0:return value
         # Python's hardware float promotion quiets signaling NaNs; trace the stored payload instead.
-        widened = ((bits>>31)<<63)|(0x7ff<<52)|((bits&0x7fffff)<<29)
+        widened = nan_payload64(bits)
         return struct.unpack("<d",struct.pack("<Q",widened))[0]
     return read
+
+
+def nan_payload64(bits: int) -> int:
+    return ((bits>>31)<<63)|(0x7ff<<52)|((bits&0x7fffff)<<29)
 
 
 if __name__=="__main__":

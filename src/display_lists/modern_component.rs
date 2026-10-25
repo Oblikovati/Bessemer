@@ -28,7 +28,13 @@ fn display_mode(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn reference(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    archive.i32s(&["visible", "suppressed", "comp_type", "ref_configuration_id"])?;
+    archive.i32("visible")?;
+    for (threshold, label) in [(0x12d0, "suppressed"), (0x12d3, "comp_type")] {
+        if archive.context.version.value() > threshold {
+            archive.i32(label)?;
+        }
+    }
+    archive.i32("ref_configuration_id")?;
     archive.u32("file_type")?;
     archive.i32s(&[
         "has_pattern_ref",
@@ -37,8 +43,14 @@ fn reference(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         "display_state",
         "is_virtual_comp",
     ])?;
-    for label in ["comp_ref", "spool_ref", "comp_description"] {
-        archive.text(label)?;
+    reference_labels(archive)
+}
+
+fn reference_labels(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() > 0x12c3 {
+        for label in ["comp_ref", "spool_ref", "comp_description"] {
+            archive.text(label)?;
+        }
     }
     if archive.context.version.value() > 0x279c {
         archive.text("config_description")?;
@@ -47,7 +59,16 @@ fn reference(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn dependencies(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    strings(archive, "depended_comp_names")?;
+    if archive.context.version.value() > 0x12df {
+        strings(archive, "depended_comp_names")?;
+    }
+    if archive.context.version.value() > 0x12e2 {
+        equation_dependencies(archive)?;
+    }
+    folder(archive)
+}
+
+fn equation_dependencies(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     let count = archive.count("equ_dep_comp_names.count", 5)?;
     for index in 0..count {
         archive.scope(&format!("equ_dep_comp_names[{index}]"), |archive| {
@@ -55,11 +76,13 @@ fn dependencies(archive: &mut DisplayDecoder<'_>) -> Result<()> {
             strings(archive, "values")
         })?;
     }
-    folder(archive)
+    Ok(())
 }
 
 fn folder(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    archive.i32("folder_comp")?;
+    if archive.context.version.value() > 0x12e8 {
+        archive.i32("folder_comp")?;
+    }
     historical_component_state(archive)?;
     if archive.context.version.value() > 0x23e4 {
         archive.i32s(&["grouped_folder_comp", "grouped_folder_type"])?;

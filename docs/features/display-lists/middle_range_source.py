@@ -27,7 +27,7 @@ def component_trace(root: dict[str,object], kind: str) -> bytes:
     for key in ["comp_xform","comp_bbox","comp_viz_prop","ref_geom_data_collector","unknown_obj"]:
         viewer.pop(key,None)
     rows: dict[str,str] = {}
-    dependencies = viewer.pop("equ_dep_comp_names")
+    dependencies = viewer.pop("equ_dep_comp_names",[])
     path = "root.tessellation.components[0].viewer_comp_data"
     for index,(key,values) in enumerate(dependencies):
         flatten(f"{path}.equ_dep_comp_names[{index}].key",key,rows)

@@ -6,6 +6,7 @@ from ui_object_wire import line_style
 
 
 def font_count(version: int) -> int:
+    if version<0x12cf:return 25
     if version<0x13ef:return 26
     return 30 if version<0x23b3 else 31
 
