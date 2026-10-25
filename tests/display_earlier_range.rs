@@ -17,35 +17,25 @@ mod scene_trace;
 #[path = "../examples/support/view_trace.rs"]
 mod view_trace;
 
+const SHADED_ROOT_GROUPS: &[&[u8]] = &[
+    include_bytes!("fixtures/display-lists/earlier-range-part.bin"),
+    include_bytes!("fixtures/display-lists/earlier-range-assembly.bin"),
+    include_bytes!("fixtures/display-lists/precollector-range-part.bin"),
+    include_bytes!("fixtures/display-lists/precollector-range-assembly.bin"),
+    include_bytes!("fixtures/display-lists/precollector-configurations.bin"),
+    include_bytes!("fixtures/display-lists/component-transition-part.bin"),
+    include_bytes!("fixtures/display-lists/component-transition-assembly.bin"),
+    include_bytes!("fixtures/display-lists/transient-viewers.bin"),
+    include_bytes!("fixtures/display-lists/grouped-component-part.bin"),
+    include_bytes!("fixtures/display-lists/grouped-component-assembly.bin"),
+    include_bytes!("fixtures/display-lists/early-assembly-configurations.bin"),
+];
+
 fn cases() -> Vec<RangeCase> {
-    let mut cases = complete_cases::decode(include_bytes!(
-        "fixtures/display-lists/earlier-range-part.bin"
-    ));
-    cases.extend(complete_cases::decode(include_bytes!(
-        "fixtures/display-lists/earlier-range-assembly.bin"
-    )));
-    for bytes in [
-        include_bytes!("fixtures/display-lists/precollector-range-part.bin").as_slice(),
-        include_bytes!("fixtures/display-lists/precollector-range-assembly.bin").as_slice(),
-        include_bytes!("fixtures/display-lists/precollector-configurations.bin").as_slice(),
-    ] {
-        cases.extend(complete_cases::decode(bytes));
-    }
-    for bytes in [
-        include_bytes!("fixtures/display-lists/component-transition-part.bin").as_slice(),
-        include_bytes!("fixtures/display-lists/component-transition-assembly.bin").as_slice(),
-        include_bytes!("fixtures/display-lists/transient-viewers.bin").as_slice(),
-    ] {
-        cases.extend(complete_cases::decode(bytes));
-    }
-    for bytes in [
-        include_bytes!("fixtures/display-lists/grouped-component-part.bin").as_slice(),
-        include_bytes!("fixtures/display-lists/grouped-component-assembly.bin").as_slice(),
-        include_bytes!("fixtures/display-lists/early-assembly-configurations.bin").as_slice(),
-    ] {
-        cases.extend(complete_cases::decode(bytes));
-    }
-    cases
+    let groups = SHADED_ROOT_GROUPS.iter();
+    groups
+        .flat_map(|bytes| complete_cases::decode(bytes))
+        .collect()
 }
 
 fn selected(version: u32, kind: DisplayDocumentKind, scenario: u8) -> RangeCase {

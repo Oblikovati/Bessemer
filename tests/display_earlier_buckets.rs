@@ -21,32 +21,22 @@ mod view_trace;
 
 const ROOT: &str = "root.views[0].view_bucket";
 
+const BUCKET_ROOT_GROUPS: &[&[u8]] = &[
+    include_bytes!("fixtures/display-lists/earlier-buckets-3d.bin"),
+    include_bytes!("fixtures/display-lists/earlier-buckets-2d.bin"),
+    include_bytes!("fixtures/display-lists/precollector-buckets-3d.bin"),
+    include_bytes!("fixtures/display-lists/precollector-buckets-2d.bin"),
+    include_bytes!("fixtures/display-lists/component-buckets-3d.bin"),
+    include_bytes!("fixtures/display-lists/component-buckets-2d.bin"),
+    include_bytes!("fixtures/display-lists/grouped-buckets-3d.bin"),
+    include_bytes!("fixtures/display-lists/grouped-buckets-2d.bin"),
+];
+
 fn cases() -> Vec<BucketCase> {
-    let mut cases = complete_cases::decode(include_bytes!(
-        "fixtures/display-lists/earlier-buckets-3d.bin"
-    ));
-    cases.extend(complete_cases::decode(include_bytes!(
-        "fixtures/display-lists/earlier-buckets-2d.bin"
-    )));
-    cases.extend(complete_cases::decode(include_bytes!(
-        "fixtures/display-lists/precollector-buckets-3d.bin"
-    )));
-    cases.extend(complete_cases::decode(include_bytes!(
-        "fixtures/display-lists/precollector-buckets-2d.bin"
-    )));
-    cases.extend(complete_cases::decode(include_bytes!(
-        "fixtures/display-lists/component-buckets-3d.bin"
-    )));
-    cases.extend(complete_cases::decode(include_bytes!(
-        "fixtures/display-lists/component-buckets-2d.bin"
-    )));
-    cases.extend(complete_cases::decode(include_bytes!(
-        "fixtures/display-lists/grouped-buckets-3d.bin"
-    )));
-    cases.extend(complete_cases::decode(include_bytes!(
-        "fixtures/display-lists/grouped-buckets-2d.bin"
-    )));
-    cases
+    let groups = BUCKET_ROOT_GROUPS.iter();
+    groups
+        .flat_map(|bytes| complete_cases::decode(bytes))
+        .collect()
 }
 
 fn selected(version: u32, scenario: u8) -> BucketCase {
