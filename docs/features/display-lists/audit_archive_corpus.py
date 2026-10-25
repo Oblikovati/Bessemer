@@ -43,8 +43,8 @@ def collect() -> tuple[bytes, list[tuple[str, bytes, int, bytes]], str]:
     return struct.pack("<I", len(records))+framed, records, manifest.hexdigest()
 
 
-def context_frame(version: int, kind: str, components: list[str]) -> bytes:
-    framed = struct.pack("<IIBI", version & 0xffffffff, 19000, int(kind == "assembly"), len(components))
+def context_frame(version: int, kind: str, components: list[str], file_version: int = 19000) -> bytes:
+    framed = struct.pack("<IIBI", version & 0xffffffff, file_version, int(kind == "assembly"), len(components))
     for component in components:
         encoded = component.encode()
         framed += struct.pack("<I", len(encoded))+encoded

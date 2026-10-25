@@ -443,3 +443,6 @@ maintainer-side humanizer skill is unavailable; its prose pass remains for revie
 
 - The 9000 interval covers grouped components, word-key bucket maps and the early
   assembly configuration/decal boundaries; see [grouped-components.md](grouped-components.md).
+
+- Explicit native file context now controls tangent-list omission independently
+  of display-list version; see [file-contexts.md](file-contexts.md).

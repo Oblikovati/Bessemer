@@ -35,7 +35,7 @@ def frames(cases: list[tuple[dict[str,object],bytes]]) -> tuple[bytes,bytes]:
     prefix = struct.pack("<I",len(cases))
     source,expected = bytearray(prefix),bytearray(prefix)
     for row,payload in cases:
-        source.extend(context_frame(row["version"],row["kind"],row["external_ids"]))
+        source.extend(context_frame(row["version"],row["kind"],row["external_ids"],row.get("file_version",19000)))
         blob = struct.pack("<I",len(payload))+payload
         source.extend(blob)
         expected.extend(b"\0"+blob)

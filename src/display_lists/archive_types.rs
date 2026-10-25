@@ -21,7 +21,8 @@ pub struct DisplayArchiveContext {
     pub version: DisplayVersion,
     /// Application-declared document kind.
     pub kind: DisplayDocumentKind,
-    /// Native current-file version, independent of the display-list archive version.
+    /// Application-supplied unsigned current-file version, independent of display-list version.
+    /// Tangent bucket lists are absent below `0x224`; the stream does not store this context.
     pub file_version: u32,
     /// Exact component IDs from the parsed external face directory; empty when absent.
     pub face_tessellation_components: Arc<BTreeSet<String>>,

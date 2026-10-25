@@ -57,22 +57,27 @@ fn bucket(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     tail(archive)
 }
 
+const BUCKET_POLY_LABELS: [&str; 13] = [
+    "silh",
+    "silh_h",
+    "wire",
+    "hidden",
+    "hatch",
+    "aux",
+    "tan_v",
+    "tan_h",
+    "explode_v",
+    "explode_h",
+    "weldbead_v",
+    "weldbead_h",
+    "solid_fill",
+];
+
 fn poly_lists(archive: &mut DisplayDecoder<'_>, two_dimensional: bool) -> Result<()> {
-    for label in [
-        "silh",
-        "silh_h",
-        "wire",
-        "hidden",
-        "hatch",
-        "aux",
-        "tan_v",
-        "tan_h",
-        "explode_v",
-        "explode_h",
-        "weldbead_v",
-        "weldbead_h",
-        "solid_fill",
-    ] {
+    for label in BUCKET_POLY_LABELS {
+        if archive.context.file_version < 0x224 && matches!(label, "tan_v" | "tan_h") {
+            continue;
+        }
         poly_list(archive, label, two_dimensional)?;
     }
     Ok(())

@@ -173,11 +173,16 @@ fn context_range_limits_and_cross_gate_shape_requirements_are_explicit() {
             DisplayArchive::from_bytes(oldest.bytes, version_context(version), LIMITS).unwrap_err();
         assert!(error.to_string().contains("Unsupported"));
     }
-    let wrong_file = DisplayArchiveContext {
+    let alternate_file = DisplayArchiveContext {
         file_version: 18000,
         ..version_context(18000)
     };
-    assert!(DisplayArchive::from_bytes(oldest.bytes, wrong_file, LIMITS).is_err());
+    assert_eq!(
+        DisplayArchive::from_bytes(oldest.bytes, alternate_file, LIMITS)
+            .unwrap()
+            .contents(),
+        parsed(oldest).contents()
+    );
     for (before, after) in [
         (18100, 18101),
         (18105, 18106),
