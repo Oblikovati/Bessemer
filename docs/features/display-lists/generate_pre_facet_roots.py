@@ -10,6 +10,7 @@ from generate_earlier_range import write_group
 from middle_range_source import component_trace
 from generate_blank_scalars import flatten
 from generate_earliest_components import write_documents
+from pre_facet_external import external_root
 
 VERSIONS = [3065,0xc57,0xc58,0xc59,0xc6e,0xc6f,0xc7b,0xc7c]
 
@@ -27,18 +28,21 @@ def scalars(root: dict[str,object], kind: str) -> bytes:
 
 
 def generate(version: int, kind: str, scenario: int) -> tuple[bytes,dict[str,object]]:
-    raw = converted(version,kind,scenario)
-    root = reference(raw,version,kind,())
+    raw,identities = external_root(version,scenario==4) if scenario in (3,4) else (converted(version,kind,scenario),())
+    assert kind=="assembly" or not identities
+    root = reference(raw,version,kind,identities)
     expected,scalar = traces(root,kind),scalars(root,kind)
     framed = struct.pack("<IBBI",version,kind=="assembly",scenario,len(raw))+raw
     framed += struct.pack("<I",len(expected))+expected+struct.pack("<I",len(scalar))+scalar
     row = {"version":version,"kind":kind,"scenario":scenario,"bytes":len(raw),"sha256":hashlib.sha256(raw).hexdigest(),"oracle_fields":len(expected.splitlines())+len(scalar.splitlines())}
+    if identities:row["external_ids"] = list(identities)
     return framed,row
 
 
 if __name__=="__main__":
     cases = [generate(version,kind,scenario) for version in VERSIONS for kind in ["part","assembly"] for scenario in range(3)]
     cases += [generate(version,kind,16+light) for version in [3065,0xc6e,0xc6f] for kind in ["part","assembly"] for light in range(5)]
+    cases += [generate(version,"assembly",scenario) for version in VERSIONS for scenario in (3,4)]
     print(write_group("pre-facet-roots",cases,("displaylists.py",)))
     compact_manifest(Path(__file__).with_name("pre-facet-roots.json"))
     write_documents(partial(generate,scenario=0),3065,"pre-facet")

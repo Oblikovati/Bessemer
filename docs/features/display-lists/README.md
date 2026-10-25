@@ -499,5 +499,6 @@ The [unsigned-version checkpoint](unsigned-versions.md) removes the artificial
 signed-alias documents. All earlier unresolved intervals remain excluded.
 
 The [earlier resolved archive checkpoint](pre-facet-roots.md) admits contexts
-from 3065, with 78 complete roots and two containers. Unresolved inline facet
-objects remain explicit payload failures; empty geometry is preserved distinctly.
+from 3065, with 94 complete roots and six containers. Cache-backed parts retain
+their non-null objects and exact external face references. Unresolved inline
+facet objects remain explicit payload failures; empty geometry is preserved distinctly.

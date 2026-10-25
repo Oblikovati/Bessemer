@@ -40,6 +40,11 @@ fn case_context(case: OldCase) -> DisplayArchiveContext {
     DisplayArchiveContext {
         version: DisplayVersion::new(case.version),
         kind: case.kind,
+        face_tessellation_components: if (3..=4).contains(&case.scenario) {
+            std::sync::Arc::new(["Assem1".to_owned()].into())
+        } else {
+            Default::default()
+        },
         ..context()
     }
 }
@@ -74,8 +79,8 @@ fn check_case(case: OldCase) -> usize {
 
 #[test]
 fn complete_resolved_roots_match_independent_fields_and_forced_bytes() {
-    assert_eq!(cases().len(), 78);
-    assert_eq!(cases().into_iter().map(check_case).sum::<usize>(), 5816);
+    assert_eq!(cases().len(), 94);
+    assert_eq!(cases().into_iter().map(check_case).sum::<usize>(), 7230);
 }
 
 fn check_empty_geometry(case: OldCase) {
@@ -118,7 +123,10 @@ fn check_null_part(archive: &DisplayArchive) {
 
 #[test]
 fn absent_shaded_data_empty_parts_and_null_component_parts_remain_distinct() {
-    for case in cases() {
+    for case in cases()
+        .into_iter()
+        .filter(|case| !(3..=4).contains(&case.scenario))
+    {
         check_empty_geometry(case);
     }
 }
@@ -293,3 +301,6 @@ fn all_five_old_light_classes_keep_their_identity_in_complete_earlier_roots() {
         );
     }
 }
+
+#[path = "support/pre_facet_external.rs"]
+mod external_faces;
