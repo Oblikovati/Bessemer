@@ -17,7 +17,10 @@ pub(super) fn read(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn part_configuration(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    archive.i32s(&["unknown_168", "is_tessed_for_exploded_view"])?;
+    archive.i32("unknown_168")?;
+    if archive.context.version.value() > 0x12fc {
+        archive.i32("is_tessed_for_exploded_view")?;
+    }
     if archive.context.version.value() > 0x2b96 {
         archive.i32("config_id")?;
         archive.text("config_name")?;

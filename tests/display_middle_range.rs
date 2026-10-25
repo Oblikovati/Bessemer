@@ -294,7 +294,7 @@ fn truncated_roots_extra_bytes_and_unproven_contexts_do_not_publish_partial_resu
         assert!(DisplayArchive::from_bytes(&trailing, case_context(case), LIMITS).is_err());
     }
     let case = selected(16000, DisplayDocumentKind::Part, 0);
-    for version in [0, 4999, 19001, u32::MAX] {
+    for version in [0, 4849, 19001, u32::MAX] {
         let context = DisplayArchiveContext {
             version: DisplayVersion::new(version),
             ..case_context(case)

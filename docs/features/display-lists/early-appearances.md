@@ -1,8 +1,10 @@
 # Early appearance and display-item layouts
 
-Feature #28 now admits display versions 5000–19000 except the uncounted-window
+The appearance work admitted display versions 5000–19000 except the uncounted-window
 interval `0x1FAE`–`0x1FCE`. This extends the complete-stream codec; it does not
 establish full clause 13 parity or native application acceptance.
+
+The [earliest scene work](earliest-scenes.md) later extended the lower bound to 4850.
 
 The owned vectors contain 58 part/assembly roots with 18,804 independent field
 expectations and 58 bucket roots with 9,721 expectations. Every fixture declares
