@@ -24,7 +24,7 @@ fn resolved_archive(document: &Document, kind: DisplayDocumentKind) -> DisplayAr
     let context =
         DisplayArchiveContext::from_document(document, kind, 19000, directory, limits, 1024 * 1024)
             .unwrap();
-    assert_eq!(context.version.value(), 2596);
+    assert!(matches!(context.version.value(), 2563 | 2596));
     assert!(context.face_tessellation_components.is_empty());
     let raw = document.read_stream("Contents/DisplayLists").unwrap();
     DisplayArchive::from_bytes(&raw, context, LIMITS).unwrap()
@@ -56,7 +56,7 @@ fn replace_reopen(original: &Document, archive: &DisplayArchive) -> Document {
     reopened
 }
 
-fn check_document_edit(kind: DisplayDocumentKind, raw: &[u8], expected_raw: &[u8]) {
+pub(super) fn check_document_edit(kind: DisplayDocumentKind, raw: &[u8], expected_raw: &[u8]) {
     let original = Document::from_bytes(raw).unwrap();
     let source = resolved_archive(&original, kind);
     let expected = resolved_archive(&Document::from_bytes(expected_raw).unwrap(), kind);

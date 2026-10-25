@@ -329,3 +329,6 @@ mod legacy_visuals;
 mod legacy_widths;
 #[path = "support/resumed_inline.rs"]
 mod resumed_inline;
+
+#[path = "support/ordinary_text.rs"]
+mod ordinary_text;

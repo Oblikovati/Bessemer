@@ -547,3 +547,7 @@ The [resumed inline-facet checkpoint](resumed-inline-layouts.md) admits contexts
 from 2596 and proves complete inline part and assembly edits before the
 unresolved facet-object interval. Its 130 roots and four containers preserve
 empty and cached layouts across the 2597 boundary.
+
+The [ordinary text checkpoint](ordinary-text-layouts.md) admits contexts from
+2563, with separate text-width and material-classification boundaries, 158
+complete roots and four inline part/assembly containers.

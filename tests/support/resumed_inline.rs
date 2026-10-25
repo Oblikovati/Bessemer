@@ -59,7 +59,7 @@ fn inline_facets(archive: &DisplayArchive) -> Vec<&FacetContainer> {
         .collect()
 }
 
-fn check_inline_payloads(case: OldCase) {
+pub(super) fn check_inline_payloads(case: OldCase) {
     let archive = parsed(case);
     let facets = inline_facets(&archive);
     assert_eq!(facets.len(), 2);
@@ -90,7 +90,10 @@ pub(super) fn resumed_edited_contents(
 ) -> DisplayArchiveContents {
     let mut contents = legacy_edges::edge_edited_contents(source, expected);
     for target in &mut contents.fields {
-        if matches!(target.value, DisplayFieldValue::Facet(_)) {
+        if matches!(target.value, DisplayFieldValue::Facet(_))
+            || target.path.contains("display_items.items[10].data.")
+            || target.path.contains("display_items.items[12].data.")
+        {
             target.value = field(expected, &target.path).unwrap().clone();
         }
     }
@@ -218,3 +221,7 @@ fn pre_object_inline_facets_are_deterministic_across_concurrent_constructors() {
 
 #[path = "resumed_inline_documents.rs"]
 mod documents;
+
+pub(super) fn check_owned_document(kind: DisplayDocumentKind, raw: &[u8], expected: &[u8]) {
+    documents::check_document_edit(kind, raw, expected);
+}

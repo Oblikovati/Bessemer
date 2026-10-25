@@ -81,7 +81,9 @@ fn material_rendering(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         "use_defined_color",
         "use_defined_hatch",
     ])?;
-    archive.text("classification")?;
+    if archive.context.version.value() > 0xa05 {
+        archive.text("classification")?;
+    }
     if archive.context.version.value() > 0xdb3 {
         archive.i32("use_new_shaders")?;
     }
