@@ -2,16 +2,7 @@ use super::{archive_decode::DisplayDecoder, archive_error::invalid};
 use crate::Result;
 
 pub(super) fn property(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    let version = archive.context.version.value();
-    let fonts = if version < 0x12cf {
-        25
-    } else if version < 0x13ef {
-        26
-    } else if version < 0x23b3 {
-        30
-    } else {
-        31
-    };
+    let fonts = component_font_slots(archive.context.version.value());
     archive.entries(fonts, "component property fonts")?;
     for index in 0..fonts {
         archive.scope(&format!("line_fonts[{index}]"), super::modern_ui::font)?;
@@ -19,6 +10,16 @@ pub(super) fn property(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.scope("ent_vis_prop", visibility)?;
     archive.u8("all_views")?;
     property_tail(archive)
+}
+
+fn component_font_slots(version: u32) -> usize {
+    match version {
+        0..=0x12a2 => 24,
+        0x12a3..=0x12ce => 25,
+        0x12cf..=0x13ee => 26,
+        0x13ef..=0x23b2 => 30,
+        _ => 31,
+    }
 }
 
 fn property_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {

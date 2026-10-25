@@ -37,15 +37,15 @@ def entry_count(version: int, kind: str, variant: int) -> int:
     return entry_budget(version,kind,variant%2)+2+populated
 
 
-def write_documents() -> None:
+def write_documents(root_generator: object = generate, version: int = 4800, prefix: str = "earliest-component") -> None:
     rows = []
     for kind in ["part","assembly"]:
-        framed,_ = generate(4800,kind)
+        framed,_ = root_generator(version,kind)
         raw,_ = frame_at(framed,6)
-        owned = document([("Contents/DisplayLists",raw),("_DL_VERSION_4800/DLUpdateStamp",b""),("Unrelated/Payload",b"retained\0payload")])
-        Path(f"tests/fixtures/display-lists/earliest-component-document-{kind}.bin").write_bytes(owned)
-        rows.append({"kind":kind,"display_version":4800,"file_version":19000,"directory_version":19000,"sha256":hashlib.sha256(owned).hexdigest()})
-    Path(__file__).with_name("earliest-component-documents.json").write_text(json.dumps({"fixtures":rows},indent=2)+"\n",encoding="utf-8",newline="\n")
+        owned = document([("Contents/DisplayLists",raw),(f"_DL_VERSION_{version}/DLUpdateStamp",b""),("Unrelated/Payload",b"retained\0payload")])
+        Path(f"tests/fixtures/display-lists/{prefix}-document-{kind}.bin").write_bytes(owned)
+        rows.append({"kind":kind,"display_version":version,"file_version":19000,"directory_version":19000,"sha256":hashlib.sha256(owned).hexdigest()})
+    Path(__file__).with_name(prefix+"-documents.json").write_text(json.dumps({"fixtures":rows},indent=2)+"\n",encoding="utf-8",newline="\n")
 
 
 if __name__=="__main__":

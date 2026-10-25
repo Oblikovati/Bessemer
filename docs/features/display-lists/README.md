@@ -458,7 +458,9 @@ Early complete-root view transitions and Bug #37 are recorded in [early view roo
 
 - The 4850 range covers exploded-view and scene background-fit gates; see [earliest scenes](earliest-scenes.md).
 
-- The lower bound is now 4800, with component metadata, property fonts, BOS flags and populated decal boundaries; see [earliest components](earliest-components.md).
+- The 4800 range covers component metadata, property fonts, BOS flags and populated decal boundaries; see [earliest components](earliest-components.md).
+
+- The lower bound is now 4600, with face-pair arrays, scene flags, 24-slot property fonts and polyline layouts; see [earliest faces](earliest-faces.md).
 
 - Archive object lookup now checks revision-scoped handles; see [revision identities](revision-identities.md). Operation history and whole-document coverage remain unfinished.
 

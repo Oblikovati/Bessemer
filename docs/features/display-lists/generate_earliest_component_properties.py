@@ -10,12 +10,13 @@ import generate_component_properties as properties
 VERSIONS = [4800,0x12ce,0x12cf,4850]
 
 
-def generate(version: int, kind: str, scenario: int) -> tuple[bytes,dict[str,object]]:
-    original,original_float = properties.convert,Archive.f32
-    properties.convert = partial(original,base_converter=convert)
+def generate(version: int, kind: str, scenario: int, root_converter: object = convert, entry_counter: object | None = None) -> tuple[bytes,dict[str,object]]:
+    original,original_float,original_entries = properties.convert,Archive.f32,properties.base_entries
+    properties.convert = partial(original,base_converter=root_converter)
+    if entry_counter is not None:properties.base_entries = entry_counter
     Archive.f32 = raw_nan_reader(original_float)
     try:return properties.generate(version,kind,scenario)
-    finally:properties.convert,Archive.f32 = original,original_float
+    finally:properties.convert,Archive.f32,properties.base_entries = original,original_float,original_entries
 
 
 if __name__=="__main__":

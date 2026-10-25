@@ -51,6 +51,14 @@ pub(super) fn face(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         })?;
     }
     archive.i32s(&["unknown_34", "unknown_68"])?;
+    face_pairs(archive)?;
+    face_identity(archive)
+}
+
+fn face_pairs(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() < 0x1203 {
+        return Ok(());
+    }
     let count = archive.count("unknown_58.count", 8)?;
     for index in 0..count {
         archive.i32s(&[
@@ -58,7 +66,7 @@ pub(super) fn face(archive: &mut DisplayDecoder<'_>) -> Result<()> {
             &format!("unknown_58[{index}][1]"),
         ])?;
     }
-    face_identity(archive)
+    Ok(())
 }
 
 fn face_identity(archive: &mut DisplayDecoder<'_>) -> Result<()> {

@@ -1,9 +1,11 @@
 # Earliest component layouts
 
-Feature #28 now admits display versions 4800–19000, excluding the uncounted-window
+The component work admitted display versions 4800–19000, excluding the uncounted-window
 interval `0x1FAE`–`0x1FCE`. Full schema parity, earlier contexts and unresolved
 object bodies remain unfinished. Archive checks do not establish native
 application acceptance or geometry validity.
+
+The [earliest face work](earliest-faces.md) later extended the lower bound to 4600.
 
 The new layouts retain field absence at each documented boundary:
 

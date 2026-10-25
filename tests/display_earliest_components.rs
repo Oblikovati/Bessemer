@@ -259,7 +259,7 @@ fn old_component_shapes_cannot_be_republished_with_new_field_requirements() {
     }
     let case = selected(4800, DisplayDocumentKind::Part, 208);
     let unsupported = DisplayArchiveContext {
-        version: DisplayVersion::new(4799),
+        version: DisplayVersion::new(4599),
         ..case_context(case)
     };
     assert_eq!(

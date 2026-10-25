@@ -26,8 +26,10 @@ fn floor(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         "resize_automatic",
         "ambient_occlusion",
         "background_fit_to_camera_fov",
-        "flags",
     ])?;
+    if archive.context.version.value() > 0x1211 {
+        archive.i32("flags")?;
+    }
     historical_floor(archive)?;
     field_of_view(archive)
 }

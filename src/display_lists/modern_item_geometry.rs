@@ -79,7 +79,7 @@ fn polygon(archive: &mut DisplayDecoder<'_>, polygon: bool) -> Result<()> {
     }
     let count = archive.count("points.count", 24)?;
     points(archive, "points", count)?;
-    if !polygon {
+    if !polygon && archive.context.version.value() > 0x12b0 {
         archive.i32("unknown_10")?;
     }
     Ok(())
