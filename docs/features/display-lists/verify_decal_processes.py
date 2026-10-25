@@ -18,7 +18,8 @@ def frozen_cases(manifest_path: Path, fixture_path: Path, generator: Callable[[i
         raw,actual = generator(row["version"],row["kind"],row["scenario"])
         assert row==actual
         payload,_ = frame_at(raw,6)
-        cases.append((dict(row,external_ids=[]),payload))
+        # #39: omitted declarations default to empty; explicit directory context must survive.
+        cases.append((dict(row,external_ids=row.get("external_ids",[])),payload))
         framed.append(raw)
     rebuilt = struct.pack("<I",len(cases))+b"".join(framed)
     assert hashlib.sha256(rebuilt).hexdigest()==manifest["sha256"]
