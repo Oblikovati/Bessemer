@@ -17,7 +17,7 @@ fn complete_zone_roots_match_independent_fields_and_forced_bytes() {
     );
 }
 
-fn check_zone_members(case: OldCase) {
+pub(super) fn check_zone_members(case: OldCase) {
     let archive = parsed(case);
     for member in &archive.contents().fields {
         if let Some(prefix) = member.path.strip_suffix(".num_user_comp_bodies") {

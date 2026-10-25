@@ -353,3 +353,6 @@ mod legacy_font;
 
 #[path = "support/legacy_zone.rs"]
 mod legacy_zone;
+
+#[path = "support/legacy_discard.rs"]
+mod legacy_discard;

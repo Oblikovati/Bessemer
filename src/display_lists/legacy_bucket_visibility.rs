@@ -5,10 +5,10 @@ pub(super) fn edge_array(archive: &mut DisplayDecoder<'_>, two_dimensional: bool
     if archive.context.version.value() >= 0xa5a {
         return Ok(());
     }
-    let minimum = if archive.context.version.value() < 0xa4b {
-        24
-    } else {
-        20
+    let minimum = match archive.context.version.value() {
+        0x744..=0x74a => 28,
+        0..=0xa4a => 24,
+        _ => 20,
     };
     let count = wall_count(archive, "edge_vis_data.count", minimum)?;
     for index in 0..count {
@@ -26,6 +26,9 @@ fn edge_record(archive: &mut DisplayDecoder<'_>, two_dimensional: bool) -> Resul
         archive.i32("discarded_old_8")?;
     }
     archive.i32s(&["unknown_8", "unknown_c"])?;
+    if (0x744..=0x74a).contains(&archive.context.version.value()) {
+        archive.i32("discarded_v0744")?;
+    }
     archive.scope("polys", |archive| {
         modern_bucket_poly::list(archive, two_dimensional)
     })

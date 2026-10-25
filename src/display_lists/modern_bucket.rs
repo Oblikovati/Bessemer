@@ -91,10 +91,7 @@ fn poly_lists(archive: &mut DisplayDecoder<'_>, two_dimensional: bool) -> Result
         {
             continue;
         }
-        if archive.context.version.value() <= 0x7f0 && label == "solid_fill" {
-            continue;
-        }
-        if archive.context.version.value() <= 0x753 && matches!(label, "explode_v" | "explode_h") {
+        if legacy_list_omitted(archive.context.version.value(), label) {
             continue;
         }
         poly_list(archive, label, two_dimensional)?;
@@ -210,4 +207,10 @@ fn hatch_info(archive: &mut DisplayDecoder<'_>, index: usize) -> Result<()> {
         archive.i32(&format!("hatch_bucket_set_info[{index}][{component}]"))?;
     }
     Ok(())
+}
+
+fn legacy_list_omitted(version: u32, label: &str) -> bool {
+    (version <= 0x7f0 && label == "solid_fill")
+        || (version <= 0x753 && matches!(label, "explode_v" | "explode_h"))
+        || (version <= 0x741 && label == "silh_h")
 }

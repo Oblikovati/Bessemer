@@ -19,6 +19,7 @@ def discarded_reader(original: object) -> object:
         finally:archive.i32 = saved
         assert words[:2]==[result["unknown_0"],result["unknown_4"]],words
         if archive.version<0xa4b:result["discarded_old_8"] = words[2]
+        if 0x744<=archive.version<=0x74a:result["discarded_v0744"] = words[5]
         return result
     return read
 

@@ -579,3 +579,7 @@ twenty-eight independent facet records and four containers.
 The [legacy zone checkpoint](legacy-zone-layouts.md) admits contexts from 1875,
 covering exploded lists, component zones and textured planes with 262 roots,
 2112 independent plane-transform fields and eight whole-document fixtures.
+
+The [discarded edge-word checkpoint](legacy-discard-layouts.md) admits contexts
+from 1857. Its 262 complete roots cover hidden-silhouette list introduction and
+the seven-version extra edge word, with eight whole-document fixtures.
