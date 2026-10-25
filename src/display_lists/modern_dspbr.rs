@@ -54,6 +54,16 @@ fn attenuation_and_textures(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() > 0x46b4 {
+        translucency(archive)?;
+    }
+    if archive.context.version.value() > 0x4971 {
+        recent_tail(archive)?;
+    }
+    Ok(())
+}
+
+fn translucency(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.text("unknown_0")?;
     archive.text("unknown_b0")?;
     archive.i32("unknown_c8")?;
@@ -62,6 +72,10 @@ fn tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     for label in ["unknown_118", "unknown_120"] {
         archive.text(label)?;
     }
+    Ok(())
+}
+
+fn recent_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.f32s(&["unknown_158", "unknown_15c"])?;
     for label in ["unknown_140", "unknown_148", "unknown_150"] {
         archive.text(label)?;

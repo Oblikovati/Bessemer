@@ -82,9 +82,9 @@ fn shaded(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn require_context(context: &DisplayArchiveContext) -> Result<()> {
-    if context.version.value() != 19000 || context.file_version != 19000 {
+    if !(18000..=19000).contains(&context.version.value()) || context.file_version != 19000 {
         return Err(unsupported(format!(
-            "display context version {}, file version {}, kind {:?}; initial full-stream checkpoint requires display/file version 19000",
+            "display context version {}, file version {}, kind {:?}; expected display version 18000..=19000 and file version 19000",
             context.version.value(),
             context.file_version,
             context.kind

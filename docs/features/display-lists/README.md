@@ -378,9 +378,10 @@ python -B -X utf8 docs/features/display-lists/audit_archive_corpus.py target/pin
 ## Remaining implementation and integration gate
 
 The [modern display-item checkpoint](display-items.md),
-[view-bucket checkpoint](view-buckets.md) and [light checkpoint](lights.md) extend
-complete native coverage to 983 streams, covering every version-19000 stream in
-this corpus. Their fixtures and field-oracle counts supersede the earlier totals
+[view-bucket checkpoint](view-buckets.md), [light checkpoint](lights.md) and
+[version-range checkpoint](version-range.md) extend complete native coverage to
+1,005 streams, covering every version-18000 and version-19000 stream in this
+corpus. Their fixtures and field-oracle counts supersede the earlier totals
 above. This corpus milestone does not establish complete schema parity.
 
 - Complete whole-document context resolution and cross-stream validation using
@@ -389,7 +390,7 @@ above. This corpus milestone does not establish complete schema parity.
   tessellation records. Preserve cycles, aliases and object-tag spelling; do not
   reset inherited state between nested serializers.
 - Extend environments, splitters, fonts, lights and visual properties beyond
-  the initial version-19000 part layout. Add earlier bucket and display-item layouts.
+  display versions 18000–19000. Add earlier bucket and display-item layouts.
 - Add earlier scene and unit layouts, remaining shaded-data layouts, decals,
   textured planes, ink views and configuration tails. Unknown-meaning
   fields remain explicit raw typed values; unresolved bodies are unsupported.

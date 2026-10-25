@@ -34,7 +34,14 @@ fn floor(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.transform("flatten_floor_xform")?;
     archive.f64("hdr_exposure")?;
     archive.i32("dspbr_tone_map")?;
-    archive.f64("field_of_view")
+    field_of_view(archive)
+}
+
+fn field_of_view(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() > 0x46ba {
+        archive.f64("field_of_view")?;
+    }
+    Ok(())
 }
 
 pub(super) fn wall_count(

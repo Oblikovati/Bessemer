@@ -132,7 +132,27 @@ fn rv_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         "default_height",
     ])?;
     archive.text("lxp_filename")?;
-    archive.f32("round_sharp_edges")
+    archive.f32("round_sharp_edges")?;
+    if archive.context.version.value() < 0x46ba {
+        archive.scope("unknown_symbol", legacy_symbol)?;
+    }
+    Ok(())
+}
+
+fn legacy_symbol(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    for index in 0..3 {
+        archive.text(&format!("strings[{index}]"))?;
+    }
+    for index in 0..17 {
+        archive.f32(&format!("floats[{index}]"))?;
+    }
+    for index in 0..2 {
+        archive.u32(&format!("uints[{index}]"))?;
+    }
+    for index in 0..4 {
+        archive.i32(&format!("ints[{index}]"))?;
+    }
+    Ok(())
 }
 
 pub(super) fn float3(archive: &mut DisplayDecoder<'_>, prefix: &str) -> Result<()> {

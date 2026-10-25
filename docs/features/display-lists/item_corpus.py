@@ -16,4 +16,5 @@ def field_coverage(actual: bytes, expected: bytes, label: str) -> dict[str,int]:
     items = sum(b".display_items.items[" in line for line in actual.splitlines())
     buckets = sum(b".view_bucket." in line for line in actual.splitlines())
     lights = sum(line.startswith(b"root.old_lights.items[") for line in actual.splitlines())
-    return {"reference":total-scenes-items-buckets-lights,"scene":scenes,"items":items,"buckets":buckets,"lights":lights}
+    materials = sum((b".material." in line or b".dspbr." in line) and not line.startswith(b"root.scene.") and b".view_bucket." not in line for line in actual.splitlines())
+    return {"reference":total-scenes-items-buckets-lights-materials,"scene":scenes,"items":items,"buckets":buckets,"lights":lights,"materials":materials}

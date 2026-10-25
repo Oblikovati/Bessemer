@@ -12,6 +12,8 @@ mod bucket_trace;
 mod item_trace;
 #[path = "support/light_trace.rs"]
 mod light_trace;
+#[path = "support/material_trace.rs"]
+mod material_trace;
 #[path = "support/reference_trace.rs"]
 mod reference_trace;
 #[path = "support/scene_trace.rs"]
@@ -137,5 +139,6 @@ fn semantic_trace(archive: &DisplayArchive) -> Vec<u8> {
     trace.extend(item_trace::trace(archive));
     trace.extend(bucket_trace::trace(archive));
     trace.extend(light_trace::trace(archive));
+    trace.extend(material_trace::trace(archive));
     trace
 }
