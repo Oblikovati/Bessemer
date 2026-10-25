@@ -14,7 +14,8 @@ pub(super) fn property(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 
 fn component_font_slots(version: u32) -> usize {
     match version {
-        0..=0xf5b => 23,
+        0..=0xf31 => 15,
+        0xf32..=0xf5b => 23,
         0xf5c..=0x12a2 => 24,
         0x12a3..=0x12ce => 25,
         0x12cf..=0x13ee => 26,

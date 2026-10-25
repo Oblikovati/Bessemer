@@ -80,7 +80,7 @@ fn object_target(archive: &DisplayArchive, path: &str) -> DisplayObjectPointer {
 
 #[test]
 fn all_body_property_roots_match_independent_fields_and_forced_bytes() {
-    assert_eq!(cases().len(), 196);
+    assert_eq!(cases().len(), 224);
     let mut fields = 0;
     for case in cases() {
         let archive = parsed(case);
@@ -108,7 +108,7 @@ fn all_body_property_roots_match_independent_fields_and_forced_bytes() {
             case.bytes
         );
     }
-    assert_eq!(fields, 53878);
+    assert_eq!(fields, 57014);
 }
 
 #[test]
@@ -389,3 +389,6 @@ mod earlier_environment;
 
 #[path = "support/earliest_widths.rs"]
 mod earlier_widths;
+
+#[path = "support/earliest_materials.rs"]
+mod earlier_materials;

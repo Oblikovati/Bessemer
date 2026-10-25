@@ -18,7 +18,7 @@ fn earlier_environment_scene_and_assembly_words_are_absent_until_their_gates() {
 }
 
 #[test]
-fn bucket_properties_keep_twenty_three_or_twenty_four_complete_font_slots() {
+fn bucket_properties_keep_each_versioned_complete_font_array() {
     for case in cases()
         .into_iter()
         .filter(|case| case.version <= 0xf5e && case.scenario < 208)
@@ -26,7 +26,8 @@ fn bucket_properties_keep_twenty_three_or_twenty_four_complete_font_slots() {
         let archive = parsed(case);
         let last = embedded_font_exists(&archive, 23);
         let prior = embedded_font_exists(&archive, 22);
-        assert!(prior);
+        assert!(embedded_font_exists(&archive, 14));
+        assert_eq!(prior, case.version >= 0xf32);
         assert_eq!(last, case.version >= 0xf5c);
         assert!(!has_field(&archive, "root.scene_type"));
     }
@@ -49,9 +50,10 @@ fn check_bucket_holder(case: OldCase) {
     };
     let reference = object_target(&archive, &format!("{path}.unknown_8"));
     assert_eq!(reference, DisplayObjectPointer::Reference(identity));
+    let last = if case.version < 0xf32 { 14 } else { 22 };
     assert!(has_field(
         &archive,
-        &format!("{path}.property.line_fonts[22].name")
+        &format!("{path}.property.line_fonts[{last}].name")
     ));
 }
 

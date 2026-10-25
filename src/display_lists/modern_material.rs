@@ -66,7 +66,7 @@ fn material_rendering(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     ])?;
     archive.text("classification")?;
     archive.i32("use_new_shaders")?;
-    if archive.i32("has_rv_app_props")? != 0 {
+    if archive.context.version.value() > 0xf1d && archive.i32("has_rv_app_props")? != 0 {
         archive.scope("rv_app_props", rv)?;
     }
     material_extensions(archive)
@@ -94,11 +94,17 @@ pub(super) fn texture(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     for index in 0..5 {
         archive.f64(&format!("texture_dir[{index}]"))?;
     }
+    texture_tail(archive)
+}
+
+fn texture_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.f64s(&["unknown_60", "texture_angle"])?;
     archive.text("unknown_70")?;
     archive.i16("texture_render_mode")?;
     archive.i32("ignore_color_material")?;
-    archive.f64s(&["texture_trans_x", "texture_trans_y"])?;
+    if archive.context.version.value() > 0xf1d {
+        archive.f64s(&["texture_trans_x", "texture_trans_y"])?;
+    }
     if archive.context.version.value() > 0x372a {
         archive.i32("for_c_thread")?;
     }
