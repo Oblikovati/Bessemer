@@ -47,7 +47,10 @@ pub(super) fn holder(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.text("component_name")?;
     archive.object("property", &["moComponentProperty"])?;
     occurrences(archive)?;
-    archive.i32s(&["unknown_40", "from_sub_assembly"])
+    if archive.context.version.value() >= 0x106a {
+        archive.i32s(&["unknown_40", "from_sub_assembly"])?;
+    }
+    Ok(())
 }
 
 fn occurrences(archive: &mut DisplayDecoder<'_>) -> Result<()> {

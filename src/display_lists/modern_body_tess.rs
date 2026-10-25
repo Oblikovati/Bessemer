@@ -26,6 +26,9 @@ pub(super) fn body(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn body_property_map(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() <= 0x10ae {
+        return single_visual_property(archive, "body_prop_infos[0].value.viz_prop");
+    }
     let count = archive.count("body_prop_infos.count", 6)?;
     for index in 0..count {
         archive.scope(&format!("body_prop_infos[{index}]"), |archive| {
@@ -55,6 +58,19 @@ pub(super) fn properties(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 
 pub(super) fn face(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     face_source(archive)?;
+    face_visual_properties(archive)?;
+    archive.i32("unknown_34")?;
+    if archive.context.version.value() >= 0x117d {
+        archive.i32("unknown_68")?;
+    }
+    face_pairs(archive)?;
+    face_identity(archive)
+}
+
+fn face_visual_properties(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() <= 0x10ae {
+        return single_visual_property(archive, "face_viz_props[0].value");
+    }
     let count = archive.count("face_viz_props.count", 6)?;
     for index in 0..count {
         archive.scope(&format!("face_viz_props[{index}]"), |archive| {
@@ -62,12 +78,13 @@ pub(super) fn face(archive: &mut DisplayDecoder<'_>) -> Result<()> {
             archive.object("value", &["moVisualProperties_c"])
         })?;
     }
-    archive.i32("unknown_34")?;
-    if archive.context.version.value() >= 0x117d {
-        archive.i32("unknown_68")?;
-    }
-    face_pairs(archive)?;
-    face_identity(archive)
+    Ok(())
+}
+
+pub(super) fn single_visual_property(archive: &mut DisplayDecoder<'_>, path: &str) -> Result<()> {
+    // The native -1 key exists only in memory; retain the actual pointer without a fake key/count.
+    archive.entries(1, path)?;
+    archive.object(path, &["moVisualProperties_c"])
 }
 
 fn face_pairs(archive: &mut DisplayDecoder<'_>) -> Result<()> {

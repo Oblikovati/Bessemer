@@ -105,19 +105,23 @@ fn rv(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         float3(archive, prefix)?;
     }
     archive.f32("face_width")?;
+    rv_color_parameters(archive)
+}
+
+fn rv_color_parameters(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i32("color_form")?;
-    archive.f32s(&[
-        "reflectivity",
-        "color_mix",
-        "orig_ambient",
-        "orig_diffuse",
-        "orig_specular",
-    ])?;
+    archive.f32("reflectivity")?;
+    if archive.context.version.value() > 0x10a1 {
+        archive.f32("color_mix")?;
+    }
     rv_illumination(archive)
 }
 
 fn rv_illumination(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    archive.i32("illum_shader_type")?;
+    if archive.context.version.value() > 0x10bf {
+        archive.f32s(&["orig_ambient", "orig_diffuse", "orig_specular"])?;
+        archive.i32("illum_shader_type")?;
+    }
     if archive.context.version.value() >= 0x1165 {
         rv_shader_settings(archive)?;
     }

@@ -5,7 +5,9 @@ use super::{
 use crate::Result;
 
 pub(super) fn table(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    archive.i32s(&["unknown_0c", "unknown_08"])?;
+    if archive.context.version.value() > 0x10b2 {
+        archive.i32s(&["unknown_0c", "unknown_08"])?;
+    }
     if archive.context.version.value() > 0x1115 {
         table_ole_numbers(archive)?;
     }

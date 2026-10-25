@@ -475,3 +475,5 @@ Early complete-root view transitions and Bug #37 are recorded in [early view roo
 - Component properties and holders preserve version-sized font arrays and shared cyclic graphs; see [component properties](component-properties.md).
 
 - Typed document context resolution reads exact markers and bounded face-directory declarations; whole-document byte reconstruction is covered in [document context](document-context.md). Named blocks and requested external facets are checked in [external face links](external-face-links.md).
+
+- The lower bound is now 4200, including implicit face, body and model visual pointers and adjacent viewer, table and material gates; see [earliest visuals](earliest-visuals.md).

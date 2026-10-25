@@ -45,7 +45,7 @@ def nested_holder(state: object, version: int, owner: int, shared: list[int]) ->
     raw = pointer(owner)+cstring("nested 鋼",True)
     prop,identity = new_property(state,version,0)
     shared.append(identity)
-    return raw+prop+occurrences(0,True)+integers(-2147483648,-44)
+    return raw+prop+occurrences(0,True)+holder_state(version)
 
 
 def unknown_pointer(state: object, version: int, variant: int, owner: int, shared: list[int]) -> bytes:
@@ -61,7 +61,11 @@ def holder(state: object, version: int, variant: int) -> bytes:
     if variant==1:prop = pointer(0)
     elif shared:prop = pointer(shared[0])
     else:prop,_ = new_property(state,version,variant)
-    return raw+prop+occurrences(variant)+integers(-2147483648,-44)
+    return raw+prop+occurrences(variant)+holder_state(version)
+
+
+def holder_state(version: int) -> bytes:
+    return integers(-2147483648,-44) if version>=0x106a else b""
 
 
 def body(state: object, version: int, class_name: str, variant: int) -> bytes:

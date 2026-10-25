@@ -19,8 +19,14 @@ def direct_properties(document: object, path: object, raw: bytes, version: int, 
     entries = [0] if null_only else [visual,0]
     replacement = integers(len(entries))+b"".join(integers(-1)+struct.pack("<H",index) for index in entries)
     patches = [(start-8,end,replacement)]
+    patches.extend(relocated_after(raw,records,end,identity))
+    return apply_patches(raw,patches)
+
+
+def relocated_after(raw: bytes, records: list[tuple[int,int,int,str]], end: int, identity: int) -> list[tuple[int,int,bytes]]:
+    patches = []
     for position,_,_,_ in records:
         if position<end:continue
         shifted = shifted_tag(raw,position,identity+1,-2)
         if shifted is not None:patches.append((position,position+len(shifted),shifted))
-    return apply_patches(raw,patches)
+    return patches

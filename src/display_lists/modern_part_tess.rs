@@ -3,6 +3,20 @@ use crate::Result;
 
 pub(super) fn read(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.object_array("bodies", &["uoTempBodyTessData_c"])?;
+    model_visual_properties(archive)?;
+    archive.u32("ddata_time_stamp")?;
+    paired_arrays(archive)?;
+    super::modern_decals::part(archive)?;
+    part_configuration(archive)
+}
+
+fn model_visual_properties(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() <= 0x10ae {
+        return super::modern_body_tess::single_visual_property(
+            archive,
+            "model_viz_props[0].value",
+        );
+    }
     let count = archive.count("model_viz_props.count", 6)?;
     for index in 0..count {
         archive.scope(&format!("model_viz_props[{index}]"), |archive| {
@@ -10,10 +24,7 @@ pub(super) fn read(archive: &mut DisplayDecoder<'_>) -> Result<()> {
             archive.object("value", &["moVisualProperties_c"])
         })?;
     }
-    archive.u32("ddata_time_stamp")?;
-    paired_arrays(archive)?;
-    super::modern_decals::part(archive)?;
-    part_configuration(archive)
+    Ok(())
 }
 
 fn part_configuration(archive: &mut DisplayDecoder<'_>) -> Result<()> {

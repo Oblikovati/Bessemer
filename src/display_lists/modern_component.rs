@@ -40,12 +40,10 @@ fn reference(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn reference_state(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    archive.i32s(&[
-        "has_pattern_ref",
-        "unknown_1a8",
-        "reference_id",
-        "display_state",
-    ])?;
+    archive.i32s(&["has_pattern_ref", "unknown_1a8", "reference_id"])?;
+    if archive.context.version.value() > 0x10ae {
+        archive.i32("display_state")?;
+    }
     if archive.context.version.value() > 0x110d {
         archive.i32("is_virtual_comp")?;
     }
