@@ -20,7 +20,7 @@ import item_corpus
 VERSIONS = sorted({12000,0x2f44,0x2f45,0x2f5d,0x2f5e,0x2f62,0x2f63,0x2f7a,0x2f7b,0x2f80,0x2f81,0x2f8b,0x2f8c,0x2f95,0x2f96,0x2f99,0x2f9a,0x2fa5,0x2fa6,0x2fa9,0x2faa,0x2fab,0x2fac,0x2fad,12999,13000})
 
 
-def converted(document: object, path: Path, raw: bytes, version: int, kind: str, variant: int, converter: object = convert, configuration_bytes: bytes | None = None) -> bytes:
+def converted(document: object, path: Path, raw: bytes, version: int, kind: str, variant: int, converter: object = convert, configuration_bytes: bytes | None = None, display_items: bytes | None = None) -> bytes:
     patches: list[tuple[int,int,bytes]] = []
     bindings = [(dl_doc,"read_display_item_list"),(dl_doc,"read_MarkUpInkViews"),(dl_tess,"multiple_configs")]
     originals = [getattr(module,name) for module,name in bindings]
@@ -28,7 +28,7 @@ def converted(document: object, path: Path, raw: bytes, version: int, kind: str,
     def config_reader(archive: object, doc_kind: str, restore: int = 1, n_views: int = 0) -> object:
         replacement = configuration_bytes if configuration_bytes is not None else configurations(version,kind) if variant==4 else struct.pack("<i",0)
         return capture_plain(lambda current:originals[2](current,doc_kind,restore,n_views),replacement,patches)(archive)
-    readers = [capture_plain(originals[0],items(version),patches),capture_plain(originals[1],ink,patches),config_reader]
+    readers = [capture_plain(originals[0],items(version) if display_items is None else display_items,patches),capture_plain(originals[1],ink,patches),config_reader]
     try:
         for (module,name),reader in zip(bindings,readers,strict=True):setattr(module,name,reader)
         return converter(document,path,raw,version,variant==1,patches)
@@ -54,7 +54,7 @@ def generate(version: int, kind: str, scenario: int = 0, root_converter: object 
     root = displaylists.display_lists(archive,kind)
     assert archive.p==len(raw)
     trace = material_corpus.trace(root)+scene_corpus.trace(root)+item_corpus.trace(root)
-    scalar = scalar_trace(root,kind,version)+(configuration_trace(root,kind) if "configurations" in root else b"")+(ink_trace(root) if root["markup_ink_views"] is not None else b"")
+    scalar = scalar_trace(root,kind,version)+(configuration_trace(root,kind) if "configurations" in root else b"")+(ink_trace(root) if root.get("markup_ink_views") is not None else b"")
     scalar += extra_trace(root) if extra_trace is not None else b""
     framed = struct.pack("<IBBI",version,kind=="assembly",128+variant,len(raw))+raw+struct.pack("<I",len(trace))+trace+struct.pack("<I",len(scalar))+scalar
     row = {"version":version,"kind":kind,"scenario":128+variant,"bytes":len(raw),"sha256":hashlib.sha256(raw).hexdigest(),"oracle_fields":len(trace.splitlines())+len(scalar.splitlines()),"aggregate_entries":entry_counter(version,kind,variant),"objects":sum(archive.classes.values())}

@@ -17,7 +17,7 @@ mod scene_trace;
 #[path = "../examples/support/view_trace.rs"]
 mod view_trace;
 
-const SHADED_ROOT_GROUPS: &[&[u8]] = &[
+const ARCHIVE_ROOT_GROUPS: &[&[u8]] = &[
     include_bytes!("fixtures/display-lists/earlier-range-part.bin"),
     include_bytes!("fixtures/display-lists/earlier-range-assembly.bin"),
     include_bytes!("fixtures/display-lists/precollector-range-part.bin"),
@@ -29,10 +29,13 @@ const SHADED_ROOT_GROUPS: &[&[u8]] = &[
     include_bytes!("fixtures/display-lists/grouped-component-part.bin"),
     include_bytes!("fixtures/display-lists/grouped-component-assembly.bin"),
     include_bytes!("fixtures/display-lists/early-assembly-configurations.bin"),
+    include_bytes!("fixtures/display-lists/window-boundary-part.bin"),
+    include_bytes!("fixtures/display-lists/window-boundary-assembly.bin"),
+    include_bytes!("fixtures/display-lists/early-minimal-annotations.bin"),
 ];
 
 fn cases() -> Vec<RangeCase> {
-    let groups = SHADED_ROOT_GROUPS.iter();
+    let groups = ARCHIVE_ROOT_GROUPS.iter();
     groups
         .flat_map(|bytes| complete_cases::decode(bytes))
         .collect()
@@ -59,7 +62,7 @@ fn parsed(case: RangeCase) -> DisplayArchive {
 
 #[test]
 fn all_earlier_range_roots_match_independent_material_scene_component_fields_and_bytes() {
-    assert_eq!(cases().len(), 274);
+    assert_eq!(cases().len(), 330);
     let mut fields = 0;
     for case in cases() {
         let archive = parsed(case);
@@ -81,7 +84,7 @@ fn all_earlier_range_roots_match_independent_material_scene_component_fields_and
             case.bytes
         );
     }
-    assert_eq!(fields, 83883);
+    assert_eq!(fields, 99684);
 }
 
 fn has_field(archive: &DisplayArchive, path: &str) -> bool {
@@ -123,7 +126,7 @@ fn truncated_roots_extra_bytes_and_unproven_contexts_do_not_publish_partial_resu
     assert!(DisplayArchive::from_bytes(&trailing, case_context(case), LIMITS).is_err());
 
     let case = selected(12000, DisplayDocumentKind::Part, 128);
-    for version in [0, 8999, 19001, u32::MAX] {
+    for version in [0, 7999, 19001, u32::MAX] {
         let context = DisplayArchiveContext {
             version: DisplayVersion::new(version),
             ..case_context(case)
@@ -205,6 +208,7 @@ fn exact_earlier_root_budgets_cover_missing_collectors_ink_and_configuration_tai
         } else {
             0
         };
+        entries -= 2 * usize::from(case.version <= 0x1fd4);
         entries += match case.scenario % 128 {
             6 | 7 => 5,
             2 => 99,
@@ -220,9 +224,14 @@ fn exact_earlier_root_budgets_cover_missing_collectors_ink_and_configuration_tai
             }
             _ => 0,
         };
+        if case.scenario % 128 == 8 {
+            entries = 152;
+        }
         let exact = DisplayArchiveLimits {
             maximum_entries: entries,
-            maximum_objects: if case.kind == DisplayDocumentKind::Part {
+            maximum_objects: if case.scenario % 128 == 8 {
+                42
+            } else if case.kind == DisplayDocumentKind::Part {
                 52
             } else {
                 54 + usize::from(matches!(case.scenario % 128, 6 | 7))
@@ -417,3 +426,6 @@ mod early_configurations;
 mod component_transitions;
 #[path = "support/grouped_component_cases.rs"]
 mod grouped_components;
+
+#[path = "support/window_boundary_cases.rs"]
+mod window_boundaries;

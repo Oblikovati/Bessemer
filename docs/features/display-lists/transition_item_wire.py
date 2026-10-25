@@ -8,7 +8,9 @@ from generate_transform_vectors import doubles
 
 def annotation(version: int) -> bytes:
     raw = integers(-7,1,-8,1)+doubles(3)+integers(1)+cstring("edw one 鋼",True)
-    raw += integers(-9,1)+cstring("edw two\0",True)+(cstring("tail",True) if version>0x23fe else b"")
+    raw += integers(-9) if version>0x1fa8 else b""
+    raw += integers(1)+cstring("edw two\0",True) if version>0x1fd4 else b""
+    raw += cstring("tail",True) if version>0x23fe else b""
     return raw+(cstring("four",True)+cstring("five😀",True) if version>0x332b else b"")
 
 

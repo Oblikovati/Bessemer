@@ -34,13 +34,7 @@ pub(super) fn start(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     if archive.context.version.value() <= 0x1c49 {
         return Ok(());
     }
-    let minimum = if archive.context.version.value() > 0x332b {
-        27
-    } else if archive.context.version.value() > 0x23fe {
-        25
-    } else {
-        24
-    };
+    let minimum = annotation_minimum(archive.context.version.value());
     let count = archive.count("edw_annot_data.count", minimum)?;
     for index in 0..count {
         archive.scope(&format!("edw_annot_data[{index}]"), annotation)?;
@@ -60,8 +54,12 @@ fn annotation(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     let count = archive.count("unknown_points.count", 24)?;
     points(archive, "unknown_points", count)?;
     strings(archive, "unknown_strings1")?;
-    archive.i32("unknown_i")?;
-    strings(archive, "unknown_strings2")?;
+    if archive.context.version.value() > 0x1fa8 {
+        archive.i32("unknown_i")?;
+    }
+    if archive.context.version.value() > 0x1fd4 {
+        strings(archive, "unknown_strings2")?;
+    }
     if archive.context.version.value() > 0x23fe {
         archive.text("unknown_s3")?;
     }
@@ -70,6 +68,13 @@ fn annotation(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         archive.text("unknown_s5")?;
     }
     Ok(())
+}
+
+fn annotation_minimum(version: u32) -> usize {
+    16 + 4 * usize::from(version > 0x1fa8)
+        + 4 * usize::from(version > 0x1fd4)
+        + usize::from(version > 0x23fe)
+        + 2 * usize::from(version > 0x332b)
 }
 
 fn strings(archive: &mut DisplayDecoder<'_>, label: &str) -> Result<()> {

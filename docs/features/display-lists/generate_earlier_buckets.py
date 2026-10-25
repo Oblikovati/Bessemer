@@ -14,11 +14,11 @@ import bucket_corpus
 import dl_doc
 
 
-def encoded(document: object, path: Path, raw: bytes, version: int, scenario: int) -> bytes:
+def encoded(document: object, path: Path, raw: bytes, version: int, scenario: int, shared_patches: list[tuple[int,int,bytes]] | None = None) -> bytes:
     originals = wire.bucket,wire.view_bucket,wire.poly,wire.edge,dl_doc.read_OrigFontScale
     original_map = wire.component_map
     wire.component_map = lambda empty:original_map(empty,version>0x23d7)
-    patches: list[tuple[int,int,bytes]] = []
+    patches: list[tuple[int,int,bytes]] = [] if shared_patches is None else shared_patches
     def encode(builder: object) -> bytes:
         wire.poly = polygon_encoder(builder,version)
         return builder.object("uiViewBucket_c",lambda state:wire.view_bucket(state,state.next_index-1,scenario>=16,scenario%16==2,23 if scenario%16==1 else -1))

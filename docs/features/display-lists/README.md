@@ -446,3 +446,6 @@ maintainer-side humanizer skill is unavailable; its prose pass remains for revie
 
 - Explicit native file context now controls tangent-list omission independently
   of display-list version; see [file-contexts.md](file-contexts.md).
+
+- The 8000 interval covers earlier annotation strides, environment/body/unit
+  omissions and the documented uncounted-window exclusion; see [window-boundaries.md](window-boundaries.md).

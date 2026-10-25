@@ -133,9 +133,10 @@ fn configuration_footer(archive: &mut DisplayDecoder<'_>, views: usize) -> Resul
 
 fn require_context(context: &DisplayArchiveContext) -> Result<()> {
     let version = context.version.value();
-    if !(version == 7000 || (9000..=19000).contains(&version)) {
+    require_window_independent(version)?;
+    if !(version == 7000 || (8000..=19000).contains(&version)) {
         return Err(unsupported(format!(
-            "display context version {}, file version {}, kind {:?}; expected display version 7000 or 9000..=19000",
+            "display context version {}, file version {}, kind {:?}; expected display version 7000 or 8000..=19000",
             context.version.value(),
             context.file_version,
             context.kind
@@ -151,6 +152,15 @@ fn tessellation(archive: &mut DisplayDecoder<'_>) -> Result<()> {
             archive.object_array("components", super::modern_assembly::ASSEMBLY_CLASSES)
         }
     }
+}
+
+fn require_window_independent(version: u32) -> Result<()> {
+    if (0x1fae..0x1fcf).contains(&version) {
+        return Err(unsupported(format!(
+            "display version {version} ({version:#x}) depends on uncounted open-window transforms; expected a stream-independent layout outside 0x1FAE..=0x1FCE"
+        )));
+    }
+    Ok(())
 }
 
 fn root_environment(archive: &mut DisplayDecoder<'_>) -> Result<()> {

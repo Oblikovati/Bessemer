@@ -30,6 +30,8 @@ const BUCKET_ROOT_GROUPS: &[&[u8]] = &[
     include_bytes!("fixtures/display-lists/component-buckets-2d.bin"),
     include_bytes!("fixtures/display-lists/grouped-buckets-3d.bin"),
     include_bytes!("fixtures/display-lists/grouped-buckets-2d.bin"),
+    include_bytes!("fixtures/display-lists/window-buckets-3d.bin"),
+    include_bytes!("fixtures/display-lists/window-buckets-2d.bin"),
 ];
 
 fn cases() -> Vec<BucketCase> {
@@ -59,7 +61,7 @@ fn parsed(case: BucketCase) -> DisplayArchive {
 
 #[test]
 fn earlier_buckets_match_independent_fields_and_exact_bytes() {
-    assert_eq!(cases().len(), 230);
+    assert_eq!(cases().len(), 280);
     let mut fields = 0;
     for case in cases() {
         assert!(case.scalars.is_empty());
@@ -85,7 +87,7 @@ fn earlier_buckets_match_independent_fields_and_exact_bytes() {
             case.bytes
         );
     }
-    assert_eq!(fields, 47909);
+    assert_eq!(fields, 56901);
 }
 
 fn edited_mode(archive: &DisplayArchive) -> DisplayArchive {
