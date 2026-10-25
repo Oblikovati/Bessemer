@@ -62,7 +62,7 @@ fn persistent_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 }
 
 fn attributes(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    archive.i32s(&["new_boundary", "atom_id"])?;
+    early_attributes(archive)?;
     if archive.context.version.value() > 0xabc {
         archive.i32("new_region")?;
     }
@@ -95,4 +95,14 @@ pub(super) fn edge(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     ])?;
     point(archive, "center_point")?;
     modern_bucket_poly::edge_legacy_words(archive)
+}
+
+fn early_attributes(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() > 0x81e {
+        archive.i32("new_boundary")?;
+    }
+    if archive.context.version.value() > 0x835 {
+        archive.i32("atom_id")?;
+    }
+    Ok(())
 }

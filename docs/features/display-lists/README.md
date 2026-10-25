@@ -567,3 +567,7 @@ from 2277, covering absent environment-tail and facet-coordinate fields with
 The [legacy model checkpoint](legacy-model-layouts.md) admits contexts from
 2130. Its 226 complete roots cover absent body/part metadata and component atom
 lists, including inline and externally cached models and four containers.
+
+The [legacy boundary checkpoint](legacy-boundary-layouts.md) admits contexts
+from 2078. Its 370 complete roots and forty independent facet records cover
+polygon attributes, body metadata, facet stamps and cone-culling fields.

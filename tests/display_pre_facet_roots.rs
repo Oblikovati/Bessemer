@@ -344,3 +344,6 @@ mod legacy_environment;
 
 #[path = "support/legacy_model.rs"]
 mod legacy_model;
+
+#[path = "support/legacy_boundary.rs"]
+mod legacy_boundary;

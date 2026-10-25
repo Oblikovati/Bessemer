@@ -17,7 +17,7 @@ fn complete_model_roots_match_independent_fields_and_forced_bytes() {
     );
 }
 
-fn check_model_gates(case: OldCase) {
+pub(super) fn check_model_gates(case: OldCase) {
     legacy_texture::check_texture_gates(case);
     check_model_members(&parsed(case), case.version);
 }

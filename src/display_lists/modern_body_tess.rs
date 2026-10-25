@@ -17,7 +17,10 @@ pub(super) fn facet_context(context: &DisplayArchiveContext, drawing: bool) -> T
 
 pub(super) fn body(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.object_array("faces", &["uoTempFaceTessData_c"])?;
-    archive.i32s(&["unknown_20", "unknown_24"])?;
+    archive.i32("unknown_20")?;
+    if archive.context.version.value() >= 0x82b {
+        archive.i32("unknown_24")?;
+    }
     if archive.context.version.value() > 0x852 {
         archive.i32("unknown_2c")?;
     }
