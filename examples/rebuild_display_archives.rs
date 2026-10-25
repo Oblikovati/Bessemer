@@ -6,6 +6,8 @@ use bessemer::display_lists::{
 use std::error::Error;
 #[path = "support/archive_scalar_trace.rs"]
 mod archive_scalar_trace;
+#[path = "support/archive_trace.rs"]
+mod archive_trace;
 #[path = "support/bucket_trace.rs"]
 mod bucket_trace;
 #[path = "support/item_trace.rs"]
@@ -130,15 +132,5 @@ fn reconstruct(
     if rebuilt != payload {
         return Err("reconstructed stream differed; expected complete byte identity".into());
     }
-    Ok((rebuilt, semantic_trace(&parsed)))
-}
-
-fn semantic_trace(archive: &DisplayArchive) -> Vec<u8> {
-    let mut trace = reference_trace::trace(archive);
-    trace.extend(scene_trace::trace(archive));
-    trace.extend(item_trace::trace(archive));
-    trace.extend(bucket_trace::trace(archive));
-    trace.extend(light_trace::trace(archive));
-    trace.extend(material_trace::trace(archive));
-    trace
+    Ok((rebuilt, archive_trace::trace(&parsed)))
 }

@@ -10,6 +10,8 @@ use archive_support::{LIMITS, archive_scalar_trace, context};
 #[path = "support/old_display_cases.rs"]
 mod complete_cases;
 use complete_cases::OldCase;
+#[path = "../examples/support/archive_trace.rs"]
+mod archive_trace;
 #[path = "../examples/support/bucket_trace.rs"]
 mod bucket_trace;
 #[path = "support/unsigned_documents.rs"]
@@ -51,19 +53,9 @@ fn case_context(case: OldCase) -> DisplayArchiveContext {
     }
 }
 
-fn trace(archive: &DisplayArchive) -> Vec<u8> {
-    let mut fields = reference_trace::trace(archive);
-    fields.extend(scene_trace::trace(archive));
-    fields.extend(item_trace::trace(archive));
-    fields.extend(bucket_trace::trace(archive));
-    fields.extend(light_trace::trace(archive));
-    fields.extend(material_trace::trace(archive));
-    fields
-}
-
 fn check_case(case: OldCase) -> usize {
     let archive = DisplayArchive::from_bytes(case.bytes, case_context(case), LIMITS).unwrap();
-    let actual = trace(&archive);
+    let actual = archive_trace::trace(&archive);
     compare_trace(&actual, case.expected, case);
     let fields = actual.iter().filter(|byte| **byte == b'\n').count()
         + archive_support::check_scalar_table(&archive, case.scalars);
