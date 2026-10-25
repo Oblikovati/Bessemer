@@ -13,14 +13,16 @@ def font_count(version: int) -> int:
     return 30 if version<0x23b3 else 31
 
 
-def font(index: int) -> bytes:
+def font(index: int, version: int = 19000) -> bytes:
     bits = [0x80000000,0x7f800042,0x7f800000,0x7fc00123,1][index%5]
-    return cstring(f"font {index} 鋼",True)+struct.pack("<hIh",-17,bits,-32768)
+    width = struct.pack("<h",-17)+(struct.pack("<I",bits) if version>=0xf41 else b"")
+    return cstring(f"font {index} 鋼",True)+width+struct.pack("<h",-32768)
 
 
 def property_body(state: object, version: int, variant: int) -> bytes:
-    raw = b"".join(font(index) for index in range(font_count(version)))
-    raw += struct.pack("<HHBIHhI",0xffff,0x8000,254,0xfedcba98,0xffff,-32768,0x7f800042)
+    raw = b"".join(font(index,version) for index in range(font_count(version)))
+    raw += struct.pack("<HHBIHh",0xffff,0x8000,254,0xfedcba98,0xffff,-32768)
+    raw += struct.pack("<I",0x7f800042) if version>=0xf41 else b""
     raw += bytes([23 if variant==2 else 255])
     raw += integers(-17) if version>=0x147c else b""
     return raw+(integers(-19) if version>0x3738 else b"")

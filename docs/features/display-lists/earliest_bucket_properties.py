@@ -11,6 +11,7 @@ from generate_transform_vectors import compact
 from swarchive import Archive
 import bucket_corpus
 import dl_doc
+from earlier_bucket_wire import polygon_encoder
 
 
 def bucket(builder: ObjectBuilder, version: int, scenario: int) -> bytes:
@@ -18,7 +19,8 @@ def bucket(builder: ObjectBuilder, version: int, scenario: int) -> bytes:
     raw = bytes(24)+integers(0,0)+bytes(8)+integers(0,0)
     raw += bytes(11*4)+bytes(4)+integers(0)+bytes(2)
     raw += integers(1)+builder.object(class_name,lambda state:body(state,version,class_name,scenario%16))
-    raw += bytes(4)+bytes(3*4)
+    value = integers(1)+property_poly(builder,version) if version<0xf41 else bytes(4)
+    raw += value+bytes(3*4)
     return raw+bytes(2*4)+bytes(8*4)+bytes(2)
 
 
@@ -64,6 +66,14 @@ def generate(version: int, kind: str, scenario: int) -> tuple[bytes,dict[str,obj
     scalars,objects = reference(raw,document,path,version,kind)
     class_name = "moComponentPropertyHolder" if scenario>=16 else "moComponentProperty"
     # Forty prefix fonts, three panes, one view and one thread-map entry precede the property budget.
-    row = {"version":version,"kind":kind,"scenario":scenario,"class_name":class_name,"bytes":len(raw),"sha256":hashlib.sha256(raw).hexdigest(),"oracle_fields":len(scalars.splitlines()),"aggregate_entries":45+entries(version,class_name,scenario%16),"objects":objects}
-    framed = struct.pack("<IBBI",version,kind=="assembly",scenario,len(raw))+raw+bytes(4)+struct.pack("<I",len(scalars))+scalars
+    row = {"version":version,"kind":kind,"scenario":scenario,"class_name":class_name,"bytes":len(raw),"sha256":hashlib.sha256(raw).hexdigest(),"oracle_fields":len(scalars.splitlines()),"aggregate_entries":45+entries(version,class_name,scenario%16)+4*int(version<0xf41),"objects":objects}
+    expected,scalars = (scalars,b"") if version<0xf41 else (b"",scalars)
+    framed = struct.pack("<IBBI",version,kind=="assembly",scenario,len(raw))+raw+struct.pack("<I",len(expected))+expected+struct.pack("<I",len(scalars))+scalars
     return framed,row
+
+
+
+def property_poly(builder: ObjectBuilder, version: int) -> bytes:
+    raw = polygon_encoder(builder,version)(1,3,kind=9,arc=False,line=False)
+    line = cstring("legacy polygon")+struct.pack("<iii",-2147483648,-4,5)
+    return raw[:28]+bytes([255])+line+raw[29:]

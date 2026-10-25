@@ -111,8 +111,7 @@ pub(super) fn type_payload(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 
 pub(super) fn line_property(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.text("style_name")?;
-    archive.i16("width.standard_width")?;
-    archive.f32("width.custom_width")?;
+    archive.scope("width", super::modern_item_style::width)?;
     archive.i32s(&["color", "visibility"])
 }
 

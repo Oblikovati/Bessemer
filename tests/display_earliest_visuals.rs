@@ -10,6 +10,8 @@ use archive_support::{LIMITS, archive_scalar_trace, context};
 #[path = "support/old_display_cases.rs"]
 mod complete_cases;
 use complete_cases::OldCase;
+#[path = "../examples/support/bucket_trace.rs"]
+mod bucket_trace;
 #[path = "../examples/support/item_trace.rs"]
 mod item_trace;
 #[path = "../examples/support/material_trace.rs"]
@@ -28,6 +30,7 @@ fn cases() -> Vec<OldCase> {
         include_bytes!("fixtures/display-lists/earliest-visual-part.bin").as_slice(),
         include_bytes!("fixtures/display-lists/earliest-visual-assembly.bin").as_slice(),
         include_bytes!("fixtures/display-lists/earliest-visual-properties.bin").as_slice(),
+        include_bytes!("fixtures/display-lists/earliest-width-items.bin").as_slice(),
     ]
     .into_iter()
     .flat_map(complete_cases::decode)
@@ -77,13 +80,16 @@ fn object_target(archive: &DisplayArchive, path: &str) -> DisplayObjectPointer {
 
 #[test]
 fn all_body_property_roots_match_independent_fields_and_forced_bytes() {
-    assert_eq!(cases().len(), 168);
+    assert_eq!(cases().len(), 196);
     let mut fields = 0;
     for case in cases() {
         let archive = parsed(case);
         let mut actual = material_trace::trace(&archive);
         actual.extend(scene_trace::trace(&archive));
         actual.extend(item_trace::trace(&archive));
+        if case.version < 0xf41 && case.scenario < 208 {
+            actual.extend(bucket_trace::trace(&archive));
+        }
         assert_eq!(
             std::str::from_utf8(&actual).unwrap(),
             std::str::from_utf8(case.expected).unwrap(),
@@ -102,7 +108,7 @@ fn all_body_property_roots_match_independent_fields_and_forced_bytes() {
             case.bytes
         );
     }
-    assert_eq!(fields, 49582);
+    assert_eq!(fields, 53878);
 }
 
 #[test]
@@ -380,3 +386,6 @@ fn early_tessellation_rejects_sampled_prefixes_and_trailing_bytes() {
 
 #[path = "support/earliest_environment.rs"]
 mod earlier_environment;
+
+#[path = "support/earliest_widths.rs"]
+mod earlier_widths;

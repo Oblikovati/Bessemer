@@ -2,6 +2,94 @@
   "scope": "complete owned wire roots with explicit file context 19000; CAD validity unclaimed",
   "fixtures": [
     {
+      "version": 3890,
+      "kind": "part",
+      "scenario": 0,
+      "class_name": "moComponentProperty",
+      "bytes": 3850,
+      "sha256": "e058a373d0ff186d84a4fe2c99274c2a8c1f868e9131dddf9cfbc05dd110cf78",
+      "oracle_fields": 105,
+      "aggregate_entries": 72,
+      "objects": 44
+    },
+    {
+      "version": 3890,
+      "kind": "part",
+      "scenario": 16,
+      "class_name": "moComponentPropertyHolder",
+      "bytes": 3929,
+      "sha256": "26cef340ed172a1f292e9781e37bfef39e9a1592bb7ddb948ce1cd108f3684de",
+      "oracle_fields": 109,
+      "aggregate_entries": 75,
+      "objects": 45
+    },
+    {
+      "version": 3890,
+      "kind": "assembly",
+      "scenario": 0,
+      "class_name": "moComponentProperty",
+      "bytes": 3850,
+      "sha256": "63bbca92e20946044bf4e8f078f0e824626e8559f8c7daaa057c941b073a1837",
+      "oracle_fields": 105,
+      "aggregate_entries": 72,
+      "objects": 44
+    },
+    {
+      "version": 3890,
+      "kind": "assembly",
+      "scenario": 16,
+      "class_name": "moComponentPropertyHolder",
+      "bytes": 3929,
+      "sha256": "8a259a298bd6c5eb57518841319dfec466a0afd65c5ea1965e284f95142b2734",
+      "oracle_fields": 109,
+      "aggregate_entries": 75,
+      "objects": 45
+    },
+    {
+      "version": 3904,
+      "kind": "part",
+      "scenario": 0,
+      "class_name": "moComponentProperty",
+      "bytes": 3850,
+      "sha256": "e058a373d0ff186d84a4fe2c99274c2a8c1f868e9131dddf9cfbc05dd110cf78",
+      "oracle_fields": 105,
+      "aggregate_entries": 72,
+      "objects": 44
+    },
+    {
+      "version": 3904,
+      "kind": "part",
+      "scenario": 16,
+      "class_name": "moComponentPropertyHolder",
+      "bytes": 3929,
+      "sha256": "26cef340ed172a1f292e9781e37bfef39e9a1592bb7ddb948ce1cd108f3684de",
+      "oracle_fields": 109,
+      "aggregate_entries": 75,
+      "objects": 45
+    },
+    {
+      "version": 3904,
+      "kind": "assembly",
+      "scenario": 0,
+      "class_name": "moComponentProperty",
+      "bytes": 3850,
+      "sha256": "63bbca92e20946044bf4e8f078f0e824626e8559f8c7daaa057c941b073a1837",
+      "oracle_fields": 105,
+      "aggregate_entries": 72,
+      "objects": 44
+    },
+    {
+      "version": 3904,
+      "kind": "assembly",
+      "scenario": 16,
+      "class_name": "moComponentPropertyHolder",
+      "bytes": 3929,
+      "sha256": "8a259a298bd6c5eb57518841319dfec466a0afd65c5ea1965e284f95142b2734",
+      "oracle_fields": 109,
+      "aggregate_entries": 75,
+      "objects": 45
+    },
+    {
       "version": 3905,
       "kind": "part",
       "scenario": 0,
@@ -970,7 +1058,7 @@
       "class_name": "moComponentPropertyHolder"
     }
   ],
-  "sha256": "84f97adc529d12ea11feac6d1e03fc3d54ad427a511df40cac9d24bf5364b044",
+  "sha256": "9a4362cfdaec1fd78ca35a3ff2daaa89a233f39bc88c875b91c48908ac5dd171",
   "source_hashes": {
     "dl_doc.py": "6342a5285d5261d7ef5d07430d021aeea5aae878b0e61de9c7488b187f2aa8bc",
     "dl_tess.py": "b5f460b353ffb057437e05819be9a5c5fb4f7f45a17faad9b1d9372d7da8faa2",

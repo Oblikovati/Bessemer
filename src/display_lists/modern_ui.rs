@@ -56,8 +56,7 @@ pub(super) fn fonts(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 
 pub(super) fn font(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.text("name")?;
-    archive.i16("standard_width")?;
-    archive.f32("custom_width")?;
+    super::modern_item_style::short_width(archive)?;
     archive.i16("end_cap")?;
     Ok(())
 }

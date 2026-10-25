@@ -17,8 +17,18 @@ pub(super) fn read(archive: &mut DisplayDecoder<'_>, kind: i32) -> Result<()> {
 }
 
 pub(super) fn width(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() < 0xf41 {
+        return archive.i32("standard_width").map(|_| ());
+    }
+    short_width(archive)
+}
+
+pub(super) fn short_width(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i16("standard_width")?;
-    archive.f32("custom_width")
+    if archive.context.version.value() >= 0xf41 {
+        archive.f32("custom_width")?;
+    }
+    Ok(())
 }
 
 fn user_pen(archive: &mut DisplayDecoder<'_>) -> Result<()> {

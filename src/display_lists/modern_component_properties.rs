@@ -40,7 +40,7 @@ fn visibility(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.u8("unknown_4")?;
     archive.u32("unknown_8")?;
     archive.u16("layer")?;
-    archive.scope("line_width", super::modern_item_style::width)
+    archive.scope("line_width", super::modern_item_style::short_width)
 }
 
 pub(super) fn holder(archive: &mut DisplayDecoder<'_>) -> Result<()> {
