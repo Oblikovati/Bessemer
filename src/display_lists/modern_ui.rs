@@ -41,7 +41,9 @@ fn pane(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.transform("unknown_28")?;
     archive.transform("pan_zoom_xform")?;
     archive.u16("display_mode")?;
-    archive.u16("hlr_display_quality")?;
+    if archive.context.version.value() > 0x45c {
+        archive.u16("hlr_display_quality")?;
+    }
     archive.f64("perspective")?;
     if archive.context.version.value() > 0xbda {
         archive.text("unknown_a8")?;

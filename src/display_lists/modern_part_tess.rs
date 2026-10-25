@@ -3,7 +3,9 @@ use crate::Result;
 
 pub(super) fn read(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.object_array("bodies", &["uoTempBodyTessData_c"])?;
-    model_visual_properties(archive)?;
+    if archive.context.version.value() >= 0x3e6 {
+        model_visual_properties(archive)?;
+    }
     if archive.context.version.value() >= 0x4f7 {
         archive.u32("ddata_time_stamp")?;
     }

@@ -599,3 +599,7 @@ and older facet arrays and planar words, plus eight whole-document fixtures.
 The [early coordinate-scope checkpoint](legacy-scope-layouts.md) admits contexts
 from 1180, with 154 complete roots proving 3D coordinates before the 2D header,
 explicit Z edits, independent facets and eight whole-document fixtures.
+
+The [early model-visual and light checkpoint](legacy-model-viz-layouts.md) admits
+contexts from 989, with 962 complete roots covering model pointers, pane quality,
+facet edge arrays and all five old-light layouts, plus eight containers.

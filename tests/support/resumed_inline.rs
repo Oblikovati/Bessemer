@@ -99,6 +99,8 @@ pub(super) fn resumed_edited_contents(
 
 fn resumed_edit_field(field: &DisplayField) -> bool {
     matches!(field.value, DisplayFieldValue::Facet(_))
+        || (field.path.starts_with("root.old_lights.")
+            && !matches!(field.value, DisplayFieldValue::ObjectTag(_)))
         || field.path.contains(".dl_ghost_bucket.items[")
         || resumed_polygon_field(&field.path)
         || (field.path.starts_with("root.textured_planes.")

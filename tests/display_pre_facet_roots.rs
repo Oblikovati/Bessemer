@@ -368,3 +368,6 @@ mod legacy_ghost;
 
 #[path = "support/legacy_scope.rs"]
 mod legacy_scope;
+
+#[path = "support/legacy_model_viz.rs"]
+mod legacy_model_viz;

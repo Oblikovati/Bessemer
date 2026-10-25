@@ -2,20 +2,19 @@ use super::{archive_decode::DisplayDecoder, archive_error::invalid};
 use crate::Result;
 
 pub(super) fn ambient(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    archive.f64s(&["ambient", "diffuse", "specular"])?;
-    archive.u32("color")?;
-    archive.i32s(&[
-        "suppressed",
-        "in_model_space",
-        "unknown_364",
-        "use_cart_display",
-    ])?;
+    if archive.context.version.value() <= 0x427 {
+        legacy_light_base(archive)?;
+    } else {
+        current_light_base(archive)?;
+    }
     light_names(archive)
 }
 
 fn light_names(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.text("id_name")?;
-    archive.text("user_name")?;
+    if archive.context.version.value() < 0x407 || archive.context.version.value() > 0x453 {
+        archive.text("user_name")?;
+    }
     let first = if archive.context.version.value() > 0x11a3 {
         "enabled_in_pv_initial"
     } else {
@@ -46,7 +45,9 @@ fn ambient_rendering(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 
 pub(super) fn directional(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     ambient(archive)?;
-    super::modern_scene::double_vector(archive, "direction")?;
+    if archive.context.version.value() > 0x427 {
+        super::modern_scene::double_vector(archive, "direction")?;
+    }
     if archive.context.version.value() >= 0x11a4 {
         archive.f64("pv_shadow_softness")?;
     }
@@ -55,16 +56,7 @@ pub(super) fn directional(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 
 pub(super) fn spot(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     ambient(archive)?;
-    super::modern_scene::double_vector(archive, "position")?;
-    super::modern_scene::double_vector(archive, "target")?;
-    archive.f64s(&[
-        "cone_angle",
-        "exponent",
-        "constant_falloff",
-        "linear_falloff",
-        "quadratic_falloff",
-        "unknown_400",
-    ])?;
+    spot_geometry(archive)?;
     spot_rendering(archive)
 }
 
@@ -79,6 +71,9 @@ fn spot_rendering(archive: &mut DisplayDecoder<'_>) -> Result<()> {
 
 pub(super) fn point(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     ambient(archive)?;
+    if archive.context.version.value() <= 0x427 {
+        return Ok(());
+    }
     super::modern_scene::double_vector(archive, "position")?;
     if archive.context.version.value() <= 0x11a3 {
         return Ok(());
@@ -113,4 +108,49 @@ fn property(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         2 => archive.text("value"),
         _ => Ok(()),
     }
+}
+
+fn current_light_base(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    archive.f64s(&["ambient", "diffuse", "specular"])?;
+    archive.u32("color")?;
+    archive.i32s(&["suppressed", "in_model_space", "unknown_364"])?;
+    if archive.context.version.value() >= 0x452 {
+        archive.i32("use_cart_display")?;
+    }
+    Ok(())
+}
+
+fn legacy_light_base(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    archive.f64s(&[
+        "ambient",
+        "unknown_old_a8",
+        "diffuse",
+        "specular",
+        "unknown_old_a0",
+        "unknown_old_b0",
+    ])?;
+    for name in ["unknown_old_88", "unknown_old_50", "unknown_old_68"] {
+        super::modern_scene::double_vector(archive, name)?;
+    }
+    archive.u32("color")?;
+    archive.i32("suppressed").map(|_| ())
+}
+
+fn spot_geometry(archive: &mut DisplayDecoder<'_>) -> Result<()> {
+    if archive.context.version.value() <= 0x427 {
+        return Ok(());
+    }
+    super::modern_scene::double_vector(archive, "position")?;
+    super::modern_scene::double_vector(archive, "target")?;
+    archive.f64("cone_angle")?;
+    if archive.context.version.value() < 0x43f {
+        return Ok(());
+    }
+    archive.f64s(&[
+        "exponent",
+        "constant_falloff",
+        "linear_falloff",
+        "quadratic_falloff",
+        "unknown_400",
+    ])
 }

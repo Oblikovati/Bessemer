@@ -20,7 +20,7 @@ fn complete_early_scope_roots_match_independent_fields_and_forced_bytes() {
     );
 }
 
-fn check_early_scope_members(case: OldCase) {
+pub(super) fn check_early_scope_members(case: OldCase) {
     let archive = parsed(case);
     legacy_ghost::check_early_ghost_members(case);
     for member in &archive.contents().fields {
