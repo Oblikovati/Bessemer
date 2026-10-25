@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added validated display-archive edit outcomes with completion, exact stored-field fidelity, validation coverage, explicit exclusions and revision-bound structural field history. (#28)
+
 - Added complete drawing `Contents/VBLists` reading, validated edits and writing with unsigned model-version context, shared object graphs and shaded part/assembly models. (#38)
 
 - Added exact display-to-face-cache link checks with borrowed facets, explicit coverage and typed failures for missing, invalid or ambiguous targets. (#28)

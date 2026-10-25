@@ -416,8 +416,10 @@ coverage for the four older supported snapshots while preserving that corpus gat
 - Add earlier scene and unit layouts, remaining shaded-data layouts,
   textured-plane bitmap bodies and earlier configuration layouts. Unknown-meaning
   fields remain explicit raw typed values; unresolved bodies are unsupported.
-- Complete the immutable archive graph, validated owned construction/edits,
-  revision-scoped identities, authentic reverts, ordered coverage and history.
+- Immutable archive graphs, validated owned construction/edits, revision-scoped
+  identities and authentic reverts have focused checks. The
+  [stored-archive edit report](edit-history.md) adds exact coverage and structural
+  field history; geometry and external-block checks remain separate.
 - Preserve the complete 1,086-stream forced-byte gate and expand independent field
   oracles to the remaining schema branches. Add their owned version/degeneracy
   vectors, malformed input/budget checks, whole-document isolation and process/
@@ -468,7 +470,7 @@ Early complete-root view transitions and Bug #37 are recorded in [early view roo
 
 - The lower bound is now 4300, with direct body-property maps, earlier state words and versioned OLE table lists; see [earliest bodies](earliest-bodies.md).
 
-- Archive object lookup now checks revision-scoped handles; see [revision identities](revision-identities.md). Operation history and whole-document coverage remain unfinished.
+- Archive object lookup now checks revision-scoped handles; see [revision identities](revision-identities.md). [Edit reports](edit-history.md) now provide structural field history; whole-document cross-stream acceptance remains a separate gate.
 
 - Shared line-style and layer-manager CObject bodies retain aliases and versioned map framing; see [UI objects](ui-objects.md).
 
@@ -632,3 +634,7 @@ The [named-view integration witnesses](named-branch-layouts.md) exercise later
 section-plane and selection branches in 100 full roots and four whole files.
 The [executed version-predicate audit](version-predicate-audit.md) records branch
 observations across the owned full-root inventory and preserves remaining gaps.
+
+The [stored-archive edit outcome](edit-history.md) returns exact coverage and
+revision-bound structural field history with each validated edit. Geometry and
+external-block checks are explicitly excluded from that operation's scope.

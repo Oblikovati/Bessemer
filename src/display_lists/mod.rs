@@ -98,6 +98,14 @@ mod textured_planes;
 
 mod archive_identity;
 pub use archive_identity::DisplayObjectHandle;
+mod archive_edit;
+mod archive_edit_history;
+mod archive_edit_types;
+pub use archive_edit_types::{
+    DisplayArchiveEdit, DisplayEditCheckMode, DisplayEditCompletion, DisplayEditCoverage,
+    DisplayEditDiagnostic, DisplayEditFidelity, DisplayFieldChange, DisplayFieldHandle,
+    DisplayFieldRelation,
+};
 
 mod modern_layers;
 mod modern_line_style;

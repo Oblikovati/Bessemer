@@ -37,6 +37,8 @@ uncounted-window interval
 `0x1FAE`–`0x1FCE`, with an explicit
 native file-version context. Tangent bucket lists follow that context independently
 of the display-list version.
+`edit_with_history` returns a validated snapshot with exact archive coverage,
+structural field history and explicit geometry/external-link check exclusions.
 Before `0x117F`, scene walls support null legacy-material pointers; non-null
 material bodies remain explicitly unsupported.
 All 1,086 reference-readable part/assembly display-list streams reconstruct

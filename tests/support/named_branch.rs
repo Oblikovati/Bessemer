@@ -132,11 +132,14 @@ fn check_named_document(raw: &[u8], expected_raw: &[u8], kind: DisplayDocumentKi
     let original = bessemer::Document::from_bytes(raw).unwrap();
     let source = archive_support::decode_document(raw, kind);
     let expected = archive_support::decode_document(expected_raw, kind);
-    let edited = source
-        .with_contents(edited_named_contents(&source), LIMITS)
+    let outcome = source
+        .edit_with_history(edited_named_contents(&source), LIMITS)
         .unwrap();
-    assert_eq!(edited.to_bytes().unwrap(), expected.to_bytes().unwrap());
-    let reopened = replace_named_stream(&original, &edited);
+    assert_eq!(
+        outcome.archive().to_bytes().unwrap(),
+        expected.to_bytes().unwrap()
+    );
+    let reopened = replace_named_stream(&original, outcome.archive());
     let result = archive_support::decode_document(&reopened.to_bytes().unwrap(), kind);
     assert_eq!(result.to_bytes().unwrap(), expected.to_bytes().unwrap());
     check_named_restore(&original, &source, &reopened, &result);
@@ -212,4 +215,27 @@ fn other_named_fields(archive: &DisplayArchive) -> Vec<DisplayField> {
         .filter(|value| value.path.as_ref() != "root.named_view_transform")
         .cloned()
         .collect()
+}
+
+#[test]
+fn named_plane_history_retains_independent_wire_and_revision_bound_parents() {
+    for case in populated_named_cases() {
+        let source = parsed(case);
+        let expected = selected_named(case, 196);
+        let outcome = source
+            .edit_with_history(edited_named_contents(&source), LIMITS)
+            .unwrap();
+        assert_eq!(outcome.archive().to_bytes().unwrap(), expected.bytes);
+        assert_eq!(outcome.changes().len(), 1);
+        let change = &outcome.changes()[0];
+        assert_eq!(change.path(), "root.named_view_transform");
+        assert_eq!(change.relation(), DisplayFieldRelation::Derived);
+        let parent = source.resolve_field(&change.parents()[0]).unwrap();
+        assert_eq!(Some(&parent.value), field(&source, change.path()));
+        let result = outcome
+            .archive()
+            .resolve_field(change.result().unwrap())
+            .unwrap();
+        assert_eq!(Some(&result.value), field(&parsed(expected), change.path()));
+    }
 }
