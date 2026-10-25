@@ -22,6 +22,7 @@ pub(super) fn append(archive: &DisplayArchive, rows: &mut Trace) {
         if polygon.count > 0 && !polygon.explicit_layer_flags {
             polygon.flags |= 0x300;
         }
+        append_logical_node(rows, prefix, archive.context().version.value());
         append_face_id(rows, prefix, &polygon, archive.context().version.value());
         rows.insert(format!("{prefix}.flags"), format!("i:{}", polygon.flags));
     }
@@ -96,4 +97,11 @@ fn flag_mask(leaf: &str) -> Option<u32> {
         "has_silh_data" => 0x10,
         _ => return None,
     })
+}
+
+fn append_logical_node(rows: &mut Trace, prefix: &str, version: u32) {
+    // #28: old readers discard the stored node word; their logical value is separate.
+    if version < 0x66e {
+        rows.insert(format!("{prefix}.node_id"), "i:-1".to_owned());
+    }
 }

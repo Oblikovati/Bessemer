@@ -26,7 +26,7 @@ fn resolved_archive(document: &Document, kind: DisplayDocumentKind) -> DisplayAr
             .unwrap();
     assert!(matches!(
         context.version.value(),
-        1857 | 1860 | 1875 | 1900 | 2011 | 2078 | 2130 | 2277 | 2359 | 2388 | 2563 | 2596
+        1645 | 1857 | 1860 | 1875 | 1900 | 2011 | 2078 | 2130 | 2277 | 2359 | 2388 | 2563 | 2596
     ));
     assert!(context.face_tessellation_components.is_empty());
     let raw = document.read_stream("Contents/DisplayLists").unwrap();

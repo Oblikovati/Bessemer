@@ -38,7 +38,7 @@ fn check_discard_words(case: OldCase) {
     }
 }
 
-fn check_hidden_silhouettes(case: OldCase) {
+pub(super) fn check_hidden_silhouettes(case: OldCase) {
     let archive = parsed(case);
     legacy_font::check_font_gates(case);
     legacy_zone::check_zone_members(case);

@@ -356,3 +356,6 @@ mod legacy_zone;
 
 #[path = "support/legacy_discard.rs"]
 mod legacy_discard;
+
+#[path = "support/legacy_text.rs"]
+mod legacy_text;

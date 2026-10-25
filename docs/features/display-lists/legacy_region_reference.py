@@ -43,6 +43,7 @@ def region_rows(path: str, value: object, rows: dict[str,str], seen: set[int]) -
         if id(value) in seen:return
         seen.add(id(value))
         if "_stored_region" in value:flatten(f"{path}.new_region",value["_stored_region"],rows)
+        if "_stored_node_id" in value:flatten(f"{path}.node_id",value["_stored_node_id"],rows)
         for key,child in value.items():region_member(path,key,child,rows,seen)
         return
     if isinstance(value,(list,tuple)):

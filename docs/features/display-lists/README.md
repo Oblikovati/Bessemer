@@ -583,3 +583,7 @@ covering exploded lists, component zones and textured planes with 262 roots,
 The [discarded edge-word checkpoint](legacy-discard-layouts.md) admits contexts
 from 1857. Its 262 complete roots cover hidden-silhouette list introduction and
 the seven-version extra edge word, with eight whole-document fixtures.
+
+The [early text checkpoint](legacy-text-layouts.md) admits contexts from 1645,
+covering omitted text tails, facet edge-ID flags and physical node words despite
+native logical resets, with 262 complete roots and four containers.

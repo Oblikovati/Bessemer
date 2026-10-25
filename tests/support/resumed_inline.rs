@@ -99,6 +99,7 @@ pub(super) fn resumed_edited_contents(
 
 fn resumed_edit_field(field: &DisplayField) -> bool {
     matches!(field.value, DisplayFieldValue::Facet(_))
+        || (field.path.contains(".view_bucket.") && field.path.ends_with(".node_id"))
         || (field.path.starts_with("root.textured_planes.")
             && matches!(field.value, DisplayFieldValue::Transform(_)))
         || [10, 12, 13, 14, 15, 16].into_iter().any(|index| {

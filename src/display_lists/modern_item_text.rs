@@ -20,8 +20,10 @@ fn text(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.f64s(&["unknown_18", "unknown_20"])?;
     archive.i32s(&["text_position", "unknown_2c"])?;
     let text = archive.text_value("text")?;
-    archive.i32("unknown_34")?;
-    archive.f64s(&["unknown_38", "unknown_40"])?;
+    if archive.context.version.value() > 0x72a {
+        archive.i32("unknown_34")?;
+        archive.f64s(&["unknown_38", "unknown_40"])?;
+    }
     if archive.context.version.value() > 0xa03 && archive.i16("has_widths")? != 0 {
         words(archive, "unknown_48", text.text().chars().count())?;
     }
