@@ -2,18 +2,8 @@ use super::{
     DisplayArchive, DisplayArchiveContents, DisplayField, DisplayFieldValue, DisplayObjectId,
     DisplayObjectPointer,
 };
+pub(super) use crate::archive_codec::ArchiveRevision as DisplayRevision;
 use crate::{BessemerError, FailureClass, Result};
-use std::sync::Arc;
-
-#[derive(Debug, Clone, Default)]
-pub(super) struct DisplayRevision(Arc<()>);
-
-impl PartialEq for DisplayRevision {
-    fn eq(&self, other: &Self) -> bool {
-        Arc::ptr_eq(&self.0, &other.0)
-    }
-}
-impl Eq for DisplayRevision {}
 
 /// Object identity bound to one immutable archive revision, independent of pointer-tag spelling.
 /// Clones and equivalent edits share a revision. Changed edits and separately decoded archives do not.

@@ -3,7 +3,9 @@ use super::{
     archive_error::invalid,
 };
 use crate::Result;
+#[cfg(test)]
 use std::collections::BTreeMap;
+#[cfg(test)]
 type IndexedArchiveFields<'a> = BTreeMap<(&'a str, usize), (usize, &'a DisplayField)>;
 
 impl DisplayArchive {
@@ -45,71 +47,27 @@ pub(super) fn edit_history(
     source: &DisplayArchive,
     result: &DisplayArchive,
 ) -> (Vec<DisplayFieldChange>, usize) {
-    let before = indexed_fields(&source.contents().fields);
-    let after = indexed_fields(&result.contents().fields);
-    let mut changes = source_relations(source, result, &before, &after);
-    let unchanged = before.len() - changes.len();
-    append_created_fields(&mut changes, result, &before, &after);
+    use crate::archive_codec::FieldCorrespondence::{Created, Deleted, Derived};
+    let (relations, unchanged) = crate::archive_codec::field_correspondences(
+        &source.contents().fields,
+        &result.contents().fields,
+        |field| field.path.as_ref(),
+    );
+    let changes = relations
+        .into_iter()
+        .map(|relation| match relation {
+            Derived { before, after } => changed_field(source, result, before, Some(after)),
+            Deleted { before } => changed_field(source, result, before, None),
+            Created { after } => created_field(result, after),
+        })
+        .collect();
     (changes, unchanged)
 }
 
-fn source_relations(
-    source: &DisplayArchive,
-    result: &DisplayArchive,
-    before: &IndexedArchiveFields<'_>,
-    after: &IndexedArchiveFields<'_>,
-) -> Vec<DisplayFieldChange> {
-    before
-        .iter()
-        .filter_map(|(path, (index, _))| {
-            source_change(
-                source,
-                result,
-                *index,
-                after.get(path).map(|(index, _)| *index),
-            )
-        })
-        .collect()
-}
-
+#[cfg(test)]
 fn indexed_fields(fields: &[DisplayField]) -> IndexedArchiveFields<'_> {
-    let mut occurrences = BTreeMap::new();
-    let mut indexed = BTreeMap::new();
-    for (index, field) in fields.iter().enumerate() {
-        // A path alone must not collapse repeated physical fields into one history entry.
-        let occurrence = occurrences.entry(field.path.as_ref()).or_insert(0);
-        indexed.insert((field.path.as_ref(), *occurrence), (index, field));
-        *occurrence += 1;
-    }
-    indexed
-}
-
-fn source_change(
-    source: &DisplayArchive,
-    result: &DisplayArchive,
-    before: usize,
-    after: Option<usize>,
-) -> Option<DisplayFieldChange> {
-    if after
-        .is_some_and(|index| source.contents().fields[before] == result.contents().fields[index])
-    {
-        return None;
-    }
-    Some(changed_field(source, result, before, after))
-}
-
-fn append_created_fields(
-    changes: &mut Vec<DisplayFieldChange>,
-    result: &DisplayArchive,
-    before: &IndexedArchiveFields<'_>,
-    after: &IndexedArchiveFields<'_>,
-) {
-    changes.extend(
-        after
-            .iter()
-            .filter(|(path, _)| !before.contains_key(*path))
-            .map(|(_, (index, _))| created_field(result, *index)),
-    );
+    // A path alone must not collapse repeated physical fields into one history entry.
+    crate::archive_codec::index_field_occurrences(fields, |field| field.path.as_ref())
 }
 
 fn changed_field(
