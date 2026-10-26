@@ -51,6 +51,8 @@
 
 ### Fixed
 
+- Fixed private model-test formatting coverage in local and CI gates after declarations moved behind an included registry. (#69)
+
 - Fixed resolved-feature failures mislabeled as configuration operations and streams, retaining their failure classes, causes and CMgr dependency locations. (#64)
 
 - Fixed valid temporary-axis references rejected by revolution, reference-plane and sketch line fields while retaining finite declared-type checks. (#46)

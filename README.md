@@ -70,6 +70,8 @@ Run `cargo test` for the owned native fixtures and malformed-input tests.
 Test builds use optimization level 1 while retaining debug assertions and integer
 overflow checks; see the [test profile measurements](docs/features/model-archives/test-performance.md).
 `cargo xtask pr` runs formatting, clippy, build, tests, and documentation examples.
+Run `cargo fmt --all -- src/model_archives/test_modules.rs` to format the private
+model suites as well; both validation gates check that included registry explicitly.
 `cargo xtask full` currently runs those same gates across the CI platform matrix.
 The Linux full check also runs `cargo xtask tsan` with the pinned nightly and
 `rust-src`, instrumenting dependencies and the standard library as well as Bessemer.
