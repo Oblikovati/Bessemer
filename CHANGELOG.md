@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added ordinary component-axis and component-point reading, field editing and writing with shared inherited layouts, typed geometry pointers and independent wrapper/whole-stream fixtures. (#54)
+
 - Added ordinary part dome reading, field editing and writing with independent nullable pointers, tagged lists, shared geometric references and complete-stream edit fixtures. (#54)
 
 - Added ordinary Toolbox specification arrays and items with preserved shared references, nonfinite floating-point bits, raw strings and independently verified Unicode edits. (#54)

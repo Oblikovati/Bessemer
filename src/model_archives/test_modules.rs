@@ -45,6 +45,9 @@ mod circular_pattern_tests;
 #[path = "../../tests/model_archives/complete_details.rs"]
 mod complete_detail_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/component_geometry.rs"]
+mod component_geometry_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/component_references.rs"]
 mod component_reference_tests;
 #[cfg(test)]
