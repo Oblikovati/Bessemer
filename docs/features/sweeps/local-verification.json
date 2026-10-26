@@ -1,0 +1,59 @@
+{
+  "base_revision": "0ab0f5e6518faeb26057d6f1b2ca4cb9f75744a3",
+  "integration_base": "357072035fec546bd3b85dacd65b4ccea863eb5d",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "gate": {
+    "command": "cargo xtask pr",
+    "staged": true,
+    "exit_code": 0,
+    "library_passed": 463,
+    "library_ignored": 3,
+    "xtask_tests_passed": 4,
+    "all_integration_suites_passed": true,
+    "doctests_passed": 265,
+    "log_sha256": "f9ccc134e3c6e7d00e1d8bae76be320ceba5418320729fb8d940f40c10e6d20b"
+  },
+  "focused": {
+    "private_tests": 6,
+    "public_tests": 2,
+    "python_tests": 3,
+    "object_cases": 160,
+    "primitive_reads": 102024,
+    "owned_streams": 7,
+    "original_96_case_facts_preserved": true,
+    "original_5_owned_facts_preserved": true
+  },
+  "native_corpus": {
+    "cases": 906,
+    "accepted": 570,
+    "rejected": 336,
+    "fresh_process_outcomes_identical": true,
+    "previous_548_preserved": true,
+    "expected_full_parity_exit_code": 101,
+    "independent_exact_eof_bytes": 31327801
+  },
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "source_file_sha256": {
+    "src/model_archives/sweep_data.rs": "00e5ad252b4ef21fb228e42a5cd3c01cab3b3b72820c24f62434928ddf61102d",
+    "src/model_archives/sweep_objects.rs": "103d76f3555986cd19f154b3f99bf7d7644392fabf5dddcba307bfa96b1756e1",
+    "src/model_archives/sweep_records.rs": "d3de519d58b24ef01e617b082bce1b8d2a84d427c0d6b075cdec273e7221124d",
+    "src/model_archives/sweep_reference_records.rs": "cf06e1ee7afdc1816978c5a30d6ea6a8e1769729b8c3d147db9f0c878201a2dd",
+    "src/model_archives/body_features.rs": "c5ff63aac7df0ac0dca6c14e1ecb7ef4fa6f8ad6ecb8cbc738d4121e4e3cb2c0",
+    "src/model_archives/component_references.rs": "c0f000a1e94daa910e9323598a94d1f2556c388a8d22a85a0a00b92cbc4059ab",
+    "src/model_archives/model_references.rs": "7d45cd01bdbe6833f3ca25355302068e4f034e5e439c2ced8f8817286e8fa551",
+    "src/model_archives/object_body.rs": "7405768c79bd1761c721e7937dd5e6fca0d2ecc4f54bdd59a075f5bdccef5595",
+    "src/model_archives/mod.rs": "2d6bb10fd5860eeada07d1303768a5d98c7a132c639d0fbf968608554e3857eb",
+    "src/model_archives/test_modules.rs": "e719a77b3c7eb346de5315d8b52bdbf90122f7e0141517de302720995b994b82",
+    "tests/resolved_features/sweeps.rs": "05b66e6ebccdc6cc4d140fd20b21bc411b3adf3b62ea4d678586251f8975a8ab",
+    "tests/resolved_sweeps.rs": "9e9a9f1b9fd3ab9e5d4187487e6775f6e0a0ca64da1078b2f328ce52b6943fe6"
+  },
+  "exclusions": [
+    "Full documented schema parity",
+    "Native geometry and topology validation",
+    "Native application acceptance",
+    "Non-Windows execution is checked by the integration PR matrix"
+  ],
+  "dependencies_changed": false,
+  "version_changed": false
+}

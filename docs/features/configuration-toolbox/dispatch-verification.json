@@ -1,0 +1,32 @@
+{
+  "base_revision": "34d1967",
+  "moved_arms": 7,
+  "runtime_classes": [
+    "moConfigurationMgr_c",
+    "moDesignTableFeature_c",
+    "moLinkedAtomIdNode_c",
+    "moNativeConfigurationTableFeature_c",
+    "moPartConfiguration_c",
+    "pwSceneData_c",
+    "swCubicalScene_c",
+    "swSphericalScene_c"
+  ],
+  "arms_sha256": "72f03695351029b12cf24fcc72c2d896b90941822cc3d93a0024e2781bef28f2",
+  "old_root_lines": 497,
+  "new_root_lines": 487,
+  "scope": "Verbatim branch relocation; unknown classes perform no reads before returning None.",
+  "exact_moved_arms_preserved": true,
+  "remaining_root_tokens_preserved": true,
+  "library_passed": 463,
+  "library_ignored": 3,
+  "native_cases": 906,
+  "native_accepted": 570,
+  "native_outcomes_and_causes_identical": true,
+  "expected_full_parity_exit_code": 101,
+  "library_log_sha256": "fd830748bde11cf0050522c4af8e7b378bfe8bd2400323ba8971e5e8e922967b",
+  "source_hashes": {
+    "object_body.rs": "be4749ae41be19dab9ad9b02c3fcf4a8597631b70a251df55805764c9345365b",
+    "configuration_objects.rs": "eb252219de70db1a37be23b352299406beb7973b1ff50694072ce58eb01d49e7",
+    "mod.rs": "dc2acffdbd3c1359d9c41e81347423a105247ce4943ccbcf5786a9e333a3cb0c"
+  }
+}

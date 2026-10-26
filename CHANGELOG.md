@@ -4,6 +4,12 @@
 
 ### Added
 
+- Added ordinary part dome reading, field editing and writing with independent nullable pointers, tagged lists, shared geometric references and complete-stream edit fixtures. (#54)
+
+- Added ordinary Toolbox specification arrays and items with preserved shared references, nonfinite floating-point bits, raw strings and independently verified Unicode edits. (#54)
+
+- Added ordinary part sweep and sweep-cut reading, field editing and writing with versioned controls, conditional dimensions, shared references and complete endpoint, wire-contact and loft-synchronization dependencies. (#54)
+
 - Added ordinary part extruded reference-surface reading, field editing and writing with required end specifications, ordered-face groups, preserved shared references and context-checked binary-empty keepers. (#54)
 
 - Added ordinary part imported and base-body reading, field editing and writing with preserved external markers and names, explicit typed inline kernel frames and signed base-body vectors. (#54)
@@ -52,6 +58,8 @@
 - Optimized test builds while retaining debug assertions, checked integer arithmetic and every exhaustive validation case. (#53)
 
 ### Fixed
+
+- Fixed populated reference axes being rejected as inherited atom owners while retaining strict checks for unrelated classes and aliases. (#46)
 
 - Fixed private model-test formatting coverage in local and CI gates after declarations moved behind an included registry. (#69)
 

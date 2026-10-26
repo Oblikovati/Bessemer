@@ -15,6 +15,9 @@ mod application_name_tests;
 #[path = "../../tests/resolved_features/attribute_records.rs"]
 mod attribute_record_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/reference_axis_owners.rs"]
+mod axis_owner_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/body_chooser_records.rs"]
 mod body_chooser_record_tests;
 #[cfg(test)]
@@ -60,6 +63,9 @@ mod configuration_scene_tests;
 #[path = "../../tests/resolved_features/configuration_tables.rs"]
 mod configuration_table_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/configuration_toolbox.rs"]
+mod configuration_toolbox_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/context_chains.rs"]
 mod context_chain_tests;
 #[cfg(test)]
@@ -89,6 +95,9 @@ mod direct_collection_tests;
 #[cfg(test)]
 #[path = "../../tests/model_archives/display_dimensions.rs"]
 mod display_dimension_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/domes.rs"]
+mod dome_record_tests;
 #[cfg(test)]
 #[path = "../../tests/model_archives/embedded_title.rs"]
 mod embedded_title_tests;
@@ -254,6 +263,9 @@ mod sketch_text_tests;
 #[cfg(test)]
 #[path = "../../tests/model_archives/spatial_objects.rs"]
 mod spatial_object_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/sweeps.rs"]
+mod sweep_record_tests;
 #[cfg(test)]
 #[path = "../../tests/model_archives/transform_rows.rs"]
 mod transform_rows;

@@ -13,6 +13,8 @@ pub(super) const WRAPPER_CLASSES: &[&str] = &[
     "moSphereRef_w",
     "moPlaneRef_w",
     "moPointRef_w",
+    "moEndPointRef_w",
+    "moLoftSynchRef_c",
     "moLineRef_w",
     "moLoopRef_w",
     "moSketchExtRef_w",
