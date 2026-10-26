@@ -469,6 +469,8 @@ fn read_display_support(
         "moSwiftSchemaRef_c" => super::schema_references::read(reader),
         "moCutListSortOptions_c" => super::browser_folders::cut_list_sort(reader, map),
         "moFaceColorConfig_c" => super::configuration_atoms::face_color(reader, map),
+        "moDetailFolder_c" => super::detail_folder_records::read(reader, map),
+        "gcBucketEdgeData_c" => crate::archive_codec::bucket_polygons::edge(reader),
         "moCompDispObjRef_c" => super::display_object::component_reference(reader, map),
         "moArrowSize_c" => super::display_object::arrow_size(reader),
         "moFavoriteHandle_c" => super::display_dimension_tail::favorite_handle(reader),

@@ -20,6 +20,7 @@ mod browser_folders;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/browser_items.rs"]
 mod browser_item_tests;
+mod bucket_adapter;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/chamfer_records.rs"]
 mod chamfer_record_tests;
@@ -60,6 +61,10 @@ mod custom_properties;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/custom_properties.rs"]
 mod custom_property_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/detail_folder_records.rs"]
+mod detail_folder_record_tests;
+mod detail_folder_records;
 mod edit;
 mod edit_history;
 mod edit_types;

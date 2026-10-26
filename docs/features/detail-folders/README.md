@@ -1,52 +1,55 @@
 # Detail-folder interoperability
 
-The next complete resolved-feature dependency is `moDetailFolder_c`, responsible
-for 48 first failures at the current 388/906 checkpoint. Its ordinary body reads
-the common feature, 18 packed direct lists, a compact transform, a typed BOM
-pointer, 14 lists, a signed optional-bucket presence, the optional direct
-gcBucket body, two further lists and a signed suffix. It does not include the
-model-feature `+354` word. The complete reader remains pending.
+Bessemer reads and reconstructs complete ordinary-part `moDetailFolder_c`
+objects, including their optional graphics buckets. Supported named fields can
+be edited through the existing resolved-feature API. Unsupported dependencies
+still return typed failures. This advances issue #54 and the broader #2 goal.
 
-The existing display bucket grammar is being reused. The first structural step
-shared the envelope, modern and legacy polygon/edge bodies, line-width grammar
-and typed object/transform context. Display callbacks retain object-map ownership,
-field paths, version gates, coordinate dimensions and budgets. The legacy
-polygon's typed discarded-edge reference remains an actual read. The nearly
-full model dispatcher now delegates unit-class dispatch to the units module,
-reducing it from 497 to 478 lines.
+The folder body contains the common feature, 18 direct lists, a compact
+transform, a typed BOM pointer, 14 more lists, a signed bucket-presence value,
+the optional direct bucket body, two final lists and a signed suffix. It does
+not contain the model-feature `+354` word. Object references use the inherited
+model map; BOM references require `moDisplayBom_c`.
 
-Fifty-one existing bucket and drawing tests passed with their independent fields,
-forced reconstruction, malformed inputs and unchanged expected bytes. Full
-`cargo xtask pr` passed without warnings: 413 library tests, integration suites
-and 265 doctests, with three external gates ignored by default. Two explicit
-906-case probes produced outcomes and failure causes identical to the merged
-pre-refactor checkpoint: 388 accepted and 518 rejected. The broad parity gate
-still fails. This structural step changes no supported wire behavior or public API.
+The implementation shares the existing display bucket envelope, polygon and
+edge bodies, visibility arrays, line widths and display-item payload codecs.
+Display adapters preserve their original field paths, version gates, collection
+budgets and object-map ownership. The structural commits retained all 388
+previously accepted corpus cases and their failure causes before enabling the
+model adapter.
 
-Independent follow-up fixtures have been prepared outside production source:
-absent bucket, 3D bucket, 2D bucket, named feature, independently expected name
-edit and populated 2D bucket. The populated case checks restoration to 3D for
-thread/halo lists and a tagged thread key. Their source reads reach EOF; the
-primitive inventories and all-prefix checks will be retained with the actual
-model-reader implementation. They are not Bessemer acceptance claims.
+Archive wire version and runtime file version are separate. The approved
+reference defaults to runtime 19000 for this ordinary model dialect; Bessemer
+uses that declared context rather than deriving it from the wire marker.
+Display contexts retain their explicit runtime-version input.
 
-Archive version and runtime file version are separate. The approved reference's
-`dl_ui._file_version` defaults to runtime 19000; it does not infer that value
-from the model wire version. The ordinary model context already declares that
-current runtime dialect. Display contexts keep their explicit file-version input.
+## Verification
 
-Display-item parsing is now shared too, including legacy text character counts,
-compact transforms and checked collection counts. Its display adapter retains
-the original owned text and lazy width calculation. The old edge-visibility
-grammar also uses the shared typed object context. Fifty-seven focused item,
-bucket and drawing tests and the complete local PR gate passed without changes
-to expected fixture bytes. Both 906-case runs retain the prior outcomes.
+Six owned full-object fixtures cover absent, 3D, 2D and populated buckets,
+a named folder and an independently constructed expected name edit. A seventh
+fixture covers all 32 current display-item payload variants. The populated
+bucket exercises tagged thread keys, signed empty counts, compact transforms,
+noncanonical presence values, raw floating-point bits and restoration of 3D
+coordinates after a 2D list.
 
-Next, connect the model bucket adapter and complete detail-folder reader, preserve the existing
-display fixtures, and prove owned construction/editing through EOF. Keep all
-unsupported dependencies explicit. Native application and geometry acceptance
-remain separate from stored-grammar validation.
+The independent fixture generator uses the approved reference in
+`../inventor-interface/solidworks`, checks exact EOF and records source hashes
+and primitive read inventories in `reference.json`. Numeric polygon blocks are
+split into independently observed f64 coordinates without changing their bits.
+Six Rust tests check reconstruction, primitive coverage, editing, all truncated
+full-object prefixes, trailing bytes, malformed counts and typed BOM roles.
+Three Python tests check fixture regeneration and oracle normalization.
 
-This work advances issue #54 and the broader #2 goal. No dependency, version,
-release, push or PR was introduced by this checkpoint. The humanizer skill is
+The complete local `cargo xtask pr` passed on Windows x64 with Rust 1.99.0.
+Two fresh 906-case runs accepted 404 samples and explicitly rejected 502;
+all previous 388 accepted samples remained accepted. The corpus gate therefore
+still fails overall. `frontier-checkpoint.json` records the packet hash,
+repeatability, newly accepted indices and remaining first failures.
+`accepted-reference.json` records an independent complete reference read of
+all 404 accepted streams, totaling 16,303,192 feature bytes, against the same
+four-stream hashes. No detail-folder first failure remains in this corpus.
+
+Stored-schema reconstruction does not certify geometry, topology or native
+application acceptance. Missing feature classes remain outside successful
+results. No dependency or package version changed. The humanizer skill is
 unavailable in this session; its prose review remains with the maintainer.
