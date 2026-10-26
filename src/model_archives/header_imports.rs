@@ -77,7 +77,10 @@ impl ImportedHeaderMap {
     }
 }
 
-fn require_import_context(header: &DocumentHeader, version: ArchiveVersion) -> Result<()> {
+pub(super) fn require_import_context(
+    header: &DocumentHeader,
+    version: ArchiveVersion,
+) -> Result<()> {
     require_modern_import_version(version)?;
     if header.archive_version() != version {
         return Err(invalid(format!(

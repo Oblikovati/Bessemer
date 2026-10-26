@@ -13,6 +13,7 @@ use std::sync::Arc;
 
 pub(super) struct ParsedPartArchive {
     fields: Vec<ModelField>,
+    wire_bytes: usize,
     lightweight: ModelLightweightState,
     maximum_bytes: usize,
     header: Arc<DocumentHeader>,
@@ -21,6 +22,7 @@ pub(super) struct ParsedPartArchive {
     kernel: Option<super::kernel_frames::CompressedKernelContext>,
 }
 
+#[cfg(test)]
 pub(super) fn read(
     bytes: &[u8],
     header: Arc<DocumentHeader>,
@@ -45,6 +47,7 @@ pub(super) fn read_with_kernel(
     reader.bounded(size, |reader| resolved(reader, &mut map, &lightweight))?;
     Ok(ParsedPartArchive {
         fields: reader.finish()?,
+        wire_bytes: bytes.len(),
         lightweight,
         maximum_bytes: limits.maximum_bytes,
         header,
@@ -103,22 +106,18 @@ fn resolved_node_flags(state: &ModelLightweightState) -> Result<u32> {
 }
 
 impl ParsedPartArchive {
-    pub fn with_fields(&self, mut fields: Vec<ModelField>) -> Result<Self> {
-        super::construction::section_lengths(&mut fields, self.maximum_bytes)?;
-        let bytes = encode_fields(&fields, self.maximum_bytes)?;
-        let parsed = read_with_kernel(
-            &bytes,
+    pub fn wire_bytes(&self) -> usize {
+        self.wire_bytes
+    }
+
+    pub fn with_fields(&self, fields: Vec<ModelField>) -> Result<Self> {
+        construct(
+            fields,
             self.header.clone(),
             self.version,
             self.limits,
             self.kernel.clone(),
-        )?;
-        if parsed.fields != fields {
-            return Err(super::invalid(
-                "constructed fields did not reproduce their paths, types or resolved object identities; expected exact schema agreement",
-            ));
-        }
-        Ok(parsed)
+        )
     }
 
     pub fn fields(&self) -> &[ModelField] {
@@ -132,4 +131,23 @@ impl ParsedPartArchive {
     pub fn to_bytes(&self) -> Result<Vec<u8>> {
         encode_fields(&self.fields, self.maximum_bytes)
     }
+}
+
+pub(super) fn construct(
+    mut fields: Vec<ModelField>,
+    header: Arc<DocumentHeader>,
+    version: ArchiveVersion,
+    limits: ModelFieldLimits,
+    kernel: Option<super::kernel_frames::CompressedKernelContext>,
+) -> Result<ParsedPartArchive> {
+    super::construction::section_lengths(&mut fields, limits.maximum_bytes)?;
+    let bytes = encode_fields(&fields, limits.maximum_bytes)?;
+    let parsed = read_with_kernel(&bytes, header, version, limits, kernel)?;
+    if parsed.fields != fields {
+        return Err(super::field_mismatch::construction_mismatch(
+            &fields,
+            &parsed.fields,
+        ));
+    }
+    Ok(parsed)
 }

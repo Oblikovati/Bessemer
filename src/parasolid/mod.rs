@@ -93,7 +93,6 @@ impl TransmitFile {
         })
     }
 
-    #[cfg(test)]
     pub(crate) fn from_embedded_partition(
         bytes: &[u8],
         base: &BaseSchema,
@@ -107,7 +106,6 @@ impl TransmitFile {
         )
     }
 
-    #[cfg(test)]
     pub(crate) fn new_embedded_partition(
         base: &BaseSchema,
         contents: TransmitContents,

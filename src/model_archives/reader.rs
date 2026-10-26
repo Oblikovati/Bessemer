@@ -3,12 +3,18 @@ use crate::archive_codec::{ArchiveCursor, MaterialRead, ObjectReader, ObjectReco
 use crate::header::ArchiveVersion;
 use crate::{BessemerError, Result};
 
+/// Explicit byte, field, collection, nesting and object budgets for one archive operation.
 #[derive(Debug, Clone, Copy)]
-pub(super) struct ModelFieldLimits {
+pub struct ModelFieldLimits {
+    /// Maximum input and reconstructed stream bytes.
     pub maximum_bytes: usize,
+    /// Maximum typed stored fields.
     pub maximum_fields: usize,
+    /// Maximum aggregate collection entries and kernel records.
     pub maximum_entries: usize,
+    /// Maximum nested record scopes.
     pub maximum_depth: usize,
+    /// Maximum newly loaded model objects.
     pub maximum_objects: usize,
 }
 
@@ -28,6 +34,7 @@ pub(super) struct ModelDecoder<'a> {
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub(super) enum ModelArchiveContext {
+    #[cfg(test)]
     Unspecified,
     OrdinaryPartExternalXml,
 }
@@ -71,6 +78,7 @@ impl<'a> ModelDecoder<'a> {
         self.checked(result)
     }
 
+    #[cfg(test)]
     pub fn new(input: &'a [u8], version: ArchiveVersion, limits: ModelFieldLimits) -> Result<Self> {
         Self::new_in_context(input, version, limits, ModelArchiveContext::Unspecified)
     }

@@ -421,7 +421,7 @@ fn read_units(
     }
     Err(BessemerError::new(
         "model archive",
-        "Contents/Config-0",
+        "model stream",
         FailureClass::Unsupported,
         format!(
             "runtime class {name:?} schema {schema}; expected an implemented complete model object body"

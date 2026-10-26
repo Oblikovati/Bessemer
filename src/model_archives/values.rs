@@ -6,25 +6,41 @@ use crate::archive_codec::{
     TransformContents, transform_codec,
 };
 
+/// Named stored value with exact floating-point bits and shared-object identities.
 #[derive(Debug, Clone, PartialEq, Eq)]
-pub(super) enum ModelFieldValue {
+pub enum ModelFieldValue {
+    /// Unsigned byte.
     U8(u8),
+    /// Unsigned word.
     U16(u16),
+    /// Signed word.
     I16(i16),
+    /// Signed integer.
     I32(i32),
+    /// Unsigned integer.
     U32(u32),
+    /// Unsigned 64-bit integer.
     U64(u64),
+    /// Exact stored single-precision bits.
     F32(StoredFloat),
+    /// Exact stored double-precision bits.
     F64(StoredDouble),
+    /// Native CString with retained encoding.
     Text(ArchiveString),
+    /// Exact MFC tag and resolved target.
     ObjectTag(Box<FramedObjectRecord>),
+    /// Native compact transform, including its original encoding flags.
     Transform(Box<CompactTransform>),
+    /// Complete typed compressed kernel partition.
     Kernel(Box<super::kernel_frames::KernelFrame>),
 }
 
+/// One physical stored field in serialization order; paths may have multiple occurrences.
 #[derive(Debug, Clone, PartialEq, Eq)]
-pub(super) struct ModelField {
+pub struct ModelField {
+    /// Exact schema-derived structural path.
     pub path: Arc<str>,
+    /// Owned stored value.
     pub value: ModelFieldValue,
 }
 

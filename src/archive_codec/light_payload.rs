@@ -4,8 +4,7 @@ use crate::Result;
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub(crate) enum LightPayloadBranch {
     OldDisplay,
-    // The model codec remains private until its complete root operation is verified.
-    #[cfg(test)]
+    // Model lights omit the late display-only user name and ID fields.
     ModelFeature,
 }
 
