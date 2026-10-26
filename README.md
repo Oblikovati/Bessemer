@@ -67,6 +67,8 @@ std::fs::write("copy.sldprt", doc.to_bytes()?)?;
 ```
 
 Run `cargo test` for the owned native fixtures and malformed-input tests.
+Test builds use optimization level 1 while retaining debug assertions and integer
+overflow checks; see the [test profile measurements](docs/features/model-archives/test-performance.md).
 `cargo xtask pr` runs formatting, clippy, build, tests, and documentation examples.
 `cargo xtask full` currently runs those same gates across the CI platform matrix.
 The Linux full check also runs `cargo xtask tsan` with the pinned nightly and
