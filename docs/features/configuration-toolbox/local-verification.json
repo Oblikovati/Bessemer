@@ -1,0 +1,54 @@
+{
+  "base_revision": "19ea92d",
+  "integration_base": "357072035fec546bd3b85dacd65b4ccea863eb5d",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "gate": {
+    "command": "cargo xtask pr",
+    "staged": true,
+    "exit_code": 0,
+    "library_passed": 467,
+    "library_ignored": 3,
+    "xtask_tests_passed": 4,
+    "all_integration_suites_passed": true,
+    "doctests_passed": 265,
+    "log_sha256": "f4a8d2d81cafe186e72af885a1cf586f09c1f14d0c707dc0fd7fa4c05dff5008"
+  },
+  "focused": {
+    "private_tests": 4,
+    "public_tests": 2,
+    "python_tests": 3,
+    "object_cases": 72,
+    "primitive_reads": 1836,
+    "owned_streams": 5,
+    "guarded_and_shared_source_readers_both_verified": true
+  },
+  "native_corpus": {
+    "cases": 906,
+    "accepted": 574,
+    "rejected": 332,
+    "previous_570_preserved": true,
+    "changed_frontiers": 19,
+    "fresh_process_outcomes_identical": true,
+    "expected_full_parity_exit_code": 101,
+    "independent_exact_eof_bytes": 31375065
+  },
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "source_file_sha256": {
+    "src/model_archives/configuration_toolbox.rs": "134412f9229362a40fd550a8a24c939f5b04857e257bf84797a2fe8d0f570a7b",
+    "src/model_archives/configuration_objects.rs": "e13831ac9190e6596d54b0d515c3d1f3051d2c4f8df063cd4335327a7eb97f08",
+    "src/model_archives/mod.rs": "968769287c3f731db587bc1e69625d59d0631b74d19fa5492c56936628baf6c9",
+    "src/model_archives/test_modules.rs": "736c5f4d2aaaf2bf74e9df730fd10e465ad9d84603f3e9e539d02a5b173526ad",
+    "tests/resolved_features/configuration_toolbox.rs": "6845cb8b955f84b84ab18f3b81614c11df106d2623c67439fda5f6caa5403c3b",
+    "tests/resolved_features/sweeps.rs": "7873c073cf80b29b86b0b1e0b2f35a479b6f3a4695abc7840a35ce329fef7d68",
+    "tests/resolved_configuration_toolbox.rs": "251205e0c79000ec76a003539a111cf2253ee83a57d5faa3ee73730db4092caf"
+  },
+  "exclusions": [
+    "Full documented schema parity",
+    "Native geometry and topology validation",
+    "Native application acceptance",
+    "Non-Windows execution is checked by the integration PR matrix"
+  ],
+  "dependencies_changed": false,
+  "version_changed": false
+}

@@ -20,6 +20,7 @@ mod configuration_objects;
 mod configuration_scenes;
 mod configuration_suffix;
 mod configuration_tables;
+mod configuration_toolbox;
 mod context;
 mod context_chains;
 mod custom_properties;

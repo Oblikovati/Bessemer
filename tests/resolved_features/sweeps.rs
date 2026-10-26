@@ -23,7 +23,7 @@ fn records() -> Vec<SweepRecord> {
     records
 }
 
-fn decode_graph(version: u32, bytes: &[u8]) -> crate::Result<(Vec<ModelField>, usize)> {
+pub(super) fn decode_graph(version: u32, bytes: &[u8]) -> crate::Result<(Vec<ModelField>, usize)> {
     let mut slots = 0;
     let fields = decode_collection(version, bytes, |reader, map| {
         reader.object("object", map, ModelObjectRole::Any)?;

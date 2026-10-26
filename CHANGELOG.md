@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added ordinary Toolbox specification arrays and items with preserved shared references, nonfinite floating-point bits, raw strings and independently verified Unicode edits. (#54)
+
 - Added ordinary part sweep and sweep-cut reading, field editing and writing with versioned controls, conditional dimensions, shared references and complete endpoint, wire-contact and loft-synchronization dependencies. (#54)
 
 - Added ordinary part extruded reference-surface reading, field editing and writing with required end specifications, ordered-face groups, preserved shared references and context-checked binary-empty keepers. (#54)

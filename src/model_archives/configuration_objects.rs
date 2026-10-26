@@ -8,6 +8,8 @@ pub(super) fn read(
     name: &str,
 ) -> Option<Result<()>> {
     let result = match name {
+        "moToolboxPartSpecArray_c" => super::configuration_toolbox::array(reader, map),
+        "moToolboxPartSpec_c" => super::configuration_toolbox::item(reader),
         "moConfigurationMgr_c" => super::configuration_manager::body(reader, map),
         "moPartConfiguration_c" => super::configuration_base::read(reader, map),
         "moLinkedAtomIdNode_c" => super::configuration_atoms::linked_node(reader, map),

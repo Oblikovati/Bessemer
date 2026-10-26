@@ -60,6 +60,9 @@ mod configuration_scene_tests;
 #[path = "../../tests/resolved_features/configuration_tables.rs"]
 mod configuration_table_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/configuration_toolbox.rs"]
+mod configuration_toolbox_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/context_chains.rs"]
 mod context_chain_tests;
 #[cfg(test)]
