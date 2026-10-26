@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added ordinary part Hole Wizard reading, field editing and writing with compatibility gates, preserved raw parameters, direct slot-axis bodies, shared dimensions and independent Unicode-edit fixtures. (#54)
+
 - Added ordinary part circular-pattern reading, field editing and writing with required dimension alternatives, preserved ordered integer collections, versioned geometry tails and independent complete-stream fixtures. (#54)
 
 - Added ordinary part shell-feature reading, field editing and writing with preserved unequal lists, shared object references, complete dimension and component dependencies and independent full-stream fixtures. (#54)

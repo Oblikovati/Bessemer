@@ -187,6 +187,11 @@ mod fillets;
 mod geometric_references;
 mod header_imports;
 mod header_order;
+mod hole_parameters;
+mod hole_wizard;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/hole_wizard.rs"]
+mod hole_wizard_tests;
 mod kernel_frames;
 mod label_defaults;
 mod layers;
