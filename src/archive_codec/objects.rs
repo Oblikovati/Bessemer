@@ -3,10 +3,21 @@ use std::collections::BTreeMap;
 use super::{ArchiveCursor, malformed};
 use crate::Result;
 
+/// Nonzero persisted identity in a native MFC object map.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord)]
-pub(crate) struct ArchiveMapIndex(u32);
+pub struct ArchiveMapIndex(u32);
 
 impl ArchiveMapIndex {
+    /// Validates a persisted object-map identity, excluding null and the class flag.
+    ///
+    /// ```
+    /// assert_eq!(bessemer::model_archives::ModelObjectId::new(2)?.value(), 2);
+    /// # Ok::<(), bessemer::BessemerError>(())
+    /// ```
+    pub fn new(value: u32) -> Result<Self> {
+        Self::nonzero(value)
+    }
+
     pub(crate) fn nonzero(value: u32) -> Result<Self> {
         if (1..=0x7fff_ffff).contains(&value) {
             return Ok(Self(value));
@@ -16,14 +27,23 @@ impl ArchiveMapIndex {
         )))
     }
 
-    pub(crate) fn value(self) -> u32 {
+    /// Returns the persisted index without implying a snapshot's ownership.
+    ///
+    /// ```
+    /// assert_eq!(bessemer::model_archives::ModelObjectId::new(3)?.value(), 3);
+    /// # Ok::<(), bessemer::BessemerError>(())
+    /// ```
+    pub fn value(self) -> u32 {
         self.0
     }
 }
 
+/// Stored MFC class name and schema, independent of the map index.
 #[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord)]
-pub(crate) struct ArchiveClass {
+pub struct ArchiveClass {
+    /// Exact native runtime class name.
     pub name: String,
+    /// Stored class schema.
     pub schema: u16,
 }
 
@@ -34,28 +54,42 @@ enum MapSlot {
     Object(ArchiveClass),
 }
 
+/// Resolved meaning of a native MFC pointer tag.
 #[derive(Debug, Clone, PartialEq, Eq)]
-pub(crate) enum ObjectRecord {
+pub enum ObjectRecord {
+    /// Null pointer, distinct from a missing version-gated field.
     Null,
+    /// New object installed in the shared map before reading its body.
     New {
+        /// Assigned native object-map index.
         index: ArchiveMapIndex,
+        /// Resolved native runtime class.
         class: ArchiveClass,
     },
+    /// Alias to an earlier loaded object.
     Reference {
+        /// Earlier object's native map index.
         index: ArchiveMapIndex,
+        /// Resolved class of that earlier object.
         class: ArchiveClass,
     },
 }
 
+/// Exact short or extended MFC pointer framing.
 #[derive(Debug, Clone, PartialEq, Eq)]
-pub(crate) struct ObjectFraming {
+pub struct ObjectFraming {
+    /// Native tag word, including null, new-class and extended markers.
     pub tag: u16,
+    /// Extension present only for tag 0x7FFF.
     pub extended: Option<u32>,
 }
 
+/// Pointer framing together with its validated shared-map interpretation.
 #[derive(Debug, Clone, PartialEq, Eq)]
-pub(crate) struct FramedObjectRecord {
+pub struct FramedObjectRecord {
+    /// Exact pointer framing retained for reconstruction.
     pub framing: ObjectFraming,
+    /// Resolved target, checked again when constructing a complete archive.
     pub record: ObjectRecord,
 }
 

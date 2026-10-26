@@ -7,15 +7,20 @@ use crate::parasolid::{
 };
 use crate::{BessemerError, FailureClass, Result};
 
+/// Explicit kernel base schema and expansion budgets for embedded partitions.
 #[derive(Clone, Debug)]
-pub(super) struct CompressedKernelContext {
+pub struct CompressedKernelContext {
+    /// Caller-supplied native base schema; no schema is guessed from payload bytes.
     pub base: BaseSchema,
+    /// Maximum expanded bytes across one model operation's kernel bodies.
     pub maximum_expanded: usize,
+    /// Limits for the typed binary transmit records.
     pub transmit_limits: TransmitLimits,
 }
 
+/// Immutable compressed carrier and fully decoded typed kernel partition.
 #[derive(Clone, Debug)]
-pub(super) struct KernelFrame {
+pub struct KernelFrame {
     base: BaseSchema,
     carrier: BlockStream,
     transmit: TransmitFile,
@@ -101,6 +106,13 @@ fn decode_frame(
 }
 
 impl KernelFrame {
+    /// Returns the currently materialized expanded byte count, including after edits.
+    ///
+    /// ```no_run
+    /// # fn example(frame: &bessemer::model_archives::KernelFrame) {
+    /// let expanded = frame.expanded_bytes();
+    /// # }
+    /// ```
     pub fn expanded_bytes(&self) -> usize {
         self.carrier
             .chunks()
@@ -109,12 +121,28 @@ impl KernelFrame {
             .sum()
     }
 
+    /// Counts all typed partition records for aggregate allocation accounting.
+    ///
+    /// ```no_run
+    /// # fn example(frame: &bessemer::model_archives::KernelFrame) {
+    /// let records = frame.record_count();
+    /// # }
+    /// ```
     pub fn record_count(&self) -> usize {
         match &self.transmit.contents().body {
             TransmitBody::Partition(list) => list.records.len(),
             TransmitBody::Deltas(_) => 0,
         }
     }
+    /// Decodes one compressed carrier, requiring a complete partition and explicit schema.
+    /// The payload excludes the enclosing signed length, type byte and suppression flag.
+    ///
+    /// ```no_run
+    /// # fn example(bytes: &[u8], context: &bessemer::model_archives::CompressedKernelContext) -> bessemer::Result<()> {
+    /// let frame = bessemer::model_archives::KernelFrame::from_payload(bytes, context)?;
+    /// # Ok(())
+    /// # }
+    /// ```
     pub fn from_payload(bytes: &[u8], context: &CompressedKernelContext) -> Result<Self> {
         let carrier = single_carrier(bytes, context.maximum_expanded)?;
         let chunk = carrier
@@ -136,14 +164,37 @@ impl KernelFrame {
         Ok(frame)
     }
 
+    /// Borrows the complete immutable binary transmit contents.
+    ///
+    /// ```no_run
+    /// # fn example(frame: &bessemer::model_archives::KernelFrame) {
+    /// let contents = frame.contents();
+    /// # }
+    /// ```
     pub fn contents(&self) -> &TransmitContents {
         self.transmit.contents()
     }
 
+    /// Resolves the effective typed layout for an explicit native record code.
+    ///
+    /// ```no_run
+    /// # fn example(frame: &bessemer::model_archives::KernelFrame) -> bessemer::Result<()> {
+    /// let fields = frame.layout_fields(60000)?;
+    /// # Ok(())
+    /// # }
+    /// ```
     pub fn layout_fields(&self, code: u16) -> Result<&[crate::parasolid::FieldDefinition]> {
         self.transmit.layout_fields(code)
     }
 
+    /// Validates an isolated replacement and materializes its changed expanded bytes.
+    ///
+    /// ```no_run
+    /// # fn example(frame: &bessemer::model_archives::KernelFrame) -> bessemer::Result<()> {
+    /// let copied = frame.with_contents(frame.contents().clone())?;
+    /// # Ok(())
+    /// # }
+    /// ```
     pub fn with_contents(&self, contents: TransmitContents) -> Result<Self> {
         let transmit = TransmitFile::new_embedded_partition(&self.base, contents)?;
         validate_body(&self.base, transmit.contents())?;
@@ -158,6 +209,15 @@ impl KernelFrame {
         Ok(frame)
     }
 
+    /// Reconstructs the signed length, type byte and compressed typed partition.
+    /// The separate enclosing suppression flag is not included.
+    ///
+    /// ```no_run
+    /// # fn example(frame: &bessemer::model_archives::KernelFrame) -> bessemer::Result<()> {
+    /// let framed = frame.to_bytes()?;
+    /// # Ok(())
+    /// # }
+    /// ```
     pub fn to_bytes(&self) -> Result<Vec<u8>> {
         let typed =
             TransmitFile::new_embedded_partition(&self.base, self.transmit.contents().clone())?

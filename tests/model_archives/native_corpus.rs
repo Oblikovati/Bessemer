@@ -1,7 +1,9 @@
 use std::sync::Arc;
 
 use super::kernel_frames::CompressedKernelContext;
-use super::{ModelFieldLimits, part_archive};
+use super::{
+    ConfigurationId, ModelFieldLimits, PartConfigurationArchive, PartConfigurationContext,
+};
 use crate::Result;
 use crate::archive_codec::ArchiveCursor;
 use crate::header::{ArchiveVersion, DocumentHeader};
@@ -19,6 +21,7 @@ fn reconstruct(
     header: &[u8],
     bytes: &[u8],
     kernel: Option<CompressedKernelContext>,
+    configuration: ConfigurationId,
 ) -> Result<Vec<u8>> {
     let version = ArchiveVersion::new(version);
     let header = Arc::new(DocumentHeader::from_bytes(
@@ -26,8 +29,15 @@ fn reconstruct(
         version,
         LIMITS.maximum_objects,
     )?);
-    let parsed = part_archive::read_with_kernel(bytes, header, version, LIMITS, kernel)?;
-    parsed.with_fields(parsed.fields().to_vec())?.to_bytes()
+    let context =
+        PartConfigurationContext::ordinary_external_xml(configuration, version, header, kernel)?;
+    let parsed = PartConfigurationArchive::from_bytes(bytes, context, LIMITS)?;
+    PartConfigurationArchive::from_fields(
+        parsed.fields().to_vec(),
+        parsed.context().clone(),
+        LIMITS,
+    )?
+    .to_bytes()
 }
 
 fn check_case(
@@ -42,11 +52,21 @@ fn check_case(
     let label = std::str::from_utf8(cursor.take(label_length).unwrap()).unwrap();
     let header = cursor.take(header_length).unwrap();
     let stream = cursor.take(stream_length).unwrap();
+    let configuration = label
+        .rsplit_once("::")
+        .ok_or_else(|| {
+            super::invalid(format!(
+                "corpus label {label:?}; expected file::Contents/Config-N"
+            ))
+        })
+        .and_then(|(_, stream)| ConfigurationId::from_stream_name(stream));
     reported_outcome(
         index,
         label,
         stream,
-        reconstruct(version, header, stream, kernel.clone()),
+        configuration.and_then(|configuration| {
+            reconstruct(version, header, stream, kernel.clone(), configuration)
+        }),
     )
 }
 

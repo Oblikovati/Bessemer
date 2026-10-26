@@ -61,7 +61,7 @@ fn loop_slot(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()
     reader.object(
         "dimension",
         map,
-        ModelObjectRole::Declared(&["moDisplayDim_c"]),
+        ModelObjectRole::Declared(super::display_dimension::CLASSES),
     )
 }
 

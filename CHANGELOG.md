@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added complete ordinary modern-part configuration reading, typed construction, isolated edits and writing with explicit header/kernel context, exact stored-schema coverage and revision-bound field history. (#44)
+
 - Added validated display-archive edit outcomes with completion, exact stored-field fidelity, validation coverage, explicit exclusions and revision-bound structural field history. (#28)
 
 - Added complete drawing `Contents/VBLists` reading, validated edits and writing with unsigned model-version context, shared object graphs and shaded part/assembly models. (#38)
@@ -32,6 +34,10 @@
 - Optimized test builds while retaining debug assertions, checked integer arithmetic and every exhaustive validation case. (#53)
 
 ### Fixed
+
+- Corrected model errors to identify the selected configuration instead of a hardcoded configuration zero. (#47)
+- Reported the first mismatched model field, expected shape and bounded object-identity details during construction. (#52)
+- Accepted all five complete display-dimension variants in sketch-loop slots while retaining unrelated-class rejection. (#46)
 
 - Restored early PW scene layouts reached through generic bucket thread keys, preserving implicit wall keys, compact wall records and versioned background suffixes. (#41)
 

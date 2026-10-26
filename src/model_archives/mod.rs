@@ -1,10 +1,46 @@
-//! Private implementation in progress for complete model archives (feature #44).
-//! No model root API is exported before its complete owned operation passes.
+//! Complete ordinary modern part configuration archives with explicit header/kernel context.
+//! Validation covers the stored archive; geometric validity and external documents are separate.
+
+mod archive;
+mod configuration;
+mod context;
+mod edit;
+mod edit_history;
+mod edit_types;
+mod field_change;
+mod field_mismatch;
+#[cfg(test)]
+#[path = "../../tests/model_archives/public_roles.rs"]
+mod public_role_tests;
+mod validation;
+pub use crate::archive_codec::{
+    ArchiveClass as ModelClass, ArchiveMapIndex as ModelObjectId,
+    FramedObjectRecord as ModelObjectTag, ObjectFraming as ModelObjectFraming,
+    ObjectRecord as ModelObjectRecord,
+};
+pub use crate::archive_codec::{
+    ArchiveString, CompactTransform, StoredDouble, StoredFloat, TextEncoding,
+};
+pub use crate::display_lists::{
+    DisplayEditCheckMode as ModelEditCheckMode, DisplayEditCompletion as ModelEditCompletion,
+    DisplayEditFidelity as ModelEditFidelity, DisplayFieldRelation as ModelFieldRelation,
+};
+pub use archive::PartConfigurationArchive;
+pub use configuration::ConfigurationId;
+pub use context::PartConfigurationContext;
+pub use edit_types::{
+    ModelArchiveCoverage, ModelArchiveDiagnostic, ModelFieldChange, ModelFieldHandle,
+    PartConfigurationEdit,
+};
+pub use kernel_frames::{CompressedKernelContext, KernelFrame};
+pub use reader::ModelFieldLimits as ModelArchiveLimits;
+pub use values::{ModelField, ModelFieldValue};
 
 mod annotation_defaults;
 mod annotation_view;
 mod atom;
 mod body_end_specs;
+#[cfg(test)]
 #[path = "../../tests/model_archives/body_features.rs"]
 mod body_feature_tests;
 mod body_features;
@@ -25,6 +61,7 @@ mod dimension_handles;
 mod dimensions;
 mod display_dimension;
 mod display_dimension_tail;
+#[cfg(test)]
 #[path = "../../tests/model_archives/display_dimensions.rs"]
 mod display_dimension_tests;
 mod display_item;
@@ -38,6 +75,7 @@ mod explosion;
 mod external_references;
 mod features;
 mod fillet_cache;
+#[cfg(test)]
 #[path = "../../tests/model_archives/fillet_threads.rs"]
 mod fillet_thread_tests;
 mod fillets;
@@ -51,6 +89,7 @@ mod lightweight;
 mod lightweight_part;
 mod lightweight_post;
 mod lightweight_shared;
+#[cfg(test)]
 #[path = "../../tests/model_archives/linear_patterns.rs"]
 mod linear_pattern_tests;
 mod linear_patterns;
@@ -73,6 +112,7 @@ mod primitives;
 mod profile_chains;
 mod profile_features;
 mod profile_geometry;
+#[cfg(test)]
 #[path = "../../tests/model_archives/profiles.rs"]
 mod profile_tests;
 mod raw_fields;
@@ -80,6 +120,7 @@ mod reader;
 mod reference_planes;
 mod reference_tail;
 mod relations;
+#[cfg(test)]
 #[path = "../../tests/model_archives/remaining_roles.rs"]
 mod remaining_role_tests;
 mod resolved_managers;
@@ -100,11 +141,13 @@ mod sketch_managers;
 mod sketch_offsets;
 mod sketch_patterns;
 mod sketch_references;
+#[cfg(test)]
 #[path = "../../tests/model_archives/sketch_roles.rs"]
 mod sketch_role_tests;
 mod sketch_splines;
 mod sketch_surfaces;
 mod sketch_tail;
+#[cfg(test)]
 #[path = "../../tests/model_archives/sketch_tail.rs"]
 mod sketch_tail_tests;
 mod sketch_text;
@@ -121,12 +164,12 @@ mod weld_helpers;
 use crate::{BessemerError, FailureClass};
 use objects::ModelObjectRole;
 use reader::{ModelDecoder, ModelFieldLimits};
-use values::{ModelField, ModelFieldValue, encode_fields};
+use values::encode_fields;
 
 fn invalid(cause: impl Into<String>) -> BessemerError {
     BessemerError::new(
         "model archive",
-        "Contents/Config-0",
+        "model stream",
         FailureClass::Invalid,
         cause,
     )
@@ -134,147 +177,194 @@ fn invalid(cause: impl Into<String>) -> BessemerError {
 
 fn model_failure(mut error: BessemerError) -> BessemerError {
     error.operation = "model archive";
-    error.entity = format!("Contents/Config-0: {}", error.entity);
+    error.entity = format!("model stream: {}", error.entity);
     error
 }
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/appearance_fields.rs"]
 mod appearance_fields;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/object_fields.rs"]
 mod object_fields;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/header_load_plan.rs"]
 mod header_load_plan;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/node_units.rs"]
 mod node_units;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/spatial_objects.rs"]
 mod spatial_object_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/lightweight.rs"]
 mod lightweight_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/lightweight_sections.rs"]
 mod lightweight_section_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/resolved_start.rs"]
 mod resolved_start_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/detail_prefix.rs"]
 mod detail_prefix_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/section_bounds.rs"]
 mod section_bound_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/dimension_defaults.rs"]
 mod dimension_default_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/annotation_table_labels.rs"]
 mod annotation_table_label_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/detail_helpers.rs"]
 mod detail_helper_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/weld_helpers.rs"]
 mod weld_helper_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/center_tail.rs"]
 mod center_tail_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/complete_details.rs"]
 mod complete_detail_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/environment.rs"]
 mod environment_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/transform_rows.rs"]
 mod transform_rows;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/views.rs"]
 mod view_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/part_archive.rs"]
 mod part_archive_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/model_tails.rs"]
 mod model_tail_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/native_corpus.rs"]
 mod native_corpus_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/annotation_views.rs"]
 mod annotation_view_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/component_references.rs"]
 mod component_reference_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/boundary_references.rs"]
 mod boundary_reference_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/entity_representations.rs"]
 mod entity_representation_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/external_references.rs"]
 mod external_reference_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/folders_parameters.rs"]
 mod folder_parameter_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/position_sheetmetal.rs"]
 mod position_sheetmetal_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/relations.rs"]
 mod relation_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/model_references.rs"]
 mod model_reference_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/radiate_representation.rs"]
 mod radiate_representation_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/kernel_frames.rs"]
 mod kernel_frame_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/geometric_references.rs"]
 mod geometric_reference_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/kernel_rows.rs"]
 mod kernel_rows;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/native_kernel_frames.rs"]
 mod native_kernel_frame_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/embedded_title.rs"]
 mod embedded_title_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/explosion.rs"]
 mod explosion_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/dimensions.rs"]
 mod dimension_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/sketch_references.rs"]
 mod sketch_reference_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/sketch_text.rs"]
 mod sketch_text_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/sketch_geometry.rs"]
 mod sketch_geometry_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/object_values.rs"]
 mod object_value_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/direct_collections.rs"]
 mod direct_collection_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/sketch_curves.rs"]
 mod sketch_curve_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/sketch_splines.rs"]
 mod sketch_spline_tests;
 
+#[cfg(test)]
 #[path = "../../tests/model_archives/sketch_dimensions.rs"]
 mod sketch_dimension_tests;

@@ -1,5 +1,15 @@
 # Complete modern part configuration archives
 
+The [public configuration API](public-api.md) now provides complete reads,
+forced construction, isolated edits and writing with exact stored-schema
+coverage and revision-bound field history. It reconstructs all 906 frozen native
+streams and passes the owned name-edit/document-reopen operation. Native
+application measurements cover that owned empty part. Assembly, drawing,
+route-assembly and separate feature archives remain in #2.
+
+The sections below retain the private implementation checkpoints that preceded
+the public API. Their measurements and integration states are historical.
+
 Feature #44 advances the complete interoperability goal in #2. This private
 codec checkpoint was developed on `codex/model-archives`, based on candidate
 merge `8ad332a57da6bd727dbe7ac36b51b341fed22865` after PR #43 passed all five

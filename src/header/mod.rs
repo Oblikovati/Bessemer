@@ -10,10 +10,8 @@ mod types;
 mod validate;
 mod values;
 
-#[cfg(test)]
 pub(crate) use fields::{FieldRule, WireKind};
 
-#[cfg(test)]
 pub(crate) fn external_field_rules() -> &'static [FieldRule] {
     ExternalFileReference::RULES
 }

@@ -27,11 +27,8 @@ pub(crate) use field_occurrences::index_field_occurrences;
 pub(crate) use material_reader::MaterialRead;
 pub(crate) use object_framing::{ObjectClassView, write_object_framing};
 pub(crate) use object_roles::{ArchiveObjectRole, require_object_role};
-#[cfg(test)]
-pub(crate) use objects::FramedObjectRecord;
-pub(crate) use objects::{
-    ArchiveClass, ArchiveMapIndex, ObjectFraming, ObjectReader, ObjectRecord, ObjectWriter,
-};
+pub use objects::{ArchiveClass, ArchiveMapIndex, FramedObjectRecord, ObjectFraming, ObjectRecord};
+pub(crate) use objects::{ObjectReader, ObjectWriter};
 pub(crate) use preserved::PreservedContents;
 pub(crate) use revision::ArchiveRevision;
 pub use text::{ArchiveString, TextEncoding};
