@@ -1,0 +1,44 @@
+{
+  "feature_issue": 44,
+  "scope": "test-only model field reader and shared appearance codec; complete model root pending",
+  "source_sha256": {
+    "src/model_archives/material.rs": "e399ecdb5fe2f762f246447a66fa1a57dd3d716532e88184ddf322d15b35258f",
+    "src/model_archives/mod.rs": "c3252524be7bcf2e34922f50a34002ad889e91173a13cf17172bac61c6368389",
+    "src/model_archives/reader.rs": "0aba5a2ac31675edd1ef68f731f386a4bcbc5c50f89cb1692e888108dcfebfd2",
+    "src/model_archives/values.rs": "234c12638e6ecc78db1c9a05702a0692fd9455e998aca815acc8eb946cf10db2",
+    "tests/model_archives/appearance_fields.rs": "0e887d38a610e6d53df59f353fa4ed943c640db070b495d2bbbc1f5c3877a27a",
+    "src/archive_codec/material_reader.rs": "920c892c51428af5c371eb9dc1aa837368a1859d547e079def8b109ec0bbcd85",
+    "src/display_lists/archive_scalars.rs": "33f8890e24635d2632a0e8c1d0fc7ca79f33c59b4cb7578e78ec56ea9eb83ddb",
+    "src/display_lists/material_archive.rs": "46ba4865b01f5999e0e7e3b946b9667ace515e23d879605ceb436e8b2a1908bc"
+  },
+  "checks": [
+    {
+      "command": "cargo xtask pr --offline",
+      "result": "passed",
+      "doctests": 204,
+      "scope": "model field builder, shared grouped reader changes, frozen existing codec suites",
+      "log": "target/model-field-reader-pr.log"
+    },
+    {
+      "command": "cargo test --offline --lib model_archives",
+      "result": "passed",
+      "tests": 9,
+      "scope": "final source after cursor/version encapsulation"
+    },
+    {
+      "command": "cargo clippy --offline --all-targets -- -D warnings",
+      "result": "passed",
+      "scope": "final source after cursor/version encapsulation"
+    }
+  ],
+  "native_model_appearance_bytes": 845,
+  "partial_prefixes_rejected": 845,
+  "parallel_encoders": 4,
+  "independent_edited_bytes": 849,
+  "published_model_api": false,
+  "no_input_bytes_retained_by_completed_fields": true,
+  "first_failure_rejects_publication": true,
+  "whole_model_root_verified": false,
+  "whole_model_document_verified": false,
+  "uncommitted": true
+}

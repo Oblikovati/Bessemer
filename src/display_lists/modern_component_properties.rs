@@ -1,5 +1,6 @@
 use super::{archive_decode::DisplayDecoder, archive_error::invalid};
 use crate::Result;
+use crate::archive_codec::visibility::read as visibility;
 
 pub(super) fn property(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     let fonts = component_font_slots(archive.context.version.value());
@@ -33,15 +34,6 @@ fn property_tail(archive: &mut DisplayDecoder<'_>) -> Result<()> {
         archive.i32("empty_prop")?;
     }
     Ok(())
-}
-
-fn visibility(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    archive.u16("unknown_0")?;
-    archive.u16("unknown_2")?;
-    archive.u8("unknown_4")?;
-    archive.u32("unknown_8")?;
-    archive.u16("layer")?;
-    archive.scope("line_width", super::modern_item_style::short_width)
 }
 
 pub(super) fn holder(archive: &mut DisplayDecoder<'_>) -> Result<()> {

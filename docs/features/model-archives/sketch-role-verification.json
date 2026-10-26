@@ -1,0 +1,31 @@
+{
+  "issue": 46,
+  "native_accepted": 890,
+  "native_required": 906,
+  "complete_gate": "failed",
+  "old_tail_packet_sha256": "4576c3183f63d10bc5883e01ee6c1cc39a30ba58322e3948c170141a668d0333",
+  "tail_report_revalidation": {
+    "previous_sha256": "5f870d819ef71c8ef3c9c96807d7385229d953b860f55cdf3f8f0cfe6fe5a237",
+    "current_sha256": "042a326ded0658e154cc2ff8fb99c50792f647eea15894b78832c5748d1910ce",
+    "reason": "Rerunning the older generator refreshed source inventory metadata; all owned wire bytes remained identical. Earlier measured source/report hashes remain in the original verification manifest."
+  },
+  "sha256": {
+    "src\\model_archives\\sketch_tail.rs": "62dbb879a41f7e7d03ab7e78bafe090010012d9f890a8aa2b485593b52909fd7",
+    "src\\model_archives\\sketch_logical.rs": "b941b03998ecf85a6c9cb9da58b8d9cabe14444782a51865f0ab368e714aa664",
+    "tests\\model_archives\\sketch_roles.rs": "0ddd28c8d8942d380837216ab770ab886c0bc2f766d926f5476f681d11fbe9a1",
+    "docs\\features\\model-archives\\freeze_sketch_role_regressions.py": "e39eb4a96aec842c7ab9fc6175d2adb1018ff5859feb57fd9295a14d08a49649",
+    "docs\\features\\model-archives\\sketch_tail_fixture_bytes.py": "eb43a29c8887b39f8c41c924f4bfa0157790b14492d71299f027fcf76aec8eeb",
+    "tests\\fixtures\\model-archives\\sketch-role-regressions.bin": "be0051df7a6854b9aa1c4ccbeaf1c5d97cb4b1dfc3253d7d6ea6c361accda34c"
+  },
+  "checks": {
+    "model tests": "250 passed; two ignored and six core tests filtered",
+    "clippy": "passed",
+    "Python": "51 passed"
+  },
+  "log_sha256": {
+    "model-sketch-roles-red.log": "9a6185d493a5b83eb79b1845c1d35f7348d90f475038d339b18df4752b546238",
+    "model-sketch-roles-all-model.log": "43abe6f3391f5fd299a3801dd84297038a4cf4dd30f9a3732ee2106777967c69",
+    "model-sketch-roles-clippy.log": "96dbfd462f9d9e436bc43c1622ead401f21583bc7e4ae4fa7e995296421ec7ee",
+    "model-sketch-roles-python.log": "8d1626efd32cc480147ce6fcaabd1fc531425bbac25bf3dead6edc0544d624aa"
+  }
+}

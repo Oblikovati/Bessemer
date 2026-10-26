@@ -1,7 +1,7 @@
 use std::collections::BTreeMap;
 
 use crate::Result;
-use crate::archive_codec::{ArchiveMapIndex, ArchiveString};
+use crate::archive_codec::{ArchiveClass, ArchiveMapIndex, ArchiveString};
 use crate::history::RevisionStamp;
 
 use super::{
@@ -151,6 +151,16 @@ pub struct HeaderNode {
     pub schema: u16,
     /// Complete known class body.
     pub object: HeaderObject,
+}
+
+impl HeaderNode {
+    /// Keeps the stored schema with its native class, e.g. `node.archive_class()` for model imports.
+    pub(crate) fn archive_class(&self) -> ArchiveClass {
+        ArchiveClass {
+            name: self.object.kind().name().to_owned(),
+            schema: self.schema,
+        }
+    }
 }
 
 /// Owned graph submitted for complete header validation before publication.

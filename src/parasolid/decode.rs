@@ -21,10 +21,11 @@ pub(super) fn file(
     bytes: &[u8],
     base: &BaseSchema,
     limits: TransmitLimits,
+    context: super::title_context::TitleContext,
 ) -> Result<TransmitContents> {
     let mut decoder = Decoder::new(TransmitCursor::new(bytes)?, base, limits);
     let (title, schema_key, n_types) = read_header(&mut decoder.cursor, base)?;
-    let body = if super::validate::is_delta_title(&title)? {
+    let body = if context.is_delta(&title)? {
         decoder.deltas()?
     } else {
         TransmitBody::Partition(decoder.record_list(false, false)?)

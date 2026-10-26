@@ -1,0 +1,98 @@
+{
+  "behavior_version": "private-model-complete-profile-v1",
+  "decision": "Complete ordinary/reused profiles with typed chains, contours, conditional framed bodies and aligned word groups. No opaque payload or partial-tail success.",
+  "migration": "Initial unpublished codec; earlier kernel/body fixtures retained across the typed body-state/model-feature helper extraction.",
+  "cases": 180,
+  "independent_scalar_values": 11072,
+  "checks": {
+    "focused": "13 passed",
+    "all model tests": "276 passed; two external-input tests ignored and six core tests filtered",
+    "all-target Clippy": "passed",
+    "Python": "55 passed",
+    "full PR gate": "earlier geometric/kernel checkpoint; rerun before push"
+  },
+  "kernel_context_cases": {
+    "framed_requires_context": 48,
+    "suppressed_without_context": 24
+  },
+  "required_reused_targets": 16,
+  "invalid_mask_cases": 112,
+  "unrelated_role_cases": 64,
+  "reference_array_budget": {
+    "pass": 6,
+    "reject": 5
+  },
+  "fixture_repeat": {
+    "fresh_processes": 2,
+    "identical": true,
+    "sha256": {
+      "profile-cases.bin": "f0a2fd0ac510ffe1bd293d2a470af8f05e75bcbf54a2e57bfbe1a0ebd69b8b23",
+      "profile-original.bin": "ac97cf4c575e5b8dfd8f656cc01431fe36811a2c83058c1cccb450644300113c",
+      "profile-edited.bin": "1fe33e98c0cd1e27a3fe85289ecd34eebb3b1cddf1b024e5ae4e6c21d64a8f66"
+    }
+  },
+  "native": {
+    "accepted": 899,
+    "required": 906,
+    "new_indices": [
+      25,
+      272,
+      295,
+      358,
+      758,
+      761
+    ],
+    "document_paths": 835,
+    "versions": {
+      "11000": 1,
+      "19000": 888,
+      "18000": 10
+    },
+    "complete_gate": "failed: four fillets and three cosmetic threads"
+  },
+  "oracle_projection": {
+    "reference_payload": "independent little-endian u32 groups; exact original byte extent required",
+    "exclusions": [
+      "derived sketch completion/cursor metadata",
+      "kernel nodes/framing use their separate typed oracle; primary/extra suppression stays included"
+    ]
+  },
+  "exclusions": [
+    "fillet and cosmetic-thread bodies and later nested dependencies",
+    "unimplemented new trim/profile-reference target bodies",
+    "public operation/history contracts",
+    "selected-configuration diagnostics",
+    "geometry/native application acceptance",
+    "remote platform matrix"
+  ],
+  "artifact_sha256": {
+    "src/model_archives/profile_features.rs": "9653abbdef2c3f9d211b6b1930a96f671bbbd116cfe9196b24073d82db603f63",
+    "src/model_archives/profile_geometry.rs": "e49d59abb0ac5bfe20773310026d995a2c57bf7ed514eec78b94e86e1796af35",
+    "src/model_archives/profile_chains.rs": "a66130fc3c6f131acc093cd7af9575b4fab014f16d19f8ce0bc7c8eccd4fc840",
+    "src/model_archives/contour_objects.rs": "9433a0656c73e8dd6673e737da14a70de5ae7ce123c51fd42996c11728249742",
+    "src/model_archives/kernel_frames.rs": "1f5248175916ae0e648e85c6955375a645cf9603d41d4f672df85200a5dac566",
+    "src/model_archives/body_features.rs": "d60f7c6770884b3d2163cf5158f1127e82373d566505f9fdbca99667e405a765",
+    "src/model_archives/object_body.rs": "ac5546ae3f52b2902a9a70af1ea63be8c80808e4c3b25517b8f3dea774ebdea8",
+    "src/model_archives/mod.rs": "23cd180289d7648ee6f6a526090ddde711ea87b340475eca602a77c0f88e0b3a",
+    "tests/model_archives/profiles.rs": "57af35474b208e839f15da8aed7ad932f94b6e8deaba6172ffc62d9fcb7e881b",
+    "tests/test_profile_oracle_projection.py": "5c076daaa11a012e1ceca16996cda486d4c907b0f9904c21b3ccb1f6200802c0",
+    "tests/fixtures/model-archives/profile-cases.bin": "f0a2fd0ac510ffe1bd293d2a470af8f05e75bcbf54a2e57bfbe1a0ebd69b8b23",
+    "tests/fixtures/model-archives/profile-original.bin": "ac97cf4c575e5b8dfd8f656cc01431fe36811a2c83058c1cccb450644300113c",
+    "tests/fixtures/model-archives/profile-edited.bin": "1fe33e98c0cd1e27a3fe85289ecd34eebb3b1cddf1b024e5ae4e6c21d64a8f66",
+    "docs/features/model-archives/freeze_profiles.py": "5a4338ae5fac65b43883121f1156438000391c3d3950e93ce53cb7d2ae75422f",
+    "docs/features/model-archives/profile_fixture_bytes.py": "38ae02cba828cf13a87d9ae1b8c863b1a7907589f377efb4029bc12fd481ae76",
+    "docs/features/model-archives/profile_oracle_projection.py": "e7e88ad355cfc981c669e7435ea41684c26061a7014a8fe5d4f95583024f9c75",
+    "docs/features/model-archives/profile-cases.json": "c0332b85bd0752f567972c6e641a18e711c54475084650e609406569bc464f87",
+    "docs/features/model-archives/profile-schema-reference.json": "05b6a876f56cacfcfc14724a946cb786ad44b2b00a81ae98b389e683b8477f61",
+    "docs/features/model-archives/profile-schema-snapshot.md": "2e70e6ccbd2956566cafd0c29d7ae9f627523dfc09ad52ff4cf3856bb78058d3"
+  },
+  "log_sha256": {
+    "model-profile-tests.log": "81572af05b8ed5029e4e6fab56f198e7ee889d44c092c7867798818d24573b81",
+    "model-profile-all-model.log": "db22dca9f5957bfd062da7d34b8444798eca0acb07a44dfc34971e5e2942c4a1",
+    "model-profile-clippy.log": "22684c114c23170a560b4703f685afa5a24bdbc6133ccabc83fb6c0d89352297",
+    "model-profile-python.log": "f99d0098166aea7cb76951dc2e23ec5a01c2e5c095fb462785770fd31dfe7cdc",
+    "model-native-corpus-profiles-first.log": "03cf8b15818ec401b53c50e466d4abbd97a23a5e70eb250d3da777c99517604c",
+    "model-native-corpus-profiles.log": "bd00b8da61dd696cd1232967f113684d815bf63ed275fe5b77396301511610ce",
+    "model-native-corpus-profiles-repeat.log": "1d6045c6cf86a56cb05939d92648f68468639921e1f962cb93070199250c262a"
+  }
+}

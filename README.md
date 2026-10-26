@@ -92,6 +92,9 @@ The [XML metadata evidence](docs/features/xml-metadata/README.md) covers all 17
 stream families, namespace-aware property views, lexical edits and corpus checks.
 The [PNG preview evidence](docs/features/png-previews/README.md) covers chunk
 preservation, ancillary copy rules, full pixel formats, and corpus verification.
+The [model codec evidence](docs/features/model-archives/plan.md) records the private
+modern-part implementation, independent edit fixtures and exact reconstruction
+of 906 native configurations. Public model operations remain under development.
 
 
 This library is named after Sir Henry Bessemer (1813–1898) an English engineer, inventor, and entrepreneur 

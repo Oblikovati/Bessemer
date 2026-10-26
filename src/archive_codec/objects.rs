@@ -34,6 +34,7 @@ enum MapSlot {
     Object(ArchiveClass),
 }
 
+#[derive(Debug, Clone, PartialEq, Eq)]
 pub(crate) enum ObjectRecord {
     Null,
     New {
@@ -44,6 +45,18 @@ pub(crate) enum ObjectRecord {
         index: ArchiveMapIndex,
         class: ArchiveClass,
     },
+}
+
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub(crate) struct ObjectFraming {
+    pub tag: u16,
+    pub extended: Option<u32>,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub(crate) struct FramedObjectRecord {
+    pub framing: ObjectFraming,
+    pub record: ObjectRecord,
 }
 
 pub(crate) struct ObjectReader {
@@ -58,7 +71,32 @@ impl ObjectReader {
     }
 
     pub(crate) fn object(&mut self, cursor: &mut ArchiveCursor<'_>) -> Result<ObjectRecord> {
+        self.framed_object(cursor).map(|framed| framed.record)
+    }
+
+    pub(crate) fn framed_object(
+        &mut self,
+        cursor: &mut ArchiveCursor<'_>,
+    ) -> Result<FramedObjectRecord> {
         let tag = cursor.u16()?;
+        let extended = if tag == 0x7fff {
+            Some(cursor.u32()?)
+        } else {
+            None
+        };
+        let record = self.record_for_tag(cursor, tag, extended)?;
+        Ok(FramedObjectRecord {
+            framing: ObjectFraming { tag, extended },
+            record,
+        })
+    }
+
+    fn record_for_tag(
+        &mut self,
+        cursor: &mut ArchiveCursor<'_>,
+        tag: u16,
+        extended: Option<u32>,
+    ) -> Result<ObjectRecord> {
         if tag == 0 {
             return Ok(ObjectRecord::Null);
         }
@@ -67,7 +105,7 @@ impl ObjectReader {
             self.insert(MapSlot::Class(class.clone()))?;
             return self.new_object(class);
         }
-        let (index, is_class) = read_index(cursor, tag)?;
+        let (index, is_class) = map_tag_index(tag, extended);
         self.mapped_record(index, is_class)
     }
 
@@ -90,8 +128,18 @@ impl ObjectReader {
     }
 
     fn new_object(&mut self, class: ArchiveClass) -> Result<ObjectRecord> {
-        let index = self.insert(MapSlot::Object(class.clone()))?;
+        let index = self.append_loaded_object(Some(class.clone()))?;
         Ok(ObjectRecord::New { index, class })
+    }
+
+    /// Imports a loaded object without a class slot or stream bytes.
+    /// Model header callers use `append_loaded_object(Some(class))` in native list order.
+    pub(crate) fn append_loaded_object(
+        &mut self,
+        class: Option<ArchiveClass>,
+    ) -> Result<ArchiveMapIndex> {
+        let slot = class.map(MapSlot::Object).unwrap_or(MapSlot::Null);
+        self.insert(slot)
     }
 
     fn insert(&mut self, slot: MapSlot) -> Result<ArchiveMapIndex> {
@@ -120,12 +168,11 @@ fn read_class(cursor: &mut ArchiveCursor<'_>) -> Result<ArchiveClass> {
     Ok(ArchiveClass { name, schema })
 }
 
-fn read_index(cursor: &mut ArchiveCursor<'_>, tag: u16) -> Result<(u32, bool)> {
-    if tag != 0x7fff {
-        return Ok((u32::from(tag & 0x7fff), tag & 0x8000 != 0));
+fn map_tag_index(tag: u16, extended: Option<u32>) -> (u32, bool) {
+    match extended {
+        Some(wide) => (wide & 0x7fff_ffff, wide & 0x8000_0000 != 0),
+        None => (u32::from(tag & 0x7fff), tag & 0x8000 != 0),
     }
-    let wide = cursor.u32()?;
-    Ok((wide & 0x7fff_ffff, wide & 0x8000_0000 != 0))
 }
 
 pub(crate) struct ObjectWriter {
@@ -191,3 +238,11 @@ fn write_tag(output: &mut Vec<u8>, index: ArchiveMapIndex, is_class: bool) {
     let tag = index.value() | if is_class { 0x8000_0000 } else { 0 };
     output.extend_from_slice(&tag.to_le_bytes());
 }
+
+#[cfg(test)]
+#[path = "object_import_tests.rs"]
+mod object_import_tests;
+
+#[cfg(test)]
+#[path = "../../tests/model_archives/header_imports.rs"]
+mod native_header_import_tests;

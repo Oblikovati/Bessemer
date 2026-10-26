@@ -10,6 +10,7 @@ mod layout_codec;
 mod record_decode;
 mod schema;
 mod schema_text;
+mod title_context;
 mod types;
 mod validate;
 mod wire;
@@ -32,6 +33,7 @@ pub struct TransmitFile {
     base: BaseSchema,
     contents: PreservedContents<TransmitContents>,
     effective: Arc<validate::EffectiveLayouts>,
+    title_context: title_context::TitleContext,
 }
 
 impl TransmitFile {
@@ -45,12 +47,22 @@ impl TransmitFile {
     /// # Ok::<(), Box<dyn std::error::Error>>(())
     /// ```
     pub fn from_bytes(bytes: &[u8], base: &BaseSchema, limits: TransmitLimits) -> Result<Self> {
-        let contents = decode::file(bytes, base, limits)?;
-        let effective = Arc::new(validate::contents(base, &contents)?);
+        Self::decode_in_context(bytes, base, limits, title_context::TitleContext::Marked)
+    }
+
+    fn decode_in_context(
+        bytes: &[u8],
+        base: &BaseSchema,
+        limits: TransmitLimits,
+        context: title_context::TitleContext,
+    ) -> Result<Self> {
+        let contents = decode::file(bytes, base, limits, context)?;
+        let effective = Arc::new(validate::contents(base, &contents, context)?);
         Ok(Self {
             base: base.clone(),
             contents: PreservedContents::decoded(bytes, contents),
             effective,
+            title_context: context,
         })
     }
 
@@ -64,12 +76,47 @@ impl TransmitFile {
     /// # Ok::<(), Box<dyn std::error::Error>>(())
     /// ```
     pub fn new(base: &BaseSchema, contents: TransmitContents) -> Result<Self> {
-        let effective = Arc::new(validate::contents(base, &contents)?);
+        Self::construct_in_context(base, contents, title_context::TitleContext::Marked)
+    }
+
+    fn construct_in_context(
+        base: &BaseSchema,
+        contents: TransmitContents,
+        context: title_context::TitleContext,
+    ) -> Result<Self> {
+        let effective = Arc::new(validate::contents(base, &contents, context)?);
         Ok(Self {
             base: base.clone(),
             contents: PreservedContents::constructed(contents),
             effective,
+            title_context: context,
         })
+    }
+
+    #[cfg(test)]
+    pub(crate) fn from_embedded_partition(
+        bytes: &[u8],
+        base: &BaseSchema,
+        limits: TransmitLimits,
+    ) -> Result<Self> {
+        Self::decode_in_context(
+            bytes,
+            base,
+            limits,
+            title_context::TitleContext::EmbeddedPartition,
+        )
+    }
+
+    #[cfg(test)]
+    pub(crate) fn new_embedded_partition(
+        base: &BaseSchema,
+        contents: TransmitContents,
+    ) -> Result<Self> {
+        Self::construct_in_context(
+            base,
+            contents,
+            title_context::TitleContext::EmbeddedPartition,
+        )
     }
 
     /// Borrows all stored fields without granting mutable aliases to published results.
@@ -116,11 +163,16 @@ impl TransmitFile {
     /// # Ok::<(), Box<dyn std::error::Error>>(())
     /// ```
     pub fn with_contents(&self, contents: TransmitContents) -> Result<Self> {
-        let effective = Arc::new(validate::contents(&self.base, &contents)?);
+        let effective = Arc::new(validate::contents(
+            &self.base,
+            &contents,
+            self.title_context,
+        )?);
         Ok(Self {
             base: self.base.clone(),
             contents: self.contents.edited(contents),
             effective,
+            title_context: self.title_context,
         })
     }
 

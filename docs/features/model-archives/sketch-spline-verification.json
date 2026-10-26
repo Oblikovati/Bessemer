@@ -1,0 +1,80 @@
+{
+  "behavior_version": "private-model-direct-spline-v1",
+  "decision": "Documented complete spline layouts and checked count arithmetic with explicit kernel context; no evaluator, normalization or opaque body fallback.",
+  "migration": "Initial unpublished codec; previous wire baselines retained across count/array helper extraction.",
+  "checks": {
+    "new spline tests": "12 passed including exhaustive prefixes; final-source broader run covers optimized fixture context reuse",
+    "referenced-field tests": "6 passed",
+    "all model tests": "215 passed; two external-input tests ignored, six core tests filtered",
+    "all-target Clippy": "passed",
+    "Python": "51 passed",
+    "fresh reference processes": "all three wire fixtures reproduced exactly",
+    "native corpus": "866/906; all 906 outcomes unchanged from preceding checkpoint; complete acceptance failed",
+    "full PR gate": "earlier geometric/kernel source state; rerun before push"
+  },
+  "cases": 934,
+  "independent_scalar_values": 80434,
+  "exact_spline_array_budget": {
+    "entries": 29,
+    "one_below_rejected": 28
+  },
+  "kernel_cases": {
+    "framed_context_required": 12,
+    "suppressed_without_context": 12
+  },
+  "oracle_exclusions": [
+    "derived interpolation_count duplicate",
+    "kernel node values use the separate typed oracle; suppression stays included"
+  ],
+  "fixture_repeat": {
+    "identical": true,
+    "sha256": {
+      "sketch-spline-cases.bin": "792ccc55d41ddb941fb98cf89a8a36904397382f0a829e8d76fd873efdde8a90",
+      "sketch-spline-original.bin": "02c2eda07dc470b0674f7dbe1024829811ef3d80c18048ff052f6f5c3b3cebbf",
+      "sketch-spline-edited.bin": "cb8da6451dfa7fe82ba87c4629095ff4b4d23aa1a7c97eb766e3e3d03b95ed13"
+    }
+  },
+  "exclusions": [
+    "complete sgSketch root, dimension collections, patterns and tail",
+    "unimplemented nonnull fixed-length target bodies",
+    "two tracked role failures",
+    "public model API and result/history contracts",
+    "geometry/native application acceptance",
+    "remote platform matrix"
+  ],
+  "artifact_sha256": {
+    "docs/features/model-archives/freeze_sketch_splines.py": "333330e37a753cf70ee956893dc6844327d8f1319c81d95596b446eb93b32de5",
+    "docs/features/model-archives/oracle_projection.py": "1e859b446ce1c765fa51243401f09d393571450bb13d8cf72ff7fd87770d2d1f",
+    "docs/features/model-archives/sketch-spline-cases.json": "a5f44a328be652429b67f00f42cd83a7fa71030fb9a233367d1509cb3187b17c",
+    "docs/features/model-archives/sketch-spline-schema-reference.json": "e6ba1b2efcfa36a7101ff9413c9492d4fee3af01375c76b90e911c18902686c1",
+    "docs/features/model-archives/sketch-spline-schema-snapshot.md": "33756b62e02c4600d5d1337f92da14715e23bad2ed79bec7850efb8c398f34cd",
+    "docs/features/model-archives/sketch_geometry_fixture_bytes.py": "87bf3a6f626819d3e9a2d9116dc3db92e1394cc02316a8b4c409abd895a2510f",
+    "docs/features/model-archives/sketch_spline_fixture_bytes.py": "2ba4572385f4aa0d5433ddedf6f0c2b6af56e5b075ba51fc5f0f4ef3d8b8fe6f",
+    "docs/features/model-archives/spline_array_fixture_bytes.py": "26c332d183a374be7d6cfdd198d03941943057a649673333c5ed117df7d1ce64",
+    "src/model_archives/mod.rs": "6513a15bb41e8e82b4bc7ed059903ec5b66b471cd53815e8d7216a957b80227b",
+    "src/model_archives/object_body.rs": "bd511c05f3afea5fc6c83df2cb67f81df0e27fd35c56b0fe509209fdc55150c3",
+    "src/model_archives/object_values.rs": "502439ce97b4c6e1172266a2d3c3894a6f6e0be708ae02dd7a8a6ad520daa574",
+    "src/model_archives/primitives.rs": "1c85f99490c162c48a8bcd65df8108a93b54f2a465f299a41e80ee3762791af8",
+    "src/model_archives/reader.rs": "e3ed668588e8eee331ee31ea9a212a0d6bdd229684328ddd96d70eff89844e27",
+    "src/model_archives/sketch_arrays.rs": "69c4d4a6f40f0f1be8a51b982654c84588c81ed53da6698bbaa49b694ab5d412",
+    "src/model_archives/sketch_splines.rs": "ad43a82d3558d5e205a4a2dcc70c652aa32f1cfb68e9acd8e484686992bcc5de",
+    "src/model_archives/sketch_text.rs": "7e3a0574d05fc9eede69bceec9f779ae0041bcc19054ba07a56d560729199099",
+    "src/model_archives/spline_arrays.rs": "aa62337dc3f97c525f84267d4583cf52e2d4eac0ca346d4c60f2163081e48453",
+    "tests/fixtures/model-archives/sketch-spline-cases.bin": "792ccc55d41ddb941fb98cf89a8a36904397382f0a829e8d76fd873efdde8a90",
+    "tests/fixtures/model-archives/sketch-spline-edited.bin": "cb8da6451dfa7fe82ba87c4629095ff4b4d23aa1a7c97eb766e3e3d03b95ed13",
+    "tests/fixtures/model-archives/sketch-spline-original.bin": "02c2eda07dc470b0674f7dbe1024829811ef3d80c18048ff052f6f5c3b3cebbf",
+    "tests/model_archives/direct_collections.rs": "f87d154811c8f8491dfa3a2e25fc78005f7fa95ffe45714038a3fd814981649b",
+    "tests/model_archives/object_values.rs": "888fe3303f43357e599923f090fd8f4d7834c350d8971627285e50c0f1b0c0d2",
+    "tests/model_archives/sketch_splines.rs": "de80bde2dbb0080e0317aafff92df2c53ba6e4d83f8ee9a2693dbcfe37941ff8",
+    "tests/test_model_kernel_oracles.py": "1185d9ef002cec2d8790f4a1f6380a5a5edc5c62b3659caeb9bdbb2c04ebea76"
+  },
+  "log_sha256": {
+    "model-spline-values.log": "2bbb7f1df1f9a427e69a4e95723a465b22cd10b40423ce898a049d593375c3d5",
+    "model-spline-tests.log": "c62f73f25e80a2f34cd28d35715a94b130555ab47d2c33e086e48416d6d86cfb",
+    "model-spline-focused.log": "ba18c67155c56ec939da6f2664f2c94432c50642c4b644691d36aa5108bc5c4a",
+    "model-spline-object-values.log": "7876038f74a23d7f417a27236c35826631db2268b633adbac93a1b5a98efe1dd",
+    "model-spline-clippy.log": "2edb2ec24b010a19fefbdefe464419b97c48cf3cd00b81db1a6dbd4a0a8ae011",
+    "model-spline-all-model.log": "071222dc0761e48a92b2cdb5c1931e140591a989d2926bb8ce8ddc7c37828729",
+    "model-spline-python.log": "1373229601b00f20279abc97f4281894c3aa5832f1417f31050f611a8340336c"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "bug_issue": 45,
+  "reason": "Operation-local memoization preserves MFC object aliases instead of fabricating repeated bodies.",
+  "old_scalar_count": 11064,
+  "corrected_scalar_count": 10980,
+  "wire_records_unchanged": [
+    {
+      "kind": 0,
+      "version": 10188,
+      "bytes": 14692,
+      "sha256": "a1cfeec2f4d3b7f04e043e7a1719986967c6ddfd818e6f64c583012df89c75ba"
+    },
+    {
+      "kind": 1,
+      "version": 10188,
+      "bytes": 14712,
+      "sha256": "ff863375095d09adad7773af103c8a3ac93000d136c49cefb4afd02082ba8a15"
+    },
+    {
+      "kind": 0,
+      "version": 19000,
+      "bytes": 16124,
+      "sha256": "4a8761ae795bac4535fb5e8c992cf77bf302323318789fd998fac8745e1acbb4"
+    },
+    {
+      "kind": 1,
+      "version": 19000,
+      "bytes": 16144,
+      "sha256": "01ec23739151a3017dcfed774664a7f046000dedafaa135f8cb20e28b9095857"
+    }
+  ],
+  "new_packet_sha256": "f316060d03cef74a1762de306a8bbd108f5c1bba0e9105b549b75fb8a9e90657",
+  "old_packet_sha256": "03458e6e53096666e1795162ae23d46187f408c0d1d778c223ab1051ea34767f",
+  "native_bytes": 17498,
+  "native_scalar_count": 2910,
+  "existing_frozen_baselines_changed": false,
+  "regression_tests": 6,
+  "two_reference_processes_identical": {
+    "annotation-table-label-cases.bin": "109bd4c35208ab1fe91a391c7aa8b95e5e9891752abb05752e6ad15a481b520c",
+    "detail-helper-cases.bin": "b020dd9a84075aca481674e31586fdb58d2f19a1ff5120db3e7ffcbbf1e7be9e",
+    "weld-helper-cases.bin": "007a69f2def4d5022ec4d5602b085cdc89bd9f026839f62ad570a9c0cc555feb",
+    "center-tail-cases.bin": "d1af5bba7597d40d8fef4d8ba0514d36d9fc71a871dccc14664bb5067fb6ee61",
+    "complete-detail-cases.bin": "f316060d03cef74a1762de306a8bbd108f5c1bba0e9105b549b75fb8a9e90657",
+    "native-complete-details.bin": "3b637ef9d580a3ed78181f4303cb3d23c9bfb4fc05c993445d26d3b94ca46e88",
+    "native-complete-details.txt": "366acc954a63c53bad8edde512a2f0909c72c800741bd307c1e67700d90bb1d2"
+  }
+}

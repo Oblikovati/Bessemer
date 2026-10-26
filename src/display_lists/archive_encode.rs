@@ -3,7 +3,10 @@ use super::{
     DisplayFieldValue as Value, DisplayObjectTag, DisplayTransform, TransformContents,
     archive_error::invalid, output::DisplayOutput,
 };
-use crate::Result;
+use crate::{
+    Result,
+    archive_codec::{ObjectClassView, ObjectFraming, write_object_framing},
+};
 
 pub(super) fn encode(
     contents: &DisplayArchiveContents,
@@ -101,40 +104,13 @@ fn write_views(
 }
 
 fn write_tag(output: &mut DisplayOutput, tag: &DisplayObjectTag) -> Result<()> {
-    if tag.extended.is_some() != (tag.tag == 0x7fff)
-        || tag.new_class.is_some() != (tag.tag == 0xffff)
-    {
-        return Err(invalid(format!(
-            "MFC tag {:#06x} with extension/class presence {}/{}; expected framing selected by 0x7FFF/0xFFFF",
-            tag.tag,
-            tag.extended.is_some(),
-            tag.new_class.is_some()
-        )));
-    }
-    output.u16(tag.tag)?;
-    if let Some(value) = tag.extended {
-        output.u32(value)?;
-    }
-    if let Some(class) = &tag.new_class {
-        write_class(output, class)?;
-    }
-    Ok(())
-}
-
-fn write_class(output: &mut DisplayOutput, class: &super::DisplayClassDescriptor) -> Result<()> {
-    if class.name.is_empty() || !class.name.is_ascii() {
-        return Err(invalid(format!(
-            "class name {:?}; expected nonempty ASCII",
-            class.name
-        )));
-    }
-    let length = u16::try_from(class.name.len()).map_err(|_| {
-        invalid(format!(
-            "class name length {}; expected u16",
-            class.name.len()
-        ))
-    })?;
-    output.u16(class.schema)?;
-    output.u16(length)?;
-    output.bytes(class.name.as_bytes())
+    let framing = ObjectFraming {
+        tag: tag.tag,
+        extended: tag.extended,
+    };
+    let class = tag.new_class.as_ref().map(|class| ObjectClassView {
+        name: &class.name,
+        schema: class.schema,
+    });
+    write_object_framing(&framing, class, |bytes| output.bytes(bytes), invalid)
 }

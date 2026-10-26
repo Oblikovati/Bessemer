@@ -6,3 +6,6 @@
 # XML framing fixtures must retain BOMs and exact CR/LF bytes.
 tests/fixtures/xml/*.bin binary
 tests/fixtures/display-lists/*.bin binary
+# Model wire fixtures and hash-bound schema excerpts retain exact source bytes.
+tests/fixtures/model-archives/*.bin binary
+docs/features/model-archives/** -text whitespace=-blank-at-eol,-blank-at-eof

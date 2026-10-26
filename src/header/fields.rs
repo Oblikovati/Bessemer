@@ -4,7 +4,7 @@ use crate::archive_codec::ArchiveString;
 use super::{HeaderBounds, HeaderReference, SharedFileName, invalid};
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
-pub(super) enum WireKind {
+pub(crate) enum WireKind {
     U8,
     U16,
     U32,
@@ -20,7 +20,7 @@ pub(super) enum WireKind {
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
-pub(super) enum FieldRole {
+pub(crate) enum FieldRole {
     Any,
     Strings,
     ObjectList,
@@ -33,12 +33,12 @@ pub(super) enum FieldRole {
 }
 
 #[derive(Debug, Clone, Copy)]
-pub(super) enum Phase {
+pub(crate) enum Phase {
     Outer,
     Body,
 }
 
-pub(super) struct FieldRule {
+pub(crate) struct FieldRule {
     pub name: &'static str,
     pub kind: WireKind,
     pub role: FieldRole,

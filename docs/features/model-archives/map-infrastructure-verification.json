@@ -1,0 +1,41 @@
+{
+  "feature_issue": 44,
+  "scope": "private MFC map infrastructure; no complete model codec yet",
+  "source_sha256": {
+    "src/archive_codec/objects.rs": "3423ada82af271a2a6ab1c7e773aa7dba6e6935eab6c9ddb1d4f376767078eb5",
+    "src/archive_codec/object_import_tests.rs": "660db4cac6693ce07e1dc38257b40fe55fd72db02beedb56493bc4e9d39d44eb",
+    "tests/model_archives/header_imports.rs": "13b34b48108c8b72ff528b4711e702e42a9ccaacaa2265ced9ae405112fd7310"
+  },
+  "executed_checks": [
+    {
+      "command": "cargo xtask pr --offline",
+      "result": "passed",
+      "scope": "structural helper with four focused map tests and existing codec suites",
+      "doctests": 204
+    },
+    {
+      "command": "cargo test --offline --lib object_import_tests",
+      "result": "passed",
+      "tests": 4,
+      "scope": "after focused test helper cleanup"
+    },
+    {
+      "command": "cargo test --offline --lib native_header_import_tests",
+      "result": "passed",
+      "tests": 1,
+      "scope": "actual owned configuration header and native root/node tags"
+    },
+    {
+      "command": "cargo clippy --offline --lib --tests -- -D warnings",
+      "result": "passed",
+      "scope": "final source and native integration test"
+    }
+  ],
+  "uncommitted": true,
+  "pr_43_head_unchanged": true,
+  "exclusions": [
+    "complete model decode/construct/edit/write operation",
+    "model whole-document replacement",
+    "model feature final PR and CI gates"
+  ]
+}

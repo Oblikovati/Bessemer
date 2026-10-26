@@ -1,7 +1,6 @@
 //! SolidWorks display-list archive codecs, under development for clause 13.
 mod transform;
-mod transform_codec;
-mod transform_types;
+use crate::archive_codec::{transform_codec, transform_types};
 
 pub use crate::archive_codec::StoredDouble;
 pub use transform::DisplayTransform;
@@ -60,9 +59,9 @@ mod modern_assembly;
 mod modern_body_tess;
 mod modern_component;
 mod modern_decals;
-mod modern_dspbr;
 mod modern_lights;
-mod modern_material;
+use crate::archive_codec::material as modern_material;
+mod material_archive;
 mod modern_part_tess;
 mod modern_root;
 mod modern_ui;
