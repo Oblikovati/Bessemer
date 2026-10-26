@@ -185,6 +185,8 @@ pub(super) const CLASSES: &[&str] = &[
     "moRib_c",
     "moRefGeom_c",
     "moRefPlane_c",
+    // #46 / C-174: the axis constructor inherits moRefGeom_c and its atom-owner contract.
+    "moRefAxis_c",
     "Fillet_c",
     "VarFillet_c",
     "moLPattern_c",

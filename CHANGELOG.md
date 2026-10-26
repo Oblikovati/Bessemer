@@ -59,6 +59,8 @@
 
 ### Fixed
 
+- Fixed populated reference axes being rejected as inherited atom owners while retaining strict checks for unrelated classes and aliases. (#46)
+
 - Fixed private model-test formatting coverage in local and CI gates after declarations moved behind an included registry. (#69)
 
 - Fixed resolved-feature failures mislabeled as configuration operations and streams, retaining their failure classes, causes and CMgr dependency locations. (#64)

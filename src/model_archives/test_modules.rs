@@ -15,6 +15,9 @@ mod application_name_tests;
 #[path = "../../tests/resolved_features/attribute_records.rs"]
 mod attribute_record_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/reference_axis_owners.rs"]
+mod axis_owner_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/body_chooser_records.rs"]
 mod body_chooser_record_tests;
 #[cfg(test)]
