@@ -1,7 +1,8 @@
 use super::{
     CompressedKernelContext, ConfigurationId, ModelArchiveCoverage, ModelArchiveDiagnostic,
     ModelArchiveLimits, ModelEditCheckMode, ModelField, PartConfigurationArchive,
-    configuration_manager, context::selected_error, resolved_features,
+    configuration_manager, resolved_failure::selected_feature_error as selected_error,
+    resolved_features,
 };
 use crate::header::ArchiveVersion;
 use crate::{Document, Result};
@@ -49,7 +50,8 @@ impl PartResolvedFeaturesArchive {
         manager_bytes: &[u8],
         limits: ModelArchiveLimits,
     ) -> Result<Self> {
-        let manager = configuration_manager::parse(manager_bytes, source.context.version, limits)?;
+        let manager = configuration_manager::parse(manager_bytes, source.context.version, limits)
+            .map_err(super::resolved_failure::manager_dependency)?;
         if super::encode_fields(&manager.fields, limits.maximum_bytes)? != manager_bytes {
             return Err(super::invalid(
                 "CMgr reconstruction differed from input; expected exact stored framing",

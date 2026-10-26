@@ -100,6 +100,7 @@ pub use resolved_edit::PartResolvedFeaturesEdit;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/native_corpus.rs"]
 mod resolved_corpus_tests;
+mod resolved_failure;
 mod resolved_features;
 pub use resolved_archive::PartResolvedFeaturesArchive;
 mod scale_records;

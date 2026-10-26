@@ -41,6 +41,8 @@
 
 ### Fixed
 
+- Fixed resolved-feature failures mislabeled as configuration operations and streams, retaining their failure classes, causes and CMgr dependency locations. (#64)
+
 - Fixed valid temporary-axis references rejected by revolution, reference-plane and sketch line fields while retaining finite declared-type checks. (#46)
 
 - Corrected model errors to identify the selected configuration instead of a hardcoded configuration zero. (#47)
