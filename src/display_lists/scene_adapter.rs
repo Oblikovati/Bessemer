@@ -1,15 +1,15 @@
 use super::archive_decode::DisplayDecoder;
 use crate::Result;
-use crate::archive_codec::scene_reader::SceneRead;
+use crate::archive_codec::context_reader::ArchiveGraphRead;
 
-impl SceneRead for DisplayDecoder<'_> {
+impl ArchiveGraphRead for DisplayDecoder<'_> {
     type ObjectContext = ();
 
-    fn scene_object(&mut self, _: &mut (), label: &str, classes: &[&str]) -> Result<()> {
+    fn graph_object(&mut self, _: &mut (), label: &str, classes: &[&str]) -> Result<()> {
         self.object(label, classes)
     }
 
-    fn scene_transform(&mut self, label: &str) -> Result<()> {
+    fn graph_transform(&mut self, label: &str) -> Result<()> {
         self.transform(label)
     }
 }

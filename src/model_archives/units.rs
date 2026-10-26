@@ -142,3 +142,22 @@ fn density(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> 
     }
     Ok(())
 }
+
+pub(super) fn read_class(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+    name: &str,
+    schema: u16,
+) -> Result<()> {
+    if let Some(kind) = ModelUnitKind::parse(name) {
+        return read(reader, map, kind);
+    }
+    Err(BessemerError::new(
+        "model archive",
+        "model stream",
+        FailureClass::Unsupported,
+        format!(
+            "runtime class {name:?} schema {schema}; expected an implemented complete model object body"
+        ),
+    ))
+}

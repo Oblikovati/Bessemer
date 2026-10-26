@@ -1,6 +1,6 @@
-use super::{ModelDecoder, units};
+use super::ModelDecoder;
+use crate::Result;
 use crate::archive_codec::{ArchiveClass, MaterialRead, ObjectReader};
-use crate::{BessemerError, FailureClass, Result};
 
 pub(super) fn read(
     reader: &mut ModelDecoder<'_>,
@@ -473,25 +473,6 @@ fn read_display_support(
         "moArrowSize_c" => super::display_object::arrow_size(reader),
         "moFavoriteHandle_c" => super::display_dimension_tail::favorite_handle(reader),
         "moHwCalloutData_c" => super::display_suffixes::callout_data(reader, map),
-        name => read_units(reader, map, name, class.schema),
+        name => super::units::read_class(reader, map, name, class.schema),
     }
-}
-
-fn read_units(
-    reader: &mut ModelDecoder<'_>,
-    map: &mut ObjectReader,
-    name: &str,
-    schema: u16,
-) -> Result<()> {
-    if let Some(kind) = units::ModelUnitKind::parse(name) {
-        return units::read(reader, map, kind);
-    }
-    Err(BessemerError::new(
-        "model archive",
-        "model stream",
-        FailureClass::Unsupported,
-        format!(
-            "runtime class {name:?} schema {schema}; expected an implemented complete model object body"
-        ),
-    ))
 }

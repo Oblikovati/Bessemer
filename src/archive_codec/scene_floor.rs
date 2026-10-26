@@ -1,7 +1,7 @@
-use super::scene_reader::SceneRead;
+use super::context_reader::ArchiveGraphRead;
 use crate::Result;
 
-pub(crate) fn read(archive: &mut impl SceneRead) -> Result<()> {
+pub(crate) fn read(archive: &mut impl ArchiveGraphRead) -> Result<()> {
     archive.i32("floor_dir")?;
     archive.f64("floor_offset")?;
     archive.i32("floor_offset_dir")?;
@@ -20,7 +20,7 @@ pub(crate) fn read(archive: &mut impl SceneRead) -> Result<()> {
     field_of_view(archive)
 }
 
-fn historical_floor(archive: &mut impl SceneRead) -> Result<()> {
+fn historical_floor(archive: &mut impl ArchiveGraphRead) -> Result<()> {
     let version = archive.version();
     if version > 0x1827 {
         archive.i32("flatten_floor")?;
@@ -33,12 +33,12 @@ fn historical_floor(archive: &mut impl SceneRead) -> Result<()> {
         archive.i32("accurate_environment_lighting")?;
     }
     if version > 0x186c {
-        archive.scene_transform("flatten_floor_xform")?;
+        archive.graph_transform("flatten_floor_xform")?;
     }
     Ok(())
 }
 
-fn field_of_view(archive: &mut impl SceneRead) -> Result<()> {
+fn field_of_view(archive: &mut impl ArchiveGraphRead) -> Result<()> {
     if archive.version() > 0x42ec {
         archive.f64("hdr_exposure")?;
         archive.i32("dspbr_tone_map")?;

@@ -21,10 +21,7 @@ pub(super) fn read(archive: &mut DisplayDecoder<'_>, kind: i32) -> Result<()> {
 }
 
 pub(super) fn width(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    if archive.context.version.value() < 0xf41 {
-        return archive.i32("standard_width").map(|_| ());
-    }
-    short_width(archive)
+    crate::archive_codec::line_style::width(archive)
 }
 
 fn user_pen(archive: &mut DisplayDecoder<'_>) -> Result<()> {

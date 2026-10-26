@@ -1,3 +1,8 @@
+pub(crate) mod bucket_envelope;
+mod bucket_legacy_polygons;
+pub(crate) mod bucket_polygons;
+pub(crate) mod bucket_reader;
+pub(crate) mod context_reader;
 mod cursor;
 mod dspbr;
 mod field_correspondence;
@@ -16,7 +21,6 @@ mod preserved;
 mod revision;
 pub(crate) mod scene_data;
 pub(crate) mod scene_floor;
-pub(crate) mod scene_reader;
 pub(crate) mod scene_walls;
 mod text;
 pub(crate) mod transform_codec;

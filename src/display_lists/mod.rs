@@ -1,4 +1,5 @@
 //! SolidWorks display-list archive codecs, under development for clause 13.
+mod bucket_adapter;
 mod scene_adapter;
 mod transform;
 use crate::archive_codec::{transform_codec, transform_types};
@@ -84,7 +85,7 @@ mod configuration_tail;
 mod configuration_views;
 mod configurations;
 mod graphics_reference;
-mod legacy_bucket_poly;
+
 mod legacy_bucket_visibility;
 mod markup_ink;
 mod modern_bucket;
