@@ -110,7 +110,7 @@ fn public_resolved_archive_rejects_incomplete_context_and_streams() {
             LIMITS,
         )
         .unwrap_err();
-        assert_eq!(error.entity, "Contents/Config-0");
+        assert_eq!(error.entity, "Contents/Config-0-ResolvedFeatures");
     }
     assert!(
         PartResolvedFeaturesArchive::from_bytes(

@@ -54,6 +54,9 @@ impl PartResolvedFeaturesArchive {
     /// ```
     pub fn field_handle(&self, index: usize) -> Result<ModelFieldHandle> {
         edit_history::checked_handle(self.fields(), &self.revision, self.configuration(), index)
+            .map_err(|error| {
+                super::resolved_failure::selected_feature_error(error, self.configuration())
+            })
     }
 
     /// Resolves handles only in their owning revision; clones and unchanged edits share ownership.
@@ -66,6 +69,9 @@ impl PartResolvedFeaturesArchive {
     /// ```
     pub fn resolve_field(&self, handle: &ModelFieldHandle) -> Result<&ModelField> {
         edit_history::resolve_snapshot(self.fields(), &self.revision, self.configuration(), handle)
+            .map_err(|error| {
+                super::resolved_failure::selected_feature_error(error, self.configuration())
+            })
     }
 }
 

@@ -1,4 +1,5 @@
 use super::display_records::declared;
+use super::geometric_references::LINE_REFERENCE_CLASSES;
 use super::{ModelDecoder, ModelObjectRole, reference_planes};
 use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader, vectors::double_vector};
@@ -48,7 +49,7 @@ fn suffix(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader, class: &str) ->
         "moPlaneInterAxisData_c" => &[("80", &["moPlaneRef_w"]), ("88", &["moPlaneRef_w"])],
         "moTwoPtsAxisData_c" => &[("80", &["moPointRef_w"]), ("88", &["moPointRef_w"])],
         // #46: the native temporary-axis serializer delegates to the line body.
-        "moLineAxisData_c" => &[("80", &["moLineRef_w", "moTempAxisRef_w"])],
+        "moLineAxisData_c" => &[("80", LINE_REFERENCE_CLASSES)],
         "moConFaceAxisData_c" => &[("80", &["moCompFace_c"])],
         _ => &[],
     };

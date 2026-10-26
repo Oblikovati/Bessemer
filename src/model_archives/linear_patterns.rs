@@ -1,10 +1,9 @@
 use super::display_dimension::CLASSES as DIMENSIONS;
 use super::display_records::declared;
+use super::geometric_references::LINE_REFERENCE_CLASSES;
 use super::{ModelDecoder, ModelObjectRole, model_lists, sketch_arrays};
 use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
-
-pub(super) const LINE_REFERENCE_CLASSES: &[&str] = &["moLineRef_w", "moTempAxisRef_w"];
 
 pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     reader.scope("body", |reader| super::body_features::base(reader, map))?;

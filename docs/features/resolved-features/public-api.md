@@ -49,3 +49,11 @@ typed failures and deterministic concurrent reconstruction. Compile-time checks
 assert Send and Sync. Full documented schema parity, broad native acceptance
 and race-detector runs remain separate requirements. The humanizer skill is
 unavailable in this session; its prose review remains with the maintainer.
+
+## Error context
+
+After the model context is resolved, feature-operation failures identify
+`part resolved features` and the selected `Contents/Config-N-ResolvedFeatures`
+stream. Failure classes and causes
+are retained, including CMgr dependency locations. See the
+[error-context regression](../resolved-feature-errors/README.md) for coverage.

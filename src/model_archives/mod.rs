@@ -100,6 +100,7 @@ pub use resolved_edit::PartResolvedFeaturesEdit;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/native_corpus.rs"]
 mod resolved_corpus_tests;
+mod resolved_failure;
 mod resolved_features;
 pub use resolved_archive::PartResolvedFeaturesArchive;
 mod scale_records;
@@ -189,6 +190,9 @@ mod lightweight;
 mod lightweight_part;
 mod lightweight_post;
 mod lightweight_shared;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/line_reference_roles.rs"]
+mod line_reference_role_tests;
 #[cfg(test)]
 #[path = "../../tests/model_archives/linear_patterns.rs"]
 mod linear_pattern_tests;

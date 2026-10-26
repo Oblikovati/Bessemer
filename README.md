@@ -105,8 +105,10 @@ model map, CMgr helper state and revision-bound field history. Supported
 [detail folders](docs/features/detail-folders/README.md) include their graphics
 buckets and display-item payloads. Supported
 [reference axes](docs/features/reference-axes/README.md) retain their derived
-data and shared references. Unsupported layouts fail explicitly; full
-SolidWorks schema parity remains in progress.
+data and shared references. Documented
+[line-reference fields](docs/features/line-reference-roles/README.md) accept
+both ordinary lines and temporary-axis derivatives. Unsupported layouts fail
+explicitly; full SolidWorks schema parity remains in progress.
 
 
 This library is named after Sir Henry Bessemer (1813–1898) an English engineer, inventor, and entrepreneur 
