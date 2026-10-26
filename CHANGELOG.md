@@ -41,6 +41,8 @@
 
 ### Fixed
 
+- Fixed valid temporary-axis references rejected by revolution, reference-plane and sketch line fields while retaining finite declared-type checks. (#46)
+
 - Corrected model errors to identify the selected configuration instead of a hardcoded configuration zero. (#47)
 - Reported the first mismatched model field, expected shape and bounded object-identity details during construction. (#52)
 - Accepted all five complete display-dimension variants in sketch-loop slots while retaining unrelated-class rejection. (#46)

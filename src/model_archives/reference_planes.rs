@@ -1,4 +1,5 @@
 use super::display_records::declared;
+use super::geometric_references::LINE_REFERENCE_CLASSES;
 use super::{ModelDecoder, ModelObjectRole, body_features, model_references, sketch_arrays};
 use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader, vectors::double_vector};
@@ -129,6 +130,7 @@ fn line_point(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<(
             "moCurveRef_w",
             "moGeneralCurveRef_w",
             "moLineRef_w",
+            "moTempAxisRef_w",
             "moCircleRef_w",
         ]),
     )?;
@@ -146,7 +148,7 @@ fn angle(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     reader.scope("direct_plane_reference_90", |reader| {
         plane_reference(reader, map)
     })?;
-    declared(reader, map, "line_reference_98", &["moLineRef_w"])?;
+    declared(reader, map, "line_reference_98", LINE_REFERENCE_CLASSES)?;
     declared(
         reader,
         map,

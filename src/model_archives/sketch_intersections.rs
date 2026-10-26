@@ -1,3 +1,4 @@
+use super::geometric_references::LINE_REFERENCE_CLASSES;
 use super::{
     ModelDecoder, ModelObjectRole, model_lists, sketch_arrays, sketch_collections,
     sketch_dimensions, sketch_logical,
@@ -175,7 +176,11 @@ fn late_points(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<
     for offset in ["88", "8c", "90", "a0"] {
         reader.u16(&format!("raw_{offset}"))?;
     }
-    reader.object("line_98", map, ModelObjectRole::Declared(&["moLineRef_w"]))?;
+    reader.object(
+        "line_98",
+        map,
+        ModelObjectRole::Declared(LINE_REFERENCE_CLASSES),
+    )?;
     let count = reader.i32("point_count")?;
     let count = reader.counted_entries("point_count", i64::from(count.max(0)), 24)?;
     sketch_arrays::vectors(reader, "raw_points_a8", count)

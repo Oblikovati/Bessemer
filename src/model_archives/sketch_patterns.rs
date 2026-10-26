@@ -1,3 +1,4 @@
+use super::geometric_references::LINE_REFERENCE_CLASSES;
 use super::{ModelDecoder, ModelObjectRole, sketch_collections, sketch_logical};
 use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader, vectors::double_vector};
@@ -62,7 +63,7 @@ fn linear_directions(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> R
         reader.object(
             &format!("edge_directions[{index}]"),
             map,
-            ModelObjectRole::Declared(&["moLineRef_w"]),
+            ModelObjectRole::Declared(LINE_REFERENCE_CLASSES),
         )?;
     }
     Ok(())

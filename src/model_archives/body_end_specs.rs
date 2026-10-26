@@ -1,4 +1,5 @@
 use super::display_records::declared;
+use super::geometric_references::LINE_REFERENCE_CLASSES;
 use super::{ModelDecoder, ModelObjectRole, model_lists};
 use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
@@ -146,7 +147,7 @@ pub(super) fn revolution(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) 
     reader.i32("word_818")?;
     declared(reader, map, "list_810", &["suObList"])?;
     reader.i32s(&["word_820", "word_868"])?;
-    declared(reader, map, "axis", &["moLineRef_w"])?;
+    declared(reader, map, "axis", LINE_REFERENCE_CLASSES)?;
     declared(reader, map, "end_spec", &["moRevEndSpec_c"])?;
     if reader.version() >= 0x3f05 {
         reader.u8("byte_8e0")?;

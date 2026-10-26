@@ -190,6 +190,9 @@ mod lightweight_part;
 mod lightweight_post;
 mod lightweight_shared;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/line_reference_roles.rs"]
+mod line_reference_role_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/linear_patterns.rs"]
 mod linear_pattern_tests;
 mod linear_patterns;
