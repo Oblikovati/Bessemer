@@ -216,6 +216,9 @@ mod radiate_representation_tests;
 #[path = "../../tests/resolved_features/reference_axes.rs"]
 mod reference_axis_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/reference_points.rs"]
+mod reference_point_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/relations.rs"]
 mod relation_tests;
 #[cfg(test)]
