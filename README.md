@@ -103,7 +103,9 @@ The [resolved-feature API](docs/features/resolved-features/public-api.md) reads
 and edits supported complete separate feature streams with their inherited
 model map, CMgr helper state and revision-bound field history. Supported
 [detail folders](docs/features/detail-folders/README.md) include their graphics
-buckets and display-item payloads. Unsupported layouts fail explicitly; full
+buckets and display-item payloads. Supported
+[reference axes](docs/features/reference-axes/README.md) retain their derived
+data and shared references. Unsupported layouts fail explicitly; full
 SolidWorks schema parity remains in progress.
 
 

@@ -44,6 +44,15 @@ pub(super) fn read(
         "moLPattern_c" => super::linear_patterns::read(reader, map),
         "moMatrixIndexHelper_c" => super::linear_patterns::matrix_helper(reader, map),
         "moRefPlane_c" => super::reference_planes::plane(reader, map),
+        "moRefAxis_c" => super::reference_axes::axis(reader, map),
+        "moRefAxisData_c"
+        | "moSurfaceAxisData_c"
+        | "moFacePtAxisData_c"
+        | "moPlanePtAxisData_c"
+        | "moPlaneInterAxisData_c"
+        | "moLineAxisData_c"
+        | "moConFaceAxisData_c"
+        | "moTwoPtsAxisData_c" => super::reference_axes::data(reader, map, &class.name),
         "moProfileFeature_c" | "mo3DProfileFeature_c" | "moOriginProfileFeature_c" => {
             super::profile_features::read(reader, map)
         }
