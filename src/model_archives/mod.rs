@@ -238,6 +238,10 @@ mod remaining_role_tests;
 mod resolved_managers;
 mod resolved_start;
 mod shared_tail;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/shell_records.rs"]
+mod shell_record_tests;
+mod shell_records;
 mod sketch_archive;
 mod sketch_arrays;
 mod sketch_backups;
