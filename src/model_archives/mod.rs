@@ -198,6 +198,10 @@ mod line_reference_role_tests;
 mod linear_pattern_tests;
 mod linear_patterns;
 mod material;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/mirror_patterns.rs"]
+mod mirror_pattern_tests;
+mod mirror_patterns;
 mod model_arrays;
 mod model_lists;
 mod model_references;
