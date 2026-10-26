@@ -1,26 +1,42 @@
 use super::{
-    ModelField, ModelFieldChange, ModelFieldHandle, ModelFieldRelation, PartConfigurationArchive,
+    ConfigurationId, ModelField, ModelFieldChange, ModelFieldHandle, ModelFieldRelation,
+    PartConfigurationArchive,
 };
+use crate::archive_codec::ArchiveRevision;
 use crate::{BessemerError, FailureClass, Result};
 
 pub(super) fn history(
     source: &PartConfigurationArchive,
     result: &PartConfigurationArchive,
 ) -> (Vec<ModelFieldChange>, usize) {
+    field_history(
+        source.fields(),
+        &source.revision,
+        result.fields(),
+        &result.revision,
+    )
+}
+
+pub(super) fn field_history(
+    source: &[ModelField],
+    source_revision: &ArchiveRevision,
+    result: &[ModelField],
+    result_revision: &ArchiveRevision,
+) -> (Vec<ModelFieldChange>, usize) {
     let (relations, unchanged) =
-        crate::archive_codec::field_correspondences(source.fields(), result.fields(), |field| {
-            field.path.as_ref()
-        });
+        crate::archive_codec::field_correspondences(source, result, |field| field.path.as_ref());
     let changes = relations
         .into_iter()
-        .map(|relation| field_change(source, result, relation))
+        .map(|relation| field_change(source, source_revision, result, result_revision, relation))
         .collect();
     (changes, unchanged)
 }
 
 fn field_change(
-    source: &PartConfigurationArchive,
-    result: &PartConfigurationArchive,
+    source: &[ModelField],
+    source_revision: &ArchiveRevision,
+    result: &[ModelField],
+    result_revision: &ArchiveRevision,
     relation: crate::archive_codec::FieldCorrespondence,
 ) -> ModelFieldChange {
     use crate::archive_codec::FieldCorrespondence::{Created, Deleted, Derived};
@@ -29,19 +45,19 @@ fn field_change(
             ModelFieldRelation::Derived,
             Some(before),
             Some(after),
-            source.fields()[before].path.clone(),
+            source[before].path.clone(),
         ),
         Deleted { before } => (
             ModelFieldRelation::Deleted,
             Some(before),
             None,
-            source.fields()[before].path.clone(),
+            source[before].path.clone(),
         ),
         Created { after } => (
             ModelFieldRelation::Created,
             None,
             Some(after),
-            result.fields()[after].path.clone(),
+            result[after].path.clone(),
         ),
     };
     ModelFieldChange {
@@ -49,15 +65,15 @@ fn field_change(
         relation: kind,
         parents: before
             .into_iter()
-            .map(|index| field_handle(source, index))
+            .map(|index| snapshot_handle(source_revision, index))
             .collect(),
-        result: after.map(|index| field_handle(result, index)),
+        result: after.map(|index| snapshot_handle(result_revision, index)),
     }
 }
 
-fn field_handle(archive: &PartConfigurationArchive, index: usize) -> ModelFieldHandle {
+fn snapshot_handle(revision: &ArchiveRevision, index: usize) -> ModelFieldHandle {
     ModelFieldHandle {
-        revision: archive.revision.clone(),
+        revision: revision.clone(),
         index,
     }
 }
@@ -72,10 +88,12 @@ impl PartConfigurationArchive {
     /// # }
     /// ```
     pub fn field_handle(&self, index: usize) -> Result<ModelFieldHandle> {
-        self.fields()
-            .get(index)
-            .ok_or_else(|| self.field_error(index, "expected an existing physical field"))?;
-        Ok(field_handle(self, index))
+        checked_handle(
+            self.fields(),
+            &self.revision,
+            self.context.configuration,
+            index,
+        )
     }
 
     /// Resolves a field only in its owning revision; clones and equivalent edits share handles.
@@ -87,28 +105,68 @@ impl PartConfigurationArchive {
     /// # }
     /// ```
     pub fn resolve_field(&self, handle: &ModelFieldHandle) -> Result<&ModelField> {
-        if handle.revision != self.revision {
-            return Err(self.field_error(
-                handle.index,
-                "handle belongs to another revision; expected this snapshot",
-            ));
-        }
-        self.fields()
-            .get(handle.index)
-            .ok_or_else(|| self.field_error(handle.index, "expected an existing physical field"))
-    }
-
-    fn field_error(&self, index: usize, cause: &str) -> BessemerError {
-        BessemerError::new(
-            "model field lookup",
-            &self.context.configuration.stream_name(),
-            FailureClass::Invalid,
-            format!(
-                "field index {index}, length {}: {cause}",
-                self.fields().len()
-            ),
+        resolve_snapshot(
+            self.fields(),
+            &self.revision,
+            self.context.configuration,
+            handle,
         )
     }
+}
+
+pub(super) fn checked_handle(
+    fields: &[ModelField],
+    revision: &ArchiveRevision,
+    configuration: ConfigurationId,
+    index: usize,
+) -> Result<ModelFieldHandle> {
+    fields.get(index).ok_or_else(|| {
+        field_error(
+            configuration,
+            fields.len(),
+            index,
+            "expected an existing physical field",
+        )
+    })?;
+    Ok(snapshot_handle(revision, index))
+}
+
+pub(super) fn resolve_snapshot<'a>(
+    fields: &'a [ModelField],
+    revision: &ArchiveRevision,
+    configuration: ConfigurationId,
+    handle: &ModelFieldHandle,
+) -> Result<&'a ModelField> {
+    if &handle.revision != revision {
+        return Err(field_error(
+            configuration,
+            fields.len(),
+            handle.index,
+            "handle belongs to another revision; expected this snapshot",
+        ));
+    }
+    fields.get(handle.index).ok_or_else(|| {
+        field_error(
+            configuration,
+            fields.len(),
+            handle.index,
+            "expected an existing physical field",
+        )
+    })
+}
+
+fn field_error(
+    configuration: ConfigurationId,
+    length: usize,
+    index: usize,
+    cause: &str,
+) -> BessemerError {
+    BessemerError::new(
+        "model field lookup",
+        &configuration.stream_name(),
+        FailureClass::Invalid,
+        format!("field index {index}, length {length}: {cause}"),
+    )
 }
 
 impl ModelFieldHandle {
