@@ -105,6 +105,9 @@ mod explosion_tests;
 #[path = "../../tests/model_archives/external_references.rs"]
 mod external_reference_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/extruded_surfaces.rs"]
+mod extruded_surface_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/fillet_threads.rs"]
 mod fillet_thread_tests;
 #[cfg(test)]

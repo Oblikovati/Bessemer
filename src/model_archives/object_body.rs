@@ -19,6 +19,9 @@ pub(super) fn read(
     match class.name.as_str() {
         "moConfigurationMgr_c" => super::configuration_manager::body(reader, map),
         "moPartConfiguration_c" => super::configuration_base::read(reader, map),
+        "moExtruRefSurface_c" => super::extruded_surfaces::read(reader, map),
+        "moOrderedFaceArray_c" => super::extruded_surfaces::ordered_faces(reader, map),
+        "moExtruRefSurfIdKeeper_c" => super::extruded_surfaces::keeper(reader),
         "moLinkedAtomIdNode_c" => super::configuration_atoms::linked_node(reader, map),
         "moCustomPropertyList" => super::custom_properties::list(reader, "properties"),
         "moSensor_c" => super::sensor_records::read(reader, map),

@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added ordinary part extruded reference-surface reading, field editing and writing with required end specifications, ordered-face groups, preserved shared references and context-checked binary-empty keepers. (#54)
+
 - Added ordinary part imported and base-body reading, field editing and writing with preserved external markers and names, explicit typed inline kernel frames and signed base-body vectors. (#54)
 
 - Added ordinary part Hole Wizard reading, field editing and writing with compatibility gates, preserved raw parameters, direct slot-axis bodies, shared dimensions and independent Unicode-edit fixtures. (#54)
