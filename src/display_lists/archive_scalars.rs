@@ -63,22 +63,13 @@ impl DisplayDecoder<'_> {
         self.field(label, Value::Box(value))
     }
     pub fn i32s(&mut self, labels: &[&str]) -> Result<()> {
-        for label in labels {
-            self.i32(label)?;
-        }
-        Ok(())
+        crate::archive_codec::MaterialRead::i32s(self, labels)
     }
     pub fn f32s(&mut self, labels: &[&str]) -> Result<()> {
-        for label in labels {
-            self.f32(label)?;
-        }
-        Ok(())
+        crate::archive_codec::MaterialRead::f32s(self, labels)
     }
     pub fn f64s(&mut self, labels: &[&str]) -> Result<()> {
-        for label in labels {
-            self.f64(label)?;
-        }
-        Ok(())
+        crate::archive_codec::MaterialRead::f64s(self, labels)
     }
     pub fn count(&mut self, label: &str, minimum: usize) -> Result<usize> {
         let count = self.i32(label)?;

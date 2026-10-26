@@ -18,6 +18,9 @@ mod error;
 pub mod header;
 pub mod history;
 pub mod metadata;
+// The model codec stays private until its complete native root operation is verified.
+#[cfg(test)]
+mod model_archives;
 pub mod parasolid;
 pub mod preview;
 mod records;

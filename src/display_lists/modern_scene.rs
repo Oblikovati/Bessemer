@@ -1,5 +1,6 @@
 use super::{archive_decode::DisplayDecoder, archive_error::invalid};
 use crate::Result;
+pub(super) use crate::archive_codec::vectors::double_vector;
 
 pub(super) fn read(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.scope("concept", super::modern_concept::read)?;
@@ -78,11 +79,4 @@ pub(super) fn wall_count(
     }
     archive.entries(count, label)?;
     Ok(count)
-}
-
-pub(super) fn double_vector(archive: &mut DisplayDecoder<'_>, label: &str) -> Result<()> {
-    for index in 0..3 {
-        archive.f64(&format!("{label}[{index}]"))?;
-    }
-    Ok(())
 }

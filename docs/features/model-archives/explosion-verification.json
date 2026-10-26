@@ -1,0 +1,43 @@
+{
+  "behavior_version": "private-model-explosion-records-v1",
+  "decision": "Explicit documented archive layouts and scoped component-holder mapping; no explosion geometry algorithm.",
+  "migration": "Initial unpublished model codec; previous fixtures and corpus outcomes remain retained.",
+  "checks": {
+    "focused Rust": "6 passed on final source",
+    "all-target Clippy": "passed on final source",
+    "all model tests": "164 passed, two external-input tests ignored and six core tests filtered; before test-only helper extraction; production sources unchanged afterward",
+    "Python": "50 passed",
+    "repeat generators": "both wire fixtures reproduced exactly",
+    "native corpus": "851/906; repeated 906 rows identical; complete acceptance failed",
+    "full PR gate": "previous geometric/kernel checkpoint; rerun before push"
+  },
+  "cases": 44,
+  "independent_scalar_values": 1882,
+  "exclusions": [
+    "geometry and native application acceptance",
+    "public model API and history/result contracts",
+    "55 remaining native configurations",
+    "remote platform matrix"
+  ],
+  "artifact_sha256": {
+    "docs/features/model-archives/explosion-cases.json": "34dc5b832f15321f49c4903f0860dd9920fbe5774df000aa9f668a6913763647",
+    "docs/features/model-archives/explosion-schema-reference.json": "facff78c68da11534ed8ab2314865c30ba68acd4c6a3349432659778e55f0cff",
+    "docs/features/model-archives/explosion-schema-snapshot.md": "1f1bcdb9fedefc867509485171fc74c34c3238deb323fc2371a1981877193617",
+    "docs/features/model-archives/freeze_explosion.py": "b8c533037a069405a3379db9d27e1f62e0726be9114ecb7e93024c4df65933a6",
+    "src/model_archives/explosion.rs": "7d5a63e87d7d28f8262eb5e30acfa5825c7e497cc2a544c190a294f30db0bcec",
+    "src/model_archives/mod.rs": "bb79764e9f847b154c553f6d0aaf605da5636104c306cbe0006d276edb489088",
+    "src/model_archives/model_lists.rs": "a3711de8bc19ebb3727837f1bebb0c6c64cd153c0d3d4f7e7d13ec19db881c90",
+    "src/model_archives/object_body.rs": "83a8f6385f869a32a131820ebf868081d9b29052c77c1cfa01d924015eeab338",
+    "src/model_archives/part_tail.rs": "065aca05fbc96add5cae193b6894b3c6928300cea4b8f45f396bff6681449306",
+    "tests/fixtures/model-archives/explosion-cases.bin": "f5357053cdef29ec9bb394ff8eb38239c443d7eb6a956ff34234bf5558e839c4",
+    "tests/fixtures/model-archives/explosion-edited.bin": "fb24c5aa142523c1d7978fe60e6090a0ce976ddbbd27433e320dbd54db146d4e",
+    "tests/model_archives/explosion.rs": "cf5629bdbc008252cfccbb67fbf363060d1774511b9e9b41d0995e8f3fe84c3b"
+  },
+  "log_sha256": {
+    "model-explosion-tests.log": "2066304638ebb9022382d05caa360580113c5399ecfc6c213dbb3208e0eaf12c",
+    "model-explosion-clippy.log": "e6b0dd64fb2576fec81be263127aac81bd8d1230907e9623a658e5ff854b8774",
+    "model-explosion-all-model.log": "59c86de2dcb87d882250759a1e6691bdf74381e266128b5c79febd05e52afeac",
+    "model-explosion-python.log": "c7e00c011b34617c282cc109a84cf3ff1c87d02aa2074b6de6c4a2af3aff54f6"
+  },
+  "all_model_test_source_sha256": "ce2c9fa8a90ff9700d72e50fd51b30a639a7037d801bd90683fa4d0a850d1f9e"
+}

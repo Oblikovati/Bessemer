@@ -27,6 +27,10 @@
 - Added compressed-block carrier decoding and chunk replacement with explicit framing, expansion limits, zlib integrity checks, and preservation of untouched chunk encodings. (#4)
 - Added SolidWorks version-4 container reading, checked stream extraction, and stream replacement that preserved untouched compressed bytes. (#1)
 
+### Changed
+
+- Optimized test builds while retaining debug assertions, checked integer arithmetic and every exhaustive validation case. (#53)
+
 ### Fixed
 
 - Restored early PW scene layouts reached through generic bucket thread keys, preserving implicit wall keys, compact wall records and versioned background suffixes. (#41)

@@ -4,14 +4,10 @@ use super::{
 };
 use crate::{
     Result,
-    archive_codec::{ArchiveCursor, ObjectRecord},
+    archive_codec::{
+        ArchiveObjectRole as ObjectRole, ObjectFraming, ObjectRecord, require_object_role,
+    },
 };
-
-#[derive(Clone, Copy)]
-enum ObjectRole<'a> {
-    Declared(&'a [&'a str]),
-    CObject,
-}
 
 impl DisplayDecoder<'_> {
     pub fn object(&mut self, label: &str, expected: &[&str]) -> Result<()> {
@@ -19,15 +15,14 @@ impl DisplayDecoder<'_> {
     }
 
     pub fn cobject(&mut self, label: &str) -> Result<()> {
-        self.object_with_role(label, ObjectRole::CObject)
+        self.object_with_role(label, ObjectRole::Any)
     }
 
     fn object_with_role(&mut self, label: &str, role: ObjectRole<'_>) -> Result<()> {
-        let start = self.input.len() - self.cursor.remaining();
-        let record = self.objects.object(&mut self.cursor)?;
-        let end = self.input.len() - self.cursor.remaining();
-        require_role(&record, role, label)?;
-        let mut tag = read_tag(&self.input[start..end])?;
+        let framed = self.objects.framed_object(&mut self.cursor)?;
+        let record = framed.record;
+        require_object_role(&record, role, label, super::archive_error::invalid)?;
+        let mut tag = display_tag(framed.framing, &record);
         resolve_target(&mut tag, &record)?;
         self.field(label, DisplayFieldValue::ObjectTag(tag))?;
         if let ObjectRecord::New { class, .. } = record {
@@ -42,7 +37,7 @@ impl DisplayDecoder<'_> {
     }
 
     pub fn cobject_array(&mut self, label: &str) -> Result<()> {
-        self.array_with_role(label, ObjectRole::CObject)
+        self.array_with_role(label, ObjectRole::Any)
     }
 
     pub fn su_count(&mut self, label: &str) -> Result<usize> {
@@ -70,56 +65,21 @@ impl DisplayDecoder<'_> {
     }
 }
 
-fn require_role(record: &ObjectRecord, role: ObjectRole<'_>, label: &str) -> Result<()> {
-    let ObjectRole::Declared(expected) = role else {
-        return Ok(());
+fn display_tag(framing: ObjectFraming, record: &ObjectRecord) -> DisplayObjectTag {
+    let new_class = match (framing.tag, record) {
+        (0xffff, ObjectRecord::New { class, .. }) => Some(DisplayClassDescriptor {
+            schema: class.schema,
+            name: class.name.clone(),
+        }),
+        _ => None,
     };
-    let class = match record {
-        ObjectRecord::Null => return Ok(()),
-        ObjectRecord::New { class, .. } | ObjectRecord::Reference { class, .. } => class,
-    };
-    // #31: map validity alone does not prove that an alias satisfies its declared pointer role.
-    if expected.contains(&class.name.as_str()) {
-        return Ok(());
-    }
-    Err(super::archive_error::invalid(format!(
-        "object role {label:?} has runtime class {:?}; expected one of {expected:?}",
-        class.name
-    )))
-}
-
-fn read_tag(bytes: &[u8]) -> Result<DisplayObjectTag> {
-    let mut cursor = ArchiveCursor::new(bytes);
-    let tag = cursor.u16()?;
-    let extended = if tag == 0x7fff {
-        Some(cursor.u32()?)
-    } else {
-        None
-    };
-    let new_class = if tag == 0xffff {
-        Some(read_descriptor(&mut cursor)?)
-    } else {
-        None
-    };
-    cursor.finish()?;
-    Ok(DisplayObjectTag {
+    DisplayObjectTag {
         target: super::DisplayObjectPointer::Null,
         runtime_class: None,
-        tag,
-        extended,
+        tag: framing.tag,
+        extended: framing.extended,
         new_class,
-    })
-}
-
-fn read_descriptor(cursor: &mut ArchiveCursor<'_>) -> Result<DisplayClassDescriptor> {
-    let schema = cursor.u16()?;
-    let length = cursor.u16()? as usize;
-    let name = cursor
-        .take(length)?
-        .iter()
-        .map(|byte| char::from(*byte))
-        .collect();
-    Ok(DisplayClassDescriptor { schema, name })
+    }
 }
 
 fn resolve_target(tag: &mut DisplayObjectTag, record: &ObjectRecord) -> Result<()> {

@@ -1,0 +1,68 @@
+{
+  "base_revision": "8ad332a57da6bd727dbe7ac36b51b341fed22865",
+  "branch": "codex/model-archives",
+  "scope": "private complete owned lightweight section; full model unresolved",
+  "rust_sources": {
+    "src/model_archives/header_imports.rs": "603715de1d7f88377fd8199b4b632802a9257615e6c59873bf48a10281277db9",
+    "src/model_archives/header_order.rs": "e5c4f61eea2a6aa0fa6e7965b9b846b6c44f38409a800e06c962f1e6d9e421bc",
+    "src/model_archives/lightweight.rs": "4fa023c84add3991db29b9a7ac2eee1f8c5e443c729a0ba477eebfcf7faf8f17",
+    "src/model_archives/lightweight_part.rs": "2f3eb02d9efe79fd970ea8b4db104112f4c9c788995af7cf1969954e19d5b606",
+    "src/model_archives/lightweight_post.rs": "2ed064d39b290f6e44a860d4e051a52e1af5629116a6d527b41377ec6c7fa4cc",
+    "src/model_archives/lightweight_shared.rs": "c574044fc840f8e14aeafd0ec411fceb9b45a960a9f554be5ce69be042771c71",
+    "src/model_archives/material.rs": "e399ecdb5fe2f762f246447a66fa1a57dd3d716532e88184ddf322d15b35258f",
+    "src/model_archives/mod.rs": "b04477792d4b997ddebc16fd02ca8a960874d9893d23abf9526a47835076b75a",
+    "src/model_archives/node.rs": "9204d2f9ad2f65dad1baa673ce96eee488b03bfcf45001b028faca8783f26da3",
+    "src/model_archives/object_body.rs": "30241a3fa87941986f77b96c4e7ce1e9297eb5dd33330950d521b6cfcc115675",
+    "src/model_archives/objects.rs": "4ff4fb8a89921d68ca2d769a133a280927929f9f6ae88b18ad38af3459da6474",
+    "src/model_archives/part_objects.rs": "9f28390002ee1c2b5d4d18194d1441bb96307a4ed0eb8b0a2eea15de3381b43a",
+    "src/model_archives/primitives.rs": "18c6a8a301a4404a36abd3f5fb67b02e4861da5df4b02248f4df57535e6c2a9b",
+    "src/model_archives/reader.rs": "b8e85347b0b8e58a6b9774f1d6586e32fd071f8b1f2eafa399e272926486773b",
+    "src/model_archives/spatial_objects.rs": "5c33b9b870026ef30bdc7597dac0c7302c5a83842f23302f8cb86f8a0612b3c5",
+    "src/model_archives/units.rs": "c77d8968232545d79e567833450999dd271b7a14afa60f7ba53ca87aa6257ff7",
+    "src/model_archives/values.rs": "c0f27c55729fd3a41be22acc5456a2570bae491cd9c1e9360f866a23677123c6",
+    "tests/model_archives/appearance_fields.rs": "ee554123d3eec5e62bdd775509685c0bb79dc28cb97ca957716fec5bb2c6ceba",
+    "tests/model_archives/header_imports.rs": "13b34b48108c8b72ff528b4711e702e42a9ccaacaa2265ced9ae405112fd7310",
+    "tests/model_archives/header_load_plan.rs": "cfb13681686773741a30917cb870cd73fdb96f172bcfe37b3718f4f89288d6c0",
+    "tests/model_archives/lightweight.rs": "c7b20f7a418c2b782585376abee6f243cbe39983e64665a36d04322106c4792e",
+    "tests/model_archives/lightweight_sections.rs": "68e6047ef8e1c8e9d382777cb309d19304ea98bfbb862bfddb4a2e4fa556c807",
+    "tests/model_archives/node_units.rs": "9ea46a2bee50f09aa51dfb3e55ab8d36d98f9d7a95b535b1b3c49201d8ef1946",
+    "tests/model_archives/object_fields.rs": "551b2594344914c7b1776589dcce4246e162cc0eb37888892cde53219e45ab50",
+    "tests/model_archives/spatial_objects.rs": "f8d589a2e5e67be218a5b205642ab2f21fa33370c39ad5681fa22d4bfa57f594"
+  },
+  "commands": [
+    {
+      "command": "cargo xtask pr --offline",
+      "exit_code": 0,
+      "log": "target/model-lightweight-pr.log",
+      "doctests": 204
+    },
+    {
+      "command": "python -B -X utf8 -m unittest discover -s tests -p test_model_primitive_inventory.py",
+      "exit_code": 0,
+      "tests": 12
+    }
+  ],
+  "owned_lightweight": {
+    "bytes": 2921,
+    "body_bytes": 2903,
+    "independent_scalars": 477,
+    "all_adjusted_body_prefixes_rejected": true,
+    "concurrent_independent_parsers": 4
+  },
+  "conditional_sections": {
+    "cases": 57,
+    "independent_scalars": 941,
+    "versions": 16,
+    "all_prefixes_rejected": true,
+    "two_reference_processes_identical": true
+  },
+  "exclusions": [
+    "Resolved section and complete root operation",
+    "Full-document derived-length edit and history",
+    "906-configuration native acceptance",
+    "Native application acceptance and geometry validation",
+    "Percent-units RTTI assignability",
+    "Public model API and unimplemented nested object bodies"
+  ],
+  "model_tests": 56
+}

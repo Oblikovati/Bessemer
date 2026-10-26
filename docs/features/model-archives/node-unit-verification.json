@@ -1,0 +1,51 @@
+{
+  "feature_issue": 44,
+  "scope": "private node and units serializers; full model root pending",
+  "base_commit": "8ad332a57da6bd727dbe7ac36b51b341fed22865",
+  "source_manifest": "node-unit-source-hashes.json",
+  "source_manifest_sha256": "27c3016af94c8a194a96cee4a381ca6305baf8cbad52f6b7a1c332c65f75a136",
+  "reference_manifest": "node-unit-reference.json",
+  "checks": [
+    {
+      "command": "cargo xtask pr --offline",
+      "result": "passed",
+      "doctests": 204,
+      "log": "target/model-node-units-pr.log"
+    },
+    {
+      "command": "cargo test --offline --lib model_archives",
+      "result": "passed",
+      "tests": 39,
+      "node_unit_tests": 10
+    },
+    {
+      "command": "cargo fmt --all -- --check",
+      "result": "passed"
+    },
+    {
+      "command": "cargo clippy --offline --all-targets -- -D warnings",
+      "result": "passed"
+    }
+  ],
+  "independent_unit_cases": 524,
+  "independent_unit_fields": 5385,
+  "independent_node_cases": 7,
+  "independent_node_fields": 36,
+  "native_unit_fields": 234,
+  "native_unit_bytes": 1487,
+  "native_node_bytes": 52,
+  "native_incomplete_unit_prefixes": 1487,
+  "native_incomplete_node_prefixes": 52,
+  "fixture_reference_processes": 2,
+  "parallel_unit_parsers": 4,
+  "uncommitted": true,
+  "published_model_api": false,
+  "whole_model_root_verified": false,
+  "exclusions": [
+    "remaining lightweight continuation and part suffix",
+    "complete resolved section",
+    "automatic section lengths and whole-document model edits",
+    "percent-unit RTTI assignability confirmation",
+    "model corpus and native application acceptance"
+  ]
+}

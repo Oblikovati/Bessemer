@@ -9,7 +9,6 @@ use crate::{
 
 pub(super) struct DisplayDecoder<'a> {
     pub cursor: ArchiveCursor<'a>,
-    pub input: &'a [u8],
     pub context: DisplayArchiveContext,
     pub limits: DisplayArchiveLimits,
     pub objects: ObjectReader,
@@ -35,7 +34,6 @@ impl<'a> DisplayDecoder<'a> {
         )?;
         Ok(Self {
             cursor: ArchiveCursor::new(input),
-            input,
             context,
             limits,
             objects: ObjectReader::new(),

@@ -7,8 +7,12 @@ use std::collections::{BTreeMap, BTreeSet};
 
 pub(super) type EffectiveLayouts = BTreeMap<u16, Vec<FieldDefinition>>;
 
-pub(super) fn contents(base: &BaseSchema, contents: &TransmitContents) -> Result<EffectiveLayouts> {
-    require_header(base, contents)?;
+pub(super) fn contents(
+    base: &BaseSchema,
+    contents: &TransmitContents,
+    context: super::title_context::TitleContext,
+) -> Result<EffectiveLayouts> {
+    require_header(base, contents, context)?;
     let layouts = resolve_layouts(base, &contents.layouts)?;
     let mut used = BTreeSet::new();
     validate_body(&contents.body, &layouts, &mut used)?;
@@ -22,10 +26,14 @@ pub(super) fn contents(base: &BaseSchema, contents: &TransmitContents) -> Result
     Ok(layouts)
 }
 
-fn require_header(base: &BaseSchema, contents: &TransmitContents) -> Result<()> {
+fn require_header(
+    base: &BaseSchema,
+    contents: &TransmitContents,
+    context: super::title_context::TitleContext,
+) -> Result<()> {
     super::decode::require_schema(&contents.schema_key, base)?;
     super::definitions::latin1_length(&contents.title, u32::MAX as usize)?;
-    let delta = is_delta_title(&contents.title)?;
+    let delta = context.is_delta(&contents.title)?;
     if delta != matches!(contents.body, TransmitBody::Deltas(_)) {
         return Err(invalid(format!(
             "title {:?} and delta-body presence {}; expected matching file kind",

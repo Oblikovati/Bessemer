@@ -1,0 +1,107 @@
+{
+  "behavior_version": "private-model-ordinary-display-dimension-v1",
+  "decision": "Complete documented ordinary base/distance/radial/angular/revolve layouts; preserve raw values, identities and thirty serialized transform words. Unsupported nested bodies/presence forms fail explicitly.",
+  "migration": "Initial unpublished codec; preceding wire baselines retained across helper extraction.",
+  "cases": 336,
+  "independent_scalar_values": 54251,
+  "checks": {
+    "display-dimension tests": "12 passed in the final all-model run; earlier focused ten-test run also passed",
+    "all model tests": "247 passed; two external-input tests ignored, six core tests filtered",
+    "all-target Clippy": "passed",
+    "Python": "51 passed",
+    "native corpus": "886/906; two final processes reproduce all 906 outcomes; complete acceptance failed",
+    "full PR gate": "earlier geometric/kernel source state; rerun before push"
+  },
+  "parameter_entry_budget": {
+    "pass": 3,
+    "reject": 2
+  },
+  "fixture_repeat": {
+    "identical": true,
+    "fresh_processes": 2,
+    "sha256": {
+      "display-dimension-cases.bin": "b431f09b1277144ce582c9600384d54768885039cf38d20c4e56a44861ebf505",
+      "display-dimension-original.bin": "e240bb5d48b620d986a4f77319fc36a172929deb715aaff13a5148bf5269e80d",
+      "display-dimension-edited.bin": "99d912cf1f084449d653cc20ff43af3dc8e29ac76c50e3aa9ea7c05acc901fd3"
+    }
+  },
+  "oracle_exclusions": [],
+  "newly_accepted_indices": [
+    294,
+    335,
+    402,
+    568,
+    658,
+    665,
+    666,
+    667,
+    668,
+    707,
+    708,
+    709,
+    710,
+    729,
+    730,
+    731,
+    732,
+    827,
+    828,
+    840
+  ],
+  "accepted_document_paths": 822,
+  "accepted_versions": {
+    "11000": 1,
+    "19000": 875,
+    "18000": 10
+  },
+  "native_failures": {
+    "model archive Contents/Config-0: Unsupported: runtime class \"moExtrusion_c\" schema 1; expected an implemented complete model object body": 7,
+    "model archive Contents/Config-0: Invalid: object role \"help_data\" has runtime class \"suObArray\"; expected one of [\"su_CObArray\"]": 1,
+    "model archive Contents/Config-0: Unsupported: runtime class \"moRevolution_c\" schema 1; expected an implemented complete model object body": 1,
+    "model archive Contents/Config-0: Unsupported: runtime class \"moBoss_c\" schema 1; expected an implemented complete model object body": 5,
+    "model archive Contents/Config-0: Invalid: object role \"handle\" has runtime class \"moSkDimHandleValG2_c\"; expected one of [\"moDimHandle_c\"]": 1,
+    "model archive Contents/Config-0: Invalid: object role \"component_reference\" has runtime class \"moCompRefPlane_c\"; expected one of [\"moCompRef_c\"]": 1,
+    "model archive Contents/Config-0: Invalid: object role \"user_objects[0]\" has runtime class \"moExtensionLineIndicator_c\"; expected one of [\"moSketchToolsUserObject_c\"]": 4
+  },
+  "exclusions": [
+    "optional link data, item object +288 and watermark bodies",
+    "serialized-transform perspective continuation",
+    "unimplemented new nested leader/jog/tag/callout dependencies",
+    "thirteen extrusion/boss/revolution first stops",
+    "seven tracked role/class mismatches and selected-configuration diagnostics",
+    "public model result/history contracts",
+    "native application/geometry acceptance",
+    "remote platform matrix"
+  ],
+  "artifact_sha256": {
+    "src/model_archives/display_dimension.rs": "8ddfb26c372071397920d529157485f0c847a8b913157244100c31d4c6a96162",
+    "src/model_archives/display_dimension_tail.rs": "e0740a0a252a02704cc77f6dd72aa226275883bcc6ca409377be7e0b7bb700e1",
+    "src/model_archives/display_item.rs": "6d35732bd41a33285a4a5521708e93c14d3c0552ceddc82c0ac7197d7de08290",
+    "src/model_archives/display_object.rs": "e2249c027f29165da73833664a44732b1e4a92fda1a1987e434fe39eb81772f6",
+    "src/model_archives/display_placement.rs": "396c39ce4038992694e22385182ca7fdd264d93a953fbe48499184a2f5dcfbe5",
+    "src/model_archives/display_records.rs": "3b9a9a257bca208ed5132834157d2149572150794124ec82e0d682c9ea181002",
+    "src/model_archives/display_suffixes.rs": "65af37c9b8beaabf4df7d4838d3c6447ac83e3097abbb930cb4b54869a1d9a95",
+    "src/model_archives/dimension_handles.rs": "36b43ba1b48aa65db9c520a43bfd504c1535246bc2d9b1fffa491b4786d2d900",
+    "src/model_archives/object_body.rs": "aa76f309d4ae7e1764d6854982aad3dacc685a7e34e7e79da634fc0afd2155c0",
+    "src/model_archives/mod.rs": "efd0f6f7e57805e450315d5a785609de4b50ce72e4a67498a5a30eede7c29a20",
+    "tests/model_archives/display_dimensions.rs": "d2462f297ac746f1cd90087a1f8cebe8b1fb1eae66a1e9a05117580ff0feddf7",
+    "docs/features/model-archives/freeze_display_dimensions.py": "03d5bf637ec2f0e10f8aef3c55396a584aa83b7264310aa69526259c012a30db",
+    "docs/features/model-archives/display_dimension_fixture_bytes.py": "ff1b4dbe9e95c33c420ed609ba5ec6efa8c2bbe1319a688834f49eba34df754b",
+    "docs/features/model-archives/display_item_fixture_bytes.py": "9b8f9847d4b86bdc2b35357a0619999006089f906f6e37a3c37f36f392ba23fe",
+    "docs/features/model-archives/display-dimension-cases.json": "4e12e31b179376464186306e03b8b0b435813d947274fbf184ed640b2ed319e2",
+    "docs/features/model-archives/display-dimension-schema-reference.json": "6ab28f9b6c29f556b2af1d690906be694f356a59061cdb803eaff09e75578f29",
+    "docs/features/model-archives/display-dimension-schema-snapshot.md": "f04cd423f1623dcd842e386c53a526e0e5a6b12794e437be0f8ace5ca669604f",
+    "tests/fixtures/model-archives/display-dimension-cases.bin": "b431f09b1277144ce582c9600384d54768885039cf38d20c4e56a44861ebf505",
+    "tests/fixtures/model-archives/display-dimension-original.bin": "e240bb5d48b620d986a4f77319fc36a172929deb715aaff13a5148bf5269e80d",
+    "tests/fixtures/model-archives/display-dimension-edited.bin": "99d912cf1f084449d653cc20ff43af3dc8e29ac76c50e3aa9ea7c05acc901fd3"
+  },
+  "log_sha256": {
+    "model-native-corpus-display-dimensions-first.log": "a0be1391255d2ac5cb3f89069984cfdf9f90e3e2a3b441d66ec1ba325cb507fc",
+    "model-native-corpus-display-dimensions.log": "272890e57ee71255deccb575da4fd8787ce1b63c545dadf1dcd17f367a658b75",
+    "model-native-corpus-display-dimensions-repeat.log": "001ca1adba60b0a0ef2842d4fe42dfb0e452976c425d06de4b6032c9244c61f9",
+    "model-display-dimension-tests.log": "26011f7ec8c29bb9ca83b4f59e2745e652083b5ba2c6d436d31b2cabd7792700",
+    "model-display-dimension-all-model.log": "9a508755e6bd39a4d53dff026ad3bac1a805f1d66c06f19fe71668f2072b860d",
+    "model-display-dimension-clippy.log": "22684c114c23170a560b4703f685afa5a24bdbc6133ccabc83fb6c0d89352297",
+    "model-display-dimension-python.log": "5ed3dfc9e73ba30cf827307c755318ce99b658aac503abcd619c82861272531f"
+  }
+}

@@ -5,7 +5,7 @@ use super::{
     HeaderContents, HeaderObject, HeaderObjectId, HeaderReference, SharedFileName, invalid, values,
 };
 use crate::Result;
-use crate::archive_codec::{ArchiveClass, ArchiveMapIndex, ObjectWriter};
+use crate::archive_codec::{ArchiveMapIndex, ObjectWriter};
 
 enum Task<'a> {
     Object(HeaderReference),
@@ -57,10 +57,7 @@ impl<'a> Encoder<'a> {
                 id.value()
             ))
         })?;
-        let class = ArchiveClass {
-            name: node.object.kind().name().to_owned(),
-            schema: node.schema,
-        };
+        let class = node.archive_class();
         let index = self.map.object(&class, &mut self.output)?;
         self.identities.insert(id, index);
         self.body(&node.object)

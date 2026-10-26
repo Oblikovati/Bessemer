@@ -1,0 +1,33 @@
+{
+  "feature_issue": 44,
+  "status": "independent expected stream edit; Bessemer operation pending",
+  "field": "root.node.name.name",
+  "original_value": "Part1",
+  "changed_value": "Bessemer Ω",
+  "original_bytes": 24028,
+  "changed_bytes": 24038,
+  "original_lightweight_size": 2903,
+  "changed_lightweight_size": 2913,
+  "original_lightweight_end": 2921,
+  "changed_lightweight_end": 2931,
+  "resolved_end": 24038,
+  "original_sha256": "2bb4c6306071b4bd20be2cda0207c376e5a6c803e884c77c95ee68f44632d8f7",
+  "changed_sha256": "a455cfd685d2d15fc854d02912ab14f4c54b0d59eb648e7bf2f86c456915c118",
+  "expected_changes": [
+    "UTF-16 CString at original byte range 44..58",
+    "signed lightweight section size at 14..18"
+  ],
+  "verified": [
+    "source completes changed root at EOF",
+    "root node name equals independent expected text",
+    "prefix before size and unchanged lightweight fields preserved",
+    "all bytes after original name preserved with ten-byte shift",
+    "reference sources unchanged during parse"
+  ],
+  "exclusions": [
+    "Bessemer codec",
+    "whole-document replacement",
+    "native application opening",
+    "geometry acceptance"
+  ]
+}
