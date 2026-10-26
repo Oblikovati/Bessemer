@@ -140,6 +140,7 @@ mod reference_axes;
 mod reference_planes;
 mod reference_tail;
 mod relations;
+mod resolved_feature_objects;
 mod resolved_managers;
 mod resolved_start;
 mod shared_tail;
