@@ -114,6 +114,12 @@ explicitly; full SolidWorks schema parity remains in progress.
 pattern codec and retain tagged/direct plane fields and shared face references
 through complete reads, isolated edits and reconstruction.
 
+[Shell features](docs/features/shell-features/README.md) retain all six tagged
+references, full flag bytes and unequal list lengths through the same API.
+
+[Circular patterns](docs/features/circular-patterns/README.md) preserve shared
+dimensions, ordered integer collections and versioned geometry tails.
+
 
 This library is named after Sir Henry Bessemer (1813–1898) an English engineer, inventor, and entrepreneur 
 best known for developing the Bessemer process, the first inexpensive industrial method for the mass production

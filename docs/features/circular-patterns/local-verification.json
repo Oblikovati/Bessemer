@@ -1,0 +1,52 @@
+{
+  "base_revision": "dfe5800",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 439,
+    "library_ignored": 3,
+    "all_integration_suites_passed": true,
+    "doctests_passed": 265,
+    "log_sha256": "cbbae0eedcf05303a699c7bf8a373896d649a718f4276ef220cd6c73dc815d45"
+  },
+  "focused": {
+    "private_tests": 5,
+    "public_tests": 2,
+    "python_tests": 3
+  },
+  "native_corpus": {
+    "cases": 906,
+    "accepted": 483,
+    "rejected": 423,
+    "fresh_process_outcomes_identical": true,
+    "expected_full_parity_exit_code": 101
+  },
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "source_file_sha256": {
+    "src/model_archives/circular_patterns.rs": "9bbf06c4b43b7f58d5d2e85f91e6674f6ebaaa102e9bc5997978f9da1e8aa5fb",
+    "src/model_archives/body_features.rs": "13fb9be3a4a82a34a2eee89e0cdc0b099e16014659c5f63face5a893adfc43ce",
+    "src/model_archives/object_body.rs": "d4f1c704d7bbbe5c2e005f83bf1fc63962b5d0ab637a935f3fd817f01b79bec1",
+    "src/model_archives/mod.rs": "892e31e6afd7d4cbf21d61bfed8fe62328e199942cf1722854c6af97c2da0035",
+    "tests/resolved_features/circular_patterns.rs": "0af3e01e7165d857ea8783a95646bca2d80c97a860a36090f4acc44bae6dbbd8",
+    "tests/resolved_circular_patterns.rs": "c1ebfed2a7f1bbe7a9682302c499534b13ebd84226bd68476afaad55cb8294d2"
+  },
+  "exclusions": [
+    "Full documented schema parity",
+    "Native geometry and topology validation",
+    "Native application acceptance",
+    "Non-Windows execution is checked by the integration PR matrix"
+  ],
+  "dependencies_changed": false,
+  "version_changed": false,
+  "final_staged_gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 439,
+    "library_ignored": 3,
+    "all_integration_suites_passed": true,
+    "doctests_passed": 265,
+    "log_sha256": "f3cc6fe480133735d94991cad5e6b2bb2132f5939615a67a5a5471826c601548"
+  }
+}

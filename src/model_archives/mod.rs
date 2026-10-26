@@ -147,6 +147,10 @@ mod body_feature_tests;
 mod body_features;
 mod boundary_references;
 mod center_helpers;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/circular_patterns.rs"]
+mod circular_pattern_tests;
+mod circular_patterns;
 mod component_references;
 mod construction;
 mod contour_objects;
@@ -238,6 +242,10 @@ mod remaining_role_tests;
 mod resolved_managers;
 mod resolved_start;
 mod shared_tail;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/shell_records.rs"]
+mod shell_record_tests;
+mod shell_records;
 mod sketch_archive;
 mod sketch_arrays;
 mod sketch_backups;

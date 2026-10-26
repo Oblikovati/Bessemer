@@ -4,6 +4,10 @@
 
 ### Added
 
+- Added ordinary part circular-pattern reading, field editing and writing with required dimension alternatives, preserved ordered integer collections, versioned geometry tails and independent complete-stream fixtures. (#54)
+
+- Added ordinary part shell-feature reading, field editing and writing with preserved unequal lists, shared object references, complete dimension and component dependencies and independent full-stream fixtures. (#54)
+
 - Added ordinary part mirror-pattern reading, field editing and writing with shared pattern bodies, tagged and direct plane references, exact inherited object maps and independent complete-stream fixtures. (#54)
 
 - Added ordinary part reference-axis reading, field editing and writing with eight axis-data layouts, required typed data pointers and preserved shared references and floating-point bits. (#54)
