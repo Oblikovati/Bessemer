@@ -143,6 +143,7 @@ mod profile_geometry;
 mod raw_fields;
 mod reader;
 mod reference_axes;
+mod reference_geometry_objects;
 mod reference_planes;
 mod reference_point_data;
 mod reference_points;
