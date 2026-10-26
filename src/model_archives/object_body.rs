@@ -25,6 +25,9 @@ pub(super) fn read(
     if let Some(result) = super::reference_points::read_object(reader, map, &class.name) {
         return result;
     }
+    if let Some(result) = super::connection_points::read_object(reader, map, &class.name) {
+        return result;
+    }
     match class.name.as_str() {
         "moDome_c" => super::dome_records::read(reader, map),
         "moCompRefAxis_c" | "moCompRefPoint_c" => {

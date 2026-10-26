@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added ordinary connection-point and route-point reading, field editing and writing with preserved direct parameters, compatibility fields, shared references and complete radial-dimension dependencies. (#54)
+
 - Added ordinary reference-point reading, field editing and writing with all seven point-data layouts, required tagged data, shared typed references and independent complete-stream fixtures. (#54)
 
 - Added ordinary component-axis and component-point reading, field editing and writing with shared inherited layouts, typed geometry pointers and independent wrapper/whole-stream fixtures. (#54)

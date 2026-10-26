@@ -21,6 +21,8 @@ mod configuration_scenes;
 mod configuration_suffix;
 mod configuration_tables;
 mod configuration_toolbox;
+mod connection_payload;
+mod connection_points;
 mod context;
 mod context_chains;
 mod custom_properties;

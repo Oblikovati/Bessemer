@@ -69,6 +69,9 @@ mod configuration_table_tests;
 #[path = "../../tests/resolved_features/configuration_toolbox.rs"]
 mod configuration_toolbox_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/connection_points.rs"]
+mod connection_point_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/context_chains.rs"]
 mod context_chain_tests;
 #[cfg(test)]
