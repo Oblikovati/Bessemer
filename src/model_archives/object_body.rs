@@ -16,6 +16,9 @@ pub(super) fn read(
     if let Some(result) = super::resolved_feature_objects::read(reader, map, &class.name) {
         return result;
     }
+    if let Some(result) = super::sweep_objects::read(reader, map, &class.name) {
+        return result;
+    }
     match class.name.as_str() {
         "moConfigurationMgr_c" => super::configuration_manager::body(reader, map),
         "moPartConfiguration_c" => super::configuration_base::read(reader, map),

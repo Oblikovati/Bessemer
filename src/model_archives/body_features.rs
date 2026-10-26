@@ -196,6 +196,8 @@ pub(super) const CLASSES: &[&str] = &[
     "moImported_c",
     "moBaseBody_c",
     "moExtruRefSurface_c",
+    "moSweep_c",
+    "moSweepCut_c",
     // #60: both complete readers use this inherited atom-feature owner role.
     "moPlanarSurface_c",
     "Chamfer_c",

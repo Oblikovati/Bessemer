@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added ordinary part sweep and sweep-cut reading, field editing and writing with versioned controls, conditional dimensions, shared references and complete endpoint, wire-contact and loft-synchronization dependencies. (#54)
+
 - Added ordinary part extruded reference-surface reading, field editing and writing with required end specifications, ordered-face groups, preserved shared references and context-checked binary-empty keepers. (#54)
 
 - Added ordinary part imported and base-body reading, field editing and writing with preserved external markers and names, explicit typed inline kernel frames and signed base-body vectors. (#54)

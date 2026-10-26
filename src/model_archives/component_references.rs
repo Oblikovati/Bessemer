@@ -2,7 +2,8 @@ use super::{ModelDecoder, ModelObjectRole, part_objects::absent_payload};
 use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
 
-pub(super) const FEATURE_CLASSES: &[&str] = &["moCompFeature_c", "moCompBodyFeature_c"];
+pub(super) const FEATURE_CLASSES: &[&str] =
+    &["moCompFeature_c", "moCompBodyFeature_c", "moCompProfile_c"];
 
 pub(super) fn reference_plane(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     feature(reader, map)?;
