@@ -186,6 +186,7 @@ pub(super) const CLASSES: &[&str] = &[
     // #54: shared pattern choosers can reference their enclosing mirror object.
     "moMirrorPattern_c",
     "moShell_c",
+    "moCirPattern_c",
     // #60: both complete readers use this inherited atom-feature owner role.
     "moPlanarSurface_c",
     "Chamfer_c",

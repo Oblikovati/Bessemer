@@ -147,6 +147,10 @@ mod body_feature_tests;
 mod body_features;
 mod boundary_references;
 mod center_helpers;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/circular_patterns.rs"]
+mod circular_pattern_tests;
+mod circular_patterns;
 mod component_references;
 mod construction;
 mod contour_objects;

@@ -44,6 +44,7 @@ pub(super) fn read(
         "moLPattern_c" => super::linear_patterns::read(reader, map),
         "moMirrorPattern_c" => super::mirror_patterns::read(reader, map),
         "moShell_c" => super::shell_records::read(reader, map),
+        "moCirPattern_c" => super::circular_patterns::read(reader, map),
         "moMatrixIndexHelper_c" => super::linear_patterns::matrix_helper(reader, map),
         "moRefPlane_c" => super::reference_planes::plane(reader, map),
         "moPlaneRef_w" => super::reference_planes::plane_reference(reader, map),
