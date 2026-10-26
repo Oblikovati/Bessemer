@@ -110,6 +110,10 @@ data and shared references. Documented
 both ordinary lines and temporary-axis derivatives. Unsupported layouts fail
 explicitly; full SolidWorks schema parity remains in progress.
 
+[Mirror patterns](docs/features/mirror-patterns/README.md) reuse the common
+pattern codec and retain tagged/direct plane fields and shared face references
+through complete reads, isolated edits and reconstruction.
+
 
 This library is named after Sir Henry Bessemer (1813–1898) an English engineer, inventor, and entrepreneur 
 best known for developing the Bessemer process, the first inexpensive industrial method for the mass production

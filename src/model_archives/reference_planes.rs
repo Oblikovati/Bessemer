@@ -82,7 +82,7 @@ fn base_references(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
     Ok(())
 }
 
-fn plane_reference(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+pub(super) fn plane_reference(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     super::geometric_references::surface(reader, map)?;
     double_vector(reader, "root_point")?;
     double_vector(reader, "normal")?;

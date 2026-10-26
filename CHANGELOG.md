@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added ordinary part mirror-pattern reading, field editing and writing with shared pattern bodies, tagged and direct plane references, exact inherited object maps and independent complete-stream fixtures. (#54)
+
 - Added ordinary part reference-axis reading, field editing and writing with eight axis-data layouts, required typed data pointers and preserved shared references and floating-point bits. (#54)
 
 - Added ordinary part detail-folder reading, editing and writing with shared graphics bucket and display-item codecs, typed BOM references and independent reconstruction fixtures. (#54)

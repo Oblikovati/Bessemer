@@ -10,6 +10,7 @@ pub(super) const SURFACE_CLASSES: &[&str] = &[
     "moSingleFaceRef_w",
     "moCylinderRef_w",
     "moSphereRef_w",
+    "moPlaneRef_w",
 ];
 
 pub(super) fn surface(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {

@@ -183,6 +183,8 @@ pub(super) const CLASSES: &[&str] = &[
     "Fillet_c",
     "VarFillet_c",
     "moLPattern_c",
+    // #54: shared pattern choosers can reference their enclosing mirror object.
+    "moMirrorPattern_c",
     // #60: both complete readers use this inherited atom-feature owner role.
     "moPlanarSurface_c",
     "Chamfer_c",

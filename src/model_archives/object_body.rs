@@ -42,8 +42,10 @@ pub(super) fn read(
             super::body_features::model_feature(reader, map)
         }),
         "moLPattern_c" => super::linear_patterns::read(reader, map),
+        "moMirrorPattern_c" => super::mirror_patterns::read(reader, map),
         "moMatrixIndexHelper_c" => super::linear_patterns::matrix_helper(reader, map),
         "moRefPlane_c" => super::reference_planes::plane(reader, map),
+        "moPlaneRef_w" => super::reference_planes::plane_reference(reader, map),
         "moRefAxis_c" => super::reference_axes::axis(reader, map),
         "moRefAxisData_c"
         | "moSurfaceAxisData_c"
