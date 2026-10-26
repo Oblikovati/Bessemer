@@ -217,6 +217,10 @@ mod profile_geometry;
 mod profile_tests;
 mod raw_fields;
 mod reader;
+mod reference_axes;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/reference_axes.rs"]
+mod reference_axis_tests;
 mod reference_planes;
 mod reference_tail;
 mod relations;
