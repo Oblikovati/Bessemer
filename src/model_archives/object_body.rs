@@ -19,13 +19,13 @@ pub(super) fn read(
     if let Some(result) = super::sweep_objects::read(reader, map, &class.name) {
         return result;
     }
+    if let Some(result) = super::configuration_objects::read(reader, map, &class.name) {
+        return result;
+    }
     match class.name.as_str() {
-        "moConfigurationMgr_c" => super::configuration_manager::body(reader, map),
-        "moPartConfiguration_c" => super::configuration_base::read(reader, map),
         "moExtruRefSurface_c" => super::extruded_surfaces::read(reader, map),
         "moOrderedFaceArray_c" => super::extruded_surfaces::ordered_faces(reader, map),
         "moExtruRefSurfIdKeeper_c" => super::extruded_surfaces::keeper(reader),
-        "moLinkedAtomIdNode_c" => super::configuration_atoms::linked_node(reader, map),
         "moCustomPropertyList" => super::custom_properties::list(reader, "properties"),
         "moSensor_c" => super::sensor_records::read(reader, map),
         "moAttribute_c" | "moAttributeDef_c" => super::attribute_records::read(reader, map),
@@ -40,16 +40,6 @@ pub(super) fn read(
             super::body_chooser_records::named_chooser(reader, map)
         }
         "moBBoxCenterData_c" => super::body_chooser_records::bounding_center(reader),
-        "swCubicalScene_c" | "swSphericalScene_c" => {
-            super::configuration_scenes::scene(reader, map)
-        }
-        "pwSceneData_c" => super::configuration_scenes::pw_data(reader),
-        "moNativeConfigurationTableFeature_c" => {
-            super::configuration_tables::native_table(reader, map)
-        }
-        "moDesignTableFeature_c" => reader.scope("model_feature", |reader| {
-            super::body_features::model_feature(reader, map)
-        }),
         "moRefPlane_c" => super::reference_planes::plane(reader, map),
         "moPlaneRef_w" => super::reference_planes::plane_reference(reader, map),
         "moRefAxis_c" => super::reference_axes::axis(reader, map),

@@ -16,6 +16,7 @@ mod configuration_base;
 mod configuration_graph;
 mod configuration_io;
 mod configuration_manager;
+mod configuration_objects;
 mod configuration_scenes;
 mod configuration_suffix;
 mod configuration_tables;
