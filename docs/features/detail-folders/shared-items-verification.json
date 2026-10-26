@@ -1,0 +1,38 @@
+{
+  "scope": "Behavior-preserving shared display-item extraction before model detail-folder behavior.",
+  "base_revision": "77036131488bcb9c131b92940db4b8c2cec47ae9",
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0",
+  "focused_tests_passed": 57,
+  "pr_gate": {
+    "passed": true,
+    "library_passed": 413,
+    "doctests_passed": 265,
+    "external_ignored": 3,
+    "warnings": 0
+  },
+  "corpus": {
+    "cases": 906,
+    "accepted": 388,
+    "rejected": 518,
+    "all_outcomes_and_causes_unchanged": true
+  },
+  "sha256": {
+    "src/archive_codec/item_reader.rs": "30389153f9efebe89db73133f9580368ee2be97fecd3c6168ff5ecd8b86979d1",
+    "src/archive_codec/display_items.rs": "55a0ba6bbfac38ce297eedb408aaf8e2d5b7c15129d0aa384fb453f04a53b015",
+    "src/archive_codec/display_item_geometry.rs": "4cec502f313066c891024db0cdbab17c1de7c600ef422a71acea0f6c85308859",
+    "src/archive_codec/display_item_text.rs": "fc2e0e9efc676e68967928544956c789b70d0c7892d18b0fd13e027a822239b3",
+    "src/archive_codec/display_item_style.rs": "c0ad1a4131bed229da0975d85cbc14488ceacab3c745ab8cf3365020434fc676",
+    "src/archive_codec/display_item_annotation.rs": "0920d6f7724cfc2bcf642d6f2f6e95520e32d4173deff6f10cf464041ef69aa5",
+    "src/archive_codec/bucket_visibility.rs": "9965f725feb9c2c80e1aaca1927c9c4ba9bc28524ad50e725dcd1f1a2608ed33",
+    "src/display_lists/item_adapter.rs": "3ac83ef94c8c6de9ce5dc0cf9d0dd4552e92322392ecaa6fc73f2976fed2bc99",
+    "src/display_lists/modern_items.rs": "d7359f74377115c07f5bda34ec66a70354f97e5434ff7010c64416b6c680f912",
+    "src/display_lists/modern_item_style.rs": "b03044640ba8544397e70d8ce466a386e74b37b273b46cb462fee4fe9a2d2853",
+    "src/display_lists/legacy_bucket_visibility.rs": "bddaaef840d0de572162d52a65f1fad5f1ef7f940bd27b5118dd78ec3ab59d76",
+    "target/shared-display-item-tests.log": "00da7996e33c7b51bc750ad12a86d597c75dd8e336d3d68b9750a87ea2eba531",
+    "target/shared-items-pr-gate.log": "3fcfdeb414409f26c50f2be4b552894d950c4d05f31aa9af28371bfc3298d717",
+    "target/public-edit-frontier.log": "cf3281a49a963d9cbd02cda81b9fcca577545f9a01a5ebecc90f00aaf06fd1c3",
+    "target/shared-items-frontier.log": "8f14af99e0046be8c8adfdc1d04e6cbcfd292f0dd68011e1aaa8c01cecb2bd9a",
+    "target/shared-items-repeat.log": "41be57e981c6ad829de83bb633ea7801cb93b009f2602754910e0a547f8d6989"
+  }
+}

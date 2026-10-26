@@ -35,9 +35,14 @@ Archive version and runtime file version are separate. The approved reference's
 from the model wire version. The ordinary model context already declares that
 current runtime dialect. Display contexts keep their explicit file-version input.
 
-The next structural dependency is shared display-item parsing, including legacy
-text character counts and compact transforms. After it is shared, connect the
-model bucket adapter and complete detail-folder reader, preserve the existing
+Display-item parsing is now shared too, including legacy text character counts,
+compact transforms and checked collection counts. Its display adapter retains
+the original owned text and lazy width calculation. The old edge-visibility
+grammar also uses the shared typed object context. Fifty-seven focused item,
+bucket and drawing tests and the complete local PR gate passed without changes
+to expected fixture bytes. Both 906-case runs retain the prior outcomes.
+
+Next, connect the model bucket adapter and complete detail-folder reader, preserve the existing
 display fixtures, and prove owned construction/editing through EOF. Keep all
 unsupported dependencies explicit. Native application and geometry acceptance
 remain separate from stored-grammar validation.
