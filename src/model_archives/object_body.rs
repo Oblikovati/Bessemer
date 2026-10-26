@@ -13,9 +13,15 @@ pub(super) fn read(
     if let Some(kind) = super::reference_planes::PlaneDataKind::parse(&class.name) {
         return super::reference_planes::data(reader, map, kind);
     }
+    if let Some(result) = super::resolved_feature_objects::read(reader, map, &class.name) {
+        return result;
+    }
     match class.name.as_str() {
         "moConfigurationMgr_c" => super::configuration_manager::body(reader, map),
         "moPartConfiguration_c" => super::configuration_base::read(reader, map),
+        "moExtruRefSurface_c" => super::extruded_surfaces::read(reader, map),
+        "moOrderedFaceArray_c" => super::extruded_surfaces::ordered_faces(reader, map),
+        "moExtruRefSurfIdKeeper_c" => super::extruded_surfaces::keeper(reader),
         "moLinkedAtomIdNode_c" => super::configuration_atoms::linked_node(reader, map),
         "moCustomPropertyList" => super::custom_properties::list(reader, "properties"),
         "moSensor_c" => super::sensor_records::read(reader, map),
@@ -41,11 +47,6 @@ pub(super) fn read(
         "moDesignTableFeature_c" => reader.scope("model_feature", |reader| {
             super::body_features::model_feature(reader, map)
         }),
-        "moLPattern_c" => super::linear_patterns::read(reader, map),
-        "moMirrorPattern_c" => super::mirror_patterns::read(reader, map),
-        "moShell_c" => super::shell_records::read(reader, map),
-        "moCirPattern_c" => super::circular_patterns::read(reader, map),
-        "moMatrixIndexHelper_c" => super::linear_patterns::matrix_helper(reader, map),
         "moRefPlane_c" => super::reference_planes::plane(reader, map),
         "moPlaneRef_w" => super::reference_planes::plane_reference(reader, map),
         "moRefAxis_c" => super::reference_axes::axis(reader, map),

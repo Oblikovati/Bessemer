@@ -4,7 +4,12 @@ use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
 
 // #59: planar surfaces supply their concrete keeper through the inherited nonnull base pointer.
-const ID_KEEPERS: &[&str] = &["moIdKeeper_c", "moPlanarSurfIdKeeper_c"];
+const ID_KEEPERS: &[&str] = &[
+    "moIdKeeper_c",
+    "moPlanarSurfIdKeeper_c",
+    // #54 / C-181: 26 exact-EOF native surface roots supply this concrete inherited keeper.
+    "moExtruRefSurfIdKeeper_c",
+];
 
 pub(super) fn header(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     reader.scope("model_feature", |reader| model_feature(reader, map))?;
@@ -187,6 +192,10 @@ pub(super) const CLASSES: &[&str] = &[
     "moMirrorPattern_c",
     "moShell_c",
     "moCirPattern_c",
+    "moHoleWzd_c",
+    "moImported_c",
+    "moBaseBody_c",
+    "moExtruRefSurface_c",
     // #60: both complete readers use this inherited atom-feature owner role.
     "moPlanarSurface_c",
     "Chamfer_c",

@@ -1,6 +1,13 @@
 use std::process::{Command, ExitCode};
 
+#[cfg(test)]
+mod formatting_tests;
 mod sanitizer;
+
+const MODEL_TEST_REGISTRY: &str = concat!(
+    env!("CARGO_MANIFEST_DIR"),
+    "/../src/model_archives/test_modules.rs"
+);
 
 fn main() -> ExitCode {
     let gate = std::env::args().nth(1).unwrap_or_default();
@@ -22,8 +29,12 @@ fn requested_gate(gate: &str) -> Result<(), String> {
 }
 
 fn run_gate() -> Result<(), String> {
+    run_commands(run_cargo)
+}
+
+fn run_commands(mut execute: impl FnMut(&[&str]) -> Result<(), String>) -> Result<(), String> {
     let commands: &[&[&str]] = &[
-        &["fmt", "--all", "--", "--check"],
+        &["fmt", "--all", "--", "--check", MODEL_TEST_REGISTRY],
         &[
             "clippy",
             "--workspace",
@@ -37,7 +48,7 @@ fn run_gate() -> Result<(), String> {
         &["test", "--workspace", "--locked"],
     ];
     for arguments in commands {
-        run_cargo(arguments)?;
+        execute(arguments)?;
     }
     Ok(())
 }

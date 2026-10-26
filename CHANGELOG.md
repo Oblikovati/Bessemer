@@ -4,6 +4,12 @@
 
 ### Added
 
+- Added ordinary part extruded reference-surface reading, field editing and writing with required end specifications, ordered-face groups, preserved shared references and context-checked binary-empty keepers. (#54)
+
+- Added ordinary part imported and base-body reading, field editing and writing with preserved external markers and names, explicit typed inline kernel frames and signed base-body vectors. (#54)
+
+- Added ordinary part Hole Wizard reading, field editing and writing with compatibility gates, preserved raw parameters, direct slot-axis bodies, shared dimensions and independent Unicode-edit fixtures. (#54)
+
 - Added ordinary part circular-pattern reading, field editing and writing with required dimension alternatives, preserved ordered integer collections, versioned geometry tails and independent complete-stream fixtures. (#54)
 
 - Added ordinary part shell-feature reading, field editing and writing with preserved unequal lists, shared object references, complete dimension and component dependencies and independent full-stream fixtures. (#54)
@@ -46,6 +52,8 @@
 - Optimized test builds while retaining debug assertions, checked integer arithmetic and every exhaustive validation case. (#53)
 
 ### Fixed
+
+- Fixed private model-test formatting coverage in local and CI gates after declarations moved behind an included registry. (#69)
 
 - Fixed resolved-feature failures mislabeled as configuration operations and streams, retaining their failure classes, causes and CMgr dependency locations. (#64)
 

@@ -1,0 +1,14 @@
+{
+  "issue": 69,
+  "scope": "Formatter traversal regression in unpublished test-registry extraction.",
+  "private_module_names_and_paths_preserved": true,
+  "existing_private_test_matches_formatter_output_from_original": true,
+  "behavioral_regression": {
+    "old_fmt_misses_nested_fixture": true,
+    "corrected_gate_rejects_unformatted_private_fixture": true,
+    "gate_stops_before_later_commands": true,
+    "formatted_fixture_passes": true
+  },
+  "xtask_tests_passed": 4,
+  "log_sha256": "a18514cf3068778899c96bf20f94c2eb8e47ef690aaeb5a5a2917c327a112cf2"
+}
