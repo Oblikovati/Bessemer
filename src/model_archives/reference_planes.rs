@@ -4,6 +4,14 @@ use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader, vectors::double_vector};
 
 pub(super) fn plane(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    reference_geometry(reader, map)?;
+    declared(reader, map, "plane_data", CLASSES)
+}
+
+pub(super) fn reference_geometry(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+) -> Result<()> {
     body_features::header(reader, map)?;
     body_features::atom_fields(reader, map)?;
     double_vector(reader, "root_point")?;
@@ -13,7 +21,7 @@ pub(super) fn plane(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Re
     if reader.version() > 0x2f85 {
         reader.i32("word_6e8")?;
     }
-    declared(reader, map, "plane_data", CLASSES)
+    Ok(())
 }
 
 pub(super) const CLASSES: &[&str] = &[

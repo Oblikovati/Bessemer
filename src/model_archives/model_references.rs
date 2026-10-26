@@ -2,6 +2,23 @@ use super::{ModelDecoder, ModelObjectRole};
 use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
 
+// #58: these concrete readers already preserve the documented inherited wrapper body.
+pub(super) const WRAPPER_CLASSES: &[&str] = &[
+    "moRefWrapper_c",
+    "moGeneralSurfRef_w",
+    "moGeneralCurveRef_w",
+    "moSingleFaceRef_w",
+    "moCircleRef_w",
+    "moCylinderRef_w",
+    "moSphereRef_w",
+    "moPointRef_w",
+    "moLineRef_w",
+    "moLoopRef_w",
+    "moSketchExtRef_w",
+    "moTempAxisRef_w",
+    "moCoordSysRef_w",
+];
+
 // The ordinary wrapper's explicit component family follows the scoped 11.16 reader.
 // Unknown classes are not admitted through name prefixes or structural guesses.
 const COMPONENTS: &[&str] = &[

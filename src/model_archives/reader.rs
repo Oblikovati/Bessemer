@@ -28,8 +28,10 @@ pub(super) struct ModelDecoder<'a> {
     failure: Option<BessemerError>,
     loaded_objects: usize,
     context: ModelArchiveContext,
+    scene_context: SceneArchiveContext,
     kernel: Option<super::kernel_frames::CompressedKernelContext>,
     kernel_expanded: usize,
+    inherited_fields: Option<&'a [ModelField]>,
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -39,14 +41,22 @@ pub(super) enum ModelArchiveContext {
     OrdinaryPartExternalXml,
 }
 
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+enum SceneArchiveContext {
+    Unselected,
+    OwnedConfiguration,
+}
+
 impl<'a> ModelDecoder<'a> {
     pub fn referenced_count(&mut self, record: &ObjectRecord, label: &str) -> Result<usize> {
-        let result = super::object_values::stored_object_count(&self.fields, record, label);
+        let result =
+            super::object_values::stored_object_count(self.object_fields(record), record, label);
         self.checked(result)
     }
 
     pub fn object_integer(&mut self, record: &ObjectRecord, label: &str) -> Result<i32> {
-        let result = super::object_values::stored_object_integer(&self.fields, record, label);
+        let result =
+            super::object_values::stored_object_integer(self.object_fields(record), record, label);
         self.checked(result)
     }
 
@@ -100,9 +110,46 @@ impl<'a> ModelDecoder<'a> {
             failure: None,
             loaded_objects: 0,
             context,
+            scene_context: SceneArchiveContext::Unselected,
             kernel: None,
             kernel_expanded: 0,
+            inherited_fields: None,
         })
+    }
+
+    pub fn with_inherited_fields(mut self, fields: &'a [ModelField]) -> Self {
+        self.inherited_fields = Some(fields);
+        self
+    }
+
+    pub(super) fn configuration_scene<T>(
+        &mut self,
+        read: impl FnOnce(&mut Self) -> Result<T>,
+    ) -> Result<T> {
+        super::configuration_manager::require_current(self)?;
+        let previous = self.scene_context;
+        self.scene_context = SceneArchiveContext::OwnedConfiguration;
+        let result = read(self);
+        self.scene_context = previous;
+        self.checked(result)
+    }
+
+    pub(super) fn require_configuration_scene(&mut self) -> Result<()> {
+        if self.scene_context == SceneArchiveContext::OwnedConfiguration {
+            return self.active();
+        }
+        self.checked(Err(BessemerError::new("configuration scene", "archive context", crate::FailureClass::Unsupported,
+            format!("scene context {:?}; expected explicitly selected OwnedConfiguration condition-200 scope", self.scene_context))))
+    }
+
+    fn object_fields(&self, record: &ObjectRecord) -> &[ModelField] {
+        let Some(inherited) = self.inherited_fields else {
+            return &self.fields;
+        };
+        if super::object_values::contains_definition(&self.fields, record) {
+            return &self.fields;
+        }
+        inherited
     }
 
     pub fn with_kernel(

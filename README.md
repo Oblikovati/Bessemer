@@ -99,6 +99,11 @@ complete ordinary modern-part reading, typed construction, isolated edits and
 writing with exact coverage and field history. The [codec evidence](docs/features/model-archives/plan.md)
 records independent fixtures and reconstruction of 906 native configurations.
 
+The [resolved-feature API](docs/features/resolved-features/public-api.md) reads
+and edits supported complete separate feature streams with their inherited
+model map, CMgr helper state and revision-bound field history. Unsupported layouts fail explicitly; full
+SolidWorks schema parity remains in progress.
+
 
 This library is named after Sir Henry Bessemer (1813–1898) an English engineer, inventor, and entrepreneur 
 best known for developing the Bessemer process, the first inexpensive industrial method for the mass production

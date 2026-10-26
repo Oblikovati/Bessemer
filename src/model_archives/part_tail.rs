@@ -84,7 +84,7 @@ fn mass_cache(reader: &mut ModelDecoder<'_>) -> Result<()> {
     Ok(())
 }
 
-fn mass_properties(reader: &mut ModelDecoder<'_>) -> Result<()> {
+pub(super) fn mass_properties(reader: &mut ModelDecoder<'_>) -> Result<()> {
     groups(
         reader,
         &[

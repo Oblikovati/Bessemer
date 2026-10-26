@@ -1,0 +1,44 @@
+{
+  "scope": "Uncommitted work; no publication, green PR gate or native acceptance claim.",
+  "full_cargo_test": {
+    "library_passed": 413,
+    "external_ignored": 3,
+    "doctests_passed": 247,
+    "integration_suites": "passed",
+    "dead_code_warnings": 20
+  },
+  "focused_rust_passed": 4,
+  "independent_python_passed": 2,
+  "corpus": {
+    "accepted": 388,
+    "total": 906,
+    "complete": false
+  },
+  "sha256": {
+    "src/model_archives/browser_folders.rs": "d390ec0890ef585be267bd82f7aa4b2aaeca29346d7e96a3be7644c280018cd7",
+    "src/model_archives/configuration_atoms.rs": "1a2fa371201b295a4b0e26ea7198e773d035e4b9f333a88ddadb08528a0e88a9",
+    "src/model_archives/object_body.rs": "2ab4bba64400af04040af40885dc3d5f8130199789fb5d2911bb9ff33efefff9",
+    "src/model_archives/mod.rs": "f538e50bef2c3297275eed9d0775c68f9b2abf65ce9428194b6fe4377f9027eb",
+    "tests/resolved_features/folder_configuration_records.rs": "e5d5ce361aec3cfdd3d992feb834a15437dead994c1283c5942fd7630ca774c9",
+    "docs/features/resolved-features/folder-configuration-reference.json": "eb5a3dc6cc35855a7c4f391e049620b99b998361c28f49219708a7a4fd6785c2",
+    "docs/features/resolved-features/folder-configuration-accepted-reference.json": "35223811fa6f0f27a5a5a0d524e098ee2a5fe0d9dca12c5fdf55764e8dfc0405",
+    "docs/features/resolved-features/folder-configuration-frontier-checkpoint.json": "817abd6345b3f87e9e40f0ebbb04c003e9450f0ee3c7b7d69dce551b60e1ff89",
+    "docs/features/resolved-features/folder-configuration-checkpoint.md": "3a6010b7855864c4085756aa316afb1d2f2ff6ddfa19773ae2de32591535dce2",
+    "docs/features/resolved-features/folder-configuration-schema-snapshot.md": "fe6e22559dcdde55c812675efc2b182df787751e0d5a474199cc428687c1c2c7",
+    "docs/features/resolved-features/folder-configuration-schema-reference.json": "a546240b67f137f5db9e0b8938a1bd6751f328e5b8879e53fd728dfbc5c06e89",
+    "docs/features/resolved-features/publication-plan.md": "e5dbd66d389dfa20d107f1bc66173414733855a2e62bb4630c4e2301b1ff4795",
+    "docs/features/resolved-features/investigation.md": "cf077da85da67c74e6771d2503f20eaeb4662ad6b958e779ba0834ebe9cebc62",
+    "docs/features/model-archives/primitive_inventory.py": "1bb8e6228afad4896c3af3664496dd0adafb70b962c3c7c80fa0e7d26d60bad5",
+    "target/folder-configuration-final-tests.log": "ddf8356eaa7edfb0cd8def147631ffad13b2e46b500532f17f9896111d0e07c1",
+    "target/folder-configuration-python-tests.log": "bd017069c4af12af0a1459fb446dd53c755ee74d3a8fe95d44f9d3c8abd7ece7",
+    "target/folder-configuration-cargo-test.log": "aaf54062638dda35265c953c1b7259b90af659e5edfdfb2d6d8a66984840605a",
+    "target/folder-configuration-frontier.log": "dca386448f6d7b903dc9e3420c87eec73000aea02b1385622258dc258222759d",
+    "target/folder-configuration-repeat.log": "020d0519a631c7a712b07e78dd6f96695d542a479692a4a67022c338a4637f80",
+    "tests/fixtures/resolved-features/cut-list-sort-edited-primitives.tsv": "5157fb7c3880c70494aac6265b4daabf8f4fdbcbf6e9608b726c254553f08de8",
+    "tests/fixtures/resolved-features/cut-list-sort-edited.bin": "4d53c41f89dee6ce58f19ae57c2d47f2b8c23e58d227337f04e0aee01d0f1c8b",
+    "tests/fixtures/resolved-features/cut-list-sort-primitives.tsv": "68f3c747a8f0451f0b8de2f373489945e167cf79dbe745941215c0fd3e7e394e",
+    "tests/fixtures/resolved-features/cut-list-sort.bin": "a83f5bab5947428be2eeb0adcd97794e0ee4fa28cb33e84bc2c87dec52bd6d2f",
+    "tests/fixtures/resolved-features/face-color-configuration-primitives.tsv": "fb740dd1a291d865fd9a4145239297e532c8605ac75a5fea4cb65474eb12fe2a",
+    "tests/fixtures/resolved-features/face-color-configuration.bin": "56b86745cc156d6f1faafead642bf3e3e1546246b54816c28cdf2a1fcc3f9a52"
+  }
+}

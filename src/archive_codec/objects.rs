@@ -3,6 +3,10 @@ use std::collections::BTreeMap;
 use super::{ArchiveCursor, malformed};
 use crate::Result;
 
+#[path = "object_snapshot.rs"]
+mod snapshot;
+pub(crate) use snapshot::ObjectMapSnapshot;
+
 /// Nonzero persisted identity in a native MFC object map.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord)]
 pub struct ArchiveMapIndex(u32);

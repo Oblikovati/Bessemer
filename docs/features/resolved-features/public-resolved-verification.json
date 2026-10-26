@@ -1,0 +1,49 @@
+{
+  "scope": "Public read/write checkpoint; editing/history and full CI remain required before integration.",
+  "pr_gate": {
+    "passed": true,
+    "library_passed": 413,
+    "external_ignored": 3,
+    "doctests_passed": 255
+  },
+  "final_checks": {
+    "public_integration_passed": 4,
+    "example_passed": 1,
+    "corpus_unit_passed": 1,
+    "all_target_clippy_warnings_denied": true
+  },
+  "dead_code_warnings": 0,
+  "corpus": {
+    "accepted": 388,
+    "total": 906,
+    "complete": false
+  },
+  "sha256": {
+    "src/model_archives/resolved_archive.rs": "eb757f9faf11146ed812a8033a112674dba529b76a06b371ed586cf789d329e7",
+    "src/model_archives/resolved_features.rs": "f4dd8945f062cdd843e8c463e3f175591356fb296be0494e876920080793c7c5",
+    "src/model_archives/configuration_manager.rs": "94d94dd835612d8bf41b7c25204239dc7d66e29aac34b050c7070bfcb96ccd9a",
+    "src/model_archives/validation.rs": "835307d67036050f610231b19399e68e4d09bd5d32bd5b1da21ffaa38e12cac1",
+    "src/model_archives/mod.rs": "b55c54e3d4abb0a2b1144a6c972d70399f74d4154863e9a0ac684912824c1699",
+    "tests/resolved_feature_archive.rs": "99f310644d68f402c7fb7f11029552dfd1c13ad346353fa2ee6d6852d4304f2e",
+    "tests/resolved_features/native_corpus.rs": "a8b480737313ec7381ea237add058e04363632b700e52e9199dfad064726b471",
+    "tests/resolved_features/manager_oracle.rs": "94de82703a04eaa25edd4076454ecff1bf8974990521addd5005caac434bb96d",
+    "examples/rebuild_part_resolved_features.rs": "c24eaaed169a07402e8c94a14e3aedea20f5383ea7926ed2498a8b59673d9887",
+    "README.md": "c91adf9de14a3bcb246e55dd6c5eb5f738caa38cad6f63b3efbb02e2ccbeff46",
+    "CHANGELOG.md": "1a64e9ea4f77ea329e24d904ffb24746819816367fc9976287b6d20932d1e237",
+    "docs/features/resolved-features/public-api.md": "35f9e0258aadf5f79b523e7ec294c487a0f3cfd19e798db217d2bc02f387f4ba",
+    "docs/features/resolved-features/publication-plan.md": "8c77e9a05a77e8c270c98210dc672156d439234b865ed8e82af43d83a8b0c6e4",
+    "docs/features/resolved-features/public-resolved-checkpoint.md": "ddb14515c3b560dc1f5f3ab03e9427b0812a084d3911aa9d5c00f27f48df5f90",
+    "docs/features/resolved-features/public-resolved-frontier-checkpoint.json": "d758fe425d497904c0e6b5c20785a4f1c3d7be069f05291477ae258481d9c4df",
+    "docs/features/resolved-features/public-resolved-accepted-reference.json": "f734faac08d128fbd208087fc8a661fed5bfc87f55d3a955871804e6c4729978",
+    "docs/features/resolved-features/investigation.md": "f47facb2c35c1cfa115428b6c4f2caf6b217a1d88d73f4e0574bb80cb61e288d",
+    "target/public-resolved-pr-gate.log": "349ebb1fd09fd95d82239f6a77d25603b7df84c0bac6738e8960c7250fb10479",
+    "target/public-resolved-final-clippy.log": "7143f321f6a993a7df059ac2735e4bef0ccaae181af895bcc18a54442796b4c2",
+    "target/public-resolved-final-tests.log": "36132ede46e2981d40af8a1c494c0e300a4d3a35b9fc0ffa5825a47d99014399",
+    "target/public-resolved-corpus-unit.log": "31e76e3a4381446e6f07ebd798af3560677a1ec8d56e074438f38f32fdfba802",
+    "target/public-resolved-example.log": "657fbd476fd601419fc249228b6ee03db08afdb8060fe34eb78216a50ec75796",
+    "target/public-resolved-frontier.log": "df54d8950021a58dd573e6a6c317642a7fa68007ee7a301bcad335d82dd2934c",
+    "target/public-resolved-repeat.log": "f9ecff477df908bb42fbd4b11252d4b5f16885ad0fb2dc639cc3640a1564c1b3",
+    "tests/fixtures/blank-part.SLDPRT": "b52e080ba2cc64d1d07ed28306f27281b07521aef550bc0c7fea8cd54be2b276",
+    "target/public-rebuilt-owned-part.SLDPRT": "b52e080ba2cc64d1d07ed28306f27281b07521aef550bc0c7fea8cd54be2b276"
+  }
+}

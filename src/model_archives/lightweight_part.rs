@@ -17,7 +17,7 @@ pub(super) fn appearances(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader)
     Ok(())
 }
 
-const BODY_CLASSES: &[&str] = &[
+pub(super) const BODY_CLASSES: &[&str] = &[
     "moCompAtomBody_c",
     "moCompSolidBody_c",
     "moCompSurfaceBody_c",

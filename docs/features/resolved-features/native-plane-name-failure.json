@@ -1,0 +1,88 @@
+{
+  "issue": 56,
+  "application": "SOLIDWORKS 2026",
+  "revision": "34.2.1",
+  "operation": "Silent read-only open of unique owned copies; close only verified owned paths; no save or rebuild.",
+  "accepted_plane_rename": false,
+  "existing_documents": {
+    "before": 3,
+    "after": 3,
+    "unchanged": true
+  },
+  "results": [
+    {
+      "case": "baseline",
+      "errors": 0,
+      "warnings": 0,
+      "features": 17,
+      "bodies": 0,
+      "configurations": 1,
+      "expectedPlane": "Front Plane",
+      "observedPlane": "Front Plane",
+      "planeMatched": true,
+      "sourceSha256": "B52E080BA2CC64D1D07ED28306F27281B07521AEF550BC0C7FEA8CD54BE2B276",
+      "loadedNames": [
+        "Comments",
+        "Favorites",
+        "History",
+        "Selection Sets",
+        "Sensors",
+        "Design Binder",
+        "Annotations",
+        "Surface Bodies",
+        "Solid Bodies",
+        "Lights and Cameras",
+        "Markups",
+        "Equations",
+        "Material <not specified>",
+        "Front Plane",
+        "Top Plane",
+        "Right Plane",
+        "Origin"
+      ],
+      "oldPlaneFound": true
+    },
+    {
+      "case": "plane-edited",
+      "errors": 0,
+      "warnings": 0,
+      "features": 17,
+      "bodies": 0,
+      "configurations": 1,
+      "expectedPlane": "Bessemer Plane \u03a9",
+      "observedPlane": null,
+      "planeMatched": false,
+      "sourceSha256": "73343D4BB81A4B62E99C45803371EB08BD2F94F36DF6522973993B6FA43BC25F",
+      "loadedNames": [
+        "Comments",
+        "Favorites",
+        "History",
+        "Selection Sets",
+        "Sensors",
+        "Design Binder",
+        "Annotations",
+        "Surface Bodies",
+        "Solid Bodies",
+        "Lights and Cameras",
+        "Markups",
+        "Equations",
+        "Material <not specified>",
+        "Front Plane",
+        "Top Plane",
+        "Right Plane",
+        "Origin"
+      ],
+      "oldPlaneFound": true
+    }
+  ],
+  "raw_report_sha256": "847f9754317ef8ccc81eebb7d94af7b28282a33c835566c3c29c12ac85554c0a",
+  "first_failure_report_sha256": "28358975dac470218decaa51114025866c586409c9ff7b4ebd4fc0c702bef799",
+  "probe_script_sha256": "f997403ef9111d34a7f82d26ca011c9863d665ab259c8e15f384c0bdc6025208",
+  "emission_test_sha256": "E733C97E0665901213B58EDB395C170C054D9F3955FBE0AAD52494A3CB0A99BB",
+  "approved_bridge_sha256": "e3e2d8b544e2f0de866a6900b47f35c43730d15dd5655a457899ec4642c5658b",
+  "limitations": [
+    "Both files opened with no errors or warnings; edited stored plane name did not appear in the native feature tree.",
+    "The authoritative naming/loading path remains unresolved; no cache patch or parser fallback was introduced.",
+    "No geometry certification, save or rebuild was performed."
+  ]
+}

@@ -43,7 +43,7 @@ impl PartConfigurationArchive {
     }
 }
 
-fn charge_object(coverage: &mut ModelArchiveCoverage, value: &ModelFieldValue) {
+pub(super) fn charge_object(coverage: &mut ModelArchiveCoverage, value: &ModelFieldValue) {
     let ModelFieldValue::ObjectTag(tag) = value else {
         return;
     };

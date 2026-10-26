@@ -1,4 +1,5 @@
 //! SolidWorks display-list archive codecs, under development for clause 13.
+mod scene_adapter;
 mod transform;
 use crate::archive_codec::{transform_codec, transform_types};
 

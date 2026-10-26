@@ -1,0 +1,45 @@
+{
+  "scope": "Public supported complete read/edit/write operations; full schema parity and CI matrix remain pending.",
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0",
+  "base_revision": "d9d4147dc3d990da82b5e7ac2e1887a143c2d528",
+  "pr_gate": {
+    "passed": true,
+    "library_passed": 413,
+    "external_ignored": 3,
+    "doctests_passed": 265,
+    "warnings": 0
+  },
+  "public_integration_passed": 9,
+  "examples_passed": 2,
+  "corpus": {
+    "accepted": 388,
+    "total": 906,
+    "complete": false
+  },
+  "sha256": {
+    "src/model_archives/resolved_archive.rs": "56a1566c8eeea4421acf33b94700037281d60dd91eca21fa74cc1b5e4fe94f63",
+    "src/model_archives/resolved_edit.rs": "5bac5f6b6f2de9afa4f3ce4784d01f9ea80634733e617442ea1fe844c2d5edd9",
+    "src/model_archives/edit_history.rs": "2816abeddbeee45807e9dc116c96be45ef85b724c04b7ef6ada41938ce6b3718",
+    "src/model_archives/edit_types.rs": "10baf169c2406a944bb39d413576d8ff697b4d1cf58b22ba3ecf82763ef1a7d7",
+    "src/model_archives/configuration_manager.rs": "d413a1dbb691b1e20328b8e7725ad6f173cd8f5fb1500f3d81e2512f7d8057df",
+    "tests/resolved_feature_archive.rs": "2e3b9c2983ab4679e522b9e28040e73a4765057b1f8dab873fa4860d14750f2d",
+    "examples/edit_resolved_plane_token.rs": "8d69e3acbc2c9b0aa1d1a4424b2e9b5140dea94eb80df05b98a7382c9ddfc05d",
+    "docs/features/resolved-features/public-api.md": "7cd94d9ab3f4b5c5a5072e8828bd350f5baf69d55c16daa08ab91f5e0738f01d",
+    "docs/features/resolved-features/publication-plan.md": "03d230d4e8af9ae750eb2386fd2639976dd0dd024b564125f9a6eaaac32e0cac",
+    "docs/features/resolved-features/public-edit-checkpoint.md": "9ed27a60e4b87617bcf5cc09d2a40cf863eaa3836e9975dc891c476defab87f0",
+    "docs/features/resolved-features/public-edit-reference.json": "e6d5fb212e27aeb403fec8430af07655635ef6d01a931a9874900d6fb1a29674",
+    "docs/features/resolved-features/public-edit-accepted-reference.json": "d40b467d717ce60ee1c3fa008f993540a3d730817eaa4f2aa5de35d7709da3ad",
+    "docs/features/resolved-features/public-edit-frontier-checkpoint.json": "6baf88f0f113971af64840981cf5be1303772f2d5c104815153bacf772bbc57b",
+    "docs/features/resolved-features/investigation.md": "9ce28fe16dbbc2a4880009b1a7cdfb08d435f9d800303f45d092e17c0d7bdde2",
+    "target/shared-field-history-tests.log": "4d1fc59af0134b5bd77d60e2748b6eaad9072d3bbbbe51646169ffc41b488491",
+    "target/public-resolved-edit-final-tests.log": "0df7c9d8cca884cd8467f1db82115cef6d1e352be64f675a16a7ad88c957ce78",
+    "target/public-resolved-edit-pr-gate.log": "acaa27fb1b384e5f2fecc9a47f855f9f7ebb5f7f6ffa660ab23ddacc0a648173",
+    "target/public-resolved-edit-example.log": "6f8fe1f9898faa9f2c5366f52ddccf2839b52e7e8ea018e21cdae14003923421",
+    "target/public-resolved-edit-example-repeat.log": "2008fa64e7aaaae504ea6c2b6c69a344e11fcb237afa2cb840dfe60a5841d927",
+    "target/public-edit-frontier.log": "cf3281a49a963d9cbd02cda81b9fcca577545f9a01a5ebecc90f00aaf06fd1c3",
+    "target/public-edit-repeat.log": "0d074f6c189e0b2ad44a8f65eb459226bc8527d22532bcb8bd6961991fd0c5ba",
+    "target/public-plane-token-edited.SLDPRT": "73343d4bb81a4b62e99c45803371eb08bd2f94f36df6522973993b6fa43bc25f",
+    "target/public-plane-token-repeat.SLDPRT": "73343d4bb81a4b62e99c45803371eb08bd2f94f36df6522973993b6fa43bc25f"
+  }
+}

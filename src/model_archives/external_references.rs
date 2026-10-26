@@ -13,6 +13,19 @@ pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
     Ok(())
 }
 
+pub(super) fn shared_file(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    reader.require_ordinary_part()?;
+    for rule in crate::header::external_field_rules()
+        .iter()
+        .take_while(|rule| rule.name != "flags")
+    {
+        if (rule.enabled)(reader.version()) {
+            field(reader, map, rule)?;
+        }
+    }
+    Ok(())
+}
+
 fn field(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader, rule: &FieldRule) -> Result<()> {
     let path = field_path(rule.name);
     match rule.kind {

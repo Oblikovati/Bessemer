@@ -3,6 +3,9 @@ use super::{ModelDecoder, ModelObjectRole, features, model_lists, sketch_arrays}
 use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
 
+// #59: planar surfaces supply their concrete keeper through the inherited nonnull base pointer.
+const ID_KEEPERS: &[&str] = &["moIdKeeper_c", "moPlanarSurfIdKeeper_c"];
+
 pub(super) fn header(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     reader.scope("model_feature", |reader| model_feature(reader, map))?;
     for label in ["array_360", "array_380"] {
@@ -11,11 +14,7 @@ pub(super) fn header(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> R
         })?;
     }
     if reader.u16("has_id_keeper")? != 0 {
-        reader.required_object(
-            "id_keeper",
-            map,
-            ModelObjectRole::Declared(&["moIdKeeper_c"]),
-        )?;
+        reader.required_object("id_keeper", map, ModelObjectRole::Declared(ID_KEEPERS))?;
     }
     Ok(())
 }
@@ -40,7 +39,7 @@ const ATOM_STAGES: &[(&str, super::sketch_geometry::DirectReader)] = &[
     ("atom_late", late),
 ];
 
-fn nullable_array(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+pub(super) fn nullable_array(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     if reader.i32("presence")? != 0 {
         reader.scope("array", |reader| {
             model_lists::pointers(reader, map, "items", ModelObjectRole::Any)
@@ -62,7 +61,7 @@ fn references(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<(
     Ok(())
 }
 
-fn chooser(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+pub(super) fn chooser(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     if reader.u16("presence")? == 0 {
         return Ok(());
     }
@@ -184,6 +183,11 @@ pub(super) const CLASSES: &[&str] = &[
     "Fillet_c",
     "VarFillet_c",
     "moLPattern_c",
+    // #60: both complete readers use this inherited atom-feature owner role.
+    "moPlanarSurface_c",
+    "Chamfer_c",
+    "moPLine_c",
+    "moScale_c",
 ];
 
 pub(super) fn read(
