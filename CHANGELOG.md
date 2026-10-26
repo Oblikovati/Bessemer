@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added ordinary part detail-folder reading, editing and writing with shared graphics bucket and display-item codecs, typed BOM references and independent reconstruction fixtures. (#54)
+
 - Added complete supported ordinary part resolved-feature reading, isolated edits and writing with explicit inherited model context, exact stored-field coverage, revision-bound history and geometry exclusions. (#54)
 
 - Added complete ordinary modern-part configuration reading, typed construction, isolated edits and writing with explicit header/kernel context, exact stored-schema coverage and revision-bound field history. (#44)

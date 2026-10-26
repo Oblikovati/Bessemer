@@ -1,0 +1,46 @@
+{
+  "scope": "Behavior-preserving bucket/context extraction before detail-folder implementation.",
+  "base_revision": "3ee6e4b1b158fd76259f8ae084ddc8a74d2d4597",
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0",
+  "focused_tests_passed": 51,
+  "pr_gate": {
+    "passed": true,
+    "library_passed": 413,
+    "doctests_passed": 265,
+    "external_ignored": 3,
+    "warnings": 0
+  },
+  "corpus": {
+    "cases": 906,
+    "accepted": 388,
+    "rejected": 518,
+    "all_outcomes_and_causes_unchanged": true,
+    "complete": false
+  },
+  "sha256": {
+    "src/archive_codec/context_reader.rs": "158e8b9a7a4025c390aff2b14f941aadf6ca9fbc2e16f91393500735f3e88e4b",
+    "src/archive_codec/bucket_reader.rs": "a87bbe9b61f08118f0f4e43a0266cbac1f24a3720bc532541c091d3e72230d94",
+    "src/archive_codec/bucket_envelope.rs": "4e77d7624c546a59e7bf23573fb646d2715cbebcac5c5239f171c9347ce8e77b",
+    "src/archive_codec/bucket_polygons.rs": "dc1979eac9c3f935ceea9532c8efad9554b4998379fa02edfdc3ea7c80a50075",
+    "src/archive_codec/bucket_legacy_polygons.rs": "ca610cf1ff726829b7c89a8150e4d3e6cfeddde68e6d230035056864e8439875",
+    "src/archive_codec/line_style.rs": "da69a55f8b591203eab1476e981b12ed46042ec2c4ce17cf6eb1e7c7cb1e561f",
+    "src/archive_codec/scene_walls.rs": "6d5b12f7e9f0e1f72017ced8274d328aeceb8994f3ce9ecb1b501011e499c208",
+    "src/archive_codec/scene_floor.rs": "1d327764a189b22d10e07dda472d15187b80b0ff721947cbe7bd1d5b82bbc548",
+    "src/display_lists/bucket_adapter.rs": "5778197c449620967c483eaac2d4bc5c2adac937edeb1d30de347787a519e54c",
+    "src/display_lists/modern_bucket.rs": "029f8d4bdc53c0813afa6aea8303bed25e3e1bf0f104bc7838419bc6f0fb2e82",
+    "src/display_lists/modern_bucket_poly.rs": "d526bb23e9aa77140e9cb6f4c8861ede9388007c5213815df26900a09773768d",
+    "src/display_lists/modern_item_style.rs": "e05908ae3146669523432c2c73e6d059da9b143c5f6c149713288af5c3d3f9b3",
+    "src/display_lists/scene_adapter.rs": "96c5e032d298f0d155e5d1c1d198da7eabaafd27b05528576796e682edf3b493",
+    "src/model_archives/object_body.rs": "45dabb378b9bc8dee5bb73de466532f5d4e8f2ece687c6113a1f8827413a1133",
+    "src/model_archives/units.rs": "f41b4aefd493f3a9058575dbdc7c7d3edb8d90efa3a755bac4e3f1e15c499cbf",
+    "src/model_archives/scene_adapter.rs": "6d7197ca4bf197980a43f724bf9698a9ec22b3f68632da3b84bdcf076b84673d",
+    "docs/features/detail-folders/README.md": "1a7acb218c82c2752a9a9140780e9f84916fdad5351da19cdd7889843109fea1",
+    "target/bucket-envelope-tests.log": "4345aa8f09ce0901d4eaeb2f5d8dfbdcb8ea5df7fdd7f18d1643f41950cc82a1",
+    "target/shared-bucket-polygon-tests.log": "5e7e15dcd10ce0f08d007c25d8342d5aaf92c27c1e58e634013dd622bd4b6330",
+    "target/bucket-refactor-pr-gate.log": "6b47ed2aa3f1d6bef88d383cf40166f30a23ece8bcc52ad806898f7399b8605e",
+    "target/public-edit-frontier.log": "cf3281a49a963d9cbd02cda81b9fcca577545f9a01a5ebecc90f00aaf06fd1c3",
+    "target/bucket-refactor-frontier.log": "495baf8c25a512bd83047ea7d60691728dda6bb97032537f97c742dbe5ea7290",
+    "target/bucket-refactor-repeat.log": "cfc1bebd423a76292febbcd707a518979531a9714ad031899cb8061bc4336e2c"
+  }
+}

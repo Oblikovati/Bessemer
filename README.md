@@ -101,7 +101,9 @@ records independent fixtures and reconstruction of 906 native configurations.
 
 The [resolved-feature API](docs/features/resolved-features/public-api.md) reads
 and edits supported complete separate feature streams with their inherited
-model map, CMgr helper state and revision-bound field history. Unsupported layouts fail explicitly; full
+model map, CMgr helper state and revision-bound field history. Supported
+[detail folders](docs/features/detail-folders/README.md) include their graphics
+buckets and display-item payloads. Unsupported layouts fail explicitly; full
 SolidWorks schema parity remains in progress.
 
 
