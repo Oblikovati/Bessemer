@@ -23,6 +23,7 @@ pub(super) fn read(
         return result;
     }
     match class.name.as_str() {
+        "moDome_c" => super::dome_records::read(reader, map),
         "moExtruRefSurface_c" => super::extruded_surfaces::read(reader, map),
         "moOrderedFaceArray_c" => super::extruded_surfaces::ordered_faces(reader, map),
         "moExtruRefSurfIdKeeper_c" => super::extruded_surfaces::keeper(reader),

@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added ordinary part dome reading, field editing and writing with independent nullable pointers, tagged lists, shared geometric references and complete-stream edit fixtures. (#54)
+
 - Added ordinary Toolbox specification arrays and items with preserved shared references, nonfinite floating-point bits, raw strings and independently verified Unicode edits. (#54)
 
 - Added ordinary part sweep and sweep-cut reading, field editing and writing with versioned controls, conditional dimensions, shared references and complete endpoint, wire-contact and loft-synchronization dependencies. (#54)

@@ -95,6 +95,7 @@ mod display_object;
 mod display_placement;
 mod display_records;
 mod display_suffixes;
+mod dome_records;
 mod entity_representations;
 mod environment;
 mod explosion;

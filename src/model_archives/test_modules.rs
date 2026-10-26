@@ -93,6 +93,9 @@ mod direct_collection_tests;
 #[path = "../../tests/model_archives/display_dimensions.rs"]
 mod display_dimension_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/domes.rs"]
+mod dome_record_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/embedded_title.rs"]
 mod embedded_title_tests;
 #[cfg(test)]

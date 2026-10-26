@@ -137,6 +137,9 @@ dimensions, versioned controls and complete shared reference dependencies.
 [Toolbox specifications](docs/features/configuration-toolbox/README.md) retain
 shared metadata items, raw string framing and exact floating-point bits.
 
+[Dome features](docs/features/domes/README.md) preserve nullable dimensions,
+tagged lists, shared geometric references and raw signed words.
+
 
 This library is named after Sir Henry Bessemer (1813–1898) an English engineer, inventor, and entrepreneur 
 best known for developing the Bessemer process, the first inexpensive industrial method for the mass production
