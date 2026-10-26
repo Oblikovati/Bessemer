@@ -24,7 +24,7 @@ fn pattern_direction_accepts_only_the_documented_line_family() {
             reader.object(
                 "line",
                 map,
-                ModelObjectRole::Declared(super::linear_patterns::LINE_REFERENCE_CLASSES),
+                ModelObjectRole::Declared(super::geometric_references::LINE_REFERENCE_CLASSES),
             )
         });
         assert_eq!(result.is_ok(), accepted, "{name}: {result:?}");

@@ -2,6 +2,8 @@ use super::{ModelDecoder, ModelObjectRole, kernel_frames, model_lists, model_ref
 use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader, vectors::double_vector};
 
+pub(super) const LINE_REFERENCE_CLASSES: &[&str] = &["moLineRef_w", "moTempAxisRef_w"];
+
 pub(super) const SURFACE_CLASSES: &[&str] = &[
     "moSurfaceRef_w",
     "moGeneralSurfRef_w",
