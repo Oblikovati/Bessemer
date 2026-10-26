@@ -1,0 +1,61 @@
+{
+  "baseline_revision": "bf8d61cba55d629617f3c729ff8cca602531345f",
+  "scope": "Uncommitted private complete owned singleton CMgr plus inherited-context foundation; separate feature-stream caller incomplete.",
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0",
+  "checks": {
+    "focused_tests_passed": 26,
+    "manager_prefixes_rejected": 1968,
+    "reference_primitive_reads": 504,
+    "manager_bytes_checked": 1968,
+    "Python_generator_tests_passed": 1,
+    "existing_body_feature_regressions_passed": 3,
+    "public_configuration_regressions_passed": 10,
+    "full_gate_executed_for_this_work": false
+  },
+  "limitations": [
+    "CMgr supports the verified version-19000 singleton graph only.",
+    "Unsupported populated branches fail explicitly; older/multi-configuration shapes remain parity work.",
+    "Complete separate resolved-feature read/construct/edit/write, required MBSM tail and corpus gate remain incomplete.",
+    "Foundation stays uncommitted until its complete caller is implemented."
+  ],
+  "source_sha256": {
+    "docs/features/resolved-features/freeze_manager_context.py": "ea94979a93d97f4e9f4d54b39b9e0f795045a73314ab96f746c9b8b0efdbd61d",
+    "docs/features/resolved-features/test_manager_oracle.py": "c2f78cd6dcd343e259c207cd3e52a37281941f62c71a3a121001a234713fd75a",
+    "src/archive_codec/mod.rs": "63b5ed2cdf9bc3c64cf9b971e8d4735391f972246dfd1e7f514ad965cf0303cc",
+    "src/archive_codec/object_snapshot.rs": "daafb65fc99df02a63c4a499ec548331ed21dd9f076ee7a706642b5f2fb0a429",
+    "src/archive_codec/objects.rs": "1449f75dcb5cc515969a2e736f8d02bf9041464e5cf3cf731f94f5bde0b29531",
+    "src/model_archives/configuration_base.rs": "45e82ef866a63bc11ce5f7d6117ff07ddf0788007dd09f747ff24c863e9f1ded",
+    "src/model_archives/configuration_io.rs": "2560b72478d4ee9e32ad79558e589b6f63dfebf6f472be31ee3ac0c8baa00544",
+    "src/model_archives/configuration_manager.rs": "9e5e9daf08a8e036eeee275aae8dc7ca0ae75bfc4dc465bc478ea614d7c47b4c",
+    "src/model_archives/configuration_suffix.rs": "af4319efba389313bc5163560f57641eb1aeb4c33c939f4938d0f7306e432d14",
+    "src/model_archives/features.rs": "c676cfd444b7c77e1349badf11a74bfa7c39d9f56f6f1b889323c0441165e22f",
+    "src/model_archives/manager_tail.rs": "37385e7574fd70279bfbcc77b640703e54c1b71c1cef57994fa1d197064d5479",
+    "src/model_archives/mod.rs": "5256bd683fce63bc8f3a5112696169798feac5da9ed6cb1c94b385699cd34b61",
+    "src/model_archives/object_body.rs": "47f0707d3e0cecbb864df307792ce3edcf666e925ee8ed33be6ae37193b4b883",
+    "src/model_archives/object_values.rs": "ae99a3d81cc23309f74c8be10b7efdaf8061cd642f795f269e58a6ea1a2a2c43",
+    "src/model_archives/part_archive.rs": "8021db7dd0507c80d8a8e7a41f68efe31c579c0cb10b7d4a77abf042677a97a6",
+    "src/model_archives/part_tail.rs": "ad5f217c6d8772bc2d0d54e9303d2cfc0906691416249e59b4c7d1a193cfbe3f",
+    "src/model_archives/reader.rs": "a9c82b38777fc81a1559cd02e066ee35992f0c6f7c98cafc79bd7a464538fac4",
+    "tests/model_archives/object_values.rs": "9b942d8eb1f72fe82e833922c4f352a03ee543f47bc6e5588b06b8b5f6e2eb69",
+    "tests/resolved_features/configuration_io.rs": "fb54826915c5bedb38299a6806ad9becac77d1b355e53a0fbbf62c9f8f005fa3",
+    "tests/resolved_features/context_snapshot.rs": "3c0c6a2263fa7b39fa5cdee4290298d5c6c64bcb8c3516df931a518d8f6782b0",
+    "tests/resolved_features/manager_context.rs": "4ded2293bd1ee73e28aacc82c32a4cf2852abdec69c78c656f3056cfaef59d33",
+    "tests/resolved_features/manager_oracle.rs": "551d619c06e2fa612b10aab0320deff73b3309570c768bcbed87edde08e62ef3"
+  },
+  "evidence_sha256": {
+    "tests/fixtures/resolved-features/owned-manager.bin": "f6387400850ae80dedbc5d2f5dc77fb1dd38ad4b8afb1e6fb2ffc2ad35edb27d",
+    "tests/fixtures/resolved-features/owned-manager-primitives.tsv": "eedd19a44ffd263cfbab1ed7243efb0de594f57a807d08ec24272867934a7bbc",
+    "docs/features/resolved-features/owned-manager-reference.json": "d1fc875e704d827a19ad6968a7bfb34fe39de2ea829d9a36474fba1f86da2e93",
+    "docs/features/resolved-features/manager-schema-snapshot.md": "8463b093581849b579f6256a1cf50d29d384c542ad44e955f85342c416ed8c19",
+    "docs/features/resolved-features/manager-schema-reference.json": "b2315ea50b3ec3755faab26dc43f98573fbaee2e5b923730528098ea17ec5bbd"
+  },
+  "log_sha256": {
+    "target/resolved-manager-focused-final.log": "5592bfe6838b527a8c3c11316d6bcd5a749262a0d66e3b29ffcb83a425831e6c",
+    "target/resolved-manager-python-tests.log": "6ba17f29cbcf87012b90adb4f2f02a741e869fac8301920a96e85d49732b5b3c",
+    "target/resolved-existing-feature-regressions.log": "8f4983da5fbf7e137fea7d5949481e54e5de373c2bb20d73774a25b0202c8a83",
+    "target/resolved-public-configuration-manager-regression.log": "bd0d372e42b82735d6ba0cbf9c8d1bc2364d33b246ddf6e94e3c0f7653b783da"
+  },
+  "historical_checkpoint": true,
+  "superseded_by": "owned-feature-verification.json"
+}

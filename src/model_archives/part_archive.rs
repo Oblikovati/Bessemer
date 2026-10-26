@@ -7,7 +7,7 @@ use super::{
     reference_tail, resolved_start, shared_tail, views,
 };
 use crate::Result;
-use crate::archive_codec::ObjectReader;
+use crate::archive_codec::{ObjectMapSnapshot, ObjectReader};
 use crate::header::{ArchiveVersion, DocumentHeader};
 use std::sync::Arc;
 
@@ -20,6 +20,7 @@ pub(super) struct ParsedPartArchive {
     version: ArchiveVersion,
     limits: ModelFieldLimits,
     kernel: Option<super::kernel_frames::CompressedKernelContext>,
+    pub(super) object_map: ObjectMapSnapshot,
 }
 
 #[cfg(test)]
@@ -54,6 +55,7 @@ pub(super) fn read_with_kernel(
         version,
         limits,
         kernel,
+        object_map: map.into_snapshot(),
     })
 }
 

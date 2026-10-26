@@ -3,6 +3,21 @@ use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader, visibility};
 
 pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    read_with_children(reader, map, true)
+}
+
+pub(super) fn without_children(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+) -> Result<()> {
+    read_with_children(reader, map, false)
+}
+
+fn read_with_children(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+    children: bool,
+) -> Result<()> {
     reader.require_ordinary_part()?;
     reader.scope("node", |reader| node::lightweight(reader, map))?;
     if reader.i32("has_merged_feature_list")? != 0 {
@@ -15,7 +30,9 @@ pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
         map,
         ModelObjectRole::Declared(&["moVisualProperties_c"]),
     )?;
-    reader.scope("feature_list", |reader| model_lists::nodes(reader, map))?;
+    if children {
+        reader.scope("feature_list", |reader| model_lists::nodes(reader, map))?;
+    }
     initial_fields(reader)?;
     property_fields(reader, map)?;
     final_fields(reader)

@@ -1,4 +1,4 @@
-use super::{archive_decode::DisplayDecoder, archive_error::invalid};
+use super::archive_decode::DisplayDecoder;
 use crate::Result;
 pub(super) use crate::archive_codec::vectors::double_vector;
 
@@ -13,55 +13,7 @@ pub(super) fn read(archive: &mut DisplayDecoder<'_>) -> Result<()> {
     archive.i32("floor_orient")?;
     archive.transform("required_xform")?;
     archive.cobject("floor_selection")?;
-    floor(archive)
-}
-
-fn floor(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    archive.i32("floor_dir")?;
-    archive.f64("floor_offset")?;
-    archive.i32("floor_offset_dir")?;
-    archive.f64s(&["floor_rotation", "env_rotation"])?;
-    archive.i32("transparent_shadow_floor")?;
-    archive.f32("floor_reflectivity")?;
-    archive.i32s(&[
-        "resize_automatic",
-        "ambient_occlusion",
-        "background_fit_to_camera_fov",
-    ])?;
-    if archive.context.version.value() > 0x1211 {
-        archive.i32("flags")?;
-    }
-    historical_floor(archive)?;
-    field_of_view(archive)
-}
-
-fn historical_floor(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    let version = archive.context.version.value();
-    if version > 0x1827 {
-        archive.i32("flatten_floor")?;
-        archive.f64("environment_size")?;
-    }
-    if version > 0x1841 {
-        archive.f64("flattened_floor_height")?;
-    }
-    if version > 0x185e {
-        archive.i32("accurate_environment_lighting")?;
-    }
-    if version > 0x186c {
-        archive.transform("flatten_floor_xform")?;
-    }
-    Ok(())
-}
-
-fn field_of_view(archive: &mut DisplayDecoder<'_>) -> Result<()> {
-    if archive.context.version.value() > 0x42ec {
-        archive.f64("hdr_exposure")?;
-        archive.i32("dspbr_tone_map")?;
-    }
-    if archive.context.version.value() > 0x46ba {
-        archive.f64("field_of_view")?;
-    }
-    Ok(())
+    crate::archive_codec::scene_floor::read(archive)
 }
 
 pub(super) fn wall_count(
@@ -69,14 +21,5 @@ pub(super) fn wall_count(
     label: &str,
     minimum: usize,
 ) -> Result<usize> {
-    let stored = archive.i32(label)?;
-    let count = stored.max(0) as usize;
-    if count > archive.cursor.remaining() / minimum {
-        return Err(invalid(format!(
-            "{label} count {stored}; expected nonpositive empty or entries fitting {} bytes",
-            archive.cursor.remaining()
-        )));
-    }
-    archive.entries(count, label)?;
-    Ok(count)
+    crate::archive_codec::scene_data::nonnegative_count(archive, label, minimum)
 }

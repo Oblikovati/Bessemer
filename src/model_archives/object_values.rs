@@ -2,6 +2,44 @@ use super::{ModelField, ModelFieldValue};
 use crate::archive_codec::{ArchiveMapIndex, ObjectRecord};
 use crate::{BessemerError, FailureClass, Result};
 
+pub(super) fn contains_definition(fields: &[ModelField], record: &ObjectRecord) -> bool {
+    let Ok(index) = record_index(record) else {
+        return false;
+    };
+    fields
+        .iter()
+        .any(|field| new_object_prefix(field, index).is_some())
+}
+
+pub(super) fn stored_object_value<'a>(
+    fields: &'a [ModelField],
+    record: &ObjectRecord,
+    label: &str,
+) -> Result<&'a ModelFieldValue> {
+    let prefix = body_prefix(fields, record_index(record)?)?;
+    let path = format!("{prefix}.{label}");
+    count_field(fields, &path).ok_or_else(|| {
+        missing_fact(
+            &path,
+            "missing field; expected a decoded stored field".into(),
+        )
+    })
+}
+
+pub(super) fn stored_object_tag<'a>(
+    fields: &'a [ModelField],
+    record: &ObjectRecord,
+    label: &str,
+) -> Result<&'a ObjectRecord> {
+    match stored_object_value(fields, record, label)? {
+        ModelFieldValue::ObjectTag(tag) => Ok(&tag.record),
+        actual => Err(missing_fact(
+            label,
+            format!("field {actual:?}; expected a decoded object tag"),
+        )),
+    }
+}
+
 pub(super) fn stored_object_integer(
     fields: &[ModelField],
     record: &ObjectRecord,

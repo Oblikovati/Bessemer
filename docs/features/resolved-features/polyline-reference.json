@@ -1,0 +1,36 @@
+{
+  "source_sha256": {
+    "plines.py": "bf640a322ca48930682b94fc0f668fae5b993cd1a640d51942d6ec7a512363de",
+    "bodyfeatures.py": "22390663a3e4f0e1eaca496f06719683a26a2c508fbfeea9a460f9c382847a2b"
+  },
+  "cases": [
+    {
+      "stem": "polyline-base",
+      "bytes": 313,
+      "reads": 96,
+      "sha256": "e0b36121e68105530a718a23e197637bf69988f697295cd7fb73f1018349ab04",
+      "oracle_sha256": "b2844874eb856e3fb4e3be05d8afc6c0ae2f830eb29440d8de68ac8d51acb8b9"
+    },
+    {
+      "stem": "polyline-project",
+      "bytes": 391,
+      "reads": 119,
+      "sha256": "33ce3cf1ec2a69d324b1e1b259bc63c16ae860760cfc56abe3fca272d95a7d6a",
+      "oracle_sha256": "c35f7aa668a2e30f9b5486f0dcb9334786d9124428bb59ffd05366150301aa0d"
+    },
+    {
+      "stem": "polyline-edited",
+      "bytes": 391,
+      "reads": 119,
+      "sha256": "dd7087c9c4a8cdedec73e47d8e6f4e54a175f6ed28433425be6429e3eb8d3d4d",
+      "oracle_sha256": "42148b428430d652d46cc1d525b95d9d7ba75cb5550ceef3862ae55cc28d1648"
+    },
+    {
+      "stem": "polyline-words",
+      "bytes": 31,
+      "reads": 9,
+      "sha256": "24453f84c505078feaa4fafb32c98dc856d202e65c72bf86617050cb990ee863",
+      "oracle_sha256": "e31588b6c592b850b46a183401af74eb9929724d9edafeb574a048862b4c075d"
+    }
+  ]
+}

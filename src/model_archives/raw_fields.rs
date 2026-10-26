@@ -8,6 +8,7 @@ pub(super) enum RawScalarKind {
     Word,
     Signed,
     Unsigned,
+    Single,
     Double,
     Text,
 }
@@ -44,6 +45,7 @@ pub(super) fn scalar(
         RawScalarKind::Word => reader.u16(label).map(|_| ()),
         RawScalarKind::Signed => reader.i32(label).map(|_| ()),
         RawScalarKind::Unsigned => reader.u32(label).map(|_| ()),
+        RawScalarKind::Single => reader.f32(label),
         RawScalarKind::Double => reader.f64(label),
         RawScalarKind::Text => reader.text(label),
     }

@@ -1,0 +1,29 @@
+{
+  "source_sha256": {
+    "modelfeatures.py": "73d00e04d2603d18c63f1fa3ba10874c6efe81891de71528c20470dc3f0260a1",
+    "configurationmanager.py": "9a7bde722004fa3dc866be4299dae6e4d37bc63f6e18c3d3b6ff3041e39f0090"
+  },
+  "cases": [
+    {
+      "stem": "cut-list-sort",
+      "bytes": 42,
+      "reads": 9,
+      "sha256": "a83f5bab5947428be2eeb0adcd97794e0ee4fa28cb33e84bc2c87dec52bd6d2f",
+      "oracle_sha256": "68f3c747a8f0451f0b8de2f373489945e167cf79dbe745941215c0fd3e7e394e"
+    },
+    {
+      "stem": "cut-list-sort-edited",
+      "bytes": 42,
+      "reads": 9,
+      "sha256": "4d53c41f89dee6ce58f19ae57c2d47f2b8c23e58d227337f04e0aee01d0f1c8b",
+      "oracle_sha256": "5157fb7c3880c70494aac6265b4daabf8f4fdbcbf6e9608b726c254553f08de8"
+    },
+    {
+      "stem": "face-color-configuration",
+      "bytes": 33,
+      "reads": 7,
+      "sha256": "56b86745cc156d6f1faafead642bf3e3e1546246b54816c28cdf2a1fcc3f9a52",
+      "oracle_sha256": "fb740dd1a291d865fd9a4145239297e532c8605ac75a5fea4cb65474eb12fe2a"
+    }
+  ]
+}

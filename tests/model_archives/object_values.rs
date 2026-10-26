@@ -159,3 +159,107 @@ fn stored_counts_reject_wrong_extended_field_types() {
         FailureClass::Missing
     );
 }
+
+#[test]
+fn inherited_fields_supply_integer_and_count_facts_without_copying_paths() {
+    let fields = dimension_fields();
+    let reference = alias(original_record(&fields), None);
+    let mut reader = ModelDecoder::new(&[], ArchiveVersion::new(19000), LIMITS)
+        .unwrap()
+        .with_inherited_fields(&fields);
+    assert_eq!(
+        reader.object_integer(&reference, "has_curve_data").unwrap(),
+        1
+    );
+    assert!(reader.finish().unwrap().is_empty());
+    for extended in [false, true] {
+        let fields = list_fields(extended);
+        let reference = alias(original_record(&fields), None);
+        let mut reader = ModelDecoder::new(&[], ArchiveVersion::new(19000), LIMITS)
+            .unwrap()
+            .with_inherited_fields(&fields);
+        assert_eq!(
+            reader.referenced_count(&reference, "items.count").unwrap(),
+            2
+        );
+        assert!(reader.finish().unwrap().is_empty());
+    }
+}
+
+#[test]
+fn local_definition_failures_never_fall_back_to_an_inherited_body() {
+    let fields = dimension_fields();
+    let record = original_record(&fields);
+    assert!(super::object_values::contains_definition(&fields, &record));
+    assert!(!super::object_values::contains_definition(
+        &fields,
+        &ObjectRecord::Null
+    ));
+    let mut reader = ModelDecoder::new(&[], ArchiveVersion::new(19000), LIMITS)
+        .unwrap()
+        .with_inherited_fields(&fields);
+    reader.field("object", fields[0].value.clone()).unwrap();
+    reader
+        .field("object.has_curve_data", ModelFieldValue::U32(1))
+        .unwrap();
+    let error = reader
+        .object_integer(&record, "has_curve_data")
+        .unwrap_err();
+    assert_eq!(error.class, FailureClass::Missing);
+    assert!(error.cause.contains("expected a decoded stored i32"));
+    assert!(reader.finish().is_err());
+}
+
+#[test]
+fn inherited_lookup_keeps_missing_identities_and_invalid_count_types_as_errors() {
+    let mut fields = list_fields(false);
+    let record = original_record(&fields);
+    let missing = alias(record.clone(), Some(1000));
+    let mut reader = ModelDecoder::new(&[], ArchiveVersion::new(19000), LIMITS)
+        .unwrap()
+        .with_inherited_fields(&fields);
+    assert!(reader.referenced_count(&missing, "items.count").is_err());
+    fields
+        .iter_mut()
+        .find(|field| field.path.ends_with("count_word"))
+        .unwrap()
+        .value = ModelFieldValue::I32(2);
+    let mut reader = ModelDecoder::new(&[], ArchiveVersion::new(19000), LIMITS)
+        .unwrap()
+        .with_inherited_fields(&fields);
+    assert!(reader.referenced_count(&record, "items.count").is_err());
+}
+
+#[test]
+fn stored_value_and_tag_lookups_keep_missing_and_wrong_typed_members_explicit() {
+    use super::object_values::{stored_object_tag, stored_object_value};
+    let mut fields = dimension_fields();
+    let owner = original_record(&fields);
+    assert_eq!(
+        stored_object_value(&fields, &owner, "has_curve_data").unwrap(),
+        &ModelFieldValue::I32(1)
+    );
+    assert_eq!(
+        stored_object_tag(&fields, &owner, "has_curve_data")
+            .unwrap_err()
+            .class,
+        FailureClass::Missing
+    );
+    assert!(stored_object_value(&fields, &owner, "missing_member").is_err());
+    assert!(stored_object_value(&fields, &ObjectRecord::Null, "has_curve_data").is_err());
+    let reference = alias(owner.clone(), None);
+    let ModelFieldValue::ObjectTag(mut tag) = fields[0].value.clone() else {
+        panic!("object tag")
+    };
+    tag.record = reference.clone();
+    tag.framing.tag = 2;
+    tag.framing.extended = None;
+    fields.push(ModelField {
+        path: "root.object.test_alias".into(),
+        value: ModelFieldValue::ObjectTag(tag),
+    });
+    assert_eq!(
+        stored_object_tag(&fields, &owner, "test_alias").unwrap(),
+        &reference
+    );
+}

@@ -14,10 +14,39 @@ pub(super) fn read(
         return super::reference_planes::data(reader, map, kind);
     }
     match class.name.as_str() {
+        "moConfigurationMgr_c" => super::configuration_manager::body(reader, map),
+        "moPartConfiguration_c" => super::configuration_base::read(reader, map),
+        "moLinkedAtomIdNode_c" => super::configuration_atoms::linked_node(reader, map),
+        "moCustomPropertyList" => super::custom_properties::list(reader, "properties"),
+        "moSensor_c" => super::sensor_records::read(reader, map),
+        "moAttribute_c" | "moAttributeDef_c" => super::attribute_records::read(reader, map),
+        "moParameter_c" => super::attribute_records::parameter(reader, map),
+        "moScalerParameter_c" => super::attribute_records::scalar_parameter(reader, map),
+        "moStringParameter_c" => super::attribute_records::string_parameter(reader, map),
+        "Chamfer_c" => super::chamfer_records::read(reader, map),
+        "moPlanarSurface_c" => super::planar_surface_records::read(reader, map),
+        "moPlanarSurfIdKeeper_c" => super::planar_surface_records::keeper(reader, map),
+        "moPerBodyChooserData_c" => super::body_chooser_records::chooser(reader, map),
+        "moPerBodyChooserDataWithFileName_c" => {
+            super::body_chooser_records::named_chooser(reader, map)
+        }
+        "moBBoxCenterData_c" => super::body_chooser_records::bounding_center(reader),
+        "swCubicalScene_c" | "swSphericalScene_c" => {
+            super::configuration_scenes::scene(reader, map)
+        }
+        "pwSceneData_c" => super::configuration_scenes::pw_data(reader),
+        "moNativeConfigurationTableFeature_c" => {
+            super::configuration_tables::native_table(reader, map)
+        }
+        "moDesignTableFeature_c" => reader.scope("model_feature", |reader| {
+            super::body_features::model_feature(reader, map)
+        }),
         "moLPattern_c" => super::linear_patterns::read(reader, map),
         "moMatrixIndexHelper_c" => super::linear_patterns::matrix_helper(reader, map),
         "moRefPlane_c" => super::reference_planes::plane(reader, map),
-        "moProfileFeature_c" | "mo3DProfileFeature_c" => super::profile_features::read(reader, map),
+        "moProfileFeature_c" | "mo3DProfileFeature_c" | "moOriginProfileFeature_c" => {
+            super::profile_features::read(reader, map)
+        }
         "moSketchChain_c" => super::profile_chains::chain(reader, map),
         "moOneContour_c" => super::contour_objects::contour(reader, map),
         "moContourChooser_c" => super::contour_objects::chooser(reader, map),
@@ -336,7 +365,30 @@ fn read_scene_body(
     class: &ArchiveClass,
 ) -> Result<()> {
     match class.name.as_str() {
-        "moEnvFolder_c" | "moFolder_c" => super::features::folder(reader, map),
+        "moEnvFolder_c"
+        | "moFolder_c"
+        | "moCommentsFolder_c"
+        | "moConfigCommentsFolder_c"
+        | "moSensorFolder_c"
+        | "moDocsFolder_c"
+        | "moInkMarkupFolder_c"
+        | "moEqnFolder_c"
+        | "moConfigTableFolder_c" => super::features::folder(reader, map),
+        "moFavoriteFolder_c" => super::browser_folders::favorite(reader, map),
+        "moFavoriteItemData_c" | "moHistoryItemData_c" => super::browser_folders::item(reader, map),
+        "moFavoriteFeatItemData_c" | "moHistoryFeatItemData_c" => {
+            super::browser_folders::feature_item(reader, map)
+        }
+        "moLiveSectionFolder_c" | "moPlaneSectionFolder_c" => {
+            super::browser_folders::live_section(reader, map)
+        }
+        "moHistoryFolder_c" => super::browser_folders::history(reader, map),
+        "moSelectionSetFolder_c" => super::browser_folders::selection_sets(reader, map),
+        "moSurfaceBodyFolder_c" | "moSolidBodyFolder_c" => {
+            super::browser_folders::body_folder(reader, map)
+        }
+        "moMaterialFolder_c" => super::browser_folders::material(reader, map),
+        "moDetailCabinet_c" => super::browser_folders::detail_cabinet(reader, map),
         "moPosGroupFolder_c" => super::position_groups::read(reader, map),
         "moMateReferenceGroupFolder_c" | "moFtrFolder_c" | "moNotesAreaFtrFolder_c" => {
             super::features::feature_group(reader, map, class.name == "moNotesAreaFtrFolder_c")
@@ -402,6 +454,21 @@ fn read_display_support(
 ) -> Result<()> {
     match class.name.as_str() {
         "moDispObjRef_c" => super::display_object::reference(reader),
+        "moChainComponent_c" => super::context_chains::component(reader, map),
+        "moContextChainComponent_c" => super::context_chains::context_component(reader, map),
+        "moContextUnitComponent_c" => super::context_chains::unit(reader, map),
+        "moReferenceChain_c" => super::context_chains::reference_chain(reader, map),
+        "moExtFeatureList_c" => super::context_chains::feature_list(reader, map),
+        "moExtFeature_c" => super::context_chains::external_feature(reader, map),
+        "moPLine_c" => super::polyline_records::read(reader, map),
+        "moPLineData_c" => super::polyline_records::data(reader, map),
+        "moPLineProject_c" => super::polyline_records::project(reader, map),
+        "su_CWordArray" => super::polyline_records::word_array(reader),
+        "moScale_c" => super::scale_records::read(reader, map),
+        "moCoordSysRef_w" => super::scale_records::coordinate_system(reader, map),
+        "moSwiftSchemaRef_c" => super::schema_references::read(reader),
+        "moCutListSortOptions_c" => super::browser_folders::cut_list_sort(reader, map),
+        "moFaceColorConfig_c" => super::configuration_atoms::face_color(reader, map),
         "moCompDispObjRef_c" => super::display_object::component_reference(reader, map),
         "moArrowSize_c" => super::display_object::arrow_size(reader),
         "moFavoriteHandle_c" => super::display_dimension_tail::favorite_handle(reader),

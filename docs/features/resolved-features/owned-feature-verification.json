@@ -1,0 +1,83 @@
+{
+  "baseline_revision": "bf8d61cba55d629617f3c729ff8cca602531345f",
+  "scope": "Uncommitted complete private owned feature read/construct/edit/write; no public result/history or broad corpus support claimed.",
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0",
+  "checks": {
+    "Rust_focused_passed": 34,
+    "Python_passed": 3,
+    "feature_primitive_reads": 1518,
+    "manager_primitive_reads": 504,
+    "feature_prefixes_rejected": 5558,
+    "manager_prefixes_rejected": 1968,
+    "roots": 17,
+    "inherited_map_slots": 97,
+    "final_map_slots": 161,
+    "original_bytes": 5558,
+    "edited_bytes": 5568,
+    "whole_document_reopen_preserved_unrelated_streams": true,
+    "whole_document_revert_byte_identical": true,
+    "parallel_edits": 4,
+    "native_application_executed": true,
+    "full_gate_executed_for_this_work": false,
+    "native_plane_rename_accepted": false
+  },
+  "limitations": [
+    "Owned ordinary version-19000 singleton manager context only.",
+    "Public immutable result/history contracts remain to be implemented.",
+    "Wider manager branches and the current reference corpus gate remain incomplete.",
+    "Native opens succeeded but the plane name stayed unchanged; Bug #56 remains open. Full local/CI gates have not run for this feature.",
+    "Geometry/topology/tolerance validity is outside the stored-schema checks."
+  ],
+  "source_sha256": {
+    "docs/features/resolved-features/freeze_manager_context.py": "ea94979a93d97f4e9f4d54b39b9e0f795045a73314ab96f746c9b8b0efdbd61d",
+    "docs/features/resolved-features/freeze_owned_features.py": "78e6646768d13ff60685d5b7ca1cf75e3fe27630e7fa5c1dbd9e5eeb0d6b4777",
+    "docs/features/resolved-features/test_manager_oracle.py": "c2f78cd6dcd343e259c207cd3e52a37281941f62c71a3a121001a234713fd75a",
+    "docs/features/resolved-features/test_owned_features.py": "442e493ec60cd2c991b4e8060b1603ded264620a2a30d08f88813390607b816d",
+    "src/archive_codec/mod.rs": "63b5ed2cdf9bc3c64cf9b971e8d4735391f972246dfd1e7f514ad965cf0303cc",
+    "src/archive_codec/object_snapshot.rs": "daafb65fc99df02a63c4a499ec548331ed21dd9f076ee7a706642b5f2fb0a429",
+    "src/archive_codec/objects.rs": "1449f75dcb5cc515969a2e736f8d02bf9041464e5cf3cf731f94f5bde0b29531",
+    "src/model_archives/browser_folders.rs": "d506b5b651156eb623859352782a28f4f7d619d0f770cc72e08e8c69a031c5a2",
+    "src/model_archives/configuration_base.rs": "45e82ef866a63bc11ce5f7d6117ff07ddf0788007dd09f747ff24c863e9f1ded",
+    "src/model_archives/configuration_io.rs": "2560b72478d4ee9e32ad79558e589b6f63dfebf6f472be31ee3ac0c8baa00544",
+    "src/model_archives/configuration_manager.rs": "0f9a3cdde1abb8af01d35417033cbeb9ef60c4474aee548f50720a1e0c84f82c",
+    "src/model_archives/configuration_suffix.rs": "af4319efba389313bc5163560f57641eb1aeb4c33c939f4938d0f7306e432d14",
+    "src/model_archives/features.rs": "c676cfd444b7c77e1349badf11a74bfa7c39d9f56f6f1b889323c0441165e22f",
+    "src/model_archives/manager_tail.rs": "37385e7574fd70279bfbcc77b640703e54c1b71c1cef57994fa1d197064d5479",
+    "src/model_archives/mod.rs": "511e93f6c2a01d952def83475ae6c350417495e50bee1f5e19716c7042fe2588",
+    "src/model_archives/object_body.rs": "b7d7663800586d9f40d738198a121d83c1c2896ad9caee09d425997988bfd09d",
+    "src/model_archives/object_values.rs": "ae99a3d81cc23309f74c8be10b7efdaf8061cd642f795f269e58a6ea1a2a2c43",
+    "src/model_archives/part_archive.rs": "8021db7dd0507c80d8a8e7a41f68efe31c579c0cb10b7d4a77abf042677a97a6",
+    "src/model_archives/part_tail.rs": "ad5f217c6d8772bc2d0d54e9303d2cfc0906691416249e59b4c7d1a193cfbe3f",
+    "src/model_archives/profile_features.rs": "8c8af932ca80dcc585993ca34051746771f39822fd0cea6aa7689e0530c380ac",
+    "src/model_archives/reader.rs": "a9c82b38777fc81a1559cd02e066ee35992f0c6f7c98cafc79bd7a464538fac4",
+    "src/model_archives/resolved_features.rs": "abe8e27a06facc142653b831a3a88d2639730d946f3bb52edd8243551b6e14ac",
+    "tests/model_archives/object_values.rs": "9b942d8eb1f72fe82e833922c4f352a03ee543f47bc6e5588b06b8b5f6e2eb69",
+    "tests/resolved_features/configuration_io.rs": "fb54826915c5bedb38299a6806ad9becac77d1b355e53a0fbbf62c9f8f005fa3",
+    "tests/resolved_features/context_snapshot.rs": "f4609d7f611e4b4db34e4fb17a55285cd6b309e3291d51ff1d69f7ec9f09cffb",
+    "tests/resolved_features/manager_context.rs": "591b5f1027c8e0334c67924d1058d3fa644dd9a4ca46903f6bc0b9280ce4a8f3",
+    "tests/resolved_features/manager_oracle.rs": "afb867e98276fbd57c7c569cfb18bee076965b63dc26b6b1ad581381b6c7393d",
+    "tests/resolved_features/owned_features.rs": "4885e1aa9d8f4a9678c7d6a9383e78da98572695f60fb3db708ffc9cdcca0b55"
+  },
+  "evidence_sha256": {
+    "tests/fixtures/resolved-features/owned-features.bin": "d7ba8160aafa1e390850ba9beceadf00fb3ef6b5b3cf9fc0b7cee7be2d6000b0",
+    "tests/fixtures/resolved-features/owned-features-plane-edited.bin": "5d2eea7898c44b97f87bbb5b034846742d8631565d4753fe5d767abf8eec2271",
+    "tests/fixtures/resolved-features/owned-features-primitives.tsv": "5619d33f7d0295ebabfab50adbcb896a47a89779db8e172e39ffde47ebf80c71",
+    "docs/features/resolved-features/owned-features-reference.json": "09bd5865c4ff11a703dba1ec6a6352c1adac7b2057e83b3b9051bfd40ca67384",
+    "docs/features/resolved-features/owned-feature-schema-snapshot.md": "025ebe830ee031e7e9b9cfef7b103c8574b3da1470a3a100252b266cecbad291",
+    "docs/features/resolved-features/owned-feature-schema-reference.json": "fad52b459f5508dc416cfac56607b231babe22d5124efa9270d52f54c0920389"
+  },
+  "log_sha256": {
+    "target/resolved-owned-operation-focused.log": "c03b3195214643c85c9eabfe18ac70c02a12e814201040bda03253ef99cb316b",
+    "target/resolved-oracle-python-tests.log": "72de1ebdf0a6458f9bed525be09af69ff5a2b4a815bc57738903b7478b839efa"
+  },
+  "native_acceptance": {
+    "report": "native-plane-name-failure.json",
+    "issue": 56,
+    "executed": true,
+    "files_opened_without_errors": true,
+    "plane_rename_accepted": false,
+    "sha256": "f9a2c4b925745de415fe58769f49bcecab1a8b98602f67154143e6e2656b51dd"
+  },
+  "integration_base_revision": "f54815af5ce868958f0ae0eed7bc58e44c016c9a"
+}

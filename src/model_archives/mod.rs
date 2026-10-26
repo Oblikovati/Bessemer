@@ -1,17 +1,112 @@
 //! Complete ordinary modern part configuration archives with explicit header/kernel context.
 //! Validation covers the stored archive; geometric validity and external documents are separate.
 
+#[cfg(test)]
+#[path = "../../tests/resolved_features/application_names.rs"]
+mod application_name_tests;
 mod archive;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/attribute_records.rs"]
+mod attribute_record_tests;
+mod attribute_records;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/body_chooser_records.rs"]
+mod body_chooser_record_tests;
+mod body_chooser_records;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/body_state_roles.rs"]
+mod body_state_role_tests;
+mod browser_folders;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/browser_items.rs"]
+mod browser_item_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/chamfer_records.rs"]
+mod chamfer_record_tests;
+mod chamfer_records;
 mod configuration;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/configuration_atoms.rs"]
+mod configuration_atom_tests;
+mod configuration_atoms;
+mod configuration_base;
+mod configuration_graph;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/configuration_graph.rs"]
+mod configuration_graph_tests;
+mod configuration_io;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/configuration_io.rs"]
+mod configuration_io_tests;
+mod configuration_manager;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/configuration_scenes.rs"]
+mod configuration_scene_tests;
+mod configuration_scenes;
+mod configuration_suffix;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/configuration_tables.rs"]
+mod configuration_table_tests;
+mod configuration_tables;
 mod context;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/context_chains.rs"]
+mod context_chain_tests;
+mod context_chains;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/context_snapshot.rs"]
+mod context_snapshot_tests;
+mod custom_properties;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/custom_properties.rs"]
+mod custom_property_tests;
 mod edit;
 mod edit_history;
 mod edit_types;
 mod field_change;
 mod field_mismatch;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/folder_configuration_records.rs"]
+mod folder_configuration_record_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/manager_context.rs"]
+mod manager_context_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/manager_oracle.rs"]
+mod manager_oracle_tests;
+mod manager_tail;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/owned_features.rs"]
+mod owned_resolved_feature_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/planar_surface_records.rs"]
+mod planar_surface_record_tests;
+mod planar_surface_records;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/polyline_records.rs"]
+mod polyline_record_tests;
+mod polyline_records;
+#[cfg(test)]
 #[path = "../../tests/model_archives/public_roles.rs"]
 mod public_role_tests;
+mod resolved_archive;
+mod resolved_edit;
+pub use resolved_edit::PartResolvedFeaturesEdit;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/native_corpus.rs"]
+mod resolved_corpus_tests;
+mod resolved_features;
+pub use resolved_archive::PartResolvedFeaturesArchive;
+mod scale_records;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/scale_schema_records.rs"]
+mod scale_schema_record_tests;
+mod scene_adapter;
+mod schema_references;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/sensor_records.rs"]
+mod sensor_record_tests;
+mod sensor_records;
 mod validation;
 pub use crate::archive_codec::{
     ArchiveClass as ModelClass, ArchiveMapIndex as ModelObjectId,

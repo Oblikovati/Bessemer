@@ -1,0 +1,39 @@
+{
+  "baseline_revision": "bf8d61cba55d629617f3c729ff8cca602531345f",
+  "scope": "Uncommitted private context foundation for #54; complete resolved-feature operation not yet implemented.",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0",
+  "checks": {
+    "snapshot_tests": 2,
+    "owned_context_tests": 2,
+    "object_fact_tests": 9,
+    "full_gate_executed_for_this_work": false,
+    "public_configuration_regressions": 10
+  },
+  "source_sha256": {
+    "src/archive_codec/object_snapshot.rs": "daafb65fc99df02a63c4a499ec548331ed21dd9f076ee7a706642b5f2fb0a429",
+    "src/archive_codec/objects.rs": "1449f75dcb5cc515969a2e736f8d02bf9041464e5cf3cf731f94f5bde0b29531",
+    "src/archive_codec/mod.rs": "63b5ed2cdf9bc3c64cf9b971e8d4735391f972246dfd1e7f514ad965cf0303cc",
+    "src/model_archives/part_archive.rs": "8021db7dd0507c80d8a8e7a41f68efe31c579c0cb10b7d4a77abf042677a97a6",
+    "src/model_archives/reader.rs": "a9c82b38777fc81a1559cd02e066ee35992f0c6f7c98cafc79bd7a464538fac4",
+    "src/model_archives/object_values.rs": "ae282a5e4cd1423ed7b15b6ffe91d1b77cd59660cb95814d01455d358649315a",
+    "src/model_archives/mod.rs": "f76b09b8f9a97e642130f45b07bdc13d87c0f1c0e6977a562db3279f409d9ced",
+    "tests/resolved_features/context_snapshot.rs": "207e2e18bdc44d52489f05e28c3d6bdb03fe23168a1d05e7830882cc55b440ca",
+    "tests/model_archives/object_values.rs": "a826df028fe3c4e00322e755a781c52564da4ed8747c844f75468d7f4f3da980"
+  },
+  "log_sha256": {
+    "target/resolved-context-snapshot-final.log": "154830463de1eb2b25df815442cdbef0b2df8f5f34a05a74a6811a40627dfa9e",
+    "target/resolved-map-snapshot-tests.log": "042b6d211f5eb08e475adef2816dbeab798024bbe17fa73f2ffc14c857b8b30f",
+    "target/resolved-inherited-fact-tests.log": "ef408afb28461644e7420599c35ad1e476d7ce2b4741258cc2115667a2ef814a",
+    "target/resolved-public-configuration-regression.log": "b6f6f5de98a0bf94489955aa84ccd75e78709a7526de194ad16286c2ef67231c"
+  },
+  "remaining": [
+    "Complete CMgr framing, selected configuration graph and saved helper state.",
+    "Complete feature roots and required MBSM tail through exact EOF.",
+    "Typed construction, independent edit, document reopen/revert and immutable result/history contracts.",
+    "Current reference corpus gate, complete local gate and required CI.",
+    "Connect the private foundation to the complete feature-stream caller before the full clippy gate; unused internal code remains uncommitted."
+  ],
+  "historical_checkpoint": true,
+  "superseded_by": "manager-verification.json"
+}

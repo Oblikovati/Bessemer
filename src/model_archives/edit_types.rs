@@ -2,7 +2,7 @@ use super::{ModelEditCheckMode, ModelFieldRelation, PartConfigurationArchive};
 use crate::archive_codec::ArchiveRevision;
 use std::sync::Arc;
 
-/// Exact validation coverage of the complete stored configuration, independent of geometry.
+/// Exact validation coverage of a complete stored model archive, independent of geometry.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub struct ModelArchiveCoverage {
     /// Whole-stream stored-schema checks, never a sampled geometry pass.
@@ -28,7 +28,7 @@ pub enum ModelArchiveDiagnostic {
     ExternalDocumentsNotChecked,
 }
 
-/// Structural field occurrence bound to one immutable configuration revision.
+/// Structural field occurrence bound to one immutable model archive revision.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct ModelFieldHandle {
     pub(super) revision: ArchiveRevision,

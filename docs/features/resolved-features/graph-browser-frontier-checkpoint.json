@@ -1,0 +1,4830 @@
+{
+  "baseline_revision": "f54815af5ce868958f0ae0eed7bc58e44c016c9a",
+  "scope": "Complete typed CMgr and feature reconstruction only; full corpus gate still fails and public resolved operations remain unfinished.",
+  "cases": 906,
+  "accepted": 190,
+  "rejected": 716,
+  "fresh_process_outcomes_identical": true,
+  "previous_checkpoint": "dependency-frontier-checkpoint.json",
+  "packet_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "log_sha256": "a400d1b7594bb96d390ea1e9ccd0d2280a7596fdf3b7a8f8886cb681e4e90229",
+  "repeat_log_sha256": "98a1819eec20eae1daff76690a39ea4d7711536affc0b9530f37aa278d6bdc57",
+  "grouped_first_failures": [
+    {
+      "count": 97,
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence N; expected an empty supported branch"
+    },
+    {
+      "count": 45,
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 39,
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 38,
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 32,
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 30,
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 27,
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 23,
+      "cause": "model archive model stream: Unsupported: runtime class \"moDetailFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 23,
+      "cause": "model archive model stream: Unsupported: runtime class \"moSensor_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 23,
+      "cause": "model archive model stream: Unsupported: runtime class \"moShell_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 22,
+      "cause": "model archive model stream: Unsupported: runtime class \"moScale_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 22,
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListSortOptions_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 21,
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweep_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 20,
+      "cause": "model archive model stream: Unsupported: runtime class \"moPLine_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 20,
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 20,
+      "cause": "model archive model stream: Unsupported: runtime class \"moCirPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 19,
+      "cause": "model archive model stream: Unsupported: runtime class \"moToolboxPartSpecArray_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 16,
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefAxis_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 15,
+      "cause": "model archive model stream: Unsupported: runtime class \"moBaseBody_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 12,
+      "cause": "model archive model stream: Unsupported: runtime class \"moDome_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 11,
+      "cause": "model archive model stream: Unsupported: runtime class \"moNewFeatComment_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 10,
+      "cause": "configuration context Contents/CMgr: Unsupported: configuration version 18000; expected scoped current version 19000"
+    },
+    {
+      "count": 10,
+      "cause": "model archive model stream: Unsupported: runtime class \"moHoleWzd_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 10,
+      "cause": "model archive model stream: Unsupported: runtime class \"moExtruRefSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 6,
+      "cause": "model archive model stream: Unsupported: runtime class \"moBlend_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 6,
+      "cause": "model archive model stream: Unsupported: runtime class \"moHelix_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 5,
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefPoint_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 5,
+      "cause": "model archive model stream: Invalid: object role \"user_objects[0]\" has runtime class \"moSplineTangencyControl_c\"; expected one of [\"moSketchToolsUserObject_c\", \"moExtensionLineIndicator_c\"]"
+    },
+    {
+      "count": 5,
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 5,
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlaneRef_w\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 5,
+      "cause": "model archive model stream: Unsupported: runtime class \"moExtruThin_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 5,
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorStock_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 4,
+      "cause": "model archive model stream: Unsupported: runtime class \"moBossThin_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 4,
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefDim2E_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 4,
+      "cause": "model archive model stream: Unsupported: runtime class \"moDraft_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 3,
+      "cause": "model archive model stream: Unsupported: runtime class \"moNetBlend_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 3,
+      "cause": "model archive model stream: Unsupported: runtime class \"moCoordSys_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 3,
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextUnitComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 3,
+      "cause": "model archive model stream: Unsupported: runtime class \"moStock_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 3,
+      "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moRadiateEdgeIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+    },
+    {
+      "count": 2,
+      "cause": "model archive model stream: Unsupported: runtime class \"moSMAndFPFeatIdPair\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 2,
+      "cause": "configuration context owned_6d8.objects_count: Unsupported: owned_6d8.objects_count count or presence N; expected an empty supported branch"
+    },
+    {
+      "count": 2,
+      "cause": "model archive model stream: Invalid: object role \"plane_data\" has runtime class \"moConstraintCoincLineAtAnglePlaneRefplaneData_c\"; expected one of [\"moRefPlnData_c\", \"moFixedRefPlnData_c\", \"moDefaultRefPlnData_c\", \"moFaceRefPlnData_c\", \"moFacePtRefPlnData_c\", \"moLinePtRefPlnData_c\", \"moPerLinePtRefPlnData_c\", \"moRefAtAngleData_c\", \"moRefThreePtsData_c\"]"
+    },
+    {
+      "count": 2,
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweepCut_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 2,
+      "cause": "model archive model stream: Unsupported: runtime class \"moCavity_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 2,
+      "cause": "model archive model stream: Invalid: object role \"reference_10\" has runtime class \"moSingleFaceRef_w\"; expected one of [\"moRefWrapper_c\"]"
+    },
+    {
+      "count": 2,
+      "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moBackDraftSurfIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+    },
+    {
+      "count": 2,
+      "cause": "model archive model stream: Unsupported: runtime class \"moSurfCut_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 2,
+      "cause": "model archive model stream: Unsupported: runtime class \"moProfileRef_w\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 2,
+      "cause": "model archive model stream: Unsupported: runtime class \"moRevolutionThin_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 2,
+      "cause": "model archive model stream: Invalid: object role \"point_reference_88\" has runtime class \"moEndPointRef_w\"; expected one of [\"moPointRef_w\"]"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moRevolvRefSurf_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moSmartComponentFeature_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefDim1E_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "configuration context Contents/CMgr: Unsupported: configuration version 11000; expected scoped current version 19000"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorSolid_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moMidSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moLockFeature_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceBlendItemPair_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutThin_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moConnectionPoint_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moCombineBodies_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moBlendRefSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Invalid: object role \"valued_g3[0]\" has runtime class \"sgArcLenDist\"; expected one of [\"sgValG3Dim\"]"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moPttnBodyEdgeIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moEndCapChamferSurfIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Invalid: object role \"point_68\" has runtime class \"moEndPointRef_w\"; expected one of [\"moPointRef_w\"]"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Invalid: object role \"plane_data\" has runtime class \"moConstraintPrllPlnTanOneCylinderRefplaneData_c\"; expected one of [\"moRefPlnData_c\", \"moFixedRefPlnData_c\", \"moDefaultRefPlnData_c\", \"moFaceRefPlnData_c\", \"moFacePtRefPlnData_c\", \"moLinePtRefPlnData_c\", \"moPerLinePtRefPlnData_c\", \"moRefAtAngleData_c\", \"moRefThreePtsData_c\"]"
+    },
+    {
+      "count": 1,
+      "cause": "configuration context optional_data_608: Unsupported: optional_data_608 count or presence N; expected an empty supported branch"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moOffsetRefSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive sketch text kernel body: Unsupported: sketch text kernel body presence 1; expected zero until its complete payload is implemented"
+    }
+  ],
+  "records": [
+    {
+      "index": 0,
+      "outcome": "rejected",
+      "cause": "configuration context Contents/CMgr: Unsupported: configuration version 11000; expected scoped current version 19000"
+    },
+    {
+      "index": 1,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 2,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 3,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 4,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 5,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 6,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 7,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 8,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 9,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 10,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 11,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 12,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefDim2E_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 13,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 14,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListSortOptions_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 15,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 16,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 17,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 18,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 19,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 20,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPLine_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 21,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPLine_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 22,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 23,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 24,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 25,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSensor_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 26,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSensor_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 27,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 28,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 29,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBlend_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 30,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 31,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 32,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 33,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSensor_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 34,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 35,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 36,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCavity_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 37,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweep_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 38,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6d8.objects_count: Unsupported: owned_6d8.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 39,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 40,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 41,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweep_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 42,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 43,
+      "outcome": "rejected",
+      "cause": "model archive sketch text kernel body: Unsupported: sketch text kernel body presence 1; expected zero until its complete payload is implemented"
+    },
+    {
+      "index": 44,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 45,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 46,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 47,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 48,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 49,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 50,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefAxis_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 51,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 52,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 53,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 54,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 55,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 56,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 57,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 58,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moBackDraftSurfIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+    },
+    {
+      "index": 59,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPLine_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 60,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 61,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 62,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 63,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 64,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 65,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moProfileRef_w\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 66,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 67,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Invalid: object role \"reference_10\" has runtime class \"moSingleFaceRef_w\"; expected one of [\"moRefWrapper_c\"]"
+    },
+    {
+      "index": 68,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBlend_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 69,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 70,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 71,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 72,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 73,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 74,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 75,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 76,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBossThin_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 77,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 78,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 79,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPLine_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 80,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 2; expected an empty supported branch"
+    },
+    {
+      "index": 81,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 82,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSensor_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 83,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 84,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSensor_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 85,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 86,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPLine_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 87,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 88,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSensor_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 89,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moHoleWzd_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 90,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 91,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 92,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPLine_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 93,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 94,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 95,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 96,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 97,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSurfCut_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 98,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 99,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 100,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 101,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPLine_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 102,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 103,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 104,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moExtruRefSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 105,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBaseBody_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 106,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPLine_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 107,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 108,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListSortOptions_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 109,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 110,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 111,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 112,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 113,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 114,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMidSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 115,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 116,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 117,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 118,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListSortOptions_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 119,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 120,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 121,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moExtruRefSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 122,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 123,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 124,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListSortOptions_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 125,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 126,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 127,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 128,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 129,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Invalid: object role \"plane_data\" has runtime class \"moConstraintCoincLineAtAnglePlaneRefplaneData_c\"; expected one of [\"moRefPlnData_c\", \"moFixedRefPlnData_c\", \"moDefaultRefPlnData_c\", \"moFaceRefPlnData_c\", \"moFacePtRefPlnData_c\", \"moLinePtRefPlnData_c\", \"moPerLinePtRefPlnData_c\", \"moRefAtAngleData_c\", \"moRefThreePtsData_c\"]"
+    },
+    {
+      "index": 130,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 131,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 132,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 133,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 134,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 135,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 136,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 137,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 138,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 139,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 140,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 141,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 142,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 143,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 144,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSensor_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 145,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 146,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSensor_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 147,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 148,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefAxis_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 149,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSensor_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 150,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 151,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 152,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSensor_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 153,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSensor_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 154,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 155,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 156,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDetailFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 157,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSensor_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 158,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 159,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefAxis_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 160,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 161,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefDim1E_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 162,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 163,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 164,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 165,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 166,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 167,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 168,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSensor_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 169,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 170,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 171,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 172,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 173,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 174,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 175,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSensor_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 176,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 177,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 178,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 179,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 180,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 181,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 182,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 183,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 184,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 185,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 186,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 187,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 188,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSensor_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 189,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSensor_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 190,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 191,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSensor_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 192,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPLine_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 193,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 194,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCoordSys_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 195,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 196,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSensor_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 197,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListSortOptions_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 198,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSensor_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 199,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSensor_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 200,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 201,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSensor_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 202,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 203,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 204,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 205,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 206,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 207,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 208,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 209,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 210,
+      "outcome": "rejected",
+      "cause": "configuration context Contents/CMgr: Unsupported: configuration version 18000; expected scoped current version 19000"
+    },
+    {
+      "index": 211,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 212,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 213,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 214,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 215,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefAxis_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 216,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 217,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 218,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 219,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 220,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moExtruRefSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 221,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 222,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 223,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 224,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListSortOptions_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 225,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 226,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 227,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefAxis_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 228,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListSortOptions_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 229,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 230,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBlendRefSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 231,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 232,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefAxis_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 233,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 234,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRevolvRefSurf_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 235,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 236,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListSortOptions_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 237,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moExtruRefSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 238,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListSortOptions_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 239,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moExtruRefSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 240,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moExtruRefSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 241,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moExtruRefSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 242,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 243,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListSortOptions_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 244,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 245,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 246,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPLine_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 247,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 248,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 249,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 250,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 251,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListSortOptions_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 252,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 253,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 254,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 255,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 256,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 257,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 258,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 259,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 260,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 261,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPLine_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 262,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPLine_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 263,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweep_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 264,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweep_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 265,
+      "outcome": "rejected",
+      "cause": "configuration context optional_data_608: Unsupported: optional_data_608 count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 266,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 267,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 268,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 269,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 270,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlaneRef_w\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 271,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 272,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCirPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 273,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefPoint_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 274,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 275,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPLine_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 276,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 277,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSMAndFPFeatIdPair\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 278,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 279,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moExtruRefSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 280,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefPoint_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 281,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 282,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 283,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 284,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 285,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefDim2E_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 286,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 287,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 288,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 289,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 290,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 291,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moPttnBodyEdgeIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+    },
+    {
+      "index": 292,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 293,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 294,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 295,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCirPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 296,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCirPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 297,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moShell_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 298,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListSortOptions_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 299,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 300,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 301,
+      "outcome": "rejected",
+      "cause": "configuration context Contents/CMgr: Unsupported: configuration version 18000; expected scoped current version 19000"
+    },
+    {
+      "index": 302,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSensor_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 303,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moHoleWzd_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 304,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 305,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 306,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListSortOptions_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 307,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListSortOptions_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 308,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 309,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moShell_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 310,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 311,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moShell_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 312,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moShell_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 313,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBossThin_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 314,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 315,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moNewFeatComment_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 316,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moNewFeatComment_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 317,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Invalid: object role \"user_objects[0]\" has runtime class \"moSplineTangencyControl_c\"; expected one of [\"moSketchToolsUserObject_c\", \"moExtensionLineIndicator_c\"]"
+    },
+    {
+      "index": 318,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moNewFeatComment_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 319,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListSortOptions_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 320,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 321,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 322,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 323,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 324,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 325,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 326,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 327,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 328,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 329,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListSortOptions_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 330,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moBackDraftSurfIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+    },
+    {
+      "index": 331,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBaseBody_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 332,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorStock_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 333,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 334,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorStock_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 335,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moToolboxPartSpecArray_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 336,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListSortOptions_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 337,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorStock_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 338,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPLine_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 339,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefAxis_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 340,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 341,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 342,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moRadiateEdgeIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+    },
+    {
+      "index": 343,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Invalid: object role \"valued_g3[0]\" has runtime class \"sgArcLenDist\"; expected one of [\"sgValG3Dim\"]"
+    },
+    {
+      "index": 344,
+      "outcome": "rejected",
+      "cause": "configuration context Contents/CMgr: Unsupported: configuration version 18000; expected scoped current version 19000"
+    },
+    {
+      "index": 345,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 346,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moRadiateEdgeIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+    },
+    {
+      "index": 347,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moStock_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 348,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moRadiateEdgeIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+    },
+    {
+      "index": 349,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moStock_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 350,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Invalid: object role \"user_objects[0]\" has runtime class \"moSplineTangencyControl_c\"; expected one of [\"moSketchToolsUserObject_c\", \"moExtensionLineIndicator_c\"]"
+    },
+    {
+      "index": 351,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moNewFeatComment_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 352,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 353,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moNewFeatComment_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 354,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 355,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListSortOptions_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 356,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListSortOptions_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 357,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweepCut_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 358,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moHelix_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 359,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 360,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDraft_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 361,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 362,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDraft_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 363,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Invalid: object role \"point_68\" has runtime class \"moEndPointRef_w\"; expected one of [\"moPointRef_w\"]"
+    },
+    {
+      "index": 364,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweep_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 365,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 366,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 367,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Invalid: object role \"point_reference_88\" has runtime class \"moEndPointRef_w\"; expected one of [\"moPointRef_w\"]"
+    },
+    {
+      "index": 368,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 369,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 370,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 371,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 372,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCirPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 373,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 374,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 375,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 376,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweepCut_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 377,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moHelix_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 378,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moHelix_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 379,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweep_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 380,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 381,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 382,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 383,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefAxis_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 384,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 385,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moExtruThin_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 386,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 387,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 388,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 389,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 390,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 391,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 392,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moHoleWzd_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 393,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCirPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 394,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 395,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCirPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 396,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 397,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 398,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 399,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 400,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRevolutionThin_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 401,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRevolutionThin_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 402,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moNewFeatComment_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 403,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moShell_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 404,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 405,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moShell_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 406,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 407,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moNewFeatComment_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 408,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 409,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweep_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 410,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCirPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 411,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 412,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCirPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 413,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCirPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 414,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 415,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBaseBody_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 416,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBaseBody_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 417,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBaseBody_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 418,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBaseBody_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 419,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBaseBody_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 420,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moShell_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 421,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 422,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 423,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDetailFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 424,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDetailFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 425,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCavity_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 426,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 427,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 428,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moHoleWzd_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 429,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 430,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moShell_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 431,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 432,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDetailFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 433,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 434,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moShell_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 435,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 436,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moShell_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 437,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDetailFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 438,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 439,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 440,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBlend_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 441,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweep_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 442,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCirPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 443,
+      "outcome": "rejected",
+      "cause": "configuration context Contents/CMgr: Unsupported: configuration version 18000; expected scoped current version 19000"
+    },
+    {
+      "index": 444,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCirPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 445,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 446,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDetailFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 447,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 448,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCirPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 449,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCirPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 450,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 451,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 452,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 453,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moShell_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 454,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 455,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 456,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moNewFeatComment_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 457,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moNewFeatComment_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 458,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 459,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 460,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 461,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 462,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 463,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 464,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 465,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 466,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 467,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDetailFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 468,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 469,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 470,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moExtruThin_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 471,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefAxis_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 472,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefAxis_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 473,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlaneRef_w\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 474,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCirPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 475,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 476,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 477,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 478,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 479,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 480,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlaneRef_w\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 481,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlaneRef_w\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 482,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 483,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 484,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 485,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 486,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 487,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBaseBody_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 488,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextUnitComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 489,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextUnitComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 490,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 491,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 492,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBaseBody_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 493,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 494,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 495,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefAxis_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 496,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefAxis_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 497,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 498,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSMAndFPFeatIdPair\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 499,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweep_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 500,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 501,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 502,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 503,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 504,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 505,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 506,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moHoleWzd_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 507,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDome_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 508,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDome_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 509,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDome_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 510,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDome_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 511,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDome_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 512,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDome_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 513,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDome_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 514,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDome_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 515,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDome_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 516,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDome_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 517,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDome_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 518,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDome_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 519,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBaseBody_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 520,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDetailFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 521,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefDim2E_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 522,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDetailFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 523,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDetailFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 524,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweep_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 525,
+      "outcome": "rejected",
+      "cause": "configuration context Contents/CMgr: Unsupported: configuration version 18000; expected scoped current version 19000"
+    },
+    {
+      "index": 526,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 527,
+      "outcome": "rejected",
+      "cause": "configuration context Contents/CMgr: Unsupported: configuration version 18000; expected scoped current version 19000"
+    },
+    {
+      "index": 528,
+      "outcome": "rejected",
+      "cause": "configuration context Contents/CMgr: Unsupported: configuration version 18000; expected scoped current version 19000"
+    },
+    {
+      "index": 529,
+      "outcome": "rejected",
+      "cause": "configuration context Contents/CMgr: Unsupported: configuration version 18000; expected scoped current version 19000"
+    },
+    {
+      "index": 530,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweep_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 531,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 532,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 533,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 534,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDetailFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 535,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDetailFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 536,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 537,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moShell_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 538,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moStock_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 539,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDetailFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 540,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefAxis_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 541,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 542,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListSortOptions_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 543,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moLockFeature_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 544,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moOffsetRefSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 545,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 546,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSmartComponentFeature_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 547,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDetailFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 548,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 549,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSensor_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 550,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListSortOptions_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 551,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 552,
+      "outcome": "rejected",
+      "cause": "configuration context Contents/CMgr: Unsupported: configuration version 18000; expected scoped current version 19000"
+    },
+    {
+      "index": 553,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCoordSys_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 554,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBossThin_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 555,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorStock_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 556,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 557,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 558,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moExtruRefSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 559,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 560,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 561,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 562,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 563,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 564,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Invalid: object role \"plane_data\" has runtime class \"moConstraintPrllPlnTanOneCylinderRefplaneData_c\"; expected one of [\"moRefPlnData_c\", \"moFixedRefPlnData_c\", \"moDefaultRefPlnData_c\", \"moFaceRefPlnData_c\", \"moFacePtRefPlnData_c\", \"moLinePtRefPlnData_c\", \"moPerLinePtRefPlnData_c\", \"moRefAtAngleData_c\", \"moRefThreePtsData_c\"]"
+    },
+    {
+      "index": 565,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 566,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 567,
+      "outcome": "rejected",
+      "cause": "configuration context Contents/CMgr: Unsupported: configuration version 18000; expected scoped current version 19000"
+    },
+    {
+      "index": 568,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 569,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDetailFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 570,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 571,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 572,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDetailFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 573,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 574,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDetailFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 575,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 576,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 577,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDetailFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 578,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefPoint_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 579,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 580,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 581,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Invalid: object role \"plane_data\" has runtime class \"moConstraintCoincLineAtAnglePlaneRefplaneData_c\"; expected one of [\"moRefPlnData_c\", \"moFixedRefPlnData_c\", \"moDefaultRefPlnData_c\", \"moFaceRefPlnData_c\", \"moFacePtRefPlnData_c\", \"moLinePtRefPlnData_c\", \"moPerLinePtRefPlnData_c\", \"moRefAtAngleData_c\", \"moRefThreePtsData_c\"]"
+    },
+    {
+      "index": 582,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 583,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDetailFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 584,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDetailFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 585,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 586,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlanarSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 587,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 588,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 90; expected an empty supported branch"
+    },
+    {
+      "index": 589,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 590,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 591,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 592,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 593,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 594,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 595,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 596,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 597,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 598,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 599,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 600,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moExtruRefSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 601,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSurfCut_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 602,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 603,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 604,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCoordSys_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 605,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceBlendItemPair_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 606,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 607,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 608,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 609,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 610,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 611,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorSolid_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 612,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 613,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 614,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moScale_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 615,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moEndCapChamferSurfIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+    },
+    {
+      "index": 616,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 617,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 618,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moNetBlend_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 619,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6d8.objects_count: Unsupported: owned_6d8.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 620,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 621,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 622,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moExtruThin_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 623,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moExtruThin_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 624,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moNetBlend_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 625,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moNetBlend_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 626,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 627,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 628,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 629,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 630,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moHoleWzd_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 631,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 632,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 633,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 634,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 635,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 636,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBlend_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 637,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 638,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 639,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moShell_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 640,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 641,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moShell_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 642,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 643,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 644,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweep_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 645,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCirPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 646,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 647,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCirPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 648,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCirPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 649,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 650,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 651,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPLine_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 652,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweep_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 653,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPLine_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 654,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moAttribute_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 655,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweep_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 656,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 657,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 658,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 659,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moShell_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 660,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moScale_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 661,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 662,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 663,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 664,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moToolboxPartSpecArray_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 665,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moToolboxPartSpecArray_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 666,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moToolboxPartSpecArray_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 667,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moToolboxPartSpecArray_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 668,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moToolboxPartSpecArray_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 669,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moToolboxPartSpecArray_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 670,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moScale_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 671,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 672,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moHoleWzd_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 673,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moScale_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 674,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moScale_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 675,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Invalid: object role \"user_objects[0]\" has runtime class \"moSplineTangencyControl_c\"; expected one of [\"moSketchToolsUserObject_c\", \"moExtensionLineIndicator_c\"]"
+    },
+    {
+      "index": 676,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moScale_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 677,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 678,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moHelix_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 679,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 680,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moScale_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 681,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moScale_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 682,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 683,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 684,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 685,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 686,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 687,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 688,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 689,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDetailFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 690,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDraft_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 691,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 692,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moProfileRef_w\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 693,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Invalid: object role \"reference_10\" has runtime class \"moSingleFaceRef_w\"; expected one of [\"moRefWrapper_c\"]"
+    },
+    {
+      "index": 694,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCirPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 695,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 696,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 697,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 698,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 699,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 700,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 701,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moShell_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 702,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moScale_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 703,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 704,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 705,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 706,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moToolboxPartSpecArray_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 707,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moToolboxPartSpecArray_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 708,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moToolboxPartSpecArray_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 709,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moToolboxPartSpecArray_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 710,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moToolboxPartSpecArray_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 711,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moToolboxPartSpecArray_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 712,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moScale_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 713,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBlend_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 714,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moHoleWzd_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 715,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moScale_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 716,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moScale_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 717,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Invalid: object role \"user_objects[0]\" has runtime class \"moSplineTangencyControl_c\"; expected one of [\"moSketchToolsUserObject_c\", \"moExtensionLineIndicator_c\"]"
+    },
+    {
+      "index": 718,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moScale_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 719,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 720,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moHelix_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 721,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 722,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moScale_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 723,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moScale_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 724,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moScale_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 725,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 726,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 727,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 728,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moToolboxPartSpecArray_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 729,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moToolboxPartSpecArray_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 730,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moToolboxPartSpecArray_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 731,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moToolboxPartSpecArray_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 732,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moToolboxPartSpecArray_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 733,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moToolboxPartSpecArray_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 734,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moScale_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 735,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBlend_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 736,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moHoleWzd_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 737,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moScale_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 738,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moScale_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 739,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Invalid: object role \"user_objects[0]\" has runtime class \"moSplineTangencyControl_c\"; expected one of [\"moSketchToolsUserObject_c\", \"moExtensionLineIndicator_c\"]"
+    },
+    {
+      "index": 740,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moScale_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 741,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 742,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moHelix_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 743,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 744,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moScale_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 745,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moScale_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 746,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 747,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDetailFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 748,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 749,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDraft_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 750,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlaneRef_w\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 751,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorStock_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 752,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moHoleWzd_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 753,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCirPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 754,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCirPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 755,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCombineBodies_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 756,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 757,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 758,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 759,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 760,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 761,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 762,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBaseBody_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 763,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 764,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 765,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 766,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 767,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 768,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 769,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefPoint_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 770,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 771,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 772,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 773,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefAxis_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 774,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 775,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefPoint_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 776,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBaseBody_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 777,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBaseBody_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 778,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 779,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBaseBody_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 780,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBaseBody_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 781,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPLine_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 782,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPLine_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 783,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 784,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 785,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListSortOptions_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 786,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPLine_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 787,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Invalid: object role \"point_reference_88\" has runtime class \"moEndPointRef_w\"; expected one of [\"moPointRef_w\"]"
+    },
+    {
+      "index": 788,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 789,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moPLine_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 790,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 791,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefAxis_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 792,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moExtruThin_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 793,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 794,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 795,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moBossThin_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 796,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 797,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 798,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 799,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 800,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 801,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 802,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 803,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 804,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 805,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 806,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 807,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 808,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 809,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 810,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 811,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 812,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 813,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweep_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 814,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweep_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 815,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweep_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 816,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweep_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 817,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moShell_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 818,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moShell_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 819,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 820,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moShell_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 821,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 822,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 823,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moShell_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 824,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moShell_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 825,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 826,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 827,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweep_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 828,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweep_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 829,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moShell_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 830,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 831,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 832,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 833,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 834,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 835,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 90; expected an empty supported branch"
+    },
+    {
+      "index": 836,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 90; expected an empty supported branch"
+    },
+    {
+      "index": 837,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 90; expected an empty supported branch"
+    },
+    {
+      "index": 838,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 90; expected an empty supported branch"
+    },
+    {
+      "index": 839,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 90; expected an empty supported branch"
+    },
+    {
+      "index": 840,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moConnectionPoint_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 841,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweep_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 842,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextUnitComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 843,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moShell_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 844,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 845,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 846,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 847,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 848,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 849,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 850,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 851,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 852,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 853,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 854,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 855,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 856,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 857,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 858,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 859,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 860,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 861,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 862,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceColorConfig_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 863,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 864,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 865,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 866,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 867,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 868,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 869,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 870,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 871,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moDetailFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 872,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moNewFeatComment_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 873,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moNewFeatComment_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 874,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorPattern_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 875,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 876,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 877,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 878,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 879,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefAxis_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 880,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 881,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 882,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 883,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 884,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 885,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 886,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 887,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 888,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moSwiftSchemaRef_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 889,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "index": 890,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 891,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 892,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"Chamfer_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 893,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutThin_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 894,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 895,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 896,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 897,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 898,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 899,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 900,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 901,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moContextChainComponent_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 902,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 903,
+      "outcome": "accepted",
+      "cause": null
+    },
+    {
+      "index": 904,
+      "outcome": "rejected",
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefDim2E_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "index": 905,
+      "outcome": "rejected",
+      "cause": "configuration context owned_6e0.objects_count: Unsupported: owned_6e0.objects_count count or presence 1; expected an empty supported branch"
+    }
+  ]
+}

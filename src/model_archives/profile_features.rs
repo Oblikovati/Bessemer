@@ -3,7 +3,11 @@ use super::{ModelDecoder, ModelObjectRole, body_features, model_lists, profile_g
 use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
 
-pub(super) const CLASSES: &[&str] = &["moProfileFeature_c", "mo3DProfileFeature_c"];
+pub(super) const CLASSES: &[&str] = &[
+    "moProfileFeature_c",
+    "mo3DProfileFeature_c",
+    "moOriginProfileFeature_c",
+];
 
 pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     reader.scope("model_feature", |reader| {

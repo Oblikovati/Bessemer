@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added complete supported ordinary part resolved-feature reading, isolated edits and writing with explicit inherited model context, exact stored-field coverage, revision-bound history and geometry exclusions. (#54)
+
 - Added complete ordinary modern-part configuration reading, typed construction, isolated edits and writing with explicit header/kernel context, exact stored-schema coverage and revision-bound field history. (#44)
 
 - Added validated display-archive edit outcomes with completion, exact stored-field fidelity, validation coverage, explicit exclusions and revision-bound structural field history. (#28)
