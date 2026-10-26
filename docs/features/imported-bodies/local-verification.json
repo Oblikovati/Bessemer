@@ -1,0 +1,47 @@
+{
+  "base_revision": "78aac32",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "gate": {
+    "command": "cargo xtask pr",
+    "staged": true,
+    "exit_code": 0,
+    "library_passed": 450,
+    "library_ignored": 3,
+    "all_integration_suites_passed": true,
+    "doctests_passed": 265,
+    "log_sha256": "7efdedb1ac4f1bb0e2d03c356b57739613c813cc5534fa7020d42f242c3d8f6d"
+  },
+  "focused": {
+    "private_tests": 5,
+    "public_tests": 3,
+    "python_tests": 3,
+    "original_preparation_byte_primitive_and_slot_facts_preserved": true
+  },
+  "native_corpus": {
+    "cases": 906,
+    "accepted": 532,
+    "rejected": 374,
+    "fresh_process_outcomes_identical": true,
+    "expected_full_parity_exit_code": 101
+  },
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "source_file_sha256": {
+    "src/model_archives/imported_bodies.rs": "aeb4ccbb4670dddccf5f877318ccb03e4e70b56db87abd7a2caab18c02d13820",
+    "src/model_archives/body_features.rs": "a1f9d373d92f1cf6536640b13d36cef5a1422c490ba5d03768643631d2855ea0",
+    "src/model_archives/object_body.rs": "70185df0d0345629451971a5d51c38a71bf96fd67f9f24c56b5d9b1b1436b386",
+    "src/model_archives/mod.rs": "64dce10d9207e6eab0bf59fc2a896593610d987de9bc84ad4d12e3cb4428c877",
+    "src/model_archives/test_modules.rs": "ff4d9b2b4e712fd06137b4e4b03515d4b07f4c9a024bad36352ccf416c42dbdf",
+    "tests/resolved_features/imported_bodies.rs": "ade49560f06d516fd835599d48c0954f3be866fcddaec969ef19f169967ea9eb",
+    "tests/resolved_imported_bodies.rs": "8e51d32d251d9c1f3c81a84aebe9a8eb05247da5d555808f9c5c296d51f77af9"
+  },
+  "reference_warning_issue": 68,
+  "exclusions": [
+    "Full documented schema parity",
+    "Native geometry and topology validation",
+    "Native application acceptance",
+    "Non-Windows execution is checked by the integration PR matrix"
+  ],
+  "dependencies_changed": false,
+  "version_changed": false
+}

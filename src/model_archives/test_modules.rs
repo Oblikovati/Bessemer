@@ -1,5 +1,8 @@
 // Keep the existing sibling namespace because private tests share parser helpers.
 #[cfg(test)]
+#[path = "../../tests/resolved_features/imported_bodies.rs"]
+mod imported_body_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/application_names.rs"]
 mod application_name_tests;
 #[cfg(test)]
