@@ -8,8 +8,8 @@ import sys
 
 WORKSPACE = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(WORKSPACE/'docs/features/model-archives'))
-from freeze_blank_part import reference_snapshot, source_module
-from primitive_inventory import observe_primitives, verify_primitive_coverage
+from freeze_blank_part import reference_snapshot
+from object_fixture_observer import observe_object_body
 from mirror_fixture_bytes import mirror_object, plane_object, PlaneMode
 from owned_mirror_fixtures import freeze_owned
 
@@ -30,22 +30,7 @@ def mirror_variants() -> list[tuple[int, bool, bool, PlaneMode]]:
 def freeze_record(reference: Path, raw: bytes, slots: int, kind: int, version: int,
                   label: str) -> tuple[bytes, dict[str, object]]:
     """Bind EOF, slots and primitive coverage; e.g. freeze_record(source, raw, 3, 1, 19000, 'plane')."""
-    objects, archive, bodies = (source_module(name, reference) for name in
-                               ('mfcobjects', 'swarchive', 'bodyfeatures'))
-    cursor = objects.ObjectArchive(raw, version)
-    cursor.feature_context = 'ordinary_external_xml'
-    cursor.model_root_class = 'moPart_c'
-    bodies.install_scoped(cursor, overwrite=True)
-    with observe_primitives(archive.Archive, raw) as reads:
-        cursor.object()
-    if cursor.p != len(raw) or len(cursor.map) != slots:
-        raise ValueError(f'{label} end/map {(cursor.p, len(cursor.map))}; expected {(len(raw), slots)}')
-    reads = [read for read in reads if read.end > read.start]
-    verify_primitive_coverage(raw, reads)
-    oracle = ''.join(f'{read.start}\t{read.end}\t{read.kind}\t{read.raw_hex}\n' for read in reads).encode()
-    frame = struct.pack('<BIII', kind, version, len(raw), len(oracle))+raw+oracle
-    return frame, dict(label=label, kind=kind, version=version, bytes=len(raw), slots=slots, reads=len(reads),
-        sha256=hashlib.sha256(raw).hexdigest(), oracle_sha256=hashlib.sha256(oracle).hexdigest())
+    return observe_object_body(reference, raw, slots, kind, version, label)
 
 
 def freeze_records(reference: Path) -> list[tuple[bytes, dict[str, object]]]:
