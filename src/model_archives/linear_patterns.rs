@@ -6,6 +6,11 @@ use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
 
 pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    common(reader, map)?;
+    reader.scope("linear_suffix", |reader| suffix(reader, map))
+}
+
+pub(super) fn common(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     reader.scope("body", |reader| super::body_features::base(reader, map))?;
     reader.scope("header", |reader| header(reader, map))?;
     reader.scope("collections", |reader| collections(reader, map))?;
@@ -17,8 +22,7 @@ pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
     reader.scope("variation", |reader| {
         super::pattern_variation::read(reader, map)
     })?;
-    reader.scope("tail", |reader| tail(reader, map))?;
-    reader.scope("linear_suffix", |reader| suffix(reader, map))
+    reader.scope("tail", |reader| tail(reader, map))
 }
 
 fn header(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
