@@ -10,6 +10,8 @@
 
 ### Added
 
+- Added ordinary face-blend item and pair reading, editing and writing with shared identities, typed boundary references and preserved optional point bytes. (#54)
+
 - Added ordinary draft and back-draft surface-identifier reading, editing and writing with complete inherited references and preserved signed words. (#54)
 
 - Added ordinary draft reading, editing and writing with direct identifier keepers, strided payloads, counted face groups and retained signed option words. (#54)

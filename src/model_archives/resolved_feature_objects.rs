@@ -25,6 +25,8 @@ pub(super) fn read(
         "moWeldmentFeature_c" => super::weldment_records::read(reader, map),
         "moCustomProperty" => super::custom_properties::record(reader),
         "moBlend_c" | "moBlendCut_c" => super::blend_records::read(reader, map),
+        "moFaceBlendItemPair_c" => super::blend_records::face_pair(reader, map),
+        "moFaceBlendItem_c" => super::blend_records::face_item(reader, map),
         "moFlatPattern_c" => super::flat_patterns::read(reader, map),
         "moFlatPatBoundBox_c" => super::flat_pattern_boxes::read(reader),
         "moBoundBoxData_c" => super::flat_pattern_boxes::contents(reader),

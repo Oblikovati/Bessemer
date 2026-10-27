@@ -147,6 +147,9 @@ mod external_reference_tests;
 #[path = "../../tests/resolved_features/extruded_surfaces.rs"]
 mod extruded_surface_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/face_blend_items.rs"]
+mod face_blend_item_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/feature_comments.rs"]
 mod feature_comment_tests;
 #[cfg(test)]

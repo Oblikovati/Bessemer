@@ -191,6 +191,8 @@ parabola segment prefixes, raw cylinder records and their shared handle types.
 direct identifier keepers, strided payloads and counted face/point collections.
 [Draft surface identifiers](docs/features/draft-surface-identifiers/README.md)
 retain full signed words and distinct identifiers with shared feature references.
+[Face-blend items](docs/features/face-blend-items/README.md) preserve pair identity,
+typed face/edge references and optional point bits.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 
