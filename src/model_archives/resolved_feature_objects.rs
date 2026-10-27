@@ -11,6 +11,8 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moWeldmentFeature_c" => super::weldment_records::read(reader, map),
+        "moCustomProperty" => super::custom_properties::record(reader),
         "moBlend_c" | "moBlendCut_c" => super::blend_records::read(reader, map),
         "moFlatPattern_c" => super::flat_patterns::read(reader, map),
         "moFlatPatBoundBox_c" => super::flat_pattern_boxes::read(reader),

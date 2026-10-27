@@ -171,6 +171,8 @@ typed transforms, shared property records and direct byte arrays.
 numeric columns and conditional direction and dimension references.
 [Reference-plane point roles](docs/features/plane-point-roles/README.md) accept
 the documented point-reference family while retaining unrelated-class rejection.
+[Weldment features](docs/features/weldments/README.md) preserve direct custom-property
+lists, duplicate records and original stored expressions.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 

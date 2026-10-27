@@ -314,3 +314,6 @@ mod view_tests;
 #[cfg(test)]
 #[path = "../../tests/model_archives/weld_helpers.rs"]
 mod weld_helper_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/weldments.rs"]
+mod weldment_record_tests;

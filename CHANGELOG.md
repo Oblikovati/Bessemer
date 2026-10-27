@@ -8,6 +8,8 @@
 
 ### Added
 
+- Added ordinary weldment reading, field editing and writing with direct custom-property lists, tagged property records and preserved duplicate records and expressions. (#54)
+
 - Added ordinary blend and blend-cut reading, field editing and writing with independent count retention, complete numeric columns and distinct direction/dimension conditions. (#54)
 
 - Added ordinary fold-folder, transform and property reading, field editing and writing with typed matrix extensions, ordered shared property pairs and direct byte arrays. (#54)

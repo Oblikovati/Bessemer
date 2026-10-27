@@ -45,6 +45,7 @@ mod planar_surface_records;
 mod polyline_records;
 mod resolved_archive;
 mod resolved_edit;
+mod weldment_records;
 pub use resolved_edit::PartResolvedFeaturesEdit;
 mod resolved_failure;
 mod resolved_features;
