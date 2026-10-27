@@ -366,6 +366,9 @@ mod thickening_tests;
 #[path = "../../tests/model_archives/transform_rows.rs"]
 mod transform_rows;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/trim_edge_identifiers.rs"]
+mod trim_edge_identifier_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/views.rs"]
 mod view_tests;
 #[cfg(test)]

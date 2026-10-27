@@ -1,0 +1,142 @@
+{
+  "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\left-trim-edge-native-evidence.json",
+  "source_sha256": "d267c50a8c451017a53ee3c856bea789127ba14ac8092a95dc416e00e33ca764",
+  "evidence": {
+    "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+    "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+    "bindings": [
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+          "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+          "tables": [
+            {
+              "class_name": "moLeftTrimEdgeIdRep_c",
+              "object_offset": 0,
+              "locator": "0x4d32a270",
+              "vftable": "0x4cf07810",
+              "slots": [
+                "0x4bbb69a0",
+                "0x4ba95c00",
+                "0x4cba273f",
+                "0x4b29dae0",
+                "0x4b29dae0",
+                "0x4bbbbbd0",
+                "0x4cba274b",
+                "0x4cba2751"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "01000000000000000000000088d19c0298a21c0270a21c02",
+        "bases": [
+          ".?AVmoLeftTrimEdgeIdRep_c@@",
+          ".?AVmoRef1EdgeIdRep_c@@",
+          ".?AVmoRefEdgeIdRep_c@@",
+          ".?AVmoEdgeIdRep_c@@",
+          ".?AVmoEntityIdRep_c@@",
+          ".?AVgcEntityIdRep_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@"
+        ]
+      },
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+          "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+          "tables": [
+            {
+              "class_name": "moRightTrimEdgeIdRep_c",
+              "object_offset": 0,
+              "locator": "0x4d32a320",
+              "vftable": "0x4cf07ab0",
+              "slots": [
+                "0x4bbb6bd0",
+                "0x4ba95c00",
+                "0x4cba273f",
+                "0x4b29dae0",
+                "0x4b29dae0",
+                "0x4bbbbbd0",
+                "0x4cba274b",
+                "0x4cba2751"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "010000000000000000000000b8d19c0248a31c0220a31c02",
+        "bases": [
+          ".?AVmoRightTrimEdgeIdRep_c@@",
+          ".?AVmoRef1EdgeIdRep_c@@",
+          ".?AVmoRefEdgeIdRep_c@@",
+          ".?AVmoEdgeIdRep_c@@",
+          ".?AVmoEntityIdRep_c@@",
+          ".?AVgcEntityIdRep_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@"
+        ]
+      }
+    ],
+    "functions": {
+      "0x4bbbbbd0": {
+        "end": "0x4bbbbc2c",
+        "native_bytes": "48895c2408574883ec20488bfa488bd9e86b030000488b4338488d4b38488bd7ff5028488bcfff15f42b1801488bcf85c074148b5348488b5c24304883c4205f48ff25e92b1801488d5348488b5c24304883c4205f48ff25dc2b1801",
+        "sha256": "74871326e79b6eb3bfab9849e6e57f7e83a204ffb0e6764230c78cebdad41c98",
+        "imports": [
+          {
+            "call_va": "0x4bbbbbf6",
+            "iat": "0x4cd3e7f0",
+            "module": "swccu.dll",
+            "symbol": "?IsStoring@su_CArchive@@QEBAHXZ",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 0,
+            "lookup_bytes": "52b3940200000000"
+          }
+        ],
+        "decompilation": "\nvoid FUN_4bbbbbd0(longlong param_1,su_CArchive *param_2)\n\n{\n  int iVar1;\n  \n  FUN_4bbbbf50();\n  (**(code **)(*(longlong *)(param_1 + 0x38) + 0x28))(param_1 + 0x38,param_2);\n  iVar1 = su_CArchive::IsStoring(param_2);\n  if (iVar1 != 0) {\n                    /* WARNING: Could not recover jumptable at 0x4bbbbc10. Too many branches */\n                    /* WARNING: Treating indirect jump as call */\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x48));\n    return;\n  }\n                    /* WARNING: Could not recover jumptable at 0x4bbbbc25. Too many branches */\n                    /* WARNING: Treating indirect jump as call */\n  su_CArchive::operator>>(param_2,(long *)(param_1 + 0x48));\n  return;\n}\n\n"
+      },
+      "0x4bbbbf50": {
+        "end": "0x4bbbc382",
+        "native_bytes": "48895c2408488974241055574156488bec4883ec70488bda488bf9488d4dc0ff151b8d1701488b45c04885c00f84ed0300008b888007000085c97512ff150e8d1701ff15008d17018bc8488b45c081f91b0200000f8221010000488d4f10488b01488bd3ff10488b4dc04885c90f84ac0300008b818007000085c07510ff15cd8c1701ff15bf8c1701488b4dc03dad030000734283b9900700000075394885ff74134881c1080500004c8bc78b5110ff1593281801ff150dd61701488bc8ff15acce170185c0740e488b0733d2488bcfff90b0000000488bcbff15c1271801488d4dc085c0ba000020007405ba00000008ff155982170185c07425488b4dc04885c90f84170300004885ff74134881c1500600004c8bc78b5110ff1528281801488bcbff157727180185c00f856e020000488b45c04885c00f84e102000083b8a0010000000f8454020000488b0733d2488bcfff90b0000000488b4dc04885c90f84b90200004881c110020000488bd7ff152a8c1701e9240200004885c00f849b020000488b70304885f6741ce89efa6500488bd0488bcee89272fe0085c00f847a020000488b45c04885c00f846d0200008b888007000085c97512ff158e8b1701ff15808b17018bc8488b45c04533f681f980010000733744397020744e488d156abdf101488bcfe84172fe0085c0488b45c0751a443970200f841f02000044897020488b45c04c897018488b45c0443970207417488d1533bdf101488bcfe80a72fe0085c00f84f20100004c897538488d5538488bcbff15fa2718014c3975380f84dd000000ff1532a01701488bd0488b4d38e8d571fe0085c07441c74530ffffffff488d5530488bcbff15462618014c8b45388b5530488d4dd0e8cebdf8ff90488d55d0488d4f10e85053fbff90488d4dd0e8c6c0f8ffe98600000041b801000000488b5538488d4f10e80e54fbff488b45c04885c00f84600100008b888007000085c97512ff15818a1701ff15738a17018bc8488b45c081f9ad03000073464885c00f84330100004885ff7413488d88080500004c8bc78b5110ff1544261801ff15bed31701488bc8ff155dcc170185c0740e488b0733d2488bcfff90b0000000488b45c048837f1800746f4885c00f84e60000008b808007000085c0750cff15078a1701ff15f98917013dd2010000734944897424204c8d0d960ff5014c8d0507f9f40133d2488b4f18e88e91fe004885c0743b488b10488bc8ff924824000085c0742b488b4dc04881c118030000ba7e2c0000ff15218a17014c8d5c2470498b5b20498b7328498be3415e5f5dc3488b45c04885c074628b808007000085c0750cff1583891701ff15758917013dcb01000073c5488b5f18e88daaf5ff488bd0488bcbe84170fe0085c07518488b5f18e8a59bf5ff488bd0488bcbe82970fe0085c07495488b4dc04881c118030000ba6a2c0000e97affffff4533c0baffffffffb901000000e8f26ffe00cc",
+        "sha256": "d62a8ff17ea74609cc51a19e32a9e96c7a12abe9bde7fe323c8d830418434699",
+        "decompilation": "\nvoid FUN_4bbbbf50(CObject *param_1,su_CArchive *param_2)\n\n{\n  CObject *this;\n  uint uVar1;\n  int iVar2;\n  gcEnvironment_c *pgVar3;\n  CRuntimeClass *pCVar4;\n  moExtruThin_c *pmVar5;\n  moExtruThin_c *this_00;\n  CObject *pCVar6;\n  int iVar7;\n  void *pvVar8;\n  long local_res18 [2];\n  CObject *local_res20;\n  longlong local_58 [2];\n  moFR_c local_48 [48];\n  \n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_58,param_2);\n  if (local_58[0] == 0) goto LAB_4bbbc36f;\n  uVar1 = *(uint *)(local_58[0] + 0x780);\n  if (uVar1 == 0) {\n    moVersionManager_c::get();\n    uVar1 = moVersionManager_c::getCurrentFileVerion();\n  }\n  if (0x21a < uVar1) {\n    (*(code *)**(undefined8 **)(param_1 + 0x10))(param_1 + 0x10,param_2);\n    if (local_58[0] != 0) {\n      uVar1 = *(uint *)(local_58[0] + 0x780);\n      if (uVar1 == 0) {\n        moVersionManager_c::get();\n        uVar1 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if ((uVar1 < 0x3ad) && (*(int *)(local_58[0] + 0x790) == 0)) {\n        if (param_1 != (CObject *)0x0) {\n          su_CObArray::SetAtGrow\n                    ((su_CObArray *)(local_58[0] + 0x508),*(int *)(local_58[0] + 0x518),param_1);\n        }\n        pgVar3 = gcEnvironment_c::get();\n        iVar2 = gcEnvironment_c::getEnableNewSurfaceId(pgVar3);\n        if (iVar2 != 0) {\n          (**(code **)(*(longlong *)param_1 + 0xb0))(param_1,0);\n        }\n      }\n      iVar2 = su_CArchive::IsStoring(param_2);\n      iVar7 = 0x200000;\n      if (iVar2 != 0) {\n        iVar7 = 0x8000000;\n      }\n      iVar2 = moArchiveHelper_c::hasCondition((moArchiveHelper_c *)local_58,iVar7);\n      if (iVar2 != 0) {\n        if (local_58[0] == 0) goto LAB_4bbbc36f;\n        if (param_1 != (CObject *)0x0) {\n          su_CObArray::SetAtGrow\n                    ((su_CObArray *)(local_58[0] + 0x650),*(int *)(local_58[0] + 0x660),param_1);\n        }\n      }\n      iVar2 = su_CArchive::IsStoring(param_2);\n      if (iVar2 != 0) {\n        return;\n      }\n      if (local_58[0] != 0) {\n        if (*(int *)(local_58[0] + 0x1a0) == 0) {\n          return;\n        }\n        (**(code **)(*(longlong *)param_1 + 0xb0))(param_1,0);\n        if (local_58[0] != 0) {\n          suObArray::addUnique((suObArray *)(local_58[0] + 0x210),param_1);\n          return;\n        }\n      }\n    }\n    goto LAB_4bbbc36f;\n  }\n  if (local_58[0] == 0) goto LAB_4bbbc36f;\n  pCVar6 = *(CObject **)(local_58[0] + 0x30);\n  if (pCVar6 != (CObject *)0x0) {\n    pCVar4 = moModel_c::GetRuntimeClass((moModel_c *)(ulonglong)uVar1);\n    iVar2 = CObject::IsKindOf(pCVar6,pCVar4);\n    if (iVar2 == 0) goto LAB_4bbbc36f;\n  }\n  if (local_58[0] == 0) goto LAB_4bbbc36f;\n  uVar1 = *(uint *)(local_58[0] + 0x780);\n  if (uVar1 == 0) {\n    moVersionManager_c::get();\n    uVar1 = moVersionManager_c::getCurrentFileVerion();\n  }\n  if (uVar1 < 0x180) {\n    if (*(int *)(local_58[0] + 0x20) != 0) {\n      iVar2 = CObject::IsKindOf(param_1,(CRuntimeClass *)\n                                        &moByEdgeSurfIdRep_c::classmoByEdgeSurfIdRep_c);\n      if (iVar2 == 0) {\n        if (*(int *)(local_58[0] + 0x20) == 0) goto LAB_4bbbc36f;\n        *(undefined4 *)(local_58[0] + 0x20) = 0;\n        *(undefined8 *)(local_58[0] + 0x18) = 0;\n      }\n      goto LAB_4bbbc160;\n    }\n  }\n  else {\nLAB_4bbbc160:\n    if ((*(int *)(local_58[0] + 0x20) != 0) &&\n       (iVar2 = CObject::IsKindOf(param_1,(CRuntimeClass *)\n                                          &moByEdgeSurfIdRep_c::classmoByEdgeSurfIdRep_c),\n       iVar2 == 0)) goto LAB_4bbbc36f;\n  }\n  local_res20 = (CObject *)0x0;\n  operator>>(param_2,&local_res20);\n  if (local_res20 != (CObject *)0x0) {\n    pCVar4 = moExtObject_c::GetThisClass();\n    iVar2 = CObject::IsKindOf(local_res20,pCVar4);\n    if (iVar2 == 0) {\n      FUN_4bb71610(param_1 + 0x10,local_res20);\n      if (local_58[0] == 0) goto LAB_4bbbc36f;\n      uVar1 = *(uint *)(local_58[0] + 0x780);\n      if (uVar1 == 0) {\n        moVersionManager_c::get();\n        uVar1 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (uVar1 < 0x3ad) {\n        if (local_58[0] == 0) goto LAB_4bbbc36f;\n        if (param_1 != (CObject *)0x0) {\n          su_CObArray::SetAtGrow\n                    ((su_CObArray *)(local_58[0] + 0x508),*(int *)(local_58[0] + 0x518),param_1);\n        }\n        pgVar3 = gcEnvironment_c::get();\n        iVar2 = gcEnvironment_c::getEnableNewSurfaceId(pgVar3);\n        if (iVar2 != 0) {\n          (**(code **)(*(longlong *)param_1 + 0xb0))(param_1,0);\n        }\n      }\n    }\n    else {\n      local_res18[0] = -1;\n      su_CArchive::operator>>(param_2,local_res18);\n      FUN_4bb47fa0(local_48,local_res18[0]);\n      FUN_4bb71530(param_1 + 0x10,local_48);\n      moFR_c::~moFR_c(local_48);\n    }\n  }\n  if (*(longlong *)(param_1 + 0x18) != 0) {\n    if (local_58[0] == 0) {\nLAB_4bbbc36f:\n                    /* WARNING: Subroutine does not return */\n      AfxThrowFileException(1,-1,(wchar_t *)0x0);\n    }\n    uVar1 = *(uint *)(local_58[0] + 0x780);\n    if (uVar1 == 0) {\n      moVersionManager_c::get();\n      uVar1 = moVersionManager_c::getCurrentFileVerion();\n    }\n    if (uVar1 < 0x1d2) {\n      this_00 = *(moExtruThin_c **)(param_1 + 0x18);\n      pmVar5 = (moExtruThin_c *)\n               __RTDynamicCast(this_00,0,&moFeature_c::RTTI_Type_Descriptor,\n                               &moBodyFeature_c::RTTI_Type_Descriptor,0);\n      if ((pmVar5 == (moExtruThin_c *)0x0) ||\n         (iVar2 = (**(code **)(*(longlong *)pmVar5 + 0x2448))(), this_00 = pmVar5, iVar2 == 0)) {\n        if (local_58[0] == 0) goto LAB_4bbbc36f;\n        uVar1 = *(uint *)(local_58[0] + 0x780);\n        if (uVar1 == 0) {\n          moVersionManager_c::get();\n          uVar1 = moVersionManager_c::getCurrentFileVerion();\n        }\n        if (0x1ca < uVar1) {\n          return;\n        }\n        pCVar6 = *(CObject **)(param_1 + 0x18);\n        pCVar4 = moExtruThin_c::GetRuntimeClass(this_00);\n        iVar2 = CObject::IsKindOf(pCVar6,pCVar4);\n        if (iVar2 == 0) {\n          this = *(CObject **)(param_1 + 0x18);\n          pCVar4 = moRevolutionThin_c::GetRuntimeClass((moRevolutionThin_c *)pCVar6);\n          iVar2 = CObject::IsKindOf(this,pCVar4);\n          if (iVar2 == 0) {\n            return;\n          }\n        }\n        pvVar8 = (void *)0x2c6a;\n      }\n      else {\n        pvVar8 = (void *)0x2c7e;\n      }\n      suPtrArray::addUnique((suPtrArray *)(local_58[0] + 0x318),pvVar8);\n    }\n  }\n  return;\n}\n\n"
+      },
+      "0x4bba7fe0": {
+        "end": "0x4bba8033",
+        "native_bytes": "40534883ec20b950000000ff153f681901488bd848894424304885c0742d488bc8e8ead4eeff90488d0582ed3501488903c74348ffffffff488d05f1f73501488903488bc34883c4205bc333c04883c4205bc3",
+        "sha256": "9b497f48e8d4d91c6490d4028a236c50fed297a4a5ad3c95c81ab93a776b22f6",
+        "decompilation": "\nundefined8 * FUN_4bba7fe0(void)\n\n{\n  undefined8 *puVar1;\n  \n  puVar1 = su_CObject::operator_new(0x50);\n  if (puVar1 != (undefined8 *)0x0) {\n    FUN_4ba954f0(puVar1);\n    *puVar1 = moRef1EdgeIdRep_c::vftable;\n    *(undefined4 *)(puVar1 + 9) = 0xffffffff;\n    *puVar1 = moLeftTrimEdgeIdRep_c::vftable;\n    return puVar1;\n  }\n  return (undefined8 *)0x0;\n}\n\n"
+      },
+      "0x4ba954f0": {
+        "end": "0x4ba95552",
+        "native_bytes": "48894c2408534883ec20488bd9ff1545332a0190488d05252d3801488903488d4b1033d2e8f7b40d0090c74328ffffffff33c04889433048894308488d059e2f3801488903488d0594084701488903488d4b38e8f85ac30090488bc34883c4205bc3",
+        "sha256": "03b1385960a4bb2694e1c8e12fed6cb0d8783ef561a552cdb92cf77dc05d1f59",
+        "decompilation": "\ngcEntityIdRep_c * FUN_4ba954f0(gcEntityIdRep_c *param_1)\n\n{\n  gcEntityIdRep_c::gcEntityIdRep_c(param_1);\n  *(undefined ***)param_1 = moEntityIdRep_c::vftable;\n  FUN_4bb70a10(param_1 + 0x10,0);\n  *(undefined4 *)(param_1 + 0x28) = 0xffffffff;\n  *(undefined8 *)(param_1 + 0x30) = 0;\n  *(undefined8 *)(param_1 + 8) = 0;\n  *(undefined ***)param_1 = moEdgeIdRep_c::vftable;\n  *(undefined ***)param_1 = moRefEdgeIdRep_c::vftable;\n  moEntityId_c::moEntityId_c((moEntityId_c *)(param_1 + 0x38));\n  return param_1;\n}\n\n"
+      },
+      "0x4bbbc390": {
+        "end": "0x4bbbc5ac",
+        "native_bytes": "48895c2408574883ec30488bd9488bfa488d4c2420ff15e5881701488bcfff153c24180185c074384885db0f84d8010000e83371fe00488bd0488bcbe8ae6ffe0085c00f84c0010000488d5308488bcfe84b74ffff488b5c24404883c4305fc3488b44242048c7430800000000c6442450014885c00f847b0100008b808007000085c0750cff1585881701ff15778817013d80010000730e488d542450488bcfff1592251801807c24500074a8488bcfff15b2231801488d1593a4f101488bcf85c07408ff159e241801eb06ff15ae231801488bd0488bcb488bf8e800ccb10048837b08000f84ea000000488b4424204885c00f84fd0000008b808007000085c0750cff1507881701ff15f98717013d800100000f83bb000000488b4b08488d15ebb9f101e8c56efe0085c00f84a300000033d2488bcfe84433b100488d158da8f101488bc8488bf8e8a16efe0085c00f84a000000041b801000000488bd7488bcbe8b9cab100488b4c24204885c90f84810000008b818007000085c07511ff158b871701ff157d871701488b4c24203dad030000733e4885c9745a4885ff74134881c1080500004c8bc78b5110ff1554231801ff15ced01701488bc8ff156dc9170185c0740e488b0733d2488bcfff90b0000000488b4b084885c90f8473feffff488d1527b9f101e8016efe0085c00f845ffeffff4533c0baffffffffb901000000e8db6dfe00cc4533c0baffffffffb901000000e8c86dfe00cc",
+        "sha256": "505786864b6467a228b77a22a1204374894384fc37b684c8f456a0123380c216",
+        "decompilation": "\nvoid FUN_4bbbc390(CObject *param_1,su_CArchive *param_2)\n\n{\n  int iVar1;\n  uint uVar2;\n  CRuntimeClass *pCVar3;\n  CObject *pCVar4;\n  gcEnvironment_c *this;\n  uchar local_res18 [16];\n  longlong local_18 [2];\n  \n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_18,param_2);\n  iVar1 = su_CArchive::IsStoring(param_2);\n  if (iVar1 != 0) {\n    if (param_1 != (CObject *)0x0) {\n      pCVar3 = CObject::GetThisClass();\n      iVar1 = CObject::IsKindOf(param_1,pCVar3);\n      if (iVar1 != 0) {\n        operator<<(param_2,(moEntityIdRep_c **)(param_1 + 8));\n        return;\n      }\n    }\n                    /* WARNING: Subroutine does not return */\n    AfxThrowFileException(1,-1,(wchar_t *)0x0);\n  }\n  *(undefined8 *)(param_1 + 8) = 0;\n  local_res18[0] = '\\x01';\n  if (local_18[0] != 0) {\n    uVar2 = *(uint *)(local_18[0] + 0x780);\n    if (uVar2 == 0) {\n      moVersionManager_c::get();\n      uVar2 = moVersionManager_c::getCurrentFileVerion();\n    }\n    if (uVar2 < 0x180) {\n      su_CArchive::operator>>(param_2,local_res18);\n    }\n    if (local_res18[0] == '\\0') {\n      return;\n    }\n    iVar1 = su_CArchive::IsDBStream(param_2);\n    if (iVar1 == 0) {\n      pCVar4 = su_CArchive::ReadObject\n                         (param_2,(CRuntimeClass *)&moEntityIdRep_c::classmoEntityIdRep_c);\n    }\n    else {\n      pCVar4 = su_CDBArchive::ReadObject\n                         ((su_CDBArchive *)param_2,\n                          (CRuntimeClass *)&moEntityIdRep_c::classmoEntityIdRep_c);\n    }\n    FUN_4c6d9070(param_1,pCVar4);\n    if (*(longlong *)(param_1 + 8) != 0) {\n      if (local_18[0] == 0) goto LAB_4bbbc586;\n      uVar2 = *(uint *)(local_18[0] + 0x780);\n      if (uVar2 == 0) {\n        moVersionManager_c::get();\n        uVar2 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if ((uVar2 < 0x180) &&\n         (iVar1 = CObject::IsKindOf(*(CObject **)(param_1 + 8),\n                                    (CRuntimeClass *)&moByEdgeSurfIdRep_c::classmoByEdgeSurfIdRep_c)\n         , iVar1 != 0)) {\n        pCVar4 = (CObject *)FUN_4c6cf810(pCVar4,0);\n        iVar1 = CObject::IsKindOf(pCVar4,(CRuntimeClass *)\n                                         &moFilletSurfIdRep_c::classmoFilletSurfIdRep_c);\n        if ((iVar1 == 0) || (FUN_4c6d8fb0(param_1,pCVar4), local_18[0] == 0)) goto LAB_4bbbc586;\n        uVar2 = *(uint *)(local_18[0] + 0x780);\n        if (uVar2 == 0) {\n          moVersionManager_c::get();\n          uVar2 = moVersionManager_c::getCurrentFileVerion();\n        }\n        if (uVar2 < 0x3ad) {\n          if (local_18[0] == 0) goto LAB_4bbbc586;\n          if (pCVar4 != (CObject *)0x0) {\n            su_CObArray::SetAtGrow\n                      ((su_CObArray *)(local_18[0] + 0x508),*(int *)(local_18[0] + 0x518),pCVar4);\n          }\n          this = gcEnvironment_c::get();\n          iVar1 = gcEnvironment_c::getEnableNewSurfaceId(this);\n          if (iVar1 != 0) {\n            (**(code **)(*(longlong *)pCVar4 + 0xb0))(pCVar4,0);\n          }\n        }\n      }\n    }\n    if (*(CObject **)(param_1 + 8) == (CObject *)0x0) {\n      return;\n    }\n    iVar1 = CObject::IsKindOf(*(CObject **)(param_1 + 8),\n                              (CRuntimeClass *)&moByEdgeSurfIdRep_c::classmoByEdgeSurfIdRep_c);\n    if (iVar1 == 0) {\n      return;\n    }\n  }\nLAB_4bbbc586:\n                    /* WARNING: Subroutine does not return */\n  AfxThrowFileException(1,-1,(wchar_t *)0x0);\n}\n\n"
+      }
+    },
+    "factory": {
+      "descriptor_va": "0x4dad6af0",
+      "descriptor_bytes": "6098f64c000000005000000001000080e07fba4b00000000307cba4b000000000000000000000000",
+      "creator": "0x4bba7fe0",
+      "constructor": "0x4ba954f0",
+      "direct_member": "moEntityId_c at +38"
+    },
+    "direct_entity_id": {
+      "primary_vtable": "0x4d1fb380",
+      "slot_bytes": "90c3bb4b00000000",
+      "serializer": "0x4bbbc390",
+      "framing": "Direct entity-ID body with tagged representation; no separate identity object-map slot"
+    },
+    "limitations": [
+      "Ordinary non-DB external-XML v>27CB only",
+      "Stored signed words remain semantically unresolved",
+      "Pdata may describe fragments; full module hash binds retained decompilation",
+      "No full document/project bit coverage claim"
+    ]
+  }
+}

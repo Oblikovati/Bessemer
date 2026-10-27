@@ -10,6 +10,8 @@
 
 ### Added
 
+- Added ordinary left/right trim-edge identifier reading, editing and writing with complete source representations, shared feature references and direct entity-ID members. (#54)
+
 - Added ordinary surface-cut and trim-surface reading, editing and writing with direct chooser ownership, independent arrays and complete reference records. (#54)
 
 - Added ordinary thickening and surface-reference reading, editing and writing with shared dimensions, versioned directions and strict selected kernel bodies. (#54)

@@ -213,6 +213,8 @@ complete payloads, shared body targets and raw versioned options.
 versioned directions and complete constant/component surface-reference layers.
 [Surface cuts and trims](docs/features/surface-operations/README.md) retain
 direct chooser ownership, allocated-data wire members and shared references.
+[Trim-edge identifiers](docs/features/trim-edge-identifiers/README.md) retain
+complete source representations and direct entity-ID members for both sides.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 
