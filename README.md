@@ -165,6 +165,8 @@ retain their inherited feature fields, geometry identities and fixed transform w
 shared sketch handles and direct bend-group records.
 [Flat patterns](docs/features/flat-patterns/README.md) preserve direct bounding boxes,
 ordered pairs and typed raw compressed kernel bodies.
+[Fold folders and transforms](docs/features/fold-transforms/README.md) preserve
+typed transforms, shared property records and direct byte arrays.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 

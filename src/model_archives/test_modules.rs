@@ -144,6 +144,9 @@ mod fillet_thread_tests;
 #[path = "../../tests/resolved_features/flat_patterns.rs"]
 mod flat_pattern_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/fold_transforms.rs"]
+mod fold_transform_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/folder_configuration_records.rs"]
 mod folder_configuration_record_tests;
 #[cfg(test)]

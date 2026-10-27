@@ -7,6 +7,9 @@ pub(super) fn read(
     map: &mut ObjectReader,
     name: &str,
 ) -> Option<Result<()>> {
+    if let Some(result) = super::fold_transforms::read_object(reader, map, name) {
+        return Some(result);
+    }
     let result = match name {
         "moFlatPattern_c" => super::flat_patterns::read(reader, map),
         "moFlatPatBoundBox_c" => super::flat_pattern_boxes::read(reader),
