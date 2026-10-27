@@ -14,6 +14,9 @@ pub(super) const HANDLES: &[&str] = &[
     "sgTextHandle",
     "sg3DPlaneHandle",
     "sg3DSphereHandle",
+    // 11.341 / C-383 binds both primary slots directly to sgEntHandle::Serialize.
+    "sg3DParametricSurfaceHandle",
+    "sgParabolaHandle",
 ];
 
 // #46: these two documented derived wrappers occupy sgExtEnt_c.reference in native sketches.
