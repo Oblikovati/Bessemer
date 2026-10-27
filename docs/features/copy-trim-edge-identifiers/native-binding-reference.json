@@ -1,0 +1,52 @@
+{
+  "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\edge-id-representations-native-evidence.json",
+  "source_sha256": "c19ad74532fec9ea5223410c6ef92210a3a161b4baf9e77029961c4beddf8d49",
+  "clause": "11.232 / C-274",
+  "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+  "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "bindings": [
+    {
+      "class_name": "moCopyEdgeIdRep_c",
+      "vtable": "0x4cf065b0",
+      "serializer": "0x4bbbbbd0",
+      "ancestry": [
+        ".?AVmoCopyEdgeIdRep_c@@",
+        ".?AVmoRefEdgeIdRep_c@@",
+        ".?AVmoEdgeIdRep_c@@",
+        ".?AVmoEntityIdRep_c@@",
+        ".?AVgcEntityIdRep_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ]
+    },
+    {
+      "class_name": "moTrimExtEdgeIdRep_c",
+      "vtable": "0x4cf07570",
+      "serializer": "0x4bbbbbd0",
+      "ancestry": [
+        ".?AVmoTrimExtEdgeIdRep_c@@",
+        ".?AVmoRef1EdgeIdRep_c@@",
+        ".?AVmoRefEdgeIdRep_c@@",
+        ".?AVmoEdgeIdRep_c@@",
+        ".?AVmoEntityIdRep_c@@",
+        ".?AVgcEntityIdRep_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ]
+    },
+    {
+      "class_name": "moEdgeRefIdRep_c",
+      "vtable": "0x4cf03120",
+      "serializer": "0x4bbbde70",
+      "ancestry": [
+        ".?AVmoEdgeRefIdRep_c@@",
+        ".?AVmoSingleEdgeIdRep_c@@",
+        ".?AVmoEdgeIdRep_c@@",
+        ".?AVmoEntityIdRep_c@@",
+        ".?AVgcEntityIdRep_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ]
+    }
+  ]
+}

@@ -4,11 +4,21 @@
 
 ### Fixed
 
+- Fixed sketch external-entity references rejecting complete known wrapper subclasses, including fresh and cached single-face references, while retaining unrelated-class rejection. (#46)
+
 - Fixed extrusion and revolution end-specification point roles rejecting documented endpoint and loft-sync subclasses through fresh or cached pointers. (#46)
 
 - Fixed reference-plane point roles rejecting documented endpoint and loft-sync subclasses for fresh and cached pointers. (#46)
 
 ### Added
+
+- Added ordinary copy, trim/extend and reference edge identifier reading, editing and writing with exact native dispatches, direct entity-ID members and retained signed words. (#54)
+
+- Added ordinary filled-surface and curve-contact reading, editing and writing with direct owned keepers, retained signed-byte bits and exact contact pointer order. (#54)
+
+- Added ordinary sew-reference surface reading, editing and writing with five direct arrays, retained flag words, native double order and empty inherited keepers. (#54)
+
+- Added ordinary net-blend/cut and contact/group/multi-edge reading, editing and writing with direct curve-set bodies, independent signed point counts and retained thin-dimension options. (#54)
 
 - Added ordinary lock/environment feature, pattern-item and edge/radius helper reading, editing and writing with exact scalar widths and preserved arbitrary object references. (#54)
 

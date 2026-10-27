@@ -41,6 +41,7 @@ mod edit_history;
 mod edit_types;
 mod field_change;
 mod field_mismatch;
+mod filled_surfaces;
 mod flat_pattern_boxes;
 mod flat_patterns;
 mod fold_transforms;
@@ -48,6 +49,8 @@ mod frontier_feature_helpers;
 mod helix_records;
 mod manager_tail;
 mod mirror_solids;
+mod net_blend_components;
+mod net_blends;
 mod offset_surfaces;
 mod planar_surface_records;
 mod polyline_records;
@@ -72,6 +75,7 @@ mod scale_records;
 mod scene_adapter;
 mod schema_references;
 mod sensor_records;
+mod sew_surfaces;
 mod validation;
 pub use crate::archive_codec::{
     ArchiveClass as ModelClass, ArchiveMapIndex as ModelObjectId,

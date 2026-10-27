@@ -1,0 +1,51 @@
+{
+  "base_revision": "738cba0c444f23c459f7bcbedb6b57e19b421d25",
+  "issue": 54,
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "focused": {
+    "private_tests": 6,
+    "public_tests": 3,
+    "python_tests": 2,
+    "cases": 90,
+    "primitive_observations": 16708,
+    "owned_streams": 21,
+    "source_target_identities_verified": true,
+    "source_role_oracle": false,
+    "existing_trim_fixture_tests": 2
+  },
+  "native": {
+    "cases": 906,
+    "previous_complete": 764,
+    "complete": 764,
+    "explicit_stops": 142,
+    "new_complete": 0,
+    "cases_advanced_to_later_stops": 3,
+    "fresh_processes": 2,
+    "all_outcomes_and_causes_identical": true,
+    "artifact_stable_across_gate": true,
+    "artifact_sha256": "6aa09fe6364d613c42a5b1d705f21f0cbde7a705ab86e7e156d6ec89fb43a0d0",
+    "accepted_set_bound_to_previous_audit": true,
+    "fresh_source_replay": false
+  },
+  "corpus_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "schema_snapshot_sha256": "5fb235b03efb75cf3ebfd535fd6020e7c6a61aa1bb7b8fcc8ee98c3eeb86d719",
+  "fixture_reference_sha256": "95e0818b55eccf34437c3f63822b5452dec1d7f0980193d01477c0406fddb14e",
+  "gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 716,
+    "library_ignored": 3,
+    "xtask_passed": 4,
+    "doctests_passed": 265,
+    "all_integration_tests_passed": true,
+    "log_sha256": "3aad47924943c839038d728cca443396b38a7810d14bc5256a2e7046fbccfe9d"
+  },
+  "exclusions": [
+    "142 explicit native corpus stops",
+    "Legacy migrations and alternate contexts",
+    "Geometry validity and SolidWorks application acceptance",
+    "Broader all-schema parity remains unproven"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "cases": 906,
+  "previous_complete": 761,
+  "complete": 764,
+  "explicit_stops": 142,
+  "new_complete": [
+    132,
+    161,
+    351
+  ],
+  "changed": [
+    {
+      "index": 132,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moFillRefSurface_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    },
+    {
+      "index": 161,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moFillRefSurface_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    },
+    {
+      "index": 351,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moFillRefSurface_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    },
+    {
+      "index": 747,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moFillRefSurface_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moEdgeRefIdRep_c\" schema 1; expected an implemented complete model object body"
+      ]
+    }
+  ]
+}

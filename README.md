@@ -219,6 +219,16 @@ complete source representations and direct entity-ID members for both sides.
 retain native-bound layouts, shared references and direct entity-ID members.
 [Lock/environment features and pattern/fillet helpers](docs/features/frontier-feature-helpers/README.md)
 retain inherited bodies, raw item bits and unqualified radius-object pointers.
+[Net blends and component groups](docs/features/net-blends/README.md) retain
+direct curve-set bodies, independent point counts, shared contacts and thin dimensions.
+[Sketch external references](docs/features/sketch-wrapper-roles/README.md) accept
+the existing finite wrapper family through fresh and cached pointers.
+[Sew-reference surfaces](docs/features/sew-surfaces/README.md) retain five direct
+arrays, raw flag words, double order and inherited empty keepers.
+[Copy, trim/extend and reference edge identifiers](docs/features/copy-trim-edge-identifiers/README.md)
+retain direct source IDs, native map accounting and signed words.
+[Filled surfaces and curve contacts](docs/features/filled-surfaces/README.md) retain
+direct keeper arrays, one-byte fields and ordered contact references.
 [Offset surfaces](docs/features/offset-surfaces/README.md) retain complete inline
 surface payloads, required data, signed array presence and empty keepers.
 [Reference curves](docs/features/reference-curves/README.md) retain complete

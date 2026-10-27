@@ -1,0 +1,63 @@
+{
+  "base_revision": "bec019e824e2d1b0c86b0df0874eccb3715ecdc2",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "focused": {
+    "private_tests": 9,
+    "public_tests": 3,
+    "python_tests": 2,
+    "cases": 570,
+    "primitive_observations": 205111,
+    "owned_streams": 34,
+    "source_target_identities_verified": true,
+    "rejected_unstable_source_regeneration_runs": 1,
+    "corrected_corruption_test_count_word_path": true
+  },
+  "native": {
+    "cases": 906,
+    "previous_complete": 757,
+    "complete": 761,
+    "explicit_stops": 145,
+    "new_complete": 4,
+    "cases_advanced_to_later_stops": 2,
+    "fresh_processes": 2,
+    "all_outcomes_and_causes_identical": true,
+    "artifact_stable_across_gate": true,
+    "artifact_sha256": "8b8dd5c05d8f4b2d4dfaff308bcb99de7aff8d5e4128170c247e1281cfe47ced",
+    "independent_feature_bytes": 48364098,
+    "independent_snapshot_identity": "6e0b110bc4019e0a03011786724f2eadd094d342e465d819d944b4ec71819497",
+    "independent_python_files": 1295,
+    "independent_report_sha256": "8f49ed244131e628c77050832929b02b3a6082531e36b7691b318df172db24d3",
+    "independent_sentinel_sha256": "7c765df608c2bb37234fcdb3d08ed0194dc981bf3995c6fc002106541b7114c6",
+    "logs_sha256": [
+      "de82a1c09d66f9f657614d1fc435f7b0720351974d17320583f210c984a181e0",
+      "c172fb8b4b46ff65e9bc12c3280663a8eb495cee9f1d4ef1423be2aceae9c08c"
+    ]
+  },
+  "corpus_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "schema_snapshot_sha256": "c5cefc835fd546f065f7a95539ef136479d0586ccee69957d7236483c15c1840",
+  "fixture_reference_sha256": "b9221d1a4e834e6b89753ed1dbc93b937c5bd5650c07a951fe786f1ca19a68ec",
+  "gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 691,
+    "library_ignored": 3,
+    "xtask_passed": 4,
+    "doctests_passed": 265,
+    "all_integration_tests_passed": true,
+    "log_sha256": "87c00f106417799d6962ff099e0162d53a1c9b8c17e3d21206f70c53d5d9149d"
+  },
+  "follow_up_bug": {
+    "issue": 46,
+    "comment_url": "https://github.com/Oblikovati/Bessemer/issues/46#issuecomment-6440280841",
+    "case": 351,
+    "scope": "Separate finite sketch external-entity wrapper-role audit; no broadened acceptance in this feature."
+  },
+  "exclusions": [
+    "145 explicit native corpus stops",
+    "Legacy layouts outside the declared modern context",
+    "Geometry validity and SolidWorks application acceptance",
+    "Broader all-schema parity remains unproven"
+  ]
+}

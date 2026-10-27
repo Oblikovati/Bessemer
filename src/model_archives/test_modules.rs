@@ -165,6 +165,9 @@ mod face_blend_item_tests;
 #[path = "../../tests/resolved_features/feature_comments.rs"]
 mod feature_comment_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/filled_surfaces.rs"]
+mod filled_surface_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/fillet_threads.rs"]
 mod fillet_thread_tests;
 #[cfg(test)]
@@ -242,6 +245,9 @@ mod native_corpus_tests;
 #[cfg(test)]
 #[path = "../../tests/model_archives/native_kernel_frames.rs"]
 mod native_kernel_frame_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/net_blends.rs"]
+mod net_blend_tests;
 #[cfg(test)]
 #[path = "../../tests/model_archives/node_units.rs"]
 mod node_units;
@@ -321,6 +327,9 @@ mod section_bound_tests;
 #[path = "../../tests/resolved_features/sensor_records.rs"]
 mod sensor_record_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/sew_surfaces.rs"]
+mod sew_surface_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/shared_sketch_handles.rs"]
 mod shared_sketch_handle_tests;
 #[cfg(test)]
@@ -356,6 +365,9 @@ mod sketch_tail_tests;
 #[cfg(test)]
 #[path = "../../tests/model_archives/sketch_text.rs"]
 mod sketch_text_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/sketch_wrapper_roles.rs"]
+mod sketch_wrapper_role_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/solid_references.rs"]
 mod solid_reference_tests;
@@ -395,3 +407,7 @@ mod weld_helper_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/weldments.rs"]
 mod weldment_record_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/copy_edge_identifiers.rs"]
+mod copy_edge_identifier_tests;
