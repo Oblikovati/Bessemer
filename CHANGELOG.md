@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Fixed three-point-plane reference fields rejecting documented endpoint and loft-sync subclasses while retaining nulls, identity and unrelated-class checks. (#46)
+
 - Fixed reference-plane data and common-wrapper roles rejecting documented constraint, point/surface and base-surface objects while retaining finite class checks. (#46)
 
 - Fixed projected-line data roles rejecting documented draft and intersection objects while retaining nonnull-owner and unrelated-class checks. (#46)

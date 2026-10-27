@@ -173,12 +173,13 @@ fn angle(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
 }
 
 fn three_points(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    // #46 / C-218: all three point-base fields admit the reviewed C-192/C-232 subclasses.
     for offset in ["88", "90", "98"] {
         declared(
             reader,
             map,
             &format!("point_reference_{offset}"),
-            &["moPointRef_w"],
+            POINT_REFERENCE_CLASSES,
         )?;
     }
     Ok(())
