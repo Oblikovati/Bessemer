@@ -175,6 +175,8 @@ the documented point-reference family while retaining unrelated-class rejection.
 lists, duplicate records and original stored expressions.
 [Structural members](docs/features/structural-members/README.md) preserve full-width
 point metadata, signed contour modes and complete shared contour/index graphs.
+[Reference dimensions](docs/features/reference-dimensions/README.md) preserve entity
+kind words, optional vectors, complete sketch handles and direct dimension planes.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 

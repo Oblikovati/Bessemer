@@ -8,6 +8,8 @@
 
 ### Added
 
+- Added ordinary reference-dimension reading, editing and writing with complete one- and two-entity records, sketch handles and direct dimension-plane tags. (#54)
+
 - Added ordinary structural-member reading, field editing and writing with complete contour, orientation, segment, index and profile-reference records and preserved full-width point metadata. (#54)
 
 - Added ordinary weldment reading, field editing and writing with direct custom-property lists, tagged property records and preserved duplicate records and expressions. (#54)
