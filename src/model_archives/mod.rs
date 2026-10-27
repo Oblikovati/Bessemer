@@ -8,6 +8,8 @@ mod archive;
 mod attribute_records;
 mod base_flange_directions;
 mod base_flanges;
+mod blend_columns;
+mod blend_records;
 mod body_chooser_records;
 mod browser_folders;
 mod bucket_adapter;

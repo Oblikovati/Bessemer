@@ -15,10 +15,20 @@ pub(super) fn pointers(
     label: &str,
     role: ModelObjectRole<'_>,
 ) -> Result<()> {
-    for index in 0..reader.object_count(&format!("{label}.count"))? {
+    counted_pointers(reader, map, label, role).map(|_| ())
+}
+
+pub(super) fn counted_pointers(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+    label: &str,
+    role: ModelObjectRole<'_>,
+) -> Result<usize> {
+    let count = reader.object_count(&format!("{label}.count"))?;
+    for index in 0..count {
         reader.object(&format!("{label}[{index}]"), map, role)?;
     }
-    Ok(())
+    Ok(count)
 }
 
 pub(super) fn nodes(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {

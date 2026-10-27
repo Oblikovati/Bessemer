@@ -11,6 +11,7 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moBlend_c" | "moBlendCut_c" => super::blend_records::read(reader, map),
         "moFlatPattern_c" => super::flat_patterns::read(reader, map),
         "moFlatPatBoundBox_c" => super::flat_pattern_boxes::read(reader),
         "moBoundBoxData_c" => super::flat_pattern_boxes::contents(reader),

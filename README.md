@@ -167,6 +167,8 @@ shared sketch handles and direct bend-group records.
 ordered pairs and typed raw compressed kernel bodies.
 [Fold folders and transforms](docs/features/fold-transforms/README.md) preserve
 typed transforms, shared property records and direct byte arrays.
+[Blends and blend cuts](docs/features/blends/README.md) preserve independent counts,
+numeric columns and conditional direction and dimension references.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 
