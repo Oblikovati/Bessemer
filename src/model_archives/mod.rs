@@ -35,6 +35,8 @@ mod edit_history;
 mod edit_types;
 mod field_change;
 mod field_mismatch;
+mod flat_pattern_boxes;
+mod flat_patterns;
 mod manager_tail;
 mod planar_surface_records;
 mod polyline_records;

@@ -163,6 +163,8 @@ also accept documented fresh and cached coordinate-system targets.
 retain their inherited feature fields, geometry identities and fixed transform words.
 [Base flanges](docs/features/base-flanges/README.md) preserve selected directions,
 shared sketch handles and direct bend-group records.
+[Flat patterns](docs/features/flat-patterns/README.md) preserve direct bounding boxes,
+ordered pairs and typed raw compressed kernel bodies.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 

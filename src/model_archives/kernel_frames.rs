@@ -55,6 +55,12 @@ pub(super) fn read_body_state(reader: &mut ModelDecoder<'_>) -> Result<KernelBod
     if reader.u8("suppressed")? != 0 {
         return Ok(KernelBodyState::Suppressed);
     }
+    read_raw_body(reader)?;
+    Ok(KernelBodyState::Serialized)
+}
+
+pub(super) fn read_raw_body(reader: &mut ModelDecoder<'_>) -> Result<()> {
+    reader.require_ordinary_part()?;
     let context = constrained_context(reader)?;
     let frame = reader.scalar(|cursor| {
         let length = cursor.i32()?;
@@ -62,7 +68,7 @@ pub(super) fn read_body_state(reader: &mut ModelDecoder<'_>) -> Result<KernelBod
     })?;
     reader.charge_kernel(frame.expanded_bytes(), frame.record_count())?;
     reader.field("frame", ModelFieldValue::Kernel(Box::new(frame)))?;
-    Ok(KernelBodyState::Serialized)
+    Ok(())
 }
 
 fn constrained_context(reader: &mut ModelDecoder<'_>) -> Result<CompressedKernelContext> {

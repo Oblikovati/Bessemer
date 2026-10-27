@@ -141,6 +141,9 @@ mod feature_comment_tests;
 #[path = "../../tests/model_archives/fillet_threads.rs"]
 mod fillet_thread_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/flat_patterns.rs"]
+mod flat_pattern_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/folder_configuration_records.rs"]
 mod folder_configuration_record_tests;
 #[cfg(test)]

@@ -1,0 +1,199 @@
+{
+  "base_revision": "f7cb394ccfbf6248f494956aca7472e9d9f223fc",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "gate": {
+    "command": "cargo xtask pr",
+    "staged": true,
+    "exit_code": 0,
+    "library_passed": 516,
+    "library_ignored": 3,
+    "xtask_tests_passed": 4,
+    "all_integration_suites_passed": true,
+    "doctests_passed": 265,
+    "log_sha256": "f021d0198cba4c76607dc1bb2c4e7c9ef8115ca4daec5df5d52ddcff4f2e5d86"
+  },
+  "focused": {
+    "private_tests": 5,
+    "public_tests": 4,
+    "python_tests": 3,
+    "object_cases": 144,
+    "projected_reads": 44842,
+    "owned_streams": 4,
+    "present_raw_kernel_cases": 48
+  },
+  "native_corpus": {
+    "cases": 906,
+    "accepted": 638,
+    "rejected": 268,
+    "accepted_input_set_unchanged": true,
+    "fresh_process_outcomes_and_causes_identical": true,
+    "artifact_stable_during_replay": true,
+    "artifact_sha256": "52480e8ac5f8e5689cfef7d103f9f96860b25d0ba04d415fc7626031ed901aae",
+    "changes": [
+      {
+        "index": 124,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFlatPattern_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFoldUpDownSketchFolder_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 188,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFlatPattern_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFoldUpDownSketchFolder_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 196,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFlatPattern_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFoldUpDownSketchFolder_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 197,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFlatPattern_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFoldUpDownSketchFolder_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 224,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFlatPattern_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFoldUpDownSketchFolder_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 228,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFlatPattern_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFoldUpDownSketchFolder_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 243,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFlatPattern_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFoldUpDownSketchFolder_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 251,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFlatPattern_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFoldUpDownSketchFolder_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 298,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFlatPattern_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFoldUpDownSketchFolder_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 306,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFlatPattern_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFoldUpDownSketchFolder_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 307,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFlatPattern_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFoldUpDownSketchFolder_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 785,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFlatPattern_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFoldUpDownSketchFolder_c\" schema 1; expected an implemented complete model object body"
+        }
+      }
+    ],
+    "previous_independent_eof_report": "../coordinate-systems/accepted-reference.json",
+    "previous_independent_eof_report_sha256": "3b03125d6499bdd08da38797c05726468f870522aa030cc8ce93cfe70aa7bacf",
+    "accepted_input_quartets_verified_against_independent_audit": 638,
+    "expected_full_parity_exit_code": 101
+  },
+  "reference_audit": {
+    "reader_python_files": 1109,
+    "reader_hashes_stable_during_generation_and_regeneration": true,
+    "known_source_resource_warning_issue": 68
+  },
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "source_file_sha256": {
+    "src/model_archives/flat_patterns.rs": "48788a56cbe70029216fdd78bc2d023864ab41814cf061316e371c94435541da",
+    "src/model_archives/flat_pattern_boxes.rs": "6d4dd0687fe0b10b7017a039516b2554e08af8a27a1d9bfec9e1341414b31ded",
+    "src/model_archives/kernel_frames.rs": "7646922503de623c5f2e23ee02040a6a4632922d8f55fd1c11e0d7ccd7bd0927",
+    "src/model_archives/base_flanges.rs": "276417bb4633a2ecd1be2acae742cb2c53c9aa6536d5c198cf38196b3a7d0278",
+    "src/model_archives/body_features.rs": "b15672391263fd2a0549cefd8be95460cecb2c2e0519afe815ffad7af05bc1aa",
+    "tests/resolved_features/flat_patterns.rs": "3e235785e2dfbf1cfa3042cfae71b822a02b1fade0b644b66bd303ff87bdb2e1",
+    "tests/resolved_flat_patterns.rs": "3ef594af9474861e9a2b9e5e9990d6aa3c5b1d9d639e7f07820a156a61800f70"
+  },
+  "exclusions": [
+    "Full documented schema parity",
+    "Fold folders and their transform dependencies",
+    "Other raw kernel forms",
+    "Native application acceptance",
+    "Geometry and topology validation",
+    "DB/deferred and historical archives",
+    "Engineering meanings and native runtime filtering",
+    "Non-Windows execution awaits a future integration PR matrix"
+  ],
+  "dependencies_changed": false,
+  "version_changed": false
+}

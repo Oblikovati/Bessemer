@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added ordinary flat-pattern reading, field editing and writing with typed raw compressed bodies, direct bounding boxes, shared references and ordered duplicate pair keys. (#54)
+
 - Added ordinary base-flange reading, field editing and writing with selected directions, shared sketch-handle collections and preserved bend-group records. (#54)
 
 - Added ordinary sheet-metal and template reading, field editing and writing with validated saved-state handoff, strided allowance payloads, fixed-face framing and complete component references. (#54)

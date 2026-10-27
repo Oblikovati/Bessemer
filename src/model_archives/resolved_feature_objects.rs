@@ -8,6 +8,9 @@ pub(super) fn read(
     name: &str,
 ) -> Option<Result<()>> {
     let result = match name {
+        "moFlatPattern_c" => super::flat_patterns::read(reader, map),
+        "moFlatPatBoundBox_c" => super::flat_pattern_boxes::read(reader),
+        "moBoundBoxData_c" => super::flat_pattern_boxes::contents(reader),
         "moSMBaseFlange_c" => super::base_flanges::read(reader, map),
         "moSheetMetal_c"
         | "moTemplateSheetMetal_c"

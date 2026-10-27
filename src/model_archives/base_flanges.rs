@@ -9,7 +9,7 @@ pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
     reader.scope("payload", |reader| payload(reader, map))
 }
 
-fn bend_group(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+pub(super) fn bend_group(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     reader.scope("common_bend_800", |reader| {
         super::sheet_payload::common(reader, map)
     })?;
