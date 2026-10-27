@@ -103,6 +103,7 @@ mod environment;
 mod explosion;
 mod external_references;
 mod extruded_surfaces;
+mod feature_comments;
 mod features;
 mod fillet_cache;
 mod fillets;

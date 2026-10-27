@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added ordinary feature-comment reading, field editing and writing with direct lists, shared text items, versioned extra members and preserved four-byte time values. (#54)
+
 - Added ordinary connection-point and route-point reading, field editing and writing with preserved direct parameters, compatibility fields, shared references and complete radial-dimension dependencies. (#54)
 
 - Added ordinary reference-point reading, field editing and writing with all seven point-data layouts, required tagged data, shared typed references and independent complete-stream fixtures. (#54)
