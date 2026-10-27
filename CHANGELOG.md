@@ -10,6 +10,8 @@
 
 ### Added
 
+- Added ordinary spline tangency, control-polygon and curvature reading, editing and writing with complete sketch owners and direct embedded handles. (#54)
+
 - Added ordinary radiated-edge identifier reading, editing and writing with complete inherited references, signed words and shared declared-role pointers. (#54)
 
 - Added ordinary reference-dimension reading, editing and writing with complete one- and two-entity records, sketch handles and direct dimension-plane tags. (#54)

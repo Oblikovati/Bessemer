@@ -181,6 +181,8 @@ kind words, optional vectors, complete sketch handles and direct dimension plane
 preserve inherited references and shared entity-representation identities.
 [End-specification point roles](docs/features/end-spec-point-roles/README.md)
 accept the verified point family in extrusion and revolution ends.
+[Spline controls](docs/features/spline-controls/README.md) retain direct handle
+records and complete sketch user-object identities.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 

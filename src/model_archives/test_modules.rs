@@ -312,6 +312,9 @@ mod sketch_text_tests;
 #[path = "../../tests/model_archives/spatial_objects.rs"]
 mod spatial_object_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/spline_controls.rs"]
+mod spline_control_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/structural_members.rs"]
 mod structural_member_tests;
 #[cfg(test)]

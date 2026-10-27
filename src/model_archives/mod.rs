@@ -196,6 +196,7 @@ mod sketch_tail;
 mod sketch_text;
 mod spatial_objects;
 mod spline_arrays;
+mod spline_controls;
 mod sweep_data;
 mod sweep_objects;
 mod sweep_records;
