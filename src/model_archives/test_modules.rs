@@ -279,6 +279,9 @@ mod resolved_corpus_tests;
 #[path = "../../tests/model_archives/resolved_start.rs"]
 mod resolved_start_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/revolved_surfaces.rs"]
+mod revolved_surface_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/scale_schema_records.rs"]
 mod scale_schema_record_tests;
 #[cfg(test)]

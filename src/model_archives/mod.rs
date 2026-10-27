@@ -47,6 +47,7 @@ mod polyline_records;
 mod reference_dimensions;
 mod resolved_archive;
 mod resolved_edit;
+mod revolved_surfaces;
 mod structural_contours;
 mod structural_member_objects;
 mod structural_member_records;

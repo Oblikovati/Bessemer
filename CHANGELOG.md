@@ -10,6 +10,8 @@
 
 ### Added
 
+- Added ordinary revolved reference-surface reading, editing and writing with shared angular dimensions, preserved data words and exact zero-byte keepers. (#54)
+
 - Added ordinary face-blend item and pair reading, editing and writing with shared identities, typed boundary references and preserved optional point bytes. (#54)
 
 - Added ordinary draft and back-draft surface-identifier reading, editing and writing with complete inherited references and preserved signed words. (#54)

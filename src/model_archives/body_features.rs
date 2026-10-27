@@ -9,6 +9,8 @@ const ID_KEEPERS: &[&str] = &[
     "moPlanarSurfIdKeeper_c",
     // #54 / C-181: 26 exact-EOF native surface roots supply this concrete inherited keeper.
     "moExtruRefSurfIdKeeper_c",
+    // #54 / C-203: retain this concrete inherited keeper; do not infer its ancestry from its name.
+    "moRevolvRefSurfIdKeeper_c",
 ];
 
 pub(super) fn header(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
@@ -224,6 +226,8 @@ pub(super) const CLASSES: &[&str] = &[
     "moDraft_c",
     // #60: both complete readers use this inherited atom-feature owner role.
     "moPlanarSurface_c",
+    // #54 / C-203: revolved surfaces retain the reference-geometry atom-owner contract.
+    "moRevolvRefSurf_c",
     "Chamfer_c",
     "moPLine_c",
     "moScale_c",

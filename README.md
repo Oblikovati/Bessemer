@@ -193,6 +193,8 @@ direct identifier keepers, strided payloads and counted face/point collections.
 retain full signed words and distinct identifiers with shared feature references.
 [Face-blend items](docs/features/face-blend-items/README.md) preserve pair identity,
 typed face/edge references and optional point bits.
+[Revolved surfaces](docs/features/revolved-surfaces/README.md) retain inline
+surface bodies, shared angular dimensions, data words and keeper identity.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 
