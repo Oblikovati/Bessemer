@@ -48,6 +48,9 @@ mod chamfer_record_tests;
 #[path = "../../tests/resolved_features/circular_patterns.rs"]
 mod circular_pattern_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/combine_bodies.rs"]
+mod combine_body_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/complete_details.rs"]
 mod complete_detail_tests;
 #[cfg(test)]
@@ -216,6 +219,9 @@ mod manager_oracle_tests;
 #[path = "../../tests/resolved_features/mirror_patterns.rs"]
 mod mirror_pattern_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/mirror_solids.rs"]
+mod mirror_solid_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/model_references.rs"]
 mod model_reference_tests;
 #[cfg(test)]
@@ -336,6 +342,9 @@ mod sketch_tail_tests;
 #[path = "../../tests/model_archives/sketch_text.rs"]
 mod sketch_text_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/solid_references.rs"]
+mod solid_reference_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/spatial_objects.rs"]
 mod spatial_object_tests;
 #[cfg(test)]
@@ -345,14 +354,26 @@ mod spline_control_tests;
 #[path = "../../tests/resolved_features/structural_members.rs"]
 mod structural_member_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/surface_operations.rs"]
+mod surface_operation_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/sweeps.rs"]
 mod sweep_record_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/thickening.rs"]
+mod thickening_tests;
 #[cfg(test)]
 #[path = "../../tests/model_archives/transform_rows.rs"]
 mod transform_rows;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/trim_edge_identifiers.rs"]
+mod trim_edge_identifier_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/views.rs"]
 mod view_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/weld_corners.rs"]
+mod weld_corner_tests;
 #[cfg(test)]
 #[path = "../../tests/model_archives/weld_helpers.rs"]
 mod weld_helper_tests;

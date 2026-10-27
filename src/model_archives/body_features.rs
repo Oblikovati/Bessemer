@@ -72,12 +72,14 @@ pub(super) fn chooser(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> 
     if reader.u16("presence")? == 0 {
         return Ok(());
     }
-    reader.scope("body", |reader| {
-        reader.scope("items", |reader| {
-            model_lists::pointers(reader, map, "items", ModelObjectRole::Any)
-        })?;
-        declared(reader, map, "owner", CLASSES)
-    })
+    reader.scope("body", |reader| direct_chooser(reader, map))
+}
+
+pub(super) fn direct_chooser(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    reader.scope("items", |reader| {
+        model_lists::pointers(reader, map, "items", ModelObjectRole::Any)
+    })?;
+    declared(reader, map, "owner", CLASSES)
 }
 
 fn choosers(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
@@ -222,6 +224,18 @@ pub(super) const CLASSES: &[&str] = &[
     "moBlendCut_c",
     // #54 / C-199: the structural-member serializer starts with the full body-feature base.
     "moWeldMemberFeat_c",
+    // #54 / C-283: the weld-corner constructor inherits the complete body-feature owner.
+    "moWeldCornerFeat_c",
+    // #54 / C-242: native RTTI binds the mirrored solid to moBodyFeature_c.
+    "moMirrorSolid_c",
+    // #54 / C-248 binds both imported moBodyFeature_c bases and ordinary node hooks.
+    "moCombineBodies_c",
+    "moDeleteBody_c",
+    // #54 / C-249 binds the imported body-feature prefix and ordinary node hooks.
+    "moThicken_c",
+    // #54 / C-250 binds both imported body-feature bases and ordinary node hooks.
+    "moSurfCut_c",
+    "moTrimRefSurface_c",
     // #54 / C-202: the draft serializer calls the complete body-feature base.
     "moDraft_c",
     // #60: both complete readers use this inherited atom-feature owner role.

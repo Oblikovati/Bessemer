@@ -1,0 +1,34 @@
+{
+  "cases": 906,
+  "previous_complete": 747,
+  "complete": 749,
+  "explicit_stops": 157,
+  "new_complete": [
+    15,
+    609
+  ],
+  "changed": [
+    {
+      "index": 15,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moLeftTrimEdgeIdRep_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    },
+    {
+      "index": 609,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moLeftTrimEdgeIdRep_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    }
+  ]
+}

@@ -20,6 +20,17 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moSurfCut_c" => super::surface_operations::cut(reader, map),
+        "moTrimRefSurface_c" => super::surface_operations::trim(reader, map),
+        "moCombineBodies_c" => super::combine_bodies::combine(reader, map),
+        "moDeleteBody_c" => super::combine_bodies::delete(reader, map),
+        "moDeleteBodyData_c" => super::combine_bodies::delete_data(reader, map),
+        "moMirrorSolid_c" => super::mirror_solids::read(reader, map),
+        "suUIntArray" => super::mirror_solids::unsigned_array(reader),
+        "moWeldCornerFeat_c" => super::weld_corners::read(reader, map),
+        "moWeldBodyData_c" => super::weld_corners::body_data(reader, map),
+        "moWeldTrimmedBodyData_c" => super::weld_corners::trimmed(reader, map),
+        "moWeldTrimToolData_c" => super::weld_corners::tool(reader, map),
         "moDraft_c" => super::draft_records::read(reader, map),
         "moDraftSIdKeeper_c" | "moEdgeFaceSIdKeeper_c" => super::draft_keepers::read(reader, map),
         "moSplineTangencyControl_c" => super::spline_controls::tangency(reader, map),

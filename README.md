@@ -201,6 +201,20 @@ pitch arrays, conditional dimension tables and wire-edge identifier identity.
 retain shared unit-component targets, wrapper aliases and signed ID/unsigned time pairs.
 [Cut-list folders](docs/features/cut-list-folders/README.md) retain inherited
 folder layers, direct properties, raw flags and shared tagged references.
+[Weld corners](docs/features/weld-corners/README.md) retain independent arrays,
+complete trimming data, raw scalars and the versioned late word.
+[Solid references](docs/features/solid-references/README.md) retain wrapper
+identity, signed body presence, typed kernel bodies and direct attributes.
+[Mirrored solids](docs/features/mirror-solids/README.md) retain independent
+planes and arrays, shared matrix helpers and unsigned-array records.
+[Combine and delete bodies](docs/features/combine-bodies/README.md) retain
+complete payloads, shared body targets and raw versioned options.
+[Thickening](docs/features/thickening/README.md) retains shared dimensions,
+versioned directions and complete constant/component surface-reference layers.
+[Surface cuts and trims](docs/features/surface-operations/README.md) retain
+direct chooser ownership, allocated-data wire members and shared references.
+[Trim-edge identifiers](docs/features/trim-edge-identifiers/README.md) retain
+complete source representations and direct entity-ID members for both sides.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 

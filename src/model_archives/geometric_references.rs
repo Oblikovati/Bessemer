@@ -105,3 +105,14 @@ pub(super) fn loop_body(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -
     }
     Ok(())
 }
+
+pub(super) fn solid(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    model_references::wrapper(reader, map)?;
+    reader.u32("raw_a8")?;
+    if reader.i32("body_presence")? != 0 {
+        reader.scope("body_b8", kernel_frames::read_body)?;
+        // #54 / C-248: the direct list follows even a suppressed selected body.
+        model_lists::pointers(reader, map, "body_attributes", ModelObjectRole::Any)?;
+    }
+    Ok(())
+}

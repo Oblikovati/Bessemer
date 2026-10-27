@@ -10,6 +10,20 @@
 
 ### Added
 
+- Added ordinary left/right trim-edge identifier reading, editing and writing with complete source representations, shared feature references and direct entity-ID members. (#54)
+
+- Added ordinary surface-cut and trim-surface reading, editing and writing with direct chooser ownership, independent arrays and complete reference records. (#54)
+
+- Added ordinary thickening and surface-reference reading, editing and writing with shared dimensions, versioned directions and strict selected kernel bodies. (#54)
+
+- Added ordinary combine/delete-body reading, editing and writing with complete typed payloads, shared body references and raw versioned option bytes. (#54)
+
+- Added ordinary mirrored-solid reading, editing and writing with independent planes and arrays, shared matrix helpers and complete unsigned-array records. (#54)
+
+- Added ordinary solid-reference reading, editing and writing with complete wrapper fields, retained signed presence, typed selected kernel bodies and direct attribute lists. (#54)
+
+- Added ordinary weld-corner reading, editing and writing with complete body-data layers, independent direct arrays, unsigned DWORDs and preserved trimming-tool scalar bits. (#54)
+
 - Added ordinary cut-list folder reading, editing and writing with complete inherited layers, direct property lists and fourteen native-bound folder classes. (#54)
 
 - Added ordinary component-reference curve reading, editing and writing with complete inherited fields, shared unit-component targets and preserved feature ID/time pairs. (#54)

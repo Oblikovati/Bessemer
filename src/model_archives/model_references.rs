@@ -17,6 +17,10 @@ pub(super) const WRAPPER_CLASSES: &[&str] = &[
     "moLoftSynchRef_c",
     "moLineRef_w",
     "moLoopRef_w",
+    // #54 / C-248 proves this concrete reference's moRefWrapper_c ancestry.
+    "moSolidRef_w",
+    // #54 / C-249 proves moRefWrapper_c ancestry; this is not a moSurfaceRef_w.
+    "moConstSurfRef_w",
     "moSketchExtRef_w",
     "moTempAxisRef_w",
     "moCoordSysRef_w",

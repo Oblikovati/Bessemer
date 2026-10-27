@@ -54,6 +54,9 @@ const LAYOUTS: &[(&str, RepresentationLayout)] = &[
     ("moCopySurfIdRep_c", Source(&["48"])),
     ("moPLineProjIdRep_c", Source(&["48"])),
     ("moDerivedEdgeIdRep_c", Source(&["48"])),
+    // #54 / C-252 proves both primary dispatches and the direct moEntityId_c member.
+    ("moLeftTrimEdgeIdRep_c", Source(&["48"])),
+    ("moRightTrimEdgeIdRep_c", Source(&["48"])),
     ("moSurfExtNeighborIdRep_c", Source(&["48"])),
     ("moMirPatternSurfIdRep_c", Source(&[])),
     ("moIndirectSurfIdRep_c", Source(&[])),

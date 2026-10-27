@@ -1,0 +1,56 @@
+{
+  "cases": 906,
+  "previous_complete": 742,
+  "complete": 744,
+  "explicit_stops": 162,
+  "new_complete": [
+    206,
+    207
+  ],
+  "changed": [
+    {
+      "index": 15,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moConstSurfRef_w\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moTrimRefSurface_c\" schema 1; expected an implemented complete model object body"
+      ]
+    },
+    {
+      "index": 206,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moThicken_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    },
+    {
+      "index": 207,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moThicken_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    },
+    {
+      "index": 609,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moConstSurfRef_w\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moTrimRefSurface_c\" schema 1; expected an implemented complete model object body"
+      ]
+    }
+  ]
+}

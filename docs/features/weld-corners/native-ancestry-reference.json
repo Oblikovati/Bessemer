@@ -1,0 +1,1256 @@
+{
+  "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\weld-corner-native-evidence.json",
+  "source_sha256": "aa659427dacc7f2acfdd9fb8740bd15a901655dce0def3b3e3daddfb08365fe5",
+  "evidence": {
+    "modules": [
+      {
+        "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+        "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c"
+      }
+    ],
+    "bindings": [
+      {
+        "module": "sldmodu.dll",
+        "class_name": "moWeldCornerFeat_c",
+        "vtable": "0x4d20cf58",
+        "serializer": "0x4c74aa00",
+        "ancestry": [
+          ".?AVmoWeldCornerFeat_c@@",
+          ".?AVmoBodyFeature_c@@",
+          ".?AVmoAtomFeature_c@@",
+          ".?AVmoModelFeature_c@@",
+          ".?AVmoFeature_c@@",
+          ".?AVmoConcept_c@@",
+          ".?AVmoLoggedNode_c@@",
+          ".?AVmoNode_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@",
+          ".?AVutDisplayedEntity_c@@"
+        ]
+      },
+      {
+        "module": "sldmodu.dll",
+        "class_name": "moWeldBodyData_c",
+        "vtable": "0x4d20f610",
+        "serializer": "0x4c7527d0",
+        "ancestry": [
+          ".?AVmoWeldBodyData_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@"
+        ]
+      },
+      {
+        "module": "sldmodu.dll",
+        "class_name": "moWeldTrimmedBodyData_c",
+        "vtable": "0x4d20f6a0",
+        "serializer": "0x4c752970",
+        "ancestry": [
+          ".?AVmoWeldTrimmedBodyData_c@@",
+          ".?AVmoWeldBodyData_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@"
+        ]
+      },
+      {
+        "module": "sldmodu.dll",
+        "class_name": "moWeldTrimToolData_c",
+        "vtable": "0x4d20f730",
+        "serializer": "0x4c7528b0",
+        "ancestry": [
+          ".?AVmoWeldTrimToolData_c@@",
+          ".?AVmoWeldBodyData_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@"
+        ]
+      }
+    ],
+    "functions": {
+      "0x4c751e50": {
+        "module": "sldmodu.dll",
+        "end": "0x4c751fd1",
+        "native_bytes": "48895c242048894c2408555657415641574883ec204c8bf24c8bf9ff15afc95e0090488d0597d7ab00498907498d5f1048895c2458488bcbff15fac95e0090488d3d8ab8630048893b498d4f38ff155d2e5e0090498d4f58ff15522e5e0090498d8f80000000ff151c975e0090498db7080100004889742460488bceff15b6c95e009048893e498bcfe882820000418b4e7841894f78418b467c4189477c4963861801000085c9745a488bf885c07e3d33db0f1f400066660f1f840000000000498b8610010000488b0cd8488b0133d2ff90580200004c8bc08b5610488bceff1563c95e0048ffc3483bdf7cd3498d9680000000498d8f80000000ff1597965e00eb6a488be885c07e6333db0f1f4000498b8610010000488b3cd8e800c7b1ff488bd0488bcfe80414450085c07514e8dcbeb1ff488bd0488bcfe8f013450085c07422488b0733d2488bcfff90580200004885c0740f4c8bc08b5610488bceff15e3c85e0048ffc3483bdd7ca3498bc7488b5c24684883c420415f415e5f5e5dc3",
+        "sha256": "009fac2cfa863823f1854a40d4c814e1bf8fe2f118267b3b4b9e9076ce174b56",
+        "imports": [
+          {
+            "address": "0x4c751e6b",
+            "iat": "0x4cd3e820",
+            "module": "swccu.dll",
+            "symbol": "??0su_CObject@@QEAA@XZ"
+          },
+          {
+            "address": "0x4c751e88",
+            "iat": "0x4cd3e888",
+            "module": "swccu.dll",
+            "symbol": "??0su_CObArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x4c751e9d",
+            "iat": "0x4cd34d00",
+            "module": "SLDMFCU.dll",
+            "symbol": "??0suPtrArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x4c751ea8",
+            "iat": "0x4cd34d00",
+            "module": "SLDMFCU.dll",
+            "symbol": "??0suPtrArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x4c751eb6",
+            "iat": "0x4cd3b5d8",
+            "module": "sldmgu.dll",
+            "symbol": "??0mgXform_c@@QEAA@XZ"
+          },
+          {
+            "address": "0x4c751ecc",
+            "iat": "0x4cd3e888",
+            "module": "swccu.dll",
+            "symbol": "??0su_CObArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x4c751f2f",
+            "iat": "0x4cd3e898",
+            "module": "swccu.dll",
+            "symbol": "?SetAtGrow@su_CObArray@@QEAAXHPEAVCObject@@@Z"
+          },
+          {
+            "address": "0x4c751f4b",
+            "iat": "0x4cd3b5e8",
+            "module": "sldmgu.dll",
+            "symbol": "??4mgXform_c@@QEAAAEBV0@AEBV0@@Z"
+          },
+          {
+            "address": "0x4c751f76",
+            "iat": "0x4cd35e88",
+            "module": "mfc140u.dll",
+            "symbol": "ordinal:7928"
+          },
+          {
+            "address": "0x4c751f8a",
+            "iat": "0x4cd35e88",
+            "module": "mfc140u.dll",
+            "symbol": "ordinal:7928"
+          },
+          {
+            "address": "0x4c751faf",
+            "iat": "0x4cd3e898",
+            "module": "swccu.dll",
+            "symbol": "?SetAtGrow@su_CObArray@@QEAAXHPEAVCObject@@@Z"
+          }
+        ]
+      },
+      "0x4c7527d0": {
+        "module": "sldmodu.dll",
+        "end": "0x4c7528a2",
+        "native_bytes": "48895c24084889742410574883ec30488bf9488bda488d4c2420ff15a0245e00488bd3488bcfff1514c15e00488d8f08010000488bd3488b01ff5028488bcbff15dbbf5e00488bcb85c074258b5778ff15dbbf5e008b577c488bcbff15cfbf5e00488b5c2440488b7424484883c4305fc3488d5778ff15bdbf5e00488b4424204885c0743a8b808007000085c0750cff153b245e00ff152d245e003dab0f0000720d488d577c488bcbff1589bf5e00488b5c2440488b7424484883c4305fc34533c0baffffffffb901000000e8d20a4500cc",
+        "sha256": "9917832c3955218b7cb133ab69331d2c0697e02c849a7ed0de8b8e51f6c47615",
+        "imports": [
+          {
+            "address": "0x4c7527ea",
+            "iat": "0x4cd34c90",
+            "module": "SLDMFCU.dll",
+            "symbol": "??0moArchiveHelper_c@@QEAA@PEAVsu_CArchive@@@Z"
+          },
+          {
+            "address": "0x4c7527f6",
+            "iat": "0x4cd3e910",
+            "module": "swccu.dll",
+            "symbol": "?Serialize@su_CObject@@UEAAXAEAVsu_CArchive@@@Z"
+          },
+          {
+            "address": "0x4c75280f",
+            "iat": "0x4cd3e7f0",
+            "module": "swccu.dll",
+            "symbol": "?IsStoring@su_CArchive@@QEBAHXZ"
+          },
+          {
+            "address": "0x4c75281f",
+            "iat": "0x4cd3e800",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z"
+          },
+          {
+            "address": "0x4c75282b",
+            "iat": "0x4cd3e800",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z"
+          },
+          {
+            "address": "0x4c752845",
+            "iat": "0x4cd3e808",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z"
+          },
+          {
+            "address": "0x4c75285f",
+            "iat": "0x4cd34ca0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+          },
+          {
+            "address": "0x4c752865",
+            "iat": "0x4cd34c98",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+          },
+          {
+            "address": "0x4c752879",
+            "iat": "0x4cd3e808",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z"
+          },
+          {
+            "address": "0x4c75289c",
+            "iat": "0x4cd35e98",
+            "module": "mfc140u.dll",
+            "symbol": "ordinal:2342"
+          }
+        ]
+      },
+      "0x4c74a6e0": {
+        "module": "sldmodu.dll",
+        "end": "0x4c74a7ef",
+        "native_bytes": "48894c24085355565741564883ec30488bfa488bf1e8f6c303ff90488d055628ac00488906488d05744eac0048898688000000488d9e0008000048895c2470488bcbff1560415f00904c8d35f02f64004c8933488d9e2008000048895c2478488bcbff1540415f00904c8933488d9e4008000048895c2420488bcbff1527415f00904c893333ed4889ae6008000089ae68080000488d051dd87800488986700800004889ae78080000488d9e8008000048895c2428488bcbff15ea405f00904c8933488d8ea0080000ff1551a55e00904889aec808000048c786d00800000100000089aed8080000e8330e03004c8bc033d2488bcfe8462a67ff488986c0080000488bc64883c430415e5f5e5d5bc3",
+        "sha256": "5f264b8d86017569e0fa4444b4dfd9c92809c51f6d3c005929760c1b937417eb",
+        "imports": [
+          {
+            "address": "0x4c74a722",
+            "iat": "0x4cd3e888",
+            "module": "swccu.dll",
+            "symbol": "??0su_CObArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x4c74a742",
+            "iat": "0x4cd3e888",
+            "module": "swccu.dll",
+            "symbol": "??0su_CObArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x4c74a75b",
+            "iat": "0x4cd3e888",
+            "module": "swccu.dll",
+            "symbol": "??0su_CObArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x4c74a798",
+            "iat": "0x4cd3e888",
+            "module": "swccu.dll",
+            "symbol": "??0su_CObArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x4c74a7a9",
+            "iat": "0x4cd34d00",
+            "module": "SLDMFCU.dll",
+            "symbol": "??0suPtrArray@@QEAA@XZ"
+          }
+        ]
+      },
+      "0x4c74aa00": {
+        "module": "sldmodu.dll",
+        "end": "0x4c74aad1",
+        "native_bytes": "4053574883ec38488bd9488bfa488d4c2420ff1578a25e00488bd7488bcbe87d653dff488d8b00080000488bd7488b01ff5028488d8b20080000488bd7488b01ff5028488bcfff15a43d5f00488bcf85c0747e8b93c8080000ff15a13d5f00488b93c0080000488bcfff15493f5f00488d8b40080000488bd7488b01ff50288b93cc080000488bcfff15723d5f008b93d0080000488bcfff15633d5f008b93d4080000488bcfff15543d5f00488d9360080000488bcfe8c5c7b2ff8b9368080000488bcfff15363d5f004883c4385f5bc3",
+        "sha256": "efa4fdd83b8e07bd939e0eca94cc320769e2f82cbd2942b690d097d3e503f5ff",
+        "imports": [
+          {
+            "address": "0x4c74aa12",
+            "iat": "0x4cd34c90",
+            "module": "SLDMFCU.dll",
+            "symbol": "??0moArchiveHelper_c@@QEAA@PEAVsu_CArchive@@@Z"
+          },
+          {
+            "address": "0x4c74aa46",
+            "iat": "0x4cd3e7f0",
+            "module": "swccu.dll",
+            "symbol": "?IsStoring@su_CArchive@@QEBAHXZ"
+          },
+          {
+            "address": "0x4c74aa59",
+            "iat": "0x4cd3e800",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z"
+          },
+          {
+            "address": "0x4c74aa69",
+            "iat": "0x4cd3e9b8",
+            "module": "swccu.dll",
+            "symbol": "??6@YAAEAVsu_CArchive@@AEAV0@PEBVCObject@@@Z"
+          },
+          {
+            "address": "0x4c74aa88",
+            "iat": "0x4cd3e800",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z"
+          },
+          {
+            "address": "0x4c74aa97",
+            "iat": "0x4cd3e800",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z"
+          },
+          {
+            "address": "0x4c74aaa6",
+            "iat": "0x4cd3e800",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z"
+          },
+          {
+            "address": "0x4c74aac4",
+            "iat": "0x4cd3e800",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z"
+          }
+        ]
+      },
+      "0x4c7528b0": {
+        "module": "sldmodu.dll",
+        "end": "0x4c752969",
+        "native_bytes": "48895c240848896c24104889742418574883ec30488bf1488bda488d4c2420ff15bb235e00488bd3488bcee8f0feffff488bcbff1507bf5e00488bcb85c07421f20f108e48010000ff1592c05e00f20f108e50010000488bcbff1581c05e00eb43488d9648010000ff157ac05e00488d9650010000488bcbff156ac05e00f20f1005c2876400660f2f8648010000720a660f2f8650010000730ac7865801000001000000488b5c2440488b6c2448488b7424504883c4305fc3",
+        "sha256": "4625a6bf16b9aa49793621168bbea62b330d319bd738128c737fc00eba37369c",
+        "imports": [
+          {
+            "address": "0x4c7528cf",
+            "iat": "0x4cd34c90",
+            "module": "SLDMFCU.dll",
+            "symbol": "??0moArchiveHelper_c@@QEAA@PEAVsu_CArchive@@@Z"
+          },
+          {
+            "address": "0x4c7528e3",
+            "iat": "0x4cd3e7f0",
+            "module": "swccu.dll",
+            "symbol": "?IsStoring@su_CArchive@@QEBAHXZ"
+          },
+          {
+            "address": "0x4c7528f8",
+            "iat": "0x4cd3e990",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@N@Z"
+          },
+          {
+            "address": "0x4c752909",
+            "iat": "0x4cd3e990",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@N@Z"
+          },
+          {
+            "address": "0x4c752918",
+            "iat": "0x4cd3e998",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAN@Z"
+          },
+          {
+            "address": "0x4c752928",
+            "iat": "0x4cd3e998",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAN@Z"
+          }
+        ]
+      },
+      "0x4c752230": {
+        "module": "sldmodu.dll",
+        "end": "0x4c752272",
+        "native_bytes": "48894c2408534883ec20488bd9e80efcffff90488d0556d4ab00488903488d8b28010000ff15a62a5e0090488d8b48010000ff15b8255e0090488bc34883c4205bc3",
+        "sha256": "1e81ca0f36a0669ee3721f0ffe33fdb274d92036cae4cb8d3f2c2fcdb2c5a795",
+        "imports": [
+          {
+            "address": "0x4c752254",
+            "iat": "0x4cd34d00",
+            "module": "SLDMFCU.dll",
+            "symbol": "??0suPtrArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x4c752262",
+            "iat": "0x4cd34820",
+            "module": "SLDMFCU.dll",
+            "symbol": "??0suDWordArray@@QEAA@XZ"
+          }
+        ]
+      },
+      "0x4c752970": {
+        "module": "sldmodu.dll",
+        "end": "0x4c7529b1",
+        "native_bytes": "48895c2408574883ec30488bd9488bfa488d4c2420ff1505235e00488bd7488bcbe83afeffff488d8b48010000488bd7488b01ff5028488b5c24404883c4305fc3",
+        "sha256": "f3cf9c07153922dad99d4a67d9773a625c734557e4f0091a9730aac101f70407",
+        "imports": [
+          {
+            "address": "0x4c752985",
+            "iat": "0x4cd34c90",
+            "module": "SLDMFCU.dll",
+            "symbol": "??0moArchiveHelper_c@@QEAA@PEAVsu_CArchive@@@Z"
+          }
+        ]
+      }
+    },
+    "roots": [
+      {
+        "path": "samples/Simulation Examples/Beams/beam_truss.sldprt",
+        "configuration": "Contents/Config-0",
+        "start": 50148,
+        "end": 53045,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 4
+        },
+        "sha256": "fd14306e1d7bd80ace22af799ea966fca0cf801c358e131f3fed501ac1be9240",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 4,
+              "840": 0
+            },
+            "raw_fields": {
+              "raw_8c8": 4,
+              "raw_8cc": 0,
+              "raw_8d0": 1,
+              "raw_8d4": 1,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/Simulation Examples/Beams/beam_truss.sldprt",
+        "configuration": "Contents/Config-0",
+        "start": 53045,
+        "end": 55381,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 4
+        },
+        "sha256": "4b68d6cbdca983441466c8928605ee201f43b4c3d96184c815c083c957a0e167",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 4,
+              "840": 0
+            },
+            "raw_fields": {
+              "raw_8c8": 4,
+              "raw_8cc": 0,
+              "raw_8d0": 1,
+              "raw_8d4": 1,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/Simulation Examples/Beams/beam_truss.sldprt",
+        "configuration": "Contents/Config-0",
+        "start": 55381,
+        "end": 57314,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 3
+        },
+        "sha256": "a770dbdbfd2ba668920f7d50abf4fa673674a685c934f3edd1a20a80580f1677",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 3,
+              "840": 0
+            },
+            "raw_fields": {
+              "raw_8c8": 4,
+              "raw_8cc": 0,
+              "raw_8d0": 1,
+              "raw_8d4": 1,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/Simulation Examples/Beams/beam_truss.sldprt",
+        "configuration": "Contents/Config-0",
+        "start": 57314,
+        "end": 58473,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 1
+        },
+        "sha256": "52588e9b612877d44d9ad324e1eeb3101de7f068ba13fcb4c9e12de398065333",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 1,
+              "840": 0
+            },
+            "raw_fields": {
+              "raw_8c8": 2,
+              "raw_8cc": 0,
+              "raw_8d0": 1,
+              "raw_8d4": 1,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/Simulation Examples/Beams/beam_truss.sldprt",
+        "configuration": "Contents/Config-0",
+        "start": 58473,
+        "end": 59680,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 1
+        },
+        "sha256": "a608216a5c6b0700f212f9b209af6adcaeb99c41782b32ac41033beb14ca0f7b",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 1,
+              "840": 0
+            },
+            "raw_fields": {
+              "raw_8c8": 2,
+              "raw_8cc": 0,
+              "raw_8d0": 1,
+              "raw_8d4": 1,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/Simulation Examples/Beams/beam_truss.sldprt",
+        "configuration": "Contents/Config-0",
+        "start": 59680,
+        "end": 60871,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 1
+        },
+        "sha256": "80341ee0db40f2073088738e4ecc888eb935ae616533e6b9b39c64c24433bd35",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 1,
+              "840": 0
+            },
+            "raw_fields": {
+              "raw_8c8": 4,
+              "raw_8cc": 0,
+              "raw_8d0": 1,
+              "raw_8d4": 1,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/Simulation Examples/Beams/beam_truss.sldprt",
+        "configuration": "Contents/Config-0",
+        "start": 60871,
+        "end": 62062,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 1
+        },
+        "sha256": "a1e6d30507edc3aa9744098db08148f765d8ce214aed33a9466d40cbe7598bb9",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 1,
+              "840": 0
+            },
+            "raw_fields": {
+              "raw_8c8": 4,
+              "raw_8cc": 0,
+              "raw_8d0": 1,
+              "raw_8d4": 1,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/Simulation Examples/Beams/beam_truss.sldprt",
+        "configuration": "Contents/Config-0",
+        "start": 62062,
+        "end": 63221,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 1
+        },
+        "sha256": "e333a2e3c32fd89008a7172c4e336b4b9e0110520e6cfece4d266866ffd41ff0",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 1,
+              "840": 0
+            },
+            "raw_fields": {
+              "raw_8c8": 4,
+              "raw_8cc": 0,
+              "raw_8d0": 1,
+              "raw_8d4": 1,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/Simulation Examples/Beams/beam_truss.sldprt",
+        "configuration": "Contents/Config-0",
+        "start": 63221,
+        "end": 64380,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 1
+        },
+        "sha256": "fe852ef7840e69c1370d60c3f11dc3da9b9c3b4d840c1c047f4b8d3003bd5ce4",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 1,
+              "840": 0
+            },
+            "raw_fields": {
+              "raw_8c8": 2,
+              "raw_8cc": 0,
+              "raw_8d0": 1,
+              "raw_8d4": 1,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/Simulation Examples/Beams/beam_truss.sldprt",
+        "configuration": "Contents/Config-0",
+        "start": 64380,
+        "end": 65569,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 1
+        },
+        "sha256": "21e168255dce8f78c59fa53970bfc99c01856118b4dee5de60df5eca00d05642",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 1,
+              "840": 0
+            },
+            "raw_fields": {
+              "raw_8c8": 4,
+              "raw_8cc": 0,
+              "raw_8d0": 1,
+              "raw_8d4": 1,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/Simulation Examples/Beams/beam_truss.sldprt",
+        "configuration": "Contents/Config-0",
+        "start": 65569,
+        "end": 66758,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 1
+        },
+        "sha256": "5d0bad0c80cbcf182ac8144972ca3078b3e792c95c48927e8ae13e22ae95b537",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 1,
+              "840": 0
+            },
+            "raw_fields": {
+              "raw_8c8": 2,
+              "raw_8cc": 0,
+              "raw_8d0": 1,
+              "raw_8d4": 1,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/Simulation Examples/bikeframe.sldprt",
+        "configuration": "Contents/Config-9",
+        "start": 333858,
+        "end": 335299,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 2
+        },
+        "sha256": "157695d5e59991fcfb534a87549f72d15811e20b84e7c4548cb4a98a4fdaccc9",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 2,
+              "840": 0
+            },
+            "raw_fields": {
+              "raw_8c8": 4,
+              "raw_8cc": 0,
+              "raw_8d0": 1,
+              "raw_8d4": 1,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/Simulation Examples/bikeframe.sldprt",
+        "configuration": "Contents/Config-9",
+        "start": 335299,
+        "end": 336322,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 1
+        },
+        "sha256": "8146cd9cd3df100f29afc1a67626556847d085ac799d86f5096183a95ab8f78d",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 1,
+              "840": 0
+            },
+            "raw_fields": {
+              "raw_8c8": 4,
+              "raw_8cc": 0,
+              "raw_8d0": 1,
+              "raw_8d4": 1,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/Simulation Examples/bikeframe.sldprt",
+        "configuration": "Contents/Config-9",
+        "start": 336322,
+        "end": 338063,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 3
+        },
+        "sha256": "3e91a5a138e0a9aaa6877393defbe295acbbe0ff9e0d723ee3c9c9ba492f0be2",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 3,
+              "840": 0
+            },
+            "raw_fields": {
+              "raw_8c8": 4,
+              "raw_8cc": 0,
+              "raw_8d0": 1,
+              "raw_8d4": 1,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/Simulation Examples/bikeframe.sldprt",
+        "configuration": "Contents/Config-9",
+        "start": 431837,
+        "end": 432860,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 1
+        },
+        "sha256": "201cc7ef9119cead6e43aa6b1deff6dca875e3651d598417712fb6718652a493",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 1,
+              "840": 0
+            },
+            "raw_fields": {
+              "raw_8c8": 4,
+              "raw_8cc": 0,
+              "raw_8d0": 1,
+              "raw_8d4": 1,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/Simulation Examples/bikeframe.sldprt",
+        "configuration": "Contents/Config-9",
+        "start": 459149,
+        "end": 460172,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 1
+        },
+        "sha256": "b4bb578e96cd06056117beb7583537686335351f2e832fd99ad4e2618a67daed",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 1,
+              "840": 0
+            },
+            "raw_fields": {
+              "raw_8c8": 4,
+              "raw_8cc": 0,
+              "raw_8d0": 1,
+              "raw_8d4": 1,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/Simulation Examples/bikeframe.sldprt",
+        "configuration": "Contents/Config-9",
+        "start": 544743,
+        "end": 545766,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 1
+        },
+        "sha256": "a1ca25782b5d5fae25e5a0a4b36f2d410641de57083029b8407eafcdae35b3e8",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 1,
+              "840": 0
+            },
+            "raw_fields": {
+              "raw_8c8": 4,
+              "raw_8cc": 0,
+              "raw_8d0": 1,
+              "raw_8d4": 1,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/tutorial/api/loop.sldprt",
+        "configuration": "Contents/Config-0",
+        "start": 90354,
+        "end": 92026,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 1
+        },
+        "sha256": "ed0c645b86d48baa2db178a9ecd8afb713b20f89c8dce1cc713c4c7ef9832638",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 1,
+              "840": 0
+            },
+            "raw_fields": {
+              "raw_8c8": 4,
+              "raw_8cc": 0,
+              "raw_8d0": 1,
+              "raw_8d4": 2,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/tutorial/api/loop.sldprt",
+        "configuration": "Contents/Config-0",
+        "start": 92026,
+        "end": 93882,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 2,
+          "moWeldTrimToolData_c": 1
+        },
+        "sha256": "48a09df7257afa9a1c5ffa915eea93643c7bffe3964a79b9d7606d2d51454701",
+        "values": [
+          {
+            "array_counts": {
+              "800": 2,
+              "820": 0,
+              "840": 1
+            },
+            "raw_fields": {
+              "raw_8c8": 4,
+              "raw_8cc": 1,
+              "raw_8d0": 1,
+              "raw_8d4": 2,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/tutorial/api/loop.sldprt",
+        "configuration": "Contents/Config-0",
+        "start": 93882,
+        "end": 95785,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 2,
+          "moWeldTrimToolData_c": 1
+        },
+        "sha256": "cc571063f697c45f8fcb5ddec1966e7873e64484c4eb27f72fa1680676f9c94d",
+        "values": [
+          {
+            "array_counts": {
+              "800": 2,
+              "820": 0,
+              "840": 1
+            },
+            "raw_fields": {
+              "raw_8c8": 4,
+              "raw_8cc": 1,
+              "raw_8d0": 1,
+              "raw_8d4": 2,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/tutorial/driveworksxpress/leg.sldprt",
+        "configuration": "Contents/Config-0",
+        "start": 101468,
+        "end": 102756,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 1
+        },
+        "sha256": "79f56c30a0505279c715a2f7655b0d0c921f8f610dd51e783c8e5d0d8969de29",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 0,
+              "840": 1
+            },
+            "raw_fields": {
+              "raw_8c8": 4,
+              "raw_8cc": 1,
+              "raw_8d0": 1,
+              "raw_8d4": 1,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/tutorial/driveworksxpress/leg.sldprt",
+        "configuration": "Contents/Config-0",
+        "start": 196195,
+        "end": 197781,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 2
+        },
+        "sha256": "1490489712a42b1908817b2ba13aad44d2521d2798fc1946bdeb798fcc21f44b",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 0,
+              "840": 2
+            },
+            "raw_fields": {
+              "raw_8c8": 4,
+              "raw_8cc": 1,
+              "raw_8d0": 1,
+              "raw_8d4": 1,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/tutorial/driveworksxpress/leg.sldprt",
+        "configuration": "Contents/Config-0",
+        "start": 197781,
+        "end": 199369,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 2
+        },
+        "sha256": "4e37af777d412d2da7c3a7516fa34f0380502294463f64b3ffebd372df6fcb8d",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 0,
+              "840": 2
+            },
+            "raw_fields": {
+              "raw_8c8": 4,
+              "raw_8cc": 1,
+              "raw_8d0": 1,
+              "raw_8d4": 1,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/tutorial/driveworksxpress/leg.sldprt",
+        "configuration": "Contents/Config-0",
+        "start": 326169,
+        "end": 327865,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 2
+        },
+        "sha256": "1f541c320fb2f3d929922bf92255c8794cba2a65c8a37f12a1891ed89767c849",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 0,
+              "840": 2
+            },
+            "raw_fields": {
+              "raw_8c8": 4,
+              "raw_8cc": 1,
+              "raw_8d0": 1,
+              "raw_8d4": 2,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/tutorial/driveworksxpress/leg.sldprt",
+        "configuration": "Contents/Config-1",
+        "start": 104409,
+        "end": 105697,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 1
+        },
+        "sha256": "51a4b639ac8b2c8f1c6492c0449b97ce26c0c85baaade4220a372a67757b02b1",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 0,
+              "840": 1
+            },
+            "raw_fields": {
+              "raw_8c8": 4,
+              "raw_8cc": 1,
+              "raw_8d0": 1,
+              "raw_8d4": 1,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/tutorial/driveworksxpress/leg.sldprt",
+        "configuration": "Contents/Config-1",
+        "start": 199359,
+        "end": 200945,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 2
+        },
+        "sha256": "4378a307132abf193df0a015fead16dc622b576b8de693a51abcfe22402c682c",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 0,
+              "840": 2
+            },
+            "raw_fields": {
+              "raw_8c8": 4,
+              "raw_8cc": 1,
+              "raw_8d0": 1,
+              "raw_8d4": 1,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/tutorial/driveworksxpress/leg.sldprt",
+        "configuration": "Contents/Config-1",
+        "start": 200945,
+        "end": 202533,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 2
+        },
+        "sha256": "113ca23408d588844356aa53b6a98fbd3f9010caf4af17b1716e98c06d74f7e7",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 0,
+              "840": 2
+            },
+            "raw_fields": {
+              "raw_8c8": 4,
+              "raw_8cc": 1,
+              "raw_8d0": 1,
+              "raw_8d4": 1,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      },
+      {
+        "path": "samples/tutorial/driveworksxpress/leg.sldprt",
+        "configuration": "Contents/Config-1",
+        "start": 329750,
+        "end": 331446,
+        "nested_counts": {
+          "moWeldTrimmedBodyData_c": 1,
+          "moWeldTrimToolData_c": 2
+        },
+        "sha256": "9364b1a5570c69301d07d0cd26cad073039f154bd9d7af2d28eef9d67c0f9730",
+        "values": [
+          {
+            "array_counts": {
+              "800": 1,
+              "820": 0,
+              "840": 2
+            },
+            "raw_fields": {
+              "raw_8c8": 4,
+              "raw_8cc": 1,
+              "raw_8d0": 1,
+              "raw_8d4": 2,
+              "raw_868": 1
+            },
+            "reference_class": "moWeldmentFeature_c",
+            "point_class": null
+          }
+        ]
+      }
+    ],
+    "total_root_bytes": 41631,
+    "coverage_credit": 0,
+    "decompilation_sha256": {
+      "FUN_4c74a6e0.c": "b316bce05f18f7fccede49703667ccc36a332fe9ae036f8bc6a73b3e49c975c0",
+      "FUN_4c74aa00.c": "af8c077de24c62886c43f9a9c5ed055f5f3c02937a72e05d2c9ad8bbbd19f989",
+      "FUN_4c751e50.c": "09c718486929ca3b8f630c082d248135b6bfbcfee095a3ed9512bd3b80fa03f2",
+      "FUN_4c752230.c": "780a3cc1a42c7a804de4e723872ca715bb1c962aa5e2ffc6849e529be382611e",
+      "FUN_4c7527d0.c": "362a713201bf76c5f3f40583258b5e7de45de7622f1baa06e780bec99f07b451",
+      "FUN_4c7528b0.c": "d9cdf159c5f6f13d774c6c643c27efb3b92f17643b736b40fd8a22655b8f0467",
+      "FUN_4c752970.c": "1045c8c53ab105d725e950600597e7171e15b3a644610945e487928af4867dde"
+    },
+    "frontier_comparison": {
+      "previous": "0.260",
+      "current": "0.261",
+      "unchanged_prior_roots": true,
+      "changed": [
+        {
+          "path": "samples/Simulation Examples/Beams/beam_truss.sldprt",
+          "configuration": "Contents/Config-0",
+          "new_roots": 14,
+          "status": "list_complete",
+          "tail_bytes": 0
+        },
+        {
+          "path": "samples/Simulation Examples/bikeframe.sldprt",
+          "configuration": "Contents/Config-9",
+          "new_roots": 102,
+          "status": "list_complete",
+          "tail_bytes": 0
+        },
+        {
+          "path": "samples/tutorial/api/loop.sldprt",
+          "configuration": "Contents/Config-0",
+          "new_roots": 4,
+          "status": "list_complete",
+          "tail_bytes": 0
+        },
+        {
+          "path": "samples/tutorial/driveworksxpress/leg.sldprt",
+          "configuration": "Contents/Config-0",
+          "new_roots": 21,
+          "status": "explicit_stop",
+          "tail_bytes": null
+        },
+        {
+          "path": "samples/tutorial/driveworksxpress/leg.sldprt",
+          "configuration": "Contents/Config-1",
+          "new_roots": 21,
+          "status": "explicit_stop",
+          "tail_bytes": null
+        }
+      ],
+      "totals": {
+        "complete_roots": 25307,
+        "list_complete": 813,
+        "explicit_stop": 93
+      }
+    }
+  }
+}

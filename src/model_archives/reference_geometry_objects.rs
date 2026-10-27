@@ -8,6 +8,11 @@ pub(super) fn read(
     name: &str,
 ) -> Option<Result<()>> {
     let result = match name {
+        "moThicken_c" => super::thicken_records::read(reader, map),
+        "moCompRefSurface_c" => super::thicken_records::component_surface(reader, map),
+        // #54 / C-249 binds the identical modern atom-geometry wire helper.
+        "moConstSurfRef_w" => super::geometric_references::solid(reader, map),
+        "moSolidRef_w" => super::geometric_references::solid(reader, map),
         "moHelix_c" => super::helix_records::read(reader, map),
         // #54 / C-213 binds the existing complete component-feature helper, with no suffix.
         "moCompReferenceCurve_c" => super::component_references::feature(reader, map),

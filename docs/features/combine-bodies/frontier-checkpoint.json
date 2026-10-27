@@ -1,0 +1,34 @@
+{
+  "cases": 906,
+  "previous_complete": 740,
+  "complete": 742,
+  "explicit_stops": 164,
+  "new_complete": [
+    37,
+    755
+  ],
+  "changed": [
+    {
+      "index": 37,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moCombineBodies_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    },
+    {
+      "index": 755,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moCombineBodies_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    }
+  ]
+}
