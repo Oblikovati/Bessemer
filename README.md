@@ -155,6 +155,9 @@ direct configurable parameters, compatibility values and shared line/dimension r
 [Feature comments](docs/features/feature-comments/README.md) preserve direct lists,
 shared text items, raw kinds, ordered extra members and four-byte time values.
 
+[Coordinate systems](docs/features/coordinate-systems/README.md) retain numeric
+axis order, equality-based selectors, direct arrays and exact vector bits.
+
 
 This library is named after Sir Henry Bessemer (1813–1898) an English engineer, inventor, and entrepreneur 
 best known for developing the Bessemer process, the first inexpensive industrial method for the mass production

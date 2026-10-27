@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added ordinary coordinate-system reading, field editing and writing with equality-selected axes, direct axis arrays, shared identities and preserved raw selector/vector values. (#54)
+
 - Added ordinary feature-comment reading, field editing and writing with direct lists, shared text items, versioned extra members and preserved four-byte time values. (#54)
 
 - Added ordinary connection-point and route-point reading, field editing and writing with preserved direct parameters, compatibility fields, shared references and complete radial-dimension dependencies. (#54)
