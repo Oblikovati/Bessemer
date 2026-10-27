@@ -48,6 +48,9 @@ mod chamfer_record_tests;
 #[path = "../../tests/resolved_features/circular_patterns.rs"]
 mod circular_pattern_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/combine_bodies.rs"]
+mod combine_body_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/complete_details.rs"]
 mod complete_detail_tests;
 #[cfg(test)]

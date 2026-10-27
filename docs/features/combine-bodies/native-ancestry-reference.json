@@ -1,0 +1,623 @@
+{
+  "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\combine-delete-body-native-evidence.json",
+  "source_sha256": "4995cf4ba21c5a96861d869e11fb306512723e3ac30a94f394302137e03d438e",
+  "evidence": {
+    "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldMoPartu.dll",
+    "sha256": "2201edfa07b1a7484acedb6db4600fa7a00e55b16090a03b92fe7d9b14cb2128",
+    "bindings": [
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldMoPartu.dll",
+          "sha256": "2201edfa07b1a7484acedb6db4600fa7a00e55b16090a03b92fe7d9b14cb2128",
+          "tables": [
+            {
+              "class_name": "moCombineBodies_c",
+              "object_offset": 0,
+              "locator": "0x1804ed890",
+              "vftable": "0x180466a48",
+              "slots": [
+                "0x18024eed0",
+                "0x18024ee80",
+                "0x1803ace24",
+                "0x1800e3360",
+                "0x1800e3360",
+                "0x18024eee0",
+                "0x1803ac32c",
+                "0x1803ac326"
+              ]
+            },
+            {
+              "class_name": "moCombineBodies_c",
+              "object_offset": 136,
+              "locator": "0x1804ed958",
+              "vftable": "0x180469070",
+              "slots": [
+                "0x18024ee74",
+                "0x1803ab7d4",
+                "0x1803ab7da",
+                "0x1800e3930",
+                "0x1803abb76",
+                "0x1803abb70",
+                "0x1803abb6a",
+                "0x62006d006f0043"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "01000000000000000000000060ab6000b8d84e0090d84e00",
+        "bases": [
+          ".?AVmoCombineBodies_c@@",
+          ".?AVmoBodyFeature_c@@",
+          ".?AVmoAtomFeature_c@@",
+          ".?AVmoModelFeature_c@@",
+          ".?AVmoFeature_c@@",
+          ".?AVmoConcept_c@@",
+          ".?AVmoLoggedNode_c@@",
+          ".?AVmoNode_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@",
+          ".?AVutDisplayedEntity_c@@"
+        ],
+        "hooks": {
+          "0x4b8": {
+            "thunk": "0x1803ac218",
+            "bytes": "ff25ba9d0300",
+            "iat": "0x1803e5fd8",
+            "import_binding": {
+              "module": "SLDMODU.dll",
+              "symbol": "?SerializeLWData@moConcept_c@@UEAAXAEAVsu_CArchive@@@Z",
+              "descriptor_bytes": "888e5a000000000000000000ca7c5f0030163e00",
+              "lookup_index": 2357,
+              "lookup_bytes": "ee9d5d0000000000"
+            }
+          },
+          "0x4c0": {
+            "thunk": "0x1803ac212",
+            "bytes": "ff25b89d0300",
+            "iat": "0x1803e5fd0",
+            "import_binding": {
+              "module": "SLDMODU.dll",
+              "symbol": "?SerializeResolvedData@moConcept_c@@UEAAXAEAVsu_CArchive@@@Z",
+              "descriptor_bytes": "888e5a000000000000000000ca7c5f0030163e00",
+              "lookup_index": 2356,
+              "lookup_bytes": "ae9d5d0000000000"
+            }
+          }
+        }
+      },
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldMoPartu.dll",
+          "sha256": "2201edfa07b1a7484acedb6db4600fa7a00e55b16090a03b92fe7d9b14cb2128",
+          "tables": [
+            {
+              "class_name": "moDeleteBody_c",
+              "object_offset": 0,
+              "locator": "0x1804edc28",
+              "vftable": "0x18046b9b0",
+              "slots": [
+                "0x18025b530",
+                "0x18025b4d0",
+                "0x1803ace24",
+                "0x1800e3360",
+                "0x1800e3360",
+                "0x18025b620",
+                "0x1803ac32c",
+                "0x1803ac326"
+              ]
+            },
+            {
+              "class_name": "moDeleteBody_c",
+              "object_offset": 136,
+              "locator": "0x1804edcf8",
+              "vftable": "0x18046dfd8",
+              "slots": [
+                "0x18025b4bc",
+                "0x1803ab7d4",
+                "0x1803ab7da",
+                "0x1800e3930",
+                "0x1803abb76",
+                "0x1803abb70",
+                "0x1803abb6a",
+                "0x6361466c65446f6d"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "01000000000000000000000028ac600050dc4e0028dc4e00",
+        "bases": [
+          ".?AVmoDeleteBody_c@@",
+          ".?AVmoBodyFeature_c@@",
+          ".?AVmoAtomFeature_c@@",
+          ".?AVmoModelFeature_c@@",
+          ".?AVmoFeature_c@@",
+          ".?AVmoConcept_c@@",
+          ".?AVmoLoggedNode_c@@",
+          ".?AVmoNode_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@",
+          ".?AVutDisplayedEntity_c@@"
+        ],
+        "hooks": {
+          "0x4b8": {
+            "thunk": "0x1803ac218",
+            "bytes": "ff25ba9d0300",
+            "iat": "0x1803e5fd8",
+            "import_binding": {
+              "module": "SLDMODU.dll",
+              "symbol": "?SerializeLWData@moConcept_c@@UEAAXAEAVsu_CArchive@@@Z",
+              "descriptor_bytes": "888e5a000000000000000000ca7c5f0030163e00",
+              "lookup_index": 2357,
+              "lookup_bytes": "ee9d5d0000000000"
+            }
+          },
+          "0x4c0": {
+            "thunk": "0x1803ac212",
+            "bytes": "ff25b89d0300",
+            "iat": "0x1803e5fd0",
+            "import_binding": {
+              "module": "SLDMODU.dll",
+              "symbol": "?SerializeResolvedData@moConcept_c@@UEAAXAEAVsu_CArchive@@@Z",
+              "descriptor_bytes": "888e5a000000000000000000ca7c5f0030163e00",
+              "lookup_index": 2356,
+              "lookup_bytes": "ae9d5d0000000000"
+            }
+          }
+        }
+      },
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldMoPartu.dll",
+          "sha256": "2201edfa07b1a7484acedb6db4600fa7a00e55b16090a03b92fe7d9b14cb2128",
+          "tables": [
+            {
+              "class_name": "moDeleteBodyData_c",
+              "object_offset": 0,
+              "locator": "0x1804edba0",
+              "vftable": "0x18046b920",
+              "slots": [
+                "0x18025b520",
+                "0x18025b410",
+                "0x1803ace24",
+                "0x1800e3360",
+                "0x1800e3360",
+                "0x18025b540",
+                "0x1803ace66",
+                "0x1803ace60"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "010000000000000000000000f8ab6000c8db4e00a0db4e00",
+        "bases": [
+          ".?AVmoDeleteBodyData_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@"
+        ]
+      }
+    ],
+    "functions": {
+      "0x18024eee0": {
+        "end": "0x18024f045",
+        "native_bytes": "48895c24085556574883ec30488bf9488bda488d4c2420ff15cb261900488bd3488bcfff156f531900488bcbff1596c71900488d9700080000488bcb85c07478ff15a2731900488b8708080000488d8f08080000488bd3ff50288b9728080000488bcbff1557c71900488b4424204885c00f84c80000008b808007000085c0750cff1571261900ff15632619003d083f00000f829a00000080bf3808000000488bcb0f95c2ff15bdc41900488b5c24504883c4305f5e5dc3ff1522731900488b8708080000488d8f08080000488bd3ff5028488d542468488bcbff15d8c619008b442468898728080000488b4424204885c0745e8b808007000085c0750cff15f4251900ff15e62519003d083f00007221488d542460c644246000488bcbff154cc41900807c2460000f95c0888738080000488b5c24504883c4305f5e5dc34533c0baffffffffb901000000e846e61500cc4533c0baffffffffb901000000e833e61500cc",
+        "sha256": "d3cb2c913cccbe0a16f80e2d1a273b84b28b8b689e062696fb2028404ab04b1f",
+        "imports": [
+          {
+            "call": "0x18024eef7",
+            "iat": "0x1803e15c8",
+            "module": "SLDMFCU.dll",
+            "symbol": "??0moArchiveHelper_c@@QEAA@PEAVsu_CArchive@@@Z",
+            "descriptor_bytes": "d08a5a000000000000000000a6c45f0078123e00",
+            "lookup_index": 106,
+            "lookup_bytes": "0eac5f0000000000"
+          },
+          {
+            "call": "0x18024ef03",
+            "iat": "0x1803e4278",
+            "module": "SLDMODU.dll",
+            "symbol": "?Serialize@moBodyFeature_c@@UEAAXAEAVsu_CArchive@@@Z",
+            "descriptor_bytes": "888e5a000000000000000000ca7c5f0030163e00",
+            "lookup_index": 1417,
+            "lookup_bytes": "dad15c0000000000"
+          },
+          {
+            "call": "0x18024ef0c",
+            "iat": "0x1803eb6a8",
+            "module": "swccu.dll",
+            "symbol": "?IsStoring@su_CArchive@@QEBAHXZ",
+            "descriptor_bytes": "c02b5b0000000000000000000e935f0068b33e00",
+            "lookup_index": 104,
+            "lookup_bytes": "a67d5f0000000000"
+          },
+          {
+            "call": "0x18024ef20",
+            "iat": "0x1803e62c8",
+            "module": "SLDMODU.dll",
+            "symbol": "??6@YAAEAVsu_CArchive@@AEAV0@AEAPEAVmoCompSolidBody_c@@@Z",
+            "descriptor_bytes": "888e5a000000000000000000ca7c5f0030163e00",
+            "lookup_index": 2451,
+            "lookup_bytes": "bab65d0000000000"
+          },
+          {
+            "call": "0x18024ef43",
+            "iat": "0x1803eb6a0",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z",
+            "descriptor_bytes": "c02b5b0000000000000000000e935f0068b33e00",
+            "lookup_index": 103,
+            "lookup_bytes": "c87d5f0000000000"
+          },
+          {
+            "call": "0x18024ef61",
+            "iat": "0x1803e15d8",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ",
+            "descriptor_bytes": "d08a5a000000000000000000a6c45f0078123e00",
+            "lookup_index": 108,
+            "lookup_bytes": "b6ab5f0000000000"
+          },
+          {
+            "call": "0x18024ef67",
+            "iat": "0x1803e15d0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ",
+            "descriptor_bytes": "d08a5a000000000000000000a6c45f0078123e00",
+            "lookup_index": 107,
+            "lookup_bytes": "dcab5f0000000000"
+          },
+          {
+            "call": "0x18024ef85",
+            "iat": "0x1803eb448",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@E@Z",
+            "descriptor_bytes": "c02b5b0000000000000000000e935f0068b33e00",
+            "lookup_index": 28,
+            "lookup_bytes": "a88d5f0000000000"
+          },
+          {
+            "call": "0x18024ef98",
+            "iat": "0x1803e62c0",
+            "module": "SLDMODU.dll",
+            "symbol": "??5@YAAEAVsu_CArchive@@AEAV0@AEAPEAVmoCompSolidBody_c@@@Z",
+            "descriptor_bytes": "888e5a000000000000000000ca7c5f0030163e00",
+            "lookup_index": 2450,
+            "lookup_bytes": "7eb65d0000000000"
+          },
+          {
+            "call": "0x18024efba",
+            "iat": "0x1803eb698",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z",
+            "descriptor_bytes": "c02b5b0000000000000000000e935f0068b33e00",
+            "lookup_index": 102,
+            "lookup_bytes": "e87d5f0000000000"
+          },
+          {
+            "call": "0x18024efde",
+            "iat": "0x1803e15d8",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ",
+            "descriptor_bytes": "d08a5a000000000000000000a6c45f0078123e00",
+            "lookup_index": 108,
+            "lookup_bytes": "b6ab5f0000000000"
+          },
+          {
+            "call": "0x18024efe4",
+            "iat": "0x1803e15d0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ",
+            "descriptor_bytes": "d08a5a000000000000000000a6c45f0078123e00",
+            "lookup_index": 107,
+            "lookup_bytes": "dcab5f0000000000"
+          },
+          {
+            "call": "0x18024effe",
+            "iat": "0x1803eb450",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAE@Z",
+            "descriptor_bytes": "c02b5b0000000000000000000e935f0068b33e00",
+            "lookup_index": 29,
+            "lookup_bytes": "c88d5f0000000000"
+          }
+        ],
+        "decompilation": "\nvoid FUN_18024eee0(moBodyFeature_c *param_1,su_CArchive *param_2)\n\n{\n  int iVar1;\n  uint uVar2;\n  uchar local_res18 [8];\n  long local_res20 [2];\n  longlong local_28 [2];\n  \n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_28,param_2);\n  moBodyFeature_c::Serialize(param_1,param_2);\n  iVar1 = su_CArchive::IsStoring(param_2);\n  if (iVar1 == 0) {\n    operator>>(param_2,(moCompSolidBody_c **)(param_1 + 0x800));\n    (**(code **)(*(longlong *)(param_1 + 0x808) + 0x28))(param_1 + 0x808,param_2);\n    su_CArchive::operator>>(param_2,local_res20);\n    *(long *)(param_1 + 0x828) = local_res20[0];\n    if (local_28[0] == 0) {\n                    /* WARNING: Subroutine does not return */\n      AfxThrowFileException(1,-1,(wchar_t *)0x0);\n    }\n    uVar2 = *(uint *)(local_28[0] + 0x780);\n    if (uVar2 == 0) {\n      moVersionManager_c::get();\n      uVar2 = moVersionManager_c::getCurrentFileVerion();\n    }\n    if (0x3f07 < uVar2) {\n      local_res18[0] = '\\0';\n      su_CArchive::operator>>(param_2,local_res18);\n      param_1[0x838] = (moBodyFeature_c)(local_res18[0] != '\\0');\n    }\n  }\n  else {\n    operator<<(param_2,(moCompSolidBody_c **)(param_1 + 0x800));\n    (**(code **)(*(longlong *)(param_1 + 0x808) + 0x28))(param_1 + 0x808,param_2);\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x828));\n    if (local_28[0] == 0) {\n                    /* WARNING: Subroutine does not return */\n      AfxThrowFileException(1,-1,(wchar_t *)0x0);\n    }\n    uVar2 = *(uint *)(local_28[0] + 0x780);\n    if (uVar2 == 0) {\n      moVersionManager_c::get();\n      uVar2 = moVersionManager_c::getCurrentFileVerion();\n    }\n    if (0x3f07 < uVar2) {\n      su_CArchive::operator<<(param_2,param_1[0x838] != (moBodyFeature_c)0x0);\n      return;\n    }\n  }\n  return;\n}\n\n"
+      },
+      "0x18025b620": {
+        "end": "0x18025b66b",
+        "native_bytes": "48895c2408574883ec20488bfa488bd9ff15428c1800488bcfff1569001900488d9300080000488bcf85c0740f488b5c24304883c4205fe934fdffff488b5c24304883c4205fe9a5fcffff",
+        "sha256": "ecfd269c32dec947bb512558309b14f465fdeda8f1b09a8d35b979435e2f5128",
+        "imports": [
+          {
+            "call": "0x18025b630",
+            "iat": "0x1803e4278",
+            "module": "SLDMODU.dll",
+            "symbol": "?Serialize@moBodyFeature_c@@UEAAXAEAVsu_CArchive@@@Z",
+            "descriptor_bytes": "888e5a000000000000000000ca7c5f0030163e00",
+            "lookup_index": 1417,
+            "lookup_bytes": "dad15c0000000000"
+          },
+          {
+            "call": "0x18025b639",
+            "iat": "0x1803eb6a8",
+            "module": "swccu.dll",
+            "symbol": "?IsStoring@su_CArchive@@QEBAHXZ",
+            "descriptor_bytes": "c02b5b0000000000000000000e935f0068b33e00",
+            "lookup_index": 104,
+            "lookup_bytes": "a67d5f0000000000"
+          }
+        ],
+        "decompilation": "\n/* private: virtual void __cdecl moDeleteBody_c::Serialize(class su_CArchive & __ptr64) __ptr64 */\n\nvoid __thiscall moDeleteBody_c::Serialize(moDeleteBody_c *this,su_CArchive *param_1)\n\n{\n  int iVar1;\n  \n                    /* 0x25b620  1244  ?Serialize@moDeleteBody_c@@EEAAXAEAVsu_CArchive@@@Z */\n  moBodyFeature_c::Serialize((moBodyFeature_c *)this,param_1);\n  iVar1 = su_CArchive::IsStoring(param_1);\n  if (iVar1 != 0) {\n    ::operator<<(param_1,(moDeleteBodyData_c **)(this + 0x800));\n    return;\n  }\n  ::operator>>(param_1,(moDeleteBodyData_c **)(this + 0x800));\n  return;\n}\n\n"
+      },
+      "0x18025b540": {
+        "end": "0x18025b613",
+        "native_bytes": "48895c2408574883ec30488bf9488bda488d4c2420ff156d601800488b4424204885c00f849700000083b88007000000750cff1560601800ff1552601800488bd3488bcfff15f6ff1800488bcbff15150119004c8b4708488d4f08488bd385c0741b41ff50288b5728488bcbff15ee001900488b5c24404883c4305fc341ff5028488b4424204885c074358b808007000085c0750cff15fd5f1800ff15ef5f18003dc41b000072ca488d5728488bcbff15a3001900488b5c24404883c4305fc34533c0baffffffffb901000000e865201500cc",
+        "sha256": "2bd9aadf6ad2e28897488fd6106596efb3649cc63fe73ce1e3d3d97901ae37b0",
+        "imports": [
+          {
+            "call": "0x18025b555",
+            "iat": "0x1803e15c8",
+            "module": "SLDMFCU.dll",
+            "symbol": "??0moArchiveHelper_c@@QEAA@PEAVsu_CArchive@@@Z",
+            "descriptor_bytes": "d08a5a000000000000000000a6c45f0078123e00",
+            "lookup_index": 106,
+            "lookup_bytes": "0eac5f0000000000"
+          },
+          {
+            "call": "0x18025b572",
+            "iat": "0x1803e15d8",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ",
+            "descriptor_bytes": "d08a5a000000000000000000a6c45f0078123e00",
+            "lookup_index": 108,
+            "lookup_bytes": "b6ab5f0000000000"
+          },
+          {
+            "call": "0x18025b578",
+            "iat": "0x1803e15d0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ",
+            "descriptor_bytes": "d08a5a000000000000000000a6c45f0078123e00",
+            "lookup_index": 107,
+            "lookup_bytes": "dcab5f0000000000"
+          },
+          {
+            "call": "0x18025b584",
+            "iat": "0x1803eb580",
+            "module": "swccu.dll",
+            "symbol": "?Serialize@su_CObject@@UEAAXAEAVsu_CArchive@@@Z",
+            "descriptor_bytes": "c02b5b0000000000000000000e935f0068b33e00",
+            "lookup_index": 67,
+            "lookup_bytes": "64835f0000000000"
+          },
+          {
+            "call": "0x18025b58d",
+            "iat": "0x1803eb6a8",
+            "module": "swccu.dll",
+            "symbol": "?IsStoring@su_CArchive@@QEBAHXZ",
+            "descriptor_bytes": "c02b5b0000000000000000000e935f0068b33e00",
+            "lookup_index": 104,
+            "lookup_bytes": "a67d5f0000000000"
+          },
+          {
+            "call": "0x18025b5ac",
+            "iat": "0x1803eb6a0",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z",
+            "descriptor_bytes": "c02b5b0000000000000000000e935f0068b33e00",
+            "lookup_index": 103,
+            "lookup_bytes": "c87d5f0000000000"
+          },
+          {
+            "call": "0x18025b5d5",
+            "iat": "0x1803e15d8",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ",
+            "descriptor_bytes": "d08a5a000000000000000000a6c45f0078123e00",
+            "lookup_index": 108,
+            "lookup_bytes": "b6ab5f0000000000"
+          },
+          {
+            "call": "0x18025b5db",
+            "iat": "0x1803e15d0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ",
+            "descriptor_bytes": "d08a5a000000000000000000a6c45f0078123e00",
+            "lookup_index": 107,
+            "lookup_bytes": "dcab5f0000000000"
+          },
+          {
+            "call": "0x18025b5ef",
+            "iat": "0x1803eb698",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z",
+            "descriptor_bytes": "c02b5b0000000000000000000e935f0068b33e00",
+            "lookup_index": 102,
+            "lookup_bytes": "e87d5f0000000000"
+          }
+        ],
+        "decompilation": "\n/* public: virtual void __cdecl moDeleteBodyData_c::Serialize(class su_CArchive & __ptr64) __ptr64\n    */\n\nvoid __thiscall moDeleteBodyData_c::Serialize(moDeleteBodyData_c *this,su_CArchive *param_1)\n\n{\n  int iVar1;\n  uint uVar2;\n  longlong local_18 [2];\n  \n                    /* 0x25b540  1243  ?Serialize@moDeleteBodyData_c@@UEAAXAEAVsu_CArchive@@@Z */\n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_18,param_1);\n  if (local_18[0] != 0) {\n    if (*(int *)(local_18[0] + 0x780) == 0) {\n      moVersionManager_c::get();\n      moVersionManager_c::getCurrentFileVerion();\n    }\n    su_CObject::Serialize((su_CObject *)this,param_1);\n    iVar1 = su_CArchive::IsStoring(param_1);\n    if (iVar1 == 0) {\n      (**(code **)(*(longlong *)(this + 8) + 0x28))(this + 8,param_1);\n      if (local_18[0] == 0) goto LAB_18025b600;\n      uVar2 = *(uint *)(local_18[0] + 0x780);\n      if (uVar2 == 0) {\n        moVersionManager_c::get();\n        uVar2 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (0x1bc3 < uVar2) {\n        su_CArchive::operator>>(param_1,(long *)(this + 0x28));\n        return;\n      }\n    }\n    else {\n      (**(code **)(*(longlong *)(this + 8) + 0x28))();\n      su_CArchive::operator<<(param_1,*(long *)(this + 0x28));\n    }\n    return;\n  }\nLAB_18025b600:\n                    /* WARNING: Subroutine does not return */\n  AfxThrowFileException(1,-1,(wchar_t *)0x0);\n}\n\n"
+      },
+      "0x18024ed10": {
+        "end": "0x18024ed96",
+        "native_bytes": "48895c241848894c2408574883ec20488bf9ff156055190090488d05187d2100488907488d0536a321004889878800000048c7870008000000000000488d9f0808000048895c2438488bcbff15f7c8190090488d0557681b00488903c78728080000ffffffff48c7873008000000000000c6873808000000488bc7488b5c24404883c4205fc3",
+        "sha256": "42c4ad7d9bbdaa271b19bdeaf9d0a9dd5aee21e2feba952b08c6f37342b48976",
+        "imports": [
+          {
+            "call": "0x18024ed22",
+            "iat": "0x1803e4288",
+            "module": "SLDMODU.dll",
+            "symbol": "??0moBodyFeature_c@@IEAA@XZ",
+            "descriptor_bytes": "888e5a000000000000000000ca7c5f0030163e00",
+            "lookup_index": 1419,
+            "lookup_bytes": "40d25c0000000000"
+          },
+          {
+            "call": "0x18024ed5b",
+            "iat": "0x1803eb658",
+            "module": "swccu.dll",
+            "symbol": "??0su_CObArray@@QEAA@XZ",
+            "descriptor_bytes": "c02b5b0000000000000000000e935f0068b33e00",
+            "lookup_index": 94,
+            "lookup_bytes": "347f5f0000000000"
+          }
+        ],
+        "decompilation": "\nmoBodyFeature_c * FUN_18024ed10(moBodyFeature_c *param_1)\n\n{\n  moBodyFeature_c::moBodyFeature_c(param_1);\n  *(undefined ***)param_1 = moCombineBodies_c::vftable;\n  *(undefined ***)(param_1 + 0x88) = moCombineBodies_c::vftable;\n  *(undefined8 *)(param_1 + 0x800) = 0;\n  su_CObArray::su_CObArray((su_CObArray *)(param_1 + 0x808));\n  *(undefined ***)(param_1 + 0x808) = suObArray::vftable;\n  *(undefined4 *)(param_1 + 0x828) = 0xffffffff;\n  *(undefined8 *)(param_1 + 0x830) = 0;\n  param_1[0x838] = (moBodyFeature_c)0x0;\n  return param_1;\n}\n\n"
+      },
+      "0x18025b070": {
+        "end": "0x18025b0e5",
+        "native_bytes": "48895c2418574883ec20b930000000ff15fb051900488bf848894424304885c07446488bc8ff150505190090488d057d082100488907488d5f0848895c2438488bcbff15a005190090488d0500a51a00488903c7472800000000488bc7488b5c24404883c4205fc333c0488b5c24404883c4205fc3",
+        "sha256": "715b2132c23856ab9878bb6937c0f6a82698756645c2215cb62c710a27693f5e",
+        "imports": [
+          {
+            "call": "0x18025b07f",
+            "iat": "0x1803eb680",
+            "module": "swccu.dll",
+            "symbol": "??2su_CObject@@SAPEAX_K@Z",
+            "descriptor_bytes": "c02b5b0000000000000000000e935f0068b33e00",
+            "lookup_index": 99,
+            "lookup_bytes": "927e5f0000000000"
+          },
+          {
+            "call": "0x18025b095",
+            "iat": "0x1803eb5a0",
+            "module": "swccu.dll",
+            "symbol": "??0su_CObject@@QEAA@XZ",
+            "descriptor_bytes": "c02b5b0000000000000000000e935f0068b33e00",
+            "lookup_index": 71,
+            "lookup_bytes": "e8825f0000000000"
+          },
+          {
+            "call": "0x18025b0b2",
+            "iat": "0x1803eb658",
+            "module": "swccu.dll",
+            "symbol": "??0su_CObArray@@QEAA@XZ",
+            "descriptor_bytes": "c02b5b0000000000000000000e935f0068b33e00",
+            "lookup_index": 94,
+            "lookup_bytes": "347f5f0000000000"
+          }
+        ],
+        "decompilation": "\nsu_CObject * FUN_18025b070(void)\n\n{\n  su_CObject *this;\n  \n  this = su_CObject::operator_new(0x30);\n  if (this != (su_CObject *)0x0) {\n    su_CObject::su_CObject(this);\n    *(undefined ***)this = moDeleteBodyData_c::vftable;\n    su_CObArray::su_CObArray((su_CObArray *)(this + 8));\n    *(undefined ***)(this + 8) = suObArray::vftable;\n    *(undefined4 *)(this + 0x28) = 0;\n    return this;\n  }\n  return (su_CObject *)0x0;\n}\n\n"
+      }
+    },
+    "descriptors": {
+      "moCombineBodies_c": {
+        "va": "0x180604248",
+        "bytes": "286a4680010000004008000001000080d0eb248001000000a0280e80010000000000000000000000",
+        "creator": "0x18024ebd0",
+        "runtime_size": 2112,
+        "creator_native_bytes": "4883ec28b940080000ff15a1ca190048894424304885c0740e488bc8e81f010000904883c428c333c04883c428c3",
+        "constructor": "0x18024ed10"
+      },
+      "moDeleteBodyData_c": {
+        "va": "0x1806048c0",
+        "bytes": "f0b8468001000000300000000100008070b0258001000000d0480e80010000000000000000000000",
+        "creator": "0x18025b070",
+        "runtime_size": 48
+      }
+    },
+    "solid_reference": {
+      "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+      "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+      "rtti": {
+        "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+        "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+        "tables": [
+          {
+            "class_name": "moSolidRef_w",
+            "object_offset": 0,
+            "locator": "0x4d320080",
+            "vftable": "0x4ced5050",
+            "slots": [
+              "0x4b90db00",
+              "0x4b90daa0",
+              "0x4cba273f",
+              "0x4b29dae0",
+              "0x4b29dae0",
+              "0x4b90ded0",
+              "0x4b52ca40",
+              "0x4b526bd0"
+            ]
+          }
+        ]
+      },
+      "locator_bytes": "010000000000000000000000b89e9c02a8001c0280001c02",
+      "bases": [
+        ".?AVmoSolidRef_w@@",
+        ".?AVmoAtomGeomRef_w@@",
+        ".?AVmoRefWrapper_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ],
+      "functions": {
+        "0x4b90ded0": {
+          "end": "0x4b90e1b3",
+          "native_bytes": "48895c240848896c2410488974242057415641574881eca00000004c8bfa488bf1e81afcffff498bd7488d4c2440ff158c6d42014c8db6b8000000498bcfff15dc08430133ff85c00f84e3000000498b1e8bef4885db400f95c5b80100000048397e50740a8bd0488bcee8b1a9a2004885db740585c00f44efba00200000488d4c2440ff15476342018bdf85c00f44dd8bd3498bcfff159508430185db0f84ea010000488b4e584885c97505488bdfeb08e89a72f3ff488bd8ba0a000000488d4c2450ff15976d420190897c242041b9010000004c8bc3488d542450498b0ee82c1b95004533c941b801000000498bd7498b0ee88835950085c00f84bd0100004533c94c8bc3488d542450498b0ee8fd2e9500498bd7488d4c2450ff15ff6b4201488d4c2450e8752e950090e95101000049893e89bc24d0000000488d9424d0000000498bcfff15ec07430139bc24d00000000f8434010000ff15d9ae4201448bc785c0410f94c048897c2430897c242848897c24204533c9498bd7498bcee81c25950049393e750eff15a9ae420185c00f8539010000ff15abb54201488bc8ff15daa4420185c0740e498b0e4885c97406ff15509e42014c8d766041c70601000000ba0a000000488d4c2450ff158d6c420190488b4e584885c97505488bdfeb0de86971f3ff488bd84885c0752aff1553b54201488bc8ff15f2ad420185c07417488b5c24404885db7406488b5b30eb03488bdf4c8d7660498bd7488d4c2450ff15f96a4201488b4424404885c07479488b80a0030000488944243048897c2428897c242041b9010000004c8bc3488d542450488b8eb8000000e880fd940048837e5000741bba01000000488bcee8aca7a20085c0750a4889beb800000041893e488d4c2450ff15cb6b42014c8d9c24a0000000498b5b20498b6b28498b7338498be3415f415e5fc34533c0baffffffffb901000000e8e7512901904533c0baffffffffb901000000e8d4512901904533c0baffffffffb901000000e8c1512901cc",
+          "sha256": "b422c619a894457d00ccbe621cdab0c3ea33873bc59f311f3cd4dfd4764c2d07",
+          "decompilation": "\nvoid FUN_4b90ded0(moRefWrapper_c *param_1,su_CArchive *param_2)\n\n{\n  moRefWrapper_c *pmVar1;\n  gcBody_w *pgVar2;\n  int iVar3;\n  moFiledConcept_c *pmVar4;\n  gcEnvironment_c *pgVar5;\n  moFiledConcept_c *pmVar6;\n  uint uVar7;\n  uint uVar8;\n  long local_res18 [2];\n  longlong local_78 [2];\n  suObList local_68 [80];\n  \n  FUN_4b90db10();\n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_78,param_2);\n  pmVar1 = param_1 + 0xb8;\n  iVar3 = su_CArchive::IsStoring(param_2);\n  pmVar4 = (moFiledConcept_c *)0x0;\n  if (iVar3 == 0) {\n    *(gcBody_w **)pmVar1 = (gcBody_w *)0x0;\n    local_res18[0] = 0;\n    su_CArchive::operator>>(param_2,local_res18);\n    if (local_res18[0] == 0) {\n      return;\n    }\n    iVar3 = gc_IsKernelParasolid();\n    mo_loadBodyFromArchive((gcBody_w **)pmVar1,param_2,(uint)(iVar3 == 0),0,(int *)0x0,0,(int *)0x0)\n    ;\n    if ((*(gcBody_w **)pmVar1 == (gcBody_w *)0x0) && (iVar3 = gc_IsKernelParasolid(), iVar3 != 0)) {\n                    /* WARNING: Subroutine does not return */\n      AfxThrowFileException(1,-1,(wchar_t *)0x0);\n    }\n    pgVar5 = gcEnvironment_c::get();\n    iVar3 = gcEnvironment_c::getEnablePartitionRollback(pgVar5);\n    if ((iVar3 != 0) && (*(gcBody_w **)pmVar1 != (gcBody_w *)0x0)) {\n      gcBody_w::changeToPermanentPartition(*(gcBody_w **)pmVar1);\n    }\n    *(undefined4 *)(param_1 + 0x60) = 1;\n    suObList::suObList(local_68,10);\n    pmVar6 = pmVar4;\n    if ((*(moComponent_c **)(param_1 + 0x58) == (moComponent_c *)0x0) ||\n       (pmVar6 = moComponent_c::getFiledOwner(*(moComponent_c **)(param_1 + 0x58)),\n       pmVar6 == (moFiledConcept_c *)0x0)) {\n      pgVar5 = gcEnvironment_c::get();\n      iVar3 = gcEnvironment_c::getEnableNewSurfaceId(pgVar5);\n      if ((iVar3 != 0) && (pmVar6 = pmVar4, local_78[0] != 0)) {\n        pmVar6 = *(moFiledConcept_c **)(local_78[0] + 0x30);\n      }\n    }\n    suObList::Serialize(local_68,param_2);\n    if (local_78[0] == 0) {\n                    /* WARNING: Subroutine does not return */\n      AfxThrowFileException(1,-1,(wchar_t *)0x0);\n    }\n    mo_assignAttribList(*(gcBody_w **)(param_1 + 0xb8),local_68,pmVar6,1,0,\n                        (moBaseConfiguration_c *)0x0,*(moFeatureRefMgr_c **)(local_78[0] + 0x3a0));\n    if ((*(longlong *)(param_1 + 0x50) != 0) &&\n       (iVar3 = moRefWrapper_c::isExternal(param_1,1), iVar3 == 0)) {\n      *(undefined8 *)(param_1 + 0xb8) = 0;\n      *(undefined4 *)(param_1 + 0x60) = 0;\n    }\n  }\n  else {\n    pgVar2 = *(gcBody_w **)pmVar1;\n    uVar8 = (uint)(pgVar2 != (gcBody_w *)0x0);\n    iVar3 = 1;\n    if (*(longlong *)(param_1 + 0x50) != 0) {\n      iVar3 = moRefWrapper_c::isExternal(param_1,1);\n    }\n    if ((pgVar2 != (gcBody_w *)0x0) && (iVar3 == 0)) {\n      uVar8 = 0;\n    }\n    iVar3 = moArchiveHelper_c::hasCondition((moArchiveHelper_c *)local_78,0x2000);\n    uVar7 = 0;\n    if (iVar3 == 0) {\n      uVar7 = uVar8;\n    }\n    su_CArchive::operator<<(param_2,uVar7);\n    if (uVar7 == 0) {\n      return;\n    }\n    if (*(moComponent_c **)(param_1 + 0x58) != (moComponent_c *)0x0) {\n      pmVar4 = moComponent_c::getFiledOwner(*(moComponent_c **)(param_1 + 0x58));\n    }\n    suObList::suObList(local_68,10);\n    mo_genAttribList(*(gcBody_w **)pmVar1,local_68,pmVar4,1,0);\n    iVar3 = mo_storeBodyToArchive(*(gcBody_w **)pmVar1,param_2,1,0);\n    if (iVar3 == 0) {\n                    /* WARNING: Subroutine does not return */\n      AfxThrowFileException(1,-1,(wchar_t *)0x0);\n    }\n    mo_resetAttribList(*(gcBody_w **)pmVar1,local_68,pmVar4,0);\n    suObList::Serialize(local_68,param_2);\n    mo_releaseAttribList(local_68);\n  }\n  suObList::~suObList(local_68);\n  return;\n}\n\n"
+        },
+        "0x4b90db10": {
+          "end": "0x4b90dbaa",
+          "native_bytes": "48895c2408574883ec30488bda488bf9e8ab679700488bd3488d4c2420ff155d714201488b004885c0745c8b808007000085c0750cff1555714201ff15477142013dbe1b00007234488bcbff158f0c4301488bcb85c074178b97a8000000488b5c24404883c4305f48ff25610e4301488d97a8000000ff155c0e4301488b5c24404883c4305fc34533c0baffffffffb901000000e8ca572901cc",
+          "sha256": "2a2abcf6364c2609c4ccebdbb728b49835604138a0646656bd234c608a8b5923",
+          "decompilation": "\nvoid FUN_4b90db10(longlong param_1,su_CArchive *param_2)\n\n{\n  uint uVar1;\n  int iVar2;\n  longlong *plVar3;\n  moArchiveHelper_c local_18 [16];\n  \n  FUN_4c2842d0();\n  plVar3 = (longlong *)moArchiveHelper_c::moArchiveHelper_c(local_18,param_2);\n  if (*plVar3 == 0) {\n                    /* WARNING: Subroutine does not return */\n    AfxThrowFileException(1,-1,(wchar_t *)0x0);\n  }\n  uVar1 = *(uint *)(*plVar3 + 0x780);\n  if (uVar1 == 0) {\n    moVersionManager_c::get();\n    uVar1 = moVersionManager_c::getCurrentFileVerion();\n  }\n  if (0x1bbd < uVar1) {\n    iVar2 = su_CArchive::IsStoring(param_2);\n    if (iVar2 != 0) {\n                    /* WARNING: Could not recover jumptable at 0x4b90db78. Too many branches */\n                    /* WARNING: Treating indirect jump as call */\n      su_CArchive::operator<<(param_2,*(ulong *)(param_1 + 0xa8));\n      return;\n    }\n    su_CArchive::operator>>(param_2,(ulong *)(param_1 + 0xa8));\n  }\n  return;\n}\n\n"
+        }
+      },
+      "component_solid_body_ancestry": {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+          "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+          "tables": [
+            {
+              "class_name": "moCompSolidBody_c",
+              "object_offset": 0,
+              "locator": "0x4d319418",
+              "vftable": "0x4ce946c0",
+              "slots": [
+                "0x4bbb6760",
+                "0x4b802e80",
+                "0x4cba273f",
+                "0x4b29dae0",
+                "0x4b29dae0",
+                "0x4bbba2d0",
+                "0x4b8200f0",
+                "0x4b809a90"
+              ]
+            },
+            {
+              "class_name": "moCompSolidBody_c",
+              "object_offset": 368,
+              "locator": "0x4d3194b8",
+              "vftable": "0x4ce94b50",
+              "slots": [
+                "0x4b802e68",
+                "0x4b2a5518",
+                "0x4b2a53d8",
+                "0x4b2a5328",
+                "0x4b2a549c",
+                "0x4b2af778",
+                "0x4b2a2290",
+                "0x88ffffff18"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "010000000000000000000000d0959a0240941b0218941b02",
+        "bases": [
+          ".?AVmoCompSolidBody_c@@",
+          ".?AVmoCompAtomBody_c@@",
+          ".?AVmoCompRef_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@",
+          ".?AVutDisplayedEntity_c@@"
+        ]
+      }
+    },
+    "limitations": [
+      "Ordinary non-DB external-XML v>27CB only",
+      "Raw combine byte preserved before native Boolean normalization",
+      "Runtime allocation size is not wire length",
+      "Pdata may be fragmented; full module hash binds decompilation",
+      "No whole-document/project bit coverage credit"
+    ]
+  }
+}

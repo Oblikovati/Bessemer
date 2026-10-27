@@ -207,6 +207,8 @@ complete trimming data, raw scalars and the versioned late word.
 identity, signed body presence, typed kernel bodies and direct attributes.
 [Mirrored solids](docs/features/mirror-solids/README.md) retain independent
 planes and arrays, shared matrix helpers and unsigned-array records.
+[Combine and delete bodies](docs/features/combine-bodies/README.md) retain
+complete payloads, shared body targets and raw versioned options.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 

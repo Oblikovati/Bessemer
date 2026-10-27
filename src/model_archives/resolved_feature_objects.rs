@@ -20,6 +20,9 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moCombineBodies_c" => super::combine_bodies::combine(reader, map),
+        "moDeleteBody_c" => super::combine_bodies::delete(reader, map),
+        "moDeleteBodyData_c" => super::combine_bodies::delete_data(reader, map),
         "moMirrorSolid_c" => super::mirror_solids::read(reader, map),
         "suUIntArray" => super::mirror_solids::unsigned_array(reader),
         "moWeldCornerFeat_c" => super::weld_corners::read(reader, map),

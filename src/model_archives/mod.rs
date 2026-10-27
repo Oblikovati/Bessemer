@@ -14,6 +14,7 @@ mod body_chooser_records;
 mod browser_folders;
 mod bucket_adapter;
 mod chamfer_records;
+mod combine_bodies;
 mod configuration;
 mod configuration_atoms;
 mod configuration_base;

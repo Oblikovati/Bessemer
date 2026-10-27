@@ -10,6 +10,8 @@
 
 ### Added
 
+- Added ordinary combine/delete-body reading, editing and writing with complete typed payloads, shared body references and raw versioned option bytes. (#54)
+
 - Added ordinary mirrored-solid reading, editing and writing with independent planes and arrays, shared matrix helpers and complete unsigned-array records. (#54)
 
 - Added ordinary solid-reference reading, editing and writing with complete wrapper fields, retained signed presence, typed selected kernel bodies and direct attribute lists. (#54)
