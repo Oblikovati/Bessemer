@@ -177,6 +177,8 @@ lists, duplicate records and original stored expressions.
 point metadata, signed contour modes and complete shared contour/index graphs.
 [Reference dimensions](docs/features/reference-dimensions/README.md) preserve entity
 kind words, optional vectors, complete sketch handles and direct dimension planes.
+[Radiated-edge identifiers](docs/features/radiated-edge-identifiers/README.md)
+preserve inherited references and shared entity-representation identities.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 

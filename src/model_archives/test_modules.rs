@@ -243,6 +243,9 @@ mod public_role_tests;
 #[path = "../../tests/model_archives/radiate_representation.rs"]
 mod radiate_representation_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/radiated_edge_identifiers.rs"]
+mod radiated_edge_identifier_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/reference_axes.rs"]
 mod reference_axis_tests;
 #[cfg(test)]
