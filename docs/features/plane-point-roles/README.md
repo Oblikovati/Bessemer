@@ -6,7 +6,7 @@ They accepted only `moPointRef_w`, rejecting complete endpoint and loft-sync
 references after reaching their tags. Eleven native configurations reproduced the
 endpoint rejection at revision `030d35dbb01588628a0aec55aac7c30d9532e00b`.
 
-Specification 11.164 / C-188 establishes that the endpoint serializer calls the
+Specification 11.164 / C-192 establishes that the endpoint serializer calls the
 complete point-reference helper. Section 11.204 / C-232 establishes loft-sync
 ancestry through the endpoint and its inherited serializer call. These three
 already implemented classes form a finite point-reference family. The fix reuses

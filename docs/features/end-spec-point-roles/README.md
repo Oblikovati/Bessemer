@@ -7,7 +7,7 @@ roles and the two unconditional revolution-end point roles. Unrelated wrappers
 still fail. Other role families and wire layouts remain unchanged.
 
 Specification 11.90 declares the extrusion point pointers; 11.91 declares the
-revolution point pointers. Section 11.164 / C-188 proves the endpoint's complete
+revolution point pointers. Section 11.164 / C-192 proves the endpoint's complete
 point-reference base, and 11.204 / C-232 proves loft-sync's endpoint ancestry and
 direct base call. The implementation reuses the existing finite family rather
 than accepting every wrapper or matching a class-name prefix. The existing

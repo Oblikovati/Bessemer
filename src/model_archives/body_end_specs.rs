@@ -4,7 +4,7 @@ use super::{ModelDecoder, ModelObjectRole, model_lists};
 use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
 
-// #46 / C-188 and C-232: end-spec point roles retain the verified point-base ancestry.
+// #46 / C-192 and C-232: end-spec point roles retain the verified point-base ancestry.
 const END_POINT_ROLE: ModelObjectRole<'_> =
     ModelObjectRole::Declared(super::geometric_references::POINT_REFERENCE_CLASSES);
 
