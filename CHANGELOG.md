@@ -10,6 +10,8 @@
 
 ### Added
 
+- Added ordinary draft reading, editing and writing with direct identifier keepers, strided payloads, counted face groups and retained signed option words. (#54)
+
 - Added ordinary parabola and 3D-cylinder backup reading, editing and writing with complete point-backup identities and shared conic/cylinder handles. (#54)
 
 - Added ordinary parabola and 3D parametric-surface handle reading, editing and writing with shared identities and retained escaped-index encodings. (#54)

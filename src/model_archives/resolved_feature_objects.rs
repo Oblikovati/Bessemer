@@ -17,6 +17,8 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moDraft_c" => super::draft_records::read(reader, map),
+        "moDraftSIdKeeper_c" | "moEdgeFaceSIdKeeper_c" => super::draft_keepers::read(reader, map),
         "moSplineTangencyControl_c" => super::spline_controls::tangency(reader, map),
         "moSplineControlPolygonControl_c" => super::spline_controls::polygon(reader, map),
         "moSplineCurvatureControl_c" => super::spline_controls::curvature(reader, map),

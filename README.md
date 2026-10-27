@@ -187,6 +187,8 @@ records and complete sketch user-object identities.
 documented parabola and parametric-surface handles through the existing codec.
 [Sketch geometry backups](docs/features/sketch-geometry-backups/README.md) preserve
 parabola segment prefixes, raw cylinder records and their shared handle types.
+[Draft features](docs/features/drafts/README.md) preserve signed presence words,
+direct identifier keepers, strided payloads and counted face/point collections.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 
