@@ -8,7 +8,7 @@ CLASSES = ('moTrimWireExtEdgeIdRep_c', 'moPttnBodyEdgeIdRep_c')
 
 
 def frontier_edge_object(kind: int, version: int, style: int, edited: bool = False,
-                         first_slot: int = 0) -> tuple[bytes, int]:
+                         first_slot: int = 0, name: str | None = None) -> tuple[bytes, int]:
     """Retain signed extremes, complete parents and repeated aliases; e.g. frontier_edge_object(1, 19000, 5)."""
     mapping=WireMap();mapping.slot=first_slot;ids: dict[str,int]={}
     def contents(key: str) -> bytes:
@@ -16,7 +16,7 @@ def frontier_edge_object(kind: int, version: int, style: int, edited: bool = Fal
         direct=source(mapping,ids,version,style) if kind else b''
         return prefix+direct+struct.pack('<2i',12345 if edited and key=='first' else WORDS[style],WORDS[5-style])
     def record(key: str) -> bytes:
-        return shared_object(mapping,ids,key,CLASSES[kind],lambda: contents(key))
+        return shared_object(mapping,ids,key,name if name is not None else CLASSES[kind],lambda: contents(key))
     def wrapper(key: str) -> bytes:
         return shared_object(mapping,ids,'entity-'+key,'moEntityId_c',lambda: record(key))
     def outer() -> bytes:
