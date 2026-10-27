@@ -20,6 +20,12 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        // #54 / C-219, C-235 and C-278 bind the identical complete extrusion serializer.
+        "moExtruThin_c" | "moBossThin_c" | "moCutThin_c" => {
+            super::thin_extrusions::extrusion(reader, map)
+        }
+        "moRevolutionThin_c" => super::thin_extrusions::revolution(reader, map),
+        "moThinSpec_c" => super::thin_extrusions::specification(reader, map),
         "moSplit_c" => super::split_features::read(reader, map),
         "moSplitItem_c" => super::split_items::read(reader, map),
         // #54 / C-276: these tagged serializers are empty; the parent writes owned data directly.

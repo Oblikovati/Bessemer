@@ -225,6 +225,8 @@ direct curve-set bodies, independent point counts, shared contacts and thin dime
 the existing finite wrapper family through fresh and cached pointers.
 [Sew-reference surfaces](docs/features/sew-surfaces/README.md) retain five direct
 arrays, raw flag words, double order and inherited empty keepers.
+[Thin extrusion and revolution features](docs/features/thin-extrusions/README.md) retain
+shared specifications, independent dimensions and fixed-width bend triples.
 [Constraint-plane families](docs/features/constraint-plane-families/README.md) retain
 complete data/interface/geometry bodies, shared targets and raw/native flag views.
 [Projected-line subtypes and surface wrappers](docs/features/projected-line-subtypes/README.md)

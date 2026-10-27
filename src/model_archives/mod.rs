@@ -73,6 +73,7 @@ mod structural_member_records;
 mod structural_member_references;
 mod surface_operations;
 mod thicken_records;
+mod thin_extrusions;
 mod weld_corners;
 mod weldment_records;
 pub use resolved_edit::PartResolvedFeaturesEdit;

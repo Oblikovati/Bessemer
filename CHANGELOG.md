@@ -16,6 +16,8 @@
 
 ### Added
 
+- Added ordinary thin extrusion, boss, cut and revolution reading, editing and writing with shared thin specifications and exact u16 bend-triple counts. (#54)
+
 - Added ordinary constraint-plane data, interfaces and geometry reading, editing and writing with shared identities and immutable raw/native flag observations. (#54)
 
 - Added ordinary projected-line draft/intersection and surface-base reading, editing and writing with retained nullable arrays, tagged list identities and exact floating-point bits. (#54)

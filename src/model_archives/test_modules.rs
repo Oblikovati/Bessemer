@@ -431,3 +431,7 @@ mod projected_line_subtype_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/constraint_planes.rs"]
 mod constraint_plane_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/thin_extrusions.rs"]
+mod thin_extrusion_tests;
