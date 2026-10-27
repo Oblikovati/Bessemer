@@ -41,6 +41,7 @@ mod field_mismatch;
 mod flat_pattern_boxes;
 mod flat_patterns;
 mod fold_transforms;
+mod helix_records;
 mod manager_tail;
 mod planar_surface_records;
 mod polyline_records;

@@ -228,6 +228,8 @@ pub(super) const CLASSES: &[&str] = &[
     "moPlanarSurface_c",
     // #54 / C-203: revolved surfaces retain the reference-geometry atom-owner contract.
     "moRevolvRefSurf_c",
+    // #54 / C-212: helices retain the inherited reference-geometry chooser owner.
+    "moHelix_c",
     "Chamfer_c",
     "moPLine_c",
     "moScale_c",

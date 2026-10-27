@@ -10,6 +10,8 @@
 
 ### Added
 
+- Added ordinary helix reading, editing and writing with typed kernel wires, variable-pitch arrays, exact dimension predicates and shared wire-edge identifiers. (#54)
+
 - Added ordinary revolved reference-surface reading, editing and writing with shared angular dimensions, preserved data words and exact zero-byte keepers. (#54)
 
 - Added ordinary face-blend item and pair reading, editing and writing with shared identities, typed boundary references and preserved optional point bytes. (#54)

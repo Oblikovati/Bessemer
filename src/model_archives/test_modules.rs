@@ -174,6 +174,9 @@ mod geometric_reference_tests;
 #[path = "../../tests/model_archives/header_load_plan.rs"]
 mod header_load_plan;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/helices.rs"]
+mod helix_record_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/hole_wizard.rs"]
 mod hole_wizard_tests;
 #[cfg(test)]

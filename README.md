@@ -195,6 +195,8 @@ retain full signed words and distinct identifiers with shared feature references
 typed face/edge references and optional point bits.
 [Revolved surfaces](docs/features/revolved-surfaces/README.md) retain inline
 surface bodies, shared angular dimensions, data words and keeper identity.
+[Helices](docs/features/helices/README.md) preserve typed kernel wires, variable
+pitch arrays, conditional dimension tables and wire-edge identifier identity.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 

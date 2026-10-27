@@ -8,6 +8,7 @@ pub(super) fn read(
     name: &str,
 ) -> Option<Result<()>> {
     let result = match name {
+        "moHelix_c" => super::helix_records::read(reader, map),
         "moRevolvRefSurf_c" => super::revolved_surfaces::read(reader, map),
         "moRevolvSurfData_c" => super::revolved_surfaces::data(reader, map),
         // C-203 binds this exact zero-byte ordinary su_CObject serializer.
