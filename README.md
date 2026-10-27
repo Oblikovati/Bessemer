@@ -201,6 +201,8 @@ pitch arrays, conditional dimension tables and wire-edge identifier identity.
 retain shared unit-component targets, wrapper aliases and signed ID/unsigned time pairs.
 [Cut-list folders](docs/features/cut-list-folders/README.md) retain inherited
 folder layers, direct properties, raw flags and shared tagged references.
+[Weld corners](docs/features/weld-corners/README.md) retain independent arrays,
+complete trimming data, raw scalars and the versioned late word.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 

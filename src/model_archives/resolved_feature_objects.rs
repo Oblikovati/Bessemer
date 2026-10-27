@@ -20,6 +20,10 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moWeldCornerFeat_c" => super::weld_corners::read(reader, map),
+        "moWeldBodyData_c" => super::weld_corners::body_data(reader, map),
+        "moWeldTrimmedBodyData_c" => super::weld_corners::trimmed(reader, map),
+        "moWeldTrimToolData_c" => super::weld_corners::tool(reader, map),
         "moDraft_c" => super::draft_records::read(reader, map),
         "moDraftSIdKeeper_c" | "moEdgeFaceSIdKeeper_c" => super::draft_keepers::read(reader, map),
         "moSplineTangencyControl_c" => super::spline_controls::tangency(reader, map),

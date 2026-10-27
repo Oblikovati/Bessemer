@@ -54,6 +54,7 @@ mod structural_contours;
 mod structural_member_objects;
 mod structural_member_records;
 mod structural_member_references;
+mod weld_corners;
 mod weldment_records;
 pub use resolved_edit::PartResolvedFeaturesEdit;
 mod resolved_failure;

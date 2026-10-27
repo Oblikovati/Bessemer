@@ -1,0 +1,46 @@
+{
+  "base_revision": "531cd512e1370a6df8eac24b6e605dcb666fdb0a",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "focused": {
+    "private_tests": 6,
+    "public_tests": 3,
+    "python_tests": 2,
+    "cases": 120,
+    "primitive_observations": 20594,
+    "owned_streams": 25,
+    "source_parsed_target_identities_verified": true
+  },
+  "native": {
+    "cases": 906,
+    "previous_complete": 734,
+    "complete": 734,
+    "explicit_stops": 172,
+    "new_complete": 0,
+    "cases_advanced_to_later_stops": 4,
+    "fresh_processes": 2,
+    "all_outcomes_and_causes_identical": true,
+    "artifact_stable": true,
+    "artifact_sha256": "c0d474982b02c33234e69f79847ed09ed7b51738e4a05d6f975836e5a928911e",
+    "independent_feature_bytes": 45307798,
+    "independent_snapshot_identity": "52c9dd54802faeff6e5fae37f0d9dd5b9b4f925e1d28367940cd4c2ee5e92fa6",
+    "independent_python_files": 1213,
+    "independent_report_sha256": "7527f61bb1e528af5343489453c036f6eb365200afeda64473416a4827d2101c"
+  },
+  "corpus_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 611,
+    "library_ignored": 3,
+    "xtask_passed": 4,
+    "doctests_passed": 265,
+    "log_sha256": "d8370df51a691abeebcde9fbe55e7bb1239f0d90343f23307dcf702e0714d199"
+  },
+  "exclusions": [
+    "Raw option domains, runtime updates and application/geometry acceptance",
+    "Historical/DB and special contexts",
+    "Remaining 172 configurations and all documented file-schema parity"
+  ]
+}

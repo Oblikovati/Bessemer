@@ -222,6 +222,8 @@ pub(super) const CLASSES: &[&str] = &[
     "moBlendCut_c",
     // #54 / C-199: the structural-member serializer starts with the full body-feature base.
     "moWeldMemberFeat_c",
+    // #54 / C-283: the weld-corner constructor inherits the complete body-feature owner.
+    "moWeldCornerFeat_c",
     // #54 / C-202: the draft serializer calls the complete body-feature base.
     "moDraft_c",
     // #60: both complete readers use this inherited atom-feature owner role.

@@ -354,6 +354,9 @@ mod transform_rows;
 #[path = "../../tests/model_archives/views.rs"]
 mod view_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/weld_corners.rs"]
+mod weld_corner_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/weld_helpers.rs"]
 mod weld_helper_tests;
 #[cfg(test)]

@@ -10,6 +10,8 @@
 
 ### Added
 
+- Added ordinary weld-corner reading, editing and writing with complete body-data layers, independent direct arrays, unsigned DWORDs and preserved trimming-tool scalar bits. (#54)
+
 - Added ordinary cut-list folder reading, editing and writing with complete inherited layers, direct property lists and fourteen native-bound folder classes. (#54)
 
 - Added ordinary component-reference curve reading, editing and writing with complete inherited fields, shared unit-component targets and preserved feature ID/time pairs. (#54)
