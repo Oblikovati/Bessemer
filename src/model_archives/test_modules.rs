@@ -60,6 +60,9 @@ mod component_geometry_role_tests;
 #[path = "../../tests/resolved_features/component_geometry.rs"]
 mod component_geometry_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/component_reference_curves.rs"]
+mod component_reference_curve_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/component_references.rs"]
 mod component_reference_tests;
 #[cfg(test)]

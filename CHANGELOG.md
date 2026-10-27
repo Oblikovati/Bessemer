@@ -10,6 +10,8 @@
 
 ### Added
 
+- Added ordinary component-reference curve reading, editing and writing with complete inherited fields, shared unit-component targets and preserved feature ID/time pairs. (#54)
+
 - Added ordinary helix reading, editing and writing with typed kernel wires, variable-pitch arrays, exact dimension predicates and shared wire-edge identifiers. (#54)
 
 - Added ordinary revolved reference-surface reading, editing and writing with shared angular dimensions, preserved data words and exact zero-byte keepers. (#54)

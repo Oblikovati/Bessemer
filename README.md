@@ -197,6 +197,8 @@ typed face/edge references and optional point bits.
 surface bodies, shared angular dimensions, data words and keeper identity.
 [Helices](docs/features/helices/README.md) preserve typed kernel wires, variable
 pitch arrays, conditional dimension tables and wire-edge identifier identity.
+[Component-reference curves](docs/features/component-reference-curves/README.md)
+retain shared unit-component targets, wrapper aliases and signed ID/unsigned time pairs.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 
