@@ -22,6 +22,15 @@ pub(super) fn read(
     if let Some(result) = super::configuration_objects::read(reader, map, &class.name) {
         return result;
     }
+    if let Some(result) = super::reference_points::read_object(reader, map, &class.name) {
+        return result;
+    }
+    if let Some(result) = super::connection_points::read_object(reader, map, &class.name) {
+        return result;
+    }
+    if let Some(result) = super::reference_geometry_objects::read(reader, map, &class.name) {
+        return result;
+    }
     match class.name.as_str() {
         "moDome_c" => super::dome_records::read(reader, map),
         "moExtruRefSurface_c" => super::extruded_surfaces::read(reader, map),
@@ -41,17 +50,6 @@ pub(super) fn read(
             super::body_chooser_records::named_chooser(reader, map)
         }
         "moBBoxCenterData_c" => super::body_chooser_records::bounding_center(reader),
-        "moRefPlane_c" => super::reference_planes::plane(reader, map),
-        "moPlaneRef_w" => super::reference_planes::plane_reference(reader, map),
-        "moRefAxis_c" => super::reference_axes::axis(reader, map),
-        "moRefAxisData_c"
-        | "moSurfaceAxisData_c"
-        | "moFacePtAxisData_c"
-        | "moPlanePtAxisData_c"
-        | "moPlaneInterAxisData_c"
-        | "moLineAxisData_c"
-        | "moConFaceAxisData_c"
-        | "moTwoPtsAxisData_c" => super::reference_axes::data(reader, map, &class.name),
         "moProfileFeature_c" | "mo3DProfileFeature_c" | "moOriginProfileFeature_c" => {
             super::profile_features::read(reader, map)
         }

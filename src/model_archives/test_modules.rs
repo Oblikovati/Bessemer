@@ -45,6 +45,9 @@ mod circular_pattern_tests;
 #[path = "../../tests/model_archives/complete_details.rs"]
 mod complete_detail_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/component_geometry.rs"]
+mod component_geometry_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/component_references.rs"]
 mod component_reference_tests;
 #[cfg(test)]
@@ -65,6 +68,9 @@ mod configuration_table_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/configuration_toolbox.rs"]
 mod configuration_toolbox_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/connection_points.rs"]
+mod connection_point_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/context_chains.rs"]
 mod context_chain_tests;
@@ -212,6 +218,9 @@ mod radiate_representation_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/reference_axes.rs"]
 mod reference_axis_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/reference_points.rs"]
+mod reference_point_tests;
 #[cfg(test)]
 #[path = "../../tests/model_archives/relations.rs"]
 mod relation_tests;

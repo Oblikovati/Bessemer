@@ -16,6 +16,19 @@ pub(super) fn reference_plane(reader: &mut ModelDecoder<'_>, map: &mut ObjectRea
     Ok(())
 }
 
+pub(super) fn reference_geometry(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+) -> Result<()> {
+    feature(reader, map)?;
+    reader.object(
+        "reference_geometry",
+        map,
+        ModelObjectRole::Declared(&["moRefGeom_c", "moRefPlane_c", "moRefAxis_c", "moRefPoint_c"]),
+    )?;
+    Ok(())
+}
+
 pub(super) fn feature(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     reader.scope("component_reference", |reader| base(reader, map))?;
     reader.i32("feature_id")?;

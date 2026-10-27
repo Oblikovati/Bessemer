@@ -143,6 +143,15 @@ tagged lists, shared geometric references and raw signed words.
 [Reference-axis owners](docs/features/reference-axis-owners/README.md) retain
 verified axis self references in populated atom choosers.
 
+[Component geometry](docs/features/component-geometry/README.md) preserves
+component-axis and component-point identities, geometry and feature ID/time words.
+
+[Reference points](docs/features/reference-points/README.md) retain all seven
+documented data variants, required data tags and shared geometry references.
+
+[Connection and route points](docs/features/connection-points/README.md) retain
+direct configurable parameters, compatibility values and shared line/dimension references.
+
 
 This library is named after Sir Henry Bessemer (1813–1898) an English engineer, inventor, and entrepreneur 
 best known for developing the Bessemer process, the first inexpensive industrial method for the mass production
