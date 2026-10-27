@@ -4,9 +4,21 @@
 
 ### Fixed
 
+- Fixed extrusion and revolution end-specification point roles rejecting documented endpoint and loft-sync subclasses through fresh or cached pointers. (#46)
+
 - Fixed reference-plane point roles rejecting documented endpoint and loft-sync subclasses for fresh and cached pointers. (#46)
 
 ### Added
+
+- Added ordinary spline tangency, control-polygon and curvature reading, editing and writing with complete sketch owners and direct embedded handles. (#54)
+
+- Added ordinary radiated-edge identifier reading, editing and writing with complete inherited references, signed words and shared declared-role pointers. (#54)
+
+- Added ordinary reference-dimension reading, editing and writing with complete one- and two-entity records, sketch handles and direct dimension-plane tags. (#54)
+
+- Added ordinary structural-member reading, field editing and writing with complete contour, orientation, segment, index and profile-reference records and preserved full-width point metadata. (#54)
+
+- Added ordinary weldment reading, field editing and writing with direct custom-property lists, tagged property records and preserved duplicate records and expressions. (#54)
 
 - Added ordinary blend and blend-cut reading, field editing and writing with independent count retention, complete numeric columns and distinct direction/dimension conditions. (#54)
 

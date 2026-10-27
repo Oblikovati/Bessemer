@@ -1,0 +1,106 @@
+{
+  "evidence_source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\endpoint-tangency-native-evidence.json",
+  "evidence_source_sha256": "efe51a15d566879c4bf9d1172b8a2a5e6fb7bd8d49ce318b028411c46bfc1792",
+  "installed_module_sha256_verified": true,
+  "module_sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "bindings": [
+    {
+      "rtti": {
+        "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+        "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+        "tables": [
+          {
+            "class_name": "moSplineCurvatureControl_c",
+            "object_offset": 0,
+            "locator": "0x4d367670",
+            "vftable": "0x4d1cc250",
+            "slots": [
+              "0x4c5b1640",
+              "0x4c5b15a0",
+              "0x4cba273f",
+              "0x4b29dae0",
+              "0x4b29dae0",
+              "0x4c5b1650",
+              "0x4cba274b",
+              "0x4cba2751"
+            ]
+          }
+        ]
+      },
+      "locator_bytes": "01000000000000000000000068e19d029876200270762002",
+      "bases": [
+        ".?AVmoSplineCurvatureControl_c@@",
+        ".?AVmoSplineDerivativeControl_c@@",
+        ".?AVmoSketchToolsUserObject_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ],
+      "slot_bytes": "50165b4c00000000"
+    },
+    {
+      "rtti": {
+        "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+        "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+        "tables": [
+          {
+            "class_name": "moSplineControlPolygonControl_c",
+            "object_offset": 0,
+            "locator": "0x4d3675e0",
+            "vftable": "0x4d1cc130",
+            "slots": [
+              "0x4c5b1170",
+              "0x4c5b1100",
+              "0x4cba273f",
+              "0x4b29dae0",
+              "0x4b29dae0",
+              "0x4c5b1180",
+              "0x4cba274b",
+              "0x4cba2751"
+            ]
+          }
+        ]
+      },
+      "locator_bytes": "01000000000000000000000030e19d0208762002e0752002",
+      "bases": [
+        ".?AVmoSplineControlPolygonControl_c@@",
+        ".?AVmoSketchToolsUserObject_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ],
+      "slot_bytes": "80115b4c00000000"
+    },
+    {
+      "rtti": {
+        "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+        "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+        "tables": [
+          {
+            "class_name": "moSplineTangencyControl_c",
+            "object_offset": 0,
+            "locator": "0x4d367db0",
+            "vftable": "0x4d1cf2a0",
+            "slots": [
+              "0x4c5c2680",
+              "0x4c5c2630",
+              "0x4cba273f",
+              "0x4b29dae0",
+              "0x4b29dae0",
+              "0x4c5c2690",
+              "0x4cba274b",
+              "0x4cba2751"
+            ]
+          }
+        ]
+      },
+      "locator_bytes": "010000000000000000000000d0ae9a02d87d2002b07d2002",
+      "bases": [
+        ".?AVmoSplineTangencyControl_c@@",
+        ".?AVmoSplineDerivativeControl_c@@",
+        ".?AVmoSketchToolsUserObject_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ],
+      "slot_bytes": "90265c4c00000000"
+    }
+  ]
+}

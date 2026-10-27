@@ -171,6 +171,18 @@ typed transforms, shared property records and direct byte arrays.
 numeric columns and conditional direction and dimension references.
 [Reference-plane point roles](docs/features/plane-point-roles/README.md) accept
 the documented point-reference family while retaining unrelated-class rejection.
+[Weldment features](docs/features/weldments/README.md) preserve direct custom-property
+lists, duplicate records and original stored expressions.
+[Structural members](docs/features/structural-members/README.md) preserve full-width
+point metadata, signed contour modes and complete shared contour/index graphs.
+[Reference dimensions](docs/features/reference-dimensions/README.md) preserve entity
+kind words, optional vectors, complete sketch handles and direct dimension planes.
+[Radiated-edge identifiers](docs/features/radiated-edge-identifiers/README.md)
+preserve inherited references and shared entity-representation identities.
+[End-specification point roles](docs/features/end-spec-point-roles/README.md)
+accept the verified point family in extrusion and revolution ends.
+[Spline controls](docs/features/spline-controls/README.md) retain direct handle
+records and complete sketch user-object identities.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 

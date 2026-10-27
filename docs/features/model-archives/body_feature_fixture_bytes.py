@@ -1,4 +1,5 @@
 """Independent ordinary inherited body features, maps, chooser cycles and derived suffixes."""
+from collections.abc import Callable
 from sketch_tail_fixture_bytes import WireMap, P, VECTOR
 from freeze_environment import feature
 from owned_name_edit import short_wide_name as text
@@ -70,11 +71,11 @@ def from_spec(version: int, kind: int) -> bytes:
     if kind in [3,4,5]:return out+(P('<d',-0.0) if kind==4 else bytes(2))+P('<i',-1)
     return out
 
-def end_spec(w: WireMap, version: int, rich: bool, first: int=3, second: int=7) -> bytes:
+def end_spec(w: WireMap, version: int, rich: bool, first: int=3, second: int=7, point_reference: Callable[[], bytes] | None = None) -> bytes:
     out=w.new('moDirectionSpec_c',lambda:direction(w,rich)) if rich else bytes(2)
     out+=P('<3iH2i',-2**31,2**31-1,-1,0,first,second)+bytes(4)
     for kind in [first,second]:
-        if kind==3:out+=w.new('moPointRef_w',lambda:body(geometric('moPointRef_w',version,False,0))) if rich else bytes(2)
+        if kind==3:out+=point_reference() if point_reference is not None else (w.new('moPointRef_w',lambda:body(geometric('moPointRef_w',version,False,0))) if rich else bytes(2))
         out+=P('<B',255 if rich else 0)+(items(rich) if rich else b'')
     out+=P('<d6i',-0.0,-2**31,2**31-1,-1,0,7,-7)+bytes(4)+P('<4i',-2**31,2**31-1,-1,0)+items(rich)*2+P('<3i',-1,0,7)
     for kind in [first,second]:
@@ -82,21 +83,21 @@ def end_spec(w: WireMap, version: int, rich: bool, first: int=3, second: int=7) 
     out+=w.new('moFromEndSpec_c',lambda:from_spec(version,4 if rich else 0)) if rich else bytes(2)
     return out+P('<4i',-2**31,2**31-1,-1,0)+(P('<i',-7) if version>=0x3b01 else b'')
 
-def revolution_end(w: WireMap, version: int, rich: bool) -> bytes:
+def revolution_end(w: WireMap, version: int, rich: bool, point_reference: Callable[[], bytes] | None = None) -> bytes:
     out=P('<5i',-2**31,2**31-1,-1,0,7)
     out+=w.new('moRefWrapper_c',lambda:wrapper(version,False)) if rich else bytes(2)
     out+=P('<H',w.slot) if rich else bytes(2)
-    out+=w.new('moPointRef_w',lambda:body(geometric('moPointRef_w',version,False,0))) if rich else bytes(2)
-    out+=P('<H',w.slot) if rich else bytes(2)
+    out+=point_reference() if point_reference is not None else (w.new('moPointRef_w',lambda:body(geometric('moPointRef_w',version,False,0))) if rich else bytes(2))
+    out+=point_reference() if point_reference is not None else (P('<H',w.slot) if rich else bytes(2))
     return out+P('<2d2i',-0.0,1.25,-2**31,2**31-1)+bytes(8)
 
-def suffix(w: WireMap, version: int, name: str, rich: bool) -> bytes:
+def suffix(w: WireMap, version: int, name: str, rich: bool, end_reference: Callable[[], bytes] | None = None) -> bytes:
     if name in CLASSES[:4]:
-        return (w.new('moEndSpec_c',lambda:end_spec(w,version,rich)) if rich else bytes(2))+P('<di',-0.0,-2**31)
+        return (end_reference() if end_reference is not None else (w.new('moEndSpec_c',lambda:end_spec(w,version,rich)) if rich else bytes(2)))+P('<di',-0.0,-2**31)
     if name=='moRib_c':return P('<iI',-2**31,0xffffffff)+bytes(10)
     out=bytes(2)+P('<BH',255,0)+P('<i',-1)+(w.array('suObList') if rich else bytes(2))
     out+=P('<2iH',-2**31,2**31-1,0)
-    out+=w.new('moRevEndSpec_c',lambda:revolution_end(w,version,rich)) if rich else bytes(2)
+    out+=end_reference() if end_reference is not None else (w.new('moRevEndSpec_c',lambda:revolution_end(w,version,rich)) if rich else bytes(2))
     return out+(P('<B',254) if version>=0x3f05 else b'')
 
 def tagged(version: int, name: str, rich: bool, final_word: int = -2**31) -> bytes:

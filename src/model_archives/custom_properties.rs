@@ -10,7 +10,8 @@ pub(super) fn list(reader: &mut ModelDecoder<'_>, label: &str) -> Result<()> {
     Ok(())
 }
 
-fn record(reader: &mut ModelDecoder<'_>) -> Result<()> {
+pub(super) fn record(reader: &mut ModelDecoder<'_>) -> Result<()> {
+    reader.require_ordinary_part()?;
     for label in ["string_08", "string_10", "string_18"] {
         reader.text(label)?;
     }

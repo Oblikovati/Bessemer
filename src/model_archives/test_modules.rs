@@ -123,6 +123,9 @@ mod dome_record_tests;
 #[path = "../../tests/model_archives/embedded_title.rs"]
 mod embedded_title_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/end_spec_point_roles.rs"]
+mod end_spec_point_role_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/entity_representations.rs"]
 mod entity_representation_tests;
 #[cfg(test)]
@@ -243,8 +246,14 @@ mod public_role_tests;
 #[path = "../../tests/model_archives/radiate_representation.rs"]
 mod radiate_representation_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/radiated_edge_identifiers.rs"]
+mod radiated_edge_identifier_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/reference_axes.rs"]
 mod reference_axis_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/reference_dimensions.rs"]
+mod reference_dimension_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/reference_points.rs"]
 mod reference_point_tests;
@@ -303,6 +312,12 @@ mod sketch_text_tests;
 #[path = "../../tests/model_archives/spatial_objects.rs"]
 mod spatial_object_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/spline_controls.rs"]
+mod spline_control_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/structural_members.rs"]
+mod structural_member_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/sweeps.rs"]
 mod sweep_record_tests;
 #[cfg(test)]
@@ -314,3 +329,6 @@ mod view_tests;
 #[cfg(test)]
 #[path = "../../tests/model_archives/weld_helpers.rs"]
 mod weld_helper_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/weldments.rs"]
+mod weldment_record_tests;

@@ -7,10 +7,21 @@ pub(super) fn read(
     map: &mut ObjectReader,
     name: &str,
 ) -> Option<Result<()>> {
+    if let Some(result) = super::reference_dimensions::read(reader, map, name) {
+        return Some(result);
+    }
+    if let Some(result) = super::structural_member_objects::read(reader, map, name) {
+        return Some(result);
+    }
     if let Some(result) = super::fold_transforms::read_object(reader, map, name) {
         return Some(result);
     }
     let result = match name {
+        "moSplineTangencyControl_c" => super::spline_controls::tangency(reader, map),
+        "moSplineControlPolygonControl_c" => super::spline_controls::polygon(reader, map),
+        "moSplineCurvatureControl_c" => super::spline_controls::curvature(reader, map),
+        "moWeldmentFeature_c" => super::weldment_records::read(reader, map),
+        "moCustomProperty" => super::custom_properties::record(reader),
         "moBlend_c" | "moBlendCut_c" => super::blend_records::read(reader, map),
         "moFlatPattern_c" => super::flat_patterns::read(reader, map),
         "moFlatPatBoundBox_c" => super::flat_pattern_boxes::read(reader),

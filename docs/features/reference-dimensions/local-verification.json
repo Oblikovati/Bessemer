@@ -1,0 +1,39 @@
+{
+  "reference_private_tests": 4,
+  "reference_public_tests": 3,
+  "python_regeneration_tests": 2,
+  "independent_cases": 250,
+  "primitive_observations": 68093,
+  "owned_streams": 5,
+  "native_cases": 906,
+  "native_accepted": 705,
+  "native_rejected": 201,
+  "previous_complete_preserved": 696,
+  "new_complete": 9,
+  "fresh_processes": 2,
+  "independent_accepted_feature_bytes": 41536707,
+  "independent_source_snapshot_identity": "77e3cfe407c21a407618283f7e6e3ba75505ce8bec90a075cb08ab7222b3bcad",
+  "independent_source_python_files": 1131,
+  "native_artifact_sha256": "073c033bb6fb360476552187074ede47727bfac2bd43dab8ca53bae3f731101c",
+  "corpus_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "platform": "Windows x64; Rust 1.99.0",
+  "exclusions": [
+    "Native geometric validity and native application acceptance",
+    "Old/DB archives and drawing-owner tails",
+    "Complete 906-case native corpus and all documented file-schema parity"
+  ],
+  "independent_report_sha256": "cdccebb8c4a09ffdf9634440d47b3fe7afe503cbdc0cfaf5fe387ea8a5f5daca",
+  "base_revision": "213bb07f53e8dd9bfe4d12f9601a0cbf7b49e784",
+  "gate": {
+    "command": "cargo xtask pr",
+    "staged": true,
+    "exit_code": 0,
+    "library_passed": 544,
+    "library_ignored": 3,
+    "xtask_tests_passed": 4,
+    "all_integration_suites_passed": true,
+    "doctests_passed": 265,
+    "log_sha256": "6eeea649848186ddf321e85a2ab5f737e02b8a3ba44b373a48934d5619bfd288"
+  }
+}

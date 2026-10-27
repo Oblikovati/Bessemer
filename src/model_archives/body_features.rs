@@ -218,6 +218,8 @@ pub(super) const CLASSES: &[&str] = &[
     // #54 / C-186: both shared blend serializers call the full body-feature base.
     "moBlend_c",
     "moBlendCut_c",
+    // #54 / C-199: the structural-member serializer starts with the full body-feature base.
+    "moWeldMemberFeat_c",
     // #60: both complete readers use this inherited atom-feature owner role.
     "moPlanarSurface_c",
     "Chamfer_c",

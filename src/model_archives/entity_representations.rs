@@ -29,6 +29,8 @@ const LAYOUTS: &[(&str, RepresentationLayout)] = &[
     ("moStartEdgeIdRep_c", Local(&["38"])),
     ("moEndFaceSurfIdRep_c", Local(&["38", "3c"])),
     ("moRadiateSurfIdRep_c", Local(&["38", "3c"])),
+    // C-243 / 11.215 proves the common helper and two-word suffix, including edge ancestry.
+    ("moRadiateEdgeIdRep_c", Local(&["38", "3c"])),
     ("moNetSideSurfIdRep_c", Local(&["38", "3c"])),
     ("moSweepSideSurfIdRep_c", Local(&["38", "3c"])),
     ("moWzdHoleSurfIdRep_c", Local(&["38", "3c"])),

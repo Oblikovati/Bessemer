@@ -9,6 +9,16 @@ const CREATION_ORDER: &[&str] = &[
     "08", "0c", "10", "14", "18", "1c", "20", "24", "28", "2c", "30", "34", "38", "40", "3c",
 ];
 
+// #46: the documented indicator extends the declared sketch-user-object role.
+// 11.164 / C-192 and 11.209 / C-237 additionally prove the controls' ancestry.
+const USER_OBJECT_CLASSES: &[&str] = &[
+    "moSketchToolsUserObject_c",
+    "moExtensionLineIndicator_c",
+    "moSplineTangencyControl_c",
+    "moSplineControlPolygonControl_c",
+    "moSplineCurvatureControl_c",
+];
+
 pub(super) fn state(reader: &mut ModelDecoder<'_>) -> Result<()> {
     reader.require_ordinary_part()?;
     reader.u16("word_12c")?;
@@ -40,8 +50,7 @@ pub(super) fn visual(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> R
         reader.object(
             &format!("user_objects[{index}]"),
             map,
-            // #46: the documented indicator extends the declared sketch-user-object role.
-            ModelObjectRole::Declared(&["moSketchToolsUserObject_c", "moExtensionLineIndicator_c"]),
+            ModelObjectRole::Declared(USER_OBJECT_CLASSES),
         )?;
     }
     Ok(())

@@ -1,0 +1,89 @@
+{
+  "cases": 906,
+  "accepted": 708,
+  "rejected": 198,
+  "newly_accepted": 3,
+  "previous_complete_preserved": true,
+  "fresh_process_outcomes_and_causes_identical": true,
+  "artifact_stable_during_replay": true,
+  "artifact_sha256": "2b536ffee1450f93280d51188af27193d36c87cec772a315bc22fc6ffe323ee4",
+  "changes": [
+    {
+      "index": 161,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moRadiateEdgeIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moFillRefSurface_c\" schema 1; expected an implemented complete model object body"
+      }
+    },
+    {
+      "index": 342,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moRadiateEdgeIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"user_objects[0]\" has runtime class \"moSplineTangencyControl_c\"; expected one of [\"moSketchToolsUserObject_c\", \"moExtensionLineIndicator_c\"]"
+      }
+    },
+    {
+      "index": 346,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moRadiateEdgeIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moCopyEdgeIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+      }
+    },
+    {
+      "index": 348,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moRadiateEdgeIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moCopyEdgeIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+      }
+    },
+    {
+      "index": 363,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"point_68\" has runtime class \"moEndPointRef_w\"; expected one of [\"moPointRef_w\"]"
+      },
+      "after": {
+        "status": "accepted",
+        "cause": ""
+      }
+    },
+    {
+      "index": 368,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"point_68\" has runtime class \"moEndPointRef_w\"; expected one of [\"moPointRef_w\"]"
+      },
+      "after": {
+        "status": "accepted",
+        "cause": ""
+      }
+    },
+    {
+      "index": 521,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"point_68\" has runtime class \"moEndPointRef_w\"; expected one of [\"moPointRef_w\"]"
+      },
+      "after": {
+        "status": "accepted",
+        "cause": ""
+      }
+    }
+  ]
+}

@@ -17,11 +17,16 @@ def short_unicode(value: str) -> bytes:
     return b'\xff\xfe\xff'+bytes([units])+encoded
 
 
+def property_record(value: str, expression: str = '材料') -> bytes:
+    """Construct one complete direct property without an outer tag; e.g. property_record('独立 Ω')."""
+    first = b''.join(short_unicode(text) for text in ['材料', '', expression])
+    first += struct.pack('<iI', -2147483648, 0xffffffff)+short_unicode(value)
+    return first+struct.pack('<3i', -1, 0, 2147483647)
+
+
 def property_bytes(value: str) -> bytes:
     """Preserve duplicates and raw extremes; e.g. property_bytes('独立 Ω')."""
-    first = b''.join(short_unicode(text) for text in ['材料', '', '材料'])
-    first += struct.pack('<iI', -2147483648, 0xffffffff)+short_unicode(value)
-    first += struct.pack('<3i', -1, 0, 2147483647)
+    first = property_record(value)
     second = b''.join(short_unicode(text) for text in ['材料', 'same', ''])
     second += struct.pack('<iI', 2147483647, 0x80000000)+short_unicode('unchanged')
     return struct.pack('<i', 2)+first+second+struct.pack('<3i', 7, -8, 9)

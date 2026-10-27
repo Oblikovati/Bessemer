@@ -142,9 +142,12 @@ def state() -> bytes:
     return P('<2Hi15i4H', 65535, 65534, -2**31, *range(-7, 8), 65533, 65532, 65531, 65530)
 
 
-def visual(w: WireMap, rich: bool, indicator: int = 0) -> bytes:
+def visual(w: WireMap, rich: bool, indicator: int = 0, user_objects: Callable[[], bytes] | None = None) -> bytes:
     out = short_wide_name('Ω line style')+P('<hf2ii', -123, -0.0, -2**31, 2**31-1, -1)
-    out += VECTOR+P('<Iii', 0xffffffff, -2**31, 2 if indicator else 0)
+    out += VECTOR+P('<Ii', 0xffffffff, -2**31)
+    if user_objects is not None:
+        return out+user_objects()
+    out += P('<i', 2 if indicator else 0)
     if indicator:
         out += w.new('moExtensionLineIndicator_c', lambda: P('<HH', indicator, 65535))+P('<H', w.slot)
     return out
@@ -189,12 +192,12 @@ def slots(w: WireMap, rich: bool) -> bytes:
     return P('<ii', -1, 2)+P('<iH', -7, 0)*2 if rich else P('<ii', -1, 0)
 
 
-def after_patterns(w: WireMap, version: int, rich: bool, final_word: int = -2**31, indicator: int = 0) -> bytes:
+def after_patterns(w: WireMap, version: int, rich: bool, final_word: int = -2**31, indicator: int = 0, user_objects: Callable[[], bytes] | None = None) -> bytes:
     out = w.array('suObList') if rich else bytes(2)
     out += constraints(w, version, rich)+offsets(w, version, rich)+styled_intersections(w, version, rich)
-    out += state()+visual(w, rich, indicator)+local_relations(w, rich)+coincidences(w, rich)+silhouettes(version, rich)
+    out += state()+visual(w, rich, indicator, user_objects)+local_relations(w, rich)+coincidences(w, rich)+silhouettes(version, rich)
     return out+blocks(w, rich)+loops(w, rich)+slots(w, rich)+P('<i', final_word)
 
 
-def ordinary(w: WireMap, version: int, rich: bool, final_word: int = -2**31, indicator: int = 0) -> bytes:
-    return bytes(52+24)+after_patterns(w, version, rich, final_word, indicator)
+def ordinary(w: WireMap, version: int, rich: bool, final_word: int = -2**31, indicator: int = 0, user_objects: Callable[[], bytes] | None = None) -> bytes:
+    return bytes(52+24)+after_patterns(w, version, rich, final_word, indicator, user_objects)
