@@ -336,6 +336,9 @@ mod sketch_tail_tests;
 #[path = "../../tests/model_archives/sketch_text.rs"]
 mod sketch_text_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/solid_references.rs"]
+mod solid_reference_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/spatial_objects.rs"]
 mod spatial_object_tests;
 #[cfg(test)]

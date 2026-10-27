@@ -203,6 +203,8 @@ retain shared unit-component targets, wrapper aliases and signed ID/unsigned tim
 folder layers, direct properties, raw flags and shared tagged references.
 [Weld corners](docs/features/weld-corners/README.md) retain independent arrays,
 complete trimming data, raw scalars and the versioned late word.
+[Solid references](docs/features/solid-references/README.md) retain wrapper
+identity, signed body presence, typed kernel bodies and direct attributes.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 
