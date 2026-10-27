@@ -1,0 +1,104 @@
+{
+  "cases": 906,
+  "previous_complete": 751,
+  "complete": 757,
+  "explicit_stops": 149,
+  "new_complete": [
+    291,
+    534,
+    537,
+    543,
+    683,
+    843
+  ],
+  "changed": [
+    {
+      "index": 291,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moLPatternItemId_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    },
+    {
+      "index": 356,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moSMEnvTableFeat_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moEdgeFlange_c\" schema 1; expected an implemented complete model object body"
+      ]
+    },
+    {
+      "index": 505,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"edgeParamsObject_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moDimPattern_c\" schema 1; expected an implemented complete model object body"
+      ]
+    },
+    {
+      "index": 534,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"featRadiusObject_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    },
+    {
+      "index": 537,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moLPatternItemId_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    },
+    {
+      "index": 543,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moLockFeature_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    },
+    {
+      "index": 683,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"featRadiusObject_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    },
+    {
+      "index": 843,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moLPatternItemId_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    }
+  ]
+}

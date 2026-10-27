@@ -12,10 +12,18 @@ fn records() -> Vec<TrimEdgeRecord> {
 }
 
 pub(super) fn records_from(packet: &'static [u8], magic: &[u8]) -> Vec<TrimEdgeRecord> {
+    records_with_count(packet, magic, 60)
+}
+
+pub(super) fn records_with_count(
+    packet: &'static [u8],
+    magic: &[u8],
+    count: u32,
+) -> Vec<TrimEdgeRecord> {
     let mut cursor = ArchiveCursor::new(packet);
     assert_eq!(cursor.take(4).unwrap(), magic);
-    assert_eq!(cursor.u32().unwrap(), 60);
-    let slots: Vec<_> = (0..60).map(|_| cursor.u32().unwrap() as usize).collect();
+    assert_eq!(cursor.u32().unwrap(), count);
+    let slots: Vec<_> = (0..count).map(|_| cursor.u32().unwrap() as usize).collect();
     let result = slots
         .into_iter()
         .map(|slots| {

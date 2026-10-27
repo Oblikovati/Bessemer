@@ -217,6 +217,8 @@ direct chooser ownership, allocated-data wire members and shared references.
 complete source representations and direct entity-ID members for both sides.
 [Trim-wire and pattern-body edge identifiers](docs/features/frontier-edge-identifiers/README.md)
 retain native-bound layouts, shared references and direct entity-ID members.
+[Lock/environment features and pattern/fillet helpers](docs/features/frontier-feature-helpers/README.md)
+retain inherited bodies, raw item bits and unqualified radius-object pointers.
 [Offset surfaces](docs/features/offset-surfaces/README.md) retain complete inline
 surface payloads, required data, signed array presence and empty keepers.
 [Reference curves](docs/features/reference-curves/README.md) retain complete

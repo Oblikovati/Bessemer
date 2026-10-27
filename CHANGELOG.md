@@ -10,6 +10,8 @@
 
 ### Added
 
+- Added ordinary lock/environment feature, pattern-item and edge/radius helper reading, editing and writing with exact scalar widths and preserved arbitrary object references. (#54)
+
 - Added ordinary trim-wire and pattern-body edge identifier reading, editing and writing with shared complete references, signed suffixes and direct entity-ID members. (#54)
 
 - Added ordinary component-curve and blend-reference surface reading, editing and writing with exact native spellings, shared blend data and five-byte surface suffixes. (#54)

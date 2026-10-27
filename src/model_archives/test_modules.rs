@@ -183,6 +183,9 @@ mod folder_parameter_tests;
 #[path = "../../tests/resolved_features/frontier_edge_identifiers.rs"]
 mod frontier_edge_identifier_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/frontier_feature_helpers.rs"]
+mod frontier_feature_helper_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/geometric_references.rs"]
 mod geometric_reference_tests;
 #[cfg(test)]

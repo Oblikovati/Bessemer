@@ -44,6 +44,7 @@ mod field_mismatch;
 mod flat_pattern_boxes;
 mod flat_patterns;
 mod fold_transforms;
+mod frontier_feature_helpers;
 mod helix_records;
 mod manager_tail;
 mod mirror_solids;
