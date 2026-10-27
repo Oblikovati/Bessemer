@@ -10,6 +10,7 @@ mod base_flange_directions;
 mod base_flanges;
 mod blend_columns;
 mod blend_records;
+mod blend_reference_surfaces;
 mod body_chooser_records;
 mod browser_folders;
 mod bucket_adapter;

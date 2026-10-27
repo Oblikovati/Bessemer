@@ -24,6 +24,9 @@ mod base_flange_tests;
 #[path = "../../tests/resolved_features/blends.rs"]
 mod blend_record_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/blend_reference_surfaces.rs"]
+mod blend_reference_surface_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/body_chooser_records.rs"]
 mod body_chooser_record_tests;
 #[cfg(test)]

@@ -10,6 +10,8 @@
 
 ### Added
 
+- Added ordinary component-curve and blend-reference surface reading, editing and writing with exact native spellings, shared blend data and five-byte surface suffixes. (#54)
+
 - Added ordinary reference-curve reading, editing and writing with cached-array branch selection, versioned kernel-body lists and retained raw DWORDs. (#54)
 
 - Added ordinary offset-surface reading, editing and writing with required data, retained signed array presence, shared references and binary-empty keepers. (#54)

@@ -14,6 +14,8 @@ const GEOMETRY_CLASSES: &[&str] = &[
     "moCoordSys_c",
     // #54 / C-251 proves this concrete surface's moRefGeom_c ancestry.
     "moOffsetRefSurface_c",
+    // #54 / C-382 proves this concrete blend surface's moRefGeom_c ancestry.
+    "moBlendRefSurface_c",
 ];
 
 pub(super) fn reference_plane(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {

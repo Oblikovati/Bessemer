@@ -219,6 +219,8 @@ complete source representations and direct entity-ID members for both sides.
 surface payloads, required data, signed array presence and empty keepers.
 [Reference curves](docs/features/reference-curves/README.md) retain complete
 body-feature layouts, cached-array branches and versioned kernel-body lists.
+[Component curves and blend-reference surfaces](docs/features/blend-reference-surfaces/README.md)
+retain exact native spellings, shared direct blend data and raw surface bytes.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 
