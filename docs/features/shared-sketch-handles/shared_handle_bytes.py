@@ -21,10 +21,16 @@ def handle_body(name: str, index: int, escaped: bool, edited: bool) -> bytes:
 
 def shared_handle_object(kind: int, version: int, index_case: int, style: int, edited: bool = False, first_slot: int = 0) -> tuple[bytes, int]:
     """Use fresh/cached typed owners without extra handle fields or allocations; e.g. shared_handle_object(1, 19000, 7, 2)."""
+    name = CLASSES[kind]
+    return named_handle_object(name, version, index_case, style, edited, first_slot)
+
+
+def named_handle_object(name: str, version: int, index_case: int, style: int, edited: bool = False, first_slot: int = 0) -> tuple[bytes, int]:
+    """Share the complete owned handle grammar across native-bound aliases; e.g. named_handle_object('sgConicHandle', 19000, 7, 2)."""
     mapping = WireMap();mapping.slot = first_slot;ids: dict[str, int] = {}
     index, escaped = INDICES[index_case]
     def pointer() -> bytes:
-        return shared_object(mapping, ids, 'entity-handle', CLASSES[kind], lambda: handle_body(CLASSES[kind], index, escaped, edited))
+        return shared_object(mapping, ids, 'entity-handle', name, lambda: handle_body(name, index, escaped, edited))
     def component() -> bytes:
         return component_base(version, False)+struct.pack('<iI', -2147483648, 0xffffffff)+pointer()+struct.pack('<I', 0x89abcdef)
     def array() -> bytes:
