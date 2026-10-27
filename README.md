@@ -159,6 +159,8 @@ shared text items, raw kinds, ordered extra members and four-byte time values.
 axis order, equality-based selectors, direct arrays and exact vector bits.
 Their [shared component geometry roles](docs/features/component-coordinate-systems/geometry-roles.md)
 also accept documented fresh and cached coordinate-system targets.
+[Component coordinate-system references](docs/features/component-coordinate-systems/README.md)
+retain their inherited feature fields, geometry identities and fixed transform words.
 
 
 This library is named after Sir Henry Bessemer (1813–1898) an English engineer, inventor, and entrepreneur 

@@ -78,6 +78,7 @@ mod body_features;
 mod boundary_references;
 mod center_helpers;
 mod circular_patterns;
+mod component_coordinates;
 mod component_references;
 mod construction;
 mod contour_objects;

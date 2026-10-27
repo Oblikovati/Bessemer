@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added ordinary component coordinate-system reading, field editing and writing with shared geometry, preserved fixed-transform words and explicit special-kind errors. (#54)
+
 - Added ordinary coordinate-system reading, field editing and writing with equality-selected axes, direct axis arrays, shared identities and preserved raw selector/vector values. (#54)
 
 - Added ordinary feature-comment reading, field editing and writing with direct lists, shared text items, versioned extra members and preserved four-byte time values. (#54)

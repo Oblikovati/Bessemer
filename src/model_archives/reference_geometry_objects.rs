@@ -8,6 +8,7 @@ pub(super) fn read(
     name: &str,
 ) -> Option<Result<()>> {
     let result = match name {
+        "moCompCoordSys_c" => super::component_coordinates::read(reader, map),
         "moCompRefAxis_c" | "moCompRefPoint_c" => {
             super::component_references::reference_geometry(reader, map)
         }
