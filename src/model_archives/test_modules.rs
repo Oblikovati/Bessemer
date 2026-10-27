@@ -180,6 +180,9 @@ mod folder_configuration_record_tests;
 #[path = "../../tests/model_archives/folders_parameters.rs"]
 mod folder_parameter_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/frontier_edge_identifiers.rs"]
+mod frontier_edge_identifier_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/geometric_references.rs"]
 mod geometric_reference_tests;
 #[cfg(test)]

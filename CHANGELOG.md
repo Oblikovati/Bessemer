@@ -10,6 +10,8 @@
 
 ### Added
 
+- Added ordinary trim-wire and pattern-body edge identifier reading, editing and writing with shared complete references, signed suffixes and direct entity-ID members. (#54)
+
 - Added ordinary component-curve and blend-reference surface reading, editing and writing with exact native spellings, shared blend data and five-byte surface suffixes. (#54)
 
 - Added ordinary reference-curve reading, editing and writing with cached-array branch selection, versioned kernel-body lists and retained raw DWORDs. (#54)

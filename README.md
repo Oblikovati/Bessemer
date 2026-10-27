@@ -215,6 +215,8 @@ versioned directions and complete constant/component surface-reference layers.
 direct chooser ownership, allocated-data wire members and shared references.
 [Trim-edge identifiers](docs/features/trim-edge-identifiers/README.md) retain
 complete source representations and direct entity-ID members for both sides.
+[Trim-wire and pattern-body edge identifiers](docs/features/frontier-edge-identifiers/README.md)
+retain native-bound layouts, shared references and direct entity-ID members.
 [Offset surfaces](docs/features/offset-surfaces/README.md) retain complete inline
 surface payloads, required data, signed array presence and empty keepers.
 [Reference curves](docs/features/reference-curves/README.md) retain complete

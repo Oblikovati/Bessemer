@@ -2,13 +2,18 @@ use super::lightweight_section_tests::next_case;
 use super::solid_reference_tests::decode_graph;
 use crate::archive_codec::ArchiveCursor;
 
-type TrimEdgeRecord = (u8, u32, &'static [u8], &'static str, usize);
+pub(super) type TrimEdgeRecord = (u8, u32, &'static [u8], &'static str, usize);
 
 fn records() -> Vec<TrimEdgeRecord> {
-    let mut cursor = ArchiveCursor::new(include_bytes!(
-        "../fixtures/trim-edge-identifiers/cases.bin"
-    ));
-    assert_eq!(cursor.take(4).unwrap(), b"TEI1");
+    records_from(
+        include_bytes!("../fixtures/trim-edge-identifiers/cases.bin"),
+        b"TEI1",
+    )
+}
+
+pub(super) fn records_from(packet: &'static [u8], magic: &[u8]) -> Vec<TrimEdgeRecord> {
+    let mut cursor = ArchiveCursor::new(packet);
+    assert_eq!(cursor.take(4).unwrap(), magic);
     assert_eq!(cursor.u32().unwrap(), 60);
     let slots: Vec<_> = (0..60).map(|_| cursor.u32().unwrap() as usize).collect();
     let result = slots
@@ -24,7 +29,11 @@ fn records() -> Vec<TrimEdgeRecord> {
 
 #[test]
 fn complete_trim_edge_identifiers_match_independent_fields_bytes_and_slots() {
-    for (_, version, bytes, oracle, slots) in records() {
+    assert_complete_records(records());
+}
+
+pub(super) fn assert_complete_records(records: Vec<TrimEdgeRecord>) {
+    for (_, version, bytes, oracle, slots) in records {
         let (fields, actual_slots) = decode_graph(version, bytes, false).unwrap();
         assert_eq!(actual_slots, slots);
         super::manager_oracle_tests::assert_reference_fields(
@@ -39,7 +48,11 @@ fn complete_trim_edge_identifiers_match_independent_fields_bytes_and_slots() {
 
 #[test]
 fn trim_edge_identifiers_reject_every_prefix_extra_byte_and_old_context() {
-    for (kind, version, bytes, _, _) in records() {
+    assert_rejected_boundaries(records());
+}
+
+pub(super) fn assert_rejected_boundaries(records: Vec<TrimEdgeRecord>) {
+    for (kind, version, bytes, _, _) in records {
         for end in 0..bytes.len() {
             assert!(
                 decode_graph(version, &bytes[..end], false).is_err(),
