@@ -22,15 +22,18 @@ from trim_edge_identity import verify_identity
 
 
 @dataclass(frozen=True)
-class IdentifierFixtureFamily:
+class ObjectFixtureFamily:
     build: Callable[[int, int, int, bool, int], tuple[bytes, int]] = trim_edge_object
     verify: Callable[[Path, bytes, int, int, int], None] = verify_identity
     configure: Callable[[ReferenceObjectCursor], None] | None = None
     magic: bytes = b'TEI1'
+    kinds: int = 2
+    versions: tuple[int, ...] = VERSIONS
+    edited_kinds: tuple[int, ...] = (0, 1)
 
 
 def owned(reference: Path, destination: Path, kind: int, style: int, edited: bool, label: str,
-          family: IdentifierFixtureFamily = IdentifierFixtureFamily()) -> dict[str, object]:
+          family: ObjectFixtureFamily = ObjectFixtureFamily()) -> dict[str, object]:
     """Use the actual complete inherited context before building aliases; e.g. owned(source, output, 0, 2, False, 'owned-draft')."""
     container, prefix, features, archive = (source_module(name, reference) for name in ('swcontainer', 'modelprefix', 'resolvedfeatures', 'swarchive'))
     original = container.Document((WORKSPACE/'tests/fixtures/blank-part.SLDPRT').read_bytes(), table={})
@@ -48,15 +51,15 @@ def owned(reference: Path, destination: Path, kind: int, style: int, edited: boo
 
 
 def freeze(reference: Path, destination: Path,
-           family: IdentifierFixtureFamily = IdentifierFixtureFamily()) -> dict[str, object]:
+           family: ObjectFixtureFamily = ObjectFixtureFamily()) -> dict[str, object]:
     """Bind independently assembled trim-edge graphs to stable approved source; e.g. freeze(source, fixtures)."""
     before = reference_snapshot(reference);sys.path.insert(0, str(reference));destination.mkdir(parents=True, exist_ok=True)
-    cases = [bare_case(reference, kind, version, style, family) for kind in range(2)
-        for version in VERSIONS for style in range(6)]
+    cases = [bare_case(reference, kind, version, style, family) for kind in range(family.kinds)
+        for version in family.versions for style in range(6)]
     packet = family.magic+struct.pack('<I', len(cases))+b''.join(struct.pack('<I', row['slots']) for _, row in cases)+b''.join(frame for frame, _ in cases)
     (destination/'cases.bin').write_bytes(packet)
-    saved = [owned(reference, destination, kind, style, False, f'owned-{kind}-{style}', family) for kind in range(2) for style in range(6)]
-    saved += [owned(reference, destination, kind, 2, True, f'owned-{kind}-2-edited', family) for kind in (0,1)]
+    saved = [owned(reference, destination, kind, style, False, f'owned-{kind}-{style}', family) for kind in range(family.kinds) for style in range(6)]
+    saved += [owned(reference, destination, kind, 2, True, f'owned-{kind}-2-edited', family) for kind in family.edited_kinds]
     if before != reference_snapshot(reference):
         raise ValueError('reference changed; expected stable source hashes')
     return dict(cases=[row for _, row in cases], owned=saved, source_hashes=before,
@@ -64,7 +67,7 @@ def freeze(reference: Path, destination: Path,
 
 
 def bare_case(reference: Path, kind: int, version: int, style: int,
-              family: IdentifierFixtureFamily = IdentifierFixtureFamily()) -> tuple[bytes, dict[str, object]]:
+              family: ObjectFixtureFamily = ObjectFixtureFamily()) -> tuple[bytes, dict[str, object]]:
     """Check typed targets and the independent primitive partition; e.g. bare_case(source, 5, 19000, 2)."""
     raw, slots = family.build(kind, version, style, False, 0)
     family.verify(reference, raw, version, kind, style)

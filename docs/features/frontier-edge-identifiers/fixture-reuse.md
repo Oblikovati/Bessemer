@@ -2,7 +2,7 @@
 
 The C-392 identifiers need the same saved-model context, primitive observation,
 owned streams and equal-but-distinct root objects as the existing trim edges.
-`IdentifierFixtureFamily` supplies the concrete builder, identity check and local
+`ObjectFixtureFamily` supplies the concrete builder, identity check and local
 source registration while retaining the old defaults.
 
 The two existing trim-edge fixture tests passed after this extraction. All 60

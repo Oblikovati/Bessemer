@@ -6,7 +6,7 @@ import sys
 
 WORKSPACE=Path(__file__).resolve().parents[3]
 sys.path.insert(0,str(WORKSPACE/'docs/features/trim-edge-identifiers'))
-from freeze_trim_edges import IdentifierFixtureFamily, REFERENCE, freeze
+from freeze_trim_edges import ObjectFixtureFamily, REFERENCE, freeze
 from freeze_blank_part import source_module
 from object_fixture_observer import ReferenceObjectCursor, object_cursor
 from frontier_edge_bytes import frontier_edge_object
@@ -34,7 +34,7 @@ def verify_identity(reference: Path, raw: bytes, version: int, kind: int, style:
         raise ValueError('frontier-edge source_entity; expected shared representation inside distinct direct IDs')
 
 
-FAMILY=IdentifierFixtureFamily(frontier_edge_object,verify_identity,configure,b'FEI1')
+FAMILY=ObjectFixtureFamily(frontier_edge_object,verify_identity,configure,b'FEI1')
 
 
 if __name__=='__main__':
