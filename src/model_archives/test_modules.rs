@@ -243,6 +243,9 @@ mod native_corpus_tests;
 #[path = "../../tests/model_archives/native_kernel_frames.rs"]
 mod native_kernel_frame_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/net_blends.rs"]
+mod net_blend_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/node_units.rs"]
 mod node_units;
 #[cfg(test)]

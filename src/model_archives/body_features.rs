@@ -226,6 +226,9 @@ pub(super) const CLASSES: &[&str] = &[
     // #54 / C-186: both shared blend serializers call the full body-feature base.
     "moBlend_c",
     "moBlendCut_c",
+    // #54 / 11.226 / C-268 proves both net-blend body-feature owner chains.
+    "moNetBlend_c",
+    "moNetBlendCut_c",
     // #54 / C-199: the structural-member serializer starts with the full body-feature base.
     "moWeldMemberFeat_c",
     // #54 / C-283: the weld-corner constructor inherits the complete body-feature owner.

@@ -20,6 +20,10 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moNetBlend_c" | "moNetBlendCut_c" => super::net_blends::read(reader, map),
+        "moContactData_c" => super::net_blend_components::contact(reader, map),
+        "moCompEntGroup_c" => super::net_blend_components::group(reader, map),
+        "moCompMultiEdge_c" => super::net_blend_components::multi_edge(reader, map),
         // #54 / 11.350 / C-392 binds both suffix-free native feature dispatches.
         "moLockFeature_c" => super::features::read(reader, map),
         "moSMEnvTableFeat_c" => super::body_features::model_feature(reader, map),

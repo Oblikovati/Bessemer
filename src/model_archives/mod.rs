@@ -48,6 +48,8 @@ mod frontier_feature_helpers;
 mod helix_records;
 mod manager_tail;
 mod mirror_solids;
+mod net_blend_components;
+mod net_blends;
 mod offset_surfaces;
 mod planar_surface_records;
 mod polyline_records;

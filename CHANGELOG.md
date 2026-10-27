@@ -10,6 +10,8 @@
 
 ### Added
 
+- Added ordinary net-blend/cut and contact/group/multi-edge reading, editing and writing with direct curve-set bodies, independent signed point counts and retained thin-dimension options. (#54)
+
 - Added ordinary lock/environment feature, pattern-item and edge/radius helper reading, editing and writing with exact scalar widths and preserved arbitrary object references. (#54)
 
 - Added ordinary trim-wire and pattern-body edge identifier reading, editing and writing with shared complete references, signed suffixes and direct entity-ID members. (#54)
