@@ -10,6 +10,8 @@
 
 ### Added
 
+- Added ordinary surface-cut and trim-surface reading, editing and writing with direct chooser ownership, independent arrays and complete reference records. (#54)
+
 - Added ordinary thickening and surface-reference reading, editing and writing with shared dimensions, versioned directions and strict selected kernel bodies. (#54)
 
 - Added ordinary combine/delete-body reading, editing and writing with complete typed payloads, shared body references and raw versioned option bytes. (#54)

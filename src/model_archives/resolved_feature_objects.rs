@@ -20,6 +20,8 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moSurfCut_c" => super::surface_operations::cut(reader, map),
+        "moTrimRefSurface_c" => super::surface_operations::trim(reader, map),
         "moCombineBodies_c" => super::combine_bodies::combine(reader, map),
         "moDeleteBody_c" => super::combine_bodies::delete(reader, map),
         "moDeleteBodyData_c" => super::combine_bodies::delete_data(reader, map),

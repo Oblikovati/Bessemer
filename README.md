@@ -211,6 +211,8 @@ planes and arrays, shared matrix helpers and unsigned-array records.
 complete payloads, shared body targets and raw versioned options.
 [Thickening](docs/features/thickening/README.md) retains shared dimensions,
 versioned directions and complete constant/component surface-reference layers.
+[Surface cuts and trims](docs/features/surface-operations/README.md) retain
+direct chooser ownership, allocated-data wire members and shared references.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 

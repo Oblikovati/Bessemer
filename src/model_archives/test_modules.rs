@@ -354,6 +354,9 @@ mod spline_control_tests;
 #[path = "../../tests/resolved_features/structural_members.rs"]
 mod structural_member_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/surface_operations.rs"]
+mod surface_operation_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/sweeps.rs"]
 mod sweep_record_tests;
 #[cfg(test)]

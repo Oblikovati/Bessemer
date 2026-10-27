@@ -56,6 +56,7 @@ mod structural_contours;
 mod structural_member_objects;
 mod structural_member_records;
 mod structural_member_references;
+mod surface_operations;
 mod thicken_records;
 mod weld_corners;
 mod weldment_records;
