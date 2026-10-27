@@ -1,0 +1,83 @@
+{
+  "base_revision": "a9e2e9c3f03d5cd0689e1e0b64802e852c4097ca",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "gate": {
+    "command": "cargo xtask pr",
+    "staged": true,
+    "exit_code": 0,
+    "library_passed": 507,
+    "library_ignored": 3,
+    "xtask_tests_passed": 4,
+    "all_integration_suites_passed": true,
+    "doctests_passed": 265,
+    "log_sha256": "3152a18c11c5e9805950dc3037374fdfef58f3de8b4e833424e4d632975709db"
+  },
+  "focused": {
+    "private_tests": 6,
+    "public_tests": 4,
+    "python_tests": 5,
+    "object_cases": 316,
+    "original_source_reads": 89802,
+    "projected_reads": 90406,
+    "owned_streams": 7,
+    "saved_states": [
+      0,
+      1
+    ],
+    "manager_state_position": 1886,
+    "invalid_manager_state": 2,
+    "exact_payload_and_table_entry_budget": 16
+  },
+  "projection": {
+    "source_reads_unchanged": true,
+    "only_exact_observed_dynamic_payload_spans_projected": true,
+    "chunk_bytes": 8,
+    "raw_element_float_meaning_not_assumed": true,
+    "source_inventory_hashes_and_ranges_retained": true,
+    "hook_restoration_tested": true
+  },
+  "native_corpus": {
+    "cases": 906,
+    "accepted": 638,
+    "rejected": 268,
+    "previous_638_preserved": true,
+    "changed_frontiers": 22,
+    "newly_accepted": 0,
+    "fresh_process_outcomes_and_causes_identical": true,
+    "artifact_stable_during_replay": true,
+    "expected_full_parity_exit_code": 101,
+    "previous_independent_eof_report": "../coordinate-systems/accepted-reference.json",
+    "previous_independent_eof_report_sha256": "3b03125d6499bdd08da38797c05726468f870522aa030cc8ce93cfe70aa7bacf"
+  },
+  "reference_audit": {
+    "reader_hashes_stable_during_generation_and_regeneration": true,
+    "reader_python_files": 1098
+  },
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "source_file_sha256": {
+    "src/model_archives/sheet_metal.rs": "4c39b3056286570fabc7aebda67a4966db346a7978ec3322c3ac17f3687f9aa7",
+    "src/model_archives/sheet_payload.rs": "684e6dff412a43f172393e9e3f7843b2a6bde982245fb2e9e6f5e5418fabed05",
+    "src/model_archives/sheet_allowance.rs": "373d0c5b55b63e7bf2c6b01ba2124a8dfff8f38f897decaaa4cae740bd68a15f",
+    "src/model_archives/sheet_arrays.rs": "9732124cf4f0d5574c38ee9ba4a2cb6856d15919304285350cb8fc8ead1cb18d",
+    "src/model_archives/reader.rs": "d79cf09d48853b9d64d5f4ad6002f253264526068c12271c19ff9e1d3f723e58",
+    "src/model_archives/resolved_features.rs": "f19d08dca8c03d0f97386cf51f4106cda2e41c6dceeb7f3c0efae62b0cd44a18",
+    "src/model_archives/resolved_feature_objects.rs": "a043d594e36185e089c1be4e845515ba7bba3ad5da1aced34ecb6e331cb576b9",
+    "src/model_archives/body_features.rs": "9a5f33005fa1951c2691c32ec561aeb4b27741ec32bf1ad89548d4394717499e",
+    "src/model_archives/mod.rs": "8f0c4185b1923f4fc58358108c0c957ebb86282a897b0ebb16aa499e64807e77",
+    "src/model_archives/test_modules.rs": "d676d051a5d3ef68fbd652cb8793248f229b92c1cfa1a4e10e66c83a41259f5c",
+    "tests/resolved_features/sheet_metal.rs": "605037c0ac02c95c7fda29b2046c5489c0527870ef522f7f1caa99bdd75de2fb",
+    "tests/resolved_sheet_metal.rs": "615b624812f6aff37cfc40b86eb2307abc4c74abd0c988cc0129eb33d28c9fb6"
+  },
+  "exclusions": [
+    "Full documented schema parity",
+    "Fresh unsupported material-parameter and additional bend-family bodies",
+    "Growth policy and engineering semantics",
+    "Native geometry and topology validation",
+    "DB/deferred storage",
+    "Native application acceptance",
+    "Non-Windows execution awaits integration PR matrix"
+  ],
+  "dependencies_changed": false,
+  "version_changed": false
+}

@@ -33,7 +33,8 @@ pub(super) fn parse(
         ModelArchiveContext::OrdinaryPartExternalXml,
     )?
     .with_inherited_fields(source.fields())
-    .with_kernel(source.context.kernel.clone());
+    .with_kernel(source.context.kernel.clone())
+    .with_saved_helper_state(manager.helper_state);
     let mut map = ObjectReader::from_snapshot(&source.parsed.object_map);
     reader.i32("raw_prefix")?;
     let roots = reader.object_count("features.count")?;
