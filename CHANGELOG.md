@@ -10,6 +10,8 @@
 
 ### Added
 
+- Added ordinary draft and back-draft surface-identifier reading, editing and writing with complete inherited references and preserved signed words. (#54)
+
 - Added ordinary draft reading, editing and writing with direct identifier keepers, strided payloads, counted face groups and retained signed option words. (#54)
 
 - Added ordinary parabola and 3D-cylinder backup reading, editing and writing with complete point-backup identities and shared conic/cylinder handles. (#54)

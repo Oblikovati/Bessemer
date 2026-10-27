@@ -19,6 +19,9 @@ const LAYOUTS: &[(&str, RepresentationLayout)] = &[
     ("moFromSktEntSurfIdRep_c", Local(&["38"])),
     ("moFilletSurfIdRep_c", Local(&["38"])),
     ("moFaceBlendSurfIdRep_c", Local(&["38"])),
+    // 11.225 / C-253 proves both primary dispatches, ancestry and the one-word suffix.
+    ("moDraftSurfIdRep_c", Local(&["38"])),
+    ("moBackDraftSurfIdRep_c", Local(&["38"])),
     ("moSimpleSurfIdRep_c", Local(&["38"])),
     ("moSimpleEdgeIdRep_c", Local(&["38"])),
     ("moSegmEdgeIdRep_c", Local(&["38"])),

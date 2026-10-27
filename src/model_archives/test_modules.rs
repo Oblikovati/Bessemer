@@ -123,6 +123,9 @@ mod dome_record_tests;
 #[path = "../../tests/resolved_features/drafts.rs"]
 mod draft_record_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/draft_surface_identifiers.rs"]
+mod draft_surface_identifier_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/embedded_title.rs"]
 mod embedded_title_tests;
 #[cfg(test)]
