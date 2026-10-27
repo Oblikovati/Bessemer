@@ -39,13 +39,16 @@ def source(mapping: WireMap, ids: dict[str, int], version: int, style: int) -> b
         lambda: inherited(mapping, ids, version, style)+simple()+struct.pack('<i', -2147483648))
 
 
-def trim_edge_object(kind: int, version: int, style: int, edited: bool = False, first_slot: int = 0) -> tuple[bytes, int]:
+def trim_edge_object(kind: int, version: int, style: int, edited: bool = False, first_slot: int = 0,
+                     name: str | None = None, source_member: bool = True) -> tuple[bytes, int]:
     """Keep equal roots distinct, shared complete sources and typed entity-ID pointer occurrences; e.g. trim_edge_object(0, 19000, 2)."""
     mapping=WireMap();mapping.slot=first_slot;ids: dict[str,int]={}
     def contents(key: str) -> bytes:
-        return inherited(mapping, ids, version, style)+source(mapping, ids, version, style)+struct.pack('<i',12345 if edited and key=='first' else WORDS[style])
+        prefix=inherited(mapping, ids, version, style)
+        direct=source(mapping, ids, version, style) if source_member else b''
+        return prefix+direct+struct.pack('<i',12345 if edited and key=='first' else WORDS[style])
     def record(key: str) -> bytes:
-        return shared_object(mapping, ids, key, CLASSES[kind], lambda: contents(key))
+        return shared_object(mapping, ids, key, name if name is not None else CLASSES[kind], lambda: contents(key))
     def wrapper(key: str) -> bytes:
         return shared_object(mapping, ids, 'entity-'+key, 'moEntityId_c', lambda: record(key))
     def outer() -> bytes:
