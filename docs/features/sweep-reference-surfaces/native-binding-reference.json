@@ -1,0 +1,89 @@
+{
+  "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\sweep-reference-surface-native-evidence.json",
+  "source_sha256": "9d38eaaaed79a11ed5bbe75767c848910a568dac9da13a8b0f0f0303535734d5",
+  "clause": "11.233 / C-275",
+  "modules": [
+    {
+      "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+      "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c"
+    }
+  ],
+  "bindings": [
+    {
+      "module": "sldmodu.dll",
+      "class_name": "moSweepRefSurface_c",
+      "vtable": "0x4d2dcb00",
+      "serializer": "0x4cb15500",
+      "ancestry": [
+        ".?AVmoSweepRefSurface_c@@",
+        ".?AVmoRefSurface_c@@",
+        ".?AVmoRefGeom_c@@",
+        ".?AVmoAtomFeature_c@@",
+        ".?AVmoModelFeature_c@@",
+        ".?AVmoFeature_c@@",
+        ".?AVmoConcept_c@@",
+        ".?AVmoLoggedNode_c@@",
+        ".?AVmoNode_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@",
+        ".?AVutDisplayedEntity_c@@"
+      ]
+    },
+    {
+      "module": "sldmodu.dll",
+      "class_name": "moSweepRefSurfIdKeeper_c",
+      "vtable": "0x4cf582e8",
+      "serializer": "0x4cba2733",
+      "ancestry": [
+        ".?AVmoSweepRefSurfIdKeeper_c@@",
+        ".?AVmoIdKeeper_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ],
+      "thunk": {
+        "bytes": "ff25d7c11900",
+        "iat": "0x4cd3e910",
+        "module": "swccu.dll",
+        "symbol": "?Serialize@su_CObject@@UEAAXAEAVsu_CArchive@@@Z"
+      }
+    },
+    {
+      "module": "sldmodu.dll",
+      "class_name": "moEdgeData_c",
+      "vtable": "0x4d2decd0",
+      "serializer": "0x4cb15430",
+      "ancestry": [
+        ".?AVmoEdgeData_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ]
+    }
+  ],
+  "backend_selector": {
+    "address": "0x4b29c5a0",
+    "native_bytes": "33c0c3",
+    "result": 0
+  },
+  "shared_sweep_data": {
+    "address": "0x4cb57060",
+    "end": "0x4cb573a6",
+    "sha256": "487fa9099a3fbd7619804ee5ec0bfe0e4087bc25e212833f2aecd5896d45c43b"
+  },
+  "angular_predicate": {
+    "address": "0x4cb551a0",
+    "native_bytes": "8b917802000083fa087506b801000000c333c0b90200000083fa090f44c1c3",
+    "disassembly": [
+      "4cb551a0: mov edx, dword ptr [rcx + 0x278]",
+      "4cb551a6: cmp edx, 8",
+      "4cb551a9: jne 0x4cb551b1",
+      "4cb551ab: mov eax, 1",
+      "4cb551b0: ret ",
+      "4cb551b1: xor eax, eax",
+      "4cb551b3: mov ecx, 2",
+      "4cb551b8: cmp edx, 9",
+      "4cb551bb: cmove eax, ecx",
+      "4cb551be: ret "
+    ],
+    "interpretation": "SweepData +278 ==8 returns1; ==9 returns2; otherwise0. Both nonzero results select both angular pointers in modern scope."
+  }
+}

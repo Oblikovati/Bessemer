@@ -8,6 +8,10 @@ pub(super) fn read(
     name: &str,
 ) -> Option<Result<()>> {
     let result = match name {
+        "moSweepRefSurface_c" => super::sweep_surfaces::read(reader, map),
+        "moEdgeData_c" => super::sweep_surfaces::edge_data(reader, map),
+        // #54 / C-275 binds the exact zero-byte su_CObject serializer thunk.
+        "moSweepRefSurfIdKeeper_c" => super::extruded_surfaces::keeper(reader),
         "moCompRefCurve_c" => super::component_references::feature(reader, map),
         "moBlendRefSurface_c" => super::blend_reference_surfaces::read(reader, map),
         // #54 / C-382 binds the exact ordinary su_CObject zero-byte thunk.

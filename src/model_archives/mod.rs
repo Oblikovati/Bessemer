@@ -219,6 +219,7 @@ mod sweep_data;
 mod sweep_objects;
 mod sweep_records;
 mod sweep_reference_records;
+mod sweep_surfaces;
 mod swift_layout;
 mod table_defaults;
 mod tolerance_helpers;
