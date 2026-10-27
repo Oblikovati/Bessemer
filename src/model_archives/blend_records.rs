@@ -31,7 +31,7 @@ pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
 }
 
 fn payload(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    let (dimensions, second) = reader.scope("data", |reader| contents(reader, map))?;
+    let (dimensions, second) = reader.scope("data", |reader| shared_contents(reader, map))?;
     reader.i32("raw_c80")?;
     for label in ["c84", "c88", "c8c", "c90"] {
         reader.u8(&format!("raw_{label}"))?;
@@ -46,7 +46,10 @@ fn payload(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> 
     Ok(())
 }
 
-fn contents(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<(u8, i32)> {
+pub(super) fn shared_contents(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+) -> Result<(u8, i32)> {
     let declared = reader.i32("declared_count_418")?;
     if declared < 0 {
         return reader.checked(Err(invalid(format!(
