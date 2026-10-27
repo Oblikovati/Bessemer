@@ -205,6 +205,8 @@ folder layers, direct properties, raw flags and shared tagged references.
 complete trimming data, raw scalars and the versioned late word.
 [Solid references](docs/features/solid-references/README.md) retain wrapper
 identity, signed body presence, typed kernel bodies and direct attributes.
+[Mirrored solids](docs/features/mirror-solids/README.md) retain independent
+planes and arrays, shared matrix helpers and unsigned-array records.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 

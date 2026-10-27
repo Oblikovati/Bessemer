@@ -224,6 +224,8 @@ pub(super) const CLASSES: &[&str] = &[
     "moWeldMemberFeat_c",
     // #54 / C-283: the weld-corner constructor inherits the complete body-feature owner.
     "moWeldCornerFeat_c",
+    // #54 / C-242: native RTTI binds the mirrored solid to moBodyFeature_c.
+    "moMirrorSolid_c",
     // #54 / C-202: the draft serializer calls the complete body-feature base.
     "moDraft_c",
     // #60: both complete readers use this inherited atom-feature owner role.

@@ -20,6 +20,8 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moMirrorSolid_c" => super::mirror_solids::read(reader, map),
+        "suUIntArray" => super::mirror_solids::unsigned_array(reader),
         "moWeldCornerFeat_c" => super::weld_corners::read(reader, map),
         "moWeldBodyData_c" => super::weld_corners::body_data(reader, map),
         "moWeldTrimmedBodyData_c" => super::weld_corners::trimmed(reader, map),

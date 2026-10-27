@@ -1,0 +1,1100 @@
+{
+  "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\mirror-solid-native-evidence.json",
+  "source_sha256": "659277ba8a20cce674f57af969261240f905e1928828eab541fae5b118ed1c3f",
+  "evidence": {
+    "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+    "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+    "bindings": [
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+          "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+          "tables": [
+            {
+              "class_name": "moMirrorSolid_c",
+              "object_offset": 0,
+              "locator": "0x4d33cfa0",
+              "vftable": "0x4cff0048",
+              "slots": [
+                "0x4bb1d7e0",
+                "0x4bcf6d10",
+                "0x4cba273f",
+                "0x4b29dae0",
+                "0x4b29dae0",
+                "0x4bb2c2d0",
+                "0x4b7a8f10",
+                "0x4b29dae0"
+              ]
+            },
+            {
+              "class_name": "moMirrorSolid_c",
+              "object_offset": 136,
+              "locator": "0x4d33d068",
+              "vftable": "0x4cff2678",
+              "slots": [
+                "0x4bcf6c98",
+                "0x4b2a53f0",
+                "0x4b2a5480",
+                "0x4b29c5a0",
+                "0x4beb0ed0",
+                "0x4beb28f0",
+                "0x4b29c5a0",
+                "0x4d33d090"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "010000000000000000000000008b9a02c8cf1d02a0cf1d02",
+        "bases": [
+          ".?AVmoMirrorSolid_c@@",
+          ".?AVmoBodyFeature_c@@",
+          ".?AVmoAtomFeature_c@@",
+          ".?AVmoModelFeature_c@@",
+          ".?AVmoFeature_c@@",
+          ".?AVmoConcept_c@@",
+          ".?AVmoLoggedNode_c@@",
+          ".?AVmoNode_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@",
+          ".?AVutDisplayedEntity_c@@"
+        ]
+      },
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+          "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+          "tables": [
+            {
+              "class_name": "moMatrixIndexHelper_c",
+              "object_offset": 0,
+              "locator": "0x4d316460",
+              "vftable": "0x4ce87ef8",
+              "slots": [
+                "0x4c279730",
+                "0x4b7762d0",
+                "0x4cba273f",
+                "0x4b29dae0",
+                "0x4b29dae0",
+                "0x4c27f890",
+                "0x4cba274b",
+                "0x4cba2751"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "010000000000000000000000b86e9c0288641b0260641b02",
+        "bases": [
+          ".?AVmoMatrixIndexHelper_c@@",
+          ".?AVmoBaseBodyChooser_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@"
+        ]
+      }
+    ],
+    "functions": {
+      "0x4bb2c2d0": {
+        "end": "0x4bb2cd1d",
+        "native_bytes": "48895c24185556574154415541564157488d6c24d94881ecc0000000488b050dc4fd014833c448894517488bf2488bf9488d4dc7ff157e252101904c8d2d0e1426014c896dc74533e4458bfc4439a7300800007e4a458bf40f1f840000000000488b8728080000498b1c064885db741f488b0333d2488bcbff905819000085c0740d488bd3488d4dc7ff159189200141ffc74983c608443bbf300800007cc1418bdc395dd77e2c4d8bf4660f1f4400004533c0488b55cf498b1416488d8f20080000ff1548892001ffc34d8d76083b5dd77cdd488bd6488d4d8fff15e0882001488bd6488bcfe8e54bffff488bceff152c24210185c00f84a5020000488b458f4885c00f84310900008b808007000085c0750cff15b7882001ff15a9882001488bce3df7070000720a33d2ff15b7252101eb0c488d9700080000e8a16208008b9708080000488bceff15e2232101488b9f10080000418bd44885db0f95c2488bceff15c92321014885db7432488b8f10080000ff1557f42001488bd6488bc8ff1593f42001488b8f10080000ff1546f42001488bd6488bc8ff1562f42001488b458f4885c00f848f0800008b888007000085c97512ff1515882001ff15078820018bc8488b458f81f982060000721d4439a0340800007514488d8f20080000488b01488bd6ff5028488b458f4885c00f84450800008b888007000085c97512ff15cb872001ff15bd8720018bc8488b458f81f90b0700007223488d8f40080000488b01488bd6ff50288b97b8090000488bceff15f8222101488b458f4885c00f84f50700008b808007000085c0750cff157b872001ff156d8720013df7070000724d488d97a0090000488bcee86fb97400488d97c8090000488bcee820a474000fb697b4090000488bceff15602421018b97bc090000488bceff15912221010fb697f0090000488bceff15412421010fb697c0090000488bceff15312421010fb697c4090000488bceff1521242101488d8f80080000488b01488bd6ff5028488b97d0080000482b97c808000048c1fa02488bceff1536222101488b9fc8080000483b9fd0080000741e660f1f4400008b13488bceff15152221014883c304483b9fd008000075e80fb697b0090000488bceff15b8232101488d97a8090000488bcee899b87400488b9f180800004885db410f95c4418bd4488bceff15cf2121014885db0f8479060000488b8f18080000ff1559f22001488bd6488bc8ff1595f22001488b8f18080000ff1548f22001488bd6488bc8ff1564f22001e942060000488d9700080000488bcee860150800488b458f4885c00f846a0600008b808007000085c0750cff1503862001ff15f58520013d5302000073094489a708080000eb16488d558b488bceff15482121018b458b898708080000488b458f4885c00f84210600008b808007000085c0750cff15ba852001ff15ac8520014c8d35f54536013d3c0500000f82bc000000488d558b488bceff15fd2021014439658b0f84a5000000488d4dffff15d9ed200190488d4de7ff1576ee200190488bd6488d4dffff15b8f12001488bd6488d4de7ff1593f12001488b8f100800004885c97538b938000000e8fa6b0701488bd84889459f4885c074164c8d45e7488d55ff488bc8ff1510ef20014c8933eb03498bdc48899f10080000eb1c488d55ffff159df42001488d55e7488b8f10080000ff1594f4200190488d4de7ff15b1ed200190488d4dffff155eed2001488b458f83b83408000000744a488b4758488b58084885db746e0f1f40000f1f8400000000004c8b7310488b1b498b06498bceff90180c000085c07413488d8f200800004d8bc68b5110ff158e2021014885db75d1eb31488b458f8b808007000085c0750cff157b842001ff156d8420013d820600007210488d8f20080000488b01488bd6ff5028488b458f4885c00f84a80400008b808007000085c0750cff1541842001ff15338420013d0b0700007222488d8f40080000488b01488bd6ff5028488d97b8090000488bceff157c1f2101eb0ac787b809000001000000488b458f4885c00f84520400008b808007000085c0750cff15eb832001ff15dd8320013df7070000725e488d97a0090000488bcee88f817400488d97c8090000488bcee800687400488d5587488bceff15db2021010fb645878987b4090000488d97bc090000488bceff15011f2101488d5587488bceff15b42021010fb645878987f0090000eb58498bdc4c8bb7000800004d85f67442e86cd40700488bd0498bcee8406a070185c0742eb9e0000000ff15e21e21014889459f4885c074174533c0488b9700080000488bc8e827857e00488bd8eb03498bdc48899fa0090000488b458f4885c00f84720300008b808007000085c0750cff150b832001ff15fd8220013d720b00007213488d5587488bceff15192021010fb64587eb03418bc48987c0090000488b458f4885c00f842c0300008b808007000085c0750cff15c5822001ff15b78220013da80b00007213488d5587488bceff15d31f21010fb64587eb03418bc48987c4090000488d4da7ff157a1e2101904c896da7458bfc4439a7300800007e504d8bf40f1f400066660f1f840000000000488b8728080000498b1c064885db741f488b0333d2488bcbff905819000085c0740d488bd3488d4da7ff159182200141ffc74983c608443bbf300800007cc1418bdc395db77e2c4d8bf4660f1f4400004533c0488b55af498b1416488d8f20080000ff1548822001ffc34d8d76083b5db77cdd488b458f4885c00f84340200008b888007000085c97512ff15e0812001ff15d28120018bc8488b458f81f9872f00007214488d8f80080000488b01488bd6ff5028488b458f4885c00f84f30100008b888007000085c97512ff159f812001ff15918120018bc8488b458f81f9942f00007213488d8fc8080000488bd6e8ecb2feff488b458f4885c00f84b30100008b888007000085c97512ff155f812001ff15518120018bc8488b458f81f9463700007217488d5587488bceff15661e21010fb64d87488b458feb03418bcc898fb00900004885c00f84660100008b888007000085c97512ff1512812001ff15048120018bc8488b458f488d97a809000081f946370000720e488bcee8af7e7400488b458feb034c89224885c00f84210100008b808007000085c0750cff15cd802001ff15bf8020013d613700000f82c4000000488d558b488bceff15171c2101837d8b000f84ad000000488d4de7ff15f3e8200190488d4dffff1590e9200190488bd6488d4de7ff15d2ec2001488bd6488d4dffff15adec2001488b8f180800004885c9753fb938000000e814670701488bd84889459f4885c0741d4c8d45ff488d55e7488bc8ff152aea2001488d0583403601488903eb03498bdc48899f18080000eb1c488d55e7ff15b0ef2001488d55ff488b8f18080000ff15a7ef200190488d4dffff15c4e8200190488d4de7ff1571e8200190488d4da7ff15061c210190488d4dc7ff15fb1b2101488b4d174833cce8b7740701488b9c24100100004881c4c0000000415f415e415d415c5f5e5dc34533c0baffffffffb901000000e87d660701904533c0baffffffffb901000000e86a660701cc4533c0baffffffffb901000000e857660701cc",
+        "sha256": "e018ce8835ee6aea1f3057ffaaa087891fb447c282a49b595f2a7c6ca5535902",
+        "imports": [
+          {
+            "call_va": "0x4bb2c304",
+            "iat": "0x4cd3e888",
+            "module": "swccu.dll",
+            "symbol": "??0su_CObArray@@QEAA@XZ",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 19,
+            "lookup_bytes": "04b6940200000000"
+          },
+          {
+            "call_va": "0x4bb2c359",
+            "iat": "0x4cd34cf0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?addUnique@suObArray@@QEAAHPEAVCObject@@@Z",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1137,
+            "lookup_bytes": "5440920200000000"
+          },
+          {
+            "call_va": "0x4bb2c392",
+            "iat": "0x4cd34ce0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?remove@suObArray@@QEAAHPEBVCObject@@H@Z",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1135,
+            "lookup_bytes": "aa40920200000000"
+          },
+          {
+            "call_va": "0x4bb2c3aa",
+            "iat": "0x4cd34c90",
+            "module": "SLDMFCU.dll",
+            "symbol": "??0moArchiveHelper_c@@QEAA@PEAVsu_CArchive@@@Z",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1125,
+            "lookup_bytes": "0442920200000000"
+          },
+          {
+            "call_va": "0x4bb2c3be",
+            "iat": "0x4cd3e7f0",
+            "module": "swccu.dll",
+            "symbol": "?IsStoring@su_CArchive@@QEBAHXZ",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 0,
+            "lookup_bytes": "52b3940200000000"
+          },
+          {
+            "call_va": "0x4bb2c3e3",
+            "iat": "0x4cd34ca0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1127,
+            "lookup_bytes": "ac41920200000000"
+          },
+          {
+            "call_va": "0x4bb2c3e9",
+            "iat": "0x4cd34c98",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1126,
+            "lookup_bytes": "d241920200000000"
+          },
+          {
+            "call_va": "0x4bb2c3fb",
+            "iat": "0x4cd3e9b8",
+            "module": "swccu.dll",
+            "symbol": "??6@YAAEAVsu_CArchive@@AEAV0@PEBVCObject@@@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 57,
+            "lookup_bytes": "36bd940200000000"
+          },
+          {
+            "call_va": "0x4bb2c418",
+            "iat": "0x4cd3e800",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 2,
+            "lookup_bytes": "98b3940200000000"
+          },
+          {
+            "call_va": "0x4bb2c431",
+            "iat": "0x4cd3e800",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 2,
+            "lookup_bytes": "98b3940200000000"
+          },
+          {
+            "call_va": "0x4bb2c443",
+            "iat": "0x4cd3b8a0",
+            "module": "sldmgu.dll",
+            "symbol": "?rootPoint@mgPlane_c@@QEBAAEBVmgPoint_c@@XZ",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 164,
+            "lookup_bytes": "e67a930200000000"
+          },
+          {
+            "call_va": "0x4bb2c44f",
+            "iat": "0x4cd3b8e8",
+            "module": "sldmgu.dll",
+            "symbol": "?save@mgPoint_c@@QEBAXAEAVsu_CArchive@@@Z",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 173,
+            "lookup_bytes": "8a7c930200000000"
+          },
+          {
+            "call_va": "0x4bb2c45c",
+            "iat": "0x4cd3b8a8",
+            "module": "sldmgu.dll",
+            "symbol": "?normal@mgPlane_c@@QEBAAEBVmgUnitVector_c@@XZ",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 165,
+            "lookup_bytes": "147b930200000000"
+          },
+          {
+            "call_va": "0x4bb2c468",
+            "iat": "0x4cd3b8d0",
+            "module": "sldmgu.dll",
+            "symbol": "?save@mgVector_c@@QEBAXAEAVsu_CArchive@@@Z",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 170,
+            "lookup_bytes": "087c930200000000"
+          },
+          {
+            "call_va": "0x4bb2c485",
+            "iat": "0x4cd34ca0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1127,
+            "lookup_bytes": "ac41920200000000"
+          },
+          {
+            "call_va": "0x4bb2c48b",
+            "iat": "0x4cd34c98",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1126,
+            "lookup_bytes": "d241920200000000"
+          },
+          {
+            "call_va": "0x4bb2c4cf",
+            "iat": "0x4cd34ca0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1127,
+            "lookup_bytes": "ac41920200000000"
+          },
+          {
+            "call_va": "0x4bb2c4d5",
+            "iat": "0x4cd34c98",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1126,
+            "lookup_bytes": "d241920200000000"
+          },
+          {
+            "call_va": "0x4bb2c502",
+            "iat": "0x4cd3e800",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 2,
+            "lookup_bytes": "98b3940200000000"
+          },
+          {
+            "call_va": "0x4bb2c51f",
+            "iat": "0x4cd34ca0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1127,
+            "lookup_bytes": "ac41920200000000"
+          },
+          {
+            "call_va": "0x4bb2c525",
+            "iat": "0x4cd34c98",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1126,
+            "lookup_bytes": "d241920200000000"
+          },
+          {
+            "call_va": "0x4bb2c55a",
+            "iat": "0x4cd3e9c0",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@E@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 58,
+            "lookup_bytes": "66bd940200000000"
+          },
+          {
+            "call_va": "0x4bb2c569",
+            "iat": "0x4cd3e800",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 2,
+            "lookup_bytes": "98b3940200000000"
+          },
+          {
+            "call_va": "0x4bb2c579",
+            "iat": "0x4cd3e9c0",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@E@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 58,
+            "lookup_bytes": "66bd940200000000"
+          },
+          {
+            "call_va": "0x4bb2c589",
+            "iat": "0x4cd3e9c0",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@E@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 58,
+            "lookup_bytes": "66bd940200000000"
+          },
+          {
+            "call_va": "0x4bb2c599",
+            "iat": "0x4cd3e9c0",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@E@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 58,
+            "lookup_bytes": "66bd940200000000"
+          },
+          {
+            "call_va": "0x4bb2c5c4",
+            "iat": "0x4cd3e800",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 2,
+            "lookup_bytes": "98b3940200000000"
+          },
+          {
+            "call_va": "0x4bb2c5e5",
+            "iat": "0x4cd3e800",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 2,
+            "lookup_bytes": "98b3940200000000"
+          },
+          {
+            "call_va": "0x4bb2c602",
+            "iat": "0x4cd3e9c0",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@E@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 58,
+            "lookup_bytes": "66bd940200000000"
+          },
+          {
+            "call_va": "0x4bb2c62b",
+            "iat": "0x4cd3e800",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 2,
+            "lookup_bytes": "98b3940200000000"
+          },
+          {
+            "call_va": "0x4bb2c641",
+            "iat": "0x4cd3b8a0",
+            "module": "sldmgu.dll",
+            "symbol": "?rootPoint@mgPlane_c@@QEBAAEBVmgPoint_c@@XZ",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 164,
+            "lookup_bytes": "e67a930200000000"
+          },
+          {
+            "call_va": "0x4bb2c64d",
+            "iat": "0x4cd3b8e8",
+            "module": "sldmgu.dll",
+            "symbol": "?save@mgPoint_c@@QEBAXAEAVsu_CArchive@@@Z",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 173,
+            "lookup_bytes": "8a7c930200000000"
+          },
+          {
+            "call_va": "0x4bb2c65a",
+            "iat": "0x4cd3b8a8",
+            "module": "sldmgu.dll",
+            "symbol": "?normal@mgPlane_c@@QEBAAEBVmgUnitVector_c@@XZ",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 165,
+            "lookup_bytes": "147b930200000000"
+          },
+          {
+            "call_va": "0x4bb2c666",
+            "iat": "0x4cd3b8d0",
+            "module": "sldmgu.dll",
+            "symbol": "?save@mgVector_c@@QEBAXAEAVsu_CArchive@@@Z",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 170,
+            "lookup_bytes": "087c930200000000"
+          },
+          {
+            "call_va": "0x4bb2c697",
+            "iat": "0x4cd34ca0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1127,
+            "lookup_bytes": "ac41920200000000"
+          },
+          {
+            "call_va": "0x4bb2c69d",
+            "iat": "0x4cd34c98",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1126,
+            "lookup_bytes": "d241920200000000"
+          },
+          {
+            "call_va": "0x4bb2c6ba",
+            "iat": "0x4cd3e808",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 3,
+            "lookup_bytes": "b8b3940200000000"
+          },
+          {
+            "call_va": "0x4bb2c6e0",
+            "iat": "0x4cd34ca0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1127,
+            "lookup_bytes": "ac41920200000000"
+          },
+          {
+            "call_va": "0x4bb2c6e6",
+            "iat": "0x4cd34c98",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1126,
+            "lookup_bytes": "d241920200000000"
+          },
+          {
+            "call_va": "0x4bb2c705",
+            "iat": "0x4cd3e808",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 3,
+            "lookup_bytes": "b8b3940200000000"
+          },
+          {
+            "call_va": "0x4bb2c719",
+            "iat": "0x4cd3b4f8",
+            "module": "sldmgu.dll",
+            "symbol": "??0mgPoint_c@@QEAA@XZ",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 47,
+            "lookup_bytes": "8266930200000000"
+          },
+          {
+            "call_va": "0x4bb2c724",
+            "iat": "0x4cd3b5a0",
+            "module": "sldmgu.dll",
+            "symbol": "??0mgUnitVector_c@@QEAA@XZ",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 68,
+            "lookup_bytes": "4e69930200000000"
+          },
+          {
+            "call_va": "0x4bb2c732",
+            "iat": "0x4cd3b8f0",
+            "module": "sldmgu.dll",
+            "symbol": "?restore@mgPoint_c@@QEAAXAEAVsu_CArchive@@@Z",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 174,
+            "lookup_bytes": "b67c930200000000"
+          },
+          {
+            "call_va": "0x4bb2c73f",
+            "iat": "0x4cd3b8d8",
+            "module": "sldmgu.dll",
+            "symbol": "?restore@mgVector_c@@QEAAXAEAVsu_CArchive@@@Z",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 171,
+            "lookup_bytes": "367c930200000000"
+          },
+          {
+            "call_va": "0x4bb2c772",
+            "iat": "0x4cd3b688",
+            "module": "sldmgu.dll",
+            "symbol": "??0mgPlane_c@@QEAA@AEBVmgPoint_c@@AEBVmgUnitVector_c@@@Z",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 97,
+            "lookup_bytes": "466d930200000000"
+          },
+          {
+            "call_va": "0x4bb2c78d",
+            "iat": "0x4cd3bc30",
+            "module": "sldmgu.dll",
+            "symbol": "?setRootPoint@mgPlane_c@@QEAAXAEBVmgPoint_c@@@Z",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 278,
+            "lookup_bytes": "2c8d930200000000"
+          },
+          {
+            "call_va": "0x4bb2c79e",
+            "iat": "0x4cd3bc38",
+            "module": "sldmgu.dll",
+            "symbol": "?setNormal@mgPlane_c@@QEAAXAEBVmgUnitVector_c@@@Z",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 279,
+            "lookup_bytes": "5e8d930200000000"
+          },
+          {
+            "call_va": "0x4bb2c7a9",
+            "iat": "0x4cd3b560",
+            "module": "sldmgu.dll",
+            "symbol": "??1mgVector_c@@QEAA@XZ",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 60,
+            "lookup_bytes": "5268930200000000"
+          },
+          {
+            "call_va": "0x4bb2c7b4",
+            "iat": "0x4cd3b518",
+            "module": "sldmgu.dll",
+            "symbol": "??1mgPoint_c@@QEAA@XZ",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 51,
+            "lookup_bytes": "f866930200000000"
+          },
+          {
+            "call_va": "0x4bb2c804",
+            "iat": "0x4cd3e898",
+            "module": "swccu.dll",
+            "symbol": "?SetAtGrow@su_CObArray@@QEAAXHPEAVCObject@@@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 21,
+            "lookup_bytes": "42b6940200000000"
+          },
+          {
+            "call_va": "0x4bb2c81f",
+            "iat": "0x4cd34ca0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1127,
+            "lookup_bytes": "ac41920200000000"
+          },
+          {
+            "call_va": "0x4bb2c825",
+            "iat": "0x4cd34c98",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1126,
+            "lookup_bytes": "d241920200000000"
+          },
+          {
+            "call_va": "0x4bb2c859",
+            "iat": "0x4cd34ca0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1127,
+            "lookup_bytes": "ac41920200000000"
+          },
+          {
+            "call_va": "0x4bb2c85f",
+            "iat": "0x4cd34c98",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1126,
+            "lookup_bytes": "d241920200000000"
+          },
+          {
+            "call_va": "0x4bb2c886",
+            "iat": "0x4cd3e808",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 3,
+            "lookup_bytes": "b8b3940200000000"
+          },
+          {
+            "call_va": "0x4bb2c8af",
+            "iat": "0x4cd34ca0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1127,
+            "lookup_bytes": "ac41920200000000"
+          },
+          {
+            "call_va": "0x4bb2c8b5",
+            "iat": "0x4cd34c98",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1126,
+            "lookup_bytes": "d241920200000000"
+          },
+          {
+            "call_va": "0x4bb2c8e7",
+            "iat": "0x4cd3e9c8",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAE@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 59,
+            "lookup_bytes": "86bd940200000000"
+          },
+          {
+            "call_va": "0x4bb2c901",
+            "iat": "0x4cd3e808",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 3,
+            "lookup_bytes": "b8b3940200000000"
+          },
+          {
+            "call_va": "0x4bb2c90e",
+            "iat": "0x4cd3e9c8",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAE@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 59,
+            "lookup_bytes": "86bd940200000000"
+          },
+          {
+            "call_va": "0x4bb2c948",
+            "iat": "0x4cd3e830",
+            "module": "swccu.dll",
+            "symbol": "??2su_CObject@@SAPEAX_K@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 8,
+            "lookup_bytes": "96b4940200000000"
+          },
+          {
+            "call_va": "0x4bb2c98f",
+            "iat": "0x4cd34ca0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1127,
+            "lookup_bytes": "ac41920200000000"
+          },
+          {
+            "call_va": "0x4bb2c995",
+            "iat": "0x4cd34c98",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1126,
+            "lookup_bytes": "d241920200000000"
+          },
+          {
+            "call_va": "0x4bb2c9a9",
+            "iat": "0x4cd3e9c8",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAE@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 59,
+            "lookup_bytes": "86bd940200000000"
+          },
+          {
+            "call_va": "0x4bb2c9d5",
+            "iat": "0x4cd34ca0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1127,
+            "lookup_bytes": "ac41920200000000"
+          },
+          {
+            "call_va": "0x4bb2c9db",
+            "iat": "0x4cd34c98",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1126,
+            "lookup_bytes": "d241920200000000"
+          },
+          {
+            "call_va": "0x4bb2c9ef",
+            "iat": "0x4cd3e9c8",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAE@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 59,
+            "lookup_bytes": "86bd940200000000"
+          },
+          {
+            "call_va": "0x4bb2ca08",
+            "iat": "0x4cd3e888",
+            "module": "swccu.dll",
+            "symbol": "??0su_CObArray@@QEAA@XZ",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 19,
+            "lookup_bytes": "04b6940200000000"
+          },
+          {
+            "call_va": "0x4bb2ca59",
+            "iat": "0x4cd34cf0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?addUnique@suObArray@@QEAAHPEAVCObject@@@Z",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1137,
+            "lookup_bytes": "5440920200000000"
+          },
+          {
+            "call_va": "0x4bb2ca92",
+            "iat": "0x4cd34ce0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?remove@suObArray@@QEAAHPEBVCObject@@H@Z",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1135,
+            "lookup_bytes": "aa40920200000000"
+          },
+          {
+            "call_va": "0x4bb2caba",
+            "iat": "0x4cd34ca0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1127,
+            "lookup_bytes": "ac41920200000000"
+          },
+          {
+            "call_va": "0x4bb2cac0",
+            "iat": "0x4cd34c98",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1126,
+            "lookup_bytes": "d241920200000000"
+          },
+          {
+            "call_va": "0x4bb2cafb",
+            "iat": "0x4cd34ca0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1127,
+            "lookup_bytes": "ac41920200000000"
+          },
+          {
+            "call_va": "0x4bb2cb01",
+            "iat": "0x4cd34c98",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1126,
+            "lookup_bytes": "d241920200000000"
+          },
+          {
+            "call_va": "0x4bb2cb3b",
+            "iat": "0x4cd34ca0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1127,
+            "lookup_bytes": "ac41920200000000"
+          },
+          {
+            "call_va": "0x4bb2cb41",
+            "iat": "0x4cd34c98",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1126,
+            "lookup_bytes": "d241920200000000"
+          },
+          {
+            "call_va": "0x4bb2cb5c",
+            "iat": "0x4cd3e9c8",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAE@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 59,
+            "lookup_bytes": "86bd940200000000"
+          },
+          {
+            "call_va": "0x4bb2cb88",
+            "iat": "0x4cd34ca0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1127,
+            "lookup_bytes": "ac41920200000000"
+          },
+          {
+            "call_va": "0x4bb2cb8e",
+            "iat": "0x4cd34c98",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1126,
+            "lookup_bytes": "d241920200000000"
+          },
+          {
+            "call_va": "0x4bb2cbcd",
+            "iat": "0x4cd34ca0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1127,
+            "lookup_bytes": "ac41920200000000"
+          },
+          {
+            "call_va": "0x4bb2cbd3",
+            "iat": "0x4cd34c98",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ",
+            "descriptor_bytes": "40ed8e020000000000000000106693026829bd01",
+            "lookup_index": 1126,
+            "lookup_bytes": "d241920200000000"
+          },
+          {
+            "call_va": "0x4bb2cbeb",
+            "iat": "0x4cd3e808",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 3,
+            "lookup_bytes": "b8b3940200000000"
+          },
+          {
+            "call_va": "0x4bb2cbff",
+            "iat": "0x4cd3b4f8",
+            "module": "sldmgu.dll",
+            "symbol": "??0mgPoint_c@@QEAA@XZ",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 47,
+            "lookup_bytes": "8266930200000000"
+          },
+          {
+            "call_va": "0x4bb2cc0a",
+            "iat": "0x4cd3b5a0",
+            "module": "sldmgu.dll",
+            "symbol": "??0mgUnitVector_c@@QEAA@XZ",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 68,
+            "lookup_bytes": "4e69930200000000"
+          },
+          {
+            "call_va": "0x4bb2cc18",
+            "iat": "0x4cd3b8f0",
+            "module": "sldmgu.dll",
+            "symbol": "?restore@mgPoint_c@@QEAAXAEAVsu_CArchive@@@Z",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 174,
+            "lookup_bytes": "b67c930200000000"
+          },
+          {
+            "call_va": "0x4bb2cc25",
+            "iat": "0x4cd3b8d8",
+            "module": "sldmgu.dll",
+            "symbol": "?restore@mgVector_c@@QEAAXAEAVsu_CArchive@@@Z",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 171,
+            "lookup_bytes": "367c930200000000"
+          },
+          {
+            "call_va": "0x4bb2cc58",
+            "iat": "0x4cd3b688",
+            "module": "sldmgu.dll",
+            "symbol": "??0mgPlane_c@@QEAA@AEBVmgPoint_c@@AEBVmgUnitVector_c@@@Z",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 97,
+            "lookup_bytes": "466d930200000000"
+          },
+          {
+            "call_va": "0x4bb2cc7a",
+            "iat": "0x4cd3bc30",
+            "module": "sldmgu.dll",
+            "symbol": "?setRootPoint@mgPlane_c@@QEAAXAEBVmgPoint_c@@@Z",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 278,
+            "lookup_bytes": "2c8d930200000000"
+          },
+          {
+            "call_va": "0x4bb2cc8b",
+            "iat": "0x4cd3bc38",
+            "module": "sldmgu.dll",
+            "symbol": "?setNormal@mgPlane_c@@QEAAXAEBVmgUnitVector_c@@@Z",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 279,
+            "lookup_bytes": "5e8d930200000000"
+          },
+          {
+            "call_va": "0x4bb2cc96",
+            "iat": "0x4cd3b560",
+            "module": "sldmgu.dll",
+            "symbol": "??1mgVector_c@@QEAA@XZ",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 60,
+            "lookup_bytes": "5268930200000000"
+          },
+          {
+            "call_va": "0x4bb2cca1",
+            "iat": "0x4cd3b518",
+            "module": "sldmgu.dll",
+            "symbol": "??1mgPoint_c@@QEAA@XZ",
+            "descriptor_bytes": "58778f020000000000000000a018940280b3bd01",
+            "lookup_index": 51,
+            "lookup_bytes": "f866930200000000"
+          },
+          {
+            "call_va": "0x4bb2ccac",
+            "iat": "0x4cd3e8b8",
+            "module": "swccu.dll",
+            "symbol": "??1su_CObArray@@UEAA@XZ",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 25,
+            "lookup_bytes": "ecb6940200000000"
+          },
+          {
+            "call_va": "0x4bb2ccb7",
+            "iat": "0x4cd3e8b8",
+            "module": "swccu.dll",
+            "symbol": "??1su_CObArray@@UEAA@XZ",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 25,
+            "lookup_bytes": "ecb6940200000000"
+          }
+        ],
+        "decompilation": "\n/* WARNING: Function: __security_check_cookie replaced with injection: security_check_cookie */\n\nvoid FUN_4bb2c2d0(moBodyFeature_c *param_1,su_CArchive *param_2)\n\n{\n  CObject *pCVar1;\n  longlong lVar2;\n  undefined8 *puVar3;\n  int iVar4;\n  uint uVar5;\n  mgPoint_c *pmVar6;\n  mgUnitVector_c *pmVar7;\n  mgPlane_c *pmVar8;\n  CRuntimeClass *pCVar9;\n  mgPlane_c *pmVar10;\n  uint uVar11;\n  long *plVar12;\n  mgPlane_c *pmVar13;\n  uint uVar14;\n  undefined1 auStack_f8 [32];\n  byte local_d8 [4];\n  int local_d4;\n  longlong local_d0 [2];\n  mgPlane_c *local_c0;\n  undefined **local_b8;\n  longlong local_b0;\n  int local_a8;\n  undefined **local_98;\n  longlong local_90;\n  int local_88;\n  mgUnitVector_c local_78 [24];\n  mgPoint_c local_60 [24];\n  ulonglong local_48;\n  \n  local_48 = DAT_4db08700 ^ (ulonglong)auStack_f8;\n  su_CObArray::su_CObArray((su_CObArray *)&local_98);\n  local_98 = suObArray::vftable;\n  pmVar13 = (mgPlane_c *)0x0;\n  uVar5 = 0;\n  pmVar10 = pmVar13;\n  pmVar8 = pmVar13;\n  if (0 < *(int *)(param_1 + 0x830)) {\n    do {\n      pCVar1 = *(CObject **)(pmVar10 + *(longlong *)(param_1 + 0x828));\n      if ((pCVar1 != (CObject *)0x0) &&\n         (iVar4 = (**(code **)(*(longlong *)pCVar1 + 0x1958))(pCVar1,0), iVar4 != 0)) {\n        suObArray::addUnique((suObArray *)&local_98,pCVar1);\n      }\n      uVar14 = (int)pmVar8 + 1;\n      pmVar10 = pmVar10 + 8;\n      pmVar8 = (mgPlane_c *)(ulonglong)uVar14;\n    } while ((int)uVar14 < *(int *)(param_1 + 0x830));\n  }\n  pmVar10 = pmVar13;\n  pmVar8 = pmVar13;\n  if (0 < local_88) {\n    do {\n      suObArray::remove((suObArray *)(param_1 + 0x820),*(CObject **)(pmVar8 + local_90),0);\n      uVar14 = (int)pmVar10 + 1;\n      pmVar10 = (mgPlane_c *)(ulonglong)uVar14;\n      pmVar8 = pmVar8 + 8;\n    } while ((int)uVar14 < local_88);\n  }\n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_d0,param_2);\n  moBodyFeature_c::Serialize(param_1,param_2);\n  iVar4 = su_CArchive::IsStoring(param_2);\n  if (iVar4 == 0) {\n    pmVar6 = (mgPoint_c *)param_2;\n    operator>>(param_2,(moCompFace_c **)(param_1 + 0x800));\n    if (local_d0[0] != 0) {\n      uVar14 = *(uint *)(local_d0[0] + 0x780);\n      if (uVar14 == 0) {\n        moVersionManager_c::get();\n        uVar14 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (uVar14 < 0x253) {\n        *(undefined4 *)(param_1 + 0x808) = 0;\n      }\n      else {\n        pmVar6 = (mgPoint_c *)param_2;\n        su_CArchive::operator>>(param_2,&local_d4);\n        *(int *)(param_1 + 0x808) = local_d4;\n      }\n      if (local_d0[0] != 0) {\n        uVar14 = *(uint *)(local_d0[0] + 0x780);\n        if (uVar14 == 0) {\n          moVersionManager_c::get();\n          uVar14 = moVersionManager_c::getCurrentFileVerion();\n        }\n        if ((0x53b < uVar14) &&\n           (pmVar6 = (mgPoint_c *)param_2, su_CArchive::operator>>(param_2,&local_d4), local_d4 != 0\n           )) {\n          mgPoint_c::mgPoint_c(local_60);\n          mgUnitVector_c::mgUnitVector_c(local_78);\n          mgPoint_c::restore(local_60,param_2);\n          mgVector_c::restore((mgVector_c *)local_78,param_2);\n          if (*(mgPlane_c **)(param_1 + 0x810) == (mgPlane_c *)0x0) {\n            pmVar8 = operator_new(0x38);\n            pmVar10 = pmVar13;\n            local_c0 = pmVar8;\n            if (pmVar8 != (mgPlane_c *)0x0) {\n              mgPlane_c::mgPlane_c(pmVar8,local_60,local_78);\n              *(undefined ***)pmVar8 = mgPlane_c::vftable;\n              pmVar10 = pmVar8;\n            }\n            *(mgPlane_c **)(param_1 + 0x810) = pmVar10;\n          }\n          else {\n            mgPlane_c::setRootPoint(*(mgPlane_c **)(param_1 + 0x810),local_60);\n            mgPlane_c::setNormal(*(mgPlane_c **)(param_1 + 0x810),local_78);\n          }\n          mgVector_c::~mgVector_c((mgVector_c *)local_78);\n          pmVar6 = local_60;\n          mgPoint_c::~mgPoint_c(pmVar6);\n        }\n        if (*(int *)(local_d0[0] + 0x834) == 0) {\n          uVar14 = *(uint *)(local_d0[0] + 0x780);\n          if (uVar14 == 0) {\n            moVersionManager_c::get();\n            uVar14 = moVersionManager_c::getCurrentFileVerion();\n          }\n          if (0x681 < uVar14) {\n            pmVar6 = (mgPoint_c *)(param_1 + 0x820);\n            (**(code **)(*(longlong *)pmVar6 + 0x28))(pmVar6,param_2);\n          }\n        }\n        else {\n          puVar3 = *(undefined8 **)(*(longlong *)(param_1 + 0x58) + 8);\n          while (puVar3 != (undefined8 *)0x0) {\n            pCVar1 = (CObject *)puVar3[2];\n            puVar3 = (undefined8 *)*puVar3;\n            pmVar6 = (mgPoint_c *)pCVar1;\n            iVar4 = (**(code **)(*(longlong *)pCVar1 + 0xc18))();\n            if (iVar4 != 0) {\n              pmVar6 = (mgPoint_c *)(param_1 + 0x820);\n              su_CObArray::SetAtGrow((su_CObArray *)pmVar6,*(int *)(param_1 + 0x830),pCVar1);\n            }\n          }\n        }\n        if (local_d0[0] != 0) {\n          uVar14 = *(uint *)(local_d0[0] + 0x780);\n          if (uVar14 == 0) {\n            moVersionManager_c::get();\n            uVar14 = moVersionManager_c::getCurrentFileVerion();\n          }\n          if (uVar14 < 0x70b) {\n            *(undefined4 *)(param_1 + 0x9b8) = 1;\n          }\n          else {\n            (**(code **)(*(longlong *)(param_1 + 0x840) + 0x28))(param_1 + 0x840,param_2);\n            pmVar6 = (mgPoint_c *)param_2;\n            su_CArchive::operator>>(param_2,(long *)(param_1 + 0x9b8));\n          }\n          if (local_d0[0] != 0) {\n            uVar14 = *(uint *)(local_d0[0] + 0x780);\n            if (uVar14 == 0) {\n              moVersionManager_c::get();\n              uVar14 = moVersionManager_c::getCurrentFileVerion();\n            }\n            if (uVar14 < 0x7f7) {\n              pCVar1 = *(CObject **)(param_1 + 0x800);\n              pmVar10 = pmVar13;\n              if (pCVar1 != (CObject *)0x0) {\n                pCVar9 = moCompFace_c::GetRuntimeClass((moCompFace_c *)pmVar6);\n                iVar4 = CObject::IsKindOf(pCVar1,pCVar9);\n                if (iVar4 != 0) {\n                  local_c0 = su_CObject::operator_new(0xe0);\n                  if (local_c0 == (mgPlane_c *)0x0) {\n                    pmVar10 = (mgPlane_c *)0x0;\n                  }\n                  else {\n                    pmVar10 = (mgPlane_c *)\n                              moSingleFaceRef_w::moSingleFaceRef_w\n                                        ((moSingleFaceRef_w *)local_c0,\n                                         *(moCompRef_c **)(param_1 + 0x800),(moComponent_c *)0x0);\n                  }\n                }\n              }\n              *(mgPlane_c **)(param_1 + 0x9a0) = pmVar10;\n            }\n            else {\n              operator>>(param_2,(moSurfaceRef_w **)(param_1 + 0x9a0));\n              operator>>(param_2,(moMatrixIndexHelper_c **)(param_1 + 0x9c8));\n              su_CArchive::operator>>(param_2,local_d8);\n              *(uint *)(param_1 + 0x9b4) = (uint)local_d8[0];\n              su_CArchive::operator>>(param_2,(long *)(param_1 + 0x9bc));\n              su_CArchive::operator>>(param_2,local_d8);\n              *(uint *)(param_1 + 0x9f0) = (uint)local_d8[0];\n            }\n            if (local_d0[0] != 0) {\n              uVar14 = *(uint *)(local_d0[0] + 0x780);\n              if (uVar14 == 0) {\n                moVersionManager_c::get();\n                uVar14 = moVersionManager_c::getCurrentFileVerion();\n              }\n              if (0xb71 < uVar14) {\n                su_CArchive::operator>>(param_2,local_d8);\n                uVar5 = (uint)local_d8[0];\n              }\n              *(uint *)(param_1 + 0x9c0) = uVar5;\n              if (local_d0[0] != 0) {\n                uVar5 = *(uint *)(local_d0[0] + 0x780);\n                if (uVar5 == 0) {\n                  moVersionManager_c::get();\n                  uVar5 = moVersionManager_c::getCurrentFileVerion();\n                }\n                uVar11 = 0;\n                uVar14 = uVar11;\n                if (0xba7 < uVar5) {\n                  su_CArchive::operator>>(param_2,local_d8);\n                  uVar14 = (uint)local_d8[0];\n                }\n                *(uint *)(param_1 + 0x9c4) = uVar14;\n                su_CObArray::su_CObArray((su_CObArray *)&local_b8);\n                local_b8 = suObArray::vftable;\n                pmVar10 = pmVar13;\n                pmVar8 = pmVar13;\n                if (0 < *(int *)(param_1 + 0x830)) {\n                  do {\n                    pCVar1 = *(CObject **)(pmVar10 + *(longlong *)(param_1 + 0x828));\n                    if ((pCVar1 != (CObject *)0x0) &&\n                       (iVar4 = (**(code **)(*(longlong *)pCVar1 + 0x1958))(pCVar1,0), iVar4 != 0))\n                    {\n                      suObArray::addUnique((suObArray *)&local_b8,pCVar1);\n                    }\n                    uVar5 = (int)pmVar8 + 1;\n                    pmVar10 = pmVar10 + 8;\n                    pmVar8 = (mgPlane_c *)(ulonglong)uVar5;\n                  } while ((int)uVar5 < *(int *)(param_1 + 0x830));\n                }\n                pmVar10 = pmVar13;\n                pmVar8 = pmVar13;\n                if (0 < local_a8) {\n                  do {\n                    suObArray::remove((suObArray *)(param_1 + 0x820),\n                                      *(CObject **)(pmVar8 + local_b0),0);\n                    uVar5 = (int)pmVar10 + 1;\n                    pmVar10 = (mgPlane_c *)(ulonglong)uVar5;\n                    pmVar8 = pmVar8 + 8;\n                  } while ((int)uVar5 < local_a8);\n                }\n                if (local_d0[0] != 0) {\n                  uVar5 = *(uint *)(local_d0[0] + 0x780);\n                  if (uVar5 == 0) {\n                    moVersionManager_c::get();\n                    uVar5 = moVersionManager_c::getCurrentFileVerion();\n                  }\n                  if (0x2f86 < uVar5) {\n                    (**(code **)(*(longlong *)(param_1 + 0x880) + 0x28))(param_1 + 0x880,param_2);\n                  }\n                  if (local_d0[0] != 0) {\n                    uVar5 = *(uint *)(local_d0[0] + 0x780);\n                    if (uVar5 == 0) {\n                      moVersionManager_c::get();\n                      uVar5 = moVersionManager_c::getCurrentFileVerion();\n                    }\n                    if (0x2f93 < uVar5) {\n                      FUN_4bb17e10(param_1 + 0x8c8,param_2);\n                    }\n                    if (local_d0[0] != 0) {\n                      uVar5 = *(uint *)(local_d0[0] + 0x780);\n                      if (uVar5 == 0) {\n                        moVersionManager_c::get();\n                        uVar5 = moVersionManager_c::getCurrentFileVerion();\n                      }\n                      if (0x3745 < uVar5) {\n                        su_CArchive::operator>>(param_2,local_d8);\n                        uVar11 = (uint)local_d8[0];\n                      }\n                      *(uint *)(param_1 + 0x9b0) = uVar11;\n                      if (local_d0[0] != 0) {\n                        uVar5 = *(uint *)(local_d0[0] + 0x780);\n                        if (uVar5 == 0) {\n                          moVersionManager_c::get();\n                          uVar5 = moVersionManager_c::getCurrentFileVerion();\n                        }\n                        if (uVar5 < 0x3746) {\n                          *(moSurfaceRef_w **)(param_1 + 0x9a8) = (moSurfaceRef_w *)0x0;\n                        }\n                        else {\n                          operator>>(param_2,(moSurfaceRef_w **)(param_1 + 0x9a8));\n                        }\n                        if (local_d0[0] != 0) {\n                          uVar5 = *(uint *)(local_d0[0] + 0x780);\n                          if (uVar5 == 0) {\n                            moVersionManager_c::get();\n                            uVar5 = moVersionManager_c::getCurrentFileVerion();\n                          }\n                          if ((0x3760 < uVar5) &&\n                             (su_CArchive::operator>>(param_2,&local_d4), local_d4 != 0)) {\n                            mgPoint_c::mgPoint_c((mgPoint_c *)local_78);\n                            mgUnitVector_c::mgUnitVector_c((mgUnitVector_c *)local_60);\n                            mgPoint_c::restore((mgPoint_c *)local_78,param_2);\n                            mgVector_c::restore((mgVector_c *)local_60,param_2);\n                            if (*(mgPlane_c **)(param_1 + 0x818) == (mgPlane_c *)0x0) {\n                              pmVar10 = operator_new(0x38);\n                              local_c0 = pmVar10;\n                              if (pmVar10 != (mgPlane_c *)0x0) {\n                                mgPlane_c::mgPlane_c\n                                          (pmVar10,(mgPoint_c *)local_78,(mgUnitVector_c *)local_60)\n                                ;\n                                *(undefined ***)pmVar10 = mgPlane_c::vftable;\n                                pmVar13 = pmVar10;\n                              }\n                              *(mgPlane_c **)(param_1 + 0x818) = pmVar13;\n                            }\n                            else {\n                              mgPlane_c::setRootPoint\n                                        (*(mgPlane_c **)(param_1 + 0x818),(mgPoint_c *)local_78);\n                              mgPlane_c::setNormal\n                                        (*(mgPlane_c **)(param_1 + 0x818),(mgUnitVector_c *)local_60\n                                        );\n                            }\n                            mgVector_c::~mgVector_c((mgVector_c *)local_60);\n                            mgPoint_c::~mgPoint_c((mgPoint_c *)local_78);\n                          }\n                          su_CObArray::~su_CObArray((su_CObArray *)&local_b8);\n                          goto LAB_4bb2ccb3;\n                        }\n                      }\n                    }\n                  }\n                }\n                    /* WARNING: Subroutine does not return */\n                AfxThrowFileException(1,-1,(wchar_t *)0x0);\n              }\n            }\n          }\n        }\n      }\n    }\n                    /* WARNING: Subroutine does not return */\n    AfxThrowFileException(1,-1,(wchar_t *)0x0);\n  }\n  if (local_d0[0] != 0) {\n    uVar5 = *(uint *)(local_d0[0] + 0x780);\n    if (uVar5 == 0) {\n      moVersionManager_c::get();\n      uVar5 = moVersionManager_c::getCurrentFileVerion();\n    }\n    if (uVar5 < 0x7f7) {\n      operator<<(param_2,(moCompFace_c **)(param_1 + 0x800));\n    }\n    else {\n      operator<<(param_2,(CObject *)0x0);\n    }\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x808));\n    lVar2 = *(longlong *)(param_1 + 0x810);\n    su_CArchive::operator<<(param_2,(uint)(lVar2 != 0));\n    if (lVar2 != 0) {\n      pmVar6 = mgPlane_c::rootPoint(*(mgPlane_c **)(param_1 + 0x810));\n      mgPoint_c::save(pmVar6,param_2);\n      pmVar7 = mgPlane_c::normal(*(mgPlane_c **)(param_1 + 0x810));\n      mgVector_c::save((mgVector_c *)pmVar7,param_2);\n    }\n    if (local_d0[0] != 0) {\n      uVar5 = *(uint *)(local_d0[0] + 0x780);\n      if (uVar5 == 0) {\n        moVersionManager_c::get();\n        uVar5 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if ((0x681 < uVar5) && (*(int *)(local_d0[0] + 0x834) == 0)) {\n        (**(code **)(*(longlong *)(param_1 + 0x820) + 0x28))(param_1 + 0x820,param_2);\n      }\n      if (local_d0[0] != 0) {\n        uVar5 = *(uint *)(local_d0[0] + 0x780);\n        if (uVar5 == 0) {\n          moVersionManager_c::get();\n          uVar5 = moVersionManager_c::getCurrentFileVerion();\n        }\n        if (0x70a < uVar5) {\n          (**(code **)(*(longlong *)(param_1 + 0x840) + 0x28))(param_1 + 0x840,param_2);\n          su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x9b8));\n        }\n        if (local_d0[0] != 0) {\n          uVar5 = *(uint *)(local_d0[0] + 0x780);\n          if (uVar5 == 0) {\n            moVersionManager_c::get();\n            uVar5 = moVersionManager_c::getCurrentFileVerion();\n          }\n          if (0x7f6 < uVar5) {\n            operator<<(param_2,(moSurfaceRef_w **)(param_1 + 0x9a0));\n            operator<<(param_2,(moMatrixIndexHelper_c **)(param_1 + 0x9c8));\n            su_CArchive::operator<<(param_2,(uchar)param_1[0x9b4]);\n            su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x9bc));\n            su_CArchive::operator<<(param_2,(uchar)param_1[0x9f0]);\n          }\n          su_CArchive::operator<<(param_2,(uchar)param_1[0x9c0]);\n          su_CArchive::operator<<(param_2,(uchar)param_1[0x9c4]);\n          (**(code **)(*(longlong *)(param_1 + 0x880) + 0x28))(param_1 + 0x880,param_2);\n          su_CArchive::operator<<\n                    (param_2,(long)(*(longlong *)(param_1 + 0x8d0) - *(longlong *)(param_1 + 0x8c8)\n                                   >> 2));\n          plVar12 = *(long **)(param_1 + 0x8c8);\n          if (plVar12 != *(long **)(param_1 + 0x8d0)) {\n            do {\n              su_CArchive::operator<<(param_2,*plVar12);\n              plVar12 = plVar12 + 1;\n            } while (plVar12 != *(long **)(param_1 + 0x8d0));\n          }\n          su_CArchive::operator<<(param_2,(uchar)param_1[0x9b0]);\n          operator<<(param_2,(moSurfaceRef_w **)(param_1 + 0x9a8));\n          lVar2 = *(longlong *)(param_1 + 0x818);\n          su_CArchive::operator<<(param_2,(uint)(lVar2 != 0));\n          if (lVar2 != 0) {\n            pmVar6 = mgPlane_c::rootPoint(*(mgPlane_c **)(param_1 + 0x818));\n            mgPoint_c::save(pmVar6,param_2);\n            pmVar7 = mgPlane_c::normal(*(mgPlane_c **)(param_1 + 0x818));\n            mgVector_c::save((mgVector_c *)pmVar7,param_2);\n          }\nLAB_4bb2ccb3:\n          su_CObArray::~su_CObArray((su_CObArray *)&local_98);\n          return;\n        }\n      }\n    }\n  }\n                    /* WARNING: Subroutine does not return */\n  AfxThrowFileException(1,-1,(wchar_t *)0x0);\n}\n\n"
+      },
+      "0x4c27f890": {
+        "end": "0x4c27f920",
+        "native_bytes": "48895c24084889742410574883ec20488bfa488bd9ff1565f0ab00488bcfff153cefab004c8b4310488d4b10488bd785c0742e41ff5028488b4330488d4b30488bd7ff50288b5308488bcf488b5c2430488b7424384883c4205f48ff250fefab0041ff5028488b4330488d4b30488bd7ff5028488d5308488bcf488b5c2430488b7424384883c4205f48ff25e8eeab00",
+        "sha256": "2a5755a958b853784aff53238eb1c344d7fbe8e926d9b2ee8d8fbf3ba49f9047",
+        "imports": [
+          {
+            "call_va": "0x4c27f8a5",
+            "iat": "0x4cd3e910",
+            "module": "swccu.dll",
+            "symbol": "?Serialize@su_CObject@@UEAAXAEAVsu_CArchive@@@Z",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 36,
+            "lookup_bytes": "fcb8940200000000"
+          },
+          {
+            "call_va": "0x4c27f8ae",
+            "iat": "0x4cd3e7f0",
+            "module": "swccu.dll",
+            "symbol": "?IsStoring@su_CArchive@@QEBAHXZ",
+            "descriptor_bytes": "c8ab8f0200000000000000007afa9402f0e7bd01",
+            "lookup_index": 0,
+            "lookup_bytes": "52b3940200000000"
+          }
+        ],
+        "decompilation": "\nvoid FUN_4c27f890(su_CObject *param_1,su_CArchive *param_2)\n\n{\n  int iVar1;\n  \n  su_CObject::Serialize(param_1,param_2);\n  iVar1 = su_CArchive::IsStoring(param_2);\n  if (iVar1 != 0) {\n    (**(code **)(*(longlong *)(param_1 + 0x10) + 0x28))();\n    (**(code **)(*(longlong *)(param_1 + 0x30) + 0x28))(param_1 + 0x30,param_2);\n                    /* WARNING: Could not recover jumptable at 0x4c27f8ea. Too many branches */\n                    /* WARNING: Treating indirect jump as call */\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 8));\n    return;\n  }\n  (**(code **)(*(longlong *)(param_1 + 0x10) + 0x28))(param_1 + 0x10,param_2);\n  (**(code **)(*(longlong *)(param_1 + 0x30) + 0x28))(param_1 + 0x30,param_2);\n                    /* WARNING: Could not recover jumptable at 0x4c27f919. Too many branches */\n                    /* WARNING: Treating indirect jump as call */\n  su_CArchive::operator>>(param_2,(long *)(param_1 + 8));\n  return;\n}\n\n"
+      },
+      "0x4bb170e0": {
+        "end": "0x4bb1710e",
+        "native_bytes": "4883ec28b9f8090000ff154177220148894424304885c0740e488bc8e83ff41d00904883c428c333c04883c428c3",
+        "sha256": "45dc9e9629d6f7e97bcdb7401624661196e9729d4094921795899f3b1059f010",
+        "decompilation": "\nundefined8 FUN_4bb170e0(void)\n\n{\n  void *pvVar1;\n  undefined8 uVar2;\n  \n  pvVar1 = su_CObject::operator_new(0x9f8);\n  if (pvVar1 != (void *)0x0) {\n    uVar2 = FUN_4bcf6540(pvVar1);\n    return uVar2;\n  }\n  return 0;\n}\n\n"
+      },
+      "0x4bcf6540": {
+        "end": "0x4bcf6690",
+        "native_bytes": "48894c2408535556574883ec38488bf9e89b05a9ff90488d05eb9a2f01488907488d0511c12f0148898788000000488d9f2008000048895c2468488bcbff150583040190488d2d9571090148892b488d9f4008000048895c2470488bcbff15e58204019048892b488d9f6008000048895c2478488bcbff15cc8204019048892b488d8f80080000ba0a000000ff155ee703019033f64889b7c80800004889b7d00800004889b7d8080000488d8fe0080000e8ea4873ff904889b710090000488d8f18090000ff15cd4f0401904889b7a00900004889b7a80900004889b7c8090000488d9fd009000048895c2420488bcbff15528204019048892b4889b7b009000048c787b8090000010000004889b7f009000048c787c0090000010000004889b700080000c78708080000010000004889b7100800004889b7a00900004889b718080000488bc74883c4385f5e5d5bc3",
+        "sha256": "de403e4bbe7716ba9896c09d3d3117433cac54ffc68702d2ae47ec1f714dd9b9",
+        "decompilation": "\nmoBodyFeature_c * FUN_4bcf6540(moBodyFeature_c *param_1)\n\n{\n  moBodyFeature_c::moBodyFeature_c(param_1);\n  *(undefined ***)param_1 = moMirrorSolid_c::vftable;\n  *(undefined ***)(param_1 + 0x88) = moMirrorSolid_c::vftable;\n  su_CObArray::su_CObArray((su_CObArray *)(param_1 + 0x820));\n  *(undefined ***)(param_1 + 0x820) = suObArray::vftable;\n  su_CObArray::su_CObArray((su_CObArray *)(param_1 + 0x840));\n  *(undefined ***)(param_1 + 0x840) = suObArray::vftable;\n  su_CObArray::su_CObArray((su_CObArray *)(param_1 + 0x860));\n  *(undefined ***)(param_1 + 0x860) = suObArray::vftable;\n  suObList::suObList((suObList *)(param_1 + 0x880),10);\n  *(undefined8 *)(param_1 + 0x8c8) = 0;\n  *(undefined8 *)(param_1 + 0x8d0) = 0;\n  *(undefined8 *)(param_1 + 0x8d8) = 0;\n  FUN_4b42aee0(param_1 + 0x8e0);\n  *(undefined8 *)(param_1 + 0x910) = 0;\n  mgXform_c::mgXform_c((mgXform_c *)(param_1 + 0x918));\n  *(undefined8 *)(param_1 + 0x9a0) = 0;\n  *(undefined8 *)(param_1 + 0x9a8) = 0;\n  *(undefined8 *)(param_1 + 0x9c8) = 0;\n  su_CObArray::su_CObArray((su_CObArray *)(param_1 + 0x9d0));\n  *(undefined ***)(param_1 + 0x9d0) = suObArray::vftable;\n  *(undefined8 *)(param_1 + 0x9b0) = 0;\n  *(undefined8 *)(param_1 + 0x9b8) = 1;\n  *(undefined8 *)(param_1 + 0x9f0) = 0;\n  *(undefined8 *)(param_1 + 0x9c0) = 1;\n  *(undefined8 *)(param_1 + 0x800) = 0;\n  *(undefined4 *)(param_1 + 0x808) = 1;\n  *(undefined8 *)(param_1 + 0x810) = 0;\n  *(undefined8 *)(param_1 + 0x9a0) = 0;\n  *(undefined8 *)(param_1 + 0x818) = 0;\n  return param_1;\n}\n\n"
+      },
+      "0x4bb17e10": {
+        "end": "0x4bb17ebe",
+        "native_bytes": "48895c24084889742410574883ec20488bf2488bd9488bce488d542440ff15d56922018b4c244085c97426488b4310482b0348c1f80248894c2448483bc87611488d542448488bcbe8835690ff8b4c244033ff85c97447660f1f840000000000488d542448488bceff158a692201488b5308483b5310740d8b44244889024883430804eb0d4c8d442448488bcbe8fee377ff8b44244048ffc7483bf872c2488b5c2430488b7424384883c4205fc3",
+        "sha256": "c8e86982583feb55b9b492e53e72d52635d8ba971a9e59dd25d75ace7bd378ba",
+        "decompilation": "\nvoid FUN_4bb17e10(longlong *param_1,su_CArchive *param_2)\n\n{\n  undefined4 *puVar1;\n  ulonglong uVar2;\n  uint local_res18 [2];\n  ulonglong local_res20;\n  \n  su_CArchive::operator>>(param_2,(long *)local_res18);\n  uVar2 = (ulonglong)local_res18[0];\n  if ((local_res18[0] != 0) &&\n     (local_res20 = uVar2, (ulonglong)(param_1[2] - *param_1 >> 2) < uVar2)) {\n    FUN_4b41d4e0(param_1,&local_res20);\n  }\n  uVar2 = 0;\n  if (local_res18[0] != 0) {\n    do {\n      su_CArchive::operator>>(param_2,(long *)&local_res20);\n      puVar1 = (undefined4 *)param_1[1];\n      if (puVar1 == (undefined4 *)param_1[2]) {\n        FUN_4b2962a0(param_1,puVar1,&local_res20);\n      }\n      else {\n        *puVar1 = (undefined4)local_res20;\n        param_1[1] = param_1[1] + 4;\n      }\n      uVar2 = uVar2 + 1;\n    } while (uVar2 < local_res18[0]);\n  }\n  return;\n}\n\n"
+      },
+      "0x4c26fdc0": {
+        "end": "0x4c26fdee",
+        "native_bytes": "4883ec28b950000000ff1561eaac0048894424304885c0740e488bc8e86f5450ff904883c428c333c04883c428c3",
+        "sha256": "14e3eb8c90284236a2e28e7045a9c7cf4b4bdc60dba7ef9fdc84398f6e1a5bc3",
+        "decompilation": "\nundefined8 FUN_4c26fdc0(void)\n\n{\n  void *pvVar1;\n  undefined8 uVar2;\n  \n  pvVar1 = su_CObject::operator_new(0x50);\n  if (pvVar1 != (void *)0x0) {\n    uVar2 = FUN_4b775250(pvVar1);\n    return uVar2;\n  }\n  return 0;\n}\n\n"
+      },
+      "0x4b775250": {
+        "end": "0x4b7752bf",
+        "native_bytes": "48894c24085356574883ec20488bf9ff15bb955c0190488d0583257101488907488d05812c7101488907488d5f1048895c2448488bcbff15fc955c0190488d358c846101488933488d5f3048895c2450488bcbff15df955c0190488933c7470801000000488bc74883c4205f5e5bc3",
+        "sha256": "452f35b5281e18ad80b4eca43004a0ecde9b44161c8a2bd17f95e46a9163eda6",
+        "decompilation": "\nsu_CObject * FUN_4b775250(su_CObject *param_1)\n\n{\n  su_CObject::su_CObject(param_1);\n  *(undefined ***)param_1 = moBaseBodyChooser_c::vftable;\n  *(undefined ***)param_1 = moMatrixIndexHelper_c::vftable;\n  su_CObArray::su_CObArray((su_CObArray *)(param_1 + 0x10));\n  *(undefined ***)(param_1 + 0x10) = suObArray::vftable;\n  su_CObArray::su_CObArray((su_CObArray *)(param_1 + 0x30));\n  *(undefined ***)(param_1 + 0x30) = suObArray::vftable;\n  *(undefined4 *)(param_1 + 8) = 1;\n  return param_1;\n}\n\n"
+      }
+    },
+    "body_feature_base": {
+      "rtti": {
+        "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+        "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+        "tables": [
+          {
+            "class_name": "moBodyFeature_c",
+            "object_offset": 0,
+            "locator": "0x4d316920",
+            "vftable": "0x4ce88548",
+            "slots": [
+              "0x4bb15b70",
+              "0x4b7877d0",
+              "0x4cba273f",
+              "0x4b29dae0",
+              "0x4b29dae0",
+              "0x4bb20fa0",
+              "0x4b7a8f10",
+              "0x4b29dae0"
+            ]
+          },
+          {
+            "class_name": "moBodyFeature_c",
+            "object_offset": 136,
+            "locator": "0x4d316948",
+            "vftable": "0x4ce8ab70",
+            "slots": [
+              "0x4b787878",
+              "0x4b2a53f0",
+              "0x4b2a5480",
+              "0x4b29c5a0",
+              "0x4beb0ed0",
+              "0x4beb28f0",
+              "0x4b29c5a0",
+              "0x4d316970"
+            ]
+          }
+        ]
+      },
+      "target": "0x4bb20fa0",
+      "hooks": {
+        "0x4b8": "0x4c189b60",
+        "0x4c0": "0x4c18a920"
+      }
+    },
+    "factory": {
+      "descriptor_va": "0x4dad3d50",
+      "descriptor_bytes": "20b3de4c00000000f809000001000080e070b14b00000000705bb14b000000000000000000000000",
+      "creator": "0x4bb170e0",
+      "constructor": "0x4bcf6540",
+      "direct_members": {
+        "0x820": "suObArray",
+        "0x840": "suObArray",
+        "0x880": "suObList"
+      }
+    },
+    "matrix_helper_factory": {
+      "descriptor_va": "0x4daede20",
+      "descriptor_bytes": "b893134d000000005000000001000080c0fd264c00000000c0f9264c000000000000000000000000",
+      "creator": "0x4c26fdc0",
+      "constructor": "0x4b775250",
+      "direct_members": {
+        "0x10": "suObArray",
+        "0x30": "suObArray"
+      }
+    },
+    "uint_array": {
+      "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmfcu.dll",
+      "sha256": "9ab6733de9a90a1564f671f83b9298c3ed15f205a359849d6b2fd68c90e95290",
+      "rtti": {
+        "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmfcu.dll",
+        "sha256": "9ab6733de9a90a1564f671f83b9298c3ed15f205a359849d6b2fd68c90e95290",
+        "tables": [
+          {
+            "class_name": "suUIntArray",
+            "object_offset": 0,
+            "locator": "0x3cf82f60",
+            "vftable": "0x3cf2ee20",
+            "slots": [
+              "0x3cb7a2f0",
+              "0x3cb79d20",
+              "0x3cd606d5",
+              "0x3c9fc9c0",
+              "0x3c9fc9c0",
+              "0x3cb7a630",
+              "0x3cd606c9",
+              "0x3cd606c3"
+            ]
+          }
+        ]
+      },
+      "locator_bytes": "010000000000000000000000b0cc7600882f5b00602f5b00",
+      "end": "0x3cb7a715",
+      "native_bytes": "48895c24084889742410574883ec20488bf9488bda488bcaff1562ed240085c0744e33f6488bcb483977080f4577108bd6ff15d1ed24008b5718488bcbff15c5ed240085f60f8e8a000000488b5708448d04b500000000488bcb488b5c2430488b7424384883c4205f48ff2570ed2400488bcfff1597e8240033f6488d542440488bcb8974244089742448ff1567ed2400488d542448488bcbff1559ed2400448b442448488bcf8b542440ff15e7ee2400448b4424404585c07e1a488b57084885d27411468d048500000000488bcbff1513ed2400488b5c2430488b7424384883c4205fc3",
+      "decompilation": "\nvoid _Serialize_suUIntArray__UEAAXAEAVsu_CArchive___Z(longlong param_1,undefined8 param_2)\n\n{\n  int iVar1;\n  int aiStackX_18 [2];\n  undefined4 auStackX_20 [2];\n  \n                    /* 0x1aa630  3491  ?Serialize@suUIntArray@@UEAAXAEAVsu_CArchive@@@Z */\n  iVar1 = _IsStoring_su_CArchive__QEBAHXZ(param_2);\n  if (iVar1 == 0) {\n    _RemoveAll_su_CUIntArray__QEAAXXZ(param_1);\n    aiStackX_18[0] = 0;\n    auStackX_20[0] = 0;\n    __5su_CArchive__QEAAAEAV0_AEAH_Z(param_2,aiStackX_18);\n    __5su_CArchive__QEAAAEAV0_AEAH_Z(param_2,auStackX_20);\n    _SetSize_su_CUIntArray__QEAAXHH_Z(param_1,aiStackX_18[0],auStackX_20[0]);\n    if ((0 < aiStackX_18[0]) && (*(longlong *)(param_1 + 8) != 0)) {\n      _Read_su_CArchive__QEAAIPEAXI_Z(param_2,*(longlong *)(param_1 + 8),aiStackX_18[0] * 4);\n    }\n  }\n  else {\n    iVar1 = 0;\n    if (*(longlong *)(param_1 + 8) != 0) {\n      iVar1 = *(int *)(param_1 + 0x10);\n    }\n    __6su_CArchive__QEAAAEAV0_H_Z(param_2,iVar1);\n    __6su_CArchive__QEAAAEAV0_H_Z(param_2,*(undefined4 *)(param_1 + 0x18));\n    if (0 < iVar1) {\n                    /* WARNING: Could not recover jumptable at 0x3cb7a699. Too many branches */\n                    /* WARNING: Treating indirect jump as call */\n      _Write_su_CArchive__QEAAXPEBXI_Z(param_2,*(undefined8 *)(param_1 + 8),iVar1 * 4);\n      return;\n    }\n  }\n  return;\n}\n\n",
+      "grammar": "i32 count, i32 growth, count u32 values; not packed ReadCount"
+    },
+    "limitations": [
+      "Ordinary non-DB external-XML v>27CB, archive reuse state +834 clear only",
+      "Stored words/bytes and plane data retained before runtime normalization",
+      "No full document/project bit coverage claim"
+    ]
+  }
+}

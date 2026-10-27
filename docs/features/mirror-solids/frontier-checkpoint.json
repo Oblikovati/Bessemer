@@ -1,0 +1,80 @@
+{
+  "cases": 906,
+  "previous_complete": 736,
+  "complete": 740,
+  "explicit_stops": 166,
+  "new_complete": [
+    151,
+    155,
+    687,
+    688
+  ],
+  "changed": [
+    {
+      "index": 37,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"suUIntArray\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moCombineBodies_c\" schema 1; expected an implemented complete model object body"
+      ]
+    },
+    {
+      "index": 151,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moMirrorSolid_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    },
+    {
+      "index": 155,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moMirrorSolid_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    },
+    {
+      "index": 611,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moMirrorSolid_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moSewRefSurface_c\" schema 1; expected an implemented complete model object body"
+      ]
+    },
+    {
+      "index": 687,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moMirrorSolid_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    },
+    {
+      "index": 688,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moMirrorSolid_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    }
+  ]
+}

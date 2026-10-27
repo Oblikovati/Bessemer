@@ -216,6 +216,9 @@ mod manager_oracle_tests;
 #[path = "../../tests/resolved_features/mirror_patterns.rs"]
 mod mirror_pattern_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/mirror_solids.rs"]
+mod mirror_solid_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/model_references.rs"]
 mod model_reference_tests;
 #[cfg(test)]
