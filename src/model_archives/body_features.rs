@@ -202,6 +202,8 @@ pub(super) const CLASSES: &[&str] = &[
     "moCutThin_c",
     "moRevolutionThin_c",
     "moRib_c",
+    // #54 / C-272 proves the concrete deleted-face feature inherits this atom-owner contract.
+    "moDelFace_c",
     "moRefGeom_c",
     "moRefPlane_c",
     // #46 / C-174: the axis constructor inherits moRefGeom_c and its atom-owner contract.

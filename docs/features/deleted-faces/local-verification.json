@@ -1,0 +1,67 @@
+{
+  "issue": 54,
+  "base_revision": "fd4b3b432339f4e4a265d2f303f331d4af0edf24",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "native_module_verified": {
+    "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldMoPartu.dll",
+    "sha256": "2201edfa07b1a7484acedb6db4600fa7a00e55b16090a03b92fe7d9b14cb2128"
+  },
+  "native_body_hashes_verified": [
+    {
+      "address": "0x18025c520",
+      "sha256": "790f07ad776afe2d5dce15a95407cac7bd00033e24bdfcc7f312bc55c3161b9a"
+    },
+    {
+      "address": "0x18025bf90",
+      "sha256": "0ebc6c80900d9c34faa1466520fb75f0d32d1536226134e353954d95cb3718b0"
+    },
+    {
+      "address": "0x18025c040",
+      "sha256": "0e000b9f549e16cfab7d529c9bb3928c0d34d685e02fa063c7366d3482d56ce4"
+    },
+    {
+      "address": "0x18025c130",
+      "sha256": "60064cb3928ca737a289b8c04e6dcbc54cabfd5418e96b0b5822d71152969814"
+    },
+    {
+      "address": "0x18025c680",
+      "sha256": "b6273b372cc7b97421be8c0ad1fbbcd1a5eb8b8dba2e7b71bcbad1a8b1524a3c"
+    },
+    {
+      "address": "0x18025c6ad",
+      "sha256": "6537abc8efa149a8cf575fef49cb1746eb5b1da1030dde1790402114c00ba401"
+    }
+  ],
+  "artifact_sha256": "e45b49ca5889797739a8c4ba512f46ce5f3cd890b5720a114a43e6c588a630de",
+  "fixture_graphs": 108,
+  "primitive_reads": 15396,
+  "owned_streams": 14,
+  "checks": {
+    "focused": "8 passed",
+    "public": "3 passed",
+    "python_regeneration": "2 passed",
+    "cargo_xtask_pr": "passed; 788 library tests, 4 xtask tests, all integrations, 274 doctests, 3 explicit external-fixture tests ignored",
+    "native_processes": "two fresh processes matched all 906 outcomes and causes; both exit 101 only for the aggregate 803/906 completeness assertion"
+  },
+  "previous_complete": 801,
+  "complete": 803,
+  "newly_complete": [
+    110,
+    338
+  ],
+  "no_prior_success_lost": true,
+  "independent_feature_bytes": 52340481,
+  "source_snapshot": "1b2784afda788c87bd179390fe8da225c91afb9bd5acb634d29a57e7c5c8f877",
+  "source_python_files": 1437,
+  "native_sentinel_configurations": 4,
+  "native_deleted_roots": 4,
+  "native_deleted_root_bytes": 65197,
+  "exclusions": [
+    "103 native cases remain explicit failures",
+    "Cases 353, 746, 747 and 748 advance to later explicit failures without completion credit",
+    "Case 353 exposes a further reference_78/moSolidRef_w role rejection under Bug #46",
+    "Historical contexts, engineering meanings, geometry validity, application acceptance and all-schema parity remain incomplete",
+    "Humanizer unavailable; maintainer prose review remains open"
+  ]
+}

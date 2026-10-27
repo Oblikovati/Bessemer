@@ -439,3 +439,7 @@ mod thin_extrusion_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/three_point_plane_roles.rs"]
 mod three_point_plane_role_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/deleted_faces.rs"]
+mod deleted_face_tests;
