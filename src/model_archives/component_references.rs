@@ -5,6 +5,15 @@ use crate::archive_codec::{MaterialRead, ObjectReader};
 pub(super) const FEATURE_CLASSES: &[&str] =
     &["moCompFeature_c", "moCompBodyFeature_c", "moCompProfile_c"];
 
+const GEOMETRY_CLASSES: &[&str] = &[
+    "moRefGeom_c",
+    "moRefPlane_c",
+    "moRefAxis_c",
+    "moRefPoint_c",
+    // #46 / C-198: the coordinate-system serializer inherits moRefGeom_c.
+    "moCoordSys_c",
+];
+
 pub(super) fn reference_plane(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     feature(reader, map)?;
     reader.object(
@@ -24,7 +33,7 @@ pub(super) fn reference_geometry(
     reader.object(
         "reference_geometry",
         map,
-        ModelObjectRole::Declared(&["moRefGeom_c", "moRefPlane_c", "moRefAxis_c", "moRefPoint_c"]),
+        ModelObjectRole::Declared(GEOMETRY_CLASSES),
     )?;
     Ok(())
 }
