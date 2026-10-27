@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- Fixed reference-plane point roles rejecting documented endpoint and loft-sync subclasses for fresh and cached pointers. (#46)
+
 ### Added
 
 - Added ordinary blend and blend-cut reading, field editing and writing with independent count retention, complete numeric columns and distinct direction/dimension conditions. (#54)

@@ -169,6 +169,8 @@ ordered pairs and typed raw compressed kernel bodies.
 typed transforms, shared property records and direct byte arrays.
 [Blends and blend cuts](docs/features/blends/README.md) preserve independent counts,
 numeric columns and conditional direction and dimension references.
+[Reference-plane point roles](docs/features/plane-point-roles/README.md) accept
+the documented point-reference family while retaining unrelated-class rejection.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 

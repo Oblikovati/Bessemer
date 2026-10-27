@@ -77,7 +77,7 @@ fn projection(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<(
         reader,
         map,
         "point_reference_20",
-        &["moPointRef_w", "moEndPointRef_w", "moLoftSynchRef_c"],
+        super::geometric_references::POINT_REFERENCE_CLASSES,
     )?;
     declared(reader, map, "plane_reference_28", &["moPlaneRef_w"])
 }

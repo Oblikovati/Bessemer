@@ -225,6 +225,9 @@ mod part_archive_tests;
 #[path = "../../tests/resolved_features/planar_surface_records.rs"]
 mod planar_surface_record_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/plane_point_roles.rs"]
+mod plane_point_role_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/polyline_records.rs"]
 mod polyline_record_tests;
 #[cfg(test)]

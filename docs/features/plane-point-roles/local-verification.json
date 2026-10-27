@@ -1,0 +1,199 @@
+{
+  "base_revision": "030d35dbb01588628a0aec55aac7c30d9532e00b",
+  "issue": 46,
+  "issue_type": "Bug",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "regression": {
+    "before_passed": 3,
+    "before_failed": 2,
+    "after_passed": 5,
+    "after_failed": 0,
+    "before_log_sha256": "e2b06fe71c49e7046485d0c55b63f98bd3317ec29c0ca952bd427664714f6afa"
+  },
+  "gate": {
+    "command": "cargo xtask pr",
+    "staged": true,
+    "exit_code": 0,
+    "library_passed": 531,
+    "library_ignored": 3,
+    "xtask_tests_passed": 4,
+    "all_integration_suites_passed": true,
+    "doctests_passed": 265,
+    "log_sha256": "83f6403060cad89b25db5569cf697839dcd3217ee67f83b162d3dc234a27f296"
+  },
+  "focused": {
+    "private_tests": 5,
+    "public_tests": 3,
+    "python_tests": 3,
+    "object_cases": 144,
+    "positive_cases": 108,
+    "unrelated_negative_cases": 36,
+    "primitive_observations": 16836,
+    "owned_streams": 11,
+    "owned_valid": 10,
+    "owned_unrelated_negative": 1
+  },
+  "native_corpus": {
+    "cases": 906,
+    "accepted": 686,
+    "rejected": 220,
+    "previous_complete_preserved": true,
+    "newly_accepted": 11,
+    "fresh_process_outcomes_and_causes_identical": true,
+    "artifact_stable_during_replay": true,
+    "artifact_sha256": "c45d17db9d573a4a0970f86fc28b611327cd3590d94d1bcc770d640407213a6e",
+    "changes": [
+      {
+        "index": 367,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Invalid: object role \"point_reference_88\" has runtime class \"moEndPointRef_w\"; expected one of [\"moPointRef_w\"]"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 423,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Invalid: object role \"point_reference_88\" has runtime class \"moEndPointRef_w\"; expected one of [\"moPointRef_w\"]"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 487,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Invalid: object role \"point_reference_88\" has runtime class \"moEndPointRef_w\"; expected one of [\"moPointRef_w\"]"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 689,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Invalid: object role \"point_reference_88\" has runtime class \"moEndPointRef_w\"; expected one of [\"moPointRef_w\"]"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 765,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Invalid: object role \"point_reference_88\" has runtime class \"moEndPointRef_w\"; expected one of [\"moPointRef_w\"]"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 776,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Invalid: object role \"point_reference_88\" has runtime class \"moEndPointRef_w\"; expected one of [\"moPointRef_w\"]"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 787,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Invalid: object role \"point_reference_88\" has runtime class \"moEndPointRef_w\"; expected one of [\"moPointRef_w\"]"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 817,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Invalid: object role \"point_reference_88\" has runtime class \"moEndPointRef_w\"; expected one of [\"moPointRef_w\"]"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 818,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Invalid: object role \"point_reference_88\" has runtime class \"moEndPointRef_w\"; expected one of [\"moPointRef_w\"]"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 823,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Invalid: object role \"point_reference_88\" has runtime class \"moEndPointRef_w\"; expected one of [\"moPointRef_w\"]"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 824,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Invalid: object role \"point_reference_88\" has runtime class \"moEndPointRef_w\"; expected one of [\"moPointRef_w\"]"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      }
+    ],
+    "expected_full_parity_exit_code": 101
+  },
+  "independent_audit": {
+    "report": "accepted-reference.json",
+    "report_sha256": "614c1ec2a7f745a776131267db1e8c61d0fd976f1e55cb4d21f93267fac06bba",
+    "accepted": 686,
+    "feature_bytes": 40016822,
+    "four_input_hashes_verified_per_case": true,
+    "snapshot_identity": "6581918b815b0c018ff1773f3f44dac7cad4b78e0dba40ee0c8539732e336a06",
+    "snapshot_python_files": 1118,
+    "snapshot_removed_after_process_exit": true
+  },
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "source_file_sha256": {
+    "src/model_archives/geometric_references.rs": "da4357d581fd069eae4905e2db00baf0388d64ee8c77ff991e439f16787427f7",
+    "src/model_archives/reference_planes.rs": "a40e909904ee84050db9b4cd040f6403e9d83a960fcd6081f334563b3a3e27bc",
+    "src/model_archives/reference_point_data.rs": "e821ae8edec4f2659311257d9e9f59c4abc9ce36ba0a2e18332cdea0b4c878e0",
+    "tests/resolved_features/plane_point_roles.rs": "8ef8d54b0a729ddfac3a1770206f69bf73e6500aae7ac77cbb126b4e71c8a0ad",
+    "tests/resolved_plane_point_roles.rs": "67baef168d62e3f434c1235f2100d629ee8afd54a06b1726b083cca6c9eac664"
+  },
+  "exclusions": [
+    "Wider finite-role audit remains open",
+    "Full documented schema parity",
+    "Native application acceptance",
+    "Geometry and topology validation",
+    "Historical and special contexts",
+    "Non-Windows execution awaits integration PR matrix"
+  ],
+  "dependencies_changed": false,
+  "version_changed": false
+}
