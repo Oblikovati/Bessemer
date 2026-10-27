@@ -7,6 +7,9 @@ pub(super) fn read(
     map: &mut ObjectReader,
     name: &str,
 ) -> Option<Result<()>> {
+    if let Some(result) = super::cut_list_folders::read_object(reader, map, name) {
+        return Some(result);
+    }
     if let Some(result) = super::reference_dimensions::read(reader, map, name) {
         return Some(result);
     }

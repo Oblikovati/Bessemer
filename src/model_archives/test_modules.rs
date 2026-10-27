@@ -99,6 +99,9 @@ mod coordinate_system_tests;
 #[path = "../../tests/resolved_features/custom_properties.rs"]
 mod custom_property_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/cut_list_folders.rs"]
+mod cut_list_folder_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/detail_folder_records.rs"]
 mod detail_folder_record_tests;
 #[cfg(test)]
