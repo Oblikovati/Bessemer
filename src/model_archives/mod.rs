@@ -6,6 +6,8 @@ include!("test_modules.rs");
 
 mod archive;
 mod attribute_records;
+mod base_flange_directions;
+mod base_flanges;
 mod body_chooser_records;
 mod browser_folders;
 mod bucket_adapter;

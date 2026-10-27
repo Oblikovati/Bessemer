@@ -20,10 +20,13 @@ def install_sheet_context(cursor: ReferenceObjectCursor, reference: Path, state:
 
 
 def observe_sheet_object(reference: Path, raw: bytes, slots: int, kind: int, version: int,
-                         state: int, verify: Callable[[dict[str, object]], None]) -> tuple[bytes, dict[str, object]]:
+                         state: int, verify: Callable[[dict[str, object]], None],
+                         configure: Callable[[ReferenceObjectCursor], None] | None = None) -> tuple[bytes, dict[str, object]]:
     """Require exact EOF and slots while retaining original inventory hashes; e.g. observe_sheet_object(source, raw, 3, 0, 19000, 0, check)."""
-    configure = partial(install_sheet_context, reference=reference, state=state, verified=True)
-    cursor = object_cursor(reference, raw, version, configure)
+    select_state = partial(install_sheet_context, reference=reference, state=state, verified=True)
+    cursor = object_cursor(reference, raw, version, select_state)
+    if configure is not None:
+        configure(cursor)
     archive = source_module('swarchive', reference)
     with observe_primitives(archive.Archive, raw) as reads, dynamic_payload_ranges(reference, raw) as ranges:
         verify(cast(dict[str, object], cursor.object()))

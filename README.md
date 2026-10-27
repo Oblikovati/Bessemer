@@ -161,6 +161,8 @@ Their [shared component geometry roles](docs/features/component-coordinate-syste
 also accept documented fresh and cached coordinate-system targets.
 [Component coordinate-system references](docs/features/component-coordinate-systems/README.md)
 retain their inherited feature fields, geometry identities and fixed transform words.
+[Base flanges](docs/features/base-flanges/README.md) preserve selected directions,
+shared sketch handles and direct bend-group records.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 

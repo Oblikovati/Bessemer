@@ -8,6 +8,7 @@ pub(super) fn read(
     name: &str,
 ) -> Option<Result<()>> {
     let result = match name {
+        "moSMBaseFlange_c" => super::base_flanges::read(reader, map),
         "moSheetMetal_c"
         | "moTemplateSheetMetal_c"
         | "moFixedFaceInFlat_c"

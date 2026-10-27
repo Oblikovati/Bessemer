@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added ordinary base-flange reading, field editing and writing with selected directions, shared sketch-handle collections and preserved bend-group records. (#54)
+
 - Added ordinary sheet-metal and template reading, field editing and writing with validated saved-state handoff, strided allowance payloads, fixed-face framing and complete component references. (#54)
 
 - Added ordinary component coordinate-system reading, field editing and writing with shared geometry, preserved fixed-transform words and explicit special-kind errors. (#54)

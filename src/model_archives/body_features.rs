@@ -211,6 +211,8 @@ pub(super) const CLASSES: &[&str] = &[
     // #54 / C-182 and C-296: both sheet-metal serializers inherit the body-feature owner layer.
     "moSheetMetal_c",
     "moTemplateSheetMetal_c",
+    // #54 / C-183: the bend-group constructor retains the body-feature owner contract.
+    "moSMBaseFlange_c",
     // #60: both complete readers use this inherited atom-feature owner role.
     "moPlanarSurface_c",
     "Chamfer_c",

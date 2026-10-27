@@ -19,7 +19,7 @@ pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
     tail(reader)
 }
 
-fn common(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+pub(super) fn common(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     declared(reader, map, "dimension_10", DISPLAY_CLASSES)?;
     declared(reader, map, "feature_18", FEATURE_CLASSES)?;
     if reader.u8("has_allowance")? != 0 {

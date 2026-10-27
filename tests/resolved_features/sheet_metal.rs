@@ -50,7 +50,7 @@ fn decoder<'a>(
     })
 }
 
-fn decode_graph(
+pub(super) fn decode_graph(
     version: u32,
     bytes: &[u8],
     selected: Option<SavedHelperState>,
