@@ -8,6 +8,14 @@ pub(super) fn read(
     name: &str,
 ) -> Option<Result<()>> {
     let result = match name {
+        "moCompRefCurve_c" => super::component_references::feature(reader, map),
+        "moBlendRefSurface_c" => super::blend_reference_surfaces::read(reader, map),
+        // #54 / C-382 binds the exact ordinary su_CObject zero-byte thunk.
+        "moBlendRefSurfIdKeeper_c" => super::extruded_surfaces::keeper(reader),
+        "moOffsetRefSurface_c" => super::offset_surfaces::read(reader, map),
+        "moOffsetSurfData_c" => super::offset_surfaces::data(reader, map),
+        // #54 / C-251 binds the ordinary binary su_CObject zero-byte return.
+        "moOffsetRefSurfIdKeeper_c" => super::extruded_surfaces::keeper(reader),
         "moThicken_c" => super::thicken_records::read(reader, map),
         "moCompRefSurface_c" => super::thicken_records::component_surface(reader, map),
         // #54 / C-249 binds the identical modern atom-geometry wire helper.

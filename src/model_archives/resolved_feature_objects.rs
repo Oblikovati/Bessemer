@@ -20,6 +20,13 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        // #54 / 11.350 / C-392 binds both suffix-free native feature dispatches.
+        "moLockFeature_c" => super::features::read(reader, map),
+        "moSMEnvTableFeat_c" => super::body_features::model_feature(reader, map),
+        "moLPatternItemId_c" => super::frontier_feature_helpers::pattern_item(reader),
+        "edgeParamsObject_c" => super::frontier_feature_helpers::edge_parameters(reader, map),
+        "featRadiusObject_c" => super::frontier_feature_helpers::feature_radius(reader, map),
+        "moRefCurve_c" => super::reference_curves::read(reader, map),
         "moSurfCut_c" => super::surface_operations::cut(reader, map),
         "moTrimRefSurface_c" => super::surface_operations::trim(reader, map),
         "moCombineBodies_c" => super::combine_bodies::combine(reader, map),

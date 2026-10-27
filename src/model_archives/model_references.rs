@@ -56,6 +56,8 @@ const COMPONENTS: &[&str] = &[
     "moCompBodyFeature_c",
     "moCompProfile_c",
     "moCompReferenceCurve_c",
+    // #54 / C-382 proves this distinct component spelling and moCompRef_c ancestry.
+    "moCompRefCurve_c",
     "moCompCoordSys_c",
     "moCompHolder_c",
 ];

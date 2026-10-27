@@ -11,6 +11,10 @@ const ID_KEEPERS: &[&str] = &[
     "moExtruRefSurfIdKeeper_c",
     // #54 / C-203: retain this concrete inherited keeper; do not infer its ancestry from its name.
     "moRevolvRefSurfIdKeeper_c",
+    // #54 / C-251 proves this empty ordinary keeper's moIdKeeper_c ancestry.
+    "moOffsetRefSurfIdKeeper_c",
+    // #54 / C-382 proves this ordinary empty keeper's moIdKeeper_c ancestry.
+    "moBlendRefSurfIdKeeper_c",
 ];
 
 pub(super) fn header(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
@@ -242,6 +246,12 @@ pub(super) const CLASSES: &[&str] = &[
     "moPlanarSurface_c",
     // #54 / C-203: revolved surfaces retain the reference-geometry atom-owner contract.
     "moRevolvRefSurf_c",
+    // #54 / C-251 binds moRefSurface_c -> moRefGeom_c -> moAtomFeature_c.
+    "moOffsetRefSurface_c",
+    // #54 / C-382 binds the inherited reference-geometry atom-owner layer.
+    "moBlendRefSurface_c",
+    // #54 / C-380 binds this distinct body-feature serializer and constructor.
+    "moRefCurve_c",
     // #54 / C-212: helices retain the inherited reference-geometry chooser owner.
     "moHelix_c",
     "Chamfer_c",

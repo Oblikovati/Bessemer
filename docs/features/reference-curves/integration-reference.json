@@ -1,0 +1,67 @@
+{
+  "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\reference-curve-integration-evidence.json",
+  "source_sha256": "f59408b5927246fd80cf123403d428742f1e6ce21fac7df86cfebc954bc056b5",
+  "evidence": {
+    "audit_sha256": "188922469051e4be585e0e5b1acd389ff5344571518cfedbe971369225aa5ba3",
+    "previous_audit_sha256": "7f94300475b6f44950edf956bb5869f49d8d620aa33c2fe013126ca4e6469924",
+    "preserved_previous_streams": 856,
+    "added_streams": [
+      {
+        "path": "samples/Simulation Examples/Verification/comp_buck.sldprt",
+        "configuration": "Contents/Config-0",
+        "source_sha256": "4e2ddf238409258bdb66fa4f451ebec72847cce5ad04573ff40533444e7654c9",
+        "bytes": 33236,
+        "context": {
+          "value": 0,
+          "position": 2436,
+          "stream": "Contents/CMgr",
+          "source_sha256": "67b053d9dc161e4b917c166619da493fc5a2ff501de94cb03bc794b0b8d70c3c",
+          "version": 19000
+        },
+        "declared_count": 25,
+        "complete_roots": 25,
+        "status": "stream_complete",
+        "end": 33236,
+        "tail_bytes": 0,
+        "unknown_bytes": 11743,
+        "list_end": 33236,
+        "list_unknown_bytes": 11743
+      },
+      {
+        "path": "samples/tutorial/api/hemisphere.sldprt",
+        "configuration": "Contents/Config-0",
+        "source_sha256": "0afa97342a9e2debe80f8cded319ea35a0d451af022e166257f9a349f93349c8",
+        "bytes": 49122,
+        "context": {
+          "value": 1,
+          "position": 3184,
+          "stream": "Contents/CMgr",
+          "source_sha256": "8227937d7ac199657c621df652a448e54c4dc9f0c7dded9cdf377ff3b3c2cdc0",
+          "version": 19000
+        },
+        "declared_count": 39,
+        "complete_roots": 39,
+        "status": "stream_complete",
+        "end": 49122,
+        "tail_bytes": 0,
+        "unknown_bytes": 16421,
+        "list_end": 49118,
+        "list_unknown_bytes": 16425,
+        "mbsm": {
+          "start": 49118,
+          "end": 49122,
+          "declared_count": 0,
+          "unknown_bytes": 0
+        }
+      }
+    ],
+    "known_decoded_structure_bytes": 47412425,
+    "coverage_credit": 0,
+    "files_sha256": {
+      "referencecurves.py": "523c8639246aaba910ce3131122b3922e99d58e7845747e4c5596acbc54b0157",
+      "resolvedfeatures.py": "e147611a2dabfc33aefab56666712df466d9a3791d599da4accb7a3415418c3f",
+      "research\\refcurve-native-evidence.json": "ac6f762cf0e3116fdf2c37ec650b9137865115ccaf1fe85ba7326421c511f878",
+      "research\\refcurve-corpus.json": "aa4bb1855fbb6b11d34c6179de91926058f1128af546d431aac09c19a6f6b9d7"
+    }
+  }
+}

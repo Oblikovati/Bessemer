@@ -33,6 +33,8 @@ const LAYOUTS: &[(&str, RepresentationLayout)] = &[
     ("moBottomEdgeIdRep_c", Local(&["38"])),
     ("moStartEdgeIdRep_c", Local(&["38"])),
     ("moEndFaceSurfIdRep_c", Local(&["38", "3c"])),
+    // #54 / 11.350 / C-392 binds the exact native serializer and edge ancestry.
+    ("moTrimWireExtEdgeIdRep_c", Local(&["38", "3c"])),
     ("moRadiateSurfIdRep_c", Local(&["38", "3c"])),
     // C-243 / 11.215 proves the common helper and two-word suffix, including edge ancestry.
     ("moRadiateEdgeIdRep_c", Local(&["38", "3c"])),
@@ -62,6 +64,8 @@ const LAYOUTS: &[(&str, RepresentationLayout)] = &[
     ("moIndirectSurfIdRep_c", Source(&[])),
     ("moShellSurfIdRep_c", Source(&[])),
     ("moLPatternSurfIdRep_c", Source(&["48", "4c"])),
+    // #54 / C-392 proves the direct entity-ID member without an outer map slot.
+    ("moPttnBodyEdgeIdRep_c", Source(&["48", "4c"])),
     ("moDimPatternSurfIdRep_c", Source(&["48", "4c"])),
     ("moPLineInterSurfIdRep_c", Source(&["48", "4c"])),
     ("moMacroFeatRefSurfIdRep_c", Source(&["48", "4c", "50"])),

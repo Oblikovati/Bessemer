@@ -73,12 +73,17 @@ def suffix_wire(mapping: WireMap, version: int, ids: dict[str, int], options: Bl
     return raw+b'\xfe'
 
 
-def blend_payload(mapping: WireMap, version: int, ids: dict[str, int], options: BlendFixtureOptions) -> bytes:
+def blend_data(mapping: WireMap, version: int, ids: dict[str, int], options: BlendFixtureOptions) -> bytes:
     """Use the loaded primary array count for columns, never the allocation word; e.g. blend_payload(mapping, 19000, ids, options)."""
     raw = struct.pack('<i', options.declared)+pointer_array(mapping, version, ids, options.count, options.rich)
     for _ in range(2):
         raw += pointer_array(mapping, version, ids, 3 if options.rich else 0, options.rich)
-    return raw+numeric_columns(options)+controls_wire(mapping, version, ids, options)+suffix_wire(mapping, version, ids, options)
+    return raw+numeric_columns(options)+controls_wire(mapping, version, ids, options)
+
+
+def blend_payload(mapping: WireMap, version: int, ids: dict[str, int], options: BlendFixtureOptions) -> bytes:
+    """Keep the old blend/cut suffix after its shared direct data; e.g. blend_payload(mapping, 19000, ids, options)."""
+    return blend_data(mapping,version,ids,options)+suffix_wire(mapping,version,ids,options)
 
 
 def blend_object(kind: int, version: int, options: BlendFixtureOptions, first_slot: int = 0) -> tuple[bytes, int]:

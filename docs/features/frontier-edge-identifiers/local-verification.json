@@ -1,0 +1,56 @@
+{
+  "base_revision": "78f4b17f1d4eaea8154ad4e647f4d45a2bc24e9c",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "focused": {
+    "private_tests": 6,
+    "public_tests": 3,
+    "python_tests": 2,
+    "cases": 60,
+    "primitive_observations": 11142,
+    "owned_streams": 14,
+    "source_target_identities_verified": true,
+    "prior_regeneration_tests": 2,
+    "prior_fixture_graphs": 60,
+    "prior_owned_streams": 14
+  },
+  "native": {
+    "cases": 906,
+    "previous_complete": 751,
+    "complete": 751,
+    "explicit_stops": 155,
+    "new_complete": 0,
+    "cases_advanced_to_later_stops": 2,
+    "fresh_processes": 2,
+    "all_outcomes_and_causes_identical": true,
+    "artifact_stable": true,
+    "artifact_sha256": "0ae66ae4cd7623b027c99abd4b7ea264cda5708783ec6d710d3a05290275f840",
+    "independent_report_binding_sha256": "87e3d3a8fc015beb4f125a59e05345ca1c476e87a3f87f1be23e33e314a76a8c",
+    "independent_feature_bytes": 47006007,
+    "independent_replay": "Prior immutable audit bound to an identical accepted index set; no fresh replay claimed.",
+    "logs_sha256": [
+      "7e14f61beec0cbef8a97a30b7705bf63d1192e6a6947b7b561bb3a787496fbf9",
+      "3c6a69ca665d8ed595dc926536642d1c86025ce367a0dd6ed4c4bed976bca660"
+    ]
+  },
+  "corpus_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "schema_snapshot_sha256": "93294698145c637ef3140351732589cc220f72c063157d584285c1e5dc645c1b",
+  "fixture_reference_sha256": "cc73bd31b079b3ce5adf47a9d6d8955c738418c836b6508699aa3f23aec2c996",
+  "gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 675,
+    "library_ignored": 3,
+    "xtask_passed": 4,
+    "doctests_passed": 265,
+    "all_integration_tests_passed": true,
+    "log_sha256": "692a299edd3e06c8a522fa12f0e5d48651933df6a0673314c21a7089352371a5"
+  },
+  "exclusions": [
+    "Geometry validity and SolidWorks application acceptance",
+    "Remaining native corpus stops",
+    "Other five C-392 classes",
+    "Broader all-schema parity remains unproven"
+  ]
+}

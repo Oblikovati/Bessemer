@@ -26,11 +26,11 @@ def nodes(children: list[bytes]) -> bytes:
     return struct.pack('<HI',65535,len(children))+b''.join(children)+struct.pack('<i',-19)
 
 
-def feature(version: int, merged: bool = True, children: list[bytes] | None = None) -> bytes:
+def feature(version: int, merged: bool = True, children: list[bytes] | None = None, word_290: int = -3) -> bytes:
     out = node_wire(version)+struct.pack('<i',-1 if merged else 0)
     if merged: out += nodes([b'\0\0',b'\0\0'])
     out += b'\0\0'+nodes(children or [])
-    out += struct.pack('<iiIB',-3,5,0xfedcba98,255)+short_wide_name('Ω optional')
+    out += struct.pack('<iiIB',word_290,5,0xfedcba98,255)+short_wide_name('Ω optional')
     out += struct.pack('<4idi',-7,11,-13,17,-0.0,-19)+b'\0\0'+b'\x01x'+b'\xff'
     out += struct.pack('<HHBIHhf',65530,65529,255,0x89abcdef,65528,-123,1.25)
     out += struct.pack('<iiH',-23,29,0)

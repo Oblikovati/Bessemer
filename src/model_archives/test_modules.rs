@@ -24,6 +24,9 @@ mod base_flange_tests;
 #[path = "../../tests/resolved_features/blends.rs"]
 mod blend_record_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/blend_reference_surfaces.rs"]
+mod blend_reference_surface_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/body_chooser_records.rs"]
 mod body_chooser_record_tests;
 #[cfg(test)]
@@ -177,6 +180,12 @@ mod folder_configuration_record_tests;
 #[path = "../../tests/model_archives/folders_parameters.rs"]
 mod folder_parameter_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/frontier_edge_identifiers.rs"]
+mod frontier_edge_identifier_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/frontier_feature_helpers.rs"]
+mod frontier_feature_helper_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/geometric_references.rs"]
 mod geometric_reference_tests;
 #[cfg(test)]
@@ -243,6 +252,9 @@ mod object_fields;
 #[path = "../../tests/model_archives/object_values.rs"]
 mod object_value_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/offset_surfaces.rs"]
+mod offset_surface_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/owned_features.rs"]
 mod owned_resolved_feature_tests;
 #[cfg(test)]
@@ -275,6 +287,9 @@ mod radiated_edge_identifier_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/reference_axes.rs"]
 mod reference_axis_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/reference_curves.rs"]
+mod reference_curve_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/reference_dimensions.rs"]
 mod reference_dimension_tests;
