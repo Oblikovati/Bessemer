@@ -24,7 +24,7 @@ def body_attributes(mapping: WireMap, ids: dict[str, int]) -> bytes:
     return struct.pack('<HI', 65535, 3)+first+bytes(2)+struct.pack('<H', ids['attribute'])
 
 
-def solid_pointer(mapping: WireMap, ids: dict[str, int], version: int, style: int, presence: int, mode: int, key: str, edited: bool) -> bytes:
+def solid_pointer(mapping: WireMap, ids: dict[str, int], version: int, style: int, presence: int, mode: int, key: str, edited: bool, name: str = 'moSolidRef_w') -> bytes:
     """Keep signed presence independent of suppression and preserve both attribute occurrences; e.g. solid_pointer(mapping, ids, 19000, 2, -1, 1, 'first', False)."""
     def contents() -> bytes:
         raw = component_target(mapping, ids, version, style)+wrapper(version, False)[2:]
@@ -33,7 +33,7 @@ def solid_pointer(mapping: WireMap, ids: dict[str, int], version: int, style: in
         if presence:
             raw += (b'\xff' if mode == 1 else frame())+body_attributes(mapping, ids)
         return raw
-    return shared_object(mapping, ids, key, 'moSolidRef_w', contents)
+    return shared_object(mapping, ids, key, name, contents)
 
 
 def solid_object(version: int, style: int, presence: int, mode: int, edited: bool = False, first_slot: int = 0) -> tuple[bytes, int]:
