@@ -18,7 +18,7 @@ pub(super) fn construction_mismatch(
     ))
 }
 
-fn field_summary(field: Option<&ModelField>) -> String {
+pub(super) fn field_summary(field: Option<&ModelField>) -> String {
     let Some(field) = field else {
         return "missing field".into();
     };

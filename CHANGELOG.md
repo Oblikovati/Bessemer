@@ -12,6 +12,8 @@
 
 ### Added
 
+- Added ordinary split-feature and split-item reading, editing and writing with direct owned arrays, compressed bodies, fixed transforms and immutable raw/native integer-map views. (#54)
+
 - Added ordinary sweep-reference surface and edge-data reading, editing and writing with shared direct sweep data, signed edge counts, retained null entries and independent conditional dimensions. (#54)
 
 - Added ordinary copy, trim/extend and reference edge identifier reading, editing and writing with exact native dispatches, direct entity-ID members and retained signed words. (#54)

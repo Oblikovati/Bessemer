@@ -41,8 +41,12 @@ fn complete_trim_edge_identifiers_match_independent_fields_bytes_and_slots() {
 }
 
 pub(super) fn assert_complete_records(records: Vec<TrimEdgeRecord>) {
+    assert_complete_records_with_kernel(records, false);
+}
+
+pub(super) fn assert_complete_records_with_kernel(records: Vec<TrimEdgeRecord>, kernel: bool) {
     for (_, version, bytes, oracle, slots) in records {
-        let (fields, actual_slots) = decode_graph(version, bytes, false).unwrap();
+        let (fields, actual_slots) = decode_graph(version, bytes, kernel).unwrap();
         assert_eq!(actual_slots, slots);
         super::manager_oracle_tests::assert_reference_fields(
             &fields,
@@ -60,15 +64,19 @@ fn trim_edge_identifiers_reject_every_prefix_extra_byte_and_old_context() {
 }
 
 pub(super) fn assert_rejected_boundaries(records: Vec<TrimEdgeRecord>) {
+    assert_rejected_boundaries_with_kernel(records, false);
+}
+
+pub(super) fn assert_rejected_boundaries_with_kernel(records: Vec<TrimEdgeRecord>, kernel: bool) {
     for (kind, version, bytes, _, _) in records {
         for end in 0..bytes.len() {
             assert!(
-                decode_graph(version, &bytes[..end], false).is_err(),
+                decode_graph(version, &bytes[..end], kernel).is_err(),
                 "{kind}/{version:#x}/{end}"
             );
         }
-        assert!(decode_graph(version, &[bytes, &[0]].concat(), false).is_err());
-        assert!(decode_graph(0x27cb, bytes, false).is_err());
+        assert!(decode_graph(version, &[bytes, &[0]].concat(), kernel).is_err());
+        assert!(decode_graph(0x27cb, bytes, kernel).is_err());
     }
 }
 

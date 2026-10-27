@@ -71,14 +71,21 @@ pub fn check_word_edit_with_kernel(
     path: &str,
     kernel: Option<CompressedKernelContext>,
 ) {
+    check_value_edit(original, edited, path, ModelFieldValue::I32(12345), kernel);
+}
+
+pub fn check_value_edit(
+    original: &[u8],
+    edited: &[u8],
+    path: &str,
+    value: ModelFieldValue,
+    kernel: Option<CompressedKernelContext>,
+) {
     let document = document_with(original);
     let archive = parsed_with_kernel(&document, kernel);
     let mut fields = archive.fields().to_vec();
-    fields
-        .iter_mut()
-        .find(|field| field.path.as_ref() == path)
-        .unwrap()
-        .value = ModelFieldValue::I32(12345);
+    let selected = fields.iter_mut().find(|f| f.path.as_ref() == path).unwrap();
+    selected.value = value;
     let edit = archive.edit_fields(fields).unwrap();
     assert_eq!(edit.archive().to_bytes().unwrap(), edited);
     assert_eq!(edit.changes().len(), 1);

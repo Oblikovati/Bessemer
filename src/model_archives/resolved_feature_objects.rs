@@ -20,6 +20,10 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moSplit_c" => super::split_features::read(reader, map),
+        "moSplitItem_c" => super::split_items::read(reader, map),
+        // #54 / C-276: these tagged serializers are empty; the parent writes owned data directly.
+        "moSplitData_c" | "moSplitBodyIdKeeper_c" => super::extruded_surfaces::keeper(reader),
         "moFillRefSurface_c" => super::filled_surfaces::read(reader, map),
         "moFillRefSurfIdKeeper_c" => super::filled_surfaces::keeper(reader, map),
         "moCurveContact_c" => super::filled_surfaces::contact(reader, map),

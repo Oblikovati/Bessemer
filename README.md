@@ -225,6 +225,8 @@ direct curve-set bodies, independent point counts, shared contacts and thin dime
 the existing finite wrapper family through fresh and cached pointers.
 [Sew-reference surfaces](docs/features/sew-surfaces/README.md) retain five direct
 arrays, raw flag words, double order and inherited empty keepers.
+[Split features and items](docs/features/split-features/README.md) retain direct
+owned arrays, positive kernel bodies, fixed transforms and separate raw/native map views.
 [Sweep-reference surfaces](docs/features/sweep-reference-surfaces/README.md) retain
 signed edge sequences, direct sweep data and independent conditional dimensions.
 [Copy, trim/extend and reference edge identifiers](docs/features/copy-trim-edge-identifiers/README.md)
