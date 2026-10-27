@@ -72,12 +72,14 @@ pub(super) fn chooser(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> 
     if reader.u16("presence")? == 0 {
         return Ok(());
     }
-    reader.scope("body", |reader| {
-        reader.scope("items", |reader| {
-            model_lists::pointers(reader, map, "items", ModelObjectRole::Any)
-        })?;
-        declared(reader, map, "owner", CLASSES)
-    })
+    reader.scope("body", |reader| direct_chooser(reader, map))
+}
+
+pub(super) fn direct_chooser(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    reader.scope("items", |reader| {
+        model_lists::pointers(reader, map, "items", ModelObjectRole::Any)
+    })?;
+    declared(reader, map, "owner", CLASSES)
 }
 
 fn choosers(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
