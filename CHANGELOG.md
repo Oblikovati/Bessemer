@@ -10,6 +10,8 @@
 
 ### Added
 
+- Added ordinary reference-curve reading, editing and writing with cached-array branch selection, versioned kernel-body lists and retained raw DWORDs. (#54)
+
 - Added ordinary offset-surface reading, editing and writing with required data, retained signed array presence, shared references and binary-empty keepers. (#54)
 
 - Added ordinary left/right trim-edge identifier reading, editing and writing with complete source representations, shared feature references and direct entity-ID members. (#54)

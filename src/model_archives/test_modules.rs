@@ -279,6 +279,9 @@ mod radiated_edge_identifier_tests;
 #[path = "../../tests/resolved_features/reference_axes.rs"]
 mod reference_axis_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/reference_curves.rs"]
+mod reference_curve_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/reference_dimensions.rs"]
 mod reference_dimension_tests;
 #[cfg(test)]

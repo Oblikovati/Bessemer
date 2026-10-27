@@ -246,6 +246,8 @@ pub(super) const CLASSES: &[&str] = &[
     "moRevolvRefSurf_c",
     // #54 / C-251 binds moRefSurface_c -> moRefGeom_c -> moAtomFeature_c.
     "moOffsetRefSurface_c",
+    // #54 / C-380 binds this distinct body-feature serializer and constructor.
+    "moRefCurve_c",
     // #54 / C-212: helices retain the inherited reference-geometry chooser owner.
     "moHelix_c",
     "Chamfer_c",

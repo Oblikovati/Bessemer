@@ -217,6 +217,8 @@ direct chooser ownership, allocated-data wire members and shared references.
 complete source representations and direct entity-ID members for both sides.
 [Offset surfaces](docs/features/offset-surfaces/README.md) retain complete inline
 surface payloads, required data, signed array presence and empty keepers.
+[Reference curves](docs/features/reference-curves/README.md) retain complete
+body-feature layouts, cached-array branches and versioned kernel-body lists.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 

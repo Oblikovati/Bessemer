@@ -49,6 +49,7 @@ mod mirror_solids;
 mod offset_surfaces;
 mod planar_surface_records;
 mod polyline_records;
+mod reference_curves;
 mod reference_dimensions;
 mod resolved_archive;
 mod resolved_edit;
