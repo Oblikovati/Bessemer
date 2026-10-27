@@ -12,7 +12,7 @@ pub(super) const CLASSES: &[&str] = &[
     "moTwoEdgeRefPointData_c",
     "moAlongCurveRefPointData_c",
 ];
-const CURVES: &[&str] = &[
+pub(super) const CURVES: &[&str] = &[
     "moCurveRef_w",
     "moGeneralCurveRef_w",
     "moCircleRef_w",

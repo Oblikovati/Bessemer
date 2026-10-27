@@ -7,6 +7,9 @@ pub(super) fn read(
     map: &mut ObjectReader,
     name: &str,
 ) -> Option<Result<()>> {
+    if let Some(result) = super::structural_member_objects::read(reader, map, name) {
+        return Some(result);
+    }
     if let Some(result) = super::fold_transforms::read_object(reader, map, name) {
         return Some(result);
     }

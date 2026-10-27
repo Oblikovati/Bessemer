@@ -173,6 +173,8 @@ numeric columns and conditional direction and dimension references.
 the documented point-reference family while retaining unrelated-class rejection.
 [Weldment features](docs/features/weldments/README.md) preserve direct custom-property
 lists, duplicate records and original stored expressions.
+[Structural members](docs/features/structural-members/README.md) preserve full-width
+point metadata, signed contour modes and complete shared contour/index graphs.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 
