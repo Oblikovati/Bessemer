@@ -70,6 +70,8 @@ const LAYOUTS: &[(&str, RepresentationLayout)] = &[
     ("moLPatternSurfIdRep_c", Source(&["48", "4c"])),
     // #54 / C-392 proves the direct entity-ID member without an outer map slot.
     ("moPttnBodyEdgeIdRep_c", Source(&["48", "4c"])),
+    // #54 / 11.192 / C-220 proves direct moEntityId_c +38 and both signed suffix words.
+    ("moPLineSilhIdRep_c", Source(&["48", "4c"])),
     ("moDimPatternSurfIdRep_c", Source(&["48", "4c"])),
     ("moPLineInterSurfIdRep_c", Source(&["48", "4c"])),
     ("moMacroFeatRefSurfIdRep_c", Source(&["48", "4c", "50"])),

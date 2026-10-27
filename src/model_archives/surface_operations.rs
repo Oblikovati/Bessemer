@@ -26,7 +26,7 @@ pub(super) fn trim(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
     reader.scope("trim_data_800", |reader| trim_suffix(reader, map))
 }
 
-fn trim_prefix(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+pub(super) fn trim_prefix(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     for label in ["array_20", "array_48"] {
         model_lists::pointers(reader, map, label, ModelObjectRole::Any)?;
     }

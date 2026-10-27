@@ -411,3 +411,15 @@ mod weldment_record_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/copy_edge_identifiers.rs"]
 mod copy_edge_identifier_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/sweep_surfaces.rs"]
+mod sweep_surface_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/split_features.rs"]
+mod split_feature_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/silhouette_edges.rs"]
+mod silhouette_edge_tests;

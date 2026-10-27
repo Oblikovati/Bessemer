@@ -17,6 +17,10 @@ const ID_KEEPERS: &[&str] = &[
     "moBlendRefSurfIdKeeper_c",
     // #54 / C-269 binds the sew surface's empty inherited keeper.
     "moSewRefSurfIdKeeper_c",
+    // #54 / C-275 proves the sweep-surface keeper's moIdKeeper_c ancestry.
+    "moSweepRefSurfIdKeeper_c",
+    // #54 / C-276 proves the split keeper's inherited moIdKeeper_c role.
+    "moSplitBodyIdKeeper_c",
 ];
 
 pub(super) fn header(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
@@ -217,6 +221,10 @@ pub(super) const CLASSES: &[&str] = &[
     "moExtruRefSurface_c",
     "moSweep_c",
     "moSweepCut_c",
+    // #54 / C-276 proves the complete body-feature owner chain.
+    "moSplit_c",
+    // #54 / C-275 proves the reference-surface atom-owner chain.
+    "moSweepRefSurface_c",
     "moDome_c",
     // #54 / C-182 and C-296: both sheet-metal serializers inherit the body-feature owner layer.
     "moSheetMetal_c",

@@ -1,0 +1,39 @@
+{
+  "cases": 906,
+  "previous_complete": 764,
+  "complete": 765,
+  "fresh_processes": 2,
+  "all_outcomes_and_causes_identical": true,
+  "artifact_sha256": "6b4a23a5533bc016d406d59e68fd127af69af36ffd1debd07d0487e6e85e5f69",
+  "changed": [
+    {
+      "index": 269,
+      "previous": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moSweepRefSurface_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "current": [
+        "accepted"
+      ]
+    },
+    {
+      "index": 342,
+      "previous": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moSweepRefSurface_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "current": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moExtendRefSurface_c\" schema 1; expected an implemented complete model object body"
+      ]
+    }
+  ],
+  "logs_sha256": [
+    "50babf4bfdd0e12feba3ae900f28989370dfe979952ef2d9811aac3a05a767ff",
+    "5c8298a9b7e4560c69cbe4d82b22500001351804e05843604abc4c498d378d4f"
+  ],
+  "all_outcomes_match_before_test_cleanup": true,
+  "expected_probe_exit": 101,
+  "expected_probe_failure": "Only the aggregate completeness assertion: 765 != 906.",
+  "explicit_stops": 141
+}
