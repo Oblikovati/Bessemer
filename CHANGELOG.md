@@ -10,6 +10,8 @@
 
 ### Added
 
+- Added ordinary offset-surface reading, editing and writing with required data, retained signed array presence, shared references and binary-empty keepers. (#54)
+
 - Added ordinary left/right trim-edge identifier reading, editing and writing with complete source representations, shared feature references and direct entity-ID members. (#54)
 
 - Added ordinary surface-cut and trim-surface reading, editing and writing with direct chooser ownership, independent arrays and complete reference records. (#54)

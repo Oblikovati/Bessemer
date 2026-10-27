@@ -12,6 +12,8 @@ const GEOMETRY_CLASSES: &[&str] = &[
     "moRefPoint_c",
     // #46 / C-198: the coordinate-system serializer inherits moRefGeom_c.
     "moCoordSys_c",
+    // #54 / C-251 proves this concrete surface's moRefGeom_c ancestry.
+    "moOffsetRefSurface_c",
 ];
 
 pub(super) fn reference_plane(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {

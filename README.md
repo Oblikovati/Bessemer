@@ -215,6 +215,8 @@ versioned directions and complete constant/component surface-reference layers.
 direct chooser ownership, allocated-data wire members and shared references.
 [Trim-edge identifiers](docs/features/trim-edge-identifiers/README.md) retain
 complete source representations and direct entity-ID members for both sides.
+[Offset surfaces](docs/features/offset-surfaces/README.md) retain complete inline
+surface payloads, required data, signed array presence and empty keepers.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 

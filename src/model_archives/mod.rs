@@ -46,6 +46,7 @@ mod fold_transforms;
 mod helix_records;
 mod manager_tail;
 mod mirror_solids;
+mod offset_surfaces;
 mod planar_surface_records;
 mod polyline_records;
 mod reference_dimensions;

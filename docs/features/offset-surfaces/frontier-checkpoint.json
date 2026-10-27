@@ -1,0 +1,31 @@
+{
+  "cases": 906,
+  "previous_complete": 749,
+  "complete": 749,
+  "explicit_stops": 157,
+  "new_complete": [],
+  "changed": [
+    {
+      "index": 353,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moOffsetRefSurface_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moTrimWireExtEdgeIdRep_c\" schema 1; expected an implemented complete model object body"
+      ]
+    },
+    {
+      "index": 544,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moOffsetRefSurface_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moRefCurve_c\" schema 1; expected an implemented complete model object body"
+      ]
+    }
+  ]
+}

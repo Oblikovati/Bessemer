@@ -243,6 +243,9 @@ mod object_fields;
 #[path = "../../tests/model_archives/object_values.rs"]
 mod object_value_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/offset_surfaces.rs"]
+mod offset_surface_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/owned_features.rs"]
 mod owned_resolved_feature_tests;
 #[cfg(test)]
