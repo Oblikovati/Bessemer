@@ -42,6 +42,7 @@ mod edit_types;
 mod field_change;
 mod field_mismatch;
 mod filled_surfaces;
+mod fixed_transform_records;
 mod flat_pattern_boxes;
 mod flat_patterns;
 mod fold_transforms;
