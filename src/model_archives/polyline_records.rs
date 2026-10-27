@@ -39,11 +39,15 @@ pub(super) fn data(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
 }
 
 pub(super) fn project(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    project_prefix(reader, map)?;
+    reader.i32s(&["raw_20", "raw_24"])
+}
+
+fn project_prefix(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     data(reader, map)?;
     reader.scope("array_10", |reader| {
         body_features::nullable_array(reader, map)
-    })?;
-    reader.i32s(&["raw_20", "raw_24"])
+    })
 }
 
 pub(super) fn word_array(reader: &mut ModelDecoder<'_>) -> Result<()> {
