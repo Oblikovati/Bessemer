@@ -12,6 +12,8 @@
 
 ### Added
 
+- Added ordinary sew-reference surface reading, editing and writing with five direct arrays, retained flag words, native double order and empty inherited keepers. (#54)
+
 - Added ordinary net-blend/cut and contact/group/multi-edge reading, editing and writing with direct curve-set bodies, independent signed point counts and retained thin-dimension options. (#54)
 
 - Added ordinary lock/environment feature, pattern-item and edge/radius helper reading, editing and writing with exact scalar widths and preserved arbitrary object references. (#54)

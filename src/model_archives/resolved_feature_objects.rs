@@ -20,6 +20,9 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moSewRefSurface_c" => super::sew_surfaces::read(reader, map),
+        // #54 / C-269 binds this exact zero-byte su_CObject serializer thunk.
+        "moSewRefSurfIdKeeper_c" => super::extruded_surfaces::keeper(reader),
         "moNetBlend_c" | "moNetBlendCut_c" => super::net_blends::read(reader, map),
         "moContactData_c" => super::net_blend_components::contact(reader, map),
         "moCompEntGroup_c" => super::net_blend_components::group(reader, map),

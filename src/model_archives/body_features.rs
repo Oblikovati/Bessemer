@@ -15,6 +15,8 @@ const ID_KEEPERS: &[&str] = &[
     "moOffsetRefSurfIdKeeper_c",
     // #54 / C-382 proves this ordinary empty keeper's moIdKeeper_c ancestry.
     "moBlendRefSurfIdKeeper_c",
+    // #54 / C-269 binds the sew surface's empty inherited keeper.
+    "moSewRefSurfIdKeeper_c",
 ];
 
 pub(super) fn header(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
@@ -243,6 +245,8 @@ pub(super) const CLASSES: &[&str] = &[
     // #54 / C-250 binds both imported body-feature bases and ordinary node hooks.
     "moSurfCut_c",
     "moTrimRefSurface_c",
+    // #54 / C-269 binds the complete body-feature prefix and its owner contract.
+    "moSewRefSurface_c",
     // #54 / C-202: the draft serializer calls the complete body-feature base.
     "moDraft_c",
     // #60: both complete readers use this inherited atom-feature owner role.

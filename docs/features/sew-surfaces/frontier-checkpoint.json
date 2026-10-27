@@ -1,0 +1,31 @@
+{
+  "cases": 906,
+  "previous_complete": 761,
+  "complete": 761,
+  "explicit_stops": 145,
+  "new_complete": [],
+  "changed": [
+    {
+      "index": 351,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moSewRefSurface_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moFillRefSurface_c\" schema 1; expected an implemented complete model object body"
+      ]
+    },
+    {
+      "index": 611,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moSewRefSurface_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moCompositeCurve_c\" schema 1; expected an implemented complete model object body"
+      ]
+    }
+  ]
+}

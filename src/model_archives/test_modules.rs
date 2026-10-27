@@ -324,6 +324,9 @@ mod section_bound_tests;
 #[path = "../../tests/resolved_features/sensor_records.rs"]
 mod sensor_record_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/sew_surfaces.rs"]
+mod sew_surface_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/shared_sketch_handles.rs"]
 mod shared_sketch_handle_tests;
 #[cfg(test)]

@@ -74,6 +74,7 @@ mod scale_records;
 mod scene_adapter;
 mod schema_references;
 mod sensor_records;
+mod sew_surfaces;
 mod validation;
 pub use crate::archive_codec::{
     ArchiveClass as ModelClass, ArchiveMapIndex as ModelObjectId,
