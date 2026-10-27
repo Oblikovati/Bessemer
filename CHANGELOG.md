@@ -4,6 +4,12 @@
 
 ### Added
 
+- Added ordinary component coordinate-system reading, field editing and writing with shared geometry, preserved fixed-transform words and explicit special-kind errors. (#54)
+
+- Added ordinary coordinate-system reading, field editing and writing with equality-selected axes, direct axis arrays, shared identities and preserved raw selector/vector values. (#54)
+
+- Added ordinary feature-comment reading, field editing and writing with direct lists, shared text items, versioned extra members and preserved four-byte time values. (#54)
+
 - Added ordinary connection-point and route-point reading, field editing and writing with preserved direct parameters, compatibility fields, shared references and complete radial-dimension dependencies. (#54)
 
 - Added ordinary reference-point reading, field editing and writing with all seven point-data layouts, required tagged data, shared typed references and independent complete-stream fixtures. (#54)
@@ -64,6 +70,8 @@
 - Optimized test builds while retaining debug assertions, checked integer arithmetic and every exhaustive validation case. (#53)
 
 ### Fixed
+
+- Accepted documented coordinate-system targets through shared component geometry pointers while retaining unrelated-class rejection. (#46)
 
 - Fixed populated reference axes being rejected as inherited atom owners while retaining strict checks for unrelated classes and aliases. (#46)
 

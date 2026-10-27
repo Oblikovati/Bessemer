@@ -45,6 +45,12 @@ mod circular_pattern_tests;
 #[path = "../../tests/model_archives/complete_details.rs"]
 mod complete_detail_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/component_coordinates.rs"]
+mod component_coordinate_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/component_geometry_roles.rs"]
+mod component_geometry_role_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/component_geometry.rs"]
 mod component_geometry_tests;
 #[cfg(test)]
@@ -77,6 +83,9 @@ mod context_chain_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/context_snapshot.rs"]
 mod context_snapshot_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/coordinate_systems.rs"]
+mod coordinate_system_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/custom_properties.rs"]
 mod custom_property_tests;
@@ -122,6 +131,9 @@ mod external_reference_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/extruded_surfaces.rs"]
 mod extruded_surface_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/feature_comments.rs"]
+mod feature_comment_tests;
 #[cfg(test)]
 #[path = "../../tests/model_archives/fillet_threads.rs"]
 mod fillet_thread_tests;

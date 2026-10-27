@@ -31,6 +31,12 @@ pub(super) fn read(
     if let Some(result) = super::reference_geometry_objects::read(reader, map, &class.name) {
         return result;
     }
+    if let Some(result) = super::feature_comments::read_object(reader, map, &class.name) {
+        return result;
+    }
+    if let Some(result) = super::coordinate_systems::read_object(reader, map, &class.name) {
+        return result;
+    }
     match class.name.as_str() {
         "moDome_c" => super::dome_records::read(reader, map),
         "moExtruRefSurface_c" => super::extruded_surfaces::read(reader, map),

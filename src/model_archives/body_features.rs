@@ -192,6 +192,8 @@ pub(super) const CLASSES: &[&str] = &[
     // #54 / C-193: both routing features inherit the common reference-geometry owner layer.
     "moConnectionPoint_c",
     "moRoutePoint_c",
+    // #54 / C-198: coordinate systems call the same inherited reference-geometry serializer.
+    "moCoordSys_c",
     "Fillet_c",
     "VarFillet_c",
     "moLPattern_c",

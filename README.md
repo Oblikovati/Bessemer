@@ -152,6 +152,16 @@ documented data variants, required data tags and shared geometry references.
 [Connection and route points](docs/features/connection-points/README.md) retain
 direct configurable parameters, compatibility values and shared line/dimension references.
 
+[Feature comments](docs/features/feature-comments/README.md) preserve direct lists,
+shared text items, raw kinds, ordered extra members and four-byte time values.
+
+[Coordinate systems](docs/features/coordinate-systems/README.md) retain numeric
+axis order, equality-based selectors, direct arrays and exact vector bits.
+Their [shared component geometry roles](docs/features/component-coordinate-systems/geometry-roles.md)
+also accept documented fresh and cached coordinate-system targets.
+[Component coordinate-system references](docs/features/component-coordinate-systems/README.md)
+retain their inherited feature fields, geometry identities and fixed transform words.
+
 
 This library is named after Sir Henry Bessemer (1813–1898) an English engineer, inventor, and entrepreneur 
 best known for developing the Bessemer process, the first inexpensive industrial method for the mass production
