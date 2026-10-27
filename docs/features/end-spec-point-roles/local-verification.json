@@ -1,0 +1,61 @@
+{
+  "base_revision": "045ac80",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "focused": {
+    "private_tests": 4,
+    "public_tests": 4,
+    "python_tests": 3,
+    "cases": 96,
+    "valid_cases": 72,
+    "invalid_role_cases": 24,
+    "primitive_observations": 6184,
+    "owned_streams": 10,
+    "owned_valid": 8,
+    "owned_invalid_role": 2,
+    "prechange_builder_baselines": 32,
+    "before_fix": {
+      "private_passed": 2,
+      "private_failed": 2
+    },
+    "after_fix": {
+      "private_passed": 4,
+      "private_failed": 0
+    }
+  },
+  "native": {
+    "cases": 906,
+    "previous_complete": 705,
+    "complete": 708,
+    "explicit_stops": 198,
+    "point_role_new_complete": 3,
+    "radiated_edge_cases_advanced": 4,
+    "fresh_processes": 2,
+    "all_outcomes_and_causes_identical": true,
+    "artifact_stable": true,
+    "artifact_sha256": "2b536ffee1450f93280d51188af27193d36c87cec772a315bc22fc6ffe323ee4",
+    "independent_feature_bytes": 42423714,
+    "independent_snapshot_identity": "b0697257bfa6f200931e1d7a2d204cba95a08873c6b18b004d118cb2cec0b0aa",
+    "independent_python_files": 1137,
+    "independent_report_sha256": "dd89a8d7bf066bafbcbedaa204564725b7a577ed5be42bb7f5463fee20e6360b"
+  },
+  "corpus_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "integration_exception": "Affected runtime modules do not exist on main; fix targets the unreleased interop candidate under Bug #46.",
+  "exclusions": [
+    "Native geometry and application acceptance",
+    "Old/DB contexts",
+    "Remaining 198 configurations and all documented file-schema parity"
+  ],
+  "gate": {
+    "command": "cargo xtask pr",
+    "staged": true,
+    "exit_code": 0,
+    "library_passed": 551,
+    "library_ignored": 3,
+    "xtask_tests_passed": 4,
+    "all_integration_suites_passed": true,
+    "doctests_passed": 265,
+    "log_sha256": "c6d86f80180ef132d2aeefc1504f2ab829c60bff5e354002b0ca85d08ce3b012"
+  }
+}

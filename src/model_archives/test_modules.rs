@@ -123,6 +123,9 @@ mod dome_record_tests;
 #[path = "../../tests/model_archives/embedded_title.rs"]
 mod embedded_title_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/end_spec_point_roles.rs"]
+mod end_spec_point_role_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/entity_representations.rs"]
 mod entity_representation_tests;
 #[cfg(test)]

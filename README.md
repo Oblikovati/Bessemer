@@ -179,6 +179,8 @@ point metadata, signed contour modes and complete shared contour/index graphs.
 kind words, optional vectors, complete sketch handles and direct dimension planes.
 [Radiated-edge identifiers](docs/features/radiated-edge-identifiers/README.md)
 preserve inherited references and shared entity-representation identities.
+[End-specification point roles](docs/features/end-spec-point-roles/README.md)
+accept the verified point family in extrusion and revolution ends.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 

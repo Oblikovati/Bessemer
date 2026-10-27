@@ -4,6 +4,10 @@ use super::{ModelDecoder, ModelObjectRole, model_lists};
 use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
 
+// #46 / C-188 and C-232: end-spec point roles retain the verified point-base ancestry.
+const END_POINT_ROLE: ModelObjectRole<'_> =
+    ModelObjectRole::Declared(super::geometric_references::POINT_REFERENCE_CLASSES);
+
 fn dimension(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader, label: &str) -> Result<()> {
     declared(reader, map, label, super::display_dimension::CLASSES)
 }
@@ -69,7 +73,7 @@ fn end_arrays(
 ) -> Result<()> {
     for (kind, point, offset) in [(first, "68", "28"), (second, "70", "48")] {
         if kind == 3 {
-            declared(reader, map, &format!("point_{point}"), &["moPointRef_w"])?;
+            reader.object(&format!("point_{point}"), map, END_POINT_ROLE)?;
         }
         if reader.u8(&format!("has_array_{offset}"))? != 0 {
             reader.scope(&format!("array_{offset}"), |reader| {
@@ -133,7 +137,7 @@ pub(super) fn revolution_end(reader: &mut ModelDecoder<'_>, map: &mut ObjectRead
         )?;
     }
     for offset in ["128", "130"] {
-        declared(reader, map, &format!("point_{offset}"), &["moPointRef_w"])?;
+        reader.object(&format!("point_{offset}"), map, END_POINT_ROLE)?;
     }
     reader.f64s(&["value_38", "value_40"])?;
     reader.i32s(&["word_140", "word_144"])?;

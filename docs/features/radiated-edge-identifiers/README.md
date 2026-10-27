@@ -27,3 +27,12 @@ Raw word meanings, general native validity of synthetic pointer combinations,
 native application acceptance, older and DB layouts, and full documented file
 schema parity remain unproven. No dependencies or package versions changed.
 The humanizer skill is unavailable; its prose pass remains with the maintainer.
+
+The shared native replay with the end-specification point-role fix advances all
+four previously rejected radiated-edge configurations to later explicit stops.
+None receives completion credit. All 705 earlier complete streams remain
+complete; the point-role fix adds three, yielding 708 of 906. Two fresh processes
+agree on every outcome and cause, and an immutable reference snapshot confirms
+exact EOF for all 708 accepted streams. The shared record is
+`../end-spec-point-roles/frontier-checkpoint.json`, with the complete independent
+input-hash audit in `../end-spec-point-roles/accepted-reference.json`.
