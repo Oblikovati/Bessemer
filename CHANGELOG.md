@@ -12,6 +12,8 @@
 
 ### Added
 
+- Added ordinary PLine silhouette edge identifier reading, editing and writing with direct source identities, exact native dispatch and retained signed suffix words. (#54)
+
 - Added ordinary split-feature and split-item reading, editing and writing with direct owned arrays, compressed bodies, fixed transforms and immutable raw/native integer-map views. (#54)
 
 - Added ordinary sweep-reference surface and edge-data reading, editing and writing with shared direct sweep data, signed edge counts, retained null entries and independent conditional dimensions. (#54)

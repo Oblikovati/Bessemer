@@ -419,3 +419,7 @@ mod sweep_surface_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/split_features.rs"]
 mod split_feature_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/silhouette_edges.rs"]
+mod silhouette_edge_tests;
