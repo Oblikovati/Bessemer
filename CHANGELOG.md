@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Fixed sketch external-entity references rejecting complete known wrapper subclasses, including fresh and cached single-face references, while retaining unrelated-class rejection. (#46)
+
 - Fixed extrusion and revolution end-specification point roles rejecting documented endpoint and loft-sync subclasses through fresh or cached pointers. (#46)
 
 - Fixed reference-plane point roles rejecting documented endpoint and loft-sync subclasses for fresh and cached pointers. (#46)

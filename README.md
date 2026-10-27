@@ -221,6 +221,8 @@ retain native-bound layouts, shared references and direct entity-ID members.
 retain inherited bodies, raw item bits and unqualified radius-object pointers.
 [Net blends and component groups](docs/features/net-blends/README.md) retain
 direct curve-set bodies, independent point counts, shared contacts and thin dimensions.
+[Sketch external references](docs/features/sketch-wrapper-roles/README.md) accept
+the existing finite wrapper family through fresh and cached pointers.
 [Offset surfaces](docs/features/offset-surfaces/README.md) retain complete inline
 surface payloads, required data, signed array presence and empty keepers.
 [Reference curves](docs/features/reference-curves/README.md) retain complete

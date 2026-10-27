@@ -360,6 +360,9 @@ mod sketch_tail_tests;
 #[path = "../../tests/model_archives/sketch_text.rs"]
 mod sketch_text_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/sketch_wrapper_roles.rs"]
+mod sketch_wrapper_role_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/solid_references.rs"]
 mod solid_reference_tests;
 #[cfg(test)]

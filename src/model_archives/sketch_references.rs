@@ -22,10 +22,6 @@ pub(super) const HANDLES: &[&str] = &[
     "sg3DCylinderHandle",
 ];
 
-// #46: these two documented derived wrappers occupy sgExtEnt_c.reference in native sketches.
-const EXTERNAL_ENTITY_REFERENCES: &[&str] =
-    &["moRefWrapper_c", "moSketchExtRef_w", "moTempAxisRef_w"];
-
 pub(super) fn handle(reader: &mut ModelDecoder<'_>) -> Result<()> {
     reader.require_ordinary_part()?;
     reader.escaped_index("entity_index", 0x777f)?;
@@ -46,10 +42,12 @@ pub(super) fn component_handle(
 
 pub(super) fn external_entity(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     reader.require_ordinary_part()?;
+    // #46: the declared wrapper family includes the earlier sketch/axis variants
+    // and the fresh/cached single-face variant exposed by native case 351.
     reader.object(
         "reference",
         map,
-        ModelObjectRole::Declared(EXTERNAL_ENTITY_REFERENCES),
+        ModelObjectRole::Declared(model_references::WRAPPER_CLASSES),
     )?;
     for (name, class) in [
         ("view", "moDrView"),

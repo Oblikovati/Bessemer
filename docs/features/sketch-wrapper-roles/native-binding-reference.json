@@ -1,0 +1,173 @@
+{
+  "issue": 46,
+  "scope": "Field-specific reuse of the existing reviewed model wrapper family; source expected-class arguments are not a role oracle.",
+  "declared_field": "sgExtEnt_c.reference: moRefWrapper_c*",
+  "canonical_family_source": "C:\\Users\\vmiguel\\git\\Bessemer\\src\\model_archives\\model_references.rs",
+  "canonical_family_sha256": "2c98904c226e6b60f6a6668d402eaf0658913214afffeeb0d746d043e38e2cfd",
+  "classes": [
+    "moRefWrapper_c",
+    "moGeneralSurfRef_w",
+    "moGeneralCurveRef_w",
+    "moSingleFaceRef_w",
+    "moCircleRef_w",
+    "moCylinderRef_w",
+    "moSphereRef_w",
+    "moPlaneRef_w",
+    "moPointRef_w",
+    "moEndPointRef_w",
+    "moLoftSynchRef_c",
+    "moLineRef_w",
+    "moLoopRef_w",
+    "moSolidRef_w",
+    "moConstSurfRef_w",
+    "moSketchExtRef_w",
+    "moTempAxisRef_w",
+    "moCoordSysRef_w"
+  ],
+  "packets": [
+    {
+      "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\geometric-reference-rtti.json",
+      "source_sha256": "a16b1e9c17397446981f46ed56b5b2ad9b69d6e51af606aa5b45496284ae4192",
+      "module_path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+      "module_sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+      "primary_tables": [
+        {
+          "class_name": "moGeneralCurveRef_w",
+          "object_offset": 0,
+          "locator": "0x4d35d4d8",
+          "vftable": "0x4d17ec20",
+          "slots": [
+            "0x4c26ea70",
+            "0x4c315c40",
+            "0x4cba273f",
+            "0x4b29dae0",
+            "0x4b29dae0",
+            "0x4c27e600",
+            "0x4b52ca40",
+            "0x4b526bd0"
+          ]
+        },
+        {
+          "class_name": "moSingleFaceRef_w",
+          "object_offset": 0,
+          "locator": "0x4d358268",
+          "vftable": "0x4d154898",
+          "slots": [
+            "0x4c26e670",
+            "0x4c2790c0",
+            "0x4cba273f",
+            "0x4b29dae0",
+            "0x4b29dae0",
+            "0x4c2856e0",
+            "0x4b52ca40",
+            "0x4b526bd0"
+          ]
+        },
+        {
+          "class_name": "moCircleRef_w",
+          "object_offset": 0,
+          "locator": "0x4d358328",
+          "vftable": "0x4d156378",
+          "slots": [
+            "0x4c2793f0",
+            "0x4c2787c0",
+            "0x4cba273f",
+            "0x4b29dae0",
+            "0x4b29dae0",
+            "0x4c27b230",
+            "0x4b52ca40",
+            "0x4b526bd0"
+          ]
+        },
+        {
+          "class_name": "moCylinderRef_w",
+          "object_offset": 0,
+          "locator": "0x4d2eda38",
+          "vftable": "0x4cd94618",
+          "slots": [
+            "0x4c279500",
+            "0x4b29d560",
+            "0x4cba273f",
+            "0x4b29dae0",
+            "0x4b29dae0",
+            "0x4c27c800",
+            "0x4b52ca40",
+            "0x4b526bd0"
+          ]
+        },
+        {
+          "class_name": "moRefWrapper_c",
+          "object_offset": 0,
+          "locator": "0x4d35cf30",
+          "vftable": "0x4d17c488",
+          "slots": [
+            "0x4c26e4a0",
+            "0x4c315a00",
+            "0x4cba273f",
+            "0x4b29dae0",
+            "0x4b29dae0",
+            "0x4c2842d0",
+            "0x4b52ca40",
+            "0x4b526bd0"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\sketch-point-reference-rtti.json",
+      "source_sha256": "85aeb9c1a137f93eab697ce84898d90e695bd4aeb34a0337f3b7027e499524db",
+      "module_path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+      "module_sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+      "primary_tables": [
+        {
+          "class_name": "sgLineHandle",
+          "object_offset": 0,
+          "locator": "0x4d367f28",
+          "vftable": "0x4d1cfcf0",
+          "slots": [
+            "0x4c58c500",
+            "0x4c5e4490",
+            "0x4cba273f",
+            "0x4b29dae0",
+            "0x4b29dae0",
+            "0x4c591ed0",
+            "0x4cba274b",
+            "0x4cba2751"
+          ]
+        },
+        {
+          "class_name": "sgArcHandle",
+          "object_offset": 0,
+          "locator": "0x4d3669b0",
+          "vftable": "0x4d1c7270",
+          "slots": [
+            "0x4c58c2d0",
+            "0x4c568150",
+            "0x4cba273f",
+            "0x4b29dae0",
+            "0x4b29dae0",
+            "0x4c591ed0",
+            "0x4cba274b",
+            "0x4cba2751"
+          ]
+        },
+        {
+          "class_name": "sgExtEnt_c",
+          "object_offset": 0,
+          "locator": "0x4d361f68",
+          "vftable": "0x4d1b7038",
+          "slots": [
+            "0x4c58c3a0",
+            "0x4c43f9f0",
+            "0x4cba273f",
+            "0x4b29dae0",
+            "0x4b29dae0",
+            "0x4c5923d0",
+            "0x4cba274b",
+            "0x4cba2751"
+          ]
+        }
+      ]
+    }
+  ]
+}
