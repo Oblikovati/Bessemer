@@ -225,6 +225,8 @@ direct curve-set bodies, independent point counts, shared contacts and thin dime
 the existing finite wrapper family through fresh and cached pointers.
 [Sew-reference surfaces](docs/features/sew-surfaces/README.md) retain five direct
 arrays, raw flag words, double order and inherited empty keepers.
+[Projected-line subtypes and surface wrappers](docs/features/projected-line-subtypes/README.md)
+retain required owners, nullable arrays, tagged lists and exact floating-point bits.
 [PLine silhouette edge identifiers](docs/features/silhouette-edge-identifiers/README.md)
 retain direct source identities and both signed suffix words.
 [Split features and items](docs/features/split-features/README.md) retain direct

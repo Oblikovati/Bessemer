@@ -9,7 +9,13 @@ pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
     reader.required_object(
         "data_808",
         map,
-        ModelObjectRole::Declared(&["moPLineData_c", "moPLineProject_c"]),
+        // #46 / C-377: all four exact subtypes have complete, distinct bodies.
+        ModelObjectRole::Declared(&[
+            "moPLineData_c",
+            "moPLineProject_c",
+            "moPLineDraft_c",
+            "moPLineIntersect_c",
+        ]),
     )
 }
 
@@ -48,6 +54,21 @@ fn project_prefix(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Resu
     reader.scope("array_10", |reader| {
         body_features::nullable_array(reader, map)
     })
+}
+
+pub(super) fn draft(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    project_prefix(reader, map)?;
+    reader.f64("raw_18")?;
+    super::display_records::declared(reader, map, "direction_20", &["moDirectionSpec_c"])
+}
+
+pub(super) fn intersect(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    project_prefix(reader, map)?;
+    reader.i32("raw_38")?;
+    for label in ["list_20", "list_28", "list_30"] {
+        super::display_records::declared(reader, map, label, &["suObList"])?;
+    }
+    Ok(())
 }
 
 pub(super) fn word_array(reader: &mut ModelDecoder<'_>) -> Result<()> {

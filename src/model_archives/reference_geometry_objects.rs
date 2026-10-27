@@ -8,6 +8,9 @@ pub(super) fn read(
     name: &str,
 ) -> Option<Result<()>> {
     let result = match name {
+        "moSurfaceRef_w" => super::geometric_references::surface(reader, map),
+        "moPLineDraft_c" => super::polyline_records::draft(reader, map),
+        "moPLineIntersect_c" => super::polyline_records::intersect(reader, map),
         "moSweepRefSurface_c" => super::sweep_surfaces::read(reader, map),
         "moEdgeData_c" => super::sweep_surfaces::edge_data(reader, map),
         // #54 / C-275 binds the exact zero-byte su_CObject serializer thunk.

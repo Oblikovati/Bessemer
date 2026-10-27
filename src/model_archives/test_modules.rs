@@ -423,3 +423,7 @@ mod split_feature_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/silhouette_edges.rs"]
 mod silhouette_edge_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/projected_line_subtypes.rs"]
+mod projected_line_subtype_tests;
