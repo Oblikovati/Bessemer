@@ -357,6 +357,9 @@ mod structural_member_tests;
 #[path = "../../tests/resolved_features/sweeps.rs"]
 mod sweep_record_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/thickening.rs"]
+mod thickening_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/transform_rows.rs"]
 mod transform_rows;
 #[cfg(test)]

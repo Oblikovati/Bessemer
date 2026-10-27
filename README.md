@@ -209,6 +209,8 @@ identity, signed body presence, typed kernel bodies and direct attributes.
 planes and arrays, shared matrix helpers and unsigned-array records.
 [Combine and delete bodies](docs/features/combine-bodies/README.md) retain
 complete payloads, shared body targets and raw versioned options.
+[Thickening](docs/features/thickening/README.md) retains shared dimensions,
+versioned directions and complete constant/component surface-reference layers.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 

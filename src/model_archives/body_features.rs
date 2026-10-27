@@ -229,6 +229,8 @@ pub(super) const CLASSES: &[&str] = &[
     // #54 / C-248 binds both imported moBodyFeature_c bases and ordinary node hooks.
     "moCombineBodies_c",
     "moDeleteBody_c",
+    // #54 / C-249 binds the imported body-feature prefix and ordinary node hooks.
+    "moThicken_c",
     // #54 / C-202: the draft serializer calls the complete body-feature base.
     "moDraft_c",
     // #60: both complete readers use this inherited atom-feature owner role.

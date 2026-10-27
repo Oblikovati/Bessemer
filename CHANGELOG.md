@@ -10,6 +10,8 @@
 
 ### Added
 
+- Added ordinary thickening and surface-reference reading, editing and writing with shared dimensions, versioned directions and strict selected kernel bodies. (#54)
+
 - Added ordinary combine/delete-body reading, editing and writing with complete typed payloads, shared body references and raw versioned option bytes. (#54)
 
 - Added ordinary mirrored-solid reading, editing and writing with independent planes and arrays, shared matrix helpers and complete unsigned-array records. (#54)
