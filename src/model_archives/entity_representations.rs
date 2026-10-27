@@ -26,6 +26,8 @@ const LAYOUTS: &[(&str, RepresentationLayout)] = &[
     ("moWireEdgeIdRep_c", Local(&["38"])),
     ("moSimpleSurfIdRep_c", Local(&["38"])),
     ("moSimpleEdgeIdRep_c", Local(&["38"])),
+    // #54 / 11.232 / C-274 binds the exact native dispatch and entity ancestry.
+    ("moEdgeRefIdRep_c", Local(&["38"])),
     ("moSegmEdgeIdRep_c", Local(&["38"])),
     ("moEndEdgeIdRep_c", Local(&["38"])),
     ("moTopEdgeIdRep_c", Local(&["38"])),
@@ -56,6 +58,8 @@ const LAYOUTS: &[(&str, RepresentationLayout)] = &[
     ("moCopySurfIdRep_c", Source(&["48"])),
     ("moPLineProjIdRep_c", Source(&["48"])),
     ("moDerivedEdgeIdRep_c", Source(&["48"])),
+    ("moCopyEdgeIdRep_c", Source(&["48"])),
+    ("moTrimExtEdgeIdRep_c", Source(&["48"])),
     // #54 / C-252 proves both primary dispatches and the direct moEntityId_c member.
     ("moLeftTrimEdgeIdRep_c", Source(&["48"])),
     ("moRightTrimEdgeIdRep_c", Source(&["48"])),

@@ -4,7 +4,8 @@ from typing import cast
 from object_fixture_observer import object_cursor
 
 
-def verify_identity(reference: Path, raw: bytes, version: int, kind: int, style: int) -> None:
+def verify_identity(reference: Path, raw: bytes, version: int, kind: int, style: int,
+                    source_member: bool = True) -> None:
     """Require distinct representations and repeated aliases through direct and tagged entity IDs; e.g. verify_identity(source, wire, 19000, 0, 5)."""
     if style not in (2,5):
         return
@@ -17,6 +18,8 @@ def verify_identity(reference: Path, raw: bytes, version: int, kind: int, style:
     for name in ('feature','external_feature_reference'):
         if first[name] is not second[name]:
             raise ValueError(f'trim-edge {name}; expected shared complete target')
+    if not source_member:
+        return
     left,right=(cast(dict[str,object],row['source_entity'])['representation'] for row in (first,second))
     if left is not right:
         raise ValueError('direct source entity; expected one shared source representation')

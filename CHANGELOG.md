@@ -12,6 +12,8 @@
 
 ### Added
 
+- Added ordinary copy, trim/extend and reference edge identifier reading, editing and writing with exact native dispatches, direct entity-ID members and retained signed words. (#54)
+
 - Added ordinary filled-surface and curve-contact reading, editing and writing with direct owned keepers, retained signed-byte bits and exact contact pointer order. (#54)
 
 - Added ordinary sew-reference surface reading, editing and writing with five direct arrays, retained flag words, native double order and empty inherited keepers. (#54)
