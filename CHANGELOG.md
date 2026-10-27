@@ -10,6 +10,14 @@
 
 ### Added
 
+- Added ordinary draft and back-draft surface-identifier reading, editing and writing with complete inherited references and preserved signed words. (#54)
+
+- Added ordinary draft reading, editing and writing with direct identifier keepers, strided payloads, counted face groups and retained signed option words. (#54)
+
+- Added ordinary parabola and 3D-cylinder backup reading, editing and writing with complete point-backup identities and shared conic/cylinder handles. (#54)
+
+- Added ordinary parabola and 3D parametric-surface handle reading, editing and writing with shared identities and retained escaped-index encodings. (#54)
+
 - Added ordinary spline tangency, control-polygon and curvature reading, editing and writing with complete sketch owners and direct embedded handles. (#54)
 
 - Added ordinary radiated-edge identifier reading, editing and writing with complete inherited references, signed words and shared declared-role pointers. (#54)

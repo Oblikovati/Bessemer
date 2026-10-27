@@ -1,0 +1,55 @@
+{
+  "evidence_source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\geometric-frontier-native-evidence.json",
+  "evidence_source_sha256": "1cda39837c81e162ec6723ab055f5f28eb8b5ab96e5fec19dfb7ca15b85f94f9",
+  "installed_module_sha256_verified": true,
+  "module_sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "tables": [
+    {
+      "class_name": "sg3DParametricSurfaceHandle",
+      "object_offset": 0,
+      "locator": "0x4d322080",
+      "vftable": "0x4ceda178",
+      "slots": [
+        "0x4c58c260",
+        "0x4b9502f0",
+        "0x4cba273f",
+        "0x4b29dae0",
+        "0x4b29dae0",
+        "0x4c591ed0",
+        "0x4cba274b",
+        "0x4cba2751"
+      ],
+      "bases": [
+        ".?AVsg3DParametricSurfaceHandle@@",
+        ".?AVsg3DSurfaceHandle@@",
+        ".?AVsgEntHandle@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ]
+    },
+    {
+      "class_name": "sgParabolaHandle",
+      "object_offset": 0,
+      "locator": "0x4d3680c8",
+      "vftable": "0x4d1d05f0",
+      "slots": [
+        "0x4c58c640",
+        "0x4c5fa1b0",
+        "0x4cba273f",
+        "0x4b29dae0",
+        "0x4b29dae0",
+        "0x4c591ed0",
+        "0x4cba274b",
+        "0x4cba2751"
+      ],
+      "bases": [
+        ".?AVsgParabolaHandle@@",
+        ".?AVsgConicHandle@@",
+        ".?AVsgSegmentHandle@@",
+        ".?AVsgEntHandle@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ]
+    }
+  ]
+}

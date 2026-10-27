@@ -1,0 +1,77 @@
+{
+  "evidence_source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\draft-surface-id-native-evidence.json",
+  "evidence_source_sha256": "b82c6c50c766a34112594a06daa4603cfd1cf47cc9b4961ed56a3835eaf81be1",
+  "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+  "module_sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "installed_module_sha256_verified": true,
+  "bindings": [
+    {
+      "rtti": {
+        "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+        "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+        "tables": [
+          {
+            "class_name": "moDraftSurfIdRep_c",
+            "object_offset": 0,
+            "locator": "0x4d333ef0",
+            "vftable": "0x4cf6b120",
+            "slots": [
+              "0x4bbb6830",
+              "0x4bbb5ca0",
+              "0x4cba273f",
+              "0x4b29dae0",
+              "0x4b29dae0",
+              "0x4bbbde70",
+              "0x4cba274b",
+              "0x4cba2751"
+            ]
+          }
+        ]
+      },
+      "locator_bytes": "01000000000000000000000088fd9c02183f1d02f03e1d02",
+      "bases": [
+        ".?AVmoDraftSurfIdRep_c@@",
+        ".?AVmoSingleSurfIdRep_c@@",
+        ".?AVmoSurfaceIdRep_c@@",
+        ".?AVmoEntityIdRep_c@@",
+        ".?AVgcEntityIdRep_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ]
+    },
+    {
+      "rtti": {
+        "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+        "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+        "tables": [
+          {
+            "class_name": "moBackDraftSurfIdRep_c",
+            "object_offset": 0,
+            "locator": "0x4d334388",
+            "vftable": "0x4cf6c3b8",
+            "slots": [
+              "0x4bbb6420",
+              "0x4bbb5ca0",
+              "0x4cba273f",
+              "0x4b29dae0",
+              "0x4b29dae0",
+              "0x4bbbde70",
+              "0x4cba274b",
+              "0x4cba2751"
+            ]
+          }
+        ]
+      },
+      "locator_bytes": "010000000000000000000000d8fe9c02b0431d0288431d02",
+      "bases": [
+        ".?AVmoBackDraftSurfIdRep_c@@",
+        ".?AVmoSingleSurfIdRep_c@@",
+        ".?AVmoSurfaceIdRep_c@@",
+        ".?AVmoEntityIdRep_c@@",
+        ".?AVgcEntityIdRep_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ]
+    }
+  ]
+}

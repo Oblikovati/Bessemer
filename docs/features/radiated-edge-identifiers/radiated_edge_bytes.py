@@ -6,12 +6,19 @@ from sweep_fixture_bytes import shared_object
 RADIATED = 'moRadiateEdgeIdRep_c'
 
 
+def representation_references(mapping: WireMap, ids: dict[str, int], feature: bytes, rich: bool) -> bytes:
+    """Share complete inherited references across native-bound representation suffixes; e.g. representation_references(mapping, ids, bytes(2), True)."""
+    external = shared_object(mapping, ids, 'representation-external', 'moFR_c',
+        lambda: struct.pack('<HiI', 0, -2147483648, 0xffffffff)) if rich else bytes(2)
+    return feature+external
+
+
 def representation(mapping: WireMap, ids: dict[str, int], rich: bool, edited: bool) -> bytes:
     """Reserve self identity before complete inherited references; e.g. representation(mapping, ids, True, False)."""
     def contents() -> bytes:
         feature = struct.pack('<H', ids['radiated']) if rich else bytes(2)
-        external = mapping.new('moFR_c', lambda: struct.pack('<HiI', 0, -2147483648, 0xffffffff)) if rich else bytes(2)
-        return feature+external+struct.pack('<2i', 12345 if edited else -2147483648, 2147483647)
+        references = representation_references(mapping, ids, feature, rich)
+        return references+struct.pack('<2i', 12345 if edited else -2147483648, 2147483647)
     return shared_object(mapping, ids, 'radiated', RADIATED, contents)
 
 

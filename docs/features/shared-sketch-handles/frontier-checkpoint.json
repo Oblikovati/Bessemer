@@ -1,0 +1,23 @@
+{
+  "cases": 906,
+  "accepted": 709,
+  "rejected": 197,
+  "newly_accepted": 0,
+  "previous_complete_preserved": true,
+  "fresh_process_outcomes_and_causes_identical": true,
+  "artifact_stable_during_replay": true,
+  "artifact_sha256": "59d0bb4428bdd27897c23704574ae6d9432ab187419114eec3b42c3eeb58c47c",
+  "changes": [
+    {
+      "index": 342,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"contour_handles[0]\" has runtime class \"sgParabolaHandle\"; expected one of [\"sgEntHandle\", \"sgLineHandle\", \"sgArcHandle\", \"sgPointHandle\", \"sgSplineHandle\", \"sgEllipseHandle\", \"sgTextHandle\", \"sg3DPlaneHandle\", \"sg3DSphereHandle\"]"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"backup\" has runtime class \"moParabolaBackedUpData_c\"; expected one of [\"moPointBackedUpData_c\", \"moLineBackedUpData_c\", \"moSegmentBackedUpData_c\", \"moArcBackedUpData_c\", \"moEllipseBackedUpData_c\", \"mo3DPlaneBackedUpData_c\", \"mo3DSphereBackedUpData_c\"]"
+      }
+    }
+  ]
+}

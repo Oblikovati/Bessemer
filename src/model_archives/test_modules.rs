@@ -120,6 +120,12 @@ mod display_dimension_tests;
 #[path = "../../tests/resolved_features/domes.rs"]
 mod dome_record_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/drafts.rs"]
+mod draft_record_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/draft_surface_identifiers.rs"]
+mod draft_surface_identifier_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/embedded_title.rs"]
 mod embedded_title_tests;
 #[cfg(test)]
@@ -279,6 +285,9 @@ mod section_bound_tests;
 #[path = "../../tests/resolved_features/sensor_records.rs"]
 mod sensor_record_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/shared_sketch_handles.rs"]
+mod shared_sketch_handle_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/sheet_metal.rs"]
 mod sheet_metal_tests;
 #[cfg(test)]
@@ -290,6 +299,9 @@ mod sketch_curve_tests;
 #[cfg(test)]
 #[path = "../../tests/model_archives/sketch_dimensions.rs"]
 mod sketch_dimension_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/sketch_geometry_backups.rs"]
+mod sketch_geometry_backup_tests;
 #[cfg(test)]
 #[path = "../../tests/model_archives/sketch_geometry.rs"]
 mod sketch_geometry_tests;

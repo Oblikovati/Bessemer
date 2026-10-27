@@ -326,6 +326,8 @@ fn read_sketch_backup_body(
         "moLineBackedUpData_c" | "moSegmentBackedUpData_c" => backup::line(reader, map),
         "moArcBackedUpData_c" => backup::arc(reader, map),
         "moEllipseBackedUpData_c" => backup::ellipse(reader, map),
+        "moParabolaBackedUpData_c" => backup::parabola(reader, map),
+        "mo3DCylinderBackedUpData_c" => backup::cylinder(reader),
         "sgSlot_c" => super::sketch_entities::slot(reader, map),
         _ => read_explosion_body(reader, map, class),
     }

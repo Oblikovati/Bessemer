@@ -183,6 +183,14 @@ preserve inherited references and shared entity-representation identities.
 accept the verified point family in extrusion and revolution ends.
 [Spline controls](docs/features/spline-controls/README.md) retain direct handle
 records and complete sketch user-object identities.
+[Shared sketch handles](docs/features/shared-sketch-handles/README.md) support
+documented parabola and parametric-surface handles through the existing codec.
+[Sketch geometry backups](docs/features/sketch-geometry-backups/README.md) preserve
+parabola segment prefixes, raw cylinder records and their shared handle types.
+[Draft features](docs/features/drafts/README.md) preserve signed presence words,
+direct identifier keepers, strided payloads and counted face/point collections.
+[Draft surface identifiers](docs/features/draft-surface-identifiers/README.md)
+retain full signed words and distinct identifiers with shared feature references.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 
