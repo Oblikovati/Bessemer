@@ -294,6 +294,9 @@ mod sketch_curve_tests;
 #[path = "../../tests/model_archives/sketch_dimensions.rs"]
 mod sketch_dimension_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/sketch_geometry_backups.rs"]
+mod sketch_geometry_backup_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/sketch_geometry.rs"]
 mod sketch_geometry_tests;
 #[cfg(test)]

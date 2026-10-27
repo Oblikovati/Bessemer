@@ -55,3 +55,6 @@ verifies all four input hashes per configuration against the unchanged native
 corpus. That prior audit covers 42,468,950 feature bytes under its recorded
 1,143-module source snapshot. This is reuse of matching independent observations,
 not a claim that a new full reference replay ran.
+
+[Additional conic/cylinder handles and backups](../sketch-geometry-backups/README.md)
+are covered separately by the native bindings in section 11.342.

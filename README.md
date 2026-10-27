@@ -185,6 +185,8 @@ accept the verified point family in extrusion and revolution ends.
 records and complete sketch user-object identities.
 [Shared sketch handles](docs/features/shared-sketch-handles/README.md) support
 documented parabola and parametric-surface handles through the existing codec.
+[Sketch geometry backups](docs/features/sketch-geometry-backups/README.md) preserve
+parabola segment prefixes, raw cylinder records and their shared handle types.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 

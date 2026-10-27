@@ -10,6 +10,8 @@ pub(super) const CLASSES: &[&str] = &[
     "moEllipseBackedUpData_c",
     "mo3DPlaneBackedUpData_c",
     "mo3DSphereBackedUpData_c",
+    "moParabolaBackedUpData_c",
+    "mo3DCylinderBackedUpData_c",
 ];
 const POINT: ModelObjectRole<'_> = ModelObjectRole::Declared(&["moPointBackedUpData_c"]);
 const LINE: ModelObjectRole<'_> =
@@ -62,5 +64,22 @@ pub(super) fn ellipse(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> 
     for offset in ["28", "30", "38", "40", "48"] {
         reader.object(&format!("point_{offset}"), map, POINT)?;
     }
+    Ok(())
+}
+
+pub(super) fn parabola(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    // C-384: line implements the common segment wire body; native ancestry is segment.
+    reader.scope("segment_base", |reader| line(reader, map))?;
+    for offset in ["20", "28", "30", "38"] {
+        reader.object(&format!("point_{offset}"), map, POINT)?;
+    }
+    reader.f64s(&["raw_40", "raw_48"])
+}
+
+pub(super) fn cylinder(reader: &mut ModelDecoder<'_>) -> Result<()> {
+    reader.require_ordinary_part()?;
+    double_vector(reader, "vector_08")?;
+    double_vector(reader, "point_20")?;
+    reader.f64("raw_38")?;
     Ok(())
 }
