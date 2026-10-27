@@ -165,6 +165,9 @@ mod face_blend_item_tests;
 #[path = "../../tests/resolved_features/feature_comments.rs"]
 mod feature_comment_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/filled_surfaces.rs"]
+mod filled_surface_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/fillet_threads.rs"]
 mod fillet_thread_tests;
 #[cfg(test)]

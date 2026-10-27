@@ -247,6 +247,8 @@ pub(super) const CLASSES: &[&str] = &[
     "moTrimRefSurface_c",
     // #54 / C-269 binds the complete body-feature prefix and its owner contract.
     "moSewRefSurface_c",
+    // #54 / C-273 proves the filled surface's complete body-feature owner chain.
+    "moFillRefSurface_c",
     // #54 / C-202: the draft serializer calls the complete body-feature base.
     "moDraft_c",
     // #60: both complete readers use this inherited atom-feature owner role.

@@ -20,6 +20,10 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moFillRefSurface_c" => super::filled_surfaces::read(reader, map),
+        "moFillRefSurfIdKeeper_c" => super::filled_surfaces::keeper(reader, map),
+        "moCurveContact_c" => super::filled_surfaces::contact(reader, map),
+        "moCurveContactData_c" => super::filled_surfaces::contact_data(reader, map),
         "moSewRefSurface_c" => super::sew_surfaces::read(reader, map),
         // #54 / C-269 binds this exact zero-byte su_CObject serializer thunk.
         "moSewRefSurfIdKeeper_c" => super::extruded_surfaces::keeper(reader),
