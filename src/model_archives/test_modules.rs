@@ -427,3 +427,7 @@ mod silhouette_edge_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/projected_line_subtypes.rs"]
 mod projected_line_subtype_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/constraint_planes.rs"]
+mod constraint_plane_tests;

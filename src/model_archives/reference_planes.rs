@@ -35,6 +35,16 @@ pub(super) const CLASSES: &[&str] = &[
     "moPerLinePtRefPlnData_c",
     "moRefAtAngleData_c",
     "moRefThreePtsData_c",
+    // #46 / C-280, C-374 and C-378: complete concrete ordinary plane-data bodies.
+    "moPntSurfRefPlnData_c",
+    "moConstraintRefplaneData_c",
+    "moConstraintMidPlaneRefplaneData_c",
+    "moConstraintCoincLineAtAnglePlaneRefplaneData_c",
+    "moConstraintCoincLineParallelPlaneRefplaneData_c",
+    "moConstraintCoincTwoPointsPerpPlnRefplaneData_c",
+    "moConstraintPrllPlnTanOneCylinderRefplaneData_c",
+    "moConstraintCoincTwoLinesRefplaneData_c",
+    "moConstraintCoincLinePerpPlaneRefplaneData_c",
 ];
 
 pub(super) fn data(
@@ -54,7 +64,11 @@ pub(super) fn data(
     }
 }
 
-fn base(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader, default: bool) -> Result<()> {
+pub(super) fn base(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+    default: bool,
+) -> Result<()> {
     reader.require_ordinary_part()?;
     double_vector(reader, "root_point")?;
     double_vector(reader, "normal")?;

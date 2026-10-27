@@ -19,7 +19,9 @@ from the native observed values.
 The fresh `moSurfaceRef_w` class uses the existing complete surface-reference
 body: common wrapper, then four doubles. Its ordinary modern scope satisfies the
 native historical double gate. The existing typed axis-surface role already
-admits this base class; the generic wrapper family is unchanged.
+admits this base class. At that checkpoint the generic wrapper family was
+unchanged; [constraint-plane families](../constraint-plane-families/README.md)
+later added the complete base surface to that shared role.
 
 Independent fixtures cover 390 complete graphs across thirteen versions, 69,354
 primitive observations and 35 owned streams. They include complete PLine

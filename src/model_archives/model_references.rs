@@ -5,6 +5,8 @@ use crate::archive_codec::{MaterialRead, ObjectReader};
 // #58: these concrete readers already preserve the documented inherited wrapper body.
 pub(super) const WRAPPER_CLASSES: &[&str] = &[
     "moRefWrapper_c",
+    // #46 / C-377 proves the complete surface-base wrapper input; C-280 uses this base role.
+    "moSurfaceRef_w",
     "moGeneralSurfRef_w",
     "moGeneralCurveRef_w",
     "moSingleFaceRef_w",

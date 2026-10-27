@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Fixed reference-plane data and common-wrapper roles rejecting documented constraint, point/surface and base-surface objects while retaining finite class checks. (#46)
+
 - Fixed projected-line data roles rejecting documented draft and intersection objects while retaining nonnull-owner and unrelated-class checks. (#46)
 
 - Fixed sketch external-entity references rejecting complete known wrapper subclasses, including fresh and cached single-face references, while retaining unrelated-class rejection. (#46)
@@ -13,6 +15,8 @@
 - Fixed reference-plane point roles rejecting documented endpoint and loft-sync subclasses for fresh and cached pointers. (#46)
 
 ### Added
+
+- Added ordinary constraint-plane data, interfaces and geometry reading, editing and writing with shared identities and immutable raw/native flag observations. (#54)
 
 - Added ordinary projected-line draft/intersection and surface-base reading, editing and writing with retained nullable arrays, tagged list identities and exact floating-point bits. (#54)
 

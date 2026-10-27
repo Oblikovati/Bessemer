@@ -7,6 +7,9 @@ pub(super) fn read(
     map: &mut ObjectReader,
     name: &str,
 ) -> Option<Result<()>> {
+    if let Some(result) = super::constraint_planes::read_object(reader, map, name) {
+        return Some(result);
+    }
     let result = match name {
         "moSurfaceRef_w" => super::geometric_references::surface(reader, map),
         "moPLineDraft_c" => super::polyline_records::draft(reader, map),
