@@ -60,6 +60,9 @@ mod component_geometry_role_tests;
 #[path = "../../tests/resolved_features/component_geometry.rs"]
 mod component_geometry_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/component_reference_curves.rs"]
+mod component_reference_curve_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/component_references.rs"]
 mod component_reference_tests;
 #[cfg(test)]
@@ -95,6 +98,9 @@ mod coordinate_system_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/custom_properties.rs"]
 mod custom_property_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/cut_list_folders.rs"]
+mod cut_list_folder_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/detail_folder_records.rs"]
 mod detail_folder_record_tests;
@@ -147,6 +153,9 @@ mod external_reference_tests;
 #[path = "../../tests/resolved_features/extruded_surfaces.rs"]
 mod extruded_surface_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/face_blend_items.rs"]
+mod face_blend_item_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/feature_comments.rs"]
 mod feature_comment_tests;
 #[cfg(test)]
@@ -170,6 +179,9 @@ mod geometric_reference_tests;
 #[cfg(test)]
 #[path = "../../tests/model_archives/header_load_plan.rs"]
 mod header_load_plan;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/helices.rs"]
+mod helix_record_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/hole_wizard.rs"]
 mod hole_wizard_tests;
@@ -275,6 +287,9 @@ mod resolved_corpus_tests;
 #[cfg(test)]
 #[path = "../../tests/model_archives/resolved_start.rs"]
 mod resolved_start_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/revolved_surfaces.rs"]
+mod revolved_surface_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/scale_schema_records.rs"]
 mod scale_schema_record_tests;

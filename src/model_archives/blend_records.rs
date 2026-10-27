@@ -6,6 +6,25 @@ use crate::archive_codec::{MaterialRead, ObjectReader};
 
 const DIRECTIONS: &[&str] = &["moDirectionSpec_c"];
 
+// 11.205 / C-233: the imported su_CObject base contributes no ordinary-scope bytes.
+pub(super) fn face_pair(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    reader.require_ordinary_part()?;
+    for label in ["first_08", "second_10"] {
+        declared(reader, map, label, &["moFaceBlendItem_c"])?;
+    }
+    Ok(())
+}
+
+pub(super) fn face_item(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    reader.require_ordinary_part()?;
+    declared(reader, map, "face_08", &["moFaceRef_c"])?;
+    declared(reader, map, "edge_10", &["moEdgeRef_c"])?;
+    if reader.u8("point_presence")? != 0 {
+        crate::archive_codec::vectors::double_vector(reader, "point_18")?;
+    }
+    Ok(())
+}
+
 pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     reader.scope("body", |reader| super::body_features::base(reader, map))?;
     reader.scope("payload", |reader| payload(reader, map))

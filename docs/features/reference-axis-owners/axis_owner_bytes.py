@@ -1,14 +1,18 @@
 """Independent reference-geometry bases and populated axis owners (#46)."""
 import struct
+from collections.abc import Callable
 from fillet_fixture_bytes import WireMap
 from body_feature_fixture_bytes import header, atom_fields
 from freeze_fixtures import BASE
 
 
-def geometry_header(mapping: WireMap, version: int, rich: bool, edited: bool = False) -> bytes:
+def geometry_header(mapping: WireMap, version: int, rich: bool, edited: bool = False, keeper: Callable[[], bytes] | None = None) -> bytes:
     """Retain the common base and its real owner index; e.g. geometry_header(mapping, 19000, True)."""
     owner = mapping.slot
-    raw = header(mapping, version, rich)+atom_fields(mapping, rich, owner)
+    raw = header(mapping, version, rich)
+    if keeper is not None:
+        raw = raw[:-2]+struct.pack('<H', 65535)+keeper()
+    raw += atom_fields(mapping, rich, owner)
     flags = 0x87654321 if edited else 0x89abcdef
     raw += struct.pack('<3dIiH', 1, -0.0, 3, flags, -2147483648, 0)
     return raw+(struct.pack('<i', 2147483647) if version > 0x2f85 else b'')

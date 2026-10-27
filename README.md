@@ -191,6 +191,16 @@ parabola segment prefixes, raw cylinder records and their shared handle types.
 direct identifier keepers, strided payloads and counted face/point collections.
 [Draft surface identifiers](docs/features/draft-surface-identifiers/README.md)
 retain full signed words and distinct identifiers with shared feature references.
+[Face-blend items](docs/features/face-blend-items/README.md) preserve pair identity,
+typed face/edge references and optional point bits.
+[Revolved surfaces](docs/features/revolved-surfaces/README.md) retain inline
+surface bodies, shared angular dimensions, data words and keeper identity.
+[Helices](docs/features/helices/README.md) preserve typed kernel wires, variable
+pitch arrays, conditional dimension tables and wire-edge identifier identity.
+[Component-reference curves](docs/features/component-reference-curves/README.md)
+retain shared unit-component targets, wrapper aliases and signed ID/unsigned time pairs.
+[Cut-list folders](docs/features/cut-list-folders/README.md) retain inherited
+folder layers, direct properties, raw flags and shared tagged references.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
 

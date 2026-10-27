@@ -10,6 +10,16 @@
 
 ### Added
 
+- Added ordinary cut-list folder reading, editing and writing with complete inherited layers, direct property lists and fourteen native-bound folder classes. (#54)
+
+- Added ordinary component-reference curve reading, editing and writing with complete inherited fields, shared unit-component targets and preserved feature ID/time pairs. (#54)
+
+- Added ordinary helix reading, editing and writing with typed kernel wires, variable-pitch arrays, exact dimension predicates and shared wire-edge identifiers. (#54)
+
+- Added ordinary revolved reference-surface reading, editing and writing with shared angular dimensions, preserved data words and exact zero-byte keepers. (#54)
+
+- Added ordinary face-blend item and pair reading, editing and writing with shared identities, typed boundary references and preserved optional point bytes. (#54)
+
 - Added ordinary draft and back-draft surface-identifier reading, editing and writing with complete inherited references and preserved signed words. (#54)
 
 - Added ordinary draft reading, editing and writing with direct identifier keepers, strided payloads, counted face groups and retained signed option words. (#54)
