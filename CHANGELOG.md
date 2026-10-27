@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added ordinary sheet-metal and template reading, field editing and writing with validated saved-state handoff, strided allowance payloads, fixed-face framing and complete component references. (#54)
+
 - Added ordinary component coordinate-system reading, field editing and writing with shared geometry, preserved fixed-transform words and explicit special-kind errors. (#54)
 
 - Added ordinary coordinate-system reading, field editing and writing with equality-selected axes, direct axis arrays, shared identities and preserved raw selector/vector values. (#54)

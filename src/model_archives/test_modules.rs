@@ -255,6 +255,9 @@ mod section_bound_tests;
 #[path = "../../tests/resolved_features/sensor_records.rs"]
 mod sensor_record_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/sheet_metal.rs"]
+mod sheet_metal_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/shell_records.rs"]
 mod shell_record_tests;
 #[cfg(test)]

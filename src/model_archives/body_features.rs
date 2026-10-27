@@ -208,6 +208,9 @@ pub(super) const CLASSES: &[&str] = &[
     "moSweep_c",
     "moSweepCut_c",
     "moDome_c",
+    // #54 / C-182 and C-296: both sheet-metal serializers inherit the body-feature owner layer.
+    "moSheetMetal_c",
+    "moTemplateSheetMetal_c",
     // #60: both complete readers use this inherited atom-feature owner role.
     "moPlanarSurface_c",
     "Chamfer_c",

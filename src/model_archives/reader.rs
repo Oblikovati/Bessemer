@@ -32,6 +32,7 @@ pub(super) struct ModelDecoder<'a> {
     kernel: Option<super::kernel_frames::CompressedKernelContext>,
     kernel_expanded: usize,
     inherited_fields: Option<&'a [ModelField]>,
+    saved_helper_state: Option<super::configuration_manager::SavedHelperState>,
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -114,12 +115,36 @@ impl<'a> ModelDecoder<'a> {
             kernel: None,
             kernel_expanded: 0,
             inherited_fields: None,
+            saved_helper_state: None,
         })
     }
 
     pub fn with_inherited_fields(mut self, fields: &'a [ModelField]) -> Self {
         self.inherited_fields = Some(fields);
         self
+    }
+
+    pub(super) fn with_saved_helper_state(
+        mut self,
+        state: super::configuration_manager::SavedHelperState,
+    ) -> Self {
+        self.saved_helper_state = Some(state);
+        self
+    }
+
+    pub(super) fn sheet_metal_extended(&self) -> bool {
+        // C-182: the native helper constructor's default is zero outside a persisted handoff.
+        self.saved_helper_state == Some(super::configuration_manager::SavedHelperState::Active)
+    }
+
+    pub(super) fn require_saved_helper_state(&mut self) -> Result<()> {
+        if self.saved_helper_state.is_some() {
+            return Ok(());
+        }
+        self.checked(Err(BessemerError::new(
+            "model archive", "sheet-metal context", crate::FailureClass::Unsupported,
+            format!("saved helper state {:?}; expected state from a complete validated configuration manager", self.saved_helper_state),
+        )))
     }
 
     pub(super) fn configuration_scene<T>(
