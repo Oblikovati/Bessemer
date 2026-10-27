@@ -2,7 +2,17 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- Fixed reference-plane point roles rejecting documented endpoint and loft-sync subclasses for fresh and cached pointers. (#46)
+
 ### Added
+
+- Added ordinary blend and blend-cut reading, field editing and writing with independent count retention, complete numeric columns and distinct direction/dimension conditions. (#54)
+
+- Added ordinary fold-folder, transform and property reading, field editing and writing with typed matrix extensions, ordered shared property pairs and direct byte arrays. (#54)
+
+- Added ordinary flat-pattern reading, field editing and writing with typed raw compressed bodies, direct bounding boxes, shared references and ordered duplicate pair keys. (#54)
 
 - Added ordinary base-flange reading, field editing and writing with selected directions, shared sketch-handle collections and preserved bend-group records. (#54)
 

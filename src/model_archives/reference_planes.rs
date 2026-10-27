@@ -1,5 +1,5 @@
 use super::display_records::declared;
-use super::geometric_references::LINE_REFERENCE_CLASSES;
+use super::geometric_references::{LINE_REFERENCE_CLASSES, POINT_REFERENCE_CLASSES};
 use super::{ModelDecoder, ModelObjectRole, body_features, model_references, sketch_arrays};
 use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader, vectors::double_vector};
@@ -114,7 +114,7 @@ fn face(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
 }
 
 fn face_point(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    declared(reader, map, "point_reference_88", &["moPointRef_w"])?;
+    declared(reader, map, "point_reference_88", POINT_REFERENCE_CLASSES)?;
     reader.scope("direct_plane_reference_90", |reader| {
         plane_reference(reader, map)
     })?;
@@ -122,7 +122,7 @@ fn face_point(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<(
 }
 
 fn line_point(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    declared(reader, map, "point_reference_88", &["moPointRef_w"])?;
+    declared(reader, map, "point_reference_88", POINT_REFERENCE_CLASSES)?;
     reader.required_object(
         "curve_reference_90",
         map,

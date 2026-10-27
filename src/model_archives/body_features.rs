@@ -213,6 +213,11 @@ pub(super) const CLASSES: &[&str] = &[
     "moTemplateSheetMetal_c",
     // #54 / C-183: the bend-group constructor retains the body-feature owner contract.
     "moSMBaseFlange_c",
+    // #54 / C-194: flat patterns use the complete bend-group/body-feature layer.
+    "moFlatPattern_c",
+    // #54 / C-186: both shared blend serializers call the full body-feature base.
+    "moBlend_c",
+    "moBlendCut_c",
     // #60: both complete readers use this inherited atom-feature owner role.
     "moPlanarSurface_c",
     "Chamfer_c",

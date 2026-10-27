@@ -21,6 +21,9 @@ mod axis_owner_tests;
 #[path = "../../tests/resolved_features/base_flanges.rs"]
 mod base_flange_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/blends.rs"]
+mod blend_record_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/body_chooser_records.rs"]
 mod body_chooser_record_tests;
 #[cfg(test)]
@@ -141,6 +144,12 @@ mod feature_comment_tests;
 #[path = "../../tests/model_archives/fillet_threads.rs"]
 mod fillet_thread_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/flat_patterns.rs"]
+mod flat_pattern_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/fold_transforms.rs"]
+mod fold_transform_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/folder_configuration_records.rs"]
 mod folder_configuration_record_tests;
 #[cfg(test)]
@@ -215,6 +224,9 @@ mod part_archive_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/planar_surface_records.rs"]
 mod planar_surface_record_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/plane_point_roles.rs"]
+mod plane_point_role_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/polyline_records.rs"]
 mod polyline_record_tests;
