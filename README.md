@@ -231,6 +231,8 @@ the reviewed wrapper family at conditional, starting-end and revolution fields.
 accept the same reviewed family at all four fields through fresh and cached references.
 [Valued-dimension fixed transforms](docs/features/fixed-valued-transforms/README.md)
 retain the full presence word and thirty raw archive words before the derived suffix.
+[Additional valued dimensions](docs/features/additional-valued-dimensions/README.md)
+retain native spline-tangent, arc-length and plane-distance identities in shared collections.
 [Deleted-face features](docs/features/deleted-faces/README.md) retain independent
 nullable arrays, unsigned DWORDs and shared nested data.
 [Composite curves](docs/features/composite-curves/README.md) retain strict kernel

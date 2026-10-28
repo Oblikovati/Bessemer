@@ -1,0 +1,48 @@
+{
+  "previous_complete": 814,
+  "complete": 816,
+  "newly_complete": [
+    152,
+    774
+  ],
+  "no_prior_success_lost": true,
+  "all_906_statuses_and_causes_identical": true,
+  "explicit_remaining_failures": 90,
+  "changed_stops": [
+    {
+      "index": 152,
+      "before": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"valued_g3[2]\" has runtime class \"sgArcLenDist\"; expected one of [\"sgValG3Dim\"]"
+      ],
+      "after": [
+        "accepted"
+      ]
+    },
+    {
+      "index": 343,
+      "before": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"valued_g3[0]\" has runtime class \"sgArcLenDist\"; expected one of [\"sgValG3Dim\"]"
+      ],
+      "after": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moSkIsoCurveInfo_c\" schema 1; expected an implemented complete model object body"
+      ]
+    },
+    {
+      "index": 774,
+      "before": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"valued_g2[0]\" has runtime class \"sg3DPlane3DPlaneDist\"; expected one of [\"sgValG2Dim\", \"sgLLDist\", \"sgPntPntDist\", \"sgPntLineDist\", \"sgPntPntHorDist\", \"sgPntPntVertDist\", \"sgAnglDim\", \"sgPoint3DPlaneDist\"]"
+      ],
+      "after": [
+        "accepted"
+      ]
+    }
+  ],
+  "logs": {
+    "additional-dimension-frontier.log": "4675025fd354fdf1b245f080ba6e9b54f3e6eec1fe381e824859d246e9460c68",
+    "additional-dimension-frontier-repeat.log": "d53a8a30d5d1fc82ddedc5bc59596be75c5008bb54682fdc228bbbfc1b1e1b6d"
+  }
+}

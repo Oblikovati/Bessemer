@@ -463,3 +463,7 @@ mod intersection_wrapper_role_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/fixed_valued_transforms.rs"]
 mod fixed_valued_transform_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/additional_valued_dimensions.rs"]
+mod additional_valued_dimension_tests;

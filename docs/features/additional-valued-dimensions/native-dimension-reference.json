@@ -1,0 +1,117 @@
+{
+  "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\sketch-dimension-frontier-corpus.json",
+  "source_sha256": "6b8169f3da3a15d4dedd5d9674d0c8bddb32c442a04da53f01da2a869ffcca3f",
+  "snapshot_identity": "3eeb65e7aae64b5835b64073e3a6adfe8e2b803eb5e7c0998825ee210d691a46",
+  "scope": "Recorded complete root prefixes only; no completion credit for partial streams.",
+  "records": [
+    {
+      "path": "samples/learn/Coping Saw.SLDPRT",
+      "configuration": "Contents/Config-0",
+      "source_sha256": "ac53d3fb710896f648fa737c126c62e4efd5b27f6dd74340eccc226d15b4e17c",
+      "recorded_root_count": 74,
+      "recorded_complete_end": 529943,
+      "original_status": "explicit_stop",
+      "objects": [
+        {
+          "cls": "sgSplineTanMagnitudeDim",
+          "root_start": 455231,
+          "root_end": 501568,
+          "root_sha256": "ba9aedf3180b69c065b3dfce5bf30aa0e78317ead34c4afb341d3fb16a72eede",
+          "plane_transform_presence": 0,
+          "handle_classes": [
+            "sgPointHandle",
+            "sgSplineHandle"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "samples/learn/Garden Trowel/Garden Trowel_Garden_Trowel_Spade.SLDPRT",
+      "configuration": "Contents/Config-0",
+      "source_sha256": "5288d0007eacad9c6119651ee9bb199c66f186a5e0fefd447ea973930cb81e8c",
+      "recorded_root_count": 46,
+      "recorded_complete_end": 272877,
+      "original_status": "explicit_stop",
+      "objects": [
+        {
+          "cls": "sgArcLenDist",
+          "root_start": 5538,
+          "root_end": 13916,
+          "root_sha256": "7822f689b7736dd0d0e6f358a84001064fa73e65b631ffcb59d9151f29261e58",
+          "plane_transform_presence": 0,
+          "quadrant": 1,
+          "handle_classes": [
+            "sgArcHandle",
+            "sgPointHandle",
+            "sgPointHandle"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "samples/Simulation Examples/shovel.sldprt",
+      "configuration": "Contents/Config-2",
+      "source_sha256": "25be4afc76bb895fc5612b61c0462e8aa7a63841db6996866e235bd5d389408d",
+      "recorded_root_count": 52,
+      "recorded_complete_end": 433914,
+      "original_status": "stream_complete",
+      "objects": [
+        {
+          "cls": "sgSplineTanMagnitudeDim",
+          "root_start": 7115,
+          "root_end": 38128,
+          "root_sha256": "449b89e0d6745dca0b618e5171dc8d99d57b06c0bd15b4a59408a1e024f4557c",
+          "plane_transform_presence": 0,
+          "handle_classes": [
+            "sgPointHandle",
+            "sgSplineHandle"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "samples/Simulation Examples/Verification/nafems_ic21.sldprt",
+      "configuration": "Contents/Config-0",
+      "source_sha256": "077742da91deaead2f5f5522137234b1d14342062108663ca0251ee71435de96",
+      "recorded_root_count": 28,
+      "recorded_complete_end": 31194,
+      "original_status": "stream_complete",
+      "objects": [
+        {
+          "cls": "sgArcLenDist",
+          "root_start": 6670,
+          "root_end": 11801,
+          "root_sha256": "17b84f904bbcbccc356e4d687dbfd829f124908d750c359d5f648367649535f9",
+          "plane_transform_presence": 0,
+          "quadrant": 1,
+          "handle_classes": [
+            "sgArcHandle",
+            "sgPointHandle",
+            "sgPointHandle"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "samples/tutorial/motionstudies/redundancies/piston female.sldprt",
+      "configuration": "Contents/Config-0",
+      "source_sha256": "e101c639a5ede447ec41f22d98a84503b532687194655824c36de0391dd325e8",
+      "recorded_root_count": 33,
+      "recorded_complete_end": 44309,
+      "original_status": "stream_complete",
+      "objects": [
+        {
+          "cls": "sg3DPlane3DPlaneDist",
+          "root_start": 13643,
+          "root_end": 17252,
+          "root_sha256": "f5044c000422272e5d2c2dc41171d0a43bc90544d0ffb52bc6a466ba5da41c22",
+          "plane_transform_presence": 0,
+          "handle_classes": [
+            "sg3DPlaneHandle",
+            "sg3DPlaneHandle"
+          ]
+        }
+      ]
+    }
+  ]
+}

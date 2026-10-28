@@ -243,9 +243,11 @@ fn read_sketch_dimension_body(
     if dims::OFFSET_CLASSES.contains(&name) {
         return dims::offset(reader, map);
     }
+    if dims::G3_CLASSES.contains(&name) {
+        return dims::valued_three(reader, map);
+    }
     match name {
         "sgDim" => dims::base(reader, map),
-        "sgValG3Dim" => dims::valued_three(reader, map),
         "sgDimEntityHelpData_c" => dims::entity_help(reader),
         _ => read_sketch_logical_body(reader, map, class),
     }
