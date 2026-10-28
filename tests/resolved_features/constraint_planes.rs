@@ -254,11 +254,12 @@ fn combined_owned_fixture_families_equal_the_exact_plane_data_role() {
     assert_exact_plane_data_role(observed);
 }
 
-fn assert_exact_plane_data_role(observed: std::collections::BTreeSet<String>) {
+fn assert_exact_plane_data_role(mut observed: std::collections::BTreeSet<String>) {
+    assert!(observed.insert(super::absolute_plane_data_tests::containing_plane_data_class()));
     let expected: std::collections::BTreeSet<String> = super::reference_planes::CLASSES
         .iter()
         .map(|name| name.to_string())
         .collect();
     assert_eq!(observed, expected);
-    assert_eq!(observed.len(), 18);
+    assert_eq!(observed.len(), 19);
 }

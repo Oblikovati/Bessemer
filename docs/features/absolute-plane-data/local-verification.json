@@ -1,0 +1,30 @@
+{
+  "issue": 54,
+  "issue_type": "Feature",
+  "behavior_version": "C285-absolute-plane-data-v1",
+  "fixture_graphs": 108,
+  "primitive_reads": 16263,
+  "owned_streams": 14,
+  "private_tests": 4,
+  "public_tests": 3,
+  "python_tests": 2,
+  "cargo_xtask_pr": "923 library tests, all integrations, 4 xtask tests and 274 doctests passed",
+  "native_absolute_planes": 8,
+  "previous_complete": 819,
+  "complete": 821,
+  "newly_complete": [
+    615,
+    905
+  ],
+  "all_906_statuses_and_causes_identical": true,
+  "no_prior_success_lost": true,
+  "source_snapshot": "5e2e04dd9ab4751fe0e6ac1d3df6f3434c2923a9ab3fb7d71d32ead1d01a95b7",
+  "fixture_source_snapshot": "20aad5f300869b68b1180c8c00d3ac49e72d785e967e17edb6a11801e9b5d96f",
+  "shared_reader_hash_identical": true,
+  "default_only_point_absent": true,
+  "kernel_decision": "Native shared serializer and virtual hook select the non-default base without a suffix",
+  "exclusions": [
+    "Other edge-flange families remain incomplete",
+    "Earlier/internal contexts, scalar meanings, geometry validity, application acceptance and whole-schema parity remain incomplete"
+  ]
+}

@@ -284,6 +284,9 @@ pub(super) const CLASSES: &[&str] = &[
     "moCosmeticWeldCutList_c",
     // #54 / C-390 binds this complete concrete body-feature owner.
     "moEndCap_c",
+    // #54 / C-391 proves these complete extrusion/body-feature ancestry bindings.
+    "moGusset_c",
+    "moWeldBeadFeat_c",
     // #54 / C-271 binds the inherited reference-geometry chooser owner.
     "moRuledSrfFromEdge_c",
     "Chamfer_c",

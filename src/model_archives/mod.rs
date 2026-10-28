@@ -39,6 +39,7 @@ mod deleted_faces;
 mod end_caps;
 mod plane_geometry_flags;
 mod ruled_surfaces;
+mod weldment_finishing;
 pub use plane_geometry_flags::PlaneGeometryFlag;
 mod context_chains;
 mod coordinate_systems;
