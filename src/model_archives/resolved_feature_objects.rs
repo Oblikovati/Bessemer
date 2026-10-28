@@ -20,6 +20,10 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moWeldSymbol_c" => super::weld_symbols::read(reader, map),
+        "moCosmeticWeldBeadSymbol_c" => super::weld_symbols::cosmetic(reader, map),
+        "moSFSymbol_c" => super::weld_symbols::surface_finish(reader, map),
+        "moCosmeticWeldBeadAttachPoint_c" => super::weld_symbols::attachment(reader, map),
         "moCompDetailItem_c" => super::component_detail_references::read(reader, map),
         "moDetailItem_c" => super::component_detail_references::detail_item(reader, map),
         "moRuledSrfFromEdge_c" => super::ruled_surfaces::read(reader, map),

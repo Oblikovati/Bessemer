@@ -491,3 +491,7 @@ mod component_detail_reference_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/component_detail_provenance.rs"]
 mod component_detail_provenance_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/weld_symbols.rs"]
+mod weld_symbol_tests;

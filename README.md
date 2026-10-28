@@ -303,3 +303,6 @@ display-item base, native weld suffix and preserved payload identities.
 
 [Component-detail references](docs/features/component-detail-references/README.md)
 documents exact detail bodies and verified current-part ownership.
+
+[Weld symbols](docs/features/weld-symbols/README.md) documents constructor-bound
+direct texts, surface-finish gates and cosmetic attachment subtype identities.

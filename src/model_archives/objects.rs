@@ -10,7 +10,7 @@ pub(super) fn require_role(
     role: ModelObjectRole<'_>,
     label: &str,
 ) -> Result<()> {
-    if representation_role(record, role) {
+    if representation_role(record, role) || super::weld_symbols::assignable(record, role) {
         return Ok(());
     }
     require_object_role(record, role, label, super::invalid)

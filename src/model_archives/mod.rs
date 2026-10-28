@@ -242,6 +242,7 @@ mod units;
 mod values;
 mod views;
 mod weld_helpers;
+mod weld_symbols;
 
 use crate::{BessemerError, FailureClass};
 use objects::ModelObjectRole;
