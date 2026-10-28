@@ -1,8 +1,10 @@
 # Component-detail references
 
-Feature #54 continuation after the display-weld reader. Native corpus cases
+This investigation recorded the Feature #54 continuation after the display-weld
+reader at revision `d40767b`. At that checkpoint, native corpus cases
 547, 615 and 905 now stop at `component_reference` containing
-`moCompDetailItem_c`. No component-detail implementation or completion credit is claimed here.
+`moCompDetailItem_c`. No component-detail implementation or completion credit was claimed at that
+checkpoint. The completed implementation is described in [the feature guide](README.md).
 
 Clauses 11.345 / C-387 and 11.348 / C-390 bind the component-detail class to the
 component-reference prefix followed by two tagged detail pointers (+E8/+F8)
@@ -54,3 +56,13 @@ against the stored pointer field and exact oracle bytes. The local PR gate passe
 matched all 906 outcomes and causes against the preceding executable: 818 complete
 reconstructions and 88 explicit failures. Both aggregate corpus commands exited
 101; there is no new native completion credit.
+
+## Implemented ownership boundary
+
+The completed reader uses the prefix identity return above, a private token from
+the completed parsed part, exact decoded unit facts and same-map owner comparison.
+Null, fresh-current and cached-current branches have independent complete owned
+fixtures. Missing provenance, wrong/null owner, external presence and unrelated
+component types remain explicit errors. No public token constructor or skipped
+component branch was added. Native remaining stops and verification exclusions
+are recorded in `local-verification.json` and `frontier-checkpoint.json`.

@@ -4,6 +4,8 @@ use crate::archive_codec::{MaterialRead, ObjectReader, visibility};
 
 const COMPONENT_REFERENCES: &[&str] = &[
     "moCompRef_c",
+    // #54 / C-387 and C-390 prove the component-reference prefix and guarded internal branch.
+    "moCompDetailItem_c",
     "moCompRefPlane_c",
     "moCompRefSurface_c",
     "moCompRefAxis_c",

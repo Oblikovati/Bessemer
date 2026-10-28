@@ -483,3 +483,25 @@ mod surface_identifier_variant_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/display_welds.rs"]
 mod display_weld_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/component_detail_references.rs"]
+mod component_detail_reference_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/component_detail_provenance.rs"]
+mod component_detail_provenance_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/weld_symbols.rs"]
+mod weld_symbol_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/attachment_records.rs"]
+mod attachment_record_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/cosmetic_weld_cut_lists.rs"]
+mod cosmetic_weld_cut_list_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/cosmetic_weld_tree.rs"]
+mod cosmetic_weld_tree_tests;

@@ -33,6 +33,7 @@ pub(super) fn parse(
         ModelArchiveContext::OrdinaryPartExternalXml,
     )?
     .with_inherited_fields(source.fields())
+    .with_verified_part_root(source.parsed.verified_root())
     .with_kernel(source.context.kernel.clone())
     .with_saved_helper_state(manager.helper_state);
     let mut map = ObjectReader::from_snapshot(&source.parsed.object_map);

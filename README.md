@@ -300,3 +300,18 @@ describes exact top-surface and end-cap chamfer representation framing.
 
 [Display welds](docs/features/display-welds/README.md) covers the complete
 display-item base, native weld suffix and preserved payload identities.
+
+[Component-detail references](docs/features/component-detail-references/README.md)
+documents exact detail bodies and verified current-part ownership.
+
+[Weld symbols](docs/features/weld-symbols/README.md) documents constructor-bound
+direct texts, surface-finish gates and cosmetic attachment subtype identities.
+
+[Attachment records](docs/features/attachment-records/README.md) distinguishes
+attachment data from inherited parametric attachment points.
+
+[Cosmetic weld cut lists](docs/features/cosmetic-weld-cut-lists/README.md)
+documents the complete reference-curve parent and native suffix order.
+
+[Cosmetic weld tree](docs/features/cosmetic-weld-tree/README.md) covers direct
+endpoint ownership, bead kernel bodies and signed wire-map lists.

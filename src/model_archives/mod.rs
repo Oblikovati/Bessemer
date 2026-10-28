@@ -5,6 +5,7 @@
 include!("test_modules.rs");
 
 mod archive;
+mod attachment_records;
 mod attribute_records;
 mod base_flange_directions;
 mod base_flanges;
@@ -32,6 +33,8 @@ mod connection_payload;
 mod connection_points;
 mod constraint_planes;
 mod context;
+mod cosmetic_weld_cut_lists;
+mod cosmetic_weld_tree;
 mod deleted_faces;
 mod plane_geometry_flags;
 mod ruled_surfaces;
@@ -121,6 +124,8 @@ mod boundary_references;
 mod center_helpers;
 mod circular_patterns;
 mod component_coordinates;
+mod component_detail_provenance;
+mod component_detail_references;
 mod component_references;
 mod construction;
 mod contour_objects;
@@ -240,6 +245,7 @@ mod units;
 mod values;
 mod views;
 mod weld_helpers;
+mod weld_symbols;
 
 use crate::{BessemerError, FailureClass};
 use objects::ModelObjectRole;

@@ -1,0 +1,41 @@
+{
+  "issue": 54,
+  "issue_type": "Feature",
+  "behavior_version": "C389-cosmetic-weld-cut-list-v1",
+  "runtime_base_revision": "ce6a1a8886fd53bf53769e739b8ac72753589f75",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "fixture_graphs": 132,
+  "primitive_reads": 26820,
+  "owned_streams": 14,
+  "checks": {
+    "private": "5 focused parser tests passed in the full gate",
+    "public": "3 passed",
+    "python": "2 regeneration/inventory tests passed",
+    "cargo_xtask_pr": "895 library tests, all integrations, 4 xtask tests and 274 doctests passed; 3 external-fixture tests explicitly ignored",
+    "native_processes": "Two fresh processes matched all 906 outcomes and causes; aggregate completeness remains incomplete"
+  },
+  "previous_complete": 818,
+  "complete": 818,
+  "newly_complete": [],
+  "no_prior_success_lost": true,
+  "source_snapshot": "4471f833c4ceeb05425de7146028c41699af4a25edb9b6cbb8bf08e789784b64",
+  "source_python_files": 1853,
+  "source_pin_unchanged": true,
+  "independent_feature_bytes": 54838261,
+  "native_cut_list_bodies": 1,
+  "native_body_bytes": 4502,
+  "native_suffix_bytes": 20,
+  "kernel_decision": "Reuse the complete reference-curve body and preserve native signed-word order; exact owner subtype admission, no kernel repair",
+  "exclusions": [
+    "88 native inputs remain explicit failures",
+    "Other cosmetic tree/bead classes, historical/internal contexts, geometry validity, application acceptance and whole-schema parity remain incomplete",
+    "Humanizer unavailable; maintainer prose review remains open"
+  ],
+  "artifact_sha256": "872f548f2d946936be126b8202cd6267c7be56454fcd8271b6d8a35e955964bf",
+  "gate_log_sha256": "56b48ece5f34aac9cd54bc60af8f17d20820c872d96c5ecaf6db74e236fbd9e7",
+  "native_log_sha256": "cc6b8414c94c73c659bfff76392e05fa3692c317c3130464eb0ca2684b042e2b",
+  "native_repeat_log_sha256": "838807523ea78250a9946f3b8738cc1dd4732182466288f5fd10e668dc64d663",
+  "source_audit_log_sha256": "3ae11cbe4911b8781eb35537445e7dafa23403ddb068c87082c95a837e26d2bb",
+  "fixture_packet_sha256": "cc18121e5e69c1fd5e1569f862f9aa1081aacedcc0b0e2687b0a1916b03264f8"
+}

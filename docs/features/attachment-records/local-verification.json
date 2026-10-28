@@ -1,0 +1,54 @@
+{
+  "issue": 54,
+  "issue_type": "Feature",
+  "behavior_version": "C211-attachment-records-v1",
+  "runtime_base_revision": "66ac011d4ddbcc29ac515b0533aace38d978b12e",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "fixture_graphs": 60,
+  "primitive_reads": 2160,
+  "owned_streams": 14,
+  "checks": {
+    "private": "7 passed, including post-cleanup rebuild",
+    "public": "3 passed",
+    "python": "2 regeneration/inventory tests passed",
+    "cargo_xtask_pr": "890 library tests, all integrations, 4 xtask tests and 274 doctests passed; 3 external-fixture tests explicitly ignored",
+    "native_processes": "Two fresh processes matched all 906 outcomes and causes; exit 101 for aggregate 818/906 completeness assertion"
+  },
+  "previous_complete": 818,
+  "complete": 818,
+  "newly_complete": [],
+  "no_prior_success_lost": true,
+  "partial_advances_without_completion_credit": [
+    547,
+    615,
+    905
+  ],
+  "independent_feature_bytes": 54838261,
+  "source_snapshot": "818f382172e6ca9d76d8d11a48eee0b7e51268e1593892a7ab06d6a83618df07",
+  "source_python_files": 1843,
+  "source_pin_unchanged": true,
+  "original_live_sources_unchanged": true,
+  "live_research_additions_after_snapshot": [
+    "research/test_xpress_awdocument_post.py",
+    "research/xpress_awdocument_post.py",
+    "research/xpress_awdocument_post_audit.py"
+  ],
+  "native_objects": {
+    "moAttachPointData_c": 9,
+    "moParametricPoint_c": 8
+  },
+  "kernel_decision": "Preserve independent data layout, inherited parametric layout, raw bits and exact native pointer roles; no normalization or repair",
+  "exclusions": [
+    "88 native inputs remain explicit failures",
+    "Case 547 advances to moCosmeticWeldCutList_c; 615 and 905 advance to moEndCap_c without completion credit",
+    "New drawing-view bodies, assembly/drawing attachment contexts, scalar meanings, geometry validity, application acceptance and whole-schema parity remain incomplete",
+    "Humanizer unavailable; maintainer prose review remains open"
+  ],
+  "artifact_sha256": "05316c3b0dc7b9e6f066e3b57df31cbb8ba9f3b68613bcb4f7f0f79084801f45",
+  "gate_log_sha256": "2b3fa5a6d3f84d2a1c026c7b35125a4ecebb8699a8daef1f451c1160f838bb7b",
+  "native_log_sha256": "12a6d82ecba97f8ea89f8b9f990c72849da90ead0a64d6e02fdfb93d0054d873",
+  "native_repeat_log_sha256": "274ced508f52a383c50ca7a5138d4abdc338cf007531d907cf7b04544513afbe",
+  "source_audit_log_sha256": "1dcbb8dfbcad4f9cfcccc6eb70c322d95037450613e57fd14b255d3df8fe1e9d",
+  "fixture_packet_sha256": "3012c4528adda2cae81b484bdd15584f77c2c8616fdb79195de97f6415d4347b"
+}

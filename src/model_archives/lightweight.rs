@@ -4,9 +4,10 @@ use super::{
     node,
 };
 use crate::Result;
-use crate::archive_codec::{MaterialRead, ObjectReader, ObjectRecord};
+use crate::archive_codec::{ArchiveMapIndex, MaterialRead, ObjectReader, ObjectRecord};
 
 pub(super) struct ModelLightweightState {
+    pub root_identity: ArchiveMapIndex,
     pub imports: ImportedHeaderMap,
     pub node: node::ModelNodePrefix,
     pub raw_1614: i32,
@@ -18,15 +19,16 @@ pub(super) fn read(
     header: ModelHeaderLoadPlan,
 ) -> Result<ModelLightweightState> {
     reader.require_ordinary_part()?;
-    root_tag(reader, map)?;
+    let root_identity = root_tag(reader, map)?;
     let size = reader.section_size("lightweight_size")?;
-    reader.bounded(size, |reader| body(reader, map, header))
+    reader.bounded(size, |reader| body(reader, map, header, root_identity))
 }
 
 fn body(
     reader: &mut ModelDecoder<'_>,
     map: &mut ObjectReader,
     header: ModelHeaderLoadPlan,
+    root_identity: ArchiveMapIndex,
 ) -> Result<ModelLightweightState> {
     let imports = header.append(reader, map)?;
     reader.i32("unknown_a8")?;
@@ -35,20 +37,20 @@ fn body(
     concept(reader, map)?;
     let raw_1614 = continuation(reader, map)?;
     Ok(ModelLightweightState {
+        root_identity,
         imports,
         node,
         raw_1614,
     })
 }
 
-fn root_tag(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+fn root_tag(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<ArchiveMapIndex> {
     let root = reader.object_tag("root", map, ModelObjectRole::Declared(&["moPart_c"]))?;
-    let shape = if matches!(root, ObjectRecord::New { .. }) {
-        Ok(())
-    } else {
-        Err(invalid(format!(
-            "root {root:?}; expected a new moPart_c object"
-        )))
+    let shape = match root {
+        ObjectRecord::New { index, .. } => Ok(index),
+        actual => Err(invalid(format!(
+            "root {actual:?}; expected a new moPart_c object"
+        ))),
     };
     reader.checked(shape)
 }

@@ -37,6 +37,8 @@ const COMPONENTS: &[&str] = &[
     "moCompSolidBody_c",
     "moCompSurfaceBody_c",
     "moCompRef_c",
+    // #54 / C-387 and C-390 prove the component-reference prefix and guarded internal branch.
+    "moCompDetailItem_c",
     "moCompEntGroup_c",
     "moCompMultiEdge_c",
     "moCompEdge_c",

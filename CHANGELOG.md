@@ -24,6 +24,16 @@
 
 ### Added
 
+- Added complete cosmetic weld subfolders, beads, bead data and parameter records with direct endpoint ownership, strict kernel framing and preserved signed wire-map counts. (#54)
+
+- Added complete cosmetic weld cut-list framing with preserved kernel bodies, shared parent references and native signed-word order. (#54)
+
+- Added distinct attachment-data and parametric-point framing with exact inherited attachment roles and preserved raw values. (#54)
+
+- Added complete weld, cosmetic weld, surface-finish and cosmetic attachment framing with direct text ownership and exact native subtype roles. (#54)
+
+- Added complete detail-item and internal component-detail framing with verified current-part unit ownership and preserved shared identities. (#54)
+
 - Added complete ordinary display-weld framing with preserved raw values, CString encodings and payload identities. (#54)
 
 - Added exact top-surface and end-cap chamfer entity-ID representations with preserved signed words and shared identities. (#54)
