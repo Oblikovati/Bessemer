@@ -1,8 +1,10 @@
-use super::annotation_view_tests::decode;
+use super::annotation_view_tests::{LIMITS, decode};
 use super::lightweight_section_tests::next_case;
-use super::{ModelFieldValue, encode_fields};
+use super::reader::ModelArchiveContext;
+use super::{ModelDecoder, ModelField, ModelFieldValue, ModelObjectRole, encode_fields};
 use crate::FailureClass;
-use crate::archive_codec::ArchiveCursor;
+use crate::archive_codec::{ArchiveCursor, ObjectReader, ObjectRecord};
+use crate::header::ArchiveVersion;
 
 const CASES: &[u8] = include_bytes!("../fixtures/model-archives/component-reference-cases.bin");
 
@@ -99,4 +101,52 @@ fn richest_case() -> (u32, &'static [u8]) {
         selected = Some((version, bytes));
     }
     selected.unwrap()
+}
+
+fn decode_prefix_record(
+    version: u32,
+    bytes: &[u8],
+) -> crate::Result<(ObjectRecord, Vec<ModelField>)> {
+    let mut reader = ModelDecoder::new_in_context(
+        bytes,
+        ArchiveVersion::new(version),
+        LIMITS,
+        ModelArchiveContext::OrdinaryPartExternalXml,
+    )?;
+    let mut map = ObjectReader::new();
+    reader.object_tag(
+        "object",
+        &mut map,
+        ModelObjectRole::Declared(&["moCompRef_c"]),
+    )?;
+    let component = reader.scope("object", |reader| {
+        super::component_references::base_record(reader, &mut map)
+    })?;
+    Ok((component, reader.finish()?))
+}
+
+#[test]
+fn complete_component_prefix_returns_the_same_stored_null_and_cached_identities() {
+    let mut cursor = ArchiveCursor::new(CASES);
+    let mut nulls = 0;
+    for _ in 0..20 {
+        let (_, version, bytes, oracle) = next_case(&mut cursor);
+        let (component, fields) = decode_prefix_record(version, bytes).unwrap();
+        assert_eq!(&component, stored_component_record(&fields));
+        nulls += usize::from(matches!(component, ObjectRecord::Null));
+        super::transform_rows::assert_fields(&fields, oracle);
+        assert_eq!(encode_fields(&fields, 30000).unwrap(), bytes);
+    }
+    assert_eq!(nulls, 10);
+}
+
+fn stored_component_record(fields: &[ModelField]) -> &ObjectRecord {
+    let stored = fields
+        .iter()
+        .find(|f| f.path.as_ref() == "root.object.component")
+        .unwrap();
+    let ModelFieldValue::ObjectTag(tag) = &stored.value else {
+        panic!("expected component pointer")
+    };
+    &tag.record
 }

@@ -2,7 +2,7 @@
 
 Feature #54 continuation after the display-weld reader. Native corpus cases
 547, 615 and 905 now stop at `component_reference` containing
-`moCompDetailItem_c`. No implementation or completion credit is claimed here.
+`moCompDetailItem_c`. No component-detail implementation or completion credit is claimed here.
 
 Clauses 11.345 / C-387 and 11.348 / C-390 bind the component-detail class to the
 component-reference prefix followed by two tagged detail pointers (+E8/+F8)
@@ -39,3 +39,18 @@ This note records the next required implementation, not a narrower supported
 replacement. Historical/internal contexts, external component layouts, runtime
 repair and full schema parity remain incomplete. Humanizer is unavailable;
 maintainer prose review remains open.
+
+## Complete prefix identity preparation
+
+`component_references::base_record` now returns the actual component record after
+decoding the complete existing prefix once. The existing `base` caller delegates
+to it and retains its previous unit return. No class dispatch, wire field,
+pointer role or branch policy changes in this structural commit.
+
+The original 188-case / 5,402-field independent fixture packet remains unchanged.
+Twenty base-prefix vectors additionally check returned null/cached identities
+against the stored pointer field and exact oracle bytes. The local PR gate passed
+860 library tests, all integrations and 274 doctests. Two fresh native processes
+matched all 906 outcomes and causes against the preceding executable: 818 complete
+reconstructions and 88 explicit failures. Both aggregate corpus commands exited
+101; there is no new native completion credit.
