@@ -13,13 +13,19 @@ legacy-word interval and the logical-group index gate. Isoparametric states
 accept width zero or typed u16 entries at width two. Other widths stop explicitly,
 and counts are checked against available bytes and the operation budget.
 
-The independent packet contains 632 cases and 19,916 scalar expectations across
+The independent packet contains 632 cases and 21,164 scalar expectations across
 eight versions. It exercises standalone bodies, populated collections, aliases,
 empty collections and all stages composed in wire order. Every case reconstructs
 exactly; all truncated prefixes and trailing bytes fail. An integer-scale edit
 matches independently assembled bytes, preserves the original and reparses with
 the expected fields. Every case survives source-buffer overwrite, and parallel
 writers reproduce the same owned pattern bytes.
+
+Bug #86 / C-395 corrected the shared valued-dimension transform from compact
+restore to the fixed 30-word archive operator. The original packet remains frozen
+as negative replay evidence. All 632 positive cases were independently regenerated;
+the 104 corrected transforms now expose raw words instead of compact projections.
+See [the framing correction](../fixed-valued-transforms/README.md).
 
 Some pattern cases explicitly seed note and count-dimension object identities.
 All 72 cases that reference these identities reject missing or wrong-class

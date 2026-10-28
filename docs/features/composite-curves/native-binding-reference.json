@@ -1,0 +1,533 @@
+{
+  "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\thin-cut-composite-native-evidence.json",
+  "source_sha256": "a3860889670287d381cdfb3b5e286bce91013db2657c5e04e3da731e3f0fe263",
+  "evidence": {
+    "modules": [
+      {
+        "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+        "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c"
+      }
+    ],
+    "bindings": [
+      {
+        "module": "sldmodu.dll",
+        "class_name": "moCutThin_c",
+        "vtable": "0x4cf4a7a8",
+        "serializer": "0x4bb24dc0",
+        "ancestry": [
+          ".?AVmoCutThin_c@@",
+          ".?AVmoExtruThin_c@@",
+          ".?AVmoExtrusion_c@@",
+          ".?AVmoSingleSketchFeature_c@@",
+          ".?AVmoSketchedFeature_c@@",
+          ".?AVmoBodyFeature_c@@",
+          ".?AVmoAtomFeature_c@@",
+          ".?AVmoModelFeature_c@@",
+          ".?AVmoFeature_c@@",
+          ".?AVmoConcept_c@@",
+          ".?AVmoLoggedNode_c@@",
+          ".?AVmoNode_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@",
+          ".?AVutDisplayedEntity_c@@"
+        ],
+        "hooks": {
+          "0x4b8": "0x4c189b60",
+          "0x4c0": "0x4c18a920"
+        }
+      },
+      {
+        "module": "sldmodu.dll",
+        "class_name": "moCompositeCurve_c",
+        "vtable": "0x4d2e6cf0",
+        "serializer": "0x4cb76330",
+        "ancestry": [
+          ".?AVmoCompositeCurve_c@@",
+          ".?AVmoReferenceCurve_c@@",
+          ".?AVmoRefGeom_c@@",
+          ".?AVmoAtomFeature_c@@",
+          ".?AVmoModelFeature_c@@",
+          ".?AVmoFeature_c@@",
+          ".?AVmoConcept_c@@",
+          ".?AVmoLoggedNode_c@@",
+          ".?AVmoNode_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@",
+          ".?AVutDisplayedEntity_c@@"
+        ]
+      }
+    ],
+    "functions": {
+      "0x4bb24dc0": {
+        "module": "sldmodu.dll",
+        "end": "0x4bb2517d",
+        "native_bytes": "48895c240848896c241056574154415641574883ec40488bda4c8bf1488d4c2430ff15a9fe2001488bd3498bcee88e030000488bcbff15f5992101488bcb85c00f84a1000000ff15ec992101498b96600800004c8d05c6effa01488bcb85c07408ff15c99a2101eb06ff15e999210133ff0fb7f7498b8e580800004885c97415488b49084885c975048bf7eb08ff15756821018bf00fb7d6488bcbff156f9f2101663bfe732a0fb7f60f1f8000000000498b8658080000488b48084803cf488bd3e86abdffff4883c70c4883ee0175e0488b5c2470488b6c24784883c440415f415e415c5f5ec3ff154b992101488d152ceffa01488bcb85c07408ff15379a2101eb06ff154799210149898660080000488b4424304885c00f848c0200008b888007000085c97513ff15b2fd2001ff15a4fd20018bc8488b44243081f9db0100000f827601000033ff6689bc2480000000488d942480000000488bcbff15b69e21010fb78424800000006685c07439b910000000e81ce4070148898424880000004885c07410488d0dd3cd420148890848897808eb03488bc7498986580800000fb78424800000008bef663bf80f8305010000488d4c2420e8231bfcff488bcbff156a982101488bcb85c074268b542420ff15499a21018b542424488bcbff153c9a21018b542428488bcbff152f9a2101eb27488d542420ff152a9a2101488d542424488bcbff151c9a2101488d542428488bcbff150e9a2101498bb658080000488b46084885c07520ba10000000b90800000041b90c00000041b801000000ff150a69210148894608488d542420488bc8ff150069210148894608488b0e4c8b214885c075048bc7eb09488bc8ff1594662101448d78ff488b4e084885c975048bc7eb06ff157d6621018d50ff458bc7488bce41ffd4488b4e084885c97406ff1562662101ffc50fb78424800000003be80f8cfbfeffff488b4424304885c00f84e40000008b808007000085c0750cff150afc2001ff15fcfb20013d4c0100000f82e9fdffff498b06498bceff90b81e0000498b8e600800004533c94533c0498bd6488b4908e824b00100498b8660080000488b48104885c9740e4533c94533c0498bd6e806b00100498b8e60080000e8aafc77ff488bd84885c00f848efdffff488b4c24304885c9745e8b818007000085c07511ff1584fb2001ff1576fb2001488b4c24303dbd01000072264885c974378b818007000085c0750cff155dfb2001ff154ffb20013dda0100000f823cfdffff4533c94533c0498bd6488bcbe88baf0100e926fdffff4533c0baffffffffb901000000e8f7e10701cc",
+        "sha256": "a5a65aff02d3e715ec7636b81061a68ef0eb032976514bd75c8afc38a3637a80",
+        "imports": [
+          {
+            "address": "0x4bb24de1",
+            "iat": "0x4cd34c90",
+            "module": "SLDMFCU.dll",
+            "symbol": "??0moArchiveHelper_c@@QEAA@PEAVsu_CArchive@@@Z"
+          },
+          {
+            "address": "0x4bb24df5",
+            "iat": "0x4cd3e7f0",
+            "module": "swccu.dll",
+            "symbol": "?IsStoring@su_CArchive@@QEBAHXZ"
+          },
+          {
+            "address": "0x4bb24e06",
+            "iat": "0x4cd3e7f8",
+            "module": "swccu.dll",
+            "symbol": "?IsDBStream@su_CArchive@@QEBAHXZ"
+          },
+          {
+            "address": "0x4bb24e21",
+            "iat": "0x4cd3e8f0",
+            "module": "swccu.dll",
+            "symbol": "?WriteObject@su_CDBArchive@@QEAAXPEBVCObject@@PEBUCRuntimeClass@@@Z"
+          },
+          {
+            "address": "0x4bb24e29",
+            "iat": "0x4cd3e818",
+            "module": "swccu.dll",
+            "symbol": "?WriteObject@su_CArchive@@QEAAXPEBVCObject@@PEBUCRuntimeClass@@@Z"
+          },
+          {
+            "address": "0x4bb24e4d",
+            "iat": "0x4cd3b6c8",
+            "module": "sldmgu.dll",
+            "symbol": "amDynamicArrayCount"
+          },
+          {
+            "address": "0x4bb24e5b",
+            "iat": "0x4cd3edd0",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@G@Z"
+          },
+          {
+            "address": "0x4bb24ea7",
+            "iat": "0x4cd3e7f8",
+            "module": "swccu.dll",
+            "symbol": "?IsDBStream@su_CArchive@@QEBAHXZ"
+          },
+          {
+            "address": "0x4bb24ebb",
+            "iat": "0x4cd3e8f8",
+            "module": "swccu.dll",
+            "symbol": "?ReadObject@su_CDBArchive@@QEAAPEAVCObject@@PEAUCRuntimeClass@@@Z"
+          },
+          {
+            "address": "0x4bb24ec3",
+            "iat": "0x4cd3e810",
+            "module": "swccu.dll",
+            "symbol": "?ReadObject@su_CArchive@@QEAAPEAVCObject@@PEBUCRuntimeClass@@@Z"
+          },
+          {
+            "address": "0x4bb24ee8",
+            "iat": "0x4cd34ca0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+          },
+          {
+            "address": "0x4bb24eee",
+            "iat": "0x4cd34c98",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+          },
+          {
+            "address": "0x4bb24f1c",
+            "iat": "0x4cd3edd8",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAG@Z"
+          },
+          {
+            "address": "0x4bb24f34",
+            "iat": "0x4cd35ec0",
+            "module": "mfc140u.dll",
+            "symbol": "ordinal:1489"
+          },
+          {
+            "address": "0x4bb24f80",
+            "iat": "0x4cd3e7f0",
+            "module": "swccu.dll",
+            "symbol": "?IsStoring@su_CArchive@@QEBAHXZ"
+          },
+          {
+            "address": "0x4bb24f91",
+            "iat": "0x4cd3e9e0",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@K@Z"
+          },
+          {
+            "address": "0x4bb24f9e",
+            "iat": "0x4cd3e9e0",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@K@Z"
+          },
+          {
+            "address": "0x4bb24fab",
+            "iat": "0x4cd3e9e0",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@K@Z"
+          },
+          {
+            "address": "0x4bb24fb8",
+            "iat": "0x4cd3e9e8",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAK@Z"
+          },
+          {
+            "address": "0x4bb24fc6",
+            "iat": "0x4cd3e9e8",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAK@Z"
+          },
+          {
+            "address": "0x4bb24fd4",
+            "iat": "0x4cd3e9e8",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAK@Z"
+          },
+          {
+            "address": "0x4bb25000",
+            "iat": "0x4cd3b910",
+            "module": "sldmgu.dll",
+            "symbol": "suDynArrayAlloc"
+          },
+          {
+            "address": "0x4bb25012",
+            "iat": "0x4cd3b918",
+            "module": "sldmgu.dll",
+            "symbol": "amDynamicArrayAdd"
+          },
+          {
+            "address": "0x4bb2502e",
+            "iat": "0x4cd3b6c8",
+            "module": "sldmgu.dll",
+            "symbol": "amDynamicArrayCount"
+          },
+          {
+            "address": "0x4bb25045",
+            "iat": "0x4cd3b6c8",
+            "module": "sldmgu.dll",
+            "symbol": "amDynamicArrayCount"
+          },
+          {
+            "address": "0x4bb25060",
+            "iat": "0x4cd3b6c8",
+            "module": "sldmgu.dll",
+            "symbol": "amDynamicArrayCount"
+          },
+          {
+            "address": "0x4bb25090",
+            "iat": "0x4cd34ca0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+          },
+          {
+            "address": "0x4bb25096",
+            "iat": "0x4cd34c98",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+          },
+          {
+            "address": "0x4bb25116",
+            "iat": "0x4cd34ca0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+          },
+          {
+            "address": "0x4bb2511c",
+            "iat": "0x4cd34c98",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+          },
+          {
+            "address": "0x4bb2513d",
+            "iat": "0x4cd34ca0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+          },
+          {
+            "address": "0x4bb25143",
+            "iat": "0x4cd34c98",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+          },
+          {
+            "address": "0x4bb25177",
+            "iat": "0x4cd35e98",
+            "module": "mfc140u.dll",
+            "symbol": "ordinal:2342"
+          }
+        ]
+      },
+      "0x4cb75eb0": {
+        "module": "sldmodu.dll",
+        "end": "0x4cb75fd3",
+        "native_bytes": "48894c24085355565741564883ec20488bea488bf9e8b67b75ff90488d051e0e7700488907488d05842f770048898788000000488d9f8807000048895c2458488bcbff1590891c0090488d3520782100488933488d8fa8070000ff15888c1c0090488d8fc8070000ff157a8c1c0090488d8fe8070000ff156c8c1c0090488d8f08080000ff155e8c1c009048c787180700000000000048c7871007000000000000c7878007000001000000b920000000ff15ca881c00488bd848894424604885c0740f488bc8ff150c891c0090488933eb0233db48899f7807000033f64c6375104d85f67e2f33db4885db780f3b75107d0a488b4508488b14d8eb0233d2488b8f78070000ff1535ed1b00ffc648ffc3493bde7cd3488bc74883c420415e5f5e5d5bc3",
+        "sha256": "857cf36de44b4b548071e85f5af480da18fd837519ebfc5e5b54895257db3890",
+        "imports": [
+          {
+            "address": "0x4cb75ef2",
+            "iat": "0x4cd3e888",
+            "module": "swccu.dll",
+            "symbol": "??0su_CObArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x4cb75f0a",
+            "iat": "0x4cd3eb98",
+            "module": "swccu.dll",
+            "symbol": "??0su_CDWordArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x4cb75f18",
+            "iat": "0x4cd3eb98",
+            "module": "swccu.dll",
+            "symbol": "??0su_CDWordArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x4cb75f26",
+            "iat": "0x4cd3eb98",
+            "module": "swccu.dll",
+            "symbol": "??0su_CDWordArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x4cb75f34",
+            "iat": "0x4cd3eb98",
+            "module": "swccu.dll",
+            "symbol": "??0su_CDWordArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x4cb75f60",
+            "iat": "0x4cd3e830",
+            "module": "swccu.dll",
+            "symbol": "??2su_CObject@@SAPEAX_K@Z"
+          },
+          {
+            "address": "0x4cb75f76",
+            "iat": "0x4cd3e888",
+            "module": "swccu.dll",
+            "symbol": "??0su_CObArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x4cb75fb5",
+            "iat": "0x4cd34cf0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?addUnique@suObArray@@QEAAHPEAVCObject@@@Z"
+          }
+        ]
+      },
+      "0x4cb75fe0": {
+        "module": "sldmodu.dll",
+        "end": "0x4cb76097",
+        "native_bytes": "48895c241848894c2408574883ec20488bf9e8897a75ff90488d05f10c7700488907488d05572e770048898788000000488d9f8807000048895c2438488bcbff1563881c0090488d05f3762100488903488d8fa8070000ff155b8b1c0090488d8fc8070000ff154d8b1c0090488d8fe8070000ff153f8b1c0090488d8f08080000ff15318b1c009033c0488987180700004889877807000048898710070000c7878007000001000000488bc7488b5c24404883c4205fc3",
+        "sha256": "a2f8cc563ad8bea2a0e5f7ba7274884442de22200b02216b8dbddbb9b6abbe5f",
+        "imports": [
+          {
+            "address": "0x4cb7601f",
+            "iat": "0x4cd3e888",
+            "module": "swccu.dll",
+            "symbol": "??0su_CObArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x4cb76037",
+            "iat": "0x4cd3eb98",
+            "module": "swccu.dll",
+            "symbol": "??0su_CDWordArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x4cb76045",
+            "iat": "0x4cd3eb98",
+            "module": "swccu.dll",
+            "symbol": "??0su_CDWordArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x4cb76053",
+            "iat": "0x4cd3eb98",
+            "module": "swccu.dll",
+            "symbol": "??0su_CDWordArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x4cb76061",
+            "iat": "0x4cd3eb98",
+            "module": "swccu.dll",
+            "symbol": "??0su_CDWordArray@@QEAA@XZ"
+          }
+        ]
+      },
+      "0x4cb76330": {
+        "module": "sldmodu.dll",
+        "end": "0x4cb7641e",
+        "native_bytes": "48895c24084889742410574883ec30488bf9488bda488d4c2420ff1540e91b00488bd3488bcfe8c5ea70ff488bcbff158c841c00488bcb85c0741e8b9780070000ff1589841c00488d9778070000488bcbff15c9e11b00eb35488d9780070000ff1572841c00488d54245048c744245000000000488bcbff15db851c00488b4424504885c0740748898778070000488d8f88070000488bd3488b01ff5028488d8fa8070000488bd3488b01ff5028488d8fc8070000488bd3488b01ff5028488d8fe8070000488bd3488b01ff5028488d8f08080000488bd3488b01ff5028488b5c2440488b7424484883c4305fc3",
+        "sha256": "94e90cdb19bc0d304788aae1589471d728af69ed92d2bcfeaca033bb96c7aba8",
+        "imports": [
+          {
+            "address": "0x4cb7634a",
+            "iat": "0x4cd34c90",
+            "module": "SLDMFCU.dll",
+            "symbol": "??0moArchiveHelper_c@@QEAA@PEAVsu_CArchive@@@Z"
+          },
+          {
+            "address": "0x4cb7635e",
+            "iat": "0x4cd3e7f0",
+            "module": "swccu.dll",
+            "symbol": "?IsStoring@su_CArchive@@QEBAHXZ"
+          },
+          {
+            "address": "0x4cb76371",
+            "iat": "0x4cd3e800",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z"
+          },
+          {
+            "address": "0x4cb76381",
+            "iat": "0x4cd34550",
+            "module": "SLDMFCU.dll",
+            "symbol": "??6@YAAEAVsu_CArchive@@AEAV0@AEAPEAVsuObArray@@@Z"
+          },
+          {
+            "address": "0x4cb76390",
+            "iat": "0x4cd3e808",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z"
+          },
+          {
+            "address": "0x4cb763a7",
+            "iat": "0x4cd3e988",
+            "module": "swccu.dll",
+            "symbol": "??5@YAAEAVsu_CArchive@@AEAV0@AEAPEAVCObject@@@Z"
+          }
+        ]
+      }
+    },
+    "shared_thin_functions": {
+      "0x4bb24dc0": {
+        "end": "0x4bb2517d",
+        "native_bytes": "48895c240848896c241056574154415641574883ec40488bda4c8bf1488d4c2430ff15a9fe2001488bd3498bcee88e030000488bcbff15f5992101488bcb85c00f84a1000000ff15ec992101498b96600800004c8d05c6effa01488bcb85c07408ff15c99a2101eb06ff15e999210133ff0fb7f7498b8e580800004885c97415488b49084885c975048bf7eb08ff15756821018bf00fb7d6488bcbff156f9f2101663bfe732a0fb7f60f1f8000000000498b8658080000488b48084803cf488bd3e86abdffff4883c70c4883ee0175e0488b5c2470488b6c24784883c440415f415e415c5f5ec3ff154b992101488d152ceffa01488bcb85c07408ff15379a2101eb06ff154799210149898660080000488b4424304885c00f848c0200008b888007000085c97513ff15b2fd2001ff15a4fd20018bc8488b44243081f9db0100000f827601000033ff6689bc2480000000488d942480000000488bcbff15b69e21010fb78424800000006685c07439b910000000e81ce4070148898424880000004885c07410488d0dd3cd420148890848897808eb03488bc7498986580800000fb78424800000008bef663bf80f8305010000488d4c2420e8231bfcff488bcbff156a982101488bcb85c074268b542420ff15499a21018b542424488bcbff153c9a21018b542428488bcbff152f9a2101eb27488d542420ff152a9a2101488d542424488bcbff151c9a2101488d542428488bcbff150e9a2101498bb658080000488b46084885c07520ba10000000b90800000041b90c00000041b801000000ff150a69210148894608488d542420488bc8ff150069210148894608488b0e4c8b214885c075048bc7eb09488bc8ff1594662101448d78ff488b4e084885c975048bc7eb06ff157d6621018d50ff458bc7488bce41ffd4488b4e084885c97406ff1562662101ffc50fb78424800000003be80f8cfbfeffff488b4424304885c00f84e40000008b808007000085c0750cff150afc2001ff15fcfb20013d4c0100000f82e9fdffff498b06498bceff90b81e0000498b8e600800004533c94533c0498bd6488b4908e824b00100498b8660080000488b48104885c9740e4533c94533c0498bd6e806b00100498b8e60080000e8aafc77ff488bd84885c00f848efdffff488b4c24304885c9745e8b818007000085c07511ff1584fb2001ff1576fb2001488b4c24303dbd01000072264885c974378b818007000085c0750cff155dfb2001ff154ffb20013dda0100000f823cfdffff4533c94533c0498bd6488bcbe88baf0100e926fdffff4533c0baffffffffb901000000e8f7e10701cc",
+        "sha256": "a5a65aff02d3e715ec7636b81061a68ef0eb032976514bd75c8afc38a3637a80",
+        "decompilation": "\nvoid FUN_4bb24dc0(moFeature_c *param_1,su_CArchive *param_2)\n\n{\n  code *pcVar1;\n  ushort uVar2;\n  int iVar3;\n  uint uVar4;\n  CObject *pCVar5;\n  undefined8 *puVar6;\n  moRefWrapper_c *this;\n  undefined8 *puVar7;\n  ulonglong uVar8;\n  longlong lVar9;\n  ushort local_res18 [4];\n  undefined8 *local_res20;\n  ulong local_48;\n  ulong local_44;\n  ulong local_40 [2];\n  longlong local_38 [2];\n  \n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_38,param_2);\n  FUN_4bb25180(param_1,param_2);\n  iVar3 = su_CArchive::IsStoring(param_2);\n  if (iVar3 != 0) {\n    iVar3 = su_CArchive::IsDBStream(param_2);\n    if (iVar3 == 0) {\n      su_CArchive::WriteObject\n                (param_2,*(CObject **)(param_1 + 0x860),\n                 (CRuntimeClass *)&moThinSpec_c::classmoThinSpec_c);\n    }\n    else {\n      su_CDBArchive::WriteObject\n                ((su_CDBArchive *)param_2,*(CObject **)(param_1 + 0x860),\n                 (CRuntimeClass *)&moThinSpec_c::classmoThinSpec_c);\n    }\n    lVar9 = 0;\n    uVar2 = 0;\n    if (*(longlong *)(param_1 + 0x858) != 0) {\n      if (*(longlong *)(*(longlong *)(param_1 + 0x858) + 8) == 0) {\n        uVar2 = 0;\n      }\n      else {\n        uVar2 = amDynamicArrayCount();\n      }\n    }\n    su_CArchive::operator<<(param_2,uVar2);\n    if (uVar2 == 0) {\n      return;\n    }\n    uVar8 = (ulonglong)uVar2;\n    do {\n      FUN_4bb20bf0(*(longlong *)(*(longlong *)(param_1 + 0x858) + 8) + lVar9,param_2);\n      lVar9 = lVar9 + 0xc;\n      uVar8 = uVar8 - 1;\n    } while (uVar8 != 0);\n    return;\n  }\n  iVar3 = su_CArchive::IsDBStream(param_2);\n  if (iVar3 == 0) {\n    pCVar5 = su_CArchive::ReadObject(param_2,(CRuntimeClass *)&moThinSpec_c::classmoThinSpec_c);\n  }\n  else {\n    pCVar5 = su_CDBArchive::ReadObject\n                       ((su_CDBArchive *)param_2,(CRuntimeClass *)&moThinSpec_c::classmoThinSpec_c);\n  }\n  *(CObject **)(param_1 + 0x860) = pCVar5;\n  if (local_38[0] != 0) {\n    uVar4 = *(uint *)(local_38[0] + 0x780);\n    if (uVar4 == 0) {\n      moVersionManager_c::get();\n      uVar4 = moVersionManager_c::getCurrentFileVerion();\n    }\n    if (0x1da < uVar4) {\n      puVar7 = (undefined8 *)0x0;\n      local_res18[0] = 0;\n      su_CArchive::operator>>(param_2,local_res18);\n      if (local_res18[0] != 0) {\n        local_res20 = operator_new(0x10);\n        puVar6 = puVar7;\n        if (local_res20 != (undefined8 *)0x0) {\n          *local_res20 = suDynamicArray<moBendIdData_c>::vftable;\n          local_res20[1] = 0;\n          puVar6 = local_res20;\n        }\n        *(undefined8 **)(param_1 + 0x858) = puVar6;\n      }\n      if (local_res18[0] != 0) {\n        do {\n          FUN_4bae6aa0(&local_48);\n          iVar3 = su_CArchive::IsStoring(param_2);\n          if (iVar3 == 0) {\n            su_CArchive::operator>>(param_2,&local_48);\n            su_CArchive::operator>>(param_2,&local_44);\n            su_CArchive::operator>>(param_2,local_40);\n          }\n          else {\n            su_CArchive::operator<<(param_2,local_48);\n            su_CArchive::operator<<(param_2,local_44);\n            su_CArchive::operator<<(param_2,local_40[0]);\n          }\n          puVar6 = *(undefined8 **)(param_1 + 0x858);\n          lVar9 = puVar6[1];\n          if (lVar9 == 0) {\n            lVar9 = suDynArrayAlloc(8,0x10,1);\n            puVar6[1] = lVar9;\n          }\n          lVar9 = amDynamicArrayAdd(lVar9,&local_48);\n          puVar6[1] = lVar9;\n          pcVar1 = *(code **)*puVar6;\n          if (lVar9 != 0) {\n            amDynamicArrayCount(lVar9);\n          }\n          iVar3 = 0;\n          if (puVar6[1] != 0) {\n            iVar3 = amDynamicArrayCount();\n          }\n          (*pcVar1)(puVar6,iVar3 + -1);\n          if (puVar6[1] != 0) {\n            amDynamicArrayCount();\n          }\n          uVar4 = (int)puVar7 + 1;\n          puVar7 = (undefined8 *)(ulonglong)uVar4;\n        } while ((int)uVar4 < (int)(uint)local_res18[0]);\n      }\n    }\n    if (local_38[0] != 0) {\n      uVar4 = *(uint *)(local_38[0] + 0x780);\n      if (uVar4 == 0) {\n        moVersionManager_c::get();\n        uVar4 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (0x14b < uVar4) {\n        (**(code **)(*(longlong *)param_1 + 0x1eb8))(param_1);\n        moDisplayDim_c::safeSetFeatureOwner\n                  (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x860) + 8),param_1,\n                   (moFeature_c *)0x0,(moComponent_c *)0x0);\n        if (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x860) + 0x10) != (moDisplayDim_c *)0x0) {\n          moDisplayDim_c::safeSetFeatureOwner\n                    (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x860) + 0x10),param_1,\n                     (moFeature_c *)0x0,(moComponent_c *)0x0);\n        }\n        this = moMirrorCompFeatData_c::getAlignmentReference\n                         (*(moMirrorCompFeatData_c **)(param_1 + 0x860));\n        if (this != (moRefWrapper_c *)0x0) {\n          if (local_38[0] == 0) goto LAB_4bb2516a;\n          uVar4 = *(uint *)(local_38[0] + 0x780);\n          if (uVar4 == 0) {\n            moVersionManager_c::get();\n            uVar4 = moVersionManager_c::getCurrentFileVerion();\n          }\n          if (0x1bc < uVar4) {\n            if (local_38[0] == 0) goto LAB_4bb2516a;\n            uVar4 = *(uint *)(local_38[0] + 0x780);\n            if (uVar4 == 0) {\n              moVersionManager_c::get();\n              uVar4 = moVersionManager_c::getCurrentFileVerion();\n            }\n            if (uVar4 < 0x1da) {\n              return;\n            }\n          }\n          moDisplayDim_c::safeSetFeatureOwner\n                    ((moDisplayDim_c *)this,param_1,(moFeature_c *)0x0,(moComponent_c *)0x0);\n        }\n      }\n      return;\n    }\n  }\nLAB_4bb2516a:\n                    /* WARNING: Subroutine does not return */\n  AfxThrowFileException(1,-1,(wchar_t *)0x0);\n}\n\n"
+      },
+      "0x4bb25180": {
+        "end": "0x4bb253c8",
+        "native_bytes": "48895c2410574883ec30488bd9488bfa488d4c2420ff15f5fa2001ba00200000488d4c2420ff15f5f0200185c075224533c0488d15cf614301488d4c2450ff15bc912101488d0dbd614301ff15a7912101488b44242048897424404885c00f84d10100008bb08007000085f6750eff15acfa2001ff159efa20018bf0488bd7488bcbe899bdffff488bcfff15e095210185c0745c488bcfff15db952101488b93100800004c8d0585e5fa01488bcf85c07408ff15b8962101eb06ff15d8952101f20f108b30080000488bcfff153f9721018b9308080000488bcfff15a0952101488b742440488b5c24484883c4305fc3488b93100800004885d27416488d4c2420ff15f1ef200148c7831008000000000000488bcfff155d952101488d150ee5fa01488bcf85c07408ff1549962101eb06ff155995210148898310080000488b4424204885c00f84e90000008b808007000085c0750cff15c4f92001ff15b6f920013d980900007210488d9330080000488bcfff159f96210181febf0d00007c10488d9308080000488bcfff15f7942101488b03488bcbff90b81e0000488b8310080000488b48184885c9740e4533c94533c0488bd3e8b5ad0100488b8310080000488b88c80000004885c9740e4533c94533c0488bd3e894ad0100488b8310080000488b48204885c9740e4533c94533c0488bd3e876ad0100488b8310080000488b88d00000004885c9740e4533c94533c0488bd3e855ad0100488b742440c7833007000001000000488b5c24484883c4305fc34533c0baffffffffb901000000e8acdf0701cc",
+        "sha256": "ddce78eb21eae6ff10048610ae415f0a1dcd65c32be0d690362637b439bbed5f",
+        "decompilation": "\nvoid FUN_4bb25180(moBodyFeature_c *param_1,su_CArchive *param_2)\n\n{\n  int iVar1;\n  ulong uVar2;\n  uint uVar3;\n  CObject *pCVar4;\n  Point local_res18 [16];\n  longlong local_18 [2];\n  \n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_18,param_2);\n  iVar1 = moArchiveHelper_c::hasCondition((moArchiveHelper_c *)local_18,0x2000);\n  if (iVar1 == 0) {\n    suCrash_c::Point::Point(local_res18,\"moExtrusion_c::Serialize\",false);\n    suCrash(\"moExtrusion_c::Serialize\");\n  }\n  if (local_18[0] != 0) {\n    uVar2 = *(ulong *)(local_18[0] + 0x780);\n    if (uVar2 == 0) {\n      moVersionManager_c::get();\n      uVar2 = moVersionManager_c::getCurrentFileVerion();\n    }\n    moBodyFeature_c::Serialize(param_1,param_2);\n    iVar1 = su_CArchive::IsStoring(param_2);\n    if (iVar1 != 0) {\n      iVar1 = su_CArchive::IsDBStream(param_2);\n      if (iVar1 == 0) {\n        su_CArchive::WriteObject\n                  (param_2,*(CObject **)(param_1 + 0x810),\n                   (CRuntimeClass *)&moEndSpec_c::classmoEndSpec_c);\n      }\n      else {\n        su_CDBArchive::WriteObject\n                  ((su_CDBArchive *)param_2,*(CObject **)(param_1 + 0x810),\n                   (CRuntimeClass *)&moEndSpec_c::classmoEndSpec_c);\n      }\n      su_CArchive::operator<<(param_2,*(double *)(param_1 + 0x830));\n      su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x808));\n      return;\n    }\n    if (*(CObject **)(param_1 + 0x810) != (CObject *)0x0) {\n      moArchiveHelper_c::deleteAfterSerialization\n                ((moArchiveHelper_c *)local_18,*(CObject **)(param_1 + 0x810));\n      *(undefined8 *)(param_1 + 0x810) = 0;\n    }\n    iVar1 = su_CArchive::IsDBStream(param_2);\n    if (iVar1 == 0) {\n      pCVar4 = su_CArchive::ReadObject(param_2,(CRuntimeClass *)&moEndSpec_c::classmoEndSpec_c);\n    }\n    else {\n      pCVar4 = su_CDBArchive::ReadObject\n                         ((su_CDBArchive *)param_2,(CRuntimeClass *)&moEndSpec_c::classmoEndSpec_c);\n    }\n    *(CObject **)(param_1 + 0x810) = pCVar4;\n    if (local_18[0] != 0) {\n      uVar3 = *(uint *)(local_18[0] + 0x780);\n      if (uVar3 == 0) {\n        moVersionManager_c::get();\n        uVar3 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (0x997 < uVar3) {\n        su_CArchive::operator>>(param_2,(double *)(param_1 + 0x830));\n      }\n      if (0xdbe < (int)uVar2) {\n        su_CArchive::operator>>(param_2,(long *)(param_1 + 0x808));\n      }\n      (**(code **)(*(longlong *)param_1 + 0x1eb8))(param_1);\n      if (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x810) + 0x18) != (moDisplayDim_c *)0x0) {\n        moDisplayDim_c::safeSetFeatureOwner\n                  (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x810) + 0x18),\n                   (moFeature_c *)param_1,(moFeature_c *)0x0,(moComponent_c *)0x0);\n      }\n      if (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x810) + 200) != (moDisplayDim_c *)0x0) {\n        moDisplayDim_c::safeSetFeatureOwner\n                  (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x810) + 200),(moFeature_c *)param_1\n                   ,(moFeature_c *)0x0,(moComponent_c *)0x0);\n      }\n      if (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x810) + 0x20) != (moDisplayDim_c *)0x0) {\n        moDisplayDim_c::safeSetFeatureOwner\n                  (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x810) + 0x20),\n                   (moFeature_c *)param_1,(moFeature_c *)0x0,(moComponent_c *)0x0);\n      }\n      if (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x810) + 0xd0) != (moDisplayDim_c *)0x0) {\n        moDisplayDim_c::safeSetFeatureOwner\n                  (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x810) + 0xd0),\n                   (moFeature_c *)param_1,(moFeature_c *)0x0,(moComponent_c *)0x0);\n      }\n      *(undefined4 *)(param_1 + 0x730) = 1;\n      return;\n    }\n  }\n                    /* WARNING: Subroutine does not return */\n  AfxThrowFileException(1,-1,(wchar_t *)0x0);\n}\n\n"
+      },
+      "0x4bb367d0": {
+        "end": "0x4bb3688d",
+        "native_bytes": "4053574883ec48488bd9488bfa488d4c2420ff15a8e41f01488bd7488bcbff151c812001488bcfff15f37f200185c00f8483000000488d5308488bcfe83faccf00488d5310488bcfe833accf008b532c488bcfff15d77f2001f20f104b30488bcfff1559812001f20f104b38488bcfff154b8120018b5328488bcfff15af7f20018b5340488bcfff15a37f2001488d5348488bcfe817aecf008b5350488bcfff158b7f20018b5354488bcfff157f7f20014883c4485f5bc3488b442420",
+        "sha256": "f8dd17f300742436f8804da1954bb96fc0152eb4057a17d3f082cd6c2c254a53",
+        "decompilation": "\nvoid FUN_4bb367d0(su_CObject *param_1,su_CArchive *param_2)\n\n{\n  int iVar1;\n  uint uVar2;\n  double *pdVar3;\n  long local_res18 [4];\n  longlong local_38 [2];\n  \n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_38,param_2);\n  su_CObject::Serialize(param_1,param_2);\n  iVar1 = su_CArchive::IsStoring(param_2);\n  if (iVar1 != 0) {\n    operator<<(param_2,(moDisplayDim_c **)(param_1 + 8));\n    operator<<(param_2,(moDisplayDim_c **)(param_1 + 0x10));\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x2c));\n    su_CArchive::operator<<(param_2,*(double *)(param_1 + 0x30));\n    su_CArchive::operator<<(param_2,*(double *)(param_1 + 0x38));\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x28));\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x40));\n    operator<<(param_2,(moDisplayRadialDim_c **)(param_1 + 0x48));\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x50));\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x54));\n    return;\n  }\n  if (local_38[0] != 0) {\n    uVar2 = *(uint *)(local_38[0] + 0x780);\n    if (uVar2 == 0) {\n      moVersionManager_c::get();\n      uVar2 = moVersionManager_c::getCurrentFileVerion();\n    }\n    if (uVar2 < 0x14c) {\n      su_CArchive::operator>>(param_2,(double *)(param_1 + 0x18));\n      *(undefined8 *)(param_1 + 8) = 0;\n      *(undefined8 *)(param_1 + 0x10) = 0;\n      *(undefined4 *)(param_1 + 0x2c) = 0;\n      *(undefined8 *)(param_1 + 0x30) = 0;\n      *(undefined8 *)(param_1 + 0x38) = 0;\n    }\n    else {\n      if (local_38[0] == 0) goto LAB_4bb36aef;\n      uVar2 = *(uint *)(local_38[0] + 0x780);\n      if (uVar2 == 0) {\n        moVersionManager_c::get();\n        uVar2 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (uVar2 < 0x153) {\n        operator>>(param_2,(moDisplayDim_c **)(param_1 + 8));\n        *(undefined8 *)(param_1 + 0x10) = 0;\n        *(undefined4 *)(param_1 + 0x2c) = 0;\n        *(undefined8 *)(param_1 + 0x30) = 0;\n        *(undefined8 *)(param_1 + 0x38) = 0;\n      }\n      else {\n        operator>>(param_2,(moDisplayDim_c **)(param_1 + 8));\n        operator>>(param_2,(moDisplayDim_c **)(param_1 + 0x10));\n        su_CArchive::operator>>(param_2,(long *)(param_1 + 0x2c));\n        su_CArchive::operator>>(param_2,(double *)(param_1 + 0x30));\n        su_CArchive::operator>>(param_2,(double *)(param_1 + 0x38));\n      }\n    }\n    su_CArchive::operator>>(param_2,(long *)(param_1 + 0x28));\n    su_CArchive::operator>>(param_2,(long *)(param_1 + 0x40));\n    if (local_38[0] != 0) {\n      uVar2 = *(uint *)(local_38[0] + 0x780);\n      if (uVar2 == 0) {\n        moVersionManager_c::get();\n        uVar2 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (0x1bc < uVar2) {\n        if (local_38[0] == 0) goto LAB_4bb36aef;\n        uVar2 = *(uint *)(local_38[0] + 0x780);\n        if (uVar2 == 0) {\n          moVersionManager_c::get();\n          uVar2 = moVersionManager_c::getCurrentFileVerion();\n        }\n        if (uVar2 < 0x1da) {\n          pdVar3 = operator_new(8);\n          su_CArchive::operator>>(param_2,pdVar3);\n          if (*pdVar3 <= 0.0 && *pdVar3 != 0.0) {\n            *pdVar3 = 0.0;\n          }\n          *(double **)(param_1 + 0x48) = pdVar3;\n        }\n        else {\n          operator>>(param_2,(moDisplayRadialDim_c **)(param_1 + 0x48));\n        }\n        su_CArchive::operator>>(param_2,(long *)(param_1 + 0x50));\n      }\n      if (local_38[0] != 0) {\n        uVar2 = *(uint *)(local_38[0] + 0x780);\n        if (uVar2 == 0) {\n          moVersionManager_c::get();\n          uVar2 = moVersionManager_c::getCurrentFileVerion();\n        }\n        if (0x1bc < uVar2) {\n          if (local_38[0] == 0) goto LAB_4bb36aef;\n          uVar2 = *(uint *)(local_38[0] + 0x780);\n          if (uVar2 == 0) {\n            moVersionManager_c::get();\n            uVar2 = moVersionManager_c::getCurrentFileVerion();\n          }\n          if (uVar2 < 0x1c5) {\n            su_CArchive::operator>>(param_2,local_res18);\n          }\n        }\n        if (local_38[0] != 0) {\n          uVar2 = *(uint *)(local_38[0] + 0x780);\n          if (uVar2 == 0) {\n            moVersionManager_c::get();\n            uVar2 = moVersionManager_c::getCurrentFileVerion();\n          }\n          if (0x1d9 < uVar2) {\n            su_CArchive::operator>>(param_2,(long *)(param_1 + 0x54));\n          }\n          return;\n        }\n      }\n    }\n  }\nLAB_4bb36aef:\n                    /* WARNING: Subroutine does not return */\n  AfxThrowFileException(1,-1,(wchar_t *)0x0);\n}\n\n"
+      },
+      "0x4bb20bf0": {
+        "end": "0x4bb20c76",
+        "native_bytes": "48895c2408488974241048897c241841564883ec20488bf9488bda488bcaff15dcdb2101488bcb85c074228b17ff15bddd21018b5704488bcbff15b1dd21018b5708488bcbff15a5dd2101eb23488bd7ff15a2dd2101488d5704488bcbff1595dd2101488d5708488bcbff1588dd2101488b5c2430488b742438488b7c24404883c420415ec3",
+        "sha256": "099c4d9ad4e61fff56c9ec69fbb7bb04d4bf67587df5142bc261e87b34ab55e1",
+        "decompilation": "\nvoid FUN_4bb20bf0(ulong *param_1,su_CArchive *param_2)\n\n{\n  int iVar1;\n  \n  iVar1 = su_CArchive::IsStoring(param_2);\n  if (iVar1 == 0) {\n    su_CArchive::operator>>(param_2,param_1);\n    su_CArchive::operator>>(param_2,param_1 + 1);\n    su_CArchive::operator>>(param_2,param_1 + 2);\n  }\n  else {\n    su_CArchive::operator<<(param_2,*param_1);\n    su_CArchive::operator<<(param_2,param_1[1]);\n    su_CArchive::operator<<(param_2,param_1[2]);\n  }\n  return;\n}\n\n"
+      }
+    },
+    "shared_reference_curve": {
+      "end": "0x4c284fe0",
+      "native_bytes": "48895c2408574881ec80000000488bfa488bd9488d4c2420ff1552feaa00488bd7488bcbe8b7ebffff488bcfff159e99ab0085c00f84f1000000ba00600000488d4c2420ff1536f4aa0085c00f85c8000000ba0a000000488d4c2430ff15aefeaa00904883bb10070000007426488b03488bcbff90901c000041b9010000004c8bc0488d542430488b8b10070000e8adb2fdff4533c941b801000000488bd7488b8b10070000e885c6fdff488b8b180700004885c9750433c0eb06ff157f41ab008bd0488bcfff151499ab004883bb10070000007420488b03488bcbff90901c00004c8bc0488d542430488b8b10070000e8fac4fdff488bd7488d4c2430ff15ccfcaa00488d4c2430e842bffdff90488d4c2430ff15eefdaa00488b9c24900000004881c4800000005fc3488b4424204885c074788b888007000085c97513ff153bfdaa00ff152dfdaa008bc8488b44242081f9150200007210488bd7488bcbe89b2c0000488b4424204885c0743e8b808007000085c0750cff1501fdaa00ff15f3fcaa003db2120000728e488d8b28070000488b01488bd7ff5028488b9c24900000004881c4800000005fc34533c0baffffffffb901000000e894e39100cc",
+      "sha256": "8c3ccc96015ccc98dcbcad6167c3431db84ad7ce508e0f9093d6a1598cb08e70",
+      "decompilation": "\n/* protected: virtual void __cdecl moReferenceCurve_c::Serialize(class su_CArchive & __ptr64)\n   __ptr64 */\n\nvoid __thiscall moReferenceCurve_c::Serialize(moReferenceCurve_c *this,su_CArchive *param_1)\n\n{\n  int iVar1;\n  long lVar2;\n  uint uVar3;\n  undefined8 uVar4;\n  longlong local_68 [2];\n  suObList local_58 [80];\n  \n                    /* 0x1124e20  12752  ?Serialize@moReferenceCurve_c@@MEAAXAEAVsu_CArchive@@@Z */\n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_68,param_1);\n  FUN_4c283a00(this,param_1);\n  iVar1 = su_CArchive::IsStoring(param_1);\n  if (iVar1 != 0) {\n    iVar1 = moArchiveHelper_c::hasCondition((moArchiveHelper_c *)local_68,0x6000);\n    if (iVar1 == 0) {\n      suObList::suObList(local_58,10);\n      if (*(longlong *)(this + 0x710) != 0) {\n        uVar4 = (**(code **)(*(longlong *)this + 0x1c90))(this);\n        FUN_4c260160(*(undefined8 *)(this + 0x710),local_58,uVar4);\n      }\n      mo_storeBodyToArchive(*(gcBody_w **)(this + 0x710),param_1,1,0);\n      if (*(gcEnt_w **)(this + 0x718) == (gcEnt_w *)0x0) {\n        lVar2 = 0;\n      }\n      else {\n        lVar2 = gcEnt_w::getNodeId(*(gcEnt_w **)(this + 0x718));\n      }\n      su_CArchive::operator<<(param_1,lVar2);\n      if (*(longlong *)(this + 0x710) != 0) {\n        uVar4 = (**(code **)(*(longlong *)this + 0x1c90))(this);\n        FUN_4c261410(*(undefined8 *)(this + 0x710),local_58,uVar4);\n      }\n      suObList::Serialize(local_58,param_1);\n      mo_releaseAttribList(local_58);\n      suObList::~suObList(local_58);\n    }\n    return;\n  }\n  if (local_68[0] != 0) {\n    uVar3 = *(uint *)(local_68[0] + 0x780);\n    if (uVar3 == 0) {\n      moVersionManager_c::get();\n      uVar3 = moVersionManager_c::getCurrentFileVerion();\n    }\n    if (0x214 < uVar3) {\n      iRestoreWire(this,param_1);\n    }\n    if (local_68[0] != 0) {\n      uVar3 = *(uint *)(local_68[0] + 0x780);\n      if (uVar3 == 0) {\n        moVersionManager_c::get();\n        uVar3 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (uVar3 < 0x12b2) {\n        return;\n      }\n      (**(code **)(*(longlong *)(this + 0x728) + 0x28))(this + 0x728,param_1);\n      return;\n    }\n  }\n                    /* WARNING: Subroutine does not return */\n  AfxThrowFileException(1,-1,(wchar_t *)0x0);\n}\n\n"
+    },
+    "roots": [
+      {
+        "path": "samples/tutorial/api/toaster.sldprt",
+        "configuration": "Contents/Config-0",
+        "start": 224583,
+        "end": 227240,
+        "kind": "composite_curve",
+        "sha256": "96dc821ffd7ba2ee7ec8789c8540e6b0b98afbfd1ed0580bc10983c95c3babc7",
+        "raw_780": 3,
+        "array_count": 2,
+        "dword_counts": {
+          "dwords_7a8": 2,
+          "dwords_7c8": 2,
+          "dwords_7e8": 0,
+          "dwords_808": 0
+        },
+        "kernel_suppressed": 0
+      },
+      {
+        "path": "samples/tutorial/moldedproductdesignadvanced/mousemultibody.sldprt",
+        "configuration": "Contents/Config-0",
+        "start": 178510,
+        "end": 186373,
+        "kind": "thin_cut",
+        "sha256": "513d814e06ad4fb31695f725d3c9f84623b49310ebdbb2e7f16a9ea734f08a5a",
+        "specification_class": "moThinSpec_c",
+        "bend_count": 0,
+        "raw_bend_records": []
+      },
+      {
+        "path": "samples/tutorial/moldedproductdesignadvanced/mousemultibody.sldprt",
+        "configuration": "Contents/Config-0",
+        "start": 190157,
+        "end": 196983,
+        "kind": "thin_cut",
+        "sha256": "13cebe4ffd72df0ba5530ae084f87e18992382a4da440bc4fab1a8e97da643ba",
+        "specification_class": "moThinSpec_c",
+        "bend_count": 0,
+        "raw_bend_records": []
+      },
+      {
+        "path": "samples/tutorial/moldedproductdesignadvanced/mousemultibody.sldprt",
+        "configuration": "Contents/Config-0",
+        "start": 212159,
+        "end": 292480,
+        "kind": "composite_curve",
+        "sha256": "45964664bf6cdf8e8809a5d5b35c64c657a195192d54c19fc3b4fec2c902bbac",
+        "raw_780": 10,
+        "array_count": 9,
+        "dword_counts": {
+          "dwords_7a8": 9,
+          "dwords_7c8": 9,
+          "dwords_7e8": 0,
+          "dwords_808": 1
+        },
+        "kernel_suppressed": 0
+      },
+      {
+        "path": "samples/tutorial/moldedproductdesignadvanced/mousemultibody.sldprt",
+        "configuration": "Contents/Config-0",
+        "start": 293624,
+        "end": 373946,
+        "kind": "composite_curve",
+        "sha256": "bcd785c33b07d57c8eb4ef2d236b20e2c7fc30d1aeddc7c088f2fd66b4550317",
+        "raw_780": 10,
+        "array_count": 9,
+        "dword_counts": {
+          "dwords_7a8": 9,
+          "dwords_7c8": 9,
+          "dwords_7e8": 0,
+          "dwords_808": 1
+        },
+        "kernel_suppressed": 0
+      },
+      {
+        "path": "samples/tutorial/toolbox/camtest.sldprt",
+        "configuration": "Contents/Config-0",
+        "start": 22387,
+        "end": 35399,
+        "kind": "thin_cut",
+        "sha256": "2a73e708abfde18c08dfe33e46a1e65245541508dd1efcccdc7995938e5cccdc",
+        "specification_class": "moThinSpec_c",
+        "bend_count": 0,
+        "raw_bend_records": []
+      }
+    ],
+    "total_root_bytes": 191001,
+    "coverage_credit": 0,
+    "decompilation_sha256": {
+      "FUN_4bb24dc0.c": "55a039ab9a87a419e61556ae640e088cde75ff6a795fb36e441c70d27b7edcfc",
+      "FUN_4cb75eb0.c": "f5a3164b743bd4aea34785bffeff93fcdddc2fcb8941aa694610e4d4e240c481",
+      "FUN_4cb75fe0.c": "930bb7fe7f0961bda5f9a8ea21d9ce9239b1b5ba2bd522a628f1e57b4d2c0556",
+      "FUN_4cb76330.c": "e124881964eabbf55fd01653c57dcc3e9f2397725d90b543c3335b02190ca137"
+    }
+  }
+}

@@ -9,7 +9,7 @@ pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
     reader.scope("payload", |reader| payload(reader, map))
 }
 
-fn reference_curve(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+pub(super) fn reference_curve(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     reader.scope("reference_geometry", |reader| {
         super::reference_planes::reference_geometry(reader, map)
     })?;

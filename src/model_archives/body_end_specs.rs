@@ -1,5 +1,6 @@
 use super::display_records::declared;
 use super::geometric_references::LINE_REFERENCE_CLASSES;
+use super::model_references::WRAPPER_CLASSES;
 use super::{ModelDecoder, ModelObjectRole, model_lists};
 use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
@@ -30,11 +31,12 @@ pub(super) fn extrusion(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -
     Ok(())
 }
 
+// #46 / C-105 and C-106: wrapper-base fields admit the reviewed complete derived classes.
 pub(super) fn from(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     reader.require_ordinary_part()?;
     let kind = reader.i32("type")?;
     if (1..=2).contains(&kind) {
-        return declared(reader, map, "reference", &["moRefWrapper_c"]);
+        return declared(reader, map, "reference", WRAPPER_CLASSES);
     }
     if !(3..=5).contains(&kind) {
         return Ok(());
@@ -114,12 +116,7 @@ fn end_references(
 ) -> Result<()> {
     for (kind, offset) in [(first, "78"), (second, "80")] {
         if kind == 7 {
-            declared(
-                reader,
-                map,
-                &format!("reference_{offset}"),
-                &["moRefWrapper_c"],
-            )?;
+            declared(reader, map, &format!("reference_{offset}"), WRAPPER_CLASSES)?;
         }
     }
     Ok(())
@@ -129,12 +126,7 @@ pub(super) fn revolution_end(reader: &mut ModelDecoder<'_>, map: &mut ObjectRead
     reader.require_ordinary_part()?;
     reader.i32s(&["word_08", "word_138", "word_13c", "word_0c", "word_10"])?;
     for offset in ["118", "120"] {
-        declared(
-            reader,
-            map,
-            &format!("reference_{offset}"),
-            &["moRefWrapper_c"],
-        )?;
+        declared(reader, map, &format!("reference_{offset}"), WRAPPER_CLASSES)?;
     }
     for offset in ["128", "130"] {
         reader.object(&format!("point_{offset}"), map, END_POINT_ROLE)?;

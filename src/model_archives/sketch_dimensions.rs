@@ -27,7 +27,8 @@ pub(super) fn base(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
 fn valued(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     base(reader, map)?;
     if reader.u16("has_plane_transform")? != 0 {
-        reader.transform("plane_transform")?;
+        // #86 / C-395: this call site selects the fixed archive operator, not restore().
+        super::fixed_transform_records::read(reader, "plane_transform.words", "valued dimension")?;
     }
     Ok(())
 }

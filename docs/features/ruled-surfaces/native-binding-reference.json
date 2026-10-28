@@ -1,0 +1,560 @@
+{
+  "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\ruled-surface-native-evidence.json",
+  "source_sha256": "2d2d6e02355aeedfa6b1ee8f3cf5d585aa7e889b2f41c1b42f86364d263f5fef",
+  "evidence": {
+    "native_ranges": {
+      "0x1801bc470": {
+        "end": "0x1801bc4f6",
+        "sha256": "d8710fa10f06231475879a7649d36b9e3fdd831a5204ae4acce58fed6814f81b",
+        "native_bytes": "48895c24184889742420574883ec30488bd9488bfa488d4c2420ff1538512200488bd7488bcbff1504772200488b4330488d4b30488bd7ff5028488b4424204885c00f84c10200008b888007000085c97513ff1510512200ff15025122008bc8488b44242081f9fd0800007212488d8bf0000000488bd7488b01ff5028eb3333f63973407e31",
+        "imports": [
+          {
+            "address": "0x1801bc48a",
+            "iat": "0x1803e15c8",
+            "module": "SLDMFCU.dll",
+            "symbol": "??0moArchiveHelper_c@@QEAA@PEAVsu_CArchive@@@Z"
+          },
+          {
+            "address": "0x1801bc496",
+            "iat": "0x1803e3ba0",
+            "module": "SLDMODU.dll",
+            "symbol": "?Serialize@moFeatureData_c@@UEAAXAEAVsu_CArchive@@@Z"
+          },
+          {
+            "address": "0x1801bc4c2",
+            "iat": "0x1803e15d8",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+          },
+          {
+            "address": "0x1801bc4c8",
+            "iat": "0x1803e15d0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+          }
+        ]
+      },
+      "0x1801bc4f6": {
+        "end": "0x1801bc522",
+        "sha256": "7831ef5c3de9a4d9a653968df6acb35003ac8a5ba61a154eae363592098d1fc2",
+        "native_bytes": "48896c24480f1f4400008b9300010000488d8bf00000004533c0ff156aee2200ffc63b73407ce3488b6c2448",
+        "imports": [
+          {
+            "address": "0x1801bc510",
+            "iat": "0x1803eb380",
+            "module": "swccu.dll",
+            "symbol": "?SetAtGrow@su_CWordArray@@QEAAXHG@Z"
+          }
+        ]
+      },
+      "0x1801bc522": {
+        "end": "0x1801bc79f",
+        "sha256": "1d356eaf48f1b31bc01bedd0fc90a78fd9136310d441acdb2444de84b99d554f",
+        "native_bytes": "488b4424204885c00f84490200008b808007000085c0750cff1598502200ff158a5022003d8a090000720e488b4350488d4b50488bd7ff5028488bcfff1544f12200488d5318488bcf85c00f84bf000000ff1597a92200488d5320488bcfff15f2752200f20f108b90000000488bcfff1591ef22008b9398000000488bcfff15faf022008b939c000000488bcfff15ebf022008b93a0000000488bcfff15dcf022008b93a8000000488bcfff15cdf02200488d93e8000000488bcfff15fd782200f20f108bb0000000488bcfff1534ef22008b93b8000000488bcfff159df02200488d8bc0000000488bd7ff1505e422008b93d8000000488bcfff157ef02200488b5c2450488b7424584883c4305fc3ff15d0a82200488b4424204885c00f84460100008b808007000085c0750cff15824f2200ff15744f22003dfe080000720d488d5320488bcfff1510752200488d9390000000488bcfff15a0ee2200488d542440488bcfff150af022008b442440488d939c000000488bcf898398000000ff15f0ef2200488d93a0000000488bcfff15e0ef2200488d93a8000000488bcfff15d0ef2200488d93e8000000488bcfff1510782200488d93b0000000488bcfff1538ee2200488d93b8000000488bcfff15a0ef2200488d8bc0000000488bd7ff1518e32200488b4424204885c0747a8b808007000085c0750cff15b64e2200ff15a84e22003dfe0800007228488d93d8000000488bcfff1559ef2200488bcbe819490000488b5c2450488b7424584883c4305fc3488bcbc783d800000001000000e8f7480000488b5c2450488b7424584883c4305fc34533c0baffffffffb901000000e8ec0e1f00cc4533c0baffffffffb901000000e8d90e1f00cc",
+        "imports": [
+          {
+            "address": "0x1801bc53a",
+            "iat": "0x1803e15d8",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+          },
+          {
+            "address": "0x1801bc540",
+            "iat": "0x1803e15d0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+          },
+          {
+            "address": "0x1801bc55e",
+            "iat": "0x1803eb6a8",
+            "module": "swccu.dll",
+            "symbol": "?IsStoring@su_CArchive@@QEBAHXZ"
+          },
+          {
+            "address": "0x1801bc573",
+            "iat": "0x1803e6f10",
+            "module": "SLDMODU.dll",
+            "symbol": "??6@YAAEAVsu_CArchive@@AEAV0@AEAPEAVmoDisplayDistanceDim_c@@@Z"
+          },
+          {
+            "address": "0x1801bc580",
+            "iat": "0x1803e3b78",
+            "module": "SLDMODU.dll",
+            "symbol": "??6@YAAEAVsu_CArchive@@AEAV0@AEAPEAVmoDisplayAngularDim_c@@@Z"
+          },
+          {
+            "address": "0x1801bc591",
+            "iat": "0x1803eb528",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@N@Z"
+          },
+          {
+            "address": "0x1801bc5a0",
+            "iat": "0x1803eb6a0",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z"
+          },
+          {
+            "address": "0x1801bc5af",
+            "iat": "0x1803eb6a0",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z"
+          },
+          {
+            "address": "0x1801bc5be",
+            "iat": "0x1803eb6a0",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z"
+          },
+          {
+            "address": "0x1801bc5cd",
+            "iat": "0x1803eb6a0",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z"
+          },
+          {
+            "address": "0x1801bc5dd",
+            "iat": "0x1803e3ee0",
+            "module": "SLDMODU.dll",
+            "symbol": "??6@YAAEAVsu_CArchive@@AEAV0@AEAPEAVmoDirectionSpec_c@@@Z"
+          },
+          {
+            "address": "0x1801bc5ee",
+            "iat": "0x1803eb528",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@N@Z"
+          },
+          {
+            "address": "0x1801bc5fd",
+            "iat": "0x1803eb6a0",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z"
+          },
+          {
+            "address": "0x1801bc60d",
+            "iat": "0x1803eaa18",
+            "module": "sldmgu.dll",
+            "symbol": "?save@mgVector_c@@QEBAXAEAVsu_CArchive@@@Z"
+          },
+          {
+            "address": "0x1801bc61c",
+            "iat": "0x1803eb6a0",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z"
+          },
+          {
+            "address": "0x1801bc632",
+            "iat": "0x1803e6f08",
+            "module": "SLDMODU.dll",
+            "symbol": "??5@YAAEAVsu_CArchive@@AEAV0@AEAPEAVmoDisplayDistanceDim_c@@@Z"
+          },
+          {
+            "address": "0x1801bc650",
+            "iat": "0x1803e15d8",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+          },
+          {
+            "address": "0x1801bc656",
+            "iat": "0x1803e15d0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+          },
+          {
+            "address": "0x1801bc66a",
+            "iat": "0x1803e3b80",
+            "module": "SLDMODU.dll",
+            "symbol": "??5@YAAEAVsu_CArchive@@AEAV0@AEAPEAVmoDisplayAngularDim_c@@@Z"
+          },
+          {
+            "address": "0x1801bc67a",
+            "iat": "0x1803eb520",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAN@Z"
+          },
+          {
+            "address": "0x1801bc688",
+            "iat": "0x1803eb698",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z"
+          },
+          {
+            "address": "0x1801bc6a2",
+            "iat": "0x1803eb698",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z"
+          },
+          {
+            "address": "0x1801bc6b2",
+            "iat": "0x1803eb698",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z"
+          },
+          {
+            "address": "0x1801bc6c2",
+            "iat": "0x1803eb698",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z"
+          },
+          {
+            "address": "0x1801bc6d2",
+            "iat": "0x1803e3ee8",
+            "module": "SLDMODU.dll",
+            "symbol": "??5@YAAEAVsu_CArchive@@AEAV0@AEAPEAVmoDirectionSpec_c@@@Z"
+          },
+          {
+            "address": "0x1801bc6e2",
+            "iat": "0x1803eb520",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAN@Z"
+          },
+          {
+            "address": "0x1801bc6f2",
+            "iat": "0x1803eb698",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z"
+          },
+          {
+            "address": "0x1801bc702",
+            "iat": "0x1803eaa20",
+            "module": "sldmgu.dll",
+            "symbol": "?restore@mgVector_c@@QEAAXAEAVsu_CArchive@@@Z"
+          },
+          {
+            "address": "0x1801bc71c",
+            "iat": "0x1803e15d8",
+            "module": "SLDMFCU.dll",
+            "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+          },
+          {
+            "address": "0x1801bc722",
+            "iat": "0x1803e15d0",
+            "module": "SLDMFCU.dll",
+            "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+          },
+          {
+            "address": "0x1801bc739",
+            "iat": "0x1803eb698",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z"
+          },
+          {
+            "address": "0x1801bc786",
+            "thunk": "0x1803ad677",
+            "iat": "0x1803e74b8",
+            "module": "mfc140u.dll",
+            "symbol": "ordinal:2342"
+          },
+          {
+            "address": "0x1801bc799",
+            "thunk": "0x1803ad677",
+            "iat": "0x1803e74b8",
+            "module": "mfc140u.dll",
+            "symbol": "ordinal:2342"
+          }
+        ]
+      },
+      "0x1801bb2e0": {
+        "end": "0x1801bb548",
+        "sha256": "4dc85a9888729a7f092f27f12cf2d6275ca8e07a48bae7143081f2ffe4f85544",
+        "native_bytes": "48895c2418555657415641574881ec900000000f29b42480000000488b05bec444004833c448894424784c8bf2488bf948894c2448ff159588220090488d056ded270048890733f648897710488d4f28ff15faee220090488d5f3048895c2450488bcbff150f03230090488d2d6fa2240048892b488d5f5048895c2458488bcbff15f20223009048892b488d5f7048895c2440488bcbff15dc0223009048892b4889b7900000004889b7980000004889b7a0000000c787a80000000100000048b8e6eb7bf3e9ceaa3f488987b000000089b7b8000000488d8fc0000000ff15edf3220090c787d8000000010000004889b7e00000004889b7e8000000488d8ff0000000ff159fff220090488d8f10010000ff15b9f32200904889b7280100004889b73001000048897718488977204d85f60f84cb0000004c897708498b06498bceff9098040000488be8b920100000ff154b022300488bd848894424404885c0743ef20f10b7900000000f54351f202500ff15c1ba2200c744243001000000c7442428010000004c897424200f28de4c8bc0488bd5488bcbff157aba2200eb03488bc648894718b920100000ff15ee012300488bd848894424404885c0743ff20f10b7b00000000f5435c21f2500ff15bc862200c744243001000000c7442428020000004c897424200f28de4c8bc0488bd5488bcbff15ad862200488bf0488977200f57db0f57d2f20f100d501e2500488d4c2460ff154df3220090488bd0488d8fc0000000ff154cf3220090488d4c2460ff15a0f2220090488bc7488b4c24784833cce8c7271f00488b9c24d00000000f28b424800000004881c490000000415f415e5f5e5dc3",
+        "imports": [
+          {
+            "address": "0x1801bb315",
+            "iat": "0x1803e3bb0",
+            "module": "SLDMODU.dll",
+            "symbol": "??0moFeatureData_c@@QEAA@PEAVmoFeature_c@@@Z"
+          },
+          {
+            "address": "0x1801bb330",
+            "iat": "0x1803ea230",
+            "module": "sldgcu.dll",
+            "symbol": "??0gcEntityList_c@@QEAA@XZ"
+          },
+          {
+            "address": "0x1801bb343",
+            "iat": "0x1803eb658",
+            "module": "swccu.dll",
+            "symbol": "??0su_CObArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x1801bb360",
+            "iat": "0x1803eb658",
+            "module": "swccu.dll",
+            "symbol": "??0su_CObArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x1801bb376",
+            "iat": "0x1803eb658",
+            "module": "swccu.dll",
+            "symbol": "??0su_CObArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x1801bb3bd",
+            "iat": "0x1803ea7b0",
+            "module": "sldmgu.dll",
+            "symbol": "??0mgVector_c@@QEAA@XZ"
+          },
+          {
+            "address": "0x1801bb3e3",
+            "iat": "0x1803eb388",
+            "module": "swccu.dll",
+            "symbol": "??0su_CWordArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x1801bb3f1",
+            "iat": "0x1803ea7b0",
+            "module": "sldmgu.dll",
+            "symbol": "??0mgVector_c@@QEAA@XZ"
+          },
+          {
+            "address": "0x1801bb42f",
+            "iat": "0x1803eb680",
+            "module": "swccu.dll",
+            "symbol": "??2su_CObject@@SAPEAX_K@Z"
+          },
+          {
+            "address": "0x1801bb451",
+            "iat": "0x1803e6f18",
+            "module": "SLDMODU.dll",
+            "symbol": "?GetThisClass@ParallelPlaneDistanceDim_c@@SAPEAUCRuntimeClass@@XZ"
+          },
+          {
+            "address": "0x1801bb478",
+            "iat": "0x1803e6ef8",
+            "module": "SLDMODU.dll",
+            "symbol": "??0moDisplayDistanceDim_c@@QEAA@PEAVmoModel_c@@PEAUCRuntimeClass@@NPEAVmoFeature_c@@JH@Z"
+          },
+          {
+            "address": "0x1801bb48c",
+            "iat": "0x1803eb680",
+            "module": "swccu.dll",
+            "symbol": "??2su_CObject@@SAPEAX_K@Z"
+          },
+          {
+            "address": "0x1801bb4ae",
+            "iat": "0x1803e3b70",
+            "module": "SLDMODU.dll",
+            "symbol": "?GetThisClass@AngleDim_c@@SAPEAUCRuntimeClass@@XZ"
+          },
+          {
+            "address": "0x1801bb4d5",
+            "iat": "0x1803e3b88",
+            "module": "SLDMODU.dll",
+            "symbol": "??0moDisplayAngularDim_c@@QEAA@PEAVmoModel_c@@PEAUCRuntimeClass@@NPEAVmoFeature_c@@JH@Z"
+          },
+          {
+            "address": "0x1801bb4f5",
+            "iat": "0x1803ea848",
+            "module": "sldmgu.dll",
+            "symbol": "??0mgVector_c@@QEAA@NNN@Z"
+          },
+          {
+            "address": "0x1801bb506",
+            "iat": "0x1803ea858",
+            "module": "sldmgu.dll",
+            "symbol": "??4mgVector_c@@QEAAAEBV0@AEBV0@@Z"
+          },
+          {
+            "address": "0x1801bb512",
+            "iat": "0x1803ea7b8",
+            "module": "sldmgu.dll",
+            "symbol": "??1mgVector_c@@QEAA@XZ"
+          }
+        ]
+      },
+      "0x1801bb550": {
+        "end": "0x1801bb667",
+        "sha256": "d1af6fabf099f8e4e9e8970954e98b77f94b0333263614d3c4e43324902b0438",
+        "native_bytes": "48894c2408535556574883ec28488bf933d2ff154886220090488d0520eb270048890733ed48896f1048896f1848896f20488d4f28ff15a5ec220090488d5f3048895c2458488bcbff15ba00230090488d351aa02400488933488d5f5048895c2460488bcbff159d00230090488933488d5f7048895c2468488bcbff1587002300904889334889af900000004889af980000004889afa0000000c787a80000000100000048b8e6eb7bf3e9ceaa3f488987b000000089afb8000000488d8fc0000000ff1598f1220090c787d8000000010000004889afe00000004889afe8000000488d8ff0000000ff154afd220090488d8f10010000ff1564f12200904889af280100004889af30010000488bc74883c4285f5e5d5bc3",
+        "imports": [
+          {
+            "address": "0x1801bb562",
+            "iat": "0x1803e3bb0",
+            "module": "SLDMODU.dll",
+            "symbol": "??0moFeatureData_c@@QEAA@PEAVmoFeature_c@@@Z"
+          },
+          {
+            "address": "0x1801bb585",
+            "iat": "0x1803ea230",
+            "module": "sldgcu.dll",
+            "symbol": "??0gcEntityList_c@@QEAA@XZ"
+          },
+          {
+            "address": "0x1801bb598",
+            "iat": "0x1803eb658",
+            "module": "swccu.dll",
+            "symbol": "??0su_CObArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x1801bb5b5",
+            "iat": "0x1803eb658",
+            "module": "swccu.dll",
+            "symbol": "??0su_CObArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x1801bb5cb",
+            "iat": "0x1803eb658",
+            "module": "swccu.dll",
+            "symbol": "??0su_CObArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x1801bb612",
+            "iat": "0x1803ea7b0",
+            "module": "sldmgu.dll",
+            "symbol": "??0mgVector_c@@QEAA@XZ"
+          },
+          {
+            "address": "0x1801bb638",
+            "iat": "0x1803eb388",
+            "module": "swccu.dll",
+            "symbol": "??0su_CWordArray@@QEAA@XZ"
+          },
+          {
+            "address": "0x1801bb646",
+            "iat": "0x1803ea7b0",
+            "module": "sldmgu.dll",
+            "symbol": "??0mgVector_c@@QEAA@XZ"
+          }
+        ]
+      },
+      "0x1801bb670": {
+        "end": "0x1801bb6f0",
+        "sha256": "a869c7a67b286b5f9ec5aa4d27fd8e66cba9c310de01dec8c0a9a3e5a18d56f2",
+        "native_bytes": "48895c241048894c2408574883ec20498bd8488bf9ff153db5220090488d05d5ea2700488907488d055b0c28004889878800000048899fb0070000488d9fb807000048895c2440488bcbff1598ff220090488d05f89e2400488903488d8fd8070000e879feffff90c7871009000000000000488bc7488b5c24384883c4205fc3",
+        "imports": [
+          {
+            "address": "0x1801bb685",
+            "iat": "0x1803e6bc8",
+            "module": "SLDMODU.dll",
+            "symbol": "??0moRefSurface_c@@QEAA@PEAVmoConcept_c@@@Z"
+          },
+          {
+            "address": "0x1801bb6ba",
+            "iat": "0x1803eb658",
+            "module": "swccu.dll",
+            "symbol": "??0su_CObArray@@QEAA@XZ"
+          }
+        ]
+      },
+      "0x1801bc7a0": {
+        "end": "0x1801bc873",
+        "sha256": "54fcadc3e732f0243e791a8a96c27e7c4bb3821372212d355e96ab81fd4c18a7",
+        "native_bytes": "48895c241048896c2418565741564883ec304c8bf2488bf1488d4c2420ff15054e2200498bd6488bceff1511a42200488d8eb8070000488b01498bd6ff5028498bceff15c0ee220085c0755f33ed8bdd399ec80700007e2c8bfd660f1f440000488b86c0070000488b0c074885c97406ff15a2722200ffc34883c7083b9ec80700007cdcb938010000ff1551ee220048894424504885c0740b488bc8e80fedffff488be84889aeb0070000488b8eb00700004885c97409488b01498bd6ff5028488b5c2458488b6c24604883c430415e5f5ec3",
+        "imports": [
+          {
+            "address": "0x1801bc7bd",
+            "iat": "0x1803e15c8",
+            "module": "SLDMFCU.dll",
+            "symbol": "??0moArchiveHelper_c@@QEAA@PEAVsu_CArchive@@@Z"
+          },
+          {
+            "address": "0x1801bc7c9",
+            "iat": "0x1803e6be0",
+            "module": "SLDMODU.dll",
+            "symbol": "?Serialize@moRefSurface_c@@MEAAXAEAVsu_CArchive@@@Z"
+          },
+          {
+            "address": "0x1801bc7e2",
+            "iat": "0x1803eb6a8",
+            "module": "swccu.dll",
+            "symbol": "?IsStoring@su_CArchive@@QEBAHXZ"
+          },
+          {
+            "address": "0x1801bc810",
+            "iat": "0x1803e3ab8",
+            "module": "SLDMODU.dll",
+            "symbol": "?use@moBEntRef_c@@QEAAXXZ"
+          },
+          {
+            "address": "0x1801bc829",
+            "iat": "0x1803eb680",
+            "module": "swccu.dll",
+            "symbol": "??2su_CObject@@SAPEAX_K@Z"
+          }
+        ]
+      }
+    },
+    "inline_backend_selector": {
+      "address": "0x1800e3930",
+      "bytes": "33c0c3",
+      "result": 0
+    },
+    "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldMoPartu.dll",
+    "sha256": "2201edfa07b1a7484acedb6db4600fa7a00e55b16090a03b92fe7d9b14cb2128",
+    "bindings": [
+      {
+        "ancestry": [
+          ".?AVmoRuledSrfFromEdge_c@@",
+          ".?AVmoRefSurface_c@@",
+          ".?AVmoRefGeom_c@@",
+          ".?AVmoAtomFeature_c@@",
+          ".?AVmoModelFeature_c@@",
+          ".?AVmoFeature_c@@",
+          ".?AVmoConcept_c@@",
+          ".?AVmoLoggedNode_c@@",
+          ".?AVmoNode_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@",
+          ".?AVutDisplayedEntity_c@@"
+        ],
+        "class_name": "moRuledSrfFromEdge_c",
+        "vftable": "0x18043a168",
+        "serializer": "0x1801bc7a0",
+        "type_name": ".?AVmoRuledSrfFromEdge_c@@"
+      },
+      {
+        "ancestry": [
+          ".?AVmoRuledSrfFromEdgeData_c@@",
+          ".?AVmoFeatureData_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@"
+        ],
+        "class_name": "moRuledSrfFromEdgeData_c",
+        "vftable": "0x18043a090",
+        "serializer": "0x1801bc470",
+        "type_name": ".?AVmoRuledSrfFromEdgeData_c@@"
+      }
+    ],
+    "decompilation_sha256": {
+      "FUN_1801bb2e0.c": "19e953c0da56656c67e3cea90d251d9d2dccc78b3bf652299ffed278720a690e",
+      "FUN_1801bb550.c": "5e8b9b5586bf8ecc8385a376bf07fdaf121610bc4385d56e5c0f060e0d229173",
+      "FUN_1801bb670.c": "38f5c0d79a55da479a3739ddd0766b629b7ee9431a88b3829f4852cc7fc80cd5",
+      "FUN_1801bc470.c": "ff777afa45de973548cfab8a46058beaa0f6aedccc1c8d103d601bcdb139227c",
+      "FUN_1801bc7a0.c": "f1939f3ec39e067fbbd1cb5cf01a0340aba4f3983433fd5c7842ef779d5712a6"
+    },
+    "roots": [
+      {
+        "path": "samples/learn/Mouse/Main Housing Overmold.SLDPRT",
+        "configuration": "Contents/Config-0",
+        "start": 396761,
+        "end": 405022,
+        "sha256": "50bb9ade22827701394a42db0ed622e252d13a4040793807f3982f05a9bcbaed",
+        "owner_is_root": true,
+        "list_counts": {
+          "array_30": 4,
+          "array_50": 0,
+          "words_f0": 4
+        },
+        "root_array_count": 4,
+        "raw_words": {
+          "raw_90": 0.0127,
+          "raw_98": 2,
+          "raw_9c": 0,
+          "raw_a0": 1,
+          "raw_a8": 1,
+          "raw_b0": 0.017453292519943334,
+          "raw_b8": 0,
+          "raw_vector_c0": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "raw_d8": 1
+        }
+      }
+    ],
+    "total_root_bytes": 8261,
+    "coverage_credit": 0
+  }
+}

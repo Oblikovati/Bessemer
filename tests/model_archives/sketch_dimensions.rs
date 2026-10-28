@@ -68,7 +68,8 @@ fn sketch_dimension_and_pattern_records_match_independent_values_and_exact_bytes
         assert_eq!(encode_fields(&decoded, 30000).unwrap(), bytes);
         cases += 1;
     }
-    assert_eq!((cases, fields), (632, 19916));
+    // #86 / C-395: 104 corrected transforms retain 30 raw words instead of compact projections.
+    assert_eq!((cases, fields), (632, 21164));
 }
 
 #[test]

@@ -121,8 +121,9 @@ def edge(w: WireMap, version: int, rich: bool) -> bytes:
     return out
 
 
-def intersection(w: WireMap, version: int, rich: bool, count: int = 1) -> bytes:
-    out = P('<HIii', 0, 0x89abcdef, count, -1)+bytes(12)
+def intersection(w: WireMap, version: int, rich: bool, count: int = 1, wrapper_references: Callable[[], bytes] | None = None) -> bytes:
+    out = P('<HIii', 0, 0x89abcdef, count, -1)
+    out += (wrapper_references() if wrapper_references is not None else bytes(8))+bytes(4)
     if count > 0: out += w.handle() if rich else bytes(2)
     out += dynamic_words(rich)
     if count > 0: out += edge(w, version, rich)
@@ -134,8 +135,9 @@ def intersection(w: WireMap, version: int, rich: bool, count: int = 1) -> bytes:
     return out+(P('<d', -0.0) if version >= 0x2be0 else b'')
 
 
-def styled_intersections(w: WireMap, version: int, rich: bool) -> bytes:
-    return P('<H', 1)+styled(w, rich)+P('<H', 2)+P('<H', 65535)+intersection(w, version, rich)
+def styled_intersections(w: WireMap, version: int, rich: bool, intersection_body: Callable[[], bytes] | None = None) -> bytes:
+    out = P('<H', 1)+styled(w, rich)+P('<H', 2)+P('<H', 65535)
+    return out+(intersection_body() if intersection_body is not None else intersection(w, version, rich))
 
 
 def state() -> bytes:
@@ -192,12 +194,12 @@ def slots(w: WireMap, rich: bool) -> bytes:
     return P('<ii', -1, 2)+P('<iH', -7, 0)*2 if rich else P('<ii', -1, 0)
 
 
-def after_patterns(w: WireMap, version: int, rich: bool, final_word: int = -2**31, indicator: int = 0, user_objects: Callable[[], bytes] | None = None) -> bytes:
+def after_patterns(w: WireMap, version: int, rich: bool, final_word: int = -2**31, indicator: int = 0, user_objects: Callable[[], bytes] | None = None, intersection_body: Callable[[], bytes] | None = None) -> bytes:
     out = w.array('suObList') if rich else bytes(2)
-    out += constraints(w, version, rich)+offsets(w, version, rich)+styled_intersections(w, version, rich)
+    out += constraints(w, version, rich)+offsets(w, version, rich)+styled_intersections(w, version, rich, intersection_body)
     out += state()+visual(w, rich, indicator, user_objects)+local_relations(w, rich)+coincidences(w, rich)+silhouettes(version, rich)
     return out+blocks(w, rich)+loops(w, rich)+slots(w, rich)+P('<i', final_word)
 
 
-def ordinary(w: WireMap, version: int, rich: bool, final_word: int = -2**31, indicator: int = 0, user_objects: Callable[[], bytes] | None = None) -> bytes:
-    return bytes(52+24)+after_patterns(w, version, rich, final_word, indicator, user_objects)
+def ordinary(w: WireMap, version: int, rich: bool, final_word: int = -2**31, indicator: int = 0, user_objects: Callable[[], bytes] | None = None, intersection_body: Callable[[], bytes] | None = None) -> bytes:
+    return bytes(52+24)+after_patterns(w, version, rich, final_word, indicator, user_objects, intersection_body)

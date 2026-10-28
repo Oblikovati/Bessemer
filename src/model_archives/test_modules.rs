@@ -443,3 +443,23 @@ mod three_point_plane_role_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/deleted_faces.rs"]
 mod deleted_face_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/end_spec_wrapper_roles.rs"]
+mod end_spec_wrapper_role_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/composite_curves.rs"]
+mod composite_curve_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/ruled_surfaces.rs"]
+mod ruled_surface_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/intersection_wrapper_roles.rs"]
+mod intersection_wrapper_role_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/fixed_valued_transforms.rs"]
+mod fixed_valued_transform_tests;

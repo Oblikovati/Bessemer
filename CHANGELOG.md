@@ -4,6 +4,12 @@
 
 ### Fixed
 
+- Fixed present sketch valued-dimension transforms using compact framing instead of the documented fixed 30-word archive operator, preserving raw presence, words and suffix identities. (#86)
+
+- Fixed all four sketch-intersection wrapper fields rejecting complete reviewed subclasses while preserving nulls, shared identities and unrelated-class checks. (#46)
+
+- Fixed extrusion, starting-end and revolution-end wrapper references rejecting complete reviewed subclasses while preserving conditional fields, nulls and identity. (#46)
+
 - Fixed three-point-plane reference fields rejecting documented endpoint and loft-sync subclasses while retaining nulls, identity and unrelated-class checks. (#46)
 
 - Fixed reference-plane data and common-wrapper roles rejecting documented constraint, point/surface and base-surface objects while retaining finite class checks. (#46)
@@ -17,6 +23,10 @@
 - Fixed reference-plane point roles rejecting documented endpoint and loft-sync subclasses for fresh and cached pointers. (#46)
 
 ### Added
+
+- Added ordinary ruled-from-edge surface and data reading, editing and writing with direct owned data, strict inline surface frames and retained WORD arrays. (#54)
+
+- Added ordinary composite-curve reading, editing and writing with strict kernel frames, shared tagged arrays and five independently counted direct containers. (#54)
 
 - Added ordinary deleted-face feature and data reading, editing and writing with independent nullable arrays, unsigned DWORDs and retained shared identities. (#54)
 
