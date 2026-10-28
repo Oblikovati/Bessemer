@@ -20,6 +20,14 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moDisplayNote_c" => super::display_notes::read(reader, map),
+        "moCompNote_c" => super::display_notes::component(reader, map),
+        "moNoteData_c" => super::display_notes::note_data(reader, map),
+        "moGenericText_c" => super::note_text::read(reader, map),
+        "moGenTextDataList_c" => super::note_text::data_list(reader, map),
+        "moTextDataLineHead_c" => super::note_text::line_head(reader, map),
+        "moTextDataChar_c" => super::note_text::character(reader),
+        "moAbsolutePoint_c" => super::dimensions::attachment(reader, map),
         "moJog_c" => super::jog_corners::jog(reader, map),
         "moBreakCornerFeat_c" => super::jog_corners::break_corner(reader, map),
         "moFlattenBends_c" => super::flatten_bends::read(reader, map),

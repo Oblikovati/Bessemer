@@ -24,6 +24,8 @@
 
 ### Added
 
+- Added complete ordinary display-note and generic-text record reconstruction, preserving paragraph fields, character units, shared identities and versioned note tails. (#54)
+
 - Added explicitly scoped version-18000 configuration-manager reading and reconstruction, including owned scenes and the historical display-map boundary. (#54)
 
 - Added complete jog and break-corner framing with stored reference presence, direct owned keepers, tagged arrays and both version gates. (#54)

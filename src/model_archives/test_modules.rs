@@ -539,3 +539,7 @@ mod weldment_finishing_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/legacy_manager_context.rs"]
 mod legacy_manager_context_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/display_notes.rs"]
+mod display_note_tests;

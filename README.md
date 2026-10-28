@@ -347,3 +347,6 @@ direct owned keepers, tagged arrays and independent version gates.
 
 [Version-18000 configuration managers](docs/features/legacy-owned-managers/README.md)
 documents explicit dialect selection and independently decoded historical streams.
+
+[Display notes](docs/features/display-notes/README.md) covers internal note components,
+generic text, direct paragraphs and shared text-list identities.
