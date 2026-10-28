@@ -280,6 +280,8 @@ pub(super) const CLASSES: &[&str] = &[
     "moHelix_c",
     // #54 / C-278 binds the inherited reference-geometry chooser owner.
     "moCompositeCurve_c",
+    // #54 / C-271 binds the inherited reference-geometry chooser owner.
+    "moRuledSrfFromEdge_c",
     "Chamfer_c",
     "moPLine_c",
     "moScale_c",

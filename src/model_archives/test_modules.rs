@@ -451,3 +451,7 @@ mod end_spec_wrapper_role_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/composite_curves.rs"]
 mod composite_curve_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/ruled_surfaces.rs"]
+mod ruled_surface_tests;

@@ -20,6 +20,8 @@
 
 ### Added
 
+- Added ordinary ruled-from-edge surface and data reading, editing and writing with direct owned data, strict inline surface frames and retained WORD arrays. (#54)
+
 - Added ordinary composite-curve reading, editing and writing with strict kernel frames, shared tagged arrays and five independently counted direct containers. (#54)
 
 - Added ordinary deleted-face feature and data reading, editing and writing with independent nullable arrays, unsigned DWORDs and retained shared identities. (#54)

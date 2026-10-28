@@ -34,6 +34,7 @@ mod constraint_planes;
 mod context;
 mod deleted_faces;
 mod plane_geometry_flags;
+mod ruled_surfaces;
 pub use plane_geometry_flags::PlaneGeometryFlag;
 mod context_chains;
 mod coordinate_systems;
