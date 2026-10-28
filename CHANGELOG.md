@@ -24,6 +24,8 @@
 
 ### Added
 
+- Added edge-flange, single-bend, per-edge and edge-geometry framing with verified saved sheet-metal state, direct handles and independent edit fixtures. (#54)
+
 - Added absolute reference-plane data with the verified shared non-default layout and typed containing-plane references. (#54)
 
 - Added complete gusset, ordinary weld-bead feature and side-data framing with preserved extrusion suffixes, transform operators, packed words and shared identities. (#54)

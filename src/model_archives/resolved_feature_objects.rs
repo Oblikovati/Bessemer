@@ -20,6 +20,11 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moEdgeFlange_c" => super::edge_flange_records::read(reader, map),
+        "moEdgeFlangeData_c" => super::edge_flange_data::read(reader, map),
+        "moOneBend_c" => super::one_bends::read(reader, map),
+        "moMultiEdgeFlangeDataPerEdge_c" => super::edge_flange_records::per_edge(reader, map),
+        "moEdgeGeom_c" | "moLinearEdgeGeom_c" => super::edge_flange_records::geometry(reader),
         "moGusset_c" => super::weldment_finishing::gusset(reader, map),
         "moWeldBeadFeat_c" => super::weldment_finishing::bead(reader, map),
         "weldBeadSideData_c" => super::weldment_finishing::side(reader, map),

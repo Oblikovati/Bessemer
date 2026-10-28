@@ -1,0 +1,36 @@
+{
+  "base_revision": "1938ea6da58344a1c864beeadf36913555166c9e",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "behavior_version": "C285-edge-flanges-v1",
+  "pr_gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 932,
+    "external_fixture_tests_ignored": 3,
+    "doctests_passed": 274,
+    "test_binaries": 165,
+    "log_sha256": "93d60b2c2f3303f929388b00a297c6629cabb2e4234a06b35bfd209d27c4d442"
+  },
+  "independent_fixture_tests": 3,
+  "native_corpus": {
+    "cases": 906,
+    "complete": 821,
+    "incomplete": 85,
+    "two_fresh_processes_identical": true,
+    "previous_complete_preserved": true
+  },
+  "oracles": [
+    "actual independent serializer primitive observations",
+    "independent owned edit goldens",
+    "exact reconstruction and map identity",
+    "all-prefix truncation and version boundary rejection",
+    "four-stream hash-bound native reference EOF"
+  ],
+  "exclusions": [
+    "positive single-bend raw-kernel bodies",
+    "nonnull conic-bend serializer",
+    "later unsupported native classes",
+    "complete documented schema parity remains unfinished"
+  ]
+}

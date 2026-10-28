@@ -287,6 +287,9 @@ pub(super) const CLASSES: &[&str] = &[
     // #54 / C-391 proves these complete extrusion/body-feature ancestry bindings.
     "moGusset_c",
     "moWeldBeadFeat_c",
+    // #54 / C-285: native bend-group and body-feature ancestry, with complete readers.
+    "moEdgeFlange_c",
+    "moOneBend_c",
     // #54 / C-271 binds the inherited reference-geometry chooser owner.
     "moRuledSrfFromEdge_c",
     "Chamfer_c",

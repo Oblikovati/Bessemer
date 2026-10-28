@@ -324,3 +324,6 @@ gusset extrusions, ordinary weld-bead features and shared side data.
 
 [Absolute plane data](docs/features/absolute-plane-data/README.md) documents the
 shared non-default plane layout and its typed containing-plane role.
+
+[Edge flanges](docs/features/edge-flanges/README.md) covers complete edge-flange,
+single-bend and per-edge records, including verified saved sheet-metal state.
