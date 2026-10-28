@@ -227,6 +227,8 @@ the existing finite wrapper family through fresh and cached pointers.
 arrays, raw flag words, double order and inherited empty keepers.
 [End-specification wrapper roles](docs/features/end-spec-wrapper-roles/README.md) accept
 the reviewed wrapper family at conditional, starting-end and revolution fields.
+[Sketch-intersection wrapper roles](docs/features/intersection-wrapper-roles/README.md)
+accept the same reviewed family at all four fields through fresh and cached references.
 [Deleted-face features](docs/features/deleted-faces/README.md) retain independent
 nullable arrays, unsigned DWORDs and shared nested data.
 [Composite curves](docs/features/composite-curves/README.md) retain strict kernel

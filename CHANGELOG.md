@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Fixed all four sketch-intersection wrapper fields rejecting complete reviewed subclasses while preserving nulls, shared identities and unrelated-class checks. (#46)
+
 - Fixed extrusion, starting-end and revolution-end wrapper references rejecting complete reviewed subclasses while preserving conditional fields, nulls and identity. (#46)
 
 - Fixed three-point-plane reference fields rejecting documented endpoint and loft-sync subclasses while retaining nulls, identity and unrelated-class checks. (#46)

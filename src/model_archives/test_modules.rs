@@ -455,3 +455,7 @@ mod composite_curve_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/ruled_surfaces.rs"]
 mod ruled_surface_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/intersection_wrapper_roles.rs"]
+mod intersection_wrapper_role_tests;

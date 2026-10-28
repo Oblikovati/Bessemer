@@ -51,11 +51,12 @@ pub(super) fn intersection(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader
 }
 
 fn references(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    // #46 / C-279: base-typed pointers can hold reviewed concrete wrapper subclasses.
     for offset in ["10", "18", "20", "28"] {
         reader.object(
             &format!("reference_{offset}"),
             map,
-            ModelObjectRole::Declared(&["moRefWrapper_c"]),
+            ModelObjectRole::Declared(super::model_references::WRAPPER_CLASSES),
         )?;
     }
     for offset in ["30", "38"] {
