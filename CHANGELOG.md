@@ -24,6 +24,8 @@
 
 ### Added
 
+- Added ordinary sketch isocurve information reading, editing and writing with exact twenty-byte numeric bodies, retained floating-point bits and shared external-entity references. (#54)
+
 - Added spline-tangent magnitude, arc-length and plane-to-plane valued-dimension reading, editing and writing through their exact native base serializers and collection roles. (#54)
 
 - Added ordinary ruled-from-edge surface and data reading, editing and writing with direct owned data, strict inline surface frames and retained WORD arrays. (#54)

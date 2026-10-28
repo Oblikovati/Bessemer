@@ -309,6 +309,7 @@ fn read_sketch_reference_body(
         "moTempAxisRef_w" => sketch::temporary_axis(reader, map),
         "moSilhVertexRef_c" => sketch::silhouette_vertex(reader, map),
         "moSkIntersectInfo_c" => sketch::intersection_info(reader),
+        "moSkIsoCurveInfo_c" => sketch::isocurve_information(reader),
         "moDimText_c" => super::sketch_text::read(reader, map),
         "utCharFormat_c" => super::detail_prefix::character_format(reader),
         _ => read_sketch_backup_body(reader, map, class),

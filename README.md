@@ -233,6 +233,8 @@ accept the same reviewed family at all four fields through fresh and cached refe
 retain the full presence word and thirty raw archive words before the derived suffix.
 [Additional valued dimensions](docs/features/additional-valued-dimensions/README.md)
 retain native spline-tangent, arc-length and plane-distance identities in shared collections.
+[Sketch isocurve information](docs/features/sketch-isocurve-information/README.md)
+retains twenty-byte numeric records, raw ratio bits and shared external-entity references.
 [Deleted-face features](docs/features/deleted-faces/README.md) retain independent
 nullable arrays, unsigned DWORDs and shared nested data.
 [Composite curves](docs/features/composite-curves/README.md) retain strict kernel
