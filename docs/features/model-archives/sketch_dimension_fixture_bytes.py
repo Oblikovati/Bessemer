@@ -22,12 +22,12 @@ def entities(count: int, rich: bool, base_index: int) -> bytes:
     return handle('sgPointHandle', -1)+struct.pack('<'+'H'*(count-1), *([base_index+2]*(count-1)))
 
 
-def valued_body(name: str, version: int, rich: bool) -> bytes:
+def valued_body(name: str, version: int, rich: bool, base_index: int = 2) -> bytes:
     out = valued(version, rich)
-    if name in G1: return out+entities(2, rich, 2)+struct.pack('<2i3d', -2**31, 2**31-1, -0.0, 1.25, -2.5)
+    if name in G1: return out+entities(2, rich, base_index)+struct.pack('<2i3d', -2**31, 2**31-1, -0.0, 1.25, -2.5)
     if name in OFFSETS: return out+struct.pack('<HH', 65532, 65531)
-    if name == 'sgValG3Dim': return out+entities(3, rich, 2)+struct.pack('<H', 65530)
-    out += entities(2, rich, 2)+struct.pack('<4H', 65529, 65528, 32768, 0)
+    if name == 'sgValG3Dim': return out+entities(3, rich, base_index)+struct.pack('<H', 65530)
+    out += entities(2, rich, base_index)+struct.pack('<4H', 65529, 65528, 32768, 0)
     out += handle('sg3DPlaneHandle', 65535) if rich else b'\0\0'
     out += struct.pack('<3d', -0.0, 1.25, -2.5)
     return out+(struct.pack('<H', 65527) if 0x2f79 < version < 0x2fa0 else b'')
