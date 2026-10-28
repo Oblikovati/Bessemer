@@ -471,3 +471,7 @@ mod additional_valued_dimension_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/sketch_isocurve_information.rs"]
 mod sketch_isocurve_information_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/cone_references.rs"]
+mod cone_reference_tests;

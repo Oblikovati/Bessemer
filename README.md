@@ -291,3 +291,6 @@ Component-property objects and holders retain their embedded fonts, visibility f
 `DisplayArchiveContext::from_document` resolves exact display-version markers and external component declarations with explicit native file and tessellation versions. See [document context resolution](docs/features/display-lists/document-context.md).
 
 `DisplayArchive::check_external_face_links` checks named cache blocks and resolves requested external facets with explicit coverage. See [external face links](docs/features/display-lists/external-face-links.md).
+
+Cone-reference framing and its surface-axis callers are documented in
+[cone references](docs/features/cone-references/README.md).

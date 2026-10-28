@@ -55,16 +55,20 @@ fn all_new_caller_class_styles_reject_every_prefix_extra_byte_and_old_context() 
 }
 
 #[test]
-fn each_caller_fixture_set_equals_the_exact_nineteen_class_wrapper_family() {
+fn each_caller_fixture_set_equals_the_exact_twenty_class_wrapper_family() {
     use std::collections::BTreeSet;
     let expected: BTreeSet<_> = super::model_references::WRAPPER_CLASSES
         .iter()
         .map(|s| s.to_string())
         .collect();
     for style in [0, 2, 4] {
-        let actual = observed_wrapper_family(style);
+        let mut actual = observed_wrapper_family(style);
+        actual.insert(super::cone_reference_tests::fresh_wrapper_class(
+            style / 2,
+            reference_path(style),
+        ));
         assert_eq!(actual, expected);
-        assert_eq!(actual.len(), 19);
+        assert_eq!(actual.len(), 20);
     }
 }
 

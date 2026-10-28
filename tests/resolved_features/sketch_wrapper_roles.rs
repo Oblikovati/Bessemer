@@ -57,12 +57,16 @@ fn sketch_reference_coverage_equals_the_existing_finite_wrapper_family() {
         .collect();
     assert_eq!(actual.len(), 18);
     actual.insert(super::constraint_plane_tests::fresh_base_surface_wrapper_class());
+    actual.insert(super::cone_reference_tests::fresh_wrapper_class(
+        4,
+        "root.object.reference",
+    ));
     let expected: BTreeSet<_> = super::model_references::WRAPPER_CLASSES
         .iter()
         .map(|name| name.to_string())
         .collect();
     assert_eq!(actual, expected);
-    assert_eq!(actual.len(), 19);
+    assert_eq!(actual.len(), 20);
 }
 
 fn assert_invalid_array_role(version: u32, bytes: &[u8], path: &str) {

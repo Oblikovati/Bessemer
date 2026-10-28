@@ -11,6 +11,7 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moConeRef_w" => super::geometric_references::cone(reader, map),
         "moSurfaceRef_w" => super::geometric_references::surface(reader, map),
         "moPLineDraft_c" => super::polyline_records::draft(reader, map),
         "moPLineIntersect_c" => super::polyline_records::intersect(reader, map),

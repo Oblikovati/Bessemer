@@ -75,15 +75,19 @@ fn observed_family(position: usize) -> std::collections::BTreeSet<String> {
 }
 
 #[test]
-fn each_of_the_four_fields_accepts_exactly_the_reviewed_nineteen_class_family() {
+fn each_of_the_four_fields_accepts_exactly_the_reviewed_twenty_class_family() {
     let expected: std::collections::BTreeSet<String> = super::model_references::WRAPPER_CLASSES
         .iter()
         .map(|s| s.to_string())
         .collect();
     for position in 0..4 {
-        let actual = observed_family(position);
+        let mut actual = observed_family(position);
+        actual.insert(super::cone_reference_tests::fresh_wrapper_class(
+            3,
+            &reference_path(0, position),
+        ));
         assert_eq!(actual, expected);
-        assert_eq!(actual.len(), 19);
+        assert_eq!(actual.len(), 20);
     }
 }
 
