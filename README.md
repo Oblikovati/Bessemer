@@ -315,3 +315,6 @@ documents the complete reference-curve parent and native suffix order.
 
 [Cosmetic weld tree](docs/features/cosmetic-weld-tree/README.md) covers direct
 endpoint ownership, bead kernel bodies and signed wire-map lists.
+
+[End caps](docs/features/end-caps/README.md) documents the complete body-feature
+parent, native pointer order and preserved shared dimensions.

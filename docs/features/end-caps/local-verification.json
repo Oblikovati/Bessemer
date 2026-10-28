@@ -1,0 +1,52 @@
+{
+  "issue": 54,
+  "issue_type": "Feature",
+  "behavior_version": "C390-end-cap-v1",
+  "runtime_base_revision": "cc16ad2b217482484eed850de704833125a95edc",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "fixture_graphs": 306,
+  "primitive_reads": 126039,
+  "owned_streams": 21,
+  "checks": {
+    "private": "7 focused parser tests passed",
+    "public": "3 passed",
+    "python": "2 tests passed using the immutable reference runner with verified origins",
+    "live_reference_regeneration": "Aborted on upstream source changes; no mixed-revision result was accepted",
+    "cargo_xtask_pr": "910 library tests, all integrations, 4 xtask tests and 274 doctests passed; 3 external-fixture tests explicitly ignored",
+    "native_processes": "Two fresh processes matched all 906 outcomes and causes; aggregate completeness remains incomplete"
+  },
+  "previous_complete": 819,
+  "complete": 819,
+  "newly_complete": [],
+  "no_prior_success_lost": true,
+  "source_snapshot": "172377243ac2d2de3e6f71f79554acb287ec1ec4e608e14b46a7272a441dca3b",
+  "source_python_files": 1890,
+  "source_pin_unchanged": true,
+  "fixture_source_snapshot": "e14f8087e7aacdfb1bd72fbb681f37ddcd6e38ecd1fd948b201796a319a0bb9d",
+  "critical_reader_hashes_identical_across_snapshots": [
+    "endcaps.py",
+    "bodyfeatures.py",
+    "displaydimensions.py",
+    "modelfeatures.py",
+    "mfcobjects.py",
+    "modelcomponents.py",
+    "swarchive.py"
+  ],
+  "independent_feature_bytes": 54868201,
+  "native_end_cap_objects": 4,
+  "kernel_decision": "Complete body-feature parent, finite native roles and exact raw suffix order; unsupported arc-length bodies remain explicit failures",
+  "exclusions": [
+    "87 native inputs remain explicit failures",
+    "The two targeted streams advance without completion credit; independent source EOF is not Bessemer EOF",
+    "Non-null arc-length bodies, earlier/internal contexts, scalar meanings, geometry validity, application acceptance and whole-schema parity remain incomplete",
+    "Humanizer unavailable; maintainer prose review remains open"
+  ],
+  "artifact_sha256": "3ebbcd493f0d0d9deb64db4e21ba63506258aced31af3372c284f5734dabea75",
+  "gate_log_sha256": "0cc077eff57aecd9e758acc1a541c05775f00af4484b17940ae8c2e8508c74a7",
+  "native_log_sha256": "57212944c12f9d1535e1fcd16594fbf099799c8de43a0c5f820d2a74763c96fc",
+  "native_repeat_log_sha256": "905a8375b4d4c47eb3a663a8ad02c3b88b8136d0de4d9542d8a6f7b80c3929a5",
+  "source_audit_log_sha256": "87a0c6622f39c99ff09539e445138668f9b79f3ee2edb043d598f3405ee3466f",
+  "fixture_packet_sha256": "96181915a9ff586751da231abac9f0f73a7278ec5684eb9e562831fc0f299c78",
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af"
+}

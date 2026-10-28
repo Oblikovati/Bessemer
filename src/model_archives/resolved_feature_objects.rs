@@ -20,6 +20,7 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moEndCap_c" => super::end_caps::read(reader, map),
         "moCosmeticWeldSubFolder_c" => super::cosmetic_weld_tree::subfolder(reader, map),
         "moCosmeticWeldBead_c" => super::cosmetic_weld_tree::bead(reader, map),
         "moCosmeticWeldBeadData_c" => super::cosmetic_weld_tree::bead_data(reader, map),

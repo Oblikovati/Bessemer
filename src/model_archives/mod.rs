@@ -36,6 +36,7 @@ mod context;
 mod cosmetic_weld_cut_lists;
 mod cosmetic_weld_tree;
 mod deleted_faces;
+mod end_caps;
 mod plane_geometry_flags;
 mod ruled_surfaces;
 pub use plane_geometry_flags::PlaneGeometryFlag;

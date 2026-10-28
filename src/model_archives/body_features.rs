@@ -282,6 +282,8 @@ pub(super) const CLASSES: &[&str] = &[
     "moCompositeCurve_c",
     // #54 / C-389 binds the complete moReferenceCurve_c ancestry and owner role.
     "moCosmeticWeldCutList_c",
+    // #54 / C-390 binds this complete concrete body-feature owner.
+    "moEndCap_c",
     // #54 / C-271 binds the inherited reference-geometry chooser owner.
     "moRuledSrfFromEdge_c",
     "Chamfer_c",

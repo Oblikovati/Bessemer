@@ -505,3 +505,6 @@ mod cosmetic_weld_cut_list_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/cosmetic_weld_tree.rs"]
 mod cosmetic_weld_tree_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/end_caps.rs"]
+mod end_cap_tests;
