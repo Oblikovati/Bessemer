@@ -1,5 +1,6 @@
 """Exact detail-item and component-detail graphs with explicit current-part indices (#54)."""
 from dataclasses import dataclass
+from collections.abc import Callable
 import struct
 from fillet_fixture_bytes import WireMap
 from sweep_fixture_bytes import shared_object
@@ -23,15 +24,22 @@ def detail_node(mapping: WireMap, ids: dict[str,int], rich: bool) -> bytes:
     return name+struct.pack('<iIiI',-3,0x89abcdef,-7,0xffffffff)+short_wide_name('Ω node label')
 
 
+def detail_fields(mapping: WireMap, ids: dict[str,int], style: int, owner: int, edited: bool=False, attachment_factory: Callable[[],bytes] | None=None) -> bytes:
+    """Reuse the exact inline detail base with a concrete attachment caller; e.g. detail_fields(mapping,ids,1,2)."""
+    rich=style%2==1;raw=detail_node(mapping,ids,rich)+struct.pack('<HH',65535,owner if rich else 0)
+    def attachment_pointer() -> bytes:
+        if not rich:return bytes(2)
+        if attachment_factory is not None:return attachment_factory()
+        return shared_object(mapping,ids,'attachment','moAttachPoint_c',lambda:strip_tag(attachment()))
+    attach=attachment_pointer()
+    raw+=struct.pack('<H',2 if rich else 0)+(attach+struct.pack('<H',ids['attachment']) if rich and attachment_factory is None else attach+attachment_pointer() if rich else b'')
+    values=(WORDS[style],0,2147483647) if rich else ()
+    return raw+struct.pack('<i',len(values))+b''.join(struct.pack('<i',v) for v in values)+struct.pack('<i',12345 if edited else WORDS[style])+attachment_pointer()
+
+
 def detail_pointer(mapping: WireMap, ids: dict[str,int], style: int, key: str, edited: bool=False) -> bytes:
     """Retain owned attachments and repeated pointers without a tagged list; e.g. detail_pointer(mapping,ids,3,'first')."""
-    def contents() -> bytes:
-        rich=style%2==1;raw=detail_node(mapping,ids,rich)+struct.pack('<HH',65535,ids['detail-'+key] if rich else 0)
-        attach=shared_object(mapping,ids,'attachment','moAttachPoint_c',lambda:strip_tag(attachment())) if rich else bytes(2)
-        raw+=struct.pack('<H',2 if rich else 0)+(attach+struct.pack('<H',ids['attachment']) if rich else b'')
-        values=(WORDS[style],0,2147483647) if rich else ()
-        return raw+struct.pack('<i',len(values))+b''.join(struct.pack('<i',v) for v in values)+struct.pack('<i',12345 if edited else WORDS[style])+(struct.pack('<H',ids['attachment']) if rich else bytes(2))
-    return shared_object(mapping,ids,'detail-'+key,'moDetailItem_c',contents)
+    return shared_object(mapping,ids,'detail-'+key,'moDetailItem_c',lambda:detail_fields(mapping,ids,style,ids['detail-'+key],edited))
 
 
 def unit_pointer(mapping: WireMap, ids: dict[str,int], mode: int, indices: CurrentPartIndices | None) -> bytes:
