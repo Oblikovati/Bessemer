@@ -24,6 +24,8 @@
 
 ### Added
 
+- Added explicitly scoped version-18000 configuration-manager reading and reconstruction, including owned scenes and the historical display-map boundary. (#54)
+
 - Added complete jog and break-corner framing with stored reference presence, direct owned keepers, tagged arrays and both version gates. (#54)
 
 - Added flatten/process-bend framing with containing-node flag selection, preserved signed body presence and strict compressed raw bodies. (#54)

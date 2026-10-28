@@ -34,6 +34,7 @@ pub(super) struct ModelDecoder<'a> {
     inherited_fields: Option<&'a [ModelField]>,
     verified_part_root: Option<super::part_archive::VerifiedPartRoot>,
     saved_helper_state: Option<super::configuration_manager::SavedHelperState>,
+    manager_dialect: Option<super::manager_dialect::ManagerDialect>,
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -118,12 +119,28 @@ impl<'a> ModelDecoder<'a> {
             inherited_fields: None,
             verified_part_root: None,
             saved_helper_state: None,
+            manager_dialect: None,
         })
     }
 
     pub fn with_inherited_fields(mut self, fields: &'a [ModelField]) -> Self {
         self.inherited_fields = Some(fields);
         self
+    }
+
+    /// Carry the completed manager's explicit dialect into dependent readers.
+    /// Example: `reader.with_manager_dialect(ManagerDialect::Owned18000)`.
+    pub(super) fn with_manager_dialect(
+        mut self,
+        dialect: super::manager_dialect::ManagerDialect,
+    ) -> Self {
+        self.manager_dialect = Some(dialect);
+        self
+    }
+
+    /// Inspect the selected manager scope; e.g. `reader.manager_dialect()`.
+    pub(super) fn manager_dialect(&self) -> Option<super::manager_dialect::ManagerDialect> {
+        self.manager_dialect
     }
 
     pub(super) fn with_verified_part_root(
@@ -170,7 +187,7 @@ impl<'a> ModelDecoder<'a> {
         &mut self,
         read: impl FnOnce(&mut Self) -> Result<T>,
     ) -> Result<T> {
-        super::configuration_manager::require_current(self)?;
+        super::configuration_manager::require_manager_scope(self)?;
         let previous = self.scene_context;
         self.scene_context = SceneArchiveContext::OwnedConfiguration;
         let result = read(self);

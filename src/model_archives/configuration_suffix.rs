@@ -74,7 +74,10 @@ fn optional_fields(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
         ModelObjectRole::Declared(&["moPatternItemId_c"]),
     )?;
     reader.object("list_88", map, ModelObjectRole::Declared(&["suObList"]))?;
-    reader.object("object_a8", map, ModelObjectRole::Any)
+    if reader.version() > 0x4972 {
+        reader.object("object_a8", map, ModelObjectRole::Any)?;
+    }
+    Ok(())
 }
 
 pub(super) fn body_states(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {

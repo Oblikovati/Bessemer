@@ -344,3 +344,6 @@ two-word state records and independent edits.
 
 [Jogs and break corners](docs/features/jog-corners/README.md) covers stored presence,
 direct owned keepers, tagged arrays and independent version gates.
+
+[Version-18000 configuration managers](docs/features/legacy-owned-managers/README.md)
+documents explicit dialect selection and independently decoded historical streams.

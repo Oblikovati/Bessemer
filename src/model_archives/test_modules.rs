@@ -535,3 +535,7 @@ mod end_cap_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/weldment_finishing.rs"]
 mod weldment_finishing_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/legacy_manager_context.rs"]
+mod legacy_manager_context_tests;

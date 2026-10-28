@@ -76,6 +76,9 @@ fn final_maps(reader: &mut ModelDecoder<'_>) -> Result<()> {
     reader.u32("time_828")?;
     set_values(reader)?;
     reader.i32("raw_858")?;
+    if reader.version() <= 0x46c1 {
+        return Ok(());
+    }
     let presence = reader.u32("display_maps_presence")?;
     io::empty(reader, "display_maps_898", presence as usize)
 }
