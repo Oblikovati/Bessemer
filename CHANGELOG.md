@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Fixed present sketch valued-dimension transforms using compact framing instead of the documented fixed 30-word archive operator, preserving raw presence, words and suffix identities. (#86)
+
 - Fixed all four sketch-intersection wrapper fields rejecting complete reviewed subclasses while preserving nulls, shared identities and unrelated-class checks. (#46)
 
 - Fixed extrusion, starting-end and revolution-end wrapper references rejecting complete reviewed subclasses while preserving conditional fields, nulls and identity. (#46)

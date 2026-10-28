@@ -14,7 +14,9 @@ def base(version: int) -> bytes:
 
 
 def valued(version: int, rich: bool) -> bytes:
-    return base(version)+struct.pack('<H', 65535 if rich else 0)+(transform(True, 0x1a) if rich else b'')
+    # #86 / C-395: this is the 30-word archive operator, not compact restore().
+    fixed=struct.pack('<30I',*range(28),15,0xffffffff) if rich else b''
+    return base(version)+struct.pack('<H', 65535 if rich else 0)+fixed
 
 
 def entities(count: int, rich: bool, base_index: int) -> bytes:

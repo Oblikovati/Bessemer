@@ -11,4 +11,10 @@ length and SHA-256 across all existing classes, rich/minimal bodies and seventee
 versions. The baseline test verifies that the original default remains byte
 identical. This preparation changes no production behavior.
 
+Bug #86 / C-395 subsequently corrected the rich transform encoding to the fixed
+archive operator. The 442 earlier hashes remain frozen; their test now explicitly
+replays the pre-correction compact fixture bytes. That replay is fixture-only and
+does not add a production fallback. Positive expectations are checked against the
+independent fixed-form reader and native operator evidence.
+
 Humanizer is unavailable; maintainer prose review remains open.

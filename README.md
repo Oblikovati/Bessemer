@@ -229,6 +229,8 @@ arrays, raw flag words, double order and inherited empty keepers.
 the reviewed wrapper family at conditional, starting-end and revolution fields.
 [Sketch-intersection wrapper roles](docs/features/intersection-wrapper-roles/README.md)
 accept the same reviewed family at all four fields through fresh and cached references.
+[Valued-dimension fixed transforms](docs/features/fixed-valued-transforms/README.md)
+retain the full presence word and thirty raw archive words before the derived suffix.
 [Deleted-face features](docs/features/deleted-faces/README.md) retain independent
 nullable arrays, unsigned DWORDs and shared nested data.
 [Composite curves](docs/features/composite-curves/README.md) retain strict kernel

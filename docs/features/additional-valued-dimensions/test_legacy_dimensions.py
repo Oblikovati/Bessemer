@@ -6,8 +6,8 @@ from legacy_dimension_baselines import current_baselines
 
 
 class LegacyDimensionBuilderTests(unittest.TestCase):
-    def test_all_default_bodies_remain_unchanged(self) -> None:
-        """Compare 442 independently pinned original bodies; e.g. python -m unittest test_legacy_dimensions."""
+    def test_all_pre_correction_bodies_remain_exact_legacy_replay(self) -> None:
+        """Retain 442 original hashes after the C-395 correction; e.g. python -m unittest test_legacy_dimensions."""
         expected=json.loads(Path(__file__).with_name('legacy-builder-baselines.json').read_text())
         self.assertEqual(current_baselines(),expected)
         self.assertEqual(len(expected),442)
