@@ -11,7 +11,12 @@ const DETAILS: &[&str] = &[
     "moCosmeticWeldBeadSymbol_c",
     "moSFSymbol_c",
 ];
-const ATTACHMENTS: &[&str] = &["moAttachPoint_c", "moCosmeticWeldBeadAttachPoint_c"];
+// #54 / 11.125 proves the complete ordinary parametric attachment subtype.
+const ATTACHMENTS: &[&str] = &[
+    "moAttachPoint_c",
+    "moCosmeticWeldBeadAttachPoint_c",
+    "moParametricPoint_c",
+];
 
 // #54 / C-387 and C-388 prove these exact native ancestry bindings and complete readers.
 pub(super) fn assignable(record: &ObjectRecord, role: ModelObjectRole<'_>) -> bool {

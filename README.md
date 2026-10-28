@@ -306,3 +306,6 @@ documents exact detail bodies and verified current-part ownership.
 
 [Weld symbols](docs/features/weld-symbols/README.md) documents constructor-bound
 direct texts, surface-finish gates and cosmetic attachment subtype identities.
+
+[Attachment records](docs/features/attachment-records/README.md) distinguishes
+attachment data from inherited parametric attachment points.

@@ -5,6 +5,7 @@
 include!("test_modules.rs");
 
 mod archive;
+mod attachment_records;
 mod attribute_records;
 mod base_flange_directions;
 mod base_flanges;

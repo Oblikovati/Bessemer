@@ -24,6 +24,8 @@
 
 ### Added
 
+- Added distinct attachment-data and parametric-point framing with exact inherited attachment roles and preserved raw values. (#54)
+
 - Added complete weld, cosmetic weld, surface-finish and cosmetic attachment framing with direct text ownership and exact native subtype roles. (#54)
 
 - Added complete detail-item and internal component-detail framing with verified current-part unit ownership and preserved shared identities. (#54)
