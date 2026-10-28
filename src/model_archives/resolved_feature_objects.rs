@@ -20,6 +20,8 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moDelFace_c" => super::deleted_faces::read(reader, map),
+        "moDelFaceData_c" => super::deleted_faces::data(reader, map),
         // #54 / C-219, C-235 and C-278 bind the identical complete extrusion serializer.
         "moExtruThin_c" | "moBossThin_c" | "moCutThin_c" => {
             super::thin_extrusions::extrusion(reader, map)

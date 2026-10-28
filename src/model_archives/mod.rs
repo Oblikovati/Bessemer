@@ -31,6 +31,7 @@ mod connection_payload;
 mod connection_points;
 mod constraint_planes;
 mod context;
+mod deleted_faces;
 mod plane_geometry_flags;
 pub use plane_geometry_flags::PlaneGeometryFlag;
 mod context_chains;
