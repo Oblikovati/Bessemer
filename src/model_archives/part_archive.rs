@@ -7,7 +7,7 @@ use super::{
     reference_tail, resolved_start, shared_tail, views,
 };
 use crate::Result;
-use crate::archive_codec::{ObjectMapSnapshot, ObjectReader};
+use crate::archive_codec::{ArchiveMapIndex, ObjectMapSnapshot, ObjectReader};
 use crate::header::{ArchiveVersion, DocumentHeader};
 use std::sync::Arc;
 
@@ -21,6 +21,17 @@ pub(super) struct ParsedPartArchive {
     limits: ModelFieldLimits,
     kernel: Option<super::kernel_frames::CompressedKernelContext>,
     pub(super) object_map: ObjectMapSnapshot,
+}
+
+// Only a completed ParsedPartArchive can issue this operation-local root proof.
+#[derive(Debug, Clone, Copy)]
+pub(super) struct VerifiedPartRoot(ArchiveMapIndex);
+
+impl VerifiedPartRoot {
+    /// Use the proven map identity for owner comparisons, for example `root.index()`.
+    pub(super) fn index(self) -> ArchiveMapIndex {
+        self.0
+    }
 }
 
 #[cfg(test)]
@@ -108,6 +119,11 @@ fn resolved_node_flags(state: &ModelLightweightState) -> Result<u32> {
 }
 
 impl ParsedPartArchive {
+    /// Issue proof from this completed archive, for example `parsed.verified_root()`.
+    pub(super) fn verified_root(&self) -> VerifiedPartRoot {
+        VerifiedPartRoot(self.lightweight.root_identity)
+    }
+
     pub fn wire_bytes(&self) -> usize {
         self.wire_bytes
     }

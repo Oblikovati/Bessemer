@@ -1,0 +1,49 @@
+{
+  "issue": 54,
+  "issue_type": "Feature",
+  "behavior_version": "C390-component-detail-v1",
+  "runtime_base_revision": "63d1b0c448210255b88acfd9db7a21ce4d803965",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "fixture_graphs": 108,
+  "bare_primitive_reads": 6682,
+  "owned_streams": 28,
+  "owned_nonnull_current_unit_streams": 14,
+  "checks": {
+    "private": "14 passed",
+    "public": "4 passed, including a complete source archive with null unit owner and unchanged input after rejected cached-unit load",
+    "python": "3 independent complete-context regeneration and inventory tests passed",
+    "cargo_xtask_pr": "874 library tests, 4 xtask tests, all integrations, 274 doctests; 3 external-fixture tests explicitly ignored",
+    "native_processes": "Two fresh processes matched all 906 outcomes and causes; exit 101 for aggregate 818/906 completeness assertion"
+  },
+  "previous_complete": 818,
+  "complete": 818,
+  "newly_complete": [],
+  "no_prior_success_lost": true,
+  "partial_advances_without_completion_credit": [
+    547,
+    615,
+    905
+  ],
+  "independent_feature_bytes": 54838261,
+  "source_snapshot": "23fc1f595694bc2cf555db35a4cfb8763544046294503b5fa2711ce79e80dd21",
+  "source_python_files": 1801,
+  "native_witness_configurations": 3,
+  "native_reviewed_prefix_roots": 91,
+  "native_component_detail_objects": 9,
+  "native_verified_nonnull_current_units": 8,
+  "native_null_component_objects": 1,
+  "kernel_decision": "Exact native-bound framing and current-part identity predicate; no numeric normalization, geometry validation or runtime repair",
+  "exclusions": [
+    "88 native inputs remain explicit failures",
+    "Cases 547, 615 and 905 advance to unimplemented weld-symbol detail subclasses without completion credit",
+    "Other detail subclasses, external component layouts, historical/internal contexts, scalar meanings, geometry validity, application acceptance and whole-schema parity remain incomplete",
+    "Humanizer unavailable; maintainer prose review remains open"
+  ],
+  "artifact_sha256": "2b85f455c347f730194d0e88477d4c3cdb0bc8841f2c77d73e403d726d6f6d75",
+  "gate_log_sha256": "5a85debc161254fd82ff535cecb613d4b890b9102e240beb950eca0233b2a03f",
+  "before_log_sha256": "e5039f3a7693b52847e48dd7d35d32fb81c3d4a337c1cb3f0152419508b30c9a",
+  "native_log_sha256": "f5bd6a88efe520a8e3f58e17a21c9a4939cdd2e88613c06adaf6fbffe627a5cb",
+  "native_repeat_log_sha256": "0ca59994c7195e71ede1920fe0a2ba8d6c551292c4cbb29be6311b1b709793ff",
+  "fixture_packet_sha256": "85a0307dc1b4bb3282452f11f004c6965b079a05bd7274d53cd63d6c46b475b5"
+}

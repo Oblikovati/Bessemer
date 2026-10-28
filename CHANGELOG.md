@@ -24,6 +24,8 @@
 
 ### Added
 
+- Added complete detail-item and internal component-detail framing with verified current-part unit ownership and preserved shared identities. (#54)
+
 - Added complete ordinary display-weld framing with preserved raw values, CString encodings and payload identities. (#54)
 
 - Added exact top-surface and end-cap chamfer entity-ID representations with preserved signed words and shared identities. (#54)

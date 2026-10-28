@@ -32,6 +32,7 @@ pub(super) struct ModelDecoder<'a> {
     kernel: Option<super::kernel_frames::CompressedKernelContext>,
     kernel_expanded: usize,
     inherited_fields: Option<&'a [ModelField]>,
+    verified_part_root: Option<super::part_archive::VerifiedPartRoot>,
     saved_helper_state: Option<super::configuration_manager::SavedHelperState>,
 }
 
@@ -115,6 +116,7 @@ impl<'a> ModelDecoder<'a> {
             kernel: None,
             kernel_expanded: 0,
             inherited_fields: None,
+            verified_part_root: None,
             saved_helper_state: None,
         })
     }
@@ -122,6 +124,23 @@ impl<'a> ModelDecoder<'a> {
     pub fn with_inherited_fields(mut self, fields: &'a [ModelField]) -> Self {
         self.inherited_fields = Some(fields);
         self
+    }
+
+    pub(super) fn with_verified_part_root(
+        mut self,
+        root: super::part_archive::VerifiedPartRoot,
+    ) -> Self {
+        self.verified_part_root = Some(root);
+        self
+    }
+
+    pub(super) fn require_current_part_unit(&mut self, component: &ObjectRecord) -> Result<()> {
+        let result = super::component_detail_provenance::require_internal_unit(
+            self.object_fields(component),
+            component,
+            self.verified_part_root,
+        );
+        self.checked(result)
     }
 
     pub(super) fn with_saved_helper_state(

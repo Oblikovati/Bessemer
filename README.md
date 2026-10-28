@@ -300,3 +300,6 @@ describes exact top-surface and end-cap chamfer representation framing.
 
 [Display welds](docs/features/display-welds/README.md) covers the complete
 display-item base, native weld suffix and preserved payload identities.
+
+[Component-detail references](docs/features/component-detail-references/README.md)
+documents exact detail bodies and verified current-part ownership.

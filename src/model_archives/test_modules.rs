@@ -483,3 +483,11 @@ mod surface_identifier_variant_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/display_welds.rs"]
 mod display_weld_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/component_detail_references.rs"]
+mod component_detail_reference_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/component_detail_provenance.rs"]
+mod component_detail_provenance_tests;

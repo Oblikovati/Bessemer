@@ -121,6 +121,8 @@ mod boundary_references;
 mod center_helpers;
 mod circular_patterns;
 mod component_coordinates;
+mod component_detail_provenance;
+mod component_detail_references;
 mod component_references;
 mod construction;
 mod contour_objects;

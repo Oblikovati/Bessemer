@@ -20,6 +20,8 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moCompDetailItem_c" => super::component_detail_references::read(reader, map),
+        "moDetailItem_c" => super::component_detail_references::detail_item(reader, map),
         "moRuledSrfFromEdge_c" => super::ruled_surfaces::read(reader, map),
         "moRuledSrfFromEdgeData_c" => super::ruled_surfaces::data(reader, map),
         "moCompositeCurve_c" => super::composite_curves::read(reader, map),
