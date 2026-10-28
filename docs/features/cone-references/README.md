@@ -1,5 +1,9 @@
 # Cone references
 
+The later [body-reference extension](../stock-features/README.md) adds complete
+caller fixtures for the twenty-first wrapper class. The cone corpus and its
+original twenty-class composition remain unchanged.
+
 Feature #54 implements `moConeRef_w` from clause 11.341 / C-383. The installed
 primary vtable `0x4D17E050` binds serializer `0x4C27B750` and proves the surface
 and reference-wrapper ancestry. The ordinary modern body reuses the complete

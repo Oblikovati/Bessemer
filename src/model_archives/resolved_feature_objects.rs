@@ -20,6 +20,10 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moStock_c" => super::stock_features::read(reader, map, false),
+        "moMirrorStock_c" => super::stock_features::read(reader, map, true),
+        "moBodyRef_w" => super::stock_references::body(reader, map),
+        "moCompBody_c" => super::stock_references::component(reader, map),
         "moDisplayNote_c" => super::display_notes::read(reader, map),
         "moCompNote_c" => super::display_notes::component(reader, map),
         "moNoteData_c" => super::display_notes::note_data(reader, map),

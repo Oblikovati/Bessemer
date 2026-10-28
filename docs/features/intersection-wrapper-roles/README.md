@@ -1,5 +1,10 @@
 # Sketch-intersection wrapper roles
 
+The current exact family also includes the body reference described in
+[stock-feature evidence](../stock-features/README.md). Additional complete
+intersection fixtures prove all four fields against the 21-class inventory;
+this feature's original corpus remains unchanged.
+
 Bug #46 fixes four intersection fields that rejected complete documented wrapper
 subclasses. Clause 11.237 / C-279 declares `moRefWrapper_c` pointers at runtime
 offsets `+10`, `+18`, `+20` and `+28`. These fields now accept the existing finite

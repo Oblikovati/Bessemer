@@ -24,6 +24,8 @@
 
 ### Added
 
+- Added ordinary stock and mirrored-stock record reconstruction, including direct collections, body references, component boxes and independent kernel controls. (#54)
+
 - Added complete ordinary display-note and generic-text record reconstruction, preserving paragraph fields, character units, shared identities and versioned note tails. (#54)
 
 - Added explicitly scoped version-18000 configuration-manager reading and reconstruction, including owned scenes and the historical display-map boundary. (#54)

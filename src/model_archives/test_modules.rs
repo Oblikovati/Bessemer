@@ -543,3 +543,11 @@ mod legacy_manager_context_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/display_notes.rs"]
 mod display_note_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/stock_features.rs"]
+mod stock_feature_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/body_reference_wrappers.rs"]
+mod body_reference_wrapper_tests;

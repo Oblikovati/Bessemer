@@ -1,5 +1,10 @@
 # End-specification wrapper roles
 
+The current exact family also includes the body reference described in
+[stock-feature evidence](../stock-features/README.md). Additional complete end
+caller fixtures prove its membership in the 21-class inventory while retaining
+this feature's original corpus.
+
 Bug #46 includes native case 353, `learn/Mouse/On Off Switch.SLDPRT`, which reaches
 an implemented end specification and rejects `moSolidRef_w` at `reference_78`.
 The new regression reproduces that exact error before the production fix.

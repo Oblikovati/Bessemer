@@ -1,5 +1,10 @@
 # Sketch external-entity wrapper roles
 
+The current exact family also includes the body reference described in
+[stock-feature evidence](../stock-features/README.md). Its additional complete
+caller fixtures extend the inventory to 21 classes; this feature's original
+eighteen-class corpus remains unchanged.
+
 Bug #46 records native case 351, `learn/Mouse/Mouse Master.SLDPRT`, failing at
 `sgExtEnt_c.reference` with a complete `moSingleFaceRef_w`. The field declares
 `moRefWrapper_c` in specification 11.29 / C-44. Its previous finite list covered

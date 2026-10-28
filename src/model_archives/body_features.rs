@@ -204,6 +204,9 @@ fn surface_ids(reader: &mut ModelDecoder<'_>) -> Result<()> {
 }
 
 pub(super) const CLASSES: &[&str] = &[
+    // #54 / C-222 through C-231: stock inherits the complete derived/body-feature layers.
+    "moStock_c",
+    "moMirrorStock_c",
     "moAtomFeature_c",
     "moBodyFeature_c",
     "moExtrusion_c",

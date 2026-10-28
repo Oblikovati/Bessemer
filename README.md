@@ -350,3 +350,6 @@ documents explicit dialect selection and independently decoded historical stream
 
 [Display notes](docs/features/display-notes/README.md) covers internal note components,
 generic text, direct paragraphs and shared text-list identities.
+
+[Stock features](docs/features/stock-features/README.md) covers stock and mirrored-stock
+records, body-reference collections and component-body transforms.
