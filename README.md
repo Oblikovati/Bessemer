@@ -330,3 +330,6 @@ single-bend and per-edge records, including verified saved sheet-metal state.
 
 [Sheet-metal folds](docs/features/sheet-folds/README.md) documents complete 3D bends,
 folds and unfolds, including raw compressed bodies and ordered maps.
+
+[Sheet-metal corners and hems](docs/features/corner-hems/README.md) covers directly
+owned hem data, independent arrays, chain identities and saved helper layouts.

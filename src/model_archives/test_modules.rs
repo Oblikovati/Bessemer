@@ -102,6 +102,9 @@ mod context_snapshot_tests;
 #[path = "../../tests/resolved_features/coordinate_systems.rs"]
 mod coordinate_system_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/corner_hems.rs"]
+mod corner_hem_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/custom_properties.rs"]
 mod custom_property_tests;
 #[cfg(test)]

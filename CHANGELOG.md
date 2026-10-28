@@ -24,6 +24,8 @@
 
 ### Added
 
+- Added complete sheet-metal corner and hem framing with directly owned data, independent arrays, chain records, relief bodies and both saved helper layouts. (#54)
+
 - Added complete 3D bend, fold and unfold framing with ordered object-to-integer maps, strict compressed raw bodies and fixed archive transforms. (#54)
 
 - Added edge-flange, single-bend, per-edge and edge-geometry framing with verified saved sheet-metal state, direct handles and independent edit fixtures. (#54)

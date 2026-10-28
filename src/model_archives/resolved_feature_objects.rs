@@ -20,6 +20,14 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moCornerFeat_c" => super::corner_hems::corner(reader, map),
+        "moFaceGeom_c" | "moPlanarFaceGeom_c" => super::corner_hems::face_geometry(reader),
+        "moHem_c" => super::corner_hems::hem(reader, map),
+        "moHemData_c" => super::corner_hems::hem_data(reader, map),
+        "moHemEdgeChainData_c" => super::hem_chains::chain_data(reader, map),
+        "moHemEdgeChain_c" => super::hem_chains::chain(reader, map),
+        "moHemEdgeChainElement_c" => super::hem_chains::element(reader, map),
+        "moReliefData_c" => super::hem_chains::relief(reader),
         "moSM3dBend_c" => super::sheet_folds::bend(reader, map),
         "moFold_c" => super::sheet_folds::fold(reader, map),
         "moUnFold_c" => super::sheet_folds::unfold(reader, map),
