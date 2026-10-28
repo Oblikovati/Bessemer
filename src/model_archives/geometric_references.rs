@@ -13,6 +13,8 @@ pub(super) const SURFACE_CLASSES: &[&str] = &[
     "moGeneralSurfRef_w",
     "moSingleFaceRef_w",
     "moCylinderRef_w",
+    // #54 / C-383 proves the complete surface and reference-wrapper ancestry.
+    "moConeRef_w",
     "moSphereRef_w",
     "moPlaneRef_w",
 ];
@@ -115,4 +117,13 @@ pub(super) fn solid(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Re
         model_lists::pointers(reader, map, "body_attributes", ModelObjectRole::Any)?;
     }
     Ok(())
+}
+
+// #54 / C-383: eight raw doubles follow the surface base; no cylinder frame mode.
+pub(super) fn cone(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    reader.require_ordinary_part()?;
+    surface(reader, map)?;
+    double_vector(reader, "raw_c8")?;
+    double_vector(reader, "raw_e0")?;
+    reader.f64s(&["raw_f8", "raw_100"])
 }

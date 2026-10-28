@@ -2,7 +2,8 @@ use super::{ModelDecoder, ModelObjectRole, dimensions, sketch_collections, sketc
 use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader, vectors::double_vector};
 
-pub(super) const G1_CLASSES: &[&str] = &["sgValG1Dim", "sgCircleDim"];
+// #54 / C-385: primary slots and native ancestry bind these exact derived bodies.
+pub(super) const G1_CLASSES: &[&str] = &["sgValG1Dim", "sgCircleDim", "sgSplineTanMagnitudeDim"];
 pub(super) const G2_CLASSES: &[&str] = &[
     "sgValG2Dim",
     "sgLLDist",
@@ -12,7 +13,9 @@ pub(super) const G2_CLASSES: &[&str] = &[
     "sgPntPntVertDist",
     "sgAnglDim",
     "sgPoint3DPlaneDist",
+    "sg3DPlane3DPlaneDist",
 ];
+pub(super) const G3_CLASSES: &[&str] = &["sgValG3Dim", "sgArcLenDist"];
 pub(super) const OFFSET_CLASSES: &[&str] = &["sgOffsetDim", "sgSkOffsetDim"];
 
 pub(super) fn base(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
@@ -101,7 +104,7 @@ pub(super) fn valued_collections(
     let groups = [
         (("valued_g1_count", "valued_g1"), G1_CLASSES),
         (("valued_g2_count", "valued_g2"), G2_CLASSES),
-        (("valued_g3_count", "valued_g3"), &["sgValG3Dim"][..]),
+        (("valued_g3_count", "valued_g3"), G3_CLASSES),
         (("offset_count", "offsets"), OFFSET_CLASSES),
     ];
     for (labels, classes) in groups {

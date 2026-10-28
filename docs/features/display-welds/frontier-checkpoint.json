@@ -1,0 +1,43 @@
+{
+  "previous_complete": 818,
+  "complete": 818,
+  "newly_complete": [],
+  "no_prior_success_lost": true,
+  "all_906_statuses_and_causes_identical": true,
+  "explicit_remaining_failures": 88,
+  "changed_stops": [
+    {
+      "index": 547,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moDisplayWeld_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"component_reference\" has runtime class \"moCompDetailItem_c\"; expected one of [\"moCompRef_c\", \"moCompRefPlane_c\", \"moCompRefSurface_c\", \"moCompRefAxis_c\", \"moCompRefPoint_c\"]"
+      ]
+    },
+    {
+      "index": 615,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moDisplayWeld_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"component_reference\" has runtime class \"moCompDetailItem_c\"; expected one of [\"moCompRef_c\", \"moCompRefPlane_c\", \"moCompRefSurface_c\", \"moCompRefAxis_c\", \"moCompRefPoint_c\"]"
+      ]
+    },
+    {
+      "index": 905,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moDisplayWeld_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"component_reference\" has runtime class \"moCompDetailItem_c\"; expected one of [\"moCompRef_c\", \"moCompRefPlane_c\", \"moCompRefSurface_c\", \"moCompRefAxis_c\", \"moCompRefPoint_c\"]"
+      ]
+    }
+  ]
+}

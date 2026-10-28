@@ -231,6 +231,10 @@ the reviewed wrapper family at conditional, starting-end and revolution fields.
 accept the same reviewed family at all four fields through fresh and cached references.
 [Valued-dimension fixed transforms](docs/features/fixed-valued-transforms/README.md)
 retain the full presence word and thirty raw archive words before the derived suffix.
+[Additional valued dimensions](docs/features/additional-valued-dimensions/README.md)
+retain native spline-tangent, arc-length and plane-distance identities in shared collections.
+[Sketch isocurve information](docs/features/sketch-isocurve-information/README.md)
+retains twenty-byte numeric records, raw ratio bits and shared external-entity references.
 [Deleted-face features](docs/features/deleted-faces/README.md) retain independent
 nullable arrays, unsigned DWORDs and shared nested data.
 [Composite curves](docs/features/composite-curves/README.md) retain strict kernel
@@ -287,3 +291,12 @@ Component-property objects and holders retain their embedded fonts, visibility f
 `DisplayArchiveContext::from_document` resolves exact display-version markers and external component declarations with explicit native file and tessellation versions. See [document context resolution](docs/features/display-lists/document-context.md).
 
 `DisplayArchive::check_external_face_links` checks named cache blocks and resolves requested external facets with explicit coverage. See [external face links](docs/features/display-lists/external-face-links.md).
+
+Cone-reference framing and its surface-axis callers are documented in
+[cone references](docs/features/cone-references/README.md).
+
+[Surface identifier variants](docs/features/surface-identifier-variants/README.md)
+describes exact top-surface and end-cap chamfer representation framing.
+
+[Display welds](docs/features/display-welds/README.md) covers the complete
+display-item base, native weld suffix and preserved payload identities.

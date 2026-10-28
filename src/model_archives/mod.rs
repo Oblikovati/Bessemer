@@ -141,6 +141,7 @@ mod display_object;
 mod display_placement;
 mod display_records;
 mod display_suffixes;
+mod display_weld;
 mod dome_records;
 mod draft_keepers;
 mod draft_records;

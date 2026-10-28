@@ -12,6 +12,8 @@ pub(super) const WRAPPER_CLASSES: &[&str] = &[
     "moSingleFaceRef_w",
     "moCircleRef_w",
     "moCylinderRef_w",
+    // #54 / C-383 proves the complete surface and reference-wrapper ancestry.
+    "moConeRef_w",
     "moSphereRef_w",
     "moPlaneRef_w",
     "moPointRef_w",

@@ -1,6 +1,6 @@
 use super::{ModelDecoder, ModelObjectRole, part_objects::absent_payload};
 use crate::Result;
-use crate::archive_codec::{MaterialRead, ObjectReader};
+use crate::archive_codec::{MaterialRead, ObjectReader, ObjectRecord};
 
 pub(super) const FEATURE_CLASSES: &[&str] =
     &["moCompFeature_c", "moCompBodyFeature_c", "moCompProfile_c"];
@@ -52,8 +52,22 @@ pub(super) fn feature(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> 
 }
 
 pub(super) fn base(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    base_record(reader, map).map(|_| ())
+}
+
+/// Decode the complete prefix once while retaining its actual component identity.
+/// Example: `base_record(reader, map)?` before selecting a proven component branch.
+pub(super) fn base_record(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+) -> Result<ObjectRecord> {
     reader.require_ordinary_part()?;
-    reader.object("component", map, ModelObjectRole::Any)?;
+    let component = reader.object_record("component", map, ModelObjectRole::Any)?;
+    base_fields(reader, map)?;
+    Ok(component)
+}
+
+fn base_fields(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     reader.i32s(BASE_PREFIX)?;
     let old = reader.i32("unknown_84")?;
     absent_payload(reader, "old component-reference payload", old)?;

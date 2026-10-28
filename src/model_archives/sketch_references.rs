@@ -77,6 +77,18 @@ pub(super) fn external_reference(
     )
 }
 
+pub(super) fn isocurve_information(reader: &mut ModelDecoder<'_>) -> Result<()> {
+    reader.require_ordinary_part()?;
+    reader.f64("ratio_08")?;
+    for name in ["parameter_direction_10", "reference_type_18", "index_1c"] {
+        reader.u16(name)?;
+    }
+    // #54 / C-386: the unaligned ID precedes +14; DB labels add no ordinary wire strings.
+    reader.i32("dimension_id_20")?;
+    reader.u16("skip_holes_14")?;
+    Ok(())
+}
+
 pub(super) fn temporary_axis(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     model_references::wrapper(reader, map)?;
     reader.f64s(&["unknown_a8", "unknown_b0"])?;

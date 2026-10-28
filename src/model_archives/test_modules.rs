@@ -463,3 +463,23 @@ mod intersection_wrapper_role_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/fixed_valued_transforms.rs"]
 mod fixed_valued_transform_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/additional_valued_dimensions.rs"]
+mod additional_valued_dimension_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/sketch_isocurve_information.rs"]
+mod sketch_isocurve_information_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/cone_references.rs"]
+mod cone_reference_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/surface_identifier_variants.rs"]
+mod surface_identifier_variant_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/display_welds.rs"]
+mod display_weld_tests;

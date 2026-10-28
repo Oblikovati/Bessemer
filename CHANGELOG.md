@@ -24,6 +24,16 @@
 
 ### Added
 
+- Added complete ordinary display-weld framing with preserved raw values, CString encodings and payload identities. (#54)
+
+- Added exact top-surface and end-cap chamfer entity-ID representations with preserved signed words and shared identities. (#54)
+
+- Added exact cone-reference framing with preserved raw doubles and shared surface-axis references. (#54)
+
+- Added ordinary sketch isocurve information reading, editing and writing with exact twenty-byte numeric bodies, retained floating-point bits and shared external-entity references. (#54)
+
+- Added spline-tangent magnitude, arc-length and plane-to-plane valued-dimension reading, editing and writing through their exact native base serializers and collection roles. (#54)
+
 - Added ordinary ruled-from-edge surface and data reading, editing and writing with direct owned data, strict inline surface frames and retained WORD arrays. (#54)
 
 - Added ordinary composite-curve reading, editing and writing with strict kernel frames, shared tagged arrays and five independently counted direct containers. (#54)

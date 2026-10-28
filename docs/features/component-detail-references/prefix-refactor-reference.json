@@ -1,0 +1,31 @@
+{
+  "issue": 54,
+  "scope": "Behavior-preserving complete component-reference prefix identity return; no component-detail class admitted",
+  "runtime_base_revision": "2477c283941259cde6161e6ebe2482b714a9a296",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "preserved_owned_baseline": {
+    "cases": 188,
+    "fields": 5402,
+    "sha256": "4b6c104938ab8d9fe60d9e0c67d8943f13ce68d5baf4dd7232557f7f836c0f71",
+    "generator_sha256": "072f29bb46c9b2a5c6e90233f2a9c7871e379bfb690acf614d86162c1800e11e"
+  },
+  "identity_vectors": 20,
+  "identity_nulls": 10,
+  "identity_cached": 10,
+  "cargo_xtask_pr": "860 library tests, all integrations, 4 xtask tests and 274 doctests passed; 3 external-fixture tests explicitly ignored",
+  "native_configurations": 906,
+  "native_complete": 818,
+  "native_explicit_failures": 88,
+  "all_outcomes_and_causes_equal_before_after_and_repeat": true,
+  "native_exit": "101 only for aggregate 818/906 completeness assertion",
+  "exclusions": [
+    "Component-detail reader and current-part provenance remain to implement",
+    "No new complete native configuration or whole-schema parity claimed",
+    "Humanizer unavailable; maintainer prose review remains open"
+  ],
+  "artifact_sha256": "3dac62442328665f8d43f83b670ae513b4051e9176da94ef27708b44e2314ff9",
+  "gate_log_sha256": "5d5c3000716e10e903077e874fa5fcf4c26e99243a4384d8d98bb8b282c5afd4",
+  "native_log_sha256": "2d59c1917004ef5fae24c73c25f947514f3e9a3995b912eeba7504adb27b2a48",
+  "native_repeat_log_sha256": "6196706ec97678f1c866f934386a453aa4b6c01ef1a0caf786c2bd690bb05010"
+}
