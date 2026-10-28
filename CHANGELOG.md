@@ -24,6 +24,8 @@
 
 ### Added
 
+- Added complete 3D bend, fold and unfold framing with ordered object-to-integer maps, strict compressed raw bodies and fixed archive transforms. (#54)
+
 - Added edge-flange, single-bend, per-edge and edge-geometry framing with verified saved sheet-metal state, direct handles and independent edit fixtures. (#54)
 
 - Added absolute reference-plane data with the verified shared non-default layout and typed containing-plane references. (#54)

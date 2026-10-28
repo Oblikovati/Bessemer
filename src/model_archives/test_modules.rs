@@ -333,6 +333,9 @@ mod sew_surface_tests;
 #[path = "../../tests/resolved_features/shared_sketch_handles.rs"]
 mod shared_sketch_handle_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/sheet_folds.rs"]
+mod sheet_fold_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/sheet_metal.rs"]
 mod sheet_metal_tests;
 #[cfg(test)]

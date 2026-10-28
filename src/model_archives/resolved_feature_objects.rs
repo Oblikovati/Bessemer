@@ -20,6 +20,10 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moSM3dBend_c" => super::sheet_folds::bend(reader, map),
+        "moFold_c" => super::sheet_folds::fold(reader, map),
+        "moUnFold_c" => super::sheet_folds::unfold(reader, map),
+        "su_CMapObToInt" => super::sheet_folds::object_integer_map(reader, map),
         "moEdgeFlange_c" => super::edge_flange_records::read(reader, map),
         "moEdgeFlangeData_c" => super::edge_flange_data::read(reader, map),
         "moOneBend_c" => super::one_bends::read(reader, map),

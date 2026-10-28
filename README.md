@@ -327,3 +327,6 @@ shared non-default plane layout and its typed containing-plane role.
 
 [Edge flanges](docs/features/edge-flanges/README.md) covers complete edge-flange,
 single-bend and per-edge records, including verified saved sheet-metal state.
+
+[Sheet-metal folds](docs/features/sheet-folds/README.md) documents complete 3D bends,
+folds and unfolds, including raw compressed bodies and ordered maps.
