@@ -40,6 +40,8 @@ mod deleted_faces;
 mod edge_flange_data;
 mod edge_flange_records;
 mod end_caps;
+mod feature_states;
+mod flatten_bends;
 mod hem_chains;
 mod one_bends;
 mod plane_geometry_flags;

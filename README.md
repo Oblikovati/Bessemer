@@ -336,3 +336,8 @@ owned hem data, independent arrays, chain identities and saved helper layouts.
 
 [UI bends](docs/features/ui-bends/README.md) covers both saved layouts, direct ruled
 lines, signed count preservation and versioned sketch-line records.
+
+[Flatten and process bends](docs/features/flatten-bends/README.md) covers containing
+node flags, signed presence and strict raw bodies.
+[Feature states](docs/features/feature-states/README.md) documents the scoped
+two-word state records and independent edits.

@@ -24,6 +24,10 @@
 
 ### Added
 
+- Added flatten/process-bend framing with containing-node flag selection, preserved signed body presence and strict compressed raw bodies. (#54)
+
+- Added scoped feature-state records with both signed native words preserved for reading and editing. (#54)
+
 - Added complete UI-bend and line-data framing with both saved helper layouts, preserved signed line counts and direct ruled-line bodies. (#54)
 
 - Added complete sheet-metal corner and hem framing with directly owned data, independent arrays, chain records, relief bodies and both saved helper layouts. (#54)

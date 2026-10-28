@@ -315,6 +315,9 @@ pub(super) const CLASSES: &[&str] = &[
     "moHem_c",
     // #54 / C-286 binds the complete UI-bend body-feature serializer.
     "moUiBend_c",
+    // #54 / C-287 proves the complete inherited bend-group feature bodies.
+    "moFlattenBends_c",
+    "moProcessBends_c",
     // #54 / C-271 binds the inherited reference-geometry chooser owner.
     "moRuledSrfFromEdge_c",
     "Chamfer_c",

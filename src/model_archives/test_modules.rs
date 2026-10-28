@@ -168,6 +168,9 @@ mod face_blend_item_tests;
 #[path = "../../tests/resolved_features/feature_comments.rs"]
 mod feature_comment_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/feature_states.rs"]
+mod feature_state_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/filled_surfaces.rs"]
 mod filled_surface_tests;
 #[cfg(test)]
@@ -176,6 +179,9 @@ mod fillet_thread_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/flat_patterns.rs"]
 mod flat_pattern_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/flatten_bends.rs"]
+mod flatten_bend_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/fold_transforms.rs"]
 mod fold_transform_tests;

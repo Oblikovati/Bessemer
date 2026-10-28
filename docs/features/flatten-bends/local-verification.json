@@ -1,0 +1,47 @@
+{
+  "base_revision": "7fcc118c5e9bf5136d53486bde8fc88d78c08387",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "pr_gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 966,
+    "external_fixture_tests_ignored": 3,
+    "doctests_passed": 274,
+    "test_binaries": 170,
+    "log_sha256": "a8e0fb2c7bcf2f00e88f66b69d426d46b6a1a088b7ef8754c5ce68088487863c"
+  },
+  "typed_prefix_refactor": {
+    "commit": "7fcc118c5e9bf5136d53486bde8fc88d78c08387",
+    "old_library_tests_passed": 956,
+    "owned_fixtures_unchanged": true
+  },
+  "native_corpus": {
+    "cases": 906,
+    "complete": 828,
+    "incomplete": 78,
+    "newly_complete": [
+      336,
+      407
+    ],
+    "two_fresh_processes_identical": true,
+    "previous_complete_preserved": true
+  },
+  "independent_native_source": {
+    "complete_configurations": 828,
+    "resolved_bytes": 57652797,
+    "all_four_stream_hashes_matched": true,
+    "all_exact_eof": true
+  },
+  "exclusions": [
+    "special archive modes and historical migrations",
+    "engineering meanings and geometric validity",
+    "later unsupported native classes",
+    "complete documented schema parity remains unfinished"
+  ],
+  "behavior_version": "C287-flatten-bends-v1",
+  "focused_private_tests": 7,
+  "public_document_tests": 5,
+  "independent_fixture_tests": 3,
+  "independent_native_tests": 2
+}
