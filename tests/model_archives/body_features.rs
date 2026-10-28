@@ -1,3 +1,15 @@
+pub(super) const ORIGINAL_PLANE_DATA_CLASSES: [&str; 9] = [
+    "moRefPlnData_c",
+    "moFixedRefPlnData_c",
+    "moDefaultRefPlnData_c",
+    "moFaceRefPlnData_c",
+    "moFacePtRefPlnData_c",
+    "moLinePtRefPlnData_c",
+    "moPerLinePtRefPlnData_c",
+    "moRefAtAngleData_c",
+    "moRefThreePtsData_c",
+];
+
 use super::direct_collection_tests::decode_collection;
 use super::lightweight_section_tests::next_case;
 use super::{ModelField, ModelFieldValue, ModelObjectRole, encode_fields};
@@ -111,7 +123,7 @@ fn body_and_plane_kinds_are_finite_and_send_sync() {
     for name in ["moBoss_c", "moExtrusion_c", "moRevolution_c", "moRib_c"] {
         assert!(super::body_features::BodyFeatureKind::parse(name).is_some());
     }
-    for name in super::reference_planes::CLASSES {
+    for name in ORIGINAL_PLANE_DATA_CLASSES {
         assert!(super::reference_planes::PlaneDataKind::parse(name).is_some());
     }
     assert!(super::body_features::BodyFeatureKind::parse("moBoss_c ").is_none());

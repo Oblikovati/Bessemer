@@ -1,0 +1,922 @@
+{
+  "thin-silhouette-native-evidence": {
+    "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\thin-silhouette-native-evidence.json",
+    "source_sha256": "eae57a55a5d11d1166031c186ce3ba034e000e022a9fe885c745945f15c4bb53",
+    "evidence": {
+      "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+      "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+      "bindings": [
+        {
+          "rtti": {
+            "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+            "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+            "tables": [
+              {
+                "class_name": "moRevolutionThin_c",
+                "object_offset": 0,
+                "locator": "0x4d35e6f8",
+                "vftable": "0x4d1896d8",
+                "slots": [
+                  "0x4bb15ef0",
+                  "0x4c397520",
+                  "0x4cba273f",
+                  "0x4b29dae0",
+                  "0x4b29dae0",
+                  "0x4bb32140",
+                  "0x4b7a8f10",
+                  "0x4b29dae0"
+                ]
+              },
+              {
+                "class_name": "moRevolutionThin_c",
+                "object_offset": 136,
+                "locator": "0x4d35e720",
+                "vftable": "0x4d18bd58",
+                "slots": [
+                  "0x4c3972dc",
+                  "0x4b2a53f0",
+                  "0x4b2a5480",
+                  "0x4b29c5a0",
+                  "0x4beb0ed0",
+                  "0x4beb28f0",
+                  "0x4b29c5a0",
+                  "0x4d35e748"
+                ]
+              }
+            ]
+          },
+          "locator_bytes": "010000000000000000000000d0ea9c0250041d02f8e61f02",
+          "bases": [
+            ".?AVmoRevolutionThin_c@@",
+            ".?AVmoRevolution_c@@",
+            ".?AVmoSingleSketchFeature_c@@",
+            ".?AVmoSketchedFeature_c@@",
+            ".?AVmoBodyFeature_c@@",
+            ".?AVmoAtomFeature_c@@",
+            ".?AVmoModelFeature_c@@",
+            ".?AVmoFeature_c@@",
+            ".?AVmoConcept_c@@",
+            ".?AVmoLoggedNode_c@@",
+            ".?AVmoNode_c@@",
+            ".?AVsu_CObject@@",
+            ".?AVCObject@@",
+            ".?AVutDisplayedEntity_c@@"
+          ]
+        },
+        {
+          "rtti": {
+            "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+            "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+            "tables": [
+              {
+                "class_name": "moBossThin_c",
+                "object_offset": 0,
+                "locator": "0x4d32f3b0",
+                "vftable": "0x4cf4cea8",
+                "slots": [
+                  "0x4bb1d5d0",
+                  "0x4bae8610",
+                  "0x4cba273f",
+                  "0x4b29dae0",
+                  "0x4b29dae0",
+                  "0x4bb24dc0",
+                  "0x4b7a8f10",
+                  "0x4b29dae0"
+                ]
+              },
+              {
+                "class_name": "moBossThin_c",
+                "object_offset": 136,
+                "locator": "0x4d32f498",
+                "vftable": "0x4cf4f568",
+                "slots": [
+                  "0x4bae84c0",
+                  "0x4b2a53f0",
+                  "0x4b2a5480",
+                  "0x4b29c5a0",
+                  "0x4beb0ed0",
+                  "0x4beb28f0",
+                  "0x4b29c5a0",
+                  "0x4d32f4c0"
+                ]
+              }
+            ]
+          },
+          "locator_bytes": "010000000000000000000000a8e69c02d8f31c02b0f31c02",
+          "bases": [
+            ".?AVmoBossThin_c@@",
+            ".?AVmoExtruThin_c@@",
+            ".?AVmoExtrusion_c@@",
+            ".?AVmoSingleSketchFeature_c@@",
+            ".?AVmoSketchedFeature_c@@",
+            ".?AVmoBodyFeature_c@@",
+            ".?AVmoAtomFeature_c@@",
+            ".?AVmoModelFeature_c@@",
+            ".?AVmoFeature_c@@",
+            ".?AVmoConcept_c@@",
+            ".?AVmoLoggedNode_c@@",
+            ".?AVmoNode_c@@",
+            ".?AVsu_CObject@@",
+            ".?AVCObject@@",
+            ".?AVutDisplayedEntity_c@@"
+          ]
+        },
+        {
+          "rtti": {
+            "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+            "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+            "tables": [
+              {
+                "class_name": "moExtruThin_c",
+                "object_offset": 0,
+                "locator": "0x4d32f118",
+                "vftable": "0x4cf480a8",
+                "slots": [
+                  "0x4bb16dc0",
+                  "0x4bae88b0",
+                  "0x4cba273f",
+                  "0x4b29dae0",
+                  "0x4b29dae0",
+                  "0x4bb24dc0",
+                  "0x4b7a8f10",
+                  "0x4b29dae0"
+                ]
+              },
+              {
+                "class_name": "moExtruThin_c",
+                "object_offset": 136,
+                "locator": "0x4d32f200",
+                "vftable": "0x4cf4a768",
+                "slots": [
+                  "0x4bae84f0",
+                  "0x4b2a53f0",
+                  "0x4b2a5480",
+                  "0x4b29c5a0",
+                  "0x4beb0ed0",
+                  "0x4beb28f0",
+                  "0x4b29c5a0",
+                  "0x4d32f2a0"
+                ]
+              }
+            ]
+          },
+          "locator_bytes": "01000000000000000000000018e69c0240f11c0218f11c02",
+          "bases": [
+            ".?AVmoExtruThin_c@@",
+            ".?AVmoExtrusion_c@@",
+            ".?AVmoSingleSketchFeature_c@@",
+            ".?AVmoSketchedFeature_c@@",
+            ".?AVmoBodyFeature_c@@",
+            ".?AVmoAtomFeature_c@@",
+            ".?AVmoModelFeature_c@@",
+            ".?AVmoFeature_c@@",
+            ".?AVmoConcept_c@@",
+            ".?AVmoLoggedNode_c@@",
+            ".?AVmoNode_c@@",
+            ".?AVsu_CObject@@",
+            ".?AVCObject@@",
+            ".?AVutDisplayedEntity_c@@"
+          ]
+        },
+        {
+          "rtti": {
+            "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+            "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+            "tables": [
+              {
+                "class_name": "moThinSpec_c",
+                "object_offset": 0,
+                "locator": "0x4d36dbf8",
+                "vftable": "0x4d203a90",
+                "slots": [
+                  "0x4bb1d9e0",
+                  "0x4c6f90b0",
+                  "0x4cba273f",
+                  "0x4b29dae0",
+                  "0x4b29dae0",
+                  "0x4bb367d0",
+                  "0x4cba274b",
+                  "0x4cba2751"
+                ]
+              }
+            ]
+          },
+          "locator_bytes": "01000000000000000000000030019e0220dc2002f8db2002",
+          "bases": [
+            ".?AVmoThinSpec_c@@",
+            ".?AVsu_CObject@@",
+            ".?AVCObject@@"
+          ]
+        },
+        {
+          "rtti": {
+            "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+            "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+            "tables": [
+              {
+                "class_name": "moPLineSilhIdRep_c",
+                "object_offset": 0,
+                "locator": "0x4d32a690",
+                "vftable": "0x4cf087d0",
+                "slots": [
+                  "0x4bbb6ae0",
+                  "0x4ba95c00",
+                  "0x4cba273f",
+                  "0x4b29dae0",
+                  "0x4b29dae0",
+                  "0x4bbbd460",
+                  "0x4cba274b",
+                  "0x4cba2751"
+                ]
+              }
+            ]
+          },
+          "locator_bytes": "010000000000000000000000a8d29c02b8a61c0290a61c02",
+          "bases": [
+            ".?AVmoPLineSilhIdRep_c@@",
+            ".?AVmoRef2EdgeIdRep_c@@",
+            ".?AVmoRefEdgeIdRep_c@@",
+            ".?AVmoEdgeIdRep_c@@",
+            ".?AVmoEntityIdRep_c@@",
+            ".?AVgcEntityIdRep_c@@",
+            ".?AVsu_CObject@@",
+            ".?AVCObject@@"
+          ]
+        },
+        {
+          "rtti": {
+            "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+            "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+            "tables": [
+              {
+                "class_name": "moEntityId_c",
+                "object_offset": 0,
+                "locator": "0x4d36d020",
+                "vftable": "0x4d1fb380",
+                "slots": [
+                  "0x4bbaac80",
+                  "0x4b399b80",
+                  "0x4cba273f",
+                  "0x4b29dae0",
+                  "0x4b29dae0",
+                  "0x4bbbc390",
+                  "0x4cba274b",
+                  "0x4cba2751"
+                ]
+              }
+            ]
+          },
+          "locator_bytes": "010000000000000000000000c0089d0250651d0220d02002",
+          "bases": [
+            ".?AVmoEntityId_c@@",
+            ".?AVgcEntityId_c@@",
+            ".?AVsu_CObject@@",
+            ".?AVCObject@@"
+          ]
+        }
+      ],
+      "functions": {
+        "0x4bb24dc0": {
+          "end": "0x4bb2517d",
+          "native_bytes": "48895c240848896c241056574154415641574883ec40488bda4c8bf1488d4c2430ff15a9fe2001488bd3498bcee88e030000488bcbff15f5992101488bcb85c00f84a1000000ff15ec992101498b96600800004c8d05c6effa01488bcb85c07408ff15c99a2101eb06ff15e999210133ff0fb7f7498b8e580800004885c97415488b49084885c975048bf7eb08ff15756821018bf00fb7d6488bcbff156f9f2101663bfe732a0fb7f60f1f8000000000498b8658080000488b48084803cf488bd3e86abdffff4883c70c4883ee0175e0488b5c2470488b6c24784883c440415f415e415c5f5ec3ff154b992101488d152ceffa01488bcb85c07408ff15379a2101eb06ff154799210149898660080000488b4424304885c00f848c0200008b888007000085c97513ff15b2fd2001ff15a4fd20018bc8488b44243081f9db0100000f827601000033ff6689bc2480000000488d942480000000488bcbff15b69e21010fb78424800000006685c07439b910000000e81ce4070148898424880000004885c07410488d0dd3cd420148890848897808eb03488bc7498986580800000fb78424800000008bef663bf80f8305010000488d4c2420e8231bfcff488bcbff156a982101488bcb85c074268b542420ff15499a21018b542424488bcbff153c9a21018b542428488bcbff152f9a2101eb27488d542420ff152a9a2101488d542424488bcbff151c9a2101488d542428488bcbff150e9a2101498bb658080000488b46084885c07520ba10000000b90800000041b90c00000041b801000000ff150a69210148894608488d542420488bc8ff150069210148894608488b0e4c8b214885c075048bc7eb09488bc8ff1594662101448d78ff488b4e084885c975048bc7eb06ff157d6621018d50ff458bc7488bce41ffd4488b4e084885c97406ff1562662101ffc50fb78424800000003be80f8cfbfeffff488b4424304885c00f84e40000008b808007000085c0750cff150afc2001ff15fcfb20013d4c0100000f82e9fdffff498b06498bceff90b81e0000498b8e600800004533c94533c0498bd6488b4908e824b00100498b8660080000488b48104885c9740e4533c94533c0498bd6e806b00100498b8e60080000e8aafc77ff488bd84885c00f848efdffff488b4c24304885c9745e8b818007000085c07511ff1584fb2001ff1576fb2001488b4c24303dbd01000072264885c974378b818007000085c0750cff155dfb2001ff154ffb20013dda0100000f823cfdffff4533c94533c0498bd6488bcbe88baf0100e926fdffff4533c0baffffffffb901000000e8f7e10701cc",
+          "sha256": "a5a65aff02d3e715ec7636b81061a68ef0eb032976514bd75c8afc38a3637a80",
+          "decompilation": "\nvoid FUN_4bb24dc0(moFeature_c *param_1,su_CArchive *param_2)\n\n{\n  code *pcVar1;\n  ushort uVar2;\n  int iVar3;\n  uint uVar4;\n  CObject *pCVar5;\n  undefined8 *puVar6;\n  moRefWrapper_c *this;\n  undefined8 *puVar7;\n  ulonglong uVar8;\n  longlong lVar9;\n  ushort local_res18 [4];\n  undefined8 *local_res20;\n  ulong local_48;\n  ulong local_44;\n  ulong local_40 [2];\n  longlong local_38 [2];\n  \n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_38,param_2);\n  FUN_4bb25180(param_1,param_2);\n  iVar3 = su_CArchive::IsStoring(param_2);\n  if (iVar3 != 0) {\n    iVar3 = su_CArchive::IsDBStream(param_2);\n    if (iVar3 == 0) {\n      su_CArchive::WriteObject\n                (param_2,*(CObject **)(param_1 + 0x860),\n                 (CRuntimeClass *)&moThinSpec_c::classmoThinSpec_c);\n    }\n    else {\n      su_CDBArchive::WriteObject\n                ((su_CDBArchive *)param_2,*(CObject **)(param_1 + 0x860),\n                 (CRuntimeClass *)&moThinSpec_c::classmoThinSpec_c);\n    }\n    lVar9 = 0;\n    uVar2 = 0;\n    if (*(longlong *)(param_1 + 0x858) != 0) {\n      if (*(longlong *)(*(longlong *)(param_1 + 0x858) + 8) == 0) {\n        uVar2 = 0;\n      }\n      else {\n        uVar2 = amDynamicArrayCount();\n      }\n    }\n    su_CArchive::operator<<(param_2,uVar2);\n    if (uVar2 == 0) {\n      return;\n    }\n    uVar8 = (ulonglong)uVar2;\n    do {\n      FUN_4bb20bf0(*(longlong *)(*(longlong *)(param_1 + 0x858) + 8) + lVar9,param_2);\n      lVar9 = lVar9 + 0xc;\n      uVar8 = uVar8 - 1;\n    } while (uVar8 != 0);\n    return;\n  }\n  iVar3 = su_CArchive::IsDBStream(param_2);\n  if (iVar3 == 0) {\n    pCVar5 = su_CArchive::ReadObject(param_2,(CRuntimeClass *)&moThinSpec_c::classmoThinSpec_c);\n  }\n  else {\n    pCVar5 = su_CDBArchive::ReadObject\n                       ((su_CDBArchive *)param_2,(CRuntimeClass *)&moThinSpec_c::classmoThinSpec_c);\n  }\n  *(CObject **)(param_1 + 0x860) = pCVar5;\n  if (local_38[0] != 0) {\n    uVar4 = *(uint *)(local_38[0] + 0x780);\n    if (uVar4 == 0) {\n      moVersionManager_c::get();\n      uVar4 = moVersionManager_c::getCurrentFileVerion();\n    }\n    if (0x1da < uVar4) {\n      puVar7 = (undefined8 *)0x0;\n      local_res18[0] = 0;\n      su_CArchive::operator>>(param_2,local_res18);\n      if (local_res18[0] != 0) {\n        local_res20 = operator_new(0x10);\n        puVar6 = puVar7;\n        if (local_res20 != (undefined8 *)0x0) {\n          *local_res20 = suDynamicArray<moBendIdData_c>::vftable;\n          local_res20[1] = 0;\n          puVar6 = local_res20;\n        }\n        *(undefined8 **)(param_1 + 0x858) = puVar6;\n      }\n      if (local_res18[0] != 0) {\n        do {\n          FUN_4bae6aa0(&local_48);\n          iVar3 = su_CArchive::IsStoring(param_2);\n          if (iVar3 == 0) {\n            su_CArchive::operator>>(param_2,&local_48);\n            su_CArchive::operator>>(param_2,&local_44);\n            su_CArchive::operator>>(param_2,local_40);\n          }\n          else {\n            su_CArchive::operator<<(param_2,local_48);\n            su_CArchive::operator<<(param_2,local_44);\n            su_CArchive::operator<<(param_2,local_40[0]);\n          }\n          puVar6 = *(undefined8 **)(param_1 + 0x858);\n          lVar9 = puVar6[1];\n          if (lVar9 == 0) {\n            lVar9 = suDynArrayAlloc(8,0x10,1);\n            puVar6[1] = lVar9;\n          }\n          lVar9 = amDynamicArrayAdd(lVar9,&local_48);\n          puVar6[1] = lVar9;\n          pcVar1 = *(code **)*puVar6;\n          if (lVar9 != 0) {\n            amDynamicArrayCount(lVar9);\n          }\n          iVar3 = 0;\n          if (puVar6[1] != 0) {\n            iVar3 = amDynamicArrayCount();\n          }\n          (*pcVar1)(puVar6,iVar3 + -1);\n          if (puVar6[1] != 0) {\n            amDynamicArrayCount();\n          }\n          uVar4 = (int)puVar7 + 1;\n          puVar7 = (undefined8 *)(ulonglong)uVar4;\n        } while ((int)uVar4 < (int)(uint)local_res18[0]);\n      }\n    }\n    if (local_38[0] != 0) {\n      uVar4 = *(uint *)(local_38[0] + 0x780);\n      if (uVar4 == 0) {\n        moVersionManager_c::get();\n        uVar4 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (0x14b < uVar4) {\n        (**(code **)(*(longlong *)param_1 + 0x1eb8))(param_1);\n        moDisplayDim_c::safeSetFeatureOwner\n                  (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x860) + 8),param_1,\n                   (moFeature_c *)0x0,(moComponent_c *)0x0);\n        if (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x860) + 0x10) != (moDisplayDim_c *)0x0) {\n          moDisplayDim_c::safeSetFeatureOwner\n                    (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x860) + 0x10),param_1,\n                     (moFeature_c *)0x0,(moComponent_c *)0x0);\n        }\n        this = moMirrorCompFeatData_c::getAlignmentReference\n                         (*(moMirrorCompFeatData_c **)(param_1 + 0x860));\n        if (this != (moRefWrapper_c *)0x0) {\n          if (local_38[0] == 0) goto LAB_4bb2516a;\n          uVar4 = *(uint *)(local_38[0] + 0x780);\n          if (uVar4 == 0) {\n            moVersionManager_c::get();\n            uVar4 = moVersionManager_c::getCurrentFileVerion();\n          }\n          if (0x1bc < uVar4) {\n            if (local_38[0] == 0) goto LAB_4bb2516a;\n            uVar4 = *(uint *)(local_38[0] + 0x780);\n            if (uVar4 == 0) {\n              moVersionManager_c::get();\n              uVar4 = moVersionManager_c::getCurrentFileVerion();\n            }\n            if (uVar4 < 0x1da) {\n              return;\n            }\n          }\n          moDisplayDim_c::safeSetFeatureOwner\n                    ((moDisplayDim_c *)this,param_1,(moFeature_c *)0x0,(moComponent_c *)0x0);\n        }\n      }\n      return;\n    }\n  }\nLAB_4bb2516a:\n                    /* WARNING: Subroutine does not return */\n  AfxThrowFileException(1,-1,(wchar_t *)0x0);\n}\n\n"
+        },
+        "0x4bb367d0": {
+          "end": "0x4bb3688d",
+          "native_bytes": "4053574883ec48488bd9488bfa488d4c2420ff15a8e41f01488bd7488bcbff151c812001488bcfff15f37f200185c00f8483000000488d5308488bcfe83faccf00488d5310488bcfe833accf008b532c488bcfff15d77f2001f20f104b30488bcfff1559812001f20f104b38488bcfff154b8120018b5328488bcfff15af7f20018b5340488bcfff15a37f2001488d5348488bcfe817aecf008b5350488bcfff158b7f20018b5354488bcfff157f7f20014883c4485f5bc3488b442420",
+          "sha256": "f8dd17f300742436f8804da1954bb96fc0152eb4057a17d3f082cd6c2c254a53",
+          "decompilation": "\nvoid FUN_4bb367d0(su_CObject *param_1,su_CArchive *param_2)\n\n{\n  int iVar1;\n  uint uVar2;\n  double *pdVar3;\n  long local_res18 [4];\n  longlong local_38 [2];\n  \n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_38,param_2);\n  su_CObject::Serialize(param_1,param_2);\n  iVar1 = su_CArchive::IsStoring(param_2);\n  if (iVar1 != 0) {\n    operator<<(param_2,(moDisplayDim_c **)(param_1 + 8));\n    operator<<(param_2,(moDisplayDim_c **)(param_1 + 0x10));\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x2c));\n    su_CArchive::operator<<(param_2,*(double *)(param_1 + 0x30));\n    su_CArchive::operator<<(param_2,*(double *)(param_1 + 0x38));\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x28));\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x40));\n    operator<<(param_2,(moDisplayRadialDim_c **)(param_1 + 0x48));\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x50));\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x54));\n    return;\n  }\n  if (local_38[0] != 0) {\n    uVar2 = *(uint *)(local_38[0] + 0x780);\n    if (uVar2 == 0) {\n      moVersionManager_c::get();\n      uVar2 = moVersionManager_c::getCurrentFileVerion();\n    }\n    if (uVar2 < 0x14c) {\n      su_CArchive::operator>>(param_2,(double *)(param_1 + 0x18));\n      *(undefined8 *)(param_1 + 8) = 0;\n      *(undefined8 *)(param_1 + 0x10) = 0;\n      *(undefined4 *)(param_1 + 0x2c) = 0;\n      *(undefined8 *)(param_1 + 0x30) = 0;\n      *(undefined8 *)(param_1 + 0x38) = 0;\n    }\n    else {\n      if (local_38[0] == 0) goto LAB_4bb36aef;\n      uVar2 = *(uint *)(local_38[0] + 0x780);\n      if (uVar2 == 0) {\n        moVersionManager_c::get();\n        uVar2 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (uVar2 < 0x153) {\n        operator>>(param_2,(moDisplayDim_c **)(param_1 + 8));\n        *(undefined8 *)(param_1 + 0x10) = 0;\n        *(undefined4 *)(param_1 + 0x2c) = 0;\n        *(undefined8 *)(param_1 + 0x30) = 0;\n        *(undefined8 *)(param_1 + 0x38) = 0;\n      }\n      else {\n        operator>>(param_2,(moDisplayDim_c **)(param_1 + 8));\n        operator>>(param_2,(moDisplayDim_c **)(param_1 + 0x10));\n        su_CArchive::operator>>(param_2,(long *)(param_1 + 0x2c));\n        su_CArchive::operator>>(param_2,(double *)(param_1 + 0x30));\n        su_CArchive::operator>>(param_2,(double *)(param_1 + 0x38));\n      }\n    }\n    su_CArchive::operator>>(param_2,(long *)(param_1 + 0x28));\n    su_CArchive::operator>>(param_2,(long *)(param_1 + 0x40));\n    if (local_38[0] != 0) {\n      uVar2 = *(uint *)(local_38[0] + 0x780);\n      if (uVar2 == 0) {\n        moVersionManager_c::get();\n        uVar2 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (0x1bc < uVar2) {\n        if (local_38[0] == 0) goto LAB_4bb36aef;\n        uVar2 = *(uint *)(local_38[0] + 0x780);\n        if (uVar2 == 0) {\n          moVersionManager_c::get();\n          uVar2 = moVersionManager_c::getCurrentFileVerion();\n        }\n        if (uVar2 < 0x1da) {\n          pdVar3 = operator_new(8);\n          su_CArchive::operator>>(param_2,pdVar3);\n          if (*pdVar3 <= 0.0 && *pdVar3 != 0.0) {\n            *pdVar3 = 0.0;\n          }\n          *(double **)(param_1 + 0x48) = pdVar3;\n        }\n        else {\n          operator>>(param_2,(moDisplayRadialDim_c **)(param_1 + 0x48));\n        }\n        su_CArchive::operator>>(param_2,(long *)(param_1 + 0x50));\n      }\n      if (local_38[0] != 0) {\n        uVar2 = *(uint *)(local_38[0] + 0x780);\n        if (uVar2 == 0) {\n          moVersionManager_c::get();\n          uVar2 = moVersionManager_c::getCurrentFileVerion();\n        }\n        if (0x1bc < uVar2) {\n          if (local_38[0] == 0) goto LAB_4bb36aef;\n          uVar2 = *(uint *)(local_38[0] + 0x780);\n          if (uVar2 == 0) {\n            moVersionManager_c::get();\n            uVar2 = moVersionManager_c::getCurrentFileVerion();\n          }\n          if (uVar2 < 0x1c5) {\n            su_CArchive::operator>>(param_2,local_res18);\n          }\n        }\n        if (local_38[0] != 0) {\n          uVar2 = *(uint *)(local_38[0] + 0x780);\n          if (uVar2 == 0) {\n            moVersionManager_c::get();\n            uVar2 = moVersionManager_c::getCurrentFileVerion();\n          }\n          if (0x1d9 < uVar2) {\n            su_CArchive::operator>>(param_2,(long *)(param_1 + 0x54));\n          }\n          return;\n        }\n      }\n    }\n  }\nLAB_4bb36aef:\n                    /* WARNING: Subroutine does not return */\n  AfxThrowFileException(1,-1,(wchar_t *)0x0);\n}\n\n"
+        },
+        "0x4bbbd460": {
+          "end": "0x4bbbd4e4",
+          "native_bytes": "48895c24084889742410574883ec20488bfa488bd9e8d6eaffff488b4338488d4b38488bd7ff5028488bcfff155f131801488bcf85c074258b5348ff155f1318018b534c488bcf488b5c2430488b7424384883c4205f48ff2543131801488d5348ff1541131801488d534c488bcf488b5c2430488b7424384883c4205f48ff2524131801",
+          "sha256": "8cd87f89bb3a7a0e6b0933a1e827cdbb57314d83cb2d386ccdf3ea946035a77c",
+          "decompilation": "\nvoid FUN_4bbbd460(longlong param_1,su_CArchive *param_2)\n\n{\n  int iVar1;\n  \n  FUN_4bbbbf50();\n  (**(code **)(*(longlong *)(param_1 + 0x38) + 0x28))(param_1 + 0x38,param_2);\n  iVar1 = su_CArchive::IsStoring(param_2);\n  if (iVar1 != 0) {\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x48));\n                    /* WARNING: Could not recover jumptable at 0x4bbbd4b6. Too many branches */\n                    /* WARNING: Treating indirect jump as call */\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x4c));\n    return;\n  }\n  su_CArchive::operator>>(param_2,(long *)(param_1 + 0x48));\n                    /* WARNING: Could not recover jumptable at 0x4bbbd4dd. Too many branches */\n                    /* WARNING: Treating indirect jump as call */\n  su_CArchive::operator>>(param_2,(long *)(param_1 + 0x4c));\n  return;\n}\n\n"
+        },
+        "0x4bb25180": {
+          "end": "0x4bb253c8",
+          "native_bytes": "48895c2410574883ec30488bd9488bfa488d4c2420ff15f5fa2001ba00200000488d4c2420ff15f5f0200185c075224533c0488d15cf614301488d4c2450ff15bc912101488d0dbd614301ff15a7912101488b44242048897424404885c00f84d10100008bb08007000085f6750eff15acfa2001ff159efa20018bf0488bd7488bcbe899bdffff488bcfff15e095210185c0745c488bcfff15db952101488b93100800004c8d0585e5fa01488bcf85c07408ff15b8962101eb06ff15d8952101f20f108b30080000488bcfff153f9721018b9308080000488bcfff15a0952101488b742440488b5c24484883c4305fc3488b93100800004885d27416488d4c2420ff15f1ef200148c7831008000000000000488bcfff155d952101488d150ee5fa01488bcf85c07408ff1549962101eb06ff155995210148898310080000488b4424204885c00f84e90000008b808007000085c0750cff15c4f92001ff15b6f920013d980900007210488d9330080000488bcfff159f96210181febf0d00007c10488d9308080000488bcfff15f7942101488b03488bcbff90b81e0000488b8310080000488b48184885c9740e4533c94533c0488bd3e8b5ad0100488b8310080000488b88c80000004885c9740e4533c94533c0488bd3e894ad0100488b8310080000488b48204885c9740e4533c94533c0488bd3e876ad0100488b8310080000488b88d00000004885c9740e4533c94533c0488bd3e855ad0100488b742440c7833007000001000000488b5c24484883c4305fc34533c0baffffffffb901000000e8acdf0701cc",
+          "sha256": "ddce78eb21eae6ff10048610ae415f0a1dcd65c32be0d690362637b439bbed5f",
+          "decompilation": "\nvoid FUN_4bb25180(moBodyFeature_c *param_1,su_CArchive *param_2)\n\n{\n  int iVar1;\n  ulong uVar2;\n  uint uVar3;\n  CObject *pCVar4;\n  Point local_res18 [16];\n  longlong local_18 [2];\n  \n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_18,param_2);\n  iVar1 = moArchiveHelper_c::hasCondition((moArchiveHelper_c *)local_18,0x2000);\n  if (iVar1 == 0) {\n    suCrash_c::Point::Point(local_res18,\"moExtrusion_c::Serialize\",false);\n    suCrash(\"moExtrusion_c::Serialize\");\n  }\n  if (local_18[0] != 0) {\n    uVar2 = *(ulong *)(local_18[0] + 0x780);\n    if (uVar2 == 0) {\n      moVersionManager_c::get();\n      uVar2 = moVersionManager_c::getCurrentFileVerion();\n    }\n    moBodyFeature_c::Serialize(param_1,param_2);\n    iVar1 = su_CArchive::IsStoring(param_2);\n    if (iVar1 != 0) {\n      iVar1 = su_CArchive::IsDBStream(param_2);\n      if (iVar1 == 0) {\n        su_CArchive::WriteObject\n                  (param_2,*(CObject **)(param_1 + 0x810),\n                   (CRuntimeClass *)&moEndSpec_c::classmoEndSpec_c);\n      }\n      else {\n        su_CDBArchive::WriteObject\n                  ((su_CDBArchive *)param_2,*(CObject **)(param_1 + 0x810),\n                   (CRuntimeClass *)&moEndSpec_c::classmoEndSpec_c);\n      }\n      su_CArchive::operator<<(param_2,*(double *)(param_1 + 0x830));\n      su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x808));\n      return;\n    }\n    if (*(CObject **)(param_1 + 0x810) != (CObject *)0x0) {\n      moArchiveHelper_c::deleteAfterSerialization\n                ((moArchiveHelper_c *)local_18,*(CObject **)(param_1 + 0x810));\n      *(undefined8 *)(param_1 + 0x810) = 0;\n    }\n    iVar1 = su_CArchive::IsDBStream(param_2);\n    if (iVar1 == 0) {\n      pCVar4 = su_CArchive::ReadObject(param_2,(CRuntimeClass *)&moEndSpec_c::classmoEndSpec_c);\n    }\n    else {\n      pCVar4 = su_CDBArchive::ReadObject\n                         ((su_CDBArchive *)param_2,(CRuntimeClass *)&moEndSpec_c::classmoEndSpec_c);\n    }\n    *(CObject **)(param_1 + 0x810) = pCVar4;\n    if (local_18[0] != 0) {\n      uVar3 = *(uint *)(local_18[0] + 0x780);\n      if (uVar3 == 0) {\n        moVersionManager_c::get();\n        uVar3 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (0x997 < uVar3) {\n        su_CArchive::operator>>(param_2,(double *)(param_1 + 0x830));\n      }\n      if (0xdbe < (int)uVar2) {\n        su_CArchive::operator>>(param_2,(long *)(param_1 + 0x808));\n      }\n      (**(code **)(*(longlong *)param_1 + 0x1eb8))(param_1);\n      if (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x810) + 0x18) != (moDisplayDim_c *)0x0) {\n        moDisplayDim_c::safeSetFeatureOwner\n                  (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x810) + 0x18),\n                   (moFeature_c *)param_1,(moFeature_c *)0x0,(moComponent_c *)0x0);\n      }\n      if (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x810) + 200) != (moDisplayDim_c *)0x0) {\n        moDisplayDim_c::safeSetFeatureOwner\n                  (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x810) + 200),(moFeature_c *)param_1\n                   ,(moFeature_c *)0x0,(moComponent_c *)0x0);\n      }\n      if (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x810) + 0x20) != (moDisplayDim_c *)0x0) {\n        moDisplayDim_c::safeSetFeatureOwner\n                  (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x810) + 0x20),\n                   (moFeature_c *)param_1,(moFeature_c *)0x0,(moComponent_c *)0x0);\n      }\n      if (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x810) + 0xd0) != (moDisplayDim_c *)0x0) {\n        moDisplayDim_c::safeSetFeatureOwner\n                  (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x810) + 0xd0),\n                   (moFeature_c *)param_1,(moFeature_c *)0x0,(moComponent_c *)0x0);\n      }\n      *(undefined4 *)(param_1 + 0x730) = 1;\n      return;\n    }\n  }\n                    /* WARNING: Subroutine does not return */\n  AfxThrowFileException(1,-1,(wchar_t *)0x0);\n}\n\n"
+        },
+        "0x4bbbbf50": {
+          "end": "0x4bbbc382",
+          "native_bytes": "48895c2408488974241055574156488bec4883ec70488bda488bf9488d4dc0ff151b8d1701488b45c04885c00f84ed0300008b888007000085c97512ff150e8d1701ff15008d17018bc8488b45c081f91b0200000f8221010000488d4f10488b01488bd3ff10488b4dc04885c90f84ac0300008b818007000085c07510ff15cd8c1701ff15bf8c1701488b4dc03dad030000734283b9900700000075394885ff74134881c1080500004c8bc78b5110ff1593281801ff150dd61701488bc8ff15acce170185c0740e488b0733d2488bcfff90b0000000488bcbff15c1271801488d4dc085c0ba000020007405ba00000008ff155982170185c07425488b4dc04885c90f84170300004885ff74134881c1500600004c8bc78b5110ff1528281801488bcbff157727180185c00f856e020000488b45c04885c00f84e102000083b8a0010000000f8454020000488b0733d2488bcfff90b0000000488b4dc04885c90f84b90200004881c110020000488bd7ff152a8c1701e9240200004885c00f849b020000488b70304885f6741ce89efa6500488bd0488bcee89272fe0085c00f847a020000488b45c04885c00f846d0200008b888007000085c97512ff158e8b1701ff15808b17018bc8488b45c04533f681f980010000733744397020744e488d156abdf101488bcfe84172fe0085c0488b45c0751a443970200f841f02000044897020488b45c04c897018488b45c0443970207417488d1533bdf101488bcfe80a72fe0085c00f84f20100004c897538488d5538488bcbff15fa2718014c3975380f84dd000000ff1532a01701488bd0488b4d38e8d571fe0085c07441c74530ffffffff488d5530488bcbff15462618014c8b45388b5530488d4dd0e8cebdf8ff90488d55d0488d4f10e85053fbff90488d4dd0e8c6c0f8ffe98600000041b801000000488b5538488d4f10e80e54fbff488b45c04885c00f84600100008b888007000085c97512ff15818a1701ff15738a17018bc8488b45c081f9ad03000073464885c00f84330100004885ff7413488d88080500004c8bc78b5110ff1544261801ff15bed31701488bc8ff155dcc170185c0740e488b0733d2488bcfff90b0000000488b45c048837f1800746f4885c00f84e60000008b808007000085c0750cff15078a1701ff15f98917013dd2010000734944897424204c8d0d960ff5014c8d0507f9f40133d2488b4f18e88e91fe004885c0743b488b10488bc8ff924824000085c0742b488b4dc04881c118030000ba7e2c0000ff15218a17014c8d5c2470498b5b20498b7328498be3415e5f5dc3488b45c04885c074628b808007000085c0750cff1583891701ff15758917013dcb01000073c5488b5f18e88daaf5ff488bd0488bcbe84170fe0085c07518488b5f18e8a59bf5ff488bd0488bcbe82970fe0085c07495488b4dc04881c118030000ba6a2c0000e97affffff4533c0baffffffffb901000000e8f26ffe00cc",
+          "sha256": "d62a8ff17ea74609cc51a19e32a9e96c7a12abe9bde7fe323c8d830418434699",
+          "decompilation": "\nvoid FUN_4bbbbf50(CObject *param_1,su_CArchive *param_2)\n\n{\n  CObject *this;\n  uint uVar1;\n  int iVar2;\n  gcEnvironment_c *pgVar3;\n  CRuntimeClass *pCVar4;\n  moExtruThin_c *pmVar5;\n  moExtruThin_c *this_00;\n  CObject *pCVar6;\n  int iVar7;\n  void *pvVar8;\n  long local_res18 [2];\n  CObject *local_res20;\n  longlong local_58 [2];\n  moFR_c local_48 [48];\n  \n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_58,param_2);\n  if (local_58[0] == 0) goto LAB_4bbbc36f;\n  uVar1 = *(uint *)(local_58[0] + 0x780);\n  if (uVar1 == 0) {\n    moVersionManager_c::get();\n    uVar1 = moVersionManager_c::getCurrentFileVerion();\n  }\n  if (0x21a < uVar1) {\n    (*(code *)**(undefined8 **)(param_1 + 0x10))(param_1 + 0x10,param_2);\n    if (local_58[0] != 0) {\n      uVar1 = *(uint *)(local_58[0] + 0x780);\n      if (uVar1 == 0) {\n        moVersionManager_c::get();\n        uVar1 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if ((uVar1 < 0x3ad) && (*(int *)(local_58[0] + 0x790) == 0)) {\n        if (param_1 != (CObject *)0x0) {\n          su_CObArray::SetAtGrow\n                    ((su_CObArray *)(local_58[0] + 0x508),*(int *)(local_58[0] + 0x518),param_1);\n        }\n        pgVar3 = gcEnvironment_c::get();\n        iVar2 = gcEnvironment_c::getEnableNewSurfaceId(pgVar3);\n        if (iVar2 != 0) {\n          (**(code **)(*(longlong *)param_1 + 0xb0))(param_1,0);\n        }\n      }\n      iVar2 = su_CArchive::IsStoring(param_2);\n      iVar7 = 0x200000;\n      if (iVar2 != 0) {\n        iVar7 = 0x8000000;\n      }\n      iVar2 = moArchiveHelper_c::hasCondition((moArchiveHelper_c *)local_58,iVar7);\n      if (iVar2 != 0) {\n        if (local_58[0] == 0) goto LAB_4bbbc36f;\n        if (param_1 != (CObject *)0x0) {\n          su_CObArray::SetAtGrow\n                    ((su_CObArray *)(local_58[0] + 0x650),*(int *)(local_58[0] + 0x660),param_1);\n        }\n      }\n      iVar2 = su_CArchive::IsStoring(param_2);\n      if (iVar2 != 0) {\n        return;\n      }\n      if (local_58[0] != 0) {\n        if (*(int *)(local_58[0] + 0x1a0) == 0) {\n          return;\n        }\n        (**(code **)(*(longlong *)param_1 + 0xb0))(param_1,0);\n        if (local_58[0] != 0) {\n          suObArray::addUnique((suObArray *)(local_58[0] + 0x210),param_1);\n          return;\n        }\n      }\n    }\n    goto LAB_4bbbc36f;\n  }\n  if (local_58[0] == 0) goto LAB_4bbbc36f;\n  pCVar6 = *(CObject **)(local_58[0] + 0x30);\n  if (pCVar6 != (CObject *)0x0) {\n    pCVar4 = moModel_c::GetRuntimeClass((moModel_c *)(ulonglong)uVar1);\n    iVar2 = CObject::IsKindOf(pCVar6,pCVar4);\n    if (iVar2 == 0) goto LAB_4bbbc36f;\n  }\n  if (local_58[0] == 0) goto LAB_4bbbc36f;\n  uVar1 = *(uint *)(local_58[0] + 0x780);\n  if (uVar1 == 0) {\n    moVersionManager_c::get();\n    uVar1 = moVersionManager_c::getCurrentFileVerion();\n  }\n  if (uVar1 < 0x180) {\n    if (*(int *)(local_58[0] + 0x20) != 0) {\n      iVar2 = CObject::IsKindOf(param_1,(CRuntimeClass *)\n                                        &moByEdgeSurfIdRep_c::classmoByEdgeSurfIdRep_c);\n      if (iVar2 == 0) {\n        if (*(int *)(local_58[0] + 0x20) == 0) goto LAB_4bbbc36f;\n        *(undefined4 *)(local_58[0] + 0x20) = 0;\n        *(undefined8 *)(local_58[0] + 0x18) = 0;\n      }\n      goto LAB_4bbbc160;\n    }\n  }\n  else {\nLAB_4bbbc160:\n    if ((*(int *)(local_58[0] + 0x20) != 0) &&\n       (iVar2 = CObject::IsKindOf(param_1,(CRuntimeClass *)\n                                          &moByEdgeSurfIdRep_c::classmoByEdgeSurfIdRep_c),\n       iVar2 == 0)) goto LAB_4bbbc36f;\n  }\n  local_res20 = (CObject *)0x0;\n  operator>>(param_2,&local_res20);\n  if (local_res20 != (CObject *)0x0) {\n    pCVar4 = moExtObject_c::GetThisClass();\n    iVar2 = CObject::IsKindOf(local_res20,pCVar4);\n    if (iVar2 == 0) {\n      FUN_4bb71610(param_1 + 0x10,local_res20);\n      if (local_58[0] == 0) goto LAB_4bbbc36f;\n      uVar1 = *(uint *)(local_58[0] + 0x780);\n      if (uVar1 == 0) {\n        moVersionManager_c::get();\n        uVar1 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (uVar1 < 0x3ad) {\n        if (local_58[0] == 0) goto LAB_4bbbc36f;\n        if (param_1 != (CObject *)0x0) {\n          su_CObArray::SetAtGrow\n                    ((su_CObArray *)(local_58[0] + 0x508),*(int *)(local_58[0] + 0x518),param_1);\n        }\n        pgVar3 = gcEnvironment_c::get();\n        iVar2 = gcEnvironment_c::getEnableNewSurfaceId(pgVar3);\n        if (iVar2 != 0) {\n          (**(code **)(*(longlong *)param_1 + 0xb0))(param_1,0);\n        }\n      }\n    }\n    else {\n      local_res18[0] = -1;\n      su_CArchive::operator>>(param_2,local_res18);\n      FUN_4bb47fa0(local_48,local_res18[0]);\n      FUN_4bb71530(param_1 + 0x10,local_48);\n      moFR_c::~moFR_c(local_48);\n    }\n  }\n  if (*(longlong *)(param_1 + 0x18) != 0) {\n    if (local_58[0] == 0) {\nLAB_4bbbc36f:\n                    /* WARNING: Subroutine does not return */\n      AfxThrowFileException(1,-1,(wchar_t *)0x0);\n    }\n    uVar1 = *(uint *)(local_58[0] + 0x780);\n    if (uVar1 == 0) {\n      moVersionManager_c::get();\n      uVar1 = moVersionManager_c::getCurrentFileVerion();\n    }\n    if (uVar1 < 0x1d2) {\n      this_00 = *(moExtruThin_c **)(param_1 + 0x18);\n      pmVar5 = (moExtruThin_c *)\n               __RTDynamicCast(this_00,0,&moFeature_c::RTTI_Type_Descriptor,\n                               &moBodyFeature_c::RTTI_Type_Descriptor,0);\n      if ((pmVar5 == (moExtruThin_c *)0x0) ||\n         (iVar2 = (**(code **)(*(longlong *)pmVar5 + 0x2448))(), this_00 = pmVar5, iVar2 == 0)) {\n        if (local_58[0] == 0) goto LAB_4bbbc36f;\n        uVar1 = *(uint *)(local_58[0] + 0x780);\n        if (uVar1 == 0) {\n          moVersionManager_c::get();\n          uVar1 = moVersionManager_c::getCurrentFileVerion();\n        }\n        if (0x1ca < uVar1) {\n          return;\n        }\n        pCVar6 = *(CObject **)(param_1 + 0x18);\n        pCVar4 = moExtruThin_c::GetRuntimeClass(this_00);\n        iVar2 = CObject::IsKindOf(pCVar6,pCVar4);\n        if (iVar2 == 0) {\n          this = *(CObject **)(param_1 + 0x18);\n          pCVar4 = moRevolutionThin_c::GetRuntimeClass((moRevolutionThin_c *)pCVar6);\n          iVar2 = CObject::IsKindOf(this,pCVar4);\n          if (iVar2 == 0) {\n            return;\n          }\n        }\n        pvVar8 = (void *)0x2c6a;\n      }\n      else {\n        pvVar8 = (void *)0x2c7e;\n      }\n      suPtrArray::addUnique((suPtrArray *)(local_58[0] + 0x318),pvVar8);\n    }\n  }\n  return;\n}\n\n"
+        },
+        "0x4bbbc390": {
+          "end": "0x4bbbc5ac",
+          "native_bytes": "48895c2408574883ec30488bd9488bfa488d4c2420ff15e5881701488bcfff153c24180185c074384885db0f84d8010000e83371fe00488bd0488bcbe8ae6ffe0085c00f84c0010000488d5308488bcfe84b74ffff488b5c24404883c4305fc3488b44242048c7430800000000c6442450014885c00f847b0100008b808007000085c0750cff1585881701ff15778817013d80010000730e488d542450488bcfff1592251801807c24500074a8488bcfff15b2231801488d1593a4f101488bcf85c07408ff159e241801eb06ff15ae231801488bd0488bcb488bf8e800ccb10048837b08000f84ea000000488b4424204885c00f84fd0000008b808007000085c0750cff1507881701ff15f98717013d800100000f83bb000000488b4b08488d15ebb9f101e8c56efe0085c00f84a300000033d2488bcfe84433b100488d158da8f101488bc8488bf8e8a16efe0085c00f84a000000041b801000000488bd7488bcbe8b9cab100488b4c24204885c90f84810000008b818007000085c07511ff158b871701ff157d871701488b4c24203dad030000733e4885c9745a4885ff74134881c1080500004c8bc78b5110ff1554231801ff15ced01701488bc8ff156dc9170185c0740e488b0733d2488bcfff90b0000000488b4b084885c90f8473feffff488d1527b9f101e8016efe0085c00f845ffeffff4533c0baffffffffb901000000e8db6dfe00cc4533c0baffffffffb901000000e8c86dfe00cc",
+          "sha256": "505786864b6467a228b77a22a1204374894384fc37b684c8f456a0123380c216",
+          "decompilation": "\nvoid FUN_4bbbc390(CObject *param_1,su_CArchive *param_2)\n\n{\n  int iVar1;\n  uint uVar2;\n  CRuntimeClass *pCVar3;\n  CObject *pCVar4;\n  gcEnvironment_c *this;\n  uchar local_res18 [16];\n  longlong local_18 [2];\n  \n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_18,param_2);\n  iVar1 = su_CArchive::IsStoring(param_2);\n  if (iVar1 != 0) {\n    if (param_1 != (CObject *)0x0) {\n      pCVar3 = CObject::GetThisClass();\n      iVar1 = CObject::IsKindOf(param_1,pCVar3);\n      if (iVar1 != 0) {\n        operator<<(param_2,(moEntityIdRep_c **)(param_1 + 8));\n        return;\n      }\n    }\n                    /* WARNING: Subroutine does not return */\n    AfxThrowFileException(1,-1,(wchar_t *)0x0);\n  }\n  *(undefined8 *)(param_1 + 8) = 0;\n  local_res18[0] = '\\x01';\n  if (local_18[0] != 0) {\n    uVar2 = *(uint *)(local_18[0] + 0x780);\n    if (uVar2 == 0) {\n      moVersionManager_c::get();\n      uVar2 = moVersionManager_c::getCurrentFileVerion();\n    }\n    if (uVar2 < 0x180) {\n      su_CArchive::operator>>(param_2,local_res18);\n    }\n    if (local_res18[0] == '\\0') {\n      return;\n    }\n    iVar1 = su_CArchive::IsDBStream(param_2);\n    if (iVar1 == 0) {\n      pCVar4 = su_CArchive::ReadObject\n                         (param_2,(CRuntimeClass *)&moEntityIdRep_c::classmoEntityIdRep_c);\n    }\n    else {\n      pCVar4 = su_CDBArchive::ReadObject\n                         ((su_CDBArchive *)param_2,\n                          (CRuntimeClass *)&moEntityIdRep_c::classmoEntityIdRep_c);\n    }\n    FUN_4c6d9070(param_1,pCVar4);\n    if (*(longlong *)(param_1 + 8) != 0) {\n      if (local_18[0] == 0) goto LAB_4bbbc586;\n      uVar2 = *(uint *)(local_18[0] + 0x780);\n      if (uVar2 == 0) {\n        moVersionManager_c::get();\n        uVar2 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if ((uVar2 < 0x180) &&\n         (iVar1 = CObject::IsKindOf(*(CObject **)(param_1 + 8),\n                                    (CRuntimeClass *)&moByEdgeSurfIdRep_c::classmoByEdgeSurfIdRep_c)\n         , iVar1 != 0)) {\n        pCVar4 = (CObject *)FUN_4c6cf810(pCVar4,0);\n        iVar1 = CObject::IsKindOf(pCVar4,(CRuntimeClass *)\n                                         &moFilletSurfIdRep_c::classmoFilletSurfIdRep_c);\n        if ((iVar1 == 0) || (FUN_4c6d8fb0(param_1,pCVar4), local_18[0] == 0)) goto LAB_4bbbc586;\n        uVar2 = *(uint *)(local_18[0] + 0x780);\n        if (uVar2 == 0) {\n          moVersionManager_c::get();\n          uVar2 = moVersionManager_c::getCurrentFileVerion();\n        }\n        if (uVar2 < 0x3ad) {\n          if (local_18[0] == 0) goto LAB_4bbbc586;\n          if (pCVar4 != (CObject *)0x0) {\n            su_CObArray::SetAtGrow\n                      ((su_CObArray *)(local_18[0] + 0x508),*(int *)(local_18[0] + 0x518),pCVar4);\n          }\n          this = gcEnvironment_c::get();\n          iVar1 = gcEnvironment_c::getEnableNewSurfaceId(this);\n          if (iVar1 != 0) {\n            (**(code **)(*(longlong *)pCVar4 + 0xb0))(pCVar4,0);\n          }\n        }\n      }\n    }\n    if (*(CObject **)(param_1 + 8) == (CObject *)0x0) {\n      return;\n    }\n    iVar1 = CObject::IsKindOf(*(CObject **)(param_1 + 8),\n                              (CRuntimeClass *)&moByEdgeSurfIdRep_c::classmoByEdgeSurfIdRep_c);\n    if (iVar1 == 0) {\n      return;\n    }\n  }\nLAB_4bbbc586:\n                    /* WARNING: Subroutine does not return */\n  AfxThrowFileException(1,-1,(wchar_t *)0x0);\n}\n\n"
+        },
+        "0x4bb20bf0": {
+          "end": "0x4bb20c76",
+          "native_bytes": "48895c2408488974241048897c241841564883ec20488bf9488bda488bcaff15dcdb2101488bcb85c074228b17ff15bddd21018b5704488bcbff15b1dd21018b5708488bcbff15a5dd2101eb23488bd7ff15a2dd2101488d5704488bcbff1595dd2101488d5708488bcbff1588dd2101488b5c2430488b742438488b7c24404883c420415ec3",
+          "sha256": "099c4d9ad4e61fff56c9ec69fbb7bb04d4bf67587df5142bc261e87b34ab55e1",
+          "decompilation": "\nvoid FUN_4bb20bf0(ulong *param_1,su_CArchive *param_2)\n\n{\n  int iVar1;\n  \n  iVar1 = su_CArchive::IsStoring(param_2);\n  if (iVar1 == 0) {\n    su_CArchive::operator>>(param_2,param_1);\n    su_CArchive::operator>>(param_2,param_1 + 1);\n    su_CArchive::operator>>(param_2,param_1 + 2);\n  }\n  else {\n    su_CArchive::operator<<(param_2,*param_1);\n    su_CArchive::operator<<(param_2,param_1[1]);\n    su_CArchive::operator<<(param_2,param_1[2]);\n  }\n  return;\n}\n\n"
+        },
+        "0x4bba8750": {
+          "end": "0x4bba87a4",
+          "native_bytes": "40534883ec20b950000000ff15cf601901488bd848894424304885c0742e488bc8e87acdeeff90488d05d2f5350148890348c74348ffffffff488d0540003601488903488bc34883c4205bc333c04883c4205bc3",
+          "sha256": "f6b1f2a1e4a14abcee954a46731e3e7b2ea7b47989b4142ed2f3c9cb9c5bd2a3",
+          "decompilation": "\nundefined8 * FUN_4bba8750(void)\n\n{\n  undefined8 *puVar1;\n  \n  puVar1 = su_CObject::operator_new(0x50);\n  if (puVar1 != (undefined8 *)0x0) {\n    FUN_4ba954f0(puVar1);\n    *puVar1 = moRef2EdgeIdRep_c::vftable;\n    puVar1[9] = 0xffffffffffffffff;\n    *puVar1 = moPLineSilhIdRep_c::vftable;\n    return puVar1;\n  }\n  return (undefined8 *)0x0;\n}\n\n"
+        },
+        "0x4ba954f0": {
+          "end": "0x4ba95552",
+          "native_bytes": "48894c2408534883ec20488bd9ff1545332a0190488d05252d3801488903488d4b1033d2e8f7b40d0090c74328ffffffff33c04889433048894308488d059e2f3801488903488d0594084701488903488d4b38e8f85ac30090488bc34883c4205bc3",
+          "sha256": "03b1385960a4bb2694e1c8e12fed6cb0d8783ef561a552cdb92cf77dc05d1f59",
+          "decompilation": "\ngcEntityIdRep_c * FUN_4ba954f0(gcEntityIdRep_c *param_1)\n\n{\n  gcEntityIdRep_c::gcEntityIdRep_c(param_1);\n  *(undefined ***)param_1 = moEntityIdRep_c::vftable;\n  FUN_4bb70a10(param_1 + 0x10,0);\n  *(undefined4 *)(param_1 + 0x28) = 0xffffffff;\n  *(undefined8 *)(param_1 + 0x30) = 0;\n  *(undefined8 *)(param_1 + 8) = 0;\n  *(undefined ***)param_1 = moEdgeIdRep_c::vftable;\n  *(undefined ***)param_1 = moRefEdgeIdRep_c::vftable;\n  moEntityId_c::moEntityId_c((moEntityId_c *)(param_1 + 0x38));\n  return param_1;\n}\n\n"
+        },
+        "0x4c6cb040": {
+          "end": "0x4c6cb079",
+          "native_bytes": "48894c2408534883ec20488bd9ff15cd37670090488d059502b300488903488d051b03b30048890348c7430800000000488bc34883c4205bc3",
+          "sha256": "d55276457f260cc3866ef0e1b78bc204e5e30a4d1ed29b2813f54c3e13396a67",
+          "decompilation": "\n/* public: __cdecl moEntityId_c::moEntityId_c(void) __ptr64 */\n\nmoEntityId_c * __thiscall moEntityId_c::moEntityId_c(moEntityId_c *this)\n\n{\n                    /* 0x156b040  1274  ??0moEntityId_c@@QEAA@XZ */\n  su_CObject::su_CObject((su_CObject *)this);\n  *(undefined ***)this = gcEntityId_c::vftable;\n  *(undefined ***)this = vftable;\n  *(undefined8 *)(this + 8) = 0;\n  return this;\n}\n\n"
+        },
+        "0x4bb32140": {
+          "end": "0x4bb322e3",
+          "native_bytes": "48895c2408574883ec30488bd9488bfa488d4c2420ff15352b2001488bd7488bcbe88a010000488bcfff1581c62001488bcf85c0743dff157cc62001488b93e80800004c8d05561cfa01488bcf85c07411ff1559c72001488b5c24404883c4305fc3ff1570c62001488b5c24404883c4305fc3ff153fc62001488d15201cfa01488bcf85c07408ff152bc72001eb06ff153bc62001488983e8080000488b4424204885c00f84e60000008b808007000085c0750cff15a62a2001ff15982a20013d4c0100007290488b03488bcbff90b81e0000488b8be80800004533c94533c0488bd3488b4908e8c4de0000488b83e8080000488b48104885c9740e4533c94533c0488bd3e8a6de0000488b8be8080000e84a2b77ff488bf84885c00f8435ffffff488b4c24204885c974648b818007000085c07511ff15242a2001ff15162a2001488b4c24203dbd01000072264885c9743d8b818007000085c0750cff15fd292001ff15ef2920013dda0100000f82e3feffff4533c94533c0488bd3488bcfe82bde0000488b5c24404883c4305fc34533c0baffffffffb901000000e891100701cc",
+          "sha256": "7efe86b6827066bcca230898bcc415596edf0934ad5a44447b4ea4491715aae1",
+          "decompilation": "\nvoid FUN_4bb32140(moFeature_c *param_1,su_CArchive *param_2)\n\n{\n  int iVar1;\n  uint uVar2;\n  CObject *pCVar3;\n  moRefWrapper_c *this;\n  longlong local_18 [2];\n  \n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_18,param_2);\n  FUN_4bb322f0(param_1,param_2);\n  iVar1 = su_CArchive::IsStoring(param_2);\n  if (iVar1 == 0) {\n    iVar1 = su_CArchive::IsDBStream(param_2);\n    if (iVar1 == 0) {\n      pCVar3 = su_CArchive::ReadObject(param_2,(CRuntimeClass *)&moThinSpec_c::classmoThinSpec_c);\n    }\n    else {\n      pCVar3 = su_CDBArchive::ReadObject\n                         ((su_CDBArchive *)param_2,(CRuntimeClass *)&moThinSpec_c::classmoThinSpec_c\n                         );\n    }\n    *(CObject **)(param_1 + 0x8e8) = pCVar3;\n    if (local_18[0] == 0) goto LAB_4bb322d0;\n    uVar2 = *(uint *)(local_18[0] + 0x780);\n    if (uVar2 == 0) {\n      moVersionManager_c::get();\n      uVar2 = moVersionManager_c::getCurrentFileVerion();\n    }\n    if (0x14b < uVar2) {\n      (**(code **)(*(longlong *)param_1 + 0x1eb8))(param_1);\n      moDisplayDim_c::safeSetFeatureOwner\n                (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x8e8) + 8),param_1,(moFeature_c *)0x0\n                 ,(moComponent_c *)0x0);\n      if (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x8e8) + 0x10) != (moDisplayDim_c *)0x0) {\n        moDisplayDim_c::safeSetFeatureOwner\n                  (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x8e8) + 0x10),param_1,\n                   (moFeature_c *)0x0,(moComponent_c *)0x0);\n      }\n      this = moMirrorCompFeatData_c::getAlignmentReference\n                       (*(moMirrorCompFeatData_c **)(param_1 + 0x8e8));\n      if (this != (moRefWrapper_c *)0x0) {\n        if (local_18[0] == 0) {\nLAB_4bb322d0:\n                    /* WARNING: Subroutine does not return */\n          AfxThrowFileException(1,-1,(wchar_t *)0x0);\n        }\n        uVar2 = *(uint *)(local_18[0] + 0x780);\n        if (uVar2 == 0) {\n          moVersionManager_c::get();\n          uVar2 = moVersionManager_c::getCurrentFileVerion();\n        }\n        if (0x1bc < uVar2) {\n          if (local_18[0] == 0) goto LAB_4bb322d0;\n          uVar2 = *(uint *)(local_18[0] + 0x780);\n          if (uVar2 == 0) {\n            moVersionManager_c::get();\n            uVar2 = moVersionManager_c::getCurrentFileVerion();\n          }\n          if (uVar2 < 0x1da) {\n            return;\n          }\n        }\n        moDisplayDim_c::safeSetFeatureOwner\n                  ((moDisplayDim_c *)this,param_1,(moFeature_c *)0x0,(moComponent_c *)0x0);\n        return;\n      }\n    }\n  }\n  else {\n    iVar1 = su_CArchive::IsDBStream(param_2);\n    if (iVar1 == 0) {\n      su_CArchive::WriteObject\n                (param_2,*(CObject **)(param_1 + 0x8e8),\n                 (CRuntimeClass *)&moThinSpec_c::classmoThinSpec_c);\n      return;\n    }\n    su_CDBArchive::WriteObject\n              ((su_CDBArchive *)param_2,*(CObject **)(param_1 + 0x8e8),\n               (CRuntimeClass *)&moThinSpec_c::classmoThinSpec_c);\n  }\n  return;\n}\n\n"
+        },
+        "0x4bb322f0": {
+          "end": "0x4bb32451",
+          "native_bytes": "40555356574154488bec4883ec40488bd9488bfa488d4de0ff1582292001488bd7488bcbe887ecfeff488bcfff15cec42001488d9300080000488bcf85c00f841d010000e817f1cf000fb6931c080000488bcfff1577c6200183bb1808000002488bcf7509488d9308080000eb0a33f6488d554048897540e8e3f0cf008b9318080000488bcfff1584c42001ba01000000488d4de0ff15151f200185c0740d488b45e083b834080000007410488d9310080000488bcfff154c2820018b9320080000488bcfff1545c420018b9368080000488bcfff1536c42001488d9328080000488bcfe8a7447400488bcfff1516c42001488b93d00800004c8d05000afa01488bcf85c07408ff15f3c42001eb06ff1513c42001488b45e04885c00f84250400008b808007000085c0750cff157e282001ff15702820013d053f00000f82e603000083bbe008000000488bcf0f95c2ff157ac520014883c440415c5f5e5b5dc3",
+          "sha256": "21d65d11c4d4aeae9cf579cf99bdb274601a91127cb7fd8f193500ffd4e41e97",
+          "decompilation": "\n/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */\n\nvoid FUN_4bb322f0(moBodyFeature_c *param_1,su_CArchive *param_2)\n\n{\n  longlong *plVar1;\n  double dVar2;\n  int iVar3;\n  uint uVar4;\n  CRuntimeClass *pCVar5;\n  su_CArchive *this;\n  moBodyFeature_c *pmVar6;\n  double dVar7;\n  undefined4 uVar8;\n  CObject *local_res18;\n  byte local_res20 [8];\n  longlong local_48 [4];\n  \n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_48,param_2);\n  moBodyFeature_c::Serialize(param_1,param_2);\n  iVar3 = su_CArchive::IsStoring(param_2);\n  if (iVar3 != 0) {\n    operator<<(param_2,(moDisplayDim_c **)(param_1 + 0x800));\n    su_CArchive::operator<<(param_2,(uchar)param_1[0x81c]);\n    if (*(int *)(param_1 + 0x818) == 2) {\n      pmVar6 = param_1 + 0x808;\n    }\n    else {\n      pmVar6 = (moBodyFeature_c *)&local_res18;\n      local_res18 = (CObject *)0x0;\n    }\n    operator<<(param_2,(moDisplayDim_c **)pmVar6);\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x818));\n    iVar3 = moArchiveHelper_c::hasCondition((moArchiveHelper_c *)local_48,1);\n    if ((iVar3 == 0) || (*(int *)(local_48[0] + 0x834) != 0)) {\n      operator<<(param_2,(suObList **)(param_1 + 0x810));\n    }\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x820));\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x868));\n    operator<<(param_2,(moLineRef_w **)(param_1 + 0x828));\n    iVar3 = su_CArchive::IsDBStream(param_2);\n    if (iVar3 == 0) {\n      su_CArchive::WriteObject\n                (param_2,*(CObject **)(param_1 + 0x8d0),\n                 (CRuntimeClass *)&moRevEndSpec_c::classmoRevEndSpec_c);\n    }\n    else {\n      su_CDBArchive::WriteObject\n                ((su_CDBArchive *)param_2,*(CObject **)(param_1 + 0x8d0),\n                 (CRuntimeClass *)&moRevEndSpec_c::classmoRevEndSpec_c);\n    }\n    if (local_48[0] != 0) {\n      uVar4 = *(uint *)(local_48[0] + 0x780);\n      if (uVar4 == 0) {\n        moVersionManager_c::get();\n        uVar4 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (uVar4 < 0x3f05) {\n        return;\n      }\n      su_CArchive::operator<<(param_2,*(int *)(param_1 + 0x8e0) != 0);\n      return;\n    }\n                    /* WARNING: Subroutine does not return */\n    AfxThrowFileException(1,-1,(wchar_t *)0x0);\n  }\n  operator>>(param_2,(moDisplayDim_c **)(param_1 + 0x800));\n  su_CArchive::operator>>(param_2,local_res20);\n  *(uint *)(param_1 + 0x81c) = (uint)local_res20[0];\n  if (local_48[0] == 0) goto LAB_4bb32824;\n  uVar4 = *(uint *)(local_48[0] + 0x780);\n  if (uVar4 == 0) {\n    moVersionManager_c::get();\n    uVar4 = moVersionManager_c::getCurrentFileVerion();\n  }\n  if (uVar4 < 0x15c) {\n    *(undefined4 *)(param_1 + 0x818) = 0;\nLAB_4bb324dd:\n    *(undefined8 *)(param_1 + 0x808) = 0;\n  }\n  else {\n    operator>>(param_2,(moDisplayDim_c **)(param_1 + 0x808));\n    su_CArchive::operator>>(param_2,(long *)(param_1 + 0x818));\n    iVar3 = gcBody_w::s_Prj13932Enabled();\n    if ((iVar3 == 0) && (*(uint *)(param_1 + 0x818) < 2)) goto LAB_4bb324dd;\n  }\n  if (local_48[0] == 0) goto LAB_4bb32824;\n  uVar4 = *(uint *)(local_48[0] + 0x780);\n  if (uVar4 == 0) {\n    moVersionManager_c::get();\n    uVar4 = moVersionManager_c::getCurrentFileVerion();\n  }\n  if ((uVar4 < 0x186) ||\n     ((iVar3 = moArchiveHelper_c::hasCondition((moArchiveHelper_c *)local_48,1), iVar3 != 0 &&\n      (*(int *)(local_48[0] + 0x834) == 0)))) {\n    *(undefined8 *)(param_1 + 0x810) = 0;\n  }\n  else {\n    operator>>(param_2,(suObList **)(param_1 + 0x810));\n  }\n  if (local_48[0] == 0) goto LAB_4bb32824;\n  uVar4 = *(uint *)(local_48[0] + 0x780);\n  if (uVar4 == 0) {\n    moVersionManager_c::get();\n    uVar4 = moVersionManager_c::getCurrentFileVerion();\n  }\n  if (0x1cb < uVar4) {\n    su_CArchive::operator>>(param_2,(long *)(param_1 + 0x820));\n  }\n  if (local_48[0] == 0) goto LAB_4bb32824;\n  uVar4 = *(uint *)(local_48[0] + 0x780);\n  if (uVar4 == 0) {\n    moVersionManager_c::get();\n    uVar4 = moVersionManager_c::getCurrentFileVerion();\n  }\n  dVar2 = DAT_4cdffa90;\n  if (uVar4 < 0x26c) {\n    plVar1 = *(longlong **)(param_1 + 0x800);\n    uVar8 = SUB84(DAT_4cdffa90,0);\n    if ((plVar1 != (longlong *)0x0) &&\n       (dVar7 = (double)(**(code **)(*plVar1 + 0x868))(plVar1,0), dVar7 = dVar7 - dVar2,\n       (double)CONCAT44((uint)((ulonglong)dVar7 >> 0x20) & _UNK_4cd9b134,\n                        SUB84(dVar7,0) & _DAT_4cd9b130) <= DAT_4cd9f028)) {\n      (**(code **)(**(longlong **)(param_1 + 0x800) + 0x860))\n                (*(longlong **)(param_1 + 0x800),uVar8,1,0);\n    }\n    plVar1 = *(longlong **)(param_1 + 0x808);\n    if ((plVar1 != (longlong *)0x0) &&\n       (dVar7 = (double)(**(code **)(*plVar1 + 0x868))(plVar1,0), dVar7 = dVar7 - dVar2,\n       (double)CONCAT44((uint)((ulonglong)dVar7 >> 0x20) & _UNK_4cd9b134,\n                        SUB84(dVar7,0) & _DAT_4cd9b130) <= DAT_4cd9f028)) {\n      (**(code **)(**(longlong **)(param_1 + 0x808) + 0x860))\n                (*(longlong **)(param_1 + 0x808),uVar8,1,0);\n    }\n  }\n  if (local_48[0] == 0) goto LAB_4bb32824;\n  uVar4 = *(uint *)(local_48[0] + 0x780);\n  if (uVar4 == 0) {\n    moVersionManager_c::get();\n    uVar4 = moVersionManager_c::getCurrentFileVerion();\n  }\n  if (0x7de < uVar4) {\n    su_CArchive::operator>>(param_2,(long *)(param_1 + 0x868));\n  }\n  if (local_48[0] == 0) goto LAB_4bb32824;\n  uVar4 = *(uint *)(local_48[0] + 0x780);\n  if (uVar4 == 0) {\n    moVersionManager_c::get();\n    uVar4 = moVersionManager_c::getCurrentFileVerion();\n  }\n  if (0x8de < uVar4) {\n    *(undefined8 *)(param_1 + 0x828) = 0;\n    local_res18 = (CObject *)0x0;\n    this = param_2;\n    operator>>(param_2,&local_res18);\n    if (local_res18 != (CObject *)0x0) {\n      pCVar5 = moLineRef_w::GetRuntimeClass((moLineRef_w *)this);\n      iVar3 = CObject::IsKindOf(local_res18,pCVar5);\n      if (iVar3 == 0) {\n                    /* WARNING: Subroutine does not return */\n        AfxThrowFileException(1,-1,(wchar_t *)0x0);\n      }\n      *(CObject **)(param_1 + 0x828) = local_res18;\n    }\n  }\n  if (local_48[0] == 0) goto LAB_4bb32824;\n  uVar4 = *(uint *)(local_48[0] + 0x780);\n  if (uVar4 == 0) {\n    moVersionManager_c::get();\n    uVar4 = moVersionManager_c::getCurrentFileVerion();\n  }\n  if (uVar4 < 0x10a4) {\nLAB_4bb32780:\n    if (local_48[0] == 0) goto LAB_4bb32824;\n    uVar4 = *(uint *)(local_48[0] + 0x780);\n    if (uVar4 == 0) {\n      moVersionManager_c::get();\n      uVar4 = moVersionManager_c::getCurrentFileVerion();\n    }\n    if (0x1173 < uVar4) {\n      operator>>(param_2,(moRevEndSpec_c **)(param_1 + 0x8d0));\n    }\n  }\n  else {\n    if (local_48[0] == 0) goto LAB_4bb32824;\n    uVar4 = *(uint *)(local_48[0] + 0x780);\n    if (uVar4 == 0) {\n      moVersionManager_c::get();\n      uVar4 = moVersionManager_c::getCurrentFileVerion();\n    }\n    if (0x10c7 < uVar4) goto LAB_4bb32780;\n    operator>>(param_2,(moRevEndSpec_c **)(param_1 + 0x8d0));\n    su_CArchive::operator>>(param_2,(long *)(param_1 + 0x8d8));\n    su_CArchive::operator>>(param_2,(long *)(param_1 + 0x8dc));\n  }\n  if (local_48[0] != 0) {\n    uVar4 = *(uint *)(local_48[0] + 0x780);\n    if (uVar4 == 0) {\n      moVersionManager_c::get();\n      uVar4 = moVersionManager_c::getCurrentFileVerion();\n    }\n    if (0x3f04 < uVar4) {\n      local_res18 = (CObject *)((ulonglong)local_res18 & 0xffffffffffffff00);\n      su_CArchive::operator>>(param_2,(uchar *)&local_res18);\n      *(uint *)(param_1 + 0x8e0) = (uint)(local_res18._0_1_ != (moBodyFeature_c)0x0);\n    }\n    (**(code **)(*(longlong *)param_1 + 0x1eb8))(param_1);\n    *(undefined4 *)(param_1 + 0x730) = 1;\n    return;\n  }\nLAB_4bb32824:\n                    /* WARNING: Subroutine does not return */\n  AfxThrowFileException(1,-1,(wchar_t *)0x0);\n}\n\n"
+        }
+      },
+      "thin_layout_hooks": {
+        "moRevolutionThin_c": {
+          "0x4b8": "0x4c189b60",
+          "0x4c0": "0x4c18a920"
+        },
+        "moBossThin_c": {
+          "0x4b8": "0x4c189b60",
+          "0x4c0": "0x4c18a920"
+        },
+        "moExtruThin_c": {
+          "0x4b8": "0x4c189b60",
+          "0x4c0": "0x4c18a920"
+        }
+      },
+      "embedded_entity_id": {
+        "constructor": "0x4c6cb040",
+        "member": "0x38",
+        "primary_vtable": "0x4d1fb380",
+        "slot_bytes": "90c3bb4b00000000",
+        "serializer": "0x4bbbc390",
+        "framing": "Direct entity-ID body with tagged representation; no separate identity object-map slot"
+      },
+      "silhouette_factory": {
+        "descriptor_va": "0x4dad6d90",
+        "descriptor_bytes": "d898f64c0000000050000000010000805087ba4b000000000083ba4b000000000000000000000000",
+        "creator": "0x4bba8750"
+      },
+      "limitations": [
+        "Ordinary non-DB external-XML version >27CB only",
+        "Thin extrusion requires the supported nonnull moThinSpec_c pointer",
+        "Raw option/selector meanings and dimension engineering validity remain partial",
+        "Bend triples preserve stored u32 values without interpreting runtime geometry",
+        "Pdata may describe fragments; full module hash binds out-of-line code",
+        "No complete document/project bit coverage claim"
+      ]
+    }
+  },
+  "thin-cut-composite-native-evidence": {
+    "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\thin-cut-composite-native-evidence.json",
+    "source_sha256": "a3860889670287d381cdfb3b5e286bce91013db2657c5e04e3da731e3f0fe263",
+    "evidence": {
+      "modules": [
+        {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+          "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c"
+        }
+      ],
+      "bindings": [
+        {
+          "module": "sldmodu.dll",
+          "class_name": "moCutThin_c",
+          "vtable": "0x4cf4a7a8",
+          "serializer": "0x4bb24dc0",
+          "ancestry": [
+            ".?AVmoCutThin_c@@",
+            ".?AVmoExtruThin_c@@",
+            ".?AVmoExtrusion_c@@",
+            ".?AVmoSingleSketchFeature_c@@",
+            ".?AVmoSketchedFeature_c@@",
+            ".?AVmoBodyFeature_c@@",
+            ".?AVmoAtomFeature_c@@",
+            ".?AVmoModelFeature_c@@",
+            ".?AVmoFeature_c@@",
+            ".?AVmoConcept_c@@",
+            ".?AVmoLoggedNode_c@@",
+            ".?AVmoNode_c@@",
+            ".?AVsu_CObject@@",
+            ".?AVCObject@@",
+            ".?AVutDisplayedEntity_c@@"
+          ],
+          "hooks": {
+            "0x4b8": "0x4c189b60",
+            "0x4c0": "0x4c18a920"
+          }
+        },
+        {
+          "module": "sldmodu.dll",
+          "class_name": "moCompositeCurve_c",
+          "vtable": "0x4d2e6cf0",
+          "serializer": "0x4cb76330",
+          "ancestry": [
+            ".?AVmoCompositeCurve_c@@",
+            ".?AVmoReferenceCurve_c@@",
+            ".?AVmoRefGeom_c@@",
+            ".?AVmoAtomFeature_c@@",
+            ".?AVmoModelFeature_c@@",
+            ".?AVmoFeature_c@@",
+            ".?AVmoConcept_c@@",
+            ".?AVmoLoggedNode_c@@",
+            ".?AVmoNode_c@@",
+            ".?AVsu_CObject@@",
+            ".?AVCObject@@",
+            ".?AVutDisplayedEntity_c@@"
+          ]
+        }
+      ],
+      "functions": {
+        "0x4bb24dc0": {
+          "module": "sldmodu.dll",
+          "end": "0x4bb2517d",
+          "native_bytes": "48895c240848896c241056574154415641574883ec40488bda4c8bf1488d4c2430ff15a9fe2001488bd3498bcee88e030000488bcbff15f5992101488bcb85c00f84a1000000ff15ec992101498b96600800004c8d05c6effa01488bcb85c07408ff15c99a2101eb06ff15e999210133ff0fb7f7498b8e580800004885c97415488b49084885c975048bf7eb08ff15756821018bf00fb7d6488bcbff156f9f2101663bfe732a0fb7f60f1f8000000000498b8658080000488b48084803cf488bd3e86abdffff4883c70c4883ee0175e0488b5c2470488b6c24784883c440415f415e415c5f5ec3ff154b992101488d152ceffa01488bcb85c07408ff15379a2101eb06ff154799210149898660080000488b4424304885c00f848c0200008b888007000085c97513ff15b2fd2001ff15a4fd20018bc8488b44243081f9db0100000f827601000033ff6689bc2480000000488d942480000000488bcbff15b69e21010fb78424800000006685c07439b910000000e81ce4070148898424880000004885c07410488d0dd3cd420148890848897808eb03488bc7498986580800000fb78424800000008bef663bf80f8305010000488d4c2420e8231bfcff488bcbff156a982101488bcb85c074268b542420ff15499a21018b542424488bcbff153c9a21018b542428488bcbff152f9a2101eb27488d542420ff152a9a2101488d542424488bcbff151c9a2101488d542428488bcbff150e9a2101498bb658080000488b46084885c07520ba10000000b90800000041b90c00000041b801000000ff150a69210148894608488d542420488bc8ff150069210148894608488b0e4c8b214885c075048bc7eb09488bc8ff1594662101448d78ff488b4e084885c975048bc7eb06ff157d6621018d50ff458bc7488bce41ffd4488b4e084885c97406ff1562662101ffc50fb78424800000003be80f8cfbfeffff488b4424304885c00f84e40000008b808007000085c0750cff150afc2001ff15fcfb20013d4c0100000f82e9fdffff498b06498bceff90b81e0000498b8e600800004533c94533c0498bd6488b4908e824b00100498b8660080000488b48104885c9740e4533c94533c0498bd6e806b00100498b8e60080000e8aafc77ff488bd84885c00f848efdffff488b4c24304885c9745e8b818007000085c07511ff1584fb2001ff1576fb2001488b4c24303dbd01000072264885c974378b818007000085c0750cff155dfb2001ff154ffb20013dda0100000f823cfdffff4533c94533c0498bd6488bcbe88baf0100e926fdffff4533c0baffffffffb901000000e8f7e10701cc",
+          "sha256": "a5a65aff02d3e715ec7636b81061a68ef0eb032976514bd75c8afc38a3637a80",
+          "imports": [
+            {
+              "address": "0x4bb24de1",
+              "iat": "0x4cd34c90",
+              "module": "SLDMFCU.dll",
+              "symbol": "??0moArchiveHelper_c@@QEAA@PEAVsu_CArchive@@@Z"
+            },
+            {
+              "address": "0x4bb24df5",
+              "iat": "0x4cd3e7f0",
+              "module": "swccu.dll",
+              "symbol": "?IsStoring@su_CArchive@@QEBAHXZ"
+            },
+            {
+              "address": "0x4bb24e06",
+              "iat": "0x4cd3e7f8",
+              "module": "swccu.dll",
+              "symbol": "?IsDBStream@su_CArchive@@QEBAHXZ"
+            },
+            {
+              "address": "0x4bb24e21",
+              "iat": "0x4cd3e8f0",
+              "module": "swccu.dll",
+              "symbol": "?WriteObject@su_CDBArchive@@QEAAXPEBVCObject@@PEBUCRuntimeClass@@@Z"
+            },
+            {
+              "address": "0x4bb24e29",
+              "iat": "0x4cd3e818",
+              "module": "swccu.dll",
+              "symbol": "?WriteObject@su_CArchive@@QEAAXPEBVCObject@@PEBUCRuntimeClass@@@Z"
+            },
+            {
+              "address": "0x4bb24e4d",
+              "iat": "0x4cd3b6c8",
+              "module": "sldmgu.dll",
+              "symbol": "amDynamicArrayCount"
+            },
+            {
+              "address": "0x4bb24e5b",
+              "iat": "0x4cd3edd0",
+              "module": "swccu.dll",
+              "symbol": "??6su_CArchive@@QEAAAEAV0@G@Z"
+            },
+            {
+              "address": "0x4bb24ea7",
+              "iat": "0x4cd3e7f8",
+              "module": "swccu.dll",
+              "symbol": "?IsDBStream@su_CArchive@@QEBAHXZ"
+            },
+            {
+              "address": "0x4bb24ebb",
+              "iat": "0x4cd3e8f8",
+              "module": "swccu.dll",
+              "symbol": "?ReadObject@su_CDBArchive@@QEAAPEAVCObject@@PEAUCRuntimeClass@@@Z"
+            },
+            {
+              "address": "0x4bb24ec3",
+              "iat": "0x4cd3e810",
+              "module": "swccu.dll",
+              "symbol": "?ReadObject@su_CArchive@@QEAAPEAVCObject@@PEBUCRuntimeClass@@@Z"
+            },
+            {
+              "address": "0x4bb24ee8",
+              "iat": "0x4cd34ca0",
+              "module": "SLDMFCU.dll",
+              "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+            },
+            {
+              "address": "0x4bb24eee",
+              "iat": "0x4cd34c98",
+              "module": "SLDMFCU.dll",
+              "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+            },
+            {
+              "address": "0x4bb24f1c",
+              "iat": "0x4cd3edd8",
+              "module": "swccu.dll",
+              "symbol": "??5su_CArchive@@QEAAAEAV0@AEAG@Z"
+            },
+            {
+              "address": "0x4bb24f34",
+              "iat": "0x4cd35ec0",
+              "module": "mfc140u.dll",
+              "symbol": "ordinal:1489"
+            },
+            {
+              "address": "0x4bb24f80",
+              "iat": "0x4cd3e7f0",
+              "module": "swccu.dll",
+              "symbol": "?IsStoring@su_CArchive@@QEBAHXZ"
+            },
+            {
+              "address": "0x4bb24f91",
+              "iat": "0x4cd3e9e0",
+              "module": "swccu.dll",
+              "symbol": "??6su_CArchive@@QEAAAEAV0@K@Z"
+            },
+            {
+              "address": "0x4bb24f9e",
+              "iat": "0x4cd3e9e0",
+              "module": "swccu.dll",
+              "symbol": "??6su_CArchive@@QEAAAEAV0@K@Z"
+            },
+            {
+              "address": "0x4bb24fab",
+              "iat": "0x4cd3e9e0",
+              "module": "swccu.dll",
+              "symbol": "??6su_CArchive@@QEAAAEAV0@K@Z"
+            },
+            {
+              "address": "0x4bb24fb8",
+              "iat": "0x4cd3e9e8",
+              "module": "swccu.dll",
+              "symbol": "??5su_CArchive@@QEAAAEAV0@AEAK@Z"
+            },
+            {
+              "address": "0x4bb24fc6",
+              "iat": "0x4cd3e9e8",
+              "module": "swccu.dll",
+              "symbol": "??5su_CArchive@@QEAAAEAV0@AEAK@Z"
+            },
+            {
+              "address": "0x4bb24fd4",
+              "iat": "0x4cd3e9e8",
+              "module": "swccu.dll",
+              "symbol": "??5su_CArchive@@QEAAAEAV0@AEAK@Z"
+            },
+            {
+              "address": "0x4bb25000",
+              "iat": "0x4cd3b910",
+              "module": "sldmgu.dll",
+              "symbol": "suDynArrayAlloc"
+            },
+            {
+              "address": "0x4bb25012",
+              "iat": "0x4cd3b918",
+              "module": "sldmgu.dll",
+              "symbol": "amDynamicArrayAdd"
+            },
+            {
+              "address": "0x4bb2502e",
+              "iat": "0x4cd3b6c8",
+              "module": "sldmgu.dll",
+              "symbol": "amDynamicArrayCount"
+            },
+            {
+              "address": "0x4bb25045",
+              "iat": "0x4cd3b6c8",
+              "module": "sldmgu.dll",
+              "symbol": "amDynamicArrayCount"
+            },
+            {
+              "address": "0x4bb25060",
+              "iat": "0x4cd3b6c8",
+              "module": "sldmgu.dll",
+              "symbol": "amDynamicArrayCount"
+            },
+            {
+              "address": "0x4bb25090",
+              "iat": "0x4cd34ca0",
+              "module": "SLDMFCU.dll",
+              "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+            },
+            {
+              "address": "0x4bb25096",
+              "iat": "0x4cd34c98",
+              "module": "SLDMFCU.dll",
+              "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+            },
+            {
+              "address": "0x4bb25116",
+              "iat": "0x4cd34ca0",
+              "module": "SLDMFCU.dll",
+              "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+            },
+            {
+              "address": "0x4bb2511c",
+              "iat": "0x4cd34c98",
+              "module": "SLDMFCU.dll",
+              "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+            },
+            {
+              "address": "0x4bb2513d",
+              "iat": "0x4cd34ca0",
+              "module": "SLDMFCU.dll",
+              "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+            },
+            {
+              "address": "0x4bb25143",
+              "iat": "0x4cd34c98",
+              "module": "SLDMFCU.dll",
+              "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+            },
+            {
+              "address": "0x4bb25177",
+              "iat": "0x4cd35e98",
+              "module": "mfc140u.dll",
+              "symbol": "ordinal:2342"
+            }
+          ]
+        },
+        "0x4cb75eb0": {
+          "module": "sldmodu.dll",
+          "end": "0x4cb75fd3",
+          "native_bytes": "48894c24085355565741564883ec20488bea488bf9e8b67b75ff90488d051e0e7700488907488d05842f770048898788000000488d9f8807000048895c2458488bcbff1590891c0090488d3520782100488933488d8fa8070000ff15888c1c0090488d8fc8070000ff157a8c1c0090488d8fe8070000ff156c8c1c0090488d8f08080000ff155e8c1c009048c787180700000000000048c7871007000000000000c7878007000001000000b920000000ff15ca881c00488bd848894424604885c0740f488bc8ff150c891c0090488933eb0233db48899f7807000033f64c6375104d85f67e2f33db4885db780f3b75107d0a488b4508488b14d8eb0233d2488b8f78070000ff1535ed1b00ffc648ffc3493bde7cd3488bc74883c420415e5f5e5d5bc3",
+          "sha256": "857cf36de44b4b548071e85f5af480da18fd837519ebfc5e5b54895257db3890",
+          "imports": [
+            {
+              "address": "0x4cb75ef2",
+              "iat": "0x4cd3e888",
+              "module": "swccu.dll",
+              "symbol": "??0su_CObArray@@QEAA@XZ"
+            },
+            {
+              "address": "0x4cb75f0a",
+              "iat": "0x4cd3eb98",
+              "module": "swccu.dll",
+              "symbol": "??0su_CDWordArray@@QEAA@XZ"
+            },
+            {
+              "address": "0x4cb75f18",
+              "iat": "0x4cd3eb98",
+              "module": "swccu.dll",
+              "symbol": "??0su_CDWordArray@@QEAA@XZ"
+            },
+            {
+              "address": "0x4cb75f26",
+              "iat": "0x4cd3eb98",
+              "module": "swccu.dll",
+              "symbol": "??0su_CDWordArray@@QEAA@XZ"
+            },
+            {
+              "address": "0x4cb75f34",
+              "iat": "0x4cd3eb98",
+              "module": "swccu.dll",
+              "symbol": "??0su_CDWordArray@@QEAA@XZ"
+            },
+            {
+              "address": "0x4cb75f60",
+              "iat": "0x4cd3e830",
+              "module": "swccu.dll",
+              "symbol": "??2su_CObject@@SAPEAX_K@Z"
+            },
+            {
+              "address": "0x4cb75f76",
+              "iat": "0x4cd3e888",
+              "module": "swccu.dll",
+              "symbol": "??0su_CObArray@@QEAA@XZ"
+            },
+            {
+              "address": "0x4cb75fb5",
+              "iat": "0x4cd34cf0",
+              "module": "SLDMFCU.dll",
+              "symbol": "?addUnique@suObArray@@QEAAHPEAVCObject@@@Z"
+            }
+          ]
+        },
+        "0x4cb75fe0": {
+          "module": "sldmodu.dll",
+          "end": "0x4cb76097",
+          "native_bytes": "48895c241848894c2408574883ec20488bf9e8897a75ff90488d05f10c7700488907488d05572e770048898788000000488d9f8807000048895c2438488bcbff1563881c0090488d05f3762100488903488d8fa8070000ff155b8b1c0090488d8fc8070000ff154d8b1c0090488d8fe8070000ff153f8b1c0090488d8f08080000ff15318b1c009033c0488987180700004889877807000048898710070000c7878007000001000000488bc7488b5c24404883c4205fc3",
+          "sha256": "a2f8cc563ad8bea2a0e5f7ba7274884442de22200b02216b8dbddbb9b6abbe5f",
+          "imports": [
+            {
+              "address": "0x4cb7601f",
+              "iat": "0x4cd3e888",
+              "module": "swccu.dll",
+              "symbol": "??0su_CObArray@@QEAA@XZ"
+            },
+            {
+              "address": "0x4cb76037",
+              "iat": "0x4cd3eb98",
+              "module": "swccu.dll",
+              "symbol": "??0su_CDWordArray@@QEAA@XZ"
+            },
+            {
+              "address": "0x4cb76045",
+              "iat": "0x4cd3eb98",
+              "module": "swccu.dll",
+              "symbol": "??0su_CDWordArray@@QEAA@XZ"
+            },
+            {
+              "address": "0x4cb76053",
+              "iat": "0x4cd3eb98",
+              "module": "swccu.dll",
+              "symbol": "??0su_CDWordArray@@QEAA@XZ"
+            },
+            {
+              "address": "0x4cb76061",
+              "iat": "0x4cd3eb98",
+              "module": "swccu.dll",
+              "symbol": "??0su_CDWordArray@@QEAA@XZ"
+            }
+          ]
+        },
+        "0x4cb76330": {
+          "module": "sldmodu.dll",
+          "end": "0x4cb7641e",
+          "native_bytes": "48895c24084889742410574883ec30488bf9488bda488d4c2420ff1540e91b00488bd3488bcfe8c5ea70ff488bcbff158c841c00488bcb85c0741e8b9780070000ff1589841c00488d9778070000488bcbff15c9e11b00eb35488d9780070000ff1572841c00488d54245048c744245000000000488bcbff15db851c00488b4424504885c0740748898778070000488d8f88070000488bd3488b01ff5028488d8fa8070000488bd3488b01ff5028488d8fc8070000488bd3488b01ff5028488d8fe8070000488bd3488b01ff5028488d8f08080000488bd3488b01ff5028488b5c2440488b7424484883c4305fc3",
+          "sha256": "94e90cdb19bc0d304788aae1589471d728af69ed92d2bcfeaca033bb96c7aba8",
+          "imports": [
+            {
+              "address": "0x4cb7634a",
+              "iat": "0x4cd34c90",
+              "module": "SLDMFCU.dll",
+              "symbol": "??0moArchiveHelper_c@@QEAA@PEAVsu_CArchive@@@Z"
+            },
+            {
+              "address": "0x4cb7635e",
+              "iat": "0x4cd3e7f0",
+              "module": "swccu.dll",
+              "symbol": "?IsStoring@su_CArchive@@QEBAHXZ"
+            },
+            {
+              "address": "0x4cb76371",
+              "iat": "0x4cd3e800",
+              "module": "swccu.dll",
+              "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z"
+            },
+            {
+              "address": "0x4cb76381",
+              "iat": "0x4cd34550",
+              "module": "SLDMFCU.dll",
+              "symbol": "??6@YAAEAVsu_CArchive@@AEAV0@AEAPEAVsuObArray@@@Z"
+            },
+            {
+              "address": "0x4cb76390",
+              "iat": "0x4cd3e808",
+              "module": "swccu.dll",
+              "symbol": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z"
+            },
+            {
+              "address": "0x4cb763a7",
+              "iat": "0x4cd3e988",
+              "module": "swccu.dll",
+              "symbol": "??5@YAAEAVsu_CArchive@@AEAV0@AEAPEAVCObject@@@Z"
+            }
+          ]
+        }
+      },
+      "shared_thin_functions": {
+        "0x4bb24dc0": {
+          "end": "0x4bb2517d",
+          "native_bytes": "48895c240848896c241056574154415641574883ec40488bda4c8bf1488d4c2430ff15a9fe2001488bd3498bcee88e030000488bcbff15f5992101488bcb85c00f84a1000000ff15ec992101498b96600800004c8d05c6effa01488bcb85c07408ff15c99a2101eb06ff15e999210133ff0fb7f7498b8e580800004885c97415488b49084885c975048bf7eb08ff15756821018bf00fb7d6488bcbff156f9f2101663bfe732a0fb7f60f1f8000000000498b8658080000488b48084803cf488bd3e86abdffff4883c70c4883ee0175e0488b5c2470488b6c24784883c440415f415e415c5f5ec3ff154b992101488d152ceffa01488bcb85c07408ff15379a2101eb06ff154799210149898660080000488b4424304885c00f848c0200008b888007000085c97513ff15b2fd2001ff15a4fd20018bc8488b44243081f9db0100000f827601000033ff6689bc2480000000488d942480000000488bcbff15b69e21010fb78424800000006685c07439b910000000e81ce4070148898424880000004885c07410488d0dd3cd420148890848897808eb03488bc7498986580800000fb78424800000008bef663bf80f8305010000488d4c2420e8231bfcff488bcbff156a982101488bcb85c074268b542420ff15499a21018b542424488bcbff153c9a21018b542428488bcbff152f9a2101eb27488d542420ff152a9a2101488d542424488bcbff151c9a2101488d542428488bcbff150e9a2101498bb658080000488b46084885c07520ba10000000b90800000041b90c00000041b801000000ff150a69210148894608488d542420488bc8ff150069210148894608488b0e4c8b214885c075048bc7eb09488bc8ff1594662101448d78ff488b4e084885c975048bc7eb06ff157d6621018d50ff458bc7488bce41ffd4488b4e084885c97406ff1562662101ffc50fb78424800000003be80f8cfbfeffff488b4424304885c00f84e40000008b808007000085c0750cff150afc2001ff15fcfb20013d4c0100000f82e9fdffff498b06498bceff90b81e0000498b8e600800004533c94533c0498bd6488b4908e824b00100498b8660080000488b48104885c9740e4533c94533c0498bd6e806b00100498b8e60080000e8aafc77ff488bd84885c00f848efdffff488b4c24304885c9745e8b818007000085c07511ff1584fb2001ff1576fb2001488b4c24303dbd01000072264885c974378b818007000085c0750cff155dfb2001ff154ffb20013dda0100000f823cfdffff4533c94533c0498bd6488bcbe88baf0100e926fdffff4533c0baffffffffb901000000e8f7e10701cc",
+          "sha256": "a5a65aff02d3e715ec7636b81061a68ef0eb032976514bd75c8afc38a3637a80",
+          "decompilation": "\nvoid FUN_4bb24dc0(moFeature_c *param_1,su_CArchive *param_2)\n\n{\n  code *pcVar1;\n  ushort uVar2;\n  int iVar3;\n  uint uVar4;\n  CObject *pCVar5;\n  undefined8 *puVar6;\n  moRefWrapper_c *this;\n  undefined8 *puVar7;\n  ulonglong uVar8;\n  longlong lVar9;\n  ushort local_res18 [4];\n  undefined8 *local_res20;\n  ulong local_48;\n  ulong local_44;\n  ulong local_40 [2];\n  longlong local_38 [2];\n  \n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_38,param_2);\n  FUN_4bb25180(param_1,param_2);\n  iVar3 = su_CArchive::IsStoring(param_2);\n  if (iVar3 != 0) {\n    iVar3 = su_CArchive::IsDBStream(param_2);\n    if (iVar3 == 0) {\n      su_CArchive::WriteObject\n                (param_2,*(CObject **)(param_1 + 0x860),\n                 (CRuntimeClass *)&moThinSpec_c::classmoThinSpec_c);\n    }\n    else {\n      su_CDBArchive::WriteObject\n                ((su_CDBArchive *)param_2,*(CObject **)(param_1 + 0x860),\n                 (CRuntimeClass *)&moThinSpec_c::classmoThinSpec_c);\n    }\n    lVar9 = 0;\n    uVar2 = 0;\n    if (*(longlong *)(param_1 + 0x858) != 0) {\n      if (*(longlong *)(*(longlong *)(param_1 + 0x858) + 8) == 0) {\n        uVar2 = 0;\n      }\n      else {\n        uVar2 = amDynamicArrayCount();\n      }\n    }\n    su_CArchive::operator<<(param_2,uVar2);\n    if (uVar2 == 0) {\n      return;\n    }\n    uVar8 = (ulonglong)uVar2;\n    do {\n      FUN_4bb20bf0(*(longlong *)(*(longlong *)(param_1 + 0x858) + 8) + lVar9,param_2);\n      lVar9 = lVar9 + 0xc;\n      uVar8 = uVar8 - 1;\n    } while (uVar8 != 0);\n    return;\n  }\n  iVar3 = su_CArchive::IsDBStream(param_2);\n  if (iVar3 == 0) {\n    pCVar5 = su_CArchive::ReadObject(param_2,(CRuntimeClass *)&moThinSpec_c::classmoThinSpec_c);\n  }\n  else {\n    pCVar5 = su_CDBArchive::ReadObject\n                       ((su_CDBArchive *)param_2,(CRuntimeClass *)&moThinSpec_c::classmoThinSpec_c);\n  }\n  *(CObject **)(param_1 + 0x860) = pCVar5;\n  if (local_38[0] != 0) {\n    uVar4 = *(uint *)(local_38[0] + 0x780);\n    if (uVar4 == 0) {\n      moVersionManager_c::get();\n      uVar4 = moVersionManager_c::getCurrentFileVerion();\n    }\n    if (0x1da < uVar4) {\n      puVar7 = (undefined8 *)0x0;\n      local_res18[0] = 0;\n      su_CArchive::operator>>(param_2,local_res18);\n      if (local_res18[0] != 0) {\n        local_res20 = operator_new(0x10);\n        puVar6 = puVar7;\n        if (local_res20 != (undefined8 *)0x0) {\n          *local_res20 = suDynamicArray<moBendIdData_c>::vftable;\n          local_res20[1] = 0;\n          puVar6 = local_res20;\n        }\n        *(undefined8 **)(param_1 + 0x858) = puVar6;\n      }\n      if (local_res18[0] != 0) {\n        do {\n          FUN_4bae6aa0(&local_48);\n          iVar3 = su_CArchive::IsStoring(param_2);\n          if (iVar3 == 0) {\n            su_CArchive::operator>>(param_2,&local_48);\n            su_CArchive::operator>>(param_2,&local_44);\n            su_CArchive::operator>>(param_2,local_40);\n          }\n          else {\n            su_CArchive::operator<<(param_2,local_48);\n            su_CArchive::operator<<(param_2,local_44);\n            su_CArchive::operator<<(param_2,local_40[0]);\n          }\n          puVar6 = *(undefined8 **)(param_1 + 0x858);\n          lVar9 = puVar6[1];\n          if (lVar9 == 0) {\n            lVar9 = suDynArrayAlloc(8,0x10,1);\n            puVar6[1] = lVar9;\n          }\n          lVar9 = amDynamicArrayAdd(lVar9,&local_48);\n          puVar6[1] = lVar9;\n          pcVar1 = *(code **)*puVar6;\n          if (lVar9 != 0) {\n            amDynamicArrayCount(lVar9);\n          }\n          iVar3 = 0;\n          if (puVar6[1] != 0) {\n            iVar3 = amDynamicArrayCount();\n          }\n          (*pcVar1)(puVar6,iVar3 + -1);\n          if (puVar6[1] != 0) {\n            amDynamicArrayCount();\n          }\n          uVar4 = (int)puVar7 + 1;\n          puVar7 = (undefined8 *)(ulonglong)uVar4;\n        } while ((int)uVar4 < (int)(uint)local_res18[0]);\n      }\n    }\n    if (local_38[0] != 0) {\n      uVar4 = *(uint *)(local_38[0] + 0x780);\n      if (uVar4 == 0) {\n        moVersionManager_c::get();\n        uVar4 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (0x14b < uVar4) {\n        (**(code **)(*(longlong *)param_1 + 0x1eb8))(param_1);\n        moDisplayDim_c::safeSetFeatureOwner\n                  (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x860) + 8),param_1,\n                   (moFeature_c *)0x0,(moComponent_c *)0x0);\n        if (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x860) + 0x10) != (moDisplayDim_c *)0x0) {\n          moDisplayDim_c::safeSetFeatureOwner\n                    (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x860) + 0x10),param_1,\n                     (moFeature_c *)0x0,(moComponent_c *)0x0);\n        }\n        this = moMirrorCompFeatData_c::getAlignmentReference\n                         (*(moMirrorCompFeatData_c **)(param_1 + 0x860));\n        if (this != (moRefWrapper_c *)0x0) {\n          if (local_38[0] == 0) goto LAB_4bb2516a;\n          uVar4 = *(uint *)(local_38[0] + 0x780);\n          if (uVar4 == 0) {\n            moVersionManager_c::get();\n            uVar4 = moVersionManager_c::getCurrentFileVerion();\n          }\n          if (0x1bc < uVar4) {\n            if (local_38[0] == 0) goto LAB_4bb2516a;\n            uVar4 = *(uint *)(local_38[0] + 0x780);\n            if (uVar4 == 0) {\n              moVersionManager_c::get();\n              uVar4 = moVersionManager_c::getCurrentFileVerion();\n            }\n            if (uVar4 < 0x1da) {\n              return;\n            }\n          }\n          moDisplayDim_c::safeSetFeatureOwner\n                    ((moDisplayDim_c *)this,param_1,(moFeature_c *)0x0,(moComponent_c *)0x0);\n        }\n      }\n      return;\n    }\n  }\nLAB_4bb2516a:\n                    /* WARNING: Subroutine does not return */\n  AfxThrowFileException(1,-1,(wchar_t *)0x0);\n}\n\n"
+        },
+        "0x4bb25180": {
+          "end": "0x4bb253c8",
+          "native_bytes": "48895c2410574883ec30488bd9488bfa488d4c2420ff15f5fa2001ba00200000488d4c2420ff15f5f0200185c075224533c0488d15cf614301488d4c2450ff15bc912101488d0dbd614301ff15a7912101488b44242048897424404885c00f84d10100008bb08007000085f6750eff15acfa2001ff159efa20018bf0488bd7488bcbe899bdffff488bcfff15e095210185c0745c488bcfff15db952101488b93100800004c8d0585e5fa01488bcf85c07408ff15b8962101eb06ff15d8952101f20f108b30080000488bcfff153f9721018b9308080000488bcfff15a0952101488b742440488b5c24484883c4305fc3488b93100800004885d27416488d4c2420ff15f1ef200148c7831008000000000000488bcfff155d952101488d150ee5fa01488bcf85c07408ff1549962101eb06ff155995210148898310080000488b4424204885c00f84e90000008b808007000085c0750cff15c4f92001ff15b6f920013d980900007210488d9330080000488bcfff159f96210181febf0d00007c10488d9308080000488bcfff15f7942101488b03488bcbff90b81e0000488b8310080000488b48184885c9740e4533c94533c0488bd3e8b5ad0100488b8310080000488b88c80000004885c9740e4533c94533c0488bd3e894ad0100488b8310080000488b48204885c9740e4533c94533c0488bd3e876ad0100488b8310080000488b88d00000004885c9740e4533c94533c0488bd3e855ad0100488b742440c7833007000001000000488b5c24484883c4305fc34533c0baffffffffb901000000e8acdf0701cc",
+          "sha256": "ddce78eb21eae6ff10048610ae415f0a1dcd65c32be0d690362637b439bbed5f",
+          "decompilation": "\nvoid FUN_4bb25180(moBodyFeature_c *param_1,su_CArchive *param_2)\n\n{\n  int iVar1;\n  ulong uVar2;\n  uint uVar3;\n  CObject *pCVar4;\n  Point local_res18 [16];\n  longlong local_18 [2];\n  \n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_18,param_2);\n  iVar1 = moArchiveHelper_c::hasCondition((moArchiveHelper_c *)local_18,0x2000);\n  if (iVar1 == 0) {\n    suCrash_c::Point::Point(local_res18,\"moExtrusion_c::Serialize\",false);\n    suCrash(\"moExtrusion_c::Serialize\");\n  }\n  if (local_18[0] != 0) {\n    uVar2 = *(ulong *)(local_18[0] + 0x780);\n    if (uVar2 == 0) {\n      moVersionManager_c::get();\n      uVar2 = moVersionManager_c::getCurrentFileVerion();\n    }\n    moBodyFeature_c::Serialize(param_1,param_2);\n    iVar1 = su_CArchive::IsStoring(param_2);\n    if (iVar1 != 0) {\n      iVar1 = su_CArchive::IsDBStream(param_2);\n      if (iVar1 == 0) {\n        su_CArchive::WriteObject\n                  (param_2,*(CObject **)(param_1 + 0x810),\n                   (CRuntimeClass *)&moEndSpec_c::classmoEndSpec_c);\n      }\n      else {\n        su_CDBArchive::WriteObject\n                  ((su_CDBArchive *)param_2,*(CObject **)(param_1 + 0x810),\n                   (CRuntimeClass *)&moEndSpec_c::classmoEndSpec_c);\n      }\n      su_CArchive::operator<<(param_2,*(double *)(param_1 + 0x830));\n      su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x808));\n      return;\n    }\n    if (*(CObject **)(param_1 + 0x810) != (CObject *)0x0) {\n      moArchiveHelper_c::deleteAfterSerialization\n                ((moArchiveHelper_c *)local_18,*(CObject **)(param_1 + 0x810));\n      *(undefined8 *)(param_1 + 0x810) = 0;\n    }\n    iVar1 = su_CArchive::IsDBStream(param_2);\n    if (iVar1 == 0) {\n      pCVar4 = su_CArchive::ReadObject(param_2,(CRuntimeClass *)&moEndSpec_c::classmoEndSpec_c);\n    }\n    else {\n      pCVar4 = su_CDBArchive::ReadObject\n                         ((su_CDBArchive *)param_2,(CRuntimeClass *)&moEndSpec_c::classmoEndSpec_c);\n    }\n    *(CObject **)(param_1 + 0x810) = pCVar4;\n    if (local_18[0] != 0) {\n      uVar3 = *(uint *)(local_18[0] + 0x780);\n      if (uVar3 == 0) {\n        moVersionManager_c::get();\n        uVar3 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (0x997 < uVar3) {\n        su_CArchive::operator>>(param_2,(double *)(param_1 + 0x830));\n      }\n      if (0xdbe < (int)uVar2) {\n        su_CArchive::operator>>(param_2,(long *)(param_1 + 0x808));\n      }\n      (**(code **)(*(longlong *)param_1 + 0x1eb8))(param_1);\n      if (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x810) + 0x18) != (moDisplayDim_c *)0x0) {\n        moDisplayDim_c::safeSetFeatureOwner\n                  (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x810) + 0x18),\n                   (moFeature_c *)param_1,(moFeature_c *)0x0,(moComponent_c *)0x0);\n      }\n      if (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x810) + 200) != (moDisplayDim_c *)0x0) {\n        moDisplayDim_c::safeSetFeatureOwner\n                  (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x810) + 200),(moFeature_c *)param_1\n                   ,(moFeature_c *)0x0,(moComponent_c *)0x0);\n      }\n      if (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x810) + 0x20) != (moDisplayDim_c *)0x0) {\n        moDisplayDim_c::safeSetFeatureOwner\n                  (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x810) + 0x20),\n                   (moFeature_c *)param_1,(moFeature_c *)0x0,(moComponent_c *)0x0);\n      }\n      if (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x810) + 0xd0) != (moDisplayDim_c *)0x0) {\n        moDisplayDim_c::safeSetFeatureOwner\n                  (*(moDisplayDim_c **)(*(longlong *)(param_1 + 0x810) + 0xd0),\n                   (moFeature_c *)param_1,(moFeature_c *)0x0,(moComponent_c *)0x0);\n      }\n      *(undefined4 *)(param_1 + 0x730) = 1;\n      return;\n    }\n  }\n                    /* WARNING: Subroutine does not return */\n  AfxThrowFileException(1,-1,(wchar_t *)0x0);\n}\n\n"
+        },
+        "0x4bb367d0": {
+          "end": "0x4bb3688d",
+          "native_bytes": "4053574883ec48488bd9488bfa488d4c2420ff15a8e41f01488bd7488bcbff151c812001488bcfff15f37f200185c00f8483000000488d5308488bcfe83faccf00488d5310488bcfe833accf008b532c488bcfff15d77f2001f20f104b30488bcfff1559812001f20f104b38488bcfff154b8120018b5328488bcfff15af7f20018b5340488bcfff15a37f2001488d5348488bcfe817aecf008b5350488bcfff158b7f20018b5354488bcfff157f7f20014883c4485f5bc3488b442420",
+          "sha256": "f8dd17f300742436f8804da1954bb96fc0152eb4057a17d3f082cd6c2c254a53",
+          "decompilation": "\nvoid FUN_4bb367d0(su_CObject *param_1,su_CArchive *param_2)\n\n{\n  int iVar1;\n  uint uVar2;\n  double *pdVar3;\n  long local_res18 [4];\n  longlong local_38 [2];\n  \n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_38,param_2);\n  su_CObject::Serialize(param_1,param_2);\n  iVar1 = su_CArchive::IsStoring(param_2);\n  if (iVar1 != 0) {\n    operator<<(param_2,(moDisplayDim_c **)(param_1 + 8));\n    operator<<(param_2,(moDisplayDim_c **)(param_1 + 0x10));\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x2c));\n    su_CArchive::operator<<(param_2,*(double *)(param_1 + 0x30));\n    su_CArchive::operator<<(param_2,*(double *)(param_1 + 0x38));\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x28));\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x40));\n    operator<<(param_2,(moDisplayRadialDim_c **)(param_1 + 0x48));\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x50));\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x54));\n    return;\n  }\n  if (local_38[0] != 0) {\n    uVar2 = *(uint *)(local_38[0] + 0x780);\n    if (uVar2 == 0) {\n      moVersionManager_c::get();\n      uVar2 = moVersionManager_c::getCurrentFileVerion();\n    }\n    if (uVar2 < 0x14c) {\n      su_CArchive::operator>>(param_2,(double *)(param_1 + 0x18));\n      *(undefined8 *)(param_1 + 8) = 0;\n      *(undefined8 *)(param_1 + 0x10) = 0;\n      *(undefined4 *)(param_1 + 0x2c) = 0;\n      *(undefined8 *)(param_1 + 0x30) = 0;\n      *(undefined8 *)(param_1 + 0x38) = 0;\n    }\n    else {\n      if (local_38[0] == 0) goto LAB_4bb36aef;\n      uVar2 = *(uint *)(local_38[0] + 0x780);\n      if (uVar2 == 0) {\n        moVersionManager_c::get();\n        uVar2 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (uVar2 < 0x153) {\n        operator>>(param_2,(moDisplayDim_c **)(param_1 + 8));\n        *(undefined8 *)(param_1 + 0x10) = 0;\n        *(undefined4 *)(param_1 + 0x2c) = 0;\n        *(undefined8 *)(param_1 + 0x30) = 0;\n        *(undefined8 *)(param_1 + 0x38) = 0;\n      }\n      else {\n        operator>>(param_2,(moDisplayDim_c **)(param_1 + 8));\n        operator>>(param_2,(moDisplayDim_c **)(param_1 + 0x10));\n        su_CArchive::operator>>(param_2,(long *)(param_1 + 0x2c));\n        su_CArchive::operator>>(param_2,(double *)(param_1 + 0x30));\n        su_CArchive::operator>>(param_2,(double *)(param_1 + 0x38));\n      }\n    }\n    su_CArchive::operator>>(param_2,(long *)(param_1 + 0x28));\n    su_CArchive::operator>>(param_2,(long *)(param_1 + 0x40));\n    if (local_38[0] != 0) {\n      uVar2 = *(uint *)(local_38[0] + 0x780);\n      if (uVar2 == 0) {\n        moVersionManager_c::get();\n        uVar2 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (0x1bc < uVar2) {\n        if (local_38[0] == 0) goto LAB_4bb36aef;\n        uVar2 = *(uint *)(local_38[0] + 0x780);\n        if (uVar2 == 0) {\n          moVersionManager_c::get();\n          uVar2 = moVersionManager_c::getCurrentFileVerion();\n        }\n        if (uVar2 < 0x1da) {\n          pdVar3 = operator_new(8);\n          su_CArchive::operator>>(param_2,pdVar3);\n          if (*pdVar3 <= 0.0 && *pdVar3 != 0.0) {\n            *pdVar3 = 0.0;\n          }\n          *(double **)(param_1 + 0x48) = pdVar3;\n        }\n        else {\n          operator>>(param_2,(moDisplayRadialDim_c **)(param_1 + 0x48));\n        }\n        su_CArchive::operator>>(param_2,(long *)(param_1 + 0x50));\n      }\n      if (local_38[0] != 0) {\n        uVar2 = *(uint *)(local_38[0] + 0x780);\n        if (uVar2 == 0) {\n          moVersionManager_c::get();\n          uVar2 = moVersionManager_c::getCurrentFileVerion();\n        }\n        if (0x1bc < uVar2) {\n          if (local_38[0] == 0) goto LAB_4bb36aef;\n          uVar2 = *(uint *)(local_38[0] + 0x780);\n          if (uVar2 == 0) {\n            moVersionManager_c::get();\n            uVar2 = moVersionManager_c::getCurrentFileVerion();\n          }\n          if (uVar2 < 0x1c5) {\n            su_CArchive::operator>>(param_2,local_res18);\n          }\n        }\n        if (local_38[0] != 0) {\n          uVar2 = *(uint *)(local_38[0] + 0x780);\n          if (uVar2 == 0) {\n            moVersionManager_c::get();\n            uVar2 = moVersionManager_c::getCurrentFileVerion();\n          }\n          if (0x1d9 < uVar2) {\n            su_CArchive::operator>>(param_2,(long *)(param_1 + 0x54));\n          }\n          return;\n        }\n      }\n    }\n  }\nLAB_4bb36aef:\n                    /* WARNING: Subroutine does not return */\n  AfxThrowFileException(1,-1,(wchar_t *)0x0);\n}\n\n"
+        },
+        "0x4bb20bf0": {
+          "end": "0x4bb20c76",
+          "native_bytes": "48895c2408488974241048897c241841564883ec20488bf9488bda488bcaff15dcdb2101488bcb85c074228b17ff15bddd21018b5704488bcbff15b1dd21018b5708488bcbff15a5dd2101eb23488bd7ff15a2dd2101488d5704488bcbff1595dd2101488d5708488bcbff1588dd2101488b5c2430488b742438488b7c24404883c420415ec3",
+          "sha256": "099c4d9ad4e61fff56c9ec69fbb7bb04d4bf67587df5142bc261e87b34ab55e1",
+          "decompilation": "\nvoid FUN_4bb20bf0(ulong *param_1,su_CArchive *param_2)\n\n{\n  int iVar1;\n  \n  iVar1 = su_CArchive::IsStoring(param_2);\n  if (iVar1 == 0) {\n    su_CArchive::operator>>(param_2,param_1);\n    su_CArchive::operator>>(param_2,param_1 + 1);\n    su_CArchive::operator>>(param_2,param_1 + 2);\n  }\n  else {\n    su_CArchive::operator<<(param_2,*param_1);\n    su_CArchive::operator<<(param_2,param_1[1]);\n    su_CArchive::operator<<(param_2,param_1[2]);\n  }\n  return;\n}\n\n"
+        }
+      },
+      "shared_reference_curve": {
+        "end": "0x4c284fe0",
+        "native_bytes": "48895c2408574881ec80000000488bfa488bd9488d4c2420ff1552feaa00488bd7488bcbe8b7ebffff488bcfff159e99ab0085c00f84f1000000ba00600000488d4c2420ff1536f4aa0085c00f85c8000000ba0a000000488d4c2430ff15aefeaa00904883bb10070000007426488b03488bcbff90901c000041b9010000004c8bc0488d542430488b8b10070000e8adb2fdff4533c941b801000000488bd7488b8b10070000e885c6fdff488b8b180700004885c9750433c0eb06ff157f41ab008bd0488bcfff151499ab004883bb10070000007420488b03488bcbff90901c00004c8bc0488d542430488b8b10070000e8fac4fdff488bd7488d4c2430ff15ccfcaa00488d4c2430e842bffdff90488d4c2430ff15eefdaa00488b9c24900000004881c4800000005fc3488b4424204885c074788b888007000085c97513ff153bfdaa00ff152dfdaa008bc8488b44242081f9150200007210488bd7488bcbe89b2c0000488b4424204885c0743e8b808007000085c0750cff1501fdaa00ff15f3fcaa003db2120000728e488d8b28070000488b01488bd7ff5028488b9c24900000004881c4800000005fc34533c0baffffffffb901000000e894e39100cc",
+        "sha256": "8c3ccc96015ccc98dcbcad6167c3431db84ad7ce508e0f9093d6a1598cb08e70",
+        "decompilation": "\n/* protected: virtual void __cdecl moReferenceCurve_c::Serialize(class su_CArchive & __ptr64)\n   __ptr64 */\n\nvoid __thiscall moReferenceCurve_c::Serialize(moReferenceCurve_c *this,su_CArchive *param_1)\n\n{\n  int iVar1;\n  long lVar2;\n  uint uVar3;\n  undefined8 uVar4;\n  longlong local_68 [2];\n  suObList local_58 [80];\n  \n                    /* 0x1124e20  12752  ?Serialize@moReferenceCurve_c@@MEAAXAEAVsu_CArchive@@@Z */\n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_68,param_1);\n  FUN_4c283a00(this,param_1);\n  iVar1 = su_CArchive::IsStoring(param_1);\n  if (iVar1 != 0) {\n    iVar1 = moArchiveHelper_c::hasCondition((moArchiveHelper_c *)local_68,0x6000);\n    if (iVar1 == 0) {\n      suObList::suObList(local_58,10);\n      if (*(longlong *)(this + 0x710) != 0) {\n        uVar4 = (**(code **)(*(longlong *)this + 0x1c90))(this);\n        FUN_4c260160(*(undefined8 *)(this + 0x710),local_58,uVar4);\n      }\n      mo_storeBodyToArchive(*(gcBody_w **)(this + 0x710),param_1,1,0);\n      if (*(gcEnt_w **)(this + 0x718) == (gcEnt_w *)0x0) {\n        lVar2 = 0;\n      }\n      else {\n        lVar2 = gcEnt_w::getNodeId(*(gcEnt_w **)(this + 0x718));\n      }\n      su_CArchive::operator<<(param_1,lVar2);\n      if (*(longlong *)(this + 0x710) != 0) {\n        uVar4 = (**(code **)(*(longlong *)this + 0x1c90))(this);\n        FUN_4c261410(*(undefined8 *)(this + 0x710),local_58,uVar4);\n      }\n      suObList::Serialize(local_58,param_1);\n      mo_releaseAttribList(local_58);\n      suObList::~suObList(local_58);\n    }\n    return;\n  }\n  if (local_68[0] != 0) {\n    uVar3 = *(uint *)(local_68[0] + 0x780);\n    if (uVar3 == 0) {\n      moVersionManager_c::get();\n      uVar3 = moVersionManager_c::getCurrentFileVerion();\n    }\n    if (0x214 < uVar3) {\n      iRestoreWire(this,param_1);\n    }\n    if (local_68[0] != 0) {\n      uVar3 = *(uint *)(local_68[0] + 0x780);\n      if (uVar3 == 0) {\n        moVersionManager_c::get();\n        uVar3 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (uVar3 < 0x12b2) {\n        return;\n      }\n      (**(code **)(*(longlong *)(this + 0x728) + 0x28))(this + 0x728,param_1);\n      return;\n    }\n  }\n                    /* WARNING: Subroutine does not return */\n  AfxThrowFileException(1,-1,(wchar_t *)0x0);\n}\n\n"
+      },
+      "roots": [
+        {
+          "path": "samples/tutorial/api/toaster.sldprt",
+          "configuration": "Contents/Config-0",
+          "start": 224583,
+          "end": 227240,
+          "kind": "composite_curve",
+          "sha256": "96dc821ffd7ba2ee7ec8789c8540e6b0b98afbfd1ed0580bc10983c95c3babc7",
+          "raw_780": 3,
+          "array_count": 2,
+          "dword_counts": {
+            "dwords_7a8": 2,
+            "dwords_7c8": 2,
+            "dwords_7e8": 0,
+            "dwords_808": 0
+          },
+          "kernel_suppressed": 0
+        },
+        {
+          "path": "samples/tutorial/moldedproductdesignadvanced/mousemultibody.sldprt",
+          "configuration": "Contents/Config-0",
+          "start": 178510,
+          "end": 186373,
+          "kind": "thin_cut",
+          "sha256": "513d814e06ad4fb31695f725d3c9f84623b49310ebdbb2e7f16a9ea734f08a5a",
+          "specification_class": "moThinSpec_c",
+          "bend_count": 0,
+          "raw_bend_records": []
+        },
+        {
+          "path": "samples/tutorial/moldedproductdesignadvanced/mousemultibody.sldprt",
+          "configuration": "Contents/Config-0",
+          "start": 190157,
+          "end": 196983,
+          "kind": "thin_cut",
+          "sha256": "13cebe4ffd72df0ba5530ae084f87e18992382a4da440bc4fab1a8e97da643ba",
+          "specification_class": "moThinSpec_c",
+          "bend_count": 0,
+          "raw_bend_records": []
+        },
+        {
+          "path": "samples/tutorial/moldedproductdesignadvanced/mousemultibody.sldprt",
+          "configuration": "Contents/Config-0",
+          "start": 212159,
+          "end": 292480,
+          "kind": "composite_curve",
+          "sha256": "45964664bf6cdf8e8809a5d5b35c64c657a195192d54c19fc3b4fec2c902bbac",
+          "raw_780": 10,
+          "array_count": 9,
+          "dword_counts": {
+            "dwords_7a8": 9,
+            "dwords_7c8": 9,
+            "dwords_7e8": 0,
+            "dwords_808": 1
+          },
+          "kernel_suppressed": 0
+        },
+        {
+          "path": "samples/tutorial/moldedproductdesignadvanced/mousemultibody.sldprt",
+          "configuration": "Contents/Config-0",
+          "start": 293624,
+          "end": 373946,
+          "kind": "composite_curve",
+          "sha256": "bcd785c33b07d57c8eb4ef2d236b20e2c7fc30d1aeddc7c088f2fd66b4550317",
+          "raw_780": 10,
+          "array_count": 9,
+          "dword_counts": {
+            "dwords_7a8": 9,
+            "dwords_7c8": 9,
+            "dwords_7e8": 0,
+            "dwords_808": 1
+          },
+          "kernel_suppressed": 0
+        },
+        {
+          "path": "samples/tutorial/toolbox/camtest.sldprt",
+          "configuration": "Contents/Config-0",
+          "start": 22387,
+          "end": 35399,
+          "kind": "thin_cut",
+          "sha256": "2a73e708abfde18c08dfe33e46a1e65245541508dd1efcccdc7995938e5cccdc",
+          "specification_class": "moThinSpec_c",
+          "bend_count": 0,
+          "raw_bend_records": []
+        }
+      ],
+      "total_root_bytes": 191001,
+      "coverage_credit": 0,
+      "decompilation_sha256": {
+        "FUN_4bb24dc0.c": "55a039ab9a87a419e61556ae640e088cde75ff6a795fb36e441c70d27b7edcfc",
+        "FUN_4cb75eb0.c": "f5a3164b743bd4aea34785bffeff93fcdddc2fcb8941aa694610e4d4e240c481",
+        "FUN_4cb75fe0.c": "930bb7fe7f0961bda5f9a8ea21d9ce9239b1b5ba2bd522a628f1e57b4d2c0556",
+        "FUN_4cb76330.c": "e124881964eabbf55fd01653c57dcc3e9f2397725d90b543c3335b02190ca137"
+      }
+    }
+  }
+}

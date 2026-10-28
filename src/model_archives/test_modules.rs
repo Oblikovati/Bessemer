@@ -423,3 +423,19 @@ mod split_feature_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/silhouette_edges.rs"]
 mod silhouette_edge_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/projected_line_subtypes.rs"]
+mod projected_line_subtype_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/constraint_planes.rs"]
+mod constraint_plane_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/thin_extrusions.rs"]
+mod thin_extrusion_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/three_point_plane_roles.rs"]
+mod three_point_plane_role_tests;

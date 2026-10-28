@@ -50,17 +50,19 @@ fn fresh_reference_class(version: u32, bytes: &[u8]) -> String {
 
 #[test]
 fn sketch_reference_coverage_equals_the_existing_finite_wrapper_family() {
-    let actual: BTreeSet<_> = records()
+    let mut actual: BTreeSet<_> = records()
         .into_iter()
         .filter(|r| r.0 % 6 == 0 && r.1 == 19000)
         .map(|(_, version, bytes, _, _)| fresh_reference_class(version, bytes))
         .collect();
+    assert_eq!(actual.len(), 18);
+    actual.insert(super::constraint_plane_tests::fresh_base_surface_wrapper_class());
     let expected: BTreeSet<_> = super::model_references::WRAPPER_CLASSES
         .iter()
         .map(|name| name.to_string())
         .collect();
     assert_eq!(actual, expected);
-    assert_eq!(actual.len(), 18);
+    assert_eq!(actual.len(), 19);
 }
 
 fn assert_invalid_array_role(version: u32, bytes: &[u8], path: &str) {

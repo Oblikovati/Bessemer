@@ -61,10 +61,18 @@ pub fn check_document_with_kernel(
     assert_eq!(archive.to_bytes().unwrap(), features);
 }
 
+#[allow(
+    dead_code,
+    reason = "Other integration crates exercise the shared signed-word edit wrappers."
+)]
 pub fn check_word_edit(original: &[u8], edited: &[u8], path: &str) {
     check_word_edit_with_kernel(original, edited, path, None);
 }
 
+#[allow(
+    dead_code,
+    reason = "Other integration crates exercise the shared signed-word edit wrappers."
+)]
 pub fn check_word_edit_with_kernel(
     original: &[u8],
     edited: &[u8],

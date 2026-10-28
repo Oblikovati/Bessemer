@@ -196,6 +196,11 @@ pub(super) const CLASSES: &[&str] = &[
     "moICE_c",
     "moRevolution_c",
     "moRevCut_c",
+    // #54 / C-219, C-235, C-236 and C-278 prove these complete body-feature ancestors.
+    "moExtruThin_c",
+    "moBossThin_c",
+    "moCutThin_c",
+    "moRevolutionThin_c",
     "moRib_c",
     "moRefGeom_c",
     "moRefPlane_c",

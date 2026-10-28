@@ -1,0 +1,40 @@
+{
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "issue": 54,
+  "bug_issue": 46,
+  "native_modules_verified": {
+    "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+    "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldsmmu.dll": "ae20d533b36f105f22de4ed5984fb2245bbf03fb91a84ae473e0941a4b9e3c54"
+  },
+  "kernel_schema": {
+    "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\data\\pschema\\sch_13006.s_t",
+    "sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af"
+  },
+  "native_packet_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "artifact_sha256": "2dc4758062862283cd9602b78a709a2a8c7bf52f3e9550e4f28b24102068f99b",
+  "fixture_graphs": 1620,
+  "primitive_reads": 188867,
+  "owned_streams": 126,
+  "checks": {
+    "cargo_xtask_pr": "passed; 763 library tests, 4 xtask tests, all integrations, 274 doctests, 3 explicitly ignored tests",
+    "focused_plane_tests": "12 passed after test-helper extraction",
+    "public_plane_tests": "5 passed",
+    "python_regeneration": "2 passed",
+    "native_processes": "2 matched all 906 outcomes and causes; both exited 101 only for aggregate 786/906 completeness assertion",
+    "source_fixture_stability": "one discarded attempt observed concurrent source changes; fresh guarded retry passed",
+    "initial_gate": "caught obsolete nine-class enum assumption; original enum coverage retained and exact eighteen-class combined role coverage added"
+  },
+  "native_complete_before": 775,
+  "native_complete_after": 786,
+  "independent_feature_bytes": 50415460,
+  "source_snapshot": "234a3ca25b4ea5073072ee98bd3f5b0b5a4effb37ec178859101e528468c38e9",
+  "source_python_files": 1404,
+  "original_native_sentinel_configurations": 11,
+  "exclusions": [
+    "120 native cases remain explicit failures",
+    "Historical contexts and all documented schema parity remain incomplete",
+    "Geometry validity and SolidWorks application acceptance are not claimed",
+    "Humanizer unavailable; maintainer prose review remains open"
+  ]
+}

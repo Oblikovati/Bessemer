@@ -5,7 +5,9 @@ the direct surface-ID keeper, required data pointer and recursive owner.
 `moPLineData_c`, `moPLineProject_c` and tagged `su_CWordArray` bodies have complete
 readers. The existing body-feature base, entity-ID, nullable-array and numeric
 array codecs are reused. The inherited atom-owner role includes the concrete
-polyline class. Draft and intersection data bodies remain unsupported.
+polyline class. This initial checkpoint excluded draft and intersection data bodies. Their complete
+modern support is now documented in [projected-line subtypes](../projected-line-subtypes/README.md);
+the measurements below retain the original checkpoint scope.
 
 Four owned fixtures cover base data, projected data, a separately generated
 scalar edit and high-bit WORD values. Their 96, 119, 119 and nine primitive

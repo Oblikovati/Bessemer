@@ -8,7 +8,10 @@ wrappers. The fresh/cached single-face regression fails before the fix with the
 same native error.
 
 The field now reuses `model_references::WRAPPER_CLASSES`, the existing reviewed
-eighteen-class family already used at other model wrapper boundaries. No tagged
+eighteen-class family already used at other model wrapper boundaries.
+[Constraint-plane families](../constraint-plane-families/README.md) later added
+the complete base-surface wrapper; combined owned fixtures now cover all nineteen
+classes. No tagged
 body reader or global assignability rule is added. View, intersection and
 isocurve pointers retain their separate types. Unrelated fresh node-name objects
 and cached arrays remain invalid. The shared display-list policy is unchanged.

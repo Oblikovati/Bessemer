@@ -1,0 +1,64 @@
+{
+  "base_revision": "81c99f615e131c9a843bcd8bdbe1bcb355b6d9fe",
+  "issues": [
+    54,
+    46
+  ],
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "focused": {
+    "private_tests": 10,
+    "public_tests": 3,
+    "python_tests": 2,
+    "cases": 390,
+    "primitive_observations": 69354,
+    "owned_streams": 35,
+    "source_target_identities_verified": true,
+    "source_role_oracle": false,
+    "rejected_unstable_fixture_freezes": 1,
+    "standalone_owners_use_complete_supported_plines": true
+  },
+  "native": {
+    "cases": 906,
+    "previous_complete": 767,
+    "complete": 775,
+    "explicit_stops": 131,
+    "new_complete": 8,
+    "cases_advanced_to_later_stops": 1,
+    "fresh_processes": 2,
+    "all_outcomes_and_causes_identical": true,
+    "reported_draft_cases_complete": [
+      79,
+      86,
+      288,
+      651
+    ],
+    "artifact_sha256": "f78032552b55aa3b93c7a883be22933eeac4ce545add57029e06312336566847",
+    "independent_feature_bytes": 49945035,
+    "independent_snapshot_identity": "7c1cf79f8d796f6c056a0117898028f617024fa584bb3b796084354c1c9f3609",
+    "independent_python_files": 1385,
+    "independent_report_sha256": "a2a158b7cd475200ba14d8a82a82440c435004f03da7dee98bd8b0dccfc38953",
+    "independent_sentinel_sha256": "71a8caa1934b54a0ae4e27f59db9626f72cdd3b538f97dd80d23caa55da6a699"
+  },
+  "corpus_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "schema_snapshot_sha256": "82c97be0d55b7249318798a0a1fcd536c8f2891ea5ea9f036606df95f8e16eb6",
+  "fixture_reference_sha256": "67faefc7c950a23ba664c843f35e2ee1a2199ce5ff460ecc9854361c6540a190",
+  "gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 751,
+    "library_ignored": 3,
+    "xtask_passed": 4,
+    "doctests_passed": 270,
+    "all_integration_tests_passed": true,
+    "log_sha256": "6e4e49bfec01f9d26ab7bd9fd66ac112407a29627e6402c0dc68c0dd4e35cbf7"
+  },
+  "exclusions": [
+    "131 explicit native corpus stops",
+    "Documented remaining plane-data bodies and role support tracked under Feature #54 and Bug #46",
+    "Historical migrations and alternate contexts",
+    "Geometry validity and SolidWorks application acceptance",
+    "Broader all-schema parity remains unproven"
+  ]
+}
