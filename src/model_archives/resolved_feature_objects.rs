@@ -20,6 +20,7 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moCosmeticWeldCutList_c" => super::cosmetic_weld_cut_lists::read(reader, map),
         "moAttachPointData_c" => super::attachment_records::data(reader, map),
         "moParametricPoint_c" => super::attachment_records::parametric(reader, map),
         "moWeldSymbol_c" => super::weld_symbols::read(reader, map),

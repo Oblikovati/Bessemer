@@ -309,3 +309,6 @@ direct texts, surface-finish gates and cosmetic attachment subtype identities.
 
 [Attachment records](docs/features/attachment-records/README.md) distinguishes
 attachment data from inherited parametric attachment points.
+
+[Cosmetic weld cut lists](docs/features/cosmetic-weld-cut-lists/README.md)
+documents the complete reference-curve parent and native suffix order.

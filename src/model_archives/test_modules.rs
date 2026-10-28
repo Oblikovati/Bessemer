@@ -499,3 +499,6 @@ mod weld_symbol_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/attachment_records.rs"]
 mod attachment_record_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/cosmetic_weld_cut_lists.rs"]
+mod cosmetic_weld_cut_list_tests;
