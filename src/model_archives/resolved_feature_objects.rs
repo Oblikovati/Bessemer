@@ -20,6 +20,10 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moGusset_c" => super::weldment_finishing::gusset(reader, map),
+        "moWeldBeadFeat_c" => super::weldment_finishing::bead(reader, map),
+        "weldBeadSideData_c" => super::weldment_finishing::side(reader, map),
+        "moEndCap_c" => super::end_caps::read(reader, map),
         "moCosmeticWeldSubFolder_c" => super::cosmetic_weld_tree::subfolder(reader, map),
         "moCosmeticWeldBead_c" => super::cosmetic_weld_tree::bead(reader, map),
         "moCosmeticWeldBeadData_c" => super::cosmetic_weld_tree::bead_data(reader, map),

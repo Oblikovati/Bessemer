@@ -497,6 +497,9 @@ mod component_detail_provenance_tests;
 mod weld_symbol_tests;
 
 #[cfg(test)]
+#[path = "../../tests/resolved_features/absolute_plane_data.rs"]
+mod absolute_plane_data_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/attachment_records.rs"]
 mod attachment_record_tests;
 #[cfg(test)]
@@ -505,3 +508,9 @@ mod cosmetic_weld_cut_list_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/cosmetic_weld_tree.rs"]
 mod cosmetic_weld_tree_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/end_caps.rs"]
+mod end_cap_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/weldment_finishing.rs"]
+mod weldment_finishing_tests;

@@ -24,6 +24,12 @@
 
 ### Added
 
+- Added absolute reference-plane data with the verified shared non-default layout and typed containing-plane references. (#54)
+
+- Added complete gusset, ordinary weld-bead feature and side-data framing with preserved extrusion suffixes, transform operators, packed words and shared identities. (#54)
+
+- Added complete ordinary end-cap framing with shared distance dimensions, native pointer order and explicit rejection of unsupported arc-length bodies. (#54)
+
 - Added complete cosmetic weld subfolders, beads, bead data and parameter records with direct endpoint ownership, strict kernel framing and preserved signed wire-map counts. (#54)
 
 - Added complete cosmetic weld cut-list framing with preserved kernel bodies, shared parent references and native signed-word order. (#54)

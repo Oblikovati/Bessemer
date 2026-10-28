@@ -3,7 +3,7 @@ use super::{ModelDecoder, ModelObjectRole, features, kernel_frames, model_lists,
 use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
 
-const DISPLAY_ITEMS: &[&str] = &[
+pub(super) const DISPLAY_ITEMS: &[&str] = &[
     "moDisplayItem_c",
     "moDisplayWeld_c",
     "moDisplayDim_c",

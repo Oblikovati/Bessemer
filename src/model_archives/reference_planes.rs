@@ -28,6 +28,8 @@ pub(super) fn reference_geometry(
 pub(super) const CLASSES: &[&str] = &[
     "moRefPlnData_c",
     "moFixedRefPlnData_c",
+    // #54 / C-285: shared serializer and native hook exclude the default-only point.
+    "moAbsoluteRefPlnData_c",
     "moDefaultRefPlnData_c",
     "moFaceRefPlnData_c",
     "moFacePtRefPlnData_c",
@@ -200,7 +202,7 @@ pub(super) enum PlaneDataKind {
 impl PlaneDataKind {
     pub(super) fn parse(name: &str) -> Option<Self> {
         match name {
-            "moRefPlnData_c" | "moFixedRefPlnData_c" => Some(Self::Base),
+            "moRefPlnData_c" | "moFixedRefPlnData_c" | "moAbsoluteRefPlnData_c" => Some(Self::Base),
             "moDefaultRefPlnData_c" => Some(Self::Default),
             "moFaceRefPlnData_c" => Some(Self::Face),
             "moFacePtRefPlnData_c" => Some(Self::FacePoint),

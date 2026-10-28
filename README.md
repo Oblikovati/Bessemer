@@ -315,3 +315,12 @@ documents the complete reference-curve parent and native suffix order.
 
 [Cosmetic weld tree](docs/features/cosmetic-weld-tree/README.md) covers direct
 endpoint ownership, bead kernel bodies and signed wire-map lists.
+
+[End caps](docs/features/end-caps/README.md) documents the complete body-feature
+parent, native pointer order and preserved shared dimensions.
+
+[Weldment finishing](docs/features/weldment-finishing/README.md) covers complete
+gusset extrusions, ordinary weld-bead features and shared side data.
+
+[Absolute plane data](docs/features/absolute-plane-data/README.md) documents the
+shared non-default plane layout and its typed containing-plane role.

@@ -5,6 +5,7 @@ use std::sync::Arc;
 
 /// Declared ordinary external-XML part context using the current 19000 runtime layout.
 /// Model wire versions remain independent; legacy runtime overrides are outside this dialect.
+/// Ordinary loading declares helper +834 clear; a nonzero override is another dialect.
 #[derive(Debug, Clone)]
 pub struct PartConfigurationContext {
     pub(super) configuration: ConfigurationId,
