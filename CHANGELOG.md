@@ -24,6 +24,8 @@
 
 ### Added
 
+- Added complete cosmetic weld subfolders, beads, bead data and parameter records with direct endpoint ownership, strict kernel framing and preserved signed wire-map counts. (#54)
+
 - Added complete cosmetic weld cut-list framing with preserved kernel bodies, shared parent references and native signed-word order. (#54)
 
 - Added distinct attachment-data and parametric-point framing with exact inherited attachment roles and preserved raw values. (#54)

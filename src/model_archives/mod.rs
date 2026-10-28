@@ -34,6 +34,7 @@ mod connection_points;
 mod constraint_planes;
 mod context;
 mod cosmetic_weld_cut_lists;
+mod cosmetic_weld_tree;
 mod deleted_faces;
 mod plane_geometry_flags;
 mod ruled_surfaces;

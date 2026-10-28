@@ -312,3 +312,6 @@ attachment data from inherited parametric attachment points.
 
 [Cosmetic weld cut lists](docs/features/cosmetic-weld-cut-lists/README.md)
 documents the complete reference-curve parent and native suffix order.
+
+[Cosmetic weld tree](docs/features/cosmetic-weld-tree/README.md) covers direct
+endpoint ownership, bead kernel bodies and signed wire-map lists.
