@@ -20,6 +20,8 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moJog_c" => super::jog_corners::jog(reader, map),
+        "moBreakCornerFeat_c" => super::jog_corners::break_corner(reader, map),
         "moFlattenBends_c" => super::flatten_bends::read(reader, map),
         "moProcessBends_c" => super::flatten_bends::process(reader, map),
         "featureStateData_c" => super::feature_states::read(reader),

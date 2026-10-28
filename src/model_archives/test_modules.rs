@@ -213,6 +213,9 @@ mod hole_wizard_tests;
 #[path = "../../tests/resolved_features/imported_bodies.rs"]
 mod imported_body_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/jog_corners.rs"]
+mod jog_corner_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/kernel_frames.rs"]
 mod kernel_frame_tests;
 #[cfg(test)]

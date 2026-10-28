@@ -1,0 +1,49 @@
+{
+  "base_revision": "e0a7376bd77a884b5574ede233d8cae5c1d26611",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "behavior_version": "C290-jog-corners-v1",
+  "pr_gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 975,
+    "external_fixture_tests_ignored": 3,
+    "doctests_passed": 274,
+    "test_binaries": 171,
+    "log_sha256": "3bf2f8feea483bf4f7db86d1e48fbb1c29d21a0a9cde3a5e279a7ec9203e4932"
+  },
+  "focused_private_tests": 9,
+  "public_document_tests": 4,
+  "independent_fixture_tests": 3,
+  "independent_native_tests": 1,
+  "native_corpus": {
+    "cases": 906,
+    "complete": 829,
+    "incomplete": 77,
+    "newly_complete": [
+      355
+    ],
+    "two_fresh_processes_identical": true,
+    "previous_complete_preserved": true
+  },
+  "independent_native_source": {
+    "complete_configurations": 829,
+    "resolved_bytes": 58223637,
+    "all_four_stream_hashes_matched": true,
+    "all_exact_eof": true
+  },
+  "oracles": [
+    "actual independent serializer primitive observations",
+    "independent complete document scalar edit goldens",
+    "actual saved CMgr helper selection",
+    "two native containing-root hashes, field values and keeper counts",
+    "all-prefix truncation and independent version boundary rejection",
+    "typed optional references and bounded direct keeper counts"
+  ],
+  "exclusions": [
+    "special archive modes that omit the keeper",
+    "engineering meanings and geometric validity",
+    "later unsupported native classes and older configuration contexts",
+    "complete documented schema parity remains unfinished"
+  ]
+}

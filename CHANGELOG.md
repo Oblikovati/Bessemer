@@ -24,6 +24,8 @@
 
 ### Added
 
+- Added complete jog and break-corner framing with stored reference presence, direct owned keepers, tagged arrays and both version gates. (#54)
+
 - Added flatten/process-bend framing with containing-node flag selection, preserved signed body presence and strict compressed raw bodies. (#54)
 
 - Added scoped feature-state records with both signed native words preserved for reading and editing. (#54)

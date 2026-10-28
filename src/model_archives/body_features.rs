@@ -318,6 +318,9 @@ pub(super) const CLASSES: &[&str] = &[
     // #54 / C-287 proves the complete inherited bend-group feature bodies.
     "moFlattenBends_c",
     "moProcessBends_c",
+    // #54 / C-290 proves these complete bend-group feature bodies.
+    "moJog_c",
+    "moBreakCornerFeat_c",
     // #54 / C-271 binds the inherited reference-geometry chooser owner.
     "moRuledSrfFromEdge_c",
     "Chamfer_c",

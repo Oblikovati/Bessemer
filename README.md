@@ -341,3 +341,6 @@ lines, signed count preservation and versioned sketch-line records.
 node flags, signed presence and strict raw bodies.
 [Feature states](docs/features/feature-states/README.md) documents the scoped
 two-word state records and independent edits.
+
+[Jogs and break corners](docs/features/jog-corners/README.md) covers stored presence,
+direct owned keepers, tagged arrays and independent version gates.
