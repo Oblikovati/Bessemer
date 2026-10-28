@@ -1,5 +1,6 @@
 """Verify helper-one edge families against the complete saved CMgr context (#54)."""
 from pathlib import Path
+from collections.abc import Callable
 import hashlib
 import struct
 from freeze_edge_flanges import WORKSPACE, source_module
@@ -9,8 +10,9 @@ from primitive_inventory import observe_primitives, verify_primitive_coverage
 from owned_circular_fixtures import write_observation
 from freeze_owned_features import STREAM
 
+SavedFeatureBuilder = Callable[[int,int,int,bool,int,bool],tuple[bytes,int]]
 
-def active_document(reference: Path, kind: int, edited: bool) -> tuple[SavedSheetMetalDocument, bytes, int]:
+def active_document(reference: Path, kind: int, edited: bool, build: SavedFeatureBuilder=edge_graph) -> tuple[SavedSheetMetalDocument, bytes, int]:
     """Derive the helper from a fully decoded manager; e.g. active_document(source,2,False)."""
     container, prefix = (source_module(name, reference) for name in ('swcontainer','modelprefix'))
     original=container.Document((WORKSPACE/'tests/fixtures/blank-part.SLDPRT').read_bytes(),table={})
@@ -19,21 +21,23 @@ def active_document(reference: Path, kind: int, edited: bool) -> tuple[SavedShee
     _,context=prefix.read(probe,'Contents/Config-0',through_part_resolved=True,configuration_context=True)
     if (context.sheet_metal_helper_850,context.sheet_metal_helper_verified)!=(1,True):
         raise ValueError(f'helper {context.sheet_metal_helper_850}; expected verified saved helper one')
-    feature,slots=edge_graph(kind,19000,3,edited,len(context.map)-1,True)
+    feature,slots=build(kind,19000,3,edited,len(context.map)-1,True)
     raw=struct.pack('<iH',-123,1)+feature+bytes(4)
     return SavedSheetMetalDocument(original,manager,raw),raw,slots
 
 
-def freeze_active(reference: Path, destination: Path) -> list[dict[str,object]]:
+def freeze_active(reference: Path, destination: Path, kinds: tuple[int,...]=(0,1,2),
+                  build: SavedFeatureBuilder=edge_graph) -> list[dict[str,object]]:
     """Observe complete ordinary feature roots and edits; e.g. freeze_active(source,output)."""
     destination.mkdir(parents=True,exist_ok=True)
-    return [observe_active(reference,destination,kind,edited) for kind in range(3) for edited in (False,True)]
+    return [observe_active(reference,destination,kind,edited,build) for kind in kinds for edited in (False,True)]
 
 
-def observe_active(reference: Path, destination: Path, kind: int, edited: bool) -> dict[str,object]:
+def observe_active(reference: Path, destination: Path, kind: int, edited: bool,
+                   build: SavedFeatureBuilder=edge_graph) -> dict[str,object]:
     """Require exact EOF, primitive coverage and inherited slots; e.g. observe_active(source,out,0,False)."""
     features,archive=(source_module(name,reference) for name in ('resolvedfeatures','swarchive'))
-    document,raw,slots=active_document(reference,kind,edited)
+    document,raw,slots=active_document(reference,kind,edited,build)
     with observe_primitives(archive.Archive,raw) as reads:
         parsed=features.read_supported(document,STREAM)
     if (parsed['end'],parsed['tail'],len(parsed['archive'].map))!=(len(raw),b'',slots):
