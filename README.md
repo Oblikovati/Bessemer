@@ -333,3 +333,6 @@ folds and unfolds, including raw compressed bodies and ordered maps.
 
 [Sheet-metal corners and hems](docs/features/corner-hems/README.md) covers directly
 owned hem data, independent arrays, chain identities and saved helper layouts.
+
+[UI bends](docs/features/ui-bends/README.md) covers both saved layouts, direct ruled
+lines, signed count preservation and versioned sketch-line records.

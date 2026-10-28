@@ -402,6 +402,9 @@ mod transform_rows;
 #[path = "../../tests/resolved_features/trim_edge_identifiers.rs"]
 mod trim_edge_identifier_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/ui_bends.rs"]
+mod ui_bend_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/views.rs"]
 mod view_tests;
 #[cfg(test)]

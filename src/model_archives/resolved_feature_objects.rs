@@ -20,6 +20,9 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moUiBend_c" => super::ui_bends::read(reader, map),
+        "moRuledBendLineData_c" => super::ui_bends::ruled_line(reader),
+        "moBendSketchLineData_c" => super::ui_bends::sketch_line(reader),
         "moCornerFeat_c" => super::corner_hems::corner(reader, map),
         "moFaceGeom_c" | "moPlanarFaceGeom_c" => super::corner_hems::face_geometry(reader),
         "moHem_c" => super::corner_hems::hem(reader, map),

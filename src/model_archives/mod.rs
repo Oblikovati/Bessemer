@@ -45,6 +45,7 @@ mod one_bends;
 mod plane_geometry_flags;
 mod ruled_surfaces;
 mod sheet_folds;
+mod ui_bends;
 mod weldment_finishing;
 pub use plane_geometry_flags::PlaneGeometryFlag;
 mod context_chains;

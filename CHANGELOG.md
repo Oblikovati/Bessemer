@@ -24,6 +24,8 @@
 
 ### Added
 
+- Added complete UI-bend and line-data framing with both saved helper layouts, preserved signed line counts and direct ruled-line bodies. (#54)
+
 - Added complete sheet-metal corner and hem framing with directly owned data, independent arrays, chain records, relief bodies and both saved helper layouts. (#54)
 
 - Added complete 3D bend, fold and unfold framing with ordered object-to-integer maps, strict compressed raw bodies and fixed archive transforms. (#54)
