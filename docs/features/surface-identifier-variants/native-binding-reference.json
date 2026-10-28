@@ -1,0 +1,4121 @@
+[
+  {
+    "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\configuration-remaining-ids-native-evidence.json",
+    "source_sha256": "9e44a0901ef0bba4ec10e467da094b6cebadc548e9662aecf33ea6474452752b",
+    "evidence": {
+      "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+      "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+      "tables": [
+        {
+          "class_name": "moRadiateSurfIdRep_c",
+          "object_offset": 0,
+          "locator": "0x4d335518",
+          "vftable": "0x4cf73690",
+          "slots": [
+            "0x4bbb6ba0",
+            "0x4bbb5ca0",
+            "0x4cba273f",
+            "0x4b29dae0",
+            "0x4b29dae0",
+            "0x4bbb79b0",
+            "0x4cba274b",
+            "0x4cba2751"
+          ],
+          "suffix_2a0": "0x4bbbf3f0"
+        },
+        {
+          "class_name": "moPttnBodyEdgeIdRep_c",
+          "object_offset": 0,
+          "locator": "0x4d329f10",
+          "vftable": "0x4cf06af0",
+          "slots": [
+            "0x4bbb6b10",
+            "0x4ba95ab0",
+            "0x4cba273f",
+            "0x4b29dae0",
+            "0x4b29dae0",
+            "0x4bbbd460",
+            "0x4cba274b",
+            "0x4cba2751"
+          ]
+        },
+        {
+          "class_name": "moEndCapChamferSurfIdRep_c",
+          "object_offset": 0,
+          "locator": "0x4d333858",
+          "vftable": "0x4cf73e98",
+          "slots": [
+            "0x4bbb6860",
+            "0x4bbb5ca0",
+            "0x4cba273f",
+            "0x4b29dae0",
+            "0x4b29dae0",
+            "0x4bbb79b0",
+            "0x4cba274b",
+            "0x4cba2751"
+          ],
+          "suffix_2a0": "0x4bbbf3f0"
+        }
+      ],
+      "functions": {
+        "0x4bbb79b0": {
+          "end": "0x4bbb79df",
+          "native_bytes": "48895c2408574883ec20488bda488bf9e88b450000488b07488bd3488bcf488b5c24304883c4205f48ffa0a0020000",
+          "sha256": "ebfc877dc8888646c253cbae52aaaf7e3e099d0bc92796b081bce9c8094593ec",
+          "instructions": [
+            {
+              "address": "0x4bbb79b0",
+              "text": "mov qword ptr [rsp + 8], rbx"
+            },
+            {
+              "address": "0x4bbb79b5",
+              "text": "push rdi"
+            },
+            {
+              "address": "0x4bbb79b6",
+              "text": "sub rsp, 0x20"
+            },
+            {
+              "address": "0x4bbb79ba",
+              "text": "mov rbx, rdx"
+            },
+            {
+              "address": "0x4bbb79bd",
+              "text": "mov rdi, rcx"
+            },
+            {
+              "address": "0x4bbb79c0",
+              "text": "call 0x4bbbbf50"
+            },
+            {
+              "address": "0x4bbb79c5",
+              "text": "mov rax, qword ptr [rdi]"
+            },
+            {
+              "address": "0x4bbb79c8",
+              "text": "mov rdx, rbx"
+            },
+            {
+              "address": "0x4bbb79cb",
+              "text": "mov rcx, rdi"
+            },
+            {
+              "address": "0x4bbb79ce",
+              "text": "mov rbx, qword ptr [rsp + 0x30]"
+            },
+            {
+              "address": "0x4bbb79d3",
+              "text": "add rsp, 0x20"
+            },
+            {
+              "address": "0x4bbb79d7",
+              "text": "pop rdi"
+            },
+            {
+              "address": "0x4bbb79d8",
+              "text": "jmp qword ptr [rax + 0x2a0]"
+            }
+          ]
+        },
+        "0x4bbbd460": {
+          "end": "0x4bbbd4e4",
+          "native_bytes": "48895c24084889742410574883ec20488bfa488bd9e8d6eaffff488b4338488d4b38488bd7ff5028488bcfff155f131801488bcf85c074258b5348ff155f1318018b534c488bcf488b5c2430488b7424384883c4205f48ff2543131801488d5348ff1541131801488d534c488bcf488b5c2430488b7424384883c4205f48ff2524131801",
+          "sha256": "8cd87f89bb3a7a0e6b0933a1e827cdbb57314d83cb2d386ccdf3ea946035a77c",
+          "instructions": [
+            {
+              "address": "0x4bbbd460",
+              "text": "mov qword ptr [rsp + 8], rbx"
+            },
+            {
+              "address": "0x4bbbd465",
+              "text": "mov qword ptr [rsp + 0x10], rsi"
+            },
+            {
+              "address": "0x4bbbd46a",
+              "text": "push rdi"
+            },
+            {
+              "address": "0x4bbbd46b",
+              "text": "sub rsp, 0x20"
+            },
+            {
+              "address": "0x4bbbd46f",
+              "text": "mov rdi, rdx"
+            },
+            {
+              "address": "0x4bbbd472",
+              "text": "mov rbx, rcx"
+            },
+            {
+              "address": "0x4bbbd475",
+              "text": "call 0x4bbbbf50"
+            },
+            {
+              "address": "0x4bbbd47a",
+              "text": "mov rax, qword ptr [rbx + 0x38]"
+            },
+            {
+              "address": "0x4bbbd47e",
+              "text": "lea rcx, [rbx + 0x38]"
+            },
+            {
+              "address": "0x4bbbd482",
+              "text": "mov rdx, rdi"
+            },
+            {
+              "address": "0x4bbbd485",
+              "text": "call qword ptr [rax + 0x28]"
+            },
+            {
+              "address": "0x4bbbd488",
+              "text": "mov rcx, rdi"
+            },
+            {
+              "address": "0x4bbbd48b",
+              "text": "call qword ptr [rip + 0x118135f]"
+            },
+            {
+              "address": "0x4bbbd491",
+              "text": "mov rcx, rdi"
+            },
+            {
+              "address": "0x4bbbd494",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbd496",
+              "text": "je 0x4bbbd4bd"
+            },
+            {
+              "address": "0x4bbbd498",
+              "text": "mov edx, dword ptr [rbx + 0x48]"
+            },
+            {
+              "address": "0x4bbbd49b",
+              "text": "call qword ptr [rip + 0x118135f]"
+            },
+            {
+              "address": "0x4bbbd4a1",
+              "text": "mov edx, dword ptr [rbx + 0x4c]"
+            },
+            {
+              "address": "0x4bbbd4a4",
+              "text": "mov rcx, rdi"
+            },
+            {
+              "address": "0x4bbbd4a7",
+              "text": "mov rbx, qword ptr [rsp + 0x30]"
+            },
+            {
+              "address": "0x4bbbd4ac",
+              "text": "mov rsi, qword ptr [rsp + 0x38]"
+            },
+            {
+              "address": "0x4bbbd4b1",
+              "text": "add rsp, 0x20"
+            },
+            {
+              "address": "0x4bbbd4b5",
+              "text": "pop rdi"
+            },
+            {
+              "address": "0x4bbbd4b6",
+              "text": "jmp qword ptr [rip + 0x1181343]"
+            },
+            {
+              "address": "0x4bbbd4bd",
+              "text": "lea rdx, [rbx + 0x48]"
+            },
+            {
+              "address": "0x4bbbd4c1",
+              "text": "call qword ptr [rip + 0x1181341]"
+            },
+            {
+              "address": "0x4bbbd4c7",
+              "text": "lea rdx, [rbx + 0x4c]"
+            },
+            {
+              "address": "0x4bbbd4cb",
+              "text": "mov rcx, rdi"
+            },
+            {
+              "address": "0x4bbbd4ce",
+              "text": "mov rbx, qword ptr [rsp + 0x30]"
+            },
+            {
+              "address": "0x4bbbd4d3",
+              "text": "mov rsi, qword ptr [rsp + 0x38]"
+            },
+            {
+              "address": "0x4bbbd4d8",
+              "text": "add rsp, 0x20"
+            },
+            {
+              "address": "0x4bbbd4dc",
+              "text": "pop rdi"
+            },
+            {
+              "address": "0x4bbbd4dd",
+              "text": "jmp qword ptr [rip + 0x1181324]"
+            }
+          ]
+        },
+        "0x4bbbf3f0": {
+          "end": "0x4bbbf462",
+          "native_bytes": "48895c24084889742410574883ec20488d7938488bda488d713c488bcaff15ddf31701488bcb85c074238b17ff15def317018b16488bcb488b5c2430488b7424384883c4205f48ff25c3f31701488bd7ff15c2f31701488bd6488bcb488b5c2430488b7424384883c4205f48ff25a6f31701",
+          "sha256": "c9627b2d0106fb43d3cd312e71b85a2e87c457455671d3c93794fc7745362c31",
+          "instructions": [
+            {
+              "address": "0x4bbbf3f0",
+              "text": "mov qword ptr [rsp + 8], rbx"
+            },
+            {
+              "address": "0x4bbbf3f5",
+              "text": "mov qword ptr [rsp + 0x10], rsi"
+            },
+            {
+              "address": "0x4bbbf3fa",
+              "text": "push rdi"
+            },
+            {
+              "address": "0x4bbbf3fb",
+              "text": "sub rsp, 0x20"
+            },
+            {
+              "address": "0x4bbbf3ff",
+              "text": "lea rdi, [rcx + 0x38]"
+            },
+            {
+              "address": "0x4bbbf403",
+              "text": "mov rbx, rdx"
+            },
+            {
+              "address": "0x4bbbf406",
+              "text": "lea rsi, [rcx + 0x3c]"
+            },
+            {
+              "address": "0x4bbbf40a",
+              "text": "mov rcx, rdx"
+            },
+            {
+              "address": "0x4bbbf40d",
+              "text": "call qword ptr [rip + 0x117f3dd]"
+            },
+            {
+              "address": "0x4bbbf413",
+              "text": "mov rcx, rbx"
+            },
+            {
+              "address": "0x4bbbf416",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbf418",
+              "text": "je 0x4bbbf43d"
+            },
+            {
+              "address": "0x4bbbf41a",
+              "text": "mov edx, dword ptr [rdi]"
+            },
+            {
+              "address": "0x4bbbf41c",
+              "text": "call qword ptr [rip + 0x117f3de]"
+            },
+            {
+              "address": "0x4bbbf422",
+              "text": "mov edx, dword ptr [rsi]"
+            },
+            {
+              "address": "0x4bbbf424",
+              "text": "mov rcx, rbx"
+            },
+            {
+              "address": "0x4bbbf427",
+              "text": "mov rbx, qword ptr [rsp + 0x30]"
+            },
+            {
+              "address": "0x4bbbf42c",
+              "text": "mov rsi, qword ptr [rsp + 0x38]"
+            },
+            {
+              "address": "0x4bbbf431",
+              "text": "add rsp, 0x20"
+            },
+            {
+              "address": "0x4bbbf435",
+              "text": "pop rdi"
+            },
+            {
+              "address": "0x4bbbf436",
+              "text": "jmp qword ptr [rip + 0x117f3c3]"
+            },
+            {
+              "address": "0x4bbbf43d",
+              "text": "mov rdx, rdi"
+            },
+            {
+              "address": "0x4bbbf440",
+              "text": "call qword ptr [rip + 0x117f3c2]"
+            },
+            {
+              "address": "0x4bbbf446",
+              "text": "mov rdx, rsi"
+            },
+            {
+              "address": "0x4bbbf449",
+              "text": "mov rcx, rbx"
+            },
+            {
+              "address": "0x4bbbf44c",
+              "text": "mov rbx, qword ptr [rsp + 0x30]"
+            },
+            {
+              "address": "0x4bbbf451",
+              "text": "mov rsi, qword ptr [rsp + 0x38]"
+            },
+            {
+              "address": "0x4bbbf456",
+              "text": "add rsp, 0x20"
+            },
+            {
+              "address": "0x4bbbf45a",
+              "text": "pop rdi"
+            },
+            {
+              "address": "0x4bbbf45b",
+              "text": "jmp qword ptr [rip + 0x117f3a6]"
+            }
+          ]
+        },
+        "0x4bbbbf50": {
+          "end": "0x4bbbc382",
+          "native_bytes": "48895c2408488974241055574156488bec4883ec70488bda488bf9488d4dc0ff151b8d1701488b45c04885c00f84ed0300008b888007000085c97512ff150e8d1701ff15008d17018bc8488b45c081f91b0200000f8221010000488d4f10488b01488bd3ff10488b4dc04885c90f84ac0300008b818007000085c07510ff15cd8c1701ff15bf8c1701488b4dc03dad030000734283b9900700000075394885ff74134881c1080500004c8bc78b5110ff1593281801ff150dd61701488bc8ff15acce170185c0740e488b0733d2488bcfff90b0000000488bcbff15c1271801488d4dc085c0ba000020007405ba00000008ff155982170185c07425488b4dc04885c90f84170300004885ff74134881c1500600004c8bc78b5110ff1528281801488bcbff157727180185c00f856e020000488b45c04885c00f84e102000083b8a0010000000f8454020000488b0733d2488bcfff90b0000000488b4dc04885c90f84b90200004881c110020000488bd7ff152a8c1701e9240200004885c00f849b020000488b70304885f6741ce89efa6500488bd0488bcee89272fe0085c00f847a020000488b45c04885c00f846d0200008b888007000085c97512ff158e8b1701ff15808b17018bc8488b45c04533f681f980010000733744397020744e488d156abdf101488bcfe84172fe0085c0488b45c0751a443970200f841f02000044897020488b45c04c897018488b45c0443970207417488d1533bdf101488bcfe80a72fe0085c00f84f20100004c897538488d5538488bcbff15fa2718014c3975380f84dd000000ff1532a01701488bd0488b4d38e8d571fe0085c07441c74530ffffffff488d5530488bcbff15462618014c8b45388b5530488d4dd0e8cebdf8ff90488d55d0488d4f10e85053fbff90488d4dd0e8c6c0f8ffe98600000041b801000000488b5538488d4f10e80e54fbff488b45c04885c00f84600100008b888007000085c97512ff15818a1701ff15738a17018bc8488b45c081f9ad03000073464885c00f84330100004885ff7413488d88080500004c8bc78b5110ff1544261801ff15bed31701488bc8ff155dcc170185c0740e488b0733d2488bcfff90b0000000488b45c048837f1800746f4885c00f84e60000008b808007000085c0750cff15078a1701ff15f98917013dd2010000734944897424204c8d0d960ff5014c8d0507f9f40133d2488b4f18e88e91fe004885c0743b488b10488bc8ff924824000085c0742b488b4dc04881c118030000ba7e2c0000ff15218a17014c8d5c2470498b5b20498b7328498be3415e5f5dc3488b45c04885c074628b808007000085c0750cff1583891701ff15758917013dcb01000073c5488b5f18e88daaf5ff488bd0488bcbe84170fe0085c07518488b5f18e8a59bf5ff488bd0488bcbe82970fe0085c07495488b4dc04881c118030000ba6a2c0000e97affffff4533c0baffffffffb901000000e8f26ffe00cc",
+          "sha256": "d62a8ff17ea74609cc51a19e32a9e96c7a12abe9bde7fe323c8d830418434699",
+          "instructions": [
+            {
+              "address": "0x4bbbbf50",
+              "text": "mov qword ptr [rsp + 8], rbx"
+            },
+            {
+              "address": "0x4bbbbf55",
+              "text": "mov qword ptr [rsp + 0x10], rsi"
+            },
+            {
+              "address": "0x4bbbbf5a",
+              "text": "push rbp"
+            },
+            {
+              "address": "0x4bbbbf5b",
+              "text": "push rdi"
+            },
+            {
+              "address": "0x4bbbbf5c",
+              "text": "push r14"
+            },
+            {
+              "address": "0x4bbbbf5e",
+              "text": "mov rbp, rsp"
+            },
+            {
+              "address": "0x4bbbbf61",
+              "text": "sub rsp, 0x70"
+            },
+            {
+              "address": "0x4bbbbf65",
+              "text": "mov rbx, rdx"
+            },
+            {
+              "address": "0x4bbbbf68",
+              "text": "mov rdi, rcx"
+            },
+            {
+              "address": "0x4bbbbf6b",
+              "text": "lea rcx, [rbp - 0x40]"
+            },
+            {
+              "address": "0x4bbbbf6f",
+              "text": "call qword ptr [rip + 0x1178d1b]"
+            },
+            {
+              "address": "0x4bbbbf75",
+              "text": "mov rax, qword ptr [rbp - 0x40]"
+            },
+            {
+              "address": "0x4bbbbf79",
+              "text": "test rax, rax"
+            },
+            {
+              "address": "0x4bbbbf7c",
+              "text": "je 0x4bbbc36f"
+            },
+            {
+              "address": "0x4bbbbf82",
+              "text": "mov ecx, dword ptr [rax + 0x780]"
+            },
+            {
+              "address": "0x4bbbbf88",
+              "text": "test ecx, ecx"
+            },
+            {
+              "address": "0x4bbbbf8a",
+              "text": "jne 0x4bbbbf9e"
+            },
+            {
+              "address": "0x4bbbbf8c",
+              "text": "call qword ptr [rip + 0x1178d0e]"
+            },
+            {
+              "address": "0x4bbbbf92",
+              "text": "call qword ptr [rip + 0x1178d00]"
+            },
+            {
+              "address": "0x4bbbbf98",
+              "text": "mov ecx, eax"
+            },
+            {
+              "address": "0x4bbbbf9a",
+              "text": "mov rax, qword ptr [rbp - 0x40]"
+            },
+            {
+              "address": "0x4bbbbf9e",
+              "text": "cmp ecx, 0x21b"
+            },
+            {
+              "address": "0x4bbbbfa4",
+              "text": "jb 0x4bbbc0cb"
+            },
+            {
+              "address": "0x4bbbbfaa",
+              "text": "lea rcx, [rdi + 0x10]"
+            },
+            {
+              "address": "0x4bbbbfae",
+              "text": "mov rax, qword ptr [rcx]"
+            },
+            {
+              "address": "0x4bbbbfb1",
+              "text": "mov rdx, rbx"
+            },
+            {
+              "address": "0x4bbbbfb4",
+              "text": "call qword ptr [rax]"
+            },
+            {
+              "address": "0x4bbbbfb6",
+              "text": "mov rcx, qword ptr [rbp - 0x40]"
+            },
+            {
+              "address": "0x4bbbbfba",
+              "text": "test rcx, rcx"
+            },
+            {
+              "address": "0x4bbbbfbd",
+              "text": "je 0x4bbbc36f"
+            },
+            {
+              "address": "0x4bbbbfc3",
+              "text": "mov eax, dword ptr [rcx + 0x780]"
+            },
+            {
+              "address": "0x4bbbbfc9",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbbfcb",
+              "text": "jne 0x4bbbbfdd"
+            },
+            {
+              "address": "0x4bbbbfcd",
+              "text": "call qword ptr [rip + 0x1178ccd]"
+            },
+            {
+              "address": "0x4bbbbfd3",
+              "text": "call qword ptr [rip + 0x1178cbf]"
+            },
+            {
+              "address": "0x4bbbbfd9",
+              "text": "mov rcx, qword ptr [rbp - 0x40]"
+            },
+            {
+              "address": "0x4bbbbfdd",
+              "text": "cmp eax, 0x3ad"
+            },
+            {
+              "address": "0x4bbbbfe2",
+              "text": "jae 0x4bbbc026"
+            },
+            {
+              "address": "0x4bbbbfe4",
+              "text": "cmp dword ptr [rcx + 0x790], 0"
+            },
+            {
+              "address": "0x4bbbbfeb",
+              "text": "jne 0x4bbbc026"
+            },
+            {
+              "address": "0x4bbbbfed",
+              "text": "test rdi, rdi"
+            },
+            {
+              "address": "0x4bbbbff0",
+              "text": "je 0x4bbbc005"
+            },
+            {
+              "address": "0x4bbbbff2",
+              "text": "add rcx, 0x508"
+            },
+            {
+              "address": "0x4bbbbff9",
+              "text": "mov r8, rdi"
+            },
+            {
+              "address": "0x4bbbbffc",
+              "text": "mov edx, dword ptr [rcx + 0x10]"
+            },
+            {
+              "address": "0x4bbbbfff",
+              "text": "call qword ptr [rip + 0x1182893]"
+            },
+            {
+              "address": "0x4bbbc005",
+              "text": "call qword ptr [rip + 0x117d60d]"
+            },
+            {
+              "address": "0x4bbbc00b",
+              "text": "mov rcx, rax"
+            },
+            {
+              "address": "0x4bbbc00e",
+              "text": "call qword ptr [rip + 0x117ceac]"
+            },
+            {
+              "address": "0x4bbbc014",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbc016",
+              "text": "je 0x4bbbc026"
+            },
+            {
+              "address": "0x4bbbc018",
+              "text": "mov rax, qword ptr [rdi]"
+            },
+            {
+              "address": "0x4bbbc01b",
+              "text": "xor edx, edx"
+            },
+            {
+              "address": "0x4bbbc01d",
+              "text": "mov rcx, rdi"
+            },
+            {
+              "address": "0x4bbbc020",
+              "text": "call qword ptr [rax + 0xb0]"
+            },
+            {
+              "address": "0x4bbbc026",
+              "text": "mov rcx, rbx"
+            },
+            {
+              "address": "0x4bbbc029",
+              "text": "call qword ptr [rip + 0x11827c1]"
+            },
+            {
+              "address": "0x4bbbc02f",
+              "text": "lea rcx, [rbp - 0x40]"
+            },
+            {
+              "address": "0x4bbbc033",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbc035",
+              "text": "mov edx, 0x200000"
+            },
+            {
+              "address": "0x4bbbc03a",
+              "text": "je 0x4bbbc041"
+            },
+            {
+              "address": "0x4bbbc03c",
+              "text": "mov edx, 0x8000000"
+            },
+            {
+              "address": "0x4bbbc041",
+              "text": "call qword ptr [rip + 0x1178259]"
+            },
+            {
+              "address": "0x4bbbc047",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbc049",
+              "text": "je 0x4bbbc070"
+            },
+            {
+              "address": "0x4bbbc04b",
+              "text": "mov rcx, qword ptr [rbp - 0x40]"
+            },
+            {
+              "address": "0x4bbbc04f",
+              "text": "test rcx, rcx"
+            },
+            {
+              "address": "0x4bbbc052",
+              "text": "je 0x4bbbc36f"
+            },
+            {
+              "address": "0x4bbbc058",
+              "text": "test rdi, rdi"
+            },
+            {
+              "address": "0x4bbbc05b",
+              "text": "je 0x4bbbc070"
+            },
+            {
+              "address": "0x4bbbc05d",
+              "text": "add rcx, 0x650"
+            },
+            {
+              "address": "0x4bbbc064",
+              "text": "mov r8, rdi"
+            },
+            {
+              "address": "0x4bbbc067",
+              "text": "mov edx, dword ptr [rcx + 0x10]"
+            },
+            {
+              "address": "0x4bbbc06a",
+              "text": "call qword ptr [rip + 0x1182828]"
+            },
+            {
+              "address": "0x4bbbc070",
+              "text": "mov rcx, rbx"
+            },
+            {
+              "address": "0x4bbbc073",
+              "text": "call qword ptr [rip + 0x1182777]"
+            },
+            {
+              "address": "0x4bbbc079",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbc07b",
+              "text": "jne 0x4bbbc2ef"
+            },
+            {
+              "address": "0x4bbbc081",
+              "text": "mov rax, qword ptr [rbp - 0x40]"
+            },
+            {
+              "address": "0x4bbbc085",
+              "text": "test rax, rax"
+            },
+            {
+              "address": "0x4bbbc088",
+              "text": "je 0x4bbbc36f"
+            },
+            {
+              "address": "0x4bbbc08e",
+              "text": "cmp dword ptr [rax + 0x1a0], 0"
+            },
+            {
+              "address": "0x4bbbc095",
+              "text": "je 0x4bbbc2ef"
+            },
+            {
+              "address": "0x4bbbc09b",
+              "text": "mov rax, qword ptr [rdi]"
+            },
+            {
+              "address": "0x4bbbc09e",
+              "text": "xor edx, edx"
+            },
+            {
+              "address": "0x4bbbc0a0",
+              "text": "mov rcx, rdi"
+            },
+            {
+              "address": "0x4bbbc0a3",
+              "text": "call qword ptr [rax + 0xb0]"
+            },
+            {
+              "address": "0x4bbbc0a9",
+              "text": "mov rcx, qword ptr [rbp - 0x40]"
+            },
+            {
+              "address": "0x4bbbc0ad",
+              "text": "test rcx, rcx"
+            },
+            {
+              "address": "0x4bbbc0b0",
+              "text": "je 0x4bbbc36f"
+            },
+            {
+              "address": "0x4bbbc0b6",
+              "text": "add rcx, 0x210"
+            },
+            {
+              "address": "0x4bbbc0bd",
+              "text": "mov rdx, rdi"
+            },
+            {
+              "address": "0x4bbbc0c0",
+              "text": "call qword ptr [rip + 0x1178c2a]"
+            },
+            {
+              "address": "0x4bbbc0c6",
+              "text": "jmp 0x4bbbc2ef"
+            },
+            {
+              "address": "0x4bbbc0cb",
+              "text": "test rax, rax"
+            },
+            {
+              "address": "0x4bbbc0ce",
+              "text": "je 0x4bbbc36f"
+            },
+            {
+              "address": "0x4bbbc0d4",
+              "text": "mov rsi, qword ptr [rax + 0x30]"
+            },
+            {
+              "address": "0x4bbbc0d8",
+              "text": "test rsi, rsi"
+            },
+            {
+              "address": "0x4bbbc0db",
+              "text": "je 0x4bbbc0f9"
+            },
+            {
+              "address": "0x4bbbc0dd",
+              "text": "call 0x4c21bb80"
+            },
+            {
+              "address": "0x4bbbc0e2",
+              "text": "mov rdx, rax"
+            },
+            {
+              "address": "0x4bbbc0e5",
+              "text": "mov rcx, rsi"
+            },
+            {
+              "address": "0x4bbbc0e8",
+              "text": "call 0x4cba337f"
+            },
+            {
+              "address": "0x4bbbc0ed",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbc0ef",
+              "text": "je 0x4bbbc36f"
+            },
+            {
+              "address": "0x4bbbc0f5",
+              "text": "mov rax, qword ptr [rbp - 0x40]"
+            },
+            {
+              "address": "0x4bbbc0f9",
+              "text": "test rax, rax"
+            },
+            {
+              "address": "0x4bbbc0fc",
+              "text": "je 0x4bbbc36f"
+            },
+            {
+              "address": "0x4bbbc102",
+              "text": "mov ecx, dword ptr [rax + 0x780]"
+            },
+            {
+              "address": "0x4bbbc108",
+              "text": "test ecx, ecx"
+            },
+            {
+              "address": "0x4bbbc10a",
+              "text": "jne 0x4bbbc11e"
+            },
+            {
+              "address": "0x4bbbc10c",
+              "text": "call qword ptr [rip + 0x1178b8e]"
+            },
+            {
+              "address": "0x4bbbc112",
+              "text": "call qword ptr [rip + 0x1178b80]"
+            },
+            {
+              "address": "0x4bbbc118",
+              "text": "mov ecx, eax"
+            },
+            {
+              "address": "0x4bbbc11a",
+              "text": "mov rax, qword ptr [rbp - 0x40]"
+            },
+            {
+              "address": "0x4bbbc11e",
+              "text": "xor r14d, r14d"
+            },
+            {
+              "address": "0x4bbbc121",
+              "text": "cmp ecx, 0x180"
+            },
+            {
+              "address": "0x4bbbc127",
+              "text": "jae 0x4bbbc160"
+            },
+            {
+              "address": "0x4bbbc129",
+              "text": "cmp dword ptr [rax + 0x20], r14d"
+            },
+            {
+              "address": "0x4bbbc12d",
+              "text": "je 0x4bbbc17d"
+            },
+            {
+              "address": "0x4bbbc12f",
+              "text": "lea rdx, [rip + 0x1f1bd6a]"
+            },
+            {
+              "address": "0x4bbbc136",
+              "text": "mov rcx, rdi"
+            },
+            {
+              "address": "0x4bbbc139",
+              "text": "call 0x4cba337f"
+            },
+            {
+              "address": "0x4bbbc13e",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbc140",
+              "text": "mov rax, qword ptr [rbp - 0x40]"
+            },
+            {
+              "address": "0x4bbbc144",
+              "text": "jne 0x4bbbc160"
+            },
+            {
+              "address": "0x4bbbc146",
+              "text": "cmp dword ptr [rax + 0x20], r14d"
+            },
+            {
+              "address": "0x4bbbc14a",
+              "text": "je 0x4bbbc36f"
+            },
+            {
+              "address": "0x4bbbc150",
+              "text": "mov dword ptr [rax + 0x20], r14d"
+            },
+            {
+              "address": "0x4bbbc154",
+              "text": "mov rax, qword ptr [rbp - 0x40]"
+            },
+            {
+              "address": "0x4bbbc158",
+              "text": "mov qword ptr [rax + 0x18], r14"
+            },
+            {
+              "address": "0x4bbbc15c",
+              "text": "mov rax, qword ptr [rbp - 0x40]"
+            },
+            {
+              "address": "0x4bbbc160",
+              "text": "cmp dword ptr [rax + 0x20], r14d"
+            },
+            {
+              "address": "0x4bbbc164",
+              "text": "je 0x4bbbc17d"
+            },
+            {
+              "address": "0x4bbbc166",
+              "text": "lea rdx, [rip + 0x1f1bd33]"
+            },
+            {
+              "address": "0x4bbbc16d",
+              "text": "mov rcx, rdi"
+            },
+            {
+              "address": "0x4bbbc170",
+              "text": "call 0x4cba337f"
+            },
+            {
+              "address": "0x4bbbc175",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbc177",
+              "text": "je 0x4bbbc36f"
+            },
+            {
+              "address": "0x4bbbc17d",
+              "text": "mov qword ptr [rbp + 0x38], r14"
+            },
+            {
+              "address": "0x4bbbc181",
+              "text": "lea rdx, [rbp + 0x38]"
+            },
+            {
+              "address": "0x4bbbc185",
+              "text": "mov rcx, rbx"
+            },
+            {
+              "address": "0x4bbbc188",
+              "text": "call qword ptr [rip + 0x11827fa]"
+            },
+            {
+              "address": "0x4bbbc18e",
+              "text": "cmp qword ptr [rbp + 0x38], r14"
+            },
+            {
+              "address": "0x4bbbc192",
+              "text": "je 0x4bbbc275"
+            },
+            {
+              "address": "0x4bbbc198",
+              "text": "call qword ptr [rip + 0x117a032]"
+            },
+            {
+              "address": "0x4bbbc19e",
+              "text": "mov rdx, rax"
+            },
+            {
+              "address": "0x4bbbc1a1",
+              "text": "mov rcx, qword ptr [rbp + 0x38]"
+            },
+            {
+              "address": "0x4bbbc1a5",
+              "text": "call 0x4cba337f"
+            },
+            {
+              "address": "0x4bbbc1aa",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbc1ac",
+              "text": "je 0x4bbbc1ef"
+            },
+            {
+              "address": "0x4bbbc1ae",
+              "text": "mov dword ptr [rbp + 0x30], 0xffffffff"
+            },
+            {
+              "address": "0x4bbbc1b5",
+              "text": "lea rdx, [rbp + 0x30]"
+            },
+            {
+              "address": "0x4bbbc1b9",
+              "text": "mov rcx, rbx"
+            },
+            {
+              "address": "0x4bbbc1bc",
+              "text": "call qword ptr [rip + 0x1182646]"
+            },
+            {
+              "address": "0x4bbbc1c2",
+              "text": "mov r8, qword ptr [rbp + 0x38]"
+            },
+            {
+              "address": "0x4bbbc1c6",
+              "text": "mov edx, dword ptr [rbp + 0x30]"
+            },
+            {
+              "address": "0x4bbbc1c9",
+              "text": "lea rcx, [rbp - 0x30]"
+            },
+            {
+              "address": "0x4bbbc1cd",
+              "text": "call 0x4bb47fa0"
+            },
+            {
+              "address": "0x4bbbc1d2",
+              "text": "nop "
+            },
+            {
+              "address": "0x4bbbc1d3",
+              "text": "lea rdx, [rbp - 0x30]"
+            },
+            {
+              "address": "0x4bbbc1d7",
+              "text": "lea rcx, [rdi + 0x10]"
+            },
+            {
+              "address": "0x4bbbc1db",
+              "text": "call 0x4bb71530"
+            },
+            {
+              "address": "0x4bbbc1e0",
+              "text": "nop "
+            },
+            {
+              "address": "0x4bbbc1e1",
+              "text": "lea rcx, [rbp - 0x30]"
+            },
+            {
+              "address": "0x4bbbc1e5",
+              "text": "call 0x4bb482b0"
+            },
+            {
+              "address": "0x4bbbc1ea",
+              "text": "jmp 0x4bbbc275"
+            },
+            {
+              "address": "0x4bbbc1ef",
+              "text": "mov r8d, 1"
+            },
+            {
+              "address": "0x4bbbc1f5",
+              "text": "mov rdx, qword ptr [rbp + 0x38]"
+            },
+            {
+              "address": "0x4bbbc1f9",
+              "text": "lea rcx, [rdi + 0x10]"
+            },
+            {
+              "address": "0x4bbbc1fd",
+              "text": "call 0x4bb71610"
+            },
+            {
+              "address": "0x4bbbc202",
+              "text": "mov rax, qword ptr [rbp - 0x40]"
+            },
+            {
+              "address": "0x4bbbc206",
+              "text": "test rax, rax"
+            },
+            {
+              "address": "0x4bbbc209",
+              "text": "je 0x4bbbc36f"
+            },
+            {
+              "address": "0x4bbbc20f",
+              "text": "mov ecx, dword ptr [rax + 0x780]"
+            },
+            {
+              "address": "0x4bbbc215",
+              "text": "test ecx, ecx"
+            },
+            {
+              "address": "0x4bbbc217",
+              "text": "jne 0x4bbbc22b"
+            },
+            {
+              "address": "0x4bbbc219",
+              "text": "call qword ptr [rip + 0x1178a81]"
+            },
+            {
+              "address": "0x4bbbc21f",
+              "text": "call qword ptr [rip + 0x1178a73]"
+            },
+            {
+              "address": "0x4bbbc225",
+              "text": "mov ecx, eax"
+            },
+            {
+              "address": "0x4bbbc227",
+              "text": "mov rax, qword ptr [rbp - 0x40]"
+            },
+            {
+              "address": "0x4bbbc22b",
+              "text": "cmp ecx, 0x3ad"
+            },
+            {
+              "address": "0x4bbbc231",
+              "text": "jae 0x4bbbc279"
+            },
+            {
+              "address": "0x4bbbc233",
+              "text": "test rax, rax"
+            },
+            {
+              "address": "0x4bbbc236",
+              "text": "je 0x4bbbc36f"
+            },
+            {
+              "address": "0x4bbbc23c",
+              "text": "test rdi, rdi"
+            },
+            {
+              "address": "0x4bbbc23f",
+              "text": "je 0x4bbbc254"
+            },
+            {
+              "address": "0x4bbbc241",
+              "text": "lea rcx, [rax + 0x508]"
+            },
+            {
+              "address": "0x4bbbc248",
+              "text": "mov r8, rdi"
+            },
+            {
+              "address": "0x4bbbc24b",
+              "text": "mov edx, dword ptr [rcx + 0x10]"
+            },
+            {
+              "address": "0x4bbbc24e",
+              "text": "call qword ptr [rip + 0x1182644]"
+            },
+            {
+              "address": "0x4bbbc254",
+              "text": "call qword ptr [rip + 0x117d3be]"
+            },
+            {
+              "address": "0x4bbbc25a",
+              "text": "mov rcx, rax"
+            },
+            {
+              "address": "0x4bbbc25d",
+              "text": "call qword ptr [rip + 0x117cc5d]"
+            },
+            {
+              "address": "0x4bbbc263",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbc265",
+              "text": "je 0x4bbbc275"
+            },
+            {
+              "address": "0x4bbbc267",
+              "text": "mov rax, qword ptr [rdi]"
+            },
+            {
+              "address": "0x4bbbc26a",
+              "text": "xor edx, edx"
+            },
+            {
+              "address": "0x4bbbc26c",
+              "text": "mov rcx, rdi"
+            },
+            {
+              "address": "0x4bbbc26f",
+              "text": "call qword ptr [rax + 0xb0]"
+            },
+            {
+              "address": "0x4bbbc275",
+              "text": "mov rax, qword ptr [rbp - 0x40]"
+            },
+            {
+              "address": "0x4bbbc279",
+              "text": "cmp qword ptr [rdi + 0x18], 0"
+            },
+            {
+              "address": "0x4bbbc27e",
+              "text": "je 0x4bbbc2ef"
+            },
+            {
+              "address": "0x4bbbc280",
+              "text": "test rax, rax"
+            },
+            {
+              "address": "0x4bbbc283",
+              "text": "je 0x4bbbc36f"
+            },
+            {
+              "address": "0x4bbbc289",
+              "text": "mov eax, dword ptr [rax + 0x780]"
+            },
+            {
+              "address": "0x4bbbc28f",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbc291",
+              "text": "jne 0x4bbbc29f"
+            },
+            {
+              "address": "0x4bbbc293",
+              "text": "call qword ptr [rip + 0x1178a07]"
+            },
+            {
+              "address": "0x4bbbc299",
+              "text": "call qword ptr [rip + 0x11789f9]"
+            },
+            {
+              "address": "0x4bbbc29f",
+              "text": "cmp eax, 0x1d2"
+            },
+            {
+              "address": "0x4bbbc2a4",
+              "text": "jae 0x4bbbc2ef"
+            },
+            {
+              "address": "0x4bbbc2a6",
+              "text": "mov dword ptr [rsp + 0x20], r14d"
+            },
+            {
+              "address": "0x4bbbc2ab",
+              "text": "lea r9, [rip + 0x1f50f96]"
+            },
+            {
+              "address": "0x4bbbc2b2",
+              "text": "lea r8, [rip + 0x1f4f907]"
+            },
+            {
+              "address": "0x4bbbc2b9",
+              "text": "xor edx, edx"
+            },
+            {
+              "address": "0x4bbbc2bb",
+              "text": "mov rcx, qword ptr [rdi + 0x18]"
+            },
+            {
+              "address": "0x4bbbc2bf",
+              "text": "call 0x4cba5452"
+            },
+            {
+              "address": "0x4bbbc2c4",
+              "text": "test rax, rax"
+            },
+            {
+              "address": "0x4bbbc2c7",
+              "text": "je 0x4bbbc304"
+            },
+            {
+              "address": "0x4bbbc2c9",
+              "text": "mov rdx, qword ptr [rax]"
+            },
+            {
+              "address": "0x4bbbc2cc",
+              "text": "mov rcx, rax"
+            },
+            {
+              "address": "0x4bbbc2cf",
+              "text": "call qword ptr [rdx + 0x2448]"
+            },
+            {
+              "address": "0x4bbbc2d5",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbc2d7",
+              "text": "je 0x4bbbc304"
+            },
+            {
+              "address": "0x4bbbc2d9",
+              "text": "mov rcx, qword ptr [rbp - 0x40]"
+            },
+            {
+              "address": "0x4bbbc2dd",
+              "text": "add rcx, 0x318"
+            },
+            {
+              "address": "0x4bbbc2e4",
+              "text": "mov edx, 0x2c7e"
+            },
+            {
+              "address": "0x4bbbc2e9",
+              "text": "call qword ptr [rip + 0x1178a21]"
+            },
+            {
+              "address": "0x4bbbc2ef",
+              "text": "lea r11, [rsp + 0x70]"
+            },
+            {
+              "address": "0x4bbbc2f4",
+              "text": "mov rbx, qword ptr [r11 + 0x20]"
+            },
+            {
+              "address": "0x4bbbc2f8",
+              "text": "mov rsi, qword ptr [r11 + 0x28]"
+            },
+            {
+              "address": "0x4bbbc2fc",
+              "text": "mov rsp, r11"
+            },
+            {
+              "address": "0x4bbbc2ff",
+              "text": "pop r14"
+            },
+            {
+              "address": "0x4bbbc301",
+              "text": "pop rdi"
+            },
+            {
+              "address": "0x4bbbc302",
+              "text": "pop rbp"
+            },
+            {
+              "address": "0x4bbbc303",
+              "text": "ret "
+            },
+            {
+              "address": "0x4bbbc304",
+              "text": "mov rax, qword ptr [rbp - 0x40]"
+            },
+            {
+              "address": "0x4bbbc308",
+              "text": "test rax, rax"
+            },
+            {
+              "address": "0x4bbbc30b",
+              "text": "je 0x4bbbc36f"
+            },
+            {
+              "address": "0x4bbbc30d",
+              "text": "mov eax, dword ptr [rax + 0x780]"
+            },
+            {
+              "address": "0x4bbbc313",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbc315",
+              "text": "jne 0x4bbbc323"
+            },
+            {
+              "address": "0x4bbbc317",
+              "text": "call qword ptr [rip + 0x1178983]"
+            },
+            {
+              "address": "0x4bbbc31d",
+              "text": "call qword ptr [rip + 0x1178975]"
+            },
+            {
+              "address": "0x4bbbc323",
+              "text": "cmp eax, 0x1cb"
+            },
+            {
+              "address": "0x4bbbc328",
+              "text": "jae 0x4bbbc2ef"
+            },
+            {
+              "address": "0x4bbbc32a",
+              "text": "mov rbx, qword ptr [rdi + 0x18]"
+            },
+            {
+              "address": "0x4bbbc32e",
+              "text": "call 0x4bb16dc0"
+            },
+            {
+              "address": "0x4bbbc333",
+              "text": "mov rdx, rax"
+            },
+            {
+              "address": "0x4bbbc336",
+              "text": "mov rcx, rbx"
+            },
+            {
+              "address": "0x4bbbc339",
+              "text": "call 0x4cba337f"
+            },
+            {
+              "address": "0x4bbbc33e",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbc340",
+              "text": "jne 0x4bbbc35a"
+            },
+            {
+              "address": "0x4bbbc342",
+              "text": "mov rbx, qword ptr [rdi + 0x18]"
+            },
+            {
+              "address": "0x4bbbc346",
+              "text": "call 0x4bb15ef0"
+            },
+            {
+              "address": "0x4bbbc34b",
+              "text": "mov rdx, rax"
+            },
+            {
+              "address": "0x4bbbc34e",
+              "text": "mov rcx, rbx"
+            },
+            {
+              "address": "0x4bbbc351",
+              "text": "call 0x4cba337f"
+            },
+            {
+              "address": "0x4bbbc356",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbc358",
+              "text": "je 0x4bbbc2ef"
+            },
+            {
+              "address": "0x4bbbc35a",
+              "text": "mov rcx, qword ptr [rbp - 0x40]"
+            },
+            {
+              "address": "0x4bbbc35e",
+              "text": "add rcx, 0x318"
+            },
+            {
+              "address": "0x4bbbc365",
+              "text": "mov edx, 0x2c6a"
+            },
+            {
+              "address": "0x4bbbc36a",
+              "text": "jmp 0x4bbbc2e9"
+            },
+            {
+              "address": "0x4bbbc36f",
+              "text": "xor r8d, r8d"
+            },
+            {
+              "address": "0x4bbbc372",
+              "text": "mov edx, 0xffffffff"
+            },
+            {
+              "address": "0x4bbbc377",
+              "text": "mov ecx, 1"
+            },
+            {
+              "address": "0x4bbbc37c",
+              "text": "call 0x4cba3373"
+            },
+            {
+              "address": "0x4bbbc381",
+              "text": "int3 "
+            }
+          ]
+        },
+        "0x4bbbc390": {
+          "end": "0x4bbbc5ac",
+          "native_bytes": "48895c2408574883ec30488bd9488bfa488d4c2420ff15e5881701488bcfff153c24180185c074384885db0f84d8010000e83371fe00488bd0488bcbe8ae6ffe0085c00f84c0010000488d5308488bcfe84b74ffff488b5c24404883c4305fc3488b44242048c7430800000000c6442450014885c00f847b0100008b808007000085c0750cff1585881701ff15778817013d80010000730e488d542450488bcfff1592251801807c24500074a8488bcfff15b2231801488d1593a4f101488bcf85c07408ff159e241801eb06ff15ae231801488bd0488bcb488bf8e800ccb10048837b08000f84ea000000488b4424204885c00f84fd0000008b808007000085c0750cff1507881701ff15f98717013d800100000f83bb000000488b4b08488d15ebb9f101e8c56efe0085c00f84a300000033d2488bcfe84433b100488d158da8f101488bc8488bf8e8a16efe0085c00f84a000000041b801000000488bd7488bcbe8b9cab100488b4c24204885c90f84810000008b818007000085c07511ff158b871701ff157d871701488b4c24203dad030000733e4885c9745a4885ff74134881c1080500004c8bc78b5110ff1554231801ff15ced01701488bc8ff156dc9170185c0740e488b0733d2488bcfff90b0000000488b4b084885c90f8473feffff488d1527b9f101e8016efe0085c00f845ffeffff4533c0baffffffffb901000000e8db6dfe00cc4533c0baffffffffb901000000e8c86dfe00cc",
+          "sha256": "505786864b6467a228b77a22a1204374894384fc37b684c8f456a0123380c216",
+          "instructions": [
+            {
+              "address": "0x4bbbc390",
+              "text": "mov qword ptr [rsp + 8], rbx"
+            },
+            {
+              "address": "0x4bbbc395",
+              "text": "push rdi"
+            },
+            {
+              "address": "0x4bbbc396",
+              "text": "sub rsp, 0x30"
+            },
+            {
+              "address": "0x4bbbc39a",
+              "text": "mov rbx, rcx"
+            },
+            {
+              "address": "0x4bbbc39d",
+              "text": "mov rdi, rdx"
+            },
+            {
+              "address": "0x4bbbc3a0",
+              "text": "lea rcx, [rsp + 0x20]"
+            },
+            {
+              "address": "0x4bbbc3a5",
+              "text": "call qword ptr [rip + 0x11788e5]"
+            },
+            {
+              "address": "0x4bbbc3ab",
+              "text": "mov rcx, rdi"
+            },
+            {
+              "address": "0x4bbbc3ae",
+              "text": "call qword ptr [rip + 0x118243c]"
+            },
+            {
+              "address": "0x4bbbc3b4",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbc3b6",
+              "text": "je 0x4bbbc3f0"
+            },
+            {
+              "address": "0x4bbbc3b8",
+              "text": "test rbx, rbx"
+            },
+            {
+              "address": "0x4bbbc3bb",
+              "text": "je 0x4bbbc599"
+            },
+            {
+              "address": "0x4bbbc3c1",
+              "text": "call 0x4cba34f9"
+            },
+            {
+              "address": "0x4bbbc3c6",
+              "text": "mov rdx, rax"
+            },
+            {
+              "address": "0x4bbbc3c9",
+              "text": "mov rcx, rbx"
+            },
+            {
+              "address": "0x4bbbc3cc",
+              "text": "call 0x4cba337f"
+            },
+            {
+              "address": "0x4bbbc3d1",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbc3d3",
+              "text": "je 0x4bbbc599"
+            },
+            {
+              "address": "0x4bbbc3d9",
+              "text": "lea rdx, [rbx + 8]"
+            },
+            {
+              "address": "0x4bbbc3dd",
+              "text": "mov rcx, rdi"
+            },
+            {
+              "address": "0x4bbbc3e0",
+              "text": "call 0x4bbb3830"
+            },
+            {
+              "address": "0x4bbbc3e5",
+              "text": "mov rbx, qword ptr [rsp + 0x40]"
+            },
+            {
+              "address": "0x4bbbc3ea",
+              "text": "add rsp, 0x30"
+            },
+            {
+              "address": "0x4bbbc3ee",
+              "text": "pop rdi"
+            },
+            {
+              "address": "0x4bbbc3ef",
+              "text": "ret "
+            },
+            {
+              "address": "0x4bbbc3f0",
+              "text": "mov rax, qword ptr [rsp + 0x20]"
+            },
+            {
+              "address": "0x4bbbc3f5",
+              "text": "mov qword ptr [rbx + 8], 0"
+            },
+            {
+              "address": "0x4bbbc3fd",
+              "text": "mov byte ptr [rsp + 0x50], 1"
+            },
+            {
+              "address": "0x4bbbc402",
+              "text": "test rax, rax"
+            },
+            {
+              "address": "0x4bbbc405",
+              "text": "je 0x4bbbc586"
+            },
+            {
+              "address": "0x4bbbc40b",
+              "text": "mov eax, dword ptr [rax + 0x780]"
+            },
+            {
+              "address": "0x4bbbc411",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbc413",
+              "text": "jne 0x4bbbc421"
+            },
+            {
+              "address": "0x4bbbc415",
+              "text": "call qword ptr [rip + 0x1178885]"
+            },
+            {
+              "address": "0x4bbbc41b",
+              "text": "call qword ptr [rip + 0x1178877]"
+            },
+            {
+              "address": "0x4bbbc421",
+              "text": "cmp eax, 0x180"
+            },
+            {
+              "address": "0x4bbbc426",
+              "text": "jae 0x4bbbc436"
+            },
+            {
+              "address": "0x4bbbc428",
+              "text": "lea rdx, [rsp + 0x50]"
+            },
+            {
+              "address": "0x4bbbc42d",
+              "text": "mov rcx, rdi"
+            },
+            {
+              "address": "0x4bbbc430",
+              "text": "call qword ptr [rip + 0x1182592]"
+            },
+            {
+              "address": "0x4bbbc436",
+              "text": "cmp byte ptr [rsp + 0x50], 0"
+            },
+            {
+              "address": "0x4bbbc43b",
+              "text": "je 0x4bbbc3e5"
+            },
+            {
+              "address": "0x4bbbc43d",
+              "text": "mov rcx, rdi"
+            },
+            {
+              "address": "0x4bbbc440",
+              "text": "call qword ptr [rip + 0x11823b2]"
+            },
+            {
+              "address": "0x4bbbc446",
+              "text": "lea rdx, [rip + 0x1f1a493]"
+            },
+            {
+              "address": "0x4bbbc44d",
+              "text": "mov rcx, rdi"
+            },
+            {
+              "address": "0x4bbbc450",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbc452",
+              "text": "je 0x4bbbc45c"
+            },
+            {
+              "address": "0x4bbbc454",
+              "text": "call qword ptr [rip + 0x118249e]"
+            },
+            {
+              "address": "0x4bbbc45a",
+              "text": "jmp 0x4bbbc462"
+            },
+            {
+              "address": "0x4bbbc45c",
+              "text": "call qword ptr [rip + 0x11823ae]"
+            },
+            {
+              "address": "0x4bbbc462",
+              "text": "mov rdx, rax"
+            },
+            {
+              "address": "0x4bbbc465",
+              "text": "mov rcx, rbx"
+            },
+            {
+              "address": "0x4bbbc468",
+              "text": "mov rdi, rax"
+            },
+            {
+              "address": "0x4bbbc46b",
+              "text": "call 0x4c6d9070"
+            },
+            {
+              "address": "0x4bbbc470",
+              "text": "cmp qword ptr [rbx + 8], 0"
+            },
+            {
+              "address": "0x4bbbc475",
+              "text": "je 0x4bbbc565"
+            },
+            {
+              "address": "0x4bbbc47b",
+              "text": "mov rax, qword ptr [rsp + 0x20]"
+            },
+            {
+              "address": "0x4bbbc480",
+              "text": "test rax, rax"
+            },
+            {
+              "address": "0x4bbbc483",
+              "text": "je 0x4bbbc586"
+            },
+            {
+              "address": "0x4bbbc489",
+              "text": "mov eax, dword ptr [rax + 0x780]"
+            },
+            {
+              "address": "0x4bbbc48f",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbc491",
+              "text": "jne 0x4bbbc49f"
+            },
+            {
+              "address": "0x4bbbc493",
+              "text": "call qword ptr [rip + 0x1178807]"
+            },
+            {
+              "address": "0x4bbbc499",
+              "text": "call qword ptr [rip + 0x11787f9]"
+            },
+            {
+              "address": "0x4bbbc49f",
+              "text": "cmp eax, 0x180"
+            },
+            {
+              "address": "0x4bbbc4a4",
+              "text": "jae 0x4bbbc565"
+            },
+            {
+              "address": "0x4bbbc4aa",
+              "text": "mov rcx, qword ptr [rbx + 8]"
+            },
+            {
+              "address": "0x4bbbc4ae",
+              "text": "lea rdx, [rip + 0x1f1b9eb]"
+            },
+            {
+              "address": "0x4bbbc4b5",
+              "text": "call 0x4cba337f"
+            },
+            {
+              "address": "0x4bbbc4ba",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbc4bc",
+              "text": "je 0x4bbbc565"
+            },
+            {
+              "address": "0x4bbbc4c2",
+              "text": "xor edx, edx"
+            },
+            {
+              "address": "0x4bbbc4c4",
+              "text": "mov rcx, rdi"
+            },
+            {
+              "address": "0x4bbbc4c7",
+              "text": "call 0x4c6cf810"
+            },
+            {
+              "address": "0x4bbbc4cc",
+              "text": "lea rdx, [rip + 0x1f1a88d]"
+            },
+            {
+              "address": "0x4bbbc4d3",
+              "text": "mov rcx, rax"
+            },
+            {
+              "address": "0x4bbbc4d6",
+              "text": "mov rdi, rax"
+            },
+            {
+              "address": "0x4bbbc4d9",
+              "text": "call 0x4cba337f"
+            },
+            {
+              "address": "0x4bbbc4de",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbc4e0",
+              "text": "je 0x4bbbc586"
+            },
+            {
+              "address": "0x4bbbc4e6",
+              "text": "mov r8d, 1"
+            },
+            {
+              "address": "0x4bbbc4ec",
+              "text": "mov rdx, rdi"
+            },
+            {
+              "address": "0x4bbbc4ef",
+              "text": "mov rcx, rbx"
+            },
+            {
+              "address": "0x4bbbc4f2",
+              "text": "call 0x4c6d8fb0"
+            },
+            {
+              "address": "0x4bbbc4f7",
+              "text": "mov rcx, qword ptr [rsp + 0x20]"
+            },
+            {
+              "address": "0x4bbbc4fc",
+              "text": "test rcx, rcx"
+            },
+            {
+              "address": "0x4bbbc4ff",
+              "text": "je 0x4bbbc586"
+            },
+            {
+              "address": "0x4bbbc505",
+              "text": "mov eax, dword ptr [rcx + 0x780]"
+            },
+            {
+              "address": "0x4bbbc50b",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbc50d",
+              "text": "jne 0x4bbbc520"
+            },
+            {
+              "address": "0x4bbbc50f",
+              "text": "call qword ptr [rip + 0x117878b]"
+            },
+            {
+              "address": "0x4bbbc515",
+              "text": "call qword ptr [rip + 0x117877d]"
+            },
+            {
+              "address": "0x4bbbc51b",
+              "text": "mov rcx, qword ptr [rsp + 0x20]"
+            },
+            {
+              "address": "0x4bbbc520",
+              "text": "cmp eax, 0x3ad"
+            },
+            {
+              "address": "0x4bbbc525",
+              "text": "jae 0x4bbbc565"
+            },
+            {
+              "address": "0x4bbbc527",
+              "text": "test rcx, rcx"
+            },
+            {
+              "address": "0x4bbbc52a",
+              "text": "je 0x4bbbc586"
+            },
+            {
+              "address": "0x4bbbc52c",
+              "text": "test rdi, rdi"
+            },
+            {
+              "address": "0x4bbbc52f",
+              "text": "je 0x4bbbc544"
+            },
+            {
+              "address": "0x4bbbc531",
+              "text": "add rcx, 0x508"
+            },
+            {
+              "address": "0x4bbbc538",
+              "text": "mov r8, rdi"
+            },
+            {
+              "address": "0x4bbbc53b",
+              "text": "mov edx, dword ptr [rcx + 0x10]"
+            },
+            {
+              "address": "0x4bbbc53e",
+              "text": "call qword ptr [rip + 0x1182354]"
+            },
+            {
+              "address": "0x4bbbc544",
+              "text": "call qword ptr [rip + 0x117d0ce]"
+            },
+            {
+              "address": "0x4bbbc54a",
+              "text": "mov rcx, rax"
+            },
+            {
+              "address": "0x4bbbc54d",
+              "text": "call qword ptr [rip + 0x117c96d]"
+            },
+            {
+              "address": "0x4bbbc553",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbc555",
+              "text": "je 0x4bbbc565"
+            },
+            {
+              "address": "0x4bbbc557",
+              "text": "mov rax, qword ptr [rdi]"
+            },
+            {
+              "address": "0x4bbbc55a",
+              "text": "xor edx, edx"
+            },
+            {
+              "address": "0x4bbbc55c",
+              "text": "mov rcx, rdi"
+            },
+            {
+              "address": "0x4bbbc55f",
+              "text": "call qword ptr [rax + 0xb0]"
+            },
+            {
+              "address": "0x4bbbc565",
+              "text": "mov rcx, qword ptr [rbx + 8]"
+            },
+            {
+              "address": "0x4bbbc569",
+              "text": "test rcx, rcx"
+            },
+            {
+              "address": "0x4bbbc56c",
+              "text": "je 0x4bbbc3e5"
+            },
+            {
+              "address": "0x4bbbc572",
+              "text": "lea rdx, [rip + 0x1f1b927]"
+            },
+            {
+              "address": "0x4bbbc579",
+              "text": "call 0x4cba337f"
+            },
+            {
+              "address": "0x4bbbc57e",
+              "text": "test eax, eax"
+            },
+            {
+              "address": "0x4bbbc580",
+              "text": "je 0x4bbbc3e5"
+            },
+            {
+              "address": "0x4bbbc586",
+              "text": "xor r8d, r8d"
+            },
+            {
+              "address": "0x4bbbc589",
+              "text": "mov edx, 0xffffffff"
+            },
+            {
+              "address": "0x4bbbc58e",
+              "text": "mov ecx, 1"
+            },
+            {
+              "address": "0x4bbbc593",
+              "text": "call 0x4cba3373"
+            },
+            {
+              "address": "0x4bbbc598",
+              "text": "int3 "
+            },
+            {
+              "address": "0x4bbbc599",
+              "text": "xor r8d, r8d"
+            },
+            {
+              "address": "0x4bbbc59c",
+              "text": "mov edx, 0xffffffff"
+            },
+            {
+              "address": "0x4bbbc5a1",
+              "text": "mov ecx, 1"
+            },
+            {
+              "address": "0x4bbbc5a6",
+              "text": "call 0x4cba3373"
+            },
+            {
+              "address": "0x4bbbc5ab",
+              "text": "int3 "
+            }
+          ]
+        }
+      },
+      "entity_id_tables": [
+        {
+          "class_name": "moEntityId_c",
+          "object_offset": 0,
+          "locator": "0x4d36d020",
+          "vftable": "0x4d1fb380",
+          "slots": [
+            "0x4bbaac80",
+            "0x4b399b80",
+            "0x4cba273f",
+            "0x4b29dae0",
+            "0x4b29dae0",
+            "0x4bbbc390",
+            "0x4cba274b",
+            "0x4cba2751"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\top-surface-dependencies-native-evidence.json",
+    "source_sha256": "b9f7b3346656665c6d890d6ac93fe6d339e7ac36c94d216c4130798750dc4c2c",
+    "evidence": {
+      "modules": [
+        {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+          "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+          "tables": [
+            {
+              "class_name": "moFromSktTopSurfIdRep_c",
+              "object_offset": 0,
+              "locator": "0x4d334238",
+              "vftable": "0x4cf6be68",
+              "slots": [
+                "0x4bbb6940",
+                "0x4bbb5ca0",
+                "0x4cba273f",
+                "0x4b29dae0",
+                "0x4b29dae0",
+                "0x4bbbde70",
+                "0x4cba274b",
+                "0x4cba2751"
+              ]
+            },
+            {
+              "class_name": "moConstraintCoincLineParallelPlaneRefplaneData_c",
+              "object_offset": 0,
+              "locator": "0x4d31f5e8",
+              "vftable": "0x4ced26e8",
+              "slots": [
+                "0x4b8f7dc0",
+                "0x4b8f76d0",
+                "0x4cba273f",
+                "0x4b29dae0",
+                "0x4b29dae0",
+                "0x4b8f8040",
+                "0x4cba274b",
+                "0x4cba2751"
+              ]
+            },
+            {
+              "class_name": "moRefPlaneParallelGeom_c",
+              "object_offset": 0,
+              "locator": "0x4d35b860",
+              "vftable": "0x4d1752a0",
+              "slots": [
+                "0x4c2e51d0",
+                "0x4c2e5010",
+                "0x4cba273f",
+                "0x4b29dae0",
+                "0x4b29dae0",
+                "0x4c2e52d0",
+                "0x4cba274b",
+                "0x4cba2751"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldsmmu.dll",
+          "sha256": "ae20d533b36f105f22de4ed5984fb2245bbf03fb91a84ae473e0941a4b9e3c54",
+          "tables": [
+            {
+              "class_name": "featureStateData_c",
+              "object_offset": 0,
+              "locator": "0x3dc73158",
+              "vftable": "0x3dc2b0a0",
+              "slots": [
+                "0x3db5b6e0",
+                "0x3d937720",
+                "0x3db880ae",
+                "0x3d709c50",
+                "0x3d709c50",
+                "0x3db5bd30",
+                "0x3db880f0",
+                "0x3db880ea"
+              ]
+            }
+          ]
+        }
+      ],
+      "functions": {
+        "0x4b8f8040": {
+          "end": "0x4b8f8045",
+          "native_bytes": "e94b000000",
+          "thunk_target": "0x4b8f8090"
+        },
+        "0x4c2e52d0": {
+          "end": "0x4c2e52d5",
+          "native_bytes": "e9bb000000",
+          "thunk_target": "0x4c2e5390"
+        },
+        "0x4c2880a0": {
+          "end": "0x4c2888e8",
+          "native_bytes": "488bc448895818488970205557415441564157488d68c84881ec100100000f2970c80f2978b8440f2940a8440f294898488b05290688014833c4488945c0488bda488bf9488d4c2430ff15a1cbaa00488bcbff15f866ab0085c00f8489010000488b4f18ff159637ab00488bd3488bc8ff15d237ab00488b4f18ff158837ab00488bd3488bc8ff15a437ab00488bd3488b4f20ff158743ab00488d4f28488d55a0e82a7c060033f60f1f840000000000f20f104cf5a0488bcbff153168ab0048ffc64883fe047ce8488d5748488bcbe8aca392ff8b5750488bcbff158066ab008b5754488bcbff157466ab008b5758488bcbff156866ab0033d2488bcbff151d68ab00488d1536548601488bcfe8cdb1910085c07431488bcfe8523204ff488bd0488d4c2440ff153c33ab0090488bd3488d4c2440ff150d37ab0090488d4c2440ff153133ab008b575c488bcbff150d66ab008b5760488bcbff150166ab000fb65764488bcbff15c46bab00488d5768488bcbe858a392ff488bcbff15d765ab00488b57704c8d05c4648601488bcb85c07408ff15b766ab00eb06ff15d765ab00488d5778488bcbe873ad92ff488b4dc04833cce827bf91004c8d9c2410010000498b5b40498b7348410f2873f0410f287be0450f2843d0450f284bc0498be3415f415e415c5f5dc3488d4c2458ff156432ab0090488bd3488d4c2458ff154d36ab00488d4c2470ff15f232ab0090488bd3488d4c2470ff151b36ab00488b4f1833f64885c9753fb938000000e883b091004c8bf048894424284885c0741f4c8d442470488d542458488bc8ff159633ab00488d05ef89c000498906eb034c8bf64c897718eb1a488d542458ff151e39ab00488d542470488b4f18ff151739ab004c8b77204d85f67533b988000000e821b091004c8bf048894424284885c07415488bc8ff158e32ab00488d05773eb400498906eb034c8bf64c897720488bd3498bceff155f41ab00488b4424304885c00f844b0500008b808007000085c0750cff1519c9aa00ff150bc9aa00488d55a0488bcb3d600100000f82f0000000ff15f365ab00f20f104da00f28c10f54057c2db100f20f10358c04ed00450f57c0f20f103dd076b700f2440f100d676eb70066410f2fc1761366410f2fc87607f20f117da0eb05f20f1175a0488d55a8488bcbff15a065ab00f20f104da80f28c10f5405292db10066410f2fc1761366410f2fc87607f20f117da8eb05f20f1175a8488d55b0488bcbff156a65ab00f20f104db00f28c10f5405f32cb10066410f2fc1761366410f2fc87607f20f117db0eb05f20f1175b0488d55b8488bcbff153465ab00f20f104db80f28c10f5405bd2cb10066410f2fc1766466410f2fc87607f20f117db8eb56f20f1175b8eb4fff150365ab00488d55b0488bcbff15f664ab00f20f1045a0f20f5905592cb100f20f1145a00f5705b56bb100f20f1145a8f20f1045b0f20f59053b2cb100f20f1145b00f5705976bb100f20f1145b8448bf64c8d7da06666660f1f840000000000f2410f1017418bd6488d4f28e85fe9000041ffc64d8d7f084183fe047ce2488d5748488bcbe8e65492ff488d542420488bcbff15e062ab008b442420894750488b4424304885c00f84850300008b808007000085c0750cff1553c7aa00ff1545c7aa003de80000007309837f50ff7503897750488d542420488bcbff159762ab008b442420894754488d542420488bcbff158262ab008b442420894758488b4424304885c00f84270300008b888007000085c97513ff15f5c6aa00ff15e7c6aa008bc8488b44243081f9da00000072614885c00f84f90200008b888007000085c97513ff15c7c6aa00ff15b9c6aa008bc8488b44243081f9e60000007333488d4d88ff15502fab0090488d542428488bcbff159163ab00488bd3488d4d88ff15c432ab0090488d4d88ff15412fab00eb344885c00f84980200008b808007000085c0750cff1566c6aa00ff1558c6aa003de6000000720e488d542428488bcbff157363ab00488d542458488d4c2440ff15a32eab0090488d15734f8601488bcfe80aad910085c0745d488b4424304885c00f844e0200008b808007000085c0750cff1509c6aa00ff15fbc5aa003d1e080000720e488bd3488d4c2440ff153e32ab00488d45884889442428488d542440488d4d88ff153e2eab0090488bd0488bcfe86aa60700488b4424304885c00f84cb0100008b888007000085c97513ff15acc5aa00ff159ec5aa008bc8488b44243081f9e50000007712ba01000000488bcfe8da7ebfff488b4424304885c00f848b0100008b888007000085c97513ff156cc5aa00ff155ec5aa008bc8488b44243081f9250e0000721a488d542428488bcbff15b160ab008b44242889475c488b4424304885c00f84430100008b888007000085c97513ff1524c5aa00ff1516c5aa008bc8488b44243081f9db1000007212488d5760488bcbff156a60ab00488b4424304885c00f84030100008b888007000085c97513ff15e4c4aa00ff15d6c4aa008bc8488b44243081f9de170000721f488d542428488bcbff15f965ab0066837c2428000f95c0884764488b4424304885c00f84b60000008b888007000085c97513ff1597c4aa00ff1589c4aa008bc8488b44243081f9842b00007211488d5768488bcbe8365292ff488b4424304885c0747b8b808007000085c0750cff155cc4aa00ff154ec4aa003da62b00007236488bcbff159e5fab00488d158f5e8601488bcb85c07408ff158a60ab00eb06ff159a5fab0048894770488d5778488bcbe83a5e92ff90488d4c2440ff15862cab0090488d4c2470ff15c22cab0090488d4c2458ff156e2cab00e99ef9ffff4533c0baffffffffb901000000e8b2aa9100904533c0baffffffffb901000000e89faa9100904533c0baffffffffb901000000e88caa9100cc",
+          "sha256": "9a97f18e8b5a5124e98131e79e55c69e74c71ed64fc92a7c072fa267f2f2c335",
+          "imports": [
+            {
+              "address": "0x4c2880e9",
+              "symbol": "??0moArchiveHelper_c@@QEAA@PEAVsu_CArchive@@@Z"
+            },
+            {
+              "address": "0x4c2880f2",
+              "symbol": "?IsStoring@su_CArchive@@QEBAHXZ"
+            },
+            {
+              "address": "0x4c288104",
+              "symbol": "?rootPoint@mgPlane_c@@QEBAAEBVmgPoint_c@@XZ"
+            },
+            {
+              "address": "0x4c288110",
+              "symbol": "?save@mgPoint_c@@QEBAXAEAVsu_CArchive@@@Z"
+            },
+            {
+              "address": "0x4c28811a",
+              "symbol": "?normal@mgPlane_c@@QEBAAEBVmgUnitVector_c@@XZ"
+            },
+            {
+              "address": "0x4c288126",
+              "symbol": "?save@mgVector_c@@QEBAXAEAVsu_CArchive@@@Z"
+            },
+            {
+              "address": "0x4c288133",
+              "symbol": "?save@mgXform_c@@QEAAXAEAVsu_CArchive@@@Z"
+            },
+            {
+              "address": "0x4c288159",
+              "symbol": "??6su_CArchive@@QEAAAEAV0@N@Z"
+            },
+            {
+              "address": "0x4c28817a",
+              "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z"
+            },
+            {
+              "address": "0x4c288186",
+              "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z"
+            },
+            {
+              "address": "0x4c288192",
+              "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z"
+            },
+            {
+              "address": "0x4c28819d",
+              "symbol": "??6su_CArchive@@QEAAAEAV0@E@Z"
+            },
+            {
+              "address": "0x4c2881c6",
+              "symbol": "??0mgPoint_c@@QEAA@AEBV0@@Z"
+            },
+            {
+              "address": "0x4c2881d5",
+              "symbol": "?save@mgPoint_c@@QEBAXAEAVsu_CArchive@@@Z"
+            },
+            {
+              "address": "0x4c2881e1",
+              "symbol": "??1mgPoint_c@@QEAA@XZ"
+            },
+            {
+              "address": "0x4c2881ed",
+              "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z"
+            },
+            {
+              "address": "0x4c2881f9",
+              "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z"
+            },
+            {
+              "address": "0x4c288206",
+              "symbol": "??6su_CArchive@@QEAAAEAV0@G@Z"
+            },
+            {
+              "address": "0x4c28821b",
+              "symbol": "?IsDBStream@su_CArchive@@QEBAHXZ"
+            },
+            {
+              "address": "0x4c288233",
+              "symbol": "?WriteObject@su_CDBArchive@@QEAAXPEBVCObject@@PEBUCRuntimeClass@@@Z"
+            },
+            {
+              "address": "0x4c28823b",
+              "symbol": "?WriteObject@su_CArchive@@QEAAXPEBVCObject@@PEBUCRuntimeClass@@@Z"
+            },
+            {
+              "address": "0x4c28828e",
+              "symbol": "??0mgPoint_c@@QEAA@XZ"
+            },
+            {
+              "address": "0x4c28829d",
+              "symbol": "?restore@mgPoint_c@@QEAAXAEAVsu_CArchive@@@Z"
+            },
+            {
+              "address": "0x4c2882a8",
+              "symbol": "??0mgUnitVector_c@@QEAA@XZ"
+            },
+            {
+              "address": "0x4c2882b7",
+              "symbol": "?restore@mgVector_c@@QEAAXAEAVsu_CArchive@@@Z"
+            },
+            {
+              "address": "0x4c2882ec",
+              "symbol": "??0mgPlane_c@@QEAA@AEBVmgPoint_c@@AEBVmgUnitVector_c@@@Z"
+            },
+            {
+              "address": "0x4c28830c",
+              "symbol": "?setRootPoint@mgPlane_c@@QEAAXAEBVmgPoint_c@@@Z"
+            },
+            {
+              "address": "0x4c28831b",
+              "symbol": "?setNormal@mgPlane_c@@QEAAXAEBVmgUnitVector_c@@@Z"
+            },
+            {
+              "address": "0x4c288344",
+              "symbol": "??0mgXform_c@@QEAA@XZ"
+            },
+            {
+              "address": "0x4c288363",
+              "symbol": "?restore@mgXform_c@@QEAAXAEAVsu_CArchive@@@Z"
+            },
+            {
+              "address": "0x4c288381",
+              "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+            },
+            {
+              "address": "0x4c288387",
+              "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+            },
+            {
+              "address": "0x4c28839f",
+              "symbol": "??5su_CArchive@@QEAAAEAV0@AEAN@Z"
+            },
+            {
+              "address": "0x4c2883f2",
+              "symbol": "??5su_CArchive@@QEAAAEAV0@AEAN@Z"
+            },
+            {
+              "address": "0x4c288428",
+              "symbol": "??5su_CArchive@@QEAAAEAV0@AEAN@Z"
+            },
+            {
+              "address": "0x4c28845e",
+              "symbol": "??5su_CArchive@@QEAAAEAV0@AEAN@Z"
+            },
+            {
+              "address": "0x4c28848f",
+              "symbol": "??5su_CArchive@@QEAAAEAV0@AEAN@Z"
+            },
+            {
+              "address": "0x4c28849c",
+              "symbol": "??5su_CArchive@@QEAAAEAV0@AEAN@Z"
+            },
+            {
+              "address": "0x4c288522",
+              "symbol": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z"
+            },
+            {
+              "address": "0x4c288547",
+              "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+            },
+            {
+              "address": "0x4c28854d",
+              "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+            },
+            {
+              "address": "0x4c28856b",
+              "symbol": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z"
+            },
+            {
+              "address": "0x4c288580",
+              "symbol": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z"
+            },
+            {
+              "address": "0x4c2885a5",
+              "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+            },
+            {
+              "address": "0x4c2885ab",
+              "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+            },
+            {
+              "address": "0x4c2885d3",
+              "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+            },
+            {
+              "address": "0x4c2885d9",
+              "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+            },
+            {
+              "address": "0x4c2885f2",
+              "symbol": "??0mgVector_c@@QEAA@XZ"
+            },
+            {
+              "address": "0x4c288601",
+              "symbol": "??5su_CArchive@@QEAAAEAV0@AEAN@Z"
+            },
+            {
+              "address": "0x4c28860e",
+              "symbol": "?restore@mgVector_c@@QEAAXAEAVsu_CArchive@@@Z"
+            },
+            {
+              "address": "0x4c288619",
+              "symbol": "??1mgVector_c@@QEAA@XZ"
+            },
+            {
+              "address": "0x4c288634",
+              "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+            },
+            {
+              "address": "0x4c28863a",
+              "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+            },
+            {
+              "address": "0x4c28864f",
+              "symbol": "??5su_CArchive@@QEAAAEAV0@AEAE@Z"
+            },
+            {
+              "address": "0x4c28865f",
+              "symbol": "??0mgPoint_c@@QEAA@AEBV0@@Z"
+            },
+            {
+              "address": "0x4c288691",
+              "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+            },
+            {
+              "address": "0x4c288697",
+              "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+            },
+            {
+              "address": "0x4c2886ac",
+              "symbol": "?restore@mgPoint_c@@QEAAXAEAVsu_CArchive@@@Z"
+            },
+            {
+              "address": "0x4c2886c4",
+              "symbol": "??0mgPoint_c@@QEAA@AEBV0@@Z"
+            },
+            {
+              "address": "0x4c2886ee",
+              "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+            },
+            {
+              "address": "0x4c2886f4",
+              "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+            },
+            {
+              "address": "0x4c28872e",
+              "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+            },
+            {
+              "address": "0x4c288734",
+              "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+            },
+            {
+              "address": "0x4c288751",
+              "symbol": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z"
+            },
+            {
+              "address": "0x4c288776",
+              "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+            },
+            {
+              "address": "0x4c28877c",
+              "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+            },
+            {
+              "address": "0x4c288798",
+              "symbol": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z"
+            },
+            {
+              "address": "0x4c2887b6",
+              "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+            },
+            {
+              "address": "0x4c2887bc",
+              "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+            },
+            {
+              "address": "0x4c2887d9",
+              "symbol": "??5su_CArchive@@QEAAAEAV0@AEAG@Z"
+            },
+            {
+              "address": "0x4c288803",
+              "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+            },
+            {
+              "address": "0x4c288809",
+              "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+            },
+            {
+              "address": "0x4c28883e",
+              "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+            },
+            {
+              "address": "0x4c288844",
+              "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+            },
+            {
+              "address": "0x4c288854",
+              "symbol": "?IsDBStream@su_CArchive@@QEBAHXZ"
+            },
+            {
+              "address": "0x4c288868",
+              "symbol": "?ReadObject@su_CDBArchive@@QEAAPEAVCObject@@PEAUCRuntimeClass@@@Z"
+            },
+            {
+              "address": "0x4c288870",
+              "symbol": "?ReadObject@su_CArchive@@QEAAPEAVCObject@@PEBUCRuntimeClass@@@Z"
+            },
+            {
+              "address": "0x4c28888c",
+              "symbol": "??1mgPoint_c@@QEAA@XZ"
+            },
+            {
+              "address": "0x4c288898",
+              "symbol": "??1mgVector_c@@QEAA@XZ"
+            },
+            {
+              "address": "0x4c2888a4",
+              "symbol": "??1mgPoint_c@@QEAA@XZ"
+            }
+          ]
+        },
+        "0x4bbbde70": {
+          "end": "0x4bbbdebe",
+          "native_bytes": "48895c2408574883ec20488bfa488bd9e8cbe0ffff488bcfff1562091801488bcf85c074148b5338488b5c24304883c4205f48ff2557091801488d5338488b5c24304883c4205f48ff254a091801",
+          "sha256": "f123f4b5107686b540fb98ea5c56a4bf9cb2a3cbf454a6d248e242b7536b99ec",
+          "imports": [
+            {
+              "address": "0x4bbbde88",
+              "symbol": "?IsStoring@su_CArchive@@QEBAHXZ"
+            }
+          ]
+        },
+        "0x4c283d30": {
+          "end": "0x4c283d60",
+          "native_bytes": "48895c2408574883ec20488bda488bf9ff15caabab00488b07488bd3488bcf488b5c24304883c4205f48ffa050010000",
+          "sha256": "53b3f0382916cf8380b4b6232c8cc76a831df754a6ed09136fd82ddc366637a6",
+          "imports": [
+            {
+              "address": "0x4c283d40",
+              "symbol": "?Serialize@su_CObject@@UEAAXAEAVsu_CArchive@@@Z"
+            }
+          ]
+        },
+        "0x4bbbbf50": {
+          "end": "0x4bbbc382",
+          "native_bytes": "48895c2408488974241055574156488bec4883ec70488bda488bf9488d4dc0ff151b8d1701488b45c04885c00f84ed0300008b888007000085c97512ff150e8d1701ff15008d17018bc8488b45c081f91b0200000f8221010000488d4f10488b01488bd3ff10488b4dc04885c90f84ac0300008b818007000085c07510ff15cd8c1701ff15bf8c1701488b4dc03dad030000734283b9900700000075394885ff74134881c1080500004c8bc78b5110ff1593281801ff150dd61701488bc8ff15acce170185c0740e488b0733d2488bcfff90b0000000488bcbff15c1271801488d4dc085c0ba000020007405ba00000008ff155982170185c07425488b4dc04885c90f84170300004885ff74134881c1500600004c8bc78b5110ff1528281801488bcbff157727180185c00f856e020000488b45c04885c00f84e102000083b8a0010000000f8454020000488b0733d2488bcfff90b0000000488b4dc04885c90f84b90200004881c110020000488bd7ff152a8c1701e9240200004885c00f849b020000488b70304885f6741ce89efa6500488bd0488bcee89272fe0085c00f847a020000488b45c04885c00f846d0200008b888007000085c97512ff158e8b1701ff15808b17018bc8488b45c04533f681f980010000733744397020744e488d156abdf101488bcfe84172fe0085c0488b45c0751a443970200f841f02000044897020488b45c04c897018488b45c0443970207417488d1533bdf101488bcfe80a72fe0085c00f84f20100004c897538488d5538488bcbff15fa2718014c3975380f84dd000000ff1532a01701488bd0488b4d38e8d571fe0085c07441c74530ffffffff488d5530488bcbff15462618014c8b45388b5530488d4dd0e8cebdf8ff90488d55d0488d4f10e85053fbff90488d4dd0e8c6c0f8ffe98600000041b801000000488b5538488d4f10e80e54fbff488b45c04885c00f84600100008b888007000085c97512ff15818a1701ff15738a17018bc8488b45c081f9ad03000073464885c00f84330100004885ff7413488d88080500004c8bc78b5110ff1544261801ff15bed31701488bc8ff155dcc170185c0740e488b0733d2488bcfff90b0000000488b45c048837f1800746f4885c00f84e60000008b808007000085c0750cff15078a1701ff15f98917013dd2010000734944897424204c8d0d960ff5014c8d0507f9f40133d2488b4f18e88e91fe004885c0743b488b10488bc8ff924824000085c0742b488b4dc04881c118030000ba7e2c0000ff15218a17014c8d5c2470498b5b20498b7328498be3415e5f5dc3488b45c04885c074628b808007000085c0750cff1583891701ff15758917013dcb01000073c5488b5f18e88daaf5ff488bd0488bcbe84170fe0085c07518488b5f18e8a59bf5ff488bd0488bcbe82970fe0085c07495488b4dc04881c118030000ba6a2c0000e97affffff4533c0baffffffffb901000000e8f26ffe00cc",
+          "sha256": "d62a8ff17ea74609cc51a19e32a9e96c7a12abe9bde7fe323c8d830418434699",
+          "imports": [
+            {
+              "address": "0x4bbbbf6f",
+              "symbol": "??0moArchiveHelper_c@@QEAA@PEAVsu_CArchive@@@Z"
+            },
+            {
+              "address": "0x4bbbbf8c",
+              "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+            },
+            {
+              "address": "0x4bbbbf92",
+              "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+            },
+            {
+              "address": "0x4bbbbfcd",
+              "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+            },
+            {
+              "address": "0x4bbbbfd3",
+              "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+            },
+            {
+              "address": "0x4bbbbfff",
+              "symbol": "?SetAtGrow@su_CObArray@@QEAAXHPEAVCObject@@@Z"
+            },
+            {
+              "address": "0x4bbbc005",
+              "symbol": "?get@gcEnvironment_c@@SAPEAV1@XZ"
+            },
+            {
+              "address": "0x4bbbc00e",
+              "symbol": "?getEnableNewSurfaceId@gcEnvironment_c@@QEAAHXZ"
+            },
+            {
+              "address": "0x4bbbc029",
+              "symbol": "?IsStoring@su_CArchive@@QEBAHXZ"
+            },
+            {
+              "address": "0x4bbbc041",
+              "symbol": "?hasCondition@moArchiveHelper_c@@QEAAHH@Z"
+            },
+            {
+              "address": "0x4bbbc06a",
+              "symbol": "?SetAtGrow@su_CObArray@@QEAAXHPEAVCObject@@@Z"
+            },
+            {
+              "address": "0x4bbbc073",
+              "symbol": "?IsStoring@su_CArchive@@QEBAHXZ"
+            },
+            {
+              "address": "0x4bbbc0c0",
+              "symbol": "?addUnique@suObArray@@QEAAHPEAVCObject@@@Z"
+            },
+            {
+              "address": "0x4bbbc10c",
+              "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+            },
+            {
+              "address": "0x4bbbc112",
+              "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+            },
+            {
+              "address": "0x4bbbc188",
+              "symbol": "??5@YAAEAVsu_CArchive@@AEAV0@AEAPEAVCObject@@@Z"
+            },
+            {
+              "address": "0x4bbbc198",
+              "symbol": "?GetThisClass@moExtObject_c@@SAPEAUCRuntimeClass@@XZ"
+            },
+            {
+              "address": "0x4bbbc1bc",
+              "symbol": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z"
+            },
+            {
+              "address": "0x4bbbc219",
+              "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+            },
+            {
+              "address": "0x4bbbc21f",
+              "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+            },
+            {
+              "address": "0x4bbbc24e",
+              "symbol": "?SetAtGrow@su_CObArray@@QEAAXHPEAVCObject@@@Z"
+            },
+            {
+              "address": "0x4bbbc254",
+              "symbol": "?get@gcEnvironment_c@@SAPEAV1@XZ"
+            },
+            {
+              "address": "0x4bbbc25d",
+              "symbol": "?getEnableNewSurfaceId@gcEnvironment_c@@QEAAHXZ"
+            },
+            {
+              "address": "0x4bbbc293",
+              "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+            },
+            {
+              "address": "0x4bbbc299",
+              "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+            },
+            {
+              "address": "0x4bbbc2e9",
+              "symbol": "?addUnique@suPtrArray@@QEAAHPEAX@Z"
+            },
+            {
+              "address": "0x4bbbc317",
+              "symbol": "?get@moVersionManager_c@@SAAEAV1@XZ"
+            },
+            {
+              "address": "0x4bbbc31d",
+              "symbol": "?getCurrentFileVerion@moVersionManager_c@@CAKXZ"
+            }
+          ]
+        },
+        "0x4b8f8090": {
+          "end": "0x4b8f8136",
+          "native_bytes": "48895c2408574883ec20488bda488bf9e88bbc9800488bcbff1542674401488bcb85c0743dff153d674401488b97880000004c8d0597461d02488bcb85c07411488b5c24304883c4205f48ff250f684401488b5c24304883c4205f48ff2526674401ff1500674401488d1561461d02488bcb85c07418ff15ec67440148898788000000488b5c24304883c4205fc3ff15ec664401488b5c2430488987880000004883c4205fc3",
+          "sha256": "9da249d058c1b00e355520188ea2ac07963b77ad8a628cb9932c1376661d21d7",
+          "imports": [
+            {
+              "address": "0x4b8f80a8",
+              "symbol": "?IsStoring@su_CArchive@@QEBAHXZ"
+            },
+            {
+              "address": "0x4b8f80b5",
+              "symbol": "?IsDBStream@su_CArchive@@QEBAHXZ"
+            },
+            {
+              "address": "0x4b8f80f2",
+              "symbol": "?IsDBStream@su_CArchive@@QEBAHXZ"
+            },
+            {
+              "address": "0x4b8f8106",
+              "symbol": "?ReadObject@su_CDBArchive@@QEAAPEAVCObject@@PEAUCRuntimeClass@@@Z"
+            },
+            {
+              "address": "0x4b8f811e",
+              "symbol": "?ReadObject@su_CArchive@@QEAAPEAVCObject@@PEBUCRuntimeClass@@@Z"
+            }
+          ]
+        },
+        "0x4c2e5390": {
+          "end": "0x4c2e5467",
+          "native_bytes": "48895c24085556574883ec20488bfa488bd9ff156895a500488bcfff153f94a500488d5308488bcf85c0744be8ef25f9ff488d4b10ff151538a5000f28c8488bcfff15b995a500488d4b10ff15f737a5000f28c8488bcfff15a395a500488bd7488d4b20488b5c24404883c4205f5e5d48ff25e164a500e854f0f8ff0f57c0488d542458488bcff20f11442458f20f11442450ff156f95a500488d542450488bcfff156195a500f20f10542450488d4b10f20f104c2458ff152b20a500488bd7488d4b20ff159664a500488b5c24404883c4205f5e5dc3",
+          "sha256": "454941a29ac2cf3f3625845c9e3724bf5ba517f424504656570c16afc1f35de1",
+          "imports": [
+            {
+              "address": "0x4c2e53a2",
+              "symbol": "?Serialize@su_CObject@@UEAAXAEAVsu_CArchive@@@Z"
+            },
+            {
+              "address": "0x4c2e53ab",
+              "symbol": "?IsStoring@su_CArchive@@QEBAHXZ"
+            },
+            {
+              "address": "0x4c2e53c5",
+              "symbol": "?u@gcSurfaceParam_c@@QEBANXZ"
+            },
+            {
+              "address": "0x4c2e53d1",
+              "symbol": "??6su_CArchive@@QEAAAEAV0@N@Z"
+            },
+            {
+              "address": "0x4c2e53db",
+              "symbol": "?v@gcSurfaceParam_c@@QEBANXZ"
+            },
+            {
+              "address": "0x4c2e53e7",
+              "symbol": "??6su_CArchive@@QEAAAEAV0@N@Z"
+            },
+            {
+              "address": "0x4c2e5423",
+              "symbol": "??5su_CArchive@@QEAAAEAV0@AEAN@Z"
+            },
+            {
+              "address": "0x4c2e5431",
+              "symbol": "??5su_CArchive@@QEAAAEAV0@AEAN@Z"
+            },
+            {
+              "address": "0x4c2e5447",
+              "symbol": "?set@gcSurfaceParam_c@@QEAAXNN@Z"
+            },
+            {
+              "address": "0x4c2e5454",
+              "symbol": "?restore@mgPoint_c@@QEAAXAEAVsu_CArchive@@@Z"
+            }
+          ]
+        },
+        "0x3db5bd30": {
+          "end": "0x3db5bdac",
+          "native_bytes": "48895c24084889742410574883ec30488bd9488bfa488d4c2420ff1548750700488bcfff1587f80700488bcf85c074258b5308ff156ff807008b5310488bcfff1563f80700488b5c2440488b7424484883c4305fc3488d5308ff1541f80700488d5310488bcfff1534f80700488b5c2440488b7424484883c4305fc3",
+          "sha256": "bcdc34d947136236c0e34b4d6f0ee95827f8d403037fb5297a5f4dd5cad81695",
+          "imports": [
+            {
+              "address": "0x3db5bd4a",
+              "symbol": "??0moArchiveHelper_c@@QEAA@PEAVsu_CArchive@@@Z"
+            },
+            {
+              "address": "0x3db5bd53",
+              "symbol": "?IsStoring@su_CArchive@@QEBAHXZ"
+            },
+            {
+              "address": "0x3db5bd63",
+              "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z"
+            },
+            {
+              "address": "0x3db5bd6f",
+              "symbol": "??6su_CArchive@@QEAAAEAV0@J@Z"
+            },
+            {
+              "address": "0x3db5bd89",
+              "symbol": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z"
+            },
+            {
+              "address": "0x3db5bd96",
+              "symbol": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z"
+            }
+          ]
+        }
+      },
+      "bindings": [
+        {
+          "cls": "moFromSktTopSurfIdRep_c",
+          "vtable": "0x4cf6be68",
+          "serializer": "0x4bbbde70"
+        },
+        {
+          "cls": "moConstraintCoincLineParallelPlaneRefplaneData_c",
+          "vtable": "0x4ced26e8",
+          "serializer": "0x4b8f8040",
+          "payload_slot_150": "0x4c2880a0"
+        },
+        {
+          "cls": "moRefPlaneParallelGeom_c",
+          "vtable": "0x4d1752a0",
+          "serializer": "0x4c2e52d0"
+        },
+        {
+          "cls": "featureStateData_c",
+          "vtable": "0x3dc2b0a0",
+          "serializer": "0x3db5bd30"
+        }
+      ],
+      "audit_sha256": "bebba889dd9d191bc1fd015685ec1209c86b4688e699f87f04e6b0999e80e38c",
+      "source_intervals": [
+        {
+          "path": "samples/learn/Mouse/Bottom Housing.SLDPRT",
+          "configuration": "Contents/Config-0",
+          "source_sha256": "5fadaa565d451eef089ff7e55a9f52159847d0bf4247b21a85de5b50fa67ba43",
+          "roots": [
+            {
+              "start": 6,
+              "end": 213,
+              "cls": "moFavoriteFolder_c",
+              "sha256": "0bb2008bd3a4b167d769082178bf07614b0eb069ab084037cbfde554019bcacb"
+            },
+            {
+              "start": 213,
+              "end": 574,
+              "cls": "moHistoryFolder_c",
+              "sha256": "99c3e0d3d25ba1fac6327eb508a7e6b5c9a6ccb4dd714ec380ce8d6265eafb5f"
+            },
+            {
+              "start": 574,
+              "end": 793,
+              "cls": "moSelectionSetFolder_c",
+              "sha256": "1b914fba574948afaed19f34bb759216369110008eff778cf1ee7fd99e165237"
+            },
+            {
+              "start": 793,
+              "end": 986,
+              "cls": "moSensorFolder_c",
+              "sha256": "61490f351e29bbfd4831de67c2a8f303fc99a08d1ffcfb4cf9e8eab3c6d2f714"
+            },
+            {
+              "start": 986,
+              "end": 1189,
+              "cls": "moDocsFolder_c",
+              "sha256": "d1b18f4a31848201eb4edeff12ac136e32e382064851f1cdfd3052c6ce496bfa"
+            },
+            {
+              "start": 1189,
+              "end": 1841,
+              "cls": "moDetailCabinet_c",
+              "sha256": "c9d030d6f485dadd7ff01b6c3e67febc02032cfc7355f0f238344c1e61b4d4e7"
+            },
+            {
+              "start": 1841,
+              "end": 2037,
+              "cls": "moInkMarkupFolder_c",
+              "sha256": "05fc090597aea3137546b4e79b93ff355c0c512675835384681792eaf5b303c1"
+            },
+            {
+              "start": 2037,
+              "end": 2039,
+              "cls": "moEnvFolder_c",
+              "sha256": "474e37ee6bf0255bad6193ce78069a91ce93a8d1adcd7ee50e45208881cfabd4"
+            },
+            {
+              "start": 2039,
+              "end": 2257,
+              "cls": "moSolidBodyFolder_c",
+              "sha256": "950c6c27cedb3cdcc3f53f044a122c443360ae0b8425f2277309fd75b17df470"
+            },
+            {
+              "start": 2257,
+              "end": 2481,
+              "cls": "moSurfaceBodyFolder_c",
+              "sha256": "6c478049f9fdb0ea064bbb73448122462e0069119d5f9a314663a05f0b2f5b46"
+            },
+            {
+              "start": 2481,
+              "end": 2678,
+              "cls": "moCommentsFolder_c",
+              "sha256": "7e0763b5cd79f0aa5431d4d949ab48a1c7c41849d0e54f1bd7db45ee50881517"
+            },
+            {
+              "start": 2678,
+              "end": 2872,
+              "cls": "moEqnFolder_c",
+              "sha256": "f8e598a47432eb1708aa7a656904d61016cbe517a2b893f8f274dc24bff7bd7e"
+            },
+            {
+              "start": 2872,
+              "end": 3117,
+              "cls": "moMaterialFolder_c",
+              "sha256": "8b6105bc4629b7f2266c5f3aa116bace39e959a4d26a42871e4dedcc7c2e1c7e"
+            },
+            {
+              "start": 3117,
+              "end": 3644,
+              "cls": "moRefPlane_c",
+              "sha256": "0167df4074ca6beb06816e495a386aaaf2c10d92fa3048f2b949d18057d261d7"
+            },
+            {
+              "start": 3644,
+              "end": 4198,
+              "cls": "moRefPlane_c",
+              "sha256": "d89169f5367d005582ca340862b2df918c2a667554f413521492b56f0d5d206b"
+            },
+            {
+              "start": 4198,
+              "end": 4756,
+              "cls": "moRefPlane_c",
+              "sha256": "507a1b12929a8b2811a2550793d1f3c63c205b48072453c2b983b1a555d346b8"
+            },
+            {
+              "start": 4756,
+              "end": 5687,
+              "cls": "moOriginProfileFeature_c",
+              "sha256": "d704cad9a42cc7f7d8c01c527ced4ea70f9f29fbaa40fb314d14fb70b2c2254b"
+            },
+            {
+              "start": 5687,
+              "end": 16124,
+              "cls": "moProfileFeature_c",
+              "sha256": "6c7fe6eecb4f62667af4d324532e667e7c6ca859c9fba9f430a96d562c9be9dd"
+            },
+            {
+              "start": 16124,
+              "end": 44477,
+              "cls": "moProfileFeature_c",
+              "sha256": "f12be433e7ae7cbd26aad6ef0115e07ff5e9b17d89f4b9548db9c09e22810b1c"
+            },
+            {
+              "start": 44477,
+              "end": 49064,
+              "cls": "moProfileFeature_c",
+              "sha256": "3c0946ccb1f1c1e11f9c7e92bc23eb4b8cb980bddc452f631d14d475f552114e"
+            },
+            {
+              "start": 49064,
+              "end": 51528,
+              "cls": "moProfileFeature_c",
+              "sha256": "8aa06e67e25dedf3f13ffeaf94918362096b0e492abd9190a7e46d7f56774d1d"
+            },
+            {
+              "start": 51528,
+              "end": 57008,
+              "cls": "moProfileFeature_c",
+              "sha256": "468d00156c91b1143b9d918eac246699db6b6c22762659a635f0561be98b3978"
+            },
+            {
+              "start": 57008,
+              "end": 266928,
+              "cls": "moStock_c",
+              "sha256": "f9a763446fd00766fbf63ecb1fdff6d68250f5a2244782df85201f049c36ad38"
+            },
+            {
+              "start": 266928,
+              "end": 268436,
+              "cls": "moDeleteBody_c",
+              "sha256": "bbdef8bcada3cec6b854ea720ab0c10ba2204a9a92c302a58f8e671f2438f3d8"
+            },
+            {
+              "start": 268436,
+              "end": 272540,
+              "cls": "moProfileFeature_c",
+              "sha256": "fb5d215148fa0d451916574a691e8cf1fa5a30e4391eb19096c7d33c125d5234"
+            },
+            {
+              "start": 272540,
+              "end": 276220,
+              "cls": "moExtruRefSurface_c",
+              "sha256": "f3289574625eff81af613227f5c45f59dccd312799f526233073801bddda517b"
+            },
+            {
+              "start": 276220,
+              "end": 279300,
+              "cls": "moTrimRefSurface_c",
+              "sha256": "acc37719af1f41be1f041fd74098be43d526a8a0575fa8ec50432e634052bdbb"
+            },
+            {
+              "start": 279300,
+              "end": 281218,
+              "cls": "moMirrorSolid_c",
+              "sha256": "72fb63bd1a3bef480737f844ed0235832d4bed0f5d50ee4945ee7f3fea18bb0a"
+            },
+            {
+              "start": 281218,
+              "end": 283852,
+              "cls": "moSewRefSurface_c",
+              "sha256": "42aa9a099e94fbcf49d9d68ae286def977ac1e604cd1d5b4828a5f2e50e2d297"
+            },
+            {
+              "start": 283852,
+              "end": 289908,
+              "cls": "moMoveCopyBody_c",
+              "sha256": "1548534118cafc93a58075d3de53d5ab8930d13336b95edbd0e5d44559da6738"
+            },
+            {
+              "start": 289908,
+              "end": 310562,
+              "cls": "moProfileFeature_c",
+              "sha256": "59fdc2cf72c1e78ddac3f06b18879d12961410b744a9939ccb6c31fffb81373f"
+            },
+            {
+              "start": 310562,
+              "end": 316674,
+              "cls": "moMoveCopyBody_c",
+              "sha256": "01769dc1ac02394d5accf859d1f12fc8226d3d8cd4c6ef2d7a338fe245025605"
+            },
+            {
+              "start": 316674,
+              "end": 319288,
+              "cls": "moRefPlane_c",
+              "sha256": "635ef8c4f26cb58a94b73b59810cf97ae8758a70310bdb972dfff94ebda94827"
+            },
+            {
+              "start": 319288,
+              "end": 321880,
+              "cls": "moRefPlane_c",
+              "sha256": "419642b41d7e52008714a22ad8ea528af53f9fca341b544f12b9eb2ac09555d5"
+            },
+            {
+              "start": 321880,
+              "end": 349539,
+              "cls": "moSplit_c",
+              "sha256": "6ee9e4a448dd49ce271b329b3a1c3fc8b11f774a4bc301c5956097fc9d21e63a"
+            },
+            {
+              "start": 349539,
+              "end": 357368,
+              "cls": "moShell_c",
+              "sha256": "52429090ff196447c0e55d262ba1e8afd51b76a9c09ab0f7c072d2d5d40db5eb"
+            },
+            {
+              "start": 357368,
+              "end": 358246,
+              "cls": "moDeleteBody_c",
+              "sha256": "fa2a54eca987f88d4f32436b2ba6d6e10b0325dda49cb6720c97128c105ff1b6"
+            },
+            {
+              "start": 358246,
+              "end": 360749,
+              "cls": "moCombineBodies_c",
+              "sha256": "a1a6b3b7b071ffc87697206e40fe95bdfa1d286fdbe30094ed6086bd85be9671"
+            },
+            {
+              "start": 360749,
+              "end": 376566,
+              "cls": "moProfileFeature_c",
+              "sha256": "be9d11cf3dc448b6d6bec914d69af873e0fb260b6ea1748d554556ea411a928d"
+            },
+            {
+              "start": 376566,
+              "end": 377574,
+              "cls": "moRefPlane_c",
+              "sha256": "0f16c172697ff6aa7bbd5f80e62a167096b40cbc6361bb36d61c7b92f6e67ba6"
+            },
+            {
+              "start": 377574,
+              "end": 387165,
+              "cls": "moProfileFeature_c",
+              "sha256": "6e7d32b6a0cc8986bd9e4e8b56f2b207adcdfd9d5fcf79da3ee6d31fc55b4ad9"
+            },
+            {
+              "start": 387165,
+              "end": 389472,
+              "cls": "moICE_c",
+              "sha256": "60d626b47231cf6f112d91328c424af8050239a0ee0c15246119ff35a5baacfc"
+            },
+            {
+              "start": 389472,
+              "end": 392162,
+              "cls": "moRefPlane_c",
+              "sha256": "7919427d2d1d71f65a6c9952fd9fe257e851c0938314a0ae6ade798efea9691c"
+            },
+            {
+              "start": 392162,
+              "end": 420813,
+              "cls": "moProfileFeature_c",
+              "sha256": "85025f1d6b0d7fa8c69c5a1daf72a6362ddd577e7f88dd83b3b35a1bc882b3c8"
+            },
+            {
+              "start": 420813,
+              "end": 438371,
+              "cls": "moProfileFeature_c",
+              "sha256": "129cd27c742e9d3159f7bd4227c53f0108c16108fa1938b4f370b961a7a719ea"
+            },
+            {
+              "start": 438371,
+              "end": 443715,
+              "cls": "moICE_c",
+              "sha256": "60cb394f9135619bd8163ed091753f927e96576e6cfc68948db7368405d76910"
+            },
+            {
+              "start": 443715,
+              "end": 451113,
+              "cls": "moDraft_c",
+              "sha256": "dace7f908a1520e75f41dd89a9f2a8e0dee03e4afe01ef1fad8427580b3612fc"
+            },
+            {
+              "start": 451113,
+              "end": 468698,
+              "cls": "moShell_c",
+              "sha256": "a1d8d95092b3bb25c303dff36b7b16dfdebb44b4a665c0be8e6459ed605294ef"
+            },
+            {
+              "start": 468698,
+              "end": 580026,
+              "cls": "moProfileFeature_c",
+              "sha256": "34efbe9af7b40bd1676689ae52dfbeb8502a92cb1bcbd2540a35efabf6a92bea"
+            },
+            {
+              "start": 580026,
+              "end": 588787,
+              "cls": "moICE_c",
+              "sha256": "6c78d0e71cf4f2ca59e401508ad11a7c35272e72671fc3a869b9b34886499c1c"
+            },
+            {
+              "start": 588787,
+              "end": 594713,
+              "cls": "Fillet_c",
+              "sha256": "d359453833d0c6b8b9481f9534b223f91b0756954189423647f545f3ec6a28da"
+            },
+            {
+              "start": 594713,
+              "end": 601219,
+              "cls": "moPunch_c",
+              "sha256": "3ac6ab6474a44a3a36f2baa8deb565204b8e9d82bd0d73b3fd4a49dfae6bec4d"
+            },
+            {
+              "start": 601219,
+              "end": 602027,
+              "cls": "moDeleteBody_c",
+              "sha256": "7ec9cf87b1fa18ed1e85a40a12971747943c90d348b227179394ada3cc97dec5"
+            },
+            {
+              "start": 602027,
+              "end": 604635,
+              "cls": "moRefPlane_c",
+              "sha256": "4341aa9c3359644271a2e17cab64fbb925740423d6f2dab0b1442c9dee588b16"
+            },
+            {
+              "start": 604635,
+              "end": 612190,
+              "cls": "moProfileFeature_c",
+              "sha256": "edf9d8f106199bbb017817ebf717008254ffc89676b837bf3f3cbe711c2033c6"
+            },
+            {
+              "start": 612190,
+              "end": 618094,
+              "cls": "moICE_c",
+              "sha256": "15a4d2db51da780c1bfb5b74189af2d5232956291da299b6c7d40b99bb84a5a5"
+            },
+            {
+              "start": 618094,
+              "end": 625182,
+              "cls": "moProfileFeature_c",
+              "sha256": "2096df443a4a8499733bd09601948a81a191bb573e5e7c4cbcc8c7ca270499f4"
+            },
+            {
+              "start": 625182,
+              "end": 630405,
+              "cls": "moICE_c",
+              "sha256": "7901972c80be42f599836ba119892df370a286f1abf610f68f8e8800e8cd8898"
+            },
+            {
+              "start": 630405,
+              "end": 637287,
+              "cls": "moProfileFeature_c",
+              "sha256": "3547e4a7206babfe0d4ef12d72d8141fa68e568b4373aea2555822f306d6ceef"
+            },
+            {
+              "start": 637287,
+              "end": 642294,
+              "cls": "moICE_c",
+              "sha256": "035e5824c07ecb2ef5f5a5ee108ba72c37ec5c036a9dcc3c33129bd95491d3be"
+            },
+            {
+              "start": 642294,
+              "end": 756798,
+              "cls": "moProfileFeature_c",
+              "sha256": "c0fc59cd26e0248f16fa430f36f75fd7bdb6f9fbee3c9252372486ad9fafa6b9"
+            },
+            {
+              "start": 756798,
+              "end": 762007,
+              "cls": "moICE_c",
+              "sha256": "7a68b5feab51de475e17489671e8c14efacfec425b98a403c506aaccc92e3989"
+            },
+            {
+              "start": 762007,
+              "end": 767845,
+              "cls": "moProfileFeature_c",
+              "sha256": "7704f4382f57e5bc4f9e8035b706f86c0138f040a4db8356bb41542642c81a8a"
+            },
+            {
+              "start": 767845,
+              "end": 771521,
+              "cls": "moICE_c",
+              "sha256": "5a53d960493184da38034783be1fd524505428bed98128d94765b08bd3da42fa"
+            },
+            {
+              "start": 771521,
+              "end": 773409,
+              "cls": "moMirrorPattern_c",
+              "sha256": "42c5faf5ca3d6b042a8e40777b56e6791fa2fb9c21fffa61e4691dbc9fc4b7af"
+            },
+            {
+              "start": 773409,
+              "end": 774838,
+              "cls": "moRefPlane_c",
+              "sha256": "65bd08f23b487c652cb088deaef44433d063ebdf7311f509eb322a6108083b48"
+            },
+            {
+              "start": 774838,
+              "end": 777398,
+              "cls": "moRefPlane_c",
+              "sha256": "367401bbff982d4df1f858a5f92e607fb70e9c8c6044ba355ca3b62b16c08750"
+            },
+            {
+              "start": 777398,
+              "end": 791024,
+              "cls": "moProfileFeature_c",
+              "sha256": "d625afdac9789090add887239b74846ccdb00e8e1b491f5589aeb905d1e65718"
+            },
+            {
+              "start": 791024,
+              "end": 792138,
+              "cls": "moRefPlane_c",
+              "sha256": "f70f5864e2c59ce59426bf43fa39213d72ed5e9e489e528805f9dc1e81a42159"
+            },
+            {
+              "start": 792138,
+              "end": 813901,
+              "cls": "moProfileFeature_c",
+              "sha256": "547840923988c6adf7fcb2e309760d4ee87a2ec76c500f8eb133fe32ced50b6d"
+            },
+            {
+              "start": 813901,
+              "end": 820407,
+              "cls": "moICE_c",
+              "sha256": "3b23550ca0342f2492e88dae933cfb25aa46dde9bad7151f00281107d1ddcefc"
+            },
+            {
+              "start": 820407,
+              "end": 827951,
+              "cls": "moCutThin_c",
+              "sha256": "26fc9ad9516af95f3b96c699de6da6a6a49a55a142d83b1e2ee1a2c05ae0ccf8"
+            },
+            {
+              "start": 827951,
+              "end": 829398,
+              "cls": "moMirrorPattern_c",
+              "sha256": "816232637a584bff453df549208181e89bff39dd5ee5789d316e77a3d353f997"
+            },
+            {
+              "start": 829398,
+              "end": 831799,
+              "cls": "moProfileFeature_c",
+              "sha256": "033de5f9b01adbea078b7edb3203fe31028314a25c4eb0749a3f551b5f2a0264"
+            },
+            {
+              "start": 831799,
+              "end": 840795,
+              "cls": "moDraft_c",
+              "sha256": "29753fd64c770276a64e02158b3b6b630953fb57447a0ccb77018a9752642162"
+            },
+            {
+              "start": 840795,
+              "end": 843475,
+              "cls": "moRefPlane_c",
+              "sha256": "f105619b7ac5b2924eb0080a6402f2e3d0a81b242155a462d7444df48c15d805"
+            },
+            {
+              "start": 843475,
+              "end": 846081,
+              "cls": "moRefPlane_c",
+              "sha256": "4cc3755f8e255bb41ab5657dec7030a819ce180ab61de06f8043c95de19cbae9"
+            },
+            {
+              "start": 846081,
+              "end": 863613,
+              "cls": "moProfileFeature_c",
+              "sha256": "e02a777b00917a92992e36e5c5696ce8f27ace0a1f7ef7c902629d7dd7c65356"
+            },
+            {
+              "start": 863613,
+              "end": 868091,
+              "cls": "moRib_c",
+              "sha256": "9f0b73b43004f3d31a4a0b7a72a6ec8dee55f422602c2f5ad1c3ca9c5ff51bec"
+            },
+            {
+              "start": 868091,
+              "end": 872340,
+              "cls": "moProfileFeature_c",
+              "sha256": "0558ce83d962d6e3ccc27eea8521607bcbe00ebd890f7e74e616194c764b4eaa"
+            },
+            {
+              "start": 872340,
+              "end": 876655,
+              "cls": "moRib_c",
+              "sha256": "4ebcd97ad755856a924fe096e5c0d08ddab789975e5fa3f6e71a63977acbffbb"
+            },
+            {
+              "start": 876655,
+              "end": 878671,
+              "cls": "moProfileFeature_c",
+              "sha256": "4d69439a7cc8b4fe191ad73ab18bbcc60e271c066920720402a8f8f4bf7e81da"
+            },
+            {
+              "start": 878671,
+              "end": 882918,
+              "cls": "moRib_c",
+              "sha256": "1bb76d79da47f1c55239e486443311c336c05c2bde127f0606fc2bbbd611184e"
+            },
+            {
+              "start": 882918,
+              "end": 893479,
+              "cls": "moProfileFeature_c",
+              "sha256": "c1be50830b65fd968f6e780b725ac315625f8b08c3f811f0f5254515066ff690"
+            },
+            {
+              "start": 893479,
+              "end": 895515,
+              "cls": "moICE_c",
+              "sha256": "3825d42817f60b5190075bd7870d159bba5a9c686f5c7519fc4d260911ef5b7c"
+            },
+            {
+              "start": 895515,
+              "end": 910061,
+              "cls": "moProfileFeature_c",
+              "sha256": "670552762269bf360c2b780ed6c17b080c133f434e5925aac89dda9c6c547f3f"
+            },
+            {
+              "start": 910061,
+              "end": 911779,
+              "cls": "moICE_c",
+              "sha256": "ea72955d15a9528e44b0e613be62a47ace896a77c8e858129e27940b38262e08"
+            },
+            {
+              "start": 911779,
+              "end": 918531,
+              "cls": "moProfileFeature_c",
+              "sha256": "a5740575cb65b44a4c234387358446780438245ddc674fd5f8b4fd0341bf72fe"
+            },
+            {
+              "start": 918531,
+              "end": 927784,
+              "cls": "moProfileFeature_c",
+              "sha256": "31812fbf8d2156cca906f219b40b087f68566f3883acaca005afd6fb125ed74c"
+            },
+            {
+              "start": 927784,
+              "end": 929680,
+              "cls": "moICE_c",
+              "sha256": "026f4beb8d23250418ac06e1128073f43353aeb53de3481d3ebfcedfe08b5bfb"
+            },
+            {
+              "start": 929680,
+              "end": 935994,
+              "cls": "moPunch_c",
+              "sha256": "9106ce2078539353eb3ff03c4e05e8c1116416439249eb0cca82759976a049e5"
+            },
+            {
+              "start": 935994,
+              "end": 936620,
+              "cls": "moDeleteBody_c",
+              "sha256": "7e0479bedb0a28ff23131c580af5fd0de572029a43385636098b2f8a0e2fe6d7"
+            },
+            {
+              "start": 936620,
+              "end": 938348,
+              "cls": "moRefPlane_c",
+              "sha256": "6678954156b929c941005bd4f38c67545aba2f28ba5f5568b2a77f57f57def62"
+            },
+            {
+              "start": 938348,
+              "end": 952399,
+              "cls": "moProfileFeature_c",
+              "sha256": "d23cceee8ed068bebce6d4026aadfad1b75e0f5a58b42118989a3251a0c475a6"
+            },
+            {
+              "start": 952399,
+              "end": 955277,
+              "cls": "moICE_c",
+              "sha256": "79355cc57084f33a1cc4292d52d96b163252007d6fdf6eaeaef18aca50d6e618"
+            },
+            {
+              "start": 955277,
+              "end": 957892,
+              "cls": "moProfileFeature_c",
+              "sha256": "76dc337a7433d5f432e24a5e7a75a74ebdc3e0ce3ae0d9e76d63c6fc1837b457"
+            },
+            {
+              "start": 957892,
+              "end": 960878,
+              "cls": "moRefPlane_c",
+              "sha256": "b6cd38b939d3fa147ad35242d88021b14abe7ae7fd00616cc3b6e6aaa3ab175f"
+            },
+            {
+              "start": 960878,
+              "end": 969995,
+              "cls": "moProfileFeature_c",
+              "sha256": "998e41b4979dcc99a685edd6a2a5e5bf92b55b61f5a4bca18069796ea0cc6d85"
+            },
+            {
+              "start": 969995,
+              "end": 974548,
+              "cls": "moICE_c",
+              "sha256": "34cd380f5a6a45d210bc0205dd68ec775f755834255dcd1db9d739e52adc5e2f"
+            },
+            {
+              "start": 974548,
+              "end": 983865,
+              "cls": "moProfileFeature_c",
+              "sha256": "d606e1d3677589553a53dbe89283ba369a7d6d625df76210aec0e4f8dae5e186"
+            },
+            {
+              "start": 983865,
+              "end": 994348,
+              "cls": "moBossThin_c",
+              "sha256": "86b60b7e7d3427b1b1fe07beaf7b30c145f399707c604293c29d6c5812604a31"
+            },
+            {
+              "start": 994348,
+              "end": 1013349,
+              "cls": "moProfileFeature_c",
+              "sha256": "ccec47324f97eb7c36d7f253fa36a5a40af413dac85c732c00478e57e4f46a42"
+            },
+            {
+              "start": 1013349,
+              "end": 1020070,
+              "cls": "moBossThin_c",
+              "sha256": "5370b866424faff8ace02a97b1f50d20936b3f6622a75a0a1a9cec8e97eeab8e"
+            },
+            {
+              "start": 1020070,
+              "end": 1034102,
+              "cls": "moProfileFeature_c",
+              "sha256": "cd37356e3918e8ec8e5934041143796f3fa4ea2b5340520528a9489e4df2b16e"
+            },
+            {
+              "start": 1034102,
+              "end": 1039981,
+              "cls": "moICE_c",
+              "sha256": "5d93c74a653c10f5e4d29250014ad72904f6a924b246dad4e0fde608cf346cdd"
+            },
+            {
+              "start": 1039981,
+              "end": 1044719,
+              "cls": "Chamfer_c",
+              "sha256": "dd08f4ccd447f1f415a0ce42f7b035cb82c47444670372005c63960dff48198e"
+            },
+            {
+              "start": 1044719,
+              "end": 1047241,
+              "cls": "moRefPlane_c",
+              "sha256": "6c59306378d1a6a56c2c2d5193b1655162f42c46c4f96a05ce789f7df12978b5"
+            },
+            {
+              "start": 1047241,
+              "end": 1057420,
+              "cls": "moProfileFeature_c",
+              "sha256": "547d8efedf7dc340f48dd6d64b7967ea88c357f32ebe94bf8a918dbdec419d96"
+            },
+            {
+              "start": 1057420,
+              "end": 1062175,
+              "cls": "moRib_c",
+              "sha256": "ca842f48e010f4ad017d9c1652a8f9312c6d29bf1c4078264e7bed29bbd70201"
+            },
+            {
+              "start": 1062175,
+              "end": 1079925,
+              "cls": "moProfileFeature_c",
+              "sha256": "4530d83b53c63a228f3cf823502b1d66016541268f2acad8ea6e6a0018869173"
+            },
+            {
+              "start": 1079925,
+              "end": 1089698,
+              "cls": "moBossThin_c",
+              "sha256": "0651974694f59c0439261b9d6271380d055b241b490c98cf8af703e654520056"
+            },
+            {
+              "start": 1089698,
+              "end": 1091147,
+              "cls": "moMirrorPattern_c",
+              "sha256": "804788f5f73713491306f2842e7a38c8bdbb8a48f4d44cee0d3571ad67533113"
+            },
+            {
+              "start": 1091147,
+              "end": 1109944,
+              "cls": "moProfileFeature_c",
+              "sha256": "1cfa14ea45a4b0dbaa6f5ef75f1e19ba9f2fff3079a66e61c405fa7e6c2f23a4"
+            },
+            {
+              "start": 1109944,
+              "end": 1119733,
+              "cls": "moBossThin_c",
+              "sha256": "1e46705f2aafc81099d27266923c4d6c6fd3d761ae7f66239c8748e9c6270b7f"
+            },
+            {
+              "start": 1119733,
+              "end": 1123571,
+              "cls": "moRefPlane_c",
+              "sha256": "9e38cdadf7b0b9fbfffa220fde441c5ca1d39cc0388b9b6717d04ec5a662a12d"
+            },
+            {
+              "start": 1123571,
+              "end": 1135469,
+              "cls": "moProfileFeature_c",
+              "sha256": "0795286316ec070749ce4567d29c95018c61febdeb47f7073d6a18479d5c6f8f"
+            },
+            {
+              "start": 1135469,
+              "end": 1142617,
+              "cls": "moICE_c",
+              "sha256": "e9fe58f027fd9e97101068cee59aa8bbe45d37166e61d1335a8ce3d1de2c075e"
+            },
+            {
+              "start": 1142617,
+              "end": 1150908,
+              "cls": "moProfileFeature_c",
+              "sha256": "5609ee1f3808bd736b2f983b41edad2596aeafc61e67f0d4fe8fdd3427189b41"
+            },
+            {
+              "start": 1150908,
+              "end": 1155916,
+              "cls": "moICE_c",
+              "sha256": "4f0149a5c39dca1a26a267d56d52dc6ab62cd899002f90f222344d5dc4aa93da"
+            },
+            {
+              "start": 1155916,
+              "end": 1172991,
+              "cls": "moProfileFeature_c",
+              "sha256": "62d708aed5444ab651b1b824a09349f39f5c4d0a1a97995fa280742e2a3d2d60"
+            },
+            {
+              "start": 1172991,
+              "end": 1182268,
+              "cls": "moICE_c",
+              "sha256": "b3194971d4316ebb23898a2ab83c64cc7ed990fba9bbc59d4c5c197fb359830d"
+            },
+            {
+              "start": 1182268,
+              "end": 1189374,
+              "cls": "moSplit_c",
+              "sha256": "e907f71f264efcc986fb6f919ed79f4618d171f34b88b3a225b798793c51f74e"
+            },
+            {
+              "start": 1189374,
+              "end": 1202903,
+              "cls": "moDraft_c",
+              "sha256": "8d90f0880aaa0d7e63bac54b10497a91f2188392a4fa01c8d54b729900110e9c"
+            },
+            {
+              "start": 1202903,
+              "end": 1208466,
+              "cls": "moDraft_c",
+              "sha256": "52161ef307f94749f9058abc88e7bd0a5b78f487bc234a1a1831ec2bd0c2f147"
+            },
+            {
+              "start": 1208466,
+              "end": 1210758,
+              "cls": "moProfileFeature_c",
+              "sha256": "084bdfaa296985fc079ba01c8fc3921f0d7303c392d0805f65f80e4a685aa0a8"
+            },
+            {
+              "start": 1210758,
+              "end": 1221678,
+              "cls": "moPLine_c",
+              "sha256": "f7a84844bbc57ea6ef2e47071ab637cb8c8c039bbac4186000cdc600939c2845"
+            },
+            {
+              "start": 1221678,
+              "end": 1228771,
+              "cls": "moDraft_c",
+              "sha256": "f92eb5fd7f901bca459ceedf945be1a89918eeff5bbecafb22a9709c2c72cecf"
+            },
+            {
+              "start": 1228771,
+              "end": 1233348,
+              "cls": "moDraft_c",
+              "sha256": "96328d87afad2dcd3ad7f5f9e3c7f51d816a1ad8dc1e98272d45998d80796a40"
+            },
+            {
+              "start": 1233348,
+              "end": 1237849,
+              "cls": "moDraft_c",
+              "sha256": "4d21f5e063594f35ae5677d66ab7a4099a1ff9e2b7e7f2b5ee9710312288f263"
+            },
+            {
+              "start": 1237849,
+              "end": 1242457,
+              "cls": "moCombineBodies_c",
+              "sha256": "cbb4b957302d0f4f25aa5746ce9f84a6231fda4dcbbd6cbfe8ebffaffbad26a5"
+            },
+            {
+              "start": 1242457,
+              "end": 1259770,
+              "cls": "moDraft_c",
+              "sha256": "ac5e47e668cf4fd43663cd92f2b905d93feaf2a4a34191e01b2ce0fa616b92aa"
+            },
+            {
+              "start": 1259770,
+              "end": 1262308,
+              "cls": "moRefPlane_c",
+              "sha256": "e71b64dd3855e6ac3d03b97104b87a994b0468ccbcdb8ef0e0076fe0ef8fb83e"
+            },
+            {
+              "start": 1262308,
+              "end": 1266166,
+              "cls": "moRevCut_c",
+              "sha256": "57d6469a2156fa7de56e9d3ae196e615a75547873898bf8fded61f6bc17702fd"
+            },
+            {
+              "start": 1266166,
+              "end": 1286120,
+              "cls": "moProfileFeature_c",
+              "sha256": "26acf8596681a0a9056ae48b247dfae037b5f19f503f1dcb492105a5457f5837"
+            },
+            {
+              "start": 1286120,
+              "end": 1289994,
+              "cls": "moICE_c",
+              "sha256": "6354d6980f7db320577f14fb98067e7744a577232bdfb5afffb31350623e134b"
+            },
+            {
+              "start": 1289994,
+              "end": 1295237,
+              "cls": "Chamfer_c",
+              "sha256": "6fa2183062261e969680951f2b857646053052e3698739e3e534843ee1b776fe"
+            },
+            {
+              "start": 1295237,
+              "end": 1307944,
+              "cls": "Fillet_c",
+              "sha256": "288c9c41c2a4d18a69f91e170debca0b538ae5595ce422627448a534cf4fc7b3"
+            },
+            {
+              "start": 1307944,
+              "end": 1329950,
+              "cls": "moProfileFeature_c",
+              "sha256": "76570e281940b947741fdd51f04e6b663b60714dc05c5bf54f3d5faf018f3eb6"
+            },
+            {
+              "start": 1329950,
+              "end": 1344132,
+              "cls": "moBossThin_c",
+              "sha256": "5c7831ea5b653072dfef1b5958cfe914886ae07c6ad84b8a6c4c1138e5345bb8"
+            },
+            {
+              "start": 1344132,
+              "end": 1345977,
+              "cls": "moMirrorPattern_c",
+              "sha256": "a833799da1b192b1ab899b617a1e36f9f611af637635ee55c73625f3070c7af2"
+            }
+          ],
+          "ids": [
+            {
+              "slot": 10944,
+              "raw_38": 1
+            },
+            {
+              "slot": 10963,
+              "raw_38": 1
+            },
+            {
+              "slot": 10981,
+              "raw_38": 1
+            },
+            {
+              "slot": 11128,
+              "raw_38": 1
+            }
+          ],
+          "dependencies": [
+            {
+              "slot": 11850,
+              "cls": "moConstraintCoincLineParallelPlaneRefplaneData_c",
+              "raw_fields": {}
+            },
+            {
+              "slot": 11877,
+              "cls": "moRefPlaneParallelGeom_c",
+              "raw_fields": {}
+            }
+          ],
+          "list_end": 1345977,
+          "status": "stream_complete",
+          "end": 1345977,
+          "tail_bytes": 0
+        },
+        {
+          "path": "samples/tutorial/Sustainability/drive sled.sldprt",
+          "configuration": "Contents/Config-1",
+          "source_sha256": "4e546fbcf483e8785f4d8370d773f73178d70ceb8efec00873d89deb9f9f01bf",
+          "roots": [
+            {
+              "start": 6,
+              "end": 203,
+              "cls": "moCommentsFolder_c",
+              "sha256": "71909d0c39f3ac8f2f5b84d09be45841e2d6cce33985e222ff4c31408cc18c83"
+            },
+            {
+              "start": 203,
+              "end": 434,
+              "cls": "moConfigCommentsFolder_c",
+              "sha256": "a5c25fde94640d88b7ca049bcc57ce6a3ab460d1d7305bc22ab8215c4581a3b1"
+            },
+            {
+              "start": 434,
+              "end": 641,
+              "cls": "moFavoriteFolder_c",
+              "sha256": "732d7249bb4914a81a54d0321877f402e2fff58f616eca0bf59ad9f77dd46634"
+            },
+            {
+              "start": 641,
+              "end": 837,
+              "cls": "moHistoryFolder_c",
+              "sha256": "ad455c51b3a661e0f4718994a6f4058774a49ff262ff88150c55a892eea18c3c"
+            },
+            {
+              "start": 837,
+              "end": 1056,
+              "cls": "moSelectionSetFolder_c",
+              "sha256": "e1f3bb75ecf52b9ef35aff08cdfd260c53353f7848ac4265060d509213708b83"
+            },
+            {
+              "start": 1056,
+              "end": 1249,
+              "cls": "moSensorFolder_c",
+              "sha256": "d80b77fca7e870121096b5598ae8489685214f9720e42b5277abbc4c6d17726f"
+            },
+            {
+              "start": 1249,
+              "end": 1452,
+              "cls": "moDocsFolder_c",
+              "sha256": "442927d71da1561a3e3e3fb052cbcb89656c04b95096dff59194c52729b81c71"
+            },
+            {
+              "start": 1452,
+              "end": 2117,
+              "cls": "moDetailCabinet_c",
+              "sha256": "a95eabbebfe7be15bcfa711e3d9979042ce9cd0fa67329b456f373678b70ffc9"
+            },
+            {
+              "start": 2117,
+              "end": 2313,
+              "cls": "moInkMarkupFolder_c",
+              "sha256": "26929f7ea272d16bafc1ca1b15f31f81bc5c09a1abd5ec6015e157430ac42a10"
+            },
+            {
+              "start": 2313,
+              "end": 2537,
+              "cls": "moSurfaceBodyFolder_c",
+              "sha256": "f97814812dee8109e18086038a45f544699a6c096018a6d38ad92761486bb1c5"
+            },
+            {
+              "start": 2537,
+              "end": 2787,
+              "cls": "moSolidBodyFolder_c",
+              "sha256": "3140834abd4d69a9c4e1f0f49cacd657a7c819d97fc89997eab24c1de6c7e095"
+            },
+            {
+              "start": 2787,
+              "end": 2789,
+              "cls": "moEnvFolder_c",
+              "sha256": "20b64b56f584ec6c5184846cbeb974347b5e4c25cb49628ce1426fd0d2128ae7"
+            },
+            {
+              "start": 2789,
+              "end": 2983,
+              "cls": "moEqnFolder_c",
+              "sha256": "1cc2105b0b86b515b4cb2bf23d6d8444232afd14c52829520718032d7712fb7d"
+            },
+            {
+              "start": 2983,
+              "end": 3220,
+              "cls": "moMaterialFolder_c",
+              "sha256": "84ce6b8778733c55eaf77abcd81603cc6d6ebc483bbd5c47e108087f15b4045b"
+            },
+            {
+              "start": 3220,
+              "end": 3759,
+              "cls": "moRefPlane_c",
+              "sha256": "8a65b46803522acaea3dc3d76cbf592f1f5ccc64b115cdfbe342ee6507771266"
+            },
+            {
+              "start": 3759,
+              "end": 4325,
+              "cls": "moRefPlane_c",
+              "sha256": "3e7444624ba1ad8fbe05aebace534a990cc10990b561ada7864a266a3e857669"
+            },
+            {
+              "start": 4325,
+              "end": 4895,
+              "cls": "moRefPlane_c",
+              "sha256": "6ed1203de14ee87477cfa1e72746533c7644ab87283381b481c5e30310421b2d"
+            },
+            {
+              "start": 4895,
+              "end": 5828,
+              "cls": "moOriginProfileFeature_c",
+              "sha256": "8139abeb6061d882bacdd150830b1070ebf8496d62fa72d64c32308d85963cf0"
+            },
+            {
+              "start": 5828,
+              "end": 6276,
+              "cls": "moConfigTableFolder_c",
+              "sha256": "8753b2b3cd50b0e77912c7076a28c5bdcf84a6d1a335c6ed39d515c028220749"
+            },
+            {
+              "start": 6276,
+              "end": 6686,
+              "cls": "moFtrFolder_c",
+              "sha256": "bd5ac09347293d73a050d6b1cfcd1a8661c558d31704f2c56508a7dd01494b99"
+            },
+            {
+              "start": 6686,
+              "end": 20487,
+              "cls": "moProfileFeature_c",
+              "sha256": "a46e176a5cfcfc270f2617a4b6513e93fe46c4f4dc314cb1b4d7e1a72b5b605d"
+            },
+            {
+              "start": 20487,
+              "end": 23691,
+              "cls": "moExtrusion_c",
+              "sha256": "59c4ea7101efec309ddcfd21cc616986830c08f694fa06e93f9faddb3aa033ea"
+            },
+            {
+              "start": 23691,
+              "end": 26405,
+              "cls": "moShell_c",
+              "sha256": "cfd2587231767a662dbcf0644250e0579e2c991f0840a75255529de85140efe1"
+            },
+            {
+              "start": 26405,
+              "end": 54371,
+              "cls": "moProfileFeature_c",
+              "sha256": "d27b543f62c6d41b597a2ec6369ba03be668a705f91e06ab5feea3395bcdf759"
+            },
+            {
+              "start": 54371,
+              "end": 57577,
+              "cls": "moICE_c",
+              "sha256": "d06c0a8295dce27fd7b6e5028f044b7ab4fb2a5dc245865b9988b9eb8d822a75"
+            },
+            {
+              "start": 57577,
+              "end": 70309,
+              "cls": "moProfileFeature_c",
+              "sha256": "52acd8e833a4ca047cd9c66e5e96ed9fb7408abef31bddaf0f5780632a2e509e"
+            },
+            {
+              "start": 70309,
+              "end": 73428,
+              "cls": "moICE_c",
+              "sha256": "e5f03bfd750b1840946333bfca165767b9e81939dce56e049a1ce88f3ac7977e"
+            },
+            {
+              "start": 73428,
+              "end": 77307,
+              "cls": "moMirrorPattern_c",
+              "sha256": "fb4a9d85624b03ee73b2cae3c591b2d9c7a59f87d119e1cad7d1fcff37be47b0"
+            },
+            {
+              "start": 77307,
+              "end": 105372,
+              "cls": "moProfileFeature_c",
+              "sha256": "e88a42fac42a852bdf27a739abfa834a4b457e707a476d7307c02edd34366934"
+            },
+            {
+              "start": 105372,
+              "end": 108787,
+              "cls": "moICE_c",
+              "sha256": "d7a5a9add6bffb528c6af85d19b79b961751b38e4938059e01f4c83a423491cf"
+            },
+            {
+              "start": 108787,
+              "end": 127815,
+              "cls": "moProfileFeature_c",
+              "sha256": "a9491cf68da90010f9467a3eaec739e5d9a07b436cafcc55830f71fec6c0c8a8"
+            },
+            {
+              "start": 127815,
+              "end": 131506,
+              "cls": "moRib_c",
+              "sha256": "86d38277fb015bff1761a82d89283df34fe4caa18c4d9503697f71302b4dbc92"
+            },
+            {
+              "start": 131506,
+              "end": 148074,
+              "cls": "moProfileFeature_c",
+              "sha256": "dde9ffa6a4953323dc79056e99322d16c44a61fe2db5d14d0c8f64fc60951868"
+            },
+            {
+              "start": 148074,
+              "end": 156246,
+              "cls": "moBossThin_c",
+              "sha256": "f20b93ee4f0f890fc154ae02a65c9c06dc2ea554c34e95eee3021d7cb9869c31"
+            },
+            {
+              "start": 156246,
+              "end": 161876,
+              "cls": "moProfileFeature_c",
+              "sha256": "e1534212864adca0fcd697aa7f952d374241607e104029a9ce9f0094f20831e2"
+            },
+            {
+              "start": 161876,
+              "end": 163644,
+              "cls": "moICE_c",
+              "sha256": "832bdfc279094538415c370f27236d4938d19660973a11411018497cd7478752"
+            },
+            {
+              "start": 163644,
+              "end": 174743,
+              "cls": "moProfileFeature_c",
+              "sha256": "187abeb484378eeec2f42a407f95e20e648b3675a797bf69b330bc2a7b653d30"
+            },
+            {
+              "start": 174743,
+              "end": 177890,
+              "cls": "moICE_c",
+              "sha256": "493ef1b7d83504ebd507d8847d5cd841b7cd2e21493119c1c0864f9554d1e45c"
+            },
+            {
+              "start": 177890,
+              "end": 205646,
+              "cls": "moDraft_c",
+              "sha256": "72132196ba132a855c362324ef96e9a615bc60ac0ca05d9de8d9525d942fc35a"
+            },
+            {
+              "start": 205646,
+              "end": 212395,
+              "cls": "Fillet_c",
+              "sha256": "15d8b4391aa472a7f3233fd1f1b78e0a7f7c839826b07d916aaec8f9b8c0e232"
+            },
+            {
+              "start": 212395,
+              "end": 229846,
+              "cls": "Fillet_c",
+              "sha256": "6f85819775a820dd3123cd88e80f03346d82b1d163340e9cf3c83bbe9578f644"
+            },
+            {
+              "start": 229846,
+              "end": 271261,
+              "cls": "Fillet_c",
+              "sha256": "7cd719d569a0242b3008768315f894010f9620b85403b2a0ffe8c44f5a3692f4"
+            },
+            {
+              "start": 271261,
+              "end": 336332,
+              "cls": "Fillet_c",
+              "sha256": "7cb70f8b913b1277e6265f1996f11a53569312c1a7281fad4db5381624279ca5"
+            },
+            {
+              "start": 336332,
+              "end": 362569,
+              "cls": "moProfileFeature_c",
+              "sha256": "57b892cd325611891dfc35c2fc52f92b74d5663e8693a893a3adc71e0bb1a430"
+            },
+            {
+              "start": 362569,
+              "end": 364021,
+              "cls": "moICE_c",
+              "sha256": "d5c4e1e0a6f14a68d4ee7a69481aed9f62293ca1350fa8e43e443d9db88b8f66"
+            },
+            {
+              "start": 364021,
+              "end": 382586,
+              "cls": "moProfileFeature_c",
+              "sha256": "3e5e08a9ac79b83283f95ba15f67d4d11cd53a0c495a3ddf662c2656b4525936"
+            },
+            {
+              "start": 382586,
+              "end": 385783,
+              "cls": "moICE_c",
+              "sha256": "53210a7a6f050d030d5046f07b0537fe3cd79fada114535f3b4e2a71d8e0cfa9"
+            },
+            {
+              "start": 385783,
+              "end": 395197,
+              "cls": "moProfileFeature_c",
+              "sha256": "4eb01fcfd97ebb2f807ccb59a61fc544c3acc7b87cfbd8af4482fda046f5e5ef"
+            },
+            {
+              "start": 395197,
+              "end": 403461,
+              "cls": "moBossThin_c",
+              "sha256": "ef71fa7bba94e680b1e317e31b61b257c7b85e621b917fd32c0dcbcbaa1e5cd6"
+            },
+            {
+              "start": 403461,
+              "end": 418294,
+              "cls": "Fillet_c",
+              "sha256": "7cb0f629046f9507f03249c9c37ec5c542c4b145c1a63771d6836baa3ce1d88f"
+            },
+            {
+              "start": 418294,
+              "end": 418296,
+              "cls": "moFtrFolder_c",
+              "sha256": "29fc79494a0048a5dce25209b1d23ed2e079a255237dfab548acec4e8916cdac"
+            },
+            {
+              "start": 418296,
+              "end": 435805,
+              "cls": "moProfileFeature_c",
+              "sha256": "a653b9fdd4e8fb471936679a39d310243e3debefc9216351cbc469e6fd17a8fc"
+            },
+            {
+              "start": 435805,
+              "end": 436211,
+              "cls": "moFtrFolder_c",
+              "sha256": "e705866789854217709da066a338df2b1315ac5c316ab4985b0e2cf75e4977a7"
+            },
+            {
+              "start": 436211,
+              "end": 444966,
+              "cls": "moSheetMetal_c",
+              "sha256": "a433858feaf3e2df4f1e632cbc122e28dfaec4b51f6fcaed74f683198be3b947"
+            },
+            {
+              "start": 444966,
+              "end": 447164,
+              "cls": "moSMBaseFlange_c",
+              "sha256": "150191d88dbf0958cead76e833dd0443f8f2164d80724f84eae2cba30bac076a"
+            },
+            {
+              "start": 447164,
+              "end": 490895,
+              "cls": "moEdgeFlange_c",
+              "sha256": "e386ef012f15a8e7434430fb58bdd16132f4b98a66758e39df750ea5669e479b"
+            },
+            {
+              "start": 490895,
+              "end": 545757,
+              "cls": "moEdgeFlange_c",
+              "sha256": "faabe86804e887cd9c29c724780a6217694d595e9a7e40cfef6dcd34dbf5c821"
+            },
+            {
+              "start": 545757,
+              "end": 546938,
+              "cls": "moUnFold_c",
+              "sha256": "8aa23ca9eb8ddb70c338c105de948a2ee0712b3b91c2fe806d410beec622dd34"
+            },
+            {
+              "start": 546938,
+              "end": 576350,
+              "cls": "moProfileFeature_c",
+              "sha256": "329279185ee68ebd4e19cf047af692a04e28c057cf7136dbe4ac1d1d9236aae1"
+            },
+            {
+              "start": 576350,
+              "end": 583482,
+              "cls": "moICE_c",
+              "sha256": "2bd7a9d6cc4946d03c643b40e4d175f8479f2caa761bb510848c575f95537023"
+            },
+            {
+              "start": 583482,
+              "end": 584215,
+              "cls": "moFold_c",
+              "sha256": "8e9f4bb604fe4d531062addad0ad571a4f4445f59e996200351c96b55dd4d674"
+            },
+            {
+              "start": 584215,
+              "end": 588036,
+              "cls": "Fillet_c",
+              "sha256": "332cfbf04e417137fd1597f528f9ab4dadecec2e540eb389d85023d920688279"
+            },
+            {
+              "start": 588036,
+              "end": 611530,
+              "cls": "moEdgeFlange_c",
+              "sha256": "29bd6ea761a653b4937b8800da86f5ff95271525f6f59bcda886f59b8de166a7"
+            },
+            {
+              "start": 611530,
+              "end": 634281,
+              "cls": "moEdgeFlange_c",
+              "sha256": "a328601538c1cfe0b4a84de6fce5c9a15fb8ab931b364f09a5abc95413fe1eaa"
+            },
+            {
+              "start": 634281,
+              "end": 654331,
+              "cls": "moHem_c",
+              "sha256": "0f84a586af3d5b00c01b444f43e98ec3ffdeb6c4c828715efebd2a136d3fd8fa"
+            },
+            {
+              "start": 654331,
+              "end": 713231,
+              "cls": "moProfileFeature_c",
+              "sha256": "1124103fa868c5089577a246cdb6ad8115b2868a3f0061a8b31d26bd9011aa6d"
+            },
+            {
+              "start": 713231,
+              "end": 715853,
+              "cls": "moICE_c",
+              "sha256": "1819c20df2f7ef2ab004491ec022a4390e7250ecc048a8f86623cff2104dfc72"
+            },
+            {
+              "start": 715853,
+              "end": 735907,
+              "cls": "moProfileFeature_c",
+              "sha256": "9bcf556d45e38e3554c959dad868612771c158ae197d8f7ff692c04d7a5e4350"
+            },
+            {
+              "start": 735907,
+              "end": 750852,
+              "cls": "moSM3dBend_c",
+              "sha256": "ccb0974d5c0a920f48bbc01fcb133306b24ee25e6a399576928ff6436640e127"
+            },
+            {
+              "start": 750852,
+              "end": 758040,
+              "cls": "moProfileFeature_c",
+              "sha256": "1d9f779edc2fc3ce86a6ac778ee547b0b770528ea9ef6775ba51753b7d595723"
+            },
+            {
+              "start": 758040,
+              "end": 772955,
+              "cls": "moSM3dBend_c",
+              "sha256": "431ea81a50a6a050880119276f4b1b6c8c3b562fbf3f0686ccd6470c151c26e6"
+            },
+            {
+              "start": 772955,
+              "end": 808167,
+              "cls": "moEdgeFlange_c",
+              "sha256": "e6fa9cb7130c17abf20c433891bdabfdaf5a391360c0afabca1b599d1c8547b6"
+            },
+            {
+              "start": 808167,
+              "end": 835444,
+              "cls": "moEdgeFlange_c",
+              "sha256": "84cd04f7cb86c0f3bd7285b5c52c5fb2a7ee654ad2ffa2a8d9c2a6f1e6cffb66"
+            },
+            {
+              "start": 835444,
+              "end": 844775,
+              "cls": "Fillet_c",
+              "sha256": "e78ce061ab9ff8924608112957a6a430e381a681421d04f845725c2e169d61c0"
+            },
+            {
+              "start": 844775,
+              "end": 851128,
+              "cls": "moFlatPattern_c",
+              "sha256": "ea37a0124a251033ae0ba6fe33f8dafbec26a4fb7755ca5682131ef263703ffa"
+            },
+            {
+              "start": 851128,
+              "end": 851130,
+              "cls": "moFtrFolder_c",
+              "sha256": "e1375df8124b474b3e01be27c7d7ba1b903651f30f8262436ff2ce5e9d25de04"
+            }
+          ],
+          "ids": [
+            {
+              "slot": 844,
+              "raw_38": 1
+            },
+            {
+              "slot": 864,
+              "raw_38": 1
+            },
+            {
+              "slot": 3770,
+              "raw_38": 1
+            },
+            {
+              "slot": 8678,
+              "raw_38": 1
+            }
+          ],
+          "dependencies": [
+            {
+              "slot": 19504,
+              "cls": "featureStateData_c",
+              "raw_fields": {
+                "raw_08": 1120,
+                "raw_10": 0
+              }
+            },
+            {
+              "slot": 19505,
+              "cls": "featureStateData_c",
+              "raw_fields": {
+                "raw_08": 1120,
+                "raw_10": 1
+              }
+            },
+            {
+              "slot": 19506,
+              "cls": "featureStateData_c",
+              "raw_fields": {
+                "raw_08": 1120,
+                "raw_10": 1
+              }
+            }
+          ],
+          "list_end": 851130,
+          "status": "stream_complete",
+          "end": 851130,
+          "tail_bytes": 0
+        }
+      ],
+      "coverage_credit": 0,
+      "complete_streams": 2,
+      "decompilation_sha256": {
+        "FUN_4b8f8090.c": "225a9f4c3e0e7c3c794bd53fdb9ccd1f8334dfe3f75072a400e35ed549a4fb0d"
+      }
+    }
+  }
+]

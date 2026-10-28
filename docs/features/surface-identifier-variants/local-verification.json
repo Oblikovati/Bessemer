@@ -1,0 +1,46 @@
+{
+  "issue": 54,
+  "issue_type": "Feature",
+  "runtime_base_revision": "ff60dd2a08503c8b0c0706547f0daa351a1c14a8",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "fixture_graphs": 108,
+  "primitive_reads": 17637,
+  "owned_streams": 14,
+  "checks": {
+    "private": "7 passed",
+    "public": "3 passed",
+    "python": "2 independent regeneration and inventory tests passed",
+    "cargo_xtask_pr": "852 library tests, 4 xtask tests, all integrations, 274 doctests; 3 external-fixture tests explicitly ignored",
+    "native_processes": "Two fresh processes matched all 906 outcomes and causes; exit 101 for aggregate 818/906 completeness assertion"
+  },
+  "previous_complete": 818,
+  "complete": 818,
+  "newly_complete": [],
+  "no_prior_success_lost": true,
+  "partial_advances_without_completion_credit": [
+    407,
+    615
+  ],
+  "independent_feature_bytes": 54838261,
+  "source_snapshot": "830b514f74c759e3ad1235044fea2f624fb46694ddffcee6ff182cbbaf1bc72d",
+  "source_python_files": 1719,
+  "native_witness_configurations": 5,
+  "native_reviewed_prefix_roots": 307,
+  "native_objects": {
+    "moFromSktTopSurfIdRep_c": 8,
+    "moEndCapChamferSurfIdRep_c": 8
+  },
+  "exclusions": [
+    "88 native inputs remain explicit failures",
+    "Cases 407 and 615 advance to moEdgeFlange_c and moDisplayWeld_c without completion credit",
+    "Historical/internal contexts, scalar meanings, geometry validity, application acceptance and whole-schema parity remain incomplete",
+    "Humanizer unavailable; maintainer prose review remains open"
+  ],
+  "artifact_sha256": "e303d767ceead07c28934c89a306699b55cc9568059135a103b9aa2e0e74edb5",
+  "gate_log_sha256": "33adec801e43de5dbab5c58e41a603a674e7191abe0b597347f80911cae6449c",
+  "before_log_sha256": "9e1fabd80198b3a75756328163834d7e719272731b8b2f117a542963eefcd1c1",
+  "native_log_sha256": "19c3dc500bb9bd46a099e9a9b7c1435e6a4692305baf494602cf7a61899945eb",
+  "native_repeat_log_sha256": "59d2767b2172868976a71a75a2b813faef687f89b1f66006208364cb01f0f5ab",
+  "fixture_packet_sha256": "820cda422f5336323ec0a4f8b74ce087e038f7c25a1c8b7c9963b687e4a68785"
+}

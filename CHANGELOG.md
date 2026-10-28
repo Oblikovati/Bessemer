@@ -24,6 +24,8 @@
 
 ### Added
 
+- Added exact top-surface and end-cap chamfer entity-ID representations with preserved signed words and shared identities. (#54)
+
 - Added exact cone-reference framing with preserved raw doubles and shared surface-axis references. (#54)
 
 - Added ordinary sketch isocurve information reading, editing and writing with exact twenty-byte numeric bodies, retained floating-point bits and shared external-entity references. (#54)

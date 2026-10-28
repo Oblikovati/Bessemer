@@ -1,0 +1,223 @@
+{
+  "packets": {
+    "top-surface-dependencies-corpus.json": "e49c91a34ff9e13fd83a5bc68e1978e1946aae1157176f8f03e9bed2ba2933d7",
+    "weld-end-cap-corpus.json": "db539b63a0dad37846291ba6481597bf21153b8ff38e14e29071f210c4ad99df"
+  },
+  "counts": {
+    "moFromSktTopSurfIdRep_c": 8,
+    "moEndCapChamferSurfIdRep_c": 8
+  },
+  "records": [
+    {
+      "packet": "top-surface-dependencies-corpus.json",
+      "index": 344,
+      "path": "samples/learn/Mouse/Bottom Housing.SLDPRT",
+      "configuration": "Contents/Config-0",
+      "source_sha256": "5fadaa565d451eef089ff7e55a9f52159847d0bf4247b21a85de5b50fa67ba43",
+      "source_complete_roots": 140,
+      "reviewed_prefix_roots": 140,
+      "rust_complete": false,
+      "objects": [
+        {
+          "class_name": "moFromSktTopSurfIdRep_c",
+          "start": 883665,
+          "end": 883683,
+          "sha256": "7eeb14d8772cb0346cd1fb98dbd08db2fa084c7ca6f64e2dc79826ffa80b58ae",
+          "suffix": [
+            1
+          ]
+        },
+        {
+          "class_name": "moFromSktTopSurfIdRep_c",
+          "start": 885632,
+          "end": 885650,
+          "sha256": "7eeb14d8772cb0346cd1fb98dbd08db2fa084c7ca6f64e2dc79826ffa80b58ae",
+          "suffix": [
+            1
+          ]
+        },
+        {
+          "class_name": "moFromSktTopSurfIdRep_c",
+          "start": 886358,
+          "end": 886376,
+          "sha256": "7eeb14d8772cb0346cd1fb98dbd08db2fa084c7ca6f64e2dc79826ffa80b58ae",
+          "suffix": [
+            1
+          ]
+        },
+        {
+          "class_name": "moFromSktTopSurfIdRep_c",
+          "start": 894799,
+          "end": 894817,
+          "sha256": "7eeb14d8772cb0346cd1fb98dbd08db2fa084c7ca6f64e2dc79826ffa80b58ae",
+          "suffix": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "packet": "top-surface-dependencies-corpus.json",
+      "index": 407,
+      "path": "samples/tutorial/Sustainability/drive sled.sldprt",
+      "configuration": "Contents/Config-1",
+      "source_sha256": "4e546fbcf483e8785f4d8370d773f73178d70ceb8efec00873d89deb9f9f01bf",
+      "source_complete_roots": 76,
+      "reviewed_prefix_roots": 76,
+      "rust_complete": false,
+      "objects": [
+        {
+          "class_name": "moFromSktTopSurfIdRep_c",
+          "start": 48750,
+          "end": 48768,
+          "sha256": "093f71db35b78adf5a022d1dc6ffee60c189d6f116b50607a2a914fb7c9d89f7",
+          "suffix": [
+            1
+          ]
+        },
+        {
+          "class_name": "moFromSktTopSurfIdRep_c",
+          "start": 49042,
+          "end": 49060,
+          "sha256": "093f71db35b78adf5a022d1dc6ffee60c189d6f116b50607a2a914fb7c9d89f7",
+          "suffix": [
+            1
+          ]
+        },
+        {
+          "class_name": "moFromSktTopSurfIdRep_c",
+          "start": 157502,
+          "end": 157520,
+          "sha256": "093f71db35b78adf5a022d1dc6ffee60c189d6f116b50607a2a914fb7c9d89f7",
+          "suffix": [
+            1
+          ]
+        },
+        {
+          "class_name": "moFromSktTopSurfIdRep_c",
+          "start": 279420,
+          "end": 279438,
+          "sha256": "489f2689a65fdc302dc42f132d1ac8f8b6f535ddacbf0748f68d92f8fd2a8520",
+          "suffix": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "packet": "weld-end-cap-corpus.json",
+      "index": 547,
+      "path": "samples/tutorial/api/insert_weld.sldprt",
+      "configuration": "Contents/Config-0",
+      "source_sha256": "3b61d301983c4ea911e2150e110ab365038b096f84b990e18048e3a24623c3a9",
+      "source_complete_roots": 24,
+      "reviewed_prefix_roots": 24,
+      "rust_complete": false,
+      "objects": []
+    },
+    {
+      "packet": "weld-end-cap-corpus.json",
+      "index": 615,
+      "path": "samples/tutorial/api/weldment_box3.sldprt",
+      "configuration": "Contents/Config-0",
+      "source_sha256": "94b377ab68492fa72394f54b2637af3e8bf93a1f06c22fd7532f4c381c8926e2",
+      "source_complete_roots": 43,
+      "reviewed_prefix_roots": 32,
+      "rust_complete": false,
+      "objects": [
+        {
+          "class_name": "moEndCapChamferSurfIdRep_c",
+          "start": 12131,
+          "end": 12153,
+          "sha256": "b8d50ce031ffec2766b0eb3a43d2e0f11f45b2260a075a3100580e05b7fb60c0",
+          "suffix": [
+            3,
+            1
+          ]
+        },
+        {
+          "class_name": "moEndCapChamferSurfIdRep_c",
+          "start": 12577,
+          "end": 12599,
+          "sha256": "a6683d1959406cbf535ed173857255d40e6b9d72fe36127a60be4fad01018a42",
+          "suffix": [
+            5,
+            7
+          ]
+        },
+        {
+          "class_name": "moEndCapChamferSurfIdRep_c",
+          "start": 12954,
+          "end": 12976,
+          "sha256": "e11bc9998accce2d6c53e0c53ff3d48ba9c35c6cb8aa9150f3b3f945815c6362",
+          "suffix": [
+            5,
+            7
+          ]
+        },
+        {
+          "class_name": "moEndCapChamferSurfIdRep_c",
+          "start": 13331,
+          "end": 13353,
+          "sha256": "4e99f6019dce7580852991c57af6ddc645fc2e56aa9516b3c440f2b785c8a28e",
+          "suffix": [
+            3,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "packet": "weld-end-cap-corpus.json",
+      "index": 905,
+      "path": "samples/tutorial/weldments/weldment_box2.sldprt",
+      "configuration": "Contents/Config-0",
+      "source_sha256": "92295a061fe0b3317e718858f52f3c935dfd4d8e24c651dbce1a582eeff01629",
+      "source_complete_roots": 52,
+      "reviewed_prefix_roots": 35,
+      "rust_complete": false,
+      "objects": [
+        {
+          "class_name": "moEndCapChamferSurfIdRep_c",
+          "start": 29882,
+          "end": 29904,
+          "sha256": "2cc0cfe27ddc3841e7afca1110a2a2a9d6c97880af62f66a0c9fe263bd78fd81",
+          "suffix": [
+            5,
+            7
+          ]
+        },
+        {
+          "class_name": "moEndCapChamferSurfIdRep_c",
+          "start": 30280,
+          "end": 30302,
+          "sha256": "c0381ef60a6be0bd210d5f1bdcc02ca332a1db32aea7c63174e4415344291486",
+          "suffix": [
+            3,
+            1
+          ]
+        },
+        {
+          "class_name": "moEndCapChamferSurfIdRep_c",
+          "start": 30705,
+          "end": 30727,
+          "sha256": "ed38b5b39586e79f8f254cabb919dbcc481e91cbd5f6389efab2933539059b6d",
+          "suffix": [
+            5,
+            7
+          ]
+        },
+        {
+          "class_name": "moEndCapChamferSurfIdRep_c",
+          "start": 31082,
+          "end": 31104,
+          "sha256": "4754f1fdb4949e5ce21928eeda4f6c95fc41c3e2e9e9c310b940c10c1009181f",
+          "suffix": [
+            3,
+            1
+          ]
+        }
+      ]
+    }
+  ]
+}

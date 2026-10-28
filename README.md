@@ -294,3 +294,6 @@ Component-property objects and holders retain their embedded fonts, visibility f
 
 Cone-reference framing and its surface-axis callers are documented in
 [cone references](docs/features/cone-references/README.md).
+
+[Surface identifier variants](docs/features/surface-identifier-variants/README.md)
+describes exact top-surface and end-cap chamfer representation framing.

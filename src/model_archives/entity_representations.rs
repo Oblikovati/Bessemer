@@ -17,6 +17,8 @@ const LAYOUTS: &[(&str, RepresentationLayout)] = &[
     ("moEntityIdRep_c", Keeper),
     ("moSurfaceIdRep_c", Keeper),
     ("moFromSktEntSurfIdRep_c", Local(&["38"])),
+    // #54 / C-374 binds the direct common-prefix call and one signed word.
+    ("moFromSktTopSurfIdRep_c", Local(&["38"])),
     ("moFilletSurfIdRep_c", Local(&["38"])),
     ("moFaceBlendSurfIdRep_c", Local(&["38"])),
     // 11.225 / C-253 proves both primary dispatches, ancestry and the one-word suffix.
@@ -35,6 +37,8 @@ const LAYOUTS: &[(&str, RepresentationLayout)] = &[
     ("moBottomEdgeIdRep_c", Local(&["38"])),
     ("moStartEdgeIdRep_c", Local(&["38"])),
     ("moEndFaceSurfIdRep_c", Local(&["38", "3c"])),
+    // #54 / C-362 and C-390 bind the primary dispatch and two signed words.
+    ("moEndCapChamferSurfIdRep_c", Local(&["38", "3c"])),
     // #54 / 11.350 / C-392 binds the exact native serializer and edge ancestry.
     ("moTrimWireExtEdgeIdRep_c", Local(&["38", "3c"])),
     ("moRadiateSurfIdRep_c", Local(&["38", "3c"])),

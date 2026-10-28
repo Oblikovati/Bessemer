@@ -475,3 +475,7 @@ mod sketch_isocurve_information_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/cone_references.rs"]
 mod cone_reference_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/surface_identifier_variants.rs"]
+mod surface_identifier_variant_tests;
