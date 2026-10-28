@@ -24,7 +24,16 @@ const ID_KEEPERS: &[&str] = &[
 ];
 
 pub(super) fn header(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.scope("model_feature", |reader| model_feature(reader, map))?;
+    header_with_node(reader, map).map(|_| ())
+}
+
+fn header_with_node(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+) -> Result<super::node::ModelNodePrefix> {
+    let prefix = reader.scope("model_feature", |reader| {
+        model_feature_with_node(reader, map)
+    })?;
     for label in ["array_360", "array_380"] {
         reader.scope(label, |reader| {
             model_lists::pointers(reader, map, "items", ModelObjectRole::Any)
@@ -33,13 +42,20 @@ pub(super) fn header(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> R
     if reader.u16("has_id_keeper")? != 0 {
         reader.required_object("id_keeper", map, ModelObjectRole::Declared(ID_KEEPERS))?;
     }
-    Ok(())
+    Ok(prefix)
 }
 
 pub(super) fn model_feature(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.scope("feature", |reader| features::read(reader, map))?;
+    model_feature_with_node(reader, map).map(|_| ())
+}
+
+fn model_feature_with_node(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+) -> Result<super::node::ModelNodePrefix> {
+    let prefix = reader.scope("feature", |reader| features::read_node_prefix(reader, map))?;
     reader.i32("word_354")?;
-    Ok(())
+    Ok(prefix)
 }
 
 pub(super) fn atom_fields(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
@@ -326,9 +342,19 @@ pub(super) fn read(
 }
 
 pub(super) fn base(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    header(reader, map)?;
+    base_with_node(reader, map).map(|_| ())
+}
+
+/// Retain the containing feature's node flags across nested archive objects.
+/// Example: `body_features::base_with_node(reader, map)?.flags_28`.
+pub(super) fn base_with_node(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+) -> Result<super::node::ModelNodePrefix> {
+    let prefix = header_with_node(reader, map)?;
     atom_fields(reader, map)?;
-    reader.scope("body_suffix", |reader| suffix(reader, map))
+    reader.scope("body_suffix", |reader| suffix(reader, map))?;
+    Ok(prefix)
 }
 
 fn suffix(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
