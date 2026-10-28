@@ -489,6 +489,7 @@ fn read_display_support(
         "moDetailFolder_c" => super::detail_folder_records::read(reader, map),
         "gcBucketEdgeData_c" => crate::archive_codec::bucket_polygons::edge(reader),
         "moCompDispObjRef_c" => super::display_object::component_reference(reader, map),
+        "moDisplayWeld_c" => super::display_weld::read(reader, map),
         "moArrowSize_c" => super::display_object::arrow_size(reader),
         "moFavoriteHandle_c" => super::display_dimension_tail::favorite_handle(reader),
         "moHwCalloutData_c" => super::display_suffixes::callout_data(reader, map),

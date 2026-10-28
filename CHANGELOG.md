@@ -24,6 +24,8 @@
 
 ### Added
 
+- Added complete ordinary display-weld framing with preserved raw values, CString encodings and payload identities. (#54)
+
 - Added exact top-surface and end-cap chamfer entity-ID representations with preserved signed words and shared identities. (#54)
 
 - Added exact cone-reference framing with preserved raw doubles and shared surface-axis references. (#54)

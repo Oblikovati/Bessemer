@@ -479,3 +479,7 @@ mod cone_reference_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/surface_identifier_variants.rs"]
 mod surface_identifier_variant_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/display_welds.rs"]
+mod display_weld_tests;

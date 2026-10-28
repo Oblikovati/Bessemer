@@ -297,3 +297,6 @@ Cone-reference framing and its surface-axis callers are documented in
 
 [Surface identifier variants](docs/features/surface-identifier-variants/README.md)
 describes exact top-surface and end-cap chamfer representation framing.
+
+[Display welds](docs/features/display-welds/README.md) covers the complete
+display-item base, native weld suffix and preserved payload identities.
