@@ -20,6 +20,23 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moCornerFeat_c" => super::corner_hems::corner(reader, map),
+        "moFaceGeom_c" | "moPlanarFaceGeom_c" => super::corner_hems::face_geometry(reader),
+        "moHem_c" => super::corner_hems::hem(reader, map),
+        "moHemData_c" => super::corner_hems::hem_data(reader, map),
+        "moHemEdgeChainData_c" => super::hem_chains::chain_data(reader, map),
+        "moHemEdgeChain_c" => super::hem_chains::chain(reader, map),
+        "moHemEdgeChainElement_c" => super::hem_chains::element(reader, map),
+        "moReliefData_c" => super::hem_chains::relief(reader),
+        "moSM3dBend_c" => super::sheet_folds::bend(reader, map),
+        "moFold_c" => super::sheet_folds::fold(reader, map),
+        "moUnFold_c" => super::sheet_folds::unfold(reader, map),
+        "su_CMapObToInt" => super::sheet_folds::object_integer_map(reader, map),
+        "moEdgeFlange_c" => super::edge_flange_records::read(reader, map),
+        "moEdgeFlangeData_c" => super::edge_flange_data::read(reader, map),
+        "moOneBend_c" => super::one_bends::read(reader, map),
+        "moMultiEdgeFlangeDataPerEdge_c" => super::edge_flange_records::per_edge(reader, map),
+        "moEdgeGeom_c" | "moLinearEdgeGeom_c" => super::edge_flange_records::geometry(reader),
         "moGusset_c" => super::weldment_finishing::gusset(reader, map),
         "moWeldBeadFeat_c" => super::weldment_finishing::bead(reader, map),
         "weldBeadSideData_c" => super::weldment_finishing::side(reader, map),

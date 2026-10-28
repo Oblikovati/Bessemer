@@ -6,7 +6,7 @@ use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
 
 // #54 / C-194: boundary-reference descendants retain the documented common base.
-const BOUNDARY_REFERENCES: &[&str] = &[
+pub(super) const BOUNDARY_REFERENCES: &[&str] = &[
     "moCompBEntRef_c",
     "moCompFace_c",
     "moCompVertex_c",

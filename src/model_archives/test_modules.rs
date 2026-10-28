@@ -102,6 +102,9 @@ mod context_snapshot_tests;
 #[path = "../../tests/resolved_features/coordinate_systems.rs"]
 mod coordinate_system_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/corner_hems.rs"]
+mod corner_hem_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/custom_properties.rs"]
 mod custom_property_tests;
 #[cfg(test)]
@@ -333,6 +336,9 @@ mod sew_surface_tests;
 #[path = "../../tests/resolved_features/shared_sketch_handles.rs"]
 mod shared_sketch_handle_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/sheet_folds.rs"]
+mod sheet_fold_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/sheet_metal.rs"]
 mod sheet_metal_tests;
 #[cfg(test)]
@@ -508,6 +514,9 @@ mod cosmetic_weld_cut_list_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/cosmetic_weld_tree.rs"]
 mod cosmetic_weld_tree_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/edge_flanges.rs"]
+mod edge_flange_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/end_caps.rs"]
 mod end_cap_tests;

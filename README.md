@@ -324,3 +324,12 @@ gusset extrusions, ordinary weld-bead features and shared side data.
 
 [Absolute plane data](docs/features/absolute-plane-data/README.md) documents the
 shared non-default plane layout and its typed containing-plane role.
+
+[Edge flanges](docs/features/edge-flanges/README.md) covers complete edge-flange,
+single-bend and per-edge records, including verified saved sheet-metal state.
+
+[Sheet-metal folds](docs/features/sheet-folds/README.md) documents complete 3D bends,
+folds and unfolds, including raw compressed bodies and ordered maps.
+
+[Sheet-metal corners and hems](docs/features/corner-hems/README.md) covers directly
+owned hem data, independent arrays, chain identities and saved helper layouts.
