@@ -20,6 +20,7 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moCompositeCurve_c" => super::composite_curves::read(reader, map),
         "moDelFace_c" => super::deleted_faces::read(reader, map),
         "moDelFaceData_c" => super::deleted_faces::data(reader, map),
         // #54 / C-219, C-235 and C-278 bind the identical complete extrusion serializer.

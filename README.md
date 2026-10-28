@@ -229,6 +229,8 @@ arrays, raw flag words, double order and inherited empty keepers.
 the reviewed wrapper family at conditional, starting-end and revolution fields.
 [Deleted-face features](docs/features/deleted-faces/README.md) retain independent
 nullable arrays, unsigned DWORDs and shared nested data.
+[Composite curves](docs/features/composite-curves/README.md) retain strict kernel
+frames, shared tagged arrays and independent direct object/DWORD arrays.
 [Thin extrusion and revolution features](docs/features/thin-extrusions/README.md) retain
 shared specifications, independent dimensions and fixed-width bend triples.
 [Three-point plane references](docs/features/three-point-plane-roles/README.md) accept

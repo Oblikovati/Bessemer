@@ -447,3 +447,7 @@ mod deleted_face_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/end_spec_wrapper_roles.rs"]
 mod end_spec_wrapper_role_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/composite_curves.rs"]
+mod composite_curve_tests;

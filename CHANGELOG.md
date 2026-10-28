@@ -20,6 +20,8 @@
 
 ### Added
 
+- Added ordinary composite-curve reading, editing and writing with strict kernel frames, shared tagged arrays and five independently counted direct containers. (#54)
+
 - Added ordinary deleted-face feature and data reading, editing and writing with independent nullable arrays, unsigned DWORDs and retained shared identities. (#54)
 
 - Added ordinary thin extrusion, boss, cut and revolution reading, editing and writing with shared thin specifications and exact u16 bend-triple counts. (#54)
