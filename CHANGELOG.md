@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Fixed extrusion, starting-end and revolution-end wrapper references rejecting complete reviewed subclasses while preserving conditional fields, nulls and identity. (#46)
+
 - Fixed three-point-plane reference fields rejecting documented endpoint and loft-sync subclasses while retaining nulls, identity and unrelated-class checks. (#46)
 
 - Fixed reference-plane data and common-wrapper roles rejecting documented constraint, point/surface and base-surface objects while retaining finite class checks. (#46)

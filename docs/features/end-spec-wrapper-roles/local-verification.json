@@ -1,0 +1,50 @@
+{
+  "issue": 46,
+  "issue_type": "Bug",
+  "runtime_base_revision": "40ab346dd020232c1c9ea51b61feea5e7ec1a91d",
+  "fixture_preparation_commit": "69ceb012923dbff1f67ad8d45e9ddfca4e55d7cb",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "regression": {
+    "before_passed": 0,
+    "before_failed": 1,
+    "before_log_sha256": "f0e62f4dbaab31806fc2b3cdf315a688963dd4354536e089372d8fcfdb2567d9",
+    "cause": "reference_78 runtime class moSolidRef_w rejected; expected singleton moRefWrapper_c"
+  },
+  "native_modules_verified": {
+    "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+    "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldMoPartu.dll": "2201edfa07b1a7484acedb6db4600fa7a00e55b16090a03b92fe7d9b14cb2128"
+  },
+  "artifact_sha256": "f08b18159cd37d26c38aea4ae0fd3c95e7422aac0d0dc03423ba7df6fc5f0abe",
+  "fixture_graphs": 1140,
+  "primitive_reads": 169376,
+  "owned_streams": 133,
+  "legacy_default_builder_cases": 180,
+  "null_witnesses": 3,
+  "unrelated_complete_witnesses": 6,
+  "checks": {
+    "focused": "7 passed",
+    "public": "3 passed",
+    "python": "4 regeneration/default-baseline tests passed; original end-point corpus regenerated with 3 tests unchanged",
+    "cargo_xtask_pr": "final tree passed; 795 library tests, 4 xtask tests, all integrations, 274 doctests, 3 explicit external-fixture tests ignored",
+    "native_processes": "two fresh processes matched all 906 outcomes and causes; exit 101 only for the aggregate 806/906 completeness assertion"
+  },
+  "previous_complete": 803,
+  "complete": 806,
+  "newly_complete": [
+    353,
+    480,
+    481
+  ],
+  "no_prior_success_lost": true,
+  "independent_feature_bytes": 52637722,
+  "source_snapshot": "d0f2ee6363fe43544c8bf2c12312e29e84869c354d3e5b435a83959acb1ee1e8",
+  "source_python_files": 1559,
+  "native_newly_complete_witnesses": 3,
+  "exclusions": [
+    "100 native inputs remain explicit failures",
+    "Other finite-role rejection sites remain open under Bug #46",
+    "Historical contexts, geometry validity, application acceptance and all-schema parity remain incomplete",
+    "Humanizer unavailable; maintainer prose review remains open"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "cases": 906,
+  "previous_complete": 803,
+  "complete": 806,
+  "fresh_processes": 2,
+  "all_outcomes_and_causes_identical": true,
+  "artifact_sha256": "f08b18159cd37d26c38aea4ae0fd3c95e7422aac0d0dc03423ba7df6fc5f0abe",
+  "changed": [
+    {
+      "index": 353,
+      "previous": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"reference_78\" has runtime class \"moSolidRef_w\"; expected one of [\"moRefWrapper_c\"]"
+      ],
+      "current": [
+        "accepted"
+      ]
+    },
+    {
+      "index": 480,
+      "previous": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"reference\" has runtime class \"moPlaneRef_w\"; expected one of [\"moRefWrapper_c\"]"
+      ],
+      "current": [
+        "accepted"
+      ]
+    },
+    {
+      "index": 481,
+      "previous": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"reference\" has runtime class \"moPlaneRef_w\"; expected one of [\"moRefWrapper_c\"]"
+      ],
+      "current": [
+        "accepted"
+      ]
+    }
+  ]
+}
