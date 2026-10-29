@@ -401,6 +401,8 @@ fn read_scene_body(
         }
         "moHistoryFolder_c" => super::browser_folders::history(reader, map),
         "moSelectionSetFolder_c" => super::browser_folders::selection_sets(reader, map),
+        "moSelectionSetData_c" => super::browser_folders::selection_set_data(reader, map),
+        "moSelectionItemData_c" => super::browser_folders::selection_item_data(reader, map),
         "moSurfaceBodyFolder_c" | "moSolidBodyFolder_c" => {
             super::browser_folders::body_folder(reader, map)
         }

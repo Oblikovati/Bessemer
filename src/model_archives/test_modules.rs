@@ -539,3 +539,39 @@ mod weldment_finishing_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/legacy_manager_context.rs"]
 mod legacy_manager_context_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/display_notes.rs"]
+mod display_note_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/stock_features.rs"]
+mod stock_feature_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/body_reference_wrappers.rs"]
+mod body_reference_wrapper_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/derived_references.rs"]
+mod derived_reference_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/move_copy_bodies.rs"]
+mod move_copy_body_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/selection_sets.rs"]
+mod selection_set_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/sketch_bitmaps.rs"]
+mod sketch_bitmap_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/sketch_bends.rs"]
+mod sketch_bend_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/mitered_flanges.rs"]
+mod mitered_flange_tests;

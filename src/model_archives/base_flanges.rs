@@ -34,7 +34,9 @@ fn payload(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> 
     tail(reader, map)
 }
 
-fn handles(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+/// Retain one sketch occurrence followed by a signed-count handle collection.
+/// Example: `base_flanges::handles(reader, map)?` for a direct mitered member.
+pub(super) fn handles(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     let count = reader.signed_count("count", 2)?;
     if count == 0 {
         return Ok(());

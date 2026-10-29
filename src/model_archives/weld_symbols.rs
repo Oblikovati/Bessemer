@@ -6,6 +6,8 @@ use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader, ObjectRecord, vectors::double_vector};
 
 const DETAILS: &[&str] = &[
+    // #54 / C-208: note data inherits this exact detail-item prefix.
+    "moNoteData_c",
     "moDetailItem_c",
     "moWeldSymbol_c",
     "moCosmeticWeldBeadSymbol_c",
@@ -13,6 +15,8 @@ const DETAILS: &[&str] = &[
 ];
 // #54 / 11.125 proves the complete ordinary parametric attachment subtype.
 const ATTACHMENTS: &[&str] = &[
+    // #54 / C-209: the absolute-point dispatch has the complete attachment body and no suffix.
+    "moAbsolutePoint_c",
     "moAttachPoint_c",
     "moCosmeticWeldBeadAttachPoint_c",
     "moParametricPoint_c",

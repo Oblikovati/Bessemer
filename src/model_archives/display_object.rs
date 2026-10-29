@@ -3,6 +3,8 @@ use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader, visibility};
 
 const COMPONENT_REFERENCES: &[&str] = &[
+    // #54 / C-207: null-component notes use the complete component-reference base.
+    "moCompNote_c",
     "moCompRef_c",
     // #54 / C-387 and C-390 prove the component-reference prefix and guarded internal branch.
     "moCompDetailItem_c",

@@ -44,6 +44,39 @@ pub(super) fn selection_sets(reader: &mut ModelDecoder<'_>, map: &mut ObjectRead
     Ok(())
 }
 
+/// Preserve selection-set words, comments and direct ordered item identities.
+/// Example: `browser_folders::selection_set_data(reader, map)?`.
+pub(super) fn selection_set_data(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+) -> Result<()> {
+    item(reader, map)?;
+    reader.i32("raw_40")?;
+    reader.text("raw_48")?;
+    if reader.version() > 0x3720 {
+        reader.object(
+            "comment",
+            map,
+            ModelObjectRole::Declared(&["moFeatComment_c", "moNewFeatComment_c"]),
+        )?;
+    }
+    model_lists::pointers(reader, map, "items", ModelObjectRole::Any)
+}
+
+/// Retain the selection item's node stage and shared wrapper reference.
+/// Example: `browser_folders::selection_item_data(reader, map)?`.
+pub(super) fn selection_item_data(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+) -> Result<()> {
+    item(reader, map)?;
+    reader.object(
+        "reference_40",
+        map,
+        ModelObjectRole::Declared(super::model_references::WRAPPER_CLASSES),
+    )
+}
+
 pub(super) fn body_folder(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     features::folder(reader, map)?;
     reader.i32s(&["raw_374", "raw_378"])?;

@@ -347,3 +347,31 @@ direct owned keepers, tagged arrays and independent version gates.
 
 [Version-18000 configuration managers](docs/features/legacy-owned-managers/README.md)
 documents explicit dialect selection and independently decoded historical streams.
+
+[Display notes](docs/features/display-notes/README.md) covers internal note components,
+generic text, direct paragraphs and shared text-list identities.
+
+[Stock features](docs/features/stock-features/README.md) covers stock and mirrored-stock
+records, body-reference collections and component-body transforms.
+
+[Derived-feature references](docs/features/derived-feature-references/README.md)
+cover versioned point presence, direct shared arrays and surface-body aliases.
+
+[Move/copy bodies](docs/features/move-copy-bodies/README.md) cover nested payloads,
+mesh tolerances and the documented conformal-deformation branches.
+
+[Selection sets](docs/features/selection-sets/README.md) cover node-based sets,
+selection items, direct lists and shared comment and wrapper identities.
+
+[Sketch bitmaps](docs/features/sketch-bitmaps/README.md) cover feature and data
+records, bounded raw byte planes and conditional compact transforms.
+
+[Sketch bends](docs/features/sketch-bends/README.md) cover complete inherited
+One Bend records, tagged stored handles and explicit kind-7 dependency stops.
+
+[Mitered flanges](docs/features/mitered-flanges/README.md) cover direct object and
+DWORD collections and four sketch-associated handle groups.
+
+[Standalone Inspection envelopes](docs/features/standalone-inspection/README.md)
+cover current encrypted templates and historical projects, exact XML preservation
+and immutable complete-XML replacement.

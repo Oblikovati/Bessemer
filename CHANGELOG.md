@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Fixed reviewed sketch-bend curve and One Bend parent roles rejecting complete fresh or cached derived references while preserving unrelated-class rejection. (#46)
+
 - Fixed present sketch valued-dimension transforms using compact framing instead of the documented fixed 30-word archive operator, preserving raw presence, words and suffix identities. (#86)
 
 - Fixed all four sketch-intersection wrapper fields rejecting complete reviewed subclasses while preserving nulls, shared identities and unrelated-class checks. (#46)
@@ -23,6 +25,24 @@
 - Fixed reference-plane point roles rejecting documented endpoint and loft-sync subclasses for fresh and cached pointers. (#46)
 
 ### Added
+
+- Added complete ordinary mitered-flange records with direct object and DWORD collections and sketch-associated handle groups. (#54)
+
+- Added ordinary sketch-bend continuations with complete One Bend prefixes, shared tagged handles and explicit kind-7 dependency errors. (#54)
+
+- Added complete ordinary sketch-bitmap records with bounded raw byte planes, conditional references and compact transforms. (#54)
+
+- Added complete ordinary selection-set and selection-item archives with versioned comments, ordered lists and shared identities. (#54)
+
+- Added complete ordinary move/copy body archives, nested payloads, mesh-tolerance records and documented zero-scale conformal branches. (#54)
+
+- Added complete modern derived-feature and surface-body reference reconstruction, including signed point presence, shared arrays and generic wrapper callers. (#54)
+
+- Added standalone Inspection project/template envelope reading and writing for current and historical cipher profiles, with exact XML replacement and bounded validation. (#92)
+
+- Added ordinary stock and mirrored-stock record reconstruction, including direct collections, body references, component boxes and independent kernel controls. (#54)
+
+- Added complete ordinary display-note and generic-text record reconstruction, preserving paragraph fields, character units, shared identities and versioned note tails. (#54)
 
 - Added explicitly scoped version-18000 configuration-manager reading and reconstruction, including owned scenes and the historical display-map boundary. (#54)
 

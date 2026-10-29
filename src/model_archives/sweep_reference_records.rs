@@ -35,14 +35,12 @@ pub(super) fn synchronization(reader: &mut ModelDecoder<'_>, map: &mut ObjectRea
     curve_references(reader, map)
 }
 
+pub(super) const CURVE_REFERENCE_CLASSES: &[&str] =
+    &["moCurveRef_w", "moGeneralCurveRef_w", "moCircleRef_w"];
+
 fn curve_references(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     for label in ["curve_reference_1c8", "curve_reference_1d0"] {
-        declared(
-            reader,
-            map,
-            label,
-            &["moCurveRef_w", "moGeneralCurveRef_w", "moCircleRef_w"],
-        )?;
+        declared(reader, map, label, CURVE_REFERENCE_CLASSES)?;
     }
     Ok(())
 }

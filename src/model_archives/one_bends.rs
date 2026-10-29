@@ -7,6 +7,25 @@ use crate::{BessemerError, FailureClass, Result};
 /// Preserve the complete single-bend body, direct handles and bounded raw-body stops.
 /// Example: `one_bends::read(reader, map)?` for the native single-bend class.
 pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    read_kind(reader, map).map(|_| ())
+}
+
+/// Return the retained bend kind for a concrete subclass's continuation.
+/// Example: `let kind = one_bends::read_kind(reader, map)?;`.
+pub(super) fn read_kind(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<i32> {
+    let has_sketch = body_prefix(reader, map)?;
+    ordinary_handle(reader, map)?;
+    let kind = middle(reader, map)?;
+    reader.object("reference_a98", map, ModelObjectRole::Any)?;
+    components(reader, map, &["ab0", "ab8"])?;
+    if has_sketch {
+        reader.scope("direct_handle_878", super::sketch_references::handle)?;
+    }
+    reader.scope("body_tail", tail)?;
+    Ok(kind)
+}
+
+fn body_prefix(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<bool> {
     reader.scope("body", |reader| body_features::base(reader, map))?;
     reader.scope("common_bend_800", |reader| {
         super::sheet_payload::common(reader, map)
@@ -14,14 +33,7 @@ pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
     reader.i32s(&["raw_840", "raw_844", "raw_848"])?;
     let has_sketch = first_sketch(reader, map)?;
     prefix(reader, map)?;
-    ordinary_handle(reader, map)?;
-    middle(reader, map)?;
-    reader.object("reference_a98", map, ModelObjectRole::Any)?;
-    components(reader, map, &["ab0", "ab8"])?;
-    if has_sketch {
-        reader.scope("direct_handle_878", super::sketch_references::handle)?;
-    }
-    reader.scope("body_tail", tail)
+    Ok(has_sketch)
 }
 
 fn first_sketch(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<bool> {
@@ -61,14 +73,15 @@ fn ordinary_handle(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
     declared(reader, map, "list_888", &["suObList"])
 }
 
-fn middle(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+fn middle(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<i32> {
     reader.object("reference_a90", map, ModelObjectRole::Any)?;
     components(reader, map, &["aa0", "aa8"])?;
-    reader.i32("raw_ac8")?;
+    let kind = reader.i32("raw_ac8")?;
     declared(reader, map, "conic_ad0", &["moConicBendData_c"])?;
     reader.transform("transform_900")?;
     reader.transform("transform_988")?;
-    reader.i32s(&["raw_ad8", "raw_adc", "raw_a30", "raw_b64", "raw_a34"])
+    reader.i32s(&["raw_ad8", "raw_adc", "raw_a30", "raw_b64", "raw_a34"])?;
+    Ok(kind)
 }
 
 fn components(

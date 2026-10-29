@@ -4,7 +4,7 @@ use super::{ModelDecoder, ModelObjectRole, reference_planes};
 use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader, vectors::double_vector};
 
-const AXIS_DATA: &[&str] = &[
+pub(super) const AXIS_DATA: &[&str] = &[
     "moRefAxisData_c",
     "moSurfaceAxisData_c",
     "moFacePtAxisData_c",

@@ -10,10 +10,20 @@ pub(super) fn require_role(
     role: ModelObjectRole<'_>,
     label: &str,
 ) -> Result<()> {
-    if representation_role(record, role) || super::weld_symbols::assignable(record, role) {
+    if representation_role(record, role)
+        || sketch_bend_role(record, role)
+        || super::weld_symbols::assignable(record, role)
+    {
         return Ok(());
     }
     require_object_role(record, role, label, super::invalid)
+}
+
+fn sketch_bend_role(record: &ObjectRecord, role: ModelObjectRole<'_>) -> bool {
+    // #46 / C-291 proves this exact ancestry for UI-bend and fixed-face callers.
+    matches!(role, ModelObjectRole::Declared(expected) if expected.contains(&"moOneBend_c"))
+        && matches!(record, ObjectRecord::New { class, .. } | ObjectRecord::Reference { class, .. }
+            if class.name == "moSketchBend_c")
 }
 
 fn representation_role(record: &ObjectRecord, role: ModelObjectRole<'_>) -> bool {
