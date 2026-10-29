@@ -3,6 +3,15 @@ use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader, visibility};
 
 pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    read_node_prefix(reader, map).map(|_| ())
+}
+
+/// Return the decoded containing node without rereading or searching stored fields.
+/// Example: `features::read_node_prefix(reader, map)?.flags_28`.
+pub(super) fn read_node_prefix(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+) -> Result<node::ModelNodePrefix> {
     read_with_children(reader, map, true)
 }
 
@@ -10,21 +19,30 @@ pub(super) fn without_children(
     reader: &mut ModelDecoder<'_>,
     map: &mut ObjectReader,
 ) -> Result<()> {
-    read_with_children(reader, map, false)
+    read_with_children(reader, map, false).map(|_| ())
 }
 
 fn read_with_children(
     reader: &mut ModelDecoder<'_>,
     map: &mut ObjectReader,
     children: bool,
-) -> Result<()> {
+) -> Result<node::ModelNodePrefix> {
     reader.require_ordinary_part()?;
-    reader.scope("node", |reader| node::lightweight(reader, map))?;
+    let prefix = reader.scope("node", |reader| node::lightweight(reader, map))?;
     if reader.i32("has_merged_feature_list")? != 0 {
         reader.scope("merged_feature_list", |reader| {
             model_lists::nodes(reader, map)
         })?;
     }
+    feature_properties(reader, map, children)?;
+    Ok(prefix)
+}
+
+fn feature_properties(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+    children: bool,
+) -> Result<()> {
     reader.object(
         "visual_properties",
         map,

@@ -4,7 +4,7 @@ use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
 
 pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    super::configuration_manager::require_current(reader)?;
+    super::configuration_manager::require_manager_scope(reader)?;
     reader.scope("feature", |reader| features::without_children(reader, map))?;
     identity_fields(reader)?;
     relationship_fields(reader, map)?;

@@ -1,0 +1,53 @@
+{
+  "base_revision": "34174977a7c57de42ad1061d0b607ce148b5b2e6",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "behavior_version": "C286-ui-bends-v1",
+  "pr_gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 956,
+    "external_fixture_tests_ignored": 3,
+    "doctests_passed": 274,
+    "test_binaries": 168,
+    "log_sha256": "dc3c897d603d8a6ca71be7481bd56253d4574ee6595a3404e9822e18a7214cdc"
+  },
+  "focused_private_tests": 6,
+  "public_document_tests": 5,
+  "independent_fixture_tests": 3,
+  "independent_native_tests": 1,
+  "native_corpus": {
+    "cases": 906,
+    "complete": 826,
+    "incomplete": 80,
+    "newly_complete": [
+      318,
+      319,
+      329,
+      456,
+      457
+    ],
+    "two_fresh_processes_identical": true,
+    "previous_complete_preserved": true
+  },
+  "independent_native_source": {
+    "complete_configurations": 826,
+    "resolved_bytes": 56589343,
+    "all_four_stream_hashes_matched": true,
+    "all_exact_eof": true
+  },
+  "oracles": [
+    "actual independent serializer primitive observations",
+    "independent complete document scalar edit goldens",
+    "actual saved CMgr helper selection for all signed count shapes",
+    "native flat-pattern roots, UI records and raw frame hashes",
+    "all-prefix truncation and strict version boundary rejection",
+    "impossible line counts rejected before iteration"
+  ],
+  "exclusions": [
+    "native alternate-helper fixtures are not claimed",
+    "engineering meanings and geometric validity",
+    "later unsupported native classes",
+    "complete documented schema parity remains unfinished"
+  ]
+}

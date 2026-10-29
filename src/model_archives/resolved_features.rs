@@ -35,7 +35,8 @@ pub(super) fn parse(
     .with_inherited_fields(source.fields())
     .with_verified_part_root(source.parsed.verified_root())
     .with_kernel(source.context.kernel.clone())
-    .with_saved_helper_state(manager.helper_state);
+    .with_saved_helper_state(manager.helper_state)
+    .with_manager_dialect(manager.dialect);
     let mut map = ObjectReader::from_snapshot(&source.parsed.object_map);
     reader.i32("raw_prefix")?;
     let roots = reader.object_count("features.count")?;

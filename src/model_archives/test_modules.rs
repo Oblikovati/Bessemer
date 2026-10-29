@@ -168,6 +168,9 @@ mod face_blend_item_tests;
 #[path = "../../tests/resolved_features/feature_comments.rs"]
 mod feature_comment_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/feature_states.rs"]
+mod feature_state_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/filled_surfaces.rs"]
 mod filled_surface_tests;
 #[cfg(test)]
@@ -176,6 +179,9 @@ mod fillet_thread_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/flat_patterns.rs"]
 mod flat_pattern_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/flatten_bends.rs"]
+mod flatten_bend_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/fold_transforms.rs"]
 mod fold_transform_tests;
@@ -206,6 +212,9 @@ mod hole_wizard_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/imported_bodies.rs"]
 mod imported_body_tests;
+#[cfg(test)]
+#[path = "../../tests/resolved_features/jog_corners.rs"]
+mod jog_corner_tests;
 #[cfg(test)]
 #[path = "../../tests/model_archives/kernel_frames.rs"]
 mod kernel_frame_tests;
@@ -402,6 +411,9 @@ mod transform_rows;
 #[path = "../../tests/resolved_features/trim_edge_identifiers.rs"]
 mod trim_edge_identifier_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/ui_bends.rs"]
+mod ui_bend_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/views.rs"]
 mod view_tests;
 #[cfg(test)]
@@ -523,3 +535,7 @@ mod end_cap_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/weldment_finishing.rs"]
 mod weldment_finishing_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/legacy_manager_context.rs"]
+mod legacy_manager_context_tests;

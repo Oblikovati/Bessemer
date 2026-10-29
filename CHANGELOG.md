@@ -24,6 +24,16 @@
 
 ### Added
 
+- Added explicitly scoped version-18000 configuration-manager reading and reconstruction, including owned scenes and the historical display-map boundary. (#54)
+
+- Added complete jog and break-corner framing with stored reference presence, direct owned keepers, tagged arrays and both version gates. (#54)
+
+- Added flatten/process-bend framing with containing-node flag selection, preserved signed body presence and strict compressed raw bodies. (#54)
+
+- Added scoped feature-state records with both signed native words preserved for reading and editing. (#54)
+
+- Added complete UI-bend and line-data framing with both saved helper layouts, preserved signed line counts and direct ruled-line bodies. (#54)
+
 - Added complete sheet-metal corner and hem framing with directly owned data, independent arrays, chain records, relief bodies and both saved helper layouts. (#54)
 
 - Added complete 3D bend, fold and unfold framing with ordered object-to-integer maps, strict compressed raw bodies and fixed archive transforms. (#54)

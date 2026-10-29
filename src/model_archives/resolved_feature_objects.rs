@@ -20,6 +20,14 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moJog_c" => super::jog_corners::jog(reader, map),
+        "moBreakCornerFeat_c" => super::jog_corners::break_corner(reader, map),
+        "moFlattenBends_c" => super::flatten_bends::read(reader, map),
+        "moProcessBends_c" => super::flatten_bends::process(reader, map),
+        "featureStateData_c" => super::feature_states::read(reader),
+        "moUiBend_c" => super::ui_bends::read(reader, map),
+        "moRuledBendLineData_c" => super::ui_bends::ruled_line(reader),
+        "moBendSketchLineData_c" => super::ui_bends::sketch_line(reader),
         "moCornerFeat_c" => super::corner_hems::corner(reader, map),
         "moFaceGeom_c" | "moPlanarFaceGeom_c" => super::corner_hems::face_geometry(reader),
         "moHem_c" => super::corner_hems::hem(reader, map),

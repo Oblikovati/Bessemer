@@ -333,3 +333,17 @@ folds and unfolds, including raw compressed bodies and ordered maps.
 
 [Sheet-metal corners and hems](docs/features/corner-hems/README.md) covers directly
 owned hem data, independent arrays, chain identities and saved helper layouts.
+
+[UI bends](docs/features/ui-bends/README.md) covers both saved layouts, direct ruled
+lines, signed count preservation and versioned sketch-line records.
+
+[Flatten and process bends](docs/features/flatten-bends/README.md) covers containing
+node flags, signed presence and strict raw bodies.
+[Feature states](docs/features/feature-states/README.md) documents the scoped
+two-word state records and independent edits.
+
+[Jogs and break corners](docs/features/jog-corners/README.md) covers stored presence,
+direct owned keepers, tagged arrays and independent version gates.
+
+[Version-18000 configuration managers](docs/features/legacy-owned-managers/README.md)
+documents explicit dialect selection and independently decoded historical streams.

@@ -15,6 +15,7 @@ pub(super) struct ParsedConfigurationManager {
     pub fields: Vec<ModelField>,
     pub helper_state: SavedHelperState,
     pub version: ArchiveVersion,
+    pub dialect: super::manager_dialect::ManagerDialect,
 }
 
 pub(super) fn parse(
@@ -22,13 +23,15 @@ pub(super) fn parse(
     version: ArchiveVersion,
     limits: ModelFieldLimits,
 ) -> Result<ParsedConfigurationManager> {
+    let dialect = super::manager_dialect::ManagerDialect::from_version(version)?;
     let mut reader = ModelDecoder::new_in_context(
         bytes,
         version,
         limits,
         ModelArchiveContext::OrdinaryPartExternalXml,
-    )?;
-    require_current(&mut reader)?;
+    )?
+    .with_manager_dialect(dialect);
+    require_manager_scope(&mut reader)?;
     let mut map = ObjectReader::new();
     let root = reader.configuration_scene(|reader| {
         reader.object_record(
@@ -53,6 +56,7 @@ pub(super) fn parse(
         fields,
         helper_state,
         version,
+        dialect,
     })
 }
 
@@ -71,8 +75,27 @@ pub(super) fn require_current(reader: &mut ModelDecoder<'_>) -> Result<()> {
     )))
 }
 
+pub(super) fn require_manager_scope(reader: &mut ModelDecoder<'_>) -> Result<()> {
+    let Some(dialect) = reader.manager_dialect() else {
+        return require_current(reader);
+    };
+    if reader.archive_version().value() == dialect.version() {
+        return reader.require_ordinary_part();
+    }
+    reader.checked(Err(BessemerError::new(
+        "configuration context",
+        "Contents/CMgr",
+        FailureClass::Unsupported,
+        format!(
+            "configuration version {} with dialect {dialect:?}; expected exact version {}",
+            reader.archive_version().value(),
+            dialect.version()
+        ),
+    )))
+}
+
 pub(super) fn body(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    require_current(reader)?;
+    require_manager_scope(reader)?;
     // #54: CMgr's factory leaves its concept null, so child-list bytes are absent.
     reader.scope("feature", |reader| {
         super::features::without_children(reader, map)
