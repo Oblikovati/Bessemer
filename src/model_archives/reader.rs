@@ -3,6 +3,8 @@ use crate::archive_codec::{ArchiveCursor, MaterialRead, ObjectReader, ObjectReco
 use crate::header::ArchiveVersion;
 use crate::{BessemerError, FailureClass, Result};
 
+#[path = "embedded_parts.rs"]
+pub(super) mod embedded_parts;
 #[path = "inline_header.rs"]
 pub(super) mod inline_header;
 
@@ -39,6 +41,7 @@ pub(super) struct ModelDecoder<'a> {
     verified_part_root: Option<super::part_archive::VerifiedPartRoot>,
     saved_helper_state: Option<super::configuration_manager::SavedHelperState>,
     manager_dialect: Option<super::manager_dialect::ManagerDialect>,
+    inline_part_scope: bool,
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -125,6 +128,7 @@ impl<'a> ModelDecoder<'a> {
             verified_part_root: None,
             saved_helper_state: None,
             manager_dialect: None,
+            inline_part_scope: false,
         })
     }
 

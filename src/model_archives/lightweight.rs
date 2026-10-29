@@ -13,6 +13,12 @@ pub(super) struct ModelLightweightState {
     pub raw_1614: i32,
 }
 
+#[derive(Clone, Copy)]
+pub(super) enum UnitComponentContext {
+    External,
+    Inline,
+}
+
 pub(super) fn read(
     reader: &mut ModelDecoder<'_>,
     map: &mut ObjectReader,
@@ -31,7 +37,7 @@ fn body(
     root_identity: ArchiveMapIndex,
 ) -> Result<ModelLightweightState> {
     let imports = header.append(reader, map)?;
-    let (node, raw_1614) = after_header(reader, map)?;
+    let (node, raw_1614) = after_header(reader, map, UnitComponentContext::External)?;
     Ok(ModelLightweightState {
         root_identity,
         imports,
@@ -41,15 +47,16 @@ fn body(
 }
 
 /// Reuse the section body without importing an external header a second time.
-/// Example: `lightweight::after_header(reader, map)?` after a verified header.
+/// Example: `lightweight::after_header(reader, map, UnitComponentContext::External)?`.
 pub(super) fn after_header(
     reader: &mut ModelDecoder<'_>,
     map: &mut ObjectReader,
+    context: UnitComponentContext,
 ) -> Result<(node::ModelNodePrefix, i32)> {
     reader.i32("unknown_a8")?;
     reader.u32("unknown_ac")?;
     let node = reader.scope("node", |reader| node::lightweight(reader, map))?;
-    concept(reader, map)?;
+    concept(reader, map, context)?;
     let raw_1614 = continuation(reader, map)?;
     Ok((node, raw_1614))
 }
@@ -65,7 +72,11 @@ fn root_tag(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<Arc
     reader.checked(shape)
 }
 
-fn concept(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+fn concept(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+    context: UnitComponentContext,
+) -> Result<()> {
     merged_features(reader, map)?;
     reader.object(
         "visual_properties",
@@ -73,6 +84,9 @@ fn concept(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> 
         ModelObjectRole::Declared(&["moVisualProperties_c"]),
     )?;
     reader.object("units", map, ModelObjectRole::Declared(&["moUnitsTable_c"]))?;
+    if matches!(context, UnitComponentContext::Inline) {
+        return reader.object("unit_component", map, ModelObjectRole::Any);
+    }
     reader.required_object(
         "unit_component",
         map,

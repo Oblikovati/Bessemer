@@ -82,9 +82,16 @@ fn compare_raw_array_element(
 ) -> bool {
     let plane =
         field.path.contains(".byte_plane_40[") || field.path.contains(".payload.bytes_3b8[");
+    // Source groups these fixed fields in raw(16); retain byte-level checks and the exact span.
+    let fixed_sixteen = field.path.contains(".model_tail.unknown_77c[")
+        || field.path.contains(".model_tail.unknown_79c[")
+        || field
+            .path
+            .contains(".postviews.sketch_block_manager.block_guid[");
+    let bytes = plane || fixed_sixteen;
     let words = field.path.contains(".payload_words[");
     let transforms = field.path.contains(".payload.transforms_1148.words[");
-    if !plane && !words && !transforms {
+    if !bytes && !words && !transforms {
         return false;
     }
     let Some(source) = spans
@@ -94,15 +101,18 @@ fn compare_raw_array_element(
         return false;
     };
     assert!(matches!(
-        (&field.value, plane, transforms),
+        (&field.value, bytes, transforms),
         (ModelFieldValue::U8(_), true, false)
             | (ModelFieldValue::U64(_), false, false)
             | (ModelFieldValue::U32(_), false, true)
     ));
+    if fixed_sixteen {
+        assert_eq!(source.end - source.start, 16, "{}", field.path);
+    }
     assert_eq!(
         end,
         start
-            + if plane {
+            + if bytes {
                 1
             } else if transforms {
                 4
@@ -117,6 +127,44 @@ fn compare_raw_array_element(
         field.path
     );
     true
+}
+
+#[test]
+fn fixed_model_tail_raw_fields_compare_all_sixteen_independent_bytes() {
+    let span = PrimitiveSpan {
+        start: 0,
+        end: 16,
+        kind: "raw",
+        wire: (0..16).collect(),
+    };
+    for name in ["unknown_77c", "unknown_79c"] {
+        for index in 0..16 {
+            let field = ModelField {
+                path: format!("root.part.model_tail.{name}[{index}]").into(),
+                value: ModelFieldValue::U8(index as u8),
+            };
+            assert_eq!(
+                compare_field(&field, index, std::slice::from_ref(&span)),
+                index + 1
+            );
+        }
+    }
+}
+
+#[test]
+#[should_panic]
+fn fixed_model_tail_raw_projection_rejects_a_widened_source_span() {
+    let span = PrimitiveSpan {
+        start: 0,
+        end: 17,
+        kind: "raw",
+        wire: vec![0; 17],
+    };
+    let field = ModelField {
+        path: "root.part.model_tail.unknown_77c[0]".into(),
+        value: ModelFieldValue::U8(0),
+    };
+    compare_field(&field, 0, &[span]);
 }
 
 #[test]

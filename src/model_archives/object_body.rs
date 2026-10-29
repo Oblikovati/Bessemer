@@ -107,6 +107,8 @@ fn read_existing(
     }
     match class.name.as_str() {
         "moHeader_c" => super::reader::inline_header::read(reader, map),
+        "moFormTool_c" => super::reader::embedded_parts::tool(reader, map),
+        "moPart_c" => super::reader::embedded_parts::read(reader, map),
         "moNodeName_c" => reader.text("name"),
         "moCStringHandle_c" => reader.text("value"),
         "moExtObject_c" => super::external_references::read(reader, map),

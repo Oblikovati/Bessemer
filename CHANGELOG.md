@@ -28,6 +28,8 @@
 
 ### Added
 
+- Added bounded inline part bodies for forming-tool pointers with shared-map headers and caller-context restoration. (#54)
+
 - Added shared-map inline model headers with scoped body-version overrides and preserved tagged references. (#54)
 
 - Added exact version-11000 configuration-manager interoperability with absent-field gates, older scene input and preserved unsigned suffix words. (#54)
