@@ -31,17 +31,27 @@ fn body(
     root_identity: ArchiveMapIndex,
 ) -> Result<ModelLightweightState> {
     let imports = header.append(reader, map)?;
-    reader.i32("unknown_a8")?;
-    reader.u32("unknown_ac")?;
-    let node = reader.scope("node", |reader| node::lightweight(reader, map))?;
-    concept(reader, map)?;
-    let raw_1614 = continuation(reader, map)?;
+    let (node, raw_1614) = after_header(reader, map)?;
     Ok(ModelLightweightState {
         root_identity,
         imports,
         node,
         raw_1614,
     })
+}
+
+/// Reuse the section body without importing an external header a second time.
+/// Example: `lightweight::after_header(reader, map)?` after a verified header.
+pub(super) fn after_header(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+) -> Result<(node::ModelNodePrefix, i32)> {
+    reader.i32("unknown_a8")?;
+    reader.u32("unknown_ac")?;
+    let node = reader.scope("node", |reader| node::lightweight(reader, map))?;
+    concept(reader, map)?;
+    let raw_1614 = continuation(reader, map)?;
+    Ok((node, raw_1614))
 }
 
 fn root_tag(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<ArchiveMapIndex> {

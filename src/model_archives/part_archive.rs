@@ -56,7 +56,9 @@ pub(super) fn read_with_kernel(
     let mut map = ObjectReader::new();
     let lightweight = lightweight::read(&mut reader, &mut map, plan)?;
     let size = reader.section_size("resolved_size")?;
-    reader.bounded(size, |reader| resolved(reader, &mut map, &lightweight))?;
+    reader.bounded(size, |reader| {
+        resolved(reader, &mut map, &lightweight.node, lightweight.raw_1614)
+    })?;
     Ok(ParsedPartArchive {
         fields: reader.finish()?,
         wire_bytes: bytes.len(),
@@ -85,12 +87,15 @@ fn part_decoder(
     .map(|reader| reader.with_kernel(kernel))
 }
 
-fn resolved(
+/// Reuse the resolved body with its actual lightweight selectors and shared map.
+/// Example: `part_archive::resolved(reader, map, &node, raw_1614)?`.
+pub(super) fn resolved(
     reader: &mut ModelDecoder<'_>,
     map: &mut ObjectReader,
-    state: &ModelLightweightState,
+    node: &super::node::ModelNodePrefix,
+    raw_1614: i32,
 ) -> Result<()> {
-    let flags = resolved_node_flags(state)?;
+    let flags = resolved_node_flags(node)?;
     resolved_start::read(reader, map)?;
     reader.scope("detail_definitions", |reader| {
         detail_definitions::read(reader, map)
@@ -105,15 +110,15 @@ fn resolved(
     })?;
     reader.scope("shared_model_tail", |reader| shared_tail::read(reader, map))?;
     reader.scope("part_resolved_tail", |reader| {
-        part_tail::read(reader, map, state.raw_1614)
+        part_tail::read(reader, map, raw_1614)
     })
 }
 
-fn resolved_node_flags(state: &ModelLightweightState) -> Result<u32> {
-    state.node.unknown_2c.ok_or_else(|| {
+fn resolved_node_flags(node: &super::node::ModelNodePrefix) -> Result<u32> {
+    node.unknown_2c.ok_or_else(|| {
         super::invalid(format!(
             "node flags {:?}; expected stored u32 flags for the modern resolved stage",
-            state.node.unknown_2c
+            node.unknown_2c
         ))
     })
 }
