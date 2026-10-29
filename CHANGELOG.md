@@ -28,6 +28,8 @@
 
 ### Added
 
+- Added complete exact-mode single-span spline records, including secondary interpolation with zero control points. (#54)
+
 - Added lossless ordinary library-feature configuration, cross-reference and atom-ID archive records. (#54)
 
 - Added complete ordinary concentric mates and plane sections with bounded collections, direct geometry and guarded serialized kernel bodies. (#54)

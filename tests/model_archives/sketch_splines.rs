@@ -35,11 +35,11 @@ fn read_mode(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader, mode: u8) ->
     }
 }
 
-fn decode(mode: u8, version: u32, bytes: &[u8]) -> Result<Vec<ModelField>> {
+pub(super) fn decode(mode: u8, version: u32, bytes: &[u8]) -> Result<Vec<ModelField>> {
     decode_context(mode, version, bytes, &super::kernel_frame_tests::context())
 }
 
-fn decode_context(
+pub(super) fn decode_context(
     mode: u8,
     version: u32,
     bytes: &[u8],
@@ -136,7 +136,9 @@ fn spline_curve_header_values_preserve_periodicity_and_reject_invalid_shapes() {
 
 #[test]
 fn spline_subtype_masks_admit_only_the_documented_bits() {
-    let supported = [0, 1, 4, 5, 8, 9, 12, 13, 16, 17, 20, 21, 24, 25, 28, 29];
+    let supported = [
+        0, 1, 4, 5, 8, 9, 12, 13, 16, 17, 20, 21, 24, 25, 28, 29, 0x80,
+    ];
     for mask in 0..=u16::MAX {
         assert_eq!(
             sketch_splines::require_subtype(mask).is_ok(),

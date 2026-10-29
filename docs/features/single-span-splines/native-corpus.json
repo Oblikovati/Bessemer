@@ -1,0 +1,21 @@
+{
+  "cases": 906,
+  "accepted": 888,
+  "rejected": 18,
+  "previous_accepted": 888,
+  "new_indices": [],
+  "regressions": [],
+  "aggregate_exit_code": 101,
+  "repeat_status_and_cause_equal": true,
+  "changed_stops": {
+    "340": {
+      "before": "model archive spline subtype: Unsupported: spline subtype mask 0x0080; expected only bits 0x001d",
+      "after": "model archive model stream: Unsupported: runtime class \"moSculpt_c\" schema 1; expected an implemented complete model object body"
+    }
+  },
+  "log_sha256": {
+    "spline-equation-frontier.log": "ca610db69179ca512f86c0128408cf7fe20a0902414ca5d3cd0e3281ea96a8c9",
+    "single-span-frontier.log": "1085c44bf2faa52cc1b7c0d2692ea2b2af4e9edfe763fba08bf0a289832dfa04",
+    "single-span-frontier-repeat.log": "276b8d78c6f816ddbeac1b6e4e6db33de4ca1d993954657fbc3007c7bc8f3a1a"
+  }
+}

@@ -55,3 +55,6 @@ rerun before push. Humanizer was unavailable; prose remains for maintainer revie
 Behavior version 2 corrected the equation transform to thirty fixed u32 words.
 The [recorded migration](../spline-equation-transform/README.md) preserves the
 former fixture hashes and verifies every unaffected case unchanged (Bug #95).
+
+The exact-mask 0x80 prototype and its true secondary callback are covered in
+[the single-span evidence](../single-span-splines/README.md) (#54).

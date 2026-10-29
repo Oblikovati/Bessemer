@@ -615,3 +615,7 @@ mod mate_plane_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/library_features.rs"]
 mod library_feature_tests;
+
+#[cfg(test)]
+#[path = "../../tests/model_archives/single_span_splines.rs"]
+mod single_span_spline_tests;

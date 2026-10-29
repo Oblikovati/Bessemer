@@ -4,6 +4,12 @@ use super::{
 use crate::archive_codec::{MaterialRead, ObjectReader, ObjectRecord, vectors::double_vector};
 use crate::{BessemerError, FailureClass, Result};
 
+#[derive(Clone, Copy)]
+pub(super) enum SplinePrototype {
+    Standard,
+    SingleSpan,
+}
+
 const LISTS: &[&str] = &["sgSplineList_c", "modifSplineList_c", "cptsSplineList_c"];
 
 pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
@@ -11,26 +17,34 @@ pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
     for index in 0..reader.signed_count("spline_count", 2)? {
         reader.scope(&format!("splines[{index}]"), |reader| {
             let mask = reader.u16("stored_category_mask")?;
-            reader.checked(require_subtype(mask))?;
-            spline(reader, map)
+            let prototype = reader.checked(require_subtype(mask))?;
+            spline(reader, map, prototype)
         })?;
     }
     Ok(())
 }
 
-pub(super) fn require_subtype(mask: u16) -> Result<()> {
+/// Select only native-proven prototypes; e.g. `require_subtype(0x80)?`.
+pub(super) fn require_subtype(mask: u16) -> Result<SplinePrototype> {
+    if mask == 0x80 {
+        return Ok(SplinePrototype::SingleSpan);
+    }
     if mask & !0x1d == 0 {
-        return Ok(());
+        return Ok(SplinePrototype::Standard);
     }
     Err(BessemerError::new(
         "model archive",
         "spline subtype",
         FailureClass::Unsupported,
-        format!("spline subtype mask {mask:#06x}; expected only bits 0x001d"),
+        format!("spline subtype mask {mask:#06x}; expected exact 0x0080 or only bits 0x001d"),
     ))
 }
 
-fn spline(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+fn spline(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+    prototype: SplinePrototype,
+) -> Result<()> {
     let entity = sketch_geometry::segment(reader, map)?;
     let flags = reader.u32("flags_32c")?;
     reader.u16("unknown_2fc")?;
@@ -39,7 +53,7 @@ fn spline(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     let controls = parameter_arrays(reader, flags)?;
     tangents(reader)?;
     reader.scope("interpolation", spline_arrays::interpolation)?;
-    interpolation_suffix(reader, controls)?;
+    interpolation_suffix(reader, controls, prototype)?;
     equation_fields(reader, flags)?;
     reader.i32("reserved_word")?;
     control_suffix(reader, flags, control_list)?;
@@ -103,11 +117,16 @@ fn tangents(reader: &mut ModelDecoder<'_>) -> Result<()> {
     Ok(())
 }
 
-fn interpolation_suffix(reader: &mut ModelDecoder<'_>, controls: usize) -> Result<()> {
+fn interpolation_suffix(
+    reader: &mut ModelDecoder<'_>,
+    controls: usize,
+    prototype: SplinePrototype,
+) -> Result<()> {
     let secondary = reader.i32("unknown_314")?;
     reader.u16("unknown_318")?;
     reader.u16("unknown_31c")?;
-    if secondary != 0 && controls != 0 {
+    // #54 / C-402 proves the single-span prototype has a true +1F0 callback.
+    if secondary != 0 && (controls != 0 || matches!(prototype, SplinePrototype::SingleSpan)) {
         reader.scope("secondary_interpolation", spline_arrays::secondary)?;
     }
     reader.i32("unknown_174")?;
