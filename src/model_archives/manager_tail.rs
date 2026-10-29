@@ -59,8 +59,7 @@ fn property_values(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
 }
 
 fn owned_maps(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    io::empty_signed(reader, "owned_6d8.objects_count", 6)?;
-    io::empty_signed(reader, "owned_6d8.associations_count", 8)?;
+    super::configuration_decals::owned_map(reader, map)?;
     super::configuration_scenes::owned_map(reader, map, "owned_6e0")
 }
 

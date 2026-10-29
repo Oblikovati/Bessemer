@@ -442,3 +442,7 @@ bodies without adding object tags or identities. See
 PhotoWorks material managers preserve complete property records, direct lists,
 shared unit references and original stored paths. See
 [the material evidence](docs/features/photoworks-materials/README.md).
+
+Configuration decals preserve complete parameter records, nested association
+arrays and scoped reference graphs. See
+[the decal evidence](docs/features/configuration-decals/README.md).

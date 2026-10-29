@@ -38,6 +38,7 @@ mod composite_curves;
 mod configuration;
 mod configuration_atoms;
 mod configuration_base;
+mod configuration_decals;
 mod configuration_graph;
 mod configuration_io;
 mod configuration_manager;

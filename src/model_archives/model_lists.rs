@@ -43,20 +43,27 @@ pub(super) fn scoped_pointer(
     reader: &mut ModelDecoder<'_>,
     map: &mut ObjectReader,
     label: &str,
+    classes: &'static [&'static str],
+    operation: &'static str,
+) -> Result<()> {
+    reader.scoped_fresh_objects(classes, operation, |reader| {
+        reader.object(label, map, ModelObjectRole::Any)
+    })
+}
+
+pub(super) fn require_scoped_class(
+    record: &crate::archive_codec::ObjectRecord,
+    label: &str,
     classes: &[&str],
     operation: &'static str,
 ) -> Result<()> {
-    let record = reader.object_tag(label, map, ModelObjectRole::Any)?;
     let crate::archive_codec::ObjectRecord::New { class, .. } = record else {
         return Ok(());
     };
-    if !classes.contains(&class.name.as_str()) {
-        let error = scoped_class_error(operation, label, &class.name, classes);
-        return reader.checked(Err(error));
+    if classes.contains(&class.name.as_str()) {
+        return Ok(());
     }
-    reader.scope(label, |reader| {
-        super::object_body::read(reader, map, &class)
-    })
+    Err(scoped_class_error(operation, label, &class.name, classes))
 }
 
 fn scoped_class_error(

@@ -659,3 +659,10 @@ mod configuration_visual_map_tests;
 
 #[path = "../../tests/resolved_features/photoworks_materials.rs"]
 mod photoworks_material_tests;
+
+#[path = "../../tests/resolved_features/configuration_decal_managers.rs"]
+mod configuration_decal_manager_tests;
+#[path = "../../tests/resolved_features/configuration_decal_maps.rs"]
+mod configuration_decal_map_tests;
+#[path = "../../tests/resolved_features/configuration_decals.rs"]
+mod configuration_decal_tests;

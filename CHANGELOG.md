@@ -28,6 +28,8 @@
 
 ### Added
 
+- Added complete configuration decal parameters and nested association arrays with recursive fresh-class scopes and shared reference preservation. (#54)
+
 - Added complete direct PhotoWorks material managers and typed property records with shared unit references and original path/default preservation. (#54)
 
 - Added ordered direct configuration visual maps with complete versioned appearance bodies, duplicate keys and signed count preservation. (#54)

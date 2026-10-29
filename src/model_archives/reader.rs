@@ -29,6 +29,7 @@ pub(super) struct ModelDecoder<'a> {
     loaded_objects: usize,
     context: ModelArchiveContext,
     scene_context: SceneArchiveContext,
+    fresh_class_scope: Option<(&'static [&'static str], &'static str)>,
     kernel: Option<super::kernel_frames::CompressedKernelContext>,
     kernel_expanded: usize,
     inherited_fields: Option<&'a [ModelField]>,
@@ -114,6 +115,7 @@ impl<'a> ModelDecoder<'a> {
             loaded_objects: 0,
             context,
             scene_context: SceneArchiveContext::Unselected,
+            fresh_class_scope: None,
             kernel: None,
             kernel_expanded: 0,
             inherited_fields: None,
@@ -203,6 +205,29 @@ impl<'a> ModelDecoder<'a> {
         self.scene_context = SceneArchiveContext::OwnedConfiguration;
         let result = read(self);
         self.scene_context = previous;
+        self.checked(result)
+    }
+
+    /// Apply a local reader table to every fresh object in the recursive body.
+    /// Example: `reader.scoped_fresh_objects(CLASSES, "decal", |reader| read(reader))?`.
+    pub(super) fn scoped_fresh_objects<T>(
+        &mut self,
+        classes: &'static [&'static str],
+        operation: &'static str,
+        read: impl FnOnce(&mut Self) -> Result<T>,
+    ) -> Result<T> {
+        self.active()?;
+        let previous = self.fresh_class_scope.replace((classes, operation));
+        let result = read(self);
+        self.fresh_class_scope = previous;
+        self.checked(result)
+    }
+
+    fn check_scoped_object(&mut self, record: &ObjectRecord, label: &str) -> Result<()> {
+        let Some((classes, operation)) = self.fresh_class_scope else {
+            return Ok(());
+        };
+        let result = super::model_lists::require_scoped_class(record, label, classes, operation);
         self.checked(result)
     }
 
@@ -347,6 +372,7 @@ impl<'a> ModelDecoder<'a> {
         self.charge_new_object(&framed.record)?;
         let record = framed.record.clone();
         self.field(label, ModelFieldValue::ObjectTag(Box::new(framed)))?;
+        self.check_scoped_object(&record, label)?;
         Ok(record)
     }
 
@@ -395,3 +421,7 @@ fn require_limit(actual: usize, maximum: usize, label: &str) -> Result<()> {
     }
     Ok(())
 }
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/scoped_fresh_classes.rs"]
+mod scoped_fresh_class_tests;
