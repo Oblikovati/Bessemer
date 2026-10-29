@@ -38,6 +38,20 @@ and public forming-tool tests passed, along with workspace Clippy. The complete
 independent edit and primitive-oracle fixtures retained their original hashes.
 This extraction adds no assembly context or public assembly API by itself.
 
+The resolved stages through layers now also share one implementation, used by
+the existing part reader. Six complete-part tests, nine inline-part tests,
+workspace Clippy and all 906 native part configurations passed after this
+structural extraction; every native outcome matched the preceding run.
+`resolved-stage-verification.json` records the source and fixture hashes.
+
+The owned blank assembly supplies an independent oracle for the next complete
+reader: 23,359 bytes, 87 map slots and 5,056 primitive reads through physical EOF.
+A separate name-edit golden adds eight bytes to the lightweight section, retains
+the original map and passes the complete reference reader again. Replay with
+`python docs/features/assembly-configurations/freeze_owned_assembly.py`; fixture
+replacement requires `--write`. These reference results do not yet prove a
+Bessemer assembly read or edit.
+
 ## MFC string-map prerequisite
 
 The map codec preserves 16-, 32- and 64-bit count framing and all four text

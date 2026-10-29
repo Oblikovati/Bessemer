@@ -18,6 +18,7 @@ mod mfc_string_maps;
 mod pattern_extensions;
 mod pattern_transform_words;
 mod photoworks_materials;
+mod resolved_model;
 mod sculpt_features;
 mod smart_components;
 mod smart_items;
