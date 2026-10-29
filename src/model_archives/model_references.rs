@@ -23,6 +23,8 @@ pub(super) const WRAPPER_CLASSES: &[&str] = &[
     "moPlaneRef_w",
     "moPointRef_w",
     "moEndPointRef_w",
+    // #54 / C-399 proves endpoint, point and wrapper ancestry by RTTI.
+    "moCurvePointRef_w",
     "moLoftSynchRef_c",
     "moLineRef_w",
     "moLoopRef_w",

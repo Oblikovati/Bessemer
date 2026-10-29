@@ -8,6 +8,9 @@ pub(super) fn read(
     name: &str,
 ) -> Option<Result<()>> {
     let result = match name {
+        "moDecalProperties_c" => super::configuration_decals::properties(reader, map),
+        "moPWMaterialProperties_c" => super::photoworks_materials::properties(reader, map),
+        "mo3dView_c" => super::three_dimensional_views::read(reader, map),
         "moSMAndFPFeatIdPair" => super::manager_scalar_records::feature_ids(reader),
         "moCustomDefinedMaterialProperty_c" => super::manager_scalar_records::material(reader),
         "moToolboxPartSpecArray_c" => super::configuration_toolbox::array(reader, map),

@@ -23,17 +23,37 @@ pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
     }
     property_values(reader, map)?;
     reader.object("list_6c8", map, ModelObjectRole::Declared(&["suObList"]))?;
+    owned_suffix(reader, map)
+}
+
+/// Read only the owned stage and the suffix actually stored by its selected dialect.
+/// Example: `manager_tail::owned_suffix(reader, map)?` after the +6C8 list.
+pub(super) fn owned_suffix(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    super::configuration_manager::require_manager_scope(reader)?;
     owned_maps(reader, map)?;
+    if reader.manager_dialect() == Some(super::manager_dialect::ManagerDialect::Owned11000) {
+        reader.scoped_fresh_objects(&[], "version-11000 conversion IDs", |reader| {
+            conversion_ids(reader, map)
+        })?;
+    } else {
+        conversion_ids(reader, map)?;
+    }
+    io::strings(reader, "strings_728")?;
+    reader.i32("raw_750")?;
+    reader.u32("raw_754")?;
+    if reader.manager_dialect() == Some(super::manager_dialect::ManagerDialect::Owned11000) {
+        return Ok(());
+    }
+    final_maps(reader)
+}
+
+fn conversion_ids(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     io::pointers(
         reader,
         map,
         "conversion_ids_700",
         ModelObjectRole::Declared(&["moConvertFeatIds_c"]),
-    )?;
-    io::strings(reader, "strings_728")?;
-    reader.i32("raw_750")?;
-    reader.u32("raw_754")?;
-    final_maps(reader)
+    )
 }
 
 fn string_values(reader: &mut ModelDecoder<'_>) -> Result<()> {
@@ -59,8 +79,13 @@ fn property_values(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
 }
 
 fn owned_maps(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    io::empty_signed(reader, "owned_6d8.objects_count", 6)?;
-    io::empty_signed(reader, "owned_6d8.associations_count", 8)?;
+    if reader.manager_dialect() == Some(super::manager_dialect::ManagerDialect::Owned11000) {
+        reader.scoped_fresh_objects(&[], "version-11000 owned decals", |reader| {
+            super::configuration_decals::owned_map(reader, map)
+        })?;
+    } else {
+        super::configuration_decals::owned_map(reader, map)?;
+    }
     super::configuration_scenes::owned_map(reader, map, "owned_6e0")
 }
 

@@ -65,6 +65,10 @@ fn sketch_reference_coverage_equals_the_existing_finite_wrapper_family() {
         4,
         "root.object.reference",
     ));
+    actual.insert(super::deform_wrapper_tests::fresh_wrapper_class(
+        4,
+        "root.object.reference",
+    ));
     for target in 0..2 {
         actual.insert(super::derived_reference_tests::fresh_wrapper_class(
             target,
@@ -77,7 +81,7 @@ fn sketch_reference_coverage_equals_the_existing_finite_wrapper_family() {
         .map(|name| name.to_string())
         .collect();
     assert_eq!(actual, expected);
-    assert_eq!(actual.len(), 23);
+    assert_eq!(actual.len(), 24);
 }
 
 fn assert_invalid_array_role(version: u32, bytes: &[u8], path: &str) {

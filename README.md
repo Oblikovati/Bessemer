@@ -82,6 +82,8 @@ See [version-history evidence](docs/features/version-history/README.md) for arch
 coverage and the installed-corpus verification.
 See [header archive evidence](docs/features/header-archives/README.md) for field
 coverage, version boundaries, graph preservation, and remaining limits.
+The [forming-tool evidence](docs/features/forming-tools/README.md) records the
+shared-map inline-header reader and the remaining embedded-part work.
 The [biography evidence](docs/features/biography-archives/README.md) covers stored
 environment observations and repeated-string reading and writing.
 See [Parasolid transmit evidence](docs/features/parasolid-transmit/README.md) for
@@ -426,3 +428,27 @@ records preserve their complete bodies; see
 Smart-component features retain their complete folders, items, direct sensor maps
 and shared owner identities; see
 [the smart-component evidence](docs/features/smart-components/README.md).
+
+Modern configuration-manager 3D views retain complete base records and direct
+annotation groups; see
+[the 3D-view evidence](docs/features/three-dimensional-views/README.md).
+
+Deform features retain both matching passes, independent stored geometry versions
+and complete curve-point references; see
+[the Deform evidence](docs/features/deformations/README.md).
+
+Configuration visual maps preserve ordered keys and complete direct appearance
+bodies without adding object tags or identities. See
+[the visual-map evidence](docs/features/configuration-visual-maps/README.md).
+
+PhotoWorks material managers preserve complete property records, direct lists,
+shared unit references and original stored paths. See
+[the material evidence](docs/features/photoworks-materials/README.md).
+
+Configuration decals preserve complete parameter records, nested association
+arrays and scoped reference graphs. See
+[the decal evidence](docs/features/configuration-decals/README.md).
+
+Version-11000 configuration managers retain their exact owned-object, scene and
+suffix layouts alongside the reviewed 18000 and 19000 dialects. See
+[the intermediate-manager evidence](docs/features/intermediate-managers/README.md).

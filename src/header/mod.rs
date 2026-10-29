@@ -10,7 +10,13 @@ mod types;
 mod validate;
 mod values;
 
-pub(crate) use fields::{FieldRule, WireKind};
+pub(crate) use context::VERSION_MARKER as HEADER_VERSION_MARKER;
+pub(crate) use fields::{FieldRole, FieldRule, Phase, WireKind};
+
+/// Reuse the header gates for an inline shared-map body, e.g. `inline_header_rules()`.
+pub(crate) fn inline_header_rules() -> &'static [FieldRule] {
+    HeaderRecord::RULES
+}
 
 pub(crate) fn external_field_rules() -> &'static [FieldRule] {
     ExternalFileReference::RULES

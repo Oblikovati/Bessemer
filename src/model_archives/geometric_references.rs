@@ -5,8 +5,12 @@ use crate::archive_codec::{MaterialRead, ObjectReader, vectors::double_vector};
 pub(super) const LINE_REFERENCE_CLASSES: &[&str] = &["moLineRef_w", "moTempAxisRef_w"];
 
 // #46 / C-192 and C-232: both derived serializers retain the complete point-reference base.
-pub(super) const POINT_REFERENCE_CLASSES: &[&str] =
-    &["moPointRef_w", "moEndPointRef_w", "moLoftSynchRef_c"];
+pub(super) const POINT_REFERENCE_CLASSES: &[&str] = &[
+    "moPointRef_w",
+    "moEndPointRef_w",
+    "moLoftSynchRef_c",
+    "moCurvePointRef_w",
+];
 
 pub(super) const SURFACE_CLASSES: &[&str] = &[
     "moSurfaceRef_w",

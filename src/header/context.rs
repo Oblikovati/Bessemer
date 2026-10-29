@@ -4,7 +4,7 @@ use super::fields::{FieldRule, Phase};
 use super::{ArchiveVersion, HeaderNode, HeaderObject, HeaderObjectId, HeaderReference, invalid};
 use crate::Result;
 
-const VERSION_MARKER: &str =
+pub(crate) const VERSION_MARKER: &str =
     "SOLIDWORKS_INTERNAL_D95A9473_4FF5_42DF_A100_ECC502EF9F7D_HEADER_VERSION_";
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]

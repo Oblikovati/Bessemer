@@ -40,8 +40,7 @@ fn relationship_fields(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) ->
     raw_fields::groups(reader, &[(Signed, "6f0"), (Octet, "680 960")])?;
     io::list(reader, map, "list_520")?;
     raw_fields::groups(reader, &[(Unsigned, "9a0"), (Octet, "964")])?;
-    let presence = reader.u8("has_data_608")?;
-    io::empty(reader, "optional_data_608", usize::from(presence))?;
+    super::photoworks_materials::optional(reader, map)?;
     reader.object(
         "toolbox_658",
         map,
@@ -83,7 +82,11 @@ fn initial_maps(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result
         "array_3c8",
         ModelObjectRole::Declared(&["moRefWrapper_c"]),
     )?;
-    raw_fields::fields(reader, Signed, "748 bcc 848")
+    raw_fields::fields(reader, Signed, "748 bcc")?;
+    if reader.version() > 0x2f72 {
+        reader.i32("raw_848")?;
+    }
+    Ok(())
 }
 
 fn common_maps(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
@@ -112,7 +115,7 @@ fn late_maps(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()
     io::integer_pairs(reader, "map_a48", true)?;
     io::empty_string_int_map(reader, "strings_5f8")?;
     reader.i32("raw_b2c")?;
-    io::empty_signed(reader, "visual_count_b50", 4)?;
+    super::configuration_visual_maps::read(reader)?;
     super::custom_properties::list(reader, "properties_b60")?;
     reader.object(
         "abbreviated_views_b78",
@@ -140,6 +143,9 @@ fn late_maps(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()
 fn final_base_fields(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     reader.i32("raw_bc8")?;
     io::integer_pairs(reader, "map_b90", false)?;
+    if reader.manager_dialect() == Some(super::manager_dialect::ManagerDialect::Owned11000) {
+        return Ok(());
+    }
     raw_fields::fields(reader, Signed, "4c0 4c4 a78")?;
     reader.object(
         "envelope_bd0",

@@ -1,0 +1,87 @@
+//! Complete owned decal maps through public load/save APIs (#54).
+#[path = "common/configuration_manager_contract.rs"]
+mod contract;
+const MANAGERS: &[&[u8]] = &[
+    include_bytes!("fixtures/configuration-decals/owned-0-0.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-0-1.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-0-2.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-0-3.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-0-4.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-0-5.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-1-0.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-1-1.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-1-2.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-1-3.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-1-4.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-1-5.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-2-0.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-2-1.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-2-2.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-2-3.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-2-4.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-2-5.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-3-0.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-3-1.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-3-2.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-3-3.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-3-4.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-3-5.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-4-0.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-4-1.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-4-2.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-4-3.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-4-4.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-4-5.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-5-0.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-5-1.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-5-2.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-5-3.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-5-4.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-5-5.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-6-0.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-6-1.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-6-2.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-6-3.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-6-4.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-6-5.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-7-0.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-7-1.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-7-2.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-7-3.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-7-4.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-7-5.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-8-0.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-8-1.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-8-2.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-8-3.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-8-4.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-8-5.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-9-0.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-9-1.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-9-2.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-9-3.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-9-4.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-9-5.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-0-2-edited.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-1-2-edited.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-2-2-edited.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-3-2-edited.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-4-2-edited.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-5-2-edited.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-6-2-edited.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-7-2-edited.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-8-2-edited.bin"),
+    include_bytes!("fixtures/configuration-decals/owned-9-2-edited.bin"),
+];
+#[test]
+fn configuration_decal_documents_load_save_and_reopen_without_changing_maps() {
+    contract::check_documents(MANAGERS);
+}
+#[test]
+fn configuration_decal_source_mutation_does_not_change_the_owned_result() {
+    contract::check_isolation(MANAGERS);
+}
+#[test]
+fn incomplete_configuration_decal_maps_fail_without_changing_the_document() {
+    contract::check_incomplete(MANAGERS);
+}

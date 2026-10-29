@@ -640,3 +640,35 @@ mod annotation_extra_tests;
 
 #[path = "../../tests/resolved_features/smart_components.rs"]
 mod smart_component_tests;
+
+#[path = "../../tests/resolved_features/three_dimensional_views.rs"]
+mod three_dimensional_view_tests;
+
+#[path = "../../tests/resolved_features/deform_geometry.rs"]
+mod deform_geometry_tests;
+#[path = "../../tests/resolved_features/deform_wrappers.rs"]
+mod deform_wrapper_tests;
+#[path = "../../tests/resolved_features/deformations.rs"]
+mod deformation_tests;
+
+#[path = "../../tests/resolved_features/deform_matching.rs"]
+mod deform_match_tests;
+
+#[path = "../../tests/resolved_features/configuration_visual_maps.rs"]
+mod configuration_visual_map_tests;
+
+#[path = "../../tests/resolved_features/photoworks_materials.rs"]
+mod photoworks_material_tests;
+
+#[path = "../../tests/resolved_features/configuration_decal_managers.rs"]
+mod configuration_decal_manager_tests;
+
+#[path = "../../tests/resolved_features/configuration_decal_maps.rs"]
+mod configuration_decal_map_tests;
+#[path = "../../tests/resolved_features/configuration_decals.rs"]
+mod configuration_decal_tests;
+#[path = "../../tests/resolved_features/intermediate_managers.rs"]
+mod intermediate_manager_tests;
+
+#[path = "../../tests/resolved_features/intermediate_tail.rs"]
+mod intermediate_tail_tests;

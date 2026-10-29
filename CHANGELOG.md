@@ -28,6 +28,20 @@
 
 ### Added
 
+- Added shared-map inline model headers with scoped body-version overrides and preserved tagged references. (#54)
+
+- Added exact version-11000 configuration-manager interoperability with absent-field gates, older scene input and preserved unsigned suffix words. (#54)
+
+- Added complete configuration decal parameters and nested association arrays with recursive fresh-class scopes and shared reference preservation. (#54)
+
+- Added complete direct PhotoWorks material managers and typed property records with shared unit references and original path/default preservation. (#54)
+
+- Added ordered direct configuration visual maps with complete versioned appearance bodies, duplicate keys and signed count preservation. (#54)
+
+- Added complete Deform feature interoperability with independent stored versions, two-pass matching, fixed geometry operators, extension records and reviewed curve-point roles. (#54)
+
+- Added modern configuration-manager 3D views with complete base transforms, direct annotation records, ordered duplicate keys and high/low count framing. (#54)
+
 - Added complete smart-component feature, data, folder, item and sensor-map interoperability with direct containers and preserved owner identities. (#54)
 
 - Added complete text borders, symbols, pattern-count dimensions and handles, and direct thread-instance arrays with their raw item records. (#54)

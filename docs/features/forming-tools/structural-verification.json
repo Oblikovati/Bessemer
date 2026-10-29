@@ -1,0 +1,21 @@
+{
+  "success": true,
+  "behavior_change": false,
+  "existing_part_tests": 6,
+  "existing_lightweight_tests": 12,
+  "source_regression_tests": 5,
+  "commands": [
+    "cargo test --lib model_archives::part_archive -- --nocapture",
+    "cargo test --lib model_archives::lightweight -- --nocapture",
+    "cargo clippy --workspace --all-targets -- -D warnings"
+  ],
+  "fixtures_unchanged": {
+    "tests/fixtures/blank-part.SLDPRT": "b52e080ba2cc64d1d07ed28306f27281b07521aef550bc0c7fea8cd54be2b276",
+    "tests/fixtures/model-archives/native-part-name-edited.bin": "a455cfd685d2d15fc854d02912ab14f4c54b0d59eb648e7bf2f86c456915c118",
+    "tests/fixtures/model-archives/native-lightweight.txt": "5957473f9e10f194276598b3818191003323041241725d369f6d51576db9b510"
+  },
+  "source_hashes": {
+    "src/model_archives/lightweight.rs": "b13b45197cc67519e80a65aa4d55a9edb99a5aaeada7ca6b0a9c7befe62d1005",
+    "src/model_archives/part_archive.rs": "6ba1322cb8856c5c7af97797492f914b5c0ed2235781cec8cb20d542c2dfcbd8"
+  }
+}

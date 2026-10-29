@@ -37,8 +37,9 @@ returned identical statuses and diagnostics: 897 of 906 accepted, up from
 896, with new case 638 and no regressions. Nine explicit stops remain
 incomplete. Source verified exact EOF for all 897 accepted streams, totaling
 80,331,347 resolved bytes, after checking four input hashes per configuration.
-The NIST annotation example remains blocked in Bessemer by its separate
-`mo3dView_c` reader and is not counted as accepted.
+At this annotation checkpoint, the NIST example stopped at its separate
+`mo3dView_c` reader. The later [modern 3D-view reader](../three-dimensional-views/README.md)
+completes that dependency and records the new acceptance separately.
 
 The Windows Rust 1.99.0 `cargo xtask pr` gate passed: 1,139 library
 tests, 277 doctests and 2,663 total passing tests across 196 test

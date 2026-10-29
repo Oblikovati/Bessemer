@@ -208,6 +208,8 @@ fn surface_ids(reader: &mut ModelDecoder<'_>) -> Result<()> {
 }
 
 pub(super) const CLASSES: &[&str] = &[
+    // #54 / C-399 binds the complete inherited body-feature owner chain.
+    "moDeform_c",
     // #54 / C-222 through C-231: stock inherits the complete derived/body-feature layers.
     "moStock_c",
     // #54 / C-396 proves the complete inherited owner chains.

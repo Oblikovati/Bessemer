@@ -4,6 +4,13 @@ use crate::archive_codec::{
 };
 use crate::{BessemerError, FailureClass, Result};
 
+const OLDER_SCENE_CLASSES: &[&str] = &[
+    "swCubicalScene_c",
+    "swSphericalScene_c",
+    "pwSceneData_c",
+    "moNodeName_c",
+    "moVisualProperties_c",
+];
 const SCENE_CLASSES: &[&str] = &["swScene_c", "swCubicalScene_c", "swSphericalScene_c"];
 
 pub(super) fn owned_map(
@@ -11,7 +18,16 @@ pub(super) fn owned_map(
     map: &mut ObjectReader,
     label: &str,
 ) -> Result<()> {
-    reader.configuration_scene(|reader| owned_entries(reader, map, label))
+    reader.configuration_scene(|reader| {
+        if reader.manager_dialect() == Some(super::manager_dialect::ManagerDialect::Owned11000) {
+            return reader.scoped_fresh_objects(
+                OLDER_SCENE_CLASSES,
+                "version-11000 scene",
+                |reader| owned_entries(reader, map, label),
+            );
+        }
+        owned_entries(reader, map, label)
+    })
 }
 
 fn owned_entries(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader, label: &str) -> Result<()> {
@@ -40,7 +56,7 @@ pub(super) fn scene(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Re
     if reader.i32("merged_presence")? != 0 {
         reader.scope("merged_list", |reader| node_list(reader, map))?;
     }
-    mapped_pointer(reader, map, "visual_properties")?;
+    scene_visual(reader, map)?;
     reader.scope("feature_list", |reader| node_list(reader, map))?;
     reader.object(
         "scene_data",
@@ -62,6 +78,17 @@ pub(super) fn scene(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Re
 pub(super) fn pw_data(reader: &mut ModelDecoder<'_>) -> Result<()> {
     reader.require_configuration_scene()?;
     scene_data::read(reader)
+}
+
+fn scene_visual(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    if reader.manager_dialect() == Some(super::manager_dialect::ManagerDialect::Owned11000) {
+        return reader.object(
+            "visual_properties",
+            map,
+            ModelObjectRole::Declared(&["moVisualProperties_c"]),
+        );
+    }
+    mapped_pointer(reader, map, "visual_properties")
 }
 
 fn node_list(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {

@@ -4,7 +4,7 @@ use crate::{BessemerError, Document, Result};
 use std::sync::Arc;
 
 /// Declared ordinary external-XML part context with explicit model wire versions.
-/// Configuration managers select independently reviewed version-18000 or version-19000 layouts.
+/// Configuration managers select independently reviewed version-11000, 18000 or 19000 layouts.
 /// Ordinary loading declares helper +834 clear; a nonzero override is another dialect.
 #[derive(Debug, Clone)]
 pub struct PartConfigurationContext {
