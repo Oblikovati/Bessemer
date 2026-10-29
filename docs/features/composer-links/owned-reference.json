@@ -1,0 +1,167 @@
+[
+  {
+    "name": "exact",
+    "scene_sha256": "9b8c2f0d6e1158cfa8f7f4e09bd3cdf88bcf93083e35d507ffd1fc085ad1a0a9",
+    "xml_sha256": "48515a8e28dc69dda03a17ef734a10643d6405c4742491dd7d35de4fbd2c24b0",
+    "xml_bytes": 144,
+    "geodes": 3,
+    "references": 3,
+    "statuses": {
+      "unique": 2,
+      "unmatched": 1,
+      "empty": 0,
+      "ambiguous": 0
+    },
+    "oracle_sha256": "1e3f5e2f33834b127055c049222a59802eee79aaa5e2ab67f2fcd6de2bef6422"
+  },
+  {
+    "name": "duplicates",
+    "scene_sha256": "75989ca4acaf18d44739effcc9b4b27167185c6fcd3cb257ec19caf9ff30d78b",
+    "xml_sha256": "5b2ea36310a127c063b2c512d64e255bfa420539f985a6a61a9bc80aab01d97e",
+    "xml_bytes": 127,
+    "geodes": 4,
+    "references": 4,
+    "statuses": {
+      "unique": 0,
+      "unmatched": 1,
+      "empty": 1,
+      "ambiguous": 2
+    },
+    "oracle_sha256": "d5a08f9ab117e37f5154d033859e3d949a7e459f6da78a011722dcc5906a7483"
+  },
+  {
+    "name": "group-order",
+    "scene_sha256": "82b2045f99358c79a7741405ed10c255aaedd4f0f1d76b8e2e6d834739bb3433",
+    "xml_sha256": "9cc7d436e44d9b644e5e21e88336852d766229f194ceae1e9d44c06bc99f8918",
+    "xml_bytes": 70,
+    "geodes": 3,
+    "references": 1,
+    "statuses": {
+      "unique": 0,
+      "unmatched": 1,
+      "empty": 0,
+      "ambiguous": 0
+    },
+    "oracle_sha256": "ac8edbc42d684ac08ff3a8b3b0009fa6676ba22dc2b133a0302b7ec16f30371e"
+  },
+  {
+    "name": "namespaces",
+    "scene_sha256": "1ce7c28ca6b3419704a37f5f23b75d3766b56ea176da3e704e66dd1632f483be",
+    "xml_sha256": "5c8af5e17689df323cbbd5d07b4c1e84cdb93d997c1d7470cf0a5d5889b71bc5",
+    "xml_bytes": 157,
+    "geodes": 1,
+    "references": 1,
+    "statuses": {
+      "unique": 1,
+      "unmatched": 0,
+      "empty": 0,
+      "ambiguous": 0
+    },
+    "oracle_sha256": "e6371321c173bdcd6507d3a4ab3da8391418210650b5e16934189b7babcbf332"
+  },
+  {
+    "name": "lexical",
+    "scene_sha256": "8c3fc8c20edb5df81aa8e10b45009dd01d6addfd070c0273d73b6b489f1f064c",
+    "xml_sha256": "0cad3cb6247fbee480b76866f212a6cf9887fca9efb64e3d45042cd44377f73c",
+    "xml_bytes": 152,
+    "geodes": 2,
+    "references": 1,
+    "statuses": {
+      "unique": 1,
+      "unmatched": 0,
+      "empty": 0,
+      "ambiguous": 0
+    },
+    "oracle_sha256": "af36061516c8caf6394a99936da8951e7ec5c884dc17b326111f388e132b4c3f"
+  },
+  {
+    "name": "lexical-edited",
+    "scene_sha256": "8c3fc8c20edb5df81aa8e10b45009dd01d6addfd070c0273d73b6b489f1f064c",
+    "xml_sha256": "f4da24bb87db84ed958ff189c3a7346f28b584fc50d4557c5324af3cbd401f8b",
+    "xml_bytes": 152,
+    "geodes": 2,
+    "references": 1,
+    "statuses": {
+      "unique": 1,
+      "unmatched": 0,
+      "empty": 0,
+      "ambiguous": 0
+    },
+    "oracle_sha256": "90c1afdddcc34d6befc02db274f7b2b83973f395c21595bd4d47faadeb1df91a"
+  },
+  {
+    "name": "root-reference",
+    "scene_sha256": "3996f74a1d549872f1816df5b78e424453a2dbd91af4f504e24b0e9eacc96697",
+    "xml_sha256": "86e5265ba4c36a3fa7228d77bbecbfbd08940c10dffc58afe4c7e91ecedfca92",
+    "xml_bytes": 44,
+    "geodes": 1,
+    "references": 1,
+    "statuses": {
+      "unique": 1,
+      "unmatched": 0,
+      "empty": 0,
+      "ambiguous": 0
+    },
+    "oracle_sha256": "4ebce35b93f2ee253e67cbd0ec0bf799ca8f176ed03aa6395a2d81907b9b6411"
+  },
+  {
+    "name": "unicode",
+    "scene_sha256": "119a861975d5e332a6c3dedd2608aad16684c20f93a74093b6eff2330fc70adb",
+    "xml_sha256": "0a01aadd7c512d5d399ed6d03a10b1cd84ac5d2935b5f20851a4d518c54345af",
+    "xml_bytes": 124,
+    "geodes": 2,
+    "references": 3,
+    "statuses": {
+      "unique": 1,
+      "unmatched": 2,
+      "empty": 0,
+      "ambiguous": 0
+    },
+    "oracle_sha256": "a334af374095b69bcc0d7670b37d049924ea8832d68a712332aee7f6596eb070"
+  },
+  {
+    "name": "surrogate-key",
+    "scene_sha256": "ee2f721c7150e247ba1887f09e7b97371c82949c178edd641a43bf6b2df99639",
+    "xml_sha256": "cff4b0d9de0990437715901c8288ad8baa92c5bc5343f82149c20ca6653e9ca0",
+    "xml_bytes": 71,
+    "geodes": 2,
+    "references": 1,
+    "statuses": {
+      "unique": 0,
+      "unmatched": 1,
+      "empty": 0,
+      "ambiguous": 0
+    },
+    "oracle_sha256": "8b24445a5ec2c9dd6fe94e7b1d3372782fb084f6b3893f8f3b4bbe436f2357d9"
+  },
+  {
+    "name": "entry-indices",
+    "scene_sha256": "ccf67ddd1f661263da1a37b04c952e43c68b31dcc81d5473bdfe51507222c193",
+    "xml_sha256": "0ac59c49a91af4b592165abea533915f584694f20d604a5fae47ad5c4b007042",
+    "xml_bytes": 66,
+    "geodes": 2,
+    "references": 1,
+    "statuses": {
+      "unique": 0,
+      "unmatched": 0,
+      "empty": 0,
+      "ambiguous": 1
+    },
+    "oracle_sha256": "8b03d10150db7b669a201e09fcb5675d4f4f0fa59d9182d06972860942f476ab"
+  },
+  {
+    "name": "empty-index",
+    "scene_sha256": "3affc60d58251e168e805905129c32099486a7f7eac452c806ab6ab58a3e05e9",
+    "xml_sha256": "43c610740abd75d527470cf215e4d605ea3a724672261ced557d76071a7ca48b",
+    "xml_bytes": 46,
+    "geodes": 0,
+    "references": 0,
+    "statuses": {
+      "unique": 0,
+      "unmatched": 0,
+      "empty": 0,
+      "ambiguous": 0
+    },
+    "oracle_sha256": "91c79b8f3540d37dc687b86215a1f04a7a715d5d359d9fbc37f319b59a14758a"
+  }
+]

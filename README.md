@@ -106,6 +106,10 @@ reads, constructs, edits and writes complete gzip scenes with named typed fields
 explicit texture-import context and derived bounded sizes. All 38 installed
 streams reconstruct exactly; native application and project semantics remain
 separate acceptance requirements.
+The [Composer XML/geode index](docs/features/composer-links/README.md) retains
+every exact local identifier candidate and supports isolated lexical reference
+edits. It preserves ambiguous and unmatched outcomes; runtime resolution and
+complete project semantics remain separate requirements.
 The [biography evidence](docs/features/biography-archives/README.md) covers stored
 environment observations and repeated-string reading and writing.
 See [Parasolid transmit evidence](docs/features/parasolid-transmit/README.md) for
