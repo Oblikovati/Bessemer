@@ -11,7 +11,22 @@ pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
 }
 
 pub(super) fn common(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.scope("body", |reader| super::body_features::base(reader, map))?;
+    common_prefix(reader, map)?;
+    reader.scope("variation", |reader| {
+        super::pattern_variation::read(reader, map)
+    })?;
+    reader.scope("tail", |reader| tail(reader, map))
+}
+
+/// Retain the containing node across complete common-pattern prefix members.
+/// Example: `common_prefix(reader, map)?.unknown_2c`.
+pub(super) fn common_prefix(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+) -> Result<super::node::ModelNodePrefix> {
+    let node = reader.scope("body", |reader| {
+        super::body_features::base_with_node(reader, map)
+    })?;
     reader.scope("header", |reader| header(reader, map))?;
     reader.scope("collections", |reader| collections(reader, map))?;
     reader.scope("shape_data", |reader| {
@@ -19,10 +34,7 @@ pub(super) fn common(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> R
     })?;
     reader.u8("byte_1048")?;
     reader.u8("byte_104c")?;
-    reader.scope("variation", |reader| {
-        super::pattern_variation::read(reader, map)
-    })?;
-    reader.scope("tail", |reader| tail(reader, map))
+    Ok(node)
 }
 
 fn header(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
@@ -96,7 +108,8 @@ pub(super) fn matrix_helper(reader: &mut ModelDecoder<'_>, map: &mut ObjectReade
     Ok(())
 }
 
-fn tail(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+/// Preserve the established pattern tail; e.g. `tail(reader, map)?`.
+pub(super) fn tail(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     declared(reader, map, "list_988", &["suObList"])?;
     reader.i32("word_1120")?;
     if reader.version() > 0x2f86 {

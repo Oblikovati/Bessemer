@@ -1,0 +1,17 @@
+{
+  "fixtures": {
+    "tests/fixtures/model-archives/linear-pattern-cases.bin": "0ab6882804a6ac78bd2c8600f6ee6f3c282acded6c9afcbeb2a99dbf6bc9ce7b",
+    "tests/fixtures/model-archives/linear-pattern-edited.bin": "d1ca38106b7201c117eccc396d76e2507fbe8599e244f3377b5d34feac62eab0",
+    "tests/fixtures/model-archives/linear-pattern-original.bin": "433d04409e251689a53f1ff16548cfca1132426d9e9e8ada9fe54635993bb7d6",
+    "tests/fixtures/mirror-patterns/cases.bin": "da3c092e7610cfe9a95ee163f278004c3df04c6262868cab0218cfa2bf451dfd",
+    "tests/fixtures/circular-patterns/cases.bin": "0ce05b303d1231c481dbda7d431dadaa024a8aff34baf598ba1c97ff0a025f29"
+  },
+  "command": "cargo test --lib pattern",
+  "passed": 29,
+  "success": true,
+  "fixture_bytes_unchanged": true,
+  "source_hashes": {
+    "src/model_archives/linear_patterns.rs": "b9dcc6ba879559c0eab80c7035f2e60f188bd76ae5c4fccef2ac2080d6d41815",
+    "src/model_archives/pattern_variation.rs": "ad2afc027d30786d6a5b5d4783a9a61168c621eca56485485614f718cffade19"
+  }
+}

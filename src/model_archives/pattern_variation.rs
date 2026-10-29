@@ -12,6 +12,12 @@ pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
     }
     reader.u8("byte_9fc")?;
     reader.u8("byte_a00")?;
+    originals(reader, map)
+}
+
+/// Keep the shared original-dimension collections in their stored order.
+/// Example: `originals(reader, map)?` after variation-specific indices.
+pub(super) fn originals(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     for label in ["original_a08", "original_a28"] {
         for index in 0..reader.signed_count(&format!("{label}.count"), 81)? {
             reader.scope(&format!("{label}[{index}]"), |reader| original(reader, map))?;
