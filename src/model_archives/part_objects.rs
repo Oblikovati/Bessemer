@@ -24,6 +24,9 @@ pub(super) fn absent_payload(
 /// Retain saved component references without resolving an external document.
 /// Example: `part_objects::unit_component(reader, map)?`.
 pub(super) fn unit_component(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    if reader.assembly_kind().is_some() {
+        return super::assembly_decoder::unit_component(reader, map);
+    }
     reader.require_ordinary_part()?;
     let external_owner = unit_owner_is_external(reader, map)?;
     let present = reader.u8("has_external_model")?;

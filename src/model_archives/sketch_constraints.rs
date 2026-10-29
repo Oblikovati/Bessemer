@@ -19,7 +19,7 @@ const COLLECTIONS: &[(&str, &str, super::sketch_geometry::DirectReader)] = &[
 ];
 
 pub(super) fn points(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     for label in ["current_constraint", "processed", "array_position"] {
         reader.u16(label)?;
     }

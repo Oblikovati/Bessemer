@@ -57,7 +57,7 @@ fn compare_field(field: &ModelField, start: usize, spans: &[PrimitiveSpan]) -> u
     }
     let fragments: Vec<_> = spans
         .iter()
-        .filter(|span| span.start >= start && span.start < end)
+        .filter(|span| span.start >= start && span.start < end && span.end > span.start)
         .collect();
     assert_eq!(fragments.first().unwrap().start, start, "{}", field.path);
     assert_eq!(fragments.last().unwrap().end, end, "{}", field.path);
@@ -127,6 +127,29 @@ fn compare_raw_array_element(
         field.path
     );
     true
+}
+
+#[test]
+fn empty_reference_reads_at_a_field_boundary_do_not_count_as_scalar_storage() {
+    let spans = [
+        PrimitiveSpan {
+            start: 0,
+            end: 0,
+            kind: "raw",
+            wire: Vec::new(),
+        },
+        PrimitiveSpan {
+            start: 0,
+            end: 4,
+            kind: "i",
+            wire: vec![0; 4],
+        },
+    ];
+    let field = ModelField {
+        path: "root.scalar".into(),
+        value: ModelFieldValue::I32(0),
+    };
+    assert_eq!(compare_field(&field, 0, &spans), 4);
 }
 
 #[test]

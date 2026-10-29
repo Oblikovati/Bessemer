@@ -35,7 +35,7 @@ const DIMENSION_WORDS: &[&str] = &[
 ];
 
 pub(super) fn base(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.i32("reference_count")?;
     reader.object("parameter", map, ModelObjectRole::Any)?;
     reader.object("tolerance", map, TOLERANCE)?;
@@ -103,7 +103,7 @@ pub(super) fn revolved(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) ->
 }
 
 pub(super) fn tolerance(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.i32s(&["type", "fit_type"])?;
     reader.f64s(&["maximum", "minimum"])?;
     reader.u8("use_text_scale")?;
@@ -133,7 +133,7 @@ fn tolerance_suffix(reader: &mut ModelDecoder<'_>) -> Result<()> {
 }
 
 pub(super) fn attachment(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     double_vector(reader, "point_08")?;
     double_vector(reader, "point_28")?;
     reader.i32("word_20")?;

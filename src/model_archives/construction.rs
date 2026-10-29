@@ -2,10 +2,19 @@ use super::{ModelField, ModelFieldValue, encode_fields, invalid};
 use crate::Result;
 
 pub(super) fn section_lengths(fields: &mut [ModelField], maximum_bytes: usize) -> Result<()> {
+    model_section_lengths(fields, maximum_bytes, fields.len())
+}
+
+/// Exclude a routing trailer from the resolved byte count, e.g. `model_section_lengths(fields, limit, trailer_start)?`.
+pub(super) fn model_section_lengths(
+    fields: &mut [ModelField],
+    maximum_bytes: usize,
+    end: usize,
+) -> Result<()> {
     embedded_section_lengths(fields, maximum_bytes)?;
     let lightweight = section_index(fields, "root.lightweight_size")?;
     let resolved = section_index(fields, "root.resolved_size")?;
-    rewrite_section_pair(fields, lightweight, resolved, fields.len(), maximum_bytes)
+    rewrite_section_pair(fields, lightweight, resolved, end, maximum_bytes)
 }
 
 /// Derive inner section lengths before their containing parts, e.g. `embedded_section_lengths(fields, limit)?`.

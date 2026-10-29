@@ -32,7 +32,7 @@ const CONSTRAINT_POSITIONS: &[&str] = &[
 ];
 
 fn base(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.i32s(&[
         "head_position",
         "visible_entity_count",

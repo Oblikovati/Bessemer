@@ -3,7 +3,7 @@ use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
 
 pub(super) fn component(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.object(
         "owner",
         map,
@@ -66,14 +66,14 @@ pub(super) fn external_feature(
     reader.object(
         "reference",
         map,
-        ModelObjectRole::Declared(&["moReference_c"]),
+        ModelObjectRole::Declared(&["moReference_c", "moReferencePattern_c"]),
     )?;
     reader.i32("raw_58")?;
     Ok(())
 }
 
 pub(super) fn reference_chain(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.u16("raw_24")?;
     reader.object(
         "features",
@@ -85,7 +85,7 @@ pub(super) fn reference_chain(reader: &mut ModelDecoder<'_>, map: &mut ObjectRea
 }
 
 pub(super) fn feature_list(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     for index in 0..reader.signed_count("items.count", 2)? {
         reader.object(
             &format!("items[{index}]"),

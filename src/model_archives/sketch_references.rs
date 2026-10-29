@@ -23,7 +23,7 @@ pub(super) const HANDLES: &[&str] = &[
 ];
 
 pub(super) fn handle(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.escaped_index("entity_index", 0x777f)?;
     reader.i32s(&["reference_id", "dimension_on_cm"])
 }
@@ -41,7 +41,7 @@ pub(super) fn component_handle(
 }
 
 pub(super) fn external_entity(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     // #46: the declared wrapper family includes the earlier sketch/axis variants
     // and the fresh/cached single-face variant exposed by native case 351.
     reader.object(
@@ -78,7 +78,7 @@ pub(super) fn external_reference(
 }
 
 pub(super) fn isocurve_information(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.f64("ratio_08")?;
     for name in ["parameter_direction_10", "reference_type_18", "index_1c"] {
         reader.u16(name)?;
@@ -114,7 +114,7 @@ pub(super) fn silhouette_vertex(
 }
 
 pub(super) fn intersection_info(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.u16("x_type")?;
     reader.i32s(&["edge_count", "edge_index", "x_count", "x_index"])
 }

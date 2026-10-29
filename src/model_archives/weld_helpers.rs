@@ -7,13 +7,13 @@ use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
 
 pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.scope("helpers[0]", weld)?;
     reader.scope("helpers[1]", |reader| gtol(reader, map))
 }
 
 pub(super) fn weld(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     fields(reader, Octet, "discarded_08")?;
     for row in 0..2 {
         for base in (0x10..0x90).step_by(0x10) {
@@ -46,7 +46,7 @@ const WELD_FIELDS: &[(RawScalarKind, &str)] = &[
 ];
 
 pub(super) fn gtol(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     for index in 0..reader.signed_count("frame_count", 27)? {
         reader.scope(&format!("frames[{index}]"), |reader| frame(reader, map))?;
     }

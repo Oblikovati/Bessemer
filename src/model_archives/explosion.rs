@@ -62,9 +62,19 @@ pub(super) fn body_transform(reader: &mut ModelDecoder<'_>, map: &mut ObjectRead
 }
 
 pub(super) fn line(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.scope("node", |reader| node::lightweight(reader, map).map(|_| ()))?;
-    reader.required_object("step", map, STEP)?;
+    let role = if reader.assembly_kind().is_some() {
+        ModelObjectRole::Declared(&[
+            "moPrtExplodeStep_c",
+            "moBodyExplodeStep_c",
+            "moPrtChainExplodeStep_c",
+            "moCompExplodeStep_c",
+        ])
+    } else {
+        STEP
+    };
+    reader.required_object("step", map, role)?;
     double_vector(reader, "raw_point_48")?;
     double_vector(reader, "raw_point_60")?;
     reader.f64s(&["raw_78", "raw_80"])?;
@@ -76,7 +86,7 @@ pub(super) fn line(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
 }
 
 pub(super) fn direction(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.scope("array_08", |reader| {
         if reader.i32("presence")? != 0 {
             reader.scope("array", |reader| {

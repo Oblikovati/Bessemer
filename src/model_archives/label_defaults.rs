@@ -16,7 +16,7 @@ enum LabelDefaultKind {
 }
 
 pub(super) fn read(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     fields(reader, Signed, "08 0c")?;
     for (index, kind) in [
         LabelDefaultKind::Detail,

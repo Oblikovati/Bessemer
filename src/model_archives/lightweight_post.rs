@@ -3,7 +3,7 @@ use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
 
 pub(super) fn array(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     if reader.i32("has_array")? == 0 {
         return Ok(());
     }
@@ -47,7 +47,7 @@ fn array_payload(reader: &mut ModelDecoder<'_>, size: usize) -> Result<()> {
 }
 
 pub(super) fn flags(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.i32("unknown_f14")?;
     let shrink = reader.i32("has_shrink_wrap_data")?;
     if reader.version() > 0x2f72 {
@@ -59,7 +59,7 @@ pub(super) fn flags(reader: &mut ModelDecoder<'_>) -> Result<()> {
 }
 
 pub(super) fn collections(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     for index in 0..reader.object_count("object_count")? {
         reader.object(&format!("objects[{index}]"), map, ModelObjectRole::Any)?;
     }
@@ -85,7 +85,7 @@ fn notes(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
 }
 
 pub(super) fn tail(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.fixed_octets("unknown_77c", 16)?;
     reader.i32("unknown_1180")?;
     reader.fixed_octets("unknown_79c", 16)?;

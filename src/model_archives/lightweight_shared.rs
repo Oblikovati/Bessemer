@@ -11,7 +11,7 @@ pub(super) fn face_appearances(
     reader: &mut ModelDecoder<'_>,
     map: &mut ObjectReader,
 ) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     for index in 0..reader.signed_count("face_count", 4)? {
         reader.scope(&format!("faces[{index}]"), |reader| {
             reader.scope("property", property)?;
@@ -30,7 +30,7 @@ pub(super) fn properties(reader: &mut ModelDecoder<'_>) -> Result<()> {
 }
 
 pub(super) fn spatial(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.u8("unknown_d28")?;
     reader.object(
         "curvature",
@@ -57,7 +57,7 @@ fn box_fields(reader: &mut ModelDecoder<'_>) -> Result<()> {
 }
 
 pub(super) fn metadata(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     for index in 0..reader.signed_count("visual_count", 6)? {
         reader.scope(&format!("visual_properties[{index}]"), |reader| {
             reader.i32("unknown_key")?;
@@ -88,7 +88,7 @@ fn details(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> 
 }
 
 pub(super) fn manager(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     if reader.i32("format")? != 2 {
         return Ok(());
     }

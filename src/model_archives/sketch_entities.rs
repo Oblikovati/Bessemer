@@ -12,7 +12,7 @@ pub(super) fn entity(
     reader: &mut ModelDecoder<'_>,
     map: &mut ObjectReader,
 ) -> Result<SketchEntityFlags> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.i32s(&["permanent_mark", "unknown_0c"])?;
     reader.scope("visual_properties", visibility::read)?;
     reader.i32("reference_count")?;

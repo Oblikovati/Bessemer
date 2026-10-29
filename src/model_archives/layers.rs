@@ -3,12 +3,12 @@ use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader, line_style};
 
 pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.object("manager", map, ModelObjectRole::Declared(&["moLayerMgr_c"]))
 }
 
 pub(super) fn layer(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.text("name")?;
     reader.text("description")?;
     reader.u32("color")?;
@@ -19,7 +19,7 @@ pub(super) fn layer(reader: &mut ModelDecoder<'_>) -> Result<()> {
 }
 
 pub(super) fn mask(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     let count = reader.i32("count")?;
     reader.i32("growth")?;
     let count = reader.signed_count_value("layer mask", count, 4)?;
@@ -30,7 +30,7 @@ pub(super) fn mask(reader: &mut ModelDecoder<'_>) -> Result<()> {
 }
 
 pub(super) fn manager(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     for index in 0..reader.signed_count("layer_count", 2)? {
         reader.object(
             &format!("layers[{index}]"),

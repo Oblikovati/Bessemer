@@ -35,7 +35,7 @@ pub(super) fn collection(
     category: Option<&str>,
     body: DirectReader,
 ) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     let count = reader.signed_count(labels.0, if category.is_some() { 2 } else { 1 })?;
     for index in 0..count {
         reader.scope(&format!("{}[{index}]", labels.1), |reader| {

@@ -20,7 +20,7 @@ const USER_OBJECT_CLASSES: &[&str] = &[
 ];
 
 pub(super) fn state(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.u16("word_12c")?;
     reader.u16("word_128")?;
     reader.i32("word_130")?;
@@ -40,7 +40,7 @@ fn line_properties(reader: &mut ModelDecoder<'_>) -> Result<()> {
 }
 
 pub(super) fn visual(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.scope("line_properties", line_properties)?;
     reader.i32("word_568")?;
     double_vector(reader, "point_570")?;
@@ -60,7 +60,7 @@ pub(super) fn extension_indicator(
     reader: &mut ModelDecoder<'_>,
     map: &mut ObjectReader,
 ) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.object("sketch", map, ModelObjectRole::Declared(&["sgSketch"]))?;
     reader.u16("word_18")?;
     Ok(())
@@ -81,7 +81,7 @@ fn local_manager(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Resul
 }
 
 pub(super) fn local_relations(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.scope("manager", |reader| local_manager(reader, map))?;
     for index in 0..reader.signed_count("entities.count", 2)? {
         reader.scope(&format!("entities[{index}]"), |reader| {
@@ -92,7 +92,7 @@ pub(super) fn local_relations(reader: &mut ModelDecoder<'_>, map: &mut ObjectRea
 }
 
 pub(super) fn coincidences(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.entries(4, "sketch coincidence groups")?;
     reader.scope("coincidences", |reader| {
         for index in 0..4 {
@@ -104,7 +104,7 @@ pub(super) fn coincidences(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader
 }
 
 pub(super) fn silhouette(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     let marker = reader.u16("marker")?;
     if marker != 0 {
         return Ok(());
@@ -116,7 +116,7 @@ pub(super) fn silhouette(reader: &mut ModelDecoder<'_>) -> Result<()> {
 }
 
 pub(super) fn silhouettes(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     if reader.version() <= 0x2f50 {
         return Ok(());
     }
@@ -127,7 +127,7 @@ pub(super) fn silhouettes(reader: &mut ModelDecoder<'_>) -> Result<()> {
 }
 
 pub(super) fn final_ordinary(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     // The ordinary helper's constructor fixes profile-feature mode to false (11.75).
     reader.i32("word_134")?;
     Ok(())

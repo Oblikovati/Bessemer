@@ -1,4 +1,4 @@
-//! Complete ordinary modern part configuration archives with explicit header/kernel context.
+//! Complete ordinary modern part and assembly configurations with explicit header/kernel context.
 //! Validation covers the stored archive; geometric validity and external documents are separate.
 
 #[cfg(test)]
@@ -23,6 +23,17 @@ mod sculpt_features;
 mod smart_components;
 mod smart_items;
 mod three_dimensional_views;
+
+mod assembly_archive;
+mod assembly_context;
+mod assembly_decoder;
+mod assembly_edit;
+mod assembly_explosion;
+mod assembly_references;
+mod assembly_tail;
+mod camera_features;
+pub use assembly_archive::{AssemblyConfigurationArchive, AssemblyConfigurationEdit};
+pub use assembly_context::{AssemblyConfigurationContext, AssemblyRootKind};
 
 mod archive;
 mod attachment_records;

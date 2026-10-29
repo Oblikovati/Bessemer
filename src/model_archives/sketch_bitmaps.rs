@@ -6,7 +6,7 @@ use crate::archive_codec::{MaterialRead, ObjectReader, vectors::double_vector};
 /// Retain bitmap feature data and its full-width compact-transform presence word.
 /// Example: `sketch_bitmaps::read(reader, map)?` for `moSketchBitmap_c`.
 pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.scope("model_feature", |reader| {
         body_features::model_feature(reader, map)
     })?;
@@ -20,7 +20,7 @@ pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
 /// Preserve complete bitmap metadata and the explicitly sized raw byte plane.
 /// Example: `sketch_bitmaps::payload(reader, map)?` for `moSketchBitmapData_c`.
 pub(super) fn payload(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     double_vector(reader, "point_08")?;
     reader.f64s(&["raw_28", "raw_20", "raw_30"])?;
     let width = reader.i32("raw_48")?;

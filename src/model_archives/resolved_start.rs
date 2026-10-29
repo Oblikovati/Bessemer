@@ -3,7 +3,7 @@ use crate::Result;
 use crate::archive_codec::ObjectReader;
 
 pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.scope("feature_list", |reader| model_lists::nodes(reader, map))?;
     reader.scope("atom_manager", |reader| {
         resolved_managers::atom_manager(reader, map)

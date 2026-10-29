@@ -27,7 +27,7 @@ fn read_with_children(
     map: &mut ObjectReader,
     children: bool,
 ) -> Result<node::ModelNodePrefix> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     let prefix = reader.scope("node", |reader| node::lightweight(reader, map))?;
     if reader.i32("has_merged_feature_list")? != 0 {
         reader.scope("merged_feature_list", |reader| {

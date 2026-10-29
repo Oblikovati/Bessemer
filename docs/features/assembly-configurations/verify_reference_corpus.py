@@ -2,6 +2,7 @@
 from pathlib import Path
 import hashlib
 import json
+import struct
 import sys
 import tempfile
 import time
@@ -48,6 +49,7 @@ def verify_assemblies() -> None:
     from swcontainer import Document
     from modelprefix import read
     results = []
+    packets: list[bytes] = []
     started = time.perf_counter()
     for kind, row in reference_cases():
         document = Document(Path(row['path']), table={})
@@ -59,12 +61,19 @@ def verify_assemblies() -> None:
         assert root['lightweight_end'] == root['resolved']['prefix_start']
         assert root['resolved']['prefix_end'] == root['resolved']['end']
         header = document.read(row['stream'] + '-ModelHeader')
+        packets.append(struct.pack('<IBIII', cursor.version, kind == 'moRouteAssembly_c',
+                                   len(header), len(raw), len(cursor.map)) + header + raw)
         results.append(dict(path=row['path'], stream=row['stream'], version=cursor.version, root_class=kind,
                             bytes=len(raw), map_slots=len(cursor.map), stream_sha256=row['stream_sha256'],
                             header_sha256=hashlib.sha256(header).hexdigest()))
     report = dict(cases=len(results), configuration_bytes=sum(row['bytes'] for row in results), records=results,
                   seconds=time.perf_counter() - started, reader_functions_replaced=False)
-    (FEATURE / 'reference-corpus.json').write_bytes((json.dumps(report, indent=2) + '\n').encode())
+    if '--export' in sys.argv:
+        destination = FEATURE.parents[2] / 'target'
+        (destination / 'assembly-native-probe.bin').write_bytes(b'ACFG' + struct.pack('<I', len(packets)) + b''.join(packets))
+        (destination / 'assembly-native-inputs.json').write_bytes((json.dumps(report, indent=2) + '\n').encode())
+    else:
+        (FEATURE / 'reference-corpus.json').write_bytes((json.dumps(report, indent=2) + '\n').encode())
 
 
 def main() -> None:

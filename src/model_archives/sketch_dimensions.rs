@@ -84,7 +84,7 @@ pub(super) fn offset(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> R
 }
 
 pub(super) fn entity_help(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.f64s(&["value_08", "value_10"])?;
     reader.u16("word_18")?;
     Ok(())

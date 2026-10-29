@@ -4,7 +4,7 @@ use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader, vectors::double_vector};
 
 pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.text("text")?;
     double_vector(reader, "point_38")?;
     reader.i32("unknown_10")?;

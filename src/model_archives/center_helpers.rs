@@ -7,7 +7,7 @@ use crate::Result;
 use crate::archive_codec::MaterialRead;
 
 pub(super) fn read(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.scope("helpers[0]", center_mark)?;
     reader.scope("helpers[1]", datum_feature)?;
     reader.scope("helpers[2]", datum_target)?;

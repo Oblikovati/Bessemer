@@ -3,7 +3,7 @@ use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader, material};
 
 pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.u8("raw_d24_stored")?;
     reader.i32s(&["raw_ce0", "raw_ce4"])?;
     reader.object(
@@ -49,7 +49,7 @@ fn keys(reader: &mut ModelDecoder<'_>, label: &str) -> Result<()> {
 }
 
 pub(super) fn feature_colors(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     for index in 0..reader.signed_count("entry_count", 4)? {
         reader.scope(&format!("entries[{index}]"), |reader| {
             reader.scope("visual", material::visual)?;
@@ -61,7 +61,7 @@ pub(super) fn feature_colors(reader: &mut ModelDecoder<'_>) -> Result<()> {
 }
 
 pub(super) fn flat_colors(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     for offset in (8..0x28).step_by(4) {
         reader.u32(&format!("raw_{offset:x}"))?;
     }
@@ -69,7 +69,7 @@ pub(super) fn flat_colors(reader: &mut ModelDecoder<'_>) -> Result<()> {
 }
 
 pub(super) fn sketch_blocks(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.scope("feature", |reader| features::read(reader, map))?;
     reader.fixed_octets("block_guid", 16)?;
     reader.scope("block_map", |reader| block_map(reader, map))

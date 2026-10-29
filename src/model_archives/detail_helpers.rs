@@ -7,7 +7,7 @@ use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
 
 pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.scope("helpers[0]", surface_finish)?;
     reader.scope("helpers[1]", |reader| note(reader, map))
 }
@@ -30,7 +30,7 @@ const ANNOTATION_TAIL: &[(RawScalarKind, &str)] = &[
 ];
 
 pub(super) fn surface_finish(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     groups(reader, SURFACE_PREFIX)?;
     reader.scope("character_format_c0", detail_prefix::character_format)?;
     fields(reader, Octet, "120 124")?;
@@ -55,7 +55,7 @@ const SURFACE_PREFIX: &[(RawScalarKind, &str)] = &[
 ];
 
 pub(super) fn note(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     groups(reader, NOTE_PREFIX)?;
     reader.scope("character_format_c8", detail_prefix::character_format)?;
     fields(reader, Signed, "240 244")?;

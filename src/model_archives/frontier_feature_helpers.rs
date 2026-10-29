@@ -5,7 +5,7 @@ use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
 
 pub(super) fn pattern_item(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.i32s(&["raw_20", "raw_24"])?;
     reader.u8("raw_08")?;
     reader.f64("raw_10")

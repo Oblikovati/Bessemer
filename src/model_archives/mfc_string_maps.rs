@@ -5,7 +5,7 @@ use crate::archive_codec::MaterialRead;
 /// Preserve ordered MFC map entries, including duplicate keys and original text prefixes.
 /// Example: `mfc_string_maps::read(reader)?` after the map's object tag.
 pub(super) fn read(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     for index in 0..configuration_io::map_entries64(reader, "entries.count", 2)? {
         for member in ["key", "value"] {
             reader.scope(&format!("entries[{index}].{member}.map_text"), text)?;

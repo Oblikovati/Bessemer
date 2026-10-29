@@ -24,6 +24,46 @@ def freeze_bytes(path: Path, raw: bytes) -> None:
     assert path.read_bytes() == raw, f'{path}; expected unchanged reference baseline'
 
 
+def wide_text(value: str) -> bytes:
+    """Use an independent short UTF-16 CString frame, e.g. wide_text('route Ω')."""
+    raw = value.encode('utf-16-le')
+    return struct.pack('<BHB', 255, 65534, len(raw) // 2) + raw
+
+
+def routing_bytes(raw: bytes, reads: list[PrimitiveRead], name: str) -> bytes:
+    """Replace the real fresh root class and append a trailer outside both sections."""
+    root_name = reads[3]
+    assert root_name.kind == 'raw' and bytes.fromhex(root_name.raw_hex) == b'moAssembly_c'
+    cls = b'moRouteAssembly_c'
+    inherited = raw[:4] + struct.pack('<H', len(cls)) + cls + raw[root_name.end:]
+    trailer = struct.pack('<i', -2147483648)
+    trailer += b''.join(wide_text(s) for s in ('', name, 'pipe', 'Ω'))
+    return inherited + trailer + struct.pack('<II', 0xffffffff, 0x80000000)
+
+
+def freeze_routing(document: ConfigurationDocument, raw: bytes, reads: list[PrimitiveRead]) -> None:
+    """Bind synthetic routing composition to the actual full routing reader."""
+    from swarchive import Archive
+    import modelprefix
+    facts = []
+    for suffix, name in (('', 'route Ω'), ('-edited', 'Bessemer routing Ω')):
+        changed = routing_bytes(raw, reads, name)
+        selected = SelectedConfigurationDocument(document, changed)
+        with observe_primitives(Archive, changed) as observed:
+            root, cursor = modelprefix.read(selected, root_class='moRouteAssembly_c', assembly_resolved_stage='assembly_tail')
+        assert cursor.p == len(changed) and root['_class'] == 'moRouteAssembly_c'
+        assert root['unit_component']['owner'] is root
+        assert root['resolved']['end'] < cursor.p
+        verify_primitive_coverage(changed, observed)
+        path = ROOT / f'tests/fixtures/assembly-configurations/owned-routing{suffix}'
+        freeze_bytes(path.with_suffix('.bin'), changed)
+        oracle = ''.join(f'{r.start}\t{r.end}\t{r.kind}\t{r.raw_hex}\t{r.source_file}:{r.source_function}:{r.source_line}\n' for r in observed)
+        freeze_bytes(path.with_suffix('.txt'), oracle.encode())
+        facts.append(dict(bytes=len(changed), resolved_end=root['resolved']['end'], map_slots=len(cursor.map),
+                          primitive_reads=len(observed), sha256=hashlib.sha256(changed).hexdigest()))
+    freeze_bytes(FEATURE / 'owned-routing-reference.json', (json.dumps(facts, indent=2) + '\n').encode())
+
+
 def freeze_renamed(document: ConfigurationDocument, raw: bytes,
                    reads: list[PrimitiveRead]) -> dict[str, object]:
     """Change one Source-identified CString and its containing section length."""
@@ -32,8 +72,7 @@ def freeze_renamed(document: ConfigurationDocument, raw: bytes,
     end = next(i for i in range(start, len(reads)) if reads[i].kind == 'raw')
     name = reads[start:end + 1]
     assert len(name) == 4 and name[-1].kind == 'raw'
-    replacement = 'Bessemer Ω'.encode('utf-16-le')
-    replacement = struct.pack('<BHB', 255, 65534, len(replacement) // 2) + replacement
+    replacement = wide_text('Bessemer Ω')
     changed = bytearray(raw[:name[0].start] + replacement + raw[name[-1].end:])
     section = next(r for r in reads if r.source_file == 'modelprefix.py' and r.source_function == 'model_prefix')
     assert section.kind == 'i' and section.end - section.start == 4
@@ -67,6 +106,7 @@ def freeze_owned() -> None:
     freeze_bytes(FEATURE / 'owned-assembly-reference.json', (json.dumps(facts, indent=2) + '\n').encode())
     oracle = ''.join(f'{r.start}\t{r.end}\t{r.kind}\t{r.raw_hex}\t{r.source_file}:{r.source_function}:{r.source_line}\n' for r in reads)
     freeze_bytes(ROOT / 'tests/fixtures/assembly-configurations/owned-assembly.txt', oracle.encode())
+    freeze_routing(document, raw, reads)
 
 
 def main() -> None:

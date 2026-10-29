@@ -1,6 +1,7 @@
 # Assembly configuration archives
 
-Issue #99 advances the full parity goal in #2. Implementation is pending.
+Issue #99 implements complete ordinary assembly and routing configuration
+archives, advancing the full parity goal in #2.
 Clauses 11.120–11.128 describe complete ordinary modern assembly configuration
 streams. The frozen snapshot includes the later clauses that complete the
 earlier prefix-only descriptions.
@@ -23,13 +24,19 @@ sections, then reads its own trailer outside the resolved section. Its strings
 and two unsigned time words retain their original values; their application
 roles remain unresolved.
 
-The implementation should first reuse the shared model stages without changing
-the existing part results. Root kind must be checked from the actual tagged
-object, and archive context must remain explicit. Assemblies must not borrow a
-part context or a synthetic object map. Assembly references, exploded profiles,
-local reader selections and root-owner checks need the documented assembly
-rules. Keep input ownership and completed-root proofs separate from an
-in-progress object's map identity.
+`AssemblyConfigurationContext` selects the root kind, wire version, real model
+header and optional kernel context. `AssemblyConfigurationArchive` checks the
+actual fresh root tag and loads the header's identities in native order.
+Shared model stages accept that explicit assembly context; part-only readers
+retain their part checks. Assembly unit components use the documented owner
+classes and reject the unsupported external-model branch.
+
+`from_fields` derives both section lengths and requires an exact typed reparse.
+For routing roots, the resolved length ends before the routing trailer.
+`edit_fields` returns an immutable result with completion, exact stored-schema
+coverage, fidelity, diagnostics and revision-bound field history. Unchanged
+edits retain the source revision; changed results reject source-only handles.
+The archive exposes imported header origins without opening external documents.
 
 The shared lightweight model stage has been extracted from the part-only suffix
 as a separate structural change. All 30 existing part, lightweight, inline-part
@@ -44,13 +51,47 @@ workspace Clippy and all 906 native part configurations passed after this
 structural extraction; every native outcome matched the preceding run.
 `resolved-stage-verification.json` records the source and fixture hashes.
 
-The owned blank assembly supplies an independent oracle for the next complete
+The owned blank assembly supplies an independent oracle for the complete
 reader: 23,359 bytes, 87 map slots and 5,056 primitive reads through physical EOF.
 A separate name-edit golden adds eight bytes to the lightweight section, retains
 the original map and passes the complete reference reader again. Replay with
 `python docs/features/assembly-configurations/freeze_owned_assembly.py`; fixture
-replacement requires `--write`. These reference results do not yet prove a
-Bessemer assembly read or edit.
+replacement requires `--write`. Public tests reproduce that independent edit,
+reopen the whole document, preserve unrelated streams, revert exactly and keep
+the original archive isolated. A composed routing fixture and its independent
+trailer edit check that changed trailer lengths do not alter either section.
+
+## Configuration verification
+
+All 180 native configurations pass complete Bessemer reads and forced typed
+construction, including their original shared-map slot counts. The separate
+906-case modern-part corpus still passes after the shared context changes.
+
+Nine retained native configurations cover references, patterns, cameras,
+exploded profiles, relations, toolbox records and routing. Their 316,486 bytes
+are bound to 70,293 actual reference primitive reads. Normal tests compare every
+field's bytes and scalar width with that inventory and force reconstruction.
+The oracle retains zero-length string reads while excluding them from the next
+scalar's storage; a focused regression checks that boundary.
+
+Twenty additional fresh object graphs cover mirror data, reference and component
+transforms, circular pattern items, all five camera faceted-reference variants,
+repeated attachment identities and assembly exploded-view IDs. Their 1,151
+primitive reads cover all compact-transform payload modes. Every truncated
+prefix and appended byte fails; malformed counts, operation budgets, old
+versions and unselected contexts cannot publish partial results. These graphs
+use actual scoped serializers and fresh maps, without preloaded identities.
+
+Replay the retained native and object fixtures with
+`freeze_native_assemblies.py` and `freeze_assembly_objects.py` in this directory.
+Both check existing bytes by default; `--write` explicitly replaces fixtures.
+`verify_reference_corpus.py --export` checks the installed reference corpus and
+writes the local probe packet used by the ignored assembly corpus test. The
+full local PR gate passed 2805 tests, including 1249 library tests and
+277 doctests. Two independent native assembly processes reconstructed all
+180 inputs exactly; the part corpus retained all 906 accepted outcomes.
+`complete-verification.json` records the source hashes, corpus hash and
+explicit exclusions.
 
 ## MFC string-map prerequisite
 
@@ -75,20 +116,19 @@ relocated only at observed pointer positions and the resolved size updated.
 Public archive tests force reconstruction, apply an independent key edit,
 reopen the edited document, preserve unrelated streams and revert exactly.
 Wrong-width edits fail without changing the source, and parallel reads use
-independent maps. This prerequisite does not yet implement assembly roots.
+independent maps. Assembly lightweight maps reuse this codec under their own
+explicit model context.
 
 The full local PR gate passed: 2792 tests, including 1242 library
 tests and 277 doctests. The separate native modern-part corpus also retained
 all 906 accepted configurations. Verification records the source hashes and
 explicit application and geometry exclusions in `string-map-verification.json`.
 
-The first acceptance operation is a complete configuration read, independent
-edit, forced construction, whole-document reopen and revert. Add precise
-primitive oracles, malformed bounds and pointer-role tests, preserve unrelated
-compressed streams and rerun the complete modern-part gate. Compare native
-process results and retain explicit kernel, geometry and application acceptance
-exclusions. The reference baseline establishes the target; it does not establish
-that Bessemer implements it.
+This acceptance operation covers complete configuration reads, independent
+edits, forced construction, document reopen and revert. Its successful archive
+checks do not establish topology, geometry, self-intersection, geometric
+tolerance or SolidWorks application acceptance. External documents are not
+opened. Kernel and application acceptance remain separate requirements.
 
 Corliss also exposes typed part, assembly and drawing model views and structural
 edits. Bessemer's completed modern-part corpus is evidence for its selected

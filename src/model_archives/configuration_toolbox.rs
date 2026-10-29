@@ -4,7 +4,7 @@ use crate::Result;
 use crate::archive_codec::ObjectReader;
 
 pub(super) fn array(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     model_lists::pointers(reader, map, "items", ModelObjectRole::Any)?;
     raw_fields::groups(
         reader,
@@ -18,7 +18,7 @@ pub(super) fn array(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Re
 }
 
 pub(super) fn item(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     raw_fields::groups(
         reader,
         &[

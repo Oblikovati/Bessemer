@@ -34,7 +34,7 @@ const DEFINITIONS: &[AnnotationDefaultKind] = &[
 ];
 
 pub(super) fn read(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     groups(reader, ROOT_FIELDS)?;
     if reader.version() >= 0x2f70 {
         fields(reader, Signed, "18")?;

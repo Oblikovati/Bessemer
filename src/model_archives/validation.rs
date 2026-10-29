@@ -17,18 +17,11 @@ impl PartConfigurationArchive {
     /// # }
     /// ```
     pub fn coverage(&self) -> ModelArchiveCoverage {
-        let mut coverage = ModelArchiveCoverage {
-            mode: ModelEditCheckMode::ExactStoredArchive,
-            wire_bytes: self.parsed.wire_bytes(),
-            typed_fields: self.fields().len(),
-            new_objects: 0,
-            object_aliases: 0,
-            imported_slots: self.parsed.lightweight().imports.slots().len(),
-        };
-        for field in self.fields() {
-            charge_object(&mut coverage, &field.value);
-        }
-        coverage
+        field_coverage(
+            self.fields(),
+            self.parsed.wire_bytes(),
+            self.parsed.lightweight().imports.slots().len(),
+        )
     }
 
     /// Borrows explicit exclusions; successful wire checks do not imply valid geometry.
@@ -41,6 +34,25 @@ impl PartConfigurationArchive {
     pub fn diagnostics(&self) -> &[ModelArchiveDiagnostic] {
         DIAGNOSTICS
     }
+}
+
+pub(super) fn field_coverage(
+    fields: &[super::ModelField],
+    wire_bytes: usize,
+    imported_slots: usize,
+) -> ModelArchiveCoverage {
+    let mut coverage = ModelArchiveCoverage {
+        mode: ModelEditCheckMode::ExactStoredArchive,
+        wire_bytes,
+        typed_fields: fields.len(),
+        new_objects: 0,
+        object_aliases: 0,
+        imported_slots,
+    };
+    for field in fields {
+        charge_object(&mut coverage, &field.value);
+    }
+    coverage
 }
 
 pub(super) fn charge_object(coverage: &mut ModelArchiveCoverage, value: &ModelFieldValue) {

@@ -13,7 +13,7 @@ pub(super) fn direct(
     labels: (&str, &str),
     body: DirectReader,
 ) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     for index in 0..word_count(reader, labels.0)? {
         reader.scope(&format!("{}[{index}]", labels.1), |reader| {
             body(reader, map)
@@ -28,7 +28,7 @@ pub(super) fn tagged(
     labels: (&str, &str),
     role: ModelObjectRole<'_>,
 ) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     for index in 0..word_count(reader, labels.0)? {
         reader.required_object(&format!("{}[{index}]", labels.1), map, role)?;
     }

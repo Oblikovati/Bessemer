@@ -6,7 +6,7 @@ use crate::archive_codec::{
 };
 
 pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.scope("shared_parameters", |reader| {
         model_lists::pointers(reader, map, "items", ModelObjectRole::Any)
     })?;
@@ -63,7 +63,7 @@ pub(super) fn light(
     map: &mut ObjectReader,
     name: &str,
 ) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.scope("model_feature", |reader| {
         features::model_feature(reader, map)
     })?;

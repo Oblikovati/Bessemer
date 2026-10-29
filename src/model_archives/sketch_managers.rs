@@ -3,7 +3,7 @@ use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
 
 pub(super) fn blocks(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     for index in 0..reader.signed_count("blocks.count", 6)? {
         reader.scope(&format!("blocks[{index}]"), |reader| {
             reader.i32("key")?;
@@ -27,7 +27,7 @@ fn block_values(reader: &mut ModelDecoder<'_>) -> Result<()> {
 }
 
 pub(super) fn handle_data(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     for index in 0..reader.signed_count("entries.count", 4)? {
         reader.scope(&format!("entries[{index}]"), |reader| {
             sketch_dimensions::handles(reader, map, &["handle"])?;
@@ -42,7 +42,7 @@ pub(super) fn handle_data(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader)
 }
 
 pub(super) fn loops(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     for index in 0..reader.signed_count("slots.count", 4)? {
         reader.scope(&format!("slots[{index}]"), |reader| loop_slot(reader, map))?;
     }
@@ -74,7 +74,7 @@ pub(super) fn integer_pairs(reader: &mut ModelDecoder<'_>, label: &str) -> Resul
 }
 
 pub(super) fn slots(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.i32("word_10")?;
     for index in 0..reader.signed_count("slots.count", 6)? {
         reader.scope(&format!("slots[{index}]"), |reader| {

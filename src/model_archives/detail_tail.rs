@@ -7,7 +7,7 @@ use crate::Result;
 use crate::archive_codec::MaterialRead;
 
 pub(super) fn read(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     for index in 0..8 {
         reader.f32(&format!("print_widths.line_weights[{index}]"))?;
     }

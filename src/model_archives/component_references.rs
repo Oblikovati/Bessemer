@@ -61,7 +61,7 @@ pub(super) fn base_record(
     reader: &mut ModelDecoder<'_>,
     map: &mut ObjectReader,
 ) -> Result<ObjectRecord> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     let component = reader.object_record("component", map, ModelObjectRole::Any)?;
     base_fields(reader, map)?;
     Ok(component)

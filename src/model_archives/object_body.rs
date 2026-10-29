@@ -7,6 +7,15 @@ pub(super) fn read(
     map: &mut ObjectReader,
     class: &ArchiveClass,
 ) -> Result<()> {
+    if let Some(result) = super::assembly_explosion::read_object(reader, map, &class.name) {
+        return result;
+    }
+    if let Some(result) = super::assembly_references::read_object(reader, map, &class.name) {
+        return result;
+    }
+    if let Some(result) = super::assembly_tail::read_object(reader, map, &class.name) {
+        return result;
+    }
     if let Some(kind) = super::body_features::BodyFeatureKind::parse(&class.name) {
         return super::body_features::read(reader, map, kind);
     }
@@ -38,6 +47,7 @@ pub(super) fn read(
         return result;
     }
     match class.name.as_str() {
+        "moCameraFeature_c" => super::camera_features::read(reader, map),
         "moDome_c" => super::dome_records::read(reader, map),
         "moExtruRefSurface_c" => super::extruded_surfaces::read(reader, map),
         "moOrderedFaceArray_c" => super::extruded_surfaces::ordered_faces(reader, map),

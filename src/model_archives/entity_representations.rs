@@ -133,7 +133,7 @@ pub(super) fn feature_reference(
     reader: &mut ModelDecoder<'_>,
     map: &mut ObjectReader,
 ) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.object(
         "external_model",
         map,
