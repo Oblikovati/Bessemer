@@ -18,12 +18,21 @@ pub(super) fn surface(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> 
     reader.require_ordinary_part()?;
     reader.i32("archive_backend_marker")?;
     // The planar class's +AB0 returns zero: a nonzero marker never externalizes these bodies.
+    sheets(reader, map)?;
+    suffix(reader, map)
+}
+
+fn sheets(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     for index in 0..reader.signed_count("sheet_count", 3)? {
         reader.scope(&format!("sheets[{index}]"), |reader| {
             reader.scope("body", kernel_frames::read_body)?;
             model_lists::pointers(reader, map, "attributes", ModelObjectRole::Any)
         })?;
     }
+    Ok(())
+}
+
+fn suffix(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     if reader.i32("extra_body_presence")? != 0 {
         let state = reader.scope("extra_body", kernel_frames::read_body_state)?;
         if state == kernel_frames::KernelBodyState::Serialized {
