@@ -14,6 +14,7 @@ mod dimension_patterns;
 mod forming_tools;
 mod library_features;
 mod library_references;
+mod mfc_string_maps;
 mod pattern_extensions;
 mod pattern_transform_words;
 mod photoworks_materials;

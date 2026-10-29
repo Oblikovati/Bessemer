@@ -675,3 +675,6 @@ mod intermediate_tail_tests;
 
 #[path = "../../tests/resolved_features/forming_tools.rs"]
 mod forming_tool_tests;
+
+#[path = "../../tests/model_archives/mfc_string_maps.rs"]
+mod mfc_string_map_tests;

@@ -38,6 +38,36 @@ and public forming-tool tests passed, along with workspace Clippy. The complete
 independent edit and primitive-oracle fixtures retained their original hashes.
 This extraction adds no assembly context or public assembly API by itself.
 
+## MFC string-map prerequisite
+
+The map codec preserves 16-, 32- and 64-bit count framing and all four text
+length widths. It retains duplicate keys and wire order. The map-specific text
+layout stores Latin-1 bytes and UTF-16 code units as typed fields, including
+unpaired surrogates accepted by the reference. It does not change the existing
+CString decoder's Unicode checks. Explicit input, entry and field budgets bound
+the code-unit loops before allocation.
+
+Twenty-eight independent graphs cover those framing combinations, empty maps,
+code-unit edits and a tagged bend-note caller. The actual reference produced 611
+primitive reads. A profile of its real `string64` calls identifies the raw text
+spans; the fixture packet retains both that original inventory and its exact
+788-primitive byte/code-unit projection. No raw span outside those identified
+string payloads is projected. All fixture bytes regenerate from immutable
+reference sources.
+
+The codec is also connected to the existing bend-note format reader. A complete
+owned part configuration contains the new tagged map, with later MFC references
+relocated only at observed pointer positions and the resolved size updated.
+Public archive tests force reconstruction, apply an independent key edit,
+reopen the edited document, preserve unrelated streams and revert exactly.
+Wrong-width edits fail without changing the source, and parallel reads use
+independent maps. This prerequisite does not yet implement assembly roots.
+
+The full local PR gate passed: 2792 tests, including 1242 library
+tests and 277 doctests. The separate native modern-part corpus also retained
+all 906 accepted configurations. Verification records the source hashes and
+explicit application and geometry exclusions in `string-map-verification.json`.
+
 The first acceptance operation is a complete configuration read, independent
 edit, forced construction, whole-document reopen and revert. Add precise
 primitive oracles, malformed bounds and pointer-role tests, preserve unrelated

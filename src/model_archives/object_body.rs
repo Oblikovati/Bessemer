@@ -111,6 +111,7 @@ fn read_existing(
         "moPart_c" => super::reader::embedded_parts::read(reader, map),
         "moNodeName_c" => reader.text("name"),
         "moCStringHandle_c" => reader.text("value"),
+        "su_CMapStringToString" => super::mfc_string_maps::read(reader),
         "moExtObject_c" => super::external_references::read(reader, map),
         "moVisualProperties_c" => crate::archive_codec::material::visual(reader),
         "gcCurvatureObject_c" => super::spatial_objects::curvature(reader),

@@ -28,6 +28,8 @@
 
 ### Added
 
+- Added 64-bit MFC string maps with preserved count and text-prefix widths, ordered duplicate keys and raw UTF-16 code units. (#99)
+
 - Added complete ordinary forming-tool instances, direct surface-ID keepers, attributed-body collections and ordered transform maps, with derived section sizes for embedded edits. (#54)
 
 - Added bounded inline part bodies for forming-tool pointers with shared-map headers and caller-context restoration. (#54)
