@@ -24,6 +24,8 @@
 
 ### Added
 
+- Added complete ordinary move/copy body archives, nested payloads, mesh-tolerance records and documented zero-scale conformal branches. (#54)
+
 - Added complete modern derived-feature and surface-body reference reconstruction, including signed point presence, shared arrays and generic wrapper callers. (#54)
 
 - Added standalone Inspection project/template envelope reading and writing for current and historical cipher profiles, with exact XML replacement and bounded validation. (#92)

@@ -193,6 +193,8 @@ mod mirror_patterns;
 mod model_arrays;
 mod model_lists;
 mod model_references;
+mod move_copy_bodies;
+mod move_copy_deformation;
 mod node;
 mod note_text;
 mod object_body;

@@ -20,6 +20,9 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moMoveCopyBody_c" => super::move_copy_bodies::read(reader, map),
+        "moMoveCopyBodyData_c" => super::move_copy_bodies::payload(reader, map),
+        "moPSMeshToleranceHandler_c" => super::move_copy_deformation::mesh(reader),
         "moDerivedFeatRef_w" => super::derived_references::read(reader, map),
         "moSurfaceBodyRef_w" => super::stock_references::body(reader, map),
         "moStock_c" => super::stock_features::read(reader, map, false),

@@ -357,6 +357,9 @@ records, body-reference collections and component-body transforms.
 [Derived-feature references](docs/features/derived-feature-references/README.md)
 cover versioned point presence, direct shared arrays and surface-body aliases.
 
+[Move/copy bodies](docs/features/move-copy-bodies/README.md) cover nested payloads,
+mesh tolerances and the documented conformal-deformation branches.
+
 [Standalone Inspection envelopes](docs/features/standalone-inspection/README.md)
 cover current encrypted templates and historical projects, exact XML preservation
 and immutable complete-XML replacement.

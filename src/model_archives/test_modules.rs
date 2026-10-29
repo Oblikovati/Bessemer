@@ -555,3 +555,7 @@ mod body_reference_wrapper_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/derived_references.rs"]
 mod derived_reference_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/move_copy_bodies.rs"]
+mod move_copy_body_tests;
