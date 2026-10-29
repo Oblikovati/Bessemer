@@ -13,7 +13,7 @@ pub(super) enum SplinePrototype {
 const LISTS: &[&str] = &["sgSplineList_c", "modifSplineList_c", "cptsSplineList_c"];
 
 pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     for index in 0..reader.signed_count("spline_count", 2)? {
         reader.scope(&format!("splines[{index}]"), |reader| {
             let mask = reader.u16("stored_category_mask")?;

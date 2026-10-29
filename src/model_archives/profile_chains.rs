@@ -17,7 +17,7 @@ pub(super) fn collection(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) 
 }
 
 pub(super) fn chain(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     model_lists::unsigned_words(reader, "array_08")?;
     model_lists::unsigned_words(reader, "array_60")?;
     reader.u32("word_28")?;

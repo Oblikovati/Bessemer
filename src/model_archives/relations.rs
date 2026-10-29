@@ -3,7 +3,7 @@ use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
 
 pub(super) fn relation(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.text("unknown_10")?;
     reader.u16("unknown_18")?;
     reader.i32("unknown_48")?;
@@ -25,7 +25,7 @@ fn sides(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
 }
 
 pub(super) fn equation_side(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     model_lists::pointers(reader, map, "elements", ModelObjectRole::Any)?;
     reader.text("unknown_50")?;
     reader.i32s(&["unknown_58", "is_left"])?;
@@ -38,13 +38,13 @@ pub(super) fn equation_side(reader: &mut ModelDecoder<'_>, map: &mut ObjectReade
 }
 
 pub(super) fn element(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.text("unknown_08")?;
     reader.i32s(&["unknown_10", "unknown_14", "unknown_18", "unknown_1c"])
 }
 
 pub(super) fn dimension(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     model_lists::pointers(reader, map, "objects_30", ModelObjectRole::Any)?;
     reader.object(
         "component_reference",
@@ -60,7 +60,7 @@ pub(super) fn dimension(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -
 }
 
 pub(super) fn global_variable(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.object(
         "component_transform",
         map,

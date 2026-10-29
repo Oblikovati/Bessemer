@@ -150,7 +150,12 @@ pub(super) fn exploded_manager(
 ) -> Result<()> {
     features::read(reader, map)?;
     reader.object("views", map, ModelObjectRole::Declared(&["suObArray"]))?;
-    reader.object("id", map, ModelObjectRole::Declared(&["moExplPrtId_c"]))?;
+    let id_classes = if reader.assembly_kind().is_some() {
+        &["moExplPrtId_c", "moExplId_c"][..]
+    } else {
+        &["moExplPrtId_c"][..]
+    };
+    reader.object("id", map, ModelObjectRole::Declared(id_classes))?;
     reader.f64("raw_390")?;
     reader.i32s(&["raw_398", "raw_39c"])?;
     for index in 0..reader.count_with_minimum("word_map_count", 4)? {
@@ -163,7 +168,7 @@ pub(super) fn exploded_manager(
 }
 
 pub(super) fn exploded_id(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.text("name")?;
     reader.i32("raw_18")?;
     Ok(())

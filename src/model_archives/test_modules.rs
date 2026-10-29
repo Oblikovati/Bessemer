@@ -672,3 +672,18 @@ mod intermediate_manager_tests;
 
 #[path = "../../tests/resolved_features/intermediate_tail.rs"]
 mod intermediate_tail_tests;
+
+#[path = "../../tests/resolved_features/forming_tools.rs"]
+mod forming_tool_tests;
+
+#[path = "../../tests/model_archives/mfc_string_maps.rs"]
+mod mfc_string_map_tests;
+
+#[path = "../../tests/model_archives/assembly_configurations.rs"]
+mod assembly_configuration_tests;
+
+#[path = "../../tests/model_archives/assembly_corpus.rs"]
+mod assembly_corpus_tests;
+
+#[path = "../../tests/model_archives/assembly_objects.rs"]
+mod assembly_object_tests;

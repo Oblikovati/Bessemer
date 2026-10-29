@@ -16,7 +16,7 @@ pub(super) fn collections(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader)
 }
 
 pub(super) fn sketch_offset(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     let count = reader.signed_count("indices.count", 4)?;
     unsigned_indices(reader, "indices", count)?;
     if count != 0 {
@@ -41,7 +41,7 @@ fn unsigned_indices(reader: &mut ModelDecoder<'_>, label: &str, count: usize) ->
 }
 
 pub(super) fn offset(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     let count = sketch_collections::word_count(reader, "external_references.count")?;
     for index in 0..count {
         reader.object(
@@ -108,7 +108,7 @@ fn offset_indices(reader: &mut ModelDecoder<'_>, count: usize, kind: u16) -> Res
 }
 
 pub(super) fn profile(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     model_lists::pointers(reader, map, "items", ModelObjectRole::Any)?;
     reader.u16("word_28")?;
     reader.f64("value_30")?;
@@ -116,13 +116,13 @@ pub(super) fn profile(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> 
 }
 
 pub(super) fn loop_offset(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.i32s(&["word_8", "word_c"])?;
     model_lists::pointers(reader, map, "items", ModelObjectRole::Any)
 }
 
 pub(super) fn loop_edge(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.u16("word_8")?;
     reader.object("array", map, ModelObjectRole::Declared(&["suObArray"]))
 }
@@ -135,7 +135,7 @@ pub(super) fn sectioned_edge(reader: &mut ModelDecoder<'_>, map: &mut ObjectRead
 }
 
 pub(super) fn section_handles(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     for label in ["first", "second"] {
         reader.object(
             label,

@@ -24,7 +24,7 @@ const STAGES: &[sketch_geometry::DirectReader] = &[
 ];
 
 pub(super) fn ordinary(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     for stage in STAGES {
         stage(reader, map)?;
     }
@@ -32,7 +32,7 @@ pub(super) fn ordinary(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) ->
 }
 
 pub(super) fn after_patterns(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.object(
         "display_dimensions",
         map,

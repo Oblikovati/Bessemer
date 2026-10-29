@@ -88,6 +88,16 @@ pub(super) fn integer_pairs(
 }
 
 pub(super) fn empty_string_int_map(reader: &mut ModelDecoder<'_>, label: &str) -> Result<()> {
+    let count = map_entries64(reader, label, 5)?;
+    empty(reader, label, count)
+}
+
+/// Bound MFC map entries without narrowing their stored count, e.g. `map_entries64(reader, "map", 2)?`.
+pub(super) fn map_entries64(
+    reader: &mut ModelDecoder<'_>,
+    label: &str,
+    minimum: usize,
+) -> Result<usize> {
     let count = map_count64(reader, label)?;
     let count = i64::try_from(count).map_err(|_| {
         super::invalid(format!(
@@ -95,8 +105,7 @@ pub(super) fn empty_string_int_map(reader: &mut ModelDecoder<'_>, label: &str) -
         ))
     });
     let count = reader.checked(count)?;
-    let count = reader.counted_entries(label, count, 5)?;
-    empty(reader, label, count)
+    reader.counted_entries(label, count, minimum)
 }
 
 fn map_count64(reader: &mut ModelDecoder<'_>, label: &str) -> Result<u64> {

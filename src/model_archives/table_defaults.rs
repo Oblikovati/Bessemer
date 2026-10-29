@@ -33,7 +33,7 @@ const LAST: &[TableDefaultKind] = &[
 ];
 
 pub(super) fn read(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     fields(reader, Signed, "08")?;
     for (index, kind) in FIRST.iter().enumerate() {
         definition(reader, index, *kind)?;

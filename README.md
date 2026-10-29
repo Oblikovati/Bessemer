@@ -54,9 +54,9 @@ reconstruct exactly, including 33 shaded models; see the
 `Contents/DisplayLists` remains unresolved in the reference. High unsigned markers
 follow the [documented version predicates](docs/features/display-lists/unsigned-versions.md).
 
-Complete part, assembly, and drawing model archives, geometric interpretation and
-validation, and semantic CAD editing remain to be implemented; this is not yet
-Corliss feature parity.
+Older part layouts, assembly mate/feature streams, drawing model archives,
+geometric interpretation and validation, and semantic CAD editing remain to be
+implemented; this is not yet Corliss feature parity.
 
 ```rust
 let bytes = std::fs::read("part.sldprt")?;
@@ -83,7 +83,21 @@ coverage and the installed-corpus verification.
 See [header archive evidence](docs/features/header-archives/README.md) for field
 coverage, version boundaries, graph preservation, and remaining limits.
 The [forming-tool evidence](docs/features/forming-tools/README.md) records the
-shared-map inline-header reader and the remaining embedded-part work.
+shared-map inline-header and forming-tool readers, embedded edits and the
+906-configuration reconstruction gate.
+The [assembly configuration API](docs/features/assembly-configurations/README.md)
+reads, constructs, edits and writes complete ordinary assembly and routing
+configurations. All 180 reference-readable modern configurations reconstruct
+exactly. Its context keeps the actual root kind and header import map; routing
+trailers stay outside the resolved section.
+The [Composer container API](docs/features/composer-containers/README.md) supports
+complete SMG ZIP32 carriers, new-member construction and isolated payload edits.
+It preserves unrelated compressed members, extra fields and comments. Member
+scene, geometry and application schemas remain separate work.
+The [Composer packed-array API](docs/features/composer-arrays/README.md) reads,
+constructs and edits complete vector and index blocks with explicit caller
+context, preserved numeric patterns and exact wire validation. Floating-point
+reconstruction and whole scene semantics remain separate work.
 The [biography evidence](docs/features/biography-archives/README.md) covers stored
 environment observations and repeated-string reading and writing.
 See [Parasolid transmit evidence](docs/features/parasolid-transmit/README.md) for

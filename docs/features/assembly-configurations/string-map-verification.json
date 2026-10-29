@@ -1,0 +1,30 @@
+{
+  "command": "cargo xtask pr",
+  "success": true,
+  "platform": "Windows 11 x86_64",
+  "toolchain": "Rust 1.99.0 x86_64-pc-windows-msvc",
+  "library_passed": 1242,
+  "doctests_passed": 277,
+  "test_executables": 205,
+  "total_passed": 2792,
+  "ignored": 3,
+  "native_accepted": 906,
+  "focused_private_passed": 6,
+  "focused_public_passed": 3,
+  "reference_graphs": 28,
+  "reference_primitive_reads": 611,
+  "projected_primitive_reads": 788,
+  "source_hashes": {
+    "src/model_archives/mfc_string_maps.rs": "b5a30e433bd72e2164980ba257c10aa9880894e7571d20483c58fbb210aebc66",
+    "src/model_archives/configuration_io.rs": "0625f4778cf20cf7ced34c4697f107f8b494341203643b464380a0d88448148c",
+    "src/model_archives/object_body.rs": "038b8504e7ab77aa8a6bcd3111d8714f5cbd6f8eacf3a33016d5c64cb37dfa0f",
+    "tests/model_archives/mfc_string_maps.rs": "f75cde063f93f0aa6b9b2e8da4f5dace193539c6f202d6a16a3e868dd173f428",
+    "tests/model_string_maps.rs": "9af427878a1dfa3cea4261bdc789259de11f783c757ea6c9563b1540e8cdc94a",
+    "docs/features/assembly-configurations/freeze_string_maps.py": "94cd4d6396f7190751fc957f3d97607fd59048b2f4678d015930819cce05c72f"
+  },
+  "exclusions": [
+    "Assembly root/configuration support is not implemented by this prerequisite.",
+    "Map field values retain wire units; application meanings and original 8-bit code pages remain unresolved.",
+    "CAD topology, geometry, tolerance and application acceptance are outside this archive codec gate."
+  ]
+}

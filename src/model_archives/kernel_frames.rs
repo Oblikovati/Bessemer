@@ -51,7 +51,7 @@ pub(super) enum KernelBodyState {
 }
 
 pub(super) fn read_body_state(reader: &mut ModelDecoder<'_>) -> Result<KernelBodyState> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     if reader.u8("suppressed")? != 0 {
         return Ok(KernelBodyState::Suppressed);
     }
@@ -60,7 +60,7 @@ pub(super) fn read_body_state(reader: &mut ModelDecoder<'_>) -> Result<KernelBod
 }
 
 pub(super) fn read_raw_body(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     let context = constrained_context(reader)?;
     let frame = reader.scalar(|cursor| {
         let length = cursor.i32()?;

@@ -4,7 +4,7 @@ use crate::header::{FieldRule, WireKind};
 use crate::{BessemerError, FailureClass, Result};
 
 pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     for rule in crate::header::external_field_rules() {
         if (rule.enabled)(reader.version()) {
             field(reader, map, rule)?;
@@ -14,7 +14,7 @@ pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
 }
 
 pub(super) fn shared_file(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     for rule in crate::header::external_field_rules()
         .iter()
         .take_while(|rule| rule.name != "flags")

@@ -22,7 +22,7 @@ pub(super) fn collections(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader)
 }
 
 pub(super) fn styled(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     for index in 0..reader.signed_count("handles.count", 2)? {
         sketch_dimensions::handles(reader, map, &[&format!("handles[{index}]")])?;
     }
@@ -33,7 +33,7 @@ pub(super) fn styled(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> R
 }
 
 pub(super) fn intersection(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     if reader.u16("marker")? != 0 {
         return Ok(());
     }
@@ -118,7 +118,7 @@ fn dynamic_values(reader: &mut ModelDecoder<'_>, count: usize, width: usize) -> 
 }
 
 pub(super) fn edge(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.i32s(&["raw_158", "raw_15c", "raw_160", "raw_164", "raw_168"])?;
     for offset in ["38", "80", "c8", "110"] {
         reader.scope(&format!("group_{offset}"), |reader| {
@@ -194,6 +194,6 @@ pub(super) fn loop_reference(reader: &mut ModelDecoder<'_>, map: &mut ObjectRead
 }
 
 pub(super) fn bent_references(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     model_lists::pointers(reader, map, "items", ModelObjectRole::Any)
 }

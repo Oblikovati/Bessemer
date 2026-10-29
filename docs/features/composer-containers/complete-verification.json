@@ -1,0 +1,36 @@
+{
+  "command": "cargo xtask pr",
+  "success": true,
+  "platform": "Windows 11 x86_64",
+  "toolchain": "Rust 1.99.0 x86_64-pc-windows-msvc",
+  "library_passed": 1249,
+  "doctests_passed": 277,
+  "test_executables": 209,
+  "total_passed": 2816,
+  "ignored": 5,
+  "native_archives": 38,
+  "native_members": 550,
+  "native_processes": 2,
+  "independent_native_edit_archives": 38,
+  "independent_unchanged_encoded_members": 512,
+  "final_clippy_success": true,
+  "native_probe_sha256": "47f70d0b19918ef104fc205a5c03aaf611c5a5c819e7250aaa990ea9088967e4",
+  "native_edit_bundle_sha256": "e55bac973702f49bfdaac9eac5a1fe6a55895d5f163991d6f4f96bb7afc9bc2d",
+  "source_hashes": {
+    "src/composer/decode.rs": "6da4fa4c9583d902594766ac0cad39329eb157e1cd62ddc8f084590cc399fb34",
+    "src/composer/encode.rs": "4fb885422c39c7ddf7cfdb510aa130aee7ab5084e93009aeb38bc023c92a0b39",
+    "src/composer/mod.rs": "32de79b0281acd5647c978a924559c2966021b02f89c2a734bb2c7d42df86014",
+    "src/composer/names.rs": "2d13232b75bd060958ef6f4bb7eed23d54b91309dc2e38c1a5b52da4f8ce0d04",
+    "src/composer/payload.rs": "dff193d31fa12dbba93a99a856150343485ae947fda57e60c82204147265186a",
+    "src/composer/types.rs": "e6dbd252221db0fb84b5b461706c5861d1575f860204791a3df2e63574ec9ac1",
+    "src/lib.rs": "0a5c8b487bb7336ab9c7d879445f330fc5f9bf22872677856aa36f45c08941fe",
+    "tests/composer_containers.rs": "b36b46a95d43bb8eeb94a9cee8bef799ad1bbde42ae2ad9548d0b1edd8fcbc21",
+    "tests/composer_failures.rs": "23e7268e15d9df5a63223cfad135e400b22df203e1083f78b90394299036755e",
+    "tests/composer_native.rs": "77957204adc69052ee0410d944d0a9ff1d91bc01b171f1b8b9b5910eec7e43bb"
+  },
+  "exclusions": [
+    "Member payload XML, scene, geometry and asset schemas were not validated.",
+    "Native application acceptance was not checked.",
+    "Encryption, split archives, ZIP64 and data descriptors are explicit unsupported variants."
+  ]
+}

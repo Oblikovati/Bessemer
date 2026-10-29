@@ -3,7 +3,7 @@ use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
 
 pub(super) fn base(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.u32("unknown_60")?;
     reader.u32("unknown_64")?;
     let count = reader.u32("entity_count")? as usize;
@@ -51,7 +51,7 @@ fn modern_suffix(reader: &mut ModelDecoder<'_>) -> Result<()> {
 }
 
 pub(super) fn entity_id(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.object(
         "representation",
         map,
@@ -64,7 +64,7 @@ pub(super) fn entity_representation(
     reader: &mut ModelDecoder<'_>,
     map: &mut ObjectReader,
 ) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.object("feature", map, ModelObjectRole::Any)?;
     reader.object(
         "external_feature_reference",

@@ -2,10 +2,7 @@ use super::header_imports::ModelHeaderLoadPlan;
 use super::lightweight::ModelLightweightState;
 use super::reader::ModelArchiveContext;
 use super::{ModelDecoder, ModelField, ModelFieldLimits, encode_fields};
-use super::{
-    detail_definitions, environment, layers, lightweight, model_arrays, part_tail, post_views,
-    reference_tail, resolved_start, shared_tail, views,
-};
+use super::{lightweight, part_tail, reference_tail, resolved_model, shared_tail};
 use crate::Result;
 use crate::archive_codec::{ArchiveMapIndex, ObjectMapSnapshot, ObjectReader};
 use crate::header::{ArchiveVersion, DocumentHeader};
@@ -96,15 +93,7 @@ pub(super) fn resolved(
     raw_1614: i32,
 ) -> Result<()> {
     let flags = resolved_node_flags(node)?;
-    resolved_start::read(reader, map)?;
-    reader.scope("detail_definitions", |reader| {
-        detail_definitions::read(reader, map)
-    })?;
-    reader.scope("after_details", |reader| environment::read(reader, map))?;
-    reader.scope("views", |reader| views::read(reader, map))?;
-    reader.scope("postviews", |reader| post_views::read(reader, map))?;
-    reader.scope("arrays", |reader| model_arrays::read(reader, map))?;
-    reader.scope("layers", |reader| layers::read(reader, map))?;
+    resolved_model::prefix(reader, map)?;
     reader.scope("reference_tail", |reader| {
         reference_tail::read(reader, map, flags)
     })?;

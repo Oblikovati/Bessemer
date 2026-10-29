@@ -1,0 +1,48 @@
+{
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "parent_revision": "ee330b34bd59f4fb2dc5eca9ea72ab082cfb32a0",
+  "local_pr_gate": {
+    "command": "cargo xtask pr",
+    "passed": 2833,
+    "ignored": 6,
+    "test_executables_and_doctest_summaries": 212
+  },
+  "owned": {
+    "vectors": 54,
+    "indices": 12
+  },
+  "native": {
+    "archives": 38,
+    "vectors": 4367,
+    "indices": 3829,
+    "array_wire_bytes": 44629425,
+    "two_process_edited_output_identical": true,
+    "edited_sha256": "466afdb49153d0ca8a39d4152a1295983a574a71bcea2859d72816caa18a9de8"
+  },
+  "independent_oracles": [
+    "documented-field-order wire fixtures",
+    "literal binary32-pattern/edit goldens",
+    "actual immutable reference readers"
+  ],
+  "retained_reference_reports": {
+    "owned-vectors.json": "866da4390d53003596b6ab2eea273a6746b7fca4484cb29e827da4c599bfde73",
+    "owned-indices.json": "456b65b686efbea6dbcb4b5df318268df1a778de8e6187ef009e9763514843c9",
+    "native-reference.json": "d630016baacb75ee759990824670d6f4f3a7980cebc57e73c8323fb6bf586347",
+    "native-probe-reference.json": "0a55a86488297dec3f7bf42fb6a3a464cd2a05389f60fa14e1e62e395089f3d1",
+    "native-edit-reference.json": "8dd1106632bcf0847c5c1efbd5572e492a55209ff1aa8132af3c58809e0649c3",
+    "schema-reference.json": "80c09aaa916e6d75157e797937cfc60e454b047302e069fede40da5a74dda103"
+  },
+  "runtime_sha256": {
+    "src/composer/arrays/indices.rs": "36c6dcbb7106e8a172cca4d78c211fc4e207f604b8aa32525c204105a90d3f47",
+    "src/composer/arrays/mod.rs": "c13b5a844edbbc1b216142de98b58ddb40bff3bb7f6a4a05a7c50373cd077495",
+    "src/composer/arrays/types.rs": "c6a86e29f250951228cf9c5612c90851f78c2fda98a84761a1fec7712d3c5f6b",
+    "src/composer/arrays/vectors.rs": "4e12df0ec32819dcdc8f99124f86658ee9d5b172c58c69083b5c72ac9a9a3cfa"
+  },
+  "exclusions": [
+    "floating-point reconstruction",
+    "topology/geometry/self-intersection/tolerance validity",
+    "whole Composer scene/project semantics",
+    "native application acceptance"
+  ]
+}

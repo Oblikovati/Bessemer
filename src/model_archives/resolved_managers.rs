@@ -3,7 +3,7 @@ use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
 
 pub(super) fn atom_manager(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.i32("unknown_260")?;
     for index in 0..reader.signed_count("atom_count", 2)? {
         reader.required_object(
@@ -17,7 +17,7 @@ pub(super) fn atom_manager(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader
 }
 
 pub(super) fn ghost_manager(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.i32("unknown_80")?;
     let packed = reader.u32("packed_count")?;
     let count = ghost_count(reader, packed)?;
@@ -68,7 +68,7 @@ pub(super) fn relation_manager(
     reader: &mut ModelDecoder<'_>,
     map: &mut ObjectReader,
 ) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     model_lists::pointers(reader, map, "relations", ModelObjectRole::Any)?;
     cache(reader)?;
     reader.text("unknown_170")?;

@@ -3,6 +3,8 @@ use crate::archive_codec::{ArchiveCursor, MaterialRead, ObjectReader, ObjectReco
 use crate::header::ArchiveVersion;
 use crate::{BessemerError, FailureClass, Result};
 
+#[path = "embedded_parts.rs"]
+pub(super) mod embedded_parts;
 #[path = "inline_header.rs"]
 pub(super) mod inline_header;
 
@@ -39,6 +41,7 @@ pub(super) struct ModelDecoder<'a> {
     verified_part_root: Option<super::part_archive::VerifiedPartRoot>,
     saved_helper_state: Option<super::configuration_manager::SavedHelperState>,
     manager_dialect: Option<super::manager_dialect::ManagerDialect>,
+    inline_part_scope: bool,
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -46,6 +49,7 @@ pub(super) enum ModelArchiveContext {
     #[cfg(test)]
     Unspecified,
     OrdinaryPartExternalXml,
+    OrdinaryAssemblyExternalXml(super::assembly_context::AssemblyRootKind),
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -125,6 +129,7 @@ impl<'a> ModelDecoder<'a> {
             verified_part_root: None,
             saved_helper_state: None,
             manager_dialect: None,
+            inline_part_scope: false,
         })
     }
 
@@ -288,15 +293,60 @@ impl<'a> ModelDecoder<'a> {
         Ok(())
     }
 
+    /// Check the shared ordinary model dialect, e.g. before reading model layers.
+    pub fn require_ordinary_model(&mut self) -> Result<()> {
+        if self.version.value() > 0x27cb
+            && matches!(
+                self.context,
+                ModelArchiveContext::OrdinaryPartExternalXml
+                    | ModelArchiveContext::OrdinaryAssemblyExternalXml(_)
+            )
+        {
+            return self.active();
+        }
+        self.checked(Err(BessemerError::new("model archive", "ordinary model context", FailureClass::Unsupported,
+            format!("version {} context {:?}; expected > 0x27CB and an explicitly selected ordinary part or assembly context", self.version.value(), self.context))))
+    }
+
+    /// Preserve root selection for local factories, e.g. an assembly unit component.
+    pub fn assembly_kind(&self) -> Option<super::assembly_context::AssemblyRootKind> {
+        match self.context {
+            ModelArchiveContext::OrdinaryAssemblyExternalXml(kind) => Some(kind),
+            _ => None,
+        }
+    }
+
+    /// Require the selected assembly factory, e.g. before an assembly timing object.
+    pub fn require_ordinary_assembly(&mut self) -> Result<()> {
+        self.require_ordinary_model()?;
+        if self.assembly_kind().is_some() {
+            return Ok(());
+        }
+        self.checked(Err(BessemerError::new(
+            "model archive",
+            "assembly context",
+            FailureClass::Unsupported,
+            format!(
+                "context {:?}; expected OrdinaryAssemblyExternalXml",
+                self.context
+            ),
+        )))
+    }
+
     pub fn require_ordinary_part(&mut self) -> Result<()> {
         if self.context == ModelArchiveContext::OrdinaryPartExternalXml
             && self.version.value() > 0x27cb
         {
             return self.active();
         }
+        let entity = if self.assembly_kind().is_some() {
+            format!("ordinary part context at {}", self.scopes.join("."))
+        } else {
+            "ordinary part context".to_owned()
+        };
         let error = BessemerError::new(
             "model archive",
-            "ordinary part context",
+            &entity,
             crate::FailureClass::Unsupported,
             format!(
                 "version {} context {:?}; expected > 0x27CB and OrdinaryPartExternalXml",

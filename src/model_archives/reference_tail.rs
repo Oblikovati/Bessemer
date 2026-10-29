@@ -21,7 +21,7 @@ pub(super) fn per_body_sheet_metal(
 }
 
 pub(super) fn permanent_mark(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.i32("permanent_mark_id")?;
     Ok(())
 }
@@ -32,6 +32,29 @@ pub(super) fn read(
     node_flags: u32,
 ) -> Result<()> {
     reader.require_ordinary_part()?;
+    shared_prefix(reader, map)?;
+    if reader.i32("raw_100c")? != 0 {
+        reader.scope("sheet_metal_master", |reader| {
+            sheet_metal_master(reader, map)
+        })?;
+    }
+    id_map(reader, node_flags)?;
+    increment_lists(reader, map)
+}
+
+/// Read the assembly reference tail without the part-only sheet-metal stages.
+/// Example: `reference_tail::assembly(reader, map, original_flags)?`.
+pub(super) fn assembly(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+    node_flags: u32,
+) -> Result<()> {
+    reader.require_ordinary_model()?;
+    shared_prefix(reader, map)?;
+    id_map(reader, node_flags)
+}
+
+fn shared_prefix(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     reader.scope("forwarded_references", |reader| {
         model_lists::pointers(reader, map, "items", ModelObjectRole::Any)
     })?;
@@ -41,14 +64,7 @@ pub(super) fn read(
         ModelObjectRole::Declared(&["moPMarkRecord_c"]),
     )?;
     reader.i32("raw_1008")?;
-    atom_map(reader, map)?;
-    if reader.i32("raw_100c")? != 0 {
-        reader.scope("sheet_metal_master", |reader| {
-            sheet_metal_master(reader, map)
-        })?;
-    }
-    id_map(reader, node_flags)?;
-    increment_lists(reader, map)
+    atom_map(reader, map)
 }
 
 fn atom_map(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
@@ -121,7 +137,7 @@ pub(super) fn increment(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -
 }
 
 pub(super) fn forwarded_feature(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.i32("feature_id")?;
     Ok(())
 }

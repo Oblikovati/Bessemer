@@ -3,7 +3,7 @@ use crate::archive_codec::{MaterialRead, ObjectReader, ObjectRecord};
 use crate::{BessemerError, FailureClass, Result};
 
 pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.entries(10, "model view slots")?;
     for index in 0..10 {
         reader.object(
@@ -16,7 +16,7 @@ pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
 }
 
 pub(super) fn view(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.text("name")?;
     reader.transform("transform_360")?;
     reader.transform("transform_368")?;

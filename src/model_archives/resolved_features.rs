@@ -66,11 +66,12 @@ fn mbsm(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
 }
 
 pub(super) fn construct(
-    fields: Vec<ModelField>,
+    mut fields: Vec<ModelField>,
     source: &PartConfigurationArchive,
     manager: &ParsedConfigurationManager,
     limits: ModelFieldLimits,
 ) -> Result<ParsedResolvedFeatures> {
+    super::construction::embedded_section_lengths(&mut fields, limits.maximum_bytes)?;
     let bytes = super::encode_fields(&fields, limits.maximum_bytes)?;
     let parsed = parse(&bytes, source, manager, limits)?;
     if parsed.fields != fields {

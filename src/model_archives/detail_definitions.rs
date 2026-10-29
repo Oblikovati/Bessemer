@@ -6,7 +6,7 @@ use crate::Result;
 use crate::archive_codec::ObjectReader;
 
 pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     defaults(reader, map)?;
     helpers(reader, map)
 }

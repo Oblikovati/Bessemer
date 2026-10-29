@@ -76,7 +76,7 @@ pub(super) const COMPONENTS: &[&str] = &[
 ];
 
 pub(super) fn wrapper(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.object(
         "component_reference",
         map,

@@ -18,12 +18,12 @@ const LINE: ModelObjectRole<'_> =
     ModelObjectRole::Declared(&["moLineBackedUpData_c", "moSegmentBackedUpData_c"]);
 
 pub(super) fn point(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     double_vector(reader, "point_08")
 }
 
 pub(super) fn plane(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     for label in ["point_08", "vector_20", "vector_38"] {
         double_vector(reader, label)?;
     }
@@ -36,7 +36,7 @@ pub(super) fn sphere(reader: &mut ModelDecoder<'_>) -> Result<()> {
 }
 
 pub(super) fn line(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     for index in 0..2 {
         reader.object(&format!("points[{index}]"), map, POINT)?;
     }
@@ -77,7 +77,7 @@ pub(super) fn parabola(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) ->
 }
 
 pub(super) fn cylinder(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     double_vector(reader, "vector_08")?;
     double_vector(reader, "point_20")?;
     reader.f64("raw_38")?;

@@ -7,6 +7,15 @@ pub(super) fn read(
     map: &mut ObjectReader,
     class: &ArchiveClass,
 ) -> Result<()> {
+    if let Some(result) = super::assembly_explosion::read_object(reader, map, &class.name) {
+        return result;
+    }
+    if let Some(result) = super::assembly_references::read_object(reader, map, &class.name) {
+        return result;
+    }
+    if let Some(result) = super::assembly_tail::read_object(reader, map, &class.name) {
+        return result;
+    }
     if let Some(kind) = super::body_features::BodyFeatureKind::parse(&class.name) {
         return super::body_features::read(reader, map, kind);
     }
@@ -38,6 +47,7 @@ pub(super) fn read(
         return result;
     }
     match class.name.as_str() {
+        "moCameraFeature_c" => super::camera_features::read(reader, map),
         "moDome_c" => super::dome_records::read(reader, map),
         "moExtruRefSurface_c" => super::extruded_surfaces::read(reader, map),
         "moOrderedFaceArray_c" => super::extruded_surfaces::ordered_faces(reader, map),
@@ -107,8 +117,11 @@ fn read_existing(
     }
     match class.name.as_str() {
         "moHeader_c" => super::reader::inline_header::read(reader, map),
+        "moFormTool_c" => super::reader::embedded_parts::tool(reader, map),
+        "moPart_c" => super::reader::embedded_parts::read(reader, map),
         "moNodeName_c" => reader.text("name"),
         "moCStringHandle_c" => reader.text("value"),
+        "su_CMapStringToString" => super::mfc_string_maps::read(reader),
         "moExtObject_c" => super::external_references::read(reader, map),
         "moVisualProperties_c" => crate::archive_codec::material::visual(reader),
         "gcCurvatureObject_c" => super::spatial_objects::curvature(reader),

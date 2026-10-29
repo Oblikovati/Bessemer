@@ -3,7 +3,7 @@ use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
 
 pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.i32s(&["raw_af8", "raw_d4c"])?;
     if reader.i32("print_settings_presence")? != 0 {
         reader.scope("print_settings", |reader| print_settings(reader, map))?;
@@ -56,7 +56,7 @@ fn print_settings(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Resu
 }
 
 pub(super) fn thread_manager(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     for index in 0..reader.signed_count("group_count", 8)? {
         reader.scope(&format!("groups[{index}]"), |reader| {
             reader.i32("key")?;
@@ -77,7 +77,7 @@ pub(super) fn thread_manager(reader: &mut ModelDecoder<'_>, map: &mut ObjectRead
 }
 
 pub(super) fn bend_format(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.text("format")?;
     reader.object(
         "substitutions",

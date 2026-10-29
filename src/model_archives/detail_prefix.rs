@@ -7,7 +7,7 @@ use crate::archive_codec::MaterialRead;
 use RawScalarKind::{Double, Octet, Signed, Text, Unsigned, Word};
 
 pub(super) fn read(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     groups(reader, PREFIX_EARLY)?;
     middle(reader)?;
     late(reader)?;
@@ -94,7 +94,7 @@ pub(super) fn strings(reader: &mut ModelDecoder<'_>) -> Result<()> {
 }
 
 pub(super) fn character_format(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     reader.text("font_name")?;
     groups(
         reader,

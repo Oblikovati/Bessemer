@@ -71,7 +71,7 @@ pub(super) fn base(
     map: &mut ObjectReader,
     default: bool,
 ) -> Result<()> {
-    reader.require_ordinary_part()?;
+    reader.require_ordinary_model()?;
     double_vector(reader, "root_point")?;
     double_vector(reader, "normal")?;
     reader.transform("transform")?;
