@@ -20,6 +20,7 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moCurveInFile_c" => super::curve_files::read(reader, map),
         "moSMMiteredFlange_c" => super::mitered_flanges::read(reader, map),
         "moSketchBend_c" => super::sketch_bends::read(reader, map),
         "moSketchBitmap_c" => super::sketch_bitmaps::read(reader, map),

@@ -372,6 +372,9 @@ One Bend records, tagged stored handles and explicit kind-7 dependency stops.
 [Mitered flanges](docs/features/mitered-flanges/README.md) cover direct object and
 DWORD collections and four sketch-associated handle groups.
 
+[Stored curve files](docs/features/curve-files/README.md) cover inherited kernel
+wires, verbatim filenames, signed point counts and bit-preserving coordinates.
+
 [Standalone Inspection envelopes](docs/features/standalone-inspection/README.md)
 cover current encrypted templates and historical projects, exact XML preservation
 and immutable complete-XML replacement.

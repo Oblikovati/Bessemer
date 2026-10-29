@@ -299,6 +299,8 @@ pub(super) const CLASSES: &[&str] = &[
     "moRefCurve_c",
     // #54 / C-212: helices retain the inherited reference-geometry chooser owner.
     "moHelix_c",
+    // #54 / C-375 proves the complete inherited reference-curve owner chain.
+    "moCurveInFile_c",
     // #54 / C-278 binds the inherited reference-geometry chooser owner.
     "moCompositeCurve_c",
     // #54 / C-389 binds the complete moReferenceCurve_c ancestry and owner role.

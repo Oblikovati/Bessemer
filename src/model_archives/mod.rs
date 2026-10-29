@@ -144,6 +144,7 @@ mod construction;
 mod contour_objects;
 mod cosmetic_thread_data;
 mod cosmetic_threads;
+mod curve_files;
 mod datum_helpers;
 mod derived_references;
 mod detail_definitions;

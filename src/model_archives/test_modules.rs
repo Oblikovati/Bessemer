@@ -575,3 +575,7 @@ mod sketch_bend_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/mitered_flanges.rs"]
 mod mitered_flange_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/curve_files.rs"]
+mod curve_file_tests;
