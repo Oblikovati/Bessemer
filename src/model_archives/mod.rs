@@ -145,6 +145,7 @@ mod contour_objects;
 mod cosmetic_thread_data;
 mod cosmetic_threads;
 mod datum_helpers;
+mod derived_references;
 mod detail_definitions;
 mod detail_helpers;
 mod detail_prefix;

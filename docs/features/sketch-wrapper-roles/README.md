@@ -60,3 +60,8 @@ bytes; `accepted-reference.json` binds that report without claiming a fresh repl
 
 The humanizer skill is unavailable in this session; prose review remains a
 maintainer task.
+
+The derived-feature and surface-body additions extend the current family to 23
+classes; [derived-reference evidence](../derived-feature-references/README.md)
+retains their complete caller fixtures. Earlier corpus counts above describe
+the corresponding frozen baseline.

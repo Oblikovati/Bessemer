@@ -33,7 +33,7 @@ source-isolation tests passed. The actual native stock/component reference test
 also passed, checking both stock classes, retained endpoints, box fields,
 configuration values and fixed-transform words.
 
-The shared wrapper family now contains 21 reviewed classes. An additional 270
+This checkpoint's shared wrapper family contained 21 reviewed classes. An additional 270
 graphs and 30 owned documents exercise body references at extrusion/end,
 starting-end, revolution-end, four sketch-intersection fields and sketch external
 references. Their 51,809 primitive observations supplement the stock fixtures;

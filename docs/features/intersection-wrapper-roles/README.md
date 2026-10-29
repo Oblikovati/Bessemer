@@ -68,3 +68,8 @@ ten single-face wrappers, ten solid wrappers and twenty nulls. Old partial
 prefixes receive no completion credit. Reports are retained in
 `frontier-checkpoint.json`, `accepted-reference.json`,
 `native-wrapper-reference.json` and `local-verification.json`.
+
+The derived-feature and surface-body additions extend the current family to 23
+classes; [derived-reference evidence](../derived-feature-references/README.md)
+retains their complete caller fixtures. Earlier corpus counts above describe
+the corresponding frozen baseline.

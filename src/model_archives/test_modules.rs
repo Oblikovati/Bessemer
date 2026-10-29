@@ -551,3 +551,7 @@ mod stock_feature_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/body_reference_wrappers.rs"]
 mod body_reference_wrapper_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/derived_references.rs"]
+mod derived_reference_tests;

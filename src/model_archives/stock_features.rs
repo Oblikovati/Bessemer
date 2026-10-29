@@ -28,7 +28,7 @@ fn source_body(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<
     reader.object(
         "body_reference_a00",
         map,
-        ModelObjectRole::Declared(&["moBodyRef_w"]),
+        ModelObjectRole::Declared(super::derived_references::BODY_REFERENCES),
     )?;
     let mode = reader.u32("raw_968")?;
     if matches!(mode, 1 | 2) {

@@ -24,6 +24,8 @@
 
 ### Added
 
+- Added complete modern derived-feature and surface-body reference reconstruction, including signed point presence, shared arrays and generic wrapper callers. (#54)
+
 - Added standalone Inspection project/template envelope reading and writing for current and historical cipher profiles, with exact XML replacement and bounded validation. (#92)
 
 - Added ordinary stock and mirrored-stock record reconstruction, including direct collections, body references, component boxes and independent kernel controls. (#54)

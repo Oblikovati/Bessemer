@@ -20,6 +20,8 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moDerivedFeatRef_w" => super::derived_references::read(reader, map),
+        "moSurfaceBodyRef_w" => super::stock_references::body(reader, map),
         "moStock_c" => super::stock_features::read(reader, map, false),
         "moMirrorStock_c" => super::stock_features::read(reader, map, true),
         "moBodyRef_w" => super::stock_references::body(reader, map),

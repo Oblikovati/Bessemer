@@ -75,7 +75,7 @@ fn observed_family(position: usize) -> std::collections::BTreeSet<String> {
 }
 
 #[test]
-fn each_of_the_four_fields_accepts_exactly_the_reviewed_twenty_one_class_family() {
+fn each_of_the_four_fields_accepts_exactly_the_reviewed_twenty_three_class_family() {
     let expected: std::collections::BTreeSet<String> = super::model_references::WRAPPER_CLASSES
         .iter()
         .map(|s| s.to_string())
@@ -90,8 +90,15 @@ fn each_of_the_four_fields_accepts_exactly_the_reviewed_twenty_one_class_family(
             3,
             &reference_path(0, position),
         ));
+        for target in 0..2 {
+            actual.insert(super::derived_reference_tests::fresh_wrapper_class(
+                target,
+                3,
+                &reference_path(0, position),
+            ));
+        }
         assert_eq!(actual, expected);
-        assert_eq!(actual.len(), 21);
+        assert_eq!(actual.len(), 23);
     }
 }
 

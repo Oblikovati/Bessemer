@@ -69,3 +69,8 @@ This change does not assign engineering meanings to wrapper targets or execute
 feature regeneration. Geometry validity, application acceptance and full schema
 parity remain open. The humanizer skill is unavailable; maintainer prose review
 remains open.
+
+The derived-feature and surface-body additions extend the current family to 23
+classes; [derived-reference evidence](../derived-feature-references/README.md)
+retains their complete caller fixtures. Earlier corpus counts above describe
+the corresponding frozen baseline.
