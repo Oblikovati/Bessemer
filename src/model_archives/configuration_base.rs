@@ -112,7 +112,7 @@ fn late_maps(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()
     io::integer_pairs(reader, "map_a48", true)?;
     io::empty_string_int_map(reader, "strings_5f8")?;
     reader.i32("raw_b2c")?;
-    io::empty_signed(reader, "visual_count_b50", 4)?;
+    super::configuration_visual_maps::read(reader)?;
     super::custom_properties::list(reader, "properties_b60")?;
     reader.object(
         "abbreviated_views_b78",

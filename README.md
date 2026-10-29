@@ -434,3 +434,7 @@ annotation groups; see
 Deform features retain both matching passes, independent stored geometry versions
 and complete curve-point references; see
 [the Deform evidence](docs/features/deformations/README.md).
+
+Configuration visual maps preserve ordered keys and complete direct appearance
+bodies without adding object tags or identities. See
+[the visual-map evidence](docs/features/configuration-visual-maps/README.md).

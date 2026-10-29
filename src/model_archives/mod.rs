@@ -45,6 +45,7 @@ mod configuration_scenes;
 mod configuration_suffix;
 mod configuration_tables;
 mod configuration_toolbox;
+mod configuration_visual_maps;
 mod connection_payload;
 mod connection_points;
 mod constraint_planes;

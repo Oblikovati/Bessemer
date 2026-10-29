@@ -653,3 +653,6 @@ mod deformation_tests;
 
 #[path = "../../tests/resolved_features/deform_matching.rs"]
 mod deform_match_tests;
+
+#[path = "../../tests/resolved_features/configuration_visual_maps.rs"]
+mod configuration_visual_map_tests;
