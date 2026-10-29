@@ -71,6 +71,11 @@ pub(super) fn line_head(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -
 /// Retain the stored character as a u16 unit and preserve both short flags.
 /// Example: `note_text::character(reader)?`.
 pub(super) fn character(reader: &mut ModelDecoder<'_>) -> Result<()> {
+    text_data_base(reader)?;
+    reader.u16("raw_40").map(|_| ())
+}
+
+fn text_data_base(reader: &mut ModelDecoder<'_>) -> Result<()> {
     reader.require_ordinary_part()?;
     raw_fields::groups(
         reader,
@@ -80,7 +85,7 @@ pub(super) fn character(reader: &mut ModelDecoder<'_>) -> Result<()> {
             (Word, "30"),
             (Signed, "34"),
             (Single, "38"),
-            (Word, "10 40"),
+            (Word, "10"),
         ],
     )
 }
