@@ -7935,5 +7935,1727 @@
       "complete_document_schema": false,
       "runtime_float_reconstruction_reproduced": false
     }
+  },
+  {
+    "name": "mixed-info-edited",
+    "texture_import_enabled": true,
+    "encoded_bytes": 315,
+    "decoded_bytes": 794,
+    "encoded_sha256": "5bf497ab85df5ac80da4d9867b69b61a508efffec944d31cfefcb71a4090edcb",
+    "decoded_sha256": "aa180eff60174d4a6a07340cc8314580fc00540ee9427d753b9e1908b10c5777",
+    "counts": {
+      "opaque_attribute_bytes": 6,
+      "vector_mode:a": 3,
+      "index_width:1": 3,
+      "vector_mode:c": 1,
+      "geometry:b": 1,
+      "lods": 2,
+      "geodes": 1,
+      "geometry:f": 1
+    },
+    "projection": {
+      "version": 7.9,
+      "information_prefix": {
+        "version": 7.9,
+        "source": {
+          "value": "source",
+          "code_units": 6,
+          "terminator": 0,
+          "start": 8,
+          "end": 22
+        },
+        "raw_word_20": 4275878552,
+        "info_logical_size": 102,
+        "info_start": 30,
+        "info_end": 136,
+        "info_physical_size": 106,
+        "fields": {
+          "raw_3c": 0,
+          "raw_34": 1,
+          "raw_54": 2,
+          "raw_44": 3,
+          "raw_4c": 4,
+          "raw_5c": 5,
+          "raw_30": 255,
+          "raw_32": 2,
+          "raw_64": 2147483648,
+          "string_68": {
+            "value": "Bessemer info \u03a9",
+            "code_units": 15,
+            "terminator": 0,
+            "start": 84,
+            "end": 116
+          },
+          "string_88": {
+            "value": "B",
+            "code_units": 1,
+            "terminator": 10,
+            "start": 116,
+            "end": 120
+          },
+          "raw_a8": 2143363909,
+          "raw_ac": 18446744073709551615,
+          "raw_31": 254,
+          "future_bytes": {
+            "bytes": 3,
+            "sha256": "ade099751d2ea9f3393f0f32d20c6b980dd5d3b0989dea599b966ae0d3cd5a1e"
+          }
+        },
+        "end": 136,
+        "unknown_bytes": 124,
+        "scene_graph_bytes": 658
+      },
+      "entries": [
+        {
+          "kind": "geode",
+          "start": 136,
+          "end": 668,
+          "matrix_presence_byte": 255,
+          "matrix_patterns": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "name": {
+            "value": "geode",
+            "code_units": 5,
+            "terminator": 10,
+            "raw_hex": "670065006f0064006500",
+            "start": 202,
+            "end": 214
+          },
+          "userdata": {
+            "start": 214,
+            "end": 336,
+            "stored_size": 118,
+            "fields": {
+              "guid": {
+                "value": "guid",
+                "code_units": 4,
+                "terminator": 10,
+                "raw_hex": "6700750069006400",
+                "start": 0,
+                "end": 10
+              },
+              "raw_d0": 4294967295,
+              "assembly_name": {
+                "value": "assembly",
+                "code_units": 8,
+                "terminator": 10,
+                "raw_hex": "61007300730065006d0062006c007900",
+                "start": 14,
+                "end": 32
+              },
+              "raw_d4": 2147483648,
+              "raw_f8": 2143289345,
+              "center_of_gravity_patterns": [
+                0,
+                1,
+                2
+              ],
+              "inertia_axes_patterns": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+              ],
+              "raw_12c": 255,
+              "issued_from": {
+                "value": "source",
+                "code_units": 6,
+                "terminator": 10,
+                "raw_hex": "73006f007500720063006500",
+                "start": 89,
+                "end": 103
+              },
+              "lod_count": 2,
+              "future_bytes": {
+                "bytes": 11,
+                "sha256": "f44f9cbe5b35f60ec88562cb445eef6f8298d2a42b94c670610817d410391842"
+              }
+            },
+            "effective_lod_count": 2,
+            "complete_component_framing": true
+          },
+          "lods": [
+            {
+              "geometry_count": 1,
+              "faces": [
+                {
+                  "start": 340,
+                  "end": 664,
+                  "attributes": {
+                    "start": 341,
+                    "end": 515,
+                    "first_name_text": {
+                      "value": "parent",
+                      "code_units": 6,
+                      "terminator": 10,
+                      "raw_hex": "70006100720065006e007400",
+                      "start": 341,
+                      "end": 355
+                    },
+                    "second_name_text": {
+                      "value": "second",
+                      "code_units": 6,
+                      "terminator": 0,
+                      "raw_hex": "7300650063006f006e006400",
+                      "start": 355,
+                      "end": 369
+                    },
+                    "diffuse_patterns": [
+                      0,
+                      1,
+                      2
+                    ],
+                    "specular_patterns": [
+                      3,
+                      4,
+                      5
+                    ],
+                    "ambient_patterns": [
+                      6,
+                      7,
+                      8
+                    ],
+                    "stored_material_ec_pattern": 9,
+                    "alpha_pattern": 10,
+                    "texture_body_size": 98,
+                    "textures": {
+                      "count": 1,
+                      "names": [
+                        {
+                          "value": "texture",
+                          "code_units": 7,
+                          "terminator": 10,
+                          "raw_hex": "7400650078007400750072006500",
+                          "start": 4,
+                          "end": 20
+                        }
+                      ],
+                      "matrix_patterns": [
+                        [
+                          0,
+                          1,
+                          2,
+                          3,
+                          4,
+                          5,
+                          6,
+                          7,
+                          8,
+                          9,
+                          10,
+                          11,
+                          12,
+                          13,
+                          14,
+                          15
+                        ]
+                      ],
+                      "mapping_bytes": [
+                        2
+                      ],
+                      "flags": [
+                        255
+                      ],
+                      "environment_words": [
+                        17
+                      ],
+                      "wrap_bytes": [
+                        3
+                      ],
+                      "last_flags": [
+                        254
+                      ]
+                    },
+                    "opaque_texture_bytes": {
+                      "bytes": 6,
+                      "sha256": "ebb3de8a3d9a40366132eb5deb5af44e4c96c11696f8fc34ea2c1d8bd8399171"
+                    }
+                  },
+                  "geometry": {
+                    "start": 515,
+                    "end": 664,
+                    "kind": "b",
+                    "fields": {
+                      "triangle_count": 1,
+                      "coordinate_count": 3,
+                      "index_count": 3,
+                      "coordinates": {
+                        "start": 528,
+                        "end": 568,
+                        "count": 3,
+                        "dimensions": 3,
+                        "mode": "a",
+                        "constant_axis_flags": [
+                          0,
+                          0,
+                          0
+                        ],
+                        "constant_patterns": [
+                          null,
+                          null,
+                          null
+                        ],
+                        "endpoint_patterns": [
+                          null,
+                          null,
+                          null
+                        ],
+                        "packed_values": {
+                          "start": 532,
+                          "end": 568,
+                          "count": 9,
+                          "value_width": 4,
+                          "raw_bytes": {
+                            "bytes": 36,
+                            "sha256": "5d7e2d9b1dcbc85e7c890036a2cf2f9fe7b66554f2df08cec6aa9c0a25c99c21"
+                          }
+                        }
+                      },
+                      "coordinate_indices": {
+                        "start": 568,
+                        "end": 571,
+                        "count": 3,
+                        "value_width": 1,
+                        "raw_bytes": {
+                          "bytes": 3,
+                          "sha256": "ae4b3280e56e2faf83f414a6e3dabe9d5fbe18976544c05fed121accb85b53fc"
+                        },
+                        "domain_parameter": 3
+                      },
+                      "normal_binding": 1,
+                      "normal_count": 3,
+                      "normals": {
+                        "start": 579,
+                        "end": 619,
+                        "count": 3,
+                        "dimensions": 3,
+                        "mode": "a",
+                        "constant_axis_flags": [
+                          0,
+                          0,
+                          0
+                        ],
+                        "constant_patterns": [
+                          null,
+                          null,
+                          null
+                        ],
+                        "endpoint_patterns": [
+                          null,
+                          null,
+                          null
+                        ],
+                        "packed_values": {
+                          "start": 583,
+                          "end": 619,
+                          "count": 9,
+                          "value_width": 4,
+                          "raw_bytes": {
+                            "bytes": 36,
+                            "sha256": "5d7e2d9b1dcbc85e7c890036a2cf2f9fe7b66554f2df08cec6aa9c0a25c99c21"
+                          }
+                        }
+                      },
+                      "normal_indices": {
+                        "start": 619,
+                        "end": 622,
+                        "count": 3,
+                        "value_width": 1,
+                        "raw_bytes": {
+                          "bytes": 3,
+                          "sha256": "ae4b3280e56e2faf83f414a6e3dabe9d5fbe18976544c05fed121accb85b53fc"
+                        },
+                        "domain_parameter": 3
+                      },
+                      "texture_layer_count": 2,
+                      "textures": {
+                        "coordinate_count": 3,
+                        "layers": [
+                          {
+                            "binding": 3,
+                            "coordinates": {
+                              "start": 634,
+                              "end": 657,
+                              "count": 3,
+                              "dimensions": 2,
+                              "mode": "c",
+                              "constant_axis_flags": [
+                                0,
+                                0
+                              ],
+                              "constant_patterns": [
+                                null,
+                                null
+                              ],
+                              "endpoint_patterns": [
+                                [
+                                  1065353216,
+                                  1073741824
+                                ],
+                                [
+                                  1065353216,
+                                  1073741824
+                                ]
+                              ],
+                              "packed_values": {
+                                "start": 651,
+                                "end": 657,
+                                "count": 6,
+                                "value_width": 1,
+                                "raw_bytes": {
+                                  "bytes": 6,
+                                  "sha256": "17e88db187afd62c16e5debf3e6527cd006bc012bc90b51a810cd80c2d511f43"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "binding": 0,
+                            "coordinates": null
+                          }
+                        ],
+                        "indices": {
+                          "start": 661,
+                          "end": 664,
+                          "count": 3,
+                          "value_width": 1,
+                          "raw_bytes": {
+                            "bytes": 3,
+                            "sha256": "ae4b3280e56e2faf83f414a6e3dabe9d5fbe18976544c05fed121accb85b53fc"
+                          },
+                          "domain_parameter": 3
+                        }
+                      }
+                    },
+                    "complete_component_framing": true
+                  }
+                }
+              ]
+            },
+            {
+              "geometry_count": 0,
+              "faces": []
+            }
+          ]
+        },
+        {
+          "kind": "face",
+          "face": {
+            "start": 668,
+            "end": 794,
+            "attributes": {
+              "start": 669,
+              "end": 745,
+              "first_name_text": {
+                "value": "parent",
+                "code_units": 6,
+                "terminator": 10,
+                "raw_hex": "70006100720065006e007400",
+                "start": 669,
+                "end": 683
+              },
+              "second_name_text": {
+                "value": "second",
+                "code_units": 6,
+                "terminator": 0,
+                "raw_hex": "7300650063006f006e006400",
+                "start": 683,
+                "end": 697
+              },
+              "diffuse_patterns": [
+                0,
+                1,
+                2
+              ],
+              "specular_patterns": [
+                3,
+                4,
+                5
+              ],
+              "ambient_patterns": [
+                6,
+                7,
+                8
+              ],
+              "stored_material_ec_pattern": 9,
+              "alpha_pattern": 10,
+              "texture_body_size": 0,
+              "textures": null,
+              "opaque_texture_bytes": {
+                "bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            },
+            "geometry": {
+              "start": 745,
+              "end": 794,
+              "kind": "f",
+              "fields": {
+                "point_size_pattern": 1073741824,
+                "coordinate_count": 3,
+                "coordinates": {
+                  "start": 754,
+                  "end": 794,
+                  "count": 3,
+                  "dimensions": 3,
+                  "mode": "a",
+                  "constant_axis_flags": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "constant_patterns": [
+                    null,
+                    null,
+                    null
+                  ],
+                  "endpoint_patterns": [
+                    null,
+                    null,
+                    null
+                  ],
+                  "packed_values": {
+                    "start": 758,
+                    "end": 794,
+                    "count": 9,
+                    "value_width": 4,
+                    "raw_bytes": {
+                      "bytes": 36,
+                      "sha256": "5d7e2d9b1dcbc85e7c890036a2cf2f9fe7b66554f2df08cec6aa9c0a25c99c21"
+                    }
+                  }
+                }
+              },
+              "complete_component_framing": true
+            }
+          }
+        }
+      ],
+      "counts": {
+        "opaque_attribute_bytes": 6,
+        "vector_mode:a": 3,
+        "index_width:1": 3,
+        "vector_mode:c": 1,
+        "geometry:b": 1,
+        "lods": 2,
+        "geodes": 1,
+        "geometry:f": 1
+      },
+      "end": 794,
+      "texture_import_enabled": true,
+      "complete_scene_framing": true,
+      "complete_document_schema": false,
+      "runtime_float_reconstruction_reproduced": false
+    }
+  },
+  {
+    "name": "mixed-userdata-edited",
+    "texture_import_enabled": true,
+    "encoded_bytes": 320,
+    "decoded_bytes": 790,
+    "encoded_sha256": "da62d53b9437ddf11ecd7cdf177802cdeb08a6bbf7b0338bda8118c132572c5d",
+    "decoded_sha256": "81eece397c56aab0a0fe4f2af9dcf41cfc38715aaefb1b3e1d40cd33393fac93",
+    "counts": {
+      "opaque_attribute_bytes": 6,
+      "vector_mode:a": 3,
+      "index_width:1": 3,
+      "vector_mode:c": 1,
+      "geometry:b": 1,
+      "lods": 2,
+      "geodes": 1,
+      "geometry:f": 1
+    },
+    "projection": {
+      "version": 7.9,
+      "information_prefix": {
+        "version": 7.9,
+        "source": {
+          "value": "source",
+          "code_units": 6,
+          "terminator": 0,
+          "start": 8,
+          "end": 22
+        },
+        "raw_word_20": 4275878552,
+        "info_logical_size": 76,
+        "info_start": 30,
+        "info_end": 110,
+        "info_physical_size": 80,
+        "fields": {
+          "raw_3c": 0,
+          "raw_34": 1,
+          "raw_54": 2,
+          "raw_44": 3,
+          "raw_4c": 4,
+          "raw_5c": 5,
+          "raw_30": 255,
+          "raw_32": 2,
+          "raw_64": 2147483648,
+          "string_68": {
+            "value": "A\ud800",
+            "code_units": 2,
+            "terminator": 0,
+            "start": 84,
+            "end": 90
+          },
+          "string_88": {
+            "value": "B",
+            "code_units": 1,
+            "terminator": 10,
+            "start": 90,
+            "end": 94
+          },
+          "raw_a8": 2143363909,
+          "raw_ac": 18446744073709551615,
+          "raw_31": 254,
+          "future_bytes": {
+            "bytes": 3,
+            "sha256": "ade099751d2ea9f3393f0f32d20c6b980dd5d3b0989dea599b966ae0d3cd5a1e"
+          }
+        },
+        "end": 110,
+        "unknown_bytes": 98,
+        "scene_graph_bytes": 680
+      },
+      "entries": [
+        {
+          "kind": "geode",
+          "start": 110,
+          "end": 664,
+          "matrix_presence_byte": 255,
+          "matrix_patterns": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "name": {
+            "value": "geode",
+            "code_units": 5,
+            "terminator": 10,
+            "raw_hex": "670065006f0064006500",
+            "start": 176,
+            "end": 188
+          },
+          "userdata": {
+            "start": 188,
+            "end": 332,
+            "stored_size": 140,
+            "fields": {
+              "guid": {
+                "value": "Bessemer GUID \u03a9",
+                "code_units": 15,
+                "terminator": 10,
+                "raw_hex": "420065007300730065006d0065007200200047005500490044002000a903",
+                "start": 0,
+                "end": 32
+              },
+              "raw_d0": 4294967295,
+              "assembly_name": {
+                "value": "assembly",
+                "code_units": 8,
+                "terminator": 10,
+                "raw_hex": "61007300730065006d0062006c007900",
+                "start": 36,
+                "end": 54
+              },
+              "raw_d4": 2147483648,
+              "raw_f8": 2143289345,
+              "center_of_gravity_patterns": [
+                0,
+                1,
+                2
+              ],
+              "inertia_axes_patterns": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+              ],
+              "raw_12c": 255,
+              "issued_from": {
+                "value": "source",
+                "code_units": 6,
+                "terminator": 10,
+                "raw_hex": "73006f007500720063006500",
+                "start": 111,
+                "end": 125
+              },
+              "lod_count": 2,
+              "future_bytes": {
+                "bytes": 11,
+                "sha256": "f44f9cbe5b35f60ec88562cb445eef6f8298d2a42b94c670610817d410391842"
+              }
+            },
+            "effective_lod_count": 2,
+            "complete_component_framing": true
+          },
+          "lods": [
+            {
+              "geometry_count": 1,
+              "faces": [
+                {
+                  "start": 336,
+                  "end": 660,
+                  "attributes": {
+                    "start": 337,
+                    "end": 511,
+                    "first_name_text": {
+                      "value": "parent",
+                      "code_units": 6,
+                      "terminator": 10,
+                      "raw_hex": "70006100720065006e007400",
+                      "start": 337,
+                      "end": 351
+                    },
+                    "second_name_text": {
+                      "value": "second",
+                      "code_units": 6,
+                      "terminator": 0,
+                      "raw_hex": "7300650063006f006e006400",
+                      "start": 351,
+                      "end": 365
+                    },
+                    "diffuse_patterns": [
+                      0,
+                      1,
+                      2
+                    ],
+                    "specular_patterns": [
+                      3,
+                      4,
+                      5
+                    ],
+                    "ambient_patterns": [
+                      6,
+                      7,
+                      8
+                    ],
+                    "stored_material_ec_pattern": 9,
+                    "alpha_pattern": 10,
+                    "texture_body_size": 98,
+                    "textures": {
+                      "count": 1,
+                      "names": [
+                        {
+                          "value": "texture",
+                          "code_units": 7,
+                          "terminator": 10,
+                          "raw_hex": "7400650078007400750072006500",
+                          "start": 4,
+                          "end": 20
+                        }
+                      ],
+                      "matrix_patterns": [
+                        [
+                          0,
+                          1,
+                          2,
+                          3,
+                          4,
+                          5,
+                          6,
+                          7,
+                          8,
+                          9,
+                          10,
+                          11,
+                          12,
+                          13,
+                          14,
+                          15
+                        ]
+                      ],
+                      "mapping_bytes": [
+                        2
+                      ],
+                      "flags": [
+                        255
+                      ],
+                      "environment_words": [
+                        17
+                      ],
+                      "wrap_bytes": [
+                        3
+                      ],
+                      "last_flags": [
+                        254
+                      ]
+                    },
+                    "opaque_texture_bytes": {
+                      "bytes": 6,
+                      "sha256": "ebb3de8a3d9a40366132eb5deb5af44e4c96c11696f8fc34ea2c1d8bd8399171"
+                    }
+                  },
+                  "geometry": {
+                    "start": 511,
+                    "end": 660,
+                    "kind": "b",
+                    "fields": {
+                      "triangle_count": 1,
+                      "coordinate_count": 3,
+                      "index_count": 3,
+                      "coordinates": {
+                        "start": 524,
+                        "end": 564,
+                        "count": 3,
+                        "dimensions": 3,
+                        "mode": "a",
+                        "constant_axis_flags": [
+                          0,
+                          0,
+                          0
+                        ],
+                        "constant_patterns": [
+                          null,
+                          null,
+                          null
+                        ],
+                        "endpoint_patterns": [
+                          null,
+                          null,
+                          null
+                        ],
+                        "packed_values": {
+                          "start": 528,
+                          "end": 564,
+                          "count": 9,
+                          "value_width": 4,
+                          "raw_bytes": {
+                            "bytes": 36,
+                            "sha256": "5d7e2d9b1dcbc85e7c890036a2cf2f9fe7b66554f2df08cec6aa9c0a25c99c21"
+                          }
+                        }
+                      },
+                      "coordinate_indices": {
+                        "start": 564,
+                        "end": 567,
+                        "count": 3,
+                        "value_width": 1,
+                        "raw_bytes": {
+                          "bytes": 3,
+                          "sha256": "ae4b3280e56e2faf83f414a6e3dabe9d5fbe18976544c05fed121accb85b53fc"
+                        },
+                        "domain_parameter": 3
+                      },
+                      "normal_binding": 1,
+                      "normal_count": 3,
+                      "normals": {
+                        "start": 575,
+                        "end": 615,
+                        "count": 3,
+                        "dimensions": 3,
+                        "mode": "a",
+                        "constant_axis_flags": [
+                          0,
+                          0,
+                          0
+                        ],
+                        "constant_patterns": [
+                          null,
+                          null,
+                          null
+                        ],
+                        "endpoint_patterns": [
+                          null,
+                          null,
+                          null
+                        ],
+                        "packed_values": {
+                          "start": 579,
+                          "end": 615,
+                          "count": 9,
+                          "value_width": 4,
+                          "raw_bytes": {
+                            "bytes": 36,
+                            "sha256": "5d7e2d9b1dcbc85e7c890036a2cf2f9fe7b66554f2df08cec6aa9c0a25c99c21"
+                          }
+                        }
+                      },
+                      "normal_indices": {
+                        "start": 615,
+                        "end": 618,
+                        "count": 3,
+                        "value_width": 1,
+                        "raw_bytes": {
+                          "bytes": 3,
+                          "sha256": "ae4b3280e56e2faf83f414a6e3dabe9d5fbe18976544c05fed121accb85b53fc"
+                        },
+                        "domain_parameter": 3
+                      },
+                      "texture_layer_count": 2,
+                      "textures": {
+                        "coordinate_count": 3,
+                        "layers": [
+                          {
+                            "binding": 3,
+                            "coordinates": {
+                              "start": 630,
+                              "end": 653,
+                              "count": 3,
+                              "dimensions": 2,
+                              "mode": "c",
+                              "constant_axis_flags": [
+                                0,
+                                0
+                              ],
+                              "constant_patterns": [
+                                null,
+                                null
+                              ],
+                              "endpoint_patterns": [
+                                [
+                                  1065353216,
+                                  1073741824
+                                ],
+                                [
+                                  1065353216,
+                                  1073741824
+                                ]
+                              ],
+                              "packed_values": {
+                                "start": 647,
+                                "end": 653,
+                                "count": 6,
+                                "value_width": 1,
+                                "raw_bytes": {
+                                  "bytes": 6,
+                                  "sha256": "17e88db187afd62c16e5debf3e6527cd006bc012bc90b51a810cd80c2d511f43"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "binding": 0,
+                            "coordinates": null
+                          }
+                        ],
+                        "indices": {
+                          "start": 657,
+                          "end": 660,
+                          "count": 3,
+                          "value_width": 1,
+                          "raw_bytes": {
+                            "bytes": 3,
+                            "sha256": "ae4b3280e56e2faf83f414a6e3dabe9d5fbe18976544c05fed121accb85b53fc"
+                          },
+                          "domain_parameter": 3
+                        }
+                      }
+                    },
+                    "complete_component_framing": true
+                  }
+                }
+              ]
+            },
+            {
+              "geometry_count": 0,
+              "faces": []
+            }
+          ]
+        },
+        {
+          "kind": "face",
+          "face": {
+            "start": 664,
+            "end": 790,
+            "attributes": {
+              "start": 665,
+              "end": 741,
+              "first_name_text": {
+                "value": "parent",
+                "code_units": 6,
+                "terminator": 10,
+                "raw_hex": "70006100720065006e007400",
+                "start": 665,
+                "end": 679
+              },
+              "second_name_text": {
+                "value": "second",
+                "code_units": 6,
+                "terminator": 0,
+                "raw_hex": "7300650063006f006e006400",
+                "start": 679,
+                "end": 693
+              },
+              "diffuse_patterns": [
+                0,
+                1,
+                2
+              ],
+              "specular_patterns": [
+                3,
+                4,
+                5
+              ],
+              "ambient_patterns": [
+                6,
+                7,
+                8
+              ],
+              "stored_material_ec_pattern": 9,
+              "alpha_pattern": 10,
+              "texture_body_size": 0,
+              "textures": null,
+              "opaque_texture_bytes": {
+                "bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            },
+            "geometry": {
+              "start": 741,
+              "end": 790,
+              "kind": "f",
+              "fields": {
+                "point_size_pattern": 1073741824,
+                "coordinate_count": 3,
+                "coordinates": {
+                  "start": 750,
+                  "end": 790,
+                  "count": 3,
+                  "dimensions": 3,
+                  "mode": "a",
+                  "constant_axis_flags": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "constant_patterns": [
+                    null,
+                    null,
+                    null
+                  ],
+                  "endpoint_patterns": [
+                    null,
+                    null,
+                    null
+                  ],
+                  "packed_values": {
+                    "start": 754,
+                    "end": 790,
+                    "count": 9,
+                    "value_width": 4,
+                    "raw_bytes": {
+                      "bytes": 36,
+                      "sha256": "5d7e2d9b1dcbc85e7c890036a2cf2f9fe7b66554f2df08cec6aa9c0a25c99c21"
+                    }
+                  }
+                }
+              },
+              "complete_component_framing": true
+            }
+          }
+        }
+      ],
+      "counts": {
+        "opaque_attribute_bytes": 6,
+        "vector_mode:a": 3,
+        "index_width:1": 3,
+        "vector_mode:c": 1,
+        "geometry:b": 1,
+        "lods": 2,
+        "geodes": 1,
+        "geometry:f": 1
+      },
+      "end": 790,
+      "texture_import_enabled": true,
+      "complete_scene_framing": true,
+      "complete_document_schema": false,
+      "runtime_float_reconstruction_reproduced": false
+    }
+  },
+  {
+    "name": "empty-user",
+    "texture_import_enabled": true,
+    "encoded_bytes": 66,
+    "decoded_bytes": 62,
+    "encoded_sha256": "ebfdd6b9732c3fad476c9d37582577ab6756e99f050f10eca0ffa67e646d1113",
+    "decoded_sha256": "8f88afe50167868effc3f148584b566f8fc2272714d72e9d279758ad80b099c4",
+    "counts": {
+      "lods": 1,
+      "geodes": 1
+    },
+    "projection": {
+      "version": 7.9,
+      "information_prefix": {
+        "version": 7.9,
+        "source": {
+          "value": "source",
+          "code_units": 6,
+          "terminator": 0,
+          "start": 8,
+          "end": 22
+        },
+        "raw_word_20": 4275878552,
+        "info_logical_size": 0,
+        "info_start": 30,
+        "info_end": 30,
+        "info_physical_size": 0,
+        "fields": {
+          "future_bytes": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "end": 30,
+        "unknown_bytes": 18,
+        "scene_graph_bytes": 32
+      },
+      "entries": [
+        {
+          "kind": "geode",
+          "start": 30,
+          "end": 62,
+          "matrix_presence_byte": 0,
+          "matrix_patterns": null,
+          "name": {
+            "value": "empty-user",
+            "code_units": 10,
+            "terminator": 0,
+            "raw_hex": "65006d007000740079002d007500730065007200",
+            "start": 32,
+            "end": 54
+          },
+          "userdata": {
+            "start": 54,
+            "end": 58,
+            "stored_size": 0,
+            "fields": {
+              "future_bytes": {
+                "bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            },
+            "effective_lod_count": 1,
+            "complete_component_framing": true
+          },
+          "lods": [
+            {
+              "geometry_count": 0,
+              "faces": []
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "lods": 1,
+        "geodes": 1
+      },
+      "end": 62,
+      "texture_import_enabled": true,
+      "complete_scene_framing": true,
+      "complete_document_schema": false,
+      "runtime_float_reconstruction_reproduced": false
+    }
+  },
+  {
+    "name": "short-user",
+    "texture_import_enabled": true,
+    "encoded_bytes": 73,
+    "decoded_bytes": 68,
+    "encoded_sha256": "5864db4fd155bb88fab3f9887a7a0405ea82434c4b98bfcf846d7961881509a3",
+    "decoded_sha256": "b46f7779bea5193dc7468dff2c0f29160f7a40ff7ad4ef948a5b3d586876c5fe",
+    "counts": {
+      "lods": 1,
+      "geodes": 1
+    },
+    "projection": {
+      "version": 7.9,
+      "information_prefix": {
+        "version": 7.9,
+        "source": {
+          "value": "source",
+          "code_units": 6,
+          "terminator": 0,
+          "start": 8,
+          "end": 22
+        },
+        "raw_word_20": 4275878552,
+        "info_logical_size": 0,
+        "info_start": 30,
+        "info_end": 30,
+        "info_physical_size": 0,
+        "fields": {
+          "future_bytes": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "end": 30,
+        "unknown_bytes": 18,
+        "scene_graph_bytes": 38
+      },
+      "entries": [
+        {
+          "kind": "geode",
+          "start": 30,
+          "end": 68,
+          "matrix_presence_byte": 0,
+          "matrix_patterns": null,
+          "name": {
+            "value": "short-user",
+            "code_units": 10,
+            "terminator": 0,
+            "raw_hex": "730068006f00720074002d007500730065007200",
+            "start": 32,
+            "end": 54
+          },
+          "userdata": {
+            "start": 54,
+            "end": 64,
+            "stored_size": 6,
+            "fields": {
+              "guid": {
+                "value": "A\ud800",
+                "code_units": 2,
+                "terminator": 0,
+                "raw_hex": "410000d8",
+                "start": 0,
+                "end": 6
+              },
+              "future_bytes": {
+                "bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            },
+            "effective_lod_count": 1,
+            "complete_component_framing": true
+          },
+          "lods": [
+            {
+              "geometry_count": 0,
+              "faces": []
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "lods": 1,
+        "geodes": 1
+      },
+      "end": 68,
+      "texture_import_enabled": true,
+      "complete_scene_framing": true,
+      "complete_document_schema": false,
+      "runtime_float_reconstruction_reproduced": false
+    }
+  },
+  {
+    "name": "zero-lods",
+    "texture_import_enabled": true,
+    "encoded_bytes": 131,
+    "decoded_bytes": 163,
+    "encoded_sha256": "3902c136cb7dc97fa9630cbb147f19041db0298aad70869fa2516bbe7fd0111a",
+    "decoded_sha256": "3d7b8d90b48e19017101ef440f96730893c0f586d8702e58e7028316bd36cc12",
+    "counts": {
+      "geodes": 1
+    },
+    "projection": {
+      "version": 7.9,
+      "information_prefix": {
+        "version": 7.9,
+        "source": {
+          "value": "source",
+          "code_units": 6,
+          "terminator": 0,
+          "start": 8,
+          "end": 22
+        },
+        "raw_word_20": 4275878552,
+        "info_logical_size": 0,
+        "info_start": 30,
+        "info_end": 30,
+        "info_physical_size": 0,
+        "fields": {
+          "future_bytes": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "end": 30,
+        "unknown_bytes": 18,
+        "scene_graph_bytes": 133
+      },
+      "entries": [
+        {
+          "kind": "geode",
+          "start": 30,
+          "end": 163,
+          "matrix_presence_byte": 0,
+          "matrix_patterns": null,
+          "name": {
+            "value": "zero-lods",
+            "code_units": 9,
+            "terminator": 0,
+            "raw_hex": "7a00650072006f002d006c006f0064007300",
+            "start": 32,
+            "end": 52
+          },
+          "userdata": {
+            "start": 52,
+            "end": 163,
+            "stored_size": 107,
+            "fields": {
+              "guid": {
+                "value": "guid",
+                "code_units": 4,
+                "terminator": 10,
+                "raw_hex": "6700750069006400",
+                "start": 0,
+                "end": 10
+              },
+              "raw_d0": 4294967295,
+              "assembly_name": {
+                "value": "assembly",
+                "code_units": 8,
+                "terminator": 10,
+                "raw_hex": "61007300730065006d0062006c007900",
+                "start": 14,
+                "end": 32
+              },
+              "raw_d4": 2147483648,
+              "raw_f8": 2143289345,
+              "center_of_gravity_patterns": [
+                0,
+                1,
+                2
+              ],
+              "inertia_axes_patterns": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+              ],
+              "raw_12c": 255,
+              "issued_from": {
+                "value": "source",
+                "code_units": 6,
+                "terminator": 10,
+                "raw_hex": "73006f007500720063006500",
+                "start": 89,
+                "end": 103
+              },
+              "lod_count": 0,
+              "future_bytes": {
+                "bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            },
+            "effective_lod_count": 0,
+            "complete_component_framing": true
+          },
+          "lods": []
+        }
+      ],
+      "counts": {
+        "geodes": 1
+      },
+      "end": 163,
+      "texture_import_enabled": true,
+      "complete_scene_framing": true,
+      "complete_document_schema": false,
+      "runtime_float_reconstruction_reproduced": false
+    }
+  },
+  {
+    "name": "short-info-8",
+    "texture_import_enabled": true,
+    "encoded_bytes": 47,
+    "decoded_bytes": 38,
+    "encoded_sha256": "590bf9bac5ace2222a221da01d2f849237fb19b16d5a46c9341308cf638d6879",
+    "decoded_sha256": "395f2f416e0dce18acd2e78ce395f93059ca245fc3855a2dad04844c121fa69c",
+    "counts": {},
+    "projection": {
+      "version": 7.9,
+      "information_prefix": {
+        "version": 7.9,
+        "source": {
+          "value": "source",
+          "code_units": 6,
+          "terminator": 0,
+          "start": 8,
+          "end": 22
+        },
+        "raw_word_20": 4275878552,
+        "info_logical_size": 8,
+        "info_start": 30,
+        "info_end": 38,
+        "info_physical_size": 8,
+        "fields": {
+          "raw_3c": 0,
+          "future_bytes": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "end": 38,
+        "unknown_bytes": 26,
+        "scene_graph_bytes": 0
+      },
+      "entries": [],
+      "counts": {},
+      "end": 38,
+      "texture_import_enabled": true,
+      "complete_scene_framing": true,
+      "complete_document_schema": false,
+      "runtime_float_reconstruction_reproduced": false
+    }
+  },
+  {
+    "name": "short-info-50",
+    "texture_import_enabled": true,
+    "encoded_bytes": 63,
+    "decoded_bytes": 80,
+    "encoded_sha256": "b3be9ab991e5f6c461fc5d5f1555f6f062459abd76dff166320e7dfa530c17bf",
+    "decoded_sha256": "2f3d1175c41d3684a7d0d17179be2b6b0f9983b33bdc7e515736360f7e387577",
+    "counts": {},
+    "projection": {
+      "version": 7.9,
+      "information_prefix": {
+        "version": 7.9,
+        "source": {
+          "value": "source",
+          "code_units": 6,
+          "terminator": 0,
+          "start": 8,
+          "end": 22
+        },
+        "raw_word_20": 4275878552,
+        "info_logical_size": 50,
+        "info_start": 30,
+        "info_end": 80,
+        "info_physical_size": 50,
+        "fields": {
+          "raw_3c": 0,
+          "raw_34": 1,
+          "raw_54": 2,
+          "raw_44": 3,
+          "raw_4c": 4,
+          "raw_5c": 5,
+          "raw_30": 255,
+          "raw_32": 2,
+          "future_bytes": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "end": 80,
+        "unknown_bytes": 68,
+        "scene_graph_bytes": 0
+      },
+      "entries": [],
+      "counts": {},
+      "end": 80,
+      "texture_import_enabled": true,
+      "complete_scene_framing": true,
+      "complete_document_schema": false,
+      "runtime_float_reconstruction_reproduced": false
+    }
+  },
+  {
+    "name": "short-info-54",
+    "texture_import_enabled": true,
+    "encoded_bytes": 65,
+    "decoded_bytes": 84,
+    "encoded_sha256": "3d62846b33d52f2a6aed664d601789e69b0ce94e5c70cc578dd1b3554c8b7bea",
+    "decoded_sha256": "77f99eba4bfee689af822b29633e2fc65c54f783d2337a148b3bcd81f2aeae1c",
+    "counts": {},
+    "projection": {
+      "version": 7.9,
+      "information_prefix": {
+        "version": 7.9,
+        "source": {
+          "value": "source",
+          "code_units": 6,
+          "terminator": 0,
+          "start": 8,
+          "end": 22
+        },
+        "raw_word_20": 4275878552,
+        "info_logical_size": 54,
+        "info_start": 30,
+        "info_end": 84,
+        "info_physical_size": 54,
+        "fields": {
+          "raw_3c": 0,
+          "raw_34": 1,
+          "raw_54": 2,
+          "raw_44": 3,
+          "raw_4c": 4,
+          "raw_5c": 5,
+          "raw_30": 255,
+          "raw_32": 2,
+          "raw_64": 2147483648,
+          "future_bytes": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "end": 84,
+        "unknown_bytes": 72,
+        "scene_graph_bytes": 0
+      },
+      "entries": [],
+      "counts": {},
+      "end": 84,
+      "texture_import_enabled": true,
+      "complete_scene_framing": true,
+      "complete_document_schema": false,
+      "runtime_float_reconstruction_reproduced": false
+    }
+  },
+  {
+    "name": "empty-info-texts",
+    "texture_import_enabled": true,
+    "encoded_bytes": 68,
+    "decoded_bytes": 92,
+    "encoded_sha256": "a4f78cd1d70b595c8903f05cafa01fc569dd8e6db326dad57c89479e2fdccece",
+    "decoded_sha256": "adb89df6dfd16a0a3878ffa9b734fcdc6186942e42015f142da1e486901a331a",
+    "counts": {},
+    "projection": {
+      "version": 7.9,
+      "information_prefix": {
+        "version": 7.9,
+        "source": {
+          "value": "source",
+          "code_units": 6,
+          "terminator": 0,
+          "start": 8,
+          "end": 22
+        },
+        "raw_word_20": 4275878552,
+        "info_logical_size": 58,
+        "info_start": 30,
+        "info_end": 92,
+        "info_physical_size": 62,
+        "fields": {
+          "raw_3c": 0,
+          "raw_34": 1,
+          "raw_54": 2,
+          "raw_44": 3,
+          "raw_4c": 4,
+          "raw_5c": 5,
+          "raw_30": 255,
+          "raw_32": 2,
+          "raw_64": 0,
+          "string_68": {
+            "value": "",
+            "code_units": 0,
+            "terminator": 0,
+            "start": 84,
+            "end": 86
+          },
+          "string_88": {
+            "value": "",
+            "code_units": 0,
+            "terminator": 10,
+            "start": 86,
+            "end": 88
+          },
+          "raw_a8": 7,
+          "future_bytes": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "end": 92,
+        "unknown_bytes": 80,
+        "scene_graph_bytes": 0
+      },
+      "entries": [],
+      "counts": {},
+      "end": 92,
+      "texture_import_enabled": true,
+      "complete_scene_framing": true,
+      "complete_document_schema": false,
+      "runtime_float_reconstruction_reproduced": false
+    }
+  },
+  {
+    "name": "constant-points",
+    "texture_import_enabled": true,
+    "encoded_bytes": 115,
+    "decoded_bytes": 132,
+    "encoded_sha256": "6713648360f923ee45d54f6e4de69e4479a8c64135514717c3aefcf8e60f3256",
+    "decoded_sha256": "ca5408923181373ee2c5f5e116da59e3ec167c8a77d4d81dd0e5b48067551c12",
+    "counts": {
+      "opaque_attribute_bytes": 0,
+      "vector_mode:c": 1,
+      "geometry:f": 1
+    },
+    "projection": {
+      "version": 7.9,
+      "information_prefix": {
+        "version": 7.9,
+        "source": {
+          "value": "source",
+          "code_units": 6,
+          "terminator": 0,
+          "start": 8,
+          "end": 22
+        },
+        "raw_word_20": 4275878552,
+        "info_logical_size": 0,
+        "info_start": 30,
+        "info_end": 30,
+        "info_physical_size": 0,
+        "fields": {
+          "future_bytes": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "end": 30,
+        "unknown_bytes": 18,
+        "scene_graph_bytes": 102
+      },
+      "entries": [
+        {
+          "kind": "face",
+          "face": {
+            "start": 30,
+            "end": 132,
+            "attributes": {
+              "start": 31,
+              "end": 107,
+              "first_name_text": {
+                "value": "parent",
+                "code_units": 6,
+                "terminator": 10,
+                "raw_hex": "70006100720065006e007400",
+                "start": 31,
+                "end": 45
+              },
+              "second_name_text": {
+                "value": "second",
+                "code_units": 6,
+                "terminator": 0,
+                "raw_hex": "7300650063006f006e006400",
+                "start": 45,
+                "end": 59
+              },
+              "diffuse_patterns": [
+                0,
+                1,
+                2
+              ],
+              "specular_patterns": [
+                3,
+                4,
+                5
+              ],
+              "ambient_patterns": [
+                6,
+                7,
+                8
+              ],
+              "stored_material_ec_pattern": 9,
+              "alpha_pattern": 10,
+              "texture_body_size": 0,
+              "textures": null,
+              "opaque_texture_bytes": {
+                "bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            },
+            "geometry": {
+              "start": 107,
+              "end": 132,
+              "kind": "f",
+              "fields": {
+                "point_size_pattern": 2143363909,
+                "coordinate_count": 1,
+                "coordinates": {
+                  "start": 116,
+                  "end": 132,
+                  "count": 1,
+                  "dimensions": 3,
+                  "mode": "c",
+                  "constant_axis_flags": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "constant_patterns": [
+                    2147483648,
+                    2139169605,
+                    4286578688
+                  ],
+                  "endpoint_patterns": [
+                    null,
+                    null,
+                    null
+                  ],
+                  "packed_values": {
+                    "start": 132,
+                    "end": 132,
+                    "count": 0,
+                    "value_width": 1,
+                    "raw_bytes": {
+                      "bytes": 0,
+                      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                    }
+                  }
+                }
+              },
+              "complete_component_framing": true
+            }
+          }
+        }
+      ],
+      "counts": {
+        "opaque_attribute_bytes": 0,
+        "vector_mode:c": 1,
+        "geometry:f": 1
+      },
+      "end": 132,
+      "texture_import_enabled": true,
+      "complete_scene_framing": true,
+      "complete_document_schema": false,
+      "runtime_float_reconstruction_reproduced": false
+    }
   }
 ]

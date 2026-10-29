@@ -28,6 +28,8 @@
 
 ### Added
 
+- Added complete Composer geometry-stream reading, typed construction, isolated field edits and gzip writing, with explicit import context, derived bounded sizes, preserved patterns and revision-bound field identities. (#103)
+
 - Added versioned Composer vector reconstruction with integer binary32 rounding, exact raw-lane copies, explicit output limits and reported profile coverage, provenance and native-control-state exclusions. (#101)
 
 - Added complete Composer packed-vector and index block reading, construction and isolated code edits with explicit caller context, exact wire reconstruction and preserved constant/endpoint patterns. (#101)

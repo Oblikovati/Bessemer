@@ -101,6 +101,11 @@ reconstruction is available through the explicit
 [versioned numeric profile](docs/features/composer-vectors/README.md), with exact
 component patterns and native control-state exclusions. Whole scene semantics
 remain separate work.
+The [Composer geometry-stream API](docs/features/composer-scenes/README.md)
+reads, constructs, edits and writes complete gzip scenes with named typed fields,
+explicit texture-import context and derived bounded sizes. All 38 installed
+streams reconstruct exactly; native application and project semantics remain
+separate acceptance requirements.
 The [biography evidence](docs/features/biography-archives/README.md) covers stored
 environment observations and repeated-string reading and writing.
 See [Parasolid transmit evidence](docs/features/parasolid-transmit/README.md) for

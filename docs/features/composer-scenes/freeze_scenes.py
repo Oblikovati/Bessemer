@@ -51,10 +51,10 @@ def information_prefix(info: bytes = b'', source: str = 'source') -> bytes:
     return struct.pack('<d', 7.9) + text_wire(source, 0) + words(0xfedcba98, logical) + info
 
 
-def full_information() -> bytes:
+def full_information(first: str = 'A\ud800') -> bytes:
     """Cover all known info cells, both terminators, a surrogate and sized future bytes."""
     body = struct.pack('<6Q', *range(6)) + b'\xff\x02' + words(0x80000000)
-    body += text_wire('A\ud800', 0) + text_wire('B', 10)
+    body += text_wire(first, 0) + text_wire('B', 10)
     return body + words(0x7fc12345) + struct.pack('<Q', 0xffffffffffffffff) + b'\xfeXYZ'
 
 
@@ -68,14 +68,15 @@ def material_body(name: str) -> bytes:
     return words(1) + text_wire(name) + words(*range(16)) + b'\x02\xff' + words(17) + b'\x03\xfe' + b'future'
 
 
-def mixed_scene(geode_name: str = 'geode', texture_name: str = 'texture') -> bytes:
+def mixed_scene(geode_name: str = 'geode', texture_name: str = 'texture',
+                info_name: str = 'A\ud800', guid: str = 'guid') -> bytes:
     """Construct two LODs and a top-level face with raw matrix presence and bounded user data."""
     import test_composerscene as builders
     import test_composerattributes as user_builders
-    user = user_builders.user_body(2) + b'user-future'
+    user = text_wire(guid) + user_builders.user_body(2)[len(text_wire('guid')):] + b'user-future'
     geode = b'u\xff' + words(*range(16)) + text_wire(geode_name)
     geode += words(len(user)) + user + words(1) + face_wire(builders.geometry('b'), material_body(texture_name)) + words(0)
-    return information_prefix(full_information()) + geode + face_wire(builders.geometry('f'))
+    return information_prefix(full_information(info_name)) + geode + face_wire(builders.geometry('f'))
 
 
 def owned_cases() -> list[tuple[str, bool, bytes]]:
@@ -89,7 +90,29 @@ def owned_cases() -> list[tuple[str, bool, bytes]]:
     cases.append(('texture-context-disabled', False, information_prefix() + face_wire(skipped)))
     cases += material_cases(builders)
     cases.extend([('mixed', True, mixed_scene()), ('mixed-name-edited', True, mixed_scene('Bessemer Ω')),
-                  ('mixed-material-edited', True, mixed_scene(texture_name='Bessemer texture Ω'))])
+                  ('mixed-material-edited', True, mixed_scene(texture_name='Bessemer texture Ω')),
+                  ('mixed-info-edited', True, mixed_scene(info_name='Bessemer info Ω')),
+                  ('mixed-userdata-edited', True, mixed_scene(guid='Bessemer GUID Ω'))])
+    cases.extend(short_metadata_cases())
+    constant_points = b'f' + words(0x7fc12345, 1) + b'c\x01\x01\x01' + words(0x80000000, 0x7f812345, 0xff800000)
+    cases.append(('constant-points', True, information_prefix() + face_wire(constant_points)))
+    return cases
+
+
+def short_metadata_cases() -> list[tuple[str, bool, bytes]]:
+    """Pin absent-versus-empty fields and default/explicit-zero LOD behavior."""
+    import test_composerattributes as user_builders
+    cases = []
+    for name, body, lods in [('empty-user', b'', words(0)), ('short-user', text_wire('A\ud800', 0), words(0)),
+                             ('zero-lods', user_builders.user_body(0), b'')]:
+        geode = b'u\0' + text_wire(name, 0) + words(len(body)) + body + lods
+        cases.append((name, True, information_prefix() + geode))
+    for size in (8, 50, 54):
+        body = (struct.pack('<6Q', *range(6)) + b'\xff\x02' + words(0x80000000))[:size]
+        prefix = struct.pack('<d', 7.9) + text_wire('source', 0) + words(0xfedcba98, len(body)) + body
+        cases.append((f'short-info-{size}', True, prefix))
+    empty_texts = struct.pack('<6Q', *range(6)) + b'\xff\x02' + words(0) + text_wire('', 0) + text_wire('') + words(7)
+    cases.append(('empty-info-texts', True, information_prefix(empty_texts)))
     return cases
 
 

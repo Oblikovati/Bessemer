@@ -2,6 +2,7 @@
 pub mod arrays;
 mod decode;
 mod encode;
+pub mod geometry;
 mod names;
 mod payload;
 mod types;

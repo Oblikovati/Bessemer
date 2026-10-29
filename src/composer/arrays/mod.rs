@@ -8,10 +8,12 @@ mod vectors;
 
 use crate::{BessemerError, FailureClass, Result};
 pub use indices::ComposerIndexBlock;
+pub(super) use indices::read_index_prefix;
 pub use types::*;
 pub use value_types::*;
 pub use values::ComposerVectorValues;
 pub use vectors::ComposerVectorBlock;
+pub(super) use vectors::read_vector_prefix;
 
 fn invalid(cause: impl Into<String>) -> BessemerError {
     BessemerError::new(
