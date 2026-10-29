@@ -52,6 +52,10 @@ fn primitive_kind(value: &ModelFieldValue) -> Option<&'static str> {
 fn compare_field(field: &ModelField, start: usize, spans: &[PrimitiveSpan]) -> usize {
     let wire = encode_fields(std::slice::from_ref(field), 30000).unwrap();
     let end = start + wire.len();
+    if field.path.contains(".byte_plane_40[") {
+        compare_plane_byte(field, start, end, &wire, spans);
+        return end;
+    }
     let fragments: Vec<_> = spans
         .iter()
         .filter(|span| span.start >= start && span.start < end)
@@ -68,6 +72,28 @@ fn compare_field(field: &ModelField, start: usize, spans: &[PrimitiveSpan]) -> u
         assert_eq!(fragments[0].kind, kind, "{}", field.path);
     }
     end
+}
+
+fn compare_plane_byte(
+    field: &ModelField,
+    start: usize,
+    end: usize,
+    wire: &[u8],
+    spans: &[PrimitiveSpan],
+) {
+    assert!(matches!(field.value, ModelFieldValue::U8(_)));
+    assert_eq!(end, start + 1);
+    let source = spans
+        .iter()
+        .find(|span| span.start <= start && end <= span.end)
+        .unwrap();
+    assert_eq!(source.kind, "raw");
+    assert_eq!(
+        wire,
+        &source.wire[start - source.start..end - source.start],
+        "{}",
+        field.path
+    );
 }
 
 #[test]

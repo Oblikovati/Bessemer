@@ -20,6 +20,8 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moSketchBitmap_c" => super::sketch_bitmaps::read(reader, map),
+        "moSketchBitmapData_c" => super::sketch_bitmaps::payload(reader, map),
         "moMoveCopyBody_c" => super::move_copy_bodies::read(reader, map),
         "moMoveCopyBodyData_c" => super::move_copy_bodies::payload(reader, map),
         "moPSMeshToleranceHandler_c" => super::move_copy_deformation::mesh(reader),

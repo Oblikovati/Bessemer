@@ -363,6 +363,9 @@ mesh tolerances and the documented conformal-deformation branches.
 [Selection sets](docs/features/selection-sets/README.md) cover node-based sets,
 selection items, direct lists and shared comment and wrapper identities.
 
+[Sketch bitmaps](docs/features/sketch-bitmaps/README.md) cover feature and data
+records, bounded raw byte planes and conditional compact transforms.
+
 [Standalone Inspection envelopes](docs/features/standalone-inspection/README.md)
 cover current encrypted templates and historical projects, exact XML preservation
 and immutable complete-XML replacement.
