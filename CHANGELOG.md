@@ -28,6 +28,8 @@
 
 ### Added
 
+- Added saved external unit-component owners and model references with completed-part context guards and preserved shared identities. (#54)
+
 - Added lossless sculpt features, owned trim and chooser records, sculpt edge identifiers the second bounding-box center class and inherited scalar display dimensions. (#54)
 
 - Added complete exact-mode single-span spline records, including secondary interpolation with zero control points. (#54)

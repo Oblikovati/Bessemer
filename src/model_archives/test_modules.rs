@@ -623,3 +623,7 @@ mod single_span_spline_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/sculpt_features.rs"]
 mod sculpt_feature_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/external_units.rs"]
+mod external_unit_tests;

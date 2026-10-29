@@ -408,3 +408,6 @@ documented in [the feature evidence](docs/features/library-features/README.md).
 
 Sculpt-feature and edge-identifier interoperability is documented in
 [the sculpt evidence](docs/features/sculpt-features/README.md).
+
+Saved external unit-component interoperability is documented in
+[the external-unit evidence](docs/features/external-unit-components/README.md).
