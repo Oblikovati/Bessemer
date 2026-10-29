@@ -274,6 +274,8 @@ pub(super) const CLASSES: &[&str] = &[
     "moSMBaseFlange_c",
     // #54 / C-194: flat patterns use the complete bend-group/body-feature layer.
     "moFlatPattern_c",
+    // #54 / C-371 binds the complete inherited flat-pattern body and owner chain.
+    "moTemplateFlatPattern_c",
     // #54 / C-186: both shared blend serializers call the full body-feature base.
     "moBlend_c",
     "moBlendCut_c",

@@ -153,7 +153,8 @@ pub(super) fn read(
         "moBlend_c" | "moBlendCut_c" => super::blend_records::read(reader, map),
         "moFaceBlendItemPair_c" => super::blend_records::face_pair(reader, map),
         "moFaceBlendItem_c" => super::blend_records::face_item(reader, map),
-        "moFlatPattern_c" => super::flat_patterns::read(reader, map),
+        // #54 / C-371 proves an exact delegation thunk with no template-class suffix.
+        "moFlatPattern_c" | "moTemplateFlatPattern_c" => super::flat_patterns::read(reader, map),
         "moFlatPatBoundBox_c" => super::flat_pattern_boxes::read(reader),
         "moBoundBoxData_c" => super::flat_pattern_boxes::contents(reader),
         "moSMBaseFlange_c" => super::base_flanges::read(reader, map),

@@ -26,7 +26,8 @@ fn records() -> Vec<FlatRecord> {
     records
 }
 
-fn decode_graph(
+/// Decode an explicit saved-state graph; e.g. `decode_graph(1, 19000, bytes, true)`.
+pub(super) fn decode_graph(
     kind: u8,
     version: u32,
     bytes: &[u8],

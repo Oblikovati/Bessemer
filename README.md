@@ -393,6 +393,9 @@ sheet framing, directly owned keepers, face arrays and shared face/edge pairs.
 [Manager scalars](docs/features/manager-scalars/README.md) cover sheet-metal
 feature-ID pairs and custom material values in their complete CMgr maps.
 
+[Template dependencies](docs/features/template-dependencies/README.md) cover
+the template flat-pattern alias and both gusset corner surface-ID variants.
+
 [Standalone Inspection envelopes](docs/features/standalone-inspection/README.md)
 cover current encrypted templates and historical projects, exact XML preservation
 and immutable complete-XML replacement.

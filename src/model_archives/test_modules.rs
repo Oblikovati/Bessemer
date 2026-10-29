@@ -603,3 +603,7 @@ mod mid_surface_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/manager_scalars.rs"]
 mod manager_scalar_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/template_dependencies.rs"]
+mod template_dependency_tests;

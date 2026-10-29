@@ -55,6 +55,15 @@ const LAYOUTS: &[(&str, RepresentationLayout)] = &[
     ("moEndFace3IntSurfIdRep_c", Local(&["38", "3c", "40"])),
     ("moFromSktEnt3IntSurfIdRep_c", Local(&["38", "3c", "40"])),
     ("moSideFace3IntSurfIdRep_c", Local(&["38", "3c", "40"])),
+    // #54 / C-371 binds both concrete virtual suffixes to the same three signed words.
+    (
+        "moSMGussetEndCornerFilletSurfIdRep_c",
+        Local(&["38", "3c", "40"]),
+    ),
+    (
+        "moSMGussetLateralCornerFilletSurfIdRep_c",
+        Local(&["38", "3c", "40"]),
+    ),
     ("moDerivedSurfIdRep_c", Source(&["48"])),
     ("moPLineSurfIdRep_c", Source(&["48"])),
     ("moPunchSurfIdRep_c", Source(&["48"])),

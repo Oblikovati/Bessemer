@@ -26,6 +26,8 @@
 
 ### Added
 
+- Added complete template flat-pattern aliases and both gusset corner surface-ID representations, preserving saved helper state and raw suffix words. (#54)
+
 - Added complete ordinary manager feature-ID pairs and custom material-property records with exact scalar values, names and shared identities. (#54)
 
 - Added complete ordinary mid-surfaces, reference-surface backend framing, direct surface-ID keepers, face/edge pairs and modified-surface IDs. (#54)
