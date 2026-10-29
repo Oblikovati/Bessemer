@@ -28,6 +28,8 @@
 
 ### Added
 
+- Added exact Composer reference splitting, lexical file keys and immutable supplied-state geode lookup and registration with explicit native-resolution exclusions. (#105)
+
 - Added complete local Composer XML/geode identifier indexing and isolated reference edits with preserved XML markup, all duplicate candidates, revision-scoped identities and explicit runtime-resolution exclusions. (#104)
 
 - Added complete Composer geometry-stream reading, typed construction, isolated field edits and gzip writing, with explicit import context, derived bounded sizes, preserved patterns and revision-bound field identities. (#103)

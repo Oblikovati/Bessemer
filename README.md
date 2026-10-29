@@ -110,6 +110,10 @@ The [Composer XML/geode index](docs/features/composer-links/README.md) retains
 every exact local identifier candidate and supports isolated lexical reference
 edits. It preserves ambiguous and unmatched outcomes; runtime resolution and
 complete project semantics remain separate requirements.
+The [Composer supplied-state reference API](docs/features/composer-references/README.md)
+provides exact UTF-16 splitting, lexical file keys, null-aware geode maps and
+ordered lookup fallbacks. External file resolution and graph effects remain
+explicitly unchecked.
 The [biography evidence](docs/features/biography-archives/README.md) covers stored
 environment observations and repeated-string reading and writing.
 See [Parasolid transmit evidence](docs/features/parasolid-transmit/README.md) for

@@ -6,6 +6,7 @@ pub mod geometry;
 pub mod links;
 mod names;
 mod payload;
+pub mod references;
 mod types;
 
 use crate::archive_codec::ArchiveRevision;
