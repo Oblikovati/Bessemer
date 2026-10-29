@@ -1,7 +1,7 @@
 use super::raw_fields::RawScalarKind::{Double, Signed, Text, Unsigned};
-use super::{ModelDecoder, ModelObjectRole, part_objects, raw_fields};
-use crate::archive_codec::{MaterialRead, ObjectReader, ObjectRecord, vectors::double_vector};
-use crate::{BessemerError, FailureClass, Result};
+use super::{ModelDecoder, ModelObjectRole, model_lists, raw_fields};
+use crate::Result;
+use crate::archive_codec::{MaterialRead, ObjectReader, vectors::double_vector};
 
 const PREFIX: &[(raw_fields::RawScalarKind, &str)] = &[
     (Signed, "20"),
@@ -82,30 +82,13 @@ pub(super) fn properties(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) 
 
 fn mapped_list(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     for index in 0..reader.object_count("count")? {
-        mapped_pointer(reader, map, &format!("items[{index}]"))?;
+        model_lists::scoped_pointer(
+            reader,
+            map,
+            &format!("items[{index}]"),
+            &["moUnitComponent_c"],
+            "PhotoWorks material",
+        )?;
     }
     Ok(())
-}
-
-fn mapped_pointer(
-    reader: &mut ModelDecoder<'_>,
-    map: &mut ObjectReader,
-    label: &str,
-) -> Result<()> {
-    let record = reader.object_tag(label, map, ModelObjectRole::Any)?;
-    let ObjectRecord::New { class, .. } = record else {
-        return Ok(());
-    };
-    if class.name != "moUnitComponent_c" {
-        return reader.checked(Err(BessemerError::new(
-            "PhotoWorks material",
-            label,
-            FailureClass::Unsupported,
-            format!(
-                "fresh class {:?}; expected moUnitComponent_c, null or an already loaded object",
-                class.name
-            ),
-        )));
-    }
-    reader.scope(label, |reader| part_objects::unit_component(reader, map))
 }

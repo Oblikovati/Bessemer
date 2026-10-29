@@ -36,3 +36,42 @@ pub(super) fn nodes(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Re
     reader.i32("unknown_tail")?;
     Ok(())
 }
+
+/// Admit complete fresh bodies only from the caller's verified local reader table.
+/// Example: `scoped_pointer(reader, map, "item", &["moUnitComponent_c"], "PhotoWorks material")?`.
+pub(super) fn scoped_pointer(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+    label: &str,
+    classes: &[&str],
+    operation: &'static str,
+) -> Result<()> {
+    let record = reader.object_tag(label, map, ModelObjectRole::Any)?;
+    let crate::archive_codec::ObjectRecord::New { class, .. } = record else {
+        return Ok(());
+    };
+    if !classes.contains(&class.name.as_str()) {
+        let error = scoped_class_error(operation, label, &class.name, classes);
+        return reader.checked(Err(error));
+    }
+    reader.scope(label, |reader| {
+        super::object_body::read(reader, map, &class)
+    })
+}
+
+fn scoped_class_error(
+    operation: &'static str,
+    label: &str,
+    actual: &str,
+    classes: &[&str],
+) -> crate::BessemerError {
+    crate::BessemerError::new(
+        operation,
+        label,
+        crate::FailureClass::Unsupported,
+        format!(
+            "fresh class {actual:?}; expected {}, null or an already loaded object",
+            classes.join(", ")
+        ),
+    )
+}

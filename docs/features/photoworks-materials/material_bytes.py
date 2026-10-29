@@ -9,20 +9,22 @@ PREFIX=(('i','20'),('I','28 2c 30'),('Q','38'),('i','40 48 4c'),('Q','68 70 78 8
 SUFFIX=(('Q','c0 c8'),('i','1ac 220'),('Q','228 230 238 240'),('i','248'),('Q','250 258 260 268 270 278'),('s','280'),('i','d8 1b0 1b4 1b8 1bc 288 2ac'),('Q','2a0'),('i','2a8 298'),('Q','1c8'),('i','2c0'),('Q','2c8'),('i','2d0'),('s','290'),('i','2d4 2e0'),('s','2f8'),('Q','300 308'),('i','310 314'),('Q','318'))
 
 
+def material_recipe_bytes(recipe: tuple[tuple[str,str],...], style: int, edited: bool=False) -> bytes:
+    """Keep material and decal scalar encodings independent of their Rust readers."""
+    raw=b''
+    for kind,offsets in recipe:
+        for index,offset in enumerate(offsets.split()):
+            if kind=='s':raw+=name_bytes(style);continue
+            value=0 if style==0 else (WORDS[(style+index)%6] if kind=='i' else BITS[(style+index)%6] if kind=='Q' else (0xffffffff,0x80000000,0)[index%3])
+            if offset=='20' and kind=='i':value=12345 if edited else 0
+            raw+=struct.pack('<'+kind,value)
+    return raw
+
+
 class MaterialGraph:
     """Reserve real property/unit slots before encoding recursive references."""
     def __init__(self, style: int, edited: bool, first_slot: int) -> None:
         self.style=style;self.edited=edited;self.mapping=WireMap();self.mapping.slot=first_slot;self.ids: dict[str,int]={}
-
-    def scalars(self, recipe: tuple[tuple[str,str],...], edited: bool=False) -> bytes:
-        raw=b''
-        for kind,offsets in recipe:
-            for index,offset in enumerate(offsets.split()):
-                if kind=='s':raw+=name_bytes(self.style);continue
-                value=0 if self.style==0 else (WORDS[(self.style+index)%6] if kind=='i' else BITS[(self.style+index)%6] if kind=='Q' else (0xffffffff,0x80000000,0)[index%3])
-                if offset=='20' and kind=='i':value=12345 if edited else 0
-                raw+=struct.pack('<'+kind,value)
-        return raw
 
     def count(self, count: int) -> bytes:
         return struct.pack('<HI',65535,count) if self.style in (3,4,5) else struct.pack('<H',count)
@@ -38,9 +40,9 @@ class MaterialGraph:
         return self.count(3)+self.unit('unit-first')+struct.pack('<H',self.ids[key])+self.unit('unit-first')
 
     def property_body(self, key: str, edited: bool) -> bytes:
-        raw=self.scalars(PREFIX,edited)
+        raw=material_recipe_bytes(PREFIX,self.style,edited)
         vector=struct.pack('<3Q',*(BITS[(self.style+i)%6] if self.style else 0 for i in range(3)))
-        return raw+vector*2+self.mapped_list(key)+vector+self.mapped_list(key)+self.scalars(SUFFIX)
+        return raw+vector*2+self.mapped_list(key)+vector+self.mapped_list(key)+material_recipe_bytes(SUFFIX,self.style)
 
     def property(self, key: str='first', edited: bool=False) -> bytes:
         return shared_object(self.mapping,self.ids,key,'moPWMaterialProperties_c',lambda:self.property_body(key,edited))
