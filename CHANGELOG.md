@@ -28,6 +28,8 @@
 
 ### Added
 
+- Added complete Composer packed-vector and index block reading, construction and isolated code edits with explicit caller context, exact wire reconstruction and preserved constant/endpoint patterns. (#101)
+
 - Added complete Composer SMG ZIP32 container reading, construction and isolated member replacement with exact no-op reconstruction, duplicate-name identities, preserved metadata and full payload-integrity checks. (#100)
 
 - Added complete ordinary assembly and routing configuration reading, construction, isolated field edits and writing, with exact section boundaries, shared object identities and structural edit history. (#99)

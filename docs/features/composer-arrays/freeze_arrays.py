@@ -19,7 +19,11 @@ from pinned_reference_tests import FrozenSourceImports, copy_sources, record_sna
 def retained(name: str, value: object) -> None:
     """Compare reviewed results unless explicitly regenerating; e.g. retained('owned.json', [])."""
     raw = (json.dumps(value, indent=2) + '\n').encode()
-    path = FEATURE / name
+    retained_bytes(FEATURE / name, raw)
+
+
+def retained_bytes(path: Path, raw: bytes) -> None:
+    """Require explicit reviewed replacement for binary as well as text fixtures."""
     if '--write' in sys.argv:
         path.write_bytes(raw)
         return
@@ -61,6 +65,8 @@ def owned_vectors() -> None:
         cases.extend(vector_case(mode, count, flags) for flags in itertools.product((0, 1), repeat=3))
     assert len(cases) == 54
     retained('owned-vectors.json', cases)
+    packets = [array_packet(case['dimensions'], case['count'], 0, bytes.fromhex(case['wire_hex'])) for case in cases]
+    retained_bytes(ROOT / 'tests/fixtures/composer-arrays/vectors.bin', b'VARR' + struct.pack('<I', len(packets)) + b''.join(packets))
 
 
 def owned_indices() -> None:
@@ -76,6 +82,13 @@ def owned_indices() -> None:
         reject_indices(raw, count, domain)
         cases.append(dict(domain=domain, count=count, width=width, values=values, wire_hex=raw.hex()))
     retained('owned-indices.json', cases)
+    packets = [array_packet(0, case['count'], case['domain'], bytes.fromhex(case['wire_hex'])) for case in cases]
+    retained_bytes(ROOT / 'tests/fixtures/composer-arrays/indices.bin', b'VARR' + struct.pack('<I', len(packets)) + b''.join(packets))
+
+
+def array_packet(dimensions: int, count: int, domain: int, wire: bytes) -> bytes:
+    """Keep actual reference context beside each full wire span for the Rust corpus gate."""
+    return struct.pack('<BIII', dimensions, count, domain, len(wire)) + wire
 
 
 def reject_indices(raw: bytes, count: int, domain: int) -> None:
@@ -152,12 +165,38 @@ def native_arrays() -> None:
     """Bind all installed arrays to complete reference scenes and original member hashes."""
     import composervectors
     records = []
+    packets = []
     for row in json.loads((SOURCE / 'research/composer-project-corpus.json').read_bytes())['files']:
         encoded, decoded, scene = native_scene(row)
         records.append(native_record(row, encoded, decoded, scene, composervectors))
+        if '--export' in sys.argv:
+            packets.extend(native_packets(decoded, scene))
     assert len(records) == 38
     assert sum(record['vectors'] for record in records) == 4367
     retained('native-reference.json', records)
+    if '--export' in sys.argv:
+        export_native(packets)
+
+
+def export_native(packets: list[bytes]) -> None:
+    """Bind the local probe to its reviewed complete-array and source-input identities."""
+    raw = b'VARR' + struct.pack('<I', len(packets)) + b''.join(packets)
+    (ROOT / 'target/composer-arrays-native.bin').write_bytes(raw)
+    retained('native-probe-reference.json', dict(records=len(packets), bytes=len(raw),
+             sha256=hashlib.sha256(raw).hexdigest(),
+             native_reference_sha256=hashlib.sha256((FEATURE / 'native-reference.json').read_bytes()).hexdigest()))
+
+
+def native_packets(decoded: bytes, scene: dict[str, object]) -> list[bytes]:
+    """Export exact block spans and contexts from actual complete reference scenes."""
+    packets = []
+    for block in array_blocks(scene['entries']):
+        vector = 'packed_values' in block
+        dimensions = block['dimensions'] if vector else 0
+        domain = 0 if vector else block['domain_parameter']
+        wire = decoded[block['start']:block['end']]
+        packets.append(array_packet(dimensions, block['count'], domain, wire))
+    return packets
 
 
 def native_scene(row: dict[str, str]) -> tuple[bytes, bytes, dict[str, object]]:

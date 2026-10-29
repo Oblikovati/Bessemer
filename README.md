@@ -94,6 +94,10 @@ The [Composer container API](docs/features/composer-containers/README.md) suppor
 complete SMG ZIP32 carriers, new-member construction and isolated payload edits.
 It preserves unrelated compressed members, extra fields and comments. Member
 scene, geometry and application schemas remain separate work.
+The [Composer packed-array API](docs/features/composer-arrays/README.md) reads,
+constructs and edits complete vector and index blocks with explicit caller
+context, preserved numeric patterns and exact wire validation. Floating-point
+reconstruction and whole scene semantics remain separate work.
 The [biography evidence](docs/features/biography-archives/README.md) covers stored
 environment observations and repeated-string reading and writing.
 See [Parasolid transmit evidence](docs/features/parasolid-transmit/README.md) for

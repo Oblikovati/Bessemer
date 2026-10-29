@@ -1,4 +1,5 @@
 //! Complete SMG-prefixed ZIP32 containers; member payload schemas remain separate.
+pub mod arrays;
 mod decode;
 mod encode;
 mod names;
