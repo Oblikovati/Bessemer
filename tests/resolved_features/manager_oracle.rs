@@ -52,8 +52,7 @@ fn primitive_kind(value: &ModelFieldValue) -> Option<&'static str> {
 fn compare_field(field: &ModelField, start: usize, spans: &[PrimitiveSpan]) -> usize {
     let wire = encode_fields(std::slice::from_ref(field), 30000).unwrap();
     let end = start + wire.len();
-    if field.path.contains(".byte_plane_40[") {
-        compare_plane_byte(field, start, end, &wire, spans);
+    if compare_raw_array_element(field, start, end, &wire, spans) {
         return end;
     }
     let fragments: Vec<_> = spans
@@ -74,26 +73,74 @@ fn compare_field(field: &ModelField, start: usize, spans: &[PrimitiveSpan]) -> u
     end
 }
 
-fn compare_plane_byte(
+fn compare_raw_array_element(
     field: &ModelField,
     start: usize,
     end: usize,
     wire: &[u8],
     spans: &[PrimitiveSpan],
-) {
-    assert!(matches!(field.value, ModelFieldValue::U8(_)));
-    assert_eq!(end, start + 1);
-    let source = spans
+) -> bool {
+    let plane = field.path.contains(".byte_plane_40[");
+    let words = field.path.contains(".payload_words[");
+    if !plane && !words {
+        return false;
+    }
+    let Some(source) = spans
         .iter()
-        .find(|span| span.start <= start && end <= span.end)
-        .unwrap();
-    assert_eq!(source.kind, "raw");
+        .find(|span| span.kind == "raw" && span.start <= start && end <= span.end)
+    else {
+        return false;
+    };
+    assert!(matches!(
+        (&field.value, plane),
+        (ModelFieldValue::U8(_), true) | (ModelFieldValue::U64(_), false)
+    ));
+    assert_eq!(end, start + if plane { 1 } else { 8 });
     assert_eq!(
         wire,
         &source.wire[start - source.start..end - source.start],
         "{}",
         field.path
     );
+    true
+}
+
+#[test]
+fn packed_raw_array_words_keep_exact_little_endian_bytes_and_element_widths() {
+    let spans = [PrimitiveSpan {
+        start: 0,
+        end: 16,
+        kind: "raw",
+        wire: vec![
+            1, 2, 3, 4, 5, 6, 7, 8, 255, 254, 253, 252, 251, 250, 249, 248,
+        ],
+    }];
+    for (index, word) in [0x0807060504030201_u64, 0xf8f9fafbfcfdfeff]
+        .into_iter()
+        .enumerate()
+    {
+        let field = ModelField {
+            path: format!("root.array.payload_words[{index}]").into(),
+            value: ModelFieldValue::U64(word),
+        };
+        assert_eq!(compare_field(&field, index * 8, &spans), (index + 1) * 8);
+    }
+}
+
+#[test]
+#[should_panic]
+fn packed_raw_array_comparison_rejects_a_changed_word() {
+    let spans = [PrimitiveSpan {
+        start: 0,
+        end: 8,
+        kind: "raw",
+        wire: vec![1, 2, 3, 4, 5, 6, 7, 8],
+    }];
+    let field = ModelField {
+        path: "root.array.payload_words[0]".into(),
+        value: ModelFieldValue::U64(0),
+    };
+    compare_field(&field, 0, &spans);
 }
 
 #[test]

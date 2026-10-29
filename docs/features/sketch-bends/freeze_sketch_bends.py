@@ -25,11 +25,12 @@ def verify(reference: Path, raw: bytes, version: int, kind: int, style: int) -> 
     assert root['one_bend']['raw_ac8']==-1
     if style not in (0,4):
         assert root['payload']['handle_e18'] is root['payload']['handle_e40']
+        if kind==2:assert root['one_bend']['reference_860'] is root['payload']['curve_de0']
 
 
 def fixture_family() -> ObjectFixtureFamily:
     """Bind complete ordinary sketch bends and one independent word-edit golden."""
-    return ObjectFixtureFamily(build=sketch_bend_object,verify=verify,configure=partial(configure,reference=REFERENCE),magic=b'SKB1',kinds=1,versions=VERSIONS,edited_kinds=(0,))
+    return ObjectFixtureFamily(build=sketch_bend_object,verify=verify,configure=partial(configure,reference=REFERENCE),magic=b'SKB1',kinds=3,versions=VERSIONS,edited_kinds=(0,))
 
 
 if __name__=='__main__':

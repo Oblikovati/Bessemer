@@ -571,3 +571,7 @@ mod sketch_bitmap_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/sketch_bends.rs"]
 mod sketch_bend_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/mitered_flanges.rs"]
+mod mitered_flange_tests;

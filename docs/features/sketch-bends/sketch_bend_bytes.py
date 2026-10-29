@@ -10,6 +10,13 @@ VERSIONS=(0x27cc,0x334b,0x334c,0x334e,0x334f,0x335a,0x335b,0x3734,0x3735,19000,0
 
 class SketchBendGraph(EdgeGraph):
     """Keep tagged handle temporaries distinct from inherited direct handles."""
+    curve_class: str
+    curve_mode: int
+
+    def marker(self) -> bytes:
+        if self.curve_mode==2:return self.curve()
+        return super().marker()
+
     def tagged_handle(self, point: bool) -> bytes:
         if self.style in (0,4):return bytes(2)
         name='sgPointHandle' if point else 'sgLineHandle'
@@ -17,7 +24,7 @@ class SketchBendGraph(EdgeGraph):
 
     def curve(self) -> bytes:
         if self.style in (0,4):return bytes(2)
-        return self.shared('curve','moGeneralCurveRef_w',lambda:strip_tag(geometric('moGeneralCurveRef_w',self.version,False,0)))
+        return self.shared('curve',self.curve_class,lambda:strip_tag(geometric(self.curve_class,self.version,False,0)))
 
     def sketch_bend(self, edited: bool) -> bytes:
         raw=self.one_bend(False)+self.marker()
@@ -27,7 +34,9 @@ class SketchBendGraph(EdgeGraph):
 
 def sketch_bend_object(kind: int, version: int, style: int, edited: bool=False, first_slot: int=0) -> tuple[bytes,int]:
     """Build the complete inherited body and suffix; e.g. sketch_bend_object(0,19000,3)."""
-    if kind!=0:raise ValueError(f'sketch bend fixture kind {kind}; expected 0')
+    if kind not in (0,1,2):raise ValueError(f'sketch bend fixture kind {kind}; expected 0, 1 or 2')
     graph=SketchBendGraph(version,style,first_slot)
+    graph.curve_class='moGeneralCurveRef_w' if kind==0 else 'moLineRef_w'
+    graph.curve_mode=kind
     raw=graph.shared('root','moSketchBend_c',lambda:graph.sketch_bend(edited))
     return raw,graph.mapping.slot+1

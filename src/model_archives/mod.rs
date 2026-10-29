@@ -190,6 +190,7 @@ mod lightweight_shared;
 mod linear_patterns;
 mod material;
 mod mirror_patterns;
+mod mitered_flanges;
 mod model_arrays;
 mod model_lists;
 mod model_references;

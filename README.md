@@ -369,6 +369,9 @@ records, bounded raw byte planes and conditional compact transforms.
 [Sketch bends](docs/features/sketch-bends/README.md) cover complete inherited
 One Bend records, tagged stored handles and explicit kind-7 dependency stops.
 
+[Mitered flanges](docs/features/mitered-flanges/README.md) cover direct object and
+DWORD collections and four sketch-associated handle groups.
+
 [Standalone Inspection envelopes](docs/features/standalone-inspection/README.md)
 cover current encrypted templates and historical projects, exact XML preservation
 and immutable complete-XML replacement.

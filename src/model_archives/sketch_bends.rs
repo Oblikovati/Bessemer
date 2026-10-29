@@ -22,7 +22,7 @@ fn continuation(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result
     reader.object(
         "curve_de0",
         map,
-        ModelObjectRole::Declared(super::sweep_reference_records::CURVE_REFERENCE_CLASSES),
+        ModelObjectRole::Declared(super::reference_point_data::CURVES),
     )?;
     reader.i32("raw_e70")?;
     Ok(())

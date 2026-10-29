@@ -7,7 +7,7 @@ fn records() -> Vec<TrimEdgeRecord> {
     records_with_count(
         include_bytes!("../fixtures/sketch-bends/cases.bin"),
         b"SKB1",
-        66,
+        198,
     )
 }
 
@@ -55,4 +55,66 @@ fn sketch_bend_curve_role_rejects_the_cached_enclosing_feature() {
         &2_u16.to_le_bytes(),
     );
     assert!(decode_graph(version, &changed, false).is_err());
+}
+
+#[test]
+fn fresh_and_cached_line_curve_targets_keep_their_complete_concrete_class() {
+    for (kind, cached) in [(7, false), (13, true)] {
+        let (_, version, bytes, _, _) = records()
+            .into_iter()
+            .find(|r| r.0 == kind && r.1 == 19000)
+            .unwrap();
+        let fields = decode_graph(version, bytes, false).unwrap().0;
+        let field = fields
+            .iter()
+            .find(|f| f.path.as_ref() == "root.object.payload.curve_de0")
+            .unwrap();
+        let super::ModelFieldValue::ObjectTag(tag) = &field.value else {
+            panic!("expected complete curve tag")
+        };
+        let (class, is_cached) = match &tag.record {
+            crate::archive_codec::ObjectRecord::New { class, .. } => (class, false),
+            crate::archive_codec::ObjectRecord::Reference { class, .. } => (class, true),
+            _ => panic!("expected complete fresh or cached line reference"),
+        };
+        assert_eq!(class.name, "moLineRef_w");
+        assert_eq!(is_cached, cached);
+    }
+}
+
+#[test]
+fn complete_sketch_bend_records_satisfy_only_reviewed_parent_roles_for_new_and_cached_tags() {
+    let (_, version, bytes, _, _) = records()
+        .into_iter()
+        .find(|r| r.0 == 0 && r.1 == 19000)
+        .unwrap();
+    let fields = decode_graph(version, bytes, false).unwrap().0;
+    let super::ModelFieldValue::ObjectTag(tag) = &fields[0].value else {
+        panic!("expected complete root tag")
+    };
+    let crate::archive_codec::ObjectRecord::New { index, class, .. } = &tag.record else {
+        panic!("expected complete fresh sketch bend")
+    };
+    let cached = crate::archive_codec::ObjectRecord::Reference {
+        index: *index,
+        class: class.clone(),
+    };
+    for record in [&tag.record, &cached] {
+        assert!(
+            super::objects::require_role(
+                record,
+                super::ModelObjectRole::Declared(&["moOneBend_c"]),
+                "bend"
+            )
+            .is_ok()
+        );
+        assert!(
+            super::objects::require_role(
+                record,
+                super::ModelObjectRole::Declared(&["moSheetMetal_c"]),
+                "bend"
+            )
+            .is_err()
+        );
+    }
 }

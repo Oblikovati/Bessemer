@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Fixed reviewed sketch-bend curve and One Bend parent roles rejecting complete fresh or cached derived references while preserving unrelated-class rejection. (#46)
+
 - Fixed present sketch valued-dimension transforms using compact framing instead of the documented fixed 30-word archive operator, preserving raw presence, words and suffix identities. (#86)
 
 - Fixed all four sketch-intersection wrapper fields rejecting complete reviewed subclasses while preserving nulls, shared identities and unrelated-class checks. (#46)
@@ -23,6 +25,8 @@
 - Fixed reference-plane point roles rejecting documented endpoint and loft-sync subclasses for fresh and cached pointers. (#46)
 
 ### Added
+
+- Added complete ordinary mitered-flange records with direct object and DWORD collections and sketch-associated handle groups. (#54)
 
 - Added ordinary sketch-bend continuations with complete One Bend prefixes, shared tagged handles and explicit kind-7 dependency errors. (#54)
 

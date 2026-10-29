@@ -11,12 +11,24 @@ keep their identity, including shared line handles. Runtime ownership repair,
 temporary-object destruction and handle copying do not alter persisted values.
 The inherited direct handles remain distinct from these tagged occurrences.
 
-Independent fixtures cover 66 complete graphs across eleven versions and six
+The initial checkpoint used 66 complete graphs across eleven versions and six
 styles, with 44,511 primitive observations and seven owned documents. Four
 focused Rust tests, three public save/reopen, edit and isolation tests, and
 immutable fixture regeneration passed. The actual source regression verified
 ten native bends in four complete containing roots, including source/root
 hashes, bend kinds, final words, reference classes and later dependency stops.
+
+Bug #46 exposed concrete line curves after mitered-flange parsing reached two
+more sketch-bend occurrences. The reader now reuses the existing reviewed curve
+family from reference-point data. Fresh and cached line regressions extend the
+inventory to 198 graphs, 133,236 primitive observations and 19 owned documents.
+The original 66 graphs and seven owned fixtures regenerated unchanged. Unrelated
+cached targets remain rejected. The corrected full gate passed 1,035 library
+tests, all integration tests and 277 doctests; the complete native corpus
+follow-up is recorded in the mitered-flange evidence.
+The same native inputs exposed UI-bend and fixed-face declarations of the One
+Bend parent. The central role check admits only the hash-bound Sketch Bend
+subtype for that parent, for fresh and cached tags, without class-prefix rules.
 
 Two native processes matched every status and cause across 906 configurations.
 All 861 previous complete reconstructions remain complete. The four affected
