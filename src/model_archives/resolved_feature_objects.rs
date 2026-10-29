@@ -45,6 +45,8 @@ pub(super) fn read(
         "moAllRangeDim_c" => super::pattern_extensions::all_range(reader, map),
         "moAlignGroup_c" => super::alignment_groups::read(reader, map),
         "moSculpt_c" => super::sculpt_features::read(reader, map),
+        "moFormToolInstance_c" => super::forming_tools::read(reader, map),
+        "moFormFeatureSIdKeeper_c" => super::fillets::keeper(reader, map),
         "moLibraryFeature_c" => super::library_features::read(reader, map),
         "moXConfigData_c" => super::library_references::configuration(reader, map),
         "moXFeatureData_c" => super::library_references::feature(reader),

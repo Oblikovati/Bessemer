@@ -1,0 +1,26 @@
+{
+  "cases": 906,
+  "accepted": 906,
+  "previous_accepted": 905,
+  "newly_accepted": [
+    658
+  ],
+  "independent_processes_agree": true,
+  "aggregate_success": true,
+  "packet_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "logs": [
+    "target/forming-native-final.log",
+    "target/forming-native-final-repeat.log"
+  ],
+  "platform": "Windows 11 x86_64",
+  "toolchain": "Rust 1.99.0 x86_64-pc-windows-msvc",
+  "source_hashes": {
+    "src/model_archives/forming_tools.rs": "8e3e51cba5a871921eddb6619c5c4dbf8db3e851064869c161c9a504f02d2f5b",
+    "src/model_archives/embedded_parts.rs": "16525a13ade44a52300a88941653140434db9bd5285def6e88baafe1ef19f821",
+    "src/model_archives/body_features.rs": "395ce5e4c88d09edc63d3b7d40893314e11def933554521a41cf03ecb1d3dbf3",
+    "src/model_archives/entity_representations.rs": "ed5232553e884b29cc039d9210d69e39a7c7670256918355473233d6a0bfe972",
+    "src/model_archives/construction.rs": "25dc28f6db3cd015e15961320073027d2891e5f5c0112e1c9cd3c9afbcb3bb0f",
+    "src/model_archives/resolved_features.rs": "8a63c399ebdb09b99ca871c9ea69b2115c71236c5277cbf45340fb2d6c64c58c"
+  }
+}

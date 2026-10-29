@@ -11,8 +11,22 @@ ROOT = FEATURE.parents[2]
 for name in ('model-archives', 'manager-scalars', 'resolved-features'):
     sys.path.insert(0, str(FEATURE.parent / name))
 from manager_tag_observation import ManagerTagObservation, relocated_tail
+from freeze_owned_features import ReferenceDocument
 
 T = TypeVar('T')
+
+
+class EditedPartDocument:
+    """Keep the original header and names while selecting the independent edited configuration."""
+    def __init__(self, original: ReferenceDocument) -> None:
+        self.original = original
+        self.configuration = (ROOT / 'tests/fixtures/model-archives/native-part-name-edited.bin').read_bytes()
+
+    def names(self) -> list[str]:
+        return self.original.names()
+
+    def read(self, name: str) -> bytes:
+        return self.configuration if name == 'Contents/Config-0' else self.original.read(name)
 
 
 def observed_read(raw: bytes, read: Callable[[], T]) -> tuple[T, list[tuple[int, int]]]:
@@ -47,12 +61,14 @@ def part_indices(raw: bytes, events: list[tuple[int, int]], added: int, self_ref
     return bytes(changed)
 
 
-def blank_tool() -> bytes:
+def blank_tool(edited: bool = False) -> bytes:
     """Insert a real inline header instead of synthetic imported map entries; e.g. blank_tool()."""
     import modelprefix
     from mfcobjects import ObjectArchive
     from swcontainer import Document
     document = Document((ROOT / 'tests/fixtures/blank-part.SLDPRT').read_bytes(), table={})
+    if edited:
+        document = EditedPartDocument(document)
     raw = document.read('Contents/Config-0')
     (part, cursor), events = observed_read(raw, partial(modelprefix.read, document, through_part_resolved=True))
     assert cursor.p == len(raw) and cursor.map[3]['_class'] == 'moExtObject_c'
@@ -86,4 +102,5 @@ def tool_cases(reference: Path) -> list[tuple[str, bytes]]:
     """Cover fresh, null and shared embedded pointers without fake map slots; e.g. tool_cases(pin)."""
     name = b'moFormTool_c'
     empty = struct.pack('<HHH', 65535, 1, len(name)) + name + struct.pack('<Hii', 0, -7, 8)
-    return [('blank-tool', blank_tool()), ('null-part-tool', empty), ('paired-tools', paired_tools(reference))]
+    return [('blank-tool', blank_tool()), ('null-part-tool', empty), ('paired-tools', paired_tools(reference)),
+            ('edited-tool', blank_tool(edited=True))]

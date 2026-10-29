@@ -28,6 +28,8 @@
 
 ### Added
 
+- Added complete ordinary forming-tool instances, direct surface-ID keepers, attributed-body collections and ordered transform maps, with derived section sizes for embedded edits. (#54)
+
 - Added bounded inline part bodies for forming-tool pointers with shared-map headers and caller-context restoration. (#54)
 
 - Added shared-map inline model headers with scoped body-version overrides and preserved tagged references. (#54)

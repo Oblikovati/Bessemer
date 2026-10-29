@@ -11,6 +11,7 @@ mod deform_features;
 mod deform_geometry;
 mod deform_matching;
 mod dimension_patterns;
+mod forming_tools;
 mod library_features;
 mod library_references;
 mod pattern_extensions;

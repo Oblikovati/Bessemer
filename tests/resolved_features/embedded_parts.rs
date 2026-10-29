@@ -1,8 +1,8 @@
 use super::*;
-use crate::archive_codec::{ArchiveCursor, ObjectRecord};
+use crate::archive_codec::{ArchiveCursor, ArchiveString, ObjectRecord, TextEncoding};
 use crate::header::ArchiveVersion;
 use crate::model_archives::reader::{ModelArchiveContext, ModelFieldLimits};
-use crate::model_archives::{ModelField, encode_fields};
+use crate::model_archives::{ModelField, ModelFieldValue, encode_fields};
 
 const LIMITS: ModelFieldLimits = ModelFieldLimits {
     maximum_bytes: 100_000,
@@ -47,6 +47,11 @@ fn complete_tools_match_source_primitives_shared_map_census_and_all_bytes() {
             include_bytes!("../fixtures/forming-tools/paired-tools.bin").as_slice(),
             include_str!("../fixtures/forming-tools/paired-tools.tsv"),
             165,
+        ),
+        (
+            include_bytes!("../fixtures/forming-tools/edited-tool.bin").as_slice(),
+            include_str!("../fixtures/forming-tools/edited-tool.tsv"),
+            162,
         ),
     ] {
         let (fields, actual) = decode(bytes).unwrap();
@@ -159,4 +164,105 @@ fn cached_tool_object_cannot_replace_the_declared_embedded_part_pointer() {
     };
     assert_eq!(error.class, FailureClass::Invalid);
     assert!(error.cause.contains("moPart_c"));
+}
+
+#[test]
+fn variable_length_embedded_edit_derives_both_sections_and_matches_the_independent_golden() {
+    let raw = include_bytes!("../fixtures/forming-tools/blank-tool.bin");
+    let expected = include_bytes!("../fixtures/forming-tools/edited-tool.bin");
+    let baseline = decode(raw).unwrap().0;
+    let mut edited = baseline.clone();
+    let name = edited
+        .iter_mut()
+        .find(|field| field.path.as_ref() == "root.object.part_08.node.name.name")
+        .unwrap();
+    name.value =
+        ModelFieldValue::Text(ArchiveString::new("Bessemer Ω", TextEncoding::Utf16).unwrap());
+    crate::model_archives::construction::embedded_section_lengths(
+        &mut edited,
+        LIMITS.maximum_bytes,
+    )
+    .unwrap();
+    assert_eq!(
+        encode_fields(&edited, LIMITS.maximum_bytes).unwrap(),
+        expected
+    );
+    assert_eq!(decode(expected).unwrap().0, edited);
+    assert_eq!(encode_fields(&baseline, LIMITS.maximum_bytes).unwrap(), raw);
+}
+
+fn length_field(path: &str, value: ModelFieldValue) -> ModelField {
+    ModelField {
+        path: path.into(),
+        value,
+    }
+}
+
+#[test]
+fn nested_part_lengths_are_derived_inside_out_and_exclude_the_tool_suffix() {
+    let outer = "root.object.part_08";
+    let inner = format!("{outer}.features[0].part_08");
+    let mut fields = vec![
+        length_field(
+            &format!("{outer}.lightweight_size"),
+            ModelFieldValue::I32(-1),
+        ),
+        length_field(&format!("{outer}.raw_light"), ModelFieldValue::U8(1)),
+        length_field(&format!("{outer}.resolved_size"), ModelFieldValue::I32(-1)),
+        length_field(
+            &format!("{inner}.lightweight_size"),
+            ModelFieldValue::I32(-1),
+        ),
+        length_field(&format!("{inner}.raw_light"), ModelFieldValue::U16(2)),
+        length_field(&format!("{inner}.resolved_size"), ModelFieldValue::I32(-1)),
+        length_field(&format!("{inner}.raw_resolved"), ModelFieldValue::U32(3)),
+        length_field(&format!("{outer}.trailer"), ModelFieldValue::U8(4)),
+        length_field("root.object.raw_38", ModelFieldValue::I32(5)),
+    ];
+    crate::model_archives::construction::embedded_section_lengths(
+        &mut fields,
+        LIMITS.maximum_bytes,
+    )
+    .unwrap();
+    for (index, length) in [(0, 1), (2, 15), (3, 2), (5, 4)] {
+        assert_eq!(fields[index].value, ModelFieldValue::I32(length));
+    }
+}
+
+#[test]
+fn embedded_length_derivation_rejects_duplicate_missing_reordered_and_wrong_typed_sizes() {
+    let baseline = decode(include_bytes!("../fixtures/forming-tools/blank-tool.bin"))
+        .unwrap()
+        .0;
+    let light = baseline
+        .iter()
+        .position(|field| field.path.ends_with(".part_08.lightweight_size"))
+        .unwrap();
+    let resolved = baseline
+        .iter()
+        .position(|field| field.path.ends_with(".part_08.resolved_size"))
+        .unwrap();
+    for variant in 0..5 {
+        let mut fields = baseline.clone();
+        let limit = if variant == 4 {
+            1
+        } else {
+            LIMITS.maximum_bytes
+        };
+        match variant {
+            0 => fields.push(fields[light].clone()),
+            1 => {
+                fields.remove(resolved);
+            }
+            2 => fields[light].value = ModelFieldValue::U32(0),
+            3 => fields.swap(light, resolved),
+            _ => {}
+        }
+        assert!(
+            crate::model_archives::construction::embedded_section_lengths(&mut fields, limit)
+                .is_err()
+        );
+    }
+    let mut empty = Vec::new();
+    crate::model_archives::construction::embedded_section_lengths(&mut empty, 0).unwrap();
 }

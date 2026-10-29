@@ -51,7 +51,7 @@ def observe_tool(pin: Path, name: str, raw: bytes, write: bool) -> dict[str, obj
 
 
 def freeze_tool(pin: Path, write: bool) -> None:
-    """Regenerate all three actual shared-map cases; e.g. freeze_tool(pin,False)."""
+    """Regenerate all actual shared-map cases and the independent edit; e.g. freeze_tool(pin,False)."""
     facts = [observe_tool(pin, name, raw, write) for name, raw in tool_cases(pin)]
     (FEATURE / 'embedded-reference.json').write_bytes((json.dumps(facts, indent=2) + '\n').encode())
     rejected = verify_tool_boundaries(pin)

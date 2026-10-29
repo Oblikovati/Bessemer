@@ -37,6 +37,8 @@ const LAYOUTS: &[(&str, RepresentationLayout)] = &[
     ("moBottomEdgeIdRep_c", Local(&["38"])),
     ("moStartEdgeIdRep_c", Local(&["38"])),
     ("moEndFaceSurfIdRep_c", Local(&["38", "3c"])),
+    // #54 / 11.252 / C-294 binds the common entity prefix and both signed suffix words.
+    ("moFormFeatureSurfIdRep_c", Local(&["38", "3c"])),
     // #54 / C-362 and C-390 bind the primary dispatch and two signed words.
     ("moEndCapChamferSurfIdRep_c", Local(&["38", "3c"])),
     // #54 / 11.350 / C-392 binds the exact native serializer and edge ancestry.
