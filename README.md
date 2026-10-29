@@ -384,6 +384,9 @@ dynamic arrays, ordered extension tags and legacy direct keeper data.
 [Body extensions](docs/features/body-extensions/README.md) cover cavities,
 transformed stock and sketch holes through their complete inherited bodies.
 
+[Feature edits](docs/features/feature-edits/README.md) cover move-face records,
+compact transforms and bending data with direct arrays and packed raw words.
+
 [Standalone Inspection envelopes](docs/features/standalone-inspection/README.md)
 cover current encrypted templates and historical projects, exact XML preservation
 and immutable complete-XML replacement.

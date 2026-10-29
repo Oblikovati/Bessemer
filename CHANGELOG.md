@@ -26,6 +26,8 @@
 
 ### Added
 
+- Added complete ordinary move-face and bending records with compact transforms, required bending data and direct owned-array framing. (#54)
+
 - Added complete ordinary cavity, transformed-stock and sketch-hole records with inherited serializer bodies and typed cavity references. (#54)
 
 - Added complete ordinary punch records with internal revision gates, bounded dynamic arrays, ordered extensions and legacy keeper data. (#54)

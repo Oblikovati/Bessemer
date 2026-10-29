@@ -591,3 +591,7 @@ mod punch_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/body_extensions.rs"]
 mod body_extension_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/feature_edits.rs"]
+mod feature_edit_tests;

@@ -34,6 +34,9 @@ pub(super) fn read(
         // #54 / C-396 binds the complete stock body with no modern suffix.
         "moStock_c" | "moXformStock_c" => super::stock_features::read(reader, map, false),
         "moCavity_c" => super::cavity_features::read(reader, map),
+        "moMoveFace_c" => super::move_faces::read(reader, map),
+        "moBending_c" => super::bending_features::read(reader, map),
+        "moBendingData_c" => super::bending_features::payload(reader, map),
         "moMirrorStock_c" => super::stock_features::read(reader, map, true),
         "moBodyRef_w" => super::stock_references::body(reader, map),
         "moCompBody_c" => super::stock_references::component(reader, map),
