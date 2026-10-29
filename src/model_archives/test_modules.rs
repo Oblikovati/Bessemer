@@ -599,3 +599,7 @@ mod feature_edit_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/mid_surfaces.rs"]
 mod mid_surface_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/manager_scalars.rs"]
+mod manager_scalar_tests;

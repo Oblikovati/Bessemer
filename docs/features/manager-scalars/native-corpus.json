@@ -1,0 +1,39 @@
+{
+  "cases": 906,
+  "accepted": 883,
+  "rejected": 23,
+  "aggregate_exit_code": 101,
+  "repeat_status_and_cause_equal": true,
+  "previous_accepted": 883,
+  "new_indices": [],
+  "regressions": [],
+  "advanced_stops": [
+    {
+      "index": 277,
+      "previous": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moSMAndFPFeatIdPair\" schema 1; expected an implemented complete model object body"
+      ],
+      "current": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moTemplateFlatPattern_c\" schema 1; expected an implemented complete model object body"
+      ]
+    },
+    {
+      "index": 498,
+      "previous": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moSMAndFPFeatIdPair\" schema 1; expected an implemented complete model object body"
+      ],
+      "current": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"representation\" has runtime class \"moSMGussetEndCornerFilletSurfIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+      ]
+    }
+  ],
+  "log_sha256": {
+    "mid-frontier.log": "59c983646fc3c893a31dbfc844072045f044cdfe7a52bd4ae91471570f8a6a39",
+    "scalar-frontier.log": "d785b9cb73e600992588c3160368596f21be35b5c21d792f0015d0aa466b5423",
+    "scalar-frontier-repeat.log": "f8b95ec70c146fa0e2eea61c0f5eb029bc6cf596caab89c12741061d36cd4d6c"
+  }
+}

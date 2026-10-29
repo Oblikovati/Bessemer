@@ -70,6 +70,7 @@ mod fold_transforms;
 mod frontier_feature_helpers;
 mod helix_records;
 mod manager_dialect;
+mod manager_scalar_records;
 mod manager_tail;
 mod mirror_solids;
 mod net_blend_components;

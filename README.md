@@ -390,6 +390,9 @@ compact transforms and bending data with direct arrays and packed raw words.
 [Mid-surfaces](docs/features/mid-surfaces/README.md) cover inline and external
 sheet framing, directly owned keepers, face arrays and shared face/edge pairs.
 
+[Manager scalars](docs/features/manager-scalars/README.md) cover sheet-metal
+feature-ID pairs and custom material values in their complete CMgr maps.
+
 [Standalone Inspection envelopes](docs/features/standalone-inspection/README.md)
 cover current encrypted templates and historical projects, exact XML preservation
 and immutable complete-XML replacement.

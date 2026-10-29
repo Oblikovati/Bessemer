@@ -8,6 +8,8 @@ pub(super) fn read(
     name: &str,
 ) -> Option<Result<()>> {
     let result = match name {
+        "moSMAndFPFeatIdPair" => super::manager_scalar_records::feature_ids(reader),
+        "moCustomDefinedMaterialProperty_c" => super::manager_scalar_records::material(reader),
         "moToolboxPartSpecArray_c" => super::configuration_toolbox::array(reader, map),
         "moToolboxPartSpec_c" => super::configuration_toolbox::item(reader),
         "moConfigurationMgr_c" => super::configuration_manager::body(reader, map),

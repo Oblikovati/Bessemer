@@ -26,6 +26,8 @@
 
 ### Added
 
+- Added complete ordinary manager feature-ID pairs and custom material-property records with exact scalar values, names and shared identities. (#54)
+
 - Added complete ordinary mid-surfaces, reference-surface backend framing, direct surface-ID keepers, face/edge pairs and modified-surface IDs. (#54)
 
 - Added complete ordinary move-face and bending records with compact transforms, required bending data and direct owned-array framing. (#54)
