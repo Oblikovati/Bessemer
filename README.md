@@ -414,3 +414,7 @@ Saved external unit-component interoperability is documented in
 
 Alignment groups, order dimensions and sketch-text kernels are documented in
 [the alignment evidence](docs/features/alignment-groups/README.md).
+
+Table, sketch and dimension patterns retain their complete inherited bodies,
+raw transform arrays, signed regeneration records and shared identities; see
+[the pattern-extension evidence](docs/features/pattern-extensions/README.md).

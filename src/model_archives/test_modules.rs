@@ -631,3 +631,6 @@ mod external_unit_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/alignment_groups.rs"]
 mod alignment_group_tests;
+
+#[path = "../../tests/resolved_features/pattern_extensions.rs"]
+mod pattern_extension_tests;

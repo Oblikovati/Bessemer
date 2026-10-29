@@ -28,6 +28,8 @@
 
 ### Added
 
+- Added complete table, sketch and dimension pattern interoperability, including raw bulk arrays, direct regeneration records, instances and range helpers. (#54)
+
 - Added complete alignment groups, order-display and valued-dimension aliases, and strict present sketch-text kernel records. (#54)
 
 - Added saved external unit-component owners and model references with completed-part context guards and preserved shared identities. (#54)

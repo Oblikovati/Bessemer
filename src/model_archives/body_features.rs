@@ -263,6 +263,11 @@ pub(super) const CLASSES: &[&str] = &[
     "moMirrorPattern_c",
     "moShell_c",
     "moCirPattern_c",
+    // #54 / C-394 binds these complete common-pattern and instance owner chains.
+    "moTablePattern_c",
+    "moSketchPattern_c",
+    "moDimPattern_c",
+    "moDimPatternFeatInstance_c",
     "moHoleWzd_c",
     "moImported_c",
     "moBaseBody_c",

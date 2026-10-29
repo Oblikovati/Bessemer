@@ -20,6 +20,11 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moTablePattern_c" => super::pattern_extensions::table(reader, map),
+        "moSketchPattern_c" => super::pattern_extensions::sketch(reader, map),
+        "moDimPattern_c" => super::dimension_patterns::read(reader, map),
+        "moDimPatternFeatInstance_c" => super::pattern_extensions::instance(reader, map),
+        "moAllRangeDim_c" => super::pattern_extensions::all_range(reader, map),
         "moAlignGroup_c" => super::alignment_groups::read(reader, map),
         "moSculpt_c" => super::sculpt_features::read(reader, map),
         "moLibraryFeature_c" => super::library_features::read(reader, map),

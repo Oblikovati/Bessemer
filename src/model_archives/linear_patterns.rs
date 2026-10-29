@@ -11,16 +11,25 @@ pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
 }
 
 pub(super) fn common(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    common_prefix(reader, map)?;
-    reader.scope("variation", |reader| {
-        super::pattern_variation::read(reader, map)
-    })?;
-    reader.scope("tail", |reader| tail(reader, map))
+    common_with_variation(reader, map, super::pattern_variation::read).map(|_| ())
+}
+
+/// Select the native variation serializer while retaining the containing node.
+/// Example: `common_with_variation(reader, map, variation)?.unknown_2c`.
+pub(super) fn common_with_variation(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+    variation: super::sketch_geometry::DirectReader,
+) -> Result<super::node::ModelNodePrefix> {
+    let node = common_prefix(reader, map)?;
+    reader.scope("variation", |reader| variation(reader, map))?;
+    reader.scope("tail", |reader| tail(reader, map))?;
+    Ok(node)
 }
 
 /// Retain the containing node across complete common-pattern prefix members.
 /// Example: `common_prefix(reader, map)?.unknown_2c`.
-pub(super) fn common_prefix(
+fn common_prefix(
     reader: &mut ModelDecoder<'_>,
     map: &mut ObjectReader,
 ) -> Result<super::node::ModelNodePrefix> {
@@ -109,7 +118,7 @@ pub(super) fn matrix_helper(reader: &mut ModelDecoder<'_>, map: &mut ObjectReade
 }
 
 /// Preserve the established pattern tail; e.g. `tail(reader, map)?`.
-pub(super) fn tail(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+fn tail(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     declared(reader, map, "list_988", &["suObList"])?;
     reader.i32("word_1120")?;
     if reader.version() > 0x2f86 {

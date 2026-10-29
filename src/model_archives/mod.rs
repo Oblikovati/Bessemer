@@ -6,8 +6,11 @@ include!("test_modules.rs");
 
 mod alignment_display;
 mod alignment_groups;
+mod dimension_patterns;
 mod library_features;
 mod library_references;
+mod pattern_extensions;
+mod pattern_transform_words;
 mod sculpt_features;
 
 mod archive;
