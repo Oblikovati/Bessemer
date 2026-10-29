@@ -422,3 +422,7 @@ raw transform arrays, signed regeneration records and shared identities; see
 Text borders, symbols, pattern-count dimensions and handles, and thread-instance
 records preserve their complete bodies; see
 [the annotation-extension evidence](docs/features/annotation-extras/README.md).
+
+Smart-component features retain their complete folders, items, direct sensor maps
+and shared owner identities; see
+[the smart-component evidence](docs/features/smart-components/README.md).

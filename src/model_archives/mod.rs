@@ -13,6 +13,8 @@ mod library_references;
 mod pattern_extensions;
 mod pattern_transform_words;
 mod sculpt_features;
+mod smart_components;
+mod smart_items;
 
 mod archive;
 mod attachment_records;

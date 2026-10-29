@@ -637,3 +637,6 @@ mod pattern_extension_tests;
 
 #[path = "../../tests/resolved_features/annotation_extras.rs"]
 mod annotation_extra_tests;
+
+#[path = "../../tests/resolved_features/smart_components.rs"]
+mod smart_component_tests;

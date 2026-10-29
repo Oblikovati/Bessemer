@@ -28,6 +28,8 @@
 
 ### Added
 
+- Added complete smart-component feature, data, folder, item and sensor-map interoperability with direct containers and preserved owner identities. (#54)
+
 - Added complete text borders, symbols, pattern-count dimensions and handles, and direct thread-instance arrays with their raw item records. (#54)
 
 - Added complete table, sketch and dimension pattern interoperability, including raw bulk arrays, direct regeneration records, instances and range helpers. (#54)
