@@ -44,11 +44,13 @@ No apparent byte tags are searched inside arrays.
 
 Floating-point projections are recorded separately under the reference's
 `nearest-even-gradual` profile. These hashes are reference expectations, not an
-independent numerical oracle. Implementation acceptance still requires exact
-rounding checks, subnormal/signed-zero cases and explicit handling of unsupported
-nonfinite arithmetic. A native control-state match is not established by this
+independent numerical oracle. The separate value operation checks exact rounding,
+subnormal/signed-zero cases and unsupported nonfinite arithmetic. A native
+control-state match is not established by this
 baseline. Raw vector patterns and quantized codes remain authoritative; the
-wire API does not expose a floating reconstruction operation.
+wire operations do not implicitly reconstruct values. The additional explicit
+[vector-value operation](../composer-vectors/README.md) implements behavior 1 of
+the declared arithmetic profile and retains the original wire block.
 
 Run `python docs/features/composer-arrays/freeze_arrays.py` to check the retained
 baselines. Add `--export` to write the installed Rust probe packet. The ignored
@@ -68,10 +70,9 @@ and compile-time thread-safety assertions. All-constant vectors with the largest
 declared row count do work proportional to their small wire header. No expanded
 floating output is allocated for those declared rows.
 
-Remaining work includes arithmetic-profile reconstruction with an independent
-rounding oracle, whole scene operations, project relationships and native
-application acceptance. Topology, geometry, self-intersection and tolerance
-checks are outside this complete wire operation.
+Remaining work includes whole scene operations, project relationships and
+native application acceptance. Topology, geometry, self-intersection and
+tolerance checks are outside this complete wire operation.
 
 The maintainer-side humanizer skill was unavailable. A maintainer still needs
 to review this prose.

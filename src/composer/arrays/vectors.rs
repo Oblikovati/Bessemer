@@ -14,6 +14,18 @@ pub struct ComposerVectorBlock {
 }
 
 impl ComposerVectorBlock {
+    /// Reconstruct every lane under an explicit profile, e.g. `block.reconstruct(ComposerVectorProfile::NearestEvenGradual79V1, 3000)?`.
+    pub fn reconstruct(
+        &self,
+        profile: ComposerVectorProfile,
+        maximum_components: usize,
+    ) -> Result<ComposerVectorValues> {
+        values::reconstruct_vectors(self, profile, maximum_components).map_err(|mut error| {
+            error.operation = "reconstruct Composer vectors";
+            error
+        })
+    }
+
     /// Parse with explicit caller shape, e.g. `ComposerVectorBlock::from_bytes(bytes, layout, 1024)?`.
     pub fn from_bytes(
         bytes: &[u8],

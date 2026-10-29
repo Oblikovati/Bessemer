@@ -1,11 +1,16 @@
-//! Exact version-7.9 packed-array wire operations (14.88.2), without float reconstruction.
+//! Exact version-7.9 packed-array wire operations and explicit software-profile values.
+mod binary32;
 mod indices;
 mod types;
+mod value_types;
+mod values;
 mod vectors;
 
 use crate::{BessemerError, FailureClass, Result};
 pub use indices::ComposerIndexBlock;
 pub use types::*;
+pub use value_types::*;
+pub use values::ComposerVectorValues;
 pub use vectors::ComposerVectorBlock;
 
 fn invalid(cause: impl Into<String>) -> BessemerError {
