@@ -31,6 +31,13 @@ local reader selections and root-owner checks need the documented assembly
 rules. Keep input ownership and completed-root proofs separate from an
 in-progress object's map identity.
 
+The shared lightweight model stage has been extracted from the part-only suffix
+as a separate structural change. All 30 existing part, lightweight, inline-part
+and public forming-tool tests passed, along with workspace Clippy. The complete
+906-case part corpus retained every accepted outcome, and the owned native,
+independent edit and primitive-oracle fixtures retained their original hashes.
+This extraction adds no assembly context or public assembly API by itself.
+
 The first acceptance operation is a complete configuration read, independent
 edit, forced construction, whole-document reopen and revert. Add precise
 primitive oracles, malformed bounds and pointer-role tests, preserve unrelated

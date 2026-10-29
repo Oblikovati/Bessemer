@@ -53,12 +53,27 @@ pub(super) fn after_header(
     map: &mut ObjectReader,
     context: UnitComponentContext,
 ) -> Result<(node::ModelNodePrefix, i32)> {
+    let node = model_after_header(reader, map, context)?;
+    reader.scope("part_appearances", |reader| {
+        lightweight_part::appearances(reader, map)
+    })?;
+    let raw_1614 = reader.scope("part_tail", lightweight_part::tail)?;
+    Ok((node, raw_1614))
+}
+
+/// Decode the shared model stage before selecting a part or assembly continuation.
+/// Example: `lightweight::model_after_header(reader, map, UnitComponentContext::External)?`.
+pub(super) fn model_after_header(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+    context: UnitComponentContext,
+) -> Result<node::ModelNodePrefix> {
     reader.i32("unknown_a8")?;
     reader.u32("unknown_ac")?;
     let node = reader.scope("node", |reader| node::lightweight(reader, map))?;
     concept(reader, map, context)?;
-    let raw_1614 = continuation(reader, map)?;
-    Ok((node, raw_1614))
+    model_continuation(reader, map)?;
+    Ok(node)
 }
 
 fn root_tag(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<ArchiveMapIndex> {
@@ -109,7 +124,7 @@ fn merged_features(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
     Ok(())
 }
 
-fn continuation(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<i32> {
+fn model_continuation(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     reader.scope("face_properties", |reader| {
         lightweight_shared::face_appearances(reader, map)
     })?;
@@ -123,9 +138,5 @@ fn continuation(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result
     reader.scope("collections", |reader| {
         lightweight_post::collections(reader, map)
     })?;
-    reader.scope("model_tail", |reader| lightweight_post::tail(reader, map))?;
-    reader.scope("part_appearances", |reader| {
-        lightweight_part::appearances(reader, map)
-    })?;
-    reader.scope("part_tail", lightweight_part::tail)
+    reader.scope("model_tail", |reader| lightweight_post::tail(reader, map))
 }
