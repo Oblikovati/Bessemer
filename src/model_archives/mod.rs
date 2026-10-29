@@ -4,6 +4,9 @@
 #[cfg(test)]
 include!("test_modules.rs");
 
+mod library_features;
+mod library_references;
+
 mod archive;
 mod attachment_records;
 mod attribute_records;

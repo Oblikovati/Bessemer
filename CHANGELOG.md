@@ -26,6 +26,8 @@
 
 ### Added
 
+- Added lossless ordinary library-feature configuration, cross-reference and atom-ID archive records. (#54)
+
 - Added complete ordinary concentric mates and plane sections with bounded collections, direct geometry and guarded serialized kernel bodies. (#54)
 
 - Added complete template flat-pattern aliases and both gusset corner surface-ID representations, preserving saved helper state and raw suffix words. (#54)

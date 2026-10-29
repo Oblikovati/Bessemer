@@ -20,6 +20,13 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moLibraryFeature_c" => super::library_features::read(reader, map),
+        "moXConfigData_c" => super::library_references::configuration(reader, map),
+        "moXFeatureData_c" => super::library_references::feature(reader),
+        "moXRefPlaneData_c" => super::library_references::plane(reader),
+        "moXRefData_c" => super::library_references::reference(reader, map),
+        "moAtomIdToFeatIdNode_c" => super::library_references::atom_node(reader, map),
+        "moAtomIdToFeatIds_c" => super::library_references::atom_ids(reader, map),
         "moPunch_c" => super::punches::read(reader, map),
         "moCurveInFile_c" => super::curve_files::read(reader, map),
         "moSMMiteredFlange_c" => super::mitered_flanges::read(reader, map),

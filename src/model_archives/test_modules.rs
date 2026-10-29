@@ -611,3 +611,7 @@ mod template_dependency_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/mate_planes.rs"]
 mod mate_plane_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/library_features.rs"]
+mod library_feature_tests;
