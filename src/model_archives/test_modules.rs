@@ -623,3 +623,20 @@ mod single_span_spline_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/sculpt_features.rs"]
 mod sculpt_feature_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/external_units.rs"]
+mod external_unit_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/alignment_groups.rs"]
+mod alignment_group_tests;
+
+#[path = "../../tests/resolved_features/pattern_extensions.rs"]
+mod pattern_extension_tests;
+
+#[path = "../../tests/resolved_features/annotation_extras.rs"]
+mod annotation_extra_tests;
+
+#[path = "../../tests/resolved_features/smart_components.rs"]
+mod smart_component_tests;

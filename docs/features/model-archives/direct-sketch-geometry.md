@@ -15,9 +15,13 @@ Text resolves its tagged dimension-text target through typed object identity.
 The reader finds the target's stored fields in the current operation, including
 aliases to an earlier target. It adds no cache or global state. Missing or
 wrong-typed required facts fail; imported class identity alone cannot establish
-a body field. Lookup failure poisons the decoder before publication. Kernel text
-still fails explicitly, matching the approved reader's unsupported branch.
+a body field. Lookup failure poisons the decoder before publication. Present
+curve text now uses the [documented kernel continuation](../alignment-groups/README.md);
+compressed records require explicit kernel-schema context, and malformed or
+unimplemented kernel layouts still fail.
 
+The following measurements record the original Feature #44 checkpoint. Current
+complete-sketch and native-corpus evidence is linked from the alignment feature.
 The independent packet contains 308 cases and 12,378 scalar expectations.
 Cases cover 2D/3D and high-bit masks, escaped endpoint extremes, optional vectors,
 category masks, shared text aliases and compositions sharing one map across all

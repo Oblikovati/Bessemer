@@ -408,3 +408,21 @@ documented in [the feature evidence](docs/features/library-features/README.md).
 
 Sculpt-feature and edge-identifier interoperability is documented in
 [the sculpt evidence](docs/features/sculpt-features/README.md).
+
+Saved external unit-component interoperability is documented in
+[the external-unit evidence](docs/features/external-unit-components/README.md).
+
+Alignment groups, order dimensions and sketch-text kernels are documented in
+[the alignment evidence](docs/features/alignment-groups/README.md).
+
+Table, sketch and dimension patterns retain their complete inherited bodies,
+raw transform arrays, signed regeneration records and shared identities; see
+[the pattern-extension evidence](docs/features/pattern-extensions/README.md).
+
+Text borders, symbols, pattern-count dimensions and handles, and thread-instance
+records preserve their complete bodies; see
+[the annotation-extension evidence](docs/features/annotation-extras/README.md).
+
+Smart-component features retain their complete folders, items, direct sensor maps
+and shared owner identities; see
+[the smart-component evidence](docs/features/smart-components/README.md).

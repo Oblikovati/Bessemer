@@ -21,11 +21,35 @@ pub(super) fn absent_payload(
     reader.checked(Err(error))
 }
 
+/// Retain saved component references without resolving an external document.
+/// Example: `part_objects::unit_component(reader, map)?`.
 pub(super) fn unit_component(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     reader.require_ordinary_part()?;
-    reader.object("owner", map, ModelObjectRole::Declared(&["moPart_c"]))?;
+    let external_owner = unit_owner_is_external(reader, map)?;
     let present = reader.u8("has_external_model")?;
-    absent_payload(reader, "external unit-component model", present.into())
+    if external_owner || present != 0 {
+        reader.require_verified_part_context()?;
+    }
+    if present != 0 {
+        reader.required_object(
+            "external_model",
+            map,
+            ModelObjectRole::Declared(&["moExtObject_c"]),
+        )?;
+    }
+    Ok(())
+}
+
+fn unit_owner_is_external(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<bool> {
+    let owner = reader.object_record(
+        "owner",
+        map,
+        ModelObjectRole::Declared(&["moPart_c", "moExtObject_c"]),
+    )?;
+    Ok(matches!(owner,
+        crate::archive_codec::ObjectRecord::New { class, .. }
+        | crate::archive_codec::ObjectRecord::Reference { class, .. }
+        if class.name == "moExtObject_c"))
 }
 
 pub(super) fn hatch(reader: &mut ModelDecoder<'_>) -> Result<()> {

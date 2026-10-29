@@ -3,7 +3,8 @@ use super::{ConfigurationId, ModelField, ModelFieldValue, PartConfigurationArchi
 use crate::archive_codec::{ArchiveMapIndex, ObjectRecord};
 use crate::header::ArchiveVersion;
 
-fn source_archive() -> PartConfigurationArchive {
+/// Build the unchanged internal-part fixture; e.g. `source_archive()`.
+pub(super) fn source_archive() -> PartConfigurationArchive {
     let document =
         crate::Document::from_bytes(include_bytes!("../fixtures/blank-part.SLDPRT")).unwrap();
     PartConfigurationArchive::from_document(

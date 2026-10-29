@@ -28,6 +28,16 @@
 
 ### Added
 
+- Added complete smart-component feature, data, folder, item and sensor-map interoperability with direct containers and preserved owner identities. (#54)
+
+- Added complete text borders, symbols, pattern-count dimensions and handles, and direct thread-instance arrays with their raw item records. (#54)
+
+- Added complete table, sketch and dimension pattern interoperability, including raw bulk arrays, direct regeneration records, instances and range helpers. (#54)
+
+- Added complete alignment groups, order-display and valued-dimension aliases, and strict present sketch-text kernel records. (#54)
+
+- Added saved external unit-component owners and model references with completed-part context guards and preserved shared identities. (#54)
+
 - Added lossless sculpt features, owned trim and chooser records, sculpt edge identifiers the second bounding-box center class and inherited scalar display dimensions. (#54)
 
 - Added complete exact-mode single-span spline records, including secondary interpolation with zero control points. (#54)

@@ -125,7 +125,19 @@ fn text(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
         ModelObjectRole::Declared(&["moDimText_c"]),
     )?;
     let curves = reader.object_integer(&record, "has_curve_data")?;
-    super::part_objects::absent_payload(reader, "sketch text kernel body", curves)?;
+    if curves != 0 {
+        text_kernel_record(reader, map)?;
+    }
     reader.text("text")?;
     reader.i32s(&["long_date", "date_and_time"])
+}
+
+fn text_kernel_record(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    reader.object(
+        "curve_references",
+        map,
+        ModelObjectRole::Declared(&["suObArray"]),
+    )?;
+    reader.scope("kernel_body", super::kernel_frames::read_body)?;
+    Ok(())
 }

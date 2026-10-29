@@ -1,7 +1,7 @@
 use super::{ModelField, ModelFieldValue, invalid};
 use crate::archive_codec::{ArchiveCursor, MaterialRead, ObjectReader, ObjectRecord};
 use crate::header::ArchiveVersion;
-use crate::{BessemerError, Result};
+use crate::{BessemerError, FailureClass, Result};
 
 /// Explicit byte, field, collection, nesting and object budgets for one archive operation.
 #[derive(Debug, Clone, Copy)]
@@ -149,6 +149,17 @@ impl<'a> ModelDecoder<'a> {
     ) -> Self {
         self.verified_part_root = Some(root);
         self
+    }
+
+    /// Require a completed saved part before external model pointers; e.g. `reader.require_verified_part_context()?`.
+    pub(super) fn require_verified_part_context(&mut self) -> Result<()> {
+        if self.verified_part_root.is_some() {
+            return Ok(());
+        }
+        self.checked(Err(BessemerError::new(
+            "model archive", "external unit component", FailureClass::Unsupported,
+            "current-part proof None; expected completed selected part archive before saved external references",
+        )))
     }
 
     pub(super) fn require_current_part_unit(&mut self, component: &ObjectRecord) -> Result<()> {

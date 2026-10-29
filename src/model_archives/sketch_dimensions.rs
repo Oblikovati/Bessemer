@@ -3,7 +3,12 @@ use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader, vectors::double_vector};
 
 // #54 / C-385: primary slots and native ancestry bind these exact derived bodies.
-pub(super) const G1_CLASSES: &[&str] = &["sgValG1Dim", "sgCircleDim", "sgSplineTanMagnitudeDim"];
+pub(super) const G1_CLASSES: &[&str] = &[
+    "sgValG1Dim",
+    "sgCircleDim",
+    "sgSplineTanMagnitudeDim",
+    "sgSplineLengthDim",
+];
 pub(super) const G2_CLASSES: &[&str] = &[
     "sgValG2Dim",
     "sgLLDist",
@@ -14,6 +19,7 @@ pub(super) const G2_CLASSES: &[&str] = &[
     "sgAnglDim",
     "sgPoint3DPlaneDist",
     "sg3DPlane3DPlaneDist",
+    "sgBsOrdDim",
 ];
 pub(super) const G3_CLASSES: &[&str] = &["sgValG3Dim", "sgArcLenDist"];
 pub(super) const OFFSET_CLASSES: &[&str] = &["sgOffsetDim", "sgSkOffsetDim"];
@@ -27,7 +33,9 @@ pub(super) fn base(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
     Ok(())
 }
 
-fn valued(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+/// Preserve the complete valued base before its class-specific suffix.
+/// Example: `valued(reader, map)?` before the pattern-position word.
+pub(super) fn valued(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     base(reader, map)?;
     if reader.u16("has_plane_transform")? != 0 {
         // #86 / C-395: this call site selects the fixed archive operator, not restore().

@@ -82,6 +82,8 @@ const LAYOUTS: &[(&str, RepresentationLayout)] = &[
     ("moMirPatternSurfIdRep_c", Source(&[])),
     ("moIndirectSurfIdRep_c", Source(&[])),
     ("moShellSurfIdRep_c", Source(&[])),
+    // #54 / C-394 binds the source-entity prefix and one signed suffix.
+    ("moSketchPatternSurfIdRep_c", Source(&["48"])),
     ("moLPatternSurfIdRep_c", Source(&["48", "4c"])),
     // #54 / C-398 binds both complete Ref2Edge source suffixes.
     ("moRightSculptEdgeIdRep_c", Source(&["48", "4c"])),

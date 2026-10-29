@@ -20,6 +20,29 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moSmartComponentFeature_c" => super::smart_components::read(reader, map),
+        "moSmartComponentFeatureData_c" => super::smart_components::feature_data(reader, map),
+        "moSensorDiaMapList_c" => super::smart_components::sensor_map(reader, map),
+        "moSmartComponentFeatFolder_c"
+        | "moSmartComponentCompFolder_c"
+        | "moSmartComponentRefFolder_c" => super::smart_components::folder(reader, map),
+        "moSCItemData_c" => super::smart_items::base(reader, map),
+        "moSCFeatureItemData_c" => super::smart_items::feature(reader, map),
+        "moSCCompItemData_c" => super::smart_items::component(reader, map),
+        "moSCRefItemData_c" => super::smart_items::reference(reader, map),
+        "moTextDataBorder_c" => super::annotation_extras::border(reader, map),
+        "moTextDataSymbol_c" => super::annotation_extras::symbol(reader),
+        "moCThreadInstanceId_c" => super::annotation_extras::thread_instances(reader, map),
+        "moCTInstId_c" => super::annotation_extras::thread_item(reader),
+        "sgLinearPattCntDim" | "sgCircularPattCntDim" => {
+            super::annotation_extras::pattern_count(reader, map)
+        }
+        "moTablePattern_c" => super::pattern_extensions::table(reader, map),
+        "moSketchPattern_c" => super::pattern_extensions::sketch(reader, map),
+        "moDimPattern_c" => super::dimension_patterns::read(reader, map),
+        "moDimPatternFeatInstance_c" => super::pattern_extensions::instance(reader, map),
+        "moAllRangeDim_c" => super::pattern_extensions::all_range(reader, map),
+        "moAlignGroup_c" => super::alignment_groups::read(reader, map),
         "moSculpt_c" => super::sculpt_features::read(reader, map),
         "moLibraryFeature_c" => super::library_features::read(reader, map),
         "moXConfigData_c" => super::library_references::configuration(reader, map),

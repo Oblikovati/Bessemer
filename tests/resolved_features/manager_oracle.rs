@@ -80,9 +80,11 @@ fn compare_raw_array_element(
     wire: &[u8],
     spans: &[PrimitiveSpan],
 ) -> bool {
-    let plane = field.path.contains(".byte_plane_40[");
+    let plane =
+        field.path.contains(".byte_plane_40[") || field.path.contains(".payload.bytes_3b8[");
     let words = field.path.contains(".payload_words[");
-    if !plane && !words {
+    let transforms = field.path.contains(".payload.transforms_1148.words[");
+    if !plane && !words && !transforms {
         return false;
     }
     let Some(source) = spans
@@ -92,10 +94,22 @@ fn compare_raw_array_element(
         return false;
     };
     assert!(matches!(
-        (&field.value, plane),
-        (ModelFieldValue::U8(_), true) | (ModelFieldValue::U64(_), false)
+        (&field.value, plane, transforms),
+        (ModelFieldValue::U8(_), true, false)
+            | (ModelFieldValue::U64(_), false, false)
+            | (ModelFieldValue::U32(_), false, true)
     ));
-    assert_eq!(end, start + if plane { 1 } else { 8 });
+    assert_eq!(
+        end,
+        start
+            + if plane {
+                1
+            } else if transforms {
+                4
+            } else {
+                8
+            }
+    );
     assert_eq!(
         wire,
         &source.wire[start - source.start..end - source.start],
@@ -176,4 +190,68 @@ pub(super) fn assert_reference_fields(
         end = compare_field(field, end, &spans);
     }
     assert_eq!(end, bytes.len());
+}
+
+#[test]
+fn packed_alignment_bytes_match_raw_spans_one_byte_at_a_time() {
+    let spans = [PrimitiveSpan {
+        start: 0,
+        end: 3,
+        kind: "raw",
+        wire: vec![0, 255, 65],
+    }];
+    for (index, value) in [0, 255, 65].into_iter().enumerate() {
+        let field = ModelField {
+            path: format!("root.object.payload.bytes_3b8[{index}]").into(),
+            value: ModelFieldValue::U8(value),
+        };
+        assert_eq!(compare_field(&field, index, &spans), index + 1);
+    }
+}
+
+#[test]
+#[should_panic]
+fn packed_alignment_byte_comparison_rejects_a_widened_word() {
+    let spans = [PrimitiveSpan {
+        start: 0,
+        end: 8,
+        kind: "raw",
+        wire: vec![0; 8],
+    }];
+    let field = ModelField {
+        path: "root.object.payload.bytes_3b8[0]".into(),
+        value: ModelFieldValue::U64(0),
+    };
+    compare_field(&field, 0, &spans);
+}
+
+#[test]
+fn packed_sketch_transform_words_match_arbitrary_raw_bits() {
+    let spans = [PrimitiveSpan {
+        start: 0,
+        end: 4,
+        kind: "raw",
+        wire: vec![0x98, 0xba, 0xdc, 0xfe],
+    }];
+    let field = ModelField {
+        path: "root.object.payload.transforms_1148.words[28]".into(),
+        value: ModelFieldValue::U32(0xfedcba98),
+    };
+    assert_eq!(compare_field(&field, 0, &spans), 4);
+}
+
+#[test]
+#[should_panic]
+fn packed_sketch_transform_words_reject_widened_values() {
+    let spans = [PrimitiveSpan {
+        start: 0,
+        end: 8,
+        kind: "raw",
+        wire: vec![0; 8],
+    }];
+    let field = ModelField {
+        path: "root.object.payload.transforms_1148.words[0]".into(),
+        value: ModelFieldValue::U64(0),
+    };
+    compare_field(&field, 0, &spans);
 }
