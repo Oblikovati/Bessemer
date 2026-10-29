@@ -41,7 +41,30 @@ def composer_cases() -> list[tuple[str, bytes, bytes]]:
         result.append((label + '.smg', zip_bytes(items, method, b'archive\x00\xff')))
     base = zip_bytes([('a', b'hello')], zipfile.ZIP_DEFLATED, b'prefix' + bytes(22))
     fake = struct.pack('<4s4H2IH', b'PK\x05\x06', 0, 0, 0, 0, 0, len(base) - 25, 0)
+    result.append(('cp437.smg', cp437_archive()))
+    result.append(('reordered.smg', reordered_archive(result[2][1])))
+    edited = [('α/file', b'Bessemer Composer payload'), *items[1:]]
+    result.append(('stored-edited.smg', zip_bytes(edited, zipfile.ZIP_STORED, b'archive\x00\xff')))
     return [(name, raw, raw) for name, raw in result] + [('false-end.smg', base[:-22] + fake, base)]
+
+
+def cp437_archive() -> bytes:
+    """Check every high CP437 code point through both complete readers."""
+    import composer
+    raw = bytearray(zip_bytes([('x' * 128, b'cp437')], zipfile.ZIP_STORED, b''))
+    member = composer.Document(raw).entries[0]
+    for position in (member.local_at + 30, member.central_at + 46):
+        raw[position:position + 128] = bytes(range(128, 256))
+    return bytes(raw)
+
+
+def reordered_archive(raw: bytes) -> bytes:
+    """Vary central order independently of physical local-record order."""
+    import composer
+    document = composer.Document(raw)
+    assert len(document.entries) == 4
+    records = [raw[entry.central_at:entry.central_end] for entry in document.entries]
+    return raw[:document.central_at] + b''.join(records[i] for i in (2, 0, 3, 1)) + raw[document.end_at:]
 
 
 def verify_archive(raw: bytes, independent_raw: bytes) -> dict[str, object]:
@@ -81,12 +104,14 @@ def freeze_owned() -> None:
         facts['name'] = name
         report.append(facts)
     frozen(FEATURE / 'owned-reference.json', (json.dumps(report, indent=2, ensure_ascii=False) + '\n').encode())
+    frozen(ROOT / 'tests/fixtures/composer/cp437-name.txt', bytes(range(128, 256)).decode('cp437').encode('utf-8'))
 
 
 def verify_native() -> None:
     """Check all installed carriers and members against the reviewed source corpus."""
     baseline = json.loads((SOURCE / 'research/composer-project-corpus.json').read_bytes())
     records = []
+    packets = []
     for row in baseline['files']:
         raw = Path(row['path']).read_bytes()
         facts = verify_archive(raw, raw)
@@ -96,11 +121,25 @@ def verify_native() -> None:
             assert observed['decoded_sha256'] == expected['decoded_sha256']
         facts['source_path'] = row['path']
         records.append(facts)
+        if '--export' in sys.argv:
+            packets.append(native_packet(raw))
     report = dict(files=len(records), members=sum(len(r['members']) for r in records),
                   file_bytes=sum(r['bytes'] for r in records),
                   decoded_bytes=sum(m['bytes'] for r in records for m in r['members']), records=records)
     assert (report['files'], report['members'], report['file_bytes'], report['decoded_bytes']) == (38, 550, 44056222, 106834828)
     frozen(FEATURE / 'native-reference.json', (json.dumps(report, indent=2, ensure_ascii=False) + '\n').encode())
+    if '--export' in sys.argv:
+        (ROOT / 'target/composer-native-probe.bin').write_bytes(b'SMGP' + struct.pack('<I', len(packets)) + b''.join(packets))
+
+
+def native_packet(raw: bytes) -> bytes:
+    """Retain independent expanded bytes for an exact native Rust comparison."""
+    members = []
+    with zipfile.ZipFile(io.BytesIO(raw)) as archive:
+        for member in archive.infolist():
+            name, payload = member.filename.encode('utf-8'), archive.read(member)
+            members.append(struct.pack('<II', len(name), len(payload)) + name + payload)
+    return struct.pack('<II', len(raw), len(members)) + raw + b''.join(members)
 
 
 def main() -> None:

@@ -90,6 +90,10 @@ reads, constructs, edits and writes complete ordinary assembly and routing
 configurations. All 180 reference-readable modern configurations reconstruct
 exactly. Its context keeps the actual root kind and header import map; routing
 trailers stay outside the resolved section.
+The [Composer container API](docs/features/composer-containers/README.md) supports
+complete SMG ZIP32 carriers, new-member construction and isolated payload edits.
+It preserves unrelated compressed members, extra fields and comments. Member
+scene, geometry and application schemas remain separate work.
 The [biography evidence](docs/features/biography-archives/README.md) covers stored
 environment observations and repeated-string reading and writing.
 See [Parasolid transmit evidence](docs/features/parasolid-transmit/README.md) for
