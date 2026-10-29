@@ -215,6 +215,10 @@ pub(super) const CLASSES: &[&str] = &[
     // #54 / C-397 proves both complete body-feature owner chains.
     "moMoveFace_c",
     "moBending_c",
+    // #54 / C-379 proves the complete body-feature/reference-geometry owner chains.
+    "moMidSurface_c",
+    "moMidRefSurface_c",
+    "moRefSurface_c",
     // #54 / C-245 binds the complete inherited body-feature owner chain.
     "moMoveCopyBody_c",
     "moMirrorStock_c",

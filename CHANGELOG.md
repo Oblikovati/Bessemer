@@ -26,6 +26,8 @@
 
 ### Added
 
+- Added complete ordinary mid-surfaces, reference-surface backend framing, direct surface-ID keepers, face/edge pairs and modified-surface IDs. (#54)
+
 - Added complete ordinary move-face and bending records with compact transforms, required bending data and direct owned-array framing. (#54)
 
 - Added complete ordinary cavity, transformed-stock and sketch-hole records with inherited serializer bodies and typed cavity references. (#54)

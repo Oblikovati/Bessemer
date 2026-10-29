@@ -32,6 +32,27 @@ fn sheets(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     Ok(())
 }
 
+/// Preserve external sheet counts without inventing inline contents.
+/// Example: `external_surface(reader, map)?` for `moRefSurface_c`.
+pub(super) fn external_surface(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+) -> Result<()> {
+    reader.require_ordinary_part()?;
+    // #54 / C-379 binds this class's +AB0 return-one predicate and backend callback.
+    if reader.i32("archive_backend_marker")? == 0 {
+        sheets(reader, map)?;
+    } else {
+        let count = reader.i32("sheet_count")?;
+        if count < 0 {
+            return reader.checked(Err(super::invalid(format!(
+                "external sheet count {count}; expected a nonnegative metadata count"
+            ))));
+        }
+    }
+    suffix(reader, map)
+}
+
 fn suffix(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     if reader.i32("extra_body_presence")? != 0 {
         let state = reader.scope("extra_body", kernel_frames::read_body_state)?;

@@ -387,6 +387,9 @@ transformed stock and sketch holes through their complete inherited bodies.
 [Feature edits](docs/features/feature-edits/README.md) cover move-face records,
 compact transforms and bending data with direct arrays and packed raw words.
 
+[Mid-surfaces](docs/features/mid-surfaces/README.md) cover inline and external
+sheet framing, directly owned keepers, face arrays and shared face/edge pairs.
+
 [Standalone Inspection envelopes](docs/features/standalone-inspection/README.md)
 cover current encrypted templates and historical projects, exact XML preservation
 and immutable complete-XML replacement.

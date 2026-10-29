@@ -194,6 +194,8 @@ mod lightweight_post;
 mod lightweight_shared;
 mod linear_patterns;
 mod material;
+mod mid_surface_pairs;
+mod mid_surfaces;
 mod mirror_patterns;
 mod mitered_flanges;
 mod model_arrays;

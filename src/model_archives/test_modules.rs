@@ -595,3 +595,7 @@ mod body_extension_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/feature_edits.rs"]
 mod feature_edit_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/mid_surfaces.rs"]
+mod mid_surface_tests;

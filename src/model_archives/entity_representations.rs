@@ -58,6 +58,8 @@ const LAYOUTS: &[(&str, RepresentationLayout)] = &[
     ("moDerivedSurfIdRep_c", Source(&["48"])),
     ("moPLineSurfIdRep_c", Source(&["48"])),
     ("moPunchSurfIdRep_c", Source(&["48"])),
+    // #54 / C-379 binds the full mirror/source prefix and the signed +48 suffix.
+    ("moBendModifiedSurfIdRep_c", Source(&["48"])),
     ("moCirPatternSurfIdRep_c", Source(&["48"])),
     ("moCopySurfIdRep_c", Source(&["48"])),
     ("moPLineProjIdRep_c", Source(&["48"])),
