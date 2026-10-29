@@ -6,7 +6,7 @@ import struct
 from freeze_views import REFERENCE, WORKSPACE, view_oracle
 from freeze_blank_part import reference_snapshot
 from oracle_projection import prune_compound_kernel
-from sketch_spline_fixture_bytes import LISTS, alias_collection, collection
+from sketch_spline_fixture_bytes import LISTS, alias_collection, collection, fixed_equation_transform
 from spline_array_fixture_bytes import curve, interpolation, secondary
 import sketchprefix
 from mfcobjects import ObjectArchive
@@ -51,6 +51,10 @@ def array_cases() -> list[tuple[bytes, int]]:
 def owned_wires() -> dict[str, bytes]:
     result = {f'sketch-spline-{name}.bin': collection('cptsSplineList_c', True, 4, 3, True, final_word=value)
               for name, value in [('original', -31), ('edited', 12345)]}
+    original=result['sketch-spline-original.bin']
+    fixed=fixed_equation_transform()
+    assert original.count(fixed)==1
+    result['sketch-spline-transform-edited.bin']=original.replace(fixed,fixed_equation_transform(True))
     for raw in result.values(): freeze(0, 19000, raw)
     return result
 

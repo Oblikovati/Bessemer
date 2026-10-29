@@ -55,9 +55,20 @@ const LAYOUTS: &[(&str, RepresentationLayout)] = &[
     ("moEndFace3IntSurfIdRep_c", Local(&["38", "3c", "40"])),
     ("moFromSktEnt3IntSurfIdRep_c", Local(&["38", "3c", "40"])),
     ("moSideFace3IntSurfIdRep_c", Local(&["38", "3c", "40"])),
+    // #54 / C-371 binds both concrete virtual suffixes to the same three signed words.
+    (
+        "moSMGussetEndCornerFilletSurfIdRep_c",
+        Local(&["38", "3c", "40"]),
+    ),
+    (
+        "moSMGussetLateralCornerFilletSurfIdRep_c",
+        Local(&["38", "3c", "40"]),
+    ),
     ("moDerivedSurfIdRep_c", Source(&["48"])),
     ("moPLineSurfIdRep_c", Source(&["48"])),
     ("moPunchSurfIdRep_c", Source(&["48"])),
+    // #54 / C-379 binds the full mirror/source prefix and the signed +48 suffix.
+    ("moBendModifiedSurfIdRep_c", Source(&["48"])),
     ("moCirPatternSurfIdRep_c", Source(&["48"])),
     ("moCopySurfIdRep_c", Source(&["48"])),
     ("moPLineProjIdRep_c", Source(&["48"])),
@@ -72,6 +83,9 @@ const LAYOUTS: &[(&str, RepresentationLayout)] = &[
     ("moIndirectSurfIdRep_c", Source(&[])),
     ("moShellSurfIdRep_c", Source(&[])),
     ("moLPatternSurfIdRep_c", Source(&["48", "4c"])),
+    // #54 / C-398 binds both complete Ref2Edge source suffixes.
+    ("moRightSculptEdgeIdRep_c", Source(&["48", "4c"])),
+    ("moLeftSculptEdgeIdRep_c", Source(&["48", "4c"])),
     // #54 / C-392 proves the direct entity-ID member without an outer map slot.
     ("moPttnBodyEdgeIdRep_c", Source(&["48", "4c"])),
     // #54 / 11.192 / C-220 proves direct moEntityId_c +38 and both signed suffix words.

@@ -55,7 +55,9 @@ pub(super) fn read(
         "moPerBodyChooserDataWithFileName_c" => {
             super::body_chooser_records::named_chooser(reader, map)
         }
-        "moBBoxCenterData_c" => super::body_chooser_records::bounding_center(reader),
+        "moBBoxCenterData_c" | "moBBoxCenterData2_c" => {
+            super::body_chooser_records::bounding_center(reader)
+        }
         "moProfileFeature_c" | "mo3DProfileFeature_c" | "moOriginProfileFeature_c" => {
             super::profile_features::read(reader, map)
         }

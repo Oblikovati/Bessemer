@@ -30,6 +30,10 @@ pub(super) fn read(
             super::extruded_surfaces::keeper(reader)
         }
         "moExtendRefSurface_c" => super::extend_surfaces::read(reader, map),
+        "moMateConcentric" => super::concentric_mates::read(reader, map),
+        "moPlaneSection_c" => super::plane_sections::read(reader, map),
+        "moPlaneSectionEdge_c" => super::plane_sections::edge(reader, map),
+        "moPlaneSectionIdKeeper_c" => super::extruded_surfaces::keeper(reader),
         "moExtendRefSurfaceData_c" => super::extend_surfaces::data(reader, map),
         "moThicken_c" => super::thicken_records::read(reader, map),
         "moCompRefSurface_c" => super::thicken_records::component_surface(reader, map),

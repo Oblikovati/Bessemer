@@ -591,3 +591,35 @@ mod punch_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/body_extensions.rs"]
 mod body_extension_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/feature_edits.rs"]
+mod feature_edit_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/mid_surfaces.rs"]
+mod mid_surface_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/manager_scalars.rs"]
+mod manager_scalar_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/template_dependencies.rs"]
+mod template_dependency_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/mate_planes.rs"]
+mod mate_plane_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/library_features.rs"]
+mod library_feature_tests;
+
+#[cfg(test)]
+#[path = "../../tests/model_archives/single_span_splines.rs"]
+mod single_span_spline_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/sculpt_features.rs"]
+mod sculpt_feature_tests;

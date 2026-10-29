@@ -20,6 +20,14 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moSculpt_c" => super::sculpt_features::read(reader, map),
+        "moLibraryFeature_c" => super::library_features::read(reader, map),
+        "moXConfigData_c" => super::library_references::configuration(reader, map),
+        "moXFeatureData_c" => super::library_references::feature(reader),
+        "moXRefPlaneData_c" => super::library_references::plane(reader),
+        "moXRefData_c" => super::library_references::reference(reader, map),
+        "moAtomIdToFeatIdNode_c" => super::library_references::atom_node(reader, map),
+        "moAtomIdToFeatIds_c" => super::library_references::atom_ids(reader, map),
         "moPunch_c" => super::punches::read(reader, map),
         "moCurveInFile_c" => super::curve_files::read(reader, map),
         "moSMMiteredFlange_c" => super::mitered_flanges::read(reader, map),
@@ -34,6 +42,16 @@ pub(super) fn read(
         // #54 / C-396 binds the complete stock body with no modern suffix.
         "moStock_c" | "moXformStock_c" => super::stock_features::read(reader, map, false),
         "moCavity_c" => super::cavity_features::read(reader, map),
+        "moMoveFace_c" => super::move_faces::read(reader, map),
+        "moBending_c" => super::bending_features::read(reader, map),
+        "moBendingData_c" => super::bending_features::payload(reader, map),
+        "moMidSurface_c" => super::mid_surfaces::read(reader, map),
+        "moMidRefSurface_c" => super::mid_surfaces::reference(reader, map),
+        "moRefSurface_c" => super::mid_surfaces::base_reference(reader, map),
+        "moMidSurfData_c" => super::mid_surfaces::data(reader, map),
+        "moFacePair_c" => super::mid_surface_pairs::faces(reader, map),
+        "moFaceToHeuristicEdges_c" => super::mid_surface_pairs::face_edges(reader, map),
+        "moEdgePair_c" => super::mid_surface_pairs::edges(reader, map),
         "moMirrorStock_c" => super::stock_features::read(reader, map, true),
         "moBodyRef_w" => super::stock_references::body(reader, map),
         "moCompBody_c" => super::stock_references::component(reader, map),
@@ -143,7 +161,8 @@ pub(super) fn read(
         "moBlend_c" | "moBlendCut_c" => super::blend_records::read(reader, map),
         "moFaceBlendItemPair_c" => super::blend_records::face_pair(reader, map),
         "moFaceBlendItem_c" => super::blend_records::face_item(reader, map),
-        "moFlatPattern_c" => super::flat_patterns::read(reader, map),
+        // #54 / C-371 proves an exact delegation thunk with no template-class suffix.
+        "moFlatPattern_c" | "moTemplateFlatPattern_c" => super::flat_patterns::read(reader, map),
         "moFlatPatBoundBox_c" => super::flat_pattern_boxes::read(reader),
         "moBoundBoxData_c" => super::flat_pattern_boxes::contents(reader),
         "moSMBaseFlange_c" => super::base_flanges::read(reader, map),

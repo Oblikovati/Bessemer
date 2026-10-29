@@ -203,7 +203,7 @@ pub(super) fn sheet_metal(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader)
     reader.object(
         "flat_pattern",
         map,
-        ModelObjectRole::Declared(&["moFlatPattern_c"]),
+        ModelObjectRole::Declared(&["moFlatPattern_c", "moTemplateFlatPattern_c"]),
     )?;
     reader.i32s(&["raw_28", "raw_20", "raw_24", "raw_50"])
 }

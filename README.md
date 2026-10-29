@@ -384,6 +384,27 @@ dynamic arrays, ordered extension tags and legacy direct keeper data.
 [Body extensions](docs/features/body-extensions/README.md) cover cavities,
 transformed stock and sketch holes through their complete inherited bodies.
 
+[Feature edits](docs/features/feature-edits/README.md) cover move-face records,
+compact transforms and bending data with direct arrays and packed raw words.
+
+[Mid-surfaces](docs/features/mid-surfaces/README.md) cover inline and external
+sheet framing, directly owned keepers, face arrays and shared face/edge pairs.
+
+[Manager scalars](docs/features/manager-scalars/README.md) cover sheet-metal
+feature-ID pairs and custom material values in their complete CMgr maps.
+
+[Template dependencies](docs/features/template-dependencies/README.md) cover
+the template flat-pattern alias and both gusset corner surface-ID variants.
+
+[Mates and sections](docs/features/mate-planes/README.md) cover concentric mates,
+direct plane-section geometry, strict collections and serialized section bodies.
+
 [Standalone Inspection envelopes](docs/features/standalone-inspection/README.md)
 cover current encrypted templates and historical projects, exact XML preservation
 and immutable complete-XML replacement.
+
+Library-feature configuration, cross-reference and atom-ID interoperability is
+documented in [the feature evidence](docs/features/library-features/README.md).
+
+Sculpt-feature and edge-identifier interoperability is documented in
+[the sculpt evidence](docs/features/sculpt-features/README.md).

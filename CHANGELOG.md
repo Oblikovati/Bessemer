@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Fixed spline equation transforms consuming compact restore bytes instead of the documented fixed 120-byte operator. (#95)
+
 - Fixed reviewed sketch-bend curve and One Bend parent roles rejecting complete fresh or cached derived references while preserving unrelated-class rejection. (#46)
 
 - Fixed present sketch valued-dimension transforms using compact framing instead of the documented fixed 30-word archive operator, preserving raw presence, words and suffix identities. (#86)
@@ -25,6 +27,22 @@
 - Fixed reference-plane point roles rejecting documented endpoint and loft-sync subclasses for fresh and cached pointers. (#46)
 
 ### Added
+
+- Added lossless sculpt features, owned trim and chooser records, sculpt edge identifiers the second bounding-box center class and inherited scalar display dimensions. (#54)
+
+- Added complete exact-mode single-span spline records, including secondary interpolation with zero control points. (#54)
+
+- Added lossless ordinary library-feature configuration, cross-reference and atom-ID archive records. (#54)
+
+- Added complete ordinary concentric mates and plane sections with bounded collections, direct geometry and guarded serialized kernel bodies. (#54)
+
+- Added complete template flat-pattern aliases and both gusset corner surface-ID representations, preserving saved helper state and raw suffix words. (#54)
+
+- Added complete ordinary manager feature-ID pairs and custom material-property records with exact scalar values, names and shared identities. (#54)
+
+- Added complete ordinary mid-surfaces, reference-surface backend framing, direct surface-ID keepers, face/edge pairs and modified-surface IDs. (#54)
+
+- Added complete ordinary move-face and bending records with compact transforms, required bending data and direct owned-array framing. (#54)
 
 - Added complete ordinary cavity, transformed-stock and sketch-hole records with inherited serializer bodies and typed cavity references. (#54)
 
