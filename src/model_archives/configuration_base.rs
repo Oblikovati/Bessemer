@@ -40,8 +40,7 @@ fn relationship_fields(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) ->
     raw_fields::groups(reader, &[(Signed, "6f0"), (Octet, "680 960")])?;
     io::list(reader, map, "list_520")?;
     raw_fields::groups(reader, &[(Unsigned, "9a0"), (Octet, "964")])?;
-    let presence = reader.u8("has_data_608")?;
-    io::empty(reader, "optional_data_608", usize::from(presence))?;
+    super::photoworks_materials::optional(reader, map)?;
     reader.object(
         "toolbox_658",
         map,

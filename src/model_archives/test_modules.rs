@@ -656,3 +656,6 @@ mod deform_match_tests;
 
 #[path = "../../tests/resolved_features/configuration_visual_maps.rs"]
 mod configuration_visual_map_tests;
+
+#[path = "../../tests/resolved_features/photoworks_materials.rs"]
+mod photoworks_material_tests;

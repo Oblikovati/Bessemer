@@ -438,3 +438,7 @@ and complete curve-point references; see
 Configuration visual maps preserve ordered keys and complete direct appearance
 bodies without adding object tags or identities. See
 [the visual-map evidence](docs/features/configuration-visual-maps/README.md).
+
+PhotoWorks material managers preserve complete property records, direct lists,
+shared unit references and original stored paths. See
+[the material evidence](docs/features/photoworks-materials/README.md).

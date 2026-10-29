@@ -15,6 +15,7 @@ mod library_features;
 mod library_references;
 mod pattern_extensions;
 mod pattern_transform_words;
+mod photoworks_materials;
 mod sculpt_features;
 mod smart_components;
 mod smart_items;

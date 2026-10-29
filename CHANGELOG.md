@@ -28,6 +28,8 @@
 
 ### Added
 
+- Added complete direct PhotoWorks material managers and typed property records with shared unit references and original path/default preservation. (#54)
+
 - Added ordered direct configuration visual maps with complete versioned appearance bodies, duplicate keys and signed count preservation. (#54)
 
 - Added complete Deform feature interoperability with independent stored versions, two-pass matching, fixed geometry operators, extension records and reviewed curve-point roles. (#54)
