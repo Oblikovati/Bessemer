@@ -123,7 +123,8 @@ fn equation_fields(reader: &mut ModelDecoder<'_>, flags: u32) -> Result<()> {
         reader.text(&format!("equation_strings[{index}]"))?;
     }
     reader.i32s(&["equation_word", "unknown_1e0"])?;
-    reader.transform("transform_1e8")
+    // #95 / C-402 proves operator>>(mgXform_c&), not compact restore.
+    super::fixed_transform_records::read(reader, "transform_1e8", "spline equation")
 }
 
 fn control_suffix(reader: &mut ModelDecoder<'_>, flags: u32, control_list: bool) -> Result<()> {

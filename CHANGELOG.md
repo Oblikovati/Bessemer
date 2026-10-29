@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Fixed spline equation transforms consuming compact restore bytes instead of the documented fixed 120-byte operator. (#95)
+
 - Fixed reviewed sketch-bend curve and One Bend parent roles rejecting complete fresh or cached derived references while preserving unrelated-class rejection. (#46)
 
 - Fixed present sketch valued-dimension transforms using compact framing instead of the documented fixed 30-word archive operator, preserving raw presence, words and suffix identities. (#86)

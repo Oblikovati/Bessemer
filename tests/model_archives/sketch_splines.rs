@@ -65,7 +65,7 @@ fn complete_direct_splines_and_arrays_match_independent_values_and_bytes() {
         assert_eq!(encode_fields(&decoded, 30000).unwrap(), bytes);
         cases += 1;
     }
-    assert_eq!((cases, fields), (934, 80434));
+    assert_eq!((cases, fields), (934, 86266));
 }
 
 #[test]
@@ -272,4 +272,54 @@ fn every_spline_case_owns_its_source_and_kernel_encoding_is_parallel() {
         framed += 1;
     }
     assert_eq!(framed, 12);
+}
+
+#[test]
+fn equation_transform_retains_thirty_fixed_words() {
+    let fields = decode(0, 19000, ORIGINAL).unwrap();
+    let words: Vec<_> = fields
+        .iter()
+        .filter(|f| f.path.contains(".transform_1e8["))
+        .cloned()
+        .collect();
+    assert_eq!(words.len(), 30);
+    assert_eq!(words[0].value, ModelFieldValue::U32(0x962fc963));
+    assert_eq!(words[28].value, ModelFieldValue::U32(0xffffff0b));
+    assert_eq!(encode_fields(&words, 30000).unwrap().len(), 120);
+}
+
+#[test]
+fn equation_transform_rejects_unsupported_perspective() {
+    let mut changed = decode(0, 19000, ORIGINAL).unwrap();
+    changed
+        .iter_mut()
+        .find(|f| f.path.ends_with("transform_1e8[28]"))
+        .unwrap()
+        .value = ModelFieldValue::U32(0x10);
+    let raw = encode_fields(&changed, 30000).unwrap();
+    let Err(error) = decode(0, 19000, &raw) else {
+        panic!("unsupported perspective was accepted")
+    };
+    assert_eq!(error.class, crate::FailureClass::Unsupported);
+}
+
+#[test]
+fn erroneous_compact_equation_fixture_is_rejected_after_recorded_migration() {
+    let legacy = include_bytes!("../fixtures/spline-equation-transform/legacy-compact.bin");
+    assert!(decode(0, 19000, legacy).is_err());
+}
+
+#[test]
+fn equation_word_edit_matches_independent_fixed_operator_golden() {
+    let original = decode(0, 19000, ORIGINAL).unwrap();
+    let mut changed = original.clone();
+    changed
+        .iter_mut()
+        .find(|f| f.path.ends_with("transform_1e8[0]"))
+        .unwrap()
+        .value = ModelFieldValue::U32(12345);
+    let expected = include_bytes!("../fixtures/model-archives/sketch-spline-transform-edited.bin");
+    assert_eq!(encode_fields(&changed, 30000).unwrap(), expected);
+    assert_eq!(decode(0, 19000, expected).unwrap(), changed);
+    assert_eq!(encode_fields(&original, 30000).unwrap(), ORIGINAL);
 }

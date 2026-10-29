@@ -18,7 +18,7 @@ preserves its signed width without applying the primary record's width rule.
 Curve headers accept dimensions 3/4 or a completely zero header; the periodic
 word remains raw while selecting the documented one-value branch.
 
-The independent packet contains 934 cases and 80,434 scalar expectations. It
+The independent packet contains 934 cases and 86,266 scalar expectations. It
 covers all supported subtype masks, three point-list classes and aliases,
 inactive null lists, interpolation shapes, secondary records, equations,
 tolerance/curve branches, suppressed bodies and typed compressed bodies.
@@ -51,3 +51,7 @@ acceptance remains 866/906 and its complete gate still fails. Geometry/native
 application acceptance and public model result/history contracts remain open.
 The full PR gate belongs to the earlier geometric/kernel source state and must
 rerun before push. Humanizer was unavailable; prose remains for maintainer review.
+
+Behavior version 2 corrected the equation transform to thirty fixed u32 words.
+The [recorded migration](../spline-equation-transform/README.md) preserves the
+former fixture hashes and verifies every unaffected case unchanged (Bug #95).

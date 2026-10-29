@@ -1,0 +1,15 @@
+{
+  "issue": 95,
+  "previous_behavior_version": 1,
+  "behavior_version": 2,
+  "reason": "C-402 proves the fixed 30-word archive operator; compact restore was a synthetic fixture error",
+  "previous_hashes": {
+    "tests/fixtures/model-archives/sketch-spline-cases.bin": "792ccc55d41ddb941fb98cf89a8a36904397382f0a829e8d76fd873efdde8a90",
+    "tests/fixtures/model-archives/sketch-spline-original.bin": "02c2eda07dc470b0674f7dbe1024829811ef3d80c18048ff052f6f5c3b3cebbf",
+    "tests/fixtures/model-archives/sketch-spline-edited.bin": "cb8da6451dfa7fe82ba87c4629095ff4b4d23aa1a7c97eb766e3e3d03b95ed13",
+    "docs/features/model-archives/sketch-spline-cases.json": "a5f44a328be652429b67f00f42cd83a7fa71030fb9a233367d1509cb3187b17c"
+  },
+  "unchanged_non_equation_cases": 448,
+  "corrected_equation_cases": 486,
+  "new_packet_sha256": "54e80b25808bd2af6326031a0975e440997fc3168ed566bc70060bb84afa7442"
+}

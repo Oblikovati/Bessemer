@@ -1,6 +1,6 @@
 """Independent direct spline records with explicit point-list and optional-body branches."""
 import struct
-from freeze_views import object_tag, transform
+from freeze_views import object_tag
 from sketch_geometry_fixture_bytes import segment
 from sketch_reference_fixture_bytes import handle
 from spline_array_fixture_bytes import curve, doubles, interpolation, secondary, vectors
@@ -38,13 +38,21 @@ def arrays(rich: bool, flags: int) -> bytes:
     return out
 
 
+def fixed_equation_transform(edited: bool=False) -> bytes:
+    """Build the native fixed operator; e.g. fixed_equation_transform(True)."""
+    words=[(index*0x1020304 ^ 3*0x87654321)&0xffffffff for index in range(30)]
+    words[28]=0xffffff0b
+    if edited:words[0]=12345
+    return struct.pack('<30I',*words)
+
+
 def suffix(name: str | None, rich: bool, flags: int, secondary_flag: bool, curve_header: tuple[int, int, int, int] = (3, 2, 1, 0)) -> bytes:
     out = struct.pack('<iHH', -1 if secondary_flag else 0, 65531, 65530)
     if secondary_flag and rich and not flags & 1: out += secondary(2)
     out += struct.pack('<i', -23)
     if flags & 4:
         out += b''.join(short_wide_name(f'Ω equation {index}') for index in range(6))
-        out += struct.pack('<ii', -2**31, 2**31-1)+transform(True, 0x1a)
+        out += struct.pack('<ii', -2**31, 2**31-1)+fixed_equation_transform()
     out += struct.pack('<i', -29)
     if name == 'cptsSplineList_c':
         out += curve(*curve_header, 255 if rich else 0) if flags & 1 else struct.pack('<H', 255 if rich else 0)+(struct.pack('<d', -0.0) if rich else b'')
