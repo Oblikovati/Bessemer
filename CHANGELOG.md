@@ -26,6 +26,8 @@
 
 ### Added
 
+- Added complete ordinary concentric mates and plane sections with bounded collections, direct geometry and guarded serialized kernel bodies. (#54)
+
 - Added complete template flat-pattern aliases and both gusset corner surface-ID representations, preserving saved helper state and raw suffix words. (#54)
 
 - Added complete ordinary manager feature-ID pairs and custom material-property records with exact scalar values, names and shared identities. (#54)

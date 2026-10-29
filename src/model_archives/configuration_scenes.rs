@@ -92,7 +92,8 @@ fn mapped_pointer(
     Ok(())
 }
 
-fn bounds(reader: &mut ModelDecoder<'_>) -> Result<()> {
+/// Preserve ten native bounding-box scalars; e.g. `bounds(reader)?` for direct scene or section members.
+pub(super) fn bounds(reader: &mut ModelDecoder<'_>) -> Result<()> {
     for label in ["bbox.centre", "bbox.high", "bbox.low"] {
         vectors::double_vector(reader, label)?;
     }

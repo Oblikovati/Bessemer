@@ -607,3 +607,7 @@ mod manager_scalar_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/template_dependencies.rs"]
 mod template_dependency_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/mate_planes.rs"]
+mod mate_plane_tests;

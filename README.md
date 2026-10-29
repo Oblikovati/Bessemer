@@ -396,6 +396,9 @@ feature-ID pairs and custom material values in their complete CMgr maps.
 [Template dependencies](docs/features/template-dependencies/README.md) cover
 the template flat-pattern alias and both gusset corner surface-ID variants.
 
+[Mates and sections](docs/features/mate-planes/README.md) cover concentric mates,
+direct plane-section geometry, strict collections and serialized section bodies.
+
 [Standalone Inspection envelopes](docs/features/standalone-inspection/README.md)
 cover current encrypted templates and historical projects, exact XML preservation
 and immutable complete-XML replacement.

@@ -23,6 +23,8 @@ const ID_KEEPERS: &[&str] = &[
     "moSweepRefSurfIdKeeper_c",
     // #54 / C-276 proves the split keeper's inherited moIdKeeper_c role.
     "moSplitBodyIdKeeper_c",
+    // #54 / C-403 verifies the keeper's moIdKeeper_c ancestry and ordinary zero-byte provider.
+    "moPlaneSectionIdKeeper_c",
 ];
 
 pub(super) fn header(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
@@ -219,6 +221,8 @@ pub(super) const CLASSES: &[&str] = &[
     "moMidSurface_c",
     "moMidRefSurface_c",
     "moRefSurface_c",
+    // #54 / C-403 proves reference-plane ancestry and the zero-byte ordinary keeper.
+    "moPlaneSection_c",
     // #54 / C-245 binds the complete inherited body-feature owner chain.
     "moMoveCopyBody_c",
     "moMirrorStock_c",
