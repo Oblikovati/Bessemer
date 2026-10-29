@@ -13,6 +13,8 @@ const ID_KEEPERS: &[&str] = &[
     "moRevolvRefSurfIdKeeper_c",
     // #54 / C-251 proves this empty ordinary keeper's moIdKeeper_c ancestry.
     "moOffsetRefSurfIdKeeper_c",
+    // #54 / 11.228 binds the extended surface's empty native keeper.
+    "moExtendRefSurfIdKeeper_c",
     // #54 / C-382 proves this ordinary empty keeper's moIdKeeper_c ancestry.
     "moBlendRefSurfIdKeeper_c",
     // #54 / C-269 binds the sew surface's empty inherited keeper.
@@ -206,6 +208,10 @@ fn surface_ids(reader: &mut ModelDecoder<'_>) -> Result<()> {
 pub(super) const CLASSES: &[&str] = &[
     // #54 / C-222 through C-231: stock inherits the complete derived/body-feature layers.
     "moStock_c",
+    // #54 / C-396 proves the complete inherited owner chains.
+    "moXformStock_c",
+    "moSketchHole",
+    "moCavity_c",
     // #54 / C-245 binds the complete inherited body-feature owner chain.
     "moMoveCopyBody_c",
     "moMirrorStock_c",
@@ -293,12 +299,16 @@ pub(super) const CLASSES: &[&str] = &[
     "moRevolvRefSurf_c",
     // #54 / C-251 binds moRefSurface_c -> moRefGeom_c -> moAtomFeature_c.
     "moOffsetRefSurface_c",
+    // #54 / 11.228 proves the complete reference-surface owner chain.
+    "moExtendRefSurface_c",
     // #54 / C-382 binds the inherited reference-geometry atom-owner layer.
     "moBlendRefSurface_c",
     // #54 / C-380 binds this distinct body-feature serializer and constructor.
     "moRefCurve_c",
     // #54 / C-212: helices retain the inherited reference-geometry chooser owner.
     "moHelix_c",
+    // #54 / C-375 proves the complete inherited reference-curve owner chain.
+    "moCurveInFile_c",
     // #54 / C-278 binds the inherited reference-geometry chooser owner.
     "moCompositeCurve_c",
     // #54 / C-389 binds the complete moReferenceCurve_c ancestry and owner role.
@@ -315,6 +325,8 @@ pub(super) const CLASSES: &[&str] = &[
     "moSketchBend_c",
     // #54 / C-292 binds the mitered flange's inherited bend-group owner chain.
     "moSMMiteredFlange_c",
+    // #54 / 11.235 binds the complete punch body-feature owner chain.
+    "moPunch_c",
     // #54 / C-288 proves complete body-feature ancestry for these fold records.
     "moSM3dBend_c",
     "moFold_c",
@@ -397,7 +409,9 @@ pub(super) enum BodyFeatureKind {
 impl BodyFeatureKind {
     pub(super) fn parse(name: &str) -> Option<Self> {
         match name {
-            "moExtrusion_c" | "moBoss_c" | "moCut_c" | "moICE_c" => Some(Self::Extrusion),
+            "moExtrusion_c" | "moBoss_c" | "moCut_c" | "moICE_c" | "moSketchHole" => {
+                Some(Self::Extrusion)
+            }
             "moRevolution_c" | "moRevCut_c" => Some(Self::Revolution),
             "moRib_c" => Some(Self::Rib),
             _ => None,

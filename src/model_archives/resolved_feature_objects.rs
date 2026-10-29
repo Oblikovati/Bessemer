@@ -20,6 +20,8 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moPunch_c" => super::punches::read(reader, map),
+        "moCurveInFile_c" => super::curve_files::read(reader, map),
         "moSMMiteredFlange_c" => super::mitered_flanges::read(reader, map),
         "moSketchBend_c" => super::sketch_bends::read(reader, map),
         "moSketchBitmap_c" => super::sketch_bitmaps::read(reader, map),
@@ -29,7 +31,9 @@ pub(super) fn read(
         "moPSMeshToleranceHandler_c" => super::move_copy_deformation::mesh(reader),
         "moDerivedFeatRef_w" => super::derived_references::read(reader, map),
         "moSurfaceBodyRef_w" => super::stock_references::body(reader, map),
-        "moStock_c" => super::stock_features::read(reader, map, false),
+        // #54 / C-396 binds the complete stock body with no modern suffix.
+        "moStock_c" | "moXformStock_c" => super::stock_features::read(reader, map, false),
+        "moCavity_c" => super::cavity_features::read(reader, map),
         "moMirrorStock_c" => super::stock_features::read(reader, map, true),
         "moBodyRef_w" => super::stock_references::body(reader, map),
         "moCompBody_c" => super::stock_references::component(reader, map),

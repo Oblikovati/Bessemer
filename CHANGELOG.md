@@ -26,6 +26,14 @@
 
 ### Added
 
+- Added complete ordinary cavity, transformed-stock and sketch-hole records with inherited serializer bodies and typed cavity references. (#54)
+
+- Added complete ordinary punch records with internal revision gates, bounded dynamic arrays, ordered extensions and legacy keeper data. (#54)
+
+- Added complete ordinary extended reference surfaces, mode-selected extension data and empty native keepers. (#54)
+
+- Added complete ordinary curves-from-file archives with retained filenames, bounded signed point lists and versioned point references. (#54)
+
 - Added complete ordinary mitered-flange records with direct object and DWORD collections and sketch-associated handle groups. (#54)
 
 - Added ordinary sketch-bend continuations with complete One Bend prefixes, shared tagged handles and explicit kind-7 dependency errors. (#54)

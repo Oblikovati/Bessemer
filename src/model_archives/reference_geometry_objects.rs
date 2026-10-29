@@ -26,7 +26,11 @@ pub(super) fn read(
         "moOffsetRefSurface_c" => super::offset_surfaces::read(reader, map),
         "moOffsetSurfData_c" => super::offset_surfaces::data(reader, map),
         // #54 / C-251 binds the ordinary binary su_CObject zero-byte return.
-        "moOffsetRefSurfIdKeeper_c" => super::extruded_surfaces::keeper(reader),
+        "moOffsetRefSurfIdKeeper_c" | "moExtendRefSurfIdKeeper_c" => {
+            super::extruded_surfaces::keeper(reader)
+        }
+        "moExtendRefSurface_c" => super::extend_surfaces::read(reader, map),
+        "moExtendRefSurfaceData_c" => super::extend_surfaces::data(reader, map),
         "moThicken_c" => super::thicken_records::read(reader, map),
         "moCompRefSurface_c" => super::thicken_records::component_surface(reader, map),
         // #54 / C-249 binds the identical modern atom-geometry wire helper.
