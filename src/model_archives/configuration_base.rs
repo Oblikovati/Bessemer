@@ -82,7 +82,11 @@ fn initial_maps(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result
         "array_3c8",
         ModelObjectRole::Declared(&["moRefWrapper_c"]),
     )?;
-    raw_fields::fields(reader, Signed, "748 bcc 848")
+    raw_fields::fields(reader, Signed, "748 bcc")?;
+    if reader.version() > 0x2f72 {
+        reader.i32("raw_848")?;
+    }
+    Ok(())
 }
 
 fn common_maps(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
@@ -139,6 +143,9 @@ fn late_maps(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()
 fn final_base_fields(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     reader.i32("raw_bc8")?;
     io::integer_pairs(reader, "map_b90", false)?;
+    if reader.manager_dialect() == Some(super::manager_dialect::ManagerDialect::Owned11000) {
+        return Ok(());
+    }
     raw_fields::fields(reader, Signed, "4c0 4c4 a78")?;
     reader.object(
         "envelope_bd0",

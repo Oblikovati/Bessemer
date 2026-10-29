@@ -72,13 +72,15 @@ fn scoped_class_error(
     actual: &str,
     classes: &[&str],
 ) -> crate::BessemerError {
+    let expected = if classes.is_empty() {
+        "null or an already loaded object".into()
+    } else {
+        format!("{}, null or an already loaded object", classes.join(", "))
+    };
     crate::BessemerError::new(
         operation,
         label,
         crate::FailureClass::Unsupported,
-        format!(
-            "fresh class {actual:?}; expected {}, null or an already loaded object",
-            classes.join(", ")
-        ),
+        format!("fresh class {actual:?}; expected {expected}"),
     )
 }

@@ -662,7 +662,13 @@ mod photoworks_material_tests;
 
 #[path = "../../tests/resolved_features/configuration_decal_managers.rs"]
 mod configuration_decal_manager_tests;
+
 #[path = "../../tests/resolved_features/configuration_decal_maps.rs"]
 mod configuration_decal_map_tests;
 #[path = "../../tests/resolved_features/configuration_decals.rs"]
 mod configuration_decal_tests;
+#[path = "../../tests/resolved_features/intermediate_managers.rs"]
+mod intermediate_manager_tests;
+
+#[path = "../../tests/resolved_features/intermediate_tail.rs"]
+mod intermediate_tail_tests;

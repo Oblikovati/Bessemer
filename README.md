@@ -446,3 +446,7 @@ shared unit references and original stored paths. See
 Configuration decals preserve complete parameter records, nested association
 arrays and scoped reference graphs. See
 [the decal evidence](docs/features/configuration-decals/README.md).
+
+Version-11000 configuration managers retain their exact owned-object, scene and
+suffix layouts alongside the reviewed 18000 and 19000 dialects. See
+[the intermediate-manager evidence](docs/features/intermediate-managers/README.md).

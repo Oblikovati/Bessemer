@@ -3,6 +3,7 @@ use crate::{BessemerError, FailureClass, Result};
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub(super) enum ManagerDialect {
+    Owned11000,
     Current19000,
     Owned18000,
 }
@@ -12,6 +13,7 @@ impl ManagerDialect {
     /// Example: `ManagerDialect::from_version(ArchiveVersion::new(18000))?`.
     pub(super) fn from_version(version: ArchiveVersion) -> Result<Self> {
         match version.value() {
+            11000 => Ok(Self::Owned11000),
             19000 => Ok(Self::Current19000),
             18000 => Ok(Self::Owned18000),
             value => Err(BessemerError::new(
@@ -19,7 +21,7 @@ impl ManagerDialect {
                 "Contents/CMgr",
                 FailureClass::Unsupported,
                 format!(
-                    "configuration version {value}; expected explicitly scoped version 18000 or 19000"
+                    "configuration version {value}; expected explicitly scoped version 11000, 18000 or 19000"
                 ),
             )),
         }
@@ -29,6 +31,7 @@ impl ManagerDialect {
     /// Example: `ManagerDialect::Owned18000.version()` returns 18000.
     pub(super) fn version(self) -> u32 {
         match self {
+            Self::Owned11000 => 11000,
             Self::Current19000 => 19000,
             Self::Owned18000 => 18000,
         }

@@ -13,8 +13,9 @@ const LIMITS: ModelArchiveLimits = ModelArchiveLimits {
 };
 
 #[test]
-fn dialect_selection_accepts_only_the_two_independently_reviewed_versions() {
+fn dialect_selection_accepts_only_the_three_independently_reviewed_versions() {
     for (version, dialect) in [
+        (11000, ManagerDialect::Owned11000),
         (18000, ManagerDialect::Owned18000),
         (19000, ManagerDialect::Current19000),
     ] {
@@ -24,7 +25,17 @@ fn dialect_selection_accepts_only_the_two_independently_reviewed_versions() {
         );
         assert_eq!(dialect.version(), version);
     }
-    for version in [0, 17999, 18001, 0x46c1, 18999, 19001, u32::MAX] {
+    for version in [
+        0,
+        10999,
+        11001,
+        17999,
+        18001,
+        0x46c1,
+        18999,
+        19001,
+        u32::MAX,
+    ] {
         assert!(ManagerDialect::from_version(ArchiveVersion::new(version)).is_err());
     }
 }

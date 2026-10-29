@@ -29,11 +29,18 @@ pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
         reader.u32(&format!("map_ce0[{index}].value"))?;
     }
     io::integer_pairs(reader, "map_d18", false)?;
-    reader.i32s(&["raw_c5c", "raw_ccc", "raw_cc8"])?;
+    reader.i32s(&["raw_c5c", "raw_ccc"])?;
+    if reader.manager_dialect() == Some(super::manager_dialect::ManagerDialect::Owned11000) {
+        return Ok(());
+    }
+    reader.i32("raw_cc8")?;
     final_set(reader)
 }
 
-fn config_object(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+/// Preserve the directly owned record with its original version gates.
+/// Example: `configuration_suffix::config_object(reader, map)?` at +4C8.
+pub(super) fn config_object(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    super::configuration_manager::require_manager_scope(reader)?;
     reader.i32s(&["raw_0c", "raw_08"])?;
     reader.object(
         "referenced_b0",
@@ -73,7 +80,9 @@ fn optional_fields(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
         map,
         ModelObjectRole::Declared(&["moPatternItemId_c"]),
     )?;
-    reader.object("list_88", map, ModelObjectRole::Declared(&["suObList"]))?;
+    if reader.version() > 0x2b8a {
+        reader.object("list_88", map, ModelObjectRole::Declared(&["suObList"]))?;
+    }
     if reader.version() > 0x4972 {
         reader.object("object_a8", map, ModelObjectRole::Any)?;
     }
