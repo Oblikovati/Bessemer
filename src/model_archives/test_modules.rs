@@ -643,3 +643,13 @@ mod smart_component_tests;
 
 #[path = "../../tests/resolved_features/three_dimensional_views.rs"]
 mod three_dimensional_view_tests;
+
+#[path = "../../tests/resolved_features/deform_geometry.rs"]
+mod deform_geometry_tests;
+#[path = "../../tests/resolved_features/deform_wrappers.rs"]
+mod deform_wrapper_tests;
+#[path = "../../tests/resolved_features/deformations.rs"]
+mod deformation_tests;
+
+#[path = "../../tests/resolved_features/deform_matching.rs"]
+mod deform_match_tests;

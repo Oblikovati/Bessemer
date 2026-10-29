@@ -20,6 +20,7 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moDeform_c" => super::deform_features::read(reader, map),
         "moSmartComponentFeature_c" => super::smart_components::read(reader, map),
         "moSmartComponentFeatureData_c" => super::smart_components::feature_data(reader, map),
         "moSensorDiaMapList_c" => super::smart_components::sensor_map(reader, map),

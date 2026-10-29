@@ -430,3 +430,7 @@ and shared owner identities; see
 Modern configuration-manager 3D views retain complete base records and direct
 annotation groups; see
 [the 3D-view evidence](docs/features/three-dimensional-views/README.md).
+
+Deform features retain both matching passes, independent stored geometry versions
+and complete curve-point references; see
+[the Deform evidence](docs/features/deformations/README.md).

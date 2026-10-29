@@ -28,6 +28,8 @@
 
 ### Added
 
+- Added complete Deform feature interoperability with independent stored versions, two-pass matching, fixed geometry operators, extension records and reviewed curve-point roles. (#54)
+
 - Added modern configuration-manager 3D views with complete base transforms, direct annotation records, ordered duplicate keys and high/low count framing. (#54)
 
 - Added complete smart-component feature, data, folder, item and sensor-map interoperability with direct containers and preserved owner identities. (#54)
