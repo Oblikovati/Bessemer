@@ -4,6 +4,7 @@ mod declaration;
 mod edit;
 mod encoding;
 mod grammar;
+mod inspection;
 mod lexical;
 mod model;
 mod namespaces;
@@ -14,6 +15,7 @@ mod types;
 mod views;
 
 use crate::{BessemerError, FailureClass, Result, archive_codec::PreservedContents};
+pub(crate) use inspection::validate as validate_inspection_xml;
 pub use properties::{MetadataProperty, PropertySection, PropertyValue, PropertyValueKind};
 use std::sync::Arc;
 pub use stream::{MetadataFamily, MetadataStream};

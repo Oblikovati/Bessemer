@@ -17,6 +17,7 @@ mod document;
 mod error;
 pub mod header;
 pub mod history;
+pub mod inspection;
 pub mod metadata;
 pub mod model_archives;
 pub mod parasolid;
