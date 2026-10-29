@@ -378,6 +378,9 @@ wires, verbatim filenames, signed point counts and bit-preserving coordinates.
 [Extended surfaces](docs/features/extend-surfaces/README.md) cover inline surface
 bodies, direct lists, empty keepers and end-condition-dependent pointers.
 
+[Punch records](docs/features/punches/README.md) cover internal revisions, bounded
+dynamic arrays, ordered extension tags and legacy direct keeper data.
+
 [Standalone Inspection envelopes](docs/features/standalone-inspection/README.md)
 cover current encrypted templates and historical projects, exact XML preservation
 and immutable complete-XML replacement.

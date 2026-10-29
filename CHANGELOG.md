@@ -26,6 +26,8 @@
 
 ### Added
 
+- Added complete ordinary punch records with internal revision gates, bounded dynamic arrays, ordered extensions and legacy keeper data. (#54)
+
 - Added complete ordinary extended reference surfaces, mode-selected extension data and empty native keepers. (#54)
 
 - Added complete ordinary curves-from-file archives with retained filenames, bounded signed point lists and versioned point references. (#54)

@@ -583,3 +583,7 @@ mod curve_file_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/extend_surfaces.rs"]
 mod extend_surface_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/punches.rs"]
+mod punch_tests;

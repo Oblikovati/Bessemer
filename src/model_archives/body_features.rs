@@ -321,6 +321,8 @@ pub(super) const CLASSES: &[&str] = &[
     "moSketchBend_c",
     // #54 / C-292 binds the mitered flange's inherited bend-group owner chain.
     "moSMMiteredFlange_c",
+    // #54 / 11.235 binds the complete punch body-feature owner chain.
+    "moPunch_c",
     // #54 / C-288 proves complete body-feature ancestry for these fold records.
     "moSM3dBend_c",
     "moFold_c",
