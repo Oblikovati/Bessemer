@@ -640,3 +640,6 @@ mod annotation_extra_tests;
 
 #[path = "../../tests/resolved_features/smart_components.rs"]
 mod smart_component_tests;
+
+#[path = "../../tests/resolved_features/three_dimensional_views.rs"]
+mod three_dimensional_view_tests;

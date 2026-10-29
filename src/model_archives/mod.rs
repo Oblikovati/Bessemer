@@ -15,6 +15,7 @@ mod pattern_transform_words;
 mod sculpt_features;
 mod smart_components;
 mod smart_items;
+mod three_dimensional_views;
 
 mod archive;
 mod attachment_records;

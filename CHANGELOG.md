@@ -28,6 +28,8 @@
 
 ### Added
 
+- Added modern configuration-manager 3D views with complete base transforms, direct annotation records, ordered duplicate keys and high/low count framing. (#54)
+
 - Added complete smart-component feature, data, folder, item and sensor-map interoperability with direct containers and preserved owner identities. (#54)
 
 - Added complete text borders, symbols, pattern-count dimensions and handles, and direct thread-instance arrays with their raw item records. (#54)

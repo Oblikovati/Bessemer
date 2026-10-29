@@ -42,7 +42,7 @@ def copy_sources(pin: Path) -> dict[str,str]:
     return hashes
 
 
-def record_snapshot(pin: Path, hashes: dict[str,str], result: unittest.TestResult, destination: Path, readers: tuple[str,...]) -> None:
+def record_snapshot(pin: Path, hashes: dict[str,str], result: unittest.TestResult, destination: Path, readers: tuple[str,...], context_readers: tuple[str,...]=('swcontainer','resolvedfeatures','mfcobjects')) -> None:
     """Retain origin/hash evidence before cleanup; e.g. record_snapshot(pin,hashes,result,folder,readers)."""
     pinned={p.relative_to(pin).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(pin.rglob('*.py'))}
     assert pinned==hashes,'pinned files changed; expected the immutable source snapshot'
@@ -50,14 +50,14 @@ def record_snapshot(pin: Path, hashes: dict[str,str], result: unittest.TestResul
              if getattr(module,'__file__',None) and Path(module.__file__).resolve().is_relative_to(pin)}
     live=[name for name,module in sys.modules.copy().items() if getattr(module,'__file__',None) and Path(module.__file__).resolve().is_relative_to(SOURCE)]
     assert not live,f'imported live modules {live}; expected every source import under {pin}'
-    assert {'swcontainer','resolvedfeatures','mfcobjects',*readers}<=origins.keys(),f'missing pinned readers; expected {readers}'
+    assert {*context_readers,*readers}<=origins.keys(),f'missing pinned readers; expected {readers}'
     report=dict(source_hashes=hashes,source_python_files=len(hashes),source_origins=origins,
                 tests_run=result.testsRun,successful=result.wasSuccessful(),
                 snapshot_identity=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest())
     (destination/'fixture-reference-snapshot.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')
 
 
-def run(feature_directory: Path, freeze_module: str, readers: tuple[str,...]) -> bool:
+def run(feature_directory: Path, freeze_module: str, readers: tuple[str,...], context_readers: tuple[str,...]=('swcontainer','resolvedfeatures','mfcobjects')) -> bool:
     """Check actual independent readers in a fresh process; e.g. run(folder,'freeze_end_caps',('endcaps',))."""
     with tempfile.TemporaryDirectory(prefix='bessemer-reference-') as temporary:
         pin=Path(temporary);hashes=copy_sources(pin)
@@ -67,6 +67,6 @@ def run(feature_directory: Path, freeze_module: str, readers: tuple[str,...]) ->
         module.REFERENCE=pin
         suite=unittest.defaultTestLoader.discover(str(feature_directory))
         result=unittest.TextTestRunner(verbosity=1).run(suite)
-        record_snapshot(pin,hashes,result,feature_directory,readers)
+        record_snapshot(pin,hashes,result,feature_directory,readers,context_readers)
     return result.wasSuccessful()
 

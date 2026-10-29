@@ -426,3 +426,7 @@ records preserve their complete bodies; see
 Smart-component features retain their complete folders, items, direct sensor maps
 and shared owner identities; see
 [the smart-component evidence](docs/features/smart-components/README.md).
+
+Modern configuration-manager 3D views retain complete base records and direct
+annotation groups; see
+[the 3D-view evidence](docs/features/three-dimensional-views/README.md).
