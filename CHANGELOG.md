@@ -26,6 +26,8 @@
 
 ### Added
 
+- Added complete ordinary cavity, transformed-stock and sketch-hole records with inherited serializer bodies and typed cavity references. (#54)
+
 - Added complete ordinary punch records with internal revision gates, bounded dynamic arrays, ordered extensions and legacy keeper data. (#54)
 
 - Added complete ordinary extended reference surfaces, mode-selected extension data and empty native keepers. (#54)

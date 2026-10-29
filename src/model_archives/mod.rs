@@ -134,6 +134,7 @@ mod atom;
 mod body_end_specs;
 mod body_features;
 mod boundary_references;
+mod cavity_features;
 mod center_helpers;
 mod circular_patterns;
 mod component_coordinates;

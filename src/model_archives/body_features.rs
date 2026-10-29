@@ -208,6 +208,10 @@ fn surface_ids(reader: &mut ModelDecoder<'_>) -> Result<()> {
 pub(super) const CLASSES: &[&str] = &[
     // #54 / C-222 through C-231: stock inherits the complete derived/body-feature layers.
     "moStock_c",
+    // #54 / C-396 proves the complete inherited owner chains.
+    "moXformStock_c",
+    "moSketchHole",
+    "moCavity_c",
     // #54 / C-245 binds the complete inherited body-feature owner chain.
     "moMoveCopyBody_c",
     "moMirrorStock_c",
@@ -405,7 +409,9 @@ pub(super) enum BodyFeatureKind {
 impl BodyFeatureKind {
     pub(super) fn parse(name: &str) -> Option<Self> {
         match name {
-            "moExtrusion_c" | "moBoss_c" | "moCut_c" | "moICE_c" => Some(Self::Extrusion),
+            "moExtrusion_c" | "moBoss_c" | "moCut_c" | "moICE_c" | "moSketchHole" => {
+                Some(Self::Extrusion)
+            }
             "moRevolution_c" | "moRevCut_c" => Some(Self::Revolution),
             "moRib_c" => Some(Self::Rib),
             _ => None,

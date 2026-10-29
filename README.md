@@ -381,6 +381,9 @@ bodies, direct lists, empty keepers and end-condition-dependent pointers.
 [Punch records](docs/features/punches/README.md) cover internal revisions, bounded
 dynamic arrays, ordered extension tags and legacy direct keeper data.
 
+[Body extensions](docs/features/body-extensions/README.md) cover cavities,
+transformed stock and sketch holes through their complete inherited bodies.
+
 [Standalone Inspection envelopes](docs/features/standalone-inspection/README.md)
 cover current encrypted templates and historical projects, exact XML preservation
 and immutable complete-XML replacement.

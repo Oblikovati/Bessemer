@@ -31,7 +31,9 @@ pub(super) fn read(
         "moPSMeshToleranceHandler_c" => super::move_copy_deformation::mesh(reader),
         "moDerivedFeatRef_w" => super::derived_references::read(reader, map),
         "moSurfaceBodyRef_w" => super::stock_references::body(reader, map),
-        "moStock_c" => super::stock_features::read(reader, map, false),
+        // #54 / C-396 binds the complete stock body with no modern suffix.
+        "moStock_c" | "moXformStock_c" => super::stock_features::read(reader, map, false),
+        "moCavity_c" => super::cavity_features::read(reader, map),
         "moMirrorStock_c" => super::stock_features::read(reader, map, true),
         "moBodyRef_w" => super::stock_references::body(reader, map),
         "moCompBody_c" => super::stock_references::component(reader, map),

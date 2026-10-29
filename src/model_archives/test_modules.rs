@@ -587,3 +587,7 @@ mod extend_surface_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/punches.rs"]
 mod punch_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/body_extensions.rs"]
+mod body_extension_tests;
