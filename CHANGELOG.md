@@ -28,6 +28,8 @@
 
 ### Added
 
+- Added complete alignment groups, order-display and valued-dimension aliases, and strict present sketch-text kernel records. (#54)
+
 - Added saved external unit-component owners and model references with completed-part context guards and preserved shared identities. (#54)
 
 - Added lossless sculpt features, owned trim and chooser records, sculpt edge identifiers the second bounding-box center class and inherited scalar display dimensions. (#54)

@@ -20,6 +20,7 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moAlignGroup_c" => super::alignment_groups::read(reader, map),
         "moSculpt_c" => super::sculpt_features::read(reader, map),
         "moLibraryFeature_c" => super::library_features::read(reader, map),
         "moXConfigData_c" => super::library_references::configuration(reader, map),

@@ -6,6 +6,7 @@ pub(super) const CLASSES: &[&str] = &[
     "Dimension_c",
     "moNumberDim_c",
     "moScalerDim_c",
+    "moScalerLengthDim_c",
     "ParallelPlaneDistanceDim_c",
     "AngleDim_c",
     "ThreeDRadiusDim_c",
@@ -19,6 +20,7 @@ pub(super) const CLASSES: &[&str] = &[
 pub(super) const GEOMETRIC: &[&str] = &[
     "moNumberDim_c",
     "moScalerDim_c",
+    "moScalerLengthDim_c",
     "ParallelPlaneDistanceDim_c",
     "ThreeDRadiusDim_c",
     "ThreeDdiameterDim_c",

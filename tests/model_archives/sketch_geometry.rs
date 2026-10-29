@@ -77,7 +77,7 @@ fn direct_line_edit_matches_independent_bytes_and_preserves_original() {
 }
 
 #[test]
-fn direct_sketch_unsupported_point_and_kernel_text_states_fail_explicitly() {
+fn direct_sketch_unsupported_points_and_incomplete_kernel_text_fail_explicitly() {
     let mut cursor = ArchiveCursor::new(CASES);
     let (_, version, bytes, _) = next_case(&mut cursor);
     for (path, value) in [("mask", 0x8020), ("has_jet", 65535)] {
@@ -93,7 +93,15 @@ fn direct_sketch_unsupported_point_and_kernel_text_states_fail_explicitly() {
     }
     let kernel = include_bytes!("../fixtures/model-archives/sketch-text-kernel-unsupported.bin");
     let error = decode(2, 19000, kernel).unwrap_err();
-    assert_eq!(error.class, crate::FailureClass::Unsupported);
+    assert_eq!(error.class, crate::FailureClass::Invalid);
+    assert_eq!(
+        error.cause,
+        format!(
+            "range {}+1; expected within {} bytes",
+            kernel.len(),
+            kernel.len()
+        )
+    );
     assert!(decode(255, 19000, &[]).unwrap_err().cause.contains("255"));
 }
 

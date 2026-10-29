@@ -3,7 +3,12 @@ use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader, vectors::double_vector};
 
 // #54 / C-385: primary slots and native ancestry bind these exact derived bodies.
-pub(super) const G1_CLASSES: &[&str] = &["sgValG1Dim", "sgCircleDim", "sgSplineTanMagnitudeDim"];
+pub(super) const G1_CLASSES: &[&str] = &[
+    "sgValG1Dim",
+    "sgCircleDim",
+    "sgSplineTanMagnitudeDim",
+    "sgSplineLengthDim",
+];
 pub(super) const G2_CLASSES: &[&str] = &[
     "sgValG2Dim",
     "sgLLDist",
@@ -14,6 +19,7 @@ pub(super) const G2_CLASSES: &[&str] = &[
     "sgAnglDim",
     "sgPoint3DPlaneDist",
     "sg3DPlane3DPlaneDist",
+    "sgBsOrdDim",
 ];
 pub(super) const G3_CLASSES: &[&str] = &["sgValG3Dim", "sgArcLenDist"];
 pub(super) const OFFSET_CLASSES: &[&str] = &["sgOffsetDim", "sgSkOffsetDim"];

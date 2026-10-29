@@ -37,7 +37,7 @@ pub(super) const WRAPPER_CLASSES: &[&str] = &[
 
 // The ordinary wrapper's explicit component family follows the scoped 11.16 reader.
 // Unknown classes are not admitted through name prefixes or structural guesses.
-const COMPONENTS: &[&str] = &[
+pub(super) const COMPONENTS: &[&str] = &[
     "moCompBody_c",
     "moCompSolidBody_c",
     "moCompSurfaceBody_c",

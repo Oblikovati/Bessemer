@@ -1,0 +1,9 @@
+{
+  "behavior_version": 1,
+  "fixture": "tests/fixtures/model-archives/sketch-text-kernel-unsupported.bin",
+  "sha256": "f3e365bfbcdc000ee15334d8d0f4da0ef858b9f600355889f3ed434449d4d7e7",
+  "bytes_unchanged": true,
+  "previous_failure": "Unsupported before entering the present kernel branch",
+  "current_failure": "Invalid at kernel_body.suppressed because the fixture ends before the required kernel byte",
+  "reason": "C-393 completes the branch; incomplete records remain rejected"
+}

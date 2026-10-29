@@ -411,3 +411,6 @@ Sculpt-feature and edge-identifier interoperability is documented in
 
 Saved external unit-component interoperability is documented in
 [the external-unit evidence](docs/features/external-unit-components/README.md).
+
+Alignment groups, order dimensions and sketch-text kernels are documented in
+[the alignment evidence](docs/features/alignment-groups/README.md).

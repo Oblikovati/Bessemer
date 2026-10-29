@@ -4,6 +4,8 @@
 #[cfg(test)]
 include!("test_modules.rs");
 
+mod alignment_display;
+mod alignment_groups;
 mod library_features;
 mod library_references;
 mod sculpt_features;
