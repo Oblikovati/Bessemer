@@ -1,0 +1,23 @@
+{
+  "cases": 906,
+  "accepted": 897,
+  "previous_accepted": 896,
+  "added": [
+    638
+  ],
+  "regressions": [],
+  "two_process_status_and_causes_identical": true,
+  "incomplete": true,
+  "remaining": {
+    "0": "rejected\tconfiguration context Contents/CMgr: Unsupported: configuration version 11000; expected explicitly scoped version 18000 or 19000",
+    "38": "rejected\tconfiguration context owned_6d8.objects_count: Unsupported: owned_6d8.objects_count count or presence 1; expected an empty supported branch",
+    "265": "rejected\tconfiguration context optional_data_608: Unsupported: optional_data_608 count or presence 1; expected an empty supported branch",
+    "341": "rejected\tconfiguration context visual_count_b50: Unsupported: visual_count_b50 count or presence 4; expected an empty supported branch",
+    "546": "rejected\tmodel archive model stream: Unsupported: runtime class \"moSmartComponentFeature_c\" schema 1; expected an implemented complete model object body",
+    "559": "rejected\tmodel archive model stream: Unsupported: runtime class \"mo3dView_c\" schema 1; expected an implemented complete model object body",
+    "619": "rejected\tconfiguration context owned_6d8.objects_count: Unsupported: owned_6d8.objects_count count or presence 1; expected an empty supported branch",
+    "658": "rejected\tmodel archive model stream: Unsupported: runtime class \"moFormToolInstance_c\" schema 1; expected an implemented complete model object body",
+    "749": "rejected\tmodel archive model stream: Unsupported: runtime class \"moDeform_c\" schema 1; expected an implemented complete model object body"
+  },
+  "packet_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f"
+}

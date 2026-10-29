@@ -16,6 +16,9 @@ pub(super) const CLASSES: &[&str] = &[
     "moDisplayDim_c",
     // #54 / C-402 proves the base display callback and no scalar suffix.
     "moDisplayScalarDim_c",
+    // #54 / C-400 proves all three optional-reference predicates return zero.
+    "moDisplayLinearPattCntDim_c",
+    "moDisplayCircularPattCntDim_c",
     "moDisplayDistanceDim_c",
     "moDisplayRadialDim_c",
     "moDisplayAngularDim_c",
@@ -26,7 +29,10 @@ pub(super) const CLASSES: &[&str] = &[
 impl DisplayDimensionKind {
     pub(super) fn parse(name: &str) -> Option<Self> {
         match name {
-            "moDisplayDim_c" | "moDisplayScalarDim_c" => Some(Self::Base),
+            "moDisplayDim_c"
+            | "moDisplayScalarDim_c"
+            | "moDisplayLinearPattCntDim_c"
+            | "moDisplayCircularPattCntDim_c" => Some(Self::Base),
             "moDisplayDistanceDim_c" => Some(Self::Distance),
             "moDisplayRadialDim_c" => Some(Self::Radial),
             "moDisplayAngularDim_c" => Some(Self::Angular),

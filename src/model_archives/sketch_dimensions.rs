@@ -33,7 +33,9 @@ pub(super) fn base(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
     Ok(())
 }
 
-fn valued(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+/// Preserve the complete valued base before its class-specific suffix.
+/// Example: `valued(reader, map)?` before the pattern-position word.
+pub(super) fn valued(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     base(reader, map)?;
     if reader.u16("has_plane_transform")? != 0 {
         // #86 / C-395: this call site selects the fixed archive operator, not restore().

@@ -418,3 +418,7 @@ Alignment groups, order dimensions and sketch-text kernels are documented in
 Table, sketch and dimension patterns retain their complete inherited bodies,
 raw transform arrays, signed regeneration records and shared identities; see
 [the pattern-extension evidence](docs/features/pattern-extensions/README.md).
+
+Text borders, symbols, pattern-count dimensions and handles, and thread-instance
+records preserve their complete bodies; see
+[the annotation-extension evidence](docs/features/annotation-extras/README.md).

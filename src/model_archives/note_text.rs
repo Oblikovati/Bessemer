@@ -75,7 +75,9 @@ pub(super) fn character(reader: &mut ModelDecoder<'_>) -> Result<()> {
     reader.u16("raw_40").map(|_| ())
 }
 
-fn text_data_base(reader: &mut ModelDecoder<'_>) -> Result<()> {
+/// Keep the shared 36-byte prefix separate from character-only storage.
+/// Example: `text_data_base(reader)?` before a border or character suffix.
+pub(super) fn text_data_base(reader: &mut ModelDecoder<'_>) -> Result<()> {
     reader.require_ordinary_part()?;
     raw_fields::groups(
         reader,

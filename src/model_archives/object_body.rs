@@ -224,7 +224,9 @@ fn read_dimension_handle_body(
         "moSkDimHandleRadial_c"
         | "moSkDimHandleOffset_c"
         | "moSkDimHandleValG2_c"
-        | "moSkDimHandleValG3_c" => super::dimension_handles::sketch(reader, map),
+        | "moSkDimHandleValG3_c"
+        | "moSkDimHandleLinearPattCnt_c"
+        | "moSkDimHandleCircularPattCnt_c" => super::dimension_handles::sketch(reader, map),
         _ => read_sketch_dimension_body(reader, map, class),
     }
 }

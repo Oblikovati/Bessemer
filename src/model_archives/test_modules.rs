@@ -634,3 +634,6 @@ mod alignment_group_tests;
 
 #[path = "../../tests/resolved_features/pattern_extensions.rs"]
 mod pattern_extension_tests;
+
+#[path = "../../tests/resolved_features/annotation_extras.rs"]
+mod annotation_extra_tests;

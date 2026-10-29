@@ -20,6 +20,13 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moTextDataBorder_c" => super::annotation_extras::border(reader, map),
+        "moTextDataSymbol_c" => super::annotation_extras::symbol(reader),
+        "moCThreadInstanceId_c" => super::annotation_extras::thread_instances(reader, map),
+        "moCTInstId_c" => super::annotation_extras::thread_item(reader),
+        "sgLinearPattCntDim" | "sgCircularPattCntDim" => {
+            super::annotation_extras::pattern_count(reader, map)
+        }
         "moTablePattern_c" => super::pattern_extensions::table(reader, map),
         "moSketchPattern_c" => super::pattern_extensions::sketch(reader, map),
         "moDimPattern_c" => super::dimension_patterns::read(reader, map),

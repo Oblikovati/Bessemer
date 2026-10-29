@@ -13,6 +13,9 @@ pub(super) const CLASSES: &[&str] = &[
     "moSkDimHandleOffset_c",
     "moSkDimHandleValG2_c",
     "moSkDimHandleValG3_c",
+    // #54 / C-400 proves both pattern-count sketch-handle serializers and ancestry.
+    "moSkDimHandleLinearPattCnt_c",
+    "moSkDimHandleCircularPattCnt_c",
 ];
 
 fn base(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<bool> {
