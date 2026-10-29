@@ -169,6 +169,7 @@ mod draft_records;
 mod entity_representations;
 mod environment;
 mod explosion;
+mod extend_surfaces;
 mod external_references;
 mod extruded_surfaces;
 mod feature_comments;

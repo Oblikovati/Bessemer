@@ -579,3 +579,7 @@ mod mitered_flange_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/curve_files.rs"]
 mod curve_file_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/extend_surfaces.rs"]
+mod extend_surface_tests;

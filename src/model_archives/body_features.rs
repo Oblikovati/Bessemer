@@ -13,6 +13,8 @@ const ID_KEEPERS: &[&str] = &[
     "moRevolvRefSurfIdKeeper_c",
     // #54 / C-251 proves this empty ordinary keeper's moIdKeeper_c ancestry.
     "moOffsetRefSurfIdKeeper_c",
+    // #54 / 11.228 binds the extended surface's empty native keeper.
+    "moExtendRefSurfIdKeeper_c",
     // #54 / C-382 proves this ordinary empty keeper's moIdKeeper_c ancestry.
     "moBlendRefSurfIdKeeper_c",
     // #54 / C-269 binds the sew surface's empty inherited keeper.
@@ -293,6 +295,8 @@ pub(super) const CLASSES: &[&str] = &[
     "moRevolvRefSurf_c",
     // #54 / C-251 binds moRefSurface_c -> moRefGeom_c -> moAtomFeature_c.
     "moOffsetRefSurface_c",
+    // #54 / 11.228 proves the complete reference-surface owner chain.
+    "moExtendRefSurface_c",
     // #54 / C-382 binds the inherited reference-geometry atom-owner layer.
     "moBlendRefSurface_c",
     // #54 / C-380 binds this distinct body-feature serializer and constructor.

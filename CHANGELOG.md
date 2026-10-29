@@ -26,6 +26,8 @@
 
 ### Added
 
+- Added complete ordinary extended reference surfaces, mode-selected extension data and empty native keepers. (#54)
+
 - Added complete ordinary curves-from-file archives with retained filenames, bounded signed point lists and versioned point references. (#54)
 
 - Added complete ordinary mitered-flange records with direct object and DWORD collections and sketch-associated handle groups. (#54)

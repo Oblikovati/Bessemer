@@ -375,6 +375,9 @@ DWORD collections and four sketch-associated handle groups.
 [Stored curve files](docs/features/curve-files/README.md) cover inherited kernel
 wires, verbatim filenames, signed point counts and bit-preserving coordinates.
 
+[Extended surfaces](docs/features/extend-surfaces/README.md) cover inline surface
+bodies, direct lists, empty keepers and end-condition-dependent pointers.
+
 [Standalone Inspection envelopes](docs/features/standalone-inspection/README.md)
 cover current encrypted templates and historical projects, exact XML preservation
 and immutable complete-XML replacement.
