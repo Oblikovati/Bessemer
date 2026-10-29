@@ -366,6 +366,9 @@ selection items, direct lists and shared comment and wrapper identities.
 [Sketch bitmaps](docs/features/sketch-bitmaps/README.md) cover feature and data
 records, bounded raw byte planes and conditional compact transforms.
 
+[Sketch bends](docs/features/sketch-bends/README.md) cover complete inherited
+One Bend records, tagged stored handles and explicit kind-7 dependency stops.
+
 [Standalone Inspection envelopes](docs/features/standalone-inspection/README.md)
 cover current encrypted templates and historical projects, exact XML preservation
 and immutable complete-XML replacement.

@@ -567,3 +567,7 @@ mod selection_set_tests;
 #[cfg(test)]
 #[path = "../../tests/resolved_features/sketch_bitmaps.rs"]
 mod sketch_bitmap_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/sketch_bends.rs"]
+mod sketch_bend_tests;

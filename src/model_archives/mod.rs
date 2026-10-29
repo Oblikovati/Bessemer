@@ -232,6 +232,7 @@ mod shell_records;
 mod sketch_archive;
 mod sketch_arrays;
 mod sketch_backups;
+mod sketch_bends;
 mod sketch_bitmaps;
 mod sketch_collections;
 mod sketch_constraints;

@@ -24,6 +24,8 @@
 
 ### Added
 
+- Added ordinary sketch-bend continuations with complete One Bend prefixes, shared tagged handles and explicit kind-7 dependency errors. (#54)
+
 - Added complete ordinary sketch-bitmap records with bounded raw byte planes, conditional references and compact transforms. (#54)
 
 - Added complete ordinary selection-set and selection-item archives with versioned comments, ordered lists and shared identities. (#54)

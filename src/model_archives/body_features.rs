@@ -311,6 +311,8 @@ pub(super) const CLASSES: &[&str] = &[
     // #54 / C-285: native bend-group and body-feature ancestry, with complete readers.
     "moEdgeFlange_c",
     "moOneBend_c",
+    // #54 / C-291 proves the complete inherited One Bend owner chain.
+    "moSketchBend_c",
     // #54 / C-288 proves complete body-feature ancestry for these fold records.
     "moSM3dBend_c",
     "moFold_c",
