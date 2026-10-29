@@ -405,3 +405,6 @@ and immutable complete-XML replacement.
 
 Library-feature configuration, cross-reference and atom-ID interoperability is
 documented in [the feature evidence](docs/features/library-features/README.md).
+
+Sculpt-feature and edge-identifier interoperability is documented in
+[the sculpt evidence](docs/features/sculpt-features/README.md).

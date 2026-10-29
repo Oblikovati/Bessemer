@@ -215,6 +215,8 @@ pub(super) const CLASSES: &[&str] = &[
     "moSketchHole",
     "moCavity_c",
     "moLibraryFeature_c",
+    // #54 / C-398 proves the complete body-feature owner chain.
+    "moSculpt_c",
     // #54 / C-397 proves both complete body-feature owner chains.
     "moMoveFace_c",
     "moBending_c",

@@ -619,3 +619,7 @@ mod library_feature_tests;
 #[cfg(test)]
 #[path = "../../tests/model_archives/single_span_splines.rs"]
 mod single_span_spline_tests;
+
+#[cfg(test)]
+#[path = "../../tests/resolved_features/sculpt_features.rs"]
+mod sculpt_feature_tests;

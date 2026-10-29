@@ -83,6 +83,9 @@ const LAYOUTS: &[(&str, RepresentationLayout)] = &[
     ("moIndirectSurfIdRep_c", Source(&[])),
     ("moShellSurfIdRep_c", Source(&[])),
     ("moLPatternSurfIdRep_c", Source(&["48", "4c"])),
+    // #54 / C-398 binds both complete Ref2Edge source suffixes.
+    ("moRightSculptEdgeIdRep_c", Source(&["48", "4c"])),
+    ("moLeftSculptEdgeIdRep_c", Source(&["48", "4c"])),
     // #54 / C-392 proves the direct entity-ID member without an outer map slot.
     ("moPttnBodyEdgeIdRep_c", Source(&["48", "4c"])),
     // #54 / 11.192 / C-220 proves direct moEntityId_c +38 and both signed suffix words.

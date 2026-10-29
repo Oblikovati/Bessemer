@@ -20,6 +20,7 @@ pub(super) fn read(
         return Some(result);
     }
     let result = match name {
+        "moSculpt_c" => super::sculpt_features::read(reader, map),
         "moLibraryFeature_c" => super::library_features::read(reader, map),
         "moXConfigData_c" => super::library_references::configuration(reader, map),
         "moXFeatureData_c" => super::library_references::feature(reader),

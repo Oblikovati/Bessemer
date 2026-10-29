@@ -6,6 +6,7 @@ include!("test_modules.rs");
 
 mod library_features;
 mod library_references;
+mod sculpt_features;
 
 mod archive;
 mod attachment_records;

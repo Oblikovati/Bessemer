@@ -28,6 +28,8 @@
 
 ### Added
 
+- Added lossless sculpt features, owned trim and chooser records, sculpt edge identifiers the second bounding-box center class and inherited scalar display dimensions. (#54)
+
 - Added complete exact-mode single-span spline records, including secondary interpolation with zero control points. (#54)
 
 - Added lossless ordinary library-feature configuration, cross-reference and atom-ID archive records. (#54)
