@@ -24,6 +24,8 @@
 
 ### Added
 
+- Added complete ordinary selection-set and selection-item archives with versioned comments, ordered lists and shared identities. (#54)
+
 - Added complete ordinary move/copy body archives, nested payloads, mesh-tolerance records and documented zero-scale conformal branches. (#54)
 
 - Added complete modern derived-feature and surface-body reference reconstruction, including signed point presence, shared arrays and generic wrapper callers. (#54)

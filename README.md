@@ -360,6 +360,9 @@ cover versioned point presence, direct shared arrays and surface-body aliases.
 [Move/copy bodies](docs/features/move-copy-bodies/README.md) cover nested payloads,
 mesh tolerances and the documented conformal-deformation branches.
 
+[Selection sets](docs/features/selection-sets/README.md) cover node-based sets,
+selection items, direct lists and shared comment and wrapper identities.
+
 [Standalone Inspection envelopes](docs/features/standalone-inspection/README.md)
 cover current encrypted templates and historical projects, exact XML preservation
 and immutable complete-XML replacement.
