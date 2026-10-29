@@ -28,6 +28,8 @@
 
 ### Added
 
+- Added shared-map inline model headers with scoped body-version overrides and preserved tagged references. (#54)
+
 - Added exact version-11000 configuration-manager interoperability with absent-field gates, older scene input and preserved unsigned suffix words. (#54)
 
 - Added complete configuration decal parameters and nested association arrays with recursive fresh-class scopes and shared reference preservation. (#54)

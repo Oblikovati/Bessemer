@@ -82,6 +82,8 @@ See [version-history evidence](docs/features/version-history/README.md) for arch
 coverage and the installed-corpus verification.
 See [header archive evidence](docs/features/header-archives/README.md) for field
 coverage, version boundaries, graph preservation, and remaining limits.
+The [forming-tool evidence](docs/features/forming-tools/README.md) records the
+shared-map inline-header reader and the remaining embedded-part work.
 The [biography evidence](docs/features/biography-archives/README.md) covers stored
 environment observations and repeated-string reading and writing.
 See [Parasolid transmit evidence](docs/features/parasolid-transmit/README.md) for

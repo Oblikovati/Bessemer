@@ -3,6 +3,9 @@ use crate::archive_codec::{ArchiveCursor, MaterialRead, ObjectReader, ObjectReco
 use crate::header::ArchiveVersion;
 use crate::{BessemerError, FailureClass, Result};
 
+#[path = "inline_header.rs"]
+pub(super) mod inline_header;
+
 /// Explicit byte, field, collection, nesting and object budgets for one archive operation.
 #[derive(Debug, Clone, Copy)]
 pub struct ModelFieldLimits {

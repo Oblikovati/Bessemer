@@ -52,7 +52,7 @@ impl ArchiveVersion {
         Self::decimal(token)
     }
 
-    pub(super) fn decimal(token: &str) -> Result<Self> {
+    pub(crate) fn decimal(token: &str) -> Result<Self> {
         let value = token.parse::<i64>().map_err(|error| {
             invalid(format!(
                 "version {token:?}: {error}; expected signed i32 or unsigned u32 decimal"

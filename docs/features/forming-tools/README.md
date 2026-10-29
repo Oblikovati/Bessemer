@@ -45,3 +45,24 @@ state restoration and two agreeing native corpus runs. Successful kernel
 framing alone does not establish complete kernel semantics or document parity.
 
 The maintainer humanizer skill was unavailable; prose review remains with review.
+
+## Inline-header implementation
+
+The inline reader reuses the standalone header field recipes, version-marker
+constant and decimal version parser. It retains original MFC tags and reads
+header dependencies on the containing map. A header-body version override is
+local to that header; outer suffix fields and the caller retain their original
+version after success or failure. Revision stamps use the existing stamp reader.
+Generic lists can retain cached caller objects; fresh model dependencies use the
+existing model dispatch rather than a second object map.
+
+The committed independent boundary vectors and native part header bind the new
+path. Additional vectors cover older direct shared-file strings, an escaped
+CString-array count and a next-ID edit whose independent golden changes only
+that word. `freeze_inline_headers.py` observes the actual reference primitives,
+checks complete byte partitions and map sizes, and regenerates the committed
+packet byte for byte from an immutable Source copy. All 28 cases and 2,857
+primitive reads passed, along with seven focused Bessemer tests. The full local
+PR gate passed 2,765 tests, including 277 doctests; three native tests remain
+explicitly ignored in that gate. The inline reader has not
+yet been connected to the complete forming-tool part body.
