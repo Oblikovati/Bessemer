@@ -38,8 +38,8 @@ def verify() -> None:
     frozen.report('native-edit-reference.json', dict(edited_bytes=len(edited), edited_sha256=frozen.sha(edited), stream_count=sum(value[1][66] == 2 for value in previous.values()), totals=totals, **facts))
 
 
-def verify_entries(previous: dict, current: dict, golden: bytes) -> None:
-    """Require exact metadata and every untouched logical stream, not only OUT."""
+def verify_entries(previous: dict, current: dict, golden: bytes, stream_name: str = 'OUT') -> None:
+    """Require exact metadata and every logical stream except the explicit replacement."""
     assert previous.keys() == current.keys()
     changed = []
     for identifier, (parent, record, payload) in previous.items():
@@ -47,7 +47,7 @@ def verify_entries(previous: dict, current: dict, golden: bytes) -> None:
         assert (parent, record) == (current_parent, current_record)
         size = struct.unpack_from('<H', record, 64)[0]
         name = record[:max(0, size - 2)].decode('utf-16-le')
-        if record[66] == 2 and name == 'OUT':
+        if record[66] == 2 and name == stream_name:
             assert actual == golden
             changed.append(identifier)
             continue

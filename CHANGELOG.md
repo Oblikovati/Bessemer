@@ -34,6 +34,8 @@
 
 ### Added
 
+- Added complete native Simulation ELF initializer interoperability, isolated CWR parameter edits, selected-directory and explicit mapping projections, header-only write proposals and exact scalar-record construction. (#115)
+
 - Added complete observed Simulation OUT report syntax, exact decimal and ordered legend views, isolated numeric-token edits, CWR replacement and explicit paired mesh-total comparisons. (#114)
 
 - Added complete observed Simulation MAS and paired family-8 GEN image reading, construction and writing, stored mesh accessors, isolated field edits and CWR coordinate replacement. (#112)

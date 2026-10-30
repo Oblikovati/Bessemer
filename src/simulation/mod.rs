@@ -1,4 +1,5 @@
 //! Stored Simulation images with actual paired MAS context and explicit semantic limits.
+mod elf;
 mod r#gen;
 mod master;
 mod out;
@@ -6,6 +7,7 @@ mod study;
 mod wire;
 
 use crate::{BessemerError, FailureClass, Result};
+pub use elf::*;
 pub use r#gen::*;
 pub use master::*;
 pub use out::*;

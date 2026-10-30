@@ -18,6 +18,10 @@ It also preserves complete Simulation OUT report syntax, ordered duplicate
 symbols and exact decimal values, with isolated numeric-token edits and explicit
 comparisons against the actual paired mesh totals. See the
 [OUT report evidence](docs/features/simulation-out/README.md).
+It also reads, constructs and edits complete native ELF initial images and
+projects documented selected-directory traversal, explicit record mapping,
+header-only writes and exact scalar slots. See the
+[ELF evidence and check scopes](docs/features/simulation-elf/README.md).
 
 The first implemented layer reads SolidWorks version-4 containers, extracts streams
 with size and CRC checks, and replaces existing stream contents. A save without

@@ -1,0 +1,101 @@
+{
+  "issue": 115,
+  "behavior_profile": "simulation-elf-projections-v1",
+  "base_revision": "979ccda219c4649c8bd5ef51806eab3490975bf8",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "gate": "cargo xtask pr",
+  "gate_exit": 0,
+  "gate_log_sha256": "de1bdbd2b21759c09689caae60cf679b43cfe725b4a05fde2c9539e5d46719e1",
+  "test_summaries": 225,
+  "passed": 2942,
+  "failed": 0,
+  "ignored": 14,
+  "focused_with_native": {
+    "passed": 15,
+    "failed": 0
+  },
+  "owned_cases": {
+    "initializers": 4,
+    "mapping_cases": 6,
+    "header_selectors": 100,
+    "store_cases": 5
+  },
+  "native_initial_images": 1,
+  "native_populated_images": 0,
+  "native_carrier_streams_checked": 6,
+  "two_fresh_processes_ran_all_fifteen_focused_tests": true,
+  "native_outputs_compared_byte_for_byte": true,
+  "native_output_bytes": 3366912,
+  "native_output_sha256": "cdd29195508eb168cf6fa0bdbf389d750a0b069afe828d3e57059ec96ba96d13",
+  "observations": [
+    {
+      "carrier_sha256": "cdd29195508eb168cf6fa0bdbf389d750a0b069afe828d3e57059ec96ba96d13",
+      "seconds": 0.0781482,
+      "observed_peak_working_set_bytes": 2723840,
+      "run": 1
+    },
+    {
+      "carrier_sha256": "cdd29195508eb168cf6fa0bdbf389d750a0b069afe828d3e57059ec96ba96d13",
+      "seconds": 0.0509594,
+      "observed_peak_working_set_bytes": 42807296,
+      "run": 2
+    }
+  ],
+  "observation_scope": "One complete native initializer/reference comparison and complete CWR parameter edit/reopen per measured process; elapsed includes startup. Observed peak working set sampled at approximately 1 ms is a lower bound and may miss actual peak. First implementation, no prior published release for comparison; no statistical speed claim. Separate byte-comparison processes ran all fifteen focused tests each.",
+  "runtime_and_test_sha256": {
+    "src/simulation/elf/directory.rs": "62a1cf6e41c03ef853fdcf975348b760c9f5c4d1d80d1d8659137c5106e2fd58",
+    "src/simulation/elf/header_projection.rs": "49aa6e8e1f84648ccd04461b0a9c8be21c71d4ac574d84b9f1eb5310332af59c",
+    "src/simulation/elf/index.rs": "1eb087ec6ef946f5ae42a77f24795f1fab40febebb6547ac8e3df6590e9b7d99",
+    "src/simulation/elf/initial.rs": "c54f78eeff48bf8fe3e19b2713072814acdedb3dca566e33837418a899c62343",
+    "src/simulation/elf/initial_edit.rs": "c917ae849595b4e204c0d979a134073b35c001b21521e5c19d6b938ec5887ca7",
+    "src/simulation/elf/mapping.rs": "9decf3ba7693a17bf0c1c2dae643c70ac3154f430b4748cb8e3cf5db58256004",
+    "src/simulation/elf/mapping_context.rs": "791a5afdb6f2d54cfc9130eff4fecabad379f8be2fba3ced1435a2bd27044f80",
+    "src/simulation/elf/mapping_types.rs": "a00e28dce716c260168f1740ba97508e94cb7616db338e7fe10ae6b3959ec683",
+    "src/simulation/elf/mod.rs": "3a2494e16b10921ee65888302cf3c110805ef33c8c320f6d332423f9fe072874",
+    "src/simulation/elf/scalars.rs": "ea58f1f6466029447737afc86bb8226c2f098ff7db7c9f90d4da9256d4800d71",
+    "src/simulation/elf/study.rs": "b42b66e891c07637a7b7855a70a9107f237a687730aefc41e98f2a18a76f8ecb",
+    "src/simulation/elf/traversal.rs": "db59a5d246d2ed165c2fc6cf7634f7c2e7dd430df6d988bba2091409ad43d5ab",
+    "src/simulation/mod.rs": "efeb098bd89f3dc9070a5e5cdf38f1cb333cb7abb6e30bb1d28f1b0585ff4b04",
+    "tests/simulation_elf.rs": "429e55849b69d1c9763acc92f3d954cbc6349a1fe839de99fbe5e52e4092d3f6",
+    "tests/common/elf_reference.rs": "12385a7a8a2e9c3245bcaf832ca1c015ff5c3d382a324ba4b07851102c002631",
+    "tests/common/elf_index_failures.rs": "c91e5b0e4a059f4a43dcb8156daf04af11e1919893ef2e029c999adc45dac4d4",
+    "tests/common/elf_initial_failures.rs": "a16a7a50cebdee597be132c330ec5549e8f1b19ad610b415744ee04bbd8f8c91",
+    "tests/fixtures/simulation-elf/owned.bin": "3808181a48ab14c810e6f9ae78d3ec2f613d94ec8352efe2e30e6311c89883c9"
+  },
+  "verification_dependency_sha256": {
+    "docs/features/simulation-out/verify_out_edits.py": "7ab5fb760c000b9581ef5d24c75e2ea38a236d8df7201272c219e8f56873735b",
+    "docs/features/simulation-out/owned_reports.py": "7a7bc4e49387b2a941f7b43c56cbbb9571ff9be9e696f70e65a902f57bfbe5a7",
+    "docs/features/simulation-elf/owned_elf.py": "fb5116a885d74f6172e11c494280f5b2614b2dea4b3dd789a43c1c339fb16f07",
+    "docs/features/simulation-elf/freeze_elf.py": "8e873fbb2c2f885ef688366afdff6942d5afcb7a8311de7d0b38ba66e0a13582",
+    "docs/features/simulation-elf/verify_initial_edits.py": "d71610af359da7c058313ec1c282f6855b2e0c582890953c7abd55553b801cb0"
+  },
+  "reference_snapshots": {
+    "source-snapshot.json": "05636a924934868805da4c6d9809dcf322f5a96d75b3e06fcab80211c5312fd6",
+    "native-initial-edit-source-snapshot.json": "05636a924934868805da4c6d9809dcf322f5a96d75b3e06fcab80211c5312fd6",
+    "out-helper-compatibility-source-snapshot.json": "05636a924934868805da4c6d9809dcf322f5a96d75b3e06fcab80211c5312fd6"
+  },
+  "actual_reader_sha256": {
+    "cfb.py": "a55a2ceb4798c8f66b5b6ae37a8555dca83b90e12d587f673573fb6bc0137091",
+    "simulationtransfer.py": "5926a736e42d3aeb2f87550e79f8fc101c15950f1a1dbe83bf5fbf67f4475fb3",
+    "simulationelf.py": "262709c31b28c0c9a91bba643415272f38b699fcaae31ba46294a0271bff2a2c",
+    "simulationelfrecord.py": "96d2e4a43dba4d0e8b1ab9a1fdc8cfef7f826c794bb4585d5908c51bc187ccd0"
+  },
+  "out_helper_default_compatibility_verified_with_actual_readers": true,
+  "original_out_provenance_preserved_byte_for_byte": true,
+  "check_modes": [
+    "ExactNativeInitialImage",
+    "ExactSelectedTraversal",
+    "ExactHeaderWriteProposal",
+    "ExactSelectedRecordCopies"
+  ],
+  "acceptance_exclusions": [
+    "whole populated-file lifecycle and publication",
+    "physical scalar/component meanings, units, frames and row associations",
+    "native runtime arithmetic, caller filtering and gates",
+    "native SolidWorks application acceptance",
+    "ThreadSanitizer execution on the Windows host; required Linux CI remains separate"
+  ],
+  "humanizer": "Unavailable; prose pass left for review",
+  "dependencies_added": false
+}

@@ -1,0 +1,37 @@
+{
+  "fixture_sha256": "3808181a48ab14c810e6f9ae78d3ec2f613d94ec8352efe2e30e6311c89883c9",
+  "decoded_bytes": 160688,
+  "initial_cases": [
+    {
+      "parameter_a": 0,
+      "parameter_b": 0,
+      "bytes": 1224,
+      "sha256": "035b3f35e6b3cbd4bfb8092fdfddf1edaf2f66864eeaf4d33e39e32ffd33dc1e",
+      "oracle_sha256": "7bd0eba46a7d222023aad61df3ae83509bd3c340fc17dee6280859501eb22884"
+    },
+    {
+      "parameter_a": 1,
+      "parameter_b": 2,
+      "bytes": 1224,
+      "sha256": "24edf38cc8e9a60e099be0756ac57e15b5408ad42d8f3a2706ad80a60975455f",
+      "oracle_sha256": "1c02c01b40819e145a4f5466525876a3d47e87ce4b56a290fe59665a067b49e7"
+    },
+    {
+      "parameter_a": 4294967295,
+      "parameter_b": 2147483648,
+      "bytes": 1224,
+      "sha256": "821ba130d0a1f53645954893e489eb45a68afb940aebda127f8959ce749fa637",
+      "oracle_sha256": "8c672c76e160acbe73181cac14c5c5072d6581e4a4fee4045e671fa7231a3ca8"
+    },
+    {
+      "parameter_a": 14642,
+      "parameter_b": 14642,
+      "bytes": 1224,
+      "sha256": "8bc413a67df713dd74552bc8b4b193ea604a70799d9bb854d69c23f59ed0e7e4",
+      "oracle_sha256": "7a7e9a0880cc6ab036a5cb342317f64744c1138995d239d7d127fc181e0107c1"
+    }
+  ],
+  "mapping_cases": 6,
+  "header_selectors": 100,
+  "store_cases": 5
+}
