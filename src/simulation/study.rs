@@ -51,6 +51,30 @@ impl SimulationStudy {
         })
     }
 
+    pub(super) fn with_carrier(&self, carrier: CompoundFile) -> Result<Self> {
+        for (name, expected) in [
+            ("MAS", self.master.to_bytes()),
+            ("GEN", self.image.to_bytes()),
+        ] {
+            let entry = carrier.entry_at_path(name)?;
+            let actual = carrier.stream(entry.id())?;
+            require(
+                actual == expected,
+                "CWR paired context",
+                format!(
+                    "{name} stream of {} bytes differs from validated {}-byte image; expected identical paired bytes",
+                    actual.len(),
+                    expected.len()
+                ),
+            )?;
+        }
+        Ok(Self {
+            carrier,
+            master: self.master.clone(),
+            image: self.image.clone(),
+        })
+    }
+
     /// Complete immutable compound carrier, e.g. `study.carrier().entries()`.
     pub fn carrier(&self) -> &CompoundFile {
         &self.carrier

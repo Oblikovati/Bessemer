@@ -1,0 +1,83 @@
+{
+  "issue": 114,
+  "behavior_profile": "simulation-out-syntax-v1",
+  "base_revision": "f1c17a9ebf316c83226d4955cb11a02247c52546",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "gate": "cargo xtask pr",
+  "gate_exit": 0,
+  "gate_log_sha256": "f9400445e664cb08d034e612ae43148e02296f4d00d30b5e4091dc1528989385",
+  "test_summaries": 224,
+  "passed": 2928,
+  "failed": 0,
+  "ignored": 13,
+  "focused_with_native": {
+    "passed": 10,
+    "failed": 0
+  },
+  "owned_reports": 10,
+  "native_reports": 1,
+  "native_numeric_occurrences_with_independent_edit_goldens": 18,
+  "native_carrier_streams_checked": 6,
+  "two_fresh_process_outputs_compared_byte_for_byte": true,
+  "native_edited_carrier_bytes": 3366912,
+  "native_edited_carrier_sha256": "91e89bbac01baf0db03f715fd2565537982ed1aab48cfc7e2c1c72cf47a8a3b1",
+  "observations": [
+    {
+      "carrier_sha256": "91e89bbac01baf0db03f715fd2565537982ed1aab48cfc7e2c1c72cf47a8a3b1",
+      "observed_peak_working_set_bytes": 2715648,
+      "seconds": 0.0873326,
+      "run": 1
+    },
+    {
+      "carrier_sha256": "91e89bbac01baf0db03f715fd2565537982ed1aab48cfc7e2c1c72cf47a8a3b1",
+      "observed_peak_working_set_bytes": 29908992,
+      "seconds": 0.0658825,
+      "run": 2
+    }
+  ],
+  "observation_scope": "One complete native report/reference comparison, all eighteen numeric edit/revert goldens and a complete CWR edit/reopen/no-op workload per process; elapsed includes startup. Observed peak working set sampled at approximately 1 ms is a lower bound and may miss the actual peak. First implementation, no prior published release for comparison; no statistical speed claim.",
+  "runtime_and_test_sha256": {
+    "src/simulation/out/decimal.rs": "a6c83d819084b11131fe3b43c47dbb36181bd41db2584b784bbea67f1f84d453",
+    "src/simulation/out/edit.rs": "efa561af4770a16b72ff54c3e1c3b48faaa32e3228505add7e2d2e83099af20a",
+    "src/simulation/out/framing.rs": "ff57b02ee036a17aa8530e667203134002c0602dba3e76fdaa51c9557af39ecf",
+    "src/simulation/out/mod.rs": "fe755514235be18c82ea2c7a96b5e5a5682a9f18ae595c9e1e337d21309a3607",
+    "src/simulation/out/outcome.rs": "7125d5bc05a823a2a4c9ef7b2571c7f608a6e54885edd6909a63fd6c7a7dece1",
+    "src/simulation/out/projection.rs": "8d3d769ac3da98884978965acfb780e76d58fb5ff8a341e750682f92a520b853",
+    "src/simulation/out/study.rs": "d8232e26cf133a76da46fee7a3fedd2d867b8d00eebebe3df3b2dc04785535b4",
+    "src/simulation/out/syntax.rs": "b0e38ff93d5cabe6a6c5606cf90365b13f7fbcdde5307b1417d360410d2f2be9",
+    "src/simulation/out/totals.rs": "838d4c812165daf080bcaba69f8475b35b1c804677200650a8c4ed3bc2542c87",
+    "src/simulation/out/types.rs": "6dca15bc9a21c6e491a64fe04e1d6e3c09c6f26e3bed447e4f6828408bba4bb5",
+    "src/simulation/mod.rs": "58079748f348de3595bc06b94bdccb997c43dd9ff3c549f618e5670be093efef",
+    "src/simulation/study.rs": "f5ec229e24e6f9a1aae5c72f5d85211378aee846f921d97cd9c5d881ab433abc",
+    "tests/simulation_out.rs": "f86c08f803011668ff8dee51d5a42e3b1ca6fd8d460dad7714dca89e9ed77aa4",
+    "tests/common/out_reference.rs": "067ffae09edcec7225ae4b0647eda18e36dde214e7debbed684b96b264563f73",
+    "tests/common/out_failures.rs": "9ef843d3851aa5b719678b4843cc6440f552357d8f4b81ce5a23026060ff45f6",
+    "tests/common/out_totals.rs": "8e3e34608b13b22b06bf4ca19b80a45dffcf3dc9c34408e18305476eefa5a6c3",
+    "tests/fixtures/simulation-out/owned.bin": "40f50f047f3e24924b8236f5579ff6324a993ba3fd81233d98d7bcc94a615977"
+  },
+  "reference_snapshots": {
+    "source-snapshot.json": "473f46162c5b4bf30b9c9159a361d106eca035f15b5b47bd59895aaaecb52719",
+    "native-edit-source-snapshot.json": "77059648dd86d121f8b7675f60e7686b93e72675263045cfe0c23b78de8ed34c"
+  },
+  "actual_reader_sha256": {
+    "cfb.py": "a55a2ceb4798c8f66b5b6ae37a8555dca83b90e12d587f673573fb6bc0137091",
+    "simulationtransfer.py": "5926a736e42d3aeb2f87550e79f8fc101c15950f1a1dbe83bf5fbf67f4475fb3",
+    "simulationout.py": "1ceabb0c53e52d51e16948725342adab01563d166365466630f3a0a48c3d68ff",
+    "simulationmaster.py": "6213855a290cf1627e852daff1630089752c1a82fdf311c9e5c55c3c7cfedb42",
+    "simulationgen.py": "c562670bf27fc0a8f833f3295413661c76a85351fdbd8d383e2157087a80ea92"
+  },
+  "exact_decimal_policy": "Sign and coefficient digits are exact; the adjusted base-ten exponent must fit i64. No binary floating calculation is used.",
+  "check_mode": "ExactTransferAndReportSyntax",
+  "paired_totals": "Matches, Mismatch, Missing and Inconclusive remain distinct; duplicate, missing and non-count values never become matches. Actual paired MAS/GEN archives supply the expected counts.",
+  "acceptance_exclusions": [
+    "complete solver and unknown line semantics",
+    "geometry, topology, self-intersection and tolerance consistency",
+    "GEN coordinate units and frame",
+    "native SolidWorks application acceptance",
+    "other encodings and line-ending profiles",
+    "ThreadSanitizer execution on the Windows host; required Linux CI remains separate"
+  ],
+  "humanizer": "Unavailable; prose pass left for review",
+  "dependencies_added": false
+}

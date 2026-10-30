@@ -1,0 +1,133 @@
+{
+  "fixture_sha256": "40f50f047f3e24924b8236f5579ff6324a993ba3fd81233d98d7bcc94a615977",
+  "cases": [
+    {
+      "label": "duplicate-symbols",
+      "bytes": 107,
+      "sha256": "bae8f9d372902a8ebd8771dd25c2f1d92d7dfa1eb16d31d865ca4d411d594760",
+      "oracle_sha256": "ff2c56b31be360bfbd49736b30e946d57c411aed55a0dfd0607e7c7de8f11425",
+      "lines": 5,
+      "fields": 2,
+      "legends": 2,
+      "nul_positions": [],
+      "declared_unit_system": null,
+      "golden_sha256": "7229f3abff190e8b8fca008bc0725076dc2025977dcadbc76db6da90d575b2ca"
+    },
+    {
+      "label": "decimal-patterns",
+      "bytes": 94,
+      "sha256": "6beeb6e645f6634448470a3aaecce3dea55a10b8bd0699dd4947f6cdab7d8ee0",
+      "oracle_sha256": "a716f2a6b537d7428d9c878763370b26608685728c85afbaeabf031bea9a1a24",
+      "lines": 4,
+      "fields": 4,
+      "legends": 0,
+      "nul_positions": [],
+      "declared_unit_system": null,
+      "golden_sha256": "b415888f607d3369673a31fc2968ca071c005752471a6fc7e8db1474410e844c"
+    },
+    {
+      "label": "nul-si-and-empty-lines",
+      "bytes": 108,
+      "sha256": "6ca8ceb9f3885d8f1595506b41f6c4e1fcd2b8c16db79e3dcc9f991e705ca969",
+      "oracle_sha256": "f1c08aed8f99a6c388053fea415653b089d109221b620669fc6d235f091ffa93",
+      "lines": 4,
+      "fields": 1,
+      "legends": 0,
+      "nul_positions": [
+        4,
+        6,
+        8,
+        10,
+        12
+      ],
+      "declared_unit_system": "SI",
+      "golden_sha256": "cdf9bf73dba2e6b68ec01145f123317bcf3bb6d2121c86fa4cac720e6b7ec857"
+    },
+    {
+      "label": "unterminated",
+      "bytes": 48,
+      "sha256": "c06d20b9084ad2628f09d8ed8e2668e1e18d5e1e58984a2f752cc2139f6067ef",
+      "oracle_sha256": "f012093f26c126d8d57e8abb804d388a7375b565de9b4f553b16394c29544d47",
+      "lines": 2,
+      "fields": 1,
+      "legends": 0,
+      "nul_positions": [],
+      "declared_unit_system": null,
+      "golden_sha256": "13bd694a04ba82cd9cdb698b680468e3753639529ead4b1544377557209c91ff"
+    },
+    {
+      "label": "unknown-and-dangling-legend",
+      "bytes": 81,
+      "sha256": "a36d9e3c11f104f0acbd799fd50f1fe348abd5d3a481f1649e4d45cf3aa312d3",
+      "oracle_sha256": "4d160adba4bf9160b328ddc53508c7133028aa030cc68ba3744c895d26a1a87a",
+      "lines": 4,
+      "fields": 0,
+      "legends": 0,
+      "nul_positions": [],
+      "declared_unit_system": null,
+      "golden_sha256": "a36d9e3c11f104f0acbd799fd50f1fe348abd5d3a481f1649e4d45cf3aa312d3"
+    },
+    {
+      "label": "empty-final-line",
+      "bytes": 6,
+      "sha256": "9ef0fd9ca90bf4fb9036cd028b249d50c6d48a255d85bb3411bce6a3ce979bb1",
+      "oracle_sha256": "9c648f8658706c839de3f58c40966ea733672e4d301e4aa38f29d8432355a369",
+      "lines": 1,
+      "fields": 0,
+      "legends": 0,
+      "nul_positions": [],
+      "declared_unit_system": null,
+      "golden_sha256": "9ef0fd9ca90bf4fb9036cd028b249d50c6d48a255d85bb3411bce6a3ce979bb1"
+    },
+    {
+      "label": "nul-only",
+      "bytes": 5,
+      "sha256": "957b88b12730e646e0f33d3618b77dfa579e8231e3c59c7104be7165611c8027",
+      "oracle_sha256": "7ae35ef8759b1c7f9591d7e61e13c1cdf7b455456cb7b4e709cac2ad855f00b2",
+      "lines": 1,
+      "fields": 0,
+      "legends": 0,
+      "nul_positions": [
+        4
+      ],
+      "declared_unit_system": null,
+      "golden_sha256": "957b88b12730e646e0f33d3618b77dfa579e8231e3c59c7104be7165611c8027"
+    },
+    {
+      "label": "signed-legends",
+      "bytes": 79,
+      "sha256": "848544a2c13fbee58b3f885943b4bf11f9a742f5b03a36963412c2c1ecef5e2d",
+      "oracle_sha256": "2976b948eb8920824044aaa9ac8957bc1134ac49972293de7910438a4bc81265",
+      "lines": 4,
+      "fields": 1,
+      "legends": 3,
+      "nul_positions": [],
+      "declared_unit_system": null,
+      "golden_sha256": "15fe607c203628d8047954440caa0e2e0dd3df79fd3899ce08c79f58cfeb18a6"
+    },
+    {
+      "label": "transfer-upper-boundary",
+      "bytes": 10485765,
+      "sha256": "82a3c179d4c2f6a3b84eca943239a54fcf5e224752e12fa0396dd7b04708ac11",
+      "oracle_sha256": "090c98b02d7aa845b43c069ca5939c5f9d9cf0da652e59c28a8213904656418c",
+      "lines": 1,
+      "fields": 0,
+      "legends": 0,
+      "nul_positions": [],
+      "declared_unit_system": null,
+      "golden_sha256": "82a3c179d4c2f6a3b84eca943239a54fcf5e224752e12fa0396dd7b04708ac11"
+    },
+    {
+      "label": "edit-crosses-transfer-boundary",
+      "bytes": 10485764,
+      "sha256": "5c6b09233ce6a22f960047895683ad07c463ef49b30a2502262117015e1a18e3",
+      "oracle_sha256": "41e31182a4514c93427f6d7db6cdce681785d98b1b69b0af44c96a406ba4ee78",
+      "lines": 2,
+      "fields": 1,
+      "legends": 0,
+      "nul_positions": [],
+      "declared_unit_system": null,
+      "golden_sha256": "be18fd9e7309ff5cb4bcee207aec31397d90934dabecded2e2756137b0997939"
+    }
+  ]
+}
