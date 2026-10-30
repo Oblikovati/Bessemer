@@ -1,0 +1,108 @@
+{
+  "issue": 116,
+  "behavior_profile": "simulation-metadata-v1",
+  "base_revision": "1f21c07d63b54dea914285df787f0581994415a4",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "gate": "cargo xtask pr",
+  "gate_result": "Completed formatting, clippy, build, all test suites and doctests with no errors",
+  "gate_log_sha256": "761b6513e7fab4255cf40ca8b19d53927a82b307fcad99aaa2651707723299c4",
+  "test_summaries": 226,
+  "passed": 2950,
+  "failed": 0,
+  "ignored": 16,
+  "focused_with_native": {
+    "passed": 10,
+    "failed": 0
+  },
+  "owned_cases": {
+    "guid_streams": 7,
+    "caller_writer_inputs": 10,
+    "scalar_patterns": 14,
+    "helper_stamps": 7
+  },
+  "native_carriers": 3,
+  "native_guid_streams": 0,
+  "native_scalar_streams": 4,
+  "native_scalar_bytes": 16,
+  "synthetic_guid_carrier_edits": 6,
+  "two_fresh_processes_ran_all_ten_focused_tests": true,
+  "outputs_compared_byte_for_byte": {
+    "native": {
+      "bytes": 18808888,
+      "sha256": "98fbac84388f959fc050e900d6e033ecc276e913f4862931fbd7a3341bd36bbb"
+    },
+    "guid": {
+      "bytes": 1396816,
+      "sha256": "4d03314eecd8c0ed68b5578cb6a6217bf89fb126fe1615062ea3fdf6772801ba"
+    }
+  },
+  "observations": [
+    {
+      "run": 1,
+      "seconds": 0.315858,
+      "observed_peak_working_set_bytes": 103247872
+    },
+    {
+      "run": 2,
+      "seconds": 0.153054,
+      "observed_peak_working_set_bytes": 111837184
+    }
+  ],
+  "observation_scope": "All ten focused tests including four native scalar edits and six synthetic GUID carrier edits per process; elapsed includes startup. Working set sampled at approximately 1 ms is a lower bound. First implementation, no prior published release for comparison; no statistical speed claim.",
+  "runtime_and_test_sha256": {
+    "src/simulation/metadata/guid_storage.rs": "e5d3c6a2c88d039c0715632b91eff12ed1f5a46d6d1effbaaa1b4f447834eea9",
+    "src/simulation/metadata/guids/codec.rs": "c405cefbe84238242dddfbdae76c34be43a3b928ebdd1018d0e5cb394e8e1cb3",
+    "src/simulation/metadata/guids/edit.rs": "d495e4efe36ce1a1de0620866b8c96b1acf22725510367afcbe7fbeab0b81b0d",
+    "src/simulation/metadata/guids/mod.rs": "4eeaabd725b7d8077ec83d6a2c17d10fbd80cb4ea8bf36d4b5190dde4d0f5cfa",
+    "src/simulation/metadata/guids/types.rs": "f41477996418553ce72bbb931f4481260ecf891f7ba09e21ede757befadebf4d",
+    "src/simulation/metadata/guids/writer.rs": "a8bca3400d26d94452d53f4ee203d822fde7dce6d39e52fa8ec654bd1508233b",
+    "src/simulation/metadata/helper.rs": "b59616122702450de72955ebe6007c85ac3bb6ca606cabb42ee1298b055de00a",
+    "src/simulation/metadata/mod.rs": "e72029e7f81f435ed5293f0590e1b9cb4eed3348d8590aaaf768055e2c5ecddd",
+    "src/simulation/metadata/scalar.rs": "78a7acaf407b70136cc3557fb9fcb4e2f5a6999d07c090569dd0a19df7a1b4c3",
+    "src/simulation/metadata/scalar_outcome.rs": "8356142704463c607643bb9281f74a63e5f4759a6aa1718daeb952d02322eb4f",
+    "src/simulation/metadata/storage.rs": "4698d8df2b9a1df109fa0b2308be70ad0e1d1506c56ed60c19c2e1cb5deb2820",
+    "src/simulation/mod.rs": "32ca80e6c34d90a639503f76cfd1786ecc1b2f7bc82e48a93f494fd0310813cc",
+    "tests/common/simulation_guid_reference.rs": "a93180f08980cf5b1ebb3164d40c0a9447e98192b68e855af33f3148deb273a8",
+    "tests/common/simulation_metadata.rs": "acfa8f037e091d7fd136fe787217bc6d429fb61798a7c0175918d7b6910a4037",
+    "tests/common/simulation_metadata_failures.rs": "38179d31a6e45c4b2c6bbfc0dc988135d56f106f94cf971c0edcff9a206d589c",
+    "tests/fixtures/simulation-metadata/owned.bin": "288bbd48e6241bb6ac22365ec21583a3391bbe3a7dab70f6dda0aca16b5cee95",
+    "tests/simulation_metadata.rs": "4ce75e707a652ef2206d10b8abf045ed4386d4e5d3d1bc0d67e5597d383cdc70"
+  },
+  "verification_dependency_sha256": {
+    "docs/features/compound-files/owned_compound.py": "13961d12d18ff35125deadbd79d8bb42ad389b5b2486d0388e2890318ab49118",
+    "docs/features/simulation-images/owned_carrier.py": "baedfdae80ffc13eaab3a62368bd593384f9a1d4678005790864d432be36e94c",
+    "docs/features/simulation-metadata/freeze_metadata.py": "612c339863653b80b6ab14d932c8c30222c7444b8d37c51a263968bbff3aca58",
+    "docs/features/simulation-metadata/owned_metadata.py": "9395b95811c43eb833e15e4eb4bdf4d1ce58fb64f0b8ff0233af4eb83c5f6389",
+    "docs/features/simulation-metadata/verify_guid_edits.py": "0f7efd066133121570e3af9be08ceecdceb0f5a00d93f57313f5b02a92aba29c",
+    "docs/features/simulation-metadata/verify_scalar_edits.py": "6cd6ad2e007f80cb648c245f5aaaf260234358978d91ccdcc7bdaeb5cc3b4676",
+    "docs/features/simulation-out/freeze_reports.py": "3caeefaac53e5ad9a3d63cedac2e689d6eeae9daa46274cb1740dbe9bf81ff39",
+    "docs/features/simulation-out/verify_out_edits.py": "7ab5fb760c000b9581ef5d24c75e2ea38a236d8df7201272c219e8f56873735b"
+  },
+  "reference_snapshots": {
+    "native-scalar-edit-source-snapshot.json": "05636a924934868805da4c6d9809dcf322f5a96d75b3e06fcab80211c5312fd6",
+    "owned-guid-edit-source-snapshot.json": "05636a924934868805da4c6d9809dcf322f5a96d75b3e06fcab80211c5312fd6",
+    "source-snapshot.json": "05636a924934868805da4c6d9809dcf322f5a96d75b3e06fcab80211c5312fd6"
+  },
+  "actual_reader_sha256": {
+    "cfb.py": "a55a2ceb4798c8f66b5b6ae37a8555dca83b90e12d587f673573fb6bc0137091",
+    "simulationguids.py": "b205b9d88e634c610d664ff868c87905d817f81d2fc10c448ef4694db95e6572",
+    "simulationscalars.py": "7f2c268655c546aaca5482c2e63aa9b9d808ed9db4829e056c84cdf43189205a"
+  },
+  "check_modes": [
+    "ExactBareScalar",
+    "ExactFourFramesAndTailPreservation",
+    "Inherited exact compound carrier checks"
+  ],
+  "acceptance_exclusions": [
+    "Populated native GUID streams and field roles",
+    "Odd byte-count semantics outside the portable even UTF-16 profile",
+    "Structural insertion of absent streams",
+    "Clock epoch, uniqueness and complete RunState enums",
+    "Native COM/runtime, historical producer and SolidWorks application acceptance",
+    "Geometry, topology, self-intersection and tolerance validation",
+    "ThreadSanitizer execution on this Windows host; required Linux CI remains separate"
+  ],
+  "humanizer": "Unavailable; prose pass left for review",
+  "dependencies_added": false
+}

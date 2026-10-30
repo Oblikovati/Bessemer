@@ -2,6 +2,7 @@
 mod elf;
 mod r#gen;
 mod master;
+mod metadata;
 mod out;
 mod study;
 mod wire;
@@ -10,6 +11,7 @@ use crate::{BessemerError, FailureClass, Result};
 pub use elf::*;
 pub use r#gen::*;
 pub use master::*;
+pub use metadata::*;
 pub use out::*;
 pub use study::*;
 
