@@ -26,6 +26,10 @@ Simulation metadata support also preserves optional `TimeStampGUIDs` field
 framing and raw UTF-16, reads and writes bare `TimeStamp`/`RunState` words, and
 edits existing CWR streams with composed helper history. See the
 [metadata evidence](docs/features/simulation-metadata/README.md).
+Element record views preserve stored codes separately from native numeric
+classification and expose explicit legacy rewrite, named solid associations
+and first-record predicate projections. See the
+[element evidence and limits](docs/features/simulation-elements/README.md).
 
 The first implemented layer reads SolidWorks version-4 containers, extracts streams
 with size and CRC checks, and replaces existing stream contents. A save without

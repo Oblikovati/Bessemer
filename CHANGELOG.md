@@ -34,6 +34,8 @@
 
 ### Added
 
+- Added complete Simulation element snapshots, independent numeric classification, explicit legacy stored-code rewrite projections and named topology/first-record predicate views. (#118)
+
 - Added Simulation GUID-string and bare scalar codecs, optional caller-writer projections, supplied update-stamp helper projections and isolated existing-stream CWR edits with composed history. (#116)
 
 - Added complete native Simulation ELF initializer interoperability, isolated CWR parameter edits, selected-directory and explicit mapping projections, header-only write proposals and exact scalar-record construction. (#115)
