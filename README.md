@@ -523,3 +523,5 @@ suffix layouts alongside the reviewed 18000 and 19000 dialects. See
 [the intermediate-manager evidence](docs/features/intermediate-managers/README.md).
 
 Simulation GEN node-group diagnostics retain signed tags, contiguous stored-order runs and source node identities, including inactive nodes and shared cross-tag references. See [node-group evidence](docs/features/simulation-node-groups/README.md).
+
+Plastics USD records retain opaque narrow bytes, raw UTF-16 units, noncanonical count prefixes and bounded u64 counts. Complete writer-grammar projections and isolated exact record edits preserve source identities and history. See [the USD evidence](docs/features/plastics-usd/README.md).

@@ -1,0 +1,119 @@
+{
+  "issue": 123,
+  "behavior_profile": "plastics-usd-records-v1",
+  "base_revision": "70c2ebc6b029ad33436023e4b29030919154ed13",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "gate": "cargo xtask pr",
+  "gate_exit": 0,
+  "gate_log_sha256": "4b895edaad96e74eb95cfb0a2023e7c3a08f88486b04277043f991bac22f38d1",
+  "test_summaries": 232,
+  "passed": 3013,
+  "failed": 0,
+  "ignored": 22,
+  "focused_integration_with_export_passed": 15,
+  "private_count_and_offset_guard_tests_passed": 2,
+  "owned_cases": {
+    "record_forms": 49,
+    "writer_layouts": 4,
+    "writer_adapter_counts": [
+      0,
+      1,
+      2,
+      7
+    ],
+    "exact_edits": 50,
+    "byte_noops": 1,
+    "individual_writer_record_mutations": 400,
+    "rejected_fixed_literal_mutations": 254,
+    "accepted_unparsed_variable_mutations": 146
+  },
+  "native_complete_file_fixtures": 0,
+  "native_derived_prefix_model_bytes": 88,
+  "native_derived_prefix_is_not_a_file_fixture": true,
+  "borrowed_preflight_and_nonzero_offset_replacement_regression_verified": true,
+  "source_and_supplied_replacement_parents_retained": true,
+  "all_edit_record_histories_replayed_exactly": true,
+  "requested_pattern_error_bits": 0,
+  "source_isolation_and_parallel_edits_and_layouts_verified": true,
+  "public_types_send_sync_asserted": 18,
+  "two_fresh_processes_ran_all_fifteen_integration_tests": true,
+  "complete_projection_outputs_compared_byte_for_byte": true,
+  "projection_output_bytes": 5732860,
+  "projection_output_sha256": "d3add6e2ebb2b18674c3b879b82a39ea3fa33fb5ff1aa7e98cdf9b06ae99e714",
+  "actual_frozen_reader_verified_the_entire_rust_projection_packet": true,
+  "projection_inputs_are_owned_synthetic": true,
+  "observations": [
+    {
+      "observed_peak_working_set_bytes": 7540736,
+      "run": 1,
+      "seconds": 0.1104573
+    },
+    {
+      "observed_peak_working_set_bytes": 23031808,
+      "run": 2,
+      "seconds": 0.0863342
+    }
+  ],
+  "observation_scope": "All fifteen integration tests per fresh process, including record forms, complete layouts, 400 individual grammar mutations, 50 complete edit goldens, malformed/limit/ownership checks and concurrent replay. Elapsed includes startup; no local gate was running during these two observations. Working set sampled around 1 ms is a lower bound and can miss actual peaks. First implementation; no prior published release or statistical speed claim.",
+  "runtime_and_test_sha256": {
+    "src/lib.rs": "63d9a5bced8d35f9126e05997f1797b3163806c2d095a07d10aac84595547bc6",
+    "src/plastics/mod.rs": "8909c1f49ebf825a76a0def08dc272681ff1d958fe4aeb62464db8b1a68938dd",
+    "src/plastics/usd/construction.rs": "ea9bbc140d89cbc2eea9b58b11385041173f5aff47a67944c442dc2be8631a38",
+    "src/plastics/usd/edit.rs": "4b4562087897d5fd8e6624ddfc2fb663c10c423bbf6c32bd4f303494fb54378e",
+    "src/plastics/usd/framing.rs": "0038991534aa46012b71e3b04490edc3ce21d811a93fb063a8d511dc564665ad",
+    "src/plastics/usd/layout.rs": "20e873300164bb33177d388ee0f541e53b97f9dfdc7081073536beda1bb94e12",
+    "src/plastics/usd/mod.rs": "4b00f0eba9e05e8f1be1e1f404b3b02e114535721c44ed73ba61ccf5dac57975",
+    "src/plastics/usd/outcome.rs": "7d39873f46515d8d68cfdf933f6665c59ca05d2f9718e682bec5d7a67b6f8c3d",
+    "src/plastics/usd/records.rs": "84577f8a5953716775d6f491315fae92acc2fab5dbc64ff9e14365005bd82a57",
+    "tests/common/usd_export.rs": "d50caff599175f148501166572059b3652497b88dc6a42615e5ca08665ad35a8",
+    "tests/common/usd_failures.rs": "b1b76ecb50c670473a1f4285a9539791cf8ddda1114aee4a6b0da60e66f1c6f7",
+    "tests/common/usd_packets.rs": "b77cfd46fdd1f8ec1d0980b60af34c9f250dd94838134e0f9acf8826ef0ac4df",
+    "tests/fixtures/plastics-usd/after-eof.bin": "f7f8f89b150690f9fa9617d01aefaaebea6eb1d847768ac087830870380fc805",
+    "tests/fixtures/plastics-usd/edits.bin": "cbb08a6463302283a92b3796fc3f6763dfeda56c2b26e55c47775b706061a68d",
+    "tests/fixtures/plastics-usd/layouts.bin": "a180f3317ead447a170d8ad4a5798cc80358a21b4d1e095ddfce222c2175176a",
+    "tests/fixtures/plastics-usd/records.bin": "0788a84a3a74b46d1345052ba0378f7bf2854f112215ee4b994dd383cb82f74e",
+    "tests/plastics_usd.rs": "4028990cfd48cf2d6d8da9363cee1cb2f0bb3aa82a8cce6fb31101a5c1596829"
+  },
+  "verification_dependency_sha256": {
+    ".gitattributes": "a228e71d9a627f6a579380be845bbdd1f6e7030c522c09710914d1e025f4c704",
+    "docs/features/model-archives/pinned_reference_tests.py": "6f95547f7dee070b1b8fe50cefaaea9a45721789636add2e67a919e42169b36e",
+    "docs/features/plastics-usd/freeze_usd.py": "9c70054496962714dd307077d2e0d4a0468fa1a24f18fe31f94c2105edf6a650",
+    "docs/features/plastics-usd/owned_usd.py": "c311e4c4c154865d6ca92ec097f0f298bd6055ccac811cb9d41ee4c249fddbba",
+    "docs/features/simulation-images/freeze_images.py": "d47b59435889b89e93f30ce1fd366e976dfbc76a7389f733f5a632ffa87b02c7",
+    "src/archive_codec/cursor.rs": "e633d19c6a04434ffb5f3ee9da8d1e2ce0940198b5b976116fc54ffb82e1b592",
+    "src/archive_codec/mod.rs": "dbf5dca8bbf7ffc87f40a9a1ef1497561653fe8441bddb9bc695ad4c4ed0de84",
+    "src/archive_codec/revision.rs": "59ad9f96b7f34ae1c5658f39daf533582d572bdb0603a5099013156c7c37dc48",
+    "src/error.rs": "4a10ca63c2ea2cfcb30d65b72f242dc7b8feafdd2f715e06adfbe2335a1b0a47",
+    "src/records.rs": "2728e4b6b3fe90f9ed0ece6ebf3b99664ecdf0ba4691ee93d11b5710b62f01a3",
+    "tests/common/simulation_images.rs": "7089399bf3c684254e38a2d4b646317ea2e113a30cf54231c4c9dbc2536f0eef"
+  },
+  "reference_snapshot_identity": "aa377fe22977f2dd8edad1674f95b1688e54ffcdbce8847ece9f33892befd061",
+  "actual_reader_sha256": {
+    "plasticsusd.py": "e0bd1db47a1cc6d45e960f700be0d3e5d93226f35a54140e3cf3c8f8628088bd"
+  },
+  "native_prefix_evidence": {
+    "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\plastics-usd-archive-native-evidence.json",
+    "source_sha256": "59b523a906731e574d5a374071ca5d0e777e3701893cbedabcf81ffe812ccca7",
+    "prefix_model_bytes": 88,
+    "prefix_model_sha256": "ec5715d007c34c7cb01b40a6e1ed4f82f1977439a6a28a90f7dd04184441cea5",
+    "is_complete_native_file_fixture": false
+  },
+  "exact_indexed_simulation_and_usd_fixture_packets_verified": 17,
+  "check_modes": [
+    "ExactCompleteCountedRecords",
+    "ExactCompleteRecordsAndUnchangedRecordBytes",
+    "ExactUnicodeWriterGrammarAndLiterals"
+  ],
+  "acceptance_exclusions": [
+    "Complete installed USD fixtures, full native writer/loader compatibility and all-project completeness",
+    "Native loader lifecycle/reset/dispatch and historical profiles",
+    "Source code pages, conversion and variable host/adapter/customer/system value semantics",
+    "Native target execution, diagnostic collection or host inventory commands",
+    "Geometry, topology consistency, self-intersection and tolerance validity",
+    "SolidWorks application acceptance",
+    "ThreadSanitizer execution on this Windows host; required Linux CI remains separate"
+  ],
+  "humanizer": "Unavailable; prose pass left for review",
+  "dependencies_added": false
+}

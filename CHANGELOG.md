@@ -34,6 +34,8 @@
 
 ### Added
 
+- Added bounded lossless Plastics USD records, explicit Unicode writer-layout projections and isolated exact record edits with complete source identities and history. (#123)
+
 - Added complete signed Simulation node-group runs with retained GEN identities and shared-reference evidence (#122).
 
 - Added exact auxiliary UTF-16 name views and supplied-destination stores, original GEN trial snapshots, explicit workspace normalization and ID-gated memory-only allocation/result projections with composed byte history. (#121)
