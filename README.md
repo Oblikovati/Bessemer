@@ -521,3 +521,5 @@ arrays and scoped reference graphs. See
 Version-11000 configuration managers retain their exact owned-object, scene and
 suffix layouts alongside the reviewed 18000 and 19000 dialects. See
 [the intermediate-manager evidence](docs/features/intermediate-managers/README.md).
+
+Simulation GEN node-group diagnostics retain signed tags, contiguous stored-order runs and source node identities, including inactive nodes and shared cross-tag references. See [node-group evidence](docs/features/simulation-node-groups/README.md).

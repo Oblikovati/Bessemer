@@ -1,9 +1,11 @@
 mod framing;
+mod groups;
 mod mesh;
 mod outcome;
 mod parts;
 use super::{Result, SimulationMasterArchive, SimulationMasterRevision, invalid, require};
 use crate::archive_codec::ArchiveRevision;
+pub use groups::*;
 pub use mesh::*;
 pub use outcome::*;
 pub use parts::*;

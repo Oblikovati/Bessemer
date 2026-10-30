@@ -34,6 +34,8 @@
 
 ### Added
 
+- Added complete signed Simulation node-group runs with retained GEN identities and shared-reference evidence (#122).
+
 - Added exact auxiliary UTF-16 name views and supplied-destination stores, original GEN trial snapshots, explicit workspace normalization and ID-gated memory-only allocation/result projections with composed byte history. (#121)
 
 - Added complete stored Simulation auxiliary body-range rows, isolated three-field edits, conditional runtime input proposals and exact exclusive body-type queries with early-stop history and explicit descriptor limits. (#120)
