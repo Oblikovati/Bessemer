@@ -25,6 +25,7 @@ pub mod model_archives;
 pub mod parasolid;
 pub mod preview;
 mod records;
+pub mod simulation;
 pub mod tessellation;
 mod writer;
 

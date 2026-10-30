@@ -34,6 +34,8 @@
 
 ### Added
 
+- Added complete observed Simulation MAS and paired family-8 GEN image reading, construction and writing, stored mesh accessors, isolated field edits and CWR coordinate replacement. (#112)
+
 - Added MS-CFB version-3/4 stream reading, full logical reconstruction and isolated existing-stream replacement with allocation and ownership checks. (#106)
 
 - Added exact Composer reference splitting, lexical file keys and immutable supplied-state geode lookup and registration with explicit native-resolution exclusions. (#105)
