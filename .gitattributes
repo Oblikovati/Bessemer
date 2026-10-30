@@ -8,6 +8,7 @@ tests/fixtures/xml/*.bin binary
 tests/fixtures/display-lists/*.bin binary
 # Selection reference packets are compressed bytes, including literal CR/LF patterns.
 tests/fixtures/simulation-selection/*.bin binary
+tests/fixtures/simulation-body-ranges/*.bin binary
 # Model wire fixtures and hash-bound schema excerpts retain exact source bytes.
 tests/fixtures/model-archives/*.bin binary
 docs/features/model-archives/** -text whitespace=-blank-at-eol,-blank-at-eof

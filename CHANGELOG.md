@@ -34,6 +34,8 @@
 
 ### Added
 
+- Added complete stored Simulation auxiliary body-range rows, isolated three-field edits, conditional runtime input proposals and exact exclusive body-type queries with early-stop history and explicit descriptor limits. (#120)
+
 - Added native Simulation family-mask and scalar/exclusion gates and complete supplied-context body node-mark projections with exact checks, preserved prior values and ordered parent/write history. (#119)
 
 - Added complete Simulation element snapshots, independent numeric classification, explicit legacy stored-code rewrite projections and named topology/first-record predicate views. (#118)

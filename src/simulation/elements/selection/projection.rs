@@ -136,7 +136,7 @@ fn mark_coverage(
     }
 }
 
-fn query_diagnostics() -> [SimulationBodyQueryDiagnostic; 4] {
+pub(super) fn query_diagnostics() -> [SimulationBodyQueryDiagnostic; 4] {
     [
         SimulationBodyQueryDiagnostic::CadOwnershipUnassigned,
         SimulationBodyQueryDiagnostic::NativeCallbackNotExecuted,

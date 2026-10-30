@@ -34,6 +34,10 @@ Selection views also expose native family-mask and scalar/exclusion gates,
 plus complete supplied-context body node-mark queries with unknown prior
 values and ordered write history. See the
 [selection and body-query evidence](docs/features/simulation-selection/README.md).
+Auxiliary row views also preserve both stored body-range profiles, provide
+isolated three-field edits and conditional runtime input proposals, and expose
+the separate exclusive body-type query. See the
+[body-range evidence and descriptor limits](docs/features/simulation-body-ranges/README.md).
 
 The first implemented layer reads SolidWorks version-4 containers, extracts streams
 with size and CRC checks, and replaces existing stream contents. A save without

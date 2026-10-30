@@ -92,7 +92,7 @@ fn visit_node(
     Ok(())
 }
 
-fn selected_node_id(record: &[u8; 140], slot: usize) -> i32 {
+pub(super) fn selected_node_id(record: &[u8; 140], slot: usize) -> i32 {
     let start = 96 + slot * 4;
     i32::from_le_bytes([
         record[start],
@@ -102,7 +102,7 @@ fn selected_node_id(record: &[u8; 140], slot: usize) -> i32 {
     ])
 }
 
-fn normalize_node_id(
+pub(super) fn normalize_node_id(
     mesh: &SimulationBodyQueryMesh,
     source: (usize, usize, u8),
     id: i32,
