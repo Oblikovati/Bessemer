@@ -34,6 +34,8 @@
 
 ### Added
 
+- Added native Simulation family-mask and scalar/exclusion gates and complete supplied-context body node-mark projections with exact checks, preserved prior values and ordered parent/write history. (#119)
+
 - Added complete Simulation element snapshots, independent numeric classification, explicit legacy stored-code rewrite projections and named topology/first-record predicate views. (#118)
 
 - Added Simulation GUID-string and bare scalar codecs, optional caller-writer projections, supplied update-stamp helper projections and isolated existing-stream CWR edits with composed history. (#116)

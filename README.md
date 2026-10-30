@@ -30,6 +30,10 @@ Element record views preserve stored codes separately from native numeric
 classification and expose explicit legacy rewrite, named solid associations
 and first-record predicate projections. See the
 [element evidence and limits](docs/features/simulation-elements/README.md).
+Selection views also expose native family-mask and scalar/exclusion gates,
+plus complete supplied-context body node-mark queries with unknown prior
+values and ordered write history. See the
+[selection and body-query evidence](docs/features/simulation-selection/README.md).
 
 The first implemented layer reads SolidWorks version-4 containers, extracts streams
 with size and CRC checks, and replaces existing stream contents. A save without

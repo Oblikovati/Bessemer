@@ -1,10 +1,12 @@
 mod classification;
 mod legacy;
+mod selection;
 mod topology;
 use super::{Result, SimulationGenArchive, invalid, require};
 use crate::archive_codec::ArchiveRevision;
 pub use classification::*;
 pub use legacy::*;
+pub use selection::*;
 pub use topology::*;
 
 /// Identity of one immutable complete element-record snapshot.

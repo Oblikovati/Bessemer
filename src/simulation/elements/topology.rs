@@ -56,7 +56,7 @@ impl SimulationElementRecord {
         &self,
         node_count: Option<u32>,
     ) -> Result<SimulationSolidTenNodeProjection> {
-        validate_solid_gate(&self.bytes)?;
+        validate_solid_gate(self)?;
         Ok(topology_result(self, node_count))
     }
 
@@ -66,9 +66,10 @@ impl SimulationElementRecord {
     }
 }
 
-fn validate_solid_gate(bytes: &[u8; 140]) -> Result<()> {
+fn validate_solid_gate(record: &SimulationElementRecord) -> Result<()> {
+    let bytes = &record.bytes;
     require(
-        bytes[0] != 0 && bytes[20] == 4 && bytes[23] == 10,
+        record.has_solid_ten_gate(),
         "Simulation solid topology",
         format!(
             "activity {}, family {}, count {}; expected nonzero activity, family 4, count 10",

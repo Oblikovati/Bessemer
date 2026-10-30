@@ -1,0 +1,121 @@
+{
+  "issue": 119,
+  "behavior_profile": "simulation-selection-v1",
+  "base_revision": "def56c6114077cf4f467d5023d898b110f839faa",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "gate": "cargo xtask pr",
+  "gate_exit": 0,
+  "gate_log_sha256": "bbeeb192b848ac9260a7fbdf4aafd70f097bcacd24cc3f5df3b46312f9741785",
+  "test_summaries": 228,
+  "passed": 2967,
+  "failed": 0,
+  "ignored": 18,
+  "focused_with_native": {
+    "selection_passed": 11,
+    "previous_element_compatibility_passed": 8,
+    "failed": 0
+  },
+  "owned_cases": {
+    "predicate_cross_product": 88800,
+    "family_mask_pairs": 9472,
+    "whole_block_queries": 1117
+  },
+  "native_pairs": 3,
+  "native_records": 25106,
+  "native_queries": 11,
+  "primary_body_queries": 5,
+  "primary_write_visits": 209204,
+  "primary_per_query_marked_nodes": 45398,
+  "primary_union_nodes": [
+    24140,
+    10553,
+    10553
+  ],
+  "primary_overlap_nodes": [
+    null,
+    76,
+    76
+  ],
+  "all_query_write_visits": 400870,
+  "two_fresh_processes_ran_all_eleven_focused_tests": true,
+  "native_projection_outputs_compared_byte_for_byte": true,
+  "native_projection_output_bytes": 15890868,
+  "native_projection_output_sha256": "c67edaa057c44d1d44290722801d794ebeb92ad61293dd5ced50cbcecc25874e",
+  "actual_frozen_readers_verified_the_entire_rust_projection_packet": true,
+  "paired_gen_copy_parent_retained": true,
+  "observations": [
+    {
+      "run": 1,
+      "seconds": 0.2841665,
+      "observed_peak_working_set_bytes": 65236992
+    },
+    {
+      "run": 2,
+      "seconds": 0.2853355,
+      "observed_peak_working_set_bytes": 64720896
+    }
+  ],
+  "observation_scope": "All eleven selection tests per process, including 98,272 owned predicate contexts, 1,117 whole-block queries and all eleven installed supplied-context queries with complete mark/write histories; elapsed includes startup. Working set sampled at approximately 1 ms is a lower bound and may miss actual peak. First implementation, no prior published release for comparison; no statistical speed claim.",
+  "runtime_and_test_sha256": {
+    "src/simulation/elements/mod.rs": "8fd73ff290d84f92b8a11b5e1693ef654d0fc3da4df2251be2a4e902c1e64f4b",
+    "src/simulation/elements/selection/context.rs": "478faaa167a4fbaa657d66f821ba0613f51aa407a5001b88d78ccc7ec93b2d43",
+    "src/simulation/elements/selection/mesh.rs": "5ca29101aff8b450478484593b289f064919dd810d069583810dbff1594ea50a",
+    "src/simulation/elements/selection/mod.rs": "2c4038649735471a67f1976a16c083487ecb63ce7b6cbdf698abdb6818b7935f",
+    "src/simulation/elements/selection/outcome.rs": "3d7664badfabe3f9e31a524d56c033293d78329b98ae322ba84569f1a9714ea8",
+    "src/simulation/elements/selection/predicates.rs": "c15ee750428b95c9c24943a7699cf0f8246b723724ece39f3c31b878e71c48b0",
+    "src/simulation/elements/selection/projection.rs": "1ea272f75eb0e56352fb589299af9acdc21af62897b7e9ff2509ca3e64148ddf",
+    "src/simulation/elements/selection/visits.rs": "512fcb7665dbeb7d4ede62a80ee448c7aad18b3b229c13c84134dc82a947fed3",
+    "src/simulation/elements/topology.rs": "89c639fec5c1c2cc980f685aec605f0d410a385731e91a0a9c19efbc38aab217",
+    "tests/common/selection_failures.rs": "ae56177be6f783e07fe1607feeb1c71fb5f902eeac3040a06732ec60f0db363c",
+    "tests/common/selection_packets.rs": "77d4cee0ad7ca5de54d2848d0b8cb78e0336eabf848b944dd413bfda535b9fdd",
+    "tests/fixtures/simulation-selection/predicates.bin": "17742b7e5e2577878e168f39dca2524626dcb35cffe2d03f0e1218bf442b1d3e",
+    "tests/fixtures/simulation-selection/queries.bin": "012247267be5ec41cdeafb376bc2c68e6968db164df5241419448f993efa9646",
+    "tests/simulation_selection.rs": "a1a51ad9190d4f960b6982490c4267b9a153856a809a2487cdec1a13be4315c0"
+  },
+  "verification_dependency_sha256": {
+    "docs/features/compound-files/freeze_compound.py": "b16b5c4ab53a0876218a89b03aae096b17e30d254ac942ec094baf5a3706771a",
+    "docs/features/compound-files/native-reference.json": "c0b018208558922e6e18fb942b201de94248075e5a3f1dcf15d614df372fa665",
+    "docs/features/model-archives/pinned_reference_tests.py": "6f95547f7dee070b1b8fe50cefaaea9a45721789636add2e67a919e42169b36e",
+    "docs/features/simulation-images/freeze_images.py": "d47b59435889b89e93f30ce1fd366e976dfbc76a7389f733f5a632ffa87b02c7",
+    "docs/features/simulation-images/owned_images.py": "9f5cece11e36398d0f1afc92765b01486ab993e38ccf873c004b1bd0a3aa753f",
+    "docs/features/simulation-selection/freeze_selection.py": "3ca665862323f8b7a0984e47a6a2a28da4b8dbba924eb6f1d9a54a9dcbd682c5",
+    "docs/features/simulation-selection/owned_selection.py": "021e92abba3172326fa32f40ca6ba7429b7973a8fabc7fc01b7cb2527a88f32d",
+    "tests/common/simulation_element_checks.rs": "dd126e1f5ee8efe9c741d3d39f209766327eea77982917c2df4804a9e18315d2",
+    "tests/common/simulation_images.rs": "7089399bf3c684254e38a2d4b646317ea2e113a30cf54231c4c9dbc2536f0eef",
+    "tests/fixtures/simulation-elements/owned.bin": "7e4fcc761aff2bd1751b68e2bc70a34b2417675810b01d18498d463e3223a250",
+    "tests/fixtures/simulation-elements/selectors.bin": "dcbe899dd08a6130e84eb19c24d2476f32e5d9f73aabf9af7bf0f36dbbecff68",
+    "tests/simulation_elements.rs": "a066176ecdd63bd48d72cd83cc4766af4010b755c346ec57661c8253d9eb813f",
+    ".gitattributes": "beb7ee6f35121b912252082a8c7822b68352504d9f0b74ae6fb0ecc9fa1159a2"
+  },
+  "reference_snapshot_identity": "935e11f6f2ad167b3c48ad471db4a46324a83347d77aa57ae02fdf9afe544e8a",
+  "actual_reader_sha256": {
+    "cfb.py": "a55a2ceb4798c8f66b5b6ae37a8555dca83b90e12d587f673573fb6bc0137091",
+    "simulationmaster.py": "6213855a290cf1627e852daff1630089752c1a82fdf311c9e5c55c3c7cfedb42",
+    "simulationgen.py": "c562670bf27fc0a8f833f3295413661c76a85351fdbd8d383e2157087a80ea92",
+    "simulationselection.py": "4c66ad169f594e4c7553bc5105f0d911e229beb27f41ab44bbc2272d12ef64b1",
+    "simulationbodynodes.py": "309ff4eef82c37996ed80ec75db5588f97813cfd7b594e4a669d3d5720e8bb70"
+  },
+  "query_limits": {
+    "maximum_nodes": 100000,
+    "maximum_elements": 100000,
+    "maximum_write_visits": 1000000
+  },
+  "check_modes": [
+    "ExactAllNodeActivity",
+    "ExactSelectedReferencesAndNodeActivity",
+    "Complete retained source blocks and ordered overwrite/parent history"
+  ],
+  "acceptance_exclusions": [
+    "CAD/assembly body ownership mapping and complete API type-flag enums",
+    "Historical runtime selections, native pointer/tree/callback state and callback execution",
+    "Native allocation/HRESULT and unsafe reference accesses",
+    "Geometry, topology consistency, self-intersection and tolerance validity",
+    "SolidWorks application acceptance",
+    "ThreadSanitizer execution on this Windows host; required Linux CI remains separate"
+  ],
+  "humanizer": "Unavailable; prose pass left for review",
+  "dependencies_added": false,
+  "all_simulation_index_fixture_bytes_compared_with_verified_working_bytes": true,
+  "compressed_fixture_attributes": "Explicit binary attributes preserve selection packet CR/LF bytes; all six Simulation fixture directories matched the git index byte for byte."
+}
