@@ -14,6 +14,18 @@ pub struct ComposerVectorBlock {
 }
 
 impl ComposerVectorBlock {
+    /// Reconstruct every lane under an explicit profile, e.g. `block.reconstruct(ComposerVectorProfile::NearestEvenGradual79V1, 3000)?`.
+    pub fn reconstruct(
+        &self,
+        profile: ComposerVectorProfile,
+        maximum_components: usize,
+    ) -> Result<ComposerVectorValues> {
+        values::reconstruct_vectors(self, profile, maximum_components).map_err(|mut error| {
+            error.operation = "reconstruct Composer vectors";
+            error
+        })
+    }
+
     /// Parse with explicit caller shape, e.g. `ComposerVectorBlock::from_bytes(bytes, layout, 1024)?`.
     pub fn from_bytes(
         bytes: &[u8],
@@ -21,11 +33,8 @@ impl ComposerVectorBlock {
         maximum_bytes: usize,
     ) -> Result<Self> {
         require_budget(bytes.len(), maximum_bytes)?;
-        let mut cursor = ArchiveCursor::new(bytes);
-        let packing = decode_packing(cursor.u8().map_err(read_error)?)?;
-        let axes = decode_axes(&mut cursor, packing, layout.dimensions).map_err(read_error)?;
-        let packed = cursor.take(cursor.remaining()).map_err(read_error)?;
-        let block = Self::from_parts(layout, packing, &axes, packed, maximum_bytes)?;
+        let (block, consumed) = read_vector_prefix(bytes, layout, maximum_bytes)?;
+        require_length(consumed, bytes.len(), "complete vector span")?;
         require_reconstruction(&block.to_bytes(), bytes)?;
         Ok(block)
     }
@@ -117,6 +126,24 @@ impl ComposerVectorBlock {
             block.coverage(),
         ))
     }
+}
+
+pub(in crate::composer) fn read_vector_prefix(
+    bytes: &[u8],
+    layout: ComposerVectorLayout,
+    maximum: usize,
+) -> Result<(ComposerVectorBlock, usize)> {
+    let mut cursor = ArchiveCursor::new(bytes);
+    let packing = decode_packing(cursor.u8().map_err(read_error)?)?;
+    let axes = decode_axes(&mut cursor, packing, layout.dimensions).map_err(read_error)?;
+    let varying = axes
+        .iter()
+        .filter(|axis| !matches!(axis, ComposerVectorAxis::Constant(_)))
+        .count();
+    let size = bounded_size(layout.count as usize, varying * packing.width(), maximum)?;
+    let packed = cursor.take(size).map_err(read_error)?;
+    let block = ComposerVectorBlock::from_parts(layout, packing, &axes, packed, maximum)?;
+    Ok((block, bytes.len() - cursor.remaining()))
 }
 
 fn validate_packed(

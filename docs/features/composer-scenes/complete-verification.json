@@ -1,0 +1,78 @@
+{
+  "parent_revision": "75e14af372613681ee7f5a96f35db136ec9cdcec",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "behavior": 1,
+  "local_pr_gate": {
+    "command": "cargo xtask pr",
+    "passed": 2866,
+    "ignored": 8,
+    "summaries": 218
+  },
+  "owned": {
+    "complete_scenes": 45,
+    "independent_edit_goldens": [
+      "geode name",
+      "material text",
+      "info text",
+      "user-data text"
+    ],
+    "coverage": [
+      "all six drawable kinds",
+      "both texture-import contexts",
+      "short/empty metadata and LOD defaults",
+      "raw patterns and surrogate code units",
+      "all compressed prefixes and invalid extensions",
+      "all five resource budgets",
+      "foreign identities and array contexts",
+      "ownership and concurrent edits",
+      "carrier composition"
+    ]
+  },
+  "native": {
+    "files": 38,
+    "decoded_bytes": 45280926,
+    "geodes": 1787,
+    "drawables": 2056,
+    "all_forced_typed_reconstructions": true,
+    "all_constructions_reopened": true,
+    "all_native_edits_reference_reopened": true,
+    "two_process_byte_comparison_equal": true,
+    "edited_bundle_sha256": "4b18927dc43330e46f3d1ed6a98baae5785617c1f245889aa1496a68eded4d28",
+    "probe_sha256": "fbebc5aa87bfdd8ff066c544245225a20bca89fa321396b8497a839e5703ed97"
+  },
+  "independent_oracles": [
+    "Python gzip writer/decoder",
+    "actual immutable complete-scene reference reader",
+    "literal native-order metadata patterns",
+    "full field equality except requested edit and derived positions/sizes"
+  ],
+  "retained_report_sha256": {
+    "owned-reference.json": "87c719d63d2b17760512e56a9b09a6715f721008d1d62248618673dbccff5f84",
+    "native-reference.json": "daa931c1b08bfaee322e5fdccd71169f5354bc37b9cd333d223750df532b0307",
+    "native-probe-reference.json": "6c1d8a8358eec48696761ff2eeb9a3eff3590c8ee24544c9ce65fc59698f8eb2",
+    "native-edit-reference.json": "ffdf8ead3f63c8c9aadf87f67f6d8dbecb8711867394196638d0e837fb3e8220",
+    "schema-reference.json": "ee8695e8a4302ba4955c17af7dd12c896ba9eb24fcbc3415e0fe22d01b4b4537",
+    "rejections.json": "d3fc5d5f50b451ac911097ce7e3c02c24cf36d9e5e7fec4fcf478193a55c97b2"
+  },
+  "runtime_sha256": {
+    "src/composer/geometry/decode.rs": "ed77a7d1568218dca0416293a5c523d5d71110fcc63f790e99469bd9407c32cd",
+    "src/composer/geometry/drawable.rs": "c837cd5315a645b8eb4ff305504a3717f4b75dd957bba15ecd30ad0da31e75a3",
+    "src/composer/geometry/encode.rs": "f8ba092799fc096fe239e209653896af74d53bbffff1f18cad3e33d95df28bc9",
+    "src/composer/geometry/gzip.rs": "fed1d9eafc328c237108c3ddc19122b36d44c7129886d72aa600d16e999485f4",
+    "src/composer/geometry/gzip_output.rs": "c212172633e403c6cb81282c477fbfce83854e156a966d2fee52464f0f310d1c",
+    "src/composer/geometry/metadata.rs": "bc95a1339f96123213ec5ae2e2c97d5e3773f388a0837154940b7dbbe4ac7b8d",
+    "src/composer/geometry/mod.rs": "c407ec3ca13100cf6097c6c3054cd67da8053d40f88fe48b6a7b313e51c18dad",
+    "src/composer/geometry/reader.rs": "63c2750c22b719db8aede903773e4d78147b18ace8c8a84b60ea9d26d7319ee5",
+    "src/composer/geometry/text.rs": "72d58a1d88debed576a4f956de11084f1b0aee15858634474ec36e980cb5e019",
+    "src/composer/geometry/types.rs": "d35b48ad0305e8bb828e1886a35377df541c471fe94e0ad9539690ad7d73234e",
+    "src/composer/geometry/value.rs": "40f56de0424e91dd6ab016b6c934d1410a19692b7a2504e9c90d5fdf52920768"
+  },
+  "exclusions": [
+    "project/XML/hierarchy relationships",
+    "geometry/topology/self-intersection/tolerance validity",
+    "runtime transforms/rendering/native application acceptance",
+    "versions other than 7.9",
+    "unsized or unexplained extensions"
+  ]
+}

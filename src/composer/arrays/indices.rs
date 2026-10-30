@@ -114,6 +114,20 @@ fn index_width(domain: u32) -> usize {
     }
 }
 
+pub(in crate::composer) fn read_index_prefix(
+    bytes: &[u8],
+    count: u32,
+    domain: u32,
+    maximum: usize,
+) -> Result<(ComposerIndexBlock, usize)> {
+    let size = bounded_size(count as usize, index_width(domain), maximum)?;
+    let packed = crate::records::region(bytes, 0, size).map_err(read_error)?;
+    Ok((
+        ComposerIndexBlock::from_bytes(packed, count, domain, maximum)?,
+        size,
+    ))
+}
+
 fn require_index_width(value: u32, width: usize) -> Result<()> {
     let maximum = match width {
         1 => 255,

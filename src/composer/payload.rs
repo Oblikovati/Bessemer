@@ -64,7 +64,7 @@ fn expand_member(stored: &[u8], member: &ComposerRecord) -> Result<Vec<u8>> {
     Ok(expanded)
 }
 
-fn inflate_exact(stored: &[u8], expected: usize, name: &str) -> Result<Vec<u8>> {
+pub(super) fn inflate_exact(stored: &[u8], expected: usize, name: &str) -> Result<Vec<u8>> {
     let capacity = expected.checked_add(1).ok_or_else(|| {
         failure(
             FailureClass::Invalid,

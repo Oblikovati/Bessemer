@@ -97,7 +97,23 @@ scene, geometry and application schemas remain separate work.
 The [Composer packed-array API](docs/features/composer-arrays/README.md) reads,
 constructs and edits complete vector and index blocks with explicit caller
 context, preserved numeric patterns and exact wire validation. Floating-point
-reconstruction and whole scene semantics remain separate work.
+reconstruction is available through the explicit
+[versioned numeric profile](docs/features/composer-vectors/README.md), with exact
+component patterns and native control-state exclusions. Whole scene semantics
+remain separate work.
+The [Composer geometry-stream API](docs/features/composer-scenes/README.md)
+reads, constructs, edits and writes complete gzip scenes with named typed fields,
+explicit texture-import context and derived bounded sizes. All 38 installed
+streams reconstruct exactly; native application and project semantics remain
+separate acceptance requirements.
+The [Composer XML/geode index](docs/features/composer-links/README.md) retains
+every exact local identifier candidate and supports isolated lexical reference
+edits. It preserves ambiguous and unmatched outcomes; runtime resolution and
+complete project semantics remain separate requirements.
+The [Composer supplied-state reference API](docs/features/composer-references/README.md)
+provides exact UTF-16 splitting, lexical file keys, null-aware geode maps and
+ordered lookup fallbacks. External file resolution and graph effects remain
+explicitly unchecked.
 The [biography evidence](docs/features/biography-archives/README.md) covers stored
 environment observations and repeated-string reading and writing.
 See [Parasolid transmit evidence](docs/features/parasolid-transmit/README.md) for

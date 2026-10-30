@@ -54,22 +54,65 @@ impl XmlMetadata {
         limits: XmlLimits,
     ) -> Result<Self> {
         self.element(id)?;
-        let attribute=self.model.elements[id.ordinal].attributes.iter().find(|attribute|attribute.visible.name.namespace.as_deref()==namespace && attribute.visible.name.local.as_ref()==local)
-            .ok_or_else(||missing(format!("XML attribute {namespace:?}:{local} on element {}; expected existing expanded attribute name",id.ordinal)))?;
-        if attribute.visible.value == value {
-            return self.with_source(self.source().clone(), limits);
-        }
         let mut source = self.source().clone();
-        let text = source
-            .document
-            .as_deref()
-            .ok_or_else(|| invalid("XML source absent; expected document for attribute edit"))?;
-        let (span, quote) = lexical::attribute_value_span(text, attribute.span.clone())?;
-        source.document = Some(lexical::replace_span(
-            text,
-            span,
-            &lexical::escape(value, Some(quote))?,
-        )?);
+        source.document = Some(self.attribute_replacement(id.ordinal, namespace, local, value)?);
         self.with_source(source, limits)
     }
+
+    fn attribute_replacement(
+        &self,
+        ordinal: usize,
+        namespace: Option<&str>,
+        local: &str,
+        value: &str,
+    ) -> Result<String> {
+        let text =
+            self.source().document.as_deref().ok_or_else(|| {
+                invalid("XML source absent; expected document for attribute edit")
+            })?;
+        replace_attribute(
+            text,
+            &self.model.elements[ordinal],
+            ordinal,
+            namespace,
+            local,
+            value,
+        )
+    }
+}
+
+pub(super) fn replace_attribute(
+    source: &str,
+    element: &super::types::ElementRecord,
+    ordinal: usize,
+    namespace: Option<&str>,
+    local: &str,
+    value: &str,
+) -> Result<String> {
+    let attribute = find_attribute(element, ordinal, namespace, local)?;
+    if attribute.visible.value == value {
+        return Ok(source.to_owned());
+    }
+    let (span, quote) = lexical::attribute_value_span(source, attribute.span.clone())?;
+    lexical::replace_span(source, span, &lexical::escape(value, Some(quote))?)
+}
+
+fn find_attribute<'a>(
+    element: &'a super::types::ElementRecord,
+    ordinal: usize,
+    namespace: Option<&str>,
+    local: &str,
+) -> Result<&'a super::types::AttributeRecord> {
+    element
+        .attributes
+        .iter()
+        .find(|attribute| {
+            attribute.visible.name.namespace.as_deref() == namespace
+                && attribute.visible.name.local.as_ref() == local
+        })
+        .ok_or_else(|| {
+            missing(format!(
+                "XML attribute {namespace:?}:{local} on element {ordinal}; expected existing expanded attribute name"
+            ))
+        })
 }
