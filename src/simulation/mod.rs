@@ -1,5 +1,6 @@
 //! Stored Simulation images with actual paired MAS context and explicit semantic limits.
 mod bodyranges;
+mod egr;
 mod elements;
 mod elf;
 mod r#gen;
@@ -11,6 +12,7 @@ mod wire;
 
 use crate::{BessemerError, FailureClass, Result};
 pub use bodyranges::*;
+pub use egr::*;
 pub use elements::*;
 pub use elf::*;
 pub use r#gen::*;

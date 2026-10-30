@@ -34,6 +34,8 @@
 
 ### Added
 
+- Added complete conditional flat Simulation EGR framing and construction, typed existing-field edits, preserved solver-name states, descriptor proposals and exact integer EGROUP projections. (#124)
+
 - Added bounded lossless Plastics USD records, explicit Unicode writer-layout projections and isolated exact record edits with complete source identities and history. (#123)
 
 - Added complete signed Simulation node-group runs with retained GEN identities and shared-reference evidence (#122).
