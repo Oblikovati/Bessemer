@@ -4,6 +4,11 @@ Bessemer is a Rust library being built to read and write SolidWorks documents
 (parts .sldprt, assemblies .sldasm, and drawings .slddrw).
 CAD kernels use it to exchange data with SolidWorks files. Martensite is its first consumer.
 
+`bessemer::compound` reads and reconstructs MS-CFB version-3/4 carriers and
+replaces existing streams on isolated snapshots, including mini-stream cutoff
+changes. See the [compound-file evidence](docs/features/compound-files/README.md)
+for allocation checks, native corpus results and validation limits.
+
 The first implemented layer reads SolidWorks version-4 containers, extracts streams
 with size and CRC checks, and replaces existing stream contents. A save without
 edits preserves the whole file byte for byte. An edited save preserves every

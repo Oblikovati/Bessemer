@@ -12,6 +12,7 @@ mod archive_codec;
 pub mod biography;
 pub mod block_stream;
 pub mod composer;
+pub mod compound;
 mod compression;
 pub mod display_lists;
 mod document;
