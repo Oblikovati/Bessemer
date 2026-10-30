@@ -535,3 +535,5 @@ Cosworks persistence retains null/empty/odd text frames, complete study lists, e
 Simulation LBC Property preserves version-selected and fixed writer layouts, exact signed words, runtime member order and isolated field edits. Documented version/layout mismatches remain explicit errors. See [the LBC Property evidence](docs/features/simulation-lbc-property/README.md).
 
 Simulation counted version arrays and UniqueIds tables retain signed values, duplicates, ordering and original headers. Explicit profiles, resource limits and isolated field edits preserve complete byte images and history; allocation capacity stays metadata. See [the scalar-table evidence](docs/features/simulation-persistent-scalars/README.md).
+
+Simulation LBC name-order lists and legacy three-group maps preserve complete text frames, signed record words and counts. Exact constructors and isolated edits retain byte images, identities and ordered history. See [the final LBC stream evidence](docs/features/simulation-lbc-final-streams/README.md).

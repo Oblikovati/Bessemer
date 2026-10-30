@@ -34,6 +34,8 @@
 
 ### Added
 
+- Added complete Simulation LBC name-order and legacy three-group map framing, exact construction and isolated text/word edits with ordered history and explicit native-operation exclusions. (#130)
+
 - Added lossless counted Simulation version arrays and UniqueIds tables with metadata-only allocation capacity, typed field edits, exact reconstruction and complete history. (#129)
 
 - Added explicit LBC Property reader-version and fixed-writer profiles with lossless word construction, isolated field edits, complete history and preserved version/layout failures. (#128)
