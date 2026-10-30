@@ -1,6 +1,6 @@
 use super::{
     Result, SimulationPersistCheckMode, SimulationPersistCoverage, SimulationPersistText,
-    SimulationStudyOrder, SimulationStudyTextId, invalid, require,
+    SimulationStudyOrder, SimulationStudyTextId, require,
 };
 use std::sync::Arc;
 
@@ -91,25 +91,16 @@ impl SimulationStudyOrder {
         if original.encoded() == replacement.encoded() {
             return Ok(self.clone());
         }
-        let bytes = replacement_bytes(self, original, replacement)?;
+        let bytes = super::text_sequence::replace_frame(
+            &self.bytes,
+            original,
+            replacement,
+            "study text edit extent",
+        )?;
         let archive = Self::from_bytes(&bytes, self.maximum_items, self.maximum_text_bytes)?;
         verify_unchanged(self, &archive, original, replacement)?;
         Ok(archive)
     }
-}
-
-fn replacement_bytes(
-    source: &SimulationStudyOrder,
-    original: &SimulationPersistText,
-    replacement: &SimulationPersistText,
-) -> Result<Vec<u8>> {
-    let (start, _, end) = original.source_offsets();
-    let size = (source.bytes.len() - original.encoded().len()).checked_add(replacement.encoded().len()).ok_or_else(|| invalid("study text edit extent", format!("{} original bytes, {} replacement bytes; expected representable complete result", source.bytes.len(), replacement.encoded().len())))?;
-    let mut bytes = super::reserve_bytes(size)?;
-    bytes.extend_from_slice(&source.bytes[..start]);
-    bytes.extend_from_slice(replacement.encoded());
-    bytes.extend_from_slice(&source.bytes[end..]);
-    Ok(bytes)
 }
 
 fn verify_unchanged(
@@ -118,19 +109,13 @@ fn verify_unchanged(
     original: &SimulationPersistText,
     replacement: &SimulationPersistText,
 ) -> Result<()> {
-    let (start, _, end) = original.source_offsets();
-    let replacement_end = start + replacement.encoded().len();
     verify_text_count(source, result)?;
-    require(
-        result.bytes[..start] == source.bytes[..start]
-            && result.bytes[start..replacement_end] == *replacement.encoded()
-            && result.bytes[replacement_end..] == source.bytes[end..],
+    super::text_sequence::verify_frame_preservation(
+        &source.bytes,
+        &result.bytes,
+        original,
+        replacement,
         "study edit preservation",
-        format!(
-            "{} result bytes; expected complete original prefix/suffix and exact supplied {}-byte replacement",
-            result.bytes.len(),
-            replacement.encoded().len()
-        ),
     )
 }
 

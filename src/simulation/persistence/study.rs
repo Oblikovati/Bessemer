@@ -150,13 +150,15 @@ fn study_offsets(
 ) -> Result<(usize, Vec<usize>)> {
     let count_offset = text_extent(bytes, 0, maximum_text)?.1;
     let count = study_count(bytes, count_offset, maximum_items)?;
-    let mut cursor = count_offset + 4;
     let mut offsets = position_storage(count)?;
     offsets.push(0);
-    for _ in 0..count {
-        offsets.push(cursor);
-        cursor = text_extent(bytes, cursor, maximum_text)?.1;
-    }
+    let cursor = super::text_sequence::append_frame_offsets(
+        bytes,
+        count_offset + 4,
+        count,
+        maximum_text,
+        &mut offsets,
+    )?;
     require(
         cursor == bytes.len(),
         "study-order endpoint",

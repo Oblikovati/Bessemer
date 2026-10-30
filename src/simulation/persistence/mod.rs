@@ -5,6 +5,7 @@ mod scalars;
 mod study;
 mod study_edit;
 mod text;
+mod text_sequence;
 mod version;
 use super::{Result, invalid, require};
 pub use coverage::*;
