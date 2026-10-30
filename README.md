@@ -527,3 +527,5 @@ Simulation GEN node-group diagnostics retain signed tags, contiguous stored-orde
 Plastics USD records retain opaque narrow bytes, raw UTF-16 units, noncanonical count prefixes and bounded u64 counts. Complete writer-grammar projections and isolated exact record edits preserve source identities and history. See [the USD evidence](docs/features/plastics-usd/README.md).
 
 Conditional flat Simulation EGR tables preserve loaded widths, live/deleted/unallocated states and every original byte. Typed field edits, solver-name states, descriptor proposals and integer EGROUP projections retain their explicit scope. See [the EGR evidence](docs/features/simulation-egr/README.md).
+
+Simulation logical storage lookup preserves raw UTF-16 names and the exact whole-input last-dot `.CWR`/stream split, without filesystem or COM calls. See [the locator evidence](docs/features/simulation-storage-locator/README.md).

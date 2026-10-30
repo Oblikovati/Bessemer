@@ -34,6 +34,8 @@
 
 ### Added
 
+- Added exact UTF-16 Simulation logical storage locators with preserved whole-input last-dot components, native mode patterns and explicit lexical-only completion. (#126)
+
 - Added complete conditional flat Simulation EGR framing and construction, typed existing-field edits, preserved solver-name states, descriptor proposals and exact integer EGROUP projections. (#124)
 
 - Added bounded lossless Plastics USD records, explicit Unicode writer-layout projections and isolated exact record edits with complete source identities and history. (#123)
