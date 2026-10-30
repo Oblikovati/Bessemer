@@ -1,0 +1,25 @@
+//! Lossless documented Cosworks persistence frames with explicit caller context.
+mod coverage;
+mod legacy;
+mod study;
+mod study_edit;
+mod text;
+mod version;
+use super::{Result, invalid, require};
+pub use coverage::*;
+pub use legacy::*;
+pub use study::*;
+pub use study_edit::*;
+pub use text::*;
+pub use version::*;
+
+fn reserve_bytes(size: usize) -> Result<Vec<u8>> {
+    let mut bytes = Vec::new();
+    bytes.try_reserve_exact(size).map_err(|error| {
+        invalid(
+            "persistence image allocation",
+            format!("{size} bytes, {error}; expected available complete image storage"),
+        )
+    })?;
+    Ok(bytes)
+}

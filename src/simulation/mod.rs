@@ -8,6 +8,7 @@ mod locator;
 mod master;
 mod metadata;
 mod out;
+mod persistence;
 mod study;
 mod wire;
 
@@ -21,6 +22,7 @@ pub use locator::*;
 pub use master::*;
 pub use metadata::*;
 pub use out::*;
+pub use persistence::*;
 pub use study::*;
 
 fn invalid(entity: &str, cause: impl Into<String>) -> BessemerError {

@@ -1,0 +1,123 @@
+{
+  "issue": 127,
+  "behavior_profile": "cosworks-persistence-framing-v1",
+  "base_revision": "01c2e6fd82592c3cfadaf31d341b8f0f19fb09f9",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "gate": "cargo xtask pr",
+  "gate_exit": 0,
+  "gate_log_sha256": "a4cd7c0eb1987278692731ee3ef270e6e51176076bdc65e235ed6dec45cb79f1",
+  "test_summaries": 235,
+  "passed": 3066,
+  "failed": 0,
+  "ignored": 25,
+  "focused_with_export": {
+    "persistence_passed": 31,
+    "previous_locator_compatibility_passed": 6,
+    "private_terminated_size_overflow_regression_passed": true,
+    "failed": 0
+  },
+  "corpus": {
+    "owned_cases": 1497,
+    "native_cases": 5012,
+    "owned_packet_bytes": 353474,
+    "owned_packet_sha256": "6154452a1a5f4be04d9f02ac1fcd548aeefd403f8733fa66115dac158410d9c5",
+    "native_packet_bytes": 4133498,
+    "native_packet_sha256": "e0224715d963872ab769f632e552964af55cd6f14ac8feeb24016f174c2962e1",
+    "native_payloads_committed": false
+  },
+  "projection": {
+    "bytes": 4486980,
+    "sha256": "004c89cb2624da2e2bf4e1030e1cc7af42e756ca04c094b3c99f4f1294e1e597"
+  },
+  "retained_native_inventory": {
+    "primitive_version_texts": 262,
+    "complete_study_lists": 335,
+    "primary_contexts": 524,
+    "legacy_carriers": 25,
+    "coexisting_primary_precedence_pairs": 21,
+    "study_text_edit_and_noop_contexts": 3845,
+    "logical_primitive_study_payload_bytes": 25988,
+    "text_spans": 1031
+  },
+  "all_complete_native_carriers_reconstructed_exactly": true,
+  "all_projection_bytes_compared_by_actual_frozen_reader": true,
+  "whole_source_parents_boundaries_raw_views_words_owner_updates_and_suffixes_verified": true,
+  "all_unchanged_study_bytes_and_ordered_history_parents_verified": true,
+  "null_empty_and_odd_payloads_remain_distinct": true,
+  "primary_numeric_context_and_full_partial_mode_are_explicit": true,
+  "malformed_available_primary_never_falls_back": true,
+  "legacy_suffix_bytes_uninterpreted": 114,
+  "compatibility_default_without_record": 500070,
+  "source_drop_and_caller_returned_buffer_mutation_isolation_verified": true,
+  "study_texts_share_one_owned_parent_allocation": true,
+  "public_types_send_sync_asserted": 19,
+  "eight_threads_repeat_complete_serial_text_views_and_edit_images_history": true,
+  "exact_indexed_fixture_packets_verified": 23,
+  "native_payloads_committed": false,
+  "runtime_and_test_sha256": {
+    "src/simulation/mod.rs": "27d1fcbb1a956d322262f3506eaab0f60f5760c1ef93db87c22311b10e612c3a",
+    "src/simulation/persistence/coverage.rs": "0bbf29f21eb6a6949dbc5c567529220ae0e20093d76f916ac8f9b964a64ae86a",
+    "src/simulation/persistence/legacy.rs": "f25b6ceb25479047e5855a1a2bf5b2b03527955f5252c3d1be202b203dbbfb33",
+    "src/simulation/persistence/mod.rs": "4b6219e00d86d06a33c2ff257faab52e35021060f04fdd90a8e316ea37cf2779",
+    "src/simulation/persistence/study.rs": "c818a9b7de11f10e9caba94931ac407baffd2308d15a15fe7b287574d73bab0c",
+    "src/simulation/persistence/study_edit.rs": "0deff4d1ac377c4ebb78f4a1676c3a8dfc7e68d8cf6930c18e47193707324846",
+    "src/simulation/persistence/text.rs": "a92668d28a282372bab462acd0a4ca5536fdd9235e842953b1350bffbe3010e2",
+    "src/simulation/persistence/version.rs": "61b4b7827b287fa34de598fde4553709e8a84087d210ef3265af31180353aad1",
+    "tests/fixtures/cosworks-persistence/owned.bin": "c52c61c834a2f0ce3d161c219e2cd3b7dbb1a278eeed57f0fe97f7e126df145c",
+    "tests/simulation_persistence.rs": "01a51a654aeae24a2d3ec87654ef93b9c05b2c72c1a99b224d8bc9eb5e181f1b",
+    "tests/simulation_persistence/corpus.rs": "646e549cb1ca8bfcaea6df5b5dc7b2e6c8f301a78b8772def696556594281788",
+    "tests/simulation_persistence/edits.rs": "c35f0c382ba8ca400456fde495567a241d9985eaba56d575cec87bb5a768956d",
+    "tests/simulation_persistence/ownership.rs": "c991ca907d64f44cbc0f36c05855723f128ac428fefa59bbb9eb92f6dc917a86",
+    "tests/simulation_persistence/projections.rs": "41d8f041e7c27b39365a32f803a42dec5f684ada28b5ec7f366c319c1a3a8ebe",
+    "tests/simulation_persistence/studies.rs": "5a24ce97541287bb5f30dfe7a1f9c01f91d3a31a549500c485500999df1aaf31",
+    "tests/simulation_persistence/versions.rs": "6a9ed3d7d4678a572216c87e101f07bc4768b22ee8f13fc26e9e43ded95c56c3"
+  },
+  "verification_script_sha256": {
+    "docs/features/cosworks-persistence/freeze_persistence.py": "3b9fd825ac7de2458db8282550b5b9329185f0b567684cbfc9bed82c7e9424d2",
+    "docs/features/cosworks-persistence/owned_persistence.py": "5664f4393fc7abcbc22a3453eac07356e36b7ba95a6a2e34190e71af7de5c44d",
+    "docs/features/cosworks-persistence/persistence_projection.py": "3a295ce18fd177c6f16044f6b06ed79e22faa200b7378346446eabf9fe8f76d3"
+  },
+  "reference_snapshot_identity": "4b44ffa6888ddae2eefdbca900703569e3ce2776f4aea88d71d56f42427fc569",
+  "actual_reader_sha256": "5135ef755b445443c2482eaa5aacb81926b5b26ab378d297ea6603875ac18b0e",
+  "native_inventory_sha256": {
+    "cosworks-small-stream-native-evidence.json": "fa5eb9954e35ed0bf9963778eb553097371a98e5e38837bffae5e05c91e770f1",
+    "cosworks-root-study-order-native-evidence.json": "bd7c9249688ada954264c9fd9295e816c030f874c65a4df0a4c3ce4721524acc",
+    "cosworks-version-gates-native-evidence.json": "f052276f42309c7e1e9f2751118bff64217678145959a4cd9c682f7ceb5f518c",
+    "cosworks-legacy-version-native-evidence.json": "48425f297d73b8557fb846c8718e73a4508438ba848dc593f5ca8feb3d914b03"
+  },
+  "fresh_process_observations": [
+    {
+      "exe_sha256": "9b4e4ae16eda7c738cd4fede4f59afb90cb979fe28b787e439b0e63bcfb5ca92",
+      "observed_peak_working_set_bytes": 15200256,
+      "all_31_tests_with_native_export": true,
+      "full_local_gate_running_concurrently": true,
+      "seconds": 1.2728379,
+      "projection_sha256": "004c89cb2624da2e2bf4e1030e1cc7af42e756ca04c094b3c99f4f1294e1e597",
+      "run": 1
+    },
+    {
+      "exe_sha256": "9b4e4ae16eda7c738cd4fede4f59afb90cb979fe28b787e439b0e63bcfb5ca92",
+      "observed_peak_working_set_bytes": 15081472,
+      "all_31_tests_with_native_export": true,
+      "full_local_gate_running_concurrently": true,
+      "seconds": 0.5700576,
+      "projection_sha256": "004c89cb2624da2e2bf4e1030e1cc7af42e756ca04c094b3c99f4f1294e1e597",
+      "run": 2
+    }
+  ],
+  "acceptance_exclusions": [
+    "Installed loader/COM/native storage opens or I/O-failure behavior",
+    "General wcstod and CString conversion semantics",
+    "Broader legacy numeric profiles and opaque suffix semantics",
+    "Active-study selection and root/nested carrier precedence",
+    "Fresh whole-document extraction, CFB integration and native read/save acceptance",
+    "Geometry/kernel/application acceptance beyond bare framing",
+    "ThreadSanitizer execution on this Windows host; required Linux CI remains separate"
+  ],
+  "humanizer": "Unavailable; prose pass left for review",
+  "dependencies_added": false,
+  "two_fresh_processes_ran_all_31_tests": true,
+  "complete_fresh_projection_outputs_compared_byte_for_byte": true,
+  "observation_scope": "All 31 focused tests per process, including the complete owned/native export. Elapsed includes startup while the full gate ran concurrently. Working-set sampling around 1 ms provides lower bounds and can miss actual peaks. First implementation, with no prior published baseline or statistical speed claim."
+}

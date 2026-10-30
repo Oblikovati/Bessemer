@@ -529,3 +529,5 @@ Plastics USD records retain opaque narrow bytes, raw UTF-16 units, noncanonical 
 Conditional flat Simulation EGR tables preserve loaded widths, live/deleted/unallocated states and every original byte. Typed field edits, solver-name states, descriptor proposals and integer EGROUP projections retain their explicit scope. See [the EGR evidence](docs/features/simulation-egr/README.md).
 
 Simulation logical storage lookup preserves raw UTF-16 names and the exact whole-input last-dot `.CWR`/stream split, without filesystem or COM calls. See [the locator evidence](docs/features/simulation-storage-locator/README.md).
+
+Cosworks persistence retains null/empty/odd text frames, complete study lists, explicit primary version modes and observed legacy suffixes. Exact reconstruction and isolated study-text edits preserve bytes, identity and history. See [the persistence evidence](docs/features/cosworks-persistence/README.md).
