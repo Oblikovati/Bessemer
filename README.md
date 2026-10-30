@@ -38,6 +38,10 @@ Auxiliary row views also preserve both stored body-range profiles, provide
 isolated three-field edits and conditional runtime input proposals, and expose
 the separate exclusive body-type query. See the
 [body-range evidence and descriptor limits](docs/features/simulation-body-ranges/README.md).
+Auxiliary name buffers preserve bounded UTF-16 and all residual bytes, with
+supplied-destination stores, real trial-workspace snapshots and explicit
+memory-only allocation/binding projections. See the
+[auxiliary runtime evidence](docs/features/simulation-auxiliary-runtime/README.md).
 
 The first implemented layer reads SolidWorks version-4 containers, extracts streams
 with size and CRC checks, and replaces existing stream contents. A save without

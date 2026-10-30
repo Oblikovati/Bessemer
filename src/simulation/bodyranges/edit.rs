@@ -71,7 +71,7 @@ fn edit_result(
     }
 }
 
-fn derived_row(
+pub(super) fn derived_row(
     parent: &SimulationAuxiliaryBodyRow,
     bytes: &[u8],
 ) -> Result<SimulationAuxiliaryBodyRow> {

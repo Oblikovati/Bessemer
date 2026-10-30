@@ -34,6 +34,8 @@
 
 ### Added
 
+- Added exact auxiliary UTF-16 name views and supplied-destination stores, original GEN trial snapshots, explicit workspace normalization and ID-gated memory-only allocation/result projections with composed byte history. (#121)
+
 - Added complete stored Simulation auxiliary body-range rows, isolated three-field edits, conditional runtime input proposals and exact exclusive body-type queries with early-stop history and explicit descriptor limits. (#120)
 
 - Added native Simulation family-mask and scalar/exclusion gates and complete supplied-context body node-mark projections with exact checks, preserved prior values and ordered parent/write history. (#119)

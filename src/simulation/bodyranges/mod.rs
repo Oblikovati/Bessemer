@@ -1,13 +1,17 @@
 mod edit;
+mod names;
 mod proposal;
+mod workspace;
 use super::{
     Result, SimulationBodySelectionId, SimulationGenArchive, SimulationGenRevision, invalid,
     require,
 };
 use crate::archive_codec::ArchiveRevision;
 pub use edit::*;
+pub use names::*;
 pub use proposal::*;
 use std::sync::Arc;
+pub use workspace::*;
 
 /// Normalized stored auxiliary row profile, distinct from its runtime workspace.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
