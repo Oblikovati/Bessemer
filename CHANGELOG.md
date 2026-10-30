@@ -4,6 +4,12 @@
 
 ### Fixed
 
+- Fixed the new compound allocator using the reserved range-lock sector for data or tables when growing version-4 files above 2 GB. (#110)
+
+- Fixed the new compound reader rejecting legal surplus stream capacity while preserving complete allocation ownership checks. (#109)
+
+- Fixed the new compound reader rejecting documented red root-directory colors, preserving installed CWR and legacy carrier metadata. (#107)
+
 - Fixed spline equation transforms consuming compact restore bytes instead of the documented fixed 120-byte operator. (#95)
 
 - Fixed reviewed sketch-bend curve and One Bend parent roles rejecting complete fresh or cached derived references while preserving unrelated-class rejection. (#46)
@@ -27,6 +33,8 @@
 - Fixed reference-plane point roles rejecting documented endpoint and loft-sync subclasses for fresh and cached pointers. (#46)
 
 ### Added
+
+- Added MS-CFB version-3/4 stream reading, full logical reconstruction and isolated existing-stream replacement with allocation and ownership checks. (#106)
 
 - Added exact Composer reference splitting, lexical file keys and immutable supplied-state geode lookup and registration with explicit native-resolution exclusions. (#105)
 
