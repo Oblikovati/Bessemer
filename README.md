@@ -531,3 +531,5 @@ Conditional flat Simulation EGR tables preserve loaded widths, live/deleted/unal
 Simulation logical storage lookup preserves raw UTF-16 names and the exact whole-input last-dot `.CWR`/stream split, without filesystem or COM calls. See [the locator evidence](docs/features/simulation-storage-locator/README.md).
 
 Cosworks persistence retains null/empty/odd text frames, complete study lists, explicit primary version modes and observed legacy suffixes. Exact reconstruction and isolated study-text edits preserve bytes, identity and history. See [the persistence evidence](docs/features/cosworks-persistence/README.md).
+
+Simulation LBC Property preserves version-selected and fixed writer layouts, exact signed words, runtime member order and isolated field edits. Documented version/layout mismatches remain explicit errors. See [the LBC Property evidence](docs/features/simulation-lbc-property/README.md).

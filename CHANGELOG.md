@@ -34,6 +34,8 @@
 
 ### Added
 
+- Added explicit LBC Property reader-version and fixed-writer profiles with lossless word construction, isolated field edits, complete history and preserved version/layout failures. (#128)
+
 - Added lossless Cosworks persistence text, study-order streams and explicit primary/legacy version carriers, with exact reconstruction, isolated text edits and preserved provenance. (#127)
 
 - Added exact UTF-16 Simulation logical storage locators with preserved whole-input last-dot components, native mode patterns and explicit lexical-only completion. (#126)
