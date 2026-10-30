@@ -14,6 +14,10 @@ and paired family-8 GEN images. It exposes stored mesh fields and isolated cell
 and coordinate-pattern edits, including complete CWR stream replacement. See the
 [Simulation evidence](docs/features/simulation-images/README.md) for supported
 framing, reference results and semantic limits.
+It also preserves complete Simulation OUT report syntax, ordered duplicate
+symbols and exact decimal values, with isolated numeric-token edits and explicit
+comparisons against the actual paired mesh totals. See the
+[OUT report evidence](docs/features/simulation-out/README.md).
 
 The first implemented layer reads SolidWorks version-4 containers, extracts streams
 with size and CRC checks, and replaces existing stream contents. A save without

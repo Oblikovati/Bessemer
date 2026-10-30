@@ -34,6 +34,8 @@
 
 ### Added
 
+- Added complete observed Simulation OUT report syntax, exact decimal and ordered legend views, isolated numeric-token edits, CWR replacement and explicit paired mesh-total comparisons. (#114)
+
 - Added complete observed Simulation MAS and paired family-8 GEN image reading, construction and writing, stored mesh accessors, isolated field edits and CWR coordinate replacement. (#112)
 
 - Added MS-CFB version-3/4 stream reading, full logical reconstruction and isolated existing-stream replacement with allocation and ownership checks. (#106)
