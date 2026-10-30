@@ -533,3 +533,5 @@ Simulation logical storage lookup preserves raw UTF-16 names and the exact whole
 Cosworks persistence retains null/empty/odd text frames, complete study lists, explicit primary version modes and observed legacy suffixes. Exact reconstruction and isolated study-text edits preserve bytes, identity and history. See [the persistence evidence](docs/features/cosworks-persistence/README.md).
 
 Simulation LBC Property preserves version-selected and fixed writer layouts, exact signed words, runtime member order and isolated field edits. Documented version/layout mismatches remain explicit errors. See [the LBC Property evidence](docs/features/simulation-lbc-property/README.md).
+
+Simulation counted version arrays and UniqueIds tables retain signed values, duplicates, ordering and original headers. Explicit profiles, resource limits and isolated field edits preserve complete byte images and history; allocation capacity stays metadata. See [the scalar-table evidence](docs/features/simulation-persistent-scalars/README.md).

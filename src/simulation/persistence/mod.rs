@@ -1,6 +1,7 @@
 //! Lossless documented Cosworks persistence frames with explicit caller context.
 mod coverage;
 mod legacy;
+mod scalars;
 mod study;
 mod study_edit;
 mod text;
@@ -8,6 +9,7 @@ mod version;
 use super::{Result, invalid, require};
 pub use coverage::*;
 pub use legacy::*;
+pub use scalars::*;
 pub use study::*;
 pub use study_edit::*;
 pub use text::*;
