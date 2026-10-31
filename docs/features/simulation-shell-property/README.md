@@ -59,11 +59,18 @@ Reference containers must retain their complete grammar rather than a persist-ID
 prefix. No production change has been made to any of these readers.
 
 Run `python -B -X utf8 docs/features/simulation-shell-property/freeze_shell_property.py`
-for strict replay. `--write` initializes evidence for review. All 33 checks pass;
+for strict replay. `--write` initializes evidence for review. All 35 checks pass;
 source imports come from an immutable copy and native packets remain in `target/`.
-Primitive field/history oracles, typed production operations, malformed/resource
-and isolation/concurrency gates, full local validation and exact-head platform
-integration remain pending.
+The complete primitive and ordered outer/nested history oracles cover all 2,284
+owned contexts and all 251 accepted original native arguments. Inline Material
+expands into its complete typed fields with scoped names and parent-relative byte
+spans. Presence packets distinguish unknown, known-empty and explicit boolean
+vectors. Each nonstructural base-word edit is independently re-read before its
+fields and every ordered parent are recorded. Owned field/history packets contain
+20,673,774 /31,185,492 bytes; native packets contain 2,874,834 /6,297,638 bytes.
+Their hashes are retained in the packet references. Typed production operations,
+malformed/resource and isolation/concurrency gates, full local validation and
+exact-head platform integration remain pending.
 
 Physical meanings, runtime layer allocation/presence reconstruction, unrepresented
 populated native profiles, native writer/application and geometry acceptance,

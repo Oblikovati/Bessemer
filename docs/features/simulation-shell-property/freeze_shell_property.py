@@ -9,7 +9,7 @@ import unittest
 
 FEATURE = Path(__file__).resolve().parent
 ROOT = FEATURE.parents[2]
-for folder in ('simulation-binary-thermal', 'model-archives', 'simulation-solid-manager', 'simulation-solid-body', 'simulation-material'):
+for folder in ('simulation-binary-thermal', 'model-archives', 'simulation-solid-manager', 'simulation-solid-body', 'simulation-material', 'simulation-sheet-property'):
     sys.path.insert(0, str(FEATURE.parent / folder))
 sys.path.insert(0, str(ROOT / 'target/reference-python'))
 from pinned_reference_tests import FrozenSourceImports, copy_sources, record_snapshot
@@ -18,6 +18,7 @@ from freeze_body import verify_unimported_boundary
 from shell_property_evidence import shell_baseline, shell_reports, verify_shell_sources, verify_shell_refinement_guards, verify_shell_clauses
 from shell_property_bindings import verify_shell_bindings
 from owned_shell_property import owned_shell_properties
+from shell_property_packets import verify_owned_shell_packets, verify_native_shell_packets
 
 
 def actual_shell_family(raw: bytes, version: int, kind: str) -> dict[str, object]:
@@ -115,7 +116,8 @@ def run_shell_property_checks(pin: Path) -> unittest.TestResult:
     from functools import partial, update_wrapper
     import importlib
     replay = update_wrapper(partial(replay_shell_native, pin), replay_shell_native)
-    checks = (verify_shell_sources, verify_shell_refinement_guards, verify_shell_clauses, verify_shell_bindings, verify_owned_shell_properties, verify_shell_presence_boundaries, replay, verify_unimported_boundary)
+    native_packets = update_wrapper(partial(verify_native_shell_packets, pin), verify_native_shell_packets)
+    checks = (verify_shell_sources, verify_shell_refinement_guards, verify_shell_clauses, verify_shell_bindings, verify_owned_shell_properties, verify_shell_presence_boundaries, replay, verify_owned_shell_packets, native_packets, verify_unimported_boundary)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
     modules = ('test_cosworks_shell_property', 'test_cosworks_material', 'test_cosworks_embedded_body_ids',
                'test_cosworks_embedded_const_surface', 'test_cosworks_base_curves', 'test_cosworks_base_virtual',
