@@ -14,3 +14,6 @@ pub use contracts::*;
 pub use values::{
     SimulationThermalField, SimulationThermalKind, SimulationThermalLimits, SimulationThermalValue,
 };
+
+pub(super) use archive::{construction_mismatch, encode_fields};
+pub(super) use coverage::{diagnostics, nested_counts, read_completion};

@@ -27,9 +27,10 @@ impl SimulationThermalCollection {
         kind: SimulationThermalKind,
         limits: SimulationThermalLimits,
     ) -> Result<Self> {
-        let (reader, count) = base::collection(bytes, version, limits, |reader, label| {
-            tails::read(reader, label, kind)
-        })?;
+        let (reader, count) =
+            base::collection(bytes, version, limits, "thermal input", |reader, label| {
+                tails::read(reader, label, kind)
+            })?;
         Ok(Self {
             parent: reader.bytes,
             version,
@@ -49,10 +50,14 @@ impl SimulationThermalCollection {
         kind: SimulationThermalKind,
         limits: SimulationThermalLimits,
     ) -> Result<Self> {
-        let bytes = encode_fields(&fields, limits.maximum_bytes)?;
+        let bytes = super::encode_fields(&fields, limits.maximum_bytes)?;
         let collection = Self::from_bytes(&bytes, version, kind, limits)?;
         if collection.fields() != fields {
-            return Err(construction_mismatch(&fields, collection.fields()));
+            return Err(super::construction_mismatch(
+                &fields,
+                collection.fields(),
+                "thermal construction",
+            ));
         }
         Ok(collection)
     }
@@ -88,9 +93,10 @@ impl SimulationThermalCollection {
     }
 }
 
-fn construction_mismatch(
+pub(in crate::simulation::persistence) fn construction_mismatch(
     supplied: &[SimulationThermalField],
     parsed: &[SimulationThermalField],
+    entity: &str,
 ) -> crate::BessemerError {
     let index = supplied
         .iter()
@@ -98,7 +104,7 @@ fn construction_mismatch(
         .position(|(left, right)| left != right)
         .unwrap_or(supplied.len().min(parsed.len()));
     invalid(
-        "thermal construction",
+        entity,
         format!(
             "field {index} {:?}; expected selected grammar field {:?}",
             supplied.get(index),
@@ -117,7 +123,10 @@ fn encoded_size(value: &SimulationThermalValue) -> usize {
     }
 }
 
-fn encode_fields(fields: &[SimulationThermalField], maximum: usize) -> Result<Vec<u8>> {
+pub(in crate::simulation::persistence) fn encode_fields(
+    fields: &[SimulationThermalField],
+    maximum: usize,
+) -> Result<Vec<u8>> {
     let mut bytes = Vec::new();
     for field in fields {
         let size = encoded_size(&field.value);

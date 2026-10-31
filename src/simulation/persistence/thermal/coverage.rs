@@ -3,27 +3,28 @@ use super::*;
 impl SimulationThermalCollection {
     /// Return complete exact coverage with explicit semantic exclusions; e.g. `collection.coverage().completion`.
     pub fn coverage(&self) -> SimulationThermalCoverage {
-        let (embedded_archives, embedded_fields) = nested_counts(self);
+        let (embedded_archives, embedded_fields) = super::nested_counts(self.fields());
         SimulationThermalCoverage {
             kind: self.kind,
             version: self.version,
             limits: self.limits,
-            completion: read_completion(self.record_count),
+            completion: super::read_completion(self.record_count),
             check_mode: SimulationThermalCheckMode::ExactSelectedProfiles,
             checked_bytes: self.parent.len(),
             checked_fields: self.fields.len(),
             record_count: self.record_count,
             embedded_archives,
             embedded_fields,
-            diagnostics: diagnostics(),
+            diagnostics: super::diagnostics(),
             requested_pattern_error_bits: 0,
         }
     }
 }
 
-fn nested_counts(collection: &SimulationThermalCollection) -> (usize, usize) {
-    collection
-        .fields
+pub(in crate::simulation::persistence) fn nested_counts(
+    fields: &[SimulationThermalField],
+) -> (usize, usize) {
+    fields
         .iter()
         .fold((0, 0), |(roots, fields), field| match &field.value {
             SimulationThermalValue::Embedded(archive) => {
@@ -33,14 +34,16 @@ fn nested_counts(collection: &SimulationThermalCollection) -> (usize, usize) {
         })
 }
 
-fn read_completion(records: usize) -> SimulationThermalCompletion {
+pub(in crate::simulation::persistence) fn read_completion(
+    records: usize,
+) -> SimulationThermalCompletion {
     if records == 0 {
         return SimulationThermalCompletion::CompletedEmptyRecords;
     }
     SimulationThermalCompletion::CompletedRecords
 }
 
-fn diagnostics() -> [SimulationThermalDiagnostic; 4] {
+pub(in crate::simulation::persistence) fn diagnostics() -> [SimulationThermalDiagnostic; 4] {
     [
         SimulationThermalDiagnostic::NativeApplicationNotExecuted,
         SimulationThermalDiagnostic::RuntimeVersionNotInferred,

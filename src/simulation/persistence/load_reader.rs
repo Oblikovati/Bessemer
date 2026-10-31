@@ -20,10 +20,11 @@ impl<'a> BinaryLoadReader<'a> {
         input: &'a [u8],
         version: SimulationPersistVersion,
         limits: SimulationThermalLimits,
+        input_subject: &str,
     ) -> Result<Self> {
         if input.len() > limits.maximum_bytes {
             return Err(invalid(
-                "thermal input",
+                input_subject,
                 format!(
                     "{} bytes; expected <= {}",
                     input.len(),

@@ -7,9 +7,10 @@ pub(super) fn collection<'a>(
     bytes: &'a [u8],
     version: SimulationPersistVersion,
     limits: SimulationThermalLimits,
+    input_subject: &str,
     mut tail: impl FnMut(&mut BinaryLoadReader<'a>, &str) -> Result<()>,
 ) -> Result<(BinaryLoadReader<'a>, usize)> {
-    let mut reader = BinaryLoadReader::new(bytes, version, limits)?;
+    let mut reader = BinaryLoadReader::new(bytes, version, limits, input_subject)?;
     let count = reader.count("collection.count", 10000, 1)?;
     for index in 0..count {
         let label = format!("record{index}");
