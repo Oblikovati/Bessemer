@@ -11,11 +11,16 @@ FEATURE = Path(__file__).resolve().parent
 ROOT = FEATURE.parents[2]
 sys.path.insert(0, str(FEATURE.parent / 'simulation-binary-thermal'))
 sys.path.insert(0, str(FEATURE.parent / 'model-archives'))
+sys.path.insert(0, str(FEATURE.parent / 'simulation-inertial-loads'))
 sys.path.insert(0, str(ROOT / 'target/reference-python'))
 import pefile
 from pinned_reference_tests import FrozenSourceImports, copy_sources, record_snapshot
 from native_carriers import SOURCE, RESEARCH, digest, recover_sample, pinned_auxiliaries
 from owned_mass import owned_mass_cases
+from mass_projection import mass_projection_case
+from mass_reference import actual_mass_parser
+from mass_adversarial import mass_mutation_packet, mass_budget_packet
+from mass_history import mass_history_case, owned_mass_history
 
 
 def baseline(name: str, value: object) -> None:
@@ -24,13 +29,6 @@ def baseline(name: str, value: object) -> None:
     raw = (json.dumps(value, indent=2) + '\n').encode('utf-8')
     if '--write' in sys.argv: path.write_bytes(raw)
     assert path.read_bytes() == raw, f'{path}; expected unchanged complete reference baseline'
-
-
-def actual_mass_parser(raw: bytes, version: int) -> dict[str, object]:
-    """Use the unchanged full actual callback; e.g. actual_mass_parser(raw, 830036)."""
-    from cosworks_mass_element_layout import parse
-    from cosworks_binary_thermal_transform_audit import archive_reader
-    return cast(dict[str, object], parse(raw, version, 'MassElement', archive_reader=archive_reader))
 
 
 def case_packet(version: int, raw: bytes, parsed: dict[str, object]) -> bytes:
@@ -50,17 +48,23 @@ def native_report() -> dict[str, object]:
     return cast(dict[str, object], report)
 
 
-def verify_native_row(row: dict[str, object], streams: dict[str, bytes]) -> bytes:
+def verify_native_row(row: dict[str, object], streams: dict[str, bytes]) -> tuple[bytes, bytes, bytes, bytes]:
     """Check fresh hashes and every original retained outcome; e.g. verify_native_row(row, streams)."""
     raw = streams[cast(str, row['stream'])]
     assert len(raw) == row['bytes'] and digest(raw) == row['sha256']
     packet = bytearray()
+    projection = bytearray()
+    history = bytearray()
+    nested_history = bytearray()
     for expected in cast(list[dict[str, object]], row['attempts']):
         version = cast(int, expected['version'])
         parsed = actual_mass_parser(raw, version)
         assert dict(version=version, **parsed) == expected
         packet.extend(case_packet(version, raw, parsed))
-    return bytes(packet)
+        projection.extend(mass_projection_case(version, raw, parsed))
+        history.extend(mass_history_case(version, raw, False))
+        nested_history.extend(mass_history_case(version, raw, True))
+    return bytes(packet), bytes(projection), bytes(history), bytes(nested_history)
 
 
 def replay_native(pin: Path) -> None:
@@ -69,22 +73,38 @@ def replay_native(pin: Path) -> None:
     baseline('retained-reference.json', report)
     rows = cast(list[dict[str, object]], report['rows'])
     material = cast(list[dict[str, object]], report['undecoded_material'])
-    packet = bytearray()
+    packets = [bytearray() for _ in range(4)]
     for path in sorted({cast(str, row['path']) for row in rows}):
         streams = recover_sample(path, pin)
         for row in (row for row in rows if row['path'] == path):
-            packet.extend(verify_native_row(row, streams))
-        for row in (row for row in material if row['path'] == path):
-            raw = streams[cast(str, row['stream'])]
-            assert len(raw) == row['bytes'] and digest(raw) == row['sha256']
+            for accumulator, fragment in zip(packets, verify_native_row(row, streams), strict=True):
+                accumulator.extend(fragment)
+        verify_material_identities(material, path, streams)
     assert len(rows) == 2 and sum(cast(int, row['bytes']) for row in rows) == 2276
+    save_native_packets(packets)
+
+
+def verify_material_identities(rows: list[dict[str, object]], path: str, streams: dict[str, bytes]) -> None:
+    """Keep the separate undecoded dependency identities visible; e.g. verify_material_identities(rows, path, streams)."""
+    for row in (row for row in rows if row['path'] == path):
+        raw = streams[cast(str, row['stream'])]
+        assert len(raw) == row['bytes'] and digest(raw) == row['sha256']
+
+
+def save_native_packets(packets: list[bytearray]) -> None:
+    """Retain each complete packet under its distinct role; e.g. save_native_packets(packets)."""
+    packet = bytes(packets[0])
     (ROOT / 'target/simulation-mass-element-native.bin').write_bytes(packet)
     baseline('native-reference.json', dict(cases=2, bytes=len(packet), sha256=digest(packet), material_decoded=False))
+    save_projection(bytes(packets[1]), True)
+    for nested, packet in enumerate(packets[2:]):
+        save_history(bytes(packet), True, bool(nested))
 
 
 def replay_owned() -> None:
     """Require every complete literal body and exact selector branch; e.g. replay_owned()."""
     packet = bytearray()
+    projection = bytearray()
     cases = owned_mass_cases()
     for selector, version, raw in cases:
         parsed = actual_mass_parser(raw, version)
@@ -95,10 +115,21 @@ def replay_owned() -> None:
         assert records[0]['pair_count'] == (3 if version >= 890204 and selector == 1 else None)
         assert not any(span['label'] == 'collection.count' for span in cast(list[dict[str, object]], parsed['spans']))
         packet.extend(case_packet(version, raw, parsed))
+        projection.extend(mass_projection_case(version, raw, parsed))
     path = ROOT / 'tests/fixtures/simulation-mass-element-property/owned.bin'
     if '--write' in sys.argv: path.parent.mkdir(exist_ok=True); path.write_bytes(packet)
     assert path.read_bytes() == packet
     baseline('owned-reference.json', dict(cases=len(cases), bytes=len(packet), sha256=digest(packet)))
+    save_projection(bytes(projection), False)
+
+
+def save_projection(packet: bytes, native: bool) -> None:
+    """Retain full actual typed fields without storing native inputs in the repository; e.g. save_projection(packet, True)."""
+    name = 'native' if native else 'owned'
+    path = ROOT / 'target/simulation-mass-element-native-projection.bin' if native else ROOT / 'tests/fixtures/simulation-mass-element-property/projection.bin'
+    if native or '--write' in sys.argv: path.write_bytes(packet)
+    assert path.read_bytes() == packet
+    baseline(f'{name}-projection-reference.json', dict(cases=2 if native else 196, bytes=len(packet), sha256=digest(packet)))
 
 
 def verify_schema() -> None:
@@ -140,6 +171,34 @@ def verify_image_bindings(image: pefile.PE, report: dict[str, object]) -> None:
             assert image.get_data(int(cast(str, binding['address']), 16) - base, len(expected)) == expected
 
 
+def save_history(packet: bytes, native: bool, nested: bool) -> None:
+    """Freeze the complete edited fields and every ordered parent; e.g. save_history(packet, True, False)."""
+    suffix = 'nested-history' if nested else 'history'
+    path = ROOT / f'target/simulation-mass-element-native-{suffix}.bin' if native else ROOT / f'tests/fixtures/simulation-mass-element-property/{suffix}.bin'
+    if native or '--write' in sys.argv: path.write_bytes(packet)
+    assert path.read_bytes() == packet
+    baseline(f'{"native" if native else "owned"}-{suffix}-reference.json', dict(cases=2 if native else 196, bytes=len(packet), sha256=digest(packet)))
+
+
+def replay_owned_history() -> None:
+    """Keep full actual-source field and parent expectations for every owned context; e.g. replay_owned_history()."""
+    for nested in (False, True):
+        save_history(owned_mass_history(nested), False, nested)
+
+
+def replay_adversarial() -> None:
+    """Freeze full actual mutation acceptance and all independent budgets; e.g. replay_adversarial()."""
+    malformed, count, accepted = mass_mutation_packet()
+    budgets = mass_budget_packet()
+    for name, packet in (('malformed.bin', malformed), ('budgets.bin', budgets)):
+        path = ROOT / 'tests/fixtures/simulation-mass-element-property' / name
+        if '--write' in sys.argv: path.write_bytes(packet)
+        assert path.read_bytes() == packet
+    baseline('adversarial-reference.json', dict(cases=count, accepted=accepted,
+             malformed_bytes=len(malformed), malformed_sha256=digest(malformed),
+             budget_cases=196, budget_bytes=len(budgets), budget_sha256=digest(budgets)))
+
+
 def run() -> bool:
     """Execute complete readers only from an immutable source copy; e.g. run()."""
     from functools import partial, update_wrapper
@@ -150,7 +209,7 @@ def run() -> bool:
         sys.meta_path.insert(0, FrozenSourceImports(pin))
         sys.path.insert(0, str(pin / 'research'))
         replay = update_wrapper(partial(replay_native, pin), replay_native)
-        suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in (replay, replay_owned, verify_schema, verify_static_bindings))
+        suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in (replay, replay_owned, verify_schema, verify_static_bindings, replay_adversarial, replay_owned_history))
         result = unittest.TextTestRunner(verbosity=2).run(suite)
         readers = ('cosworks_mass_element_layout', 'cosworks_binary_thermal_transform_audit', 'cfb', 'swcontainer')
         record_snapshot(pin, hashes, result, FEATURE, readers, ())

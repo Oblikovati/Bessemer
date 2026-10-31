@@ -1,0 +1,32 @@
+{
+  "issue": 138,
+  "status": "Complete independent scalar-edited fields and outer/nested-copy history matched actual source expectations",
+  "owned_contexts": 196,
+  "native_contexts": 2,
+  "processes": 2,
+  "exports": [
+    {
+      "role": "history",
+      "bytes": 2875147,
+      "sha256": "91b9f75414a2c6bab6494ccde1d37811a4fa079921bd591cc5d493778bb0996c"
+    },
+    {
+      "role": "nested-history",
+      "bytes": 3013139,
+      "sha256": "6d0a9ba597116c06719639f070387f070f9e7caef16bbb55846591369ed2a088"
+    }
+  ],
+  "combined_bytes": 5888286,
+  "checks": [
+    "Every complete edited byte image",
+    "Every edited field path, type, physical offset and raw value",
+    "Every ordered outer relation and source/replacement parent",
+    "Every independently observed nested physical source/result handle and path",
+    "Byte-for-byte comparison of two fresh process exports and complete independent expectations"
+  ],
+  "exclusions": [
+    "Native application acceptance",
+    "Full local/platform feature gates",
+    "Complete documented schema parity"
+  ]
+}
