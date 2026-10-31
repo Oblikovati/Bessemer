@@ -1,0 +1,20 @@
+{
+  "issue": 165,
+  "code_commit": "73353ff7083915ca925df1b5b61ee8cabd62d15e",
+  "code_tree": "50a9672485317b60b23d2b8af51ff869bc022dc8",
+  "command": "cargo xtask pr",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "platform": "Windows x64",
+  "passed": 3521,
+  "failed": 0,
+  "ignored": 108,
+  "test_summaries": 266,
+  "exit_code": 0,
+  "process_reaped": true,
+  "log": "target/post-graph-full-pr-gate.log",
+  "log_sha256": "bba4911d0a10771daee6457d21e92f646142518ae13a8469358d63425e80f0f8",
+  "focused_including_native": 18,
+  "strict_reference_checks": 15,
+  "platform_integration": "Pending exact-head platform and ThreadSanitizer checks; PR #162 remains the sole open integration PR",
+  "scope": "The committed graph runtime and tests were unchanged throughout the gate. Uncommitted dialog reference work is separate and receives no Rust acceptance from this cut."
+}
