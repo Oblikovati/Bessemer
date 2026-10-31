@@ -29,7 +29,10 @@ the foundation. Rust tests also exercise truncations, all four exact/one-below
 budgets, 100,001 populated folder entries, ownership, all 15 public types'
 Send/Sync bounds and eight concurrent workers performing 32 mixed edits each.
 Native folder, writer/application, physical or geometric acceptance is not
-claimed. Local and platform gate outcomes are recorded separately.
+claimed. The [full local gate](full-gate-verification.json) passed 3,308 tests with zero
+failures and 63 ignored. All 19 focused tests, including explicit native inputs,
+and 11 strict source checks passed. Exact-head platform integration remains
+pending.
 
 Run `python -B -X utf8 docs/features/simulation-solid-children/freeze_children.py`
 for strict immutable-source replay. `--write` initializes evidence for review.
