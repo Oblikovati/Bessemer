@@ -52,7 +52,9 @@ All 5,454 targeted framing outcomes match: 240 unchanged accepted controls and
 outer/embedded budgets and rejects every proper prefix/trailing byte. Fixed
 blob/list caps have sufficient payload controls at and above each boundary.
 The [operation ledger](interop-verification.json) records full exports and scope.
-Full local and exact-head platform gates remain pending. Sheet bodies and
+The [full local gate](full-gate-verification.json) passed 3,326 tests
+with zero failures and 66 ignored. Exact-head platform integration remains
+pending. Sheet bodies and
 sibling ComponentPersistID streams are separate operations. The earlier
 [basic read ledger](basic-read-verification.json) remains retained as an initial
 checkpoint rather than complete operation acceptance.
