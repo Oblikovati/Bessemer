@@ -1,0 +1,20 @@
+{
+  "issue": 164,
+  "code_commit": "c982fa703fd9b81e97f086952d63cc37f6c8d5c8",
+  "code_tree": "717bee4c5b725ffc9e1b0dfcfa3251c8087f0d16",
+  "command": "cargo xtask pr",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "platform": "Windows x64",
+  "passed": 3506,
+  "failed": 0,
+  "ignored": 105,
+  "test_summaries": 265,
+  "exit_code": 0,
+  "process_reaped": true,
+  "log": "target/results-property-full-pr-gate.log",
+  "log_sha256": "390fe8d80f81b045fd9d31c169dca908f6e9e612a63d2f84ffe8f1118f024db0",
+  "focused_including_native": 16,
+  "strict_reference_checks": 22,
+  "platform_integration": "Pending exact-head platform and ThreadSanitizer checks; PR #162 remains the sole open integration PR",
+  "scope": "The committed Results runtime and tests were unchanged throughout the gate. Uncommitted graph reference work is separate and receives no Rust acceptance from this cut."
+}
