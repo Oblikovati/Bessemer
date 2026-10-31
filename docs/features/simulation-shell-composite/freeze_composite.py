@@ -9,7 +9,7 @@ import unittest
 
 FEATURE = Path(__file__).resolve().parent
 ROOT = FEATURE.parents[2]
-for folder in ('simulation-binary-thermal', 'model-archives', 'simulation-solid-manager', 'simulation-solid-body'):
+for folder in ('simulation-binary-thermal', 'model-archives', 'simulation-solid-manager', 'simulation-solid-body', 'simulation-component-persist-id'):
     sys.path.insert(0, str(FEATURE.parent / folder))
 sys.path.insert(0, str(ROOT / 'target/reference-python'))
 import pefile
@@ -17,6 +17,7 @@ from pinned_reference_tests import FrozenSourceImports, copy_sources, record_sna
 from native_carriers import SOURCE, RESEARCH, digest, recover_sample, pinned_auxiliaries
 from freeze_solid_manager import verify_image
 from freeze_body import verify_source_hash, verify_unimported_boundary, verify_model_bindings
+from owned_composite import owned_composite_cases, DOUBLE_BITS
 
 
 def composite_baseline(name: str, value: object) -> None:
@@ -104,6 +105,24 @@ def composite_row_packet(row: dict[str, object], streams: dict[str, bytes]) -> b
     return bytes(packet)
 
 
+def verify_composite_owned() -> None:
+    """Match independently constructed signed/bit/selector/ID expectations against the actual callback; e.g. verify_composite_owned()."""
+    outcomes: list[dict[str, object]] = []
+    for case in owned_composite_cases():
+        raw = case['raw']
+        parsed = actual_composite(raw, case['version'], case['kind'], case['wire_profile'])
+        assert parsed['success'] and parsed['end'] == len(raw) and parsed['values'] == case['values']
+        assert parsed['reconstruction_sha256'] == digest(raw)
+        assert b''.join(bytes.fromhex(cast(str, span['raw_hex'])) for span in cast(list[dict[str, object]], parsed['spans'])) == raw
+        archives = cast(list[object], parsed['archives'])
+        assert len(archives) == (2 if case['persist_present'] and case['version'] >= 840002 else 0)
+        if 'member3f8' in case['values']: assert raw[16:64] == struct.pack('<6Q', *DOUBLE_BITS)
+        outcomes.append(dict(kind=case['kind'], wire_profile=case['wire_profile'], version=case['version'],
+                        persist_present=case['persist_present'], raw_hex=raw.hex(), expected=parsed))
+    assert len(outcomes) == 270
+    composite_baseline('owned-reference.json', outcomes)
+
+
 def replay_composite_native(pin: Path) -> None:
     """Recover the complete 20-stream denominator and every failed alternative; e.g. replay_composite_native(pin)."""
     rows = cast(list[dict[str, object]], composite_report()['rows'])
@@ -141,7 +160,7 @@ def run_composite_checks(pin: Path) -> unittest.TestResult:
     import test_cosworks_embedded_body_ids
     import test_cosworks_embedded_const_surface
     replay = update_wrapper(partial(replay_composite_native, pin), replay_composite_native)
-    checks = (verify_composite_sources, verify_composite_bindings, verify_composite_historical_failure, replay, verify_unimported_boundary)
+    checks = (verify_composite_sources, verify_composite_bindings, verify_composite_historical_failure, verify_composite_owned, replay, verify_unimported_boundary)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
     for module in (test_cosworks_composite, test_cosworks_embedded_body_ids, test_cosworks_embedded_const_surface):
         suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(module))
