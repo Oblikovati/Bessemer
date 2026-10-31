@@ -5,6 +5,8 @@ mod decode;
 mod edit;
 mod groups;
 mod identity;
+mod inline;
+pub(super) use inline::read_inline;
 mod tails;
 mod types;
 

@@ -1,0 +1,75 @@
+{
+  "feature_issue": 159,
+  "behavior_profile": 1,
+  "implementation_parent": "ef62850501d6b0aa3accc85c3d854fc6911adb91",
+  "strict_reference_checks": 35,
+  "focused_rust_tests_including_native": 14,
+  "failures": 0,
+  "clippy_warnings": 0,
+  "processes_reaped": true,
+  "owned_contexts": 2284,
+  "owned_versions": 113,
+  "native_arguments": 254,
+  "native_accepted": 251,
+  "native_failed": 3,
+  "independent_exact_one_below_budget_axes": 7,
+  "independent_coverage_statistics": [
+    "base_end",
+    "subtype",
+    "layers",
+    "materials",
+    "descriptors",
+    "declared_entries",
+    "embedded_archives",
+    "embedded_fields"
+  ],
+  "public_send_sync_assertions": 18,
+  "required_context_cases": 36,
+  "all_field_noops_verified": true,
+  "foreign_stale_out_of_bounds_ids_rejected": true,
+  "mutable_input_and_caller_field_isolation_verified": true,
+  "packets": {
+    "projection": {
+      "bytes": 23548608,
+      "sha256": "601510dc4d62de690c509b3fe4b42e3505b7b48ddaaf5b82258b90b45febd08b",
+      "processes": 2,
+      "owned_cases": 2284,
+      "native_arguments": 251,
+      "exact_source_packet_match": true
+    },
+    "history": {
+      "bytes": 37483130,
+      "sha256": "b3d03b669263d1da524ce90688e4b43ecf54c5235ab4c04b0a397334d1e4d3cd",
+      "processes": 2,
+      "owned_cases": 2284,
+      "native_arguments": 251,
+      "exact_source_packet_match": true
+    }
+  },
+  "runtime_sources_sha256": {
+    "src/simulation/persistence/shell_property/archive.rs": "daefdae12adf2ba9f5a799c7d43a91f96a7bcda689d78832c96b75851ebc45a5",
+    "src/simulation/persistence/shell_property/context.rs": "8b63af1af46d4d5cea453c695901e6e784e738f76b31353052a0fed99b5f594b",
+    "src/simulation/persistence/shell_property/contracts.rs": "055dd026d99c84dd43d12f936a52ea9b7491cd18c5d1a64e3dbdfc1ad7fac2d6",
+    "src/simulation/persistence/shell_property/coverage.rs": "bb7d5faa6d257c01ca9d9b2060edb37c3383259c05785af2de5fe2c70a298714",
+    "src/simulation/persistence/shell_property/decode.rs": "2aa175b427b4bc18acaaceb5534d6460fbc3017aaae1a76e58075d9fd8341203",
+    "src/simulation/persistence/shell_property/edit.rs": "77da83cab3f76d031d56385e5a380e9198e6d043487c7f0cfed0912a8e5dd56a",
+    "src/simulation/persistence/shell_property/layers.rs": "8a72a621b34b2d9d4c9ad44df3134a3afa987a62a062804a4c2372ce9666c595",
+    "src/simulation/persistence/shell_property/mod.rs": "96383715e3b46cc4a96b54b0cb3d32d05b70ac67fe93a85039fec0574d29f83e",
+    "src/simulation/persistence/shell_property/presence.rs": "db68e27a9b9e88e7c46082eab14f9c3d3bf86d2ed8704b3dd1b55e4b2f3b2930",
+    "src/simulation/persistence/shell_property/result.rs": "007b9f164d60f4c29bc2a93e4d01f4abfdf7e78b1a00777b6c87a16ddb9b86dc",
+    "src/simulation/persistence/shell_property/types.rs": "4b4c4eb0082977bffcf8b515be78c5484d45f687e2afcd7af00de84cbd04e0b7",
+    "src/simulation/persistence/material/inline.rs": "cf97b035860f3502f5406d9b5ff87e2502ed8b0550a9419c8f787ba55de0e0a2",
+    "src/simulation/persistence/material/mod.rs": "5fea00fd319f19286f3244f1ecb095cfb20907776f4d8532cc19b553e4fcce7b",
+    "src/simulation/persistence/mod.rs": "fc317bdf8c30b779113226864e7df730ef1ddfb6fc3e7ff9356f14146f97eac3"
+  },
+  "source_snapshot_identity": "76d6b6b5f3207e3bbaaf7efa252411b12aeab3fba5a718ab3d5e4787353d07e7",
+  "native_log_sha256": "62237fb8bde7521ae11770eec95528b635c4f76efabcc14f79dd5febe9c863c7",
+  "reference_log_sha256": "b94c464b1c31eb8d5755544af7d96adbf63e288f36afe40719220d31e5cf7b32",
+  "exclusions": [
+    "Full malformed grammar corpus, fixed caps and shorter extents remain pending.",
+    "Zero-text controls, changed typed-value and additional failure-preservation cases remain pending.",
+    "Mixed concurrency, full local gate and five exact-head platform gates remain pending.",
+    "Historical shell test bytes remain unavailable; historical native outcomes are verified.",
+    "Native writer/application and geometry acceptance remain unproven."
+  ]
+}
