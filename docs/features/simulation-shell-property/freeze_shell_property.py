@@ -19,6 +19,9 @@ from shell_property_evidence import shell_baseline, shell_reports, verify_shell_
 from shell_property_bindings import verify_shell_bindings
 from owned_shell_property import owned_shell_properties
 from shell_property_packets import verify_owned_shell_packets, verify_native_shell_packets
+from shell_property_malformed import verify_shell_malformed
+from shell_property_extents import verify_shell_extents
+from shell_property_caps import verify_shell_caps, verify_shell_null_budgets
 
 
 def actual_shell_family(raw: bytes, version: int, kind: str) -> dict[str, object]:
@@ -117,7 +120,8 @@ def run_shell_property_checks(pin: Path) -> unittest.TestResult:
     import importlib
     replay = update_wrapper(partial(replay_shell_native, pin), replay_shell_native)
     native_packets = update_wrapper(partial(verify_native_shell_packets, pin), verify_native_shell_packets)
-    checks = (verify_shell_sources, verify_shell_refinement_guards, verify_shell_clauses, verify_shell_bindings, verify_owned_shell_properties, verify_shell_presence_boundaries, replay, verify_owned_shell_packets, native_packets, verify_unimported_boundary)
+    checks = (verify_shell_sources, verify_shell_refinement_guards, verify_shell_clauses, verify_shell_bindings, verify_owned_shell_properties, verify_shell_presence_boundaries, replay, verify_owned_shell_packets, native_packets,
+              verify_shell_malformed, verify_shell_caps, verify_shell_null_budgets, verify_shell_extents, verify_unimported_boundary)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
     modules = ('test_cosworks_shell_property', 'test_cosworks_material', 'test_cosworks_embedded_body_ids',
                'test_cosworks_embedded_const_surface', 'test_cosworks_base_curves', 'test_cosworks_base_virtual',

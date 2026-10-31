@@ -3,8 +3,12 @@ use bessemer::{model_archives::ModelArchiveLimits, simulation::*};
 use std::sync::Arc;
 #[path = "simulation_shell_property/budgets.rs"]
 mod budgets;
+#[path = "simulation_shell_property/concurrency.rs"]
+mod concurrency;
 #[path = "simulation_shell_property/contracts.rs"]
 mod contracts;
+#[path = "simulation_shell_property/failure_preservation.rs"]
+mod failure_preservation;
 #[path = "simulation_shell_property/history.rs"]
 mod history;
 #[path = "support/binary_load_edit_case.rs"]
@@ -21,6 +25,14 @@ mod load_mutations;
 )]
 #[path = "support/binary_load_projection.rs"]
 mod load_projection;
+#[path = "simulation_shell_property/malformed.rs"]
+mod malformed;
+#[path = "simulation_shell_property/typed_edits.rs"]
+mod typed_edits;
+#[path = "simulation_shell_property/typed_history.rs"]
+mod typed_history;
+#[path = "simulation_shell_property/typed_values.rs"]
+mod typed_values;
 use load_projection::{
     consume_expected_fields, project_field, project_packet, project_word, read_word,
     take_projection,

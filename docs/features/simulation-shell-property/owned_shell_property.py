@@ -7,13 +7,16 @@ from owned_thermal import thermal_base, mixed_texts
 from owned_material import material_literal
 
 
-class OwnedShellProperty(TypedDict):
+class ShellRawContext(TypedDict):
     kind: int
     version: int
     raw: bytes
+    layer_presence: list[bool] | None
+
+
+class OwnedShellProperty(ShellRawContext):
     base_end: int
     subtype: int
-    layer_presence: list[bool] | None
     inline_materials: list[bytes]
 
 
