@@ -1,0 +1,190 @@
+{
+  "issue": 133,
+  "behavior_profile": "simulation-parameter-sets-v1",
+  "base_revision": "1770eb28095d46e0d35987225e33265de0c05c01",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "gate": "cargo xtask pr",
+  "gate_exit": 0,
+  "gate_log_sha256": "6fbf2c9a828b0209e16381c65c955c61b4a346c51aeb863990e9b4104aea6d19",
+  "passed": 3130,
+  "failed": 0,
+  "ignored": 30,
+  "test_summaries": 240,
+  "focused_tests_with_native_export_passed": 15,
+  "private_checked_extent_and_count_tests_passed": 2,
+  "prior_manager_compatibility_tests_with_native_export_passed": 10,
+  "prior_manager_complete_projection_bytes_unchanged": 5257724,
+  "source_reference_checks_passed": 7,
+  "corpus": {
+    "owned_cases": 14531,
+    "native_cases": 3255,
+    "owned_bytes": 600410109,
+    "native_bytes": 141702910,
+    "owned_sha256": "4d51e5006180f753d7a9acdf4e9f2d8c9b1e98b0fea6abfa8cb88bf52dfd34a5",
+    "native_sha256": "12c35573acedf0d7a03c4ad02179935ff752323867e816df0d24a4da1191ad8b",
+    "native_inputs_committed": false,
+    "large_array_edits": "All fields retained; table/value edits probed at indices 0, 1, 9998, 9999, 10000 and last where present"
+  },
+  "projection": {
+    "bytes": 742113027,
+    "sha256": "65d3ba20da1fd136864cb9f119e3ade3295bc279df360ac1f4eaa9b5cd681db6"
+  },
+  "owned_contexts": {
+    "accepted_reads": 80,
+    "accepted_edits_and_noops": 14064,
+    "rejected_reads": 251,
+    "rejected_structural_edits": 136
+  },
+  "native_contexts": {
+    "accepted_reads": 8,
+    "accepted_edits_and_noops": 3200,
+    "rejected_reads": 35,
+    "rejected_structural_edits": 12
+  },
+  "native_carriers": 5,
+  "retained_candidate_contexts": 43,
+  "accepted_original_candidate_contexts": 8,
+  "rejected_original_candidate_contexts": 35,
+  "matching_stored_version_streams": 4,
+  "matching_stored_version_bytes": 5468,
+  "incompatible_basic_study_bytes": 2944,
+  "incompatible_retained_versions": [
+    700021,
+    890116
+  ],
+  "all_accepted_inputs_reconstructed_through_complete_constructor": true,
+  "every_typed_primitive_text_role_offset_pattern_and_coverage_compared": true,
+  "every_ordered_original_result_history_parent_and_relation_compared": true,
+  "legacy_header_word_zero_retained_independently_of_fixed_table": true,
+  "structural_count_changes_require_complete_matching_reconstruction": true,
+  "wrong_kind_and_foreign_id_failures_are_typed_and_preserve_inputs": true,
+  "raw_nan_infinity_signed_zero_and_subnormal_patterns_preserved": true,
+  "complete_arrays_of_10000_and_10001_items_and_last_fields_verified": true,
+  "large_array_edit_scope": "Every field/byte/history retained; edits probe indices 0, 1, 9998, 9999, 10000 and last where present, plus all non-array fields. Every field edited on smaller fixtures.",
+  "authentic_noops_retain_revision_and_field_ids": true,
+  "independent_complete_replacement_text_parents_retained": true,
+  "caller_drop_returned_parts_fields_and_buffer_isolation_verified": true,
+  "public_types_send_sync_asserted": 18,
+  "eight_threads_repeat_complete_edits_and_all_relations": true,
+  "two_fresh_processes_ran_all_fifteen_tests": true,
+  "complete_fresh_and_before_after_harness_outputs_compared_byte_for_byte": true,
+  "harness_measurements": {
+    "scope": "All fifteen tests including full owned/native export; same cases, fields, history and complete byte images. Host workload not isolated; sampled working sets are lower bounds, not statistical performance claims.",
+    "before": [
+      {
+        "run": 1,
+        "observed_peak_working_set_bytes": 3216531456,
+        "projection_sha256": "65d3ba20da1fd136864cb9f119e3ade3295bc279df360ac1f4eaa9b5cd681db6",
+        "seconds": 8.5212729,
+        "all_fifteen_tests_with_native_export": true,
+        "exe_sha256": "1081b993310a923d3ae3974b52a2ca2e627ac58f233e0eac2326b9a667f3a6f7"
+      },
+      {
+        "run": 2,
+        "observed_peak_working_set_bytes": 3240800256,
+        "projection_sha256": "65d3ba20da1fd136864cb9f119e3ade3295bc279df360ac1f4eaa9b5cd681db6",
+        "seconds": 8.4913858,
+        "all_fifteen_tests_with_native_export": true,
+        "exe_sha256": "1081b993310a923d3ae3974b52a2ca2e627ac58f233e0eac2326b9a667f3a6f7"
+      }
+    ],
+    "after": [
+      {
+        "projection_sha256": "65d3ba20da1fd136864cb9f119e3ade3295bc279df360ac1f4eaa9b5cd681db6",
+        "all_fifteen_tests_with_native_export": true,
+        "seconds": 7.2811702,
+        "run": 1,
+        "exe_sha256": "6f43bb406e7d6121df8f0906a9257cb81fdd2893c67d678c33fc0cc7acf8a26e",
+        "observed_peak_working_set_bytes": 302268416
+      },
+      {
+        "projection_sha256": "65d3ba20da1fd136864cb9f119e3ade3295bc279df360ac1f4eaa9b5cd681db6",
+        "all_fifteen_tests_with_native_export": true,
+        "seconds": 7.3139628,
+        "run": 2,
+        "exe_sha256": "6f43bb406e7d6121df8f0906a9257cb81fdd2893c67d678c33fc0cc7acf8a26e",
+        "observed_peak_working_set_bytes": 302133248
+      }
+    ],
+    "complete_export_bytes": 742113027,
+    "complete_export_sha256": "65d3ba20da1fd136864cb9f119e3ade3295bc279df360ac1f4eaa9b5cd681db6",
+    "complete_byte_comparison_passed": true,
+    "production_library_code_changed": false
+  },
+  "lossless_fixture_storage": {
+    "format": "PADX-v2 with zlib and explicit complete expanded size",
+    "complete_expected_bytes_preserved": true,
+    "expanded_bytes": 600410109,
+    "expanded_sha256": "4d51e5006180f753d7a9acdf4e9f2d8c9b1e98b0fea6abfa8cb88bf52dfd34a5",
+    "original_zlib_bytes": 92446371,
+    "packed_zlib_bytes": 8298097,
+    "packed_sha256": "7298df314c79a454fc3720455af3e3e3eee2b284e59536851eac8ee26e9536e8",
+    "cases_fields_and_history_unchanged": true,
+    "initial_packed_zlib_bytes": 8298083
+  },
+  "exact_indexed_packet_sha256": {
+    "docs/features/simulation-parameter-sets/README.md": "d8f30277e778b0de3f35bb95c96eaa24fdd29a52f1122025fd19143a9739f21c",
+    "docs/features/simulation-parameter-sets/corpus-reference.json": "ee9df67e543147430afa602ac9209d8268d25b2671ff1108d25e23d9c5ed58ee",
+    "docs/features/simulation-parameter-sets/decoder-validation-reference.json": "f74ffedb994f1341aad7177f2309444322b50fe202f95cb6932f3f47e4ba5e38",
+    "docs/features/simulation-parameter-sets/fixture-storage-reference.json": "61710607f11cd2186b6a56257bc0b28ec89c9e2b22a008a93c4ea080e8577827",
+    "docs/features/simulation-parameter-sets/fixture_storage.py": "8e23965391f17766080a081b18ef4ec7f72080b0b52b89b5d321483e65db7c68",
+    "docs/features/simulation-parameter-sets/freeze_parameters.py": "76ee3bd83cf52b12bf42db3df4f82df2e1ec9b3249e5b2631f3f950cbba9aa78",
+    "docs/features/simulation-parameter-sets/harness-observations.json": "0b8c87e04d0d6fcaac2bec74fa785ca54f1c3e0f719b5059bf4920cf2ce0b2c9",
+    "docs/features/simulation-parameter-sets/literal_parameters.py": "a39fb00e1b7d871c51fb8c4ab82ecc17b19ff8fa722ab71d3f00400cda199882",
+    "docs/features/simulation-parameter-sets/native-reference.json": "5dd259f6ad255fc0910aa7b6be5e27a1279a76286082a92730029ba997b0a63e",
+    "docs/features/simulation-parameter-sets/native-source-reference.json": "0bd31fb191d81955d50d8386df50ec149861109a97f0bd890d1912db50c56b1d",
+    "docs/features/simulation-parameter-sets/parameter_cases.py": "f899ac4f911473196c73ea555075b4855cd49e67e32e46f3926d68ca0e6a1f55",
+    "docs/features/simulation-parameter-sets/parameter_fields.py": "1410bc006c583e395dd551b84c76722929f67a636d10a7cb99100b17f85590e1",
+    "docs/features/simulation-parameter-sets/parameter_projection.py": "2614b3b4f2b26387b5c093360bd5e2205df4a42e4340b4452baf30dd52aa5ced",
+    "docs/features/simulation-parameter-sets/rust-projection-reference.json": "20fdcb330d201d978ba6bc1fe5dd66a7567a12cfe317064b79701cf488266ad9",
+    "docs/features/simulation-parameter-sets/schema-reference.json": "cf5f8e828ba69f442e0fd453820db0188be370337788bcec7d389fa49301484a",
+    "docs/features/simulation-parameter-sets/schema-snapshot.md": "09acba7efa7df12196e9641e7ac8d60131db73f8460c3d0eac6a9d9ecf4cfae9",
+    "docs/features/simulation-parameter-sets/source-snapshot.json": "0454b7aa7387c1a86db3e81e96715bcc02dee0bef3c1068dfbf7a53be3aff0df",
+    "src/simulation/persistence/mod.rs": "3b48b4ae7c5d286d89fc6cecc4ba133e745e2adf1e7b9b02253edea6b43c314b",
+    "src/simulation/persistence/parameter_sets/construction.rs": "0c4ae6127325d8b72c16b379f06273713a7c954c1e09a5013d7be08169c63447",
+    "src/simulation/persistence/parameter_sets/decode.rs": "bddae8411aab2a30e0958d2e0bfceb0be08eeac16e0c07de14461691ddfb6839",
+    "src/simulation/persistence/parameter_sets/edit.rs": "eb5e0102f65f7bf6b8196ba24724423c84a7795de88db639339fed43f0e48516",
+    "src/simulation/persistence/parameter_sets/encode.rs": "535070c3e70b0ee225f83142dbcbdd3af4428fa45a2a2ab243f4b1699e1446cd",
+    "src/simulation/persistence/parameter_sets/layout.rs": "74b67dd6b96d8acd4478e7113074dc298004505c7fe3d02b91ba971d53314bc7",
+    "src/simulation/persistence/parameter_sets/mod.rs": "244daa75693eea4bef54d8dbecaab69e1fb957c079933ba96095af90c602ab49",
+    "src/simulation/persistence/parameter_sets/parts.rs": "6a78b1ddb5086b517a6139465089f7ee29d1af96f117b1ca98a55e3be6b75050",
+    "src/simulation/persistence/parameter_sets/types.rs": "d8ff47ca7b155401be513ede9bd6b97d1e7002c731ac5a753a617e34b6cc1895",
+    "tests/fixtures/simulation-parameter-sets/owned.bin": "7298df314c79a454fc3720455af3e3e3eee2b284e59536851eac8ee26e9536e8",
+    "tests/simulation_parameter_sets.rs": "7c7828529ae59fe7478a3644b6e5bc8acd6c82ca2f3e37b3f3750909fd971dc6",
+    "tests/simulation_parameter_sets/corpus.rs": "a0a712851da6234d7918dc6425d681ed1e47a9aa066f3907209da471a6ff0291",
+    "tests/simulation_parameter_sets/fixture_storage.rs": "49cc18a5927325eb081a06caed2b18f511c7b85d41ef24dc31a267ba54863ef4",
+    "tests/simulation_parameter_sets/projections.rs": "49c60564367f0a4428d995fd133fd59b7db24ded79c37fc209dc0931626eda77",
+    "tests/simulation_parameter_sets/support.rs": "8059999da3ef162882d90f0fc47e4891568c6829ba9a570984085ba368f39753"
+  },
+  "reference_snapshot_identity": "39f7e672157134bbc4b0f4830e514efc809295736c854aae9b45ee512fac2d7c",
+  "actual_reader_sha256": "5135ef755b445443c2482eaa5aacb81926b5b26ab378d297ea6603875ac18b0e",
+  "native_inventory_sha256": {
+    "cosworks-parameter-layout-native-evidence.json": "976a734c63ab40b2391bd0a7fdb6d2a0d7677b7ff56cf49872f5531607c9e008",
+    "cosworks-parameter-decoder-validation.json": "6c810aa016d66f41150248a17e62546717026753d99e886e8a4359e0bd5a46b4"
+  },
+  "verification_dependency_sha256": {
+    ".gitattributes": "1b696e993472e323e2066634ceb50cb41ef5abd2c48a54e5b2de87782f161426",
+    "src/archive_codec/cursor.rs": "e633d19c6a04434ffb5f3ee9da8d1e2ce0940198b5b976116fc54ffb82e1b592",
+    "src/archive_codec/revision.rs": "59ad9f96b7f34ae1c5658f39daf533582d572bdb0603a5099013156c7c37dc48",
+    "src/error.rs": "4a10ca63c2ea2cfcb30d65b72f242dc7b8feafdd2f715e06adfbe2335a1b0a47",
+    "src/records.rs": "2728e4b6b3fe90f9ed0ece6ebf3b99664ecdf0ba4691ee93d11b5710b62f01a3",
+    "src/simulation/persistence/text.rs": "a92668d28a282372bab462acd0a4ca5536fdd9235e842953b1350bffbe3010e2",
+    "src/simulation/persistence/version.rs": "61b4b7827b287fa34de598fde4553709e8a84087d210ef3265af31180353aad1",
+    "tests/common/simulation_images.rs": "7089399bf3c684254e38a2d4b646317ea2e113a30cf54231c4c9dbc2536f0eef",
+    "docs/features/cosworks-persistence/owned_persistence.py": "5664f4393fc7abcbc22a3453eac07356e36b7ba95a6a2e34190e71af7de5c44d",
+    "docs/features/model-archives/pinned_reference_tests.py": "6f95547f7dee070b1b8fe50cefaaea9a45721789636add2e67a919e42169b36e"
+  },
+  "native_payloads_committed": false,
+  "acceptance_exclusions": [
+    "Native version dispatch and per-study/storage-name binding",
+    "BasicStudy fallback or guessed historical grammars",
+    "Runtime retention clamping and assigned field/domain meanings",
+    "Current native writer global/version equivalence or application read/save acceptance",
+    "ResultLocations and nested persistent-ID/object archives",
+    "Geometry/kernel validation",
+    "ThreadSanitizer on this Windows host; required Linux CI remains separate"
+  ],
+  "humanizer": "Unavailable; prose pass left for review",
+  "dependencies_added": false
+}

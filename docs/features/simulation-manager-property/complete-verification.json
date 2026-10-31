@@ -1,0 +1,129 @@
+{
+  "issue": 131,
+  "behavior_profile": "simulation-manager-property-v1",
+  "base_revision": "3d54652d4371cbf8545eee734d0e3c397703a276",
+  "gate_started_base_revision": "9a95d6bdd34e9ff361f1d60612228f7ae644fdba",
+  "metadata_integration_preserved_complete_working_index_and_tree": true,
+  "integration_record_sha256": "11d81b5b5fefe29e00ad8637f194c2cd27549f3b274ccf5af773e6ca3d6395f8",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "gate": "cargo xtask pr",
+  "gate_exit": 0,
+  "gate_log_sha256": "caa2d712baa03fe43d6db0e45d199022600a933a2a87220f764db564504a729c",
+  "passed": 3114,
+  "failed": 0,
+  "ignored": 29,
+  "test_summaries": 239,
+  "focused_tests_with_native_export_passed": 10,
+  "prior_lbc_compatibility_tests_with_native_export_passed": 17,
+  "prior_lbc_complete_projection_bytes_unchanged": 6599636,
+  "source_reference_checks_passed": 6,
+  "corpus": {
+    "owned_cases": 8553,
+    "native_cases": 7928,
+    "owned_bytes": 2736036,
+    "native_bytes": 2521680,
+    "owned_sha256": "eadf4df871f9e65029959ce418ee107b842a0f1661a0e4e6707bd6eb1aa169c1",
+    "native_sha256": "24dfa3d3bfcd07fa81941ff3a152c87b457cb0a4cc5cb5a005943e784fb2ac38",
+    "native_inputs_committed": false
+  },
+  "projection": {
+    "bytes": 5257724,
+    "sha256": "71219abbff9d17b2d50ce00f963c7a3d3347d2471a6a5280b41208f62f95957c"
+  },
+  "owned_contexts": {
+    "accepted_reads": 485,
+    "accepted_edits_and_noops": 7860,
+    "rejected_reads": 208
+  },
+  "native_contexts": {
+    "accepted_reads": 518,
+    "accepted_edits_and_noops": 7380,
+    "rejected_reads": 30
+  },
+  "native_beam_headers": 353,
+  "native_beam_bytes": 4228,
+  "native_mass_headers": 161,
+  "native_mass_bytes": 644,
+  "native_candidate_contexts": 548,
+  "native_rejected_beam_contexts": 30,
+  "native_four_byte_beam_headers": 0,
+  "explicit_kind_and_version_never_inferred_from_size": true,
+  "mass_optional_version_context_retained_without_a_gate": true,
+  "all_accepted_images_reconstructed_exactly": true,
+  "full_field_physical_and_runtime_offsets_and_signed_patterns_compared": true,
+  "every_ordered_parent_result_history_relation_and_coverage_compared": true,
+  "authentic_noops_retain_revision_and_field_ids": true,
+  "typed_rejections_leave_sources_unchanged": true,
+  "caller_drop_returned_field_and_buffer_isolation_verified": true,
+  "public_types_send_sync_asserted": 13,
+  "eight_threads_repeat_complete_edits_and_all_relations": true,
+  "two_fresh_processes_ran_all_ten_tests": true,
+  "complete_fresh_outputs_compared_byte_for_byte": true,
+  "fresh_process_observations": [
+    {
+      "seconds": 0.1326581,
+      "observed_peak_working_set_bytes": 15323136,
+      "projection_sha256": "71219abbff9d17b2d50ce00f963c7a3d3347d2471a6a5280b41208f62f95957c",
+      "run": 1,
+      "exe_sha256": "ab7edd48c10c938dc3fe597df36c41314dcfb5b280168fd0d37b3ebfc27712f3",
+      "all_ten_tests_with_native_export": true
+    },
+    {
+      "seconds": 0.0982449,
+      "observed_peak_working_set_bytes": 17055744,
+      "projection_sha256": "71219abbff9d17b2d50ce00f963c7a3d3347d2471a6a5280b41208f62f95957c",
+      "run": 2,
+      "exe_sha256": "ab7edd48c10c938dc3fe597df36c41314dcfb5b280168fd0d37b3ebfc27712f3",
+      "all_ten_tests_with_native_export": true
+    }
+  ],
+  "observation_scope": "All ten focused tests including complete owned/native export, before the full local gate. Elapsed includes process startup; host workload was not isolated. Sampled working sets are lower bounds and may miss peaks. First implementation; no previous published baseline or statistical speed claim.",
+  "exact_indexed_packet_sha256": {
+    "docs/features/simulation-manager-property/README.md": "d471224e04945fadb32b834e627fed58a2fdfdd57937238435ef76a307d545eb",
+    "docs/features/simulation-manager-property/corpus-reference.json": "b0a9f443db5c88dd62e6ba639dd88abe16c30cc2c7e38759d0178268708007ff",
+    "docs/features/simulation-manager-property/freeze_manager_property.py": "62b60fe21f6a9ef5fdcf311f988d9a83f934ce41e4569259068f705f9da8e7d7",
+    "docs/features/simulation-manager-property/manager_cases.py": "f24077b148dc89efbb592ca68247fa5735db0db084b828dc7052727c3d953350",
+    "docs/features/simulation-manager-property/native-reference.json": "7e48fe5075f53463e2239b2622251691ee28a6bd168f50282b3680f4deb6da39",
+    "docs/features/simulation-manager-property/native-source-reference.json": "9cf1aa5750215b11ee8b35c031d43a99e3294b82777b5f1b625ff0b5dccdef6c",
+    "docs/features/simulation-manager-property/rust-projection-reference.json": "f98b713a5a48e095032a0985da1bd9bbdac17dd6d8c5ebdbf5cdab8cbf9d72c9",
+    "docs/features/simulation-manager-property/schema-reference.json": "37ea6d1ccbf0ea35878b559751c0eb820cc515b17a610edadf09b12b738b0972",
+    "docs/features/simulation-manager-property/schema-snapshot.md": "de1c5c41f6af19ff7d99979e5a5baf1da8b21223bb888b9129a1593a27524f1e",
+    "docs/features/simulation-manager-property/source-snapshot.json": "a11ef6f0b6d6e206560524b40bd58c3b626c24b36ddf5890d9ce2dd27a3fd81b",
+    "src/simulation/persistence/manager_property/edit.rs": "806fbfb3bdffdad8c71986cec00d456bb8bb052b726a44262c3fb61bd482242f",
+    "src/simulation/persistence/manager_property/mod.rs": "6ab4e105d8f6ea2fb700d80d3f5a90fd80ca597e727ae1211b14766f1c2a04a8",
+    "src/simulation/persistence/manager_property/profile.rs": "0b79ac50ce93148e7bce0a9d5cb7abb832e382154a20ac3e52bb3026e8926f15",
+    "src/simulation/persistence/manager_property/types.rs": "b08d462e0c27666c8ef4b31c5d483c3e51132670c673da2892a074851511b7ff",
+    "src/simulation/persistence/mod.rs": "0eaa539348b8df54567da394106f6c58673ce3867299acef0bb6f1067dea13ec",
+    "tests/fixtures/simulation-manager-property/owned.bin": "8a2e48518cb6db5e805f49b44dd93f9d37815f5f3f55df584abed08558680bdc",
+    "tests/simulation_manager_property.rs": "b18367fd08eab15fc7fa750d4f8528caa7dc46b7e534e795d7446a2703a249a6",
+    "tests/simulation_manager_property/corpus.rs": "82d200d414649f49df0c34c633630d129d34b00010ea9d10ef269da0df0214f7"
+  },
+  "reference_snapshot_identity": "44ee611c8580626650acdb711d4c54dde867748c8099ea20991cf79d18973956",
+  "actual_reader_sha256": "5135ef755b445443c2482eaa5aacb81926b5b26ab378d297ea6603875ac18b0e",
+  "native_inventory_sha256": {
+    "filename": "cosworks-manager-property-native-evidence.json",
+    "sha256": "cc8d25b6785db79fa00d585a53ec9cb0edf65968057cee2cc8885ac5e22f71c1"
+  },
+  "verification_dependency_sha256": {
+    ".gitattributes": "3504f5ad1323dc2819a747290e5f4c79905dff80d9f7021e55dd7cf2afa88ff6",
+    "src/archive_codec/revision.rs": "59ad9f96b7f34ae1c5658f39daf533582d572bdb0603a5099013156c7c37dc48",
+    "src/error.rs": "4a10ca63c2ea2cfcb30d65b72f242dc7b8feafdd2f715e06adfbe2335a1b0a47",
+    "src/records.rs": "2728e4b6b3fe90f9ed0ece6ebf3b99664ecdf0ba4691ee93d11b5710b62f01a3",
+    "src/simulation/persistence/version.rs": "61b4b7827b287fa34de598fde4553709e8a84087d210ef3265af31180353aad1",
+    "tests/common/simulation_images.rs": "7089399bf3c684254e38a2d4b646317ea2e113a30cf54231c4c9dbc2536f0eef",
+    "docs/features/cosworks-persistence/owned_persistence.py": "5664f4393fc7abcbc22a3453eac07356e36b7ba95a6a2e34190e71af7de5c44d",
+    "docs/features/model-archives/pinned_reference_tests.py": "6f95547f7dee070b1b8fe50cefaaea9a45721789636add2e67a919e42169b36e"
+  },
+  "native_payloads_committed": false,
+  "acceptance_exclusions": [
+    "Nested BeamFolders, Beams, JointGroups and MassElements",
+    "Child object/material schemas and object-count inference",
+    "Native version dispatch and folder enumeration",
+    "Fresh document extraction, CFB integration and native application read/save acceptance",
+    "Geometry/kernel validation and assigned physical field meanings",
+    "ThreadSanitizer on this Windows host; required Linux CI remains separate"
+  ],
+  "humanizer": "Unavailable; prose pass left for review",
+  "dependencies_added": false
+}
