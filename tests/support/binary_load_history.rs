@@ -3,8 +3,8 @@ use super::load_projection::{consume_expected_fields, project_field, project_wor
 use bessemer::model_archives::SimulationEmbeddedArchive;
 use bessemer::simulation::{
     SimulationThermalField, SimulationThermalFieldId, SimulationThermalHistory,
-    SimulationThermalHistoryParent, SimulationThermalNestedHistory, SimulationThermalNestedParent,
-    SimulationThermalRelation, SimulationThermalValue,
+    SimulationThermalNestedHistory, SimulationThermalNestedParent, SimulationThermalRelation,
+    SimulationThermalValue,
 };
 
 pub(super) struct LoadHistorySnapshot<'a> {
@@ -56,42 +56,13 @@ fn project_oracle<K>(
     }
 }
 
-fn relation_tag(relation: SimulationThermalRelation) -> usize {
-    match relation {
-        SimulationThermalRelation::Copied => 0,
-        SimulationThermalRelation::Derived => 1,
-        SimulationThermalRelation::Created => 2,
-        SimulationThermalRelation::Deleted => 3,
-    }
-}
-
-fn project_parents(
-    output: &mut Vec<u8>,
-    source: &LoadHistorySnapshot<'_>,
-    parents: &[SimulationThermalHistoryParent],
-) {
-    for parent in parents {
-        let (tag, ordinal) = match parent {
-            SimulationThermalHistoryParent::Source(id) => {
-                assert_eq!(*id, source.ids[id.ordinal()]);
-                (0, id.ordinal())
-            }
-            SimulationThermalHistoryParent::Replacement => (1, u32::MAX as usize),
-        };
-        project_word(output, tag);
-        project_word(output, ordinal);
-    }
-}
-
 fn project_outer(output: &mut Vec<u8>, view: &LoadHistoryView<'_>) {
-    project_word(output, view.outer.len());
-    for row in view.outer {
-        assert_eq!(row.result, view.result.ids[row.result.ordinal()]);
-        project_word(output, row.result.ordinal());
-        project_word(output, relation_tag(row.relation));
-        project_word(output, row.parents.len());
-        project_parents(output, &view.source, &row.parents);
-    }
+    super::load_projection::project_outer_history(
+        output,
+        view.outer,
+        &view.source.ids,
+        &view.result.ids,
+    );
 }
 
 fn consume_history(cursor: &mut &[u8]) {

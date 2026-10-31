@@ -8,13 +8,13 @@ from thermal_projection import FieldShape, projected_fields, span_shape
 from thermal_edit_oracle import scalar_edit_case, thermal_parser
 
 
-def outer_history(fields: list[bytes], changed: bool) -> bytes:
+def outer_history(fields: list[bytes], changed: bool, requested_path: str = 'record0.base.integer') -> bytes:
     """Keep every source and replacement parent in physical order; e.g. outer_history(fields, True)."""
     rows = bytearray(struct.pack('<I', len(fields)))
     for index, field in enumerate(fields):
         length = struct.unpack_from('<I', field)[0]
         path = field[4:4 + length].decode('utf-8')
-        derived = changed and path == 'record0.base.integer'
+        derived = changed and path == requested_path
         rows.extend(struct.pack('<IIIII', index, int(derived), 2 if derived else 1, 0, index))
         if derived: rows.extend(struct.pack('<II', 1, 0xffffffff))
     return bytes(rows)
