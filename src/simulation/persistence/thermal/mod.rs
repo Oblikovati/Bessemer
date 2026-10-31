@@ -1,11 +1,10 @@
 //! Complete binary LBC thermal framing with independent outer and embedded version contexts (#134).
 mod archive;
-mod base;
+use super::load_base as base;
 mod contracts;
 mod coverage;
 mod edit;
 mod history;
-mod reader;
 mod result;
 mod tails;
 mod values;

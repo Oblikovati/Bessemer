@@ -1,28 +1,24 @@
-use super::{
-    SimulationThermalField, SimulationThermalKind, SimulationThermalLimits, SimulationThermalValue,
-};
+use super::thermal::{SimulationThermalField, SimulationThermalLimits, SimulationThermalValue};
 use crate::Result;
 use crate::archive_codec::ArchiveCursor;
 use crate::model_archives::{SimulationEmbeddedArchive, SimulationEmbeddedProfile};
 use crate::simulation::{SimulationPersistText, SimulationPersistVersion, invalid};
 use std::sync::Arc;
 
-pub(super) struct ThermalReader<'a> {
+pub(super) struct BinaryLoadReader<'a> {
     cursor: ArchiveCursor<'a>,
     pub bytes: Arc<[u8]>,
     pub version: i32,
-    pub kind: SimulationThermalKind,
     pub limits: SimulationThermalLimits,
     pub fields: Vec<SimulationThermalField>,
     pub offsets: Vec<(usize, usize)>,
     entries: usize,
 }
 
-impl<'a> ThermalReader<'a> {
+impl<'a> BinaryLoadReader<'a> {
     pub fn new(
         input: &'a [u8],
         version: SimulationPersistVersion,
-        kind: SimulationThermalKind,
         limits: SimulationThermalLimits,
     ) -> Result<Self> {
         if input.len() > limits.maximum_bytes {
@@ -39,7 +35,6 @@ impl<'a> ThermalReader<'a> {
             cursor: ArchiveCursor::new(input),
             bytes: input.into(),
             version: version.value(),
-            kind,
             limits,
             fields: Vec::new(),
             offsets: Vec::new(),

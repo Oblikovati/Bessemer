@@ -1,7 +1,26 @@
-use super::reader::ThermalReader;
+use super::load_reader::BinaryLoadReader;
+use super::thermal::SimulationThermalLimits;
+use crate::simulation::SimulationPersistVersion;
 use crate::{Result, simulation::invalid};
 
-pub(super) fn record(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
+pub(super) fn collection<'a>(
+    bytes: &'a [u8],
+    version: SimulationPersistVersion,
+    limits: SimulationThermalLimits,
+    mut tail: impl FnMut(&mut BinaryLoadReader<'a>, &str) -> Result<()>,
+) -> Result<(BinaryLoadReader<'a>, usize)> {
+    let mut reader = BinaryLoadReader::new(bytes, version, limits)?;
+    let count = reader.count("collection.count", 10000, 1)?;
+    for index in 0..count {
+        let label = format!("record{index}");
+        record(&mut reader, &label)?;
+        tail(&mut reader, &label)?;
+    }
+    reader.finish()?;
+    Ok((reader, count))
+}
+
+pub(super) fn record(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
     references(reader, label)?;
     reader.signed(&format!("{label}.base.integer"))?;
     reader.texts(&format!("{label}.base.text"), 4)?;
@@ -20,7 +39,7 @@ pub(super) fn record(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> 
     late_base(reader, label)
 }
 
-fn scalar_block(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
+fn scalar_block(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
     let prefix = format!("{label}.base.scalar_block");
     reader.double(&format!("{prefix}.f8"))?;
     reader.signed(&format!("{prefix}.ec"))?;
@@ -29,7 +48,7 @@ fn scalar_block(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
     reader.words(&format!("{prefix}.words"), 3)
 }
 
-fn references(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
+fn references(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
     let count = reader.count(&format!("{label}.references.count"), 10000, 1)?;
     for index in 0..count {
         reference(reader, &format!("{label}.reference{index}"))?;
@@ -37,7 +56,7 @@ fn references(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
     reader.words(&format!("{label}.references.tail"), 2)
 }
 
-fn reference(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
+fn reference(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
     if reader.version < 840002 {
         reader.words(&format!("{label}.legacy_header"), 7)?;
         reader.text(&format!("{label}.legacy_name"))?;
@@ -60,13 +79,13 @@ fn reference(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
     Ok(())
 }
 
-fn reference_blob(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
+fn reference_blob(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
     let declared = reader.signed(&format!("{label}.blob_count"))?;
     let count = reader.available_count(declared, label, 1000000, 1)?;
     reader.blob(&format!("{label}.blob"), count)
 }
 
-pub(super) fn optional_slot(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
+pub(super) fn optional_slot(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
     reader.signed(&format!("{label}.integer"))?;
     if reader.signed(&format!("{label}.present"))? != 0 {
         optional_body(reader, label)?;
@@ -74,7 +93,7 @@ pub(super) fn optional_slot(reader: &mut ThermalReader<'_>, label: &str) -> Resu
     Ok(())
 }
 
-fn optional_body(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
+fn optional_body(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
     reader.text(&format!("{label}.name"))?;
     reader.signed(&format!("{label}.header[0]"))?;
     let selector = reader.signed(&format!("{label}.header[1]"))?;
@@ -90,7 +109,7 @@ fn optional_body(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
     reader.doubles(&format!("{label}.pairs"), count * 2)
 }
 
-fn gated_words(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
+fn gated_words(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
     for (enabled, suffix) in [
         (reader.version > 800002, "ac"),
         (reader.version > 800037, "48"),
@@ -103,7 +122,7 @@ fn gated_words(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
     Ok(())
 }
 
-fn late_base(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
+fn late_base(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
     if reader.version <= 810001 {
         return Ok(());
     }
@@ -121,7 +140,7 @@ fn late_base(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
     late_texts(reader, label)
 }
 
-fn late_texts(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
+fn late_texts(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
     reader.words(&format!("{label}.base.three_integers"), 3)?;
     reader.text(&format!("{label}.base.158"))?;
     reader.text(&format!("{label}.base.160"))?;
@@ -131,7 +150,7 @@ fn late_texts(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
     Ok(())
 }
 
-fn terminal_table(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
+fn terminal_table(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
     let mode = reader.signed(&format!("{label}.table.mode"))?;
     if !(-100..=100).contains(&mode) {
         return Err(invalid(

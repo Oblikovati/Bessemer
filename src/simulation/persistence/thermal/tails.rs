@@ -1,16 +1,23 @@
-use super::{SimulationThermalKind, base, reader::ThermalReader};
+use super::super::load_reader::BinaryLoadReader;
+use super::{SimulationThermalKind, base};
 use crate::Result;
 
-pub(super) fn read(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
-    match reader.kind {
+pub(super) fn read(
+    reader: &mut BinaryLoadReader<'_>,
+    label: &str,
+    kind: SimulationThermalKind,
+) -> Result<()> {
+    match kind {
         SimulationThermalKind::Temperature => temperature(reader, label),
         SimulationThermalKind::Convection => convection(reader, label),
-        SimulationThermalKind::HeatFlux | SimulationThermalKind::HeatPower => heat(reader, label),
+        SimulationThermalKind::HeatFlux | SimulationThermalKind::HeatPower => {
+            heat(reader, label, kind == SimulationThermalKind::HeatPower)
+        }
         SimulationThermalKind::Radiation => radiation(reader, label),
     }
 }
 
-fn temperature(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
+fn temperature(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
     reader.words(&format!("{label}.thermal.words"), 2)?;
     reader.double(&format!("{label}.thermal.double"))?;
     reader.text(&format!("{label}.thermal.text"))?;
@@ -21,7 +28,7 @@ fn temperature(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
     Ok(())
 }
 
-fn convection(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
+fn convection(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
     reader.words(&format!("{label}.thermal.words"), 2)?;
     reader.doubles(&format!("{label}.thermal.doubles"), 2)?;
     reader.texts(&format!("{label}.thermal.text"), 2)?;
@@ -34,14 +41,13 @@ fn convection(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
     Ok(())
 }
 
-fn heat(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
+fn heat(reader: &mut BinaryLoadReader<'_>, label: &str, power: bool) -> Result<()> {
     reader.words(&format!("{label}.thermal.words"), 2)?;
     reader.double(&format!("{label}.thermal.double0"))?;
     reader.signed(&format!("{label}.thermal.word0"))?;
     reader.doubles(&format!("{label}.thermal.doubles"), 2)?;
     reader.signed(&format!("{label}.thermal.word1"))?;
     reader.texts(&format!("{label}.thermal.text"), 3)?;
-    let power = reader.kind == SimulationThermalKind::HeatPower;
     if power {
         reader.signed(&format!("{label}.thermal.word24"))?;
     }
@@ -57,14 +63,14 @@ fn heat(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
     Ok(())
 }
 
-fn heat_late(reader: &mut ThermalReader<'_>, label: &str, power: bool) -> Result<()> {
+fn heat_late(reader: &mut BinaryLoadReader<'_>, label: &str, power: bool) -> Result<()> {
     if power {
         return pairs(reader, label);
     }
     reader.words(&format!("{label}.thermal.two_late_words"), 2)
 }
 
-fn radiation(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
+fn radiation(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
     reader.words(&format!("{label}.thermal.words"), 4)?;
     reader.doubles(&format!("{label}.thermal.doubles"), 4)?;
     reader.texts(&format!("{label}.thermal.text"), 3)?;
@@ -74,7 +80,7 @@ fn radiation(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
     Ok(())
 }
 
-fn pairs(reader: &mut ThermalReader<'_>, label: &str) -> Result<()> {
+fn pairs(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
     if reader.signed(&format!("{label}.thermal.selector"))? != 1 {
         return Ok(());
     }

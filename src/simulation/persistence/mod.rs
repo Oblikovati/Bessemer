@@ -2,6 +2,8 @@
 mod coverage;
 mod lbc_final;
 mod legacy;
+mod load_base;
+mod load_reader;
 mod manager_property;
 mod parameter_sets;
 mod scalars;

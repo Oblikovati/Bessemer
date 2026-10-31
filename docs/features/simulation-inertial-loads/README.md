@@ -30,6 +30,13 @@ for strict replay from a consistent copied source tree. The reference-only
 dependency setup is shared with #134. `--write` creates initial baselines for
 review; strict runs compare all existing evidence and fixture bytes.
 
+The private shared reader, complete collection loop and common load base have
+been extracted separately from new load behavior. The public thermal API stays
+unchanged. All 58 focused/native regressions passed, clippy passed, and all five
+complete exports matched the pre-extraction revision and independent oracles
+byte for byte across 26,626,482 bytes. See the
+[extraction evidence](shared-base-extraction-verification.json).
+
 Next verify Rust exact construction,
 isolated edits, full physical fields and histories, malformed inputs, explicit
 budgets, ownership, concurrency and fresh-process exports. Require the local

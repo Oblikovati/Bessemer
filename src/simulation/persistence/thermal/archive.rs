@@ -1,6 +1,6 @@
 use super::{
     SimulationThermalField, SimulationThermalKind, SimulationThermalLimits, SimulationThermalValue,
-    base, reader::ThermalReader, tails,
+    base, tails,
 };
 use crate::Result;
 use crate::simulation::{SimulationPersistVersion, invalid};
@@ -27,14 +27,9 @@ impl SimulationThermalCollection {
         kind: SimulationThermalKind,
         limits: SimulationThermalLimits,
     ) -> Result<Self> {
-        let mut reader = ThermalReader::new(bytes, version, kind, limits)?;
-        let count = reader.count("collection.count", 10000, 1)?;
-        for index in 0..count {
-            let label = format!("record{index}");
-            base::record(&mut reader, &label)?;
-            tails::read(&mut reader, &label)?;
-        }
-        reader.finish()?;
+        let (reader, count) = base::collection(bytes, version, limits, |reader, label| {
+            tails::read(reader, label, kind)
+        })?;
         Ok(Self {
             parent: reader.bytes,
             version,
