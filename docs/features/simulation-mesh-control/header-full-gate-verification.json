@@ -1,0 +1,22 @@
+{
+  "feature_issue": 161,
+  "scope": "Complete MeshControl study-header operation; counted records remain pending",
+  "command": "cargo xtask pr",
+  "code_commit": "3407f7f6ac7739436ebf8ae2e8a948be4c5d908e",
+  "code_tree": "35d65366590c045d9db07aec4ee1572dd11de4cb",
+  "rust_sources_and_tests_unchanged_during_gate": true,
+  "platform": "Windows x86_64",
+  "toolchain": "1.99.0",
+  "exit_code": 0,
+  "process_reaped": true,
+  "summaries": 262,
+  "passed": 3465,
+  "failed": 0,
+  "ignored": 95,
+  "log_sha256": "eb852d328e25ae7fb5b1b68f58cb0ba9784975246eab8d5ccffbac140bd84cef",
+  "exclusions": [
+    "Counted-record production implementation and acceptance remain open under #161.",
+    "Exact immutable publication-cut and five exact-head platform gates remain pending.",
+    "Native writer/application, geometry and whole-format acceptance remain unproven."
+  ]
+}
