@@ -599,3 +599,8 @@ Standalone `Component PersistID` operations preserve the separate component
 stream through complete construction and isolated edits, including explicit
 inner archive versions and ordered field history. See
 [the standalone persist-ID evidence](docs/features/simulation-component-persist-id/README.md).
+
+Separate `SurfaceBody` framing preserves declared versioned words, raw text and
+double bits through construction and isolated edits. Six historical partial
+word-pair streams remain typed failures. See
+[the SurfaceBody evidence](docs/features/simulation-surface-body/README.md).

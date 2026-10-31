@@ -19,6 +19,7 @@ from freeze_solid_manager import verify_image
 from freeze_body import body_input, verify_source_hash
 from owned_surface import owned_surface_bodies
 from surface_projection import surface_projection, surface_history
+from surface_adversarial import surface_mutation_packet, surface_budget_packet, surface_list_cap
 
 
 def baseline(name: str, value: object) -> None:
@@ -125,6 +126,21 @@ def save_owned_packet(name: str, packet: bytes, count: int) -> None:
     baseline(metadata, dict(cases=count, bytes=len(packet), sha256=digest(packet)))
 
 
+def verify_adversarial() -> None:
+    """Retain all complete framing outcomes and independently measured budgets; e.g. verify_adversarial()."""
+    from cosworks_surface_body_layout import parse
+    packet, count, accepted = surface_mutation_packet(parse)
+    save_owned_packet('malformed', packet, count)
+    save_owned_packet('budgets', surface_budget_packet(parse), 96)
+    baseline('adversarial-reference.json', dict(inputs=count, accepted=accepted, failed=count - accepted, budget_cases=96))
+
+
+def verify_list_cap() -> None:
+    """Keep populated fixed-cap controls distinct from truncation failures; e.g. verify_list_cap()."""
+    from cosworks_surface_body_layout import parse
+    surface_list_cap(parse, baseline)
+
+
 def verify_historical_failures() -> None:
     """Keep exact partial prefixes and four unclassified bytes incomplete; e.g. verify_historical_failures()."""
     from cosworks_surface_body_layout import parse
@@ -134,6 +150,7 @@ def verify_historical_failures() -> None:
     tail = tail_report()
     rows = cast(list[dict[str, object]], tail['rows'])
     assert len(rows) == len(failures) == 6 and tail['complete_860006_comparators'] == []
+    packet = bytearray()
     for row in rows:
         raw = bytes.fromhex(cast(str, row['raw_hex']))
         assert digest(raw) == row['sha256'] == failures[(row['path'], row['stream'])]['sha256']
@@ -142,6 +159,18 @@ def verify_historical_failures() -> None:
         assert parsed['spans'] == row['prefix_spans'] and parsed['error'] == row['failure']
         assert raw[parsed['end']:].hex() == row['unclassified_tail_hex']
         assert len(raw) - parsed['end'] == 4 and 'need 8' in parsed['error']
+        packet.extend(struct.pack('<IIII', 860006, len(raw), parsed['end'], 8) + raw)
+    (ROOT / 'target/simulation-surface-body-historical.bin').write_bytes(packet)
+
+
+def verify_synthetic_same_version() -> None:
+    """Distinguish a complete synthetic declared layout from the six incomplete native bodies; e.g. verify_synthetic_same_version()."""
+    from cosworks_surface_body_layout import parse
+    raw = bytes(92)
+    parsed = parse(raw, 860006)
+    assert parsed['success'] and parsed['end'] == len(raw)
+    baseline('synthetic-860006-reference.json', dict(bytes=92, sha256=digest(raw), complete=True,
+             scope='Independent synthetic all-zero declared layout; not a native same-version comparator'))
 
 
 def verify_sources() -> None:
@@ -180,7 +209,7 @@ def run_checks(pin: Path) -> unittest.TestResult:
     import test_cosworks_surface_body
     replay = update_wrapper(partial(replay_native, pin), replay_native)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in
-                               (replay, replay_owned, verify_historical_failures, verify_sources, verify_bindings))
+                               (replay, replay_owned, verify_adversarial, verify_list_cap, verify_historical_failures, verify_synthetic_same_version, verify_sources, verify_bindings))
     suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(test_cosworks_surface_body))
     return unittest.TextTestRunner(verbosity=2).run(suite)
 

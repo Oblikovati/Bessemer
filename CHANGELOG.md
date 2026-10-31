@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added exact SurfaceBody read, construction and isolated edits with ordered history, preserving typed failures for six unresolved historical partial-word cases. (#153)
+
 - Added standalone Component PersistID reads, construction and isolated edits with exact EOF, coordinated blob/count validation and complete ordered nested history. (#152)
 
 - Added complete inherited SolidManager sheet Property reads, construction and isolated edits, with exact class-specific 4281 surface continuations and ordered nested history. (#151)
