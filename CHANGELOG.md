@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Corrected the planned Simulation Material text contract to retain accepted odd-byte frames without a UTF-16 view. (#141)
+
 - Fixed load edits that discarded embedded CString length-prefix changes as semantic no-ops. (#137)
 
 - Fixed the new compound allocator using the reserved range-lock sector for data or tables when growing version-4 files above 2 GB. (#110)

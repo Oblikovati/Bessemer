@@ -12,9 +12,15 @@ attempts and 67 failed alternatives. Six AWDocument Material streams totaling
 150 bytes have a distinct unresolved carrier and stay outside this grammar.
 The earlier two mass-child identities overlap this study-manager corpus.
 
-Fresh extraction, copied-source replay, current installed binding checks and
-Rust operations are still pending. Historical report metadata is provenance;
-it does not substitute for those checks. See [the initial baseline](initial-reference.json).
+Fresh extraction now matches every retained native attempt, including exact
+failure-prefix hashes and both earlier mass-child results in full. All 300 owned
+profiles pass the unchanged actual reader, with explicit prefix and standalone
+EOF checks. Six reference checks passed, including installed module/function
+and floating-threshold bytes. The representative totals remain 8,712 properties,
+18,390 delegated bodies and 18/38 populated property/delegated tables. Those
+totals use the original first-success convention, not inferred runtime dispatch.
+See the [reference foundation](reference-foundation-verification.json).
+Rust operations and their full acceptance gates remain pending.
 
 Two boundary cases need explicit owned fixtures. A nonzero property-table
 presence consumes positive counted pairs; zero presence retains the declared
@@ -23,10 +29,11 @@ check to that absent payload would reject valid source shapes. Direct global
 and delegated tables consume every counted pair, interleaved on the wire.
 
 The actual Material reader also requests a decoded text view for every string.
-Its UTF-16 reader accepts unpaired surrogate units but rejects odd byte counts.
-Owned fixtures and malformed expectations must preserve that distinction;
-the common load reader's broader raw-text acceptance is insufficient evidence
-for this separate body.
+Unpaired UTF-16 surrogate units remain intact. Odd-byte payloads are accepted
+as raw frames and have no UTF-16 view. Bug [#141](https://github.com/Oblikovati/Bessemer/issues/141)
+corrected an earlier design/verifier assumption that odd frames would fail.
+The owned corpus includes those frames; Rust must retain their bytes without
+normalizing them or inventing decoded text.
 
 The reference also exposes `require_eof=False` and tests a complete Material body
 followed by unrelated bytes. Support that explicit prefix boundary alongside
@@ -44,3 +51,13 @@ Full independent field/edit/history exports, malformed and exact-limit cases,
 ownership, concurrency, fresh-process comparisons and local/platform gates are
 required before integration. No target DLL, COM method or native writer has run
 for this feature. Whole-object, application and geometric acceptance remain open.
+
+
+Run `python -B -X utf8 docs/features/simulation-material/freeze_material.py` for
+strict fresh replay from an immutable copy of the actual sources. The shared
+reference-only dependencies and approved document/CFB adapters match the earlier
+Simulation features. `--write` initializes evidence for review. Native packet
+bytes remain under `target/`; the committed input/span fixture is independently
+built. The [initial baseline](initial-reference.json) retains complete historical
+clauses and reports, while [the text correction](text-framing-correction.json)
+records Bug #141 and why the initial owned draft gained odd auxiliary strings.
