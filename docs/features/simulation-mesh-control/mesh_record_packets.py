@@ -8,6 +8,7 @@ from mesh_control_evidence import FEATURE, mesh_baseline, mesh_reports
 from owned_mesh_records import OwnedMeshRecords, owned_mesh_records, mesh_collection_literal, mesh_empty_curve_mode
 from mesh_record_projection import mesh_record_projection, mesh_record_span_shape, mesh_span_owner
 from mesh_record_history import mesh_record_history
+from mesh_record_metrics import mesh_record_budget_packet
 
 ROOT = FEATURE.parents[2]
 
@@ -19,11 +20,11 @@ def actual_mesh_records(raw: bytes, version: int) -> dict[str, object]:
     return cast(dict[str, object], parse(raw, version, 'MeshControl', archive_reader=archive_reader))
 
 
-def mesh_record_operation_packets(version: int, raw: bytes, parsed: dict[str, object]) -> tuple[bytes, bytes, bytes]:
+def mesh_record_operation_packets(version: int, raw: bytes, parsed: dict[str, object]) -> tuple[bytes, bytes, bytes, bytes]:
     """Keep complete input, primitive and independently reread history expectations together; e.g. mesh_record_operation_packets(version, raw, parsed)."""
     assert parsed['success'] and parsed['end'] == len(raw), parsed
     return (struct.pack('<III', version, 1, len(raw)) + raw,
-            mesh_record_projection(version, raw, parsed), mesh_record_history(version, raw, parsed))
+            mesh_record_projection(version, raw, parsed), mesh_record_history(version, raw, parsed), mesh_record_budget_packet(version, raw, parsed))
 
 
 def require_owned_mesh_record_boundaries(case: OwnedMeshRecords, parsed: dict[str, object]) -> None:
@@ -42,7 +43,7 @@ def require_owned_mesh_record_boundaries(case: OwnedMeshRecords, parsed: dict[st
 
 def verify_owned_mesh_record_packets() -> None:
     """Freeze every empty/single/mixed/repeated context with complete operation oracles; e.g. verify_owned_mesh_record_packets()."""
-    packets = [bytearray(), bytearray(), bytearray()]
+    packets = [bytearray(), bytearray(), bytearray(), bytearray()]
     cases = owned_mesh_records()
     for case in cases:
         parsed = actual_mesh_records(case['raw'], case['version'])
@@ -59,7 +60,7 @@ def save_owned_record_packets(packets: list[bytearray]) -> dict[str, object]:
     """Preserve all reviewed owned packet bytes in ordinary runs; e.g. save_owned_record_packets(packets)."""
     folder = ROOT / 'tests/fixtures/simulation-mesh-control'
     references: dict[str, object] = {}
-    for name, raw in zip(('input', 'projection', 'history'), packets, strict=True):
+    for name, raw in zip(('input', 'projection', 'history', 'budgets'), packets, strict=True):
         path = folder / f'records-{name}.bin'
         if '--write' in sys.argv:
             folder.mkdir(parents=True, exist_ok=True)
@@ -69,11 +70,11 @@ def save_owned_record_packets(packets: list[bytearray]) -> dict[str, object]:
     return references
 
 
-def native_mesh_record_row(row: dict[str, object], streams: dict[str, bytes]) -> tuple[bytes, bytes, bytes]:
+def native_mesh_record_row(row: dict[str, object], streams: dict[str, bytes]) -> tuple[bytes, bytes, bytes, bytes]:
     """Keep every original record candidate and scoped occurrence; e.g. native_mesh_record_row(row, streams)."""
     raw = streams[cast(str, row['stream'])]
     assert len(raw) == row['bytes'] and digest(raw) == row['sha256'], row['stream']
-    packets = [bytearray(), bytearray(), bytearray()]
+    packets = [bytearray(), bytearray(), bytearray(), bytearray()]
     for expected in cast(list[dict[str, object]], row['attempts']):
         version = cast(int, expected['version'])
         parsed = actual_mesh_records(raw, version)
@@ -81,19 +82,19 @@ def native_mesh_record_row(row: dict[str, object], streams: dict[str, bytes]) ->
         assert parsed['success'], (row['stream'], version, parsed)
         fragments = mesh_record_operation_packets(version, raw, parsed)
         for packet, fragment in zip(packets, fragments, strict=True): packet.extend(fragment)
-    return bytes(packets[0]), bytes(packets[1]), bytes(packets[2])
+    return bytes(packets[0]), bytes(packets[1]), bytes(packets[2]), bytes(packets[3])
 
 
 def replay_native_mesh_record_packets(pin: Path) -> None:
     """Recover all twelve native streams and every edited/reference parent; e.g. replay_native_mesh_record_packets(pin)."""
     rows = cast(list[dict[str, object]], mesh_reports()[1]['rows'])
-    packets = [bytearray(), bytearray(), bytearray()]
+    packets = [bytearray(), bytearray(), bytearray(), bytearray()]
     for document in sorted({cast(str, row['path']) for row in rows}):
         streams = recover_sample(document, pin)
         fragments = [native_mesh_record_row(row, streams) for row in rows if row['path'] == document]
         for index, packet in enumerate(packets): packet.extend(b''.join(fragment[index] for fragment in fragments))
     references: dict[str, object] = {}
-    for name, raw in zip(('input', 'projection', 'history'), packets, strict=True):
+    for name, raw in zip(('input', 'projection', 'history', 'budgets'), packets, strict=True):
         (ROOT / f'target/simulation-mesh-control-native-records-{name}.bin').write_bytes(raw)
         references[name] = dict(bytes=len(raw), sha256=digest(raw))
     mesh_baseline('records-native-packets.json', dict(streams=12, arguments=12, records=16, packets=references))

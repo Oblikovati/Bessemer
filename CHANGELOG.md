@@ -38,7 +38,7 @@
 
 ### Added
 
-- Added complete study MeshControlManager header reads, construction and isolated edits with explicit historical-reader/current-writer profiles, exact budgets and ordered history. (#161)
+- Added complete study MeshControlManager headers and counted MeshControl read, construction and isolated edits with explicit header profiles, exact budgets and ordered outer/nested history. (#161)
 
 - Added combined ShellManager corpus read and construction validation with exact identity bindings, named profiles and explicit incomplete payloads. (#160)
 

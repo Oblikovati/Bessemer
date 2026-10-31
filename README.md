@@ -633,7 +633,9 @@ and replays all 1,008 original version/profile arguments through typed codecs.
 It preserves 46 rejected arguments and the one incomplete historical payload;
 see [the combined ShellManager evidence](docs/features/simulation-shell-inventory/README.md).
 
-Study MeshControlManager headers support complete reads, construction and isolated
-edits with explicit historical-reader/current-writer profiles. Their unresolved
+Study MeshControlManager headers and counted MeshControl records support complete
+reads, construction and isolated edits. Headers have explicit historical-reader/
+current-writer profiles; records retain their declared reader-version grammar.
+Their unresolved
 DocumentInfo candidate remains rejected under its original study-reader context;
 see [the MeshControl evidence](docs/features/simulation-mesh-control/README.md).

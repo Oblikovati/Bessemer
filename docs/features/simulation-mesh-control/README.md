@@ -82,10 +82,28 @@ collections and all scoped nested archive parents. The original native input
 packet is unchanged. [Record oracle verification](records-oracle-verification.json)
 records counts, packet/source hashes and exclusions.
 
-The counted-record Rust codec, independent coverage/budget expectations,
-malformed grammar and extent tests, resource/fixed-cap controls and
-isolation/concurrency remain pending. Full local/platform gates for the completed
-combined feature also remain pending. Native writer/application and geometry
-acceptance, field
+`SimulationMeshControlRecords` now reads, constructs and edits every complete
+record with immutable physical record/base spans. The initial 13 focused Rust
+checks pass, including three explicit native checks, full independent fields,
+construction, edited images, ordered outer/nested history and coverage statistics.
+Seven resource axes pass at exact bounds and fail one below every positive
+requirement for both reading and construction. Completed-empty collections retain
+an explicit status and support genuinely zero text/entry/embedded requirements.
+
+Every field no-op retains revision identity and all copied outer/nested parents.
+Malformed construction, foreign/stale/bounds IDs, failed count/kind edits and
+caller byte/field-vector mutation preserve the original inputs. All 390,672 proper
+prefixes and 322 appended-byte cases fail. All 16 public types satisfy
+`Send + Sync`. Two fresh Rust processes produce identical complete field and
+history exports, exactly matching the independent source packets.
+[Record interoperability verification](records-interop-verification.json) records
+code/log hashes and the remaining scope. The added budget packets preserve every
+earlier input/field/history reference; their reason and behavior version are
+retained in [budget extension verification](records-budget-extension-verification.json).
+
+Generated malformed grammar, sufficient-payload fixed-cap controls, full changed
+six-kind/supplied-archive provenance and mixed concurrency remain pending. Full
+local/platform gates for the completed combined feature also remain pending.
+Native writer/application and geometry acceptance, field
 meanings, unrepresented native profiles and whole-format parity remain unproven.
 Humanizer was unavailable; maintainer prose review remains pending.
