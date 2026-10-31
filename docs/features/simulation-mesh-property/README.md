@@ -82,7 +82,17 @@ packets for all 945 owned/native accepted contexts, exactly matching the
 independent source packets. [Initial runtime verification](runtime-verification.json)
 records hashes, executed checks and scope.
 
-Complete malformed/cap/resource checks, changed values of every supported kind,
+The extended focused suite passes all 13 checks, including four native checks.
+Independent packets account for every explicit declaration, direct/nested record,
+embedded root and embedded field. Reading and construction pass exact byte,
+field, entry, per-text, embedded-byte, object and embedded-field limits, and fail
+one below every positive requirement. The all-null controls retain genuine zero
+text, entry and embedded requirements. Implicit single duration words remain
+physical fields without inventing a stored count. Both source initialization
+and strict replay pass all 32 checks. [Budget verification](budget-verification.json)
+records the measured limits and preserves all earlier packet references.
+
+Generated malformed controls, sufficient-payload fixed caps, changed values of every supported kind,
 mixed concurrency and full local/platform gates remain pending. Native writer symmetry,
 application opening, physical meanings, geometry validation, universal runtime
 version selection and whole-format parity remain unproven.

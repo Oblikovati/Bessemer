@@ -11,6 +11,7 @@ from property_collection_literals import property_nested_counts, newest_property
 from owned_property import OwnedMeshProperty, owned_properties, owned_property_literal
 from property_projection import property_projection, property_span_shape, property_nested_shape
 from property_history import property_history
+from property_metrics import property_budget_packet
 
 
 def verify_owned_property(case: OwnedMeshProperty) -> dict[str, object]:
@@ -66,14 +67,15 @@ def property_input_packet(case: OwnedMeshProperty) -> bytes:
 def verify_owned_property_packets() -> None:
     """Freeze full literals and primitive fields across every gate and populated extension; e.g. verify_owned_property_packets()."""
     cases = owned_properties()
-    inputs, projection, history = bytearray(), bytearray(), bytearray()
+    inputs, projection, history, budgets = bytearray(), bytearray(), bytearray(), bytearray()
     for case in cases:
         parsed = verify_owned_property(case)
         inputs.extend(property_input_packet(case))
         projection.extend(property_projection(case['version'], case['raw'], parsed))
         history.extend(property_history(case['version'], case['raw']))
+        budgets.extend(property_budget_packet(case['version'], case['raw'], parsed))
     references = {name: save_property_packet(name, bytes(packet))
-                  for name, packet in (('input', inputs), ('projection', projection), ('history', history))}
+                  for name, packet in (('input', inputs), ('projection', projection), ('history', history), ('budgets', budgets))}
     property_baseline('owned-reference.json', dict(contexts=len(cases), versions=len({case['version'] for case in cases}),
         logical_bytes=sum(len(case['raw']) for case in cases), null_text_controls=sum(case['null_texts'] for case in cases),
         direct_records=sum(len(case['records']) for case in cases),
