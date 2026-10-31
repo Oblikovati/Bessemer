@@ -35,38 +35,8 @@ fn assert_serial_equivalence(
     );
     assert_eq!(actual.archive().context(), expected.archive().context());
     assert_eq!(actual.parent(), expected.parent());
-    assert_eq!(actual.history().len(), expected.history().len());
-    for (row, serial) in actual.history().iter().zip(expected.history()) {
-        assert_eq!(row.relation, serial.relation);
-        assert_eq!(row.parents, serial.parents);
-        assert_eq!(row.result.ordinal(), serial.result.ordinal());
-    }
-    assert_serial_nested(actual, expected);
-}
-
-fn assert_serial_nested(
-    actual: &SimulationShellPropertyEdit,
-    expected: &SimulationShellPropertyEdit,
-) {
-    assert_eq!(
-        actual.nested_history().len(),
-        expected.nested_history().len()
-    );
-    for (row, serial) in actual
-        .nested_history()
-        .iter()
-        .zip(expected.nested_history())
-    {
-        assert_eq!(row.path, serial.path);
-        assert_eq!(row.relation, serial.relation);
-        assert_eq!(row.outer_parent, serial.outer_parent);
-        assert_eq!(row.outer_result.ordinal(), serial.outer_result.ordinal());
-        assert_eq!(row.parents, serial.parents);
-        assert_eq!(
-            row.result.as_ref().map(|id| id.index()),
-            serial.result.as_ref().map(|id| id.index())
-        );
-    }
+    typed_load_history::assert_serial_outer(actual.history(), expected.history());
+    typed_load_history::assert_serial_nested(actual.nested_history(), expected.nested_history());
 }
 
 fn run_worker(

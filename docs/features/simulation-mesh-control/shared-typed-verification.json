@@ -29,5 +29,16 @@
   },
   "exclusions": [
     "Native tests were explicitly ignored in the before/after invocation; owned complete field/history and exhaustive prefix fixtures were replayed unchanged."
-  ]
+  ],
+  "shared_serial_history_followup": {
+    "scope": "Extracted normalized ordered serial-history comparisons, preserving Shell Property concurrency coverage",
+    "shell_concurrency_passed": 1,
+    "mesh_concurrency_passed": 1,
+    "clippy_warnings": 0,
+    "processes_reaped": true,
+    "logs": {
+      "target/mesh-shared-concurrency-replay.log": "8eb7d29ce5b771bb6214646ddd58f54c536ca88e2908df3403b332e6018ff7ca",
+      "target/mesh-shared-concurrency-clippy.log": "09c821bd1a26aea9997dea247fa8aa9053a400cbd631bba0a22294bb00278a4d"
+    }
+  }
 }
