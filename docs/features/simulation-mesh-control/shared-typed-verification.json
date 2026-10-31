@@ -1,0 +1,33 @@
+{
+  "feature_issue": 161,
+  "scope": "Structural extraction of existing Shell Property typed-value and provenance assertions into reusable test helpers",
+  "parent": "45cc9220532a01ac417d1517be8e8a2a3cd3109a",
+  "before": {
+    "passed": 20,
+    "failed": 0,
+    "ignored_native": 4
+  },
+  "after": {
+    "passed": 20,
+    "failed": 0,
+    "ignored_native": 4
+  },
+  "final_extraction_focused_replay": {
+    "passed": 2,
+    "failed": 0,
+    "scope": "all existing six-kind edits and mixed concurrency"
+  },
+  "all_processes_reaped": true,
+  "clippy_warnings": 0,
+  "owned_and_native_fixtures_unchanged": true,
+  "production_sources_unchanged": true,
+  "artifacts": {
+    "target/mesh-typed-shared-before.log": "f3a2e6b4d04583837f0c9a08ef5984c802c031d9c0c9950fb5ee56b017102015",
+    "target/mesh-typed-shared-after.log": "50f850a3ab2459a200b5240350407bf970ac23d04c5c8268fe97b8d68c202e74",
+    "target/mesh-typed-shared-final.log": "347de7a0aab75460c4c244aa727cff9fbaed898610ef2b8916a5681cd8d6f279",
+    "target/mesh-records-typed-clippy.log": "bb953c13f795b6f097e18732b3ac9ae7631d21b8eeff92ccdc45ba4ad3b4222b"
+  },
+  "exclusions": [
+    "Native tests were explicitly ignored in the before/after invocation; owned complete field/history and exhaustive prefix fixtures were replayed unchanged."
+  ]
+}
