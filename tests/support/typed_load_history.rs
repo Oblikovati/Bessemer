@@ -184,3 +184,33 @@ pub(super) fn archived_rows(
     }
     rows
 }
+
+pub(super) fn assert_serial_outer(
+    actual: &[SimulationThermalHistory],
+    serial: &[SimulationThermalHistory],
+) {
+    assert_eq!(actual.len(), serial.len());
+    for (row, expected) in actual.iter().zip(serial) {
+        assert_eq!(row.result.ordinal(), expected.result.ordinal());
+        assert_eq!(row.relation, expected.relation);
+        assert_eq!(row.parents, expected.parents);
+    }
+}
+
+pub(super) fn assert_serial_nested(
+    actual: &[SimulationThermalNestedHistory],
+    serial: &[SimulationThermalNestedHistory],
+) {
+    assert_eq!(actual.len(), serial.len());
+    for (row, expected) in actual.iter().zip(serial) {
+        assert_eq!(row.path, expected.path);
+        assert_eq!(row.relation, expected.relation);
+        assert_eq!(row.outer_parent, expected.outer_parent);
+        assert_eq!(row.outer_result.ordinal(), expected.outer_result.ordinal());
+        assert_eq!(row.parents, expected.parents);
+        assert_eq!(
+            row.result.as_ref().map(|id| id.index()),
+            expected.result.as_ref().map(|id| id.index())
+        );
+    }
+}
