@@ -644,3 +644,8 @@ Study `Mesh/Property` supports complete documented reads, construction and
 isolated edits with explicit versions. It preserves populated nested records,
 unassigned raw fields, and negative or duplicate integer-set keys;
 see [the Mesh Property evidence](docs/features/simulation-mesh-property/README.md).
+
+Results root, category and plot `Property` bodies support complete reads,
+construction and isolated edits with explicit hierarchy and version contexts.
+Current root/category writer layouts remain separate from historical readers;
+see [the Results header evidence](docs/features/simulation-results-headers/README.md).

@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added complete documented Results root, category and plot Property reads, construction and isolated edits with explicit hierarchy and current-writer contexts. (#164)
+
 - Added complete documented Mesh Property reads, construction and isolated edits with explicit versions, populated nested records, preserved integer-set keys and ordered provenance. (#163)
 
 - Added complete study MeshControlManager headers and counted MeshControl read, construction and isolated edits with explicit header profiles, exact budgets and ordered outer/nested history. (#161)
