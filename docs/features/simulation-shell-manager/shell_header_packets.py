@@ -1,6 +1,6 @@
 """Complete independent header fields/history for explicit reader and current-writer profiles (#156)."""
 from pathlib import Path
-from typing import cast
+from typing import Callable, cast
 import json
 import struct
 from native_carriers import RESEARCH, digest, recover_sample
@@ -9,11 +9,14 @@ from shell_literal_oracles import shell_header_spans
 from thermal_history_projection import outer_history
 from thermal_nested_history import nested_copy_rows
 
+HeaderAcceptance = Callable[[int, int, bytes, list[int]], None]
+HeaderSpanFactory = Callable[[list[int]], list[dict[str, object]]]
 
-def header_primitive_fields(raw: bytes, words: list[int]) -> list[bytes]:
+
+def header_primitive_fields(raw: bytes, words: list[int], span_factory: HeaderSpanFactory = shell_header_spans) -> list[bytes]:
     """Project known signed words and documented destinations independently of Rust; e.g. header_primitive_fields(raw, [-1, 2])."""
     fields: list[bytes] = []
-    spans = shell_header_spans(words)
+    spans = span_factory(words)
     assert b''.join(bytes.fromhex(cast(str, span['raw_hex'])) for span in spans) == raw
     for span in spans:
         path = cast(str, span['label']).encode()
@@ -32,19 +35,22 @@ def require_header_words(profile: int, version: int, raw: bytes, words: list[int
     assert parsed['reconstruction_sha256'] == digest(raw)
 
 
-def header_case_packets(profile: int, version: int, raw: bytes, words: list[int]) -> tuple[bytes, bytes]:
+def header_case_packets(profile: int, version: int, raw: bytes, words: list[int], *,
+                        acceptance: HeaderAcceptance = require_header_words,
+                        span_factory: HeaderSpanFactory = shell_header_spans,
+                        edited_path: str = 'wordc8') -> tuple[bytes, bytes]:
     """Keep full field and independently re-read edited/history expectations together; e.g. header_case_packets(0, 800028, raw, words)."""
-    require_header_words(profile, version, raw, words)
-    fields = header_primitive_fields(raw, words)
+    acceptance(profile, version, raw, words)
+    fields = header_primitive_fields(raw, words, span_factory)
     projection = struct.pack('<III', profile, version, len(raw)) + raw + struct.pack('<I', len(fields)) + b''.join(fields)
     replacement = words[0] ^ 32
     changed_words = [replacement, *words[1:]]
     edited = struct.pack('<i', replacement) + raw[4:]
-    require_header_words(profile, version, edited, changed_words)
-    edited_fields = header_primitive_fields(edited, changed_words)
+    acceptance(profile, version, edited, changed_words)
+    edited_fields = header_primitive_fields(edited, changed_words, span_factory)
     history = (struct.pack('<IIiII', profile, version, replacement, 1, len(raw)) + raw + edited
                + struct.pack('<I', len(edited_fields)) + b''.join(edited_fields)
-               + outer_history(edited_fields, True, 'wordc8') + nested_copy_rows(edited_fields))
+               + outer_history(edited_fields, True, edited_path) + nested_copy_rows(edited_fields))
     return projection, history
 
 
