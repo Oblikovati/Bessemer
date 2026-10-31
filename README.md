@@ -554,5 +554,5 @@ Simulation beam child `Property` bodies preserve complete reference containers,
 signed two-byte fields, unsigned words, raw doubles/text, counted triples and
 historical helpers. Complete construction and isolated edits retain revision-bound
 identities and ordered outer/nested history. Focused/native and independent
-reference checks pass; full local/platform acceptance is pending. See
+reference checks and the full local gate pass; platform integration is pending. See
 [the beam Property evidence](docs/features/simulation-beam-property/README.md).

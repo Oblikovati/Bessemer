@@ -47,7 +47,7 @@ prefix and trailing byte. Eight threads each run 32 mixed edits against seven
 serial variants, matching bytes, fields, coverage and complete parent relations.
 
 The [operation ledger](operation-checkpoint.json) records hashes, scope and
-remaining gates. Full local and exact-head platform gates remain pending.
+remaining gates. The full local gate passed; exact-head platform integration remains pending.
 Native runtime/application, physical/link semantics and geometric acceptance
 remain separate. No target code executes.
 
@@ -57,3 +57,6 @@ Set `BESSEMER_BEAM_NATIVE_INPUT`, `BESSEMER_BEAM_NATIVE_PROJECTION_INPUT`,
 `target/simulation-beam-property-native*.bin` packets. Optional complete exports
 use `BESSEMER_BEAM_PROJECTION_OUTPUT`, `BESSEMER_BEAM_HISTORY_OUTPUT` and
 `BESSEMER_BEAM_NESTED_HISTORY_OUTPUT`.
+
+The [full local gate](full-local-verification.json) records the exact committed
+implementation, platform, toolchain, test totals and complete log hash.
