@@ -1,0 +1,29 @@
+{
+  "issue": 138,
+  "status": "Reference foundation only; Rust implementation and operation gates remain unfinished",
+  "native_property_streams": 2,
+  "native_property_bytes": 2276,
+  "native_candidates": [
+    830036,
+    830036
+  ],
+  "separate_material_streams": 2,
+  "separate_material_bytes": 7096,
+  "material_decoded": false,
+  "owned": {
+    "cases": 196,
+    "bytes": 407940,
+    "sha256": "d3efca330620415bf1c9b7ceb2fd13305230058c093d9090dd60a84cd4e0c527"
+  },
+  "strict_reference_checks": 4,
+  "installed_bindings": "Complete module hash, every retained function span, serialization slot, literal and threshold bytes checked directly without target execution",
+  "exclusions": [
+    "Rust read/construction/edit implementation",
+    "Independent full field/history Rust comparisons",
+    "Malformed and exact-limit corpus",
+    "Ownership/concurrency/fresh-process Rust comparisons",
+    "Full local and platform feature gates",
+    "Native application and geometric acceptance",
+    "Complete documented-schema parity"
+  ]
+}
