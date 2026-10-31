@@ -66,8 +66,12 @@ malformed construction, foreign/stale IDs and caller-input isolation. All 16
 public types satisfy `Send + Sync`. Eight workers cover every owned context with
 three scalar edit options, comparing complete bytes/fields/spans and every ordered
 outer/nested parent against serial results. ThreadSanitizer and application/native
-writer acceptance have not been executed. Full local and exact-head platform
-gates remain pending for this feature.
+writer acceptance have not been executed. The full local `cargo xtask pr` gate
+passed on `6839d21985943878dd3703637ccfb8208ba182cd`: 3,426 tests, zero failures,
+87 explicit ignores and 259 summaries. The process exited successfully and was
+reaped; the log SHA-256 is
+`52fa0c2f06fa6d6e009304ac01570caf19f7acc180339a0e6e14b5746eb1e817`.
+Exact-head platform gates remain pending for this feature.
 
 Field meanings, native runtime/pointer selection, the historical short layout,
 native writer/application and geometry acceptance are unproven. Shell Property
