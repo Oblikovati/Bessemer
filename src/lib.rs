@@ -23,6 +23,7 @@ pub mod inspection;
 pub mod metadata;
 pub mod model_archives;
 pub mod parasolid;
+pub mod plastics;
 pub mod preview;
 mod records;
 pub mod simulation;

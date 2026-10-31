@@ -523,3 +523,17 @@ suffix layouts alongside the reviewed 18000 and 19000 dialects. See
 [the intermediate-manager evidence](docs/features/intermediate-managers/README.md).
 
 Simulation GEN node-group diagnostics retain signed tags, contiguous stored-order runs and source node identities, including inactive nodes and shared cross-tag references. See [node-group evidence](docs/features/simulation-node-groups/README.md).
+
+Plastics USD records retain opaque narrow bytes, raw UTF-16 units, noncanonical count prefixes and bounded u64 counts. Complete writer-grammar projections and isolated exact record edits preserve source identities and history. See [the USD evidence](docs/features/plastics-usd/README.md).
+
+Conditional flat Simulation EGR tables preserve loaded widths, live/deleted/unallocated states and every original byte. Typed field edits, solver-name states, descriptor proposals and integer EGROUP projections retain their explicit scope. See [the EGR evidence](docs/features/simulation-egr/README.md).
+
+Simulation logical storage lookup preserves raw UTF-16 names and the exact whole-input last-dot `.CWR`/stream split, without filesystem or COM calls. See [the locator evidence](docs/features/simulation-storage-locator/README.md).
+
+Cosworks persistence retains null/empty/odd text frames, complete study lists, explicit primary version modes and observed legacy suffixes. Exact reconstruction and isolated study-text edits preserve bytes, identity and history. See [the persistence evidence](docs/features/cosworks-persistence/README.md).
+
+Simulation LBC Property preserves version-selected and fixed writer layouts, exact signed words, runtime member order and isolated field edits. Documented version/layout mismatches remain explicit errors. See [the LBC Property evidence](docs/features/simulation-lbc-property/README.md).
+
+Simulation counted version arrays and UniqueIds tables retain signed values, duplicates, ordering and original headers. Explicit profiles, resource limits and isolated field edits preserve complete byte images and history; allocation capacity stays metadata. See [the scalar-table evidence](docs/features/simulation-persistent-scalars/README.md).
+
+Simulation LBC name-order lists and legacy three-group maps preserve complete text frames, signed record words and counts. Exact constructors and isolated edits retain byte images, identities and ordered history. See [the final LBC stream evidence](docs/features/simulation-lbc-final-streams/README.md).

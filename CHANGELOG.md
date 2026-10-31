@@ -34,6 +34,20 @@
 
 ### Added
 
+- Added complete Simulation LBC name-order and legacy three-group map framing, exact construction and isolated text/word edits with ordered history and explicit native-operation exclusions. (#130)
+
+- Added lossless counted Simulation version arrays and UniqueIds tables with metadata-only allocation capacity, typed field edits, exact reconstruction and complete history. (#129)
+
+- Added explicit LBC Property reader-version and fixed-writer profiles with lossless word construction, isolated field edits, complete history and preserved version/layout failures. (#128)
+
+- Added lossless Cosworks persistence text, study-order streams and explicit primary/legacy version carriers, with exact reconstruction, isolated text edits and preserved provenance. (#127)
+
+- Added exact UTF-16 Simulation logical storage locators with preserved whole-input last-dot components, native mode patterns and explicit lexical-only completion. (#126)
+
+- Added complete conditional flat Simulation EGR framing and construction, typed existing-field edits, preserved solver-name states, descriptor proposals and exact integer EGROUP projections. (#124)
+
+- Added bounded lossless Plastics USD records, explicit Unicode writer-layout projections and isolated exact record edits with complete source identities and history. (#123)
+
 - Added complete signed Simulation node-group runs with retained GEN identities and shared-reference evidence (#122).
 
 - Added exact auxiliary UTF-16 name views and supplied-destination stores, original GEN trial snapshots, explicit workspace normalization and ID-gated memory-only allocation/result projections with composed byte history. (#121)
