@@ -47,6 +47,27 @@ impl<'a> BinaryLoadReader<'a> {
         self.bytes.len() - self.cursor.remaining()
     }
 
+    pub fn declared_entries(&self) -> usize {
+        self.entries
+    }
+
+    pub fn into_body_parts(self) -> Result<super::load_prefix::BinaryLoadParts> {
+        let consumed = self.position();
+        if consumed == self.bytes.len() {
+            return Ok(super::load_prefix::BinaryLoadParts {
+                bytes: self.bytes,
+                fields: self.fields,
+                offsets: self.offsets,
+            });
+        }
+        super::load_prefix::rebase_prefix(
+            self.bytes[..consumed].into(),
+            self.fields,
+            self.offsets,
+            self.limits.maximum_text_bytes,
+        )
+    }
+
     fn push(&mut self, label: &str, start: usize, value: SimulationThermalValue) -> Result<()> {
         if self.fields.len() >= self.limits.maximum_fields {
             return Err(invalid(
@@ -124,6 +145,21 @@ impl<'a> BinaryLoadReader<'a> {
     pub fn count(&mut self, label: &str, maximum: usize, minimum: usize) -> Result<usize> {
         let value = self.signed(label)?;
         self.bounded(value, label, maximum, minimum)
+    }
+
+    pub fn declared_count(&mut self, label: &str, maximum: usize) -> Result<usize> {
+        let value = self.signed(label)?;
+        let count = usize::try_from(value)
+            .ok()
+            .filter(|count| *count <= maximum)
+            .ok_or_else(|| {
+                invalid(
+                    label,
+                    format!("declared count {value}; expected 0..={maximum}"),
+                )
+            })?;
+        self.charge_entries(label, count)?;
+        Ok(count)
     }
 
     pub fn bounded(

@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added complete study-manager Simulation Material reads, construction, body-prefix operations and isolated typed edits with immutable fields, complete history and exact stored-profile coverage. (#140)
+
 - Added complete single-body MassElement child Property reads, construction and isolated typed edits with explicit versions, immutable identities and composed history. (#138)
 
 - Added bounded Gravity, CentriFugal and BaseExcitation binary reads, complete construction and isolated typed edits with explicit versions, composed history and exact field validation. (#136)

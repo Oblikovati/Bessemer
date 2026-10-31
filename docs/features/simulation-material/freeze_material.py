@@ -18,6 +18,9 @@ from pinned_reference_tests import FrozenSourceImports, copy_sources, record_sna
 from native_carriers import SOURCE, RESEARCH, digest, recover_sample, pinned_auxiliaries
 from owned_material import owned_material_cases, material_literal
 from material_reference import actual_material_parser, retained_outcome
+from material_projection import material_projection_case
+from material_history import material_history_case
+from material_adversarial import material_mutation_packet, material_budget_packet
 
 
 def baseline(name: str, value: object) -> None:
@@ -57,20 +60,25 @@ def verify_payload(row: dict[str, object], streams: dict[str, bytes]) -> bytes:
     return raw
 
 
-def replay_row(row: dict[str, object], raw: bytes, prior: dict[str, object] | None) -> bytes:
+def replay_row(row: dict[str, object], raw: bytes, prior: dict[str, object] | None) -> tuple[bytes, bytes, bytes]:
     """Match every original success/failure and the complete earlier mass-child outcomes; e.g. replay_row(row, raw, prior)."""
     packet = bytearray()
+    projection = bytearray()
+    history = bytearray()
     for expected in cast(list[dict[str, object]], row['attempts']):
         version = cast(int, expected['version'])
         parsed = actual_material_parser(raw, version)
         assert retained_outcome(version, parsed) == expected, (row['path'], row['stream'], version)
         packet.extend(case_packet(raw, version, parsed))
+        if parsed['success']:
+            projection.extend(material_projection_case(raw, version, parsed))
+            history.extend(material_history_case(raw, version, parsed))
     if prior is not None:
         assert prior['sha256'] == row['sha256']
         for expected in cast(list[dict[str, object]], prior['attempts']):
             version = cast(int, expected['version'])
             assert dict(version=version, **actual_material_parser(raw, version)) == expected
-    return bytes(packet)
+    return bytes(packet), bytes(projection), bytes(history)
 
 
 def replay_native(pin: Path) -> None:
@@ -80,15 +88,32 @@ def replay_native(pin: Path) -> None:
     excluded = cast(list[dict[str, object]], corpus['excluded_awdocument'])
     prior = {(row['path'], row['stream']): row for row in cast(list[dict[str, object]], earlier['rows'])}
     packet = bytearray()
+    projection = bytearray()
+    history = bytearray()
     paths = sorted({cast(str, row['path']) for row in rows + excluded})
     for path in paths:
-        streams = recover_sample(path, pin)
-        for row in (row for row in rows if row['path'] == path):
-            raw = verify_payload(row, streams)
-            packet.extend(replay_row(row, raw, prior.get((row['path'], row['stream']))))
-        for row in (row for row in excluded if row['path'] == path):
-            verify_payload(row, streams)
+        image, fields, edits = replay_document(path, pin, rows, excluded, prior)
+        packet.extend(image)
+        projection.extend(fields)
+        history.extend(edits)
     save_native(packet, rows, excluded)
+    save_projection(bytes(projection), True)
+    save_history(bytes(history), True)
+
+
+def replay_document(path: str, pin: Path, rows: list[dict[str, object]], excluded: list[dict[str, object]], prior: dict[tuple[object, object], dict[str, object]]) -> tuple[bytes, bytes, bytes]:
+    """Recover one document and verify all retained/excluded identities; e.g. replay_document(path, pin, rows, excluded, prior)."""
+    streams = recover_sample(path, pin)
+    packet, projection, history = bytearray(), bytearray(), bytearray()
+    for row in (row for row in rows if row['path'] == path):
+        raw = verify_payload(row, streams)
+        image, fields, edits = replay_row(row, raw, prior.get((row['path'], row['stream'])))
+        packet.extend(image)
+        projection.extend(fields)
+        history.extend(edits)
+    for row in (row for row in excluded if row['path'] == path):
+        verify_payload(row, streams)
+    return bytes(packet), bytes(projection), bytes(history)
 
 
 def save_native(packet: bytearray, rows: list[dict[str, object]], excluded: list[dict[str, object]]) -> None:
@@ -116,17 +141,39 @@ def verify_representative_totals(rows: list[dict[str, object]]) -> None:
 def replay_owned() -> None:
     """Replay complete independent empty/populated/count-only historical bodies; e.g. replay_owned()."""
     packet = bytearray()
+    projection = bytearray()
+    history = bytearray()
     cases = owned_material_cases()
     for version, raw in cases:
         parsed = actual_material_parser(raw, version)
         assert parsed['success'] and parsed['end'] == len(raw)
         assert parsed['reconstruction_sha256'] == digest(raw)
         packet.extend(case_packet(raw, version, parsed))
+        projection.extend(material_projection_case(raw, version, parsed))
+        history.extend(material_history_case(raw, version, parsed))
         check_prefix(raw, version)
     path = ROOT / 'tests/fixtures/simulation-material/owned.bin'
     if '--write' in sys.argv: path.parent.mkdir(exist_ok=True); path.write_bytes(packet)
     assert path.read_bytes() == packet
     baseline('owned-reference.json', dict(cases=len(cases), packet_bytes=len(packet), packet_sha256=digest(packet)))
+    save_projection(bytes(projection), False)
+    save_history(bytes(history), False)
+
+
+def save_projection(packet: bytes, native: bool) -> None:
+    """Keep complete typed fields for every accepted candidate, including ambiguous versions; e.g. save_projection(packet, True)."""
+    path = ROOT / 'target/simulation-material-native-projection.bin' if native else ROOT / 'tests/fixtures/simulation-material/projection.bin'
+    if native or '--write' in sys.argv: path.write_bytes(packet)
+    assert path.read_bytes() == packet
+    baseline(f'{"native" if native else "owned"}-projection-reference.json', dict(cases=1230 if native else 300, bytes=len(packet), sha256=digest(packet)))
+
+
+def save_history(packet: bytes, native: bool) -> None:
+    """Keep complete edited images/fields and all ordered parents; e.g. save_history(packet, True)."""
+    path = ROOT / 'target/simulation-material-native-history.bin' if native else ROOT / 'tests/fixtures/simulation-material/history.bin'
+    if native or '--write' in sys.argv: path.write_bytes(packet)
+    assert path.read_bytes() == packet
+    baseline(f'{"native" if native else "owned"}-history-reference.json', dict(cases=1230 if native else 300, bytes=len(packet), sha256=digest(packet)))
 
 
 def check_prefix(raw: bytes, version: int) -> None:
@@ -211,6 +258,19 @@ def verify_spans(image: pefile.PE, spans: list[dict[str, str]]) -> None:
         assert digest(image.get_data(start - image.OPTIONAL_HEADER.ImageBase, end - start)) == span['raw_sha256']
 
 
+def replay_adversarial() -> None:
+    """Preserve every actual accepted/rejected mutation and independent exact budget; e.g. replay_adversarial()."""
+    malformed, count, accepted = material_mutation_packet()
+    budgets = material_budget_packet()
+    for name, packet in (('malformed.bin', malformed), ('budgets.bin', budgets)):
+        path = ROOT / 'tests/fixtures/simulation-material' / name
+        if '--write' in sys.argv: path.write_bytes(packet)
+        assert path.read_bytes() == packet
+    baseline('adversarial-reference.json', dict(cases=count, accepted=accepted, rejected=count-accepted,
+             malformed_bytes=len(malformed), malformed_sha256=digest(malformed),
+             budget_cases=300, budget_bytes=len(budgets), budget_sha256=digest(budgets)))
+
+
 def run() -> bool:
     """Use only immutable copies of actual source modules; e.g. run()."""
     with tempfile.TemporaryDirectory(prefix='bessemer-material-') as temporary:
@@ -220,7 +280,7 @@ def run() -> bool:
         sys.meta_path.insert(0, FrozenSourceImports(pin))
         sys.path.insert(0, str(pin / 'research'))
         replay = update_wrapper(partial(replay_native, pin), replay_native)
-        suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in (replay, replay_owned, verify_schema, verify_installed_bindings, verify_presence_and_empty_shapes, verify_utf16_boundary))
+        suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in (replay, replay_owned, verify_schema, verify_installed_bindings, verify_presence_and_empty_shapes, verify_utf16_boundary, replay_adversarial))
         result = unittest.TextTestRunner(verbosity=2).run(suite)
         record_snapshot(pin, hashes, result, FEATURE, ('cosworks_material_layout', 'cosworkspersist', 'cfb', 'swcontainer'), ())
         (FEATURE / 'fixture-reference-snapshot.json').replace(FEATURE / 'source-snapshot.json')

@@ -15,12 +15,13 @@ The earlier two mass-child identities overlap this study-manager corpus.
 Fresh extraction now matches every retained native attempt, including exact
 failure-prefix hashes and both earlier mass-child results in full. All 300 owned
 profiles pass the unchanged actual reader, with explicit prefix and standalone
-EOF checks. Six reference checks passed, including installed module/function
+EOF checks. Seven reference checks passed, including installed module/function
 and floating-threshold bytes. The representative totals remain 8,712 properties,
 18,390 delegated bodies and 18/38 populated property/delegated tables. Those
 totals use the original first-success convention, not inferred runtime dispatch.
 See the [reference foundation](reference-foundation-verification.json).
-Rust operations and their full acceptance gates remain pending.
+Rust read, complete construction and explicit prefix operations are implemented
+locally, including isolated typed edits; full acceptance gates are pending.
 
 Two boundary cases need explicit owned fixtures. A nonzero property-table
 presence consumes positive counted pairs; zero presence retains the declared
@@ -61,3 +62,28 @@ bytes remain under `target/`; the committed input/span fixture is independently
 built. The [initial baseline](initial-reference.json) retains complete historical
 clauses and reports, while [the text correction](text-framing-correction.json)
 records Bug #141 and why the initial owned draft gained odd auxiliary strings.
+
+
+The complete local operation corpus passed 23 focused/native tests and seven
+strict reference checks. Two fresh Rust processes matched every independent
+field projection (38,170,224 bytes) and complete edited-field/history expectation
+(56,008,596 bytes). All 300 owned contexts and 1,230 successful native arguments
+are included. All 67 failed native alternatives remain explicit failures.
+
+Rust matched 40,622 reference mutation outcomes: 13,816 accepted and 26,806
+rejected, including 300 unchanged positive controls. Every owned context passed
+exact and one-below byte, field, declared-entry and text limits in standalone
+and prefix modes. Every proper prefix failed in both modes. Eight threads each
+ran 32 edits against four serial variants, comparing bytes, fields, coverage,
+identities, ordered parents and preservation. All fourteen public types/aliases
+have Send/Sync assertions. The [verification ledger](read-construction-verification.json)
+records these checks; full local and exact-head platform gates remain pending.
+Native runtime, application and geometric acceptance remain open.
+
+Set `BESSEMER_MATERIAL_NATIVE_INPUT` to `target/simulation-material-native.bin`
+for retained acceptance outcomes, `BESSEMER_MATERIAL_NATIVE_PROJECTION_INPUT` to
+`target/simulation-material-native-projection.bin` for full field expectations,
+and `BESSEMER_MATERIAL_NATIVE_HISTORY_INPUT` to
+`target/simulation-material-native-history.bin` for full edit/history expectations.
+`BESSEMER_MATERIAL_PROJECTION_OUTPUT` and `BESSEMER_MATERIAL_HISTORY_OUTPUT`
+optionally export the complete checked packets.
