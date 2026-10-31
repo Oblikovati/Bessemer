@@ -22,16 +22,27 @@ def mixed_texts(count: int) -> bytes:
 
 def thermal_reference(version: int) -> bytes:
     """Use two nonnull inner archives under their own distinct versions; e.g. thermal_reference(890501)."""
-    blob = signed_words(3) + b'\xaa\0\xff'
-    if version < 840002:
-        raw = signed_words(-1, 2, -3, 4, -5, 6, -7) + mixed_texts(1) + blob
-        return raw + (signed_words(-1, -2) if version >= 800075 else b'')
+    return b''.join(raw for _, raw in thermal_reference_blocks(version))
+
+
+def thermal_reference_archives() -> tuple[bytes, bytes]:
+    """Reuse complete original literal archive frames without slicing a parser result; e.g. thermal_reference_archives()."""
     transform = literal_wrapper(14000) + literal_transform(255, 0x2f) + literal_transform(1, 0x4a)
     first = struct.pack('<I', 14000) + tagged_component('moCompXFormWrapper_c', transform)
     second = struct.pack('<I', 4281) + tagged_component('moLineRef_w', wrapper_bodies(4281)['moLineRef_w'])
-    raw = signed_words(-1, 2) + blob + first + second + signed_words(1, -2, 3, -4, 5)
-    raw += mixed_texts(1) + signed_words(-1, -2)
-    return raw + (signed_words(3, -4, 5) if version >= 890021 else b'')
+    return first, second
+
+
+def thermal_reference_blocks(version: int) -> list[tuple[str, bytes]]:
+    """Expose existing literal boundaries for independent parent fixtures; e.g. thermal_reference_blocks(840002)."""
+    blob = [('blob_count', signed_words(3)), ('blob', b'\xaa\0\xff')]
+    if version < 840002:
+        blocks = [('legacy_header', signed_words(-1, 2, -3, 4, -5, 6, -7)), ('legacy_name', mixed_texts(1))] + blob
+        return blocks + ([('tail', signed_words(-1, -2))] if version >= 800075 else [])
+    first, second = thermal_reference_archives()
+    blocks = [('id_header', signed_words(-1, 2))] + blob + [('archive0', first), ('archive1', second)]
+    blocks += [('header', signed_words(1, -2, 3, -4, 5)), ('name', mixed_texts(1)), ('tail', signed_words(-1, -2))]
+    return blocks + ([('late_tail', signed_words(3, -4, 5))] if version >= 890021 else [])
 
 
 def optional_literal(version: int) -> bytes:
