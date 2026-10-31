@@ -568,5 +568,5 @@ The combined BeamManager corpus gate freshly replays all 1,080 retained payload
 identities /620,654 logical bytes through all six typed payload families together,
 preserving 1,114 candidate arguments including 30 rejected alternatives. Exact
 identity manifests and complete validated construction/write checks pass locally;
-full local/platform gates remain pending. See
+the full local gate passed; platform integration remains pending. See
 [the combined BeamManager evidence](docs/features/simulation-beam-inventory/README.md).

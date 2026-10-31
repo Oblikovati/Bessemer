@@ -1,7 +1,7 @@
 {
   "issue": 146,
   "bug": 147,
-  "status": "Complete fresh combined source/Rust corpus passed; full local and exact-head platform gates pending",
+  "status": "Complete fresh combined source/Rust corpus and full local gate passed; exact-head platform integration pending",
   "source_checks": 4,
   "rust_tests": {
     "passed": 5,
@@ -59,7 +59,7 @@
     "clippy -D warnings, formatting and function/file audits"
   ],
   "exclusions": [
-    "Full local and exact-head platform integration",
+    "Exact-head platform integration",
     "Native application opening and native writer equivalence",
     "Physical/geometry/adjacency/enumeration/repair semantics",
     "Unsampled BeamFolder or all historical/context forms",

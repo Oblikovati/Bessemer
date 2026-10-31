@@ -22,7 +22,7 @@ tags fail before overwrite or opaque fallback. Native payload bytes stay under
 
 No native BeamFolder fixture is added. Storage framing does not establish
 physical meaning, adjacency/enumeration order, runtime repairs, native writer or
-application acceptance, geometry or all historical forms. Full local and exact-head platform gates remain pending.
+application acceptance, geometry or all historical forms. The full local gate passed; exact-head platform integration remains pending.
 
 Four strict copied-source checks and five Rust tests pass, including the explicit
 full native packet. Two fresh Rust processes match all 845,315 packet bytes
@@ -42,3 +42,6 @@ verifier's missing reference-only dependency path. The existing bundle is reused
 no runtime dependency or production behavior changed. The
 [correction record](reference-dependency-correction.json) retains the initial
 import failure and successful write/strict replay regression.
+
+The [full local gate](full-local-verification.json) records the exact committed
+implementation, platform, toolchain, complete test totals and log hash.
