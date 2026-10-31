@@ -130,17 +130,10 @@ fn publish(
 fn reader_limits(
     limits: SimulationMaterialLimits,
 ) -> super::super::thermal::SimulationThermalLimits {
-    super::super::thermal::SimulationThermalLimits {
-        maximum_bytes: limits.maximum_bytes,
-        maximum_fields: limits.maximum_fields,
-        maximum_entries: limits.maximum_entries,
-        maximum_text_bytes: limits.maximum_text_bytes,
-        embedded: crate::model_archives::ModelArchiveLimits {
-            maximum_bytes: 0,
-            maximum_fields: 0,
-            maximum_entries: 0,
-            maximum_depth: 0,
-            maximum_objects: 0,
-        },
-    }
+    super::super::load_reader::outer_limits(
+        limits.maximum_bytes,
+        limits.maximum_fields,
+        limits.maximum_entries,
+        limits.maximum_text_bytes,
+    )
 }

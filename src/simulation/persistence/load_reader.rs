@@ -5,6 +5,27 @@ use crate::model_archives::{SimulationEmbeddedArchive, SimulationEmbeddedProfile
 use crate::simulation::{SimulationPersistText, SimulationPersistVersion, invalid};
 use std::sync::Arc;
 
+pub(super) fn outer_limits(
+    maximum_bytes: usize,
+    maximum_fields: usize,
+    maximum_entries: usize,
+    maximum_text_bytes: usize,
+) -> SimulationThermalLimits {
+    SimulationThermalLimits {
+        maximum_bytes,
+        maximum_fields,
+        maximum_entries,
+        maximum_text_bytes,
+        embedded: crate::model_archives::ModelArchiveLimits {
+            maximum_bytes: 0,
+            maximum_fields: 0,
+            maximum_entries: 0,
+            maximum_depth: 0,
+            maximum_objects: 0,
+        },
+    }
+}
+
 pub(super) struct BinaryLoadReader<'a> {
     cursor: ArchiveCursor<'a>,
     pub bytes: Arc<[u8]>,
