@@ -15,7 +15,9 @@ sys.path.insert(0, str(ROOT / 'target/reference-python'))
 import pefile
 from pinned_reference_tests import FrozenSourceImports, copy_sources, record_snapshot
 from native_carriers import SOURCE, RESEARCH, digest, recover_sample, pinned_auxiliaries
-from owned_solid_manager import owned_solid_headers
+from owned_solid_manager import owned_solid_headers, solid_counted_nulls
+from solid_projection import projection_case, history_case
+from solid_adversarial import mutation_packet, budget_packet
 
 
 def baseline(name: str, value: object) -> None:
@@ -41,33 +43,39 @@ def case_packet(version: int, raw: bytes, parsed: dict[str, object]) -> bytes:
             + struct.pack('<I', len(spans)) + b''.join(struct.pack('<II', span['offset'], span['end']) for span in spans))
 
 
-def native_row(row: dict[str, object], streams: dict[str, bytes]) -> bytes:
+def native_row(row: dict[str, object], streams: dict[str, bytes]) -> tuple[bytes, bytes, bytes]:
     """Require exact full original outcomes after fresh extraction; e.g. native_row(row, streams)."""
     from cosworks_solid_manager_layout import parse
     raw = streams[cast(str, row['stream'])]
     assert len(raw) == row['bytes'] and digest(raw) == row['sha256']
-    packet = bytearray()
+    packets = [bytearray() for _ in range(3)]
     for expected in cast(list[dict[str, object]], row['attempts']):
         version = cast(int, expected['version'])
         parsed = parse(raw, version)
         assert dict(version=version, **parsed) == expected
-        packet.extend(case_packet(version, raw, parsed))
-    return bytes(packet)
+        packets[0].extend(case_packet(version, raw, parsed))
+        if parsed['success']:
+            packets[1].extend(projection_case(version, raw, parsed))
+            packets[2].extend(history_case(version, raw))
+    return cast(tuple[bytes, bytes, bytes], tuple(bytes(packet) for packet in packets))
 
 
 def replay_native(pin: Path) -> None:
     """Recover all 361 identities and retain all 395 framing arguments; e.g. replay_native(pin)."""
     rows = cast(list[dict[str, object]], retained_report()['rows'])
-    packet = bytearray()
+    packets = [bytearray() for _ in range(3)]
     for document in sorted({cast(str, row['path']) for row in rows}):
         streams = recover_sample(document, pin)
         for row in (row for row in rows if row['path'] == document):
-            packet.extend(native_row(row, streams))
+            for packet, fragment in zip(packets, native_row(row, streams), strict=True): packet.extend(fragment)
     attempts = [attempt for row in rows for attempt in cast(list[dict[str, object]], row['attempts'])]
     assert len(rows) == 361 and sum(cast(int, row['bytes']) for row in rows) == 5136
     assert len(attempts) == 395 and sum(cast(bool, attempt['success']) for attempt in attempts) == 365
+    packet = bytes(packets[0])
     (ROOT / 'target/simulation-solid-manager-native.bin').write_bytes(packet)
     baseline('native-reference.json', dict(streams=361, arguments=395, accepted=365, failed=30, bytes=len(packet), sha256=digest(packet)))
+
+    for role, packet in zip(('projection', 'history'), packets[1:], strict=True): save_operation(bytes(packet), role, True, 365)
 
 
 def replay_owned() -> None:
@@ -75,17 +83,37 @@ def replay_owned() -> None:
     from cosworks_solid_manager_layout import parse
     cases = owned_solid_headers()
     packet = bytearray()
+    projection = bytearray()
+    history = bytearray()
     for _, version, raw in cases:
         parsed = parse(raw, version)
         assert parsed['success'] and parsed['end'] == len(raw), (version, parsed)
         assert parsed['reconstruction_sha256'] == digest(raw)
         packet.extend(case_packet(version, raw, parsed))
+        projection.extend(projection_case(version, raw, parsed))
+        history.extend(history_case(version, raw))
+    save_owned_input(bytes(packet), len(cases))
+    save_operation(bytes(projection), 'projection', False, len(cases))
+    save_operation(bytes(history), 'history', False, len(cases))
+
+
+def save_owned_input(packet: bytes, count: int) -> None:
+    """Freeze all complete original owned inputs and spans; e.g. save_owned_input(packet, 68)."""
     path = ROOT / 'tests/fixtures/simulation-solid-manager/owned.bin'
     if '--write' in sys.argv:
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(packet)
     assert path.read_bytes() == packet
-    baseline('owned-reference.json', dict(cases=len(cases), bytes=len(packet), sha256=digest(packet)))
+    baseline('owned-reference.json', dict(cases=count, bytes=len(packet), sha256=digest(packet)))
+
+
+
+def save_operation(packet: bytes, role: str, native: bool, count: int) -> None:
+    """Keep native bytes outside the repository and owned expectations complete; e.g. save_operation(packet, 'history', True, 365)."""
+    path = ROOT / f'target/simulation-solid-manager-native-{role}.bin' if native else ROOT / f'tests/fixtures/simulation-solid-manager/{role}.bin'
+    if native or '--write' in sys.argv: path.write_bytes(packet)
+    assert path.read_bytes() == packet
+    baseline(f'{"native" if native else "owned"}-{role}-reference.json', dict(cases=count, bytes=len(packet), sha256=digest(packet)))
 
 
 def verify_sources() -> None:
@@ -131,9 +159,40 @@ def run_checks(pin: Path) -> unittest.TestResult:
     from functools import partial, update_wrapper
     import test_cosworks_solid_manager
     replay = update_wrapper(partial(replay_native, pin), replay_native)
-    suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in (replay, replay_owned, verify_sources, verify_bindings))
+    suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in (replay, replay_owned, verify_sources, verify_bindings, verify_hardcaps, replay_adversarial))
     suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(test_cosworks_solid_manager))
     return unittest.TextTestRunner(verbosity=2).run(suite)
+
+
+def replay_adversarial() -> None:
+    """Keep every actual mutation and exact source-derived budget; e.g. replay_adversarial()."""
+    malformed, count, accepted = mutation_packet()
+    budgets = budget_packet()
+    for name, packet in (('malformed', malformed), ('budgets', budgets)):
+        path = ROOT / f'tests/fixtures/simulation-solid-manager/{name}.bin'
+        if '--write' in sys.argv: path.write_bytes(packet)
+        assert path.read_bytes() == packet
+    baseline('adversarial-reference.json', dict(inputs=count, accepted=accepted, rejected=count-accepted,
+             malformed_bytes=len(malformed), malformed_sha256=digest(malformed),
+             budget_contexts=68, budget_bytes=len(budgets), budget_sha256=digest(budgets)))
+
+
+def verify_hardcaps() -> None:
+    """Distinguish count limits from truncation with complete synthetic payloads; e.g. verify_hardcaps()."""
+    from cosworks_solid_manager_layout import parse
+    cases = ((870004, 100000, 0, True), (870008, 100000, 100000, True),
+             (870004, 100001, 0, False), (870008, 0, 100001, False))
+    rows: list[dict[str, object]] = []
+    for version, first, second, accepted in cases:
+        raw = solid_counted_nulls(version, first, second)
+        parsed = parse(raw, version)
+        assert parsed['success'] == accepted
+        if accepted:
+            assert parsed['end'] == len(raw) and parsed['reconstruction_sha256'] == digest(raw)
+            assert len(parsed['spans']) == 5 + first + (1 + second if version >= 870008 else 0)
+        else: assert 'over-limit count 100001' in parsed['error']
+        rows.append(dict(version=version, first_count=first, second_count=second, accepted=accepted, bytes=len(raw), sha256=digest(raw)))
+    baseline('hardcap-reference.json', dict(scope='synthetic only; no populated native list fixture', cases=rows))
 
 
 def run() -> bool:

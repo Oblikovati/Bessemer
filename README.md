@@ -570,3 +570,9 @@ preserving 1,114 candidate arguments including 30 rejected alternatives. Exact
 identity manifests and complete validated construction/write checks pass locally;
 the full local gate passed; platform integration remains pending. See
 [the combined BeamManager evidence](docs/features/simulation-beam-inventory/README.md).
+
+Direct SolidManager `Property` headers preserve all five version gates, signed
+words, both bounded raw-text lists and duplicate order. Complete construction
+and isolated edits retain revision-bound IDs and ordered history. Focused/native
+and independent Source checks pass; full local/platform gates remain pending.
+See [the SolidManager header evidence](docs/features/simulation-solid-manager/README.md).

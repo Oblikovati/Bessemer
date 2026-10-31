@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added complete direct SolidManager Property reads, typed construction and isolated edits with raw text lists, exact resource limits and complete stored-profile history. (#148)
+
 - Added complete Simulation joint/group/list bodies and static beam-folder headers with explicit child-count scope, typed construction, isolated edits and complete stored-profile history. (#144)
 
 - Added complete Simulation beam child Property reads, typed construction and isolated edits with signed-short widths, explicit embedded profiles, complete history and exact stored-profile coverage. (#142)

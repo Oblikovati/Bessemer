@@ -1,0 +1,79 @@
+{
+  "issue": 148,
+  "status": "Complete focused operation corpus; full local and exact-head platform gates pending",
+  "focused_tests": {
+    "passed": 18,
+    "failed": 0,
+    "ignored": 0,
+    "explicit_native_inputs": 3
+  },
+  "strict_source_checks": 9,
+  "owned_profiles": 68,
+  "native_occurrences": 361,
+  "native_arguments": 395,
+  "native_accepted": 365,
+  "native_failed": 30,
+  "published_types_send_sync": 13,
+  "complete_fresh_exports": {
+    "projection": {
+      "bytes": 58781,
+      "sha256": "66fd840a39554c05d107f39e4a9a9d6007165e1079a759fc723db7260c696733",
+      "processes": 2,
+      "complete_independent_match": true
+    },
+    "history": {
+      "bytes": 109941,
+      "sha256": "04cfd3cbdf6ebb8bc90857eb2ec0d52fb3d918aa045966e7136a0dd5ae610693",
+      "processes": 2,
+      "complete_independent_match": true
+    }
+  },
+  "adversarial": {
+    "inputs": 393,
+    "accepted": 15,
+    "rejected": 378,
+    "malformed_bytes": 9691,
+    "malformed_sha256": "fe02493278a9af17a011cd2394cd395ce499383db66ff32a81fee40af1172183",
+    "budget_contexts": 68,
+    "budget_bytes": 2784,
+    "budget_sha256": "b48f674f696520dbdcb00a2ed4f89f9899f3e0905bb68e2feee74d3b587e7150"
+  },
+  "identity_positive_controls": 15,
+  "hardcap_evidence": "hardcap-reference.json",
+  "concurrency": {
+    "threads": 8,
+    "edits_per_thread": 32,
+    "serial_options": 3,
+    "kinds": [
+      "signed word",
+      "UTF-16 text with raw units",
+      "odd-byte nonnull text"
+    ],
+    "checks": [
+      "bytes",
+      "fields",
+      "version/limits/completion/check mode",
+      "list entries and diagnostics/error",
+      "ordered source/replacement parents and result identities",
+      "exact surrounding byte preservation"
+    ]
+  },
+  "checks": [
+    "Every owned/native accepted physical type/path/value/offset and complete construction matches Source",
+    "All original accepted and failed native candidate contexts retained without runtime selection",
+    "Complete independent first-word edits and every ordered outer parent; no embedded scope invented",
+    "Null/allocated-empty/unpaired/odd frames remain byte-distinct",
+    "Exact no-ops retain source IDs; foreign/stale/wrong-kind/structural and fabricated construction requests preserve source",
+    "All four caller budgets pass exact/one-below Source metrics for all owned contexts",
+    "Each hard cap of 100000 passes with sufficient complete payload; one above rejects independently of truncation",
+    "Every owned proper prefix and trailing byte rejects",
+    "Material outer-limit extraction preserves complete 94178820-byte old field/history exports against Source in a separate commit",
+    "clippy -D warnings, formatting and file/function audits"
+  ],
+  "exclusions": [
+    "Full local and exact-head platform gates",
+    "Native populated-list fixtures (retained lists all empty)",
+    "Child bodies/components/folders/persist-ID storage acceptance",
+    "Native runtime/application/writer, physical or geometric acceptance"
+  ]
+}

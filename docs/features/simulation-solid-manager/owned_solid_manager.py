@@ -27,3 +27,11 @@ def owned_solid_headers() -> list[tuple[int, int, bytes]]:
     gates = (800068, 840013, 850032, 870004, 870008)
     versions = sorted({0, 2147483647, *(gate + delta for gate in gates for delta in (-1, 0, 1))})
     return [(profile, version, solid_header_literal(version, profile)) for version in versions for profile in range(4)]
+
+
+def solid_counted_nulls(version: int, first: int, second: int) -> bytes:
+    """Provide sufficient payload at and beyond the independent list cap; e.g. solid_counted_nulls(870008, 100000, 100000)."""
+    assert version in (870004, 870008), version
+    raw = signed_words(-2147483648, 2147483647, -1, 2, first) + bytes(first * 4)
+    if version >= 870008: raw += signed_words(second) + bytes(second * 4)
+    return raw
