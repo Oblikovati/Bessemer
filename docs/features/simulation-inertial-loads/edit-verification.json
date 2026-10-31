@@ -1,6 +1,6 @@
 {
   "issue": 136,
-  "status": "Scoped read/construction/edit and complete independent history corpora passed locally; final local and platform gates pending",
+  "status": "Complete scoped local gate and focused corpora passed; platform integration pending",
   "revision": "b1c868b709c6468180631d5fde96a00d07b2651a",
   "owned_contexts": 135,
   "native_contexts": 18,
@@ -52,9 +52,10 @@
     "exact_cut_full_gate": "Passed: 3184 tests, 0 failures, 38 ignored, 243 summaries; detached checkout removed after process completion"
   },
   "exclusions": [
-    "Final full local and platform feature gates",
+    "All five exact-head platform feature checks",
     "Native application acceptance",
     "Complete schema parity"
   ],
-  "history_verification": "history-verification.json"
+  "history_verification": "history-verification.json",
+  "acceptance": "acceptance.json"
 }

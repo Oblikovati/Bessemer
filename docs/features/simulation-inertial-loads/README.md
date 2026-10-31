@@ -3,7 +3,7 @@
 Feature [#136](https://github.com/Oblikovati/Bessemer/issues/136) covers complete
 Gravity, CentriFugal and BaseExcitation collections. Implementation follows the
 thermal acceptance gate in #134. Complete reads, construction and typed edits
-are implemented locally; remaining corpus and integration gates are unfinished.
+are implemented and verified locally; platform integration remains pending.
 
 The initial baseline retains complete clauses 14.338 and 14.341, hashes of the
 actual readers, and every native report row and candidate outcome from C-714
@@ -85,7 +85,10 @@ source/result handles and physical occurrence order are checked throughout. See
 `BESSEMER_INERTIAL_HISTORY_OUTPUT` and `BESSEMER_INERTIAL_NESTED_HISTORY_OUTPUT`
 paths export the full owned/native checked results.
 
-The final local PR gate and all five exact-head platform checks are required
+The complete local `cargo xtask pr` gate passed 3,204 tests with
+zero failures and 43 explicit ignores. The
+[acceptance ledger](acceptance.json) records the validated revision, toolchain,
+log hash and exclusions. All five exact-head platform checks are still required
 before merging. Native application acceptance remains separate.
 
 Native runtime dispatch, study-index association, model conversion, unit
