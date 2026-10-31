@@ -23,8 +23,11 @@ for strict replay. `--write` initializes evidence for review. Generated native
 binary packets stay under `target/`; the original report retains decoded values
 and raw spans as provenance. No target code executes.
 
-Production operations, full field/edit/history oracles, malformed/resource,
-ownership/concurrency and local/platform gates remain pending. Whole manager
+Production operations, malformed/resource, ownership/concurrency and
+local/platform gates remain pending. Complete independent field and ordered
+outer/nested edit-history expectations are retained for all 20 owned profiles
+and 427 accepted native arguments. Fresh strict replay reproduces them
+unchanged; Rust operation parity remains unproven. Whole manager
 inventory, the six historical SurfaceBody trailers, native writer/application
 and geometric acceptance are separate scopes.
 
