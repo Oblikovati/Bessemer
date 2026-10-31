@@ -10,7 +10,7 @@ from thermal_history_projection import history_projection_case
 from embedded_field_projection import embedded_field_case
 
 
-def nested_copy_rows(fields: list[bytes]) -> bytes:
+def nested_copy_rows(fields: list[bytes], project: Callable[[bytes], bytes] = embedded_field_case) -> bytes:
     """Derive every nested occurrence from independently observed source fields; e.g. nested_copy_rows(fields)."""
     rows = bytearray()
     count = 0
@@ -19,7 +19,7 @@ def nested_copy_rows(fields: list[bytes]) -> bytes:
         tag = struct.unpack_from('<I', field, 4 + length)[0]
         if tag != 5: continue
         raw = field[16 + length:]
-        observed = embedded_field_case(raw)
+        observed = project(raw)
         field_count = struct.unpack_from('<I', observed, 4 + len(raw))[0]
         for index in range(field_count):
             rows.extend(struct.pack('<IIIIIII', outer, outer, index, 0, 1, 0, index))
