@@ -30,7 +30,10 @@ complete expectations byte for byte. Twenty focused tests and clippy passed,
 including all six replacement kinds, opaque IDs, real wire-framing changes,
 no-op identities, exact preservation and source ownership. All fifteen public
 types have Send/Sync assertions. Six strict actual-source checks passed.
-The full local and platform acceptance gates remain unfinished. Eight threads
+The full local `cargo xtask pr` gate passed 3,221 tests with zero
+failures and 46 explicit ignores. The [acceptance ledger](acceptance.json)
+records the exact revision, fingerprints, toolchain, log hash and exclusions.
+All five exact-head platform feature checks remain pending. Eight threads
 each performed 32 mixed edits
 and matched serial bytes, all outer relations, nested source/replacement parents
 and result-handle ownership. See the

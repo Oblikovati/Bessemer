@@ -1,8 +1,8 @@
 {
   "issue": 138,
-  "status": "Complete focused/corpus checks passed; full local and platform feature gates remain unfinished",
+  "status": "Complete scoped local acceptance passed; exact-head platform checks pending",
   "base_revision": "f9e903f215116353f80c119aa1934287c5382a0d",
-  "implementation": "Uncommitted mass_element production module and integration tests",
+  "implementation": "Committed mass_element production module and integration tests",
   "owned_contexts": 196,
   "native_contexts": 2,
   "native_property_bytes": 2276,
@@ -32,7 +32,7 @@
     "Foreign/stale/out-of-range and invalid structural requests preserve source inputs"
   ],
   "exclusions": [
-    "Full local and exact-head platform gates",
+    "All five exact-head platform feature checks",
     "Sibling Material body support",
     "Native application/geometric acceptance",
     "Complete documented schema parity"
@@ -45,5 +45,7 @@
   },
   "history_verification": "history-verification.json",
   "malformed_cases": 14287,
-  "exact_and_one_below_budget_contexts": 196
+  "exact_and_one_below_budget_contexts": 196,
+  "validated_revision": "d35b87eb7f8dac7dbf3ab525d2ff84bcd68a602f",
+  "acceptance": "acceptance.json"
 }
