@@ -1,6 +1,6 @@
 {
   "issue": 140,
-  "status": "Complete local operation corpus; full local and exact-head platform gates pending",
+  "status": "Complete local operation corpus and full local gate passed; exact-head platform integration pending",
   "base_revision": "c3690b5790212e8b4df73a0cf10a7543a3540d86",
   "owned_contexts": 300,
   "native_candidate_attempts": 1297,
@@ -39,7 +39,7 @@
   ],
   "storage_note": "Standalone and exact-window prefixes reuse their existing exact body parent; a prefix window containing following bytes creates one consumed-body copy and rebinds text parents. Existing load paths do not call the new sealing helper.",
   "exclusions": [
-    "Full local and exact-head platform gates",
+    "Exact-head platform integration",
     "Native runtime/application/material-model/geometric acceptance",
     "Complete documented schema parity"
   ],

@@ -77,7 +77,7 @@ and prefix modes. Every proper prefix failed in both modes. Eight threads each
 ran 32 edits against four serial variants, comparing bytes, fields, coverage,
 identities, ordered parents and preservation. All fourteen public types/aliases
 have Send/Sync assertions. The [verification ledger](read-construction-verification.json)
-records these checks; full local and exact-head platform gates remain pending.
+records these checks; the full local PR gate also passed. Exact-head platform integration remains pending.
 Native runtime, application and geometric acceptance remain open.
 
 Set `BESSEMER_MATERIAL_NATIVE_INPUT` to `target/simulation-material-native.bin`
@@ -87,3 +87,6 @@ and `BESSEMER_MATERIAL_NATIVE_HISTORY_INPUT` to
 `target/simulation-material-native-history.bin` for full edit/history expectations.
 `BESSEMER_MATERIAL_PROJECTION_OUTPUT` and `BESSEMER_MATERIAL_HISTORY_OUTPUT`
 optionally export the complete checked packets.
+
+The [full local gate](full-local-verification.json) records the exact committed
+implementation, toolchain, test totals and complete log hash.
