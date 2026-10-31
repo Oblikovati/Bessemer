@@ -108,7 +108,10 @@ bytes, fields, spans and ordered histories: 1,024 mixed operations in total.
 Failure tests cover oversized inline text, aggregate-count exhaustion after
 partial validation, uncoupled blob lengths and caller-context mutation.
 
-Complete local validation and exact-head platform integration remain pending.
+Complete local validation passed: 3,447 tests passed, none failed and 91 were
+explicitly ignored across 260 summaries. The final strict reference replay passed
+all 39 checks. Exact-head platform integration remains pending. Counts and log
+hashes are retained in [full gate verification](full-gate-verification.json).
 Native application/geometry acceptance is separate. Behavior profile 1 targets
 the documented C-757 refinement; the original native outcomes remain replayable
 and unchanged, while the unavailable historical test file remains recorded as an
