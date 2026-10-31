@@ -34,6 +34,8 @@
 
 ### Added
 
+- Added complete direct Simulation BeamManager and MassElementManager Property profiles, exact construction and isolated signed-word edits with revision-bound field history. (#131)
+
 - Added complete Simulation LBC name-order and legacy three-group map framing, exact construction and isolated text/word edits with ordered history and explicit native-operation exclusions. (#130)
 
 - Added lossless counted Simulation version arrays and UniqueIds tables with metadata-only allocation capacity, typed field edits, exact reconstruction and complete history. (#129)

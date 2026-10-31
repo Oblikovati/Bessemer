@@ -537,3 +537,5 @@ Simulation LBC Property preserves version-selected and fixed writer layouts, exa
 Simulation counted version arrays and UniqueIds tables retain signed values, duplicates, ordering and original headers. Explicit profiles, resource limits and isolated field edits preserve complete byte images and history; allocation capacity stays metadata. See [the scalar-table evidence](docs/features/simulation-persistent-scalars/README.md).
 
 Simulation LBC name-order lists and legacy three-group maps preserve complete text frames, signed record words and counts. Exact constructors and isolated edits retain byte images, identities and ordered history. See [the final LBC stream evidence](docs/features/simulation-lbc-final-streams/README.md).
+
+Direct Simulation BeamManager and MassElementManager Property headers retain explicit version context, signed words and their documented runtime destination order. Complete construction and isolated edits preserve exact bytes and field history. See [the direct manager-header evidence](docs/features/simulation-manager-property/README.md).

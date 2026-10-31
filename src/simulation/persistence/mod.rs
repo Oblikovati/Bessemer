@@ -2,6 +2,7 @@
 mod coverage;
 mod lbc_final;
 mod legacy;
+mod manager_property;
 mod scalars;
 mod study;
 mod study_edit;
@@ -12,6 +13,7 @@ use super::{Result, invalid, require};
 pub use coverage::*;
 pub use lbc_final::*;
 pub use legacy::*;
+pub use manager_property::*;
 pub use scalars::*;
 pub use study::*;
 pub use study_edit::*;
