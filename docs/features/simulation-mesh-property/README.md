@@ -109,7 +109,11 @@ complete serial bytes, fields, extents, coverage, limits and ordered histories.
 All 18 focused Rust checks pass, including four native checks; Clippy passes
 with warnings denied. [Adversarial and typed-edit verification](adversarial-typed-verification.json)
 records all counts, source identities, logs and exclusions.
-Full local/platform and ThreadSanitizer gates remain pending. Native writer symmetry,
+The full local `cargo xtask pr` gate passed at runtime commit
+`0e13a3b4f69bcca9b365eded685c6e3c5e5d3c7f`: 3,493 tests passed, zero failed,
+and 102 were ignored across 264 summaries. The process exited successfully;
+[full gate verification](full-gate-verification.json) records its tree and log hash.
+Exact-head platform and ThreadSanitizer gates remain pending. Native writer symmetry,
 application opening, physical meanings, geometry validation, universal runtime
 version selection and whole-format parity remain unproven.
 
