@@ -17,3 +17,5 @@ pub use values::{
 
 pub(super) use archive::{construction_mismatch, encode_fields};
 pub(super) use coverage::{diagnostics, nested_counts, read_completion};
+
+pub(super) use history::compose;

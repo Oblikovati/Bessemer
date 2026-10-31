@@ -10,8 +10,8 @@ use std::sync::Arc;
 /// One physical outer occurrence tied to an immutable complete collection revision.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct SimulationThermalFieldId {
-    pub(super) revision: ArchiveRevision,
-    pub(super) ordinal: usize,
+    pub(in crate::simulation::persistence) revision: ArchiveRevision,
+    pub(in crate::simulation::persistence) ordinal: usize,
 }
 
 impl SimulationThermalFieldId {

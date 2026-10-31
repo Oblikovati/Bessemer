@@ -1,3 +1,4 @@
+use super::super::load_snapshot::BinaryLoadSnapshot;
 use super::*;
 use crate::archive_codec::index_field_occurrences;
 use crate::model_archives::{ModelField, SimulationEmbeddedArchive};
@@ -9,9 +10,9 @@ type ThermalHistories = (
     Arc<[SimulationThermalNestedHistory]>,
 );
 
-pub(super) fn compose(
-    source: &SimulationThermalCollection,
-    result: &SimulationThermalCollection,
+pub(in crate::simulation::persistence) fn compose<S: BinaryLoadSnapshot>(
+    source: &S,
+    result: &S,
     requested: usize,
     replacement: &SimulationThermalValue,
     changed: bool,
@@ -28,9 +29,9 @@ pub(super) fn compose(
     Ok((outer.into(), nested.into()))
 }
 
-fn outer_relation(
-    source: &SimulationThermalCollection,
-    result: &SimulationThermalCollection,
+fn outer_relation<S: BinaryLoadSnapshot>(
+    source: &S,
+    result: &S,
     ordinal: usize,
     derived: bool,
 ) -> Result<SimulationThermalHistory> {
@@ -51,22 +52,22 @@ fn outer_relation(
     })
 }
 
-struct NestedContext<'a> {
-    source: &'a SimulationThermalCollection,
-    result: &'a SimulationThermalCollection,
+struct NestedContext<'a, S: BinaryLoadSnapshot> {
+    source: &'a S,
+    result: &'a S,
     ordinal: usize,
     before: &'a SimulationEmbeddedArchive,
     after: &'a SimulationEmbeddedArchive,
     replacement: Option<&'a SimulationEmbeddedArchive>,
 }
 
-fn nested_context<'a>(
-    source: &'a SimulationThermalCollection,
-    result: &'a SimulationThermalCollection,
+fn nested_context<'a, S: BinaryLoadSnapshot>(
+    source: &'a S,
+    result: &'a S,
     ordinal: usize,
     replacement: &'a SimulationThermalValue,
     derived: bool,
-) -> Result<Option<NestedContext<'a>>> {
+) -> Result<Option<NestedContext<'a, S>>> {
     let Some(before) = embedded_field(source, ordinal)? else {
         return Ok(None);
     };
@@ -85,13 +86,13 @@ fn nested_context<'a>(
     }))
 }
 
-fn required_embedded_field(
-    collection: &SimulationThermalCollection,
+fn required_embedded_field<S: BinaryLoadSnapshot>(
+    collection: &S,
     ordinal: usize,
 ) -> Result<&SimulationEmbeddedArchive> {
     embedded_field(collection, ordinal)?.ok_or_else(|| {
         invalid(
-            "thermal nested result",
+            &format!("{} nested result", collection.subject()),
             format!(
                 "ordinal {ordinal} has no embedded value; expected the original archive field role"
             ),
@@ -99,13 +100,13 @@ fn required_embedded_field(
     })
 }
 
-fn embedded_field(
-    collection: &SimulationThermalCollection,
+fn embedded_field<S: BinaryLoadSnapshot>(
+    collection: &S,
     ordinal: usize,
 ) -> Result<Option<&SimulationEmbeddedArchive>> {
     let field = collection.fields().get(ordinal).ok_or_else(|| {
         invalid(
-            "thermal nested ordinal",
+            &format!("{} nested ordinal", collection.subject()),
             format!(
                 "ordinal {ordinal}; expected < {} fields",
                 collection.fields().len()
@@ -118,7 +119,7 @@ fn embedded_field(
     }
 }
 
-impl NestedContext<'_> {
+impl<S: BinaryLoadSnapshot> NestedContext<'_, S> {
     fn relations(&self) -> Result<Vec<SimulationThermalNestedHistory>> {
         let before = index_field_occurrences(self.before.fields(), |field| field.path.as_ref());
         let after = index_field_occurrences(self.after.fields(), |field| field.path.as_ref());
@@ -154,7 +155,12 @@ impl NestedContext<'_> {
             result: target
                 .map(|index| self.after.field_handle(index))
                 .transpose()?,
-            relation: nested_relation(original, target, self.replacement.is_some())?,
+            relation: nested_relation(
+                original,
+                target,
+                self.replacement.is_some(),
+                self.source.subject(),
+            )?,
         })
     }
 
@@ -176,7 +182,7 @@ impl NestedContext<'_> {
         }
         if parents.is_empty() {
             return Err(invalid(
-                "thermal nested history",
+                &format!("{} nested history", self.source.subject()),
                 format!(
                     "source {original:?}, result {target:?}; expected at least one source/replacement parent"
                 ),
@@ -190,6 +196,7 @@ fn nested_relation(
     original: Option<usize>,
     target: Option<usize>,
     replaced: bool,
+    family: &str,
 ) -> Result<SimulationThermalRelation> {
     use SimulationThermalRelation::{Copied, Created, Deleted, Derived};
     match (original, target) {
@@ -197,7 +204,7 @@ fn nested_relation(
         (Some(_), None) => Ok(Deleted),
         (None, Some(_)) => Ok(Created),
         (None, None) => Err(invalid(
-            "thermal nested history",
+            &format!("{family} nested history"),
             "source None, result None; expected at least one field occurrence",
         )),
     }

@@ -158,3 +158,21 @@ fn append_value(bytes: &mut Vec<u8>, value: &SimulationThermalValue) -> Result<(
     }
     Ok(())
 }
+
+impl super::super::load_snapshot::BinaryLoadSnapshot for SimulationThermalCollection {
+    fn fields(&self) -> &[SimulationThermalField] {
+        self.fields()
+    }
+    fn field_id(&self, ordinal: usize) -> Result<super::SimulationThermalFieldId> {
+        self.field_id(ordinal)
+    }
+    fn field_offsets(&self) -> &[(usize, usize)] {
+        self.field_offsets()
+    }
+    fn wire_bytes(&self) -> &[u8] {
+        &self.parent
+    }
+    fn subject(&self) -> &'static str {
+        "thermal"
+    }
+}
