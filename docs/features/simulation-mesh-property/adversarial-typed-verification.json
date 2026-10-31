@@ -1,0 +1,388 @@
+{
+  "feature_issue": 163,
+  "implementation_revision": "fe00c0fe8ca5335b30951b803c61ceb4abdafe60",
+  "scope": "Complete focused adversarial, supported-value edit and mixed-concurrency acceptance; full local/platform gates remain pending",
+  "behavior_profile": 1,
+  "source_checks": 35,
+  "focused_rust_tests_including_native": 18,
+  "native_tests": 4,
+  "all_exit_codes": 0,
+  "all_processes_reaped": true,
+  "clippy_warnings": 0,
+  "owned_contexts": 588,
+  "native_accepted_contexts": 357,
+  "native_failed_arguments": 34,
+  "malformed": {
+    "contexts": 588,
+    "mutations": 61791,
+    "accepted": 2052,
+    "rejected": 59739,
+    "bytes": 2296718,
+    "sha256": "89c1049b89aa5171233d7de1d16f11e777a8a42444bdb98b66095c0c6831bcfe"
+  },
+  "hardcaps": {
+    "cases": [
+      {
+        "name": "text_list",
+        "count": 10000,
+        "success": true,
+        "fields": 10015,
+        "bytes": 40072,
+        "sha256": "904ad75924543f5299f04d0e1df978ead358571bd18888cb18a4659230972f9a"
+      },
+      {
+        "name": "text_list",
+        "count": 10001,
+        "success": false,
+        "fields": 0,
+        "bytes": 40076,
+        "sha256": "26557fc65a619a5408b611649011850f60fc3fbace37db6d5b8782f31344f186"
+      },
+      {
+        "name": "references",
+        "count": 10000,
+        "success": true,
+        "fields": 100015,
+        "bytes": 390072,
+        "sha256": "caa20099706bfa4c74ffbffe49bbd03e56710085293a3813a859de1a3c35180c"
+      },
+      {
+        "name": "references",
+        "count": 10001,
+        "success": false,
+        "fields": 0,
+        "bytes": 390111,
+        "sha256": "e720d1e98f7d6e4f71a236206698404b8eb9841ffb77c278170ada70ca5e2e1a"
+      },
+      {
+        "name": "direct_records",
+        "count": 10000,
+        "success": true,
+        "fields": 90022,
+        "bytes": 360116,
+        "sha256": "c243cd32e0f0d2bb3c3f62aa6303e67799ce57557da092c03166846b08a1a2fa"
+      },
+      {
+        "name": "direct_records",
+        "count": 10001,
+        "success": false,
+        "fields": 0,
+        "bytes": 360152,
+        "sha256": "5d705565e060757dc94bacdb2e95e883587b9b8e3754cf3a5ae5fdb33f00f5fd"
+      },
+      {
+        "name": "duration",
+        "count": 10000,
+        "success": true,
+        "fields": 10032,
+        "bytes": 40164,
+        "sha256": "020f313c2a1d89233559c33952ba398aea0b73daca14bf7928da38663e3f2136"
+      },
+      {
+        "name": "duration",
+        "count": 10001,
+        "success": false,
+        "fields": 0,
+        "bytes": 40168,
+        "sha256": "4a8f80003c81d31208f2f5837c1f3b2d1a88df2168491417e88f923d6c7fe88b"
+      },
+      {
+        "name": "array_objects",
+        "count": 10000,
+        "success": true,
+        "fields": 70034,
+        "bytes": 280172,
+        "sha256": "b0c4ee5e58d7efe97ae2e774c7c26421292e37bc6722930434f524040d50e9a5"
+      },
+      {
+        "name": "array_objects",
+        "count": 10001,
+        "success": false,
+        "fields": 0,
+        "bytes": 280200,
+        "sha256": "e25ba78b052790ac6036fb0ca1f4edc7ab2576c12c10f73368e6e1285d3d287f"
+      },
+      {
+        "name": "keyed_parents",
+        "count": 10000,
+        "success": true,
+        "fields": 90044,
+        "bytes": 480220,
+        "sha256": "a989bcf44cece2120d6de1cca32e2a3830489d3910013bfcceead390f0f842fe"
+      },
+      {
+        "name": "keyed_parents",
+        "count": 10001,
+        "success": false,
+        "fields": 0,
+        "bytes": 480268,
+        "sha256": "228ca5394a65fb8fbf384ca7ea9205669b32e6ad25e0ed81edd6502a2df7d132"
+      },
+      {
+        "name": "double_array",
+        "count": 10000,
+        "success": true,
+        "fields": 10045,
+        "bytes": 80224,
+        "sha256": "94701882e6bb996ada2c4768b185c47e83b3ee3ebd5022efed3b743a206d6b43"
+      },
+      {
+        "name": "double_array",
+        "count": 10001,
+        "success": false,
+        "fields": 0,
+        "bytes": 80232,
+        "sha256": "2090483a8cd848cbb47ee7236334ed79f2ad7dfb8648b58bdddce2461221e203"
+      },
+      {
+        "name": "newest_keys",
+        "count": 10000,
+        "success": true,
+        "fields": 10047,
+        "bytes": 40232,
+        "sha256": "22c4628e52c7830f8bb55c789f0d386b5059257c6bea4aed5f5c9148d6f863b3"
+      },
+      {
+        "name": "newest_keys",
+        "count": 10001,
+        "success": false,
+        "fields": 0,
+        "bytes": 40236,
+        "sha256": "e02fa2e03bbddb693facfc225dda16fa9a2d59d0f61ee0bd0be3aec5b7f40bd2"
+      },
+      {
+        "name": "blob",
+        "count": 1000000,
+        "success": true,
+        "fields": 26,
+        "bytes": 1000120,
+        "sha256": "afd01fe8c63e79e6d24d96b47444bde1c895a314b417700f59d71c917103a273"
+      },
+      {
+        "name": "blob",
+        "count": 1000001,
+        "success": false,
+        "fields": 0,
+        "bytes": 1000121,
+        "sha256": "3e94f0c7f4ce5e8ee5970e210dcf0e7af1bf071046960865fd0420ae29fed48d"
+      },
+      {
+        "name": "extension2c",
+        "count": 10000,
+        "success": true,
+        "fields": 340045,
+        "bytes": 2680216,
+        "sha256": "5719b637490aaaa18575453da54a9f9efd91f835e6a68b4001ea07307f13eb86"
+      },
+      {
+        "name": "extension2c",
+        "count": 10001,
+        "success": false,
+        "fields": 0,
+        "bytes": 2680484,
+        "sha256": "7cad45b524397f7ff49a5d90669e4fa68b985ab357b60e57faac35304a73ae33"
+      },
+      {
+        "name": "extension38",
+        "count": 10000,
+        "success": true,
+        "fields": 560046,
+        "bytes": 4280220,
+        "sha256": "f3e6afe20861aaf7be3ca52e4e673a6871b5175ca584199cd5d5750e48c3d421"
+      },
+      {
+        "name": "extension38",
+        "count": 10001,
+        "success": false,
+        "fields": 0,
+        "bytes": 4280648,
+        "sha256": "20f0469265a2cc327617d392830363c107209d6526dc00c953307b2e76d54220"
+      },
+      {
+        "name": "nested_array0",
+        "count": 100000,
+        "success": true,
+        "fields": 100101,
+        "bytes": 800644,
+        "sha256": "550da1b5e3d29796ffbe95c480187de64d82fc296ff34f02713924abff7a526f"
+      },
+      {
+        "name": "nested_array0",
+        "count": 100001,
+        "success": false,
+        "fields": 0,
+        "bytes": 800652,
+        "sha256": "273d53920e0c8131f6f2c29acafa8bb298ef9349cd09d5b99d3b3516c169e995"
+      },
+      {
+        "name": "nested_array1",
+        "count": 100000,
+        "success": true,
+        "fields": 100101,
+        "bytes": 800644,
+        "sha256": "8b0a63f24980e15ace07a4ca4712deacfa59493c5e6a99d305ce194b1be2bcff"
+      },
+      {
+        "name": "nested_array1",
+        "count": 100001,
+        "success": false,
+        "fields": 0,
+        "bytes": 800652,
+        "sha256": "76a471c259d37874ae6f539e5a765e6f5e83c88df095ab575e8721ea38d6c1e7"
+      },
+      {
+        "name": "word_array0",
+        "count": 10000,
+        "success": true,
+        "fields": 10041,
+        "bytes": 40200,
+        "sha256": "453cb9cf644f2b6e155cee3dd51c12d738473c0da15a156ef6274d35806e3a86"
+      },
+      {
+        "name": "word_array0",
+        "count": 10001,
+        "success": false,
+        "fields": 0,
+        "bytes": 40204,
+        "sha256": "87317c03e058b3ee0fb6f737b68f79c8501f258ec5347b4f71ca3815fba503da"
+      },
+      {
+        "name": "word_array1",
+        "count": 10000,
+        "success": true,
+        "fields": 10041,
+        "bytes": 40200,
+        "sha256": "a8772de52dbf3fc9acefbf3ee8bea367a76a770d74261afc66591e710e3658b9"
+      },
+      {
+        "name": "word_array1",
+        "count": 10001,
+        "success": false,
+        "fields": 0,
+        "bytes": 40204,
+        "sha256": "39288b1580da5644569d11800ebfd9dea8a579f38e3aa9a2518b1dff7001739a"
+      },
+      {
+        "name": "keyed_children",
+        "count": 10000,
+        "success": true,
+        "fields": 10053,
+        "bytes": 400268,
+        "sha256": "529088490de7e7a59ceccec0f9ec8de9d92724cd003d4a7bc518d6ec7df9d2d9"
+      },
+      {
+        "name": "keyed_children",
+        "count": 10001,
+        "success": false,
+        "fields": 0,
+        "bytes": 400308,
+        "sha256": "8ab649e7de0c2f1b42c8d39d1edd803cb498aacbde8931455fac32bc165c287b"
+      }
+    ],
+    "contexts": 32,
+    "bytes": 23509140,
+    "sha256": "9f57c35a912076d04642d87ff2249ccbaed6cfc0c7192c13037381400fc63eb1"
+  },
+  "extents": {
+    "contexts": 588,
+    "proper_prefixes": 1151425,
+    "accepted_prefixes": 0,
+    "trailing_byte_rejections": 588
+  },
+  "changed_value_counts": {
+    "signed": 588,
+    "unsigned_not_present_in_outer_grammar": 0,
+    "double_bits": 588,
+    "text": 4128,
+    "bytes": 46430,
+    "all_distinct_archive_donors": 1392,
+    "total": 53126
+  },
+  "concurrency": {
+    "workers": 8,
+    "contexts_per_worker": 588,
+    "visits_per_worker_by_kind": [
+      588,
+      0,
+      588,
+      1326,
+      557,
+      580
+    ],
+    "total_operations": 29112,
+    "each_selected_family_visited_per_worker": true,
+    "compared": [
+      "complete bytes",
+      "fields",
+      "field offsets",
+      "direct record extents",
+      "original and replacement parents",
+      "ordered outer/nested history",
+      "all coverage values",
+      "all caller budgets",
+      "input isolation"
+    ]
+  },
+  "null_and_nonnull_archive_donors_included": true,
+  "all_positive_cap_and_accepted_mutant_constructions_verified": true,
+  "function_and_file_bounds_audited": true,
+  "source_snapshot_identity": "b9f0ea2f5d07f1f44828529d16603a15f5721efd8f0397aebfbbbc7e8353dbe4",
+  "changed_existing_external_source_hashes": [],
+  "artifacts": {
+    "target/mesh-property-adversarial-write.log": {
+      "bytes": 5128,
+      "sha256": "35637ed8cab364d4605a4e390021fb443dd5eb91e1ae861fddbb9f500297831a"
+    },
+    "target/mesh-property-adversarial-strict.log": {
+      "bytes": 5128,
+      "sha256": "610a00bb8c1d8d2ec72e6b9bd889ecfdf6519c1aa60e8e7539edb6451992d8cb"
+    },
+    "target/mesh-property-final-native-focused.log": {
+      "bytes": 2304,
+      "sha256": "1163a3905a93050d79d7ca390752387eef88369301916bd26c7dd707caec6a81"
+    },
+    "target/mesh-property-final-clippy.log": {
+      "bytes": 135,
+      "sha256": "5be2bc5e1a31220974ff58a9adf38fb5add39c15aa2a9f3994fc5916ac15e8dd"
+    }
+  },
+  "test_sources": {
+    "tests/simulation_mesh_property.rs": "057a2da797809b975dc78600f7d8b6b6020e7a2948643153a11ce1d3ea94c34e",
+    "tests/simulation_mesh_property/budgets.rs": "98786f9cca51156e92bf863a50c54fe3cd49483eb7c749b7a6913e39abd8bf61",
+    "tests/simulation_mesh_property/concurrency.rs": "a34955c0aa6524c2af8712ab72cc0150fa7ee13505cf93408af0c4926226d4f6",
+    "tests/simulation_mesh_property/contracts.rs": "2ea6f1fe19685061bb3f2a7f89a8cb0d8f9996162b9a7516769168b087085c71",
+    "tests/simulation_mesh_property/history.rs": "640f42b8a51d13f3d2f2cf4a5910075ae7743b3a7085b0b44a12b87cfdbd13aa",
+    "tests/simulation_mesh_property/malformed.rs": "fc402432eb99aa3da36b23331a7fa27c2fc54f1ec702c9908444b29ed408f5e5",
+    "tests/simulation_mesh_property/records.rs": "1e608f9ae5fe5d1dd21e7d8362d28937fe0bdd9a729b2f23d4d09cc7a0d826df",
+    "tests/simulation_mesh_property/typed_edits.rs": "79a0ed952b02463798a921055ee3c3879abd6ae3023c1701447e6c9829a2578c",
+    "tests/simulation_mesh_property/typed_values.rs": "41f964f784287084e32c4893b7079bc52c039df01a3cc5b4bd3db4261a3128c3"
+  },
+  "oracle_sources": {
+    "freeze_mesh_property.py": "e2eaa48739b00d32d04953b93456aeae7ff77eb258068a9cc81f9719b26e6e6c",
+    "owned_property.py": "ce767c15490864f125aede7106149d58d5d976fb16deca7e5ee35f0bebfa5d3e",
+    "property_bindings.py": "ab60ec022a71eb573a3610b3afb1f7faaf3dd5e924135d3d9af5547a0b24e27f",
+    "property_cap_literals.py": "afcf6a6dc4209e1852372d2234e2d5e088edd1335131980453ba28a28a0234b3",
+    "property_caps.py": "e2cc7d4d5ef47eb7aaca2fa10e4d083ac603e56a0637f60b576c53f6d3a76bed",
+    "property_collection_literals.py": "50a2ee4f10da4d44aa244dbfadfa52e3cf5739056123b149dc17abaef5f8019c",
+    "property_evidence.py": "787fe82f2a436ec079369758bea26af662b899aec81dc83ceb2b0771d7ecda3f",
+    "property_extents.py": "b6e5eaa7acec828b6ae3480e97181ee8a32f74dd715549ccee446a5a64064300",
+    "property_history.py": "9d5c97f28b750eab9b4a8a9d5dbaf66c42aa7863d547cf952b9871195b7c4c51",
+    "property_initial_literals.py": "fd807348ffa772355388d1e8403f02a3b2c11bbcecc2c6764be5d05311f0a311",
+    "property_literal_values.py": "51615a3c8585007fb8b2e500ec2410df2bb307a867e2dba7284cb6ae0e5cdd9b",
+    "property_malformed.py": "b2455cb508e649722654ef69dfa6b35f8c7fea1ed8c99c502f1cc4e8153ebac3",
+    "property_metrics.py": "3662d3e07cbb762349ac3e1701e8cd8fcae79e72052a5b19e475be53a4e01d27",
+    "property_native.py": "2ea7b2f5768da624c7f605cddcee83985fc2f815b32f031108ef8a2545513e93",
+    "property_native_operations.py": "1c74b365049356778f703e84b9d14721ec2a7a7634062dcf44bb4d5cd94918ba",
+    "property_nested_literals.py": "df36e2fa5e3d348e541500dd3e401c88beecacf04a62e458576b4bd82ee80b11",
+    "property_owned_packets.py": "839cc56b9e9e275074cfeefd4130079f604dcd99992cc8a410daa3fa258b361f",
+    "property_projection.py": "800da74836bb8992466a4150e34a31dde532583e057b2c78245051c540460d99"
+  },
+  "exclusions": [
+    "Full local PR gate",
+    "Exact-head Linux/macOS/Windows and ThreadSanitizer integration",
+    "Native populated nested/set fixtures",
+    "Native application/writer and geometry acceptance",
+    "Whole-format schema parity"
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending"
+}

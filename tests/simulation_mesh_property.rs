@@ -2,6 +2,8 @@
 use bessemer::{model_archives::ModelArchiveLimits, simulation::*};
 #[path = "simulation_mesh_property/budgets.rs"]
 mod budgets;
+#[path = "simulation_mesh_property/concurrency.rs"]
+mod concurrency;
 #[path = "simulation_mesh_property/contracts.rs"]
 mod contracts;
 #[path = "simulation_mesh_property/history.rs"]
@@ -17,7 +19,6 @@ mod load_history;
 #[path = "support/binary_load_limits.rs"]
 #[allow(
     dead_code,
-    unused_imports,
     reason = "Shared limits helpers also serve malformed grammar and mutation suites."
 )]
 mod load_limits;
@@ -33,8 +34,22 @@ mod load_mutations;
     reason = "Shared exporters also serve malformed and nested-history corpora."
 )]
 mod load_projection;
+#[path = "simulation_mesh_property/malformed.rs"]
+mod malformed;
 #[path = "simulation_mesh_property/records.rs"]
 mod records;
+#[path = "simulation_mesh_property/typed_edits.rs"]
+mod typed_edits;
+#[path = "support/typed_load_history.rs"]
+mod typed_load_history;
+#[path = "support/typed_load_values.rs"]
+#[allow(
+    dead_code,
+    reason = "Shared value choices also serve other persistence suites; this suite enumerates every distinct archive donor."
+)]
+mod typed_load_values;
+#[path = "simulation_mesh_property/typed_values.rs"]
+mod typed_values;
 use load_projection::{
     consume_expected_fields, project_field, project_packet, project_word, read_word,
     take_projection,

@@ -1,0 +1,263 @@
+{
+  "cases": [
+    {
+      "name": "text_list",
+      "count": 10000,
+      "success": true,
+      "fields": 10015,
+      "bytes": 40072,
+      "sha256": "904ad75924543f5299f04d0e1df978ead358571bd18888cb18a4659230972f9a"
+    },
+    {
+      "name": "text_list",
+      "count": 10001,
+      "success": false,
+      "fields": 0,
+      "bytes": 40076,
+      "sha256": "26557fc65a619a5408b611649011850f60fc3fbace37db6d5b8782f31344f186"
+    },
+    {
+      "name": "references",
+      "count": 10000,
+      "success": true,
+      "fields": 100015,
+      "bytes": 390072,
+      "sha256": "caa20099706bfa4c74ffbffe49bbd03e56710085293a3813a859de1a3c35180c"
+    },
+    {
+      "name": "references",
+      "count": 10001,
+      "success": false,
+      "fields": 0,
+      "bytes": 390111,
+      "sha256": "e720d1e98f7d6e4f71a236206698404b8eb9841ffb77c278170ada70ca5e2e1a"
+    },
+    {
+      "name": "direct_records",
+      "count": 10000,
+      "success": true,
+      "fields": 90022,
+      "bytes": 360116,
+      "sha256": "c243cd32e0f0d2bb3c3f62aa6303e67799ce57557da092c03166846b08a1a2fa"
+    },
+    {
+      "name": "direct_records",
+      "count": 10001,
+      "success": false,
+      "fields": 0,
+      "bytes": 360152,
+      "sha256": "5d705565e060757dc94bacdb2e95e883587b9b8e3754cf3a5ae5fdb33f00f5fd"
+    },
+    {
+      "name": "duration",
+      "count": 10000,
+      "success": true,
+      "fields": 10032,
+      "bytes": 40164,
+      "sha256": "020f313c2a1d89233559c33952ba398aea0b73daca14bf7928da38663e3f2136"
+    },
+    {
+      "name": "duration",
+      "count": 10001,
+      "success": false,
+      "fields": 0,
+      "bytes": 40168,
+      "sha256": "4a8f80003c81d31208f2f5837c1f3b2d1a88df2168491417e88f923d6c7fe88b"
+    },
+    {
+      "name": "array_objects",
+      "count": 10000,
+      "success": true,
+      "fields": 70034,
+      "bytes": 280172,
+      "sha256": "b0c4ee5e58d7efe97ae2e774c7c26421292e37bc6722930434f524040d50e9a5"
+    },
+    {
+      "name": "array_objects",
+      "count": 10001,
+      "success": false,
+      "fields": 0,
+      "bytes": 280200,
+      "sha256": "e25ba78b052790ac6036fb0ca1f4edc7ab2576c12c10f73368e6e1285d3d287f"
+    },
+    {
+      "name": "keyed_parents",
+      "count": 10000,
+      "success": true,
+      "fields": 90044,
+      "bytes": 480220,
+      "sha256": "a989bcf44cece2120d6de1cca32e2a3830489d3910013bfcceead390f0f842fe"
+    },
+    {
+      "name": "keyed_parents",
+      "count": 10001,
+      "success": false,
+      "fields": 0,
+      "bytes": 480268,
+      "sha256": "228ca5394a65fb8fbf384ca7ea9205669b32e6ad25e0ed81edd6502a2df7d132"
+    },
+    {
+      "name": "double_array",
+      "count": 10000,
+      "success": true,
+      "fields": 10045,
+      "bytes": 80224,
+      "sha256": "94701882e6bb996ada2c4768b185c47e83b3ee3ebd5022efed3b743a206d6b43"
+    },
+    {
+      "name": "double_array",
+      "count": 10001,
+      "success": false,
+      "fields": 0,
+      "bytes": 80232,
+      "sha256": "2090483a8cd848cbb47ee7236334ed79f2ad7dfb8648b58bdddce2461221e203"
+    },
+    {
+      "name": "newest_keys",
+      "count": 10000,
+      "success": true,
+      "fields": 10047,
+      "bytes": 40232,
+      "sha256": "22c4628e52c7830f8bb55c789f0d386b5059257c6bea4aed5f5c9148d6f863b3"
+    },
+    {
+      "name": "newest_keys",
+      "count": 10001,
+      "success": false,
+      "fields": 0,
+      "bytes": 40236,
+      "sha256": "e02fa2e03bbddb693facfc225dda16fa9a2d59d0f61ee0bd0be3aec5b7f40bd2"
+    },
+    {
+      "name": "blob",
+      "count": 1000000,
+      "success": true,
+      "fields": 26,
+      "bytes": 1000120,
+      "sha256": "afd01fe8c63e79e6d24d96b47444bde1c895a314b417700f59d71c917103a273"
+    },
+    {
+      "name": "blob",
+      "count": 1000001,
+      "success": false,
+      "fields": 0,
+      "bytes": 1000121,
+      "sha256": "3e94f0c7f4ce5e8ee5970e210dcf0e7af1bf071046960865fd0420ae29fed48d"
+    },
+    {
+      "name": "extension2c",
+      "count": 10000,
+      "success": true,
+      "fields": 340045,
+      "bytes": 2680216,
+      "sha256": "5719b637490aaaa18575453da54a9f9efd91f835e6a68b4001ea07307f13eb86"
+    },
+    {
+      "name": "extension2c",
+      "count": 10001,
+      "success": false,
+      "fields": 0,
+      "bytes": 2680484,
+      "sha256": "7cad45b524397f7ff49a5d90669e4fa68b985ab357b60e57faac35304a73ae33"
+    },
+    {
+      "name": "extension38",
+      "count": 10000,
+      "success": true,
+      "fields": 560046,
+      "bytes": 4280220,
+      "sha256": "f3e6afe20861aaf7be3ca52e4e673a6871b5175ca584199cd5d5750e48c3d421"
+    },
+    {
+      "name": "extension38",
+      "count": 10001,
+      "success": false,
+      "fields": 0,
+      "bytes": 4280648,
+      "sha256": "20f0469265a2cc327617d392830363c107209d6526dc00c953307b2e76d54220"
+    },
+    {
+      "name": "nested_array0",
+      "count": 100000,
+      "success": true,
+      "fields": 100101,
+      "bytes": 800644,
+      "sha256": "550da1b5e3d29796ffbe95c480187de64d82fc296ff34f02713924abff7a526f"
+    },
+    {
+      "name": "nested_array0",
+      "count": 100001,
+      "success": false,
+      "fields": 0,
+      "bytes": 800652,
+      "sha256": "273d53920e0c8131f6f2c29acafa8bb298ef9349cd09d5b99d3b3516c169e995"
+    },
+    {
+      "name": "nested_array1",
+      "count": 100000,
+      "success": true,
+      "fields": 100101,
+      "bytes": 800644,
+      "sha256": "8b0a63f24980e15ace07a4ca4712deacfa59493c5e6a99d305ce194b1be2bcff"
+    },
+    {
+      "name": "nested_array1",
+      "count": 100001,
+      "success": false,
+      "fields": 0,
+      "bytes": 800652,
+      "sha256": "76a471c259d37874ae6f539e5a765e6f5e83c88df095ab575e8721ea38d6c1e7"
+    },
+    {
+      "name": "word_array0",
+      "count": 10000,
+      "success": true,
+      "fields": 10041,
+      "bytes": 40200,
+      "sha256": "453cb9cf644f2b6e155cee3dd51c12d738473c0da15a156ef6274d35806e3a86"
+    },
+    {
+      "name": "word_array0",
+      "count": 10001,
+      "success": false,
+      "fields": 0,
+      "bytes": 40204,
+      "sha256": "87317c03e058b3ee0fb6f737b68f79c8501f258ec5347b4f71ca3815fba503da"
+    },
+    {
+      "name": "word_array1",
+      "count": 10000,
+      "success": true,
+      "fields": 10041,
+      "bytes": 40200,
+      "sha256": "a8772de52dbf3fc9acefbf3ee8bea367a76a770d74261afc66591e710e3658b9"
+    },
+    {
+      "name": "word_array1",
+      "count": 10001,
+      "success": false,
+      "fields": 0,
+      "bytes": 40204,
+      "sha256": "39288b1580da5644569d11800ebfd9dea8a579f38e3aa9a2518b1dff7001739a"
+    },
+    {
+      "name": "keyed_children",
+      "count": 10000,
+      "success": true,
+      "fields": 10053,
+      "bytes": 400268,
+      "sha256": "529088490de7e7a59ceccec0f9ec8de9d92724cd003d4a7bc518d6ec7df9d2d9"
+    },
+    {
+      "name": "keyed_children",
+      "count": 10001,
+      "success": false,
+      "fields": 0,
+      "bytes": 400308,
+      "sha256": "8ab649e7de0c2f1b42c8d39d1edd803cb498aacbde8931455fac32bc165c287b"
+    }
+  ],
+  "contexts": 32,
+  "bytes": 23509140,
+  "sha256": "9f57c35a912076d04642d87ff2249ccbaed6cfc0c7192c13037381400fc63eb1"
+}
