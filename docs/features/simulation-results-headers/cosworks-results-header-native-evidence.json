@@ -1,0 +1,2946 @@
+{
+  "evidence": "C-762",
+  "literals": [
+    {
+      "address": "0x181f83f80",
+      "name": "Results",
+      "raw_hex": "52006500730075006c00740073000000"
+    },
+    {
+      "address": "0x181f53138",
+      "name": "Property",
+      "raw_hex": "500072006f00700065007200740079000000"
+    }
+  ],
+  "module_sha256": "f4cf8adfc0f6e2e36c3a29765d28bd0d073f952e5078c5dcc7cc0d5a0d409c36",
+  "functions": [
+    {
+      "address": "0x18118aaa0",
+      "end": "0x18118ab63",
+      "raw_sha256": "785eea50e6abc4881699e85b38b52702c53b7cf39cf0a7ce618967112442ebfe"
+    },
+    {
+      "address": "0x18118c1f0",
+      "end": "0x18118c533",
+      "raw_sha256": "07255c61bb7a698379d09db3bd0e95ae7b138d0b56c7693a53d66e20e937169f"
+    }
+  ],
+  "constructor": "0x18118aaa0",
+  "vtable": "0x182041c28",
+  "reader_slot": "0x182041c70",
+  "reader": "0x18118c1f0",
+  "version_constants": [
+    {
+      "address": "0x18201a2f8",
+      "value": 840013,
+      "raw_hex": "000000009aa22941"
+    },
+    {
+      "address": "0x182041ca0",
+      "value": 890402,
+      "raw_hex": "00000000442c2b41"
+    },
+    {
+      "address": "0x182033598",
+      "value": 890605,
+      "raw_hex": "00000000da2d2b41"
+    }
+  ],
+  "summary": {
+    "streams": 53,
+    "bytes": 2192,
+    "complete": 53,
+    "complete_bytes": 2192
+  },
+  "rows": [
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\3plates-surfaces.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 32,
+      "sha256": "ffe4f43f2f1b2b5b7bba904db3555b42107d136b309e0deacaa1c92b57bc94f2",
+      "attempts": [
+        {
+          "version": 890620,
+          "success": true,
+          "end": 32,
+          "values": {
+            "member58": 3,
+            "text60": "2",
+            "member70": 0,
+            "member74": 2,
+            "member08": 0,
+            "text68": "1"
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "03000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 12,
+              "raw_hex": "0400000032000000"
+            },
+            {
+              "label": "member70",
+              "offset": 12,
+              "end": 16,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member74",
+              "offset": 16,
+              "end": 20,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "member08",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "text68",
+              "offset": 24,
+              "end": 32,
+              "raw_hex": "0400000031000000"
+            }
+          ],
+          "reconstruction_sha256": "ffe4f43f2f1b2b5b7bba904db3555b42107d136b309e0deacaa1c92b57bc94f2"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\actuator.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 30,
+      "sha256": "0e8d1a67c7012276b34a256b0eb77c5bdf1bb5d70fbd584a2d17500a3aff787f",
+      "attempts": [
+        {
+          "version": 890912,
+          "success": true,
+          "end": 30,
+          "values": {
+            "member58": 8,
+            "text60": "",
+            "member70": 0,
+            "member74": 1,
+            "member08": 0,
+            "text68": "1"
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "08000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 10,
+              "raw_hex": "020000000000"
+            },
+            {
+              "label": "member70",
+              "offset": 10,
+              "end": 14,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member74",
+              "offset": 14,
+              "end": 18,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member08",
+              "offset": 18,
+              "end": 22,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "text68",
+              "offset": 22,
+              "end": 30,
+              "raw_hex": "0400000031000000"
+            }
+          ],
+          "reconstruction_sha256": "0e8d1a67c7012276b34a256b0eb77c5bdf1bb5d70fbd584a2d17500a3aff787f"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\actuator.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Property",
+      "bytes": 30,
+      "sha256": "b6aaa937a5f56712fcea753bbe2caee16aabb82893539515139cb0b8c264906d",
+      "attempts": [
+        {
+          "version": 890912,
+          "success": true,
+          "end": 30,
+          "values": {
+            "member58": 7,
+            "text60": "",
+            "member70": 0,
+            "member74": 1,
+            "member08": 0,
+            "text68": "1"
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "07000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 10,
+              "raw_hex": "020000000000"
+            },
+            {
+              "label": "member70",
+              "offset": 10,
+              "end": 14,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member74",
+              "offset": 14,
+              "end": 18,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member08",
+              "offset": 18,
+              "end": 22,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "text68",
+              "offset": 22,
+              "end": 30,
+              "raw_hex": "0400000031000000"
+            }
+          ],
+          "reconstruction_sha256": "b6aaa937a5f56712fcea753bbe2caee16aabb82893539515139cb0b8c264906d"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Beams\\beam_truss.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 30,
+      "sha256": "f707325e02cd32a7f7f8d1551109d56e7d34249768b46e42775cf7b4b5f6ee1c",
+      "attempts": [
+        {
+          "version": 890620,
+          "success": true,
+          "end": 30,
+          "values": {
+            "member58": 2,
+            "text60": "",
+            "member70": 0,
+            "member74": 1,
+            "member08": 16,
+            "text68": "1"
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 10,
+              "raw_hex": "020000000000"
+            },
+            {
+              "label": "member70",
+              "offset": 10,
+              "end": 14,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member74",
+              "offset": 14,
+              "end": 18,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member08",
+              "offset": 18,
+              "end": 22,
+              "raw_hex": "10000000"
+            },
+            {
+              "label": "text68",
+              "offset": 22,
+              "end": 30,
+              "raw_hex": "0400000031000000"
+            }
+          ],
+          "reconstruction_sha256": "f707325e02cd32a7f7f8d1551109d56e7d34249768b46e42775cf7b4b5f6ee1c"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\bikeframe.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 40,
+      "sha256": "7bb40b9beeb83f250d1a75004913746d61ee02c90de5da25d89eb2db44a863a1",
+      "attempts": [
+        {
+          "version": 890620,
+          "success": true,
+          "end": 40,
+          "values": {
+            "member58": 5,
+            "text60": "1,2,3",
+            "member70": 0,
+            "member74": 1,
+            "member08": 0,
+            "text68": "4"
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "05000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "0c00000031002c0032002c0033000000"
+            },
+            {
+              "label": "member70",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member74",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member08",
+              "offset": 28,
+              "end": 32,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "text68",
+              "offset": 32,
+              "end": 40,
+              "raw_hex": "0400000034000000"
+            }
+          ],
+          "reconstruction_sha256": "7bb40b9beeb83f250d1a75004913746d61ee02c90de5da25d89eb2db44a863a1"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\car_model.sldasm",
+      "stream": "Cosworks/StudyManager/SimStudy-7/Results/Property",
+      "bytes": 40,
+      "sha256": "42b55280256544361fad10affaaa410b5992e5aea7e22b2f48ee024a6ecd9c06",
+      "attempts": [
+        {
+          "version": 891107,
+          "success": true,
+          "end": 40,
+          "values": {
+            "member58": 8,
+            "text60": "5,6,7",
+            "member70": 0,
+            "member74": 2,
+            "member08": 0,
+            "text68": "1"
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "08000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "0c00000035002c0036002c0037000000"
+            },
+            {
+              "label": "member70",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member74",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "member08",
+              "offset": 28,
+              "end": 32,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "text68",
+              "offset": 32,
+              "end": 40,
+              "raw_hex": "0400000031000000"
+            }
+          ],
+          "reconstruction_sha256": "42b55280256544361fad10affaaa410b5992e5aea7e22b2f48ee024a6ecd9c06"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Design Scenarios\\hanger.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 24,
+      "sha256": "3c99bd949d965a17f37578167a80e383543ffad3be09d89d3c3b9a83503e0ddd",
+      "attempts": [
+        {
+          "version": 700021,
+          "success": false,
+          "end": 20,
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "03000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 16,
+              "raw_hex": "0800000031002c0032000000"
+            },
+            {
+              "label": "member70",
+              "offset": 16,
+              "end": 20,
+              "raw_hex": "00000000"
+            }
+          ],
+          "error": "trailing bytes at 20: 4"
+        },
+        {
+          "version": 890116,
+          "success": true,
+          "end": 24,
+          "values": {
+            "member58": 3,
+            "text60": "1,2",
+            "member70": 0,
+            "member74": 1
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "03000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 16,
+              "raw_hex": "0800000031002c0032000000"
+            },
+            {
+              "label": "member70",
+              "offset": 16,
+              "end": 20,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member74",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "01000000"
+            }
+          ],
+          "reconstruction_sha256": "3c99bd949d965a17f37578167a80e383543ffad3be09d89d3c3b9a83503e0ddd"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Drop Test\\hd_packaging.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 32,
+      "sha256": "4702143a2accc3215dd53dcccf8c731a28fd0293806663b4a1f89d8024988fcf",
+      "attempts": [
+        {
+          "version": 890620,
+          "success": true,
+          "end": 32,
+          "values": {
+            "member58": 3,
+            "text60": "2",
+            "member70": 0,
+            "member74": 1,
+            "member08": 0,
+            "text68": "1"
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "03000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 12,
+              "raw_hex": "0400000032000000"
+            },
+            {
+              "label": "member70",
+              "offset": 12,
+              "end": 16,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member74",
+              "offset": 16,
+              "end": 20,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member08",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "text68",
+              "offset": 24,
+              "end": 32,
+              "raw_hex": "0400000031000000"
+            }
+          ],
+          "reconstruction_sha256": "4702143a2accc3215dd53dcccf8c731a28fd0293806663b4a1f89d8024988fcf"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Drop Test\\twoblocks.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 36,
+      "sha256": "7d7d644a2cd6af588d3484bcc964e444726a2a7a260ed522146773faf79f4543",
+      "attempts": [
+        {
+          "version": 890620,
+          "success": true,
+          "end": 36,
+          "values": {
+            "member58": 4,
+            "text60": "2,3",
+            "member70": 0,
+            "member74": 2,
+            "member08": 0,
+            "text68": "1"
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "04000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 16,
+              "raw_hex": "0800000032002c0033000000"
+            },
+            {
+              "label": "member70",
+              "offset": 16,
+              "end": 20,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member74",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "member08",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "text68",
+              "offset": 28,
+              "end": 36,
+              "raw_hex": "0400000031000000"
+            }
+          ],
+          "reconstruction_sha256": "7d7d644a2cd6af588d3484bcc964e444726a2a7a260ed522146773faf79f4543"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Fatigue\\vehiclesuspension.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Property",
+      "bytes": 28,
+      "sha256": "f1feca11eabdd6edf65be0afbe9d8f64e967cf75c57e6525d235a3dcd39a26ac",
+      "attempts": [
+        {
+          "version": 890112,
+          "success": true,
+          "end": 28,
+          "values": {
+            "member58": 4,
+            "text60": "1,2,3",
+            "member70": 1,
+            "member74": 2
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "04000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "0c00000031002c0032002c0033000000"
+            },
+            {
+              "label": "member70",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member74",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "02000000"
+            }
+          ],
+          "reconstruction_sha256": "f1feca11eabdd6edf65be0afbe9d8f64e967cf75c57e6525d235a3dcd39a26ac"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\mixed-1-solid.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 176,
+      "sha256": "74d06988a47072387bea40bfb5230615fa6c765638ec04b8f835985181705ddf",
+      "attempts": [
+        {
+          "version": 830033,
+          "success": true,
+          "end": 176,
+          "values": {
+            "member58": 6,
+            "text60": "(-Strain,1-),(-Stress,2-),(-Displacement,3-),(-Result 4,4-),(-Displacement{1},5-)",
+            "member70": 1
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "06000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 172,
+              "raw_hex": "a400000028002d00530074007200610069006e002c0031002d0029002c0028002d005300740072006500730073002c0032002d0029002c0028002d0044006900730070006c006100630065006d0065006e0074002c0033002d0029002c0028002d0052006500730075006c007400200034002c0034002d0029002c0028002d0044006900730070006c006100630065006d0065006e0074007b0031007d002c0035002d0029000000"
+            },
+            {
+              "label": "member70",
+              "offset": 172,
+              "end": 176,
+              "raw_hex": "01000000"
+            }
+          ],
+          "reconstruction_sha256": "74d06988a47072387bea40bfb5230615fa6c765638ec04b8f835985181705ddf"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\mixed-1-solid.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Property",
+      "bytes": 146,
+      "sha256": "837a12dbcb2da208332d6d812766c7815fbac8553297e684ebeb7e674c69bb5f",
+      "attempts": [
+        {
+          "version": 830033,
+          "success": true,
+          "end": 146,
+          "values": {
+            "member58": 5,
+            "text60": "(-Strain,1-),(-Stress,2-),(-Displacement,3-),(-Displacement{1},4-)",
+            "member70": 1
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "05000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 142,
+              "raw_hex": "8600000028002d00530074007200610069006e002c0031002d0029002c0028002d005300740072006500730073002c0032002d0029002c0028002d0044006900730070006c006100630065006d0065006e0074002c0033002d0029002c0028002d0044006900730070006c006100630065006d0065006e0074007b0031007d002c0034002d0029000000"
+            },
+            {
+              "label": "member70",
+              "offset": 142,
+              "end": 146,
+              "raw_hex": "01000000"
+            }
+          ],
+          "reconstruction_sha256": "837a12dbcb2da208332d6d812766c7815fbac8553297e684ebeb7e674c69bb5f"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Nonlinear\\2dsimplification\\bolt_nut.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 38,
+      "sha256": "14c017794330bbdb90b77d2a5fd379fbf5387d1bbf1f7884785b4af842fba8ac",
+      "attempts": [
+        {
+          "version": 890913,
+          "success": true,
+          "end": 38,
+          "values": {
+            "member58": 4,
+            "text60": "1,2,3",
+            "member70": 1,
+            "member74": 1,
+            "member08": 2,
+            "text68": ""
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "04000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "0c00000031002c0032002c0033000000"
+            },
+            {
+              "label": "member70",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member74",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member08",
+              "offset": 28,
+              "end": 32,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "text68",
+              "offset": 32,
+              "end": 38,
+              "raw_hex": "020000000000"
+            }
+          ],
+          "reconstruction_sha256": "14c017794330bbdb90b77d2a5fd379fbf5387d1bbf1f7884785b4af842fba8ac"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Nonlinear\\nl_o_ring.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 44,
+      "sha256": "3796107625f349e30170ee8d7628485d53a8c9806f4e74c58f1020a8d767d8f3",
+      "attempts": [
+        {
+          "version": 890620,
+          "success": true,
+          "end": 44,
+          "values": {
+            "member58": 6,
+            "text60": "2,3,4",
+            "member70": 1,
+            "member74": 2,
+            "member08": 66048,
+            "text68": "1,5"
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "06000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "0c00000032002c0033002c0034000000"
+            },
+            {
+              "label": "member70",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member74",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "member08",
+              "offset": 28,
+              "end": 32,
+              "raw_hex": "00020100"
+            },
+            {
+              "label": "text68",
+              "offset": 32,
+              "end": 44,
+              "raw_hex": "0800000031002c0035000000"
+            }
+          ],
+          "reconstruction_sha256": "3796107625f349e30170ee8d7628485d53a8c9806f4e74c58f1020a8d767d8f3"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Optimization\\brake rotor.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 30,
+      "sha256": "ca01f533724fee09c6516f73cc411fda232b5c69d27f0624c742c7f88d9fb761",
+      "attempts": [
+        {
+          "version": 890620,
+          "success": true,
+          "end": 30,
+          "values": {
+            "member58": 2,
+            "text60": "",
+            "member70": 0,
+            "member74": 1,
+            "member08": 65568,
+            "text68": "1"
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 10,
+              "raw_hex": "020000000000"
+            },
+            {
+              "label": "member70",
+              "offset": 10,
+              "end": 14,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member74",
+              "offset": 14,
+              "end": 18,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member08",
+              "offset": 18,
+              "end": 22,
+              "raw_hex": "20000100"
+            },
+            {
+              "label": "text68",
+              "offset": 22,
+              "end": 30,
+              "raw_hex": "0400000031000000"
+            }
+          ],
+          "reconstruction_sha256": "ca01f533724fee09c6516f73cc411fda232b5c69d27f0624c742c7f88d9fb761"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\pipingassembly.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 44,
+      "sha256": "3bce2aef303aae36c9bed29284894d8820cbf322eed96eb705271e6823cf14a8",
+      "attempts": [
+        {
+          "version": 890912,
+          "success": true,
+          "end": 44,
+          "values": {
+            "member58": 6,
+            "text60": "2,3,4,5",
+            "member70": 0,
+            "member74": 2,
+            "member08": 0,
+            "text68": "1"
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "06000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 24,
+              "raw_hex": "1000000032002c0033002c0034002c0035000000"
+            },
+            {
+              "label": "member70",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member74",
+              "offset": 28,
+              "end": 32,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "member08",
+              "offset": 32,
+              "end": 36,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "text68",
+              "offset": 36,
+              "end": 44,
+              "raw_hex": "0400000031000000"
+            }
+          ],
+          "reconstruction_sha256": "3bce2aef303aae36c9bed29284894d8820cbf322eed96eb705271e6823cf14a8"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\pliers.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 40,
+      "sha256": "1e2aeaae049cc2bd13e9c907617e637fae5fd186dcb663aee6b5a8ad18b82ea9",
+      "attempts": [
+        {
+          "version": 890912,
+          "success": true,
+          "end": 40,
+          "values": {
+            "member58": 5,
+            "text60": "2,3,4",
+            "member70": 0,
+            "member74": 2,
+            "member08": 0,
+            "text68": "1"
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "05000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "0c00000032002c0033002c0034000000"
+            },
+            {
+              "label": "member70",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member74",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "member08",
+              "offset": 28,
+              "end": 32,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "text68",
+              "offset": 32,
+              "end": 40,
+              "raw_hex": "0400000031000000"
+            }
+          ],
+          "reconstruction_sha256": "1e2aeaae049cc2bd13e9c907617e637fae5fd186dcb663aee6b5a8ad18b82ea9"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\shaft.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 48,
+      "sha256": "cf2f8aa88cb97cebd3a806c98b57020442c380d9885e4f1d29a5dfc9284da1c6",
+      "attempts": [
+        {
+          "version": 700010,
+          "success": false,
+          "end": 32,
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "07000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 28,
+              "raw_hex": "1400000032002c0033002c0034002c0035002c0036000000"
+            },
+            {
+              "label": "member70",
+              "offset": 28,
+              "end": 32,
+              "raw_hex": "00000000"
+            }
+          ],
+          "error": "trailing bytes at 32: 16"
+        },
+        {
+          "version": 890620,
+          "success": true,
+          "end": 48,
+          "values": {
+            "member58": 7,
+            "text60": "2,3,4,5,6",
+            "member70": 0,
+            "member74": 2,
+            "member08": 0,
+            "text68": "1"
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "07000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 28,
+              "raw_hex": "1400000032002c0033002c0034002c0035002c0036000000"
+            },
+            {
+              "label": "member70",
+              "offset": 28,
+              "end": 32,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member74",
+              "offset": 32,
+              "end": 36,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "member08",
+              "offset": 36,
+              "end": 40,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "text68",
+              "offset": 40,
+              "end": 48,
+              "raw_hex": "0400000031000000"
+            }
+          ],
+          "reconstruction_sha256": "cf2f8aa88cb97cebd3a806c98b57020442c380d9885e4f1d29a5dfc9284da1c6"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Thermal\\computer_chip.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 32,
+      "sha256": "2705d70549d6b34ba2d86bbde920d993317ea04ae523b803b955d3fc8772d42a",
+      "attempts": [
+        {
+          "version": 700010,
+          "success": false,
+          "end": 16,
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "03000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 12,
+              "raw_hex": "0400000032000000"
+            },
+            {
+              "label": "member70",
+              "offset": 12,
+              "end": 16,
+              "raw_hex": "01000000"
+            }
+          ],
+          "error": "trailing bytes at 16: 16"
+        },
+        {
+          "version": 890620,
+          "success": true,
+          "end": 32,
+          "values": {
+            "member58": 3,
+            "text60": "2",
+            "member70": 1,
+            "member74": 2,
+            "member08": 0,
+            "text68": "1"
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "03000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 12,
+              "raw_hex": "0400000032000000"
+            },
+            {
+              "label": "member70",
+              "offset": 12,
+              "end": 16,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member74",
+              "offset": 16,
+              "end": 20,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "member08",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "text68",
+              "offset": 24,
+              "end": 32,
+              "raw_hex": "0400000031000000"
+            }
+          ],
+          "reconstruction_sha256": "2705d70549d6b34ba2d86bbde920d993317ea04ae523b803b955d3fc8772d42a"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Thermal\\computer_chip.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Property",
+      "bytes": 32,
+      "sha256": "ffe4f43f2f1b2b5b7bba904db3555b42107d136b309e0deacaa1c92b57bc94f2",
+      "attempts": [
+        {
+          "version": 700010,
+          "success": false,
+          "end": 16,
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "03000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 12,
+              "raw_hex": "0400000032000000"
+            },
+            {
+              "label": "member70",
+              "offset": 12,
+              "end": 16,
+              "raw_hex": "00000000"
+            }
+          ],
+          "error": "trailing bytes at 16: 16"
+        },
+        {
+          "version": 890620,
+          "success": true,
+          "end": 32,
+          "values": {
+            "member58": 3,
+            "text60": "2",
+            "member70": 0,
+            "member74": 2,
+            "member08": 0,
+            "text68": "1"
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "03000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 12,
+              "raw_hex": "0400000032000000"
+            },
+            {
+              "label": "member70",
+              "offset": 12,
+              "end": 16,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member74",
+              "offset": 16,
+              "end": 20,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "member08",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "text68",
+              "offset": 24,
+              "end": 32,
+              "raw_hex": "0400000031000000"
+            }
+          ],
+          "reconstruction_sha256": "ffe4f43f2f1b2b5b7bba904db3555b42107d136b309e0deacaa1c92b57bc94f2"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Thermal\\computer_chip.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Property",
+      "bytes": 38,
+      "sha256": "60f5ab86c0fe270eab23fc6047edcf77fc711b52f55b2da06741a82c84d97089",
+      "attempts": [
+        {
+          "version": 700010,
+          "success": false,
+          "end": 24,
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "04000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "0c00000031002c0032002c0033000000"
+            },
+            {
+              "label": "member70",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "00000000"
+            }
+          ],
+          "error": "trailing bytes at 24: 14"
+        },
+        {
+          "version": 890620,
+          "success": true,
+          "end": 38,
+          "values": {
+            "member58": 4,
+            "text60": "1,2,3",
+            "member70": 0,
+            "member74": 1,
+            "member08": 0,
+            "text68": ""
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "04000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "0c00000031002c0032002c0033000000"
+            },
+            {
+              "label": "member70",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member74",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member08",
+              "offset": 28,
+              "end": 32,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "text68",
+              "offset": 32,
+              "end": 38,
+              "raw_hex": "020000000000"
+            }
+          ],
+          "reconstruction_sha256": "60f5ab86c0fe270eab23fc6047edcf77fc711b52f55b2da06741a82c84d97089"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\motor_frame.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 28,
+      "sha256": "f1feca11eabdd6edf65be0afbe9d8f64e967cf75c57e6525d235a3dcd39a26ac",
+      "attempts": [
+        {
+          "version": 850023,
+          "success": true,
+          "end": 28,
+          "values": {
+            "member58": 4,
+            "text60": "1,2,3",
+            "member70": 1,
+            "member74": 2
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "04000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "0c00000031002c0032002c0033000000"
+            },
+            {
+              "label": "member70",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member74",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "02000000"
+            }
+          ],
+          "reconstruction_sha256": "f1feca11eabdd6edf65be0afbe9d8f64e967cf75c57e6525d235a3dcd39a26ac"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_3dnlg1.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 28,
+      "sha256": "962dc39ebe8f17a9550a547b43a232940de933eae647734866d039c2f82e39fd",
+      "attempts": [
+        {
+          "version": 890518,
+          "success": true,
+          "end": 28,
+          "values": {
+            "member58": 6,
+            "text60": "2,5",
+            "member70": 0,
+            "member74": 2,
+            "member08": 0
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "06000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 16,
+              "raw_hex": "0800000032002c0035000000"
+            },
+            {
+              "label": "member70",
+              "offset": 16,
+              "end": 20,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member74",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "member08",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "00000000"
+            }
+          ],
+          "reconstruction_sha256": "962dc39ebe8f17a9550a547b43a232940de933eae647734866d039c2f82e39fd"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_3dnlg5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 60,
+      "sha256": "1db1805fc8f8fb8f297ae730f84ec80dc898d2d3ca102ca3f126f22366417339",
+      "attempts": [
+        {
+          "version": 890518,
+          "success": true,
+          "end": 60,
+          "values": {
+            "member58": 12,
+            "text60": "2,5,6,4,7,8,9,10,11",
+            "member70": 0,
+            "member74": 2,
+            "member08": 0
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "0c000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 48,
+              "raw_hex": "2800000032002c0035002c0036002c0034002c0037002c0038002c0039002c00310030002c00310031000000"
+            },
+            {
+              "label": "member70",
+              "offset": 48,
+              "end": 52,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member74",
+              "offset": 52,
+              "end": 56,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "member08",
+              "offset": 56,
+              "end": 60,
+              "raw_hex": "00000000"
+            }
+          ],
+          "reconstruction_sha256": "1db1805fc8f8fb8f297ae730f84ec80dc898d2d3ca102ca3f126f22366417339"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_3dnlg5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Property",
+      "bytes": 36,
+      "sha256": "7079160a7429065d78f34e252cadec29b076502fb738a677c73eb3c2317da662",
+      "attempts": [
+        {
+          "version": 890518,
+          "success": true,
+          "end": 36,
+          "values": {
+            "member58": 5,
+            "text60": "1,2,3,4",
+            "member70": 0,
+            "member74": 2,
+            "member08": 0
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "05000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 24,
+              "raw_hex": "1000000031002c0032002c0033002c0034000000"
+            },
+            {
+              "label": "member70",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member74",
+              "offset": 28,
+              "end": 32,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "member08",
+              "offset": 32,
+              "end": 36,
+              "raw_hex": "00000000"
+            }
+          ],
+          "reconstruction_sha256": "7079160a7429065d78f34e252cadec29b076502fb738a677c73eb3c2317da662"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_3dnlg9.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 38,
+      "sha256": "c5d0c2c77b4fb7ad3f1ffc0257942b866f742a553e0956c4728afb83df8d8464",
+      "attempts": [
+        {
+          "version": 890610,
+          "success": true,
+          "end": 38,
+          "values": {
+            "member58": 4,
+            "text60": "1,2,3",
+            "member70": 1,
+            "member74": 2,
+            "member08": 0,
+            "text68": ""
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "04000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "0c00000031002c0032002c0033000000"
+            },
+            {
+              "label": "member70",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member74",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "member08",
+              "offset": 28,
+              "end": 32,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "text68",
+              "offset": 32,
+              "end": 38,
+              "raw_hex": "020000000000"
+            }
+          ],
+          "reconstruction_sha256": "c5d0c2c77b4fb7ad3f1ffc0257942b866f742a553e0956c4728afb83df8d8464"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_gnl5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 42,
+      "sha256": "0082236bf2ce59a95f8fb194b2c33ab40a145109492bd2a26fdb955015c26260",
+      "attempts": [
+        {
+          "version": 890610,
+          "success": true,
+          "end": 42,
+          "values": {
+            "member58": 5,
+            "text60": "1,2,3,4",
+            "member70": 1,
+            "member74": 2,
+            "member08": 0,
+            "text68": ""
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "05000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 24,
+              "raw_hex": "1000000031002c0032002c0033002c0034000000"
+            },
+            {
+              "label": "member70",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member74",
+              "offset": 28,
+              "end": 32,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "member08",
+              "offset": 32,
+              "end": 36,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "text68",
+              "offset": 36,
+              "end": 42,
+              "raw_hex": "020000000000"
+            }
+          ],
+          "reconstruction_sha256": "0082236bf2ce59a95f8fb194b2c33ab40a145109492bd2a26fdb955015c26260"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_gnl5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Property",
+      "bytes": 42,
+      "sha256": "0082236bf2ce59a95f8fb194b2c33ab40a145109492bd2a26fdb955015c26260",
+      "attempts": [
+        {
+          "version": 890610,
+          "success": true,
+          "end": 42,
+          "values": {
+            "member58": 5,
+            "text60": "1,2,3,4",
+            "member70": 1,
+            "member74": 2,
+            "member08": 0,
+            "text68": ""
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "05000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 24,
+              "raw_hex": "1000000031002c0032002c0033002c0034000000"
+            },
+            {
+              "label": "member70",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member74",
+              "offset": 28,
+              "end": 32,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "member08",
+              "offset": 32,
+              "end": 36,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "text68",
+              "offset": 36,
+              "end": 42,
+              "raw_hex": "020000000000"
+            }
+          ],
+          "reconstruction_sha256": "0082236bf2ce59a95f8fb194b2c33ab40a145109492bd2a26fdb955015c26260"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_gnl5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Property",
+      "bytes": 42,
+      "sha256": "0082236bf2ce59a95f8fb194b2c33ab40a145109492bd2a26fdb955015c26260",
+      "attempts": [
+        {
+          "version": 890610,
+          "success": true,
+          "end": 42,
+          "values": {
+            "member58": 5,
+            "text60": "1,2,3,4",
+            "member70": 1,
+            "member74": 2,
+            "member08": 0,
+            "text68": ""
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "05000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 24,
+              "raw_hex": "1000000031002c0032002c0033002c0034000000"
+            },
+            {
+              "label": "member70",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member74",
+              "offset": 28,
+              "end": 32,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "member08",
+              "offset": 32,
+              "end": 36,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "text68",
+              "offset": 36,
+              "end": 42,
+              "raw_hex": "020000000000"
+            }
+          ],
+          "reconstruction_sha256": "0082236bf2ce59a95f8fb194b2c33ab40a145109492bd2a26fdb955015c26260"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_gnl6.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 46,
+      "sha256": "5909353488614c872784eca028b7fbe0bb85532a2ec0ded19b7b4381d4aaa34f",
+      "attempts": [
+        {
+          "version": 890610,
+          "success": true,
+          "end": 46,
+          "values": {
+            "member58": 7,
+            "text60": "1,2,3,5,6",
+            "member70": 1,
+            "member74": 2,
+            "member08": 0,
+            "text68": ""
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "07000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 28,
+              "raw_hex": "1400000031002c0032002c0033002c0035002c0036000000"
+            },
+            {
+              "label": "member70",
+              "offset": 28,
+              "end": 32,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member74",
+              "offset": 32,
+              "end": 36,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "member08",
+              "offset": 36,
+              "end": 40,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "text68",
+              "offset": 40,
+              "end": 46,
+              "raw_hex": "020000000000"
+            }
+          ],
+          "reconstruction_sha256": "5909353488614c872784eca028b7fbe0bb85532a2ec0ded19b7b4381d4aaa34f"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_gnl7.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 28,
+      "sha256": "a8b143034cd9c1850e8d24a3871ca2c224ad7ff302e3ca3c9e8839884edda397",
+      "attempts": [
+        {
+          "version": 890518,
+          "success": true,
+          "end": 28,
+          "values": {
+            "member58": 4,
+            "text60": "1,2",
+            "member70": 0,
+            "member74": 2,
+            "member08": 0
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "04000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 16,
+              "raw_hex": "0800000031002c0032000000"
+            },
+            {
+              "label": "member70",
+              "offset": 16,
+              "end": 20,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member74",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "member08",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "00000000"
+            }
+          ],
+          "reconstruction_sha256": "a8b143034cd9c1850e8d24a3871ca2c224ad7ff302e3ca3c9e8839884edda397"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_ic43.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 24,
+      "sha256": "8495ee8b58d26ba5ac893d036d379ae45d161d857e152264ca737a25914c0d05",
+      "attempts": [
+        {
+          "version": 840023,
+          "success": true,
+          "end": 24,
+          "values": {
+            "member58": 11,
+            "text60": "8,9",
+            "member70": 1,
+            "member74": 1
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "0b000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 16,
+              "raw_hex": "0800000038002c0039000000"
+            },
+            {
+              "label": "member70",
+              "offset": 16,
+              "end": 20,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member74",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "01000000"
+            }
+          ],
+          "reconstruction_sha256": "8495ee8b58d26ba5ac893d036d379ae45d161d857e152264ca737a25914c0d05"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_nl5a_b.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 42,
+      "sha256": "0082236bf2ce59a95f8fb194b2c33ab40a145109492bd2a26fdb955015c26260",
+      "attempts": [
+        {
+          "version": 890610,
+          "success": true,
+          "end": 42,
+          "values": {
+            "member58": 5,
+            "text60": "1,2,3,4",
+            "member70": 1,
+            "member74": 2,
+            "member08": 0,
+            "text68": ""
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "05000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 24,
+              "raw_hex": "1000000031002c0032002c0033002c0034000000"
+            },
+            {
+              "label": "member70",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member74",
+              "offset": 28,
+              "end": 32,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "member08",
+              "offset": 32,
+              "end": 36,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "text68",
+              "offset": 36,
+              "end": 42,
+              "raw_hex": "020000000000"
+            }
+          ],
+          "reconstruction_sha256": "0082236bf2ce59a95f8fb194b2c33ab40a145109492bd2a26fdb955015c26260"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_nl5a_b.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Property",
+      "bytes": 42,
+      "sha256": "0082236bf2ce59a95f8fb194b2c33ab40a145109492bd2a26fdb955015c26260",
+      "attempts": [
+        {
+          "version": 890610,
+          "success": true,
+          "end": 42,
+          "values": {
+            "member58": 5,
+            "text60": "1,2,3,4",
+            "member70": 1,
+            "member74": 2,
+            "member08": 0,
+            "text68": ""
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "05000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 24,
+              "raw_hex": "1000000031002c0032002c0033002c0034000000"
+            },
+            {
+              "label": "member70",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member74",
+              "offset": 28,
+              "end": 32,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "member08",
+              "offset": 32,
+              "end": 36,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "text68",
+              "offset": 36,
+              "end": 42,
+              "raw_hex": "020000000000"
+            }
+          ],
+          "reconstruction_sha256": "0082236bf2ce59a95f8fb194b2c33ab40a145109492bd2a26fdb955015c26260"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_nl9.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 24,
+      "sha256": "6cc6b754bec02f8ab1b767d882376a978dad0eec8bcd4ea0e0545763a8f65220",
+      "attempts": [
+        {
+          "version": 890518,
+          "success": true,
+          "end": 24,
+          "values": {
+            "member58": 2,
+            "text60": "1",
+            "member70": 0,
+            "member74": 2,
+            "member08": 0
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 12,
+              "raw_hex": "0400000031000000"
+            },
+            {
+              "label": "member70",
+              "offset": 12,
+              "end": 16,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member74",
+              "offset": 16,
+              "end": 20,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "member08",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "00000000"
+            }
+          ],
+          "reconstruction_sha256": "6cc6b754bec02f8ab1b767d882376a978dad0eec8bcd4ea0e0545763a8f65220"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_nl9.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Property",
+      "bytes": 40,
+      "sha256": "c6a07217038233de01945cb261efafe49d304b2d07845b50826ff61787f9ff10",
+      "attempts": [
+        {
+          "version": 890518,
+          "success": true,
+          "end": 40,
+          "values": {
+            "member58": 6,
+            "text60": "1,2,3,4,5",
+            "member70": 0,
+            "member74": 2,
+            "member08": 0
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "06000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 28,
+              "raw_hex": "1400000031002c0032002c0033002c0034002c0035000000"
+            },
+            {
+              "label": "member70",
+              "offset": 28,
+              "end": 32,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member74",
+              "offset": 32,
+              "end": 36,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "member08",
+              "offset": 36,
+              "end": 40,
+              "raw_hex": "00000000"
+            }
+          ],
+          "reconstruction_sha256": "c6a07217038233de01945cb261efafe49d304b2d07845b50826ff61787f9ff10"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 96,
+      "sha256": "0514ffdd8448950f545ab8b2d098cdfd59792400418ba383700ccfe7a4faa53a",
+      "attempts": [
+        {
+          "version": 840017,
+          "success": true,
+          "end": 96,
+          "values": {
+            "member58": 21,
+            "text60": "1,2,3,4,5,6,7,8,10,11,12,13,14,15,16,17",
+            "member70": 1,
+            "member74": 2
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "15000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 88,
+              "raw_hex": "5000000031002c0032002c0033002c0034002c0035002c0036002c0037002c0038002c00310030002c00310031002c00310032002c00310033002c00310034002c00310035002c00310036002c00310037000000"
+            },
+            {
+              "label": "member70",
+              "offset": 88,
+              "end": 92,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member74",
+              "offset": 92,
+              "end": 96,
+              "raw_hex": "02000000"
+            }
+          ],
+          "reconstruction_sha256": "0514ffdd8448950f545ab8b2d098cdfd59792400418ba383700ccfe7a4faa53a"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 28,
+      "sha256": "2d91b4353afab4ce035619c9b5566aafee7988838e092d271f92862a1ed5dba5",
+      "attempts": [
+        {
+          "version": 830038,
+          "success": true,
+          "end": 28,
+          "values": {
+            "member58": 5,
+            "text60": "1,2,3,4",
+            "member70": 0
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "05000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 24,
+              "raw_hex": "1000000031002c0032002c0033002c0034000000"
+            },
+            {
+              "label": "member70",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "00000000"
+            }
+          ],
+          "reconstruction_sha256": "2d91b4353afab4ce035619c9b5566aafee7988838e092d271f92862a1ed5dba5"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Property",
+      "bytes": 28,
+      "sha256": "2d91b4353afab4ce035619c9b5566aafee7988838e092d271f92862a1ed5dba5",
+      "attempts": [
+        {
+          "version": 830038,
+          "success": true,
+          "end": 28,
+          "values": {
+            "member58": 5,
+            "text60": "1,2,3,4",
+            "member70": 0
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "05000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 24,
+              "raw_hex": "1000000031002c0032002c0033002c0034000000"
+            },
+            {
+              "label": "member70",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "00000000"
+            }
+          ],
+          "reconstruction_sha256": "2d91b4353afab4ce035619c9b5566aafee7988838e092d271f92862a1ed5dba5"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Property",
+      "bytes": 90,
+      "sha256": "778bd3300e1f52c29d090fcc24212049e9199a891f0af556e8627d0ee679dd12",
+      "attempts": [
+        {
+          "version": 830038,
+          "success": true,
+          "end": 90,
+          "values": {
+            "member58": 17,
+            "text60": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16",
+            "member70": 0
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "11000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 86,
+              "raw_hex": "4e00000031002c0032002c0033002c0034002c0035002c0036002c0037002c0038002c0039002c00310030002c00310031002c00310032002c00310033002c00310034002c00310035002c00310036000000"
+            },
+            {
+              "label": "member70",
+              "offset": 86,
+              "end": 90,
+              "raw_hex": "00000000"
+            }
+          ],
+          "reconstruction_sha256": "778bd3300e1f52c29d090fcc24212049e9199a891f0af556e8627d0ee679dd12"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 96,
+      "sha256": "0514ffdd8448950f545ab8b2d098cdfd59792400418ba383700ccfe7a4faa53a",
+      "attempts": [
+        {
+          "version": 840017,
+          "success": true,
+          "end": 96,
+          "values": {
+            "member58": 21,
+            "text60": "1,2,3,4,5,6,7,8,10,11,12,13,14,15,16,17",
+            "member70": 1,
+            "member74": 2
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "15000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 88,
+              "raw_hex": "5000000031002c0032002c0033002c0034002c0035002c0036002c0037002c0038002c00310030002c00310031002c00310032002c00310033002c00310034002c00310035002c00310036002c00310037000000"
+            },
+            {
+              "label": "member70",
+              "offset": 88,
+              "end": 92,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member74",
+              "offset": 92,
+              "end": 96,
+              "raw_hex": "02000000"
+            }
+          ],
+          "reconstruction_sha256": "0514ffdd8448950f545ab8b2d098cdfd59792400418ba383700ccfe7a4faa53a"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nl2a_part1.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 24,
+      "sha256": "0776beefdf8ef3a79d0de04cb47616644b55667d4325fec9a876982b823a55e0",
+      "attempts": [
+        {
+          "version": 830038,
+          "success": true,
+          "end": 24,
+          "values": {
+            "member58": 4,
+            "text60": "1,2,3",
+            "member70": 0
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "04000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "0c00000031002c0032002c0033000000"
+            },
+            {
+              "label": "member70",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "00000000"
+            }
+          ],
+          "reconstruction_sha256": "0776beefdf8ef3a79d0de04cb47616644b55667d4325fec9a876982b823a55e0"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nl2a_part2.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 24,
+      "sha256": "0776beefdf8ef3a79d0de04cb47616644b55667d4325fec9a876982b823a55e0",
+      "attempts": [
+        {
+          "version": 830038,
+          "success": true,
+          "end": 24,
+          "values": {
+            "member58": 4,
+            "text60": "1,2,3",
+            "member70": 0
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "04000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "0c00000031002c0032002c0033000000"
+            },
+            {
+              "label": "member70",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "00000000"
+            }
+          ],
+          "reconstruction_sha256": "0776beefdf8ef3a79d0de04cb47616644b55667d4325fec9a876982b823a55e0"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nl2a_part3.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 24,
+      "sha256": "0776beefdf8ef3a79d0de04cb47616644b55667d4325fec9a876982b823a55e0",
+      "attempts": [
+        {
+          "version": 830038,
+          "success": true,
+          "end": 24,
+          "values": {
+            "member58": 4,
+            "text60": "1,2,3",
+            "member70": 0
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "04000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "0c00000031002c0032002c0033000000"
+            },
+            {
+              "label": "member70",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "00000000"
+            }
+          ],
+          "reconstruction_sha256": "0776beefdf8ef3a79d0de04cb47616644b55667d4325fec9a876982b823a55e0"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nl2c_part1c.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 24,
+      "sha256": "0776beefdf8ef3a79d0de04cb47616644b55667d4325fec9a876982b823a55e0",
+      "attempts": [
+        {
+          "version": 830038,
+          "success": true,
+          "end": 24,
+          "values": {
+            "member58": 4,
+            "text60": "1,2,3",
+            "member70": 0
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "04000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "0c00000031002c0032002c0033000000"
+            },
+            {
+              "label": "member70",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "00000000"
+            }
+          ],
+          "reconstruction_sha256": "0776beefdf8ef3a79d0de04cb47616644b55667d4325fec9a876982b823a55e0"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nl2c_part3.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 24,
+      "sha256": "0776beefdf8ef3a79d0de04cb47616644b55667d4325fec9a876982b823a55e0",
+      "attempts": [
+        {
+          "version": 830038,
+          "success": true,
+          "end": 24,
+          "values": {
+            "member58": 4,
+            "text60": "1,2,3",
+            "member70": 0
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "04000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "0c00000031002c0032002c0033000000"
+            },
+            {
+              "label": "member70",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "00000000"
+            }
+          ],
+          "reconstruction_sha256": "0776beefdf8ef3a79d0de04cb47616644b55667d4325fec9a876982b823a55e0"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\vessel weldment.sldprt",
+      "stream": "CosmosXpress/StudyManager/COSMOSXpressStudy/Results/Property",
+      "bytes": 14,
+      "sha256": "080a7f53183fcaa071a627e2ba38cf198ccb7fcc85643616d6340efb79cd9bee",
+      "attempts": [
+        {
+          "version": 810030,
+          "success": true,
+          "end": 14,
+          "values": {
+            "member58": 21,
+            "text60": "",
+            "member70": 0
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "15000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 10,
+              "raw_hex": "020000000000"
+            },
+            {
+              "label": "member70",
+              "offset": 10,
+              "end": 14,
+              "raw_hex": "00000000"
+            }
+          ],
+          "reconstruction_sha256": "080a7f53183fcaa071a627e2ba38cf198ccb7fcc85643616d6340efb79cd9bee"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\beam_boltconnection.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 32,
+      "sha256": "c812efdd866c77a6bc928e09af015b52ed1a98ddaf1a52543daeaf6fbad24f14",
+      "attempts": [
+        {
+          "version": 890319,
+          "success": true,
+          "end": 32,
+          "values": {
+            "member58": 5,
+            "text60": "1,2,3,4",
+            "member70": 1,
+            "member74": 2
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "05000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 24,
+              "raw_hex": "1000000031002c0032002c0033002c0034000000"
+            },
+            {
+              "label": "member70",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member74",
+              "offset": 28,
+              "end": 32,
+              "raw_hex": "02000000"
+            }
+          ],
+          "reconstruction_sha256": "c812efdd866c77a6bc928e09af015b52ed1a98ddaf1a52543daeaf6fbad24f14"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\lineardynamic.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 28,
+      "sha256": "b1c304c7c7644f93009398fd05c84371e269f40f18c36972c8b5186aea7ab4d6",
+      "attempts": [
+        {
+          "version": 880012,
+          "success": true,
+          "end": 28,
+          "values": {
+            "member58": 4,
+            "text60": "1,2,3",
+            "member70": 1,
+            "member74": 1
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "04000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "0c00000031002c0032002c0033000000"
+            },
+            {
+              "label": "member70",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member74",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "01000000"
+            }
+          ],
+          "reconstruction_sha256": "b1c304c7c7644f93009398fd05c84371e269f40f18c36972c8b5186aea7ab4d6"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\loop.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 28,
+      "sha256": "b1c304c7c7644f93009398fd05c84371e269f40f18c36972c8b5186aea7ab4d6",
+      "attempts": [
+        {
+          "version": 850024,
+          "success": true,
+          "end": 28,
+          "values": {
+            "member58": 4,
+            "text60": "1,2,3",
+            "member70": 1,
+            "member74": 1
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "04000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "0c00000031002c0032002c0033000000"
+            },
+            {
+              "label": "member70",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "member74",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "01000000"
+            }
+          ],
+          "reconstruction_sha256": "b1c304c7c7644f93009398fd05c84371e269f40f18c36972c8b5186aea7ab4d6"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\remoteload.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 20,
+      "sha256": "98855479182cfb86f5187c3606c535e6d5beea41c8403a26133bfd212d6185b7",
+      "attempts": [
+        {
+          "version": 870014,
+          "success": true,
+          "end": 20,
+          "values": {
+            "member58": 2,
+            "text60": "1",
+            "member70": 0,
+            "member74": 1
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "02000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 12,
+              "raw_hex": "0400000031000000"
+            },
+            {
+              "label": "member70",
+              "offset": 12,
+              "end": 16,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member74",
+              "offset": 16,
+              "end": 20,
+              "raw_hex": "01000000"
+            }
+          ],
+          "reconstruction_sha256": "98855479182cfb86f5187c3606c535e6d5beea41c8403a26133bfd212d6185b7"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\tjoint.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 32,
+      "sha256": "fd0f62dba0372157ccadd24c346989a354e805504e5fa2d4e1c67f76b19d8eb5",
+      "attempts": [
+        {
+          "version": 860006,
+          "success": true,
+          "end": 32,
+          "values": {
+            "member58": 5,
+            "text60": "1,2,3,4",
+            "member70": 0,
+            "member74": 1
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "05000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 24,
+              "raw_hex": "1000000031002c0032002c0033002c0034000000"
+            },
+            {
+              "label": "member70",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member74",
+              "offset": 28,
+              "end": 32,
+              "raw_hex": "01000000"
+            }
+          ],
+          "reconstruction_sha256": "fd0f62dba0372157ccadd24c346989a354e805504e5fa2d4e1c67f76b19d8eb5"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\weldment_box3.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Property",
+      "bytes": 28,
+      "sha256": "010c9e20bf05b6d74ce5a2d144c7bd2cc892438acc2654aa36c0d75beb491150",
+      "attempts": [
+        {
+          "version": 870014,
+          "success": true,
+          "end": 28,
+          "values": {
+            "member58": 4,
+            "text60": "1,2,3",
+            "member70": 0,
+            "member74": 2
+          },
+          "spans": [
+            {
+              "label": "member58",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "04000000"
+            },
+            {
+              "label": "text60",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "0c00000031002c0032002c0033000000"
+            },
+            {
+              "label": "member70",
+              "offset": 20,
+              "end": 24,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member74",
+              "offset": 24,
+              "end": 28,
+              "raw_hex": "02000000"
+            }
+          ],
+          "reconstruction_sha256": "010c9e20bf05b6d74ce5a2d144c7bd2cc892438acc2654aa36c0d75beb491150"
+        }
+      ]
+    }
+  ],
+  "tests": {
+    "run": 3,
+    "output": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n"
+  },
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_results_header_audit.py": "7dbcb3d6fecabd67471c59fb99eddbdf2649f5e1612a44804471fe6bbdb0c10a",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_results_header.py": "54c13dad9469b94d6aae10a918f23af4fde01aa9b9800079932a154a6c2ebf3c",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\test_cosworks_results_header.py": "db20a4c38677090db04732ac0406a3d148f3621bf948fb5634e9c35e3f0c1165",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-results-constructor-probe.json": "4001e0cbf7e1d81472ed79b29b843a240f80667f0095ebc61458b9031a8a1d2c",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-results-storage-probe.json": "eb8d7d6488e381890cbe2f50e8e7b70802891cc1f3cfcec76819024cbf50d4a2",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\cosworks-results\\FUN_18118c1f0.c": "025d1dead58eec21f85156a8d2a71ba7b658537cf967c6a45db1a3f91d17b458",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\cosworks-storage\\FUN_18142acf0.c": "eab347a07fd93402ce8ae316ffaf818c9ff1d9f9dc7407ff3f984af3f1ee5a1c",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\third-party-storage-corpus.json": "3559b35ad01d27ac07d4de4b696e18a85283614f980d5ce125e17e3c20e6a9db"
+  },
+  "target_executed": false,
+  "coverage_credit": 0,
+  "limitations": [
+    "Candidate versions do not prove storage-suffix/runtime-index identity",
+    "Direct Results Property only; category/plot properties and graph/dialog streams remain separate"
+  ]
+}
