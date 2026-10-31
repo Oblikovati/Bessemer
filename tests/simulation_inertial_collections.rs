@@ -275,3 +275,6 @@ mod nested_history;
 
 #[path = "support/binary_load_limits.rs"]
 mod load_limits;
+
+#[path = "support/binary_load_mutations.rs"]
+mod load_mutations;

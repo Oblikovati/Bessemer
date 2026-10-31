@@ -211,3 +211,6 @@ fn assert_selector_pairs(selector: i32) {
             .collect::<Vec<_>>()
     );
 }
+
+#[path = "support/binary_load_mutations.rs"]
+mod load_mutations;
