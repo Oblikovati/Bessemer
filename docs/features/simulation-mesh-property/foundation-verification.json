@@ -1,0 +1,59 @@
+{
+  "feature_issue": 163,
+  "scope": "Complete strict source/native reference foundation; Rust codec and independent owned operation packets remain pending",
+  "bessemer_base_revision": "31a0d8a16af900ffdba5df6ed4edd749c6125391",
+  "source_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "behavior_profile": 1,
+  "reference_tests": 29,
+  "original_reference_tests": 20,
+  "foundation_checks": 9,
+  "write_exit_code": 0,
+  "write_process_reaped": true,
+  "strict_exit_code": 0,
+  "strict_process_reaped": true,
+  "streams": 357,
+  "logical_bytes": 94876,
+  "candidate_arguments": 391,
+  "accepted_arguments": 357,
+  "failed_arguments": 34,
+  "retained_direct_records": 353,
+  "native_newest_set_occurrences": 8,
+  "native_populated_newest_sets": 0,
+  "original_c759_c760_complete_native_observations_preserved": true,
+  "target_executed": false,
+  "historical_reader_hashes": [
+    "a83791daafb6af1f22e37b38833e2bf64259604fde3c59e59333b98713f69f94",
+    "55632d983a2603b409d593319bdd6a16c670030dede00378a6326b3bad5afb0e"
+  ],
+  "adopted_reader_sha256": "7cae57ea0eabb96c9105ca4229cc22f973fefcf0fef2f62865f0e7f7e633f8eb",
+  "snapshot_identity": "9a9149a21fd8d0ed71d3460fd13ec8dea4f3b04ded9b8eea301dda622fefa737",
+  "native_packet": {
+    "streams": 357,
+    "logical_bytes": 94876,
+    "arguments": 391,
+    "accepted": 357,
+    "failed": 34,
+    "bytes": 107744,
+    "sha256": "653c39b5c8439c9150ed1de0b0790d5eb5306d1b7300c77bcea9e959c4d3b0c4"
+  },
+  "artifacts": {
+    "target/mesh-property-foundation-write.log": "2e50f58c857dff06c3b1e0f002ee8e14655a1635a2d761f3f9ea458b1bb0a7a8",
+    "target/mesh-property-foundation-strict.log": "fc6c00f17bda47d645e252f136f37b283c6da330372eb6773dc10d8758587105"
+  },
+  "foundation_sources": {
+    "freeze_mesh_property.py": "11bcae66f98c9e35ae67b1719ee11ffa2bb8359ccd5b33283e0a238a2646fca2",
+    "property_bindings.py": "ab60ec022a71eb573a3610b3afb1f7faaf3dd5e924135d3d9af5547a0b24e27f",
+    "property_evidence.py": "787fe82f2a436ec079369758bea26af662b899aec81dc83ceb2b0771d7ecda3f",
+    "property_native.py": "2ea7b2f5768da624c7f605cddcee83985fc2f815b32f031108ef8a2545513e93"
+  },
+  "exclusions": [
+    "Independent complete owned operation packets",
+    "Rust typed read/construction/edit API",
+    "Complete malformed/cap/resource/isolation/concurrency and two-process Rust checks",
+    "Full local and exact-head platform integration gates",
+    "Native populated nested/set fixtures",
+    "Native application/writer and geometry acceptance",
+    "Whole-format schema parity"
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending"
+}
