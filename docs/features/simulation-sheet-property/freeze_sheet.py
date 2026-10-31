@@ -20,6 +20,7 @@ from freeze_body import body_input, verify_model_bindings, verify_source_hash, v
 from owned_sheet import owned_sheets
 from owned_sheet_embedded import sheet_embedded_literals
 from sheet_projection import sheet_projection, sheet_history
+from sheet_adversarial import sheet_mutations, sheet_budgets, sheet_blob_cap
 
 
 def baseline(name: str, value: object) -> None:
@@ -134,11 +135,25 @@ def verify_owned_embedded() -> None:
         success = end == len(raw)
         accepted += success
         packet.extend(struct.pack('<II', int(success), len(raw)) + raw)
-    assert accepted == 18
+    assert accepted == 23
+    assert digest(packet[:16675]) == "d63e050c0253dc867bc9324c70ec773e1e9b4fc7d3b506aea6c1280bf8535659"
     path = ROOT / 'tests/fixtures/simulation-sheet-property/embedded.bin'
     if '--write' in sys.argv: path.write_bytes(packet)
     assert path.read_bytes() == packet
-    baseline('owned-embedded-reference.json', dict(cases=49, accepted=18, failed=31, bytes=len(packet), sha256=digest(packet)))
+    baseline('owned-embedded-reference.json', dict(cases=61, accepted=23, failed=38, bytes=len(packet), sha256=digest(packet)))
+
+
+def verify_adversarial() -> None:
+    """Retain all framing outcomes and exact independently measured budgets; e.g. verify_adversarial()."""
+    packet, count, accepted = sheet_mutations(actual_sheet)
+    save_owned_packet('malformed', packet, count)
+    save_owned_packet('budgets', sheet_budgets(actual_sheet), 32)
+    baseline('adversarial-reference.json', dict(inputs=count, accepted=accepted, failed=count - accepted, budget_cases=32))
+
+
+def verify_blob_cap() -> None:
+    """Keep sufficient-payload fixed-cap checks distinct from truncated input tests; e.g. verify_blob_cap()."""
+    sheet_blob_cap(actual_sheet, baseline)
 
 
 def verify_prior_successes() -> None:
@@ -228,7 +243,7 @@ def run_checks(pin: Path) -> unittest.TestResult:
     import test_cosworks_embedded_const_surface
     replay = update_wrapper(partial(replay_native, pin), replay_native)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in
-                               (replay, replay_owned, verify_owned_embedded, verify_prior_successes, verify_sources, verify_bindings, verify_unimported_boundary))
+                               (replay, replay_owned, verify_owned_embedded, verify_adversarial, verify_blob_cap, verify_prior_successes, verify_sources, verify_bindings, verify_unimported_boundary))
     for module in (test_cosworks_sheet_property, test_cosworks_embedded_body_ids, test_cosworks_embedded_const_surface):
         suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(module))
     return unittest.TextTestRunner(verbosity=2).run(suite)

@@ -91,6 +91,9 @@ pub(in crate::model_archives) fn read_object(
     if let Some(result) = super::representations::read_object(reader, map, &class.name) {
         return result;
     }
+    if let Some(result) = super::sheet_components::read_object(reader, map, &class.name) {
+        return result;
+    }
     read_common_object(reader, map, class)
 }
 

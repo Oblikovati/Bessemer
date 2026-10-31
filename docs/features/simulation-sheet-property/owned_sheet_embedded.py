@@ -3,7 +3,7 @@ import struct
 from owned_components import signed_words, holder_words
 from owned_embedded import literal_wrapper
 from owned_chains import tagged_component
-from owned_references import component_bodies
+from owned_references import component_bodies, component_reference_body
 
 INNER_VERSIONS = (4280, 4281, 4306, 4307, 7101, 7102, 14000, 19000, 19001)
 
@@ -34,4 +34,10 @@ def sheet_embedded_literals() -> list[bytes]:
         for name in ('moConstSurfRef_alias_w', 'moCompPlaneSectionBody_alias_c'):
             body = constant_surface_literal(version, 0)
             cases.append(struct.pack('<I', version) + tagged_component(name, body))
+    for name in ('moSolidRef_w', 'moCompSolidBody_c', 'moCompHolder_c'):
+        body = constant_surface_literal(4281, 0) if name == 'moSolidRef_w' else sheet_component_literal(4281)
+        cases.append(struct.pack('<I', 4281) + tagged_component(name, body))
+    for version in INNER_VERSIONS:
+        body = component_reference_body(version) + signed_words(-100)
+        cases.append(struct.pack('<I', version) + tagged_component('moCompRefSurface_c', body))
     return cases

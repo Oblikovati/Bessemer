@@ -588,3 +588,9 @@ distinct embedded archive versions, raw text and floating bits through complete
 construction and isolated edits. Full independent field and ordered nested
 history checks cover owned and native contexts. See
 [the solid-body evidence](docs/features/simulation-solid-body/README.md).
+
+Inherited SolidManager sheet `Property` operations preserve the complete stored
+header through construction and isolated edits, including exact 4281 surface
+and plane-section continuations. Historical nested SurfaceBody trailers retain
+their separate unsupported scope. See
+[the inherited-sheet evidence](docs/features/simulation-sheet-property/README.md).
