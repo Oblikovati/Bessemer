@@ -1,0 +1,36 @@
+{
+  "issue": 150,
+  "status": "incomplete-source-provenance",
+  "production_api_added": false,
+  "source_checks": {
+    "run": 10,
+    "passed": 9,
+    "failed": 1
+  },
+  "failure": {
+    "check": "verify_sources",
+    "file": "solidworks/modelboundary.py",
+    "original_c734_sha256": "e1b4356b42c02e6330e6754c975bab76bb5b79e6a1616495e97d3e44c0d4ed3b",
+    "current_sha256": "401f25dcdc739157fb58de249232090228d4237fc3809fa32ce3e43e24dba511",
+    "guard_retained": true,
+    "next_step": "Recover original bytes or independently reconcile the exact upstream revision before accepting this reference foundation."
+  },
+  "native": {
+    "streams": 680,
+    "logical_bytes": 855786,
+    "arguments": 745,
+    "accepted": 691,
+    "failed": 54,
+    "bytes": 1103132,
+    "sha256": "2ee02a1efa6ac625884ca1b36c64cd7f210c02e39c07d16914b77fceefee0cee"
+  },
+  "owned": {
+    "cases": 240,
+    "bytes": 214739,
+    "sha256": "d732f9d7ac360111190de9071bff0caf630b688894e1f7146c392b711b650d5d"
+  },
+  "earlier_c731_successes": "all preserved",
+  "installed_image_bindings": "passed",
+  "original_tests": 5,
+  "humanizer": "Unavailable; maintainer prose review pending"
+}
