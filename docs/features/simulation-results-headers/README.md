@@ -3,7 +3,7 @@
 This feature covers the three distinct Property levels under a study's Results
 storage: root, category and plot. Specification 14.382–14.384 and the complete
 C-762/C-763/C-764 reports are retained here. The reference foundation precedes
-the Rust codec; no Results header API is published at this stage.
+the Rust codec and its complete operation oracles.
 
 The original inventory contains 450 occurrences and 10,956 logical bytes:
 
@@ -60,7 +60,24 @@ expected output. Native failed arguments remain in the original input packet.
 [Packet references](operation-packets-reference.json) bind every byte and hash.
 These are reference oracles; they do not establish Rust operation acceptance.
 
-The typed Rust codec, malformed/cap/resource/isolation/concurrency checks, process exports
+`SimulationResultsProperty` now reads and constructs complete typed bodies with
+`SimulationResultsContext` selecting root/category/plot readers or the documented
+current root/category writers. Reader versions are explicit and immutable.
+Field IDs bind to one revision; isolated edits retain complete source/result
+images, supplied replacements, exact validation and ordered occurrence history.
+Historical category list counts retain their 100,000-entry cap, unsigned words
+retain their full domain, and plot runtime normalization never changes wire bytes.
+
+All nine initial Rust checks pass, including both native field/history checks.
+Every owned field passes no-op identity checks; foreign/stale/bounds requests,
+wrong construction paths/kinds, missing/extra fields, every proper prefix and
+appended bytes reject. All sixteen public contract types satisfy `Send` and
+`Sync`. Two fresh processes exported identical complete owned/native field and
+history packets, each matching the source oracles byte for byte. Clippy passed
+with warnings denied. [Runtime verification](runtime-verification.json) records
+the exact hashes and remaining acceptance exclusions.
+
+Sufficient-payload cap/resource/isolation/concurrency checks, process exports
 and full local/platform gates remain pending. Dialog, graph and auxiliary
 streams are separate serializers and receive no coverage from this inventory.
 Native application opening, historical writer symmetry, business meanings,
