@@ -1,0 +1,6 @@
+{
+  "original_sha256": "e283b59b3fdb9c77501158a7af71f9a13c93349b7b8bd43f4cfd0a0bbd2dd691",
+  "current_sha256": "f77f36d0845aef1f1e474505b556c9dd7bebc404f6b96840eee8e20efea51b1d",
+  "reconstructed_original_sha256": "e283b59b3fdb9c77501158a7af71f9a13c93349b7b8bd43f4cfd0a0bbd2dd691",
+  "added_class": "class MaterialPrefixTests(unittest.TestCase):\n    def test_explicit_embedded_boundary(self):\n        raw=fixture(840030);suffix=b'next Property fields'\n        self.assertFalse(parse(raw+suffix,840030)['success'])\n        prefix=parse(raw+suffix,840030,require_eof=False)\n        self.assertTrue(prefix['success']);self.assertEqual(prefix['end'],len(raw))\n        self.assertEqual(prefix['reconstruction_sha256'],hashlib.sha256(raw).hexdigest())\n\n\n"
+}

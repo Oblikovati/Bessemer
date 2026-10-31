@@ -604,3 +604,8 @@ Separate `SurfaceBody` framing preserves declared versioned words, raw text and
 double bits through construction and isolated edits. Six historical partial
 word-pair streams remain typed failures. See
 [the SurfaceBody evidence](docs/features/simulation-surface-body/README.md).
+
+The combined SolidManager gate checks all 3,439 retained identities and all 3,730
+original version arguments across seven typed payload families. Six incomplete
+SurfaceBody occurrences remain errors within the denominator. See
+[the complete inventory evidence](docs/features/simulation-solid-inventory/README.md).
