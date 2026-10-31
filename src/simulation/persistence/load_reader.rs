@@ -192,6 +192,14 @@ impl<'a> BinaryLoadReader<'a> {
         Ok(())
     }
 
+    pub fn selected_word_pairs(&mut self, prefix: &str) -> Result<()> {
+        if self.signed(&format!("{prefix}.selector"))? != 1 {
+            return Ok(());
+        }
+        let count = self.count(&format!("{prefix}.pair_count"), 10000, 8)?;
+        self.words(&format!("{prefix}.pairs"), count * 2)
+    }
+
     pub fn doubles(&mut self, label: &str, count: usize) -> Result<()> {
         for index in 0..count {
             self.double(&format!("{label}[{index}]"))?;

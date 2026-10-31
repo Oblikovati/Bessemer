@@ -81,9 +81,5 @@ fn radiation(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
 }
 
 fn pairs(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
-    if reader.signed(&format!("{label}.thermal.selector"))? != 1 {
-        return Ok(());
-    }
-    let count = reader.count(&format!("{label}.thermal.pair_count"), 10000, 8)?;
-    reader.words(&format!("{label}.thermal.pairs"), count * 2)
+    reader.selected_word_pairs(&format!("{label}.thermal"))
 }

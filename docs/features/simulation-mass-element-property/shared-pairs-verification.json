@@ -1,0 +1,32 @@
+{
+  "issue": 138,
+  "status": "Behavior-preserving extraction of exact selector-one counted word pairs",
+  "base_revision": "0756f6c06f4fb0907102a9eee150567d3e1c8c35",
+  "owned_contexts": 295,
+  "native_contexts": 68,
+  "focused_tests": 6,
+  "clippy": "passed",
+  "exports": [
+    {
+      "export": "fields",
+      "bytes": 5953224,
+      "sha256": "94974b6d2f67bd933b043ebbab5605372dc16331a03d5aaa03ce2fef957a0687"
+    },
+    {
+      "export": "history",
+      "bytes": 8780754,
+      "sha256": "257b403c2fadb8347578d1e53da8a22a33bca023da7ab6fbc400c80202ad33bc"
+    },
+    {
+      "export": "nested",
+      "bytes": 9687810,
+      "sha256": "93a73a7b09304f09a02e52b2e52ac670793e402390c78d3e9f0bd3dba4f0146c"
+    }
+  ],
+  "combined_bytes": 24421788,
+  "checks": "Every complete outer field, wire byte, span, scalar-edit outer parent and nested-copy parent matches pre-extraction and independent source expectations",
+  "exclusions": [
+    "Mass-element grammar implementation",
+    "Native application acceptance"
+  ]
+}
