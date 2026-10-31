@@ -1,0 +1,73 @@
+{
+  "feature_issue": 161,
+  "scope": "Complete study MeshControlManager header API; counted records remain pending",
+  "implementation_parent": "cd4501c2fa6089586f3c9c345f7fe5b981f018cd",
+  "strict_reference_checks": 13,
+  "strict_reference_exit_code": 0,
+  "reference_process_reaped": true,
+  "reference_log_sha256": "b6f82cc1736cbad969ece0b9373b09619cad54aa589c14a4a0b7bb4c1b42eac1",
+  "mesh_rust_tests_including_native": 16,
+  "earlier_shell_rust_tests_including_native": 13,
+  "combined_focused_tests": 29,
+  "focused_failures": 0,
+  "focused_processes_reaped": true,
+  "focused_log_sha256": "ee6ddec702f526b0733254fca1f4c08f18596cbf12c4cd8ab8f3a10f73885679",
+  "second_focused_log_sha256": "ffec2fd7fe43950bcfb920c0c17c2007da72beb7016cb4d1a5a32849767687ec",
+  "clippy_warnings": 0,
+  "clippy_log_sha256": "abd73a5c41d6d3303495d8a6a5c785f2f03443e89cdc9a5a5e186fae76bee145",
+  "owned_contexts": 80,
+  "owned_fields": 200,
+  "proper_prefixes_rejected": 800,
+  "trailing_byte_cases_rejected": 80,
+  "exact_and_one_below_positive_budget_axes": 2,
+  "zero_text_and_entry_budgets_verified": true,
+  "compile_time_send_sync_types": 14,
+  "mixed_concurrent_operations": 1920,
+  "concurrent_workers": 8,
+  "contexts_and_three_options_covered_per_worker": true,
+  "original_native_arguments": 392,
+  "native_accepted": 361,
+  "native_rejected": 31,
+  "source_snapshot_sha256": "51ed35510d7403dca77906c2a390a895aa5b23f4775c14ff4b302de07b3fe32b",
+  "packets": {
+    "projection": {
+      "bytes": 39906,
+      "sha256": "88c8b22a31c3a6c9695c7f2b3178a6599d9c0fc1904d22ecd2fdcf78958eb59c",
+      "owned_cases": 80,
+      "native_arguments": 361,
+      "fresh_processes": 2,
+      "exact_source_packet_match": true
+    },
+    "history": {
+      "bytes": 76770,
+      "sha256": "feab64de0a786f9daed2c3e932451404fe13c0ff28393a61d5b0a223877695f6",
+      "owned_cases": 80,
+      "native_arguments": 361,
+      "fresh_processes": 2,
+      "exact_source_packet_match": true
+    }
+  },
+  "runtime_sources_sha256": {
+    "src/simulation/persistence/mesh_control_header/archive.rs": "7b365d86bf848bef45a85c6cdc60f6314e28913af9aa6e68a7c0407ff36e51de",
+    "src/simulation/persistence/mesh_control_header/coverage.rs": "d87a91cd1c1af4a2ea4b52b6bd3d1cc7170ab144aac587a49097bb53878bbbcb",
+    "src/simulation/persistence/mesh_control_header/decode.rs": "ea6df430628dd826cef7d5e672def60adc1ba876ff5471130e2e8b8db06e5b31",
+    "src/simulation/persistence/mesh_control_header/edit.rs": "f9dc384ee6d5472e118711a8f3c3476248b0d55ffd933aef3f6c04f407780149",
+    "src/simulation/persistence/mesh_control_header/identity.rs": "65920c043f29aeffd5a7967c7f0bfe2f7b3b68e798b53081914b02c2bf2b24c4",
+    "src/simulation/persistence/mesh_control_header/mod.rs": "0e8be8ea7c76d0b13ae88ffa76fafb45ca90806aab57c6b257c61c639ba4ef41",
+    "src/simulation/persistence/mesh_control_header/profile.rs": "f1c84cbee254f6cd2fcac48a124bc46fb1141fb9899b088e1d5b7b312fd1b068",
+    "src/simulation/persistence/mesh_control_header/types.rs": "1bb0f9479581304a32c3deed35cd8bef1cc4e1b9476abdc5b93e0b59f19b7fd2"
+  },
+  "test_sources_sha256": {
+    "tests/simulation_mesh_control_header.rs": "a2e36eea07654dbdac7605bc73e85fe485c112db0f748df8b648513a4a905c34",
+    "tests/simulation_shell_manager.rs": "63a7eba8f5faa42eb04a937e7423e8a9e9bbfdf7d57d076f8f436e0e408fdcd4",
+    "tests/support/signed_header_contracts.rs": "08186653a00fa3242e8b24d5e7c479d4f6f6923e61a1bd52699dd10222020370",
+    "tests/support/signed_header_history.rs": "8a5020ac910f5ce3aba4cdb92caddb9cb36867c769eacc2cf0383be371851a40",
+    "tests/support/signed_header_projection.rs": "04e0e01acbda5df2ea88d0737d146eb9eea7f52c9579f356b56313a1e3be1729"
+  },
+  "exclusions": [
+    "Full local gate and exact-head platform acceptance remain pending.",
+    "Counted-record Rust interoperability and its complete independent acceptance remain pending under #161.",
+    "Writer bodies are static-layout literals checked by explicit compatible-reader controls, not native writer execution.",
+    "DocumentInfo dispatch, native application/geometry acceptance and whole-format completion remain unproven."
+  ]
+}

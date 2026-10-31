@@ -33,6 +33,7 @@ mod header_projection;
 use header_projection::{project_case, read_original};
 
 const OWNED_CASES: usize = 60;
+const PARALLEL_ROUNDS: usize = 32;
 const NATIVE_ACCEPTED: usize = 365;
 const NATIVE_REJECTED: usize = 30;
 const EXPECTED_HISTORY: &[u8] =

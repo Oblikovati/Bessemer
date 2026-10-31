@@ -200,13 +200,18 @@ fn edit_signature(header: &HeaderBody, replacement: i32) -> Vec<u8> {
 
 fn assert_parallel_options(headers: &[HeaderBody], expected: &[[Vec<u8>; 3]], worker: usize) {
     let replacements = [-2147483648, 0, 2147483647];
-    for iteration in 0..32 {
+    let mut visited = std::collections::BTreeSet::new();
+    for iteration in 0..PARALLEL_ROUNDS {
         let source = (worker + iteration) % headers.len();
         let option = (worker * 7 + iteration) % replacements.len();
+        visited.insert((source, option));
         assert_eq!(
             edit_signature(&headers[source], replacements[option]),
             expected[source][option]
         );
+    }
+    if PARALLEL_ROUNDS >= headers.len() * 3 {
+        assert_eq!(visited.len(), headers.len() * 3);
     }
 }
 
