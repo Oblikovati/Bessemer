@@ -1,5 +1,6 @@
 """Independent complete scalar edits and nested copy provenance for solid bodies (#150)."""
 import struct
+from collections.abc import Callable
 from typing import cast
 from thermal_projection import projected_fields
 from thermal_history_projection import outer_history
@@ -23,11 +24,11 @@ def edited_body_fields(version: int, raw: bytes) -> list[bytes]:
     return projected_fields(raw, cast(list[dict[str, object]], parsed['spans']), body_shape)
 
 
-def body_history(version: int, raw: bytes) -> bytes:
+def body_history(version: int, raw: bytes, project_fields: Callable[[int, bytes], list[bytes]] = edited_body_fields, project_embedded: Callable[[bytes], bytes] = body_embedded_case) -> bytes:
     """Derive all outer and nested occurrence parents independently; e.g. body_history(880004, raw)."""
     replacement = struct.unpack_from('<i', raw)[0] ^ 32
     expected = struct.pack('<i', replacement) + raw[4:]
-    fields = edited_body_fields(version, expected)
+    fields = project_fields(version, expected)
     return (struct.pack('<IIiII', 0, version, replacement, 1, len(raw)) + raw + expected
             + struct.pack('<I', len(fields)) + b''.join(fields)
-            + outer_history(fields, True, 'persistid.words[0]') + nested_copy_rows(fields, body_embedded_case))
+            + outer_history(fields, True, 'persistid.words[0]') + nested_copy_rows(fields, project_embedded))

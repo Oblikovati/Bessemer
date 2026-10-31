@@ -1,5 +1,6 @@
 """Complete independent primitive expansion of actual solid-body spans (#150)."""
 import struct
+from collections.abc import Callable
 from typing import cast
 from thermal_projection import FieldShape, projected_fields, repeated_shape
 
@@ -22,8 +23,8 @@ def body_shape(label: str, size: int) -> list[FieldShape]:
     return [(label, 0, 4)]
 
 
-def body_projection(version: int, raw: bytes, parsed: dict[str, object]) -> bytes:
+def body_projection(version: int, raw: bytes, parsed: dict[str, object], shape: Callable[[str, int], list[FieldShape]] = body_shape) -> bytes:
     """Retain every exact path/tag/raw value/offset from actual reader calls; e.g. body_projection(version, raw, parsed)."""
     assert parsed['success'] and parsed['end'] == len(raw)
-    fields = projected_fields(raw, cast(list[dict[str, object]], parsed['spans']), body_shape)
+    fields = projected_fields(raw, cast(list[dict[str, object]], parsed['spans']), shape)
     return struct.pack('<II', version, len(raw)) + raw + struct.pack('<I', len(fields)) + b''.join(fields)
