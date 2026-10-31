@@ -38,7 +38,7 @@ python -B -X utf8 docs/features/simulation-shell-inventory/freeze_shell_inventor
 
 Both commands preserve reviewed baselines. The explicit `--write` option is only
 for a reviewed initial freeze or baseline update. The combined gate passed all
-11 checks. Its native-reader input packet has 1,844,374 bytes and SHA-256
+13 checks. Its native-reader input packet has 1,844,374 bytes and SHA-256
 `a5aeca4bd40e9022e0aa4182b9d7c630f252bcc15c60e3931eab222e785d13a8`.
 The packet preserves the family, exact document/stream identity, complete payload
 and every original version/profile/success tuple. Shell and midsurface native
@@ -51,9 +51,23 @@ arguments and outcomes are retained in `candidate-denominator.json`; metadata
 rejection covers missing, extra, duplicate, renamed, resized and rehashed rows.
 The source snapshot records the immutable import origins and source hashes.
 
-Combined typed Rust construction, byte/field/span and history validation, owned
-platform fixtures, deterministic process exports and full local/platform gates
-remain pending for this feature. Existing individual-family acceptance remains
-separate. Native writer/application and geometry acceptance, physical field
+All six combined Rust checks pass, including the explicit native replay. Every
+accepted argument constructs complete bytes from typed fields and retains exact
+field values and spans. The nine owned identities provide 13 argument controls
+across all seven families, including the reader/writer asymmetry and one
+incomplete body. Negative tests reject duplicate or renamed identities, unknown
+families and unknown profiles before codec dispatch. The five existing
+SolidManager checks still pass, including their explicit native replay.
+
+Two fresh Rust processes export bytes from typed construction for every accepted
+native argument, with explicit failure markers for rejected arguments. Both
+exports exactly match the independent reference framing: 1,857,428 bytes,
+SHA-256 `6f7af608468ab54e7467180c2e0be81ca1692f3b57002f03cbfc6e6ea6ff3797`.
+These exports check complete body construction; full independent primitive/span
+projections and ordered edit histories remain covered separately by the existing
+family oracles. Combined ordered-history validation and full local/platform
+gates remain pending for this feature.
+
+Native writer/application and geometry acceptance, physical field
 meanings, unrepresented populated native profiles and whole-format parity remain
 unproven. Humanizer was unavailable; maintainer prose review remains pending.

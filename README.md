@@ -627,3 +627,8 @@ isolated edits, including scoped inline Material fields and reference archives.
 Newest nonempty layers require explicit lookup-presence context. Their descriptor
 flags retain raw values and ordered bodies; see
 [the shell Property evidence](docs/features/simulation-shell-property/README.md).
+
+The combined ShellManager corpus gate binds all 936 retained stream identities
+and replays all 1,008 original version/profile arguments through typed codecs.
+It preserves 46 rejected arguments and the one incomplete historical payload;
+see [the combined ShellManager evidence](docs/features/simulation-shell-inventory/README.md).

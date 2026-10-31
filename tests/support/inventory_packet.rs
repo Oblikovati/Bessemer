@@ -96,11 +96,7 @@ fn assert_argument(
     version: SimulationPersistVersion,
     accepted: u32,
     rebuilt: Result<Vec<u8>>,
-) {
-    assert!(
-        accepted <= 1,
-        "accepted {accepted}; expected Boolean 0 or 1"
-    );
+) -> Vec<u8> {
     assert_eq!(
         rebuilt.is_ok(),
         accepted == 1,
@@ -109,8 +105,34 @@ fn assert_argument(
         String::from_utf8_lossy(payload.stream),
         version.value()
     );
-    if let Ok(bytes) = rebuilt {
-        assert_eq!(bytes, payload.raw);
+    match rebuilt {
+        Ok(bytes) => {
+            assert_eq!(bytes, payload.raw);
+            bytes
+        }
+        Err(_) => Vec::new(),
+    }
+}
+
+fn append_rebuilt(
+    output: &mut Vec<u8>,
+    payload: &InventoryPayload<'_>,
+    version: SimulationPersistVersion,
+    profile: Option<u32>,
+    accepted: u32,
+    bytes: &[u8],
+) {
+    for word in [
+        payload.family,
+        version.value() as u32,
+        profile.unwrap_or(u32::MAX),
+        accepted,
+    ] {
+        project_word(output, word as usize);
+    }
+    for frame in [payload.document, payload.stream, bytes] {
+        project_word(output, frame.len());
+        output.extend_from_slice(frame);
     }
 }
 
@@ -120,16 +142,22 @@ fn replay_argument(
     totals: &mut InventoryTotals,
     wire: InventoryWire,
     rebuild: InventoryRebuild,
+    output: &mut Vec<u8>,
 ) -> bool {
     let version = SimulationPersistVersion::new(read_word(cursor) as i32).unwrap();
     let profile = read_profile(cursor, wire);
     let accepted = read_word(cursor);
-    assert_argument(
+    assert!(
+        accepted <= 1,
+        "accepted {accepted}; expected Boolean 0 or 1"
+    );
+    let bytes = assert_argument(
         payload,
         version,
         accepted,
         rebuild(payload.family, payload.raw, version, profile),
     );
+    append_rebuilt(output, payload, version, profile, accepted, &bytes);
     totals.arguments += 1;
     totals.accepted += accepted as usize;
     totals.failed += usize::from(accepted == 0);
@@ -142,6 +170,7 @@ fn replay_payload(
     totals: &mut InventoryTotals,
     wire: InventoryWire,
     rebuild: InventoryRebuild,
+    output: &mut Vec<u8>,
 ) {
     let count = read_word(cursor);
     assert!(
@@ -150,7 +179,7 @@ fn replay_payload(
     );
     let mut complete = false;
     for _ in 0..count {
-        complete |= replay_argument(cursor, payload, totals, wire, rebuild);
+        complete |= replay_argument(cursor, payload, totals, wire, rebuild, output);
     }
     totals.incomplete += usize::from(!complete);
     totals.streams += 1;
@@ -159,12 +188,21 @@ fn replay_payload(
 }
 
 pub(crate) fn replay_packet(
-    mut cursor: &[u8],
+    cursor: &[u8],
     wire: InventoryWire,
     rebuild: InventoryRebuild,
 ) -> InventoryTotals {
+    replay_packet_with_output(cursor, wire, rebuild).0
+}
+
+pub(crate) fn replay_packet_with_output(
+    mut cursor: &[u8],
+    wire: InventoryWire,
+    rebuild: InventoryRebuild,
+) -> (InventoryTotals, Vec<u8>) {
     let mut identities = BTreeSet::new();
     let mut totals = InventoryTotals::default();
+    let mut output = Vec::new();
     while !cursor.is_empty() {
         let payload = inventory_payload(&mut cursor, wire);
         assert!(
@@ -172,7 +210,14 @@ pub(crate) fn replay_packet(
             "duplicate {} identity",
             wire.storage
         );
-        replay_payload(&mut cursor, &payload, &mut totals, wire, rebuild);
+        replay_payload(
+            &mut cursor,
+            &payload,
+            &mut totals,
+            wire,
+            rebuild,
+            &mut output,
+        );
     }
-    totals
+    (totals, output)
 }
