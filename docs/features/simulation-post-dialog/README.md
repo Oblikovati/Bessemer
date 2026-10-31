@@ -1,0 +1,69 @@
+# Dialog and standalone post-processing interoperability (#166)
+
+This feature covers the complete DGXPOST dialog grammar, standalone PostInfo and
+PostStyle carriers, and their documented stored-field roles and bounded derived
+views. C-766 through C-770 establish the staged dialog framing. C-840 establishes
+the separate legacy helper routes. Later PostInfo, cut-primitive, color, style
+and legend evidence remains part of the required scope, including the field
+catalog and detailed legacy view; this feature does not stop at prefix framing.
+
+The original modern inventory has 224 dialog streams and 496,979 logical bytes.
+Every original candidate and all five staged outcomes are replayed exactly,
+including values, spans, prefix/complete status and hashes. Prefix consumption
+is repeated evidence over the same bytes and receives no additional byte credit.
+
+The separate standalone inventory has 120 streams and 44,640 bytes. PostInfo has
+60 helper-complete blocks, 52 with a caller-compatible retained version.
+PostStyle has 52 helper-complete/caller-compatible blocks and eight failed
+records. All 240 original arguments remain present: 172 helper successes and 68
+failures. The sixteen record/context exceptions remain separate from the 104
+caller-compatible records. Helper EOF does not establish that its parent chose
+the standalone route.
+
+The full corpus scan also found 251 `cwPostDlgParam` streams under legacy study
+paths, totaling 275,470 bytes, outside C-770's Results inventory. Their complete
+payloads and primary/coexisting root version sources are retained separately.
+All 251 fail under those retained candidates. No lower version is selected to
+make them fit; their grammar/context mismatch remains unresolved. The original
+224-stream denominator remains unchanged.
+
+Three older reports pin PostStyle helper hash `a13ebac8…626ad3f`; the current
+helper hash `3bbb7feb…1982145` is independently pinned by C-770 and C-867. The
+single approved source transition adds C-867's detailed below700006 view.
+Every other original dependency pin must match. Fresh replay requires every
+older native output unchanged and the complete C-867 synthetic output, including
+its overlapping outer raw span and detailed view. The C-867 audit is retained as
+provenance and is never executed: it would regenerate evidence in the sibling
+repository. Its historical color-report dependency is not consumed by these
+checks; imported implementation origins and hashes are captured in the immutable
+source snapshot.
+
+Installed checks read all five complete caller/provider images without loading
+target code. They bind dialog and legacy helper imports/exports, legacy stream
+literals, all recorded serializer function spans, color/reference/shared-text
+and equation delegates, and the recorded IAT slots.
+
+Run the foundation with:
+
+```powershell
+python -B -X utf8 docs/features/simulation-post-dialog/freeze_post_dialog.py
+```
+
+Expanded initialization and strict replay each passed all 24 checks: seventeen
+original tests and seven foundation checks. Both processes exited successfully
+after cleanup. [Foundation verification](foundation-verification.json) records
+the source snapshot, exact packet/log hashes, source adoption and exclusions.
+
+Owned complete operations, full later field-role/view adoption, typed Rust
+read/construction/edit, atomic text profiles, scoped embedded archive acceptance,
+independent fields/history/resources, adversarial limits and extents, isolation,
+concurrency, process exports and full local/platform acceptance remain pending.
+Imported-helper text, PostStyle's separate defensive text bound and standalone
+700002 PostInfo safety limits must remain distinct. Unknown bits and enum words
+must survive without runtime normalization or invented physical meanings.
+
+Native application opening, the additional legacy mismatch cohort, remaining
+carrier exceptions, universal runtime version selection, unknown physical
+meanings and whole-format parity remain unproven.
+
+Humanizer was unavailable; maintainer prose review remains pending.
