@@ -204,3 +204,19 @@ pub(super) fn terminal_records(
     }
     Ok(())
 }
+
+pub(super) fn terminal_table_with_empty_mode(
+    reader: &mut BinaryLoadReader<'_>,
+    label: &str,
+    subject: &str,
+) -> Result<()> {
+    let mode = reader.signed(&format!("{label}.table.mode"))?;
+    let count = reader.count(&format!("{label}.table.count"), 50, 184)?;
+    if count != 0 && !(-100..=100).contains(&mode) {
+        return Err(invalid(
+            label,
+            format!("mode {mode} with count {count}; expected -100..=100 for nonempty {subject}"),
+        ));
+    }
+    terminal_records(reader, label, count)
+}
