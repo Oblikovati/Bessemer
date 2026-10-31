@@ -4,7 +4,7 @@ from typing import cast
 from collections.abc import Callable
 from owned_thermal import THERMAL_KINDS, owned_thermal_cases
 from native_carriers import ThermalCarrier
-from thermal_projection import projected_fields, span_shape
+from thermal_projection import FieldShape, projected_fields, span_shape
 from thermal_edit_oracle import scalar_edit_case, thermal_parser
 
 
@@ -20,7 +20,7 @@ def outer_history(fields: list[bytes], changed: bool) -> bytes:
     return bytes(rows)
 
 
-def history_projection_case(kind: int, version: int, raw: bytes, names: tuple[str, ...] = THERMAL_KINDS, parser: Callable[[bytes, int, str], dict[str, object]] = thermal_parser, shape: Callable[[str], tuple[int, list[str]]] = span_shape) -> bytes:
+def history_projection_case(kind: int, version: int, raw: bytes, names: tuple[str, ...] = THERMAL_KINDS, parser: Callable[[bytes, int, str], dict[str, object]] = thermal_parser, shape: Callable[[str, int], list[FieldShape]] = span_shape) -> bytes:
     """Replay complete independent edited fields and literal provenance; e.g. history_projection_case(0, 890501, raw)."""
     oracle = scalar_edit_case(kind, version, raw, names, parser)
     changed, size = struct.unpack_from('<II', oracle, 12)

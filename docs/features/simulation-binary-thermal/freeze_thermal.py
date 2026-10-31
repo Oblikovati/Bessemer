@@ -357,6 +357,18 @@ def embedded_string_framing_reference() -> None:
     baseline('framing-noop-reference.json', dict(issue=137, same_decoded_text=True, different_retained_wire=True, cases=cases))
 
 
+def history_shape_callback_contract() -> None:
+    """Check shared annotations against the actual two-argument projection boundary (#139); e.g. history_shape_callback_contract()."""
+    from typing import get_args, get_type_hints
+    from thermal_projection import span_shape
+    from thermal_history_projection import history_projection_case
+    from thermal_nested_history import nested_history_case
+    shape = get_type_hints(span_shape)
+    expected = ([shape['label'], shape['size']], shape['return'])
+    for project in (history_projection_case, nested_history_case):
+        assert get_args(get_type_hints(project)['shape']) == expected, project.__name__
+
+
 def run() -> bool:
     """Run actual unmodified modules from a consistent source copy; e.g. run()."""
     with tempfile.TemporaryDirectory(prefix='bessemer-binary-thermal-') as temporary:
@@ -366,7 +378,7 @@ def run() -> bool:
         sys.meta_path.insert(0, FrozenSourceImports(pin))
         sys.path.insert(0, str(pin / 'research'))
         replay = update_wrapper(partial(replay_candidates, pin), replay_candidates)
-        checks = (replay, source_evidence, owned_archives, verify_embedded_rejections, schema_evidence, owned_component_holders, owned_reference_chains, component_guard_rejections, owned_reference_families, representation_depth_boundary, complete_registry_evidence, owned_thermal_collections, owned_thermal_edits, owned_thermal_adversarial, owned_thermal_projection, owned_thermal_history_projection, owned_embedded_map_projection, owned_embedded_field_projection, owned_nested_history_projection, embedded_string_framing_reference)
+        checks = (replay, source_evidence, owned_archives, verify_embedded_rejections, schema_evidence, owned_component_holders, owned_reference_chains, component_guard_rejections, owned_reference_families, representation_depth_boundary, complete_registry_evidence, owned_thermal_collections, owned_thermal_edits, owned_thermal_adversarial, owned_thermal_projection, owned_thermal_history_projection, owned_embedded_map_projection, owned_embedded_field_projection, owned_nested_history_projection, embedded_string_framing_reference, history_shape_callback_contract)
         suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
         result = unittest.TextTestRunner(verbosity=2).run(suite)
         readers = ('cosworks_binary_thermal_transform_audit', 'cosworks_binary_thermal_layout', 'cosworks_force_optional_audit', 'cfb', 'swcontainer')
