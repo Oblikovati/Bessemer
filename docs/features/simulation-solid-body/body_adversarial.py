@@ -25,13 +25,13 @@ def body_mutations(span: dict[str, object], raw: bytes) -> list[bytes]:
             for count in (-1, 0, 1, maximum - 1, maximum, maximum + 1, 2147483647)]
 
 
-def body_mutation_packet(parser: BodyParser, contexts: Sequence[tuple[int, int, bytes]] | None = None) -> tuple[bytes, int, int]:
+def body_mutation_packet(parser: BodyParser, contexts: Sequence[tuple[int, int, bytes]] | None = None, mutate: Callable[[dict[str, object], bytes], list[bytes]] = body_mutations) -> tuple[bytes, int, int]:
     """Retain every outcome including unchanged positive controls; e.g. body_mutation_packet()."""
     cases: list[tuple[int, int, bytes, list[tuple[bool, bytes]]]] = []
     for _, version, raw in owned_solid_bodies() if contexts is None else contexts:
         parsed = parser(raw, version)
         assert parsed['success']
-        images = {image for span in cast(list[dict[str, object]], parsed['spans']) for image in body_mutations(span, raw)}
+        images = {image for span in cast(list[dict[str, object]], parsed['spans']) for image in mutate(span, raw)}
         images.add(raw)
         outcomes = [(cast(bool, parser(image, version)['success']), image) for image in sorted(images)]
         cases.append((0, version, raw, outcomes))
