@@ -61,9 +61,15 @@ packets (76,770 bytes), each exactly matching the independent source packet.
 [Header interoperability verification](header-interop-verification.json) records
 all counts, hashes, source revisions and explicit exclusions.
 
+The committed header implementation passed the full local gate: 3,465 tests,
+zero failures and 95 explicit ignores across 262 summaries.
+[Header full gate verification](header-full-gate-verification.json) records its
+exact code revision and log hash. Counted-record and exact-head platform
+acceptance remain separate.
+
 The counted-record Rust codec, its independent owned field/span/coverage/history
 oracles, malformed grammar and extent tests, resource/fixed-cap controls and
-isolation/concurrency remain pending. Full local/platform gates for this feature
-also remain pending. Native writer/application and geometry acceptance, field
+isolation/concurrency remain pending. Full local/platform gates for the completed
+combined feature also remain pending. Native writer/application and geometry acceptance, field
 meanings, unrepresented native profiles and whole-format parity remain unproven.
 Humanizer was unavailable; maintainer prose review remains pending.
