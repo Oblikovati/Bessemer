@@ -58,6 +58,12 @@ fn check_packet(mut cursor: &[u8]) -> usize {
 }
 
 #[test]
+fn all_null_controls_accept_genuinely_zero_text_entries_and_embedded_budgets() {
+    let packet = include_bytes!("../fixtures/simulation-shell-property/null-budgets.bin");
+    assert_eq!(check_packet(packet), 10);
+}
+
+#[test]
 fn all_owned_contexts_obey_independent_seven_axis_budgets_and_complete_statistics() {
     assert_eq!(check_packet(BUDGETS), 2284);
 }

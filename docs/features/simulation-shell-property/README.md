@@ -66,7 +66,7 @@ Clippy passes with warnings denied. The shell operation selects its own bounded
 terminal reader and retains out-of-range unused modes only for zero counts.
 
 Run `python -B -X utf8 docs/features/simulation-shell-property/freeze_shell_property.py`
-for strict replay. `--write` initializes evidence for review. All 35 checks pass;
+for strict replay. `--write` initializes evidence for review. All 39 checks pass;
 source imports come from an immutable copy and native packets remain in `target/`.
 The complete primitive and ordered outer/nested history oracles cover all 2,284
 owned contexts and all 251 accepted original native arguments. Inline Material
@@ -82,7 +82,7 @@ every positive requirement for both reads and construction. Independent coverage
 statistics include base endpoint, subtype, layers, inline Materials, descriptors,
 declared entries and all embedded roots/fields.
 
-All 14 focused Rust checks, including explicit native checks, pass. Every owned
+All 24 focused Rust checks, including explicit native checks, pass. Every owned
 field no-op preserves bytes, context, identities and copied parents. Tests cover
 foreign/stale/out-of-bounds IDs, malformed complete construction and mutable
 input/caller-field isolation. All 18 public types satisfy `Send + Sync`. Unknown
@@ -90,10 +90,30 @@ required layer presence returns an Unsupported typed error describing incomplete
 runtime context; wrong vector lengths are Invalid. Neither produces a successful
 partial body. Operation, entity and cause remain explicit.
 
-Full malformed-input, shorter-extent, fixed-cap, typed-edit and mixed-concurrency
-acceptance, complete local validation and exact-head platform integration remain
-pending. Zero-text controls and additional preservation/failure cases also remain
-part of that acceptance work. Native application/geometry acceptance is separate.
+The mutation corpus checks 277,350 actual outcomes: 45,548 accepted controls and
+231,802 failures. Every accepted mutation also constructs complete bytes through
+the typed API. All 2,954,046 proper prefixes fail under their original explicit
+contexts, as do all 2,284 appended-byte cases. Twenty-four sufficient-payload
+controls check both sides of the reference, blob, layer, curve, optional-pair and
+inline Material-property caps for both concrete kinds. Ten all-null controls
+exercise genuinely zero text/entry/embedded budgets.
+
+Closed-form byte-splice and span-shift expectations cover 60,320 changed values:
+2,284 signed words, 2,284 unsigned words, 3,168 raw doubles, 48,894 counted texts,
+2,034 blobs and 1,656 complete archives. They check every unaffected field and
+all ordered outer/nested parents, including supplied-archive parents and
+created/deleted occurrences. Eight workers run 32 rounds across both concrete
+kinds and both presence vectors, comparing all typed options with complete serial
+bytes, fields, spans and ordered histories: 1,024 mixed operations in total.
+Failure tests cover oversized inline text, aggregate-count exhaustion after
+partial validation, uncoupled blob lengths and caller-context mutation.
+
+Complete local validation and exact-head platform integration remain pending.
+Native application/geometry acceptance is separate. Behavior profile 1 targets
+the documented C-757 refinement; the original native outcomes remain replayable
+and unchanged, while the unavailable historical test file remains recorded as an
+evidence limitation rather than being reconstructed by guesswork. The adoption
+decision and replay scope are recorded in [behavior profile 1](behavior-profile-1.md).
 
 Physical meanings, runtime layer allocation/presence reconstruction, unrepresented
 populated native profiles, native writer/application and geometry acceptance,
