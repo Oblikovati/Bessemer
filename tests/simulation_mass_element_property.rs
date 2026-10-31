@@ -1,6 +1,8 @@
 //! Complete single-body MassElement Property operations against independent source projections (#138).
 use bessemer::model_archives::ModelArchiveLimits;
 use bessemer::simulation::*;
+#[path = "simulation_mass_element_property/strict_profiles.rs"]
+mod strict_profiles;
 
 #[path = "support/binary_load_projection.rs"]
 mod load_projection;
