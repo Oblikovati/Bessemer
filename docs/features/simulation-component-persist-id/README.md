@@ -47,6 +47,8 @@ for strict replay. `--write` initializes evidence for review. Generated native
 binary packets stay under `target/`; original reports retain decoded values
 and raw spans as provenance. No target code executes.
 
-Full local and exact-head platform gates remain pending. Whole manager
+The [full local gate](full-gate-verification.json) passed 3,360 tests
+with zero failures and 72 ignored. Exact-head platform integration remains
+pending. Whole manager
 inventory, six historical SurfaceBody trailers, native writer/application
 and geometric acceptance remain separate scopes.
