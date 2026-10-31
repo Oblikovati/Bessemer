@@ -563,3 +563,10 @@ child-count agreement. BeamFolder word/text headers have static/synthetic suppor
 no native folder fixture is claimed. Complete construction and isolated edits
 retain all outer/nested parents. Focused/native checks and the full local gate pass; platform
 integration remains pending. See [the joint/group evidence](docs/features/simulation-beam-groups/README.md).
+
+The combined BeamManager corpus gate freshly replays all 1,080 retained payload
+identities /620,654 logical bytes through all six typed payload families together,
+preserving 1,114 candidate arguments including 30 rejected alternatives. Exact
+identity manifests and complete validated construction/write checks pass locally;
+full local/platform gates remain pending. See
+[the combined BeamManager evidence](docs/features/simulation-beam-inventory/README.md).

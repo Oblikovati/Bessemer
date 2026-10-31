@@ -367,6 +367,8 @@
 
 ### Changed
 
+- Expanded BeamManager corpus validation to replay every retained payload family together with exact identity manifests, complete construction and all candidate outcomes. (#146)
+
 - Optimized test builds while retaining debug assertions, checked integer arithmetic and every exhaustive validation case. (#53)
 
 ### Fixed
