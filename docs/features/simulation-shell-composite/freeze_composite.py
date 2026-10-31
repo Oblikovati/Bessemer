@@ -9,7 +9,7 @@ import unittest
 
 FEATURE = Path(__file__).resolve().parent
 ROOT = FEATURE.parents[2]
-for folder in ('simulation-binary-thermal', 'model-archives', 'simulation-solid-manager', 'simulation-solid-body', 'simulation-component-persist-id'):
+for folder in ('simulation-binary-thermal', 'model-archives', 'simulation-solid-manager', 'simulation-solid-body', 'simulation-component-persist-id', 'simulation-sheet-property'):
     sys.path.insert(0, str(FEATURE.parent / folder))
 sys.path.insert(0, str(ROOT / 'target/reference-python'))
 import pefile
@@ -18,6 +18,8 @@ from native_carriers import SOURCE, RESEARCH, digest, recover_sample, pinned_aux
 from freeze_solid_manager import verify_image
 from freeze_body import verify_source_hash, verify_unimported_boundary, verify_model_bindings
 from owned_composite import owned_composite_cases, DOUBLE_BITS
+from composite_projection import composite_context, composite_projection, composite_history
+from composite_adversarial import composite_budget_packet, composite_mutations
 
 
 def composite_baseline(name: str, value: object) -> None:
@@ -123,6 +125,72 @@ def verify_composite_owned() -> None:
     composite_baseline('owned-reference.json', outcomes)
 
 
+def verify_composite_owned_packets() -> None:
+    """Keep complete independent fields/history available to platform CI; e.g. verify_composite_owned_packets()."""
+    packets = [bytearray(), bytearray()]
+    for case in owned_composite_cases():
+        kind, profile, version, raw = case['kind'], case['wire_profile'], case['version'], case['raw']
+        context = composite_context(kind, profile)
+        parsed = actual_composite(raw, version, kind, profile)
+        packets[0].extend(composite_projection(context, version, raw, parsed))
+        packets[1].extend(composite_history(context, version, raw, kind, profile))
+    folder = ROOT / 'tests/fixtures/simulation-shell-composite'
+    references: dict[str, object] = {}
+    for name, raw in zip(('projection', 'history'), packets, strict=True):
+        path = folder / f'{name}.bin'
+        if '--write' in sys.argv:
+            folder.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(raw)
+        assert path.read_bytes() == raw
+        references[name] = dict(bytes=len(raw), sha256=digest(raw))
+    composite_baseline('owned-packets-reference.json', dict(cases=270, packets=references))
+
+
+def verify_composite_extents() -> None:
+    """Check every shorter extent without rejecting the explicit optional writer tail; e.g. verify_composite_extents()."""
+    prefixes, complete_prefixes = 0, 0
+    for case in owned_composite_cases():
+        for size in range(len(case['raw'])):
+            parsed = actual_composite(case['raw'][:size], case['version'], case['kind'], case['wire_profile'])
+            optional = case['wire_profile'] == 'writer' and case['persist_present'] and size == 64
+            assert bool(parsed['success']) == optional, (case, size, parsed)
+            prefixes += 1
+            complete_prefixes += int(optional)
+        trailing = actual_composite(case['raw'] + b'\x00', case['version'], case['kind'], case['wire_profile'])
+        assert not trailing['success'], (case, trailing)
+    composite_baseline('extent-reference.json', dict(prefixes=prefixes, complete_optional_prefixes=complete_prefixes, rejected_trailing_cases=270))
+
+
+def verify_composite_adversarial() -> None:
+    """Freeze complete actual mutation outcomes and seven independent budget axes; e.g. verify_composite_adversarial()."""
+    mutations, count, accepted = composite_mutations(actual_composite)
+    packets = {'malformed': mutations, 'budgets': composite_budget_packet(actual_composite)}
+    references: dict[str, object] = {}
+    for name, raw in packets.items():
+        path = ROOT / 'tests/fixtures/simulation-shell-composite' / f'{name}.bin'
+        if '--write' in sys.argv: path.write_bytes(raw)
+        assert path.read_bytes() == raw
+        references[name] = dict(bytes=len(raw), sha256=digest(raw))
+    composite_baseline('adversarial-reference.json', dict(cases=270, mutations=count, accepted=accepted, rejected=count - accepted, packets=references))
+
+
+def verify_composite_hardcaps() -> None:
+    """Supply complete payloads at both sides of the fixed record/blob caps; e.g. verify_composite_hardcaps()."""
+    outcomes: list[dict[str, object]] = []
+    for profile in ('reader', 'writer'):
+        for count in (100000, 100001):
+            raw = struct.pack('<i', count) + bytes(count * 16)
+            success = bool(actual_composite(raw, 0, 'CompositeFlipTurn', profile)['success'])
+            assert success == (count == 100000)
+            outcomes.append(dict(kind='CompositeFlipTurn', profile=profile, count=count, success=success))
+        for count in (1000000, 1000001):
+            raw = struct.pack('<4i', 0, 0, 1, 4) + bytes(48) + struct.pack('<3i', 0, 0, count) + bytes(count)
+            success = bool(actual_composite(raw, 840001, 'CompositeExtra', profile)['success'])
+            assert success == (count == 1000000)
+            outcomes.append(dict(kind='CompositeExtra', profile=profile, count=count, success=success))
+    composite_baseline('hardcap-reference.json', outcomes)
+
+
 def replay_composite_native(pin: Path) -> None:
     """Recover the complete 20-stream denominator and every failed alternative; e.g. replay_composite_native(pin)."""
     rows = cast(list[dict[str, object]], composite_report()['rows'])
@@ -153,6 +221,39 @@ def verify_composite_historical_failure() -> None:
     composite_baseline('historical-failure-reference.json', failures)
 
 
+def composite_native_oracle_row(row: dict[str, object], streams: dict[str, bytes]) -> tuple[bytes, bytes]:
+    """Project every accepted original profile without discarding failed alternatives elsewhere; e.g. composite_native_oracle_row(row, streams)."""
+    raw = streams[cast(str, row['stream'])]
+    assert digest(raw) == row['sha256'] and len(raw) == row['bytes']
+    kind = cast(str, row['stream']).rsplit('/', 1)[-1]
+    projections, histories = bytearray(), bytearray()
+    for expected in cast(list[dict[str, object]], row['attempts']):
+        if not expected['success']: continue
+        version, profile = cast(int, expected['version']), cast(str, expected['wire_profile'])
+        parsed = actual_composite(raw, version, kind, profile)
+        assert dict(version=version, wire_profile=profile, **parsed) == expected
+        context = composite_context(kind, profile)
+        projections.extend(composite_projection(context, version, raw, parsed))
+        histories.extend(composite_history(context, version, raw, kind, profile))
+    return bytes(projections), bytes(histories)
+
+
+def replay_composite_native_oracles(pin: Path) -> None:
+    """Keep full native fields and ordered histories for all 30 accepted arguments; e.g. replay_composite_native_oracles(pin)."""
+    rows = cast(list[dict[str, object]], composite_report()['rows'])
+    packets = [bytearray(), bytearray()]
+    for document in sorted({cast(str, row['path']) for row in rows}):
+        streams = recover_sample(document, pin)
+        fragments = [composite_native_oracle_row(row, streams) for row in rows if row['path'] == document]
+        packets[0].extend(b''.join(fragment[0] for fragment in fragments))
+        packets[1].extend(b''.join(fragment[1] for fragment in fragments))
+    references: dict[str, object] = {}
+    for name, raw in zip(('projection', 'history'), packets, strict=True):
+        (ROOT / f'target/simulation-shell-composite-native-{name}.bin').write_bytes(raw)
+        references[name] = dict(bytes=len(raw), sha256=digest(raw))
+    composite_baseline('native-oracles-reference.json', dict(accepted_arguments=30, packets=references))
+
+
 def run_composite_checks(pin: Path) -> unittest.TestResult:
     """Run original callback/grammar tests with exact full native and historical checks; e.g. run_composite_checks(pin)."""
     from functools import partial, update_wrapper
@@ -160,7 +261,9 @@ def run_composite_checks(pin: Path) -> unittest.TestResult:
     import test_cosworks_embedded_body_ids
     import test_cosworks_embedded_const_surface
     replay = update_wrapper(partial(replay_composite_native, pin), replay_composite_native)
-    checks = (verify_composite_sources, verify_composite_bindings, verify_composite_historical_failure, verify_composite_owned, replay, verify_unimported_boundary)
+    native_oracles = update_wrapper(partial(replay_composite_native_oracles, pin), replay_composite_native_oracles)
+    checks = (verify_composite_sources, verify_composite_bindings, verify_composite_historical_failure,
+              verify_composite_owned, verify_composite_owned_packets, verify_composite_extents, verify_composite_adversarial, verify_composite_hardcaps, replay, native_oracles, verify_unimported_boundary)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
     for module in (test_cosworks_composite, test_cosworks_embedded_body_ids, test_cosworks_embedded_const_surface):
         suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(module))
