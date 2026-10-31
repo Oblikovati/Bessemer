@@ -19,6 +19,7 @@ from results_bindings import verify_results_installed_bindings
 from results_native import verify_results_inventory, replay_results_native
 from results_owned import verify_results_owned, verify_results_writer_controls
 from results_packets import verify_results_packets
+from results_resources import verify_results_resources, verify_results_category_cap
 
 
 def run_results_checks(pin: Path) -> unittest.TestResult:
@@ -26,7 +27,8 @@ def run_results_checks(pin: Path) -> unittest.TestResult:
     replay = update_wrapper(partial(replay_results_native, pin), replay_results_native)
     checks = (verify_results_sources, verify_results_schema, verify_results_level_guards,
               verify_results_installed_bindings, verify_results_inventory, replay,
-              verify_results_owned, verify_results_writer_controls, verify_results_packets)
+              verify_results_owned, verify_results_writer_controls, verify_results_packets,
+              verify_results_resources, verify_results_category_cap)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
     for name in READERS:
         suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module('test_' + name)))

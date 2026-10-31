@@ -77,8 +77,16 @@ history packets, each matching the source oracles byte for byte. Clippy passed
 with warnings denied. [Runtime verification](runtime-verification.json) records
 the exact hashes and remaining acceptance exclusions.
 
-Sufficient-payload cap/resource/isolation/concurrency checks, process exports
-and full local/platform gates remain pending. Dialog, graph and auxiliary
+All 20 source checks pass in initialization and strict replay. All 12 focused
+Rust checks pass, including native resources. Reading and construction pass the
+independent exact byte, field, declared-entry and per-text requirements and fail
+one below every positive requirement. Embedded budgets remain zero because
+these layouts contain no embedded archives. Fully supplied 100,000 and 100,001
+historical text-list controls pass and fail respectively; the accepted control
+also constructs all 100,002 physical fields. Clippy passes with warnings denied.
+
+Generated malformed outcomes, changed-value unsigned/text edits, caller isolation,
+mixed concurrency and full local/platform gates remain pending. Dialog, graph and auxiliary
 streams are separate serializers and receive no coverage from this inventory.
 Native application opening, historical writer symmetry, business meanings,
 geometry validation and whole-format parity remain unproven.
