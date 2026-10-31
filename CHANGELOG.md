@@ -36,6 +36,8 @@
 
 ### Added
 
+- Added bounded Gravity, CentriFugal and BaseExcitation binary reads, complete construction and isolated typed edits with explicit versions, composed history and exact field validation. (#136)
+
 - Added explicit Simulation embedded archive profiles and reference registry, plus complete binary thermal reads, construction and isolated typed edits with composed source/replacement history across all five families. (#134)
 
 - Added complete bounded Simulation ParameterSets construction, raw primitive/text framing and isolated typed-field edits with full array preservation and ordered history. (#133)

@@ -18,6 +18,10 @@ sys.path.insert(0, str(ROOT / 'target/reference-python'))
 from pinned_reference_tests import FrozenSourceImports, copy_sources, record_snapshot
 from native_carriers import ThermalCarrier, SOURCE, RESEARCH, digest, recover_sample, pinned_auxiliaries
 from owned_inertial import LOAD_KINDS, owned_inertial_cases
+from inertial_projection import owned_projection_packet, projection_case
+from inertial_edit_oracle import owned_inertial_edits, native_inertial_edits
+from inertial_malformed import inertial_mutation_packet, inertial_budget_packet
+from inertial_history import owned_inertial_history, native_inertial_history
 
 
 def baseline(name: str, value: object) -> None:
@@ -79,13 +83,58 @@ def replay_native(pin: Path) -> None:
     """Recover every complete native image with actual approved adapters and hash checks; e.g. replay_native(pin)."""
     rows = retained_rows()
     packet = bytearray()
+    projection = bytearray()
+    edits = bytearray()
+    history = [bytearray(), bytearray()]
     for path in sorted({row['path'] for row in rows}):
         streams = recover_sample(path, pin)
         for row in (row for row in rows if row['path'] == path):
             packet.extend(verify_native_row(row, streams[row['stream']]))
+            projection.extend(native_projection_case(row, streams[row['stream']]))
+            edits.extend(native_inertial_edits(row, streams[row['stream']]))
+            for nested, history_packet in enumerate(history):
+                history_packet.extend(native_inertial_history(row, streams[row['stream']], bool(nested)))
+    save_native_packets(packet, projection, edits, history)
+
+
+def save_native_packets(packet: bytearray, projection: bytearray, edits: bytearray, history: list[bytearray]) -> None:
+    """Save each distinct independently checked native packet; e.g. save_native_packets(packet, projection, edits, history)."""
     (ROOT / 'target/simulation-inertial-native-cases.bin').write_bytes(packet)
     baseline('native-reference.json', dict(streams=18, bytes=17928, attempts=18, accepted=18,
              packet_bytes=len(packet), packet_sha256=digest(packet), callbacks='Original retained and full actual C-716 additive registry'))
+    (ROOT / 'target/simulation-inertial-native-projection.bin').write_bytes(projection)
+    baseline('native-projection-reference.json', dict(cases=18, bytes=len(projection), sha256=digest(projection)))
+    save_native_edit_packet(edits)
+    for nested, history_packet in enumerate(history):
+        save_history_packet(bytes(history_packet), True, bool(nested))
+
+
+def save_history_packet(packet: bytes, native: bool, nested: bool) -> None:
+    """Freeze complete outer or composed nested history projections; e.g. save_history_packet(packet, False, True)."""
+    suffix = 'nested-history' if nested else 'history'
+    name = f'native-{suffix}' if native else suffix
+    path = ROOT / f'target/simulation-inertial-{name}.bin' if native else ROOT / f'tests/fixtures/simulation-inertial-loads/{suffix}.bin'
+    if native or '--write' in sys.argv: path.write_bytes(packet)
+    assert path.read_bytes() == packet
+    baseline(f'{"native" if native else "owned"}-{suffix}-reference.json', dict(cases=18 if native else 135, bytes=len(packet), sha256=digest(packet)))
+
+
+def replay_owned_history() -> None:
+    """Retain complete independently projected outer and nested parents; e.g. replay_owned_history()."""
+    for nested in (False, True):
+        save_history_packet(owned_inertial_history(nested), False, nested)
+
+
+def save_native_edit_packet(packet: bytearray) -> None:
+    """Retain complete independently replayed native edit expectations; e.g. save_native_edit_packet(packet)."""
+    (ROOT / 'target/simulation-inertial-native-edits.bin').write_bytes(packet)
+    baseline('native-edit-reference.json', dict(cases=18, bytes=len(packet), sha256=digest(packet)))
+
+
+def native_projection_case(row: ThermalCarrier, raw: bytes) -> bytes:
+    """Retain every original native context in full field exports; e.g. native_projection_case(row, raw)."""
+    kind = LOAD_KINDS.index(row['stream'].split('/')[-1])
+    return b''.join(projection_case(kind, cast(int, attempt['version']), raw) for attempt in row['attempts'])
 
 
 def replay_owned() -> None:
@@ -123,6 +172,37 @@ def verify_clauses() -> None:
         assert digest((RESEARCH / name).read_bytes()) == expected, name
 
 
+def replay_owned_projection() -> None:
+    """Freeze every independent typed outer value and offset; e.g. replay_owned_projection()."""
+    packet = owned_projection_packet()
+    path = ROOT / 'tests/fixtures/simulation-inertial-loads/projection.bin'
+    if '--write' in sys.argv: path.write_bytes(packet)
+    assert path.read_bytes() == packet
+    baseline('owned-projection-reference.json', dict(cases=135, bytes=len(packet), sha256=digest(packet)))
+
+
+def replay_owned_edits() -> None:
+    """Freeze complete scalar-edited images located by actual source spans; e.g. replay_owned_edits()."""
+    packet = owned_inertial_edits()
+    path = ROOT / 'tests/fixtures/simulation-inertial-loads/edits.bin'
+    if '--write' in sys.argv: path.write_bytes(packet)
+    assert path.read_bytes() == packet
+    baseline('owned-edit-reference.json', dict(cases=135, bytes=len(packet), sha256=digest(packet)))
+
+
+def replay_adversarial() -> None:
+    """Freeze complete source acceptance and independent exact budgets; e.g. replay_adversarial()."""
+    malformed, count, accepted = inertial_mutation_packet()
+    budgets = inertial_budget_packet()
+    for name, packet in (('malformed.bin', malformed), ('budgets.bin', budgets)):
+        path = ROOT / 'tests/fixtures/simulation-inertial-loads' / name
+        if '--write' in sys.argv: path.write_bytes(packet)
+        assert path.read_bytes() == packet
+    baseline('adversarial-reference.json', dict(cases=count, accepted=accepted,
+             malformed_bytes=len(malformed), malformed_sha256=digest(malformed),
+             budget_cases=135, budget_bytes=len(budgets), budget_sha256=digest(budgets)))
+
+
 def run() -> bool:
     """Execute only copied actual sources and retain their origins; e.g. run()."""
     with tempfile.TemporaryDirectory(prefix='bessemer-inertial-') as temporary:
@@ -132,7 +212,7 @@ def run() -> bool:
         sys.meta_path.insert(0, FrozenSourceImports(pin))
         sys.path.insert(0, str(pin / 'research'))
         replay = update_wrapper(partial(replay_native, pin), replay_native)
-        suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in (replay, replay_owned, verify_clauses))
+        suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in (replay, replay_owned, verify_clauses, replay_owned_projection, replay_owned_edits, replay_adversarial, replay_owned_history))
         result = unittest.TextTestRunner(verbosity=2).run(suite)
         readers = ('cosworks_inertial_audit', 'cosworks_base_excitation_audit', 'cosworks_inertial_layout', 'cosworks_base_excitation_layout', 'cosworks_binary_thermal_transform_audit', 'cfb', 'swcontainer')
         record_snapshot(pin, hashes, result, FEATURE, readers, ())
