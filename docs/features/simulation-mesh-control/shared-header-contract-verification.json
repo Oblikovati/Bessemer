@@ -1,0 +1,16 @@
+{
+  "feature_issue": 161,
+  "scope": "Behavior-preserving shared header contract, full projection and ordered-history test extraction",
+  "before_rust_tests_including_native": 13,
+  "after_rust_tests_including_native": 13,
+  "failures": 0,
+  "processes_reaped": true,
+  "owned_fixtures_changed": false,
+  "before_log_sha256": "48e87253ada94a3748ee697043bfce6d7ea692e5f4cd0a451d712436fa066163",
+  "after_log_sha256": "2860c625bf952bc82ba9a6c4832be8063d5d082614ba27a0313afe85f571c7c2",
+  "shared_test_sources_sha256": {
+    "tests/support/signed_header_contracts.rs": "0cffb51145ed0daa6d50de582696352e800066a4d4b92063093cd8e96aa98464",
+    "tests/support/signed_header_history.rs": "8a5020ac910f5ce3aba4cdb92caddb9cb36867c769eacc2cf0383be371851a40",
+    "tests/support/signed_header_projection.rs": "04e0e01acbda5df2ea88d0737d146eb9eea7f52c9579f356b56313a1e3be1729"
+  }
+}

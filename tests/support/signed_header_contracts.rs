@@ -1,26 +1,22 @@
 use super::*;
 
-fn owned_headers() -> Vec<SimulationShellManagerProperty> {
+fn owned_headers() -> Vec<HeaderBody> {
     let mut cursor = EXPECTED;
     let mut headers = Vec::new();
     while !cursor.is_empty() {
         headers.push(read_original(&mut cursor));
         consume_expected_fields(&mut cursor);
     }
-    assert_eq!(headers.len(), 60);
+    assert_eq!(headers.len(), OWNED_CASES);
     headers
 }
 
-fn decode(
-    header: &SimulationShellManagerProperty,
-    raw: &[u8],
-    limits: SimulationShellManagerLimits,
-) -> bessemer::Result<SimulationShellManagerProperty> {
-    SimulationShellManagerProperty::from_bytes(raw, header.version(), header.wire_profile(), limits)
+fn decode(header: &HeaderBody, raw: &[u8], limits: HeaderLimits) -> bessemer::Result<HeaderBody> {
+    HeaderBody::from_bytes(raw, header.version(), header.wire_profile(), limits)
 }
 
-fn exact_header_limits(header: &SimulationShellManagerProperty) -> SimulationShellManagerLimits {
-    SimulationShellManagerLimits {
+fn exact_header_limits(header: &HeaderBody) -> HeaderLimits {
+    HeaderLimits {
         maximum_bytes: header.to_bytes().len(),
         maximum_fields: header.fields().len(),
         maximum_entries: 0,
@@ -28,12 +24,9 @@ fn exact_header_limits(header: &SimulationShellManagerProperty) -> SimulationShe
     }
 }
 
-fn assert_lowered_header_cap(
-    header: &SimulationShellManagerProperty,
-    limits: SimulationShellManagerLimits,
-) {
+fn assert_lowered_header_cap(header: &HeaderBody, limits: HeaderLimits) {
     assert!(decode(header, &header.to_bytes(), limits).is_err());
-    let rebuilt = SimulationShellManagerProperty::from_fields(
+    let rebuilt = HeaderBody::from_fields(
         header.fields().to_vec(),
         header.version(),
         header.wire_profile(),
@@ -42,7 +35,7 @@ fn assert_lowered_header_cap(
     assert!(rebuilt.is_err());
 }
 
-fn check_exact_budgets(header: &SimulationShellManagerProperty) {
+fn check_exact_budgets(header: &HeaderBody) {
     let exact = exact_header_limits(header);
     assert_exact_header_construction(header, exact);
     assert_eq!(
@@ -59,11 +52,8 @@ fn check_exact_budgets(header: &SimulationShellManagerProperty) {
     assert_lowered_header_cap(header, fields);
 }
 
-fn assert_exact_header_construction(
-    header: &SimulationShellManagerProperty,
-    limits: SimulationShellManagerLimits,
-) {
-    let constructed = SimulationShellManagerProperty::from_fields(
+fn assert_exact_header_construction(header: &HeaderBody, limits: HeaderLimits) {
+    let constructed = HeaderBody::from_fields(
         header.fields().to_vec(),
         header.version(),
         header.wire_profile(),
@@ -84,7 +74,7 @@ fn every_owned_header_obeys_exact_and_one_below_positive_budgets_with_zero_text_
 fn every_proper_prefix_and_trailing_byte_fails_with_sufficient_byte_budget() {
     for header in owned_headers() {
         let raw = header.to_bytes();
-        let limits = SimulationShellManagerLimits {
+        let limits = HeaderLimits {
             maximum_bytes: 32,
             ..LIMITS
         };
@@ -99,24 +89,19 @@ fn every_proper_prefix_and_trailing_byte_fails_with_sufficient_byte_budget() {
     }
 }
 
-fn assert_noop(header: &SimulationShellManagerProperty, ordinal: usize) {
+fn assert_noop(header: &HeaderBody, ordinal: usize) {
     let parent = header.field_id(ordinal).unwrap();
     let edit = header
         .edit_field(&parent, header.fields()[ordinal].value.clone())
         .unwrap();
     assert_eq!(edit.result(), parent);
     assert_eq!(edit.archive().to_bytes(), header.to_bytes());
-    assert_eq!(
-        edit.coverage().completion,
-        SimulationShellManagerCompletion::Unchanged
-    );
+    assert_eq!(edit.coverage().completion, HeaderCompletion::Unchanged);
     for (index, row) in edit.history().iter().enumerate() {
-        assert_eq!(row.relation, SimulationShellManagerRelation::Copied);
+        assert_eq!(row.relation, HeaderRelation::Copied);
         assert_eq!(
             row.parents.as_ref(),
-            &[SimulationShellManagerHistoryParent::Source(
-                header.field_id(index).unwrap()
-            )]
+            &[HeaderHistoryParent::Source(header.field_id(index).unwrap())]
         );
         assert_eq!(row.result, header.field_id(index).unwrap());
     }
@@ -139,7 +124,7 @@ fn field_ownership_rejects_foreign_stale_and_out_of_bounds_handles() {
     assert!(independent.field(&original).is_err());
     assert!(header.field_id(usize::MAX).is_err());
     let edit = header
-        .edit_field(&original, SimulationShellManagerValue::Signed(17))
+        .edit_field(&original, HeaderValue::Signed(17))
         .unwrap();
     assert!(edit.archive().field(&original).is_err());
     assert!(header.field(&edit.result()).is_err());
@@ -147,13 +132,11 @@ fn field_ownership_rejects_foreign_stale_and_out_of_bounds_handles() {
     assert!(edit.archive().field(&edit.result()).is_ok());
 }
 
-fn invalid_header_field_sets(
-    header: &SimulationShellManagerProperty,
-) -> [Vec<SimulationShellManagerField>; 4] {
+fn invalid_header_field_sets(header: &HeaderBody) -> [Vec<HeaderField>; 4] {
     let mut path = header.fields().to_vec();
     path[0].path = "unbound-header-word".into();
     let mut kind = header.fields().to_vec();
-    kind[0].value = SimulationShellManagerValue::Unsigned(0);
+    kind[0].value = HeaderValue::Unsigned(0);
     let mut absent = header.fields().to_vec();
     absent.pop();
     let mut extra = header.fields().to_vec();
@@ -166,13 +149,8 @@ fn construction_rejects_wrong_paths_kinds_and_missing_or_extra_fields() {
     for header in owned_headers() {
         for fields in invalid_header_field_sets(&header) {
             assert!(
-                SimulationShellManagerProperty::from_fields(
-                    fields,
-                    header.version(),
-                    header.wire_profile(),
-                    LIMITS
-                )
-                .is_err()
+                HeaderBody::from_fields(fields, header.version(), header.wire_profile(), LIMITS)
+                    .is_err()
             );
         }
     }
@@ -184,12 +162,10 @@ fn mutable_inputs_successful_edits_and_failed_requests_remain_isolated() {
         let mut input = original.to_bytes();
         let source = decode(&original, &input, LIMITS).unwrap();
         let parent = source.field_id(0).unwrap();
-        let edit = source
-            .edit_field(&parent, SimulationShellManagerValue::Signed(23))
-            .unwrap();
+        let edit = source.edit_field(&parent, HeaderValue::Signed(23)).unwrap();
         assert!(
             source
-                .edit_field(&parent, SimulationShellManagerValue::Unsigned(23))
+                .edit_field(&parent, HeaderValue::Unsigned(23))
                 .is_err()
         );
         input.fill(0x5a);
@@ -200,11 +176,11 @@ fn mutable_inputs_successful_edits_and_failed_requests_remain_isolated() {
     }
 }
 
-fn edit_signature(header: &SimulationShellManagerProperty, replacement: i32) -> Vec<u8> {
+fn edit_signature(header: &HeaderBody, replacement: i32) -> Vec<u8> {
     let edit = header
         .edit_field(
             &header.field_id(0).unwrap(),
-            SimulationShellManagerValue::Signed(replacement),
+            HeaderValue::Signed(replacement),
         )
         .unwrap();
     let result = edit.archive();
@@ -222,11 +198,7 @@ fn edit_signature(header: &SimulationShellManagerProperty, replacement: i32) -> 
     output
 }
 
-fn assert_parallel_options(
-    headers: &[SimulationShellManagerProperty],
-    expected: &[[Vec<u8>; 3]],
-    worker: usize,
-) {
+fn assert_parallel_options(headers: &[HeaderBody], expected: &[[Vec<u8>; 3]], worker: usize) {
     let replacements = [-2147483648, 0, 2147483647];
     for iteration in 0..32 {
         let source = (worker + iteration) % headers.len();

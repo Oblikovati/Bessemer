@@ -2,10 +2,7 @@ use super::load_edit_case::{LoadEditCase, read_edit_case};
 use super::load_history::{LoadHistorySnapshot, LoadHistoryView, project_history, project_nested};
 use super::*;
 
-const EXPECTED_HISTORY: &[u8] =
-    include_bytes!("../fixtures/simulation-shell-manager/header-history.bin");
-
-fn snapshot(header: &SimulationShellManagerProperty) -> LoadHistorySnapshot<'_> {
+fn snapshot(header: &HeaderBody) -> LoadHistorySnapshot<'_> {
     LoadHistorySnapshot::new(
         header.to_bytes(),
         header.fields(),
@@ -14,12 +11,10 @@ fn snapshot(header: &SimulationShellManagerProperty) -> LoadHistorySnapshot<'_> 
     )
 }
 
-fn make_edit(case: &LoadEditCase<'_, SimulationShellWireProfile>) -> SimulationShellManagerEdit {
-    let source =
-        SimulationShellManagerProperty::from_bytes(case.original, case.version, case.kind, LIMITS)
-            .unwrap();
+fn make_edit(case: &LoadEditCase<'_, HeaderProfile>) -> HeaderEdit {
+    let source = HeaderBody::from_bytes(case.original, case.version, case.kind, LIMITS).unwrap();
     let parent = source.field_id(0).unwrap();
-    let replacement = SimulationShellManagerValue::Signed(case.replacement);
+    let replacement = HeaderValue::Signed(case.replacement);
     let edit = source.edit_field(&parent, replacement.clone()).unwrap();
     assert_eq!(edit.archive().to_bytes(), case.expected);
     assert_eq!(edit.source().to_bytes(), case.original);
@@ -30,14 +25,11 @@ fn make_edit(case: &LoadEditCase<'_, SimulationShellWireProfile>) -> SimulationS
     edit
 }
 
-fn assert_changed_scope(edit: &SimulationShellManagerEdit, profile: SimulationShellWireProfile) {
-    assert_eq!(
-        edit.coverage().completion,
-        SimulationShellManagerCompletion::Changed
-    );
+fn assert_changed_scope(edit: &HeaderEdit, profile: HeaderProfile) {
+    assert_eq!(edit.coverage().completion, HeaderCompletion::Changed);
     assert_eq!(
         edit.coverage().check_mode,
-        SimulationShellManagerCheckMode::ExactBodyAndPreservation
+        HeaderCheckMode::ExactBodyAndPreservation
     );
     assert_eq!(edit.coverage().wire_profile, profile);
 }
@@ -51,25 +43,24 @@ fn project_case(cursor: &mut &[u8], output: &mut Vec<u8>) {
         outer: edit.history(),
         nested: &[],
     };
-    let kind = usize::from(case.kind == SimulationShellWireProfile::Writer);
+    let kind = usize::from(case.kind == HeaderProfile::Writer);
     project_history(cursor, output, &case, kind, &view);
     project_nested(cursor, output, &view);
 }
 
 #[test]
 fn every_owned_profile_edit_matches_all_independent_fields_and_ordered_history_parents() {
-    project_packet(EXPECTED_HISTORY, 60, project_case);
+    project_packet(EXPECTED_HISTORY, OWNED_CASES, project_case);
 }
 
 #[test]
 #[ignore = "requires complete independently generated native header edit/history expectations"]
 fn every_native_header_edit_matches_complete_independent_history_with_optional_export() {
-    let path = std::env::var_os("BESSEMER_SHELL_HEADER_NATIVE_HISTORY_INPUT")
-        .expect("set complete native header histories");
+    let path = std::env::var_os(NATIVE_HISTORY_ENV).expect("set complete native header histories");
     let native = std::fs::read(path).unwrap();
-    let mut packet = project_packet(EXPECTED_HISTORY, 60, project_case);
-    packet.extend(project_packet(&native, 365, project_case));
-    if let Some(path) = std::env::var_os("BESSEMER_SHELL_HEADER_HISTORY_OUTPUT") {
+    let mut packet = project_packet(EXPECTED_HISTORY, OWNED_CASES, project_case);
+    packet.extend(project_packet(&native, NATIVE_ACCEPTED, project_case));
+    if let Some(path) = std::env::var_os(HISTORY_OUTPUT_ENV) {
         std::fs::write(path, packet).unwrap();
     }
 }
