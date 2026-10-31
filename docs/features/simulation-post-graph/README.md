@@ -88,8 +88,12 @@ types satisfy `Send` and `Sync`; Clippy passes with warnings denied.
 Two fresh Rust processes exported identical complete owned/native fields
 (1,637,647 bytes) and history (2,513,677 bytes), each matching the independent
 source packets byte for byte. [Runtime verification](runtime-verification.json)
-records their exact hashes, final logs and exclusions. Full local/platform and
-ThreadSanitizer acceptance remain pending.
+records their exact hashes, final logs and exclusions. The full local
+`cargo xtask pr` gate passed at runtime commit
+`73353ff7083915ca925df1b5b61ee8cabd62d15e`: 3,521 tests passed, zero failed,
+and 108 were ignored across 266 summaries. The process exited successfully;
+[full gate verification](full-gate-verification.json) records its tree and log hash.
+Exact-head platform and ThreadSanitizer acceptance remain pending.
 
 Native application opening, short-read/clamp emulation, chart business meanings,
 historical writer equivalence, dialog and auxiliary streams, geometry validation
