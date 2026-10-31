@@ -65,8 +65,27 @@ exports exactly match the independent reference framing: 1,857,428 bytes,
 SHA-256 `6f7af608468ab54e7467180c2e0be81ca1692f3b57002f03cbfc6e6ea6ff3797`.
 These exports check complete body construction; full independent primitive/span
 projections and ordered edit histories remain covered separately by the existing
-family oracles. Combined ordered-history validation and full local/platform
-gates remain pending for this feature.
+family oracles.
+
+The operation-oracle binding gate checks the full accepted multiset by family,
+version, profile, payload length and SHA-256, preserving repeated occurrences:
+
+```text
+python -B -X utf8 docs/features/simulation-shell-inventory/verify_family_oracle_packets.py
+```
+
+All seven checks pass. The required arguments are 365 headers, 79 groups, 236
+Shells Properties, 15 midsurface Properties, 237 Materials, 22 FlipTurn profiles
+and eight Extra writer profiles. Each family input and its complete primitive and
+history packet must match the reviewed length and digest. The Material oracle
+also covers 993 accepted arguments outside this inventory; they add no coverage
+to its 962-argument denominator. Missing occurrences, substituted versions,
+unassigned extra arguments and packet hash/extent substitutions are rejected.
+The exact binding is retained in
+[family oracle coverage](family-oracle-coverage-reference.json).
+
+The combined Rust invocation of these native operation oracles and full
+local/platform gates remain pending for this feature.
 
 Native writer/application and geometry acceptance, physical field
 meanings, unrepresented populated native profiles and whole-format parity remain
