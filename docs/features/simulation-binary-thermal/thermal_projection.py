@@ -1,6 +1,7 @@
 """Independent primitive expansion of actual complete source spans (#134)."""
 import re
 import struct
+from collections.abc import Callable
 from typing import cast
 from owned_thermal import THERMAL_KINDS, owned_thermal_cases
 from thermal_malformed import is_text_span
@@ -69,12 +70,12 @@ def span_shape(label: str, size: int) -> list[FieldShape]:
     return primitive_shape(label, size)
 
 
-def projected_fields(raw: bytes, spans: list[dict[str, object]]) -> list[bytes]:
+def projected_fields(raw: bytes, spans: list[dict[str, object]], shape: Callable[[str, int], list[FieldShape]] = span_shape) -> list[bytes]:
     """Encode every complete typed field with independent source offsets; e.g. projected_fields(raw, spans)."""
     fields: list[bytes] = []
     for span in spans:
         start, end = cast(int, span['offset']), cast(int, span['end'])
-        for path, tag, width in span_shape(cast(str, span['label']), end - start):
+        for path, tag, width in shape(cast(str, span['label']), end - start):
             name = path.encode('utf-8')
             fields.append(struct.pack('<I', len(name)) + name + struct.pack('<III', tag, start, start + width) + raw[start:start + width])
             start += width

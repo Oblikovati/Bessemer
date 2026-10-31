@@ -245,3 +245,6 @@ fn thermal_collections_own_input_texts_and_returned_byte_buffers() {
     assert_eq!(source.to_bytes(), raw);
     assert_complete_collection(&source, raw);
 }
+
+#[path = "support/binary_load_projection.rs"]
+mod load_projection;
