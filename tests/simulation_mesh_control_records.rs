@@ -17,7 +17,6 @@ mod load_history;
 #[path = "support/binary_load_limits.rs"]
 #[allow(
     dead_code,
-    unused_imports,
     reason = "The shared limits module also serves malformed-grammar corpora."
 )]
 mod load_limits;
@@ -33,6 +32,8 @@ mod load_mutations;
     reason = "Shared helpers also serve full ordered-history tests."
 )]
 mod load_projection;
+#[path = "simulation_mesh_control_records/malformed.rs"]
+mod malformed;
 use load_projection::{
     consume_expected_fields, project_field, project_packet, project_word, read_word,
     take_projection,

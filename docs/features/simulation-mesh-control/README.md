@@ -101,8 +101,18 @@ code/log hashes and the remaining scope. The added budget packets preserve every
 earlier input/field/history reference; their reason and behavior version are
 retained in [budget extension verification](records-budget-extension-verification.json).
 
-Generated malformed grammar, sufficient-payload fixed-cap controls, full changed
-six-kind/supplied-archive provenance and mixed concurrency remain pending. Full
+All 20 strict reference checks now pass. Rust matches all 29,397 generated
+grammar outcomes across the 322 owned contexts: 756 complete accepted images and
+28,641 rejected images. Each accepted image also passes complete typed
+construction. Five fixed caps have full payload controls at the limit and one
+above it: 10,000 records, 10,000 references, 1,000,000 blob bytes, 100,000 optional
+pairs and 50 curves. Permissive caller budgets keep these checks independent of
+resource limits. The source reader independently rejects all 390,672 proper
+prefixes and 322 appended-byte images. All 15 focused Rust checks pass, including
+the three native checks. [Adversarial verification](records-adversarial-verification.json)
+records counts, hashes and exclusions.
+
+Full changed six-kind/supplied-archive provenance and mixed concurrency remain pending. Full
 local/platform gates for the completed combined feature also remain pending.
 Native writer/application and geometry acceptance, field
 meanings, unrepresented native profiles and whole-format parity remain unproven.
