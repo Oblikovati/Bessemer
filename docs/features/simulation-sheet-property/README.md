@@ -49,7 +49,9 @@ binary packets stay under `target/`; original reports retain decoded native
 values/raw spans as provenance. No target code executes. The earlier
 [foundation ledger](foundation-verification.json) records the initial scope.
 
-Full local and exact-head platform gates remain pending. Nested SurfaceBody
+The [full local gate](full-gate-verification.json) passed 3,343 tests
+with zero failures and 69 ignored. Exact-head platform integration remains
+pending. Nested SurfaceBody
 historical tails, sibling ComponentPersistID, whole storage trees, physical
 meanings, native writer/application and geometry acceptance are separate.
 Complete inherited Property framing does not resolve the six documented
