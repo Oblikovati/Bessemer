@@ -1,0 +1,81 @@
+{
+  "issue": 142,
+  "status": "Complete focused operation corpus; full local and exact-head platform gates pending",
+  "base_revision": "b4fc75f7",
+  "rust_tests": {
+    "passed": 20,
+    "failed": 0,
+    "ignored": 0,
+    "explicit_native_inputs": 4
+  },
+  "native_contexts": 163,
+  "owned_contexts": 104,
+  "checks": [
+    "Complete EOF/read/reconstruction and forced typed construction",
+    "All original owned/native source span boundaries",
+    "Signed-short width and signed extrema",
+    "Typed kind and foreign/out-of-range identity rejection",
+    "Exact no-op identities and outer source parents for every owned field",
+    "Every owned proper prefix and trailing-byte rejection",
+    "15 public types/aliases Send/Sync",
+    "clippy -D warnings, formatting and function/file audits",
+    "All typed field paths, physical offsets, raw values and unsigned/short widths match complete independent expectations",
+    "Every owned/native short edit matches complete independent edited fields and ordered outer/nested-copy histories",
+    "All seven value kinds preserve complete source/replacement/result and exact prefix/suffix bytes",
+    "Embedded short/extended CString prefixes produce distinct real edits",
+    "Targeted mutation outcomes and seven exact/one-below outer/embedded limits match source metrics"
+  ],
+  "existing_mass_tests": {
+    "passed": 17,
+    "failed": 0,
+    "ignored_native": 3
+  },
+  "remaining": [
+    "Full local and exact-head platform gates",
+    "Native runtime/application/geometry and physical/link semantics"
+  ],
+  "strict_reference_checks": 9,
+  "fresh_complete_exports": {
+    "projection": {
+      "bytes": 585542,
+      "sha256": "9c53b5a139a4b94da76853a245077a5b37f798ab53c39b1135ce35ef47363a0e",
+      "processes": 2,
+      "full_independent_match": true
+    },
+    "history": {
+      "bytes": 872118,
+      "sha256": "c44204fe09ea8aa74e5a517678fdcfe3ac631a8a4fb5efb9486ab9d02bcef98c",
+      "processes": 2,
+      "full_independent_match": true
+    },
+    "nested-history": {
+      "bytes": 914346,
+      "sha256": "c03569d66cd7ba24b03e14cf9aa619ff35158cfd5c7ba1c76ebe7a16b2f98c4f",
+      "processes": 2,
+      "full_independent_match": true
+    }
+  },
+  "adversarial": {
+    "inputs": 1548,
+    "accepted": 0,
+    "rejected": 1548,
+    "malformed_bytes": 88046,
+    "malformed_sha256": "04299a91f08ee0b965b3fcc83eed907a874b421aa7bc569eb35a35ae6c95cda4",
+    "budget_cases": 104,
+    "budget_bytes": 61052,
+    "budget_sha256": "d7e148210141e90de13dad065ee0b9003d7f82ae8b10317f9b1bd31348974d6f"
+  },
+  "concurrency": {
+    "threads": 8,
+    "edits_per_thread": 32,
+    "serial_variants": 7,
+    "comparisons": [
+      "bytes",
+      "fields",
+      "coverage",
+      "all source/replacement parents",
+      "result handle identities",
+      "input isolation"
+    ]
+  }
+}

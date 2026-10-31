@@ -31,3 +31,29 @@ for review. The complete native input/span packet stays under `target/`; owned
 literals and spans are committed under `tests/fixtures/simulation-beam-property/`.
 No target code executes. The initial report and current source snapshot retain
 the distinction between historical evidence and this fresh replay.
+
+The complete local codec reads and reconstructs every owned/native case,
+validates complete typed construction, and provides isolated edits with ordered
+outer/nested history. Twenty Rust tests pass with four explicit native inputs;
+nine strict copied-source checks pass. All fifteen published types/aliases have
+Send/Sync assertions. Clippy, formatting and function/file audits pass.
+
+Two fresh Rust processes match the complete independent field export (585,542
+bytes), short-edit/outer-history export (872,118 bytes), and short-edit/nested-copy
+history export (914,346 bytes). Every original accepted context is retained.
+All 1,548 targeted malformed inputs match Source rejection. Every owned context
+passes seven exact/one-below outer/embedded budgets and rejects every proper
+prefix and trailing byte. Eight threads each run 32 mixed edits against seven
+serial variants, matching bytes, fields, coverage and complete parent relations.
+
+The [operation ledger](operation-checkpoint.json) records hashes, scope and
+remaining gates. Full local and exact-head platform gates remain pending.
+Native runtime/application, physical/link semantics and geometric acceptance
+remain separate. No target code executes.
+
+Set `BESSEMER_BEAM_NATIVE_INPUT`, `BESSEMER_BEAM_NATIVE_PROJECTION_INPUT`,
+`BESSEMER_BEAM_NATIVE_HISTORY_INPUT` and
+`BESSEMER_BEAM_NATIVE_NESTED_HISTORY_INPUT` to the corresponding freshly generated
+`target/simulation-beam-property-native*.bin` packets. Optional complete exports
+use `BESSEMER_BEAM_PROJECTION_OUTPUT`, `BESSEMER_BEAM_HISTORY_OUTPUT` and
+`BESSEMER_BEAM_NESTED_HISTORY_OUTPUT`.

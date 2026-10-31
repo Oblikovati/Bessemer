@@ -549,3 +549,10 @@ Gravity, CentriFugal and BaseExcitation collections have local reads, complete c
 MassElement child `Property` has local complete single-body reads, construction and typed edits, preserving raw scalar/text fields and its exact selector/pair gate. Independent fields, complete edit/history exports, malformed inputs and exact limits match all owned and retained native contexts; the full local gate passed and exact-head platform integration remains pending. See [the mass-element Property evidence](docs/features/simulation-mass-element-property/README.md).
 
 Study-manager Simulation `Material` has local complete reads, construction and explicit bounded-prefix operations. Every accepted retained argument matches independent field projections; raw text and interleaved pairs remain unchanged. Isolated typed edits match complete independent history expectations, malformed-input outcomes and exact resource limits; concurrent edits match serial results. The full local gate passed; platform integration remains pending. See [the Material evidence](docs/features/simulation-material/README.md).
+
+Simulation beam child `Property` bodies preserve complete reference containers,
+signed two-byte fields, unsigned words, raw doubles/text, counted triples and
+historical helpers. Complete construction and isolated edits retain revision-bound
+identities and ordered outer/nested history. Focused/native and independent
+reference checks pass; full local/platform acceptance is pending. See
+[the beam Property evidence](docs/features/simulation-beam-property/README.md).

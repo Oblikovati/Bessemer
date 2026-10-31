@@ -1,4 +1,5 @@
 //! Lossless documented Cosworks persistence frames with explicit caller context.
+mod beam;
 mod coverage;
 mod inertial;
 mod lbc_final;
@@ -21,6 +22,7 @@ mod text_sequence;
 mod thermal;
 mod version;
 use super::{Result, invalid, require};
+pub use beam::*;
 pub use coverage::*;
 pub use inertial::*;
 pub use lbc_final::*;

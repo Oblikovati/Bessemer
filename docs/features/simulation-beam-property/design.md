@@ -5,9 +5,12 @@ embedded archives and most scalar values. Beam Property adds two physical
 signed 16-bit fields. The current shared public value enum has only 32-bit
 signed words; encoding either short as that variant would change its wire
 width. Adding a variant also affects exhaustive callers across already shipped
-families. Choose a representation only after reviewing existing short codecs
-and pinning all old shared projections. Do not silently promote stored shorts
-or expose them as unexplained opaque bytes.
+families. The local implementation uses a beam-specific value enum with a signed-short
+variant and a shared-value variant. This keeps the existing public enum and all
+its callers unchanged. Private short wire frames use the existing raw-byte
+writer; the public beam view exposes their signed two-byte type. Construction
+and edits validate both the public type and the complete parsed wire shape.
+Shared bytes cannot masquerade as a signed-short replacement.
 
 The child body is independent of the manager header and Material stream. Its
 reference-container prefix must use existing typed embedded archive profiles,

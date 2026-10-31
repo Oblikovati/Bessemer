@@ -11,11 +11,14 @@ FEATURE = Path(__file__).resolve().parent
 ROOT = FEATURE.parents[2]
 sys.path.insert(0, str(FEATURE.parent / 'simulation-binary-thermal'))
 sys.path.insert(0, str(FEATURE.parent / 'model-archives'))
+sys.path.insert(0, str(FEATURE.parent / 'simulation-inertial-loads'))
 sys.path.insert(0, str(ROOT / 'target/reference-python'))
 import pefile
 from pinned_reference_tests import FrozenSourceImports, copy_sources, record_snapshot
 from native_carriers import SOURCE, RESEARCH, digest, recover_sample, pinned_auxiliaries
 from owned_beam import owned_beam_cases
+from beam_projection import beam_parser, projection_case, history_case, nested_history_case
+from beam_adversarial import mutation_packet, budget_packet
 
 
 def freeze(name: str, value: object) -> None:
@@ -66,6 +69,43 @@ def replay_native(pin: Path) -> None:
     (ROOT / 'target/simulation-beam-property-native.bin').write_bytes(packet)
     freeze('native-reference.json', dict(streams=len(rows), attempts=attempts,
            bytes=len(packet), sha256=digest(packet)))
+
+
+def save_operation_packet(packet: bytes, role: str, native: bool, count: int) -> None:
+    """Keep native payloads outside the repository; e.g. save_operation_packet(packet, 'history', True, 163)."""
+    path = ROOT / f'target/simulation-beam-property-native-{role}.bin' if native else ROOT / f'tests/fixtures/simulation-beam-property/{role}.bin'
+    if native or '--write' in sys.argv: path.write_bytes(packet)
+    assert path.read_bytes() == packet
+    freeze(f'{"native" if native else "owned"}-{role}-reference.json', dict(cases=count, bytes=len(packet), sha256=digest(packet)))
+
+
+def operation_packets(cases: list[tuple[int, bytes]], native: bool) -> None:
+    """Export every complete typed field and edited outer relation; e.g. operation_packets(cases, False)."""
+    projection = bytearray()
+    history = bytearray()
+    nested = bytearray()
+    for version, raw in cases:
+        projection.extend(projection_case(version, raw, beam_parser(raw, version)))
+        history.extend(history_case(version, raw))
+        nested.extend(nested_history_case(version, raw))
+    save_operation_packet(bytes(projection), 'projection', native, len(cases))
+    save_operation_packet(bytes(history), 'history', native, len(cases))
+    save_operation_packet(bytes(nested), 'nested-history', native, len(cases))
+
+
+def replay_operations(pin: Path) -> None:
+    """Use freshly recovered originals for all retained candidate versions; e.g. replay_operations(pin)."""
+    operation_packets([(version, raw) for _, version, raw in owned_beam_cases()], False)
+    rows = cast(list[dict[str, object]], beam_report()['rows'])
+    cases: list[tuple[int, bytes]] = []
+    for path in sorted({cast(str, row['path']) for row in rows}):
+        streams = recover_sample(path, pin)
+        for row in (row for row in rows if row['path'] == path):
+            raw = streams[cast(str, row['stream'])]
+            assert digest(raw) == row['sha256'] and len(raw) == row['bytes']
+            cases.extend((cast(int, attempt['version']), raw) for attempt in cast(list[dict[str, object]], row['attempts']) if attempt['success'])
+    assert len(cases) == 163
+    operation_packets(cases, True)
 
 
 def verify_sources() -> None:
@@ -137,8 +177,23 @@ def run_checks(pin: Path) -> unittest.TestResult:
     replay = update_wrapper(partial(replay_native, pin), replay_native)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check)
                                for check in (replay, verify_sources, verify_bindings, replay_owned))
+    suite.addTest(unittest.FunctionTestCase(update_wrapper(partial(replay_operations, pin), replay_operations)))
+    suite.addTest(unittest.FunctionTestCase(replay_adversarial))
     suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(test_cosworks_beam_property))
     return unittest.TextTestRunner(verbosity=2).run(suite)
+
+
+def replay_adversarial() -> None:
+    """Retain every actual mutation result and independent exact budget; e.g. replay_adversarial()."""
+    malformed, count, accepted = mutation_packet()
+    budgets = budget_packet()
+    for name, packet in (('malformed', malformed), ('budgets', budgets)):
+        path = ROOT / f'tests/fixtures/simulation-beam-property/{name}.bin'
+        if '--write' in sys.argv: path.write_bytes(packet)
+        assert path.read_bytes() == packet
+    freeze('adversarial-reference.json', dict(inputs=count, accepted=accepted, rejected=count-accepted,
+           malformed_bytes=len(malformed), malformed_sha256=digest(malformed),
+           budget_cases=104, budget_bytes=len(budgets), budget_sha256=digest(budgets)))
 
 
 def run() -> bool:
