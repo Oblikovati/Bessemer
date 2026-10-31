@@ -1,0 +1,86 @@
+{
+  "feature_issue": 163,
+  "behavior_profile": 1,
+  "implementation_revision": "9458352702d28b1c8b69a9cf4ed5c5047822bf18",
+  "reason": "Added independent exact resource and complete operation coverage packets without modifying earlier input/projection/history references",
+  "focused_tests_including_native": 13,
+  "native_tests": 4,
+  "strict_source_checks": 32,
+  "all_exit_codes": 0,
+  "all_processes_reaped": true,
+  "clippy_warnings": 0,
+  "owned_contexts": 588,
+  "native_accepted_contexts": 357,
+  "exact_and_one_below_positive_axes": [
+    "outer bytes",
+    "outer fields",
+    "declared entries",
+    "per-text payload bytes",
+    "embedded bytes",
+    "embedded objects",
+    "embedded fields"
+  ],
+  "implicit_duration_count_charged": false,
+  "all_null_empty_controls": 98,
+  "references": {
+    "owned-reference.json": {
+      "preserved_packets": {
+        "input": {
+          "bytes": 1355313,
+          "sha256": "9c5b0a27262e8c815742a62f5f30962b3670ade377c55cc09090c7506b5de4d1"
+        },
+        "projection": {
+          "bytes": 7465950,
+          "sha256": "63f513a582cf4ab243dbf958ea9d42427455124bb7f655f03ff2a1b891620603"
+        },
+        "history": {
+          "bytes": 10998495,
+          "sha256": "e881f46d8ceba500a551d970d7428df2ecab457731dda78138d38a9ac6c5f043"
+        }
+      },
+      "added_budget_packet": {
+        "bytes": 1188889,
+        "sha256": "0c06f647ab2e4b5bdd22001b95989b070f4dc53cff5b3e9d75203c6d8e1fa34f"
+      }
+    },
+    "native-operations-reference.json": {
+      "preserved_packets": {
+        "projection": {
+          "bytes": 805362,
+          "sha256": "31d4bf470de1b3ce0a861b65d2985368ed1ad1128ed6c8dac17727c838fb8a13"
+        },
+        "history": {
+          "bytes": 1256706,
+          "sha256": "85e08b565d361f7708b17ef3108b49369609c34ad1166d1810d0855cadbad046"
+        }
+      },
+      "added_budget_packet": {
+        "bytes": 117676,
+        "sha256": "0c936212e82e745175608879bd67c47a8d314e8056cfab399017c96ccc3d5c6f"
+      }
+    }
+  },
+  "source_snapshot_identity": "ef8af954e675eda3bb55f5c2ac0fef19a51bf215f22c5d895638f6c7be67192a",
+  "artifacts": {
+    "target/mesh-property-budget-write.log": "09881b629714f5f098c179873868e9d9cb4bcdbcbd4030213beb1e165f0a8747",
+    "target/mesh-property-budget-strict.log": "e1ba249c02c332d3f046a29ecca84482dc69154444b40ef4127ab92dddcbc1af",
+    "target/mesh-property-runtime-budget-focused.log": "7223e07e58a3c34a3e5d47ab258f181851ba4da506980e86b41f4db1b9c5f4a0",
+    "target/mesh-property-runtime-budget-clippy.log": "f2db941706aa80393a6b0900a695af408f189b8318d9375f0363cd29b4869d3c"
+  },
+  "sources": {
+    "docs/features/simulation-mesh-property/property_metrics.py": "3662d3e07cbb762349ac3e1701e8cd8fcae79e72052a5b19e475be53a4e01d27",
+    "docs/features/simulation-mesh-property/property_owned_packets.py": "839cc56b9e9e275074cfeefd4130079f604dcd99992cc8a410daa3fa258b361f",
+    "docs/features/simulation-mesh-property/property_native_operations.py": "1c74b365049356778f703e84b9d14721ec2a7a7634062dcf44bb4d5cd94918ba",
+    "tests/simulation_mesh_property/budgets.rs": "98786f9cca51156e92bf863a50c54fe3cd49483eb7c749b7a6913e39abd8bf61"
+  },
+  "exclusions": [
+    "Generated malformed outcomes and sufficient-payload fixed caps",
+    "Every proper prefix and appended byte",
+    "All supported changed-value kinds and supplied-archive provenance",
+    "Mixed concurrency",
+    "Full local and exact-head platform/ThreadSanitizer gates",
+    "Native application/writer and geometry acceptance",
+    "Whole-format schema parity"
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending"
+}

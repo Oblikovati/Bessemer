@@ -1,5 +1,7 @@
 //! Complete Mesh Property operations against independent owned/native packets (#163).
 use bessemer::{model_archives::ModelArchiveLimits, simulation::*};
+#[path = "simulation_mesh_property/budgets.rs"]
+mod budgets;
 #[path = "simulation_mesh_property/contracts.rs"]
 mod contracts;
 #[path = "simulation_mesh_property/history.rs"]
@@ -12,6 +14,19 @@ mod history;
 mod load_edit_case;
 #[path = "support/binary_load_history.rs"]
 mod load_history;
+#[path = "support/binary_load_limits.rs"]
+#[allow(
+    dead_code,
+    unused_imports,
+    reason = "Shared limits helpers also serve malformed grammar and mutation suites."
+)]
+mod load_limits;
+#[path = "support/binary_load_mutations.rs"]
+#[allow(
+    dead_code,
+    reason = "Shared mutation helpers serve the limits module before grammar corpus extensions."
+)]
+mod load_mutations;
 #[path = "support/binary_load_projection.rs"]
 #[allow(
     dead_code,
