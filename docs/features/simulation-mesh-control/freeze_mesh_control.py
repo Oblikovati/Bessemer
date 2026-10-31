@@ -22,6 +22,7 @@ from freeze_solid_manager import verify_image
 from freeze_shell import verify_shell_image
 from mesh_control_evidence import mesh_baseline, mesh_reports, verify_mesh_source_bindings, verify_mesh_refinement_rejections, verify_mesh_schema_clauses
 from solid_inventory_bindings import complete_identity_match
+from mesh_header_packets import verify_owned_mesh_header_packets, replay_native_mesh_header_packets
 
 
 def verify_mesh_corpus_bindings() -> None:
@@ -120,8 +121,9 @@ def run_mesh_checks(pin: Path) -> unittest.TestResult:
     import test_cosworks_mesh_control_header
     import test_cosworks_mesh_control
     replay = update_wrapper(partial(replay_mesh_native, pin), replay_mesh_native)
+    headers = update_wrapper(partial(replay_native_mesh_header_packets, pin), replay_native_mesh_header_packets)
     checks = (verify_mesh_corpus_bindings, verify_mesh_source_bindings, verify_mesh_refinement_rejections, verify_mesh_schema_clauses,
-              verify_mesh_installed_bindings, replay, verify_unimported_boundary)
+              verify_mesh_installed_bindings, verify_owned_mesh_header_packets, headers, replay, verify_unimported_boundary)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
     for module in (test_cosworks_mesh_control_header, test_cosworks_mesh_control):
         suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(module))
