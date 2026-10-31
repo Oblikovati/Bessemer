@@ -49,7 +49,7 @@ fn scalar_block(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
     reader.words(&format!("{prefix}.words"), 3)
 }
 
-fn references(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
+pub(super) fn references(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
     let count = reader.count(&format!("{label}.references.count"), 10000, 1)?;
     for index in 0..count {
         reference(reader, &format!("{label}.reference{index}"))?;
