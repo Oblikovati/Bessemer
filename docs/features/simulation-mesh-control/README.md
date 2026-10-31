@@ -112,8 +112,25 @@ prefixes and 322 appended-byte images. All 15 focused Rust checks pass, includin
 the three native checks. [Adversarial verification](records-adversarial-verification.json)
 records counts, hashes and exclusions.
 
-Full changed six-kind/supplied-archive provenance and mixed concurrency remain pending. Full
-local/platform gates for the completed combined feature also remain pending.
+Changed-value checks cover 8,825 edits across all 322 owned contexts: 446 signed,
+446 unsigned, 446 raw double, 6,983 text, 248 blob and 256 embedded archive edits.
+Each edit matches an independent literal replacement of the original field bytes.
+Checks cover complete field and record/base extents, unaffected fields, typed
+construction, input isolation, and all ordered outer and nested source/replacement
+parents, including created and deleted embedded occurrences. The earlier Shell
+Property fixtures pass unchanged through shared value and history assertions;
+[shared-helper verification](shared-typed-verification.json) records the separate
+structural change.
+
+Eight workers each visit every owned context and every changed-value option,
+plus all 62 completed-empty no-ops. All 71,096 concurrent operations match serial
+bytes, fields, physical extents, completion, limits, diagnostics, achieved error
+and ordered histories. Original inputs remain unchanged. All 17 focused Rust
+checks pass, including the three native checks. [Changed-value verification](records-typed-verification.json)
+records exact counts, hashes and scope.
+
+Full local/platform gates and ThreadSanitizer acceptance for the completed
+combined feature remain pending.
 Native writer/application and geometry acceptance, field
 meanings, unrepresented native profiles and whole-format parity remain unproven.
 Humanizer was unavailable; maintainer prose review remains pending.
