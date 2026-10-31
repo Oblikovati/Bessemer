@@ -1,0 +1,58 @@
+{
+  "feature_issue": 161,
+  "implementation_revision": "f73461bbfae3f1b9121d488c8bc9b62e259beba9",
+  "behavior_profile": 1,
+  "strict_reference_checks": 20,
+  "reference_exit_code": 0,
+  "reference_process_reaped": true,
+  "focused_tests_including_native": 15,
+  "focused_exit_code": 0,
+  "focused_process_reaped": true,
+  "owned_contexts": 322,
+  "grammar_mutations": 29397,
+  "accepted_complete_mutations": 756,
+  "rejected_mutations": 28641,
+  "fixed_caps": {
+    "records": 10000,
+    "references": 10000,
+    "blob_bytes": 1000000,
+    "optional_pairs": 100000,
+    "curves": 50
+  },
+  "sufficient_payload_fixed_cap_controls": 10,
+  "positive_cap_controls": 5,
+  "negative_cap_controls": 5,
+  "proper_prefixes_rejected_by_both_readers": 390672,
+  "trailing_byte_cases_rejected_by_both_readers": 322,
+  "artifacts": {
+    "target/mesh-control-record-adversarial-strict.log": {
+      "bytes": 3479,
+      "sha256": "de995a8ae2f1732e7a496f4c8141ffc7cffa90113f63e41d0a37e3c500f56e24"
+    },
+    "target/mesh-control-records-adversarial-focused.log": {
+      "bytes": 2198,
+      "sha256": "26c3a2dc9d194bc64b845c0a0f5cd8c0247098727a3fead5e893da7923dd6754"
+    },
+    "target/mesh-control-records-adversarial-native.log": {
+      "bytes": 1921,
+      "sha256": "5f6e05c8cc1416be72565a7a72f2ff1e32961cc0ffdc1399870cff3424504641"
+    },
+    "tests/fixtures/simulation-mesh-control/records-malformed.bin": {
+      "bytes": 934269,
+      "sha256": "3639d139ea95931fc0d3867e23cd6ad65bc555a24793279bc45edf244cf29062"
+    },
+    "tests/fixtures/simulation-mesh-control/records-hardcaps.bin": {
+      "bytes": 9881216,
+      "sha256": "c15de9881cacdeef99cb40e685fa7873d0c9cedf6299b5650aca04fc38840239"
+    }
+  },
+  "build_cache_observation": "After a detached older-cut validation reused the pinned Cargo target, root integration tests linked a stale library without MeshControl exports. Cleaning package bessemer and rebuilding passed unchanged production sources.",
+  "exclusions": [
+    "Complete six-value-kind changed edits and supplied-archive provenance",
+    "Mixed concurrent record edits",
+    "Combined full local and exact-head platform gates",
+    "Native application/writer and geometry acceptance",
+    "Whole-format schema parity"
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending"
+}

@@ -25,6 +25,9 @@ from mesh_control_evidence import mesh_baseline, mesh_reports, verify_mesh_sourc
 from solid_inventory_bindings import complete_identity_match
 from mesh_header_packets import verify_owned_mesh_header_packets, replay_native_mesh_header_packets
 from mesh_record_packets import verify_owned_mesh_record_packets, replay_native_mesh_record_packets, verify_mesh_record_factory_rejections, verify_mesh_record_scope_rejections
+from mesh_record_malformed import verify_mesh_record_mutations
+from mesh_record_caps import verify_mesh_record_caps
+from mesh_record_extents import verify_mesh_record_extents
 
 
 def verify_mesh_corpus_bindings() -> None:
@@ -127,7 +130,8 @@ def run_mesh_checks(pin: Path) -> unittest.TestResult:
     records = update_wrapper(partial(replay_native_mesh_record_packets, pin), replay_native_mesh_record_packets)
     checks = (verify_mesh_corpus_bindings, verify_mesh_source_bindings, verify_mesh_refinement_rejections, verify_mesh_schema_clauses,
               verify_mesh_installed_bindings, verify_owned_mesh_header_packets, headers, verify_owned_mesh_record_packets,
-              verify_mesh_record_factory_rejections, verify_mesh_record_scope_rejections, records, replay, verify_unimported_boundary)
+              verify_mesh_record_factory_rejections, verify_mesh_record_scope_rejections, verify_mesh_record_mutations,
+              verify_mesh_record_caps, verify_mesh_record_extents, records, replay, verify_unimported_boundary)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
     for module in (test_cosworks_mesh_control_header, test_cosworks_mesh_control):
         suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(module))
