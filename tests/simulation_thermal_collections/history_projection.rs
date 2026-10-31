@@ -1,83 +1,25 @@
-use super::edit_oracles::{EditOracleCase, check_oracle, read_oracle};
-use super::projection::{consume_expected_fields, project_field, project_word};
+use super::edit_oracles::{check_oracle, read_oracle};
+use super::load_history::{LoadHistorySnapshot, LoadHistoryView, project_history};
 use super::*;
-use bessemer::simulation::{
-    SimulationThermalEdit, SimulationThermalHistoryParent, SimulationThermalRelation,
-};
+use bessemer::simulation::SimulationThermalEdit;
 
 const EXPECTED: &[u8] = include_bytes!("../fixtures/simulation-binary-thermal/thermal-history.bin");
 
-fn project_oracle(output: &mut Vec<u8>, case: &EditOracleCase<'_>, edit: &SimulationThermalEdit) {
-    project_word(
-        output,
-        KINDS.iter().position(|kind| *kind == case.kind).unwrap(),
-    );
-    project_word(output, case.version.value() as usize);
-    output.extend_from_slice(&case.replacement.to_le_bytes());
-    project_word(output, usize::from(case.changed));
-    project_word(output, case.original.len());
-    output.extend_from_slice(&edit.source().to_bytes());
-    output.extend_from_slice(&edit.archive().to_bytes());
-    project_word(output, edit.archive().fields().len());
-    for (field, span) in edit
-        .archive()
-        .fields()
-        .iter()
-        .zip(edit.archive().field_offsets())
-    {
-        project_field(output, field, *span);
-    }
+fn snapshot(collection: &SimulationThermalCollection) -> LoadHistorySnapshot<'_> {
+    LoadHistorySnapshot::new(
+        collection.to_bytes(),
+        collection.fields(),
+        collection.field_offsets(),
+        |index| collection.field_id(index).unwrap(),
+    )
 }
 
-fn relation_tag(relation: SimulationThermalRelation) -> usize {
-    match relation {
-        SimulationThermalRelation::Copied => 0,
-        SimulationThermalRelation::Derived => 1,
-        SimulationThermalRelation::Created => 2,
-        SimulationThermalRelation::Deleted => 3,
-    }
-}
-
-fn project_parents(
-    output: &mut Vec<u8>,
-    edit: &SimulationThermalEdit,
-    parents: &[SimulationThermalHistoryParent],
-) {
-    for parent in parents {
-        let (tag, ordinal) = match parent {
-            SimulationThermalHistoryParent::Source(id) => {
-                assert_eq!(*id, edit.source().field_id(id.ordinal()).unwrap());
-                (0, id.ordinal())
-            }
-            SimulationThermalHistoryParent::Replacement => (1, u32::MAX as usize),
-        };
-        project_word(output, tag);
-        project_word(output, ordinal);
-    }
-}
-
-fn project_outer_history(output: &mut Vec<u8>, edit: &SimulationThermalEdit) {
-    project_word(output, edit.history().len());
-    for row in edit.history() {
-        assert_eq!(
-            row.result,
-            edit.archive().field_id(row.result.ordinal()).unwrap()
-        );
-        project_word(output, row.result.ordinal());
-        project_word(output, relation_tag(row.relation));
-        project_word(output, row.parents.len());
-        project_parents(output, edit, &row.parents);
-    }
-}
-
-fn consume_expected_history(cursor: &mut &[u8]) {
-    for _ in 0..packet_word(cursor) {
-        packet_word(cursor);
-        packet_word(cursor);
-        for _ in 0..packet_word(cursor) {
-            packet_word(cursor);
-            packet_word(cursor);
-        }
+pub(super) fn history_view(edit: &SimulationThermalEdit) -> LoadHistoryView<'_> {
+    LoadHistoryView {
+        source: snapshot(edit.source()),
+        result: snapshot(edit.archive()),
+        outer: edit.history(),
+        nested: edit.nested_history(),
     }
 }
 
@@ -87,30 +29,15 @@ pub(super) fn project_history_case(
 ) -> SimulationThermalEdit {
     let case = read_oracle(cursor);
     let edit = check_oracle(&case);
-    project_oracle(output, &case, &edit);
-    project_outer_history(output, &edit);
-    consume_expected_fields(cursor);
-    consume_expected_history(cursor);
+    let kind = KINDS.iter().position(|kind| *kind == case.kind).unwrap();
+    project_history(cursor, output, &case, kind, &history_view(&edit));
     edit
 }
 
-fn project_history_packet(mut cursor: &[u8], expected_count: usize) -> Vec<u8> {
-    let expected = cursor;
-    let mut output = Vec::new();
-    let mut count = 0;
-    while !cursor.is_empty() {
-        let start = output.len();
-        let expected_start = expected.len() - cursor.len();
-        project_history_case(&mut cursor, &mut output);
-        assert_eq!(
-            &output[start..],
-            &expected[expected_start..expected.len() - cursor.len()],
-            "case {count}"
-        );
-        count += 1;
-    }
-    assert_eq!(count, expected_count);
-    output
+fn project_history_packet(cursor: &[u8], expected_count: usize) -> Vec<u8> {
+    super::load_projection::project_packet(cursor, expected_count, |cursor, output| {
+        project_history_case(cursor, output);
+    })
 }
 
 #[test]

@@ -1,6 +1,6 @@
 use bessemer::simulation::{SimulationThermalField, SimulationThermalValue};
 
-fn read_word(cursor: &mut &[u8]) -> u32 {
+pub(super) fn read_word(cursor: &mut &[u8]) -> u32 {
     let (raw, remaining) = cursor.split_at(4);
     *cursor = remaining;
     u32::from_le_bytes(raw.try_into().unwrap())

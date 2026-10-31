@@ -1,10 +1,11 @@
 """Complete independent outer field and scalar-edit history exports (#134)."""
 import struct
 from typing import cast
+from collections.abc import Callable
 from owned_thermal import THERMAL_KINDS, owned_thermal_cases
 from native_carriers import ThermalCarrier
-from thermal_projection import projected_fields
-from thermal_edit_oracle import scalar_edit_case
+from thermal_projection import projected_fields, span_shape
+from thermal_edit_oracle import scalar_edit_case, thermal_parser
 
 
 def outer_history(fields: list[bytes], changed: bool) -> bytes:
@@ -19,15 +20,14 @@ def outer_history(fields: list[bytes], changed: bool) -> bytes:
     return bytes(rows)
 
 
-def history_projection_case(kind: int, version: int, raw: bytes) -> bytes:
+def history_projection_case(kind: int, version: int, raw: bytes, names: tuple[str, ...] = THERMAL_KINDS, parser: Callable[[bytes, int, str], dict[str, object]] = thermal_parser, shape: Callable[[str], tuple[int, list[str]]] = span_shape) -> bytes:
     """Replay complete independent edited fields and literal provenance; e.g. history_projection_case(0, 890501, raw)."""
-    from cosworks_binary_thermal_transform_audit import parse_native, archive_reader
-    oracle = scalar_edit_case(kind, version, raw)
+    oracle = scalar_edit_case(kind, version, raw, names, parser)
     changed, size = struct.unpack_from('<II', oracle, 12)
     expected = oracle[20 + size:]
-    parsed = parse_native(expected, version, THERMAL_KINDS[kind], archive_reader)
+    parsed = parser(expected, version, names[kind])
     assert parsed['success'] and len(expected) == size
-    fields = projected_fields(expected, parsed['spans'])
+    fields = projected_fields(expected, cast(list[dict[str, object]], parsed['spans']), shape)
     return oracle + struct.pack('<I', len(fields)) + b''.join(fields) + outer_history(fields, bool(changed))
 
 

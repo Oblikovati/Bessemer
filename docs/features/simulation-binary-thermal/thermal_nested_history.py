@@ -1,9 +1,11 @@
 """Independent physical nested occurrence parents for complete scalar edits (#134)."""
 import struct
 from typing import cast
+from collections.abc import Callable
 from owned_thermal import THERMAL_KINDS, owned_thermal_cases
 from native_carriers import ThermalCarrier
-from thermal_projection import projected_fields
+from thermal_projection import projected_fields, span_shape
+from thermal_edit_oracle import thermal_parser
 from thermal_history_projection import history_projection_case
 from embedded_field_projection import embedded_field_case
 
@@ -25,13 +27,12 @@ def nested_copy_rows(fields: list[bytes]) -> bytes:
     return struct.pack('<I', count) + rows
 
 
-def nested_history_case(kind: int, version: int, raw: bytes) -> bytes:
+def nested_history_case(kind: int, version: int, raw: bytes, names: tuple[str, ...] = THERMAL_KINDS, parser: Callable[[bytes, int, str], dict[str, object]] = thermal_parser, shape: Callable[[str], tuple[int, list[str]]] = span_shape) -> bytes:
     """Compose complete independently verified scalar edits and nested provenance; e.g. nested_history_case(0, 890501, raw)."""
-    from cosworks_binary_thermal_transform_audit import parse_native, archive_reader
-    parsed = parse_native(raw, version, THERMAL_KINDS[kind], archive_reader)
+    parsed = parser(raw, version, names[kind])
     assert parsed['success'] and parsed['end'] == len(raw)
-    fields = projected_fields(raw, parsed['spans'])
-    return history_projection_case(kind, version, raw) + nested_copy_rows(fields)
+    fields = projected_fields(raw, cast(list[dict[str, object]], parsed['spans']), shape)
+    return history_projection_case(kind, version, raw, names, parser, shape) + nested_copy_rows(fields)
 
 
 def owned_nested_history_packet() -> bytes:

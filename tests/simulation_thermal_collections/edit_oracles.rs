@@ -5,32 +5,10 @@ use bessemer::simulation::{SimulationThermalCompletion, SimulationThermalValue};
 const OWNED_EDITS: &[u8] =
     include_bytes!("../fixtures/simulation-binary-thermal/thermal-edits.bin");
 
-pub(super) struct EditOracleCase<'a> {
-    pub kind: SimulationThermalKind,
-    pub version: SimulationPersistVersion,
-    pub replacement: i32,
-    pub changed: bool,
-    pub original: &'a [u8],
-    pub expected: &'a [u8],
-}
+pub(super) type EditOracleCase<'a> = super::load_edit_case::LoadEditCase<'a, SimulationThermalKind>;
 
 pub(super) fn read_oracle<'a>(cursor: &mut &'a [u8]) -> EditOracleCase<'a> {
-    let kind = KINDS[packet_word(cursor) as usize];
-    let version = SimulationPersistVersion::new(packet_word(cursor) as i32).unwrap();
-    let replacement = packet_word(cursor) as i32;
-    let changed = packet_word(cursor) != 0;
-    let size = packet_word(cursor) as usize;
-    let (original, remaining) = cursor.split_at(size);
-    let (expected, remaining) = remaining.split_at(size);
-    *cursor = remaining;
-    EditOracleCase {
-        kind,
-        version,
-        replacement,
-        changed,
-        original,
-        expected,
-    }
+    super::load_edit_case::read_edit_case(cursor, &KINDS)
 }
 
 pub(super) fn check_oracle(

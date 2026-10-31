@@ -249,5 +249,11 @@ fn thermal_collections_own_input_texts_and_returned_byte_buffers() {
 #[path = "support/binary_load_projection.rs"]
 mod load_projection;
 
+#[path = "support/binary_load_edit_case.rs"]
+mod load_edit_case;
+
 #[path = "support/binary_load_strings.rs"]
 mod load_strings;
+
+#[path = "support/binary_load_history.rs"]
+mod load_history;
