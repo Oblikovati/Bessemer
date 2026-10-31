@@ -52,8 +52,15 @@ physical spans and reconstruction hashes match the reference. Twenty current
 root/category writer controls pass compatible readers and reject version-zero
 reader layouts. Invalid writer levels reject; no plot writer is inferred.
 
-Complete independent owned operation packets, the typed Rust codec,
-malformed/cap/resource/isolation/concurrency checks, process exports
+Owned input, complete primitive projection and ordered first-word edit history
+packets are now retained under `tests/fixtures/simulation-results-headers`.
+The 660 owned contexts and all 450 accepted native arguments are reparsed after
+literal replacement; every unaffected field and copied parent remains in the
+expected output. Native failed arguments remain in the original input packet.
+[Packet references](operation-packets-reference.json) bind every byte and hash.
+These are reference oracles; they do not establish Rust operation acceptance.
+
+The typed Rust codec, malformed/cap/resource/isolation/concurrency checks, process exports
 and full local/platform gates remain pending. Dialog, graph and auxiliary
 streams are separate serializers and receive no coverage from this inventory.
 Native application opening, historical writer symmetry, business meanings,

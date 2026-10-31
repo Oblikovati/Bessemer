@@ -1,5 +1,6 @@
 """Complete independent Results literal reconstruction and current-writer controls (#164)."""
 from typing import cast
+from itertools import product
 from native_carriers import digest
 from results_evidence import results_baseline
 from results_literals import (ResultsBlocks, results_root_blocks, results_category_blocks,
@@ -48,12 +49,11 @@ def verify_results_writer_controls() -> None:
     """Check only documented current writers against compatible readers; e.g. verify_results_writer_controls()."""
     for level in (0, 1):
         compatible = 890605 if level == 0 else 810010
-        for rotation in range(5):
-            for null_only in (False, True):
-                blocks = results_writer_blocks(level, rotation, null_only)
-                raw = b''.join(fragment for _, fragment in blocks)
-                assert actual_results(raw, compatible, level)['success'], (level, rotation)
-                assert not actual_results(raw, 0, level)['success'], (level, rotation)
+        for rotation, null_only in product(range(5), (False, True)):
+            blocks = results_writer_blocks(level, rotation, null_only)
+            raw = b''.join(fragment for _, fragment in blocks)
+            assert actual_results(raw, compatible, level)['success'], (level, rotation)
+            assert not actual_results(raw, 0, level)['success'], (level, rotation)
     for invalid in (-1, 2, 3, True):
         try: results_writer_blocks(invalid, 0)
         except ValueError: continue
