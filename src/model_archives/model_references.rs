@@ -82,6 +82,12 @@ pub(super) fn wrapper(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> 
         map,
         ModelObjectRole::Declared(COMPONENTS),
     )?;
+    wrapper_fields(reader, map)?;
+    reader.i32s(&["unknown_4c", "unknown_68", "unknown_34", "unknown_30"])?;
+    final_words(reader)
+}
+
+pub(super) fn wrapper_fields(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     reader.u16("unknown_60")?;
     reader.object("component", map, ModelObjectRole::Any)?;
     reader.i32s(&["unknown_64", "unknown_08"])?;
@@ -90,8 +96,7 @@ pub(super) fn wrapper(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> 
     if reader.version() > 0x2faf {
         reader.i32("unknown_74")?;
     }
-    reader.i32s(&["unknown_4c", "unknown_68", "unknown_34", "unknown_30"])?;
-    final_words(reader)
+    Ok(())
 }
 
 fn optional_transforms(reader: &mut ModelDecoder<'_>) -> Result<()> {
@@ -103,7 +108,7 @@ fn optional_transforms(reader: &mut ModelDecoder<'_>) -> Result<()> {
     Ok(())
 }
 
-fn final_words(reader: &mut ModelDecoder<'_>) -> Result<()> {
+pub(super) fn final_words(reader: &mut ModelDecoder<'_>) -> Result<()> {
     if reader.version() >= 0x2b73 {
         reader.i32("unknown_90")?;
     }

@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Fixed load edits that discarded embedded CString length-prefix changes as semantic no-ops. (#137)
+
 - Fixed the new compound allocator using the reserved range-lock sector for data or tables when growing version-4 files above 2 GB. (#110)
 
 - Fixed the new compound reader rejecting legal surplus stream capacity while preserving complete allocation ownership checks. (#109)
@@ -33,6 +35,8 @@
 - Fixed reference-plane point roles rejecting documented endpoint and loft-sync subclasses for fresh and cached pointers. (#46)
 
 ### Added
+
+- Added explicit Simulation embedded archive profiles and reference registry, plus complete binary thermal reads, construction and isolated typed edits with composed source/replacement history across all five families. (#134)
 
 - Added complete bounded Simulation ParameterSets construction, raw primitive/text framing and isolated typed-field edits with full array preservation and ordered history. (#133)
 

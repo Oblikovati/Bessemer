@@ -7,6 +7,8 @@ use crate::{BessemerError, FailureClass, Result};
 pub(super) mod embedded_parts;
 #[path = "inline_header.rs"]
 pub(super) mod inline_header;
+#[path = "simulation_scope.rs"]
+mod simulation_scope;
 
 /// Explicit byte, field, collection, nesting and object budgets for one archive operation.
 #[derive(Debug, Clone, Copy)]
@@ -42,6 +44,7 @@ pub(super) struct ModelDecoder<'a> {
     saved_helper_state: Option<super::configuration_manager::SavedHelperState>,
     manager_dialect: Option<super::manager_dialect::ManagerDialect>,
     inline_part_scope: bool,
+    simulation_representation_depth: usize,
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -50,6 +53,7 @@ pub(super) enum ModelArchiveContext {
     Unspecified,
     OrdinaryPartExternalXml,
     OrdinaryAssemblyExternalXml(super::assembly_context::AssemblyRootKind),
+    SimulationEmbedded,
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -130,6 +134,7 @@ impl<'a> ModelDecoder<'a> {
             saved_helper_state: None,
             manager_dialect: None,
             inline_part_scope: false,
+            simulation_representation_depth: 0,
         })
     }
 
@@ -306,6 +311,10 @@ impl<'a> ModelDecoder<'a> {
         }
         self.checked(Err(BessemerError::new("model archive", "ordinary model context", FailureClass::Unsupported,
             format!("version {} context {:?}; expected > 0x27CB and an explicitly selected ordinary part or assembly context", self.version.value(), self.context))))
+    }
+
+    pub(super) fn is_simulation_embedded(&self) -> bool {
+        self.context == ModelArchiveContext::SimulationEmbedded
     }
 
     /// Preserve root selection for local factories, e.g. an assembly unit component.

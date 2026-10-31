@@ -1,0 +1,90 @@
+{
+  "issue": 136,
+  "change": "Extracted private binary load reader, complete collection loop and shared load-base grammar; retained all existing public thermal types and behavior",
+  "baseline_revision": "d6b17119d59ca2bba132fa9e755cb6c27a890106",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "comparison": {
+    "issue": 136,
+    "phase": "after complete structural extraction",
+    "baseline_revision": "d6b17119d59ca2bba132fa9e755cb6c27a890106",
+    "exports": [
+      {
+        "label": "outer",
+        "bytes": 5953224,
+        "sha256": "94974b6d2f67bd933b043ebbab5605372dc16331a03d5aaa03ce2fef957a0687",
+        "before_path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\binary-load-extraction-before-outer.bin",
+        "after_path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\binary-load-extraction-after-outer.bin",
+        "exit": 0
+      },
+      {
+        "label": "outer-history",
+        "bytes": 8780754,
+        "sha256": "257b403c2fadb8347578d1e53da8a22a33bca023da7ab6fbc400c80202ad33bc",
+        "before_path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\binary-load-extraction-before-outer-history.bin",
+        "after_path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\binary-load-extraction-after-outer-history.bin",
+        "exit": 0
+      },
+      {
+        "label": "maps",
+        "bytes": 822634,
+        "sha256": "ef4c229e37255b441cd35f8dc19606a8b6a162701c76bf1ff3bdc58eb2e7812e",
+        "before_path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\binary-load-extraction-before-maps.bin",
+        "after_path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\binary-load-extraction-after-maps.bin",
+        "exit": 0
+      },
+      {
+        "label": "nested-fields",
+        "bytes": 1382060,
+        "sha256": "50c0dcbac7377ce4a2204693fde9209d4960de18db0b0e5dff5a59490c795063",
+        "before_path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\binary-load-extraction-before-nested-fields.bin",
+        "after_path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\binary-load-extraction-after-nested-fields.bin",
+        "exit": 0
+      },
+      {
+        "label": "nested-history",
+        "bytes": 9687810,
+        "sha256": "93a73a7b09304f09a02e52b2e52ac670793e402390c78d3e9f0bd3dba4f0146c",
+        "before_path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\binary-load-extraction-before-nested-history.bin",
+        "after_path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\binary-load-extraction-after-nested-history.bin",
+        "exit": 0
+      }
+    ],
+    "bytes": 26626482,
+    "every_byte_unchanged": true,
+    "all_independent_oracles_matched": true,
+    "handles_reaped": true
+  },
+  "focused_regression": {
+    "embedded_and_thermal_tests_including_explicit_native_inputs": 56,
+    "nested_primitive_tests_including_explicit_native_input": 2,
+    "failed": 0,
+    "ignored": 0
+  },
+  "clippy": {
+    "command": "cargo clippy --lib --test simulation_thermal_collections --test simulation_embedded_archives --test simulation_embedded_components -- -D warnings",
+    "exit": 0
+  },
+  "code_sha256": {
+    "src/simulation/persistence/load_reader.rs": "6e572a8db2481950333460a70d089e838b413c9d511aa5233463f0ad2f08dbd3",
+    "src/simulation/persistence/load_base.rs": "719fc36633d82902ea46d2c910c8b29dc27f9f1b1c3a1b91d64d02f4b4a5ffbc",
+    "src/simulation/persistence/mod.rs": "6688c9fc64d69dbdfcbada8ba52cfa80dafb9ec5973f576b2186ec8a3c3d897f",
+    "src/simulation/persistence/thermal/archive.rs": "03ece0408968058aa5299e3d07e78e2ef87bf0766cae308f690d7b7a9225bd49",
+    "src/simulation/persistence/thermal/mod.rs": "97f2e60863b4790c2fdc3c07ff83e2b2ffe031dbf741ea4963318c4b01d6723b",
+    "src/simulation/persistence/thermal/tails.rs": "b3a8abe857ea5b0d8a3b352e6db4adf272fac523cc81321193c3e1105e1e7de5"
+  },
+  "checks": [
+    "All existing public thermal API types retained",
+    "Explicit family passed to thermal tail dispatch",
+    "Identical complete original/edited images, outer field paths and types, raw patterns and offsets",
+    "Identical class/schema/object-map identities",
+    "Identical complete ordered outer/nested-copy history with every parent",
+    "Every prior targeted malformed mutation and proper prefix still rejected",
+    "Exact and one-below budgets unchanged",
+    "Function/file audit and git diff --check passed"
+  ],
+  "exclusions": [
+    "New inertial/base-excitation Rust behavior",
+    "Final local and platform gates for the new feature",
+    "Native application acceptance"
+  ]
+}

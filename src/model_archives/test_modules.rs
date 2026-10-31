@@ -354,6 +354,9 @@ mod sheet_metal_tests;
 #[path = "../../tests/resolved_features/shell_records.rs"]
 mod shell_record_tests;
 #[cfg(test)]
+#[path = "../../tests/model_archives/simulation_embedded_context.rs"]
+mod simulation_embedded_context_tests;
+#[cfg(test)]
 #[path = "../../tests/model_archives/sketch_curves.rs"]
 mod sketch_curve_tests;
 #[cfg(test)]
@@ -687,3 +690,6 @@ mod assembly_corpus_tests;
 
 #[path = "../../tests/model_archives/assembly_objects.rs"]
 mod assembly_object_tests;
+
+#[path = "../../tests/model_archives/embedded_field_projection.rs"]
+mod embedded_field_projection_tests;

@@ -1,0 +1,65 @@
+{
+  "issue": 134,
+  "status": "Unfinished local feature; complete scalar-edited outer fields and all outer history parents independently verified",
+  "revision": "55ad3b8c6a10db705ad33206309c9680fbf7b9ef",
+  "owned": {
+    "cases": 295,
+    "bytes": 7280564,
+    "sha256": "3ba3b99779a7efb2baa347becf1f89685b03997c42302ed51d2da7d4096d601e"
+  },
+  "native": {
+    "cases": 68,
+    "bytes": 1500190,
+    "sha256": "c1a981f3e58956b69984eb566a626535feae2f96818961e29c1e5ef29ba4dfc4"
+  },
+  "fresh_processes": {
+    "owned_contexts": 295,
+    "native_contexts": 68,
+    "scope": "Complete original and edited byte images, every edited outer path/discriminant/raw value/offset and every ordered outer history relation with all source/replacement parents",
+    "processes": [
+      {
+        "path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\thermal-history-projection-process-0.bin",
+        "bytes": 8780754,
+        "sha256": "257b403c2fadb8347578d1e53da8a22a33bca023da7ab6fbc400c80202ad33bc",
+        "exit": 0
+      },
+      {
+        "path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\thermal-history-projection-process-1.bin",
+        "bytes": 8780754,
+        "sha256": "257b403c2fadb8347578d1e53da8a22a33bca023da7ab6fbc400c80202ad33bc",
+        "exit": 0
+      }
+    ],
+    "byte_identical_to_independent_source": true,
+    "byte_identical_between_processes": true,
+    "handles_reaped": true
+  },
+  "new_history_tests": {
+    "passed": 2,
+    "failed": 0,
+    "ignored": 0
+  },
+  "strict_actual_source_checks": {
+    "passed": 16,
+    "failed": 0
+  },
+  "clippy_exit": 0,
+  "scope": [
+    "Complete source and expected edited byte images",
+    "Actual reference replay of every independently spliced scalar edit",
+    "Every edited outer typed path, discriminant, raw pattern and offset",
+    "Every outer result occurrence in physical order",
+    "Every ordered source/replacement parent and relation",
+    "Revision identities validated before normalized ordinal export",
+    "All previous scalar-edit source isolation and nested-copy assertions retained",
+    "Two fresh processes compared byte for byte with each other and the independent oracle",
+    "Function/file audit and git diff --check passed"
+  ],
+  "exclusions": [
+    "Independent nested-occurrence projection",
+    "Final full local PR gate",
+    "Final platform matrix",
+    "SolidWorks native application execution",
+    "Complete schema parity"
+  ]
+}

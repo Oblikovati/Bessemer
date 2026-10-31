@@ -1,0 +1,17 @@
+### 14.311 Embedded chain components and five additional complete Pressure streams
+
+*Status: scoped chain branch validated; 82 native Pressure streams fully reconstruct, seven remain open · Evidence: C-687*
+
+**Installed serializers.** Static RTTI/PE bindings identify `moChainComponent_c` **0x4C228AC0**, `moReferenceChain_c` **0x4B68B5F0**, `moExtFeatureList_c` **0x4C187880**, and `moExtFeature_c` **0x4C187DC0**. C-687 retains primary serializer-slot checks, installed model-module SHA-256, function-fragment hashes and retained decompilation hashes, plus the external-feature base helper **0x4C1887A0**. These are the embedded **0x4000** helper-context branches; alternate helper conditions and older object forms remain outside this adapter.
+
+**Scoped wire sequence.** The chain component restores its owner/component pointer, which this reader requires to be null; a tagged reference-chain pointer follows. At archive version **0x837** or later, an unsigned four-byte word at object **+0x30** follows. The supported reference-chain branch requires version greater than **0x8D1** and consumes a two-byte word, a tagged external-feature-list pointer, a signed four-byte word and a direct configuration (`CString`, signed four-byte identifier). Helper-dependent owner/presence branches are absent in this scoped context.
+
+The external-feature list uses a **signed four-byte count** from version **0xF21**, followed by that many tagged objects. Negative, excessive or impossible counts fail. The supported external-feature base requires version **0xF25** or later: direct shared-file definition, direct configuration, one byte, a signed four-byte word, and a tagged `moCStringHandle_c` name. This name form is conditional on global **0x4DB7E519** being zero; the audit records its PE initial byte and verifies native handle framing without claiming a universal runtime value. The continuation restores a tagged reference pointer and, from **0x11EB**, a signed four-byte word. Versions below **0x105E**, where historical pattern data may occur, are explicitly rejected. Unknown nested classes and unsupported owners remain stops.
+
+**Native completion.** `cosworks_embedded_chain.py` extends the explicit archive registry. Fresh extraction/hash verification and original-baseline replay cover all **89** family streams. Exact EOF/reconstruction succeeds for **82 distinct streams / 3925362 bytes**, adding **five streams / 12513 bytes** to C-686. The **83** successful version-candidate attempts are retained separately from distinct-stream counts.
+
+The remaining **seven streams / 80750 bytes** stop at `moFilletSurfIdRep_c` (one), `moShellSurfIdRep_c` (two), `moRadiateEdgeIdRep_c` (one), `moVertexRef_c` (one), the edge-specific component continuation (one), and `moDerivedSurfIdRep_c` (one). Eight previous chain stops have become five complete streams and three more specific representation stops.
+
+**Validation limits.** All **11** focused embedded-archive tests pass: nested chain tags, fixed-width feature counts, versions **6000/14000/19000**, unsigned word preservation, negative/excessive count and nonnull-owner rejection, every-byte truncation, map isolation and callback bounds. Evidence retains audit, reader and test hashes. Framing is established for this tested scope; physical field meanings, runtime version selection, writer round trips and all installed-format completeness remain partial. No target execution or global semantic byte credit occurs.
+
+Evidence: C-687.

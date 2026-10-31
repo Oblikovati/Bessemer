@@ -37,7 +37,6 @@ pub(crate) mod visibility;
 
 pub(crate) use cursor::ArchiveCursor;
 pub(crate) use field_correspondence::{FieldCorrespondence, field_correspondences};
-#[cfg(test)]
 pub(crate) use field_occurrences::index_field_occurrences;
 pub(crate) use material_reader::MaterialRead;
 pub(crate) use object_framing::{ObjectClassView, write_object_framing};

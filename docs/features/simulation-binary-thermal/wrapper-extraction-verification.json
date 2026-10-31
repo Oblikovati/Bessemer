@@ -1,0 +1,19 @@
+{
+  "issue": 134,
+  "change": "Extracted ordinary wrapper fields after the declared component reference into a private function; retained the ordinary context guard, class role, field paths and gate order.",
+  "fixture": "tests/fixtures/model-archives/model-reference-cases.bin",
+  "fixture_sha256": "6d5ad3acea90c128bb56f57078500a92edb871bc283b2a5024b5ccc3d7da8a78",
+  "complete_cases": 64,
+  "independent_fields": 3576,
+  "command": "cargo test --lib model_reference_tests",
+  "before": {"passed": 4, "failed": 0},
+  "after": {"passed": 4, "failed": 0},
+  "coverage": [
+    "Complete independent field and transform oracle comparison",
+    "Exact re-encoding of every complete fixture",
+    "All truncated prefixes and trailing-byte rejection",
+    "Unrelated component class rejection",
+    "Source mutation isolation"
+  ],
+  "excluded": ["New embedded context behavior", "Complete thermal interoperability", "Native application acceptance"]
+}

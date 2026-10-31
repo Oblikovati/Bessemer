@@ -1,0 +1,17 @@
+### 14.310 Embedded feature-reference wrappers and five additional complete Pressure streams
+
+*Status: feature wrapper/component branch validated; 77 native Pressure streams fully reconstruct, 12 remain open · Evidence: C-686*
+
+**Installed new class binding.** Static RTTI locates `moFeatureRefWrapper_c` primary vtable **0x4CE8ADC8**, serializer slot **+0x28 → 0x4BB253D0–0x4BB25424**. The newly retained **21-instruction** function calls shared wrapper **0x4C2842D0**, then reads or writes one **unsigned four-byte field +0xA8**. C-686 binds the installed slot, PE fragment, new decompilation and model-module hash. It does not equate this class with the distinct derived-feature wrappers used elsewhere in the model schema.
+
+The five native paths blocked on that class then declare **`moCompFeature_c`** as its first nested component reference. Its primary slot binds **0x4BBB9A60**. In the explicit embedded **0x4000** helper context, the serializer calls the common component-reference base, then takes the direct feature-reference value helper **0x4BB48620** path. For these archive versions, that continuation consumes a four-byte value and four-byte time. The alternative condition-**1**/**0x10000** paths are not generalized by this audit. Unsupported old-reference, reference-info, transform or other component-base bodies remain stops as before.
+
+**Scoped adapter extension.** `cosworks_embedded_feature_wrapper.py` implements this common historical wrapper plus unsigned suffix and the supported feature-component continuation. The archive adapter accepts these readers only through an explicit extension registry; its default registry remains restricted and previous behavior remains reproducible. All object maps are still fresh per provider call. The wrapper uses the already documented version gates and clear constructor-initialized helper **+0x834** configuration flag. No ordinary-reader guard or unknown object length is bypassed.
+
+**Native completion.** Fresh extraction/hash verification and original-baseline replay across all **89** family streams now yields **77 complete streams / 3912849 bytes**, exact EOF and reconstruction hash. This adds **five streams / 18170 bytes** to C-685's result. Across one successful candidate per complete stream, **86 Pressure records** include **150** independently mapped object-archive calls: **69** face-wrapper roots, **five** feature-wrapper roots, **74** external-object roots and **two** null roots. The five feature-wrapper paths each restore a `moCompFeature_c` body under the verified branch.
+
+The remaining **12 streams / 93263 bytes** retain eight chain-component stops and one each at a radiate-edge representation, vertex-reference body, edge-specific component continuation, and derived-surface representation. Earlier failures from incompatible coexisting version candidates remain retained separately. Completion counts use distinct streams, not the **78** successful candidate attempts.
+
+**Validation limits.** Seven focused archive tests pass, including historical wrapper-tail layouts at versions **6000/14000/19000**, unsigned **0xFFFFFFFF** suffix preservation, truncation at every byte, map isolation, restricted class dispatch and callback-boundary checks. C-686 retains test/audit/adapter hashes and both new serializer bindings. Native EOF/hash reconstruction establishes framing, not physical field meanings, runtime version selection, writer round trips or all installed-format completeness. No target execution or global semantic byte credit occurs.
+
+Evidence: C-686.
