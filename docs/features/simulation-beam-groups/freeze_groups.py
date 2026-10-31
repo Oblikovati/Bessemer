@@ -11,11 +11,14 @@ FEATURE = Path(__file__).resolve().parent
 ROOT = FEATURE.parents[2]
 sys.path.insert(0, str(FEATURE.parent / 'simulation-binary-thermal'))
 sys.path.insert(0, str(FEATURE.parent / 'model-archives'))
+sys.path.insert(0, str(FEATURE.parent / 'simulation-inertial-loads'))
 sys.path.insert(0, str(ROOT / 'target/reference-python'))
 import pefile
 from pinned_reference_tests import FrozenSourceImports, copy_sources, record_snapshot
 from native_carriers import SOURCE, RESEARCH, digest, recover_sample, pinned_auxiliaries
 from owned_groups import KINDS, owned_group_cases
+from group_projection import projection_case, history_case
+from group_adversarial import mutation_packet, budget_packet
 
 
 def baseline(name: str, value: object) -> None:
@@ -95,6 +98,38 @@ def replay_owned() -> None:
     baseline('owned-reference.json', dict(cases=len(cases), bytes=len(packet), sha256=digest(packet)))
 
 
+def save_operation(packet: bytes, role: str, native: bool, count: int) -> None:
+    """Retain complete expectations with native bytes outside the repository; e.g. save_operation(packet, 'history', True, 414)."""
+    path = ROOT / f'target/simulation-beam-groups-native-{role}.bin' if native else ROOT / f'tests/fixtures/simulation-beam-groups/{role}.bin'
+    if native or '--write' in sys.argv: path.write_bytes(packet)
+    assert path.read_bytes() == packet
+    baseline(f'{"native" if native else "owned"}-{role}-reference.json', dict(cases=count, bytes=len(packet), sha256=digest(packet)))
+
+
+def operation_packets(cases: list[tuple[int, int, int | None, bytes]], native: bool) -> None:
+    """Keep every complete physical field and all edit parents; e.g. operation_packets(cases, False)."""
+    for role, project in (('projection', projection_case), ('history', history_case)):
+        packet = b''.join(project(kind, version, expected, raw) for kind, version, expected, raw in cases)
+        save_operation(packet, role, native, len(cases))
+
+
+def replay_operations(pin: Path) -> None:
+    """Freshly extract all native inputs for full independent operation expectations; e.g. replay_operations(pin)."""
+    operation_packets(owned_group_cases(), False)
+    rows = cast(list[dict[str, object]], report()['rows'])
+    cases: list[tuple[int, int, int | None, bytes]] = []
+    for path in sorted({cast(str, row['path']) for row in rows}):
+        streams = recover_sample(path, pin)
+        for row in (row for row in rows if row['path'] == path):
+            raw = streams[cast(str, row['stream'])]
+            assert digest(raw) == row['sha256'] and len(raw) == row['bytes']
+            for attempt in cast(list[dict[str, object]], row['attempts']):
+                assert attempt['success']
+                cases.append((KINDS.index(cast(str, row['kind'])), cast(int, attempt['version']), cast(int | None, row['expected_joint_count']), raw))
+    assert len(cases) == 414
+    operation_packets(cases, True)
+
+
 def verify_sources() -> None:
     """Bind every original source/decompilation and full clause; e.g. verify_sources()."""
     for original, expected in cast(dict[str, str], report()['sources']).items():
@@ -138,8 +173,23 @@ def run_checks(pin: Path) -> unittest.TestResult:
     import test_cosworks_beam_group
     replay = update_wrapper(partial(replay_native, pin), replay_native)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in (replay, replay_owned, verify_sources, verify_bindings))
+    suite.addTest(unittest.FunctionTestCase(update_wrapper(partial(replay_operations, pin), replay_operations)))
+    suite.addTest(unittest.FunctionTestCase(replay_adversarial))
     suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(test_cosworks_beam_group))
     return unittest.TextTestRunner(verbosity=2).run(suite)
+
+
+def replay_adversarial() -> None:
+    """Preserve all actual mutation outcomes and independent exact budgets; e.g. replay_adversarial()."""
+    malformed, count, accepted = mutation_packet()
+    budgets = budget_packet()
+    for name, packet in (('malformed', malformed), ('budgets', budgets)):
+        path = ROOT / f'tests/fixtures/simulation-beam-groups/{name}.bin'
+        if '--write' in sys.argv: path.write_bytes(packet)
+        assert path.read_bytes() == packet
+    baseline('adversarial-reference.json', dict(inputs=count, accepted=accepted, rejected=count-accepted,
+             malformed_bytes=len(malformed), malformed_sha256=digest(malformed),
+             budget_contexts=560, budget_bytes=len(budgets), budget_sha256=digest(budgets)))
 
 
 def run() -> bool:

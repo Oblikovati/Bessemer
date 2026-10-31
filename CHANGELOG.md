@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added complete Simulation joint/group/list bodies and static beam-folder headers with explicit child-count scope, typed construction, isolated edits and complete stored-profile history. (#144)
+
 - Added complete Simulation beam child Property reads, typed construction and isolated edits with signed-short widths, explicit embedded profiles, complete history and exact stored-profile coverage. (#142)
 
 - Added complete study-manager Simulation Material reads, construction, body-prefix operations and isolated typed edits with immutable fields, complete history and exact stored-profile coverage. (#140)
