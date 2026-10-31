@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added standalone Component PersistID reads, construction and isolated edits with exact EOF, coordinated blob/count validation and complete ordered nested history. (#152)
+
 - Added complete inherited SolidManager sheet Property reads, construction and isolated edits, with exact class-specific 4281 surface continuations and ordered nested history. (#151)
 
 - Added complete SolidManager solid-body Property read, construction and isolated edits with exact historical gates, nested history and four explicitly bound embedded identity suffixes. (#150)

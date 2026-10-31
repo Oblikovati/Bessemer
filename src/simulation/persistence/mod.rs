@@ -1,6 +1,7 @@
 //! Lossless documented Cosworks persistence frames with explicit caller context.
 mod beam;
 mod beam_groups;
+mod component_persist_id;
 mod coverage;
 mod inertial;
 mod lbc_final;
@@ -30,6 +31,7 @@ mod version;
 use super::{Result, invalid, require};
 pub use beam::*;
 pub use beam_groups::*;
+pub use component_persist_id::*;
 pub use coverage::*;
 pub use inertial::*;
 pub use lbc_final::*;

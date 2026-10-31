@@ -594,3 +594,8 @@ header through construction and isolated edits, including exact 4281 surface
 and plane-section continuations. Historical nested SurfaceBody trailers retain
 their separate unsupported scope. See
 [the inherited-sheet evidence](docs/features/simulation-sheet-property/README.md).
+
+Standalone `Component PersistID` operations preserve the separate component
+stream through complete construction and isolated edits, including explicit
+inner archive versions and ordered field history. See
+[the standalone persist-ID evidence](docs/features/simulation-component-persist-id/README.md).

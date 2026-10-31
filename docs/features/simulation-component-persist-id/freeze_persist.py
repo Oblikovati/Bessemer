@@ -20,6 +20,7 @@ from freeze_body import body_input, verify_model_bindings, verify_source_hash, v
 from owned_persist import owned_component_persist_ids
 from freeze_sheet import verify_surface_bindings
 from persist_projection import persist_id_projection, persist_id_history
+from persist_adversarial import persist_id_mutations, persist_id_budgets, persist_id_blob_cap
 
 
 def baseline(name: str, value: object) -> None:
@@ -123,6 +124,19 @@ def save_owned_packet(name: str, packet: bytes, count: int) -> None:
     baseline(metadata, dict(cases=count, bytes=len(packet), sha256=digest(packet)))
 
 
+def verify_adversarial() -> None:
+    """Retain all complete outcomes and exact independently observed budgets; e.g. verify_adversarial()."""
+    packet, count, accepted = persist_id_mutations(actual_persist_id)
+    save_owned_packet('malformed', packet, count)
+    save_owned_packet('budgets', persist_id_budgets(actual_persist_id), 20)
+    baseline('adversarial-reference.json', dict(inputs=count, accepted=accepted, failed=count - accepted, budget_cases=20))
+
+
+def verify_blob_cap() -> None:
+    """Keep complete sufficient-payload controls separate from malformed counts; e.g. verify_blob_cap()."""
+    persist_id_blob_cap(actual_persist_id, baseline)
+
+
 def verify_sources() -> None:
     """Keep original dependency hashes and the precise unused-file reconciliation; e.g. verify_sources()."""
     for original, expected in cast(dict[str, str], retained_report()['sources']).items():
@@ -172,7 +186,7 @@ def run_checks(pin: Path) -> unittest.TestResult:
     import test_cosworks_embedded_const_surface
     replay = update_wrapper(partial(replay_native, pin), replay_native)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in
-                               (replay, replay_owned, verify_sources, verify_bindings, verify_unimported_boundary))
+                               (replay, replay_owned, verify_adversarial, verify_blob_cap, verify_sources, verify_bindings, verify_unimported_boundary))
     for module in (test_cosworks_component_persistid, test_cosworks_embedded_body_ids, test_cosworks_embedded_const_surface):
         suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(module))
     return unittest.TextTestRunner(verbosity=2).run(suite)
