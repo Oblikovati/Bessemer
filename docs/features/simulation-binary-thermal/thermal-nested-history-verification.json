@@ -1,0 +1,62 @@
+{
+  "issue": 134,
+  "status": "Local feature verification; full integration gates pending",
+  "revision": "55ad3b8c6a10db705ad33206309c9680fbf7b9ef",
+  "scope": "Complete scalar-edit outer and nested-copy provenance derived from actual physical source occurrences",
+  "owned": {
+    "cases": 295,
+    "bytes": 7720784,
+    "sha256": "1c2ccc2d8374bfb952498dad50c3db00ff860c4bf64af60c3c17a50175ccae9f"
+  },
+  "native": {
+    "cases": 68,
+    "bytes": 1967026,
+    "sha256": "03e4d6f62738ffbc7995bc3da06e5df126284d98039f9c06d0db12b23ddee9a4"
+  },
+  "fresh_processes": {
+    "owned_contexts": 295,
+    "native_contexts": 68,
+    "scope": "Complete source and edited images, all edited outer fields, complete ordered outer and nested-copy history with every physical parent",
+    "processes": [
+      {
+        "path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\thermal-nested-history-process-0.bin",
+        "bytes": 9687810,
+        "sha256": "93a73a7b09304f09a02e52b2e52ac670793e402390c78d3e9f0bd3dba4f0146c",
+        "exit": 0
+      },
+      {
+        "path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\thermal-nested-history-process-1.bin",
+        "bytes": 9687810,
+        "sha256": "93a73a7b09304f09a02e52b2e52ac670793e402390c78d3e9f0bd3dba4f0146c",
+        "exit": 0
+      }
+    ],
+    "byte_identical_to_independent_source": true,
+    "byte_identical_between_processes": true,
+    "handles_reaped": true
+  },
+  "focused_new_tests": {
+    "passed": 2,
+    "failed": 0,
+    "ignored": 0
+  },
+  "strict_actual_source_checks": {
+    "passed": 19,
+    "failed": 0
+  },
+  "clippy_exit": 0,
+  "source_readers_modified": false,
+  "checks": [
+    "Every complete expected image and all exported bytes compared",
+    "Original source profile restored after each observation",
+    "All scalar-edit nested handles validated against their owning revisions",
+    "Source and result nested paths agree for each retained occurrence",
+    "Function/file audit and git diff --check passed"
+  ],
+  "exclusions": [
+    "Final full local PR gate",
+    "Final platform matrix",
+    "Native SolidWorks application execution",
+    "Complete installed schema parity"
+  ]
+}

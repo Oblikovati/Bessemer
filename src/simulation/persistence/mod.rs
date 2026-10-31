@@ -9,6 +9,7 @@ mod study;
 mod study_edit;
 mod text;
 mod text_sequence;
+mod thermal;
 mod version;
 use super::{Result, invalid, require};
 pub use coverage::*;
@@ -20,6 +21,7 @@ pub use scalars::*;
 pub use study::*;
 pub use study_edit::*;
 pub use text::*;
+pub use thermal::*;
 pub use version::*;
 
 fn reserve_bytes(size: usize) -> Result<Vec<u8>> {

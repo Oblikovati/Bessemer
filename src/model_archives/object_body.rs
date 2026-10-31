@@ -7,6 +7,9 @@ pub(super) fn read(
     map: &mut ObjectReader,
     class: &ArchiveClass,
 ) -> Result<()> {
+    if reader.is_simulation_embedded() {
+        return super::simulation_embedded::read_object(reader, map, class);
+    }
     if let Some(result) = super::assembly_explosion::read_object(reader, map, &class.name) {
         return result;
     }

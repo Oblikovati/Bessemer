@@ -279,6 +279,7 @@ mod sheet_arrays;
 mod sheet_metal;
 mod sheet_payload;
 mod shell_records;
+mod simulation_embedded;
 mod sketch_archive;
 mod sketch_arrays;
 mod sketch_backups;
@@ -301,6 +302,9 @@ mod sketch_surfaces;
 mod sketch_tail;
 mod sketch_text;
 mod spatial_objects;
+pub use simulation_embedded::{
+    SimulationEmbeddedArchive, SimulationEmbeddedEdit, SimulationEmbeddedProfile,
+};
 mod spline_arrays;
 mod spline_controls;
 mod stock_collections;
