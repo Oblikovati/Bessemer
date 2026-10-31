@@ -6,7 +6,7 @@ reference reports 680 streams /855,786 bytes, with 745 original version
 arguments: 691 accepted and 54 failed alternatives. Those alternatives must
 remain explicit; a successful candidate does not establish runtime dispatch.
 
-All 13 strict reference checks now pass. The initial source guard correctly
+All 15 strict reference checks now pass. The initial source guard correctly
 stopped on a changed `solidworks/modelboundary.py`. A full replay trace recorded
 zero calls to that file, and frozen import origins confirm it is not imported.
 The scoped embedded readers install their own instance dispatch tables. The
@@ -30,15 +30,29 @@ strict replay. `--write` initializes evidence for review. Generated native
 binary packets stay under `target/`; original research reports retain decoded
 values and raw spans as provenance. No target code executes.
 
-Production typed operations, complete field/edit/history oracles, adversarial
-and resource tests, ownership/concurrency checks and full local/platform gates
-remain pending. Sheet bodies, sibling ComponentPersistID streams, field business
-meanings, native writer/application and geometric acceptance are separate.
+`SimulationSolidBodyProperty` reads and constructs one complete direct body
+under an explicit outer version and caller limits. `edit_field` returns the
+immutable source, complete replacement, validated result, completion/coverage
+and every ordered outer/nested history relation. Existing embedded layouts
+serve the four exact C-734 identities at inner versions 4307 and above; the
+separate 4281 profile remains explicit and rejects those four classes.
 
-The local read/construction prototype matches complete independent fields for
-240 owned profiles and all 691 accepted native arguments, with all 54 failed
-alternatives preserved. Four added identity suffixes retain the 4307 minimum
-and match 24 independent version cases. Two fresh processes match the full
-3,113,446-byte field export. The [basic read ledger](basic-read-verification.json)
-records these checks and the remaining operation gates; this is not complete
-production acceptance.
+All 21 focused tests, including three explicit native inputs, pass. Complete
+fields/construction and scalar-edit fields/history match independent actual
+source expectations for 240 owned profiles and all 691 accepted native
+arguments, with all 54 failed alternatives preserved. Two fresh processes match
+complete field and edit/history exports. The five stored value kinds, exact
+no-ops, foreign/stale IDs, fabricated shapes, raw text parent ownership,
+CString framing, source isolation, all 15 public types' Send/Sync bounds and
+eight workers x 32 mixed edits are checked. Native writer/application,
+field meanings and geometric acceptance remain separate.
+
+All 5,454 targeted framing outcomes match: 240 unchanged accepted controls and
+5,214 rejections. Every owned context passes seven independent exact/one-below
+outer/embedded budgets and rejects every proper prefix/trailing byte. Fixed
+blob/list caps have sufficient payload controls at and above each boundary.
+The [operation ledger](interop-verification.json) records full exports and scope.
+Full local and exact-head platform gates remain pending. Sheet bodies and
+sibling ComponentPersistID streams are separate operations. The earlier
+[basic read ledger](basic-read-verification.json) remains retained as an initial
+checkpoint rather than complete operation acceptance.

@@ -18,6 +18,8 @@ from native_carriers import SOURCE, RESEARCH, digest, recover_sample, pinned_aux
 from freeze_solid_manager import verify_image
 from owned_body import owned_solid_bodies, solid_identifier_archives
 from body_projection import body_projection
+from body_history import body_history
+from body_adversarial import body_mutation_packet, body_budget_packet, verify_body_hardcaps
 
 
 def baseline(name: str, value: object) -> None:
@@ -50,19 +52,22 @@ def body_input(version: int, raw: bytes, parsed: dict[str, object]) -> bytes:
             + struct.pack('<I', len(spans)) + b''.join(struct.pack('<II', span['offset'], span['end']) for span in spans))
 
 
-def replay_body_row(row: dict[str, object], streams: dict[str, bytes]) -> tuple[bytes, bytes]:
+def replay_body_row(row: dict[str, object], streams: dict[str, bytes]) -> tuple[bytes, bytes, bytes]:
     """Keep every exact original argument, including failures; e.g. replay_body_row(row, streams)."""
     raw = streams[cast(str, row['stream'])]
     assert len(raw) == row['bytes'] and digest(raw) == row['sha256']
     packet = bytearray()
     projected = bytearray()
+    history = bytearray()
     for expected in cast(list[dict[str, object]], row['attempts']):
         version = cast(int, expected['version'])
         parsed = actual_body(raw, version)
         assert dict(version=version, **parsed) == expected
         packet.extend(body_input(version, raw, parsed))
-        if parsed['success']: projected.extend(body_projection(version, raw, parsed))
-    return bytes(packet), bytes(projected)
+        if parsed['success']:
+            projected.extend(body_projection(version, raw, parsed))
+            history.extend(body_history(version, raw))
+    return bytes(packet), bytes(projected), bytes(history)
 
 
 def replay_native(pin: Path) -> None:
@@ -70,17 +75,20 @@ def replay_native(pin: Path) -> None:
     rows = cast(list[dict[str, object]], retained_report()['rows'])
     packet = bytearray()
     projected = bytearray()
+    history = bytearray()
     for document in sorted({cast(str, row['path']) for row in rows}):
         streams = recover_sample(document, pin)
         for row in (row for row in rows if row['path'] == document):
-            inputs, fields = replay_body_row(row, streams)
+            inputs, fields, edits = replay_body_row(row, streams)
             packet.extend(inputs)
             projected.extend(fields)
+            history.extend(edits)
     attempts = [attempt for row in rows for attempt in cast(list[dict[str, object]], row['attempts'])]
     assert len(rows) == 680 and sum(cast(int, row['bytes']) for row in rows) == 855786
     assert len(attempts) == 745 and sum(cast(bool, attempt['success']) for attempt in attempts) == 691
     (ROOT / 'target/simulation-solid-body-native.bin').write_bytes(packet)
     (ROOT / 'target/simulation-solid-body-native-projection.bin').write_bytes(projected)
+    (ROOT / 'target/simulation-solid-body-native-history.bin').write_bytes(history)
     baseline('native-reference.json', dict(streams=680, logical_bytes=855786, arguments=745,
              accepted=691, failed=54, bytes=len(packet), sha256=digest(packet)))
 
@@ -89,6 +97,7 @@ def replay_owned() -> None:
     """Require actual complete framing of independent historical literals; e.g. replay_owned()."""
     packet = bytearray()
     projected = bytearray()
+    history = bytearray()
     cases = owned_solid_bodies()
     for _, version, raw in cases:
         parsed = actual_body(raw, version)
@@ -96,21 +105,21 @@ def replay_owned() -> None:
         assert parsed['reconstruction_sha256'] == digest(raw)
         packet.extend(body_input(version, raw, parsed))
         projected.extend(body_projection(version, raw, parsed))
-    path = ROOT / 'tests/fixtures/simulation-solid-body/owned.bin'
+        history.extend(body_history(version, raw))
+    save_owned_packet('owned', bytes(packet), len(cases))
+    save_owned_packet('projection', bytes(projected), len(cases))
+    save_owned_packet('history', bytes(history), len(cases))
+
+
+def save_owned_packet(name: str, packet: bytes, count: int) -> None:
+    """Keep every independent typed field in the owned corpus; e.g. save_owned_packet('projection', packet, 240)."""
+    path = ROOT / f'tests/fixtures/simulation-solid-body/{name}.bin'
     if '--write' in sys.argv:
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(packet)
     assert path.read_bytes() == packet
-    baseline('owned-reference.json', dict(cases=len(cases), bytes=len(packet), sha256=digest(packet)))
-    save_owned_projection(bytes(projected), len(cases))
-
-
-def save_owned_projection(packet: bytes, count: int) -> None:
-    """Keep every independent typed field in the owned corpus; e.g. save_owned_projection(packet, 240)."""
-    path = ROOT / 'tests/fixtures/simulation-solid-body/projection.bin'
-    if '--write' in sys.argv: path.write_bytes(packet)
-    assert path.read_bytes() == packet
-    baseline('owned-projection-reference.json', dict(cases=count, bytes=len(packet), sha256=digest(packet)))
+    metadata = 'owned-reference.json' if name == 'owned' else f'owned-{name}-reference.json'
+    baseline(metadata, dict(cases=count, bytes=len(packet), sha256=digest(packet)))
 
 
 def verify_identifier_profiles() -> None:
@@ -129,6 +138,19 @@ def verify_identifier_profiles() -> None:
     if '--write' in sys.argv: path.write_bytes(packet)
     assert path.read_bytes() == packet
     baseline('identifier-reference.json', dict(cases=24, accepted=12, failed=12, bytes=len(packet), sha256=digest(packet)))
+
+
+def verify_adversarial() -> None:
+    """Keep every exact mutation outcome and independent budget; e.g. verify_adversarial()."""
+    packet, count, accepted = body_mutation_packet(actual_body)
+    save_owned_packet('malformed', packet, count)
+    save_owned_packet('budgets', body_budget_packet(actual_body), 240)
+    baseline('adversarial-reference.json', dict(inputs=count, accepted=accepted, failed=count - accepted, budget_cases=240))
+
+
+def verify_fixed_caps() -> None:
+    """Keep sufficiently populated cap controls separate from truncation cases; e.g. verify_fixed_caps()."""
+    verify_body_hardcaps(actual_body, baseline)
 
 
 def verify_prior_successes() -> None:
@@ -227,7 +249,7 @@ def run_checks(pin: Path) -> unittest.TestResult:
     import test_cosworks_embedded_body_ids
     replay = update_wrapper(partial(replay_native, pin), replay_native)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in
-                               (replay, replay_owned, verify_identifier_profiles, verify_prior_successes, verify_sources, verify_bindings, verify_unimported_boundary, verify_reconciliation_failures))
+                               (replay, replay_owned, verify_identifier_profiles, verify_adversarial, verify_fixed_caps, verify_prior_successes, verify_sources, verify_bindings, verify_unimported_boundary, verify_reconciliation_failures))
     for module in (test_cosworks_solid_body, test_cosworks_embedded_body_ids):
         suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(module))
     return unittest.TextTestRunner(verbosity=2).run(suite)

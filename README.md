@@ -582,3 +582,9 @@ raw text frames, signed words and historical gates through construction and
 isolated edits. Coverage distinguishes native-backed component grammar from
 static folder evidence, including the explicit negative-count policy. See
 [the child-header evidence](docs/features/simulation-solid-children/README.md).
+
+SolidManager solid-body `Property` operations preserve inline persist-ID bytes,
+distinct embedded archive versions, raw text and floating bits through complete
+construction and isolated edits. Full independent field and ordered nested
+history checks cover owned and native contexts. See
+[the solid-body evidence](docs/features/simulation-solid-body/README.md).

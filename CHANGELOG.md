@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added complete SolidManager solid-body Property read, construction and isolated edits with exact historical gates, nested history and four explicitly bound embedded identity suffixes. (#150)
+
 - Added explicit Simulation SolidManager component and static folder header read, construction and isolated edits with scoped validation and complete field history. (#149)
 
 - Added complete direct SolidManager Property reads, typed construction and isolated edits with raw text lists, exact resource limits and complete stored-profile history. (#148)

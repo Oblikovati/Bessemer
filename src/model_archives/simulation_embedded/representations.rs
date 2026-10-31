@@ -28,6 +28,11 @@ const HISTORICAL: &[&str] = &[
     "moRadiateEdgeIdRep_c",
 ];
 const MODERN: &[&str] = &[
+    // C-734 binds these four concrete suffixes in solid-body persist-ID archives (#150).
+    "moSimpleEdgeIdRep_c",
+    "moCopySurfIdRep_c",
+    "moMacroFeatRefSurfIdRep_c",
+    "moEndCapChamferSurfIdRep_c",
     "moEndEdgeIdRep_c",
     "moEndFace3IntSurfIdRep_c",
     "moSweepSideSurfIdRep_c",
