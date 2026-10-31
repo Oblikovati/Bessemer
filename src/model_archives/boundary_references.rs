@@ -4,12 +4,8 @@ use crate::archive_codec::{MaterialRead, ObjectReader};
 
 pub(super) fn base(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     reader.require_ordinary_model()?;
-    reader.u32("unknown_60")?;
-    reader.u32("unknown_64")?;
-    let count = reader.u32("entity_count")? as usize;
-    reader.u32("unknown_e8")?;
-    reader.u32("unknown_70")?;
-    reader.f64s(&["unknown_28", "unknown_30"])?;
+    let count = header_words(reader)? as usize;
+    header_values(reader)?;
     reader.object(
         "vertex_reference",
         map,
@@ -20,6 +16,18 @@ pub(super) fn base(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
     let temporary = reader.i32("temporary_count")?;
     absent_payload(reader, "temporary contour-chooser records", temporary)?;
     modern_suffix(reader)
+}
+
+pub(super) fn header_words(reader: &mut ModelDecoder<'_>) -> Result<u32> {
+    reader.u32("unknown_60")?;
+    reader.u32("unknown_64")?;
+    reader.u32("entity_count")
+}
+
+pub(super) fn header_values(reader: &mut ModelDecoder<'_>) -> Result<()> {
+    reader.u32("unknown_e8")?;
+    reader.u32("unknown_70")?;
+    reader.f64s(&["unknown_28", "unknown_30"])
 }
 
 fn entities(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader, count: usize) -> Result<()> {
