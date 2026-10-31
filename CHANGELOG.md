@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added explicit Simulation SolidManager component and static folder header read, construction and isolated edits with scoped validation and complete field history. (#149)
+
 - Added complete direct SolidManager Property reads, typed construction and isolated edits with raw text lists, exact resource limits and complete stored-profile history. (#148)
 
 - Added complete Simulation joint/group/list bodies and static beam-folder headers with explicit child-count scope, typed construction, isolated edits and complete stored-profile history. (#144)

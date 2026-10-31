@@ -17,6 +17,8 @@ from pinned_reference_tests import FrozenSourceImports, copy_sources, record_sna
 from native_carriers import SOURCE, RESEARCH, digest, recover_sample, pinned_auxiliaries
 from freeze_solid_manager import verify_image
 from owned_children import owned_component_headers, child_versions, folder_fields, folder_projection_case
+from child_projection import component_projection, component_history, folder_history
+from child_adversarial import component_mutations, child_budgets
 
 
 def baseline(name: str, value: object) -> None:
@@ -42,32 +44,44 @@ def input_case(version: int, raw: bytes, parsed: dict[str, object]) -> bytes:
             + struct.pack('<I', len(spans)) + b''.join(struct.pack('<II', span['offset'], span['end']) for span in spans))
 
 
-def native_row(row: dict[str, object], streams: dict[str, bytes]) -> bytes:
+def native_row(row: dict[str, object], streams: dict[str, bytes]) -> tuple[bytes, bytes, bytes]:
     """Match every complete original outcome after fresh envelope recovery; e.g. native_row(row, streams)."""
     from cosworks_solid_component_layout import parse
     raw = streams[cast(str, row['stream'])]
     assert len(raw) == row['bytes'] and digest(raw) == row['sha256']
     packet = bytearray()
+    projection = bytearray()
+    history = bytearray()
     for expected in cast(list[dict[str, object]], row['attempts']):
         version = cast(int, expected['version'])
         parsed = parse(raw, version)
         assert dict(version=version, **parsed) == expected
         packet.extend(input_case(version, raw, parsed))
-    return bytes(packet)
+        if parsed['success']:
+            projection.extend(component_projection(version, raw))
+            history.extend(component_history(version, raw))
+    return bytes(packet), bytes(projection), bytes(history)
 
 
 def replay_native(pin: Path) -> None:
     """Recover all 685 native component occurrences and 752 original arguments; e.g. replay_native(pin)."""
     rows = cast(list[dict[str, object]], retained_report()['rows'])
     packet = bytearray()
+    projection = bytearray()
+    history = bytearray()
     for document in sorted({cast(str, row['path']) for row in rows}):
         streams = recover_sample(document, pin)
         for row in (row for row in rows if row['path'] == document):
-            packet.extend(native_row(row, streams))
+            inputs, projected, edited = native_row(row, streams)
+            packet.extend(inputs)
+            projection.extend(projected)
+            history.extend(edited)
     attempts = [attempt for row in rows for attempt in cast(list[dict[str, object]], row['attempts'])]
     assert len(rows) == 685 and sum(cast(int, row['bytes']) for row in rows) == 33518
     assert len(attempts) == 752 and sum(cast(bool, attempt['success']) for attempt in attempts) == 699
     (ROOT / 'target/simulation-solid-component-native.bin').write_bytes(packet)
+    (ROOT / 'target/simulation-solid-component-native-projection.bin').write_bytes(projection)
+    (ROOT / 'target/simulation-solid-component-native-history.bin').write_bytes(history)
     baseline('native-reference.json', dict(streams=685, arguments=752, accepted=699, failed=53,
              bytes=len(packet), sha256=digest(packet), native_folders=0))
 
@@ -93,6 +107,8 @@ def replay_owned_components() -> None:
         assert parsed['reconstruction_sha256'] == digest(raw)
         packet.extend(input_case(version, raw, parsed))
     save_owned('component', bytes(packet), len(cases), 'actual unmodified component reader')
+    save_owned('component-projection', b''.join(component_projection(version, raw) for _, version, raw in cases), len(cases), 'complete actual component reader fields')
+    save_owned('component-history', b''.join(component_history(version, raw) for _, version, raw in cases), len(cases), 'complete actual component reader edited fields and ordered parents')
 
 
 def verify_static_folder_vectors() -> None:
@@ -110,6 +126,18 @@ def verify_static_folder_vectors() -> None:
                 else: assert tag == 0 and len(raw) == 4
             packet.extend(folder_projection_case(version, profile))
     save_owned('folder', bytes(packet), len(child_versions()) * 4, 'static C-730 clause/installed bindings plus literal vectors; no native folder reader replay')
+    save_owned('folder-history', b''.join(folder_history(version, profile) for version in child_versions() for profile in range(4)), len(child_versions()) * 4, 'static literal edited fields and ordered parents; no folder reader replay')
+
+
+def verify_component_mutations() -> None:
+    """Keep every accepted/failed targeted framing input; e.g. verify_component_mutations()."""
+    packet, count, accepted = component_mutations()
+    save_owned('component-mutations', packet, count, f'actual component reader: {accepted} accepted, {count - accepted} failed')
+
+
+def verify_child_budgets() -> None:
+    """Keep independent complete-call and literal measures; e.g. verify_child_budgets()."""
+    save_owned('budgets', child_budgets(), 96, 'actual component calls and separately static folder literal measures')
 
 
 def verify_sources() -> None:
@@ -155,7 +183,7 @@ def run_checks(pin: Path) -> unittest.TestResult:
     import test_cosworks_solid_component
     replay = update_wrapper(partial(replay_native, pin), replay_native)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in
-                               (replay, replay_owned_components, verify_static_folder_vectors, verify_sources, verify_bindings, verify_folder_inventory_empty))
+                               (replay, replay_owned_components, verify_static_folder_vectors, verify_component_mutations, verify_child_budgets, verify_sources, verify_bindings, verify_folder_inventory_empty))
     suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(test_cosworks_solid_component))
     return unittest.TextTestRunner(verbosity=2).run(suite)
 

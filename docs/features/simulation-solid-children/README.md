@@ -12,15 +12,24 @@ gates, list duplicates and order without assigned field business meanings.
 Folder negative counts must fail explicitly under the documented independent
 bounded-reader policy, rather than becoming a successful empty list.
 
-The full initial report and clause are retained. Initial write and strict replay
-pass nine checks: all original component outcomes, 48 independent component
-profiles, 48 separately scoped static folder vectors, installed bindings and
-the zero-folder retained payload inventory. The
-[reference ledger](reference-foundation-verification.json) records exact packets
-and exclusions. Production operations, complete edit/history expectations,
-malformed/resource limits, ownership/concurrency and local/platform gates remain
-pending. Native folder, writer/application, physical
-or geometric acceptance is not claimed.
+`SimulationSolidChildProperty` reads and constructs a complete direct body with
+an explicit `Component` or `Folder` kind. `edit_field` returns the immutable
+source, replacement, result, exact coverage and ordered history for every field.
+True no-ops retain identities. Four caller budgets bound bytes, fields, folder
+entries and individual raw text payloads. Coverage records the selected kind,
+grammar evidence and behavior profile 1; evidence describes grammar support,
+not the provenance of caller-supplied bytes.
+
+The full initial report and clause are retained. Eleven independent checks
+cover original component outcomes, 48 component profiles, 48 separately static
+folder vectors, complete field/edit/history expectations, component mutations,
+independent budgets, installed bindings and the zero-folder payload inventory.
+The initial [reference ledger](reference-foundation-verification.json) records
+the foundation. Rust tests also exercise truncations, all four exact/one-below
+budgets, 100,001 populated folder entries, ownership, all 15 public types'
+Send/Sync bounds and eight concurrent workers performing 32 mixed edits each.
+Native folder, writer/application, physical or geometric acceptance is not
+claimed. Local and platform gate outcomes are recorded separately.
 
 Run `python -B -X utf8 docs/features/simulation-solid-children/freeze_children.py`
 for strict immutable-source replay. `--write` initializes evidence for review.

@@ -576,3 +576,9 @@ words, both bounded raw-text lists and duplicate order. Complete construction
 and isolated edits retain revision-bound IDs and ordered history. Focused/native
 and independent Source checks plus the full local gate pass; platform integration remains pending.
 See [the SolidManager header evidence](docs/features/simulation-solid-manager/README.md).
+
+SolidManager component and folder headers use explicit body kinds and preserve
+raw text frames, signed words and historical gates through construction and
+isolated edits. Coverage distinguishes native-backed component grammar from
+static folder evidence, including the explicit negative-count policy. See
+[the child-header evidence](docs/features/simulation-solid-children/README.md).
