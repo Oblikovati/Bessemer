@@ -543,3 +543,64 @@ Direct Simulation BeamManager and MassElementManager Property headers retain exp
 Simulation ParameterSets preserve complete version-selected headers, tables, record texts and raw double bits, including explicitly allowed arrays beyond native retention. Complete construction and isolated typed-field edits retain exact byte images and ordered history. See [the ParameterSets evidence](docs/features/simulation-parameter-sets/README.md).
 
 Simulation embedded archives use explicit modern and legacy version profiles, independently of the outer Simulation version. The declared 61 reference classes and all five binary thermal collections preserve historical layouts through exact reads, construction and isolated typed edits. Edit results retain source/replacement history and exact validation coverage. The full local validation gate passed; platform integration remains pending. See [the embedded archive and thermal evidence](docs/features/simulation-binary-thermal/README.md).
+
+Gravity, CentriFugal and BaseExcitation collections have local reads, complete construction and isolated typed edits through their historical gates. Results retain raw fields, explicit limits and source/replacement history. Complete corpus and local-gate checks passed; platform integration remains pending. See [the inertial load evidence](docs/features/simulation-inertial-loads/README.md).
+
+MassElement child `Property` has local complete single-body reads, construction and typed edits, preserving raw scalar/text fields and its exact selector/pair gate. Independent fields, complete edit/history exports, malformed inputs and exact limits match all owned and retained native contexts; the full local gate passed and exact-head platform integration remains pending. See [the mass-element Property evidence](docs/features/simulation-mass-element-property/README.md).
+
+Study-manager Simulation `Material` has local complete reads, construction and explicit bounded-prefix operations. Every accepted retained argument matches independent field projections; raw text and interleaved pairs remain unchanged. Isolated typed edits match complete independent history expectations, malformed-input outcomes and exact resource limits; concurrent edits match serial results. The full local gate passed; platform integration remains pending. See [the Material evidence](docs/features/simulation-material/README.md).
+
+Simulation beam child `Property` bodies preserve complete reference containers,
+signed two-byte fields, unsigned words, raw doubles/text, counted triples and
+historical helpers. Complete construction and isolated edits retain revision-bound
+identities and ordered outer/nested history. Focused/native and independent
+reference checks and the full local gate pass; platform integration is pending. See
+[the beam Property evidence](docs/features/simulation-beam-property/README.md).
+
+Separate Simulation JointGroup, Joint and JointList bodies preserve signed IDs,
+ordered duplicate neighbor pairs, historical reference gates and explicit optional
+child-count agreement. BeamFolder word/text headers have static/synthetic support;
+no native folder fixture is claimed. Complete construction and isolated edits
+retain all outer/nested parents. Focused/native checks and the full local gate pass; platform
+integration remains pending. See [the joint/group evidence](docs/features/simulation-beam-groups/README.md).
+
+The combined BeamManager corpus gate freshly replays all 1,080 retained payload
+identities /620,654 logical bytes through all six typed payload families together,
+preserving 1,114 candidate arguments including 30 rejected alternatives. Exact
+identity manifests and complete validated construction/write checks pass locally;
+the full local gate passed; platform integration remains pending. See
+[the combined BeamManager evidence](docs/features/simulation-beam-inventory/README.md).
+
+Direct SolidManager `Property` headers preserve all five version gates, signed
+words, both bounded raw-text lists and duplicate order. Complete construction
+and isolated edits retain revision-bound IDs and ordered history. Focused/native
+and independent Source checks plus the full local gate pass; platform integration remains pending.
+See [the SolidManager header evidence](docs/features/simulation-solid-manager/README.md).
+
+SolidManager component and folder headers use explicit body kinds and preserve
+raw text frames, signed words and historical gates through construction and
+isolated edits. Coverage distinguishes native-backed component grammar from
+static folder evidence, including the explicit negative-count policy. See
+[the child-header evidence](docs/features/simulation-solid-children/README.md).
+
+SolidManager solid-body `Property` operations preserve inline persist-ID bytes,
+distinct embedded archive versions, raw text and floating bits through complete
+construction and isolated edits. Full independent field and ordered nested
+history checks cover owned and native contexts. See
+[the solid-body evidence](docs/features/simulation-solid-body/README.md).
+
+Inherited SolidManager sheet `Property` operations preserve the complete stored
+header through construction and isolated edits, including exact 4281 surface
+and plane-section continuations. Historical nested SurfaceBody trailers retain
+their separate unsupported scope. See
+[the inherited-sheet evidence](docs/features/simulation-sheet-property/README.md).
+
+Standalone `Component PersistID` operations preserve the separate component
+stream through complete construction and isolated edits, including explicit
+inner archive versions and ordered field history. See
+[the standalone persist-ID evidence](docs/features/simulation-component-persist-id/README.md).
+
+Separate `SurfaceBody` framing preserves declared versioned words, raw text and
+double bits through construction and isolated edits. Six historical partial
+word-pair streams remain typed failures. See
+[the SurfaceBody evidence](docs/features/simulation-surface-body/README.md).

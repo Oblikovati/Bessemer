@@ -70,9 +70,13 @@ fn require_modern(reader: &ModelDecoder<'_>, name: &str) -> Result<()> {
     ))
 }
 
-fn solid(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+pub(super) fn solid(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     require_modern(reader, "moCompSolidBody_c")?;
     components::reference_base(reader, map)?;
+    solid_tail(reader, map)
+}
+
+pub(super) fn solid_tail(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     reader.object("face_reference", map, ModelObjectRole::Any)?;
     let count = bounds::signed_count(reader, "words.count", 100000, 4)?;
     for index in 0..count {

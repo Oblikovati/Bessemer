@@ -1,0 +1,92 @@
+{
+  "issue": 136,
+  "status": "Uncommitted local read/construction operation verified; typed edits and remaining acceptance gates unfinished",
+  "revision": "cb990988644950952b90c5e11fb5584544f7734a",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "code_sha256": {
+    "src/simulation/persistence/inertial/archive.rs": "47b6e85902b044185b117fcb607a7b186951c5bde0047ba6b64164ff6b2f6419",
+    "src/simulation/persistence/inertial/coverage.rs": "91766ce63fb6b816777bacffe1d6feed9fe83fb8ec6c666d5788c6bc1b2f23b3",
+    "src/simulation/persistence/inertial/mod.rs": "5bf6cf0ab1785507479f837ba208df91dc86703f52968fcb23cd54e4bd964a2c",
+    "src/simulation/persistence/inertial/tails.rs": "1b69555a067a32b46ef0195c294a64b48ed57b56eb61052ad5521433d845b7a0",
+    "src/simulation/persistence/inertial/types.rs": "e6949623205865fc20dad1646de88b891d1f8bc95076328d3cbc785e49a3e0c5",
+    "src/simulation/persistence/mod.rs": "55a24bca471caa9052858b272a89ee250a2b40489eedef66e99c103f9387a71e",
+    "tests/simulation_inertial_collections.rs": "5635388e34ba6819ea1247d0fa8e2db64a4597114d6849550e1b509ef26ae09b",
+    "tests/simulation_inertial_collections/projection.rs": "4ce8b471a8ded88baf4298a2e6c0f32d128bcc055af9f5dbc723a332f68eb8d7"
+  },
+  "owned_contexts": 135,
+  "native_contexts": 18,
+  "source_input_bytes": 17928,
+  "owned_projection": {
+    "cases": 135,
+    "bytes": 2311234,
+    "sha256": "1cc02289c89e9a97e506c9baf6515978892960cc2e99dd23eb3bc7e079cdb043"
+  },
+  "native_projection": {
+    "cases": 18,
+    "bytes": 101432,
+    "sha256": "41ccd6ec1540ad94d5b7e218e7bc28d9da631fbd9bdb1b51fc5bc334e965c894"
+  },
+  "fresh_processes": {
+    "owned_contexts": 135,
+    "native_contexts": 18,
+    "scope": "All complete input images and every ordered outer typed field path, discriminant, offset and raw pattern; embedded images retained atomically",
+    "processes": [
+      {
+        "path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\inertial-projection-process-0.bin",
+        "bytes": 2412666,
+        "sha256": "04498b73b1cb20638d9acfe4518095bf3c3b7e3f106aa6870afc3e8c4c8d2c7c",
+        "exit": 0
+      },
+      {
+        "path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\inertial-projection-process-1.bin",
+        "bytes": 2412666,
+        "sha256": "04498b73b1cb20638d9acfe4518095bf3c3b7e3f106aa6870afc3e8c4c8d2c7c",
+        "exit": 0
+      }
+    ],
+    "byte_identical_to_independent_source": true,
+    "byte_identical_between_processes": true,
+    "handles_reaped": true
+  },
+  "focused_tests": {
+    "passed": 9,
+    "failed": 0,
+    "ignored": 0
+  },
+  "strict_inertial_source_checks": {
+    "passed": 4,
+    "failed": 0
+  },
+  "strict_thermal_source_regressions": {
+    "passed": 19,
+    "failed": 0
+  },
+  "thermal_projection_and_history_regressions": {
+    "passed": 4,
+    "failed": 0,
+    "explicit_native_inputs": true
+  },
+  "clippy_exit": 0,
+  "checks": [
+    "All three complete derived grammars and all shared base fields",
+    "Exact EOF and complete constructions for every accepted native and owned context",
+    "Every independent outer field path/type/offset/raw pattern",
+    "Unsigned high-bit BaseExcitation header and 820012 text/tail gate",
+    "Completed empty collections remain distinct from failed reads",
+    "Constructor path/type mismatches preserve source snapshots",
+    "Input, returned-buffer and cloned-field isolation",
+    "Compile-time Send/Sync for all nine published types/aliases",
+    "Input and diagnostic subjects retain their explicit family",
+    "Independent expected projections matched by two fresh processes",
+    "Function/file audit and git diff --check passed"
+  ],
+  "exclusions": [
+    "Typed field IDs and isolated edit results",
+    "Full ordered outer/nested edit history",
+    "Complete malformed and explicit budget corpus",
+    "Concurrency stress for the new public API",
+    "Full local and platform feature gates",
+    "Native SolidWorks application acceptance",
+    "Complete schema parity"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "issue": 150,
+  "scope": "Structural reference-observer reuse; old default callbacks unchanged",
+  "exports": {
+    "fields": {
+      "bytes": 892052,
+      "sha256": "bd50d6d1f33d984b884f00fef47b69895600fa6f044f54bd0ebe4c60be27d9d9",
+      "identical_before_after": true
+    },
+    "history": {
+      "bytes": 7720784,
+      "sha256": "1c2ccc2d8374bfb952498dad50c3db00ff860c4bf64af60c3c17a50175ccae9f",
+      "identical_before_after": true
+    }
+  },
+  "old_owned_embedded_roots": 1595,
+  "old_owned_thermal_contexts": 295,
+  "method": "Two fresh processes with immutable source copies executed the actual default source callbacks before and after typed parser/projector arguments. Full raw exports compared byte for byte. No production Rust path changed in this extraction."
+}

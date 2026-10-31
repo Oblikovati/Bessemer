@@ -9,6 +9,7 @@ mod decoder;
 mod edit;
 mod reference_wrappers;
 mod representations;
+mod sheet_components;
 mod wrappers;
 
 pub use archive::SimulationEmbeddedArchive;

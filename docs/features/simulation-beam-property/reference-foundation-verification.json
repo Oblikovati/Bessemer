@@ -1,0 +1,37 @@
+{
+  "issue": 142,
+  "status": "Reference foundation only; production operation acceptance pending",
+  "commands": [
+    "python -B -X utf8 docs/features/simulation-beam-property/freeze_beam.py --write",
+    "python -B -X utf8 docs/features/simulation-beam-property/freeze_beam.py"
+  ],
+  "strict_checks": 7,
+  "failed": 0,
+  "native": {
+    "streams": 163,
+    "attempts": 163,
+    "bytes": 62956,
+    "sha256": "7c19a0ac9e914062b8c3ea5fe0c6c55670c2f3dcf3b31a55a821e468ac0a6768"
+  },
+  "owned": {
+    "cases": 104,
+    "bytes": 70444,
+    "sha256": "a2ade86916c5b72aa4770da3249cf2f45ae31d035a43c8faed0631bda08a2ed7"
+  },
+  "native_logical_bytes": 43516,
+  "checks": [
+    "Fresh approved Document/CFB extraction with complete outer/nested hashes",
+    "Every original retained outcome, full span list and reconstruction hash",
+    "All original dependency hashes and installed function/slot/threshold bytes",
+    "Original three source boundary tests",
+    "All 104 independent literals with raw shorts/unsigned words and complete embedded archives",
+    "Frozen source import origins and unchanged source snapshot"
+  ],
+  "exclusions": [
+    "Production beam read/construction/edit API",
+    "Independent field/history projections and complete malformed/resource corpus",
+    "Concurrent/serial and fresh Rust process equivalence",
+    "Local and platform acceptance gates",
+    "Native runtime/application/geometry and physical/link semantics"
+  ]
+}

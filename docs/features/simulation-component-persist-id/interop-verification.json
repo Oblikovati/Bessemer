@@ -1,0 +1,68 @@
+{
+  "issue": 152,
+  "behavior_profile": 1,
+  "focused_including_native": {
+    "passed": 20,
+    "failed": 0,
+    "ignored": 0
+  },
+  "strict_reference_checks": 16,
+  "native": {
+    "streams": 406,
+    "logical_bytes": 267786,
+    "arguments": 453,
+    "accepted": 427,
+    "failed": 26
+  },
+  "owned_profiles": 20,
+  "mutation_outcomes": {
+    "unchanged_accepted_controls": 20,
+    "rejected": 231
+  },
+  "independent_exact_one_below_budget_contexts": 20,
+  "budget_axes": 7,
+  "zero_axes": "Outer text/declared entries are absent; positive required budgets are lowered. Embedded limits remain explicit.",
+  "prefixes_and_trailing_bytes": "every proper owned prefix and appended byte rejected",
+  "populated_blob_cap": "blob-cap-reference.json",
+  "send_sync_types": 15,
+  "concurrency": {
+    "workers": 8,
+    "iterations": 32,
+    "mixed_serial_options": 3
+  },
+  "value_kinds": [
+    "Signed",
+    "Bytes",
+    "Embedded"
+  ],
+  "special_cases": [
+    "Coordinated blob/count construction against independent expected bytes",
+    "Empty blob remains one complete mandatory body; empty input fails",
+    "Following sibling payload rejected at standalone EOF",
+    "Wire-distinct embedded CString framing remains a real isolated edit"
+  ],
+  "exports": {
+    "fields": {
+      "bytes": 674484,
+      "sha256": "fd938da7b46c9178dfe2b15ea69d039f1e957f5774d1a32f80375aa02e80fac1",
+      "fresh_processes": 2,
+      "scope": "20 owned + 427 accepted native arguments, complete fields"
+    },
+    "history": {
+      "bytes": 1677897,
+      "sha256": "ad0d23ecef0f50696e594fb13faa7bb228187c1353aa586d2b478dcfda441e22",
+      "fresh_processes": 2,
+      "scope": "20 owned + 427 accepted native arguments, complete edited fields and all ordered outer/nested parents"
+    }
+  },
+  "clippy": "passed -D warnings",
+  "full_local_gate": "full-gate-verification.json",
+  "platform_integration": "pending",
+  "exclusions": [
+    "Opaque ID meanings and physical semantics",
+    "Direct component Property and nested bodies",
+    "Whole SolidManager inventory and six unresolved SurfaceBody trailers",
+    "Native writer/application or geometric acceptance"
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending"
+}

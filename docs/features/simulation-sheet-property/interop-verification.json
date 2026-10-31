@@ -1,0 +1,76 @@
+{
+  "issue": 151,
+  "behavior_profile": 1,
+  "focused_including_native": {
+    "passed": 20,
+    "failed": 0,
+    "ignored": 0
+  },
+  "strict_reference_checks": 18,
+  "native": {
+    "streams": 238,
+    "logical_bytes": 186372,
+    "arguments": 243,
+    "accepted": 240,
+    "failed": 3
+  },
+  "owned_profiles": 32,
+  "embedded_corpus": {
+    "cases": 61,
+    "accepted": 23,
+    "failed": 38,
+    "bytes": 18190,
+    "sha256": "1f7e18496d0a7539ee213bf9c3058cea0f6bcf7c516fb5a381bd8c990676cd04"
+  },
+  "mutation_outcomes": {
+    "unchanged_accepted_controls": 32,
+    "rejected": 488
+  },
+  "independent_exact_one_below_budgets": {
+    "contexts": 32,
+    "axes": 7,
+    "outer_declared_entries": "zero in this inherited grammar; positive axes are lowered"
+  },
+  "prefixes_and_trailing_bytes": "all owned bodies rejected",
+  "populated_blob_cap": "blob-cap-reference.json",
+  "send_sync_types": 15,
+  "concurrency": {
+    "workers": 8,
+    "iterations": 32,
+    "mixed_serial_options": 4
+  },
+  "value_kinds": [
+    "Signed",
+    "Text",
+    "Bytes",
+    "Embedded"
+  ],
+  "exports": {
+    "fields": {
+      "bytes": 496724,
+      "sha256": "5631ac8f244dc1c41e3430c408ef403af40400d73adf19b4ba98d1b4f41399c8",
+      "fresh_processes": 2,
+      "scope": "32 owned + 240 accepted native arguments, complete fields"
+    },
+    "history": {
+      "bytes": 1366060,
+      "sha256": "cea95cad4753f0ab8cf5cd2ae92f221e92222b70a57a6d0768a767fdda458971",
+      "fresh_processes": 2,
+      "scope": "32 owned + 240 accepted native arguments, complete edited fields and all ordered outer/nested parents"
+    }
+  },
+  "shared_refactors": [
+    "shared-persist-id-verification.json",
+    "shared-embedded-tail-verification.json",
+    "shared-adversarial-verification.json"
+  ],
+  "initial_test_correction": "The first native projection tests retained the copied solid-body count 691. The sheet packet contained and matched all 240 accepted arguments; only the family count assertion was corrected. Original outcomes and complete expected bytes remained unchanged.",
+  "full_local_gate": "full-gate-verification.json",
+  "platform_integration": "pending",
+  "exclusions": [
+    "Six unresolved nested SurfaceBody historical trailers",
+    "Whole storage-tree/runtime study selection",
+    "Business/physical meanings and native writer/application/geometric acceptance"
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending"
+}

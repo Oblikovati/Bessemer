@@ -1,4 +1,4 @@
-use super::thermal::{SimulationThermalField, SimulationThermalFieldId};
+use super::thermal::SimulationThermalFieldId;
 use crate::archive_codec::ArchiveRevision;
 use crate::{Result, simulation::invalid};
 
@@ -20,12 +20,12 @@ pub(super) fn field_id(
     })
 }
 
-pub(super) fn field<'a>(
-    fields: &'a [SimulationThermalField],
+pub(super) fn field<'a, T>(
+    fields: &'a [T],
     revision: &ArchiveRevision,
     id: &SimulationThermalFieldId,
     family: &str,
-) -> Result<&'a SimulationThermalField> {
+) -> Result<&'a T> {
     if id.revision != *revision {
         return Err(invalid(
             &format!("{family} field revision"),

@@ -1,5 +1,6 @@
 """Independent malformed images located through actual reference spans (#134)."""
 import struct
+from collections.abc import Callable
 from typing import cast
 from owned_thermal import owned_thermal_cases, THERMAL_KINDS
 
@@ -16,7 +17,7 @@ def is_text_span(label: str) -> bool:
             or label.endswith(('.name', '.legacy_name', '.base.158', '.base.160')))
 
 
-def span_mutations(span: dict[str, object], raw: bytes) -> list[bytes]:
+def span_mutations(span: dict[str, object], raw: bytes, text_span: Callable[[str], bool] = is_text_span) -> list[bytes]:
     """Target actual count, mode, optional and text boundaries; e.g. span_mutations(span, raw)."""
     label, offset, end = cast(str, span['label']), cast(int, span['offset']), cast(int, span['end'])
     if label.endswith(('.count', '.blob_count', '.pair_count')):
@@ -25,7 +26,7 @@ def span_mutations(span: dict[str, object], raw: bytes) -> list[bytes]:
         return [raw[:offset + 16] + struct.pack('<i', value) + raw[offset + 20:] for value in (-1, 100001, 0x7fffffff)]
     if label.endswith('.table.mode'):
         return [raw[:offset] + struct.pack('<i', value) + raw[offset + 4:] for value in (-101, 101)]
-    if is_text_span(label):
+    if text_span(label):
         images = [raw[:offset] + struct.pack('<I', count) + raw[offset + 4:] for count in (1, 0xffffffff)]
         if end > offset + 4: images.append(raw[:end - 1] + b'\x7f' + raw[end:])
         return images
@@ -48,7 +49,7 @@ def malformed_thermal_cases() -> list[tuple[int, int, bytes, list[tuple[bool, by
     return cases
 
 
-def source_budget_metrics(raw: bytes, spans: list[dict[str, object]], archives: list[dict[str, object]]) -> tuple[int, int, int, int]:
+def source_budget_metrics(raw: bytes, spans: list[dict[str, object]], archives: list[dict[str, object]], text_span: Callable[[str], bool] = is_text_span) -> tuple[int, int, int, int]:
     """Compute aggregate entries and exact text/root budgets from actual independent boundaries; e.g. source_budget_metrics(raw, spans, archives)."""
     entries, text_max = 0, 0
     for span in spans:
@@ -57,7 +58,7 @@ def source_budget_metrics(raw: bytes, spans: list[dict[str, object]], archives: 
             entries += struct.unpack_from('<i', raw, offset)[0]
         if '.optional' in label and label.endswith('.header'):
             entries += struct.unpack_from('<i', raw, offset + 16)[0]
-        if is_text_span(label): text_max = max(text_max, struct.unpack_from('<I', raw, offset)[0])
+        if text_span(label): text_max = max(text_max, struct.unpack_from('<I', raw, offset)[0])
     largest_root = max((cast(int, item['end']) - cast(int, item['offset']) for item in archives), default=0)
     objects = max((sum(cast(dict[str, int], item['classes']).values()) for item in archives), default=0)
     return entries, text_max, largest_root, objects
@@ -77,7 +78,11 @@ def thermal_budget_cases() -> list[tuple[int, int, bytes, tuple[int, int, int, i
 
 def malformed_packet() -> tuple[bytes, int, int]:
     """Retain reference acceptance for every mutant; e.g. malformed_packet()."""
-    cases = malformed_thermal_cases()
+    return encode_mutation_cases(malformed_thermal_cases())
+
+
+def encode_mutation_cases(cases: list[tuple[int, int, bytes, list[tuple[bool, bytes]]]]) -> tuple[bytes, int, int]:
+    """Keep exact splices and independent acceptance beside each original; e.g. encode_mutation_cases(cases)."""
     packet = bytearray()
     count, accepted_count = 0, 0
     for kind, version, raw, outcomes in cases:

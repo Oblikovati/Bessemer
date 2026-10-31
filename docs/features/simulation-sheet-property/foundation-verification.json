@@ -1,0 +1,55 @@
+{
+  "issue": 151,
+  "status": "reference-foundation-verified",
+  "production_api_added": false,
+  "checks": {
+    "passed": 16,
+    "failed": 0
+  },
+  "native": {
+    "streams": 238,
+    "logical_bytes": 186372,
+    "arguments": 243,
+    "accepted": 240,
+    "failed": 3,
+    "bytes": 211554,
+    "sha256": "7491ed2b7d489413f72e45e9092109781f7f00e374ab154d4d0c84a1122d3418"
+  },
+  "owned": {
+    "cases": 32,
+    "bytes": 16692,
+    "sha256": "04adba244c8ab9403f4bf0c1855cf470700f849a29295b19db7c3467fd95ac3d"
+  },
+  "embedded": {
+    "cases": 49,
+    "accepted": 18,
+    "failed": 31,
+    "bytes": 16675,
+    "sha256": "d63e050c0253dc867bc9324c70ec773e1e9b4fc7d3b506aea6c1280bf8535659"
+  },
+  "prior_c735_c736_successes": "all preserved unchanged",
+  "bindings": [
+    "Corrected +60 storage slot 18205A610 -> 1813314F0",
+    "Inherited call target 180A32600",
+    "Installed image/function/threshold hashes",
+    "Four primary/suffix ID bindings",
+    "Constant-surface and plane-section primary serializers"
+  ],
+  "unused_dependency_pin": "../simulation-solid-body/source-reconciliation.json, independently guarded unimported throughout this replay",
+  "write_and_strict_processes_reaped": true,
+  "strict_log_sha256": "9c7b6028d1c01475ec1a894129ffd1e426a9a651fcebef8cb183d14dc2b591bf",
+  "exclusions": [
+    "Six historical nested SurfaceBody trailers",
+    "Whole storage-tree/version dispatch selection",
+    "Production operations and complete field/history oracles",
+    "Native target/writer/application and geometric acceptance"
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending",
+  "complete_oracles": {
+    "native": "native-oracle-reference.json",
+    "owned_fields": "owned-projection-reference.json",
+    "owned_history": "owned-history-reference.json",
+    "scope": "Complete independent expectations only; Rust operation parity remains pending"
+  },
+  "oracle_strict_log_sha256": "5e23b63a1b393b4c09af968cc37e029ab3e471b454c5f507e73361736ed29dd2"
+}

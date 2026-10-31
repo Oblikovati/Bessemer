@@ -5,6 +5,27 @@ use crate::model_archives::{SimulationEmbeddedArchive, SimulationEmbeddedProfile
 use crate::simulation::{SimulationPersistText, SimulationPersistVersion, invalid};
 use std::sync::Arc;
 
+pub(super) fn outer_limits(
+    maximum_bytes: usize,
+    maximum_fields: usize,
+    maximum_entries: usize,
+    maximum_text_bytes: usize,
+) -> SimulationThermalLimits {
+    SimulationThermalLimits {
+        maximum_bytes,
+        maximum_fields,
+        maximum_entries,
+        maximum_text_bytes,
+        embedded: crate::model_archives::ModelArchiveLimits {
+            maximum_bytes: 0,
+            maximum_fields: 0,
+            maximum_entries: 0,
+            maximum_depth: 0,
+            maximum_objects: 0,
+        },
+    }
+}
+
 pub(super) struct BinaryLoadReader<'a> {
     cursor: ArchiveCursor<'a>,
     pub bytes: Arc<[u8]>,
@@ -45,6 +66,27 @@ impl<'a> BinaryLoadReader<'a> {
 
     pub fn position(&self) -> usize {
         self.bytes.len() - self.cursor.remaining()
+    }
+
+    pub fn declared_entries(&self) -> usize {
+        self.entries
+    }
+
+    pub fn into_body_parts(self) -> Result<super::load_prefix::BinaryLoadParts> {
+        let consumed = self.position();
+        if consumed == self.bytes.len() {
+            return Ok(super::load_prefix::BinaryLoadParts {
+                bytes: self.bytes,
+                fields: self.fields,
+                offsets: self.offsets,
+            });
+        }
+        super::load_prefix::rebase_prefix(
+            self.bytes[..consumed].into(),
+            self.fields,
+            self.offsets,
+            self.limits.maximum_text_bytes,
+        )
     }
 
     fn push(&mut self, label: &str, start: usize, value: SimulationThermalValue) -> Result<()> {
@@ -126,6 +168,21 @@ impl<'a> BinaryLoadReader<'a> {
         self.bounded(value, label, maximum, minimum)
     }
 
+    pub fn declared_count(&mut self, label: &str, maximum: usize) -> Result<usize> {
+        let value = self.signed(label)?;
+        let count = usize::try_from(value)
+            .ok()
+            .filter(|count| *count <= maximum)
+            .ok_or_else(|| {
+                invalid(
+                    label,
+                    format!("declared count {value}; expected 0..={maximum}"),
+                )
+            })?;
+        self.charge_entries(label, count)?;
+        Ok(count)
+    }
+
     pub fn bounded(
         &mut self,
         value: i32,
@@ -190,6 +247,14 @@ impl<'a> BinaryLoadReader<'a> {
             self.signed(&format!("{label}[{index}]"))?;
         }
         Ok(())
+    }
+
+    pub fn selected_word_pairs(&mut self, prefix: &str) -> Result<()> {
+        if self.signed(&format!("{prefix}.selector"))? != 1 {
+            return Ok(());
+        }
+        let count = self.count(&format!("{prefix}.pair_count"), 10000, 8)?;
+        self.words(&format!("{prefix}.pairs"), count * 2)
     }
 
     pub fn doubles(&mut self, label: &str, count: usize) -> Result<()> {

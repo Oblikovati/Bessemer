@@ -1,0 +1,27 @@
+{
+  "issue": 140,
+  "status": "Behavior-preserving extraction of shared outer history test serialization",
+  "base_revision": "c3690b5790212e8b4df73a0cf10a7543a3540d86",
+  "owned_thermal_contexts": 295,
+  "native_thermal_contexts": 68,
+  "focused_thermal_tests": 4,
+  "clippy": "passed",
+  "complete_exports": [
+    {
+      "role": "history",
+      "bytes": 8780754,
+      "sha256": "257b403c2fadb8347578d1e53da8a22a33bca023da7ab6fbc400c80202ad33bc"
+    },
+    {
+      "role": "nested",
+      "bytes": 9687810,
+      "sha256": "93a73a7b09304f09a02e52b2e52ac670793e402390c78d3e9f0bd3dba4f0146c"
+    }
+  ],
+  "combined_bytes": 18468564,
+  "checks": "Complete pre/post bytes and all independent original expectations remain identical; source helper retains the original requested path by default",
+  "exclusions": [
+    "Material feature acceptance",
+    "Native application acceptance"
+  ]
+}

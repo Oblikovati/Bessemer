@@ -1,0 +1,734 @@
+{
+  "evidence": "C-722",
+  "module_sha256": "f4cf8adfc0f6e2e36c3a29765d28bd0d073f952e5078c5dcc7cc0d5a0d409c36",
+  "functions": [
+    {
+      "address": "0x1810c9f40",
+      "end": "0x1810ca133",
+      "raw_sha256": "46734fd9ac343eaca76843a9a06c8cb5bee72406aba29bb2313625188f937dd3"
+    },
+    {
+      "address": "0x1810ce5d0",
+      "end": "0x1810ceeba",
+      "raw_sha256": "a1ac8e56bf2b3165dddfe5b511725379005c5df59976636c0a7c3d43a3cee4c4",
+      "decompilation_sha256": "25e4f0fbb9414e8cb9a9bae1d76220b6d3ba882d0abed4a78a8be126d6136485"
+    }
+  ],
+  "serializer_slot": {
+    "address": "0x18202fde0",
+    "target": "0x1810ce5d0"
+  },
+  "literals": [
+    {
+      "address": "0x181f53138",
+      "name": "Property",
+      "raw_hex": "500072006f00700065007200740079000000"
+    },
+    {
+      "address": "0x181f50d20",
+      "name": "Material",
+      "raw_hex": "4d006100740065007200690061006c000000"
+    }
+  ],
+  "version_constants": [
+    {
+      "address": "0x18202ff50",
+      "value": 890204.0,
+      "raw_hex": "00000000b82a2b41"
+    },
+    {
+      "address": "0x18202ff58",
+      "value": 891107.0,
+      "raw_hex": "00000000c6312b41"
+    }
+  ],
+  "rows": [
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\frequency_16.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/MassElementManager/MassElements/MassElement 1/Property",
+      "bytes": 1144,
+      "sha256": "7b724d2adef5ad61d131d542393ce127c50381da9f0cfe858e70d6fc138c3147",
+      "attempts": [
+        {
+          "version": 830036,
+          "success": true,
+          "complete_records": [
+            {
+              "index": 0,
+              "subtype": 0,
+              "derived_offset": 768,
+              "end": 1144,
+              "selector": null,
+              "pair_count": null
+            }
+          ],
+          "end": 1144,
+          "reconstruction_sha256": "7b724d2adef5ad61d131d542393ce127c50381da9f0cfe858e70d6fc138c3147",
+          "prefix_reconstruction_sha256": "7b724d2adef5ad61d131d542393ce127c50381da9f0cfe858e70d6fc138c3147",
+          "spans": [
+            {
+              "label": "record0.references.count",
+              "offset": 0,
+              "end": 4,
+              "sha256": "26b25d457597a7b0463f9620f666dd10aa2c4373a505967c7c8d70922a2d6ece"
+            },
+            {
+              "label": "record0.reference0.legacy_header",
+              "offset": 4,
+              "end": 32,
+              "sha256": "95d51b5b3a9f717d353345391e9b01937cc1a307ccb77b2754039b838a4996b9"
+            },
+            {
+              "label": "record0.reference0.legacy_name",
+              "offset": 32,
+              "end": 38,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.reference0.blob_count",
+              "offset": 38,
+              "end": 42,
+              "sha256": "1ca27eeb099ab9973c35e880918e0bd43a212152927fd569fc9262d937ac0b6c"
+            },
+            {
+              "label": "record0.reference0.blob",
+              "offset": 42,
+              "end": 145,
+              "sha256": "e83a721862c30503cf40aacf59f1fb02f4808a8aa2649a45044d42db65b55418"
+            },
+            {
+              "label": "record0.reference0.tail",
+              "offset": 145,
+              "end": 153,
+              "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+            },
+            {
+              "label": "record0.reference1.legacy_header",
+              "offset": 153,
+              "end": 181,
+              "sha256": "868e6151e6bf5720cf801a9dce73253129ca137b95182d60c5d665f922e506df"
+            },
+            {
+              "label": "record0.reference1.legacy_name",
+              "offset": 181,
+              "end": 187,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.reference1.blob_count",
+              "offset": 187,
+              "end": 191,
+              "sha256": "27d6c190670106d16b6a3cb27fad9f0db3c0a62fb2667b053198a6700bc642d4"
+            },
+            {
+              "label": "record0.reference1.blob",
+              "offset": 191,
+              "end": 564,
+              "sha256": "6895df2309dea5c09a8895261e89eabaa59f686ec763130ed38879a7c5e9bceb"
+            },
+            {
+              "label": "record0.reference1.tail",
+              "offset": 564,
+              "end": 572,
+              "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+            },
+            {
+              "label": "record0.references.tail",
+              "offset": 572,
+              "end": 580,
+              "sha256": "d86e8112f3c4c4442126f8e9f44f16867da487f29052bf91b810457db34209a4"
+            },
+            {
+              "label": "record0.base.integer",
+              "offset": 580,
+              "end": 584,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "record0.base.text0",
+              "offset": 584,
+              "end": 590,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.base.text1",
+              "offset": 590,
+              "end": 596,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.base.text2",
+              "offset": 596,
+              "end": 602,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.base.text3",
+              "offset": 602,
+              "end": 608,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.base.two_integers",
+              "offset": 608,
+              "end": 616,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "record0.base.scalar_block",
+              "offset": 616,
+              "end": 652,
+              "sha256": "f541b27f5b8b741ce945dfdf2ea30072cd4ebd1371f3294081de51d75c855e1b"
+            },
+            {
+              "label": "record0.base.id",
+              "offset": 652,
+              "end": 656,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "record0.base.six_doubles",
+              "offset": 656,
+              "end": 704,
+              "sha256": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1"
+            },
+            {
+              "label": "record0.base.array_text0",
+              "offset": 704,
+              "end": 710,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.base.array_text1",
+              "offset": 710,
+              "end": 716,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.base.array_text2",
+              "offset": 716,
+              "end": 722,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.base.array_text3",
+              "offset": 722,
+              "end": 728,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.base.array_text4",
+              "offset": 728,
+              "end": 734,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.base.array_text5",
+              "offset": 734,
+              "end": 740,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.optional0.integer",
+              "offset": 740,
+              "end": 744,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "record0.optional0.present",
+              "offset": 744,
+              "end": 748,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "record0.optional1.integer",
+              "offset": 748,
+              "end": 752,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "record0.optional1.present",
+              "offset": 752,
+              "end": 756,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "record0.base.ac",
+              "offset": 756,
+              "end": 760,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "record0.base.48",
+              "offset": 760,
+              "end": 764,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "record0.base.230",
+              "offset": 764,
+              "end": 768,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "record0.mass.three_words",
+              "offset": 768,
+              "end": 780,
+              "sha256": "0db201e8371010e5cd3b719cf6c131cea86e18ef7c5bdd394e23b352b8e54f9e"
+            },
+            {
+              "label": "record0.mass.header_text0",
+              "offset": 780,
+              "end": 846,
+              "sha256": "604c802ca8357c8bb9d94433562b30348e441563855743fa58c4a889bd1ec1f3"
+            },
+            {
+              "label": "record0.mass.header_text1",
+              "offset": 846,
+              "end": 868,
+              "sha256": "90dd584cb9f02ded36abe2fcf74abaf94ffa55db806f06d824674608c78b4ef1"
+            },
+            {
+              "label": "record0.mass.three_flags",
+              "offset": 868,
+              "end": 880,
+              "sha256": "c3e42245ffdff31c980d63b232de1414ca2461a08c6efccca2af96737ef4d068"
+            },
+            {
+              "label": "record0.mass.six_doubles",
+              "offset": 880,
+              "end": 928,
+              "sha256": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1"
+            },
+            {
+              "label": "record0.mass.six_words",
+              "offset": 928,
+              "end": 952,
+              "sha256": "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0"
+            },
+            {
+              "label": "record0.mass.sixteen_doubles",
+              "offset": 952,
+              "end": 1080,
+              "sha256": "3db78931e3bed73462998685cc87fcc67fbe1bff5d6c9c7d40468fb51142071f"
+            },
+            {
+              "label": "record0.mass.text0",
+              "offset": 1080,
+              "end": 1086,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.mass.text1",
+              "offset": 1086,
+              "end": 1092,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.mass.text2",
+              "offset": 1092,
+              "end": 1098,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.mass.text3",
+              "offset": 1098,
+              "end": 1104,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.mass.text4",
+              "offset": 1104,
+              "end": 1110,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.mass.text5",
+              "offset": 1110,
+              "end": 1116,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.mass.word410",
+              "offset": 1116,
+              "end": 1120,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "record0.mass.six_tail_words",
+              "offset": 1120,
+              "end": 1144,
+              "sha256": "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0"
+            }
+          ],
+          "archive_records": []
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\frequency_16.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-3/MassElementManager/MassElements/MassElement 1/Property",
+      "bytes": 1132,
+      "sha256": "278f32af43085f147eaebcb9ce84cb35f7643a6d65192ddb522a81eb63ec19f7",
+      "attempts": [
+        {
+          "version": 830036,
+          "success": true,
+          "complete_records": [
+            {
+              "index": 0,
+              "subtype": 0,
+              "derived_offset": 766,
+              "end": 1132,
+              "selector": null,
+              "pair_count": null
+            }
+          ],
+          "end": 1132,
+          "reconstruction_sha256": "278f32af43085f147eaebcb9ce84cb35f7643a6d65192ddb522a81eb63ec19f7",
+          "prefix_reconstruction_sha256": "278f32af43085f147eaebcb9ce84cb35f7643a6d65192ddb522a81eb63ec19f7",
+          "spans": [
+            {
+              "label": "record0.references.count",
+              "offset": 0,
+              "end": 4,
+              "sha256": "26b25d457597a7b0463f9620f666dd10aa2c4373a505967c7c8d70922a2d6ece"
+            },
+            {
+              "label": "record0.reference0.legacy_header",
+              "offset": 4,
+              "end": 32,
+              "sha256": "95d51b5b3a9f717d353345391e9b01937cc1a307ccb77b2754039b838a4996b9"
+            },
+            {
+              "label": "record0.reference0.legacy_name",
+              "offset": 32,
+              "end": 38,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.reference0.blob_count",
+              "offset": 38,
+              "end": 42,
+              "sha256": "9ee4ee67ed95fa24c47309e8b15f04f252bd2a5e9b09415e360bf5fdfcb4009e"
+            },
+            {
+              "label": "record0.reference0.blob",
+              "offset": 42,
+              "end": 144,
+              "sha256": "2d33f57b61bce7b28d51395d4c815249b20ab3892a438d590453ffeba2489107"
+            },
+            {
+              "label": "record0.reference0.tail",
+              "offset": 144,
+              "end": 152,
+              "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+            },
+            {
+              "label": "record0.reference1.legacy_header",
+              "offset": 152,
+              "end": 180,
+              "sha256": "868e6151e6bf5720cf801a9dce73253129ca137b95182d60c5d665f922e506df"
+            },
+            {
+              "label": "record0.reference1.legacy_name",
+              "offset": 180,
+              "end": 186,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.reference1.blob_count",
+              "offset": 186,
+              "end": 190,
+              "sha256": "56c3ad8c9471c09492859f6c8de4c752170d6958b7b0fef66ee5079f33cd1dcb"
+            },
+            {
+              "label": "record0.reference1.blob",
+              "offset": 190,
+              "end": 562,
+              "sha256": "acc0c9966298cdc49aafb5c2ef0ab82054e0b86d1f46592921dfa0cc68290318"
+            },
+            {
+              "label": "record0.reference1.tail",
+              "offset": 562,
+              "end": 570,
+              "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+            },
+            {
+              "label": "record0.references.tail",
+              "offset": 570,
+              "end": 578,
+              "sha256": "d86e8112f3c4c4442126f8e9f44f16867da487f29052bf91b810457db34209a4"
+            },
+            {
+              "label": "record0.base.integer",
+              "offset": 578,
+              "end": 582,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "record0.base.text0",
+              "offset": 582,
+              "end": 588,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.base.text1",
+              "offset": 588,
+              "end": 594,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.base.text2",
+              "offset": 594,
+              "end": 600,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.base.text3",
+              "offset": 600,
+              "end": 606,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.base.two_integers",
+              "offset": 606,
+              "end": 614,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "record0.base.scalar_block",
+              "offset": 614,
+              "end": 650,
+              "sha256": "104258e74c34e1b4e54de85b3bce78cfbe46dc97478b6d73bfd07a6644b68094"
+            },
+            {
+              "label": "record0.base.id",
+              "offset": 650,
+              "end": 654,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "record0.base.six_doubles",
+              "offset": 654,
+              "end": 702,
+              "sha256": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1"
+            },
+            {
+              "label": "record0.base.array_text0",
+              "offset": 702,
+              "end": 708,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.base.array_text1",
+              "offset": 708,
+              "end": 714,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.base.array_text2",
+              "offset": 714,
+              "end": 720,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.base.array_text3",
+              "offset": 720,
+              "end": 726,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.base.array_text4",
+              "offset": 726,
+              "end": 732,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.base.array_text5",
+              "offset": 732,
+              "end": 738,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.optional0.integer",
+              "offset": 738,
+              "end": 742,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "record0.optional0.present",
+              "offset": 742,
+              "end": 746,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "record0.optional1.integer",
+              "offset": 746,
+              "end": 750,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "record0.optional1.present",
+              "offset": 750,
+              "end": 754,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "record0.base.ac",
+              "offset": 754,
+              "end": 758,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "record0.base.48",
+              "offset": 758,
+              "end": 762,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "record0.base.230",
+              "offset": 762,
+              "end": 766,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "record0.mass.three_words",
+              "offset": 766,
+              "end": 778,
+              "sha256": "0db201e8371010e5cd3b719cf6c131cea86e18ef7c5bdd394e23b352b8e54f9e"
+            },
+            {
+              "label": "record0.mass.header_text0",
+              "offset": 778,
+              "end": 834,
+              "sha256": "9ffd38fd55f7bd1cf4d06a8030bbfe0955b2c3e74140a01392cebdfbfa9082bf"
+            },
+            {
+              "label": "record0.mass.header_text1",
+              "offset": 834,
+              "end": 856,
+              "sha256": "90dd584cb9f02ded36abe2fcf74abaf94ffa55db806f06d824674608c78b4ef1"
+            },
+            {
+              "label": "record0.mass.three_flags",
+              "offset": 856,
+              "end": 868,
+              "sha256": "c3e42245ffdff31c980d63b232de1414ca2461a08c6efccca2af96737ef4d068"
+            },
+            {
+              "label": "record0.mass.six_doubles",
+              "offset": 868,
+              "end": 916,
+              "sha256": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1"
+            },
+            {
+              "label": "record0.mass.six_words",
+              "offset": 916,
+              "end": 940,
+              "sha256": "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0"
+            },
+            {
+              "label": "record0.mass.sixteen_doubles",
+              "offset": 940,
+              "end": 1068,
+              "sha256": "3db78931e3bed73462998685cc87fcc67fbe1bff5d6c9c7d40468fb51142071f"
+            },
+            {
+              "label": "record0.mass.text0",
+              "offset": 1068,
+              "end": 1074,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.mass.text1",
+              "offset": 1074,
+              "end": 1080,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.mass.text2",
+              "offset": 1080,
+              "end": 1086,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.mass.text3",
+              "offset": 1086,
+              "end": 1092,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.mass.text4",
+              "offset": 1092,
+              "end": 1098,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.mass.text5",
+              "offset": 1098,
+              "end": 1104,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "record0.mass.word410",
+              "offset": 1104,
+              "end": 1108,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "record0.mass.six_tail_words",
+              "offset": 1108,
+              "end": 1132,
+              "sha256": "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0"
+            }
+          ],
+          "archive_records": []
+        }
+      ]
+    }
+  ],
+  "undecoded_material": [
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\frequency_16.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/MassElementManager/MassElements/MassElement 1/Material",
+      "bytes": 3548,
+      "sha256": "a29df0224e05af3d7d7dbbb4a554f1949ec5060f0e097f8189f5b59008464e6a",
+      "decoded": false
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\frequency_16.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-3/MassElementManager/MassElements/MassElement 1/Material",
+      "bytes": 3548,
+      "sha256": "a29df0224e05af3d7d7dbbb4a554f1949ec5060f0e097f8189f5b59008464e6a",
+      "decoded": false
+    }
+  ],
+  "complete_streams": 2,
+  "complete_bytes": 2276,
+  "remaining_property_streams": 0,
+  "tests": {
+    "run": 3,
+    "passed": 3,
+    "output": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.022s\n\nOK\n"
+  },
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_mass_element_audit.py": "5e47189b7dce8c7a78163102e0b8cd06a0a5db28afb929c62b8dec0e2d004c2f",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_mass_element_layout.py": "2ffdbcff11e9682b0002e5ef522a4ebe903a2f325802c37ed6567bcb85568f5a",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\test_cosworks_mass_element.py": "5e0297a42cfb79957468de9acae152cd36890deea2a6a1f93c5a31f365151d77",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_binary_thermal_transform_audit.py": "e4e9c50808b9d52cc8291df1a9fc6eaa6793a44db8b62fefcae827599b6109fb",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_force_optional_audit.py": "06326328127568c14914a5c5d6dca7e7295b6f4bfae8300c047b69c773e9148a",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-mass-element-constructor-probe.json": "9f156d9759c7815379c5bb13f3aa495322f6e0103759ff07a0d6cb60393d7fa4",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-mass-element-storage-probe.json": "b3270c05aafc89c3e6beeeadcdb7741aa1c9abfc1865660613a536e053a8c5e4",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\cosworks-mass-element\\FUN_1810ce5d0.c": "25e4f0fbb9414e8cb9a9bae1d76220b6d3ba882d0abed4a78a8be126d6136485",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\third-party-storage-corpus.json": "3559b35ad01d27ac07d4de4b696e18a85283614f980d5ce125e17e3c20e6a9db"
+  },
+  "coverage_credit": 0,
+  "target_executed": false,
+  "limitations": [
+    "Only child Property framing, not sibling Material grammar",
+    "Retained candidate versions are not proven runtime dispatch",
+    "Raw preservation does not assign physical mass/inertia meanings",
+    "No native writer execution"
+  ]
+}

@@ -1,6 +1,7 @@
 """Independent typed nested fields observed from original source calls (#134)."""
 import struct
 import sys
+from collections.abc import Callable
 from types import FrameType
 from typing import cast
 from embedded_map_projection import ObservedArchive
@@ -81,13 +82,15 @@ def selected_fields(events: list[FieldEvent], size: int) -> list[FieldEvent]:
     return selected
 
 
-def embedded_field_case(raw: bytes) -> bytes:
+def embedded_field_case(raw: bytes, parser: Callable[[bytes, int], tuple[int, dict[str, object]]] | None = None) -> bytes:
     """Replay the full actual additive reader before exporting every logical typed field; e.g. embedded_field_case(raw)."""
-    from cosworks_binary_thermal_transform_audit import archive_reader
+    if parser is None:
+        from cosworks_binary_thermal_transform_audit import archive_reader
+        parser = archive_reader
     observer, prior = FieldCallObserver(), sys.getprofile()
     try:
         sys.setprofile(observer)
-        end, _ = archive_reader(raw, 0)
+        end, _ = parser(raw, 0)
     finally:
         sys.setprofile(prior)
     assert end == len(raw) and not observer.pending

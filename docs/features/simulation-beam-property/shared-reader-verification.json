@@ -1,0 +1,18 @@
+{
+  "issue": 142,
+  "changes": [
+    "Made the unchanged reference-container reader available to sibling codecs",
+    "Generalized unchanged revision/ordinal lookup over the field element type"
+  ],
+  "existing_mass_property_tests": {
+    "passed": 17,
+    "failed": 0,
+    "ignored_native": 3
+  },
+  "new_beam_tests": {
+    "passed": 7,
+    "failed": 0,
+    "explicit_native_inputs": 1
+  },
+  "runtime_wire_behavior_changed": false
+}

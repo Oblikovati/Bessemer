@@ -1,0 +1,49 @@
+{
+  "issue": 149,
+  "status": "Reference foundation only; production operations and acceptance pending",
+  "checks_passed": 9,
+  "failed": 0,
+  "native_component": {
+    "streams": 685,
+    "arguments": 752,
+    "accepted": 699,
+    "failed": 53,
+    "bytes": 81656,
+    "sha256": "f3099e467fc9eee335f0fc7b7275d6f43d027b3b9d73f4bfa87786a897785860",
+    "native_folders": 0
+  },
+  "native_component_logical_bytes": 33518,
+  "owned_component": {
+    "cases": 48,
+    "bytes": 3996,
+    "sha256": "c79d5b8ebba1ca59c0da9a0dc5bf5e09decd4ffa5bc763eefff9b4c4e433a249",
+    "scope": "actual unmodified component reader"
+  },
+  "static_folder": {
+    "cases": 48,
+    "bytes": 10956,
+    "sha256": "7bb8ca4774f229bdd4f7132a0107f28e74e97142dee829488c53673f9ebafea3",
+    "scope": "static C-730 clause/installed bindings plus literal vectors; no native folder reader replay"
+  },
+  "folder_inventory": {
+    "retained_payloads": 0,
+    "scope": "C-590 retained stream inventory only; empty storages and unsampled files are not excluded"
+  },
+  "checks": [
+    "Fresh approved envelope/nested extraction and all 752 exact original component outcomes",
+    "All 685 original component identities preserve complete source words/text/spans and reconstruction hashes",
+    "48 independent component profiles pass the unchanged actual reader",
+    "48 static folder literal field/offset/raw vectors validate historical gates and actual shared text-frame grammar",
+    "Complete C-730 source/decompilation bindings and clause",
+    "Installed component/folder constructor/reader function hashes, component slot, folder slot and all four thresholds",
+    "Original three component boundary/text/version tests",
+    "Complete pinned Source import origins and unchanged snapshot"
+  ],
+  "exclusions": [
+    "Actual native folder reader/payload replay (no retained payloads)",
+    "Production read/construction/edit API",
+    "Complete independent edit/history, malformed/resource, isolation/concurrency and full local/platform gates",
+    "Sibling persist IDs, nested solid/sheet bodies and whole storage-tree acceptance",
+    "Native runtime/application/writer, field business meanings or geometry"
+  ]
+}

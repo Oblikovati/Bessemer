@@ -1,6 +1,9 @@
-use bessemer::simulation::{SimulationThermalField, SimulationThermalValue};
+use bessemer::simulation::{
+    SimulationThermalField, SimulationThermalFieldId, SimulationThermalHistory,
+    SimulationThermalHistoryParent, SimulationThermalRelation, SimulationThermalValue,
+};
 
-fn read_word(cursor: &mut &[u8]) -> u32 {
+pub(super) fn read_word(cursor: &mut &[u8]) -> u32 {
     let (raw, remaining) = cursor.split_at(4);
     *cursor = remaining;
     u32::from_le_bytes(raw.try_into().unwrap())
@@ -79,4 +82,47 @@ pub(super) fn project_packet(
     }
     assert_eq!(count, expected_count);
     output
+}
+
+fn relation_tag(relation: SimulationThermalRelation) -> usize {
+    match relation {
+        SimulationThermalRelation::Copied => 0,
+        SimulationThermalRelation::Derived => 1,
+        SimulationThermalRelation::Created => 2,
+        SimulationThermalRelation::Deleted => 3,
+    }
+}
+
+fn project_parents(
+    output: &mut Vec<u8>,
+    source_ids: &[SimulationThermalFieldId],
+    parents: &[SimulationThermalHistoryParent],
+) {
+    for parent in parents {
+        let (tag, ordinal) = match parent {
+            SimulationThermalHistoryParent::Source(id) => {
+                assert_eq!(*id, source_ids[id.ordinal()]);
+                (0, id.ordinal())
+            }
+            SimulationThermalHistoryParent::Replacement => (1, u32::MAX as usize),
+        };
+        project_word(output, tag);
+        project_word(output, ordinal);
+    }
+}
+
+pub(super) fn project_outer_history(
+    output: &mut Vec<u8>,
+    rows: &[SimulationThermalHistory],
+    source_ids: &[SimulationThermalFieldId],
+    result_ids: &[SimulationThermalFieldId],
+) {
+    project_word(output, rows.len());
+    for row in rows {
+        assert_eq!(row.result, result_ids[row.result.ordinal()]);
+        project_word(output, row.result.ordinal());
+        project_word(output, relation_tag(row.relation));
+        project_word(output, row.parents.len());
+        project_parents(output, source_ids, &row.parents);
+    }
 }

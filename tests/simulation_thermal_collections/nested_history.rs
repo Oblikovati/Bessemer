@@ -1,99 +1,15 @@
-use super::history_projection::project_history_case;
-use super::projection::project_word;
-use super::*;
-use bessemer::model_archives::SimulationEmbeddedArchive;
-use bessemer::simulation::{
-    SimulationThermalEdit, SimulationThermalNestedParent, SimulationThermalRelation,
-    SimulationThermalValue,
-};
+use super::history_projection::{history_view, project_history_case};
 
 const EXPECTED: &[u8] =
     include_bytes!("../fixtures/simulation-binary-thermal/thermal-nested-history.bin");
 
-fn embedded(
-    collection: &SimulationThermalCollection,
-    ordinal: usize,
-) -> &SimulationEmbeddedArchive {
-    let SimulationThermalValue::Embedded(archive) = &collection.fields()[ordinal].value else {
-        panic!("ordinal {ordinal}; expected embedded value");
-    };
-    archive
-}
-
-fn assert_outer_identities(
-    edit: &SimulationThermalEdit,
-    row: &bessemer::simulation::SimulationThermalNestedHistory,
-) {
-    assert_eq!(
-        row.outer_parent,
-        edit.source().field_id(row.outer_parent.ordinal()).unwrap()
-    );
-    assert_eq!(
-        row.outer_result,
-        edit.archive().field_id(row.outer_result.ordinal()).unwrap()
-    );
-}
-
-fn checked_nested_indices(edit: &SimulationThermalEdit, ordinal: usize) -> (usize, usize) {
-    let row = &edit.nested_history()[ordinal];
-    assert_outer_identities(edit, row);
-    let before = embedded(edit.source(), row.outer_parent.ordinal());
-    let after = embedded(edit.archive(), row.outer_result.ordinal());
-    let [SimulationThermalNestedParent::Source(parent)] = row.parents.as_ref() else {
-        panic!("row {ordinal}; expected exactly one source parent");
-    };
-    let result = row.result.as_ref().unwrap();
-    assert_eq!(*parent, before.field_handle(parent.index()).unwrap());
-    assert_eq!(*result, after.field_handle(result.index()).unwrap());
-    assert_eq!(row.path, before.fields()[parent.index()].path);
-    assert_eq!(row.path, after.fields()[result.index()].path);
-    (parent.index(), result.index())
-}
-
-fn project_nested_row(output: &mut Vec<u8>, edit: &SimulationThermalEdit, ordinal: usize) {
-    let row = &edit.nested_history()[ordinal];
-    let (parent, result) = checked_nested_indices(edit, ordinal);
-    assert_eq!(row.relation, SimulationThermalRelation::Copied);
-    for value in [
-        row.outer_parent.ordinal(),
-        row.outer_result.ordinal(),
-        result,
-        0,
-        1,
-        0,
-        parent,
-    ] {
-        project_word(output, value);
-    }
-}
-
 fn project_nested_case(cursor: &mut &[u8], output: &mut Vec<u8>) {
     let edit = project_history_case(cursor, output);
-    project_word(output, edit.nested_history().len());
-    for ordinal in 0..edit.nested_history().len() {
-        project_nested_row(output, &edit, ordinal);
-    }
-    let count = packet_word(cursor) as usize;
-    *cursor = &cursor[count * 28..];
+    super::load_history::project_nested(cursor, output, &history_view(&edit));
 }
 
-fn project_nested_packet(mut cursor: &[u8], expected_count: usize) -> Vec<u8> {
-    let expected = cursor;
-    let mut output = Vec::new();
-    let mut count = 0;
-    while !cursor.is_empty() {
-        let start = output.len();
-        let expected_start = expected.len() - cursor.len();
-        project_nested_case(&mut cursor, &mut output);
-        assert_eq!(
-            &output[start..],
-            &expected[expected_start..expected.len() - cursor.len()],
-            "case {count}"
-        );
-        count += 1;
-    }
-    assert_eq!(count, expected_count);
-    output
+fn project_nested_packet(cursor: &[u8], expected_count: usize) -> Vec<u8> {
+    super::load_projection::project_packet(cursor, expected_count, project_nested_case)
 }
 
 #[test]

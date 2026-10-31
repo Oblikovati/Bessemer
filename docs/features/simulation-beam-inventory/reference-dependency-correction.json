@@ -1,0 +1,9 @@
+{
+  "bug": 147,
+  "failed_first_replay": "ModuleNotFoundError: pefile in the actual embedded-archive audit import chain",
+  "correction": "Added the existing target/reference-python path used by the other feature verifiers",
+  "new_dependencies": false,
+  "production_behavior_changed": false,
+  "required_regression": "Complete fresh write and strict frozen-source combined replay",
+  "regression_result": "Initial write and strict frozen-source replay passed all four checks"
+}

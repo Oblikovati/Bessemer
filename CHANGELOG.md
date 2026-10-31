@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Corrected the planned Simulation Material text contract to retain accepted odd-byte frames without a UTF-16 view. (#141)
+
 - Fixed load edits that discarded embedded CString length-prefix changes as semantic no-ops. (#137)
 
 - Fixed the new compound allocator using the reserved range-lock sector for data or tables when growing version-4 files above 2 GB. (#110)
@@ -35,6 +37,28 @@
 - Fixed reference-plane point roles rejecting documented endpoint and loft-sync subclasses for fresh and cached pointers. (#46)
 
 ### Added
+
+- Added exact SurfaceBody read, construction and isolated edits with ordered history, preserving typed failures for six unresolved historical partial-word cases. (#153)
+
+- Added standalone Component PersistID reads, construction and isolated edits with exact EOF, coordinated blob/count validation and complete ordered nested history. (#152)
+
+- Added complete inherited SolidManager sheet Property reads, construction and isolated edits, with exact class-specific 4281 surface continuations and ordered nested history. (#151)
+
+- Added complete SolidManager solid-body Property read, construction and isolated edits with exact historical gates, nested history and four explicitly bound embedded identity suffixes. (#150)
+
+- Added explicit Simulation SolidManager component and static folder header read, construction and isolated edits with scoped validation and complete field history. (#149)
+
+- Added complete direct SolidManager Property reads, typed construction and isolated edits with raw text lists, exact resource limits and complete stored-profile history. (#148)
+
+- Added complete Simulation joint/group/list bodies and static beam-folder headers with explicit child-count scope, typed construction, isolated edits and complete stored-profile history. (#144)
+
+- Added complete Simulation beam child Property reads, typed construction and isolated edits with signed-short widths, explicit embedded profiles, complete history and exact stored-profile coverage. (#142)
+
+- Added complete study-manager Simulation Material reads, construction, body-prefix operations and isolated typed edits with immutable fields, complete history and exact stored-profile coverage. (#140)
+
+- Added complete single-body MassElement child Property reads, construction and isolated typed edits with explicit versions, immutable identities and composed history. (#138)
+
+- Added bounded Gravity, CentriFugal and BaseExcitation binary reads, complete construction and isolated typed edits with explicit versions, composed history and exact field validation. (#136)
 
 - Added explicit Simulation embedded archive profiles and reference registry, plus complete binary thermal reads, construction and isolated typed edits with composed source/replacement history across all five families. (#134)
 
@@ -354,6 +378,8 @@
 - Added SolidWorks version-4 container reading, checked stream extraction, and stream replacement that preserved untouched compressed bytes. (#1)
 
 ### Changed
+
+- Expanded BeamManager corpus validation to replay every retained payload family together with exact identity manifests, complete construction and all candidate outcomes. (#146)
 
 - Optimized test builds while retaining debug assertions, checked integer arithmetic and every exhaustive validation case. (#53)
 

@@ -58,7 +58,7 @@ fn endpoint(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()>
     Ok(())
 }
 
-fn solid(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+pub(super) fn solid(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     if reader.archive_version().value() < 4307 {
         return Err(super::unsupported(
             "moSolidRef_w",

@@ -1,0 +1,68 @@
+{
+  "issue": 146,
+  "bug": 147,
+  "status": "Complete fresh combined source/Rust corpus and full local gate passed; exact-head platform integration pending",
+  "source_checks": 4,
+  "rust_tests": {
+    "passed": 5,
+    "failed": 0,
+    "ignored": 0,
+    "explicit_native_inputs": 1
+  },
+  "native": {
+    "streams": 1080,
+    "logical_bytes": 620654,
+    "arguments": 1114,
+    "accepted": 1084,
+    "failed": 30,
+    "packet_bytes": 845315,
+    "packet_sha256": "8a3c73383d85ae3a0cd447c016ed4ffd888a819e393a15ee6e69af9ce1baa338",
+    "families": {
+      "0": 353,
+      "1": 163,
+      "2": 150,
+      "3": 36,
+      "4": 11,
+      "5": 367
+    }
+  },
+  "owned": {
+    "streams": 6,
+    "arguments": 8,
+    "accepted": 7,
+    "failed": 1,
+    "logical_bytes": 4296,
+    "packet_bytes": 5143,
+    "packet_sha256": "33e333d7f2144735451bd54a707c2baefd45c7d7e66bbf38756251b618d3f733"
+  },
+  "identity_manifest": {
+    "identities": 1080,
+    "bytes": 206973,
+    "sha256": "9acc3ffa51d3a3a9a5bc12f717ff9217bcab88b4a2bf8a004c2176dc4d6d0339",
+    "native_payload_bytes": 0
+  },
+  "fresh_rust_exports": {
+    "processes": 2,
+    "bytes": 845315,
+    "sha256": "8a3c73383d85ae3a0cd447c016ed4ffd888a819e393a15ee6e69af9ce1baa338",
+    "complete_source_match": true
+  },
+  "checks": [
+    "Exact one-to-one original C-590/C-727 identities, sizes, hashes and source report bindings",
+    "Fresh envelope/nested recovery and every complete original reader outcome across six payload families",
+    "All 1114 candidate arguments, including 1084 accepted and 30 failed alternatives",
+    "Every successful typed read and complete validated construction/write reproduces the entire original body",
+    "Complete identity manifest comparison rejects renamed/substituted/missing/extra entries",
+    "Owned six-family corpus with accepted alternatives and explicit rejected header argument",
+    "Duplicate identities and unknown family tags fail without overwrite or opaque fallback",
+    "Immutable source import origins and complete source snapshot",
+    "clippy -D warnings, formatting and function/file audits"
+  ],
+  "exclusions": [
+    "Exact-head platform integration",
+    "Native application opening and native writer equivalence",
+    "Physical/geometry/adjacency/enumeration/repair semantics",
+    "Unsampled BeamFolder or all historical/context forms",
+    "Complete installed-format/schema parity"
+  ]
+}

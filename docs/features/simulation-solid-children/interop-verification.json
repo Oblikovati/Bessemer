@@ -1,0 +1,85 @@
+{
+  "issue": 149,
+  "behavior_profile": 1,
+  "focused_tests": {
+    "passed": 19,
+    "failed": 0,
+    "ignored": 0
+  },
+  "component_native": {
+    "occurrences": 685,
+    "logical_bytes": 33518,
+    "arguments": 752,
+    "accepted": 699,
+    "failed": 53
+  },
+  "owned": {
+    "component": 48,
+    "static_folder": 48
+  },
+  "component_mutations": {
+    "accepted_unchanged_controls": 48,
+    "rejected": 132
+  },
+  "independent_budget_cases": 96,
+  "concurrency": {
+    "workers": 8,
+    "iterations": 32,
+    "mixed_serial_variants": 4
+  },
+  "public_send_sync_types": 15,
+  "source_checks": 11,
+  "clippy": "passed with -D warnings",
+  "exports": {
+    "fields": {
+      "bytes": 223740,
+      "sha256": "d3f53b74258ee10a0c866e22deec2d17a8d9fa968804befbcc87710e286441b8",
+      "fresh_processes": 2,
+      "scope": "48 owned component + 48 static folder + 699 native component fields"
+    },
+    "history": {
+      "bytes": 352250,
+      "sha256": "c744b711c44eb016875997affce46890532b47a39ca51384215d9306f11099a2",
+      "fresh_processes": 2,
+      "scope": "48 owned component + 699 native component full edited fields and ordered history; 48 static folder histories checked separately"
+    }
+  },
+  "owned_packets": {
+    "budgets.bin": {
+      "bytes": 4772,
+      "sha256": "305d8b979adc15b3900d0ec475e3236ca2c32cfdb996a40d272876e67c2add41"
+    },
+    "component-history.bin": {
+      "bytes": 18884,
+      "sha256": "11bba2d7c67020edaf53bae5ea4a4db859270da143ec0602d1251175c39a2eb9"
+    },
+    "component-mutations.bin": {
+      "bytes": 5072,
+      "sha256": "f927bf3345826c976ad2fc75a9bf71421c27d52f607a809b72fd0630becafa70"
+    },
+    "component-projection.bin": {
+      "bytes": 11192,
+      "sha256": "7d5ae42841f46a25bf3d2c3e8919b73efc1aac6387b8dd6e4075b22d402d81dc"
+    },
+    "component.bin": {
+      "bytes": 3996,
+      "sha256": "c79d5b8ebba1ca59c0da9a0dc5bf5e09decd4ffa5bc763eefff9b4c4e433a249"
+    },
+    "folder-history.bin": {
+      "bytes": 18660,
+      "sha256": "c06aab7bc1fd7fd03ffb51f1d91889d2cb28dd0f5285a7d4ac2edb21e96f9890"
+    },
+    "folder.bin": {
+      "bytes": 10956,
+      "sha256": "7bb8ca4774f229bdd4f7132a0107f28e74e97142dee829488c53673f9ebafea3"
+    }
+  },
+  "exclusions": [
+    "Native folder payloads: zero retained; static vectors only",
+    "Folder profile 1 rejects negative counts; native loop may skip them",
+    "Sibling ComponentPersistID and nested solid/sheet bodies are separate",
+    "Native application/writer and geometric acceptance not tested",
+    "Full local gate and platform integration recorded separately"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending"
+}

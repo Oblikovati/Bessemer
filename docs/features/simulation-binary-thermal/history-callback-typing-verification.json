@@ -1,0 +1,13 @@
+{
+  "issue": 139,
+  "status": "Internal verification typing corrected; public library behavior and persisted bytes unchanged",
+  "regression": "Both prior callback annotations fail comparison with the actual span_shape signature; corrected annotations pass",
+  "expected_callback": "Callable[[str, int], list[FieldShape]]",
+  "strict_thermal_checks": 21,
+  "strict_thermal_failures": 0,
+  "scope": "Only shared reference projection annotations and their regression contract",
+  "exclusions": [
+    "Native application acceptance",
+    "Full documented schema parity"
+  ]
+}
