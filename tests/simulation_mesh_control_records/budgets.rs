@@ -2,7 +2,7 @@ use super::*;
 
 const EXPECTED: &[u8] = include_bytes!("../fixtures/simulation-mesh-control/records-budgets.bin");
 
-fn limit_signature(limits: SimulationMeshControlLimits) -> [usize; 9] {
+pub(super) fn limit_signature(limits: SimulationMeshControlLimits) -> [usize; 9] {
     [
         limits.maximum_bytes,
         limits.maximum_fields,

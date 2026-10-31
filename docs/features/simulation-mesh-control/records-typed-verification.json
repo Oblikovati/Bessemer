@@ -1,0 +1,81 @@
+{
+  "feature_issue": 161,
+  "implementation_parent": "d7c84a2e7eb1edbabde749bc44150e50d65e09fd",
+  "behavior_profile": 1,
+  "production_sources_unchanged": true,
+  "existing_owned_and_native_fixtures_unchanged": true,
+  "focused_tests_including_native": 17,
+  "native_tests": 3,
+  "focused_exit_code": 0,
+  "focused_process_reaped": true,
+  "clippy_warnings": 0,
+  "clippy_exit_code": 0,
+  "clippy_process_reaped": true,
+  "owned_contexts": 322,
+  "changed_edits": 8825,
+  "changed_kind_counts": {
+    "signed": 446,
+    "unsigned": 446,
+    "raw_double_bits": 446,
+    "variable_text": 6983,
+    "blob": 248,
+    "supplied_archive": 256
+  },
+  "concurrency": {
+    "workers": 8,
+    "contexts_per_worker": 322,
+    "changed_edits_per_worker": 8825,
+    "completed_empty_noops_per_worker": 62,
+    "total_operations": 71096,
+    "every_context_and_option_visited_per_worker": true,
+    "compared": [
+      "all bytes",
+      "fields",
+      "field offsets",
+      "record/base extents",
+      "original parents",
+      "replacement values",
+      "ordered outer history",
+      "ordered nested history",
+      "all coverage values",
+      "caller budgets",
+      "input isolation"
+    ]
+  },
+  "literal_splice_expected_images": true,
+  "complete_outer_and_nested_source_replacement_parents": true,
+  "full_from_fields_and_physical_extents": true,
+  "function_and_file_bounds_audited": true,
+  "artifacts": {
+    "target/mesh-records-typed-final-focused.log": {
+      "bytes": 2157,
+      "sha256": "a5d0decd71ab56f9a388539d3e73c01b8a23391422df3eb0490ff665fa7153af"
+    },
+    "target/mesh-records-typed-final-clippy.log": {
+      "bytes": 135,
+      "sha256": "5be2bc5e1a31220974ff58a9adf38fb5add39c15aa2a9f3994fc5916ac15e8dd"
+    },
+    "target/mesh-shared-concurrency-replay.log": {
+      "bytes": 880,
+      "sha256": "8eb7d29ce5b771bb6214646ddd58f54c536ca88e2908df3403b332e6018ff7ca"
+    }
+  },
+  "test_sources": {
+    "tests/simulation_mesh_control_records/budgets.rs": "2b26c2a95880dfc14d6b78d3d590e43a6919d709ba262208d121224d819dd970",
+    "tests/simulation_mesh_control_records/concurrency.rs": "33b290c6f6a57298901ba42a273e40556f084d62bf1d92500dc3e9ce4c4ba7b5",
+    "tests/simulation_mesh_control_records/contracts.rs": "85b87c0578ce4b08757b8ba0466906e4bb45dd0e10c6c891cbbe06427e826ba9",
+    "tests/simulation_mesh_control_records/history.rs": "af6435ee65c1d0b9dac5b9f355ab16d04d9667b6627775f0cff0b0eacf17e1cb",
+    "tests/simulation_mesh_control_records/malformed.rs": "1f168983d53592b8bd2153a2049f9a823392f85b36def65cc0c5b3355e2e9000",
+    "tests/simulation_mesh_control_records/typed_edits.rs": "81b9275cff807a24b54a9ff71a65c0cb56b835a55bf42f086acf00770cbfbfdf",
+    "tests/simulation_mesh_control_records/typed_values.rs": "4aca043191851a40d8dc1db6225ab910a7b2ce5ac86b1488655e86705d2efae5",
+    "tests/support/typed_load_history.rs": "a86b9773bca0a42ec30a9ea09fbc4d14e263f103783c79b1b2fea9f27693bcee",
+    "tests/support/typed_load_values.rs": "23712fd457d59d1d31c2efcfa1382dd441494f652c7a671e53c9775f40ce4ecd"
+  },
+  "exclusions": [
+    "Combined full local gate",
+    "Exact-head platform and ThreadSanitizer acceptance",
+    "Native application/writer and geometry acceptance",
+    "Whole-format schema parity"
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending"
+}

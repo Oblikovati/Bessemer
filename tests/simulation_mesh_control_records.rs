@@ -2,6 +2,8 @@
 use bessemer::{model_archives::ModelArchiveLimits, simulation::*};
 #[path = "simulation_mesh_control_records/budgets.rs"]
 mod budgets;
+#[path = "simulation_mesh_control_records/concurrency.rs"]
+mod concurrency;
 #[path = "simulation_mesh_control_records/contracts.rs"]
 mod contracts;
 #[path = "simulation_mesh_control_records/history.rs"]
@@ -34,6 +36,14 @@ mod load_mutations;
 mod load_projection;
 #[path = "simulation_mesh_control_records/malformed.rs"]
 mod malformed;
+#[path = "simulation_mesh_control_records/typed_edits.rs"]
+mod typed_edits;
+#[path = "support/typed_load_history.rs"]
+mod typed_load_history;
+#[path = "support/typed_load_values.rs"]
+mod typed_load_values;
+#[path = "simulation_mesh_control_records/typed_values.rs"]
+mod typed_values;
 use load_projection::{
     consume_expected_fields, project_field, project_packet, project_word, read_word,
     take_projection,

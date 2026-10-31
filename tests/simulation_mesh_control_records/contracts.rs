@@ -1,6 +1,6 @@
 use super::*;
 
-fn owned_collections() -> Vec<SimulationMeshControlRecords> {
+pub(super) fn owned_collections() -> Vec<SimulationMeshControlRecords> {
     let mut cursor = OWNED;
     let mut bodies = Vec::new();
     while !cursor.is_empty() {
