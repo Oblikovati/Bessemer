@@ -1,0 +1,129 @@
+{
+  "feature_issue": 160,
+  "command": "cargo test --test simulation_shell_manager --test simulation_shell_groups --test simulation_shell_property --test simulation_shell_composite --test simulation_material --test simulation_shell_inventory -- --ignored",
+  "accepted_rust_code_commit": "3ac3011f21ed3d6111d21e6d85638be137d0faf7",
+  "argument_binding_checks": 7,
+  "accepted_original_arguments_covered": 962,
+  "required_family_arguments": [
+    365,
+    79,
+    236,
+    15,
+    237,
+    22,
+    8
+  ],
+  "argument_binding_log_sha256": "b5612d952fb63e2dd5552a6041777f51a70a460836b3193ef19738e73340889a",
+  "processes": [
+    {
+      "process": "first",
+      "exit_code": 0,
+      "process_reaped": true,
+      "summaries": 6,
+      "passed": 18,
+      "failed": 0,
+      "ignored": 0,
+      "log_sha256": "bd86058a22284275f96444e6d62bc19586d9629c4279799d2d9295669809daec"
+    },
+    {
+      "process": "second",
+      "exit_code": 0,
+      "process_reaped": true,
+      "summaries": 6,
+      "passed": 18,
+      "failed": 0,
+      "ignored": 0,
+      "log_sha256": "955ef70417d14b8703125ea893012157a2530e2b1feb32b88250802f1c719f3d"
+    }
+  ],
+  "full_projection_and_ordered_history_exports": {
+    "shell_header": {
+      "projection": {
+        "bytes": 32260,
+        "sha256": "7f60fbffb975e9f69e064dba38957e9a7948b515199d92ae9afab6821d69e381",
+        "owned_bytes": 4155,
+        "native_bytes": 28105,
+        "exact_source_packet_match": true
+      },
+      "history": {
+        "bytes": 62500,
+        "sha256": "aab768104829c9160fb6f86ed261ae2790add7bec4073510ef02353d650e7c74",
+        "owned_bytes": 8115,
+        "native_bytes": 54385,
+        "exact_source_packet_match": true
+      }
+    },
+    "shell_group": {
+      "projection": {
+        "bytes": 3990111,
+        "sha256": "b6c5ac55cf2e82e64d21c301d64370bc22405b3fd734155c40d836a9867a3dbe",
+        "owned_bytes": 3986556,
+        "native_bytes": 3555,
+        "exact_source_packet_match": true
+      },
+      "history": {
+        "bytes": 26380979,
+        "sha256": "32fbf363a7c858e814ac8d5bd403d0dd9a073f919ad5478da2c8a6427431a4c5",
+        "owned_bytes": 26373000,
+        "native_bytes": 7979,
+        "exact_source_packet_match": true
+      }
+    },
+    "shell_property": {
+      "projection": {
+        "bytes": 23548608,
+        "sha256": "601510dc4d62de690c509b3fe4b42e3505b7b48ddaaf5b82258b90b45febd08b",
+        "owned_bytes": 20673774,
+        "native_bytes": 2874834,
+        "exact_source_packet_match": true
+      },
+      "history": {
+        "bytes": 37483130,
+        "sha256": "b3d03b669263d1da524ce90688e4b43ecf54c5235ab4c04b0a397334d1e4d3cd",
+        "owned_bytes": 31185492,
+        "native_bytes": 6297638,
+        "exact_source_packet_match": true
+      }
+    },
+    "shell_composite": {
+      "projection": {
+        "bytes": 258739,
+        "sha256": "93eb2bc9effad59c3a0c0cad44d11cc49eeb2cab57722cd396ac030430a2c0db",
+        "owned_bytes": 251005,
+        "native_bytes": 7734,
+        "exact_source_packet_match": true
+      },
+      "history": {
+        "bytes": 472151,
+        "sha256": "ec038eda792039a5b14499c07856e9d3897f047eb887e1e2c16149b81b350281",
+        "owned_bytes": 458945,
+        "native_bytes": 13206,
+        "exact_source_packet_match": true
+      }
+    },
+    "material": {
+      "projection": {
+        "bytes": 38170224,
+        "sha256": "29a290d5f109341552686020fe69f07007e00bbfcbe39527be7461b0921ad28b",
+        "owned_bytes": 1655098,
+        "native_bytes": 36515126,
+        "exact_source_packet_match": true
+      },
+      "history": {
+        "bytes": 56008596,
+        "sha256": "c948b8457ae10381fa3a134a0b562215db2000ec4187f391692856d0d0674bc6",
+        "owned_bytes": 2494822,
+        "native_bytes": 53513774,
+        "exact_source_packet_match": true
+      }
+    }
+  },
+  "two_fresh_processes_byte_identical": true,
+  "all_ten_exports_exact_reference_packet_matches": true,
+  "scope": "Complete owned/native family primitive, span, edited-image and ordered outer/nested history oracles; original accepted ShellManager argument multiset is a verified subset of those contexts.",
+  "exclusions": [
+    "Material operation oracles also contain 993 accepted arguments outside this inventory; they add no ShellManager coverage.",
+    "Native groups are empty; their histories are complete count no-ops.",
+    "Native application, geometry and whole-format completion remain unproven."
+  ]
+}

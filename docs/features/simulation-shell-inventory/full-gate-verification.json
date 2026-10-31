@@ -1,0 +1,26 @@
+{
+  "feature_issue": 160,
+  "command": "cargo xtask pr",
+  "accepted_rust_code_commit": "3ac3011f21ed3d6111d21e6d85638be137d0faf7",
+  "gate_started_with_uncommitted_implementation": true,
+  "tested_rust_sources_unchanged_since_accepted_commit": true,
+  "test_sources_sha256": {
+    "tests/simulation_shell_inventory/families.rs": "97b504ae6daa8ef23361e1a9a377e6100c8bfe4a836348cb1282ff4b009a508b",
+    "tests/simulation_shell_inventory.rs": "c51a9125b6ddc7372e104daba888d090357619b03d83cb568e49406dc8dadeac",
+    "tests/support/inventory_packet.rs": "f6ae48a7deac6ca15a819ff6dd58531ebf98e939d9ed9cd2779af46bacdb9e8a"
+  },
+  "additional_oracle_binding_commit": "e4a0e27889e0022a658e85f6bc2e16add1e45164",
+  "platform": "Windows x86_64",
+  "toolchain": "1.99.0",
+  "exit_code": 0,
+  "process_reaped": true,
+  "summaries": 261,
+  "passed": 3452,
+  "failed": 0,
+  "ignored": 92,
+  "log_sha256": "d199ed66203e09eada57f2794c9546bf3ebb63899cce614cfad1b68f704cd9c5",
+  "exclusions": [
+    "Exact immutable publication-cut validation and five exact-head platform gates remain pending.",
+    "Native application, geometry and whole-format completion remain unproven."
+  ]
+}
