@@ -87,7 +87,7 @@ Independent packets account for every explicit declaration, direct/nested record
 embedded root and embedded field. Reading and construction pass exact byte,
 field, entry, per-text, embedded-byte, object and embedded-field limits, and fail
 one below every positive requirement. The all-null controls retain genuine zero
-text, entry and embedded requirements. Implicit single duration words remain
+text, entry and embedded byte/object/field requirements. Implicit single duration words remain
 physical fields without inventing a stored count. Both source initialization
 and strict replay pass all 32 checks. [Budget verification](budget-verification.json)
 records the measured limits and preserves all earlier packet references.
