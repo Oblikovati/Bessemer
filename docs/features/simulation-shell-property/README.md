@@ -2,8 +2,9 @@
 
 Feature [#159](https://github.com/Oblikovati/Bessemer/issues/159) tracks complete
 Property interoperability for specification 14.365-14.367 and refinements
-14.375-14.377. This checkpoint supplies reference evidence and independent owned
-literals. It adds no production API. Direct manager/group records and separate
+14.375-14.377. `SimulationShellProperty` reads, constructs and edits complete
+bodies under a typed concrete kind, outer version and layer-presence context.
+Direct manager/group records and separate
 composite streams remain the operations in #156 and #157.
 
 Fresh extraction matches all 249 retained original identities /842,326 bytes:
@@ -61,7 +62,8 @@ callers select their original strict reader. Sixty-four regressions pass before
 and after this structural change against unchanged owned byte/field/history
 fixtures. A separate regression checks all four out-of-range signed modes on an
 otherwise complete zero-count table, preserving the original error details.
-Clippy passes with warnings denied. No shell Property operation has been added.
+Clippy passes with warnings denied. The shell operation selects its own bounded
+terminal reader and retains out-of-range unused modes only for zero counts.
 
 Run `python -B -X utf8 docs/features/simulation-shell-property/freeze_shell_property.py`
 for strict replay. `--write` initializes evidence for review. All 35 checks pass;
@@ -73,9 +75,25 @@ spans. Presence packets distinguish unknown, known-empty and explicit boolean
 vectors. Each nonstructural base-word edit is independently re-read before its
 fields and every ordered parent are recorded. Owned field/history packets contain
 20,673,774 /31,185,492 bytes; native packets contain 2,874,834 /6,297,638 bytes.
-Their hashes are retained in the packet references. Typed production operations,
-malformed/resource and isolation/concurrency gates, full local validation and
-exact-head platform integration remain pending.
+Their hashes are retained in the packet references. The typed operation matches
+every complete field/span/construction and all ordered scalar-edit outer/nested
+parents. Seven independent resource axes pass at exact limits and fail one below
+every positive requirement for both reads and construction. Independent coverage
+statistics include base endpoint, subtype, layers, inline Materials, descriptors,
+declared entries and all embedded roots/fields.
+
+All 14 focused Rust checks, including explicit native checks, pass. Every owned
+field no-op preserves bytes, context, identities and copied parents. Tests cover
+foreign/stale/out-of-bounds IDs, malformed complete construction and mutable
+input/caller-field isolation. All 18 public types satisfy `Send + Sync`. Unknown
+required layer presence returns an Unsupported typed error describing incomplete
+runtime context; wrong vector lengths are Invalid. Neither produces a successful
+partial body. Operation, entity and cause remain explicit.
+
+Full malformed-input, shorter-extent, fixed-cap, typed-edit and mixed-concurrency
+acceptance, complete local validation and exact-head platform integration remain
+pending. Zero-text controls and additional preservation/failure cases also remain
+part of that acceptance work. Native application/geometry acceptance is separate.
 
 Physical meanings, runtime layer allocation/presence reconstruction, unrepresented
 populated native profiles, native writer/application and geometry acceptance,
