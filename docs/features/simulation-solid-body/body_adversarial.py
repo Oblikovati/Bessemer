@@ -1,11 +1,11 @@
 """Actual framing mutations and independent stored-field resource requirements (#150)."""
 import struct
-from collections.abc import Callable
+from collections.abc import Callable, Sequence
 from typing import cast
 from owned_body import owned_solid_bodies, solid_body_literal
 from body_projection import body_shape
 from body_history import body_embedded_case
-from thermal_projection import projected_fields
+from thermal_projection import FieldShape, projected_fields
 from thermal_malformed import span_mutations, source_budget_metrics, encode_mutation_cases
 
 BodyParser = Callable[[bytes, int], dict[str, object]]
@@ -25,10 +25,10 @@ def body_mutations(span: dict[str, object], raw: bytes) -> list[bytes]:
             for count in (-1, 0, 1, maximum - 1, maximum, maximum + 1, 2147483647)]
 
 
-def body_mutation_packet(parser: BodyParser) -> tuple[bytes, int, int]:
+def body_mutation_packet(parser: BodyParser, contexts: Sequence[tuple[int, int, bytes]] | None = None) -> tuple[bytes, int, int]:
     """Retain every outcome including unchanged positive controls; e.g. body_mutation_packet()."""
     cases: list[tuple[int, int, bytes, list[tuple[bool, bytes]]]] = []
-    for _, version, raw in owned_solid_bodies():
+    for _, version, raw in owned_solid_bodies() if contexts is None else contexts:
         parsed = parser(raw, version)
         assert parsed['success']
         images = {image for span in cast(list[dict[str, object]], parsed['spans']) for image in body_mutations(span, raw)}
@@ -38,27 +38,27 @@ def body_mutation_packet(parser: BodyParser) -> tuple[bytes, int, int]:
     return encode_mutation_cases(cases)
 
 
-def largest_body_archive_fields(raw: bytes, archives: list[dict[str, object]]) -> int:
+def largest_body_archive_fields(raw: bytes, archives: list[dict[str, object]], project: Callable[[bytes], bytes] = body_embedded_case) -> int:
     """Observe nested typed calls under the exact C-734 callback; e.g. largest_body_archive_fields(raw, archives)."""
     counts: list[int] = []
     for item in archives:
         start, end = cast(int, item['offset']), cast(int, item['end'])
-        observed = body_embedded_case(raw[start:end])
+        observed = project(raw[start:end])
         counts.append(struct.unpack_from('<I', observed, 4 + end - start)[0])
     return max(counts, default=0)
 
 
-def body_budget_packet(parser: BodyParser) -> bytes:
+def body_budget_packet(parser: BodyParser, contexts: Sequence[tuple[int, int, bytes]] | None = None, shape: Callable[[str, int], list[FieldShape]] = body_shape, project: Callable[[bytes], bytes] = body_embedded_case) -> bytes:
     """Compute seven exact budgets from independent spans and primitive calls; e.g. body_budget_packet()."""
     packet = bytearray()
-    for _, version, raw in owned_solid_bodies():
+    for _, version, raw in owned_solid_bodies() if contexts is None else contexts:
         parsed = parser(raw, version)
         assert parsed['success']
         spans = cast(list[dict[str, object]], parsed['spans'])
         archives = cast(list[dict[str, object]], parsed['archives'])
         metrics = source_budget_metrics(raw, spans, archives, body_text_span)
-        fields = len(projected_fields(raw, spans, body_shape))
-        nested = largest_body_archive_fields(raw, archives)
+        fields = len(projected_fields(raw, spans, shape))
+        nested = largest_body_archive_fields(raw, archives, project)
         packet.extend(struct.pack('<III', 0, version, len(raw)) + raw)
         packet.extend(struct.pack('<IIIIII', *metrics, fields, nested))
     return bytes(packet)
