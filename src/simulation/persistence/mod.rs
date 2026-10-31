@@ -8,6 +8,7 @@ mod legacy;
 mod load_base;
 mod load_edit;
 mod load_identity;
+mod load_persist_id;
 mod load_prefix;
 mod load_reader;
 mod load_snapshot;

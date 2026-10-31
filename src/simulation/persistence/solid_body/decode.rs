@@ -12,7 +12,7 @@ const EARLY_FIELDS: &[(i32, &str, usize)] = &[
 ];
 
 pub(super) fn read(reader: &mut BinaryLoadReader<'_>) -> Result<()> {
-    persist_id(reader)?;
+    super::super::load_persist_id::read(reader)?;
     reader.text("text58")?;
     reader.text("text60")?;
     reader.words("words70_7c", 4)?;
@@ -20,18 +20,6 @@ pub(super) fn read(reader: &mut BinaryLoadReader<'_>) -> Result<()> {
     early_words(reader)?;
     late_words(reader)?;
     list_and_suffix(reader)
-}
-
-fn persist_id(reader: &mut BinaryLoadReader<'_>) -> Result<()> {
-    reader.words("persistid.words", 2)?;
-    let declared = reader.signed("persistid.blob_count")?;
-    let count = reader.available_count(declared, "persistid.blob", 1000000, 1)?;
-    reader.blob("persistid.blob", count)?;
-    if reader.version >= 840002 {
-        reader.embedded("persistid.archive0")?;
-        reader.embedded("persistid.archive1")?;
-    }
-    Ok(())
 }
 
 fn gated_words(reader: &mut BinaryLoadReader<'_>, gates: &[(i32, &str, usize)]) -> Result<()> {
