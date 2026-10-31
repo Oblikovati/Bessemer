@@ -1,0 +1,36 @@
+{
+  "issue": 156,
+  "before_commit": "7adc8de792da04562428fa84dff575f5162a6bb8",
+  "scope": "Behavior-preserving extraction of existing MFC prefix parsing and ordered outer-field history construction. Existing private callers use the extracted helpers; no new bounded/group behavior in this commit.",
+  "checks": [
+    {
+      "log": "target/shell-shared-primitives-existing.log",
+      "passed": 18,
+      "failed": 0,
+      "ignored": 0,
+      "summaries": 3,
+      "sha256": "5c9fa9ff124189b0e69ef58b13a28959ae82e9e9a065958bab3ec1b51bfbb92a"
+    },
+    {
+      "log": "target/shell-shared-primitives-header.log",
+      "passed": 13,
+      "failed": 0,
+      "ignored": 0,
+      "summaries": 1,
+      "sha256": "41c68fec91655cfb9690fe193b14c9dd8385d0370840bac5fa7ee084ff9e8527"
+    }
+  ],
+  "exports": {
+    "fields": {
+      "bytes": 32260,
+      "sha256": "7f60fbffb975e9f69e064dba38957e9a7948b515199d92ae9afab6821d69e381",
+      "unchanged": true
+    },
+    "history": {
+      "bytes": 62500,
+      "sha256": "aab768104829c9160fb6f86ed261ae2790add7bec4073510ef02353d650e7c74",
+      "unchanged": true
+    }
+  },
+  "processes_reaped": true
+}

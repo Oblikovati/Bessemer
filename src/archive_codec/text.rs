@@ -75,22 +75,22 @@ impl ArchiveString {
     }
 
     pub(crate) fn decode(cursor: &mut ArchiveCursor<'_>) -> Result<Self> {
-        let first = cursor.u8()?;
-        if first != 0xff {
-            return read_text(
-                cursor,
-                u32::from(first),
-                LengthWidth::Byte,
-                TextEncoding::Latin1,
-            );
+        let (count, width, encoding) = string_header(cursor)?;
+        read_text(cursor, count, width, encoding)
+    }
+
+    pub(crate) fn decode_bounded(
+        cursor: &mut ArchiveCursor<'_>,
+        maximum_payload_bytes: usize,
+    ) -> Result<(Self, usize)> {
+        let (count, width, encoding) = string_header(cursor)?;
+        let size = text_byte_count(count, encoding)?;
+        if size > maximum_payload_bytes {
+            return Err(malformed(format!(
+                "CString payload {size} bytes; expected <= {maximum_payload_bytes}"
+            )));
         }
-        let word = cursor.u16()?;
-        if word != 0xfffe {
-            let (count, width) = extended_length(cursor, word)?;
-            return read_text(cursor, count, width, TextEncoding::Latin1);
-        }
-        let (count, width) = wide_length(cursor)?;
-        read_text(cursor, count, width, TextEncoding::Utf16)
+        Ok((read_text(cursor, count, width, encoding)?, size))
     }
 
     pub(crate) fn encoded_size(&self) -> Result<usize> {
@@ -130,6 +130,20 @@ impl ArchiveString {
         }
         Ok(())
     }
+}
+
+fn string_header(cursor: &mut ArchiveCursor<'_>) -> Result<(u32, LengthWidth, TextEncoding)> {
+    let first = cursor.u8()?;
+    if first != 0xff {
+        return Ok((u32::from(first), LengthWidth::Byte, TextEncoding::Latin1));
+    }
+    let word = cursor.u16()?;
+    if word != 0xfffe {
+        let (count, width) = extended_length(cursor, word)?;
+        return Ok((count, width, TextEncoding::Latin1));
+    }
+    let (count, width) = wide_length(cursor)?;
+    Ok((count, width, TextEncoding::Utf16))
 }
 
 fn extended_length(cursor: &mut ArchiveCursor<'_>, word: u16) -> Result<(u32, LengthWidth)> {

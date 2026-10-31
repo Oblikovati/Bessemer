@@ -1,0 +1,34 @@
+{
+  "issue": 156,
+  "status": "Verified reference foundation and independent owned values; no production API yet",
+  "strict_reference_checks": 10,
+  "owned_headers": 30,
+  "owned_groups": 72,
+  "native_reports": [
+    {
+      "evidence": "C-741",
+      "streams": 430,
+      "logical_bytes": 3164,
+      "arguments": 474,
+      "accepted": 444,
+      "failed": 30
+    },
+    {
+      "evidence": "C-747",
+      "streams": 69,
+      "logical_bytes": 276,
+      "arguments": 79,
+      "accepted": 79,
+      "failed": 0
+    }
+  ],
+  "unique_native_streams": 430,
+  "unique_native_bytes": 3164,
+  "scope": "C-747 groups repeat the 69 C-741 group identities; no populated native group. Original hashes, installed bindings and all original alternatives remain exact.",
+  "pending": [
+    "Complete independent primitive-field/edit/history oracles",
+    "Typed API and budgets/malformed/ownership/concurrency/fresh-process checks",
+    "Full local and exact-head platform gates"
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending"
+}
