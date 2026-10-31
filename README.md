@@ -561,5 +561,5 @@ Separate Simulation JointGroup, Joint and JointList bodies preserve signed IDs,
 ordered duplicate neighbor pairs, historical reference gates and explicit optional
 child-count agreement. BeamFolder word/text headers have static/synthetic support;
 no native folder fixture is claimed. Complete construction and isolated edits
-retain all outer/nested parents. Focused/native checks pass; full local/platform
-gates remain pending. See [the joint/group evidence](docs/features/simulation-beam-groups/README.md).
+retain all outer/nested parents. Focused/native checks and the full local gate pass; platform
+integration remains pending. See [the joint/group evidence](docs/features/simulation-beam-groups/README.md).

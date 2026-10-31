@@ -41,8 +41,8 @@ seven exact/one-below outer/embedded budgets and rejects every proper prefix and
 trailing byte. Eight threads each run 32 mixed edits across four body kinds and
 eight serial requests, matching bytes, fields, coverage and all parent relations.
 Clippy, formatting and size/function audits pass. See the
-[operation ledger](operation-checkpoint.json). Full local and exact-head platform
-gates remain pending; native runtime/application and geometric acceptance remain
+[operation ledger](operation-checkpoint.json). The full local gate passed; exact-head platform
+integration remains pending; native runtime/application and geometric acceptance remain
 separate.
 
 Bug [#145](https://github.com/Oblikovati/Bessemer/issues/145) corrected the draft
@@ -58,3 +58,6 @@ Set `BESSEMER_BEAM_GROUPS_NATIVE_INPUT`,
 `target/simulation-beam-groups-native*.bin` packets. Optional complete exports
 use `BESSEMER_BEAM_GROUPS_PROJECTION_OUTPUT` and
 `BESSEMER_BEAM_GROUPS_HISTORY_OUTPUT`.
+
+The [full local gate](full-local-verification.json) records the exact committed
+implementation, platform, toolchain, test totals and complete log hash.
