@@ -36,7 +36,9 @@ for strict replay; `--write` initializes reviewable evidence. Native packets rem
 under `target/`; the committed native manifest contains identity metadata only.
 Original reports can contain decoded values and raw spans. No target code executes.
 
-Full local and exact-head platform gates remain pending. Native folder payloads,
+The full local gate passed: 3,380 tests, zero failures and 77 explicit ignores
+across 256 summaries. See [gate verification](full-gate-verification.json).
+Exact-head platform integration remains pending. Native folder payloads,
 runtime version selection, physical meanings, historical mismatch resolution,
 geometry and native CAD writer/application acceptance require separate evidence.
 Humanizer was unavailable; maintainer prose review remains pending.
