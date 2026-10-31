@@ -142,3 +142,31 @@ fn assert_count_edit_rejected(property: &SimulationMeshProperty) {
             .is_err()
     );
 }
+
+#[test]
+fn every_owned_property_rejects_all_proper_prefixes_and_appended_bytes_without_mutation() {
+    let mut prefixes = 0;
+    for property in owned_properties() {
+        let raw = property.to_bytes();
+        prefixes += assert_proper_prefixes(&property, &raw);
+        assert!(
+            SimulationMeshProperty::from_bytes(
+                &[raw.as_slice(), &[0]].concat(),
+                property.version(),
+                LIMITS
+            )
+            .is_err()
+        );
+        assert_eq!(property.to_bytes(), raw);
+    }
+    assert_eq!(prefixes, 1_151_425);
+}
+
+fn assert_proper_prefixes(property: &SimulationMeshProperty, raw: &[u8]) -> usize {
+    for end in 0..raw.len() {
+        assert!(
+            SimulationMeshProperty::from_bytes(&raw[..end], property.version(), LIMITS).is_err()
+        );
+    }
+    raw.len()
+}

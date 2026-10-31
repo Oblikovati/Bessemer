@@ -21,6 +21,9 @@ from property_bindings import verify_property_installed_bindings
 from property_native import verify_property_inventory, verify_property_historical_replay, verify_property_historical_guards, replay_property_native
 from property_owned_packets import verify_owned_property_packets, verify_property_literal_guards
 from property_native_operations import replay_native_property_operations
+from property_malformed import verify_property_mutations
+from property_caps import verify_property_caps
+from property_extents import verify_property_extents
 
 
 def run_property_checks(pin: Path) -> unittest.TestResult:
@@ -29,7 +32,8 @@ def run_property_checks(pin: Path) -> unittest.TestResult:
     operations = update_wrapper(partial(replay_native_property_operations, pin), replay_native_property_operations)
     checks = (verify_property_sources, verify_property_refinement_guards, verify_property_schema,
               verify_property_installed_bindings, verify_property_inventory, verify_property_historical_replay, verify_property_historical_guards,
-              replay, verify_owned_property_packets, verify_property_literal_guards, operations, verify_unimported_boundary)
+              replay, verify_owned_property_packets, verify_property_literal_guards, operations,
+              verify_property_mutations, verify_property_caps, verify_property_extents, verify_unimported_boundary)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
     for name in ('test_cosworks_mesh', 'test_cosworks_material', 'test_cosworks_embedded_body_ids',
                  'test_cosworks_embedded_const_surface', 'test_cosworks_mesh_nested_record', 'test_cosworks_mesh_newest_set'):

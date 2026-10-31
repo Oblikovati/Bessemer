@@ -92,8 +92,24 @@ physical fields without inventing a stored count. Both source initialization
 and strict replay pass all 32 checks. [Budget verification](budget-verification.json)
 records the measured limits and preserves all earlier packet references.
 
-Generated malformed controls, sufficient-payload fixed caps, changed values of every supported kind,
-mixed concurrency and full local/platform gates remain pending. Native writer symmetry,
+The adversarial source replay passes all 35 checks. Across all 588 owned
+contexts, Rust matches 61,791 actual grammar outcomes: 2,052 complete accepted
+images and 59,739 rejected images. Each accepted image also passes complete
+typed construction. All sixteen fixed caps have sufficient complete payloads at
+the limit and one above it, under permissive caller budgets. Both readers reject
+every one of the 1,151,425 proper prefixes and all 588 appended-byte cases.
+
+Changed-value checks cover 53,126 edits: 588 signed words, 588 raw doubles, 4,128
+text frames, 46,430 byte fields and 1,392 supplied embedded archives. Every
+distinct valid archive donor in each body participates, including null roots.
+Literal byte replacements, all unaffected fields and shifted extents, complete
+construction and every ordered source/replacement parent are checked. Eight
+workers execute 29,112 mixed operations across every owned context, matching
+complete serial bytes, fields, extents, coverage, limits and ordered histories.
+All 18 focused Rust checks pass, including four native checks; Clippy passes
+with warnings denied. [Adversarial and typed-edit verification](adversarial-typed-verification.json)
+records all counts, source identities, logs and exclusions.
+Full local/platform and ThreadSanitizer gates remain pending. Native writer symmetry,
 application opening, physical meanings, geometry validation, universal runtime
 version selection and whole-format parity remain unproven.
 
