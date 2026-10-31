@@ -6,12 +6,16 @@ reference reports 680 streams /855,786 bytes, with 745 original version
 arguments: 691 accepted and 54 failed alternatives. Those alternatives must
 remain explicit; a successful candidate does not establish runtime dispatch.
 
-The initial replay matched all native outcomes, all 240 owned profiles, earlier
-C-731 successes, installed bindings and five original tests. Its source guard
-failed because `solidworks/modelboundary.py` differs from the C-734 report's
-hash. The original hash and failure remain retained; this foundation is
-incomplete until that provenance difference is reconciled. No source hash was
-silently accepted or original report rewritten.
+All 12 strict reference checks now pass. The initial source guard correctly
+stopped on a changed `solidworks/modelboundary.py`. A full replay trace recorded
+zero calls to that file, and frozen import origins confirm it is not imported.
+The scoped embedded readers install their own instance dispatch tables. The
+[reconciliation](source-reconciliation.json) pins exactly this unused file's
+new hash, preserves the original C-734 hash and failed check, and rejects other
+files/hashes or future imports of that module. Every other original source hash
+and all 745 original outcomes remain unchanged. This does not authorize using
+the newer general boundary readers in this callback. See the
+[foundation ledger](foundation-verification.json).
 
 The foundation replays unchanged actual body and embedded-archive readers from
 an immutable source copy. It retains the complete earlier and expanded reports,

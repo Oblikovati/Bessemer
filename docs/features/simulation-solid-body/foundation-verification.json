@@ -1,19 +1,11 @@
 {
   "issue": 150,
-  "status": "incomplete-source-provenance",
+  "status": "reference-foundation-verified",
   "production_api_added": false,
   "source_checks": {
-    "run": 10,
-    "passed": 9,
-    "failed": 1
-  },
-  "failure": {
-    "check": "verify_sources",
-    "file": "solidworks/modelboundary.py",
-    "original_c734_sha256": "e1b4356b42c02e6330e6754c975bab76bb5b79e6a1616495e97d3e44c0d4ed3b",
-    "current_sha256": "401f25dcdc739157fb58de249232090228d4237fc3809fa32ce3e43e24dba511",
-    "guard_retained": true,
-    "next_step": "Recover original bytes or independently reconcile the exact upstream revision before accepting this reference foundation."
+    "run": 12,
+    "passed": 12,
+    "failed": 0
   },
   "native": {
     "streams": 680,
@@ -32,5 +24,21 @@
   "earlier_c731_successes": "all preserved",
   "installed_image_bindings": "passed",
   "original_tests": 5,
-  "humanizer": "Unavailable; maintainer prose review pending"
+  "humanizer": "Unavailable; maintainer prose review pending",
+  "initial_source_checks": {
+    "run": 10,
+    "passed": 9,
+    "failed": 1
+  },
+  "initial_failure": {
+    "check": "verify_sources",
+    "file": "solidworks/modelboundary.py",
+    "original_c734_sha256": "e1b4356b42c02e6330e6754c975bab76bb5b79e6a1616495e97d3e44c0d4ed3b",
+    "current_sha256": "401f25dcdc739157fb58de249232090228d4237fc3809fa32ce3e43e24dba511",
+    "guard_retained": true,
+    "next_step": "Recover original bytes or independently reconcile the exact upstream revision before accepting this reference foundation."
+  },
+  "reconciliation": "source-reconciliation.json",
+  "strict_log_sha256": "d37b11d6cd90a0b8228278d93b6261fdc4b264ce95d55c2c9cffb270f84d3bdc",
+  "processes_reaped": true
 }

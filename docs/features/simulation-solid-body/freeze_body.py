@@ -116,7 +116,7 @@ def verify_sources() -> None:
     for original, expected in cast(dict[str, str], retained_report()['sources']).items():
         normalized = original.replace('\\', '/')
         relative = normalized.split('/inventor-interface/', 1)[1]
-        assert digest((SOURCE / relative).read_bytes()) == expected, relative
+        verify_source_hash(relative, expected)
     text = (SOURCE / 'docs/solidworks-file-format/specification.md').read_bytes().decode().replace('\r\n', '\n')
     for section in ('14.352', '14.355', '14.357'):
         start = text.index(f'### {section} ')
@@ -124,6 +124,40 @@ def verify_sources() -> None:
         path = FEATURE / f'schema-{section}.md'
         if '--write' in sys.argv: path.write_bytes(raw)
         assert path.read_bytes() == raw
+
+
+def verify_source_hash(relative: str, original: str) -> None:
+    """Allow only the reviewed, unimported dependency pin; e.g. verify_source_hash(relative, original)."""
+    current = digest((SOURCE / relative).read_bytes())
+    if current == original: return
+    require_unused_pin(relative, original, current)
+
+
+def require_unused_pin(relative: str, original: str, current: str) -> None:
+    """Require every dimension of the single reviewed pin; e.g. require_unused_pin(relative, original, current)."""
+    reconciliation = json.loads((FEATURE / 'source-reconciliation.json').read_bytes())
+    assert relative == reconciliation['file'], relative
+    assert original == reconciliation['original_c734_sha256']
+    assert current == reconciliation['current_sha256']
+    verify_unimported_boundary()
+
+
+def verify_reconciliation_failures() -> None:
+    """Ensure no other file or hash can use this reconciliation; e.g. verify_reconciliation_failures()."""
+    pin = json.loads((FEATURE / 'source-reconciliation.json').read_bytes())
+    valid = (pin['file'], pin['original_c734_sha256'], pin['current_sha256'])
+    require_unused_pin(*valid)
+    for index in range(3):
+        altered = list(valid)
+        altered[index] = 'unreviewed'
+        try: require_unused_pin(*altered)
+        except AssertionError: continue
+        raise AssertionError(f'{altered}; expected rejection outside the exact reviewed pin')
+
+
+def verify_unimported_boundary() -> None:
+    """Reject future callback use of the independently changed general reader; e.g. verify_unimported_boundary()."""
+    assert 'modelboundary' not in sys.modules, 'modelboundary; expected no imported general boundary reader in this scoped replay'
 
 
 def verify_model_bindings(image: pefile.PE, report: dict[str, object]) -> None:
@@ -157,7 +191,7 @@ def run_checks(pin: Path) -> unittest.TestResult:
     import test_cosworks_embedded_body_ids
     replay = update_wrapper(partial(replay_native, pin), replay_native)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in
-                               (replay, replay_owned, verify_prior_successes, verify_sources, verify_bindings))
+                               (replay, replay_owned, verify_prior_successes, verify_sources, verify_bindings, verify_unimported_boundary, verify_reconciliation_failures))
     for module in (test_cosworks_solid_body, test_cosworks_embedded_body_ids):
         suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(module))
     return unittest.TextTestRunner(verbosity=2).run(suite)
@@ -172,6 +206,7 @@ def run() -> bool:
         sys.meta_path.insert(0, FrozenSourceImports(pin))
         sys.path.insert(0, str(pin / 'research'))
         result = run_checks(pin)
+        verify_unimported_boundary()
         record_snapshot(pin, hashes, result, FEATURE, ('cosworks_solid_body_layout', 'cosworks_embedded_body_ids', 'cosworkspersist', 'cfb', 'swcontainer'), ())
         (FEATURE / 'fixture-reference-snapshot.json').replace(FEATURE / 'source-snapshot.json')
         return result.wasSuccessful()
