@@ -31,6 +31,10 @@ mod malformed;
 mod typed_edits;
 #[path = "simulation_shell_property/typed_history.rs"]
 mod typed_history;
+#[path = "support/typed_load_history.rs"]
+mod typed_load_history;
+#[path = "support/typed_load_values.rs"]
+mod typed_load_values;
 #[path = "simulation_shell_property/typed_values.rs"]
 mod typed_values;
 use load_projection::{
