@@ -129,8 +129,12 @@ and ordered histories. Original inputs remain unchanged. All 17 focused Rust
 checks pass, including the three native checks. [Changed-value verification](records-typed-verification.json)
 records exact counts, hashes and scope.
 
-Full local/platform gates and ThreadSanitizer acceptance for the completed
-combined feature remain pending.
+The complete local PR gate passed on `31a0d8a`: 3,479 tests passed, none failed
+and 98 were explicitly ignored across 263 summaries. The final strict reference
+replay passed all 20 checks; its process exited successfully after cleanup.
+[Combined full gate verification](combined-full-gate-verification.json) records
+the exact revision, logs, source snapshot and exclusions. Exact-head platform
+and ThreadSanitizer acceptance remain pending in the serial integration queue.
 Native writer/application and geometry acceptance, field
 meanings, unrepresented native profiles and whole-format parity remain unproven.
 Humanizer was unavailable; maintainer prose review remains pending.
