@@ -1,5 +1,7 @@
 //! Complete Results root/category/plot field and edit-history acceptance (#164).
 use bessemer::simulation::*;
+#[path = "simulation_results_property/budgets.rs"]
+mod budgets;
 #[path = "simulation_results_property/contracts.rs"]
 mod contracts;
 #[path = "simulation_results_property/history.rs"]

@@ -1,0 +1,77 @@
+{
+  "feature_issue": 164,
+  "implementation_parent": "bbb5174487c8cd77001b831466ab511a5e68c6f6",
+  "reference_checks": 20,
+  "focused_rust_including_native": 12,
+  "all_exit_codes": 0,
+  "all_processes_reaped": true,
+  "clippy_warnings": 0,
+  "owned_contexts": 660,
+  "native_accepted_arguments": 450,
+  "resource_axes": [
+    "outer bytes",
+    "outer fields",
+    "declared entries",
+    "per-text bytes"
+  ],
+  "embedded_requirements": {
+    "bytes": 0,
+    "fields": 0,
+    "entries": 0,
+    "objects": 0,
+    "depth": 0
+  },
+  "exact_and_one_below_read_and_construction": true,
+  "sufficient_payload_counts": [
+    100000,
+    100001
+  ],
+  "accepted_cap_physical_fields": 100002,
+  "source_snapshot_identity": "ca3a607382cd14e450d18fbb9719beee441d2ba061a4bf1d603b3d74c476542e",
+  "resources": {
+    "budgets.bin": {
+      "bytes": 23801,
+      "sha256": "72d0b97a788a0e6efa9796d537cf6c2e627b9798f01f895b68239015ff3f1805"
+    },
+    "native-budgets": {
+      "bytes": 21756,
+      "sha256": "e9b7089a611bae177bb84184ef5b73ac44b47afabcf1dfc0a55d0f48ea2c1313"
+    }
+  },
+  "caps": {
+    "controls": [
+      {
+        "count": 100000,
+        "accepted": true,
+        "bytes": 400008,
+        "sha256": "2605279e3b0128e95a55c181d0a80e902312f4e1ebd35b9804a89f52537d015d"
+      },
+      {
+        "count": 100001,
+        "accepted": false,
+        "bytes": 400012,
+        "sha256": "8505b1790e122771574cae66cf113bf98e47a6aa09a6582b35a06ea986dfa0f1"
+      }
+    ],
+    "packets": {
+      "category-cap.bin": {
+        "bytes": 800052,
+        "sha256": "0f6ced428ec138c5208e5ebcf66161dedaacf49a056fa1277abd2f2233234bfd"
+      }
+    }
+  },
+  "logs": {
+    "target/results-headers-resources-write.log": "bb5061740c44c12722c2e9b258167f102c87be44c11bc0408ac28fbf9de6d919",
+    "target/results-headers-resources-strict.log": "bfd7f81fea687018b026ac98f52d462cb55764d6c79c62641dcd3de0124be673",
+    "target/results-property-resource-native.log": "86b798685040dbf6e8bab1a3abce79c18c7fca777b2823a302523ccfe2b408ba",
+    "target/results-property-resource-clippy.log": "bb953c13f795b6f097e18732b3ac9ae7631d21b8eeff92ccdc45ba4ad3b4222b"
+  },
+  "exclusions": [
+    "Targeted malformed grammar outcomes",
+    "Changed unsigned/text values",
+    "Caller isolation",
+    "Mixed concurrency",
+    "Full local and exact-head platform/ThreadSanitizer gates",
+    "Native application opening and whole-format parity"
+  ]
+}
