@@ -1,8 +1,10 @@
 # Mesh Property interoperability (#163)
 
 This feature implements the complete documented study `Mesh/Property` stream
-from specification 14.378–14.381. The reference foundation precedes the Rust
-codec; no Mesh Property API is published at this stage.
+from specification 14.378–14.381. `SimulationMeshProperty` provides complete
+reading, field construction and isolated edits under an explicit version and
+caller budgets. Its initial functional checks pass; final acceptance work
+remains open.
 
 The retained reports cover the initial static layout (C-758), complete native
 replay and imported settings dispatch (C-759), populated nested direct records
@@ -71,8 +73,17 @@ The extended initialization and strict replay each passed all 32 checks.
 [Owned operation verification](owned-operations-verification.json) records the
 complete packet hashes, source snapshot, executed checks and remaining scope.
 
-The typed Rust codec, malformed/cap/resource checks, isolation, concurrency,
-two-process Rust export comparison and integration gates remain pending. Native writer symmetry,
+The initial 11 Rust checks pass, including three explicit native checks. They
+cover complete fields, typed construction, direct-record extents, all original
+native outcomes, ordered scalar-edit history, every-field no-ops, foreign/stale/
+bounds IDs and caller byte/field-vector isolation. All 16 public types satisfy
+`Send + Sync`. Two fresh processes export identical complete field and history
+packets for all 945 owned/native accepted contexts, exactly matching the
+independent source packets. [Initial runtime verification](runtime-verification.json)
+records hashes, executed checks and scope.
+
+Complete malformed/cap/resource checks, changed values of every supported kind,
+mixed concurrency and full local/platform gates remain pending. Native writer symmetry,
 application opening, physical meanings, geometry validation, universal runtime
 version selection and whole-format parity remain unproven.
 
