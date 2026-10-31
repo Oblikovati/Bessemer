@@ -44,6 +44,10 @@
     "tests/fixtures/simulation-mesh-control/records-hardcaps.bin": {
       "bytes": 9881216,
       "sha256": "c15de9881cacdeef99cb40e685fa7873d0c9cedf6299b5650aca04fc38840239"
+    },
+    "target/mesh-control-records-adversarial-clippy.log": {
+      "bytes": 135,
+      "sha256": "b9887d9d23653a826c18fdd26e84f5a9010003193feb5cf9e0251038f8fdca05"
     }
   },
   "build_cache_observation": "After a detached older-cut validation reused the pinned Cargo target, root integration tests linked a stale library without MeshControl exports. Cleaning package bessemer and rebuilding passed unchanged production sources.",
@@ -54,5 +58,8 @@
     "Native application/writer and geometry acceptance",
     "Whole-format schema parity"
   ],
-  "humanizer": "Unavailable; maintainer prose review pending"
+  "humanizer": "Unavailable; maintainer prose review pending",
+  "clippy_warnings": 0,
+  "clippy_exit_code": 0,
+  "clippy_process_reaped": true
 }
