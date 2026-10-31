@@ -5,11 +5,19 @@ Temperature, Convection, HeatFlux, HeatPower and Radiation collections. Their
 reference containers require an explicit Simulation embedded archive context.
 The ordinary part and assembly archive guards must retain their existing behavior.
 
-The [current acceptance ledger](acceptance.json) maps the feature requirements
+The [initial acceptance ledger](acceptance.json) maps the feature requirements
 to their evidence and records the code/test fingerprints. The focused corpus
 and independent replay passed. The full local gate passed 3,183 tests with zero
 failures; platform integration remains pending.
 Earlier verification files retain their original implementation-stage results.
+
+Bug [#137](https://github.com/Oblikovati/Bessemer/issues/137) exposed an additional
+wire-framing case after that initial gate. Two embedded CStrings can decode to
+the same text while retaining different prefix widths. Edit no-op checks now
+compare the complete requested embedded wire image, leaving semantic text
+equality unchanged. Both valid forms are independently replayed by the actual
+reference reader. Focused regressions check the framing change and an authentic
+byte-identical no-op. The fixed candidate requires a fresh full validation gate.
 
 ## Reference baseline
 

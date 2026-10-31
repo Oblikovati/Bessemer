@@ -15,7 +15,7 @@ from pinned_reference_tests import FrozenSourceImports, copy_sources, record_sna
 from native_carriers import recover_carriers, pinned_auxiliaries, digest, RESEARCH, SOURCE, ThermalCarrier
 from embedded_reference import verify_owned_embedded, verify_embedded_rejections
 from owned_components import owned_holders
-from owned_chains import owned_chain_cases
+from owned_chains import owned_chain_cases, tagged_component
 from owned_references import owned_reference_cases, nested_representation_bytes
 from native_embedded import detached_archive_packet, component_guard_rejections
 from registry_reference import declared_registry
@@ -341,6 +341,22 @@ def owned_nested_history_projection() -> None:
     baseline('thermal-owned-nested-history-reference.json', dict(cases=295, bytes=len(packet), sha256=digest(packet)))
 
 
+def embedded_string_framing_reference() -> None:
+    """Check both nonminimal CString forms with the actual full registry (#137); e.g. embedded_string_framing_reference()."""
+    from cosworks_binary_thermal_transform_audit import archive_reader
+    from swarchive import Archive
+    cases: list[dict[str, object]] = []
+    for body in (b'\x01x', b'\xff\x01\x00x'):
+        raw = (14000).to_bytes(4, 'little') + tagged_component('moCStringHandle_c', body)
+        end, details = archive_reader(raw, 0)
+        assert end == len(raw) and details['object_class'] == 'moCStringHandle_c'
+        text = Archive(raw, 14000, len(raw) - len(body))
+        assert text.cstring() == 'x' and text.p == len(raw)
+        cases.append(dict(bytes=len(raw), raw_hex=raw.hex(), sha256=digest(raw), archive=details))
+    assert [case['bytes'] for case in cases] == [29, 31]
+    baseline('framing-noop-reference.json', dict(issue=137, same_decoded_text=True, different_retained_wire=True, cases=cases))
+
+
 def run() -> bool:
     """Run actual unmodified modules from a consistent source copy; e.g. run()."""
     with tempfile.TemporaryDirectory(prefix='bessemer-binary-thermal-') as temporary:
@@ -350,7 +366,7 @@ def run() -> bool:
         sys.meta_path.insert(0, FrozenSourceImports(pin))
         sys.path.insert(0, str(pin / 'research'))
         replay = update_wrapper(partial(replay_candidates, pin), replay_candidates)
-        checks = (replay, source_evidence, owned_archives, verify_embedded_rejections, schema_evidence, owned_component_holders, owned_reference_chains, component_guard_rejections, owned_reference_families, representation_depth_boundary, complete_registry_evidence, owned_thermal_collections, owned_thermal_edits, owned_thermal_adversarial, owned_thermal_projection, owned_thermal_history_projection, owned_embedded_map_projection, owned_embedded_field_projection, owned_nested_history_projection)
+        checks = (replay, source_evidence, owned_archives, verify_embedded_rejections, schema_evidence, owned_component_holders, owned_reference_chains, component_guard_rejections, owned_reference_families, representation_depth_boundary, complete_registry_evidence, owned_thermal_collections, owned_thermal_edits, owned_thermal_adversarial, owned_thermal_projection, owned_thermal_history_projection, owned_embedded_map_projection, owned_embedded_field_projection, owned_nested_history_projection, embedded_string_framing_reference)
         suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
         result = unittest.TextTestRunner(verbosity=2).run(suite)
         readers = ('cosworks_binary_thermal_transform_audit', 'cosworks_binary_thermal_layout', 'cosworks_force_optional_audit', 'cfb', 'swcontainer')

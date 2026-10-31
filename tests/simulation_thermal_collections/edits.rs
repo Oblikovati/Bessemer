@@ -377,3 +377,25 @@ fn every_owned_thermal_context_supports_complete_scalar_edit_history() {
     }
     assert_eq!(count, 295);
 }
+
+#[test]
+fn embedded_text_prefix_width_changes_are_not_semantic_noops() {
+    let source = populated_collection();
+    let ordinal = role_index(&source, "record0.reference0.archive0");
+    let short = super::load_strings::framed_string_archive(false, LIMITS.embedded);
+    let extended = super::load_strings::framed_string_archive(true, LIMITS.embedded);
+    assert_eq!(short.fields(), extended.fields());
+    let prepared = replace_value(&source, ordinal, Value::Embedded(Box::new(short)));
+    let edit = replace_value(
+        prepared.archive(),
+        ordinal,
+        Value::Embedded(Box::new(extended.clone())),
+    );
+    super::load_strings::assert_wire_value(&edit.archive().fields()[ordinal].value, &extended);
+    assert_eq!(edit.coverage().completion, Completion::Changed);
+    assert_outer_history(&edit, ordinal, true);
+    assert_other_fields(&edit, ordinal);
+    let repeated = replace_value(edit.archive(), ordinal, Value::Embedded(Box::new(extended)));
+    assert_eq!(repeated.coverage().completion, Completion::Unchanged);
+    assert_eq!(repeated.result(), edit.result());
+}

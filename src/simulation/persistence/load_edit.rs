@@ -14,7 +14,7 @@ pub(super) fn replaced_field<S: BinaryLoadSnapshot>(
             format!("ordinal {ordinal}; expected < {}", source.fields().len()),
         )
     })?;
-    if original.value == *replacement {
+    if unchanged_value(source, ordinal, &original.value, replacement)? {
         return Ok(source.clone());
     }
     let mut fields = source.fields().to_vec();
@@ -28,6 +28,23 @@ pub(super) fn replaced_field<S: BinaryLoadSnapshot>(
     let result = reparse(fields)?;
     verify_preservation(source, &result, ordinal)?;
     Ok(result)
+}
+
+fn unchanged_value<S: BinaryLoadSnapshot>(
+    source: &S,
+    ordinal: usize,
+    original: &SimulationThermalValue,
+    replacement: &SimulationThermalValue,
+) -> Result<bool> {
+    if original != replacement {
+        return Ok(false);
+    }
+    let SimulationThermalValue::Embedded(archive) = replacement else {
+        return Ok(true);
+    };
+    // CString semantic equality omits retained prefix width; no-op edits must preserve requested wire bytes (#137).
+    let (start, end) = field_span(source, ordinal)?;
+    Ok(source.wire_bytes()[start..end] == archive.to_bytes()?)
 }
 
 pub(super) fn require_kind(

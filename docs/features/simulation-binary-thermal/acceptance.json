@@ -1,7 +1,7 @@
 {
   "issue": 134,
   "behavior_profile": "simulation-binary-thermal-v1",
-  "status": "Focused acceptance and full local PR gate passed; platform integration gate pending",
+  "status": "Historical initial acceptance before Bug #137; fixed candidate requires a fresh full local and platform gate",
   "revision": "55ad3b8c6a10db705ad33206309c9680fbf7b9ef",
   "platform": "Windows-11-10.0.26200-SP0",
   "code_and_test_sha256": {
@@ -130,5 +130,12 @@
     "Unknown physical units or runtime globals",
     "Geometry and topology validation",
     "Complete installed SolidWorks schema parity"
-  ]
+  ],
+  "post_gate_regression": {
+    "issue": 137,
+    "problem": "Semantic embedded-field equality omitted retained CString prefix width and could discard a requested framing change",
+    "fixed_candidate_status": "Focused regressions passed; full validation pending",
+    "released_behavior_migration_required": false,
+    "reason": "The unreleased v1 contract already requires exact requested wire patterns; semantic text equality remains unchanged"
+  }
 }

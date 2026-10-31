@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Fixed load edits that discarded embedded CString length-prefix changes as semantic no-ops. (#137)
+
 - Fixed the new compound allocator using the reserved range-lock sector for data or tables when growing version-4 files above 2 GB. (#110)
 
 - Fixed the new compound reader rejecting legal surplus stream capacity while preserving complete allocation ownership checks. (#109)
