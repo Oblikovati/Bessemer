@@ -23,8 +23,11 @@ for strict replay. `--write` initializes evidence for review. Generated native
 binary packets stay under `target/`; retained original reports include decoded
 native values/raw spans as provenance. No target code executes.
 
-Production operations, complete field/edit/history oracles, malformed/resource
-cases, ownership/concurrency and full local/platform gates remain pending.
+Production operations, malformed/resource cases, ownership/concurrency and
+full local/platform gates remain pending. Complete independent field and
+ordered outer/nested edit-history expectations are retained for all 32 owned
+profiles and 240 accepted native arguments. Fresh strict replay reproduces
+them unchanged; Rust parity with these expectations remains unproven.
 Nested SurfaceBody historical tails, sibling ComponentPersistID, whole storage
 trees, physical meanings, native writer/application and geometry acceptance are
 separate. In particular, complete inherited Property framing cannot resolve

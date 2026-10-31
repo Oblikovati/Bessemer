@@ -19,6 +19,7 @@ from freeze_solid_manager import verify_image
 from freeze_body import body_input, verify_model_bindings, verify_source_hash, verify_unimported_boundary
 from owned_sheet import owned_sheets
 from owned_sheet_embedded import sheet_embedded_literals
+from sheet_projection import sheet_projection, sheet_history
 
 
 def baseline(name: str, value: object) -> None:
@@ -44,31 +45,42 @@ def actual_sheet(raw: bytes, version: int) -> dict[str, object]:
     return cast(dict[str, object], parse(raw, version, archive_reader=archive_reader))
 
 
-def native_row(row: dict[str, object], streams: dict[str, bytes]) -> bytes:
+def native_row(row: dict[str, object], streams: dict[str, bytes]) -> tuple[bytes, bytes, bytes]:
     """Keep every original accepted and failed argument unchanged; e.g. native_row(row, streams)."""
     raw = streams[cast(str, row['stream'])]
     assert len(raw) == row['bytes'] and digest(raw) == row['sha256']
     packet = bytearray()
+    projected = bytearray()
+    history = bytearray()
     for expected in cast(list[dict[str, object]], row['attempts']):
         version = cast(int, expected['version'])
         parsed = actual_sheet(raw, version)
         assert dict(version=version, **parsed) == expected
         packet.extend(body_input(version, raw, parsed))
-    return bytes(packet)
+        if parsed['success']:
+            projected.extend(sheet_projection(version, raw, parsed))
+            history.extend(sheet_history(version, raw))
+    return bytes(packet), bytes(projected), bytes(history)
 
 
 def replay_native(pin: Path) -> None:
     """Recover all retained inherited-sheet streams independently; e.g. replay_native(pin)."""
     rows = cast(list[dict[str, object]], retained_report()['rows'])
     packet = bytearray()
+    projected = bytearray()
+    history = bytearray()
     for document in sorted({cast(str, row['path']) for row in rows}):
         streams = recover_sample(document, pin)
         for row in (row for row in rows if row['path'] == document):
-            packet.extend(native_row(row, streams))
+            inputs, fields, edits = native_row(row, streams)
+            packet.extend(inputs)
+            projected.extend(fields)
+            history.extend(edits)
     attempts = [item for row in rows for item in cast(list[dict[str, object]], row['attempts'])]
     assert len(rows) == 238 and sum(cast(int, row['bytes']) for row in rows) == 186372
     assert len(attempts) == 243 and sum(cast(bool, item['success']) for item in attempts) == 240
     (ROOT / 'target/simulation-sheet-property-native.bin').write_bytes(packet)
+    save_native_oracles(bytes(projected), bytes(history))
     baseline('native-reference.json', dict(streams=238, logical_bytes=186372, arguments=243,
              accepted=240, failed=3, bytes=len(packet), sha256=digest(packet)))
 
@@ -76,18 +88,39 @@ def replay_native(pin: Path) -> None:
 def replay_owned() -> None:
     """Check independent raw/historical literals with the unchanged reader; e.g. replay_owned()."""
     packet = bytearray()
+    projected = bytearray()
+    history = bytearray()
     cases = owned_sheets()
     for _, version, raw in cases:
         parsed = actual_sheet(raw, version)
         assert parsed['success'] and parsed['end'] == len(raw), (version, parsed)
         assert parsed['reconstruction_sha256'] == digest(raw)
         packet.extend(body_input(version, raw, parsed))
-    path = ROOT / 'tests/fixtures/simulation-sheet-property/owned.bin'
+        projected.extend(sheet_projection(version, raw, parsed))
+        history.extend(sheet_history(version, raw))
+    save_owned_packet('owned', bytes(packet), len(cases))
+    save_owned_packet('projection', bytes(projected), len(cases))
+    save_owned_packet('history', bytes(history), len(cases))
+
+
+def save_native_oracles(projected: bytes, history: bytes) -> None:
+    """Keep full native field and outer/nested history packets separate from input outcomes; e.g. save_native_oracles(fields, edits)."""
+    records: dict[str, object] = {}
+    for name, packet in (('projection', projected), ('history', history)):
+        (ROOT / f'target/simulation-sheet-property-native-{name}.bin').write_bytes(packet)
+        records[name] = dict(cases=240, bytes=len(packet), sha256=digest(packet))
+    baseline('native-oracle-reference.json', records)
+
+
+def save_owned_packet(name: str, packet: bytes, count: int) -> None:
+    """Retain complete immutable independent packets; e.g. save_owned_packet('history', packet, 32)."""
+    path = ROOT / f'tests/fixtures/simulation-sheet-property/{name}.bin'
     if '--write' in sys.argv:
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(packet)
     assert path.read_bytes() == packet
-    baseline('owned-reference.json', dict(cases=len(cases), bytes=len(packet), sha256=digest(packet)))
+    metadata = 'owned-reference.json' if name == 'owned' else f'owned-{name}-reference.json'
+    baseline(metadata, dict(cases=count, bytes=len(packet), sha256=digest(packet)))
 
 
 def verify_owned_embedded() -> None:

@@ -44,5 +44,12 @@
     "Production operations and complete field/history oracles",
     "Native target/writer/application and geometric acceptance"
   ],
-  "humanizer": "Unavailable; maintainer prose review pending"
+  "humanizer": "Unavailable; maintainer prose review pending",
+  "complete_oracles": {
+    "native": "native-oracle-reference.json",
+    "owned_fields": "owned-projection-reference.json",
+    "owned_history": "owned-history-reference.json",
+    "scope": "Complete independent expectations only; Rust operation parity remains pending"
+  },
+  "oracle_strict_log_sha256": "5e23b63a1b393b4c09af968cc37e029ab3e471b454c5f507e73361736ed29dd2"
 }
