@@ -1,0 +1,773 @@
+{
+  "evidence": "C-867",
+  "synthetic_result": {
+    "success": true,
+    "end": 374,
+    "spans": [
+      {
+        "label": "style.legacy_raw",
+        "offset": 6,
+        "end": 374,
+        "raw_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f404142434445464748494a4b4c4d4e4f505152535455565758595a5b5c5d5e5f606162636465666768696a6b6c6d6e6f707172737475767778797a7b7c7d7e7f808182838485868788898a8b8c8d8e8f909192939495969798999a9b9c9d9e9fa0a1a2a3a4a5a6a7a8a9aaabacadaeafb0b1b2b3b4b5b6b7b8b9babbbcbdbebfc0c1c2c3c4c5c6c7c8c9cacbcccdcecfd0d1d2d3d4d5d6d7d8d9dadbdcdddedfe0e1e2e3e4e5e6e7e8e9eaebecedeeeff0f1f2f3f4f5f6f7f8f9fafbfcfdfeff000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f404142434445464748494a4b4c4d4e4f505152535455565758595a5b5c5d5e5f606162636465666768696a6b6c6d6e6f"
+      }
+    ],
+    "reconstruction_sha256": "53941da41b2abae36f8d5fbe4674e77e9c7a05b20254d8c6d78829f2d2372ce4",
+    "legacy_view": {
+      "schema": "pre700006_poststyle_v7",
+      "base_offset": 6,
+      "end": 374,
+      "spans": [
+        {
+          "label": "v7.prefix.word_0",
+          "offset": 6,
+          "end": 10,
+          "raw_hex": "00010203",
+          "purpose": null,
+          "current_object_member": null
+        },
+        {
+          "label": "v7.prefix.word_4",
+          "offset": 10,
+          "end": 14,
+          "raw_hex": "04050607",
+          "purpose": null,
+          "current_object_member": null
+        },
+        {
+          "label": "v7.prefix.word_8",
+          "offset": 14,
+          "end": 18,
+          "raw_hex": "08090a0b",
+          "purpose": null,
+          "current_object_member": null
+        },
+        {
+          "label": "v7.prefix.word_c",
+          "offset": 18,
+          "end": 22,
+          "raw_hex": "0c0d0e0f",
+          "purpose": null,
+          "current_object_member": null
+        },
+        {
+          "label": "v7.prefix.word_10",
+          "offset": 22,
+          "end": 26,
+          "raw_hex": "10111213",
+          "purpose": null,
+          "current_object_member": null
+        },
+        {
+          "label": "v7.prefix.color_14",
+          "offset": 26,
+          "end": 42,
+          "purpose": null,
+          "raw_hex": "1415161718191a1b1c1d1e1f20212223",
+          "channels": {
+            "red": {
+              "offset": 0,
+              "raw_hex": "14151617",
+              "finite_value": 4.849421835080754e-25
+            },
+            "green": {
+              "offset": 4,
+              "raw_hex": "18191a1b",
+              "finite_value": 1.274668966124485e-22
+            },
+            "blue": {
+              "offset": 8,
+              "raw_hex": "1c1d1e1f",
+              "finite_value": 3.34818801271884e-20
+            },
+            "alpha": {
+              "offset": 12,
+              "raw_hex": "20212223",
+              "finite_value": 8.789052088727036e-18
+            }
+          },
+          "current_object_member": null
+        },
+        {
+          "label": "v7.prefix.color_24",
+          "offset": 42,
+          "end": 58,
+          "purpose": null,
+          "raw_hex": "2425262728292a2b2c2d2e2f30313233",
+          "channels": {
+            "red": {
+              "offset": 0,
+              "raw_hex": "24252627",
+              "finite_value": 2.3057261734128233e-15
+            },
+            "green": {
+              "offset": 4,
+              "raw_hex": "28292a2b",
+              "finite_value": 6.045324831005505e-13
+            },
+            "blue": {
+              "offset": 8,
+              "raw_hex": "2c2d2e2f",
+              "finite_value": 1.5841256084669908e-10
+            },
+            "alpha": {
+              "offset": 12,
+              "raw_hex": "30313233",
+              "finite_value": 4.148859034103225e-08
+            }
+          },
+          "current_object_member": null
+        },
+        {
+          "label": "v7.prefix.color_34",
+          "offset": 58,
+          "end": 74,
+          "purpose": null,
+          "raw_hex": "3435363738393a3b3c3d3e3f40414243",
+          "channels": {
+            "red": {
+              "offset": 0,
+              "raw_hex": "34353637",
+              "finite_value": 1.0860432666959241e-05
+            },
+            "green": {
+              "offset": 4,
+              "raw_hex": "38393a3b",
+              "finite_value": 0.002841545268893242
+            },
+            "blue": {
+              "offset": 8,
+              "raw_hex": "3c3d3e3f",
+              "finite_value": 0.743121862411499
+            },
+            "alpha": {
+              "offset": 12,
+              "raw_hex": "40414243",
+              "finite_value": 194.2548828125
+            }
+          },
+          "current_object_member": null
+        },
+        {
+          "label": "v7.prefix.color_44",
+          "offset": 74,
+          "end": 90,
+          "purpose": null,
+          "raw_hex": "4445464748494a4b4c4d4e4f50515253",
+          "channels": {
+            "red": {
+              "offset": 0,
+              "raw_hex": "44454647",
+              "finite_value": 50757.265625
+            },
+            "green": {
+              "offset": 4,
+              "raw_hex": "48494a4b",
+              "finite_value": 13257032.0
+            },
+            "blue": {
+              "offset": 8,
+              "raw_hex": "4c4d4e4f",
+              "finite_value": 3461172224.0
+            },
+            "alpha": {
+              "offset": 12,
+              "raw_hex": "50515253",
+              "finite_value": 903307329536.0
+            }
+          },
+          "current_object_member": null
+        },
+        {
+          "label": "v7.prefix.color_54",
+          "offset": 90,
+          "end": 106,
+          "purpose": null,
+          "raw_hex": "5455565758595a5b5c5d5e5f60616263",
+          "channels": {
+            "red": {
+              "offset": 0,
+              "raw_hex": "54555657",
+              "finite_value": 235661969850368.0
+            },
+            "green": {
+              "offset": 4,
+              "raw_hex": "58595a5b",
+              "finite_value": 6.145977941491712e+16
+            },
+            "blue": {
+              "offset": 8,
+              "raw_hex": "5c5d5e5f",
+              "finite_value": 1.6023064204323848e+19
+            },
+            "alpha": {
+              "offset": 12,
+              "raw_hex": "60616263",
+              "finite_value": 4.175980768877802e+21
+            }
+          },
+          "current_object_member": null
+        },
+        {
+          "label": "v7.prefix.color_64",
+          "offset": 106,
+          "end": 122,
+          "purpose": null,
+          "raw_hex": "6465666768696a6b6c6d6e6f70717273",
+          "channels": {
+            "red": {
+              "offset": 0,
+              "raw_hex": "64656667",
+              "finite_value": 1.0880146179708669e+24
+            },
+            "green": {
+              "offset": 4,
+              "raw_hex": "68696a6b",
+              "finite_value": 2.833864087319082e+26
+            },
+            "blue": {
+              "offset": 8,
+              "raw_hex": "6c6d6e6f",
+              "finite_value": 7.378971526739827e+28
+            },
+            "alpha": {
+              "offset": 12,
+              "raw_hex": "70717273",
+              "finite_value": 1.9208322534253579e+31
+            }
+          },
+          "current_object_member": null
+        },
+        {
+          "label": "v7.prefix.color_74",
+          "offset": 122,
+          "end": 138,
+          "purpose": null,
+          "raw_hex": "7475767778797a7b7c7d7e7f80818283",
+          "channels": {
+            "red": {
+              "offset": 0,
+              "raw_hex": "74757677",
+              "finite_value": 4.998778357773619e+33
+            },
+            "green": {
+              "offset": 4,
+              "raw_hex": "78797a7b",
+              "finite_value": 1.3005378935752505e+36
+            },
+            "blue": {
+              "offset": 8,
+              "raw_hex": "7c7d7e7f",
+              "finite_value": 3.3827546305547634e+38
+            },
+            "alpha": {
+              "offset": 12,
+              "raw_hex": "80818283",
+              "finite_value": -7.670445022226018e-37
+            }
+          },
+          "current_object_member": null
+        },
+        {
+          "label": "v7.prefix.word_84",
+          "offset": 138,
+          "end": 142,
+          "raw_hex": "84858687",
+          "purpose": null,
+          "current_object_member": null
+        },
+        {
+          "label": "v7.prefix.word_88",
+          "offset": 142,
+          "end": 146,
+          "raw_hex": "88898a8b",
+          "purpose": null,
+          "current_object_member": null
+        },
+        {
+          "label": "v7.prefix.word_8c",
+          "offset": 146,
+          "end": 150,
+          "raw_hex": "8c8d8e8f",
+          "purpose": null,
+          "current_object_member": null
+        },
+        {
+          "label": "v7.prefix.word_90",
+          "offset": 150,
+          "end": 154,
+          "raw_hex": "90919293",
+          "purpose": null,
+          "current_object_member": null
+        },
+        {
+          "label": "v7.prefix.word_94",
+          "offset": 154,
+          "end": 158,
+          "raw_hex": "94959697",
+          "purpose": null,
+          "current_object_member": null
+        },
+        {
+          "label": "v7.prefix.word_98",
+          "offset": 158,
+          "end": 162,
+          "raw_hex": "98999a9b",
+          "purpose": null,
+          "current_object_member": null
+        },
+        {
+          "label": "v7.prefix.word_9c",
+          "offset": 162,
+          "end": 166,
+          "raw_hex": "9c9d9e9f",
+          "purpose": null,
+          "current_object_member": null
+        },
+        {
+          "label": "v7.prefix.word_a0",
+          "offset": 166,
+          "end": 170,
+          "raw_hex": "a0a1a2a3",
+          "purpose": null,
+          "current_object_member": null
+        },
+        {
+          "label": "v7.prefix.word_a4",
+          "offset": 170,
+          "end": 174,
+          "raw_hex": "a4a5a6a7",
+          "purpose": null,
+          "current_object_member": null
+        },
+        {
+          "label": "v7.legend.word_0",
+          "offset": 174,
+          "end": 178,
+          "raw_hex": "a8a9aaab",
+          "current_object_member": "0x8",
+          "purpose": null
+        },
+        {
+          "label": "v7.legend.word_4",
+          "offset": 178,
+          "end": 182,
+          "raw_hex": "acadaeaf",
+          "current_object_member": "0xc",
+          "purpose": null
+        },
+        {
+          "label": "v7.legend.word_8",
+          "offset": 182,
+          "end": 186,
+          "raw_hex": "b0b1b2b3",
+          "current_object_member": "0x10",
+          "purpose": null
+        },
+        {
+          "label": "v7.legend.word_c",
+          "offset": 186,
+          "end": 190,
+          "raw_hex": "b4b5b6b7",
+          "current_object_member": "0x14",
+          "purpose": null
+        },
+        {
+          "label": "v7.legend.color_10",
+          "offset": 190,
+          "end": 206,
+          "raw_hex": "b8b9babbbcbdbebfc0c1c2c3c4c5c6c7",
+          "current_object_member": "0x18",
+          "purpose": null,
+          "channels": {
+            "red": {
+              "offset": 0,
+              "raw_hex": "b8b9babb",
+              "finite_value": -0.005698408931493759
+            },
+            "green": {
+              "offset": 4,
+              "raw_hex": "bcbdbebf",
+              "finite_value": -1.4901652336120605
+            },
+            "blue": {
+              "offset": 8,
+              "raw_hex": "c0c1c2c3",
+              "finite_value": -389.513671875
+            },
+            "alpha": {
+              "offset": 12,
+              "raw_hex": "c4c5c6c7",
+              "finite_value": -101771.53125
+            }
+          }
+        },
+        {
+          "label": "v7.legend.color_20",
+          "offset": 206,
+          "end": 222,
+          "raw_hex": "c8c9cacbcccdcecfd0d1d2d3d4d5d6d7",
+          "current_object_member": "0x28",
+          "purpose": null,
+          "channels": {
+            "red": {
+              "offset": 0,
+              "raw_hex": "c8c9cacb",
+              "finite_value": -26579856.0
+            },
+            "green": {
+              "offset": 4,
+              "raw_hex": "cccdcecf",
+              "finite_value": -6939187200.0
+            },
+            "blue": {
+              "offset": 8,
+              "raw_hex": "d0d1d2d3",
+              "finite_value": -1810926403584.0
+            },
+            "alpha": {
+              "offset": 12,
+              "raw_hex": "d4d5d6d7",
+              "finite_value": -472427746295808.0
+            }
+          }
+        },
+        {
+          "label": "v7.legend.color_30",
+          "offset": 222,
+          "end": 238,
+          "raw_hex": "d8d9dadbdcdddedfe0e1e2e3e4e5e6e7",
+          "current_object_member": "0x38",
+          "purpose": null,
+          "channels": {
+            "red": {
+              "offset": 0,
+              "raw_hex": "d8d9dadb",
+              "finite_value": -1.2320213331817267e+17
+            },
+            "green": {
+              "offset": 4,
+              "raw_hex": "dcdddedf",
+              "finite_value": -3.2118467477662335e+19
+            },
+            "blue": {
+              "offset": 8,
+              "raw_hex": "e0e1e2e3",
+              "finite_value": -8.370480339423351e+21
+            },
+            "alpha": {
+              "offset": 12,
+              "raw_hex": "e4e5e6e7",
+              "finite_value": -2.180770049168677e+24
+            }
+          }
+        },
+        {
+          "label": "v7.legend.color_40",
+          "offset": 238,
+          "end": 254,
+          "raw_hex": "e8e9eaebecedeeeff0f1f2f3f4f5f6f7",
+          "current_object_member": "0x48",
+          "purpose": null,
+          "channels": {
+            "red": {
+              "offset": 0,
+              "raw_hex": "e8e9eaeb",
+              "finite_value": -5.679864656499139e+26
+            },
+            "green": {
+              "offset": 4,
+              "raw_hex": "ecedeeef",
+              "finite_value": -1.478901244704375e+29
+            },
+            "blue": {
+              "offset": 8,
+              "raw_hex": "f0f1f2f3",
+              "finite_value": -3.8496182716031243e+31
+            },
+            "alpha": {
+              "offset": 12,
+              "raw_hex": "f4f5f6f7",
+              "finite_value": -1.0017918353313404e+34
+            }
+          }
+        },
+        {
+          "label": "v7.legend.color_50",
+          "offset": 254,
+          "end": 270,
+          "raw_hex": "f8f9fafbfcfdfeff0001020304050607",
+          "current_object_member": "0x58",
+          "purpose": null,
+          "channels": {
+            "red": {
+              "offset": 0,
+              "raw_hex": "f8f9fafb",
+              "finite_value": -2.6062883664186394e+36
+            },
+            "green": {
+              "offset": 4,
+              "raw_hex": "fcfdfeff",
+              "finite_value": null
+            },
+            "blue": {
+              "offset": 8,
+              "raw_hex": "00010203",
+              "finite_value": 3.820471434542632e-37
+            },
+            "alpha": {
+              "offset": 12,
+              "raw_hex": "04050607",
+              "finite_value": 1.0082513512365273e-34
+            }
+          }
+        },
+        {
+          "label": "v7.legend.color_60",
+          "offset": 270,
+          "end": 286,
+          "raw_hex": "08090a0b0c0d0e0f1011121314151617",
+          "current_object_member": "0x68",
+          "purpose": null,
+          "channels": {
+            "red": {
+              "offset": 0,
+              "raw_hex": "08090a0b",
+              "finite_value": 2.658462758989161e-32
+            },
+            "green": {
+              "offset": 4,
+              "raw_hex": "0c0d0e0f",
+              "finite_value": 7.003653270560797e-30
+            },
+            "blue": {
+              "offset": 8,
+              "raw_hex": "10111213",
+              "finite_value": 1.843620320795992e-27
+            },
+            "alpha": {
+              "offset": 12,
+              "raw_hex": "14151617",
+              "finite_value": 4.849421835080754e-25
+            }
+          }
+        },
+        {
+          "label": "v7.legend.color_70",
+          "offset": 286,
+          "end": 302,
+          "raw_hex": "18191a1b1c1d1e1f2021222324252627",
+          "current_object_member": "0x78",
+          "purpose": null,
+          "channels": {
+            "red": {
+              "offset": 0,
+              "raw_hex": "18191a1b",
+              "finite_value": 1.274668966124485e-22
+            },
+            "green": {
+              "offset": 4,
+              "raw_hex": "1c1d1e1f",
+              "finite_value": 3.34818801271884e-20
+            },
+            "blue": {
+              "offset": 8,
+              "raw_hex": "20212223",
+              "finite_value": 8.789052088727036e-18
+            },
+            "alpha": {
+              "offset": 12,
+              "raw_hex": "24252627",
+              "finite_value": 2.3057261734128233e-15
+            }
+          }
+        },
+        {
+          "label": "v7.legend.color_80",
+          "offset": 302,
+          "end": 318,
+          "raw_hex": "28292a2b2c2d2e2f3031323334353637",
+          "current_object_member": "0x88",
+          "purpose": null,
+          "channels": {
+            "red": {
+              "offset": 0,
+              "raw_hex": "28292a2b",
+              "finite_value": 6.045324831005505e-13
+            },
+            "green": {
+              "offset": 4,
+              "raw_hex": "2c2d2e2f",
+              "finite_value": 1.5841256084669908e-10
+            },
+            "blue": {
+              "offset": 8,
+              "raw_hex": "30313233",
+              "finite_value": 4.148859034103225e-08
+            },
+            "alpha": {
+              "offset": 12,
+              "raw_hex": "34353637",
+              "finite_value": 1.0860432666959241e-05
+            }
+          }
+        },
+        {
+          "label": "v7.legend.color_90",
+          "offset": 318,
+          "end": 334,
+          "raw_hex": "38393a3b3c3d3e3f4041424344454647",
+          "current_object_member": "0x98",
+          "purpose": null,
+          "channels": {
+            "red": {
+              "offset": 0,
+              "raw_hex": "38393a3b",
+              "finite_value": 0.002841545268893242
+            },
+            "green": {
+              "offset": 4,
+              "raw_hex": "3c3d3e3f",
+              "finite_value": 0.743121862411499
+            },
+            "blue": {
+              "offset": 8,
+              "raw_hex": "40414243",
+              "finite_value": 194.2548828125
+            },
+            "alpha": {
+              "offset": 12,
+              "raw_hex": "44454647",
+              "finite_value": 50757.265625
+            }
+          }
+        },
+        {
+          "label": "v7.legend.word_a0",
+          "offset": 334,
+          "end": 338,
+          "raw_hex": "48494a4b",
+          "current_object_member": "0xa8",
+          "purpose": null
+        },
+        {
+          "label": "v7.style.word_14c",
+          "offset": 338,
+          "end": 342,
+          "raw_hex": "4c4d4e4f",
+          "current_object_member": "0x1b8",
+          "purpose": null
+        },
+        {
+          "label": "v7.style.color_150",
+          "offset": 342,
+          "end": 358,
+          "raw_hex": "505152535455565758595a5b5c5d5e5f",
+          "current_object_member": "0x1bc",
+          "purpose": null,
+          "channels": {
+            "red": {
+              "offset": 0,
+              "raw_hex": "50515253",
+              "finite_value": 903307329536.0
+            },
+            "green": {
+              "offset": 4,
+              "raw_hex": "54555657",
+              "finite_value": 235661969850368.0
+            },
+            "blue": {
+              "offset": 8,
+              "raw_hex": "58595a5b",
+              "finite_value": 6.145977941491712e+16
+            },
+            "alpha": {
+              "offset": 12,
+              "raw_hex": "5c5d5e5f",
+              "finite_value": 1.6023064204323848e+19
+            }
+          }
+        },
+        {
+          "label": "v7.style.color_160",
+          "offset": 358,
+          "end": 374,
+          "raw_hex": "606162636465666768696a6b6c6d6e6f",
+          "current_object_member": "0x1dc",
+          "purpose": null,
+          "channels": {
+            "red": {
+              "offset": 0,
+              "raw_hex": "60616263",
+              "finite_value": 4.175980768877802e+21
+            },
+            "green": {
+              "offset": 4,
+              "raw_hex": "64656667",
+              "finite_value": 1.0880146179708669e+24
+            },
+            "blue": {
+              "offset": 8,
+              "raw_hex": "68696a6b",
+              "finite_value": 2.833864087319082e+26
+            },
+            "alpha": {
+              "offset": 12,
+              "raw_hex": "6c6d6e6f",
+              "finite_value": 7.378971526739827e+28
+            }
+          }
+        }
+      ],
+      "reconstruction_sha256": "53941da41b2abae36f8d5fbe4674e77e9c7a05b20254d8c6d78829f2d2372ce4",
+      "color_records": 18,
+      "raw_word_bytes": 80,
+      "purpose_completeness": "partial"
+    }
+  },
+  "repeated_native_summary": {
+    "DspPostStyle": {
+      "streams": 60,
+      "bytes": 17040,
+      "helper_complete": 52,
+      "caller_compatible_complete": 52,
+      "caller_compatible_bytes": 14768,
+      "rgba_records_first_success": 676,
+      "consumed_bytes_first_success": 14768,
+      "scope": "strict_eof"
+    },
+    "cwPostDlgParam": {
+      "streams": 224,
+      "bytes": 496979,
+      "helper_complete": 224,
+      "caller_compatible_complete": 224,
+      "caller_compatible_bytes": 496979,
+      "rgba_records_first_success": 4160,
+      "consumed_bytes_first_success": 274442,
+      "scope": "prefix_only"
+    }
+  },
+  "tests": {
+    "run": 3,
+    "output": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.001s\n\nOK\n"
+  },
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_post_v7_composed_view_audit.py": "c2a55e2c42fc74ceb01c3f4a73bbf9f5609adeb9c1484bf8829b34e035777de4",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-post-color-fields-native-evidence.json": "12a07b5b61debc27b8f104d843e9c0a6d13a80fb2fc256362b01a3af4ce15164",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_post_style_layout.py": "3bbb7feb95bc490dc8d3c80365a1cae41b3cdccb8013b48ce5f8158a91982145",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_post_v7_composed_view.py": "96e436c0fca42eba44295e098c19bc375ca06521260fbafbf0eea11ec1426cfc",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_post_v7_layout.py": "796932359d321662d260dd3d1ffca3b828215cf81020b611eaeb2d19839a32a7",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_post_v7_prefix.py": "6125f6de0d03ac13ac466119635b7acc271629cdc26c572bfcfdb08c404d1ad9",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_post_color_fields.py": "b6728e09a029d027ac01eb73c1cb557c063d5a20c75f4e9c16ae3aea11d9f7e8",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\test_cosworks_post_v7_composed_view.py": "138b77ffac51abbb79370d2ec1a5cdd4c7483fe61b653f32b3591aedefcb0f02",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-post-v7-layout-evidence.json": "6178cfa6a2ff19f76e565820fd8a4bf11ea37a1b17c19f8de2e6be669e3fcda0",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-post-v7-prefix-evidence.json": "cb9e2341ca16e5a830bb0f472466e826a81ff6ef0a0e2e956fdf185821c8b9f1"
+  },
+  "target_executed": false,
+  "coverage_credit": 0,
+  "limitations": [
+    "Synthetic integrated legacy record only; no new historical native fixture",
+    "Raw outer span and detailed view overlap intentionally; never sum both as byte coverage",
+    "Current member mapping is annotation, not runtime object conversion",
+    "All prior modern native prefix/EOF and retained-version limitations remain"
+  ]
+}
