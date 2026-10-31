@@ -50,11 +50,19 @@ fn scalar_block(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
 }
 
 pub(super) fn references(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
-    let count = reader.count(&format!("{label}.references.count"), 10000, 1)?;
+    reference_container(reader, &format!("{label}.references"), label)
+}
+
+pub(super) fn reference_container(
+    reader: &mut BinaryLoadReader<'_>,
+    container: &str,
+    references: &str,
+) -> Result<()> {
+    let count = reader.count(&format!("{container}.count"), 10000, 1)?;
     for index in 0..count {
-        reference(reader, &format!("{label}.reference{index}"))?;
+        reference(reader, &format!("{references}.reference{index}"))?;
     }
-    reader.words(&format!("{label}.references.tail"), 2)
+    reader.words(&format!("{container}.tail"), 2)
 }
 
 fn reference(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {

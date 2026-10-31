@@ -1,0 +1,28 @@
+{
+  "issue": 144,
+  "change": "Separate reference-container and reference-occurrence path roots without changing existing caller paths or wire bytes",
+  "focused_beam_tests": 20,
+  "failed": 0,
+  "clippy": "passed -D warnings",
+  "complete_before_after_exports": {
+    "projection": {
+      "bytes": 585542,
+      "sha256": "9c53b5a139a4b94da76853a245077a5b37f798ab53c39b1135ce35ef47363a0e",
+      "unchanged": true,
+      "independent_source_match": true
+    },
+    "history": {
+      "bytes": 872118,
+      "sha256": "c44204fe09ea8aa74e5a517678fdcfe3ac631a8a4fb5efb9486ab9d02bcef98c",
+      "unchanged": true,
+      "independent_source_match": true
+    },
+    "nested-history": {
+      "bytes": 914346,
+      "sha256": "c03569d66cd7ba24b03e14cf9aa619ff35158cfd5c7ba1c76ebe7a16b2f98c4f",
+      "unchanged": true,
+      "independent_source_match": true
+    }
+  },
+  "total_bytes": 2372006
+}
