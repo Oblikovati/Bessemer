@@ -1,0 +1,54 @@
+{
+  "feature_issue": 165,
+  "implementation_parent": "53bc32a80b3dc74d63cf468c454bdead103486ee",
+  "behavior_profile": 1,
+  "focused_including_native": 18,
+  "strict_reference_checks": 15,
+  "owned_contexts": 270,
+  "native_accepted_arguments": 224,
+  "all_exit_codes": 0,
+  "all_processes_reaped": true,
+  "clippy_warnings": 0,
+  "compile_time_send_sync_types": 16,
+  "changed_value_counts": {
+    "signed": 12720,
+    "raw64": 4260,
+    "text": 4410
+  },
+  "changed_edits": 21390,
+  "concurrent_workers": 8,
+  "concurrent_operations": 175440,
+  "malformed_cases": 8820,
+  "malformed_accepted": 420,
+  "malformed_rejected": 8400,
+  "proper_prefixes": 90630,
+  "appended_bytes": 270,
+  "exports": {
+    "fields": {
+      "bytes": 1637647,
+      "sha256": "b4504fa492c7cfa7310de171e8508d84de0ecb5416a8ed67d3b1dfdb2ac5c996",
+      "fresh_processes": 2,
+      "complete_source_match": true
+    },
+    "history": {
+      "bytes": 2513677,
+      "sha256": "b0b836243c52ae1a7dc5e035eb40e84af8364e4800a1a7be2167847624f2cec5",
+      "fresh_processes": 2,
+      "complete_source_match": true
+    }
+  },
+  "source_snapshot_identity": "acc0bbcaf06b9236d3820833e6a060cd2d4680b215861d2a4097fd4530699143",
+  "logs": {
+    "target/post-graph-runtime-source-strict.log": "e21b2438cee0484d72189385db6675bbaa266372199aec4a90ca6f0e17513662",
+    "target/post-graph-first-export.log": "1fb9ac0d61c6ff58c4c7b8c6d19860bf23da9997903355f6afa2be44811ed6ba",
+    "target/post-graph-second-export.log": "6a5eab6dbd99b9cd3428c71ab97fae4f8a2bf5adad9b94a511e9c6117f3bf893",
+    "target/post-graph-final-clippy.log": "00717a544e6a115b3200e774b127e6e15bce5311e63e7b0b1eb72685d4e75b11"
+  },
+  "exclusions": [
+    "Full local gate",
+    "Exact-head platform integration and ThreadSanitizer",
+    "Native application opening",
+    "Native clamp/short-read emulation and historical writer symmetry",
+    "Business meanings, geometry validation and whole-format parity"
+  ]
+}

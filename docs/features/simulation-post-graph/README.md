@@ -64,10 +64,32 @@ the 90,630 owned proper prefixes and all 270 appended-byte cases rejects.
 records packet identities, full-outcome hashes, source identity and log hashes.
 These are independent expected results for the forthcoming Rust acceptance.
 
-Complete typed read/construction/edit operations, isolation, concurrency,
-two-process Rust exports and local/platform
-acceptance remain pending. No graph API or partial decoder is published by this
-reference foundation.
+`SimulationPostGraphParameters` now reads and constructs complete bodies under
+an explicit version. `SimulationPostGraphText` retains bounded raw UTF-16 code
+units as one character-count frame. Signed words, unassigned `Raw64` patterns
+and text remain distinct public value types, even when a raw pattern could
+encode a valid text frame. Isolated edits preserve complete source/replacement
+parents, all unaffected fields, shifted offsets and ordered occurrence history.
+
+All 18 focused Rust checks pass, including three native checks. Reading and
+construction pass exact byte, field, aggregate-character and per-text payload
+budgets and fail one below every positive requirement. Fully supplied cap
+controls, all 8,820 actual malformed outcomes, all 90,630 proper prefixes and
+270 appended-byte cases match the source profile. All owned fields pass no-op
+identity checks; foreign, stale, bounds and wrong-type requests reject.
+
+Changed-value checks cover 21,390 edits: 12,720 signed words, 4,260 raw eight-byte
+patterns and 4,410 character-text frames. Caller buffers, field vectors and text
+payloads remain isolated after success and failure. Eight workers execute
+175,440 mixed operations, matching complete serial bytes, fields, offsets and
+coverage while checking each edit's ordered parents. All sixteen public contract
+types satisfy `Send` and `Sync`; Clippy passes with warnings denied.
+
+Two fresh Rust processes exported identical complete owned/native fields
+(1,637,647 bytes) and history (2,513,677 bytes), each matching the independent
+source packets byte for byte. [Runtime verification](runtime-verification.json)
+records their exact hashes, final logs and exclusions. Full local/platform and
+ThreadSanitizer acceptance remain pending.
 
 Native application opening, short-read/clamp emulation, chart business meanings,
 historical writer equivalence, dialog and auxiliary streams, geometry validation
