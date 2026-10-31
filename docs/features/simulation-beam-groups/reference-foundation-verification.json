@@ -1,0 +1,34 @@
+{
+  "issue": 144,
+  "status": "Reference foundation only; production operations and acceptance remain pending",
+  "native": {
+    "streams": 414,
+    "attempts": 414,
+    "bytes": 84600,
+    "sha256": "4f1e52c9920378860dbbc0c4178eb97d95c94422ed37bd73650e35284c49e9c8",
+    "native_folders": 0
+  },
+  "native_logical_bytes": 50872,
+  "owned": {
+    "cases": 560,
+    "bytes": 79400,
+    "sha256": "b102a0fb5d2bacf2dcf78a9fd212ece231cefaf0f3b760f9d75dc2ea8adc98a8"
+  },
+  "strict_checks": 8,
+  "failed": 0,
+  "checks": [
+    "Fresh approved Document/CFB extraction with complete envelope/nested hashes",
+    "All 414 retained candidate outcomes, complete original spans and semantic summary details",
+    "All original sources/decompilations and installed function/threshold/literal bytes",
+    "All 560 independent literal bodies across four kinds and historical gates",
+    "Original four actual Source tests, including inclusive Joint reference transition and expected JointList count mismatch",
+    "Immutable Source imports and unchanged copy snapshot"
+  ],
+  "exclusions": [
+    "Native BeamFolder fixtures (none retained)",
+    "Production read/construction/edit API",
+    "Independent full field/edit/history and malformed/resource/concurrency corpora",
+    "Local/platform gates",
+    "Runtime adjacency/lookup/order/repair, geometry, native application/writer acceptance"
+  ]
+}
