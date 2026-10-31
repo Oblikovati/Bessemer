@@ -63,7 +63,9 @@ See [combined verification](interop-verification.json), the earlier
 Run `python -B -X utf8 docs/features/simulation-shell-manager/freeze_shell.py`
 for strict replay; `--write` initializes evidence for review. Original reports can
 contain decoded values and spans. Generated native packets stay under `target/`.
-No target code executes. The full local and exact-head platform gates remain pending.
+No target code executes. The full local gate passed: 3,409 tests, zero failures and 84 explicit ignores
+across 258 summaries. See [gate verification](full-gate-verification.json).
+Exact-head platform integration remains pending.
 
 Shell/midsurface Property, inline Material, composites, runtime dispatch, native
 locale conversion, field meanings, geometry and native CAD writer/application
