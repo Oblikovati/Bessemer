@@ -84,8 +84,17 @@ unassigned extra arguments and packet hash/extent substitutions are rejected.
 The exact binding is retained in
 [family oracle coverage](family-oracle-coverage-reference.json).
 
-The combined Rust invocation of these native operation oracles and full
-local/platform gates remain pending for this feature.
+Both fresh combined Rust runs of these native operation oracles passed all 18
+checks with no failures or ignores. All ten complete primitive and ordered-history
+exports match the independent owned/native reference packets byte for byte and
+match between processes. Counts, command, scope and hashes are retained in
+[native operation verification](native-operation-verification.json).
+
+The full local gate passed 3,452 tests with no failures and 92 explicit ignores
+across 261 summaries. The additional seven-check oracle-binding gate also passed.
+[Full gate verification](full-gate-verification.json) records the tested Rust
+sources and the later binding-check commit. Immutable publication-cut validation
+and all five exact-head platform gates remain pending.
 
 Native writer/application and geometry acceptance, physical field
 meanings, unrepresented populated native profiles and whole-format parity remain
