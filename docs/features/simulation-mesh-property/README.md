@@ -44,9 +44,35 @@ reference tests and nine foundation checks. Both processes exited successfully
 after cleanup. [Foundation verification](foundation-verification.json) records
 the source revision, packet and log hashes, and remaining acceptance scope.
 
-Complete independent owned fields, extents, edits and history, the typed Rust
-codec, malformed/cap/resource checks, isolation, concurrency, process export
-comparison and integration gates remain pending. Native writer symmetry,
+The owned operation corpus contains 588 contexts across 98 versions, with 574
+direct records and 716 populated nested bodies. Independent literals cross each
+gate and every version in the non-monotonic omission window. Profiles include
+independent empty/populated arrays, repeated nonnull and null archives, disabled
+mode words, raw text/bit patterns, and negative and duplicate newest-set keys.
+Every complete labelled extent and nested boundary matches the actual reader.
+Primitive projections retain unassigned nested eight-byte fields as fixed raw
+bytes, without inventing floating-point types or physical meanings.
+
+Complete field and ordered edit-history packets cover every owned context and
+all 357 accepted native arguments. The 34 failed native alternatives remain
+unchanged in the original input packet. Edits replace only the first signed
+word, preserve every other byte, and record all outer source/replacement and
+nested copy parents. The shared reference-literal extraction preserved all 295
+earlier thermal bodies byte for byte; [its verification](shared-reference-verification.json)
+records the original fixture hash.
+
+The last 98 owned contexts have empty collections and exclusively null text,
+providing genuine zero text and embedded-resource controls for later budget
+checks. They were appended without changing any earlier input, projection or
+history bytes; [extension verification](null-control-extension-verification.json)
+records the reason and exact retained prefixes.
+
+The extended initialization and strict replay each passed all 32 checks.
+[Owned operation verification](owned-operations-verification.json) records the
+complete packet hashes, source snapshot, executed checks and remaining scope.
+
+The typed Rust codec, malformed/cap/resource checks, isolation, concurrency,
+two-process Rust export comparison and integration gates remain pending. Native writer symmetry,
 application opening, physical meanings, geometry validation, universal runtime
 version selection and whole-format parity remain unproven.
 
