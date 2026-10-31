@@ -1,13 +1,21 @@
 //! Stored Simulation images with actual paired MAS context and explicit semantic limits.
+mod bodyranges;
+mod elements;
+mod elf;
 mod r#gen;
 mod master;
+mod metadata;
 mod out;
 mod study;
 mod wire;
 
 use crate::{BessemerError, FailureClass, Result};
+pub use bodyranges::*;
+pub use elements::*;
+pub use elf::*;
 pub use r#gen::*;
 pub use master::*;
+pub use metadata::*;
 pub use out::*;
 pub use study::*;
 

@@ -34,6 +34,20 @@
 
 ### Added
 
+- Added complete signed Simulation node-group runs with retained GEN identities and shared-reference evidence (#122).
+
+- Added exact auxiliary UTF-16 name views and supplied-destination stores, original GEN trial snapshots, explicit workspace normalization and ID-gated memory-only allocation/result projections with composed byte history. (#121)
+
+- Added complete stored Simulation auxiliary body-range rows, isolated three-field edits, conditional runtime input proposals and exact exclusive body-type queries with early-stop history and explicit descriptor limits. (#120)
+
+- Added native Simulation family-mask and scalar/exclusion gates and complete supplied-context body node-mark projections with exact checks, preserved prior values and ordered parent/write history. (#119)
+
+- Added complete Simulation element snapshots, independent numeric classification, explicit legacy stored-code rewrite projections and named topology/first-record predicate views. (#118)
+
+- Added Simulation GUID-string and bare scalar codecs, optional caller-writer projections, supplied update-stamp helper projections and isolated existing-stream CWR edits with composed history. (#116)
+
+- Added complete native Simulation ELF initializer interoperability, isolated CWR parameter edits, selected-directory and explicit mapping projections, header-only write proposals and exact scalar-record construction. (#115)
+
 - Added complete observed Simulation OUT report syntax, exact decimal and ordered legend views, isolated numeric-token edits, CWR replacement and explicit paired mesh-total comparisons. (#114)
 
 - Added complete observed Simulation MAS and paired family-8 GEN image reading, construction and writing, stored mesh accessors, isolated field edits and CWR coordinate replacement. (#112)

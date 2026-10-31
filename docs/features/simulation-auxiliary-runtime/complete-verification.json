@@ -1,0 +1,104 @@
+{
+  "issue": 121,
+  "behavior_profile": "simulation-auxiliary-runtime-v1",
+  "base_revision": "6a70acd7d9a967d100e4ce129b71bd62f1b54bf4",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "gate": "cargo xtask pr",
+  "gate_exit": 0,
+  "gate_log_sha256": "15bc5279f8f576bc787a7a79c9df390a86952c39136fc92b389fcfe2bd32d44e",
+  "test_summaries": 230,
+  "passed": 2991,
+  "failed": 0,
+  "ignored": 20,
+  "focused_with_native": {
+    "auxiliary_runtime_passed": 14,
+    "previous_body_ranges_compatibility_passed": 12,
+    "failed": 0
+  },
+  "owned_cases": {
+    "name_buffers": 16,
+    "name_stores": 192,
+    "workspace_pairs": 112,
+    "plans": 448,
+    "binding_contexts": 2240
+  },
+  "native_pairs": 3,
+  "native_auxiliary_rows": 5,
+  "native_legacy_original_trial_contexts": 4,
+  "native_name_buffer_bytes": 1280,
+  "native_prefix_including_nul_bytes": 146,
+  "native_residual_bytes": 1134,
+  "native_residual_nonzero_bytes": 565,
+  "native_positive_length_vectors": 0,
+  "supplied_zero_allocation_result_is_synthetic": true,
+  "two_fresh_processes_ran_all_fourteen_tests": true,
+  "native_projection_outputs_compared_byte_for_byte": true,
+  "native_projection_output_bytes": 10460,
+  "native_projection_output_sha256": "e0b36da1d19b9090decaac124fea8e22eed8cc57eaec57e275c9cc591ceb1f4d",
+  "actual_frozen_readers_verified_the_entire_rust_projection_packet": true,
+  "original_gen_trial_and_copy_parents_retained": true,
+  "all_final_byte_parents_replayed_exactly": true,
+  "requested_pattern_error_bits": 0,
+  "source_isolation_and_parallel_bytes_verified": true,
+  "observations": [
+    {
+      "observed_peak_working_set_bytes": 12394496,
+      "run": 1,
+      "seconds": 0.4164914
+    },
+    {
+      "observed_peak_working_set_bytes": 8998912,
+      "run": 2,
+      "seconds": 0.151702
+    }
+  ],
+  "observation_scope": "All fourteen focused tests per process, including owned cases, malformed inputs, five native rows, four real legacy trial contexts and parallel replay. Elapsed includes startup. Working set sampled around 1 ms is a lower bound. First implementation; no prior published release or statistical speed claim.",
+  "runtime_and_test_sha256": {
+    "src/simulation/bodyranges/edit.rs": "d3d3c29522a6ac8599b54c084735096f86d6e5a4580d7d06c7a105be0b0e481f",
+    "src/simulation/bodyranges/mod.rs": "fac7c1d0ec7d0bdf11145cf8a0d1306981ef9743c78cb3ed28a960630fd50945",
+    "src/simulation/bodyranges/names.rs": "649eb080269d635e7e4e0727238b0d8a7efc59e71a50a32f415c45a497472553",
+    "src/simulation/bodyranges/workspace/allocation.rs": "c5a9f4e76cc6613c14f87a686fec8460efea9989e1ded14a52715baa17620dc5",
+    "src/simulation/bodyranges/workspace/composed.rs": "b8e39aee713853a5de5f8836407ea51797163620c4b5b1b2f98cbbe09aa0a797",
+    "src/simulation/bodyranges/workspace/mod.rs": "83f4e31a04574e1b61a01acf50285de8cce2b09a119f8f856d00b27e810499ab",
+    "src/simulation/bodyranges/workspace/normalization.rs": "f58b07db53bae3a46cc3c303c3d6b26e2b3eceee579b586f2208c87ebef27e20",
+    "src/simulation/bodyranges/workspace/outcome.rs": "2ad57ee197ea6bb75e2ca51920f9277b1b5931688cf11ca11de5608538aab1fd",
+    "src/simulation/gen/mod.rs": "6c722e28842baea061bfa9442ab89e708b943e9e89d25590fc3bc3767bea65ff",
+    "tests/common/auxiliary_runtime_failures.rs": "1438102a5a0b26103b6f3e65753bcb97c14bdd418878cedbb243da167f0783f7",
+    "tests/common/auxiliary_runtime_packets.rs": "2b23a6cbf2baaeb8458d040884e5b5a7b99e3c9b62978f5e81fd2f2fc3dcc495",
+    "tests/fixtures/simulation-auxiliary-runtime/names.bin": "d41812926883da3687a96f9b02cfd4ada2efefe86fd61ceb7901cede223bcde8",
+    "tests/fixtures/simulation-auxiliary-runtime/workspaces.bin": "39b0e723e5b622d341a754e02563103e3695a938811c58c81268af6490844eed",
+    "tests/simulation_auxiliary_runtime.rs": "781550de8369fba778d2e054613d2dd14b3afc987bfca27310098b244a4e4d2f"
+  },
+  "verification_dependency_sha256": {
+    ".gitattributes": "b37c8fdfee8fe7f3f419ee84bb598979d16596a4af1e458ffe8e23946cddf823",
+    "docs/features/compound-files/freeze_compound.py": "b16b5c4ab53a0876218a89b03aae096b17e30d254ac942ec094baf5a3706771a",
+    "docs/features/model-archives/pinned_reference_tests.py": "6f95547f7dee070b1b8fe50cefaaea9a45721789636add2e67a919e42169b36e",
+    "docs/features/simulation-auxiliary-runtime/freeze_auxiliary.py": "099c3dd2a8ba27951654ab014dca7458bf1daec1b54e6f08b67223044f3b01e3",
+    "docs/features/simulation-auxiliary-runtime/owned_auxiliary.py": "f19c9fd53dc9b584a1593b98b16d197effdfc3b1e57311c5624a9bebdfe1d83a",
+    "docs/features/simulation-images/freeze_images.py": "d47b59435889b89e93f30ce1fd366e976dfbc76a7389f733f5a632ffa87b02c7",
+    "docs/features/simulation-images/owned_images.py": "9f5cece11e36398d0f1afc92765b01486ab993e38ccf873c004b1bd0a3aa753f",
+    "tests/common/simulation_images.rs": "7089399bf3c684254e38a2d4b646317ea2e113a30cf54231c4c9dbc2536f0eef"
+  },
+  "reference_snapshot_identity": "935e11f6f2ad167b3c48ad471db4a46324a83347d77aa57ae02fdf9afe544e8a",
+  "actual_reader_sha256": {
+    "cfb.py": "a55a2ceb4798c8f66b5b6ae37a8555dca83b90e12d587f673573fb6bc0137091",
+    "simulationmaster.py": "6213855a290cf1627e852daff1630089752c1a82fdf311c9e5c55c3c7cfedb42",
+    "simulationgen.py": "c562670bf27fc0a8f833f3295413661c76a85351fdbd8d383e2157087a80ea92",
+    "simulationauxiliary.py": "327dc13bc4e78b1e64eb9aa78e8fac53ffba22391515b1c5e87a00902fda8d6d",
+    "simulationauxruntime.py": "626cdd4ce7b0b41a31d2429dc1aa1012ffa80bcb03c6dfe644126ab116007f0d"
+  },
+  "exact_simulation_index_fixture_packets_verified": 12,
+  "acceptance_exclusions": [
+    "Native MFC trimming and final returned names",
+    "CAD identity, historical temporary buffers and residual/trailing/discarded word meanings",
+    "Native allocator outcomes, delegated reads, pointer dereferences and native I/O failure handling",
+    "Positive-length native auxiliary vectors and complete vector domains",
+    "Whole GEN publication after runtime memory projection",
+    "Geometry, topology consistency, self-intersection and tolerance validity",
+    "SolidWorks application acceptance",
+    "ThreadSanitizer execution on this Windows host; required Linux CI remains separate"
+  ],
+  "humanizer": "Unavailable; prose pass left for review",
+  "dependencies_added": false
+}

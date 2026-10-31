@@ -1,0 +1,122 @@
+{
+  "issue": 120,
+  "behavior_profile": "simulation-body-ranges-v1",
+  "base_revision": "176beb355320a4c6e9cb5e992374b5d2929ecca9",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "gate": "cargo xtask pr",
+  "gate_exit": 0,
+  "gate_log_sha256": "b53a9a440c65510958dba5ea14a9914f8bdcb786436db368c53a1e93ed1d298a",
+  "test_summaries": 229,
+  "passed": 2978,
+  "failed": 0,
+  "ignored": 19,
+  "focused_with_native": {
+    "body_range_passed": 12,
+    "previous_selection_compatibility_passed": 11,
+    "failed": 0
+  },
+  "owned_cases": {
+    "auxiliary_rows": 144,
+    "accepted_exclusive_queries": 3357,
+    "rejected_exclusive_queries": 612
+  },
+  "native_pairs": 3,
+  "native_auxiliary_rows": 5,
+  "native_stored_auxiliary_bytes": 1424,
+  "bound_field_attribution_bytes_including_previously_framed_identifiers": 60,
+  "native_elements_partitioned_exactly_once": 25106,
+  "all_interval_body_ids_match": true,
+  "native_full_span_queries": 5,
+  "native_conditional_proposal_queries": 5,
+  "two_fresh_processes_ran_all_twelve_focused_tests": true,
+  "native_projection_outputs_compared_byte_for_byte": true,
+  "native_projection_output_bytes": 23412,
+  "native_projection_output_sha256": "00d5b1cbd971442764c005d284409c6210654c72bbe2b09672fc20007e2f9e6c",
+  "actual_frozen_readers_verified_the_entire_rust_projection_packet": true,
+  "bounded_auxiliary_reference": {
+    "path": "research/simulation_aux_body_ranges_evidence.py",
+    "file_sha256": "e300204544373fa08fbfb99f88a5892a60fc5633916812d11cf5cd07bd5e6c60",
+    "function_sha256": "14901057b7776c6fdc74a0bb9b91b4c18a515c726fcf755137f76633049e6d94",
+    "function": "fields",
+    "unchanged_function_ast": true,
+    "top_level_native_inspection_executed": false
+  },
+  "complete_native_research_verifier_executed": false,
+  "paired_gen_and_row_copy_parents_retained": true,
+  "observations": [
+    {
+      "run": 1,
+      "seconds": 0.0926604,
+      "observed_peak_working_set_bytes": 18731008
+    },
+    {
+      "run": 2,
+      "seconds": 0.0651684,
+      "observed_peak_working_set_bytes": 6569984
+    }
+  ],
+  "observation_scope": "All twelve body-range tests per process, including 144 complete row/edit goldens, 3,357 accepted and 612 rejected exclusive runtime contexts, five actual installed intervals and ten native runtime query projections; elapsed includes startup. Working set sampled at approximately 1 ms is a lower bound and may miss actual peak. First implementation, no prior published release for comparison; no statistical speed claim.",
+  "runtime_and_test_sha256": {
+    "src/simulation/bodyranges/edit.rs": "1ffd188d55c89c4af5477c79d42fe2d20ac041ac773ef153137f885b4e1eb413",
+    "src/simulation/bodyranges/mod.rs": "f85ab38643b7189eb97a6a691355447c5566034540800886da8e6c4d0ab52a8e",
+    "src/simulation/bodyranges/proposal.rs": "2a25ceef1920ccc1a0175b81b051e46474eca0541497fe28f54d19212c556289",
+    "src/simulation/elements/selection/bodytype/mod.rs": "da1d350419b5b9d3072ab4e4c9ec91b26900ce6b775a140f7eba0487ff5fe1da",
+    "src/simulation/elements/selection/bodytype/outcome.rs": "cf4f9fe3479511aeed64e97c8cff6b7cbb0e771c9089d41ba35f1f52029e90d4",
+    "src/simulation/elements/selection/bodytype/scan.rs": "c5b5885621c1bde51b9ae8e3bcccc9fb0f99adc8a3076adaef1d6904869a09ca",
+    "src/simulation/elements/selection/mod.rs": "a069c628ad12aa36f99fd1b1577f08e847ee0e3838b818613c9dc05f04de1713",
+    "src/simulation/elements/selection/projection.rs": "f633801820555cdede5102307e9a770fede3badddfb493f36fc214aef371b5cf",
+    "src/simulation/elements/selection/visits.rs": "469ac8138b42700c38271b55fcac6d33dff418f06f561031e0331722ea3956fa",
+    "src/simulation/mod.rs": "275e257473d256c05580cca0e57b0ee779c9762ba66847ed5f8c31995cfeee19",
+    "tests/common/body_range_failures.rs": "91f000cf57bbd1de4038d2ee5b34e27275980aed1a8c4e4c863fafd8f67409f1",
+    "tests/common/body_range_packets.rs": "f67e1688caac955f6b72a9a2633ce484cd199e2e65f24c3ee9a732c56337afee",
+    "tests/fixtures/simulation-body-ranges/auxiliary.bin": "7422cfc14fe86ec5a378caf68f962ef95ec9072781141dfbf7929a2e15276a0a",
+    "tests/fixtures/simulation-body-ranges/types.bin": "4da756d23fe8a09365477232571537173076e85c69d0a224f8d37a06b6c6aa35",
+    "tests/simulation_body_ranges.rs": "45de09617ccba4933e115de2bb7eeaa982100bfe4d416d484498d4a5116f881f"
+  },
+  "verification_dependency_sha256": {
+    ".gitattributes": "b15d2edfa5d3d7e4cd0b0d13262b63243ebe44336fc7c5998b61ea37689fb939",
+    "docs/features/compound-files/freeze_compound.py": "b16b5c4ab53a0876218a89b03aae096b17e30d254ac942ec094baf5a3706771a",
+    "docs/features/compound-files/native-reference.json": "c0b018208558922e6e18fb942b201de94248075e5a3f1dcf15d614df372fa665",
+    "docs/features/model-archives/pinned_reference_tests.py": "6f95547f7dee070b1b8fe50cefaaea9a45721789636add2e67a919e42169b36e",
+    "docs/features/simulation-body-ranges/bounded_auxiliary.py": "e55235f1a02881a38e09afbed7d2460a4653ecaf617b27502255d199ea60ecc1",
+    "docs/features/simulation-body-ranges/freeze_ranges.py": "da248c217d7e87c39241a1e38db31597caff46accd04d3b6516e75891a79d65c",
+    "docs/features/simulation-body-ranges/owned_ranges.py": "a188daf2cdef4724abe1c3369871250f96437371aeabdfa73e80e80d85437223",
+    "docs/features/simulation-images/freeze_images.py": "d47b59435889b89e93f30ce1fd366e976dfbc76a7389f733f5a632ffa87b02c7",
+    "docs/features/simulation-images/owned_images.py": "9f5cece11e36398d0f1afc92765b01486ab993e38ccf873c004b1bd0a3aa753f",
+    "docs/features/simulation-selection/owned_selection.py": "021e92abba3172326fa32f40ca6ba7429b7973a8fabc7fc01b7cb2527a88f32d",
+    "tests/common/selection_failures.rs": "ae56177be6f783e07fe1607feeb1c71fb5f902eeac3040a06732ec60f0db363c",
+    "tests/common/selection_packets.rs": "77d4cee0ad7ca5de54d2848d0b8cb78e0336eabf848b944dd413bfda535b9fdd",
+    "tests/common/simulation_images.rs": "7089399bf3c684254e38a2d4b646317ea2e113a30cf54231c4c9dbc2536f0eef",
+    "tests/fixtures/simulation-selection/predicates.bin": "17742b7e5e2577878e168f39dca2524626dcb35cffe2d03f0e1218bf442b1d3e",
+    "tests/fixtures/simulation-selection/queries.bin": "012247267be5ec41cdeafb376bc2c68e6968db164df5241419448f993efa9646",
+    "tests/simulation_selection.rs": "a1a51ad9190d4f960b6982490c4267b9a153856a809a2487cdec1a13be4315c0"
+  },
+  "reference_snapshot_identity": "935e11f6f2ad167b3c48ad471db4a46324a83347d77aa57ae02fdf9afe544e8a",
+  "actual_reader_sha256": {
+    "cfb.py": "a55a2ceb4798c8f66b5b6ae37a8555dca83b90e12d587f673573fb6bc0137091",
+    "simulationmaster.py": "6213855a290cf1627e852daff1630089752c1a82fdf311c9e5c55c3c7cfedb42",
+    "simulationgen.py": "c562670bf27fc0a8f833f3295413661c76a85351fdbd8d383e2157087a80ea92",
+    "simulationbodytype.py": "7b2d563f540a6da2e9db3bef86b5d5517d58a4290cb6bc450b9d09dbd7febb5f",
+    "research/simulation_aux_body_ranges_evidence.py": "e300204544373fa08fbfb99f88a5892a60fc5633916812d11cf5cd07bd5e6c60"
+  },
+  "exact_simulation_index_fixture_packets_verified": 10,
+  "check_modes": [
+    "ExactCompleteRowAndThreeFieldBinding",
+    "NegativeBoundsOnly",
+    "SuppliedCallbackAndModeOnly",
+    "ExactExclusiveScanUntilFirstActiveAssociation"
+  ],
+  "acceptance_exclusions": [
+    "Complete auxiliary semantics and descriptor serialization",
+    "Runtime fresh-list/study-mode guards, reused-list provenance and historical bounds",
+    "CAD body mapping, complete API flag conversion and native callback execution",
+    "Whole GEN/vector framing publication after a standalone row edit",
+    "Native research inspection/decompilation or installed runtime execution",
+    "Geometry, topology consistency, self-intersection and tolerance validity",
+    "SolidWorks application acceptance",
+    "ThreadSanitizer execution on this Windows host; required Linux CI remains separate"
+  ],
+  "humanizer": "Unavailable; prose pass left for review",
+  "dependencies_added": false
+}

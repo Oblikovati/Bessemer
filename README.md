@@ -18,6 +18,30 @@ It also preserves complete Simulation OUT report syntax, ordered duplicate
 symbols and exact decimal values, with isolated numeric-token edits and explicit
 comparisons against the actual paired mesh totals. See the
 [OUT report evidence](docs/features/simulation-out/README.md).
+It also reads, constructs and edits complete native ELF initial images and
+projects documented selected-directory traversal, explicit record mapping,
+header-only writes and exact scalar slots. See the
+[ELF evidence and check scopes](docs/features/simulation-elf/README.md).
+Simulation metadata support also preserves optional `TimeStampGUIDs` field
+framing and raw UTF-16, reads and writes bare `TimeStamp`/`RunState` words, and
+edits existing CWR streams with composed helper history. See the
+[metadata evidence](docs/features/simulation-metadata/README.md).
+Element record views preserve stored codes separately from native numeric
+classification and expose explicit legacy rewrite, named solid associations
+and first-record predicate projections. See the
+[element evidence and limits](docs/features/simulation-elements/README.md).
+Selection views also expose native family-mask and scalar/exclusion gates,
+plus complete supplied-context body node-mark queries with unknown prior
+values and ordered write history. See the
+[selection and body-query evidence](docs/features/simulation-selection/README.md).
+Auxiliary row views also preserve both stored body-range profiles, provide
+isolated three-field edits and conditional runtime input proposals, and expose
+the separate exclusive body-type query. See the
+[body-range evidence and descriptor limits](docs/features/simulation-body-ranges/README.md).
+Auxiliary name buffers preserve bounded UTF-16 and all residual bytes, with
+supplied-destination stores, real trial-workspace snapshots and explicit
+memory-only allocation/binding projections. See the
+[auxiliary runtime evidence](docs/features/simulation-auxiliary-runtime/README.md).
 
 The first implemented layer reads SolidWorks version-4 containers, extracts streams
 with size and CRC checks, and replaces existing stream contents. A save without
@@ -497,3 +521,5 @@ arrays and scoped reference graphs. See
 Version-11000 configuration managers retain their exact owned-object, scene and
 suffix layouts alongside the reviewed 18000 and 19000 dialects. See
 [the intermediate-manager evidence](docs/features/intermediate-managers/README.md).
+
+Simulation GEN node-group diagnostics retain signed tags, contiguous stored-order runs and source node identities, including inactive nodes and shared cross-tag references. See [node-group evidence](docs/features/simulation-node-groups/README.md).

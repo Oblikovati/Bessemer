@@ -1,9 +1,11 @@
 mod framing;
+mod groups;
 mod mesh;
 mod outcome;
 mod parts;
 use super::{Result, SimulationMasterArchive, SimulationMasterRevision, invalid, require};
 use crate::archive_codec::ArchiveRevision;
+pub use groups::*;
 pub use mesh::*;
 pub use outcome::*;
 pub use parts::*;
@@ -36,6 +38,17 @@ pub struct SimulationGenArchive {
 }
 
 impl SimulationGenArchive {
+    pub(super) fn auxiliary_trial_slice(&self, index: usize) -> Result<(&[u8], usize)> {
+        let count = self.layout.counts[8] as usize;
+        require(
+            index < count,
+            "GEN auxiliary trial",
+            format!("logical row index {index}; expected less than {count}"),
+        )?;
+        let (start, end) = auxiliary_trial_bounds(self.layout.blocks[7].0, index)?;
+        let bytes=self.bytes.get(start..end).ok_or_else(||invalid("GEN auxiliary trial",format!("288-byte slice at {start} in {} bytes; expected the complete original trial read",self.bytes.len())))?;
+        Ok((bytes, start))
+    }
     /// Validate complete paired framing, e.g. `SimulationGenArchive::from_bytes(gen, &master)?`.
     pub fn from_bytes(bytes: &[u8], master: &SimulationMasterArchive) -> Result<Self> {
         let layout = framing::decode(bytes, master.version())?;
@@ -137,4 +150,10 @@ impl SimulationGenArchive {
         }
         Self::from_bytes(&bytes, &self.master)
     }
+}
+
+fn auxiliary_trial_bounds(base: usize, index: usize) -> Result<(usize, usize)> {
+    index.checked_mul(288).and_then(|delta|base.checked_add(delta))
+        .and_then(|start|start.checked_add(288).map(|end|(start,end)))
+        .ok_or_else(||invalid("GEN auxiliary trial offsets",format!("base {base}, row index {index}; expected addressable complete 288-byte trial offsets")))
 }
