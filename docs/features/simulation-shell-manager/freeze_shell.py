@@ -17,6 +17,7 @@ from pinned_reference_tests import FrozenSourceImports, copy_sources, record_sna
 from native_carriers import SOURCE, RESEARCH, digest, recover_sample, pinned_auxiliaries
 from owned_shell import owned_shell_groups, owned_shell_headers
 from shell_literal_oracles import shell_literal_spans, shell_literal_edit, shell_literal_history, shell_header_spans, shell_header_edit
+from shell_header_packets import owned_header_packets, native_header_packets
 
 REPORTS = ('cosworks-shell-manager-native-evidence.json', 'cosworks-shell-group-native-evidence.json')
 
@@ -135,6 +136,33 @@ def verify_shell_header_oracles() -> None:
     shell_baseline('header-oracle-reference.json', oracles)
 
 
+def verify_shell_header_owned_packets() -> None:
+    """Freeze complete reader/current-writer CI fields and edit/history expectations; e.g. verify_shell_header_owned_packets()."""
+    folder = ROOT / 'tests/fixtures/simulation-shell-manager'
+    projections, histories = owned_header_packets()
+    for name, raw in (('header-projection.bin', projections), ('header-history.bin', histories)):
+        path = folder / name
+        if '--write' in sys.argv:
+            folder.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(raw)
+        assert path.read_bytes() == raw
+    shell_baseline('header-owned-packets.json', dict(cases=60, reader_cases=30, writer_cases=30,
+                   projection_bytes=len(projections), projection_sha256=digest(projections),
+                   history_bytes=len(histories), history_sha256=digest(histories),
+                   writer_scope='Installed static unconditional two-word grammar; actual reader control at 800028, not native writer execution.'))
+
+
+def replay_shell_header_packets(pin: Path) -> None:
+    """Retain the complete 395 native header arguments and 365 accepted field/history cases; e.g. replay_shell_header_packets(pin)."""
+    packets = native_header_packets(pin)
+    references: dict[str, object] = {}
+    for name, raw in zip(('input', 'projection', 'history'), packets, strict=True):
+        (ROOT / f'target/simulation-shell-header-native-{name}.bin').write_bytes(raw)
+        references[name] = dict(bytes=len(raw), sha256=digest(raw))
+    shell_baseline('header-native-packets.json', dict(streams=361, logical_bytes=2888, arguments=395,
+                   accepted=365, failed=30, packets=references))
+
+
 def replay_shell_row(row: dict[str, object], streams: dict[str, bytes], group_records: bool) -> bytes:
     """Preserve all original candidate outcomes and complete payloads; e.g. replay_shell_row(row, streams, True)."""
     stream = cast(str, row['stream'])
@@ -184,7 +212,9 @@ def run_shell_checks(pin: Path) -> unittest.TestResult:
     import test_cosworks_shell_manager
     import test_cosworks_shell_group
     replay = update_wrapper(partial(replay_shell_native, pin), replay_shell_native)
-    checks = (verify_shell_sources, verify_shell_bindings, verify_shell_owned, verify_shell_literal_oracles, verify_shell_header_oracles, replay)
+    headers = update_wrapper(partial(replay_shell_header_packets, pin), replay_shell_header_packets)
+    checks = (verify_shell_sources, verify_shell_bindings, verify_shell_owned, verify_shell_literal_oracles,
+              verify_shell_header_oracles, verify_shell_header_owned_packets, headers, replay)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
     for module in (test_cosworks_shell_manager, test_cosworks_shell_group):
         suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(module))

@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added complete ShellManager header construction and isolated edits with explicit historical reader and current-writer wire profiles. (#156)
+
 - Added fresh seven-family SolidManager inventory reconciliation and typed complete-read/construction gates while retaining six incomplete SurfaceBody occurrences as failures. (#154)
 
 - Added exact SurfaceBody read, construction and isolated edits with ordered history, preserving typed failures for six unresolved historical partial-word cases. (#153)

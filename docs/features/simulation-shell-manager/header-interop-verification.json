@@ -1,0 +1,41 @@
+{
+  "issue": 156,
+  "status": "Direct header API and explicit reader/current-writer profiles verified; group API and full feature gates pending",
+  "focused_including_native": 13,
+  "strict_reference_checks": 14,
+  "owned_header_cases": 60,
+  "native_streams": 361,
+  "native_arguments": 395,
+  "native_accepted": 365,
+  "native_failed": 30,
+  "send_sync_types": 14,
+  "concurrency": {
+    "workers": 8,
+    "iterations_per_worker": 32,
+    "options": 3
+  },
+  "exports": {
+    "fields": {
+      "bytes": 32260,
+      "sha256": "7f60fbffb975e9f69e064dba38957e9a7948b515199d92ae9afab6821d69e381",
+      "fresh_processes": 2,
+      "cases": 425
+    },
+    "history": {
+      "bytes": 62500,
+      "sha256": "aab768104829c9160fb6f86ed261ae2790add7bec4073510ef02353d650e7c74",
+      "fresh_processes": 2,
+      "cases": 425
+    }
+  },
+  "clippy": "passed -D warnings",
+  "full_local_gate": "pending",
+  "platform_integration": "pending",
+  "writer_scope": "Installed static unconditional two-word grammar; explicit compatible-reader control at 800028. No native writer execution.",
+  "pending": [
+    "Typed group API and full field/edit/history parity",
+    "Remaining malformed/count/aggregate-budget controls for groups",
+    "Full local and exact-head platform integration"
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending"
+}
