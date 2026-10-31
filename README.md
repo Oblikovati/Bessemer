@@ -649,3 +649,8 @@ Results root, category and plot `Property` bodies support complete reads,
 construction and isolated edits with explicit hierarchy and version contexts.
 Current root/category writer layouts remain separate from historical readers;
 see [the Results header evidence](docs/features/simulation-results-headers/README.md).
+
+`cwPostGraphParam` supports complete versioned reads, construction and isolated
+edits. Character-count strings retain raw code units and change length as one
+atomic value; unassigned eight-byte values retain their exact patterns. See
+[the graph parameter evidence](docs/features/simulation-post-graph/README.md).
