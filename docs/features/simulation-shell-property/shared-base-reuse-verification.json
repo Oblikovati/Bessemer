@@ -1,0 +1,33 @@
+{
+  "feature_issue": 159,
+  "refactor_parent": "b6dd5b1c96bd7d07258df61885bb6e13732b63a1",
+  "scope": "Private shared-base terminal callback; every existing caller retains its original strict profile.",
+  "runtime_file": "src/simulation/persistence/load_base.rs",
+  "original_sha256": "b426f17813af79d03d09cdee8c930d5758f25d2ce7aae98baa57d0baa3ecdbd1",
+  "refactored_sha256": "486fcf3f980918f81a78f694f7283e54163110ff8ac2b20766303c32234a0461",
+  "regression_targets": [
+    "simulation_thermal_collections",
+    "simulation_inertial_collections",
+    "simulation_mass_element_property"
+  ],
+  "existing_passed": 64,
+  "existing_failed": 0,
+  "explicit_ignored": 14,
+  "identical_before_after_summaries": true,
+  "owned_field_byte_history_fixtures_unchanged": true,
+  "strict_zero_count_mode_regression_passed": true,
+  "strict_modes": [
+    -2147483648,
+    -101,
+    101,
+    2147483647
+  ],
+  "clippy_warnings": 0,
+  "processes_reaped": true,
+  "logs": {
+    "before": "5ebfd6acf9546bb8354c1c3e9f80ed14ae027eaf916d4e6372d84fcde8c7eaf5",
+    "after": "cc7cd4d0468ab0cc241312643fda341e922f9133052d115595a00f8bf307f7ff"
+  },
+  "strict_regression_log_sha256": "851cf730c17ce3fbe226a54346928768678e00bb55a78226a3cd06f8fdba5016",
+  "full_local_and_platform_gates_for_feature_pending": true
+}

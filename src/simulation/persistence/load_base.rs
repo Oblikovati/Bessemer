@@ -3,6 +3,8 @@ use super::thermal::SimulationThermalLimits;
 use crate::simulation::SimulationPersistVersion;
 use crate::{Result, simulation::invalid};
 
+pub(super) type TerminalTableReader = fn(&mut BinaryLoadReader<'_>, &str) -> Result<()>;
+
 pub(super) fn collection<'a>(
     bytes: &'a [u8],
     version: SimulationPersistVersion,
@@ -22,6 +24,14 @@ pub(super) fn collection<'a>(
 }
 
 pub(super) fn record(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
+    record_with_terminal(reader, label, terminal_table)
+}
+
+pub(super) fn record_with_terminal(
+    reader: &mut BinaryLoadReader<'_>,
+    label: &str,
+    terminal: TerminalTableReader,
+) -> Result<()> {
     references(reader, label)?;
     reader.signed(&format!("{label}.base.integer"))?;
     reader.texts(&format!("{label}.base.text"), 4)?;
@@ -37,7 +47,7 @@ pub(super) fn record(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<(
         optional_slot(reader, &format!("{label}.optional1"))?;
     }
     gated_words(reader, label)?;
-    late_base(reader, label)
+    late_base(reader, label, terminal)
 }
 
 fn scalar_block(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
@@ -131,7 +141,11 @@ fn gated_words(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
     Ok(())
 }
 
-fn late_base(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
+fn late_base(
+    reader: &mut BinaryLoadReader<'_>,
+    label: &str,
+    terminal: TerminalTableReader,
+) -> Result<()> {
     if reader.version <= 810001 {
         return Ok(());
     }
@@ -146,15 +160,19 @@ fn late_base(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
     if reader.version < 890009 {
         return Ok(());
     }
-    late_texts(reader, label)
+    late_texts(reader, label, terminal)
 }
 
-fn late_texts(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
+fn late_texts(
+    reader: &mut BinaryLoadReader<'_>,
+    label: &str,
+    terminal: TerminalTableReader,
+) -> Result<()> {
     reader.words(&format!("{label}.base.three_integers"), 3)?;
     reader.text(&format!("{label}.base.158"))?;
     reader.text(&format!("{label}.base.160"))?;
     if reader.version >= 890011 {
-        terminal_table(reader, label)?;
+        terminal(reader, label)?;
     }
     Ok(())
 }
@@ -168,6 +186,14 @@ fn terminal_table(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> 
         ));
     }
     let count = reader.count(&format!("{label}.table.count"), 50, 184)?;
+    terminal_records(reader, label, count)
+}
+
+pub(super) fn terminal_records(
+    reader: &mut BinaryLoadReader<'_>,
+    label: &str,
+    count: usize,
+) -> Result<()> {
     for index in 0..count {
         let prefix = format!("{label}.table{index}");
         reader.text(&format!("{prefix}.name"))?;

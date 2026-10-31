@@ -56,7 +56,12 @@ reading the count; it must not be reused unchanged for this new profile or
 silently relaxed for existing callers. Inline Material can reuse its established
 bounded decoder and typed values, with scoped field paths and aggregate budgets.
 Reference containers must retain their complete grammar rather than a persist-ID
-prefix. No production change has been made to any of these readers.
+prefix. The shared base now accepts a private terminal-table callback; existing
+callers select their original strict reader. Sixty-four regressions pass before
+and after this structural change against unchanged owned byte/field/history
+fixtures. A separate regression checks all four out-of-range signed modes on an
+otherwise complete zero-count table, preserving the original error details.
+Clippy passes with warnings denied. No shell Property operation has been added.
 
 Run `python -B -X utf8 docs/features/simulation-shell-property/freeze_shell_property.py`
 for strict replay. `--write` initializes evidence for review. All 35 checks pass;
