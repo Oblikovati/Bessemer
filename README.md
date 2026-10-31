@@ -574,5 +574,5 @@ the full local gate passed; platform integration remains pending. See
 Direct SolidManager `Property` headers preserve all five version gates, signed
 words, both bounded raw-text lists and duplicate order. Complete construction
 and isolated edits retain revision-bound IDs and ordered history. Focused/native
-and independent Source checks pass; full local/platform gates remain pending.
+and independent Source checks plus the full local gate pass; platform integration remains pending.
 See [the SolidManager header evidence](docs/features/simulation-solid-manager/README.md).

@@ -1,6 +1,6 @@
 {
   "issue": 148,
-  "status": "Complete focused operation corpus; full local and exact-head platform gates pending",
+  "status": "Complete focused corpus and full local gate passed; exact-head platform integration pending",
   "focused_tests": {
     "passed": 18,
     "failed": 0,
@@ -71,7 +71,7 @@
     "clippy -D warnings, formatting and file/function audits"
   ],
   "exclusions": [
-    "Full local and exact-head platform gates",
+    "Exact-head platform integration",
     "Native populated-list fixtures (retained lists all empty)",
     "Child bodies/components/folders/persist-ID storage acceptance",
     "Native runtime/application/writer, physical or geometric acceptance"

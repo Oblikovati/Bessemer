@@ -43,7 +43,7 @@ Eight threads each run 32 mixed signed, UTF-16 and odd-frame edits against three
 serial options. Bytes, fields, coverage, input isolation and all ordered parents
 match. All thirteen public types/aliases assert Send/Sync. Clippy, formatting
 and function/file audits pass. The [operation ledger](operation-verification.json)
-records exact scope and hashes; full local and exact-head platform gates remain
+records exact scope and hashes; the full local gate passed; exact-head platform integration remains
 pending. The earlier reference ledger is retained as the initial foundation.
 
 Set `BESSEMER_SOLID_MANAGER_NATIVE_INPUT`,
@@ -52,3 +52,6 @@ Set `BESSEMER_SOLID_MANAGER_NATIVE_INPUT`,
 generated `target/simulation-solid-manager-native*.bin` packets. Complete
 exports optionally use `BESSEMER_SOLID_MANAGER_PROJECTION_OUTPUT` and
 `BESSEMER_SOLID_MANAGER_HISTORY_OUTPUT`.
+
+The [full local gate](full-local-verification.json) records the exact committed
+implementation, platform, toolchain, complete test totals and log hash.
