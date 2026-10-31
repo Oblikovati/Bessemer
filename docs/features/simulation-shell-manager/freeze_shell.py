@@ -16,6 +16,7 @@ import pefile
 from pinned_reference_tests import FrozenSourceImports, copy_sources, record_snapshot
 from native_carriers import SOURCE, RESEARCH, digest, recover_sample, pinned_auxiliaries
 from owned_shell import owned_shell_groups, owned_shell_headers
+from shell_literal_oracles import shell_literal_spans, shell_literal_edit, shell_literal_history, shell_header_spans, shell_header_edit
 
 REPORTS = ('cosworks-shell-manager-native-evidence.json', 'cosworks-shell-group-native-evidence.json')
 
@@ -102,6 +103,38 @@ def verify_shell_owned() -> None:
     shell_baseline('owned-reference.json', dict(headers=headers, groups=groups))
 
 
+def verify_shell_literal_oracles() -> None:
+    """Compare every primitive boundary and independent edited record against the actual reader; e.g. verify_shell_literal_oracles()."""
+    from cosworks_shell_group_layout import parse
+    oracles: list[dict[str, object]] = []
+    for case in owned_shell_groups():
+        original = parse(case['raw'], case['version'], wire_profile=case['wire_profile'])
+        assert original['spans'] == shell_literal_spans(case)
+        raw, expected_records, ordinal = shell_literal_edit(case)
+        edited = parse(raw, case['version'], wire_profile=case['wire_profile'])
+        assert edited['success'] and edited['records'] == expected_records and edited['end'] == len(raw)
+        assert edited['reconstruction_sha256'] == digest(raw)
+        oracles.append(dict(version=case['version'], wire_profile=case['wire_profile'], pattern=case['pattern'],
+                       ordinal=ordinal, original_spans=original['spans'], expected_edited=edited,
+                       history=shell_literal_history(case, ordinal)))
+    shell_baseline('literal-oracle-reference.json', oracles)
+
+
+def verify_shell_header_oracles() -> None:
+    """Pin every header field and complete edited body independently of the actual parser; e.g. verify_shell_header_oracles()."""
+    oracles: list[dict[str, object]] = []
+    for version, words, original in owned_shell_headers():
+        spans = shell_header_spans(words)
+        assert b''.join(bytes.fromhex(cast(str, span['raw_hex'])) for span in spans) == original
+        raw, expected_words, history = shell_header_edit(words)
+        parsed = shell_attempt(raw, version, 'Property', False)
+        assert parsed['success'] and parsed['values'] == expected_words and parsed['end'] == len(raw)
+        assert parsed['reconstruction_sha256'] == digest(raw)
+        assert raw[4:] == original[4:]
+        oracles.append(dict(version=version, original_spans=spans, expected_edited=parsed, history=history))
+    shell_baseline('header-oracle-reference.json', oracles)
+
+
 def replay_shell_row(row: dict[str, object], streams: dict[str, bytes], group_records: bool) -> bytes:
     """Preserve all original candidate outcomes and complete payloads; e.g. replay_shell_row(row, streams, True)."""
     stream = cast(str, row['stream'])
@@ -151,7 +184,8 @@ def run_shell_checks(pin: Path) -> unittest.TestResult:
     import test_cosworks_shell_manager
     import test_cosworks_shell_group
     replay = update_wrapper(partial(replay_shell_native, pin), replay_shell_native)
-    suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in (verify_shell_sources, verify_shell_bindings, verify_shell_owned, replay))
+    checks = (verify_shell_sources, verify_shell_bindings, verify_shell_owned, verify_shell_literal_oracles, verify_shell_header_oracles, replay)
+    suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
     for module in (test_cosworks_shell_manager, test_cosworks_shell_group):
         suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(module))
     return unittest.TextTestRunner(verbosity=2).run(suite)

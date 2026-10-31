@@ -2305,6 +2305,8 @@
     "research/part_geometric_dimension_reference_points_replay_audit.py": "3b614c67b7c974450f9522f4e3b7b57a4daddca2cf07be37c24b42d6cb7c36f1",
     "research/part_geometric_dimension_reference_points_weld_checkpoint_audit.py": "d953ef5684fa07e6d31c6cbbcd3778958ec740500141a89119b2bdf520b07efc",
     "research/part_geometric_dimension_transform_native_audit.py": "a24413df02d4d3b61b59d8967198cf2df821be2652b3c66a3eeb1cee5d63c74f",
+    "research/part_large_field_rbp_access_audit.py": "f04d0df41fbd71b58b926e8b8ca0d22852f8603d92f092537c00d80881dc76d4",
+    "research/part_large_field_rbp_owner_triage_audit.py": "85455ea43966ccdb43d381c5d63c9ec2bdcf50881d8ebeeb814dcf17af7162eb",
     "research/part_layer_number_checkpoint_accounting_audit.py": "90b88719414bedd902b77c319250bacaed55b984d1e527af0033f6f0e1076f24",
     "research/part_logical_g2_index_state_checkpoint_audit.py": "902a81ef40d5ec00c1221fdc31fe4372b1a6269bd7fb802ce65d0d40e339b6c1",
     "research/part_logical_g2_index_state_compatibility_audit.py": "8a60731e8fa786d8f106c829a2ae92bf62c895e1cc361c5681deb30da80e026a",
@@ -2518,6 +2520,7 @@
     "research/part_sketch_spline_flag_producer_scope_audit.py": "7f6f9b2b733a5331654a212ff2867ba1c204590aebff958cf6864894d926d809",
     "research/part_sketch_spline_flag_upstream_gate_audit.py": "e39e64602867c3fbb974bc57a0a8eabfe99d7486ac94859d61395394a699849d",
     "research/part_sketch_spline_flag_virtual_target_audit.py": "b89428f3deea4abd799579abcad74eca9f265d9e8026f67271e55fb0771b2e87",
+    "research/part_sketch_spline_interpolation_owner_audit.py": "2b583fac2bd4a73ac765f542953960d07be1927c869897afa7f11c23f12f65b5",
     "research/part_sketch_spline_restore_condition_audit.py": "b55011e055109c5d060c567fec780bd45615ab8e68840d4bb4be18054d8a8ae2",
     "research/part_sketch_spline_restore_marker_binding_audit.py": "42ddbc90a9b540f452582487c2c9d1a3bf86de745c6cd3de54a808c8d569b6ef",
     "research/part_sketch_spline_restore_marker_replay_audit.py": "0a0f0b8523ad600ae5bed6374c734f36ef5f6125330adbe05861dbf75a397d4f",
@@ -2536,6 +2539,7 @@
     "research/part_spline_fixed_length_native_audit.py": "e3fd58056963ef59aa9571f3008671a51a50006e2333c006e149a093c11b0c71",
     "research/part_spline_fixed_length_replay_audit.py": "2ab23f9c2b9ffd9b476ee6c6bd6021aacc1961641eac030cda3c2408c6e400de",
     "research/part_spline_internal_access_audit.py": "2a7acfcb71b0721fbd90144e211d5e1d752b931ae786c4b46293dbc4be4e4ed4",
+    "research/part_spline_interpolation_marker_access_audit.py": "58e6e6e722334e5af4d330053e9cf94569bce118d212f359804e303d0f98d988",
     "research/part_spline_knot_array_checkpoint_audit.py": "36d1a0c7984deaa5c628d560468e8eafec9560e117edcd5fa70f73e9c4fea240",
     "research/part_spline_knot_array_finalize_audit.py": "7b95c7240f79359a10237352b08e622cd22834d49db98ae151edf76b4d12ecea",
     "research/part_spline_knot_array_native_audit.py": "949d28e5bb61d102ab3a7cbb8d98896bde30fe15e15026fe4a5b481e82494aeb",
@@ -2589,6 +2593,7 @@
     "research/part_visual_layer_producer_chain_audit.py": "5fd47d45928cf91c5e1d16681290369a7fca1287ca517650c5b646743225798e",
     "research/part_visual_owner_flow_gap_audit.py": "d98424bac05160f6bf09d611ec7d90e73b272fba728d2d047ae3b043cc9f7ceb",
     "research/part_visual_sg_override_producers_audit.py": "b0081d34d074f1351e97ede8e8de9f2a450d4e721e7f20fc89b61d53ed91d75f",
+    "research/part_visual_sketch_rbp_access_audit.py": "ffb71519f35e7a690ff064ad9ed0fc03c68f856e96d8468f660df6091215091a",
     "research/part_visual_temp_color_client_scope_audit.py": "df3a35c4d1f59a174d19ec30638f9829aea905ac14c52a44fd1a0ab3b979266b",
     "research/part_visual_translator_marker_audit.py": "f2158f55e9dfa047c2faedc9992afdab25f757cdc6b4ad1e2c435195c0b5c780",
     "research/part_visual_ui_mask_import_chain_audit.py": "31b03961ca85a21c3676cb5addc07afb4c1ed9c76c86d54bf6bcb0c73ef5de4e",
@@ -3677,18 +3682,18 @@
     "ziptimestamps.py": "fd5d93cc11c170ccd300763e7f5e0ce96841d3cd37b8f9377e30fe509e3c4d90",
     "cfb.py": "a55a2ceb4798c8f66b5b6ae37a8555dca83b90e12d587f673573fb6bc0137091"
   },
-  "source_python_files": 3676,
+  "source_python_files": 3681,
   "source_origins": {
-    "cosworks_shell_manager_layout": "C:\\Users\\vmiguel\\AppData\\Local\\Temp\\bessemer-shell-manager-i3ltly0m\\research\\cosworks_shell_manager_layout.py",
-    "test_cosworks_shell_manager": "C:\\Users\\vmiguel\\AppData\\Local\\Temp\\bessemer-shell-manager-i3ltly0m\\research\\test_cosworks_shell_manager.py",
-    "swarchive": "C:\\Users\\vmiguel\\AppData\\Local\\Temp\\bessemer-shell-manager-i3ltly0m\\swarchive.py",
-    "cosworks_shell_group_layout": "C:\\Users\\vmiguel\\AppData\\Local\\Temp\\bessemer-shell-manager-i3ltly0m\\research\\cosworks_shell_group_layout.py",
-    "test_cosworks_shell_group": "C:\\Users\\vmiguel\\AppData\\Local\\Temp\\bessemer-shell-manager-i3ltly0m\\research\\test_cosworks_shell_group.py",
-    "swcontainer": "C:\\Users\\vmiguel\\AppData\\Local\\Temp\\bessemer-shell-manager-i3ltly0m\\swcontainer.py",
-    "cfb": "C:\\Users\\vmiguel\\AppData\\Local\\Temp\\bessemer-shell-manager-i3ltly0m\\cfb.py",
-    "third_party_storage_corpus": "C:\\Users\\vmiguel\\AppData\\Local\\Temp\\bessemer-shell-manager-i3ltly0m\\research\\third_party_storage_corpus.py"
+    "cosworks_shell_manager_layout": "C:\\Users\\vmiguel\\AppData\\Local\\Temp\\bessemer-shell-manager-f7qlfbok\\research\\cosworks_shell_manager_layout.py",
+    "test_cosworks_shell_manager": "C:\\Users\\vmiguel\\AppData\\Local\\Temp\\bessemer-shell-manager-f7qlfbok\\research\\test_cosworks_shell_manager.py",
+    "swarchive": "C:\\Users\\vmiguel\\AppData\\Local\\Temp\\bessemer-shell-manager-f7qlfbok\\swarchive.py",
+    "cosworks_shell_group_layout": "C:\\Users\\vmiguel\\AppData\\Local\\Temp\\bessemer-shell-manager-f7qlfbok\\research\\cosworks_shell_group_layout.py",
+    "test_cosworks_shell_group": "C:\\Users\\vmiguel\\AppData\\Local\\Temp\\bessemer-shell-manager-f7qlfbok\\research\\test_cosworks_shell_group.py",
+    "swcontainer": "C:\\Users\\vmiguel\\AppData\\Local\\Temp\\bessemer-shell-manager-f7qlfbok\\swcontainer.py",
+    "cfb": "C:\\Users\\vmiguel\\AppData\\Local\\Temp\\bessemer-shell-manager-f7qlfbok\\cfb.py",
+    "third_party_storage_corpus": "C:\\Users\\vmiguel\\AppData\\Local\\Temp\\bessemer-shell-manager-f7qlfbok\\research\\third_party_storage_corpus.py"
   },
-  "tests_run": 10,
+  "tests_run": 12,
   "successful": true,
-  "snapshot_identity": "e942026dc871d312c908b7ad62212ea595283fe2f92d1aea0c5bdea79bf62b34"
+  "snapshot_identity": "825728e750c8390b4466aa338577994bb8ed60a7b808d9ddcab2889c6f554f7e"
 }

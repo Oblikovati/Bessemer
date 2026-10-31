@@ -11,7 +11,7 @@ checks the same 69 groups /276 bytes through the recovered record grammar,
 with all 79 arguments accepted. The groups occur in both reports; adding the
 report counts would inflate the unique denominator.
 
-All ten checks pass, including the six original tests, exact original source
+All twelve checks pass, including the six original tests, exact original source
 hashes, complete retained clauses, installed DLL function/threshold/literal
 bindings and fresh envelope/CFB recovery. No target code executes. Original
 reports retain decoded values and complete spans as provenance; generated native
@@ -29,9 +29,12 @@ group tests also cover the profile boundary, narrow/wide text and raw NaN.
 Native groups remain empty; populated-record coverage is static and synthetic.
 
 Run `python -B -X utf8 docs/features/simulation-shell-manager/freeze_shell.py`
-for strict replay. `--write` initializes evidence for review. Complete independent
-primitive-field/edit/history oracles, typed APIs, resource/identity/ownership and
-concurrency checks, full local and exact-head platform gates remain pending.
+for strict replay. `--write` initializes evidence for review. Independent owned primitive boundaries and complete scalar-edit/history
+expectations now match the actual reader. Header edits change one mandatory
+word; populated group edits change one known word, and empty groups retain a
+no-op control. Rust parity, native full-field/edit projections, typed APIs,
+resource/identity/ownership and concurrency checks, full local and exact-head
+platform gates remain pending.
 Shell/midsurface Property, inline Material, composites, runtime dispatch, field
 meanings, geometry and native CAD writer/application acceptance are separate work.
 Humanizer was unavailable; maintainer prose review remains pending.
