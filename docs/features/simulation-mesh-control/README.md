@@ -67,9 +67,25 @@ zero failures and 95 explicit ignores across 262 summaries.
 exact code revision and log hash. Counted-record and exact-head platform
 acceptance remain separate.
 
-The counted-record Rust codec, its independent owned field/span/coverage/history
-oracles, malformed grammar and extent tests, resource/fixed-cap controls and
+The counted-record reference corpus now contains 322 owned contexts across 62
+versions: 446 direct records and 62 completed-empty collections. Independent
+literals cross every base/reference/optional and derived threshold, mix empty and
+populated bases, retain repeated nonnull archive occurrences and exercise raw
+floating-point/text edge cases. Twelve additional controls preserve out-of-range
+mode words in zero-count final curve tables. Record/base extents are constructed
+independently and match the actual reader; every source span is contiguous,
+hash-checked and accounts for the complete body.
+
+All 17 extended strict reference checks pass. Complete owned/native primitive and
+ordered edit-history packets are retained, including count no-ops for empty
+collections and all scoped nested archive parents. The original native input
+packet is unchanged. [Record oracle verification](records-oracle-verification.json)
+records counts, packet/source hashes and exclusions.
+
+The counted-record Rust codec, independent coverage/budget expectations,
+malformed grammar and extent tests, resource/fixed-cap controls and
 isolation/concurrency remain pending. Full local/platform gates for the completed
-combined feature also remain pending. Native writer/application and geometry acceptance, field
+combined feature also remain pending. Native writer/application and geometry
+acceptance, field
 meanings, unrepresented native profiles and whole-format parity remain unproven.
 Humanizer was unavailable; maintainer prose review remains pending.
