@@ -1,0 +1,33 @@
+{
+  "feature_issue": 160,
+  "implementation_parent": "d6d63405e4891282768fb8bcfda4f3939d94d0c0",
+  "binding_tests": 8,
+  "combined_reference_checks": 11,
+  "failures": 0,
+  "reference_exit_code": 0,
+  "reference_process_reaped": true,
+  "reference_log_sha256": "d5c09b84c80eac1e4b42f2dde59f6fc09c5f5d07653834a75910a93e18210696",
+  "source_snapshot_sha256": "dac98e851c5234007e4196942ddfa282897a3caca1e3e96769f27e3396c58b75",
+  "scripts_sha256": {
+    "freeze_inventory_bindings.py": "dfec3888c2bef6b7cc2513d683e2cb391fee2d2c24e8846695d617a759dcbe3e",
+    "freeze_shell_inventory.py": "f69b2fedf9a80fa7635b6ff30918e7bb6c0b96075834fb1fb2adde868ba46ed2",
+    "shell_inventory_bindings.py": "78c22039e5ef3c5fc8bba4c1715b92691427ae568d5dc455d996a317eed48d14",
+    "shell_inventory_replay.py": "f273446cfb836b4c4e227d79ecd343adea92233d85dd90ceb3edeea46a3af945"
+  },
+  "native_packet": {
+    "streams": 936,
+    "packet_bytes": 1844374,
+    "packet_sha256": "a5aeca4bd40e9022e0aa4182b9d7c630f252bcc15c60e3931eab222e785d13a8",
+    "complete_streams": 935,
+    "incomplete_streams": 1,
+    "original_arguments": 1008,
+    "accepted": 962,
+    "rejected": 46,
+    "target_executed": false
+  },
+  "exclusions": [
+    "Combined typed Rust acceptance, owned platform fixtures, history and deterministic process exports remain pending.",
+    "Full local and exact-head platform gates remain pending for this feature.",
+    "No target execution, native application or geometry acceptance, or whole-format completion is claimed."
+  ]
+}
