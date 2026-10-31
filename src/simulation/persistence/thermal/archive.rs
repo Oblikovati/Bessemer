@@ -93,9 +93,9 @@ impl SimulationThermalCollection {
     }
 }
 
-pub(in crate::simulation::persistence) fn construction_mismatch(
-    supplied: &[SimulationThermalField],
-    parsed: &[SimulationThermalField],
+pub(in crate::simulation::persistence) fn construction_mismatch<T: std::fmt::Debug + PartialEq>(
+    supplied: &[T],
+    parsed: &[T],
     entity: &str,
 ) -> crate::BessemerError {
     let index = supplied
