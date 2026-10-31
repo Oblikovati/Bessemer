@@ -272,3 +272,6 @@ mod load_history;
 mod history_projection;
 #[path = "simulation_inertial_collections/nested_history.rs"]
 mod nested_history;
+
+#[path = "support/binary_load_limits.rs"]
+mod load_limits;

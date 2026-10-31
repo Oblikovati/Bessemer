@@ -15,18 +15,6 @@ fn targeted_mutations_match_complete_actual_reference_acceptance() {
     assert_eq!((accepted, rejected), (0, 15927));
 }
 
-fn splice_mutant(cursor: &mut &[u8], original: &[u8]) -> Vec<u8> {
-    let start = word(cursor);
-    let removed = word(cursor);
-    let size = word(cursor);
-    let (replacement, remaining) = cursor.split_at(size);
-    *cursor = remaining;
-    let mut image = original[..start].to_vec();
-    image.extend_from_slice(replacement);
-    image.extend_from_slice(&original[start + removed..]);
-    image
-}
-
 fn read_budget_case(cursor: &mut &[u8]) -> SimulationInertialCollection {
     let kind = KINDS[word(cursor)];
     let version = SimulationPersistVersion::new(word(cursor) as i32).unwrap();
@@ -37,14 +25,7 @@ fn read_budget_case(cursor: &mut &[u8]) -> SimulationInertialCollection {
 }
 
 fn reference_limits(cursor: &mut &[u8]) -> SimulationInertialLimits {
-    let mut limits = LIMITS;
-    limits.maximum_entries = word(cursor);
-    limits.maximum_text_bytes = word(cursor);
-    limits.embedded.maximum_bytes = word(cursor);
-    limits.embedded.maximum_objects = word(cursor);
-    limits.maximum_fields = word(cursor);
-    limits.embedded.maximum_fields = word(cursor);
-    limits
+    super::load_limits::read_reference_limits(cursor, LIMITS)
 }
 
 fn assert_budget_failure(
@@ -69,21 +50,7 @@ fn assert_reduced_budgets(
     collection: &SimulationInertialCollection,
     exact: SimulationInertialLimits,
 ) {
-    for index in 0..7 {
-        let mut limits = exact;
-        let value = match index {
-            0 => &mut limits.maximum_bytes,
-            1 => &mut limits.maximum_fields,
-            2 => &mut limits.maximum_entries,
-            3 => &mut limits.maximum_text_bytes,
-            4 => &mut limits.embedded.maximum_bytes,
-            5 => &mut limits.embedded.maximum_objects,
-            _ => &mut limits.embedded.maximum_fields,
-        };
-        if *value == 0 {
-            continue;
-        }
-        *value -= 1;
+    for limits in super::load_limits::reduced_limits(exact) {
         assert_budget_failure(collection, limits);
     }
 }
@@ -151,23 +118,13 @@ fn assert_prefix_rejections(
 
 fn check_reference_mutations(cursor: &mut &[u8]) -> (usize, usize) {
     let collection = read_budget_case(cursor);
-    let (mut accepted, mut rejected) = (0, 0);
-    for _ in 0..word(cursor) {
-        let expected = word(cursor) != 0;
-        let image = splice_mutant(cursor, &collection.to_bytes());
-        let result = SimulationInertialCollection::from_bytes(
-            &image,
+    super::load_limits::check_mutations(cursor, &collection.to_bytes(), |image| {
+        SimulationInertialCollection::from_bytes(
+            image,
             collection.version(),
             collection.kind(),
             LIMITS,
-        );
-        assert_eq!(
-            result.is_ok(),
-            expected,
-            "expected actual reference acceptance"
-        );
-        accepted += usize::from(expected);
-        rejected += usize::from(!expected);
-    }
-    (accepted, rejected)
+        )
+        .is_ok()
+    })
 }
