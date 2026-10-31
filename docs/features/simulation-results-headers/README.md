@@ -101,7 +101,11 @@ checking every edit's ordered history. All 16 focused Rust checks pass,
 including three native checks; Clippy passes with warnings denied.
 [Adversarial verification](adversarial-verification.json) records the evidence.
 
-Full local/platform gates remain pending. Dialog, graph and auxiliary
+The full local `cargo xtask pr` gate passed at runtime commit
+`c982fa703fd9b81e97f086952d63cc37f6c8d5c8`: 3,506 tests passed, zero failed,
+and 105 were ignored across 265 summaries. The process exited successfully;
+[full gate verification](full-gate-verification.json) records its tree and log hash.
+Exact-head platform and ThreadSanitizer gates remain pending. Dialog, graph and auxiliary
 streams are separate serializers and receive no coverage from this inventory.
 Native application opening, historical writer symmetry, business meanings,
 geometry validation and whole-format parity remain unproven.
