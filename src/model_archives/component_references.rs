@@ -68,9 +68,7 @@ pub(super) fn base_record(
 }
 
 fn base_fields(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    reader.i32s(BASE_PREFIX)?;
-    let old = reader.i32("unknown_84")?;
-    absent_payload(reader, "old component-reference payload", old)?;
+    base_head(reader)?;
     reader.i32("unknown_a0")?;
     reader.u32("unknown_34")?;
     reader.i32s(BASE_SUFFIX)?;
@@ -79,6 +77,12 @@ fn base_fields(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<
     }
     optional_text(reader, "has_string_b8", "unknown_b8")?;
     modern_suffix(reader)
+}
+
+pub(super) fn base_head(reader: &mut ModelDecoder<'_>) -> Result<()> {
+    reader.i32s(BASE_PREFIX)?;
+    let old = reader.i32("unknown_84")?;
+    absent_payload(reader, "old component-reference payload", old)
 }
 
 const BASE_PREFIX: &[&str] = &[

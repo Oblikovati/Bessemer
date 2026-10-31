@@ -1,0 +1,13 @@
+{
+  "issue": 134,
+  "change": "Extracted the six common signed component words and guarded old-reference presence field; ordinary context checks, subsequent words and suffixes remain unchanged.",
+  "fixture": "tests/fixtures/model-archives/component-reference-cases.bin",
+  "fixture_sha256": "4b6c104938ab8d9fe60d9e0c67d8943f13ce68d5baf4dd7232557f7f836c0f71",
+  "complete_cases": 188,
+  "independent_fields": 5402,
+  "command": "cargo test --lib component_reference_tests",
+  "before": {"passed": 5, "failed": 0},
+  "after": {"passed": 5, "failed": 0},
+  "coverage": ["Complete independent fields and exact reconstruction", "All prefixes and trailing bytes", "Unsupported branches and invalid edge counts", "Null and cached object identities", "Source ownership and parallel reconstruction"],
+  "excluded": ["Historical embedded holder behavior", "Complete thermal interoperability"]
+}
