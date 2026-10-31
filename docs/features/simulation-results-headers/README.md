@@ -85,8 +85,23 @@ these layouts contain no embedded archives. Fully supplied 100,000 and 100,001
 historical text-list controls pass and fail respectively; the accepted control
 also constructs all 100,002 physical fields. Clippy passes with warnings denied.
 
-Generated malformed outcomes, changed-value unsigned/text edits, caller isolation,
-mixed concurrency and full local/platform gates remain pending. Dialog, graph and auxiliary
+The final source replay passes all 22 checks. Rust matches all 3,965 targeted
+count/text mutations: 3,962 rejected inputs and three complete accepted
+reinterpretations, each also passing construction. Both readers reject every
+one of the 7,961 owned proper prefixes and all 660 appended-byte cases.
+
+Changed-value checks cover 3,035 edits: 1,030 signed words, 370 unsigned words and
+1,635 raw text frames. Null, empty, odd, surrogate and different-length text
+replacements preserve all unaffected fields, shifted offsets and ordered
+source/replacement parents. Current writer contexts also retain their selected
+dialect through edits and no-ops. Caller byte buffers and field vectors remain
+isolated after success and failed requests. Eight workers execute 34,840 mixed
+operations, matching complete serial bytes, fields, offsets and coverage while
+checking every edit's ordered history. All 16 focused Rust checks pass,
+including three native checks; Clippy passes with warnings denied.
+[Adversarial verification](adversarial-verification.json) records the evidence.
+
+Full local/platform gates remain pending. Dialog, graph and auxiliary
 streams are separate serializers and receive no coverage from this inventory.
 Native application opening, historical writer symmetry, business meanings,
 geometry validation and whole-format parity remain unproven.

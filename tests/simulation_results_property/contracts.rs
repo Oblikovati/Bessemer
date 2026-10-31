@@ -73,12 +73,21 @@ fn current_writers_are_explicit_and_only_match_compatible_reader_shapes() {
         assert_eq!(rebuilt.to_bytes(), body.to_bytes());
         assert_eq!(rebuilt.context(), writer);
         assert_eq!(rebuilt.coverage().context, writer);
+        assert_writer_edits(&rebuilt);
         let old = SimulationPersistVersion::new(0).unwrap();
         assert!(
             SimulationResultsProperty::from_bytes(&rebuilt.to_bytes(), context(level, old), LIMITS)
                 .is_err()
         );
     });
+}
+
+fn assert_writer_edits(body: &SimulationResultsProperty) {
+    for (index, replacement) in typed_edits::choices(body) {
+        let edit = typed_edits::replace(body, index, replacement);
+        assert_eq!(edit.archive().context(), body.context());
+        assert_noop(body, index);
+    }
 }
 
 fn assert_send_sync<T: Send + Sync>() {}
@@ -101,4 +110,32 @@ fn every_public_results_contract_is_send_and_sync() {
     assert_send_sync::<SimulationResultsLimits>();
     assert_send_sync::<SimulationResultsCheckMode>();
     assert_send_sync::<SimulationResultsDiagnostic>();
+}
+
+fn assert_caller_isolation(body: &SimulationResultsProperty) {
+    let original = body.to_bytes();
+    let mut caller = original.clone();
+    let read = SimulationResultsProperty::from_bytes(&caller, body.context(), LIMITS).unwrap();
+    caller.fill(255);
+    assert_eq!(read.to_bytes(), original);
+    let mut fields = read.fields().to_vec();
+    let built =
+        SimulationResultsProperty::from_fields(fields.clone(), body.context(), LIMITS).unwrap();
+    fields[0].path = "caller-mutated".into();
+    fields[0].value = SimulationResultsValue::Unsigned(0);
+    assert_eq!(built.fields(), body.fields());
+    assert_eq!(built.to_bytes(), original);
+    let id = read.field_id(0).unwrap();
+    assert!(
+        read.edit_field(&id, SimulationResultsValue::Unsigned(0))
+            .is_err()
+    );
+    assert_eq!(read.field_id(0).unwrap(), id);
+    assert_eq!(read.to_bytes(), original);
+    assert_eq!(body.to_bytes(), original);
+}
+
+#[test]
+fn mutable_caller_inputs_and_vectors_are_isolated_after_success_and_failure() {
+    each_owned(|_, _, body| assert_caller_isolation(&body));
 }

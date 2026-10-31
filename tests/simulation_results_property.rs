@@ -2,6 +2,8 @@
 use bessemer::simulation::*;
 #[path = "simulation_results_property/budgets.rs"]
 mod budgets;
+#[path = "simulation_results_property/concurrency.rs"]
+mod concurrency;
 #[path = "simulation_results_property/contracts.rs"]
 mod contracts;
 #[path = "simulation_results_property/history.rs"]
@@ -22,6 +24,20 @@ mod load_history;
 mod load_projection;
 #[path = "simulation_results_property/malformed.rs"]
 mod malformed;
+#[path = "simulation_results_property/typed_edits.rs"]
+mod typed_edits;
+#[allow(
+    dead_code,
+    reason = "Results has no nested archives; other families use the shared nested assertions."
+)]
+#[path = "support/typed_load_history.rs"]
+mod typed_load_history;
+#[allow(
+    dead_code,
+    reason = "Shared value encoders also support embedded and raw-byte corpus families."
+)]
+#[path = "support/typed_load_values.rs"]
+mod typed_load_values;
 use load_projection::*;
 
 const EXPECTED: &[u8] = include_bytes!("fixtures/simulation-results-headers/projection.bin");
