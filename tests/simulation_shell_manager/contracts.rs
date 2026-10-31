@@ -44,6 +44,7 @@ fn assert_lowered_header_cap(
 
 fn check_exact_budgets(header: &SimulationShellManagerProperty) {
     let exact = exact_header_limits(header);
+    assert_exact_header_construction(header, exact);
     assert_eq!(
         decode(header, &header.to_bytes(), exact)
             .unwrap()
@@ -56,6 +57,20 @@ fn check_exact_budgets(header: &SimulationShellManagerProperty) {
     let mut fields = exact;
     fields.maximum_fields -= 1;
     assert_lowered_header_cap(header, fields);
+}
+
+fn assert_exact_header_construction(
+    header: &SimulationShellManagerProperty,
+    limits: SimulationShellManagerLimits,
+) {
+    let constructed = SimulationShellManagerProperty::from_fields(
+        header.fields().to_vec(),
+        header.version(),
+        header.wire_profile(),
+        limits,
+    )
+    .unwrap();
+    assert_eq!(constructed.to_bytes(), header.to_bytes());
 }
 
 #[test]

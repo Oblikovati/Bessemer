@@ -1,56 +1,72 @@
-# ShellManager header and group evidence
+# ShellManager headers and direct groups
 
-Feature [#156](https://github.com/Oblikovati/Bessemer/issues/156) tracks complete
-typed interoperability for specification 14.363/C-741 and 14.368/C-747.
-Direct header reading, complete construction and isolated edits are implemented.
-The populated group API remains pending.
+Feature [#156](https://github.com/Oblikovati/Bessemer/issues/156) implements
+complete reads, validated construction and isolated edits for specification
+14.363/C-741 and 14.368/C-747. The wire-validation behavior profile is 1.
 
-Fresh recovery matches every original argument dictionary and payload hash.
-C-741 contains 430 streams /3,164 bytes and 474 arguments: 444 accepted and
-30 failed. These include 361 direct headers and 69 empty groups. C-747 separately
-checks the same 69 groups /276 bytes through the recovered record grammar,
-with all 79 arguments accepted. The groups occur in both reports; adding the
-report counts would inflate the unique denominator.
+`SimulationShellManagerProperty` retains signed +C8 and adds +10C only above
+reader version 800027. The explicit Writer profile always includes both words.
+`SimulationShellGroup` reads a signed count followed by direct records: four MFC
+CStrings, two signed words, a raw double, three signed words and +84 from reader
+version 890016 or under Writer. These groups have no object tags or embedded
+archive-version header. Header values, group counts and CFB enumeration remain
+separate; destination offsets do not assign business meanings.
 
-All fourteen reference checks pass, including the six original tests, exact original source
-hashes, complete retained clauses, installed DLL function/threshold/literal
-bindings and fresh envelope/CFB recovery. No target code executes. Original
-reports retain decoded values and complete spans as provenance; generated native
-packets remain under `target/`.
+Both APIs require normalized `SimulationPersistVersion`, explicit
+`SimulationShellWireProfile` and caller budgets. Writer selects unconditional
+late fields; CString representation remains explicit and retained. The installed
+string writer emits wide strings, while native narrow conversion can depend on
+locale. Callers can construct wide values with `ArchiveString::new` and
+`TextEncoding::Utf16`; the library does not infer a locale or normalize existing
+narrow frames. This profile does not claim native writer execution.
 
-Direct header reading includes +C8 and adds +10C only above version 800027.
-The current writer always emits both. Group records use four MFC CStrings,
-two signed words, a raw double, three signed words and +84 from reader version
-890016 or under the explicit current writer profile. CwPersist text framing,
-object tags and embedded archive-version words do not belong to this group format.
-Sixty independent reader/current-writer header profiles and 72 group profiles match known literal
-values, including empty/multiple records, all three MFC length widths, embedded
-NUL, Latin-1/UTF-16, signed extremes and raw floating-point patterns. The original
-group tests also cover the profile boundary, narrow/wide text and raw NaN.
-Native groups remain empty; populated-record coverage is static and synthetic.
+Group limits cover all input/output bytes, primitive occurrences, declared records
+and aggregate CString payload bytes. Length/encoding prefixes count toward whole
+bytes, rather than text payload. CString lengths are checked against the remaining
+aggregate text budget before decoding. The recovered bounded-reader cap is
+100,000 records. Exact EOF is mandatory, including a zero-record group's count.
 
-`SimulationShellManagerProperty` requires a normalized version, explicit
-`SimulationShellWireProfile::Reader` or `Writer`, and caller budgets. Reader
-version 800027 has one word; Writer retains two even at that supplied version.
-Coverage retains both the version and selected grammar. Construction revalidates
-the complete shape; edits retain immutable source/replacement/result, exact
-surrounding bytes and all ordered source/replacement field parents.
+Published bodies and edits are immutable. IDs belong to one revision; no-ops keep
+those identities. Changed values receive complete ordered source/replacement
+history, with exact surrounding-byte preservation. CString prefix width and
+encoding affect wire no-ops even when decoded text matches. Doubles retain raw
+bits, including NaN payloads and signed zero. Coverage returns completion, selected
+grammar, limits, diagnostics and achieved pattern error together.
 
-All 13 focused header tests pass, including explicit native inputs. Both fresh
-processes match every owned/native field and history byte against independent
-expectations. Fourteen public types have Send/Sync assertions; eight workers
-perform 32 mixed edits each against three serial options. Exact/one-below byte
-and field budgets, zero entry/text requirements, all proper prefixes/trailing
-bytes, typed shape/kind errors, no-ops, revision ownership and input isolation
-are checked. See [header verification](header-interop-verification.json).
+Fresh recovery matches every original dictionary and payload hash. C-741 contains
+430 streams /3,164 bytes and 474 arguments: 444 accepted, 30 failed. These are
+361 direct headers and 69 empty groups. C-747 separately checks those same groups
+/276 bytes with all 79 arguments accepted. Adding both report counts would inflate
+the unique denominator. Native groups remain empty; populated-record evidence is
+installed static recovery plus independent owned literals.
+
+All 19 strict reference checks pass, including six original tests, complete retained
+clauses, exact source hashes and installed function/threshold/literal bindings.
+Thirty historical-reader and 30 current-writer header profiles match full fields
+and edit history. Seventy-two group profiles cover empty/multiple records, all MFC
+length widths, embedded NUL, Latin-1/UTF-16 and signed/raw-double patterns. All 312
+owned typed edits include prefix-width and explicit encoding changes. The 876
+mutants retain 192 accepted controls and 684 rejections. Every one of 1,583,832
+proper prefixes and all trailing-byte cases fail. Complete 100,000/100,001-record
+payloads independently establish the fixed cap without insufficient-byte masking.
+
+All 36 focused Rust tests pass with explicit native inputs, and clippy passes with
+warnings denied. Two fresh processes match complete fields and ordered histories
+against independent Source packets. Compile-time assertions cover header/group,
+profile and shared CString types. Each API's eight-worker, 32-edit mixed test
+matches three serial options. Tests also cover exact/one-below budgets, zero text
+requirements, typed errors, every field's no-op, foreign/stale IDs, malformed
+construction, partial-reparse failure and mutable-input/caller-field isolation.
+See [combined verification](interop-verification.json), the earlier
+[header ledger](header-interop-verification.json) and isolated shared-helper proofs.
 
 Run `python -B -X utf8 docs/features/simulation-shell-manager/freeze_shell.py`
-for strict replay; `--write` initializes evidence for review. Independent owned
-group primitive boundaries and complete scalar-edit/history expectations match
-the actual reader. Populated groups change one known word; empty groups retain
-a no-op control. Group Rust parity, native group projections, group resource/
-identity/ownership/concurrency checks and full local/exact-head platform gates
-remain pending.
-Shell/midsurface Property, inline Material, composites, runtime dispatch, field
-meanings, geometry and native CAD writer/application acceptance are separate work.
-Humanizer was unavailable; maintainer prose review remains pending.
+for strict replay; `--write` initializes evidence for review. Original reports can
+contain decoded values and spans. Generated native packets stay under `target/`.
+No target code executes. The full local and exact-head platform gates remain pending.
+
+Shell/midsurface Property, inline Material, composites, runtime dispatch, native
+locale conversion, field meanings, geometry and native CAD writer/application
+acceptance are separate work. Earlier source checkpoints remain retained; no
+earlier Bessemer group implementation is replaced. Humanizer was unavailable;
+maintainer prose review remains pending.

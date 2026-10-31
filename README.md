@@ -610,7 +610,8 @@ original version arguments across seven typed payload families. Six incomplete
 SurfaceBody occurrences remain errors within the denominator. See
 [the complete inventory evidence](docs/features/simulation-solid-inventory/README.md).
 
-Direct ShellManager headers preserve historical reader gates and the current
-writer's unconditional two-word layout through an explicit wire profile. Complete
-construction and isolated edits retain exact bytes, identities and ordered history.
-See [the ShellManager evidence](docs/features/simulation-shell-manager/README.md).
+Direct ShellManager headers and group records retain explicit reader/current-writer
+late-field profiles. Groups preserve MFC CString encodings/prefix widths and raw
+double bits under aggregate caller budgets. Complete construction and isolated
+edits retain exact bytes, identities and ordered history. Populated native group
+coverage remains unproven; see [the ShellManager evidence](docs/features/simulation-shell-manager/README.md).

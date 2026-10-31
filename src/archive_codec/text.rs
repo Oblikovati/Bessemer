@@ -79,6 +79,20 @@ impl ArchiveString {
         read_text(cursor, count, width, encoding)
     }
 
+    pub(crate) fn decode_bounded(
+        cursor: &mut ArchiveCursor<'_>,
+        maximum_payload_bytes: usize,
+    ) -> Result<(Self, usize)> {
+        let (count, width, encoding) = string_header(cursor)?;
+        let size = text_byte_count(count, encoding)?;
+        if size > maximum_payload_bytes {
+            return Err(malformed(format!(
+                "CString payload {size} bytes; expected <= {maximum_payload_bytes}"
+            )));
+        }
+        Ok((read_text(cursor, count, width, encoding)?, size))
+    }
+
     pub(crate) fn encoded_size(&self) -> Result<usize> {
         let count = encoded_count(&self.text, self.encoding)?;
         let prefix = match self.width {

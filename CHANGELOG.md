@@ -38,7 +38,7 @@
 
 ### Added
 
-- Added complete ShellManager header construction and isolated edits with explicit historical reader and current-writer wire profiles. (#156)
+- Added complete ShellManager headers and direct group records with explicit late-field profiles, retained MFC string frames, aggregate budgets and isolated edit history. (#156)
 
 - Added fresh seven-family SolidManager inventory reconciliation and typed complete-read/construction gates while retaining six incomplete SurfaceBody occurrences as failures. (#154)
 

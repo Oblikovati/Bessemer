@@ -1,6 +1,6 @@
 {
   "issue": 156,
-  "status": "Direct header API and explicit reader/current-writer profiles verified; group API and full feature gates pending",
+  "status": "Direct header API verified; see interop-verification.json for complete combined feature scope",
   "focused_including_native": 13,
   "strict_reference_checks": 14,
   "owned_header_cases": 60,
@@ -33,9 +33,7 @@
   "platform_integration": "pending",
   "writer_scope": "Installed static unconditional two-word grammar; explicit compatible-reader control at 800028. No native writer execution.",
   "pending": [
-    "Typed group API and full field/edit/history parity",
-    "Remaining malformed/count/aggregate-budget controls for groups",
-    "Full local and exact-head platform integration"
+    "Full local and exact-head platform gates"
   ],
   "humanizer": "Unavailable; maintainer prose review pending"
 }

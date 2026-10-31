@@ -3,6 +3,6 @@
 pub enum SimulationShellWireProfile {
     /// Apply the historical reader's version gates; e.g. `Self::Reader`.
     Reader,
-    /// Apply the installed current writer's unconditional late fields; e.g. `Self::Writer`.
+    /// Apply the current writer's unconditional late fields, retaining explicit CString encodings; e.g. `Self::Writer`.
     Writer,
 }

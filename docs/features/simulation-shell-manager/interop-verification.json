@@ -1,0 +1,105 @@
+{
+  "issue": 156,
+  "behavior_profile": 1,
+  "status": "Complete scoped header/group interop; full local and exact-head platform gates pending",
+  "kernel_decision": "Exact stored-wire framing with normalized supplied versions and explicit historical-reader/current-writer late-field profiles. Retain caller CString representation, raw double bits and every physical occurrence. No native locale conversion or version dispatch inferred.",
+  "apis": [
+    "SimulationShellManagerProperty",
+    "SimulationShellGroup"
+  ],
+  "native": {
+    "unique_streams": 430,
+    "logical_bytes": 3164,
+    "arguments": 474,
+    "accepted": 444,
+    "failed": 30,
+    "headers": {
+      "streams": 361,
+      "bytes": 2888,
+      "arguments": 395,
+      "accepted": 365,
+      "failed": 30
+    },
+    "groups": {
+      "streams": 69,
+      "bytes": 276,
+      "arguments": 79,
+      "accepted": 79,
+      "failed": 0,
+      "populated_native": 0
+    },
+    "scope": "C-747 repeats the 69 C-741 groups; no denominator inflation."
+  },
+  "owned": {
+    "header_profiles": 60,
+    "group_profiles": 72,
+    "typed_group_edits": 312,
+    "native_group_noops": 79,
+    "group_mutations": {
+      "outcomes": 876,
+      "accepted": 192,
+      "rejected": 684
+    },
+    "proper_group_prefixes": 1583832,
+    "group_trailing_cases": 72,
+    "hardcap_counts": [
+      100000,
+      100001
+    ]
+  },
+  "focused": {
+    "header_tests": 13,
+    "group_tests": 23,
+    "total_tests": 36,
+    "explicit_native_inputs": true,
+    "strict_reference_checks": 19,
+    "original_reference_tests": 6,
+    "clippy": "passed -D warnings"
+  },
+  "exports": {
+    "header": {
+      "fields": {
+        "bytes": 32260,
+        "sha256": "7f60fbffb975e9f69e064dba38957e9a7948b515199d92ae9afab6821d69e381",
+        "fresh_processes": 2
+      },
+      "history": {
+        "bytes": 62500,
+        "sha256": "aab768104829c9160fb6f86ed261ae2790add7bec4073510ef02353d650e7c74",
+        "fresh_processes": 2
+      }
+    },
+    "group": {
+      "fields": {
+        "bytes": 3990111,
+        "sha256": "b6c5ac55cf2e82e64d21c301d64370bc22405b3fd734155c40d836a9867a3dbe",
+        "fresh_processes": 2
+      },
+      "history": {
+        "bytes": 26380979,
+        "sha256": "32fbf363a7c858e814ac8d5bd403d0dd9a073f919ad5478da2c8a6427431a4c5",
+        "fresh_processes": 2
+      }
+    }
+  },
+  "ownership": "Mutable raw inputs and caller field vectors isolated after success/failure; all-field no-ops retain revisions; wrong-kind, malformed construction and foreign/stale/out-of-bounds requests reject; partial text-reparse failure publishes no result.",
+  "thread_safety": {
+    "header_type_assertions": 14,
+    "group_and_shared_type_assertions": 16,
+    "workers_per_api": 8,
+    "iterations_per_worker": 32,
+    "serial_options": 3,
+    "thread_sanitizer": "pending exact-head platform integration"
+  },
+  "bounds": "Header exact/one-below bytes/fields with zero text/entries; group exact/one-below all four aggregate axes, including positive records with zero text payload. Both complete construction and reading are checked.",
+  "full_local_gate": "pending",
+  "platform_integration": "pending",
+  "prior_behavior": "No earlier Bessemer group API replaced; complete older source checkpoints and original failure alternatives remain retained.",
+  "exclusions": [
+    "Populated native group coverage",
+    "Shell/midsurface Property, inline Material and composite streams",
+    "Native locale conversion and runtime dispatch",
+    "Physical meanings, geometry and native CAD writer/application acceptance"
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending"
+}

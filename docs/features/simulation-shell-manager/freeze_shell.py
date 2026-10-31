@@ -18,6 +18,8 @@ from native_carriers import SOURCE, RESEARCH, digest, recover_sample, pinned_aux
 from owned_shell import owned_shell_groups, owned_shell_headers
 from shell_literal_oracles import shell_literal_spans, shell_literal_edit, shell_literal_history, shell_header_spans, shell_header_edit
 from shell_header_packets import owned_header_packets, native_header_packets
+from shell_group_packets import owned_group_packets, native_group_packets
+from shell_group_adversarial import group_mutation_packet, verify_group_prefixes, verify_group_hardcap
 
 REPORTS = ('cosworks-shell-manager-native-evidence.json', 'cosworks-shell-group-native-evidence.json')
 
@@ -163,6 +165,50 @@ def replay_shell_header_packets(pin: Path) -> None:
                    accepted=365, failed=30, packets=references))
 
 
+def verify_shell_group_owned_packets() -> None:
+    """Freeze every group field, all typed edits and aggregate caller requirements; e.g. verify_shell_group_owned_packets()."""
+    folder = ROOT / 'tests/fixtures/simulation-shell-manager'
+    references: dict[str, object] = {}
+    for name, raw in zip(('projection', 'history', 'budgets'), owned_group_packets(owned_shell_groups()), strict=True):
+        path = folder / f'group-{name}.bin'
+        if '--write' in sys.argv: path.write_bytes(raw)
+        assert path.read_bytes() == raw
+        references[name] = dict(bytes=len(raw), sha256=digest(raw))
+    shell_baseline('group-owned-packets.json', dict(cases=72, edit_cases=312, packets=references,
+                   scope='Both late-field profiles preserve explicit narrow/wide representations; no native locale conversion.'))
+
+
+def replay_shell_group_packets(pin: Path) -> None:
+    """Keep the native empty boundary separate from owned populated record coverage; e.g. replay_shell_group_packets(pin)."""
+    references: dict[str, object] = {}
+    for name, raw in zip(('input', 'projection', 'history', 'budgets'), native_group_packets(pin), strict=True):
+        (ROOT / f'target/simulation-shell-group-native-{name}.bin').write_bytes(raw)
+        references[name] = dict(bytes=len(raw), sha256=digest(raw))
+    shell_baseline('group-native-packets.json', dict(streams=69, logical_bytes=276, arguments=79,
+                   accepted=79, failed=0, edit_cases=79, packets=references,
+                   scope='Every native group is empty; native histories are complete count no-ops.'))
+
+
+def verify_shell_group_mutants() -> None:
+    """Retain all reference mutation outcomes, including valid changed controls; e.g. verify_shell_group_mutants()."""
+    raw, count, accepted = group_mutation_packet()
+    path = ROOT / 'tests/fixtures/simulation-shell-manager/group-malformed.bin'
+    if '--write' in sys.argv: path.write_bytes(raw)
+    assert path.read_bytes() == raw
+    shell_baseline('group-malformed-reference.json', dict(cases=count, accepted=accepted, rejected=count - accepted,
+                   packet_bytes=len(raw), packet_sha256=digest(raw)))
+
+
+def verify_shell_group_prefixes() -> None:
+    """Require every owned truncation and trailing byte to remain incomplete; e.g. verify_shell_group_prefixes()."""
+    verify_group_prefixes(shell_baseline)
+
+
+def verify_shell_group_hardcap() -> None:
+    """Keep fixed-cap controls independent of available-byte/caller-budget failures; e.g. verify_shell_group_hardcap()."""
+    verify_group_hardcap(shell_baseline)
+
+
 def replay_shell_row(row: dict[str, object], streams: dict[str, bytes], group_records: bool) -> bytes:
     """Preserve all original candidate outcomes and complete payloads; e.g. replay_shell_row(row, streams, True)."""
     stream = cast(str, row['stream'])
@@ -213,8 +259,10 @@ def run_shell_checks(pin: Path) -> unittest.TestResult:
     import test_cosworks_shell_group
     replay = update_wrapper(partial(replay_shell_native, pin), replay_shell_native)
     headers = update_wrapper(partial(replay_shell_header_packets, pin), replay_shell_header_packets)
+    groups = update_wrapper(partial(replay_shell_group_packets, pin), replay_shell_group_packets)
     checks = (verify_shell_sources, verify_shell_bindings, verify_shell_owned, verify_shell_literal_oracles,
-              verify_shell_header_oracles, verify_shell_header_owned_packets, headers, replay)
+              verify_shell_header_oracles, verify_shell_header_owned_packets, verify_shell_group_owned_packets,
+              verify_shell_group_mutants, verify_shell_group_prefixes, verify_shell_group_hardcap, headers, groups, replay)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
     for module in (test_cosworks_shell_manager, test_cosworks_shell_group):
         suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(module))
