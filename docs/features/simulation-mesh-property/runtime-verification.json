@@ -1,0 +1,71 @@
+{
+  "feature_issue": 163,
+  "scope": "Complete functional Mesh Property read/construction/edit with initial ownership/provenance checks; final adversarial/resource/concurrency gates remain pending",
+  "implementation_parent": "028c13d79c8260d768650ddef338df3a2d83fc4b",
+  "behavior_profile": 1,
+  "owned_contexts": 588,
+  "native_accepted_arguments": 357,
+  "native_failed_arguments": 34,
+  "direct_owned_records": 574,
+  "nested_owned_records": 716,
+  "first_native_inclusive_tests": 7,
+  "second_native_inclusive_tests": 11,
+  "followup_contract_tests": 4,
+  "all_processes_reaped": true,
+  "all_exit_codes": 0,
+  "clippy_warnings": 0,
+  "compile_time_send_sync_types": 16,
+  "all_field_noops_source_parents_and_identity_checked": true,
+  "foreign_stale_bounds_and_failed_requests_checked": true,
+  "caller_bytes_and_field_vector_isolation_checked": true,
+  "function_and_file_bounds_audited": true,
+  "exports": {
+    "fields": {
+      "bytes": 8271312,
+      "sha256": "0e0a0b602dd8ea9ac6a68b68c56d888e32b1b43f779170fdc22844791acc9dfb",
+      "fresh_processes": 2,
+      "complete_source_match": true
+    },
+    "history": {
+      "bytes": 12255201,
+      "sha256": "40b169d9efbe783eb3d91923435eff987fe731573bba3f92663af86b7a7a68f1",
+      "fresh_processes": 2,
+      "complete_source_match": true
+    }
+  },
+  "artifacts": {
+    "target/mesh-property-runtime-native-first.log": "a7d8f942873f959bc47a1d901de2bdd41b345015794aeb79fa07ab562fdd8d5e",
+    "target/mesh-property-runtime-native-second.log": "7e6f2793799a613fcf81405e5deac23c56fa0c47a2097e3406a67f05e6be0771",
+    "target/mesh-property-runtime-contracts.log": "dfb2d98452cad407d2ad76bdf583e09ed41dead7609815222f7660f39d8a7295",
+    "target/mesh-property-runtime-final-clippy.log": "d25bd980447f32063cd3f1428801c6e1c5ed1153b5f0151256c7fd1cbef5c84d"
+  },
+  "runtime_and_test_sources": {
+    "src/simulation/persistence/mesh_property/archive.rs": "ca3843ec09721b275a5c9b1fe85a84d497c2c9e090ab552db93f5eb9796cb2af",
+    "src/simulation/persistence/mesh_property/contracts.rs": "29fe6956e6a4aa61a2e32540ed1460d623297f36e75f3c3342dd6495a8fc50ea",
+    "src/simulation/persistence/mesh_property/coverage.rs": "0afe7c28483c7ebb307a743b74c157cc321c4cee126329bb68d1719eb6fce9f8",
+    "src/simulation/persistence/mesh_property/decode.rs": "c6615a193e0e207aeff1f655cdc0622e675979b0ccf09bfac20649f34fb06efc",
+    "src/simulation/persistence/mesh_property/direct.rs": "6c5482122b01ce8ede51599c8e904a7bf830389c1ba5d3cfa589963a60d263cc",
+    "src/simulation/persistence/mesh_property/edit.rs": "abd6a5011282a9330816860741eac8d244814c0b8fc7260dc26121e27fa272df",
+    "src/simulation/persistence/mesh_property/initial.rs": "2f36499ed1ba29ce112c818d2d4d0bac1ae5a1c054cd106702525d67d141e94a",
+    "src/simulation/persistence/mesh_property/mod.rs": "2d6ec461efea9b44f46a050ed9f18a489a90778554494d805046fc57978cfadf",
+    "src/simulation/persistence/mesh_property/nested.rs": "4ed07e8e53a7aa15b05c81117635ff10444615fd21d7f876a51978c265c9a62e",
+    "src/simulation/persistence/mesh_property/result.rs": "88babb624aa219d86b1fdc3fb207ba33a3f288754e38ed7f8b5ea79121101de6",
+    "src/simulation/persistence/mesh_property/tail.rs": "865c62a177da8948c437a619b302fb65936749abe3c8901e22e4b2c4e858e888",
+    "src/simulation/persistence/mesh_property/types.rs": "8b66544f7d9fb259491a57df14a86fabce2549e594a6ebc8f3cb7bef57d6d434",
+    "tests/simulation_mesh_property.rs": "4d930f17e614031b0e96ab954a948f9a85d37e20d668585182ba6f3528330a68",
+    "tests/simulation_mesh_property/contracts.rs": "6f69208ceac8e7ef78d4ff5b0f992f594632053f44d28d07fc8c09e68372f462",
+    "tests/simulation_mesh_property/history.rs": "640f42b8a51d13f3d2f2cf4a5910075ae7743b3a7085b0b44a12b87cfdbd13aa",
+    "tests/simulation_mesh_property/records.rs": "1e608f9ae5fe5d1dd21e7d8362d28937fe0bdd9a729b2f23d4d09cc7a0d826df"
+  },
+  "exclusions": [
+    "Independent complete resource statistics and exact/one-below budgets",
+    "Generated malformed outcomes and sufficient-payload hard caps",
+    "Exhaustive prefixes and trailing bytes",
+    "Complete supported changed-value kinds and supplied-archive provenance",
+    "Mixed concurrency",
+    "Full local and exact-head platform/ThreadSanitizer gates",
+    "Native application/writer and geometry acceptance",
+    "Whole-format schema parity"
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending"
+}
