@@ -16,7 +16,8 @@ import pefile
 from pinned_reference_tests import FrozenSourceImports, copy_sources, record_snapshot
 from native_carriers import SOURCE, RESEARCH, digest, recover_sample, pinned_auxiliaries
 from freeze_solid_manager import verify_image
-from owned_body import owned_solid_bodies
+from owned_body import owned_solid_bodies, solid_identifier_archives
+from body_projection import body_projection
 
 
 def baseline(name: str, value: object) -> None:
@@ -49,31 +50,37 @@ def body_input(version: int, raw: bytes, parsed: dict[str, object]) -> bytes:
             + struct.pack('<I', len(spans)) + b''.join(struct.pack('<II', span['offset'], span['end']) for span in spans))
 
 
-def replay_body_row(row: dict[str, object], streams: dict[str, bytes]) -> bytes:
+def replay_body_row(row: dict[str, object], streams: dict[str, bytes]) -> tuple[bytes, bytes]:
     """Keep every exact original argument, including failures; e.g. replay_body_row(row, streams)."""
     raw = streams[cast(str, row['stream'])]
     assert len(raw) == row['bytes'] and digest(raw) == row['sha256']
     packet = bytearray()
+    projected = bytearray()
     for expected in cast(list[dict[str, object]], row['attempts']):
         version = cast(int, expected['version'])
         parsed = actual_body(raw, version)
         assert dict(version=version, **parsed) == expected
         packet.extend(body_input(version, raw, parsed))
-    return bytes(packet)
+        if parsed['success']: projected.extend(body_projection(version, raw, parsed))
+    return bytes(packet), bytes(projected)
 
 
 def replay_native(pin: Path) -> None:
     """Recover all 680 original solid bodies independently; e.g. replay_native(pin)."""
     rows = cast(list[dict[str, object]], retained_report()['rows'])
     packet = bytearray()
+    projected = bytearray()
     for document in sorted({cast(str, row['path']) for row in rows}):
         streams = recover_sample(document, pin)
         for row in (row for row in rows if row['path'] == document):
-            packet.extend(replay_body_row(row, streams))
+            inputs, fields = replay_body_row(row, streams)
+            packet.extend(inputs)
+            projected.extend(fields)
     attempts = [attempt for row in rows for attempt in cast(list[dict[str, object]], row['attempts'])]
     assert len(rows) == 680 and sum(cast(int, row['bytes']) for row in rows) == 855786
     assert len(attempts) == 745 and sum(cast(bool, attempt['success']) for attempt in attempts) == 691
     (ROOT / 'target/simulation-solid-body-native.bin').write_bytes(packet)
+    (ROOT / 'target/simulation-solid-body-native-projection.bin').write_bytes(projected)
     baseline('native-reference.json', dict(streams=680, logical_bytes=855786, arguments=745,
              accepted=691, failed=54, bytes=len(packet), sha256=digest(packet)))
 
@@ -81,18 +88,47 @@ def replay_native(pin: Path) -> None:
 def replay_owned() -> None:
     """Require actual complete framing of independent historical literals; e.g. replay_owned()."""
     packet = bytearray()
+    projected = bytearray()
     cases = owned_solid_bodies()
     for _, version, raw in cases:
         parsed = actual_body(raw, version)
         assert parsed['success'] and parsed['end'] == len(raw), (version, parsed)
         assert parsed['reconstruction_sha256'] == digest(raw)
         packet.extend(body_input(version, raw, parsed))
+        projected.extend(body_projection(version, raw, parsed))
     path = ROOT / 'tests/fixtures/simulation-solid-body/owned.bin'
     if '--write' in sys.argv:
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(packet)
     assert path.read_bytes() == packet
     baseline('owned-reference.json', dict(cases=len(cases), bytes=len(packet), sha256=digest(packet)))
+    save_owned_projection(bytes(projected), len(cases))
+
+
+def save_owned_projection(packet: bytes, count: int) -> None:
+    """Keep every independent typed field in the owned corpus; e.g. save_owned_projection(packet, 240)."""
+    path = ROOT / 'tests/fixtures/simulation-solid-body/projection.bin'
+    if '--write' in sys.argv: path.write_bytes(packet)
+    assert path.read_bytes() == packet
+    baseline('owned-projection-reference.json', dict(cases=count, bytes=len(packet), sha256=digest(packet)))
+
+
+def verify_identifier_profiles() -> None:
+    """Require exact concrete suffixes and reject older/out-of-range inner versions; e.g. verify_identifier_profiles()."""
+    from cosworks_embedded_body_ids import archive_reader
+    packet = bytearray()
+    accepted = 0
+    for raw in solid_identifier_archives():
+        try: end, _ = archive_reader(raw, 0)
+        except ValueError: end = -1
+        success = end == len(raw)
+        accepted += success
+        packet.extend(struct.pack('<II', int(success), len(raw)) + raw)
+    assert accepted == 12
+    path = ROOT / 'tests/fixtures/simulation-solid-body/identifiers.bin'
+    if '--write' in sys.argv: path.write_bytes(packet)
+    assert path.read_bytes() == packet
+    baseline('identifier-reference.json', dict(cases=24, accepted=12, failed=12, bytes=len(packet), sha256=digest(packet)))
 
 
 def verify_prior_successes() -> None:
@@ -191,7 +227,7 @@ def run_checks(pin: Path) -> unittest.TestResult:
     import test_cosworks_embedded_body_ids
     replay = update_wrapper(partial(replay_native, pin), replay_native)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in
-                               (replay, replay_owned, verify_prior_successes, verify_sources, verify_bindings, verify_unimported_boundary, verify_reconciliation_failures))
+                               (replay, replay_owned, verify_identifier_profiles, verify_prior_successes, verify_sources, verify_bindings, verify_unimported_boundary, verify_reconciliation_failures))
     for module in (test_cosworks_solid_body, test_cosworks_embedded_body_ids):
         suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(module))
     return unittest.TextTestRunner(verbosity=2).run(suite)

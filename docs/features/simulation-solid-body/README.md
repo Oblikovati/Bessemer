@@ -6,7 +6,7 @@ reference reports 680 streams /855,786 bytes, with 745 original version
 arguments: 691 accepted and 54 failed alternatives. Those alternatives must
 remain explicit; a successful candidate does not establish runtime dispatch.
 
-All 12 strict reference checks now pass. The initial source guard correctly
+All 13 strict reference checks now pass. The initial source guard correctly
 stopped on a changed `solidworks/modelboundary.py`. A full replay trace recorded
 zero calls to that file, and frozen import origins confirm it is not imported.
 The scoped embedded readers install their own instance dispatch tables. The
@@ -34,3 +34,11 @@ Production typed operations, complete field/edit/history oracles, adversarial
 and resource tests, ownership/concurrency checks and full local/platform gates
 remain pending. Sheet bodies, sibling ComponentPersistID streams, field business
 meanings, native writer/application and geometric acceptance are separate.
+
+The local read/construction prototype matches complete independent fields for
+240 owned profiles and all 691 accepted native arguments, with all 54 failed
+alternatives preserved. Four added identity suffixes retain the 4307 minimum
+and match 24 independent version cases. Two fresh processes match the full
+3,113,446-byte field export. The [basic read ledger](basic-read-verification.json)
+records these checks and the remaining operation gates; this is not complete
+production acceptance.

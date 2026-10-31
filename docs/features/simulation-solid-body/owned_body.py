@@ -68,3 +68,16 @@ def solid_body_literal(version: int, profile: int) -> bytes:
 def owned_solid_bodies() -> list[tuple[int, int, bytes]]:
     """Keep every gate/profile pair in deterministic order; e.g. owned_solid_bodies()."""
     return [(profile, version, solid_body_literal(version, profile)) for version in body_versions() for profile in range(4)]
+
+
+def solid_identifier_archives() -> list[bytes]:
+    """Keep all four concrete suffixes and their strict inner-version boundaries; e.g. solid_identifier_archives()."""
+    layouts = (('moSimpleEdgeIdRep_c', False, 1), ('moCopySurfIdRep_c', True, 1),
+               ('moMacroFeatRefSurfIdRep_c', True, 3), ('moEndCapChamferSurfIdRep_c', False, 2))
+    cases: list[bytes] = []
+    for name, source, count in layouts:
+        prefix = bytes(4) + (bytes(2) if source else b'')
+        words = signed_words(*(-2147483648 if index % 2 == 0 else 2147483647 for index in range(count)))
+        for version in (4281, 4306, 4307, 14000, 19000, 19001):
+            cases.append(struct.pack('<I', version) + tagged_component(name, prefix + words))
+    return cases
