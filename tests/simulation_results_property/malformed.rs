@@ -41,3 +41,28 @@ fn assert_incomplete_images(body: &SimulationResultsProperty) {
 fn every_context_rejects_every_proper_prefix_and_appended_byte() {
     contracts::each_owned(|_, _, body| assert_incomplete_images(&body));
 }
+
+fn check_mutation(cursor: &mut &[u8]) -> bool {
+    let level = read_word(cursor) as usize;
+    let version = SimulationPersistVersion::new(read_word(cursor) as i32).unwrap();
+    let accepted = read_word(cursor) != 0;
+    let size = read_word(cursor) as usize;
+    let raw = take_projection(cursor, size);
+    let parsed = SimulationResultsProperty::from_bytes(raw, context(level, version), LIMITS);
+    assert_eq!(parsed.is_ok(), accepted, "{level}/{version:?}/{raw:?}");
+    if let Ok(body) = parsed {
+        assert_constructed(&body);
+    }
+    accepted
+}
+
+#[test]
+fn all_targeted_count_and_text_mutations_match_actual_complete_reference_acceptance() {
+    let mut cursor = &include_bytes!("../fixtures/simulation-results-headers/malformed.bin")[..];
+    let mut counts = [0; 2];
+    while !cursor.is_empty() {
+        counts[usize::from(check_mutation(&mut cursor))] += 1;
+    }
+    assert_eq!(counts, [3962, 3]);
+    println!("complete malformed rejected/accepted counts: {counts:?}");
+}
