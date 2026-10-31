@@ -1,0 +1,164 @@
+{
+  "feature_issue": 165,
+  "bessemer_parent": "c982fa703fd9b81e97f086952d63cc37f6c8d5c8",
+  "reference_checks": 15,
+  "owned_contexts": 270,
+  "native_arguments": 224,
+  "all_exit_codes": 0,
+  "all_processes_reaped": true,
+  "resource_axes": [
+    "outer bytes",
+    "complete typed fields",
+    "total declared characters",
+    "maximum text payload bytes"
+  ],
+  "character_cap_positions": 4,
+  "full_cap_controls": 8,
+  "negative_count_controls": 4,
+  "accepted_cap_physical_fields": 79,
+  "proper_prefixes": 90630,
+  "appended_bytes": 270,
+  "malformed_cases": 8820,
+  "malformed_accepted": 420,
+  "malformed_rejected": 8400,
+  "source_snapshot_identity": "efd9199e1eceff46d1dca9edc0b22e781b3ec7d6a05c85836ef731cdff56e9ec",
+  "resources": {
+    "budgets.bin": {
+      "bytes": 96030,
+      "sha256": "ff9f073b25f7004adcdbcb40f6ab47160dee76f2abab5328cd5d324efbd73c14"
+    },
+    "native-budgets": {
+      "bytes": 87808,
+      "sha256": "a98ff525a0d1a4a0be681bc04907aec775e12dd5249dbc1c185d62550da06e5f"
+    }
+  },
+  "caps": {
+    "controls": [
+      {
+        "label": "textb0",
+        "count": -1,
+        "accepted": false,
+        "fields": 0,
+        "bytes": 392,
+        "sha256": "9841ddeef5b5b4ac5b24b1d502ea61787736894cd2d6f21ac528ef9280def1c9"
+      },
+      {
+        "label": "textb0",
+        "count": 1024,
+        "accepted": true,
+        "fields": 79,
+        "bytes": 2440,
+        "sha256": "abdcbcfc41edf0162b4c83a8104668bcb9fdf96214bad7df9cb115e41e0277b3"
+      },
+      {
+        "label": "textb0",
+        "count": 1025,
+        "accepted": false,
+        "fields": 0,
+        "bytes": 2442,
+        "sha256": "7865c89071ee423881d1ee003abc3bc45e97f2d0a4f20d403211abc7b28c9664"
+      },
+      {
+        "label": "textb8",
+        "count": -1,
+        "accepted": false,
+        "fields": 0,
+        "bytes": 392,
+        "sha256": "a78ceea0b6c5f868ee6b89f64f5bd9029d95609e04e4f6fead4b95828a6e15b6"
+      },
+      {
+        "label": "textb8",
+        "count": 1024,
+        "accepted": true,
+        "fields": 79,
+        "bytes": 2440,
+        "sha256": "f62257947d3ec46c9e7a363ce886702940dc95f028e0f7c09eed513fba16873a"
+      },
+      {
+        "label": "textb8",
+        "count": 1025,
+        "accepted": false,
+        "fields": 0,
+        "bytes": 2442,
+        "sha256": "64d0b83971793fe4ea98e46a2e58c1b7189a318f42e663ddd0d55e9d15e599cd"
+      },
+      {
+        "label": "textc0",
+        "count": -1,
+        "accepted": false,
+        "fields": 0,
+        "bytes": 392,
+        "sha256": "792f141b3a38c3b206c47cced3b8d8927f90be1885a807b6f4b506bd39ca8e8b"
+      },
+      {
+        "label": "textc0",
+        "count": 1024,
+        "accepted": true,
+        "fields": 79,
+        "bytes": 2440,
+        "sha256": "f9cccdee9439441401b541ca4e684a2485e377b122c5331cba7bf80412833b00"
+      },
+      {
+        "label": "textc0",
+        "count": 1025,
+        "accepted": false,
+        "fields": 0,
+        "bytes": 2442,
+        "sha256": "42ac39059df8a52f684552611d04511381ad55ad9561d7bc92e64ab5e20e8a7b"
+      },
+      {
+        "label": "textd0",
+        "count": -1,
+        "accepted": false,
+        "fields": 0,
+        "bytes": 392,
+        "sha256": "acf34f0e11e999a9132bcd34197fa2f35e3ee2274dd6180da39a5ecced15f0d9"
+      },
+      {
+        "label": "textd0",
+        "count": 1024,
+        "accepted": true,
+        "fields": 79,
+        "bytes": 2440,
+        "sha256": "d5ac37cc40d6cc123ab8874127aed226489f8d21adccaf59a08b16ff155708ec"
+      },
+      {
+        "label": "textd0",
+        "count": 1025,
+        "accepted": false,
+        "fields": 0,
+        "bytes": 2442,
+        "sha256": "e0141935d591ecc4c93d6b60c651daa89e25ea0ad8c270a95ce3e6f6b180e2e5"
+      }
+    ],
+    "packets": {
+      "character-caps.bin": {
+        "bytes": 21240,
+        "sha256": "f1e8acd9dd020c3859441f168bc11425b9442c3bb99b3aba12184a6a062aa485"
+      }
+    }
+  },
+  "malformed": {
+    "cases": 8820,
+    "accepted": 420,
+    "complete_outcomes_sha256": "db6ee2138f52be02cd0623b936be3983c54a3a5f612b1d6d2a5fdfddf0046af1",
+    "packets": {
+      "malformed.bin": {
+        "bytes": 3109998,
+        "sha256": "9af8e0e7c5019f53914ff2c80910522b63f1c53ae46e71d3e6b2488c88ebddb4"
+      }
+    }
+  },
+  "logs": {
+    "target/post-graph-adversarial-write.log": "1277201b97bdd61522acd2f8020b8622880428e40c16c0fac17c8d4680d93c1a",
+    "target/post-graph-adversarial-strict.log": "6bb2486428a981c733d9b7721efc2989b91092da60677f320289638d9af8153e"
+  },
+  "exclusions": [
+    "Rust read/construction/edit acceptance and typed atomic character text",
+    "Exact/one-below resource limits enforced by Rust",
+    "Changed-value edits and complete replacement provenance",
+    "Caller isolation, mixed concurrency and two-process Rust exports",
+    "Full local/platform/ThreadSanitizer gates",
+    "Native application opening and whole-format parity"
+  ]
+}
