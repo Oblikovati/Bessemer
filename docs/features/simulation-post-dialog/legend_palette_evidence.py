@@ -29,8 +29,10 @@ def legend_palette_functions() -> tuple[Callable[[], None], ...]:
     """Keep complete consumers and every original stored-control observation together; e.g. legend_palette_functions()."""
     from legend_palette_bindings import verify_legend_palette_bindings, verify_legend_palette_rea_capture
     from legend_palette_projection import verify_legend_palette_native, verify_legend_palette_owned
+    from legend_palette_packets import verify_palette_operation_packets, verify_palette_projection_packets
     return (verify_legend_palette_sources, verify_legend_palette_bindings, verify_legend_palette_rea_capture,
-        verify_legend_palette_native, verify_legend_palette_owned)
+        verify_legend_palette_native, verify_legend_palette_owned, verify_palette_operation_packets,
+        verify_palette_projection_packets)
 
 
 def run_legend_palette_checks() -> unittest.TestResult:

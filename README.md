@@ -717,6 +717,11 @@ bits, finite numeric views, source field IDs and absolute wire spans. The
 [position-factor evidence](docs/features/simulation-post-dialog/legend-position.md)
 retains conditional field absence and the native pixel-consumer qualifications.
 
+`legend_palette_inputs` preserves raw mapping, reversal, count and gray-enable
+words. Its [local dispatcher plans](docs/features/simulation-post-dialog/legend-palette.md)
+require only reached runtime facts and retain the fixed nine-slot framing,
+count-validity qualifications and unresolved destination algorithms.
+
 
 `SimulationRgbaColor::from_colorref_nearest_even` models the packed constructor:
 the low three bytes supply RGB and alpha becomes one. The high byte is ignored.
