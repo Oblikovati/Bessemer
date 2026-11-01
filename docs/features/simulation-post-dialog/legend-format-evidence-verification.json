@@ -1,0 +1,82 @@
+{
+  "issue": 166,
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "target_executed": false,
+  "additional_stored_byte_credit": 0,
+  "complete_installed_instruction_counts": [
+    67,
+    79
+  ],
+  "independent_ghidra_instruction_count": 146,
+  "native_accepted_contexts": 276,
+  "original_rejected_contexts": 8,
+  "owned_complete_contexts": 425,
+  "opaque_older_owned_contexts": 20,
+  "exact_historical_color_report_transitions": 1,
+  "exact_decoder_qualifications": 1,
+  "decoder_bug": 169,
+  "strict_source": {
+    "checks": 17,
+    "seconds": 4.907,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-format-source-strict.log",
+      "bytes": 2612,
+      "sha256": "b20d79840264e1af292d1ce6acb573019dac767b77959cca7c8482740c346d03"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/legend-format-source-snapshot.json",
+      "bytes": 625411,
+      "sha256": "25912571ee76b528b9f3ecfa578242cb3b9f6f536a94cbf65ae2e601431fb3cf"
+    }
+  },
+  "verifier_files": [
+    {
+      "path": "docs/features/simulation-post-dialog/legend_format_evidence.py",
+      "bytes": 3239,
+      "sha256": "b8ea34020e5b8db7f1a84aadf2b31aea8de514fa80d2f549d2dbf46bba8175c7"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/legend_format_bindings.py",
+      "bytes": 6256,
+      "sha256": "cee4eb9ead68a125487802decaffa48e1b33de1e38787341efc7e2919698ff23"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/legend_format_projection.py",
+      "bytes": 4961,
+      "sha256": "ee896f96e5035d1d558c034996c58a999a0034cadf1a5a7d8d746b33d30a08d7"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/freeze_post_dialog.py",
+      "bytes": 36084,
+      "sha256": "bcbb29f80e2e33066cde6ff128c404bd3531cf9b20fece049b7d2d43170177e6"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/dialog_snapshot_names.py",
+      "bytes": 2197,
+      "sha256": "5878b75782178b8810fdf1cffa35226060db91ef15f4918e1b09ccdc4ba81103"
+    }
+  ],
+  "oracle_kinds": [
+    "Original pinned Source model and both original tests",
+    "Exact complete installed bodies, named exports, five literals and three constants",
+    "Independent Ghidra instruction locations and complete contiguous body extents",
+    "Complete native and owned bodies with original scopes, selected versions and full raw field views",
+    "All original rejected identities matched to retained failed helper attempts",
+    "Eight single-byte mutations, changed register text and unknown-address qualification rejection"
+  ],
+  "excluded": [
+    "Native execution, CRT/MFC rendering, localization and actual runtime value/pointer state",
+    "Treating observations or initializer values as wire restrictions/defaults",
+    "Promoting original modern prefix scope into whole-format acceptance"
+  ],
+  "pending": [
+    "Full221 Source suite",
+    "Typed number-format and alternate-selection operations with independent expected results and ownership/concurrency/process checks",
+    "Remaining documented feature166 models",
+    "Exact publication-cut PR and all five platform gates"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending."
+}
