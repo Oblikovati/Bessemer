@@ -1,0 +1,13 @@
+{
+  "cases": 6628,
+  "oracle": "Original Source caller gate plus reviewed helper unsigned guards and native pointer/stride memory traversal",
+  "kernel_decision": "Missing required snapshots and exceeded explicit budgets fail before publication; unused context does not require group data",
+  "scope": "Only ordered local slot58 requests, color provenance and admitted alpha cap; no native rendering or geometry validation",
+  "additional_stored_byte_credit": 0,
+  "packets": {
+    "aux-triangle-plans.bin": {
+      "bytes": 1274452,
+      "sha256": "bec6cd0ba8e613bdb38fbc3f889e43d947080a427702fc97d8c540d6d6503112"
+    }
+  }
+}
