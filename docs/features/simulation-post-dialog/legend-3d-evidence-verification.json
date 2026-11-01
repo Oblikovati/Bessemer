@@ -1,0 +1,73 @@
+{
+  "issue": 166,
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "target_executed": false,
+  "complete_installed_instruction_counts": [
+    185,
+    247
+  ],
+  "independent_ghidra_instruction_count": 432,
+  "complete_native_body_bytes": 1831,
+  "native_accepted_contexts": 276,
+  "native_count_words": 276,
+  "native_precision_words": 276,
+  "original_rejected_contexts": 8,
+  "owned_complete_contexts": 425,
+  "opaque_older_owned_contexts": 20,
+  "additional_stored_byte_credit": 0,
+  "exact_historical_color_report_transitions": 1,
+  "exact_decoder_qualifications": 0,
+  "initial_freeze": {
+    "checks": 16,
+    "seconds": 7.039,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-3d-source-write.log",
+      "bytes": 2497,
+      "sha256": "1e3ec5e7e279016c9152b960a7792090557210908abe93dde362fccc3a5d8484"
+    }
+  },
+  "strict_source": {
+    "checks": 16,
+    "seconds": 5.189,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-3d-source-strict.log",
+      "bytes": 2497,
+      "sha256": "ceb30d0a92ce10785828cca78833cf8ff53d79bd77bf7190b51de4d57e1fda71"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/legend-3d-source-snapshot.json",
+      "bytes": 625089,
+      "sha256": "d316b3ceccca7e9b74031a5fcc8de8d699a8717ed3df3107389f21c2404367e2"
+    }
+  },
+  "installed_proof": "legend-3d-installed-reference.json",
+  "independent_decoder": "legend-3d-rea-reference.json",
+  "oracle_kinds": [
+    "Complete original C852 report/probes/decompilations and exact historical replay-input transition",
+    "All432 GNU-decoded installed instructions, exact whole-module identities and both named renderer exports",
+    "Independent Ghidra locations and complete contiguous817/1014-byte function extents",
+    "Exact packed-color constructor bytes/provider identity, named float getter export/IAT and lighting/RGB/primitive/shading import bindings",
+    "Complete276 accepted native contexts with original identities, multiplicity, versions, scopes and552 unchanged word observations",
+    "All eight original rejected identities and425 complete owned contexts, twenty opaque absences and signed/malformed word boundaries",
+    "All eight original catalog/style/color unit tests over immutable copied readers"
+  ],
+  "excluded": [
+    "Target execution, independently reproduced geometry/shading/pixel output and safe renderer allocations",
+    "Stored ContourType identity from a plain integer render argument or initial shading as final GL state",
+    "Stored EC/100 background-color aliases, alpha compositing or complete GL state restoration",
+    "Independent float-getter body semantics, actual font/view dimensions and ambient floating-point behavior",
+    "Count/precision validity constraints, absent defaults, new stored-byte credit or expanded native acceptance"
+  ],
+  "pending": [
+    "Full integrated Source replay for this evidence cut",
+    "Typed local rendering-request and background arithmetic projections",
+    "Independent positive-count body geometry/floating-point behavior if projected",
+    "Remaining documented feature166 models",
+    "Exact publication-head cargo xtask pr and all five platform gates"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending."
+}

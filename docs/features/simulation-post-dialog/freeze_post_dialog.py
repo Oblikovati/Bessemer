@@ -91,6 +91,7 @@ from legend_palette_evidence import legend_palette_functions, run_legend_palette
 from legend_height_evidence import legend_height_functions, run_legend_height_checks
 from legend_yield_evidence import legend_yield_functions, run_legend_yield_checks
 from legend_step_evidence import legend_step_functions, run_legend_step_checks
+from legend_3d_evidence import legend_3d_functions, run_legend_3d_checks
 from aux_triangle_evidence import verify_aux_triangle_sources
 from aux_triangle_bindings import verify_aux_triangle_bindings
 from aux_triangle_projection import verify_aux_triangle_native, verify_aux_triangle_projection
@@ -125,7 +126,7 @@ def run_dialog_checks(pin: Path) -> unittest.TestResult:
 
 def run_style_annotation_checks() -> unittest.TestResult | None:
     """Dispatch the concrete stored-style modes without changing the full denominator; e.g. run_style_annotation_checks()."""
-    modes = (('--legend-step-only', run_legend_step_checks), ('--legend-yield-only', run_legend_yield_checks), ('--legend-height-only', run_legend_height_checks), ('--legend-palette-only', run_legend_palette_checks), ('--legend-position-only', run_legend_position_checks), ('--legend-format-only', run_legend_format_checks), ('--preference-colors-only', run_preference_color_checks), ('--mode3-rgb-only', run_mode3_rgb_checks), ('--segment-color-only', run_segment_color_checks), ('--plot54-only', run_plot54_checks), ('--text-controls-only', run_text_control_checks), ('--triangle-selectors-only', run_triangle_selector_checks), ('--aux-triangle-only', run_aux_triangle_checks), ('--annotations-only', run_annotation_checks), ('--vector-style-only', run_vector_style_checks),
+    modes = (('--legend-3d-only', run_legend_3d_checks), ('--legend-step-only', run_legend_step_checks), ('--legend-yield-only', run_legend_yield_checks), ('--legend-height-only', run_legend_height_checks), ('--legend-palette-only', run_legend_palette_checks), ('--legend-position-only', run_legend_position_checks), ('--legend-format-only', run_legend_format_checks), ('--preference-colors-only', run_preference_color_checks), ('--mode3-rgb-only', run_mode3_rgb_checks), ('--segment-color-only', run_segment_color_checks), ('--plot54-only', run_plot54_checks), ('--text-controls-only', run_text_control_checks), ('--triangle-selectors-only', run_triangle_selector_checks), ('--aux-triangle-only', run_aux_triangle_checks), ('--annotations-only', run_annotation_checks), ('--vector-style-only', run_vector_style_checks),
              ('--raw-preferences-only', run_raw_preferences_checks), ('--local-render-only', run_local_render_checks))
     for flag, check in modes:
         if flag in sys.argv: return check()
@@ -168,7 +169,7 @@ def default_dialog_functions(pin: Path) -> tuple[Callable[[], None], ...]:
               verify_offset_fringe_sources, verify_offset_fringe_bindings, verify_offset_fringe_native,
               verify_offset_fringe_packets, verify_offset_fringe_projection,
               verify_vector_sources, verify_vector_bindings, verify_vector_static_tables, verify_vector_table_constants,
-              verify_vector_packets, verify_vector_native, verify_vector_projection) + unit_model_functions() + local_render_functions() + raw_preferences_functions() + vector_style_functions() + annotation_functions() + aux_triangle_functions() + triangle_selector_functions() + text_control_functions() + plot54_functions() + segment_color_functions() + mode3_rgb_functions() + preference_color_functions() + legend_format_functions() + legend_position_functions() + legend_palette_functions() + legend_height_functions() + legend_yield_functions() + legend_step_functions()
+              verify_vector_packets, verify_vector_native, verify_vector_projection) + unit_model_functions() + local_render_functions() + raw_preferences_functions() + vector_style_functions() + annotation_functions() + aux_triangle_functions() + triangle_selector_functions() + text_control_functions() + plot54_functions() + segment_color_functions() + mode3_rgb_functions() + preference_color_functions() + legend_format_functions() + legend_position_functions() + legend_palette_functions() + legend_height_functions() + legend_yield_functions() + legend_step_functions() + legend_3d_functions()
 
 
 def plot54_functions() -> tuple[Callable[[], None], ...]:
@@ -430,6 +431,7 @@ def vector_snapshot_readers() -> tuple[str, ...]:
 
 def dialog_snapshot_readers() -> tuple[str, ...]:
     """Require exactly the readers exercised by the selected gate; e.g. dialog_snapshot_readers()."""
+    if '--legend-3d-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout')
     if '--legend-step-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_legend_step_policy')
     if '--legend-yield-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_color_fields', 'cosworks_legend_color_policy_fields')
     if '--legend-height-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout')

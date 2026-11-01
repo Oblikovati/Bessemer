@@ -509,3 +509,7 @@ Typed FC views retain absence, while the independent runtime operation keeps all
 six supplied parents and the exact reached-read coverage.
 The [local step-layout projection](legend-step-layout.md) adds the documented
 integer calculations while keeping helper state changes explicit.
+
+The [3D body/background evidence](legend-3d.md) binds additional count and
+precision consumers while keeping packed color and rendering arguments separate
+from unproved stored-color or contour-code identities.
