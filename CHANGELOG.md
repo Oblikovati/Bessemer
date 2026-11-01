@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added stored legend yield-color views and exact local gray-mapper call plans with explicit runtime split and post-suffix facts, raw color preservation, signed counts and wrapped byte offsets. (#166)
+
 - Added raw legend cell-count views and immutable exact32 height-product projections from explicit helper results, preserving overflow bits and runtime/font qualifications. (#166)
 
 - Added typed legend palette controls and immutable local dispatcher plans with explicit gray-helper/plot facts, raw count diagnostics and consumed-parent history. (#166)

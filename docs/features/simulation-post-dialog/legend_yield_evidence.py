@@ -30,8 +30,9 @@ def legend_yield_functions() -> tuple[Callable[[], None], ...]:
     """Keep both complete consumers and original raw color observations together; e.g. legend_yield_functions()."""
     from legend_yield_bindings import verify_legend_yield_bindings, verify_legend_yield_rea_capture
     from legend_yield_projection import verify_legend_yield_native, verify_legend_yield_owned
+    from legend_yield_packets import verify_yield_operation_packets, verify_yield_projection_packets
     return (verify_legend_yield_sources, verify_legend_yield_bindings, verify_legend_yield_rea_capture,
-        verify_legend_yield_native, verify_legend_yield_owned)
+        verify_legend_yield_native, verify_legend_yield_owned, verify_yield_operation_packets, verify_yield_projection_packets)
 
 
 def run_legend_yield_checks() -> unittest.TestResult:
