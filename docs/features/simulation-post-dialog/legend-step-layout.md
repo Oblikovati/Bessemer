@@ -60,7 +60,8 @@ Two fresh processes matched all43,220 independent expected projections,
 totaling1,383,040bytes each. The
 [operation record](legend-step-layout-operation-verification.json) and
 [process proof](legend-step-layout-process-verification.json) retain exact hashes
-and remaining full/publication gates.
+and remaining publication gates. The full integrated Source suite then passed
+268 checks in500.038seconds and exited successfully after snapshot recording.
 
 Full renderer output remains outside this local integer projection. Other
 required feature166 models and exact publication gates remain outstanding.
