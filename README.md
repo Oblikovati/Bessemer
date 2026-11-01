@@ -704,7 +704,7 @@ stored RGBA colors with their structural paths and complete body spans,
 including legacy color regions. `SimulationRgbaColor` preserves all four scalar
 patterns and reconstructs exactly sixteen bytes. Its named-channel accessor
 returns numeric values only for finite patterns, preserving signed zero and
-subnormal values. Colors are not clamped or normalized.
+subnormal values. Colors are not clamped or normalized; the separate [plot54 local plan](docs/features/simulation-post-dialog/plot54-color.md) records its alpha projection.
 
 
 `SimulationRgbaColor::from_colorref_nearest_even` models the packed constructor:

@@ -26,8 +26,8 @@ The alpha decision at18015A904 is `COMISS(1, alpha)`, followed by `JAE` over the
 write of1. Under masked exceptions, an unordered comparison sets carry, so it
 also reaches that write. This is an inference from the verified instructions
 and the [Intel COMISS/Jcc reference](https://cdrdv2-public.intel.com/812383/253666-sdm-vol-2a.pdf),
-not observed native NaN behavior. A future local model must make its exception
-and DAZ/FTZ assumptions explicit and test the flag decision independently.
+not observed native NaN behavior. The local model makes its masked-exception
+and DAZ/FTZ-off assumptions explicit and tests the flag decision independently.
 A decompiled ordered `alpha > 1` expression alone loses the unordered branch.
 
 Every original208 stream identity, parent plot code, conditional stored-code
@@ -48,25 +48,31 @@ The strict targeted suite passed15 checks in4.565seconds and its process exited
 successfully after snapshot recording. The [evidence proof](plot54-evidence-verification.json)
 records exact revision, hashes, scope, preserved unknowns and remaining gates.
 
-## Remaining local operation work
+## Local operation
 
-Project the actual optional color pair and parent plot-code availability from
-canonical snapshots. Preserve absent older groups and an unknown standalone
-parent code. Evaluate runtime mode before plot code, then require the copied
-colors only for the admitted caller path. Do not force unused older color
-fields merely to report an excluded caller branch.
+`plot54_color_inputs()` projects optional canonical colors and parent plot-code
+availability from dialog and standalone style snapshots. The immutable
+`plan_masked_daz_ftz_off(runtime)` evaluates mode, plot code, copied colors,
+core presence and callback availability in their reached order. Unknown facts
+return typed dependency errors; known bypasses and null rejections return
+completed empty local plans. Helper rejection retains both caller copies.
 
-Retain both copied arguments with their exact origins. Require reached core
-presence and callback availability as explicit known runtime facts. Distinguish
-unknown state from known null rejection, caller bypass and admitted local color
-read. Preserve raw RGBA before the read and its separately derived alpha after
-the verified comparison; neither projection overwrites serialized bytes.
+An admitted read retains exact original2AC RGBA and a separate alpha projection.
+Values above1 and unordered values become1; negative values, signed zeros and
+subnormals remain unchanged under the declared floating-point assumptions.
+Original2BC remains forwarded with unknown consumer purpose. Results carry
+completion, diagnostics, original inputs, runtime facts and exact local coverage.
+They model neither renderer state nor callback geometry or a completed draw.
 
-Complete the local model with immutable provenance, completion, diagnostic and
-coverage results, exact-error scope, independent guard/flag oracles, generated
-float boundaries, source mutation isolation, concurrency and fresh-process
-comparisons. Never present this local color decision as a successful draw or
-reconstruct an undocumented callback ABI, geometry record, physical unit,
-reflection pipeline or2BC consumer purpose. This evidence step ships no public
-operation stub. The full local operation, full Source gate and publication
-checks remain required for feature166.
+The final strict Source suite passed17 checks in5.810seconds. Seven integration
+checks and a partial-pair regression passed, as did Clippy and allseven C889
+regressions after sharing the verified alpha projection. Independent expectations
+cover17,236 operation cases plus425 owned and276 native archive contexts.
+Two fresh processes matched all1,553,884 expected bytes; eight workers matched
+serial operation results. Native runtime scenarios are hypothetical inputs,
+with no claim of observed native callback invocation.
+
+The [operation proof](plot54-operation-verification.json) and
+[process proof](plot54-process-verification.json) record hashes and exclusions.
+The full Source gate and exact publication-cut checks remain required before
+feature166 integration, alongside the remaining named schema models.

@@ -1,0 +1,88 @@
+{
+  "issue": 166,
+  "behavior_version": "C891-local-plot54-color-v1",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "target_executed": false,
+  "kernel_decision": "Preserve ordered caller/helper dependencies, original copied arguments and raw read separately from alpha projection. Under masked exceptions and DAZ/FTZ off, COMISS carry selects one for above-one or unordered alpha. Unknown reached facts fail; known bypass/null stages complete empty local plans.",
+  "rust": {
+    "checks": 7,
+    "failed": 0,
+    "ignored": 0,
+    "seconds": 0.12,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/plot54-rust-final.log",
+      "bytes": 956,
+      "sha256": "0f9ffb2e6bf4185584680b0f73a21e9e2625d53f1ec332bdebedb26d82221abf"
+    }
+  },
+  "partial_pair_regression": {
+    "checks": 1,
+    "failed": 0,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/plot54-pair-test.log",
+      "bytes": 487,
+      "sha256": "47f370012c6d45bf9a9382c01b715034eb5f857980d55d9c8f0e5469e372daed"
+    }
+  },
+  "clippy": {
+    "result": "passed",
+    "scope": "all-targets all-features -D warnings",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/plot54-clippy.log",
+      "bytes": 136,
+      "sha256": "7870cc65a15c6448a04d238563aa39e3022cea9bb4ed72d95abb111b862486ff"
+    }
+  },
+  "shared_alpha_regression": {
+    "checks": 7,
+    "failed": 0,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/plot54-shared-alpha-native-regression.log",
+      "bytes": 942,
+      "sha256": "3497c324a6f21197ab7196b7d610a005736f9dc97911a8d43f274532490c19e6"
+    }
+  },
+  "targeted_source": {
+    "checks": 17,
+    "seconds": 5.81,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/plot54-plan-source-strict.log",
+      "bytes": 2765,
+      "sha256": "cfed9a114f895f9a626519c6766476ca0d31ae95724caeca5fead25ace1190d9"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/plot54-source-snapshot.json",
+      "bytes": 610973,
+      "sha256": "7fdb3fb654a3d613a2a4ea865f9d64ebd1d0b26bb5177b9c083347f45feba4cc"
+    }
+  },
+  "process_proof": "plot54-process-verification.json",
+  "concurrency_workers": 8,
+  "public_send_sync_assertions": 8,
+  "additional_stored_byte_credit": 0,
+  "oracle_kinds": [
+    "Independent ordered guard matrix and Python floating-point comparison including unordered alpha",
+    "Complete owned/native archives, full EOF, original optional fields and unchanged bytes",
+    "Exact installed instruction evidence and independent Ghidra locations",
+    "Source mutation isolation, serial/parallel bytes and two fresh processes"
+  ],
+  "excluded": [
+    "Native target execution or observed callback invocation",
+    "Renderer state, callback ABI/geometry, reflection or complete draw",
+    "Meaning or nonuse of forwarded2BC",
+    "Unmasked exceptions or DAZ/FTZ-enabled behavior"
+  ],
+  "pending": [
+    "Full189 Source checks",
+    "Exact publication-cut PR gate and five platform checks",
+    "Remaining feature166 schemas and integration"
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+}
