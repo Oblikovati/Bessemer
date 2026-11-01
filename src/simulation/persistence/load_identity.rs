@@ -42,3 +42,26 @@ pub(super) fn field<'a, T>(
         )
     })
 }
+
+pub(super) fn outer_field_relation(
+    source: SimulationThermalFieldId,
+    result: SimulationThermalFieldId,
+    derived: bool,
+) -> super::thermal::SimulationThermalHistory {
+    use super::thermal::{
+        SimulationThermalHistory, SimulationThermalHistoryParent, SimulationThermalRelation,
+    };
+    let mut parents = vec![SimulationThermalHistoryParent::Source(source)];
+    if derived {
+        parents.push(SimulationThermalHistoryParent::Replacement);
+    }
+    SimulationThermalHistory {
+        parents: parents.into(),
+        result,
+        relation: if derived {
+            SimulationThermalRelation::Derived
+        } else {
+            SimulationThermalRelation::Copied
+        },
+    }
+}

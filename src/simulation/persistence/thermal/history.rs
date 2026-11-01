@@ -21,35 +21,16 @@ pub(in crate::simulation::persistence) fn compose<S: BinaryLoadSnapshot>(
     let mut nested = Vec::new();
     for ordinal in 0..source.fields().len() {
         let derived = changed && ordinal == requested;
-        outer.push(outer_relation(source, result, ordinal, derived)?);
+        outer.push(super::super::load_identity::outer_field_relation(
+            source.field_id(ordinal)?,
+            result.field_id(ordinal)?,
+            derived,
+        ));
         if let Some(context) = nested_context(source, result, ordinal, replacement, derived)? {
             nested.extend(context.relations()?);
         }
     }
     Ok((outer.into(), nested.into()))
-}
-
-fn outer_relation<S: BinaryLoadSnapshot>(
-    source: &S,
-    result: &S,
-    ordinal: usize,
-    derived: bool,
-) -> Result<SimulationThermalHistory> {
-    let mut parents = vec![SimulationThermalHistoryParent::Source(
-        source.field_id(ordinal)?,
-    )];
-    if derived {
-        parents.push(SimulationThermalHistoryParent::Replacement);
-    }
-    Ok(SimulationThermalHistory {
-        parents: parents.into(),
-        result: result.field_id(ordinal)?,
-        relation: if derived {
-            SimulationThermalRelation::Derived
-        } else {
-            SimulationThermalRelation::Copied
-        },
-    })
 }
 
 struct NestedContext<'a, S: BinaryLoadSnapshot> {

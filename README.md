@@ -609,3 +609,9 @@ The combined SolidManager gate checks all 3,439 retained identities and all 3,73
 original version arguments across seven typed payload families. Six incomplete
 SurfaceBody occurrences remain errors within the denominator. See
 [the complete inventory evidence](docs/features/simulation-solid-inventory/README.md).
+
+Direct ShellManager headers and group records retain explicit reader/current-writer
+late-field profiles. Groups preserve MFC CString encodings/prefix widths and raw
+double bits under aggregate caller budgets. Complete construction and isolated
+edits retain exact bytes, identities and ordered history. Populated native group
+coverage remains unproven; see [the ShellManager evidence](docs/features/simulation-shell-manager/README.md).

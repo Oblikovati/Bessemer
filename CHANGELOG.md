@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added complete ShellManager headers and direct group records with explicit late-field profiles, retained MFC string frames, aggregate budgets and isolated edit history. (#156)
+
 - Added fresh seven-family SolidManager inventory reconciliation and typed complete-read/construction gates while retaining six incomplete SurfaceBody occurrences as failures. (#154)
 
 - Added exact SurfaceBody read, construction and isolated edits with ordered history, preserving typed failures for six unresolved historical partial-word cases. (#153)
