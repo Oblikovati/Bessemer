@@ -1,0 +1,58 @@
+{
+  "issue": 166,
+  "scope": "Extract existing exact pin-transition and rejected-identity checks for C846/C847 reuse",
+  "behavior_changed": false,
+  "existing_reference_packets_identical": [
+    {
+      "path": "docs/features/simulation-post-dialog/legend-format-c846-reference.json",
+      "bytes": 315467,
+      "sha256": "4058e7336afc8b37c0242c35b4a8829ef7adac9263522f156308ba5f9cf5287c"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/legend-format-installed-reference.json",
+      "bytes": 489,
+      "sha256": "0085b31ea75b617fd91bb1528b8556e87365d3f48aac6d3bd8cbd3fcdddc4fd2"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/legend-format-kernel-reference.json",
+      "bytes": 432,
+      "sha256": "0f8c7f276b04aeb2a599eec4cc5f0161a87bb2176b4afdf255edf6c6474c0132"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/legend-format-native-reference.json",
+      "bytes": 861,
+      "sha256": "4811bab7e39e19c79523620f85d7d18c2d87bc99cb3dfc84179d437d28be41e3"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/legend-format-operation-packets-reference.json",
+      "bytes": 617,
+      "sha256": "473df266291b6a9914f97300acf23752807fdeb6b59da9fb60e0d1c49e80fa1c"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/legend-format-owned-reference.json",
+      "bytes": 362521,
+      "sha256": "ce77db122beacf37d91f9dd909642dacd70839de7c0733c92d2a84ef2648c7e7"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/legend-format-projection-packets-reference.json",
+      "bytes": 493,
+      "sha256": "2d503d7148c1b2fc3a70e04f406314499c3277feb8565ae99984bc91626a22e8"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/legend-format-rea-reference.json",
+      "bytes": 4555,
+      "sha256": "16f9f25a6246da24eeb543ed1bd11f93a8ba1f6f7ca1b52eeb701a4bf8b14b94"
+    }
+  ],
+  "source": {
+    "checks": 19,
+    "seconds": 9.187,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-word-refactor-source.log",
+      "bytes": 3046,
+      "sha256": "e9d1d64dec30fa36bc7d8763226e24c32fb846951befca994f6c4aceee4e5f14"
+    }
+  }
+}
