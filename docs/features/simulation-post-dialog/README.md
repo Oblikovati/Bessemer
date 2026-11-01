@@ -94,6 +94,22 @@ archive dialects remain distinct. Initialization and strict replay each pass
 all 45 checks and exit successfully. [Owned-literal verification](owned-literal-verification.json)
 records the exact frozen outputs and exclusions.
 
+Complete primitive and edit-history expectations now accompany the 495 owned
+inputs. The fixture packets retain each physical field's path, type, byte span
+and exact value, plus a literal first-word edit and its ordered outer/nested
+history. Counted character text and byte payloads stay atomic. The legacy
+368-byte style view is partitioned once rather than counted again as an
+overlapping raw block. All 396 successful native helper contexts have separate
+projection/history exports; this does not turn helper acceptance into caller
+acceptance or cover the additional legacy mismatch cohort.
+
+The parent scalar partition follows schema14.492–493: the stored min/max code
+and deformation selector are signed integers, and the two scales and four
+range values are float32 bit patterns. Remaining unresolved words retain their
+raw bits. These stored roles do not establish units, normalization, runtime
+activation or geometry. [Packet hashes](operation-packets-reference.json)
+identify the complete expectations; Rust codec acceptance remains pending.
+
 Owned complete operations, full later field-role/view adoption, typed Rust
 read/construction/edit, atomic text profiles, scoped embedded archive acceptance,
 independent fields/history/resources, adversarial limits and extents, isolation,
