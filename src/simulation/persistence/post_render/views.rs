@@ -84,3 +84,14 @@ fn render_input_failure(path: &str, observed: Option<&SimulationThermalValue>) -
         ),
     )
 }
+
+pub(in crate::simulation::persistence) fn optional_render_word_bits<T: BinaryLoadSnapshot>(
+    snapshot: &T,
+    path: &str,
+) -> Result<Option<u32>> {
+    match render_word(snapshot, path) {
+        Ok(word) => Ok(Some(word as u32)),
+        Err(error) if error.class == FailureClass::Missing => Ok(None),
+        Err(error) => Err(error),
+    }
+}
