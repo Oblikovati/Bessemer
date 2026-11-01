@@ -1,0 +1,72 @@
+{
+  "issue": 166,
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "scope": "Complete C891 source/native stored-color replay and installed static caller/helper bindings only; local runtime color operation remains pending",
+  "target_executed": false,
+  "native_contexts": 276,
+  "native_present": 208,
+  "native_missing": 68,
+  "owned_complete_contexts": 425,
+  "owned_present": 285,
+  "owned_missing": 140,
+  "native_distinct_2ac_encodings": 3,
+  "native_stored_plot54": 1,
+  "actual_runtime_mode_known": false,
+  "actual_helper_invocation_observed": false,
+  "forwarded_2bc_purpose_bound": false,
+  "additional_stored_byte_credit": 0,
+  "strict_source": {
+    "checks": 15,
+    "seconds": 4.565,
+    "process_exit_code": 0,
+    "result": "passed",
+    "log": {
+      "path": "target/plot54-source-strict.log",
+      "bytes": 2367,
+      "sha256": "1edba82ebe233bb18ba480bddbb5789506fb51965e27212d878d146a89e453f8"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/plot54-source-snapshot.json",
+      "bytes": 607817,
+      "sha256": "fe0564664945ee2f0023b16db278fa1a586ed71d09c2d62812ee7c391d88c57a"
+    }
+  },
+  "installed_binding": {
+    "complete_method_instruction_counts": [
+      29,
+      294
+    ],
+    "total_instructions": 323,
+    "reference": "plot54-installed-reference.json",
+    "independent_decoder": "Ghidra12.1.4",
+    "rea_reference": "plot54-rea-reference.json",
+    "alpha_constant_address": "0x1802d7aec",
+    "alpha_constant_hex": "0000803f",
+    "original_binary_written": false,
+    "analysis_session_closed": true
+  },
+  "oracle_kinds": [
+    "Allseven original source/probe/decompilation pins except one exact qualified historical color-report transition",
+    "Every original208 identity, raw parent plot code and both complete16-byte colors independently replayed from complete bytes, preserving stream multiplicity",
+    "All425 owned contexts verify the exact above820005 wire gate and missing groups without guessed parent context",
+    "Both complete installed native bodies, colour-copy/R8/R9 chains, ordered mode/plot/core/callback guards, exact copy/GetColor4fv imports and file-backed literal",
+    "Independent Ghidra caller/helper instruction locations and constant bytes, retaining all provider limitations",
+    "Allfour original catalog tests and allfour repeated style/color framing tests remain in the targeted denominator"
+  ],
+  "alpha_decision_note": "Verified COMISS(1,alpha)/JAE requires flags semantics; under masked exceptions, unordered sets CF and reaches the write of1. This is static/manual inference, not observed native NaN behavior.",
+  "intel_reference": "https://cdrdv2-public.intel.com/812383/253666-sdm-vol-2a.pdf",
+  "excluded": [
+    "Actual native invocation, runtime mode or callback contents",
+    "UI labels, physical units, complete renderer virtual state, reflection and scene geometry",
+    "Recovering a callback ABI or complete geometry record schema",
+    "Promoting2BC forwarding into a bound consumer purpose or global nonuse proof",
+    "Global schema coverage credit or inferred missing-value initialization"
+  ],
+  "pending": [
+    "Full Source suite including allfive new evidence checks (expected187)",
+    "Complete local color-copy/read/clamp operation with explicit runtime dependencies, independent oracle and Rust tests",
+    "Publication-cut PR and allfive exact-head platform gates; remaining feature166 models"
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+}
