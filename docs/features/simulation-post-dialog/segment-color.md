@@ -31,6 +31,7 @@ allother source dependencies must match unchanged.
 The strict targeted suite passed15 checks in5.214seconds and its process exited
 successfully after snapshot recording. The [verification proof](segment-color-evidence-verification.json)
 records exact hashes, the corrected legacy boundary and remaining gates.
+The full Source suite passed194 checks in517.964seconds and exited successfully.
 
 ## Remaining operation requirements
 
