@@ -55,6 +55,50 @@ unit tests remain included. The
 [verification record](legend-3d-evidence-verification.json) retains exact logs,
 snapshot hashes and remaining gates.
 
-Typed local request/background arithmetic projections and remaining feature166
-models are still outstanding, as are exact publication gates. Humanizer is
-unavailable in this checkout; maintainer prose review remains pending.
+## Typed local requests and background inputs
+
+`SimulationLegendHeightInputs::project_3d_body_requests` uses the entry count
+snapshot for the earlier temporary allocation calculation. It requires an
+explicit `SimulationLegend3DBodyRuntime::cell_count_at_mapping_raw` for the
+later read; that value never falls back to the snapshot. The plain by-value
+rendering argument is also explicit and supplies no stored contour identity.
+
+The result retains low32 pair/float counts, the raw requested mapping count,
+saturated byte requests and the bound initial/later GL-call arguments. Signed32
+float counts are sign-extended before unsigned64 multiplication by4. Every
+negative result overflows that multiply and requests u64::MAX; nonnegative
+values multiply without overflow. These are computed request patterns only.
+Zero, negative, excessive or wrapped counts do not acquire allocation or
+rendering-validity approval.
+
+`SimulationLegend3DBackgroundRuntime::project_background_nearest_even` requires
+the packed argument, actual precision at its width read and raw GLboolean
+lighting result in that order. It reuses the explicit nearest-even packed
+constructor, computes low32 precision+10 and records the polygon/lighting
+decisions. The constructed color is not an emulated float-getter buffer or a
+stored-background-color view. All raw lighting bytes remain in history; every
+nonzero value requests the later lighting-enable call.
+
+Both immutable plans retain every supplied parent, derived history, completion,
+exact local coverage, zero achieved pattern error and explicit native/geometry
+exclusions. No buffer is allocated. Caller phase facts, native/helper completion,
+float-getter output, geometry, floating dimensions and actual GL state remain
+unvalidated.
+
+The operation corpus covers26,784 boundary/presence/generated cases. Complete
+parent replay retains425 owned and276 native contexts plus452 full count/precision
+mutants, each with sixteen explicitly hypothetical body/background contexts.
+
+All fourteen Rust checks passed, including complete native replay and eight-worker
+comparisons. All eleven public types satisfy `Send + Sync`. Clippy passed with
+warnings denied after the native unsigned overflow expression was written with
+`saturating_mul`. The strict Source suite passed19 checks in7.375seconds and
+exited successfully after snapshot recording and cleanup. Two fresh processes
+matched all45,232 independent expected results, totaling2,171,136bytes each.
+The [operation record](legend-3d-operation-verification.json) and
+[process proof](legend-3d-process-verification.json) retain exact hashes and
+remaining full/publication gates.
+
+Independent positive-count geometry and floating background-dimension behavior,
+other required feature166 models and exact publication gates remain outstanding.
+Humanizer is unavailable in this checkout; maintainer prose review remains pending.

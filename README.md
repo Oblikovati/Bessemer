@@ -742,6 +742,12 @@ from explicit enable, point, size, range and post-helper facts. It preserves
 signed32 wrapping, exact division by20 and the separate FC reread without
 claiming complete rendering or valid pixels.
 
+`project_3d_body_requests` retains temporary buffer-size and drawing-call
+decisions from an entry count and explicit later count. The separate
+[`project_background_nearest_even`](docs/features/simulation-post-dialog/legend-3d.md)
+projection keeps packed color, precision-at-read and lighting facts explicit;
+both return local requests without allocating buffers or validating rendering.
+
 
 `SimulationRgbaColor::from_colorref_nearest_even` models the packed constructor:
 the low three bytes supply RGB and alpha becomes one. The high byte is ignored.

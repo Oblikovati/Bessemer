@@ -431,7 +431,7 @@ def vector_snapshot_readers() -> tuple[str, ...]:
 
 def dialog_snapshot_readers() -> tuple[str, ...]:
     """Require exactly the readers exercised by the selected gate; e.g. dialog_snapshot_readers()."""
-    if '--legend-3d-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout')
+    if '--legend-3d-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_colorref_import_view')
     if '--legend-step-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_legend_step_policy')
     if '--legend-yield-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_color_fields', 'cosworks_legend_color_policy_fields')
     if '--legend-height-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout')

@@ -1,0 +1,11 @@
+{
+  "positive_byte_max": 8589934588,
+  "negative_unsigned_min": 18446744071562067968,
+  "signed32_saturation_identity_proved": true,
+  "argument_reads": [
+    "1800e204d cmp dword ptr [rbp + 0xe8], 2",
+    "1800e208b cmp dword ptr [rbp + 0xe8], 2"
+  ],
+  "native_allocations_performed": false,
+  "geometry_validated": false
+}
