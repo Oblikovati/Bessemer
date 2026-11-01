@@ -1,6 +1,7 @@
 use super::super::SimulationRgbaColor;
+use super::super::triangle_snapshot::validate_triangle_group_snapshot;
 use super::{SimulationAuxiliaryTriangleControls, types::*};
-use crate::{BessemerError, FailureClass, Result};
+use crate::Result;
 
 /// Immutable owned requests, provenance, completion and local coverage.
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -23,7 +24,12 @@ impl SimulationAuxiliaryTriangleControls {
     ) -> Result<SimulationAuxTrianglePlan> {
         let stage = admitted_stage(self, context);
         let count = inspected_count(stage, context);
-        validate_group_snapshot(count, groups.len(), maximum_groups)?;
+        validate_triangle_group_snapshot(
+            "auxiliary triangle call plan",
+            count,
+            groups.len(),
+            maximum_groups,
+        )?;
         let color = if stage == SimulationAuxTriangleStage::HelperEntered {
             self.renderer_color_masked_exceptions()
         } else {
@@ -88,28 +94,6 @@ fn inspected_count(
         return 0;
     }
     signed as usize
-}
-
-fn validate_group_snapshot(count: usize, available: usize, maximum: usize) -> Result<()> {
-    if count > maximum {
-        return Err(BessemerError::new(
-            "auxiliary triangle call plan",
-            "group_count",
-            FailureClass::Invalid,
-            format!("group count {count}; expected at most maximum_groups {maximum}"),
-        ));
-    }
-    if count > available {
-        return Err(BessemerError::new(
-            "auxiliary triangle call plan",
-            "group snapshots",
-            FailureClass::Missing,
-            format!(
-                "{available} provided groups; expected at least {count} complete group snapshots"
-            ),
-        ));
-    }
-    Ok(())
 }
 
 fn planned_calls(
