@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added optional legend locale-grouping views that retained arbitrary signed C0 controls and kept absent wire fields separate from reader resets and runtime locale state. (#166)
+
 - Added explicit legend reader reset plans with ordered derived zero assignments, version history and separate unsupported raw-class results. (#166)
 
 - Added explicit legacy hidden-parts load projections with both derived runtime words, exact adjacent-store coverage and retained original wire values. (#166)
