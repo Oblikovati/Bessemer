@@ -58,8 +58,10 @@ def legend_resets_functions() -> tuple[Callable[[], None], ...]:
     """Keep full reader provenance, exact reset policy and original native rows together; e.g. legend_resets_functions()."""
     from legend_resets_bindings import verify_legend_resets_bindings, verify_legend_resets_rea_capture
     from legend_resets_projection import verify_legend_resets_native, verify_legend_resets_owned
+    from legend_resets_packets import verify_reset_operation_packets, verify_reset_projection_packets
     return (verify_legend_resets_sources, verify_legend_resets_bindings, verify_legend_resets_rea_capture,
-        verify_legend_reset_boundaries, verify_legend_resets_native, verify_legend_resets_owned)
+        verify_legend_reset_boundaries, verify_legend_resets_native, verify_legend_resets_owned,
+        verify_reset_operation_packets, verify_reset_projection_packets)
 
 
 def run_legend_resets_checks() -> unittest.TestResult:

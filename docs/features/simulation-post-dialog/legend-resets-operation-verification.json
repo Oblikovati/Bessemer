@@ -1,0 +1,80 @@
+{
+  "issue": 166,
+  "behavior_version": "C857-explicit-reader-resets-v1",
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0 x86_64-pc-windows-msvc",
+  "source_foundation_cut": "960d24d896659f32ee254f50e5b4a0f4cd31accd",
+  "operation_cases": 4137,
+  "owned_complete_parents": 557,
+  "native_complete_parents": 276,
+  "public_send_sync_types": 7,
+  "initial_source": {
+    "checks": 21,
+    "seconds": 7.031,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-resets-operation-source-initial.log",
+      "bytes": 3371,
+      "sha256": "ea9d9e163cf4005d737ff209a1fb615d6db96b3e4003cd470d5ebd084140e76f"
+    }
+  },
+  "strict_source": {
+    "checks": 21,
+    "seconds": 15.4,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-resets-operation-source-strict.log",
+      "bytes": 3372,
+      "sha256": "c6b7a3d6424945d63bb5b1b0cd1bab1286da04b2969bbd8f31fd100a77a73c8c"
+    }
+  },
+  "rust": {
+    "passed": 7,
+    "failed": 0,
+    "ignored": 0,
+    "parallel_workers": 8,
+    "log": {
+      "path": "target/legend-resets-operation-rust-final.log",
+      "bytes": 830,
+      "sha256": "774f25a7f2928e40fe212c32fd6b46ba04504e04e9305bde7f6158bd876d63cd"
+    }
+  },
+  "clippy": {
+    "all_targets": true,
+    "all_features": true,
+    "deny_warnings": true,
+    "seconds": 36.1,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-resets-operation-clippy.log",
+      "bytes": 136,
+      "sha256": "6655971420c5a8138e03f0859683f42c80001e63c8317a07632a761fc42d5d67"
+    }
+  },
+  "source_snapshot": {
+    "path": "docs/features/simulation-post-dialog/legend-resets-source-snapshot.json",
+    "bytes": 625403,
+    "sha256": "353f04cce5487624deb766799cc77996a012629f82a1af24f4052b6c1c625f4d"
+  },
+  "process_verification": {
+    "path": "docs/features/simulation-post-dialog/legend-resets-process-verification.json",
+    "bytes": 916,
+    "sha256": "1042f6192e578e3b09d475fcef47abac3e57da66139e9e4b856a8e08ec10ce36"
+  },
+  "kernel_decision": "Select only explicit native zero events from the existing normalized version. Preserve 700006..840007 triple stores,840008..840009 pair stores and completed later empty plans; reject raw-class scope. Retain stored C0/C4/C8 absence and bits independently. No constructor, prior state, native execution or full-reader inference.",
+  "oracle_kinds": [
+    "Bound complete GNU/Ghidra reader and exact zero stores",
+    "Original frozen Source model with independent fixed member order and interval boundaries",
+    "Complete wire presence and signed32 patterns, including132 later mutations",
+    "Eight-worker serial equivalence and two fresh process comparisons"
+  ],
+  "pending": [
+    "Full315 integrated Source replay",
+    "Remaining feature166 obligations",
+    "Exact publication-head cargo xtask pr and all five platform checks"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending."
+}

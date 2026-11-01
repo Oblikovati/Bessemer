@@ -535,5 +535,8 @@ original-word history, while rejecting raw-class and later direct-read contexts.
 
 The [legend reader resets](legend-resets.md) retain explicit version-gated zero
 assignments separately from absent wire words and unknown constructor state.
+Typed reset plans retain native store order, version history and exact local
+coverage; later profiles return a completed empty list and raw-class profiles
+remain unsupported.
 The [reader-selection baseline](reader-selection.md) keeps existing mode priority
 and captured callback inputs pinned as further models are added.
