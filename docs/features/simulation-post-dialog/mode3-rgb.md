@@ -66,16 +66,47 @@ The strict decision suite passed16 checks in5.277seconds, including15 reviewed
 pass-filter cases and14 capacity/growth cases. The [kernel proof](mode3-rgb-kernel-verification.json)
 retains the contract and remaining implementation gates.
 
-## Remaining local operation work
+## Local operation
 
-Project actual optional word1B8 and complete1DC RGBA from canonical snapshots.
-Retain unconditional caller copying separately from conditional candidate RGB,
-including original alpha and older unavailable facts. Keep group eligibility,
-face-dependent replacement and actual array-update acceptance as distinct stages.
-Unknown reached runtime facts cannot become assumed false or zero.
+`mode3_geometry_rgb_inputs()` preserves optional1B8, complete1DC RGBA and the
+available parent plot code. Older opaque styles keep missing named fields;
+standalone styles keep an unknown parent code. `plan_group_rgb(group)` requires
+the reached stored mode and unconditional full color copy before inspecting
+the declared primary or reflected group context.
 
-A complete local operation needs immutable provenance, typed completion and
-failure, explicit exact bit-copy coverage, independent branch/array-offset oracles,
-raw-pattern boundaries, input isolation, concurrency and fresh-process comparisons.
-Array copying does not validate geometry or prove rendering. The complete Source
-and publication gates remain required alongside the remaining feature166 schemas.
+A nonzero group status or zero item-test result completes with no array request.
+Eligible mode3 groups require the face before deciding whether group replacement
+is needed. Other modes copy both group RGBA parents before requiring the face
+for selection. Both parents remain retained even when only one RGB is selected.
+The primary plot54/selector1-or2 filter follows selection; the reflected pass
+keeps its distinct submission rule. Every reached unknown produces a typed
+missing-fact error. Known zero values remain distinct from missing values.
+
+`apply_local_array(context)` completes empty requests without requiring unused
+array facts. An admitted request requires the signed capacity and the appropriate
+existing or post-growth snapshot. Nonzero growth results produce typed failures.
+A known zero result still requires explicit destination cells. The operation
+checks fixed index5, copies all observed destination cells and changes only
+that cell's three raw words. Constructor budgets apply before copying supplied
+storage. Successful results retain the original plan/context, selected destination
+parent, before/after words, exact local coverage and achieved zero pattern error.
+All published storage is immutable and owns its copied constructor input.
+
+All eight Rust checks passed, including the explicit zero-budget boundary and
+source mutation isolation. Clippy passed for alltargets/features with warnings
+denied. The strict Source suite passed18 checks in5.458seconds. Eight workers
+matched serial words, and two fresh processes matched all3,944,772 independently
+expected bytes. The [operation proof](mode3-rgb-operation-verification.json) and
+[process proof](mode3-rgb-process-verification.json) record exact hashes and scope.
+
+Independent expectations cover15,342 group/array/raw-pattern cases and four
+separately labeled scenarios for every425 owned and276 native context. The
+scenarios preserve unknown runtime facts and distinguish primary filtering from
+reflected accepted-growth copies. They do not assert native invocation or
+allocator execution. Full retained bodies still round-trip unchanged.
+
+The complete native allocator, renderer state, reflection admission, exceptional
+paths, geometry validity and whole-scene rendering remain outside this local
+word-selection/copy contract. Alpha remains in original copied parents. No group
+selection or derived array write overwrites serialized1DC. The full204 Source gate, exact publication checks and
+remaining documented feature166 schemas still require their own acceptance gates.

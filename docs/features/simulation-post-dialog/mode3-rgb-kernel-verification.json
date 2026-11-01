@@ -5,7 +5,6 @@
   "platform": "Windows x64",
   "scope": "Primary/reflected pass and fixed count1/index5 helper decisions",
   "target_executed": false,
-  "production_operation_status": "pending",
   "reviewed_pass_rows": 15,
   "reviewed_array_rows": 14,
   "targeted_source": {
@@ -39,8 +38,7 @@
     "A complete production candidate/group/array operation"
   ],
   "pending": [
-    "Production immutable candidate, group and fixed array-write operation with explicit runtime dependencies",
-    "Independent raw-pattern fixtures, input isolation, concurrency and fresh-process checks for that operation",
+    "Full204 Source gate for the operation",
     "Exact publication-cut PR and five platform checks; remaining feature166 schemas"
   ],
   "prose_review": "Humanizer skill unavailable; maintainer review pending.",
@@ -60,5 +58,7 @@
       "bytes": 629647,
       "sha256": "1e008682137d0c509b1f0507a6b91ebeeae8008b7b40b527df493fec8e34bb74"
     }
-  }
+  },
+  "production_operation_status_at_decision_cut": "pending",
+  "current_operation_proof": "mode3-rgb-operation-verification.json"
 }
