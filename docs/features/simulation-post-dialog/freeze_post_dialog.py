@@ -65,6 +65,10 @@ from vector_style_bindings import verify_vector_style_bindings
 from vector_style_projection import verify_vector_style_native, verify_vector_style_projection
 from vector_style_decoder_checks import verify_vector_style_decoder_spellings
 from vector_style_packets import verify_vector_style_packets
+from annotation_evidence import verify_annotation_sources, verify_annotation_catalog
+from annotation_bindings import verify_annotation_bindings
+from annotation_projection import verify_annotation_native, verify_annotation_projection
+from annotation_packets import verify_annotation_packets
 from dialog_projection_shapes import verify_dialog_scalar_shapes
 from dialog_parent_views import (verify_dialog_parent_sources, verify_dialog_parent_native, verify_dialog_parent_bindings,
                                  verify_dialog_parent_owned, verify_dialog_parent_branches)
@@ -72,9 +76,8 @@ from dialog_parent_views import (verify_dialog_parent_sources, verify_dialog_par
 
 def run_dialog_checks(pin: Path) -> unittest.TestResult:
     """Preserve all original C-770 and integrated legacy-view tests beside fresh full replay; e.g. run_dialog_checks(pin)."""
-    if '--vector-style-only' in sys.argv: return run_vector_style_checks()
-    if '--raw-preferences-only' in sys.argv: return run_raw_preferences_checks()
-    if '--local-render-only' in sys.argv: return run_local_render_checks()
+    specialized = run_style_annotation_checks()
+    if specialized is not None: return specialized
     if '--unit-only' in sys.argv: return run_unit_checks()
     if '--vector-only' in sys.argv: return run_vector_checks()
     if '--offset-fringe-only' in sys.argv: return run_offset_fringe_checks()
@@ -91,6 +94,15 @@ def run_dialog_checks(pin: Path) -> unittest.TestResult:
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
     append_dialog_unit_tests(suite)
     return unittest.TextTestRunner(verbosity=2).run(suite)
+
+
+def run_style_annotation_checks() -> unittest.TestResult | None:
+    """Dispatch the concrete stored-style modes without changing the full denominator; e.g. run_style_annotation_checks()."""
+    modes = (('--annotations-only', run_annotation_checks), ('--vector-style-only', run_vector_style_checks),
+             ('--raw-preferences-only', run_raw_preferences_checks), ('--local-render-only', run_local_render_checks))
+    for flag, check in modes:
+        if flag in sys.argv: return check()
+    return None
 
 
 def append_dialog_unit_tests(suite: unittest.TestSuite) -> None:
@@ -129,7 +141,21 @@ def default_dialog_functions(pin: Path) -> tuple[Callable[[], None], ...]:
               verify_offset_fringe_sources, verify_offset_fringe_bindings, verify_offset_fringe_native,
               verify_offset_fringe_packets, verify_offset_fringe_projection,
               verify_vector_sources, verify_vector_bindings, verify_vector_static_tables, verify_vector_table_constants,
-              verify_vector_packets, verify_vector_native, verify_vector_projection) + unit_model_functions() + local_render_functions() + raw_preferences_functions() + vector_style_functions()
+              verify_vector_packets, verify_vector_native, verify_vector_projection) + unit_model_functions() + local_render_functions() + raw_preferences_functions() + vector_style_functions() + annotation_functions()
+
+
+def annotation_functions() -> tuple[Callable[[], None], ...]:
+    """Keep full consumer bindings and all annotation cohorts together; e.g. annotation_functions()."""
+    return (verify_annotation_sources, verify_annotation_catalog, verify_annotation_bindings,
+            verify_annotation_native, verify_annotation_projection, verify_annotation_packets)
+
+
+def run_annotation_checks() -> unittest.TestResult:
+    """Retain current complete catalog tests and decoder rejection checks beside C887; e.g. run_annotation_checks()."""
+    checks = (verify_dialog_sources, verify_dialog_field_sources, verify_vector_style_decoder_spellings) + annotation_functions()
+    suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
+    suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module('test_cosworks_post_style_field_catalog')))
+    return unittest.TextTestRunner(verbosity=2).run(suite)
 
 
 def vector_style_functions() -> tuple[Callable[[], None], ...]:
@@ -318,6 +344,7 @@ def vector_snapshot_readers() -> tuple[str, ...]:
 
 def dialog_snapshot_readers() -> tuple[str, ...]:
     """Require exactly the readers exercised by the selected gate; e.g. dialog_snapshot_readers()."""
+    if '--annotations-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_style_field_catalog')
     if '--vector-style-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_style_field_catalog', 'cosworks_colorref_import_view')
     if '--raw-preferences-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout')
     if '--local-render-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_render_safety')
@@ -325,8 +352,7 @@ def dialog_snapshot_readers() -> tuple[str, ...]:
     if '--vector-only' in sys.argv: return vector_snapshot_readers()
     if '--offset-fringe-only' in sys.argv: return offset_fringe_snapshot_readers()
     if '--render-policy-only' in sys.argv: return render_snapshot_readers()
-    if '--legend-comparison-only' in sys.argv:
-        return ('cosworks_legend_comparison', 'cosworks_color_comparison', 'cosworks_post_style_layout', 'cosworks_post_color_fields')
+    if '--legend-comparison-only' in sys.argv: return ('cosworks_legend_comparison', 'cosworks_color_comparison', 'cosworks_post_style_layout', 'cosworks_post_color_fields')
     if '--rgba-comparison-only' in sys.argv: return ('cosworks_color_comparison',)
     if '--colorref-export-only' in sys.argv: return ('cosworks_colorref_view',)
     if '--colorref-import-only' in sys.argv: return ('cosworks_colorref_import_view', 'cosworks_colorref_view')
@@ -349,7 +375,7 @@ def default_snapshot_readers() -> tuple[str, ...]:
 
 def dialog_snapshot_filename() -> str:
     """Keep partial replay evidence separate from the mandatory full snapshot; e.g. dialog_snapshot_filename()."""
-    modes = (('--vector-style-only', 'vector-style-source-snapshot.json'), ('--raw-preferences-only', 'raw-preferences-source-snapshot.json'),
+    modes = (('--annotations-only', 'annotation-source-snapshot.json'), ('--vector-style-only', 'vector-style-source-snapshot.json'), ('--raw-preferences-only', 'raw-preferences-source-snapshot.json'),
              ('--local-render-only', 'local-render-source-snapshot.json'),
              ('--resources-only', 'resource-source-snapshot.json'),
              ('--caps-only', 'cap-source-snapshot.json'),

@@ -1,0 +1,28 @@
+{
+  "issue": 169,
+  "qualification": "Three recorded COMISD qualifiers; exact bytes and all other instruction text retained",
+  "address_spelling": "Explicit zero displacement and unit-scale arithmetic identities only",
+  "records": [
+    {
+      "address": "0x18010098b",
+      "original": "18010098b comisd xmm1, xmmword ptr [rip + 0x1d9c75]",
+      "canonical": "18010098b comisd xmm1, qword ptr [rip + 0x1d9c75]",
+      "raw_hex": "660f2f0d759c1d00",
+      "kind": "recorded_comisd_qualifier"
+    },
+    {
+      "address": "0x1801009b7",
+      "original": "1801009b7 comisd xmm0, xmmword ptr [rip + 0x1d9c49]",
+      "canonical": "1801009b7 comisd xmm0, qword ptr [rip + 0x1d9c49]",
+      "raw_hex": "660f2f05499c1d00",
+      "kind": "recorded_comisd_qualifier"
+    },
+    {
+      "address": "0x180100c6d",
+      "original": "180100c6d comisd xmm1, xmmword ptr [rip + 0x1d9993]",
+      "canonical": "180100c6d comisd xmm1, qword ptr [rip + 0x1d9993]",
+      "raw_hex": "660f2f0d93991d00",
+      "kind": "recorded_comisd_qualifier"
+    }
+  ]
+}

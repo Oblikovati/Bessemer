@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added independent raw Min/Max annotation controls and the separate glyph-material adjustment predicate with explicit runtime context. (#166)
+
 - Added raw vector-style controls and explicit local size, density and whole-color write models with preserved older field absence. (#166)
 
 - Added raw PostStyle word views, explicit initializer assignments and local preference transitions with preserved missing state. (#166)

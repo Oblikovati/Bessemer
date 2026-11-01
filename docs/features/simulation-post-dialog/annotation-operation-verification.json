@@ -1,0 +1,107 @@
+{
+  "issue": 166,
+  "qualification_issue": 169,
+  "behavior_version": "C887-extrema-annotation-controls-v1",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "kernel_decision": "Preserve independent signed raw Min/Max words and exact zero/nonzero requests. Keep value/position requests and the glyph material-only gate distinct from extrema computation and subsequent glyph helper calls. Preserve older missing controls without defaults.",
+  "target_executed": false,
+  "policy_contexts": 43350,
+  "control_pairs": 4335,
+  "render_arguments": 5,
+  "plot_presence_states": 2,
+  "owned_complete_contexts": 425,
+  "owned_present": 405,
+  "owned_missing": 20,
+  "native_complete_contexts": 276,
+  "native_present": 276,
+  "additional_stored_byte_credit": 0,
+  "rust": {
+    "checks": 7,
+    "failed": 0,
+    "ignored": 0,
+    "seconds": 0.19,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/annotation-rust.log",
+      "bytes": 920,
+      "sha256": "74fea196f2343c6973c6d187c8ce6fb86cfcd66434cf00dbeac04732b2aed0cb"
+    }
+  },
+  "clippy": {
+    "scope": "all-targets all-features -D warnings",
+    "result": "passed",
+    "seconds": 43.45,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/annotation-clippy.log",
+      "bytes": 136,
+      "sha256": "6521d9b811dbef2f204302674d3bc6b75c0154ea4d74cb4d99a1f9b1b894c551"
+    }
+  },
+  "targeted_source": {
+    "checks": 13,
+    "seconds": 11.767,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/annotation-source-strict.log",
+      "bytes": 2356,
+      "sha256": "5ba959fc7dc57290a66ca0544e5e8f4b96f06d6fad45d326e9112dc568c99ea9"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/annotation-source-snapshot.json",
+      "bytes": 569641,
+      "sha256": "408e1ca40e7bbc8817cc69a230f9ae4afa9e402232249b7e8e94f3fd1712e98a"
+    }
+  },
+  "full_source": {
+    "checks": 156,
+    "seconds": 527.271,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/annotation-source-full.log",
+      "bytes": 39308,
+      "sha256": "76235beebc7bdc1fff878a4d661ca7d488d3c44efb7f206e6497c08ac90ae332"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 576948,
+      "sha256": "45d7e5c0e8e96f63c92a82c84ce05394340d9fedc79133a2b5e65d1b173ceae5"
+    }
+  },
+  "packet_references": [
+    "annotation-native-reference.json",
+    "annotation-projection-reference.json",
+    "annotation-policy-reference.json"
+  ],
+  "decoder_qualifications": "annotation-decoder-qualifications.json",
+  "concurrency_workers": 8,
+  "concurrency_scope": "All43350 policies and425 complete owned parent/style views",
+  "process_proof": "annotation-process-verification.json",
+  "oracle_kinds": [
+    "Every original C887 source/probe/decompilation pin and exact qualified historical native-color-report transition",
+    "Seven complete installed consumers/helpers and exact named glyph export",
+    "Four exact UTF16LE NUL literals and actual RIP-relative references",
+    "Independent Min/Max register guards, value/position helper request and both glyph calls after the material gate",
+    "Every original native identity, raw control pair, enabled view and byte offset from complete supplied bytes",
+    "Reviewed four-class annotation truth table and three material-allowed classes over signed boundaries",
+    "C885 preference-copy composition, immutable views, eight-worker and two-fresh-process exact comparisons",
+    "Three exact original/qualified COMISD strings with byte guards and rejection tests; explicit arithmetic-equivalent address spelling mode with strict default retained"
+  ],
+  "excluded": [
+    "Actual native renderer invocation or OpenGL state",
+    "Extrema computation, coordinate selection and equivalence to user-selected legend ranges",
+    "Treating zero annotation controls as disabling all glyph rendering",
+    "Inferred resource-derived labels or complete formatting policy",
+    "Restricted0/1 validity domains or guessed historical migration defaults",
+    "Geometry validity or global semantic coverage credit"
+  ],
+  "pending": [
+    "Latest complete publication-cut PR and cross-platform/ThreadSanitizer gates",
+    "Integration of qualification bug169 with feature166",
+    "Remaining style, rendering and preference roles"
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+}
