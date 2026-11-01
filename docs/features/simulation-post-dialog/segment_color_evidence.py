@@ -6,7 +6,7 @@ from collections.abc import Callable
 from typing import cast
 from native_carriers import RESEARCH, SOURCE, digest
 from dialog_evidence import dialog_baseline
-from dialog_projection import actual_post_record
+from stored_style_colors import canonical_style_spans, optional_style_rgba, verify_stored_style_rgba_boundaries
 from dialog_owned import dialog_owned_cases
 from local_render_evidence import local_render_report
 from style_preferences_projection import raw_style_identity, raw_style_native_contexts
@@ -42,21 +42,10 @@ def verify_segment_color_sources() -> None:
 
 def segment_color_observation(family: int, version: int, raw: bytes) -> dict[str, object] | None:
     """Read exact four-component storage, retaining the separate twelve-byte consumer view; e.g. segment_color_observation(2, 890620, raw)."""
-    parsed = actual_post_record(family, version, raw)
-    assert parsed['success'] and parsed['end'] == len(raw)
-    spans = {span['label']: span for span in cast(list[dict[str, object]], parsed['spans'])}
-    present = [f'style.color_1bc.component_{index}' in spans for index in range(4)]
-    assert all(present) or not any(present)
-    assert all(present) == (version >= 700006)
-    if not all(present): return None
-    words: list[bytes] = []
-    for index in range(4):
-        span = spans[f'style.color_1bc.component_{index}']
-        word = bytes.fromhex(cast(str, span['raw_hex']))
-        offset = cast(int, span['offset'])
-        assert len(word) == 4 and raw[offset:offset + 4] == word
-        words.append(word)
-    rgba = b''.join(words)
+    spans = canonical_style_spans(family, version, raw)
+    rgba = optional_style_rgba(spans, raw, 'style.color_1bc')
+    assert (rgba is not None) == (version >= 700006)
+    if rgba is None: return None
     return dict(rgba_1bc_raw_hex=rgba.hex(), rgb_consumer_bytes_hex=rgba[:12].hex(),
         alpha_purpose=None, actual_runtime_mode_2c68=None, actual_primitive_invocation=None)
 
@@ -84,6 +73,7 @@ def verify_segment_color_native() -> None:
 
 def verify_segment_color_owned() -> None:
     """Require every complete owned parent/style body and retain all four components; e.g. verify_segment_color_owned()."""
+    verify_stored_style_rgba_boundaries()
     contexts = [(family, version, raw) for family, version, _, raw in dialog_owned_cases() if family in (0, 2)]
     observed = [segment_color_observation(*context) for context in contexts]
     assert len(observed) == 425 and sum(row is None for row in observed) == 20
