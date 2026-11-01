@@ -102,6 +102,8 @@ comparisons. All eight public types satisfy `Send + Sync`. Clippy passed with
 warnings denied. The strict Source suite passed19 checks in9.503seconds and
 exited successfully after snapshot recording. Two fresh processes matched all
 94,934 independent expected results, totaling4,177,096bytes.
+The full Source suite passed240 checks in492.633seconds and exited successfully
+after snapshot recording.
 The [operation record](legend-palette-operation-verification.json) and
 [process proof](legend-palette-process-verification.json) retain exact hashes,
 coverage and exclusions. Remaining documented feature166 models and exact

@@ -73,10 +73,26 @@
     "Count-sized wire arrays, absent-field defaults, new byte coverage or whole-format acceptance from prefix scopes"
   ],
   "pending": [
-    "Full240 Source gate",
     "Exact publication-cut PR validation and all five platform checks",
     "Remaining feature166 documented models and integration",
     "Bug172 integration with feature166"
   ],
-  "prose_review": "Humanizer unavailable; maintainer review pending."
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 240,
+    "seconds": 492.633,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "a724858a7b5cb2d3089d13de9e14752f45dd0822",
+    "log": {
+      "path": "target/legend-palette-operation-source-full.log",
+      "bytes": 54776,
+      "sha256": "df4036d6b937098007a986e7d60ffa6aa3dd1982075ebe038d62b057a5867371"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 633132,
+      "sha256": "f8140fa4a3e2e94ac4f3c6a5922b2573c763a6a94a47f72dcf4a280b0768e025"
+    }
+  }
 }
