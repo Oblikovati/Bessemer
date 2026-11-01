@@ -520,3 +520,7 @@ The [end-cell evidence](legend-end-cell.md) preserves the E8/EC pair and its
 separate runtime activation gate, including both RGB consumer branches.
 Its typed stored views preserve absence, while the local operation requires
 explicit read-time facts and retains exact RGB bits with separate alpha history.
+
+The [eDrawings width evidence](legend-width.md) retains raw B4 selectors,
+exact native constants and supplied font/title argument boundaries without
+assigning pixel units or the unresolved color100 role.

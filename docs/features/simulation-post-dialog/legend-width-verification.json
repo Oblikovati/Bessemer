@@ -1,0 +1,87 @@
+{
+  "issue": 166,
+  "evidence": "C-854",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "target_executed": false,
+  "complete_installed_instruction_counts": [
+    1144,
+    91
+  ],
+  "independent_ghidra_instruction_count": 1235,
+  "complete_body_bytes": 4974,
+  "exact_decoder_qualifications": 0,
+  "original_candidate_rows": 284,
+  "native_accepted_contexts": 276,
+  "original_rejected_contexts": 8,
+  "native_value_counts": {
+    "1": 262,
+    "2": 14
+  },
+  "native_zero_branch_observed": false,
+  "owned_complete_contexts": 425,
+  "owned_opaque_earlier_contexts": 20,
+  "additional_stored_byte_credit": 0,
+  "initial_freeze": {
+    "checks": 16,
+    "failed": 0,
+    "seconds": 5.557,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-width-source-initial.log",
+      "bytes": 2509,
+      "sha256": "93a3549000c80961cb94f9dbc5b3245e3253a74768b981468505aee51e09011a"
+    }
+  },
+  "strict_source": {
+    "checks": 16,
+    "failed": 0,
+    "seconds": 5.142,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-width-source-strict.log",
+      "bytes": 2509,
+      "sha256": "b0df42ce598b50545e04f1eea5e840a910159b17058defce979a9818b7924a12"
+    }
+  },
+  "snapshot": {
+    "path": "docs/features/simulation-post-dialog/legend-width-source-snapshot.json",
+    "bytes": 625089,
+    "sha256": "1d8ca653f40a43809649fd662ed8f1b3f3ba87df2c1f9d17e9983930918f9818"
+  },
+  "evidence_captures": [
+    {
+      "path": "docs/features/simulation-post-dialog/legend-width-rea-main.json",
+      "bytes": 108653,
+      "sha256": "fc53cb19a8747c1a2fe1ff46e1bd680c5a4be03dfa21bfc6439db6c113492f7a"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/legend-width-rea-title.json",
+      "bytes": 14903,
+      "sha256": "aaf0ac32403b5f3d02c72645c0531b2a25225a7f5b56d6e76f86ab0ffb15f90c"
+    }
+  ],
+  "kernel_decision": "Evidence only: preserve raw signed B4 and its narrow renderer-specific width policy. Bind actual signed font68 conversion, both initial multiplications, B4=1 addition, B4=0 multiplication and default identity separately. Preserve explicit font64/title packed-color arguments without a stored color100 identity. Retain complete native/source bodies and all original admission qualifications; do not claim floating or pixel output.",
+  "oracle_kinds": [
+    "Complete GNU/Ghidra bodies with all instruction locations and exact hashes",
+    "Exact RIP-relative width constants, named packed constructor and complete provider leaf",
+    "Independent signed B4 boundaries, absence and malformed-width rejection",
+    "Original284 native candidate rows,276 accepted identities/eight failures and425 complete owned parents",
+    "All eight original catalog/style/color tests"
+  ],
+  "excluded": [
+    "Native DLL execution",
+    "Floating width or universal physical/pixel units",
+    "B4 enum labels, applicability to other renderers and stored color100 identity",
+    "New stored-byte credit or expanded original prefix-only admission"
+  ],
+  "pending": [
+    "Typed optional width views and explicit floating-point projection",
+    "Full integrated Source replay for this evidence cut",
+    "Remaining feature166 models",
+    "Exact publication-head cargo xtask pr and all five platform gates"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending."
+}
