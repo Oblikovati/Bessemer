@@ -6,7 +6,7 @@ from native_carriers import digest
 from dialog_evidence import dialog_baseline
 from dialog_owned import dialog_owned_cases
 from dialog_projection import actual_post_record
-from dialog_field_evidence import dialog_field_reports
+from legend_word_sources import verify_legend_rejected_identities
 from style_preferences_projection import raw_style_native_contexts, raw_style_identity
 from local_render_evidence import local_render_report
 from legend_format_evidence import legend_format_report
@@ -45,14 +45,11 @@ def verify_legend_format_native() -> None:
 
 def verify_legend_format_rejected_rows(rows: list[dict[str, object]]) -> None:
     """Match each rejected identity to its retained failed attempts; e.g. verify_legend_format_rejected_rows(rows)."""
-    current = cast(list[dict[str, object]], dialog_field_reports()[2]['rows'])
-    available = {(row['path'], row['stream'], row['sha256']): row for row in current}
     rejected = [row for row in rows if row['selected_version'] is None]
     assert len(rejected) == 8
     for row in rejected:
         assert row['view'] == dict(fields=[]), row
-        attempts = cast(list[dict[str, object]], available[(row['path'], row['stream'], row['sha256'])]['attempts'])
-        assert attempts and not any(attempt['success'] for attempt in attempts), (row, attempts)
+    verify_legend_rejected_identities(rejected)
 
 
 def legend_format_census(views: list[dict[str, object]]) -> dict[str, object]:

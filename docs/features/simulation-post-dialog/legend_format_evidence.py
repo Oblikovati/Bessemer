@@ -4,7 +4,8 @@ from typing import cast
 import importlib
 import json
 import unittest
-from native_carriers import RESEARCH, SOURCE, digest
+from native_carriers import RESEARCH
+from legend_word_sources import legend_word_source_transitions
 from dialog_evidence import dialog_baseline
 
 
@@ -19,16 +20,8 @@ def legend_format_report() -> dict[str, object]:
 
 def verify_legend_format_sources() -> None:
     """Admit only the exact historical color-report transition beside complete row replay; e.g. verify_legend_format_sources()."""
-    transitions: list[dict[str, str]] = []
-    for original, expected in cast(dict[str, str], legend_format_report()['sources']).items():
-        relative = original.replace('\\', '/').split('/inventor-interface/')[-1]
-        assert relative.startswith('solidworks/research/'), original
-        actual = digest((SOURCE / relative).read_bytes())
-        if actual == expected: continue
-        assert relative == 'solidworks/research/cosworks-post-color-fields-native-evidence.json', relative
-        assert (expected, actual) == ('a1a672e78546d9dbddc7ee55b6315916003c8776dfe7acfd7ea1907495ccb67c', '97f4f83c3dad71727f9d6edb209acc776753680d74ea770c2b7edc349a1e415d'), (expected, actual)
-        transitions.append(dict(path=relative, original=expected, current=actual))
-    assert len(transitions) == 1, transitions
+    historical = 'a1a672e78546d9dbddc7ee55b6315916003c8776dfe7acfd7ea1907495ccb67c'
+    transitions = legend_word_source_transitions(legend_format_report(), historical)
     dialog_baseline('legend-format-source-transitions.json', dict(transitions=transitions))
 
 
