@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added numeric plot54 local color plans with ordered runtime dependencies, original copied colors and explicit masked alpha semantics. (#166)
+
 - Added explicit Simulation primary-text assignment and eight-position display selection, preserving unknown runtime state, counted payloads and per-stage provenance. (#166)
 
 - Added complete local Simulation hidden-parts/model-tessellation triangle color plans with explicit caller facts, ordered lookup filters, owned provenance and masked DAZ/FTZ-off alpha semantics. (#166)

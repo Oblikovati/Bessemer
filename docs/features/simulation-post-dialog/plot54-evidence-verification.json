@@ -64,9 +64,25 @@
     "Global schema coverage credit or inferred missing-value initialization"
   ],
   "pending": [
-    "Full Source suite including allfive new evidence checks (expected187)",
     "Complete local color-copy/read/clamp operation with explicit runtime dependencies, independent oracle and Rust tests",
     "Publication-cut PR and allfive exact-head platform gates; remaining feature166 models"
   ],
-  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 187,
+    "seconds": 458.162,
+    "process_exit_code": 0,
+    "result": "passed",
+    "verifier_cut": "c30442b6e00fe5749cdb70fcdfbac8092a08ba34",
+    "log": {
+      "path": "target/plot54-source-full.log",
+      "bytes": 44961,
+      "sha256": "67d308ef9c65231be317936ba8994990063090e9d54f17dc577d1aaec4e64d98"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 615726,
+      "sha256": "9d1ab5bbbb1da0a49c48fe64635d3c679e3af5299048d2fda64ef1f9910299b0"
+    }
+  }
 }

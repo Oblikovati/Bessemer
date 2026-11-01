@@ -79,6 +79,8 @@ from text_selection_packets import verify_post_text_operation_packets
 from text_selection_projection import verify_post_text_projection_packets
 from plot54_evidence import verify_plot54_sources, verify_plot54_native, verify_plot54_owned
 from plot54_bindings import verify_plot54_bindings, verify_plot54_rea_capture
+from plot54_plan_packets import verify_plot54_plan_packets
+from plot54_projection import verify_plot54_projection_packets
 from aux_triangle_evidence import verify_aux_triangle_sources
 from aux_triangle_bindings import verify_aux_triangle_bindings
 from aux_triangle_projection import verify_aux_triangle_native, verify_aux_triangle_projection
@@ -161,7 +163,8 @@ def default_dialog_functions(pin: Path) -> tuple[Callable[[], None], ...]:
 
 def plot54_functions() -> tuple[Callable[[], None], ...]:
     """Keep complete C891 sources, installed bindings and all archived inputs together; e.g. plot54_functions()."""
-    return (verify_plot54_sources, verify_plot54_bindings, verify_plot54_rea_capture, verify_plot54_native, verify_plot54_owned)
+    return (verify_plot54_sources, verify_plot54_bindings, verify_plot54_rea_capture, verify_plot54_native, verify_plot54_owned,
+            verify_plot54_plan_packets, verify_plot54_projection_packets)
 
 
 def run_plot54_checks() -> unittest.TestResult:
