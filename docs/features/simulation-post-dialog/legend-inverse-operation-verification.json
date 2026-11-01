@@ -1,0 +1,87 @@
+{
+  "issue": 166,
+  "behavior_version": "C860-local-preference-zero-tests-v1",
+  "platform": "Windows x64",
+  "toolchain": "Rust1.99.0 x86_64-pc-windows-msvc",
+  "foundation_cut": "a95ca702d8d269316e4b4b702c72e3ce21623a05",
+  "operation_cases": 12678,
+  "owned_complete_parents": 565,
+  "native_complete_parents": 276,
+  "complete_a8_mutants": 140,
+  "public_send_sync_types": 11,
+  "initial_source": {
+    "checks": 17,
+    "seconds": 6.785,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-inverse-operation-source-initial.log",
+      "bytes": 2801,
+      "sha256": "db1505bc53da30578d2baa739ec82937e3844868436d1d634e9866f55af9744c"
+    }
+  },
+  "strict_source": {
+    "checks": 17,
+    "seconds": 5.973,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-inverse-operation-source-strict.log",
+      "bytes": 2801,
+      "sha256": "1438fb04877081c0f2de46e78847951f46b912e2ddae50da33226c210b1d5098"
+    }
+  },
+  "rust": {
+    "passed": 11,
+    "failed": 0,
+    "ignored": 0,
+    "workers": 8,
+    "log": {
+      "path": "target/legend-inverse-operation-rust-final.log",
+      "bytes": 1146,
+      "sha256": "1ae4cfd250458cdd5afdc70fcc0fc1df8c41271e560060ecc8d11858d97589eb"
+    }
+  },
+  "clippy": {
+    "all_targets": true,
+    "all_features": true,
+    "deny_warnings": true,
+    "seconds": 36.51,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-inverse-operation-clippy.log",
+      "bytes": 136,
+      "sha256": "1674444283d19545372f19477ad723f0485a1e18b22e70e491af88d1e1370885"
+    }
+  },
+  "source_snapshot": {
+    "path": "docs/features/simulation-post-dialog/legend-inverse-source-snapshot.json",
+    "bytes": 625093,
+    "sha256": "017f11705425130c10be44986d0cf29387156a05b785cc660eb887878fb5b1a3"
+  },
+  "process_verification": {
+    "path": "docs/features/simulation-post-dialog/legend-inverse-process-verification.json",
+    "bytes": 986,
+    "sha256": "8e9d287bd1144cca7841de5881ede45545699dcfe5250d3b5bcc7e66b1271076"
+  },
+  "kernel_decision": "Expose optional canonical stored A8 without defaults. Export only its exact zero-test view. Require explicit unknown/null/present runtime plot context for local A8 assignment,skip exact22/57/73 before consuming preference1528,and distinguish type70. Preserve every original fact in immutable history,including unused words. Completed NoAssignment supplies no previous object value. Known-null local assignment establishes no safety for later native pointer uses. Other preference methods remain outside the local plan.",
+  "oracle_kinds": [
+    "Original frozen zero_test model with literal domain/noninvertibility expectations and both original tests",
+    "Complete original native getter/setter bodies,bounded unsigned subtraction/BT mask and both zero-test stores",
+    "12678 fixed/generated getter/setter cases,including all three lower/upper mask aliases and missing-input order",
+    "565 complete owned/mutated and276 native parents with original optional A8 values and no wire changes",
+    "Eight-worker serial equality and two fresh processes matching202785 full original-history/result words"
+  ],
+  "excluded": [
+    "Native target execution or pointer validity",
+    "Whole preference methods,palette/color work and later native pointer uses",
+    "Constructor/prior-state inference,universal setter policy or normalized original words"
+  ],
+  "pending": [
+    "Full331 integrated Source replay",
+    "Remaining feature166 models",
+    "Exact publication-head cargo xtask pr and all five platform gates"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending."
+}

@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added local A8/preference zero-test projections with original signed values, guarded assignment paths and completed early-return results. (#166)
+
 - Added optional legend locale-grouping views that retained arbitrary signed C0 controls and kept absent wire fields separate from reader resets and runtime locale state. (#166)
 
 - Added explicit legend reader reset plans with ordered derived zero assignments, version history and separate unsupported raw-class results. (#166)

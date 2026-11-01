@@ -757,6 +757,11 @@ preserves the optional raw C0 locale-grouping control. Nonzero values enable
 conditional grouping; locale characters and exact rendered strings remain
 runtime facts.
 
+[`legend_preference_inputs`](docs/features/simulation-post-dialog/legend-inverse.md)
+preserves optional A8 and projects the lossy preference word0 zero test.
+`SimulationLegendPreferenceRuntime::project_local_a8_assignment` requires explicit
+runtime plot/preference facts and preserves the setter's early-return branches.
+
 `legend_step_inputs` preserves the optional FC layout switch. The separate
 [`SimulationLegendStepRuntime::step_availability`](docs/features/simulation-post-dialog/legend-step.md)
 operation requires explicit runtime plot words, retains raw signed BEC returns
