@@ -1,0 +1,101 @@
+# Combined ShellManager inventory (#160)
+
+This gate binds the complete C-746 denominator to its original C-590 stream
+identities and five evidence reports. The fresh reference replay recovers each
+document envelope and nested stream, checks exact names, lengths and hashes, then
+compares every original reader/version/profile outcome with copied reference code.
+No SolidWorks code executes.
+
+The denominator contains 936 unique identities and 1,648,966 logical bytes. There
+are 1,008 original arguments: 962 accepted and 46 rejected. Under their explicit
+profiles, 935 identities have at least one complete argument. The remaining
+4-byte CompositeExtra payload fails both original profiles at version 840030.
+Eight other CompositeExtra payloads retain their reader failures and writer
+successes. Overlapping refinements add no identities to this denominator.
+
+| Family | Identities | Bytes |
+|---|---:|---:|
+| Direct manager Property | 361 | 2,888 |
+| ShellManagerGroup | 69 | 276 |
+| Shells Property | 234 | 826,556 |
+| MidSurfShells Property | 15 | 15,770 |
+| Material | 237 | 802,740 |
+| CompositeFlipTurn | 11 | 220 |
+| CompositeExtra | 9 | 516 |
+
+Run the metadata gate from the repository root:
+
+```text
+python -B -X utf8 docs/features/simulation-shell-inventory/freeze_inventory_bindings.py
+```
+
+The reference gate also needs the installed sample corpus and the same local
+reference dependencies as the individual family gates:
+
+```text
+python -B -X utf8 docs/features/simulation-shell-inventory/freeze_shell_inventory.py
+```
+
+Both commands preserve reviewed baselines. The explicit `--write` option is only
+for a reviewed initial freeze or baseline update. The combined gate passed all
+13 checks. Its native-reader input packet has 1,844,374 bytes and SHA-256
+`a5aeca4bd40e9022e0aa4182b9d7c630f252bcc15c60e3931eab222e785d13a8`.
+The packet preserves the family, exact document/stream identity, complete payload
+and every original version/profile/success tuple. Shell and midsurface native
+arguments use unknown layer-presence context; this replay does not reconstruct
+runtime allocations. Source deltas reuse the reviewed Material prefix and
+C-757 Shell Property refinements, with all other pins exact.
+
+The complete schema clause is retained in [14.367](schema-14.367.md). Original
+arguments and outcomes are retained in `candidate-denominator.json`; metadata
+rejection covers missing, extra, duplicate, renamed, resized and rehashed rows.
+The source snapshot records the immutable import origins and source hashes.
+
+All six combined Rust checks pass, including the explicit native replay. Every
+accepted argument constructs complete bytes from typed fields and retains exact
+field values and spans. The nine owned identities provide 13 argument controls
+across all seven families, including the reader/writer asymmetry and one
+incomplete body. Negative tests reject duplicate or renamed identities, unknown
+families and unknown profiles before codec dispatch. The five existing
+SolidManager checks still pass, including their explicit native replay.
+
+Two fresh Rust processes export bytes from typed construction for every accepted
+native argument, with explicit failure markers for rejected arguments. Both
+exports exactly match the independent reference framing: 1,857,428 bytes,
+SHA-256 `6f7af608468ab54e7467180c2e0be81ca1692f3b57002f03cbfc6e6ea6ff3797`.
+These exports check complete body construction; full independent primitive/span
+projections and ordered edit histories remain covered separately by the existing
+family oracles.
+
+The operation-oracle binding gate checks the full accepted multiset by family,
+version, profile, payload length and SHA-256, preserving repeated occurrences:
+
+```text
+python -B -X utf8 docs/features/simulation-shell-inventory/verify_family_oracle_packets.py
+```
+
+All seven checks pass. The required arguments are 365 headers, 79 groups, 236
+Shells Properties, 15 midsurface Properties, 237 Materials, 22 FlipTurn profiles
+and eight Extra writer profiles. Each family input and its complete primitive and
+history packet must match the reviewed length and digest. The Material oracle
+also covers 993 accepted arguments outside this inventory; they add no coverage
+to its 962-argument denominator. Missing occurrences, substituted versions,
+unassigned extra arguments and packet hash/extent substitutions are rejected.
+The exact binding is retained in
+[family oracle coverage](family-oracle-coverage-reference.json).
+
+Both fresh combined Rust runs of these native operation oracles passed all 18
+checks with no failures or ignores. All ten complete primitive and ordered-history
+exports match the independent owned/native reference packets byte for byte and
+match between processes. Counts, command, scope and hashes are retained in
+[native operation verification](native-operation-verification.json).
+
+The full local gate passed 3,452 tests with no failures and 92 explicit ignores
+across 261 summaries. The additional seven-check oracle-binding gate also passed.
+[Full gate verification](full-gate-verification.json) records the tested Rust
+sources and the later binding-check commit. Immutable publication-cut validation
+and all five exact-head platform gates remain pending.
+
+Native writer/application and geometry acceptance, physical field
+meanings, unrepresented populated native profiles and whole-format parity remain
+unproven. Humanizer was unavailable; maintainer prose review remains pending.
