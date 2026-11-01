@@ -1,0 +1,31 @@
+{
+  "issue": 166,
+  "operation": "Complete standalone PostInfo read/build/isolated edit; full dialog issue remains open",
+  "accepted_commit": "9bcda159963f57cd130a2ddf1b570c746e5be978",
+  "full_gate": "cargo xtask pr",
+  "exit_code": 0,
+  "passed": 3531,
+  "failed": 0,
+  "ignored": 111,
+  "summaries": 267,
+  "log_sha256": "44bf7c75341f480cdd94abc74323f806b54176c94832d83c8ad63b39f2c203e5",
+  "focused_checks_including_native": 13,
+  "focused_log_sha256": "8161e09a11124d745319de32ec04876e51086685fc309d80da34b54dbfd33cf7",
+  "owned_contexts": 70,
+  "owned_logical_bytes": 32294,
+  "owned_changed_edits": 8070,
+  "owned_noops": 8070,
+  "owned_proper_prefix_rejections": 32294,
+  "owned_trailing_rejections": 70,
+  "native_helper_contexts": 120,
+  "native_caller_compatible_contexts": 52,
+  "native_logical_bytes": 55200,
+  "native_physical_fields": 13800,
+  "platform": "Windows x64, Rust1.99.0",
+  "exclusions": [
+    "PostStyle preparation was unregistered and excluded from the accepted committed tree",
+    "Parent dialog and remaining bounded consumer views are pending",
+    "No native application execution or automatic runtime version selection",
+    "Five-platform integration acceptance remains pending under the serial PR queue"
+  ]
+}
