@@ -1,0 +1,79 @@
+{
+  "issue": 166,
+  "behavior_version": "C892-ordered-local-RGB-read-v1",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "target_executed": false,
+  "kernel_decision": "Preserve mode-first, signed positive first/last indices, signed ordered range and zero-or-mask0x4 flags before requiring named1BC. Only project the three raw words at the normal-flow read boundary; retain complete original RGBA and unknown reached facts. No endpoint validity or primitive invocation is inferred.",
+  "operation_cases": 25434,
+  "owned_complete_contexts": 425,
+  "owned_present": 405,
+  "owned_missing": 20,
+  "native_complete_contexts": 276,
+  "additional_stored_byte_credit": 0,
+  "rust": {
+    "checks": 7,
+    "failed": 0,
+    "ignored": 0,
+    "seconds": 0.14,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/segment-rgb-rust-final.log",
+      "bytes": 888,
+      "sha256": "e2ff6df94daa51bb75c06180597aeab8c0f130a8436ba9b2db6a007427a48ea1"
+    }
+  },
+  "clippy": {
+    "scope": "all-targets all-features -D warnings",
+    "result": "passed",
+    "seconds": 36.77,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/segment-rgb-clippy.log",
+      "bytes": 136,
+      "sha256": "5aa9aafbc6543493853b4028cc72ffaf41249108191e18909d7871849d029f34"
+    }
+  },
+  "targeted_source": {
+    "checks": 17,
+    "seconds": 5.189,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/segment-rgb-source-strict.log",
+      "bytes": 2755,
+      "sha256": "564aeb1dcab63080eb390f4e5660c53980f67614cfd4f85a1f17b9ae22b9e1e8"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/segment-color-source-snapshot.json",
+      "bytes": 615258,
+      "sha256": "846b574ceaeedd41e797ea01bc8cda59685078eeae7b1c16d9e644fec21fd9df"
+    }
+  },
+  "native_bindings": "segment-color-installed-reference.json",
+  "independent_decoder": "segment-color-rea-reference.json",
+  "process_proof": "segment-rgb-process-verification.json",
+  "concurrency_workers": 8,
+  "public_send_sync_assertions": 7,
+  "ownership": "All public inputs/runtime values are copied scalar options and raw word arrays; plans have private immutable value fields and expose copied observations. Every case preserves inputs after success/failure, and every completed stage remains unchanged after source mutation.",
+  "oracle_kinds": [
+    "Complete556 instruction/byte matches and ordered17-instruction caller guard sequence",
+    "Independent555 Ghidra locations with explicit trailing-NOP exclusion and six scalar qualifier confirmations",
+    "Independent unsigned-subtraction, signed struct decoding and arithmetic flag-bit oracle",
+    "Complete425 owned and276 native bodies, full EOF and unchanged archive bytes",
+    "Generated float classes/raw channel patterns and independent alpha variation without FPU evaluation",
+    "Two fresh processes and eight workers match independent expected bytes"
+  ],
+  "excluded": [
+    "Native target execution, observed runtime facts or primitive invocation",
+    "Pre-read state/helper execution and exceptional paths",
+    "Endpoint lookup, membership, transforms, separation or geometry validity",
+    "Graphics-state changes, physical units, complete scene rendering or fourth-component purpose"
+  ],
+  "pending": [
+    "Full196 Source gate",
+    "Exact publication-cut PR gate and five platform checks",
+    "Complete primitive operation and remaining feature166 schemas/integration"
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+}
