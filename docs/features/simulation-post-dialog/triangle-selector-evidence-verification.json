@@ -1,0 +1,34 @@
+{
+  "issue": 166,
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "scope": "Original C889 source pins and complete stored-input replay only; no operation or installed instruction rematch claim",
+  "target_executed": false,
+  "native_contexts": 276,
+  "owned_contexts": 425,
+  "owned_present": 405,
+  "owned_missing": 20,
+  "additional_stored_byte_credit": 0,
+  "strict_source": {
+    "checks": 9,
+    "seconds": 4.449,
+    "process_exit_code": 0,
+    "result": "passed",
+    "log": {
+      "path": "target/triangle-selector-source-owned-strict.log",
+      "bytes": 1604,
+      "sha256": "f06bc6e49dfaec8602fdbc8a79687aaee19dfbb26e33c840af64aeb768f730d7"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/triangle-selector-source-snapshot.json",
+      "bytes": 586890,
+      "sha256": "e6f4091c464ef5da0770635ab60f1a57e7eb761d92ad00906d76ff5ba2d591e3"
+    }
+  },
+  "pending": [
+    "Complete installed caller/helper/constant binding",
+    "Both caller paths and complete bounded helper operation with independent oracle",
+    "Full Source suite including these three new evidence checks",
+    "Publication-cut PR and all five exact-head platform gates"
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+}
