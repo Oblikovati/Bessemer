@@ -1,0 +1,47 @@
+{
+  "module_sha256": "2fa0173c92d0f3193deeb048c008bd04c37daaefb80cc175704249164acff44a",
+  "complete_consumer_instructions": 315,
+  "assignment_methods": [
+    {
+      "start": "0x180044350",
+      "end": "0x180044486",
+      "sha256": "07303e3a2ae57a3a298cafe73a1251fb345770a418aefef800abfd354c5ffc0b",
+      "instructions": 60
+    },
+    {
+      "start": "0x180044580",
+      "end": "0x1800447f8",
+      "sha256": "c06d91253420645bd3e96f5a9da2a8f31d208e6657a04a54f004cac931f690d3",
+      "instructions": 122
+    },
+    {
+      "start": "0x180044880",
+      "end": "0x18004494e",
+      "sha256": "4405c0fa217da34b9ca8bf2954e9dfa8f3e111a8cacda85a0eeef7f632245385",
+      "instructions": 56
+    }
+  ],
+  "cstring_ordinal_imports": [
+    {
+      "module": "mfc140u.dll",
+      "iat": "0x1802ccb90",
+      "name": null,
+      "ordinal": 286
+    },
+    {
+      "module": "mfc140u.dll",
+      "iat": "0x1802ccb98",
+      "name": null,
+      "ordinal": 280
+    }
+  ],
+  "empty_literal": {
+    "address": "0x1802d7c10",
+    "raw_hex": "0000"
+  },
+  "target_executed": false,
+  "limitations": [
+    "Ordinal import identities are observed; imported CString symbol names are absent.",
+    "No complete font/layout or renderer execution claim."
+  ]
+}
