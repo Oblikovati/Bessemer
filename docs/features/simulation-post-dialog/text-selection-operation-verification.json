@@ -87,9 +87,25 @@
     "Inferring count0 initialization or resolving unknown native strings from empty wire bytes"
   ],
   "pending": [
-    "Expanded full Source suite including both operation/projection checks (expected182)",
     "Complete publication-cut PR and allfive exact-head platform/ThreadSanitizer gates",
     "Remaining documented schema models and feature166 integration"
   ],
-  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 182,
+    "seconds": 671.59,
+    "process_exit_code": 0,
+    "result": "passed",
+    "verifier_cut": "5c7b6618ac3b4dff12c05824e80ef34ed8a8a2ae",
+    "log": {
+      "path": "target/text-selection-source-full.log",
+      "bytes": 43997,
+      "sha256": "07d9cab1520291aa3a8bb1e8939c03dfaef9ddf862e3225334b4677a385463e0"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 610848,
+      "sha256": "9c078dcc09fa706acae0eff90f39a83aa1480cfa41c6c06a722629442450f6e7"
+    }
+  }
 }
