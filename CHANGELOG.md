@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added optional legend B4 views and exact nearest-even width projections with explicit font/selector facts, preserved intermediate bits and independent rational rounding checks. (#166)
+
 - Added optional legend end-cell E8/EC views and exact local gate/RGB projections with explicit read-time facts, short-circuit completion and preserved alpha provenance. (#166)
 
 - Added local 3D legend buffer/mapping request and background-input projections with explicit phase facts, exact saturation/wrapping, packed constructor bits and rendering-validity exclusions. (#166)

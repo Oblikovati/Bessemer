@@ -9,5 +9,6 @@ mod value;
 pub(super) use alpha_cap::cap_alpha_one_masked_daz_ftz_off;
 pub(super) use collect::collect_wire_colors;
 pub(super) use color_comparison::unordered_nan as is_binary32_nan;
+pub(super) use colorref_import::rounded_significand;
 pub use colorref_projection::{SimulationColorrefDomainFailure, SimulationColorrefProjection};
 pub use value::{SimulationColorChannel, SimulationPostColorView, SimulationRgbaColor};
