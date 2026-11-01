@@ -111,9 +111,26 @@
     "New stored-byte credit or broader native acceptance"
   ],
   "pending": [
-    "Full integrated Source replay for this operation cut",
     "Remaining feature166 models",
     "Exact publication-head cargo xtask pr and all five platform gates including ThreadSanitizer"
   ],
-  "prose_review": "Humanizer unavailable; maintainer review pending."
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_source_replay": {
+    "checks": 285,
+    "failed": 0,
+    "seconds": 536.873,
+    "process_exit_code": 0,
+    "accepted_source_cut": "95a45b3fced814f436da303a463c6cbd2c08d050",
+    "log": {
+      "path": "target/legend-end-cell-operation-source-full.log",
+      "bytes": 63087,
+      "sha256": "42413949935967f736e8d046f78d9326a90044df711114b4bee28a167b03bce2"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 633446,
+      "sha256": "ffcbf8608a2963b8c47fdd63f3b3a238195208dfce68fb64db9b717021876896"
+    },
+    "terminal_exit_reaped": true
+  }
 }

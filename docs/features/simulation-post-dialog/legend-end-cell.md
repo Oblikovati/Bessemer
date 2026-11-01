@@ -49,6 +49,8 @@ after snapshot recording and cleanup. Nine owned Rust tests passed, followed by
 the complete native-parent test. Eight-worker results matched serial results.
 Two fresh Rust processes matched all91,182 independent expected words byte for
 byte. Clippy passed across all targets and features with warnings denied.
+The full integrated Source replay passed285 checks in536.873seconds and
+exited successfully after snapshot recording and cleanup.
 
 Run the owned Rust checks with `cargo test --test simulation_legend_end_cell`.
 Native replay additionally requires fresh packets from the pinned Source gate;
