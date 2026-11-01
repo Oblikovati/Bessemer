@@ -74,9 +74,25 @@
   ],
   "pending": [
     "Typed read-time assignment result",
-    "Full integrated Source replay for this evidence cut",
     "Remaining feature166 models",
     "Exact publication-head cargo xtask pr and all five platform gates"
   ],
-  "prose_review": "Humanizer unavailable; maintainer review pending."
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_integrated_source": {
+    "checks": 313,
+    "seconds": 483.353,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "accepted_source_cut": "960d24d896659f32ee254f50e5b4a0f4cd31accd",
+    "log": {
+      "path": "target/legend-resets-source-full.log",
+      "bytes": 68198,
+      "sha256": "c1c94a1adf38606af11475791ab64c1b803f58a71dc9512c426c7f67c4c53382"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 634126,
+      "sha256": "a3c714569fbc7b4dd8e11be7241b9e57c01d0b22c429ba42093446bcb6b87684"
+    }
+  }
 }
