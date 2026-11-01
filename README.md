@@ -712,6 +712,11 @@ construct printf-style strings and select the bounded alternate branch from
 explicit runtime facts, retaining skipped assignments and missing inputs separately.
 Native numeric rendering and localization remain outside these operations.
 
+`legend_position_factors` exposes horizontal and vertical factors with exact raw
+bits, finite numeric views, source field IDs and absolute wire spans. The
+[position-factor evidence](docs/features/simulation-post-dialog/legend-position.md)
+retains conditional field absence and the native pixel-consumer qualifications.
+
 
 `SimulationRgbaColor::from_colorref_nearest_even` models the packed constructor:
 the low three bytes supply RGB and alpha becomes one. The high byte is ignored.

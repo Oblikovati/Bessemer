@@ -30,8 +30,9 @@ def legend_position_functions() -> tuple[Callable[[], None], ...]:
     """Keep full native consumer bindings and all complete-body observations together; e.g. legend_position_functions()."""
     from legend_position_bindings import verify_legend_position_bindings, verify_legend_position_rea_capture
     from legend_position_projection import verify_legend_position_native, verify_legend_position_owned
+    from legend_position_packets import verify_legend_position_projection_packets
     return (verify_legend_position_sources, verify_legend_position_bindings, verify_legend_position_rea_capture,
-        verify_legend_position_native, verify_legend_position_owned)
+        verify_legend_position_native, verify_legend_position_owned, verify_legend_position_projection_packets)
 
 
 def run_legend_position_checks() -> unittest.TestResult:
