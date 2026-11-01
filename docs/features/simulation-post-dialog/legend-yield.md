@@ -50,7 +50,47 @@ absences. No new stored-byte coverage or actual native gray-path observation is
 claimed. The exact historical color-report transition is admitted only beside
 complete current replay.
 
-The [verification record](legend-yield-evidence-verification.json) records executed
-checks and remaining gates. Typed local yield operations, complete interpolation,
-runtime split derivation and remaining feature166 models remain outstanding.
+## Typed stored views and ordered call requests
+
+`SimulationPostDialog::legend_yield_inputs` and
+`SimulationPostStyle::legend_yield_inputs` retain optional D8 and entry reversal.
+`plan_gray_calls_nearest_even` copies all four D8 words and constructs white
+before requiring the runtime index. A missing color therefore fails even when
+the supplied index would fall back. Entry reversal is required only for a reached
+mapping call; a missing post-suffix state fails only on the partial path.
+
+`SimulationLegendYieldRuntime` supplies the requested signed count and entry
+index. Its optional `SimulationLegendYieldPrefixState` supplies the three actual
+post-suffix rereads. Those values may differ from entry state, including a changed
+negative prefix count or reversal. The plan forwards them without revalidating
+the earlier index test. Neither an unchanged state nor an actual helper return
+is inferred.
+
+Completed immutable plans retain the original stored/runtime parents, a derived
+history relation, the copied color pair and all ordered calls. Each call retains
+the exact signed count, base count, raw reversal, base-area identity and signed64
+relative byte displacement. Fallback produces a completed empty call list;
+mapping plans expose a conditional return1 only if every requested call completes.
+Coverage and diagnostics distinguish exact local integer/color-pattern planning
+from unmodeled interpolation, tick adjustment and pointer validity.
+
+Independent unbounded-integer expectations cover13,632 boundary/generated cases.
+Complete parent replay covers425 owned and276 native contexts plus210 arbitrary
+four-channel/reversal mutations. Every parent receives eight explicitly
+hypothetical runtime contexts. The generated presence mask uses high LCG bits
+to avoid low-bit parity repeating the same missing-input path.
+
+All thirteen Rust checks passed, including every native case. Eight-worker
+comparisons match serial operation and parent results, and all ten public types
+satisfy `Send + Sync`. Clippy passed with warnings denied. Two fresh processes
+matched all20,920 independent expected results, totaling1,422,560bytes each.
+The final strict Source suite passed17 checks in6.163seconds and exited
+successfully after snapshot recording and cleanup.
+The [operation record](legend-yield-operation-verification.json) and
+[process proof](legend-yield-process-verification.json) retain exact hashes and
+remaining integration gates.
+
+The [evidence record](legend-yield-evidence-verification.json) records executed
+checks and remaining gates. Complete interpolation, runtime split derivation and
+remaining feature166 models remain outstanding.
 Humanizer is unavailable in this checkout; maintainer prose review remains pending.

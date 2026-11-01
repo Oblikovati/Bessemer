@@ -727,6 +727,11 @@ count-validity qualifications and unresolved destination algorithms.
 combines that word with an explicit cell-height helper result using exact32
 wrapping arithmetic, retaining font, pixel and tick qualifications.
 
+`legend_yield_inputs` preserves all four D8 color words and raw reversal. Its
+[gray-call planner](docs/features/simulation-post-dialog/legend-yield.md) requires
+an explicit runtime split index and reached post-suffix rereads, retaining exact
+signed count forwarding, wrapped offsets and suffix-before-prefix call order.
+
 
 `SimulationRgbaColor::from_colorref_nearest_even` models the packed constructor:
 the low three bytes supply RGB and alpha becomes one. The high byte is ignored.

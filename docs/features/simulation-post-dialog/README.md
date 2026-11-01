@@ -500,3 +500,5 @@ See [triangle colors](triangle-selectors.md), [text selection](text-controls.md)
 
 The [legend yield-color evidence](legend-yield.md) binds stored D8 separately
 from the runtime yield and split index, including both complete native consumers.
+Its typed call planner retains raw colors, wrapped offsets and explicit
+post-suffix rereads without deriving final mapped colors.
