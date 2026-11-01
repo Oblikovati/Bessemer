@@ -722,6 +722,11 @@ words. Its [local dispatcher plans](docs/features/simulation-post-dialog/legend-
 require only reached runtime facts and retain the fixed nine-slot framing,
 count-validity qualifications and unresolved destination algorithms.
 
+`legend_height_inputs` reads the raw cell-count multiplier. Its
+[height-product projection](docs/features/simulation-post-dialog/legend-height.md)
+combines that word with an explicit cell-height helper result using exact32
+wrapping arithmetic, retaining font, pixel and tick qualifications.
+
 
 `SimulationRgbaColor::from_colorref_nearest_even` models the packed constructor:
 the low three bytes supply RGB and alpha becomes one. The high byte is ignored.

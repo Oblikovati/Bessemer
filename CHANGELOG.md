@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added raw legend cell-count views and immutable exact32 height-product projections from explicit helper results, preserving overflow bits and runtime/font qualifications. (#166)
+
 - Added typed legend palette controls and immutable local dispatcher plans with explicit gray-helper/plot facts, raw count diagnostics and consumed-parent history. (#166)
 
 - Added immutable legend position-factor views with raw binary32 values, exact wire spans, revision-bound field IDs and copied-source provenance. (#166)
