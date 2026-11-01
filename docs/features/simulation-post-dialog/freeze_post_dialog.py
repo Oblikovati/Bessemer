@@ -49,6 +49,10 @@ from vector_table_bindings import verify_vector_static_tables
 from vector_table_constants import verify_vector_table_constants, pinned_vector_data
 from vector_packets import verify_vector_packets
 from vector_projection import verify_vector_native, verify_vector_projection
+from unit_evidence import verify_unit_sources, verify_unit_bindings, verify_unit_flag_bindings
+from unit_registry_bindings import verify_unit_registry_bindings
+from unit_packets import verify_unit_packets
+from unit_projection import verify_unit_native, verify_unit_projection
 from dialog_projection_shapes import verify_dialog_scalar_shapes
 from dialog_parent_views import (verify_dialog_parent_sources, verify_dialog_parent_native, verify_dialog_parent_bindings,
                                  verify_dialog_parent_owned, verify_dialog_parent_branches)
@@ -56,6 +60,7 @@ from dialog_parent_views import (verify_dialog_parent_sources, verify_dialog_par
 
 def run_dialog_checks(pin: Path) -> unittest.TestResult:
     """Preserve all original C-770 and integrated legacy-view tests beside fresh full replay; e.g. run_dialog_checks(pin)."""
+    if '--unit-only' in sys.argv: return run_unit_checks()
     if '--vector-only' in sys.argv: return run_vector_checks()
     if '--offset-fringe-only' in sys.argv: return run_offset_fringe_checks()
     if '--render-policy-only' in sys.argv: return run_render_policy_checks()
@@ -83,7 +88,8 @@ def append_dialog_unit_tests(suite: unittest.TestSuite) -> None:
                  'test_cosworks_color_comparison', 'test_cosworks_legend_comparison',
                  'test_cosworks_legend_render_gate', 'test_cosworks_need_model_tess',
                  'test_cosworks_need_offset', 'test_cosworks_fringe_option',
-                 'test_cosworks_vector_direction_branch', 'test_cosworks_component_vector_policy'):
+                 'test_cosworks_vector_direction_branch', 'test_cosworks_component_vector_policy',
+                 'test_cosworks_component_unit_type'):
         suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module(name)))
 
 
@@ -108,7 +114,13 @@ def default_dialog_functions(pin: Path) -> tuple[Callable[[], None], ...]:
               verify_offset_fringe_sources, verify_offset_fringe_bindings, verify_offset_fringe_native,
               verify_offset_fringe_packets, verify_offset_fringe_projection,
               verify_vector_sources, verify_vector_bindings, verify_vector_static_tables, verify_vector_table_constants,
-              verify_vector_packets, verify_vector_native, verify_vector_projection)
+              verify_vector_packets, verify_vector_native, verify_vector_projection) + unit_model_functions()
+
+
+def unit_model_functions() -> tuple[Callable[[], None], ...]:
+    """Share the complete unit denominator between targeted and integrated gates; e.g. unit_model_functions()."""
+    return (verify_unit_sources, verify_unit_bindings, verify_unit_flag_bindings,
+            verify_unit_registry_bindings, verify_unit_packets, verify_unit_native, verify_unit_projection)
 
 
 def run_resource_checks() -> unittest.TestResult:
@@ -223,6 +235,25 @@ def render_snapshot_readers() -> tuple[str, ...]:
         'cosworks_post_v7_composed_view', 'cosworks_legend_render_gate', 'cosworks_need_model_tess')
 
 
+def run_unit_checks() -> unittest.TestResult:
+    """Verify original unresolved states, explicit alternatives, complete code bindings and context matrices; e.g. run_unit_checks()."""
+    checks = (verify_dialog_sources, verify_dialog_field_sources) + unit_model_functions()
+    suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
+    suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module('test_cosworks_component_unit_type')))
+    return unittest.TextTestRunner(verbosity=2).run(suite)
+
+
+def offset_fringe_snapshot_readers() -> tuple[str, ...]:
+    """Keep the exact full parent and offset/fringe model readers for targeted replay; e.g. offset_fringe_snapshot_readers()."""
+    return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout',
+        'cosworks_need_offset', 'cosworks_fringe_option')
+
+
+def unit_snapshot_readers() -> tuple[str, ...]:
+    """Require the actual pure unit model and complete parent readers for unit-only replay; e.g. unit_snapshot_readers()."""
+    return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_component_unit_type')
+
+
 def vector_snapshot_readers() -> tuple[str, ...]:
     """Require the real composed model and full parent readers for vector-only replay; e.g. vector_snapshot_readers()."""
     return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout',
@@ -231,9 +262,9 @@ def vector_snapshot_readers() -> tuple[str, ...]:
 
 def dialog_snapshot_readers() -> tuple[str, ...]:
     """Require exactly the readers exercised by the selected gate; e.g. dialog_snapshot_readers()."""
+    if '--unit-only' in sys.argv: return unit_snapshot_readers()
     if '--vector-only' in sys.argv: return vector_snapshot_readers()
-    if '--offset-fringe-only' in sys.argv:
-        return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_need_offset', 'cosworks_fringe_option')
+    if '--offset-fringe-only' in sys.argv: return offset_fringe_snapshot_readers()
     if '--render-policy-only' in sys.argv: return render_snapshot_readers()
     if '--legend-comparison-only' in sys.argv:
         return ('cosworks_legend_comparison', 'cosworks_color_comparison', 'cosworks_post_style_layout', 'cosworks_post_color_fields')
@@ -257,7 +288,7 @@ def default_snapshot_readers() -> tuple[str, ...]:
     readers = DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout')
     if any(flag in sys.argv for flag in ('--resources-only', '--caps-only', '--reference-caps-only')):
         return readers
-    return readers + ('cosworks_post_v7_composed_view', 'cfb', 'swcontainer', 'cosworks_colorref_import_view', 'cosworks_colorref_view', 'cosworks_color_comparison', 'cosworks_legend_comparison', 'cosworks_legend_render_gate', 'cosworks_need_model_tess', 'cosworks_need_offset', 'cosworks_fringe_option', 'cosworks_vector_direction_branch', 'cosworks_component_vector_policy')
+    return readers + ('cosworks_post_v7_composed_view', 'cfb', 'swcontainer', 'cosworks_colorref_import_view', 'cosworks_colorref_view', 'cosworks_color_comparison', 'cosworks_legend_comparison', 'cosworks_legend_render_gate', 'cosworks_need_model_tess', 'cosworks_need_offset', 'cosworks_fringe_option', 'cosworks_vector_direction_branch', 'cosworks_component_vector_policy', 'cosworks_component_unit_type')
 
 
 def dialog_snapshot_filename() -> str:
@@ -274,7 +305,8 @@ def dialog_snapshot_filename() -> str:
              ('--legend-comparison-only', 'legend-comparison-source-snapshot.json'),
              ('--render-policy-only', 'render-policy-source-snapshot.json'),
              ('--offset-fringe-only', 'offset-fringe-source-snapshot.json'),
-             ('--vector-only', 'vector-source-snapshot.json'))
+             ('--vector-only', 'vector-source-snapshot.json'),
+             ('--unit-only', 'unit-source-snapshot.json'))
     for flag, filename in modes:
         if flag in sys.argv: return filename
     return 'source-snapshot.json'

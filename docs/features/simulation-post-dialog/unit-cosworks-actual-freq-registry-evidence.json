@@ -1,0 +1,366 @@
+{
+  "evidence": "C-883",
+  "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\Simulation\\cosworks.dll",
+  "module_sha256": "f4cf8adfc0f6e2e36c3a29765d28bd0d073f952e5078c5dcc7cc0d5a0d409c36",
+  "blocks": [
+    {
+      "start": "0x180fda483",
+      "end": "0x180fda558",
+      "sha256": "d42a86161b70c6c79713772f9932cdcabea69cd8f2d7236482c24ac3312ce8df",
+      "raw_hex": "488d4424604889442428488d855009000048894424204c8d4c24644533c0488d15a8170301488b4c2470ff157d5bf50085c07434488d4424604889442428488d855009000048894424204c8d4c24644533c0488d1574170301488b4c2470ff15495bf50085c0756dba00020000488d4c2468ff15c5baf500448b442460488d9550090000488d4c2468e8af02abff418bd4488d4c2468ff15b1baf500488d85c803000048894580488d542468488d8dc8030000ff15a4b2f50090488bc8e89b05abff85c0750433c9eb05b901000000ff15a89df500",
+      "instructions": [
+        "180fda483 lea rax, [rsp + 0x60]",
+        "180fda488 mov qword ptr [rsp + 0x28], rax",
+        "180fda48d lea rax, [rbp + 0x950]",
+        "180fda494 mov qword ptr [rsp + 0x20], rax",
+        "180fda499 lea r9, [rsp + 0x64]",
+        "180fda49e xor r8d, r8d",
+        "180fda4a1 lea rdx, [rip + 0x10317a8]",
+        "180fda4a8 mov rcx, qword ptr [rsp + 0x70]",
+        "180fda4ad call qword ptr [rip + 0xf55b7d]",
+        "180fda4b3 test eax, eax",
+        "180fda4b5 je 0x180fda4eb",
+        "180fda4b7 lea rax, [rsp + 0x60]",
+        "180fda4bc mov qword ptr [rsp + 0x28], rax",
+        "180fda4c1 lea rax, [rbp + 0x950]",
+        "180fda4c8 mov qword ptr [rsp + 0x20], rax",
+        "180fda4cd lea r9, [rsp + 0x64]",
+        "180fda4d2 xor r8d, r8d",
+        "180fda4d5 lea rdx, [rip + 0x1031774]",
+        "180fda4dc mov rcx, qword ptr [rsp + 0x70]",
+        "180fda4e1 call qword ptr [rip + 0xf55b49]",
+        "180fda4e7 test eax, eax",
+        "180fda4e9 jne 0x180fda558",
+        "180fda4eb mov edx, 0x200",
+        "180fda4f0 lea rcx, [rsp + 0x68]",
+        "180fda4f5 call qword ptr [rip + 0xf5bac5]",
+        "180fda4fb mov r8d, dword ptr [rsp + 0x60]",
+        "180fda500 lea rdx, [rbp + 0x950]",
+        "180fda507 lea rcx, [rsp + 0x68]",
+        "180fda50c call 0x180a8a7c0",
+        "180fda511 mov edx, r12d",
+        "180fda514 lea rcx, [rsp + 0x68]",
+        "180fda519 call qword ptr [rip + 0xf5bab1]",
+        "180fda51f lea rax, [rbp + 0x3c8]",
+        "180fda526 mov qword ptr [rbp - 0x80], rax",
+        "180fda52a lea rdx, [rsp + 0x68]",
+        "180fda52f lea rcx, [rbp + 0x3c8]",
+        "180fda536 call qword ptr [rip + 0xf5b2a4]",
+        "180fda53c nop ",
+        "180fda53d mov rcx, rax",
+        "180fda540 call 0x180a8aae0",
+        "180fda545 test eax, eax",
+        "180fda547 jne 0x180fda54d",
+        "180fda549 xor ecx, ecx",
+        "180fda54b jmp 0x180fda552",
+        "180fda54d mov ecx, 1",
+        "180fda552 call qword ptr [rip + 0xf59da8]"
+      ],
+      "indirect_calls": [
+        {
+          "address": "0x180fda4ad",
+          "iat": "0x181f30030",
+          "import_binding": [
+            "ADVAPI32.dll",
+            "RegQueryValueExW"
+          ]
+        },
+        {
+          "address": "0x180fda4e1",
+          "iat": "0x181f30030",
+          "import_binding": [
+            "ADVAPI32.dll",
+            "RegQueryValueExW"
+          ]
+        },
+        {
+          "address": "0x180fda4f5",
+          "iat": "0x181f35fc0",
+          "import_binding": [
+            "mfc140u.dll",
+            "4954"
+          ]
+        },
+        {
+          "address": "0x180fda519",
+          "iat": "0x181f35fd0",
+          "import_binding": [
+            "mfc140u.dll",
+            "12240"
+          ]
+        },
+        {
+          "address": "0x180fda536",
+          "iat": "0x181f357e0",
+          "import_binding": [
+            "mfc140u.dll",
+            "280"
+          ]
+        },
+        {
+          "address": "0x180fda552",
+          "iat": "0x181f34300",
+          "import_binding": [
+            "cwPostCommon.dll",
+            "?dgxPostCommonSetActualFreqDispFlag@@YAXH@Z"
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x180a8aae0",
+      "end": "0x180a8ac01",
+      "sha256": "3e355e4d63aac1499e5197fd1658681adcc9db0c092dd9710b8af94e336f3039",
+      "raw_hex": "48895c241048896c2418565741564881ecb0010000488b05840aad014833c448898424a00100004c8bf148894c2420488b01486358f033d2b904000000ff150d8d4a01488be84885c0742d48c7c0ffffffff48ffc0803c280075f7ffc0b9640000003bc10f4fc14c63c0488bd5488d4c2430ff15d08e4a01488d1519e24c01b904000000ff15c68c4a0133ff488bf385db7e1e8bdf8bd7498bceff1518b64a0188841ca0000000ffc748ffc3483bde7ce44881fe000100007361c68434a000000000488d8c24a0000000ff15c88b4a018bd84885ed7411488d542430b904000000ff15698c4a0190498bceff153fab4a018bc3488b8c24a00100004833cce89d37c8004c8d9c24b0010000498b5b28498b6b30498be3415e5f5ec3e8f839c80090",
+      "instructions": [
+        "180a8aae0 mov qword ptr [rsp + 0x10], rbx",
+        "180a8aae5 mov qword ptr [rsp + 0x18], rbp",
+        "180a8aaea push rsi",
+        "180a8aaeb push rdi",
+        "180a8aaec push r14",
+        "180a8aaee sub rsp, 0x1b0",
+        "180a8aaf5 mov rax, qword ptr [rip + 0x1ad0a84]",
+        "180a8aafc xor rax, rsp",
+        "180a8aaff mov qword ptr [rsp + 0x1a0], rax",
+        "180a8ab07 mov r14, rcx",
+        "180a8ab0a mov qword ptr [rsp + 0x20], rcx",
+        "180a8ab0f mov rax, qword ptr [rcx]",
+        "180a8ab12 movsxd rbx, dword ptr [rax - 0x10]",
+        "180a8ab16 xor edx, edx",
+        "180a8ab18 mov ecx, 4",
+        "180a8ab1d call qword ptr [rip + 0x14a8d0d]",
+        "180a8ab23 mov rbp, rax",
+        "180a8ab26 test rax, rax",
+        "180a8ab29 je 0x180a8ab58",
+        "180a8ab2b mov rax, 0xffffffffffffffff",
+        "180a8ab32 inc rax",
+        "180a8ab35 cmp byte ptr [rax + rbp], 0",
+        "180a8ab39 jne 0x180a8ab32",
+        "180a8ab3b inc eax",
+        "180a8ab3d mov ecx, 0x64",
+        "180a8ab42 cmp eax, ecx",
+        "180a8ab44 cmovg eax, ecx",
+        "180a8ab47 movsxd r8, eax",
+        "180a8ab4a mov rdx, rbp",
+        "180a8ab4d lea rcx, [rsp + 0x30]",
+        "180a8ab52 call qword ptr [rip + 0x14a8ed0]",
+        "180a8ab58 lea rdx, [rip + 0x14ce219]",
+        "180a8ab5f mov ecx, 4",
+        "180a8ab64 call qword ptr [rip + 0x14a8cc6]",
+        "180a8ab6a xor edi, edi",
+        "180a8ab6c mov rsi, rbx",
+        "180a8ab6f test ebx, ebx",
+        "180a8ab71 jle 0x180a8ab91",
+        "180a8ab73 mov ebx, edi",
+        "180a8ab75 mov edx, edi",
+        "180a8ab77 mov rcx, r14",
+        "180a8ab7a call qword ptr [rip + 0x14ab618]",
+        "180a8ab80 mov byte ptr [rsp + rbx + 0xa0], al",
+        "180a8ab87 inc edi",
+        "180a8ab89 inc rbx",
+        "180a8ab8c cmp rbx, rsi",
+        "180a8ab8f jl 0x180a8ab75",
+        "180a8ab91 cmp rsi, 0x100",
+        "180a8ab98 jae 0x180a8abfb",
+        "180a8ab9a mov byte ptr [rsp + rsi + 0xa0], 0",
+        "180a8aba2 lea rcx, [rsp + 0xa0]",
+        "180a8abaa call qword ptr [rip + 0x14a8bc8]",
+        "180a8abb0 mov ebx, eax",
+        "180a8abb2 test rbp, rbp",
+        "180a8abb5 je 0x180a8abc8",
+        "180a8abb7 lea rdx, [rsp + 0x30]",
+        "180a8abbc mov ecx, 4",
+        "180a8abc1 call qword ptr [rip + 0x14a8c69]",
+        "180a8abc7 nop ",
+        "180a8abc8 mov rcx, r14",
+        "180a8abcb call qword ptr [rip + 0x14aab3f]",
+        "180a8abd1 mov eax, ebx",
+        "180a8abd3 mov rcx, qword ptr [rsp + 0x1a0]",
+        "180a8abdb xor rcx, rsp",
+        "180a8abde call 0x18170e380",
+        "180a8abe3 lea r11, [rsp + 0x1b0]",
+        "180a8abeb mov rbx, qword ptr [r11 + 0x28]",
+        "180a8abef mov rbp, qword ptr [r11 + 0x30]",
+        "180a8abf3 mov rsp, r11",
+        "180a8abf6 pop r14",
+        "180a8abf8 pop rdi",
+        "180a8abf9 pop rsi",
+        "180a8abfa ret ",
+        "180a8abfb call 0x18170e5f8",
+        "180a8ac00 nop "
+      ],
+      "indirect_calls": [
+        {
+          "address": "0x180a8ab1d",
+          "iat": "0x181f33830",
+          "import_binding": [
+            "api-ms-win-crt-locale-l1-1-0.dll",
+            "setlocale"
+          ]
+        },
+        {
+          "address": "0x180a8ab52",
+          "iat": "0x181f33a28",
+          "import_binding": [
+            "api-ms-win-crt-string-l1-1-0.dll",
+            "strncpy"
+          ]
+        },
+        {
+          "address": "0x180a8ab64",
+          "iat": "0x181f33830",
+          "import_binding": [
+            "api-ms-win-crt-locale-l1-1-0.dll",
+            "setlocale"
+          ]
+        },
+        {
+          "address": "0x180a8ab7a",
+          "iat": "0x181f36198",
+          "import_binding": [
+            "mfc140u.dll",
+            "4913"
+          ]
+        },
+        {
+          "address": "0x180a8abaa",
+          "iat": "0x181f33778",
+          "import_binding": [
+            "api-ms-win-crt-convert-l1-1-0.dll",
+            "atoi"
+          ]
+        },
+        {
+          "address": "0x180a8abc1",
+          "iat": "0x181f33830",
+          "import_binding": [
+            "api-ms-win-crt-locale-l1-1-0.dll",
+            "setlocale"
+          ]
+        },
+        {
+          "address": "0x180a8abcb",
+          "iat": "0x181f35710",
+          "import_binding": [
+            "mfc140u.dll",
+            "1033"
+          ]
+        }
+      ]
+    },
+    {
+      "start": "0x180a8a7c0",
+      "end": "0x180a8a854",
+      "sha256": "fd56347d2487feeeb7507e4387416918e2b07bedb83c4b65d075b3d1f06d37ab",
+      "raw_hex": "405356574881ec40040000488b05ae0dad014833c448898424300400004963f8488bda488bf133c0668944243033d241b8fe030000488d4c2432e80d87c8004c8bc7488bd3488d4c2430ff1530924a01488d542430488d4c2420ff15e8ae4a0190488bd0488bceff15bbaf4a0190488d4c2420ff15d7ae4a01488b8c24300400004833cce8373bc8004881c4400400005f5e5bc3",
+      "instructions": [
+        "180a8a7c0 push rbx",
+        "180a8a7c2 push rsi",
+        "180a8a7c3 push rdi",
+        "180a8a7c4 sub rsp, 0x440",
+        "180a8a7cb mov rax, qword ptr [rip + 0x1ad0dae]",
+        "180a8a7d2 xor rax, rsp",
+        "180a8a7d5 mov qword ptr [rsp + 0x430], rax",
+        "180a8a7dd movsxd rdi, r8d",
+        "180a8a7e0 mov rbx, rdx",
+        "180a8a7e3 mov rsi, rcx",
+        "180a8a7e6 xor eax, eax",
+        "180a8a7e8 mov word ptr [rsp + 0x30], ax",
+        "180a8a7ed xor edx, edx",
+        "180a8a7ef mov r8d, 0x3fe",
+        "180a8a7f5 lea rcx, [rsp + 0x32]",
+        "180a8a7fa call 0x181712f0c",
+        "180a8a7ff mov r8, rdi",
+        "180a8a802 mov rdx, rbx",
+        "180a8a805 lea rcx, [rsp + 0x30]",
+        "180a8a80a call qword ptr [rip + 0x14a9230]",
+        "180a8a810 lea rdx, [rsp + 0x30]",
+        "180a8a815 lea rcx, [rsp + 0x20]",
+        "180a8a81a call qword ptr [rip + 0x14aaee8]",
+        "180a8a820 nop ",
+        "180a8a821 mov rdx, rax",
+        "180a8a824 mov rcx, rsi",
+        "180a8a827 call qword ptr [rip + 0x14aafbb]",
+        "180a8a82d nop ",
+        "180a8a82e lea rcx, [rsp + 0x20]",
+        "180a8a833 call qword ptr [rip + 0x14aaed7]",
+        "180a8a839 mov rcx, qword ptr [rsp + 0x430]",
+        "180a8a841 xor rcx, rsp",
+        "180a8a844 call 0x18170e380",
+        "180a8a849 add rsp, 0x440",
+        "180a8a850 pop rdi",
+        "180a8a851 pop rsi",
+        "180a8a852 pop rbx",
+        "180a8a853 ret "
+      ],
+      "indirect_calls": [
+        {
+          "address": "0x180a8a80a",
+          "iat": "0x181f33a40",
+          "import_binding": [
+            "api-ms-win-crt-string-l1-1-0.dll",
+            "wcsncpy"
+          ]
+        },
+        {
+          "address": "0x180a8a81a",
+          "iat": "0x181f35708",
+          "import_binding": [
+            "mfc140u.dll",
+            "286"
+          ]
+        },
+        {
+          "address": "0x180a8a827",
+          "iat": "0x181f357e8",
+          "import_binding": [
+            "mfc140u.dll",
+            "1501"
+          ]
+        },
+        {
+          "address": "0x180a8a833",
+          "iat": "0x181f35710",
+          "import_binding": [
+            "mfc140u.dll",
+            "1033"
+          ]
+        }
+      ]
+    }
+  ],
+  "registry_value_references": [
+    {
+      "instruction": "0x180fda4a1",
+      "address": "0x18200bc50",
+      "value": "ActualFrequencyDisplacements"
+    },
+    {
+      "instruction": "0x180fda4d5",
+      "address": "0x18200bc50",
+      "value": "ActualFrequencyDisplacements"
+    }
+  ],
+  "caller": "0x180fd8890",
+  "conversion_helper": "0x180a8aae0",
+  "setter_call": "0x180fda552",
+  "retained_missing_context_records": 56,
+  "actual_runtime_flag": null,
+  "target_executed": false,
+  "coverage_credit": 0,
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_actual_freq_registry_audit.py": "8ac4d2614a9bedaa5c54486c6ba385e86b34c3d15fbe2083cbd85e5419e49489",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-actual-freq-flag-caller-probe.json": "824e804dfd2a5895876688da6d9b9c3d9fc51691c0ef0e4c648e5d9e62bf7840",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-actual-freq-flag-caller-ranges.tsv": "97e0db5931b50ac15e5283b3c03eb135271a216aba8f6369ad80d388a87cf663",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-actual-freq-disp-flag-native-evidence.json": "1572c5622689c57d136d5bd3d605174a22c14f3eead5b577adde81a8b5836982",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\cosworks-actual-freq-flag-caller\\FUN_180a8a7c0.c": "e425cc1ed59ce76d6b1cb94f622f28be5a3e6da96c6f0b174c5c08bac1d0c513",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\cosworks-actual-freq-flag-caller\\FUN_180a8aae0.c": "4fc6c82f0c4f8466e5acbfa5e32924a6fdbdb7d905ed9e8fd294c1f5aa0ee13a",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\cosworks-actual-freq-flag-caller\\FUN_180fd8890.c": "fae530db4a1f10491fa6127ed6c325aca8d774a9e1547fb4e106d8447e10214f"
+  },
+  "limitations": [
+    "Registry value is external runtime configuration, not a newly identified stored document field",
+    "Successful query path converts text and normalizes nonzero integer to1; two failed query attempts skip this setter call",
+    "No general registry parser or atoi overflow/locale emulation is claimed",
+    "Invocation order, other callers/modules and actual per-file runtime flag remain unresolved"
+  ]
+}
