@@ -37,7 +37,34 @@ legacy/style or modern-prefix scopes.
 
 The strict targeted suite passed15 checks in5.292seconds and its process exited
 successfully after snapshot recording. The [verification proof](mode3-rgb-evidence-verification.json)
-records exact hashes, preserved unknowns and remaining gates.
+records exact hashes, preserved unknowns and remaining gates. The full Source
+suite passed201 checks in524.555seconds and exited successfully.
+
+## Local kernel decision
+
+Both traversal passes retain the same conditional group-color replacement.
+The primary pass suppresses its array call for plot54 when the unsigned
+selector-minus1 result is at most1. The reflected pass has no corresponding
+plot/selector suppression. Those two call sites must remain distinct in a local
+operation, even when their selected RGB words happen to match.
+
+For the fixed count1/index5 call, the last target index is5. The helper uses
+a signed comparison: capacity above5 takes the existing destination; every
+other signed capacity reaches the growth helper. Only an explicitly known
+zero growth result takes the copy path. A nonzero result follows the status4
+reporting path. An unknown result remains unknown. This establishes a branch
+contract without simulating the native allocator or proving a successful update.
+
+Before publishing a local copy, require an explicit destination snapshot with
+at least six complete triples. Require the appropriate post-growth snapshot
+only after an admitted growth result. Preserve the original destination and
+all three copied words; do not invent missing cells or change serialized1DC.
+Caller rejection must leave unknown destination facts unused. Allocation and
+whole-scene acceptance remain separate from this exact local bit-copy contract.
+
+The strict decision suite passed16 checks in5.277seconds, including15 reviewed
+pass-filter cases and14 capacity/growth cases. The [kernel proof](mode3-rgb-kernel-verification.json)
+retains the contract and remaining implementation gates.
 
 ## Remaining local operation work
 

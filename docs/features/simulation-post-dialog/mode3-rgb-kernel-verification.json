@@ -1,0 +1,48 @@
+{
+  "issue": 166,
+  "behavior_version": "C893-local-color-and-triple-write-v1",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "scope": "Primary/reflected pass and fixed count1/index5 helper decisions",
+  "target_executed": false,
+  "production_operation_status": "pending",
+  "reviewed_pass_rows": 15,
+  "reviewed_array_rows": 14,
+  "targeted_source": {
+    "checks": 16,
+    "seconds": 5.277,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/mode3-rgb-kernel-strict.log",
+      "bytes": 2489,
+      "sha256": "4843b218adce44b86b4568473e84480ae646fc18abf168368432aeac7d43f4c3"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/mode3-rgb-source-snapshot.json",
+      "bytes": 622545,
+      "sha256": "3f14c1d9ec1f9ae86ad59bf243c4ca4db0846412ac3b2b59da6c7f9149650b95"
+    }
+  },
+  "decisions": "mode3-rgb-kernel-reference.json",
+  "complete_method_instructions": 504,
+  "complete_thunk_instructions": 1,
+  "primary_filter": "plot54 and unsigned(selector-1)<=1",
+  "reflected_filter": "No primary plot/selector filter",
+  "fixed_array_branch": "Signed capacity>5 uses existing destination; otherwise only explicitly known growth result0 admits copy",
+  "missing_facts": "Unknown capacity/growth remains unknown; rejected caller branches do not require unused destination facts",
+  "required_destination": "At least six explicitly supplied complete triples before a local write; no invented cells",
+  "additional_stored_byte_credit": 0,
+  "excluded": [
+    "Allocator execution or actual native submission",
+    "Geometry/renderer/whole-scene validation",
+    "A complete production candidate/group/array operation"
+  ],
+  "pending": [
+    "Full202 Source gate",
+    "Production immutable candidate, group and fixed array-write operation with explicit runtime dependencies",
+    "Independent raw-pattern fixtures, input isolation, concurrency and fresh-process checks for that operation",
+    "Exact publication-cut PR and five platform checks; remaining feature166 schemas"
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+}

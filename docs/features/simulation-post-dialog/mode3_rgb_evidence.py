@@ -94,8 +94,9 @@ def verify_mode3_rgb_owned() -> None:
 def mode3_rgb_functions() -> tuple[Callable[[], None], ...]:
     """Keep complete source/body evidence and all raw stored contexts together; e.g. mode3_rgb_functions()."""
     from mode3_rgb_bindings import verify_mode3_rgb_bindings, verify_mode3_rgb_rea_capture
+    from mode3_rgb_kernel import verify_mode3_rgb_kernel_decisions
     return (verify_mode3_rgb_sources, verify_mode3_rgb_bindings, verify_mode3_rgb_rea_capture,
-        verify_mode3_rgb_native, verify_mode3_rgb_owned)
+        verify_mode3_rgb_native, verify_mode3_rgb_owned, verify_mode3_rgb_kernel_decisions)
 
 
 def run_mode3_rgb_checks() -> unittest.TestResult:
