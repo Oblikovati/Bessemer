@@ -1,0 +1,33 @@
+{
+  "issue": 166,
+  "scope": "Behavior-preserving canonical stored-color extraction",
+  "targeted_source": {
+    "checks": 17,
+    "seconds": 6.067,
+    "result": "passed unchanged expectations",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/stored-style-colors-refactor-regression.log",
+      "bytes": 2755,
+      "sha256": "395b2c942a81d8b9459c3ee2de0f8ec6f2146b1e53a53cec1079624b5e5b5d72"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/segment-color-source-snapshot.json",
+      "bytes": 617696,
+      "sha256": "5a23c81137d61d9b4c54c4e19eb91626d8e5fb42026131b1a90fb649b5a1edc2"
+    }
+  },
+  "unchanged": {
+    "owned_contexts": 425,
+    "native_contexts": 276,
+    "local_rgb_cases": 25434,
+    "owned_missing_named_colors": 20
+  },
+  "negative_regressions": [
+    "Allfour missing-component positions rejected",
+    "Complete metadata with changed raw bytes rejected",
+    "Absent group remains None",
+    "Complete signed-zero/NaN/original words preserved"
+  ],
+  "target_executed": false
+}
