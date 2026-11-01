@@ -79,15 +79,22 @@ def native_style_disassembly(image: pefile.PE, start: int, end: int) -> list[Sty
     return parsed_style_instructions(output)
 
 
-def decoded_style_preference_method(image: pefile.PE, method: dict[str, object]) -> list[StylePreferenceInstruction]:
+def canonical_style_address_operands(mnemonic: str, text: str) -> str:
+    """Normalize only exact zero displacement and unit-scale address identities; e.g. canonical_style_address_operands('lea', 'rax,[rbp+0]')."""
+    normalized = canonical_style_operands(mnemonic, text)
+    return normalized.replace('+0]', ']').replace('*1+', '+').replace('*1]', ']')
+
+
+def decoded_style_preference_method(image: pefile.PE, method: dict[str, object], normalize_address_spelling: bool = False) -> list[StylePreferenceInstruction]:
     """Match complete instructions, contiguous bytes, digest and any recorded export; e.g. decoded_style_preference_method(image, method)."""
     start, end = int(cast(str, method['start']), 16), int(cast(str, method['end']), 16)
     raw = image.get_data(start - image.OPTIONAL_HEADER.ImageBase, end - start)
     assert digest(raw) == method['sha256'], method['start']
     instructions = native_style_disassembly(image, start, end)
-    actual = [(i.address, i.mnemonic, ','.join(i.operands)) for i in instructions]
+    normalizer = canonical_style_address_operands if normalize_address_spelling else canonical_style_operands
+    actual = [(i.address, i.mnemonic, normalizer(i.mnemonic, ','.join(i.operands))) for i in instructions]
     expected = [line.split(' ', 2) for line in cast(list[str], method['instructions'])]
-    original = [(int(parts[0], 16), parts[1], canonical_style_operands(parts[1], parts[2] if len(parts) == 3 else '')) for parts in expected]
+    original = [(int(parts[0], 16), parts[1], normalizer(parts[1], parts[2] if len(parts) == 3 else '')) for parts in expected]
     assert actual == original, [(a, b) for a, b in zip(actual, original) if a != b]
     assert b''.join(instruction.raw for instruction in instructions) == raw, method['start']
     assert instructions[0].address == start and instructions[-1].address + len(instructions[-1].raw) == end
