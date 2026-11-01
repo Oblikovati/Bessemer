@@ -96,8 +96,10 @@ def verify_segment_color_owned() -> None:
 def segment_color_functions() -> tuple[Callable[[], None], ...]:
     """Keep exact original sources, full bodies and complete archive replays together; e.g. segment_color_functions()."""
     from segment_color_bindings import verify_segment_color_bindings, verify_segment_color_rea_capture
+    from segment_rgb_packets import verify_segment_rgb_packets
+    from segment_rgb_projection import verify_segment_rgb_projection_packets
     return (verify_segment_color_sources, verify_segment_color_bindings, verify_segment_color_rea_capture,
-        verify_segment_color_native, verify_segment_color_owned)
+        verify_segment_color_native, verify_segment_color_owned, verify_segment_rgb_packets, verify_segment_rgb_projection_packets)
 
 
 def run_segment_color_checks() -> unittest.TestResult:

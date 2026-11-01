@@ -40,6 +40,7 @@ def verify_segment_color_bindings() -> None:
         verify_segment_qualification_boundaries()
         assert [len(method) for method in segment_color_decoded_methods(image, methods)] == [275, 136, 145]
         segment_color_argument_anchors(methods)
+        segment_rgb_guard_anchors(methods)
         dialog_import(image, b'dspogl.dll', b'?GetColor3fv@COGLColor@@QEAAXQEAM@Z', 0x1802cb438)
         dialog_import(image, b'opengl32.dll', b'glColor3fv', 0x1802cbbb8)
         segment_color_call_slots(report, image.get_data)
@@ -112,3 +113,15 @@ def verify_segment_scalar_capture(address: int, canonical: str, actual: str) -> 
     assert displacement is not None
     resolved = expected.replace(displacement[0], str(address + 8 + int(displacement[1])))
     assert canonical_style_address_operands(mnemonic, actual_operands) == resolved
+
+
+
+def segment_rgb_guard_anchors(methods: list[dict[str, object]]) -> None:
+    """Pin reached signed index and raw flag guards in exact instruction order; e.g. segment_rgb_guard_anchors(methods)."""
+    expected = ('18015e889 mov eax, dword ptr [rcx + 0x2c68]', '18015e88f sub eax, 3',
+        '18015e892 cmp eax, 1', '18015e895 ja 0x18015ec8e',
+        '18015e89b mov eax, dword ptr [rcx + 0x274c]', '18015e8a1 test eax, eax', '18015e8a3 jle 0x18015ec8e',
+        '18015e8a9 mov ecx, dword ptr [rcx + 0x2750]', '18015e8af test ecx, ecx', '18015e8b1 jle 0x18015ec8e',
+        '18015e8b7 cmp ecx, eax', '18015e8b9 jl 0x18015ec8e', '18015e8bf mov eax, dword ptr [r15 + 0xda4]',
+        '18015e8c6 test eax, eax', '18015e8c8 je 0x18015e8d2', '18015e8ca test al, 4', '18015e8cc je 0x18015ec8e')
+    assert tuple(cast(list[str], methods[0]['instructions'])[21:38]) == expected

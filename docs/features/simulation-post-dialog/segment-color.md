@@ -33,17 +33,41 @@ successfully after snapshot recording. The [verification proof](segment-color-ev
 records exact hashes, the corrected legacy boundary and remaining gates.
 The full Source suite passed194 checks in517.964seconds and exited successfully.
 
-## Remaining operation requirements
+## Local RGB read
 
-The consumer admits only runtime modes3 and4 and applies element-index and
-flag guards before visiting endpoint geometry. Endpoint node identifiers,
-coordinates, possible assembly transforms and helper separation checks remain
-required inputs to a complete primitive call plan. A stored color is insufficient
-to establish invocation, valid geometry or successful drawing. No UI label,
-physical unit or global meaning for every1BC consumer is inferred.
+`element_segment_color_inputs()` retains the optional canonical1BC RGBA from
+dialog and standalone style snapshots. `plan_rgb_read(runtime)` evaluates
+mode, first index, last index, ordered range and flags in the verified order.
+Unknown facts fail only when reached. Modes outside3/4, nonpositive indices,
+a reversed range and nonzero flags without mask0x4 return completed empty
+local plans. The stored color is required only after those guards admit a read.
 
-This evidence slice adds no operation stub. A complete local operation needs
-ordered typed runtime dependencies, copied endpoint provenance, explicit geometry
-coverage, independent boundary cases and ownership/concurrency/process checks.
-The complete Source and publication gates remain required before integration
+An admitted normal-flow read returns the first three raw words without numeric
+conversion or clamping. Its immutable provenance retains allfour original words
+and every supplied runtime fact. Completion, diagnostics and exact local coverage
+remain attached. Earlier state calls and their exceptional paths are outside
+this local read model. The result grants no endpoint or draw validity.
+
+Independent expectations cover25,434 guard/bit-pattern cases and four separately
+labeled runtime scenarios for every425 owned and276 native archive contexts.
+Allseven Rust checks passed, including known-zero versus missing colors, alpha
+independence, source mutation isolation and eight-worker comparisons. Two fresh
+processes matched all1,030,588 expected bytes. Clippy passed for alltargets and
+features with warnings denied. The strict17-check Source suite passed in5.189seconds.
+The [operation proof](segment-rgb-operation-verification.json) and
+[process proof](segment-rgb-process-verification.json) retain exact scope and hashes.
+
+## Remaining primitive operation work
+
+The consumer visits endpoint geometry after its color read. Endpoint node
+identifiers, coordinates, possible assembly transforms and helper separation
+checks remain required inputs to a complete primitive call plan. A stored color
+or completed local read is insufficient to establish primitive invocation,
+valid geometry or successful drawing. No UI label, physical unit or global
+meaning for every1BC consumer is inferred.
+
+A complete primitive operation still needs ordered typed endpoint dependencies,
+copied geometry provenance, explicit geometry coverage and independent boundary,
+ownership, concurrency and process checks. The full196 Source gate and exact
+publication gates remain required for this local-read addition before integration
 of feature166, together with the remaining named schema models.

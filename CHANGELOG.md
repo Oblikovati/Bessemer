@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added guarded element-segment RGB reads with explicit runtime dependencies, preserved raw RGBA and separate endpoint-geometry exclusions. (#166)
+
 - Added numeric plot54 local color plans with ordered runtime dependencies, original copied colors and explicit masked alpha semantics. (#166)
 
 - Added explicit Simulation primary-text assignment and eight-position display selection, preserving unknown runtime state, counted payloads and per-stage provenance. (#166)
