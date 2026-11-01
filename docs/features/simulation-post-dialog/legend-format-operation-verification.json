@@ -72,9 +72,25 @@
     "Initializer defaults, whole-format acceptance from prefix scopes, new byte coverage or wire edits"
   ],
   "pending": [
-    "Full223 Source gate",
     "Exact publication-cut PR validation and all five platform checks",
     "Remaining feature166 documented models and integration"
   ],
-  "prose_review": "Humanizer unavailable; maintainer review pending."
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 223,
+    "seconds": 711.138,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "c3795b0d205af68008ae6a5223060130fe62e42b",
+    "log": {
+      "path": "target/legend-format-operation-source-full.log",
+      "bytes": 51705,
+      "sha256": "006afa942b460908a025ef29b8f6c6aeedab3f50e58a776e5c5010471f4695dd"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 632456,
+      "sha256": "3a6622e528f7b5947ca02b3049ff39e4cf033b4888f69eae9a79a4ddfde5fa59"
+    }
+  }
 }

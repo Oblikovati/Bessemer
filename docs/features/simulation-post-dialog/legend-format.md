@@ -89,6 +89,8 @@ All seven Rust checks passed, including native contexts and eight-worker
 comparisons. Clippy passed. Two fresh processes matched all84,395 expected
 results, totaling4,388,540bytes. The [operation record](legend-format-operation-verification.json)
 and [process proof](legend-format-process-verification.json) retain the exact
-gates, hashes and exclusions. Exact publication validation, platform gates and
+gates, hashes and exclusions. The full Source suite passed223 checks in
+711.138seconds and exited successfully after snapshot recording.
+Exact publication validation, platform gates and
 remaining documented feature166 models remain outstanding. Humanizer is
 unavailable in this checkout; maintainer prose review remains pending.
