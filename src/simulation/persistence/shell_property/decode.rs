@@ -1,6 +1,6 @@
 use super::super::{load_base, load_reader::BinaryLoadReader};
 use super::{SimulationShellPropertyContext, types::ShellPropertyStatistics};
-use crate::{Result, simulation::invalid};
+use crate::Result;
 
 pub(super) fn frame_error(mut error: crate::BessemerError) -> crate::BessemerError {
     error.operation = "decode shell Property";
@@ -34,17 +34,7 @@ pub(super) fn read(
 }
 
 fn shell_terminal_table(reader: &mut BinaryLoadReader<'_>, label: &str) -> Result<()> {
-    let mode = reader.signed(&format!("{label}.table.mode"))?;
-    let count = reader.count(&format!("{label}.table.count"), 50, 184)?;
-    if count != 0 && !(-100..=100).contains(&mode) {
-        return Err(invalid(
-            label,
-            format!(
-                "mode {mode} with count {count}; expected -100..=100 for nonempty shell curves"
-            ),
-        ));
-    }
-    load_base::terminal_records(reader, label, count)
+    load_base::terminal_table_with_empty_mode(reader, label, "shell curves")
 }
 
 fn derived_prefix(reader: &mut BinaryLoadReader<'_>) -> Result<i32> {

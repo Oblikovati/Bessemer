@@ -1,0 +1,72 @@
+{
+  "feature_issue": 161,
+  "scope": "Complete functional counted-record read/construction/edit with initial contracts; final adversarial/concurrency gates remain pending",
+  "implementation_parent": "3c838d59ab2a856e7b0f4619b616aa668ff80f85",
+  "behavior_profile": 1,
+  "strict_reference_checks": 17,
+  "reference_exit_code": 0,
+  "reference_process_reaped": true,
+  "reference_log_sha256": "c05d9f3b35ab4b3aae35f82aacab79c33e553aa2cd4288b2cfa3bf961057dbba",
+  "focused_rust_tests_including_native": 13,
+  "native_tests": 3,
+  "focused_exit_code": 0,
+  "focused_process_reaped": true,
+  "first_focused_log_sha256": "fa6df20551671d336c7437cbaa22e656204c99fae42b7768d4a4fcda72c09bc8",
+  "second_focused_log_sha256": "39979e05a0315af3f35eb9024d6126e3c84852d6301051348a029bca8e0fd859",
+  "clippy_warnings": 0,
+  "clippy_log_sha256": "37cbc9e4e5bbffb8684f7953f5f72d352a8ce2fa443de2a41210c20004c8dc76",
+  "owned_contexts": 322,
+  "owned_records": 446,
+  "completed_empty_contexts": 62,
+  "native_arguments": 12,
+  "native_records": 16,
+  "proper_prefixes_rejected": 390672,
+  "trailing_byte_cases_rejected": 322,
+  "independent_exact_one_below_positive_budget_axes": 7,
+  "all_record_and_base_extents_independently_verified": true,
+  "compile_time_send_sync_types": 16,
+  "all_field_noops_and_outer_nested_copied_parents_verified": true,
+  "caller_byte_and_field_vector_isolation_verified": true,
+  "foreign_stale_bounds_and_failed_count_kind_requests_verified": true,
+  "packets": {
+    "projection": {
+      "bytes": 2623906,
+      "sha256": "437214e10222a8dc173f595ade0421699e1ce4224735a2a064b62562dc93079b",
+      "owned_contexts": 322,
+      "native_arguments": 12,
+      "fresh_processes": 2,
+      "exact_source_packet_match": true
+    },
+    "history": {
+      "bytes": 4271749,
+      "sha256": "fe57d58a7074f6e4a460c2ef5a56e63fad3a590a4d0f1cc4dfdd75c31535bc88",
+      "owned_contexts": 322,
+      "native_arguments": 12,
+      "fresh_processes": 2,
+      "exact_source_packet_match": true
+    }
+  },
+  "runtime_sources_sha256": {
+    "src/simulation/persistence/mesh_control_records/archive.rs": "9b4ca9a39cb65bfcb7d31b4003809be653e4fbc40822aaa968a6b48a7f432eb9",
+    "src/simulation/persistence/mesh_control_records/contracts.rs": "e089542c16fcff278e4e9c343fad3a94f62a90b1c0a245a30c0fd6295523a523",
+    "src/simulation/persistence/mesh_control_records/coverage.rs": "7b79874786dca73c4357d9a37e8c83a4233463ac47f058b9305c10279be09f8f",
+    "src/simulation/persistence/mesh_control_records/decode.rs": "2ef752ee0e3fbdd9fab5507663ba434109533777b24be7e8ae6eb5d8e29a0c63",
+    "src/simulation/persistence/mesh_control_records/edit.rs": "a0dc7ba71107cc9ad9e5ee830158e9b0644575f423073792d2c6e78c189fe629",
+    "src/simulation/persistence/mesh_control_records/mod.rs": "2f89636014ad473c6aa38663ecd35235b92e67539f93bdd20b14b679f4ce00eb",
+    "src/simulation/persistence/mesh_control_records/result.rs": "7f37e495e6d35de4a266fdefb96691548757453e7bcef5cccaff8979d4349f10",
+    "src/simulation/persistence/mesh_control_records/types.rs": "db87f4284b1a95e66f30f13ba45ebf7aef9b444b4c3c4afb90a4b077d524694b"
+  },
+  "test_sources_sha256": {
+    "tests/simulation_mesh_control_records/budgets.rs": "b91183aad7caa261591b9fab222fd1890859ca34150181437b975e7ae08fdcc5",
+    "tests/simulation_mesh_control_records/contracts.rs": "7000d76fde53d1580cd03932eb21c674bbcc4e22dd19ff2edb52bc53e96b4cb1",
+    "tests/simulation_mesh_control_records/history.rs": "af6435ee65c1d0b9dac5b9f355ab16d04d9667b6627775f0cff0b0eacf17e1cb",
+    "tests/simulation_mesh_control_records.rs": "d7ee5fb9c0847651a81c4f68fe9744eee5b883fcfe025905296ebd4b660f7f26"
+  },
+  "source_snapshot_sha256": "cea97d55f0dc4d61ba8e0fc2ffdf1893545f88cf430dcd87f6c401d7cbc53fbb",
+  "exclusions": [
+    "Generated malformed grammar and sufficient-payload fixed-cap controls remain pending.",
+    "Full six-kind changed-value/supplied-archive provenance and mixed concurrency acceptance remain pending.",
+    "Full local and five exact-head platform gates for the completed combined feature remain pending.",
+    "Native writer/application, DocumentInfo dispatch, geometry and whole-format acceptance remain unproven."
+  ]
+}

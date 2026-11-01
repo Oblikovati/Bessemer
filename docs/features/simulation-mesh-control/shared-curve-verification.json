@@ -1,0 +1,29 @@
+{
+  "feature_issue": 161,
+  "scope": "Behavior-preserving extraction of existing Shell empty-table curve reader; earlier strict reader unchanged",
+  "runs": [
+    {
+      "phase": "before",
+      "summaries": 4,
+      "passed": 85,
+      "failed": 0,
+      "ignored": 18,
+      "exit_code": 0,
+      "process_reaped": true,
+      "log_sha256": "77e20bcd994c320818dcf3dabd8fcd5680d7e4fd79be26c067286278353d53fa"
+    },
+    {
+      "phase": "after",
+      "summaries": 4,
+      "passed": 85,
+      "failed": 0,
+      "ignored": 18,
+      "exit_code": 0,
+      "process_reaped": true,
+      "log_sha256": "eb19583cff9f9bcb68c5ecc283b8ae4a2cdb453f628532cc0b1612d917ad5029"
+    }
+  ],
+  "owned_field_history_and_prefix_fixtures_unchanged": true,
+  "strict_empty_table_mode_error_class_entity_and_cause_unchanged": true,
+  "shell_curve_error_cause_preserved_with_explicit_subject": true
+}

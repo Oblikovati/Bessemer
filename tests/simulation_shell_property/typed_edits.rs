@@ -47,7 +47,7 @@ fn assert_field_spans(
         if index != changed {
             assert_eq!(field, &edit.archive().fields()[index]);
         }
-        let expected = shifted_span(
+        let expected = typed_load_values::shifted_span(
             body.field_offsets()[index],
             body.field_offsets()[changed],
             index,
@@ -56,26 +56,6 @@ fn assert_field_spans(
         );
         assert_eq!(edit.archive().field_offsets()[index], expected);
     }
-}
-
-fn shifted_span(
-    span: (usize, usize),
-    target: (usize, usize),
-    index: usize,
-    changed: usize,
-    width: usize,
-) -> (usize, usize) {
-    if index < changed {
-        return span;
-    }
-    if index == changed {
-        return (target.0, target.0 + width);
-    }
-    let delta = width as isize - (target.1 - target.0) as isize;
-    (
-        span.0.checked_add_signed(delta).unwrap(),
-        span.1.checked_add_signed(delta).unwrap(),
-    )
 }
 
 fn assert_edit_coverage(
@@ -115,13 +95,4 @@ fn all_owned_contexts_support_six_value_kinds_variable_text_and_complete_supplie
     assert_eq!(counts, [2284, 2284, 3168, 48894, 2034, 1656]);
 }
 
-pub(super) fn value_kind(value: &SimulationShellPropertyValue) -> usize {
-    match value {
-        SimulationShellPropertyValue::Signed(_) => 0,
-        SimulationShellPropertyValue::Unsigned(_) => 1,
-        SimulationShellPropertyValue::DoubleBits(_) => 2,
-        SimulationShellPropertyValue::Text(_) => 3,
-        SimulationShellPropertyValue::Bytes(_) => 4,
-        SimulationShellPropertyValue::Embedded(_) => 5,
-    }
-}
+pub(super) use super::typed_load_values::value_kind;
