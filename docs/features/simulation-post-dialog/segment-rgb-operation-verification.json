@@ -71,9 +71,25 @@
     "Graphics-state changes, physical units, complete scene rendering or fourth-component purpose"
   ],
   "pending": [
-    "Full196 Source gate",
     "Exact publication-cut PR gate and five platform checks",
     "Complete primitive operation and remaining feature166 schemas/integration"
   ],
-  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 196,
+    "seconds": 542.32,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "94d601dcf0f24609a817e1aa4948784a3878c66b",
+    "log": {
+      "path": "target/segment-rgb-source-full.log",
+      "bytes": 46711,
+      "sha256": "ace4602b5b2caab4c99154c192ed36b6bbed75dec1f68abe5e003d90f6f1b22d"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 622105,
+      "sha256": "1fc1b2a6cd4f860209d49a45441fc1111e14c720a090d9cb3cb8c0e6b70a479c"
+    }
+  }
 }
