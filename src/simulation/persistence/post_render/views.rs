@@ -95,3 +95,17 @@ pub(in crate::simulation::persistence) fn optional_render_word_bits<T: BinaryLoa
         Err(error) => Err(error),
     }
 }
+
+pub(in crate::simulation::persistence) fn optional_render_signed_words<
+    T: BinaryLoadSnapshot,
+    const N: usize,
+>(
+    snapshot: &T,
+    paths: [&str; N],
+) -> Result<[Option<i32>; N]> {
+    let mut words = [None; N];
+    for (slot, path) in words.iter_mut().zip(paths) {
+        *slot = optional_render_word_bits(snapshot, path)?.map(|word| word as i32);
+    }
+    Ok(words)
+}
