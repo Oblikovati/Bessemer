@@ -99,9 +99,25 @@
     "Universal FC visibility labels, missing-field defaults, new byte credit and expanded native acceptance"
   ],
   "pending": [
-    "Full integrated Source replay for this layout cut",
     "Remaining documented feature166 models",
     "Exact publication-head cargo xtask pr and all five platform gates"
   ],
-  "prose_review": "Humanizer unavailable; maintainer review pending."
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 268,
+    "seconds": 500.038,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "53f2e6d00abdf48f8707a584ed3a11b50af27712",
+    "log": {
+      "path": "target/legend-step-layout-source-full.log",
+      "bytes": 59902,
+      "sha256": "247e936f908cdcd07a1a17ad0ef021c1bcfd02512b1d39d2fae3a931760af858"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 633446,
+      "sha256": "3f0a733f2ab34709dbd40b58493c9d17bf404a64df6c5ac3eba006f75840edab"
+    }
+  }
 }
