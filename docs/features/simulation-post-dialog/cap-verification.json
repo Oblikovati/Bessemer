@@ -1,0 +1,51 @@
+{
+  "issue": 166,
+  "source_controls": 72,
+  "accepted": 24,
+  "rejected": 48,
+  "reference": {
+    "path": "docs/features/simulation-post-dialog/cap-reference.json",
+    "bytes": 17329,
+    "sha256": "1f9ae93c46a1f3c5369ee558d7294137cb9934e6d1150647ddee9f61d5f6386a"
+  },
+  "source_snapshot": {
+    "path": "docs/features/simulation-post-dialog/cap-source-snapshot.json",
+    "bytes": 515233,
+    "sha256": "2a3bfae041a0af00b0e1eb5368513fef6e9befdf373d9932f85d9a620e2e7c25"
+  },
+  "initialization": {
+    "checks": 3,
+    "seconds": 3.941,
+    "log": {
+      "path": "target/post-dialog-caps-source-write.log",
+      "bytes": 624,
+      "sha256": "aebbe605112b40a9a610d9432adae1c761ff3e6ee9b4edbda13a3547c0cf884f"
+    }
+  },
+  "strict_replay": {
+    "checks": 3,
+    "seconds": 3.237,
+    "log": {
+      "path": "target/post-dialog-caps-source-strict.log",
+      "bytes": 624,
+      "sha256": "2b8a769a18ead128e67e26ce4e937b1140e495f036dc61bda185631a3b6d2ff8"
+    }
+  },
+  "rust_focused_logs": [
+    {
+      "path": "target/post-dialog-count-caps.log",
+      "bytes": 475,
+      "sha256": "f30d34aeb3a7632bf6a2b6f3260da6cd5922958e7ec3e0ed3426cc24844ed8b7"
+    },
+    {
+      "path": "target/post-dialog-byte-caps.log",
+      "bytes": 470,
+      "sha256": "62a1f39e7ac2e1cea9c22efa97358dc264657cc9bbeb4a669e0bb867d63cdab8"
+    }
+  ],
+  "pending": [
+    "Full 60-check reference replay after registration.",
+    "Combined Rust run and final helper recompilation.",
+    "Complete parent operation acceptance, later documented views and PR gate."
+  ]
+}

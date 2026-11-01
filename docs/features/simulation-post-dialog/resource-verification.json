@@ -1,0 +1,81 @@
+{
+  "issue": 166,
+  "reference_replay": {
+    "command": "python docs/features/simulation-post-dialog/freeze_post_dialog.py",
+    "checks": 59,
+    "result": "passed",
+    "seconds": 379.481,
+    "log": {
+      "path": "target/post-dialog-resource-full-strict.log",
+      "bytes": 22994,
+      "sha256": "593c4c0307912ab618bb31211e07ba7306465f69dd35cf34c1d2b03f6addff83"
+    }
+  },
+  "resource_packet": {
+    "path": "tests/fixtures/simulation-post-dialog/resources.bin",
+    "bytes": 9008,
+    "sha256": "47bf678d67d0e35005ad43d891dd62607b48f52645110c4d50a24aa60861a0b2"
+  },
+  "source_snapshot": {
+    "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+    "bytes": 516053,
+    "sha256": "b78c5c7d722bc4f3efecebebd40453f7a4df274d347f76387be69bbfeec2e969"
+  },
+  "resource_contexts": 225,
+  "independent_axes": [
+    "outer bytes",
+    "outer primitive fields",
+    "variable entries",
+    "text payload bytes",
+    "maximum embedded bytes",
+    "maximum embedded fields",
+    "maximum embedded new objects"
+  ],
+  "rust_resource_checks": {
+    "source_budgets": {
+      "path": "target/post-dialog-source-budgets.log",
+      "bytes": 485,
+      "sha256": "3e5c689632389945c6d08e334a54cda45359878cd7e79a7cc59244a4328b154b"
+    },
+    "embedded_budgets": {
+      "path": "target/post-dialog-embedded-budgets.log",
+      "bytes": 485,
+      "sha256": "00365e81ebd63db9b2d6900754445f381037ed7533da6c154aaead153664c241"
+    }
+  },
+  "exclusions": [
+    "No application acceptance or geometry validation claim.",
+    "Complete parent operation acceptance and full PR gate remain pending.",
+    "Runtime boundary controls are separate from the independent Source resource denominators."
+  ],
+  "subsequent_full_replay": {
+    "checks": 60,
+    "seconds": 380.936,
+    "result": "passed",
+    "log": {
+      "path": "target/post-dialog-sixty-strict.log",
+      "bytes": 23150,
+      "sha256": "01b9a7c422707412c692395e63fc36e588599547094df76686d072d0dd72269d"
+    },
+    "source_snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 518648,
+      "sha256": "8b1a085baac03c62e49af774ccfb5a4bd358b255e82f729bf4d6d645fe2a02b2"
+    }
+  },
+  "latest_full_replay": {
+    "checks": 61,
+    "seconds": 492.705,
+    "result": "passed",
+    "log": {
+      "path": "target/post-dialog-sixty-one-strict.log",
+      "bytes": 23337,
+      "sha256": "43d941c0b5496e6a3e7864df636ec8a12d413a67f20f2df2c8767fc59975afec"
+    },
+    "source_snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 520055,
+      "sha256": "12025b109f04a5e62224e853d7d531b80a8a53aef26d656d8baa6ba96ab0226c"
+    }
+  }
+}

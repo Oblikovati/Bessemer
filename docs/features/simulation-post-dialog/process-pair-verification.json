@@ -1,0 +1,25 @@
+{
+  "issue": 166,
+  "processes_per_output": 2,
+  "parent_contexts": 449,
+  "owned_parents": 225,
+  "native_parents": 224,
+  "outputs": {
+    "fields": {
+      "bytes": 12940808,
+      "sha256": "f286189af2a5b6bd8c64f934768a88c3e5b5503631d2cbacf21fd119403b6fd1",
+      "matches_source_expectation": true,
+      "process_outputs_identical": true
+    },
+    "history": {
+      "bytes": 23530850,
+      "sha256": "fb0ba85d341b43e5dea113130e4e97e004070e367ed1d3b3f3cf096cbc57e7d4",
+      "matches_source_expectation": true,
+      "process_outputs_identical": true
+    }
+  },
+  "exclusions": [
+    "Non-parent history contexts are retained passthrough framing and receive no parent runtime coverage credit.",
+    "Application dispatch, rendering and geometry acceptance are not established."
+  ]
+}

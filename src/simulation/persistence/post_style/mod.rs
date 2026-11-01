@@ -29,3 +29,5 @@ pub use super::thermal::{
 pub use archive::SimulationPostStyle;
 pub use contracts::SimulationPostStyleEdit;
 pub use types::{SimulationPostStyleCompletion, SimulationPostStyleCoverage};
+
+pub(super) use decode::read as read_poststyle;

@@ -1,7 +1,10 @@
 use super::super::load_reader::BinaryLoadReader;
 use crate::Result;
 
-pub(super) fn read(reader: &mut BinaryLoadReader<'_>, maximum_characters: usize) -> Result<()> {
+pub(in crate::simulation::persistence) fn read(
+    reader: &mut BinaryLoadReader<'_>,
+    maximum_characters: usize,
+) -> Result<()> {
     if reader.version < 700006 {
         return super::legacy::read(reader);
     }

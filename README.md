@@ -666,3 +666,11 @@ helper profiles, including the legacy style/legend partition, versioned color
 fields and atomic character text. It shares raw field/text representations with
 PostInfo and applies its own layout and explicit budgets; see
 [the dialog helper evidence](docs/features/simulation-post-dialog/README.md).
+
+
+`SimulationPostDialog` reads, constructs and edits complete versioned DGXPOST
+bodies. It retains atomic character text, opaque counted bytes, raw scalar bits
+and scoped reference archives, with explicit outer and embedded limits. Reads
+require EOF; isolated edits preserve every unselected field and report outer
+and nested provenance. Stored profiles do not establish application dispatch
+or geometry validity. See [the dialog evidence](docs/features/simulation-post-dialog/README.md).

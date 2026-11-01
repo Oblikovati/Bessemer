@@ -1,7 +1,10 @@
 use super::super::load_reader::BinaryLoadReader;
 use crate::Result;
 
-pub(super) fn read(reader: &mut BinaryLoadReader<'_>, maximum_characters: usize) -> Result<()> {
+pub(in crate::simulation::persistence) fn read(
+    reader: &mut BinaryLoadReader<'_>,
+    maximum_characters: usize,
+) -> Result<()> {
     for index in 0..7 {
         let path = format!("post_info.header[{index}]");
         if matches!(index, 2 | 5 | 6) {
