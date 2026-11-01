@@ -87,10 +87,26 @@
     "Gray/alpha validity constraints, count-sized wire framing, absent-field defaults and new stored-byte credit"
   ],
   "pending": [
-    "Full integrated Source replay for this operation cut",
     "Remaining documented feature166 models",
     "Exact publication-head cargo xtask pr and all five platform gates",
     "Bug172 integration with feature166"
   ],
-  "prose_review": "Humanizer unavailable; maintainer review pending."
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 255,
+    "seconds": 542.274,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "b9266b80fef02e92aefd59649b5a3d96755603be",
+    "log": {
+      "path": "target/legend-yield-operation-source-full.log",
+      "bytes": 57600,
+      "sha256": "1db41249667dc4952afd9c9a3b387d264603d18f022ba4d41e7aae197ef9ebeb"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 633132,
+      "sha256": "c39e9617e27ff82c8c77aae4ecadfaaf43eaf3ca55f4c95dfa057f548a18db82"
+    }
+  }
 }
