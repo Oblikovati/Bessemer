@@ -473,3 +473,8 @@ The [vector-direction model](vector-direction.md) composes the local selector/te
 branch with the complete static provider dispatch. It retains all four output
 words and their origin, and requires explicit loaded CString presence. Native
 runtime execution and the fourth word's physical meaning remain unclaimed.
+
+The [numeric unit model](unit-type.md) retains numeric codes and explicit runtime
+context. It distinguishes known fallback9999 from missing required state, keeps
+ActualFreqDispFlag raw and never supplies a flag from PE initialization or a
+registry setting that may not apply to the file.

@@ -38,6 +38,7 @@
 
 ### Added
 
+- Added numeric unit selection with explicit optional runtime context, exact ActualFreqDispFlag gating and typed missing-context results. (#166)
 - Added the static component-vector model with verified tables, exact four-word outputs, dispatch provenance and explicit loaded-text context. (#166)
 - Added optional-state offset decisions and raw-preserving fringe views with explicit modeled runtime transitions and call-order effects. (#166)
 - Added raw-preserving legend body-entry and model-tessellation request views with explicit runtime presence and missing-state errors. (#166)

@@ -1,0 +1,103 @@
+{
+  "issue": 166,
+  "behavior_version": "C881-C882-C883-numeric-unit-v1",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "kernel_decision": "Preserve numeric codes and unsigned boundaries; require only context used by the selected branch, retain the exact-one raw global gate and never resolve runtime state from PE initialization or registry evidence.",
+  "target_executed": false,
+  "owned_cases": 202840,
+  "owned_outcomes": {
+    "completed": 202145,
+    "missing_global": 22,
+    "missing_modifier": 673
+  },
+  "native_contexts": 224,
+  "native_modeled": 168,
+  "native_unresolved": 56,
+  "explicit_flag_alternatives": 168,
+  "actual_runtime_flag": null,
+  "owned_complete_parents": 225,
+  "native_complete_parents": 224,
+  "parent_context_choices": 16,
+  "additional_stored_byte_credit": 0,
+  "rust": {
+    "checks": 7,
+    "failed": 0,
+    "ignored": 0,
+    "log": {
+      "path": "target/unit-rust.log",
+      "bytes": 939,
+      "sha256": "708901cc20a65b3e55cf72db32991d09410bf192ea1aad88a42d97695e6df931"
+    }
+  },
+  "clippy": {
+    "path": "target/unit-clippy.log",
+    "bytes": 136,
+    "sha256": "adf4315b7724d751bec10d5a3a135778bcd9a3a165996b41fac17612107afc6e"
+  },
+  "source_initialization": {
+    "checks": 12,
+    "seconds": 8.789,
+    "log": {
+      "path": "target/unit-source-write.log",
+      "bytes": 2243,
+      "sha256": "5c3fc15b29fb5b2d0586b8735f5b79daee5211ba1874ee60183e8140c2485a1a"
+    }
+  },
+  "source_strict": {
+    "checks": 12,
+    "seconds": 9.339,
+    "log": {
+      "path": "target/unit-source-strict.log",
+      "bytes": 2243,
+      "sha256": "21d15c42af7243f1c815a0d011c868c4393dda9ce95c8f020b83e314e768d075"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/unit-source-snapshot.json",
+      "bytes": 542746,
+      "sha256": "66d99c6f04589c1dd800eab25ae3fc0fc0dddc78f82daecf9c29c365f75a74f8"
+    }
+  },
+  "packet_references": [
+    "unit-packets-reference.json",
+    "unit-native-reference.json",
+    "unit-projection-reference.json"
+  ],
+  "concurrency_workers": 8,
+  "process_proof": "unit-process-verification.json",
+  "oracle_kinds": [
+    "Pinned original numeric Source model and all C881/C882/C883 source pins",
+    "Full installed provider/wrapper/import/export bindings",
+    "Exact raw global accessors, distinct adjacent target and virtual/file-backed section bounds",
+    "Complete registry/conversion block bytes and actual file-backed import thunks without registry execution",
+    "All native raw inputs, unknown states and explicit alternatives",
+    "Branch/context matrices, immutable parent projections, eight-worker and two-process replay"
+  ],
+  "excluded": [
+    "Unit names or physical dimensions",
+    "Native execution or all-tuple execution-equivalence proof",
+    "Assumed BE8/global initialization or per-file registry applicability",
+    "General registry parsing, locale conversion or atoi overflow behavior"
+  ],
+  "pending": [
+    "Latest-tree PR and cross-platform/ThreadSanitizer publication gates",
+    "Remaining rendering/style/preference roles"
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 131,
+    "seconds": 328.778,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/unit-source-full.log",
+      "bytes": 34714,
+      "sha256": "9b1ca7e203e689283d2a78a36dd7dbcd9443870c2d6f67fed481c1bbc3b6165a"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 549700,
+      "sha256": "33ef066c0d80b941e4f6cf13b60a0d118747ee0f4de0f13037cfdc072f71db9f"
+    }
+  }
+}

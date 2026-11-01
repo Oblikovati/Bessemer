@@ -1,0 +1,2122 @@
+{
+  "evidence": "C-882",
+  "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\Simulation\\cwPostCommon.dll",
+  "module_sha256": "6bcca4be3b3d9e3c81ea31cfeeac82681de635c908f062a9bc8553fb96606fad",
+  "leaves": [
+    {
+      "export": "?dgxPostCommonGetActualFreqDispFlag@@YAHXZ",
+      "address": "0x180028fb0",
+      "end": "0x180028fb7",
+      "global_address": "0x180057b68",
+      "raw_hex": "8b05b2eb0200c3",
+      "sha256": "4f7ba5d569b55e9fa630da4eb710fb8c85fdc555312ddbc0fc5d53c882f37c98",
+      "instructions": [
+        {
+          "address": "0x180028fb0",
+          "mnemonic": "mov",
+          "operands": "eax, dword ptr [rip + 0x2ebb2]"
+        },
+        {
+          "address": "0x180028fb6",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "export": "?dgxPostCommonSetActualFreqDispFlag@@YAXH@Z",
+      "address": "0x180031c00",
+      "end": "0x180031c07",
+      "global_address": "0x180057b68",
+      "raw_hex": "890d625f0200c3",
+      "sha256": "a18dad4bf49d02db0d24daea899095b0ac8ff6b88ddf8e5ba4496d7e8aded72f",
+      "instructions": [
+        {
+          "address": "0x180031c00",
+          "mnemonic": "mov",
+          "operands": "dword ptr [rip + 0x25f62], ecx"
+        },
+        {
+          "address": "0x180031c06",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "export": "?dgxPostCommonGetCosmosWorksAPIRunning@@YAHXZ",
+      "address": "0x18002f410",
+      "end": "0x18002f417",
+      "global_address": "0x180057b6c",
+      "raw_hex": "8b0556870200c3",
+      "sha256": "0a570874f0096507d4d42aa48483e0f63fef8e56a185e992a8a8e01f1a37ce44",
+      "instructions": [
+        {
+          "address": "0x18002f410",
+          "mnemonic": "mov",
+          "operands": "eax, dword ptr [rip + 0x28756]"
+        },
+        {
+          "address": "0x18002f416",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    }
+  ],
+  "static_global_location": {
+    "global_address": "0x180057b68",
+    "section": {
+      "name": ".data",
+      "rva": "0x53000",
+      "virtual_size": 22624,
+      "raw_size": 4096
+    },
+    "inside_virtual_zero_fill": true
+  },
+  "rows": [
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\3plates-surfaces.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "5fa9b8bfe7ffffed064dff82048ee86cc3859a733a88656b234bd0de274c5038",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 2,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\shaft.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "39a7a7a1ec05a7704919fb617f85ef1ffac0fee0ffd3de368e6388c91e3b99a3",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\shaft.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot2/cwPostDlgParam",
+      "sha256": "ec3a6e82ac0095f3c5c10377a5bed1d6c229889045eaa979f256882f213db1df",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\shaft.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot3/cwPostDlgParam",
+      "sha256": "b8e80a5f367577eecb451b734730948440563b880a23101a23576c5cb402bc13",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\shaft.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot4/cwPostDlgParam",
+      "sha256": "a153412484e2dffd1c82a6c32b28b14d609f2f42413b31360996bacfea0dc83f",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\shaft.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot5/cwPostDlgParam",
+      "sha256": "2c7a793ce49bfdc229ede6651de8623ed8c3938c3736fcd1c5f3449167cc98ba",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\asly1.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "84b4af0db6b9e4d067f676bd051179788e9297be43b3035388af858033522a3a",
+      "selected_version": 800078,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": null,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\frequency_11.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "c5bb81268d281bd1067c8f814c96312e95043a6da21c37915ec7bb8f857b5053",
+      "selected_version": 800078,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": null,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "831f8bf11b9b14b75ee054c42879e226fa0367e7175f6bd827b76b153c0751d1",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot10/cwPostDlgParam",
+      "sha256": "c9cb8f29ce9091704fb2c2c2ec42f26514ea62ed6d5de5544c04ae1ee40d774a",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot11/cwPostDlgParam",
+      "sha256": "e18265765d4ca46ae835c8791da5b10a467c19fd4eb93c82d3c2c4317b75fe16",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot12/cwPostDlgParam",
+      "sha256": "dadb712142d3eebc04dbac0dbd8017b96e2bcb9a27cd0782a5badfdbade23dde",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot13/cwPostDlgParam",
+      "sha256": "aa3f72b2fbbca9b9aab611ba37d390981ec321fb7b5734ee94be3fb926a96503",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot14/cwPostDlgParam",
+      "sha256": "a0d29424ee436d7653c009010b366d340d94247c567686204005c8df6a4ea3d6",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot15/cwPostDlgParam",
+      "sha256": "cf5e8849a63b03ee541b248fac4207d57e82bbf25c9a270ca2319281514c6fb1",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot16/cwPostDlgParam",
+      "sha256": "ae72cb6c1b7a0a42ae9ad27f09b64e199b4158de0bf9bb10d81234e493aaa870",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot2/cwPostDlgParam",
+      "sha256": "c1b7f6bc00ec90666b5ddbcaab77edcca368937e0fe1dd2a489f6439643c98c6",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot3/cwPostDlgParam",
+      "sha256": "4a37b31a59bb8c393a1d06ff1861aafaac802ef106af910642d04d62ac28e001",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot4/cwPostDlgParam",
+      "sha256": "dc42a3e413a19781be843ec593d4038afc74ea40b2500794f2b9711dd7025b9f",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot5/cwPostDlgParam",
+      "sha256": "fef147bfd7c9f76d02a554dec9954e680e682d09de955860099a173348854e1d",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot6/cwPostDlgParam",
+      "sha256": "1263228391e21867525bdca85ba6d03865f6464c83e6b0adf5794a1294957e1f",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot7/cwPostDlgParam",
+      "sha256": "e326e9222cf3704d7ec00e7ec40257c1c07843af2aa692cc89436fd620fd6a66",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot8/cwPostDlgParam",
+      "sha256": "be5608afec9e1f257ed32ec6e3d17d9f8a49ca9c5dabecaa30344a6658eb893e",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot9/cwPostDlgParam",
+      "sha256": "8f50467ed5b16760a450ddb4b4d2da24e1954dafc1921d7ec303fb529850e45a",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "06540332de568fa3db843e90ac4413fd7e548c8b9093126b8563f957e26ac088",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot10/cwPostDlgParam",
+      "sha256": "89761bd7d55ecf12a2554c81d1146228141528e59d8bb38b1ed267bfae5c116f",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot11/cwPostDlgParam",
+      "sha256": "c3ab099c12fb634f801cf6ef9cc86d71ffda6309410eaf4e3999ea40370248f5",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot12/cwPostDlgParam",
+      "sha256": "d3b9ccecc5500237900e228fba5313151b5e92ba7b394ec223cb19a2a441b15a",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot13/cwPostDlgParam",
+      "sha256": "4a20d2f7dab233ae0a26ef304040312380a576d033a83dfcbc4fd417e86358a5",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot14/cwPostDlgParam",
+      "sha256": "ab2923cb7e16a27f57e6ef3457d995571f8e7bb8ae6cf6e0075440521f911815",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot15/cwPostDlgParam",
+      "sha256": "6606b6c21ff79d2dffa8b3360f6a889fb7bb71dafe753a87dca9266aa4c800e8",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot16/cwPostDlgParam",
+      "sha256": "30e22f90c2c7948ba996acf7f7e5902b162e46bbe596f464e75735e5033b8a13",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot2/cwPostDlgParam",
+      "sha256": "2ef513126f625eed613971b0126b9d57286fe37d3747d05485ac5faf8b7b7a4f",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot3/cwPostDlgParam",
+      "sha256": "9ff55e61ba4f04cf4571ac613f12c140ad1a849a25919f63e39aa2687a0d9376",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot4/cwPostDlgParam",
+      "sha256": "eec0f33a40dc7f6e3a4b0a4d58868d697370fb584e05b4302787f589fb3746bb",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot5/cwPostDlgParam",
+      "sha256": "534b390d53154cab054f3615b0066f7de895347e9ce581d26b223a68a53f41d3",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot6/cwPostDlgParam",
+      "sha256": "3a8bce9b7ef1abb525f231eb89bd43a31dd907262d4bdde6427f14a6b5b928f6",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot7/cwPostDlgParam",
+      "sha256": "3aacdc4213bbea79ab6b4dfbfdc015d80a82e419747f9037aca192dc7a32d33a",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot8/cwPostDlgParam",
+      "sha256": "89ad0912e28d6798d77575bb0d8b66dc6a8aa1f15157d220df31f945786fb5fb",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot9/cwPostDlgParam",
+      "sha256": "55cb1a273cc83e3f7fc9ac3f16c5981d5b1b381086749c28684b0d21c02ebd1a",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "831f8bf11b9b14b75ee054c42879e226fa0367e7175f6bd827b76b153c0751d1",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot10/cwPostDlgParam",
+      "sha256": "c9cb8f29ce9091704fb2c2c2ec42f26514ea62ed6d5de5544c04ae1ee40d774a",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot11/cwPostDlgParam",
+      "sha256": "e18265765d4ca46ae835c8791da5b10a467c19fd4eb93c82d3c2c4317b75fe16",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot12/cwPostDlgParam",
+      "sha256": "dadb712142d3eebc04dbac0dbd8017b96e2bcb9a27cd0782a5badfdbade23dde",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot13/cwPostDlgParam",
+      "sha256": "aa3f72b2fbbca9b9aab611ba37d390981ec321fb7b5734ee94be3fb926a96503",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot14/cwPostDlgParam",
+      "sha256": "a0d29424ee436d7653c009010b366d340d94247c567686204005c8df6a4ea3d6",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot15/cwPostDlgParam",
+      "sha256": "cf5e8849a63b03ee541b248fac4207d57e82bbf25c9a270ca2319281514c6fb1",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot16/cwPostDlgParam",
+      "sha256": "ae72cb6c1b7a0a42ae9ad27f09b64e199b4158de0bf9bb10d81234e493aaa870",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot2/cwPostDlgParam",
+      "sha256": "c1b7f6bc00ec90666b5ddbcaab77edcca368937e0fe1dd2a489f6439643c98c6",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot3/cwPostDlgParam",
+      "sha256": "4a37b31a59bb8c393a1d06ff1861aafaac802ef106af910642d04d62ac28e001",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot4/cwPostDlgParam",
+      "sha256": "dc42a3e413a19781be843ec593d4038afc74ea40b2500794f2b9711dd7025b9f",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot5/cwPostDlgParam",
+      "sha256": "fef147bfd7c9f76d02a554dec9954e680e682d09de955860099a173348854e1d",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot6/cwPostDlgParam",
+      "sha256": "1263228391e21867525bdca85ba6d03865f6464c83e6b0adf5794a1294957e1f",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot7/cwPostDlgParam",
+      "sha256": "e326e9222cf3704d7ec00e7ec40257c1c07843af2aa692cc89436fd620fd6a66",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot8/cwPostDlgParam",
+      "sha256": "be5608afec9e1f257ed32ec6e3d17d9f8a49ca9c5dabecaa30344a6658eb893e",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot9/cwPostDlgParam",
+      "sha256": "8f50467ed5b16760a450ddb4b4d2da24e1954dafc1921d7ec303fb529850e45a",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "stored_inputs": {
+        "analysis": 1,
+        "plot_type": 1,
+        "component": 3,
+        "word_be8": null,
+        "word_bec": 0,
+        "global_57b68": null
+      },
+      "conditional_alternatives": [
+        {
+          "actual_freq_disp_flag": 0,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 1,
+          "unit_type_code": 0,
+          "status": "modeled",
+          "error": null
+        },
+        {
+          "actual_freq_disp_flag": 2,
+          "unit_type_code": 9999,
+          "status": "modeled",
+          "error": null
+        }
+      ],
+      "actual_runtime_flag": null
+    }
+  ],
+  "retained_missing_context_records": 56,
+  "conditional_counts": {
+    "flag_0_code_9999": 56,
+    "flag_1_code_0": 56,
+    "flag_2_code_9999": 56
+  },
+  "tests": {
+    "run": 3,
+    "output": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n"
+  },
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_actual_freq_disp_flag_audit.py": "7b1be01009b2705c539e7334f674729e4287e6c0489398683a09a7bc56038399",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-component-unit-type-native-evidence.json": "175bf88ecfd5860148c6863e7375281ea4009fb4035a587867f8f7154fbfde2e",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-unit-global-xrefs.json": "1351c88cfb3e371125b2735446916e6f5ffae72b890a7b02dfecb7a7a9a686a0",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_unit_global_xrefs.py": "89f2371a06937d178c1661e000c9d7b8ee558c616739cb7f91d09ed39755f453",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_component_unit_type.py": "a436027a061a3ce5fe05f5a335eee290c2b504a996fb7a60b9b9724d5c185dad",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\test_cosworks_component_unit_type.py": "fec013a500f2b850fd2a64fcb96bc4b9e459a03734f1fed0a7ea60f3ba9f856d"
+  },
+  "target_executed": false,
+  "coverage_credit": 0,
+  "limitations": [
+    "ActualFreqDispFlag export spelling retained; expansion/physical meaning not inferred",
+    "Named setter does not identify when caller invokes it or which runtime value applies to a file",
+    "Conditional alternatives are not resolved units; all prior56 context stops remain",
+    "Adjacent API-running global is distinct and must not substitute for this flag",
+    "PE zero-fill establishes image initialization only, not application state"
+  ]
+}
