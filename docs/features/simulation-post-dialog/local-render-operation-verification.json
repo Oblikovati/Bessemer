@@ -90,8 +90,22 @@
     "Guessed pre700006 style migration defaults"
   ],
   "pending": [
-    "Latest-tree local PR and cross-platform publication gates",
+    "Cross-platform publication gates and local gates for subsequent changes",
     "Remaining style/rendering/preference roles"
   ],
-  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "local_pr_gate": {
+    "runtime_revision": "58b3982ed74c5e306e0ccbc081d46b81dde9e71c",
+    "result": "passed",
+    "process_exit_code": 0,
+    "summaries": 278,
+    "passed": 3627,
+    "failed": 0,
+    "ignored": 146,
+    "log": {
+      "path": "target/local-render-pr-gate.log",
+      "bytes": 466328,
+      "sha256": "70c886e2d1549ee181dbe9ffb8970000f8a98c1faa1019d3398b69b3c97030c9"
+    }
+  }
 }

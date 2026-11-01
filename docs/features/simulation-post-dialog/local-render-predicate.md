@@ -27,5 +27,5 @@ Six Rust tests, all-target Clippy and all139 integrated reference checks passed.
 Eight workers reproduced the serial predicate results. Two fresh processes
 matched all18,453 owned/native results against Source byte for byte.
 [Verification](local-render-operation-verification.json) records the exact
-evidence, assumptions and exclusions. Publication still needs the current local
-PR gate and the required platform checks.
+evidence, assumptions and exclusions. The local PR gate passed for the committed
+predicate change. Publication still needs the required platform checks.
