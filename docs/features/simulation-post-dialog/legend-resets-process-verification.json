@@ -1,0 +1,26 @@
+{
+  "issue": 166,
+  "behavior_version": "C857-explicit-reader-resets-v1",
+  "platform": "Windows x64",
+  "operation_cases": 4137,
+  "complete_parents": 833,
+  "words": 53032,
+  "oracle": "Frozen original reset policy, explicit independent member order, complete stored wire presence and bits",
+  "executable_sha256": "fd2e3f376091451a75678e00d02eb3cbbb6ecc4fa4dd89c8d7367a97677b0dc8",
+  "runs": [
+    {
+      "process": 1,
+      "exit_code": 0,
+      "bytes": 212128,
+      "sha256": "76d700a7f231db3b0e7eee5c40268ddb376d1ad00bff0f40c5cf74706eb99f54"
+    },
+    {
+      "process": 2,
+      "exit_code": 0,
+      "bytes": 212128,
+      "sha256": "76d700a7f231db3b0e7eee5c40268ddb376d1ad00bff0f40c5cf74706eb99f54"
+    }
+  ],
+  "comparison": "Both fresh Rust processes matched all53032 independent expected words byte for byte; exact export test verified",
+  "native_target_executed": false
+}

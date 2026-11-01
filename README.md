@@ -747,6 +747,11 @@ Its [legacy load projection](docs/features/simulation-post-dialog/hidden-migrati
 returns both derived runtime words and exact store coverage for versions
 700006..840007, retaining original values and leaving source bytes unchanged.
 
+[`legend_read_zero_assignments`](docs/features/simulation-post-dialog/legend-resets.md)
+selects only explicit reader zero stores from the existing version. It retains
+native member order and distinguishes unsupported raw-class versions from
+completed later profiles with no assignments, without changing stored words.
+
 `legend_step_inputs` preserves the optional FC layout switch. The separate
 [`SimulationLegendStepRuntime::step_availability`](docs/features/simulation-post-dialog/legend-step.md)
 operation requires explicit runtime plot words, retains raw signed BEC returns

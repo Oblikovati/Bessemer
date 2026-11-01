@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added explicit legend reader reset plans with ordered derived zero assignments, version history and separate unsupported raw-class results. (#166)
+
 - Added explicit legacy hidden-parts load projections with both derived runtime words, exact adjacent-store coverage and retained original wire values. (#166)
 
 - Added optional legend B4 views and exact nearest-even width projections with explicit font/selector facts, preserved intermediate bits and independent rational rounding checks. (#166)

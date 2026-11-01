@@ -25,13 +25,27 @@ replay retains all425 parents and distinguishes the20 unsupported raw-class
 contexts from completed empty assignment maps in later explicit-field contexts.
 
 The [verification record](legend-resets-verification.json) records targeted and
-full replay. A typed assignment result and the remaining feature166 obligations
-remain pending.
+full replay. The remaining feature166 obligations and publication gates remain
+separate from this local policy.
 
 The targeted freeze passed 19 checks in 5.940 seconds. Strict replay passed the
 same 19 checks in 7.209 seconds and exited successfully after snapshot recording
 and cleanup. These runs include the two original reset tests, the owned
 reader-routing baseline and eight original catalog/style/color tests. Full
 integrated replay and publication acceptance remain separate gates.
+
+The typed operation uses behavior version `C857-explicit-reader-resets-v1`.
+`SimulationPersistVersion::legend_read_zero_assignments` and both complete parent
+views return immutable plans with ordered assignments, completion, original
+version history, diagnostics and exact local store coverage. A completed empty
+plan establishes no constructor or prior-object state. Raw-class conversion
+returns a typed unsupported error rather than an empty plan.
+
+The operation fixtures cover 4,137 version cases, 557 complete owned parents
+(including 132 later-profile wire mutations) and all 276 native parents. Stored
+C0/C4/C8 presence and raw bits are checked independently of derived assignments.
+Concurrent replay compares eight workers with serial results. The operation
+does not execute the native reader, validate a native pointer or emulate its
+remaining reads.
 
 Humanizer is unavailable in this checkout; maintainer prose review remains pending.
