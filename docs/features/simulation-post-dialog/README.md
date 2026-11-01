@@ -270,3 +270,23 @@ Four focused Rust tests and all-target Clippy passed. All five full/partial
 snapshot-selection modes were checked separately; partial runs retain their own
 evidence files. [Prefix-view verification](prefix-view-operation-verification.json)
 records the executed checks and remaining publication work.
+
+
+PostInfo named views expose all twelve physical slots independently of their
+stored active counts. Known primitive and direction codes receive typed names;
+unknown codes retain their original integers and no inferred name. Normal,
+center and shared-scalar patterns remain unchanged. The derived D pattern flips
+only the scalar sign bit. The header view retains all seven words, signed count
+values and the noninvertible forward contour preference conversion. Five frozen
+Source blocks cover sixty slots, including unknown codes and non-finite patterns.
+All 17 PostInfo tests passed with native checks included, and all-target Clippy
+passed. Ten targeted pinned Source checks passed. Reverse/default contour policy,
+runtime comparison and the other consumer views remain separate obligations.
+
+
+The named PostInfo views passed the full 61-check Source replay and all 18 final
+Rust tests, with native checks included. The native named-role check covers 60
+physical blocks and 720 slots under both retained helper arguments. Its 1,440
+slot observations repeat those same stored bytes and receive no extra byte
+credit. All-target Clippy passed after that check was added. See
+[named-view verification](postinfo-named-view-verification.json).

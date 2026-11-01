@@ -21,6 +21,8 @@ def verify_owned_postinfo_field_views() -> None:
         assert bytes.fromhex(cast(str, actual['raw_hex'])) == raw
         rows.append(dict(rotation=rotation, fields=actual))
     dialog_baseline('owned-postinfo-fields-reference.json', dict(contexts=5, physical_slots=60, rows=rows))
+    from dialog_cut_view_packets import verify_cut_view_packet
+    verify_cut_view_packet()
 
 
 def assert_owned_slot(record: dict[str, object], index: int, rotation: int) -> None:

@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added named PostInfo slot and header views with preserved unknown codes, raw vectors and exact D sign-bit aliases. (#166)
+
 - Added raw-preserving dialog range and deformation-scale views with explicit unknown-selector fallback. (#166)
 
 - Added complete versioned DGXPOST dialog reads, construction and isolated typed edits with bounded reference archives and ordered provenance. (#166)

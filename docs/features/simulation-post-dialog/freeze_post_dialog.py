@@ -35,6 +35,7 @@ from dialog_parent_views import (verify_dialog_parent_sources, verify_dialog_par
 
 def run_dialog_checks(pin: Path) -> unittest.TestResult:
     """Preserve all original C-770 and integrated legacy-view tests beside fresh full replay; e.g. run_dialog_checks(pin)."""
+    if '--postinfo-views-only' in sys.argv: return run_postinfo_view_checks()
     if '--parent-views-only' in sys.argv: return run_parent_view_checks()
     if any(flag in sys.argv for flag in ('--resources-only', '--caps-only', '--reference-caps-only')): return run_resource_checks()
     replay = update_wrapper(partial(replay_dialog_native, pin), replay_dialog_native)
@@ -73,8 +74,20 @@ def run_parent_view_checks() -> unittest.TestResult:
     return unittest.TextTestRunner(verbosity=2).run(suite)
 
 
+def run_postinfo_view_checks() -> unittest.TestResult:
+    """Replay raw fixed slots and the bounded named policies through copied helpers; e.g. run_postinfo_view_checks()."""
+    checks = (verify_dialog_sources, verify_dialog_field_sources, verify_owned_postinfo_field_views)
+    suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
+    for suffix in ('info_fields', 'cutprim_types', 'contour_policy'):
+        module = importlib.import_module('test_cosworks_post_' + suffix)
+        suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(module))
+    return unittest.TextTestRunner(verbosity=2).run(suite)
+
+
 def dialog_snapshot_readers() -> tuple[str, ...]:
     """Require exactly the readers exercised by the selected gate; e.g. dialog_snapshot_readers()."""
+    if '--postinfo-views-only' in sys.argv:
+        return ('cosworks_post_info_fields', 'cosworks_post_contour_policy')
     if '--parent-views-only' in sys.argv:
         return ('cosworks_legend_range_fields', 'cosworks_deform_scale_fields')
     readers = DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout')
@@ -88,7 +101,8 @@ def dialog_snapshot_filename() -> str:
     modes = (('--resources-only', 'resource-source-snapshot.json'),
              ('--caps-only', 'cap-source-snapshot.json'),
              ('--reference-caps-only', 'reference-cap-source-snapshot.json'),
-             ('--parent-views-only', 'parent-view-source-snapshot.json'))
+             ('--parent-views-only', 'parent-view-source-snapshot.json'),
+             ('--postinfo-views-only', 'postinfo-view-source-snapshot.json'))
     for flag, filename in modes:
         if flag in sys.argv: return filename
     return 'source-snapshot.json'
