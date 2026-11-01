@@ -526,3 +526,7 @@ exact native constants and supplied font/title argument boundaries without
 assigning pixel units or the unresolved color100 role.
 Its typed optional views and exact nearest-even projection keep entry facts
 explicit and compare every binary32 stage against an independent rational oracle.
+
+The [legacy hidden-parts migration](hidden-migration.md) separates absent wire
+options from the reader's derived state, including the adjacent word overwritten
+by its 64-bit store and the later direct-read branch.

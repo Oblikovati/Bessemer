@@ -1,0 +1,79 @@
+{
+  "issue": 166,
+  "evidence": "C-856",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "target_executed": false,
+  "complete_installed_instruction_count": 227,
+  "independent_ghidra_instruction_count": 227,
+  "complete_reader_bytes": 1010,
+  "exact_decoder_qualifications": 0,
+  "native_accepted_contexts": 276,
+  "original_migrated_contexts": 116,
+  "later_direct_read_contexts": 160,
+  "original_rejected_contexts": 8,
+  "native_stored_values": {
+    "0": 116
+  },
+  "native_derived_pairs": {
+    "(0, 0)": 116
+  },
+  "owned_complete_contexts": 425,
+  "owned_migrated_contexts": 181,
+  "owned_unmigrated_contexts": 244,
+  "additional_stored_byte_credit": 0,
+  "initial_freeze": {
+    "checks": 18,
+    "seconds": 6.119,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/hidden-migration-source-initial.log",
+      "bytes": 2909,
+      "sha256": "4c0db96989089c3d0bb77c8c79d52fd0b097df222a48264b143d0f53773ea839"
+    }
+  },
+  "strict_source": {
+    "checks": 18,
+    "seconds": 17.073,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/hidden-migration-source-strict.log",
+      "bytes": 2910,
+      "sha256": "14320fc82472bae50e3444a8782a374cffc02e1681f9d0cf019c3faa99d4e5dc"
+    }
+  },
+  "snapshot": {
+    "path": "docs/features/simulation-post-dialog/hidden-migration-source-snapshot.json",
+    "bytes": 625455,
+    "sha256": "6a3bcbb901e80668f135689d725725bf8925ac807dbbfddb4dc1f9408999743f"
+  },
+  "evidence_capture": {
+    "path": "docs/features/simulation-post-dialog/hidden-migration-rea-reader.json",
+    "bytes": 25729,
+    "sha256": "d63f76fb0d3cc1a9d5b7f6a81150080fcbcd38ad25efcc2f38d13fd1506a499a"
+  },
+  "kernel_decision": "Evidence only: keep original1F0 and absent wire1EC separate from the explicit-field700006..840007 reader migration. Bind zero, unsigned DEC/JBE1..3, full64-bit one-store and fallback two32-bit stores exactly. Retain all276 accepted identities including160 later direct-read contexts and all eight rejections. Derived runtime pairs add no wire spans, defaults for raw legacy contexts or permission to rewrite bytes.",
+  "oracle_kinds": [
+    "Complete GNU/Ghidra reader bodies and all227 exact instruction locations",
+    "Exact named reader, signed version boundaries, wire reads and32/64-bit store widths",
+    "Independent little-endian byte-store emulation with unsigned decrement gating",
+    "All original migration Source tests plus signed/noninteger/version-boundary rejection",
+    "All116 original migration rows,160 later contexts,eight failures and425 complete owned parents",
+    "All eight original catalog/style/color checks"
+  ],
+  "excluded": [
+    "Native target execution and nonzero native migration observation",
+    "Raw-class conversion below700006 or blanket absent-field defaults",
+    "Whole hidden-parts visibility policy and full visual meanings of1F0",
+    "Source byte rewriting,new stored fields or expanded original admission"
+  ],
+  "pending": [
+    "Typed migration result",
+    "Full integrated Source replay for this evidence cut",
+    "Remaining feature166 models",
+    "Exact publication-head cargo xtask pr and all five platform gates"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending."
+}
