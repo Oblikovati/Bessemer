@@ -95,8 +95,10 @@ def mode3_rgb_functions() -> tuple[Callable[[], None], ...]:
     """Keep complete source/body evidence and all raw stored contexts together; e.g. mode3_rgb_functions()."""
     from mode3_rgb_bindings import verify_mode3_rgb_bindings, verify_mode3_rgb_rea_capture
     from mode3_rgb_kernel import verify_mode3_rgb_kernel_decisions
+    from mode3_rgb_operation_packets import verify_mode3_operation_packets
+    from mode3_rgb_operation_projection import verify_mode3_operation_projection_packets
     return (verify_mode3_rgb_sources, verify_mode3_rgb_bindings, verify_mode3_rgb_rea_capture,
-        verify_mode3_rgb_native, verify_mode3_rgb_owned, verify_mode3_rgb_kernel_decisions)
+        verify_mode3_rgb_native, verify_mode3_rgb_owned, verify_mode3_rgb_kernel_decisions, verify_mode3_operation_packets, verify_mode3_operation_projection_packets)
 
 
 def run_mode3_rgb_checks() -> unittest.TestResult:

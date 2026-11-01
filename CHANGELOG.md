@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added immutable conditional1DC RGB group plans and fixed-slot array copies with distinct primary/reflected filters, explicit growth facts and complete parent history. (#166)
+
 - Added guarded element-segment RGB reads with explicit runtime dependencies, preserved raw RGBA and separate endpoint-geometry exclusions. (#166)
 
 - Added numeric plot54 local color plans with ordered runtime dependencies, original copied colors and explicit masked alpha semantics. (#166)
