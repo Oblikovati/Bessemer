@@ -1,0 +1,150 @@
+{
+  "issue": 166,
+  "behavior_version": "C854-nearest-even-width-v1",
+  "platform": "Windows x64",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "target_executed": false,
+  "kernel_decision": "Keep optional stored B4 separate from actual entry font68/B4 facts. Require font first and selector after the two initial products, even for font0. Project signed conversion, both products and the reached addition/multiplication/identity branch with explicit nearest-even integer arithmetic, reusing the unchanged shared significand rounding primitive. Return each raw stage, native operation identity, zero/nonzero completion, complete derived history, exact coverage and zero local pattern error. Do not infer ambient SSE state, file initialization, units or geometry validity.",
+  "complete_installed_instruction_counts": [
+    1144,
+    91
+  ],
+  "independent_ghidra_instruction_count": 1235,
+  "exact_decoder_qualifications": 0,
+  "public_send_sync_types": 9,
+  "operation_cases": 18040,
+  "font_boundary_patterns": 498,
+  "owned_complete_contexts": 425,
+  "complete_selector_mutants": 135,
+  "native_accepted_contexts": 276,
+  "original_rejected_contexts": 8,
+  "hypothetical_contexts_per_parent": 8,
+  "additional_stored_byte_credit": 0,
+  "rust_owned": {
+    "passed": 9,
+    "failed": 0,
+    "ignored": 2,
+    "seconds": 0.2,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-width-rust-owned.log",
+      "bytes": 1335,
+      "sha256": "1f93a8fb0dd2f1d2c1b88e4f0d9d24819b7b24acecad919d8f7a9339851db494"
+    }
+  },
+  "rust_native": {
+    "passed": 1,
+    "failed": 0,
+    "ignored": 0,
+    "seconds": 0.17,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-width-rust-native.log",
+      "bytes": 400,
+      "sha256": "19578496f096d5c98b404f382d6814944206c12211911825bf24844e4ad4a739"
+    }
+  },
+  "initial_test_warning": {
+    "rule": "unused_assignments",
+    "resolution": "Added an explicit assertion of the mutated caller value in the isolation test; reran the owned suite without warnings.",
+    "log": {
+      "path": "target/legend-width-rust-owned-initial.log",
+      "bytes": 1770,
+      "sha256": "94d246269a721b03f6c481e77550f7257898513b7d855a33b57e04eea4b38df6"
+    }
+  },
+  "shared_rounding_regression": {
+    "passed": 8,
+    "failed": 0,
+    "ignored": 4,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-width-shared-rounding-regression.log",
+      "bytes": 1984,
+      "sha256": "183660eb12c19e09137d0e6707da8316bf977cf9f0ea7a24704649ec09d2c4c6"
+    }
+  },
+  "clippy": {
+    "arguments": "--all-targets --all-features -- -D warnings",
+    "seconds": 34.35,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-width-clippy.log",
+      "bytes": 136,
+      "sha256": "ad9edce5eebed3e2acc4a3215f5f03fc3f12537409866aab199e3d7ae817eff0"
+    }
+  },
+  "initial_freeze": {
+    "checks": 19,
+    "seconds": 7.495,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-width-operation-source-initial.log",
+      "bytes": 3065,
+      "sha256": "7be8b1bdf2084a26257e2554d5152f71c354ed3edb6becf1e197bc98b24accf5"
+    }
+  },
+  "strict_source": {
+    "checks": 19,
+    "seconds": 8.377,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-width-operation-source-strict.log",
+      "bytes": 3065,
+      "sha256": "9474ac25f1521d4068db2ed0cf43252d26753f6ba14052c3a84fce9641d4d02b"
+    }
+  },
+  "snapshot": {
+    "path": "docs/features/simulation-post-dialog/legend-width-source-snapshot.json",
+    "bytes": 625089,
+    "sha256": "5f8560c6c997ed2cb0bd87ea363cf81b8634205a37db75ab57e1fd434c016f1d"
+  },
+  "domain_proof": {
+    "path": "docs/features/simulation-post-dialog/legend-width-domain-reference.json",
+    "bytes": 628,
+    "sha256": "e291b6c55b4942d92b4a6aeb5f468299d7846af14f31d68c2f47c2a940f85484"
+  },
+  "operation_packet": {
+    "path": "tests/fixtures/simulation-post-dialog/legend-width-operations.bin",
+    "bytes": 793768,
+    "sha256": "85348aa67e29f08202b1f5a143497f666e795cb43e6db39ef5ed1d74e1a049b7"
+  },
+  "owned_projection_packet": {
+    "path": "tests/fixtures/simulation-post-dialog/legend-width-projection.bin",
+    "bytes": 1679387,
+    "sha256": "4ab252c7bf20ac55b7c51bfee1817f0b9c6dcf86797a6e745e8723c174d1637c"
+  },
+  "process_proof": {
+    "path": "docs/features/simulation-post-dialog/legend-width-process-verification.json",
+    "bytes": 1009,
+    "sha256": "1f1c595a6b65de3aab82dd8a70b74720bc629cbb2f637affef0ea19f3fca14dc"
+  },
+  "oracle_kinds": [
+    "Original complete Source/native/field evidence with all admission qualifications",
+    "Complete GNU/Ghidra bodies, exact constants and ordered signed-font/selector boundaries",
+    "Exact rational stages with monotonic neighboring-binary32 search and even-midpoint decisions",
+    "Oracle exact/subnormal/normal midpoint self-checks and whole-signed32 normal/finite/48-bit domain certificate",
+    "All presence combinations,498 signed font boundaries, generated patterns and all three native selector branches",
+    "Complete owned/native parents and135 full selector mutations, each with eight explicit hypothetical entry contexts",
+    "Nine public Send+Sync types, input isolation after success/failure/mutation and eight-worker comparisons",
+    "Two fresh Rust processes matched all199496 independent expected words byte for byte"
+  ],
+  "excluded": [
+    "Native target execution, live SSE/MXCSR state and native pointer validity",
+    "File-to-runtime initialization, positive/physical size validity, universal units and rendered output",
+    "Unresolved color100 identity, title rendering and broader UI behavior",
+    "New stored-byte credit or expanded original admission"
+  ],
+  "pending": [
+    "Full integrated Source replay for this operation cut",
+    "Remaining feature166 models",
+    "Exact publication-head cargo xtask pr and all five platform gates including ThreadSanitizer"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending."
+}

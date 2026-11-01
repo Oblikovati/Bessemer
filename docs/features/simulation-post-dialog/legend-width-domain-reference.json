@@ -1,0 +1,14 @@
+{
+  "rounding": "nearest-even",
+  "converted_nonzero_magnitude_bounds": [
+    1,
+    2147483648
+  ],
+  "nonzero_width_lower_bound_power": -11,
+  "width_upper_bound_power": 24,
+  "lower_bound_normal": true,
+  "upper_bound_finite": true,
+  "exact_significand_product_bits": 48,
+  "native_sse_state_inferred": false,
+  "proof": "Converted nonzero signed32 magnitudes lie in[1,2^31]. Scale lies between2^-10 and3*2^-11;5/8 lies between1/2 and1. Representable closed bounds keep rounded nonzero stages at least2^-11 and at most3*2^20 before final scaling, hence below2^24 afterward. Products of two24-bit significands fit48 bits."
+}

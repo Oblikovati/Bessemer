@@ -68,8 +68,11 @@ def legend_width_functions() -> tuple[Callable[[], None], ...]:
     """Keep full width/title provenance and every original scalar observation together; e.g. legend_width_functions()."""
     from legend_width_bindings import verify_legend_width_bindings, verify_legend_width_rea_captures
     from legend_width_projection import verify_legend_width_native, verify_legend_width_owned
+    from legend_width_oracle import verify_width_rational_domain
+    from legend_width_packets import verify_width_operation_packets, verify_width_projection_packets
     return (verify_legend_width_sources, verify_width_word_boundaries, verify_legend_width_bindings,
-        verify_legend_width_rea_captures, verify_legend_width_native, verify_legend_width_owned)
+        verify_legend_width_rea_captures, verify_legend_width_native, verify_legend_width_owned,
+        verify_width_rational_domain, verify_width_operation_packets, verify_width_projection_packets)
 
 
 def run_legend_width_checks() -> unittest.TestResult:

@@ -524,3 +524,5 @@ explicit read-time facts and retains exact RGB bits with separate alpha history.
 The [eDrawings width evidence](legend-width.md) retains raw B4 selectors,
 exact native constants and supplied font/title argument boundaries without
 assigning pixel units or the unresolved color100 role.
+Its typed optional views and exact nearest-even projection keep entry facts
+explicit and compare every binary32 stage against an independent rational oracle.

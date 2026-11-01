@@ -26,36 +26,55 @@ or defaults. Original prefix-only and candidate-version qualifications remain;
 this evidence adds no stored-byte coverage credit.
 
 The [verification record](legend-width-verification.json) records targeted and
-full replay gates and exact captures. Typed width views, explicit floating-point
-projections, renderer execution and the remaining feature166 obligations remain
-pending.
+full replay gates and exact captures. The typed views and local numerical
+projection are described below. Renderer execution, geometric validation and
+the remaining feature166 obligations remain pending.
 
 The targeted freeze passed16 checks in5.557seconds. Strict replay passed the
 same16 checks in5.142seconds and exited successfully after snapshot recording
 and cleanup. Both retain all eight original catalog/style/color tests. Full
 integrated replay and publication gates remain separate obligations.
 
-## Next numerical projection
+## Numerical projection
 
-An explicit nearest-even projection can use the actual signed font68 and B4
-reads as separate inputs. Font conversion and the two initial multiplications
-occur before B4 is read, with no intervening helper call. Missing facts must
-follow that order. The stored view must not manufacture font state or an earlier
-profile's missing selector.
+`legend_width_inputs` preserves optional signed B4 on complete dialog and
+PostStyle snapshots. The separate
+`SimulationLegendWidthRuntime::project_width_nearest_even` operation requires
+actual signed font68 and B4 reads. Font conversion and the two initial
+multiplications occur before B4 is read, with no intervening helper call.
+Missing facts fail in that order, including a missing B4 when the font is zero.
+The stored view supplies no font state or earlier-profile selector default.
 
 For signed32 font inputs, every nonzero intermediate magnitude is normal and
-finite. The final doubling and multiplication by four are exact power-of-two
-scalings in this domain. A projection should still retain their distinct native
-operation identities. It should return each intermediate binary32 pattern,
-explicit rounding policy, complete input history and local error/coverage,
-without claiming pixel dimensions or the live process's SSE rounding mode.
+finite. The [domain proof](legend-width-domain-reference.json) retains closed
+representable bounds and the 48-bit significand-product bound. The final
+doubling and multiplication by four are exact power-of-two scalings in this
+domain. Results retain their distinct native operation identities and every
+intermediate binary32 pattern. Completion distinguishes zero from signed
+nonzero output; a negative width is a local numerical result, without physical
+or geometric validation. Immutable history retains both supplied parents.
 
-The independent oracle should round exact rational values between neighboring
-binary32 encodings, including ties to an even significand. The production model
-can reuse the existing integer nearest-even significand primitive. That keeps
-the oracle independent of its integer bit calculation and avoids ambient
-floating-point state. Boundary cases should include signed extrema, integer
-rounding transitions around powers of two, generated signed patterns and the
-three distinct B4 branches.
+The independent oracle rounds exact rational values between neighboring
+binary32 encodings, including ties to an even significand. Production reuses
+the existing integer nearest-even significand primitive and performs no host
+floating arithmetic. The corpus covers 18,040 cases, including 498 signed font
+boundaries around powers of two, conversion midpoints and signed32 limits.
+All presence combinations and three B4 branches remain distinct. Complete
+parent replay retains 425 owned contexts, 135 full selector mutations and
+276 native parents with eight explicit hypothetical entry contexts each.
+
+The [operation record](legend-width-operation-verification.json) and
+[process proof](legend-width-process-verification.json) retain exact checks and
+remaining publication gates. The declared nearest-even policy does not establish
+the live process's SSE state, pixel dimensions or a universal physical unit.
+
+The strict operation suite passed 19 checks in 8.377 seconds and exited
+successfully after snapshot recording and cleanup. Nine owned Rust tests and
+the complete native-parent test passed, including eight-worker comparisons.
+The existing color-conversion and preference suites passed unchanged after
+reuse of their rounding primitive. Clippy passed for all targets and features
+with warnings denied. Two fresh Rust processes matched all 199,496 independent
+expected words byte for byte. Full integrated replay and publication validation,
+including ThreadSanitizer, remain separate gates.
 
 Humanizer is unavailable in this checkout; maintainer prose review remains pending.

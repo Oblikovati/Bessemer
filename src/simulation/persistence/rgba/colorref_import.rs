@@ -35,7 +35,7 @@ fn colorref_component_bits(component: u8) -> u32 {
     ((leading + 96) << 23) | (significand & 0x7fffff)
 }
 
-pub(super) fn rounded_significand(product: u64, shift: u32) -> u32 {
+pub(in super::super) fn rounded_significand(product: u64, shift: u32) -> u32 {
     let mut retained = product >> shift;
     if shift == 0 {
         return retained as u32;

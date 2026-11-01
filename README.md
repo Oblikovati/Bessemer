@@ -737,6 +737,11 @@ signed count forwarding, wrapped offsets and suffix-before-prefix call order.
 requires actual read-time plot, flag and color facts, preserves short-circuit
 reads and copies RGB bits without consuming alpha or validating geometry.
 
+`legend_width_inputs` preserves optional B4 selectors. The separate
+[`SimulationLegendWidthRuntime::project_width_nearest_even`](docs/features/simulation-post-dialog/legend-width.md)
+requires actual entry font and selector facts, returns each exact binary32 stage
+under explicit nearest-even rounding, and retains native branch identities.
+
 `legend_step_inputs` preserves the optional FC layout switch. The separate
 [`SimulationLegendStepRuntime::step_availability`](docs/features/simulation-post-dialog/legend-step.md)
 operation requires explicit runtime plot words, retains raw signed BEC returns
