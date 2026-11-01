@@ -112,6 +112,6 @@ complete rendered text remain unresolved. All7 Rust integration checks and the o
 with warnings denied, and the strict Source suite passed16 checks. Two fresh
 processes matched18,901 contexts and609,580 output bytes against independent
 expectations. The [operation proof](text-selection-operation-verification.json)
-records revisions, log hashes and exclusions. The expanded full Source suite
-and publication gates remain pending. All other named
+records revisions, log hashes and exclusions. The complete182-check Source suite passed in671.590seconds and exited
+successfully after snapshot recording. Publication gates remain pending. All other named
 schema models and publication gates remain required for feature166.
