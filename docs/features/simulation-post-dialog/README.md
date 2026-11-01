@@ -492,3 +492,6 @@ copy a constructed color's alpha instead of using packed assignment semantics.
 
 The [annotation controls](extrema-annotations.md) preserve independent Min/Max
 requests and keep glyph material adjustment separate from glyph helper calls.
+
+The [auxiliary triangle planner](auxiliary-triangles.md) combines stored controls
+with explicit runtime groups, ordered filtering and exact local color requests.

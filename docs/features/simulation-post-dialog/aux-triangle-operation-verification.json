@@ -1,0 +1,92 @@
+{
+  "issue": 166,
+  "qualification_issue": 169,
+  "behavior_version": "C888-auxiliary-triangle-plan-v1",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "target_executed": false,
+  "kernel_decision": "Preserve stored controls and missing groups. Compose the exact masked caller gate with explicit runtime facts, signed group iteration, ordered positive triangle counts and opaque payload forwarding. Cap supplied alpha only inside the admitted caller domain. Reject unavailable required groups or resource-budget overruns before publication.",
+  "request_cases": 86632,
+  "helper_plan_cases": 6628,
+  "owned_complete_contexts": 425,
+  "owned_present": 224,
+  "native_complete_contexts": 276,
+  "native_present": 160,
+  "additional_stored_byte_credit": 0,
+  "rust": {
+    "checks": 7,
+    "seconds": 0.23,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/aux-triangle-rust-publication.log",
+      "bytes": 860,
+      "sha256": "05fd3eb9381ba00fcf7cd9ef9f0403cbb28f93aa8bf48ac068f7394170271f73"
+    }
+  },
+  "clippy": {
+    "scope": "all-targets all-features -D warnings",
+    "result": "passed",
+    "seconds": 1.13,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/aux-triangle-clippy-publication.log",
+      "bytes": 73,
+      "sha256": "00719ba100a4b11def98e0e9b61f4fdcde6466c7baf1a78a2031145f903a2628"
+    }
+  },
+  "targeted_source": {
+    "checks": 16,
+    "seconds": 5.204,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/aux-triangle-plan-source-strict.log",
+      "bytes": 2713,
+      "sha256": "4fcff462a1c6b918a8a4d3da794f5e28354bcfe0211cfb953147591d10e5c47b"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/aux-triangle-source-snapshot.json",
+      "bytes": 581722,
+      "sha256": "9c8b154cae1a5ad8873e4e6130e0cae0c086b9407f3fb7eb8e892c66c1485956"
+    }
+  },
+  "full_source": {
+    "checks": 165,
+    "seconds": 537.866,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/aux-triangle-source-full.log",
+      "bytes": 40786,
+      "sha256": "dd1c14c9c0e4c407d3d7b05c9dbe4c87678e5d71ff3ee25938c6c6658ff954e2"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 590116,
+      "sha256": "26984bec3a0c3640efb0bac287cd90f1dc2b05013ac75b905817a0e7db065a22"
+    }
+  },
+  "process_proof": "aux-triangle-process-verification.json",
+  "decoder_qualifications": "aux-triangle-decoder-qualifications.json",
+  "oracle_kinds": [
+    "Original native report identities, offsets, raw controls and full supplied archive bytes",
+    "Complete byte-covered installed caller/helper bodies, threshold constants and file-backed concrete vtable slots with exact named exports",
+    "Independent Source caller gate over signed control boundaries and binary32 exponent/sign/threshold classes",
+    "Independent pointer-offset helper oracle, resource boundaries and signed/high-bit counts",
+    "Owned immutable projections, source mutation isolation in both color modes, eight-worker and two-fresh-process comparisons"
+  ],
+  "excluded": [
+    "Native renderer execution and OpenGL state",
+    "Payload dereferencing, topology or geometry validation",
+    "Scene traversal and complete document rendering",
+    "General MINSS behavior outside admitted caller alpha domain",
+    "Guessed initialization for missing historical controls"
+  ],
+  "pending": [
+    "Complete publication-cut PR and five exact-head cross-platform gates",
+    "Integration with complete feature166 and qualification bug169",
+    "Remaining named style/rendering/preference models"
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+}

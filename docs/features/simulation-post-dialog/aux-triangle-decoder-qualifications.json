@@ -1,0 +1,27 @@
+{
+  "issue": 169,
+  "records": [
+    {
+      "address": "0x18010098b",
+      "original": "18010098b comisd xmm1, xmmword ptr [rip + 0x1d9c75]",
+      "canonical": "18010098b comisd xmm1, qword ptr [rip + 0x1d9c75]",
+      "raw_hex": "660f2f0d759c1d00",
+      "kind": "recorded_comisd_qualifier"
+    },
+    {
+      "address": "0x1801009b7",
+      "original": "1801009b7 comisd xmm0, xmmword ptr [rip + 0x1d9c49]",
+      "canonical": "1801009b7 comisd xmm0, qword ptr [rip + 0x1d9c49]",
+      "raw_hex": "660f2f05499c1d00",
+      "kind": "recorded_comisd_qualifier"
+    },
+    {
+      "address": "0x18015822c",
+      "original": "18015822c add eax, -3",
+      "canonical": "18015822c add eax, 0xfffffffd",
+      "raw_hex": "83c0fd",
+      "kind": "signed32_immediate_spelling"
+    }
+  ],
+  "scope": "Two inherited caller qualifiers and one signed32 immediate spelling; complete bytes and other operands retained"
+}

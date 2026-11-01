@@ -69,6 +69,11 @@ from annotation_evidence import verify_annotation_sources, verify_annotation_cat
 from annotation_bindings import verify_annotation_bindings
 from annotation_projection import verify_annotation_native, verify_annotation_projection
 from annotation_packets import verify_annotation_packets
+from aux_triangle_evidence import verify_aux_triangle_sources
+from aux_triangle_bindings import verify_aux_triangle_bindings
+from aux_triangle_projection import verify_aux_triangle_native, verify_aux_triangle_projection
+from aux_triangle_packets import verify_aux_triangle_packets
+from aux_triangle_plan_packets import verify_aux_triangle_plan_packets
 from dialog_projection_shapes import verify_dialog_scalar_shapes
 from dialog_parent_views import (verify_dialog_parent_sources, verify_dialog_parent_native, verify_dialog_parent_bindings,
                                  verify_dialog_parent_owned, verify_dialog_parent_branches)
@@ -98,7 +103,7 @@ def run_dialog_checks(pin: Path) -> unittest.TestResult:
 
 def run_style_annotation_checks() -> unittest.TestResult | None:
     """Dispatch the concrete stored-style modes without changing the full denominator; e.g. run_style_annotation_checks()."""
-    modes = (('--annotations-only', run_annotation_checks), ('--vector-style-only', run_vector_style_checks),
+    modes = (('--aux-triangle-only', run_aux_triangle_checks), ('--annotations-only', run_annotation_checks), ('--vector-style-only', run_vector_style_checks),
              ('--raw-preferences-only', run_raw_preferences_checks), ('--local-render-only', run_local_render_checks))
     for flag, check in modes:
         if flag in sys.argv: return check()
@@ -116,7 +121,7 @@ def append_dialog_unit_tests(suite: unittest.TestSuite) -> None:
                  'test_cosworks_legend_render_gate', 'test_cosworks_need_model_tess',
                  'test_cosworks_need_offset', 'test_cosworks_fringe_option',
                  'test_cosworks_vector_direction_branch', 'test_cosworks_component_vector_policy',
-                 'test_cosworks_component_unit_type', 'test_cosworks_render_safety'):
+                 'test_cosworks_component_unit_type', 'test_cosworks_render_safety', 'test_cosworks_aux_triangle_gate'):
         suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module(name)))
 
 
@@ -141,7 +146,22 @@ def default_dialog_functions(pin: Path) -> tuple[Callable[[], None], ...]:
               verify_offset_fringe_sources, verify_offset_fringe_bindings, verify_offset_fringe_native,
               verify_offset_fringe_packets, verify_offset_fringe_projection,
               verify_vector_sources, verify_vector_bindings, verify_vector_static_tables, verify_vector_table_constants,
-              verify_vector_packets, verify_vector_native, verify_vector_projection) + unit_model_functions() + local_render_functions() + raw_preferences_functions() + vector_style_functions() + annotation_functions()
+              verify_vector_packets, verify_vector_native, verify_vector_projection) + unit_model_functions() + local_render_functions() + raw_preferences_functions() + vector_style_functions() + annotation_functions() + aux_triangle_functions()
+
+
+def aux_triangle_functions() -> tuple[Callable[[], None], ...]:
+    """Keep complete caller/helper bindings and all archived groups beside the Source gate; e.g. aux_triangle_functions()."""
+    return (verify_aux_triangle_sources, verify_aux_triangle_bindings, verify_aux_triangle_native,
+            verify_aux_triangle_projection, verify_aux_triangle_packets, verify_aux_triangle_plan_packets)
+
+
+def run_aux_triangle_checks() -> unittest.TestResult:
+    """Preserve all original gate and current catalog unit tests in the targeted mode; e.g. run_aux_triangle_checks()."""
+    checks = (verify_dialog_sources, verify_dialog_field_sources, verify_vector_style_decoder_spellings) + aux_triangle_functions()
+    suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
+    for name in ('test_cosworks_aux_triangle_gate', 'test_cosworks_post_style_field_catalog'):
+        suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module(name)))
+    return unittest.TextTestRunner(verbosity=2).run(suite)
 
 
 def annotation_functions() -> tuple[Callable[[], None], ...]:
@@ -344,6 +364,7 @@ def vector_snapshot_readers() -> tuple[str, ...]:
 
 def dialog_snapshot_readers() -> tuple[str, ...]:
     """Require exactly the readers exercised by the selected gate; e.g. dialog_snapshot_readers()."""
+    if '--aux-triangle-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_style_field_catalog', 'cosworks_aux_triangle_gate')
     if '--annotations-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_style_field_catalog')
     if '--vector-style-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_style_field_catalog', 'cosworks_colorref_import_view')
     if '--raw-preferences-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout')
@@ -356,8 +377,7 @@ def dialog_snapshot_readers() -> tuple[str, ...]:
     if '--rgba-comparison-only' in sys.argv: return ('cosworks_color_comparison',)
     if '--colorref-export-only' in sys.argv: return ('cosworks_colorref_view',)
     if '--colorref-import-only' in sys.argv: return ('cosworks_colorref_import_view', 'cosworks_colorref_view')
-    if '--rgba-views-only' in sys.argv:
-        return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_color_fields')
+    if '--rgba-views-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_color_fields')
     if '--postinfo-views-only' in sys.argv:
         return ('cosworks_post_info_fields', 'cosworks_post_contour_policy')
     if '--parent-views-only' in sys.argv:
@@ -370,12 +390,12 @@ def default_snapshot_readers() -> tuple[str, ...]:
     readers = DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout')
     if any(flag in sys.argv for flag in ('--resources-only', '--caps-only', '--reference-caps-only')):
         return readers
-    return readers + ('cosworks_post_v7_composed_view', 'cfb', 'swcontainer', 'cosworks_colorref_import_view', 'cosworks_colorref_view', 'cosworks_color_comparison', 'cosworks_legend_comparison', 'cosworks_legend_render_gate', 'cosworks_need_model_tess', 'cosworks_need_offset', 'cosworks_fringe_option', 'cosworks_vector_direction_branch', 'cosworks_component_vector_policy', 'cosworks_component_unit_type', 'cosworks_render_safety')
+    return readers + ('cosworks_post_v7_composed_view', 'cfb', 'swcontainer', 'cosworks_colorref_import_view', 'cosworks_colorref_view', 'cosworks_color_comparison', 'cosworks_legend_comparison', 'cosworks_legend_render_gate', 'cosworks_need_model_tess', 'cosworks_need_offset', 'cosworks_fringe_option', 'cosworks_vector_direction_branch', 'cosworks_component_vector_policy', 'cosworks_component_unit_type', 'cosworks_render_safety', 'cosworks_aux_triangle_gate')
 
 
 def dialog_snapshot_filename() -> str:
     """Keep partial replay evidence separate from the mandatory full snapshot; e.g. dialog_snapshot_filename()."""
-    modes = (('--annotations-only', 'annotation-source-snapshot.json'), ('--vector-style-only', 'vector-style-source-snapshot.json'), ('--raw-preferences-only', 'raw-preferences-source-snapshot.json'),
+    modes = (('--aux-triangle-only', 'aux-triangle-source-snapshot.json'), ('--annotations-only', 'annotation-source-snapshot.json'), ('--vector-style-only', 'vector-style-source-snapshot.json'), ('--raw-preferences-only', 'raw-preferences-source-snapshot.json'),
              ('--local-render-only', 'local-render-source-snapshot.json'),
              ('--resources-only', 'resource-source-snapshot.json'),
              ('--caps-only', 'cap-source-snapshot.json'),

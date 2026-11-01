@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added auxiliary-triangle controls and bounded immutable call plans with runtime rejection reasons, color provenance and explicit payload-validation exclusions. (#166)
+
 - Added independent raw Min/Max annotation controls and the separate glyph-material adjustment predicate with explicit runtime context. (#166)
 
 - Added raw vector-style controls and explicit local size, density and whole-color write models with preserved older field absence. (#166)
