@@ -1,0 +1,91 @@
+{
+  "issue": 166,
+  "behavior_version": "C849-local-height-product-v1",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "target_executed": false,
+  "kernel_decision": "Preserve optional raw signed32 word14 as the cell-count multiplier, without font/tick identities or defaults. Require an explicit cell-helper return before requiring the count, matching call-before-IMUL order. Compute only the observed final low32 product with wrapping signed32 multiplication, including negative/overflow/zero results. Return immutable complete scalar parents, derived history, zero/nonzero completion, exact one-word/one-runtime-value coverage, diagnostics and zero pattern error without font/title/tick or pixel emulation.",
+  "complete_installed_instruction_counts": [
+    98,
+    25,
+    23,
+    6
+  ],
+  "independent_ghidra_instruction_count": 152,
+  "native_accepted_contexts": 276,
+  "original_rejected_contexts": 8,
+  "owned_complete_contexts": 425,
+  "opaque_older_owned_contexts": 20,
+  "complete_count_mutants": 268,
+  "operation_cases": 8864,
+  "hypothetical_helper_contexts_per_parent": 5,
+  "local_requests": 13709,
+  "additional_stored_byte_credit": 0,
+  "exact_historical_color_report_transitions": 1,
+  "exact_decoder_qualifications": 0,
+  "rust": {
+    "checks": 7,
+    "failed": 0,
+    "ignored": 0,
+    "seconds": 0.25,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-height-rust-final.log",
+      "bytes": 918,
+      "sha256": "f784a4e223e3e3f7e3493e4962f2486fa8461df5631fdde9e3ae54505a5828f5"
+    }
+  },
+  "clippy": {
+    "scope": "all-targets all-features -D warnings",
+    "result": "passed",
+    "seconds": 34.93,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-height-clippy.log",
+      "bytes": 136,
+      "sha256": "6816ae9086b09a465daff6852a9cf17a1e4e73342fb4c541294b0c2889f6db3d"
+    }
+  },
+  "strict_source": {
+    "checks": 18,
+    "seconds": 6.275,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-height-operation-source-strict.log",
+      "bytes": 2898,
+      "sha256": "762b689f7227d255ea9e7b9200119a4dd0bd3f3709b89dddaf616aa6465f63ee"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/legend-height-source-snapshot.json",
+      "bytes": 625089,
+      "sha256": "9a4e6cf97a7a00e7977ae58ff5d970c9fba7205373807819d8f17ba1ea4d28b8"
+    }
+  },
+  "installed_proof": "legend-height-installed-reference.json",
+  "independent_decoder": "legend-height-rea-reference.json",
+  "process_proof": "legend-height-process-verification.json",
+  "concurrency_workers": 8,
+  "public_send_sync_assertions": 6,
+  "ownership": "Plans retain only copied optional scalar input, explicit signed32 helper result and raw product; there are no borrowed parents, caches or global state. Every operation verifies original inputs unchanged on success/failure; zero/nonzero completed plans survive original count/helper mutation. Complete native/owned/mutant parents retain exact bytes, repeated getters and actual field absence. Eight workers and two fresh processes agree with independent expectations.",
+  "oracle_kinds": [
+    "Literal unchanged C849 raw-word annotation replay with all276 accepted/eight rejected original observations",
+    "Exact152 installed instructions, named exports, helper targets, complete sign mask/title scale, decompilation pins and conditional regular-mapper count relationship",
+    "Independent Ghidra152 locations and four complete contiguous extents",
+    "Independent unbounded integer products masked to32 bits, signed extremes, deliberate overflow-to-zero and8192 generated products",
+    "Both missing-input orders, zero-valued unused operands, all425 owned/276 native parents and268 complete count mutations",
+    "Six public thread traits, eight workers and two fresh processes match all13709 result packets"
+  ],
+  "excluded": [
+    "Native target execution, actual LOGFONTW metrics, cell-helper SSE conversion/environment and exceptional conversion behavior",
+    "Title coordinate emulation, complete tick generation/adjustment and universal stored/runtime tick-count identity",
+    "Pixel geometry validity, general mapper/interpolation behavior or native allocation outcomes",
+    "Absent count defaults, count-controlled wire arrays, new byte credit and whole-format acceptance from prefix scopes"
+  ],
+  "pending": [
+    "Full248 Source gate",
+    "Exact publication-cut PR validation and all five platform checks",
+    "Remaining feature166 documented models and integration"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending."
+}
