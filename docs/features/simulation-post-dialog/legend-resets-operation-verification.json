@@ -72,9 +72,25 @@
     "Eight-worker serial equivalence and two fresh process comparisons"
   ],
   "pending": [
-    "Full315 integrated Source replay",
     "Remaining feature166 obligations",
     "Exact publication-head cargo xtask pr and all five platform checks"
   ],
-  "prose_review": "Humanizer unavailable; maintainer review pending."
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_integrated_source": {
+    "checks": 315,
+    "seconds": 617.563,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "accepted_source_cut": "94fa7e8b1fafc45ca6f93a5725c64d3c2019f97f",
+    "log": {
+      "path": "target/legend-resets-operation-source-full.log",
+      "bytes": 68605,
+      "sha256": "a3fe5fe864093a0b2123e0154788a2c8657ed2e56ee7bca672adcd7567142381"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 634126,
+      "sha256": "2b7fd176fc4edbe829264f25977423caa53b3213ade4e4e3db7a5c38b60c2e49"
+    }
+  }
 }
