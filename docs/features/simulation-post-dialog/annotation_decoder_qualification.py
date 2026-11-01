@@ -4,6 +4,7 @@ from collections.abc import Mapping
 from typing import cast
 import pefile
 from dialog_evidence import dialog_baseline
+from native_decoder_qualifications import qualify_captured_native_line, qualify_captured_native_method
 from style_preferences_disassembly import (StylePreferenceInstruction, decoded_style_preference_method,
     canonical_style_address_operands, canonical_style_operands)
 
@@ -16,26 +17,12 @@ CAPTURED_ANNOTATION_TEXT: Mapping[int, tuple[str, str, str, str]] = MappingProxy
 
 def qualify_annotation_line(line: str, raw: bytes | None) -> tuple[str, dict[str, str] | None]:
     """Qualify only an exact captured string and byte sequence, preserving all other text; e.g. qualify_annotation_line('180000000 ret', None)."""
-    address = int(line.split(' ', 1)[0], 16)
-    captured = CAPTURED_ANNOTATION_TEXT.get(address)
-    if captured is None: return line, None
-    original, canonical, expected_hex, kind = captured
-    assert line == original and raw == bytes.fromhex(expected_hex), (line, raw, captured)
-    return canonical, dict(address=hex(address), original=original, canonical=canonical, raw_hex=expected_hex, kind=kind)
+    return qualify_captured_native_line(line, raw, CAPTURED_ANNOTATION_TEXT)
 
 
 def qualified_annotation_method(image: pefile.PE, method: dict[str, object]) -> tuple[dict[str, object], list[dict[str, str]]]:
     """Copy expected text without rewriting the original Source report; e.g. qualified_annotation_method(image, method)."""
-    lines: list[str] = []
-    qualifications: list[dict[str, str]] = []
-    for line in cast(list[str], method['instructions']):
-        address = int(line.split(' ', 1)[0], 16)
-        captured = CAPTURED_ANNOTATION_TEXT.get(address)
-        raw = image.get_data(address - image.OPTIONAL_HEADER.ImageBase, len(captured[2]) // 2) if captured is not None else None
-        canonical, qualification = qualify_annotation_line(line, raw)
-        lines.append(canonical)
-        if qualification is not None: qualifications.append(qualification)
-    return method | {'instructions': lines}, qualifications
+    return qualify_captured_native_method(image, method, CAPTURED_ANNOTATION_TEXT)
 
 
 def annotation_decoded_methods(image: pefile.PE, methods: list[dict[str, object]]) -> dict[int, list[StylePreferenceInstruction]]:
