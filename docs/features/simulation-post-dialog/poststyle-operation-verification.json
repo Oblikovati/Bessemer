@@ -1,0 +1,40 @@
+{
+  "issue": 166,
+  "operation": "Complete standalone PostStyle read/build/isolated edit; full dialog issue remains open",
+  "accepted_commit": "e4bdfe501022b9d311c7205b465483315cdf3592",
+  "full_gate": "cargo xtask pr",
+  "exit_code": 0,
+  "passed": 3542,
+  "failed": 0,
+  "ignored": 114,
+  "summaries": 268,
+  "log_sha256": "b50c73fa4c33c7b7680f2d1974c3f121d460bbaf1971327df92e0ba4bcee86e2",
+  "focused_info_checks": 13,
+  "focused_style_checks": 14,
+  "focused_repeat_sha256": "82c09bfea3e286244fbc9615e84bccc23908ccf6470300c17fe35727ef62869c",
+  "owned_contexts": 200,
+  "owned_logical_bytes": 74492,
+  "owned_changed_edits": 18560,
+  "owned_noops": 18560,
+  "owned_proper_prefix_rejections": 74492,
+  "owned_trailing_rejections": 200,
+  "native_candidates": 120,
+  "native_accepted": 52,
+  "native_rejected": 68,
+  "native_caller_compatible": 52,
+  "native_accepted_bytes": 14768,
+  "platform": "Windows x64, Rust1.99.0",
+  "oracles": [
+    "Frozen complete independent Source fields and literal edit histories",
+    "Independent byte slices and closed profile bounds",
+    "Serial bytes versus eight-worker replay",
+    "Two fresh focused processes assert byte equality with the same complete owned/native field/history expectations"
+  ],
+  "exclusions": [
+    "Prepared parent-dialog module is unregistered and excluded from this accepted committed tree",
+    "Parent dialog codec and remaining bounded consumer views remain pending",
+    "Expanded legacy mismatch cohort remains unresolved",
+    "No native application execution or automatic runtime version selection",
+    "Five exact-head platform integration checks remain pending in the serial PR queue"
+  ]
+}
