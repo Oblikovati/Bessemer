@@ -1,0 +1,20 @@
+{
+  "feature_issue": 157,
+  "command": "cargo xtask pr",
+  "code_commit": "6839d21985943878dd3703637ccfb8208ba182cd",
+  "code_tree": "e44728f334f24fc91aa16f58e55eb3988a62f6f6",
+  "platform": "Windows x86_64",
+  "toolchain": "1.99.0",
+  "exit_code": 0,
+  "process_reaped": true,
+  "summaries": 259,
+  "passed": 3426,
+  "failed": 0,
+  "ignored": 87,
+  "log_sha256": "52fa0c2f06fa6d6e009304ac01570caf19f7acc180339a0e6e14b5746eb1e817",
+  "exclusions": [
+    "Explicit native inputs were tested separately; routine gate ignores remain explicit.",
+    "Exact-head platform gates and ThreadSanitizer for this feature remain pending.",
+    "Native writer/application and geometry acceptance remain unproven."
+  ]
+}
