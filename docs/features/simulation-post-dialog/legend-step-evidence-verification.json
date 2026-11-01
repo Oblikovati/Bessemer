@@ -76,11 +76,27 @@
     "New stored-byte coverage or expanded original acceptance scopes"
   ],
   "pending": [
-    "Full integrated Source replay for this evidence cut",
     "Typed FC and runtime availability operations",
     "Local layout projections with explicit helper-boundary facts",
     "Remaining documented feature166 models",
     "Exact publication-head PR validation and all five platform gates"
   ],
-  "prose_review": "Humanizer unavailable; maintainer review pending."
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 263,
+    "seconds": 508.256,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "f92fa8efa3aacd00a9fa43d158f32205e4efd47b",
+    "log": {
+      "path": "target/legend-step-source-full.log",
+      "bytes": 58907,
+      "sha256": "660731250addac42986bb7f7e66aaf9cc5a89fe64b7d0d018a1a82e8d32259b8"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 633446,
+      "sha256": "bfb5389e02bbd7bea0519136544ec13d551ef23f4a6e6c0e3afa9134d802b522"
+    }
+  }
 }
