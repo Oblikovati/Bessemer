@@ -82,9 +82,25 @@
   ],
   "pending": [
     "Typed local conversion and guarded assignment plans",
-    "Full329 integrated Source replay",
     "Remaining feature166 models",
     "Exact publication-head cargo xtask pr and all five platform gates"
   ],
-  "prose_review": "Humanizer unavailable; maintainer review pending."
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_integrated_source": {
+    "checks": 329,
+    "seconds": 500.588,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "accepted_source_cut": "a95ca702d8d269316e4b4b702c72e3ce21623a05",
+    "log": {
+      "path": "target/legend-inverse-source-full.log",
+      "bytes": 71007,
+      "sha256": "8c85ed5fa4bb2b651d7121befdad4c7667aa795bbb10b3d6121fef4164f701da"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 634468,
+      "sha256": "4ecc403457ef19e298e5773755df0866b20ade8d13cfd5cc878498d75d2767e1"
+    }
+  }
 }
