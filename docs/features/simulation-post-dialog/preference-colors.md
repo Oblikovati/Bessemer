@@ -58,16 +58,35 @@ successfully after snapshot recording. The [verification proof](preference-color
 records exact hashes, qualifications and remaining gates. The full Source suite
 passed212 checks in434.935seconds and its process exited successfully.
 
-## Remaining operation work
+## Local preference-color operation
 
-Implement the eight typed routes with an explicit nullable-pointer/type context,
-reusing the alpha-preserving nearest-even packed assignment. Preserve original
-RGBA separately from projected RGBA, raw preference words and their source offsets.
-Require missing pointer/type/source facts only when reached; a skipped block
-must not require preference bytes. Retain the preceding legend-call boundary.
+`SimulationStylePreferenceColorRoute::from_style_member` normalizes the eight
+bound members once and exposes their canonical field paths and source offsets.
+`project_style_preference_nearest_even` takes an original `SimulationRgbaColor`,
+the route, optional borrowed preference bytes and explicit pointer/type facts.
+Unknown pointer presence fails before interpreting a supplied type. A known null
+pointer admits the block even when an unused cached type says73; a known nonnull
+pointer requires its type and skips only for exactly73.
 
-The local projection needs immutable completion, diagnostics, exact coverage,
-all-parent provenance, source isolation, independent rounding/raw-alpha/bounds
-fixtures, concurrency and fresh-process checks. It must leave serialized bytes
-unchanged. The full Source and publication gates and the remaining documented
-feature166 models still require their separate acceptance evidence.
+Skipped plans preserve allfour original words without requiring source bytes.
+Admitted plans validate both reached source extents, reuse alpha-preserving
+nearest-even packed assignment and apply the five raw alpha overrides separately.
+Results retain original/projected RGBA, every consumed packed/alpha word, source
+offsets and availability, runtime context, completion, diagnostics and exact local
+coverage. Borrowed bytes are not retained. The preceding legend-call boundary
+remains explicit, and no wire bytes change. A projection whose bits already
+match the original remains a completed projection, with its source reads recorded.
+
+Independent expectations cover17,400 route/context/bounds/rounding/alpha cases.
+All425 owned and276 native contexts preserve their complete retained bodies and
+conditional route absences.2,457 owned and1,698 native route colors each receive
+four explicitly hypothetical scenarios;1,453 unavailable routes remain absent.
+No preference contents or invocation are inferred from native stored colors.
+
+All eight Rust checks and Clippy passed. Eight workers matched serial results;
+two fresh processes matched all2,584,032 independently expected bytes. The strict
+Source suite passed20 checks in7.120seconds and exited after snapshot recording.
+The [operation proof](preference-color-operation-verification.json) and
+[process proof](preference-color-process-verification.json) retain exact scope,
+hashes and exclusions. The full214 Source gate, exact publication checks and
+remaining documented feature166 models still need their acceptance evidence.

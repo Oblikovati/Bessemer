@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added eight typed preference-color projections with explicit pointer/type applicability, nearest-even RGB, preserved/raw-copy alpha policies and consumed-source history. (#166)
+
 - Added immutable conditional1DC RGB group plans and fixed-slot array copies with distinct primary/reflected filters, explicit growth facts and complete parent history. (#166)
 
 - Added guarded element-segment RGB reads with explicit runtime dependencies, preserved raw RGBA and separate endpoint-geometry exclusions. (#166)
