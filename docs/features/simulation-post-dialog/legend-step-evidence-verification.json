@@ -1,0 +1,86 @@
+{
+  "issue": 166,
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "target_executed": false,
+  "complete_probe_instruction_counts": [
+    14,
+    14,
+    129,
+    373,
+    25
+  ],
+  "complete_probe_bytes": 2294,
+  "independent_body_instruction_counts": [
+    13,
+    13,
+    128,
+    373,
+    25
+  ],
+  "independent_body_instruction_count": 552,
+  "complete_body_bytes": 2291,
+  "separately_pinned_probe_int3_bytes": 3,
+  "native_accepted_contexts": 276,
+  "native_fc_words": 109,
+  "native_absent_fc_contexts": 167,
+  "original_rejected_contexts": 8,
+  "owned_complete_contexts": 425,
+  "owned_absent_fc_contexts": 312,
+  "additional_stored_byte_credit": 0,
+  "exact_historical_color_report_transitions": 1,
+  "exact_decoder_qualifications": 0,
+  "initial_freeze": {
+    "checks": 18,
+    "seconds": 7.963,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-step-source-write.log",
+      "bytes": 2710,
+      "sha256": "fd813879d8716aebceeab5ceb876156d3d66dcc8b28a40f51cde85c6db4ef086"
+    }
+  },
+  "strict_source": {
+    "checks": 18,
+    "seconds": 5.342,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-step-source-strict.log",
+      "bytes": 2710,
+      "sha256": "2be41a45a2f09e022fda60a9ce00c6eee6b1ea5620efe401cdb204cb023a888c"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/legend-step-source-snapshot.json",
+      "bytes": 625403,
+      "sha256": "f2a218cd799f6c3f4dcbee02607b44e8a90008b3ec3d624068b2214c6ea8b25a"
+    }
+  },
+  "installed_proof": "legend-step-installed-reference.json",
+  "independent_decoder": "legend-step-rea-reference.json",
+  "oracle_kinds": [
+    "Complete original C851 report, all source/decompilation pins and one exact historical replay-input transition",
+    "All555 GNU-decoded original probe instructions, exact complete module identity and all five named exports",
+    "Five independent Ghidra function bodies and552 instruction locations with exact contiguous extents",
+    "Three original one-byte INT3 probe tails separately pinned by exact address/CC byte; changed endpoints and tails rejected",
+    "All276 accepted native identities with original scopes/versions and exact109 FC annotations, plus all eight retained rejected identities",
+    "425 complete owned contexts and signed boundary/absence/malformed-width FC annotation checks",
+    "Both original runtime availability policy tests and all eight original catalog/style/color tests over copied modules"
+  ],
+  "excluded": [
+    "Native target execution, complete renderer output and pixel validity",
+    "FC visibility labels, stored step numbers and default values",
+    "Availability from serialized FC or invented runtime plot words/pointer safety",
+    "Localized text labels from resource IDs",
+    "Assuming FC/runtime state stays unchanged across text helper calls",
+    "New stored-byte coverage or expanded original acceptance scopes"
+  ],
+  "pending": [
+    "Full integrated Source replay for this evidence cut",
+    "Typed FC and runtime availability operations",
+    "Local layout projections with explicit helper-boundary facts",
+    "Remaining documented feature166 models",
+    "Exact publication-head PR validation and all five platform gates"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending."
+}
