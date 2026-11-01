@@ -74,5 +74,5 @@ with no claim of observed native callback invocation.
 
 The [operation proof](plot54-operation-verification.json) and
 [process proof](plot54-process-verification.json) record hashes and exclusions.
-The full Source gate and exact publication-cut checks remain required before
+The full Source gate passed189 checks in556.182seconds. Exact publication-cut checks remain required before
 feature166 integration, alongside the remaining named schema models.

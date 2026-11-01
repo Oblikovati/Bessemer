@@ -80,9 +80,25 @@
     "Unmasked exceptions or DAZ/FTZ-enabled behavior"
   ],
   "pending": [
-    "Full189 Source checks",
     "Exact publication-cut PR gate and five platform checks",
     "Remaining feature166 schemas and integration"
   ],
-  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 189,
+    "seconds": 556.182,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "67b57c8d",
+    "log": {
+      "path": "target/plot54-plan-source-full.log",
+      "bytes": 45359,
+      "sha256": "4d5314dcbc6d92c0302c886a96ab30d4ad070bb6763590d875cd0ec174dde8e4"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 618739,
+      "sha256": "1539fccc3b111b3357d1696fbc8e9452ff684c0a250b23b6d64db37d44d3f52d"
+    }
+  }
 }
