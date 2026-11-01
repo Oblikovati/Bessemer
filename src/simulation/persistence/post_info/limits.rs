@@ -16,7 +16,7 @@ pub struct SimulationPostInfoLimits {
 }
 
 impl SimulationPostInfoLimits {
-    pub(super) fn wire_limits(self) -> SimulationThermalLimits {
+    pub(in crate::simulation::persistence) fn wire_limits(self) -> SimulationThermalLimits {
         outer_limits(
             self.maximum_bytes,
             self.maximum_fields,

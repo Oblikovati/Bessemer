@@ -44,7 +44,10 @@ impl SimulationPostInfoText {
         bytes
     }
 
-    pub(super) fn from_frame(bytes: &[u8], maximum_bytes: usize) -> Result<Self> {
+    pub(in crate::simulation::persistence) fn from_frame(
+        bytes: &[u8],
+        maximum_bytes: usize,
+    ) -> Result<Self> {
         let mut cursor = ArchiveCursor::new(bytes);
         let count = cursor.i32()?;
         let width = usize::try_from(count)

@@ -25,7 +25,9 @@ pub struct SimulationPostInfoField {
     pub value: SimulationPostInfoValue,
 }
 
-pub(super) fn wire_value(value: &SimulationPostInfoValue) -> SimulationThermalValue {
+pub(in crate::simulation::persistence) fn wire_value(
+    value: &SimulationPostInfoValue,
+) -> SimulationThermalValue {
     match value {
         SimulationPostInfoValue::Signed(word) => SimulationThermalValue::Signed(*word),
         SimulationPostInfoValue::RawWordBits(bits) | SimulationPostInfoValue::Float32Bits(bits) => {
@@ -37,7 +39,9 @@ pub(super) fn wire_value(value: &SimulationPostInfoValue) -> SimulationThermalVa
     }
 }
 
-pub(super) fn to_wire_fields(fields: &[SimulationPostInfoField]) -> Vec<SimulationThermalField> {
+pub(in crate::simulation::persistence) fn to_wire_fields(
+    fields: &[SimulationPostInfoField],
+) -> Vec<SimulationThermalField> {
     fields
         .iter()
         .map(|field| SimulationThermalField {
@@ -92,7 +96,7 @@ fn is_float_path(path: &str) -> bool {
             || path.ends_with(".shared_scalar"))
 }
 
-pub(super) fn require_kind(
+pub(in crate::simulation::persistence) fn require_kind(
     original: &SimulationPostInfoValue,
     replacement: &SimulationPostInfoValue,
     path: &str,

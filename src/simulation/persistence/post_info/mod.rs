@@ -30,3 +30,8 @@ mod character_text;
 mod values;
 pub use character_text::SimulationPostInfoText;
 pub use values::{SimulationPostInfoField, SimulationPostInfoValue};
+
+pub(super) use values::{
+    require_kind as info_require_kind, to_wire_fields as info_to_wire_fields,
+    wire_value as info_wire_value,
+};
