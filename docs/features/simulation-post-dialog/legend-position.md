@@ -34,7 +34,50 @@ horizontal and seven vertical words. In particular, horizontal `cccc4c3f` and
 `cdcc4c3f` remain separate. All425 owned complete contexts retain actual field
 absence, including twenty older opaque styles.
 
-The [verification record](legend-position-evidence-verification.json) records
-executed tests and outstanding work. Typed position views remain pending.
-Humanizer is unavailable in this checkout; maintainer prose review remains
-pending.
+The [evidence verification record](legend-position-evidence-verification.json)
+records the complete bindings and corpus checks. Its full Source suite passed
+230checks in457.537seconds and exited successfully after snapshot recording.
+
+## Typed position views
+
+`SimulationPostDialog::legend_position_factors` and
+`SimulationPostStyle::legend_position_factors` return immutable
+`SimulationLegendPositionFactors`. Each present horizontal or vertical factor
+retains its typed axis, complete raw word, absolute four-byte wire span and
+revision-bound source field ID. `finite_value` returns the exact finite
+binary32 value, including signed zero. A present nonfinite factor retains its
+raw word and has no finite view; an absent factor has no factor object.
+
+Coverage records actual factor and byte counts, exact selected-profile checks,
+zero achieved local pattern error and unchanged wire state. Completed absence
+has its own status. Each factor returns copied-source history with its original
+field as the sole parent and unchanged result identity. Results retain native
+execution, pixel emulation, runtime-dimension and screen-origin exclusions.
+
+The view validates each loaded raw word against its actual source bytes and
+span before publication. Missing spans, wrong widths, out-of-range/reversed
+spans, byte mismatches and wrong value kinds fail with typed errors. Results
+retain their raw words, spans and IDs after caller buffer mutation or source
+archive destruction. Source IDs drive the existing typed edit APIs: focused
+parent/style checks change both factor words against independent literal byte
+patches, preserve the originals and reject the old IDs on edited revisions.
+
+Independent expectations use the unchanged copied Source model and complete
+primitive-field ordinals. The corpus contains425 owned contexts,276 native
+contexts and2,055 generated cases spanning both signs, every exponent, boundary
+mantissas, NaN payloads and the nearby observed finite encodings. Every context
+retains its complete parent bytes. Serial and eight-worker runs compare full
+raw words, spans, ordinals, finite-view presence and finite result bits; copied
+source history is checked against each owning revision.
+
+All eight Rust checks passed, including three injected-boundary checks and
+five complete projection/edit checks. Clippy passed with warnings denied.
+The strict Source suite passed18 checks in7.862seconds and exited successfully
+after snapshot recording. Two fresh Rust processes matched every expected
+result across2,756 contexts, totaling154,336bytes.
+
+The [operation verification record](legend-position-operation-verification.json)
+and [process proof](legend-position-process-verification.json) record exact
+tests, hashes and exclusions. Remaining documented feature166 models, exact
+publication validation and platform integration remain outstanding.
+Humanizer is unavailable in this checkout; maintainer prose review remains pending.

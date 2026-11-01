@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added immutable legend position-factor views with raw binary32 values, exact wire spans, revision-bound field IDs and copied-source provenance. (#166)
+
 - Added typed legend format construction and alternate selection with raw signed controls, explicit runtime facts, wrapping widths and complete local provenance. (#166)
 
 - Added eight typed preference-color projections with explicit pointer/type applicability, nearest-even RGB, preserved/raw-copy alpha policies and consumed-source history. (#166)

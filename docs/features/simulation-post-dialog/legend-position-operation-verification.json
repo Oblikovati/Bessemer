@@ -1,0 +1,85 @@
+{
+  "issue": 166,
+  "behavior_version": "C847-position-view-v1",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "target_executed": false,
+  "kernel_decision": "Project only actually present canonical AC/B0 words from complete selected-profile snapshots. Retain exact raw binary32 bits, typed axes, revision-bound source IDs and verified four-byte wire spans. Expose finite-only numeric values without normalization; distinguish nonfinite-present from absent. Return copied-source history, completed absence/presence, exact local coverage and original C847 native-pixel/runtime qualifications. Missing or inconsistent required source spans remain typed failures. Existing typed edits consume the exported source IDs without altering original snapshots.",
+  "owned_complete_contexts": 425,
+  "native_complete_contexts": 276,
+  "generated_float_class_contexts": 2055,
+  "total_contexts": 2756,
+  "additional_stored_byte_credit": 0,
+  "rust": {
+    "checks": 8,
+    "failed": 0,
+    "ignored": 0,
+    "boundary_checks": 3,
+    "integration_checks": 5,
+    "integration_seconds": 0.31,
+    "process_exit_code": 0,
+    "boundary_log": {
+      "path": "target/legend-position-boundaries-rust.log",
+      "bytes": 787,
+      "sha256": "b7af21ed4dc88f79e559c5aa747359cf0b2579957d3b419599ba424623b40630"
+    },
+    "integration_log": {
+      "path": "target/legend-position-rust-final.log",
+      "bytes": 818,
+      "sha256": "6285b4489615d8bdeed72e4425f97234e1373707eb7eb8552efc4291a99707f4"
+    }
+  },
+  "clippy": {
+    "scope": "all-targets all-features -D warnings",
+    "result": "passed",
+    "seconds": 2.08,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-position-clippy.log",
+      "bytes": 135,
+      "sha256": "9166e440629d00d10d13f088abcf02d6efabd39875726313c1867a10ae5bbe1a"
+    }
+  },
+  "strict_source": {
+    "checks": 18,
+    "seconds": 7.862,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-position-operation-source-strict.log",
+      "bytes": 2857,
+      "sha256": "ee4545bf38c96f0d59cf53e7ff4195a2d5602b13140dc21df60c227eba9d5688"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/legend-position-source-snapshot.json",
+      "bytes": 625419,
+      "sha256": "9c89bebbc2e78fba84c33e6953aecf9c97d795ab7821e418fc968c28f9b8b0b5"
+    }
+  },
+  "installed_proof": "legend-position-installed-reference.json",
+  "independent_decoder": "legend-position-rea-reference.json",
+  "evidence_proof": "legend-position-evidence-verification.json",
+  "process_proof": "legend-position-process-verification.json",
+  "concurrency_workers": 8,
+  "public_send_sync_assertions": 6,
+  "ownership": "Views own copied scalar bits, wire spans and typed axes plus immutable revision tokens. They retain no borrowed archive storage. Every complete-context projection checks full round-trip bytes, repeated getters, original revision IDs and copied-source history; views remain unchanged after caller-buffer mutation and archive destruction. Focused parent/style source-ID edits match literal byte patches and preserve original views; old IDs fail on edited revisions. Named boundary fakes reject missing/short/reversed/out-of-range/mismatched spans and wrong value kinds without publishing partial factors.",
+  "oracle_kinds": [
+    "Unchanged copied Source decode_fields and both original tests",
+    "Exact25 installed instructions and both complete independently analyzed Ghidra extents",
+    "All original276 native accepted observations and eight original rejected identities with retained scopes/versions",
+    "Complete425 owned contexts and2055 patched complete styles covering both signs, all exponents, boundary mantissas, NaN payloads and nearby observed finite words",
+    "Independent complete primitive-field ordinals, absolute spans, raw words and finite-value bits",
+    "Named injected-boundary fakes, literal byte-patch edits through exported IDs, six public thread traits, eight workers and two fresh processes"
+  ],
+  "excluded": [
+    "Native target execution, pixel emulation and actual signed viewport dimensions",
+    "Actual SSE environment, a universal screen origin, mathematical-floor substitution, clamping or normalization",
+    "Absent-field defaults, extra stored-byte credit and whole-format acceptance from original prefix scopes"
+  ],
+  "pending": [
+    "Full231 Source gate",
+    "Exact publication-cut PR validation and all five platform checks",
+    "Remaining feature166 documented models and integration"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending."
+}
