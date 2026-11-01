@@ -79,9 +79,26 @@
   ],
   "pending": [
     "Typed optional width views and explicit floating-point projection",
-    "Full integrated Source replay for this evidence cut",
     "Remaining feature166 models",
     "Exact publication-head cargo xtask pr and all five platform gates"
   ],
-  "prose_review": "Humanizer unavailable; maintainer review pending."
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_source_replay": {
+    "checks": 291,
+    "failed": 0,
+    "seconds": 494.874,
+    "process_exit_code": 0,
+    "accepted_source_cut": "6bb83d3f96af468a9b55bb0456b6769730949368",
+    "log": {
+      "path": "target/legend-width-source-full.log",
+      "bytes": 64193,
+      "sha256": "a600bfd9724a21d9e31af7355298a6aeac7b68c7a70331f1d2b590ae32808029"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 633446,
+      "sha256": "4397a2c0567ec92c82f2065d662493776acaf650fbd44389ac4ab49586091ead"
+    },
+    "terminal_exit_reaped": true
+  }
 }
