@@ -74,9 +74,25 @@
     "Replacing serialized1DC with group RGB or derived destination words"
   ],
   "pending": [
-    "Full204 Source gate",
     "Exact publication-cut PR validation and allfive platform checks",
     "Remaining feature166 documented schemas and integration"
   ],
-  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 204,
+    "seconds": 441.091,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "59d78bd74206b70d57b4f28386843099b5b85130",
+    "log": {
+      "path": "target/mode3-rgb-operation-source-full.log",
+      "bytes": 48202,
+      "sha256": "d99ee49b23f9ba7e896e649e808b794a849b56b51aa5970cd31ea5d06554a075"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 631800,
+      "sha256": "217c3896df5515756c9bba97cb1073256ccf9dc1453adc88d824d6e2926bfa04"
+    }
+  }
 }

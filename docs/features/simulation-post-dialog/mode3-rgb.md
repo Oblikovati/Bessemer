@@ -108,5 +108,6 @@ allocator execution. Full retained bodies still round-trip unchanged.
 The complete native allocator, renderer state, reflection admission, exceptional
 paths, geometry validity and whole-scene rendering remain outside this local
 word-selection/copy contract. Alpha remains in original copied parents. No group
-selection or derived array write overwrites serialized1DC. The full204 Source gate, exact publication checks and
+selection or derived array write overwrites serialized1DC. The full204-check Source suite passed in441.091seconds and exited successfully.
+Exact publication checks and
 remaining documented feature166 schemas still require their own acceptance gates.
