@@ -468,3 +468,8 @@ Eight workers matched serial results; two fresh processes matched all 18,146
 model cases and their 80,075 output words against Source byte for byte.
 [Offset/fringe verification](offset-fringe-operation-verification.json) records
 the exact native inputs, transitions, missing-state exclusions and remaining gates.
+
+The [vector-direction model](vector-direction.md) composes the local selector/text
+branch with the complete static provider dispatch. It retains all four output
+words and their origin, and requires explicit loaded CString presence. Native
+runtime execution and the fourth word's physical meaning remain unclaimed.

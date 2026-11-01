@@ -1,0 +1,113 @@
+{
+  "issue": 166,
+  "behavior_version": "C878-C879-C880-static-vector-v1",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "kernel_decision": "Compose the explicit signed selector/loaded-text branch with the full static provider dispatch; preserve exact four-word outputs and table provenance, including selected tables on fallback.",
+  "target_executed": false,
+  "static_tables": 23,
+  "static_entries": 262,
+  "static_tails": 11,
+  "output_patterns": 9,
+  "owned_provider_cases": 106560,
+  "owned_composed_cases": 3488,
+  "native_provider_cases": 224,
+  "native_composed_cases": 224,
+  "owned_complete_parents": 225,
+  "native_complete_parents": 224,
+  "explicit_loaded_text_choices": 2,
+  "additional_stored_byte_credit": 0,
+  "rust": {
+    "checks": 7,
+    "failed": 0,
+    "ignored": 0,
+    "log": {
+      "path": "target/vector-rust.log",
+      "bytes": 931,
+      "sha256": "c0767bbbc3d3e83bcf0e120d545de5fe4758a1ef6d6b96f8af9d61e8a58b7e36"
+    }
+  },
+  "clippy": {
+    "path": "target/vector-clippy.log",
+    "bytes": 136,
+    "sha256": "ba82894615a40d8de2968bc2aa4afd486bc01042f5981d629b15ff9b8e2a10d3"
+  },
+  "initial_harness_failure": {
+    "checks": 14,
+    "errors": 6,
+    "cause": "Copied provider helper required its real JSON dependency; it was absent from the temporary pin.",
+    "log": {
+      "path": "target/vector-source-missing-data-initial.log",
+      "bytes": 16522,
+      "sha256": "3362533b3c2e8a5a4073218b1ab2312c527fa2f9668b41cd33476e695b3259f2"
+    },
+    "resolution": "Copy the original hash-bound JSON once, verify it before/after replay, and preserve all original checks."
+  },
+  "source_initialization": {
+    "checks": 14,
+    "seconds": 9.462,
+    "log": {
+      "path": "target/vector-source-write.log",
+      "bytes": 2524,
+      "sha256": "604a5089e6dfed8113a025b606b1982dc7c045e1315b619e6f552c302671a654"
+    }
+  },
+  "source_strict": {
+    "checks": 14,
+    "seconds": 7.659,
+    "log": {
+      "path": "target/vector-source-strict.log",
+      "bytes": 2524,
+      "sha256": "4161f44109f20029d3f07b1e516f9666ef2a2d7b820f3d28badb18217b6afc2b"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/vector-source-snapshot.json",
+      "bytes": 539309,
+      "sha256": "635b07aad37d2fe09ef2f4da72e630dcadfaa838c327cbf9cdcbe0bea6ccbdea"
+    }
+  },
+  "table_data_snapshot": "vector-data-snapshot.json",
+  "packet_references": [
+    "vector-packets-reference.json",
+    "vector-native-reference.json",
+    "vector-projection-reference.json",
+    "vector-table-constants-reference.json"
+  ],
+  "concurrency_workers": 8,
+  "process_proof": "vector-process-verification.json",
+  "oracle_kinds": [
+    "Original C878/C879/C880 reports and complete native identities",
+    "Pinned independent provider/composed Source models",
+    "Installed full method/import/export, table target and literal tail byte checks",
+    "Independent complete static-entry coverage and dispatch boundary tuples",
+    "Immutable parent projections under both explicit loaded-string states",
+    "Eight-worker and fresh-process byte replay"
+  ],
+  "excluded": [
+    "Native execution or full integer-tuple execution-equivalence proof",
+    "Inferred runtime CString assignment",
+    "Fourth output word physical meaning",
+    "Engineering enum labels or normalization"
+  ],
+  "pending": [
+    "Latest-tree PR and cross-platform/ThreadSanitizer publication gates",
+    "Remaining unit/style/preference roles"
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 121,
+    "seconds": 339.604,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/vector-source-full.log",
+      "bytes": 32940,
+      "sha256": "72f3d779d8df606343f43be0d15757d239e476daadfb5bf7ebd4a91c1a780246"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 546518,
+      "sha256": "4d18d0a60b3f7c65f99727549e924e445d922314d6636f5192acaebccfb9c452"
+    }
+  }
+}
