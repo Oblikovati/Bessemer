@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added raw vector-style controls and explicit local size, density and whole-color write models with preserved older field absence. (#166)
+
 - Added raw PostStyle word views, explicit initializer assignments and local preference transitions with preserved missing state. (#166)
 
 - Added the conditional local rendering predicate over exact stored counts and position bits, with explicit missing legacy state. (#166)
