@@ -48,6 +48,7 @@ mod surface_body;
 mod text;
 mod text_sequence;
 mod thermal;
+mod triangle_snapshot;
 mod version;
 use super::{Result, invalid, require};
 pub use beam::*;
