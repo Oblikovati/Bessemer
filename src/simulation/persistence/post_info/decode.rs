@@ -1,5 +1,5 @@
 use super::super::load_reader::BinaryLoadReader;
-use crate::{Result, archive_codec::ArchiveCursor, simulation::invalid};
+use crate::Result;
 
 pub(super) fn read(reader: &mut BinaryLoadReader<'_>, maximum_characters: usize) -> Result<()> {
     for index in 0..7 {
@@ -34,20 +34,5 @@ fn legacy_suffix(reader: &mut BinaryLoadReader<'_>, maximum_characters: usize) -
         return Ok(());
     }
     reader.unsigned("legacy.word")?;
-    let count = ArchiveCursor::new(&reader.bytes[reader.position()..]).i32()?;
-    let count = reader.bounded(count, "legacy.text", maximum_characters, 2)?;
-    // bounded() has already restricted the count to the available two-byte units.
-    let width = count * 2;
-    require_text_budget(width, reader.limits.maximum_text_bytes)?;
-    reader.blob("legacy.text", width + 4)
-}
-
-fn require_text_budget(width: usize, maximum: usize) -> Result<()> {
-    if width <= maximum {
-        return Ok(());
-    }
-    Err(invalid(
-        "legacy.text",
-        format!("{width} payload bytes; expected <= {maximum}"),
-    ))
+    reader.character_text("legacy.text", maximum_characters)
 }

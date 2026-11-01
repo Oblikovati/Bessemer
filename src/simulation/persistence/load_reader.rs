@@ -127,6 +127,23 @@ impl<'a> BinaryLoadReader<'a> {
         self.push(label, start, SimulationThermalValue::DoubleBits(bits))
     }
 
+    pub fn character_text(&mut self, label: &str, maximum_characters: usize) -> Result<()> {
+        let count = ArchiveCursor::new(&self.bytes[self.position()..]).i32()?;
+        let count = self.bounded(count, label, maximum_characters, 2)?;
+        // bounded() has already restricted the count to the available two-byte units.
+        let width = count * 2;
+        if width > self.limits.maximum_text_bytes {
+            return Err(invalid(
+                label,
+                format!(
+                    "{width} payload bytes; expected <= {}",
+                    self.limits.maximum_text_bytes
+                ),
+            ));
+        }
+        self.blob(label, width + 4)
+    }
+
     pub fn text(&mut self, label: &str) -> Result<()> {
         let start = self.position();
         let text = SimulationPersistText::read_shared(

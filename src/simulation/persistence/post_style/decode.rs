@@ -1,5 +1,5 @@
 use super::super::load_reader::BinaryLoadReader;
-use crate::{Result, archive_codec::ArchiveCursor, simulation::invalid};
+use crate::Result;
 
 pub(super) fn read(reader: &mut BinaryLoadReader<'_>, maximum_characters: usize) -> Result<()> {
     if reader.version < 700006 {
@@ -9,7 +9,7 @@ pub(super) fn read(reader: &mut BinaryLoadReader<'_>, maximum_characters: usize)
     colors(reader, "style", &[0x1f4, 0x1bc, 0x220, 0x1dc])?;
     words(reader, "style", &[0x1b8, 0x1f0, 0x230])?;
     legend(reader)?;
-    character_text(reader, maximum_characters)?;
+    reader.character_text("style.text", maximum_characters)?;
     suffix(reader)
 }
 
@@ -87,20 +87,4 @@ fn suffix(reader: &mut BinaryLoadReader<'_>) -> Result<()> {
         colors(reader, "style", &[0x1cc])?;
     }
     Ok(())
-}
-
-fn character_text(reader: &mut BinaryLoadReader<'_>, maximum_characters: usize) -> Result<()> {
-    let count = ArchiveCursor::new(&reader.bytes[reader.position()..]).i32()?;
-    let count = reader.bounded(count, "style.text", maximum_characters, 2)?;
-    let width = count * 2;
-    if width > reader.limits.maximum_text_bytes {
-        return Err(invalid(
-            "style.text",
-            format!(
-                "{width} payload bytes; expected <= {}",
-                reader.limits.maximum_text_bytes
-            ),
-        ));
-    }
-    reader.blob("style.text", width + 4)
 }
