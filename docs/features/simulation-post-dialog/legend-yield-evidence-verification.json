@@ -74,11 +74,27 @@
     "Equal-channel/alpha validity rules, absent-field defaults and new stored-byte coverage"
   ],
   "pending": [
-    "Full integrated Source replay for this evidence cut",
     "Typed local yield operations",
     "Remaining documented feature166 models",
     "Exact publication-head PR validation and all five platform gates",
     "Bug172 integration with feature166"
   ],
-  "prose_review": "Humanizer unavailable; maintainer review pending."
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 253,
+    "seconds": 504.527,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "8dc2d30b87ae47088a16e13b0077998a5f7fce1a",
+    "log": {
+      "path": "target/legend-yield-source-full.log",
+      "bytes": 57197,
+      "sha256": "5d27a43b7013f5ecbbb4c70a00b2896850a7424dd254faa423eba9b0ca3aeb65"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 633132,
+      "sha256": "a5db2be4c346d59a899a509f87460ee7f2946b2824f99fb656c85a1947b35038"
+    }
+  }
 }
