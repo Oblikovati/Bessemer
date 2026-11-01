@@ -737,6 +737,11 @@ signed count forwarding, wrapped offsets and suffix-before-prefix call order.
 operation requires explicit runtime plot words, retains raw signed BEC returns
 and records the reached word reads without deriving availability from FC.
 
+`project_step_layout` computes the [local layout integers](docs/features/simulation-post-dialog/legend-step-layout.md)
+from explicit enable, point, size, range and post-helper facts. It preserves
+signed32 wrapping, exact division by20 and the separate FC reread without
+claiming complete rendering or valid pixels.
+
 
 `SimulationRgbaColor::from_colorref_nearest_even` models the packed constructor:
 the low three bytes supply RGB and alpha becomes one. The high byte is ignored.

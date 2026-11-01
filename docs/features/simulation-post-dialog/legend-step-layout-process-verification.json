@@ -1,0 +1,25 @@
+{
+  "issue": 166,
+  "behavior_version": "C851-local-layout-integers-v1",
+  "platform": "Windows x64",
+  "requests": 43220,
+  "words_per_request": 8,
+  "oracle": "Independent unbounded/modulo32/truncation expectations for35468 cases and eight hypothetical contexts across969 complete parents",
+  "executable_sha256": "751de3728003e606d36b5e5eb8f8e59c6c011f1a8bb9eb3b522b3c1601548b95",
+  "runs": [
+    {
+      "process": 1,
+      "exit_code": 0,
+      "bytes": 1383040,
+      "sha256": "2f045d018a7444e272144b14080745823eb2aad26ba0dd8a6741b467027e12b7"
+    },
+    {
+      "process": 2,
+      "exit_code": 0,
+      "bytes": 1383040,
+      "sha256": "2f045d018a7444e272144b14080745823eb2aad26ba0dd8a6741b467027e12b7"
+    }
+  ],
+  "comparison": "Both fresh Rust processes matched all345760 independent expected words byte for byte; exact export-test execution checked",
+  "native_executed": false
+}

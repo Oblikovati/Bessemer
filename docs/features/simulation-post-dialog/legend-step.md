@@ -92,6 +92,8 @@ totaling1,328,040bytes each. The
 [process proof](legend-step-process-verification.json) retain exact hashes and
 remaining publication gates.
 
-Local layout projections remain outstanding, along with the other required
-feature166 models and exact publication gates. Humanizer is unavailable in this
-checkout; maintainer prose review remains pending.
+The [local layout projection](legend-step-layout.md) models the documented
+integer branches with explicit post-helper facts, wrapping and signed division.
+Full renderer output, other required feature166 models and exact publication
+gates remain outside the completed local operations. Humanizer is unavailable
+in this checkout; maintainer prose review remains pending.
