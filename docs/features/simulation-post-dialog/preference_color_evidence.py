@@ -100,8 +100,10 @@ def verify_preference_color_owned() -> None:
 def preference_color_functions() -> tuple[Callable[[], None], ...]:
     """Keep all original pins, complete bodies and canonical native/owned observations together; e.g. preference_color_functions()."""
     from preference_color_bindings import verify_preference_color_bindings, verify_preference_color_rea_capture
+    from preference_color_operation_packets import verify_preference_operation_packets
+    from preference_color_operation_projection import verify_preference_operation_projection_packets
     return (verify_preference_color_sources, verify_preference_color_bindings, verify_preference_color_rea_capture,
-        verify_preference_color_native, verify_preference_color_owned)
+        verify_preference_color_native, verify_preference_color_owned, verify_preference_operation_packets, verify_preference_operation_projection_packets)
 
 
 def run_preference_color_checks() -> unittest.TestResult:
