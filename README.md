@@ -706,6 +706,12 @@ patterns and reconstructs exactly sixteen bytes. Its named-channel accessor
 returns numeric values only for finite patterns, preserving signed zero and
 subnormal values. The [preference-color projections](docs/features/simulation-post-dialog/preference-colors.md) keep initializer, explicit runtime applicability and raw alpha policy separate. Colors are not clamped or normalized; the separate [plot54 local plan](docs/features/simulation-post-dialog/plot54-color.md) records its alpha projection, and [element-segment local RGB reads](docs/features/simulation-post-dialog/segment-color.md) preserves the RGB consumer boundary; [conditional1DC RGB](docs/features/simulation-post-dialog/mode3-rgb.md) provides group-selection plans and isolated fixed-slot copies with explicit runtime facts.
 
+`legend_format_inputs` exposes present raw legend format controls on complete
+dialog and PostStyle snapshots. Its [local format plans](docs/features/simulation-post-dialog/legend-format.md)
+construct printf-style strings and select the bounded alternate branch from
+explicit runtime facts, retaining skipped assignments and missing inputs separately.
+Native numeric rendering and localization remain outside these operations.
+
 
 `SimulationRgbaColor::from_colorref_nearest_even` models the packed constructor:
 the low three bytes supply RGB and alpha becomes one. The high byte is ignored.
