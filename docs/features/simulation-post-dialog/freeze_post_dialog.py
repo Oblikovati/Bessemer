@@ -75,6 +75,8 @@ from triangle_color_packets import verify_triangle_color_packets
 from triangle_color_projection import verify_triangle_color_projection
 from text_control_evidence import verify_text_control_sources, verify_text_control_native, verify_text_control_owned
 from text_control_bindings import verify_text_control_bindings, verify_text_control_rea_capture
+from text_selection_packets import verify_post_text_operation_packets
+from text_selection_projection import verify_post_text_projection_packets
 from aux_triangle_evidence import verify_aux_triangle_sources
 from aux_triangle_bindings import verify_aux_triangle_bindings
 from aux_triangle_projection import verify_aux_triangle_native, verify_aux_triangle_projection
@@ -158,7 +160,7 @@ def default_dialog_functions(pin: Path) -> tuple[Callable[[], None], ...]:
 def text_control_functions() -> tuple[Callable[[], None], ...]:
     """Retain complete source/native text and earlier assignment obligations together; e.g. text_control_functions()."""
     return (verify_text_control_sources, verify_text_control_bindings, verify_text_control_rea_capture,
-            verify_text_control_native, verify_text_control_owned)
+            verify_text_control_native, verify_text_control_owned, verify_post_text_operation_packets, verify_post_text_projection_packets)
 
 
 def run_text_control_checks() -> unittest.TestResult:

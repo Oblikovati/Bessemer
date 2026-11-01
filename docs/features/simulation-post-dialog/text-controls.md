@@ -51,26 +51,67 @@ successfully after snapshot recording. The [evidence proof](text-control-evidenc
 records exact revision, hashes, decoder facts, preserved qualifications and
 outstanding operation/full-suite/publication requirements.
 
-## Remaining operation requirements
+## Local assignment and selection
 
-Project23C,240 and counted text from the canonical parent/style snapshot.
-Keep unknown previous primary state distinct from a known empty CString.
-Compose positive-count NUL-prefix assignment and count0 preservation explicitly;
-do not silently reapply assignment when selecting an already-mutated runtime
-object. Accept actual runtime strings as explicit inputs, including all seven
-line positions. Do not infer them from stored control values.
+`text_display_controls()` reads canonical parent/style words23C/240 and the
+complete counted text frame. Older missing controls remain typed missing
+values. The getter never initializes a runtime primary or invents line text.
 
-A complete local selection plan must retain original wire bytes and raw controls,
-its actual selected string parents and every line index. Require unknown runtime
-values only when selected; disabled sources need no invented runtime contents.
-Preserve all raw UTF-16 units, including embedded zeros in explicitly supplied
-runtime CString state. Resource limits and missing required state return typed
-errors before publication. Published results must own their reachable strings,
-retain completion, diagnostics, coverage and exact-error scope, and pass mutation,
-concurrency and fresh-process comparisons against an independent oracle.
+`assign_primary(previous, maximum_code_units)` explicitly resolves known primary
+state after load. Positive count assigns the first-NUL prefix; zero count
+preserves a known prior CString. An unknown prior at count0 returns typed
+missing state, while a positive leading-NUL payload completes an empty
+assignment. The result retains complete wire bytes, optional previous text,
+assignment kind, known output, diagnostics and per-stage coverage.
 
-No empty selected string establishes that all font, measurement, line-space or
-output operations are skipped. Font names, UI labels, layout coordinates and
-complete rendered text remain unresolved. This evidence step introduces no
-incomplete public operation API. Feature166 still requires the complete local
-selection/assignment model, its full tests and all publication gates.
+`plan_selection(runtime, maximum_code_units)` reads actual current runtime
+CStrings. It does not reapply stored text. Each zero display word selects empty
+literals without requiring unknown runtime contents; each nonzero word requires
+its primary or seven line inputs. Explicit runtime units after embedded zeros
+remain preserved. Array positions retain all seven line indices and selected
+origins identify each runtime parent.
+
+`plan_after_assignment(previous_runtime, maximum_code_units)` explicitly composes
+both stages and retains the assignment result with its parents and coverage.
+It first requires a known assignment result, even when a display control is
+off. Call `plan_selection` directly when selecting current state without that
+load operation. Each stage records its own reached CString dependencies and
+budget; the combined result retains both stages rather than presenting the
+selection count as the complete assignment footprint.
+
+The supplied bound limits counted input and known output for assignment, and
+the sum of eight selected strings for selection. It is a resource policy, not
+a native validity rule. Current selection does not inspect unused stored text
+against its output budget. Missing selected state and budget/overflow failures
+return typed errors before publication, with no successful partial selection.
+
+The existing text type owns immutable private byte storage, copies borrowed
+input on construction and exposes only immutable payload slices. Plans and
+assignment results retain those immutable values; no mutable payload can be
+reached through a published result. Tests mutate the original constructor
+buffer, replace controls and runtime strings after publication, and compare
+all result parents and bytes. Success and failure also leave input contexts
+unchanged. All ten public operation types assert Send/Sync and eight workers
+replay the complete matrix against serial bytes.
+
+An independent oracle covers18,200 cases over arbitrary signed zero/nonzero
+controls, unknown versus known-empty state, both assignment kinds, every
+missing-line position, raw NUL/surrogate/supplementary units, explicit
+composition and resource boundaries. The original Source view remains bounded
+at512 units. Additional513-unit programmatic-budget cases use the reviewed
+native bounded-copy loop as a separate oracle; they do not establish native
+allocation behavior, oversized-file acceptance or a changed Source-view limit.
+Complete projections retain all425 owned and276 native archive contexts.
+Native projected operation inputs deliberately mark runtime strings unknown;
+their typed missing results are local dependency checks, not observed native
+failures or invented runtime contents.
+
+No empty selected string establishes skipped font, measurement, line-space or
+output work. Font names, UI labels, layout coordinates, runtime production and
+complete rendered text remain unresolved. All7 Rust integration checks and the overflow regression passed. Clippy passed
+with warnings denied, and the strict Source suite passed16 checks. Two fresh
+processes matched18,901 contexts and609,580 output bytes against independent
+expectations. The [operation proof](text-selection-operation-verification.json)
+records revisions, log hashes and exclusions. The expanded full Source suite
+and publication gates remain pending. All other named
+schema models and publication gates remain required for feature166.

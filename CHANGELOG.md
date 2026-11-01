@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added explicit Simulation primary-text assignment and eight-position display selection, preserving unknown runtime state, counted payloads and per-stage provenance. (#166)
+
 - Added complete local Simulation hidden-parts/model-tessellation triangle color plans with explicit caller facts, ordered lookup filters, owned provenance and masked DAZ/FTZ-off alpha semantics. (#166)
 
 - Added auxiliary-triangle controls and bounded immutable call plans with runtime rejection reasons, color provenance and explicit payload-validation exclusions. (#166)

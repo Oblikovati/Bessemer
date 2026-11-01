@@ -63,9 +63,25 @@
     "Native target execution or global schema completion credit"
   ],
   "pending": [
-    "Full Source suite including allfive new evidence checks and three original text-view tests (expected180)",
     "Complete C890 local selection and explicit assignment operation with independent oracle and Rust tests",
     "Publication-cut PR and allfive exact-head platform gates; remaining feature166 models"
   ],
-  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 180,
+    "seconds": 472.036,
+    "process_exit_code": 0,
+    "result": "passed",
+    "verifier_cut": "2801f63561bde5141c3ec73bbe4486f52f613ffd",
+    "log": {
+      "path": "target/text-control-source-full.log",
+      "bytes": 43576,
+      "sha256": "2b16ef846a3b726d456d1d28525b8bdbd131205bc4b8cf9a467c0c35e2478a7d"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 601795,
+      "sha256": "43745402d5c2a481852eecd564afa1a23c24edce69c7c7ddb616e5131a66b30f"
+    }
+  }
 }
