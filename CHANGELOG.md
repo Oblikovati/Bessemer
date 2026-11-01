@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added typed legend palette controls and immutable local dispatcher plans with explicit gray-helper/plot facts, raw count diagnostics and consumed-parent history. (#166)
+
 - Added immutable legend position-factor views with raw binary32 values, exact wire spans, revision-bound field IDs and copied-source provenance. (#166)
 
 - Added typed legend format construction and alternate selection with raw signed controls, explicit runtime facts, wrapping widths and complete local provenance. (#166)
