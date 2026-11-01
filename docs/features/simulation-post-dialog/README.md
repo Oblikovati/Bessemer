@@ -252,3 +252,21 @@ public-type thread-safety assertions passed separately; the final all-target
 Clippy run also passed. [Operation verification](parent-operation-verification.json)
 records the gate scope, logs and remaining cross-platform acceptance. The
 consumer views remain a separate implementation step under the same issue.
+
+
+The range and deformation-scale accessors implement the bounded prefix views in
+specification 14.492–14.493. Their complete raw-bit expectations cover all 225
+owned contexts. Another 210 cases cross every documented state and selector
+branch with zero, signed zero, subnormal, infinite and NaN patterns. A state edit
+refreshes the selected endpoints while the source view stays unchanged. Unknown
+state codes remain visible and select baseline endpoints; unknown scale
+selectors remain visible and select literal float32 one. Stored values remain
+available alongside the selections. The pinned helper replay also checks the
+225-context packet and its input provenance.
+
+
+The integrated range/scale packet passed the full 61-check strict Source replay.
+Four focused Rust tests and all-target Clippy passed. All five full/partial
+snapshot-selection modes were checked separately; partial runs retain their own
+evidence files. [Prefix-view verification](prefix-view-operation-verification.json)
+records the executed checks and remaining publication work.

@@ -17,6 +17,7 @@ mod edit;
 mod result;
 mod types;
 mod values;
+mod views;
 
 pub use super::post_info::SimulationPostInfoText as SimulationPostDialogText;
 pub use super::thermal::{
@@ -35,3 +36,7 @@ pub use contracts::SimulationPostDialogEdit;
 pub use counted_bytes::SimulationPostDialogBytes;
 pub use types::{SimulationPostDialogCompletion, SimulationPostDialogCoverage};
 pub use values::{SimulationPostDialogField, SimulationPostDialogValue};
+pub use views::{
+    SimulationPostDialogDeformationView, SimulationPostDialogRangeView,
+    SimulationPostDialogScaleSource,
+};

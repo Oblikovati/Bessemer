@@ -674,3 +674,11 @@ and scoped reference archives, with explicit outer and embedded limits. Reads
 require EOF; isolated edits preserve every unselected field and report outer
 and nested provenance. Stored profiles do not establish application dispatch
 or geometry validity. See [the dialog evidence](docs/features/simulation-post-dialog/README.md).
+
+
+`SimulationPostDialog::range_view` selects the documented stored minimum and
+maximum patterns while retaining the original state and all four endpoints.
+`deformation_scale_view` retains both stored scale patterns and the signed
+selector, selecting literal float32 one for unrecognized selectors. These
+accessors preserve signed zero, subnormal and non-finite patterns without
+changing the document.
