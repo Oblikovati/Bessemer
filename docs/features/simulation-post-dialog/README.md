@@ -77,6 +77,23 @@ Field initialization and strict replay each passed all 43 checks and exited
 successfully after cleanup. [Field-model verification](field-model-verification.json)
 records the exact current evidence, full-view comparisons, catalog and log hashes.
 
+Independent complete wire literals now cover 495 contexts and 175 distinct
+versions: 225 parent dialogs, seventy standalone PostInfo records and two hundred
+standalone PostStyle records. The 1,462,773 logical bytes are assembled before
+calling the reader. Every source span, endpoint and reconstruction hash matches.
+Adjacent gates include populated references, sensors, integer/string lists,
+equation variables and the byte-list/character-text transition; newest controls
+include duplicate reference records and both equation selector states.
+
+PostInfo literals keep all twelve physical slots even when active-count words
+are negative or extreme. Five bit rotations additionally check known/unknown
+primitive and direction views, exact normal/center/shared-scalar bits, closed-form
+zero/subnormal values, nonfinite handling and the D-view sign XOR. Empty text,
+surrogates, embedded NULs, odd-byte persisted reference text and both embedded
+archive dialects remain distinct. Initialization and strict replay each pass
+all 45 checks and exit successfully. [Owned-literal verification](owned-literal-verification.json)
+records the exact frozen outputs and exclusions.
+
 Owned complete operations, full later field-role/view adoption, typed Rust
 read/construction/edit, atomic text profiles, scoped embedded archive acceptance,
 independent fields/history/resources, adversarial limits and extents, isolation,
