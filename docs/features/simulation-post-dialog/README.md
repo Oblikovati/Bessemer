@@ -497,3 +497,6 @@ The [auxiliary triangle planner](auxiliary-triangles.md) combines stored control
 with explicit runtime groups, ordered filtering and exact local color requests.
 
 See [triangle colors](triangle-selectors.md), [text selection](text-controls.md) and [plot54 colors](plot54-color.md).
+
+The [legend yield-color evidence](legend-yield.md) binds stored D8 separately
+from the runtime yield and split index, including both complete native consumers.
