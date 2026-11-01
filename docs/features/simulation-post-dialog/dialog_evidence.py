@@ -33,7 +33,7 @@ def dialog_reports() -> list[dict[str, object]]:
 def approved_style_adoption(relative: str, expected: str, actual: str, report: dict[str, object]) -> bool:
     """Allow only C-867's exact legacy-view extension already pinned by complete C-770; e.g. approved_style_adoption(path, old, new, report)."""
     if (relative, expected, actual) != ('solidworks/research/cosworks_post_style_layout.py', OLD_STYLE, CURRENT_STYLE): return False
-    assert report['evidence'] in ('C-768', 'C-769', 'C-840'), report['evidence']
+    assert report['evidence'] in ('C-768', 'C-769', 'C-840', 'C-841', 'C-843'), report['evidence']
     for name in ('cosworks-post-dialog-native-evidence.json', 'cosworks-post-v7-composed-view-evidence.json'):
         canonical = json.loads((RESEARCH / name).read_bytes())
         matches = [value for key, value in canonical['sources'].items() if key.replace('\\', '/').endswith('/cosworks_post_style_layout.py')]

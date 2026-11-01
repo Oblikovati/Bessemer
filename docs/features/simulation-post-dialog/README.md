@@ -38,6 +38,25 @@ repository. Its historical color-report dependency is not consumed by these
 checks; imported implementation origins and hashes are captured in the immutable
 source snapshot.
 
+The field refinement now retains C-841's original PostInfo projection and the
+complete C-843 primitive/direction/contour view for all sixty native blocks and
+720 slots. Only the three documented annotation keys are removed when checking
+the older projection; every original raw word, finite view and sign-flipped bit
+view must remain identical. Current RGBA replay preserves all 359 original
+candidate outcomes across 284 style/dialog carriers, including failures and
+the modern prefix-only qualification.
+
+The current machine-readable catalog has 118 labels: 103 bound consumer roles,
+one framing role and fourteen unresolved purposes. This reflects its later
+evidence provenance beyond the older counts recorded in section 14.479. Every
+descriptor, unknown purpose, eighteen-version probe, native occurrence and byte
+category is recomputed exactly. All contributing evidence packet hashes match.
+Core primitive, contour and RGBA method spans, exports, tokens and the float
+sign mask are bound to installed bytes without target execution. Four further
+ancestor source transitions are explicit in
+[the field adoption record](field-source-adoption-reference.json); no general
+source-hash exception is allowed.
+
 Installed checks read all five complete caller/provider images without loading
 target code. They bind dialog and legacy helper imports/exports, legacy stream
 literals, all recorded serializer function spans, color/reference/shared-text
@@ -53,6 +72,10 @@ Expanded initialization and strict replay each passed all 24 checks: seventeen
 original tests and seven foundation checks. Both processes exited successfully
 after cleanup. [Foundation verification](foundation-verification.json) records
 the source snapshot, exact packet/log hashes, source adoption and exclusions.
+
+Field initialization and strict replay each passed all 43 checks and exited
+successfully after cleanup. [Field-model verification](field-model-verification.json)
+records the exact current evidence, full-view comparisons, catalog and log hashes.
 
 Owned complete operations, full later field-role/view adoption, typed Rust
 read/construction/edit, atomic text profiles, scoped embedded archive acceptance,
