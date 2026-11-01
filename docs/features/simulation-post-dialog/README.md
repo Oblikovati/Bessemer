@@ -154,3 +154,22 @@ full 0x100000-character safety controls and eight-worker replay. This helper
 operation does not infer named-stream dispatch compatibility. Parent-dialog and
 PostStyle codecs, remaining bounded views and full issue166 acceptance remain
 pending. Humanizer prose review remains pending.
+
+`SimulationPostStyle` now reads, constructs and edits complete historical and
+modern helper profiles. The legacy 368-byte body has 20 preserved raw words and
+72 float32 color components. Modern fields follow every documented legend/style
+gate, including the two legend-position float32 values. The operation shares
+PostInfo's four stored value kinds, character frame and budget representation;
+its reader applies the selected PostStyle layout and character cap. The reviewed
+style safety profile uses 512 characters, with independent payload and aggregate
+budgets. Loading preserves all stored bits and does not apply rendering defaults.
+
+Fourteen focused Style checks and all thirteen Info checks pass together. Style
+coverage includes 200 owned contexts / 74,492 bytes, every proper prefix plus a
+trailing byte, 18,560 changed edits and the same number of no-ops, complete field
+and ordered history oracles, five exact/one-below resource axes, raw text ownership
+and eight-worker replay. Native replay matches all 120 retained Style candidates:
+52 accepted / 14,768 bytes and 68 rejected; all 52 successes are caller-compatible
+in this cohort. The complete native field and literal edit-history expectations
+match byte for byte. Full Style PR/platform acceptance remains pending, as do the
+parent-dialog codec, remaining bounded views and expanded legacy mismatch cohort.

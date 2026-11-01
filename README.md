@@ -660,3 +660,9 @@ explicit version context, preserving all twelve slots independently of active
 counts. Version700002 alone carries an atomic character-text suffix with separate
 character, payload and aggregate budgets. See
 [the dialog helper evidence](docs/features/simulation-post-dialog/README.md).
+
+`SimulationPostStyle` supports the complete historical and modern `DspPostStyle`
+helper profiles, including the legacy style/legend partition, versioned color
+fields and atomic character text. It shares raw field/text representations with
+PostInfo and applies its own layout and explicit budgets; see
+[the dialog helper evidence](docs/features/simulation-post-dialog/README.md).

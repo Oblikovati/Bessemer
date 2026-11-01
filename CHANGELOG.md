@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added complete versioned PostStyle reads, construction and isolated edits with legacy style/legend partitions, exact color bits and atomic character text. (#166)
+
 - Added complete fixed-slot PostInfo reads, construction and isolated edits with preserved float32 patterns and the exact version700002 character-text suffix. (#166)
 
 - Added complete documented graph parameter reads, construction and isolated edits with atomic character-count text and preserved raw eight-byte values. (#165)
