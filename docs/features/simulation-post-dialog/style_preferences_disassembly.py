@@ -26,6 +26,30 @@ def canonical_style_assembly(text: str) -> str:
     return re.sub(r'\s+', '', text)
 
 
+def canonical_style_operands(mnemonic: str, text: str) -> str:
+    """Normalize redundant address spelling only for NOP; e.g. canonical_style_operands('nop', 'dword ptr [rax+0]')."""
+    normalized = canonical_style_assembly(text)
+    if mnemonic != 'nop': return normalized
+    return normalized.replace('+0]', ']').replace('*1+', '+').replace('*1]', ']')
+
+
+def canonical_style_opcode(mnemonic: str, operands: str, raw: bytes) -> tuple[str, str]:
+    """Normalize only byte-checked redundant prefixes and the exact two-byte NOP alias; e.g. canonical_style_opcode('xchg', 'ax,ax', bytes.fromhex('6690'))."""
+    if mnemonic == 'rex':
+        assert raw[0] == 0x40, raw
+        mnemonic, operands = operands.split(None, 1)
+    prefixes = 0
+    while mnemonic == 'data16':
+        assert raw[prefixes] == 0x66, raw
+        prefixes += 1
+        mnemonic, operands = operands.split(None, 1)
+        assert mnemonic in ('data16', 'nop'), (mnemonic, raw)
+    if mnemonic == 'xchg' and canonical_style_assembly(operands) == 'ax,ax':
+        assert raw == bytes.fromhex('6690'), raw
+        return 'nop', ''
+    return mnemonic, operands
+
+
 def parsed_style_instructions(output: str) -> list[StylePreferenceInstruction]:
     """Keep decoded bytes and addresses beside normalized operands; e.g. parsed_style_instructions(output)."""
     pattern = re.compile(r'^\s*([0-9a-f]+):\s+((?:[0-9a-f]{2}\s+)+)\s*([a-z][a-z0-9]*)\s*(.*)$')
@@ -34,10 +58,8 @@ def parsed_style_instructions(output: str) -> list[StylePreferenceInstruction]:
         match = pattern.match(line)
         if match is None: continue
         address, raw, mnemonic, operands = match.groups()
-        if mnemonic == 'rex':
-            assert bytes.fromhex(raw)[0] == 0x40, raw
-            mnemonic, operands = operands.split(None, 1)
-        normalized = canonical_style_assembly(operands)
+        mnemonic, operands = canonical_style_opcode(mnemonic, operands, bytes.fromhex(raw))
+        normalized = canonical_style_operands(mnemonic, operands)
         instructions.append(StylePreferenceInstruction(int(address, 16), mnemonic,
             tuple(normalized.split(',')) if normalized else (), bytes.fromhex(raw)))
     return instructions
@@ -58,18 +80,18 @@ def native_style_disassembly(image: pefile.PE, start: int, end: int) -> list[Sty
 
 
 def decoded_style_preference_method(image: pefile.PE, method: dict[str, object]) -> list[StylePreferenceInstruction]:
-    """Match complete decoded instructions, contiguous bytes, digest and exact named export; e.g. decoded_style_preference_method(image, method)."""
+    """Match complete instructions, contiguous bytes, digest and any recorded export; e.g. decoded_style_preference_method(image, method)."""
     start, end = int(cast(str, method['start']), 16), int(cast(str, method['end']), 16)
     raw = image.get_data(start - image.OPTIONAL_HEADER.ImageBase, end - start)
     assert digest(raw) == method['sha256'], method['start']
     instructions = native_style_disassembly(image, start, end)
     actual = [(i.address, i.mnemonic, ','.join(i.operands)) for i in instructions]
     expected = [line.split(' ', 2) for line in cast(list[str], method['instructions'])]
-    original = [(int(parts[0], 16), parts[1], canonical_style_assembly(parts[2] if len(parts) == 3 else '')) for parts in expected]
+    original = [(int(parts[0], 16), parts[1], canonical_style_operands(parts[1], parts[2] if len(parts) == 3 else '')) for parts in expected]
     assert actual == original, [(a, b) for a, b in zip(actual, original) if a != b]
     assert b''.join(instruction.raw for instruction in instructions) == raw, method['start']
     assert instructions[0].address == start and instructions[-1].address + len(instructions[-1].raw) == end
-    dialog_export(image, cast(str, method['export']).encode(), start)
+    if 'export' in method: dialog_export(image, cast(str, method['export']).encode(), start)
     return instructions
 
 

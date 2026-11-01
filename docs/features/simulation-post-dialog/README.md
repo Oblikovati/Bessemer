@@ -485,3 +485,7 @@ inputs without interpreting its result as complete rendering safety or validity.
 The [raw style preference model](raw-style-preferences.md) separates stored
 optional words, explicit initialization and the four raw local
 preference transfers. It retains raw bits and requires caller pointer context.
+
+The [vector style controls](vector-style-controls.md) retain signed controls and
+all RGBA bits. Explicit local write models preserve the active-object gate and
+copy a constructed color's alpha instead of using packed assignment semantics.
