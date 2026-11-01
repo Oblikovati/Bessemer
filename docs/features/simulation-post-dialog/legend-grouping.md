@@ -55,7 +55,8 @@ checks in5.336seconds. Both processes exited successfully after snapshot cleanup
 All four Rust tests, including native replay, and Clippy passed. Both fresh
 processes matched the6,664 expected bytes. The [verification record](legend-grouping-verification.json)
 retains the exact gates and [process proof](legend-grouping-process-verification.json).
-Full integrated replay, publication acceptance and remaining feature166 work
-remain separate obligations.
+Full integrated Source replay passed321 checks in539.404seconds and exited
+successfully after snapshot cleanup. Publication acceptance and remaining
+feature166 work remain separate obligations.
 
 Humanizer is unavailable in this checkout; maintainer prose review remains pending.
