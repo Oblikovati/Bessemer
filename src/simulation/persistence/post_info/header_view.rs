@@ -1,4 +1,4 @@
-use super::{SimulationPostInfo, SimulationPostInfoValue};
+use super::{SimulationPostInfo, SimulationPostInfoContourCode, SimulationPostInfoValue};
 use crate::{Result, simulation::invalid};
 
 /// Raw header words and bounded accessor meanings, without active-slot inference.
@@ -31,7 +31,8 @@ impl SimulationPostInfo {
         Ok(SimulationPostInfoHeaderView {
             raw_words: words,
             contour_type: words[2] as i32,
-            preference_integer: contour_preference(words[2] as i32),
+            preference_integer: SimulationPostInfoContourCode::from_raw(words[2] as i32)
+                .preference_integer(),
             section_active_count: words[5] as i32,
             iso_active_count: words[6] as i32,
         })
@@ -46,15 +47,5 @@ fn header_word(info: &SimulationPostInfo, ordinal: usize) -> Result<u32> {
             "PostInfo header view",
             format!("field {ordinal}: {value:?}; expected raw32 or signed32 header word"),
         )),
-    }
-}
-
-fn contour_preference(code: i32) -> i32 {
-    match code {
-        0 => 0,
-        1 => 1,
-        4 => 2,
-        5 | 6 => 3,
-        _ => 6,
     }
 }

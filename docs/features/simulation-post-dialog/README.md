@@ -290,3 +290,14 @@ physical blocks and 720 slots under both retained helper arguments. Its 1,440
 slot observations repeat those same stored bytes and receive no extra byte
 credit. All-target Clippy passed after that check was added. See
 [named-view verification](postinfo-named-view-verification.json).
+
+
+The typed contour policy implements both noninvertible conversion directions and
+the explicit default override for plot types 22, 57 and 70. The original stored
+code remains available. The named PostInfo render comparison reads only words
+04, 08, 10 and 0C. Tests change every field in all seventy owned contexts to
+verify that boundary, including the version700002 suffix. Distinct stored codes
+5 and 6 compare different even though both map to preference 3. All 23 PostInfo
+tests, all-target Clippy and ten pinned Source checks passed. These operations
+leave source archives unchanged. [Contour policy verification](contour-policy-verification.json)
+records the evidence; other documented consumer roles remain pending.

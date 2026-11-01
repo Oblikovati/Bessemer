@@ -1,6 +1,6 @@
 use super::*;
 
-const CONTOUR_FORWARD_CASES: [(i32, i32); 10] = [
+pub(super) const CONTOUR_FORWARD_CASES: [(i32, i32); 10] = [
     (0, 0),
     (1, 1),
     (4, 2),

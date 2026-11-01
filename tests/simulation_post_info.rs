@@ -21,6 +21,8 @@ const LIMITS: SimulationPostInfoLimits = SimulationPostInfoLimits {
 };
 const EXPECTED: &[u8] = include_bytes!("fixtures/simulation-post-dialog/projection.bin");
 
+#[path = "simulation_post_info/contour_policy.rs"]
+mod contour_policy;
 #[path = "simulation_post_info/contracts.rs"]
 mod contracts;
 #[path = "simulation_post_info/text_limits.rs"]

@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added typed ContourType conversions, explicit plot-context defaults and the bounded four-word PostInfo render comparison. (#166)
+
 - Added named PostInfo slot and header views with preserved unknown codes, raw vectors and exact D sign-bit aliases. (#166)
 
 - Added raw-preserving dialog range and deformation-scale views with explicit unknown-selector fallback. (#166)
