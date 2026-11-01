@@ -505,3 +505,5 @@ post-suffix rereads without deriving final mapped colors.
 
 The [legend step evidence](legend-step.md) separates the version-gated FC layout
 switch from runtime availability and preserves the latter's raw integer return.
+Typed FC views retain absence, while the independent runtime operation keeps all
+six supplied parents and the exact reached-read coverage.

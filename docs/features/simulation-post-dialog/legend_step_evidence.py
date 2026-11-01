@@ -69,8 +69,10 @@ def legend_step_functions() -> tuple[Callable[[], None], ...]:
     """Keep stored layout and runtime availability evidence separate within the full gate; e.g. legend_step_functions()."""
     from legend_step_bindings import verify_legend_step_bindings, verify_legend_step_rea_capture
     from legend_step_projection import verify_legend_step_native, verify_legend_step_owned
+    from legend_step_packets import verify_step_operation_packets, verify_step_projection_packets
     return (verify_legend_step_sources, verify_step_word_boundaries, verify_legend_step_bindings,
-        verify_legend_step_rea_capture, verify_legend_step_native, verify_legend_step_owned)
+        verify_legend_step_rea_capture, verify_legend_step_native, verify_legend_step_owned,
+        verify_step_operation_packets, verify_step_projection_packets)
 
 
 def run_legend_step_checks() -> unittest.TestResult:

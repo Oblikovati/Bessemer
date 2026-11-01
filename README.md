@@ -732,6 +732,11 @@ wrapping arithmetic, retaining font, pixel and tick qualifications.
 an explicit runtime split index and reached post-suffix rereads, retaining exact
 signed count forwarding, wrapped offsets and suffix-before-prefix call order.
 
+`legend_step_inputs` preserves the optional FC layout switch. The separate
+[`SimulationLegendStepRuntime::step_availability`](docs/features/simulation-post-dialog/legend-step.md)
+operation requires explicit runtime plot words, retains raw signed BEC returns
+and records the reached word reads without deriving availability from FC.
+
 
 `SimulationRgbaColor::from_colorref_nearest_even` models the packed constructor:
 the low three bytes supply RGB and alpha becomes one. The high byte is ignored.

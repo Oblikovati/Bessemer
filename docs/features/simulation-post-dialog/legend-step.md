@@ -52,13 +52,46 @@ owned contexts retain actual version-gated presence and signed FC patterns,
 including312 FC absences.
 No global stored-byte coverage is added.
 
-The strict Source suite passed18 checks in5.342seconds and exited successfully
+The initial strict Source suite passed18 checks in5.342seconds and exited successfully
 after snapshot recording and cleanup. Both original runtime policy tests and all
 eight catalog/style/color tests remain included. The
 [verification record](legend-step-evidence-verification.json) retains exact log
 and snapshot hashes, the body/probe distinction and remaining gates.
 
-Typed FC views, runtime availability operations and local layout projections
-remain outstanding, along with the other required feature166 models and exact
-publication gates. Humanizer is unavailable in this checkout; maintainer prose
-review remains pending.
+## Typed FC views and runtime availability
+
+`SimulationPostDialog::legend_step_inputs` and
+`SimulationPostStyle::legend_step_inputs` return the optional signed FC word.
+`step_layout_nonzero` preserves absent, zero and nonzero cases without assigning
+visibility or supplying runtime values.
+
+`SimulationLegendStepRuntime` requires all six explicit signed32 plot words.
+Its `step_availability` operation evaluates the complete integer policy and
+returns an immutable `SimulationLegendStepPlan`. `availability_raw` preserves
+negative and nonboolean BEC values. Completion distinguishes a complete zero
+return from a complete nonzero return; neither means that drawing succeeded.
+
+The plan retains every original runtime word, including supplied words unused
+by the reached branch, and a derived history relation. Coverage records the
+exact reached count/plot/analysis/BD8/BE8/BEC reads. In particular, count>1 still
+records the earlier BD8 read when plot21 later overrides its ordinary-gate result.
+Coverage reports zero local pattern error and no stored-word reads. Diagnostics
+retain native execution, pointer safety, FC independence and renderer exclusions.
+
+The operation corpus covers102,272 boundary/generated runtime cases,425 complete
+owned and276 native parents and268 complete FC mutations. Every parent receives
+eight explicitly hypothetical runtime contexts. All eleven Rust checks passed,
+including native projections and eight-worker comparisons; all seven public
+types satisfy `Send + Sync`. Clippy passed with warnings denied. The final strict
+Source suite passed20 checks in6.794seconds and exited successfully after snapshot
+recording and cleanup.
+
+Two fresh processes matched all110,024 runtime results and969 stored FC views,
+totaling1,328,040bytes each. The
+[operation record](legend-step-operation-verification.json) and
+[process proof](legend-step-process-verification.json) retain exact hashes and
+remaining publication gates.
+
+Local layout projections remain outstanding, along with the other required
+feature166 models and exact publication gates. Humanizer is unavailable in this
+checkout; maintainer prose review remains pending.
