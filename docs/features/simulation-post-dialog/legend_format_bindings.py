@@ -4,6 +4,7 @@ import pefile
 from typing import cast
 from native_carriers import RESEARCH, digest
 from dialog_evidence import FEATURE, dialog_baseline
+from legend_body_evidence import legend_body_capture
 from dialog_bindings import dialog_images
 from style_preferences_disassembly import decoded_style_preference_method
 from native_decoder_qualifications import qualify_captured_native_method, qualify_captured_native_line
@@ -81,19 +82,7 @@ def verify_legend_format_qualification_boundaries() -> None:
 
 def verify_legend_format_rea_capture() -> None:
     """Require all146 independent Ghidra locations and both complete contiguous body extents; e.g. verify_legend_format_rea_capture()."""
-    captures: list[dict[str, object]] = []
-    for name, method in zip(('primary', 'alternate'), legend_format_methods(), strict=True):
-        path = FEATURE / f'legend-format-rea-{name}.json'
-        record = json.loads(path.read_bytes())
-        assert record['subject']['digest']['sha256'] == legend_format_report()['module_sha256']
-        assert record['provider'] == dict(id='ghidra', name='Ghidra', version='12.1.4')
-        assert record['authority'] == 'shipped-artifact' and record['confidence'] == 'observed'
-        result = record['normalized_result']
-        assert record['raw_result']['value'] == result
-        assert [line.split(':', 1)[0] for line in result['instructions']] == ['0x' + line.split()[0] for line in cast(list[str], method['instructions'])]
-        body = result['procedure']['body']
-        assert body['available'] and body['contains_entry'] and not body['non_contiguous']
-        assert body['ranges'] == [dict(start=method['start'], end=hex(int(cast(str, method['end']), 16) - 1))]
-        assert body['total_bytes'] == body['span_bytes'] == int(cast(str, method['end']), 16) - int(cast(str, method['start']), 16)
-        captures.append(dict(path=path.name, sha256=digest(path.read_bytes()), evidence_id=record['evidence_id'], instructions=len(result['instructions']), limitations=record['limitations']))
+    module_hash = cast(str, legend_format_report()['module_sha256'])
+    captures = [legend_body_capture(FEATURE / f'legend-format-rea-{name}.json', method, module_hash)
+        for name, method in zip(('primary', 'alternate'), legend_format_methods(), strict=True)]
     dialog_baseline('legend-format-rea-reference.json', dict(captures=captures, independent_instruction_count=146, target_executed=False))
