@@ -59,7 +59,7 @@ def verify_dialog_sources() -> None:
 def verify_dialog_schema() -> None:
     """Retain every complete initial framing and standalone carrier clause; e.g. verify_dialog_schema()."""
     text = (SOURCE / 'docs/solidworks-file-format/specification.md').read_bytes().decode().replace('\r\n', '\n')
-    for section in ('14.386', '14.387', '14.388', '14.389', '14.390', '14.460', '14.461', '14.462', '14.463', '14.479', '14.487'):
+    for section in ('14.386', '14.387', '14.388', '14.389', '14.390', '14.460', '14.461', '14.462', '14.463', '14.479', '14.487', '14.492', '14.493'):
         start = text.index(f'### {section} ')
         raw = (text[start:text.index('\n### ', start + 1)].rstrip() + '\n').encode()
         path = FEATURE / f'schema-{section}.md'

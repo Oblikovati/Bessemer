@@ -110,6 +110,20 @@ raw bits. These stored roles do not establish units, normalization, runtime
 activation or geometry. [Packet hashes](operation-packets-reference.json)
 identify the complete expectations; Rust codec acceptance remains pending.
 
+The complete C-874/C-875 parent-view reports are retained and replayed against
+all 224 native parent contexts. Installed export names, complete accessor bytes
+and the constant-one literal match the hashed provider. The two historical color
+replay-input hashes differ from the current report; the exact transitions are
+recorded, and every original parent row is checked directly against recovered
+native bytes. No historical audit is executed or rewritten.
+
+All 225 owned parent inputs also carry range/scale expectations. Another 210
+literal controls cover all min/max-code and deformation-selector branches,
+unknown signed extremes and five exact float32 patterns. Stored values and
+selected views remain separate: no units, range ordering, UI mode names or
+geometry activation are inferred. Initialization passes 57 checks, including the
+five original range/scale tests. Later bounded consumer views remain pending.
+
 Owned complete operations, full later field-role/view adoption, typed Rust
 read/construction/edit, atomic text profiles, scoped embedded archive acceptance,
 independent fields/history/resources, adversarial limits and extents, isolation,
