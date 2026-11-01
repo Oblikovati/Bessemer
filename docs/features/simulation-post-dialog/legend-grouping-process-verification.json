@@ -1,0 +1,26 @@
+{
+  "issue": 166,
+  "behavior_version": "C858-stored-grouping-view-v1",
+  "platform": "Windows x64",
+  "owned_complete_parents": 557,
+  "native_complete_parents": 276,
+  "words": 1666,
+  "oracle": "Complete Source C858 C0 observations checked against reused owned/native wire-presence fixtures; no reset expectations consumed",
+  "executable_sha256": "964ea4a63c34b5ca169f87306a4bb140d03b94165d88a90b03d1dcb97a4cede2",
+  "runs": [
+    {
+      "process": 1,
+      "exit_code": 0,
+      "bytes": 6664,
+      "sha256": "d5760c9414a2fa1b51aa5e3fe067b27d7ae76fbe14111825ef3bcb84b158f52c"
+    },
+    {
+      "process": 2,
+      "exit_code": 0,
+      "bytes": 6664,
+      "sha256": "d5760c9414a2fa1b51aa5e3fe067b27d7ae76fbe14111825ef3bcb84b158f52c"
+    }
+  ],
+  "comparison": "Both fresh Rust processes matched all1666 independent expected words byte for byte; exact export test verified",
+  "native_target_executed": false
+}

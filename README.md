@@ -752,6 +752,11 @@ selects only explicit reader zero stores from the existing version. It retains
 native member order and distinguishes unsupported raw-class versions from
 completed later profiles with no assignments, without changing stored words.
 
+[`legend_grouping_inputs`](docs/features/simulation-post-dialog/legend-grouping.md)
+preserves the optional raw C0 locale-grouping control. Nonzero values enable
+conditional grouping; locale characters and exact rendered strings remain
+runtime facts.
+
 `legend_step_inputs` preserves the optional FC layout switch. The separate
 [`SimulationLegendStepRuntime::step_availability`](docs/features/simulation-post-dialog/legend-step.md)
 operation requires explicit runtime plot words, retains raw signed BEC returns

@@ -1,0 +1,105 @@
+{
+  "issue": 166,
+  "behavior_version": "C858-stored-grouping-view-v1",
+  "specification": "14.478/C-858",
+  "platform": "Windows x64",
+  "toolchain": "Rust1.99.0 x86_64-pc-windows-msvc",
+  "original_report_rows": 284,
+  "accepted_native_contexts": 276,
+  "rejected_native_candidates": 8,
+  "stored_native_controls": 160,
+  "absent_native_controls": 116,
+  "native_value_counts": {
+    "1": 84,
+    "0": 76
+  },
+  "owned_base_contexts": 425,
+  "complete_fixture_owned_contexts": 557,
+  "complete_fixture_wire_mutants": 132,
+  "complete_fixture_native_contexts": 276,
+  "complete_instructions": [
+    176,
+    1638
+  ],
+  "complete_body_bytes": 7499,
+  "converter_call_sites": 3,
+  "exact_byte_bound_decoder_qualifications": 5,
+  "shared_decoder_modified": false,
+  "initial_source": {
+    "checks": 13,
+    "seconds": 6.935,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-grouping-source-initial-qualified.log",
+      "bytes": 2140,
+      "sha256": "ebf9abc79f715b330a322a2a547d29ef5c2804a467fdaf69df084b0f9ac266ad"
+    }
+  },
+  "strict_source": {
+    "checks": 13,
+    "seconds": 5.336,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-grouping-source-strict.log",
+      "bytes": 2140,
+      "sha256": "7c5eaa6326264045cd022d3a5aa03bdf07cfae95fa0e831d8e8a727c58915766"
+    }
+  },
+  "rust": {
+    "passed": 4,
+    "failed": 0,
+    "ignored": 0,
+    "workers": 8,
+    "log": {
+      "path": "target/legend-grouping-rust-final.log",
+      "bytes": 614,
+      "sha256": "a9e1e71562ef93e6e360715fbc3071087b4a23d9af36443e535a58e1f030056a"
+    }
+  },
+  "clippy": {
+    "all_targets": true,
+    "all_features": true,
+    "deny_warnings": true,
+    "seconds": 6.55,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-grouping-clippy.log",
+      "bytes": 135,
+      "sha256": "efd98976e54ec675b66572cefadbe8498cdb16ae0b653cf4df994ecd3a089234"
+    }
+  },
+  "public_send_sync_types": 1,
+  "source_snapshot": {
+    "path": "docs/features/simulation-post-dialog/legend-grouping-source-snapshot.json",
+    "bytes": 624751,
+    "sha256": "6a3711a2c89d3f33a26a4bb026b376dd538c57099785d8dd7b5f7bcfa46fb9ce"
+  },
+  "process_verification": {
+    "path": "docs/features/simulation-post-dialog/legend-grouping-process-verification.json",
+    "bytes": 945,
+    "sha256": "325d442d14bddbe2dd3e993699a4f75cb506735ff789951b4b821d31d4b5fdb9"
+  },
+  "kernel_decision": "Expose only actual optional signed C0 through the existing complete parent views. Preserve raw-class and explicit older wire absence, arbitrary nonzero patterns, original bytes and separate derived reset events. Bind conditional native consumers without emulating arbitrary CString/locale rendering.",
+  "oracle_kinds": [
+    "Original C858 report pins and exact historical color-report transition",
+    "Complete GNU/Ghidra converter/caller bodies, exact named exports, locale provider calls and all three C0 argument sites",
+    "Complete independent Source observations of425 owned and276 native bodies,all eight rejected identities",
+    "Reused complete557 owned/native276 fixtures checked against C858 C0 presence and raw bits without reset expectations",
+    "Eight-worker serial equivalence and two fresh processes matching1666 independent expected words"
+  ],
+  "excluded": [
+    "Native target execution",
+    "Locale character values or arbitrary CString conversion",
+    "Constructor/prior-object state and serialized defaults",
+    "Additional byte credit or changed original native admission"
+  ],
+  "pending": [
+    "Full321 integrated Source replay",
+    "Remaining feature166 models",
+    "Exact publication-head cargo xtask pr and all five platform gates"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending."
+}

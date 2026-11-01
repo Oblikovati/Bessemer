@@ -538,5 +538,7 @@ assignments separately from absent wire words and unknown constructor state.
 Typed reset plans retain native store order, version history and exact local
 coverage; later profiles return a completed empty list and raw-class profiles
 remain unsupported.
+The [grouping view](legend-grouping.md) preserves C0's optional signed control
+without choosing locale characters or inferring separator insertion.
 The [reader-selection baseline](reader-selection.md) keeps existing mode priority
 and captured callback inputs pinned as further models are added.
