@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added the conditional local rendering predicate over exact stored counts and position bits, with explicit missing legacy state. (#166)
+
 - Added numeric unit selection with explicit optional runtime context, exact ActualFreqDispFlag gating and typed missing-context results. (#166)
 - Added the static component-vector model with verified tables, exact four-word outputs, dispatch provenance and explicit loaded-text context. (#166)
 - Added optional-state offset decisions and raw-preserving fringe views with explicit modeled runtime transitions and call-order effects. (#166)

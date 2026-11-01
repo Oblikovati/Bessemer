@@ -1,5 +1,7 @@
 //! Bounded named renderer decisions over explicit inputs, specification 14.490–14.491 (#166).
+mod local_predicate;
 mod offset_fringe;
+pub use local_predicate::SimulationLocalRenderInputs;
 pub(super) mod views;
 pub use offset_fringe::{SimulationFringeOptionView, SimulationOffsetRequestInputs};
 

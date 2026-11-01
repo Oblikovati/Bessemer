@@ -21,7 +21,7 @@ impl SimulationRgbaColor {
     }
 }
 
-fn unordered_nan(bits: u32) -> bool {
+pub(in crate::simulation::persistence) fn unordered_nan(bits: u32) -> bool {
     bits & 0x7f800000 == 0x7f800000 && bits & 0x7fffff != 0
 }
 
