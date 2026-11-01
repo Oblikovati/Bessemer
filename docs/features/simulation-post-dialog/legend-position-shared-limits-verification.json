@@ -1,0 +1,20 @@
+{
+  "issue": 166,
+  "scope": "Move unchanged complete-dialog/style test limits for existing format and new position projection callers",
+  "behavior_changed": false,
+  "rust": {
+    "checks": 5,
+    "failed": 0,
+    "ignored": 2,
+    "seconds": 0.19,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-position-shared-limits-rust.log",
+      "bytes": 1063,
+      "sha256": "5f35985bae32854d68d43b932a6a2956b6fcc6969c8407a903969f405b1e398a"
+    }
+  },
+  "excluded": [
+    "Two existing native format checks were explicitly ignored in this focused refactor run"
+  ]
+}
