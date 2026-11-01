@@ -81,6 +81,7 @@ from plot54_evidence import verify_plot54_sources, verify_plot54_native, verify_
 from plot54_bindings import verify_plot54_bindings, verify_plot54_rea_capture
 from plot54_plan_packets import verify_plot54_plan_packets
 from plot54_projection import verify_plot54_projection_packets
+from segment_color_evidence import segment_color_functions, run_segment_color_checks
 from aux_triangle_evidence import verify_aux_triangle_sources
 from aux_triangle_bindings import verify_aux_triangle_bindings
 from aux_triangle_projection import verify_aux_triangle_native, verify_aux_triangle_projection
@@ -115,7 +116,7 @@ def run_dialog_checks(pin: Path) -> unittest.TestResult:
 
 def run_style_annotation_checks() -> unittest.TestResult | None:
     """Dispatch the concrete stored-style modes without changing the full denominator; e.g. run_style_annotation_checks()."""
-    modes = (('--plot54-only', run_plot54_checks), ('--text-controls-only', run_text_control_checks), ('--triangle-selectors-only', run_triangle_selector_checks), ('--aux-triangle-only', run_aux_triangle_checks), ('--annotations-only', run_annotation_checks), ('--vector-style-only', run_vector_style_checks),
+    modes = (('--segment-color-only', run_segment_color_checks), ('--plot54-only', run_plot54_checks), ('--text-controls-only', run_text_control_checks), ('--triangle-selectors-only', run_triangle_selector_checks), ('--aux-triangle-only', run_aux_triangle_checks), ('--annotations-only', run_annotation_checks), ('--vector-style-only', run_vector_style_checks),
              ('--raw-preferences-only', run_raw_preferences_checks), ('--local-render-only', run_local_render_checks))
     for flag, check in modes:
         if flag in sys.argv: return check()
@@ -158,7 +159,7 @@ def default_dialog_functions(pin: Path) -> tuple[Callable[[], None], ...]:
               verify_offset_fringe_sources, verify_offset_fringe_bindings, verify_offset_fringe_native,
               verify_offset_fringe_packets, verify_offset_fringe_projection,
               verify_vector_sources, verify_vector_bindings, verify_vector_static_tables, verify_vector_table_constants,
-              verify_vector_packets, verify_vector_native, verify_vector_projection) + unit_model_functions() + local_render_functions() + raw_preferences_functions() + vector_style_functions() + annotation_functions() + aux_triangle_functions() + triangle_selector_functions() + text_control_functions() + plot54_functions()
+              verify_vector_packets, verify_vector_native, verify_vector_projection) + unit_model_functions() + local_render_functions() + raw_preferences_functions() + vector_style_functions() + annotation_functions() + aux_triangle_functions() + triangle_selector_functions() + text_control_functions() + plot54_functions() + segment_color_functions()
 
 
 def plot54_functions() -> tuple[Callable[[], None], ...]:
@@ -420,7 +421,7 @@ def vector_snapshot_readers() -> tuple[str, ...]:
 
 def dialog_snapshot_readers() -> tuple[str, ...]:
     """Require exactly the readers exercised by the selected gate; e.g. dialog_snapshot_readers()."""
-    if '--plot54-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_style_field_catalog', 'cosworks_post_color_fields')
+    if any(flag in sys.argv for flag in ('--segment-color-only', '--plot54-only')): return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_style_field_catalog', 'cosworks_post_color_fields')
     if '--text-controls-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_style_field_catalog', 'cosworks_post_style_text_view')
     if '--aux-triangle-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_style_field_catalog', 'cosworks_aux_triangle_gate')
     if any(flag in sys.argv for flag in ('--triangle-selectors-only', '--annotations-only')): return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_style_field_catalog')
@@ -451,7 +452,7 @@ def default_snapshot_readers() -> tuple[str, ...]:
 
 def dialog_snapshot_filename() -> str:
     """Keep partial replay evidence separate from the mandatory full snapshot; e.g. dialog_snapshot_filename()."""
-    modes = (('--plot54-only', 'plot54-source-snapshot.json'), ('--text-controls-only', 'text-control-source-snapshot.json'), ('--triangle-selectors-only', 'triangle-selector-source-snapshot.json'), ('--aux-triangle-only', 'aux-triangle-source-snapshot.json'), ('--annotations-only', 'annotation-source-snapshot.json'), ('--vector-style-only', 'vector-style-source-snapshot.json'), ('--raw-preferences-only', 'raw-preferences-source-snapshot.json'),
+    modes = (('--segment-color-only', 'segment-color-source-snapshot.json'), ('--plot54-only', 'plot54-source-snapshot.json'), ('--text-controls-only', 'text-control-source-snapshot.json'), ('--triangle-selectors-only', 'triangle-selector-source-snapshot.json'), ('--aux-triangle-only', 'aux-triangle-source-snapshot.json'), ('--annotations-only', 'annotation-source-snapshot.json'), ('--vector-style-only', 'vector-style-source-snapshot.json'), ('--raw-preferences-only', 'raw-preferences-source-snapshot.json'),
              ('--local-render-only', 'local-render-source-snapshot.json'),
              ('--resources-only', 'resource-source-snapshot.json'),
              ('--caps-only', 'cap-source-snapshot.json'),

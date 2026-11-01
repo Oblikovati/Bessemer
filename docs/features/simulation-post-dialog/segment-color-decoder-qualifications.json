@@ -1,0 +1,48 @@
+{
+  "issue": 169,
+  "qualification": "Six recorded COMISD qualifiers; exact bytes and all other instruction text retained",
+  "records": [
+    {
+      "address": "0x1800beb3f",
+      "original": "1800beb3f comisd xmm6, xmmword ptr [rip + 0x218f71]",
+      "canonical": "1800beb3f comisd xmm6, qword ptr [rip + 0x218f71]",
+      "raw_hex": "660f2f35718f2100",
+      "kind": "recorded_comisd_qualifier"
+    },
+    {
+      "address": "0x1800bebaa",
+      "original": "1800bebaa comisd xmm1, xmmword ptr [rip + 0x218f0e]",
+      "canonical": "1800bebaa comisd xmm1, qword ptr [rip + 0x218f0e]",
+      "raw_hex": "660f2f0d0e8f2100",
+      "kind": "recorded_comisd_qualifier"
+    },
+    {
+      "address": "0x1800bebb7",
+      "original": "1800bebb7 comisd xmm0, xmmword ptr [rip + 0x218f11]",
+      "canonical": "1800bebb7 comisd xmm0, qword ptr [rip + 0x218f11]",
+      "raw_hex": "660f2f05118f2100",
+      "kind": "recorded_comisd_qualifier"
+    },
+    {
+      "address": "0x1800bedb7",
+      "original": "1800bedb7 comisd xmm7, xmmword ptr [rip + 0x218cf9]",
+      "canonical": "1800bedb7 comisd xmm7, qword ptr [rip + 0x218cf9]",
+      "raw_hex": "660f2f3df98c2100",
+      "kind": "recorded_comisd_qualifier"
+    },
+    {
+      "address": "0x1800bee1a",
+      "original": "1800bee1a comisd xmm1, xmmword ptr [rip + 0x218c9e]",
+      "canonical": "1800bee1a comisd xmm1, qword ptr [rip + 0x218c9e]",
+      "raw_hex": "660f2f0d9e8c2100",
+      "kind": "recorded_comisd_qualifier"
+    },
+    {
+      "address": "0x1800bee27",
+      "original": "1800bee27 comisd xmm0, xmmword ptr [rip + 0x218ca1]",
+      "canonical": "1800bee27 comisd xmm0, qword ptr [rip + 0x218ca1]",
+      "raw_hex": "660f2f05a18c2100",
+      "kind": "recorded_comisd_qualifier"
+    }
+  ]
+}
