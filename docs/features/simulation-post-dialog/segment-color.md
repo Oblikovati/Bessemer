@@ -53,7 +53,8 @@ labeled runtime scenarios for every425 owned and276 native archive contexts.
 Allseven Rust checks passed, including known-zero versus missing colors, alpha
 independence, source mutation isolation and eight-worker comparisons. Two fresh
 processes matched all1,030,588 expected bytes. Clippy passed for alltargets and
-features with warnings denied. The strict17-check Source suite passed in5.189seconds.
+features with warnings denied. The strict17-check Source suite passed in5.189seconds. The full196-check suite
+passed in542.320seconds and its process exited successfully.
 The [operation proof](segment-rgb-operation-verification.json) and
 [process proof](segment-rgb-process-verification.json) retain exact scope and hashes.
 
@@ -68,6 +69,6 @@ meaning for every1BC consumer is inferred.
 
 A complete primitive operation still needs ordered typed endpoint dependencies,
 copied geometry provenance, explicit geometry coverage and independent boundary,
-ownership, concurrency and process checks. The full196 Source gate and exact
+ownership, concurrency and process checks. Exact
 publication gates remain required for this local-read addition before integration
 of feature166, together with the remaining named schema models.
