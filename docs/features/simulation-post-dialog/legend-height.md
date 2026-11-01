@@ -64,6 +64,8 @@ comparisons; all six public types satisfy `Send + Sync`. Clippy passed with
 warnings denied. The strict Source suite passed18 checks in6.275seconds and
 exited successfully after snapshot recording. Two fresh processes matched all
 13,709 independent expected results, totaling219,344bytes.
+The full Source suite passed248 checks in525.047seconds and exited successfully
+after snapshot recording.
 The [verification record](legend-height-operation-verification.json) and
 [process proof](legend-height-process-verification.json) retain exact hashes,
 coverage and remaining full/publication gates. Remaining documented feature166
