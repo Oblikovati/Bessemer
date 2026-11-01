@@ -79,6 +79,9 @@ pub use text::*;
 pub use thermal::*;
 pub use version::*;
 
+mod rgba;
+pub use rgba::*;
+
 fn reserve_bytes(size: usize) -> Result<Vec<u8>> {
     let mut bytes = Vec::new();
     bytes.try_reserve_exact(size).map_err(|error| {

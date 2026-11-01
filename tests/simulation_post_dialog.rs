@@ -222,5 +222,9 @@ mod reference_caps;
 #[path = "simulation_post_dialog/embedded_boundaries.rs"]
 mod embedded_boundaries;
 
+#[path = "support/post_color_views.rs"]
+mod color_expectations;
+#[path = "simulation_post_dialog/colors.rs"]
+mod colors;
 #[path = "simulation_post_dialog/views.rs"]
 mod views;

@@ -1,5 +1,6 @@
 //! Complete versioned PostStyle and embedded legacy/modern legend profiles (#166).
 mod archive;
+mod colors;
 mod contracts;
 mod coverage;
 mod decode;

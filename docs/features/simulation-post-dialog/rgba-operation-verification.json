@@ -1,0 +1,88 @@
+{
+  "issue": 166,
+  "behavior_version": "COGLColor-C844-C867-raw-view-v1",
+  "scope": "raw RGBA values and complete outer color collections for parent dialogs and standalone styles",
+  "owned_contexts": 425,
+  "owned_colors": 7429,
+  "native_helper_contexts": 276,
+  "native_color_observations": 4940,
+  "additional_stored_byte_credit": 0,
+  "source_reference": "rgba-operation-packets-reference.json",
+  "rust": {
+    "color_checks": 12,
+    "log": {
+      "path": "target/post-color-views-source-tests.log",
+      "bytes": 1634,
+      "sha256": "42a109fe70bcd0868974a297cc1f9094287bdca6afe56102e5955070f76189d2"
+    },
+    "collector_guard_checks": 4,
+    "guard_log": {
+      "path": "target/post-rgba-collector-tests.log",
+      "bytes": 847,
+      "sha256": "857d31c8a952e3661b8db7998a837175dd90b31cfc15bb414d0abc6b7d5f4d2f"
+    }
+  },
+  "clippy": {
+    "path": "target/post-color-views-final-clippy.log",
+    "bytes": 135,
+    "sha256": "47d5a601e8989a5757fd875d6b043f168104683ab3d072d9fcc4befaf032c442"
+  },
+  "source_initialization": {
+    "checks": 3,
+    "seconds": 4.129,
+    "log": {
+      "path": "target/post-rgba-views-source-write.log",
+      "bytes": 660,
+      "sha256": "e472baae9e7cf93caeabc23801c9c071e7b073d094c6bd6c1ebc0bb94dbcda24"
+    }
+  },
+  "source_strict": {
+    "checks": 3,
+    "seconds": 4.867,
+    "log": {
+      "path": "target/post-rgba-views-source-strict.log",
+      "bytes": 660,
+      "sha256": "f269c45b11555f43e9f829c8de93543a9af347e4aafc599cbbb7e59c3f8290a3"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/rgba-view-source-snapshot.json",
+      "bytes": 524799,
+      "sha256": "d0d55a2c7ea6adaf28159edf1b2194366f17a45302c463de19c924a31ca316d8"
+    }
+  },
+  "concurrency": {
+    "workers": 8,
+    "owned_contexts": 425,
+    "matches_serial": true
+  },
+  "process_proof": "rgba-process-verification.json",
+  "pending": [
+    "Publication gates, packed color conversion, native comparisons and remaining loaded-state/legend semantics."
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "initial_full_replay_issue": {
+    "cause": "New report filename collided with existing rgba-view-reference.json.",
+    "correction": "Restored existing report byte for byte from HEAD; renamed new packet report to rgba-operation-packets-reference.json.",
+    "original_report_sha256": "638f268e47afa95e981876bf13e795b3265248a508cb25bb6017a7d877fb5d54",
+    "log": "target/post-rgba-views-full-strict.log",
+    "failed_checks": 2,
+    "checks": 62,
+    "seconds": 368.484,
+    "log_sha256": "29eb39750a1ae945034a7ae684a62874616f04e86008353da39ffbef328a4a80"
+  },
+  "corrected_full_source": {
+    "checks": 62,
+    "seconds": 373.602,
+    "result": "passed",
+    "log": {
+      "path": "target/post-rgba-views-full-strict-fixed.log",
+      "bytes": 23529,
+      "sha256": "d5569a990b76dff4535942b9ed83ed1e52d232423294f76cafb1544d18f4d8fd"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 529575,
+      "sha256": "7cefc1f528f860a2e228e4da1795b2001f10c0f17b8b7ab762199de03358daf7"
+    }
+  }
+}
