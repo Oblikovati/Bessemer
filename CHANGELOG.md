@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added explicit legacy hidden-parts load projections with both derived runtime words, exact adjacent-store coverage and retained original wire values. (#166)
+
 - Added optional legend B4 views and exact nearest-even width projections with explicit font/selector facts, preserved intermediate bits and independent rational rounding checks. (#166)
 
 - Added optional legend end-cell E8/EC views and exact local gate/RGB projections with explicit read-time facts, short-circuit completion and preserved alpha provenance. (#166)

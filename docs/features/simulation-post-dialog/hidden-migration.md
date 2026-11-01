@@ -27,13 +27,49 @@ All 425 owned parents are retained without inferring defaults or rewriting
 their bytes. Derived migration values add no stored-byte coverage credit.
 
 The [verification record](hidden-migration-verification.json) records the
-targeted and full replay gates. A typed migration result and the remaining
-feature166 obligations remain pending.
+targeted and full evidence replay gates. The typed projection below keeps its
+operation acceptance separate. The remaining feature166 obligations remain
+pending.
 
 The targeted freeze passed 18 checks in 6.119 seconds. Strict replay passed the
 same 18 checks in 17.073 seconds and exited successfully after snapshot recording
 and cleanup. Both retain the two original migration tests and all eight original
 catalog/style/color checks. Full integrated replay and publication acceptance
 remain separate gates.
+
+## Typed projection
+
+`hidden_parts_migration_inputs` copies the archive's explicit version and
+optional original signed 1F0. It does not create an absent stored 1EC or rewrite
+the archive. `project_legacy_hidden_parts` first requires version700006..840007,
+then requires the original word. Outside that interval it returns a typed
+unsupported-scope error, including for later direct-read contexts. An unknown
+word inside the interval returns a typed missing-input error.
+
+Completed results retain both derived runtime words and the exact store kind.
+The coverage distinguishes one four-byte store, one eight-byte store and two
+four-byte stores. It records zero additional wire bytes and zero local pattern
+error, with no native pointer or full visibility validation. Immutable derived
+history retains the original version and 1F0 even when its runtime copy becomes
+zero or one. Original byte payloads remain unchanged.
+
+The operation corpus contains 4,336 version/presence/signed-pattern cases.
+Complete parent replay retains all 425 owned contexts and 276 native contexts,
+plus 140 full 1F0 mutations. Each parent keeps its actual version and eight
+explicit original, missing or hypothetical word contexts. These hypotheses do
+not promote nonzero migrations into native sample observations.
+
+The [operation record](hidden-migration-operation-verification.json) and
+[fresh-process proof](hidden-migration-process-verification.json) retain exact
+executed checks and remaining gates. The earlier raw-class conversion, later
+direct reads and whole hidden-parts visibility decision remain separate.
+
+All eight owned Rust checks and the complete native-parent check passed,
+including eight-worker comparisons. All eight public types satisfy `Send + Sync`.
+The strict Source suite passed 20 checks in 5.956 seconds and exited successfully
+after snapshot recording and cleanup. Clippy passed for all targets and features
+with warnings denied. Two fresh Rust processes matched all 90,194 independent
+expected words byte for byte. Full integrated replay and publication validation,
+including ThreadSanitizer, remain separate gates.
 
 Humanizer is unavailable in this checkout; maintainer prose review remains pending.

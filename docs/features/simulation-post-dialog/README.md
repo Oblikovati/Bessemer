@@ -530,3 +530,5 @@ explicit and compare every binary32 stage against an independent rational oracle
 The [legacy hidden-parts migration](hidden-migration.md) separates absent wire
 options from the reader's derived state, including the adjacent word overwritten
 by its 64-bit store and the later direct-read branch.
+Its typed projection returns both runtime words with exact store coverage and
+original-word history, while rejecting raw-class and later direct-read contexts.
