@@ -542,5 +542,7 @@ The [grouping view](legend-grouping.md) preserves C0's optional signed control
 without choosing locale characters or inferring separator insertion.
 The [A8 preference evidence](legend-inverse.md) retains the noninvertible zero
 test and the setter's runtime plot-type exceptions separately from wire values.
+Typed local plans retain original inputs, exact read/store coverage and completed
+empty assignments without emulating the remaining preference methods.
 The [reader-selection baseline](reader-selection.md) keeps existing mode priority
 and captured callback inputs pinned as further models are added.

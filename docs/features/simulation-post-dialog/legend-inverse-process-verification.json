@@ -1,0 +1,26 @@
+{
+  "issue": 166,
+  "behavior_version": "C860-local-preference-zero-tests-v1",
+  "platform": "Windows x64",
+  "operation_cases": 12678,
+  "complete_parents": 841,
+  "words": 202785,
+  "oracle": "Original frozen zero_test plus independent unsigned subtraction/bounded native BT mask,complete optional A8 parents and full original source histories",
+  "executable_sha256": "dafa6dfc01e73762ad218b3698a79c118889bcee56320090e33c72a0e82dec51",
+  "runs": [
+    {
+      "process": 1,
+      "exit_code": 0,
+      "bytes": 811140,
+      "sha256": "deacd2b9d3fffe3a826853ae3abf6e8abfe425aed19e13e77d5c5343b0d5f350"
+    },
+    {
+      "process": 2,
+      "exit_code": 0,
+      "bytes": 811140,
+      "sha256": "deacd2b9d3fffe3a826853ae3abf6e8abfe425aed19e13e77d5c5343b0d5f350"
+    }
+  ],
+  "comparison": "Both fresh Rust processes matched all202785 independent expected history/result words byte for byte; exact export test verified",
+  "native_target_executed": false
+}

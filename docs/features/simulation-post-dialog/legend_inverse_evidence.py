@@ -51,8 +51,10 @@ def legend_inverse_functions() -> tuple[Callable[[], None], ...]:
     """Keep original conversion tests beside full bindings and complete parent replay; e.g. legend_inverse_functions()."""
     from legend_inverse_bindings import verify_inverse_bindings, verify_inverse_rea
     from legend_inverse_projection import verify_inverse_native, verify_inverse_owned
+    from legend_inverse_packets import verify_inverse_operation_packets, verify_inverse_projection_packets
     return (verify_legend_inverse_sources, verify_inverse_relation, verify_inverse_bindings,
-        verify_inverse_rea, verify_inverse_native, verify_inverse_owned)
+        verify_inverse_rea, verify_inverse_native, verify_inverse_owned,
+        verify_inverse_operation_packets, verify_inverse_projection_packets)
 
 
 def run_legend_inverse_checks() -> unittest.TestResult:
