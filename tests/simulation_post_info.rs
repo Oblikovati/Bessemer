@@ -25,6 +25,8 @@ const EXPECTED: &[u8] = include_bytes!("fixtures/simulation-post-dialog/projecti
 mod contracts;
 #[path = "simulation_post_info/text_limits.rs"]
 mod text_limits;
+#[path = "simulation_post_info/views.rs"]
+mod views;
 
 fn encoded_value(value: &SimulationPostInfoValue) -> (usize, Vec<u8>) {
     match value {

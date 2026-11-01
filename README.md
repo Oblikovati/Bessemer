@@ -682,3 +682,10 @@ maximum patterns while retaining the original state and all four endpoints.
 selector, selecting literal float32 one for unrecognized selectors. These
 accessors preserve signed zero, subnormal and non-finite patterns without
 changing the document.
+
+
+`SimulationPostInfo::cut_primitive` exposes each of the twelve physical slots,
+with known primitive names and direction tokens, raw normal/center patterns,
+and the shared scalar's D sign-bit alias. Unknown codes remain unnamed and
+active-count words do not remove slots. `header_view` preserves all seven header
+words and exposes the bounded forward ContourType preference conversion.
