@@ -478,3 +478,6 @@ The [numeric unit model](unit-type.md) retains numeric codes and explicit runtim
 context. It distinguishes known fallback9999 from missing required state, keeps
 ActualFreqDispFlag raw and never supplies a flag from PE initialization or a
 registry setting that may not apply to the file.
+
+The [local rendering predicate](local-render-predicate.md) exposes C-884's four
+inputs without interpreting its result as complete rendering safety or validity.
