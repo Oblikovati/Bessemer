@@ -1,6 +1,6 @@
 use super::super::{
     SimulationPostDialog, SimulationPostStyle, load_snapshot::BinaryLoadSnapshot,
-    post_render::views::optional_render_word_bits,
+    post_render::views::optional_render_signed_words,
 };
 use super::SimulationLegendFormatInputs;
 use crate::Result;
@@ -22,15 +22,15 @@ impl SimulationPostDialog {
 fn format_inputs_from_snapshot<T: BinaryLoadSnapshot>(
     snapshot: &T,
 ) -> Result<SimulationLegendFormatInputs> {
-    let mut words = [None; 4];
-    for (slot, path) in words.iter_mut().zip([
-        "legend.word_b8",
-        "legend.word_bc",
-        "legend.word_c4",
-        "legend.word_c8",
-    ]) {
-        *slot = optional_render_word_bits(snapshot, path)?.map(|word| word as i32);
-    }
+    let words = optional_render_signed_words(
+        snapshot,
+        [
+            "legend.word_b8",
+            "legend.word_bc",
+            "legend.word_c4",
+            "legend.word_c8",
+        ],
+    )?;
     Ok(SimulationLegendFormatInputs {
         mode_raw: words[0],
         precision_raw: words[1],
