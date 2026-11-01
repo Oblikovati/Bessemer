@@ -1,0 +1,116 @@
+{
+  "issue": 166,
+  "scope": "Share exact Ghidra function-body validation for actual format, position and palette callers",
+  "behavior_changed": false,
+  "existing_reference_packets_identical": [
+    {
+      "path": "docs/features/simulation-post-dialog/legend-format-c846-reference.json",
+      "bytes": 315467,
+      "sha256": "4058e7336afc8b37c0242c35b4a8829ef7adac9263522f156308ba5f9cf5287c"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/legend-format-installed-reference.json",
+      "bytes": 489,
+      "sha256": "0085b31ea75b617fd91bb1528b8556e87365d3f48aac6d3bd8cbd3fcdddc4fd2"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/legend-format-kernel-reference.json",
+      "bytes": 432,
+      "sha256": "0f8c7f276b04aeb2a599eec4cc5f0161a87bb2176b4afdf255edf6c6474c0132"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/legend-format-native-reference.json",
+      "bytes": 861,
+      "sha256": "4811bab7e39e19c79523620f85d7d18c2d87bc99cb3dfc84179d437d28be41e3"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/legend-format-operation-packets-reference.json",
+      "bytes": 617,
+      "sha256": "473df266291b6a9914f97300acf23752807fdeb6b59da9fb60e0d1c49e80fa1c"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/legend-format-owned-reference.json",
+      "bytes": 362521,
+      "sha256": "ce77db122beacf37d91f9dd909642dacd70839de7c0733c92d2a84ef2648c7e7"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/legend-format-projection-packets-reference.json",
+      "bytes": 493,
+      "sha256": "2d503d7148c1b2fc3a70e04f406314499c3277feb8565ae99984bc91626a22e8"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/legend-format-rea-reference.json",
+      "bytes": 4555,
+      "sha256": "16f9f25a6246da24eeb543ed1bd11f93a8ba1f6f7ca1b52eeb701a4bf8b14b94"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/legend-position-c847-reference.json",
+      "bytes": 230004,
+      "sha256": "4d5a81bbddc8d4decb0954a1d03723e65f8934f912235e072c1d2ab9f354f684"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/legend-position-installed-reference.json",
+      "bytes": 329,
+      "sha256": "192530e0c235be4902119b4dbe6b786caeda96a6425cb578260b72afe3c41bda"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/legend-position-native-reference.json",
+      "bytes": 643,
+      "sha256": "4c56d09b476c0de4e65a4d761cccb0c31b160eb9ff4e6fe927fcce76d2caf11f"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/legend-position-owned-reference.json",
+      "bytes": 227195,
+      "sha256": "aa5e134d0978151daa9dac0e3a908857016757ab9790d22ea18439240a6b99d8"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/legend-position-projection-packets-reference.json",
+      "bytes": 568,
+      "sha256": "ffa9aebc98c48f17af6fd6418bf439e0672038f5a0c9fd3b7ea7906eac9c43e4"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/legend-position-rea-reference.json",
+      "bytes": 4552,
+      "sha256": "37e3dd1330e90d762e09f98bdb3b244c05d7c04471edf50b2c3f9285fb144ac2"
+    }
+  ],
+  "snapshots": [
+    {
+      "path": "docs/features/simulation-post-dialog/legend-format-source-snapshot.json",
+      "bytes": 625411,
+      "sha256": "a4456fa5b1dd42bca41d9ad4452ca7da5b0e71298819a215b311a586ffcbef8c"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/legend-position-source-snapshot.json",
+      "bytes": 625419,
+      "sha256": "4fe09a45731d1012d6ada5abad58141ab26e5ce2310552c1be2dd053581ee7ab"
+    }
+  ],
+  "snapshot_change": "Verified frozen temporary-root origin paths only; normalized metadata/source hashes unchanged",
+  "source": [
+    {
+      "mode": "legend-format-only",
+      "checks": 19,
+      "seconds": 5.715,
+      "result": "passed",
+      "process_exit_code": 0,
+      "log": {
+        "path": "target/legend-body-format-refactor-source.log",
+        "bytes": 3046,
+        "sha256": "00783c9b75f926af765469a1568988cd2593161657c3850f5dd11f7f6acad05f"
+      }
+    },
+    {
+      "mode": "legend-position-only",
+      "checks": 18,
+      "seconds": 6.364,
+      "result": "passed",
+      "process_exit_code": 0,
+      "log": {
+        "path": "target/legend-body-position-refactor-source.log",
+        "bytes": 2857,
+        "sha256": "7e4fb6c92fefe5f68e4e1bd588ecc497fdf902ef3ca80e457220e30d81c53baa"
+      }
+    }
+  ]
+}
