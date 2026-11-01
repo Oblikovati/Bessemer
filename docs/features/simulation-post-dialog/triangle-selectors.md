@@ -27,7 +27,7 @@ current catalog tests. Its process exited successfully after snapshot recording.
 The [evidence proof](triangle-selector-evidence-verification.json) records exact
 revision, log and snapshot hashes, scope and outstanding gates.
 
-## Remaining operation work
+## Caller and helper contract
 
 The hidden-parts caller requires a nonzero result from named
 `HiddenPartsOptionOn`, unsigned1F0 below2, and core678 equal0 for this helper
@@ -73,16 +73,44 @@ full suite passed168 checks in504.026seconds at the evidence-only cut2063B1B7;
 its denominator excludes these two new checks. The updated full gate remains
 required.
 
-A complete operation must accept explicit runtime facts and lookup outcomes,
-retain both group color origins, return ordered immutable local call requests,
-and report missing required facts and resource limits without partial success.
+`hidden_parts_triangle_controls()` and `model_tessellation_triangle_controls()`
+read canonical parent/style snapshots without initializing missing older fields.
+`SimulationTriangleColorControls` retains the caller kind, original selector,
+RGBA and, for the model path, the stored21C override. All425 owned and276 native
+complete projections retain raw archive bytes;20 older owned groups are missing.
+
+`plan_masked_daz_ftz_off` accepts matching typed caller facts, explicit helper
+runtime facts, complete group snapshots and a maximum-group budget. Unknown
+external results remain `None`. It requires each result only when reached.
 Lookup runs after the group-class test and before the positive triangle-count
 test. A missing lookup outcome is therefore required even for a nonpositive
 triangle count when the class matches and runtime8C8 is nonzero. An earlier
-class rejection needs no lookup result. Preserve that dependency order rather
-than eagerly requiring every outcome or skipping the lookup for empty groups.
-It must cover both callers and the documented helper, preserve source isolation,
-and carry native execution, geometry validation and scene traversal exclusions.
-No public replacement or incomplete operation API is shipped by this evidence
-step. Full operation, the updated complete Source suite and publication gates remain
-required for feature166.
+class rejection needs no lookup result.
+
+Plans distinguish disabled/bypassed branches, other caller paths, helper
+rejections, admitted setup and completed empty/call results. They own the
+inspected original groups, controls, runtime context and ordered local requests.
+Each request retains the group index, opaque payload identities and exact RGB
+origin. Supplied alpha is independent of the selected group alpha. Coverage
+records signed iteration, reached lookup count, budget, exact pattern error and
+explicit floating-point assumptions. Native execution, payload validity, other
+caller paths and scene traversal exclusions accompany every successful plan.
+
+Budget overruns, unavailable required groups, unknown reached external results
+and mismatched caller kinds return typed errors without partial successful
+output. A high-bit raw count can admit setup while inspecting no groups.
+No plan dereferences payload identities or publishes geometry.
+
+An independent pointer-offset oracle covers25,436 scenarios with both caller
+gates, zero/nonzero and unsigned selector boundaries, class/lookup/count order,
+both RGB origins, resource limits, missing facts and1,547 alpha patterns. Tests
+also cover source mutation after publication, both typed caller mismatches,
+eight-worker replay, public Send/Sync traits and complete archive projections.
+All7 Rust integration checks and the allocation-error regression passed.
+Clippy passed with warnings denied. The strict Source suite passed13 checks.
+Two fresh processes matched26,137 contexts and1,505,328 output bytes against
+independent expectations. The [operation proof](triangle-color-operation-verification.json)
+records revisions, log hashes, exclusions and remaining gates. The expanded
+full Source suite and publication gates remain pending. Complete scene rendering remains outside this documented local
+binding; all other named schema models and publication gates remain required
+for feature166.
