@@ -95,6 +95,8 @@ from legend_3d_evidence import legend_3d_functions, run_legend_3d_checks
 from legend_end_cell_evidence import legend_end_cell_functions, run_legend_end_cell_checks
 from legend_width_evidence import legend_width_functions, run_legend_width_checks
 from hidden_migration_evidence import hidden_migration_functions, run_hidden_migration_checks
+from dialog_reader_selection import select_dialog_snapshot_readers
+from dialog_reader_selection_checks import verify_dialog_reader_selection
 from aux_triangle_evidence import verify_aux_triangle_sources
 from aux_triangle_bindings import verify_aux_triangle_bindings
 from aux_triangle_projection import verify_aux_triangle_native, verify_aux_triangle_projection
@@ -172,7 +174,7 @@ def default_dialog_functions(pin: Path) -> tuple[Callable[[], None], ...]:
               verify_offset_fringe_sources, verify_offset_fringe_bindings, verify_offset_fringe_native,
               verify_offset_fringe_packets, verify_offset_fringe_projection,
               verify_vector_sources, verify_vector_bindings, verify_vector_static_tables, verify_vector_table_constants,
-              verify_vector_packets, verify_vector_native, verify_vector_projection) + unit_model_functions() + local_render_functions() + raw_preferences_functions() + vector_style_functions() + annotation_functions() + aux_triangle_functions() + triangle_selector_functions() + text_control_functions() + plot54_functions() + segment_color_functions() + mode3_rgb_functions() + preference_color_functions() + legend_format_functions() + legend_position_functions() + legend_palette_functions() + legend_height_functions() + legend_yield_functions() + legend_step_functions() + legend_3d_functions() + legend_end_cell_functions() + legend_width_functions() + hidden_migration_functions()
+              verify_vector_packets, verify_vector_native, verify_vector_projection) + unit_model_functions() + local_render_functions() + raw_preferences_functions() + vector_style_functions() + annotation_functions() + aux_triangle_functions() + triangle_selector_functions() + text_control_functions() + plot54_functions() + segment_color_functions() + mode3_rgb_functions() + preference_color_functions() + legend_format_functions() + legend_position_functions() + legend_palette_functions() + legend_height_functions() + legend_yield_functions() + legend_step_functions() + legend_3d_functions() + legend_end_cell_functions() + legend_width_functions() + hidden_migration_functions() + (verify_dialog_reader_selection,)
 
 
 def plot54_functions() -> tuple[Callable[[], None], ...]:
@@ -433,37 +435,11 @@ def vector_snapshot_readers() -> tuple[str, ...]:
 
 
 def dialog_snapshot_readers() -> tuple[str, ...]:
-    """Require exactly the readers exercised by the selected gate; e.g. dialog_snapshot_readers()."""
-    if '--hidden-migration-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_style_legacy_hidden_policy')
-    if '--legend-width-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout')
-    if '--legend-end-cell-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_color_fields')
-    if '--legend-3d-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_colorref_import_view')
-    if '--legend-step-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_legend_step_policy')
-    if '--legend-yield-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_color_fields', 'cosworks_legend_color_policy_fields')
-    if '--legend-height-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout')
-    if '--legend-palette-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_legend_color_policy_fields')
-    if '--legend-position-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_legend_position_fields')
-    if '--legend-format-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_legend_number_format')
-    if '--preference-colors-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_style_field_catalog', 'cosworks_post_color_fields', 'cosworks_style_preference_colors', 'cosworks_colorref_import_view')
-    if any(flag in sys.argv for flag in ('--mode3-rgb-only', '--segment-color-only', '--plot54-only')): return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_style_field_catalog', 'cosworks_post_color_fields')
-    if '--text-controls-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_style_field_catalog', 'cosworks_post_style_text_view')
-    if '--aux-triangle-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_style_field_catalog', 'cosworks_aux_triangle_gate')
-    if any(flag in sys.argv for flag in ('--triangle-selectors-only', '--annotations-only')): return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_style_field_catalog')
-    if '--vector-style-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_style_field_catalog', 'cosworks_colorref_import_view')
-    if '--raw-preferences-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout')
-    if '--local-render-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_render_safety')
-    if '--unit-only' in sys.argv: return unit_snapshot_readers()
-    if '--vector-only' in sys.argv: return vector_snapshot_readers()
-    if '--offset-fringe-only' in sys.argv: return offset_fringe_snapshot_readers()
-    if '--render-policy-only' in sys.argv: return render_snapshot_readers()
-    if '--legend-comparison-only' in sys.argv: return ('cosworks_legend_comparison', 'cosworks_color_comparison', 'cosworks_post_style_layout', 'cosworks_post_color_fields')
-    if '--rgba-comparison-only' in sys.argv: return ('cosworks_color_comparison',)
-    if '--colorref-export-only' in sys.argv: return ('cosworks_colorref_view',)
-    if '--colorref-import-only' in sys.argv: return ('cosworks_colorref_import_view', 'cosworks_colorref_view')
-    if '--rgba-views-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_color_fields')
-    if '--postinfo-views-only' in sys.argv: return ('cosworks_post_info_fields', 'cosworks_post_contour_policy')
-    if '--parent-views-only' in sys.argv: return ('cosworks_legend_range_fields', 'cosworks_deform_scale_fields')
-    return default_snapshot_readers()
+    """Require the unchanged ordered reader profile for the selected gate; e.g. dialog_snapshot_readers()."""
+    providers = {'--unit-only': unit_snapshot_readers, '--vector-only': vector_snapshot_readers,
+        '--offset-fringe-only': offset_fringe_snapshot_readers, '--render-policy-only': render_snapshot_readers,
+        'default': default_snapshot_readers}
+    return select_dialog_snapshot_readers(sys.argv, DIALOG_READERS, providers)
 
 
 def default_snapshot_readers() -> tuple[str, ...]:
