@@ -10,6 +10,7 @@ mod planes;
 mod references;
 
 mod archive;
+mod colors;
 mod contracts;
 mod counted_bytes;
 mod coverage;

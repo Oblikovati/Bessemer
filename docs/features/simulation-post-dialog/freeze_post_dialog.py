@@ -1,6 +1,7 @@
 """Copied-source complete dialog/legacy foundation with retained field-view obligations (#166)."""
 from pathlib import Path
 from functools import partial, update_wrapper
+from collections.abc import Callable
 import importlib
 import sys
 import tempfile
@@ -28,6 +29,7 @@ from dialog_edit_oracle import verify_dialog_edit_matrix
 from dialog_resource_oracle import verify_dialog_resources
 from dialog_cap_oracle import verify_dialog_caps
 from dialog_reference_cap_oracle import verify_reference_caps
+from dialog_rgba_packets import verify_rgba_packets
 from dialog_projection_shapes import verify_dialog_scalar_shapes
 from dialog_parent_views import (verify_dialog_parent_sources, verify_dialog_parent_native, verify_dialog_parent_bindings,
                                  verify_dialog_parent_owned, verify_dialog_parent_branches)
@@ -35,18 +37,11 @@ from dialog_parent_views import (verify_dialog_parent_sources, verify_dialog_par
 
 def run_dialog_checks(pin: Path) -> unittest.TestResult:
     """Preserve all original C-770 and integrated legacy-view tests beside fresh full replay; e.g. run_dialog_checks(pin)."""
+    if '--rgba-views-only' in sys.argv: return run_rgba_view_checks()
     if '--postinfo-views-only' in sys.argv: return run_postinfo_view_checks()
     if '--parent-views-only' in sys.argv: return run_parent_view_checks()
     if any(flag in sys.argv for flag in ('--resources-only', '--caps-only', '--reference-caps-only')): return run_resource_checks()
-    replay = update_wrapper(partial(replay_dialog_native, pin), replay_dialog_native)
-    additional = update_wrapper(partial(replay_additional_legacy_dialogs, pin), replay_additional_legacy_dialogs)
-    checks = (verify_dialog_sources, verify_dialog_schema, verify_dialog_installed_bindings,
-              verify_dialog_inventory, replay, verify_dialog_legacy_view, additional,
-              verify_dialog_field_sources, verify_dialog_catalog_provenance, verify_dialog_field_bindings,
-              verify_postinfo_field_views, verify_rgba_native_views, verify_dialog_role_catalog, verify_dialog_owned,
-              verify_owned_postinfo_field_views, verify_dialog_operation_packets, verify_dialog_scalar_shapes, verify_dialog_parent_sources,
-              verify_dialog_parent_native, verify_dialog_parent_bindings,
-              verify_dialog_parent_owned, verify_dialog_parent_branches, verify_dialog_edit_matrix, verify_dialog_resources, verify_dialog_caps, verify_reference_caps)
+    checks = default_dialog_functions(pin)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
     for suffix in ('dialog_layout', 'dialog_prefix', 'info', 'style', 'planes', 'v7_composed_view',
                    'info_fields', 'cutprim_types', 'contour_policy', 'color_fields', 'style_field_catalog'):
@@ -55,6 +50,19 @@ def run_dialog_checks(pin: Path) -> unittest.TestResult:
         suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module(name)))
     return unittest.TextTestRunner(verbosity=2).run(suite)
 
+
+
+def default_dialog_functions(pin: Path) -> tuple[Callable[[], None], ...]:
+    """Retain the complete ordered default denominator beside targeted replay modes; e.g. default_dialog_functions(pin)."""
+    replay = update_wrapper(partial(replay_dialog_native, pin), replay_dialog_native)
+    additional = update_wrapper(partial(replay_additional_legacy_dialogs, pin), replay_additional_legacy_dialogs)
+    return (verify_dialog_sources, verify_dialog_schema, verify_dialog_installed_bindings,
+              verify_dialog_inventory, replay, verify_dialog_legacy_view, additional,
+              verify_dialog_field_sources, verify_dialog_catalog_provenance, verify_dialog_field_bindings,
+              verify_postinfo_field_views, verify_rgba_native_views, verify_dialog_role_catalog, verify_dialog_owned,
+              verify_owned_postinfo_field_views, verify_dialog_operation_packets, verify_dialog_scalar_shapes, verify_dialog_parent_sources,
+              verify_dialog_parent_native, verify_dialog_parent_bindings,
+              verify_dialog_parent_owned, verify_dialog_parent_branches, verify_dialog_edit_matrix, verify_dialog_resources, verify_dialog_caps, verify_reference_caps, verify_rgba_packets)
 
 
 def run_resource_checks() -> unittest.TestResult:
@@ -84,8 +92,17 @@ def run_postinfo_view_checks() -> unittest.TestResult:
     return unittest.TextTestRunner(verbosity=2).run(suite)
 
 
+def run_rgba_view_checks() -> unittest.TestResult:
+    """Check complete parent/style color denominators through actual copied parsers; e.g. run_rgba_view_checks()."""
+    checks = (verify_dialog_sources, verify_dialog_field_sources, verify_rgba_packets)
+    suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
+    return unittest.TextTestRunner(verbosity=2).run(suite)
+
+
 def dialog_snapshot_readers() -> tuple[str, ...]:
     """Require exactly the readers exercised by the selected gate; e.g. dialog_snapshot_readers()."""
+    if '--rgba-views-only' in sys.argv:
+        return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_color_fields')
     if '--postinfo-views-only' in sys.argv:
         return ('cosworks_post_info_fields', 'cosworks_post_contour_policy')
     if '--parent-views-only' in sys.argv:
@@ -102,7 +119,8 @@ def dialog_snapshot_filename() -> str:
              ('--caps-only', 'cap-source-snapshot.json'),
              ('--reference-caps-only', 'reference-cap-source-snapshot.json'),
              ('--parent-views-only', 'parent-view-source-snapshot.json'),
-             ('--postinfo-views-only', 'postinfo-view-source-snapshot.json'))
+             ('--postinfo-views-only', 'postinfo-view-source-snapshot.json'),
+             ('--rgba-views-only', 'rgba-view-source-snapshot.json'))
     for flag, filename in modes:
         if flag in sys.argv: return filename
     return 'source-snapshot.json'

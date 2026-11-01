@@ -304,3 +304,27 @@ verify that boundary, including the version700002 suffix. Distinct stored codes
 tests, all-target Clippy and ten pinned Source checks passed. These operations
 leave source archives unchanged. [Contour policy verification](contour-policy-verification.json)
 records the evidence; other documented consumer roles remain pending.
+
+
+Shared RGBA views cover every outer color in parent and standalone style bodies,
+including legacy regions. One collector validates four consecutive component
+paths, four-byte spans and scalar kinds before publishing a complete color.
+Malformed or incomplete groups fail as a whole; an empty collection remains a
+completed empty query. Color values retain all RGBA bits and return separate
+optional finite channel values. No clamping or color-space conversion is applied.
+
+Pinned Source expectations cover 7,429 owned colors across 425 contexts and
+4,940 color observations across 276 accepted native helper contexts. Paths,
+spans, raw bytes and all finite-channel results match. Eight-worker replay
+matches serial output for every owned context. Two fresh processes produce
+identical packets for all 449 parent and 252 style contexts, matching Source
+byte for byte. These views reuse already counted input bytes. Packed COLORREF
+conversion, native comparison and loaded-state policies remain separate work.
+
+
+The integrated raw-color views passed all 62 strict reference checks. The first
+full run exposed a new-report filename collision; the original reference was
+restored byte for byte and the new packet report received a separate name. The
+corrected run used no baseline-writing flag. [RGBA verification](rgba-operation-verification.json)
+retains both the failed-run finding and the passing replay, alongside all twelve
+color tests, four collector guards, Clippy and fresh-process byte comparisons.

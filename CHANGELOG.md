@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added shared raw RGBA views for parent dialogs and PostStyle bodies with complete color spans and finite-channel values. (#166)
+
 - Added typed ContourType conversions, explicit plot-context defaults and the bounded four-word PostInfo render comparison. (#166)
 
 - Added named PostInfo slot and header views with preserved unknown codes, raw vectors and exact D sign-bit aliases. (#166)

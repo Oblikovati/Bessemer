@@ -697,3 +697,11 @@ optional plot-type context; they do not inspect runtime objects or rewrite a
 document. `SimulationPostInfo::diff_ogl_render` compares the four stored header
 words selected by that named routine. It leaves cut primitives and active counts
 out of that bounded comparison.
+
+
+`SimulationPostDialog::colors` and `SimulationPostStyle::colors` expose outer
+stored RGBA colors with their structural paths and complete body spans,
+including legacy color regions. `SimulationRgbaColor` preserves all four scalar
+patterns and reconstructs exactly sixteen bytes. Its named-channel accessor
+returns numeric values only for finite patterns, preserving signed zero and
+subnormal values. Colors are not clamped or normalized.

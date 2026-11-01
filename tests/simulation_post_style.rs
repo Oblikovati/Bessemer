@@ -21,6 +21,10 @@ const LIMITS: SimulationPostStyleLimits = SimulationPostStyleLimits {
 };
 const EXPECTED: &[u8] = include_bytes!("fixtures/simulation-post-dialog/projection.bin");
 
+#[path = "support/post_color_views.rs"]
+mod color_expectations;
+#[path = "simulation_post_style/colors.rs"]
+mod colors;
 #[path = "simulation_post_style/contracts.rs"]
 mod contracts;
 #[path = "simulation_post_style/text_limits.rs"]
