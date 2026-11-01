@@ -90,10 +90,26 @@
     "New public operation API or stub"
   ],
   "pending": [
-    "Complete full194 Source gate",
     "Complete local operation with typed reached runtime and endpoint dependencies",
     "Exact publication-cut PR validation and five platform gates",
     "Remaining feature166 schemas and integration"
   ],
-  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 194,
+    "seconds": 517.964,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "74a56d6195f7b1285bcf4da9231d45d394fea890",
+    "log": {
+      "path": "target/segment-color-source-full.log",
+      "bytes": 46321,
+      "sha256": "07f68a35b76a3cc9badb1df0e3a40c05ed58c96798c6ec318bc73de86ce7facc"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 621169,
+      "sha256": "7fe24119ece7c25e571a3aceb06e3f0cce60db7af289b79fcab4a536bbdc8de0"
+    }
+  }
 }
