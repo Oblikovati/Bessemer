@@ -1,0 +1,94 @@
+{
+  "issue": 166,
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "scope": "C893 conditional1DC RGB candidate and runtime triple-array submission evidence",
+  "target_executed": false,
+  "original_binary_written": false,
+  "complete_method_instruction_counts": [
+    371,
+    133
+  ],
+  "independent_method_instructions": 504,
+  "independent_thunk_instructions": 1,
+  "thunk": {
+    "start": "0x18018ae40",
+    "target": "0x18018a870",
+    "bytes": "e92bfaffff"
+  },
+  "candidate_default_rgb_bits": [
+    "0x3f000000",
+    "0x3f000000",
+    "0x3f000000"
+  ],
+  "mode3_requirement": "signed raw1B8 exactly3",
+  "group_replacement": "mode!=3 or face==0x405; face0x404 selects first group color, otherwise other color",
+  "submission": {
+    "count": 1,
+    "index": 5,
+    "stride_bytes": 12,
+    "destination_offset_bytes": 60,
+    "actual_update_observed": false
+  },
+  "native_contexts": 276,
+  "native_mode_counts": {
+    "1": 255,
+    "0": 9,
+    "2": 9,
+    "3": 3
+  },
+  "native_distinct_rgb": 2,
+  "owned_contexts": 425,
+  "owned_present": 405,
+  "owned_missing": 20,
+  "additional_stored_byte_credit": 0,
+  "targeted_source": {
+    "checks": 15,
+    "seconds": 5.292,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/mode3-rgb-source-strict.log",
+      "bytes": 2297,
+      "sha256": "ce31f48ca08a64c8637e55138990ec7d2482c7026e89f5f98dc422b847c5f47b"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/mode3-rgb-source-snapshot.json",
+      "bytes": 619209,
+      "sha256": "26c93ff49dbabf4a4f7bea88192be4d9789a4a5724b3e49f7fe4e7205dc1de05"
+    }
+  },
+  "installed_proof": "mode3-rgb-installed-reference.json",
+  "independent_decoder": "mode3-rgb-rea-reference.json",
+  "normalization": {
+    "scope": "Opt-in arithmetic unit-scale addressing with negative offsets; complete instruction bytes/digests still required",
+    "changed_scales_rejected": true,
+    "changed_offsets_rejected": true,
+    "initial_capture": {
+      "path": "target/mode3-rgb-bindings-initial.log",
+      "bytes": 1814,
+      "sha256": "cfa62816fad41dc1da0e1458385bac6c048cbbcf92bd7e130a3797808424f0fc"
+    }
+  },
+  "oracle_kinds": [
+    "Complete caller/helper byte, operand and interval comparison",
+    "Exact copy import and five-byte relative jump",
+    "Independent complete Ghidra instruction locations, contiguous byte extents and thunk target",
+    "All276 original stream identities, signed modes and complete raw1DC colors",
+    "All425 owned bodies with exact EOF and20 opaque legacy absences",
+    "Negative scale/offset spelling regressions"
+  ],
+  "excluded": [
+    "Native execution, observed face codes or successful triple submission",
+    "Fourth word consumption by the three-word copy",
+    "Geometry membership, complete rendering, UI labels or universal scene policy",
+    "Replacing serialized1DC with selected group RGB"
+  ],
+  "pending": [
+    "Full201 Source gate",
+    "Complete local candidate/group-selection and array-update operation with explicit reached runtime facts",
+    "Exact publication-cut PR validation and five platform gates",
+    "Remaining feature166 schemas and integration"
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+}
