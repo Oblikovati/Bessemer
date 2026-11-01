@@ -64,12 +64,20 @@ def verify_end_cell_rgb_anchors(method: dict[str, object]) -> None:
     """Bind RGB copies separately from preserved stored alpha and unmodeled geometry; e.g. verify_end_cell_rgb_anchors(method)."""
     ordered_end_cell_anchors(method, ['1800e0480 mov eax, dword ptr [r14 + 0x14]',
         '1800e050c movss xmm0, dword ptr [r14 + 0xec]',
+        '1800e0515 movss dword ptr [rbp + 0x88], xmm0',
         '1800e051d movss xmm1, dword ptr [r14 + 0xf0]',
-        '1800e052e movss xmm0, dword ptr [r14 + 0xf4]', '1800e056e call 0x18029fb60',
+        '1800e0526 movss dword ptr [rbp + 0x8c], xmm1',
+        '1800e052e movss xmm0, dword ptr [r14 + 0xf4]',
+        '1800e0537 movss dword ptr [rbp + 0x90], xmm0',
+        '1800e0559 lea r8, [rbp + 0x88]', '1800e056e call 0x18029fb60',
         '1800e0f38 mov eax, dword ptr [rsi + 0x14]',
         '1800e0fc3 movss xmm0, dword ptr [rsi + 0xec]',
+        '1800e0fcb movss dword ptr [rbp + 0x98], xmm0',
         '1800e0fd3 movss xmm1, dword ptr [rsi + 0xf0]',
-        '1800e0fe3 movss xmm0, dword ptr [rsi + 0xf4]', '1800e1022 call 0x18029fb60'])
+        '1800e0fdb movss dword ptr [rbp + 0x9c], xmm1',
+        '1800e0fe3 movss xmm0, dword ptr [rsi + 0xf4]',
+        '1800e0feb movss dword ptr [rbp + 0xa0], xmm0',
+        '1800e100d lea r8, [rbp + 0x98]', '1800e1022 call 0x18029fb60'])
 
 
 def verify_legend_end_cell_rea_capture() -> None:

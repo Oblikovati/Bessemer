@@ -22,9 +22,41 @@ identities, owned parents and all eight original catalog/style/color checks.
 The [verification record](legend-end-cell-verification.json) records executed
 gates and exact evidence hashes.
 
-This slice establishes evidence only. A typed conditional operation, independent
-geometry and floating-point projections, broader UI activation and the remaining
-feature166 obligations remain pending. It adds no stored-byte coverage credit
-and does not expand the original prefix-only admission scope.
+`legend_end_cell_inputs` exposes the optional signed flag and full raw color on
+complete dialog and PostStyle snapshots. It retains absence and supplies no live
+initialization defaults.
+
+`SimulationLegendEndCellRuntime::project_end_cell` requires actual read-time
+plot524 first, E8 only after a nonzero plot word, and EC only after a nonzero E8.
+A zero gate completes without an RGB result. An unknown reached fact returns a
+typed missing-dependency error. Active results copy the first three raw color
+words without floating arithmetic; all supplied parents, including unused alpha,
+remain in immutable derived history. Coverage records the reached reads, exact
+local pattern checks and zero pattern error. It excludes pointer, geometry and
+renderer validation.
+
+The operation corpus crosses every presence combination, signed boundaries and
+raw color classes, with generated cases. Parent projections retain all425 owned
+and276 native contexts plus184 complete flag/color mutations. Eight explicitly
+hypothetical contexts per parent include different later colors; the operation
+never assumes that a stored value survives earlier native helpers unchanged.
+The [operation record](legend-end-cell-operation-verification.json) and
+[process proof](legend-end-cell-process-verification.json) record execution and
+remaining gates separately from the evidence checkpoint.
+
+The strict Source replay passed18 checks in7.508seconds and exited successfully
+after snapshot recording and cleanup. Nine owned Rust tests passed, followed by
+the complete native-parent test. Eight-worker results matched serial results.
+Two fresh Rust processes matched all91,182 independent expected words byte for
+byte. Clippy passed across all targets and features with warnings denied.
+
+Run the owned Rust checks with `cargo test --test simulation_legend_end_cell`.
+Native replay additionally requires fresh packets from the pinned Source gate;
+its test is explicitly ignored in an ordinary checkout. The full publication
+gate, including ThreadSanitizer, remains separate from these local checks.
+
+Independent geometry and floating-point projections, broader UI activation and
+the remaining feature166 obligations remain pending. This adds no stored-byte
+coverage credit and does not expand the original prefix-only admission scope.
 
 Humanizer is unavailable in this checkout; maintainer prose review remains pending.

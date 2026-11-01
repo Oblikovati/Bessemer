@@ -1,0 +1,27 @@
+{
+  "issue": 166,
+  "behavior_version": "C853-local-gate-rgb-v1",
+  "platform": "Windows x64",
+  "operation_cases": 7232,
+  "complete_parents": 885,
+  "hypothetical_contexts_per_parent": 8,
+  "words": 91182,
+  "oracle": "Independent two-predicate short-circuit truth table, exact first-three-word copy identity and complete parent optional raw fields",
+  "executable_sha256": "9bc80032999b7032f94a0cab28c5af4f470e9bf81b459299ac4a484bcafad484",
+  "runs": [
+    {
+      "process": 1,
+      "exit_code": 0,
+      "bytes": 364728,
+      "sha256": "6b9d71010d70cc35e853f6165b8b2f19cf290f077c519423dcfc360bad8b0f10"
+    },
+    {
+      "process": 2,
+      "exit_code": 0,
+      "bytes": 364728,
+      "sha256": "6b9d71010d70cc35e853f6165b8b2f19cf290f077c519423dcfc360bad8b0f10"
+    }
+  ],
+  "comparison": "Both fresh Rust processes matched all91182 independent expected words byte for byte; exact export-test execution checked",
+  "native_executed": false
+}
