@@ -1,0 +1,32 @@
+{
+  "feature_issue": 159,
+  "behavior_profile": 1,
+  "strict_reference_checks": 33,
+  "exit_code": 0,
+  "process_reaped": true,
+  "original_occurrences": 249,
+  "original_logical_bytes": 842326,
+  "original_arguments": 254,
+  "original_accepted": 251,
+  "original_rejected": 3,
+  "refinement_reports": 3,
+  "refinement_occurrences_each": 378,
+  "refinement_arguments_each": 397,
+  "owned_cases": 2284,
+  "owned_versions": 113,
+  "owned_logical_bytes": 2954046,
+  "owned_sha256": "274b331549056eb167b56ee567573930831b27bb9a385ee434d0b02fbaa740e4",
+  "native_packet_sha256": "d82fe6f6ad7d42a798a033873e2408e758821df5676bf1463b3d2db2bbb7a70a",
+  "source_snapshot_identity": "02cf43d6709f55d2fc407a31551efaf9af633f4d3d0e0b86b9db2133c583c566",
+  "strict_log_sha256": "1227c8962d0b9df59481bf0fd5ccb44a499c85d32182cc9fb4f2d0037aff5b70",
+  "historical_native_outcomes_unchanged": true,
+  "current_refinement_source_verified": true,
+  "historical_test_source_recovered": false,
+  "production_api_added": false,
+  "exclusions": [
+    "Primitive field and history oracles remain pending.",
+    "Historical shell test bytes are unavailable; current pinned tests and all historical native outcomes are verified.",
+    "Typed production operations and all local/platform integration gates for this feature remain pending.",
+    "Native writer/application and geometry acceptance remain unproven."
+  ]
+}

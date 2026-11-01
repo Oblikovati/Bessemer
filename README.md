@@ -621,3 +621,9 @@ construction and isolated typed edits. Explicit reader/writer profiles retain
 conditional fields, raw double bits, optional writer tails and delegated ID
 archives. The historical four-byte Extra remains an error; see
 [the composite evidence](docs/features/simulation-shell-composite/README.md).
+
+Shells and MidSurfShells Property bodies support complete reads, construction and
+isolated edits, including scoped inline Material fields and reference archives.
+Newest nonempty layers require explicit lookup-presence context. Their descriptor
+flags retain raw values and ordered bodies; see
+[the shell Property evidence](docs/features/simulation-shell-property/README.md).

@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added complete Shells and MidSurfShells Property reads, construction and isolated edits with explicit layer context, scoped inline Material fields, aggregate budgets and ordered histories. (#159)
+
 - Added complete shell composite read, construction and isolated edits with explicit reader/writer profiles, delegated ID archives, bounded resources and ordered history. (#157)
 
 - Added complete ShellManager headers and direct group records with explicit late-field profiles, retained MFC string frames, aggregate budgets and isolated edit history. (#156)
