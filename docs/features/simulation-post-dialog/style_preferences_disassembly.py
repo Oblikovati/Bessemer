@@ -82,7 +82,7 @@ def native_style_disassembly(image: pefile.PE, start: int, end: int) -> list[Sty
 def canonical_style_address_operands(mnemonic: str, text: str) -> str:
     """Normalize only exact zero displacement and unit-scale address identities; e.g. canonical_style_address_operands('lea', 'rax,[rbp+0]')."""
     normalized = canonical_style_operands(mnemonic, text)
-    return normalized.replace('+0]', ']').replace('*1+', '+').replace('*1]', ']')
+    return normalized.replace('+0]', ']').replace('*1+', '+').replace('*1]', ']').replace('*1-', '-')
 
 
 def decoded_style_preference_method(image: pefile.PE, method: dict[str, object], normalize_address_spelling: bool = False) -> list[StylePreferenceInstruction]:
