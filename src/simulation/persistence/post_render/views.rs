@@ -53,7 +53,7 @@ fn gate_from_snapshot<T: BinaryLoadSnapshot>(
     })
 }
 
-fn render_word<T: BinaryLoadSnapshot>(snapshot: &T, path: &str) -> Result<i32> {
+pub(super) fn render_word<T: BinaryLoadSnapshot>(snapshot: &T, path: &str) -> Result<i32> {
     let value = snapshot
         .fields()
         .iter()

@@ -442,3 +442,29 @@ projections. Eight-worker replay matched serial results, and two fresh processes
 matched all 22,644 model decisions against Source byte for byte.
 [Rendering-policy verification](render-policy-operation-verification.json) records
 the exact evidence, exclusions and remaining publication checks.
+
+`SimulationOffsetRequestInputs` models NeedOffset without supplying an invented
+word48. Style1B8 values1/2 decide the result directly. Other modes require an
+explicit word48 and return true only for exactly1. The parent projection preserves
+absent older word48 values, and a required absent value returns a typed error.
+
+`SimulationFringeOptionView` retains stored words14/48, the fringe return code
+and word48 after a modeled GetFringeOption call. A nonzero14 with unsigned48 at
+most1, or signed48 equal5, yields runtime48 equal6. The zero14 branch maps48
+values0/1/4 to codes0/1/2 and other values to3. Other nonzero14 cases return0 for
+48 equal4 and1 otherwise, without changing48. Numeric UI labels remain unknown.
+
+These runtime transitions do not edit stored bytes. With mode0, nonzero14 and
+initial48 equal1, NeedOffset is true before the modeled fringe call and false
+after its6 assignment. That is an explicit conditional example, not an observed
+application call sequence. Native replay preserves all224 offset decisions and
+208 fringe states; sixteen older dialogs remain outside the fringe model rather
+than receiving a guessed runtime default.
+
+The offset/fringe implementation passed eight Rust checks, all-target Clippy
+and all 109 integrated reference checks. Independent fixtures cover 9,075 offset
+cases, 8,639 fringe cases and every complete owned/native parent projection.
+Eight workers matched serial results; two fresh processes matched all 18,146
+model cases and their 80,075 output words against Source byte for byte.
+[Offset/fringe verification](offset-fringe-operation-verification.json) records
+the exact native inputs, transitions, missing-state exclusions and remaining gates.
