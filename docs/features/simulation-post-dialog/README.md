@@ -515,3 +515,6 @@ precision consumers while keeping packed color and rendering arguments separate
 from unproved stored-color or contour-code identities.
 Its typed local projections preserve entry/later count separation, saturated
 temporary-size requests, packed constructor bits and raw lighting decisions.
+
+The [end-cell evidence](legend-end-cell.md) preserves the E8/EC pair and its
+separate runtime activation gate, including both RGB consumer branches.
