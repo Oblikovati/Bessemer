@@ -418,3 +418,27 @@ states include 17 with matched nonzero A8, whose later-field mutations preserve
 the comparator's continued checks.
 [Legend comparison verification](legend-comparison-operation-verification.json)
 records the exact revisions, assumptions, logs and remaining publication work.
+
+The named Layer0_RenderBody gate retains the signed suppression word and requires
+the caller to supply runtime plot presence. It enters only when a plot object is
+present and the suppression word equals zero. Nonzero words remain unchanged.
+Both complete parent and standalone style objects expose this view; pre700006
+styles use the independently bound legacy legend A0-to-A8 mapping. Passing the
+entry gate does not prove that drawing occurred or identify a UI option.
+
+`SimulationModelTessellationInputs` retains the six explicit signed controls used
+by NeedModelTess. A nonzero style21C overrides the remaining decision. Otherwise,
+the hidden-parts branch requires a nonzero option, zero dialog518 and an unsigned
+style1F0 value of at most one. The remaining numeric branches are plot types4/65,
+or type53 with word18 equal2. These are request predicates, without a claim that
+meshes were generated. The parent projection requires all six stored controls;
+an absent older hidden-option field returns a typed missing-state error. Callers
+with actual loaded runtime state can supply the six values explicitly.
+
+The two rendering policies passed seven Rust tests, all-target Clippy and all 99
+integrated reference checks. Independent packets cover 872 gate cases and 21,060
+tessellation cases, all original native states and all 701 complete parent/style
+projections. Eight-worker replay matched serial results, and two fresh processes
+matched all 22,644 model decisions against Source byte for byte.
+[Rendering-policy verification](render-policy-operation-verification.json) records
+the exact evidence, exclusions and remaining publication checks.
