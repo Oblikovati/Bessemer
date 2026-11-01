@@ -1,0 +1,113 @@
+{
+  "issue": 166,
+  "behavior_version": "C885-raw-style-preferences-v1",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "kernel_decision": "Retain optional raw uint32 state, explicit initializer assignments, exact local four-word transfers and two-word copy effects. Require caller pointer context and preserve all other words without inferred file defaults or UI restrictions.",
+  "target_executed": false,
+  "initializer_words": 12,
+  "raw_preference_transfers": 4,
+  "copy_words": 2,
+  "pointer_contexts": 443,
+  "presence_profiles": 26,
+  "policy_contexts": 11518,
+  "owned_complete_contexts": 425,
+  "native_complete_contexts": 276,
+  "original_native_observations": 276,
+  "additional_stored_byte_credit": 0,
+  "rust": {
+    "checks": 7,
+    "failed": 0,
+    "ignored": 0,
+    "seconds": 0.2,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/raw-preferences-rust-final.log",
+      "bytes": 925,
+      "sha256": "6eef3e2f71e205c028cd3e5edd7a0b32f95b1dbc001710bb6a6852da53aeb6be"
+    }
+  },
+  "clippy": {
+    "scope": "all-targets all-features -D warnings",
+    "result": "passed",
+    "seconds": 27.89,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/raw-preferences-clippy-final-cut.log",
+      "bytes": 136,
+      "sha256": "1971bcd6cfbce9c8b30cbceb6a22bc3cf0884b20b6af558d9debc11e54cd9893"
+    }
+  },
+  "targeted_source": {
+    "checks": 7,
+    "seconds": 8.679,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/raw-preferences-policy-source-strict.log",
+      "bytes": 1471,
+      "sha256": "9556597437d065796b652eed1eb80d3e77afcd4a84343d9bbb98e117ce923d96"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/raw-preferences-source-snapshot.json",
+      "bytes": 553003,
+      "sha256": "5800191748f90ce313cf35967987784fc0fa39efee4347aa16efe19b848ed478"
+    }
+  },
+  "full_source": {
+    "checks": 144,
+    "seconds": 523.747,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/raw-preferences-source-full.log",
+      "bytes": 36988,
+      "sha256": "3768d4658d4de8a32e21bbb0433c2ec7b6d06278f36229511dce2c4c492db136"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 560243,
+      "sha256": "35536e61157db2f402480b108cf7e3369c9284d9d964f1deec52aec307cff361"
+    }
+  },
+  "packet_references": [
+    "raw-preferences-native-reference.json",
+    "raw-preferences-projection-reference.json",
+    "raw-preferences-policy-reference.json"
+  ],
+  "concurrency_workers": 8,
+  "concurrency_scope": "All owned policy cases and all425 complete owned parent/style views",
+  "process_proof": "raw-preferences-process-verification.json",
+  "process_logs": [
+    {
+      "path": "target/raw-preferences-process-1-final.log",
+      "bytes": 189,
+      "sha256": "173bd1574b00b1358ce4503e2128c2264ec970716dd00f1edf6cc4ea28dc70b0"
+    },
+    {
+      "path": "target/raw-preferences-process-2-final.log",
+      "bytes": 189,
+      "sha256": "be9f4199bed4c6a8941ff7188f4acb4f725d55ab8952209c20c17064e528ccb2"
+    }
+  ],
+  "oracle_kinds": [
+    "All original C885 source pins and exact qualified historical native-color-report transition",
+    "Complete installed method bytes, decoded instruction lists, named exports and contiguous byte coverage",
+    "Exact split initializer stores, runtime preference load/export offsets and copy-pair stores",
+    "Bounded tracing of actual local gate instructions over443 pointer contexts, including critical70/73 and neighbors",
+    "All276 original native identities, wire offsets, raw values and initializer counterexamples from complete bytes",
+    "Optional-field matrices, byte isolation, eight-worker and two-fresh-process exact replay"
+  ],
+  "excluded": [
+    "Native SolidWorks execution or actual per-file setter invocation",
+    "Treating initialization as file defaults or valid-value sets",
+    "Inferred current runtime pointers or missing legacy migration values",
+    "Whole preference-method completion, inherited legend effects and named transfers outside C885",
+    "Inferred UI labels or values beyond separately bound later consumer roles"
+  ],
+  "pending": [
+    "Latest complete publication-cut PR and cross-platform/ThreadSanitizer gates",
+    "Composition of inherited/named preference effects and remaining rendering/style roles"
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+}

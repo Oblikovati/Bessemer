@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added raw PostStyle word views, explicit initializer assignments and local preference transitions with preserved missing state. (#166)
+
 - Added the conditional local rendering predicate over exact stored counts and position bits, with explicit missing legacy state. (#166)
 
 - Added numeric unit selection with explicit optional runtime context, exact ActualFreqDispFlag gating and typed missing-context results. (#166)
