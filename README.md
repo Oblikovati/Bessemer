@@ -705,3 +705,11 @@ including legacy color regions. `SimulationRgbaColor` preserves all four scalar
 patterns and reconstructs exactly sixteen bytes. Its named-channel accessor
 returns numeric values only for finite patterns, preserving signed zero and
 subnormal values. Colors are not clamped or normalized.
+
+
+`SimulationRgbaColor::from_colorref_nearest_even` models the packed constructor:
+the low three bytes supply RGB and alpha becomes one. The high byte is ignored.
+`assigned_colorref_nearest_even` models the separate assignment overload and
+preserves every existing alpha bit. Integer rounding reproduces the specified
+binary32 nearest-even model independently of ambient floating-point state. These
+supplementary values leave the original stored color available to the caller.
