@@ -481,3 +481,7 @@ registry setting that may not apply to the file.
 
 The [local rendering predicate](local-render-predicate.md) exposes C-884's four
 inputs without interpreting its result as complete rendering safety or validity.
+
+The [raw style preference model](raw-style-preferences.md) separates stored
+optional words, explicit initialization and the four raw local
+preference transfers. It retains raw bits and requires caller pointer context.
