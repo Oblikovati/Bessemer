@@ -35,3 +35,5 @@ pub(super) use values::{
     require_kind as info_require_kind, to_wire_fields as info_to_wire_fields,
     wire_value as info_wire_value,
 };
+
+pub(super) use decode::read as read_postinfo;

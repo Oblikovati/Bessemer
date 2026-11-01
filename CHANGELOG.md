@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added complete versioned DGXPOST dialog reads, construction and isolated typed edits with bounded reference archives and ordered provenance. (#166)
+
 - Added complete versioned PostStyle reads, construction and isolated edits with legacy style/legend partitions, exact color bits and atomic character text. (#166)
 
 - Added complete fixed-slot PostInfo reads, construction and isolated edits with preserved float32 patterns and the exact version700002 character-text suffix. (#166)

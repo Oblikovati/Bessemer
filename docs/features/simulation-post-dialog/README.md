@@ -172,7 +172,7 @@ and eight-worker replay. Native replay matches all 120 retained Style candidates
 52 accepted / 14,768 bytes and 68 rejected; all 52 successes are caller-compatible
 in this cohort. The complete native field and literal edit-history expectations
 match byte for byte. Full Style PR/platform acceptance remains pending, as do the
-parent-dialog codec, remaining bounded views and expanded legacy mismatch cohort.
+complete parent-dialog acceptance, remaining bounded views and expanded legacy mismatch cohort.
 
 The parent edit oracle now records every one of 117,435 physical field mutations
 across all 225 owned dialog contexts. Both complete grammar acceptance and
@@ -188,3 +188,67 @@ complete original inputs and primitive expectations remain frozen separately.
 [Edit-oracle verification](edit-matrix-verification.json) records input/output
 hashes, exact counts, completed Rust checks and remaining acceptance work. Parent
 prefix and expanded concurrency acceptance are tracked separately.
+
+
+The full strict replay now passes 59 checks, including independent resource
+counts for all 225 owned parent contexts. The resource packet records outer
+bytes, fields, variable entries and text payloads, plus per-root embedded byte,
+field and new-object maxima. Nested coverage totals remain separate from those
+per-root limits. Rust accepts each exact budget and rejects one below during
+both reading and construction. [Resource verification](resource-verification.json)
+records packet, snapshot and verification-log hashes. These checks do not claim
+application acceptance or geometry validation; complete parent acceptance is
+still in progress.
+
+
+A separate pinned Source replay checks complete boundary inputs for five
+collection roles and every reached opaque-byte role. It replaces existing
+collection records before inserting literal records, retaining the complete
+suffix. Negative lengths and counts, exact caps, and one above each cap have
+independent outcomes in [the boundary reference](cap-reference.json). The
+collection cap is 10,000; reference blobs allow 1,000,000 bytes and legacy list
+payloads allow 1,048,576 bytes. These targeted checks supplement the full gate.
+
+
+The parent codec uses the complete versioned grammar and requires EOF. It reuses
+the Info and Style field readers while applying the parent text caps and scoped
+reference archive dialect. Published inputs and results own immutable bytes and
+fields. Construction reparses the complete supplied shape; isolated edits return
+the selected field result together with unchanged inputs, diagnostics, coverage
+and ordered outer/nested provenance. All 21 checks in the first expanded parent
+run passed, alongside 13 Info and 14 Style checks. The exhaustive parent checks
+covered 117,435 changed requests, the same number of no-ops, every proper prefix
+of the owned bodies, and eight-worker replay. [Focused verification](parent-focused-verification.json)
+records the counts and remaining acceptance work. Later bounded consumer views
+remain part of issue #166.
+
+
+Nine populated reference roles also have independent whole-record count
+controls. Each complete 10,000-record body is accepted by both readers and can
+be reconstructed by Rust; negative counts and 10,001-record bodies fail. The
+controls repeat an accepted complete record, including its scoped embedded
+archives, and retain the original suffix. Their outer byte and field budgets
+allow the full input so the count check is tested independently. See
+[the reference-count evidence](reference-cap-reference.json).
+
+
+Two fresh processes produced identical complete field and edit-history packets
+for all 449 parent contexts: 225 owned and 224 native. Both outputs also match
+the independent Source expectations byte for byte. The history packet retains
+other helper contexts as passthrough framing; those add no parent runtime
+coverage. [Process verification](process-pair-verification.json) records sizes,
+hashes and exclusions.
+
+
+The full strict reference replay passes all 61 checks after integrating both
+resource denominators and complete reference-count boundaries. The
+[resource verification record](resource-verification.json) retains the latest
+snapshot and log hashes alongside the earlier 59- and 60-check runs.
+
+
+The parent codec passed the local PR gate: 3,561 tests passed, none failed,
+and 118 were ignored. Two later parent archive-boundary tests and the expanded
+public-type thread-safety assertions passed separately; the final all-target
+Clippy run also passed. [Operation verification](parent-operation-verification.json)
+records the gate scope, logs and remaining cross-platform acceptance. The
+consumer views remain a separate implementation step under the same issue.
