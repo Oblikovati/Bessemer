@@ -65,10 +65,26 @@
     "Unmasked or non-nearest-even native floating environment claims"
   ],
   "pending": [
-    "Full212 Source gate",
     "Typed immutable preference-color operation with explicit runtime/source dependencies and original/projected provenance",
     "Independent packed/alpha/bounds fixtures, constructor/source isolation, concurrency and fresh-process validation for the operation",
     "Remaining feature166 schemas and exact publication-cut PR/platform gates"
   ],
-  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 212,
+    "seconds": 434.935,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "8d5f3c5de7c2600835f722e0b2e81f21a58d9c96",
+    "log": {
+      "path": "target/preference-color-source-full.log",
+      "bytes": 49624,
+      "sha256": "bddd9d579124ac62d92b68f1d027f7fa409d96c0fb290bd51f099118c9536b51"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 632134,
+      "sha256": "be362983346560f5f0635572d246aad5bb5cd6246b7bfc3f9499225b413a2200"
+    }
+  }
 }
