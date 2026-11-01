@@ -713,3 +713,11 @@ the low three bytes supply RGB and alpha becomes one. The high byte is ignored.
 preserves every existing alpha bit. Integer rounding reproduces the specified
 binary32 nearest-even model independently of ambient floating-point state. These
 supplementary values leave the original stored color available to the caller.
+
+
+`SimulationRgbaColor::colorref_nearest_even` provides the documented conditional
+packed export. RGB multiplication, signed truncation and low-byte wrapping use
+integer arithmetic; alpha is ignored. The outcome retains the original color
+and either a packed value or a typed channel/domain exclusion. Nonfinite,
+nonzero subnormal and overflowing/out-of-range RGB inputs produce no packed
+value under this model.
