@@ -73,9 +73,25 @@
     "Implicit wire edits or filling unavailable versioned colors"
   ],
   "pending": [
-    "Full214 Source gate",
     "Exact publication-cut PR validation and allfive platform checks",
     "Remaining feature166 documented schemas and integration"
   ],
-  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 214,
+    "seconds": 431.728,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "7b60b922db72323b192d8581186deab09c84b71a",
+    "log": {
+      "path": "target/preference-color-operation-source-full.log",
+      "bytes": 50062,
+      "sha256": "d187c3752aa0a5be4c8b46aca8b407b6c49f733a0471fb6b4383e663f0e841f5"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 632134,
+      "sha256": "251e2309d6dc385d748d8ec206be0b12585356bf28b716f2cb75e8db95e87121"
+    }
+  }
 }

@@ -88,5 +88,6 @@ two fresh processes matched all2,584,032 independently expected bytes. The stric
 Source suite passed20 checks in7.120seconds and exited after snapshot recording.
 The [operation proof](preference-color-operation-verification.json) and
 [process proof](preference-color-process-verification.json) retain exact scope,
-hashes and exclusions. The full214 Source gate, exact publication checks and
+hashes and exclusions. The full Source suite passed214 checks in431.728seconds
+and exited successfully after snapshot recording. Exact publication checks and
 remaining documented feature166 models still need their acceptance evidence.
