@@ -70,8 +70,10 @@ def hidden_migration_functions() -> tuple[Callable[[], None], ...]:
     """Keep complete reader provenance, native qualifications and byte-store semantics together; e.g. hidden_migration_functions()."""
     from hidden_migration_bindings import verify_hidden_migration_bindings, verify_hidden_migration_rea_capture
     from hidden_migration_projection import verify_hidden_migration_native, verify_hidden_migration_owned
+    from hidden_migration_packets import verify_hidden_operation_packets, verify_hidden_projection_packets
     return (verify_hidden_migration_sources, verify_hidden_migration_bindings, verify_hidden_migration_rea_capture,
-        verify_hidden_store_policy, verify_hidden_migration_native, verify_hidden_migration_owned)
+        verify_hidden_store_policy, verify_hidden_migration_native, verify_hidden_migration_owned,
+        verify_hidden_operation_packets, verify_hidden_projection_packets)
 
 
 def run_hidden_migration_checks() -> unittest.TestResult:

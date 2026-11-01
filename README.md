@@ -742,6 +742,11 @@ reads and copies RGB bits without consuming alpha or validating geometry.
 requires actual entry font and selector facts, returns each exact binary32 stage
 under explicit nearest-even rounding, and retains native branch identities.
 
+`hidden_parts_migration_inputs` preserves the original version and stored 1F0.
+Its [legacy load projection](docs/features/simulation-post-dialog/hidden-migration.md)
+returns both derived runtime words and exact store coverage for versions
+700006..840007, retaining original values and leaving source bytes unchanged.
+
 `legend_step_inputs` preserves the optional FC layout switch. The separate
 [`SimulationLegendStepRuntime::step_availability`](docs/features/simulation-post-dialog/legend-step.md)
 operation requires explicit runtime plot words, retains raw signed BEC returns

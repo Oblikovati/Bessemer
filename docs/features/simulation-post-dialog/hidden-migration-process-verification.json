@@ -1,0 +1,27 @@
+{
+  "issue": 166,
+  "behavior_version": "C856-hidden-parts-load-v1",
+  "platform": "Windows x64",
+  "operation_cases": 4336,
+  "complete_parents": 841,
+  "hypothetical_contexts_per_parent": 8,
+  "words": 90194,
+  "oracle": "Frozen migration policy plus independent little-endian stores/unsigned decrement/version scope and complete optional parent words",
+  "executable_sha256": "cc4467069a15c5df23594141abf4a8bc05734e96a0e554ba515cb0f7dadad816",
+  "runs": [
+    {
+      "process": 1,
+      "exit_code": 0,
+      "bytes": 360776,
+      "sha256": "e8ed35eac8f80241857f60d54fc3fc947a55e756225b83765192091f807b599d"
+    },
+    {
+      "process": 2,
+      "exit_code": 0,
+      "bytes": 360776,
+      "sha256": "e8ed35eac8f80241857f60d54fc3fc947a55e756225b83765192091f807b599d"
+    }
+  ],
+  "comparison": "Both fresh Rust processes matched all90194 independent expected words byte for byte; exact export-test execution checked",
+  "native_target_executed": false
+}
