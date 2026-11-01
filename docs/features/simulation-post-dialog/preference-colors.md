@@ -55,7 +55,8 @@ qualifications remain unchanged. These observations add no newly decoded bytes.
 
 The strict targeted suite passed18 checks in5.785seconds and its process exited
 successfully after snapshot recording. The [verification proof](preference-color-evidence-verification.json)
-records exact hashes, qualifications and remaining gates.
+records exact hashes, qualifications and remaining gates. The full Source suite
+passed212 checks in434.935seconds and its process exited successfully.
 
 ## Remaining operation work
 
