@@ -1,0 +1,97 @@
+{
+  "issue": 166,
+  "behavior_version": "C876-C877-offset-fringe-v1",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "kernel_decision": "Decide offset modes 1/2 before requiring optional runtime word48; preserve original words and model fringe local mutation separately, including observable conditional call order.",
+  "target_executed": false,
+  "synthetic_offset_cases": 9075,
+  "synthetic_fringe_cases": 8639,
+  "original_native_offset_cases": 224,
+  "original_native_fringe_cases": 208,
+  "missing_native_fringe_states": 16,
+  "owned_complete_contexts": 225,
+  "native_complete_contexts": 224,
+  "native_complete_bytes": 496979,
+  "additional_stored_byte_credit": 0,
+  "rust": {
+    "checks": 8,
+    "failed": 0,
+    "ignored": 0,
+    "log": {
+      "path": "target/offset-fringe-rust.log",
+      "bytes": 978,
+      "sha256": "3d25d6f8a28492333b83890aff4a49418e791d079366463845f62877e5d5aaca"
+    }
+  },
+  "clippy": {
+    "path": "target/offset-fringe-clippy.log",
+    "bytes": 136,
+    "sha256": "a6b94ddf65031948cbbe19914387c7209640651adcc75c12eb658943a833ee55"
+  },
+  "source_initialization": {
+    "checks": 12,
+    "seconds": 7.126,
+    "log": {
+      "path": "target/offset-fringe-source-write.log",
+      "bytes": 2040,
+      "sha256": "73da0f4b7538634840c9402583070798d1dda00a3a149f3ab8964976e05cedbe"
+    }
+  },
+  "source_strict": {
+    "checks": 12,
+    "seconds": 10.588,
+    "log": {
+      "path": "target/offset-fringe-source-strict.log",
+      "bytes": 2041,
+      "sha256": "7526610a0de0aa2dba592d539738565d6fedf5fb0dba751e5fb69dcf750ecf09"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/offset-fringe-source-snapshot.json",
+      "bytes": 536736,
+      "sha256": "909f910595e43c514795647ad8154e1835b8d252568e788a66e077a7c8822149"
+    }
+  },
+  "packet_references": [
+    "offset-fringe-packets-reference.json",
+    "offset-fringe-native-reference.json",
+    "offset-fringe-projection-reference.json"
+  ],
+  "concurrency_workers": 8,
+  "process_proof": "offset-fringe-process-verification.json",
+  "oracle_kinds": [
+    "Pinned independent Source models",
+    "Complete original native identities, wire offsets, raw controls and results",
+    "Full named installed method leaves and exports",
+    "Signed-neighbor matrices with optional required state",
+    "Source-derived pre/post decisions for explicit runtime call order",
+    "Complete immutable parent projections, eight-worker and fresh-process replay"
+  ],
+  "excluded": [
+    "Actual application call order or runtime initialization",
+    "Physical offset distance/direction/units",
+    "Generalized UI meanings of fringe codes",
+    "Automatic stored-word normalization from modeled getter calls"
+  ],
+  "pending": [
+    "Latest-tree PR and cross-platform/ThreadSanitizer publication gates",
+    "Remaining vector/unit/style/preference policies"
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 109,
+    "seconds": 381.298,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/offset-fringe-source-full.log",
+      "bytes": 30885,
+      "sha256": "63c2456d986088b9d7429516010f2f0a2d397bb6447b6d59afebbc2dc3ca6e71"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 542328,
+      "sha256": "9c855e59a003f62e630aa38315478bcb349dd9fafababb84ec2ad1d398ccfc48"
+    }
+  }
+}
