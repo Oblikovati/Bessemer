@@ -53,7 +53,10 @@ fn gate_from_snapshot<T: BinaryLoadSnapshot>(
     })
 }
 
-pub(super) fn render_word<T: BinaryLoadSnapshot>(snapshot: &T, path: &str) -> Result<i32> {
+pub(in crate::simulation::persistence) fn render_word<T: BinaryLoadSnapshot>(
+    snapshot: &T,
+    path: &str,
+) -> Result<i32> {
     let value = snapshot
         .fields()
         .iter()

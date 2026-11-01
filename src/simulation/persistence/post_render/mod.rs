@@ -1,6 +1,6 @@
 //! Bounded named renderer decisions over explicit inputs, specification 14.490–14.491 (#166).
 mod offset_fringe;
-mod views;
+pub(super) mod views;
 pub use offset_fringe::{SimulationFringeOptionView, SimulationOffsetRequestInputs};
 
 /// Inputs for the named Layer0_RenderBody entry conjunction; this does not prove drawing occurred.
