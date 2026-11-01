@@ -84,9 +84,25 @@
     "Guessed runtime values or initialization for missing historical fields"
   ],
   "pending": [
-    "Expanded complete Source gate including both new operation/projection checks (expected172)",
     "Complete publication-cut PR gate and five exact-head platform/ThreadSanitizer gates",
     "Remaining named schema models and feature166 integration"
   ],
-  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 172,
+    "seconds": 518.974,
+    "process_exit_code": 0,
+    "result": "passed",
+    "verifier_cut": "319e029038fd119d618c0bef890aad14f70c1773",
+    "log": {
+      "path": "target/triangle-color-operation-source-full.log",
+      "bytes": 42190,
+      "sha256": "2573c4549384c974f4e98a5b5cc7f2a884abb651f5b64880a92db4eebd88b360"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 599046,
+      "sha256": "ba6118b775b2a121105d2909935b503a5df2a3b49ab3a1fe5886ba2ff3741020"
+    }
+  }
 }

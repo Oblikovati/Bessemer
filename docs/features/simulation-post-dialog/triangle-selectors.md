@@ -70,8 +70,8 @@ analysis session was closed. The reproducible GNU verifier additionally checks
 the complete function bytes and instruction operands, named accessor, exact
 color imports and concrete triangle vtable slots. Both new native/capture checks passed in the strict11-check gate. The earlier
 full suite passed168 checks in504.026seconds at the evidence-only cut2063B1B7;
-its denominator excludes these two new checks. The updated full gate remains
-required.
+its denominator excludes these two new checks. The expanded full gate passed172 checks in518.974seconds at the operation
+cut319E0290.
 
 `hidden_parts_triangle_controls()` and `model_tessellation_triangle_controls()`
 read canonical parent/style snapshots without initializing missing older fields.
@@ -110,7 +110,7 @@ All7 Rust integration checks and the allocation-error regression passed.
 Clippy passed with warnings denied. The strict Source suite passed13 checks.
 Two fresh processes matched26,137 contexts and1,505,328 output bytes against
 independent expectations. The [operation proof](triangle-color-operation-verification.json)
-records revisions, log hashes, exclusions and remaining gates. The expanded
-full Source suite and publication gates remain pending. Complete scene rendering remains outside this documented local
+records revisions, log hashes, exclusions and remaining gates. The full Source suite passed172 checks in518.974seconds. Publication gates
+remain pending. Complete scene rendering remains outside this documented local
 binding; all other named schema models and publication gates remain required
 for feature166.
