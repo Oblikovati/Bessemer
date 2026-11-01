@@ -17,6 +17,10 @@ from dialog_evidence import verify_dialog_sources, verify_dialog_schema
 from dialog_bindings import verify_dialog_installed_bindings
 from dialog_native import (DIALOG_READERS, verify_dialog_inventory, replay_dialog_native, verify_dialog_legacy_view)
 from dialog_legacy_carriers import replay_additional_legacy_dialogs
+from dialog_field_evidence import verify_dialog_field_sources, verify_dialog_catalog_provenance
+from dialog_field_bindings import verify_dialog_field_bindings
+from dialog_field_views import verify_postinfo_field_views, verify_rgba_native_views
+from dialog_catalog import verify_dialog_role_catalog
 
 
 def run_dialog_checks(pin: Path) -> unittest.TestResult:
@@ -24,9 +28,12 @@ def run_dialog_checks(pin: Path) -> unittest.TestResult:
     replay = update_wrapper(partial(replay_dialog_native, pin), replay_dialog_native)
     additional = update_wrapper(partial(replay_additional_legacy_dialogs, pin), replay_additional_legacy_dialogs)
     checks = (verify_dialog_sources, verify_dialog_schema, verify_dialog_installed_bindings,
-              verify_dialog_inventory, replay, verify_dialog_legacy_view, additional)
+              verify_dialog_inventory, replay, verify_dialog_legacy_view, additional,
+              verify_dialog_field_sources, verify_dialog_catalog_provenance, verify_dialog_field_bindings,
+              verify_postinfo_field_views, verify_rgba_native_views, verify_dialog_role_catalog)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
-    for suffix in ('dialog_layout', 'dialog_prefix', 'info', 'style', 'planes', 'v7_composed_view'):
+    for suffix in ('dialog_layout', 'dialog_prefix', 'info', 'style', 'planes', 'v7_composed_view',
+                   'info_fields', 'cutprim_types', 'contour_policy', 'color_fields', 'style_field_catalog'):
         suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module('test_cosworks_post_' + suffix)))
     return unittest.TextTestRunner(verbosity=2).run(suite)
 
