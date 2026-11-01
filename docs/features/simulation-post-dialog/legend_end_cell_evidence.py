@@ -70,8 +70,10 @@ def legend_end_cell_functions() -> tuple[Callable[[], None], ...]:
     """Keep full native provenance and every original flag/color interpretation together; e.g. legend_end_cell_functions()."""
     from legend_end_cell_bindings import verify_legend_end_cell_bindings, verify_legend_end_cell_rea_capture
     from legend_end_cell_projection import verify_legend_end_cell_native, verify_legend_end_cell_owned
+    from legend_end_cell_packets import verify_end_cell_operation_packets, verify_end_cell_projection_packets
     return (verify_legend_end_cell_sources, verify_end_cell_flag_boundaries, verify_legend_end_cell_bindings,
-        verify_legend_end_cell_rea_capture, verify_legend_end_cell_native, verify_legend_end_cell_owned)
+        verify_legend_end_cell_rea_capture, verify_legend_end_cell_native, verify_legend_end_cell_owned,
+        verify_end_cell_operation_packets, verify_end_cell_projection_packets)
 
 
 def run_legend_end_cell_checks() -> unittest.TestResult:

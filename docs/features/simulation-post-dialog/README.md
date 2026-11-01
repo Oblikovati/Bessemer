@@ -518,3 +518,5 @@ temporary-size requests, packed constructor bits and raw lighting decisions.
 
 The [end-cell evidence](legend-end-cell.md) preserves the E8/EC pair and its
 separate runtime activation gate, including both RGB consumer branches.
+Its typed stored views preserve absence, while the local operation requires
+explicit read-time facts and retains exact RGB bits with separate alpha history.

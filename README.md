@@ -732,6 +732,11 @@ wrapping arithmetic, retaining font, pixel and tick qualifications.
 an explicit runtime split index and reached post-suffix rereads, retaining exact
 signed count forwarding, wrapped offsets and suffix-before-prefix call order.
 
+`legend_end_cell_inputs` preserves optional E8/EC words. The separate
+[`SimulationLegendEndCellRuntime::project_end_cell`](docs/features/simulation-post-dialog/legend-end-cell.md)
+requires actual read-time plot, flag and color facts, preserves short-circuit
+reads and copies RGB bits without consuming alpha or validating geometry.
+
 `legend_step_inputs` preserves the optional FC layout switch. The separate
 [`SimulationLegendStepRuntime::step_availability`](docs/features/simulation-post-dialog/legend-step.md)
 operation requires explicit runtime plot words, retains raw signed BEC returns

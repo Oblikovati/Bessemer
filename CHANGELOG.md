@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added optional legend end-cell E8/EC views and exact local gate/RGB projections with explicit read-time facts, short-circuit completion and preserved alpha provenance. (#166)
+
 - Added local 3D legend buffer/mapping request and background-input projections with explicit phase facts, exact saturation/wrapping, packed constructor bits and rendering-validity exclusions. (#166)
 
 - Added local legend step-layout projections with explicit post-helper FC/runtime facts, exact signed division and wrapping arithmetic, early-return completion and reached-read diagnostics. (#166)
