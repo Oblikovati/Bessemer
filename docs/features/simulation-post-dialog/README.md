@@ -496,4 +496,4 @@ requests and keep glyph material adjustment separate from glyph helper calls.
 The [auxiliary triangle planner](auxiliary-triangles.md) combines stored controls
 with explicit runtime groups, ordered filtering and exact local color requests.
 
-See [triangle color plans](triangle-selectors.md) and [text-control evidence](text-controls.md).
+See [triangle color plans](triangle-selectors.md) and [text assignment and selection](text-controls.md).

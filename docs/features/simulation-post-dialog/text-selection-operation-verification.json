@@ -1,0 +1,95 @@
+{
+  "issue": 166,
+  "behavior_version": "C890-explicit-text-assignment-and-selection-v1",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "target_executed": false,
+  "kernel_decision": "Keep counted assignment, actual-current-state selection and explicit composition distinct. Positive count assigns first-NUL raw units; zero count preserves only explicitly known prior primary state. Require unknown strings only when each requested stage needs them. Preserve raw controls, counted suffixes, every line position and both composed histories without Unicode repair or inferred initialization.",
+  "operation_cases": 18200,
+  "owned_complete_contexts": 425,
+  "owned_present": 405,
+  "owned_missing": 20,
+  "native_complete_contexts": 276,
+  "additional_stored_byte_credit": 0,
+  "rust": {
+    "checks": 7,
+    "failed": 0,
+    "ignored": 0,
+    "seconds": 0.12,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/text-selection-rust-final.log",
+      "bytes": 974,
+      "sha256": "ba5014f3e76e1fdbe599c569c7cb30cf6e5b7e35e8f4edc6ae140ae1869f7b37"
+    }
+  },
+  "overflow_regression": {
+    "checks": 1,
+    "failed": 0,
+    "seconds": 0,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/text-selection-overflow-test.log",
+      "bytes": 488,
+      "sha256": "64d8cb9ec6440b435567d1cf1fdf3d2e4fd305f1becd989bcb54ca01a621b52f"
+    }
+  },
+  "clippy": {
+    "scope": "all-targets all-features -D warnings",
+    "result": "passed",
+    "seconds": 34.75,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/text-selection-clippy.log",
+      "bytes": 136,
+      "sha256": "e641bbc48849b8ed7179f78d451b5017f0f08d3cb9fb889a93882e5ed6edb5ce"
+    }
+  },
+  "targeted_source": {
+    "checks": 16,
+    "seconds": 5.808,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/text-selection-source-strict.log",
+      "bytes": 2822,
+      "sha256": "3f4538173a0189442b56d9b0e39f070429c9308e4c6f162cf485a5df5e30ccae"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/text-control-source-snapshot.json",
+      "bytes": 599925,
+      "sha256": "23f6714284230392c943efdfc27be724d922003945d153951a4f96a96c00593a"
+    }
+  },
+  "native_bindings": "text-control-installed-reference.json",
+  "independent_decoder": "text-control-rea-reference.json",
+  "process_proof": "text-selection-process-verification.json",
+  "concurrency_workers": 8,
+  "public_send_sync_assertions": 10,
+  "concurrency_scope": "All18200 operation cases compared with serial bytes",
+  "ownership": "Reused text values have immutable private byte storage, copy borrowed construction input and expose no mutation path. Inputs are replaced and constructor buffers are mutated after publication; assignment/selection parents and bytes remain unchanged.",
+  "oracle_kinds": [
+    "Complete C890 consumer and three C855 assignment/helper bodies, all553 instructions, exact literal and ordinal import slots",
+    "Independent Ghidra consumer locations/literal bytes and unchanged original C855/C890 provenance qualifications",
+    "Unchanged Source bounded UTF16 prefix view plus allthree original unit tests; separately reviewed copy loop for explicit513-unit programmatic budgets",
+    "Independent selection dependency table and every missing-line position, zero/nonzero signed controls, unknown/known-empty state and resource boundaries",
+    "Complete owned/native parent/style snapshots, exact counted bytes, repeated getters, full EOF and unchanged archive bytes",
+    "Explicitly unknown native runtime inputs yield local typed dependency failures, without claiming observed native errors or contents",
+    "Source mutation isolation after success and unchanged inputs after every success/failure; constructor buffers do not alias immutable result bytes",
+    "Two fresh processes and eight workers match independent expected units, origins, assignment kinds and completion bytes"
+  ],
+  "excluded": [
+    "SolidWorks/CString target execution or observed runtime production",
+    "Native allocation, oversize-file acceptance or extending the bounded Source view beyond512 units",
+    "UI labels, font identity, layout coordinates or complete rendered text",
+    "Validating raw code units as Unicode scalar values",
+    "Treating empty selections as skipping every layout/output operation",
+    "Inferring count0 initialization or resolving unknown native strings from empty wire bytes"
+  ],
+  "pending": [
+    "Expanded full Source suite including both operation/projection checks (expected182)",
+    "Complete publication-cut PR and allfive exact-head platform/ThreadSanitizer gates",
+    "Remaining documented schema models and feature166 integration"
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+}
