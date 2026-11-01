@@ -532,3 +532,8 @@ options from the reader's derived state, including the adjacent word overwritten
 by its 64-bit store and the later direct-read branch.
 Its typed projection returns both runtime words with exact store coverage and
 original-word history, while rejecting raw-class and later direct-read contexts.
+
+The [legend reader resets](legend-resets.md) retain explicit version-gated zero
+assignments separately from absent wire words and unknown constructor state.
+The [reader-selection baseline](reader-selection.md) keeps existing mode priority
+and captured callback inputs pinned as further models are added.
