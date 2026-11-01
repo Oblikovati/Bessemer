@@ -69,7 +69,8 @@ including eight-worker comparisons. All eight public types satisfy `Send + Sync`
 The strict Source suite passed 20 checks in 5.956 seconds and exited successfully
 after snapshot recording and cleanup. Clippy passed for all targets and features
 with warnings denied. Two fresh Rust processes matched all 90,194 independent
-expected words byte for byte. Full integrated replay and publication validation,
-including ThreadSanitizer, remain separate gates.
+expected words byte for byte. The full integrated Source replay passed304 checks
+in547.370seconds and exited successfully after snapshot recording and cleanup.
+Publication validation, including ThreadSanitizer, remains a separate gate.
 
 Humanizer is unavailable in this checkout; maintainer prose review remains pending.
