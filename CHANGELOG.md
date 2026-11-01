@@ -38,6 +38,7 @@
 
 ### Added
 
+- Added raw-preserving legend body-entry and model-tessellation request views with explicit runtime presence and missing-state errors. (#166)
 - Added explicit loaded legend comparison inputs, conditional native comparison dependencies and typed missing-state/count failures. (#166)
 - Added conditional RGBA comparison predicates with explicit masked-exception/DAZ-off semantics, preserving stored bitwise equality. (#166)
 - Added explicit nearest-even COLORREF export with signed truncation, byte wrapping and typed outside-model diagnostics. (#166)

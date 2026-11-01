@@ -1,0 +1,96 @@
+{
+  "issue": 166,
+  "behavior_version": "C872-C873-render-policy-v1",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "kernel_decision": "Use explicit signed32 stored controls and runtime plot presence; preserve the unsigned style1F0 test and fail on absent older runtime inputs rather than guessing migrations.",
+  "target_executed": false,
+  "synthetic_gate_cases": 872,
+  "synthetic_tessellation_cases": 21060,
+  "original_native_gate_states": 276,
+  "native_gate_cases": 552,
+  "original_native_tessellation_states": 160,
+  "owned_complete_contexts": 425,
+  "native_complete_contexts": 276,
+  "additional_stored_byte_credit": 0,
+  "rust": {
+    "checks": 7,
+    "failed": 0,
+    "ignored": 0,
+    "log": {
+      "path": "target/render-policy-rust.log",
+      "bytes": 909,
+      "sha256": "21b7d21c6f5ea54de3536108e4dcda6dd3c78e76da47561caf51ad7ab26f838f"
+    }
+  },
+  "clippy": {
+    "path": "target/render-policy-clippy.log",
+    "bytes": 136,
+    "sha256": "1bd4674485d08d423869aa4487aba3b85513a34b3dd782e9bd9a72e4e4ba9d92"
+  },
+  "source_initialization": {
+    "checks": 12,
+    "seconds": 6.796,
+    "log": {
+      "path": "target/render-policy-source-write.log",
+      "bytes": 2143,
+      "sha256": "2195c9e84464b4c26f96ededa6f710e83dcddac3d7d94505174c081d2f23ef6b"
+    }
+  },
+  "source_strict": {
+    "checks": 12,
+    "seconds": 5.238,
+    "log": {
+      "path": "target/render-policy-source-strict.log",
+      "bytes": 2143,
+      "sha256": "fe9e7510671d5087be7e20314660a5fe4d7b629c3d8958c784e508b33eddc7c3"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/render-policy-source-snapshot.json",
+      "bytes": 535758,
+      "sha256": "68744b1c815f67a4255ad1bfaf621e7dadf7641f293e18d71044350dc2a40741"
+    }
+  },
+  "packet_references": [
+    "render-policy-packets-reference.json",
+    "render-policy-native-reference.json",
+    "render-policy-projection-reference.json"
+  ],
+  "concurrency_workers": 8,
+  "process_proof": "render-policy-process-verification.json",
+  "oracle_kinds": [
+    "Pinned independent Source models",
+    "Complete original C872 and C873 native identities and expected inputs",
+    "Complete installed method/getter/reader bindings and original source pins",
+    "Signed-neighbor and complete declared six-control branch matrices",
+    "Complete parent/style projection with legacy mapping and missing-state invariants",
+    "Eight-worker and fresh-process deterministic replay"
+  ],
+  "excluded": [
+    "Observed runtime plot-pointer state",
+    "Actual drawing or mesh generation",
+    "Guessed older hidden-option migrations",
+    "Generalized UI meaning of numeric plot controls"
+  ],
+  "pending": [
+    "Latest-tree PR and cross-platform/ThreadSanitizer publication gates",
+    "Remaining named PostStyle policies and preference routes"
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 99,
+    "seconds": 375.005,
+    "result": "passed",
+    "log": {
+      "path": "target/render-policy-source-full.log",
+      "bytes": 29313,
+      "sha256": "4dbf618a900c806d200e124e55bdeaf54d1d1d0711844608ddb2735599b55203"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 540148,
+      "sha256": "803ca3deae3a0de8b0aa4eabf25477e439972164666479e1aa831f7e7620dab6"
+    },
+    "process_exit_code": 0
+  }
+}
