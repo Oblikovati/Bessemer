@@ -502,3 +502,6 @@ The [legend yield-color evidence](legend-yield.md) binds stored D8 separately
 from the runtime yield and split index, including both complete native consumers.
 Its typed call planner retains raw colors, wrapped offsets and explicit
 post-suffix rereads without deriving final mapped colors.
+
+The [legend step evidence](legend-step.md) separates the version-gated FC layout
+switch from runtime availability and preserves the latter's raw integer return.

@@ -1,0 +1,31 @@
+{
+  "complete_probe_instruction_counts": [
+    14,
+    14,
+    129,
+    373,
+    25
+  ],
+  "exact_decoder_qualifications": 0,
+  "probe_tail_bytes": [
+    {
+      "address": "0x1800dba86",
+      "raw_hex": "cc",
+      "purpose": "Original probe byte after the complete returned function body"
+    },
+    {
+      "address": "0x1800dbc66",
+      "raw_hex": "cc",
+      "purpose": "Original probe byte after the complete returned function body"
+    },
+    {
+      "address": "0x1800dba4f",
+      "raw_hex": "cc",
+      "purpose": "Original probe byte after the complete returned function body"
+    }
+  ],
+  "target_executed": false,
+  "complete_renderer_modeled": false,
+  "localized_labels_known": false,
+  "availability_from_fc": false
+}
