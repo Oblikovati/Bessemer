@@ -85,7 +85,8 @@ comparisons match serial operation and parent results, and all ten public types
 satisfy `Send + Sync`. Clippy passed with warnings denied. Two fresh processes
 matched all20,920 independent expected results, totaling1,422,560bytes each.
 The final strict Source suite passed17 checks in6.163seconds and exited
-successfully after snapshot recording and cleanup.
+successfully after snapshot recording and cleanup. The full integrated Source
+suite then passed255 checks in542.274seconds and exited successfully.
 The [operation record](legend-yield-operation-verification.json) and
 [process proof](legend-yield-process-verification.json) retain exact hashes and
 remaining integration gates.
