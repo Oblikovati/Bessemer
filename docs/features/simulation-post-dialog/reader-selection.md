@@ -1,6 +1,6 @@
 # Source reader-selection refactor
 
-The replay driver reached its file-size limit while new documented models were
+The replay driver neared its file-size limit while new documented models were
 being added. Reader selection now lives in a separate module; dispatching tests
 and executing replay remain in the driver. The ordered selector still handles
 early profiles, deferred specialized callbacks, final replacement profiles and
@@ -22,6 +22,7 @@ The selector itself neither imports Source models nor modifies execution flags.
 The [verification record](reader-selection-verification.json) retains fixture,
 driver and validation hashes. This structural change modifies no production
 library behavior, parser acceptance, native denominator or byte-coverage credit.
-Full integrated replay and publication gates remain separate obligations.
+The full integrated replay passed305 checks in509.985seconds and exited
+successfully after snapshot recording and cleanup. Publication remains separate.
 
 Humanizer is unavailable in this checkout; maintainer prose review remains pending.
