@@ -71,9 +71,26 @@
   ],
   "pending": [
     "Typed migration result",
-    "Full integrated Source replay for this evidence cut",
     "Remaining feature166 models",
     "Exact publication-head cargo xtask pr and all five platform gates"
   ],
-  "prose_review": "Humanizer unavailable; maintainer review pending."
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_source_replay": {
+    "checks": 302,
+    "failed": 0,
+    "seconds": 713.114,
+    "process_exit_code": 0,
+    "accepted_source_cut": "7a6f58c397efbc1dfcc85d6e3b983c0c7fd21a7a",
+    "log": {
+      "path": "target/hidden-migration-source-full.log",
+      "bytes": 66255,
+      "sha256": "dfd9070c51dc3cbd09e69d287d939a6ef8124d87f7710015a7b990b30f6bff68"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 633812,
+      "sha256": "8be676272da56ef7a0cace231a5e7559a3a17d10defb6783d9a2509992abab69"
+    },
+    "terminal_exit_reaped": true
+  }
 }
