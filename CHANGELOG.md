@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added optional legend FC layout views and exact runtime step-availability results with raw signed BEC returns, complete runtime history and reached-word coverage. (#166)
+
 - Added stored legend yield-color views and exact local gray-mapper call plans with explicit runtime split and post-suffix facts, raw color preservation, signed counts and wrapped byte offsets. (#166)
 
 - Added raw legend cell-count views and immutable exact32 height-product projections from explicit helper results, preserving overflow bits and runtime/font qualifications. (#166)
