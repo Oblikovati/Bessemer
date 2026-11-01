@@ -513,3 +513,5 @@ integer calculations while keeping helper state changes explicit.
 The [3D body/background evidence](legend-3d.md) binds additional count and
 precision consumers while keeping packed color and rendering arguments separate
 from unproved stored-color or contour-code identities.
+Its typed local projections preserve entry/later count separation, saturated
+temporary-size requests, packed constructor bits and raw lighting decisions.

@@ -1,0 +1,25 @@
+{
+  "issue": 166,
+  "behavior_version": "C852-local-request-background-v1",
+  "platform": "Windows x64",
+  "requests": 45232,
+  "words_per_request": 12,
+  "oracle": "Independent modulo32/unsigned saturation/argument decisions and original frozen nearest-even constructor over26784 cases and sixteen hypothetical contexts across1153 complete parents",
+  "executable_sha256": "d7a92e548e60e1ee3c57e5e37ec23f3c142343e60847f1e04da9b1054fc1390b",
+  "runs": [
+    {
+      "process": 1,
+      "exit_code": 0,
+      "bytes": 2171136,
+      "sha256": "4d360382ccc23aed509fb15a23d197a509c643198d7217849d59e46a3c9873dc"
+    },
+    {
+      "process": 2,
+      "exit_code": 0,
+      "bytes": 2171136,
+      "sha256": "4d360382ccc23aed509fb15a23d197a509c643198d7217849d59e46a3c9873dc"
+    }
+  ],
+  "comparison": "Both fresh Rust processes matched all542784 independent expected words byte for byte; exact export-test execution checked",
+  "native_executed": false
+}

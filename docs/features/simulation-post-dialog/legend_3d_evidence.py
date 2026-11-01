@@ -70,8 +70,11 @@ def legend_3d_functions() -> tuple[Callable[[], None], ...]:
     """Keep full consumer provenance and original raw-word replay together; e.g. legend_3d_functions()."""
     from legend_3d_bindings import verify_legend_3d_bindings, verify_legend_3d_rea_capture
     from legend_3d_projection import verify_legend_3d_native, verify_legend_3d_owned
+    from legend_3d_integer_bindings import verify_3d_integer_request_bindings
+    from legend_3d_packets import verify_3d_operation_packets, verify_3d_projection_packets
     return (verify_legend_3d_sources, verify_3d_word_boundaries, verify_legend_3d_bindings,
-        verify_legend_3d_rea_capture, verify_legend_3d_native, verify_legend_3d_owned)
+        verify_legend_3d_rea_capture, verify_legend_3d_native, verify_legend_3d_owned,
+        verify_3d_integer_request_bindings, verify_3d_operation_packets, verify_3d_projection_packets)
 
 
 def run_legend_3d_checks() -> unittest.TestResult:

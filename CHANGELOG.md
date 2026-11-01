@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added local 3D legend buffer/mapping request and background-input projections with explicit phase facts, exact saturation/wrapping, packed constructor bits and rendering-validity exclusions. (#166)
+
 - Added local legend step-layout projections with explicit post-helper FC/runtime facts, exact signed division and wrapping arithmetic, early-return completion and reached-read diagnostics. (#166)
 
 - Added optional legend FC layout views and exact runtime step-availability results with raw signed BEC returns, complete runtime history and reached-word coverage. (#166)
