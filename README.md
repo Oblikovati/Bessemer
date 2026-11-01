@@ -654,3 +654,9 @@ see [the Results header evidence](docs/features/simulation-results-headers/READM
 edits. Character-count strings retain raw code units and change length as one
 atomic value; unassigned eight-byte values retain their exact patterns. See
 [the graph parameter evidence](docs/features/simulation-post-graph/README.md).
+
+`SimulationPostInfo` supports the complete fixed-slot `DspPostInfo` helper with
+explicit version context, preserving all twelve slots independently of active
+counts. Version700002 alone carries an atomic character-text suffix with separate
+character, payload and aggregate budgets. See
+[the dialog helper evidence](docs/features/simulation-post-dialog/README.md).
