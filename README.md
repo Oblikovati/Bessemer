@@ -689,3 +689,11 @@ with known primitive names and direction tokens, raw normal/center patterns,
 and the shared scalar's D sign-bit alias. Unknown codes remain unnamed and
 active-count words do not remove slots. `header_view` preserves all seven header
 words and exposes the bounded forward ContourType preference conversion.
+
+
+`SimulationPostInfoContourCode` retains raw codes and provides the documented
+forward, reverse and default preference conversions. Defaults accept explicit
+optional plot-type context; they do not inspect runtime objects or rewrite a
+document. `SimulationPostInfo::diff_ogl_render` compares the four stored header
+words selected by that named routine. It leaves cut primitives and active counts
+out of that bounded comparison.

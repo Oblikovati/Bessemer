@@ -27,11 +27,14 @@ pub use super::thermal::{
 };
 
 mod character_text;
+mod contour_code;
 mod cut_accessors;
 mod cut_view;
 mod header_view;
+mod render_comparison;
 mod values;
 pub use character_text::SimulationPostInfoText;
+pub use contour_code::SimulationPostInfoContourCode;
 pub use cut_view::{
     SimulationPostInfoCutView, SimulationPostInfoDirectionToken, SimulationPostInfoPrimitiveKind,
     SimulationPostInfoSlotGroup,
