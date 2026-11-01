@@ -30,6 +30,8 @@ from dialog_resource_oracle import verify_dialog_resources
 from dialog_cap_oracle import verify_dialog_caps
 from dialog_reference_cap_oracle import verify_reference_caps
 from dialog_rgba_packets import verify_rgba_packets
+from colorref_import_evidence import verify_colorref_import_sources, verify_colorref_import_bindings
+from colorref_import_packets import verify_colorref_import_packets
 from dialog_projection_shapes import verify_dialog_scalar_shapes
 from dialog_parent_views import (verify_dialog_parent_sources, verify_dialog_parent_native, verify_dialog_parent_bindings,
                                  verify_dialog_parent_owned, verify_dialog_parent_branches)
@@ -37,6 +39,7 @@ from dialog_parent_views import (verify_dialog_parent_sources, verify_dialog_par
 
 def run_dialog_checks(pin: Path) -> unittest.TestResult:
     """Preserve all original C-770 and integrated legacy-view tests beside fresh full replay; e.g. run_dialog_checks(pin)."""
+    if '--colorref-import-only' in sys.argv: return run_colorref_import_checks()
     if '--rgba-views-only' in sys.argv: return run_rgba_view_checks()
     if '--postinfo-views-only' in sys.argv: return run_postinfo_view_checks()
     if '--parent-views-only' in sys.argv: return run_parent_view_checks()
@@ -46,7 +49,8 @@ def run_dialog_checks(pin: Path) -> unittest.TestResult:
     for suffix in ('dialog_layout', 'dialog_prefix', 'info', 'style', 'planes', 'v7_composed_view',
                    'info_fields', 'cutprim_types', 'contour_policy', 'color_fields', 'style_field_catalog'):
         suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module('test_cosworks_post_' + suffix)))
-    for name in ('test_cosworks_legend_range_fields', 'test_cosworks_deform_scale_fields'):
+    for name in ('test_cosworks_legend_range_fields', 'test_cosworks_deform_scale_fields',
+                 'test_cosworks_colorref_import_view', 'test_cosworks_colorref_assignment'):
         suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module(name)))
     return unittest.TextTestRunner(verbosity=2).run(suite)
 
@@ -62,7 +66,8 @@ def default_dialog_functions(pin: Path) -> tuple[Callable[[], None], ...]:
               verify_postinfo_field_views, verify_rgba_native_views, verify_dialog_role_catalog, verify_dialog_owned,
               verify_owned_postinfo_field_views, verify_dialog_operation_packets, verify_dialog_scalar_shapes, verify_dialog_parent_sources,
               verify_dialog_parent_native, verify_dialog_parent_bindings,
-              verify_dialog_parent_owned, verify_dialog_parent_branches, verify_dialog_edit_matrix, verify_dialog_resources, verify_dialog_caps, verify_reference_caps, verify_rgba_packets)
+              verify_dialog_parent_owned, verify_dialog_parent_branches, verify_dialog_edit_matrix, verify_dialog_resources, verify_dialog_caps, verify_reference_caps, verify_rgba_packets,
+              verify_colorref_import_sources, verify_colorref_import_bindings, verify_colorref_import_packets)
 
 
 def run_resource_checks() -> unittest.TestResult:
@@ -99,8 +104,20 @@ def run_rgba_view_checks() -> unittest.TestResult:
     return unittest.TextTestRunner(verbosity=2).run(suite)
 
 
+def run_colorref_import_checks() -> unittest.TestResult:
+    """Keep original reports, installed leaves and independent integer inputs in the targeted gate; e.g. run_colorref_import_checks()."""
+    checks = (verify_dialog_sources, verify_dialog_field_sources, verify_colorref_import_sources,
+              verify_colorref_import_bindings, verify_colorref_import_packets)
+    suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
+    for name in ('test_cosworks_colorref_import_view', 'test_cosworks_colorref_assignment'):
+        suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module(name)))
+    return unittest.TextTestRunner(verbosity=2).run(suite)
+
+
 def dialog_snapshot_readers() -> tuple[str, ...]:
     """Require exactly the readers exercised by the selected gate; e.g. dialog_snapshot_readers()."""
+    if '--colorref-import-only' in sys.argv:
+        return ('cosworks_colorref_import_view', 'cosworks_colorref_view')
     if '--rgba-views-only' in sys.argv:
         return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_color_fields')
     if '--postinfo-views-only' in sys.argv:
@@ -110,7 +127,7 @@ def dialog_snapshot_readers() -> tuple[str, ...]:
     readers = DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout')
     if any(flag in sys.argv for flag in ('--resources-only', '--caps-only', '--reference-caps-only')):
         return readers
-    return readers + ('cosworks_post_v7_composed_view', 'cfb', 'swcontainer')
+    return readers + ('cosworks_post_v7_composed_view', 'cfb', 'swcontainer', 'cosworks_colorref_import_view', 'cosworks_colorref_view')
 
 
 def dialog_snapshot_filename() -> str:
@@ -120,7 +137,8 @@ def dialog_snapshot_filename() -> str:
              ('--reference-caps-only', 'reference-cap-source-snapshot.json'),
              ('--parent-views-only', 'parent-view-source-snapshot.json'),
              ('--postinfo-views-only', 'postinfo-view-source-snapshot.json'),
-             ('--rgba-views-only', 'rgba-view-source-snapshot.json'))
+             ('--rgba-views-only', 'rgba-view-source-snapshot.json'),
+             ('--colorref-import-only', 'colorref-import-source-snapshot.json'))
     for flag, filename in modes:
         if flag in sys.argv: return filename
     return 'source-snapshot.json'

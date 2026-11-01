@@ -1,0 +1,73 @@
+{
+  "issue": 166,
+  "behavior_version": "COGLColor-C862-C906-nearest-even-import-v1",
+  "kernel_decision": "Use exact integer significand multiplication and ties-to-even rounding for source scale 0x3b808081; constructor alpha is one and assignment alpha is copied bitwise.",
+  "owned_cases": 1025,
+  "native_cases": 9672,
+  "native_original_colors": 4836,
+  "additional_stored_byte_credit": 0,
+  "rust": {
+    "checks": 4,
+    "failed": 0,
+    "ignored": 0,
+    "log": {
+      "path": "target/colorref-import-rust.log",
+      "bytes": 709,
+      "sha256": "890afda4b8786947adc40c449fa813be0ba0a6a223f805c3032a5d5c67709785"
+    }
+  },
+  "clippy": {
+    "path": "target/colorref-import-clippy.log",
+    "bytes": 136,
+    "sha256": "98bfdcd87695f9b671986e44b7538e0ec58033a2981ff325d8d33cdc7e5ab6dd"
+  },
+  "source_initialization": {
+    "checks": 11,
+    "seconds": 3.193,
+    "log": {
+      "path": "target/colorref-import-source-write.log",
+      "bytes": 1753,
+      "sha256": "f4bbdc8f10624141d285d9309ef89684bec05cf59ce7b2e040bd1767dfc9d747"
+    }
+  },
+  "source_strict": {
+    "checks": 11,
+    "seconds": 3.998,
+    "log": {
+      "path": "target/colorref-import-source-strict.log",
+      "bytes": 1753,
+      "sha256": "b5bf4fb1ab9054b4b42dabeee8f4899de2a307acadbd82c8474b59b73c16fdde"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/colorref-import-source-snapshot.json",
+      "bytes": 522851,
+      "sha256": "325ce8253c0d7ad3fa334889e88708ea56aa286945a664b72a3605a54269e5a0"
+    }
+  },
+  "process_proof": "colorref-import-process-verification.json",
+  "packet_reference": "rgba-colorref-import-packets-reference.json",
+  "concurrency_workers": 8,
+  "pending": [
+    "Publication gates, packed export, native comparisons and loaded-state/legend policies."
+  ],
+  "exclusions": [
+    "No observed application MXCSR, denormal/exception state or native runtime experiment.",
+    "Supplementary reconstruction never replaces original wire colors implicitly."
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 71,
+    "seconds": 365.993,
+    "result": "passed",
+    "log": {
+      "path": "target/colorref-import-source-full.log",
+      "bytes": 24813,
+      "sha256": "2386e161dd6d56a05da61ae793af17c74f85228736a9c938f79ef03e8889e8d5"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 532280,
+      "sha256": "d77261fe832bcdcbddb49ba74016a988376230ae70b4d64bb4434955a239a028"
+    }
+  }
+}

@@ -328,3 +328,26 @@ restored byte for byte and the new packet report received a separate name. The
 corrected run used no baseline-writing flag. [RGBA verification](rgba-operation-verification.json)
 retains both the failed-run finding and the passing replay, alongside all twelve
 color tests, four collector guards, Clippy and fresh-process byte comparisons.
+
+
+Packed construction and assignment use the exact stored scale 0x3B808081 under
+an explicit nearest-even binary32 model. Integer significand rounding reproduces
+the model without reading or modifying floating-point state. Construction sets
+alpha to one; assignment replaces RGB and copies the original alpha bits,
+including signed zero and NaN payloads. The high packed byte is ignored in both.
+
+The original C-862 and later C-906 reports are retained in full. Their exact
+helper/color-report source transitions are recorded separately. Provider hashes,
+complete leaf bytes, named exports and the scale constant match the installed
+module; no target code executes. Source and Rust agree on 1,025 owned cases and
+9,672 native-derived cases over 4,836 original colors. Eight-worker replay and
+two fresh processes match all 10,697 case outputs byte for byte. These are
+conditional model results; application MXCSR state and runtime execution remain
+unproven. Packed export and other color/legend policies remain pending.
+
+
+The integrated constructor/assignment model passed all 71 strict reference checks.
+Four Rust tests, all-target Clippy and two fresh-process comparisons passed;
+every constructed/assigned byte matches the independent Source outputs. See
+[packed import verification](colorref-import-operation-verification.json) for
+exact logs, input denominators and the remaining publication/consumer work.

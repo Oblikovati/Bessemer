@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added explicit nearest-even COLORREF construction and assignment models with exact alpha handling and integer-only rounding. (#166)
+
 - Added shared raw RGBA views for parent dialogs and PostStyle bodies with complete color spans and finite-channel values. (#166)
 
 - Added typed ContourType conversions, explicit plot-context defaults and the bounded four-word PostInfo render comparison. (#166)
