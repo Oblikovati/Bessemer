@@ -1,0 +1,71 @@
+{
+  "issue": 166,
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "scope": "Complete C890/C855 source/native text-input evidence and installed static consumer/assignment bindings only; no completed text operation or layout claim",
+  "target_executed": false,
+  "native_contexts": 276,
+  "earlier_assignment_identities": 284,
+  "earlier_prefix_observations": 224,
+  "earlier_strict_accepted_observations": 52,
+  "earlier_unaccepted_interpretations": 8,
+  "owned_complete_contexts": 425,
+  "owned_present": 405,
+  "owned_missing": 20,
+  "owned_synthetic_positive_payloads": 112,
+  "additional_stored_byte_credit": 0,
+  "strict_source": {
+    "checks": 14,
+    "seconds": 4.987,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/text-control-source-strict-corrected.log",
+      "bytes": 2401,
+      "sha256": "397629dcaa614c73cd718adb2e6d3323ec6dfcc82a039dc3a6492da3bbf8ff81"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/text-control-source-snapshot.json",
+      "bytes": 595100,
+      "sha256": "e8c5ef08e9158c716e4da04490be5a3f525a2e2d5b7bdc933b5d60259068a6cc"
+    }
+  },
+  "installed_binding": {
+    "consumer_instructions": 315,
+    "assignment_helper_instruction_counts": [
+      60,
+      122,
+      56
+    ],
+    "total_instructions": 553,
+    "reference": "text-control-installed-reference.json",
+    "cstring_import_names_present": false,
+    "independent_decoder": "Ghidra12.1.4",
+    "rea_reference": "text-control-rea-reference.json",
+    "original_binary_written": false,
+    "analysis_session_closed": true
+  },
+  "oracle_kinds": [
+    "Every original C890 and C855 source/probe/decompilation/unit-test pin, with two exact qualified historical color-report transitions",
+    "Complete installed display and three earlier assignment/helper bodies, exact operand/source branches, seven empty constructors and file-backed literal bytes",
+    "Observed MFC ordinal imports with absent symbol names preserved",
+    "Independent Ghidra display instruction locations and initialized literal bytes with all provider limitations retained",
+    "Every original native identity, raw controls, character count, counted bytes, prefix/code units, offset/end and source descriptor from complete EOF bodies",
+    "Per-stream frequency replay preserves multiplicity of identical content hashes",
+    "All425 owned version contexts preserve actual presence and raw assignment inputs without defaults",
+    "Allthree original text-view unit tests cover embedded NUL, zero-count skip, leading NUL assignment, surrogates and bounds; full current catalog tests retained"
+  ],
+  "excluded": [
+    "Observed runtime primary or seven-line contents",
+    "Treating count0 as clearing a reused runtime CString",
+    "UI labels, font identification, complete layout or rendered scene success",
+    "Promoting original prefix-only evidence or failed interpretations into global acceptance",
+    "Native target execution or global schema completion credit"
+  ],
+  "pending": [
+    "Full Source suite including allfive new evidence checks and three original text-view tests (expected180)",
+    "Complete C890 local selection and explicit assignment operation with independent oracle and Rust tests",
+    "Publication-cut PR and allfive exact-head platform gates; remaining feature166 models"
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+}

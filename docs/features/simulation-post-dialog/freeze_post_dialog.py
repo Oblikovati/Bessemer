@@ -73,6 +73,8 @@ from triangle_selector_evidence import verify_triangle_selector_sources, verify_
 from triangle_selector_bindings import verify_triangle_selector_bindings, verify_triangle_selector_rea_capture
 from triangle_color_packets import verify_triangle_color_packets
 from triangle_color_projection import verify_triangle_color_projection
+from text_control_evidence import verify_text_control_sources, verify_text_control_native, verify_text_control_owned
+from text_control_bindings import verify_text_control_bindings, verify_text_control_rea_capture
 from aux_triangle_evidence import verify_aux_triangle_sources
 from aux_triangle_bindings import verify_aux_triangle_bindings
 from aux_triangle_projection import verify_aux_triangle_native, verify_aux_triangle_projection
@@ -107,7 +109,7 @@ def run_dialog_checks(pin: Path) -> unittest.TestResult:
 
 def run_style_annotation_checks() -> unittest.TestResult | None:
     """Dispatch the concrete stored-style modes without changing the full denominator; e.g. run_style_annotation_checks()."""
-    modes = (('--triangle-selectors-only', run_triangle_selector_checks), ('--aux-triangle-only', run_aux_triangle_checks), ('--annotations-only', run_annotation_checks), ('--vector-style-only', run_vector_style_checks),
+    modes = (('--text-controls-only', run_text_control_checks), ('--triangle-selectors-only', run_triangle_selector_checks), ('--aux-triangle-only', run_aux_triangle_checks), ('--annotations-only', run_annotation_checks), ('--vector-style-only', run_vector_style_checks),
              ('--raw-preferences-only', run_raw_preferences_checks), ('--local-render-only', run_local_render_checks))
     for flag, check in modes:
         if flag in sys.argv: return check()
@@ -125,7 +127,7 @@ def append_dialog_unit_tests(suite: unittest.TestSuite) -> None:
                  'test_cosworks_legend_render_gate', 'test_cosworks_need_model_tess',
                  'test_cosworks_need_offset', 'test_cosworks_fringe_option',
                  'test_cosworks_vector_direction_branch', 'test_cosworks_component_vector_policy',
-                 'test_cosworks_component_unit_type', 'test_cosworks_render_safety', 'test_cosworks_aux_triangle_gate'):
+                 'test_cosworks_component_unit_type', 'test_cosworks_render_safety', 'test_cosworks_aux_triangle_gate', 'test_cosworks_post_style_text_view'):
         suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module(name)))
 
 
@@ -150,7 +152,22 @@ def default_dialog_functions(pin: Path) -> tuple[Callable[[], None], ...]:
               verify_offset_fringe_sources, verify_offset_fringe_bindings, verify_offset_fringe_native,
               verify_offset_fringe_packets, verify_offset_fringe_projection,
               verify_vector_sources, verify_vector_bindings, verify_vector_static_tables, verify_vector_table_constants,
-              verify_vector_packets, verify_vector_native, verify_vector_projection) + unit_model_functions() + local_render_functions() + raw_preferences_functions() + vector_style_functions() + annotation_functions() + aux_triangle_functions() + triangle_selector_functions()
+              verify_vector_packets, verify_vector_native, verify_vector_projection) + unit_model_functions() + local_render_functions() + raw_preferences_functions() + vector_style_functions() + annotation_functions() + aux_triangle_functions() + triangle_selector_functions() + text_control_functions()
+
+
+def text_control_functions() -> tuple[Callable[[], None], ...]:
+    """Retain complete source/native text and earlier assignment obligations together; e.g. text_control_functions()."""
+    return (verify_text_control_sources, verify_text_control_bindings, verify_text_control_rea_capture,
+            verify_text_control_native, verify_text_control_owned)
+
+
+def run_text_control_checks() -> unittest.TestResult:
+    """Keep all original text-view and current catalog tests beside full native replay; e.g. run_text_control_checks()."""
+    checks = (verify_dialog_sources, verify_dialog_field_sources) + text_control_functions()
+    suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
+    for name in ('test_cosworks_post_style_text_view', 'test_cosworks_post_style_field_catalog'):
+        suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module(name)))
+    return unittest.TextTestRunner(verbosity=2).run(suite)
 
 
 def triangle_selector_functions() -> tuple[Callable[[], None], ...]:
@@ -382,6 +399,7 @@ def vector_snapshot_readers() -> tuple[str, ...]:
 
 def dialog_snapshot_readers() -> tuple[str, ...]:
     """Require exactly the readers exercised by the selected gate; e.g. dialog_snapshot_readers()."""
+    if '--text-controls-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_style_field_catalog', 'cosworks_post_style_text_view')
     if '--aux-triangle-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_style_field_catalog', 'cosworks_aux_triangle_gate')
     if any(flag in sys.argv for flag in ('--triangle-selectors-only', '--annotations-only')): return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_style_field_catalog')
     if '--vector-style-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_style_field_catalog', 'cosworks_colorref_import_view')
@@ -396,10 +414,8 @@ def dialog_snapshot_readers() -> tuple[str, ...]:
     if '--colorref-export-only' in sys.argv: return ('cosworks_colorref_view',)
     if '--colorref-import-only' in sys.argv: return ('cosworks_colorref_import_view', 'cosworks_colorref_view')
     if '--rgba-views-only' in sys.argv: return DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_post_color_fields')
-    if '--postinfo-views-only' in sys.argv:
-        return ('cosworks_post_info_fields', 'cosworks_post_contour_policy')
-    if '--parent-views-only' in sys.argv:
-        return ('cosworks_legend_range_fields', 'cosworks_deform_scale_fields')
+    if '--postinfo-views-only' in sys.argv: return ('cosworks_post_info_fields', 'cosworks_post_contour_policy')
+    if '--parent-views-only' in sys.argv: return ('cosworks_legend_range_fields', 'cosworks_deform_scale_fields')
     return default_snapshot_readers()
 
 
@@ -408,12 +424,12 @@ def default_snapshot_readers() -> tuple[str, ...]:
     readers = DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout')
     if any(flag in sys.argv for flag in ('--resources-only', '--caps-only', '--reference-caps-only')):
         return readers
-    return readers + ('cosworks_post_v7_composed_view', 'cfb', 'swcontainer', 'cosworks_colorref_import_view', 'cosworks_colorref_view', 'cosworks_color_comparison', 'cosworks_legend_comparison', 'cosworks_legend_render_gate', 'cosworks_need_model_tess', 'cosworks_need_offset', 'cosworks_fringe_option', 'cosworks_vector_direction_branch', 'cosworks_component_vector_policy', 'cosworks_component_unit_type', 'cosworks_render_safety', 'cosworks_aux_triangle_gate')
+    return readers + ('cosworks_post_v7_composed_view', 'cfb', 'swcontainer', 'cosworks_colorref_import_view', 'cosworks_colorref_view', 'cosworks_color_comparison', 'cosworks_legend_comparison', 'cosworks_legend_render_gate', 'cosworks_need_model_tess', 'cosworks_need_offset', 'cosworks_fringe_option', 'cosworks_vector_direction_branch', 'cosworks_component_vector_policy', 'cosworks_component_unit_type', 'cosworks_render_safety', 'cosworks_aux_triangle_gate', 'cosworks_post_style_text_view')
 
 
 def dialog_snapshot_filename() -> str:
     """Keep partial replay evidence separate from the mandatory full snapshot; e.g. dialog_snapshot_filename()."""
-    modes = (('--triangle-selectors-only', 'triangle-selector-source-snapshot.json'), ('--aux-triangle-only', 'aux-triangle-source-snapshot.json'), ('--annotations-only', 'annotation-source-snapshot.json'), ('--vector-style-only', 'vector-style-source-snapshot.json'), ('--raw-preferences-only', 'raw-preferences-source-snapshot.json'),
+    modes = (('--text-controls-only', 'text-control-source-snapshot.json'), ('--triangle-selectors-only', 'triangle-selector-source-snapshot.json'), ('--aux-triangle-only', 'aux-triangle-source-snapshot.json'), ('--annotations-only', 'annotation-source-snapshot.json'), ('--vector-style-only', 'vector-style-source-snapshot.json'), ('--raw-preferences-only', 'raw-preferences-source-snapshot.json'),
              ('--local-render-only', 'local-render-source-snapshot.json'),
              ('--resources-only', 'resource-source-snapshot.json'),
              ('--caps-only', 'cap-source-snapshot.json'),
