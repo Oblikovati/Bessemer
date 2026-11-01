@@ -39,10 +39,26 @@
     "A complete production candidate/group/array operation"
   ],
   "pending": [
-    "Full202 Source gate",
     "Production immutable candidate, group and fixed array-write operation with explicit runtime dependencies",
     "Independent raw-pattern fixtures, input isolation, concurrency and fresh-process checks for that operation",
     "Exact publication-cut PR and five platform checks; remaining feature166 schemas"
   ],
-  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 202,
+    "seconds": 495.29,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "7b81281d46903c4d0e12c376e676af292441a011",
+    "log": {
+      "path": "target/mode3-rgb-kernel-full.log",
+      "bytes": 47797,
+      "sha256": "097823d03120f9adf68c8ce577546b31d35cd8acc122549107eba9e580e0d671"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 629647,
+      "sha256": "1e008682137d0c509b1f0507a6b91ebeeae8008b7b40b527df493fec8e34bb74"
+    }
+  }
 }
