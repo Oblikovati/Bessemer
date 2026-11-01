@@ -99,6 +99,7 @@ from dialog_reader_selection import select_dialog_snapshot_readers
 from dialog_reader_selection_checks import verify_dialog_reader_selection
 from legend_resets_evidence import legend_resets_functions, run_legend_resets_checks
 from legend_grouping_evidence import legend_grouping_functions, run_legend_grouping_checks
+from legend_inverse_evidence import legend_inverse_functions, run_legend_inverse_checks
 from aux_triangle_evidence import verify_aux_triangle_sources
 from aux_triangle_bindings import verify_aux_triangle_bindings
 from aux_triangle_projection import verify_aux_triangle_native, verify_aux_triangle_projection
@@ -133,7 +134,7 @@ def run_dialog_checks(pin: Path) -> unittest.TestResult:
 
 def run_style_annotation_checks() -> unittest.TestResult | None:
     """Dispatch the concrete stored-style modes without changing the full denominator; e.g. run_style_annotation_checks()."""
-    modes = (('--legend-grouping-only', run_legend_grouping_checks), ('--legend-resets-only', run_legend_resets_checks), ('--hidden-migration-only', run_hidden_migration_checks), ('--legend-width-only', run_legend_width_checks), ('--legend-end-cell-only', run_legend_end_cell_checks), ('--legend-3d-only', run_legend_3d_checks), ('--legend-step-only', run_legend_step_checks), ('--legend-yield-only', run_legend_yield_checks), ('--legend-height-only', run_legend_height_checks), ('--legend-palette-only', run_legend_palette_checks), ('--legend-position-only', run_legend_position_checks), ('--legend-format-only', run_legend_format_checks), ('--preference-colors-only', run_preference_color_checks), ('--mode3-rgb-only', run_mode3_rgb_checks), ('--segment-color-only', run_segment_color_checks), ('--plot54-only', run_plot54_checks), ('--text-controls-only', run_text_control_checks), ('--triangle-selectors-only', run_triangle_selector_checks), ('--aux-triangle-only', run_aux_triangle_checks), ('--annotations-only', run_annotation_checks), ('--vector-style-only', run_vector_style_checks),
+    modes = (('--legend-inverse-only', run_legend_inverse_checks), ('--legend-grouping-only', run_legend_grouping_checks), ('--legend-resets-only', run_legend_resets_checks), ('--hidden-migration-only', run_hidden_migration_checks), ('--legend-width-only', run_legend_width_checks), ('--legend-end-cell-only', run_legend_end_cell_checks), ('--legend-3d-only', run_legend_3d_checks), ('--legend-step-only', run_legend_step_checks), ('--legend-yield-only', run_legend_yield_checks), ('--legend-height-only', run_legend_height_checks), ('--legend-palette-only', run_legend_palette_checks), ('--legend-position-only', run_legend_position_checks), ('--legend-format-only', run_legend_format_checks), ('--preference-colors-only', run_preference_color_checks), ('--mode3-rgb-only', run_mode3_rgb_checks), ('--segment-color-only', run_segment_color_checks), ('--plot54-only', run_plot54_checks), ('--text-controls-only', run_text_control_checks), ('--triangle-selectors-only', run_triangle_selector_checks), ('--aux-triangle-only', run_aux_triangle_checks), ('--annotations-only', run_annotation_checks), ('--vector-style-only', run_vector_style_checks),
              ('--raw-preferences-only', run_raw_preferences_checks), ('--local-render-only', run_local_render_checks))
     for flag, check in modes:
         if flag in sys.argv: return check()
@@ -151,7 +152,7 @@ def append_dialog_unit_tests(suite: unittest.TestSuite) -> None:
                  'test_cosworks_legend_render_gate', 'test_cosworks_need_model_tess',
                  'test_cosworks_need_offset', 'test_cosworks_fringe_option',
                  'test_cosworks_vector_direction_branch', 'test_cosworks_component_vector_policy',
-                 'test_cosworks_component_unit_type', 'test_cosworks_render_safety', 'test_cosworks_aux_triangle_gate', 'test_cosworks_post_style_text_view', 'test_cosworks_style_preference_colors', 'test_cosworks_legend_number_format', 'test_cosworks_legend_position_fields', 'test_cosworks_legend_color_policy_fields', 'test_cosworks_legend_step_policy', 'test_cosworks_post_style_legacy_hidden_policy', 'test_cosworks_legend_read_resets'):
+                 'test_cosworks_component_unit_type', 'test_cosworks_render_safety', 'test_cosworks_aux_triangle_gate', 'test_cosworks_post_style_text_view', 'test_cosworks_style_preference_colors', 'test_cosworks_legend_number_format', 'test_cosworks_legend_position_fields', 'test_cosworks_legend_color_policy_fields', 'test_cosworks_legend_step_policy', 'test_cosworks_post_style_legacy_hidden_policy', 'test_cosworks_legend_read_resets', 'test_cosworks_legend_inverse_preference'):
         suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module(name)))
 
 
@@ -176,7 +177,7 @@ def default_dialog_functions(pin: Path) -> tuple[Callable[[], None], ...]:
               verify_offset_fringe_sources, verify_offset_fringe_bindings, verify_offset_fringe_native,
               verify_offset_fringe_packets, verify_offset_fringe_projection,
               verify_vector_sources, verify_vector_bindings, verify_vector_static_tables, verify_vector_table_constants,
-              verify_vector_packets, verify_vector_native, verify_vector_projection) + unit_model_functions() + local_render_functions() + raw_preferences_functions() + vector_style_functions() + annotation_functions() + aux_triangle_functions() + triangle_selector_functions() + text_control_functions() + plot54_functions() + segment_color_functions() + mode3_rgb_functions() + preference_color_functions() + legend_format_functions() + legend_position_functions() + legend_palette_functions() + legend_height_functions() + legend_yield_functions() + legend_step_functions() + legend_3d_functions() + legend_end_cell_functions() + legend_width_functions() + hidden_migration_functions() + legend_resets_functions() + legend_grouping_functions() + (verify_dialog_reader_selection,)
+              verify_vector_packets, verify_vector_native, verify_vector_projection) + unit_model_functions() + local_render_functions() + raw_preferences_functions() + vector_style_functions() + annotation_functions() + aux_triangle_functions() + triangle_selector_functions() + text_control_functions() + plot54_functions() + segment_color_functions() + mode3_rgb_functions() + preference_color_functions() + legend_format_functions() + legend_position_functions() + legend_palette_functions() + legend_height_functions() + legend_yield_functions() + legend_step_functions() + legend_3d_functions() + legend_end_cell_functions() + legend_width_functions() + hidden_migration_functions() + legend_resets_functions() + legend_grouping_functions() + legend_inverse_functions() + (verify_dialog_reader_selection,)
 
 
 def plot54_functions() -> tuple[Callable[[], None], ...]:
@@ -449,7 +450,7 @@ def default_snapshot_readers() -> tuple[str, ...]:
     readers = DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout')
     if any(flag in sys.argv for flag in ('--resources-only', '--caps-only', '--reference-caps-only')):
         return readers
-    return readers + ('cosworks_post_v7_composed_view', 'cfb', 'swcontainer', 'cosworks_colorref_import_view', 'cosworks_colorref_view', 'cosworks_color_comparison', 'cosworks_legend_comparison', 'cosworks_legend_render_gate', 'cosworks_need_model_tess', 'cosworks_need_offset', 'cosworks_fringe_option', 'cosworks_vector_direction_branch', 'cosworks_component_vector_policy', 'cosworks_component_unit_type', 'cosworks_render_safety', 'cosworks_aux_triangle_gate', 'cosworks_post_style_text_view', 'cosworks_style_preference_colors', 'cosworks_legend_number_format', 'cosworks_legend_position_fields', 'cosworks_legend_color_policy_fields', 'cosworks_legend_step_policy', 'cosworks_post_style_legacy_hidden_policy', 'cosworks_legend_read_resets')
+    return readers + ('cosworks_post_v7_composed_view', 'cfb', 'swcontainer', 'cosworks_colorref_import_view', 'cosworks_colorref_view', 'cosworks_color_comparison', 'cosworks_legend_comparison', 'cosworks_legend_render_gate', 'cosworks_need_model_tess', 'cosworks_need_offset', 'cosworks_fringe_option', 'cosworks_vector_direction_branch', 'cosworks_component_vector_policy', 'cosworks_component_unit_type', 'cosworks_render_safety', 'cosworks_aux_triangle_gate', 'cosworks_post_style_text_view', 'cosworks_style_preference_colors', 'cosworks_legend_number_format', 'cosworks_legend_position_fields', 'cosworks_legend_color_policy_fields', 'cosworks_legend_step_policy', 'cosworks_post_style_legacy_hidden_policy', 'cosworks_legend_read_resets', 'cosworks_legend_inverse_preference')
 
 
 
