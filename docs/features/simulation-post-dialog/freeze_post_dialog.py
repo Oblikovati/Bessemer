@@ -24,6 +24,7 @@ from dialog_catalog import verify_dialog_role_catalog
 from dialog_owned import verify_dialog_owned
 from dialog_owned_field_views import verify_owned_postinfo_field_views
 from dialog_operation_packets import verify_dialog_operation_packets
+from dialog_edit_oracle import verify_dialog_edit_matrix
 from dialog_projection_shapes import verify_dialog_scalar_shapes
 from dialog_parent_views import (verify_dialog_parent_sources, verify_dialog_parent_native, verify_dialog_parent_bindings,
                                  verify_dialog_parent_owned, verify_dialog_parent_branches)
@@ -39,7 +40,7 @@ def run_dialog_checks(pin: Path) -> unittest.TestResult:
               verify_postinfo_field_views, verify_rgba_native_views, verify_dialog_role_catalog, verify_dialog_owned,
               verify_owned_postinfo_field_views, verify_dialog_operation_packets, verify_dialog_scalar_shapes, verify_dialog_parent_sources,
               verify_dialog_parent_native, verify_dialog_parent_bindings,
-              verify_dialog_parent_owned, verify_dialog_parent_branches)
+              verify_dialog_parent_owned, verify_dialog_parent_branches, verify_dialog_edit_matrix)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
     for suffix in ('dialog_layout', 'dialog_prefix', 'info', 'style', 'planes', 'v7_composed_view',
                    'info_fields', 'cutprim_types', 'contour_policy', 'color_fields', 'style_field_catalog'):

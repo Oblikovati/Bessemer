@@ -21,6 +21,11 @@ def dialog_fields(family: int, version: int, raw: bytes) -> list[bytes]:
     """Project all complete typed fields after actual reader acceptance; e.g. dialog_fields(0, 890620, raw)."""
     parsed = actual_post_record(family, version, raw)
     assert parsed['success'] and parsed['end'] == len(raw), (family, version, parsed)
+    return dialog_fields_from_record(raw, parsed)
+
+
+def dialog_fields_from_record(raw: bytes, parsed: dict[str, object]) -> list[bytes]:
+    """Expand one already accepted complete Source record without decoding it twice; e.g. dialog_fields_from_record(raw, parsed)."""
     spans = dialog_atomic_spans(parsed)
     labels = [cast(str, span['label']) for span in spans]
     assert len(labels) == len(set(labels)), 'expected unique physical role paths'

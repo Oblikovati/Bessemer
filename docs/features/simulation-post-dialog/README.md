@@ -173,3 +173,18 @@ and eight-worker replay. Native replay matches all 120 retained Style candidates
 in this cohort. The complete native field and literal edit-history expectations
 match byte for byte. Full Style PR/platform acceptance remains pending, as do the
 parent-dialog codec, remaining bounded views and expanded legacy mismatch cohort.
+
+The parent edit oracle now records every one of 117,435 physical field mutations
+across all 225 owned dialog contexts. Both complete grammar acceptance and
+preservation of unselected field paths, kinds, values and rebased spans come
+from fresh pinned Source parsing. The resulting matrix contains 115,312 valid
+isolated edits and 2,123 rejected structural mutations across all eight value
+kinds. The earlier 662 missing-terminal-NUL PersistText mutations remain separate
+negative controls; valid odd-byte replacements retain the required terminator.
+
+Initialization and strict replay each pass all 58 reference checks. The compact
+matrix stores complete replacement frames and independent outcome/span facts;
+complete original inputs and primitive expectations remain frozen separately.
+[Edit-oracle verification](edit-matrix-verification.json) records input/output
+hashes, exact counts, completed Rust checks and remaining acceptance work. Parent
+prefix and expanded concurrency acceptance are tracked separately.
