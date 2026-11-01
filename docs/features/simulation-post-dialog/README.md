@@ -108,7 +108,8 @@ and deformation selector are signed integers, and the two scales and four
 range values are float32 bit patterns. Remaining unresolved words retain their
 raw bits. These stored roles do not establish units, normalization, runtime
 activation or geometry. [Packet hashes](operation-packets-reference.json)
-identify the complete expectations; Rust codec acceptance remains pending.
+identify the complete expectations. Local codec acceptance is recorded in
+[parent operation verification](parent-operation-verification.json).
 
 The complete C-874/C-875 parent-view reports are retained and replayed against
 all 224 native parent contexts. Installed export names, complete accessor bytes
@@ -124,10 +125,11 @@ selected views remain separate: no units, range ordering, UI mode names or
 geometry activation are inferred. Initialization passes 57 checks, including the
 five original range/scale tests. Later bounded consumer views remain pending.
 
-Owned complete operations, full later field-role/view adoption, typed Rust
-read/construction/edit, atomic text profiles, scoped embedded archive acceptance,
-independent fields/history/resources, adversarial limits and extents, isolation,
-concurrency, process exports and full local/platform acceptance remain pending.
+Verified stored-profile coverage includes typed reads/construction/edits, atomic
+text, scoped archives, independent fields/history/resources, adversarial limits
+and extents, isolation, concurrency and process exports. The parent codec passed
+its local gate. Cross-platform publication and later field-role/view adoption
+remain pending.
 Imported-helper text, PostStyle's separate defensive text bound and standalone
 700002 PostInfo safety limits must remain distinct. Unknown bits and enum words
 must survive without runtime normalization or invented physical meanings.
@@ -147,13 +149,13 @@ character safety budget rather than the imported helper's separate 1024-characte
 profile. Reads require EOF, and edits return immutable inputs/results, exact
 coverage and ordered field history through the existing load adapters.
 
-Thirteen focused Rust checks pass, including all 70 owned contexts, all 120 native
+Thirteen core-codec Rust checks pass, including all 70 owned contexts, all 120 native
 PostInfo helper arguments from 60 streams, complete field and literal edit-history
 oracles, every-field changed/no-op edits, input isolation, five resource axes,
 full 0x100000-character safety controls and eight-worker replay. This helper
-operation does not infer named-stream dispatch compatibility. Parent-dialog and
-PostStyle codecs, remaining bounded views and full issue166 acceptance remain
-pending. Humanizer prose review remains pending.
+operation does not infer named-stream dispatch compatibility. The parent-dialog
+and PostStyle codecs are also implemented; remaining bounded views and full
+issue166 acceptance remain pending. Humanizer prose review remains pending.
 
 `SimulationPostStyle` now reads, constructs and edits complete historical and
 modern helper profiles. The legacy 368-byte body has 20 preserved raw words and
@@ -171,8 +173,8 @@ and ordered history oracles, five exact/one-below resource axes, raw text owners
 and eight-worker replay. Native replay matches all 120 retained Style candidates:
 52 accepted / 14,768 bytes and 68 rejected; all 52 successes are caller-compatible
 in this cohort. The complete native field and literal edit-history expectations
-match byte for byte. Full Style PR/platform acceptance remains pending, as do the
-complete parent-dialog acceptance, remaining bounded views and expanded legacy mismatch cohort.
+match byte for byte. Cross-platform publication, remaining consumer views and
+the expanded legacy mismatch cohort remain pending.
 
 The parent edit oracle now records every one of 117,435 physical field mutations
 across all 225 owned dialog contexts. Both complete grammar acceptance and
@@ -190,15 +192,15 @@ hashes, exact counts, completed Rust checks and remaining acceptance work. Paren
 prefix and expanded concurrency acceptance are tracked separately.
 
 
-The full strict replay now passes 59 checks, including independent resource
+The 59-check strict replay added independent resource
 counts for all 225 owned parent contexts. The resource packet records outer
 bytes, fields, variable entries and text payloads, plus per-root embedded byte,
 field and new-object maxima. Nested coverage totals remain separate from those
 per-root limits. Rust accepts each exact budget and rejects one below during
 both reading and construction. [Resource verification](resource-verification.json)
 records packet, snapshot and verification-log hashes. These checks do not claim
-application acceptance or geometry validation; complete parent acceptance is
-still in progress.
+application acceptance or geometry validation. Parent cross-platform
+publication remains pending.
 
 
 A separate pinned Source replay checks complete boundary inputs for five
@@ -251,7 +253,7 @@ and 118 were ignored. Two later parent archive-boundary tests and the expanded
 public-type thread-safety assertions passed separately; the final all-target
 Clippy run also passed. [Operation verification](parent-operation-verification.json)
 records the gate scope, logs and remaining cross-platform acceptance. The
-consumer views remain a separate implementation step under the same issue.
+additional consumer roles remain under the same issue.
 
 
 The range and deformation-scale accessors implement the bounded prefix views in
@@ -279,9 +281,10 @@ center and shared-scalar patterns remain unchanged. The derived D pattern flips
 only the scalar sign bit. The header view retains all seven words, signed count
 values and the noninvertible forward contour preference conversion. Five frozen
 Source blocks cover sixty slots, including unknown codes and non-finite patterns.
-All 17 PostInfo tests passed with native checks included, and all-target Clippy
-passed. Ten targeted pinned Source checks passed. Reverse/default contour policy,
-runtime comparison and the other consumer views remain separate obligations.
+The initial 17 PostInfo tests passed with native checks included, and all-target
+Clippy passed. Ten targeted pinned Source checks passed. Reverse/default contour
+policy and the named runtime comparison are implemented below; other consumer
+roles remain pending.
 
 
 The named PostInfo views passed the full 61-check Source replay and all 18 final
