@@ -57,9 +57,26 @@
     "New stored-byte credit or expanded original prefix-only admission"
   ],
   "pending": [
-    "Full integrated Source replay for this evidence cut",
     "Remaining feature166 models",
     "Exact publication-head cargo xtask pr and all five platform gates"
   ],
-  "prose_review": "Humanizer unavailable; maintainer review pending."
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_source_replay": {
+    "checks": 283,
+    "failed": 0,
+    "seconds": 483.104,
+    "process_exit_code": 0,
+    "accepted_source_cut": "83ca11804d49fae7556c0e771bfd1a7e8dd398a2",
+    "log": {
+      "path": "target/legend-end-cell-source-full.log",
+      "bytes": 62714,
+      "sha256": "8f0586417d2c3d9b7b2575dc0a37d25d1ef6dc8954030d3e8ce6c2082c2315fb"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 633446,
+      "sha256": "fc3454e002cc2bd12d3995d4b5d1ebfaf4d5faa394cf247be3bb0ee4da21a93d"
+    },
+    "terminal_exit_reaped": true
+  }
 }
