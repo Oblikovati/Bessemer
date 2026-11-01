@@ -75,6 +75,8 @@ five complete projection/edit checks. Clippy passed with warnings denied.
 The strict Source suite passed18 checks in7.862seconds and exited successfully
 after snapshot recording. Two fresh Rust processes matched every expected
 result across2,756 contexts, totaling154,336bytes.
+The full Source suite passed231 checks in491.813seconds and exited successfully
+after snapshot recording.
 
 The [operation verification record](legend-position-operation-verification.json)
 and [process proof](legend-position-process-verification.json) record exact
