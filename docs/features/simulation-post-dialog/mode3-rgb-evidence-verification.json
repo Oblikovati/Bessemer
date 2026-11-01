@@ -85,10 +85,26 @@
     "Replacing serialized1DC with selected group RGB"
   ],
   "pending": [
-    "Full201 Source gate",
     "Complete local candidate/group-selection and array-update operation with explicit reached runtime facts",
     "Exact publication-cut PR validation and five platform gates",
     "Remaining feature166 schemas and integration"
   ],
-  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 201,
+    "seconds": 524.555,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "e0fdc7a12cd91b272574c8010132a5c160f140cf",
+    "log": {
+      "path": "target/mode3-rgb-source-full.log",
+      "bytes": 47605,
+      "sha256": "86ab3036659d7510ba176bce9ee3e110cd3e7e0584bb50dc0bcaee622e12fc81"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 626343,
+      "sha256": "700fc0561080172c69c6898dde895e897d56ce3bd7200642c571dc4b547da1d2"
+    }
+  }
 }
