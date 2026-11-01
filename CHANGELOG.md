@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added complete fixed-slot PostInfo reads, construction and isolated edits with preserved float32 patterns and the exact version700002 character-text suffix. (#166)
+
 - Added complete documented graph parameter reads, construction and isolated edits with atomic character-count text and preserved raw eight-byte values. (#165)
 
 - Added complete documented Results root, category and plot Property reads, construction and isolated edits with explicit hierarchy and current-writer contexts. (#164)

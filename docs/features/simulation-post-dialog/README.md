@@ -137,3 +137,20 @@ carrier exceptions, universal runtime version selection, unknown physical
 meanings and whole-format parity remain unproven.
 
 Humanizer was unavailable; maintainer prose review remains pending.
+
+The standalone `SimulationPostInfo` operation now reads, constructs and edits the
+complete 460-byte helper body and its exact version700002 suffix. Its 115 fixed
+fields retain enum words, unresolved word bits and float32 patterns; all twelve
+slots remain present for negative or extreme active counts. Counted character
+text is an atomic value, preserves raw code units and uses an explicit configurable
+character safety budget rather than the imported helper's separate 1024-character
+profile. Reads require EOF, and edits return immutable inputs/results, exact
+coverage and ordered field history through the existing load adapters.
+
+Thirteen focused Rust checks pass, including all 70 owned contexts, all 120 native
+PostInfo helper arguments from 60 streams, complete field and literal edit-history
+oracles, every-field changed/no-op edits, input isolation, five resource axes,
+full 0x100000-character safety controls and eight-worker replay. This helper
+operation does not infer named-stream dispatch compatibility. Parent-dialog and
+PostStyle codecs, remaining bounded views and full issue166 acceptance remain
+pending. Humanizer prose review remains pending.
