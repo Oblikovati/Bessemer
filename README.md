@@ -704,7 +704,7 @@ stored RGBA colors with their structural paths and complete body spans,
 including legacy color regions. `SimulationRgbaColor` preserves all four scalar
 patterns and reconstructs exactly sixteen bytes. Its named-channel accessor
 returns numeric values only for finite patterns, preserving signed zero and
-subnormal values. Colors are not clamped or normalized; the separate [plot54 local plan](docs/features/simulation-post-dialog/plot54-color.md) records its alpha projection, and [element-segment local RGB reads](docs/features/simulation-post-dialog/segment-color.md) preserves the RGB consumer boundary; [conditional1DC RGB](docs/features/simulation-post-dialog/mode3-rgb.md) provides group-selection plans and isolated fixed-slot copies with explicit runtime facts.
+subnormal values. The [preference-color route evidence](docs/features/simulation-post-dialog/preference-colors.md) keeps initializer and runtime applicability separate. Colors are not clamped or normalized; the separate [plot54 local plan](docs/features/simulation-post-dialog/plot54-color.md) records its alpha projection, and [element-segment local RGB reads](docs/features/simulation-post-dialog/segment-color.md) preserves the RGB consumer boundary; [conditional1DC RGB](docs/features/simulation-post-dialog/mode3-rgb.md) provides group-selection plans and isolated fixed-slot copies with explicit runtime facts.
 
 
 `SimulationRgbaColor::from_colorref_nearest_even` models the packed constructor:

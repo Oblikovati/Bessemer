@@ -1,0 +1,140 @@
+{
+  "evidence": "C-907",
+  "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\Simulation\\DgxPost.dll",
+  "module_sha256": "2fa0173c92d0f3193deeb048c008bd04c37daaefb80cc175704249164acff44a",
+  "function": {
+    "address": "0x180045050",
+    "end": "0x1800451c2",
+    "instructions": [
+      "180045050 mov qword ptr [rsp + 8], rbx",
+      "180045055 push rdi",
+      "180045056 sub rsp, 0x20",
+      "18004505a mov rdi, rdx",
+      "18004505d mov rbx, rcx",
+      "180045060 call 0x1800e3a90",
+      "180045065 mov rax, qword ptr [rbx + 0x2d0]",
+      "18004506c test rax, rax",
+      "18004506f je 0x18004507b",
+      "180045071 cmp dword ptr [rax + 0x10], 0x49",
+      "180045075 je 0x1800451b7",
+      "18004507b mov eax, dword ptr [rdi + 0x152c]",
+      "180045081 lea rdx, [rdi + 0x1578]",
+      "180045088 mov dword ptr [rbx + 0x240], eax",
+      "18004508e lea rcx, [rbx + 0x220]",
+      "180045095 mov eax, dword ptr [rdi + 0x1570]",
+      "18004509b mov dword ptr [rbx + 0x21c], eax",
+      "1800450a1 mov eax, dword ptr [rdi + 0x1574]",
+      "1800450a7 mov dword ptr [rbx + 0x230], eax",
+      "1800450ad call qword ptr [rip + 0x2862c5]",
+      "1800450b3 mov eax, dword ptr [rdi + 0x157c]",
+      "1800450b9 lea rdx, [rdi + 0x1588]",
+      "1800450c0 mov dword ptr [rbx + 0x22c], eax",
+      "1800450c6 lea rcx, [rbx + 0x1bc]",
+      "1800450cd mov eax, dword ptr [rdi + 0x1584]",
+      "1800450d3 mov dword ptr [rbx + 0x1b8], eax",
+      "1800450d9 call qword ptr [rip + 0x286299]",
+      "1800450df lea rdx, [rdi + 0x158c]",
+      "1800450e6 lea rcx, [rbx + 0x1cc]",
+      "1800450ed call qword ptr [rip + 0x286285]",
+      "1800450f3 lea rdx, [rdi + 0x1590]",
+      "1800450fa lea rcx, [rbx + 0x1dc]",
+      "180045101 call qword ptr [rip + 0x286271]",
+      "180045107 mov eax, dword ptr [rdi + 0x1594]",
+      "18004510d lea rdx, [rdi + 0x15a8]",
+      "180045114 lea rcx, [rbx + 0x2ac]",
+      "18004511b mov dword ptr [rbx + 0x1e8], eax",
+      "180045121 call qword ptr [rip + 0x286251]",
+      "180045127 mov eax, dword ptr [rdi + 0x15b0]",
+      "18004512d lea rdx, [rdi + 0x15ac]",
+      "180045134 lea rcx, [rbx + 0x2bc]",
+      "18004513b mov dword ptr [rbx + 0x2b8], eax",
+      "180045141 call qword ptr [rip + 0x286231]",
+      "180045147 mov eax, dword ptr [rdi + 0x15b8]",
+      "18004514d lea rdx, [rdi + 0x15d0]",
+      "180045154 mov dword ptr [rbx + 0x1ec], eax",
+      "18004515a lea rcx, [rbx + 0x1f4]",
+      "180045161 mov eax, dword ptr [rdi + 0x15c0]",
+      "180045167 mov dword ptr [rbx + 0x1f0], eax",
+      "18004516d call qword ptr [rip + 0x286205]",
+      "180045173 mov eax, dword ptr [rdi + 0x15c8]",
+      "180045179 lea rdx, [rdi + 0x15cc]",
+      "180045180 mov dword ptr [rbx + 0x200], eax",
+      "180045186 lea rcx, [rbx + 0x20c]",
+      "18004518d mov eax, dword ptr [rdi + 0x15b4]",
+      "180045193 mov dword ptr [rbx + 0x204], eax",
+      "180045199 mov eax, dword ptr [rdi + 0x15bc]",
+      "18004519f mov dword ptr [rbx + 0x208], eax",
+      "1800451a5 call qword ptr [rip + 0x2861cd]",
+      "1800451ab mov eax, dword ptr [rdi + 0x15c4]",
+      "1800451b1 mov dword ptr [rbx + 0x218], eax",
+      "1800451b7 mov rbx, qword ptr [rsp + 0x30]",
+      "1800451bc add rsp, 0x20",
+      "1800451c0 pop rdi",
+      "1800451c1 ret "
+    ]
+  },
+  "routes": [
+    {
+      "style_offset": "0x220",
+      "packed_preference_offset": "0x1578",
+      "alpha_preference_offset": "0x157c"
+    },
+    {
+      "style_offset": "0x1bc",
+      "packed_preference_offset": "0x1588",
+      "alpha_preference_offset": null
+    },
+    {
+      "style_offset": "0x1cc",
+      "packed_preference_offset": "0x158c",
+      "alpha_preference_offset": null
+    },
+    {
+      "style_offset": "0x1dc",
+      "packed_preference_offset": "0x1590",
+      "alpha_preference_offset": "0x1594"
+    },
+    {
+      "style_offset": "0x2ac",
+      "packed_preference_offset": "0x15a8",
+      "alpha_preference_offset": "0x15b0"
+    },
+    {
+      "style_offset": "0x2bc",
+      "packed_preference_offset": "0x15ac",
+      "alpha_preference_offset": null
+    },
+    {
+      "style_offset": "0x1f4",
+      "packed_preference_offset": "0x15d0",
+      "alpha_preference_offset": "0x15c8"
+    },
+    {
+      "style_offset": "0x20c",
+      "packed_preference_offset": "0x15cc",
+      "alpha_preference_offset": "0x15c4"
+    }
+  ],
+  "local_block_skip_type": 73,
+  "legend_call_precedes_guard": true,
+  "tests": {
+    "run": 3,
+    "output": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n"
+  },
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_style_preference_colors_audit.py": "5cc574c178f099c5e85c4648c097e135e2b953b6542edfe0cb1910915cd7ab82",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-style-raw-preferences-probe.json": "8d1c7d3b4ead0702772ff9cdb544c263812a9c816f940a519d3eb3d5714be2ed",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_style_preference_colors.py": "45cde7e47d1d345e747ddaecc1649c338a3e2e5ed6ad2a199267cd53eb8100e4",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\test_cosworks_style_preference_colors.py": "96f7956c14c87e70e9095102e0ad8dfde5d482367e47857dc513d54026604cb1",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-colorref-assignment-evidence.json": "366d09693b3c9323698fc4a348eab8c7cd99a717716083487c79479278290372",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\cosworks-style-raw-preferences\\FUN_180045050.c": "59a7f4952ece54ab1f8cecb64b1b88c1d197cb4d70eea4c0699d7b15d6d26c69"
+  },
+  "target_executed": false,
+  "coverage_credit": 0,
+  "limitations": [
+    "Explicit runtime applicability required; not inferred from serialized color bytes",
+    "Color projection only, not a complete preference setter",
+    "Nearest-even arithmetic context is explicit",
+    "No unresolved color display role is assigned"
+  ]
+}
