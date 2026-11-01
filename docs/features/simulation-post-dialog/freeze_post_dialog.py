@@ -36,6 +36,8 @@ from colorref_export_evidence import verify_colorref_export_sources, verify_colo
 from colorref_export_packets import verify_colorref_export_packets
 from color_comparison_evidence import verify_color_comparison_sources, verify_color_comparison_bindings
 from color_comparison_packets import verify_color_comparison_packets
+from legend_comparison_evidence import verify_legend_comparison_sources, verify_legend_comparison_bindings
+from legend_comparison_packets import verify_legend_comparison_packets, verify_legend_style_projection
 from dialog_projection_shapes import verify_dialog_scalar_shapes
 from dialog_parent_views import (verify_dialog_parent_sources, verify_dialog_parent_native, verify_dialog_parent_bindings,
                                  verify_dialog_parent_owned, verify_dialog_parent_branches)
@@ -43,6 +45,7 @@ from dialog_parent_views import (verify_dialog_parent_sources, verify_dialog_par
 
 def run_dialog_checks(pin: Path) -> unittest.TestResult:
     """Preserve all original C-770 and integrated legacy-view tests beside fresh full replay; e.g. run_dialog_checks(pin)."""
+    if '--legend-comparison-only' in sys.argv: return run_legend_comparison_checks()
     if '--rgba-comparison-only' in sys.argv: return run_color_comparison_checks()
     if '--colorref-export-only' in sys.argv: return run_colorref_export_checks()
     if '--colorref-import-only' in sys.argv: return run_colorref_import_checks()
@@ -57,7 +60,7 @@ def run_dialog_checks(pin: Path) -> unittest.TestResult:
         suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module('test_cosworks_post_' + suffix)))
     for name in ('test_cosworks_legend_range_fields', 'test_cosworks_deform_scale_fields',
                  'test_cosworks_colorref_import_view', 'test_cosworks_colorref_assignment', 'test_cosworks_colorref_view',
-                 'test_cosworks_color_comparison'):
+                 'test_cosworks_color_comparison', 'test_cosworks_legend_comparison'):
         suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module(name)))
     return unittest.TextTestRunner(verbosity=2).run(suite)
 
@@ -76,7 +79,9 @@ def default_dialog_functions(pin: Path) -> tuple[Callable[[], None], ...]:
               verify_dialog_parent_owned, verify_dialog_parent_branches, verify_dialog_edit_matrix, verify_dialog_resources, verify_dialog_caps, verify_reference_caps, verify_rgba_packets,
               verify_colorref_import_sources, verify_colorref_import_bindings, verify_colorref_import_packets,
               verify_colorref_export_sources, verify_colorref_export_bindings, verify_colorref_export_packets,
-              verify_color_comparison_sources, verify_color_comparison_bindings, verify_color_comparison_packets)
+              verify_color_comparison_sources, verify_color_comparison_bindings, verify_color_comparison_packets,
+              verify_legend_comparison_sources, verify_legend_comparison_bindings, verify_legend_comparison_packets,
+              verify_legend_style_projection)
 
 
 def run_resource_checks() -> unittest.TestResult:
@@ -141,8 +146,21 @@ def run_color_comparison_checks() -> unittest.TestResult:
     return unittest.TextTestRunner(verbosity=2).run(suite)
 
 
+def run_legend_comparison_checks() -> unittest.TestResult:
+    """Verify complete dependencies, conditional branches and original native identities; e.g. run_legend_comparison_checks()."""
+    checks = (verify_dialog_sources, verify_dialog_field_sources, verify_colorref_import_sources,
+              verify_color_comparison_sources, verify_color_comparison_bindings,
+              verify_legend_comparison_sources, verify_legend_comparison_bindings, verify_legend_comparison_packets,
+              verify_legend_style_projection)
+    suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
+    suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module('test_cosworks_legend_comparison')))
+    return unittest.TextTestRunner(verbosity=2).run(suite)
+
+
 def dialog_snapshot_readers() -> tuple[str, ...]:
     """Require exactly the readers exercised by the selected gate; e.g. dialog_snapshot_readers()."""
+    if '--legend-comparison-only' in sys.argv:
+        return ('cosworks_legend_comparison', 'cosworks_color_comparison', 'cosworks_post_style_layout', 'cosworks_post_color_fields')
     if '--rgba-comparison-only' in sys.argv:
         return ('cosworks_color_comparison',)
     if '--colorref-export-only' in sys.argv:
@@ -158,7 +176,7 @@ def dialog_snapshot_readers() -> tuple[str, ...]:
     readers = DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout')
     if any(flag in sys.argv for flag in ('--resources-only', '--caps-only', '--reference-caps-only')):
         return readers
-    return readers + ('cosworks_post_v7_composed_view', 'cfb', 'swcontainer', 'cosworks_colorref_import_view', 'cosworks_colorref_view', 'cosworks_color_comparison')
+    return readers + ('cosworks_post_v7_composed_view', 'cfb', 'swcontainer', 'cosworks_colorref_import_view', 'cosworks_colorref_view', 'cosworks_color_comparison', 'cosworks_legend_comparison')
 
 
 def dialog_snapshot_filename() -> str:
@@ -171,7 +189,8 @@ def dialog_snapshot_filename() -> str:
              ('--rgba-views-only', 'rgba-view-source-snapshot.json'),
              ('--colorref-import-only', 'colorref-import-source-snapshot.json'),
              ('--colorref-export-only', 'colorref-export-source-snapshot.json'),
-             ('--rgba-comparison-only', 'rgba-comparison-source-snapshot.json'))
+             ('--rgba-comparison-only', 'rgba-comparison-source-snapshot.json'),
+             ('--legend-comparison-only', 'legend-comparison-source-snapshot.json'))
     for flag, filename in modes:
         if flag in sys.argv: return filename
     return 'source-snapshot.json'

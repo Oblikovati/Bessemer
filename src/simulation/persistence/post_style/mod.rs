@@ -6,6 +6,8 @@ mod coverage;
 mod decode;
 mod edit;
 mod legacy;
+mod legend_comparison;
+mod legend_state;
 mod result;
 mod types;
 mod values;
@@ -29,6 +31,7 @@ pub use super::thermal::{
 };
 pub use archive::SimulationPostStyle;
 pub use contracts::SimulationPostStyleEdit;
+pub use legend_state::SimulationLegendComparisonState;
 pub use types::{SimulationPostStyleCompletion, SimulationPostStyleCoverage};
 
 pub(super) use decode::read as read_poststyle;
