@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added complete local Simulation hidden-parts/model-tessellation triangle color plans with explicit caller facts, ordered lookup filters, owned provenance and masked DAZ/FTZ-off alpha semantics. (#166)
+
 - Added auxiliary-triangle controls and bounded immutable call plans with runtime rejection reasons, color provenance and explicit payload-validation exclusions. (#166)
 
 - Added independent raw Min/Max annotation controls and the separate glyph-material adjustment predicate with explicit runtime context. (#166)

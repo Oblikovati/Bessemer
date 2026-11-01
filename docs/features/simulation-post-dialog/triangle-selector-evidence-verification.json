@@ -25,27 +25,26 @@
     }
   },
   "pending": [
-    "Full Source suite including the two new installed-binding and retained-capture checks (expected170)",
     "Both caller paths and complete bounded helper operation with independent oracle",
     "Publication-cut PR and all five exact-head platform gates"
   ],
   "prose_review": "Humanizer skill unavailable; maintainer review pending.",
   "full_source": {
-    "checks": 168,
-    "seconds": 504.026,
+    "checks": 170,
+    "seconds": 519.815,
     "process_exit_code": 0,
     "result": "passed",
-    "source_evidence_cut": "2063b1b7c0cde942247b3c922b6619b27042863c",
-    "includes_new_installed_binding_gate": false,
+    "source_evidence_cut": "aed35916c72e64fca2493189bbbe40b21fb8868d",
+    "includes_new_installed_binding_gate": true,
     "log": {
-      "path": "target/triangle-selector-source-full.log",
-      "bytes": 41376,
-      "sha256": "615d36d024586021da1a6cc6001699c7ef675fd2247e5925d5e82f2f6bbca3d3"
+      "path": "target/triangle-selector-native-binding-full.log",
+      "bytes": 41799,
+      "sha256": "03d5578798eaf79918e0815bab38baa0220668767dd1cd9e4055f940235808a3"
     },
     "snapshot": {
       "path": "docs/features/simulation-post-dialog/source-snapshot.json",
-      "bytes": 593862,
-      "sha256": "c0f981d29df36b98079260fc303ebd4baa6c70cafa13647d1a5757b1beb0e63e"
+      "bytes": 596781,
+      "sha256": "e9e457b5ef9addf86a2ed742f99c1afdb4a1444c4ce02260d902edbb287c45de"
     }
   },
   "installed_binding": {
