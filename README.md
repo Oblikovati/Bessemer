@@ -615,3 +615,9 @@ late-field profiles. Groups preserve MFC CString encodings/prefix widths and raw
 double bits under aggregate caller budgets. Complete construction and isolated
 edits retain exact bytes, identities and ordered history. Populated native group
 coverage remains unproven; see [the ShellManager evidence](docs/features/simulation-shell-manager/README.md).
+
+Separate CompositeFlipTurn and CompositeExtra streams support complete reads,
+construction and isolated typed edits. Explicit reader/writer profiles retain
+conditional fields, raw double bits, optional writer tails and delegated ID
+archives. The historical four-byte Extra remains an error; see
+[the composite evidence](docs/features/simulation-shell-composite/README.md).

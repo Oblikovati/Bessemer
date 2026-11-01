@@ -1,0 +1,50 @@
+[
+  {
+    "kind": "CompositeFlipTurn",
+    "profile": "reader",
+    "count": 100000,
+    "success": true
+  },
+  {
+    "kind": "CompositeFlipTurn",
+    "profile": "reader",
+    "count": 100001,
+    "success": false
+  },
+  {
+    "kind": "CompositeExtra",
+    "profile": "reader",
+    "count": 1000000,
+    "success": true
+  },
+  {
+    "kind": "CompositeExtra",
+    "profile": "reader",
+    "count": 1000001,
+    "success": false
+  },
+  {
+    "kind": "CompositeFlipTurn",
+    "profile": "writer",
+    "count": 100000,
+    "success": true
+  },
+  {
+    "kind": "CompositeFlipTurn",
+    "profile": "writer",
+    "count": 100001,
+    "success": false
+  },
+  {
+    "kind": "CompositeExtra",
+    "profile": "writer",
+    "count": 1000000,
+    "success": true
+  },
+  {
+    "kind": "CompositeExtra",
+    "profile": "writer",
+    "count": 1000001,
+    "success": false
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "issue": 157,
+  "status": "Reference foundation only; no production API yet",
+  "strict_reference_checks": 15,
+  "original_reference_tests": 10,
+  "native": {
+    "streams": 20,
+    "bytes": 736,
+    "complete": 19,
+    "complete_bytes": 732,
+    "arguments": 40,
+    "accepted": 30,
+    "failed": 10,
+    "packet_bytes": 2272,
+    "packet_sha256": "f8320e4a6d6fb6272a12abff16cd8aedfc5ca959bd4c8e3d711b2a2a19378c46"
+  },
+  "source_callback": "cosworks_embedded_const_surface.archive_reader, matching the original audit",
+  "historical_failure": "One four-byte CompositeExtra at 840030 remains incomplete under reader and writer; exact original prefixes/errors retained.",
+  "scope": "Explicit profile outcomes only; no runtime pointer/version dispatch inferred. Existing unused modelboundary pin remains exact and guarded.",
+  "pending": [
+    "Independent complete owned primitive/edit/history oracles",
+    "Typed API and all resource/ownership/concurrency checks",
+    "Full local and exact-head platform gates"
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending"
+}

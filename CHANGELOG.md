@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added complete shell composite read, construction and isolated edits with explicit reader/writer profiles, delegated ID archives, bounded resources and ordered history. (#157)
+
 - Added complete ShellManager headers and direct group records with explicit late-field profiles, retained MFC string frames, aggregate budgets and isolated edit history. (#156)
 
 - Added fresh seven-family SolidManager inventory reconciliation and typed complete-read/construction gates while retaining six incomplete SurfaceBody occurrences as failures. (#154)
