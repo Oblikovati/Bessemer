@@ -116,6 +116,8 @@ def verify_dialog_parent_owned() -> None:
         rows.append(dict(version=version, sha256=digest(raw), range=range_view, scale=scale_view))
     assert len(rows) == 225, len(rows)
     dialog_baseline('owned-parent-views-reference.json', rows)
+    from dialog_parent_view_packets import verify_parent_view_packet
+    verify_parent_view_packet()
 
 
 def assert_dialog_parent_bits(raw: bytes, range_view: dict[str, object], scale_view: dict[str, object]) -> None:

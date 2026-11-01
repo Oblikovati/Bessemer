@@ -221,3 +221,6 @@ mod reference_caps;
 
 #[path = "simulation_post_dialog/embedded_boundaries.rs"]
 mod embedded_boundaries;
+
+#[path = "simulation_post_dialog/views.rs"]
+mod views;

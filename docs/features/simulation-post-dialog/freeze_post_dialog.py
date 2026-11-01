@@ -35,6 +35,7 @@ from dialog_parent_views import (verify_dialog_parent_sources, verify_dialog_par
 
 def run_dialog_checks(pin: Path) -> unittest.TestResult:
     """Preserve all original C-770 and integrated legacy-view tests beside fresh full replay; e.g. run_dialog_checks(pin)."""
+    if '--parent-views-only' in sys.argv: return run_parent_view_checks()
     if any(flag in sys.argv for flag in ('--resources-only', '--caps-only', '--reference-caps-only')): return run_resource_checks()
     replay = update_wrapper(partial(replay_dialog_native, pin), replay_dialog_native)
     additional = update_wrapper(partial(replay_additional_legacy_dialogs, pin), replay_additional_legacy_dialogs)
@@ -64,6 +65,35 @@ def run_resource_checks() -> unittest.TestResult:
     return unittest.TextTestRunner(verbosity=2).run(suite)
 
 
+def run_parent_view_checks() -> unittest.TestResult:
+    """Replay the view helpers and full owned denominators without replacing the default gate; e.g. run_parent_view_checks()."""
+    checks = (verify_dialog_sources, verify_dialog_field_sources,
+              verify_dialog_parent_owned, verify_dialog_parent_branches)
+    suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
+    return unittest.TextTestRunner(verbosity=2).run(suite)
+
+
+def dialog_snapshot_readers() -> tuple[str, ...]:
+    """Require exactly the readers exercised by the selected gate; e.g. dialog_snapshot_readers()."""
+    if '--parent-views-only' in sys.argv:
+        return ('cosworks_legend_range_fields', 'cosworks_deform_scale_fields')
+    readers = DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout')
+    if any(flag in sys.argv for flag in ('--resources-only', '--caps-only', '--reference-caps-only')):
+        return readers
+    return readers + ('cosworks_post_v7_composed_view', 'cfb', 'swcontainer')
+
+
+def dialog_snapshot_filename() -> str:
+    """Keep partial replay evidence separate from the mandatory full snapshot; e.g. dialog_snapshot_filename()."""
+    modes = (('--resources-only', 'resource-source-snapshot.json'),
+             ('--caps-only', 'cap-source-snapshot.json'),
+             ('--reference-caps-only', 'reference-cap-source-snapshot.json'),
+             ('--parent-views-only', 'parent-view-source-snapshot.json'))
+    for flag, filename in modes:
+        if flag in sys.argv: return filename
+    return 'source-snapshot.json'
+
+
 def run() -> bool:
     """Require every reader/delegate import to originate from an immutable copy; e.g. run()."""
     with tempfile.TemporaryDirectory(prefix='bessemer-post-dialog-') as temporary:
@@ -73,13 +103,8 @@ def run() -> bool:
         sys.meta_path.insert(0, FrozenSourceImports(pin))
         sys.path.insert(0, str(pin / 'research'))
         result = run_dialog_checks(pin)
-        readers = DIALOG_READERS + ('cosworks_post_info_layout', 'cosworks_post_style_layout')
-        if not any(flag in sys.argv for flag in ('--resources-only', '--caps-only', '--reference-caps-only')):
-            readers += ('cosworks_post_v7_composed_view', 'cfb', 'swcontainer')
-        record_snapshot(pin, hashes, result, FEATURE, readers, ())
-        name = 'resource-source-snapshot.json' if '--resources-only' in sys.argv else 'source-snapshot.json'
-        if '--caps-only' in sys.argv: name = 'cap-source-snapshot.json'
-        if '--reference-caps-only' in sys.argv: name = 'reference-cap-source-snapshot.json'
+        record_snapshot(pin, hashes, result, FEATURE, dialog_snapshot_readers(), ())
+        name = dialog_snapshot_filename()
         (FEATURE / 'fixture-reference-snapshot.json').replace(FEATURE / name)
         return result.wasSuccessful()
 
