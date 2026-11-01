@@ -35,8 +35,25 @@
   "native_acceptance_changed": false,
   "baseline_policy": "Old owned callback inputs and outputs remain frozen; later explicit provider dependencies are distinct inputs, not baseline replacements.",
   "pending": [
-    "Full integrated Source replay after extraction",
     "Feature166 exact publication-head and platform gates"
   ],
-  "prose_review": "Humanizer unavailable; maintainer review pending."
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_source_replay": {
+    "checks": 305,
+    "failed": 0,
+    "seconds": 509.985,
+    "process_exit_code": 0,
+    "accepted_source_cut": "e5bea985a0a0b81558ae4a55f681ffa8366d4cb5",
+    "log": {
+      "path": "target/dialog-reader-selection-source-full.log",
+      "bytes": 66838,
+      "sha256": "6648d732ddd6a51ef1431e12707ee9239a7fc93e4ea53ce26767f5618c0baa36"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 633812,
+      "sha256": "0b81f4b5380432d451e6e8fa4b807b837f507045696d9dfe7d257271ce5de451"
+    },
+    "terminal_exit_reaped": true
+  }
 }
