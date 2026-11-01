@@ -1,0 +1,71 @@
+{
+  "issue": 166,
+  "behavior_version": "COGLColor-C861-nearest-even-export-v1",
+  "kernel_decision": "Use exact integer binary32 multiplication rounding, signed32 truncation and low-byte wrapping; preserve explicit outside-model results and original RGBA.",
+  "owned_cases": 10503,
+  "owned_projected": 5287,
+  "owned_outside_model": 5216,
+  "native_cases": 4836,
+  "additional_stored_byte_credit": 0,
+  "rust": {
+    "export_checks": 7,
+    "import_regression_checks": 4,
+    "failed": 0,
+    "ignored": 0,
+    "log": {
+      "path": "target/colorref-export-rust.log",
+      "bytes": 1501,
+      "sha256": "9796848111765edcab64f452b7a0b1c74fab808b226837ac26b1f5fe0b01212a"
+    }
+  },
+  "clippy": {
+    "path": "target/colorref-export-clippy.log",
+    "bytes": 136,
+    "sha256": "b4d928b581c37b383c466defe80622944fef8c06dd22dc425189c526bb8e6370"
+  },
+  "source_initialization": {
+    "checks": 9,
+    "seconds": 3.201,
+    "log": {
+      "path": "target/colorref-export-source-write.log",
+      "bytes": 1584,
+      "sha256": "e03c71e75021f720f25b0a209315551e08fe3e1faffa362b93a688b37916ec15"
+    }
+  },
+  "source_strict": {
+    "checks": 9,
+    "seconds": 7.047,
+    "log": {
+      "path": "target/colorref-export-source-strict.log",
+      "bytes": 1584,
+      "sha256": "b100dc7d45372cfb351ae4964fdca18caea4a605d7dd62352ba42477829a8e17"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/colorref-export-source-snapshot.json",
+      "bytes": 524951,
+      "sha256": "ab890e382dfe4c495b3259b4390ede5bf15ec21962458b5e6fc882784cfcd37b"
+    }
+  },
+  "packet_reference": "rgba-colorref-export-packets-reference.json",
+  "concurrency_workers": 8,
+  "process_proof": "colorref-export-process-verification.json",
+  "pending": [
+    "Publication gates, native color comparisons and loaded-state/legend policies."
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 77,
+    "seconds": 350.274,
+    "result": "passed",
+    "log": {
+      "path": "target/colorref-export-source-full.log",
+      "bytes": 25734,
+      "sha256": "2366ce194273a1541eb4f58581c83906e2eaec89e6e0c46671916c718a465cf6"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 534961,
+      "sha256": "2d98fb9d21887f0fa3ab7c4c5e211d498f9acdd8321513040c1cb7110925b3ab"
+    }
+  }
+}

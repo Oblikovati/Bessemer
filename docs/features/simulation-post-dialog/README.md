@@ -351,3 +351,27 @@ Four Rust tests, all-target Clippy and two fresh-process comparisons passed;
 every constructed/assigned byte matches the independent Source outputs. See
 [packed import verification](colorref-import-operation-verification.json) for
 exact logs, input denominators and the remaining publication/consumer work.
+
+
+The conditional GetCOLORREF model uses exact integer rounding for RGB times 255,
+then signed32 truncation and low-byte extraction. It models negative and oversized
+wrapping without clamping. Zero/normal finite RGB inputs are projected only when
+the rounded products fit signed32, including exactly -2^31 and excluding +2^31.
+Nonfinite/subnormal inputs and nonfinite/out-of-range products return an explicit
+outside-model outcome with original color, channel and reason. Alpha is ignored.
+
+Independent Source cases cover all exponents, both signs, representative
+significands, conversion-boundary neighbors and mixed words: 5,287 owned cases
+project and 5,216 remain outside the model. All 4,836 original native projections
+match. Eight-worker replay equals serial output, and two fresh processes match
+all 15,339 results byte for byte. The original C-861 report, exact source
+transition, full named leaf and factor 255 are retained and verified without
+native execution. Native floating-point environment and invalid-conversion
+behavior remain outside the declared model.
+
+
+The integrated packed-export model passed all 77 strict reference checks. Seven
+export tests, four import regressions and all-target Clippy passed. Two fresh
+processes matched all 15,339 projected/excluded outcomes against Source byte for
+byte. [Packed export verification](colorref-export-operation-verification.json)
+records the exact checks and remaining publication work.

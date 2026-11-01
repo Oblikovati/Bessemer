@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added explicit nearest-even COLORREF export with signed truncation, byte wrapping and typed outside-model diagnostics. (#166)
+
 - Added explicit nearest-even COLORREF construction and assignment models with exact alpha handling and integer-only rounding. (#166)
 
 - Added shared raw RGBA views for parent dialogs and PostStyle bodies with complete color spans and finite-channel values. (#166)
