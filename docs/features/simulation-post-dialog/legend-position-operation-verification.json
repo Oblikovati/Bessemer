@@ -77,9 +77,25 @@
     "Absent-field defaults, extra stored-byte credit and whole-format acceptance from original prefix scopes"
   ],
   "pending": [
-    "Full231 Source gate",
     "Exact publication-cut PR validation and all five platform checks",
     "Remaining feature166 documented models and integration"
   ],
-  "prose_review": "Humanizer unavailable; maintainer review pending."
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 231,
+    "seconds": 491.813,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "d756883068e45854cb49d3cd97e1d12321c1b24f",
+    "log": {
+      "path": "target/legend-position-operation-source-full.log",
+      "bytes": 53159,
+      "sha256": "ea213ecea21bb47a05beffa63c66482522438f59ff62f4f336ac818336ab5a52"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 632786,
+      "sha256": "9981536be3406f70c35fc5a4f97665285a1eee00f36ec52a527b6b4ef082cfae"
+    }
+  }
 }
