@@ -103,10 +103,26 @@
     "New stored-byte credit or broader original native acceptance"
   ],
   "pending": [
-    "Full integrated Source replay for this operation cut",
     "Local layout projections with explicit helper-boundary facts",
     "Remaining documented feature166 models",
     "Exact publication-head cargo xtask pr and all five platform gates"
   ],
-  "prose_review": "Humanizer unavailable; maintainer review pending."
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 265,
+    "seconds": 476.008,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "3da9e7655f870b99eab490fe0247e05b4d6122fe",
+    "log": {
+      "path": "target/legend-step-operation-source-full.log",
+      "bytes": 59302,
+      "sha256": "4cdade7536bed0c212fcf5bda8745c6f8c9a57359fe86758cbf40679882ed508"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 633446,
+      "sha256": "13353a22a7beee22307c77d750ac3c3ed2574f78e8b8f5a9275a81600e1dc5f9"
+    }
+  }
 }
