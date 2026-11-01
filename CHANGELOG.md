@@ -38,6 +38,7 @@
 
 ### Added
 
+- Added conditional RGBA comparison predicates with explicit masked-exception/DAZ-off semantics, preserving stored bitwise equality. (#166)
 - Added explicit nearest-even COLORREF export with signed truncation, byte wrapping and typed outside-model diagnostics. (#166)
 
 - Added explicit nearest-even COLORREF construction and assignment models with exact alpha handling and integer-only rounding. (#166)

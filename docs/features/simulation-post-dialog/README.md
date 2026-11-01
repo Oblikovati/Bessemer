@@ -375,3 +375,21 @@ export tests, four import regressions and all-target Clippy passed. Two fresh
 processes matched all 15,339 projected/excluded outcomes against Source byte for
 byte. [Packed export verification](colorref-export-operation-verification.json)
 records the exact checks and remaining publication work.
+
+The color comparison methods model the C-864 operators under explicit masked
+exceptions and DAZ-off assumptions. Each of the four channels, including alpha,
+passes when its words match, both are signed zeros, or either is a NaN. The NaN
+rule makes this relation nontransitive, so stored `SimulationRgbaColor` equality
+continues to compare bits. Neither method reads or changes the floating-point
+environment, and neither claims observed execution of the native operators.
+
+Independent packets cover 2,048 synthetic pairs and all 676 ordered pairs of the
+26 distinct native colors. Six Rust tests passed, including eight-worker replay;
+two fresh processes matched all 2,724 paired predicates against Source byte for
+byte. All-target Clippy and nine targeted strict reference checks passed. The
+complete original C-864 report, both installed operator leaves and the qualified
+source transition are retained. These views add no stored-byte coverage.
+
+The integrated comparison passed all 83 strict reference checks.
+[Comparison verification](rgba-comparison-operation-verification.json) records
+the exact inputs, assumptions, checks and remaining publication work.

@@ -1,0 +1,236 @@
+{
+  "evidence": "C-864",
+  "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\Simulation\\DspOGL.dll",
+  "module_sha256": "842108f8a7846719e0ab012505c0913d8e15a51fc77719aa665e2bf248c22dd2",
+  "functions": [
+    {
+      "export": "??8COGLColor@@QEAAHAEBV0@@Z",
+      "address": "0x180003be0",
+      "end": "0x180003c13",
+      "raw_hex": "f30f10020f2e017527f30f1042040f2e4104751cf30f1042080f2e41087511f30f10420c0f2e410c7506b801000000c333c0c3",
+      "sha256": "abe47544c96b118393785f68ea3a33f015816bc7c9ef078756bafaa63057f748",
+      "instructions": [
+        {
+          "address": "0x180003be0",
+          "mnemonic": "movss",
+          "operands": "xmm0, dword ptr [rdx]"
+        },
+        {
+          "address": "0x180003be4",
+          "mnemonic": "ucomiss",
+          "operands": "xmm0, dword ptr [rcx]"
+        },
+        {
+          "address": "0x180003be7",
+          "mnemonic": "jne",
+          "operands": "0x180003c10"
+        },
+        {
+          "address": "0x180003be9",
+          "mnemonic": "movss",
+          "operands": "xmm0, dword ptr [rdx + 4]"
+        },
+        {
+          "address": "0x180003bee",
+          "mnemonic": "ucomiss",
+          "operands": "xmm0, dword ptr [rcx + 4]"
+        },
+        {
+          "address": "0x180003bf2",
+          "mnemonic": "jne",
+          "operands": "0x180003c10"
+        },
+        {
+          "address": "0x180003bf4",
+          "mnemonic": "movss",
+          "operands": "xmm0, dword ptr [rdx + 8]"
+        },
+        {
+          "address": "0x180003bf9",
+          "mnemonic": "ucomiss",
+          "operands": "xmm0, dword ptr [rcx + 8]"
+        },
+        {
+          "address": "0x180003bfd",
+          "mnemonic": "jne",
+          "operands": "0x180003c10"
+        },
+        {
+          "address": "0x180003bff",
+          "mnemonic": "movss",
+          "operands": "xmm0, dword ptr [rdx + 0xc]"
+        },
+        {
+          "address": "0x180003c04",
+          "mnemonic": "ucomiss",
+          "operands": "xmm0, dword ptr [rcx + 0xc]"
+        },
+        {
+          "address": "0x180003c08",
+          "mnemonic": "jne",
+          "operands": "0x180003c10"
+        },
+        {
+          "address": "0x180003c0a",
+          "mnemonic": "mov",
+          "operands": "eax, 1"
+        },
+        {
+          "address": "0x180003c0f",
+          "mnemonic": "ret",
+          "operands": ""
+        },
+        {
+          "address": "0x180003c10",
+          "mnemonic": "xor",
+          "operands": "eax, eax"
+        },
+        {
+          "address": "0x180003c12",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "export": "??9COGLColor@@QEAAHAEBV0@@Z",
+      "address": "0x180003c20",
+      "end": "0x180003c53",
+      "raw_hex": "f30f10020f2e017524f30f1042040f2e41047519f30f1042080f2e4108750ef30f10420c0f2e410c750333c0c3b801000000c3",
+      "sha256": "4373791e0d6fbf75b3fc4c2df43f627f4c705b9e8310e079a756978643a26a80",
+      "instructions": [
+        {
+          "address": "0x180003c20",
+          "mnemonic": "movss",
+          "operands": "xmm0, dword ptr [rdx]"
+        },
+        {
+          "address": "0x180003c24",
+          "mnemonic": "ucomiss",
+          "operands": "xmm0, dword ptr [rcx]"
+        },
+        {
+          "address": "0x180003c27",
+          "mnemonic": "jne",
+          "operands": "0x180003c4d"
+        },
+        {
+          "address": "0x180003c29",
+          "mnemonic": "movss",
+          "operands": "xmm0, dword ptr [rdx + 4]"
+        },
+        {
+          "address": "0x180003c2e",
+          "mnemonic": "ucomiss",
+          "operands": "xmm0, dword ptr [rcx + 4]"
+        },
+        {
+          "address": "0x180003c32",
+          "mnemonic": "jne",
+          "operands": "0x180003c4d"
+        },
+        {
+          "address": "0x180003c34",
+          "mnemonic": "movss",
+          "operands": "xmm0, dword ptr [rdx + 8]"
+        },
+        {
+          "address": "0x180003c39",
+          "mnemonic": "ucomiss",
+          "operands": "xmm0, dword ptr [rcx + 8]"
+        },
+        {
+          "address": "0x180003c3d",
+          "mnemonic": "jne",
+          "operands": "0x180003c4d"
+        },
+        {
+          "address": "0x180003c3f",
+          "mnemonic": "movss",
+          "operands": "xmm0, dword ptr [rdx + 0xc]"
+        },
+        {
+          "address": "0x180003c44",
+          "mnemonic": "ucomiss",
+          "operands": "xmm0, dword ptr [rcx + 0xc]"
+        },
+        {
+          "address": "0x180003c48",
+          "mnemonic": "jne",
+          "operands": "0x180003c4d"
+        },
+        {
+          "address": "0x180003c4a",
+          "mnemonic": "xor",
+          "operands": "eax, eax"
+        },
+        {
+          "address": "0x180003c4c",
+          "mnemonic": "ret",
+          "operands": ""
+        },
+        {
+          "address": "0x180003c4d",
+          "mnemonic": "mov",
+          "operands": "eax, 1"
+        },
+        {
+          "address": "0x180003c52",
+          "mnemonic": "ret",
+          "operands": ""
+        }
+      ]
+    }
+  ],
+  "model_environment": "masked_exceptions_daz_off",
+  "native_color_records": 4836,
+  "unique_native_raw_colors": 26,
+  "raw_color_counts": {
+    "b3b2323fb3b2323fb3b2323f0000003f": 168,
+    "0000000000000000000000000000803f": 243,
+    "b3b2323fb3b2323fb3b2323fcdcccc3d": 346,
+    "00000000000000000000803f0000803f": 377,
+    "000000000000803f0000803f0000803f": 276,
+    "000000000000803f000000000000803f": 276,
+    "0000803f0000803f000000000000803f": 276,
+    "0000803f00000000000000000000803f": 377,
+    "0000803f0000803f0000803f0000803f": 1322,
+    "cac8c83ecac8c83ecac8c83e0000803f": 157,
+    "3333333f3333333f3333333f0000803f": 224,
+    "00fffe3e0000803f0000803f0000803f": 150,
+    "3333333f3333333f3333333f0000003f": 111,
+    "3333333f3333333f3333333fcdcccc3d": 354,
+    "cdcccc3ecdcccc3ecdcccc3e0000803f": 50,
+    "0000003f0000803f0000803f0000803f": 55,
+    "000000000000000000fffe3e0000803f": 15,
+    "0000803f00fffe3e000000000000803f": 15,
+    "0000003f0000003f0000003f0000803f": 8,
+    "b3b2323fb3b2323fb3b2323f00000000": 8,
+    "0000803f0000003f000000000000803f": 3,
+    "00000000000000000000803f0000803e": 1,
+    "8180803e00000000000000000000803f": 14,
+    "00000000000000008180003f0000803f": 4,
+    "c9c8c83ec9c8c83ec9c8c83e0000803f": 3,
+    "fffefe3e0000803f0000803f0000803f": 3
+  },
+  "distinct_raw_pairs_model_equal": [],
+  "tests": {
+    "run": 3,
+    "output": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n"
+  },
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_color_comparison_audit.py": "d5c83f3607c70274c5925ac0e29792dfe1893a40f8cdafaec345e1089452a1d6",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_color_comparison.py": "a9aa7775bb55f8adbab9931dcdc248bdfccf16034345560efb030be4ee99e2b0",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\test_cosworks_color_comparison.py": "579074a9745e57b20bfa65259fcad25035ee1b24538d50869949e8c8d3f4c591",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-post-color-accessor-exports.json": "59adb870b7a984c4ac370381c37d669830605669be84c13b8b100a7a77b2844f",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-post-color-fields-native-evidence.json": "a1a672e78546d9dbddc7ee55b6315916003c8776dfe7acfd7ea1907495ccb67c"
+  },
+  "target_executed": false,
+  "coverage_credit": 0,
+  "limitations": [
+    "NaN behavior is conditional on masked exceptions; application MXCSR unobserved",
+    "Independent comparison model assumes DAZ off and masked exceptions",
+    "Model equality is not raw-bit identity or a safe canonicalization equivalence",
+    "Native colors are static payloads; target operators not executed"
+  ]
+}
