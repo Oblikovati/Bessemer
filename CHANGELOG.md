@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added local legend step-layout projections with explicit post-helper FC/runtime facts, exact signed division and wrapping arithmetic, early-return completion and reached-read diagnostics. (#166)
+
 - Added optional legend FC layout views and exact runtime step-availability results with raw signed BEC returns, complete runtime history and reached-word coverage. (#166)
 
 - Added stored legend yield-color views and exact local gray-mapper call plans with explicit runtime split and post-suffix facts, raw color preservation, signed counts and wrapped byte offsets. (#166)

@@ -507,3 +507,5 @@ The [legend step evidence](legend-step.md) separates the version-gated FC layout
 switch from runtime availability and preserves the latter's raw integer return.
 Typed FC views retain absence, while the independent runtime operation keeps all
 six supplied parents and the exact reached-read coverage.
+The [local step-layout projection](legend-step-layout.md) adds the documented
+integer calculations while keeping helper state changes explicit.
