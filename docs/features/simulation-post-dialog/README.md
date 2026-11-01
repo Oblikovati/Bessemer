@@ -393,3 +393,28 @@ source transition are retained. These views add no stored-byte coverage.
 The integrated comparison passed all 83 strict reference checks.
 [Comparison verification](rgba-comparison-operation-verification.json) records
 the exact inputs, assumptions, checks and remaining publication work.
+
+`SimulationLegendComparisonState` captures explicit raw legend inputs without
+inventing missing initialized state. `SimulationPostStyle::legend_comparison_state`
+projects the stored fields and preserves absences. A caller can supply explicit
+runtime fields through `from_fields`; this does not infer migration defaults.
+State equality compares raw optional words, separately from the native model.
+
+The conditional comparison follows C-871 in order: header words, the active
+palette, A8, float position factors, format controls and flag-dependent colors.
+Its masked-exception/DAZ-off assumptions match the color comparison. Counts must
+be in 0..=9 when that branch is reached. A required absent input returns a typed
+missing-state error; earlier differences retain the native short circuit.
+Duplicate inputs, nonword inputs and incomplete supplied colors are rejected.
+The model describes this comparator, not rendering equivalence or observed
+application state. All original prefix/version qualifications remain in the
+retained C-871 report, and these views add no stored-byte coverage.
+
+The legend model passed ten Rust checks, all-target Clippy and all 90 integrated
+reference checks. Its independent packets contain 8,253 synthetic pairs, 7,085
+native-derived pairs and all 252 complete-style projections. Two fresh processes
+matched all 15,338 outcomes against Source byte for byte. The 109 original native
+states include 17 with matched nonzero A8, whose later-field mutations preserve
+the comparator's continued checks.
+[Legend comparison verification](legend-comparison-operation-verification.json)
+records the exact revisions, assumptions, logs and remaining publication work.
