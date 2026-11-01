@@ -97,7 +97,8 @@ exited successfully after snapshot recording and cleanup. Two fresh processes
 matched all45,232 independent expected results, totaling2,171,136bytes each.
 The [operation record](legend-3d-operation-verification.json) and
 [process proof](legend-3d-process-verification.json) retain exact hashes and
-remaining full/publication gates.
+remaining publication gates. The full integrated Source replay passed277 checks
+in493.863seconds and exited with code0 after snapshot recording and cleanup.
 
 Independent positive-count geometry and floating background-dimension behavior,
 other required feature166 models and exact publication gates remain outstanding.
