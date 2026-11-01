@@ -36,8 +36,10 @@ def legend_format_functions() -> tuple[Callable[[], None], ...]:
     """Keep full source/binary and complete native/owned obligations together; e.g. legend_format_functions()."""
     from legend_format_bindings import verify_legend_format_bindings, verify_legend_format_rea_capture
     from legend_format_projection import verify_legend_format_native, verify_legend_format_owned
+    from legend_format_packets import verify_legend_format_operation_packets, verify_legend_format_projection_packets
     return (verify_legend_format_sources, verify_legend_format_bindings, verify_legend_format_rea_capture,
-        verify_legend_format_native, verify_legend_format_owned)
+        verify_legend_format_native, verify_legend_format_owned, verify_legend_format_operation_packets,
+        verify_legend_format_projection_packets)
 
 
 def run_legend_format_checks() -> unittest.TestResult:
