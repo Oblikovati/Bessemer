@@ -22,7 +22,7 @@ other eight original source pins must match. Original caller/helper bodies
 and instruction listings are retained in the C889 reference artifact; this
 source replay alone does not rematch the installed machine code.
 
-The final strict targeted suite passed9 checks in4.449seconds, including all
+The final strict targeted suite passed11 checks in5.741seconds, including all
 current catalog tests. Its process exited successfully after snapshot recording.
 The [evidence proof](triangle-selector-evidence-verification.json) records exact
 revision, log and snapshot hashes, scope and outstanding gates.
@@ -48,16 +48,41 @@ pass the nonzero outer check while admitting no signed iterations.
 
 This helper does not inherit the auxiliary pass's plot51 or renderer3-through5
 rejections. Its MINSS alpha cap at180157981 also has a broader possible caller
-domain. Before publishing a full plan, bind the complete installed instructions
-and constant bytes, explicitly specify floating-point assumptions, and build
-an independent oracle covering signed zero, subnormals, infinities and NaNs.
+domain. Before publishing a full plan, explicitly specify floating-point
+assumptions and build an independent oracle covering signed zero, subnormals,
+infinities and NaNs.
 Do not extend the auxiliary caller's admitted-alpha shortcut to this helper.
+
+The [Intel instruction reference](https://cdrdv2-public.intel.com/835752/253667-sdm-vol-2b.pdf),
+order253667-085US, pages4-31 and4-32, specifies selection of the second operand
+when a source is NaN. Here that second operand is the stored constant1. With
+floating-point exceptions masked and DAZ/FTZ disabled, the planned model must
+therefore return1 for either-sign signaling or quiet NaN, retain negative
+infinity and values below1, and cap positive infinity and values above1. The
+model must retain signed zeros and original subnormal patterns. Those are
+declared operation assumptions; the file bytes do not establish native MXCSR.
+
+Independent Ghidra12.1.4 captures retain all81 hidden-caller,132 helper and92
+model-caller instruction locations and the four constant bytes. Evidence IDs
+and provider limitations are preserved in the `triangle-selector-rea-*.json`
+records. The source binary was not executed or edited, and the ephemeral
+analysis session was closed. The reproducible GNU verifier additionally checks
+the complete function bytes and instruction operands, named accessor, exact
+color imports and concrete triangle vtable slots. Both new native/capture checks passed in the strict11-check gate. The earlier
+full suite passed168 checks in504.026seconds at the evidence-only cut2063B1B7;
+its denominator excludes these two new checks. The updated full gate remains
+required.
 
 A complete operation must accept explicit runtime facts and lookup outcomes,
 retain both group color origins, return ordered immutable local call requests,
 and report missing required facts and resource limits without partial success.
+Lookup runs after the group-class test and before the positive triangle-count
+test. A missing lookup outcome is therefore required even for a nonpositive
+triangle count when the class matches and runtime8C8 is nonzero. An earlier
+class rejection needs no lookup result. Preserve that dependency order rather
+than eagerly requiring every outcome or skipping the lookup for empty groups.
 It must cover both callers and the documented helper, preserve source isolation,
 and carry native execution, geometry validation and scene traversal exclusions.
 No public replacement or incomplete operation API is shipped by this evidence
-step. Full operation, native instruction rematch and publication gates remain
+step. Full operation, the updated complete Source suite and publication gates remain
 required for feature166.

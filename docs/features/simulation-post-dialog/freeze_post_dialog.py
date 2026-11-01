@@ -70,6 +70,7 @@ from annotation_bindings import verify_annotation_bindings
 from annotation_projection import verify_annotation_native, verify_annotation_projection
 from annotation_packets import verify_annotation_packets
 from triangle_selector_evidence import verify_triangle_selector_sources, verify_triangle_selector_native, verify_triangle_selector_owned
+from triangle_selector_bindings import verify_triangle_selector_bindings, verify_triangle_selector_rea_capture
 from aux_triangle_evidence import verify_aux_triangle_sources
 from aux_triangle_bindings import verify_aux_triangle_bindings
 from aux_triangle_projection import verify_aux_triangle_native, verify_aux_triangle_projection
@@ -152,7 +153,8 @@ def default_dialog_functions(pin: Path) -> tuple[Callable[[], None], ...]:
 
 def triangle_selector_functions() -> tuple[Callable[[], None], ...]:
     """Retain the original C889 provenance and complete native selector replay; e.g. triangle_selector_functions()."""
-    return (verify_triangle_selector_sources, verify_triangle_selector_native, verify_triangle_selector_owned)
+    return (verify_triangle_selector_sources, verify_triangle_selector_bindings, verify_triangle_selector_rea_capture,
+            verify_triangle_selector_native, verify_triangle_selector_owned)
 
 
 def run_triangle_selector_checks() -> unittest.TestResult:

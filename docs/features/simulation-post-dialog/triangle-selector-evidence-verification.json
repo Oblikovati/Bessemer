@@ -1,7 +1,7 @@
 {
   "issue": 166,
   "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
-  "scope": "Original C889 source pins and complete stored-input replay only; no operation or installed instruction rematch claim",
+  "scope": "Original C889 source/native-input replay plus complete installed static caller/helper/constant/import/vtable bindings and retained independent Ghidra evidence; full operation remains pending",
   "target_executed": false,
   "native_contexts": 276,
   "owned_contexts": 425,
@@ -9,26 +9,73 @@
   "owned_missing": 20,
   "additional_stored_byte_credit": 0,
   "strict_source": {
-    "checks": 9,
-    "seconds": 4.449,
+    "checks": 11,
+    "seconds": 5.741,
     "process_exit_code": 0,
     "result": "passed",
     "log": {
-      "path": "target/triangle-selector-source-owned-strict.log",
-      "bytes": 1604,
-      "sha256": "f06bc6e49dfaec8602fdbc8a79687aaee19dfbb26e33c840af64aeb768f730d7"
+      "path": "target/triangle-selector-native-binding-strict.log",
+      "bytes": 2028,
+      "sha256": "34742c956ef99a38cb54ce05634a58860550828748128f99e6027d9e224a9c21"
     },
     "snapshot": {
       "path": "docs/features/simulation-post-dialog/triangle-selector-source-snapshot.json",
-      "bytes": 586890,
-      "sha256": "e6f4091c464ef5da0770635ab60f1a57e7eb761d92ad00906d76ff5ba2d591e3"
+      "bytes": 589811,
+      "sha256": "15830ea97fbd16377b2657c3c5dbe80d2720be5d80c84241fae2ba5995f644d1"
     }
   },
   "pending": [
-    "Complete installed caller/helper/constant binding",
+    "Full Source suite including the two new installed-binding and retained-capture checks (expected170)",
     "Both caller paths and complete bounded helper operation with independent oracle",
-    "Full Source suite including these three new evidence checks",
     "Publication-cut PR and all five exact-head platform gates"
   ],
-  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 168,
+    "seconds": 504.026,
+    "process_exit_code": 0,
+    "result": "passed",
+    "source_evidence_cut": "2063b1b7c0cde942247b3c922b6619b27042863c",
+    "includes_new_installed_binding_gate": false,
+    "log": {
+      "path": "target/triangle-selector-source-full.log",
+      "bytes": 41376,
+      "sha256": "615d36d024586021da1a6cc6001699c7ef675fd2247e5925d5e82f2f6bbca3d3"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 593862,
+      "sha256": "c0f981d29df36b98079260fc303ebd4baa6c70cafa13647d1a5757b1beb0e63e"
+    }
+  },
+  "installed_binding": {
+    "reference": "triangle-selector-installed-reference.json",
+    "method_instruction_counts": [
+      81,
+      132,
+      92
+    ],
+    "instructions": 305,
+    "independent_decoder": "Ghidra12.1.4",
+    "rea_reference": "triangle-selector-rea-reference.json",
+    "target_executed": false,
+    "original_binary_written": false
+  },
+  "verifier_sources": [
+    {
+      "path": "docs/features/simulation-post-dialog/triangle_selector_bindings.py",
+      "bytes": 8246,
+      "sha256": "de5936bdb61c6e45537d98d8d82773ed15c9eeb2e5a6247357c292d88373efe0"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/triangle_selector_evidence.py",
+      "bytes": 6235,
+      "sha256": "478e831e1ed4c2d45ff2bc93c9aebffa45a7defab5516d9b20c0ab69501b8107"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/freeze_post_dialog.py",
+      "bytes": 32479,
+      "sha256": "29d58532bb3823e26f2e1a21cd049c60eb803208d8fb5603a0106f472d9f44ce"
+    }
+  ]
 }
