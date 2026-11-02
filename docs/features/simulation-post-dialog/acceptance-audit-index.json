@@ -1,0 +1,355 @@
+{
+  "issue": 166,
+  "scope": "Local requirement/evidence index; not a completion claim or publication gate",
+  "rows": [
+    {
+      "sections": "14.386\u2013390",
+      "requirement": "Complete parent grammar, caller/provider bindings and all staged original outcomes",
+      "implementation": [
+        "post_dialog"
+      ],
+      "proof": "parent-operation-verification.json"
+    },
+    {
+      "sections": "14.460",
+      "requirement": "Distinct PostInfo/PostStyle carriers and explicit helper/caller contexts",
+      "implementation": [
+        "post_info",
+        "post_style"
+      ],
+      "proof": "poststyle-operation-verification.json"
+    },
+    {
+      "sections": "14.461\u2013463",
+      "requirement": "Fixed slots, primitive/direction views, ContourType policies and four-word comparison",
+      "implementation": [
+        "post_info"
+      ],
+      "proof": "postinfo-named-view-verification.json"
+    },
+    {
+      "sections": "14.464\u2013465",
+      "requirement": "Raw RGBA channels, alpha roles and unnormalized option words",
+      "implementation": [
+        "rgba",
+        "post_render"
+      ],
+      "proof": "rgba-operation-verification.json"
+    },
+    {
+      "sections": "14.466",
+      "requirement": "Primary/alternate format construction with explicit runtime facts",
+      "implementation": [
+        "post_legend_format"
+      ],
+      "proof": "legend-format-operation-verification.json"
+    },
+    {
+      "sections": "14.467",
+      "requirement": "Raw position factors and bounded pixel conversion",
+      "implementation": [
+        "post_legend_position"
+      ],
+      "proof": "legend-position-operation-verification.json"
+    },
+    {
+      "sections": "14.468",
+      "requirement": "Palette counts, reversal and local dispatcher",
+      "implementation": [
+        "post_legend_palette"
+      ],
+      "proof": "legend-palette-operation-verification.json"
+    },
+    {
+      "sections": "14.469",
+      "requirement": "Height/cell/title/tick consumers",
+      "implementation": [
+        "post_legend_height"
+      ],
+      "proof": "legend-height-operation-verification.json"
+    },
+    {
+      "sections": "14.470",
+      "requirement": "Yield-color selection and explicit split facts",
+      "implementation": [
+        "post_legend_yield"
+      ],
+      "proof": "legend-yield-operation-verification.json"
+    },
+    {
+      "sections": "14.471",
+      "requirement": "Step availability and local wrapping layout",
+      "implementation": [
+        "post_legend_step",
+        "post_legend_step_layout"
+      ],
+      "proof": "legend-step-layout-operation-verification.json"
+    },
+    {
+      "sections": "14.472",
+      "requirement": "3D local geometry/call requests with explicit external inputs",
+      "implementation": [
+        "post_legend_3d"
+      ],
+      "proof": "legend-3d-operation-verification.json"
+    },
+    {
+      "sections": "14.473",
+      "requirement": "End-cell activation and raw RGB selection",
+      "implementation": [
+        "post_legend_end_cell"
+      ],
+      "proof": "legend-end-cell-operation-verification.json"
+    },
+    {
+      "sections": "14.474",
+      "requirement": "Width selector and exact nearest-even stages",
+      "implementation": [
+        "post_legend_width"
+      ],
+      "proof": "legend-width-operation-verification.json"
+    },
+    {
+      "sections": "14.475",
+      "requirement": "Preserved counted text and separately assigned prefix",
+      "implementation": [
+        "post_text_controls"
+      ],
+      "proof": "text-selection-operation-verification.json"
+    },
+    {
+      "sections": "14.476",
+      "requirement": "Explicit legacy hidden-parts migration stores",
+      "implementation": [
+        "post_hidden_migration"
+      ],
+      "proof": "hidden-migration-operation-verification.json"
+    },
+    {
+      "sections": "14.477",
+      "requirement": "Version-gated derived zeros distinct from wire absence",
+      "implementation": [
+        "post_legend_resets"
+      ],
+      "proof": "legend-resets-operation-verification.json"
+    },
+    {
+      "sections": "14.478",
+      "requirement": "Optional raw locale-grouping control; locale rendering excluded by schema",
+      "implementation": [
+        "post_legend_grouping.rs"
+      ],
+      "proof": "legend-grouping-verification.json"
+    },
+    {
+      "sections": "14.479",
+      "requirement": "Exact role catalog, unknown purposes and original byte accounting",
+      "implementation": [
+        "post_style",
+        "post_info"
+      ],
+      "proof": "field-model-verification.json"
+    },
+    {
+      "sections": "14.480",
+      "requirement": "Lossy A8 zero tests and guarded local assignment",
+      "implementation": [
+        "post_legend_inverse"
+      ],
+      "proof": "legend-inverse-operation-verification.json"
+    },
+    {
+      "sections": "14.481\u2013482;14.524",
+      "requirement": "Packed-color projection, construction and alpha-preserving assignment",
+      "implementation": [
+        "rgba"
+      ],
+      "proof": "colorref-import-operation-verification.json"
+    },
+    {
+      "sections": "14.483",
+      "requirement": "Complete conditional style comparator, physical aliases and native-order checks",
+      "implementation": [
+        "post_style/comparison"
+      ],
+      "proof": "style-comparison-operation-verification.json"
+    },
+    {
+      "sections": "14.484",
+      "requirement": "Explicit masked-exception/DAZ-off color comparison",
+      "implementation": [
+        "rgba"
+      ],
+      "proof": "rgba-comparison-operation-verification.json"
+    },
+    {
+      "sections": "14.485\u2013487",
+      "requirement": "Detailed raw legacy partitions and non-overlapping byte accounting",
+      "implementation": [
+        "post_style/legacy.rs"
+      ],
+      "proof": "poststyle-operation-verification.json"
+    },
+    {
+      "sections": "14.489",
+      "requirement": "Bounded loaded legend comparison without inferred old runtime state",
+      "implementation": [
+        "post_style/legend_comparison.rs"
+      ],
+      "proof": "legend-comparison-operation-verification.json"
+    },
+    {
+      "sections": "14.490\u2013491",
+      "requirement": "Layer suppression and model-tessellation request policies",
+      "implementation": [
+        "post_render"
+      ],
+      "proof": "render-policy-operation-verification.json"
+    },
+    {
+      "sections": "14.492\u2013493",
+      "requirement": "Stored range/deformation views with raw float patterns",
+      "implementation": [
+        "post_dialog/views.rs"
+      ],
+      "proof": "parent-views-verification.json"
+    },
+    {
+      "sections": "14.494\u2013495",
+      "requirement": "Offset decision and fringe-option local mutation",
+      "implementation": [
+        "post_render/offset_fringe.rs"
+      ],
+      "proof": "offset-fringe-operation-verification.json"
+    },
+    {
+      "sections": "14.496\u2013498",
+      "requirement": "Vector outer dispatch, complete tables and provider outputs",
+      "implementation": [
+        "post_vector"
+      ],
+      "proof": "vector-operation-verification.json"
+    },
+    {
+      "sections": "14.499\u2013501",
+      "requirement": "Unit-type model and explicit runtime/global flag facts",
+      "implementation": [
+        "post_units"
+      ],
+      "proof": "unit-operation-verification.json"
+    },
+    {
+      "sections": "14.502",
+      "requirement": "Local rendering predicate only",
+      "implementation": [
+        "post_render/local_predicate.rs"
+      ],
+      "proof": "local-render-operation-verification.json"
+    },
+    {
+      "sections": "14.503",
+      "requirement": "Explicit raw initialization and local preference transfers/copy",
+      "implementation": [
+        "post_style_preferences"
+      ],
+      "proof": "raw-preferences-operation-verification.json"
+    },
+    {
+      "sections": "14.504",
+      "requirement": "Vector size/density/color controls",
+      "implementation": [
+        "post_vector_style"
+      ],
+      "proof": "vector-style-operation-verification.json"
+    },
+    {
+      "sections": "14.505",
+      "requirement": "Extrema annotation controls",
+      "implementation": [
+        "post_annotations"
+      ],
+      "proof": "annotation-operation-verification.json"
+    },
+    {
+      "sections": "14.506",
+      "requirement": "Auxiliary triangle gates and colors",
+      "implementation": [
+        "post_aux_triangles"
+      ],
+      "proof": "aux-triangle-operation-verification.json"
+    },
+    {
+      "sections": "14.507",
+      "requirement": "Hidden/model triangle color selectors",
+      "implementation": [
+        "post_triangle_colors"
+      ],
+      "proof": "triangle-color-operation-verification.json"
+    },
+    {
+      "sections": "14.508",
+      "requirement": "Primary text and runtime seven-line controls",
+      "implementation": [
+        "post_text_controls"
+      ],
+      "proof": "text-selection-operation-verification.json"
+    },
+    {
+      "sections": "14.509",
+      "requirement": "Plot54 callback color path",
+      "implementation": [
+        "post_plot54"
+      ],
+      "proof": "plot54-operation-verification.json"
+    },
+    {
+      "sections": "14.510",
+      "requirement": "Element-segment RGB requests",
+      "implementation": [
+        "post_segment_color"
+      ],
+      "proof": "segment-rgb-operation-verification.json"
+    },
+    {
+      "sections": "14.511",
+      "requirement": "Mode3 RGB geometry candidates",
+      "implementation": [
+        "post_mode3_rgb"
+      ],
+      "proof": "mode3-rgb-operation-verification.json"
+    },
+    {
+      "sections": "14.523;14.525",
+      "requirement": "Bound initialized color100 literals and conditional preference color routes",
+      "implementation": [
+        "post_preference_colors"
+      ],
+      "proof": "preference-color-operation-verification.json"
+    }
+  ],
+  "runtime_source_cut": "c6eff1f517c2b5dca6a19bec700d8e37c5371b0c",
+  "source_gate": {
+    "checks": 338,
+    "seconds": 471.309,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "proof": "style-comparison-operation-verification.json"
+  },
+  "consolidated_rust_gate": {
+    "harnesses": 37,
+    "passed": 355,
+    "failed": 0,
+    "ignored": 0,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "matched_export_files": 34,
+    "proof": "consolidated-native-verification.json"
+  },
+  "publication_gate": "Pending exact publication-head cargo xtask pr and all five required checks; PR173 belongs to feature163",
+  "broader_goal_remaining": [
+    "Legacy POSTPLOTDLG carrier14.459/14.526 has no typed codec in the inspected tree",
+    "Material/EGR clauses14.512\u2013522 require separate scope audit",
+    "251 additional legacy cwPostDlgParam carriers remain unresolved under retained version contexts",
+    "Native application/writer equivalence,universal runtime selection and whole-format parity are unproven"
+  ]
+}

@@ -1,0 +1,351 @@
+{
+  "issue": 166,
+  "runtime_source_cut": "c6eff1f517c2b5dca6a19bec700d8e37c5371b0c",
+  "platform": "Windows x64",
+  "toolchain": "Rust1.99.0 x86_64-pc-windows-msvc",
+  "native_target_code_executed": false,
+  "command": "cargo test with all37 reviewed simulation-post-dialog fixture harnesses -- --include-ignored",
+  "harnesses": [
+    "simulation_annotations",
+    "simulation_aux_triangles",
+    "simulation_colorref_export",
+    "simulation_colorref_import",
+    "simulation_hidden_migration",
+    "simulation_legend_3d",
+    "simulation_legend_comparison",
+    "simulation_legend_end_cell",
+    "simulation_legend_format",
+    "simulation_legend_grouping",
+    "simulation_legend_height",
+    "simulation_legend_inverse",
+    "simulation_legend_palette",
+    "simulation_legend_position",
+    "simulation_legend_resets",
+    "simulation_legend_step",
+    "simulation_legend_step_layout",
+    "simulation_legend_width",
+    "simulation_legend_yield",
+    "simulation_local_render",
+    "simulation_mode3_rgb",
+    "simulation_offset_fringe",
+    "simulation_plot54_colors",
+    "simulation_post_dialog",
+    "simulation_post_info",
+    "simulation_post_render",
+    "simulation_post_style",
+    "simulation_post_text_controls",
+    "simulation_post_vector",
+    "simulation_preference_colors",
+    "simulation_rgba_comparison",
+    "simulation_segment_rgb",
+    "simulation_style_comparison",
+    "simulation_style_preferences",
+    "simulation_triangle_colors",
+    "simulation_unit_type",
+    "simulation_vector_style"
+  ],
+  "passed": 355,
+  "failed": 0,
+  "ignored": 0,
+  "process_exit_code": 0,
+  "terminal_exit_reaped": true,
+  "sum_harness_test_seconds": 332.65,
+  "longest_harness_test_seconds": 323.31,
+  "log": {
+    "path": "target/post-dialog-native-acceptance-configured.log",
+    "bytes": 37974,
+    "sha256": "9c20c06c0dab98cb550720457a0e38672a2ef76a80a4ab62bf15b1e48e633157"
+  },
+  "export_count": 34,
+  "export_bytes": 42698704,
+  "all_exports_matched_prior_independent_expected_process_hashes": true,
+  "exports": [
+    {
+      "variable": "BESSEMER_ANNOTATION_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_annotation_output.bin",
+      "bytes": 710424,
+      "sha256": "810678d523303311269994b8307be777525f5e320999b0c97dc42b9544bc170d",
+      "independent_proof": "annotation-process-verification.json",
+      "proof_hash_matches": 1
+    },
+    {
+      "variable": "BESSEMER_AUX_TRIANGLE_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_aux_triangle_output.bin",
+      "bytes": 1286992,
+      "sha256": "6a8dd014e9ff44222af09a41ce386eeac3ea7ec75a724295378e73cb93577628",
+      "independent_proof": "aux-triangle-process-verification.json",
+      "proof_hash_matches": 1
+    },
+    {
+      "variable": "BESSEMER_COLORREF_EXPORT_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_colorref_export_output.bin",
+      "bytes": 122712,
+      "sha256": "39d84628cb9dd82dac935b6df3706332621707a61d3b6b892590a4ec5aa853e3",
+      "independent_proof": "colorref-export-process-verification.json",
+      "proof_hash_matches": 1
+    },
+    {
+      "variable": "BESSEMER_COLORREF_IMPORT_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_colorref_import_output.bin",
+      "bytes": 342304,
+      "sha256": "817f32b02741d6355ef74b97a9c67823e741eb4e40e5727bbcd3ae1f8b000ede",
+      "independent_proof": "colorref-import-process-verification.json",
+      "proof_hash_matches": 1
+    },
+    {
+      "variable": "BESSEMER_HIDDEN_MIGRATION_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_hidden_migration_output.bin",
+      "bytes": 360776,
+      "sha256": "e8ed35eac8f80241857f60d54fc3fc947a55e756225b83765192091f807b599d",
+      "independent_proof": "hidden-migration-process-verification.json",
+      "proof_hash_matches": 2
+    },
+    {
+      "variable": "BESSEMER_LEGEND_3D_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_legend_3d_output.bin",
+      "bytes": 2171136,
+      "sha256": "4d360382ccc23aed509fb15a23d197a509c643198d7217849d59e46a3c9873dc",
+      "independent_proof": "legend-3d-process-verification.json",
+      "proof_hash_matches": 2
+    },
+    {
+      "variable": "BESSEMER_LEGEND_COMPARISON_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_legend_comparison_output.bin",
+      "bytes": 61352,
+      "sha256": "43203e4c08c34b8fd5e75976803e85dcb45dcee77c4b76e96c5f29f5b1e988ae",
+      "independent_proof": "legend-comparison-process-verification.json",
+      "proof_hash_matches": 1
+    },
+    {
+      "variable": "BESSEMER_LEGEND_END_CELL_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_legend_end_cell_output.bin",
+      "bytes": 364728,
+      "sha256": "6b9d71010d70cc35e853f6165b8b2f19cf290f077c519423dcfc360bad8b0f10",
+      "independent_proof": "legend-end-cell-process-verification.json",
+      "proof_hash_matches": 2
+    },
+    {
+      "variable": "BESSEMER_LEGEND_FORMAT_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_legend_format_output.bin",
+      "bytes": 4388540,
+      "sha256": "61cebebece4361a79ae6b3cdb99010816ff329061742faec1f183a828326ec6c",
+      "independent_proof": "legend-format-process-verification.json",
+      "proof_hash_matches": 3
+    },
+    {
+      "variable": "BESSEMER_LEGEND_GROUPING_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_legend_grouping_output.bin",
+      "bytes": 6664,
+      "sha256": "d5760c9414a2fa1b51aa5e3fe067b27d7ae76fbe14111825ef3bcb84b158f52c",
+      "independent_proof": "legend-grouping-process-verification.json",
+      "proof_hash_matches": 2
+    },
+    {
+      "variable": "BESSEMER_LEGEND_HEIGHT_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_legend_height_output.bin",
+      "bytes": 219344,
+      "sha256": "86cea3d844df80f197341b1582312c0e18c0204531392de7fe0ab98ad4d6e1fa",
+      "independent_proof": "legend-height-process-verification.json",
+      "proof_hash_matches": 3
+    },
+    {
+      "variable": "BESSEMER_LEGEND_INVERSE_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_legend_inverse_output.bin",
+      "bytes": 811140,
+      "sha256": "deacd2b9d3fffe3a826853ae3abf6e8abfe425aed19e13e77d5c5343b0d5f350",
+      "independent_proof": "legend-inverse-process-verification.json",
+      "proof_hash_matches": 2
+    },
+    {
+      "variable": "BESSEMER_LEGEND_PALETTE_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_legend_palette_output.bin",
+      "bytes": 4177096,
+      "sha256": "7a56a9e53b3ebdc7f1f70fcca48d6a12330ec52ea606cdc9b5f05e788fc8808f",
+      "independent_proof": "legend-palette-process-verification.json",
+      "proof_hash_matches": 3
+    },
+    {
+      "variable": "BESSEMER_LEGEND_POSITION_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_legend_position_output.bin",
+      "bytes": 154336,
+      "sha256": "3363c768dd72460ddd300497a793e281a70930f9ffa22ccad33849280f27b6b8",
+      "independent_proof": "legend-position-process-verification.json",
+      "proof_hash_matches": 3
+    },
+    {
+      "variable": "BESSEMER_LEGEND_RESETS_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_legend_resets_output.bin",
+      "bytes": 212128,
+      "sha256": "76d700a7f231db3b0e7eee5c40268ddb376d1ad00bff0f40c5cf74706eb99f54",
+      "independent_proof": "legend-resets-process-verification.json",
+      "proof_hash_matches": 2
+    },
+    {
+      "variable": "BESSEMER_LEGEND_STEP_LAYOUT_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_legend_step_layout_output.bin",
+      "bytes": 1383040,
+      "sha256": "2f045d018a7444e272144b14080745823eb2aad26ba0dd8a6741b467027e12b7",
+      "independent_proof": "legend-step-layout-process-verification.json",
+      "proof_hash_matches": 2
+    },
+    {
+      "variable": "BESSEMER_LEGEND_STEP_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_legend_step_output.bin",
+      "bytes": 1328040,
+      "sha256": "b80f1bcb753b041e5ce584ae945fa3c95da180958299586828409db5e1cc6ed4",
+      "independent_proof": "legend-step-process-verification.json",
+      "proof_hash_matches": 2
+    },
+    {
+      "variable": "BESSEMER_LEGEND_WIDTH_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_legend_width_output.bin",
+      "bytes": 797984,
+      "sha256": "487ac9dee55cbb6406381aea8906c3ebbe6b1277f7788ed654c79461d60faa5c",
+      "independent_proof": "legend-width-process-verification.json",
+      "proof_hash_matches": 2
+    },
+    {
+      "variable": "BESSEMER_LEGEND_YIELD_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_legend_yield_output.bin",
+      "bytes": 1422560,
+      "sha256": "af044f911626ce67649b015ba03ec0a06cb16c8382dc3c64f0df82d0dcd5cd79",
+      "independent_proof": "legend-yield-process-verification.json",
+      "proof_hash_matches": 2
+    },
+    {
+      "variable": "BESSEMER_LOCAL_RENDER_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_local_render_output.bin",
+      "bytes": 73812,
+      "sha256": "5eb5a1dc4cef3d2bb298f5e6e7adee2bed9a21f6d9fb8e8063539a08171dcaab",
+      "independent_proof": "local-render-process-verification.json",
+      "proof_hash_matches": 1
+    },
+    {
+      "variable": "BESSEMER_MODE3_RGB_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_mode3_rgb_output.bin",
+      "bytes": 3944772,
+      "sha256": "cdc94cbc121f52430ab62b60b916afba656bcb34de3cf82017a10c93a0298506",
+      "independent_proof": "mode3-rgb-process-verification.json",
+      "proof_hash_matches": 1
+    },
+    {
+      "variable": "BESSEMER_OFFSET_FRINGE_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_offset_fringe_output.bin",
+      "bytes": 320300,
+      "sha256": "7de4055672c83ca5e6d6b96369dba909fe8686ee0b9b3f60129c930f2a280a3d",
+      "independent_proof": "offset-fringe-process-verification.json",
+      "proof_hash_matches": 1
+    },
+    {
+      "variable": "BESSEMER_PLOT54_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_plot54_output.bin",
+      "bytes": 1553884,
+      "sha256": "12184be136b391d929ec1b2ed0af1023cbfb216da75af2736eba18d25e1c3fcd",
+      "independent_proof": "plot54-process-verification.json",
+      "proof_hash_matches": 1
+    },
+    {
+      "variable": "BESSEMER_POST_TEXT_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_post_text_output.bin",
+      "bytes": 609580,
+      "sha256": "72e551b3958f8ff4a922108b68970b27b3f20ef2ee784200ef59ce0855add1f3",
+      "independent_proof": "text-selection-process-verification.json",
+      "proof_hash_matches": 1
+    },
+    {
+      "variable": "BESSEMER_PREFERENCE_COLORS_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_preference_colors_output.bin",
+      "bytes": 2584032,
+      "sha256": "515442aa681c8808936060b8fe54351e8069c293775864335196bdfb287c3dc6",
+      "independent_proof": "preference-color-process-verification.json",
+      "proof_hash_matches": 1
+    },
+    {
+      "variable": "BESSEMER_RAW_PREFERENCES_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_raw_preferences_output.bin",
+      "bytes": 2983852,
+      "sha256": "bc3b0a1c4cbdc981f7d7da6b0bf7216877fa7cbbcd54acc418d5d4ddb0dd27c8",
+      "independent_proof": "raw-preferences-process-verification.json",
+      "proof_hash_matches": 1
+    },
+    {
+      "variable": "BESSEMER_RENDER_POLICY_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_render_policy_output.bin",
+      "bytes": 90576,
+      "sha256": "7927dc9c5fdae9305e9c296740b216a413fd6bf837cfb2eb3d09cad2cc49c113",
+      "independent_proof": "render-policy-process-verification.json",
+      "proof_hash_matches": 1
+    },
+    {
+      "variable": "BESSEMER_RGBA_COMPARISON_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_rgba_comparison_output.bin",
+      "bytes": 21792,
+      "sha256": "43ca3b6cf6c04a7b9d22355041c0ef26e1362f3204c11920c187fb0dcafaf52c",
+      "independent_proof": "rgba-comparison-process-verification.json",
+      "proof_hash_matches": 1
+    },
+    {
+      "variable": "BESSEMER_SEGMENT_RGB_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_segment_rgb_output.bin",
+      "bytes": 1030588,
+      "sha256": "17ba1375b9df5363c8fab138061daaec63f0318c590c4e9173ef1083c63e1ab0",
+      "independent_proof": "segment-rgb-process-verification.json",
+      "proof_hash_matches": 1
+    },
+    {
+      "variable": "BESSEMER_STYLE_COMPARISON_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_style_comparison_output.bin",
+      "bytes": 2633400,
+      "sha256": "e6fcd3cd8d7efa5985662c7364d7f9d9910eb9b23f4ae1deacb70140cb18f17c",
+      "independent_proof": "style-comparison-process-verification.json",
+      "proof_hash_matches": 2
+    },
+    {
+      "variable": "BESSEMER_TRIANGLE_COLOR_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_triangle_color_output.bin",
+      "bytes": 1505328,
+      "sha256": "472c18fe682ec09b57c96b91979743794df7bf2c3dbea91014455d7d079fddb5",
+      "independent_proof": "triangle-color-process-verification.json",
+      "proof_hash_matches": 1
+    },
+    {
+      "variable": "BESSEMER_UNIT_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_unit_output.bin",
+      "bytes": 1625856,
+      "sha256": "15cfa41ecda675accb91f21527ad46c2443b173ea73aab95fd80517786199621",
+      "independent_proof": "unit-process-verification.json",
+      "proof_hash_matches": 1
+    },
+    {
+      "variable": "BESSEMER_VECTOR_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_vector_output.bin",
+      "bytes": 3093888,
+      "sha256": "d2e318102e31576decba8932b6c793fe70d165f098b574821fb04647a3e5187b",
+      "independent_proof": "vector-process-verification.json",
+      "proof_hash_matches": 1
+    },
+    {
+      "variable": "BESSEMER_VECTOR_STYLE_OUTPUT",
+      "path": "target\\post-dialog-acceptance-exports\\bessemer_vector_style_output.bin",
+      "bytes": 305748,
+      "sha256": "e7ec121c2b2332d1bbf981382a5a04e1248b445c3d068ee581f32bd1bc6b2765",
+      "independent_proof": "vector-style-process-verification.json",
+      "proof_hash_matches": 1
+    }
+  ],
+  "initial_runner_configuration": {
+    "outcome": "Failed:required BESSEMER_HIDDEN_MIGRATION_OUTPUT was absent; no test or production assertion changed",
+    "log": {
+      "path": "target/post-dialog-native-acceptance.log",
+      "bytes": 4629,
+      "sha256": "9bd2ce947ad17270655c0213bed697a6ea789849391a55b0e14cd0e0b9841d05"
+    },
+    "corrected": "All34 reviewed exporter variables assigned distinct workspace-local files; entire37-harness suite rerun with all tests included"
+  },
+  "scope": "Consolidated known-schema codec and bounded-consumer acceptance on complete freshly frozen native/owned packets; no DLL or application execution",
+  "pending": [
+    "Repository-wide cargo xtask pr on immutable acceptance head",
+    "Exact publication-cut validation and all five feature166 platform gates",
+    "Remaining whole-goal carriers and unresolved contexts"
+  ]
+}
