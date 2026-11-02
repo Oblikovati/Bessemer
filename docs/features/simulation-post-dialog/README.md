@@ -3,7 +3,9 @@
 The [acceptance audit](acceptance-audit.md) maps current documented clauses to
 implementation and independent evidence. The latest full Source replay passed338
 checks; the consolidated native-fixture Rust suite passed355 tests in37 harnesses
-with no failures or ignored cases. Publication gates and whole-format parity
+with no failures or ignored cases. The [local repository gate](repository-pr-verification.json)
+also passed with3802 tests and zero failures; its192 ignored tests are recorded
+separately from the native-fixture run. Publication gates and whole-format parity
 remain separate.
 
 This feature covers the complete DGXPOST dialog grammar, standalone PostInfo and
