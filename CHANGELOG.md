@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added complete historical named-plot reads, construction and isolated edits with fixed-buffer suffix preservation and explicit caller-version qualifications. (#174)
+
 - Added complete conditional PostStyle comparison plans with ordered checks, shared scalar/color storage, preserved source histories and explicit SSE assumptions. (#166)
 
 - Added local A8/preference zero-test projections with original signed values, guarded assignment paths and completed early-return results. (#166)

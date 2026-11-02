@@ -655,6 +655,12 @@ edits. Character-count strings retain raw code units and change length as one
 atomic value; unassigned eight-byte values retain their exact patterns. See
 [the graph parameter evidence](docs/features/simulation-post-graph/README.md).
 
+`SimulationLegacyPlot` reads, constructs and edits the historical named-plot
+helper, including both bulk layouts, all fixed fields and versioned counted
+texts. Its bounded wide-buffer views retain every byte after the first NUL.
+Helper completion remains separate from the caller-version gate and native
+runtime acceptance; see [the historical plot evidence](docs/features/simulation-legacy-plot/README.md).
+
 `SimulationPostInfo` supports the complete fixed-slot `DspPostInfo` helper with
 explicit version context, preserving all twelve slots independently of active
 counts. Version700002 alone carries an atomic character-text suffix with separate

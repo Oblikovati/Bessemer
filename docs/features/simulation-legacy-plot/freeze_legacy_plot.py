@@ -11,7 +11,7 @@ import unittest
 FEATURE = Path(__file__).resolve().parent
 ROOT = FEATURE.parents[2]
 sys.path.insert(0, str(FEATURE.parent / 'model-archives'))
-for folder in ('simulation-binary-thermal', 'simulation-post-dialog', 'simulation-solid-inventory'):
+for folder in ('simulation-binary-thermal', 'simulation-post-dialog', 'simulation-solid-inventory', 'simulation-post-graph'):
     sys.path.insert(0, str(FEATURE.parent / folder))
 sys.path.insert(0, str(ROOT / 'target/reference-python'))
 from pinned_reference_tests import FrozenSourceImports, copy_sources, record_snapshot
@@ -19,6 +19,8 @@ from native_carriers import pinned_auxiliaries
 from legacy_plot_evidence import verify_legacy_plot_sources, verify_legacy_plot_schema, verify_legacy_fixed_sequence
 from legacy_plot_bindings import verify_legacy_plot_installed, verify_legacy_wide_rea
 from legacy_plot_native import verify_legacy_plot_inventory, replay_legacy_plot_native
+from legacy_plot_owned import verify_legacy_owned_grammar, verify_legacy_owned_failures
+from legacy_plot_packets import verify_legacy_plot_operation_packets
 
 FIXED_READS = 'cosworks-legacy-plot-fixed-reads.json'
 FIXED_SHA256 = 'f29d842bad49e163275d128c3d5e795d05cdfc27b8aaab531daffef94d5226d7'
@@ -39,7 +41,8 @@ def run_legacy_acceptance_checks(pin: Path) -> unittest.TestResult:
     """Keep original tests beside strict source, installed and complete native checks; e.g. run_legacy_acceptance_checks(pin)."""
     replay = update_wrapper(partial(replay_legacy_plot_native, pin), replay_legacy_plot_native)
     checks = (verify_legacy_plot_sources, verify_legacy_plot_schema, verify_legacy_fixed_sequence,
-        verify_legacy_plot_installed, verify_legacy_wide_rea, verify_legacy_plot_inventory, replay)
+        verify_legacy_plot_installed, verify_legacy_wide_rea, verify_legacy_plot_inventory, replay,
+        verify_legacy_owned_grammar, verify_legacy_owned_failures, verify_legacy_plot_operation_packets)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
     original = importlib.import_module('test_cosworks_legacy_plot_record')
     tests = unittest.defaultTestLoader.loadTestsFromModule(original)
