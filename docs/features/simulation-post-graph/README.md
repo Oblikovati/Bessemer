@@ -109,4 +109,4 @@ the independent owned/native packets byte for byte; both hashes also match
 the earlier acceptance run. [Publication source verification](publication-source-verification.json)
 records the new snapshot, binary and logs. The historical source snapshot is
 preserved. This refresh does not replace the required exact publication-head
-Cargo and platform gates; PR #176 remains the sole publication PR.
+Cargo gate and all five platform checks. Publication remains serial.
