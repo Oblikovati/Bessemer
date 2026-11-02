@@ -1,0 +1,20 @@
+{
+  "issue": 163,
+  "code_commit": "0e13a3b4f69bcca9b365eded685c6e3c5e5d3c7f",
+  "code_tree": "85f17c89ea7bdbe63d0374e8092279601d103c61",
+  "command": "cargo xtask pr",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "platform": "Windows x64",
+  "passed": 3493,
+  "failed": 0,
+  "ignored": 102,
+  "test_summaries": 264,
+  "exit_code": 0,
+  "process_reaped": true,
+  "log": "target/mesh-property-full-pr-gate.log",
+  "log_sha256": "41c867dde04f3985ab10bcfbc6a814f5a1c19c5aea750ad05d3517660920a17c",
+  "focused_including_native": 18,
+  "strict_reference_checks": 35,
+  "platform_integration": "Pending exact-head platform and ThreadSanitizer checks; PR #162 remains the sole open integration PR",
+  "scope": "The committed Mesh Property runtime and tests were unchanged throughout this gate. Uncommitted Results reference work is separate and receives no runtime acceptance from this cut."
+}

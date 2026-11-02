@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added complete documented Mesh Property reads, construction and isolated edits with explicit versions, populated nested records, preserved integer-set keys and ordered provenance. (#163)
+
 - Added complete study MeshControlManager headers and counted MeshControl read, construction and isolated edits with explicit header profiles, exact budgets and ordered outer/nested history. (#161)
 
 - Added combined ShellManager corpus read and construction validation with exact identity bindings, named profiles and explicit incomplete payloads. (#160)
