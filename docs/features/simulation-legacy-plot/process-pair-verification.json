@@ -1,0 +1,51 @@
+{
+  "issue": 174,
+  "accepted_source_cut": "b27da6cf0f22001a4fba7c77e450f7d6c69e6ee0",
+  "platform": "Windows x64",
+  "binary": {
+    "path": "target/pinned-1.99.0/debug/deps/simulation_legacy_plot-f6fa77433d76be39.exe",
+    "sha256": "d994d2242107f5ac069108a31596ea76682492382369b1959ce3c04931a8e019"
+  },
+  "runs": [
+    {
+      "index": 1,
+      "exit_code": 0,
+      "seconds": 0.3279999999795109,
+      "bytes": 30307140,
+      "sha256": "2045db1578bd2f881cc8b92c1687cbcc87af6aa4821ecbdcd0340452880fa36c",
+      "memory": {
+        "measured": true,
+        "peak_working_set_bytes": 46477312,
+        "error_code": null
+      }
+    },
+    {
+      "index": 2,
+      "exit_code": 0,
+      "seconds": 0.2660000000614673,
+      "bytes": 30307140,
+      "sha256": "2045db1578bd2f881cc8b92c1687cbcc87af6aa4821ecbdcd0340452880fa36c",
+      "memory": {
+        "measured": true,
+        "peak_working_set_bytes": 46211072,
+        "error_code": null
+      }
+    }
+  ],
+  "byte_identical": true,
+  "concurrent_full_suite_export_identical": true,
+  "scope": {
+    "owned_complete_bodies": 52,
+    "native_successful_arguments": 96,
+    "all_native_candidate_outcomes": 120,
+    "native_wide_views": 240,
+    "operation": "Every field changed with independent literal prefix/suffix oracle, exact result projection and all ordered source/replacement history parents"
+  },
+  "memory_method": "GetProcessMemoryInfo on each owned child handle after completion; PeakWorkingSetSize retained if available",
+  "qualifications": [
+    "Wire bytes, typed projections and ordered history are compared; opaque revision tokens are checked for correct ownership within each process and represented by their physical ordinals.",
+    "Coverage completion, check mode and achieved zero pattern error are asserted for every changed operation.",
+    "No previous release provides this operation, so no previous-release performance comparison is claimed.",
+    "No SolidWorks DLL or native application code executed."
+  ]
+}

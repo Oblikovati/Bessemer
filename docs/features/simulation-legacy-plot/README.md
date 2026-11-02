@@ -81,8 +81,15 @@ failed attempts and their original endpoints.
 The final Rust integration run passed all15 tests, including both native tests
 with zero failures or ignored cases. All-target/all-feature Clippy passed.
 The strict Source rerun passed all14 checks without updating baselines.
-Remaining acceptance work includes fresh-process comparison, the repository
-gate and publication checks in
+Two fresh processes produced identical30,307,140-byte field/history exports,
+also matching the concurrent full-suite export. Runs took0.328 and0.266 seconds
+with peak working sets46,477,312 and46,211,072 bytes. The
+[process proof](process-pair-verification.json) records the binary and hashes;
+[operation verification](operation-verification.json) records all gates and
+their limits. No previous release provides this operation for comparison.
+
+Remaining acceptance work includes the exact publication-head repository
+gate and all five platform checks in
 [issue #174](https://github.com/Oblikovati/Bessemer/issues/174). Native writer
 equivalence and whole-format parity remain unproven.
 
