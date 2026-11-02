@@ -52,3 +52,20 @@ by this foundation. Whole-schema, native application and geometry acceptance
 remain unproven.
 
 Humanizer is unavailable; maintainer prose review remains pending.
+
+The complete owned-input stage passed all10 checks in final initialization and
+strict replay. Its992 feature streams contain1,984 definitions across seven
+parameter and two generic classes, each with a loaded-class definition and an
+instance alias. They use the unchanged owned part's verified97-slot map and
+complete required MBSM tail. All128 update-bit combinations, three unrelated
+state patterns and all16 parameter-role combinations are represented.
+
+[Owned verification](owned-verification.json) records the exact context and
+fixture hashes. Independent literals retain91,776 packet bytes, including
+87,808 wire bytes. The node oracle records raw words and offsets;23,872 original
+reader primitives partition every wire byte and corroborate all7,936 node-word
+spans. Generic classes retain the same upper bits without parameter roles.
+Raw scalar NaNs, negative zero, alternate-presence bytes, text and all other
+fields stay in the full inputs. The earlier nine-check snapshot remains at its
+recorded Git revision. The [archive integration contract](design.md) describes
+the next implementation; these fixtures do not establish Rust acceptance yet.

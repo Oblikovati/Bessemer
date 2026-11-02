@@ -1,0 +1,109 @@
+{
+  "issue": 178,
+  "stage": "Complete owned source streams and independent node/primitive oracles; Rust views/edits pending",
+  "checks": 10,
+  "original_focused_tests": 5,
+  "final_initialization_and_strict_replay_passed": true,
+  "elapsed_seconds": [
+    14.664,
+    14.382
+  ],
+  "process_exit_codes": [
+    0,
+    0
+  ],
+  "processes_reaped": true,
+  "cases": 992,
+  "definitions": 1984,
+  "instance_aliases": 992,
+  "classes": 9,
+  "parameter_classes": 7,
+  "generic_classes": 2,
+  "generic_update_combinations": 128,
+  "unresolved_state_patterns": 3,
+  "parameter_bit_combinations": 16,
+  "inherited_slots": 97,
+  "model_version": 19000,
+  "physical_primitive_rows": 23872,
+  "node_word_spans": 7936,
+  "complete_covered_wire_bytes": 87808,
+  "source_hash_exceptions": 0,
+  "source_snapshot": {
+    "path": "docs/features/model-node-state/source-snapshot.json",
+    "bytes": 637188,
+    "sha256": "cdd4a30b481663aadcdad89d45b1e6f5ecb7ddac41f4ef15becba2a9d3216cf6"
+  },
+  "source_identity": "0ec15c472733c060ae0d09dbacde25841ec65af8b6724b39d274c6b1043123b0",
+  "source_python_files": 5102,
+  "fixture": {
+    "path": "tests/fixtures/blank-part.SLDPRT",
+    "bytes": 33888,
+    "sha256": "b52e080ba2cc64d1d07ed28306f27281b07521aef550bc0c7fea8cd54be2b276"
+  },
+  "artifacts": [
+    {
+      "path": "tests/fixtures/model-node-state/owned.bin",
+      "bytes": 91776,
+      "sha256": "bfe75164b302b489984fd5072a5b65b8f6bb378dede7e1aa0e0a70b8a3577d46"
+    },
+    {
+      "path": "tests/fixtures/model-node-state/nodes.tsv",
+      "bytes": 63648,
+      "sha256": "747afa3a3ae22eba6a724d96aff6b831216bd8e1e3d19aa92e8574bbc0b05ac2"
+    },
+    {
+      "path": "tests/fixtures/model-node-state/primitives.tsv",
+      "bytes": 1087390,
+      "sha256": "12fb8048788be3a81b40e28127fb0dcf03d0807381bb16650276be4d22753706"
+    },
+    {
+      "path": "docs/features/model-node-state/owned-reference.json",
+      "bytes": 251638,
+      "sha256": "9046109a2d8624fdfebdbb49348fa9bdfd03e1ecd72e24b16fb2a85602ff25c1"
+    }
+  ],
+  "logs": [
+    {
+      "path": "target/model-node-state-owned-source.log",
+      "bytes": 2551,
+      "sha256": "c9501982b39a88c1cf3cc7926b6921ecc1ec3f6feae493caf7fb0e3f5ef249d4"
+    },
+    {
+      "path": "target/model-node-state-owned-corrected-source.log",
+      "bytes": 1908,
+      "sha256": "2fbbfa8775c5b558e92b4aa542cc37fe1d12a04c91c4eeec0b290df25f341606"
+    },
+    {
+      "path": "target/model-node-state-owned-final-source.log",
+      "bytes": 1908,
+      "sha256": "51be9215ec9753b19500ffd197a0ff2984ab67d1d619ee4b058c4ef206a7484c"
+    },
+    {
+      "path": "target/model-node-state-owned-oracle-source.log",
+      "bytes": 1908,
+      "sha256": "01432b19978c56a6d66b6d324cd0831bb9ca7acd5b917c3971af441d632d9a34"
+    },
+    {
+      "path": "target/model-node-state-owned-primitives-source.log",
+      "bytes": 1909,
+      "sha256": "85d260b529586e88ffbbc7f61146e2f2c7d67fc9445cd70755c5f0cf410600a7"
+    },
+    {
+      "path": "target/model-node-state-owned-strict-source.log",
+      "bytes": 1909,
+      "sha256": "3a98c0a28e0605a81ac3640796969c978d1cef6213d48ac376ef00fdb70ef986"
+    }
+  ],
+  "historical_foundation_snapshot_preserved_at_revision": "8c675caa3ddbe53aa61c4d982c6af726bf2ea014",
+  "corrections": [
+    "The first owned run lacked the existing resolved-feature document adapter on sys.path. The unchanged adapter directory was added; no reader or expected outcome was replaced.",
+    "Later successful initialization steps added exact context hashes, all named-bit assertions, a dependency-free node oracle and full original-reader primitive partitions. The complete raw stream packet stayed byte-identical."
+  ],
+  "coverage_credit": 0,
+  "target_executed": false,
+  "pending": [
+    "Archive-integrated Rust view and selected-bit edit implementation",
+    "Full Rust byte/field/history/identity/ownership/resource/failure acceptance",
+    "Fresh process/concurrency,906-case retention and immutable-head local/platform gates"
+  ]
+}
