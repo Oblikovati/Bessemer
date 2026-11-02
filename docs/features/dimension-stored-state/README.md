@@ -1,0 +1,58 @@
+# Stored dimension state
+
+[Feature #179](https://github.com/Oblikovati/Bessemer/issues/179) covers specification
+clauses 11.436 and 11.437. Bessemer already preserves the signed dimension-base
+`mask` and `unknown_5c` words, but does not expose their documented roles through
+an archive-backed typed view.
+
+The intended view will expose the bend-angle range flag (`mask & 2`), the stored
+fillet reference-point change number (`(mask >> 2) & 7`), unresolved mask bits
+(`mask & 0xFFFFFFE1`) and the signed redundant identifier. Stored zero through
+seven are valid counter inputs. Every signed identifier remains valid. Native
+range enforcement, increment transitions, units and handle resolution are
+outside this stored-value operation.
+
+The existing field paths and wire layout must remain unchanged. Projection must
+identify the dimension-base scope and physical typed neighbors in the selected
+archive revision; unrelated tolerance masks and other `unknown_5c` fields must
+fail selection. Edits must use the existing field-edit validation and history,
+preserve unselected bits and fields, and reject stale or foreign views. No-op
+edits must preserve identity. Both configuration and resolved-feature entry
+points need tests using complete archive carriers.
+
+`freeze_dimension_state.py` copies the complete current source tree before
+importing any original reader. It runs all nine original related test modules,
+plus separate checks for the twelve current reader/test pins, both complete
+schema clauses and five complete historical reports. Native report dependency
+pins remain strict. Historical replay readers and accounting totals remain
+historical evidence; the harness does not invoke report writers, patch original
+tests or adopt their old source revisions as current behavior.
+
+The asset manifest pins the original tests' file-relative reports, blank-part
+fixture, CFB adapter and existing key cache. These copies keep test behavior
+unchanged when the Python sources move into the temporary root. The harness
+uses the existing local PE reader for the original installed-corpus tests.
+
+The installed-image check matches the complete 45,766-name export map, nine
+recorded ranges totaling 3,341 bytes and the typed redundant-ID resolver slot.
+Seven ranges have named entries; the constructor and copy ranges are internal.
+Both the export-count cap and the default 512-byte symbol-name preview need
+explicit handling: names are read from their physical PE offsets with an
+8,192-byte termination bound. These are ordinary static observations using the
+existing PE reader, not fresh REA Evidence. No CAD code is executed.
+
+The next acceptance work is an independent owned byte/field oracle, complete
+retained-corpus typed projection and the runtime operation. The operation needs input-isolation, ordered history,
+document reopening, compile-time Send/Sync, concurrent deterministic output and
+two-process byte comparison checks. Local and exact-head platform gates remain
+required before publication. This foundation does not claim runtime completion
+or additional semantic coverage.
+
+Run the source checks from the repository root:
+
+```powershell
+python -B -X utf8 docs/features/dimension-stored-state/freeze_dimension_state.py
+```
+
+The humanizer skill is unavailable in this checkout; its prose pass remains for
+maintainer review.

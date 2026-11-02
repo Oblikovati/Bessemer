@@ -1,0 +1,72 @@
+{
+  "issue": 179,
+  "stage": "Reference foundation; owned oracle and runtime operation pending",
+  "source_command": "python -B -X utf8 docs/features/dimension-stored-state/freeze_dimension_state.py",
+  "source_exit_code": 0,
+  "source_process_reaped": true,
+  "source_checks": 113,
+  "unchanged_original_test_modules": 9,
+  "unchanged_original_tests": 109,
+  "separate_evidence_checks": 4,
+  "source_seconds": 68.048,
+  "source_python_files": 5103,
+  "source_identity": "99c84c47f7ba695f0a477771255dfe89a1401c8ce4ed2ef559af4060af54ada6",
+  "source_snapshot": {
+    "path": "docs/features/dimension-stored-state/source-snapshot.json",
+    "bytes": 635612,
+    "sha256": "92f28cba30b14b93b40f02b853172aa892aed618772dc82cd30577f2f86dc063"
+  },
+  "source_log": {
+    "path": "target/dimension-state-native-source.log",
+    "bytes": 17401,
+    "sha256": "d52585b1511c5ed3749b5e8142371e58667fd878eb887e5e2ab858c38da9a916"
+  },
+  "initial_complete_source_checks": 112,
+  "initial_complete_source_seconds": 70.769,
+  "initial_complete_source_snapshot": {
+    "path": "docs/features/dimension-stored-state/initial-source-snapshot.json",
+    "bytes": 635612,
+    "sha256": "121179bd174dbeae67de4ccd5965c44b90ec8ff4d2d5eca43c1f63386a45a91e"
+  },
+  "initial_complete_source_log": {
+    "path": "target/dimension-state-initial-complete-source.log",
+    "bytes": 17247,
+    "sha256": "1f7a14c9f915c37dd53e65d1b1f46ee311beed19c457dfb130fb6e0799f5f484"
+  },
+  "historical_reports": 5,
+  "historical_report_bytes": 801462,
+  "native_intervals": 9,
+  "native_interval_bytes": 3341,
+  "named_exports": 45766,
+  "resolver_slot_matches": true,
+  "installed_reference": {
+    "path": "docs/features/dimension-stored-state/installed-reference.json",
+    "bytes": 2907,
+    "sha256": "91c628d95c617a0d20ea2f6676c0f8b2cb3adb8852964b82bdb52fba44d82b9c"
+  },
+  "source_support": [
+    {
+      "path": "docs/features/dimension-stored-state/dimension_state_evidence.py",
+      "bytes": 4113,
+      "sha256": "1079db1c5ca007a8bf577f2f06929c53d75a0f9f035110cf4e585db47fc5125a"
+    },
+    {
+      "path": "docs/features/dimension-stored-state/dimension_state_native.py",
+      "bytes": 4990,
+      "sha256": "0cf2bdafeebd8c9b26854e869ee972e868f888a48bd2e79948df16d31313e5e3"
+    },
+    {
+      "path": "docs/features/dimension-stored-state/freeze_dimension_state.py",
+      "bytes": 2454,
+      "sha256": "2b4733facad12fc7577da95678acf437d1cce88df9b68a90dfcea0e39cba5336"
+    }
+  ],
+  "qualifications": [
+    "No runtime Rust API or decoder behavior changed. No new semantic coverage or complete parity claimed.",
+    "All original tests run unchanged from the frozen current source copy; historical reports retain their original reader/accounting revisions.",
+    "Initial missing-asset harness failures and a subsequent export-preview mismatch were retained in target logs; the passing run includes all original tests and a corrected complete-name PE check.",
+    "Native checks are ordinary read-only PE observations with target_executed=false, not fresh REA Evidence.",
+    "Publication remains serial behind PR176; this feature has no publication branch or PR.",
+    "Humanizer skill unavailable; prose pass pending maintainer review."
+  ]
+}
