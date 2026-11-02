@@ -23,7 +23,8 @@ points need tests using complete archive carriers.
 `freeze_dimension_state.py` copies the complete current source tree before
 importing any original reader. It runs all nine original related test modules,
 plus separate checks for the twelve current reader/test pins, both complete
-schema clauses and five complete historical reports. Native report dependency
+schema clauses, five complete historical reports and the owned complete-carrier
+oracle. Native report dependency
 pins remain strict. Historical replay readers and accounting totals remain
 historical evidence; the harness does not invoke report writers, patch original
 tests or adopt their old source revisions as current behavior.
@@ -41,8 +42,36 @@ explicit handling: names are read from their physical PE offsets with an
 8,192-byte termination bound. These are ordinary static observations using the
 existing PE reader, not fresh REA Evidence. No CAD code is executed.
 
-The next acceptance work is an independent owned byte/field oracle, complete
-retained-corpus typed projection and the runtime operation. The operation needs input-isolation, ordered history,
+The owned corpus contains 5,440 complete feature streams across 17 dimension
+classes: direct, geometric, reference, valued-sketch and offset dimensions.
+Each stream inherits the original 97-slot configuration map, stores two physical
+definitions through new and loaded class tags, and ends with an instance alias.
+The original reader confirms all 10,880 definitions, 5,440 aliases and final
+100-slot maps. Cases cover all sixteen flag/counter combinations, four unrelated
+bit patterns and five signed identifier limits. Optional Unicode text retains
+an embedded NUL and a noncanonical presence byte. Geometric bodies retain
+negative zero and a NaN payload. Reference dimensions exercise a nested base
+scope. Six additional reader pins protect these derived bodies and contexts.
+
+The literal 1,264,320-byte packet includes 1,242,560 stream bytes. The original
+primitive observer independently partitions every stream byte into 318,400
+reads and checks 54,400 signed scalar spans at literal offsets. Its mask reads
+pass through the original unknown-field helper; the oracle preserves that
+attribution. `dimensions.tsv` records class, raw unsigned mask, signed redundant
+identifier, both physical base offsets and stream length. `primitives.tsv`
+records case index, byte start/end, primitive kind and exact bytes. The binary
+packet prefixes each complete stream with its little-endian u32 length.
+
+The [owned verification record](owned-verification.json) retains the completed
+114-check initialization and strict rerun, their logs and the final immutable
+source snapshot. Both processes exited successfully and were reaped. The strict
+run checked all existing fixture bytes without baseline-write mode. The earlier
+113-check foundation record identifies its artifacts by Git revision so later
+source snapshots do not silently replace that evidence.
+
+The next acceptance work is complete field/edit/history comparison against these
+independent artifacts, retained-corpus typed projection and the runtime
+operation. The operation needs input-isolation, ordered history,
 document reopening, compile-time Send/Sync, concurrent deterministic output and
 two-process byte comparison checks. Local and exact-head platform gates remain
 required before publication. This foundation does not claim runtime completion

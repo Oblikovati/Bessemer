@@ -62,11 +62,13 @@
     }
   ],
   "qualifications": [
+    "All artifact paths and helper hashes in this foundation record refer to artifact_git_revision; later owned-fixture runs have separate evidence.",
     "No runtime Rust API or decoder behavior changed. No new semantic coverage or complete parity claimed.",
     "All original tests run unchanged from the frozen current source copy; historical reports retain their original reader/accounting revisions.",
     "Initial missing-asset harness failures and a subsequent export-preview mismatch were retained in target logs; the passing run includes all original tests and a corrected complete-name PE check.",
     "Native checks are ordinary read-only PE observations with target_executed=false, not fresh REA Evidence.",
     "Publication remains serial behind PR176; this feature has no publication branch or PR.",
     "Humanizer skill unavailable; prose pass pending maintainer review."
-  ]
+  ],
+  "artifact_git_revision": "899ada96fc4450f18e7907bfff69e5b7ab585b54"
 }

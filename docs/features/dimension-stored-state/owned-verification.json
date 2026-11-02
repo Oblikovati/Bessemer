@@ -1,0 +1,102 @@
+{
+  "issue": 179,
+  "stage": "Complete owned reference corpus; runtime operation and native typed projection pending",
+  "foundation_git_revision": "899ada96fc4450f18e7907bfff69e5b7ab585b54",
+  "source_command": "python -B -X utf8 docs/features/dimension-stored-state/freeze_dimension_state.py",
+  "source_exit_code": 0,
+  "source_process_reaped": true,
+  "baseline_update_mode": false,
+  "source_checks": 114,
+  "unchanged_original_tests": 109,
+  "unchanged_original_test_modules": 9,
+  "separate_evidence_checks": 5,
+  "source_seconds": 367.35,
+  "source_python_files": 5103,
+  "source_identity": "99c84c47f7ba695f0a477771255dfe89a1401c8ce4ed2ef559af4060af54ada6",
+  "source_snapshot": {
+    "path": "docs/features/dimension-stored-state/source-snapshot.json",
+    "bytes": 640480,
+    "sha256": "f4e0f7972287e4380a11f74932643da634abed0343e46dcb338999e279576d7d"
+  },
+  "source_log": {
+    "path": "target/dimension-state-owned-strict.log",
+    "bytes": 17602,
+    "sha256": "ef0aa8479afc30158d90e5827009bce72cfa95ffe21822c2acc622ce4a614df6"
+  },
+  "initialization_checks": 114,
+  "initialization_exit_code": 0,
+  "initialization_process_reaped": true,
+  "initialization_seconds": 147.352,
+  "initialization_log": {
+    "path": "target/dimension-state-owned-initialize.log",
+    "bytes": 17602,
+    "sha256": "571d19d51f217d48c3d6f9aca635288afdb2e7b15ecdbb339ce5f2695e5501b7"
+  },
+  "fixture_metadata": {
+    "path": "docs/features/dimension-stored-state/owned-reference.json",
+    "bytes": 1158,
+    "sha256": "da1568092fafe9020793cb9ae125e9d02ee14ed7b58193c2167a7dd0bb44fa6f"
+  },
+  "fixtures": [
+    {
+      "path": "tests/fixtures/dimension-stored-state/dimensions.tsv",
+      "bytes": 214190,
+      "sha256": "ed83be24b4336d9031ad572cd4016cd96e76f75a425fdf526ee7acd28f1b37f4"
+    },
+    {
+      "path": "tests/fixtures/dimension-stored-state/owned.bin",
+      "bytes": 1264320,
+      "sha256": "78e1e7fce136d678477283398e93b7a927d6298339a90be105c0dbe83e4d7ddd"
+    },
+    {
+      "path": "tests/fixtures/dimension-stored-state/primitives.tsv",
+      "bytes": 7223210,
+      "sha256": "9730fca96dc2896c9be65fbd9f20e011114531095cc128918c82db259e6444b7"
+    }
+  ],
+  "source_support": [
+    {
+      "path": "docs/features/dimension-stored-state/dimension_state_evidence.py",
+      "bytes": 4113,
+      "sha256": "1079db1c5ca007a8bf577f2f06929c53d75a0f9f035110cf4e585db47fc5125a"
+    },
+    {
+      "path": "docs/features/dimension-stored-state/dimension_state_native.py",
+      "bytes": 4990,
+      "sha256": "0cf2bdafeebd8c9b26854e869ee972e868f888a48bd2e79948df16d31313e5e3"
+    },
+    {
+      "path": "docs/features/dimension-stored-state/dimension_state_owned.py",
+      "bytes": 10861,
+      "sha256": "467c2d0a2518b5ecc0d9c2a49f875961fd5ef6bac47eb372a9039cca649be37f"
+    },
+    {
+      "path": "docs/features/dimension-stored-state/freeze_dimension_state.py",
+      "bytes": 2744,
+      "sha256": "b770fb78837833fbeb1a9865b06b3b7cd389fffc04ff50507c9bab478dc37fc4"
+    }
+  ],
+  "class_count": 17,
+  "cases": 5440,
+  "physical_definitions": 10880,
+  "instance_aliases": 5440,
+  "primitive_reads": 318400,
+  "scalar_spans_checked": 54400,
+  "wire_bytes": 1242560,
+  "packet_bytes": 1264320,
+  "native_evidence_unchanged": {
+    "path": "docs/features/dimension-stored-state/installed-reference.json",
+    "bytes": 2907,
+    "sha256": "91c628d95c617a0d20ea2f6676c0f8b2cb3adb8852964b82bdb52fba44d82b9c"
+  },
+  "qualifications": [
+    "All existing fixture bytes were checked in strict mode; no original test, native report, reader or accounting baseline was patched.",
+    "The original mask primitive is charged through its existing unknown-field helper, which is retained in the observation scope.",
+    "All original physical reads partition complete feature bytes; literal offsets and signed/bit-role expectations are independently constructed.",
+    "Every case has two class-loaded definitions, one identity alias and a verified100-slot map derived from the original97-slot inherited context.",
+    "The runtime view/edit API, full retained906-case typed projection and operation/publication gates remain pending.",
+    "The strict run overlapped an independent graph Cargo gate; durations are observations, not comparative benchmarks.",
+    "The earlier113-check foundation artifact paths are explicitly bound to revision899ada96fc4450f18e7907bfff69e5b7ab585b54 in source-verification.json.",
+    "Humanizer skill unavailable; prose pass pending maintainer review."
+  ]
+}

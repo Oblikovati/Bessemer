@@ -7,11 +7,13 @@ import unittest
 
 FEATURE = Path(__file__).resolve().parent
 sys.path.insert(0, str(FEATURE.parent / 'model-archives'))
+sys.path.insert(0, str(FEATURE.parent / 'resolved-features'))
 sys.path.insert(0, str(FEATURE.parents[2] / 'target/reference-python'))
 from pinned_reference_tests import FrozenSourceImports, copy_sources, record_snapshot
 from dimension_state_evidence import verify_dimension_readers, verify_dimension_clauses, verify_dimension_reports
 from dimension_state_evidence import stage_dimension_assets
 from dimension_state_native import verify_dimension_installed
+from dimension_state_owned import verify_owned_dimension_archives
 
 ORIGINAL_TESTS = ('test_node_state_fields', 'test_node_tooltip', 'test_sketchprefix',
     'test_modelboundary', 'test_camerafeatures', 'test_modelcomponents',
@@ -20,7 +22,8 @@ ORIGINAL_TESTS = ('test_node_state_fields', 'test_node_tooltip', 'test_sketchpre
 
 def run_dimension_checks() -> unittest.TestResult:
     """Keep every original test and separate provenance checks; e.g. run_dimension_checks()."""
-    checks = (verify_dimension_readers, verify_dimension_clauses, verify_dimension_reports, verify_dimension_installed)
+    checks = (verify_dimension_readers, verify_dimension_clauses, verify_dimension_reports,
+              verify_dimension_installed, verify_owned_dimension_archives)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
     for name in ORIGINAL_TESTS:
         original = unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module(name))
@@ -39,7 +42,8 @@ def run() -> bool:
         sys.path.insert(0, str(pin / 'research'))
         result = run_dimension_checks()
         record_snapshot(pin, hashes, result, FEATURE,
-                        ('dimensions', 'test_dimensions', 'test_geometric_dimension_transform'),
+                        ('dimensions', 'test_dimensions', 'test_geometric_dimension_transform',
+                         'resolvedfeatures', 'referencedimensions', 'sketchprefix', 'modelprefix', 'bodyfeatures'),
                         ('mfcobjects', 'swarchive'))
         (FEATURE / 'fixture-reference-snapshot.json').replace(FEATURE / 'source-snapshot.json')
         return result.wasSuccessful()
