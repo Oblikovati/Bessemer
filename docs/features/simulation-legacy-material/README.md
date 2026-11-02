@@ -27,6 +27,20 @@ current original tests. [Foundation verification](foundation-verification.json)
 records the complete clauses, source snapshot and logs. Native extraction and
 installed-function verification remain separate from this initial source gate.
 
+The expanded installed-reader gate passed all12 checks in initialization and
+strict replay. It verifies the full current image hash, ten recorded intervals
+totaling19,007 bytes, all15 current-serializer direct calls and the exact
+MaterialList literal. [Current-reader verification](current-reader-verification.json)
+records the scope and logs. Fresh extraction/replay of all70 payloads remains
+pending; these interval checks do not bind the historical candidate body.
+
+The older modern-Material checkpoint supplies only its pinned native intervals.
+Its obsolete pure-model source pins are not adopted. C838/C894/C895 retain
+their current strict model/dependency pins, with no hash exception. REA's
+objdump provider was unavailable on this host; the existing PE reader verified
+the same installed image and intervals without executing target code. The
+[tool qualification](native-tool-qualification.json) preserves that limitation.
+
 The investigation must establish the historical producer/consumer or context
 before claiming a complete codec. Current-reader failures, original versions,
 candidate-success flags and zero completed-schema credit remain required

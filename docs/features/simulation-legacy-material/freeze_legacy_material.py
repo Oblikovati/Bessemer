@@ -8,8 +8,10 @@ import unittest
 FEATURE = Path(__file__).resolve().parent
 ROOT = FEATURE.parents[2]
 sys.path.insert(0, str(FEATURE.parent / 'model-archives'))
+sys.path.insert(0, str(ROOT / 'target/reference-python'))
 from pinned_reference_tests import FrozenSourceImports, copy_sources, record_snapshot
 from legacy_material_evidence import verify_legacy_material_sources, verify_legacy_material_schema
+from legacy_material_bindings import verify_legacy_material_installed
 
 READERS = ('cosworks_material_layout', 'cosworks_legacy_material_header', 'cosworks_legacy_material_candidate', 'cosworkspersist')
 TESTS = ('test_cosworks_material', 'test_cosworks_legacy_material_header', 'test_cosworks_legacy_material_candidate')
@@ -18,7 +20,7 @@ TESTS = ('test_cosworks_material', 'test_cosworks_legacy_material_header', 'test
 def run_legacy_material_checks() -> unittest.TestResult:
     """Keep all nine actual original tests beside strict evidence checks; e.g. run_legacy_material_checks()."""
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in
-        (verify_legacy_material_sources, verify_legacy_material_schema))
+        (verify_legacy_material_sources, verify_legacy_material_schema, verify_legacy_material_installed))
     original = unittest.TestSuite(unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module(name)) for name in TESTS)
     assert original.countTestCases() == 9, f'{original.countTestCases()}; expected all nine current original tests'
     suite.addTests(original)
