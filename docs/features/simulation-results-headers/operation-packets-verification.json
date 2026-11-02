@@ -1,0 +1,48 @@
+{
+  "feature_issue": 164,
+  "bessemer_parent": "2a66e494cf68aad4b0ac5cfd37c5fc7cb7285481",
+  "source_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "source_snapshot_identity": "bd827cbe6fb40b04ebf77e37048bc00d7bb5bdb72c01bc3d12e9a29bef3dc575",
+  "reference_checks": 18,
+  "owned_contexts": 660,
+  "native_accepted_arguments": 450,
+  "native_failed_arguments": 31,
+  "all_exit_codes": 0,
+  "all_processes_reaped": true,
+  "complete_first_word_changed_fields_and_ordered_parents": true,
+  "packets": {
+    "owned.bin": {
+      "bytes": 18521,
+      "sha256": "33227a8feb6c214dcb7298d0a131bb35c5a04d708df9ec5123a76abcc90a8e16"
+    },
+    "projection.bin": {
+      "bytes": 79178,
+      "sha256": "2a70c6b72d6ea0e6ecce8522dfd623b00f85f0b9192ffb64f07b880d84fc3e4d"
+    },
+    "history.bin": {
+      "bytes": 139339,
+      "sha256": "5e28f84bd0c1d8bf33d999eb7cce9fc1bc91d5d78d2a35e970904c50d8b0331a"
+    },
+    "native-projection": {
+      "bytes": 68209,
+      "sha256": "3f9018c8986da610d231ac55ce84ec178b322c7ee7307bf010fc4f1533222614"
+    },
+    "native-history": {
+      "bytes": 115165,
+      "sha256": "c646e62611e64c3e6a45fecf711a4b1a4f90ee03e07101acc2d49769bd4f2940"
+    }
+  },
+  "logs": {
+    "target/results-headers-packets-final-write.log": "1cfa05e39ad86dc67c08704117290dd8a5ef95eb147df6db44b18616a68009a1",
+    "target/results-headers-packets-final-strict.log": "1cfa05e39ad86dc67c08704117290dd8a5ef95eb147df6db44b18616a68009a1"
+  },
+  "exclusions": [
+    "Rust read/construction/edit acceptance",
+    "Changed-value text and unsigned fields",
+    "Malformed and sufficient-payload caps",
+    "Resource budgets and isolation",
+    "Mixed concurrency and two-process Rust exports",
+    "Exact-head platform integration and ThreadSanitizer",
+    "Native application opening and whole-format parity"
+  ]
+}
