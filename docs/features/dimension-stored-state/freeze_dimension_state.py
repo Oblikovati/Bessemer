@@ -14,6 +14,7 @@ from dimension_state_evidence import verify_dimension_readers, verify_dimension_
 from dimension_state_evidence import stage_dimension_assets
 from dimension_state_native import verify_dimension_installed
 from dimension_state_owned import verify_owned_dimension_archives
+from dimension_state_configuration import verify_owned_dimension_configuration
 
 ORIGINAL_TESTS = ('test_node_state_fields', 'test_node_tooltip', 'test_sketchprefix',
     'test_modelboundary', 'test_camerafeatures', 'test_modelcomponents',
@@ -25,6 +26,9 @@ def run_dimension_checks() -> unittest.TestResult:
     checks = (verify_dimension_readers, verify_dimension_clauses, verify_dimension_reports,
               verify_dimension_installed, verify_owned_dimension_archives)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
+    suite.addTest(unittest.FunctionTestCase(verify_owned_dimension_configuration))
+    if '--configuration-only' in sys.argv:
+        return unittest.TextTestRunner(verbosity=2).run(unittest.TestSuite([unittest.FunctionTestCase(verify_owned_dimension_configuration)]))
     for name in ORIGINAL_TESTS:
         original = unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module(name))
         assert original.countTestCases() > 0, f'{name}; expected the complete original test module'
@@ -41,11 +45,14 @@ def run() -> bool:
         sys.meta_path.insert(0, FrozenSourceImports(pin))
         sys.path.insert(0, str(pin / 'research'))
         result = run_dimension_checks()
+        readers = ('dimensions', 'modelprefix', 'partresolved') if '--configuration-only' in sys.argv else (
+            'dimensions', 'test_dimensions', 'test_geometric_dimension_transform',
+            'resolvedfeatures', 'referencedimensions', 'sketchprefix', 'modelprefix', 'bodyfeatures')
         record_snapshot(pin, hashes, result, FEATURE,
-                        ('dimensions', 'test_dimensions', 'test_geometric_dimension_transform',
-                         'resolvedfeatures', 'referencedimensions', 'sketchprefix', 'modelprefix', 'bodyfeatures'),
+                        readers,
                         ('mfcobjects', 'swarchive'))
-        (FEATURE / 'fixture-reference-snapshot.json').replace(FEATURE / 'source-snapshot.json')
+        name = 'configuration-source-snapshot.json' if '--configuration-only' in sys.argv else 'source-snapshot.json'
+        (FEATURE / 'fixture-reference-snapshot.json').replace(FEATURE / name)
         return result.wasSuccessful()
 
 

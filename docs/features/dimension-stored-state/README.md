@@ -1,21 +1,21 @@
 # Stored dimension state
 
 [Feature #179](https://github.com/Oblikovati/Bessemer/issues/179) covers specification
-clauses 11.436 and 11.437. Bessemer already preserves the signed dimension-base
-`mask` and `unknown_5c` words, but does not expose their documented roles through
-an archive-backed typed view.
+clauses 11.436 and 11.437. The [archive-backed API](api.md) exposes documented
+roles while preserving the existing signed dimension-base `mask` and
+`unknown_5c` words and raw field paths.
 
-The intended view will expose the bend-angle range flag (`mask & 2`), the stored
+The view exposes the bend-angle range flag (`mask & 2`), the stored
 fillet reference-point change number (`(mask >> 2) & 7`), unresolved mask bits
 (`mask & 0xFFFFFFE1`) and the signed redundant identifier. Stored zero through
 seven are valid counter inputs. Every signed identifier remains valid. Native
 range enforcement, increment transitions, units and handle resolution are
 outside this stored-value operation.
 
-The existing field paths and wire layout must remain unchanged. Projection must
-identify the dimension-base scope and physical typed neighbors in the selected
+The existing field paths and wire layout remain unchanged. Projection identifies
+the dimension-base scope and physical typed neighbors in the selected
 archive revision; unrelated tolerance masks and other `unknown_5c` fields must
-fail selection. Edits must use the existing field-edit validation and history,
+fail selection. Edits use the existing field-edit validation and history,
 preserve unselected bits and fields, and reject stale or foreign views. No-op
 edits must preserve identity. Both configuration and resolved-feature entry
 points need tests using complete archive carriers.
@@ -69,13 +69,31 @@ run checked all existing fixture bytes without baseline-write mode. The earlier
 113-check foundation record identifies its artifacts by Git revision so later
 source snapshots do not silently replace that evidence.
 
-The next acceptance work is complete field/edit/history comparison against these
-independent artifacts, retained-corpus typed projection and the runtime
-operation. The operation needs input-isolation, ordered history,
-document reopening, compile-time Send/Sync, concurrent deterministic output and
-two-process byte comparison checks. Local and exact-head platform gates remain
-required before publication. This foundation does not claim runtime completion
-or additional semantic coverage.
+The complete configuration fixture adds two dimension definitions and an alias
+to the original absent object map, updating the resolved section extent. Its
+independently read primitive partition covers all 24,137 bytes. Adding objects
+changes inherited slots, so its companion feature stream is an independently
+validated ten-byte empty list with the same 100-slot context. Document tests
+read both archives, preserve unrelated streams and reverse edits byte for byte.
+
+The [operation record](operation-verification.json) records ten passing
+integration tests, four projection guards, nine documentation examples and clean
+all-target Clippy. All 163,200 selected-value requests match independently
+calculated complete images, unselected fields and ordered history: 131,648
+change a value and 31,552 are exact no-ops. Every remaining u8 counter request
+fails explicitly. Both public types pass compile-time Send/Sync checks. Eight
+workers share immutable snapshots through 43,520 accepted edits and 43,520
+expected failures. Serial and eight-worker projections match in full; two fresh
+processes produce identical 66,235,220-byte view/field/edit/history exports.
+
+The native gate projects 5,920 configuration dimensions and 76,318 feature
+dimensions while reconstructing both carriers for all 906 cases. The original
+private/public reconstruction gate also passes. Every feature count binds by
+stream identity and complete hash to its original per-stream C-1923 identifier
+gain; [native bindings](native-bindings-verification.json) retain every row.
+Historical accounting is unchanged. Local repository and exact-publication-head
+platform/ThreadSanitizer gates remain required; this operation does not claim
+whole-format parity or native application/geometry acceptance.
 
 Run the source checks from the repository root:
 

@@ -129,6 +129,10 @@ update bits and class-scoped parameter flags from complete part configurations
 and resolved-feature archives. Selected-bit edits preserve other fields and bits
 and return the existing complete archive validation and structural history.
 Stored flags remain separate from effective native predicates and setter cascades.
+The [stored dimension API](docs/features/dimension-stored-state/api.md) projects
+the bend-angle flag, fillet reference-point change number and signed redundant
+identifier from direct or nested dimension bases. Isolated stored-value edits
+preserve raw mask bits, other fields and the existing complete archive history.
 The [assembly configuration API](docs/features/assembly-configurations/README.md)
 reads, constructs, edits and writes complete ordinary assembly and routing
 configurations. All 180 reference-readable modern configurations reconstruct

@@ -6,6 +6,8 @@ use crate::archive_codec::ArchiveCursor;
 use crate::header::{ArchiveVersion, DocumentHeader};
 use std::sync::Arc;
 
+#[path = "../model_dimension_state/native.rs"]
+mod stored_dimension_views;
 #[path = "../model_node_state/native.rs"]
 mod stored_node_views;
 

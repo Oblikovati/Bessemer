@@ -1,0 +1,171 @@
+{
+  "issue": 179,
+  "behavior_profile": "dimension-stored-state-v1",
+  "stage": "Complete local archive-backed operation acceptance; repository/publication gates pending",
+  "focused_integration": 10,
+  "projection_guard_unit_tests": 4,
+  "documentation_examples": 9,
+  "owned_contexts": 5440,
+  "owned_physical_definitions": 10880,
+  "changed_and_noop_value_operations": 163200,
+  "changed_value_operations": 131648,
+  "noop_value_operations": 31552,
+  "compile_time_send_sync_public_types": 2,
+  "parallel_projection_workers": 8,
+  "parallel_projection_equals_serial": true,
+  "shared_snapshot_workers": 8,
+  "shared_snapshot_successful_edits": 43520,
+  "shared_snapshot_expected_failures": 43520,
+  "retained_native_cases": 906,
+  "native_configuration_dimensions": 5920,
+  "native_feature_dimensions": 76318,
+  "all906_feature_counts_and_hashes_match_original_C1923": true,
+  "native_outcome_rows_identical_across_two_runs": true,
+  "complete_native_carriers_unchanged": true,
+  "original_private_public_reconstruction_gate_passed": true,
+  "source_checks": 115,
+  "source_seconds": 172.373,
+  "source_exit_code": 0,
+  "source_process_reaped": true,
+  "source_baseline_write_mode": false,
+  "source_hash_exceptions": 0,
+  "unchanged_original_tests": 109,
+  "separate_evidence_checks": 6,
+  "source_snapshot": {
+    "path": "docs/features/dimension-stored-state/source-snapshot.json",
+    "bytes": 640480,
+    "sha256": "f647821339038d87b550b4d093cff6353a7d5ab3423f047d441a90f129923027"
+  },
+  "source_identity": "99c84c47f7ba695f0a477771255dfe89a1401c8ce4ed2ef559af4060af54ada6",
+  "configuration_fixture": {
+    "path": "docs/features/dimension-stored-state/configuration-reference.json",
+    "bytes": 588,
+    "sha256": "2ca899456e0efc7c71c959502d3bae584ee0440f1775f6927067ac86dd8d0c6b"
+  },
+  "configuration_companion": {
+    "path": "tests/fixtures/dimension-stored-state/configuration-features.bin",
+    "bytes": 10,
+    "sha256": "bb6a0212d863813d519b2e817d13c9ff166ea48a62614d57de74cac758e8e4c0"
+  },
+  "companion_is_completed_empty_with100_inherited_slots": true,
+  "whole_document_reopen_unrelated_streams_and_exact_revert": true,
+  "owned_reference": {
+    "path": "docs/features/dimension-stored-state/owned-reference.json",
+    "bytes": 1158,
+    "sha256": "da1568092fafe9020793cb9ae125e9d02ee14ed7b58193c2167a7dd0bb44fa6f"
+  },
+  "native_bindings": {
+    "path": "docs/features/dimension-stored-state/native-bindings-verification.json",
+    "bytes": 345217,
+    "sha256": "5cbc82220539d889e8100c19d06bbca41289835786ecfddff96246507d94a04b"
+  },
+  "native_input": {
+    "path": "target/resolved-native-probe.bin",
+    "bytes": 129189574,
+    "sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f"
+  },
+  "process_output": {
+    "path": "target/dimension-state-first-projection.bin",
+    "bytes": 66235220,
+    "sha256": "2c4649549b3df8c1f33ec4b56cd210a4c7060982c580294137cc30a2258f8441"
+  },
+  "fresh_processes": 2,
+  "fresh_process_test_counts": [
+    10,
+    10
+  ],
+  "fresh_process_seconds": [
+    26.65,
+    30.83
+  ],
+  "fresh_processes_reaped": true,
+  "all_target_all_feature_clippy_clean": true,
+  "runtime_source_files_under500_lines": true,
+  "runtime_and_test_function_bodies_at_most20_nonblank_lines": true,
+  "source_support": [
+    {
+      "path": "docs/features/dimension-stored-state/bind_native_dimension_counts.py",
+      "bytes": 4877,
+      "sha256": "af6982aaa1a68eeac154fa95ab1f4d361e97e178f9b6ec838cedea9530e183e2"
+    },
+    {
+      "path": "docs/features/dimension-stored-state/dimension_state_configuration.py",
+      "bytes": 9102,
+      "sha256": "3011749bde6acdb2ef91a33cd767221fd2219951323ec5bdc674b9e66b789f03"
+    },
+    {
+      "path": "docs/features/dimension-stored-state/dimension_state_evidence.py",
+      "bytes": 4113,
+      "sha256": "1079db1c5ca007a8bf577f2f06929c53d75a0f9f035110cf4e585db47fc5125a"
+    },
+    {
+      "path": "docs/features/dimension-stored-state/dimension_state_native.py",
+      "bytes": 4990,
+      "sha256": "0cf2bdafeebd8c9b26854e869ee972e868f888a48bd2e79948df16d31313e5e3"
+    },
+    {
+      "path": "docs/features/dimension-stored-state/dimension_state_owned.py",
+      "bytes": 10861,
+      "sha256": "467c2d0a2518b5ecc0d9c2a49f875961fd5ef6bac47eb372a9039cca649be37f"
+    },
+    {
+      "path": "docs/features/dimension-stored-state/freeze_dimension_state.py",
+      "bytes": 3307,
+      "sha256": "c77955039e0651b6167305c05babe2367e3c52d4ebd67cbefb175771fa1af767"
+    }
+  ],
+  "logs": [
+    {
+      "path": "target/dimension-state-first-process.log",
+      "bytes": 1201,
+      "sha256": "2fff7e81406325329ec5d28d82045f6e3d18e7195870ae626eadc634b8a87f72"
+    },
+    {
+      "path": "target/dimension-state-second-process.log",
+      "bytes": 1201,
+      "sha256": "dc625de0a28b7e8e4387a5eaee99d326664e248b718cf8b404169b02b930c9c7"
+    },
+    {
+      "path": "target/dimension-state-final-unit.log",
+      "bytes": 889,
+      "sha256": "54d68c074231589d262cbdfc3e99010dcc81df6bb929b9decaf60f215c194505"
+    },
+    {
+      "path": "target/dimension-state-final-native.log",
+      "bytes": 24904,
+      "sha256": "228a194cb1eeff934b1484fbcfe0f72227b0f8010f4df2036f8126569812c1f2"
+    },
+    {
+      "path": "target/dimension-state-retained-native.log",
+      "bytes": 21164,
+      "sha256": "642b9099facfa6f36134962d09e55e1cf7aeb9f8b7db1e6cc3fad8b3502fc412"
+    },
+    {
+      "path": "target/dimension-state-doc-tests.log",
+      "bytes": 1854,
+      "sha256": "ca7c6b66ed324ceb7e6fd69866407049a9a938be6668a21fa36297346af30300"
+    },
+    {
+      "path": "target/dimension-state-final-all-clippy.log",
+      "bytes": 135,
+      "sha256": "9bb75efc9243ddf80c7f6a9a76a0adab86add01fd78608e0691b4173f51a29d5"
+    },
+    {
+      "path": "target/dimension-state-operation-final-source.log",
+      "bytes": 17827,
+      "sha256": "68b4913df08ffb756d5dc4240ea9450e0fa777d03bad72051edbda4babfeb647"
+    },
+    {
+      "path": "target/dimension-state-configuration-companion-initialize.log",
+      "bytes": 327,
+      "sha256": "9dd2852c7218353f00527052592c2c9eb7a52f25e21fd945b3b6d01e3d0279d4"
+    }
+  ],
+  "exclusions": [
+    "Full repository cargo xtask pr gate",
+    "Fresh exact-publication-head local/platform/ThreadSanitizer gates",
+    "Native setter cascades, range enforcement, units and native handle resolution",
+    "Native application opening, geometry validity and whole-format parity",
+    "Reference accounting Bug177 and historical MaterialList framing remain separate"
+  ]
+}
