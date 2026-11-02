@@ -1,5 +1,12 @@
 # Separate ordinary part resolved features
 
+The current retained-packet Rust audit is recorded in
+[retained-corpus verification](retained-corpus-refresh-verification.json):
+two fresh processes accepted all906 cases with exact private/public
+reconstruction, and all nine public owned operation tests passed. The
+chronological investigation below retains its earlier source and Rust
+checkpoints; those measurements do not describe current Rust acceptance.
+
 Tracked in #54, as part of the schema parity work in #2. This investigation
 precedes implementation. It does not establish Bessemer support for separate
 `Contents/Config-N-ResolvedFeatures` streams.
