@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added complete conditional PostStyle comparison plans with ordered checks, shared scalar/color storage, preserved source histories and explicit SSE assumptions. (#166)
+
 - Added local A8/preference zero-test projections with original signed values, guarded assignment paths and completed early-return results. (#166)
 
 - Added optional legend locale-grouping views that retained arbitrary signed C0 controls and kept absent wire fields separate from reader resets and runtime locale state. (#166)

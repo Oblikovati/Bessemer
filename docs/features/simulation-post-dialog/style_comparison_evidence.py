@@ -39,8 +39,10 @@ def style_comparison_functions() -> tuple[Callable[[], None], ...]:
     """Keep complete native control flow beside exact original/owned word observations; e.g. style_comparison_functions()."""
     from style_comparison_bindings import verify_style_comparison_bindings, verify_style_comparison_rea
     from style_comparison_projection import verify_style_comparison_native, verify_style_comparison_owned
+    from style_comparison_packets import verify_style_comparison_operation_packets, verify_style_comparison_projection_packets
     return (verify_style_comparison_sources, verify_style_comparison_bindings, verify_style_comparison_rea,
-        verify_style_comparison_native, verify_style_comparison_owned)
+        verify_style_comparison_native, verify_style_comparison_owned,
+        verify_style_comparison_operation_packets, verify_style_comparison_projection_packets)
 
 
 def run_style_comparison_checks() -> unittest.TestResult:

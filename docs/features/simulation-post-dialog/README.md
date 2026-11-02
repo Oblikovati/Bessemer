@@ -546,5 +546,7 @@ Typed local plans retain original inputs, exact read/store coverage and complete
 empty assignments without emulating the remaining preference methods.
 The [conditional style-comparison evidence](style-comparison.md) retains native
 dependency order, delegated comparison identities and unchanged wire controls.
+The complete typed comparison composes the existing legend/color policies and
+keeps scalar alpha aliases in the same storage as their colors.
 The [reader-selection baseline](reader-selection.md) keeps existing mode priority
 and captured callback inputs pinned as further models are added.
