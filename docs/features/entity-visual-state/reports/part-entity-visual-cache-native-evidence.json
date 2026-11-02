@@ -1,0 +1,54 @@
+{
+  "evidence": "C-2055",
+  "target_executed": false,
+  "coverage_credit": 0,
+  "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+  "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "functions": [
+    {
+      "export": "?getLayerAttributeCache@moEntVisProp_c@@QEAA?AW4swLayerMask_e@@XZ",
+      "start": "0x4b2a5b70",
+      "end": "0x4b2a5b74",
+      "bytes": "8b4104c3",
+      "sha256": "f7e0208f5e988ae39c7a45dfddbd12921d02f9c3deb5695d4c534c8ab0ccdb0f",
+      "instructions": [
+        [
+          "mov",
+          "eax, dword ptr [rcx + 4]"
+        ],
+        [
+          "ret",
+          ""
+        ]
+      ]
+    },
+    {
+      "export": "?setLayerAttributeCache@moEntVisProp_c@@QEAAXW4swLayerMask_e@@@Z",
+      "start": "0x4b2b1830",
+      "end": "0x4b2b1834",
+      "bytes": "895104c3",
+      "sha256": "1a3286d87ae82d32a4ad7e6bbc47daea8c7d13a4e52e43d6eeb43bf18d756f6f",
+      "instructions": [
+        [
+          "mov",
+          "dword ptr [rcx + 4], edx"
+        ],
+        [
+          "ret",
+          ""
+        ]
+      ]
+    }
+  ],
+  "findings": [
+    "Typed swLayerMask_e cache getter and setter access the complete runtime dword at +4 without masking.",
+    "The established entity-visual serializer saves one byte from this runtime member; expose that saved byte without synthesizing upper runtime bits.",
+    "The name binds ownership and role; it does not establish the remaining mask bits or effective visibility. Retain the full saved-byte unknown charge."
+  ],
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part_entity_visual_cache_native_audit.py": "3d474f0e39f004859a53f9fa0132f65373530a50ac61cd34228f89b09e754065",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\sldmodu-complete-export-index.json": "fb3efcb81f1c79daf1ad32961f1ec1adb681297c1c2f41177250293ebe836ace",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-entity-visual-fields-native-evidence.json": "7bae27e2d9e0d6069f72aa378f2b230f57f000afe11c7764f6311dde3357e0fa",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-entity-visual-state-predicates-evidence.json": "d2e3749eeab3c54661f4c9364546ed8048545d4d614cc20f12f67785ce8b0cfc"
+  }
+}

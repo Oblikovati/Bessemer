@@ -1,0 +1,2748 @@
+{
+  "evidence": "C-2178",
+  "discovery_only": true,
+  "target_executed": false,
+  "coverage_credit": 0,
+  "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+  "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "rows": [
+    {
+      "export": "??0moEntVisProp_c@@QEAA@AEBV0@@Z",
+      "entry": "0x4b299740",
+      "complete_extent": true,
+      "unwind_group": true,
+      "fragments": [
+        {
+          "start": "0x4b299740",
+          "end": "0x4b2997ae",
+          "bytes": "48895c241848894c2408574883ec20488bda488bf90fb7026689010fb74202668941028b42048941044883c10848894c24388b420889010fb7420c668941044883c1084883c210ff15f3b4a901908b43188947188b431c89471c8b4320894720488bc7488b5c24404883c4205fc3",
+          "sha256": "2acbf5dcfc70721daf57b7f6cac4fe483e9982fe9397b29deabd1e12b0b11fcb"
+        }
+      ],
+      "instructions": [
+        "4b299740 mov qword ptr [rsp + 0x18], rbx",
+        "4b299745 mov qword ptr [rsp + 8], rcx",
+        "4b29974a push rdi",
+        "4b29974b sub rsp, 0x20",
+        "4b29974f mov rbx, rdx",
+        "4b299752 mov rdi, rcx",
+        "4b299755 movzx eax, word ptr [rdx]",
+        "4b299758 mov word ptr [rcx], ax",
+        "4b29975b movzx eax, word ptr [rdx + 2]",
+        "4b29975f mov word ptr [rcx + 2], ax",
+        "4b299763 mov eax, dword ptr [rdx + 4]",
+        "4b299766 mov dword ptr [rcx + 4], eax",
+        "4b299769 add rcx, 8",
+        "4b29976d mov qword ptr [rsp + 0x38], rcx",
+        "4b299772 mov eax, dword ptr [rdx + 8]",
+        "4b299775 mov dword ptr [rcx], eax",
+        "4b299777 movzx eax, word ptr [rdx + 0xc]",
+        "4b29977b mov word ptr [rcx + 4], ax",
+        "4b29977f add rcx, 8",
+        "4b299783 add rdx, 0x10",
+        "4b299787 call qword ptr [rip + 0x1a9b4f3]",
+        "4b29978d nop ",
+        "4b29978e mov eax, dword ptr [rbx + 0x18]",
+        "4b299791 mov dword ptr [rdi + 0x18], eax",
+        "4b299794 mov eax, dword ptr [rbx + 0x1c]",
+        "4b299797 mov dword ptr [rdi + 0x1c], eax",
+        "4b29979a mov eax, dword ptr [rbx + 0x20]",
+        "4b29979d mov dword ptr [rdi + 0x20], eax",
+        "4b2997a0 mov rax, rdi",
+        "4b2997a3 mov rbx, qword ptr [rsp + 0x40]",
+        "4b2997a8 add rsp, 0x20",
+        "4b2997ac pop rdi",
+        "4b2997ad ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4b29975b",
+          "instruction": "movzx eax, word ptr [rdx + 2]",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rdx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4b29975f",
+          "instruction": "mov word ptr [rcx + 2], ax",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4b299763",
+          "instruction": "mov eax, dword ptr [rdx + 4]",
+          "fields": [
+            "stored_cache_byte"
+          ],
+          "memory": [
+            {
+              "base": "rdx",
+              "displacement": 4,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4b299766",
+          "instruction": "mov dword ptr [rcx + 4], eax",
+          "fields": [
+            "stored_cache_byte"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 4,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4b299772",
+          "instruction": "mov eax, dword ptr [rdx + 8]",
+          "fields": [
+            "color_word"
+          ],
+          "memory": [
+            {
+              "base": "rdx",
+              "displacement": 8,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4b299775",
+          "instruction": "mov dword ptr [rcx], eax",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 0,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4b29977b",
+          "instruction": "mov word ptr [rcx + 4], ax",
+          "fields": [
+            "stored_cache_byte"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 4,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "??0moEntVisProp_c@@QEAA@FW4swByLayer_e@0@KFVutLineWidth_c@@@Z",
+      "entry": "0x4c1603e0",
+      "complete_extent": true,
+      "unwind_group": true,
+      "fragments": [
+        {
+          "start": "0x4c1603e0",
+          "end": "0x4c16049f",
+          "bytes": "48895c2410488974241848894c240857415641574883ec30418bf1418bf80fb7da4c8bf94c8d71084c8974242041c706ffffffff6641c74604ffff498d4e08ff156348bd009033c049894718418947206641891f6641897f024189360fb7442470664189470c488b542478488d4c2420ff152a48bd00488bd84889442428498d4e08488bd0ff150548bd0090488bcbff150348bd0041c7470403000000488b4c2478ff15f047bd00498bc7488b5c2458488b7424604883c430415f415e5fc3",
+          "sha256": "21660ada963d66739833462db4693ed2b9f6cba2bbf3f2c77b6c7e6807b86a6f"
+        }
+      ],
+      "instructions": [
+        "4c1603e0 mov qword ptr [rsp + 0x10], rbx",
+        "4c1603e5 mov qword ptr [rsp + 0x18], rsi",
+        "4c1603ea mov qword ptr [rsp + 8], rcx",
+        "4c1603ef push rdi",
+        "4c1603f0 push r14",
+        "4c1603f2 push r15",
+        "4c1603f4 sub rsp, 0x30",
+        "4c1603f8 mov esi, r9d",
+        "4c1603fb mov edi, r8d",
+        "4c1603fe movzx ebx, dx",
+        "4c160401 mov r15, rcx",
+        "4c160404 lea r14, [rcx + 8]",
+        "4c160408 mov qword ptr [rsp + 0x20], r14",
+        "4c16040d mov dword ptr [r14], 0xffffffff",
+        "4c160414 mov word ptr [r14 + 4], 0xffff",
+        "4c16041b lea rcx, [r14 + 8]",
+        "4c16041f call qword ptr [rip + 0xbd4863]",
+        "4c160425 nop ",
+        "4c160426 xor eax, eax",
+        "4c160428 mov qword ptr [r15 + 0x18], rax",
+        "4c16042c mov dword ptr [r15 + 0x20], eax",
+        "4c160430 mov word ptr [r15], bx",
+        "4c160434 mov word ptr [r15 + 2], di",
+        "4c160439 mov dword ptr [r14], esi",
+        "4c16043c movzx eax, word ptr [rsp + 0x70]",
+        "4c160441 mov word ptr [r15 + 0xc], ax",
+        "4c160446 mov rdx, qword ptr [rsp + 0x78]",
+        "4c16044b lea rcx, [rsp + 0x20]",
+        "4c160450 call qword ptr [rip + 0xbd482a]",
+        "4c160456 mov rbx, rax",
+        "4c160459 mov qword ptr [rsp + 0x28], rax",
+        "4c16045e lea rcx, [r14 + 8]",
+        "4c160462 mov rdx, rax",
+        "4c160465 call qword ptr [rip + 0xbd4805]",
+        "4c16046b nop ",
+        "4c16046c mov rcx, rbx",
+        "4c16046f call qword ptr [rip + 0xbd4803]",
+        "4c160475 mov dword ptr [r15 + 4], 3",
+        "4c16047d mov rcx, qword ptr [rsp + 0x78]",
+        "4c160482 call qword ptr [rip + 0xbd47f0]",
+        "4c160488 mov rax, r15",
+        "4c16048b mov rbx, qword ptr [rsp + 0x58]",
+        "4c160490 mov rsi, qword ptr [rsp + 0x60]",
+        "4c160495 add rsp, 0x30",
+        "4c160499 pop r15",
+        "4c16049b pop r14",
+        "4c16049d pop rdi",
+        "4c16049e ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4c16040d",
+          "instruction": "mov dword ptr [r14], 0xffffffff",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "r14",
+              "displacement": 0,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4c160414",
+          "instruction": "mov word ptr [r14 + 4], 0xffff",
+          "fields": [
+            "stored_cache_byte"
+          ],
+          "memory": [
+            {
+              "base": "r14",
+              "displacement": 4,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4c160434",
+          "instruction": "mov word ptr [r15 + 2], di",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "r15",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4c160439",
+          "instruction": "mov dword ptr [r14], esi",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "r14",
+              "displacement": 0,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4c160475",
+          "instruction": "mov dword ptr [r15 + 4], 3",
+          "fields": [
+            "stored_cache_byte"
+          ],
+          "memory": [
+            {
+              "base": "r15",
+              "displacement": 4,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "??0moEntVisProp_c@@QEAA@XZ",
+      "entry": "0x4c1604a0",
+      "complete_extent": true,
+      "unwind_group": true,
+      "fragments": [
+        {
+          "start": "0x4c1604a0",
+          "end": "0x4c1604f9",
+          "bytes": "48895c241848894c2408574883ec20488bd9b8ffffffffc701ffff000033ffc74104030000004883c10848894c2438c701ffffffff668941044883c108ff15a547bd009048897b18897b20488bc3488b5c24404883c4205fc3",
+          "sha256": "a07f04f682f6d01e4b7fba3e6755b1a51e40d72f34cb8009d26ec01803e5447f"
+        }
+      ],
+      "instructions": [
+        "4c1604a0 mov qword ptr [rsp + 0x18], rbx",
+        "4c1604a5 mov qword ptr [rsp + 8], rcx",
+        "4c1604aa push rdi",
+        "4c1604ab sub rsp, 0x20",
+        "4c1604af mov rbx, rcx",
+        "4c1604b2 mov eax, 0xffffffff",
+        "4c1604b7 mov dword ptr [rcx], 0xffff",
+        "4c1604bd xor edi, edi",
+        "4c1604bf mov dword ptr [rcx + 4], 3",
+        "4c1604c6 add rcx, 8",
+        "4c1604ca mov qword ptr [rsp + 0x38], rcx",
+        "4c1604cf mov dword ptr [rcx], 0xffffffff",
+        "4c1604d5 mov word ptr [rcx + 4], ax",
+        "4c1604d9 add rcx, 8",
+        "4c1604dd call qword ptr [rip + 0xbd47a5]",
+        "4c1604e3 nop ",
+        "4c1604e4 mov qword ptr [rbx + 0x18], rdi",
+        "4c1604e8 mov dword ptr [rbx + 0x20], edi",
+        "4c1604eb mov rax, rbx",
+        "4c1604ee mov rbx, qword ptr [rsp + 0x40]",
+        "4c1604f3 add rsp, 0x20",
+        "4c1604f7 pop rdi",
+        "4c1604f8 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4c1604b7",
+          "instruction": "mov dword ptr [rcx], 0xffff",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 0,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4c1604bf",
+          "instruction": "mov dword ptr [rcx + 4], 3",
+          "fields": [
+            "stored_cache_byte"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 4,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4c1604cf",
+          "instruction": "mov dword ptr [rcx], 0xffffffff",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 0,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4c1604d5",
+          "instruction": "mov word ptr [rcx + 4], ax",
+          "fields": [
+            "stored_cache_byte"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 4,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "??1moEntVisProp_c@@QEAA@XZ",
+      "entry": "0x4b29bac0",
+      "complete_extent": true,
+      "unwind_group": true,
+      "fragments": [
+        {
+          "start": "0x4b29bac0",
+          "end": "0x4b29bae1",
+          "bytes": "48894c24084883ec284883c10848894c24384883c1084883c42848ff259791a901",
+          "sha256": "6d4e67a126d2f3c5b8faf84f3bb13b54e5d304dbbec525cd137946fb6c20520f"
+        }
+      ],
+      "instructions": [
+        "4b29bac0 mov qword ptr [rsp + 8], rcx",
+        "4b29bac5 sub rsp, 0x28",
+        "4b29bac9 add rcx, 8",
+        "4b29bacd mov qword ptr [rsp + 0x38], rcx",
+        "4b29bad2 add rcx, 8",
+        "4b29bad6 add rsp, 0x28",
+        "4b29bada jmp qword ptr [rip + 0x1a99197]"
+      ],
+      "hits": []
+    },
+    {
+      "export": "??4moEntVisProp_c@@QEAAXAEBV0@@Z",
+      "entry": "0x4c160570",
+      "complete_extent": true,
+      "unwind_group": true,
+      "fragments": [
+        {
+          "start": "0x4c160570",
+          "end": "0x4c1605c7",
+          "bytes": "48895c2408574883ec200fb702488bda668901488bf90fb74202668941028b42088941080fb7420c4883c2106689410c4883c110ff15c646bd008b43048947048b431c89471c8b4320488b5c24308947204883c4205fc3",
+          "sha256": "25a9de26c10129853e4feb0ff965d015cb22569c211655b75fab241d95c39077"
+        }
+      ],
+      "instructions": [
+        "4c160570 mov qword ptr [rsp + 8], rbx",
+        "4c160575 push rdi",
+        "4c160576 sub rsp, 0x20",
+        "4c16057a movzx eax, word ptr [rdx]",
+        "4c16057d mov rbx, rdx",
+        "4c160580 mov word ptr [rcx], ax",
+        "4c160583 mov rdi, rcx",
+        "4c160586 movzx eax, word ptr [rdx + 2]",
+        "4c16058a mov word ptr [rcx + 2], ax",
+        "4c16058e mov eax, dword ptr [rdx + 8]",
+        "4c160591 mov dword ptr [rcx + 8], eax",
+        "4c160594 movzx eax, word ptr [rdx + 0xc]",
+        "4c160598 add rdx, 0x10",
+        "4c16059c mov word ptr [rcx + 0xc], ax",
+        "4c1605a0 add rcx, 0x10",
+        "4c1605a4 call qword ptr [rip + 0xbd46c6]",
+        "4c1605aa mov eax, dword ptr [rbx + 4]",
+        "4c1605ad mov dword ptr [rdi + 4], eax",
+        "4c1605b0 mov eax, dword ptr [rbx + 0x1c]",
+        "4c1605b3 mov dword ptr [rdi + 0x1c], eax",
+        "4c1605b6 mov eax, dword ptr [rbx + 0x20]",
+        "4c1605b9 mov rbx, qword ptr [rsp + 0x30]",
+        "4c1605be mov dword ptr [rdi + 0x20], eax",
+        "4c1605c1 add rsp, 0x20",
+        "4c1605c5 pop rdi",
+        "4c1605c6 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4c160586",
+          "instruction": "movzx eax, word ptr [rdx + 2]",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rdx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": true
+        },
+        {
+          "address": "0x4c16058a",
+          "instruction": "mov word ptr [rcx + 2], ax",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": true
+        },
+        {
+          "address": "0x4c16058e",
+          "instruction": "mov eax, dword ptr [rdx + 8]",
+          "fields": [
+            "color_word"
+          ],
+          "memory": [
+            {
+              "base": "rdx",
+              "displacement": 8,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": true
+        },
+        {
+          "address": "0x4c160591",
+          "instruction": "mov dword ptr [rcx + 8], eax",
+          "fields": [
+            "color_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 8,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": true
+        },
+        {
+          "address": "0x4c1605aa",
+          "instruction": "mov eax, dword ptr [rbx + 4]",
+          "fields": [
+            "stored_cache_byte"
+          ],
+          "memory": [
+            {
+              "base": "rbx",
+              "displacement": 4,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": true
+        },
+        {
+          "address": "0x4c1605ad",
+          "instruction": "mov dword ptr [rdi + 4], eax",
+          "fields": [
+            "stored_cache_byte"
+          ],
+          "memory": [
+            {
+              "base": "rdi",
+              "displacement": 4,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": true
+        }
+      ]
+    },
+    {
+      "export": "??8moEntVisProp_c@@QEBAHAEBV0@@Z",
+      "entry": "0x4c1605f0",
+      "complete_extent": true,
+      "unwind_group": true,
+      "fragments": [
+        {
+          "start": "0x4c1605f0",
+          "end": "0x4c160630",
+          "bytes": "4883ec280fb702663901752d0fb742026639410275238b4204394104751b4883c2084883c108e81500000085c0740ab8010000004883c428c333c04883c428c3",
+          "sha256": "0a7382c441e0a8a490b303f8767e3f12c36fb2228ee5b6daaf03725eb40e8c25"
+        }
+      ],
+      "instructions": [
+        "4c1605f0 sub rsp, 0x28",
+        "4c1605f4 movzx eax, word ptr [rdx]",
+        "4c1605f7 cmp word ptr [rcx], ax",
+        "4c1605fa jne 0x4c160629",
+        "4c1605fc movzx eax, word ptr [rdx + 2]",
+        "4c160600 cmp word ptr [rcx + 2], ax",
+        "4c160604 jne 0x4c160629",
+        "4c160606 mov eax, dword ptr [rdx + 4]",
+        "4c160609 cmp dword ptr [rcx + 4], eax",
+        "4c16060c jne 0x4c160629",
+        "4c16060e add rdx, 8",
+        "4c160612 add rcx, 8",
+        "4c160616 call 0x4c160630",
+        "4c16061b test eax, eax",
+        "4c16061d je 0x4c160629",
+        "4c16061f mov eax, 1",
+        "4c160624 add rsp, 0x28",
+        "4c160628 ret ",
+        "4c160629 xor eax, eax",
+        "4c16062b add rsp, 0x28",
+        "4c16062f ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4c1605fc",
+          "instruction": "movzx eax, word ptr [rdx + 2]",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rdx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": true
+        },
+        {
+          "address": "0x4c160600",
+          "instruction": "cmp word ptr [rcx + 2], ax",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": true
+        },
+        {
+          "address": "0x4c160606",
+          "instruction": "mov eax, dword ptr [rdx + 4]",
+          "fields": [
+            "stored_cache_byte"
+          ],
+          "memory": [
+            {
+              "base": "rdx",
+              "displacement": 4,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": true
+        },
+        {
+          "address": "0x4c160609",
+          "instruction": "cmp dword ptr [rcx + 4], eax",
+          "fields": [
+            "stored_cache_byte"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 4,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": true
+        }
+      ]
+    },
+    {
+      "export": "?Serialize@moEntVisProp_c@@QEAAXAEAVsu_CArchive@@@Z",
+      "entry": "0x4c1606c0",
+      "complete_extent": true,
+      "unwind_group": true,
+      "fragments": [
+        {
+          "start": "0x4c1606c0",
+          "end": "0x4c1607b3",
+          "bytes": "48895c24084889742410574883ec40488bf9488bda488d4c2420ff15b045bd00488bd3488d4c2430ff15a245bd00488bc8ba01000000ff15a43bbd00488bcbff15ebe0bd00488bcb85c074250fb717ff15bbe6bd000fb75702488bcbff15aee6bd000fb65704488bcbff1591e2bd00eb53488bd7ff159ee6bd00488d5702488bcbff1591e6bd00488b4424204885c0744f8b808007000085c0750cff153f45bd00ff153145bd003d470400007216488d542460488bcbff154ce2bd000fb6442460894704488d4f08488bd3e830000000488b5c2450488b7424584883c4405fc34533c0baffffffffb901000000e8c12ba400cc",
+          "sha256": "7204dc0491fd9665fabf22efec6f48d6b4859cc5684e19ed5edaa127a27ab7b2"
+        }
+      ],
+      "instructions": [
+        "4c1606c0 mov qword ptr [rsp + 8], rbx",
+        "4c1606c5 mov qword ptr [rsp + 0x10], rsi",
+        "4c1606ca push rdi",
+        "4c1606cb sub rsp, 0x40",
+        "4c1606cf mov rdi, rcx",
+        "4c1606d2 mov rbx, rdx",
+        "4c1606d5 lea rcx, [rsp + 0x20]",
+        "4c1606da call qword ptr [rip + 0xbd45b0]",
+        "4c1606e0 mov rdx, rbx",
+        "4c1606e3 lea rcx, [rsp + 0x30]",
+        "4c1606e8 call qword ptr [rip + 0xbd45a2]",
+        "4c1606ee mov rcx, rax",
+        "4c1606f1 mov edx, 1",
+        "4c1606f6 call qword ptr [rip + 0xbd3ba4]",
+        "4c1606fc mov rcx, rbx",
+        "4c1606ff call qword ptr [rip + 0xbde0eb]",
+        "4c160705 mov rcx, rbx",
+        "4c160708 test eax, eax",
+        "4c16070a je 0x4c160731",
+        "4c16070c movzx edx, word ptr [rdi]",
+        "4c16070f call qword ptr [rip + 0xbde6bb]",
+        "4c160715 movzx edx, word ptr [rdi + 2]",
+        "4c160719 mov rcx, rbx",
+        "4c16071c call qword ptr [rip + 0xbde6ae]",
+        "4c160722 movzx edx, byte ptr [rdi + 4]",
+        "4c160726 mov rcx, rbx",
+        "4c160729 call qword ptr [rip + 0xbde291]",
+        "4c16072f jmp 0x4c160784",
+        "4c160731 mov rdx, rdi",
+        "4c160734 call qword ptr [rip + 0xbde69e]",
+        "4c16073a lea rdx, [rdi + 2]",
+        "4c16073e mov rcx, rbx",
+        "4c160741 call qword ptr [rip + 0xbde691]",
+        "4c160747 mov rax, qword ptr [rsp + 0x20]",
+        "4c16074c test rax, rax",
+        "4c16074f je 0x4c1607a0",
+        "4c160751 mov eax, dword ptr [rax + 0x780]",
+        "4c160757 test eax, eax",
+        "4c160759 jne 0x4c160767",
+        "4c16075b call qword ptr [rip + 0xbd453f]",
+        "4c160761 call qword ptr [rip + 0xbd4531]",
+        "4c160767 cmp eax, 0x447",
+        "4c16076c jb 0x4c160784",
+        "4c16076e lea rdx, [rsp + 0x60]",
+        "4c160773 mov rcx, rbx",
+        "4c160776 call qword ptr [rip + 0xbde24c]",
+        "4c16077c movzx eax, byte ptr [rsp + 0x60]",
+        "4c160781 mov dword ptr [rdi + 4], eax",
+        "4c160784 lea rcx, [rdi + 8]",
+        "4c160788 mov rdx, rbx",
+        "4c16078b call 0x4c1607c0",
+        "4c160790 mov rbx, qword ptr [rsp + 0x50]",
+        "4c160795 mov rsi, qword ptr [rsp + 0x58]",
+        "4c16079a add rsp, 0x40",
+        "4c16079e pop rdi",
+        "4c16079f ret ",
+        "4c1607a0 xor r8d, r8d",
+        "4c1607a3 mov edx, 0xffffffff",
+        "4c1607a8 mov ecx, 1",
+        "4c1607ad call 0x4cba3373",
+        "4c1607b2 int3 "
+      ],
+      "hits": [
+        {
+          "address": "0x4c160715",
+          "instruction": "movzx edx, word ptr [rdi + 2]",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rdi",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4c160722",
+          "instruction": "movzx edx, byte ptr [rdi + 4]",
+          "fields": [
+            "stored_cache_byte"
+          ],
+          "memory": [
+            {
+              "base": "rdi",
+              "displacement": 4,
+              "size": 1
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4c160781",
+          "instruction": "mov dword ptr [rdi + 4], eax",
+          "fields": [
+            "stored_cache_byte"
+          ],
+          "memory": [
+            {
+              "base": "rdi",
+              "displacement": 4,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?getColor@moEntVisProp_c@@QEAAHAEAK@Z",
+      "entry": "0x4c160850",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4c160850",
+          "end": "0x4c160869",
+          "bytes": "668339ff750333c0c38b410825ffffff008902b801000000c3",
+          "sha256": "0d456fbd9ef8e6f18b69c30998c30a52026948afc0f81627a6e0fe46dcc01f6d",
+          "entry_bound": "0x4c160870"
+        }
+      ],
+      "instructions": [
+        "4c160850 cmp word ptr [rcx], -1",
+        "4c160854 jne 0x4c160859",
+        "4c160856 xor eax, eax",
+        "4c160858 ret ",
+        "4c160859 mov eax, dword ptr [rcx + 8]",
+        "4c16085c and eax, 0xffffff",
+        "4c160861 mov dword ptr [rdx], eax",
+        "4c160863 mov eax, 1",
+        "4c160868 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4c160859",
+          "instruction": "mov eax, dword ptr [rcx + 8]",
+          "fields": [
+            "color_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 8,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": true
+        },
+        {
+          "address": "0x4c160861",
+          "instruction": "mov dword ptr [rdx], eax",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rdx",
+              "displacement": 0,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": true
+        }
+      ]
+    },
+    {
+      "export": "?getLayer@moEntVisProp_c@@QEBAFXZ",
+      "entry": "0x4b2a6bf0",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4b2a6bf0",
+          "end": "0x4b2a6bf4",
+          "bytes": "0fb701c3",
+          "sha256": "2be8c4f9dbf9273adf6943945858f55c2a11257ba686ef4f499bc414d846b4dc",
+          "entry_bound": "0x4b2a6c00"
+        }
+      ],
+      "instructions": [
+        "4b2a6bf0 movzx eax, word ptr [rcx]",
+        "4b2a6bf3 ret "
+      ],
+      "hits": []
+    },
+    {
+      "export": "?getLayerAttribs@moEntVisProp_c@@QEAAHXZ",
+      "entry": "0x4b2a6c10",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4b2a6c10",
+          "end": "0x4b2a6c15",
+          "bytes": "0fbf4102c3",
+          "sha256": "8c4cee1719d6b6e735fa4abde11ab7d24ed571319333c4e32ec4fc8787c37c12",
+          "entry_bound": "0x4b2a6c20"
+        }
+      ],
+      "instructions": [
+        "4b2a6c10 movsx eax, word ptr [rcx + 2]",
+        "4b2a6c14 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4b2a6c10",
+          "instruction": "movsx eax, word ptr [rcx + 2]",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?getLayerAttributeCache@moEntVisProp_c@@QEAA?AW4swLayerMask_e@@XZ",
+      "entry": "0x4b2a5b70",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4b2a5b70",
+          "end": "0x4b2a5b74",
+          "bytes": "8b4104c3",
+          "sha256": "f7e0208f5e988ae39c7a45dfddbd12921d02f9c3deb5695d4c534c8ab0ccdb0f",
+          "entry_bound": "0x4b2a5b80"
+        }
+      ],
+      "instructions": [
+        "4b2a5b70 mov eax, dword ptr [rcx + 4]",
+        "4b2a5b73 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4b2a5b70",
+          "instruction": "mov eax, dword ptr [rcx + 4]",
+          "fields": [
+            "stored_cache_byte"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 4,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?getStyle@moEntVisProp_c@@QEAAHAEAF@Z",
+      "entry": "0x4c160870",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4c160870",
+          "end": "0x4c160886",
+          "bytes": "668339ff750333c0c30fb7410c668902b801000000c3",
+          "sha256": "3209224235ca33c52a28aab0bbf8fe486da4d160c595afa85084f0b4839d9f63",
+          "entry_bound": "0x4c160890"
+        }
+      ],
+      "instructions": [
+        "4c160870 cmp word ptr [rcx], -1",
+        "4c160874 jne 0x4c160879",
+        "4c160876 xor eax, eax",
+        "4c160878 ret ",
+        "4c160879 movzx eax, word ptr [rcx + 0xc]",
+        "4c16087d mov word ptr [rdx], ax",
+        "4c160880 mov eax, 1",
+        "4c160885 ret "
+      ],
+      "hits": []
+    },
+    {
+      "export": "?getTempColor@moEntVisProp_c@@QEAAHAEAK@Z",
+      "entry": "0x4c160890",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4c160890",
+          "end": "0x4c160899",
+          "bytes": "8b412089028b411cc3",
+          "sha256": "18c6087b6c9ae0c2ed668a80fde5c5d7bc03aa968c0784b22c211fd44c0efd02",
+          "entry_bound": "0x4c1608a0"
+        }
+      ],
+      "instructions": [
+        "4c160890 mov eax, dword ptr [rcx + 0x20]",
+        "4c160893 mov dword ptr [rdx], eax",
+        "4c160895 mov eax, dword ptr [rcx + 0x1c]",
+        "4c160898 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4c160893",
+          "instruction": "mov dword ptr [rdx], eax",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rdx",
+              "displacement": 0,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?getWidth@moEntVisProp_c@@QEAAHAEAVutLineWidth_c@@@Z",
+      "entry": "0x4c1608a0",
+      "complete_extent": true,
+      "unwind_group": true,
+      "fragments": [
+        {
+          "start": "0x4c1608a0",
+          "end": "0x4c160906",
+          "bytes": "40534883ec30488bdac744242000000000668339ff750833c04883c4305bc3488d5110488d4c2440ff15b243bd00c744242001000000488d542440488bcbff158c43bd00b90100000083e1fe894c2420488d4c2440ff157d43bd00b8010000004883c4305bc3",
+          "sha256": "8ff988e312879794e1c88e97800afc9cd994bc875c87900a1089fcaf3e8ddd2d"
+        }
+      ],
+      "instructions": [
+        "4c1608a0 push rbx",
+        "4c1608a2 sub rsp, 0x30",
+        "4c1608a6 mov rbx, rdx",
+        "4c1608a9 mov dword ptr [rsp + 0x20], 0",
+        "4c1608b1 cmp word ptr [rcx], -1",
+        "4c1608b5 jne 0x4c1608bf",
+        "4c1608b7 xor eax, eax",
+        "4c1608b9 add rsp, 0x30",
+        "4c1608bd pop rbx",
+        "4c1608be ret ",
+        "4c1608bf lea rdx, [rcx + 0x10]",
+        "4c1608c3 lea rcx, [rsp + 0x40]",
+        "4c1608c8 call qword ptr [rip + 0xbd43b2]",
+        "4c1608ce mov dword ptr [rsp + 0x20], 1",
+        "4c1608d6 lea rdx, [rsp + 0x40]",
+        "4c1608db mov rcx, rbx",
+        "4c1608de call qword ptr [rip + 0xbd438c]",
+        "4c1608e4 mov ecx, 1",
+        "4c1608e9 and ecx, 0xfffffffe",
+        "4c1608ec mov dword ptr [rsp + 0x20], ecx",
+        "4c1608f0 lea rcx, [rsp + 0x40]",
+        "4c1608f5 call qword ptr [rip + 0xbd437d]",
+        "4c1608fb mov eax, 1",
+        "4c160900 add rsp, 0x30",
+        "4c160904 pop rbx",
+        "4c160905 ret "
+      ],
+      "hits": []
+    },
+    {
+      "export": "?isIgnoringVisibility@moEntVisProp_c@@QEBAHXZ",
+      "entry": "0x4b2a4d90",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4b2a4d90",
+          "end": "0x4b2a4d94",
+          "bytes": "8b4118c3",
+          "sha256": "38058506e8e859d5be73a33baa621352c08ea01f2224ee170173253757193941",
+          "entry_bound": "0x4b2a4da0"
+        }
+      ],
+      "instructions": [
+        "4b2a4d90 mov eax, dword ptr [rcx + 0x18]",
+        "4b2a4d93 ret "
+      ],
+      "hits": []
+    },
+    {
+      "export": "?isPrintable@moEntVisProp_c@@QEAAHXZ",
+      "entry": "0x4c160910",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4c160910",
+          "end": "0x4c160917",
+          "bytes": "8b410483e002c3",
+          "sha256": "72126d88173bf147930a3c4986d1e74c0899e45a0e9d1f0a450c4ef2725948ec",
+          "entry_bound": "0x4c160920"
+        }
+      ],
+      "instructions": [
+        "4c160910 mov eax, dword ptr [rcx + 4]",
+        "4c160913 and eax, 2",
+        "4c160916 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4c160910",
+          "instruction": "mov eax, dword ptr [rcx + 4]",
+          "fields": [
+            "stored_cache_byte"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 4,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?isVisible@moEntVisProp_c@@QEAAHXZ",
+      "entry": "0x4c160920",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4c160920",
+          "end": "0x4c160933",
+          "bytes": "837918007406b801000000c38b410483e001c3",
+          "sha256": "f061d5fa0542f3e97463e066a9c3d1c8ab95c2201d4dde01de334e00fb73437c",
+          "entry_bound": "0x4c160940"
+        }
+      ],
+      "instructions": [
+        "4c160920 cmp dword ptr [rcx + 0x18], 0",
+        "4c160924 je 0x4c16092c",
+        "4c160926 mov eax, 1",
+        "4c16092b ret ",
+        "4c16092c mov eax, dword ptr [rcx + 4]",
+        "4c16092f and eax, 1",
+        "4c160932 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4c16092c",
+          "instruction": "mov eax, dword ptr [rcx + 4]",
+          "fields": [
+            "stored_cache_byte"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 4,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": true
+        }
+      ]
+    },
+    {
+      "export": "?matchLayerByName@moEntVisProp_c@@QEAAXPEAVmoLayerMgr_c@@0@Z",
+      "entry": "0x4c160940",
+      "complete_extent": true,
+      "unwind_group": true,
+      "fragments": [
+        {
+          "start": "0x4c160940",
+          "end": "0x4c160a9a",
+          "bytes": "48895c2418555657415641574883ec30498bf0488bc2488bf933db895c242041bfffffffff4885d274754d85c074790fb71166443bfa746c488bc8e8b0c0a9ff4885c07463488b5010488d4c2460ff15cc54bd00bd01000000896c2420488d542460488bcee8c6c3a9ff448bf00fb7d0488bcee838bda9ff85c0740f410fb7d6488bcee868c0a9ff488bd883e5fe896c2420488d4c2460ff157354bd00eb094885f67404498b58088b4f044885db75656644893f0fb74702a8017507c74708ffffffffa80275056644897f0ca804752d418bd7488d4c2460ff15ca35bd00488bd84889442468488d4f10488bd0ff153d42bd0090488bcbff153b42bd00c7470403000000488b5c24704883c430415f415e5f5e5dc30fb74330668907894f04488d4424684889442478488d542468488bcbe82ac2a9ff90448b43248b53204c8bc8488bcfe877010000488b5c24704883c430415f415e5f5e5dc3",
+          "sha256": "560dc0875b2052ef48ba9bcce757300cc0d9d476cfa45475585458ce4db988cc"
+        }
+      ],
+      "instructions": [
+        "4c160940 mov qword ptr [rsp + 0x18], rbx",
+        "4c160945 push rbp",
+        "4c160946 push rsi",
+        "4c160947 push rdi",
+        "4c160948 push r14",
+        "4c16094a push r15",
+        "4c16094c sub rsp, 0x30",
+        "4c160950 mov rsi, r8",
+        "4c160953 mov rax, rdx",
+        "4c160956 mov rdi, rcx",
+        "4c160959 xor ebx, ebx",
+        "4c16095b mov dword ptr [rsp + 0x20], ebx",
+        "4c16095f mov r15d, 0xffffffff",
+        "4c160965 test rdx, rdx",
+        "4c160968 je 0x4c1609df",
+        "4c16096a test r8, r8",
+        "4c16096d je 0x4c1609e8",
+        "4c16096f movzx edx, word ptr [rcx]",
+        "4c160972 cmp r15w, dx",
+        "4c160976 je 0x4c1609e4",
+        "4c160978 mov rcx, rax",
+        "4c16097b call 0x4bbfca30",
+        "4c160980 test rax, rax",
+        "4c160983 je 0x4c1609e8",
+        "4c160985 mov rdx, qword ptr [rax + 0x10]",
+        "4c160989 lea rcx, [rsp + 0x60]",
+        "4c16098e call qword ptr [rip + 0xbd54cc]",
+        "4c160994 mov ebp, 1",
+        "4c160999 mov dword ptr [rsp + 0x20], ebp",
+        "4c16099d lea rdx, [rsp + 0x60]",
+        "4c1609a2 mov rcx, rsi",
+        "4c1609a5 call 0x4bbfcd70",
+        "4c1609aa mov r14d, eax",
+        "4c1609ad movzx edx, ax",
+        "4c1609b0 mov rcx, rsi",
+        "4c1609b3 call 0x4bbfc6f0",
+        "4c1609b8 test eax, eax",
+        "4c1609ba je 0x4c1609cb",
+        "4c1609bc movzx edx, r14w",
+        "4c1609c0 mov rcx, rsi",
+        "4c1609c3 call 0x4bbfca30",
+        "4c1609c8 mov rbx, rax",
+        "4c1609cb and ebp, 0xfffffffe",
+        "4c1609ce mov dword ptr [rsp + 0x20], ebp",
+        "4c1609d2 lea rcx, [rsp + 0x60]",
+        "4c1609d7 call qword ptr [rip + 0xbd5473]",
+        "4c1609dd jmp 0x4c1609e8",
+        "4c1609df test rsi, rsi",
+        "4c1609e2 je 0x4c1609e8",
+        "4c1609e4 mov rbx, qword ptr [r8 + 8]",
+        "4c1609e8 mov ecx, dword ptr [rdi + 4]",
+        "4c1609eb test rbx, rbx",
+        "4c1609ee jne 0x4c160a55",
+        "4c1609f0 mov word ptr [rdi], r15w",
+        "4c1609f4 movzx eax, word ptr [rdi + 2]",
+        "4c1609f8 test al, 1",
+        "4c1609fa jne 0x4c160a03",
+        "4c1609fc mov dword ptr [rdi + 8], 0xffffffff",
+        "4c160a03 test al, 2",
+        "4c160a05 jne 0x4c160a0c",
+        "4c160a07 mov word ptr [rdi + 0xc], r15w",
+        "4c160a0c test al, 4",
+        "4c160a0e jne 0x4c160a3d",
+        "4c160a10 mov edx, r15d",
+        "4c160a13 lea rcx, [rsp + 0x60]",
+        "4c160a18 call qword ptr [rip + 0xbd35ca]",
+        "4c160a1e mov rbx, rax",
+        "4c160a21 mov qword ptr [rsp + 0x68], rax",
+        "4c160a26 lea rcx, [rdi + 0x10]",
+        "4c160a2a mov rdx, rax",
+        "4c160a2d call qword ptr [rip + 0xbd423d]",
+        "4c160a33 nop ",
+        "4c160a34 mov rcx, rbx",
+        "4c160a37 call qword ptr [rip + 0xbd423b]",
+        "4c160a3d mov dword ptr [rdi + 4], 3",
+        "4c160a44 mov rbx, qword ptr [rsp + 0x70]",
+        "4c160a49 add rsp, 0x30",
+        "4c160a4d pop r15",
+        "4c160a4f pop r14",
+        "4c160a51 pop rdi",
+        "4c160a52 pop rsi",
+        "4c160a53 pop rbp",
+        "4c160a54 ret ",
+        "4c160a55 movzx eax, word ptr [rbx + 0x30]",
+        "4c160a59 mov word ptr [rdi], ax",
+        "4c160a5c mov dword ptr [rdi + 4], ecx",
+        "4c160a5f lea rax, [rsp + 0x68]",
+        "4c160a64 mov qword ptr [rsp + 0x78], rax",
+        "4c160a69 lea rdx, [rsp + 0x68]",
+        "4c160a6e mov rcx, rbx",
+        "4c160a71 call 0x4bbfcca0",
+        "4c160a76 nop ",
+        "4c160a77 mov r8d, dword ptr [rbx + 0x24]",
+        "4c160a7b mov edx, dword ptr [rbx + 0x20]",
+        "4c160a7e mov r9, rax",
+        "4c160a81 mov rcx, rdi",
+        "4c160a84 call 0x4c160c00",
+        "4c160a89 mov rbx, qword ptr [rsp + 0x70]",
+        "4c160a8e add rsp, 0x30",
+        "4c160a92 pop r15",
+        "4c160a94 pop r14",
+        "4c160a96 pop rdi",
+        "4c160a97 pop rsi",
+        "4c160a98 pop rbp",
+        "4c160a99 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4c1609e4",
+          "instruction": "mov rbx, qword ptr [r8 + 8]",
+          "fields": [
+            "color_word"
+          ],
+          "memory": [
+            {
+              "base": "r8",
+              "displacement": 8,
+              "size": 8
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4c1609e8",
+          "instruction": "mov ecx, dword ptr [rdi + 4]",
+          "fields": [
+            "stored_cache_byte"
+          ],
+          "memory": [
+            {
+              "base": "rdi",
+              "displacement": 4,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4c1609f4",
+          "instruction": "movzx eax, word ptr [rdi + 2]",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rdi",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4c1609fc",
+          "instruction": "mov dword ptr [rdi + 8], 0xffffffff",
+          "fields": [
+            "color_word"
+          ],
+          "memory": [
+            {
+              "base": "rdi",
+              "displacement": 8,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4c160a3d",
+          "instruction": "mov dword ptr [rdi + 4], 3",
+          "fields": [
+            "stored_cache_byte"
+          ],
+          "memory": [
+            {
+              "base": "rdi",
+              "displacement": 4,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4c160a5c",
+          "instruction": "mov dword ptr [rdi + 4], ecx",
+          "fields": [
+            "stored_cache_byte"
+          ],
+          "memory": [
+            {
+              "base": "rdi",
+              "displacement": 4,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?setFlagAllByLayer@moEntVisProp_c@@QEAAXXZ",
+      "entry": "0x4b2b19d0",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4b2b19d0",
+          "end": "0x4b2b19d7",
+          "bytes": "66c741021f00c3",
+          "sha256": "545be6ff948f4bae0b59a8035fe961d40638304f6e2c4e2baee993f059ab7dba",
+          "entry_bound": "0x4b2b19e0"
+        }
+      ],
+      "instructions": [
+        "4b2b19d0 mov word ptr [rcx + 2], 0x1f",
+        "4b2b19d6 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4b2b19d0",
+          "instruction": "mov word ptr [rcx + 2], 0x1f",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?setFlagColorByLayer@moEntVisProp_c@@QEAAXXZ",
+      "entry": "0x4b2b19f0",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4b2b19f0",
+          "end": "0x4b2b19f6",
+          "bytes": "6683490201c3",
+          "sha256": "b9ddb7269d14109ecfc2d8ae3c81d88f8e001eb0b454162cb2b8186c7c9388d8",
+          "entry_bound": "0x4b2b1a00"
+        }
+      ],
+      "instructions": [
+        "4b2b19f0 or word ptr [rcx + 2], 1",
+        "4b2b19f5 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4b2b19f0",
+          "instruction": "or word ptr [rcx + 2], 1",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?setFlagFontByLayer@moEntVisProp_c@@QEAAXXZ",
+      "entry": "0x4b2b1a00",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4b2b1a00",
+          "end": "0x4b2b1a06",
+          "bytes": "6683490202c3",
+          "sha256": "b5778a32eecec0493e0f4657e67be7986b14bc74eeb0b8e63a30aae833197508",
+          "entry_bound": "0x4b2b1a10"
+        }
+      ],
+      "instructions": [
+        "4b2b1a00 or word ptr [rcx + 2], 2",
+        "4b2b1a05 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4b2b1a00",
+          "instruction": "or word ptr [rcx + 2], 2",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?setFlagFontByLayerSP@moEntVisProp_c@@QEAAXXZ",
+      "entry": "0x4b2b1a10",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4b2b1a10",
+          "end": "0x4b2b1a16",
+          "bytes": "6683490208c3",
+          "sha256": "854ce969b2365205ef5aa8c084a1fc25caf255267f552d65bd74d83b555ae870",
+          "entry_bound": "0x4b2b1a20"
+        }
+      ],
+      "instructions": [
+        "4b2b1a10 or word ptr [rcx + 2], 8",
+        "4b2b1a15 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4b2b1a10",
+          "instruction": "or word ptr [rcx + 2], 8",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?setFlagWidthByLayer@moEntVisProp_c@@QEAAXXZ",
+      "entry": "0x4b2b1a30",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4b2b1a30",
+          "end": "0x4b2b1a36",
+          "bytes": "6683490204c3",
+          "sha256": "180c608d6d55735e17dc1656cc3d83e5a5a48d89a1f5baa34100da9c81e8177a",
+          "entry_bound": "0x4b2b1a40"
+        }
+      ],
+      "instructions": [
+        "4b2b1a30 or word ptr [rcx + 2], 4",
+        "4b2b1a35 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4b2b1a30",
+          "instruction": "or word ptr [rcx + 2], 4",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?setFlagWidthByLayerSP@moEntVisProp_c@@QEAAXXZ",
+      "entry": "0x4b2b1a40",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4b2b1a40",
+          "end": "0x4b2b1a46",
+          "bytes": "6683490210c3",
+          "sha256": "399191c2f4877a78c5aeee29ae16a7363080d20d74bef72327a74b1db04b9d91",
+          "entry_bound": "0x4b2b1a50"
+        }
+      ],
+      "instructions": [
+        "4b2b1a40 or word ptr [rcx + 2], 0x10",
+        "4b2b1a45 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4b2b1a40",
+          "instruction": "or word ptr [rcx + 2], 0x10",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?setIgnoreVisibility@moEntVisProp_c@@QEAAXH@Z",
+      "entry": "0x4b2b1f70",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4b2b1f70",
+          "end": "0x4b2b1f74",
+          "bytes": "895118c3",
+          "sha256": "61c0057b461fa7383c0683f7603ad1454f0c40a6fcdf98cba1a1a51da1d1c61f",
+          "entry_bound": "0x4b2b1f80"
+        }
+      ],
+      "instructions": [
+        "4b2b1f70 mov dword ptr [rcx + 0x18], edx",
+        "4b2b1f73 ret "
+      ],
+      "hits": []
+    },
+    {
+      "export": "?setLayer@moEntVisProp_c@@QEAAXF@Z",
+      "entry": "0x4b2b2630",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4b2b2630",
+          "end": "0x4b2b2634",
+          "bytes": "668911c3",
+          "sha256": "00a0775bd705fcb6c6b79ee3cc42a2214a8511ade06fbe684f961ed8a1630fb7",
+          "entry_bound": "0x4b2b2640"
+        }
+      ],
+      "instructions": [
+        "4b2b2630 mov word ptr [rcx], dx",
+        "4b2b2633 ret "
+      ],
+      "hits": []
+    },
+    {
+      "export": "?setLayer@moEntVisProp_c@@QEAAXFW4swLayerMask_e@@HHVutLineWidth_c@@@Z",
+      "entry": "0x4c160aa0",
+      "complete_extent": true,
+      "unwind_group": true,
+      "fragments": [
+        {
+          "start": "0x4c160aa0",
+          "end": "0x4c160b12",
+          "bytes": "48895c2408564883ec30488bf16683faff7505668911eb4466891144894104448949080fb74424606689410c488b542468488d4c2420ff15a441bd00488bd84889442428488d4e10488bd0ff157f41bd0090488bcbff157d41bd0090488b4c2468488b5c24404883c4305e48ff256641bd00",
+          "sha256": "1a45b59d0f8f196bfbdcc4f0c81fae2e2d87c6412a37a753f248f52dcc400cb9"
+        }
+      ],
+      "instructions": [
+        "4c160aa0 mov qword ptr [rsp + 8], rbx",
+        "4c160aa5 push rsi",
+        "4c160aa6 sub rsp, 0x30",
+        "4c160aaa mov rsi, rcx",
+        "4c160aad cmp dx, -1",
+        "4c160ab1 jne 0x4c160ab8",
+        "4c160ab3 mov word ptr [rcx], dx",
+        "4c160ab6 jmp 0x4c160afc",
+        "4c160ab8 mov word ptr [rcx], dx",
+        "4c160abb mov dword ptr [rcx + 4], r8d",
+        "4c160abf mov dword ptr [rcx + 8], r9d",
+        "4c160ac3 movzx eax, word ptr [rsp + 0x60]",
+        "4c160ac8 mov word ptr [rcx + 0xc], ax",
+        "4c160acc mov rdx, qword ptr [rsp + 0x68]",
+        "4c160ad1 lea rcx, [rsp + 0x20]",
+        "4c160ad6 call qword ptr [rip + 0xbd41a4]",
+        "4c160adc mov rbx, rax",
+        "4c160adf mov qword ptr [rsp + 0x28], rax",
+        "4c160ae4 lea rcx, [rsi + 0x10]",
+        "4c160ae8 mov rdx, rax",
+        "4c160aeb call qword ptr [rip + 0xbd417f]",
+        "4c160af1 nop ",
+        "4c160af2 mov rcx, rbx",
+        "4c160af5 call qword ptr [rip + 0xbd417d]",
+        "4c160afb nop ",
+        "4c160afc mov rcx, qword ptr [rsp + 0x68]",
+        "4c160b01 mov rbx, qword ptr [rsp + 0x40]",
+        "4c160b06 add rsp, 0x30",
+        "4c160b0a pop rsi",
+        "4c160b0b jmp qword ptr [rip + 0xbd4166]"
+      ],
+      "hits": [
+        {
+          "address": "0x4c160abb",
+          "instruction": "mov dword ptr [rcx + 4], r8d",
+          "fields": [
+            "stored_cache_byte"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 4,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4c160abf",
+          "instruction": "mov dword ptr [rcx + 8], r9d",
+          "fields": [
+            "color_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 8,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?setLayer@moEntVisProp_c@@QEAAXPEAVmoLayer_c@@W4swLayerMask_e@@@Z",
+      "entry": "0x4c160b20",
+      "complete_extent": true,
+      "unwind_group": true,
+      "fragments": [
+        {
+          "start": "0x4c160b20",
+          "end": "0x4c160bd4",
+          "bytes": "48895c2408574883ec30488bda488bf94885d2755fbaffffffff6689110fb74102a8017507c74108ffffffffa80275046689510ca804752a488d4c2448ff158534bd00488bd84889442458488d4f10488bd0ff15f840bd0090488bcbff15f640bd00c7470403000000488b5c24404883c4305fc30fb7423066890144894104488d4424484889442458488d542448488bcbe8eac0a9ff90448b43248b53204c8bc8488bcfe837000000488b5c24404883c4305fc3",
+          "sha256": "13425bf6d85d524b60458d293c3864b70500454fe838a8a6c67670626659af0e"
+        }
+      ],
+      "instructions": [
+        "4c160b20 mov qword ptr [rsp + 8], rbx",
+        "4c160b25 push rdi",
+        "4c160b26 sub rsp, 0x30",
+        "4c160b2a mov rbx, rdx",
+        "4c160b2d mov rdi, rcx",
+        "4c160b30 test rdx, rdx",
+        "4c160b33 jne 0x4c160b94",
+        "4c160b35 mov edx, 0xffffffff",
+        "4c160b3a mov word ptr [rcx], dx",
+        "4c160b3d movzx eax, word ptr [rcx + 2]",
+        "4c160b41 test al, 1",
+        "4c160b43 jne 0x4c160b4c",
+        "4c160b45 mov dword ptr [rcx + 8], 0xffffffff",
+        "4c160b4c test al, 2",
+        "4c160b4e jne 0x4c160b54",
+        "4c160b50 mov word ptr [rcx + 0xc], dx",
+        "4c160b54 test al, 4",
+        "4c160b56 jne 0x4c160b82",
+        "4c160b58 lea rcx, [rsp + 0x48]",
+        "4c160b5d call qword ptr [rip + 0xbd3485]",
+        "4c160b63 mov rbx, rax",
+        "4c160b66 mov qword ptr [rsp + 0x58], rax",
+        "4c160b6b lea rcx, [rdi + 0x10]",
+        "4c160b6f mov rdx, rax",
+        "4c160b72 call qword ptr [rip + 0xbd40f8]",
+        "4c160b78 nop ",
+        "4c160b79 mov rcx, rbx",
+        "4c160b7c call qword ptr [rip + 0xbd40f6]",
+        "4c160b82 mov dword ptr [rdi + 4], 3",
+        "4c160b89 mov rbx, qword ptr [rsp + 0x40]",
+        "4c160b8e add rsp, 0x30",
+        "4c160b92 pop rdi",
+        "4c160b93 ret ",
+        "4c160b94 movzx eax, word ptr [rdx + 0x30]",
+        "4c160b98 mov word ptr [rcx], ax",
+        "4c160b9b mov dword ptr [rcx + 4], r8d",
+        "4c160b9f lea rax, [rsp + 0x48]",
+        "4c160ba4 mov qword ptr [rsp + 0x58], rax",
+        "4c160ba9 lea rdx, [rsp + 0x48]",
+        "4c160bae mov rcx, rbx",
+        "4c160bb1 call 0x4bbfcca0",
+        "4c160bb6 nop ",
+        "4c160bb7 mov r8d, dword ptr [rbx + 0x24]",
+        "4c160bbb mov edx, dword ptr [rbx + 0x20]",
+        "4c160bbe mov r9, rax",
+        "4c160bc1 mov rcx, rdi",
+        "4c160bc4 call 0x4c160c00",
+        "4c160bc9 mov rbx, qword ptr [rsp + 0x40]",
+        "4c160bce add rsp, 0x30",
+        "4c160bd2 pop rdi",
+        "4c160bd3 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4c160b3d",
+          "instruction": "movzx eax, word ptr [rcx + 2]",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4c160b45",
+          "instruction": "mov dword ptr [rcx + 8], 0xffffffff",
+          "fields": [
+            "color_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 8,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4c160b82",
+          "instruction": "mov dword ptr [rdi + 4], 3",
+          "fields": [
+            "stored_cache_byte"
+          ],
+          "memory": [
+            {
+              "base": "rdi",
+              "displacement": 4,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4c160b9b",
+          "instruction": "mov dword ptr [rcx + 4], r8d",
+          "fields": [
+            "stored_cache_byte"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 4,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?setLayerAttributeCache@moEntVisProp_c@@QEAAXW4swLayerMask_e@@@Z",
+      "entry": "0x4b2b1830",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4b2b1830",
+          "end": "0x4b2b1834",
+          "bytes": "895104c3",
+          "sha256": "1a3286d87ae82d32a4ad7e6bbc47daea8c7d13a4e52e43d6eeb43bf18d756f6f",
+          "entry_bound": "0x4b2b1840"
+        }
+      ],
+      "instructions": [
+        "4b2b1830 mov dword ptr [rcx + 4], edx",
+        "4b2b1833 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4b2b1830",
+          "instruction": "mov dword ptr [rcx + 4], edx",
+          "fields": [
+            "stored_cache_byte"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 4,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?setTempColor@moEntVisProp_c@@QEAAXK@Z",
+      "entry": "0x4c160be0",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4c160be0",
+          "end": "0x4c160beb",
+          "bytes": "895120c7411c01000000c3",
+          "sha256": "da82fa321229c8e6123ce5dc2cfd24821b88ed5f2b1f0a947f479520537b7e24",
+          "entry_bound": "0x4c160bf0"
+        }
+      ],
+      "instructions": [
+        "4c160be0 mov dword ptr [rcx + 0x20], edx",
+        "4c160be3 mov dword ptr [rcx + 0x1c], 1",
+        "4c160bea ret "
+      ],
+      "hits": []
+    },
+    {
+      "export": "?unsetFlagAllByLayer@moEntVisProp_c@@QEAAXXZ",
+      "entry": "0x4b2b42c0",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4b2b42c0",
+          "end": "0x4b2b42c7",
+          "bytes": "33c066894102c3",
+          "sha256": "2857aae2f20a5ae905350a5b6d93c2328569a0f9133fc9e0961fd13612d8b9ee",
+          "entry_bound": "0x4b2b42d0"
+        }
+      ],
+      "instructions": [
+        "4b2b42c0 xor eax, eax",
+        "4b2b42c2 mov word ptr [rcx + 2], ax",
+        "4b2b42c6 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4b2b42c2",
+          "instruction": "mov word ptr [rcx + 2], ax",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?unsetFlagColorByLayer@moEntVisProp_c@@QEAAXXZ",
+      "entry": "0x4b2b42d0",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4b2b42d0",
+          "end": "0x4b2b42d6",
+          "bytes": "66836102fec3",
+          "sha256": "987fb669088b8c32101b31f0ebda0df14be98d6f62460d9c0d7686c9ac455d8e",
+          "entry_bound": "0x4b2b42e0"
+        }
+      ],
+      "instructions": [
+        "4b2b42d0 and word ptr [rcx + 2], 0xfffe",
+        "4b2b42d5 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4b2b42d0",
+          "instruction": "and word ptr [rcx + 2], 0xfffe",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?unsetFlagFontByLayer@moEntVisProp_c@@QEAAXXZ",
+      "entry": "0x4b2b42e0",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4b2b42e0",
+          "end": "0x4b2b42e6",
+          "bytes": "66836102fdc3",
+          "sha256": "9ddb8ba3525d8d7a1b43bcfdd0bc54ba27baf7c58572994d5c1b926babddf5ac",
+          "entry_bound": "0x4b2b42f0"
+        }
+      ],
+      "instructions": [
+        "4b2b42e0 and word ptr [rcx + 2], 0xfffd",
+        "4b2b42e5 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4b2b42e0",
+          "instruction": "and word ptr [rcx + 2], 0xfffd",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?unsetFlagFontByLayerSP@moEntVisProp_c@@QEAAXXZ",
+      "entry": "0x4b2b42f0",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4b2b42f0",
+          "end": "0x4b2b42f6",
+          "bytes": "66836102f7c3",
+          "sha256": "5d78c6b0ccabf6bf7149cd05f8ab7e56ef5e38d22af034e046605080f94e76ad",
+          "entry_bound": "0x4b2b4300"
+        }
+      ],
+      "instructions": [
+        "4b2b42f0 and word ptr [rcx + 2], 0xfff7",
+        "4b2b42f5 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4b2b42f0",
+          "instruction": "and word ptr [rcx + 2], 0xfff7",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?unsetFlagWidthByLayer@moEntVisProp_c@@QEAAXXZ",
+      "entry": "0x4b2b4300",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4b2b4300",
+          "end": "0x4b2b4306",
+          "bytes": "66836102fbc3",
+          "sha256": "8078f9d091a12bc6abec5bd2e1c5d8b4e078e94e1b7764f710bbd359fca12a0f",
+          "entry_bound": "0x4b2b4310"
+        }
+      ],
+      "instructions": [
+        "4b2b4300 and word ptr [rcx + 2], 0xfffb",
+        "4b2b4305 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4b2b4300",
+          "instruction": "and word ptr [rcx + 2], 0xfffb",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?unsetFlagWidthByLayerSP@moEntVisProp_c@@QEAAXXZ",
+      "entry": "0x4b2b4310",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4b2b4310",
+          "end": "0x4b2b4316",
+          "bytes": "66836102efc3",
+          "sha256": "108b56562c5abffc2b6aa6f938486a8da27814a4b73b7de187d477108d5799c1",
+          "entry_bound": "0x4b2b4320"
+        }
+      ],
+      "instructions": [
+        "4b2b4310 and word ptr [rcx + 2], 0xffef",
+        "4b2b4315 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4b2b4310",
+          "instruction": "and word ptr [rcx + 2], 0xffef",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?unsetTempColor@moEntVisProp_c@@QEAAXXZ",
+      "entry": "0x4c160bf0",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4c160bf0",
+          "end": "0x4c160bf8",
+          "bytes": "c7411c00000000c3",
+          "sha256": "176d82a9dbf79b132c959754d1610fd8609a8566e33bb7273f7003fdfbcc8e87",
+          "entry_bound": "0x4c160c00"
+        }
+      ],
+      "instructions": [
+        "4c160bf0 mov dword ptr [rcx + 0x1c], 0",
+        "4c160bf7 ret "
+      ],
+      "hits": []
+    },
+    {
+      "export": "?updateVisProps@moEntVisProp_c@@QEAAXHHVutLineWidth_c@@@Z",
+      "entry": "0x4c160c00",
+      "complete_extent": true,
+      "unwind_group": true,
+      "fragments": [
+        {
+          "start": "0x4c160c00",
+          "end": "0x4c160d18",
+          "bytes": "48895c241048896c24184c894c2420565741564883ec30498be9458bf08bfa488bf1c7442420000000000fb74102a8017503895108a8027505664489710ca804752d488bd5488d4c2450ff153040bd00488bd84889442428488d4e10488bd0ff150b40bd0090488bcbff150940bd00837e08ff7508897e0866836602fe66837e0c007d0a664489760c66836602fd488d5610488d4c2450ff15e33fbd00bf01000000897c2420488d4c2450ff152f33bd000fb6d883e7fe897c2420488d4c2450ff15b23fbd0084db7532488bd5488d4c2450ff15a83fbd00488bd84889442428488bd0488d4e10ff15833fbd0090488bcbff15813fbd0066836602fb488bcd488b5c2458488b6c24604883c430415e5f5e48ff25603fbd00",
+          "sha256": "e3ed4286d76e70478c57bf2a806c4a446d6d23c90fa33f0857da0dc2a12ebcae"
+        }
+      ],
+      "instructions": [
+        "4c160c00 mov qword ptr [rsp + 0x10], rbx",
+        "4c160c05 mov qword ptr [rsp + 0x18], rbp",
+        "4c160c0a mov qword ptr [rsp + 0x20], r9",
+        "4c160c0f push rsi",
+        "4c160c10 push rdi",
+        "4c160c11 push r14",
+        "4c160c13 sub rsp, 0x30",
+        "4c160c17 mov rbp, r9",
+        "4c160c1a mov r14d, r8d",
+        "4c160c1d mov edi, edx",
+        "4c160c1f mov rsi, rcx",
+        "4c160c22 mov dword ptr [rsp + 0x20], 0",
+        "4c160c2a movzx eax, word ptr [rcx + 2]",
+        "4c160c2e test al, 1",
+        "4c160c30 jne 0x4c160c35",
+        "4c160c32 mov dword ptr [rcx + 8], edx",
+        "4c160c35 test al, 2",
+        "4c160c37 jne 0x4c160c3e",
+        "4c160c39 mov word ptr [rcx + 0xc], r14w",
+        "4c160c3e test al, 4",
+        "4c160c40 jne 0x4c160c6f",
+        "4c160c42 mov rdx, rbp",
+        "4c160c45 lea rcx, [rsp + 0x50]",
+        "4c160c4a call qword ptr [rip + 0xbd4030]",
+        "4c160c50 mov rbx, rax",
+        "4c160c53 mov qword ptr [rsp + 0x28], rax",
+        "4c160c58 lea rcx, [rsi + 0x10]",
+        "4c160c5c mov rdx, rax",
+        "4c160c5f call qword ptr [rip + 0xbd400b]",
+        "4c160c65 nop ",
+        "4c160c66 mov rcx, rbx",
+        "4c160c69 call qword ptr [rip + 0xbd4009]",
+        "4c160c6f cmp dword ptr [rsi + 8], -1",
+        "4c160c73 jne 0x4c160c7d",
+        "4c160c75 mov dword ptr [rsi + 8], edi",
+        "4c160c78 and word ptr [rsi + 2], 0xfffe",
+        "4c160c7d cmp word ptr [rsi + 0xc], 0",
+        "4c160c82 jge 0x4c160c8e",
+        "4c160c84 mov word ptr [rsi + 0xc], r14w",
+        "4c160c89 and word ptr [rsi + 2], 0xfffd",
+        "4c160c8e lea rdx, [rsi + 0x10]",
+        "4c160c92 lea rcx, [rsp + 0x50]",
+        "4c160c97 call qword ptr [rip + 0xbd3fe3]",
+        "4c160c9d mov edi, 1",
+        "4c160ca2 mov dword ptr [rsp + 0x20], edi",
+        "4c160ca6 lea rcx, [rsp + 0x50]",
+        "4c160cab call qword ptr [rip + 0xbd332f]",
+        "4c160cb1 movzx ebx, al",
+        "4c160cb4 and edi, 0xfffffffe",
+        "4c160cb7 mov dword ptr [rsp + 0x20], edi",
+        "4c160cbb lea rcx, [rsp + 0x50]",
+        "4c160cc0 call qword ptr [rip + 0xbd3fb2]",
+        "4c160cc6 test bl, bl",
+        "4c160cc8 jne 0x4c160cfc",
+        "4c160cca mov rdx, rbp",
+        "4c160ccd lea rcx, [rsp + 0x50]",
+        "4c160cd2 call qword ptr [rip + 0xbd3fa8]",
+        "4c160cd8 mov rbx, rax",
+        "4c160cdb mov qword ptr [rsp + 0x28], rax",
+        "4c160ce0 mov rdx, rax",
+        "4c160ce3 lea rcx, [rsi + 0x10]",
+        "4c160ce7 call qword ptr [rip + 0xbd3f83]",
+        "4c160ced nop ",
+        "4c160cee mov rcx, rbx",
+        "4c160cf1 call qword ptr [rip + 0xbd3f81]",
+        "4c160cf7 and word ptr [rsi + 2], 0xfffb",
+        "4c160cfc mov rcx, rbp",
+        "4c160cff mov rbx, qword ptr [rsp + 0x58]",
+        "4c160d04 mov rbp, qword ptr [rsp + 0x60]",
+        "4c160d09 add rsp, 0x30",
+        "4c160d0d pop r14",
+        "4c160d0f pop rdi",
+        "4c160d10 pop rsi",
+        "4c160d11 jmp qword ptr [rip + 0xbd3f60]"
+      ],
+      "hits": [
+        {
+          "address": "0x4c160c2a",
+          "instruction": "movzx eax, word ptr [rcx + 2]",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4c160c32",
+          "instruction": "mov dword ptr [rcx + 8], edx",
+          "fields": [
+            "color_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 8,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4c160c6f",
+          "instruction": "cmp dword ptr [rsi + 8], -1",
+          "fields": [
+            "color_word"
+          ],
+          "memory": [
+            {
+              "base": "rsi",
+              "displacement": 8,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4c160c75",
+          "instruction": "mov dword ptr [rsi + 8], edi",
+          "fields": [
+            "color_word"
+          ],
+          "memory": [
+            {
+              "base": "rsi",
+              "displacement": 8,
+              "size": 4
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4c160c78",
+          "instruction": "and word ptr [rsi + 2], 0xfffe",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rsi",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4c160c89",
+          "instruction": "and word ptr [rsi + 2], 0xfffd",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rsi",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        },
+        {
+          "address": "0x4c160cf7",
+          "instruction": "and word ptr [rsi + 2], 0xfffb",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rsi",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?useAny@moEntVisProp_c@@QEAAHXZ",
+      "entry": "0x4b2b4c50",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4b2b4c50",
+          "end": "0x4b2b4c5a",
+          "bytes": "33c0663941020f95c0c3",
+          "sha256": "3808d2bdbf91312ea0810d36136a984bbf2b31f82f8d58e045caa87227cc2711",
+          "entry_bound": "0x4b2b4c60"
+        }
+      ],
+      "instructions": [
+        "4b2b4c50 xor eax, eax",
+        "4b2b4c52 cmp word ptr [rcx + 2], ax",
+        "4b2b4c56 setne al",
+        "4b2b4c59 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4b2b4c52",
+          "instruction": "cmp word ptr [rcx + 2], ax",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?useColor@moEntVisProp_c@@QEAAHXZ",
+      "entry": "0x4b2b4c60",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4b2b4c60",
+          "end": "0x4b2b4c68",
+          "bytes": "0fbf410283e001c3",
+          "sha256": "73090152e20217c02735983759137d79647661bb62c12612ec47449fbb24377a",
+          "entry_bound": "0x4b2b4c70"
+        }
+      ],
+      "instructions": [
+        "4b2b4c60 movsx eax, word ptr [rcx + 2]",
+        "4b2b4c64 and eax, 1",
+        "4b2b4c67 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4b2b4c60",
+          "instruction": "movsx eax, word ptr [rcx + 2]",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?useFont@moEntVisProp_c@@QEAAHXZ",
+      "entry": "0x4b2b4c70",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4b2b4c70",
+          "end": "0x4b2b4c78",
+          "bytes": "0fbf410283e002c3",
+          "sha256": "8cb824a1e4994a45c7feb3ae06ac76313b63bd7cfd3f4ee803c7a45f31e24863",
+          "entry_bound": "0x4b2b4c80"
+        }
+      ],
+      "instructions": [
+        "4b2b4c70 movsx eax, word ptr [rcx + 2]",
+        "4b2b4c74 and eax, 2",
+        "4b2b4c77 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4b2b4c70",
+          "instruction": "movsx eax, word ptr [rcx + 2]",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?useFontSP@moEntVisProp_c@@QEAAHXZ",
+      "entry": "0x4b2b4c80",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4b2b4c80",
+          "end": "0x4b2b4c88",
+          "bytes": "0fbf410283e008c3",
+          "sha256": "e42aff17b7c6b5ea86a14a90908cb4fd94b326cee3170e023c5fc28afed6c5a9",
+          "entry_bound": "0x4b2b4c90"
+        }
+      ],
+      "instructions": [
+        "4b2b4c80 movsx eax, word ptr [rcx + 2]",
+        "4b2b4c84 and eax, 8",
+        "4b2b4c87 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4b2b4c80",
+          "instruction": "movsx eax, word ptr [rcx + 2]",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?useWidth@moEntVisProp_c@@QEAAHXZ",
+      "entry": "0x4b2b4cc0",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4b2b4cc0",
+          "end": "0x4b2b4cc8",
+          "bytes": "0fbf410283e004c3",
+          "sha256": "ea7974a113d381859e90fc9ba48c1f8f25198c676b45923336382877955e9c17",
+          "entry_bound": "0x4b2b4cd0"
+        }
+      ],
+      "instructions": [
+        "4b2b4cc0 movsx eax, word ptr [rcx + 2]",
+        "4b2b4cc4 and eax, 4",
+        "4b2b4cc7 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4b2b4cc0",
+          "instruction": "movsx eax, word ptr [rcx + 2]",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    },
+    {
+      "export": "?useWidthSP@moEntVisProp_c@@QEAAHXZ",
+      "entry": "0x4b2b4cd0",
+      "complete_extent": true,
+      "unwind_group": false,
+      "fragments": [
+        {
+          "start": "0x4b2b4cd0",
+          "end": "0x4b2b4cd8",
+          "bytes": "0fbf410283e010c3",
+          "sha256": "4860ac367d5ec87b47c198312936f157b5d2a7b914990fc549b5f463bc97e1c4",
+          "entry_bound": "0x4b2b4ce0"
+        }
+      ],
+      "instructions": [
+        "4b2b4cd0 movsx eax, word ptr [rcx + 2]",
+        "4b2b4cd4 and eax, 0x10",
+        "4b2b4cd7 ret "
+      ],
+      "hits": [
+        {
+          "address": "0x4b2b4cd0",
+          "instruction": "movsx eax, word ptr [rcx + 2]",
+          "fields": [
+            "by_layer_word"
+          ],
+          "memory": [
+            {
+              "base": "rcx",
+              "displacement": 2,
+              "size": 2
+            }
+          ],
+          "new_vs_prior_probe": false
+        }
+      ]
+    }
+  ],
+  "new_access_sites": [
+    {
+      "address": "0x4c160586",
+      "instruction": "movzx eax, word ptr [rdx + 2]",
+      "fields": [
+        "by_layer_word"
+      ],
+      "memory": [
+        {
+          "base": "rdx",
+          "displacement": 2,
+          "size": 2
+        }
+      ],
+      "new_vs_prior_probe": true
+    },
+    {
+      "address": "0x4c16058a",
+      "instruction": "mov word ptr [rcx + 2], ax",
+      "fields": [
+        "by_layer_word"
+      ],
+      "memory": [
+        {
+          "base": "rcx",
+          "displacement": 2,
+          "size": 2
+        }
+      ],
+      "new_vs_prior_probe": true
+    },
+    {
+      "address": "0x4c16058e",
+      "instruction": "mov eax, dword ptr [rdx + 8]",
+      "fields": [
+        "color_word"
+      ],
+      "memory": [
+        {
+          "base": "rdx",
+          "displacement": 8,
+          "size": 4
+        }
+      ],
+      "new_vs_prior_probe": true
+    },
+    {
+      "address": "0x4c160591",
+      "instruction": "mov dword ptr [rcx + 8], eax",
+      "fields": [
+        "color_word"
+      ],
+      "memory": [
+        {
+          "base": "rcx",
+          "displacement": 8,
+          "size": 4
+        }
+      ],
+      "new_vs_prior_probe": true
+    },
+    {
+      "address": "0x4c1605aa",
+      "instruction": "mov eax, dword ptr [rbx + 4]",
+      "fields": [
+        "stored_cache_byte"
+      ],
+      "memory": [
+        {
+          "base": "rbx",
+          "displacement": 4,
+          "size": 4
+        }
+      ],
+      "new_vs_prior_probe": true
+    },
+    {
+      "address": "0x4c1605ad",
+      "instruction": "mov dword ptr [rdi + 4], eax",
+      "fields": [
+        "stored_cache_byte"
+      ],
+      "memory": [
+        {
+          "base": "rdi",
+          "displacement": 4,
+          "size": 4
+        }
+      ],
+      "new_vs_prior_probe": true
+    },
+    {
+      "address": "0x4c1605fc",
+      "instruction": "movzx eax, word ptr [rdx + 2]",
+      "fields": [
+        "by_layer_word"
+      ],
+      "memory": [
+        {
+          "base": "rdx",
+          "displacement": 2,
+          "size": 2
+        }
+      ],
+      "new_vs_prior_probe": true
+    },
+    {
+      "address": "0x4c160600",
+      "instruction": "cmp word ptr [rcx + 2], ax",
+      "fields": [
+        "by_layer_word"
+      ],
+      "memory": [
+        {
+          "base": "rcx",
+          "displacement": 2,
+          "size": 2
+        }
+      ],
+      "new_vs_prior_probe": true
+    },
+    {
+      "address": "0x4c160606",
+      "instruction": "mov eax, dword ptr [rdx + 4]",
+      "fields": [
+        "stored_cache_byte"
+      ],
+      "memory": [
+        {
+          "base": "rdx",
+          "displacement": 4,
+          "size": 4
+        }
+      ],
+      "new_vs_prior_probe": true
+    },
+    {
+      "address": "0x4c160609",
+      "instruction": "cmp dword ptr [rcx + 4], eax",
+      "fields": [
+        "stored_cache_byte"
+      ],
+      "memory": [
+        {
+          "base": "rcx",
+          "displacement": 4,
+          "size": 4
+        }
+      ],
+      "new_vs_prior_probe": true
+    },
+    {
+      "address": "0x4c160859",
+      "instruction": "mov eax, dword ptr [rcx + 8]",
+      "fields": [
+        "color_word"
+      ],
+      "memory": [
+        {
+          "base": "rcx",
+          "displacement": 8,
+          "size": 4
+        }
+      ],
+      "new_vs_prior_probe": true
+    },
+    {
+      "address": "0x4c160861",
+      "instruction": "mov dword ptr [rdx], eax",
+      "fields": [
+        "by_layer_word"
+      ],
+      "memory": [
+        {
+          "base": "rdx",
+          "displacement": 0,
+          "size": 4
+        }
+      ],
+      "new_vs_prior_probe": true
+    },
+    {
+      "address": "0x4c16092c",
+      "instruction": "mov eax, dword ptr [rcx + 4]",
+      "fields": [
+        "stored_cache_byte"
+      ],
+      "memory": [
+        {
+          "base": "rcx",
+          "displacement": 4,
+          "size": 4
+        }
+      ],
+      "new_vs_prior_probe": true
+    }
+  ],
+  "explicit_byte3_sites": [],
+  "findings": [
+    "Corrected half-open ByLayer scan interval is[2,4), covering both stored bytes. The earlier[2,3) window could miss explicit byte+3 accesses.",
+    "Include typed constructors, destructor, assignment and equality operator exports alongside named methods. Wider memory accesses overlapping the complete word are retained.",
+    "Native unwind chains and fragments are retained. Non-unwind candidates are bounded by the next known entry/padding and checked for branch completeness; incomplete candidates remain discovery only.",
+    "Displacements and additional copy/equality accesses alone do not name remaining flag bits. No decoder alias, mask-domain closure or byte credit is assigned."
+  ],
+  "limitations": [
+    "Static discovery only; no CAD execution. Export-scoped scan does not exhaust inlined/direct accesses in other functions or external modules. Folded code and overlapped accesses require receiver/dataflow proof before semantic binding. Existing field charges and part accounting unchanged."
+  ],
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part_visual_full_word_access_audit.py": "8f7ca941cee1bf39ef990fc6641389d66902d230029bad2dcce67a0126548007",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\sldmodu-complete-export-index.json": "fb3efcb81f1c79daf1ad32961f1ec1adb681297c1c2f41177250293ebe836ace",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-mask-interior-byte-probe.json": "d96632e07c914c1d212535986eb0ab0665007b053b4f31006d58540aad8f872c",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part_mask_interior_byte_probe.py": "3e87a8e9e95e5ac11f8214e3ff3089bf848daa1740d0311a42c3bdad731aed78",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\dl_light.py": "4dd594a5a5fbd1fad60b49c0ac1817db469228108e0fdd3786785896850dfad3"
+  }
+}

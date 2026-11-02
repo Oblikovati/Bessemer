@@ -1,0 +1,82 @@
+{
+  "evidence": "C-1912",
+  "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+  "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "target_executed": false,
+  "coverage_credit": 0,
+  "functions": [
+    {
+      "start": "0x4c160b20",
+      "end": "0x4c160bd4",
+      "bytes": "48895c2408574883ec30488bda488bf94885d2755fbaffffffff6689110fb74102a8017507c74108ffffffffa80275046689510ca804752a488d4c2448ff158534bd00488bd84889442458488d4f10488bd0ff15f840bd0090488bcbff15f640bd00c7470403000000488b5c24404883c4305fc30fb7423066890144894104488d4424484889442458488d542448488bcbe8eac0a9ff90448b43248b53204c8bc8488bcfe837000000488b5c24404883c4305fc3",
+      "sha256": "13425bf6d85d524b60458d293c3864b70500454fe838a8a6c67670626659af0e"
+    },
+    {
+      "start": "0x4c160890",
+      "end": "0x4c160899",
+      "bytes": "8b412089028b411cc3",
+      "sha256": "18c6087b6c9ae0c2ed668a80fde5c5d7bc03aa968c0784b22c211fd44c0efd02"
+    },
+    {
+      "start": "0x4c160be0",
+      "end": "0x4c160beb",
+      "bytes": "895120c7411c01000000c3",
+      "sha256": "da82fa321229c8e6123ce5dc2cfd24821b88ed5f2b1f0a947f479520537b7e24"
+    },
+    {
+      "start": "0x4c160bf0",
+      "end": "0x4c160bf8",
+      "bytes": "c7411c00000000c3",
+      "sha256": "176d82a9dbf79b132c959754d1610fd8609a8566e33bb7273f7003fdfbcc8e87"
+    }
+  ],
+  "assertions": {
+    "0x4c160b30": [
+      "test",
+      "rdx, rdx"
+    ],
+    "0x4c160b33": [
+      "jne",
+      "0x4c160b94"
+    ],
+    "0x4c160b41": [
+      "test",
+      "al, 1"
+    ],
+    "0x4c160b43": [
+      "jne",
+      "0x4c160b4c"
+    ],
+    "0x4c160b45": [
+      "mov",
+      "dword ptr [rcx + 8], 0xffffffff"
+    ],
+    "0x4c160be0": [
+      "mov",
+      "dword ptr [rcx + 0x20], edx"
+    ],
+    "0x4c160be3": [
+      "mov",
+      "dword ptr [rcx + 0x1c], 1"
+    ],
+    "0x4c160bf0": [
+      "mov",
+      "dword ptr [rcx + 0x1c], 0"
+    ]
+  },
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-entity-visual-color-native-evidence.json": "923885d7be12a005806ec6605a0d17723bc4efd20330215d2326d29ef9fea980",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part_entity_visual_color_sentinel_native_audit.py": "82a67de60be905c6e6755ff2be6edca3589492ffa5fa92db8d627e622b29a75c",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-entity-visual-color-sentinel-native.txt": "afbafac7f92677313ee273ca481c7022ff6a331a86d37d0c1014e2faed7d1050",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\visual-color-consumers-run.txt": "a56093df8844489d3f6734a7fcd6b6bb5563cf0b5cad85b2247f837e8cbbcd7f",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\visual-get-color-callers.txt": "8dc8aafe34989fd63bdcf733e9effec7e51fafcd356888fa4aefbda674473dd2",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\visual-get-color-callers-run.txt": "86a337b661d6b708f0c695c9865a5d9445a420d7e1b991286c4187b7773e93fe",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\visual-color-consumers\\FUN_4c160b20.c": "637958490b56f5c89ab586709ef29a31535d1c197bb9d828cb3bb2fc7b456a88",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\visual-color-consumers\\FUN_4c160890.c": "38dc4d0cea77012bc00e46c6d7bf9b653758f05ae202fca53c74484f50c1c155",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\visual-color-consumers\\FUN_4c160be0.c": "4975edfde6a9bd3ee40a10bac04aca217aa15c096815ec88966e43de25e247c7",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\visual-color-consumers\\FUN_4c160bf0.c": "3ebdf88e3b608bec559aa54504ab105e53e3ec6355b96f728b11b45149fdc4ba"
+  },
+  "limitations": [
+    "Missing-layer setter writes the all-one color sentinel only when ColorByLayer bit is clear. Reader identifies stored sentinel without applying setter behavior. Temporary color +20 and active state +1C are runtime fields, not the serialized +8 word. color::getColorRef channel packing has no established link to this stored field. Channel order and general high-byte semantics remain unresolved."
+  ]
+}

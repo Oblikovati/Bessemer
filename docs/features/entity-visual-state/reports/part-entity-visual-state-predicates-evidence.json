@@ -1,0 +1,35 @@
+{
+  "evidence": "C-1874",
+  "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+  "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "functions": [
+    {
+      "start": "0x4c160910",
+      "end": "0x4c160917",
+      "bytes": "8b410483e002c3",
+      "sha256": "72126d88173bf147930a3c4986d1e74c0899e45a0e9d1f0a450c4ef2725948ec"
+    },
+    {
+      "start": "0x4c160920",
+      "end": "0x4c160933",
+      "bytes": "837918007406b801000000c38b410483e001c3",
+      "sha256": "f061d5fa0542f3e97463e066a9c3d1c8ab95c2201d4dde01de334e00fb73437c"
+    }
+  ],
+  "import_calls": {},
+  "target_executed": false,
+  "coverage_credit": 0,
+  "findings": [
+    "4C160910 returns runtime state +4 masked by 2, retaining integer result 0 or 2.",
+    "4C160920 returns 1 when runtime dword +18 is nonzero; otherwise it returns runtime state +4 masked by 1.",
+    "Stored byte +4 is serialized into a runtime integer; runtime +18 is not established as a wire field."
+  ],
+  "limitations": [
+    "Predicate semantic names and high state bits remain unresolved. The runtime override must not overwrite stored byte values in an offline reader. No semantic byte credit is claimed."
+  ],
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-entity-visual-fields-native-evidence.json": "7bae27e2d9e0d6069f72aa378f2b230f57f000afe11c7764f6311dde3357e0fa",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part_entity_visual_state_predicates_audit.py": "77c572b3404a806b5c48d3e91b6413f5434cdfe4b9b92c2d892989582cfe7e87",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-entity-visual-state-predicates-native.txt": "55d9386a1fbfb4335d398348562501f8f72dc52b355b4cd02e796615387f0b36"
+  }
+}
