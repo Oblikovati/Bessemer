@@ -1,0 +1,47 @@
+{
+  "evidence": "C-1963",
+  "target_executed": false,
+  "coverage_credit": 0,
+  "comparisons": [
+    {
+      "mode": "parameter_projections_disabled",
+      "before": [
+        906,
+        4590047,
+        2290189,
+        97
+      ],
+      "after": [
+        906,
+        4590047,
+        2155929,
+        97
+      ]
+    },
+    {
+      "mode": "parameter_projections_enabled",
+      "before": [
+        906,
+        4590047,
+        2290189,
+        97
+      ],
+      "after": [
+        906,
+        4590047,
+        2155929,
+        97
+      ]
+    }
+  ],
+  "proof": "Both disabled and enabled parameter projections give the same total; only one inherited stale expected unknown-total constant changes, proven by AST equality.",
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part_parameter_node_flags_checkpoint_audit.py": "b47a979531a06a7ab240a7ce8e774af8ed960d4c47819e80d6f76d34a983c343",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\test_partlightweight_pre_parameter_node_flags_checkpoint.txt": "3aa63a767b6b3abe2970ff0805ca336b0c02fe7beabe98e92cac7164318dba18",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\test_partlightweight.py": "90fdaa25db90ffd4fe646d20ffa8b40f172910d41ec83c8c956603f33c0d743c",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\modelnode.py": "e7ef5d3d251b44ffbb3b065d4586d4b382f4dc4a011c22459235db353d39587c",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\dimensions.py": "2295770dea08c366fd4c024121def63eb9acfbcf18d4cdb1a47cc29165e49493",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\partlightweight.py": "e1423dc4628ccff8ede8400b393bb6da448c671c6fc3ca1143bff969ada7526c",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-parameter-node-flags-native-evidence.json": "8e4799da1e6f517fd075b3f84cc4b76f5fb7418100300c3f090a2f6328bfd8a6"
+  }
+}

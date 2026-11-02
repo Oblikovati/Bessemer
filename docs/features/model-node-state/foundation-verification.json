@@ -1,0 +1,70 @@
+{
+  "issue": 178,
+  "stage": "Source/native foundation only; archive-integrated Rust views and edits pending",
+  "checks": 9,
+  "original_focused_tests": 5,
+  "initialization_and_strict_replay_passed": true,
+  "elapsed_seconds": [
+    1.244,
+    1.054
+  ],
+  "process_exit_codes": [
+    0,
+    0
+  ],
+  "processes_reaped": true,
+  "source_hash_exceptions": 0,
+  "source_snapshot": {
+    "path": "docs/features/model-node-state/source-snapshot.json",
+    "bytes": 619697,
+    "sha256": "761b720ec80e8968a347955bc2cea2ef435578cf63ba082e76b3d923c0f81d67"
+  },
+  "source_identity": "0ec15c472733c060ae0d09dbacde25841ec65af8b6724b39d274c6b1043123b0",
+  "source_python_files": 5102,
+  "historical_reports": 9,
+  "current_reader_pins": 9,
+  "complete_clauses": [
+    "11.435",
+    "11.448",
+    "11.449",
+    "11.572"
+  ],
+  "installed": {
+    "path": "docs/features/model-node-state/installed-reference.json",
+    "bytes": 5765,
+    "sha256": "935cf98683c0290ab700cfd71e015e0bb36cfd147272c62df2139fac990f3384"
+  },
+  "module_sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "unique_native_intervals": 23,
+  "recorded_native_bytes": 847,
+  "all_declared_named_exports_parsed": 45766,
+  "parameter_primary_rtti_and_bases_match": true,
+  "coverage_credit": 0,
+  "target_executed": false,
+  "provider": "Existing PE reader and frozen original RTTI locator; not fresh REA Evidence",
+  "logs": [
+    {
+      "path": "target/model-node-state-foundation-source.log",
+      "bytes": 3575,
+      "sha256": "81eecdd619140dc9d196b127fcabd4f9536aa0fcaf5013bde377642688149011"
+    },
+    {
+      "path": "target/model-node-state-corrected-source.log",
+      "bytes": 1728,
+      "sha256": "373a8f5eeffc64bcfc322777e8498f4c025784afe1bfe16f7e7992819055528f"
+    },
+    {
+      "path": "target/model-node-state-strict-source.log",
+      "bytes": 1728,
+      "sha256": "1eafaf691d967241d10a2a836cd7ef6c3e5cb6c614f46f5d9b75ff9b5dfbf401"
+    }
+  ],
+  "correction": "The first native check used pefile default max_symbol_exports8192, which stopped after17911 names. A bounded50000 limit now covers all45766 declared names and exact exports; no report or native assertion was weakened.",
+  "history": "Historical replay reports and their source/counter revisions remain intact. Current readers are separately pinned. Bug177 remains a separate unchanged source-accounting failure.",
+  "pending": [
+    "Independent complete archive field/projection/edit/history oracles and finite parameter class scope",
+    "Archive-integrated Rust views and isolated edits; no public stub shipped",
+    "Original906-case corpus, boundaries, failures, isolation and deterministic process/concurrency acceptance",
+    "Immutable publication-head local gate and all five exact-head platform checks"
+  ]
+}

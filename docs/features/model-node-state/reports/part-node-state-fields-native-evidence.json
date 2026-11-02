@@ -1,0 +1,184 @@
+{
+  "evidence": "C-1918",
+  "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+  "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "target_executed": false,
+  "coverage_credit": 0,
+  "functions": [
+    {
+      "name": "needsUpdate",
+      "export": "?needsUpdate@moNode_c@@UEAAHH@Z",
+      "start": "0x4c04e180",
+      "end": "0x4c04e1ba",
+      "bytes": "4883ec28f6410c01752683fa01751a488b014533c0ff906801000033c985c00f95c18bc14883c428c333c04883c428c3b8010000004883c428c3",
+      "sha256": "f7349a19481472f0a172a40b46588c165080456ef2fc2470e5894d9336321446"
+    },
+    {
+      "name": "isUpdateError",
+      "export": "?isUpdateError@moNode_c@@QEBAHXZ",
+      "start": "0x4c04e110",
+      "end": "0x4c04e117",
+      "bytes": "8b410c83e002c3",
+      "sha256": "82196714c3b7d92114009e3939451a1ef323545606f4914fd5a7eec45e2a97a0"
+    },
+    {
+      "name": "isUpdateWarning",
+      "export": "?isUpdateWarning@moNode_c@@UEBAHXZ",
+      "start": "0x4c04e150",
+      "end": "0x4c04e157",
+      "bytes": "8b410c83e004c3",
+      "sha256": "54441d7a5ec9118904f4815168b52518fe699db923dde78c2ada50108866e0e2"
+    },
+    {
+      "name": "isSatNotSolved",
+      "export": "?isSatNotSolved@moNode_c@@UEAAHXZ",
+      "start": "0x4b2ad590",
+      "end": "0x4b2ad599",
+      "bytes": "8b410c2500010000c3",
+      "sha256": "60dd6d850b9997f3e5f6d4cc7c9ec119e2698e2d66482ad99c46b1d52fdf06de"
+    },
+    {
+      "name": "isUpdateLocked",
+      "export": "?isUpdateLocked@moNode_c@@UEBAHXZ",
+      "start": "0x4c04e120",
+      "end": "0x4c04e12a",
+      "bytes": "8b410cc1e80e83e001c3",
+      "sha256": "05620117240dcb55becad7bedfe1359b8217ca7dd11dc18691ed7929e9a948b4"
+    },
+    {
+      "name": "isUpdatePending",
+      "export": "?isUpdatePending@moNode_c@@UEBAHXZ",
+      "start": "0x4c04e130",
+      "end": "0x4c04e13a",
+      "bytes": "8b410cc1e80f83e001c3",
+      "sha256": "5341dff63319602b3a600b4d5986983b34fcd7d48802a8b38c4193bf061e891b"
+    },
+    {
+      "name": "isUpdateSecurity",
+      "export": "?isUpdateSecurity@moNode_c@@UEBAHXZ",
+      "start": "0x4c04e140",
+      "end": "0x4c04e149",
+      "bytes": "8b410c2500000200c3",
+      "sha256": "9a7de65e3b2f61c184755675e334f5bf91e38e5c934aecd5fadb10420b53d2af"
+    },
+    {
+      "name": "setUpdateState",
+      "export": "?setUpdateState@moNode_c@@QEAAXH@Z",
+      "start": "0x4b2b15e0",
+      "end": "0x4b2b15e4",
+      "bytes": "89510cc3",
+      "sha256": "b1ecf0116b4597a63734d64c1d27d52c63b9127d8384e69ab5175179a959491a"
+    },
+    {
+      "name": "SetNeedsIDToBeSet",
+      "export": "?SetNeedsIDToBeSet@moNode_c@@QEAAXH@Z",
+      "start": "0x4c04cd60",
+      "end": "0x4c04cd7b",
+      "bytes": "448b4128418bc00fbaf01e410fbae81e85d2440f44c044894128c3",
+      "sha256": "f79fcb818f64b41a28dff502edc878e4120a095d2d571a6c1f2044f88a2ca726"
+    },
+    {
+      "name": "clearFlag2",
+      "export": "?clearFlag2@moNode_c@@QEAAHW4dummyBits2_e@1@@Z",
+      "start": "0x4c04cfd0",
+      "end": "0x4c04cfdb",
+      "bytes": "8b412cf7d223d089512cc3",
+      "sha256": "3d09c8c69e90c70c1ca4b20e870bf01160bf1b487e365228a111cf1fbb07129c"
+    },
+    {
+      "name": "setFlagOn2",
+      "export": "?setFlagOn2@moNode_c@@QEAAHW4dummyBits2_e@1@@Z",
+      "start": "0x4c04e8f0",
+      "end": "0x4c04e8fe",
+      "bytes": "8b412c448bc0440bc24489412cc3",
+      "sha256": "f1fb8c9e8d3b09af1d9bdd1ac0f415c46f88f3dcb49c892625cb26aabaf34cb2"
+    },
+    {
+      "name": "setNeedsUpdate",
+      "export": "?setNeedsUpdate@moNode_c@@UEAAXHHPEAV1@@Z",
+      "start": "0x4c04e910",
+      "end": "0x4c04ea2c",
+      "bytes": "48895c24084889742410574883ec20498bf98bf2488bd985d27438ff15e7acce00488bc8ff15769ace0085c00f85da000000e8097aacff488bd0488bcbe82d4ab50085c0740d83bb2c030000000f85b90000004885ff7410e8f3d71c00488bd0488bcfe8074ab5008b430c83e0fd85f60f848e00000025fb7ffdff83c80189430cff1581eace00bada060000488b084c8b4178488bc841ffd083f801756e488b03488bcbff9098040000488b13488bcb488bf8ff922003000085c0744f4885ff744a488b17488bcfff929801000085c0743a488b0733d2488bcfff90d81100004885c074274c8b00488bd3488bc8488b5c2430488b7424384883c4205f49ffa0c803000025fa7ffdff89430c488b5c2430488b7424384883c4205fc3",
+      "sha256": "8d9acd4af0d2e35fa18276ed0319c385e99b2d7bae080cdcd1dfe59493d51ea6"
+    },
+    {
+      "name": "setUpdateError",
+      "export": "?setUpdateError@moNode_c@@UEAAXH@Z",
+      "start": "0x4c04ea90",
+      "end": "0x4c04eaa3",
+      "bytes": "85d2740e8b410c25fa7ffdff83c80289410cc3",
+      "sha256": "beba8b5ee48e0b92ea35f7a72ab68c8f7def321a605e48eafefb037688a5c101"
+    }
+  ],
+  "assertions": {
+    "0x4c04e113": [
+      "and",
+      "eax, 2"
+    ],
+    "0x4c04e153": [
+      "and",
+      "eax, 4"
+    ],
+    "0x4b2ad593": [
+      "and",
+      "eax, 0x100"
+    ],
+    "0x4c04e123": [
+      "shr",
+      "eax, 0xe"
+    ],
+    "0x4c04e126": [
+      "and",
+      "eax, 1"
+    ],
+    "0x4c04e133": [
+      "shr",
+      "eax, 0xf"
+    ],
+    "0x4c04e136": [
+      "and",
+      "eax, 1"
+    ],
+    "0x4c04e143": [
+      "and",
+      "eax, 0x20000"
+    ],
+    "0x4b2b15e0": [
+      "mov",
+      "dword ptr [rcx + 0xc], edx"
+    ],
+    "0x4c04cd67": [
+      "btr",
+      "eax, 0x1e"
+    ],
+    "0x4c04cd6b": [
+      "bts",
+      "r8d, 0x1e"
+    ],
+    "0x4c04cd76": [
+      "mov",
+      "dword ptr [rcx + 0x28], r8d"
+    ],
+    "0x4c04cfd7": [
+      "mov",
+      "dword ptr [rcx + 0x2c], edx"
+    ],
+    "0x4c04e8f9": [
+      "mov",
+      "dword ptr [rcx + 0x2c], r8d"
+    ]
+  },
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-node-tooltip-native-evidence.json": "6abe8ebd033ebf88277789c4442af72ccf915899c81e4a8fc5d1242db3f83461",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part_node_state_fields_native_audit.py": "27d866631c01eeb8d718a0fac6668371302a03e56217de689080f9d24aa5c151",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\node-update-state-run.txt": "72c9aa2fc33c8a2d20d04db7037930376a052dd39ca4e99cd58fd85be538a3d4",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-node-state-fields-native.txt": "7d877db995c18a5cf7319b7266a92fafe6b36dfb539e46a293fa5f7c6af4899b",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\node-update-state\\FUN_4c04e180.c": "3b6975e16ce12488a9baf01ecc00762e7d57b81956109c1ba4f2ba89cbdf62a4",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\node-update-state\\FUN_4c04e910.c": "1943ba48c710961e2ec454d7b2dcc9f022319132bae1c141ea9216c473972866",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\node-update-state\\FUN_4c04cd60.c": "eaf554ee1d4107bfecdb1e8a317cf6bff3b84e5b6f98bd98f3b68313f0135c39",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\node-update-state\\FUN_4c04ea90.c": "01a6942094fefce868f9c1a7b4f5fd1af9990d3e6750221619fbabd0f594726f"
+  },
+  "limitations": [
+    "Seven +0C bit roles and +28 bit30 are bound; remaining state/flag domains unresolved. SAT and security names retained without expanding their meanings. Runtime needsUpdate can consult virtual state when its argument is one; stored bit alone is not that effective result. Setters can clear neighboring bits and are not applied by parsing. Loader forcing +28 bit30 is not applied to stored flags."
+  ]
+}

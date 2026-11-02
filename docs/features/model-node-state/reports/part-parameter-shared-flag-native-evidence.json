@@ -1,0 +1,170 @@
+{
+  "evidence": "C-1964",
+  "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+  "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "target_executed": false,
+  "coverage_credit": 0,
+  "functions": [
+    {
+      "start": "0x4b2a41b0",
+      "end": "0x4b2a41b5",
+      "export": "?getParameter@Dimension_c@@UEAAPEAVmoParameter_c@@XZ",
+      "bytes": "488b4128c3",
+      "sha256": "cff2ef16c7ec552c1f7c9706cb926933e47de8667aaeb590d325e246c3669ef3",
+      "disassembly": [
+        "4b2a41b0 mov rax, qword ptr [rcx + 0x28]",
+        "4b2a41b4 ret "
+      ]
+    },
+    {
+      "start": "0x4c82aa90",
+      "end": "0x4c82aab1",
+      "export": "?isShared@Dimension_c@@QEBAHXZ",
+      "bytes": "488b41284885c07415837810017f09f74028000000207406b801000000c333c0c3",
+      "sha256": "144e14c678868dab99597f6480c88534e5bb127a157bb1684af5c17f069f79a0",
+      "disassembly": [
+        "4c82aa90 mov rax, qword ptr [rcx + 0x28]",
+        "4c82aa94 test rax, rax",
+        "4c82aa97 je 0x4c82aaae",
+        "4c82aa99 cmp dword ptr [rax + 0x10], 1",
+        "4c82aa9d jg 0x4c82aaa8",
+        "4c82aa9f test dword ptr [rax + 0x28], 0x20000000",
+        "4c82aaa6 je 0x4c82aaae",
+        "4c82aaa8 mov eax, 1",
+        "4c82aaad ret ",
+        "4c82aaae xor eax, eax",
+        "4c82aab0 ret "
+      ]
+    },
+    {
+      "start": "0x4c82b400",
+      "end": "0x4c82b40e",
+      "export": "?shareCount@Dimension_c@@QEBAHXZ",
+      "bytes": "488b41284885c07501c38b4010c3",
+      "sha256": "4157bb603150422c9e4eba6119876b7108665dcf4f2a9694640c284b5d43c0ce",
+      "disassembly": [
+        "4c82b400 mov rax, qword ptr [rcx + 0x28]",
+        "4c82b404 test rax, rax",
+        "4c82b407 jne 0x4c82b40a",
+        "4c82b409 ret ",
+        "4c82b40a mov eax, dword ptr [rax + 0x10]",
+        "4c82b40d ret "
+      ]
+    },
+    {
+      "start": "0x4c848df0",
+      "end": "0x4c848e65",
+      "export": "?clearSharedParameterFlag@moDimHandle_c@@QEAAXXZ",
+      "bytes": "40534883ec20488b0133d2488bd9ff90300700004885c07456488b0333d2488bcbff90300700004885c07443488bc8e8dc25feff83f8017536488b0333d2488bcbff90300700004885c07423488b10488bc8ff92a00000004885c07412ba00000020488bc84883c4205be9814180ff4883c4205bc3",
+      "sha256": "1f426fb43ef68fb8c9728082a5959577019c68701173edd70da9612392b70561",
+      "disassembly": [
+        "4c848df0 push rbx",
+        "4c848df2 sub rsp, 0x20",
+        "4c848df6 mov rax, qword ptr [rcx]",
+        "4c848df9 xor edx, edx",
+        "4c848dfb mov rbx, rcx",
+        "4c848dfe call qword ptr [rax + 0x730]",
+        "4c848e04 test rax, rax",
+        "4c848e07 je 0x4c848e5f",
+        "4c848e09 mov rax, qword ptr [rbx]",
+        "4c848e0c xor edx, edx",
+        "4c848e0e mov rcx, rbx",
+        "4c848e11 call qword ptr [rax + 0x730]",
+        "4c848e17 test rax, rax",
+        "4c848e1a je 0x4c848e5f",
+        "4c848e1c mov rcx, rax",
+        "4c848e1f call 0x4c82b400",
+        "4c848e24 cmp eax, 1",
+        "4c848e27 jne 0x4c848e5f",
+        "4c848e29 mov rax, qword ptr [rbx]",
+        "4c848e2c xor edx, edx",
+        "4c848e2e mov rcx, rbx",
+        "4c848e31 call qword ptr [rax + 0x730]",
+        "4c848e37 test rax, rax",
+        "4c848e3a je 0x4c848e5f",
+        "4c848e3c mov rdx, qword ptr [rax]",
+        "4c848e3f mov rcx, rax",
+        "4c848e42 call qword ptr [rdx + 0xa0]",
+        "4c848e48 test rax, rax",
+        "4c848e4b je 0x4c848e5f",
+        "4c848e4d mov edx, 0x20000000",
+        "4c848e52 mov rcx, rax",
+        "4c848e55 add rsp, 0x20",
+        "4c848e59 pop rbx",
+        "4c848e5a jmp 0x4c04cfe0",
+        "4c848e5f add rsp, 0x20",
+        "4c848e63 pop rbx",
+        "4c848e64 ret "
+      ]
+    }
+  ],
+  "assertions": {
+    "0x4b2a41b0": [
+      "mov",
+      "rax, qword ptr [rcx + 0x28]"
+    ],
+    "0x4c82aa90": [
+      "mov",
+      "rax, qword ptr [rcx + 0x28]"
+    ],
+    "0x4c82aa99": [
+      "cmp",
+      "dword ptr [rax + 0x10], 1"
+    ],
+    "0x4c82aa9f": [
+      "test",
+      "dword ptr [rax + 0x28], 0x20000000"
+    ],
+    "0x4c82aa9d": [
+      "jg",
+      "0x4c82aaa8"
+    ],
+    "0x4c82aaa6": [
+      "je",
+      "0x4c82aaae"
+    ],
+    "0x4c82b40a": [
+      "mov",
+      "eax, dword ptr [rax + 0x10]"
+    ],
+    "0x4c848e24": [
+      "cmp",
+      "eax, 1"
+    ],
+    "0x4c848e4d": [
+      "mov",
+      "edx, 0x20000000"
+    ],
+    "0x4c848e5a": [
+      "jmp",
+      "0x4c04cfe0"
+    ]
+  },
+  "node_clear_binding": {
+    "start": "0x4c04cfe0",
+    "end": "0x4c04cfeb",
+    "export": "?clearFlag@moNode_c@@QEAAHW4dummyBits_e@1@@Z",
+    "bytes": "8b4128f7d223d0895128c3",
+    "sha256": "f74fb2360dc64c4fc224f81fe0c0797220b44c5dcd1db1ebb973cab0a54e7045",
+    "disassembly": [
+      "4c04cfe0 mov eax, dword ptr [rcx + 0x28]",
+      "4c04cfe3 not edx",
+      "4c04cfe5 and edx, eax",
+      "4c04cfe7 mov dword ptr [rcx + 0x28], edx",
+      "4c04cfea ret "
+    ]
+  },
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part_parameter_shared_flag_native_audit.py": "9afa064613a56bd3a53ff6fe5b67327cadf82a5764d9af9d5839f8ea0664ed8d",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\sldmodu-complete-export-index.json": "fb3efcb81f1c79daf1ad32961f1ec1adb681297c1c2f41177250293ebe836ace",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-parameter-node-flags-native-evidence.json": "8e4799da1e6f517fd075b3f84cc4b76f5fb7418100300c3f090a2f6328bfd8a6",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parameter-shared-flag-run.txt": "c852048ccfdfa48dfd12e3b8ed92b67d5faff7491ee9b5d9c7a712239f93fb48",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\node-flag-roles-run.txt": "d1480c0cab5c9cbd87a184796e1ff243009b966adafb8890bd33858b9ef7423f",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\node-flag-roles\\FUN_4c848df0.c": "682995a58d85c074db7313ced6d46dff2c6367f3dc691ec09cd1f8a8610c98f4",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\parameter-shared-flag\\FUN_4c82aa90.c": "095e49302dedabd46057bfb4c68f129c3ccc52807af67e198e920481d11a8748",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\parameter-shared-flag\\FUN_4c82b400.c": "a7216bb766e27e9dd16c50e7819dec6174a74f44aec00991d4194b7a8a7d9e84"
+  },
+  "limitations": [
+    "Parameter-class role at runtime +28 mask 0x20000000. Dimension::isShared returns true for a nonnull parameter when shareCount>1 OR the stored flag is set; decoding does not simulate this effective result. clearSharedParameterFlag conditionally clears it when shareCount==1. Runtime reference count is not added to the parameter wire schema. Full flag-word domain remains partial and accounting unchanged."
+  ]
+}
