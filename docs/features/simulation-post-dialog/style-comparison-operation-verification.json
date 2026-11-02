@@ -93,9 +93,25 @@
     "Peak-memory measurement or comparison to a nonexistent previous published style-comparator API"
   ],
   "pending": [
-    "Full338 integrated Source replay",
     "Remaining feature166 models",
     "Exact publication-head cargo xtask pr and all five platform gates"
   ],
-  "prose_review": "Humanizer unavailable; maintainer review pending."
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_integrated_source": {
+    "checks": 338,
+    "seconds": 471.309,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "accepted_source_cut": "af51fd062902a71f3976a3f314b4b84f65a75761",
+    "log": {
+      "path": "target/style-comparison-operation-source-full.log",
+      "bytes": 72889,
+      "sha256": "df85bd02067765f830d47f5ef78e79202b3a2b44890bc57b26c01cd8aa30478c"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 634468,
+      "sha256": "a3de8ab7eac44994382b5b9799427d7bcb1f365f4b543d2b42364264a3d27b36"
+    }
+  }
 }

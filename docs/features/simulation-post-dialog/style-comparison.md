@@ -89,7 +89,8 @@ two fresh processes matched658,350 independent decision/error/trace words,
 2,633,400bytes, while checking all completed source histories and input isolation.
 The [operation record](style-comparison-operation-verification.json) and
 [process proof](style-comparison-process-verification.json) retain the gates.
-Full operation replay, publication acceptance and remaining feature166 work are
-pending.
+Full operation Source replay passed338 checks in471.309seconds and exited
+successfully after snapshot cleanup. Publication acceptance and remaining
+feature166 work are pending.
 
 Humanizer is unavailable in this checkout; maintainer prose review remains pending.
