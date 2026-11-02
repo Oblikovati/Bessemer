@@ -1,0 +1,36 @@
+{
+  "feature_issue": 165,
+  "bessemer_parent": "c982fa703fd9b81e97f086952d63cc37f6c8d5c8",
+  "source_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "reference_checks": 9,
+  "original_tests": 3,
+  "foundation_checks": 6,
+  "all_exit_codes": 0,
+  "all_processes_reaped": true,
+  "target_executed": false,
+  "source_hash_exceptions": false,
+  "complete_original_values_strings_spans_and_failures_preserved": true,
+  "native": {
+    "streams": 224,
+    "logical_bytes": 83328,
+    "arguments": 224,
+    "accepted": 224,
+    "failed": 0,
+    "bytes": 86016,
+    "sha256": "e53d809364f42e28c0887f11613d56079d66fe9da98257ed24200761ecd637b7"
+  },
+  "source_snapshot_identity": "5069b8ce82597d8115710f191c0d8becb3cc7448aec6f63ca29f87528ff206bf",
+  "logs": {
+    "target/post-graph-foundation-write.log": "c46fc22ff78dbb06f8493c3b37fcf94c2501f9478f41b505aced02c623f3c568",
+    "target/post-graph-foundation-strict.log": "7929dca4ed0762d87167ea3c454fa8198e33f30e093bcda2d3152af174c3aae8"
+  },
+  "exclusions": [
+    "Owned complete operation oracles",
+    "Rust read/construction/edit operations",
+    "Count caps and resources",
+    "Malformed/extents/isolation/concurrency acceptance",
+    "Two-process complete field/history exports",
+    "Local/platform/ThreadSanitizer gates",
+    "Native application opening and whole-format parity"
+  ]
+}

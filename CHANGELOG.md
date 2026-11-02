@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added complete documented graph parameter reads, construction and isolated edits with atomic character-count text and preserved raw eight-byte values. (#165)
+
 - Added complete documented Results root, category and plot Property reads, construction and isolated edits with explicit hierarchy and current-writer contexts. (#164)
 
 - Added complete documented Mesh Property reads, construction and isolated edits with explicit versions, populated nested records, preserved integer-set keys and ordered provenance. (#163)
