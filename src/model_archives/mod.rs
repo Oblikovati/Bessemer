@@ -241,6 +241,8 @@ mod move_copy_bodies;
 mod move_copy_deformation;
 mod move_faces;
 mod node;
+mod node_state;
+pub use node_state::{ModelNodeStoredFlag, ModelNodeStoredState};
 mod note_text;
 mod object_body;
 mod object_values;

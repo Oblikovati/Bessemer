@@ -124,6 +124,11 @@ coverage, version boundaries, graph preservation, and remaining limits.
 The [forming-tool evidence](docs/features/forming-tools/README.md) records the
 shared-map inline-header and forming-tool readers, embedded edits and the
 906-configuration reconstruction gate.
+The [stored node-state API](docs/features/model-node-state/api.md) projects named
+update bits and class-scoped parameter flags from complete part configurations
+and resolved-feature archives. Selected-bit edits preserve other fields and bits
+and return the existing complete archive validation and structural history.
+Stored flags remain separate from effective native predicates and setter cascades.
 The [assembly configuration API](docs/features/assembly-configurations/README.md)
 reads, constructs, edits and writes complete ordinary assembly and routing
 configurations. All 180 reference-readable modern configurations reconstruct

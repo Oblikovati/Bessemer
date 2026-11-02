@@ -3,7 +3,8 @@
 Feature [#178](https://github.com/Oblikovati/Bessemer/issues/178) covers the
 stored node update-state bits and parameter-only flag roles in specification
 11.435, 11.448, 11.449 and 11.572. The existing archive codecs preserve these
-words. Archive-integrated named views and isolated edits remain to be implemented.
+words. [Archive-integrated named views and isolated edits](api.md) are now
+implemented locally; publication acceptance remains pending.
 
 The foundation retains all four complete clauses, nine original native/replay
 reports and nine current reader/test dependencies. Historical replay reports
@@ -41,15 +42,14 @@ dimension sharing can consult a runtime reference count. Parameter meanings
 must not appear on generic nodes. Native setter cascades, pointer allocation
 and state normalization are outside the stored-word edit operation.
 
-Next, bind complete archive object identities and finite parameter class scope,
-then add views and edits through the existing validated operation/history paths.
-Independent literals must cover all128 update-bit combinations, parameter-bit
-combinations, unrelated bits, exact version gates, generic-node exclusion,
-no-ops, failures, isolation and ordered provenance. Existing906-case corpus
-acceptance, deterministic process/concurrency checks, the immutable-head local
-gate and all five platform gates remain required. No Rust API or stub was added
-by this foundation. Whole-schema, native application and geometry acceptance
-remain unproven.
+The implementation binds revision-scoped state fields and finite parameter
+class scope, then reuses the existing validated archive edit/history paths.
+Focused tests cover every owned context, literal byte edits, complete unselected
+field preservation, exact no-ops, foreign/stale/type/scope failures, missing-word
+guards, ownership, serial/parallel agreement and eight-worker shared-snapshot
+stress. Existing906-case corpus retention, fresh-process checks, the immutable-head
+local gate and all five platform gates remain separate acceptance requirements.
+Whole-schema, native application and geometry acceptance remain unproven.
 
 Humanizer is unavailable; maintainer prose review remains pending.
 
@@ -68,4 +68,23 @@ spans. Generic classes retain the same upper bits without parameter roles.
 Raw scalar NaNs, negative zero, alternate-presence bytes, text and all other
 fields stay in the full inputs. The earlier nine-check snapshot remains at its
 recorded Git revision. The [archive integration contract](design.md) describes
-the next implementation; these fixtures do not establish Rust acceptance yet.
+the implementation contract; fixture acceptance remains distinct from Rust and
+platform acceptance.
+
+The [local operation ledger](operation-verification.json) records seven passing
+integration tests, five projection-guard tests, twelve documentation examples,
+nine prior public archive regressions and clean all-target Clippy. All35,328
+owned bit requests match closed-form full images, complete unselected fields
+and ordered changed-field history; half are exact no-ops. The configuration
+entry points also reopen an edited document, preserve unrelated streams and
+revert the whole document byte for byte.
+
+The new native gate inspects15,542 configuration nodes and72,113 feature nodes
+across all906 retained contexts, including the original39,487 parameter
+definitions and zero observed feature global-variable bits. Both complete
+carriers reconstruct exactly. The original private/public906-case gate also
+passes. Two fresh processes produce identical6,315,152-byte full view/field/edit
+history exports, matching serial and eight-worker projections. Eight workers
+also exercise shared immutable snapshots with23,552 accepted edits and4,096
+expected scope rejections. Repository and exact-head platform gates remain
+separate from this local acceptance.

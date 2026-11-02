@@ -87,23 +87,22 @@ def verify_owned_node_result(parsed: dict[str, object], name: str, state: int, f
         assert node['stored_shared_thickness'] == bool(words[2] & 1), node
 
 
-def persist_owned_node_packet(packet: bytearray, rows: list[dict[str, object]], context_hashes: list[str], primitives: bytearray) -> None:
-    """Lock the complete literal packet without replacing earlier fixtures; e.g. persist_owned_node_packet(packet, rows)."""
-    destination = FEATURE.parents[2] / 'tests/fixtures/model-node-state/owned.bin'
+def lock_owned_node_fixture(name: str, raw: bytes | bytearray) -> None:
+    """Require immutable fixture bytes outside reviewed initialization; e.g. lock_owned_node_fixture('owned.bin', packet)."""
+    destination = FEATURE.parents[2] / 'tests/fixtures/model-node-state' / name
     destination.parent.mkdir(exist_ok=True)
     if '--write' in sys.argv:
-        destination.write_bytes(packet)
-    assert destination.read_bytes() == packet, f'{destination}; expected complete unchanged owned archive packet'
+        destination.write_bytes(raw)
+    assert destination.read_bytes() == raw, f'{destination}; expected complete unchanged node-state fixture bytes'
+
+
+def persist_owned_node_packet(packet: bytearray, rows: list[dict[str, object]], context_hashes: list[str], primitives: bytearray) -> None:
+    """Lock the complete literal packet without replacing earlier fixtures; e.g. persist_owned_node_packet(packet, rows)."""
+    lock_owned_node_fixture('owned.bin', packet)
     oracle = ''.join(f'{row["class_name"]}\t{row["update_state"]}\t{row["flags_28"]}\t{row["flags_2c"]}\t'
                      f'{cast(list[int], row["state_offsets"])[0]}\t{cast(list[int], row["state_offsets"])[1]}\t{row["bytes"]}\n' for row in rows).encode()
-    expected = destination.with_name('nodes.tsv')
-    if '--write' in sys.argv:
-        expected.write_bytes(oracle)
-    assert expected.read_bytes() == oracle, f'{expected}; expected independent literal node words and offsets'
-    physical = destination.with_name('primitives.tsv')
-    if '--write' in sys.argv:
-        physical.write_bytes(primitives)
-    assert physical.read_bytes() == primitives, f'{physical}; expected full original-reader primitive partitions'
+    lock_owned_node_fixture('nodes.tsv', oracle)
+    lock_owned_node_fixture('primitives.tsv', primitives)
     node_state_baseline('owned-reference.json', dict(cases=len(rows), nodes=2 * len(rows), aliases=len(rows),
         sha256=hashlib.sha256(packet).hexdigest(), packet_bytes=len(packet), context_streams_sha256=context_hashes,
         node_oracle_sha256=hashlib.sha256(oracle).hexdigest(), primitive_oracle_sha256=hashlib.sha256(primitives).hexdigest(), rows=rows))
@@ -117,9 +116,25 @@ def owned_node_archive_context() -> tuple['ReferenceDocument', list[str]]:
     document = container.Document(fixture, table={})
     context_hashes = [hashlib.sha256(document.read(name)).hexdigest() for name in
                       ('Contents/Config-0-ModelHeader', 'Contents/Config-0', 'Contents/CMgr')]
-    _, context = importlib.import_module('modelprefix').read(document, 'Contents/Config-0', through_part_resolved=True, configuration_context=True)
-    assert len(context.map) == 97, f'{len(context.map)}; expected complete owned97-slot inherited map'
+    slots = capture_owned_configuration_nodes(document)
+    assert slots == 97, f'{slots}; expected complete owned97-slot inherited map'
     return document, context_hashes
+
+
+def capture_owned_configuration_nodes(document: 'ReferenceDocument') -> int:
+    """Record original configuration node word offsets without inferring them from Rust; e.g. capture_owned_configuration_nodes(document)."""
+    from primitive_inventory import observe_primitives
+    archive = importlib.import_module('swarchive')
+    raw = document.read('Contents/Config-0')
+    with observe_primitives(archive.Archive, raw) as reads:
+        _, context = importlib.import_module('modelprefix').read(document, 'Contents/Config-0', through_part_resolved=True, configuration_context=True)
+    words = [read for read in reads if read.source_file == 'modelnode.py' and read.kind in ('i', 'I')]
+    assert words and len(words) % 4 == 0, f'{len(words)}; expected complete modern four-word node groups'
+    for index in range(0, len(words), 4):
+        assert [word.start for word in words[index:index + 4]] == [words[index].start + 4 * offset for offset in range(4)], words[index]
+    oracle = ''.join(f'{read.start}\t{read.end}\t{read.kind}\t{read.raw_hex}\n' for read in words).encode()
+    lock_owned_node_fixture('configuration-nodes.tsv', oracle)
+    return len(context.map)
 
 
 def capture_owned_node_stream(document: 'ReferenceDocument', raw: bytes, starts: list[int], index: int) -> tuple[dict[str, object], bytes]:

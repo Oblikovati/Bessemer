@@ -1,0 +1,190 @@
+{
+  "issue": 178,
+  "behavior_profile": "model-node-stored-flags-v1",
+  "stage": "Complete local archive-backed operation acceptance; repository/publication gates pending",
+  "focused_integration": 7,
+  "projection_guard_unit_tests": 5,
+  "documentation_examples": 12,
+  "prior_public_archive_tests": 9,
+  "owned_contexts": 992,
+  "owned_node_definitions": 1984,
+  "changed_and_noop_bit_operations": 35328,
+  "changed_bit_operations": 17664,
+  "noop_bit_operations": 17664,
+  "compile_time_send_sync_public_types": 2,
+  "parallel_projection_workers": 8,
+  "parallel_projection_equals_serial": true,
+  "shared_snapshot_workers": 8,
+  "shared_snapshot_successful_edits": 23552,
+  "shared_snapshot_expected_scope_failures": 4096,
+  "retained_native_cases": 906,
+  "native_configuration_nodes": 15542,
+  "native_feature_nodes": 72113,
+  "native_feature_parameters": 39487,
+  "native_feature_global_variable_set": 0,
+  "native_outcome_rows_identical_across_two_runs": true,
+  "complete_native_bytes_unchanged": true,
+  "source_checks": 10,
+  "source_hash_exceptions": 0,
+  "source_snapshot": {
+    "path": "docs/features/model-node-state/source-snapshot.json",
+    "bytes": 637188,
+    "sha256": "46f9e5a75eb4dafc646194a92d7a72e50a2000b1ba55599405b7e5b7ff6bcb08"
+  },
+  "source_identity": "0ec15c472733c060ae0d09dbacde25841ec65af8b6724b39d274c6b1043123b0",
+  "configuration_word_oracle": {
+    "path": "tests/fixtures/model-node-state/configuration-nodes.tsv",
+    "bytes": 612,
+    "sha256": "05edfa016110f7124c3299e2da779733015baa5276f9bfce725815a95cbdf42a"
+  },
+  "previous_owned_fixtures_byte_identical_to_revision": "676e7257f298a7d078a11ae3a30f1e28a9b258df",
+  "process_pair": {
+    "fresh_processes": 2,
+    "focused_tests_each": 7,
+    "elapsed_seconds": [
+      2.83,
+      2.85
+    ],
+    "outputs": [
+      {
+        "path": "target/model-node-state-first-projection.bin",
+        "bytes": 6315152,
+        "sha256": "070d9d6848205425cf5e1f6759c209300e22479e5ea1b36a85b41b3d491e441b"
+      },
+      {
+        "path": "target/model-node-state-second-projection.bin",
+        "bytes": 6315152,
+        "sha256": "070d9d6848205425cf5e1f6759c209300e22479e5ea1b36a85b41b3d491e441b"
+      }
+    ],
+    "complete_views_fields_and_history_equal": true
+  },
+  "all_finished_processes_reaped": true,
+  "clippy_warnings": 0,
+  "source_files": [
+    {
+      "path": "src/model_archives/node_state/accessors.rs",
+      "bytes": 3178,
+      "sha256": "b33c9366d26c7daa0f66f6f6250dfe390fff6069a009c5a907072da4ff6150ce"
+    },
+    {
+      "path": "src/model_archives/node_state/archive_ops.rs",
+      "bytes": 4637,
+      "sha256": "5365122ee18f3d1b78bb28f54bf902d98245934b1d876961c00cf5152294e53a"
+    },
+    {
+      "path": "src/model_archives/node_state/mod.rs",
+      "bytes": 5035,
+      "sha256": "eed41e8b5d7cd7dcb2b206c1764701b59cb0cec1be6655de7deaab67b5ef828e"
+    },
+    {
+      "path": "src/model_archives/node_state/projection.rs",
+      "bytes": 3638,
+      "sha256": "24a3319a625c166edd2c08e65b4cc6bde8918f21a968017fa5166b3d15f2abcc"
+    },
+    {
+      "path": "tests/model_node_state/configuration.rs",
+      "bytes": 5715,
+      "sha256": "022ee5fce552e14b7a8251f347bbb7e0b616014479149e5e45ab02a457800534"
+    },
+    {
+      "path": "tests/model_node_state/edits.rs",
+      "bytes": 3836,
+      "sha256": "4d8454180079472b2856502beb5cd231619aa0c0951d40c9ef288d1459e574e0"
+    },
+    {
+      "path": "tests/model_node_state/exports.rs",
+      "bytes": 5917,
+      "sha256": "23cd1db3ab3418db5da0bd0e504bf003013206a5e36aeb12ecce5b3b33cdf280"
+    },
+    {
+      "path": "tests/model_node_state/native.rs",
+      "bytes": 3633,
+      "sha256": "955d96b6979e35cead06153bcd052b4c9f109f97f065f6d46486249377ad87cc"
+    },
+    {
+      "path": "tests/model_node_state/ownership.rs",
+      "bytes": 2610,
+      "sha256": "90c17ac335de80464d08b9ea3cf564a0785bfbabb7be321eb1cc8ad9f8b7ed75"
+    },
+    {
+      "path": "tests/model_node_state/projection_unit.rs",
+      "bytes": 4659,
+      "sha256": "c8e597dfb27c34f45db8174fcb0a4e52cdedc305fec72e959dd4894323083247"
+    },
+    {
+      "path": "tests/model_node_state.rs",
+      "bytes": 6229,
+      "sha256": "bccf3ed58215a2afabf9a4fe734cb5d731d8d95db8f705cd2483fd0f7e092dd7"
+    },
+    {
+      "path": "tests/resolved_features/native_corpus.rs",
+      "bytes": 5710,
+      "sha256": "b4c1cf5fc1efebaf5307a82ec282da7ce34f014ad4320903d35f9a934247bd4a"
+    }
+  ],
+  "logs": [
+    {
+      "path": "target/model-node-state-final-focused.log",
+      "bytes": 1105,
+      "sha256": "ea0019c45a3fe547b3c14369c17825a3fe49d7302b9019b6f101d3555e849f11"
+    },
+    {
+      "path": "target/model-node-state-final-unit.log",
+      "bytes": 970,
+      "sha256": "102ee0acf2c2d64e85262248d1498d43c2d4afc2d4d44c7869d51cb076ee7ec8"
+    },
+    {
+      "path": "target/model-node-state-prior-public.log",
+      "bytes": 1125,
+      "sha256": "3990346bb66fa62b8958b7e58a89c6d6cb481e492b720ff7c84d9934f5a17051"
+    },
+    {
+      "path": "target/model-node-state-doc-tests.log",
+      "bytes": 2179,
+      "sha256": "025d4cad87c993ca363f15d53e087b57c012eaf072526b4408fb4e11284ad9cf"
+    },
+    {
+      "path": "target/model-node-state-final-all-clippy.log",
+      "bytes": 136,
+      "sha256": "c6af93c94a8b525cc8942911c1c1a4ea17f47370fb85acfabade7d7b818b4170"
+    },
+    {
+      "path": "target/model-node-state-retained-corpus.log",
+      "bytes": 21377,
+      "sha256": "9f3d3fc330853ee1d3818750d382b1084b0b6170e02e89281573869cd8863849"
+    },
+    {
+      "path": "target/model-node-state-native-first.log",
+      "bytes": 23763,
+      "sha256": "bafb3aafcb450297a91703c4c71c92028daab0571cd501330c99a4d2b6b2c51c"
+    },
+    {
+      "path": "target/model-node-state-native-final.log",
+      "bytes": 23700,
+      "sha256": "f62ac22a6a203e987e8e2ef370f5514d6ef5559276ba2d697272cf912012be31"
+    },
+    {
+      "path": "target/model-node-state-operation-source-strict.log",
+      "bytes": 1909,
+      "sha256": "161f46000f668d5008ca7435c7fa6fa3b90d49d4a1afa79042adf1a078101da5"
+    },
+    {
+      "path": "target/model-node-state-first-process.log",
+      "bytes": 859,
+      "sha256": "045e3f69efdfdf1ee2486557998ac8c331a1c20fd8a22d476ba78dd7ad3e2ad6"
+    },
+    {
+      "path": "target/model-node-state-second-process.log",
+      "bytes": 859,
+      "sha256": "f71cf14b33a0cdea7d1441f386686a9a0ec2b2612778a51e7963354509eb95a8"
+    }
+  ],
+  "exclusions": [
+    "Full repository cargo xtask pr gate",
+    "Exact publication-head platform and ThreadSanitizer gates",
+    "Native setter cascades, runtime predicates and pointer allocation",
+    "Whole-word semantic coverage, native application and geometry acceptance",
+    "Whole-format schema parity; reference accounting Bug177 and historical MaterialList remain separate"
+  ]
+}
