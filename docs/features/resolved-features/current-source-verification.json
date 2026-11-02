@@ -1,0 +1,64 @@
+{
+  "issue": 54,
+  "reference_bug": 177,
+  "scope": "Unchanged current source regression from frozen sources; failure retained",
+  "original_tests": 3,
+  "passed": 2,
+  "failed": 1,
+  "errored": 0,
+  "elapsed_seconds": 1.261,
+  "exit_code": 1,
+  "process_reaped": true,
+  "reader_or_expectation_patches": false,
+  "source_hash_exceptions": 0,
+  "source_snapshot": {
+    "path": "docs/features/resolved-features/current-source-snapshot.json",
+    "bytes": 639087,
+    "sha256": "2a7a8c0577a0e888fdf66fce86dddb87d5cd266c09c5170f8cd14522b8b38a65"
+  },
+  "source_identity": "99c84c47f7ba695f0a477771255dfe89a1401c8ce4ed2ef559af4060af54ada6",
+  "signature_cache": {
+    "path": "../inventor-interface/solidworks/cache/keytable.json",
+    "bytes": 108079,
+    "sha256": "3d4b864346a859652b8662655479d8669556db28434da9ed15ba7bf9c677fac7"
+  },
+  "reports": [
+    {
+      "path": "../inventor-interface/solidworks/research/resolved-library-audit-0.382.json",
+      "bytes": 656498,
+      "sha256": "69e35d935f644fb5297e58974de703aee99fa41c48cae3c4f0f9ebb2e87dae7c"
+    },
+    {
+      "path": "../inventor-interface/solidworks/research/resolved-curve-file-audit-0.353.json",
+      "bytes": 657001,
+      "sha256": "0bd73c88e01eddb2eef064eedd59bab0027173c46e0f26e5db42de5dbacedda5"
+    }
+  ],
+  "logs": [
+    {
+      "path": "target/resolved-current-source-refresh.log",
+      "bytes": 2677,
+      "sha256": "ecba4e84ef86e7c78985f298e57e88a9fbdd55ee46218bb1d57d919d23c71811"
+    },
+    {
+      "path": "target/resolved-current-source-corrected.log",
+      "bytes": 1305,
+      "sha256": "08bd2de46a4a669dc36f4fda0c879544ed44fce389e6f90cefe0a96fcdbc0756"
+    }
+  ],
+  "mismatch": {
+    "path": "CAM Examples/tutorial_parts/Mill/mill3axii_5.sldprt",
+    "configuration": "Contents/Config-0",
+    "stream_bytes": 96170,
+    "stream_sha256": "74e90b15345e4a30c07cd74f39bbf87cf6905cb646bf2444fcf11914e35e5c40",
+    "expected_known_bytes": 51395,
+    "observed_known_bytes": 84979,
+    "expected_unknown_bytes": 44775,
+    "observed_unknown_bytes": 11191
+  },
+  "corrections": [
+    "The first run could not find the container default cache and lacked pefile. The copied existing signature cache was staged at cache/keytable.json without installing dependencies or patching readers.",
+    "The corrected run reached the unchanged per-file accounting assertion. No baseline was updated and the failure remains visible."
+  ],
+  "qualification": "The original source test stops at the first mismatch. Its asserted 906-stream/53900337-byte aggregate is not a measured current-source result. The independent Rust retained-packet acceptance remains separately recorded. No issue closure or parity completion is claimed."
+}

@@ -73,3 +73,12 @@ matches its original input manifest; this was not fresh extraction or a new
 Python-source run. Earlier failed Rust checkpoints and reference-only results
 remain historical evidence. Other archive/version contexts, source-wide parity,
 native application and geometry acceptance remain separate requirements.
+
+The unchanged current Python regression was also replayed from frozen sources.
+It failed a known-byte accounting assertion before completing its corpus loop:
+84,979 observed bytes versus51,395 in the pinned audit for the first stream.
+The other two original tests passed. [Current source verification](current-source-verification.json)
+retains the failed run, exact inputs and immutable snapshot; Bug
+[#177](https://github.com/Oblikovati/Bessemer/issues/177) tracks the discrepancy.
+The asserted906-stream aggregate is not a measured passing source result.
+No parser, expected result or historical baseline was changed to hide it.
