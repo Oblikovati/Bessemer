@@ -80,7 +80,6 @@
   ],
   "pending": [
     "Complete typed conditional style comparator and independent operation oracle",
-    "Full336 integrated Source replay",
     "Remaining feature166 models",
     "Exact publication-head cargo xtask pr and all five platform gates"
   ],
@@ -108,5 +107,22 @@
         "sha256": "f1d63caf65b78f6b3b4acb0809b01266e79ffb049d677c54c85112321485bad5"
       }
     ]
+  },
+  "full_integrated_source": {
+    "checks": 336,
+    "seconds": 566.186,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "accepted_source_cut": "a0e62ea608a059e036aba451d7c5c95f2b9fec69",
+    "log": {
+      "path": "target/style-comparison-source-full.log",
+      "bytes": 72424,
+      "sha256": "c97270c7b05a01aa946a96a4418e65ea62d880d0d22aacf71b484ff20b5bf51a"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 634468,
+      "sha256": "9010175a40a5db53f3809241cde3ff26a0727123216e063ffa987e5260ac9403"
+    }
   }
 }
