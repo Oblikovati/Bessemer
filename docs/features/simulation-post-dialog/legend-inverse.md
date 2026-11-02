@@ -70,7 +70,8 @@ serial replay; two fresh processes matched202,785 original-history/result words,
 811,140bytes, against independent expected fixtures. The
 [operation record](legend-inverse-operation-verification.json) and
 [process proof](legend-inverse-process-verification.json) retain the exact gates.
-Full operation replay, publication acceptance and remaining feature166 work are
-pending.
+Full operation Source replay passed331 checks in541.752seconds and exited
+successfully after snapshot cleanup. Publication acceptance and remaining
+feature166 work are pending.
 
 Humanizer is unavailable in this checkout; maintainer prose review remains pending.
