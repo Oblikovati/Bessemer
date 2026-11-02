@@ -1,5 +1,11 @@
 # Dialog and standalone post-processing interoperability (#166)
 
+The [acceptance audit](acceptance-audit.md) maps current documented clauses to
+implementation and independent evidence. The latest full Source replay passed338
+checks; the consolidated native-fixture Rust suite passed355 tests in37 harnesses
+with no failures or ignored cases. Publication gates and whole-format parity
+remain separate.
+
 This feature covers the complete DGXPOST dialog grammar, standalone PostInfo and
 PostStyle carriers, and their documented stored-field roles and bounded derived
 views. C-766 through C-770 establish the staged dialog framing. C-840 establishes
