@@ -82,3 +82,17 @@ retains the failed run, exact inputs and immutable snapshot; Bug
 [#177](https://github.com/Oblikovati/Bessemer/issues/177) tracks the discrepancy.
 The asserted906-stream aggregate is not a measured passing source result.
 No parser, expected result or historical baseline was changed to hide it.
+
+A separate diagnostic mode measures every original row without replacing that
+failing test. Run `freeze_current_resolved.py --measure` for the measurement;
+the default command continues to run the original tests. Two fresh diagnostic
+processes completed all906 frames and produced byte-identical outcomes. Every
+case's model header, configuration, CMgr and feature hash matches the Rust
+retained-input manifest:3,624 exact stream hashes.
+
+All906 known-byte counts differ from the older audit. The current measured
+sum is75,659,073 bytes,21,758,736 above its53,900,337-byte expectation.
+[Measurement verification](current-source-measurement-verification.json)
+retains every row, both source snapshots and logs. This establishes the scope
+of Bug #177; it does not review or adopt the changed semantic accounting.
+The original failure and historical baselines remain intact.

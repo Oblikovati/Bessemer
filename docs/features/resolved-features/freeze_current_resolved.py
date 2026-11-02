@@ -2,6 +2,7 @@
 from pathlib import Path
 import hashlib
 import importlib
+from functools import partial, update_wrapper
 import sys
 import tempfile
 import unittest
@@ -11,6 +12,7 @@ for folder in ('model-archives', 'simulation-binary-thermal'):
     sys.path.insert(0, str(FEATURE.parent / folder))
 from pinned_reference_tests import SOURCE, FrozenSourceImports, copy_sources, record_snapshot
 from native_carriers import pinned_auxiliaries
+from current_resolved_measurement import measure_current_resolved_corpus
 
 RESOLVED_REPORT_PINS = {
     'resolved-library-audit-0.382.json': '69e35d935f644fb5297e58974de703aee99fa41c48cae3c4f0f9ebb2e87dae7c',
@@ -21,6 +23,7 @@ RESOLVED_REPORT_PINS = {
 def copy_resolved_test_inputs(pin: Path) -> None:
     """Bind reports and the container's default cache without patching readers; e.g. copy_resolved_test_inputs(pin)."""
     cached = (pin / 'keytable.json').read_bytes()
+    assert hashlib.sha256(cached).hexdigest() == '3d4b864346a859652b8662655479d8669556db28434da9ed15ba7bf9c677fac7', pin
     cache = pin / 'cache/keytable.json'
     if cache.exists():
         assert cache.read_bytes() == cached, f'{cache}; expected unchanged frozen signature cache'
@@ -38,6 +41,16 @@ def copy_resolved_test_inputs(pin: Path) -> None:
             destination.write_bytes(raw)
 
 
+def current_resolved_suite(pin: Path) -> unittest.TestSuite:
+    """Keep the original failing gate separate from diagnostic measurement; e.g. current_resolved_suite(pin)."""
+    suite = unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module('test_resolvedcoverage'))
+    assert suite.countTestCases() == 3, f'{suite.countTestCases()}; expected all three original resolved tests'
+    if '--measure' not in sys.argv:
+        return suite
+    measure = update_wrapper(partial(measure_current_resolved_corpus, pin), measure_current_resolved_corpus)
+    return unittest.TestSuite([unittest.FunctionTestCase(measure)])
+
+
 def run_current_resolved() -> bool:
     """Run every original test without replacing parser functions or expectations; e.g. run_current_resolved()."""
     with tempfile.TemporaryDirectory(prefix='bessemer-current-resolved-') as temporary:
@@ -46,13 +59,12 @@ def run_current_resolved() -> bool:
         pinned_auxiliaries(pin, hashes)
         copy_resolved_test_inputs(pin)
         sys.meta_path.insert(0, FrozenSourceImports(pin))
-        suite = unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module('test_resolvedcoverage'))
-        assert suite.countTestCases() == 3, f'{suite.countTestCases()}; expected all three original resolved tests'
-        result = unittest.TextTestRunner(verbosity=2).run(suite)
+        result = unittest.TextTestRunner(verbosity=2).run(current_resolved_suite(pin))
         copy_resolved_test_inputs(pin)
         record_snapshot(pin, hashes, result, FEATURE, ('test_resolvedcoverage', 'resolvedfeatures', 'swcover'),
                         ('swcontainer', 'mfcobjects'))
-        (FEATURE / 'fixture-reference-snapshot.json').replace(FEATURE / 'current-source-snapshot.json')
+        name = 'current-measured-source-snapshot.json' if '--measure' in sys.argv else 'current-source-snapshot.json'
+        (FEATURE / 'fixture-reference-snapshot.json').replace(FEATURE / name)
         return result.wasSuccessful()
 
 
