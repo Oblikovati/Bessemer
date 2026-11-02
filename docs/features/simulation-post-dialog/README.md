@@ -544,5 +544,7 @@ The [A8 preference evidence](legend-inverse.md) retains the noninvertible zero
 test and the setter's runtime plot-type exceptions separately from wire values.
 Typed local plans retain original inputs, exact read/store coverage and completed
 empty assignments without emulating the remaining preference methods.
+The [conditional style-comparison evidence](style-comparison.md) retains native
+dependency order, delegated comparison identities and unchanged wire controls.
 The [reader-selection baseline](reader-selection.md) keeps existing mode priority
 and captured callback inputs pinned as further models are added.
