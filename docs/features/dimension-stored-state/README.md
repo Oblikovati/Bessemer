@@ -91,9 +91,11 @@ dimensions while reconstructing both carriers for all 906 cases. The original
 private/public reconstruction gate also passes. Every feature count binds by
 stream identity and complete hash to its original per-stream C-1923 identifier
 gain; [native bindings](native-bindings-verification.json) retain every row.
-Historical accounting is unchanged. Local repository and exact-publication-head
-platform/ThreadSanitizer gates remain required; this operation does not claim
-whole-format parity or native application/geometry acceptance.
+Historical accounting is unchanged. The [repository PR gate](repository-pr-verification.json)
+also passed on the committed runtime: 3,862 tests passed, zero failed and
+196 were ignored across 306 summaries. Fresh exact-publication-head
+local/platform/ThreadSanitizer gates remain required. This operation does not
+claim whole-format parity or native application/geometry acceptance.
 
 Run the source checks from the repository root:
 
