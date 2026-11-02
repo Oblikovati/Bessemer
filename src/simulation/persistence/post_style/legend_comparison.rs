@@ -121,7 +121,7 @@ fn missing_color(index: usize) -> crate::BessemerError {
     )
 }
 
-fn scalar_differs(left: u32, right: u32) -> bool {
+pub(super) fn scalar_differs(left: u32, right: u32) -> bool {
     SimulationRgbaColor::from_bits([left, 0, 0, 0])
         .different_masked_exceptions_daz_off(SimulationRgbaColor::from_bits([right, 0, 0, 0]))
 }
