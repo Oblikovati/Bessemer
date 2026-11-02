@@ -13,12 +13,13 @@ def legend_body_capture(path: Path, method: dict[str, object], module_sha256: st
     assert record['authority'] == 'shipped-artifact' and record['confidence'] == 'observed'
     result = record['normalized_result']
     assert record['raw_result']['value'] == result
+    instructions = result['instructions'] if 'instructions' in result else result['assembly']
     expected = ['0x' + line.split()[0] for line in cast(list[str], method['instructions'])]
-    assert [line.split(':', 1)[0] for line in result['instructions']] == expected
+    assert [line.split(':', 1)[0] for line in instructions] == expected
     body = result['procedure']['body']
     assert body['available'] and body['contains_entry'] and not body['non_contiguous']
     start, end = (int(cast(str, method[key]), 16) for key in ('start', 'end'))
     assert body['ranges'] == [dict(start=hex(start), end=hex(end - 1))]
     assert body['total_bytes'] == body['span_bytes'] == end - start
     return dict(path=path.name, sha256=digest(path.read_bytes()), evidence_id=record['evidence_id'],
-        instructions=len(result['instructions']), limitations=record['limitations'])
+        instructions=len(instructions), limitations=record['limitations'])
