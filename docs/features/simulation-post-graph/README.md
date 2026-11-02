@@ -100,3 +100,13 @@ historical writer equivalence, dialog and auxiliary streams, geometry validation
 and whole-format parity remain unproven.
 
 Humanizer was unavailable; maintainer prose review remains pending.
+
+A fresh replay before serialized publication passed all15 source checks against
+the current documentation and retained all224 native arguments. Two fresh
+combined-root Rust processes each passed all18 focused tests with no ignored
+checks. Their complete field and edit-history exports matched each other and
+the independent owned/native packets byte for byte; both hashes also match
+the earlier acceptance run. [Publication source verification](publication-source-verification.json)
+records the new snapshot, binary and logs. The historical source snapshot is
+preserved. This refresh does not replace the required exact publication-head
+Cargo and platform gates; PR #176 remains the sole publication PR.
