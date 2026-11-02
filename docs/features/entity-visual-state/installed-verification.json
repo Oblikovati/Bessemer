@@ -1,0 +1,90 @@
+{
+  "issue": 181,
+  "stage": "Installed-image and unchanged original source acceptance; complete operation/caller gates pending",
+  "source_command": "python -B -X utf8 docs/features/entity-visual-state/freeze_visual_state.py",
+  "exit_code": 0,
+  "process_reaped": true,
+  "source_checks": 118,
+  "unchanged_original_tests": 114,
+  "separate_evidence_checks": 4,
+  "source_seconds": 39.97,
+  "baseline_write_mode": false,
+  "source_python_files": 5103,
+  "source_identity": "99c84c47f7ba695f0a477771255dfe89a1401c8ce4ed2ef559af4060af54ada6",
+  "source_snapshot": {
+    "path": "docs/features/entity-visual-state/source-snapshot.json",
+    "bytes": 635430,
+    "sha256": "5571d544f7ec87d9c0fbbd90eb9480a2db591437c2f7c91a07872861b36df52e"
+  },
+  "installed_reference": {
+    "path": "docs/features/entity-visual-state/installed-reference.json",
+    "bytes": 37722,
+    "sha256": "153e45c40edebe0cd7ddc3daefce305aca90b03bf717c91dd1c912398a6b1093"
+  },
+  "modules": 3,
+  "reported_intervals": 93,
+  "reported_interval_bytes": 13962,
+  "reported_bytes_include_overlapping_captures": true,
+  "explicit_named_bindings": 45,
+  "recorded_import_sites": 7,
+  "renderer_provider_links": 2,
+  "normalizer_constants": 1,
+  "all_declared_export_names_parsed_in_full": true,
+  "target_executed": false,
+  "coverage_credit": 0,
+  "provider": "Existing pefile reader; ordinary static observations, not fresh REA Evidence",
+  "original_foundation_revision": "fd79eed121bc6474c9dbc55dee41712f659811ce",
+  "source_support": [
+    {
+      "path": "docs/features/entity-visual-state/freeze_visual_state.py",
+      "bytes": 2517,
+      "sha256": "359a89c308d6c833d91d533a21cdfcd71580b2cc5ad55f39e8bb1ed513ef1884"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_native.py",
+      "bytes": 2689,
+      "sha256": "8a5eaf74ccd0d47a1fd48a82526a072d2b6f38828ec586f06daa1f856405b86f"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_native_catalog.py",
+      "bytes": 4408,
+      "sha256": "168dd9e2a0c0f1f9e592d0f264e549cc52eb07572b908b7b2c25d278bdb80576"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_native_image.py",
+      "bytes": 4602,
+      "sha256": "f21fddb4ddc50dd8ca63b1c675afdbc0f733ebb4d5f068188d4fa30095266e4c"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_state_evidence.py",
+      "bytes": 3961,
+      "sha256": "3ef9bc94140d66d296b66ac145d26dd5339f437c514b621814d8a46d2018d156"
+    }
+  ],
+  "borrowed_pe_name_reader": {
+    "path": "docs/features/dimension-stored-state/dimension_state_native.py",
+    "bytes": 4990,
+    "sha256": "0cf2bdafeebd8c9b26854e869ee972e868f888a48bd2e79948df16d31313e5e3"
+  },
+  "logs": [
+    {
+      "path": "target/entity-visual-state-native-initialize.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/entity-visual-state-installed-source.log",
+      "bytes": 18107,
+      "sha256": "4d8dcad1ea9cf5e95e0031f8266c885efda4eecb6a882d040383194c300aae15"
+    }
+  ],
+  "qualifications": [
+    "Every original report range is checked at its complete reported extent; overlapping captures are not presented as unique code bytes.",
+    "All images, full names, explicit bindings, recorded IAT operands and the original native float constant match without loading target code.",
+    "The two renderer imports resolve to named exports whose provider entry intervals are also captured and checked.",
+    "Current Source readers and tests remain separate from the historical source/accounting revisions in retained reports.",
+    "Independent complete owned carrier/edit oracles, the runtime API, caller corpus/operation gates and exact-head publication remain pending.",
+    "PR180 remains the sole publication PR; no new publication branch or PR was created.",
+    "Humanizer unavailable; prose pass pending maintainer review."
+  ]
+}

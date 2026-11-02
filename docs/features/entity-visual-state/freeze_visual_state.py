@@ -12,6 +12,7 @@ sys.path.insert(0, str(FEATURE.parents[2] / 'target/reference-python'))
 from pinned_reference_tests import FrozenSourceImports, copy_sources, record_snapshot
 from dimension_state_evidence import stage_dimension_assets
 from visual_state_evidence import verify_visual_readers, verify_visual_clauses, verify_visual_reports
+from visual_native import verify_visual_installed
 
 VISUAL_TEST_MODULES = ('test_feature_update_time', 'test_modelfeatures', 'test_node_state_fields',
     'test_node_tooltip', 'test_sketchprefix', 'test_modelboundary', 'test_camerafeatures',
@@ -20,7 +21,7 @@ VISUAL_TEST_MODULES = ('test_feature_update_time', 'test_modelfeatures', 'test_n
 
 def run_visual_checks() -> unittest.TestResult:
     """Run every original related test beside separate evidence checks; e.g. run_visual_checks()."""
-    checks = (verify_visual_readers, verify_visual_clauses, verify_visual_reports)
+    checks = (verify_visual_readers, verify_visual_clauses, verify_visual_reports, verify_visual_installed)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
     for name in VISUAL_TEST_MODULES:
         original = unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module(name))

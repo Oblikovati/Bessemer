@@ -37,10 +37,20 @@ all 906 feature-stream identities, 127,773 physical visual reads and their
 894,411-byte unknown charge. Its historical accounting totals are preserved,
 without adopting them as current Source accounting or claiming new byte credit.
 
-Installed-image corroboration, independent complete owned carrier/edit oracles,
-the public typed operation and retained-corpus/caller acceptance remain pending.
-The foundation does not claim any of those gates from copied native evidence.
-The [design notes](design.md) retain the complete caller and verification scope.
+The [installed-image check](installed-verification.json) subsequently passed all
+118 checks, including every original test. Three pinned DLLs match all 93
+reported intervals totaling 13,962 bytes, 45 explicit named bindings, seven
+import call sites, the raw RGB normalization constant and both renderer/provider
+links. All declared export names were read in full, avoiding the PE reader's
+default count limit and name preview. Overlapping report captures remain
+separate; the byte total is the sum of reported intervals. These are ordinary
+static observations with the existing PE reader, not fresh REA Evidence. CAD
+code was not loaded or executed, and no semantic byte credit was added.
+
+The initial 117-check foundation record binds its snapshot and support hashes to
+its original Git revision. Independent complete owned carrier/edit oracles, the
+public typed operation and retained-corpus/caller acceptance remain pending.
+The [design notes](design.md) retain that complete caller and verification scope.
 
 Run the source checks from the repository root:
 
