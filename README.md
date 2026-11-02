@@ -762,6 +762,11 @@ preserves optional A8 and projects the lossy preference word0 zero test.
 `SimulationLegendPreferenceRuntime::project_local_a8_assignment` requires explicit
 runtime plot/preference facts and preserves the setter's early-return branches.
 
+[`style_comparison_state`](docs/features/simulation-post-dialog/style-comparison.md)
+preserves optional style/legend facts. Its `compare_masked_exceptions_daz_off`
+operation follows the complete native dependency order, reports the first
+difference and retains both source states without applying load-time defaults.
+
 `legend_step_inputs` preserves the optional FC layout switch. The separate
 [`SimulationLegendStepRuntime::step_availability`](docs/features/simulation-post-dialog/legend-step.md)
 operation requires explicit runtime plot words, retains raw signed BEC returns

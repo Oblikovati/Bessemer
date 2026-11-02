@@ -4,7 +4,7 @@ from collections.abc import Callable, Mapping, Sequence
 DialogReaderProvider = Callable[[], tuple[str, ...]]
 DialogReaderSuffix = tuple[tuple[str, ...], tuple[str, ...]]
 DIALOG_EARLY_READER_SUFFIXES: tuple[DialogReaderSuffix, ...] = (
-    (('--style-comparison-only',), ('cosworks_post_info_layout', 'cosworks_post_style_layout')),
+    (('--style-comparison-only',), ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_legend_comparison', 'cosworks_color_comparison', 'cosworks_post_color_fields')),
     (('--legend-inverse-only',), ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_legend_inverse_preference')),
     (('--legend-grouping-only',), ('cosworks_post_info_layout', 'cosworks_post_style_layout')),
     (('--legend-resets-only',), ('cosworks_post_info_layout', 'cosworks_post_style_layout', 'cosworks_legend_read_resets')),

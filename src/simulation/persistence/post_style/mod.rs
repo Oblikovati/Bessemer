@@ -1,6 +1,7 @@
 //! Complete versioned PostStyle and embedded legacy/modern legend profiles (#166).
 mod archive;
 mod colors;
+mod comparison;
 mod contracts;
 mod coverage;
 mod decode;
@@ -30,6 +31,7 @@ pub use super::thermal::{
     SimulationThermalRelation as SimulationPostStyleRelation,
 };
 pub use archive::SimulationPostStyle;
+pub use comparison::*;
 pub use contracts::SimulationPostStyleEdit;
 pub use legend_state::SimulationLegendComparisonState;
 pub use types::{SimulationPostStyleCompletion, SimulationPostStyleCoverage};
