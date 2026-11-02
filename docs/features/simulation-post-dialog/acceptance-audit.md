@@ -10,7 +10,10 @@ The consolidated Rust/native-fixture run passed355 tests across37 harnesses,
 with zero failures or ignored tests. All34 exports matched their independent
 process-proof hashes; [consolidated verification](consolidated-native-verification.json)
 records exact scope,logs and the corrected exporter configuration. Repository-wide
-and publication gates remain separate.
+`cargo xtask pr` also passed locally:3802 passed,zero failed,192 ignored across303
+test summaries. The [repository gate proof](repository-pr-verification.json)
+records the unchanged Rust/test trees and explicitly separates the ignored
+cases from the complete native-fixture run. Publication gates remain separate.
 
 | Specification | Local implementation and bounded scope | Evidence |
 |---|---|---|
