@@ -348,15 +348,24 @@
   "publication_gate": "Pending exact feature166 publication-head cargo xtask pr and all five required checks; feature163 merged through PR173 and feature166 remains queued behind164/165",
   "broader_goal_remaining": [
     "Feature174 typed legacy POSTPLOTDLG carrier14.459/14.526 passed local operation/process checks; its publication/platform acceptance remains pending",
-    "Material/EGR clauses14.512\u2013522 require separate scope audit",
+    "Historical MaterialList body grammar14.458/14.512\u2013513 remains unbound; feature175 retains original failures and candidate noncompletion",
     "251 additional legacy cwPostDlgParam carriers remain unresolved under retained version contexts",
-    "Native application/writer equivalence,universal runtime selection and whole-format parity are unproven"
+    "Native application/writer equivalence,universal runtime selection and whole-format parity are unproven",
+    "Existing EGR conditional profile14.514\u2013522 passed the separate current scope audit; native complete fixtures and cache/save equivalence remain unproven"
   ],
   "separate_legacy_plot_acceptance": {
     "issue": 174,
     "runtime_source_cut": "b27da6cf0f22001a4fba7c77e450f7d6c69e6ee0",
     "operation_proof": "../simulation-legacy-plot/operation-verification.json",
     "process_proof": "../simulation-legacy-plot/process-pair-verification.json",
+    "included_in_feature166_scope": false
+  },
+  "separate_egr_scope_audit": {
+    "issue": 124,
+    "source_checks": 8,
+    "current_focused_tests": 18,
+    "native_complete_fixtures": 0,
+    "scope_audit": "../simulation-egr/scope-audit.md",
     "included_in_feature166_scope": false
   }
 }

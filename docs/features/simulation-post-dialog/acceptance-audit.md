@@ -86,9 +86,11 @@ rejected; no version is lowered to manufacture acceptance.
 The distinct legacy plot carrier14.459/14.526 now has its own typed codec in
 feature174, with [local operation acceptance](../simulation-legacy-plot/operation-verification.json)
 and [process proof](../simulation-legacy-plot/process-pair-verification.json).
-Its publication/platform gates remain separate from feature166. Material/EGR
-clauses14.512–522 still require a separate scope audit. These are not counted
-as completed by this feature166 audit.
+Its publication/platform gates remain separate from feature166. The
+[EGR scope audit](../simulation-egr/scope-audit.md) confirms the existing bounded
+implementation of14.514–522 and retains its native-fixture/cache/save limits.
+MaterialList14.458/14.512–513 still lacks a bound historical body grammar and
+is tracked in feature175. Neither is counted as completed by this feature166 audit.
 Native application/writer equivalence,universal runtime version selection and
 whole-format parity remain unproven.
 
