@@ -1,0 +1,62 @@
+{
+  "issue": 175,
+  "stage": "Immutable original source tests and report/schema pins only",
+  "checks": 11,
+  "original_tests": 9,
+  "initialization_and_strict_replay_passed": true,
+  "snapshot": {
+    "file": "source-snapshot.json",
+    "sha256": "873dded8f846d70f0f649b4d4a73795fdd6f9d7750fc98a78b2f5d90be0591de",
+    "identity": "0ec15c472733c060ae0d09dbacde25841ec65af8b6724b39d274c6b1043123b0"
+  },
+  "logs": [
+    {
+      "path": "target/legacy-material-foundation-source.log",
+      "bytes": 1540,
+      "sha256": "099abbd8edf82bd2d48c138157726b18b4315129d5bc20bc9fbb5d883c19c75e",
+      "exit_code": 0,
+      "process_reaped": true
+    },
+    {
+      "path": "target/legacy-material-foundation-strict-source.log",
+      "bytes": 1540,
+      "sha256": "64295bb0660e4ce91ad7f7595838a7c5c3491c47d3219cd48c9d90abf4696ba4",
+      "exit_code": 0,
+      "process_reaped": true
+    }
+  ],
+  "clauses": [
+    {
+      "section": "14.458",
+      "file": "schema-14.458.md",
+      "bytes": 3725,
+      "sha256": "2368b8666f88d7a284da7c783b51eac3fe29e1570c756095da3fd669c0cc83c0"
+    },
+    {
+      "section": "14.512",
+      "file": "schema-14.512.md",
+      "bytes": 3275,
+      "sha256": "b03261a0a41683d302a33c7baa1f2c3d677238e1ce6ea7db02b92873251b791c"
+    },
+    {
+      "section": "14.513",
+      "file": "schema-14.513.md",
+      "bytes": 2221,
+      "sha256": "218e6b612ca3229ecb25a6a7045c0120bb7cadd9deb57e495ceb15ba47aa65ec"
+    }
+  ],
+  "retained": {
+    "streams": 70,
+    "bytes": 20426,
+    "header_bytes": 6902,
+    "unread_after_header": 13524,
+    "complete_schema_records": 0,
+    "candidate_eof_streams": 70
+  },
+  "exclusions": [
+    "No fresh native extraction or current installed function verification yet",
+    "No bound historical body serializer",
+    "No Rust legacy codec or production fallback",
+    "No native writer equivalence or whole-format parity"
+  ]
+}
