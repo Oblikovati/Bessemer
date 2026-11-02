@@ -84,5 +84,29 @@
     "Remaining feature166 models",
     "Exact publication-head cargo xtask pr and all five platform gates"
   ],
-  "prose_review": "Humanizer unavailable; maintainer review pending."
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "legend_constructor_extraction": {
+    "public_behavior_changed": false,
+    "public_api_added": false,
+    "owned_tests_passed": 7,
+    "native_tests_deferred": 3,
+    "fixture_changes": false,
+    "log": {
+      "path": "target/style-comparison-legend-extraction.log",
+      "bytes": 1331,
+      "sha256": "3434f73493c07d97238ba43113230b119da9a1d2da859f6bc547fecd48ad7959"
+    },
+    "owned_fixtures": [
+      {
+        "path": "tests/fixtures/simulation-post-dialog/legend-comparison.bin",
+        "bytes": 4390604,
+        "sha256": "85e8a69d20a2d49f3a1ba16ebdcfa9e0f220c81e9ccfc67f551a4b2fd0e1f747"
+      },
+      {
+        "path": "tests/fixtures/simulation-post-dialog/legend-style-projection.bin",
+        "bytes": 128900,
+        "sha256": "f1d63caf65b78f6b3b4acb0809b01266e79ffb049d677c54c85112321485bad5"
+      }
+    ]
+  }
 }

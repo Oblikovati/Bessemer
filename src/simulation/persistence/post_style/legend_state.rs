@@ -19,19 +19,23 @@ pub struct SimulationLegendComparisonState {
 impl SimulationLegendComparisonState {
     /// Capture explicit named runtime inputs without defaults; e.g. `Self::from_fields(style.fields())?`.
     pub fn from_fields(fields: &[SimulationPostStyleField]) -> Result<Self> {
+        Self::from_word_reader(|path| comparison_input(fields, path))
+    }
+
+    pub(super) fn from_word_reader<F>(mut read_word: F) -> Result<Self>
+    where
+        F: FnMut(&str) -> Result<Option<u32>>,
+    {
         let mut state = Self {
             words: [None; 16],
             channels: [None; 48],
         };
         for (slot, offset) in state.words.iter_mut().zip(WORD_OFFSETS) {
-            *slot = comparison_input(fields, &format!("legend.word_{offset:x}"))?;
+            *slot = read_word(&format!("legend.word_{offset:x}"))?;
         }
         for (index, slot) in state.channels.iter_mut().enumerate() {
             let offset = COLOR_OFFSETS[index / 4];
-            *slot = comparison_input(
-                fields,
-                &format!("legend.color_{offset:x}.component_{}", index % 4),
-            )?;
+            *slot = read_word(&format!("legend.color_{offset:x}.component_{}", index % 4))?;
         }
         state.require_whole_colors()?;
         Ok(state)
