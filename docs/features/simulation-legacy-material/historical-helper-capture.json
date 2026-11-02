@@ -1,0 +1,116 @@
+{
+  "module_sha256": "f4cf8adfc0f6e2e36c3a29765d28bd0d073f952e5078c5dcc7cc0d5a0d409c36",
+  "provider": "Existing GNU objdump CLI and pefile; not REA Evidence",
+  "tool_sha256": "df8f3cafcf792e219c8e3ba809cb5b5d32d5d7eefe9b6552e6b230f0c0b61646",
+  "begin": "0x1816e1160",
+  "end": "0x1816e12f4",
+  "bytes": 404,
+  "raw_hex": "405641564883ec4848895c2468488bf248896c2470488d512048897c24404c8bf14c89642438488bce0f297424200f28f2ff1521f38400488bc8498d5628ff1514f38400488bc8498d5630ff1517f38400488bc8498d5634ff150af38400488bc8498d5638ff15fdf28400488bc8498d563cff15f0f28400498d5648488bceff15d3f28400488bc8498d5650ff15c6f28400488bc8498d5658ff15b9f28400488bc8488d542460ff15bbf28400488bc8498d5660ff159ef2840033ed41396e307e644c897c2430660f1f8400000000004863c5498d9e00010000bf100000004c8d3c404a8d1cfb660f1f840000000000488bd3488bceff153cfb840048ffc34883ef0175eb498d9610010000488bce4a8d14faff1567f18400ffc5413b6e307caf4c8b7c24304c8b642438498d9e980b0000488b6c2470bf180000000f1f4000488bd3488bceff150cf284004883c3084883ef0175ea660f2f35ca099d00488b7c2440488b5c24680f28742420720d498d5608488bceff15dcf184008b442460498bce41894668e8e453ffff4883c448415e5ec3",
+  "raw_sha256": "4eada7654e38e073d5b73ea485e76f3317bfb7765d9ef37c5f2fca95a3946508",
+  "unwind_fragments": [
+    {
+      "begin": "0x1816e1160",
+      "end": "0x1816e1168",
+      "unwind_rva": "0x24c9fe8",
+      "header_hex": "01080300",
+      "chained_parent": null
+    },
+    {
+      "begin": "0x1816e1168",
+      "end": "0x1816e1170",
+      "unwind_rva": "0x24c9ff4",
+      "header_hex": "21050200",
+      "chained_parent": [
+        "0x16e1160",
+        "0x16e1168",
+        "0x24c9fe8"
+      ]
+    },
+    {
+      "begin": "0x1816e1170",
+      "end": "0x1816e1222",
+      "unwind_rva": "0x24ca008",
+      "header_hex": "211e0800",
+      "chained_parent": [
+        "0x16e1168",
+        "0x16e1170",
+        "0x24c9ff4"
+      ]
+    },
+    {
+      "begin": "0x1816e1222",
+      "end": "0x1816e1286",
+      "unwind_rva": "0x24ca028",
+      "header_hex": "21050200",
+      "chained_parent": [
+        "0x16e1170",
+        "0x16e1222",
+        "0x24ca008"
+      ]
+    },
+    {
+      "begin": "0x1816e1286",
+      "end": "0x1816e12a0",
+      "unwind_rva": "0x24ca03c",
+      "header_hex": "21000000",
+      "chained_parent": [
+        "0x16e1170",
+        "0x16e1222",
+        "0x24ca008"
+      ]
+    },
+    {
+      "begin": "0x1816e12a0",
+      "end": "0x1816e12cf",
+      "unwind_rva": "0x24ca04c",
+      "header_hex": "21000400",
+      "chained_parent": [
+        "0x16e1168",
+        "0x16e1170",
+        "0x24c9ff4"
+      ]
+    },
+    {
+      "begin": "0x1816e12cf",
+      "end": "0x1816e12f4",
+      "unwind_rva": "0x24ca064",
+      "header_hex": "21000000",
+      "chained_parent": [
+        "0x16e1160",
+        "0x16e1168",
+        "0x24c9fe8"
+      ]
+    }
+  ],
+  "imports": {
+    "0x181f303e0": "??5CwPersistStream@@QEAAAEAV0@AEAN@Z",
+    "0x181f304b8": "??5CwPersistStream@@QEAAAEAV0@AEAV?$CStringT@_WV?$StrTraitMFC_DLL@_WV?$ChTraitsCRT@_W@ATL@@@@@ATL@@@Z",
+    "0x181f304c8": "??5CwPersistStream@@QEAAAEAV0@AEAH@Z",
+    "0x181f30d98": "??5CwPersistStream@@QEAAAEAV0@AEAD@Z"
+  },
+  "constants": [
+    {
+      "address": "0x181f61f48",
+      "raw_hex": "00000000026a2841",
+      "value": 800001.0
+    },
+    {
+      "address": "0x1820b1c88",
+      "raw_hex": "00000000006a2841",
+      "value": 800000.0
+    }
+  ],
+  "output_sha256": "69b623d413ee8ec1f6508f6d90c7d634b377d44792d6af63a3385f7877896d68",
+  "observations": {
+    "property_identifier_char_calls": 16,
+    "property_value": "double extraction",
+    "trailing_string_calls": 24,
+    "extra_text08_minimum_version": 800000,
+    "current_reader_delegates_below_version": 800001,
+    "candidate_observed_trailing_strings": 21
+  },
+  "qualification": "Seven contiguous chained unwind fragments resolve to the same root. Neighboring functions at1816e1300 and1816e1370 are excluded. Static calls do not prove callee behavior, exceptions, historical producer identity or candidate compatibility.",
+  "historical_candidate_body_bound": false,
+  "target_executed": false,
+  "completed_schema_records": 0
+}

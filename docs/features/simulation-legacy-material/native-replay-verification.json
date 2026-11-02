@@ -1,0 +1,58 @@
+{
+  "issue": 175,
+  "stage": "Fresh retained native replay and static older-helper distinction",
+  "strict_checks": 15,
+  "strict_elapsed_seconds": 2.851,
+  "strict_exit_code": 0,
+  "process_reaped": true,
+  "streams": 70,
+  "payload_bytes": 20426,
+  "original_current_model_failures": 70,
+  "original_candidate_eof": 70,
+  "identifier_records": 196,
+  "nonzero_identifier_suffixes": 182,
+  "source_hash_exceptions": 0,
+  "completed_schema_records": 0,
+  "historical_candidate_body_bound": false,
+  "target_executed": false,
+  "artifacts": [
+    {
+      "path": "docs/features/simulation-legacy-material/source-snapshot.json",
+      "bytes": 619601,
+      "sha256": "d782f595bb521496ddcd1f62d421a02806037adc3f1d2791711edbf374125d0c"
+    },
+    {
+      "path": "docs/features/simulation-legacy-material/native-replay-reference.json",
+      "bytes": 930544,
+      "sha256": "fb6dd0d2ea68f853276f3fa348a146279f5e6a618258eb3954a5c7c396906225"
+    },
+    {
+      "path": "docs/features/simulation-legacy-material/installed-current-reader-reference.json",
+      "bytes": 2220,
+      "sha256": "a2508583aca5d514f8ff25220a77a43145c56f325ffdd2aeeb085670f22ac464"
+    },
+    {
+      "path": "docs/features/simulation-legacy-material/historical-helper-capture.json",
+      "bytes": 4101,
+      "sha256": "3498746b728cf7a3c2c046f9f030051854eccfd83953748121a154779eacbbd0"
+    },
+    {
+      "path": "docs/features/simulation-legacy-material/historical-helper-objdump.txt",
+      "bytes": 5959,
+      "sha256": "69b623d413ee8ec1f6508f6d90c7d634b377d44792d6af63a3385f7877896d68"
+    }
+  ],
+  "logs": [
+    {
+      "path": "target/legacy-material-native-replay-source.log",
+      "bytes": 2116,
+      "sha256": "7679d46d28aa80c56124425f3648cfc38739313404f53fc138905fc84fc44665"
+    },
+    {
+      "path": "target/legacy-material-native-strict-source.log",
+      "bytes": 2322,
+      "sha256": "38a13ac487b237ed664c17face9da999390a6a376c204f52dccd703c44d20e70"
+    }
+  ],
+  "qualification": "The installed reader delegates below800001 to a helper with24 trailing strings and one extra text08 at800000. The21-string candidate is not bound to this helper. Original current-model failures are retained; no native reader execution is claimed."
+}

@@ -5,9 +5,30 @@ from operator import itemgetter
 import hashlib
 import json
 import struct
-import sys
 import pefile
-from legacy_material_evidence import FEATURE, RESEARCH, legacy_material_reports
+from legacy_material_evidence import RESEARCH, legacy_material_reports, legacy_material_baseline
+
+
+def verify_legacy_material_historical_capture() -> None:
+    """Keep the static historical-helper finding distinct from a body binding; e.g. verify_legacy_material_historical_capture()."""
+    folder = Path(__file__).resolve().parent
+    capture = json.loads((folder / 'historical-helper-capture.json').read_bytes())
+    module = Path('C:/Program Files/SOLIDWORKS Corp/SOLIDWORKS/Simulation/cosworks.dll')
+    raw = module.read_bytes()
+    assert hashlib.sha256(raw).hexdigest() == capture['module_sha256'], module
+    image = pefile.PE(data=raw, fast_load=True)
+    try:
+        start, end = int(capture['begin'], 16), int(capture['end'], 16)
+        observed = image.get_data(start - image.OPTIONAL_HEADER.ImageBase, end - start)
+        assert observed.hex() == capture['raw_hex'] and len(observed) == 404, capture['begin']
+        for constant in capture['constants']:
+            value = image.get_data(int(constant['address'], 16) - image.OPTIONAL_HEADER.ImageBase, 8)
+            assert value.hex() == constant['raw_hex'] and struct.unpack('<d', value)[0] == constant['value'], constant
+        listing = (folder / 'historical-helper-objdump.txt').read_bytes()
+        assert hashlib.sha256(listing).hexdigest() == capture['output_sha256'], folder
+        assert capture['historical_candidate_body_bound'] is False and capture['completed_schema_records'] == 0, capture
+    finally:
+        image.close()
 
 
 def legacy_material_function_rows() -> list[dict[str, str]]:
@@ -48,12 +69,21 @@ def verify_legacy_material_intervals(image: pefile.PE) -> list[dict[str, object]
     return observed
 
 
-def record_legacy_material_installed(value: dict[str, object]) -> None:
-    """Require unchanged current-route observations outside initialization; e.g. record_legacy_material_installed(report)."""
-    path = FEATURE / 'installed-current-reader-reference.json'
-    raw = (json.dumps(value, indent=2) + '\n').encode()
-    if '--write' in sys.argv: path.write_bytes(raw)
-    assert path.read_bytes() == raw, f'{path}; expected exact unchanged current-reader evidence'
+def verify_legacy_material_literal_pool(image: pefile.PE) -> int:
+    """Bind all nine spelling pointers without assigning wire property IDs; e.g. verify_legacy_material_literal_pool(image)."""
+    report = legacy_material_reports()[2]
+    matches = cast(dict[str, dict[str, object]], report['literal_matches'])
+    base = image.OPTIONAL_HEADER.ImageBase
+    for name, binding in matches.items():
+        address = int(cast(str, binding['pointer_address']), 16)
+        assert address == 0x18254f1b8 + 8 * cast(int, binding['pointer_table_slot']), binding
+        pointer = image.get_data(address - base, 8)
+        assert pointer.hex() == binding['pointer_raw_hex'], f'{name}/{pointer.hex()}; expected {binding}'
+        target = struct.unpack('<Q', pointer)[0]
+        assert hex(target) == binding['literal_address'], f'{name}/{target:x}; expected {binding["literal_address"]}'
+        literal = image.get_data(target - base, len(name) + 1)
+        assert literal.hex() == binding['literal_raw_hex'] and literal == name.encode('ascii') + b'\0', binding
+    return len(matches)
 
 
 def verify_legacy_material_installed() -> None:
@@ -67,11 +97,12 @@ def verify_legacy_material_installed() -> None:
     try:
         intervals = verify_legacy_material_intervals(image)
         calls = verify_legacy_material_call_targets(image)
+        spellings = verify_legacy_material_literal_pool(image)
         literal = 'MaterialList\0'.encode('utf-16le')
         observed = image.get_data(0x182064060 - image.OPTIONAL_HEADER.ImageBase, len(literal))
         assert observed == literal, f'{observed.hex()}; expected complete MaterialList UTF16 literal'
-        record_legacy_material_installed(dict(module_sha256=actual, recorded_intervals=intervals,
-            current_serializer_direct_calls=calls, material_list_literal_address='0x182064060',
+        legacy_material_baseline('installed-current-reader-reference.json', dict(module_sha256=actual, recorded_intervals=intervals,
+            current_serializer_direct_calls=calls, material_list_literal_address='0x182064060', corroborated_identifier_spellings=spellings,
             historical_candidate_body_bound=False, target_executed=False, completed_schema_records=0,
             inspection_provider='Existing pefile reader; REA objdump returned ERR_REA_WINDOWS_NATIVE'))
     finally:

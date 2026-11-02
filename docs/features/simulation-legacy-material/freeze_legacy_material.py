@@ -1,5 +1,6 @@
 """Freeze all original historical MaterialList tests before investigating body binding (#175)."""
 from pathlib import Path
+from functools import partial, update_wrapper
 import importlib
 import sys
 import tempfile
@@ -9,18 +10,24 @@ FEATURE = Path(__file__).resolve().parent
 ROOT = FEATURE.parents[2]
 sys.path.insert(0, str(FEATURE.parent / 'model-archives'))
 sys.path.insert(0, str(ROOT / 'target/reference-python'))
+for folder in ('simulation-binary-thermal', 'simulation-material', 'simulation-post-dialog', 'simulation-solid-inventory'):
+    sys.path.insert(0, str(FEATURE.parent / folder))
 from pinned_reference_tests import FrozenSourceImports, copy_sources, record_snapshot
 from legacy_material_evidence import verify_legacy_material_sources, verify_legacy_material_schema
-from legacy_material_bindings import verify_legacy_material_installed
+from legacy_material_bindings import verify_legacy_material_installed, verify_legacy_material_historical_capture
+from legacy_material_native import verify_legacy_material_inventory, replay_legacy_material_native
+from native_carriers import pinned_auxiliaries
 
 READERS = ('cosworks_material_layout', 'cosworks_legacy_material_header', 'cosworks_legacy_material_candidate', 'cosworkspersist')
 TESTS = ('test_cosworks_material', 'test_cosworks_legacy_material_header', 'test_cosworks_legacy_material_candidate')
 
 
-def run_legacy_material_checks() -> unittest.TestResult:
+def run_legacy_material_checks(pin: Path) -> unittest.TestResult:
     """Keep all nine actual original tests beside strict evidence checks; e.g. run_legacy_material_checks()."""
+    replay = update_wrapper(partial(replay_legacy_material_native, pin), replay_legacy_material_native)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in
-        (verify_legacy_material_sources, verify_legacy_material_schema, verify_legacy_material_installed))
+        (verify_legacy_material_sources, verify_legacy_material_schema, verify_legacy_material_installed,
+         verify_legacy_material_inventory, replay, verify_legacy_material_historical_capture))
     original = unittest.TestSuite(unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module(name)) for name in TESTS)
     assert original.countTestCases() == 9, f'{original.countTestCases()}; expected all nine current original tests'
     suite.addTests(original)
@@ -32,10 +39,11 @@ def run() -> bool:
     with tempfile.TemporaryDirectory(prefix='bessemer-legacy-material-') as temporary:
         pin = Path(temporary)
         hashes = copy_sources(pin)
+        pinned_auxiliaries(pin, hashes)
         sys.meta_path.insert(0, FrozenSourceImports(pin))
         sys.path.insert(0, str(pin / 'research'))
-        result = run_legacy_material_checks()
-        record_snapshot(pin, hashes, result, FEATURE, READERS, ())
+        result = run_legacy_material_checks(pin)
+        record_snapshot(pin, hashes, result, FEATURE, READERS + ('cfb', 'swcontainer'), ())
         (FEATURE / 'fixture-reference-snapshot.json').replace(FEATURE / 'source-snapshot.json')
         return result.wasSuccessful()
 

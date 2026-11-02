@@ -15,6 +15,14 @@ REPORTS = (
 )
 
 
+def legacy_material_baseline(name: str, value: object) -> None:
+    """Require exact immutable feature evidence outside initialization; e.g. legacy_material_baseline('native.json', rows)."""
+    path = FEATURE / name
+    raw = (json.dumps(value, indent=2) + '\n').encode()
+    if '--write' in sys.argv: path.write_bytes(raw)
+    assert path.read_bytes() == raw, f'{path}; expected exact unchanged historical MaterialList evidence'
+
+
 def legacy_material_reports() -> list[dict[str, object]]:
     """Require all three original reports without adding schema credit; e.g. legacy_material_reports()."""
     reports: list[dict[str, object]] = []
