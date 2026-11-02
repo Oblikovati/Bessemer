@@ -1,0 +1,36 @@
+{
+  "issue": 178,
+  "command": "cargo xtask pr",
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0 x86_64-pc-windows-msvc",
+  "exit_code": 0,
+  "process_reaped": true,
+  "starting_source_cut": "9dc5cef3f6860ff60b0c049ab731c41a9388ed91",
+  "observed_head_at_completion": "899ada96fc4450f18e7907bfff69e5b7ab585b54",
+  "rust_and_test_trees_unchanged_during_gate": true,
+  "tree_entries": [
+    "040000 tree 0c4075fefb8e5cf974a5fdd2614125de1331ee58\t.cargo",
+    "100644 blob b5b8a15af3025ff50cd10eec25e219d506aabb33\tCargo.lock",
+    "100644 blob 9b01f12f6cf6438926743d87434d243c7f904a5d\tCargo.toml",
+    "100644 blob b432996f101609389fcd631582395680520eb494\trust-toolchain.toml",
+    "040000 tree 03552ae59190706e399569266171f5b92ba8bcce\tsrc",
+    "040000 tree ec9ab46366e3f36ff89efb51609eda8e635e32e8\ttests",
+    "040000 tree 424b0b986342a419095e476d6450537d4432a035\txtask"
+  ],
+  "summary": {
+    "harness_summaries": 305,
+    "passed": 3839,
+    "failed": 0,
+    "ignored": 195
+  },
+  "log": {
+    "path": "target/model-node-state-full-pr-gate.log",
+    "bytes": 498571,
+    "sha256": "26b88e9eee88a3df53fad4d334a6b8e0fa4e2641bd835a7cf3f1837fab9007f1"
+  },
+  "qualifications": [
+    "The only later commit added dimension-reference documentation and Python support; Rust sources/tests/Cargo/xtask were unchanged.",
+    "The ignored tests are not claimed executed by this gate; separate focused native906-case evidence is retained in operation-verification.json.",
+    "A fresh exact-publication-head local gate and all five platform checks remain required."
+  ]
+}

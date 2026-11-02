@@ -86,5 +86,7 @@ carriers reconstruct exactly. The original private/public906-case gate also
 passes. Two fresh processes produce identical6,315,152-byte full view/field/edit
 history exports, matching serial and eight-worker projections. Eight workers
 also exercise shared immutable snapshots with23,552 accepted edits and4,096
-expected scope rejections. Repository and exact-head platform gates remain
-separate from this local acceptance.
+expected scope rejections. The [repository PR gate](repository-pr-verification.json)
+also passed: 3,839 tests passed, zero failed and 195 were ignored across
+305 summaries. Exact-publication-head platform and ThreadSanitizer gates
+remain pending in the serial queue.

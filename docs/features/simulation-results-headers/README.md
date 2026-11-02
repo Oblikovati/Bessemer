@@ -105,7 +105,10 @@ The full local `cargo xtask pr` gate passed at runtime commit
 `c982fa703fd9b81e97f086952d63cc37f6c8d5c8`: 3,506 tests passed, zero failed,
 and 105 were ignored across 265 summaries. The process exited successfully;
 [full gate verification](full-gate-verification.json) records its tree and log hash.
-Exact-head platform and ThreadSanitizer gates remain pending. Dialog, graph and auxiliary
+[PR #176](https://github.com/Oblikovati/Bessemer/pull/176) passed all five exact-head
+platform checks, including Linux ThreadSanitizer, and merged into the candidate
+branch. The [integration record](integration-verification.json) retains the head,
+merge, checks and completed branch/checkout/build cleanup. Dialog, graph and auxiliary
 streams are separate serializers and receive no coverage from this inventory.
 Native application opening, historical writer symmetry, business meanings,
 geometry validation and whole-format parity remain unproven.
