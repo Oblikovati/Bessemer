@@ -345,11 +345,18 @@
     "matched_export_files": 34,
     "proof": "consolidated-native-verification.json"
   },
-  "publication_gate": "Pending exact publication-head cargo xtask pr and all five required checks; PR173 belongs to feature163",
+  "publication_gate": "Pending exact feature166 publication-head cargo xtask pr and all five required checks; feature163 merged through PR173 and feature166 remains queued behind164/165",
   "broader_goal_remaining": [
-    "Legacy POSTPLOTDLG carrier14.459/14.526 has no typed codec in the inspected tree",
+    "Feature174 typed legacy POSTPLOTDLG carrier14.459/14.526 passed local operation/process checks; its publication/platform acceptance remains pending",
     "Material/EGR clauses14.512\u2013522 require separate scope audit",
     "251 additional legacy cwPostDlgParam carriers remain unresolved under retained version contexts",
     "Native application/writer equivalence,universal runtime selection and whole-format parity are unproven"
-  ]
+  ],
+  "separate_legacy_plot_acceptance": {
+    "issue": 174,
+    "runtime_source_cut": "b27da6cf0f22001a4fba7c77e450f7d6c69e6ee0",
+    "operation_proof": "../simulation-legacy-plot/operation-verification.json",
+    "process_proof": "../simulation-legacy-plot/process-pair-verification.json",
+    "included_in_feature166_scope": false
+  }
 }
