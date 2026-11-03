@@ -1,0 +1,75 @@
+{
+  "issue": 181,
+  "stage": "Native physical carrier/shape acceptance before typed visual operation",
+  "command": "cargo test --lib native_visual_carriers_bind_all906_streams_to_original_physical_record_counts -- --include-ignored --nocapture",
+  "platform": "Windows x64",
+  "toolchain": "Rust1.99.0 x86_64-pc-windows-msvc",
+  "exit_code": 0,
+  "process_reaped": true,
+  "passed": 1,
+  "failed": 0,
+  "ignored": 0,
+  "test_seconds": 46.55,
+  "cases": 906,
+  "configuration_visuals": 9586,
+  "feature_visuals": 127773,
+  "source_evidence": "C-1959",
+  "all_original_stream_identities_lengths_hashes_and_counts_match": true,
+  "source_report": {
+    "path": "docs/features/entity-visual-state/reports/part-entity-visual-rgb-replay-evidence.json",
+    "bytes": 307453,
+    "sha256": "900516f9cf202369f376193748e7cc3fd29c72416e40b2cbd0a7d851373786d2"
+  },
+  "native_packet": {
+    "path": "target/resolved-native-probe.bin",
+    "bytes": 129189574,
+    "sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f"
+  },
+  "bindings": {
+    "path": "docs/features/entity-visual-state/native-bindings-verification.json",
+    "bytes": 296162,
+    "sha256": "d8963c2331744c1919a87dd601cbdec3c181d84de693d9d1c10c81a390623e6e"
+  },
+  "test_log": {
+    "path": "target/entity-visual-native-carriers.log",
+    "bytes": 22627,
+    "sha256": "ee6d4e4139c4ba1e52465c57d56101bd3c786e54890e8a5b85d3a484f64c0758"
+  },
+  "clippy": {
+    "path": "target/entity-visual-native-clippy.log",
+    "bytes": 136,
+    "sha256": "3489d8ed254d4f494e110ef6aad806a8a7c0c115fb925784ccf91e23d6edfa7d"
+  },
+  "support": [
+    {
+      "path": "tests/model_visual_carriers/native.rs",
+      "bytes": 3212,
+      "sha256": "2951b3f9397ef1c39174e1b73db8063cd9f7e0c3402e30a4471a154e2d297e3a"
+    },
+    {
+      "path": "tests/resolved_features/native_corpus.rs",
+      "bytes": 5860,
+      "sha256": "3c970b7033e422a32b9532e1c7e0de86165d757b5de232863d2008df53c77d41"
+    },
+    {
+      "path": "docs/features/entity-visual-state/bind_native_visual_counts.py",
+      "bytes": 4123,
+      "sha256": "4c61c102a77869c6f153a34cc8a711a91571e3d145e38fcd429782f325bcfa3d"
+    },
+    {
+      "path": "docs/features/dimension-stored-state/bind_native_dimension_counts.py",
+      "bytes": 4877,
+      "sha256": "af6982aaa1a68eeac154fa95ab1f4d361e97e178f9b6ec838cedea9530e183e2"
+    }
+  ],
+  "coverage_credit": 0,
+  "qualifications": [
+    "Every retained configuration and feature stream decoded completely; feature reconstruction retained every original byte.",
+    "Every physical visual group matched the complete adjacent same-scope U16/U16/U8/U32/U16/I16/F32 shape. Object aliases were not counted as new physical definitions.",
+    "Per-stream feature counts were bound to the unchanged original C-1959 Windows-normalized identity, full decoded length and SHA256; packet order and report order were treated separately.",
+    "The9586 configuration count is an additional declared Rust-carrier observation; it is not attributed to the original feature-only report.",
+    "Historical unknown-byte accounting remains untouched. These counts add no semantic byte credit, native application or geometry acceptance.",
+    "Typed visual projections/edits, full component matrix acceptance and broader carrier/publication gates remain pending.",
+    "Humanizer unavailable; prose pass pending maintainer review."
+  ]
+}

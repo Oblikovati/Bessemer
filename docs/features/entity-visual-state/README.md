@@ -82,6 +82,14 @@ field-based reconstruction reproduced every byte, retained the expected object
 slots, reported `Unchanged` and returned empty changed-field history. All three
 integration tests and Clippy passed. This check adds no runtime visual API.
 
+The [native carrier check](native-carrier-verification.json) decoded all 906
+retained configurations and feature streams. It found 9,586 configuration
+visuals and matched all 127,773 feature visuals to the original C-1959
+per-stream identities, lengths, hashes and physical counts. Every selected
+record retained its complete field shape, and the feature streams reconstructed
+exactly. The configuration count is a separate observation; historical byte
+accounting and semantic credit remain unchanged.
+
 The initial 117-check foundation and subsequent 118-check installed-image record
 bind their snapshots and support hashes to their original Git revisions. Other
 complete caller/edit oracles, the public typed operation and retained-corpus

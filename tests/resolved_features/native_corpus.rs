@@ -10,6 +10,8 @@ use std::sync::Arc;
 mod stored_dimension_views;
 #[path = "../model_node_state/native.rs"]
 mod stored_node_views;
+#[path = "../model_visual_carriers/native.rs"]
+mod stored_visual_carriers;
 
 const LIMITS: ModelArchiveLimits = ModelArchiveLimits {
     maximum_bytes: 64 * 1024 * 1024,
