@@ -19,6 +19,8 @@ mod complete_cases;
 mod documents;
 #[path = "component_visual_carriers/early.rs"]
 mod early;
+#[path = "component_visual_carriers/matrix.rs"]
+mod matrix;
 
 fn retained_component_cases() -> Vec<complete_cases::OldCase> {
     [

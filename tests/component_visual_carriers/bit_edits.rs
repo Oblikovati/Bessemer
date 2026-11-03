@@ -13,7 +13,7 @@ fn component_integer_words(raw: &[u8]) -> [DisplayFieldValue; 6] {
     ]
 }
 
-fn component_literal_words(raw: &[u8]) -> Vec<DisplayFieldValue> {
+pub(super) fn component_literal_words(raw: &[u8]) -> Vec<DisplayFieldValue> {
     assert!(matches!(raw.len(), 13 | 17));
     let mut words = component_integer_words(raw).to_vec();
     if raw.len() == 17 {

@@ -160,8 +160,17 @@ passed 7,662 complete modern cases, with 16,791,273 fresh primitive reads over
 unselected primitive and the real holder cycle/shared-property identity. Storage
 factors out the two unchanged complete templates; parsing still covers every
 case. All three focused checks passed in 5,066.655 seconds. The initial Source
-snapshot is retained separately, and strict replay is running. Rust acceptance
-of this full matrix and the typed operation remain pending.
+snapshot is retained separately, and strict replay is running. The typed
+operation remains pending.
+
+The [full Rust component matrix](component-matrix-rust-verification.json) passed
+all 7,662 cases in two fresh processes. Each input reconstructs through
+`DisplayArchive::new`, each RGB edit preserves its unselected fields and exact
+history parent, and every case reopens and reverses inside a complete owned
+document. Both direct encoder exports match at 162,319,474 bytes. Original Source
+accepted all 15,324 exported roots, checked each input against its retained hash
+and each RGB result against a literal patch, and retained holder identity. The
+strict primitive replay, wider operation gates and typed facade remain pending.
 
 The initial 117-check foundation and subsequent 118-check installed-image record
 bind their snapshots and support hashes to their original Git revisions. Other
