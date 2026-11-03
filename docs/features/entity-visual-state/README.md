@@ -114,6 +114,14 @@ matching version marker; the original readers checked complete bytes and holder
 identity without overrides. Older native document markers, versions below 5000
 and the full modern component word matrix remain separate acceptance work.
 
+The [Rust component context checks](component-context-rust-verification.json)
+reconstruct all 88 baseline roots and edit all 86 physical visuals. All 11,696
+single-bit writes matched independent literal byte changes and preserved every
+unselected field and source byte. Each change retained its exact revision-bound
+parent. RGB edits also reparse and reverse exactly; 14 modern cases retain
+whole-document checks. Source acceptance of the changed older bit patterns and
+the pre-5000 layouts remain separate work.
+
 The initial 117-check foundation and subsequent 118-check installed-image record
 bind their snapshots and support hashes to their original Git revisions. Other
 complete caller/edit oracles, the public typed operation and retained-corpus

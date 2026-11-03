@@ -7,6 +7,8 @@ use bessemer::tessellation::StoredFloat;
 )]
 #[path = "support/display_archive.rs"]
 mod archive_support;
+#[path = "component_visual_carriers/bit_edits.rs"]
+mod bit_edits;
 #[allow(
     dead_code,
     reason = "The visual checks use only complete case bytes and context."
@@ -16,7 +18,7 @@ mod complete_cases;
 #[path = "component_visual_carriers/documents.rs"]
 mod documents;
 
-fn modern_component_cases() -> Vec<complete_cases::OldCase> {
+fn retained_component_cases() -> Vec<complete_cases::OldCase> {
     [
         include_bytes!("fixtures/display-lists/component-properties.bin").as_slice(),
         include_bytes!("fixtures/display-lists/component-property-holders-part.bin").as_slice(),
@@ -24,7 +26,6 @@ fn modern_component_cases() -> Vec<complete_cases::OldCase> {
     ]
     .into_iter()
     .flat_map(complete_cases::decode)
-    .filter(|case| case.version == 19000)
     .collect()
 }
 
@@ -40,7 +41,7 @@ fn component_baseline_values() -> [DisplayFieldValue; 7] {
     ]
 }
 
-fn component_rgb_expected(raw: &[u8]) -> Vec<u8> {
+fn component_visual_offset(raw: &[u8]) -> usize {
     let literal = [
         255, 255, 0, 128, 254, 152, 186, 220, 254, 255, 255, 0, 128, 66, 0, 128, 127,
     ];
@@ -50,8 +51,12 @@ fn component_rgb_expected(raw: &[u8]) -> Vec<u8> {
         .filter(|(_, bytes)| *bytes == literal)
         .collect();
     assert_eq!(matches.len(), 1);
+    matches[0].0
+}
+
+fn component_rgb_expected(raw: &[u8]) -> Vec<u8> {
     let mut expected = raw.to_vec();
-    let offset = matches[0].0 + 5;
+    let offset = component_visual_offset(raw) + 5;
     expected[offset..offset + 4].copy_from_slice(&0xfe798668_u32.to_le_bytes());
     expected
 }
@@ -70,12 +75,14 @@ fn verify_component_rgb_edit(source: &DisplayArchive, raw: &[u8], index: usize) 
     assert_eq!(result.changes().len(), 1);
     assert_eq!(result.changes()[0].parents().len(), 1);
     assert_eq!(source.to_bytes().unwrap(), raw);
-    verify_component_rgb_history(source, &result, index + 3);
+    verify_component_field_history(source, &result, index + 3);
     verify_component_rgb_reopen(source, result.archive(), raw);
-    documents::verify_component_document(source, result.archive());
+    if source.context().version == DisplayVersion::new(19000) {
+        documents::verify_component_document(source, result.archive());
+    }
 }
 
-fn verify_component_rgb_history(
+fn verify_component_field_history(
     source: &DisplayArchive,
     result: &DisplayArchiveEdit,
     index: usize,
@@ -139,6 +146,7 @@ fn verify_component_unchanged(source: &DisplayArchive, raw: &[u8]) {
 
 fn verify_component_baseline(case: complete_cases::OldCase) -> usize {
     let context = DisplayArchiveContext {
+        version: DisplayVersion::new(case.version),
         kind: case.kind,
         ..archive_support::context()
     };
@@ -163,19 +171,20 @@ fn verify_component_visual_groups(source: &DisplayArchive, raw: &[u8]) -> usize 
             .collect();
         assert_eq!(actual, component_baseline_values());
         verify_component_rgb_edit(source, raw, index);
+        bit_edits::verify_component_bit_writes(source, raw, index);
     }
     positions.len()
 }
 
 #[test]
-fn complete_modern_component_roots_preserve_visual_words_reconstruction_and_rgb_edits() {
-    let cases = modern_component_cases();
-    assert_eq!(cases.len(), 16);
+fn retained_component_visuals_roundtrip_and_preserve_every_edited_bit() {
+    let cases = retained_component_cases();
+    assert_eq!(cases.len(), 88);
     assert_eq!(
         cases
             .into_iter()
             .map(verify_component_baseline)
             .sum::<usize>(),
-        14
+        86
     );
 }
