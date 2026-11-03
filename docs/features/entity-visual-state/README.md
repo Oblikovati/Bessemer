@@ -98,6 +98,14 @@ retained its original source bytes. Every request returned one changed-field
 history entry with the original revision-bound parent. The typed visual facade
 and broader operation acceptance remain pending.
 
+The [complete word write check](word-write-verification.json) replaces all seven
+physical values in both targets of every owned model, sketch and nested display
+case: 22,986 changed requests and 160,902 changed fields. Each result matched a
+literal 17-byte replacement, preserved every unselected field and retained its
+source bytes. History matched the existing source-path order, including all seven
+original revision-bound parents. These checks use the existing archive codec;
+the typed visual operation remains pending.
+
 The initial 117-check foundation and subsequent 118-check installed-image record
 bind their snapshots and support hashes to their original Git revisions. Other
 complete caller/edit oracles, the public typed operation and retained-corpus

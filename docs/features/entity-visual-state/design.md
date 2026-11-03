@@ -25,8 +25,9 @@ fail explicitly; they do not become zero-filled visual records.
 Keep source handles bound to the archive revision. Delegate complete replacement
 fields to the existing operation result, preserving validation coverage,
 diagnostics, completion and ordered copy/derived history. Width requests can
-affect two physical fields; history must reflect the actual changed fields in
-wire order. No-ops retain identity. Source and caller buffers remain isolated
+affect two physical fields; history must reflect both actual changes in the
+existing source-path order. The archive edit contract sorts source paths, then
+appends created result paths; it does not report physical wire order. No-ops retain identity. Source and caller buffers remain isolated
 after success, failure and later source changes.
 
 Both archive families already have revision-bound field handles and complete

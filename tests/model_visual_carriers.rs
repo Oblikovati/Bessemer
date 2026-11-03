@@ -6,6 +6,8 @@ use bessemer::tessellation::StoredFloat;
 
 #[path = "model_visual_carriers/edits.rs"]
 mod edits;
+#[path = "model_visual_carriers/word_edits.rs"]
+mod word_edits;
 
 const VISUAL_LIMITS: ModelArchiveLimits = ModelArchiveLimits {
     maximum_bytes: 30000,
@@ -124,6 +126,7 @@ fn verify_visual_carrier_corpus(corpus: VisualCarrierCorpus) {
         verify_visual_groups(&archive, raw, &columns, corpus.suffix);
         verify_visual_reconstruction(&archive, raw);
         edits::verify_visual_rgb_writes(&archive, raw, &columns, corpus.suffix);
+        word_edits::verify_visual_word_writes(&archive, raw, &columns, corpus.suffix);
         count += 1;
     }
     assert_eq!(count, 3831);

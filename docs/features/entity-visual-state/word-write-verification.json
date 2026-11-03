@@ -1,0 +1,64 @@
+{
+  "issue": 181,
+  "stage": "Complete owned visual raw-word writes through existing archive edits; typed operation remains pending",
+  "command": "cargo test --test model_visual_carriers",
+  "platform": "Windows x64",
+  "toolchain": "Rust1.99.0 x86_64-pc-windows-msvc",
+  "exit_code": 0,
+  "process_reaped": true,
+  "passed": 3,
+  "failed": 0,
+  "ignored": 0,
+  "test_seconds": 38.07,
+  "owned_cases": 11493,
+  "changed_complete_word_requests": 22986,
+  "changed_physical_fields": 160902,
+  "existing_rgb_requests_rechecked": 22986,
+  "independent_expected_bytes": "Replace exactly17 selected bytes with the contrasting physical definition already admitted by the original Source reader",
+  "history_order_source_offsets": [
+    4,
+    6,
+    5,
+    0,
+    1,
+    2,
+    3
+  ],
+  "history_order": "Existing source-path order, not wire order",
+  "source_fixture_git_revision": "64580d1dd6ce6d0759ea78ed08282860b1dfe607",
+  "source_bytes_isolated": true,
+  "every_unselected_field_and_path_equal": true,
+  "support": [
+    {
+      "path": "tests/model_visual_carriers.rs",
+      "bytes": 6083,
+      "sha256": "103c564d64c58125fce99b678bb0932ecf2e96b75d557bf61462da5150beb14a"
+    },
+    {
+      "path": "tests/model_visual_carriers/word_edits.rs",
+      "bytes": 2419,
+      "sha256": "f65d8e317d1d2db335e6d6108d43371001b3c346e8f301a240a470a11d1e3cb5"
+    }
+  ],
+  "log": {
+    "path": "target/entity-visual-rust-word-writes.log",
+    "bytes": 635,
+    "sha256": "f2df61edefa662126938b5d1051b6515be811aa5f8efbb5041ec627a73b45cf7"
+  },
+  "clippy": {
+    "path": "target/entity-visual-rust-word-clippy.log",
+    "bytes": 135,
+    "sha256": "af19964a2fdd98e496e64bf93773e7561b0c45ba63f0c2841e4c794e06e59e0d"
+  },
+  "initial_failed_assumption": {
+    "path": "target/entity-visual-rust-word-writes-order-assumption.log",
+    "bytes": 2340,
+    "sha256": "82a2192bb8bedab4da0df20bdb510e05d5af980b1c10e80a74f4465f5603bf97"
+  },
+  "qualifications": [
+    "The first new test incorrectly expected wire-order history; the existing public edit contract and field correspondence unit test require source-path order. The corrected independent expected offset order is explicit. No production behavior or original assertion changed.",
+    "Both physical records in every folder/sketch/display case were edited independently with all seven typed values from contrasting complete Source-admitted definitions.",
+    "Coverage credit remains zero. Typed visual API, complete component/version/drawing/configuration acceptance, full operation acceptance and publication gates remain pending.",
+    "Humanizer unavailable; prose pass pending maintainer review."
+  ]
+}
