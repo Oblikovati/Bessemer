@@ -68,6 +68,61 @@ fn verify_component_rgb_edit(source: &DisplayArchive, raw: &[u8], index: usize) 
     assert_eq!(result.changes().len(), 1);
     assert_eq!(result.changes()[0].parents().len(), 1);
     assert_eq!(source.to_bytes().unwrap(), raw);
+    verify_component_rgb_history(source, &result, index + 3);
+    verify_component_rgb_reopen(source, result.archive(), raw);
+}
+
+fn verify_component_rgb_history(
+    source: &DisplayArchive,
+    result: &DisplayArchiveEdit,
+    index: usize,
+) {
+    let change = &result.changes()[0];
+    assert_eq!(change.relation(), DisplayFieldRelation::Derived);
+    let parent = &change.parents()[0];
+    let target = change.result().unwrap();
+    assert_eq!(
+        source.resolve_field(parent).unwrap(),
+        &source.contents().fields[index]
+    );
+    assert_eq!(
+        result.archive().resolve_field(target).unwrap(),
+        &result.archive().contents().fields[index]
+    );
+    assert!(source.resolve_field(target).is_err());
+    assert!(result.archive().resolve_field(parent).is_err());
+    verify_component_unselected(source, result.archive(), index);
+}
+
+fn verify_component_unselected(source: &DisplayArchive, result: &DisplayArchive, index: usize) {
+    for (ordinal, (before, after)) in source
+        .contents()
+        .fields
+        .iter()
+        .zip(&result.contents().fields)
+        .enumerate()
+    {
+        if ordinal != index {
+            assert_eq!(before, after);
+        }
+    }
+}
+
+fn verify_component_rgb_reopen(source: &DisplayArchive, result: &DisplayArchive, raw: &[u8]) {
+    let reopened = DisplayArchive::from_bytes(
+        &result.to_bytes().unwrap(),
+        source.context(),
+        archive_support::LIMITS,
+    )
+    .unwrap();
+    assert_eq!(reopened.contents(), result.contents());
+    let reversed = reopened
+        .edit_with_history(source.contents().clone(), archive_support::LIMITS)
+        .unwrap();
+    assert_eq!(reversed.completion(), DisplayEditCompletion::Changed);
+    assert_eq!(reversed.archive().to_bytes().unwrap(), raw);
+    assert_eq!(reversed.archive().contents(), source.contents());
+    assert_eq!(reversed.changes().len(), 1);
 }
 
 fn verify_component_unchanged(source: &DisplayArchive, raw: &[u8]) {
