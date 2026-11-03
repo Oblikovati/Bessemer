@@ -1,0 +1,40 @@
+{
+  "issue": 184,
+  "tests": 6,
+  "skipped": 0,
+  "successful": true,
+  "asset_pins": {
+    "sketch-intersection-full-targeted-corpus.json": "a19bc81768be15e617556b5917066009541edf9a1d5b2c6b8bc918f5b7cb3f8f",
+    "weld-corner-targeted-corpus.json": "1d5926e852d18491121ba8e9b080b415292627b3266320840a8031416dbf34d3",
+    "resolved-feature-list-frontier.json": "bafb3f28f0529c769fd158ab15777acce7225d25763c45f6a060b185416de677"
+  },
+  "source_python_files": 5661,
+  "qualification": "Unchanged original reader tests only; C-3307 populated replay and native bindings remain separate",
+  "processes_reaped": 1,
+  "exit_code": 0,
+  "test_seconds": 1.906,
+  "artifacts": [
+    {
+      "path": "target/intersection-match-original-tests.log",
+      "bytes": 1687,
+      "sha256": "da8f35f81e7f9f1b98a084b6b0da2fb8bfc510cbe6e4a36dd10dfb6760b337b7"
+    },
+    {
+      "path": "target/run-intersection-match-original-tests.py",
+      "bytes": 2703,
+      "sha256": "cc4d17730270ad86b1ef7b758dee95207201ebc3ed8abe6186cda79a6c8ad0b8"
+    },
+    {
+      "path": "docs/features/intersection-reference-match/original-tests-source-snapshot.json",
+      "bytes": 709928,
+      "sha256": "8055ece63b859982a4336c0ad8061c75f8bb6d8bcb3873d2a2398a22af293f90"
+    }
+  ],
+  "coverage_credit": 0,
+  "runtime_implemented": false,
+  "remaining": [
+    "C-3307 populated replay and independent complete carrier/scalar oracles",
+    "Historical/current transitive dependency admission and native bindings",
+    "Typed operation implementation and full acceptance/publication gates"
+  ]
+}

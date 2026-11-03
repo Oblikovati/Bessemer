@@ -13,6 +13,17 @@ dependencies match their published hashes. This is preparation: transitive
 dependencies, native bindings, original Source replay and Rust operations have
 not been verified here.
 
+The [unchanged original test run](original-tests-verification.json) subsequently
+passed all six tests without skips, including their existing native fixture
+checks. Frozen-source and import checks passed for 5,661 copied Python files.
+This does not rerun the separate C-3307 populated accounting experiment.
+
+The [transitive inventory](dependency-inventory-verification.json) reached 615
+reports and 30,306 source references. Of these, 4,660 do not match current files;
+the graph includes earlier point-in-time reader revisions. Those historical
+pins remain distinct from current requirements. Full dependency and native
+binding admission remains incomplete.
+
 The published cohort contains eight complete streams, seventeen edges and
 sixty-eight reference groups. Its 544-byte isolated accounting reduction is not
 global coverage credit. Raw20 remains separate and uninterpreted by this feature.
