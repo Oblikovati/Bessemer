@@ -46,12 +46,25 @@ Their offset-and-word packets match byte for byte and are bound to complete
 configuration/feature stream hashes. The exhaustive native typed RGB edit test
 uses those offsets for literal full-stream expectations. Its complete906-case
 run is still pending; passing projection and capture does not establish edits.
+The [native assembly capture](native-assembly-source-span-verification.json)
+also covers all 180 retained ordinary/routing configurations and 2,516 physical
+visuals in two identical Source packets. Its typed edit acceptance is separate
+from that capture.
+
 The ignored test requires `target/resolved-native-probe.bin`,
 `target/entity-visual-native-ordered-spans.bin` and `BESSEMER_KERNEL_SCHEMA`:
 
 ```powershell
 cargo test --lib native_visual_rgb_edits_match_source_offsets_for_every_physical_record -- --include-ignored --nocapture
 ```
+
+The [native graphics Source check](native-graphics-source-span-verification.json)
+parsed all 910 part displays, 176 assembly displays and 20 drawing streams in two
+accepted processes. None contained a physical entity visual record. Each process
+also detected the one expected record in both owned positive controls. The full
+native identity manifests match the earlier complete corpora. These native empty
+results complement the positive owned edit matrices; Rust typed native empty
+acceptance remains pending.
 
 The existing physical fields remain the compatibility surface:
 
