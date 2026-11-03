@@ -5,7 +5,8 @@ stored visual roles over Bessemer's existing complete visibility codec. The
 foundation retains eleven complete schema clauses, fifteen historical reports
 and nineteen current reader/test pins. The first strict run passed 117 checks:
 all 114 tests in eleven unchanged original modules, plus three separate checks
-for readers, clauses and reports. No runtime API or parser behavior changed.
+for readers, clauses and reports. That foundation changed no runtime API or
+parser behavior.
 
 The first [runtime API route](api.md) now projects revision-bound stored roles
 and edits them through complete resolved part feature archives. The
@@ -192,8 +193,9 @@ passed 7,662 complete modern cases, with 16,791,273 fresh primitive reads over
 unselected primitive and the real holder cycle/shared-property identity. Storage
 factors out the two unchanged complete templates; parsing still covers every
 case. All three focused checks passed in 5,066.655 seconds. The initial Source
-snapshot is retained separately, and strict replay is running. The typed
-operation remains pending.
+snapshot is retained separately. The [strict replay](component-strict-replay-verification.json)
+also passed all three checks in 5,162.718 seconds, with unchanged fixtures, helpers
+and every Source file shared with initialization.
 
 The [full Rust component matrix](component-matrix-rust-verification.json) passed
 all 7,662 cases in two fresh processes. Each input reconstructs through
@@ -202,12 +204,20 @@ history parent, and every case reopens and reverses inside a complete owned
 document. Both direct encoder exports match at 162,319,474 bytes. Original Source
 accepted all 15,324 exported roots, checked each input against its retained hash
 and each RGB result against a literal patch, and retained holder identity. The
-strict primitive replay, wider operation gates and typed facade remain pending.
+strict primitive replay has since passed; wider operation gates remain open.
+
+The [actual typed export checks](typed-export-verification.json) passed in two
+fresh component processes and two fresh drawing processes. Component exports
+come directly from the typed RGB edit result; drawing exports exercise all 136
+stored bits through typed requests and compare eight workers with serial output.
+Every exported byte matches the retained packets already accepted by complete
+original Source readers. This reuses that acceptance by byte identity and does
+not claim a fresh Source execution for those typed packets.
 
 The initial 117-check foundation and subsequent 118-check installed-image record
-bind their snapshots and support hashes to their original Git revisions. Other
-complete caller/edit oracles, the public typed operation and retained-corpus
-acceptance remain pending.
+bind their snapshots and support hashes to their original Git revisions.
+Retained native edit acceptance and wider operation/publication gates remain
+pending.
 The [design notes](design.md) retain that complete caller and verification scope.
 
 Run the source checks from the repository root:
