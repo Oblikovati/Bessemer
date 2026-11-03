@@ -75,6 +75,13 @@ model-feature visuals. The complete streams retain 3,831 outer aliases and
 strict replay checks the new corpus and all eight earlier folder/sketch
 artifacts without rewriting them. Component checks remain separate.
 
+The [Rust carrier check](rust-carrier-verification.json) decoded all 11,493
+folder/sketch/display cases through the existing complete feature-archive API.
+Both focused records matched the literal offsets and stored bits. Full
+field-based reconstruction reproduced every byte, retained the expected object
+slots, reported `Unchanged` and returned empty changed-field history. All three
+integration tests and Clippy passed. This check adds no runtime visual API.
+
 The initial 117-check foundation and subsequent 118-check installed-image record
 bind their snapshots and support hashes to their original Git revisions. Other
 complete caller/edit oracles, the public typed operation and retained-corpus
