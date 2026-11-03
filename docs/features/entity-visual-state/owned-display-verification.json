@@ -1,0 +1,175 @@
+{
+  "issue": 181,
+  "stage": "Complete owned folder, sketch and nested-display callers; component matrix and runtime operation pending",
+  "source_checks": 121,
+  "unchanged_original_tests": 114,
+  "unchanged_original_test_modules": 11,
+  "separate_evidence_checks": 7,
+  "source_identity": "bd83cb366ba67e373b1fc2111392165352b42b0f06b204bb035595f0a32264f1",
+  "source_python_files": 5202,
+  "initialization": {
+    "command": "python -B -X utf8 docs/features/entity-visual-state/freeze_visual_state.py --write-display",
+    "wrote_only_new_display_artifacts": true,
+    "exit_code": 0,
+    "process_reaped": true,
+    "seconds": 1575.104,
+    "log": {
+      "path": "target/entity-visual-display-initialize.log",
+      "bytes": 18684,
+      "sha256": "a26ece495a067b01ffc6b208184969b3414554ac02b8b2701ff9eee7400658ac"
+    }
+  },
+  "strict": {
+    "command": "python -B -X utf8 docs/features/entity-visual-state/freeze_visual_state.py",
+    "baseline_write_mode": false,
+    "exit_code": 0,
+    "process_reaped": true,
+    "seconds": 1463.102,
+    "log": {
+      "path": "target/entity-visual-display-strict.log",
+      "bytes": 18684,
+      "sha256": "5816b2ad4e445d90d5e9a877c3ec11f21d2ad847764dd5fce104f3c3f54e35e8"
+    }
+  },
+  "display": {
+    "caller": "complete display dimensions nested in revolution owners in resolved-feature carriers",
+    "cases": 3831,
+    "physical_records": 15324,
+    "instance_aliases": 3831,
+    "inherited_slots": 97,
+    "final_slots": 108,
+    "context_streams_sha256": [
+      "3b98a8dfe9082f76c546219eb38b4b358c9a682d5aafc1a44b33c099c1a22495",
+      "2bb4c6306071b4bd20be2cda0207c376e5a6c803e884c77c95ee68f44632d8f7",
+      "f6387400850ae80dedbc5d2f5dc77fb1dd38ad4b8afb1e6fb2ffc2ad35edb27d"
+    ],
+    "packet_bytes": 13232274,
+    "wire_bytes": 13216950,
+    "packet_sha256": "6ec2726afb9a56d57f53d14ad5a96901a5939f351c151d2bbf8ae2f6ded08d54",
+    "word_oracle_sha256": "ba25077762a2e1aecd9336f6162877038b82db8546a39db12bb78678fe344f38",
+    "primitive_reads": 3053307,
+    "primitives_sha256": "5157f9103ce57922ebed15e8a80ed5ccaa5194e54c0769836c3e8961ea1ccd2c",
+    "literal_scalar_spans": 53634,
+    "focused_physical_records": 7662,
+    "unselected_physical_records": 7662
+  },
+  "prior_artifact_git_revision": "f9a79e68e117f33fbd5d976dcdf595385b74d3eb",
+  "all_eight_prior_model_sketch_artifacts_byte_identical": true,
+  "artifacts": [
+    {
+      "path": "docs/features/entity-visual-state/source-snapshot.json",
+      "bytes": 653252,
+      "sha256": "a1bcb6964f62c61a6a7ac384b03b967c8d795d5db9e425e5a3fd5379993c8c4a"
+    },
+    {
+      "path": "docs/features/entity-visual-state/owned-display-reference.json",
+      "bytes": 936,
+      "sha256": "8b654f2938afc9fa4590adfc3b70a0e4e3e9a4f28c235939361befb36c4f5e2f"
+    },
+    {
+      "path": "tests/fixtures/entity-visual-state/display.bin",
+      "bytes": 13232274,
+      "sha256": "6ec2726afb9a56d57f53d14ad5a96901a5939f351c151d2bbf8ae2f6ded08d54"
+    },
+    {
+      "path": "tests/fixtures/entity-visual-state/display-words.tsv",
+      "bytes": 259336,
+      "sha256": "ba25077762a2e1aecd9336f6162877038b82db8546a39db12bb78678fe344f38"
+    },
+    {
+      "path": "tests/fixtures/entity-visual-state/display-primitives.tsv",
+      "bytes": 78788637,
+      "sha256": "5157f9103ce57922ebed15e8a80ed5ccaa5194e54c0769836c3e8961ea1ccd2c"
+    }
+  ],
+  "source_support": [
+    {
+      "path": "docs/features/entity-visual-state/freeze_visual_state.py",
+      "bytes": 2931,
+      "sha256": "c429c46c747d2ef443deeb77d6c8d3d99d35e329cef268f5eb98c79ac8a72ae2"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_owned_words.py",
+      "bytes": 4718,
+      "sha256": "e5e8148b6d38bf31023949dfc7b9624f3d40ac3b95db2138c2ae14f13552ac4e"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_owned_carriers.py",
+      "bytes": 2593,
+      "sha256": "65e6c595cc0822c18aba5e47170fa34be5c1dbbf4b172a608dc2d2b193701287"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_owned_corpus.py",
+      "bytes": 6068,
+      "sha256": "ebe8390a4cd0fe885a123e17049acc5054fe9b56fc9eacdd123dd660811fcdec"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_sketch_carriers.py",
+      "bytes": 3478,
+      "sha256": "50c23ffb249e58509adac8251cd8037aed879e85d34df9a892155e9da7a28098"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_display_carriers.py",
+      "bytes": 4410,
+      "sha256": "a714eae859bc5d7a5ace481a62a23d4e14186081835782085339b2a6822300ac"
+    },
+    {
+      "path": "docs/features/model-archives/pinned_reference_tests.py",
+      "bytes": 4167,
+      "sha256": "6f95547f7dee070b1b8fe50cefaaea9a45721789636add2e67a919e42169b36e"
+    },
+    {
+      "path": "docs/features/model-archives/primitive_inventory.py",
+      "bytes": 4371,
+      "sha256": "1bb8e6228afad4896c3af3664496dd0adafb70b962c3c7c80fa0e7d26d60bad5"
+    },
+    {
+      "path": "docs/features/model-archives/body_feature_fixture_bytes.py",
+      "bytes": 5985,
+      "sha256": "c45e632df915afd711fb3aaa37bea2bb404284d9eeefdc775a2f38c728e8723b"
+    },
+    {
+      "path": "docs/features/model-archives/display_dimension_fixture_bytes.py",
+      "bytes": 6204,
+      "sha256": "ff1b4dbe9e95c33c420ed609ba5ec6efa8c2bbe1319a688834f49eba34df754b"
+    },
+    {
+      "path": "docs/features/model-archives/display_item_fixture_bytes.py",
+      "bytes": 2451,
+      "sha256": "9b8f9847d4b86bdc2b35357a0619999006089f906f6e37a3c37f36f392ba23fe"
+    },
+    {
+      "path": "docs/features/dimension-stored-state/dimension_state_owned.py",
+      "bytes": 10861,
+      "sha256": "467c2d0a2518b5ecc0d9c2a49f875961fd5ef6bac47eb372a9039cca649be37f"
+    },
+    {
+      "path": "docs/features/dimension-stored-state/dimension_state_evidence.py",
+      "bytes": 4113,
+      "sha256": "1079db1c5ca007a8bf577f2f06929c53d75a0f9f035110cf4e585db47fc5125a"
+    }
+  ],
+  "owner_probes": [
+    {
+      "path": "target/entity-visual-display-owner-check.log",
+      "bytes": 114,
+      "sha256": "4026264572e77ca985e25908915a0f728a0aa1b1ad821a6d54fc500bdcfa8ec4"
+    },
+    {
+      "path": "target/entity-visual-display-owner-accounting-check.log",
+      "bytes": 114,
+      "sha256": "4026264572e77ca985e25908915a0f728a0aa1b1ad821a6d54fc500bdcfa8ec4"
+    }
+  ],
+  "coverage_credit": 0,
+  "qualifications": [
+    "Each complete moRevolution_c owner enters the original scoped display reader through dimension_800, retaining a null dimension_808 neighbor and the outer first-owner alias.",
+    "The complete3831-case matrix verifies all four physical visuals per stream: two focused display records and two unchanged model-feature records. Every primitive partitions the complete stream.",
+    "The97 inherited slots grow to108 through actual owner, name and display class/object definitions. No Source reader registration or version override was added.",
+    "All earlier folder/sketch fixtures and metadata matched their original Git blobs; the strict replay reproduced all new display artifacts without writes.",
+    "Component seed/probe helpers were developed separately and were not part of these121 checks. Their full word matrix and provenance require separate acceptance.",
+    "Historical117/118/119/120-check records retain their original Git artifact references; no byte-credit baseline was rewritten.",
+    "Public typed edits, configuration/display/drawing carrier coverage, retained native counts, native application and whole-format parity remain pending.",
+    "Humanizer unavailable; prose pass pending maintainer review."
+  ]
+}

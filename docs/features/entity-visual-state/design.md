@@ -29,6 +29,13 @@ affect two physical fields; history must reflect the actual changed fields in
 wire order. No-ops retain identity. Source and caller buffers remain isolated
 after success, failure and later source changes.
 
+Both archive families already have revision-bound field handles and complete
+edit outcomes. Reuse the model archives' field-edit operations and the display
+archive's `edit_with_history` outcome, including its exact stored-archive
+coverage and geometry/external-link exclusions. The visual layer should select
+and replace the existing physical fields while those operations retain
+responsibility for full-stream validation, completion and ordered history.
+
 Acceptance needs all high bytes, asymmetric/primary/white RGB values and exact
 missing-sentinel controls; all cache byte combinations and ByLayer roles with
 unresolved bits; layer/style signedness and sentinel cases; raw width limits,
@@ -76,6 +83,22 @@ owner for the next corpus and account separately for its model-feature visual
 record, name-object slots and display-object slots. The ordinary resolved-feature
 reader already installs the complete revolution reader; no extra registration
 in the fixture harness is needed.
+
+The component-property baseline reuses three hash-bound complete display-root
+corpora. Their 88 cases passed packet framing and saved stream-hash checks in
+an injected temporary root. Sixteen cases have display version 19000, matching
+the real owned blank part and assembly documents. The unchanged
+`displaylists.archive_for` and `display_lists` readers consumed each of those
+roots completely, with an exact primitive partition. Fourteen physical property
+definitions and two null controls matched their independent visual literals.
+Both nested-holder cases retained the outer/inner reference cycle and a shared
+physical property object. Observations keep raw signaling-NaN bits; the
+historical generators' float-reader patches were not invoked.
+
+The other 72 seed cases have only their stored framing and hashes checked so
+far; original-reader acceptance for their declared contexts remains pending.
+The full component visual-word matrix and isolated edit operations remain
+pending for both document kinds and applicable drawing-bucket carriers.
 
 Publication is serial behind the dialog publication and the existing accepted queue. This
 foundation creates no publication branch or PR. The humanizer skill is

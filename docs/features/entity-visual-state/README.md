@@ -66,6 +66,15 @@ artifacts remained byte-identical after the shared corpus verifier was
 extracted. No Source reader registration, runtime API or native byte credit
 was added.
 
+The [nested display proof](owned-display-verification.json) covers 3,831 complete
+revolution streams, each with two display dimensions reached through their real
+owners. It distinguishes 7,662 focused display visuals from 7,662 unchanged
+model-feature visuals. The complete streams retain 3,831 outer aliases and
+108 map slots per case. All 3,053,307 original primitive reads partition the
+13,216,950 wire bytes. Initialization writes only the display artifacts; the
+strict replay checks the new corpus and all eight earlier folder/sketch
+artifacts without rewriting them. Component checks remain separate.
+
 The initial 117-check foundation and subsequent 118-check installed-image record
 bind their snapshots and support hashes to their original Git revisions. Other
 complete caller/edit oracles, the public typed operation and retained-corpus
