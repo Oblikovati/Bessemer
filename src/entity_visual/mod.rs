@@ -1,6 +1,7 @@
 //! Stored entity visual roles, preserving raw words independently of rendering and layer resolution.
 mod edit;
 mod projection;
+pub(crate) use projection::visual_field_words;
 mod roles;
 #[cfg(test)]
 #[path = "../../tests/entity_visual_state/words.rs"]

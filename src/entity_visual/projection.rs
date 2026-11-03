@@ -1,6 +1,36 @@
 use super::{EntityVisualStoredWords as Words, VisualScalar as Scalar, visual_role_error};
 use crate::Result;
 
+const VISUAL_FIELD_SUFFIXES: [&str; 7] = [
+    ".unknown_0",
+    ".unknown_2",
+    ".unknown_4",
+    ".unknown_8",
+    ".layer",
+    ".line_width.standard_width",
+    ".line_width.custom_width",
+];
+
+pub(crate) fn visual_field_words<T>(
+    fields: &[T],
+    prefix: &str,
+    path: impl Fn(&T) -> &str,
+    scalar: impl Fn(&T) -> Result<Scalar>,
+) -> Result<Words> {
+    let mut values = Vec::new();
+    for (index, suffix) in VISUAL_FIELD_SUFFIXES.iter().enumerate() {
+        let expected = format!("{prefix}{suffix}");
+        let Some(field) = fields.get(index).filter(|field| path(field) == expected) else {
+            if index == 6 {
+                break;
+            }
+            return Err(visual_role_error(prefix, format!("missing {expected}")));
+        };
+        values.push(scalar(field)?);
+    }
+    Words::from_scalars(&values, prefix)
+}
+
 impl Words {
     pub(crate) fn from_scalars(values: &[Scalar], path: &str) -> Result<Self> {
         let (layer, flags, cache, color, style, width) = visual_integer_values(values, path)?;

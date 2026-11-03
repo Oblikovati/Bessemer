@@ -8,16 +8,6 @@ use crate::entity_visual::{
 };
 use std::sync::Arc;
 
-const VISUAL_SUFFIXES: [&str; 7] = [
-    ".unknown_0",
-    ".unknown_2",
-    ".unknown_4",
-    ".unknown_8",
-    ".layer",
-    ".line_width.standard_width",
-    ".line_width.custom_width",
-];
-
 /// Stored visual words bound to the physical record in one immutable model revision.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct ModelEntityVisualStoredState {
@@ -73,21 +63,12 @@ fn model_visual_prefix(path: &str) -> Result<&str> {
 }
 
 fn model_visual_words(fields: &[ModelField], prefix: &str) -> Result<EntityVisualStoredWords> {
-    let mut values = Vec::new();
-    for (index, suffix) in VISUAL_SUFFIXES.iter().enumerate() {
-        let expected = format!("{prefix}{suffix}");
-        let Some(field) = fields
-            .get(index)
-            .filter(|field| field.path.as_ref() == expected)
-        else {
-            if index == 6 {
-                break;
-            }
-            return Err(visual_role_error(prefix, format!("missing {expected}")));
-        };
-        values.push(model_visual_scalar(field)?);
-    }
-    EntityVisualStoredWords::from_scalars(&values, prefix)
+    crate::entity_visual::visual_field_words(
+        fields,
+        prefix,
+        |field| field.path.as_ref(),
+        model_visual_scalar,
+    )
 }
 
 fn changed_model_visual_fields(
