@@ -1,0 +1,128 @@
+{
+  "issue": 184,
+  "passed": true,
+  "complete_streams": 8,
+  "groups": 68,
+  "signed_scalars": 136,
+  "accounting_adapter_installed": false,
+  "original_accounting_preserved": true,
+  "source_python_files": 5665,
+  "streams": [
+    {
+      "path": "samples/learn/Baseball Bat.SLDPRT",
+      "stream": "Contents/Config-0-ResolvedFeatures",
+      "bytes": 710327,
+      "sha256": "9a3d7704bccd9ce349aced08c7eaf0fae1ce365a21d41865d6556ff73d5a7ede",
+      "root_count": 42,
+      "map_items": 22345,
+      "unknown_bytes": 82874,
+      "end": 710327
+    },
+    {
+      "path": "samples/learn/Garden Trowel/Garden Trowel_Garden_Trowel_Spade.SLDPRT",
+      "stream": "Contents/Config-0-ResolvedFeatures",
+      "bytes": 514962,
+      "sha256": "5288d0007eacad9c6119651ee9bb199c66f186a5e0fefd447ea973930cb81e8c",
+      "root_count": 69,
+      "map_items": 6399,
+      "unknown_bytes": 63005,
+      "end": 514962
+    },
+    {
+      "path": "samples/learn/Mouse/Bottom Housing.SLDPRT",
+      "stream": "Contents/Config-0-ResolvedFeatures",
+      "bytes": 1345977,
+      "sha256": "5fadaa565d451eef089ff7e55a9f52159847d0bf4247b21a85de5b50fa67ba43",
+      "root_count": 140,
+      "map_items": 23146,
+      "unknown_bytes": 92067,
+      "end": 1345977
+    },
+    {
+      "path": "samples/learn/Mouse/Mouse Battery Cover.SLDPRT",
+      "stream": "Contents/Config-0-ResolvedFeatures",
+      "bytes": 1078929,
+      "sha256": "62c15b8229c3085781679b3777169db19369d57f2f778719c99d6b0f2609092e",
+      "root_count": 74,
+      "map_items": 9545,
+      "unknown_bytes": 36946,
+      "end": 1078929
+    },
+    {
+      "path": "samples/learn/Mouse/Mouse Buttons.SLDPRT",
+      "stream": "Contents/Config-0-ResolvedFeatures",
+      "bytes": 670903,
+      "sha256": "d0b8da630f2208f6cb8de98c08dd1b9d8511956c53b619d65671b086b8e217df",
+      "root_count": 87,
+      "map_items": 8836,
+      "unknown_bytes": 54377,
+      "end": 670903
+    },
+    {
+      "path": "samples/Simulation Examples/bikeframe.sldprt",
+      "stream": "Contents/Config-9-ResolvedFeatures",
+      "bytes": 650399,
+      "sha256": "dd8f838e24427c4ed7eb04131b9ae793e5f6162533dd3061348422ed41b20f23",
+      "root_count": 167,
+      "map_items": 13122,
+      "unknown_bytes": 82857,
+      "end": 650399
+    },
+    {
+      "path": "samples/Simulation Examples/FloWorks/side.sldprt",
+      "stream": "Contents/Config-0-ResolvedFeatures",
+      "bytes": 268856,
+      "sha256": "f5c68d668868e2d080dea6fd46d9182ba3845b43ca4ebfc2c66f5a3cfaba5b49",
+      "root_count": 52,
+      "map_items": 5586,
+      "unknown_bytes": 25999,
+      "end": 268856
+    },
+    {
+      "path": "samples/tutorial/floxpress/ball valve/Side.sldprt",
+      "stream": "Contents/Config-0-ResolvedFeatures",
+      "bytes": 268576,
+      "sha256": "9e376cc588df2a2486cd8ed7da750459d840b91d4d675a31c8299878501ac733",
+      "root_count": 52,
+      "map_items": 5566,
+      "unknown_bytes": 25911,
+      "end": 268576
+    }
+  ],
+  "coverage_credit": 0,
+  "qualification": "Eight explicit unchanged complete-reader invocations; the snapshot tests_run=0 describes unittest usage, not a test-suite pass",
+  "processes_reaped": 1,
+  "exit_code": 0,
+  "current_reader_test_pins_verified": 6,
+  "populated_report_direct_dependencies_verified": 31,
+  "artifacts": [
+    {
+      "path": "target/intersection-match-original-roots.log",
+      "bytes": 383,
+      "sha256": "5af93d1e1eacf69786da6b84f45e166a00f4794996b0572ab96b33c0e2521d71"
+    },
+    {
+      "path": "target/replay-intersection-match-original-roots.py",
+      "bytes": 4169,
+      "sha256": "afdf3314c241df427d7a5ab78ac05364c23c4666f693eb209f9ac2454fbff36b"
+    },
+    {
+      "path": "docs/features/intersection-reference-match/original-roots-source-snapshot.json",
+      "bytes": 716098,
+      "sha256": "be09a4a45482d2cbc57a94438118751a6a7db624cce9e0a4a31f498b60db2bf5"
+    }
+  ],
+  "checks": [
+    "All eight actual streams match retained SHA-256 identities and complete lengths.",
+    "Unchanged original full readers preserve graph fingerprints, maps/aliases, root spans and EOF.",
+    "All136 signed scalar values and raw bytes, group states and raw20 prefixes match direct container slices.",
+    "Original unknown-byte totals match retained unadapted baselines; no accounting adapter is installed.",
+    "Frozen source files and imported module origins remain unchanged and match all six prepared reader/test pins."
+  ],
+  "remaining": [
+    "Installed native byte binding admission and independently generated complete owned carriers",
+    "Typed operation implementation and full document/concurrency/export gates",
+    "Local Cargo and exact-head publication gates"
+  ],
+  "runtime_implemented": false
+}

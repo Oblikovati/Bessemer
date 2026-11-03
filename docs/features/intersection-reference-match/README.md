@@ -24,6 +24,14 @@ the graph includes earlier point-in-time reader revisions. Those historical
 pins remain distinct from current requirements. Full dependency and native
 binding admission remains incomplete.
 
+The [unchanged populated replay](original-roots-verification.json) accepted all
+eight retained complete streams without an accounting adapter. Complete graph
+fingerprints, object maps and aliases, root spans, EOF and original unknown-byte
+totals match the unadapted baselines. Direct container slices also match all
+136 signed scalars and their state/raw20 prefixes. All six prepared reader/test
+pins and the replay report's 31 direct dependencies match. This establishes
+baseline reader acceptance; native bindings and typed operations remain open.
+
 The published cohort contains eight complete streams, seventeen edges and
 sixty-eight reference groups. Its 544-byte isolated accounting reduction is not
 global coverage credit. Raw20 remains separate and uninterpreted by this feature.
