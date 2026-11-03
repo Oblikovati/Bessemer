@@ -1,0 +1,126 @@
+{
+  "issue": 183,
+  "stage": "CI sanitizer partition correction prepared on existing unreleased publication branch",
+  "failed_workflow": 41675547743,
+  "failed_job": 126055056145,
+  "failed_head": "d7520d4dbd06605ed71ea855db0c725af05b0690",
+  "failure_annotation": "The job has exceeded the maximum execution time of 6h0m0s",
+  "unit_passed": 15,
+  "failed": 0,
+  "direct_compile_exit_code": 0,
+  "direct_clippy_exit_code": 0,
+  "complete_targets": 301,
+  "ci_partitions": 8,
+  "partition_measurement": {
+    "targets": 301,
+    "partitions": [
+      {
+        "index": 0,
+        "targets": 38,
+        "completed_old_run_seconds": 13299.67,
+        "completed_old_run_targets": 33
+      },
+      {
+        "index": 1,
+        "targets": 38,
+        "completed_old_run_seconds": 1125.47,
+        "completed_old_run_targets": 32
+      },
+      {
+        "index": 2,
+        "targets": 38,
+        "completed_old_run_seconds": 345.59,
+        "completed_old_run_targets": 33
+      },
+      {
+        "index": 3,
+        "targets": 38,
+        "completed_old_run_seconds": 117.03,
+        "completed_old_run_targets": 32
+      },
+      {
+        "index": 4,
+        "targets": 38,
+        "completed_old_run_seconds": 138.02,
+        "completed_old_run_targets": 32
+      },
+      {
+        "index": 5,
+        "targets": 37,
+        "completed_old_run_seconds": 601.08,
+        "completed_old_run_targets": 31
+      },
+      {
+        "index": 6,
+        "targets": 37,
+        "completed_old_run_seconds": 221.83,
+        "completed_old_run_targets": 32
+      },
+      {
+        "index": 7,
+        "targets": 37,
+        "completed_old_run_seconds": 326.22,
+        "completed_old_run_targets": 32
+      }
+    ],
+    "old_completed_targets": 257,
+    "qualifications": [
+      "Timing excludes the cancelled unfinished dialog target and every target not yet reached. These are lower bounds, not predicted full sanitizer runtimes."
+    ]
+  },
+  "support": [
+    {
+      "path": "C:\\bessemer166\\xtask\\src\\main.rs",
+      "bytes": 2167,
+      "sha256": "e94ee0fdf26f205734074d26fea0c577f6452c8bd1d55255186377220ef0109e"
+    },
+    {
+      "path": "C:\\bessemer166\\xtask\\src\\sanitizer.rs",
+      "bytes": 6335,
+      "sha256": "f13b199fa35c3b1945b7f49382e1805a85a2d26bcf8a8364520d7e02058563cc"
+    },
+    {
+      "path": "C:\\bessemer166\\xtask\\src\\sanitizer_shard.rs",
+      "bytes": 4611,
+      "sha256": "3f86812eb59a3951080045e327dcaf11ec61054d475bd83015cfc8393717418b"
+    },
+    {
+      "path": "C:\\bessemer166\\xtask\\src\\sanitizer_shard_tests.rs",
+      "bytes": 6775,
+      "sha256": "80a45f47bef748471cee60c66cf1005a3adc806a6a00a3fb273b72c2a20312af"
+    },
+    {
+      "path": "C:\\bessemer166\\.github\\workflows\\bessemer.yml",
+      "bytes": 1410,
+      "sha256": "4a884d39fbdf27cff40348d6ab7952d9e72945c1915e3e3c8de025c8fbc7bffe"
+    }
+  ],
+  "logs": [
+    {
+      "path": "target\\ci-sanitizer-partition-tests.log",
+      "bytes": 1549,
+      "sha256": "9cc5cff1f1623c3224386299646ef42a37ce7737473ff22d7bc9a60242fec3db"
+    },
+    {
+      "path": "target\\ci-sanitizer-partition-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target\\ci-sanitizer-partition-clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "checks": [
+    "The deterministic partition union contains the library and every default file/directory integration target exactly once. Fake workspaces cover unsupported manifests, duplicate names, missing inputs and target layout errors.",
+    "The default local command retains --tests. Partitioned commands select complete targets and retain -Zbuild-std, dependency/standard-library instrumentation and existing ignored test behavior.",
+    "All eight sanitizer jobs must succeed before any full platform gate starts. Existing five required publication check names are unchanged.",
+    "Failed instrumented processes remain failures; empty partitions do not accidentally fall back to Cargo default targets. No dependencies or package versions changed."
+  ],
+  "qualifications": [
+    "This is prepared local command/planner/workflow acceptance, not a fresh remote sanitizer pass. Cargo xtask pr must pass before push, and every required check must pass on the new head before merge.",
+    "The actual timing lower bounds exclude the cancelled unfinished dialog target and every later target. Budget resolution remains unproven until the fresh complete CI run succeeds.",
+    "main has no Rust/CI implementation; the correction remains on the existing unreleased feature publication branch. Humanizer unavailable; prose pass pending maintainer review."
+  ]
+}

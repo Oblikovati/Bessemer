@@ -798,3 +798,11 @@ integer arithmetic; alpha is ignored. The outcome retains the original color
 and either a packed value or a typed channel/domain exclusion. Nonfinite,
 nonzero subnormal and overflowing/out-of-range RGB inputs produce no packed
 value under this model.
+
+ThreadSanitizer CI runs the complete library and integration test targets across
+eight deterministic partitions. Every partition instruments the library,
+dependencies and standard library; native-input exclusions remain unchanged.
+All eight partitions must succeed before the four full platform gates run.
+`cargo xtask tsan` retains the complete local run. A matching local partition is
+`cargo xtask tsan --shard 0/8` on Linux x86_64. The planner rejects custom Cargo
+target layouts instead of silently dropping targets.
