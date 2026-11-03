@@ -90,10 +90,10 @@ fn reopened_configuration_document(original: &Document, changed: &[u8]) -> Docum
 }
 
 macro_rules! configuration_visual_test {
-    ($name:ident, $loader:ident, $part:expr, $offsets:expr) => {
+    ($name:ident, $loader:ident, $document:expr, $offsets:expr) => {
         #[test]
         fn $name() {
-            let document = configuration_document($part);
+            let document = $document;
             let source = $loader(&document);
             let raw = document.read_stream("Contents/Config-0").unwrap();
             assert_eq!(source.to_bytes().unwrap(), raw);
@@ -170,7 +170,7 @@ mod part {
     configuration_visual_test!(
         complete_part_visuals_match_source_spans_and_document_reversals,
         part_visual_configuration,
-        true,
+        configuration_document(true),
         PART_OFFSETS
     );
 }
@@ -184,7 +184,7 @@ mod assembly {
     configuration_visual_test!(
         complete_assembly_visuals_match_source_spans_and_document_reversals,
         assembly_visual_configuration,
-        false,
+        configuration_document(false),
         ASSEMBLY_OFFSETS
     );
 }
@@ -210,5 +210,42 @@ fn configuration_visual_states_cannot_cross_archive_families_or_decodes() {
         other
             .edit_entity_visual_state(&first[0], EntityVisualStoredEdit::ColorWord(0))
             .is_err()
+    );
+}
+
+fn routing_visual_document() -> Document {
+    let mut document = configuration_document(false);
+    let raw = include_bytes!("fixtures/assembly-configurations/owned-routing.bin");
+    document
+        .replace_stream("Contents/Config-0", raw.to_vec())
+        .unwrap();
+    document
+}
+
+fn routing_visual_configuration(document: &Document) -> AssemblyConfigurationArchive {
+    AssemblyConfigurationArchive::from_document(
+        document,
+        ConfigurationId::new(0),
+        AssemblyRootKind::RoutingAssembly,
+        ArchiveVersion::new(19000),
+        None,
+        LIMITS,
+    )
+    .unwrap()
+}
+
+mod routing {
+    use super::*;
+    const OFFSETS: [usize; 5] = [20104, 20407, 20668, 22900, 23218];
+    configuration_result_check!(
+        verify_configuration_result,
+        AssemblyConfigurationArchive,
+        AssemblyConfigurationEdit
+    );
+    configuration_visual_test!(
+        complete_routing_visuals_match_source_spans_and_document_reversals,
+        routing_visual_configuration,
+        routing_visual_document(),
+        OFFSETS
     );
 }

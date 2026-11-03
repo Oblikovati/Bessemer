@@ -9,8 +9,9 @@ visuals with `entity_visual_states`, project an owned field with
 `PartConfigurationArchive` and `AssemblyConfigurationArchive` use the same
 revision-bound projection/edit methods and physical-definition enumeration. The
 configuration checkpoint binds five real records in each ordinary owned fixture
-to complete original Source spans. Wider routing/native-corpus and operation
-acceptance remain pending under #181.
+to complete original Source spans. The owned routing configuration also passes
+its five Source-bound records. Wider native-corpus and operation acceptance
+remain pending under #181.
 
 ```rust
 use bessemer::entity_visual::EntityVisualStoredEdit;

@@ -12,22 +12,25 @@ and edits them through complete resolved part feature archives. The
 [operation checks](resolved-operation-verification.json) cover all 11,493 owned
 model/sketch/display cases, including 22,986 typed RGB changes and no-ops, width
 pairs, foreign/stale handles and shared-source mixed success/failure. The full
-configuration/display/drawing routes and operation/publication gates remain open.
+API routes now cover configuration, display and drawing archives as described
+below; wider corpus and operation/publication gates remain open.
 
 The [display and drawing API checks](display-operation-verification.json) now
 cover complete display enumeration and revision-bound edits, including real
 float absence, complete empty results and shared-source isolation. The full
 7,662-case word matrix uses the typed RGB route alongside the existing raw edit
 gates. Drawing wrappers retain their layout and expose the shared complete edit
-report. Part/assembly configuration routes and the remaining operation gates
-still need completion.
+report. The configuration routes are verified below; remaining corpus and
+operation gates still need completion.
 
 The [configuration operation checks](configuration-operation-verification.json)
 now bind five real visuals in each ordinary owned part and assembly configuration
 to independently observed Source spans. Projection, literal RGB edits, original
 history, no-ops, document reopening/checkpoint reversal and cross-configuration
 rejection pass. The model archive families share the same typed implementation;
-routing/native-corpus acceptance and the wider operation gates remain pending.
+the [owned routing checkpoint](routing-operation-verification.json) also verifies
+five records through both Source and the typed API. Retained native-corpus
+acceptance and the wider operation gates remain pending.
 
 The existing physical fields remain the compatibility surface:
 
@@ -117,8 +120,8 @@ physical targets in every owned case: 22,986 changed writes through the existing
 validated archive edit operation. Each complete result matched independently
 patched literal bytes, preserved the high byte and every unselected field, and
 retained its original source bytes. Every request returned one changed-field
-history entry with the original revision-bound parent. The typed visual facade
-and broader operation acceptance remain pending.
+history entry with the original revision-bound parent. These raw-codec checks
+predate the typed API checkpoints above; broader acceptance remains pending.
 
 The [complete word write check](word-write-verification.json) replaces all seven
 physical values in both targets of every owned model, sketch and nested display
@@ -126,7 +129,7 @@ case: 22,986 changed requests and 160,902 changed fields. Each result matched a
 literal 17-byte replacement, preserved every unselected field and retained its
 source bytes. History matched the existing source-path order, including all seven
 original revision-bound parents. These checks use the existing archive codec;
-the typed visual operation remains pending.
+the typed API checkpoints above provide the current operation status.
 
 The [component context probes](component-context-probe-verification.json) accepted
 all 88 retained complete roots in two fresh processes across ten declared display
@@ -150,7 +153,7 @@ processes with identical Source snapshots. They checked 224,302 primitive reads,
 132 visuals without a custom-width float and 88 with one. The matching
 [Rust checks](early-component-rust-verification.json) passed explicit field-presence
 checks and 25,696 single-bit writes, including the 3904/3905 boundary. Versions
-below 3196 and continuous version coverage remain unproven. The typed operation remains pending; the full modern matrix initialization is
+below 3196 and continuous version coverage remain unproven. The full operation gates remain pending; the full modern matrix initialization is
 recorded below.
 
 The [changed-output Source checks](component-changed-source-verification.json)
