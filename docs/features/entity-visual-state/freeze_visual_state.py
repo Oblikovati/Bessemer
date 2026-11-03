@@ -15,6 +15,7 @@ from dimension_state_evidence import stage_dimension_assets
 from visual_state_evidence import verify_visual_readers, verify_visual_clauses, verify_visual_reports
 from visual_native import verify_visual_installed
 from visual_owned_carriers import verify_owned_visual_model_carriers
+from visual_sketch_carriers import verify_owned_visual_sketch_carriers
 
 VISUAL_TEST_MODULES = ('test_feature_update_time', 'test_modelfeatures', 'test_node_state_fields',
     'test_node_tooltip', 'test_sketchprefix', 'test_modelboundary', 'test_camerafeatures',
@@ -24,7 +25,7 @@ VISUAL_TEST_MODULES = ('test_feature_update_time', 'test_modelfeatures', 'test_n
 def run_visual_checks() -> unittest.TestResult:
     """Run every original related test beside separate evidence checks; e.g. run_visual_checks()."""
     checks = (verify_visual_readers, verify_visual_clauses, verify_visual_reports,
-              verify_visual_installed, verify_owned_visual_model_carriers)
+              verify_visual_installed, verify_owned_visual_model_carriers, verify_owned_visual_sketch_carriers)
     suite = unittest.TestSuite(unittest.FunctionTestCase(check) for check in checks)
     for name in VISUAL_TEST_MODULES:
         original = unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module(name))

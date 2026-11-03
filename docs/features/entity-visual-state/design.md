@@ -68,6 +68,15 @@ rejects that class at that location. Sketch coverage must use its real sketch
 owner. No reader registration or Source override was added to accept the
 discarded fixture attempt. Other visual callers still need complete carriers.
 
+The display-object caller has a reachable owner in `moRevolution_c`:
+`bodyfeatures.revolution_suffix` installs the scoped display readers before
+reading `dimension_800` and `dimension_808`. Its display dimension includes the
+complete display-object base and direct visual record. Use that full nested
+owner for the next corpus and account separately for its model-feature visual
+record, name-object slots and display-object slots. The ordinary resolved-feature
+reader already installs the complete revolution reader; no extra registration
+in the fixture harness is needed.
+
 Publication is serial behind the dialog publication and the existing accepted queue. This
 foundation creates no publication branch or PR. The humanizer skill is
 unavailable; its prose pass remains for maintainer review.

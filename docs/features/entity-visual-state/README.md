@@ -56,6 +56,16 @@ boundaries. The 386,931 original primitive reads partition every stream byte;
 The [owned proof](owned-verification.json) records the strict replay and hashes
 of the complete carriers, word expectations and primitive observations.
 
+The [complete sketch proof](owned-sketch-verification.json) extends the same
+3,831-case matrix to direct points inside real `sgSketch` owners. Its 7,662
+physical visual records and 3,831 aliases span 6,903,462 wire bytes and
+2,041,923 original primitive reads. Initialization wrote only the new sketch
+artifacts. The subsequent no-write replay passed all 120 checks: 114 unchanged
+original tests and six separate evidence checks. All four earlier folder
+artifacts remained byte-identical after the shared corpus verifier was
+extracted. No Source reader registration, runtime API or native byte credit
+was added.
+
 The initial 117-check foundation and subsequent 118-check installed-image record
 bind their snapshots and support hashes to their original Git revisions. Other
 complete caller/edit oracles, the public typed operation and retained-corpus
