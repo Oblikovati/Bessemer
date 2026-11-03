@@ -58,6 +58,15 @@ operand-free instructions. The mixed code/table update interval retains its
 incomplete control-flow scope. Import, RTTI and bounded dataflow admission remain
 separate; this replay supplies no REA Evidence or target execution.
 
+The [bounded binding replay](native-bindings-verification.json) subsequently
+matched all 76 imported call sites, the constructor's table/RTTI connection and
+all 67 selected instruction assertions. The two receiver definitions and single
+spill definition match the retained direct-predecessor review. All direct jumps
+in the 95-instruction stackless helper stay within its decoded instructions;
+its selected input operands read raw24/raw28 and do not read raw20. This retains
+the published branch scope, opaque provider contracts and incomplete update CFG.
+The wider owned matrix, typed operations and publication gates remain pending.
+
 The published cohort contains eight complete streams, seventeen edges and
 sixty-eight reference groups. Its 544-byte isolated accounting reduction is not
 global coverage credit. Raw20 remains separate and uninterpreted by this feature.
