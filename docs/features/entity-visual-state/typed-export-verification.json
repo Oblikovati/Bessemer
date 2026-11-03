@@ -1,0 +1,110 @@
+{
+  "issue": 181,
+  "stage": "Actual typed visual edit exports bound byte for byte to retained complete original Source acceptance",
+  "tested_worktree_base_revision": "4e81225f3a68b3750fb274c4c9079696f701edc1",
+  "processes_reaped": 4,
+  "component_command": "cargo test --test component_visual_carriers matrix:: -- --nocapture",
+  "drawing_command": "cargo test --test drawing_visual_carrier -- --nocapture",
+  "component_cases_per_process": 7662,
+  "component_passed_per_process": 1,
+  "drawing_passed_per_process": 4,
+  "failed": 0,
+  "ignored": 0,
+  "test_seconds_in_log_order": [
+    99.17,
+    93.27,
+    0.2,
+    0.18
+  ],
+  "component_exports": [
+    {
+      "path": "target/entity-visual-component-typed-process-1.bin",
+      "bytes": 162319474,
+      "sha256": "07379c37eed970c67945ef413cf9fbf327943f1a9f05ff4d190b76382075a204"
+    },
+    {
+      "path": "target/entity-visual-component-typed-process-2.bin",
+      "bytes": 162319474,
+      "sha256": "07379c37eed970c67945ef413cf9fbf327943f1a9f05ff4d190b76382075a204"
+    }
+  ],
+  "drawing_exports": [
+    {
+      "path": "target/entity-visual-drawing-typed-process-1.bin",
+      "bytes": 75892,
+      "sha256": "8c2fd8efdcea5a7c212fefde6181e0c7921604f5ff923ffabbdc0b967c702d13"
+    },
+    {
+      "path": "target/entity-visual-drawing-typed-process-2.bin",
+      "bytes": 75892,
+      "sha256": "8c2fd8efdcea5a7c212fefde6181e0c7921604f5ff923ffabbdc0b967c702d13"
+    }
+  ],
+  "component_export_route": "DisplayArchive::edit_entity_visual_state ColorRgb result archive encoder; forced constructors and lower-level edits remain independent comparisons",
+  "drawing_export_route": "DrawingBucketArchive::edit_entity_visual_state result archive encoder for every one of136 single-bit changes across all seven scalar roles",
+  "drawing_parallel_gate": "Each fresh process compares all136 typed bit edits across eight workers with serial output and checks revision-owned field history",
+  "source_acceptance_reused": [
+    {
+      "path": "docs/features/entity-visual-state/component-matrix-rust-verification.json",
+      "bytes": 677144,
+      "sha256": "17bdbe77326116e7182bf4690a3202a51fba48fa43fbf4f1f295da97ef5b2041"
+    },
+    {
+      "path": "docs/features/entity-visual-state/drawing-direct-export-verification.json",
+      "bytes": 2019,
+      "sha256": "a922decb56d33f6655836284d0e186450dd91d6d64e25a8ad6acbbe2a8c3bacc"
+    }
+  ],
+  "acceptance_binding": "Both fresh typed export packets compare directly byte for byte with retained packets previously consumed by complete original Source readers; no fresh Source execution is claimed here.",
+  "support": [
+    {
+      "path": "tests/component_visual_carriers/typed_state.rs",
+      "bytes": 8445,
+      "sha256": "59d5c57ae59232263ec6fd1f56cc591a33bf32d3abc237b014c1d87ac5f80f1b"
+    },
+    {
+      "path": "tests/component_visual_carriers/matrix.rs",
+      "bytes": 7362,
+      "sha256": "34edba8858f90a53618f3ac1fd679ba37aeb8f131995c249f9fec656984760c7"
+    },
+    {
+      "path": "tests/drawing_visual_carrier.rs",
+      "bytes": 12294,
+      "sha256": "8bbfd696bf4c8ca3bf0903e142f0890d0c0c0c9d65d9aa3f49bb279021f00f43"
+    }
+  ],
+  "logs": [
+    {
+      "path": "target/entity-visual-component-typed-integration-1.log",
+      "bytes": 610,
+      "sha256": "f2f1dea1fdaef63405608feda9db9914aacc5157b48e9c4f64336afe0d326165"
+    },
+    {
+      "path": "target/entity-visual-component-typed-integration-2.log",
+      "bytes": 548,
+      "sha256": "c9a876c1ab6870b6f66de40f4cc91c20669616618bff9c8485b09d421e057ce2"
+    },
+    {
+      "path": "target/entity-visual-drawing-typed-process-1.log",
+      "bytes": 726,
+      "sha256": "1ecbfb8f4ac0b869ce2c647ca3f2870096222500a89ca6f18c83b64256193661"
+    },
+    {
+      "path": "target/entity-visual-drawing-typed-process-2.log",
+      "bytes": 664,
+      "sha256": "29a6fb11304402878ebffc8b373c307317c381f9ce06bf601148333678e7e047"
+    }
+  ],
+  "clippy": {
+    "path": "target/entity-visual-typed-export-clippy.log",
+    "bytes": 135,
+    "sha256": "1f4e5666bddd0f7484efdb6c14972b8c27a2ef6edd411f99ae264a56a32d6ccc"
+  },
+  "function_shape_audit": "All changed Rust files remain under500 lines and functions at most20 nonblank body lines.",
+  "coverage_credit": 0,
+  "qualifications": [
+    "The initial lib-only test selection ran zero tests; target/entity-visual-component-typed-process-1.log is preserved and excluded from acceptance. Both actual component integration selections subsequently passed.",
+    "Complete native edit-byte oracles, remaining carrier breadth and publication gates are still required for #181. Native application rendering and geometry validity remain unproven.",
+    "Humanizer unavailable; prose pass pending maintainer review."
+  ]
+}

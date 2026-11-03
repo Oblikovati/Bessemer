@@ -103,7 +103,9 @@ fn drawing_bit_result(source: &DrawingBucketArchive, bit: usize) -> Vec<u8> {
     let actual = edited.to_bytes().unwrap();
     assert_eq!(actual, expected);
     verify_drawing_bit_reversal(source, &edited);
-    actual
+    let typed = typed_drawing_bit_result(source, index, &contents.fields[index].value);
+    assert_eq!(typed, actual);
+    typed
 }
 
 fn verify_drawing_bit_reversal(source: &DrawingBucketArchive, edited: &DrawingBucketArchive) {
@@ -244,4 +246,61 @@ fn typed_drawing_visual_noops_keep_original_field_identity() {
     assert!(result.changes().is_empty());
     assert!(result.archive().resolve_field(state.source_field()).is_ok());
     assert_eq!(result.archive().to_bytes().unwrap(), drawing_visual_bytes());
+}
+
+fn drawing_stored_request(index: usize, value: &DisplayFieldValue) -> EntityVisualStoredEdit {
+    match (index, value) {
+        (0, DisplayFieldValue::U16(word)) => EntityVisualStoredEdit::LayerNumber(*word),
+        (1, DisplayFieldValue::U16(word)) => EntityVisualStoredEdit::ByLayerFlags(*word),
+        (2, DisplayFieldValue::U8(word)) => EntityVisualStoredEdit::LayerAttributeCache(*word),
+        (3, DisplayFieldValue::U32(word)) => EntityVisualStoredEdit::ColorWord(*word),
+        (4, DisplayFieldValue::U16(word)) => EntityVisualStoredEdit::LineStyle(*word),
+        (5, DisplayFieldValue::I16(word)) => EntityVisualStoredEdit::StandardWidth(*word),
+        (6, DisplayFieldValue::F32(word)) => EntityVisualStoredEdit::CustomWidth(*word),
+        other => panic!("{other:?}; expected the seven ordered visual scalar roles"),
+    }
+}
+
+fn typed_drawing_bit_result(
+    source: &DrawingBucketArchive,
+    index: usize,
+    value: &DisplayFieldValue,
+) -> Vec<u8> {
+    let state = &source.entity_visual_states().unwrap()[0];
+    let request = drawing_stored_request(index - drawing_visual_position(source), value);
+    let result = source
+        .edit_entity_visual_state(state, request, archive_support::LIMITS)
+        .unwrap();
+    verify_typed_drawing_bit_history(source, &result, index, value);
+    assert!(
+        result
+            .archive()
+            .entity_visual_state(state.source_field())
+            .is_err()
+    );
+    result.archive().to_bytes().unwrap()
+}
+
+fn verify_typed_drawing_bit_history(
+    source: &DrawingBucketArchive,
+    result: &DisplayArchiveEdit,
+    index: usize,
+    value: &DisplayFieldValue,
+) {
+    assert_eq!(result.completion(), DisplayEditCompletion::Changed);
+    assert_eq!(result.changes().len(), 1);
+    let change = &result.changes()[0];
+    assert_eq!(change.parents().len(), 1);
+    assert_eq!(
+        source.resolve_field(&change.parents()[0]).unwrap(),
+        &source.contents().fields[index]
+    );
+    assert_eq!(
+        result
+            .archive()
+            .resolve_field(change.result().unwrap())
+            .unwrap()
+            .value,
+        *value
+    );
 }

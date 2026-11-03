@@ -57,7 +57,7 @@ pub(super) fn verify_display_rgb(
     offset: usize,
     index: usize,
     state: &DisplayEntityVisualStoredState,
-) {
+) -> Vec<u8> {
     let color = state.words().color_word ^ 0x00a53cf0;
     let rgb = [color as u8, (color >> 8) as u8, (color >> 16) as u8];
     let result = source
@@ -65,9 +65,11 @@ pub(super) fn verify_display_rgb(
         .unwrap();
     let mut expected = raw.to_vec();
     expected[offset + 5..offset + 9].copy_from_slice(&color.to_le_bytes());
-    assert_eq!(result.archive().to_bytes().unwrap(), expected);
+    let actual = result.archive().to_bytes().unwrap();
+    assert_eq!(actual, expected);
     verify_display_rgb_identity(source, &result, state, index, color);
     assert_eq!(source.to_bytes().unwrap(), raw);
+    actual
 }
 
 fn verify_display_rgb_identity(
@@ -172,7 +174,7 @@ pub(super) fn verify_typed_matrix_rgb(
     raw: &[u8],
     index: usize,
     offset: usize,
-) {
+) -> Vec<u8> {
     let states = source.entity_visual_states().unwrap();
     assert_eq!(states.len(), 1);
     let state = &states[0];
@@ -180,8 +182,9 @@ pub(super) fn verify_typed_matrix_rgb(
         typed_display_values(state.words()),
         bit_edits::component_literal_words(&raw[offset..offset + 17])
     );
-    verify_display_rgb(source, raw, offset, index, state);
+    let actual = verify_display_rgb(source, raw, offset, index, state);
     verify_display_noop(source, state);
+    actual
 }
 
 #[test]

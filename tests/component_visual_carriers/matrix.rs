@@ -183,8 +183,11 @@ fn verify_component_matrix_case(
     let index = matrix_visual_position(&source);
     verify_matrix_fields(&baseline, &source, index, &words);
     verify_component_unchanged(&source, &raw);
-    typed_state::verify_typed_matrix_rgb(&source, &raw, index, template.offset);
-    let edited = component_matrix_rgb_result(&source, &raw, index, template.offset);
+    let edited = typed_state::verify_typed_matrix_rgb(&source, &raw, index, template.offset);
+    assert_eq!(
+        edited,
+        component_matrix_rgb_result(&source, &raw, index, template.offset)
+    );
     let reconstructed = component_matrix_forced_bytes(&source);
     assert_eq!(reconstructed, raw);
     append_matrix_outputs(output, &reconstructed, &edited);
