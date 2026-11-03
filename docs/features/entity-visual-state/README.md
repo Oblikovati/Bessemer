@@ -47,9 +47,19 @@ separate; the byte total is the sum of reported intervals. These are ordinary
 static observations with the existing PE reader, not fresh REA Evidence. CAD
 code was not loaded or executed, and no semantic byte credit was added.
 
-The initial 117-check foundation record binds its snapshot and support hashes to
-its original Git revision. Independent complete owned carrier/edit oracles, the
-public typed operation and retained-corpus/caller acceptance remain pending.
+The first complete owned caller contains 3,831 resolved-feature streams with
+7,662 physical folder definitions and 3,831 instance aliases. Independent
+literals cover every color high byte, cache byte and known ByLayer combination,
+plus signed width limits, raw floating-point edge patterns and layer/style
+boundaries. The 386,931 original primitive reads partition every stream byte;
+53,634 literal visual spans also retain their original reader attribution.
+The [owned proof](owned-verification.json) records the strict replay and hashes
+of the complete carriers, word expectations and primitive observations.
+
+The initial 117-check foundation and subsequent 118-check installed-image record
+bind their snapshots and support hashes to their original Git revisions. Other
+complete caller/edit oracles, the public typed operation and retained-corpus
+acceptance remain pending.
 The [design notes](design.md) retain that complete caller and verification scope.
 
 Run the source checks from the repository root:

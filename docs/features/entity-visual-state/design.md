@@ -55,6 +55,19 @@ a public decoder defect. Construct a reachable Source-valid complete archive
 before classifying a mismatch as a Bug. Keep any proven fix separate from this
 additive operation and land it through the patch workflow.
 
-Publication is serial behind PR #180 and the existing accepted queue. This
+The first owned carrier uses complete `moFolder_c` definitions in a resolved
+feature stream. Each case contains a new class, a loaded-class definition with
+different words, an alias to the first instance and an empty boundary list.
+The inherited 97-slot context grows to 100 slots. All original primitive reads
+partition the complete stream, including the fourteen literal visual scalars.
+Integer wrapper attribution stays with `mfcobjects`; direct byte/color reads
+belong to `dl_light` and the custom width float belongs to `dl_ui`.
+
+A sketch point cannot serve as a top-level feature: the unchanged Source reader
+rejects that class at that location. Sketch coverage must use its real sketch
+owner. No reader registration or Source override was added to accept the
+discarded fixture attempt. Other visual callers still need complete carriers.
+
+Publication is serial behind the dialog publication and the existing accepted queue. This
 foundation creates no publication branch or PR. The humanizer skill is
 unavailable; its prose pass remains for maintainer review.
