@@ -74,6 +74,24 @@ word. The existing complete Source control still matches its original bytes.
 The full matrix's complete roots and primitive oracles remain to be generated
 and accepted through Source; the input tests do not establish that acceptance.
 
+The [first complete matrix run](matrix-initial-verification.json) subsequently
+passed all 1,344 declared cases and all ten tests. It retains 4,032 roots, 10,752
+physical reference groups, 43,008 scalar values and 606,144 physical primitive
+reads. Complete Source readers preserve definitions, aliases, map sizes, null
+siblings and EOF. Every constructor output also matches an independent literal
+patch. A separate stdlib checker verified the complete 2,045,568-byte packet and
+every primitive range and raw byte without importing Source. The strict second
+fresh-process replay is running; typed operations remain pending.
+
+Regenerate the matrix only during explicit oracle initialization:
+
+```powershell
+python -B -X utf8 docs/features/intersection-reference-match/freeze_owned_controls.py --write-matrix
+```
+
+The ordinary command above performs strict byte comparisons with every retained
+artifact and never updates them.
+
 The published cohort contains eight complete streams, seventeen edges and
 sixty-eight reference groups. Its 544-byte isolated accounting reduction is not
 global coverage credit. Raw20 remains separate and uninterpreted by this feature.
