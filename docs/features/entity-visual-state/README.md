@@ -128,7 +128,8 @@ processes with identical Source snapshots. They checked 224,302 primitive reads,
 132 visuals without a custom-width float and 88 with one. The matching
 [Rust checks](early-component-rust-verification.json) passed explicit field-presence
 checks and 25,696 single-bit writes, including the 3904/3905 boundary. Versions
-below 3196 and continuous version coverage remain unproven. The typed operation and full modern component matrix remain pending.
+below 3196 and continuous version coverage remain unproven. The typed operation remains pending; the full modern matrix initialization is
+recorded below.
 
 The [changed-output Source checks](component-changed-source-verification.json)
 accepted all 37,698 independently expected complete bit/RGB outputs asserted by
@@ -150,6 +151,15 @@ workers match serial bytes, and two fresh Rust exports match exactly. Original
 readers accepted every actual export with 26,248 primitive checks and unchanged
 unselected reads. Wider drawing profiles and native document acceptance remain
 pending.
+
+The [full component initialization](component-initialization-verification.json)
+passed 7,662 complete modern cases, with 16,791,273 fresh primitive reads over
+81,129,087 wire bytes and 53,634 selected scalar spans. Each case preserved every
+unselected primitive and the real holder cycle/shared-property identity. Storage
+factors out the two unchanged complete templates; parsing still covers every
+case. All three focused checks passed in 5,066.655 seconds. The initial Source
+snapshot is retained separately, and strict replay is running. Rust acceptance
+of this full matrix and the typed operation remain pending.
 
 The initial 117-check foundation and subsequent 118-check installed-image record
 bind their snapshots and support hashes to their original Git revisions. Other

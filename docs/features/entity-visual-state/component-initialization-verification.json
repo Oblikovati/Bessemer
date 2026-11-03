@@ -1,0 +1,105 @@
+{
+  "issue": 181,
+  "stage": "Full original-reader modern component matrix initialization; strict replay remains running",
+  "command": "python -B -X utf8 docs/features/entity-visual-state/freeze_component_visuals.py --write",
+  "exit_code": 0,
+  "process_reaped": true,
+  "passed": 3,
+  "failed": 0,
+  "test_seconds": 5066.655,
+  "source_python_files": 5229,
+  "source_snapshot_identity": "17362ed5932bdecb5e69c388df09846bab9b743f03167c8ef44da803d9f9e671",
+  "snapshot": {
+    "path": "docs/features/entity-visual-state/component-initialization-source-snapshot.json",
+    "bytes": 635814,
+    "sha256": "6534121c18ddede3fd33477582be0a13d486007a2f6e028bafb44f66134405f1"
+  },
+  "metadata": {
+    "path": "docs/features/entity-visual-state/owned-component-reference.json",
+    "bytes": 4074,
+    "sha256": "c9bb163cf8a95ccba7e15f545ed523d8eb4f542f8528703236ddb6424cb90102"
+  },
+  "cases": 7662,
+  "cases_per_document_kind": 3831,
+  "selected_scalar_spans": 53634,
+  "fresh_source_primitive_reads": 16791273,
+  "total_wire_bytes": 81129087,
+  "stored_complete_templates": 2,
+  "stored_template_primitive_rows": 4383,
+  "fixtures": [
+    {
+      "path": "tests/fixtures/entity-visual-state/component-templates.bin",
+      "bytes": 21209,
+      "sha256": "bd6a110b8c8715ee1dd2d28e25c97cf90242d80db18ab566d0b7226434df8539"
+    },
+    {
+      "path": "tests/fixtures/entity-visual-state/component-words.tsv",
+      "bytes": 1085660,
+      "sha256": "9ec16c0740fce1f0b9d0f706ecf49accc5030f321048184dfd64d788caa6d64a"
+    },
+    {
+      "path": "tests/fixtures/entity-visual-state/component-primitives.tsv",
+      "bytes": 260386,
+      "sha256": "92023a97c0781e1e86d9d199117852498fad8710d4c05fffd7c50f6b265f4522"
+    }
+  ],
+  "support": [
+    {
+      "path": "docs/features/entity-visual-state/freeze_component_visuals.py",
+      "bytes": 1943,
+      "sha256": "d147ebe1d4ce66d914081cd720f6a29c8789fe6820efc573701f503ca9bd784d"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_component_seeds.py",
+      "bytes": 3500,
+      "sha256": "ecc9c054d5fb8c83ed9e5459d204fd49b0cb2a65d50e91e81a3876cb31aa2659"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_component_source.py",
+      "bytes": 3686,
+      "sha256": "31d4767398ebc37fc75a169e9265febb4dfb17e115c03a4e62ea1b7d180c6e83"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_component_baselines.py",
+      "bytes": 2860,
+      "sha256": "a12ac602e749ede1d72e1b24ece1ab004c34460b966b976af28c22f4f53c6e34"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_component_matrix.py",
+      "bytes": 4503,
+      "sha256": "933581203f3a9dac70ad58af3fa130a8952558aac5d58517d55679ebb508a2c6"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_component_corpus.py",
+      "bytes": 4370,
+      "sha256": "2062345c86d40a55804086fc1c71f061f2e59d461f23de3962a090f4714de377"
+    }
+  ],
+  "log": {
+    "path": "target/entity-visual-component-initialize.log",
+    "bytes": 616,
+    "sha256": "9db50ce70eb11b4b9ef51914a8b6b2be1c53d66fee616460e1c429d45acfedae"
+  },
+  "function_shape_audit": {
+    "path": "target/entity-visual-function-shape.json",
+    "bytes": 3157,
+    "sha256": "13cf0f9b5e31e17460416aadd1a1ba96705100e5300a1f768181dd4dab3721f0"
+  },
+  "checks": [
+    "All3831 independent visual word cases reparsed through each complete part/assembly shared-property cyclic-holder owner",
+    "Every original Source read boundary/type/attribution matches its complete owner template",
+    "Every unselected primitive raw value, all_views neighbor, object-map slot count and holder alias/cycle retained",
+    "Literal scalar projection and full raw17-byte selected words checked for every complete root",
+    "Whole root EOF and byte partition checked independently of the Rust codec",
+    "Earlier model/sketch/display corpora were not regenerated or rewritten"
+  ],
+  "coverage_credit": 0,
+  "qualifications": [
+    "Only the two unchanged complete templates and full baseline primitive oracles are stored once. All7662 cases still perform complete fresh original Source parsing and every read-shape/unselected-byte check.",
+    "This runner has3 focused checks; it is not the earlier121-check original-test harness.",
+    "The successful initialization snapshot was copied unchanged before starting the sequential strict replay. The active replay may update component-source-snapshot.json only after completion.",
+    "Strict non-writing fixture replay, Rust acceptance of the full7662-case component matrix, typed operation/full carrier coverage and publication gates remain pending.",
+    "This proves file-wire interoperability, not native application rendering or geometry validity. No byte-accounting credit was adopted.",
+    "Humanizer unavailable; prose pass pending maintainer review."
+  ]
+}
