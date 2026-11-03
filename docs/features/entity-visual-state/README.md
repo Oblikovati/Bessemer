@@ -139,6 +139,14 @@ inputs were literal expected bytes, rather than exported Rust-produced files;
 the Rust checks establish equality to the actual edit results. Rust process and
 concurrency exports remain part of the full operation acceptance.
 
+The [drawing caller probe](drawing-owner-source-verification.json) retains a
+complete 554-byte `VBLists` candidate at model version 10200. Original readers
+accepted it twice with 193 primitive reads and five map slots. Its real bucket
+object keys share one physical component property; top-level aliases, a null
+pointer and a bucket self-reference retain identity. Rust wrapper/edit acceptance
+and native document acceptance remain pending. The candidate bytes are retained
+in the finding while the independent modern corpus writer remains active.
+
 The initial 117-check foundation and subsequent 118-check installed-image record
 bind their snapshots and support hashes to their original Git revisions. Other
 complete caller/edit oracles, the public typed operation and retained-corpus
