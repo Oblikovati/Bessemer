@@ -1,0 +1,60 @@
+{
+  "issue": 181,
+  "stage": "First fresh original Source replay of actual typed model RGB exports",
+  "processes_reaped": 1,
+  "exit_codes": [
+    0
+  ],
+  "cases": 11493,
+  "cases_per_caller": 3831,
+  "complete_roots": 34479,
+  "changed_roots": 22986,
+  "focused_visuals_per_root": 2,
+  "source_python_files": 5635,
+  "artifacts": [
+    {
+      "path": "target/entity-visual-model-typed-source-1.log",
+      "bytes": 479435,
+      "sha256": "d4f2b1f197da2a0ef553c76f151e8ac79861c66bb6a5c6630e1cd7df6deb5834"
+    },
+    {
+      "path": "target/entity-visual-model-typed-source-1.json",
+      "bytes": 715379,
+      "sha256": "499a61e325ddbbe12d684d683a2829beee3023e78ab7b4f9bca224c5c1b363cc"
+    },
+    {
+      "path": "target/replay-visual-model-typed-exports.py",
+      "bytes": 6807,
+      "sha256": "6a59db519f67d8d88314a9760afd822764c9badab8cc1e1cdae15c2093efeeae"
+    },
+    {
+      "path": "target/entity-visual-model-concurrent-process-1.bin",
+      "bytes": 64222888,
+      "sha256": "a587067ff1c3096e549cc4291da1a1aafc35dcb1c700a8266f14ff8e5b4defbb"
+    },
+    {
+      "path": "docs/features/entity-visual-state/model-typed-export-source-snapshot.json",
+      "bytes": 701508,
+      "sha256": "66daec95d28f734d1d5b55d6a636fb25a34718cd6e939d134bc7abcd74e5f9b0"
+    }
+  ],
+  "context_streams_sha256": [
+    "3b98a8dfe9082f76c546219eb38b4b358c9a682d5aafc1a44b33c099c1a22495",
+    "2bb4c6306071b4bd20be2cda0207c376e5a6c803e884c77c95ee68f44632d8f7",
+    "f6387400850ae80dedbc5d2f5dc77fb1dd38ad4b8afb1e6fb2ffc2ad35edb27d"
+  ],
+  "coverage_credit": 0,
+  "checks": [
+    "Every original root matches its retained Source-owned packet and word-oracle hashes.",
+    "Both actual Rust changed roots match independent literal RGB patches, including the preserved high byte and all unrelated bytes.",
+    "Unchanged original resolved-feature readers consume every original and changed root through EOF with the expected object-map size and original alias identity.",
+    "Both focused visuals in every root match all named stored scalar projections and roles; raw float bits remain bound by exact wire equality.",
+    "All frozen source files remain byte-identical and every Source module import comes from that immutable copy. No float method, version or class registry is overridden."
+  ],
+  "qualifications": [
+    "Second fresh-process Source replay is running and is not accepted by this record.",
+    "This is complete archive-reader acceptance, not native application opening, rendering or geometry validity.",
+    "The original Source unit suite is not rerun by this export-only check. Prior foundation acceptance remains separate.",
+    "Native part edits, Cargo/repository and exact-head publication gates remain required. Humanizer unavailable; maintainer prose review pending."
+  ]
+}

@@ -273,6 +273,13 @@ vector and original history parent. Every unrelated stream, name and order
 remains exact, and reversal restores every original container byte. Native part
 and repository/publication gates remain open.
 
+The [first fresh Source export replay](model-typed-export-source-initial-verification.json)
+accepted all 34,479 actual model, sketch and nested-display roots, including
+22,986 RGB-edited outputs. Complete unchanged readers reached EOF, retained
+alias identity and checked both focused visual projections. Every edited root
+also matched an independent literal RGB patch. Frozen reader files and imports
+passed their integrity checks. A second fresh-process replay remains pending.
+
 The initial 117-check foundation and subsequent 118-check installed-image record
 bind their snapshots and support hashes to their original Git revisions.
 Retained native edit acceptance and wider operation/publication gates remain
