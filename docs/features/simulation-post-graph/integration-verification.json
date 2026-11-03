@@ -1,0 +1,64 @@
+{
+  "issue": 165,
+  "pr": "https://github.com/Oblikovati/Bessemer/pull/180",
+  "publication_head": "e7ab827796e3aeaa9ac8c3987f8119b3c759861b",
+  "publication_tree": "9cf7c37ee96ccc4ca863b1032a05190f3eb15cb6",
+  "accepted_source_cut": "f51597a464263b9a7d1c4e9722626cbec9ae6398",
+  "merge_commit": "74d2aa0e2d640ee4163401fa26200704ecc9aeda",
+  "merged_at": "2026-11-02T12:11:59Z",
+  "integration_branch": "codex/interop-candidate",
+  "required_checks": [
+    {
+      "name": "PR gate (Linux x86_64)",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "completed_at": "2026-11-02T07:13:29Z",
+      "url": "https://github.com/Oblikovati/Bessemer/actions/runs/41401621712/job/125134465461"
+    },
+    {
+      "name": "Full gate (Linux x86_64)",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "completed_at": "2026-11-02T12:11:42Z",
+      "url": "https://github.com/Oblikovati/Bessemer/actions/runs/41401621712/job/125134465234"
+    },
+    {
+      "name": "Full gate (macOS x86_64)",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "completed_at": "2026-11-02T07:45:39Z",
+      "url": "https://github.com/Oblikovati/Bessemer/actions/runs/41401621712/job/125134465533"
+    },
+    {
+      "name": "Full gate (macOS arm64)",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "completed_at": "2026-11-02T07:07:47Z",
+      "url": "https://github.com/Oblikovati/Bessemer/actions/runs/41401621712/job/125134465547"
+    },
+    {
+      "name": "Full gate (Windows x64)",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "completed_at": "2026-11-02T07:30:38Z",
+      "url": "https://github.com/Oblikovati/Bessemer/actions/runs/41401621712/job/125134465548"
+    }
+  ],
+  "linux_full_includes_thread_sanitizer": true,
+  "issue_closed": true,
+  "publication_head_integrated": true,
+  "cleanup": {
+    "worktree_removed": true,
+    "local_branch_removed": true,
+    "remote_branch_removed": true,
+    "build_directory_removed": true,
+    "active_publication_processes": 0,
+    "cargo_clean_reported": "20728 files,19.7GiB"
+  },
+  "excluded": [
+    "Native application/writer execution",
+    "Chart business meanings and native clamp side effects",
+    "Geometry acceptance and whole-format parity",
+    "Package release or version bump"
+  ]
+}

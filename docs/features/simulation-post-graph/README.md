@@ -108,5 +108,11 @@ checks. Their complete field and edit-history exports matched each other and
 the independent owned/native packets byte for byte; both hashes also match
 the earlier acceptance run. [Publication source verification](publication-source-verification.json)
 records the new snapshot, binary and logs. The historical source snapshot is
-preserved. This refresh does not replace the required exact publication-head
-Cargo and platform gates; PR #176 remains the sole publication PR.
+preserved. The subsequent exact-publication-head Cargo gate passed with
+3,521 tests passed, zero failed and108 ignored across266summaries. Two fresh
+publication processes each passed all18 focused checks with native packets and
+identical complete field/history exports.
+[PR #180](https://github.com/Oblikovati/Bessemer/pull/180) passed all five exact-head
+platform checks, including Linux ThreadSanitizer, and merged into the candidate.
+The [integration record](integration-verification.json) retains the head, merge,
+checks and completed branch/checkout/build cleanup.
