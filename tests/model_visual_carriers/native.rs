@@ -1,6 +1,21 @@
 use super::{LIMITS, configuration_for_case, next_case};
 use crate::archive_codec::ArchiveCursor;
 use crate::model_archives::{ModelField, ModelFieldValue, PartResolvedFeaturesArchive};
+use crate::entity_visual::EntityVisualStoredWords;
+
+fn native_projected_visual_values(words: EntityVisualStoredWords) -> [ModelFieldValue; 7] {
+    [ModelFieldValue::U16(words.layer_number), ModelFieldValue::U16(words.by_layer_flags),
+        ModelFieldValue::U8(words.layer_attribute_cache), ModelFieldValue::U32(words.color_word),
+        ModelFieldValue::U16(words.line_style), ModelFieldValue::I16(words.standard_width),
+        ModelFieldValue::F32(words.custom_width.unwrap())]
+}
+
+fn assert_native_typed_visual(fields: &[ModelField], state: &crate::model_archives::ModelEntityVisualStoredState) {
+    let index = state.source_field().index();
+    for (field, expected) in fields[index..index + 7].iter().zip(native_projected_visual_values(state.words())) {
+        assert_eq!(field.value, expected, "{}", field.path);
+    }
+}
 
 fn native_visual_prefix(path: &str) -> Option<&str> {
     path.strip_suffix(".unknown_0").filter(|prefix| {
@@ -48,14 +63,18 @@ fn inspect_native_visual_case(
 ) -> (usize, usize) {
     let source = configuration_for_case(case, kernel).unwrap();
     let configuration = inspect_native_visual_fields(source.fields());
+    let states = source.entity_visual_states().unwrap();
+    assert_eq!(states.len(), configuration);
+    for state in &states { assert_native_typed_visual(source.fields(), state); }
     let features =
         PartResolvedFeaturesArchive::from_bytes(case.features, source, case.manager, LIMITS)
             .unwrap();
     assert_eq!(features.to_bytes().unwrap(), case.features);
-    (
-        configuration,
-        inspect_native_visual_fields(features.fields()),
-    )
+    let physical = inspect_native_visual_fields(features.fields());
+    let states = features.entity_visual_states().unwrap();
+    assert_eq!(states.len(), physical);
+    for state in &states { assert_native_typed_visual(features.fields(), state); }
+    (configuration, physical)
 }
 
 #[test]
@@ -76,5 +95,6 @@ fn native_visual_carriers_bind_all906_streams_to_original_physical_record_counts
     }
     assert_eq!(cursor.remaining(), 0);
     assert_eq!(totals[1], 127773); // #181 / C-1959: original physical shared-codec reads.
+    assert_eq!(totals[0], 9586);
     println!("VISUAL_NATIVE_TOTAL\t{}\t{}", totals[0], totals[1]);
 }

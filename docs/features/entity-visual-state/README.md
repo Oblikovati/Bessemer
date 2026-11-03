@@ -32,6 +32,13 @@ the [owned routing checkpoint](routing-operation-verification.json) also verifie
 five records through both Source and the typed API. Retained native-corpus
 acceptance and the wider operation gates remain pending.
 
+The [native typed projection check](native-typed-projection-verification.json)
+passed all 906 retained part cases. Public enumeration and every stored word
+match 9,586 configuration visuals and 127,773 resolved-feature visuals. All
+per-stream count rows match the earlier physical gate exactly. This establishes
+complete native reads/projections; native edit and wider operation acceptance
+remain separate work.
+
 The existing physical fields remain the compatibility surface:
 
 | Field suffix | Stored role | Type |
