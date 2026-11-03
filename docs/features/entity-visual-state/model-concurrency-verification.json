@@ -1,0 +1,165 @@
+{
+  "issue": 181,
+  "stage": "All owned model/sketch/nested-display visual word matrices across eight mixed workers and two processes",
+  "processes_reaped": 2,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "passed_per_process": 1,
+  "failed": 0,
+  "ignored": 0,
+  "cases_per_process": 11493,
+  "cases_per_caller": 3831,
+  "focused_visuals_per_case": 2,
+  "focused_visuals_per_process": 22986,
+  "workers_per_shared_snapshot": 8,
+  "serial_controls_per_snapshot": 1,
+  "changed_requests_per_process": 206874,
+  "expected_rejected_requests_per_process": 206874,
+  "noop_requests_per_process": 206874,
+  "total_requests_per_process": 620622,
+  "test_seconds": [
+    344.58,
+    360.52
+  ],
+  "exports": [
+    {
+      "path": "target/entity-visual-model-concurrent-process-1.bin",
+      "bytes": 64222888,
+      "sha256": "a587067ff1c3096e549cc4291da1a1aafc35dcb1c700a8266f14ff8e5b4defbb"
+    },
+    {
+      "path": "target/entity-visual-model-concurrent-process-2.bin",
+      "bytes": 64222888,
+      "sha256": "a587067ff1c3096e549cc4291da1a1aafc35dcb1c700a8266f14ff8e5b4defbb"
+    }
+  ],
+  "wire_exports_byte_identical": true,
+  "complete_operation_traces": [
+    {
+      "path": "target/entity-visual-model-concurrent-process-1.trace.zlib",
+      "bytes": 295100109,
+      "sha256": "1781c0980ceacf34123e0482e5700fdb4c0ac252ddbc7ec1e33cb697c040da16"
+    },
+    {
+      "path": "target/entity-visual-model-concurrent-process-2.trace.zlib",
+      "bytes": 295100109,
+      "sha256": "1781c0980ceacf34123e0482e5700fdb4c0ac252ddbc7ec1e33cb697c040da16"
+    }
+  ],
+  "complete_operation_traces_byte_identical": true,
+  "complete_projection": {
+    "cases": 11493,
+    "payload_bytes": 64084968,
+    "export_bytes": 64222888,
+    "export_sha256": "a587067ff1c3096e549cc4291da1a1aafc35dcb1c700a8266f14ff8e5b4defbb",
+    "trace_cases": 11493,
+    "complete_projection_bytes": 2668426898,
+    "complete_projection_sha256": "afaa8ef7f43604a6c96ab99ebe26e3743736db028022b8bac9d0dee231b2e172",
+    "compressed_trace_bytes": 295100109,
+    "compressed_trace_sha256": "1781c0980ceacf34123e0482e5700fdb4c0ac252ddbc7ec1e33cb697c040da16"
+  },
+  "owned_reference_bindings": [
+    {
+      "path": "docs/features/entity-visual-state/owned-model-reference.json",
+      "bytes": 830,
+      "sha256": "e413dbc444fd1ef30dfa94843ec83bfc8ea0a0a05d0f07506cd22227ecdc1817"
+    },
+    {
+      "path": "docs/features/entity-visual-state/owned-sketch-reference.json",
+      "bytes": 846,
+      "sha256": "c50ab8d7b4495282e7658dc73b52023ef0010bbb24e2d59b3a49eaa5c8482eae"
+    },
+    {
+      "path": "docs/features/entity-visual-state/owned-display-reference.json",
+      "bytes": 936,
+      "sha256": "8b654f2938afc9fa4590adfc3b70a0e4e3e9a4f28c235939361befb36c4f5e2f"
+    }
+  ],
+  "projection_checker": {
+    "path": "target/check-model-concurrent-projection.py",
+    "bytes": 3271,
+    "sha256": "b99830660fba985b5ac6ad2181bc28807fb2ba837316d31a1cf82ff6e3183051"
+  },
+  "projection_logs": [
+    {
+      "path": "target/entity-visual-model-concurrent-process-1-projection.log",
+      "bytes": 449,
+      "sha256": "1ff45e00144cc9e2a2ff821de1c41878c91fb55a7e4155ba275b3da3efc25149"
+    },
+    {
+      "path": "target/entity-visual-model-concurrent-process-2-projection.log",
+      "bytes": 449,
+      "sha256": "1ff45e00144cc9e2a2ff821de1c41878c91fb55a7e4155ba275b3da3efc25149"
+    }
+  ],
+  "support": [
+    {
+      "path": "tests/model_visual_carriers.rs",
+      "bytes": 6804,
+      "sha256": "816532421b2ba45460d1fd7b1512a3ebb644eb434bafd7bf8770c6c4982e3400"
+    },
+    {
+      "path": "tests/model_visual_carriers/concurrency.rs",
+      "bytes": 10278,
+      "sha256": "258f98667d562c01285acfec36d3c7cea28bb3b8266e8e2004011690344997d0"
+    },
+    {
+      "path": "tests/support/visual_workers.rs",
+      "bytes": 554,
+      "sha256": "de2b3f55ef516e04b83153b39ea739491a798b103c0f616f123501bd67249f20"
+    }
+  ],
+  "logs": [
+    {
+      "path": "target/entity-visual-model-concurrent-process-1.log",
+      "bytes": 391502,
+      "sha256": "97397d321d184cd1062162a9105df5ac0147fbc8f86be88d67afa97a4534c2af"
+    },
+    {
+      "path": "target/entity-visual-model-concurrent-process-2.log",
+      "bytes": 391502,
+      "sha256": "52e5cb81a4052dae047ca56a4086acde91319fa93cb65364d4ad3da18677d99e"
+    }
+  ],
+  "compiler_log": {
+    "path": "target/entity-visual-model-concurrent-compile.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "test_binary": {
+    "path": "target/entity-visual-model-concurrent-tests.exe",
+    "bytes": 50434560,
+    "sha256": "b3c46335cf5f3c5977f800f39604bb5aea330a1cc9de03ea64141cb44ffa30be"
+  },
+  "direct_clippy": {
+    "exit_code": 0,
+    "model_log": {
+      "path": "target/entity-visual-model-concurrent-clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "component_log": {
+      "path": "target/entity-visual-component-concurrent-clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "compiler_command": "rustc --edition=2024 --test tests/model_visual_carriers.rs --extern bessemer=target/pinned-1.99.0/debug/deps/libbessemer-f8dd2f2d514eb7f4.rlib --extern flate2=target/pinned-1.99.0/debug/deps/libflate2-2d1ec62b5c8ec434.rlib -L dependency=target/pinned-1.99.0/debug/deps -C opt-level=1 -C debug-assertions=yes -C overflow-checks=yes -D warnings -F unsafe_code -o target/entity-visual-model-concurrent-tests.exe",
+  "coverage_credit": 0,
+  "checks": [
+    "Both focused physical definitions in every complete folder, sketch-owner and nested-display-owner case are checked against literal Source scalar spans. Additional owner visuals and every other field remain unselected and exact.",
+    "Eight workers share the same immutable source and both typed states. Each performs changed RGB, rejected width-presence and no-op requests against each focused definition.",
+    "Worker results equal serial bytes, every field, completion, exact coverage, fidelity, diagnostics, structural history with resolved original parents/result fields and complete typed failure errors.",
+    "Serial changes match literal RGB patches of complete original streams, preserve all unselected values and report exactly one original color-field parent. No-ops retain revision identity and changed results reject stale original states.",
+    "Original source fields/bytes and the shared parent configuration remain unchanged after all mixed requests. Each complete owner retains its expected root and inherited/shared-map slot counts.",
+    "Both complete wire packets match byte for byte. An independent checker verifies every original input and both actual changed exports against hash-bound owned Source packets/oracles and direct literal patches. Both full operation traces match byte for byte with raw stored float bits retained."
+  ],
+  "qualifications": [
+    "These are22986 focused definitions across11493 complete cases; two additional model-base visuals in each nested display owner remain unselected and are preserved in every full field/byte comparison.",
+    "This does not claim a fresh original Source parse of the changed model exports. The expected bytes derive from the retained complete original Source-owned packets and independently observed scalar offsets.",
+    "Standalone compilation and direct clippy-driver checks avoid overlapping Cargo commands. Full Cargo/Clippy/repository and publication gates remain required. Whole-document edit/reopen/reversal matrices are the next separate acceptance step.",
+    "The exhaustive native part gate remains active. Native application rendering and geometry validity remain unproven. Historical unknown accounting is unchanged. Humanizer unavailable; prose pass pending maintainer review."
+  ]
+}

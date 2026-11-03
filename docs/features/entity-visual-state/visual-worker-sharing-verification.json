@@ -65,5 +65,6 @@
   "qualifications": [
     "This moves only the existing eight-worker comparison and three literal corpus descriptors. Existing matrix assertions, request semantics, whole-document gates and operation traces remain unchanged.",
     "Standalone binaries retain the existing validated library and explicit test-profile flags; full Cargo/Clippy/repository gates remain separate. The new full model concurrency gate follows in a separate change. Humanizer unavailable; prose pass pending maintainer review."
-  ]
+  ],
+  "artifact_git_revision": "a33034d28a6ee458c1df01693a92a3fc866c086e"
 }

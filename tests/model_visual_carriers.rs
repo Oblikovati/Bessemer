@@ -4,10 +4,14 @@ use bessemer::header::ArchiveVersion;
 use bessemer::model_archives::*;
 use bessemer::tessellation::StoredFloat;
 
+#[path = "model_visual_carriers/concurrency.rs"]
+mod concurrency;
 #[path = "model_visual_carriers/edits.rs"]
 mod edits;
 #[path = "model_visual_carriers/typed_state.rs"]
 mod typed_state;
+#[path = "support/visual_workers.rs"]
+mod visual_workers;
 #[path = "model_visual_carriers/word_edits.rs"]
 mod word_edits;
 
