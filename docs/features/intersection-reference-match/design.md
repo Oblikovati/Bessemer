@@ -42,3 +42,36 @@ enum, resolve coedges or execute geometry. Published accounting remains unchange
 Add the user-facing README and Unreleased changelog entry with the runtime
 implementation. No version bump, release or additional publication PR is part
 of preparation. Humanizer is unavailable; prose review remains pending.
+
+## Revision-owned operation contract
+
+The first complete operation uses `PartResolvedFeaturesArchive`, for which the
+owned 19000 matrix and eight native roots have complete original-reader
+acceptance. Other ordinary part/assembly archive callers remain in scope, but
+need their own complete positive carriers before their API is added. Absence
+enumeration on a complete archive must return an empty collection successfully.
+
+Select a physical record by its revision-bound leading `raw_00` handle. Admit
+only the exact nested path through `styled_intersections.intersections[index]`,
+`edges_48[index]` and one of the four declared groups. Parse indices once. Bind
+the actual preceding `sgSketch` definition, marker-zero intersection and
+same-scope four-field sequence `U16 raw_00`, `I32 raw_20`, `I32 raw_24`,
+`I32 raw_28`. A similar suffix elsewhere is insufficient. Keep handles for all
+four words and the validated scope in the immutable view; edits reuse those
+identities rather than reclassifying a path.
+
+The word projection retains the uninterpreted state and raw20 words alongside
+the signed span-count and backward-offset states. Role edits replace only the
+span-count state, only the backward-offset state, or both atomically. No role
+edit changes the state word, raw20, references, counters or cached geometry.
+All signed32 values are admitted; no native state transition, nonnegative
+constraint or count-sum normalization is applied.
+
+Delegate replacement fields to the existing complete archive edit. Resolve the
+source revision before constructing replacements. A no-op keeps revision
+identity; changed outcomes retain every actual ordered original/replacement
+parent, including one-field changes within a paired request. Wrong/foreign/stale
+handles and malformed typed groups fail before publication. Keep the existing
+operation completion, diagnostics, fidelity and explicit validation exclusions.
+Do not add an offline matcher or metric API without its separate complete input
+contract and a caller.

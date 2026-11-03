@@ -1,0 +1,87 @@
+{
+  "issue": 184,
+  "stage": "Two fresh complete Source matrix processes with strict retained-artifact replay",
+  "processes_reaped": 2,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "tests_per_process": 10,
+  "test_seconds": [
+    218.873,
+    237.742
+  ],
+  "cases_per_process": 1344,
+  "roots_per_process": 4032,
+  "physical_groups_per_process": 10752,
+  "literal_scalars_per_process": 43008,
+  "physical_primitives_per_process": 606144,
+  "primitive_bytes": 13561662,
+  "primitive_sha256": "ea67488a074e4af716391acb124d0a875f4ae6df83b5a5319e87c1d15e942953",
+  "retained_artifacts": {
+    "matrix.bin": {
+      "bytes": 2045568,
+      "sha256": "ed12bb67ec0b7891bca6d77926390ee9b40150bc9cb7fe63cd9672e979b6363c"
+    },
+    "matrix-words.tsv": {
+      "bytes": 399696,
+      "sha256": "234e27a4f26450f73d106a52c54a78c2eb0269c9fa6101ea0cb0d93dfc754b42"
+    },
+    "matrix-primitives.tsv.zlib": {
+      "bytes": 1771887,
+      "sha256": "7544f91ff21743dafbcfc6b6ade33395afd8d2738bbfa1e309739c3238e0d350"
+    }
+  },
+  "common_source_files": 5686,
+  "changed_common_source_files": [],
+  "first_only_source_files": [],
+  "second_only_source_files": [
+    "research/parallel_sketch_bitmap_transparency_final_review.py",
+    "research/parallel_sketch_bitmap_transparency_proof_review.py",
+    "research/parallel_sketch_bitmap_transparency_reader.py",
+    "research/parallel_sketch_bitmap_transparency_replay.py",
+    "research/parallel_sketch_bitmap_transparency_saved_verification.py",
+    "research/parallel_sketch_bitmap_transparency_smoke.py"
+  ],
+  "artifacts": [
+    {
+      "path": "target/intersection-match-matrix-initialization.log",
+      "bytes": 50078,
+      "sha256": "1dd526bd1693e88d4891404a06542c411274c5b5549e3fd427b4b3e253978360"
+    },
+    {
+      "path": "target/intersection-match-matrix-strict-replay.log",
+      "bytes": 50078,
+      "sha256": "35b3652fbfddf648caf3363d05d2e47f20a4260b67e3ab6c1a75c192e0844b5a"
+    },
+    {
+      "path": "docs/features/intersection-reference-match/matrix-initial-source-snapshot.json",
+      "bytes": 715317,
+      "sha256": "c4006bcbf45f2691190ce396dd3f61e21131071039e20861ecd04ad4cb830862"
+    },
+    {
+      "path": "docs/features/intersection-reference-match/fixture-reference-snapshot.json",
+      "bytes": 716120,
+      "sha256": "2484197384bf5f0b1101e04bf3da715d33a6239a8747f1de14429c4d758aa7d7"
+    },
+    {
+      "path": "docs/features/intersection-reference-match/owned-matrix-reference.json",
+      "bytes": 617,
+      "sha256": "5f663c29f4fc0fbf07576f82e523c9985ab1aa19bf0006748cd977996f43d58f"
+    }
+  ],
+  "checks": [
+    "Each process accepts every declared Cartesian case in exact sorted order through unchanged complete Source readers.",
+    "All definitions, physical group values, object-map sizes, original aliases, literal scalar spans and full primitive partitions match.",
+    "The second process rebuilds every root, word row and raw primitive row and compares all serialized artifacts and metadata byte for byte against initialization; it has no write-matrix flag.",
+    "All common frozen Source files remain identical across snapshots; added research files are listed separately. Both processes match all six prepared reader/test pins.",
+    "Independent stdlib verification of every packet byte, scalar and primitive range remains recorded in matrix-initial-verification.json."
+  ],
+  "coverage_credit": 0,
+  "runtime_implemented": false,
+  "qualifications": [
+    "The matrix uses its declared bounded signed/state cases at ordinary19000; it does not prove every caller or version boundary.",
+    "Typed role edits, native corpus operation checks, document/isolation/concurrency exports and exact-head publication gates remain required.",
+    "No native application, matcher, geometry or full schema parity is claimed. Humanizer unavailable; prose review remains pending."
+  ]
+}

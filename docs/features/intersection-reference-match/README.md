@@ -83,6 +83,13 @@ patch. A separate stdlib checker verified the complete 2,045,568-byte packet and
 every primitive range and raw byte without importing Source. The strict second
 fresh-process replay is running; typed operations remain pending.
 
+The [strict second process](matrix-source-verification.json) subsequently passed
+the same 1,344 cases and all ten tests. It rebuilt every root, word row and
+primitive row and matched all retained artifacts and metadata byte for byte.
+All 5,686 common frozen Source files match; six added research files are listed
+separately. Typed operations and the remaining caller/version, document,
+concurrency and publication gates stay open.
+
 Regenerate the matrix only during explicit oracle initialization:
 
 ```powershell
