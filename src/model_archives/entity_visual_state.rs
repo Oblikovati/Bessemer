@@ -1,5 +1,6 @@
 use super::{
-    ModelField, ModelFieldHandle, ModelFieldValue, PartResolvedFeaturesArchive,
+    AssemblyConfigurationArchive, AssemblyConfigurationEdit, ModelField, ModelFieldHandle,
+    ModelFieldValue, PartConfigurationArchive, PartConfigurationEdit, PartResolvedFeaturesArchive,
     PartResolvedFeaturesEdit,
 };
 use crate::Result;
@@ -49,11 +50,17 @@ fn model_visual_value(scalar: VisualScalar) -> ModelFieldValue {
     }
 }
 
+fn model_visual_candidate(path: &str) -> bool {
+    path.strip_suffix(".unknown_0").is_some_and(|prefix| {
+        prefix.ends_with(".entity_visual_properties") || prefix.ends_with(".visual_properties")
+    })
+}
+
 fn model_visual_prefix(path: &str) -> Result<&str> {
     let Some(prefix) = path.strip_suffix(".unknown_0") else {
         return Err(visual_role_error(path, "not a leading visual field"));
     };
-    if prefix.ends_with(".entity_visual_properties") || prefix.ends_with(".visual_properties") {
+    if model_visual_candidate(path) {
         return Ok(prefix);
     }
     Err(visual_role_error(
@@ -92,33 +99,52 @@ fn changed_model_visual_fields(
     Ok(fields)
 }
 
-impl PartResolvedFeaturesArchive {
-    /// Projects a complete physical visual record; e.g. `let visual = source.entity_visual_state(&field)?;`.
-    pub fn entity_visual_state(
-        &self,
-        field: &ModelFieldHandle,
-    ) -> Result<ModelEntityVisualStoredState> {
-        let leading = self.resolve_field(field)?;
-        let prefix = model_visual_prefix(&leading.path)?;
-        let tail = self
-            .fields()
-            .get(field.index()..)
-            .ok_or_else(|| visual_role_error(prefix, field.index()))?;
-        Ok(ModelEntityVisualStoredState {
-            words: model_visual_words(tail, prefix)?,
-            first: field.clone(),
-            path: Arc::from(prefix),
-        })
-    }
+macro_rules! model_visual_archive_api {
+    ($archive:ty, $outcome:ty) => {
+        impl $archive {
+            /// Enumerates physical definitions in wire order; e.g. `let visuals = source.entity_visual_states()?;`.
+            /// A complete archive with no physical definitions returns an empty vector.
+            pub fn entity_visual_states(&self) -> Result<Vec<ModelEntityVisualStoredState>> {
+                self.fields()
+                    .iter()
+                    .enumerate()
+                    .filter(|(_, field)| model_visual_candidate(&field.path))
+                    .map(|(index, _)| self.entity_visual_state(&self.field_handle(index)?))
+                    .collect()
+            }
 
-    /// Edits stored roles with complete validation and original field history; e.g. `source.edit_entity_visual_state(&visual, EntityVisualStoredEdit::ColorRgb([1, 2, 3]))?`.
-    pub fn edit_entity_visual_state(
-        &self,
-        visual: &ModelEntityVisualStoredState,
-        edit: EntityVisualStoredEdit,
-    ) -> Result<PartResolvedFeaturesEdit> {
-        self.resolve_field(&visual.first)?;
-        let fields = changed_model_visual_fields(self.fields(), visual, edit)?;
-        self.edit_fields(fields)
-    }
+            /// Projects a complete physical visual record; e.g. `let visual = source.entity_visual_state(&field)?;`.
+            pub fn entity_visual_state(
+                &self,
+                field: &ModelFieldHandle,
+            ) -> Result<ModelEntityVisualStoredState> {
+                let leading = self.resolve_field(field)?;
+                let prefix = model_visual_prefix(&leading.path)?;
+                let tail = self
+                    .fields()
+                    .get(field.index()..)
+                    .ok_or_else(|| visual_role_error(prefix, field.index()))?;
+                Ok(ModelEntityVisualStoredState {
+                    words: model_visual_words(tail, prefix)?,
+                    first: field.clone(),
+                    path: Arc::from(prefix),
+                })
+            }
+
+            /// Edits stored roles with complete validation and original field history; e.g. `source.edit_entity_visual_state(&visual, EntityVisualStoredEdit::ColorRgb([1, 2, 3]))?`.
+            pub fn edit_entity_visual_state(
+                &self,
+                visual: &ModelEntityVisualStoredState,
+                edit: EntityVisualStoredEdit,
+            ) -> Result<$outcome> {
+                self.resolve_field(&visual.first)?;
+                let fields = changed_model_visual_fields(self.fields(), visual, edit)?;
+                self.edit_fields(fields)
+            }
+        }
+    };
 }
+
+model_visual_archive_api!(PartResolvedFeaturesArchive, PartResolvedFeaturesEdit);
+model_visual_archive_api!(PartConfigurationArchive, PartConfigurationEdit);
+model_visual_archive_api!(AssemblyConfigurationArchive, AssemblyConfigurationEdit);

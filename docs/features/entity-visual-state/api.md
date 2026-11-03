@@ -6,7 +6,11 @@ covers model features, sketch entities and nested display objects. Complete
 `DisplayArchive` and `DrawingBucketArchive` also enumerate physical component
 visuals with `entity_visual_states`, project an owned field with
 `entity_visual_state`, and apply `edit_entity_visual_state` with explicit limits.
-Part and assembly configuration API routes remain pending under #181.
+`PartConfigurationArchive` and `AssemblyConfigurationArchive` use the same
+revision-bound projection/edit methods and physical-definition enumeration. The
+configuration checkpoint binds five real records in each ordinary owned fixture
+to complete original Source spans. Wider routing/native-corpus and operation
+acceptance remain pending under #181.
 
 ```rust
 use bessemer::entity_visual::EntityVisualStoredEdit;
@@ -43,5 +47,6 @@ with its existing names and behavior.
 
 The complete caller corpus and independent Source oracles remain the acceptance
 basis. This API checkpoint does not complete #181 or establish geometry validity,
-native application acceptance, or the remaining carrier and publication gates.
+native application acceptance, or the remaining corpus, operation and
+publication gates.
 The humanizer skill is unavailable; prose review remains for the maintainer.

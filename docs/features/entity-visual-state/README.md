@@ -22,6 +22,13 @@ gates. Drawing wrappers retain their layout and expose the shared complete edit
 report. Part/assembly configuration routes and the remaining operation gates
 still need completion.
 
+The [configuration operation checks](configuration-operation-verification.json)
+now bind five real visuals in each ordinary owned part and assembly configuration
+to independently observed Source spans. Projection, literal RGB edits, original
+history, no-ops, document reopening/checkpoint reversal and cross-configuration
+rejection pass. The model archive families share the same typed implementation;
+routing/native-corpus acceptance and the wider operation gates remain pending.
+
 The existing physical fields remain the compatibility surface:
 
 | Field suffix | Stored role | Type |
