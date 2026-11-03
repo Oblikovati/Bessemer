@@ -99,13 +99,18 @@ fn drawing_bit_result(source: &DrawingBucketArchive, bit: usize) -> Vec<u8> {
     assert_eq!(edited.contents(), &contents);
     let mut expected = drawing_visual_bytes();
     expected[VISUAL_OFFSET + bit / 8] ^= 1 << (bit % 8);
-    assert_eq!(edited.to_bytes().unwrap(), expected);
+    let actual = edited.to_bytes().unwrap();
+    assert_eq!(actual, expected);
+    verify_drawing_bit_reversal(source, &edited);
+    actual
+}
+
+fn verify_drawing_bit_reversal(source: &DrawingBucketArchive, edited: &DrawingBucketArchive) {
     let reverted = edited
         .with_contents(source.contents().clone(), archive_support::LIMITS)
         .unwrap();
     assert_eq!(reverted.to_bytes().unwrap(), drawing_visual_bytes());
     assert_eq!(source.to_bytes().unwrap(), drawing_visual_bytes());
-    expected
 }
 
 fn drawing_bit_projection(source: &DrawingBucketArchive) -> Vec<u8> {

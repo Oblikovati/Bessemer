@@ -149,8 +149,10 @@ pointer and a bucket self-reference retain identity. The
 through the public wrapper and verify all 136 bit edits and exact reversals. Eight
 workers match serial bytes, and two fresh Rust exports match exactly. Original
 readers accepted every actual export with 26,248 primitive checks and unchanged
-unselected reads. Wider drawing profiles and native document acceptance remain
-pending.
+unselected reads. A [direct-buffer rerun](drawing-direct-export-verification.json)
+exports the encoder buffer itself after each independent byte assertion; both
+fresh exports retain the exact Source-accepted packet hash. Wider drawing
+profiles and native document acceptance remain pending.
 
 The [full component initialization](component-initialization-verification.json)
 passed 7,662 complete modern cases, with 16,791,273 fresh primitive reads over

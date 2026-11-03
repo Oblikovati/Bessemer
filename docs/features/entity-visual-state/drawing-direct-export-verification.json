@@ -1,0 +1,47 @@
+{
+  "issue": 181,
+  "stage": "Direct encoder-buffer drawing exports after exact literal assertions",
+  "tests_passed_per_process": 2,
+  "processes_reaped": 2,
+  "test_seconds": [
+    0.13,
+    0.11
+  ],
+  "exports": [
+    {
+      "path": "target/entity-visual-drawing-process-1.bin",
+      "bytes": 75892,
+      "sha256": "8c2fd8efdcea5a7c212fefde6181e0c7921604f5ff923ffabbdc0b967c702d13"
+    },
+    {
+      "path": "target/entity-visual-drawing-process-2.bin",
+      "bytes": 75892,
+      "sha256": "8c2fd8efdcea5a7c212fefde6181e0c7921604f5ff923ffabbdc0b967c702d13"
+    }
+  ],
+  "exports_byte_identical": true,
+  "bytes_identical_to_previous_original_source_accepted_packet": true,
+  "previous_source_acceptance": "drawing-owner-rust-verification.json",
+  "support": {
+    "path": "tests/drawing_visual_carrier.rs",
+    "bytes": 7501,
+    "sha256": "c44fcce5c6d27d08b6154c0a82c7d634c64ee519c51857dd211201169d09b28d"
+  },
+  "logs": [
+    {
+      "path": "target/entity-visual-drawing-rust-1.log",
+      "bytes": 574,
+      "sha256": "abce3cace54ef15136eab700d453cf8fcd12d3979f8f1a3d853d32d619c3b6b4"
+    },
+    {
+      "path": "target/entity-visual-drawing-rust-2.log",
+      "bytes": 512,
+      "sha256": "452ed6bfdc292c4e7e10a52b8178a11275531364befd79c4f58f7ca8a45f6e33"
+    }
+  ],
+  "qualifications": [
+    "The test helper now returns the encoder-produced buffer directly after asserting equality with the independently patched expected bytes. The previous helper returned the asserted-equal expected buffer; no accepted byte result changed.",
+    "The unchanged75892-byte packet hash binds both current direct exports to all136 original-reader accepted outputs and26248 primitive checks retained in the previous proof.",
+    "Eight-worker byte equality and exact reversals still execute in each process. No new runtime surface or broader drawing/native application acceptance is claimed."
+  ]
+}
