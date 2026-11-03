@@ -174,10 +174,7 @@ fn verify_component_matrix_case(
     output: &mut Option<Vec<u8>>,
 ) {
     let words = component_matrix_word_bytes(columns);
-    assert_eq!(template.offset, columns[9].parse::<usize>().unwrap());
-    assert_eq!(template.bytes.len(), columns[10].parse::<usize>().unwrap());
-    let mut raw = template.bytes.to_vec();
-    raw[template.offset..template.offset + 17].copy_from_slice(&words);
+    let raw = component_matrix_raw(template, columns, &words);
     let baseline = matrix_archive(template.bytes, template.kind);
     let source = matrix_archive(&raw, template.kind);
     let index = matrix_visual_position(&source);
@@ -209,4 +206,16 @@ fn complete_component_word_matrix_reconstructs_edits_and_reverses_every_document
     if let (Some(path), Some(output)) = (path, output) {
         std::fs::write(path, output).unwrap();
     }
+}
+
+fn component_matrix_raw(
+    template: &ComponentMatrixTemplate,
+    columns: &[&str],
+    words: &[u8],
+) -> Vec<u8> {
+    assert_eq!(template.offset, columns[9].parse::<usize>().unwrap());
+    assert_eq!(template.bytes.len(), columns[10].parse::<usize>().unwrap());
+    let mut raw = template.bytes.to_vec();
+    raw[template.offset..template.offset + 17].copy_from_slice(words);
+    raw
 }
