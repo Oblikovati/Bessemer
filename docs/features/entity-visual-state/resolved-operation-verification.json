@@ -1,0 +1,127 @@
+{
+  "issue": 181,
+  "stage": "First complete typed stored-role archive route: resolved part feature archives",
+  "profile": "entity-visual-stored-roles-v1",
+  "api": [
+    "PartResolvedFeaturesArchive::entity_visual_state",
+    "PartResolvedFeaturesArchive::edit_entity_visual_state",
+    "ModelEntityVisualStoredState",
+    "EntityVisualStoredWords",
+    "EntityVisualStoredEdit",
+    "EntityVisualByLayerRole",
+    "EntityVisualCacheRole"
+  ],
+  "runtime_callers": [
+    "model feature visuals",
+    "sketch entity visuals",
+    "nested model display-object visuals"
+  ],
+  "source_fixture_git_revision": "64580d1dd6ce6d0759ea78ed08282860b1dfe607",
+  "pure_word_tests": 15,
+  "all_by_layer_words": 65536,
+  "by_layer_set_clear_requests": 655360,
+  "all_cache_bytes": 256,
+  "cache_set_clear_requests": 1024,
+  "owned_complete_cases": 11493,
+  "typed_projections": 22986,
+  "typed_rgb_changes": 22986,
+  "typed_color_noops": 22986,
+  "typed_width_pair_changes": 180,
+  "source_path_width_history_relative_order": [
+    6,
+    5
+  ],
+  "full_caller_tests_passed": 4,
+  "focused_isolation_tests_passed": 2,
+  "mixed_shared_snapshot_workers": 8,
+  "mixed_success_requests_serial_plus_workers": 144,
+  "mixed_failed_requests_serial_plus_workers": 144,
+  "logs": [
+    {
+      "path": "target/entity-visual-stored-word-tests.log",
+      "bytes": 1671,
+      "sha256": "d65d84d49bd4e49fda7884a7283c55ca19da3ebf503ac942e7723d26fceb5963"
+    },
+    {
+      "path": "target/entity-visual-stored-model-tests.log",
+      "bytes": 861,
+      "sha256": "25a2e6d1bacb72920ca28576adac40474777f7eb33ced544b1d105eb0e3a312e"
+    },
+    {
+      "path": "target/entity-visual-stored-model-isolation.log",
+      "bytes": 578,
+      "sha256": "3aa4c276a0993076cb5f7cb058bb76f6efa075afcdf51a54da9f323e4fdaf6f5"
+    }
+  ],
+  "test_seconds": [
+    0.01,
+    64.04,
+    0.01
+  ],
+  "clippy": {
+    "path": "target/entity-visual-stored-role-clippy.log",
+    "bytes": 135,
+    "sha256": "dd6eaed56a0bb62c5cd480c157689c8128e62c6673e083b12fce47825059da14"
+  },
+  "support": [
+    {
+      "path": "src/entity_visual/mod.rs",
+      "bytes": 3007,
+      "sha256": "2d416419b16c4851d3433bec2cc78afcdba47b88800b5d511d9054f9d5d0a055"
+    },
+    {
+      "path": "src/entity_visual/roles.rs",
+      "bytes": 2578,
+      "sha256": "1ec2c8b526828e4ea3b5aba03cf776ac584557d28e4584677773ef91ee87a313"
+    },
+    {
+      "path": "src/entity_visual/projection.rs",
+      "bytes": 1900,
+      "sha256": "fc65f81258f6d40ff0ad11a1ee9408717c5c297992f5a24061ea7c6d0831d2ab"
+    },
+    {
+      "path": "src/entity_visual/edit.rs",
+      "bytes": 2597,
+      "sha256": "bbbb0346c6b907d9619b43a4b7c84debbafd7acd4e1859248a9434f628865a3e"
+    },
+    {
+      "path": "src/model_archives/entity_visual_state.rs",
+      "bytes": 5075,
+      "sha256": "8ee84e6246b65c01c84678a5c457b4b68655a9db7700ed3354cf344586aefde1"
+    },
+    {
+      "path": "tests/entity_visual_state/words.rs",
+      "bytes": 9004,
+      "sha256": "f871a66b30ada0f919b4193bac9e43367bffdd17b2cad084e951ff5e292fb7ce"
+    },
+    {
+      "path": "tests/model_visual_carriers/typed_state.rs",
+      "bytes": 8636,
+      "sha256": "860ba8514e62fa4c5ad47b035fbd751e9e27eae591265d2461e9cffa47239c28"
+    },
+    {
+      "path": "tests/model_visual_carriers.rs",
+      "bytes": 6238,
+      "sha256": "b2b3004de1594899e906dd2303c18017ee16ae865f97dda3eaa1e44ca0ea9167"
+    }
+  ],
+  "checks": [
+    "Literal seven-field projection for both focused physical records in every Source-owned model/sketch/display case",
+    "RGB preserves the unresolved high byte and equals a direct literal-byte patch",
+    "Every getter channel/high byte/exact missing sentinel matches original physical bytes across the full owned color matrix",
+    "Width pair edits preserve arbitrary raw float bits and report both original parents in source-path order",
+    "Exact no-ops retain revision identity and empty changed history",
+    "Wrong scope, stale/foreign state, and physically mismatched width requests fail explicitly",
+    "Independently decoded equal bytes cannot share state/handles; caller-buffer mutation cannot change decoded archives",
+    "Compile-time Send/Sync for every new public type, plus shared-source mixed successful/failed edit stress",
+    "Original raw codec paths and field APIs remain selectable and unchanged"
+  ],
+  "qualifications": [
+    "This first complete route uses existing complete archive validation/results and covers all three model-feature-side callers; it does not complete the full feature.",
+    "Part configuration, assembly configuration, display archive and drawing wrapper API routes remain pending. Other version contexts, full operation exports/native binding, broad operation gates and publication remain pending.",
+    "The typed RGB output equality is proven against independent literal bytes in the owned corpora. This checkpoint does not claim a new actual-export Source replay of the typed API.",
+    "No native setter cascades, effective-layer resolution, unit conversion, geometry validity or native save/open/rendering acceptance is claimed.",
+    "The separate full component primitive replay and sole publication PR182 remain live. No version bump, release or new dependency was introduced.",
+    "Humanizer unavailable; prose pass pending maintainer review."
+  ]
+}

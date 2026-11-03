@@ -16,6 +16,7 @@ pub mod compound;
 mod compression;
 pub mod display_lists;
 mod document;
+pub mod entity_visual;
 mod error;
 pub mod header;
 pub mod history;

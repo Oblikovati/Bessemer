@@ -347,3 +347,6 @@ fn model_failure(mut error: BessemerError) -> BessemerError {
     error.entity = format!("model stream: {}", error.entity);
     error
 }
+
+mod entity_visual_state;
+pub use entity_visual_state::ModelEntityVisualStoredState;

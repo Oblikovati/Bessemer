@@ -129,6 +129,11 @@ update bits and class-scoped parameter flags from complete part configurations
 and resolved-feature archives. Selected-bit edits preserve other fields and bits
 and return the existing complete archive validation and structural history.
 Stored flags remain separate from effective native predicates and setter cascades.
+The [stored entity visual API](docs/features/entity-visual-state/api.md) projects
+layer/style, ByLayer, cache, color and raw width values from complete resolved
+part feature archives. Revision-bound edits preserve unselected words and bits
+and return the existing complete archive validation and history report.
+
 The [stored dimension API](docs/features/dimension-stored-state/api.md) projects
 the bend-angle flag, fillet reference-point change number and signed redundant
 identifier from direct or nested dimension bases. Isolated stored-value edits

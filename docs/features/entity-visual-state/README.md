@@ -7,6 +7,13 @@ and nineteen current reader/test pins. The first strict run passed 117 checks:
 all 114 tests in eleven unchanged original modules, plus three separate checks
 for readers, clauses and reports. No runtime API or parser behavior changed.
 
+The first [runtime API route](api.md) now projects revision-bound stored roles
+and edits them through complete resolved part feature archives. The
+[operation checks](resolved-operation-verification.json) cover all 11,493 owned
+model/sketch/display cases, including 22,986 typed RGB changes and no-ops, width
+pairs, foreign/stale handles and shared-source mixed success/failure. The full
+configuration/display/drawing routes and operation/publication gates remain open.
+
 The existing physical fields remain the compatibility surface:
 
 | Field suffix | Stored role | Type |

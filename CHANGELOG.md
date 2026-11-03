@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added revision-bound stored entity visual-role projections and isolated value edits for complete resolved part feature archives. (#181)
+
 - Added archive-backed stored dimension mask and redundant-identifier views with isolated value edits, preserved raw bits and revision-bound history. (#179)
 
 - Added archive-backed stored node and parameter flag views and isolated bit edits with revision-bound history and preserved unresolved bits. (#178)
