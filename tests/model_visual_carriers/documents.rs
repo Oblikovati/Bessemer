@@ -112,3 +112,42 @@ fn complete_model_sketch_and_display_document_controls_reopen_and_reverse_typed_
         }
     }
 }
+
+fn verify_complete_model_document_case(raw: &[u8], columns: &[&str], suffix: &str) {
+    let document = prepared_model_visual_document(raw);
+    let source = reopened_model_visuals(&document);
+    assert_eq!(source.to_bytes().unwrap(), raw);
+    verify_visual_groups(&source, raw, columns, suffix);
+    for index in visual_group_positions(source.fields(), suffix) {
+        verify_model_visual_document_edit(&document, &source, index);
+    }
+}
+
+fn verify_complete_model_document_corpus(corpus: VisualCarrierCorpus, first: usize) -> usize {
+    let mut cursor = corpus.packet;
+    let mut count = 0;
+    for row in corpus.words.lines() {
+        let columns: Vec<_> = row.split('\t').collect();
+        let raw = visual_case_bytes(&mut cursor, &columns);
+        verify_complete_model_document_case(raw, &columns, corpus.suffix);
+        println!("VISUAL_MODEL_DOCUMENT\t{}\t2", first + count);
+        count += 1;
+    }
+    assert!(cursor.is_empty());
+    count
+}
+
+#[test]
+fn every_owned_model_visual_document_reopens_preserves_other_streams_and_reverses_exactly() {
+    let mut first = 0;
+    for corpus in [
+        folder_visual_corpus(),
+        sketch_visual_corpus(),
+        nested_display_visual_corpus(),
+    ] {
+        let count = verify_complete_model_document_corpus(corpus, first);
+        assert_eq!(count, 3831);
+        first += count;
+    }
+    assert_eq!(first, 11493);
+}
