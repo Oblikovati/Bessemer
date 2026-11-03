@@ -40,6 +40,19 @@ per-stream count rows match the earlier physical gate exactly. This establishes
 complete native reads/projections; native edit and wider operation acceptance
 remain separate work.
 
+The [native Source span capture](native-source-span-verification.json) independently
+located all 137,359 physical records in two fresh original-reader processes.
+Their offset-and-word packets match byte for byte and are bound to complete
+configuration/feature stream hashes. The exhaustive native typed RGB edit test
+uses those offsets for literal full-stream expectations. Its complete906-case
+run is still pending; passing projection and capture does not establish edits.
+The ignored test requires `target/resolved-native-probe.bin`,
+`target/entity-visual-native-ordered-spans.bin` and `BESSEMER_KERNEL_SCHEMA`:
+
+```powershell
+cargo test --lib native_visual_rgb_edits_match_source_offsets_for_every_physical_record -- --include-ignored --nocapture
+```
+
 The existing physical fields remain the compatibility surface:
 
 | Field suffix | Stored role | Type |

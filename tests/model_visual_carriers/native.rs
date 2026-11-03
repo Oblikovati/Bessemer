@@ -1,3 +1,6 @@
+#[path = "native_edits.rs"]
+mod native_edits;
+
 use super::{LIMITS, configuration_for_case, next_case};
 use crate::archive_codec::ArchiveCursor;
 use crate::model_archives::{ModelField, ModelFieldValue, PartResolvedFeaturesArchive};
