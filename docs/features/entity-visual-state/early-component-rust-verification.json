@@ -1,0 +1,76 @@
+{
+  "issue": 181,
+  "stage": "Existing complete public component visual edits including actual absent custom-float layouts",
+  "command": "cargo test --test component_visual_carriers",
+  "platform": "Windows x64",
+  "toolchain": "Rust1.99.0 x86_64-pc-windows-msvc",
+  "exit_code": 0,
+  "process_reaped": true,
+  "passed": 2,
+  "failed": 0,
+  "ignored": 0,
+  "test_seconds": 23.18,
+  "early_complete_cases": 220,
+  "early_versions": 55,
+  "early_without_custom_float": 132,
+  "early_with_custom_float": 88,
+  "early_changed_single_bit_requests": 25696,
+  "total_complete_cases": 308,
+  "total_physical_visuals": 306,
+  "total_changed_single_bit_requests": 37392,
+  "total_changed_rgb_requests": 306,
+  "whole_document_rgb_cases": 14,
+  "exact_boundary_cases": {
+    "3904": 4,
+    "3905": 4
+  },
+  "checks": [
+    "Actual six-field/13-byte or seven-field/17-byte visual presence checked against parsed custom_width field paths",
+    "Every stored bit independently changed against literal expected complete bytes",
+    "Every unselected typed field/path and source byte sequence unchanged",
+    "Exactly one derived history entry with the correct source revision parent for each bit edit",
+    "Every RGB output reparses and reverses exactly",
+    "Original later-context and modern whole-document checks retained"
+  ],
+  "source_baseline_oracle": "early-component-source-verification.json",
+  "support": [
+    {
+      "path": "tests/component_visual_carriers.rs",
+      "bytes": 7306,
+      "sha256": "e294d865ee3ca23a80efc2e3a85a8b1bce9db34f4eeb2465546b25ec418fb93a"
+    },
+    {
+      "path": "tests/component_visual_carriers/early.rs",
+      "bytes": 678,
+      "sha256": "25737201dce7730d2974c1b1512f4b54ceb426753d2fb2f1c15faf4029e2a43f"
+    },
+    {
+      "path": "tests/component_visual_carriers/bit_edits.rs",
+      "bytes": 2079,
+      "sha256": "7c75b36c85e221c3a2b58e10d7da77553563d06cbf4561b4c952834a39ea8a1e"
+    },
+    {
+      "path": "tests/component_visual_carriers/documents.rs",
+      "bytes": 3191,
+      "sha256": "ac83277dafdb4b44b9f3e3df14cd0a4dd9428ebebe1ac329f4f86250f3902e94"
+    }
+  ],
+  "log": {
+    "path": "target/entity-visual-component-rust-early.log",
+    "bytes": 563,
+    "sha256": "f1b8ad305d6100fe74f668fa400a882784198a0b9e999c447b1b1e66c839f178"
+  },
+  "clippy": {
+    "path": "target/entity-visual-component-rust-early-clippy.log",
+    "bytes": 135,
+    "sha256": "fa0eecc446760c32d39df6e3b29432cc5dc8fd76ff137d181b628fd708e19a55"
+  },
+  "coverage_credit": 0,
+  "qualifications": [
+    "The55 early versions are exact saved profiles from3196through4271; continuous version coverage and versions below3196 are unproven.",
+    "Original Source baseline inputs passed twice with byte-identical source manifests. Fresh Source acceptance of all changed-bit outputs remains separate.",
+    "Whole-document context/reopen/reverse checks cover14 modern RGB cases. Older declared contexts are not fabricated native saves.",
+    "No production codec or public API changed. Typed stored-role facade, full remaining callers, native application acceptance and publication gates remain pending.",
+    "Humanizer unavailable; prose pass pending maintainer review."
+  ]
+}

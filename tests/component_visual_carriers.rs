@@ -17,6 +17,8 @@ mod bit_edits;
 mod complete_cases;
 #[path = "component_visual_carriers/documents.rs"]
 mod documents;
+#[path = "component_visual_carriers/early.rs"]
+mod early;
 
 fn retained_component_cases() -> Vec<complete_cases::OldCase> {
     [
@@ -42,11 +44,9 @@ fn component_baseline_values() -> [DisplayFieldValue; 7] {
 }
 
 fn component_visual_offset(raw: &[u8]) -> usize {
-    let literal = [
-        255, 255, 0, 128, 254, 152, 186, 220, 254, 255, 255, 0, 128, 66, 0, 128, 127,
-    ];
+    let literal = [255, 255, 0, 128, 254, 152, 186, 220, 254, 255, 255, 0, 128];
     let matches: Vec<_> = raw
-        .windows(17)
+        .windows(13)
         .enumerate()
         .filter(|(_, bytes)| *bytes == literal)
         .collect();
@@ -155,6 +155,36 @@ fn verify_component_baseline(case: complete_cases::OldCase) -> usize {
     verify_component_visual_groups(&source, case.bytes)
 }
 
+fn component_visual_shape(source: &DisplayArchive) -> (usize, usize) {
+    if source.context().version < DisplayVersion::new(0xf41) {
+        (6, 13)
+    } else {
+        (7, 17)
+    }
+}
+
+fn verify_component_word_projection(source: &DisplayArchive, index: usize) {
+    let (count, _) = component_visual_shape(source);
+    let actual: Vec<_> = source.contents().fields[index..index + count]
+        .iter()
+        .map(|field| field.value.clone())
+        .collect();
+    assert_eq!(actual, component_baseline_values()[..count]);
+    let prefix = source.contents().fields[index]
+        .path
+        .strip_suffix(".unknown_0")
+        .unwrap();
+    let custom_path = format!("{prefix}.line_width.custom_width");
+    assert_eq!(
+        source
+            .contents()
+            .fields
+            .iter()
+            .any(|field| field.path.as_ref() == custom_path),
+        count == 7
+    );
+}
+
 fn verify_component_visual_groups(source: &DisplayArchive, raw: &[u8]) -> usize {
     let positions: Vec<_> = source
         .contents()
@@ -165,11 +195,7 @@ fn verify_component_visual_groups(source: &DisplayArchive, raw: &[u8]) -> usize 
         .map(|(index, _)| index)
         .collect();
     for &index in &positions {
-        let actual: Vec<_> = source.contents().fields[index..index + 7]
-            .iter()
-            .map(|field| field.value.clone())
-            .collect();
-        assert_eq!(actual, component_baseline_values());
+        verify_component_word_projection(source, index);
         verify_component_rgb_edit(source, raw, index);
         bit_edits::verify_component_bit_writes(source, raw, index);
     }
