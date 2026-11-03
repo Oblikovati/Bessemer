@@ -159,13 +159,8 @@ fn verify_matrix_shared_workers(
     index: usize,
     serial: &MatrixMixedOutcome,
 ) {
-    std::thread::scope(|scope| {
-        let workers: Vec<_> = (0..8)
-            .map(|_| scope.spawn(|| matrix_mixed_outcome(source, state, index)))
-            .collect();
-        for worker in workers {
-            assert_eq!(&worker.join().unwrap(), serial);
-        }
+    crate::visual_workers::assert_eight_visual_workers(serial, || {
+        matrix_mixed_outcome(source, state, index)
     });
 }
 

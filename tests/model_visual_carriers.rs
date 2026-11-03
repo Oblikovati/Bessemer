@@ -136,32 +136,44 @@ fn verify_visual_carrier_corpus(corpus: VisualCarrierCorpus) {
     assert!(cursor.is_empty());
 }
 
-#[test]
-fn complete_folder_visuals_match_literal_fields_and_forced_reconstruction() {
-    verify_visual_carrier_corpus(VisualCarrierCorpus {
+fn folder_visual_corpus() -> VisualCarrierCorpus {
+    VisualCarrierCorpus {
         packet: include_bytes!("fixtures/entity-visual-state/model.bin"),
         words: include_str!("fixtures/entity-visual-state/model-words.tsv"),
         suffix: ".entity_visual_properties.unknown_0",
         final_slots: 100,
-    });
+    }
 }
 
-#[test]
-fn complete_sketch_visuals_match_literal_fields_and_forced_reconstruction() {
-    verify_visual_carrier_corpus(VisualCarrierCorpus {
+fn sketch_visual_corpus() -> VisualCarrierCorpus {
+    VisualCarrierCorpus {
         packet: include_bytes!("fixtures/entity-visual-state/sketch.bin"),
         words: include_str!("fixtures/entity-visual-state/sketch-words.tsv"),
         suffix: ".visual_properties.unknown_0",
         final_slots: 100,
-    });
+    }
 }
 
-#[test]
-fn complete_nested_display_visuals_match_literal_fields_and_forced_reconstruction() {
-    verify_visual_carrier_corpus(VisualCarrierCorpus {
+fn nested_display_visual_corpus() -> VisualCarrierCorpus {
+    VisualCarrierCorpus {
         packet: include_bytes!("fixtures/entity-visual-state/display.bin"),
         words: include_str!("fixtures/entity-visual-state/display-words.tsv"),
         suffix: ".visual_properties.unknown_0",
         final_slots: 108,
-    });
+    }
+}
+
+#[test]
+fn complete_folder_visuals_match_literal_fields_and_forced_reconstruction() {
+    verify_visual_carrier_corpus(folder_visual_corpus());
+}
+
+#[test]
+fn complete_sketch_visuals_match_literal_fields_and_forced_reconstruction() {
+    verify_visual_carrier_corpus(sketch_visual_corpus());
+}
+
+#[test]
+fn complete_nested_display_visuals_match_literal_fields_and_forced_reconstruction() {
+    verify_visual_carrier_corpus(nested_display_visual_corpus());
 }

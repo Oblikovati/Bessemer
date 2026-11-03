@@ -23,6 +23,8 @@ mod early;
 mod matrix;
 #[path = "component_visual_carriers/typed_state.rs"]
 mod typed_state;
+#[path = "support/visual_workers.rs"]
+mod visual_workers;
 
 fn retained_component_cases() -> Vec<complete_cases::OldCase> {
     [
