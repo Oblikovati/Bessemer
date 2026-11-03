@@ -39,12 +39,14 @@ fn model_document_rgb_edit(
         .entity_visual_state(&source.field_handle(index).unwrap())
         .unwrap();
     let color = state.words().color_word ^ 0x00a53cf0;
-    source
+    let result = source
         .edit_entity_visual_state(
             &state,
             Edit::ColorRgb([color as u8, (color >> 8) as u8, (color >> 16) as u8]),
         )
-        .unwrap()
+        .unwrap();
+    verify_model_document_rgb_result(source, &result, index, color);
+    result
 }
 
 fn model_document_rgb_reversal(
@@ -150,4 +152,27 @@ fn every_owned_model_visual_document_reopens_preserves_other_streams_and_reverse
         first += count;
     }
     assert_eq!(first, 11493);
+}
+
+fn verify_model_document_rgb_result(
+    source: &PartResolvedFeaturesArchive,
+    result: &PartResolvedFeaturesEdit,
+    index: usize,
+    color: u32,
+) {
+    assert_eq!(result.completion(), ModelEditCompletion::Changed);
+    assert_eq!(result.changes().len(), 1);
+    assert_eq!(
+        result.changes()[0].parents(),
+        [source.field_handle(index + 3).unwrap()]
+    );
+    let mut expected = source.fields().to_vec();
+    expected[index + 3].value = ModelFieldValue::U32(color);
+    assert_eq!(result.archive().fields(), expected);
+    assert!(
+        result
+            .archive()
+            .entity_visual_state(&source.field_handle(index).unwrap())
+            .is_err()
+    );
 }

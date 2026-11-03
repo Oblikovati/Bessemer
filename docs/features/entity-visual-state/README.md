@@ -265,8 +265,13 @@ no-op requests. Both complete wire exports and 2,668,426,898-byte operation
 projections match byte for byte. An independent checker binds every input and
 both focused edits to the owned Source packets and literal scalar offsets.
 The [document controls](model-document-controls-verification.json) also passed
-all three complete callers and six exact document edit/reopen/reversals. Their
-full matrix expansion is running separately.
+all three complete callers and six exact document edit/reopen/reversals. The
+[full document matrix](model-document-matrix-verification.json) subsequently
+passed all 11,493 cases twice, with 22,986 changed/reopened documents and typed
+exact reversals per run. The stronger repeat also verifies each changed field
+vector and original history parent. Every unrelated stream, name and order
+remains exact, and reversal restores every original container byte. Native part
+and repository/publication gates remain open.
 
 The initial 117-check foundation and subsequent 118-check installed-image record
 bind their snapshots and support hashes to their original Git revisions.
