@@ -48,8 +48,11 @@ uses those offsets for literal full-stream expectations. Its complete906-case
 run is still pending; passing projection and capture does not establish edits.
 The [native assembly capture](native-assembly-source-span-verification.json)
 also covers all 180 retained ordinary/routing configurations and 2,516 physical
-visuals in two identical Source packets. Its typed edit acceptance is separate
-from that capture.
+visuals in two identical Source packets. The [native assembly typed edit check](native-assembly-rust-verification.json)
+subsequently passed all 180 configurations and 2,516 changed visual requests in
+two fresh processes. Every result matches its complete literal Source-offset
+patch, retains its original field parent and leaves the source unchanged. The
+unit target was compiled separately; Cargo/Clippy and publication remain open.
 
 The ignored test requires `target/resolved-native-probe.bin`,
 `target/entity-visual-native-ordered-spans.bin` and `BESSEMER_KERNEL_SCHEMA`:

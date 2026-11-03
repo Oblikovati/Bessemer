@@ -166,3 +166,40 @@ fn assert_native_source_width(state: &ModelEntityVisualStoredState, raw: &[u8; 1
         u32::from_le_bytes(raw[13..17].try_into().unwrap())
     );
 }
+
+fn next_native_assembly_visual_edit(
+    cursor: &mut ArchiveCursor<'_>,
+    oracle: &mut ArchiveCursor<'_>,
+    index: usize,
+) -> usize {
+    assert_eq!(oracle.u32().unwrap() as usize, index);
+    let count = oracle.u32().unwrap() as usize;
+    let spans = native_source_spans(oracle, count);
+    let (source, raw) = crate::model_archives::assembly_corpus_tests::visual_edit_archive(cursor);
+    native_visual_edit_projection(
+        raw,
+        &source.entity_visual_states().unwrap(),
+        &spans,
+        native_rgb_editor!(source),
+    );
+    assert_eq!(source.to_bytes().unwrap(), raw);
+    println!("VISUAL_NATIVE_ASSEMBLY_EDIT\t{index}\t{count}");
+    count
+}
+
+#[test]
+#[ignore = "requires the complete180 native assembly packet and original Source span oracle"]
+fn native_assembly_visual_rgb_edits_match_every_original_source_span() {
+    let bytes = std::fs::read("target/assembly-native-probe.bin").unwrap();
+    let spans = std::fs::read("target/entity-visual-assembly-source-spans.bin").unwrap();
+    let (mut cursor, mut oracle) = (ArchiveCursor::new(&bytes), ArchiveCursor::new(&spans));
+    assert_eq!(cursor.take(4).unwrap(), b"ACFG");
+    assert_eq!(oracle.take(4).unwrap(), b"BVA1");
+    assert_eq!((cursor.u32().unwrap(), oracle.u32().unwrap()), (180, 180));
+    let total: usize = (0..180)
+        .map(|index| next_native_assembly_visual_edit(&mut cursor, &mut oracle, index))
+        .sum();
+    assert_eq!((cursor.remaining(), oracle.remaining()), (0, 0));
+    assert_eq!(total, 2516);
+    println!("VISUAL_NATIVE_ASSEMBLY_EDIT_TOTAL\t{total}");
+}

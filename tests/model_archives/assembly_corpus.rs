@@ -85,3 +85,11 @@ fn complete_native_assembly_corpus_requires_exact_typed_construction() {
     println!("ASSEMBLY_TOTAL\t{accepted}\t{count}");
     assert_eq!(accepted, count);
 }
+
+pub(super) fn visual_edit_archive<'a>(
+    cursor: &mut ArchiveCursor<'a>,
+) -> (AssemblyConfigurationArchive, &'a [u8]) {
+    let case = next_case(cursor);
+    let bytes = case.bytes;
+    (verify(case).unwrap(), bytes)
+}
