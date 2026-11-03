@@ -143,9 +143,13 @@ The [drawing caller probe](drawing-owner-source-verification.json) retains a
 complete 554-byte `VBLists` candidate at model version 10200. Original readers
 accepted it twice with 193 primitive reads and five map slots. Its real bucket
 object keys share one physical component property; top-level aliases, a null
-pointer and a bucket self-reference retain identity. Rust wrapper/edit acceptance
-and native document acceptance remain pending. The candidate bytes are retained
-in the finding while the independent modern corpus writer remains active.
+pointer and a bucket self-reference retain identity. The
+[Rust drawing checks](drawing-owner-rust-verification.json) now reconstruct it
+through the public wrapper and verify all 136 bit edits and exact reversals. Eight
+workers match serial bytes, and two fresh Rust exports match exactly. Original
+readers accepted every actual export with 26,248 primitive checks and unchanged
+unselected reads. Wider drawing profiles and native document acceptance remain
+pending.
 
 The initial 117-check foundation and subsequent 118-check installed-image record
 bind their snapshots and support hashes to their original Git revisions. Other
