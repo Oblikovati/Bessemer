@@ -278,7 +278,10 @@ accepted all 34,479 actual model, sketch and nested-display roots, including
 22,986 RGB-edited outputs. Complete unchanged readers reached EOF, retained
 alias identity and checked both focused visual projections. Every edited root
 also matched an independent literal RGB patch. Frozen reader files and imports
-passed their integrity checks. A second fresh-process replay remains pending.
+passed their integrity checks. The
+[second fresh-process replay](model-typed-export-source-verification.json)
+subsequently accepted the same complete denominator. All 5,635 common Source
+files match across snapshots; eleven added research files are listed separately.
 
 The initial 117-check foundation and subsequent 118-check installed-image record
 bind their snapshots and support hashes to their original Git revisions.
