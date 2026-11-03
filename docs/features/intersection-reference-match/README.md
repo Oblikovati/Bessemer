@@ -50,6 +50,14 @@ verification, not REA instruction or dataflow Evidence. The
 artifact identity check, timed-out byte request and session cleanup. Complete
 native bindings and the wider owned matrix remain pending.
 
+The [ordinary instruction replay](native-instructions-verification.json)
+subsequently matched all 5,395 retained instructions across thirteen captures
+and both named consumer exports, using the existing Capstone 5.0.7 installation.
+Instruction text matches exactly, including the original trailing spaces on
+operand-free instructions. The mixed code/table update interval retains its
+incomplete control-flow scope. Import, RTTI and bounded dataflow admission remain
+separate; this replay supplies no REA Evidence or target execution.
+
 The published cohort contains eight complete streams, seventeen edges and
 sixty-eight reference groups. Its 544-byte isolated accounting reduction is not
 global coverage credit. Raw20 remains separate and uninterpreted by this feature.
