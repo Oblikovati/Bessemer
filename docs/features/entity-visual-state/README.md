@@ -62,9 +62,14 @@ The [native graphics Source check](native-graphics-source-span-verification.json
 parsed all 910 part displays, 176 assembly displays and 20 drawing streams in two
 accepted processes. None contained a physical entity visual record. Each process
 also detected the one expected record in both owned positive controls. The full
-native identity manifests match the earlier complete corpora. These native empty
-results complement the positive owned edit matrices; Rust typed native empty
-acceptance remains pending.
+native identity manifests match the earlier complete corpora. The
+[Rust native graphics check](native-graphics-rust-verification.json) also passed
+all 1,106 documents in two fresh processes. It forces complete stream encoders,
+checks typed empty results and exact whole-document reopening, and binds all
+194,267,137 reconstructed bytes per process to the Source hashes. Both exports
+match byte for byte. The test was compiled against the existing validated
+library without another Cargo command; Cargo/Clippy and publication gates remain
+separate. These native empty results complement the positive owned edit matrices.
 
 The existing physical fields remain the compatibility surface:
 

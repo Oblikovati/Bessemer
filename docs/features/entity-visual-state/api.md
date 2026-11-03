@@ -46,6 +46,12 @@ source revision. Foreign or stale state fails before cloning fields; failed
 requests leave source snapshots unchanged. The raw field API remains available
 with its existing names and behavior.
 
+The native graphics acceptance uses Source's independent display bucket and
+face-directory defaults of 19000. The Source packet's `file_version` slot records
+`modelheader.version`; the Rust test parses it as a model marker and keeps it
+separate from those display caller inputs. Drawings use their actual normalized
+model marker through `DrawingBucketArchive::from_document`.
+
 The complete caller corpus and independent Source oracles remain the acceptance
 basis. This API checkpoint does not complete #181 or establish geometry validity,
 native application acceptance, or the remaining corpus, operation and
