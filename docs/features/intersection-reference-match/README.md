@@ -89,8 +89,8 @@ Regenerate the matrix only during explicit oracle initialization:
 python -B -X utf8 docs/features/intersection-reference-match/freeze_owned_controls.py --write-matrix
 ```
 
-The ordinary command above performs strict byte comparisons with every retained
-artifact and never updates them.
+Without `--write-matrix`, the command performs strict byte comparisons with every
+retained artifact and never updates them.
 
 The published cohort contains eight complete streams, seventeen edges and
 sixty-eight reference groups. Its 544-byte isolated accounting reduction is not
