@@ -1,0 +1,68 @@
+{
+  "issue": 181,
+  "scope": "Existing complete modern display carriers only; no new visual API or full-format claim",
+  "baselines": 16,
+  "physical_visual_definitions": 14,
+  "missing_definition_controls": 2,
+  "version": 19000,
+  "document_kinds": [
+    "part",
+    "assembly"
+  ],
+  "checks": [
+    "literal seven-field projection including signaling-NaN bits",
+    "forced complete reconstruction and unchanged history",
+    "RGB replacement against independently patched complete bytes",
+    "one derived field with one parent",
+    "unchanged original bytes"
+  ],
+  "tests": [
+    {
+      "path": "tests/component_visual_carriers.rs",
+      "bytes": 4220,
+      "sha256": "e60a28baf0dc32158a6dc22c6ae30ba0677a4614f384afdbfeeb2903c6ff9815"
+    }
+  ],
+  "logs": [
+    {
+      "path": "target/entity-visual-component-rust-baselines.log",
+      "bytes": 477,
+      "sha256": "1531cd45d9561e5bd3d0fab2abf6a3a8671c5af5a7453819bdeba64c58acde80"
+    },
+    {
+      "path": "target/entity-visual-component-rust-baselines-clippy.log",
+      "bytes": 135,
+      "sha256": "ff4362baca8e69a8821944aa543c9425912fca0450fa67684271f72d7ee62c36"
+    }
+  ],
+  "results": {
+    "tests_passed": 1,
+    "tests_failed": 0,
+    "clippy": "passed",
+    "function_size_audit": "all at most20 nonblank body lines"
+  },
+  "fixture_packets": [
+    {
+      "path": "tests/fixtures/display-lists/component-properties.bin",
+      "bytes": 1623116,
+      "sha256": "a51fbaf30f9c42a5d318f8cfbca49f0fd4530e9af7120b409e3f9dd56ed696bb"
+    },
+    {
+      "path": "tests/fixtures/display-lists/component-property-holders-part.bin",
+      "bytes": 985963,
+      "sha256": "fde62edaae88fb8a48ec6dc1af7765101aee218120a656d8f49dc4deb1f0cfac"
+    },
+    {
+      "path": "tests/fixtures/display-lists/component-property-holders-assembly.bin",
+      "bytes": 1048203,
+      "sha256": "6631dae60ce4148a713d56500de707a4e6321fbcbdb9228b9809126654777c57"
+    }
+  ],
+  "exclusions": [
+    "full7662-case Source matrix still running",
+    "older version Source acceptance",
+    "new typed stored-role API",
+    "whole document and native application acceptance",
+    "platform publication gates"
+  ]
+}
