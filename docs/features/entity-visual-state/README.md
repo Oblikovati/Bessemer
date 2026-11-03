@@ -258,6 +258,16 @@ byte for byte, covering 2,790,230,192 uncompressed bytes per process with raw
 stored float bits. Current reader pins and all eleven schema clauses still
 match; Cargo/Clippy, remaining native parts and publication gates stay open.
 
+The [full model concurrency check](model-concurrency-verification.json) passed
+all 11,493 owned model, sketch and nested-display cases in two fresh processes.
+Each process checked 22,986 focused visuals through 620,622 changed, rejected and
+no-op requests. Both complete wire exports and 2,668,426,898-byte operation
+projections match byte for byte. An independent checker binds every input and
+both focused edits to the owned Source packets and literal scalar offsets.
+The [document controls](model-document-controls-verification.json) also passed
+all three complete callers and six exact document edit/reopen/reversals. Their
+full matrix expansion is running separately.
+
 The initial 117-check foundation and subsequent 118-check installed-image record
 bind their snapshots and support hashes to their original Git revisions.
 Retained native edit acceptance and wider operation/publication gates remain
