@@ -1,3 +1,6 @@
+#[path = "matrix_concurrency.rs"]
+mod concurrency;
+
 use super::*;
 use complete_cases::framing;
 

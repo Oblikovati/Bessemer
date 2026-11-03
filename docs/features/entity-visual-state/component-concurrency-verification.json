@@ -1,0 +1,126 @@
+{
+  "issue": 181,
+  "stage": "Every complete owned component visual matrix snapshot across eight mixed workers and two fresh processes",
+  "processes_reaped": 2,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "passed_per_process": 1,
+  "failed": 0,
+  "ignored": 0,
+  "cases_per_process": 7662,
+  "cases_per_kind": 3831,
+  "workers_per_shared_snapshot": 8,
+  "serial_controls_per_snapshot": 1,
+  "changed_requests_per_process": 68958,
+  "expected_rejected_requests_per_process": 68958,
+  "noop_requests_per_process": 68958,
+  "total_requests_per_process": 206874,
+  "test_seconds": [
+    356.11,
+    365.42
+  ],
+  "wire_exports": [
+    {
+      "path": "target/entity-visual-component-concurrent-process-1.bin",
+      "bytes": 162319474,
+      "sha256": "07379c37eed970c67945ef413cf9fbf327943f1a9f05ff4d190b76382075a204"
+    },
+    {
+      "path": "target/entity-visual-component-concurrent-process-2.bin",
+      "bytes": 162319474,
+      "sha256": "07379c37eed970c67945ef413cf9fbf327943f1a9f05ff4d190b76382075a204"
+    }
+  ],
+  "wire_exports_byte_identical": true,
+  "wire_bytes_identical_to_original_Source_accepted_typed_packet": {
+    "path": "target/entity-visual-component-typed-process-1.bin",
+    "bytes": 162319474,
+    "sha256": "07379c37eed970c67945ef413cf9fbf327943f1a9f05ff4d190b76382075a204"
+  },
+  "complete_operation_traces": [
+    {
+      "path": "target/entity-visual-component-concurrent-process-1.trace.zlib",
+      "bytes": 332314432,
+      "sha256": "3f58f39d269a87c097229cd5c5f85cf1585ca1db80ade657e25cb89c609abef6"
+    },
+    {
+      "path": "target/entity-visual-component-concurrent-process-2.trace.zlib",
+      "bytes": 332314432,
+      "sha256": "3f58f39d269a87c097229cd5c5f85cf1585ca1db80ade657e25cb89c609abef6"
+    }
+  ],
+  "complete_operation_traces_byte_identical": true,
+  "trace_projection": {
+    "cases": 7662,
+    "wire_bytes": 162319474,
+    "wire_sha256": "07379c37eed970c67945ef413cf9fbf327943f1a9f05ff4d190b76382075a204",
+    "wire_identical_to_retained_Source_accepted_typed_export": true,
+    "compressed_trace_bytes": 332314432,
+    "compressed_trace_sha256": "3f58f39d269a87c097229cd5c5f85cf1585ca1db80ade657e25cb89c609abef6",
+    "complete_projection_bytes": 2790230192,
+    "complete_projection_sha256": "ec062333074db60a10194bb4a6ae8e909dcd82d78f3809f36f125fc5474a2411"
+  },
+  "source_acceptance": {
+    "path": "docs/features/entity-visual-state/typed-export-verification.json",
+    "bytes": 4911,
+    "sha256": "1b0323c5c932f0c7ecccba8e151d8664eae8e3da139b6a3403fe6a19eadf1331"
+  },
+  "support": [
+    {
+      "path": "tests/component_visual_carriers/matrix.rs",
+      "bytes": 7831,
+      "sha256": "45cd76825b72bb2edb0765549111251075ca6b441af1f3c65221bfa23f9079c7"
+    },
+    {
+      "path": "tests/component_visual_carriers/matrix_concurrency.rs",
+      "bytes": 8801,
+      "sha256": "f253a2ed40f0c26c6e331610c5016f7e8345891a16e476053a0f95a25a141a2a"
+    }
+  ],
+  "compiler_log": {
+    "path": "target/entity-visual-component-concurrent-compile.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "test_binary": {
+    "path": "target/entity-visual-component-concurrent-tests.exe",
+    "bytes": 12175872,
+    "sha256": "56e81b930cae8cc47ddd937202439c73884844640d0eb324eb34767cbf124910"
+  },
+  "compiler_command": "rustc --edition=2024 --test tests/component_visual_carriers.rs --extern bessemer=target/pinned-1.99.0/debug/deps/libbessemer-f8dd2f2d514eb7f4.rlib --extern flate2=target/pinned-1.99.0/debug/deps/libflate2-2d1ec62b5c8ec434.rlib -L dependency=target/pinned-1.99.0/debug/deps -C opt-level=1 -C debug-assertions=yes -C overflow-checks=yes -D warnings -F unsafe_code -o target/entity-visual-component-concurrent-tests.exe",
+  "compiler_exit_code": 0,
+  "logs": [
+    {
+      "path": "target/entity-visual-component-concurrent-process-1.log",
+      "bytes": 275093,
+      "sha256": "a96ce340049b6dc4c06494e774d5625b063d3d06334fd521fff71589f5519d8c"
+    },
+    {
+      "path": "target/entity-visual-component-concurrent-process-2.log",
+      "bytes": 275093,
+      "sha256": "894d5018b82d0899ec18ba7f4d1c89e6165d69537b275dc9b74a70f01b3655e9"
+    }
+  ],
+  "current_schema_guards": {
+    "path": "target/entity-visual-current-schema-guards.log",
+    "bytes": 76,
+    "sha256": "bc644d7d87297bc1e59319fbaf0fb2d19477606838531bb824de98f0b7de1d99"
+  },
+  "coverage_credit": 0,
+  "checks": [
+    "Each case gives eight workers the same borrowed immutable source and typed state. Each worker performs one changed RGB request, one invalid width-presence request and one no-op.",
+    "Every worker equals its serial control in exact bytes, every typed field, completion, diagnostics, fidelity, full coverage, structural history with resolved original parents/result fields and the complete typed rejection error.",
+    "Serial results independently match a literal raw RGB patch and the full expected field vector. Exact stored-archive mode, wire length, field count and achieved fidelity are checked.",
+    "Original source bytes remain unchanged and force reconstruction from its final fields back to the complete original literal after all workers join. No-op revision identity and changed-result stale state rejection are checked.",
+    "Both wire packets match every byte of the retained original Source-accepted typed packet. Both compressed operation traces match every byte; the validated complete uncompressed trace covers all7662 ordered outcomes and retains raw StoredFloat/StoredDouble bits.",
+    "Trace parents/results are projected to resolved fields after exact original handle-parent assertions; ephemeral new revision identities are excluded from cross-process semantic comparison.",
+    "No dependency was added: trace compression reuses the existing pinned flate2 dependency. All changed Rust functions remain at most20 nonblank body lines and files under500 lines."
+  ],
+  "qualifications": [
+    "Standalone test binaries used the validated library artifact and its matching existing flate2 dependency, with explicit test-profile flags, to avoid overlapping Cargo commands. Cargo/Clippy/repository and publication gates remain required.",
+    "This accepts the complete modern component word matrix. Exhaustive retained native part/assembly edits and remaining operation gates are recorded separately; it does not complete #181.",
+    "Native application rendering and geometry validity remain unproven. Historical unknown accounting is unchanged. Humanizer unavailable; prose pass pending maintainer review."
+  ]
+}

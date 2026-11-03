@@ -248,6 +248,16 @@ Every exported byte matches the retained packets already accepted by complete
 original Source readers. This reuses that acceptance by byte identity and does
 not claim a fresh Source execution for those typed packets.
 
+The [complete component concurrency check](component-concurrency-verification.json)
+passed all 7,662 modern word cases in two fresh processes. Eight workers share
+each immutable snapshot and perform a changed RGB edit, a rejected width request
+and a no-op. All 206,874 requests per process match serial bytes, every field,
+history, diagnostics, coverage, fidelity and typed errors. Both wire exports
+retain the Source-accepted packet bytes. Complete operation traces also match
+byte for byte, covering 2,790,230,192 uncompressed bytes per process with raw
+stored float bits. Current reader pins and all eleven schema clauses still
+match; Cargo/Clippy, remaining native parts and publication gates stay open.
+
 The initial 117-check foundation and subsequent 118-check installed-image record
 bind their snapshots and support hashes to their original Git revisions.
 Retained native edit acceptance and wider operation/publication gates remain
