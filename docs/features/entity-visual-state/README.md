@@ -90,6 +90,14 @@ record retained its complete field shape, and the feature streams reconstructed
 exactly. The configuration count is a separate observation; historical byte
 accounting and semantic credit remain unchanged.
 
+The [changed RGB write check](rgb-write-verification.json) exercises both
+physical targets in every owned case: 22,986 changed writes through the existing
+validated archive edit operation. Each complete result matched independently
+patched literal bytes, preserved the high byte and every unselected field, and
+retained its original source bytes. Every request returned one changed-field
+history entry with the original revision-bound parent. The typed visual facade
+and broader operation acceptance remain pending.
+
 The initial 117-check foundation and subsequent 118-check installed-image record
 bind their snapshots and support hashes to their original Git revisions. Other
 complete caller/edit oracles, the public typed operation and retained-corpus

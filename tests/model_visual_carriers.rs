@@ -4,6 +4,9 @@ use bessemer::header::ArchiveVersion;
 use bessemer::model_archives::*;
 use bessemer::tessellation::StoredFloat;
 
+#[path = "model_visual_carriers/edits.rs"]
+mod edits;
+
 const VISUAL_LIMITS: ModelArchiveLimits = ModelArchiveLimits {
     maximum_bytes: 30000,
     maximum_fields: 10000,
@@ -73,15 +76,10 @@ fn verify_visual_groups(
     columns: &[&str],
     suffix: &str,
 ) {
-    let groups: Vec<_> = archive
-        .fields()
-        .iter()
+    for (ordinal, index) in visual_group_positions(archive.fields(), suffix)
+        .into_iter()
         .enumerate()
-        .filter(|(_, field)| field.path.ends_with(suffix))
-        .map(|(index, _)| index)
-        .collect();
-    assert_eq!(groups.len(), 2);
-    for (ordinal, index) in groups.into_iter().enumerate() {
+    {
         let start = columns[8 + ordinal].parse::<usize>().unwrap();
         let expected = visual_literal_values(&raw[start..start + 17]);
         if ordinal == 0 {
@@ -91,6 +89,24 @@ fn verify_visual_groups(
             assert_eq!(actual.value, value, "{}", actual.path);
         }
     }
+}
+
+fn visual_group_positions(fields: &[ModelField], suffix: &str) -> Vec<usize> {
+    let groups: Vec<_> = fields
+        .iter()
+        .enumerate()
+        .filter(|(_, field)| field.path.ends_with(suffix))
+        .map(|(index, _)| index)
+        .collect();
+    assert_eq!(groups.len(), 2);
+    groups
+}
+
+fn verify_visual_reconstruction(archive: &PartResolvedFeaturesArchive, raw: &[u8]) {
+    let reconstructed = archive.edit_fields(archive.fields().to_vec()).unwrap();
+    assert_eq!(reconstructed.completion(), ModelEditCompletion::Unchanged);
+    assert_eq!(reconstructed.archive().to_bytes().unwrap(), raw);
+    assert!(reconstructed.changes().is_empty());
 }
 
 fn verify_visual_carrier_corpus(corpus: VisualCarrierCorpus) {
@@ -106,10 +122,8 @@ fn verify_visual_carrier_corpus(corpus: VisualCarrierCorpus) {
         assert_eq!(archive.object_slots(), (97, corpus.final_slots));
         assert_eq!(archive.root_count(), 3);
         verify_visual_groups(&archive, raw, &columns, corpus.suffix);
-        let reconstructed = archive.edit_fields(archive.fields().to_vec()).unwrap();
-        assert_eq!(reconstructed.completion(), ModelEditCompletion::Unchanged);
-        assert_eq!(reconstructed.archive().to_bytes().unwrap(), raw);
-        assert!(reconstructed.changes().is_empty());
+        verify_visual_reconstruction(&archive, raw);
+        edits::verify_visual_rgb_writes(&archive, raw, &columns, corpus.suffix);
         count += 1;
     }
     assert_eq!(count, 3831);

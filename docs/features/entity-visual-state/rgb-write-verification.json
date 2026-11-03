@@ -1,0 +1,49 @@
+{
+  "issue": 181,
+  "stage": "Existing complete archive RGB writes before the typed visual facade",
+  "command": "cargo test --test model_visual_carriers",
+  "exit_code": 0,
+  "process_reaped": true,
+  "passed": 3,
+  "failed": 0,
+  "ignored": 0,
+  "test_seconds": 23.0,
+  "owned_cases": 11493,
+  "changed_rgb_requests": 22986,
+  "independent_expected_bytes": "Original complete literal input with only the selected color bytes XOR00A53CF0",
+  "unchanged_high_byte": true,
+  "every_unselected_field_and_path_equal": true,
+  "source_bytes_isolated": true,
+  "changed_history_entries_per_request": 1,
+  "exact_original_parent_per_request": true,
+  "source_fixture_git_revision": "64580d1dd6ce6d0759ea78ed08282860b1dfe607",
+  "support": [
+    {
+      "path": "tests/model_visual_carriers.rs",
+      "bytes": 5932,
+      "sha256": "3cef004c3b627007002677e4e109b601d7a077ec7c7a3ed30edfcc986b8b4cef"
+    },
+    {
+      "path": "tests/model_visual_carriers/edits.rs",
+      "bytes": 1775,
+      "sha256": "5ca75128629c0dcc687cb9a7f6ca2b4c8b76f3e59462bcc38f1a1232b1967d1a"
+    }
+  ],
+  "log": {
+    "path": "target/entity-visual-rust-rgb-writes.log",
+    "bytes": 635,
+    "sha256": "424c5e10f539d0fda83c8a5178f3a84a8d4d8b78c8d8713c7dfd4da1175c002a"
+  },
+  "clippy": {
+    "path": "target/entity-visual-rust-rgb-clippy.log",
+    "bytes": 135,
+    "sha256": "bb953c13f795b6f097e18732b3ac9ae7631d21b8eeff92ccdc45ba4ad3b4222b"
+  },
+  "qualifications": [
+    "The existing complete edit_fields operation performs each real changed write and full revalidation; no production codec or public API changed.",
+    "Both focused physical records in every folder/sketch/display case were edited independently. Expected bytes came from direct literal byte replacement, not the archive encoder.",
+    "Every unselected typed field/path and complete original source byte sequence remained unchanged. Each result reported Changed and exactly one revision-bound original history parent.",
+    "These checks do not establish a typed RGB facade, native application behavior, geometry validity or full carrier/operation acceptance.",
+    "Humanizer unavailable; prose pass pending maintainer review."
+  ]
+}
