@@ -119,8 +119,8 @@ reconstruct all 88 baseline roots and edit all 86 physical visuals. All 11,696
 single-bit writes matched independent literal byte changes and preserved every
 unselected field and source byte. Each change retained its exact revision-bound
 parent. RGB edits also reparse and reverse exactly; 14 modern cases retain
-whole-document checks. Source acceptance of the changed older bit patterns and
-the early layout checks below cover retained pre-5000 baselines.
+whole-document checks. The early layout checks below cover retained pre-5000
+baselines.
 
 The [early Source checks](early-component-source-verification.json) accepted all
 220 retained bucket-owned component roots across 55 exact versions in two fresh
@@ -128,8 +128,16 @@ processes with identical Source snapshots. They checked 224,302 primitive reads,
 132 visuals without a custom-width float and 88 with one. The matching
 [Rust checks](early-component-rust-verification.json) passed explicit field-presence
 checks and 25,696 single-bit writes, including the 3904/3905 boundary. Versions
-below 3196, continuous version coverage and changed-output Source replay remain
-unproven. The typed operation and full modern component matrix remain pending.
+below 3196 and continuous version coverage remain unproven. The typed operation and full modern component matrix remain pending.
+
+The [changed-output Source checks](component-changed-source-verification.json)
+accepted all 37,698 independently expected complete bit/RGB outputs asserted by
+the Rust tests. Two fresh processes matched every case and ordered output hash
+over 244,882,785 bytes. Original readers checked exact EOF, named values, custom
+width presence and holder identity without primitive or float overrides. The
+inputs were literal expected bytes, rather than exported Rust-produced files;
+the Rust checks establish equality to the actual edit results. Rust process and
+concurrency exports remain part of the full operation acceptance.
 
 The initial 117-check foundation and subsequent 118-check installed-image record
 bind their snapshots and support hashes to their original Git revisions. Other

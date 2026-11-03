@@ -96,8 +96,13 @@ Both nested-holder cases retained the outer/inner reference cycle and a shared
 physical property object. Observations keep raw signaling-NaN bits; the
 historical generators' float-reader patches were not invoked.
 
-The other 72 seed cases have only their stored framing and hashes checked so
-far; original-reader acceptance for their declared contexts remains pending.
+All 88 seed cases now pass original readers with matching declared contexts.
+The additional 220 early bucket-owned cases cover 55 exact versions, including
+132 physical visuals without a custom-width float. Both baseline corpora passed
+fresh-process replays. All 37,698 independently expected complete bit/RGB outputs
+also passed original readers twice; the Rust tests assert exact equality between
+actual edit bytes and those literal expectations. These checks do not establish
+historical native document markers, continuous version support or native opening.
 The full component visual-word matrix and isolated edit operations remain
 pending for both document kinds and applicable drawing-bucket carriers.
 
