@@ -14,6 +14,14 @@ model/sketch/display cases, including 22,986 typed RGB changes and no-ops, width
 pairs, foreign/stale handles and shared-source mixed success/failure. The full
 configuration/display/drawing routes and operation/publication gates remain open.
 
+The [display and drawing API checks](display-operation-verification.json) now
+cover complete display enumeration and revision-bound edits, including real
+float absence, complete empty results and shared-source isolation. The full
+7,662-case word matrix uses the typed RGB route alongside the existing raw edit
+gates. Drawing wrappers retain their layout and expose the shared complete edit
+report. Part/assembly configuration routes and the remaining operation gates
+still need completion.
+
 The existing physical fields remain the compatibility surface:
 
 | Field suffix | Stored role | Type |

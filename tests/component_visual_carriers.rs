@@ -21,6 +21,8 @@ mod documents;
 mod early;
 #[path = "component_visual_carriers/matrix.rs"]
 mod matrix;
+#[path = "component_visual_carriers/typed_state.rs"]
+mod typed_state;
 
 fn retained_component_cases() -> Vec<complete_cases::OldCase> {
     [
@@ -196,6 +198,7 @@ fn verify_component_visual_groups(source: &DisplayArchive, raw: &[u8]) -> usize 
         .filter(|(_, field)| field.path.ends_with(".ent_vis_prop.unknown_0"))
         .map(|(index, _)| index)
         .collect();
+    typed_state::verify_display_visuals(source, raw, positions.len());
     for &index in &positions {
         verify_component_word_projection(source, index);
         verify_component_rgb_edit(source, raw, index);

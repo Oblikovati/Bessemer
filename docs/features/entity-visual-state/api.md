@@ -1,9 +1,12 @@
 # Stored entity visual roles
 
 `PartResolvedFeaturesArchive::entity_visual_state` projects one complete physical
-record from its revision-bound leading layer-number field. This first archive
-route covers model features, sketch entities and nested display objects. The
-configuration, display-list and drawing-wrapper routes remain pending under #181.
+record from its revision-bound leading layer-number field. This model route
+covers model features, sketch entities and nested display objects. Complete
+`DisplayArchive` and `DrawingBucketArchive` also enumerate physical component
+visuals with `entity_visual_states`, project an owned field with
+`entity_visual_state`, and apply `edit_entity_visual_state` with explicit limits.
+Part and assembly configuration API routes remain pending under #181.
 
 ```rust
 use bessemer::entity_visual::EntityVisualStoredEdit;
@@ -16,6 +19,12 @@ let result = source.edit_entity_visual_state(
 )?;
 let complete_bytes = result.archive().to_bytes()?;
 ```
+
+Drawing edits retain drawing layout inside the shared `DisplayArchiveEdit`
+report. Resolve source history parents through the drawing wrapper and result
+fields through `result.archive()`. Display and drawing enumeration returns a
+completed empty vector when the complete archive contains no physical visual
+definitions. Aliases do not produce duplicate definitions.
 
 The copied words distinguish layer number from line style. They retain the full
 ByLayer word, cache byte, color word, signed width selector and optional raw

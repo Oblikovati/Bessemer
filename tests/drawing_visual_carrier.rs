@@ -1,5 +1,6 @@
 //! Complete Source-admitted drawing property owner with real shared object keys (#181).
 use bessemer::display_lists::*;
+use bessemer::entity_visual::EntityVisualStoredEdit;
 use bessemer::{FailureClass, header::ArchiveVersion, tessellation::StoredFloat};
 #[allow(
     dead_code,
@@ -176,4 +177,71 @@ fn drawing_visual_bits_match_literal_bytes_in_eight_workers_and_optional_process
     if let Some(path) = std::env::var_os("BESSEMER_DRAWING_VISUAL_OUTPUT") {
         std::fs::write(path, &serial).unwrap();
     }
+}
+
+#[test]
+fn typed_drawing_visual_edits_keep_layout_history_and_revision_ownership() {
+    let source = drawing_visual_archive();
+    let states = source.entity_visual_states().unwrap();
+    assert_eq!(states.len(), 1);
+    let state = &states[0];
+    assert_eq!(
+        source.entity_visual_state(state.source_field()).unwrap(),
+        *state
+    );
+    let result = source
+        .edit_entity_visual_state(
+            state,
+            EntityVisualStoredEdit::ColorRgb([7, 19, 251]),
+            archive_support::LIMITS,
+        )
+        .unwrap();
+    let mut expected = drawing_visual_bytes();
+    expected[VISUAL_OFFSET + 5..VISUAL_OFFSET + 9].copy_from_slice(&0x80fb1307_u32.to_le_bytes());
+    assert_eq!(result.archive().to_bytes().unwrap(), expected);
+    verify_typed_drawing_history(&source, &result, state);
+    assert_eq!(source.to_bytes().unwrap(), drawing_visual_bytes());
+}
+
+fn verify_typed_drawing_history(
+    source: &DrawingBucketArchive,
+    result: &DisplayArchiveEdit,
+    state: &DisplayEntityVisualStoredState,
+) {
+    assert_eq!(result.completion(), DisplayEditCompletion::Changed);
+    assert_eq!(result.changes().len(), 1);
+    let change = &result.changes()[0];
+    assert_eq!(change.parents().len(), 1);
+    assert_eq!(
+        source.resolve_field(&change.parents()[0]).unwrap().value,
+        DisplayFieldValue::U32(0x80563412)
+    );
+    assert!(source.resolve_field(change.result().unwrap()).is_err());
+    assert!(
+        result
+            .archive()
+            .edit_entity_visual_state(
+                state,
+                EntityVisualStoredEdit::ColorWord(0),
+                archive_support::LIMITS
+            )
+            .is_err()
+    );
+}
+
+#[test]
+fn typed_drawing_visual_noops_keep_original_field_identity() {
+    let source = drawing_visual_archive();
+    let state = &source.entity_visual_states().unwrap()[0];
+    let result = source
+        .edit_entity_visual_state(
+            state,
+            EntityVisualStoredEdit::ColorWord(state.words().color_word),
+            archive_support::LIMITS,
+        )
+        .unwrap();
+    assert_eq!(result.completion(), DisplayEditCompletion::Unchanged);
+    assert!(result.changes().is_empty());
+    assert!(result.archive().resolve_field(state.source_field()).is_ok());
+    assert_eq!(result.archive().to_bytes().unwrap(), drawing_visual_bytes());
 }

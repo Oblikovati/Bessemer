@@ -8,6 +8,36 @@ use crate::{Result, header::ArchiveVersion};
 pub struct DrawingBucketArchive(DisplayArchive);
 
 impl DrawingBucketArchive {
+    /// Enumerates physical drawing component visuals; e.g. `let visuals = source.entity_visual_states()?;`.
+    pub fn entity_visual_states(&self) -> Result<Vec<super::DisplayEntityVisualStoredState>> {
+        self.0.entity_visual_states().map_err(failure)
+    }
+
+    /// Resolves a visual only in this drawing revision; e.g. `source.entity_visual_state(visual.source_field())?`.
+    pub fn entity_visual_state(
+        &self,
+        field: &super::DisplayFieldHandle,
+    ) -> Result<super::DisplayEntityVisualStoredState> {
+        self.0.entity_visual_state(field).map_err(failure)
+    }
+
+    /// Edits while retaining drawing layout and complete shared history; e.g. `source.edit_entity_visual_state(&visual, edit, limits)?`.
+    pub fn edit_entity_visual_state(
+        &self,
+        visual: &super::DisplayEntityVisualStoredState,
+        edit: crate::entity_visual::EntityVisualStoredEdit,
+        limits: DisplayArchiveLimits,
+    ) -> Result<super::DisplayArchiveEdit> {
+        self.0
+            .edit_entity_visual_state(visual, edit, limits)
+            .map_err(failure)
+    }
+
+    /// Resolves original drawing field history; e.g. `source.resolve_field(&change.parents()[0])?`.
+    pub fn resolve_field(&self, field: &super::DisplayFieldHandle) -> Result<&super::DisplayField> {
+        self.0.resolve_field(field).map_err(failure)
+    }
+
     /// Reads a complete drawing bucket stream with the document's model version.
     ///
     /// ```no_run
