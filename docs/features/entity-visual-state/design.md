@@ -103,8 +103,14 @@ fresh-process replays. All 37,698 independently expected complete bit/RGB output
 also passed original readers twice; the Rust tests assert exact equality between
 actual edit bytes and those literal expectations. These checks do not establish
 historical native document markers, continuous version support or native opening.
-The full component visual-word matrix and isolated edit operations remain
-pending for both document kinds and applicable drawing-bucket carriers.
+The full component visual-word matrix subsequently passed for both document
+kinds, including complete document edit/reopen/reversal checks. The
+[component matrix record](component-matrix-rust-verification.json),
+[typed export record](typed-export-verification.json) and
+[component concurrency record](component-concurrency-verification.json) retain
+their distinct acceptance scopes. Drawing-bucket typed exports also match the
+retained Source-accepted outputs. The remaining native part edit run and
+repository/platform publication gates are still required.
 
 Publication is serial behind the dialog publication and the existing accepted queue. This
 foundation creates no publication branch or PR. The humanizer skill is
