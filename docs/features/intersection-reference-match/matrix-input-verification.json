@@ -1,0 +1,54 @@
+{
+  "issue": 184,
+  "stage": "Bounded Cartesian generator and complete control regression; full matrix Source replay pending",
+  "processes_reaped": 1,
+  "exit_code": 0,
+  "tests": 9,
+  "test_seconds": 1.395,
+  "matrix_inputs": 1344,
+  "signed_values_per_axis": 8,
+  "selected_state_values": 7,
+  "opaque_ordinal_controls": 3,
+  "physical_groups_per_input": 8,
+  "literal_groups_checked": 10752,
+  "literal_scalar_values_checked": 43008,
+  "exhaustive_u16_literal_controls": 65536,
+  "existing_complete_source_controls_rechecked": 1,
+  "current_reader_test_pins_verified": 6,
+  "artifacts": [
+    {
+      "path": "docs/features/intersection-reference-match/owned_intersection_matrix.py",
+      "bytes": 1540,
+      "sha256": "923c7e1ebd97d527bba1c5ae63f3c33c468c2df396cf2889f63215bbc45257ec"
+    },
+    {
+      "path": "docs/features/intersection-reference-match/test_owned_intersection_matrix.py",
+      "bytes": 1789,
+      "sha256": "dbeb8c049df5907c7637dc5abc85171fe6519fd6ae27671a1172dbc48b92c7b4"
+    },
+    {
+      "path": "docs/features/intersection-reference-match/fixture-reference-snapshot.json",
+      "bytes": 714743,
+      "sha256": "28c2bec903174ebfbc60a4f419bcafed2649615dc721d9d616250d27d27ccd5a"
+    },
+    {
+      "path": "target/intersection-match-matrix-input-tests.log",
+      "bytes": 112,
+      "sha256": "79609447682729e5eb14ac2c4e67c1d014df0509f0ddc54e563da37fabad7ce7"
+    }
+  ],
+  "checks": [
+    "The1344 declared Cartesian tuples are unique and appear in a total sorted order.",
+    "Every generated pair contains four physical groups per owner and distinct owner values; selected values agree with independent literal expectations.",
+    "All43008 generated scalar values encode into exact u16/i32 literal prefixes without narrowing or enum filtering.",
+    "All65536 possible state words preserve their exact two-byte representation and unchanged signed siblings.",
+    "The existing complete two-definition/alias control and its immutable Source-accepted root bytes remain unchanged."
+  ],
+  "qualifications": [
+    "Only the existing complete control is parsed through Source by these tests. The1344 matrix roots and their full primitive oracles have not yet been generated/replayed.",
+    "The eight selected signed values and seven selected state inputs are a declared bounded matrix, not exhaustive i32 or complete caller/version coverage.",
+    "No runtime API, matcher, geometry, native execution or coverage credit is introduced. Humanizer unavailable; prose review remains pending."
+  ],
+  "coverage_credit": 0,
+  "runtime_implemented": false
+}

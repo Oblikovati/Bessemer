@@ -67,6 +67,13 @@ its selected input operands read raw24/raw28 and do not read raw20. This retains
 the published branch scope, opaque provider contracts and incomplete update CFG.
 The wider owned matrix, typed operations and publication gates remain pending.
 
+The [matrix-input tests](matrix-input-verification.json) passed all nine checks.
+They cover 1,344 unique sorted Cartesian inputs, 10,752 generated physical groups
+and 43,008 literal scalar values. A separate literal check covers every u16 state
+word. The existing complete Source control still matches its original bytes.
+The full matrix's complete roots and primitive oracles remain to be generated
+and accepted through Source; the input tests do not establish that acceptance.
+
 The published cohort contains eight complete streams, seventeen edges and
 sixty-eight reference groups. Its 544-byte isolated accounting reduction is not
 global coverage credit. Raw20 remains separate and uninterpreted by this feature.
