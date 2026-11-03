@@ -13,6 +13,8 @@ mod archive_support;
 )]
 #[path = "support/old_display_cases.rs"]
 mod complete_cases;
+#[path = "component_visual_carriers/documents.rs"]
+mod documents;
 
 fn modern_component_cases() -> Vec<complete_cases::OldCase> {
     [
@@ -70,6 +72,7 @@ fn verify_component_rgb_edit(source: &DisplayArchive, raw: &[u8], index: usize) 
     assert_eq!(source.to_bytes().unwrap(), raw);
     verify_component_rgb_history(source, &result, index + 3);
     verify_component_rgb_reopen(source, result.archive(), raw);
+    documents::verify_component_document(source, result.archive());
 }
 
 fn verify_component_rgb_history(
