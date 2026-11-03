@@ -106,6 +106,14 @@ source bytes. History matched the existing source-path order, including all seve
 original revision-bound parents. These checks use the existing archive codec;
 the typed visual operation remains pending.
 
+The [component context probes](component-context-probe-verification.json) accepted
+all 88 retained complete roots in two fresh processes across ten declared display
+versions from 5000 through 19000. Both runs agreed on every case, including 86
+physical visuals and 172,216 primitive reads. A named fake document supplied each
+matching version marker; the original readers checked complete bytes and holder
+identity without overrides. Older native document markers, versions below 5000
+and the full modern component word matrix remain separate acceptance work.
+
 The initial 117-check foundation and subsequent 118-check installed-image record
 bind their snapshots and support hashes to their original Git revisions. Other
 complete caller/edit oracles, the public typed operation and retained-corpus
