@@ -1,0 +1,14 @@
+{
+  "issue": 184,
+  "tool": "REA 6.5.0 / Ghidra 12.1.4",
+  "target": "C:/Program Files/SOLIDWORKS Corp/SOLIDWORKS/sldmodu.dll",
+  "observed_open_sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "read_request": {"address": "0x4bfbc110", "length": 32},
+  "outcome": "MCP timed out awaiting tools/call after 300s; no byte Evidence returned",
+  "revalidation": "REA session remained open with analysis activity not_observed and no provider requests; previously observed Java PID14480 was absent",
+  "cleanup": "REA close_binary returned result=null",
+  "native_bytes_verified": false,
+  "target_executed": false,
+  "coverage_credit": 0,
+  "qualification": "Opening observed the installed artifact identity only. No byte comparison, function ownership or behavior is established by this attempt. No configuration was changed or tool installed."
+}

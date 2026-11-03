@@ -32,6 +32,24 @@ totals match the unadapted baselines. Direct container slices also match all
 pins and the replay report's 31 direct dependencies match. This establishes
 baseline reader acceptance; native bindings and typed operations remain open.
 
+The [owned controls](owned-controls-verification.json) prove two complete sketch
+definitions, eight distinct reference groups and a real alias. All 451 physical
+primitive reads partition the 1,518-byte stream, including 32 independently
+framed scalar spans. Six maintained regression tests pass against the retained
+Source-accepted literal and invalid builder inputs. Run them through frozen
+Source imports from the repository root:
+
+```powershell
+python -B -X utf8 docs/features/intersection-reference-match/freeze_owned_controls.py
+```
+
+An [ordinary PE-file check](native-fragments-verification.json) matches all
+thirteen retained native intervals, totalling 21,607 bytes. This is exact fragment
+verification, not REA instruction or dataflow Evidence. The
+[REA qualification](native-tool-qualification.json) records the successful
+artifact identity check, timed-out byte request and session cleanup. Complete
+native bindings and the wider owned matrix remain pending.
+
 The published cohort contains eight complete streams, seventeen edges and
 sixty-eight reference groups. Its 544-byte isolated accounting reduction is not
 global coverage credit. Raw20 remains separate and uninterpreted by this feature.
