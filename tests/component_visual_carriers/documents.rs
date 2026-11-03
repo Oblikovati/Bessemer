@@ -40,18 +40,11 @@ fn component_document_context(
 }
 
 fn verify_component_document_streams(before: &Document, after: &Document) {
-    let before_names: Vec<_> = before.streams().map(|stream| stream.name).collect();
-    let after_names: Vec<_> = after.streams().map(|stream| stream.name).collect();
-    assert_eq!(before_names, after_names);
-    for stream in before
-        .streams()
-        .filter(|stream| stream.name != DISPLAY_STREAM)
-    {
-        assert_eq!(
-            before.read_stream(stream.name).unwrap(),
-            after.read_stream(stream.name).unwrap()
-        );
-    }
+    crate::unselected_document_streams::assert_unselected_document_streams(
+        before,
+        after,
+        DISPLAY_STREAM,
+    );
 }
 
 fn reopen_component_document(document: &Document, archive: &DisplayArchive) -> Document {

@@ -23,6 +23,8 @@ mod early;
 mod matrix;
 #[path = "component_visual_carriers/typed_state.rs"]
 mod typed_state;
+#[path = "support/unselected_document_streams.rs"]
+mod unselected_document_streams;
 #[path = "support/visual_workers.rs"]
 mod visual_workers;
 
