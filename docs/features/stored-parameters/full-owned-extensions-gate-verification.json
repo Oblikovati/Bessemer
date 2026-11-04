@@ -1,0 +1,20 @@
+{
+  "issue": 202,
+  "command": "cargo xtask pr",
+  "process_exit_code": 0,
+  "passed": true,
+  "source_revision": "f8b7578a16c57eb7f2f0ac94783d630b7b0f6473",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "tests_passed": 4082,
+  "tests_failed": 0,
+  "tests_ignored": 230,
+  "test_summaries": 324,
+  "log_sha256": "148c03e7ea0ac5827f53d04e73de05b55848b2ff844db66d4e4ca4153210fdab",
+  "scope": "Complete alternate matrix, byte/field/entry boundaries, rejection matrix and six-class multi-parameter document operations through f8b7578a",
+  "exclusions": [
+    "Later root-alias and older-version extensions are excluded",
+    "Later raw update-stamp regression and Bug204 correction are excluded",
+    "Native primary document census, exact-head remote checks, geometry/application acceptance and whole parity remain separate"
+  ]
+}
