@@ -65,3 +65,18 @@ The complete snapshot is retained as lossless gzip with a small JSON index.
 The configuration operation currently has a complete blank-part density test;
 the six-class independent wire baseline above is in resolved-feature context.
 That distinction remains part of the acceptance scope.
+
+## Native projection check
+
+One complete retained-corpus run passed all 906 cases, with 4,430 physical
+configuration parameters and 39,487 physical resolved-feature parameters.
+The typed population matched a separate physical class scan, every projected
+name/history dependency resolved and both complete archive streams reconstructed
+byte for byte. The run took 306.06 seconds on Windows with the explicit installed
+kernel schema. Counts and log hashes are retained in `native-verification.json`;
+all per-case counts are retained as lossless gzip.
+
+This is a read/projection and internal consistency check. Fresh original Source
+comparison of actual parameter exports, native edits and whole native document
+reopen/reversal remain open. It does not establish a class-by-context/version
+population matrix or native application and geometry acceptance.
