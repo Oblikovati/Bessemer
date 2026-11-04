@@ -1,10 +1,16 @@
 //! Canonical saved sketch-reference keys and independent complete-root edits (#188).
+#[path = "model_sketch_reference_lookup/concurrency.rs"]
+mod concurrency;
 #[path = "model_sketch_reference_lookup/documents.rs"]
 mod documents;
+#[path = "support/model_operation_snapshot.rs"]
+mod model_operation_snapshot;
 #[path = "support/owned_resolved_document.rs"]
 mod owned_resolved_document;
 #[path = "support/unselected_document_streams.rs"]
 mod unselected_document_streams;
+#[path = "support/visual_workers.rs"]
+mod visual_workers;
 use bessemer::Document;
 use bessemer::header::ArchiveVersion;
 use bessemer::model_archives::*;

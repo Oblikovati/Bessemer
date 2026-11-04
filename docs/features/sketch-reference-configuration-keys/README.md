@@ -77,3 +77,11 @@ Their 24,000-operation exports are byte-identical; independent literal
 checks accepted all 22,672 changes and 1,328 no-ops. Both original Source
 actual-output replays are running. These checks do not complete the remaining
 native, concurrency, full Cargo or remote publication gates.
+
+The owned concurrency gate passed in two fresh processes. Each compared
+21,600 serial/worker visits over every case, owner and request kind, with
+86,400 changed, unchanged, foreign and stale requests. Complete fields,
+bytes, history, coverage, diagnostics and typed errors matched across eight
+workers. Source, foreign archive and configuration inputs stayed unchanged.
+The seven-test owned suite and integration Clippy passed; native operations,
+ThreadSanitizer, full Cargo and remote publication acceptance remain open.
