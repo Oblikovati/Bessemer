@@ -1,0 +1,26 @@
+{
+  "issue": 202,
+  "scope": "All 24 owned class/style layouts; no new native population or runtime behavior",
+  "tests_passed": 2,
+  "tests_failed": 0,
+  "focused_seconds": 0.21,
+  "foreign_and_stale_selector_rejections": 144,
+  "incompatible_primary_and_alternate_rejections": 96,
+  "source_bytes_values_and_revision_handles_preserved": true,
+  "clippy_exit_code": 0,
+  "post_format_maximum_function_lines": 13,
+  "failed_first_build": "Unused test helper argument; removed before successful build. No production change.",
+  "log_sha256": "b58fdf3af3a7c849cd3fa2a8f4ddb19810f220d2a7cebbf3b0d593f5f5b501ed",
+  "exclusions": [
+    "Configuration and inherited context acceptance remain separately recorded",
+    "The active full native primary corpus run and complete PR gate are not acceptance evidence for this revision"
+  ],
+  "complete_focused_suite": {
+    "passed": 19,
+    "failed": 0,
+    "ignored": 0,
+    "seconds": 36.95,
+    "exit_code": 0,
+    "log_sha256": "c2863af205eccc41c10f750f75b8609dad220295cc7064e9c0a6b00adcab5529"
+  }
+}

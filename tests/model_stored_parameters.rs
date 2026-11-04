@@ -73,6 +73,8 @@ mod inherited;
 mod ownership;
 #[path = "model_stored_parameters/read.rs"]
 mod read;
+#[path = "model_stored_parameters/rejections.rs"]
+mod rejections;
 
 fn primary_request(kind: usize) -> ModelParameterStoredEdit {
     ModelParameterStoredEdit::Primary(edited_value(kind))
