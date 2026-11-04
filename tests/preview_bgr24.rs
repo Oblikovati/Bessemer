@@ -215,7 +215,7 @@ fn assert_bgr24_palette_rejections(source: &DibPreview) {
 }
 
 fn assert_bgr24_format_rejections(source: &DibPreview) {
-    for (bits, compression) in [(24, 1), (24, 2), (24, 3), (16, 0)] {
+    for (bits, compression) in [(24, 1), (24, 2), (24, 3), (2, 0)] {
         let mut contents = source.contents().clone();
         contents.header.bit_count = bits;
         contents.header.compression = compression;

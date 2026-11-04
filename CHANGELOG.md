@@ -50,6 +50,8 @@
 
 ### Added
 
+- Added 16-bit BI_RGB555 preview word decoding and replacement, retaining unused high bits, padding, palettes and size declarations. (#210)
+
 - Added uncompressed 1-, 4- and 8-bit indexed DIB previews with exact palette indices, padding and unused-bit preservation during pixel edits. (#209)
 
 - Added 24-bit BI_RGB preview reading and pixel replacement, preserving row padding, palettes, orientations and image-size declarations. (#207)

@@ -63,7 +63,7 @@ full/lightweight context.
 namespace-aware property views, exact source framing and isolated text/attribute edits.
 It also supports embedded `ThirdPty/InspectionXpert` projects and complete Job Number edits.
 `bessemer::preview` reads and writes packed DIB previews, decodes RLE8, uncompressed
-1/4/8-bit indexed pixels, BGR24 and BGRX, and supports isolated palette and pixel
+1/4/8-bit indexed pixels, raw RGB555 words, BGR24 and BGRX, and supports isolated palette and pixel
 replacement. Packed RGB edits preserve stored row padding and unused index bits. Uncompressed RGB
 previews retain legal zero image-size declarations through edits and reversals.
 It also reads, constructs, edits, and writes static PNG previews, preserving stored

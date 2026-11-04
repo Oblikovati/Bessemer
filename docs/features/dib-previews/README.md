@@ -7,6 +7,8 @@ BGRX. The [version 2 BGR24 extension](../dib-bgr24/README.md) adds 24-bit BI_RGB
 using dedicated pixel methods, while retaining version 1 RLE8/BGRX output.
 The [version 3 indexed RGB extension](../dib-indexed-rgb/README.md) adds uncompressed
 1-, 4- and 8-bit indices through the existing indexed-pixel API.
+The [version 4 RGB555 extension](../dib-rgb555/README.md) adds raw 16-bit word
+decoding and replacement while retaining the unused high bit.
 Other bit depths, compression modes and header types return typed
 unsupported errors. [PNG previews](../png-previews/README.md) implement the separate
 clause 8.2 datastream.
@@ -63,6 +65,8 @@ let stream_bytes = changed.to_bytes()?;
 `rebuild_dib INPUT OUTPUT RASTER` forces reconstruction and emits a verification
 raster: two bytes per indexed pixel (written marker, index), or four BGRX bytes
 per pixel, or three BGR bytes per 24-bit pixel.
+For RGB555, the raster contains two little-endian bytes per raw word, including
+the unused high bit; these are distinct from the indexed marker/index encoding.
 `set_preview_color SOURCE STREAM INDEX BLUE GREEN RED DESTINATION`
 performs a complete document palette edit, preserving the entry's reserved byte.
 

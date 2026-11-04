@@ -1,0 +1,109 @@
+{
+  "issue": 210,
+  "source_parent": "d4b71197de334665417657bc3296d7c2b30c7d76",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "before": {
+    "admission_probe_exit_code": 101,
+    "log_sha256": "354594f1cdab1acd176c8cbe7010676b83bad8554d357a6b25bd1a6770edc1e7"
+  },
+  "after": {
+    "combined_compile_and_test_exit_code": 0,
+    "integration_tests_passed": 40,
+    "tests_failed": 0,
+    "row_unit_tests_passed": 2,
+    "row_unit_exit_code": 0,
+    "row_unit_log_sha256": "63b0891f8bdbffb5b4b8f6b9ecda066141f1e5ba8f1e20dcef50d6b8cf3d1659",
+    "logs": {
+      "target/rgb555-preview_rgb555-tests.log": {
+        "passed": 7,
+        "ignored": 0,
+        "sha256": "70cd5456c4e73054cd1dfcd2446e28b6cfa9f066703a2f541e50740f8e9b1c9a"
+      },
+      "target/rgb555-preview_indexed_rgb-tests.log": {
+        "passed": 7,
+        "ignored": 0,
+        "sha256": "a72e09b54a4b15faa2b54721572f0b2b829519b9146de6c52d1c792174bcc342"
+      },
+      "target/rgb555-preview_bgr24-tests.log": {
+        "passed": 7,
+        "ignored": 0,
+        "sha256": "3a6b9c12e99c6b8e2701ede1724c189118141a7d7a795e663061362e244ee5ab"
+      },
+      "target/rgb555-preview_rgb_zero_size-tests.log": {
+        "passed": 5,
+        "ignored": 0,
+        "sha256": "409a2a716062b36ce266c113d8faad7c81bf45192a0c113fd67f94508f4c76ce"
+      },
+      "target/rgb555-preview-tests.log": {
+        "passed": 5,
+        "ignored": 0,
+        "sha256": "10898085cda8cd92ecfd1be30bd342ac3adf6915aab71edf849dd58217496b40"
+      },
+      "target/rgb555-preview_adversarial-tests.log": {
+        "passed": 5,
+        "ignored": 0,
+        "sha256": "21b80db2979deaa0c9b67545a43c942379d0fd96df22f5a3a70f39746384aedb"
+      },
+      "target/rgb555-preview_document-tests.log": {
+        "passed": 2,
+        "ignored": 0,
+        "sha256": "9ef0ed6ff1f0f2e872322adb2ddb7e7893e0b68cae3c47f9a00b92ab446d9160"
+      },
+      "target/rgb555-preview_isolation-tests.log": {
+        "passed": 2,
+        "ignored": 0,
+        "sha256": "fb6d655783fa3f4e1752481595dd21428abbcdd7723ad1ff51634a78a076ed0b"
+      }
+    }
+  },
+  "coverage": {
+    "literal_original_edited_pairs": 136,
+    "full_raw_word_domain_cases": 8,
+    "raw_u16_values_per_domain_case": 65536,
+    "whole_document_edit_reopen_fresh_reversals": 136,
+    "native_windows_images": 272,
+    "native_windows_pixels": 1053904,
+    "concurrent_workers": 8,
+    "new_form_fresh_example_processes": 544,
+    "earlier_form_fresh_example_processes": 3718
+  },
+  "checks": {
+    "library_compile_exit_code": 0,
+    "test_library_compile_exit_code": 0,
+    "test_library_clippy_exit_code": 0,
+    "integration_clippy_exit_code": 0,
+    "example_clippy_exit_code": 0,
+    "format_exit_code": 0,
+    "new_and_changed_functions_at_most_20_lines": true,
+    "new_files_below_500_lines": true
+  },
+  "production_sha256": {
+    "src/preview/bgr555.rs": "bdba3f070e0f1d4c8c80a0998dfe11406f186744312abcb9225238538ccffa1a",
+    "src/preview/header.rs": "eab22d034a99d830b87ed308e146694ce10d440fe2291f8e20f3ce4c4b2d7589",
+    "src/preview/rows.rs": "dbf8eb5a2989d7bcf95217c062ebde860b0f658fda1e5e107ff47090b396c025",
+    "src/preview/codec.rs": "4d1cf8a1b7ec21d4b5cc7d0adb0fd2fe1cd66dfbdf1a686f2f795fc0922bfedd",
+    "src/preview/mod.rs": "f83bf88a1bf2d15f08ab50c350f06f27464f38bec3d5d0c0b501b7c3e98ed686",
+    "src/preview/pixels.rs": "f292e4acf383aa089c965d72992ba8ec98f1677743d49e9f5a605e39d19efdbe",
+    "src/preview/types.rs": "3b71032b4f830038b742955aa1afd625be18194dcb9a7c54a7e64171dcfdcd7d",
+    "examples/rebuild_dib.rs": "e58fc45fa789a7d842d989147eb1bb2e5ac625d4036cb02be58a0db7ec8c9ba2"
+  },
+  "supporting_sha256": {
+    "tests/preview_rgb555.rs": "88e44eb87c3567684a974ecc1e705f234523ef3ea81e3f9ccfb2abf83d3697bb",
+    "tests/support/rgb555_cases.rs": "36f504b0530c7cde9dfba0937e2cb0f050763b82c6c9a230af38a671334e7db7",
+    "tests/preview_bgr24.rs": "4f52af8c5508e1decbbf85df7dfb570ca3a2cfffbe76e55102801c460447f468",
+    "docs/features/dib-indexed-rgb/verify_example.py": "8c698049c2253168455ba5412ed0819e9b95f827324903d22074ed425a489f5c"
+  },
+  "artifacts_sha256": {
+    "windows-oracle.json": "05a8c4eb991a6f10627d966417d4cebad45ccb413e246e1d58c9e3a48e6b17f3",
+    "example-verification.json": "a01d557de576f0ccf342ecd1b75ca3b52ac84f7a71e24a5daeb2c849802e3b5f",
+    "indexed-regression-process-verification.json": "85a75ffe97425becd41fa24910a0439fbaedde8039d739ee740501de768cfa7f",
+    "bgr24-regression-process-verification.json": "4509352c29a87c13a17579d53634cc9be18911f31a4c47f04b32c0c2362bf3fd"
+  },
+  "changed_rejection_baseline": "The old BGR24 unsupported-depth mutation now selects2 bits; the newly admitted16-bit form has136 positive literal pairs. Earlier fixture bytes and expected field/raster values remain unchanged. DIB behavior version4.",
+  "exclusions": [
+    "Full cargo xtask pr at this source cut remains pending",
+    "Exact-head remote CI and integration remain pending",
+    "Native SolidWorks RGB555 population, application opening, geometry and complete schema parity are not claimed"
+  ]
+}

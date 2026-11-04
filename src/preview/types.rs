@@ -9,7 +9,7 @@ pub struct BitmapInfoHeader {
     pub height: i32,
     /// Plane count; must be one.
     pub planes: u16,
-    /// Bits per pixel: 1/4/8 for indexed RGB, eight for RLE8, 24 for BGR, 32 for BGRX.
+    /// Bits per pixel: 1/4/8 for indexed RGB, eight for RLE8, 16 for RGB555, 24 for BGR, 32 for BGRX.
     pub bit_count: u16,
     /// Windows BI_RLE8 (1) or BI_RGB (0).
     pub compression: u32,
@@ -62,6 +62,7 @@ pub enum DibPixels {
 pub(super) enum DibEncoding {
     Rle8,
     IndexedRgb(u8),
+    Bgr555,
     Bgr24,
     Bgrx32,
 }

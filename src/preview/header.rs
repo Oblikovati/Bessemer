@@ -86,31 +86,38 @@ fn pixel_count(width: usize, height: usize, maximum_pixels: usize) -> Result<usi
 }
 
 fn encoding(header: &BitmapInfoHeader) -> Result<DibEncoding> {
-    if header.header_size != 40 {
-        return Err(unsupported(format!(
-            "DIB header size {}; expected BITMAPINFOHEADER size 40",
-            header.header_size
-        )));
-    }
+    require_header_size(header.header_size)?;
     if header.planes != 1 {
         return Err(invalid(format!("DIB planes {}; expected 1", header.planes)));
     }
     match (header.bit_count, header.compression) {
         (8, 1) => Ok(DibEncoding::Rle8),
         (bits @ (1 | 4 | 8), 0) => Ok(DibEncoding::IndexedRgb(bits as u8)),
+        (16, 0) => Ok(DibEncoding::Bgr555),
         (24, 0) => Ok(DibEncoding::Bgr24),
         (32, 0) => Ok(DibEncoding::Bgrx32),
         other => Err(unsupported(format!(
-            "DIB bit count/compression {other:?}; expected (8, BI_RLE8=1) or (1/4/8/24/32, BI_RGB=0)"
+            "DIB bit count/compression {other:?}; expected (8, BI_RLE8=1) or (1/4/8/16/24/32, BI_RGB=0)"
         ))),
     }
+}
+
+fn require_header_size(size: u32) -> Result<()> {
+    if size != 40 {
+        return Err(unsupported(format!(
+            "DIB header size {size}; expected BITMAPINFOHEADER size 40"
+        )));
+    }
+    Ok(())
 }
 
 pub(super) fn palette_count(header: &BitmapInfoHeader, shape: ImageShape) -> Result<usize> {
     let maximum = match shape.encoding {
         DibEncoding::Rle8 => 256,
         DibEncoding::IndexedRgb(bits) => 1usize << bits,
-        DibEncoding::Bgr24 | DibEncoding::Bgrx32 => return Ok(header.colors_used as usize),
+        DibEncoding::Bgr555 | DibEncoding::Bgr24 | DibEncoding::Bgrx32 => {
+            return Ok(header.colors_used as usize);
+        }
     };
     if header.colors_used as usize > maximum {
         return Err(invalid(format!(

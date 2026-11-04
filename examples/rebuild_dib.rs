@@ -19,6 +19,13 @@ fn main() -> Result<(), Box<dyn Error>> {
 }
 
 fn preview_raster(preview: &DibPreview) -> bessemer::Result<Vec<u8>> {
+    if preview.contents().header.bit_count == 16 {
+        return Ok(preview
+            .decode_bgr555_words(100_000_000)?
+            .into_iter()
+            .flat_map(u16::to_le_bytes)
+            .collect());
+    }
     if preview.contents().header.bit_count == 24 {
         return Ok(preview
             .decode_bgr24_pixels(100_000_000)?

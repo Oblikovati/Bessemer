@@ -1,5 +1,6 @@
 //! Packed DIB preview reading, immutable editing, and lossless archive preservation.
 mod bgr24;
+mod bgr555;
 mod codec;
 mod header;
 mod indexed_rgb;

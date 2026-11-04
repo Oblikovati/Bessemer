@@ -8,6 +8,7 @@ use crate::Result;
 impl DibPreview {
     /// Decodes top-to-bottom pixels without inventing values for unwritten RLE positions.
     /// For 24-bit BGR, use `decode_bgr24_pixels` to retain three-byte pixel values.
+    /// For 16-bit RGB555, use `decode_bgr555_words` to retain every stored word bit.
     ///
     /// ```no_run
     /// # fn example(preview: &bessemer::preview::DibPreview) -> bessemer::Result<()> {
@@ -28,6 +29,9 @@ impl DibPreview {
             )?)),
             DibEncoding::Bgr24 => Err(unsupported(
                 "24-bit BI_RGB pixels; expected decode_bgr24_pixels for three-byte BGR values",
+            )),
+            DibEncoding::Bgr555 => Err(unsupported(
+                "16-bit BI_RGB pixels; expected decode_bgr555_words for raw RGB555 words",
             )),
         }
     }

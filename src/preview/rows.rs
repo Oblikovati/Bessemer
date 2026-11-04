@@ -7,6 +7,7 @@ use crate::Result;
 pub(super) fn row_stride(shape: ImageShape) -> Result<usize> {
     let (units, alignment, divisor) = match shape.encoding {
         DibEncoding::IndexedRgb(bits) => (bits as usize, 32, 8),
+        DibEncoding::Bgr555 => (2, 4, 1),
         DibEncoding::Bgr24 => (3, 4, 1),
         DibEncoding::Bgrx32 => (4, 4, 1),
         DibEncoding::Rle8 => return Err(invalid("Rle8 row stride; expected uncompressed RGB")),
@@ -42,6 +43,7 @@ mod tests {
         (DibEncoding::IndexedRgb(1), 1),
         (DibEncoding::IndexedRgb(4), 4),
         (DibEncoding::IndexedRgb(8), 8),
+        (DibEncoding::Bgr555, 16),
         (DibEncoding::Bgr24, 24),
         (DibEncoding::Bgrx32, 32),
     ];

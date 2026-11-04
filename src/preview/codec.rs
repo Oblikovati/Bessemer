@@ -62,7 +62,9 @@ pub(super) fn validate(contents: &DibContents, maximum_pixels: usize) -> Result<
     require_image_byte_length(contents, image_byte_count(&contents.header, shape)?)?;
     match shape.encoding {
         DibEncoding::Rle8 => rle::walk_rle(&contents.pixel_bytes, shape, palette, None)?,
-        DibEncoding::Bgr24 | DibEncoding::Bgrx32 => require_rgb_size(contents, shape)?,
+        DibEncoding::Bgr555 | DibEncoding::Bgr24 | DibEncoding::Bgrx32 => {
+            require_rgb_size(contents, shape)?
+        }
         DibEncoding::IndexedRgb(bits) => {
             require_rgb_size(contents, shape)?;
             indexed_rgb::validate_indices(&contents.pixel_bytes, shape, bits, palette)?;
