@@ -1,0 +1,19 @@
+{
+  "issue": 201,
+  "status": "Focused selector and caller-copy isolation checks passed; original Source comparison remains active",
+  "tests_passed": 9,
+  "failed": 0,
+  "ignored": 0,
+  "process_exit_code": 0,
+  "checks": [
+    "Every field in the owned five-root archive selects iff it is a physical root",
+    "Every nonroot rejection retains typed operation/class/cause",
+    "Mutating caller-owned occurrence, tag and target copies leaves the snapshot unchanged",
+    "All earlier framing, alias, inherited/nested target, concurrency and ownership tests remain passing",
+    "Focused Clippy and function/file size checks passed"
+  ],
+  "logs_sha256": {
+    "resolved-root-graph-selection-tests.log": "4d767e67290eabcd88388c9ded9a95b873d874c2e9a3a03461f4e3a3afc8f13c",
+    "resolved-root-graph-selection-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -149,6 +149,45 @@ fn all_published_root_snapshot_types_are_send_and_sync() {
     require::<ModelResolvedRootDiagnostic>();
 }
 
+#[test]
+fn every_physical_field_selection_matches_root_membership_without_mutating_the_graph() {
+    let source = root_archive(ALIASES);
+    let graph = source.root_graph().unwrap();
+    for index in 0..source.fields().len() {
+        let handle = source.field_handle(index).unwrap();
+        let expected = graph.roots().iter().find(|root| root.field == handle);
+        match (graph.root(&handle), expected) {
+            (Ok(actual), Some(expected)) => assert_eq!(actual, expected),
+            (Err(error), None) => {
+                assert_eq!(error.class, bessemer::FailureClass::Invalid);
+                assert_eq!(error.operation, "resolved root graph");
+                assert!(error.cause.contains("expected"));
+            }
+            actual => panic!("{actual:?} at field {index}; expected physical root membership"),
+        }
+    }
+    assert_graph_contract(&graph);
+}
+
+#[test]
+fn mutating_caller_owned_occurrence_copies_cannot_change_the_published_snapshot() {
+    let graph = root_archive(ALIASES).root_graph().unwrap();
+    let mut copies = graph.roots().to_vec();
+    copies[0].ordinal = usize::MAX;
+    copies[0].target = ModelResolvedRootTarget::Null;
+    copies[0].tag.record = ModelObjectRecord::Null;
+    assert_eq!(graph.roots()[0].ordinal, 0);
+    assert!(matches!(
+        graph.roots()[0].target,
+        ModelResolvedRootTarget::Local { .. }
+    ));
+    assert!(matches!(
+        graph.roots()[0].tag.record,
+        ModelObjectRecord::New { .. }
+    ));
+    assert_graph_contract(&graph);
+}
+
 fn inherited_target() -> ModelObjectId {
     owned_root_configuration()
         .fields()
