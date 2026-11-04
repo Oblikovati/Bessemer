@@ -252,3 +252,70 @@ fn owned_root_configuration() -> PartConfigurationArchive {
     )
     .unwrap()
 }
+
+fn root_stream_result(
+    raw: &[u8],
+    configuration: &PartConfigurationArchive,
+    limits: ModelArchiveLimits,
+) -> bessemer::Result<PartResolvedFeaturesArchive> {
+    PartResolvedFeaturesArchive::from_bytes(
+        raw,
+        configuration.clone(),
+        include_bytes!("fixtures/sheet-metal/manager-0.bin"),
+        limits,
+    )
+}
+
+#[test]
+fn every_incomplete_alias_stream_and_appended_byte_fails_without_publishing_partial_roots() {
+    let configuration = owned_root_configuration();
+    let source = root_stream_result(ALIASES, &configuration, ROOT_LIMITS).unwrap();
+    let graph = source.root_graph().unwrap();
+    for end in 0..ALIASES.len() {
+        assert!(
+            root_stream_result(&ALIASES[..end], &configuration, ROOT_LIMITS).is_err(),
+            "prefix{end}; expected incomplete stream failure"
+        );
+    }
+    for value in 0..=u8::MAX {
+        let mut appended = ALIASES.to_vec();
+        appended.push(value);
+        assert!(
+            root_stream_result(&appended, &configuration, ROOT_LIMITS).is_err(),
+            "appended{value}; expected exact EOF failure"
+        );
+    }
+    assert_graph_contract(&graph);
+    assert_eq!(source.to_bytes().unwrap(), ALIASES);
+}
+
+#[test]
+fn exact_source_byte_and_field_caps_pass_and_one_below_fails_without_changing_the_snapshot() {
+    let configuration = owned_root_configuration();
+    let source = root_stream_result(ALIASES, &configuration, ROOT_LIMITS).unwrap();
+    let exact = ModelArchiveLimits {
+        maximum_bytes: ALIASES.len(),
+        maximum_fields: source.fields().len(),
+        ..ROOT_LIMITS
+    };
+    let accepted = root_stream_result(ALIASES, &configuration, exact).unwrap();
+    assert_graph_contract(&accepted.root_graph().unwrap());
+    for limits in insufficient_root_caps(exact) {
+        let error = root_stream_result(ALIASES, &configuration, limits).unwrap_err();
+        assert!(error.cause.contains("expected"));
+    }
+    assert_graph_contract(&source.root_graph().unwrap());
+}
+
+fn insufficient_root_caps(exact: ModelArchiveLimits) -> [ModelArchiveLimits; 2] {
+    [
+        ModelArchiveLimits {
+            maximum_bytes: exact.maximum_bytes - 1,
+            ..exact
+        },
+        ModelArchiveLimits {
+            maximum_fields: exact.maximum_fields - 1,
+            ..exact
+        },
+    ]
+}

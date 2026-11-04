@@ -99,3 +99,13 @@ guard over 6,673 Python files. The two fresh Rust packets each contained 1,508,8
 bytes and matched byte for byte. This closes the scoped stored-metadata comparison;
 the known-byte accounting defect, publication gates and broader model/geometry
 requirements remain open.
+
+
+## Malformed streams and source budgets
+
+The [boundary proof](boundary-verification.json) records all 3,686 proper
+prefixes and all 256 single-byte append variants of the owned alias stream being
+rejected before root publication. The accepted source and its snapshot remain
+unchanged after those failures. Exact byte and field caps pass, while one below
+either cap fails. The focused suite passed 11 tests. These additions cover those
+two source resource dimensions; other decoder caps retain their existing tests.
