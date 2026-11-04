@@ -57,5 +57,8 @@
     "Native SolidWorks application, equation/unit evaluation, setter cascades and geometry are not exercised",
     "Source accounting Bug #177 is unchanged",
     "Latest complete publication gates remain open; current full gate excludes this later first-native test"
-  ]
+  ],
+  "verification_correction": "Runtime/reference results remain passing. The original size check ran before formatting completed and did not cover the final formatted source.",
+  "initial_function_size_audit_applies_to_final_formatted_source": false,
+  "corrected_function_size_audit": "Passed after formatting and structural test-helper split; size-audit-correction.json (#203)"
 }

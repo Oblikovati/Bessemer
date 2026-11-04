@@ -42,31 +42,64 @@ fn read_parameter_document(
     row: &NativePrimaryRow,
     kernel: Option<CompressedKernelContext>,
 ) -> ModelParameterSource {
+    read_parameter_context(document, case, row.context, kernel)
+}
+
+fn read_parameter_context(
+    document: &Document,
+    case: &ResolvedCorpusCase<'_>,
+    context: u32,
+    kernel: Option<CompressedKernelContext>,
+) -> ModelParameterSource {
     let name = case.label.rsplit_once("::").unwrap().1;
     let configuration = ConfigurationId::from_stream_name(name).unwrap();
-    match row.context {
-        0 => ModelParameterSource::Configuration(
-            crate::model_archives::PartConfigurationArchive::from_document(
-                document,
-                configuration,
-                case.version,
-                kernel,
-                LIMITS,
-            )
-            .unwrap(),
-        ),
-        1 => ModelParameterSource::ResolvedFeatures(
-            PartResolvedFeaturesArchive::from_document(
-                document,
-                configuration,
-                case.version,
-                kernel,
-                LIMITS,
-            )
-            .unwrap(),
-        ),
+    match context {
+        0 => ModelParameterSource::Configuration(read_parameter_configuration(
+            document,
+            case,
+            configuration,
+            kernel,
+        )),
+        1 => ModelParameterSource::ResolvedFeatures(read_parameter_features(
+            document,
+            case,
+            configuration,
+            kernel,
+        )),
         other => panic!("context {other}; expected configuration0 or features1"),
     }
+}
+
+fn read_parameter_features(
+    document: &Document,
+    case: &ResolvedCorpusCase<'_>,
+    configuration: ConfigurationId,
+    kernel: Option<CompressedKernelContext>,
+) -> PartResolvedFeaturesArchive {
+    PartResolvedFeaturesArchive::from_document(
+        document,
+        configuration,
+        case.version,
+        kernel,
+        LIMITS,
+    )
+    .unwrap()
+}
+
+fn read_parameter_configuration(
+    document: &Document,
+    case: &ResolvedCorpusCase<'_>,
+    configuration: ConfigurationId,
+    kernel: Option<CompressedKernelContext>,
+) -> crate::model_archives::PartConfigurationArchive {
+    crate::model_archives::PartConfigurationArchive::from_document(
+        document,
+        configuration,
+        case.version,
+        kernel,
+        LIMITS,
+    )
+    .unwrap()
 }
 
 fn parameter_source_bytes(source: &ModelParameterSource) -> Vec<u8> {
@@ -160,15 +193,20 @@ fn assert_native_primary_operation(
         &ModelParameterValue::Double(StoredDouble::from_bits(row.original))
     );
     let changed = edit_native_primary(&source, &parameter, row.replacement);
+    let expected = first_primary_expected(original, row);
+    assert_eq!(parameter_source_bytes(&changed), expected);
+    assert_document_primary_reversal(document, case, row, &source, &changed, kernel);
+    assert_eq!(parameter_source_bytes(&source), original);
+}
+
+fn first_primary_expected(original: &[u8], row: &NativePrimaryRow) -> Vec<u8> {
     let mut expected = original.to_vec();
     assert_eq!(
         &expected[row.offset..row.offset + 8],
         &row.original.to_le_bytes()
     );
     expected[row.offset..row.offset + 8].copy_from_slice(&row.replacement.to_le_bytes());
-    assert_eq!(parameter_source_bytes(&changed), expected);
-    assert_document_primary_reversal(document, case, row, &source, &changed, kernel);
-    assert_eq!(parameter_source_bytes(&source), original);
+    expected
 }
 
 fn assert_document_primary_reversal(
@@ -180,30 +218,42 @@ fn assert_document_primary_reversal(
     kernel: Option<CompressedKernelContext>,
 ) {
     let stream = native_parameter_stream(case, row);
-    let mut output = document.clone();
-    output
-        .replace_stream(&stream, parameter_source_bytes(changed))
-        .unwrap();
-    let reopened = Document::from_bytes(&output.to_bytes().unwrap()).unwrap();
-    unselected_document_streams::assert_unselected_document_streams(document, &reopened, &stream);
+    let (mut output, reopened) =
+        primary_output_document(document, &stream, parameter_source_bytes(changed));
     let current = read_parameter_document(&reopened, case, row, kernel);
     assert_eq!(
         parameter_source_fields(&current),
         parameter_source_fields(changed)
     );
     let reverse = edit_native_primary(&current, &parameter_at(&current, row), row.original);
-    assert_eq!(
-        parameter_source_fields(&reverse),
-        parameter_source_fields(source)
-    );
-    assert_eq!(
-        parameter_source_bytes(&reverse),
-        parameter_source_bytes(source)
-    );
+    assert_parameter_archives_equal(&reverse, source);
     output
         .replace_stream(&stream, parameter_source_bytes(&reverse))
         .unwrap();
     assert_eq!(output.to_bytes().unwrap(), document.to_bytes().unwrap());
+}
+
+fn assert_parameter_archives_equal(actual: &ModelParameterSource, expected: &ModelParameterSource) {
+    assert_eq!(
+        parameter_source_fields(actual),
+        parameter_source_fields(expected)
+    );
+    assert_eq!(
+        parameter_source_bytes(actual),
+        parameter_source_bytes(expected)
+    );
+}
+
+fn primary_output_document(
+    document: &Document,
+    stream: &str,
+    replacement: Vec<u8>,
+) -> (Document, Document) {
+    let mut output = document.clone();
+    output.replace_stream(stream, replacement).unwrap();
+    let reopened = Document::from_bytes(&output.to_bytes().unwrap()).unwrap();
+    unselected_document_streams::assert_unselected_document_streams(document, &reopened, stream);
+    (output, reopened)
 }
 
 #[test]

@@ -1,0 +1,43 @@
+{
+  "issue": 203,
+  "kind": "Bug",
+  "cause": "Size verification read the test file before the formatter process completed",
+  "affected_original_source_revision": "f3daadda",
+  "original_noncomment_body_lines": {
+    "read_parameter_document": 25,
+    "assert_native_primary_operation": 22,
+    "assert_document_primary_reversal": 25
+  },
+  "correction": "Split test helpers by responsibility; await formatter completion, then assert every formatted function body<=20 and file<500 lines before building tests",
+  "runtime_behavior_changed": false,
+  "first_native_regression_passed": 1,
+  "first_native_regression_failed": 0,
+  "regression_seconds": 0.45,
+  "post_format_counts": {
+    "first_native_rows": 17,
+    "read_parameter_document": 1,
+    "read_parameter_context": 17,
+    "read_parameter_features": 8,
+    "read_parameter_configuration": 8,
+    "parameter_source_bytes": 4,
+    "parameter_source_fields": 4,
+    "parameter_at": 9,
+    "edit_native_primary": 15,
+    "assert_primary_history": 6,
+    "native_parameter_stream": 5,
+    "assert_native_primary_operation": 17,
+    "first_primary_expected": 7,
+    "assert_document_primary_reversal": 14,
+    "assert_parameter_archives_equal": 8,
+    "primary_output_document": 5,
+    "first_native_parameter_edits_match_original_spans_reopen_and_reverse_complete_documents": 11
+  },
+  "logs_sha256": {
+    "native-parameter-primary-post-format-sizes.log": "ccf27fa144f41639b788ed6b75a3b5e357c5c434043835b5a5e96e65c141693f",
+    "native-parameter-primary-refactor-build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native-parameter-primary-refactor-tests.log": "5b66d935d10006293918b931693693965684df2a3ea03d54fb79787fbd0e8516",
+    "native-parameter-primary-refactor-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "scope": "Internal test/refinement verification; no package version, runtime API, wire behavior or dependency change",
+  "clippy_exit_code": 0
+}

@@ -185,7 +185,12 @@ edited documents reopen through the public archive readers, preserve all
 unrelated streams and reverse through fresh typed states to the original file
 bytes. Input isolation and one-parent changed-field history also pass. The
 native test completed in 0.41 seconds; Clippy with warnings denied, formatting
-and function/file size checks passed. `native-first-edit-verification.json`
+passed. The initial function-size check ran before formatting completed and
+missed three oversized test helpers. Bug #203 split those helpers and reran
+the unchanged native test successfully in 0.45 seconds, then verified every
+formatted body and file against the limits. `size-audit-correction.json` retains
+the correction and original scope; the earlier size claim is superseded.
+`native-first-edit-verification.json`
 records the input hash, source snapshot, commands' log hashes and exclusions.
 
 Regenerate the oracle with:
