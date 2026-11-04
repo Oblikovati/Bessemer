@@ -1,4 +1,4 @@
-//! Composer's UTF-8 facade reuses the metadata grammar, namespace and lexical edit engine.
+//! UTF-8 facade over the shared metadata grammar, namespace and lexical edit engine.
 use super::{
     ExpandedName, XmlAttribute, XmlLimits, encoding, invalid, model, reader, types::XmlModel,
 };
@@ -6,7 +6,7 @@ use crate::Result;
 use std::sync::Arc;
 
 #[derive(Debug, Clone)]
-pub(crate) struct ComposerXmlDocument {
+pub(crate) struct Utf8XmlDocument {
     original: Arc<[u8]>,
     text: Arc<str>,
     model: Arc<XmlModel>,
@@ -14,7 +14,7 @@ pub(crate) struct ComposerXmlDocument {
     bom: bool,
 }
 
-impl ComposerXmlDocument {
+impl Utf8XmlDocument {
     pub(crate) fn from_bytes(bytes: &[u8], limits: XmlLimits) -> Result<Self> {
         let (text, bom) = decode_utf8(bytes, limits)?;
         let parsed = parse_model(text, bytes.len(), limits)?;

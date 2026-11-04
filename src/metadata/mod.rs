@@ -1,6 +1,5 @@
 //! Lossless, namespace-aware SolidWorks XML metadata with immutable revision-scoped edits.
 mod attributes;
-mod composer;
 mod declaration;
 mod edit;
 mod encoding;
@@ -13,10 +12,10 @@ mod properties;
 mod reader;
 mod stream;
 mod types;
+mod utf8;
 mod views;
 
 use crate::{BessemerError, FailureClass, Result, archive_codec::PreservedContents};
-pub(crate) use composer::ComposerXmlDocument;
 pub(crate) use inspection::validate as validate_inspection_xml;
 pub use properties::{MetadataProperty, PropertySection, PropertyValue, PropertyValueKind};
 use std::sync::Arc;
@@ -25,6 +24,7 @@ use types::XmlModel;
 pub use types::{
     ExpandedName, XmlAttribute, XmlElementId, XmlEncoding, XmlFormat, XmlLimits, XmlSource,
 };
+pub(crate) use utf8::Utf8XmlDocument as ComposerXmlDocument;
 pub use views::XmlElementRef;
 
 /// Immutable source plus a complete flat element/attribute model; reads take no lock.
