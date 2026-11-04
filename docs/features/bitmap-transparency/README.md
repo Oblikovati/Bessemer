@@ -8,8 +8,7 @@ The saved has-transparency setting (`raw_70`), level parameter (`raw_60`)
 and type selector (`raw_6c`) each retain their full signed i32 value.
 Their observed zero values do not establish a Boolean, percentage, unit,
 range or closed enum. Runtime cache `7C` is not serialized. The typed
-stored-setting interface is implemented; actual-output Source replay,
-ThreadSanitizer, full Cargo and publication acceptance remain pending.
+stored-setting interface is implemented; ThreadSanitizer and exact-head remote publication acceptance remain pending.
 
 The existing complete bitmap grammar already preserves these words.
 Preparation matched all 15 direct publication pins. Independent byte
@@ -54,8 +53,8 @@ These probes establish the generic API baseline; typed API evidence follows.
 Temporary Rust probes were removed after retaining
 measurements and artifact hashes.
 
-Remaining acceptance includes both actual-output Source replays,
-ThreadSanitizer, the full local Cargo gate and exact-head publication gates.
+Remaining acceptance includes ThreadSanitizer and exact-head remote
+publication gates.
 Raw64, raw68, raw80, pixel payloads and transforms stay outside the setting
 roles. Native classification, image decoding and rendering are separate
 operations. No native code executed during these checks.
@@ -79,8 +78,8 @@ per process, including complete reopen, every typed field, unrelated stream
 order and bytes, and exact restoration of the original container. Two fresh
 processes using the final executable passed. Their 39,474-operation wire
 exports match each other and the initial run byte for byte; independent
-literal checks accepted all 35,088 changes and 4,386 no-ops. Actual-output
-Source replay remains in progress.
+literal checks accepted all 35,088 changes and 4,386 no-ops. Both actual-output
+Source replays passed all 39,474 outputs per process.
 
 Native typed tests use the existing 906-case BRF1 packet and four independently
 pinned span rows. The first archive matrix passed all 108 requests. Its
@@ -102,9 +101,15 @@ fidelity, diagnostics, resolved history and typed errors. Source and parent
 configuration inputs stayed unchanged. Wire exports and compressed full
 traces match byte for byte between processes. Independent literal patches
 accepted all 5,117 exported roots, and trace framing/EOF checks passed.
-ThreadSanitizer and full Cargo/exact-head publication gates remain pending.
+ThreadSanitizer and exact-head remote publication gates remain pending.
 
 The final standalone normal suite passed seven tests in 35.31 seconds; its
 two native tests were ignored there and executed explicitly above. Both
-actual-output Source replays are running against separate immutable copies.
+actual-output Source replays passed against separate immutable copies, with
+all 168 consumed modules unchanged. Complete graph/map/f64 bits, aliases,
+spans, EOF and accounting signatures matched independent expected results.
 The humanizer skill is unavailable in this session; prose review is pending.
+
+The full Windows local gate passed at `45811c3`: 3935 tests passed,
+206 were ignored, and formatting, Clippy, build and doctest checks
+completed. Explicit native and Source gates remain separately recorded.
