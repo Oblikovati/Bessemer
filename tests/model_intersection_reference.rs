@@ -2,6 +2,8 @@
 use bessemer::Document;
 use bessemer::header::ArchiveVersion;
 use bessemer::model_archives::*;
+#[path = "model_intersection_reference/classification.rs"]
+mod classification;
 #[path = "model_intersection_reference/concurrency.rs"]
 mod concurrency;
 #[path = "model_intersection_reference/contracts.rs"]

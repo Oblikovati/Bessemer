@@ -26,6 +26,22 @@ fn edited_reference_fields(
 }
 
 impl PartResolvedFeaturesArchive {
+    /// Replaces the stored selector while preserving signed siblings and references; e.g. `source.edit_intersection_reference_classification(&reference, 3)?;`.
+    pub fn edit_intersection_reference_classification(
+        &self,
+        reference: &ModelIntersectionReferenceStoredState,
+        selector: u16,
+    ) -> Result<PartResolvedFeaturesEdit> {
+        let leading = &reference.source_fields[0];
+        self.resolve_field(leading)?;
+        let mut fields = self.fields().to_vec();
+        let field = fields
+            .get_mut(leading.index())
+            .ok_or_else(|| reference_error(&reference.path, leading.index()))?;
+        field.value = ModelFieldValue::U16(selector);
+        self.edit_fields(fields)
+    }
+
     /// Enumerates physical ordinary sketch references in wire order; e.g. `let references = source.intersection_reference_states()?;`.
     /// A complete archive without records returns an empty vector.
     pub fn intersection_reference_states(

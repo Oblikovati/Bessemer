@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added revision-bound stored intersection classification-selector access and isolated u16 edits while preserving signed siblings and object references. (#185)
+
 - Added revision-bound intersection-reference span and backward-offset views with isolated signed-word edits in complete ordinary part resolved-feature archives. (#184)
 
 - Added revision-bound stored entity visual-role projections and isolated value edits for complete part/assembly configuration, resolved part feature, display and drawing-bucket archives. (#181)

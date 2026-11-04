@@ -141,8 +141,10 @@ identifier from direct or nested dimension bases. Isolated stored-value edits
 preserve raw mask bits, other fields and the existing complete archive history.
 The [stored intersection-reference API](docs/features/intersection-reference-match/api.md)
 projects signed span-count and backward-offset states from complete ordinary
-part resolved-feature archives. Revision-bound edits preserve the uninterpreted
-state/raw20 words, references and all other fields, with complete archive history.
+part resolved-feature archives. Revision-bound span/offset edits preserve the
+saved selector, raw20, references and all other fields, with complete history.
+The [classification-selector API](docs/features/intersection-index-classification/api.md)
+also reads and edits the saved u16 selector without evaluating native matching.
 The [assembly configuration API](docs/features/assembly-configurations/README.md)
 reads, constructs, edits and writes complete ordinary assembly and routing
 configurations. All 180 reference-readable modern configurations reconstruct

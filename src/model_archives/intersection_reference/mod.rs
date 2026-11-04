@@ -12,7 +12,7 @@ use std::sync::Arc;
 /// Exact stored words in one physical ordinary intersection-edge reference.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub struct ModelIntersectionReferenceStoredWords {
-    /// Uninterpreted state word; no enum or active-state restriction is imposed.
+    /// Stored classification selector; no geometry enum or active-state restriction is imposed.
     pub raw_state: u16,
     /// Raw word20; a complete loaded coedge-ordinal role remains unproven.
     pub raw_word_20: i32,
@@ -47,6 +47,11 @@ pub struct ModelIntersectionReferenceStoredState {
 }
 
 impl ModelIntersectionReferenceStoredState {
+    /// Copies the saved selector without native matching; e.g. `let selector = reference.classification_selector();`.
+    pub fn classification_selector(&self) -> u16 {
+        self.words.raw_state
+    }
+
     /// Copies every raw word without resolving topology; e.g. `let raw = reference.words();`.
     pub fn words(&self) -> ModelIntersectionReferenceStoredWords {
         self.words
