@@ -827,3 +827,5 @@ integer arithmetic; alpha is ignored. The outcome retains the original color
 and either a packed value or a typed channel/domain exclusion. Nonfinite,
 nonzero subnormal and overflowing/out-of-range RGB inputs produce no packed
 value under this model.
+
+Canonical stored sketch-reference configuration keys are available through `sketch_reference_lookup_states()` and `edit_sketch_reference_lookup_keys()`. These operations preserve full signed object/record keys without runtime lookup or STORE-time sentinel projection. See [the feature contract](docs/features/sketch-reference-configuration-keys/README.md).

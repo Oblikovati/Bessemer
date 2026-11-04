@@ -38,6 +38,8 @@
 
 ### Added
 
+- Added revision-owned canonical sketch-reference configuration lookup key views and isolated or paired signed-key edits. (#188)
+
 - Added revision-bound stored intersection classification-selector and edge-index access with isolated u16/i32 edits preserving siblings and object references. (#185)
 
 - Added revision-bound intersection-reference span and backward-offset views with isolated signed-word edits in complete ordinary part resolved-feature archives. (#184)

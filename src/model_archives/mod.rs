@@ -350,6 +350,12 @@ fn model_failure(mut error: BessemerError) -> BessemerError {
 
 mod entity_visual_state;
 pub use entity_visual_state::ModelEntityVisualStoredState;
+mod sketch_reference_lookup;
+pub use sketch_reference_lookup::{
+    ModelSketchReferenceStoredLookupEdit, ModelSketchReferenceStoredLookupKeys,
+    ModelSketchReferenceStoredLookupState,
+};
+
 mod intersection_reference;
 pub use intersection_reference::{
     ModelIntersectionEdgeStoredIndex, ModelIntersectionReferenceStoredEdit,
