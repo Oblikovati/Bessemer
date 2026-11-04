@@ -2,8 +2,7 @@
 
 Feature [#190](https://github.com/Oblikovati/Bessemer/issues/190) tracks
 published section 11.1661 / C-3345. `BitmapResourceArray` now reads complete logical arrays, constructs independent
-arrays and publishes isolated payload edits. Full operation acceptance and
-publication remain open. The stream still comes from `Document`; the new
+arrays and publishes isolated payload edits. Local operation gates passed; publication remains open. The stream still comes from `Document`; the new
 codec interprets only its logical count and opaque payload.
 
 The logical body is a compact 16/32 count followed by exactly that many raw
@@ -64,18 +63,24 @@ missing-versus-empty behavior and all 1,513,405 proper-prefix rejections.
 Every published type compiles as Send+Sync. The native gate passed five
 payload forms in each original resource, including shrinkage below the
 short-count boundary, complete document reopen and exact whole-container
-reversal. Fresh-process and concurrency results are retained below. Full
-local and remote gates remain pending. No dependency or version was changed.
+reversal. Fresh-process and concurrency results are retained below. The full local gate is recorded below;
+remote gates remain pending. No dependency or version was changed.
 
 Two fresh Rust processes passed all nine focused tests, including the native
 container gate and eight-worker byte comparison. Both exported the same
 120 actual edited arrays for independent Source-reader acceptance. The
 [operation record](rust-operation-verification.json) retains the exact source
-and executable hashes. The full local and remote gates remain pending.
+and executable hashes. The full local gate is recorded below; remote gates remain pending.
 
 Original frozen Source readers accepted all 120 actual exports through EOF
 without adding an MFC map slot. The [actual-output record](actual-output-source-verification.json)
 and [snapshot](fixture-reference-snapshot.json) retain the packet digest
 and import/hash guards. The first full local gate rejected seven missing
 public enum-variant docstrings. Those descriptions were added, and the
-complete gate is running again.
+subsequent complete gate passed.
+
+The [full local gate](full-local-gate-verification.json) passed 3,964 tests
+with zero failures and 217 explicit exclusions across 316 summaries.
+The process exited successfully. Its Rust, test, Cargo and CI content matches
+the locally integrated feature commit. Exact-head remote platform and
+ThreadSanitizer checks remain required after the current PR is merged.
