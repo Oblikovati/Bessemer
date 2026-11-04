@@ -1,6 +1,8 @@
 //! Pin complete equation field storage and document edits before role projections (#199).
 #[path = "support/owned_resolved_document.rs"]
 mod owned_resolved_document;
+#[path = "support/owned_saved_manager_document.rs"]
+mod owned_saved_manager_document;
 #[path = "support/unselected_document_streams.rs"]
 mod unselected_document_streams;
 use bessemer::Document;
@@ -151,12 +153,8 @@ fn assert_reopened_equation_document(
 }
 
 fn equation_fixture_document(raw: &[u8]) -> Document {
-    let mut document = prepared_owned_resolved_document(raw);
-    document
-        .replace_stream(
-            "Contents/CMgr",
-            include_bytes!("fixtures/sheet-metal/manager-0.bin").to_vec(),
-        )
-        .unwrap();
-    Document::from_bytes(&document.to_bytes().unwrap()).unwrap()
+    owned_saved_manager_document::prepared_saved_manager_document(raw)
 }
+
+#[path = "model_spline_equation_state/typed.rs"]
+mod typed;

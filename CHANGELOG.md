@@ -44,6 +44,8 @@
 
 ### Added
 
+- Added physical spline equation stored-state views and exact lock, signed-option and CString edits with retained source provenance. (#199)
+
 - Added explicit caller-supplied Inspection source size/checksum comparisons with exact stored text, complete byte coverage and unchanged document provenance. (#195)
 
 - Added ordered standalone Inspection record views, selected DOM input projections and isolated existing-attribute edits with revision-bound identities and complete record provenance. (#193)

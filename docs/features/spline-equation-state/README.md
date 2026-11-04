@@ -1,9 +1,13 @@
 # Stored spline equation state (#199)
 
-The current codec preserves equation fields but does not expose their documented
-stored roles together. Feature #199 will add a complete archive/document
-read-edit-reopen operation over those fields. The original equation runtime and
-geometry work in #2 and #54 remains open.
+Feature #199 adds `spline_equation_states`, `spline_equation_state` and
+`edit_spline_equation` to the complete resolved-feature archive. They expose the
+six saved string roles, full signed option and selected endpoint-lock masks with
+an immutable source snapshot, copied field history, completion, exact stored
+coverage, achieved stored-value error and semantic exclusions. The first complete
+typed lock edit matches the independent Source golden, reopens the whole document
+and reverses it byte-for-byte. Broader acceptance remains in progress. The
+original equation runtime and geometry work in #2 and #54 remains open.
 
 ## Wire roles and decision
 
@@ -67,9 +71,9 @@ lock edits, reopened complete documents and reversed them byte-for-byte. The
 owned documents require the saved-manager context used by the Source generator;
 the earlier blank-manager failure is retained rather than hidden.
 
-These fixtures pin existing behavior before the new role API. The public
-stored-state projection, complete acceptance matrix and publication gates remain
-unfinished. No new runtime or geometry coverage is claimed.
+These fixtures pin existing behavior before the new role API. The first typed
+projection and edit operation is implemented; the complete acceptance matrix and
+publication gates remain unfinished. No new runtime or geometry coverage is claimed.
 
 Reproduce the owned baseline without changing its files:
 

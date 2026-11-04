@@ -371,3 +371,9 @@ pub use intersection_reference::{
     ModelIntersectionEdgeStoredIndex, ModelIntersectionReferenceStoredEdit,
     ModelIntersectionReferenceStoredState, ModelIntersectionReferenceStoredWords,
 };
+
+mod spline_equation_state;
+pub use spline_equation_state::{
+    ModelSplineEquationDiagnostic, ModelSplineEquationFieldCopy, ModelSplineEquationStoredEdit,
+    ModelSplineEquationStoredState, ModelSplineEquationTextRole,
+};

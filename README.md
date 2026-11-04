@@ -361,6 +361,10 @@ body-feature layouts, cached-array branches and versioned kernel-body lists.
 retain exact native spellings, shared direct blend data and raw surface bytes.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
+[Stored spline equation state](docs/features/spline-equation-state/README.md)
+exposes the six saved string roles, full signed option and equation-path endpoint
+lock bits. Typed edits preserve unrelated stored fields and use complete archive
+validation; they do not run the native equation setter or evaluate expressions.
 
 
 This library is named after Sir Henry Bessemer (1813–1898) an English engineer, inventor, and entrepreneur 
