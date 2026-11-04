@@ -278,3 +278,17 @@ also fails without changing source bytes, projected values or valid handles.
 cover byte and field caps. An additional entry-cap check accepts exactly 4,097
 roots and rejects a cap of 4,096 across all 26 complete graphs, preserving one
 physical parameter per graph. Other resource dimensions retain separate tests.
+
+## Cross-parameter edit isolation
+
+An additional owned graph contains all six physical parameter classes in wire
+order. Original Source readers accepted that graph and six complete expected
+images, each changing one primary value. Every other parameter's identity,
+names, primary, alternate and presence remained unchanged.
+
+Bessemer matched all six complete expected streams, reopened each complete
+document, and reversed each edit from a fresh typed snapshot to the original
+file bytes. All 21 focused tests passed. The frozen source snapshot and
+`multiple-verification.json` record the acceptance scope; a fresh strict
+regeneration run is active. This does not extend native population, version or
+geometry acceptance.

@@ -75,6 +75,8 @@ mod ownership;
 mod read;
 #[path = "model_stored_parameters/rejections.rs"]
 mod rejections;
+#[path = "model_stored_parameters/multiple.rs"]
+mod multiple;
 
 fn primary_request(kind: usize) -> ModelParameterStoredEdit {
     ModelParameterStoredEdit::Primary(edited_value(kind))
