@@ -3,9 +3,9 @@ use crate::Document;
 use crate::model_archives::ConfigurationId;
 
 #[path = "../support/unselected_document_streams.rs"]
-mod unselected_document_streams;
+pub(super) mod unselected_document_streams;
 
-fn native_reference_document_source(
+pub(super) fn native_reference_document_source(
     document: &Document,
     case: &ResolvedCorpusCase<'_>,
     kernel: Option<CompressedKernelContext>,

@@ -1,7 +1,7 @@
 use super::*;
 use crate::model_archives::{ModelEditCheckMode, ModelEditFidelity, ModelFieldHandle, ModelFieldRelation, PartResolvedFeaturesEdit};
 
-fn native_index_oracles(index: u32) -> Vec<(usize, i32)> {
+pub(super) fn native_index_oracles(index: u32) -> Vec<(usize, i32)> {
     let raw = std::fs::read("target/intersection-role-native-index-spans.bin").unwrap();
     let mut cursor = ArchiveCursor::new(&raw);
     assert_eq!(cursor.take(4).unwrap(), b"BRX1");
@@ -20,7 +20,7 @@ fn native_index_oracles(index: u32) -> Vec<(usize, i32)> {
     selected.unwrap()
 }
 
-fn verify_native_role_payload(
+pub(super) fn verify_native_role_payload(
     source: &PartResolvedFeaturesArchive,
     raw: &[u8],
     parent: &ModelFieldHandle,

@@ -47,8 +47,10 @@ both late-field edits in the complete 16,384-edge owner, including full
 document reopen and exact reversal. Native archive operations passed all
 68 selectors and 17 indices across the eight complete streams in two fresh
 processes, with literal patches, complete fields and exact history checked.
-Selector output replay and native document/concurrency/publication gates
-remain pending.
+Both native document processes also passed all 85 forward edits and typed
+reversals, preserving unrelated streams and restoring the entire original
+files byte for byte. The second selector output replay and the remaining
+concurrency/publication gates are pending.
 
 Implementation must reuse the complete archive readers and revision-owned
 edit/history contracts. Require independent complete roots and literal
