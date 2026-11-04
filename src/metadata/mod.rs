@@ -8,6 +8,7 @@ mod inspection;
 mod lexical;
 mod model;
 mod namespaces;
+mod ordered;
 mod properties;
 mod reader;
 mod stream;
@@ -17,6 +18,7 @@ mod views;
 
 use crate::{BessemerError, FailureClass, Result, archive_codec::PreservedContents};
 pub(crate) use inspection::validate as validate_inspection_xml;
+pub(crate) use ordered::OrderedXmlView;
 pub use properties::{MetadataProperty, PropertySection, PropertyValue, PropertyValueKind};
 use std::sync::Arc;
 pub use stream::{MetadataFamily, MetadataStream};
@@ -227,3 +229,7 @@ fn missing(cause: impl Into<String>) -> BessemerError {
         cause,
     )
 }
+
+#[cfg(test)]
+#[path = "../../tests/metadata_ordered_capture.rs"]
+mod ordered_capture_tests;

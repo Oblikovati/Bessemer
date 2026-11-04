@@ -13,10 +13,13 @@ projection of an existing envelope, not a relationship writer or graph validator
 publication. Extend that builder rather than parsing the same XML again.
 `XmlModel` currently keeps element children and concatenated direct text, which
 cannot represent `a<child>b</child>c` as descendant text `abc`. It also drops
-comments and processing instructions. Add an operation-local ordered content
+comments and processing instructions. Use an optional operation-local ordered content
 representation containing child-element references, decoded text, comments and
-processing instructions. Retain the original qualified element spelling beside
-the existing expanded name. Expanded namespace matching used by other consumers
+processing instructions. Retain original qualified element spellings in that
+optional representation. Default validation and Composer parsing omit it;
+Inspection record indexing requests it explicitly. A checked ordered view is
+required at the relationship projection boundary. This separation follows the
+retained read-cost measurement and restores the original element record layout. Expanded namespace matching used by other consumers
 must remain unchanged.
 
 Text and general-reference events can form one DOM text node. Coalesce adjacent

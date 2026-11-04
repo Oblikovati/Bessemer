@@ -1,0 +1,27 @@
+{
+  "issue": 197,
+  "change": "Behavior-preserving opt-in ordered-content storage after measured cost review",
+  "prior_whole_gate": "Stopped deliberately after passing lint/build; incomplete, not a test pass. The storage implementation was being replaced.",
+  "prior_gate_log_sha256": "ecd62173948d093d404d2a3031abeb2335b3f80205f337533577e55683caab0c",
+  "targeted_parser_tests_passed": 2,
+  "capture_boundary": "Default facade, validation and Composer parsing leave XmlModel ordered data absent. InspectionRecords requests ordered capture explicitly; projection requires a checked ordered view.",
+  "fresh_processes": 2,
+  "tests_passed_per_process": 13,
+  "failed": 0,
+  "packet_bytes": 381601,
+  "packet_sha256": "3c4706cb9e8604c65b397d8b51360af85b97fff995e1f5a561e31fae87e65aa0",
+  "packets_unchanged_from_original_source_verified_results": true,
+  "regressions_passed": {
+    "xml_metadata": 8,
+    "composer_containers": 7,
+    "composer_links": 10,
+    "composer_references": 8
+  },
+  "existing_composer_reference_exclusions": 1,
+  "function_and_file_size_audit_passed": true,
+  "remaining": [
+    "Repeat matched cost measurement",
+    "All-target lint and complete repository gate on optimized source",
+    "Exact-head remote integration"
+  ]
+}

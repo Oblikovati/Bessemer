@@ -1,7 +1,10 @@
 use super::{
     XmlAttribute, XmlLimits, attributes, declaration, encoding, grammar, invalid,
     namespaces::{NamePool, NamespaceScope, ParsedAttribute, qualified},
-    types::{AttributeRecord, ElementRecord, XmlContent, XmlMetrics, XmlModel},
+    types::{
+        AttributeRecord, ElementRecord, XmlContent, XmlContentMode, XmlMetrics, XmlModel,
+        XmlOrderedContent,
+    },
     unsupported,
 };
 use crate::Result;
@@ -25,10 +28,18 @@ struct XmlBuilder<'a> {
 }
 
 pub(super) fn parse_document(source: &str, limits: XmlLimits) -> Result<XmlModel> {
+    parse_document_in_mode(source, limits, XmlContentMode::Elements)
+}
+
+pub(super) fn parse_document_in_mode(
+    source: &str,
+    limits: XmlLimits,
+    mode: XmlContentMode,
+) -> Result<XmlModel> {
     grammar::check_characters(source)?;
     let mut reader = Reader::from_str(source);
     reader.config_mut().enable_all_checks(true);
-    let mut builder = XmlBuilder::new(source, limits)?;
+    let mut builder = XmlBuilder::new(source, limits, mode)?;
     loop {
         let start = reader.buffer_position() as usize;
         let event = reader.read_event().map_err(|error| {
@@ -45,9 +56,10 @@ pub(super) fn parse_document(source: &str, limits: XmlLimits) -> Result<XmlModel
 }
 
 impl<'a> XmlBuilder<'a> {
-    fn new(source: &'a str, limits: XmlLimits) -> Result<Self> {
+    fn new(source: &'a str, limits: XmlLimits, mode: XmlContentMode) -> Result<Self> {
         encoding::require_size(1, limits.maximum_nodes as usize, "XML document frame")?;
         let model = XmlModel {
+            ordered: matches!(mode, XmlContentMode::Ordered).then(XmlOrderedContent::default),
             metrics: XmlMetrics {
                 nodes: 1,
                 ..XmlMetrics::default()
@@ -119,9 +131,8 @@ impl<'a> XmlBuilder<'a> {
         let declared = self.scope.push(&parsed, &mut self.pool)?;
         let name = self.scope.resolve(&name, true)?;
         let attributes = self.resolve_attributes(parsed)?;
-        let qualified_name = Arc::from(start.name().as_ref());
         let ordinal = self.publish_element(name, attributes, span, depth);
-        self.model.elements[ordinal].qualified_name = qualified_name;
+        self.retain_opened_element(&start);
         if empty {
             self.scope.pop(declared);
         } else {
@@ -150,8 +161,6 @@ impl<'a> XmlBuilder<'a> {
         let parent = self.stack.last().map(|frame| frame.ordinal);
         let ordinal = self.model.elements.len();
         self.model.elements.push(ElementRecord {
-            qualified_name: Arc::from(""),
-            content: Vec::new(),
             name,
             attributes,
             parent,
@@ -161,9 +170,6 @@ impl<'a> XmlBuilder<'a> {
         });
         if let Some(parent) = parent {
             self.model.elements[parent].children.push(ordinal);
-            self.model.elements[parent]
-                .content
-                .push(XmlContent::Element(ordinal));
         }
         self.model.metrics.depth = self.model.metrics.depth.max(depth);
         ordinal
@@ -246,9 +252,26 @@ impl<'a> XmlBuilder<'a> {
         Ok(())
     }
 
+    fn retain_opened_element(&mut self, start: &BytesStart<'_>) {
+        let Some(ordered) = self.model.ordered.as_mut() else {
+            return;
+        };
+        let ordinal = ordered.content.len();
+        ordered
+            .qualified_names
+            .push(Arc::from(start.name().as_ref()));
+        ordered.content.push(Vec::new());
+        if let Some(parent) = self.stack.last() {
+            ordered.content[parent.ordinal].push(XmlContent::Element(ordinal));
+        }
+    }
+
     fn retain_content(&mut self, content: XmlContent) {
+        let Some(ordered) = self.model.ordered.as_mut() else {
+            return;
+        };
         if let Some(frame) = self.stack.last() {
-            self.model.elements[frame.ordinal].content.push(content);
+            ordered.content[frame.ordinal].push(content);
         }
     }
 
@@ -259,7 +282,10 @@ impl<'a> XmlBuilder<'a> {
         let Some(frame) = self.stack.last() else {
             return;
         };
-        let content = &mut self.model.elements[frame.ordinal].content;
+        let Some(ordered) = self.model.ordered.as_mut() else {
+            return;
+        };
+        let content = &mut ordered.content[frame.ordinal];
         if let Some(XmlContent::Text(text)) = content.last_mut() {
             text.push_str(value);
             return;

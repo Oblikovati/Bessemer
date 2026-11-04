@@ -1,10 +1,10 @@
 use super::*;
 use crate::archive_codec::ArchiveRevision;
-use crate::metadata::{Utf8XmlDocument, XmlContent};
+use crate::metadata::{OrderedXmlView, XmlContent};
 use std::collections::BTreeSet;
 
 pub(super) fn attempts(
-    xml: &Utf8XmlDocument,
+    xml: &OrderedXmlView<'_>,
     revision: &ArchiveRevision,
     sheet: usize,
     policy: InspectionRelationshipPolicy,
@@ -28,7 +28,7 @@ pub(super) fn attempts(
 }
 
 fn make_attempt(
-    xml: &Utf8XmlDocument,
+    xml: &OrderedXmlView<'_>,
     revision: &ArchiveRevision,
     container: usize,
     content_index: usize,
@@ -65,7 +65,7 @@ fn node_kind(content: &XmlContent) -> InspectionRelationshipNodeKind {
     }
 }
 
-fn entry_fields(xml: &Utf8XmlDocument, element: usize) -> (Arc<str>, Vec<Arc<str>>) {
+fn entry_fields(xml: &OrderedXmlView<'_>, element: usize) -> (Arc<str>, Vec<Arc<str>>) {
     let mut key = Arc::from("");
     let mut values = Vec::new();
     for child in xml.children(element) {
@@ -82,7 +82,7 @@ fn entry_fields(xml: &Utf8XmlDocument, element: usize) -> (Arc<str>, Vec<Arc<str
     (key, values)
 }
 
-fn append_values(xml: &Utf8XmlDocument, field: usize, values: &mut Vec<Arc<str>>) {
+fn append_values(xml: &OrderedXmlView<'_>, field: usize, values: &mut Vec<Arc<str>>) {
     if let Some(array) = first_child(xml, field, "ArrayOfString") {
         values.extend(
             xml.children(array)
@@ -92,7 +92,7 @@ fn append_values(xml: &Utf8XmlDocument, field: usize, values: &mut Vec<Arc<str>>
     }
 }
 
-fn first_child(xml: &Utf8XmlDocument, parent: usize, name: &str) -> Option<usize> {
+fn first_child(xml: &OrderedXmlView<'_>, parent: usize, name: &str) -> Option<usize> {
     xml.children(parent)
         .iter()
         .copied()

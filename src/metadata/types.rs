@@ -85,8 +85,6 @@ pub(super) struct AttributeRecord {
 
 #[derive(Debug)]
 pub(super) struct ElementRecord {
-    pub qualified_name: Arc<str>,
-    pub content: Vec<XmlContent>,
     pub name: ExpandedName,
     pub attributes: Vec<AttributeRecord>,
     pub parent: Option<usize>,
@@ -115,6 +113,19 @@ pub(super) struct XmlMetrics {
 
 #[derive(Debug, Default)]
 pub(super) struct XmlModel {
+    pub ordered: Option<XmlOrderedContent>,
     pub elements: Vec<ElementRecord>,
     pub metrics: XmlMetrics,
+}
+
+#[derive(Debug, Clone, Copy)]
+pub(super) enum XmlContentMode {
+    Elements,
+    Ordered,
+}
+
+#[derive(Debug, Default)]
+pub(super) struct XmlOrderedContent {
+    pub qualified_names: Vec<Arc<str>>,
+    pub content: Vec<Vec<XmlContent>>,
 }

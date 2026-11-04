@@ -16,6 +16,13 @@ Eight workers matched 384 mixed-policy results against serial results. The
 focused metadata and Composer regressions passed 33 tests, retaining one existing
 exclusion. The full repository and publication gates remain required.
 
+A matched local probe found additional read time and memory use in the first
+storage implementation. Ordered capture is now opt-in at the shared-parser
+boundary: validation and Composer keep the lightweight element model, while
+Inspection record indexing requests the content needed by relationships. The
+complete result packets remain unchanged. The optimized implementation still
+needs a repeated cost measurement and complete repository validation.
+
 The selected native helper distinguishes ordered insertion attempts, insertion
 into an initially empty map, and the writer's empty-key filter. A retained text,
 comment or processing-instruction node can insert an empty key before a later

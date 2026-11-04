@@ -33,7 +33,7 @@ pub struct InspectionRecords {
 impl InspectionRecords {
     /// Index an already validated envelope; e.g. `InspectionRecords::from_envelope(&envelope)?`.
     pub fn from_envelope(envelope: &InspectionEnvelope) -> Result<Self> {
-        let xml = Utf8XmlDocument::from_bytes_for(
+        let xml = Utf8XmlDocument::from_bytes_ordered(
             envelope.xml_bytes(),
             envelope.limits,
             "Inspection XML",

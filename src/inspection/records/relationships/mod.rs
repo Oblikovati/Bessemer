@@ -13,7 +13,8 @@ impl InspectionRecords {
         policy: InspectionRelationshipPolicy,
     ) -> Result<InspectionRelationshipViews> {
         self.require_relationship_sheet(sheet)?;
-        let attempts = projection::attempts(&self.xml, &self.revision, sheet.ordinal, policy);
+        let xml = self.relationship_xml()?;
+        let attempts = projection::attempts(&xml, &self.revision, sheet.ordinal, policy);
         let entries = projection::first_insertions(&attempts);
         let writer_entries = entries
             .iter()
@@ -28,6 +29,15 @@ impl InspectionRecords {
             entries,
             writer_entries,
         ))
+    }
+
+    fn relationship_xml(&self) -> Result<crate::metadata::OrderedXmlView<'_>> {
+        self.xml.ordered_view().ok_or_else(|| {
+            record_error(
+                FailureClass::Missing,
+                "ordered XML capture absent; expected complete relationship traversal".to_owned(),
+            )
+        })
     }
 
     fn require_relationship_sheet(&self, sheet: &InspectionRecordId) -> Result<()> {
