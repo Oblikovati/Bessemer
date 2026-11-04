@@ -32,3 +32,12 @@ load-time expression evaluation, declared-character filtering, compatibility
 word replacement or matrix application. Frames, expression grammar, geometry
 and native workflow equivalence remain separate. No behavior version or
 expected fixture was changed.
+
+The [qualified runtime audit](qualified-runtime-schema-audit.json) records eight
+selected clauses through edition 0.3011. They refine parser output quantities,
+candidate construction, integer wrapping, matrix composition and mutable runtime
+budgets without adding stored fields. Those runtime operations remain
+unimplemented. The 100-sample check is not exact geometry validation, and the
+coefficient-basis R*T composition does not define how to apply the archived
+transform. The existing wire decoder is unchanged; no native execution,
+behavior-version change or coverage gain is claimed.
