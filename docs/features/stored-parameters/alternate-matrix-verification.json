@@ -1,0 +1,41 @@
+{
+  "issue": 202,
+  "status": "Complete owned alternate/presence matrix passed independent original Source and typed document operations; strict replay is active",
+  "native_positive_alternate_population": 0,
+  "owned_graphs": 15,
+  "alternate_value_edits": 15,
+  "nonzero_presence_requests": 3825,
+  "total_cases": 3840,
+  "independent_source_tests_passed": 1,
+  "source_initial_process_exit_code": 0,
+  "source_initial_unittest_seconds": 400.031,
+  "fixture_bytes": 999269,
+  "fixture_sha256": "c84c0f9844d6c2eca759bfbc442ec90ae3fa0149cbd982d2a904fca536722eb2",
+  "typed_integration_tests_passed": 14,
+  "typed_integration_tests_failed": 0,
+  "typed_test_seconds": 35.43,
+  "whole_owned_document_reopens_and_typed_reversals": 3840,
+  "noops_kept_distinct_from_changes": true,
+  "all_unselected_streams_preserved": true,
+  "input_isolation": true,
+  "clippy_exit_code": 0,
+  "post_format_function_file_sizes_exit_code": 0,
+  "source_snapshot_identity": "d1c7789f9ea87e5608dac33cae1d89c118996005c167a7dbe88217d242d85ca0",
+  "logs_sha256": {
+    "parameter-alternate-matrix-source-initial.log": "b7ab4f685844108e981bc6e16a1caa19061d0c0950302e09e17bb17128310b3f",
+    "parameter-alternate-matrix-build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "parameter-alternate-matrix-tests.log": "ae2aa409020d61fbf8d2fc2f268a96835687747eeba40673219d5b76b3610d4c",
+    "parameter-alternate-matrix-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "parameter-alternate-matrix-post-format-sizes.log": "574ef095918579bd242902cf584f17516a8ccbaca42ef375741b2994c8fd3ac9"
+  },
+  "active_strict_regeneration": {
+    "session": 30582,
+    "log": "target/parameter-alternate-matrix-source-regeneration.log"
+  },
+  "exclusions": [
+    "No positive native alternate/presence claims: every native numeric presence byte is zero",
+    "Owned alternate/presence matrix is version19000 resolved-feature context; other contexts retain separate acceptance",
+    "Presence edits preserve the existing field shape; adding/removing alternates is not implemented by this operation",
+    "Native application, effective-value/unit/equation evaluation, geometry and exact-head publication remain open"
+  ]
+}

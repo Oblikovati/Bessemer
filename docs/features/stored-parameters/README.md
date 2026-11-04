@@ -232,3 +232,29 @@ passed, but no completed corpus-edit acceptance is claimed yet.
 python -B -X utf8 docs/features/stored-parameters/freeze_all_primary_reference.py
 cargo test --lib all_native_parameter_primaries_match_original_spans_reopen_and_reverse_every_document -- --ignored --nocapture
 ```
+
+## Complete owned alternate and presence matrix
+
+The native census contains no positive alternates: all 42,562 numeric parameters
+have presence byte zero; the 1,355 strings have no presence byte. Positive
+alternate behavior therefore has independent owned coverage rather than a
+native acceptance claim.
+
+The owned matrix covers all five numeric classes and three positive layouts:
+15 alternate-value bit changes and every nonzero byte value for each layout,
+for 3,840 requests in total. Unchanged original Source readers accepted all
+complete expected graphs. All 14 typed integration tests pass, including every
+matrix request against its expected stream, complete document reopen,
+unrelated-stream checks, fresh typed reversal and original file bytes. No-op
+presence requests remain distinct from changed results.
+
+The Source matrix took 400.031 seconds and the typed suite took 35.43 seconds;
+these are verification timings. The 999,269-byte expected-image packet and
+initial reference snapshot are retained. Strict source regeneration is still
+running. `alternate-matrix-verification.json` records scope and exclusions;
+this does not establish other version/context or native-positive populations.
+
+```text
+python -B -X utf8 docs/features/stored-parameters/freeze_alternate_matrix_reference.py
+cargo test --test model_stored_parameters
+```
