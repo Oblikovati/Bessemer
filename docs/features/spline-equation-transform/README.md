@@ -41,3 +41,12 @@ unimplemented. The 100-sample check is not exact geometry validation, and the
 coefficient-basis R*T composition does not define how to apply the archived
 transform. The existing wire decoder is unchanged; no native execution,
 behavior-version change or coverage gain is claimed.
+
+The [equation API/runtime extension audit](equation-api-runtime-schema-audit.json)
+records clauses 11.1727–11.1736. They bind selected converted-string flags,
+post-evaluation parameter scaling, fallback coefficient packing, backend transform
+transport and API getter/setter roles. The endpoint-lock masks belong to 32C,
+not F4; the saved scalar option remains a full signed word despite its API Boolean
+formal. Ignored provider returns and resolver changes prevent broad completion
+or geometry claims. These runtime/API behaviors remain unimplemented, while the
+raw wire codec and its earlier expected results remain unchanged.
