@@ -24,6 +24,20 @@ def multiple_parameter_graph(edited: int | None = None) -> bytes:
 
 
 class MultipleParameterReferenceTests(unittest.TestCase):
+    def test_alias_roots_keep_six_physical_definitions(self) -> None:
+        """Check complete null/alias occurrences without duplicating physical definitions."""
+        import swcontainer
+        from sheet_owned_fixtures import SavedSheetMetalDocument
+        document = swcontainer.Document((ROOT / 'tests/fixtures/blank-part.SLDPRT').read_bytes(), table={})
+        manager = (ROOT / 'tests/fixtures/sheet-metal/manager-0.bin').read_bytes()
+        raw = multiple_parameter_graph()
+        _, expected = observe_parameters(SavedSheetMetalDocument(document, manager, raw), 'Contents/Config-0-ResolvedFeatures')
+        aliases = struct.pack('<HHH', 0, expected[0]['definition'][3], expected[5]['definition'][3])
+        changed = raw[:4] + struct.pack('<H', 9) + raw[6:] + aliases
+        _, actual = observe_parameters(SavedSheetMetalDocument(document, manager, changed), 'Contents/Config-0-ResolvedFeatures')
+        self.assertEqual(actual, expected)
+        self.assertEqual(len(actual), 6)
+
     def test_each_primary_change_preserves_all_other_physical_parameters(self) -> None:
         """Compare seven complete graphs through unchanged original readers."""
         import swcontainer

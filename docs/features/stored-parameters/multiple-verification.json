@@ -55,7 +55,7 @@
     "clippy_exit_code": 0,
     "post_format_maximum_function_lines": 19,
     "log_sha256": "4995f186e3f477edfc9867d5df4152302b2b0d89e56f05aad0dd48a7e97ceefe",
-    "scope": "Literal ordinary object-reference framing test; no additional independent Source replay or native occurrence population claimed",
+    "scope": "Literal ordinary object-reference framing and unchanged original Source complete parses; no additional native occurrence population claimed",
     "full_gate_exclusion": "This extension follows the active f8b7578a full PR gate source and is excluded from that run",
     "complete_focused_suite": {
       "source_revision": "ca42e226",
@@ -66,10 +66,14 @@
       "exit_code": 0,
       "log_sha256": "2a64dddc34e39a4c23ef859baa66122ac2dc8f2de721df49953e0c6729965edb"
     },
-    "independent_source_followup": {
-      "session": 82096,
-      "status": "Two tests passed; immutable source-integrity finalization remains live. No guarded-success credit yet.",
-      "log": "target/parameter-multiple-alias-source.log"
+    "independent_source": {
+      "tests_passed": 2,
+      "seconds": 1.693,
+      "exit_code": 0,
+      "immutable_source_and_import_guards_passed": true,
+      "all_seven_existing_fixtures_unchanged": true,
+      "snapshot_identity": "f5cf24c15484603612e96a0d4777fb9768a085f299fc295d9f9c13b2a6362d77",
+      "log_sha256": "34d4ec994f75dc74ee634f074e0cfde1c8af98e911d208a26760349296bcd151"
     }
   }
 }

@@ -34,7 +34,8 @@ def main() -> int:
         if not result.wasSuccessful():
             return 1
         verify_parameter_regeneration(generated, ROOT / 'tests/fixtures/stored-parameters/multiple')
-        retain_parameter_snapshot((evidence / 'fixture-reference-snapshot.json').read_bytes(), 'multiple-source-snapshot')
+        prefix = 'multiple-alias-source-snapshot' if '--aliases' in sys.argv else 'multiple-source-snapshot'
+        retain_parameter_snapshot((evidence / 'fixture-reference-snapshot.json').read_bytes(), prefix)
         return 0
 
 
