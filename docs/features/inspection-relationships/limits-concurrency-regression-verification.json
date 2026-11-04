@@ -1,0 +1,34 @@
+{
+  "issue": 197,
+  "relationship_tests_passed": 12,
+  "relationship_manual_exporter_ignored_by_default": 1,
+  "exact_limits": {
+    "lexical_events_with_document_frame": 15,
+    "attributes_with_namespace_declarations": 2,
+    "element_depth": 5,
+    "byte_limit": "Exact ciphertext padded length; one byte below rejected"
+  },
+  "all_four_one_below_limits_rejected_both_profiles": true,
+  "every_proper_prefix_rejected": true,
+  "appended_nul_rejected": true,
+  "workers": 8,
+  "mixed_policy_result_comparisons": 384,
+  "standalone_library_clippy_passed": true,
+  "function_and_file_size_audit_passed": true,
+  "regression_tests_passed": {
+    "xml_metadata": 8,
+    "composer_containers": 7,
+    "composer_links": 10,
+    "composer_references": 8
+  },
+  "existing_composer_reference_exclusions": 1,
+  "logs": {
+    "inspection-relationships-limits-concurrency.log": "643ee0c210d0b31db5b817fbe85d28b70597312a8da2783a9f05c20641077f4b",
+    "inspection-relationships-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "relationships-xml_metadata-regression.log": "0311f4c8e73800cdf9656001b35551b1d49e5f448db27713b046a6f72624272e",
+    "relationships-composer_containers-regression.log": "efd0c893b04e1d4144b04eef420e7628a477eed552e742f9c2cbb8c8a92c152d",
+    "relationships-composer_links-regression.log": "495adf950c8bef76eacc70399ec27d5c641e33ec5ab22877b30e8e37500d0573",
+    "relationships-composer_references-regression.log": "ecb37074432ac87672b057f995fb80f1f6e41eb74f820470cf6d6d7a05db3dd6"
+  },
+  "qualification": "Focused Windows standalone compilation with warnings denied, unsafe forbidden and assertions/overflow checks enabled. The full Cargo repository gate remains pending."
+}

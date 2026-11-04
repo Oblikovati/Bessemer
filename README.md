@@ -502,6 +502,9 @@ occurrences, with isolated edits to existing unqualified attribute text.
 Its [source identity comparison](docs/features/inspection-source-identity/README.md)
 checks caller-supplied bytes against stored size/checksum text and retains
 explicit completion, coverage and document provenance.
+Its [relationship views](docs/features/inspection-relationships/README.md) expose
+ordered load attempts, first-insertion entries and the writer's empty-key filter
+under an explicit DOM retention policy, while preserving the original envelope.
 
 Library-feature configuration, cross-reference and atom-ID interoperability is
 documented in [the feature evidence](docs/features/library-features/README.md).

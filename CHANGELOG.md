@@ -42,6 +42,8 @@
 
 ### Added
 
+- Added explicit-policy Inspection relationship load attempts, first-insertion map views and writer-filtered entries with immutable source provenance. (#197)
+
 - Added explicit caller-supplied Inspection source size/checksum comparisons with exact stored text, complete byte coverage and unchanged document provenance. (#195)
 
 - Added ordered standalone Inspection record views, selected DOM input projections and isolated existing-attribute edits with revision-bound identities and complete record provenance. (#193)

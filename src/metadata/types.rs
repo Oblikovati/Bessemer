@@ -85,12 +85,23 @@ pub(super) struct AttributeRecord {
 
 #[derive(Debug)]
 pub(super) struct ElementRecord {
+    pub qualified_name: Arc<str>,
+    pub content: Vec<XmlContent>,
     pub name: ExpandedName,
     pub attributes: Vec<AttributeRecord>,
     pub parent: Option<usize>,
     pub children: Vec<usize>,
     pub direct_text: String,
     pub span: Range<usize>,
+}
+
+#[derive(Debug)]
+pub(crate) enum XmlContent {
+    Element(usize),
+    Text(String),
+    CData(String),
+    Comment,
+    ProcessingInstruction,
 }
 
 #[derive(Debug, Default, Clone, Copy)]

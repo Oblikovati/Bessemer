@@ -20,6 +20,7 @@ pub(crate) use inspection::validate as validate_inspection_xml;
 pub use properties::{MetadataProperty, PropertySection, PropertyValue, PropertyValueKind};
 use std::sync::Arc;
 pub use stream::{MetadataFamily, MetadataStream};
+pub(crate) use types::XmlContent;
 use types::XmlModel;
 pub use types::{
     ExpandedName, XmlAttribute, XmlElementId, XmlEncoding, XmlFormat, XmlLimits, XmlSource,

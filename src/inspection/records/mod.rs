@@ -2,6 +2,7 @@
 mod edit;
 mod load;
 mod projection;
+pub mod relationships;
 mod source_identity;
 mod source_md5;
 mod types;

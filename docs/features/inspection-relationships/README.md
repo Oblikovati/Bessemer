@@ -1,8 +1,20 @@
 # Inspection relationship projections
 
 Feature #197 covers the persisted dictionary in §§14.19–14.20. This directory
-currently contains independent preparation fixtures and reference tests; no Rust
-relationship API is implemented yet.
+contains independent preparation fixtures and reference tests alongside the first
+Rust read/preserve/reopen operation. `InspectionRecords::relationship_views`
+requires an explicit retained-node or element-only policy. It retains every load
+attempt, first-insertion map entry and writer-filtered entry separately, together
+with immutable source identity, completion, lexical coverage, history and semantic
+exclusions. It does not serialize a new relationship dictionary.
+
+The first focused operation passed nine contract tests. Two fresh processes each
+passed ten tests including the manual exporter; their complete packets were
+byte-identical. The unchanged original Source helper matched every attempt and
+selected entry for 12 cases under both policies. Exact limits and every one-below rejection passed for both cipher profiles.
+Eight workers matched 384 mixed-policy results against serial results. The
+focused metadata and Composer regressions passed 33 tests, retaining one existing
+exclusion. The full repository and publication gates remain required.
 
 The selected native helper distinguishes ordered insertion attempts, insertion
 into an initially empty map, and the writer's empty-key filter. A retained text,
@@ -26,8 +38,8 @@ separate from strict XML admission. The populated tutorial supplies 48 nonempty
 writer keys and 120 reciprocal links; those counts and graph properties are
 fixture observations, not universal validity requirements.
 
-Before adding a Rust interface, reuse the existing bounded XML parser and prove
-one complete read/preserve/reopen operation with explicit retention assumptions.
+The Rust interface reuses the existing bounded XML parser and retains explicit
+node-policy assumptions through the complete read/preserve/reopen operation.
 Further gates include unknown-node preservation, descendant-text order, exact Qt
 whitespace, duplicate handling, source isolation, limits, concurrency, fresh
 processes and unchanged Source agreement. No native application or geometry

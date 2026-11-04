@@ -1,7 +1,7 @@
 use super::{
     XmlAttribute, XmlLimits, attributes, declaration, encoding, grammar, invalid,
     namespaces::{NamePool, NamespaceScope, ParsedAttribute, qualified},
-    types::{AttributeRecord, ElementRecord, XmlMetrics, XmlModel},
+    types::{AttributeRecord, ElementRecord, XmlContent, XmlMetrics, XmlModel},
     unsupported,
 };
 use crate::Result;
@@ -92,9 +92,20 @@ impl<'a> XmlBuilder<'a> {
             Event::DocType(_) => Err(unsupported(
                 "XML DTD declaration; expected metadata without DTD or external entities",
             )),
-            Event::PI(pi) => grammar::processing_target(pi.target()),
-            Event::Comment(_) | Event::Eof => Ok(()),
+            Event::PI(pi) => self.instruction(pi.target()),
+            Event::Comment(_) => self.nontext(XmlContent::Comment),
+            Event::Eof => Ok(()),
         }
+    }
+
+    fn instruction(&mut self, target: &str) -> Result<()> {
+        grammar::processing_target(target)?;
+        self.nontext(XmlContent::ProcessingInstruction)
+    }
+
+    fn nontext(&mut self, content: XmlContent) -> Result<()> {
+        self.retain_content(content);
+        Ok(())
     }
 
     fn open(&mut self, start: BytesStart<'_>, span: Range<usize>, empty: bool) -> Result<()> {
@@ -108,7 +119,9 @@ impl<'a> XmlBuilder<'a> {
         let declared = self.scope.push(&parsed, &mut self.pool)?;
         let name = self.scope.resolve(&name, true)?;
         let attributes = self.resolve_attributes(parsed)?;
+        let qualified_name = Arc::from(start.name().as_ref());
         let ordinal = self.publish_element(name, attributes, span, depth);
+        self.model.elements[ordinal].qualified_name = qualified_name;
         if empty {
             self.scope.pop(declared);
         } else {
@@ -137,6 +150,8 @@ impl<'a> XmlBuilder<'a> {
         let parent = self.stack.last().map(|frame| frame.ordinal);
         let ordinal = self.model.elements.len();
         self.model.elements.push(ElementRecord {
+            qualified_name: Arc::from(""),
+            content: Vec::new(),
             name,
             attributes,
             parent,
@@ -146,6 +161,9 @@ impl<'a> XmlBuilder<'a> {
         });
         if let Some(parent) = parent {
             self.model.elements[parent].children.push(ordinal);
+            self.model.elements[parent]
+                .content
+                .push(XmlContent::Element(ordinal));
         }
         self.model.metrics.depth = self.model.metrics.depth.max(depth);
         ordinal
@@ -195,7 +213,19 @@ impl<'a> XmlBuilder<'a> {
         let normalized = quick_xml::events::BytesText::from_escaped(text)
             .xml10_content()
             .into_owned();
-        self.append(&normalized)
+        self.append_text_content(normalized, cdata)
+    }
+
+    fn append_text_content(&mut self, normalized: String, cdata: bool) -> Result<()> {
+        self.append(&normalized)?;
+        if cdata {
+            if !normalized.is_empty() {
+                self.retain_content(XmlContent::CData(normalized));
+            }
+            return Ok(());
+        }
+        self.retain_text(&normalized);
+        Ok(())
     }
 
     fn reference(&mut self, reference: BytesRef<'_>) -> Result<()> {
@@ -205,9 +235,36 @@ impl<'a> XmlBuilder<'a> {
             ))
         })?;
         if let Some(character) = value {
-            return self.append(&character.to_string());
+            return self.append_reference(&character.to_string());
         }
-        self.append(predefined_reference(reference.as_ref())?)
+        self.append_reference(predefined_reference(reference.as_ref())?)
+    }
+
+    fn append_reference(&mut self, value: &str) -> Result<()> {
+        self.append(value)?;
+        self.retain_text(value);
+        Ok(())
+    }
+
+    fn retain_content(&mut self, content: XmlContent) {
+        if let Some(frame) = self.stack.last() {
+            self.model.elements[frame.ordinal].content.push(content);
+        }
+    }
+
+    fn retain_text(&mut self, value: &str) {
+        if value.is_empty() {
+            return;
+        }
+        let Some(frame) = self.stack.last() else {
+            return;
+        };
+        let content = &mut self.model.elements[frame.ordinal].content;
+        if let Some(XmlContent::Text(text)) = content.last_mut() {
+            text.push_str(value);
+            return;
+        }
+        content.push(XmlContent::Text(value.to_owned()));
     }
 
     fn append(&mut self, value: &str) -> Result<()> {

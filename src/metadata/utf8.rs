@@ -138,6 +138,28 @@ impl Utf8XmlDocument {
         self.model.elements[ordinal].parent
     }
 
+    pub(crate) fn qualified_name(&self, ordinal: usize) -> &str {
+        &self.model.elements[ordinal].qualified_name
+    }
+
+    pub(crate) fn content(&self, ordinal: usize) -> &[super::XmlContent] {
+        &self.model.elements[ordinal].content
+    }
+
+    pub(crate) fn descendant_text(&self, ordinal: usize) -> String {
+        use super::XmlContent;
+        let mut pending: Vec<_> = self.content(ordinal).iter().rev().collect();
+        let mut text = String::new();
+        while let Some(content) = pending.pop() {
+            match content {
+                XmlContent::Text(value) | XmlContent::CData(value) => text.push_str(value),
+                XmlContent::Element(child) => pending.extend(self.content(*child).iter().rev()),
+                XmlContent::Comment | XmlContent::ProcessingInstruction => {}
+            }
+        }
+        text
+    }
+
     pub(crate) fn children(&self, ordinal: usize) -> &[usize] {
         &self.model.elements[ordinal].children
     }
