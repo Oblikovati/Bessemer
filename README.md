@@ -62,9 +62,9 @@ full/lightweight context.
 `bessemer::metadata` reads and writes all documented XML metadata families, with
 namespace-aware property views, exact source framing and isolated text/attribute edits.
 It also supports embedded `ThirdPty/InspectionXpert` projects and complete Job Number edits.
-`bessemer::preview` reads and writes packed DIB previews, decodes RLE8, BGR24 and BGRX
-pixels, and supports isolated palette and pixel replacement. BGR24 edits preserve
-stored row padding. Uncompressed RGB
+`bessemer::preview` reads and writes packed DIB previews, decodes RLE8, uncompressed
+1/4/8-bit indexed pixels, BGR24 and BGRX, and supports isolated palette and pixel
+replacement. Packed RGB edits preserve stored row padding and unused index bits. Uncompressed RGB
 previews retain legal zero image-size declarations through edits and reversals.
 It also reads, constructs, edits, and writes static PNG previews, preserving stored
 chunks and exact samples across all defined color/depth pairs and Adam7 interlace.

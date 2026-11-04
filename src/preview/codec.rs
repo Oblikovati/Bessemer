@@ -1,5 +1,5 @@
 use super::{
-    BitmapInfoHeader, DibContents, PaletteEntry, bgr24, header, invalid, rle,
+    BitmapInfoHeader, DibContents, PaletteEntry, bgr24, header, indexed_rgb, invalid, rle,
     types::{DibEncoding, ImageShape},
 };
 use crate::{Result, archive_codec::ArchiveCursor};
@@ -63,6 +63,10 @@ pub(super) fn validate(contents: &DibContents, maximum_pixels: usize) -> Result<
     match shape.encoding {
         DibEncoding::Rle8 => rle::walk_rle(&contents.pixel_bytes, shape, palette, None)?,
         DibEncoding::Bgr24 | DibEncoding::Bgrx32 => require_rgb_size(contents, shape)?,
+        DibEncoding::IndexedRgb(bits) => {
+            require_rgb_size(contents, shape)?;
+            indexed_rgb::validate_indices(&contents.pixel_bytes, shape, bits, palette)?;
+        }
     }
     stream_size(contents)?;
     Ok(shape)
@@ -109,10 +113,14 @@ fn image_byte_count(header: &BitmapInfoHeader, shape: ImageShape) -> Result<usiz
 }
 
 fn rgb_byte_count(shape: ImageShape) -> Result<usize> {
-    if shape.encoding == DibEncoding::Bgr24 {
-        return bgr24::byte_count(shape);
+    match shape.encoding {
+        DibEncoding::Bgr24 => bgr24::byte_count(shape),
+        DibEncoding::IndexedRgb(bits) => indexed_rgb::byte_count(shape, bits),
+        DibEncoding::Bgrx32 => bgrx_byte_count(shape),
+        DibEncoding::Rle8 => Err(invalid(
+            "Rle8 image extent; expected uncompressed RGB for dimension-derived size",
+        )),
     }
-    bgrx_byte_count(shape)
 }
 
 fn bgrx_byte_count(shape: ImageShape) -> Result<usize> {

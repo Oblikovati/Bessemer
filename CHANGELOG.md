@@ -50,6 +50,8 @@
 
 ### Added
 
+- Added uncompressed 1-, 4- and 8-bit indexed DIB previews with exact palette indices, padding and unused-bit preservation during pixel edits. (#209)
+
 - Added 24-bit BI_RGB preview reading and pixel replacement, preserving row padding, palettes, orientations and image-size declarations. (#207)
 
 - Added direct legacy references in ordinary component prefixes with preserved raw presence, generic pointer identity and four-byte time values. (#206)

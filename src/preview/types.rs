@@ -9,7 +9,7 @@ pub struct BitmapInfoHeader {
     pub height: i32,
     /// Plane count; must be one.
     pub planes: u16,
-    /// Bits per pixel: eight for RLE8, 24 for BGR, 32 for BGRX.
+    /// Bits per pixel: 1/4/8 for indexed RGB, eight for RLE8, 24 for BGR, 32 for BGRX.
     pub bit_count: u16,
     /// Windows BI_RLE8 (1) or BI_RGB (0).
     pub compression: u32,
@@ -52,7 +52,7 @@ pub struct DibContents {
 /// Decoded pixels in top-to-bottom row order; dimensions are in the archive header.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum DibPixels {
-    /// RLE8 indices; None means no opcode wrote this pixel, not palette entry zero.
+    /// Palette indices; None means an RLE8 opcode never wrote this pixel, not index zero.
     Indexed(Vec<Option<u8>>),
     /// Four raw BGRX bytes per pixel; the fourth byte is preserved without alpha semantics.
     Bgrx(Vec<[u8; 4]>),
@@ -61,6 +61,7 @@ pub enum DibPixels {
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub(super) enum DibEncoding {
     Rle8,
+    IndexedRgb(u8),
     Bgr24,
     Bgrx32,
 }

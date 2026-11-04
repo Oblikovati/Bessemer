@@ -97,26 +97,29 @@ fn encoding(header: &BitmapInfoHeader) -> Result<DibEncoding> {
     }
     match (header.bit_count, header.compression) {
         (8, 1) => Ok(DibEncoding::Rle8),
+        (bits @ (1 | 4 | 8), 0) => Ok(DibEncoding::IndexedRgb(bits as u8)),
         (24, 0) => Ok(DibEncoding::Bgr24),
         (32, 0) => Ok(DibEncoding::Bgrx32),
         other => Err(unsupported(format!(
-            "DIB bit count/compression {other:?}; expected (8, BI_RLE8=1), (24, BI_RGB=0) or (32, BI_RGB=0)"
+            "DIB bit count/compression {other:?}; expected (8, BI_RLE8=1) or (1/4/8/24/32, BI_RGB=0)"
         ))),
     }
 }
 
 pub(super) fn palette_count(header: &BitmapInfoHeader, shape: ImageShape) -> Result<usize> {
-    if shape.encoding != DibEncoding::Rle8 {
-        return Ok(header.colors_used as usize);
-    }
-    if header.colors_used > 256 {
+    let maximum = match shape.encoding {
+        DibEncoding::Rle8 => 256,
+        DibEncoding::IndexedRgb(bits) => 1usize << bits,
+        DibEncoding::Bgr24 | DibEncoding::Bgrx32 => return Ok(header.colors_used as usize),
+    };
+    if header.colors_used as usize > maximum {
         return Err(invalid(format!(
-            "RLE8 palette count {}; expected 0..=256",
+            "indexed palette count {}; expected 0..={maximum}",
             header.colors_used
         )));
     }
     Ok(if header.colors_used == 0 {
-        256
+        maximum
     } else {
         header.colors_used as usize
     })

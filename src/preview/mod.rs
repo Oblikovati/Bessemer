@@ -2,6 +2,7 @@
 mod bgr24;
 mod codec;
 mod header;
+mod indexed_rgb;
 mod pixels;
 mod png;
 mod rle;

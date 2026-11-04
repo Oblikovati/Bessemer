@@ -5,6 +5,8 @@
 It supports the two installed-corpus formats: eight-bit BI_RLE8 and 32-bit BI_RGB
 BGRX. The [version 2 BGR24 extension](../dib-bgr24/README.md) adds 24-bit BI_RGB
 using dedicated pixel methods, while retaining version 1 RLE8/BGRX output.
+The [version 3 indexed RGB extension](../dib-indexed-rgb/README.md) adds uncompressed
+1-, 4- and 8-bit indices through the existing indexed-pixel API.
 Other bit depths, compression modes and header types return typed
 unsupported errors. [PNG previews](../png-previews/README.md) implement the separate
 clause 8.2 datastream.
@@ -36,6 +38,8 @@ contents and reverts preserve the original bytes. `new` forces reconstruction.
 `with_indexed_pixels` replaces all pixels with deterministic RLE runs of at most
 255 indices, EOL for every row, and EOB. It deliberately replaces the original
 command encoding, including any unwritten positions and trailing bytes.
+For uncompressed indexed RGB, the same method edits packed indices while retaining
+row padding and unused bits; every decoded position is `Some(index)`.
 `with_bgrx_pixels` replaces all four bytes per pixel in the original row orientation.
 `decode_bgr24_pixels` returns BGR triples in top-to-bottom order;
 `with_bgr24_pixels` replaces them while preserving each stored row's padding.

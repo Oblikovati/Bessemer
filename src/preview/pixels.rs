@@ -1,5 +1,5 @@
 use super::{
-    DibContents, DibPixels, DibPreview, codec, invalid, rle,
+    DibContents, DibPixels, DibPreview, codec, indexed_rgb, invalid, rle,
     types::{DibEncoding, ImageShape},
     unsupported,
 };
@@ -21,13 +21,18 @@ impl DibPreview {
         match shape.encoding {
             DibEncoding::Bgrx32 => Ok(DibPixels::Bgrx(decode_bgrx(&contents.pixel_bytes, shape))),
             DibEncoding::Rle8 => decode_rle(contents, shape),
+            DibEncoding::IndexedRgb(bits) => Ok(DibPixels::Indexed(indexed_rgb::decode(
+                &contents.pixel_bytes,
+                shape,
+                bits,
+            )?)),
             DibEncoding::Bgr24 => Err(unsupported(
                 "24-bit BI_RGB pixels; expected decode_bgr24_pixels for three-byte BGR values",
             )),
         }
     }
 
-    /// Replaces every RLE8 pixel with checked top-to-bottom indices and deterministic runs.
+    /// Replaces indexed pixels, using deterministic RLE8 runs or preserving RGB packing bits.
     ///
     /// ```no_run
     /// # fn example(preview: &bessemer::preview::DibPreview, indices: &[u8]) -> bessemer::Result<()> {
@@ -36,17 +41,14 @@ impl DibPreview {
     /// # }
     /// ```
     pub fn with_indexed_pixels(&self, indices: &[u8], maximum_pixels: usize) -> Result<Self> {
-        let shape = self.replacement_shape(DibEncoding::Rle8, indices.len(), maximum_pixels)?;
-        if let Some(index) = indices
-            .iter()
-            .find(|index| **index as usize >= self.contents().palette.len())
-        {
-            return Err(invalid(format!(
-                "replacement index {index}; expected below {}",
-                self.contents().palette.len()
-            )));
-        }
-        self.with_pixel_bytes(rle::encode_indices(indices, shape), maximum_pixels)
+        let shape = self.indexed_replacement_shape(indices.len(), maximum_pixels)?;
+        require_palette_indices(indices, self.contents().palette.len())?;
+        let bytes = if let DibEncoding::IndexedRgb(bits) = shape.encoding {
+            indexed_rgb::replace(&self.contents().pixel_bytes, shape, bits, indices)?
+        } else {
+            rle::encode_indices(indices, shape)
+        };
+        self.with_pixel_bytes(bytes, maximum_pixels)
     }
 
     /// Replaces BGRX pixels in top-to-bottom order, preserving their fourth bytes.
@@ -84,6 +86,21 @@ impl DibPreview {
         Ok(shape)
     }
 
+    fn indexed_replacement_shape(&self, count: usize, maximum_pixels: usize) -> Result<ImageShape> {
+        let shape = codec::validate(self.contents(), maximum_pixels)?;
+        if !matches!(
+            shape.encoding,
+            DibEncoding::Rle8 | DibEncoding::IndexedRgb(_)
+        ) {
+            return Err(unsupported(format!(
+                "indexed replacement from {:?}; expected Rle8 or IndexedRgb",
+                shape.encoding
+            )));
+        }
+        require_replacement_count(count, shape.count)?;
+        Ok(shape)
+    }
+
     pub(super) fn with_pixel_bytes(&self, bytes: Vec<u8>, maximum_pixels: usize) -> Result<Self> {
         let mut contents = self.contents().clone();
         // Preserve legal omitted BI_RGB sizes across fresh edit/reversal checkpoints (#208).
@@ -94,6 +111,15 @@ impl DibPreview {
         contents.pixel_bytes = bytes;
         self.with_contents(contents, maximum_pixels)
     }
+}
+
+fn require_palette_indices(indices: &[u8], palette: usize) -> Result<()> {
+    if let Some(index) = indices.iter().find(|index| **index as usize >= palette) {
+        return Err(invalid(format!(
+            "replacement index {index}; expected below {palette}"
+        )));
+    }
+    Ok(())
 }
 
 fn require_replacement_count(count: usize, expected: usize) -> Result<()> {
