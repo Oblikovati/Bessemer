@@ -1,0 +1,96 @@
+{
+  "issue": 199,
+  "status": "Stored spline operations passed in all three currently admitted manager contexts; native and full publication acceptance remain open",
+  "new_saved_versions": [
+    11000,
+    18000
+  ],
+  "previous_saved_version": 19000,
+  "context_cases": [
+    {
+      "index": 0,
+      "version": 11000,
+      "label": "0: C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\CAM Examples\\tutorial_parts\\Mill\\mill3axii_5.sldprt::Contents/Config-0",
+      "document_bytes": 217757,
+      "document_sha256": "a0babf7e45dde717b9bd2ee42052bb9d49d2d024fcafa75fe2bf12cd91016b4e",
+      "context_sha256": {
+        "header": "3e32a90aa00e9fd1bd18d8638d1150afaac3f5f0244630217d785581ffbd3ba2",
+        "configuration": "174058cb739865f89bd2b59bec89a93271788dd6b8640a07d635319ba52c0ce1",
+        "manager": "b512cb856c004ace38fdeab3567e50be2b86f619175aa3e7c3cbaf73a9e22f53"
+      }
+    },
+    {
+      "index": 525,
+      "version": 18000,
+      "label": "525: C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\cover_datum.sldprt::Contents/Config-0",
+      "document_bytes": 133437,
+      "document_sha256": "df18756bf4080635830fcc87d8bb957efa38c7eba8759d76879d7af1d1668d39",
+      "context_sha256": {
+        "header": "382987e97fdda85065d06bf1abfaf14be8f8fe02f1b5cedb7c445f3be9b8d961",
+        "configuration": "1432c4b36a103bb7d85558db5ac6bf940a76036cfe3bff2df950aab8d7c35ff0",
+        "manager": "90e35086857faf6a3ec244f99c404b0a527644f9b520bfd123793048f27e24e5"
+      }
+    }
+  ],
+  "new_owned_graphs": 36,
+  "new_owned_wire_bytes": 42278,
+  "primitive_calls_including_empty_reads": 11150,
+  "inherited_slots": {
+    "11000": 413,
+    "18000": 106
+  },
+  "saved_manager_helpers": {
+    "11000": 0,
+    "18000": 0
+  },
+  "initial_source_tests_passed": 1,
+  "initial_source_process_exit_code": 0,
+  "source_replay_tests_passed": 4,
+  "source_replay_process_exit_code": 0,
+  "source_import_and_content_guards": "passed",
+  "source_collectors_removed": true,
+  "all_existing_and_new_fixtures_regenerated_identically": true,
+  "source_replay_snapshot_gzip": "version-replay-source-snapshot.json.gz",
+  "source_replay_snapshot_gzip_sha256": "62784fe50665010b1b0818392184c8f49a702a4a4bd63f56593423cf638d1d16",
+  "source_replay_identity": "fca38f754d5a301e522de6fdd24bd0881ecce89e07f5ccb73680997b2496c589",
+  "source_replay_changes": {
+    "added": [
+      "research/parallel_constraint_hatch_creation_ids_independent_review.py",
+      "research/parallel_display_hatch_scale_density_attempt01.py",
+      "research/parallel_display_hatch_scale_density_role.py",
+      "research/parallel_patterns_hatch_data_point_array_grammar.py",
+      "research/parallel_root_hatch_data_serializer_discovery.py"
+    ],
+    "removed": [],
+    "modified": []
+  },
+  "typed_tests_passed": 20,
+  "failed": 0,
+  "ignored": 0,
+  "typed_exit_code": 0,
+  "checks": [
+    "Both spline prototypes and all saved role styles in both legacy contexts",
+    "Actual persisted header/configuration/manager bytes checked through original Source",
+    "Complete primitive byte coverage, EOF and inherited map extent",
+    "All six strings, compatibility word, full signed option and flag images",
+    "Four independent lock golden edits, full document reopen, unrelated streams and exact reversal",
+    "Foreign context failures return typed invalid errors and preserve inputs",
+    "All earlier owned matrix, alias and concurrency checks passed unchanged"
+  ],
+  "exclusions": [
+    "Owned graphs replace the feature streams for these tests; original native feature acceptance is not established",
+    "Known native Source accounting failure #177 is unchanged and remains open",
+    "No new version admission, geometry, API evaluation or native application claim",
+    "Full combined local and exact-head remote gates remain required"
+  ],
+  "logs_sha256": {
+    "spline-equation-version-context-probe.log": "a0180804420badc12065e0d1accab02c3d8e38bc457e5ea649f44bb42ce4f242",
+    "spline-equation-version-source-generation.log": "42abfc2c854f2a5557a769f64fe06b16762ca9a8ca2afe6651b78704fb0d4590",
+    "spline-equation-version-source-replay.log": "ad2e5894c0300ac9f9309069e3f3bd770a7487f5a075391ca09a0dc1ffc4e3f0",
+    "spline-equation-version-tests.log": "f6d2fc11ddb16822cf7e1693b7cb17b7ee3aff7df416bae1faa618262fb53eb2",
+    "spline-equation-version-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spline-equation-version-format.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "temporary_probe_source_sha256": "d4e4dbc22c88c2b7930d714cdee0291038470c83d0c61348a8d375f0a1dddf14",
+  "temporary_probe_source_and_executable_removed": true
+}

@@ -132,11 +132,21 @@ fn assert_reopened_equation_document(
     source: &PartResolvedFeaturesArchive,
     edit: &PartResolvedFeaturesEdit,
 ) {
+    assert_reopened_equation_at_version(document, source, edit, 19000, EQUATION_LIMITS);
+}
+
+fn assert_reopened_equation_at_version(
+    document: &Document,
+    source: &PartResolvedFeaturesArchive,
+    edit: &PartResolvedFeaturesEdit,
+    version: u32,
+    limits: ModelArchiveLimits,
+) {
     let original = document.to_bytes().unwrap();
     let mut output = document.clone();
     replace_owned_resolved_stream(&mut output, edit.archive().to_bytes().unwrap());
     let reopened = Document::from_bytes(&output.to_bytes().unwrap()).unwrap();
-    let current = read_owned_resolved_document(&reopened, EQUATION_LIMITS);
+    let current = read_equation_at_version(&reopened, version, limits);
     assert_eq!(current.fields(), edit.archive().fields());
     unselected_document_streams::assert_unselected_document_streams(
         document,
@@ -150,6 +160,21 @@ fn assert_reopened_equation_document(
         source.to_bytes().unwrap(),
         document.read_stream(OWNED_RESOLVED_STREAM).unwrap()
     );
+}
+
+fn read_equation_at_version(
+    document: &Document,
+    version: u32,
+    limits: ModelArchiveLimits,
+) -> PartResolvedFeaturesArchive {
+    PartResolvedFeaturesArchive::from_document(
+        document,
+        ConfigurationId::new(0),
+        bessemer::header::ArchiveVersion::new(version),
+        None,
+        limits,
+    )
+    .unwrap()
 }
 
 fn equation_fixture_document(raw: &[u8]) -> Document {
@@ -172,3 +197,6 @@ mod exports;
 
 #[path = "model_spline_equation_state/aliases.rs"]
 mod aliases;
+
+#[path = "model_spline_equation_state/versions.rs"]
+mod versions;

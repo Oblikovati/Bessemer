@@ -154,3 +154,27 @@ field and alias, reopened the complete document and reversed exactly. Eight
 workers replayed 128 edits against those goldens without changing their source.
 The full typed suite passed 17 tests. This adds owned alias acceptance; saved
 version contexts beyond 19000, native outcomes and publication gates remain open.
+
+
+## Saved-version contexts
+
+The [version proof](version-verification.json) adds 36 independent graphs in
+persisted version11000 and version18000 contexts. Source checked the exact native
+header, configuration and manager bytes before composing each owned graph.
+Inherited map sizes were 413 and 106; both saved manager helpers were zero.
+All six text roles, signed option, compatibility word, flags and empty-equation
+cases matched the literal expectations through complete feature EOF and primitive
+coverage. The normal reproducer now checks all four Source tests and requires
+all earlier and new fixtures to regenerate exactly.
+
+The typed suite passed 20 tests. Both prototypes in each legacy context completed
+an independent lock edit, whole-document reopen and byte-exact reversal while
+preserving unrelated streams. Foreign version19000 feature images were rejected
+without changing their input. Together with the earlier version19000 cases,
+these cover the three currently admitted configuration-manager versions; this
+work does not admit other versions.
+
+These are owned feature graphs inside native contexts. They do not establish
+acceptance of the documents' original feature streams or resolve the separate
+Source accounting failure in #177. Native outcome preservation and full combined
+publication gates remain open.

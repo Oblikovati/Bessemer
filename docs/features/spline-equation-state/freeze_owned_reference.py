@@ -21,8 +21,13 @@ def run_owned_reference(pin: Path, generated: Path) -> unittest.TestResult:
     sys.path.insert(0, str(ROOT / 'docs/features/trim-edge-identifiers'))
     os.environ['BESSEMER_EQUATION_PIN'] = str(pin)
     os.environ['BESSEMER_EQUATION_FIXTURE_ROOT'] = str(generated)
+    os.environ['BESSEMER_EQUATION_CONTEXT_ROOT'] = str(ROOT / 'tests/fixtures/spline-equation-state/versions')
+    os.environ['BESSEMER_EQUATION_VERSION_ROOT'] = str(generated / 'versions')
     import freeze_trim_edges
-    suite = unittest.defaultTestLoader.discover(str(FEATURE), pattern='test_owned_reference.py')
+    suite = unittest.TestSuite([
+        unittest.defaultTestLoader.discover(str(FEATURE), pattern='test_owned_reference.py'),
+        unittest.defaultTestLoader.discover(str(FEATURE), pattern='test_version_reference.py'),
+    ])
     return unittest.TextTestRunner(verbosity=2).run(suite)
 
 
