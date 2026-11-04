@@ -1,0 +1,213 @@
+{
+  "issue": 185,
+  "stage": "Immutable report and direct publication dependency preparation",
+  "reports": [
+    {
+      "path": "reports/part-sketch-intersection-edge-index-completion-evidence.json",
+      "evidence": "C-3308",
+      "bytes": 261293,
+      "sha256": "c76ecec4f940f172dc4c7469cb84385851e222262161e995c1dffbed60319d29",
+      "direct_checks": [
+        {
+          "path": "solidworks/research/publish_sketch_intersection_edge_index_completion.py",
+          "expected_sha256": "42117d5762e7a1535669d6ab1e3902349c4fbdb673b0d18ed7e6642e02efb0fe",
+          "actual_sha256": "42117d5762e7a1535669d6ab1e3902349c4fbdb673b0d18ed7e6642e02efb0fe",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_edge_index_replay_evidence.json",
+          "expected_sha256": "15b9ceb39f34877b31e26d2dfe531e2a456067f7f97fc527d77747897e87762b",
+          "actual_sha256": "15b9ceb39f34877b31e26d2dfe531e2a456067f7f97fc527d77747897e87762b",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_edge_index_smoke.json",
+          "expected_sha256": "bd1e6d6d0b390a23747acb63f1d94852ede82feedc4941f125646eb4f12eefea",
+          "actual_sha256": "bd1e6d6d0b390a23747acb63f1d94852ede82feedc4941f125646eb4f12eefea",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_edge_index_saved_verification.json",
+          "expected_sha256": "a11163cc68cc6a34ae1283881425e8da97fe4ba8b5a5db1d79942f382ba2f863",
+          "actual_sha256": "a11163cc68cc6a34ae1283881425e8da97fe4ba8b5a5db1d79942f382ba2f863",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_edge_index_experiment_manifest.json",
+          "expected_sha256": "900a09d26ac5f3234c663e7c73b578713602ceffeaac573f6bcb75d98d228ff4",
+          "actual_sha256": "900a09d26ac5f3234c663e7c73b578713602ceffeaac573f6bcb75d98d228ff4",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_root_intersection_edge_index_producer.json",
+          "expected_sha256": "e6a2ec4404e82580c409bf7d3f0e990a92da9fcf6b07e7d2d22b327aebbb5418",
+          "actual_sha256": "e6a2ec4404e82580c409bf7d3f0e990a92da9fcf6b07e7d2d22b327aebbb5418",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_edge_index_map_consumer.json",
+          "expected_sha256": "39ccd0d6e45e3e00ea4c3ed3bea44edc2c7a32ea797b92907f6ba6c3bc038efe",
+          "actual_sha256": "39ccd0d6e45e3e00ea4c3ed3bea44edc2c7a32ea797b92907f6ba6c3bc038efe",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_edge_index_reader.py",
+          "expected_sha256": "31411bdb5521a1b2337f30b723bc686535f728efb33f5d6b0a7ee3aba5080263",
+          "actual_sha256": "31411bdb5521a1b2337f30b723bc686535f728efb33f5d6b0a7ee3aba5080263",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_edge_index_replay.py",
+          "expected_sha256": "3905fac1bd9d793f9d44c7e098414cc94445c8984e3a7a47b8398a47f48232f5",
+          "actual_sha256": "3905fac1bd9d793f9d44c7e098414cc94445c8984e3a7a47b8398a47f48232f5",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_edge_index_smoke.py",
+          "expected_sha256": "adf97d5f2da7dc97c42d1293af16a1fb492705276cf7193244834e8475208085",
+          "actual_sha256": "adf97d5f2da7dc97c42d1293af16a1fb492705276cf7193244834e8475208085",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_edge_index_saved_verification.py",
+          "expected_sha256": "2536197d41b06c87b27260fd84e8516ae3340fe6a5e17a1feccca0b6476dfbb9",
+          "actual_sha256": "2536197d41b06c87b27260fd84e8516ae3340fe6a5e17a1feccca0b6476dfbb9",
+          "matched": true
+        }
+      ],
+      "matched": 11,
+      "total": 11,
+      "published_isolated_delta": 68,
+      "retained_raw20_bytes": 272
+    },
+    {
+      "path": "reports/part-sketch-intersection-reference-classification-completion-evidence.json",
+      "evidence": "C-3310",
+      "bytes": 736809,
+      "sha256": "3985504d316d4e9a4850c64b7e93bc1fcf2786aa367257969b6c89f8d042f2f1",
+      "direct_checks": [
+        {
+          "path": "solidworks/research/publish_sketch_intersection_reference_classification_completion.py",
+          "expected_sha256": "aeba4c225874c8eade42aafca47d866b5ae0d9dd113159b2efa581cf236b29b2",
+          "actual_sha256": "aeba4c225874c8eade42aafca47d866b5ae0d9dd113159b2efa581cf236b29b2",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_reference_classification_replay_evidence.json",
+          "expected_sha256": "28c9f5af9bbdfb642af749b0f6997341277d1a6410caf691c06ae17768d2dcb4",
+          "actual_sha256": "28c9f5af9bbdfb642af749b0f6997341277d1a6410caf691c06ae17768d2dcb4",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_reference_classification_smoke_final.json",
+          "expected_sha256": "91f6752a3a5a579ae939f5716d220029aa651e520dde1a457c3eff25f5e44168",
+          "actual_sha256": "91f6752a3a5a579ae939f5716d220029aa651e520dde1a457c3eff25f5e44168",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_reference_classification_saved_verification.json",
+          "expected_sha256": "35b06498e691306effdbeeafe2dd37d590cf6b67cb65ee75f2c1bdac5544d840",
+          "actual_sha256": "35b06498e691306effdbeeafe2dd37d590cf6b67cb65ee75f2c1bdac5544d840",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_reference_classification_experiment_manifest.json",
+          "expected_sha256": "6fc45744d3a183ec897f1311c9c0b029a69f4c6300c7e5d1f035018236946de3",
+          "actual_sha256": "6fc45744d3a183ec897f1311c9c0b029a69f4c6300c7e5d1f035018236946de3",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_reference_classification_review.json",
+          "expected_sha256": "a0ad1ff9e4c0c235a68933a5a6df2a38eb24cadfcb17dd4a163b34cc68363736",
+          "actual_sha256": "a0ad1ff9e4c0c235a68933a5a6df2a38eb24cadfcb17dd4a163b34cc68363736",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_reference_topology_producer.json",
+          "expected_sha256": "09f842f3b04da0213a05e75e937234f7d1737c903796d7ec7a9bad7d1f652db6",
+          "actual_sha256": "09f842f3b04da0213a05e75e937234f7d1737c903796d7ec7a9bad7d1f652db6",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_reference_match_consumer.json",
+          "expected_sha256": "742e05332cd65659d70018bbd1b0adbafcc37cb2c63c5c6b736dbd013f411fb8",
+          "actual_sha256": "742e05332cd65659d70018bbd1b0adbafcc37cb2c63c5c6b736dbd013f411fb8",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+          "expected_sha256": "f0386f38f8df587fbbb84dff0b41b58fffe26decb180f7667ee20dfe1dee283d",
+          "actual_sha256": "f0386f38f8df587fbbb84dff0b41b58fffe26decb180f7667ee20dfe1dee283d",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_reference_classification_reader.py",
+          "expected_sha256": "0249640e36c89c35532c979eef657c0ca4b3b1c67d0140a2945af43d4685c666",
+          "actual_sha256": "0249640e36c89c35532c979eef657c0ca4b3b1c67d0140a2945af43d4685c666",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_reference_classification_replay.py",
+          "expected_sha256": "edce2822e8ab6eb53a4a80dc5f89670e7df786633e3ed5a1ece1bdce415ed44e",
+          "actual_sha256": "edce2822e8ab6eb53a4a80dc5f89670e7df786633e3ed5a1ece1bdce415ed44e",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_reference_classification_smoke.py",
+          "expected_sha256": "4bd4292db2ca648ed7152fc4ba361d8555e4810ba2068c9dcb59d81184caf3b9",
+          "actual_sha256": "4bd4292db2ca648ed7152fc4ba361d8555e4810ba2068c9dcb59d81184caf3b9",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_reference_classification_smoke.json",
+          "expected_sha256": "1a6f3788eeda5758365becdeaacad61513d007c59372024d0215574c56bfab47",
+          "actual_sha256": "1a6f3788eeda5758365becdeaacad61513d007c59372024d0215574c56bfab47",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_reference_classification_smoke_final.py",
+          "expected_sha256": "3291af0d21d9e20eb2fa8e505fdfa094627a3d7348633a5ced97c6381755e0a1",
+          "actual_sha256": "3291af0d21d9e20eb2fa8e505fdfa094627a3d7348633a5ced97c6381755e0a1",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_reference_classification_saved_verification.py",
+          "expected_sha256": "bb3dfa047b52cd157906c0e76e97d7c4581044c2e4482d8f37155ecf3300e1e0",
+          "actual_sha256": "bb3dfa047b52cd157906c0e76e97d7c4581044c2e4482d8f37155ecf3300e1e0",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_reference_classification_attempt01_reader.py",
+          "expected_sha256": "a6eda29803befcf20d44d3e97f6394352a9c3c0ab147d5121bd9dc0b5aa66e3a",
+          "actual_sha256": "a6eda29803befcf20d44d3e97f6394352a9c3c0ab147d5121bd9dc0b5aa66e3a",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_reference_classification_attempt01_smoke.py",
+          "expected_sha256": "4bd4292db2ca648ed7152fc4ba361d8555e4810ba2068c9dcb59d81184caf3b9",
+          "actual_sha256": "4bd4292db2ca648ed7152fc4ba361d8555e4810ba2068c9dcb59d81184caf3b9",
+          "matched": true
+        },
+        {
+          "path": "solidworks/research/parallel_sketch_intersection_reference_classification_attempt01_smoke.json",
+          "expected_sha256": "1a6f3788eeda5758365becdeaacad61513d007c59372024d0215574c56bfab47",
+          "actual_sha256": "1a6f3788eeda5758365becdeaacad61513d007c59372024d0215574c56bfab47",
+          "matched": true
+        }
+      ],
+      "matched": 18,
+      "total": 18,
+      "published_isolated_delta": 136,
+      "retained_raw20_bytes": 272
+    }
+  ],
+  "source_replay_executed": false,
+  "native_bindings_verified": false,
+  "runtime_implemented": false,
+  "coverage_credit": 0,
+  "qualifications": [
+    "Exact bytes only; no newline normalization or historical pin substitution. A matching direct publication hash does not prove transitive reader admission or native binding.",
+    "Original full Source roots, independent complete owned carriers and scalar/span oracles, typed operations, document/concurrency and publication gates remain required.",
+    "Keep the two isolated measurements separate; raw20 remains unresolved."
+  ]
+}

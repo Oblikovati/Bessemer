@@ -12,6 +12,11 @@ observed values do not define their domains. Raw20 remains unresolved.
 Keep the reports' isolated accounting separate. No combined whole-part
 measurement, native matching, cache resolution or geometry claim follows.
 
+Both original reports are retained under `reports/`. Preparation verified
+all 11 direct publication dependencies for C-3308 and all 18 for C-3310
+against their exact current bytes. This does not establish transitive
+admission or replace original Source and native verification.
+
 Implementation must reuse the complete archive readers and revision-owned
 edit/history contracts. Require independent complete roots and literal
 patches, signed/full-u16 controls, whole-document reopen/reversal, actual
