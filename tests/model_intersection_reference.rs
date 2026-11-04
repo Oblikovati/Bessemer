@@ -4,6 +4,12 @@ use bessemer::header::ArchiveVersion;
 use bessemer::model_archives::*;
 #[path = "model_intersection_reference/contracts.rs"]
 mod contracts;
+#[path = "model_intersection_reference/documents.rs"]
+mod documents;
+#[path = "support/owned_resolved_document.rs"]
+mod owned_resolved_document;
+#[path = "support/unselected_document_streams.rs"]
+mod unselected_document_streams;
 
 const LIMITS: ModelArchiveLimits = ModelArchiveLimits {
     maximum_bytes: 30000,

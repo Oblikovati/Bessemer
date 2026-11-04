@@ -168,6 +168,7 @@
     "Clippy requested as_chunks for the constant-size fixture iterator. The second process uses that equivalent iterator without an allowance, and its full export matches the first process byte for byte. The initial test source and lint output are retained."
   ],
   "coverage_credit": 0,
+  "artifact_git_revision": "5eb74096dc6f98373f63f2b2824fe7761edce922",
   "qualifications": [
     "Standalone builds use isolated outputs and the existing validated dependency artifacts; full Cargo/repository and exact-head platform gates for this new runtime remain pending.",
     "Fresh unchanged Source parsing of actual typed changed outputs remains pending; current Source acceptance binds the original matrix roots and independent literal oracles.",

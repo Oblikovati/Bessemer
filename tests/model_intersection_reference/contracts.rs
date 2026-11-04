@@ -98,7 +98,7 @@ fn verify_reference_projection(
     }
 }
 
-fn verify_reference_edit(
+pub(super) fn verify_reference_edit(
     source: &PartResolvedFeaturesArchive,
     raw: &[u8],
     state: &State,

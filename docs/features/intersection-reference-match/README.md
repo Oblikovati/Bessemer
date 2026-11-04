@@ -117,6 +117,16 @@ are listed separately. Both corrected processes passed frozen-import and file
 integrity checks. Native edits, caller/version boundaries, complete documents,
 concurrency and publication gates remain open.
 
+The [complete document matrix](document-matrix-verification.json) passed all
+1,344 cases in two fresh processes, with 10,752 document edits and typed exact
+reversals per run. Each changed document reopens through the public reader,
+preserves every unrelated stream, name and ordering, and reverses to all original
+container bytes. Independent field/byte/history assertions remain in force.
+The [shared setup gate](document-helper-sharing-verification.json) also retained
+all 11,493 existing visual-document cases before and after helper extraction.
+Native edits, wider caller/version boundaries, mixed concurrency and full
+Cargo/platform publication gates remain pending.
+
 Regenerate the matrix only during explicit oracle initialization:
 
 ```powershell
