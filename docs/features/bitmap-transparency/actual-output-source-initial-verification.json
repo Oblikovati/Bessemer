@@ -1,0 +1,29 @@
+{
+  "issue": 187,
+  "stage": "First complete unchanged Source replay of actual typed outputs",
+  "passed": true,
+  "process_reaped": true,
+  "exit_code": 0,
+  "actual_roots": 39474,
+  "changed_roots": 35088,
+  "noops": 4386,
+  "test_seconds": 1200.348,
+  "source_python_files": 5939,
+  "consumed_source_modules": 168,
+  "snapshot_identity": "a6d871098ded81808e0de2127260443f53a7f6f58ea389b1d5f4eb3bcdeb814b",
+  "export_sha256": "af60420f34703b54f94ae0c7324dd5a57d876174f3efd804d0bb2b0602c0d7f4",
+  "accounting_adapter_installed": false,
+  "checks": [
+    "Every actual output matched independent literal full-stream bytes before original Source parsing",
+    "Complete graph and shared map including binary64 bits matched baseline with only the expected saved word replaced",
+    "Physical definitions, first-instance alias identity, exact root spans, EOF and original unknown totals unchanged",
+    "All sketch/detail accounting signatures unchanged",
+    "Immutable Source hash and origin guard passed"
+  ],
+  "qualification": "Expected application-owned baseline words alone were replaced. Original Source reader functions and output identities were never overridden. Second fresh replay is running and is not accepted here.",
+  "artifacts": {
+    "target/replay-bitmap-actual-output-source.py": "fb2181a8b5309a248c2a6db3163029c10e1f0fdd9375b95c788195dbf3a3b078",
+    "target/bitmap-actual-output-source-1.log": "478cd87e1d5598150243ea9aae626ee82b4f4999cefe7aafc983a0caa3f5739c",
+    "target/bitmap-operation-process-1.bin": "af60420f34703b54f94ae0c7324dd5a57d876174f3efd804d0bb2b0602c0d7f4"
+  }
+}
