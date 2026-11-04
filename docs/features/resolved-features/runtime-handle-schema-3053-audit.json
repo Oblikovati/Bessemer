@@ -1,0 +1,99 @@
+{
+  "issue": 2,
+  "edition": "Edition 0.3053 \u00b7 2026-11-04 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "specification_sha256": "5f4d11030c40965a3ce8364cfcf12c19556125f0aa847c8e7fe4982479ab1129",
+  "scope": "Selected11 newly documented clauses11.1782..11.1792; not a whole-schema audit",
+  "snapshot_path": "docs/features/resolved-features/runtime-handle-schema-3053-snapshot.md",
+  "snapshot_representation": "Owned excerpt normalized to LF before hashing; specification hash binds original bytes",
+  "snapshot_sha256": "08bfa1c4ec1a30cd03ca71bf8914c1596f65241cdec4aac61becd0c169812ff4",
+  "clauses": [
+    {
+      "clause": "11.1782",
+      "heading": "### 11.1782 AutoPatternPoints current producers and exact-one eligibility",
+      "source_status": "*Status: existing retained positive native evidence requalified with current types/bytes; eligibility scope separate \u00b7 Evidence: C-3467*",
+      "section_sha256_normalized_lf": "a68dce0e06d8b0bb36e2be32fdefa087731a101df5f799a2af502914cc0f8eda"
+    },
+    {
+      "clause": "11.1783",
+      "heading": "### 11.1783 Selected kind1 paired offset-form line inputs",
+      "source_status": "*Status: actual component providers, point/index pairs and source LineHandle ordinals verified; geometry meanings qualified \u00b7 Evidence: C-3468*",
+      "section_sha256_normalized_lf": "e04829882f3254064b6e493cd966819273f25eaa6e8415315b1f1bf717fa0da1"
+    },
+    {
+      "clause": "11.1784",
+      "heading": "### 11.1784 Selected kind1 endpoint-centred arc creation inputs",
+      "source_status": "*Status: typed temporary-arc member inputs and source ordinals verified; final geometry separate - Evidence: C-3469*",
+      "section_sha256_normalized_lf": "5edb8f9c96a80906073b6abf10f1de883217a88cada7ed443d90c030a894e3c5"
+    },
+    {
+      "clause": "11.1785",
+      "heading": "### 11.1785 Hatch definition name-first lookup and current ID fallback",
+      "source_status": "*Status: typed current-style definition lookup and raw fullword equality verified; final provider effects separate - Evidence: C-3470*",
+      "section_sha256_normalized_lf": "254735c15b898e0ac1fe57ad35e14a7c890f25b755dd3e80314118edf431bf54"
+    },
+    {
+      "clause": "11.1786",
+      "heading": "### 11.1786 Canonical slot-handle clone reference-bit checkpoints",
+      "source_status": "*Status: selected canonical clone allocations and constructor inputs verified; coherent final geometry separate - Evidence: C-3471*",
+      "section_sha256_normalized_lf": "625d4a5a75d166882c0cb2eb3ab2829b72e9da153541a9e5d1bcdbe9960443c4"
+    },
+    {
+      "clause": "11.1787",
+      "heading": "### 11.1787 Selected kind2 radial-form arc creation inputs",
+      "source_status": "*Status: source-bound numeric input forms and four temporary arc records verified; geometry separate - Evidence: C-3472*",
+      "section_sha256_normalized_lf": "66958ed4ac49184c1052b25ee97d9ca91807e311ce8244b5449898dae6e9c1cc"
+    },
+    {
+      "clause": "11.1788",
+      "heading": "### 11.1788 Selected slot creation Type predicate",
+      "source_status": "*Status: exact current seed predicate, canonical class return and data carrier verified - Evidence: C-3473*",
+      "section_sha256_normalized_lf": "f4689fbfc3c79ae39f7d9ff6c5faf3ea61c4eb1da02b04150a4721de0b34247b"
+    },
+    {
+      "clause": "11.1789",
+      "heading": "### 11.1789 Equal-distance current MidPoint pointer collector",
+      "source_status": "*Status: typed current constraint lookup and conditional F0 output transport verified - Evidence: C-3474*",
+      "section_sha256_normalized_lf": "0213cde75e5cfa7822a0f293b83f14f559a6a0985a6dff9bdb1555531b5dfb77"
+    },
+    {
+      "clause": "11.1790",
+      "heading": "### 11.1790 Character-format scalar API aliases and effective-version query",
+      "source_status": "*Status: same declaring class, raw64 accessors and selected wire/version-query joins verified; physical semantics separate - Evidence: C-3475*",
+      "section_sha256_normalized_lf": "7249884ad7a9d7829deb99600e6feb969eff25e120931c364531a958714b4fe2"
+    },
+    {
+      "clause": "11.1791",
+      "heading": "### 11.1791 Common-handle legacy index escape and sign-conversion policy",
+      "source_status": "*Status: canonical shared serializer and exact local index grammar verified; old context admission separate - Evidence: C-3476*",
+      "section_sha256_normalized_lf": "7c778cbb6862f3abdda1b71c62431f31d1b28ef5681d92140bbaf68081bd3ba9"
+    },
+    {
+      "clause": "11.1792",
+      "heading": "### 11.1792 Common-handle RefID disjoint legacy LOAD presence",
+      "source_status": "*Status: selected incoming index paths, exact suffix gates and signed codecs verified; inherited scope separate - Evidence: C-3477*",
+      "section_sha256_normalized_lf": "1ebcc95b70fd03757a6878eeb3953ee59ce445ef8fb5890a9fea617a6c259feb"
+    }
+  ],
+  "decisions": [
+    "Preserve raw AutoPatternPoints words: constructor1/disable0 producers do not close the stored domain; full runtime65537 is not exact1 despite low16 STORE1",
+    "Keep slot line/arc creation formulas, source ordinals, clone checkpoints and exact Type producer predicates separate from archive fields and geometric success; no inferred unit, radius or enum equivalence",
+    "Retain hatch name-first/ID-fallback priority only as a qualified current lookup; preserve full signed32 saved IDs without index/domain normalization",
+    "Do not reinterpret equal-distance runtime vector/list storage or record stride256 as new serialized fields; F0 pointer transport does not prove midpoint geometry",
+    "Record utCharFormat API aliases ObliqueAngle40, LineWidth48, SpaceBetweenChars50 as raw64 moves; old effective-version LOAD gate0x725 is not a historical writer rule or a new admitted context",
+    "Record common-handle index grammar: below signed0x77E,0x777F is ordinary30591; old nonmarker conversion affects only0xFF9D..0xFFFF below signed0xA84; later nonmarkers zero-extend; escaped signed32 values bypass conversion",
+    "Record disjoint RefID LOAD presence: unsigned0x8E8..0x997 or signed version>=0x9F7; gap0x998..0x9F6 omits it; DimOnCM uses signed0x17D7; selected STORE writes both signed32 suffixes",
+    "Keep initial provider-version query, later latched query, inherited bodies, object maps and actual caller admission distinct; no old-version fixture or class admission is supplied",
+    "Preserve the stated checker-history limitations and failed-source provenance qualifications rather than fabricating or rerunning frozen evidence"
+  ],
+  "implementation_effect": "Documentation only; no new codec, producer emulation, Boolean normalization, version admission, geometry or runtime fallback",
+  "acceptance_credit": "No source/container replay, native application execution, population, byte/global coverage or whole-schema parity credit from this audit",
+  "related_code": [
+    "src/model_archives/sketch_references.rs",
+    "src/model_archives/simulation_embedded/component_boundaries.rs"
+  ],
+  "remaining": [
+    "Complete old containing-body/context evidence before any admission change",
+    "Actual runtime/provider/geometry acceptance remains independent of stored-schema validation",
+    "Overall schema and interop parity remain open in #2"
+  ]
+}
