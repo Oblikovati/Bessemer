@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Preserved negative component-edge reference counts while continuing the conditional composite-reference pair and retaining positive-count bounds. (#204)
+
 - Fixed model-field equality discarding CString count-prefix-only edits and their derived history. (#200)
 
 - Preserved original Inspection attribute lexemes when reversing edits with a retained immutable checkpoint, including all replay history parents. (#194)

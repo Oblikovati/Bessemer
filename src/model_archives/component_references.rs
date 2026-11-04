@@ -145,7 +145,7 @@ pub(super) fn edge(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
     vector(reader, "unknown_158")?;
     vector(reader, "unknown_170")?;
     reader.u32("unknown_18c")?;
-    for index in 0..reader.signed_count("reference_count", 2)? {
+    for index in 0..super::configuration_io::positive_count(reader, "reference_count", 2)? {
         reader.object(&format!("references[{index}]"), map, ModelObjectRole::Any)?;
     }
     if flags & 6 != 6 && flags & 8 != 0 {

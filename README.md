@@ -97,6 +97,10 @@ Older part layouts, assembly mate/feature streams, drawing model archives,
 geometric interpretation and validation, and semantic CAD editing remain to be
 implemented; this is not yet Corliss feature parity.
 
+Component-edge readers preserve signed reference counts, skip nonpositive
+reference loops, and continue the documented optional pointer pair. See the
+[signed-count regression evidence](docs/features/component-edge-counts/README.md).
+
 ```rust
 let bytes = std::fs::read("part.sldprt")?;
 let mut doc = bessemer::Document::from_bytes(&bytes)?;

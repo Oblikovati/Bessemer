@@ -49,7 +49,7 @@ fn unsupported_component_branches_and_invalid_edge_counts_fail_explicitly() {
         for (suffix, value, class) in [
             ("unknown_84", 7, FailureClass::Unsupported),
             ("has_reference_info", -1, FailureClass::Unsupported),
-            ("reference_count", -1, FailureClass::Invalid),
+            ("reference_count", i32::MAX, FailureClass::Invalid),
         ] {
             mutations += rejected_mutation(version, &fields, suffix, value, class);
         }
