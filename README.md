@@ -838,3 +838,8 @@ All eight partitions must succeed before the four full platform gates run.
 `cargo xtask tsan` retains the complete local run. A matching local partition is
 `cargo xtask tsan --shard 0/8` on Linux x86_64. The planner rejects custom Cargo
 target layouts instead of silently dropping targets.
+
+Stored bitmap matching-color, transparent-color and ink-markup settings are
+available through `bitmap_appearance_states()` and `edit_bitmap_appearance()`.
+Values retain their full signed or unsigned width; historical archives can
+omit the ink-markup word. See [the appearance contract](docs/features/bitmap-appearance/README.md).

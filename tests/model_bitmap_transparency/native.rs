@@ -6,6 +6,8 @@ mod native_documents;
 #[path = "native_packet.rs"]
 mod native_packet;
 use native_packet::{NativeBitmapCase, native_bitmap_cases};
+#[path = "../support/native_kernel_context.rs"]
+mod native_kernel_context;
 
 const NATIVE_LIMITS: ModelArchiveLimits = ModelArchiveLimits {
     maximum_bytes: 64 * 1024 * 1024,
@@ -16,16 +18,7 @@ const NATIVE_LIMITS: ModelArchiveLimits = ModelArchiveLimits {
 };
 
 fn native_bitmap_kernel() -> CompressedKernelContext {
-    let path = std::env::var_os("BESSEMER_KERNEL_SCHEMA").unwrap();
-    let bytes = std::fs::read(path).unwrap();
-    CompressedKernelContext {
-        base: bessemer::parasolid::BaseSchema::from_bytes(&bytes).unwrap(),
-        maximum_expanded: 64 * 1024 * 1024,
-        transmit_limits: bessemer::parasolid::TransmitLimits {
-            maximum_records: 1_000_000,
-            maximum_field_elements: 10_000_000,
-        },
-    }
+    native_kernel_context::native_test_kernel_context()
 }
 
 fn native_bitmap_id(case: &NativeBitmapCase<'_>) -> ConfigurationId {

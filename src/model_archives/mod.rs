@@ -355,7 +355,11 @@ pub use sketch_reference_lookup::{
     ModelSketchReferenceStoredLookupEdit, ModelSketchReferenceStoredLookupKeys,
     ModelSketchReferenceStoredLookupState,
 };
+mod bitmap_appearance;
 mod bitmap_transparency;
+pub use bitmap_appearance::{
+    ModelBitmapAppearanceEdit, ModelBitmapAppearanceState, ModelBitmapAppearanceWords,
+};
 pub use bitmap_transparency::{
     ModelBitmapTransparencyEdit, ModelBitmapTransparencyState, ModelBitmapTransparencyWords,
 };

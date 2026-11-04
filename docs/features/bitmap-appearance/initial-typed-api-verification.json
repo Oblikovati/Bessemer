@@ -1,0 +1,78 @@
+{
+  "issue": 189,
+  "passed": true,
+  "processes_reaped": true,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "tests_per_process": 4,
+  "complete_stream_cases": 825,
+  "physical_owners": 1650,
+  "aliases": 825,
+  "distinct_appearance_fields": 4800,
+  "requests_for_all_cases_per_process": 24000,
+  "additional_owned_current_requests_per_process": 11250,
+  "archive_versions": [
+    11000,
+    18000,
+    19000
+  ],
+  "typed_contract": [
+    "I32 matching-color percentage",
+    "U32 transparent color",
+    "Optional I32 ink-markup texture",
+    "No normalization or synthesized historical ink word"
+  ],
+  "checks": [
+    "All isolated edits match complete literal byte patches",
+    "Every stored field matches independent expected values",
+    "Full derived history and physical parents",
+    "Exact stored coverage and fidelity",
+    "Diagnostics preserved",
+    "Input archive isolation",
+    "Foreign and stale rejection errors equal revision resolution errors",
+    "Absent-ink errors include requested value and required stored shape",
+    "Canonical unsupported schemas error rather than appear empty",
+    "Public types compile as Send+Sync"
+  ],
+  "same_executable_sha256": "a7d9b45fed309eb1671d374f3fadbe0d814899c075501c45247a3f88cfaaafd8",
+  "logs": [
+    {
+      "path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\bitmap-appearance-context-matched-tests.log",
+      "seconds": 7.71,
+      "sha256": "d88e49fb4a083644c8eb9c72c408ede4de0e57557761167286232776ff12a53c"
+    },
+    {
+      "path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\bitmap-appearance-context-matched-process-2.log",
+      "seconds": 10.41,
+      "sha256": "1aab6f55e46a283b6afc8931a5c0959114540903b5d1771c854022d05497be09"
+    }
+  ],
+  "initial_failures": [
+    {
+      "path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\bitmap-appearance-initial-tests.log",
+      "sha256": "8eae78537549f69a085467034091b1fba12c9ae3f33a20d6dc5d9724872a4d74"
+    },
+    {
+      "path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\bitmap-appearance-supported-versions.log",
+      "sha256": "7dff862d686f0101f3db8270b31fd96cd1aa89ab62bea3b44a86416634785b28"
+    }
+  ],
+  "corrections": [
+    "Used explicitly supported complete-context versions instead of11000-series boundary versions",
+    "Bound historical map indices to selected original configuration contexts",
+    "Matched actual per-context MBSM eligibility; exact EOF assertions retained"
+  ],
+  "manager_admission_changed": false,
+  "clippy_core_and_integration": "Passed with warnings denied",
+  "function_size_audit": [],
+  "remaining": [
+    "Complete immutable Source hash/origin audit",
+    "Native setting-word operations",
+    "Whole-document edits and reversals",
+    "Byte-identical fresh-process operation exports",
+    "Concurrency",
+    "Full local Cargo and exact-head remote publication"
+  ]
+}
