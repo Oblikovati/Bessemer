@@ -499,6 +499,9 @@ and immutable complete-XML replacement.
 Its [ordered record views](docs/features/inspection-records/README.md) retain
 literal document, group, characteristic, measurement and custom-property
 occurrences, with isolated edits to existing unqualified attribute text.
+Its [source identity comparison](docs/features/inspection-source-identity/README.md)
+checks caller-supplied bytes against stored size/checksum text and retains
+explicit completion, coverage and document provenance.
 
 Library-feature configuration, cross-reference and atom-ID interoperability is
 documented in [the feature evidence](docs/features/library-features/README.md).
