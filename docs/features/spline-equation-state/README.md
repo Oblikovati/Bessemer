@@ -56,3 +56,27 @@ Runtime expression parsing/evaluation, public API string/double conversion,
 provider contexts, transform interpretation, loaded-object reuse and native
 geometry acceptance are separate requirements. Their absence is not covered by
 this stored-state operation.
+
+## Owned baseline
+
+The [preparation proof](preparation-verification.json) records 18 complete Source
+feature graphs with 22,282 bytes and 6,016 primitive reads, plus 28 direct cases.
+The frozen Source tests and import/content guard passed. Two Bessemer tests using
+the existing archive API reconstructed the saved fields, matched the independent
+lock edits, reopened complete documents and reversed them byte-for-byte. The
+owned documents require the saved-manager context used by the Source generator;
+the earlier blank-manager failure is retained rather than hidden.
+
+These fixtures pin existing behavior before the new role API. The public
+stored-state projection, complete acceptance matrix and publication gates remain
+unfinished. No new runtime or geometry coverage is claimed.
+
+Reproduce the owned baseline without changing its files:
+
+```powershell
+python -B -X utf8 docs/features/spline-equation-state/freeze_owned_reference.py
+```
+
+The command regenerates every fixture in a temporary root and requires exact
+agreement. The small source-snapshot index identifies a deterministic gzip that
+retains every byte of the full import/hash record; no provenance is discarded.
