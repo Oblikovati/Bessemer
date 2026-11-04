@@ -99,3 +99,11 @@ actual output matched the independent complete original with exactly the
 requested four-byte patch. Packet identities and exclusions are retained in
 the [process proof](process-export-verification.json). Original-reader
 acceptance of these actual exports is running separately.
+
+The [actual-output Source replay](actual-output-source-verification.json)
+accepted all 1,080 owned and 60 native Rust exports. Each output reached EOF,
+matched the independent literal edit and retained the complete graph/map,
+aliases and raw float bits after only the intended scalar replacement. Root
+spans, class counts and unknown totals stayed unchanged. The frozen content
+and import guards passed, and the process exited successfully. The current
+full local repository gate and later exact-head remote gates remain pending.
