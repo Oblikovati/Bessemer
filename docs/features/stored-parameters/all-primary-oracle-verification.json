@@ -1,7 +1,7 @@
 {
   "issue": 202,
   "source_revision": "b1799d792c6c9728cb82d6af63e4666134240d6b",
-  "status": "Complete independent primary oracle passed; full native document edit gate and strict oracle regeneration are running",
+  "status": "Complete independent primary oracle and strict regeneration passed; full native document edit gate remains active",
   "original_source_tests_passed": 3,
   "original_source_tests_failed": 0,
   "initial_process_exit_code": 0,
@@ -31,10 +31,10 @@
     "native-first-after-primary-corpus-adapter.log": "c1ae87157a3ede19968d91b0fd46ec2b2badd8fef66eaf0b0ced8b853c290bfd",
     "all-native-primary-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "all-native-primary-format.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "all-native-primary-post-format-sizes.log": "5f4c95944c23b0f0fa89738c30c0e2bc456b0fb90f8d1184f1d7aede2656528b"
+    "all-native-primary-post-format-sizes.log": "5f4c95944c23b0f0fa89738c30c0e2bc456b0fb90f8d1184f1d7aede2656528b",
+    "all-native-parameter-primary-source-regeneration.log": "8934b6dc39642cdaf60064f496d40a4e9e86f6da1cb0f511a56231490fa21575"
   },
   "active_work": {
-    "strict_source_regeneration_session": 29224,
     "full_native_document_gate_session": 88265,
     "full_native_document_gate_log": "target/all-native-parameter-primary-document-gate.log",
     "coverage_goal": "Every43917 primary edit, complete native document reopen, unrelated-stream checks and fresh typed exact reversal"
@@ -44,5 +44,9 @@
     "No per-edit original Source full-model replay for all43917 changes; replacement primitive validity and complete original parses are independently checked",
     "Alternate/presence edit census, other version/class populations, native application/geometry and exact-head publication remain open",
     "Source accounting Bug #177 remains unchanged"
-  ]
+  ],
+  "strict_regeneration_exit_code": 0,
+  "strict_regeneration_tests_passed": 3,
+  "strict_regeneration_unittest_seconds": 589.537,
+  "strict_regeneration_source_snapshot_identity": "23478993d0740037eb4cf3928c79dbe99455955b6848a0992994d0c3bd85a9c6"
 }
