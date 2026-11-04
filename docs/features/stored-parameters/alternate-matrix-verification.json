@@ -1,6 +1,6 @@
 {
   "issue": 202,
-  "status": "Complete owned alternate/presence matrix passed independent original Source and typed document operations; strict replay is active",
+  "status": "Complete owned alternate/presence matrix passed independent original Source, strict byte regeneration and typed document operations",
   "native_positive_alternate_population": 0,
   "owned_graphs": 15,
   "alternate_value_edits": 15,
@@ -26,16 +26,22 @@
     "parameter-alternate-matrix-build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "parameter-alternate-matrix-tests.log": "ae2aa409020d61fbf8d2fc2f268a96835687747eeba40673219d5b76b3610d4c",
     "parameter-alternate-matrix-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "parameter-alternate-matrix-post-format-sizes.log": "574ef095918579bd242902cf584f17516a8ccbaca42ef375741b2994c8fd3ac9"
-  },
-  "active_strict_regeneration": {
-    "session": 30582,
-    "log": "target/parameter-alternate-matrix-source-regeneration.log"
+    "parameter-alternate-matrix-post-format-sizes.log": "574ef095918579bd242902cf584f17516a8ccbaca42ef375741b2994c8fd3ac9",
+    "parameter-alternate-matrix-source-regeneration.log": "36edfb45da137c7aa4f73a0f3b1f98c94732282c1349fae228c55a42bf234836"
   },
   "exclusions": [
     "No positive native alternate/presence claims: every native numeric presence byte is zero",
     "Owned alternate/presence matrix is version19000 resolved-feature context; other contexts retain separate acceptance",
     "Presence edits preserve the existing field shape; adding/removing alternates is not implemented by this operation",
     "Native application, effective-value/unit/equation evaluation, geometry and exact-head publication remain open"
-  ]
+  ],
+  "strict_regeneration": {
+    "tests_passed": 1,
+    "unittest_seconds": 391.134,
+    "fixture_bytes_unchanged": true,
+    "retained_snapshot_and_fixture_reverification_exit_code": 0,
+    "original_process_exit_code": null,
+    "original_process_exit_note": "Process handle was already reaped; retained snapshot was written only after successful tests, Source guards and strict fixture comparison."
+  },
+  "strict_source_snapshot_identity": "e9e1203329cb0b553f026bcdced48dff0e33f19a8a705127aecb974e18c85a92"
 }

@@ -250,8 +250,8 @@ presence requests remain distinct from changed results.
 
 The Source matrix took 400.031 seconds and the typed suite took 35.43 seconds;
 these are verification timings. The 999,269-byte expected-image packet and
-initial reference snapshot are retained. Strict source regeneration is still
-running. `alternate-matrix-verification.json` records scope and exclusions;
+initial reference snapshot are retained. Strict source regeneration passed all
+3,840 cases in 391.134 seconds and reproduced every fixture byte. `alternate-matrix-verification.json` records scope and exclusions;
 this does not establish other version/context or native-positive populations.
 
 ```text
