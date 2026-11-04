@@ -13,6 +13,7 @@ extern crate self as bessemer;
 mod archive;
 mod archive_codec;
 pub mod biography;
+pub mod bitmap_resource;
 pub mod block_stream;
 pub mod composer;
 pub mod compound;

@@ -1,0 +1,95 @@
+{
+  "issue": 190,
+  "passed": true,
+  "processes_reaped": true,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "tests_per_process": 9,
+  "owned_literals": 20,
+  "owned_primary_replacements": 140,
+  "proper_prefix_rejections": 1513405,
+  "appended_remainder_rejections": 20,
+  "native_resources": 4,
+  "native_forward_operations": 20,
+  "native_reverse_operations": 20,
+  "native_unchanged_operations": 4,
+  "native_changed_operations": 16,
+  "parallel_workers": 8,
+  "serial_and_worker_operation_visits": 1080,
+  "requests_per_visit": [
+    "forward",
+    "over-budget rejection",
+    "reverse"
+  ],
+  "public_send_sync_assertions": true,
+  "function_size_audit_passed": true,
+  "process_logs": [
+    {
+      "path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\bitmap-resource-final-process-1.log",
+      "bytes": 1041,
+      "sha256": "32d73697339c371573ac0611b8ec666ca649411851abf570d23ea8abaab37ab6"
+    },
+    {
+      "path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\bitmap-resource-final-process-2.log",
+      "bytes": 1041,
+      "sha256": "3e9d0758b1e3d77ae785e43bd9fcfef5a9a6f04ad7bbaf5f187873d26c03f096"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "src\\bitmap_resource\\codec.rs",
+      "bytes": 2060,
+      "sha256": "6497a231b21b8cb604b6e5648315d266eac67f1ac6e8b37d3ac02957c53beb2f"
+    },
+    {
+      "path": "src\\bitmap_resource\\edit.rs",
+      "bytes": 3571,
+      "sha256": "a92cddc8fd22af757b93254426bb7d7c267f1fbb12e0f86ab1dc4955c926a20f"
+    },
+    {
+      "path": "src\\bitmap_resource\\mod.rs",
+      "bytes": 2855,
+      "sha256": "f0a50ed28c5013f011e89a08c89a0da1e83e8ecec9c1c2c5dfb1740d45e3c07f"
+    },
+    {
+      "path": "src\\bitmap_resource\\types.rs",
+      "bytes": 4535,
+      "sha256": "edf1635888a9875015809024866d73d9290526d4638abfa70c1758a6abac2bd5"
+    },
+    {
+      "path": "tests\\bitmap_resource.rs",
+      "bytes": 9506,
+      "sha256": "f403d43c255c40f40441aaf3e50d9ff1a89bce4c859535671711d0920333d659"
+    },
+    {
+      "path": "tests\\bitmap_resource\\concurrency.rs",
+      "bytes": 2395,
+      "sha256": "cbef1f50a09e64450c852f1d895dbbd0e7658ed6e90245a7a5f49b77694b76b0"
+    },
+    {
+      "path": "tests\\bitmap_resource\\native.rs",
+      "bytes": 4431,
+      "sha256": "afb3d01e82f6f780c70b149d286e5ea2727f2879a8f0f21fcee1843ac45e566a"
+    }
+  ],
+  "executable": {
+    "path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\bitmap-resource-final-tests.exe",
+    "bytes": 2613248,
+    "sha256": "93f742241ed2b2025f3b4cba441f63b81cc7036ead641aa9bc1ccc9b3e32cb6e"
+  },
+  "scope": "Exact count/payload bytes, immutable source isolation, field history, unselected native stream identity and complete original container reversal. No image decoding/runtime behavior claim.",
+  "remaining": [
+    "Full local gate",
+    "Exact-head remote platform and ThreadSanitizer gates",
+    "Native application equivalence",
+    "Whole-schema parity"
+  ],
+  "formatter_and_clippy_passed": true,
+  "initial_full_gate_failure": {
+    "reason": "Seven missing public enum variant docstrings; documentation added without changing runtime behavior.",
+    "log_sha256": "8d78667588fc79a5c6c3426e72d151e8a595e1a4e696c25aa4025cdda8949550"
+  },
+  "source_qualification": "Focused executable predates only seven enum-variant docstrings added after the first full-gate lint failure; full Cargo gate checks the final documentation-bearing sources."
+}

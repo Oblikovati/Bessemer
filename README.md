@@ -843,3 +843,8 @@ Stored bitmap matching-color, transparent-color and ink-markup settings are
 available through `bitmap_appearance_states()` and `edit_bitmap_appearance()`.
 Values retain their full signed or unsigned width; historical archives can
 omit the ink-markup word. See [the appearance contract](docs/features/bitmap-appearance/README.md).
+
+`bitmap_resource::BitmapResourceArray` reads complete headerless named bitmap
+arrays and edits opaque payloads with count-width preservation, diagnostics,
+coverage and field history. Stream selection is explicit; no pixel layout or
+runtime resize is inferred. See [the resource contract](docs/features/bitmap-resource-arrays/README.md).

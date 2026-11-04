@@ -40,6 +40,8 @@
 
 ### Added
 
+- Added bounded named bitmap resource-array reads, isolated payload edits and count/payload validation with complete field history. (#190)
+
 - Added revision-owned bitmap matching-color, unsigned transparent-color and optional ink-markup views with isolated saved-word edits. (#189)
 
 - Added revision-owned canonical sketch-reference configuration lookup key views and isolated or paired signed-key edits. (#188)
