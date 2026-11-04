@@ -1,0 +1,46 @@
+{
+  "issue": 187,
+  "passed": true,
+  "processes_reaped": true,
+  "final_identical_executable_processes": [
+    2,
+    3
+  ],
+  "initial_process": 1,
+  "qualification": "Initial process preceded a test-only helper split; processes2 and3 used the same final executable. Production library unchanged across all three.",
+  "typed_api_roots_per_process": 39474,
+  "changed_roots_per_process": 35088,
+  "noops_per_process": 4386,
+  "document_forward_edits_per_process": 4386,
+  "document_reversals_per_process": 4386,
+  "wire_exports_identical": true,
+  "export_bytes": 9237788,
+  "export_sha256": "af60420f34703b54f94ae0c7324dd5a57d876174f3efd804d0bb2b0602c0d7f4",
+  "final_executable_sha256": "ef99f52aa14dfe637d29aaf1f75f697f513c3a71fb0ea1b281d42223bb49aeb5",
+  "logs": [
+    {
+      "process": 1,
+      "seconds": 34.9,
+      "sha256": "71d85bb64886886da62d1855c73faf69c62bf233eb9d272c01f8d05892051b9f"
+    },
+    {
+      "process": 2,
+      "seconds": 38.18,
+      "sha256": "eb253f1f1fd2b56362d98f627e66188b1db373ca1fb10917e06d5f0996f5204c"
+    },
+    {
+      "process": 3,
+      "seconds": 42.41,
+      "sha256": "301ebd15f6f84eb3a850e81e13ff4fce7f8c7b60683f95fc8a48982a70c031c9"
+    }
+  ],
+  "checks": [
+    "Every typed output matched independent complete-stream byte patches",
+    "Complete document reopen retained all typed fields",
+    "Unselected stream names, order and bytes unchanged",
+    "Fresh typed reversals restored original fields, feature bytes and entire original document bytes",
+    "Input documents and source archives unchanged"
+  ],
+  "source_replay": "Running separately against actual process1 bytes; not yet accepted",
+  "full_gate": "Pending"
+}

@@ -1,0 +1,49 @@
+{
+  "issue": 187,
+  "passed": true,
+  "processes_reaped": true,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "processes": [
+    2,
+    3
+  ],
+  "native_streams": 4,
+  "native_typed_archive_requests_per_process": 108,
+  "changed_archive_requests_per_process": 96,
+  "noop_archive_requests_per_process": 12,
+  "document_forward_edits_per_process": 12,
+  "document_reverse_edits_per_process": 12,
+  "native_corpus_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "native_span_oracle_sha256": "5c7800e13504a90c8ceeabb9df61b2af2df15fa0aa1b676f8e79f21dd44ce6a5",
+  "executable_sha256": "e551ec0412a1bca4bb345886e2b51aa480e60d115aed04023fc94118fc6ddb21",
+  "library_sha256": "a5b85a6c8e79a2ea41f1cbd8a823f451e5f6caec6244569114de9e8e0ce71ba8",
+  "logs": [
+    {
+      "process": 2,
+      "seconds": 55.4,
+      "sha256": "26423d6507f1add609c69038569267dee77aeacbdbc269c66184b799987df854"
+    },
+    {
+      "process": 3,
+      "seconds": 56.54,
+      "sha256": "74e48c19f970ca71ae7a243275bf8742d0fcf43323d937a94d2186d788ef5761"
+    }
+  ],
+  "checks": [
+    "Canonical complete native owners and all12 independently pinned scalar spans",
+    "All nine signed controls for each typed role match literal full-stream patches",
+    "Exact completion, coverage, fidelity, diagnostics, history and revision errors",
+    "Complete native document reopen matches all typed fields and unrelated streams",
+    "Fresh typed reverse restores original fields, feature bytes and complete original file using retained original builder",
+    "Original native input documents and source bytes unchanged"
+  ],
+  "initial_failed_attempt": "native-initial-attempt.json; not counted as document acceptance",
+  "qualification": "Original document checkpoint is retained through serialization and reopen. A fresh container alone cannot recover discarded original compressed bytes. No native classifier, renderer or geometry execution.",
+  "canonical_native_span_oracle": {
+    "sha256": "9bebe21a1cd170226fbba432b8b91c9f60557f284302918f5ec1e748fc1c71bb",
+    "normalization": "Authored TSV normalized CRLF to LF for Git; all parsed rows, offsets and values unchanged. Execution-time original-byte hash retained above."
+  }
+}

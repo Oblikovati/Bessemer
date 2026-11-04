@@ -1,0 +1,128 @@
+{
+  "issue": 187,
+  "tool": "Ordinary Python pefile2024.8.26 RVA mapping with direct raw PE export-name/ordinal/address arrays; not REA Evidence",
+  "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+  "module_sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "policy_sha256": "266642ee8e51075f62675e057431b1e33cd4d7812ba18b034255bfc27495d00a",
+  "verified_unique_ranges": 13,
+  "verified_range_bytes_sum": 636,
+  "ranges": [
+    {
+      "start": "0x4c0fe770",
+      "end": "0x4c0fe7c7",
+      "file_offset": 16374640,
+      "bytes": 87,
+      "sha256": "133b5575cde49aa485f37327c9bbc873de288a9ac113fb30f7ccaabe1bfa56df"
+    },
+    {
+      "start": "0x4c0fe7c7",
+      "end": "0x4c0fe7f0",
+      "file_offset": 16374727,
+      "bytes": 41,
+      "sha256": "5824fb31f4157ea68db7a9d0bfa64c762adc3a6d8de305ad21ed90e4fd8c4192"
+    },
+    {
+      "start": "0x4c0fe7f0",
+      "end": "0x4c0fe85a",
+      "file_offset": 16374768,
+      "bytes": 106,
+      "sha256": "2ad0488af611365e52c379ab1fcafc018d098cb92885fefdd26020d21e927849"
+    },
+    {
+      "start": "0x4c0fe85a",
+      "end": "0x4c0fe86a",
+      "file_offset": 16374874,
+      "bytes": 16,
+      "sha256": "83ffa681825d84e1d0027f3b1ce96f45fa6cf3c1dcc87a45e817974fb5d1f765"
+    },
+    {
+      "start": "0x4c0fe86a",
+      "end": "0x4c0fe874",
+      "file_offset": 16374890,
+      "bytes": 10,
+      "sha256": "71fbded45559f9869368b04599218ee56975bfc699a8af6ab8b8e2cebf4661d1"
+    },
+    {
+      "start": "0x4c0fdf10",
+      "end": "0x4c0fe04d",
+      "file_offset": 16372496,
+      "bytes": 317,
+      "sha256": "f2fe41f0105c89624a5584b31d760d2e5cefe2aba5f4a7c6c4ee44d8dfdeae1f"
+    },
+    {
+      "start": "0x4b2c6900",
+      "end": "0x4b2c6904",
+      "file_offset": 1465600,
+      "bytes": 4,
+      "sha256": "6adcb7ca87b78d8ea2260c2586dbba1ec45af1f7781b84427c334943708e2b7f"
+    },
+    {
+      "start": "0x4b2c6bb0",
+      "end": "0x4b2c6bb4",
+      "file_offset": 1466288,
+      "bytes": 4,
+      "sha256": "d94ef11eefaf1886c3c1734a903f9fa79d3e89648df191c371f27e871cac0ac1"
+    },
+    {
+      "start": "0x4b2c6af0",
+      "end": "0x4b2c6af4",
+      "file_offset": 1466096,
+      "bytes": 4,
+      "sha256": "e6001fd7c43d35f244e418688ebe47d7777d15c557f62267ef4f2fb6c3bf7a74"
+    },
+    {
+      "start": "0x4b2c6d60",
+      "end": "0x4b2c6d64",
+      "file_offset": 1466720,
+      "bytes": 4,
+      "sha256": "dbd4e6f9fedb7537da029376953e29a9d608ab27f5c21b221a22f4dc34d53961"
+    },
+    {
+      "start": "0x4b2c69f0",
+      "end": "0x4b2c69f4",
+      "file_offset": 1465840,
+      "bytes": 4,
+      "sha256": "0b27ad85b74e93b12f68ebe531271f15e322083184edc1e582fdf577a151cffc"
+    },
+    {
+      "start": "0x4c0fe880",
+      "end": "0x4c0fe893",
+      "file_offset": 16374912,
+      "bytes": 19,
+      "sha256": "834e06b19c4da17514cb82eab5ab8f5a4362a60b24c97feddc3098b76b59c735"
+    },
+    {
+      "start": "0x4c0fde40",
+      "end": "0x4c0fde54",
+      "file_offset": 16372288,
+      "bytes": 20,
+      "sha256": "94e3b093bad9fd4ea07bc4742c9752b5717408106873c392d8afbefe2e3ec7d0"
+    }
+  ],
+  "typed_exports_verified": {
+    "?get_HasTransparency@moSketchBitmapData_c@@QEBAHXZ": "0x4b2c6900",
+    "?set_HasTransparency@moSketchBitmapData_c@@QEAAXH@Z": "0x4b2c6bb0",
+    "?getLevelOfTransparency@moSketchBitmapData_c@@QEBAHXZ": "0x4b2c6af0",
+    "?setLevelOfTransparency@moSketchBitmapData_c@@QEAAXH@Z": "0x4b2c6d60",
+    "?getTransparencyType@moSketchBitmapData_c@@QEBAHXZ": "0x4b2c69f0",
+    "?setTransparencyType@moSketchBitmapData_c@@QEAAXH@Z": "0x4c0fe880",
+    "?setTransparencyAlphaType@moSketchBitmapData_c@@QEAAXXZ": "0x4c0fe770",
+    "?getTransparencyAlphaType@moSketchBitmapData_c@@QEBA?AW4sketchBitmapAlphaType_e@@XZ": "0x4c0fde40",
+    "?initAlphaChannelData@moSketchBitmapData_c@@QEAAXXZ": "0x4c0fdf10"
+  },
+  "complete_raw_named_exports": 45766,
+  "initial_attempt": "All13 ranges matched; pefile parsed export view omitted a required named symbol, so no export acceptance was granted. Direct raw arrays then checked unchanged expected symbols.",
+  "target_executed": false,
+  "coverage_credit": 0,
+  "exclusions": [
+    "No disassembly or instruction assertions rerun",
+    "No pure instruction model or native classifier execution",
+    "Range equality does not establish complete control-flow coverage"
+  ],
+  "rea_qualification": "Earlier same-module REA byte request timed out after300s; retained in ../intersection-reference-match/native-tool-qualification.json. No setup or provider changes repeated.",
+  "collector_hashes": {
+    "target/verify-bitmap-native-byte-pins.py": "1e108316a893c01c114602c9af2d45525ed0c0a087523a2ec3dc8291a2ead070",
+    "target/verify-bitmap-native-byte-pins-first-attempt.py": "ec7faa9f5ab656a63d4d13e83b4df2ec025aecf39cb0cedd0c8d4b98be8f5f7d",
+    "target/correct-bitmap-native-export-verifier.py": "9689b8184efdd0a97615568e5bb577521c89bd49be21ae3bbd3b3d3e69f58ce2"
+  }
+}

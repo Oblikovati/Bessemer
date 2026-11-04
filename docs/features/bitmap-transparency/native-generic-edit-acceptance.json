@@ -1,0 +1,35 @@
+{
+  "issue": 187,
+  "stage": "Existing generic edit API native baseline; dedicated typed API not implemented",
+  "native_complete_streams": 4,
+  "original_exact_reconstructions": 4,
+  "isolated_role_edit_requests": 12,
+  "expected_replacements": [
+    -2147483648,
+    2147483647,
+    -1
+  ],
+  "checks": [
+    "Exact complete original feature stream reconstruction",
+    "One physical canonical bitmap-data definition per selected stream",
+    "All three original saved role values equal independent pinned zero observations",
+    "Each generic edit equals original bytes with only the independently pinned four-byte replacement",
+    "Source archive bytes remain unchanged after each edit"
+  ],
+  "artifacts": {
+    "target/bitmap-native-role-probe.rs": "7cac62bc54c0f6efae593c9e370bfaafa71bc19c24a23c3fde548a3d3d962594",
+    "target/bitmap-native-role-probe.exe": "e84287ec82a7e0cb87c497a7bb474ce34fe764a728bfabae131b6a805baf6059",
+    "target/bitmap-native-role-probe.bin": "34f73ec7362bea1ce65fb60e8c90d32604c1019a374a5756694991e6737ad665",
+    "target/bitmap-native-role-probe.log": "676efc207ab482407b717c7a854dbda4175564d5554d75e070a1c0930347478e",
+    "target/libbessemer_edge_index.rlib": "f884e0bac383deb33f4cb677ed34afba77945476352fe225927c6fdc9ed433da"
+  },
+  "compile_attempts": [
+    "First probe attempted private archive_codec imports and did not compile",
+    "Corrected probe used existing public ModelObjectRecord and local bounded packet decoding; compiled and passed"
+  ],
+  "scope_exclusions": [
+    "No native classifier or renderer execution",
+    "No dedicated typed settings API validation",
+    "No complete document serialization or concurrency claim"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "issue": 187,
+  "passed": true,
+  "processes_reaped": true,
+  "cases": 731,
+  "workers": 8,
+  "serial_plus_worker_role_visits_per_process": 39474,
+  "changed_edit_requests_per_process": 39474,
+  "noop_edit_requests_per_process": 39474,
+  "foreign_edit_rejections_per_process": 39474,
+  "stale_edit_rejections_per_process": 78948,
+  "counted_edit_requests_per_process": 197370,
+  "qualification": "Each changed-result verifier checks an additional stale edit before the mixed-outcome stale edit. Getters and resolve_field checks are not counted as edit requests. ThreadSanitizer remains pending.",
+  "same_executable_sha256": "8cab117bd3e0f1990c26f5ea7f88681e9d1b5a8926a5239714912575f962a693",
+  "wire": {
+    "roots": 5117,
+    "bytes": 1197498,
+    "sha256": "878386cfa857b17c373e09ff0ac36cb453878ffe6e03b1632fcf93359829ddec",
+    "independent_expected": "Original stream plus six isolated full-signed complement patches per case"
+  },
+  "trace": {
+    "compressed_bytes": 2694189,
+    "compressed_sha256": "5d3cd385d098d379f5a6949246a6f845d18de7f7dd949507f8d42acf03691827",
+    "uncompressed_bytes": 47412767,
+    "uncompressed_sha256": "7efe9f17490729adc02dabfb9fe3a78b3b944f8bb6e16be9e0373a9c4b4d8d0a",
+    "complete_case_rows": 731,
+    "eof": true
+  },
+  "logs": [
+    {
+      "process": 1,
+      "seconds": 11.2,
+      "sha256": "00797ebaaa19ccb9d83b223cd7db5d538a19e027729501b2e07f8e1f05870f8c"
+    },
+    {
+      "process": 2,
+      "seconds": 10.71,
+      "sha256": "f3768309e33a9605a6b10054de8277fb556464fbd793eb1e3efea81d4da6a9ad"
+    }
+  ],
+  "checks": [
+    "Every worker complete operation snapshot equals serial",
+    "Wire and compressed full-operation traces match across fresh processes",
+    "Snapshots retain all fields, completion, exact coverage, fidelity, diagnostics, resolved history, unchanged counts and complete typed errors",
+    "Source and foreign fields/bytes plus parent configuration bytes remain unchanged",
+    "Independent full-wire patch oracle and exact trace framing/EOF accepted"
+  ],
+  "clippy": "passed with warnings denied",
+  "function_size_audit": "all new functions <=20 nonblank body lines; files <500 lines"
+}

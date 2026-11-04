@@ -829,3 +829,5 @@ nonzero subnormal and overflowing/out-of-range RGB inputs produce no packed
 value under this model.
 
 Canonical stored sketch-reference configuration keys are available through `sketch_reference_lookup_states()` and `edit_sketch_reference_lookup_keys()`. These operations preserve full signed object/record keys without runtime lookup or STORE-time sentinel projection. See [the feature contract](docs/features/sketch-reference-configuration-keys/README.md).
+
+Stored bitmap transparency settings expose full signed has-transparency, level and type values through `bitmap_transparency_states()` and isolated `edit_bitmap_transparency()` operations. See [the feature contract](docs/features/bitmap-transparency/README.md) for the qualified scope and validation status.
