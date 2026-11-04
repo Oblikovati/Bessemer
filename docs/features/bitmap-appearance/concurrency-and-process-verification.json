@@ -1,0 +1,57 @@
+{
+  "issue": 189,
+  "passed": true,
+  "processes_reaped": true,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "tests_per_process": 6,
+  "all_versions": {
+    "cases": 825,
+    "serial_plus_workers": 9,
+    "setting_roles": 4800,
+    "visits_per_process": 43200,
+    "edit_requests_per_process": 216000,
+    "changed": 43200,
+    "noops": 43200,
+    "foreign": 43200,
+    "stale": 86400
+  },
+  "additional_owned_current_gate": {
+    "cases": 375,
+    "visits_per_process": 20250,
+    "edit_requests_per_process": 101250
+  },
+  "checks": [
+    "Every worker matches complete serial operation snapshots",
+    "Literal complete byte patches and every field",
+    "Completion and exact stored coverage/fidelity",
+    "Diagnostics and resolved history parents/results",
+    "Foreign and stale typed errors",
+    "Source and independently parsed foreign input isolation"
+  ],
+  "two_process_primary_exports": "operation-export-verification.json",
+  "same_executable_sha256": "d129a12cd5880c73f9526946f10ae21398305a4ee37cb0fb839aabac165a5e1d",
+  "logs": [
+    {
+      "process": 1,
+      "seconds": 21.32,
+      "sha256": "62c6a51a7a5326f5be7692734993047fa771460469e471156435b0080fff0328"
+    },
+    {
+      "process": 2,
+      "seconds": 21.31,
+      "sha256": "50e122b044efd7ebedc6d89ea04a6fa5901fc0c0c2f556ee6592e008c7d82bf6"
+    }
+  ],
+  "clippy": "Passed with warnings denied",
+  "function_size_audit": [],
+  "remaining": [
+    "Actual-output Source replay",
+    "Native setting-word operations",
+    "Whole-document edits and reversals",
+    "Integrated full local gate",
+    "Exact-head remote publication and ThreadSanitizer"
+  ]
+}

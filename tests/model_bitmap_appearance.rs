@@ -1,4 +1,12 @@
 //! C-3341 saved appearance roles against independently built literal roots (#189).
+#[path = "model_bitmap_appearance/concurrency.rs"]
+mod concurrency;
+#[path = "model_bitmap_appearance/exports.rs"]
+mod exports;
+#[path = "support/model_operation_snapshot.rs"]
+mod model_operation_snapshot;
+#[path = "support/visual_workers.rs"]
+mod visual_workers;
 use bessemer::Document;
 use bessemer::header::ArchiveVersion;
 use bessemer::model_archives::*;
@@ -182,30 +190,45 @@ fn verify_appearance_edit(
     role: usize,
     offset: usize,
     bits: i32,
+) -> Vec<u8> {
+    let (request, _) = appearance_request(role, bits);
+    let result = source.edit_bitmap_appearance(state, request).unwrap();
+    verify_appearance_result(source, raw, state, role, offset, bits, &result);
+    result.archive().to_bytes().unwrap()
+}
+
+fn verify_appearance_result(
+    source: &PartResolvedFeaturesArchive,
+    raw: &[u8],
+    state: &Appearance,
+    role: usize,
+    offset: usize,
+    bits: i32,
+    result: &PartResolvedFeaturesEdit,
 ) {
     let (request, expected) = appearance_request(role, bits);
-    let result = source.edit_bitmap_appearance(state, request).unwrap();
     let mut literal = raw.to_vec();
     literal[offset..offset + 4].copy_from_slice(&bits.to_le_bytes());
     assert_eq!(result.archive().to_bytes().unwrap(), literal);
     let mut fields = source.fields().to_vec();
     fields[state.source_fields()[role].index()].value = expected.clone();
     assert_eq!(result.archive().fields(), fields);
-    verify_appearance_history(source, state, role, &result, expected);
-    verify_appearance_revision(source, state, &result, request);
+    verify_appearance_history(source, state, role, result, expected);
+    verify_appearance_revision(source, state, result, request);
     assert_eq!(source.to_bytes().unwrap(), raw);
 }
 
 fn verify_appearance_owner(
-    case: usize,
+    index: usize,
     owner: usize,
     source: &PartResolvedFeaturesArchive,
-    raw: &[u8],
+    case: &AppearanceCase<'_>,
+    output: &mut Option<Vec<u8>>,
 ) -> usize {
     let states = source.bitmap_appearance_states().unwrap();
     assert_eq!(states.len(), 2);
     let state = &states[owner];
-    let (offsets, expected) = appearance_oracle(case, owner);
+    let (offsets, expected) = appearance_oracle(index, owner);
     verify_appearance_state(state, expected);
     for (role, offset) in offsets
         .into_iter()
@@ -213,7 +236,8 @@ fn verify_appearance_owner(
         .filter_map(|(role, offset)| offset.map(|offset| (role, offset)))
     {
         for bits in REQUESTS {
-            verify_appearance_edit(source, raw, state, role, offset, bits);
+            let actual = verify_appearance_edit(source, case.raw, state, role, offset, bits);
+            exports::append_appearance_export(output, case.version, &actual);
         }
     }
     state.source_fields().len() * REQUESTS.len()
@@ -222,14 +246,16 @@ fn verify_appearance_owner(
 #[test]
 #[ignore = "Requires explicit installed kernel schema and pinned11000/18000 native contexts"]
 fn all_appearance_words_and_isolated_edits_match_independent_complete_roots() {
+    let (path, mut output) = exports::appearance_export();
     let mut edits = 0;
     for (index, case) in appearance_cases().into_iter().enumerate() {
         let source = appearance_archive(&case);
         for owner in 0..2 {
-            edits += verify_appearance_owner(index, owner, &source, case.raw);
+            edits += verify_appearance_owner(index, owner, &source, &case, &mut output);
         }
     }
     assert_eq!(edits, 24000);
+    exports::finish_appearance_export(path, output);
 }
 
 #[test]
@@ -242,7 +268,7 @@ fn owned_current_appearance_edits_match_all375_literal_roots() {
     {
         let source = appearance_archive(&case);
         for owner in 0..2 {
-            edits += verify_appearance_owner(index, owner, &source, case.raw);
+            edits += verify_appearance_owner(index, owner, &source, &case, &mut None);
         }
     }
     assert_eq!(edits, 11250);

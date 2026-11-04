@@ -61,3 +61,16 @@ appearance-enabled library. Both native transparency tests also passed after
 sharing the kernel fixture helper:108 archive requests and12 document edits
 with12 exact reversals. Their independent span, field, stream and whole-file
 assertions were preserved.
+
+Two fresh six-test processes passed the mixed concurrency gate. For all825
+streams, each process compared43,200 serial/worker visits and216,000 changed,
+unchanged, foreign and stale requests. The owned current-only gate added
+20,250 visits. Every worker matched full bytes, fields, coverage, diagnostics,
+completion and resolved history. The final library and test Clippy checks and
+function-size audit passed.
+
+Their24,000 primary edit exports match byte for byte:19,680 changes and4,320
+no-ops. An independent checker accepted every complete literal patch, version
+frame and exact EOF. The export hash and all process/log evidence are retained.
+Actual-output Source replay, native setting operations, whole-document checks
+and integrated local/remote gates remain pending.

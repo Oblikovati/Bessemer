@@ -125,3 +125,10 @@ function-size audit passed. The stream-preservation helper is shared with
 the existing native intersection tests; their assertions are unchanged.
 The earlier duplicate-module and import-depth lint failures are retained
 in the preparation record. No native document pass is claimed yet.
+
+The complete local `cargo xtask pr` gate passed at129b9faae2c4097ec8db2c53af466a58427f1c9e:
+3,953 tests passed, zero failed and206 were ignored across314 summaries.
+The process exited successfully. That source cut predates the later native
+lookup tests and feature189; their integration needs its own final gate.
+Remote publication, ThreadSanitizer and complete native operation acceptance
+remain separate requirements.
