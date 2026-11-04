@@ -1,0 +1,31 @@
+{
+  "issue": 202,
+  "status": "Owned resolved-feature parameter reference baseline passed; public operations remain unimplemented",
+  "graphs": 30,
+  "original_graphs": 24,
+  "independent_primary_edit_goldens": 6,
+  "wire_bytes": 3377,
+  "primitive_calls": 754,
+  "inherited_slots": 97,
+  "source_python_files": 6703,
+  "snapshot_identity": "b51a3112f4b39cc7fca47971b354aa58ea14532facb13aaee2dcc44b3698c616",
+  "initial_reader_test_exit_code": 0,
+  "regeneration_exit_code": 0,
+  "complete_eof": true,
+  "complete_primitive_coverage": true,
+  "name_pointer_identity_checked": true,
+  "raw_float_bits_checked": true,
+  "source_integrity_and_import_guards_passed": true,
+  "logs_sha256": {
+    "stored-parameter-source-initial.log": "9f180ce66d2c1c15fd6145951e06889d9963c6d8d6a69e5645bf9c99e532c199",
+    "stored-parameter-source-after-class-metadata.log": "c0b1920768d80bad6d106e56b6bb4059946e89080437633f13fb01f11c816616",
+    "stored-parameter-source-regeneration.log": "42946f58de3576cd83fd160acf50a20073daa86ec220641ed2ab95ee035644ba"
+  },
+  "initial_test_correction": "First uncommitted assertion omitted the original reader moNodeName_c _class metadata; corrected only the test expectation, then reran original readers and byte-exact regeneration successfully.",
+  "exclusions": [
+    "Configuration-context parameter projection and edits",
+    "Typed public parameter read/edit operations and document reopen/reversal",
+    "Native parameter operation acceptance, concurrency and publication gates",
+    "Units, equations, effective values and native setter semantics are not inferred"
+  ]
+}
