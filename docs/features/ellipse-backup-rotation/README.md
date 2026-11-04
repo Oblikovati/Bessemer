@@ -83,3 +83,11 @@ changing the unresolved accounting baseline or claiming byte credit.
 
 Native Rust operations and whole-document reversal, two-process exports with
 actual Source acceptance, and full local/remote gates remain pending.
+
+The [native Rust gate](native-rust-verification.json) passed all nine tests.
+All five original profiles matched the Source scalar/map/schema observations;
+60 edits and 60 fresh typed reversals preserved every unselected logical
+stream and stream order, then restored each complete original container
+exactly. The original archives and documents remained unchanged. Actual
+SolidWorks reload/save, fresh-process export acceptance and full publication
+gates remain separate requirements.

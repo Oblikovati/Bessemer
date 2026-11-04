@@ -15,8 +15,16 @@ pub(super) fn native_ellipse_archive(
             features.to_vec(),
         )
         .unwrap();
+    native_ellipse_from_document(&document, configuration, version)
+}
+
+pub(super) fn native_ellipse_from_document(
+    document: &Document,
+    configuration: &str,
+    version: u32,
+) -> PartResolvedFeaturesArchive {
     PartResolvedFeaturesArchive::from_document(
-        &document,
+        document,
         ConfigurationId::from_stream_name(configuration).unwrap(),
         ArchiveVersion::new(version),
         Some(native_kernel_context::native_test_kernel_context()),

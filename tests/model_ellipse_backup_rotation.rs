@@ -9,10 +9,14 @@ mod framing;
 mod historical;
 #[path = "support/model_operation_snapshot.rs"]
 mod model_operation_snapshot;
+#[path = "model_ellipse_backup_rotation/native.rs"]
+mod native;
 #[path = "support/native_kernel_context.rs"]
 mod native_kernel_context;
 #[path = "support/owned_resolved_document.rs"]
 mod owned_resolved_document;
+#[path = "support/unselected_document_streams.rs"]
+mod unselected_document_streams;
 
 use bessemer::FailureClass;
 use bessemer::model_archives::*;
@@ -125,8 +129,12 @@ fn verify_ellipse_edit(
 }
 
 fn ellipse_expected_bytes(case: &EllipseCase, owner: usize, snapshot: i32) -> Vec<u8> {
-    let mut expected = case.raw.to_vec();
-    expected[case.offsets[owner]..case.offsets[owner] + 4].copy_from_slice(&snapshot.to_le_bytes());
+    patch_ellipse_word(case.raw, case.offsets[owner], snapshot)
+}
+
+fn patch_ellipse_word(raw: &[u8], offset: usize, snapshot: i32) -> Vec<u8> {
+    let mut expected = raw.to_vec();
+    expected[offset..offset + 4].copy_from_slice(&snapshot.to_le_bytes());
     expected
 }
 
