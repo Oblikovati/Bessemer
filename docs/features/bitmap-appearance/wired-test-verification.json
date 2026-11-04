@@ -1,0 +1,19 @@
+{
+  "issue": 189,
+  "passed": true,
+  "process_reaped": true,
+  "exit_code": 0,
+  "tests_passed": 10,
+  "ignored_tests_explicitly_selected": true,
+  "seconds": 43.87,
+  "log_sha256": "bee603d4b8f5c4b59e99b13ab773add8d1f2e519d2d8d4e4d1ac711ab38e5798",
+  "executable_sha256": "1dba6e2bcc15a9f16d98896e57e4f99fc8ba9e9d048901180553409f44ed322b",
+  "source_test_file_sha256": "651f64c5e01c61aa61fcdd763407d20cc81b648796c677d8c1bc559a44a882bb",
+  "qualification": "Compiled the actual Cargo integration source directly, including the new native and document modules; no generated harness. All ordinary and installed-input tests passed.",
+  "clippy": "Passed with warnings denied",
+  "remaining": [
+    "Final complete Cargo gate on new source commit",
+    "Full native lookup jobs",
+    "Exact-head remote publication and ThreadSanitizer"
+  ]
+}

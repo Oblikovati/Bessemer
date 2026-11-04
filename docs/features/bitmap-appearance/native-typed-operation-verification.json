@@ -1,0 +1,60 @@
+{
+  "issue": 189,
+  "passed": true,
+  "processes_reaped": true,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "tests_per_process": 2,
+  "native_cases": [
+    340,
+    675,
+    717,
+    739
+  ],
+  "primary_archive_requests_per_process": 60,
+  "changed_per_process": 52,
+  "noops_per_process": 8,
+  "document_forward_edits_per_process": 12,
+  "document_reverse_edits_per_process": 12,
+  "same_executable_sha256": "6a032f1bd508a049605b241ee7e4f70fa9a07e3d0d84415a3f8e94bdae91d7fe",
+  "logs": [
+    {
+      "process": 1,
+      "seconds": 39.31,
+      "sha256": "31db079a222e8a16a7da2d1f73d3b246acd9e3634a4d0a47bff5bc0452cac9e0"
+    },
+    {
+      "process": 2,
+      "seconds": 39.42,
+      "sha256": "12bded3d8f4ae27569cb62e4af9a8d59a829acbec4761c6a06bfe99a9cae7f9f"
+    }
+  ],
+  "clippy": "Passed with warnings denied",
+  "function_size_audit": [],
+  "harness_qualification": "The current committed integration harness was copied with only fixture/module paths made absolute and the new native module plus shared stream checker appended. All operation assertions and helper bodies were retained; verified by exact regeneration. Cargo wiring is deferred until the in-flight full gate completes.",
+  "base_head": "6102fb2f379fe2787685bc1c0852d73053de865a",
+  "harness_sha256": "1fc48a1c264171213541b320c5fac45546c10187f7f62bfe84a0f5c13e0e6eff",
+  "native_test_source_sha256": "68c421f1bd03a7ac9b4bd8434906dd6635014868f8546cb6abe5fea56370491a",
+  "native_exports": "native-operation-export-verification.json",
+  "checks": [
+    "Original native files reconstruct exactly before and after operations",
+    "Every setting edit matches an independent complete literal byte patch",
+    "Every field and resolved history parent/result matches",
+    "Completion, exact stored coverage, fidelity and diagnostics retained",
+    "No-op identity and changed-result stale-handle errors",
+    "Whole document reopen yields complete expected fields",
+    "Every unrelated stream and its order is preserved",
+    "Fresh typed reverse restores source fields and raw archive exactly",
+    "Applying the reverse to retained original builder restores the entire original container",
+    "Source document and archive inputs remain unchanged"
+  ],
+  "remaining": [
+    "Cargo-native test wiring",
+    "Complete actual-output Source replays",
+    "Whole-document fixture matrix across all supported contexts",
+    "Integrated exact-source full local gate and remote publication/ThreadSanitizer",
+    "Native application/writer equivalence"
+  ]
+}

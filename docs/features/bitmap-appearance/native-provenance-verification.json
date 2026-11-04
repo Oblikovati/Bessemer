@@ -1,0 +1,156 @@
+{
+  "issue": 189,
+  "passed": true,
+  "authority": "Ordinary installed PE bytes, raw export/import tables and Capstone disassembly; not REA Evidence",
+  "module_sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "direct_publication_pins": 24,
+  "raw_export_names": 45766,
+  "typed_exports": [
+    {
+      "name": "?getMatchingColorPercentage@moSketchBitmapData_c@@QEBAHXZ",
+      "address": "0x4b2c6b10"
+    },
+    {
+      "name": "?setMatchingColorPercentage@moSketchBitmapData_c@@QEAAXH@Z",
+      "address": "0x4b2c6d80"
+    },
+    {
+      "name": "?getTransparentColor@moSketchBitmapData_c@@QEBAKXZ",
+      "address": "0x4b2a48e0"
+    },
+    {
+      "name": "?setTransparentColor@moSketchBitmapData_c@@QEAAXK@Z",
+      "address": "0x4b2b11b0"
+    },
+    {
+      "name": "?get_IsInkMarkupTexture@moSketchBitmapData_c@@QEBAHXZ",
+      "address": "0x4b2acd30"
+    },
+    {
+      "name": "?set_IsInkMarkupTexture@moSketchBitmapData_c@@QEAAXH@Z",
+      "address": "0x4b2b18c0"
+    },
+    {
+      "name": "?getAlphaChannelData@moSketchBitmapData_c@@QEAAPEBEXZ",
+      "address": "0x4c0fd5a0"
+    }
+  ],
+  "native_ranges": [
+    {
+      "start": "0x4b2c6b10",
+      "bytes": 4,
+      "sha256": "6ffefd5a9a063cdcc897e922db1b401a2a6c8a8fd3c47617ed3ec2fe7dd373d8",
+      "instructions": 2
+    },
+    {
+      "start": "0x4b2c6d80",
+      "bytes": 4,
+      "sha256": "ed9f6a32e4498f2cf61fbd7a2e9e3cbf505eff408f8aaa0a4a1e0c7ad34271f4",
+      "instructions": 2
+    },
+    {
+      "start": "0x4b2a48e0",
+      "bytes": 4,
+      "sha256": "7f67506f6b2359c1273015e2f239f36f68d4e1680fa96efe5ff997e4fca26457",
+      "instructions": 2
+    },
+    {
+      "start": "0x4b2b11b0",
+      "bytes": 4,
+      "sha256": "f4badebf45d6360e643e62ffb4d9caf0e7d368255c2f61dab6dd9230c7fb7f74",
+      "instructions": 2
+    },
+    {
+      "start": "0x4b2acd30",
+      "bytes": 7,
+      "sha256": "1f0f198e5bcd0f5ca2fad1aad795861a51bbff07576ba42fb28a2a28ca873926",
+      "instructions": 2
+    },
+    {
+      "start": "0x4b2b18c0",
+      "bytes": 7,
+      "sha256": "e65f3b5a2793cf49d8dbf25fe206e1371edb8ad418101af628172c21638b31b9",
+      "instructions": 2
+    },
+    {
+      "start": "0x4c0fd5a0",
+      "bytes": 23,
+      "sha256": "212d26d8c9e9b09d6ea93ade2b7d94c8f93c290974f7ed497c25add3d04d4060",
+      "instructions": 9
+    },
+    {
+      "start": "0x4c0fabc0",
+      "bytes": 500,
+      "sha256": "73fa9a9ce26ad53e11632eca78ad1059e26cf8af6d6d28b32eb9ec4b4d3a73a3"
+    },
+    {
+      "start": "0x4c0fc200",
+      "bytes": 2193,
+      "sha256": "d47199a0f2e0758d1338d5fe8f565f741d34aaa40f10caf06fb4bf33f1f2368e"
+    }
+  ],
+  "native_bytes": 2746,
+  "retained_leaf_instructions": 21,
+  "primary_serializer": {
+    "primary": "0x4d0f7448",
+    "slot": "0x28",
+    "actual": "0x4c0fc200"
+  },
+  "archive_operator_calls": [
+    {
+      "site": "0x4c0fc3af",
+      "slot": "0x4cd3e800",
+      "dll": "swccu.dll",
+      "name": "??6su_CArchive@@QEAAAEAV0@J@Z",
+      "ordinal": null
+    },
+    {
+      "site": "0x4c0fc3bb",
+      "slot": "0x4cd3e9e0",
+      "dll": "swccu.dll",
+      "name": "??6su_CArchive@@QEAAAEAV0@K@Z",
+      "ordinal": null
+    },
+    {
+      "site": "0x4c0fc458",
+      "slot": "0x4cd3e800",
+      "dll": "swccu.dll",
+      "name": "??6su_CArchive@@QEAAAEAV0@J@Z",
+      "ordinal": null
+    },
+    {
+      "site": "0x4c0fc7e7",
+      "slot": "0x4cd3e808",
+      "dll": "swccu.dll",
+      "name": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z",
+      "ordinal": null
+    },
+    {
+      "site": "0x4c0fc7f4",
+      "slot": "0x4cd3e9e8",
+      "dll": "swccu.dll",
+      "name": "??5su_CArchive@@QEAAAEAV0@AEAK@Z",
+      "ordinal": null
+    },
+    {
+      "site": "0x4c0fca60",
+      "slot": "0x4cd3e808",
+      "dll": "swccu.dll",
+      "name": "??5su_CArchive@@QEAAAEAV0@AEAJ@Z",
+      "ordinal": null
+    }
+  ],
+  "target_executed": false,
+  "coverage_credit": 0,
+  "limitations": [
+    "No native setter or application was executed",
+    "No normalization, color packing, percent algorithm or Boolean restriction inferred",
+    "Alpha getter equality supplies no new endpoint or renderer meaning",
+    "No global accounting credit"
+  ],
+  "initial_attempt": {
+    "collector_sha256": "ddedb09e3d11a6ad9bc1b53c865a110ff30f822dc65098db4ac76eb6fd5c268c",
+    "failure": "Capstone detailed operands were disabled; enabled detail mode without changing expected bindings"
+  },
+  "collector_sha256": "22d753e4eeefc7cd25d8e4629dc3a9e6949934a4ad95538d2dddd5ddcdd273c3"
+}

@@ -1,10 +1,16 @@
 //! C-3341 saved appearance roles against independently built literal roots (#189).
 #[path = "model_bitmap_appearance/concurrency.rs"]
 mod concurrency;
+#[path = "model_bitmap_appearance/documents.rs"]
+mod documents;
 #[path = "model_bitmap_appearance/exports.rs"]
 mod exports;
 #[path = "support/model_operation_snapshot.rs"]
 mod model_operation_snapshot;
+#[path = "model_bitmap_appearance/native.rs"]
+mod native;
+#[path = "support/unselected_document_streams.rs"]
+mod unselected_document_streams;
 #[path = "support/visual_workers.rs"]
 mod visual_workers;
 use bessemer::Document;

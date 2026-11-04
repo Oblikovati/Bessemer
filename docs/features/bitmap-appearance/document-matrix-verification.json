@@ -1,0 +1,49 @@
+{
+  "issue": 189,
+  "passed": true,
+  "processes_reaped": true,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "tests_per_process": 2,
+  "all_supported_contexts": {
+    "cases": 825,
+    "forward_edits": 4800,
+    "fresh_typed_reversals": 4800
+  },
+  "additional_owned_current_gate": {
+    "cases": 375,
+    "forward_edits": 2250,
+    "fresh_typed_reversals": 2250
+  },
+  "same_executable_sha256": "665b54432ca8c02d997b2cfa88e1ec8de5a8fb49e4390611b6f73715530b2eef",
+  "logs": [
+    {
+      "process": 1,
+      "seconds": 40.83,
+      "sha256": "cc8edcc6741763ec6d337252f6890def57463a25f587f9cf72ec94614d955a61"
+    },
+    {
+      "process": 2,
+      "seconds": 39.59,
+      "sha256": "c2afc4a6422b6dc03f362919e931dbfc08627812956426ca478ab56ee1d86ea5"
+    }
+  ],
+  "clippy": "Passed with warnings denied",
+  "function_size_audit": [],
+  "harness_sha256": "ec35461c9ea4b008c3f66b119a217a8054322ac9f7d3067e3e8a96dc94353b9e",
+  "checks": [
+    "Complete field and byte literal patches",
+    "Exact stored coverage, diagnostics, fidelity and derived history",
+    "Fresh typed state used for reversal",
+    "Every unrelated stream and order preserved",
+    "Exact whole-container restoration through retained original builder",
+    "Original input document and archive isolation"
+  ],
+  "remaining": [
+    "Cargo test wiring and final-source gate",
+    "Exact-head remote publication and ThreadSanitizer",
+    "Native application/writer equivalence"
+  ]
+}

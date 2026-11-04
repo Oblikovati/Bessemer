@@ -50,9 +50,8 @@ Fresh original Source validation passed all825 complete streams against an
 immutable copy, with4,800 scalar checks and39,275 primitive reads. Class/map,
 alias, primitive-partition, exact EOF and signed/unsigned expectations matched.
 The frozen Source content and import-origin audit passed; the process exited
-successfully. These checks remain separate from the Rust gate. Native setting operations,
-whole-document reversal, fresh-process exports, concurrency, full Cargo and
-exact-head remote publication acceptance remain open. The earlier raw70/60/6C
+successfully. These checks remain separate from the Rust gate. The later
+operation, document and full-gate results are recorded below. The earlier raw70/60/6C
 transparency roles and later SDK transparency contracts remain separate work.
 The humanizer skill is unavailable; the prose pass is left to review.
 
@@ -72,5 +71,39 @@ function-size audit passed.
 Their24,000 primary edit exports match byte for byte:19,680 changes and4,320
 no-ops. An independent checker accepted every complete literal patch, version
 frame and exact EOF. The export hash and all process/log evidence are retained.
-Actual-output Source replay, native setting operations, whole-document checks
-and integrated local/remote gates remain pending.
+Both actual-output Source replays passed all24,000 outputs, with all171
+consumed modules identical between the immutable snapshots. Complete
+graph/map fingerprints, floating-point bits, spans, EOF and original unknown
+totals and sketch/detail signatures matched the independently patched baseline.
+
+Native byte binding independently matched twelve setting words in four
+canonical bodies, including all four NEW_CLASS headers and absent alpha
+planes. Ordinary installed-module verification matched seven named exports,
+nine code ranges totaling2,746 bytes, all21 retained leaf instructions,
+the actual primary serializer slot and six typed archive-operator calls.
+These are PE/disassembly checks, not REA Evidence or native target execution.
+The initial disabled Capstone-detail attempt is retained in the proof; its
+correction changed no expected instruction, export or operator binding.
+
+Two fresh native-file processes each passed60 archive requests:52 changes
+and8 no-ops. All complete outputs matched independent literal patches and
+each other byte for byte. Twelve document edits and12 fresh typed reversals
+per process preserved every unrelated stream and restored the complete
+original containers through their retained builders. Both native actual-output
+Source replays passed all60 outputs, including complete graph/map/floating-
+point fingerprints, exact spans and EOF, and unchanged accounting signatures.
+All170 consumed Source modules matched between the two immutable snapshots.
+
+The whole-document fixture matrix passed in two fresh processes. Each covered
+4,800 forward edits and4,800 fresh typed reversals across all825 streams.
+The owned current-context gate added2,250 edits and2,250 reversals. Reopened
+fields and bytes, every unrelated stream and its order, complete original
+container restoration and source isolation all matched. Native and document
+modules are now wired into the ordinary Cargo integration target, with the
+installed-input cases explicitly ignored unless selected.
+
+The full local `cargo xtask pr` gate passed at6102fb2f379fe2787685bc1c0852d73053de865a:
+3,956 tests passed, zero failed and212 were ignored across315 summaries.
+That source cut predates the newly wired test modules; the final source gate
+remains required. Exact-head remote publication and ThreadSanitizer, native
+application/writer equivalence and whole-schema parity remain unproven.
