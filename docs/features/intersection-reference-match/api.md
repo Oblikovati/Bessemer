@@ -44,10 +44,9 @@ The first implementation covers complete ordinary part resolved-feature
 archives. Other caller APIs need complete positive carriers before addition.
 The owned matrix has accepted original Source roots and typed Rust edits.
 Two fresh unchanged Source processes also accepted every actual exported edit
-output. Native operation edits, wider version/caller boundaries, whole
-documents, concurrency and publication gates remain pending. The owned document
-matrix subsequently passed complete edit/reopen/reversal in two processes;
-native document and broader caller coverage remain separate.
+output. The owned document matrix passed complete edit/reopen/reversal in two
+processes. Native operation/document edits, wider version/caller boundaries,
+concurrency and publication gates remain pending.
 File-operation acceptance does not establish geometry,
 native application opening or rendering. The humanizer skill is unavailable;
 prose review remains pending.
