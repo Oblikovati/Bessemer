@@ -50,6 +50,8 @@ stored/actual value and flag; the independent result decoder also checked exact
 caller XML, coverage and provenance invariants through packet EOF. The immutable
 single-reader snapshot and import/content guard passed.
 
-Complete local and exact-head remote checks remain required before
-integration. Application acceptance remains separate from this lexical checksum
+The complete local PR gate passed 3,998 tests with zero failures and 224 explicit
+exclusions. The retained gate proof identifies the tested source cut and the two
+explicit test-profile environment settings. Exact-head remote integration remains
+required. Application acceptance remains separate from this lexical checksum
 comparison.
