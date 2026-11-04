@@ -1,5 +1,10 @@
 # Complete direct boundary data
 
+The implementation and focused/native checks below are complete locally; see
+`README.md` and `local-verification.json`. Full PR validation and serial
+integration remain pending. The following requirements are retained as the
+original acceptance plan.
+
 Feature #205 closes two explicit stops in the existing ordinary boundary reader:
 temporary chooser time pairs and direct downstream identifier data. The owned
 schema excerpts and current source/implementation hashes establish the gap;

@@ -48,6 +48,8 @@
 
 ### Added
 
+- Added complete direct boundary chooser-time and downstream identifier bodies, preserving signed counts, duplicate pairs, zero values and versioned tails. (#205)
+
 - Added typed stored parameter snapshots and exact value edits for complete part configuration and resolved-feature archives, retaining independent name pointers, alternate presence bytes and copied field history. (#202)
 
 - Added immutable resolved-feature root snapshots with stored order, aliases, loaded target identities and copied provenance. (#201)

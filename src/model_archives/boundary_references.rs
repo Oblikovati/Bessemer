@@ -1,6 +1,8 @@
-use super::{ModelDecoder, ModelObjectRole, part_objects::absent_payload};
+use super::{ModelDecoder, ModelObjectRole};
 use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
+#[path = "boundary_direct_data.rs"]
+mod direct_data;
 
 pub(super) fn base(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     reader.require_ordinary_model()?;
@@ -13,8 +15,7 @@ pub(super) fn base(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Res
     )?;
     entities(reader, map, count)?;
     reader.u32("unknown_48")?;
-    let temporary = reader.i32("temporary_count")?;
-    absent_payload(reader, "temporary contour-chooser records", temporary)?;
+    direct_data::temporary_records(reader)?;
     modern_suffix(reader)
 }
 
@@ -55,7 +56,10 @@ fn modern_suffix(reader: &mut ModelDecoder<'_>) -> Result<()> {
     }
     reader.i32("unknown_ec")?;
     let present = reader.i32("has_direct_model_data")?;
-    absent_payload(reader, "direct boundary model data", present)
+    if present == 0 {
+        return Ok(());
+    }
+    reader.scope("direct_model_data", direct_data::downstream_body)
 }
 
 pub(super) fn entity_id(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {

@@ -100,6 +100,9 @@ implemented; this is not yet Corliss feature parity.
 Component-edge readers preserve signed reference counts, skip nonpositive
 reference loops, and continue the documented optional pointer pair. See the
 [signed-count regression evidence](docs/features/component-edge-counts/README.md).
+Boundary references also preserve direct chooser-time pairs and downstream
+identifier data, including duplicate keys, zero entries and both version gates.
+See the [direct boundary evidence](docs/features/boundary-direct-data/README.md).
 
 ```rust
 let bytes = std::fs::read("part.sldprt")?;
