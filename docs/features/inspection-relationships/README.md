@@ -55,3 +55,5 @@ Further gates include unknown-node preservation, descendant-text order, exact Qt
 whitespace, duplicate handling, source isolation, limits, concurrency, fresh
 processes and unchanged Source agreement. No native application or geometry
 acceptance follows from the preparation tests.
+
+The complete local PR gate passed 4,015 tests with zero failures and 225 explicit exclusions. The retained full-gate proof identifies its exact source cut; later spline-state and CString equality work is excluded. Exact-head integration and remote publication checks remain required.
