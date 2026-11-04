@@ -1,3 +1,4 @@
+//! Independent lexical, provenance and native-carrier contracts for standalone Inspection records.
 use bessemer::inspection::records::*;
 use bessemer::inspection::{InspectionEnvelope, InspectionProfile};
 use bessemer::metadata::XmlLimits;
