@@ -7,6 +7,9 @@
 //! # Ok::<(), Box<dyn std::error::Error>>(())
 //! ```
 
+#[cfg(test)]
+extern crate self as bessemer;
+
 mod archive;
 mod archive_codec;
 pub mod biography;

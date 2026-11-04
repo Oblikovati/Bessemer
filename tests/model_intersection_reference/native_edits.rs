@@ -6,6 +6,12 @@ use crate::model_archives::{
     ModelIntersectionReferenceStoredWords as Words, PartResolvedFeaturesArchive,
 };
 
+#[path = "native_documents.rs"]
+mod documents;
+
+type NativeReferenceCheck =
+    fn(&ResolvedCorpusCase<'_>, &NativeReferenceOracle, Option<CompressedKernelContext>);
+
 struct NativeReferenceSpan {
     offset: usize,
     words: Words,
@@ -56,7 +62,7 @@ fn verify_native_reference_edit(
     raw: &[u8],
     state: &State,
     span: &NativeReferenceSpan,
-) {
+) -> crate::model_archives::PartResolvedFeaturesEdit {
     let expected = [
         span.words.span_count_state ^ 0x1357_9bdf,
         span.words.backward_offset_state ^ 0x2468_ace0,
@@ -71,6 +77,14 @@ fn verify_native_reference_edit(
     verify_native_reference_payload(source, raw, state, span, expected, result.archive());
     assert_eq!(result.completion(), ModelEditCompletion::Changed);
     verify_native_reference_history(source, state, &result);
+    verify_native_reference_revision(state, &result);
+    result
+}
+
+fn verify_native_reference_revision(
+    state: &State,
+    result: &crate::model_archives::PartResolvedFeaturesEdit,
+) {
     assert!(
         result
             .archive()
@@ -143,6 +157,7 @@ fn run_native_reference_cohort(
     probe: &[u8],
     spans: &[u8],
     kernel: Option<CompressedKernelContext>,
+    verify: NativeReferenceCheck,
 ) {
     let (mut cursor, mut oracle) = (ArchiveCursor::new(probe), ArchiveCursor::new(spans));
     assert_eq!(cursor.take(4).unwrap(), b"BRF1");
@@ -151,7 +166,7 @@ fn run_native_reference_cohort(
     let expected: Vec<_> = (0..8)
         .map(|_| read_native_reference_oracle(&mut oracle))
         .collect();
-    verify_native_reference_selection(&mut cursor, &expected, kernel);
+    verify_native_reference_selection(&mut cursor, &expected, kernel, verify);
     assert_eq!(expected.iter().map(|entry| entry.spans.len()).sum::<usize>(), 68);
     assert_eq!((cursor.remaining(), oracle.remaining()), (0, 0));
 }
@@ -160,13 +175,14 @@ fn verify_native_reference_selection(
     cursor: &mut ArchiveCursor<'_>,
     expected: &[NativeReferenceOracle],
     kernel: Option<CompressedKernelContext>,
+    verify: NativeReferenceCheck,
 ) {
     let mut selected = expected.iter().peekable();
     for index in 0..906 {
         let case = next_case(cursor);
         if selected.peek().is_some_and(|entry| entry.index == index) {
             let entry = selected.next().unwrap();
-            verify_native_reference_case(&case, entry, kernel.clone());
+            verify(&case, entry, kernel.clone());
             println!("INTERSECTION_NATIVE_EDIT\t{index}\t{}", entry.spans.len());
         }
     }
@@ -179,5 +195,5 @@ fn every_native_intersection_reference_matches_source_words_and_isolated_literal
     let probe = std::fs::read("target/resolved-native-probe.bin").unwrap();
     let spans = std::fs::read("target/intersection-reference-native-source-spans.bin").unwrap();
     let kernel = crate::model_archives::native_corpus_tests::corpus_kernel_context();
-    run_native_reference_cohort(&probe, &spans, kernel);
+    run_native_reference_cohort(&probe, &spans, kernel, verify_native_reference_case);
 }

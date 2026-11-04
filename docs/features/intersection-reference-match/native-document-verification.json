@@ -1,0 +1,95 @@
+{
+  "issue": 184,
+  "stage": "Native complete-document edit/reopen/reversal",
+  "processes_reaped": 2,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "tests_per_process": 2,
+  "test_seconds": [
+    119.32,
+    152.28
+  ],
+  "harness_threads": [
+    "default",
+    "1"
+  ],
+  "complete_stream_contexts_per_process": 8,
+  "distinct_input_files": 8,
+  "document_edits_per_process": 68,
+  "document_reversals_per_process": 68,
+  "archive_edits_per_process": 68,
+  "artifacts": [
+    {
+      "path": "src/lib.rs",
+      "bytes": 868,
+      "sha256": "a9a574327559528ceec9e8c23f1988035d6e24285407873fe1d330400be63b81"
+    },
+    {
+      "path": "tests/model_intersection_reference/native_edits.rs",
+      "bytes": 7201,
+      "sha256": "54d1ea4087953a12e4f12ce0af213ec731e9a94b04a027b92791f60988c7c65b"
+    },
+    {
+      "path": "tests/model_intersection_reference/native_documents.rs",
+      "bytes": 3953,
+      "sha256": "790fb8089158ac26b96f1d9c5320f9c0c834d63b92fc5673d63d2de148582a3c"
+    },
+    {
+      "path": "tests/support/unselected_document_streams.rs",
+      "bytes": 713,
+      "sha256": "cef16204fd410c34c6d5f4103b1078b51e0af8cf1844741520d724f367347d78"
+    },
+    {
+      "path": "docs/features/intersection-reference-match/native-document-source-bindings.json",
+      "bytes": 4400,
+      "sha256": "37164b7333d507bcc3436c9bacb33dada1d716cfcfed45111e0cb416f3320b37"
+    },
+    {
+      "path": "target/intersection-reference-native-documents-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/intersection-reference-native-documents-initial.log",
+      "bytes": 1193,
+      "sha256": "6a6c5005e334fb057c423d17ff920a01894890c5d9ff201c1647ca4c4117c23c"
+    },
+    {
+      "path": "target/intersection-reference-native-documents-repeat.log",
+      "bytes": 984,
+      "sha256": "5ae7044e40d37841bddffdfafcc6d6123d9f92fdbe3a3607afbad17c928078a8"
+    },
+    {
+      "path": "target/intersection-reference-native-document-clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/intersection-reference-native-document-format.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/intersection-reference-native-document-projection.log",
+      "bytes": 1178,
+      "sha256": "6066c54180f33ffd078d1c9870fc504c93456c9ee41ab57624e41e19e69f2c73"
+    }
+  ],
+  "checks": [
+    "Actual installed files reopen through PartResolvedFeaturesArchive::from_document with their original configuration ID, version and kernel context; complete selected feature bytes match retained BRF1 before edits.",
+    "Every selected group reuses the independent literal-patch, complete-field and exact-history assertions from the native archive operation test.",
+    "Each changed complete document serializes and reopens through the public document reader. All fields equal the typed expected result, and every unrelated stream plus stream ordering is unchanged.",
+    "Reversal reacquires revision-owned state from the reopened archive, restores every original field and feature byte, and restores the entire original file byte for byte. The input document remains unchanged.",
+    "Both fresh processes include all native cases explicitly. Eight focused projection tests, standalone whole-unit Clippy, workspace cargo fmt --check and function/file-size audit passed. All20 current direct report and original reader/test pins still match."
+  ],
+  "coverage_credit": 0,
+  "qualifications": [
+    "These standalone native tests require retained proprietary packets, installed sample files and the explicit native kernel schema; ordinary cargo test keeps them ignored.",
+    "No complete changed-document export packet or byte-for-byte comparison between processes was performed. Per-case exact whole-file reversal is asserted in both processes; scheduling acceptance is not a concurrency stress or sanitizer result.",
+    "Broader caller/version coverage, mixed concurrency/full history traces and complete Cargo/exact-head publication gates for Feature184 remain pending.",
+    "The evolving specification now contains adjacent C-3308/C-3310 roles tracked separately in Feature185. Neither those roles nor loaded raw20 semantics are implemented or credited by this gate.",
+    "No native matcher, application opening, rendering or geometry claim follows. Humanizer unavailable; prose review pending."
+  ]
+}

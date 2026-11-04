@@ -47,8 +47,11 @@ Two fresh unchanged Source processes also accepted every actual exported edit
 output. The owned document matrix passed complete edit/reopen/reversal in two
 processes. Native archive edits passed all 68 physical groups in the eight
 complete C-3307 streams, with literal byte patches and complete field/history
-checks. Native document edits, wider version/caller boundaries, concurrency
-and publication gates remain pending.
+checks. Native complete-document edits also passed all 68 groups in two fresh
+processes: reopen preserved every unrelated stream and reversal restored the
+original files byte for byte. Wider version/caller boundaries, concurrency
+and publication gates remain pending. The newer index and classification roles
+are tracked separately in #185.
 File-operation acceptance does not establish geometry,
 native application opening or rendering. The humanizer skill is unavailable;
 prose review remains pending.
