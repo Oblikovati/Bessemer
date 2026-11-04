@@ -17,6 +17,14 @@ all 11 direct publication dependencies for C-3308 and all 18 for C-3310
 against their exact current bytes. This does not establish transitive
 admission or replace original Source and native verification.
 
+Static verification matched 22 retained native ranges, 26 instruction
+captures containing 8,365 instructions, 165 selected instruction assertions,
+169 import bindings and three named exports against the installed module.
+The check used direct PE tables and Capstone, not REA Evidence. Overlapping
+captures remain separate checks. No native code or pure instruction model
+was executed, and complete control-flow coverage is unproven. Source replay
+and the operation gates remain required.
+
 Implementation must reuse the complete archive readers and revision-owned
 edit/history contracts. Require independent complete roots and literal
 patches, signed/full-u16 controls, whole-document reopen/reversal, actual
