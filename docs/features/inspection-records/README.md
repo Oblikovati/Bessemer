@@ -44,7 +44,19 @@ parents, stale and foreign identities, failed-edit isolation, empty completed
 indexes and eight concurrent edits against the serial result. The load-view tests
 also check repeated exact containers, qualified and differently named children,
 comments, processing instructions, nested descendants, empty characteristics and
-rejection of wrong-role, foreign and stale identities. Explicit limit
-boundaries, wider native templates, fresh-process equality and unchanged Source
+rejection of wrong-role, foreign and stale identities. A literal eight-element
+document independently fixes the exact limits at 16 lexical events, three
+attributes and depth eight. Both cipher profiles accept those bounds and reject
+each axis one below; the byte boundary includes required cipher padding. Every
+proper XML prefix and an unexplained trailing suffix are rejected. Oversized
+edits and caller mutation preserve the original snapshot and identities.
+
+Both owned current template variants have a sheet and nested document with no
+characteristic records. Their title edits preserve every other XML byte, reopen
+through encryption and reverse to the exact original ciphertext. An explicit
+installed-root test repeats these checks against all 42 original templates,
+first requiring their bytes to equal the accepted owned variants (28 and 14).
+
+Fresh-process equality and unchanged Source
 acceptance of actual Rust outputs still need their feature gates. The complete
 local and exact-head remote checks remain required before integration.
