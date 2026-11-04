@@ -1,0 +1,57 @@
+{
+  "issue": 2,
+  "edition": "Edition 0.3046 \u00b7 2026-11-04 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "specification_sha256": "b23bf3ab954e172f1f0a62fc8643b58d2713f12c0abaa9740283c32160358aec",
+  "scope": "Selected7 clauses; retained admission/runtime qualifications, not a whole-schema audit",
+  "snapshot_path": "docs/features/resolved-features/legacy-suffix-schema-3046-snapshot.md",
+  "snapshot_representation": "Owned excerpt normalized to LF before hashing; original specification hash retains original bytes",
+  "snapshot_sha256": "8ddd19d5d8802bb7ec7fd511cabad6c0d9f1578bacee44436810fe945f61f189",
+  "clauses": [
+    {
+      "clause": "11.1757",
+      "heading": "### 11.1757 Logical-G2 legacy tangent-word gate and compatibility invalidation",
+      "source_status": "*Status: exact old LOAD presence and independent current-state validation operation verified \u00b7 Evidence: C-3442*",
+      "section_sha256_normalized_lf": "9c244e50b2a03e251e595a59d37fc8a1ff213543a580eb1a1bdb09db9fa257f6"
+    },
+    {
+      "clause": "11.1760",
+      "heading": "### 11.1760 Logical-G2 legacy suffix presence, type and runtime-default matrix",
+      "source_status": "*Status: exact canonical LOAD gates and local assignment policies verified; inherited/old containing-body admission separate \u00b7 Evidence: C-3445*",
+      "section_sha256_normalized_lf": "b4da31a9554a8d09193f7e1de41efe96c5a8b9e8d3aa195cfae5ea5a9aea10c1"
+    },
+    {
+      "clause": "11.1763",
+      "heading": "### 11.1763 Logical-base Derived legacy omission and explicit reset",
+      "source_status": "*Status: canonical raw-word codecs, version gate and local reset verified; inherited admission separate \u00b7 Evidence: C-3448*",
+      "section_sha256_normalized_lf": "13f36daa44eeed80fa19ff9d3d0f21cdeffc53fb983973f19d608ce85b2832d8"
+    },
+    {
+      "clause": "11.1765",
+      "heading": "### 11.1765 Linear-pattern legacy suffix gates and runtime default matrix",
+      "source_status": "*Status: canonical retained suffix and codecs verified; legacy/context admission separate - Evidence: C-3450*",
+      "section_sha256_normalized_lf": "75192fd858065ec181f6b9f52b8d96daddfcc9e09e49a0669fb3c993360ed2c0"
+    },
+    {
+      "clause": "11.1767",
+      "heading": "### 11.1767 Circular-pattern latched-version legacy suffix matrix",
+      "source_status": "*Status: canonical serializer, current version latch and exact codecs verified; legacy admission separate - Evidence: C-3452*",
+      "section_sha256_normalized_lf": "c0746558d5f65cd0ea0cb7797be584c934dd460b725b73bd53a2e1d224e94e2e"
+    },
+    {
+      "clause": "11.1769",
+      "heading": "### 11.1769 Shared pattern-constraint legacy optional words and current increment",
+      "source_status": "*Status: canonical shared serializer, raw codecs and selected runtime operation verified; old admission separate - Evidence: C-3454*",
+      "section_sha256_normalized_lf": "724cecc544636967e9cbe7014a69967ee619e2c0607ac28965b5cd9e000592a0"
+    },
+    {
+      "clause": "11.1770",
+      "heading": "### 11.1770 Logical-group pre-base gate, stored count and set-reset policy",
+      "source_status": "*Status: canonical body gate, independent STORE traversal and LOAD mutation order verified; containing admission separate \u00b7 Evidence: C-3455*",
+      "section_sha256_normalized_lf": "bd6fe4f8556d8c0336cba65039cdeb76a5c6d321c7985396262b47fbdaa3fb44"
+    }
+  ],
+  "decision": "No new class/context/version admission or runtime emulation. Preserve admitted raw values and duplicate occurrences. LOAD omission, STORE asymmetry, constructor state and current provider effects remain separate.",
+  "coverage_credit": 0,
+  "native_execution": false,
+  "remaining": "Complete old parent/base framing and source populations remain required for legacy admission; broader runtime/model/geometry parity remains open."
+}
