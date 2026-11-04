@@ -158,3 +158,11 @@ fn equation_fixture_document(raw: &[u8]) -> Document {
 
 #[path = "model_spline_equation_state/typed.rs"]
 mod typed;
+
+#[path = "support/cstring_framing_fixture.rs"]
+mod cstring_framing_fixture;
+#[path = "model_spline_equation_state/matrix.rs"]
+mod matrix;
+
+#[path = "model_spline_equation_state/concurrency.rs"]
+mod concurrency;

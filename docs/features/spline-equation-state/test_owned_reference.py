@@ -7,7 +7,7 @@ from itertools import product
 from mfcobjects import ObjectArchive
 import sketchprefix
 from freeze_trim_edges import ObjectFixtureFamily, owned
-from spline_equation_state_bytes import equation_collection, equation_sketch, expected_equation_state
+from spline_equation_state_bytes import equation_collection, equation_sketch, expected_equation_state, write_literal_positions
 
 ROOT = Path(__file__).resolve().parents[3]
 DESTINATION = Path(os.environ['BESSEMER_EQUATION_FIXTURE_ROOT'])
@@ -51,4 +51,5 @@ class OwnedEquationReferenceTests(unittest.TestCase):
             row = owned(reference, DESTINATION, kind, 0, True, f'owned-{kind}-0-edited', family)
             observations.append(row | dict(expected=expected_equation_state(kind, 0, True)))
         (DESTINATION / 'manifest.json').write_bytes((json.dumps(observations, indent=2) + '\n').encode())
+        write_literal_positions(DESTINATION)
         self.assertEqual(len(observations), 18)

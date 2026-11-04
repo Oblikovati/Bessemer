@@ -1,0 +1,93 @@
+{
+  "issue": 199,
+  "status": "Expanded owned stored-value validation; full acceptance and publication remain open",
+  "runtime_source_commit": "8ffb8112",
+  "tests_passed": 14,
+  "failed": 0,
+  "ignored": 0,
+  "process_exit_code": 0,
+  "owned_edit_requests": {
+    "lock": 48,
+    "signed_option": 120,
+    "text": 720,
+    "count_prefix": 18,
+    "total": 906
+  },
+  "concurrency": {
+    "workers": 8,
+    "iterations_per_worker": 16,
+    "source_cases": 3,
+    "total_replays": 384,
+    "checks": [
+      "Exact result bytes against serial results",
+      "Completion, fidelity, diagnostics and parent history",
+      "Shared input bytes unchanged"
+    ],
+    "exclusions": [
+      "Not a ThreadSanitizer run",
+      "Concurrent revisions are distinct; only result field indexes are comparable"
+    ]
+  },
+  "source_reference": {
+    "tests_passed": 2,
+    "exit_code": 0,
+    "all_owned_files_regenerated_identically": true,
+    "python_files_frozen": 6565,
+    "snapshot_identity": "0e12bc91b408bb2eeea9e9286f707f88b6d253378e23eaabe29fa8c512901b51",
+    "added_sources": [
+      "research/parallel_constraint_current_large_sketch_semantic_frontier.py",
+      "research/parallel_constraint_current_large_sketch_semantic_frontier_clause_qualification.py",
+      "research/parallel_constraint_g1_legacy_inline_xform_grammar.py",
+      "research/parallel_constraint_g1_tanmagnitude_owner_helper_capture.py",
+      "research/parallel_constraint_g3_parameter_map_lookup_capture.py",
+      "research/parallel_constraint_intersection6c_bit01_independent_review.py",
+      "research/parallel_constraint_line_backup_restore_policy.py",
+      "research/parallel_constraint_line_cast_forwarded_helper_capture.py",
+      "research/parallel_constraint_silhouette_postmodifier_independent_review.py",
+      "research/parallel_constraint_silhouette_profile_axis_independent_review.py",
+      "research/parallel_constraint_tangency_control_saved_geometry_independent_review.py",
+      "research/parallel_display_curvature_f0_operation_capture.py",
+      "research/parallel_display_curvature_saved_affine_consumer.py",
+      "research/parallel_display_curvature_saved_field_ui_capture.py",
+      "research/parallel_display_curvature_ui_owner_xform_capture.py",
+      "research/parallel_display_intersection6c_bit01_arc_policy.py",
+      "research/parallel_display_intersection6c_bit01_provider_capture.py",
+      "research/parallel_display_isocurve_admission_proposal_independent_review.py",
+      "research/parallel_display_isocurve_source_selection_independent_review.py",
+      "research/parallel_display_line_backup_restore_independent_review.py",
+      "research/parallel_display_line_backup_restore_independent_review_attempt01.py",
+      "research/parallel_display_line_backup_restore_independent_review_attempt02.py",
+      "research/parallel_patterns_curvature_saved_affine_independent_review.py",
+      "research/parallel_patterns_g1_legacy_transform_independent_review.py",
+      "research/parallel_patterns_isocurve_canonical_admission_proposal.py",
+      "research/parallel_patterns_isocurve_retained_source_selection.py",
+      "research/parallel_patterns_lower_frontier_semantic_reconciliation.py",
+      "research/parallel_patterns_silhouette_feature_dispatch_inventory.py",
+      "research/parallel_patterns_silhouette_postmodifier_contract.py",
+      "research/parallel_patterns_silhouette_profile_axis_contract.py",
+      "research/parallel_patterns_silhouette_profile_axis_status_qualification.py",
+      "research/parallel_patterns_spline_control_type_unwrap.py",
+      "research/parallel_patterns_tangency_control_saved_geometry_role.py",
+      "research/parallel_root_endpoint_saved_fields_native.py",
+      "research/parallel_root_sketch_semantic_selection_v85.py",
+      "research/publish_root_curvature_affine_c3429.py",
+      "research/publish_root_intersection_adjusted_arc_c3426.py",
+      "research/publish_root_silhouette_postmodifier_c3425.py",
+      "research/publish_root_sketch_backup_profile_c3423_c3424.py",
+      "research/publish_root_sketch_legacy_control_c3427_c3428.py"
+    ],
+    "removed_sources": [],
+    "modified_sources": []
+  },
+  "remaining": [
+    "Malformed physical ownership and alias matrices",
+    "Fresh process actual edit result exports through original Source",
+    "Broader saved-version contexts and native outcomes",
+    "Combined full local gate and exact-head remote publication gates"
+  ],
+  "logs_sha256": {
+    "spline-equation-state-matrix-tests.log": "726e36f3012e9470d4088835d90b1cb31d285138909145d53e6537e21eb1fa0c",
+    "spline-equation-state-matrix-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spline-equation-state-matrix-owned-source.log": "35d339acc51fd73b8a2fc096ea7101153e04916e4f43ae21a6bc86a7057ac874"
+  }
+}

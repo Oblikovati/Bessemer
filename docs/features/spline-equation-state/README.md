@@ -84,3 +84,19 @@ python -B -X utf8 docs/features/spline-equation-state/freeze_owned_reference.py
 The command regenerates every fixture in a temporary root and requires exact
 agreement. The small source-snapshot index identifies a deterministic gzip that
 retains every byte of the full import/hash record; no provenance is discarded.
+
+
+## Expanded stored-value checks
+
+The [matrix proof](matrix-verification.json) records 906 owned edit requests:
+48 lock requests, 120 signed option requests, 720 text replacements and 18 count
+prefix transitions. Expected bytes come from literal words and CString frames,
+with offsets assembled independently of Bessemer. The 14-test suite passed;
+eight workers also replayed 384 edits against serial bytes and preserved their
+shared inputs. This concurrency check does not replace ThreadSanitizer.
+
+The frozen Source replay regenerated every fixture exactly. Its source copy
+added 40 Python files and changed none of the earlier files. The earlier full
+snapshot remains in `preparation-owned-source-snapshot.json.gz`; the current
+snapshot includes the replay identity. Malformed ownership cases, fresh actual
+edit exports, native outcomes and combined publication gates remain open.
