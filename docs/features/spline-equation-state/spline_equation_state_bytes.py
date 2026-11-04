@@ -26,14 +26,34 @@ def equation_collection(kind: int, style: int, edited: bool = False) -> bytes:
 
 def equation_sketch(kind: int, version: int, style: int, edited: bool = False, first_slot: int = 0) -> tuple[bytes, int]:
     """Use the existing complete sketch body and inherited map; e.g. equation_sketch(0,19000,0)."""
+    return equation_sketch_collection(equation_collection(kind, style, edited), version, first_slot)
+
+
+def equation_sketch_collection(direct: bytes, version: int, first_slot: int) -> tuple[bytes, int]:
+    """Compose an independently assembled direct collection; e.g. equation_sketch_collection(direct,19000,96)."""
     mapping = WireMap()
     mapping.slot = first_slot
     def sketch_body() -> bytes:
         raw = ordinary(mapping, version, False)
         assert raw[:32] == bytes(32), 'expected original eight empty direct collections'
-        return raw[:28] + equation_collection(kind, style, edited) + raw[32:]
+        return raw[:28] + direct + raw[32:]
     raw = mapping.new('sgSketch', sketch_body)
     return raw, mapping.slot + 1
+
+
+def equation_alias_graph(first_slot: int, edited: int = -1) -> tuple[bytes, int]:
+    """Build four physical splines and two exact aliases; e.g. equation_alias_graph(96,2)."""
+    first = equation_pair(0, (0, 4), edited, 0)
+    first, slots = equation_sketch_collection(first, 19000, first_slot)
+    second = equation_pair(1, (1, 2), edited, 2)
+    second, end = equation_sketch_collection(second, 19000, slots - 1)
+    return struct.pack('<iH', -123, 5) + first + struct.pack('<HH', slots - 1, 0) + second + struct.pack('<H', end - 1), end
+
+
+def equation_pair(kind: int, styles: tuple[int, int], edited: int, first: int) -> bytes:
+    """Assemble two physical entries without a parser; e.g. equation_pair(0,(0,4),1,0)."""
+    entries = [equation_collection(kind, style, edited == first + ordinal)[4:] for ordinal, style in enumerate(styles)]
+    return struct.pack('<i', 2) + b''.join(entries)
 
 
 def expected_equation_state(kind: int, style: int, edited: bool = False) -> dict[str, object]:

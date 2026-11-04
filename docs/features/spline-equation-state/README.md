@@ -139,3 +139,18 @@ packets byte for byte, opens all 906 actual documents through the original
 container and feature readers, requires complete feature EOF, and compares all
 nine saved values. This checks stored roles; it does not execute the native
 setter, expression evaluator or geometry providers.
+
+
+## Physical occurrences and aliases
+
+The [alias proof](alias-verification.json) covers two physical sketches with two
+equation splines each, two shared-object aliases and a null root. Source checked
+five complete independent graphs through EOF and primitive byte coverage. The
+normal reproducer regenerated every earlier fixture and each new graph exactly.
+
+Bessemer enumerated four physical states across the five roots. Each selected
+lock edit matched its independent whole-graph golden, preserved every unselected
+field and alias, reopened the complete document and reversed exactly. Eight
+workers replayed 128 edits against those goldens without changing their source.
+The full typed suite passed 17 tests. This adds owned alias acceptance; saved
+version contexts beyond 19000, native outcomes and publication gates remain open.

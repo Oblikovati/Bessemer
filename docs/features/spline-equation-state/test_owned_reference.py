@@ -7,7 +7,7 @@ from itertools import product
 from mfcobjects import ObjectArchive
 import sketchprefix
 from freeze_trim_edges import ObjectFixtureFamily, owned
-from spline_equation_state_bytes import equation_collection, equation_sketch, expected_equation_state, write_literal_positions
+from spline_equation_state_bytes import equation_collection, equation_sketch, expected_equation_state, write_literal_positions, equation_alias_graph
 
 ROOT = Path(__file__).resolve().parents[3]
 DESTINATION = Path(os.environ['BESSEMER_EQUATION_FIXTURE_ROOT'])
@@ -53,3 +53,42 @@ class OwnedEquationReferenceTests(unittest.TestCase):
         (DESTINATION / 'manifest.json').write_bytes((json.dumps(observations, indent=2) + '\n').encode())
         write_literal_positions(DESTINATION)
         self.assertEqual(len(observations), 18)
+
+    def test_alias_graph_has_four_physical_splines_and_exact_shared_roots(self) -> None:
+        """Observe distinct definitions, aliases and null without inventing alias bodies."""
+        destination = DESTINATION / 'alias-graphs'
+        destination.mkdir(parents=True, exist_ok=True)
+        observations = [self.check_alias_graph(edited, destination) for edited in range(-1, 4)]
+        (destination / 'manifest.json').write_bytes((json.dumps(observations, indent=2) + '\n').encode())
+
+    def check_alias_graph(self, edited: int, destination: Path) -> dict[str, int]:
+        """Observe a complete independently built alias graph; e.g. self.check_alias_graph(2, temporary)."""
+        from freeze_trim_edges import source_module, saved_manager, SavedSheetMetalDocument, observe_primitives, verify_primitive_coverage
+        reference = Path(os.environ['BESSEMER_EQUATION_PIN'])
+        container, prefix, features, archive = (source_module(name, reference) for name in ('swcontainer', 'modelprefix', 'resolvedfeatures', 'swarchive'))
+        original = container.Document((ROOT / 'tests/fixtures/blank-part.SLDPRT').read_bytes(), table={})
+        manager, _ = saved_manager(reference, original, 0)
+        _, context = prefix.read(SavedSheetMetalDocument(original, manager, b''), 'Contents/Config-0', through_part_resolved=True, configuration_context=True)
+        raw, slots = equation_alias_graph(len(context.map) - 1, edited)
+        with observe_primitives(archive.Archive, raw) as reads:
+            parsed = features.read_supported(SavedSheetMetalDocument(original, manager, raw), 'Contents/Config-0-ResolvedFeatures')
+        self.assertEqual((parsed['end'], parsed['tail'], len(parsed['archive'].map)), (len(raw), b'', slots))
+        verify_primitive_coverage(raw, reads)
+        self.check_alias_roles(parsed['items'], edited)
+        (destination / f'graph-{edited + 1}.bin').write_bytes(raw)
+        return dict(edited=edited, wire_bytes=len(raw), slots=slots, primitive_reads=len(reads))
+
+    def check_alias_roles(self, items: list[object], edited: int) -> None:
+        """Check identity and literal roles independently; e.g. self.check_alias_roles(items,-1)."""
+        self.assertEqual(len(items), 5)
+        self.assertIs(items[0], items[1])
+        self.assertIsNone(items[2])
+        self.assertIs(items[3], items[4])
+        splines = items[0]['splines'] + items[3]['splines']
+        self.assertEqual(len(splines), 4)
+        for ordinal, (actual, style) in enumerate(zip(splines, [0, 4, 1, 2])):
+            expected = expected_equation_state(ordinal // 2, style, edited == ordinal)
+            self.assertEqual(actual['flags_32c'], expected['flags_32c'])
+            self.assertEqual(actual['equation_strings'], expected['strings'])
+            self.assertEqual(actual['equation_word'], expected['compatibility_word'])
+            self.assertEqual(actual['unknown_1e0'], expected['saved_option'])

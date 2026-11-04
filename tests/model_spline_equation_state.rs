@@ -169,3 +169,6 @@ mod concurrency;
 
 #[path = "model_spline_equation_state/exports.rs"]
 mod exports;
+
+#[path = "model_spline_equation_state/aliases.rs"]
+mod aliases;

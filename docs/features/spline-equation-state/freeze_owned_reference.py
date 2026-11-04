@@ -29,8 +29,8 @@ def run_owned_reference(pin: Path, generated: Path) -> unittest.TestResult:
 def verify_owned_fixture_regeneration(generated: Path) -> None:
     """Require every checked-in byte unchanged; e.g. verify_owned_fixture_regeneration(temporary)."""
     expected = ROOT / 'tests/fixtures/spline-equation-state'
-    names = sorted(path.name for path in expected.iterdir() if path.is_file())
-    assert names == sorted(path.name for path in generated.iterdir() if path.is_file()), 'expected identical fixture file sets'
+    names = sorted(path.relative_to(expected).as_posix() for path in expected.rglob('*') if path.is_file())
+    assert names == sorted(path.relative_to(generated).as_posix() for path in generated.rglob('*') if path.is_file()), 'expected identical fixture file sets'
     for name in names:
         assert (expected / name).read_bytes() == (generated / name).read_bytes(), f'{name}; expected unchanged reviewed baseline'
 
