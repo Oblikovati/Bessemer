@@ -1,0 +1,20 @@
+{
+  "issue": 199,
+  "command": "cargo xtask pr",
+  "passed": true,
+  "process_exit_code": 0,
+  "source_revision": "82283408fc83f821e99c13004775dce27af664dc",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "tests_passed": 4046,
+  "tests_failed": 0,
+  "tests_ignored": 225,
+  "test_summaries": 322,
+  "log_sha256": "37162e311236bc056e6d9523a7451dd97f6af96033e7b5cdff10077ece410414",
+  "scope": "Combined #197/#199/#200 implementation and all earlier root features through82283408; includes all three admitted saved contexts and aliases",
+  "exclusions": [
+    "Later test-only native empty scan #199 is outside this checkout",
+    "New root snapshot Feature #201 is excluded",
+    "Exact-head remote publication and native positive equation acceptance remain open"
+  ]
+}
