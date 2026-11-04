@@ -1,9 +1,24 @@
 use super::*;
 use crate::archive_codec::ArchiveRevision;
-use crate::metadata::{OrderedXmlView, XmlContent};
+use crate::metadata::{OrderedXmlView, Utf8XmlDocument, XmlContent};
 use std::collections::BTreeSet;
 
 pub(super) fn attempts(
+    xml: &Utf8XmlDocument,
+    revision: &ArchiveRevision,
+    sheet: usize,
+    policy: InspectionRelationshipPolicy,
+) -> Result<Vec<InspectionRelationshipAttempt>> {
+    let ordered = xml.ordered_view().ok_or_else(|| {
+        record_error(
+            FailureClass::Missing,
+            "ordered XML capture absent; expected complete relationship traversal".to_owned(),
+        )
+    })?;
+    Ok(collect_attempts(&ordered, revision, sheet, policy))
+}
+
+fn collect_attempts(
     xml: &OrderedXmlView<'_>,
     revision: &ArchiveRevision,
     sheet: usize,

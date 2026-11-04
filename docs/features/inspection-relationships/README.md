@@ -18,10 +18,14 @@ exclusion. The full repository and publication gates remain required.
 
 A matched local probe found additional read time and memory use in the first
 storage implementation. Ordered capture is now opt-in at the shared-parser
-boundary: validation and Composer keep the lightweight element model, while
-Inspection record indexing requests the content needed by relationships. The
-complete result packets remain unchanged. The optimized implementation still
-needs a repeated cost measurement and complete repository validation.
+boundary: validation, Composer and ordinary Inspection indexing keep the
+lightweight element model. A relationship request performs an additional bounded
+parse and drops the ordered model after projection. The complete result packets
+remain unchanged. A balanced local probe found ordinary reads near baseline;
+complete relationship requests took about 41% longer than the first unreleased
+implementation and used about 18% less observed working set. These diagnostic
+measurements include fixture I/O and a concurrent native test, and do not replace
+complete repository or release-performance validation.
 
 The selected native helper distinguishes ordered insertion attempts, insertion
 into an initially empty map, and the writer's empty-key filter. A retained text,

@@ -33,7 +33,7 @@ pub struct InspectionRecords {
 impl InspectionRecords {
     /// Index an already validated envelope; e.g. `InspectionRecords::from_envelope(&envelope)?`.
     pub fn from_envelope(envelope: &InspectionEnvelope) -> Result<Self> {
-        let xml = Utf8XmlDocument::from_bytes_ordered(
+        let xml = Utf8XmlDocument::from_bytes_for(
             envelope.xml_bytes(),
             envelope.limits,
             "Inspection XML",
@@ -107,3 +107,7 @@ impl InspectionRecords {
 fn record_error(class: FailureClass, cause: String) -> BessemerError {
     BessemerError::new("Inspection records", "standalone project XML", class, cause)
 }
+
+#[cfg(test)]
+#[path = "../../../tests/inspection_relationship_capture.rs"]
+mod relationship_capture_tests;
