@@ -56,6 +56,20 @@
     "post_format_maximum_function_lines": 19,
     "log_sha256": "4995f186e3f477edfc9867d5df4152302b2b0d89e56f05aad0dd48a7e97ceefe",
     "scope": "Literal ordinary object-reference framing test; no additional independent Source replay or native occurrence population claimed",
-    "full_gate_exclusion": "This extension follows the active f8b7578a full PR gate source and is excluded from that run"
+    "full_gate_exclusion": "This extension follows the active f8b7578a full PR gate source and is excluded from that run",
+    "complete_focused_suite": {
+      "source_revision": "ca42e226",
+      "passed": 22,
+      "failed": 0,
+      "ignored": 0,
+      "seconds": 36.68,
+      "exit_code": 0,
+      "log_sha256": "2a64dddc34e39a4c23ef859baa66122ac2dc8f2de721df49953e0c6729965edb"
+    },
+    "independent_source_followup": {
+      "session": 82096,
+      "status": "Two tests passed; immutable source-integrity finalization remains live. No guarded-success credit yet.",
+      "log": "target/parameter-multiple-alias-source.log"
+    }
   }
 }
