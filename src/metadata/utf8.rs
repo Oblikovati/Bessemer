@@ -12,11 +12,20 @@ pub(crate) struct Utf8XmlDocument {
     model: Arc<XmlModel>,
     siblings: Arc<[usize]>,
     bom: bool,
+    subject: &'static str,
 }
 
 impl Utf8XmlDocument {
     pub(crate) fn from_bytes(bytes: &[u8], limits: XmlLimits) -> Result<Self> {
-        let (text, bom) = decode_utf8(bytes, limits)?;
+        Self::from_bytes_for(bytes, limits, "Composer XML")
+    }
+
+    pub(crate) fn from_bytes_for(
+        bytes: &[u8],
+        limits: XmlLimits,
+        subject: &'static str,
+    ) -> Result<Self> {
+        let (text, bom) = decode_utf8(bytes, limits, subject)?;
         let parsed = parse_model(text, bytes.len(), limits)?;
         let siblings = sibling_ordinals(&parsed);
         Ok(Self {
@@ -25,6 +34,7 @@ impl Utf8XmlDocument {
             model: Arc::new(parsed),
             siblings: siblings.into(),
             bom,
+            subject,
         })
     }
 
@@ -71,38 +81,56 @@ impl Utf8XmlDocument {
         value: &str,
         limits: XmlLimits,
     ) -> Result<Self> {
-        let text = self.replaced_text(ordinal, value)?;
+        self.with_attribute(ordinal, "IdentGeom", value, limits)
+    }
+
+    pub(crate) fn with_attribute(
+        &self,
+        ordinal: usize,
+        local: &str,
+        value: &str,
+        limits: XmlLimits,
+    ) -> Result<Self> {
+        let text = self.replaced_text(ordinal, local, value)?;
         let source = utf8_source(text, self.bom);
         encoding::require_size(
             encoding::encoded_length(&source)?,
             limits.maximum_bytes,
-            "edited Composer XML bytes",
+            &format!("edited {} bytes", self.subject),
         )?;
-        Self::from_bytes(&encoding::encode(&source), limits)
+        Self::from_bytes_for(&encoding::encode(&source), limits, self.subject)
     }
 
-    fn replaced_text(&self, ordinal: usize, value: &str) -> Result<String> {
+    fn replaced_text(&self, ordinal: usize, local: &str, value: &str) -> Result<String> {
         super::edit::replace_attribute(
             &self.text,
             &self.model.elements[ordinal],
             ordinal,
             None,
-            "IdentGeom",
+            local,
             value,
         )
     }
+
+    pub(crate) fn parent(&self, ordinal: usize) -> Option<usize> {
+        self.model.elements[ordinal].parent
+    }
 }
 
-fn decode_utf8(bytes: &[u8], limits: XmlLimits) -> Result<(&str, bool)> {
-    encoding::require_size(bytes.len(), limits.maximum_bytes, "Composer XML bytes")?;
+fn decode_utf8<'a>(bytes: &'a [u8], limits: XmlLimits, subject: &str) -> Result<(&'a str, bool)> {
+    encoding::require_size(
+        bytes.len(),
+        limits.maximum_bytes,
+        &format!("{subject} bytes"),
+    )?;
     let bom = bytes.starts_with(&[0xef, 0xbb, 0xbf]);
     let payload = if bom { &bytes[3..] } else { bytes };
     let text = std::str::from_utf8(payload).map_err(|error| {
         invalid(format!(
-            "Composer XML encoding {error}; expected UTF-8 with optional BOM"
+            "{subject} encoding {error}; expected UTF-8 with optional BOM"
         ))
     })?;
-    reject_declarations(text)?;
+    reject_declarations(text, subject)?;
     Ok((text, bom))
 }
 
@@ -125,11 +153,11 @@ fn utf8_source(text: String, bom: bool) -> super::XmlSource {
     }
 }
 
-fn reject_declarations(text: &str) -> Result<()> {
+fn reject_declarations(text: &str, subject: &str) -> Result<()> {
     if text.contains("<!DOCTYPE") || text.contains("<!ENTITY") {
-        return Err(super::unsupported(
-            "Composer XML contains a DTD/entity declaration marker; expected no declarations or external resources",
-        ));
+        return Err(super::unsupported(format!(
+            "{subject} contains a DTD/entity declaration marker; expected no declarations or external resources"
+        )));
     }
     Ok(())
 }

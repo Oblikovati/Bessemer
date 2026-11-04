@@ -1,0 +1,61 @@
+{
+  "issue": 193,
+  "status": "First complete literal record operation; broader feature gates remain open",
+  "record_tests_passed": 7,
+  "composer_owned_tests_passed": 10,
+  "composer_native_tests_passed": 1,
+  "native_composer_project_indexes": 38,
+  "native_composer_outputs_byte_equal_baseline": true,
+  "cipher_profiles_checked": [
+    "Current2020",
+    "Historical2015"
+  ],
+  "tutorial_named_records": 158,
+  "concurrent_workers": 8,
+  "checks": [
+    "cargo fmt check",
+    "core Clippy warnings and missing docs denied",
+    "test Clippy warnings denied",
+    "unsafe forbidden",
+    "function bodies at most 20 nonblank lines",
+    "files below 500 lines"
+  ],
+  "files": {
+    "target/inspection-record-focused.log": {
+      "bytes": 675,
+      "sha256": "e0192fee4e48c9e5f5a16a991c31ed73035d357ac9ad518bc883f89e3f7741b7"
+    },
+    "target/inspection-composer-owned.log": {
+      "bytes": 942,
+      "sha256": "eec7c8a5a3f8ff42060d36b3d6bea02679777d93a7d0e6e28a94088127d0b8cb"
+    },
+    "target/inspection-composer-native.log": {
+      "bytes": 202,
+      "sha256": "38b490e2f4797d06911a424d33b490cf5de479f8f4641cda99b0b2c9162bfc32"
+    },
+    "target/inspection-composer-native/target/composer-links-native-edits.bin": {
+      "bytes": 89092608,
+      "sha256": "3cc9169490a9a443aedfd398631b7e6a4af16d46d6f706f25f68ad61ff7932d1"
+    }
+  },
+  "source_sha256": {
+    "src/inspection/records/edit.rs": "3529084e741096c1e7a4f471942ee5d14e466ff58b210a74e9755982bc0caed4",
+    "src/inspection/records/mod.rs": "36b77f58c94e98756572d9797ed188cbbac746ce2874a6dd09e26eae01ddbe85",
+    "src/inspection/records/projection.rs": "55954eee4fcfe6ecb52a0506f7c31269122ca94642b4fd596fdbae27a8c31e04",
+    "src/inspection/records/types.rs": "0248d1120002b92f94a5273ad7ab5e600c03cbb25e1c00f757b07d0c4d4a6caf",
+    "src/inspection/mod.rs": "f5163d7907bed64ca9b4886c9aeac4532fb1e620c047891fe95b4b6309ae6711",
+    "src/metadata/mod.rs": "4a8399584d0912701048a94d0e467eb729ac3dd9df2c5257454bb7f4355b5b8b",
+    "src/metadata/utf8.rs": "18ec4e7a2767cf893089c1e567cd44398c750222f6d16e24237f4c25e428334f",
+    "tests/inspection_records.rs": "87eff50bfd0dbd667ca6d86a883b57416418a0098a16bf32d74857aeb2f85cb1"
+  },
+  "remaining": [
+    "Native load projections",
+    "Explicit limit boundaries",
+    "Additional installed templates",
+    "Fresh process outputs",
+    "Actual Rust output acceptance by unchanged Source",
+    "Complete post-integration local gate",
+    "Exact-head remote matrix",
+    "Application reload"
+  ]
+}

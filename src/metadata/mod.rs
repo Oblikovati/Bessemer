@@ -24,6 +24,7 @@ use types::XmlModel;
 pub use types::{
     ExpandedName, XmlAttribute, XmlElementId, XmlEncoding, XmlFormat, XmlLimits, XmlSource,
 };
+pub(crate) use utf8::Utf8XmlDocument;
 pub(crate) use utf8::Utf8XmlDocument as ComposerXmlDocument;
 pub use views::XmlElementRef;
 

@@ -496,6 +496,9 @@ direct plane-section geometry, strict collections and serialized section bodies.
 [Standalone Inspection envelopes](docs/features/standalone-inspection/README.md)
 cover current encrypted templates and historical projects, exact XML preservation
 and immutable complete-XML replacement.
+Its [ordered record views](docs/features/inspection-records/README.md) retain
+literal document, group, characteristic, measurement and custom-property
+occurrences, with isolated edits to existing unqualified attribute text.
 
 Library-feature configuration, cross-reference and atom-ID interoperability is
 documented in [the feature evidence](docs/features/library-features/README.md).

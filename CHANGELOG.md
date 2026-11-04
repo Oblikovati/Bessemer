@@ -40,6 +40,8 @@
 
 ### Added
 
+- Added ordered standalone Inspection record views and isolated existing-attribute edits with revision-bound identities and complete record provenance. (#193)
+
 - Added class-scoped full-width ellipse-backup rotation snapshot views and isolated stored-word edits. (#192)
 
 - Added bounded named bitmap resource-array reads, isolated payload edits and count/payload validation with complete field history. (#190)
