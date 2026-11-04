@@ -1,0 +1,26 @@
+{
+  "issue": 193,
+  "tests": 4,
+  "failures": 0,
+  "process_exit_code": 0,
+  "source_import_guard": "passed; immutable original inspectionrecords module, no live Source imports",
+  "source_snapshot_identity": "8de1684d70b1eb425c764915723c498bf19bea9e275dd90479f0a2f15d8da123",
+  "source_python_files": 6334,
+  "fixtures": {
+    "tests\\fixtures\\inspection-records\\ordered.xml": {
+      "bytes": 1517,
+      "sha256": "3c9c36f84f2d24509201c0ec7420a11ab6b019b9ef9a3260a9a282f9c0f97c1c"
+    },
+    "tests\\fixtures\\standalone-inspection\\historical.xml": {
+      "bytes": 361531,
+      "sha256": "d5ce41d90637a180975ac925cabed42c2f87628c446c3276a398e3c40e3d29ce"
+    }
+  },
+  "excluded": [
+    "Rust implementation",
+    "encrypted edit/reopen/reverse",
+    "application reload",
+    "relationship map semantics",
+    "full Inspection schema parity"
+  ]
+}
