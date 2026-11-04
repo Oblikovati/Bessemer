@@ -3,7 +3,7 @@ use relationships::InspectionRelationshipPolicy;
 
 #[test]
 fn ordinary_record_index_and_published_source_never_retain_operation_local_capture() {
-    let xml = include_bytes!("fixtures/inspection-relationships/ordered.xml");
+    let xml = include_bytes!("../fixtures/inspection-relationships/ordered.xml");
     let project = indexed_project(xml);
     assert!(project.xml.ordered_view().is_none());
     let sheet = project

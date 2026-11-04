@@ -231,5 +231,5 @@ fn missing(cause: impl Into<String>) -> BessemerError {
 }
 
 #[cfg(test)]
-#[path = "../../tests/metadata_ordered_capture.rs"]
+#[path = "../../tests/metadata/ordered_capture.rs"]
 mod ordered_capture_tests;

@@ -109,5 +109,5 @@ fn record_error(class: FailureClass, cause: String) -> BessemerError {
 }
 
 #[cfg(test)]
-#[path = "../../../tests/inspection_relationship_capture.rs"]
+#[path = "../../../tests/inspection_relationships/unit_capture.rs"]
 mod relationship_capture_tests;
