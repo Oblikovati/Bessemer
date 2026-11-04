@@ -257,3 +257,6 @@ mod load_strings;
 
 #[path = "support/binary_load_history.rs"]
 mod load_history;
+
+#[path = "support/model_field_semantics.rs"]
+mod model_field_semantics;

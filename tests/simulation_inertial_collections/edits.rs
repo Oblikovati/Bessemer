@@ -366,7 +366,7 @@ fn string_framing_edit(
 ) -> (SimulationInertialEdit, SimulationEmbeddedArchive) {
     let short = super::load_strings::framed_string_archive(false, LIMITS.embedded);
     let extended = super::load_strings::framed_string_archive(true, LIMITS.embedded);
-    assert_eq!(short.fields(), extended.fields());
+    crate::model_field_semantics::assert_distinct_framing(short.fields(), extended.fields());
     assert_ne!(short.to_bytes().unwrap(), extended.to_bytes().unwrap());
     let prepared = replace(
         source,
