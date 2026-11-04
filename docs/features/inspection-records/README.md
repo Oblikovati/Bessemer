@@ -10,8 +10,17 @@ Each occurrence has a revision-bound identity and its nearest named owner.
 Stored Uid and Name strings remain ordinary attributes; duplicate values do not
 merge occurrences. `edit_attribute` replaces an existing unqualified attribute
 through the shared XML lexical engine. Its result retains both immutable
-snapshots, completion, exact XML coverage, semantic exclusions and one source
+snapshots, completion, exact XML coverage, semantic exclusions and a source
 parent for every result record. Only the selected record's relation is derived.
+
+Edits retain the initial immutable lexical checkpoint (#194). Restoring a
+checkpoint value replays that attribute's original token, including quote style,
+spacing and character-reference spelling, while retaining unrelated later edits.
+Replay history includes both the current occurrence and the checkpoint occurrence;
+the result exposes the checkpoint snapshot so both parents can be resolved.
+Intermediate snapshots share the initial checkpoint rather than forming a chain.
+A project parsed from a reopened edited envelope starts with its own observed
+checkpoint; it cannot reconstruct an earlier file's unobserved lexical spelling.
 
 `ordered.xml` is an owned literal fixture. It distinguishes the DOCUMENT container
 from its nested records, preserves duplicate identifiers and property names, and
@@ -57,6 +66,12 @@ through encryption and reverse to the exact original ciphertext. An explicit
 installed-root test repeats these checks against all 42 original templates,
 first requiring their bytes to equal the accepted owned variants (28 and 14).
 
-Fresh-process equality and unchanged Source
-acceptance of actual Rust outputs still need their feature gates. The complete
+Two fresh processes each passed 22 tests and exported all 1,349 unqualified
+attribute edits across six fixtures. Every edit reversed to its original lexical
+bytes, including numeric references and alternate quotes. Their 467,509,853-byte
+packets were byte-identical. Two original Source tests accepted every actual Rust
+output, comparing complete XML trees against independently changed expectations.
+Independent Expat byte spans and fixed escaped-value spellings also checked each
+output's exact byte patch. The frozen reader and source-integrity guard passed.
+The complete
 local and exact-head remote checks remain required before integration.

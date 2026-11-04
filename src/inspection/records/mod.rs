@@ -20,6 +20,7 @@ pub struct InspectionRecords {
     xml: Utf8XmlDocument,
     revision: ArchiveRevision,
     records: Arc<[InspectionRecord]>,
+    checkpoint: Option<Arc<InspectionRecords>>,
 }
 
 impl InspectionRecords {
@@ -37,6 +38,7 @@ impl InspectionRecords {
             xml,
             revision,
             records,
+            checkpoint: None,
         })
     }
 
@@ -88,6 +90,10 @@ impl InspectionRecords {
             ExternalSourcesNotResolved,
             ApplicationReloadNotChecked,
         ]
+    }
+
+    fn replay_checkpoint(&self) -> &Self {
+        self.checkpoint.as_deref().unwrap_or(self)
     }
 }
 

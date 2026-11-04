@@ -1,0 +1,51 @@
+{
+  "issue": 193,
+  "bug": 194,
+  "source_tests_passed": 2,
+  "source_process_exit_code": 0,
+  "source_test_seconds": 26.206,
+  "source_python_files": 6356,
+  "source_snapshot_identity": "9daccd43bdf762a0ff4dc49b3518ceb7f1ecc4edf7aa0e7dea83630e7a24c923",
+  "source_import_and_content_guard": "passed",
+  "original_reader_unchanged": true,
+  "actual_rust_outputs_accepted": 1349,
+  "complete_independent_expected_byte_patches": 1349,
+  "fresh_process_packets_byte_equal": true,
+  "oracle": "Original inspectionrecords.read full trees against independently changed expected trees; Expat start-tag byte positions and fixed escaped-value spellings against every output byte",
+  "composer_owned_tests_passed": 10,
+  "composer_native_tests_passed": 1,
+  "composer_native_project_indexes": 38,
+  "composer_native_output_byte_equal_before_refactor": true,
+  "files": {
+    "target/inspection-actual-output-source.log": {
+      "bytes": 620,
+      "sha256": "590629af073b7f604def90d10d0b89b811b72515b745dac8b7fcfb495b304951"
+    },
+    "target/verify-inspection-exports-source.py": {
+      "bytes": 1208,
+      "sha256": "02af5e054d7a61361a4b2649d423cd9d9d44228ef71e94706ac4241a1d395a1b"
+    },
+    "docs/features/inspection-records/verify_output_reference.py": {
+      "bytes": 8298,
+      "sha256": "9aed285c43edc630eececda6f89149cb19ed179a35c4588d854beaf594e5efbe"
+    },
+    "target/inspection-replay-composer-owned.log": {
+      "bytes": 942,
+      "sha256": "82cef78f9b0f9d83d07a72a7fea535c1dc20cbd7c843b9da4e0c9fd90d43ea3e"
+    },
+    "target/inspection-replay-composer-native.log": {
+      "bytes": 202,
+      "sha256": "e532b5b466dbec697020726b8333b47a2702bd3665b98da7d2326e4a29c4f4a8"
+    },
+    "target/inspection-replay-composer/target/composer-links-native-edits.bin": {
+      "bytes": 89092608,
+      "sha256": "3cc9169490a9a443aedfd398631b7e6a4af16d46d6f706f25f68ad61ff7932d1"
+    }
+  },
+  "exclusions": [
+    "No native application reload",
+    "No numeric/enum/unit interpretation",
+    "No missing historical lexeme inference after reopening",
+    "Full local/exact-head remote gates pending"
+  ]
+}

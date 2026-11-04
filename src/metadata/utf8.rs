@@ -92,6 +92,28 @@ impl Utf8XmlDocument {
         limits: XmlLimits,
     ) -> Result<Self> {
         let text = self.replaced_text(ordinal, local, value)?;
+        self.with_replaced_text(text, limits)
+    }
+
+    pub(crate) fn restore_attribute(
+        &self,
+        ordinal: usize,
+        local: &str,
+        checkpoint: &Self,
+        limits: XmlLimits,
+    ) -> Result<Self> {
+        let text = super::edit::restore_attribute(
+            &self.text,
+            &self.model.elements[ordinal],
+            ordinal,
+            &checkpoint.text,
+            &checkpoint.model.elements[ordinal],
+            local,
+        )?;
+        self.with_replaced_text(text, limits)
+    }
+
+    fn with_replaced_text(&self, text: String, limits: XmlLimits) -> Result<Self> {
         let source = utf8_source(text, self.bom);
         encoding::require_size(
             encoding::encoded_length(&source)?,
