@@ -1,0 +1,136 @@
+{
+  "issue": 185,
+  "stage": "Complete bounded role matrix with mixed requests across eight workers and two fresh processes",
+  "processes_reaped": 2,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "test_seconds": [
+    43.62,
+    43.62
+  ],
+  "cases_per_process": 264,
+  "selectors_per_case": 8,
+  "indices_per_case": 2,
+  "workers_per_shared_snapshot": 8,
+  "serial_controls_per_snapshot": 1,
+  "role_visits_per_process": 23760,
+  "changed_requests_per_process": 23760,
+  "noop_requests_per_process": 23760,
+  "foreign_revision_rejections_per_process": 23760,
+  "stale_revision_rejections_per_process": 47520,
+  "total_counted_edit_requests_per_process": 118800,
+  "independent_wire_oracle": {
+    "passed": true,
+    "roots": 2904,
+    "bytes": 4419892,
+    "sha256": "78a5127e738e0c1e9aa89dabb08f65d1608670e8e9792183c9dbc3a2825429ea"
+  },
+  "complete_outputs": {
+    "passed": true,
+    "comparisons": [
+      {
+        "first": "target/stored-role-concurrent-process-1.bin",
+        "second": "target/stored-role-concurrent-process-2.bin",
+        "bytes": 4419892,
+        "sha256": "78a5127e738e0c1e9aa89dabb08f65d1608670e8e9792183c9dbc3a2825429ea",
+        "all_bytes_equal": true
+      },
+      {
+        "first": "target/stored-role-concurrent-process-1.trace.zlib",
+        "second": "target/stored-role-concurrent-process-2.trace.zlib",
+        "bytes": 30559657,
+        "sha256": "60710869e582ccc0c5804b98eea86a421c961ccda8fcfe193a001647c91f22fa",
+        "all_bytes_equal": true
+      }
+    ],
+    "complete_trace": {
+      "case_lines": 264,
+      "uncompressed_bytes": 303544314,
+      "uncompressed_sha256": "bd5e3c4d2839054645871e5aa75ed952797e8a1cca40e8bc7120bb536459b7a1"
+    },
+    "test_seconds": [
+      43.62,
+      43.62
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "tests/model_intersection_reference.rs",
+      "bytes": 6294,
+      "sha256": "666e9a5f9e4ca03fc4c9788b01b36ddff946813080291175c16ae0a08b0bf282"
+    },
+    {
+      "path": "tests/model_intersection_reference/role_concurrency.rs",
+      "bytes": 6713,
+      "sha256": "baefca2339323ac220e228c16a01adc554723df5f28d5843f380ff1526503d7f"
+    },
+    {
+      "path": "tests/support/model_operation_snapshot.rs",
+      "bytes": 2037,
+      "sha256": "9f687a2cc3ecfb32681229f2db8663d1582822c603f41e48c8287aaaef15d5fa"
+    },
+    {
+      "path": "tests/support/visual_workers.rs",
+      "bytes": 554,
+      "sha256": "de2b3f55ef516e04b83153b39ea739491a798b103c0f616f123501bd67249f20"
+    },
+    {
+      "path": "target/stored-role-concurrent-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/stored-role-concurrent-final-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/stored-role-concurrent-process-1.log",
+      "bytes": 9091,
+      "sha256": "9df614800454ca870b61839b9f4a2ccb842aead810375d52dd8ed4cf9eddc0c8"
+    },
+    {
+      "path": "target/stored-role-concurrent-process-2.log",
+      "bytes": 9091,
+      "sha256": "9df614800454ca870b61839b9f4a2ccb842aead810375d52dd8ed4cf9eddc0c8"
+    },
+    {
+      "path": "target/stored-role-concurrent-clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/stored-role-concurrent-format.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/stored-role-concurrent-independent.json",
+      "bytes": 138,
+      "sha256": "50da04a125a19ce45cd222d2722d03b660a94e4f9306776ea8cad3d02b58cabb"
+    },
+    {
+      "path": "target/stored-role-concurrent-comparison.json",
+      "bytes": 838,
+      "sha256": "05056c59c95ef4a1654c71e35f8b26423cb16172932538824529dc2d3fced238"
+    }
+  ],
+  "coverage_credit": 0,
+  "checks": [
+    "All264 Source-owned bounded cases exercise every physical selector and saved index with one serial and eight concurrent visits. No state/value filter changes the cohort.",
+    "Every changed request uses independent literal complete-root patches, full expected fields, exact history/parents/results, completion, unchanged count, coverage/fidelity, diagnostics and stale rejection.",
+    "Each worker also performs a no-op and foreign/stale revision requests. Complete worker snapshots equal serial bytes, all fields, status/coverage/fidelity/diagnostics, resolved history, unchanged counts and captured typed errors.",
+    "Both original source archives and their parent configuration remain unchanged after mixed requests; no-op handles remain valid in the original revision.",
+    "Both complete wire exports and compressed full traces match byte for byte. A stdlib checker validates every actual input/changed output against independent literal patches. Full trace decompression reaches exact EOF with264 complete case lines.",
+    "Standalone integration Clippy, workspace formatting and function/file-size audit pass."
+  ],
+  "qualifications": [
+    "The second run follows only behavior-preserving test helper shortening. Every wire and full-trace byte matches the first process.",
+    "History identities are checked within each operation; cross-process traces contain resolved original parents/result fields rather than allocation identities.",
+    "This is the complete bounded264-case matrix, not exhaustive concurrent writes to every field of the large owner. Full-u16 and large-owner read/write/document gates remain independent evidence.",
+    "These controlled eight-worker checks are not ThreadSanitizer or full Cargo/exact-head publication acceptance. The second selector actual-output Source replay remains active.",
+    "No native classifier, correspondence mapping, provider, geometry or complete schema parity is claimed. Humanizer unavailable; prose review pending."
+  ]
+}

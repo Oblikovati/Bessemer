@@ -49,8 +49,11 @@ document reopen and exact reversal. Native archive operations passed all
 processes, with literal patches, complete fields and exact history checked.
 Both native document processes also passed all 85 forward edits and typed
 reversals, preserving unrelated streams and restoring the entire original
-files byte for byte. The second selector output replay and the remaining
-concurrency/publication gates are pending.
+files byte for byte. Eight-worker mixed requests also passed the complete
+bounded matrix in two fresh processes. Full wire exports and operation
+traces match byte for byte, including resolved history and typed errors.
+The second selector output replay, ThreadSanitizer and full Cargo/exact-head
+publication gates are pending.
 
 Implementation must reuse the complete archive readers and revision-owned
 edit/history contracts. Require independent complete roots and literal
