@@ -150,3 +150,42 @@ fn stored_component_record(fields: &[ModelField]) -> &ObjectRecord {
     };
     &tag.record
 }
+
+#[test]
+fn component_edge_update_stamp_limits_preserve_all_u32_bits_without_cache_invalidation() {
+    let mut cursor = ArchiveCursor::new(CASES);
+    let mut edges = 0;
+    while cursor.remaining() != 0 {
+        let (_, version, bytes, _) = next_case(&mut cursor);
+        let fields = decode(version, bytes).unwrap();
+        let Some(index) = fields
+            .iter()
+            .position(|field| field.path.ends_with(".unknown_18c"))
+        else {
+            continue;
+        };
+        for limit in [0, 1, 0x65, 0x7fff_ffff, 0x8000_0000, u32::MAX] {
+            assert_stored_update_limit(version, bytes, &fields, index, limit);
+        }
+        edges += 1;
+    }
+    assert_eq!(edges, 48);
+}
+
+fn assert_stored_update_limit(
+    version: u32,
+    original: &[u8],
+    fields: &[ModelField],
+    selected: usize,
+    limit: u32,
+) {
+    let mut changed = fields.to_vec();
+    changed[selected].value = ModelFieldValue::U32(limit);
+    let offset = encode_fields(&fields[..selected], 30000).unwrap().len();
+    let mut expected = original.to_vec();
+    expected[offset..offset + 4].copy_from_slice(&limit.to_le_bytes());
+    let encoded = encode_fields(&changed, 30000).unwrap();
+    assert_eq!(encoded, expected);
+    assert_eq!(decode(version, &encoded).unwrap(), changed);
+    assert_eq!(encode_fields(fields, 30000).unwrap(), original);
+}
