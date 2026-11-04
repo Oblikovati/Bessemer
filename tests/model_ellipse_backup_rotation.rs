@@ -1,8 +1,16 @@
 //! Full signed ellipse-backup snapshots against independent complete-root literals (#192).
+#[path = "model_ellipse_backup_rotation/concurrency.rs"]
+mod concurrency;
 #[path = "model_ellipse_backup_rotation/contracts.rs"]
 mod contracts;
 #[path = "../examples/support/framing.rs"]
 mod framing;
+#[path = "model_ellipse_backup_rotation/historical.rs"]
+mod historical;
+#[path = "support/model_operation_snapshot.rs"]
+mod model_operation_snapshot;
+#[path = "support/native_kernel_context.rs"]
+mod native_kernel_context;
 #[path = "support/owned_resolved_document.rs"]
 mod owned_resolved_document;
 

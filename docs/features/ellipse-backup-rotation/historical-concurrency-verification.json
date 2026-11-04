@@ -1,0 +1,65 @@
+{
+  "issue": 192,
+  "passed": true,
+  "process_reaped": true,
+  "exit_code": 0,
+  "tests": 8,
+  "seconds": 1.0,
+  "all_supported_owned_contexts": 108,
+  "historical_and_current_primary_requests": 1080,
+  "exact_reverse_requests": 1080,
+  "duplicated_current_context_primary_requests": 360,
+  "concurrency": {
+    "shared_current_contexts": 36,
+    "physical_states": 72,
+    "workers": 8,
+    "serial_plus_worker_visits": 648,
+    "requests": 2592,
+    "outcomes": [
+      "changed",
+      "unchanged",
+      "foreign failure",
+      "stale failure"
+    ],
+    "compared": [
+      "bytes",
+      "all fields",
+      "completion",
+      "coverage",
+      "fidelity",
+      "diagnostics",
+      "complete resolved changed-field history",
+      "typed errors"
+    ]
+  },
+  "clippy_warnings_denied": true,
+  "function_size_audit_passed": true,
+  "log_sha256": "3b138eea74b01d9ae3593fba0876ec69451afa0d9d5fd7f1c39bce37deaa5c96",
+  "executable_sha256": "b8bbe6e0b541cbc5d225e9531b8f6b9e7708a0c7cb937570339030d576ab9c23",
+  "files": [
+    {
+      "path": "tests\\model_ellipse_backup_rotation.rs",
+      "sha256": "28bc5c4009b100cb487fda2c16aee866de4290af3389e16c60e34367aabc9ed1"
+    },
+    {
+      "path": "tests\\model_ellipse_backup_rotation\\concurrency.rs",
+      "sha256": "e39e2af324a557da4273b1da5644b59c384842547955031615f7dabef639c96e"
+    },
+    {
+      "path": "tests\\model_ellipse_backup_rotation\\contracts.rs",
+      "sha256": "f8a2e0b61c6e1dce6e32603689b131a18fa8f16171168f3214e4a4d2302d0417"
+    },
+    {
+      "path": "tests\\model_ellipse_backup_rotation\\historical.rs",
+      "sha256": "121d56bc00acf1363c365ea0706676daf79a81fcbeb1330cd8872d4f3ecabb1f"
+    }
+  ],
+  "remaining": [
+    "Native Rust projection/edit/document reversal gate",
+    "Two-process byte exports and actual Source output acceptance",
+    "Full local repository gate",
+    "Exact-head remote platform and ThreadSanitizer gates",
+    "Native application equivalence",
+    "Whole-schema parity"
+  ]
+}

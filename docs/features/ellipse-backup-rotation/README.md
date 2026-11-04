@@ -63,3 +63,23 @@ Regenerate the independent literals with
 `python -B -X utf8 docs/features/ellipse-backup-rotation/freeze_owned_ellipse.py`.
 Run the frozen original readers with
 `python -B -X utf8 docs/features/ellipse-backup-rotation/verify_owned_source.py`.
+
+All eight Rust tests then passed, including all 108 owned contexts and 1,080
+primary edit/reverse requests across the three supported versions. Eight
+workers shared every current-context snapshot and matched serial bytes, all
+fields, coverage, diagnostics, history and expected failures across 648 state
+visits and 2,592 requests. The [historical/concurrency record](historical-concurrency-verification.json)
+retains the tested source and executable hashes. Clippy with warnings denied
+and the function-size audit passed.
+
+The [native Source replay](native-source-verification.json) passed all five
+retained profiles: three contain four physical ellipses each and two contain
+none. Original readers reached every EOF and partitioned 1,580,514 logical
+bytes into 412,538 primitive reads. Passive primitive observations bound all
+12 signed values, literal offsets, physical map identities and schema1 values
+without replacing a class reader. Frozen content/import checks passed and the
+process exited successfully. Existing unknown totals were observed, without
+changing the unresolved accounting baseline or claiming byte credit.
+
+Native Rust operations and whole-document reversal, two-process exports with
+actual Source acceptance, and full local/remote gates remain pending.
