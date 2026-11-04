@@ -10,6 +10,8 @@ mod concurrency;
 mod documents;
 #[path = "model_visual_carriers/edits.rs"]
 mod edits;
+#[path = "support/owned_resolved_document.rs"]
+mod owned_resolved_document;
 #[path = "model_visual_carriers/typed_state.rs"]
 mod typed_state;
 #[path = "support/unselected_document_streams.rs"]

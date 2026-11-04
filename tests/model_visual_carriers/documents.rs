@@ -1,26 +1,14 @@
 use super::*;
 use bessemer::entity_visual::EntityVisualStoredEdit as Edit;
 
-const MODEL_VISUAL_STREAM: &str = "Contents/Config-0-ResolvedFeatures";
+const MODEL_VISUAL_STREAM: &str = crate::owned_resolved_document::OWNED_RESOLVED_STREAM;
 
 fn prepared_model_visual_document(raw: &[u8]) -> Document {
-    let mut document =
-        Document::from_bytes(include_bytes!("../fixtures/blank-part.SLDPRT")).unwrap();
-    document
-        .replace_stream(MODEL_VISUAL_STREAM, raw.to_vec())
-        .unwrap();
-    Document::from_bytes(&document.to_bytes().unwrap()).unwrap()
+    crate::owned_resolved_document::prepared_owned_resolved_document(raw)
 }
 
 fn reopened_model_visuals(document: &Document) -> PartResolvedFeaturesArchive {
-    PartResolvedFeaturesArchive::from_document(
-        document,
-        ConfigurationId::new(0),
-        ArchiveVersion::new(19000),
-        None,
-        VISUAL_LIMITS,
-    )
-    .unwrap()
+    crate::owned_resolved_document::read_owned_resolved_document(document, VISUAL_LIMITS)
 }
 
 fn verify_model_visual_other_streams(before: &Document, after: &Document) {
