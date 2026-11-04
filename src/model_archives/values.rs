@@ -36,13 +36,29 @@ pub enum ModelFieldValue {
 }
 
 /// One physical stored field in serialization order; paths may have multiple occurrences.
-#[derive(Debug, Clone, PartialEq, Eq)]
+#[derive(Debug, Clone)]
 pub struct ModelField {
     /// Exact schema-derived structural path.
     pub path: Arc<str>,
     /// Owned stored value.
     pub value: ModelFieldValue,
 }
+
+impl PartialEq for ModelField {
+    fn eq(&self, other: &Self) -> bool {
+        if self.path != other.path {
+            return false;
+        }
+        match (&self.value, &other.value) {
+            (ModelFieldValue::Text(left), ModelFieldValue::Text(right)) => {
+                left.same_stored_representation(right)
+            }
+            (left, right) => left == right,
+        }
+    }
+}
+
+impl Eq for ModelField {}
 
 impl ModelFieldValue {
     fn encoded_size(&self) -> Result<usize> {

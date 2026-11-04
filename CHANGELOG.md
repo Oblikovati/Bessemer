@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Fixed model-field equality discarding CString count-prefix-only edits and their derived history. (#200)
+
 - Preserved original Inspection attribute lexemes when reversing edits with a retained immutable checkpoint, including all replay history parents. (#194)
 
 - Partitioned the complete ThreadSanitizer workload across eight required CI jobs to keep validation within hosted-runner time limits. (#183)

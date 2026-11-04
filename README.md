@@ -860,3 +860,5 @@ Stored ellipse-backup rotation snapshots expose the complete signed word through
 class admission and revision guards preserve aliases and unselected fields.
 See [the snapshot contract](docs/features/ellipse-backup-rotation/README.md) for
 validation status and the native restoration/geometry exclusions.
+
+Model-field edits retain CString count-prefix changes as physical changes, including completion and derived field history; decoded string comparison remains semantic. See the [framing regression](docs/features/model-text-framing/README.md).
