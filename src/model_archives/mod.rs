@@ -350,3 +350,8 @@ fn model_failure(mut error: BessemerError) -> BessemerError {
 
 mod entity_visual_state;
 pub use entity_visual_state::ModelEntityVisualStoredState;
+mod intersection_reference;
+pub use intersection_reference::{
+    ModelIntersectionReferenceStoredEdit, ModelIntersectionReferenceStoredState,
+    ModelIntersectionReferenceStoredWords,
+};

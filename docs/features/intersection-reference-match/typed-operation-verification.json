@@ -1,0 +1,178 @@
+{
+  "issue": 184,
+  "stage": "First complete ordinary resolved-feature stored-role operation",
+  "projection_tests": 8,
+  "projection_exit_code": 0,
+  "initial_controls_passed": 3,
+  "first_matrix_passed": 1,
+  "second_integration_process_passed": 4,
+  "processes_reaped": true,
+  "first_matrix_seconds": 72.64,
+  "second_integration_seconds": 114.91,
+  "cases_per_matrix_process": 1344,
+  "physical_references_per_matrix": 10752,
+  "changed_requests_per_matrix": 43008,
+  "noop_requests_per_matrix": 32256,
+  "requests_per_matrix": 75264,
+  "exported_roots_per_process": 44352,
+  "exported_packet_bytes": 67503748,
+  "exported_packet_sha256": "9f1caef0a67f45721f090275aa6369354afc333e0d4f504bede21fa745ece47f",
+  "artifacts": [
+    {
+      "path": "src/model_archives/intersection_reference/admission.rs",
+      "bytes": 4265,
+      "sha256": "c10b96418b48c394de7312e0396b3c303411ba795fd41350054d2bfda13ed4c2"
+    },
+    {
+      "path": "src/model_archives/intersection_reference/archive_ops.rs",
+      "bytes": 2756,
+      "sha256": "7b39456a89884ba8fa9bed6e04335feeac664fc19869ba369e606015b734b247"
+    },
+    {
+      "path": "src/model_archives/intersection_reference/mod.rs",
+      "bytes": 2991,
+      "sha256": "dca0164d982429951d9c1d17acbc4be06f7e3175489125b80356736a4a76266c"
+    },
+    {
+      "path": "src/model_archives/intersection_reference/projection.rs",
+      "bytes": 2093,
+      "sha256": "e7b435b4d82d684a65b145721f6e66587486b42e3dd32fad79116f862180fec6"
+    },
+    {
+      "path": "tests/model_intersection_reference/contracts.rs",
+      "bytes": 7823,
+      "sha256": "29924d75e737955654cda0082fd8de35184e9dc3b9bd64d3aa4c4b3b996aa1b1"
+    },
+    {
+      "path": "tests/model_intersection_reference/projection_unit.rs",
+      "bytes": 6438,
+      "sha256": "5924a76f1574a8c3ee58cf54c40cf8ddaeb0764d36f250adc9ee9c10ff2acb80"
+    },
+    {
+      "path": "tests/model_intersection_reference.rs",
+      "bytes": 4769,
+      "sha256": "edce410e52d363fb0c4f4f8ad6117c39d6d27370ae1b62078d45afa12ea2a2f7"
+    },
+    {
+      "path": "src/model_archives/mod.rs",
+      "bytes": 9015,
+      "sha256": "f874de1a3642ff058b98231156e7840e2b177dabad84757dada7e4a9620a58bb"
+    },
+    {
+      "path": "target/intersection-reference-unit-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/intersection-reference-unit-tests-initial.log",
+      "bytes": 1058,
+      "sha256": "6ccc109da277c84b803cb3f02dc3307ef1a4a52508bcaf180e45ee681e2d6948"
+    },
+    {
+      "path": "target/intersection-reference-unit-repeat-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/intersection-reference-unit-tests-repeat.log",
+      "bytes": 1178,
+      "sha256": "84efe63ff6193dee508f75cdd39fbd80c5756c5d7d5a4f034103048f0e74211d"
+    },
+    {
+      "path": "target/intersection-reference-library-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/intersection-reference-integration-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/intersection-reference-integration-repeat-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/intersection-reference-controls.log",
+      "bytes": 345,
+      "sha256": "089a6f3e7b6742ef32b6be5af54b42cb60e88342e84c563d647a1ac73103db60"
+    },
+    {
+      "path": "target/intersection-reference-edits-process-1.log",
+      "bytes": 48938,
+      "sha256": "ac68ab60e21b23e1a1f50b53989a3a7b3443b9641564cce258820dcdc502c6d4"
+    },
+    {
+      "path": "target/intersection-reference-edits-process-2.log",
+      "bytes": 49167,
+      "sha256": "bb48089a67c1663a7389f96659df88cd3deef57e428226c93d4535f890e3e1cf"
+    },
+    {
+      "path": "target/intersection-reference-library-clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/intersection-reference-integration-clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/intersection-reference-integration-clippy-iterator-failure.log",
+      "bytes": 649,
+      "sha256": "6bdd5814c6234c756f7dafc6d7f86b487d9efe72bcef8124e8a176cf17650c83"
+    },
+    {
+      "path": "target/intersection-reference-integration-source-initial.rs",
+      "bytes": 4759,
+      "sha256": "1b3250d4554b6a34105873f6943202500480bad2903eab0bdf52343ed78a1735"
+    },
+    {
+      "path": "target/intersection-reference-typed-export-projection.log",
+      "bytes": 511,
+      "sha256": "bd7926db3f377804472476b3965e234fd66efc826e8859be6784f502be591f4b"
+    },
+    {
+      "path": "target/check-intersection-typed-exports.py",
+      "bytes": 3047,
+      "sha256": "bcaa7b88ec36c1a09b5c0fcc54eb07554a11e7fcdb26abeec187f4a74c57929e"
+    },
+    {
+      "path": "target/intersection-reference-function-shape.log",
+      "bytes": 4,
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "path": "target/intersection-reference-cargo-fmt-check.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "compiler": "Rust1.99.0; isolated rustc test-profile artifacts, opt-level1, debug assertions and overflow checks enabled, warnings denied and unsafe forbidden",
+  "library_artifact": {
+    "path": "target/libbessemer_intersection_reference.rlib",
+    "sha256": "951703dcdd08ca828c7bc1f5fdda1d42c1a043b52a43f0d4fbe7f97645535c0e"
+  },
+  "checks": [
+    "Revision-owned projection admits only actual sgSketch definitions, marker0 intersections, canonical indices, valid edge bounds and adjacent same-scope U16/I32 words.",
+    "All selected words agree with both retained Source word oracles and direct raw-byte decoding, with state/raw20 and all unrelated fields preserved.",
+    "Four changed requests per reference cover both single-word replacements, an atomic paired replacement and a paired request with one unchanged word.",
+    "Every changed result matches an independent literal patch, the complete expected field vector and exact ordered original/replacement history; coverage, fidelity, diagnostics and stale-handle rejection are checked.",
+    "Three no-op variants retain revision identity and all fields. Empty results succeed; foreign revisions fail without modifying either input. Parent configurations remain unchanged.",
+    "Both67,503,748-byte actual exports match each other and every independently expected complete output in a separate stdlib checker.",
+    "All three public stored types satisfy compile-time Send/Sync. Standalone library/integration Clippy and workspace cargo fmt --check pass."
+  ],
+  "initial_attempts": [
+    "The first seven projection tests passed before behavior-preserving helper splits; the final focused selection contains eight tests.",
+    "Clippy requested as_chunks for the constant-size fixture iterator. The second process uses that equivalent iterator without an allowance, and its full export matches the first process byte for byte. The initial test source and lint output are retained."
+  ],
+  "coverage_credit": 0,
+  "qualifications": [
+    "Standalone builds use isolated outputs and the existing validated dependency artifacts; full Cargo/repository and exact-head platform gates for this new runtime remain pending.",
+    "Fresh unchanged Source parsing of actual typed changed outputs remains pending; current Source acceptance binds the original matrix roots and independent literal oracles.",
+    "Native operation edits, broader caller/version boundaries, complete document reversals, mixed concurrency/full history traces and publication remain required.",
+    "The concurrent publication PR gate targets the separate immutable Feature166/CI-fix checkout; it does not validate Feature184.",
+    "No native matching, application opening, geometry or complete schema parity is claimed. Humanizer unavailable; prose review remains pending."
+  ]
+}

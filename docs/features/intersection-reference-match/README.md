@@ -90,6 +90,18 @@ All 5,686 common frozen Source files match; six added research files are listed
 separately. Typed operations and the remaining caller/version, document,
 concurrency and publication gates stay open.
 
+The first [typed stored operation](api.md) is implemented for complete ordinary
+part resolved-feature archives. The
+[Rust operation record](typed-operation-verification.json) covers 43,008 changed
+requests and 32,256 no-ops per complete matrix run, including paired requests
+with only one actual change. All fields, literal bytes, original/replacement
+history, completion, coverage, diagnostics, stale revisions and input isolation
+pass. Two fresh Rust exports match at 67,503,748 bytes and independently match
+every expected signed-word patch. Eight focused projection checks, all four
+integration tests and standalone Clippy pass. Cargo/platform, fresh Source
+changed-output, native edit, broader caller/version, whole-document and
+concurrency gates remain required; this does not complete Feature #184.
+
 Regenerate the matrix only during explicit oracle initialization:
 
 ```powershell

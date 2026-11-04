@@ -139,6 +139,10 @@ The [stored dimension API](docs/features/dimension-stored-state/api.md) projects
 the bend-angle flag, fillet reference-point change number and signed redundant
 identifier from direct or nested dimension bases. Isolated stored-value edits
 preserve raw mask bits, other fields and the existing complete archive history.
+The [stored intersection-reference API](docs/features/intersection-reference-match/api.md)
+projects signed span-count and backward-offset states from complete ordinary
+part resolved-feature archives. Revision-bound edits preserve the uninterpreted
+state/raw20 words, references and all other fields, with complete archive history.
 The [assembly configuration API](docs/features/assembly-configurations/README.md)
 reads, constructs, edits and writes complete ordinary assembly and routing
 configurations. All 180 reference-readable modern configurations reconstruct
