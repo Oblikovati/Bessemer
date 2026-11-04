@@ -8,10 +8,10 @@ use crate::model_archives::{
 
 #[path = "native_documents.rs"]
 mod documents;
-#[path = "native_roles.rs"]
-mod roles;
 #[path = "native_role_documents.rs"]
 mod role_documents;
+#[path = "native_roles.rs"]
+mod roles;
 
 type NativeReferenceCheck =
     fn(&ResolvedCorpusCase<'_>, &NativeReferenceOracle, Option<CompressedKernelContext>);
@@ -171,7 +171,13 @@ fn run_native_reference_cohort(
         .map(|_| read_native_reference_oracle(&mut oracle))
         .collect();
     verify_native_reference_selection(&mut cursor, &expected, kernel, verify);
-    assert_eq!(expected.iter().map(|entry| entry.spans.len()).sum::<usize>(), 68);
+    assert_eq!(
+        expected
+            .iter()
+            .map(|entry| entry.spans.len())
+            .sum::<usize>(),
+        68
+    );
     assert_eq!((cursor.remaining(), oracle.remaining()), (0, 0));
 }
 

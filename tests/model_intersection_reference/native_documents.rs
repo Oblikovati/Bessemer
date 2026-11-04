@@ -26,7 +26,9 @@ fn reverse_native_reference_document(
     reopened: &PartResolvedFeaturesArchive,
     original: &State,
 ) -> PartResolvedFeaturesArchive {
-    let handle = reopened.field_handle(original.source_fields()[0].index()).unwrap();
+    let handle = reopened
+        .field_handle(original.source_fields()[0].index())
+        .unwrap();
     let current = reopened.intersection_reference_state(&handle).unwrap();
     let words = original.words();
     reopened
@@ -51,9 +53,14 @@ fn verify_native_document_roundtrip(
     kernel: Option<CompressedKernelContext>,
 ) {
     let edit = verify_native_reference_edit(source, case.features, state, span);
-    let stream = format!("{}-ResolvedFeatures", case.label.rsplit_once("::").unwrap().1);
+    let stream = format!(
+        "{}-ResolvedFeatures",
+        case.label.rsplit_once("::").unwrap().1
+    );
     let mut output = document.clone();
-    output.replace_stream(&stream, edit.archive().to_bytes().unwrap()).unwrap();
+    output
+        .replace_stream(&stream, edit.archive().to_bytes().unwrap())
+        .unwrap();
     let reopened = Document::from_bytes(&output.to_bytes().unwrap()).unwrap();
     let actual = native_reference_document_source(&reopened, case, kernel);
     assert_eq!(actual.fields(), edit.archive().fields());
@@ -61,7 +68,9 @@ fn verify_native_document_roundtrip(
     let reverse = reverse_native_reference_document(&actual, state);
     assert_eq!(reverse.fields(), source.fields());
     assert_eq!(reverse.to_bytes().unwrap(), case.features);
-    output.replace_stream(&stream, reverse.to_bytes().unwrap()).unwrap();
+    output
+        .replace_stream(&stream, reverse.to_bytes().unwrap())
+        .unwrap();
     assert_eq!(output.to_bytes().unwrap(), document.to_bytes().unwrap());
 }
 
@@ -72,7 +81,14 @@ fn verify_native_reference_document_case(
 ) {
     assert_eq!(case.label, oracle.label);
     assert_eq!(case.version.value(), oracle.version);
-    let path = case.label.split_once(": ").unwrap().1.rsplit_once("::").unwrap().0;
+    let path = case
+        .label
+        .split_once(": ")
+        .unwrap()
+        .1
+        .rsplit_once("::")
+        .unwrap()
+        .0;
     let bytes = std::fs::read(path).unwrap();
     let document = Document::from_bytes(&bytes).unwrap();
     let source = native_reference_document_source(&document, case, kernel.clone());
@@ -91,5 +107,10 @@ fn every_native_intersection_reference_document_reopens_preserves_streams_and_re
     let probe = std::fs::read("target/resolved-native-probe.bin").unwrap();
     let spans = std::fs::read("target/intersection-reference-native-source-spans.bin").unwrap();
     let kernel = crate::model_archives::native_corpus_tests::corpus_kernel_context();
-    run_native_reference_cohort(&probe, &spans, kernel, verify_native_reference_document_case);
+    run_native_reference_cohort(
+        &probe,
+        &spans,
+        kernel,
+        verify_native_reference_document_case,
+    );
 }

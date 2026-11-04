@@ -8,12 +8,12 @@ use std::sync::Arc;
 
 #[path = "../model_dimension_state/native.rs"]
 mod stored_dimension_views;
+#[path = "../model_intersection_reference/native_edits.rs"]
+mod stored_intersection_references;
 #[path = "../model_node_state/native.rs"]
 mod stored_node_views;
 #[path = "../model_visual_carriers/native.rs"]
 mod stored_visual_carriers;
-#[path = "../model_intersection_reference/native_edits.rs"]
-mod stored_intersection_references;
 
 const LIMITS: ModelArchiveLimits = ModelArchiveLimits {
     maximum_bytes: 64 * 1024 * 1024,
