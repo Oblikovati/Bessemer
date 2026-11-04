@@ -68,7 +68,9 @@ pub(super) fn base_record(
 }
 
 fn base_fields(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
-    base_head(reader)?;
+    if legacy_presence(reader)? != 0 {
+        reader.scope("legacy_reference", |reader| legacy_payload(reader, map))?;
+    }
     reader.i32("unknown_a0")?;
     reader.u32("unknown_34")?;
     reader.i32s(BASE_SUFFIX)?;
@@ -80,9 +82,19 @@ fn base_fields(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<
 }
 
 pub(super) fn base_head(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    reader.i32s(BASE_PREFIX)?;
-    let old = reader.i32("unknown_84")?;
+    let old = legacy_presence(reader)?;
     absent_payload(reader, "old component-reference payload", old)
+}
+
+fn legacy_presence(reader: &mut ModelDecoder<'_>) -> Result<i32> {
+    reader.i32s(BASE_PREFIX)?;
+    reader.i32("unknown_84")
+}
+
+fn legacy_payload(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    reader.object("object", map, ModelObjectRole::Any)?;
+    reader.u32("time_word")?;
+    Ok(())
 }
 
 const BASE_PREFIX: &[&str] = &[

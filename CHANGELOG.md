@@ -48,6 +48,8 @@
 
 ### Added
 
+- Added direct legacy references in ordinary component prefixes with preserved raw presence, generic pointer identity and four-byte time values. (#206)
+
 - Added complete direct boundary chooser-time and downstream identifier bodies, preserving signed counts, duplicate pairs, zero values and versioned tails. (#205)
 
 - Added typed stored parameter snapshots and exact value edits for complete part configuration and resolved-feature archives, retaining independent name pointers, alternate presence bytes and copied field history. (#202)

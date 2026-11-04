@@ -1,6 +1,6 @@
 {
   "issue": 206,
-  "status": "Independent original-reader initialization and strict replay passed297 cases; typed implementation acceptance pending",
+  "status": "Implemented and passed focused/native checks; full gate and integration remain separate",
   "edition": "Edition 0.3073 \u00b7 2026-11-04 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
   "specification_sha256": "0a7d862562f95e16dbb566c8d7c5e2ab3611ea0c23960b6b53ac0f1d9c6bec18",
   "clause": "11.454",
@@ -25,5 +25,7 @@
     "exit_code": 0,
     "all_fixture_bytes_unchanged": true,
     "snapshot_identity": "dd53943c8555d5fa8b01f345eae2ee61acdcadca976dd3fcbf694d107da4aa46"
-  }
+  },
+  "pre_implementation_revision": "b39245e57895c13b7235872b65a9649e14594df7",
+  "behavior_transition": "Ordinary legacy-payload profile1 reads formerly unsupported nonzero bodies; old zero-presence baselines and Simulation rejection remain unchanged. No on-disk migration, dependency or package-version change."
 }

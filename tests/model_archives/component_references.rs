@@ -5,6 +5,8 @@ use super::{ModelDecoder, ModelField, ModelFieldValue, ModelObjectRole, encode_f
 use crate::FailureClass;
 use crate::archive_codec::{ArchiveCursor, ObjectReader, ObjectRecord};
 use crate::header::ArchiveVersion;
+#[path = "component_legacy_reference.rs"]
+mod legacy_reference;
 
 const CASES: &[u8] = include_bytes!("../fixtures/model-archives/component-reference-cases.bin");
 
@@ -47,7 +49,7 @@ fn unsupported_component_branches_and_invalid_edge_counts_fail_explicitly() {
         let (_, version, bytes, _) = next_case(&mut cursor);
         let fields = decode(version, bytes).unwrap();
         for (suffix, value, class) in [
-            ("unknown_84", 7, FailureClass::Unsupported),
+            ("unknown_84", 7, FailureClass::Invalid),
             ("has_reference_info", -1, FailureClass::Unsupported),
             ("reference_count", i32::MAX, FailureClass::Invalid),
         ] {

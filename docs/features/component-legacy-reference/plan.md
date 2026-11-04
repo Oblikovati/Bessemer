@@ -1,5 +1,10 @@
 # Ordinary direct legacy references
 
+The ordinary implementation and focused/native checks are complete locally;
+see `README.md` and `local-verification.json`. Full-gate/platform validation and
+serial integration remain pending. The requirements below retain the original
+acceptance scope.
+
 Feature #206 implements the two-entry direct payload selected by nonzero
 `unknown_84`. The old field path and its full signed value remain unchanged.
 The payload contains a generic object pointer followed by one raw `u32` time

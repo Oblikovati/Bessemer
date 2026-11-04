@@ -103,6 +103,9 @@ reference loops, and continue the documented optional pointer pair. See the
 Boundary references also preserve direct chooser-time pairs and downstream
 identifier data, including duplicate keys, zero entries and both version gates.
 See the [direct boundary evidence](docs/features/boundary-direct-data/README.md).
+Ordinary component prefixes also retain direct legacy object/time payloads,
+including fresh and shared targets; the Simulation dialect keeps its existing
+restrictions. See the [legacy-reference evidence](docs/features/component-legacy-reference/README.md).
 
 ```rust
 let bytes = std::fs::read("part.sldprt")?;
