@@ -38,5 +38,11 @@
     "Adversarial and resource/failure matrices",
     "Combined full local and exact-head remote publication gates",
     "Higher-level model and geometry parity remain open"
-  ]
+  ],
+  "combined_gate_first_attempt": {
+    "exit_code": 1,
+    "cause": "Private test module declarations needed formatter ordering; no compilation or test failure",
+    "log_sha256": "26237d0d83136773029b19b96cd9e8d919a7b380a7bc3346033ab9cc3bd668d9",
+    "correction": "Ran cargo fmt --all -- src/model_archives/test_modules.rs; reordered only two module declarations. Native test functions and production code are unchanged."
+  }
 }
