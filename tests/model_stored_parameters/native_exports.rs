@@ -158,3 +158,16 @@ fn put_owned(
     assert_eq!(parameters.len(), 1);
     put_parameters(packet, &parameters);
 }
+
+#[test]
+fn inherited_parameter_exports_match_both_independent_source_goldens() {
+    let configuration = crate::model_archives::context_snapshot_tests::owned_configuration();
+    let mut packet = Vec::new();
+    for (edited, raw) in owned_fixtures::INHERITED.iter().enumerate() {
+        put_owned(&mut packet, &configuration, raw, [6, 0, edited]);
+    }
+    if let Some(path) = std::env::var_os("BESSEMER_PARAMETER_INHERITED_PACKET") {
+        append_packet(path, &packet);
+    }
+    assert!(!packet.is_empty());
+}

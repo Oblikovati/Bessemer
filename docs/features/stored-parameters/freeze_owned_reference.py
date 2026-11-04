@@ -26,16 +26,16 @@ def run_parameter_reference(pin: Path, destination: Path) -> unittest.TestResult
     return unittest.TextTestRunner(verbosity=2).run(suite)
 
 
-def retain_parameter_snapshot(raw: bytes) -> None:
+def retain_parameter_snapshot(raw: bytes, prefix: str = 'owned-source-snapshot') -> None:
     """Keep the complete original snapshot with a bounded index; e.g. retain_parameter_snapshot(raw)."""
     snapshot = json.loads(raw)
     compressed = gzip.compress(raw, mtime=0)
     assert gzip.decompress(compressed) == raw, 'expected lossless complete Source snapshot'
-    (FEATURE / 'owned-source-snapshot.json.gz').write_bytes(compressed)
+    (FEATURE / f'{prefix}.json.gz').write_bytes(compressed)
     index = {key: snapshot[key] for key in ('source_python_files', 'source_origins', 'tests_run', 'successful', 'snapshot_identity')}
-    index.update(original_snapshot_gzip='owned-source-snapshot.json.gz',
+    index.update(original_snapshot_gzip=f'{prefix}.json.gz',
                  original_snapshot_sha256=hashlib.sha256(raw).hexdigest(), gzip_sha256=hashlib.sha256(compressed).hexdigest())
-    (FEATURE / 'owned-source-snapshot.json').write_bytes((json.dumps(index, indent=2) + '\n').encode())
+    (FEATURE / f'{prefix}.json').write_bytes((json.dumps(index, indent=2) + '\n').encode())
 
 
 def verify_parameter_regeneration(generated: Path) -> None:

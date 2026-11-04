@@ -24,7 +24,7 @@ fn primary_edits_match_six_independent_goldens_and_reverse_complete_documents() 
     }
 }
 
-fn assert_document_reversal(
+pub(super) fn assert_document_reversal(
     document: &Document,
     source: &PartResolvedFeaturesArchive,
     edit: &PartResolvedFeaturesEdit,

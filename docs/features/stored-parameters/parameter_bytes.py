@@ -54,3 +54,14 @@ def parameter_graph(kind: int, style: int, edited: bool = False, first_slot: int
         return node + parameter_name + parameter_value(kind, style, edited)
     root = mapping.new(PARAMETER_CLASSES[kind], body)
     return struct.pack('<iH', -123, 1) + root, mapping.slot + 1
+
+
+def inherited_parameter_graph(identity: int, first_slot: int, edited: bool = False) -> tuple[bytes, int]:
+    """Use an independently loaded configuration name for both pointers; e.g. inherited_parameter_graph(4,96)."""
+    mapping = WireMap()
+    mapping.slot = first_slot
+    reference = struct.pack('<H', identity)
+    node = reference + struct.pack('<iIiI', -2, 0xffffffff, -3, 0x80000000) + b'\x04help'
+    value = struct.pack('<QB', 0xc023000000000000 if edited else 0x3ff4000000000000, 0)
+    feature = mapping.new('moDensityParameter_c', lambda: node + reference + value)
+    return struct.pack('<iH', -123, 1) + feature, mapping.slot + 1

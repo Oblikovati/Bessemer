@@ -7,6 +7,7 @@ fn inherited_name_aliases_keep_configuration_identity_text_and_history() {
     let configuration = snapshot.source().configuration_archive();
     let (identity, text) = inherited_name(configuration);
     let raw = inherited_parameter_bytes(identity);
+    assert_eq!(raw, fixtures::INHERITED[0]);
     let source = inherited_archive(&raw, configuration);
     let parameter = state(&source);
     assert_eq!(parameter.node_name().text(), Some(&text));
@@ -19,6 +20,29 @@ fn inherited_name_aliases_keep_configuration_identity_text_and_history() {
     let edit = apply_parameter(&source, &parameter, primary_request(0));
     assert_eq!(edit.completion(), ModelEditCompletion::Unchanged);
     assert_eq!(edit.archive().to_bytes().unwrap(), raw);
+}
+
+#[test]
+fn inherited_name_value_edit_matches_source_golden_and_reverses_the_complete_document() {
+    let (document, source) = fixture(fixtures::INHERITED[0]);
+    let parameter = state(&source);
+    let value = ModelParameterValue::Double(StoredDouble::from_bits(0xc023000000000000));
+    let edit = apply_parameter(
+        &source,
+        &parameter,
+        ModelParameterStoredEdit::Primary(value),
+    );
+    assert_eq!(edit.archive().to_bytes().unwrap(), fixtures::INHERITED[1]);
+    assert_eq!(edit.changes().len(), 1);
+    let current = state(edit.archive());
+    assert_inherited_history(&current);
+    assert_eq!(
+        current.node_name().text_field(),
+        parameter.node_name().text_field()
+    );
+    let reverse = ModelParameterStoredEdit::Primary(parameter.primary().clone());
+    super::edits::assert_document_reversal(&document, &source, &edit, reverse);
+    assert_eq!(source.to_bytes().unwrap(), fixtures::INHERITED[0]);
 }
 
 fn inherited_archive(

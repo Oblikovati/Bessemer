@@ -44,3 +44,8 @@ pub(super) const EDITED: [&[u8]; 6] = [
     include_bytes!("../fixtures/stored-parameters/owned-4-0-edited.bin"),
     include_bytes!("../fixtures/stored-parameters/owned-5-0-edited.bin"),
 ];
+
+pub(super) const INHERITED: [&[u8]; 2] = [
+    include_bytes!("../fixtures/stored-parameters/inherited/original.bin"),
+    include_bytes!("../fixtures/stored-parameters/inherited/edited.bin"),
+];

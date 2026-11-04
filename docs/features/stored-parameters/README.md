@@ -107,8 +107,8 @@ release benchmark.
 `native-actual-output-census.json` records the class/version/context populations.
 All six classes occur in resolved features; four occur in configurations.
 The native name-pointer population contains null and local pointers but no
-inherited pointers. The positive inherited-name Rust test therefore still
-needs its own original-reader comparison. Native edits, whole native document
+inherited pointers. The independent positive inherited check below covers that
+missing population. Native edits, whole native document
 reopen/reversal and application/geometry acceptance remain separate. Bug #177's
 unknown-byte accounting oracle is unchanged.
 
@@ -134,3 +134,39 @@ python -B -X utf8 docs/features/stored-parameters/verify_parameter_exports.py
 Run the Python comparison after both native exports finish. The `--owned-only`
 option permits an early owned comparison while native exports are running.
 Packet files append records, so reuse would invalidate the fresh-process check.
+
+## Positive inherited name aliases
+
+Two independently assembled 66-byte feature graphs retain both name pointers
+as references to configuration object 5, the existing `Part1` name. The unchanged
+original readers accepted both graphs and a fresh strict run regenerated every
+fixture byte. The edited graph changes only the primary double from 1.25 to -9.5.
+The original 30 graphs also regenerated unchanged after adding this separate
+fixture directory; their earlier source provenance is preserved.
+
+All 13 focused Rust tests pass. The inherited edit matches the independent
+golden, preserves the shared configuration text handle and its copied history,
+reopens the complete document and reverses to its original bytes. Two fresh
+Rust processes produced identical 444-byte result packets. Those actual origin1,
+name and value records matched a fresh unchanged original-reader run with
+source-integrity, import-origin and method-identity guards.
+
+Run `freeze_inherited_reference.py` in this directory for strict wire-fixture
+regeneration. To reproduce actual-output comparison, set
+`BESSEMER_PARAMETER_INHERITED_PACKET` to unused absolute `inherited-1.bin` and
+`inherited-2.bin` paths under `target/stored-parameter-actual-results`, running
+the following test in two fresh processes:
+
+```text
+cargo test --lib inherited_parameter_exports_match_both_independent_source_goldens
+python -B -X utf8 docs/features/stored-parameters/freeze_inherited_reference.py --actual-exports
+```
+
+`inherited-verification.json` records the evidence and exclusions. These are
+owned positive cases; the native corpus still has no inherited-name population.
+
+The combined local PR gate at `d3c3e4c` passed 4,071 tests with zero failures.
+That checkout contains the first parameter operation and 12 integration tests;
+later exports and the 13th inherited test have separate focused evidence.
+`full-local-gate-verification.json` records this boundary. Exact-head remote
+publication and the broader native editing/application requirements remain open.
