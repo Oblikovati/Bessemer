@@ -352,6 +352,6 @@ mod entity_visual_state;
 pub use entity_visual_state::ModelEntityVisualStoredState;
 mod intersection_reference;
 pub use intersection_reference::{
-    ModelIntersectionReferenceStoredEdit, ModelIntersectionReferenceStoredState,
-    ModelIntersectionReferenceStoredWords,
+    ModelIntersectionEdgeStoredIndex, ModelIntersectionReferenceStoredEdit,
+    ModelIntersectionReferenceStoredState, ModelIntersectionReferenceStoredWords,
 };

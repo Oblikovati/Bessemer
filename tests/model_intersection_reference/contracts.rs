@@ -188,7 +188,7 @@ fn verify_reference_change(
     assert_eq!(replacement.value, ModelFieldValue::I32(expected));
 }
 
-fn verify_reference_coverage(
+pub(super) fn verify_reference_coverage(
     source: &PartResolvedFeaturesArchive,
     result: &PartResolvedFeaturesEdit,
     wire_bytes: usize,

@@ -1,8 +1,5 @@
 use super::*;
 
-const ROLE_PACKET: &[u8] =
-    include_bytes!("../fixtures/intersection-index-classification/roots.bin");
-
 fn verify_classification_history(
     source: &PartResolvedFeaturesArchive,
     state: &ModelIntersectionReferenceStoredState,
@@ -176,7 +173,7 @@ fn complete_owned_role_matrix_classification_edits_preserve_all_signed_index_and
     assert_eq!(context.to_bytes().unwrap(), original);
 }
 
-fn full_selector_domain_archive() -> (PartResolvedFeaturesArchive, &'static [u8]) {
+pub(super) fn full_selector_domain_archive() -> (PartResolvedFeaturesArchive, &'static [u8]) {
     let (context, manager) = intersection_context();
     let mut cursor = ROLE_PACKET;
     for _ in 0..264 {

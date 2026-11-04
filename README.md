@@ -145,6 +145,8 @@ part resolved-feature archives. Revision-bound span/offset edits preserve the
 saved selector, raw20, references and all other fields, with complete history.
 The [classification-selector API](docs/features/intersection-index-classification/api.md)
 also reads and edits the saved u16 selector without evaluating native matching.
+Its [edge-index API](docs/features/intersection-index-classification/api.md)
+preserves arbitrary signed handle-array indices without building correspondence maps.
 The [assembly configuration API](docs/features/assembly-configurations/README.md)
 reads, constructs, edits and writes complete ordinary assembly and routing
 configurations. All 180 reference-readable modern configurations reconstruct

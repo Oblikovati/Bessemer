@@ -37,8 +37,10 @@ codes. Both physical sketch definitions and their shared alias remain
 visible. Independent checks verified 16,913 stored indices, 67,652 groups
 and the complete 676,537-read byte partition. A second fresh strict replay
 passed without rewriting artifacts; every consumed Source module was
-unchanged. The classification API is under operation validation; the index
-API and the remaining output/document/concurrency gates are pending.
+unchanged. Both stored-role APIs passed their initial Rust operation gates:
+all u16 selector replacements and the complete signed-index matrix preserve
+unselected fields and exact history. Fresh Source replay of actual outputs
+and the remaining native/document/concurrency/publication gates are pending.
 
 Implementation must reuse the complete archive readers and revision-owned
 edit/history contracts. Require independent complete roots and literal

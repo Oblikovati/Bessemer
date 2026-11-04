@@ -1,6 +1,8 @@
 //! Stored intersection-reference roles without native matching or topology resolution (#184).
 mod admission;
 mod archive_ops;
+mod edge_index;
+pub use edge_index::ModelIntersectionEdgeStoredIndex;
 mod projection;
 #[cfg(test)]
 #[path = "../../../tests/model_intersection_reference/projection_unit.rs"]

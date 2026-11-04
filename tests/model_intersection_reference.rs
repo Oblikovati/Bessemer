@@ -10,6 +10,8 @@ mod concurrency;
 mod contracts;
 #[path = "model_intersection_reference/documents.rs"]
 mod documents;
+#[path = "model_intersection_reference/edge_index.rs"]
+mod edge_index;
 #[path = "support/model_operation_snapshot.rs"]
 mod model_operation_snapshot;
 #[path = "support/owned_resolved_document.rs"]
@@ -29,6 +31,7 @@ const LIMITS: ModelArchiveLimits = ModelArchiveLimits {
 const CONTROL: &[u8] = include_bytes!("fixtures/intersection-reference-match/controls.bin");
 const MATRIX: &[u8] = include_bytes!("fixtures/intersection-reference-match/matrix.bin");
 const WORDS: &str = include_str!("fixtures/intersection-reference-match/matrix-words.tsv");
+const ROLE_PACKET: &[u8] = include_bytes!("fixtures/intersection-index-classification/roots.bin");
 
 fn intersection_context() -> (PartConfigurationArchive, Vec<u8>) {
     let document = Document::from_bytes(include_bytes!("fixtures/blank-part.SLDPRT")).unwrap();
@@ -113,6 +116,7 @@ fn complete_empty_intersection_enumeration_is_successful() {
     empty.extend_from_slice(&[0; 6]);
     let source = intersection_archive(&empty, &context, &manager);
     assert!(source.intersection_reference_states().unwrap().is_empty());
+    assert!(source.intersection_edge_indices().unwrap().is_empty());
     assert_eq!(source.root_count(), 0);
 }
 

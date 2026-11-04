@@ -14,7 +14,7 @@ const LIMITS: ModelArchiveLimits = ModelArchiveLimits {
     maximum_objects: 256,
 };
 
-fn reference_archive() -> PartResolvedFeaturesArchive {
+pub(super) fn reference_archive() -> PartResolvedFeaturesArchive {
     let document = Document::from_bytes(include_bytes!("../fixtures/blank-part.SLDPRT")).unwrap();
     let source = PartConfigurationArchive::from_document(
         &document,

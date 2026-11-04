@@ -50,6 +50,20 @@ fn sketch_parent(collection: &str) -> Result<&str> {
         .ok_or_else(|| reference_error(collection, "missing sketch owner"))
 }
 
+pub(super) fn edge_index_scope(path: &str) -> Result<IntersectionReferenceScope<'_>> {
+    let group = path
+        .strip_suffix(".raw_168")
+        .ok_or_else(|| reference_error(path, "not raw_168"))?;
+    let (intersection, edge) = indexed_parent(group, ".edges_48[")?;
+    let (collection, _) = indexed_parent(intersection, ".intersections[")?;
+    Ok(IntersectionReferenceScope {
+        group,
+        intersection,
+        sketch: sketch_parent(collection)?,
+        edge,
+    })
+}
+
 fn indexed_parent<'a>(path: &'a str, label: &str) -> Result<(&'a str, usize)> {
     let (parent, suffix) = path
         .rsplit_once(label)
