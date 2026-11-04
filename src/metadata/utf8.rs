@@ -1,6 +1,7 @@
 //! UTF-8 facade over the shared metadata grammar, namespace and lexical edit engine.
 use super::{
-    ExpandedName, XmlAttribute, XmlLimits, encoding, invalid, model, reader, types::XmlModel,
+    ExpandedName, XmlAttribute, XmlLimits, encoding, invalid, model, reader,
+    types::{XmlContentMode, XmlModel},
 };
 use crate::Result;
 use std::sync::Arc;
@@ -25,8 +26,25 @@ impl Utf8XmlDocument {
         limits: XmlLimits,
         subject: &'static str,
     ) -> Result<Self> {
+        Self::from_bytes_in_mode(bytes, limits, subject, XmlContentMode::Elements)
+    }
+
+    pub(crate) fn from_bytes_ordered(
+        bytes: &[u8],
+        limits: XmlLimits,
+        subject: &'static str,
+    ) -> Result<Self> {
+        Self::from_bytes_in_mode(bytes, limits, subject, XmlContentMode::Ordered)
+    }
+
+    fn from_bytes_in_mode(
+        bytes: &[u8],
+        limits: XmlLimits,
+        subject: &'static str,
+        mode: XmlContentMode,
+    ) -> Result<Self> {
         let (text, bom) = decode_utf8(bytes, limits, subject)?;
-        let parsed = parse_model(text, bytes.len(), limits)?;
+        let parsed = parse_model(text, bytes.len(), limits, mode)?;
         let siblings = sibling_ordinals(&parsed);
         Ok(Self {
             original: bytes.into(),
@@ -138,6 +156,13 @@ impl Utf8XmlDocument {
         self.model.elements[ordinal].parent
     }
 
+    pub(crate) fn ordered_view(&self) -> Option<super::OrderedXmlView<'_>> {
+        Some(super::OrderedXmlView::new(
+            self,
+            self.model.ordered.as_ref()?,
+        ))
+    }
+
     pub(crate) fn children(&self, ordinal: usize) -> &[usize] {
         &self.model.elements[ordinal].children
     }
@@ -160,8 +185,13 @@ fn decode_utf8<'a>(bytes: &'a [u8], limits: XmlLimits, subject: &str) -> Result<
     Ok((text, bom))
 }
 
-fn parse_model(text: &str, physical: usize, limits: XmlLimits) -> Result<XmlModel> {
-    let mut parsed = reader::parse_document(text, limits)?;
+fn parse_model(
+    text: &str,
+    physical: usize,
+    limits: XmlLimits,
+    mode: XmlContentMode,
+) -> Result<XmlModel> {
+    let mut parsed = reader::parse_document_in_mode(text, limits, mode)?;
     parsed.metrics.source_bytes = text.len();
     parsed.metrics.physical_bytes = physical;
     model::require_limits(parsed.metrics, limits)?;

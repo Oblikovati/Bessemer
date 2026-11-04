@@ -2,6 +2,7 @@
 mod edit;
 mod load;
 mod projection;
+pub mod relationships;
 mod source_identity;
 mod source_md5;
 mod types;
@@ -106,3 +107,7 @@ impl InspectionRecords {
 fn record_error(class: FailureClass, cause: String) -> BessemerError {
     BessemerError::new("Inspection records", "standalone project XML", class, cause)
 }
+
+#[cfg(test)]
+#[path = "../../../tests/inspection_relationships/unit_capture.rs"]
+mod relationship_capture_tests;

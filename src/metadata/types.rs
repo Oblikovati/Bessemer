@@ -93,6 +93,15 @@ pub(super) struct ElementRecord {
     pub span: Range<usize>,
 }
 
+#[derive(Debug)]
+pub(crate) enum XmlContent {
+    Element(usize),
+    Text(String),
+    CData(String),
+    Comment,
+    ProcessingInstruction,
+}
+
 #[derive(Debug, Default, Clone, Copy)]
 pub(super) struct XmlMetrics {
     pub depth: usize,
@@ -104,6 +113,19 @@ pub(super) struct XmlMetrics {
 
 #[derive(Debug, Default)]
 pub(super) struct XmlModel {
+    pub ordered: Option<XmlOrderedContent>,
     pub elements: Vec<ElementRecord>,
     pub metrics: XmlMetrics,
+}
+
+#[derive(Debug, Clone, Copy)]
+pub(super) enum XmlContentMode {
+    Elements,
+    Ordered,
+}
+
+#[derive(Debug, Default)]
+pub(super) struct XmlOrderedContent {
+    pub qualified_names: Vec<Arc<str>>,
+    pub content: Vec<Vec<XmlContent>>,
 }

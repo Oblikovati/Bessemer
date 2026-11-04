@@ -1,0 +1,213 @@
+{
+  "issue": 197,
+  "workload": "Same accepted 128 reads and first 32 retained results as read-cost-measurement.json",
+  "trials": [
+    {
+      "variant": "baseline",
+      "trial": 1,
+      "position": 0,
+      "elapsed_ns": 536657100,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 42729472,
+      "exit_code": 0
+    },
+    {
+      "variant": "initial",
+      "trial": 1,
+      "position": 1,
+      "elapsed_ns": 628279100,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 55304192,
+      "exit_code": 0
+    },
+    {
+      "variant": "opt-in",
+      "trial": 1,
+      "position": 2,
+      "elapsed_ns": 599088300,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 55996416,
+      "exit_code": 0
+    },
+    {
+      "variant": "initial",
+      "trial": 2,
+      "position": 0,
+      "elapsed_ns": 597737300,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 55808000,
+      "exit_code": 0
+    },
+    {
+      "variant": "opt-in",
+      "trial": 2,
+      "position": 1,
+      "elapsed_ns": 561370200,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 55902208,
+      "exit_code": 0
+    },
+    {
+      "variant": "baseline",
+      "trial": 2,
+      "position": 2,
+      "elapsed_ns": 506922800,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 42708992,
+      "exit_code": 0
+    },
+    {
+      "variant": "opt-in",
+      "trial": 3,
+      "position": 0,
+      "elapsed_ns": 558827500,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 55947264,
+      "exit_code": 0
+    },
+    {
+      "variant": "baseline",
+      "trial": 3,
+      "position": 1,
+      "elapsed_ns": 511715100,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 42713088,
+      "exit_code": 0
+    },
+    {
+      "variant": "initial",
+      "trial": 3,
+      "position": 2,
+      "elapsed_ns": 593590900,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 55169024,
+      "exit_code": 0
+    },
+    {
+      "variant": "baseline",
+      "trial": 4,
+      "position": 0,
+      "elapsed_ns": 509011000,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 43237376,
+      "exit_code": 0
+    },
+    {
+      "variant": "initial",
+      "trial": 4,
+      "position": 1,
+      "elapsed_ns": 638459300,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 55328768,
+      "exit_code": 0
+    },
+    {
+      "variant": "opt-in",
+      "trial": 4,
+      "position": 2,
+      "elapsed_ns": 572623300,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 55951360,
+      "exit_code": 0
+    },
+    {
+      "variant": "initial",
+      "trial": 5,
+      "position": 0,
+      "elapsed_ns": 578369800,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 55791616,
+      "exit_code": 0
+    },
+    {
+      "variant": "opt-in",
+      "trial": 5,
+      "position": 1,
+      "elapsed_ns": 579236500,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 55881728,
+      "exit_code": 0
+    },
+    {
+      "variant": "baseline",
+      "trial": 5,
+      "position": 2,
+      "elapsed_ns": 509291900,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 43028480,
+      "exit_code": 0
+    },
+    {
+      "variant": "opt-in",
+      "trial": 6,
+      "position": 0,
+      "elapsed_ns": 582647000,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 55529472,
+      "exit_code": 0
+    },
+    {
+      "variant": "baseline",
+      "trial": 6,
+      "position": 1,
+      "elapsed_ns": 513235800,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 42692608,
+      "exit_code": 0
+    },
+    {
+      "variant": "initial",
+      "trial": 6,
+      "position": 2,
+      "elapsed_ns": 579965200,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 55181312,
+      "exit_code": 0
+    }
+  ],
+  "medians": {
+    "baseline": {
+      "elapsed_ns": 510503500.0,
+      "observed_peak_working_set_bytes": 42721280.0
+    },
+    "initial": {
+      "elapsed_ns": 595664100.0,
+      "observed_peak_working_set_bytes": 55316480.0
+    },
+    "opt-in": {
+      "elapsed_ns": 575929900.0,
+      "observed_peak_working_set_bytes": 55924736.0
+    }
+  },
+  "trial_order": "Six trials with three rotating variant orders; each variant occupies each order position twice",
+  "memory_measurement": "Maximum OS-reported PeakWorkingSet64 observed live at roughly 20ms intervals; final lifetime peak may be higher",
+  "profile": "Windows x64, rustc1.99.0, opt-level1, assertions and overflow checks enabled",
+  "probe_source_sha256": "e985547ff60948fb4733f5a5bd86d76776dfe7805d50cb5057bdfe508d956195",
+  "qualifications": [
+    "Native lookup test remained active; not a dedicated performance runner.",
+    "Includes fixture I/O and envelope validation.",
+    "Diagnostic local comparison, not previous-release acceptance or allocation counting."
+  ],
+  "decision": "Parser-level opt-in avoids unrelated metadata retention but ordinary Inspection indexing still retains the ordered model. Move capture to the relationship operation boundary and repeat measurement; do not claim memory acceptance from this intermediate refactor.",
+  "baseline_runtime_revision": "6397067259c10d39b3a89ba60084a8b28ef07027",
+  "initial_relationship_runtime_revision": "c4a792dd",
+  "intermediate_opt_in_runtime_revision": "cb80df27"
+}

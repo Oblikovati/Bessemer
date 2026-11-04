@@ -8,6 +8,8 @@
 
 - Preserved original Inspection attribute lexemes when reversing edits with a retained immutable checkpoint, including all replay history parents. (#194)
 
+- Bounded transient test build artifacts in PR/full gates after the hosted Linux runner exhausted disk. (#196)
+
 - Partitioned the complete ThreadSanitizer workload across eight required CI jobs to keep validation within hosted-runner time limits. (#183)
 
 - Corrected the planned Simulation Material text contract to retain accepted odd-byte frames without a UTF-16 view. (#141)
@@ -45,6 +47,8 @@
 ### Added
 
 - Added physical spline equation stored-state views and exact lock, signed-option and CString edits with retained source provenance. (#199)
+
+- Added explicit-policy Inspection relationship load attempts, first-insertion map views and writer-filtered entries with immutable source provenance. (#197)
 
 - Added explicit caller-supplied Inspection source size/checksum comparisons with exact stored text, complete byte coverage and unchanged document provenance. (#195)
 

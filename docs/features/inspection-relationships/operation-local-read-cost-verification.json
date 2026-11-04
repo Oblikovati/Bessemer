@@ -1,0 +1,303 @@
+{
+  "issue": 197,
+  "choice": "Capture ordered XML only inside relationship_views, retaining all original projection results and keeping ordinary Inspection record indexing lightweight",
+  "baseline_runtime_revision": "6397067259c10d39b3a89ba60084a8b28ef07027",
+  "initial_relationship_runtime_revision": "c4a792dd",
+  "operation_local_source_state": "Uncommitted operation-local change following cb80df27; normalized source hashes retained below",
+  "profile": "Windows x64, rustc1.99.0, opt-level1, assertions and overflow checks enabled, unsafe forbidden",
+  "workloads": {
+    "ordinary_reads": "128 accepted complete envelope/record reads alternating two fixtures, retaining first32 results",
+    "relationship_requests": "128 complete envelope/record/relationship reads across both fixtures and both policies, retaining first32 results"
+  },
+  "cold_read_trials": [
+    {
+      "variant": "baseline",
+      "trial": 1,
+      "position": 0,
+      "elapsed_ns": 623839900,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 43376640,
+      "exit_code": 0
+    },
+    {
+      "variant": "operation-local",
+      "trial": 1,
+      "position": 1,
+      "elapsed_ns": 581093800,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 43290624,
+      "exit_code": 0
+    },
+    {
+      "variant": "operation-local",
+      "trial": 2,
+      "position": 0,
+      "elapsed_ns": 614703500,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 43204608,
+      "exit_code": 0
+    },
+    {
+      "variant": "baseline",
+      "trial": 2,
+      "position": 1,
+      "elapsed_ns": 554292300,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 43364352,
+      "exit_code": 0
+    },
+    {
+      "variant": "baseline",
+      "trial": 3,
+      "position": 0,
+      "elapsed_ns": 550627300,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 43114496,
+      "exit_code": 0
+    },
+    {
+      "variant": "operation-local",
+      "trial": 3,
+      "position": 1,
+      "elapsed_ns": 542746300,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 43032576,
+      "exit_code": 0
+    },
+    {
+      "variant": "operation-local",
+      "trial": 4,
+      "position": 0,
+      "elapsed_ns": 518934300,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 42995712,
+      "exit_code": 0
+    },
+    {
+      "variant": "baseline",
+      "trial": 4,
+      "position": 1,
+      "elapsed_ns": 531429100,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 43372544,
+      "exit_code": 0
+    },
+    {
+      "variant": "baseline",
+      "trial": 5,
+      "position": 0,
+      "elapsed_ns": 503582800,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 43106304,
+      "exit_code": 0
+    },
+    {
+      "variant": "operation-local",
+      "trial": 5,
+      "position": 1,
+      "elapsed_ns": 503957000,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 43180032,
+      "exit_code": 0
+    },
+    {
+      "variant": "operation-local",
+      "trial": 6,
+      "position": 0,
+      "elapsed_ns": 517544400,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 43184128,
+      "exit_code": 0
+    },
+    {
+      "variant": "baseline",
+      "trial": 6,
+      "position": 1,
+      "elapsed_ns": 524248700,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 43356160,
+      "exit_code": 0
+    }
+  ],
+  "relationship_request_trials": [
+    {
+      "variant": "initial",
+      "trial": 1,
+      "position": 0,
+      "elapsed_ns": 627439200,
+      "attempts": 5120,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 56594432,
+      "exit_code": 0
+    },
+    {
+      "variant": "operation-local",
+      "trial": 1,
+      "position": 1,
+      "elapsed_ns": 892803500,
+      "attempts": 5120,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 46542848,
+      "exit_code": 0
+    },
+    {
+      "variant": "operation-local",
+      "trial": 2,
+      "position": 0,
+      "elapsed_ns": 845751400,
+      "attempts": 5120,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 46534656,
+      "exit_code": 0
+    },
+    {
+      "variant": "initial",
+      "trial": 2,
+      "position": 1,
+      "elapsed_ns": 676465200,
+      "attempts": 5120,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 56573952,
+      "exit_code": 0
+    },
+    {
+      "variant": "initial",
+      "trial": 3,
+      "position": 0,
+      "elapsed_ns": 680251200,
+      "attempts": 5120,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 56541184,
+      "exit_code": 0
+    },
+    {
+      "variant": "operation-local",
+      "trial": 3,
+      "position": 1,
+      "elapsed_ns": 910018800,
+      "attempts": 5120,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 46280704,
+      "exit_code": 0
+    },
+    {
+      "variant": "operation-local",
+      "trial": 4,
+      "position": 0,
+      "elapsed_ns": 906591200,
+      "attempts": 5120,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 46272512,
+      "exit_code": 0
+    },
+    {
+      "variant": "initial",
+      "trial": 4,
+      "position": 1,
+      "elapsed_ns": 652567500,
+      "attempts": 5120,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 56598528,
+      "exit_code": 0
+    },
+    {
+      "variant": "initial",
+      "trial": 5,
+      "position": 0,
+      "elapsed_ns": 618095700,
+      "attempts": 5120,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 56573952,
+      "exit_code": 0
+    },
+    {
+      "variant": "operation-local",
+      "trial": 5,
+      "position": 1,
+      "elapsed_ns": 867278200,
+      "attempts": 5120,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 46530560,
+      "exit_code": 0
+    },
+    {
+      "variant": "operation-local",
+      "trial": 6,
+      "position": 0,
+      "elapsed_ns": 924192500,
+      "attempts": 5120,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 46272512,
+      "exit_code": 0
+    },
+    {
+      "variant": "initial",
+      "trial": 6,
+      "position": 1,
+      "elapsed_ns": 620753900,
+      "attempts": 5120,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 56561664,
+      "exit_code": 0
+    }
+  ],
+  "cold_read_medians": {
+    "baseline": {
+      "elapsed_ns": 541028200.0,
+      "observed_peak_working_set_bytes": 43360256.0
+    },
+    "operation-local": {
+      "elapsed_ns": 530840300.0,
+      "observed_peak_working_set_bytes": 43182080.0
+    }
+  },
+  "relationship_request_medians": {
+    "initial": {
+      "elapsed_ns": 640003350.0,
+      "observed_peak_working_set_bytes": 56573952.0
+    },
+    "operation-local": {
+      "elapsed_ns": 899697350.0,
+      "observed_peak_working_set_bytes": 46405632.0
+    }
+  },
+  "cold_read_time_ratio": 0.9811693734263759,
+  "cold_read_observed_memory_ratio": 0.9958907991687134,
+  "request_time_ratio_to_initial": 1.4057697510489593,
+  "request_observed_memory_ratio_to_initial": 0.820264986967854,
+  "trial_order": "Six balanced trials per comparison, alternating which variant runs first",
+  "memory_measurement": "Maximum OS-reported PeakWorkingSet64 observed live at roughly20ms intervals; final lifetime peak may be higher. Not private-byte or allocation counting.",
+  "qualifications": [
+    "Native lookup test remained active; no dedicated performance runner.",
+    "Includes fixture I/O and XML envelope validation.",
+    "Compares local builds, not a published previous release.",
+    "Timing ranges overlap for existing cold reads; ratios do not prove a universal speedup."
+  ],
+  "source_sha256_normalized_lf": {
+    "src/inspection/records/mod.rs": "73bcba43eb5767612da4b3f6393953c54d6f4eda2ba906c85e8d16e6cbeb331a",
+    "src/inspection/records/relationships/mod.rs": "3447b8970d48bbbd6a8ec33a88de644914c5d07e63c2309c08ce62357bb92db4",
+    "src/inspection/records/relationships/projection.rs": "168508ba66ae460c517e75688e84637dd9382fd917040367aa270bcfeb81e642",
+    "tests/inspection_relationship_capture.rs": "07de51b8dd19f631238016183648512812eddd8eec75bc8e14d6d1bf696ba5ca"
+  },
+  "probe_sha256": {
+    "relationship-read-cost-probe.rs": "e985547ff60948fb4733f5a5bd86d76776dfe7805d50cb5057bdfe508d956195",
+    "relationship-operation-cost-probe.rs": "311f3eccbcb1d9a08f3de1a296301be59760931e5de0097c6b7b8a70af6a8e4c"
+  },
+  "remaining": [
+    "All-target lint and complete repository gate on final source",
+    "Exact-head remote integration"
+  ],
+  "temporary_probe_sources_executables_and_baseline_rlib_removed": true
+}

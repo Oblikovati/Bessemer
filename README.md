@@ -506,6 +506,9 @@ occurrences, with isolated edits to existing unqualified attribute text.
 Its [source identity comparison](docs/features/inspection-source-identity/README.md)
 checks caller-supplied bytes against stored size/checksum text and retains
 explicit completion, coverage and document provenance.
+Its [relationship views](docs/features/inspection-relationships/README.md) expose
+ordered load attempts, first-insertion entries and the writer's empty-key filter
+under an explicit DOM retention policy, while preserving the original envelope.
 
 Library-feature configuration, cross-reference and atom-ID interoperability is
 documented in [the feature evidence](docs/features/library-features/README.md).
@@ -845,6 +848,9 @@ ThreadSanitizer CI runs the complete library and integration test targets across
 eight deterministic partitions. Every partition instruments the library,
 dependencies and standard library; native-input exclusions remain unchanged.
 All eight partitions must succeed before the four full platform gates run.
+PR/full gates bound transient test artifacts by omitting test debug information
+and incremental caches. Assertions, overflow checks and the complete workload
+remain enabled. See [the storage policy](docs/features/ci-build-storage/README.md).
 `cargo xtask tsan` retains the complete local run. A matching local partition is
 `cargo xtask tsan --shard 0/8` on Linux x86_64. The planner rejects custom Cargo
 target layouts instead of silently dropping targets.
