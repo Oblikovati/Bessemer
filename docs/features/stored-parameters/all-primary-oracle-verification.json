@@ -1,0 +1,48 @@
+{
+  "issue": 202,
+  "source_revision": "b1799d792c6c9728cb82d6af63e4666134240d6b",
+  "status": "Complete independent primary oracle passed; full native document edit gate and strict oracle regeneration are running",
+  "original_source_tests_passed": 3,
+  "original_source_tests_failed": 0,
+  "initial_process_exit_code": 0,
+  "initial_unittest_seconds": 526.513,
+  "cases": 906,
+  "configuration_primaries": 4430,
+  "resolved_feature_primaries": 39487,
+  "oracle_bytes": 2075057,
+  "oracle_sha256": "8460c6e501af5af73d094be80953227305b56f73b3210e64d07a413bb488fe3b",
+  "checked": [
+    "All24 owned class/style spans distinguish actual values from node words and tooltips",
+    "Original CString standalone decoding covers byte/word/dword count boundaries including reserved narrow0xFFFE",
+    "Every native primary span equals the original archive substring and original returned value",
+    "Every numeric one-bit replacement and string replacement frame decodes through original primitive methods to complete EOF",
+    "Complete original configuration/feature readers, unchanged method identities, frozen hashes and import origins"
+  ],
+  "string_policy": "Change one Unicode scalar while retaining its UTF16 code-unit width when nonempty; empty strings become X; use independently encoded shortest legal CString prefix",
+  "first_native_regression_after_adapters_passed": 1,
+  "first_native_regression_seconds": 0.47,
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "post_format_size_exit_code": 0,
+  "source_snapshot_identity": "da39e355c08ef43df2d280e045f8d8ddabee8a97e7e76d136331ca1e1d989157",
+  "logs_sha256": {
+    "all-native-parameter-primary-source-initial.log": "df88ce19204c9b14991fb52d16e1265836eb920ff6beff52f0e8c15b79240d28",
+    "all-native-parameter-primary-build-final.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native-first-after-primary-corpus-adapter.log": "c1ae87157a3ede19968d91b0fd46ec2b2badd8fef66eaf0b0ced8b853c290bfd",
+    "all-native-primary-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "all-native-primary-format.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "all-native-primary-post-format-sizes.log": "5f4c95944c23b0f0fa89738c30c0e2bc456b0fb90f8d1184f1d7aede2656528b"
+  },
+  "active_work": {
+    "strict_source_regeneration_session": 29224,
+    "full_native_document_gate_session": 88265,
+    "full_native_document_gate_log": "target/all-native-parameter-primary-document-gate.log",
+    "coverage_goal": "Every43917 primary edit, complete native document reopen, unrelated-stream checks and fresh typed exact reversal"
+  },
+  "exclusions": [
+    "No full corpus edit success is credited before the active gate completes",
+    "No per-edit original Source full-model replay for all43917 changes; replacement primitive validity and complete original parses are independently checked",
+    "Alternate/presence edit census, other version/class populations, native application/geometry and exact-head publication remain open",
+    "Source accounting Bug #177 remains unchanged"
+  ]
+}

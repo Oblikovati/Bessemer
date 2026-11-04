@@ -204,3 +204,31 @@ The native test requires the retained corpus packet, its original installed
 sample file and the explicit kernel schema. This proves the first complete
 native operation in both contexts. It does not cover the full parameter edit
 population, other stored kinds, native application opening or geometric validity.
+
+## Complete native primary oracle and active edit gate
+
+The independent oracle now covers all 43,917 native primary values in all
+906 cases: 4,430 configuration values and 39,487 resolved-feature values.
+Three original-reader tests passed, including all 24 owned class/style spans,
+CString length-boundary checks and every native original span/replacement.
+The complete 2,075,057-byte oracle is pinned under `native-primary-corpus`.
+The original Source snapshot, import origins and method identities remain checked.
+
+Numeric requests flip one stored bit. String requests change one Unicode scalar
+without changing its UTF-16 width when possible; empty values become `X`.
+Replacement CStrings use an independently encoded shortest legal prefix,
+including the reserved Latin-1 `0xFFFE` rule. Original primitive readers validate
+every replacement through EOF. This does not mean each changed whole model
+has already been replayed through Source.
+
+Strict source regeneration and the full native document edit gate are running.
+The latter checks every primary edit against the complete expected stream,
+reopens the document, checks unrelated streams, derives a fresh typed reversal
+and requires the original complete file bytes. Early numeric and string cases
+passed, but no completed corpus-edit acceptance is claimed yet.
+`all-primary-oracle-verification.json` records this boundary.
+
+```text
+python -B -X utf8 docs/features/stored-parameters/freeze_all_primary_reference.py
+cargo test --lib all_native_parameter_primaries_match_original_spans_reopen_and_reverse_every_document -- --ignored --nocapture
+```
