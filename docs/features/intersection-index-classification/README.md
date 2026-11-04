@@ -6,8 +6,9 @@ in `../inventor-interface/docs/solidworks-file-format/specification.md`
 documents the signed edge168 handle-array index in section 11.1624, C-3308,
 and the u16 reference classification selector in section 11.1626, C-3310.
 
-Admission, immutable Source replay, native bindings and complete edit gates
-remain unverified here. Retain every signed index and every u16 selector;
+Scope admission and complete edit gates remain unverified here. Original
+Source roots and static native bindings passed the checks below.
+Retain every signed index and every u16 selector;
 observed values do not define their domains. Raw20 remains unresolved.
 Keep the reports' isolated accounting separate. No combined whole-part
 measurement, native matching, cache resolution or geometry claim follows.
@@ -22,8 +23,14 @@ captures containing 8,365 instructions, 165 selected instruction assertions,
 169 import bindings and three named exports against the installed module.
 The check used direct PE tables and Capstone, not REA Evidence. Overlapping
 captures remain separate checks. No native code or pure instruction model
-was executed, and complete control-flow coverage is unproven. Source replay
-and the operation gates remain required.
+was executed, and complete control-flow coverage is unproven.
+
+Eight complete native roots passed the unchanged original Source readers
+from an immutable copy. Graph and map identities, binary64 bits, root spans,
+EOF and original unknown totals match both retained reports. Direct slices
+also match all 17 signed indices, 68 selectors and 204 signed sibling words.
+No accounting adapter was installed. Owned role matrices, typed operations
+and their document/concurrency gates remain required.
 
 Implementation must reuse the complete archive readers and revision-owned
 edit/history contracts. Require independent complete roots and literal
