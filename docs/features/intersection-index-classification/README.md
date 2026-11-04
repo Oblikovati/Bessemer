@@ -6,8 +6,9 @@ in `../inventor-interface/docs/solidworks-file-format/specification.md`
 documents the signed edge168 handle-array index in section 11.1624, C-3308,
 and the u16 reference classification selector in section 11.1626, C-3310.
 
-Scope admission and complete edit gates remain unverified here. Original
-Source roots and static native bindings passed the checks below.
+Both stored-role APIs passed the owned, native, document and local gates
+below. Remote publication remains pending. Original Source roots and static
+native bindings passed their separate checks.
 Retain every signed index and every u16 selector;
 observed values do not define their domains. Raw20 remains unresolved.
 Keep the reports' isolated accounting separate. No combined whole-part
@@ -52,8 +53,14 @@ reversals, preserving unrelated streams and restoring the entire original
 files byte for byte. Eight-worker mixed requests also passed the complete
 bounded matrix in two fresh processes. Full wire exports and operation
 traces match byte for byte, including resolved history and typed errors.
-The second selector output replay, ThreadSanitizer and full Cargo/exact-head
-publication gates are pending.
+Both fresh original Source processes accepted all 65,536 actual selector
+outputs, including 65,535 changes and one no-op per process. Complete
+graph/map identities, binary64 bits, aliases, spans, EOF and accounting
+signatures matched, with all 169 consumed Source modules unchanged.
+The full Windows local Cargo gate passed at `cef6cdb`: 3,928 tests passed,
+204 were ignored, and all formatting, Clippy and build checks completed.
+Both final-layout explicit native reruns passed separately. ThreadSanitizer
+and exact-head remote publication gates remain pending.
 
 Implementation must reuse the complete archive readers and revision-owned
 edit/history contracts. Require independent complete roots and literal
