@@ -100,3 +100,11 @@ added 40 Python files and changed none of the earlier files. The earlier full
 snapshot remains in `preparation-owned-source-snapshot.json.gz`; the current
 snapshot includes the replay identity. Malformed ownership cases, fresh actual
 edit exports, native outcomes and combined publication gates remain open.
+
+
+All 906 requests also passed complete-document reopening, preservation of
+unrelated streams and byte-exact reversal. Five private scope tests cover
+admitted category masks, alias owners, counts, malformed paths, missing extents
+and repeated paths under separate physical sketch definitions. The scope tests
+and the expanded integration suite passed Clippy. These owned checks do not
+establish every saved-version context or native application behavior.

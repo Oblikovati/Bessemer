@@ -3,6 +3,10 @@ use crate::archive_codec::ObjectRecord;
 use crate::model_archives::{ModelField, ModelFieldValue};
 use std::ops::Range;
 
+#[cfg(test)]
+#[path = "../../../tests/model_spline_equation_state/unit_scope.rs"]
+mod tests;
+
 pub(super) struct EquationScope<'a> {
     pub prefix: &'a str,
     pub range: Range<usize>,

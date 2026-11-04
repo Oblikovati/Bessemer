@@ -80,7 +80,7 @@
     "modified_sources": []
   },
   "remaining": [
-    "Malformed physical ownership and alias matrices",
+    "Malformed same-scope equation group and complete admitted alias-document matrices",
     "Fresh process actual edit result exports through original Source",
     "Broader saved-version contexts and native outcomes",
     "Combined full local gate and exact-head remote publication gates"
@@ -88,6 +88,32 @@
   "logs_sha256": {
     "spline-equation-state-matrix-tests.log": "726e36f3012e9470d4088835d90b1cb31d285138909145d53e6537e21eb1fa0c",
     "spline-equation-state-matrix-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "spline-equation-state-matrix-owned-source.log": "35d339acc51fd73b8a2fc096ea7101153e04916e4f43ae21a6bc86a7057ac874"
+    "spline-equation-state-matrix-owned-source.log": "35d339acc51fd73b8a2fc096ea7101153e04916e4f43ae21a6bc86a7057ac874",
+    "spline-equation-state-matrix-document-tests.log": "5ff18db60d5cb66cb21c7fd83fc01b076c1ed6973034080cd4e6134fe45f2557",
+    "spline-equation-state-matrix-document-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spline-equation-scope-unit-tests.log": "a4cc7583d10fdfe0b6273ea2e5f0987e026e8b4b2effd1447ad5b914ae6e13fb",
+    "spline-equation-scope-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "document_checks": {
+    "edit_requests": 906,
+    "complete_document_reopen": true,
+    "unrelated_streams_preserved": true,
+    "byte_exact_reversal": true,
+    "source_isolation": true,
+    "tests_passed": 14,
+    "failed": 0,
+    "ignored": 0
+  },
+  "physical_scope_unit_tests": {
+    "passed": 5,
+    "failed": 0,
+    "ignored": 0,
+    "coverage": [
+      "All admitted category masks",
+      "Missing and noncanonical selected paths",
+      "Alias owner and invalid count/type",
+      "Missing owner/count/category/final extent",
+      "Repeated paths under nearest physical owner"
+    ]
   }
 }
