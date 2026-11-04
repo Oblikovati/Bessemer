@@ -63,6 +63,39 @@ class RelationshipReferenceTests(unittest.TestCase):
         self.assertEqual(relationships.trimmed('\u200bx\ufeff'), '\u200bx\ufeff')
         self.assertEqual(relationships.trimmed('\u0085\u00a0 x \u3000'), 'x')
 
+    def test_text_reference_cdata_and_nested_boundaries_reach_loaded_values(self) -> None:
+        """Compare complete extracted values against literals across all text boundaries."""
+        xml = (b'<PackageOptions><RelationshipsDictionary><item><key><string>K</string></key>'
+               b'<value><ArrayOfString><string>a&amp;&#98;<![CDATA[c]]>d&#x65;</string>'
+               b'<string>a<x>b<y>c</y>d</x>e<!--ignored--><?p ignored?>f</string>'
+               b'</ArrayOfString></value></item></RelationshipsDictionary></PackageOptions>')
+        attempts = relationships.load_attempts(package(xml))
+        self.assertEqual(len(attempts), 1)
+        expected = [dict(key='K', values=['a&bcde', 'abcdef'])]
+        self.assertEqual(relationships.insert_first(attempts), expected)
+        self.assertEqual(relationships.writer_entries(expected), expected)
+
+    def test_empty_cdata_and_non_elements_each_attempt_empty_insertion(self) -> None:
+        """Keep DOM node kinds rather than inferring attempts from visible text."""
+        xml = (b'<PackageOptions><RelationshipsDictionary><![CDATA[]]><![CDATA[x]]>'
+               b'<!--c--><?p i?><item><key><string/></key><value><ArrayOfString>'
+               b'<string>later</string></ArrayOfString></value></item>'
+               b'</RelationshipsDictionary></PackageOptions>')
+        attempts = relationships.load_attempts(package(xml))
+        self.assertEqual([entry['node'].nodeType for entry in attempts],
+                         [Node.CDATA_SECTION_NODE, Node.COMMENT_NODE,
+                          Node.PROCESSING_INSTRUCTION_NODE, Node.ELEMENT_NODE])
+        self.assertEqual(relationships.insert_first(attempts), [dict(key='', values=[])])
+        self.assertEqual(relationships.writer_entries(relationships.insert_first(attempts)), [])
+
+    def test_no_dictionary_completes_empty_without_reading_nested_namesakes(self) -> None:
+        """Require direct-child selection and exact case before dictionary traversal."""
+        for xml in (b'<PackageOptions/>', b'<PackageOptions><relationshipsDictionary/></PackageOptions>',
+                    b'<PackageOptions><wrapper><RelationshipsDictionary><item/></RelationshipsDictionary>'
+                    b'</wrapper></PackageOptions>'):
+            with self.subTest(xml=xml):
+                self.assertEqual(relationships.load_attempts(package(xml)), [])
+
     def test_accepted_tutorial_keeps_48_keys_and_120_reciprocal_links(self) -> None:
         """Reuse the accepted decoded tutorial without selecting an encrypted decoder dependency."""
         raw = (ROOT / 'tests/fixtures/standalone-inspection/historical.xml').read_bytes()

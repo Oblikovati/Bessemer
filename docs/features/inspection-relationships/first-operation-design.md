@@ -21,8 +21,9 @@ must remain unchanged.
 
 Text and general-reference events can form one DOM text node. Coalesce adjacent
 text segments; keep CDATA, comments, processing instructions and element
-boundaries explicit. Test this against the pinned DOM helper before exposing
-attempt counts. Charge limits from the original event stream, including events
+boundaries explicit. The selected reference DOM drops empty CDATA sections;
+retain that distinction when projecting this explicit DOM policy. Test grouping
+against the pinned helper before exposing attempt counts. Charge limits from the original event stream, including events
 that a selected projection omits. Do not reinterpret a lower projected node
 count as permission to admit an over-budget document.
 

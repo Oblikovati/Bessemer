@@ -1,0 +1,16 @@
+{
+  "issue": 197,
+  "tests_passed": 11,
+  "process_exit_code": 0,
+  "source_guard": "passed; copied one unchanged helper before importing, with no live Source imports",
+  "snapshot_identity": "69e3447d8c3155e1036a95d8dfcbb821c09d8f02bd2d56958423b9eac55ae620",
+  "source_collector_removed": true,
+  "log_sha256": "645c1656bf8cbc9d6d15b658a76e6a4375531c421f8e7e026990f7b32efa8040",
+  "reference_test_sha256": "ec30a688b4cbe55d60d265ae9ea06adc6b694abac9d62af4988cd11ee02658a6",
+  "observations": [
+    "References and nested/CDATA content preserve complete extracted value order.",
+    "The selected DOM drops empty CDATA and retains nonempty CDATA, comments and processing instructions.",
+    "Missing direct exact-name dictionary returns a completed empty helper result."
+  ],
+  "qualification": "Independent preparation only. Native caller policy, bounded Rust operation, application reload and whole-schema parity remain unverified."
+}
