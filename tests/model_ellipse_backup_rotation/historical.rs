@@ -33,7 +33,7 @@ pub(super) fn native_ellipse_from_document(
     .unwrap()
 }
 
-fn historical_ellipse_context(case: &EllipseCase) -> PartResolvedFeaturesArchive {
+pub(super) fn historical_ellipse_context(case: &EllipseCase) -> PartResolvedFeaturesArchive {
     if case.version == 19000 {
         return current_ellipse_archive(case);
     }

@@ -99,7 +99,7 @@ fn verify_native_ellipse_request(
     owner: usize,
     span: &NativeEllipseSpan,
     snapshot: i32,
-) {
+) -> Vec<u8> {
     let states = source.ellipse_backup_rotation_states().unwrap();
     let state = &states[owner];
     let edit = source
@@ -116,6 +116,7 @@ fn verify_native_ellipse_request(
     contracts::verify_ellipse_result(source, state, &edit, snapshot);
     verify_native_ellipse_document(document, case, &edit, owner, span.snapshot);
     assert_eq!(source.to_bytes().unwrap(), raw);
+    edit.archive().to_bytes().unwrap()
 }
 
 fn verify_native_ellipse_document(
@@ -144,7 +145,7 @@ fn verify_native_ellipse_document(
     assert_eq!(output.to_bytes().unwrap(), original.to_bytes().unwrap());
 }
 
-fn verify_native_ellipse_case(case: &NativeEllipseCase) -> usize {
+fn verify_native_ellipse_case(case: &NativeEllipseCase, output: &mut Option<Vec<u8>>) -> usize {
     let bytes = std::fs::read(case.path).unwrap();
     let document = Document::from_bytes(&bytes).unwrap();
     let stream = format!("{}-ResolvedFeatures", case.configuration);
@@ -155,13 +156,30 @@ fn verify_native_ellipse_case(case: &NativeEllipseCase) -> usize {
     assert_eq!(raw.len(), case.bytes);
     assert_eq!(spans.len(), case.owners);
     verify_native_ellipse_projection(&source, &raw, &spans);
-    for (owner, span) in spans.iter().enumerate() {
-        for snapshot in REQUESTS {
-            verify_native_ellipse_request(&document, case, &source, owner, span, snapshot);
-        }
-    }
+    export_native_ellipse_requests(&document, case, &source, &spans, output);
     assert_eq!(document.to_bytes().unwrap(), bytes);
     spans.len() * 5
+}
+
+fn export_native_ellipse_requests(
+    document: &Document,
+    case: &NativeEllipseCase,
+    source: &PartResolvedFeaturesArchive,
+    spans: &[NativeEllipseSpan],
+    output: &mut Option<Vec<u8>>,
+) {
+    for (owner, span) in spans.iter().enumerate() {
+        for (request, snapshot) in REQUESTS.into_iter().enumerate() {
+            let actual =
+                verify_native_ellipse_request(document, case, source, owner, span, snapshot);
+            exports::append_ellipse_export(
+                output,
+                [case.index, owner, request],
+                case.version,
+                &actual,
+            );
+        }
+    }
 }
 
 #[test]
@@ -169,11 +187,14 @@ fn verify_native_ellipse_case(case: &NativeEllipseCase) -> usize {
 fn all_native_ellipse_words_match_source_spans_edit_reopen_and_reverse_exact_documents() {
     let cases = native_ellipse_cases();
     assert_eq!(cases.len(), 5);
+    let (path, mut packet) =
+        exports::ellipse_export_start("BESSEMER_ELLIPSE_NATIVE_EXPORT", b"EBN1", 60);
     let mut operations = 0;
     for case in cases {
-        let completed = verify_native_ellipse_case(&case);
+        let completed = verify_native_ellipse_case(&case, &mut packet);
         println!("ELLIPSE_NATIVE_DOCUMENT\t{}\t{}", case.index, completed);
         operations += completed;
     }
     assert_eq!(operations, 60);
+    exports::finish_ellipse_export(path, packet);
 }

@@ -91,3 +91,11 @@ stream and stream order, then restored each complete original container
 exactly. The original archives and documents remained unchanged. Actual
 SolidWorks reload/save, fresh-process export acceptance and full publication
 gates remain separate requirements.
+
+Two fresh Rust processes passed all ten tests and exported identical packets.
+The owned packet contains 1,080 checked operations: 960 changed and 120
+unchanged. The native packet contains 60: 48 changed and 12 unchanged. Every
+actual output matched the independent complete original with exactly the
+requested four-byte patch. Packet identities and exclusions are retained in
+the [process proof](process-export-verification.json). Original-reader
+acceptance of these actual exports is running separately.

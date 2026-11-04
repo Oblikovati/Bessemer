@@ -3,6 +3,8 @@
 mod concurrency;
 #[path = "model_ellipse_backup_rotation/contracts.rs"]
 mod contracts;
+#[path = "model_ellipse_backup_rotation/exports.rs"]
+mod exports;
 #[path = "../examples/support/framing.rs"]
 mod framing;
 #[path = "model_ellipse_backup_rotation/historical.rs"]
