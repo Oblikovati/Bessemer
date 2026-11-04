@@ -1,0 +1,85 @@
+{
+  "issue": 185,
+  "stage": "Initial Source-owned complete role fixture corpus",
+  "passed": true,
+  "process_reaped": true,
+  "exit_code": 0,
+  "tests": 5,
+  "test_seconds": 258.485,
+  "source_python_files": 5847,
+  "independent_verification": {
+    "passed": true,
+    "cases": 265,
+    "complete_roots": 795,
+    "indices": 16913,
+    "groups": 67652,
+    "literal_scalars": 287521,
+    "primitive_reads": 676537,
+    "all_selectors_in_first_owner": true,
+    "raw_matrix_patch_checks": 264,
+    "packet_bytes": 2074396,
+    "artifacts": {
+      "roots.bin": {
+        "bytes": 2074396,
+        "sha256": "e20e484ea59d5b66347714ef7ca8a761f4835fe2db25c11d051e012d59fc2d0a"
+      },
+      "scalars.tsv": {
+        "bytes": 3504008,
+        "sha256": "ec34a7735595f6855550eb52743edc21f00a079829a15b5e3ee491914ef1f88e"
+      },
+      "primitives.tsv.zlib": {
+        "bytes": 3365469,
+        "sha256": "a37d7c0f94e7be27a7642ea8a84f95a768e0d4815878b006e2c48f82faa8e41b"
+      }
+    }
+  },
+  "artifacts": [
+    {
+      "path": "docs/features/intersection-index-classification/freeze_owned_roles.py",
+      "bytes": 588,
+      "sha256": "1ae3a54ec695db0fcf5cf5d930a504cbceee8a571ee0159e46caa93de0108c6d"
+    },
+    {
+      "path": "docs/features/intersection-index-classification/owned_intersection_roles.py",
+      "bytes": 5311,
+      "sha256": "729335f8570f9ba6bc86cc7c327b16205511031320633214a1b301143a3fe7d2"
+    },
+    {
+      "path": "docs/features/intersection-index-classification/owned_role_corpus.py",
+      "bytes": 3730,
+      "sha256": "e8f8cf686491e95b1ad56db11bb07f0f66505a26707e05e33bfda201b2901658"
+    },
+    {
+      "path": "docs/features/intersection-index-classification/role_source_oracles.py",
+      "bytes": 4073,
+      "sha256": "de4b2ce90d7c1feff66058fcc16fbf2f2d0dabc9c269f98446b0fa676d0ab52d"
+    },
+    {
+      "path": "docs/features/intersection-index-classification/test_owned_intersection_roles.py",
+      "bytes": 4035,
+      "sha256": "32e43df634041c9ca81a7c1604bd782c15036cae6343c099bde324d6559c38e9"
+    },
+    {
+      "path": "target/intersection-role-owned-initial.log",
+      "bytes": 9018,
+      "sha256": "517700ca50b8ddb455e218f8fe61079b252c05ea9ca8d7264552de478cc3d506"
+    },
+    {
+      "path": "target/intersection-role-owned-independent.json",
+      "bytes": 692,
+      "sha256": "2994e254e768a9bfa69dd15c88ed3ce5e3d6c9cf5ca51a867048bb4d4b3403c7"
+    },
+    {
+      "path": "docs/features/intersection-index-classification/owned-role-source-initial-snapshot.json",
+      "bytes": 737368,
+      "sha256": "9a5fdaf65da980717879b576a65271ddbf0551419bca5e23df8c39e61dbafbc2"
+    }
+  ],
+  "coverage_credit": 0,
+  "qualifications": [
+    "Initialization used explicit --write-role-fixtures. A second fresh strict process without initialization remains required.",
+    "The large complete root retains two physical sgSketch definitions and their first-instance alias. Its first owner contains all65536 stored selector codes, without enum filtering; the second contains four additional contrast groups.",
+    "Only original Source primitive methods were observed; no semantic/accounting/float/version override was installed. Independent stdlib checks partition every byte and bind all scalar spans.",
+    "Rust typed role APIs, actual changed-output replay, document/concurrency and publication gates remain pending. Humanizer unavailable; prose review pending."
+  ]
+}

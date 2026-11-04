@@ -29,8 +29,15 @@ Eight complete native roots passed the unchanged original Source readers
 from an immutable copy. Graph and map identities, binary64 bits, root spans,
 EOF and original unknown totals match both retained reports. Direct slices
 also match all 17 signed indices, 68 selectors and 204 signed sibling words.
-No accounting adapter was installed. Owned role matrices, typed operations
-and their document/concurrency gates remain required.
+No accounting adapter was installed.
+
+The initial owned fixture pass accepted 264 bounded signed-index/selector
+cases and one complete root whose first owner contains all 65,536 selector
+codes. Both physical sketch definitions and their shared alias remain
+visible. Independent checks verified 16,913 stored indices, 67,652 groups
+and the complete 676,537-read byte partition. A fresh strict replay is in
+progress. Typed operations and their document/concurrency gates remain
+required.
 
 Implementation must reuse the complete archive readers and revision-owned
 edit/history contracts. Require independent complete roots and literal
