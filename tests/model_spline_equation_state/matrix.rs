@@ -149,6 +149,7 @@ fn assert_matrix_edit(
     assert_matrix_history(source, result, selected, changed);
     let document = equation_fixture_document(&source.to_bytes().unwrap());
     assert_reopened_equation_document(&document, source, result);
+    exports::export_actual_equation_result(result);
 }
 
 fn assert_matrix_coverage(

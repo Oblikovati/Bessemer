@@ -3,6 +3,10 @@ use crate::archive_codec::ArchiveString;
 use crate::model_archives::{ModelField, ModelFieldHandle, ModelFieldValue};
 use scope::{EquationScope, equation_error};
 
+#[cfg(test)]
+#[path = "../../../tests/model_spline_equation_state/unit_projection.rs"]
+mod tests;
+
 pub(super) fn is_equation_candidate(fields: &[ModelField], index: usize) -> bool {
     fields
         .get(index)

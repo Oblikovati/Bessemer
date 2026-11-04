@@ -1,0 +1,63 @@
+{
+  "issue": 199,
+  "status": "Owned actual edit outputs verified; full schema parity and publication remain open",
+  "actual_edit_requests": 906,
+  "packet_bytes_each": 29702703,
+  "fresh_processes": 2,
+  "packets_byte_identical": true,
+  "packet_sha256": "b961d453437d570a69c2009c67fd15bedc1087c87b227953bbb167669fc61479",
+  "original_source_tests_passed": 2,
+  "original_source_process_exit_code": 0,
+  "source_import_and_content_guard": "passed",
+  "source_collector_removed": true,
+  "source_python_files_frozen": 6579,
+  "source_snapshot_identity": "5aedb5ef21d08b2b0e0bd5ccfa0deae97eda19d96ae4f07fc81a99d8baa9e4c2",
+  "source_changes_since_matrix": {
+    "added": [
+      "research/parallel_constraint_curvature_f0_kernel_independent_review.py",
+      "research/parallel_constraint_g3_legacy_parameter_map_grammar.py",
+      "research/parallel_constraint_g3_parameter_map_assoc_capture.py",
+      "research/parallel_constraint_tangency_vector_scale_independent_review.py",
+      "research/parallel_display_curvature108_guarded_reciprocal.py",
+      "research/parallel_display_curvature_f0_gcp_capture.py",
+      "research/parallel_display_curvature_f0_kernel_producer.py",
+      "research/parallel_display_curvature_f0_operation_capture_v2.py",
+      "research/parallel_display_curvature_f0_vector_set_qualification.py",
+      "research/parallel_patterns_endpoint_parameter_independent_review.py",
+      "research/parallel_patterns_g3_legacy_map_independent_review.py",
+      "research/parallel_patterns_tangency_vector_scale_consumer.py",
+      "research/parallel_root_endpoint_parameter_roles.py",
+      "research/publish_root_sketch_control_batch_c3430_c3433.py"
+    ],
+    "removed": [],
+    "modified": []
+  },
+  "checks": [
+    "Actual complete document container opens through original Source",
+    "Extracted feature stream equals exported Bessemer stream",
+    "Complete feature EOF, no tail, one sketch and one spline",
+    "Exact six projected saved strings and three raw words",
+    "Fresh Rust processes produce byte-identical complete packets",
+    "Four malformed-group and five physical-scope tests passed",
+    "Integration and private unit Clippy passed; cargo fmt check passed"
+  ],
+  "runtime_library_sha256": "041afc1c662eeac11c02e5cfe9ee75034083cab45324f52805a712cb630ab4d1",
+  "runtime_library_scope": "8ffb8112 runtime, including #197/#199/#200; later changes add tests and documentation only",
+  "exclusions": [
+    "Native setter and providers were not executed",
+    "Expressions, API conversions and geometry were not evaluated",
+    "No all-version or native-corpus acceptance follows",
+    "Full combined local and exact-head remote gates remain required"
+  ],
+  "logs_sha256": {
+    "spline-equation-actual-source.log": "08331b28cbdc0f414413b3c6971c93112a557b2bcc4f4a9892a34a4e854d8422",
+    "spline-equation-projection-unit-tests.log": "0f34b12d1385ca11f3a153b6453682b95b3853cf556a421a715ee124a9e88dc3",
+    "spline-equation-projection-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spline-equation-state-export-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spline-equation-actual-format.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "fresh_process_logs_sha256": {
+    "tests-1.log": "a09f85cfa9e4b5218e088a1a5d1005f2ad463e64fbb62d1a1a57ba3a6cc489eb",
+    "tests-2.log": "8f7378326d9aa37b1d5d87337379bc526c5bae299a49d4753b4d0c085f5d2dd0"
+  }
+}

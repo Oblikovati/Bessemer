@@ -166,3 +166,6 @@ mod matrix;
 
 #[path = "model_spline_equation_state/concurrency.rs"]
 mod concurrency;
+
+#[path = "model_spline_equation_state/exports.rs"]
+mod exports;

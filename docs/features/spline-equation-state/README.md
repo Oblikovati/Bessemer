@@ -108,3 +108,34 @@ admitted category masks, alias owners, counts, malformed paths, missing extents
 and repeated paths under separate physical sketch definitions. The scope tests
 and the expanded integration suite passed Clippy. These owned checks do not
 establish every saved-version context or native application behavior.
+
+
+## Actual edited output reference check
+
+The matrix can export each actual result as a complete document, its resolved
+feature stream and the nine projected saved values (six strings and three words).
+Run the four matrix tests with one test thread when exporting; packet order is
+then deterministic. Choose an unused result directory so an earlier packet
+cannot be appended to a new run:
+
+```powershell
+$resultRoot = Join-Path (Get-Location) 'target/spline-equation-actual-results'
+if (Test-Path -LiteralPath $resultRoot) { throw 'Expected an unused result directory' }
+New-Item -ItemType Directory -Path $resultRoot | Out-Null
+try {
+    foreach ($iteration in 1..2) {
+        $env:BESSEMER_EQUATION_RESULT_PACKET = Join-Path $resultRoot "results-$iteration.bin"
+        cargo test --test model_spline_equation_state matrix:: -- --test-threads=1
+        if ($LASTEXITCODE -ne 0) { throw "Matrix process failed: $LASTEXITCODE" }
+    }
+} finally {
+    Remove-Item Env:BESSEMER_EQUATION_RESULT_PACKET -ErrorAction SilentlyContinue
+}
+python -B -X utf8 docs/features/spline-equation-state/verify_actual_reference.py
+```
+
+The verifier copies Source before importing it. It compares both fresh-process
+packets byte for byte, opens all 906 actual documents through the original
+container and feature readers, requires complete feature EOF, and compares all
+nine saved values. This checks stored roles; it does not execute the native
+setter, expression evaluator or geometry providers.
