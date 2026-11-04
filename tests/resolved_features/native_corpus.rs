@@ -6,6 +6,9 @@ use crate::archive_codec::ArchiveCursor;
 use crate::header::{ArchiveVersion, DocumentHeader};
 use std::sync::Arc;
 
+#[path = "../support/unselected_document_streams.rs"]
+mod unselected_document_streams;
+
 #[path = "../model_dimension_state/native.rs"]
 mod stored_dimension_views;
 #[path = "../model_intersection_reference/native_edits.rs"]

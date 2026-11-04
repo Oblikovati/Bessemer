@@ -1,0 +1,133 @@
+{
+  "issue": 188,
+  "passed": true,
+  "authority": "Ordinary installed PE bytes and Capstone disassembly; not REA Evidence",
+  "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+  "module_sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "pefile_version": "2024.8.26",
+  "direct_publication_pins": 35,
+  "native_ranges": 14,
+  "native_bytes": 6163,
+  "instructions": 1637,
+  "ranges": [
+    {
+      "source": "parallel_constraint_wrapper_ids_typed_configdata_review.json",
+      "start": "0x4b8bce20",
+      "bytes": 130,
+      "sha256": "93888f025660e2e9df6a1e43d0f63b095ae533921ae9d0ecd51ad4fa86c0e9da",
+      "instructions": 38
+    },
+    {
+      "source": "parallel_constraint_wrapper_ids_typed_configdata_review.json",
+      "start": "0x4b8c7390",
+      "bytes": 917,
+      "sha256": "90d5413dce52ea0fec3a823811f2c5841445ce6d230230ce9b7f9af30308538a",
+      "instructions": 238
+    },
+    {
+      "source": "parallel_constraint_wrapper_ids_typed_configdata_review.json",
+      "start": "0x4c33d5e0",
+      "bytes": 1164,
+      "sha256": "9c2cce31a21e5a678ff159bb654cf88c48c3a3463ba45a40467da27a83a098f3",
+      "instructions": 318
+    },
+    {
+      "source": "parallel_constraint_wrapper_ids_typed_configdata_review.json",
+      "start": "0x4c340620",
+      "bytes": 186,
+      "sha256": "6d9360b136147a58b4aa03d9d8c8bd7c5c2839bc041d4e627aebd919255cd660",
+      "instructions": 55
+    },
+    {
+      "source": "parallel_constraint_wrapper_ids_typed_configdata_review.json",
+      "start": "0x4bdea8f0",
+      "bytes": 193,
+      "sha256": "a39c589613441c5dd8b680fec0badca3fba780d3446543290c1b46e57af68219",
+      "instructions": 51
+    },
+    {
+      "source": "parallel_constraint_wrapper_ids_typed_configdata_review.json",
+      "start": "0x4c21cd90",
+      "bytes": 93,
+      "sha256": "d410bfd8b5069dad744f7d974fb633de6182be46ff23e9ecacdc41264e8814d8",
+      "instructions": 26
+    },
+    {
+      "source": "parallel_constraint_wrapper_ids_typed_configdata_review.json",
+      "start": "0x4c2382a0",
+      "bytes": 219,
+      "sha256": "3cb7e6592057905afbf65a4bedc7c0d42966c4f8267f367d2a7eb78b256f5e89",
+      "instructions": 57
+    },
+    {
+      "source": "parallel_constraint_wrapper6c_70_reset_chain_review.json",
+      "start": "0x4c33bd80",
+      "bytes": 99,
+      "sha256": "91c6b86f4c08a17b4064d5687cbac848fde008491233f7f31beef592c2858553",
+      "instructions": 26
+    },
+    {
+      "source": "parallel_constraint_wrapper6c_70_reset_chain_review.json",
+      "start": "0x4bdea800",
+      "bytes": 77,
+      "sha256": "ace1d413831062ee5e900009a88f791dbe9947c9bf5a1a62599d3d1b7dab87ee",
+      "instructions": 21
+    },
+    {
+      "source": "parallel_constraint_wrapper6c_70_reset_chain_review.json",
+      "start": "0x4bdea84d",
+      "bytes": 51,
+      "sha256": "07dd513f3ac42039d234c77285e4e2eba64a40ff648fc3a047f014fe32fc116c",
+      "instructions": 15
+    },
+    {
+      "source": "parallel_constraint_wrapper6c_70_reset_chain_review.json",
+      "start": "0x4bdea880",
+      "bytes": 14,
+      "sha256": "ff1b3ce00b3c4478f119b5bdfe460f51bd1ecb0d96a22f54d2490ad6cb9610b2",
+      "instructions": 5
+    },
+    {
+      "source": "parallel_constraint_wrapper6c_70_reset_chain_review.json",
+      "start": "0x4bdea88e",
+      "bytes": 28,
+      "sha256": "274ef57660a05d1ba096f7ce18567eeacddd98945a948738c23e717ec4643511",
+      "instructions": 7
+    },
+    {
+      "source": "parallel_constraint_wrapper6c_70_reset_chain_review.json",
+      "start": "0x4b8c4f80",
+      "bytes": 96,
+      "sha256": "50f965059f561b4fb68ee23d9c67af910bec006a157508b3b762ff474e8902f4",
+      "instructions": 32
+    },
+    {
+      "source": "parallel_sketch_wrapper20_30_base_serializer_initial.json",
+      "start": "0x4c2842d0",
+      "bytes": 2896,
+      "sha256": "386341e872220db549b19e1f412c15a6891b7262f165ab134ee47907e744e6cd",
+      "instructions": 748
+    }
+  ],
+  "context_pointer": {
+    "address": "0x4cec9dd0",
+    "expected": "0x4d31da20",
+    "actual": "0x4d31da20"
+  },
+  "checks": [
+    "Every direct publication source SHA256 matched",
+    "All thirteen context/reset ranges and the complete base serializer range matched installed bytes",
+    "Fresh disassembly of every retained range matched every retained instruction and operand",
+    "Every range consumed completely",
+    "Qualified config-data context pointer matched"
+  ],
+  "target_executed": false,
+  "coverage_credit": 0,
+  "limitations": [
+    "Static equality does not prove native runtime execution or complete dynamic control flow",
+    "No fresh key allocation or STORE-time context simulation",
+    "No homogeneous owner78 guarantee",
+    "No new global accounting credit"
+  ],
+  "collector_sha256": "b29c70a2b417ca2b278531890928f44c806251b8fecad068443b63394b4f73cb"
+}

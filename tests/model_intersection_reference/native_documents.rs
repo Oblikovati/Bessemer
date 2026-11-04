@@ -2,8 +2,7 @@ use super::*;
 use crate::Document;
 use crate::model_archives::ConfigurationId;
 
-#[path = "../support/unselected_document_streams.rs"]
-pub(super) mod unselected_document_streams;
+pub(super) use super::super::unselected_document_streams;
 
 pub(super) fn native_reference_document_source(
     document: &Document,

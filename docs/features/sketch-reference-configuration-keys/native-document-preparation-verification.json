@@ -1,0 +1,37 @@
+{
+  "issue": 188,
+  "compilation_passed": true,
+  "clippy_passed": true,
+  "warnings_denied": true,
+  "unsafe_forbidden": true,
+  "function_size_audit": [],
+  "formatter_check_passed": true,
+  "native_document_gate": "Running20589 forward edits and20589 fresh typed reversals; no pass claimed",
+  "executable_sha256": "efb0146e08a3e63edc581e33130d8b7549a042bebff2e24c1307933b0a0633d5",
+  "initial_attempts": [
+    {
+      "log": "lookup-native-document-clippy.log",
+      "sha256": "81cc522a6a40f0fd12d85af1a92c92ce367b3a004da3f4e45f37d860d10d5b3c"
+    },
+    {
+      "log": "lookup-native-document-clippy-final.log",
+      "sha256": "a7e8d438c03e48cb75ad2ee875f31f4486bb63a9fe05c12134ddb660e5079b3c"
+    },
+    {
+      "log": "lookup-native-document-clippy-corrected.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "corrections": [
+    "Loaded stream-preservation helper once under existing corpus reader",
+    "Corrected relative module import depth",
+    "Preserved all whole-file and unrelated-stream assertions"
+  ],
+  "production_behavior_changed": false,
+  "remaining": [
+    "Complete native archive-edit gate",
+    "Complete native document gate",
+    "Full local gate",
+    "Exact-head remote publication and ThreadSanitizer"
+  ]
+}

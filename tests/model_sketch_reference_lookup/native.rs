@@ -8,6 +8,11 @@ use crate::model_archives::{
 };
 
 type NativeLookupRow = [i64; 7];
+type NativeLookupCheck =
+    fn(&ResolvedCorpusCase<'_>, &[&NativeLookupRow], Option<CompressedKernelContext>, bool);
+
+#[path = "native_documents.rs"]
+mod documents;
 
 fn native_lookup_rows() -> Vec<NativeLookupRow> {
     include_str!("../fixtures/sketch-reference-configuration-keys/native-spans.tsv")
@@ -119,7 +124,7 @@ fn verify_native_lookup_edit(
     row: &NativeLookupRow,
     raw: &[u8],
     kind: usize,
-) {
+) -> PartResolvedFeaturesEdit {
     let (request, expected) = native_lookup_edit(row, kind);
     let result = source
         .edit_sketch_reference_lookup_keys(state, request)
@@ -128,6 +133,7 @@ fn verify_native_lookup_edit(
     verify_native_lookup_history(source, state, &result, expected);
     verify_native_lookup_stale(&result, state, request);
     assert_eq!(source.to_bytes().unwrap(), raw);
+    result
 }
 
 fn verify_native_lookup_case(
@@ -152,7 +158,7 @@ fn verify_native_lookup_case(
     assert_eq!(source.to_bytes().unwrap(), case.features);
 }
 
-fn run_native_lookup_corpus(edit: bool) {
+fn run_native_lookup_corpus(check: NativeLookupCheck, edit: bool) {
     let bytes = std::fs::read("target/resolved-native-probe.bin").unwrap();
     let rows = native_lookup_rows();
     let kernel = crate::model_archives::native_corpus_tests::corpus_kernel_context();
@@ -163,7 +169,7 @@ fn run_native_lookup_corpus(edit: bool) {
     for index in 0..906 {
         let case = next_case(&mut cursor);
         let selected: Vec<_> = rows.iter().filter(|row| row[0] == index).collect();
-        verify_native_lookup_case(&case, &selected, kernel.clone(), edit);
+        check(&case, &selected, kernel.clone(), edit);
         total += selected.len();
         println!("LOOKUP_NATIVE\t{index}\t{}\t{edit}", selected.len());
     }
@@ -174,13 +180,13 @@ fn run_native_lookup_corpus(edit: bool) {
 #[test]
 #[ignore = "Requires retained906-case corpus and explicit kernel schema"]
 fn native_lookup_views_match_all_recorded_signed_spans() {
-    run_native_lookup_corpus(false);
+    run_native_lookup_corpus(verify_native_lookup_case, false);
 }
 
 #[test]
 #[ignore = "Requires retained906-case corpus and explicit kernel schema; performs20589 edits"]
 fn native_lookup_edits_match_all_recorded_literal_spans() {
-    run_native_lookup_corpus(true);
+    run_native_lookup_corpus(verify_native_lookup_case, true);
 }
 
 fn verify_native_lookup_relation(
