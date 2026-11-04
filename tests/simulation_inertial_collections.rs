@@ -278,3 +278,6 @@ mod load_limits;
 
 #[path = "support/binary_load_mutations.rs"]
 mod load_mutations;
+
+#[path = "support/model_field_semantics.rs"]
+mod model_field_semantics;
