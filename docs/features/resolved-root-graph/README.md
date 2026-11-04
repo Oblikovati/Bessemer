@@ -37,3 +37,17 @@ The complete retained native corpus, resource/failure matrices and combined loca
 and exact-head remote gates remain required before publication. Higher-level
 part/assembly/drawing model views and structural edits remain open in #2. This
 read operation does not provide geometry or a structural edit stub.
+
+
+## Native structural gate
+
+The [native proof](native-verification.json) covers all 906 retained carriers and
+26,789 roots: 984 inherited targets and 25,805 local targets. This corpus contains
+no null roots; the owned graph supplies that case. Every physical tag, resolved
+class/schema, defining-field link and selector passed, while all configuration
+and feature bytes stayed unchanged. Two processes produced identical case and
+total records, retained losslessly in `native-case-results.tsv.gz`.
+
+This comparison uses Bessemer's admitted fields and loaded map identities. It does
+not replace the pending independent Source metadata comparison or establish
+feature dependency order, geometry or native application behavior.

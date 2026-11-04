@@ -19,6 +19,8 @@ mod stored_node_views;
 mod stored_sketch_lookup_keys;
 #[path = "../model_spline_equation_state/native.rs"]
 mod stored_spline_equations;
+#[path = "../model_resolved_root_graph/native.rs"]
+mod stored_root_graphs;
 #[path = "../model_visual_carriers/native.rs"]
 mod stored_visual_carriers;
 

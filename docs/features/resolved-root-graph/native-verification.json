@@ -1,0 +1,42 @@
+{
+  "issue": 201,
+  "status": "Two native structural root passes completed; original Source and full publication acceptance remain open",
+  "cases": 906,
+  "roots": 26789,
+  "null_targets": 0,
+  "inherited_targets": 984,
+  "local_targets": 25805,
+  "first_process_exit_code": 0,
+  "second_process_exit_code": 0,
+  "case_and_total_records": 907,
+  "process_records_byte_identical": true,
+  "checks": [
+    "Complete physical root count and canonical ordinal paths",
+    "Exact stored framing and resolved class/schema",
+    "Local defining field has the same object identity and class",
+    "Inherited targets remain below the actual inherited slot bound",
+    "Every root selector resolves its own occurrence",
+    "Every original configuration and feature byte image remains identical",
+    "Clippy and function/file size checks passed",
+    "cargo fmt check passed"
+  ],
+  "comparison": "Bessemer stored fields and admitted map identities; not a fresh original Source metadata comparison",
+  "packet_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "packet_bytes": 129189574,
+  "runtime_source_revision": "7f718618",
+  "case_results_gzip": "native-case-results.tsv.gz",
+  "case_results_raw_sha256": "377a125e9c3cf4885103e47c8c837df694018afc7e9452bc466e51f22630ce71",
+  "case_results_gzip_sha256": "bda2bf04c556dd78ea8fef89e650adb99b003aa6d50adc07cdabe42d019f4db2",
+  "logs_sha256": {
+    "resolved-root-graph-native-tests.log": "df9f9f01c4c3cc5d94893b70ede168de25a665cb51257c772ca5e9ec2b2f6b66",
+    "resolved-root-graph-native-final-tests.log": "985f900f37ac8c745e5c8c5a7b88d50b2742749aef1e31439e54c060d0815cfc",
+    "resolved-root-graph-native-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "resolved-root-graph-native-format.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "remaining": [
+    "Fresh original Source comparison of root metadata and links",
+    "Adversarial and resource/failure matrices",
+    "Combined full local and exact-head remote publication gates",
+    "Higher-level model and geometry parity remain open"
+  ]
+}
