@@ -365,6 +365,10 @@ direct allowances, raw strided payloads and fixed-face references.
 exposes the six saved string roles, full signed option and equation-path endpoint
 lock bits. Typed edits preserve unrelated stored fields and use complete archive
 validation; they do not run the native equation setter or evaluate expressions.
+[Resolved root snapshots](docs/features/resolved-root-graph/README.md) expose every
+stored root, including nulls and aliases, with local or inherited target
+identities. They preserve physical provenance without inferring dependency order
+or geometry.
 
 
 This library is named after Sir Henry Bessemer (1813–1898) an English engineer, inventor, and entrepreneur 

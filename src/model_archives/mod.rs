@@ -377,3 +377,9 @@ pub use spline_equation_state::{
     ModelSplineEquationDiagnostic, ModelSplineEquationFieldCopy, ModelSplineEquationStoredEdit,
     ModelSplineEquationStoredState, ModelSplineEquationTextRole,
 };
+
+mod resolved_root_graph;
+pub use resolved_root_graph::{
+    ModelResolvedRootCopy, ModelResolvedRootDiagnostic, ModelResolvedRootGraph,
+    ModelResolvedRootOccurrence, ModelResolvedRootTarget,
+};

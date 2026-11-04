@@ -46,6 +46,8 @@
 
 ### Added
 
+- Added immutable resolved-feature root snapshots with stored order, aliases, loaded target identities and copied provenance. (#201)
+
 - Added physical spline equation stored-state views and exact lock, signed-option and CString edits with retained source provenance. (#199)
 
 - Added explicit-policy Inspection relationship load attempts, first-insertion map views and writer-filtered entries with immutable source provenance. (#197)
