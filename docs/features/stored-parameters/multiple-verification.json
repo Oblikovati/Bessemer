@@ -40,5 +40,22 @@
     "exit_code": 1,
     "cause": "New integration module declarations were not in rustfmt order; runtime tests were not reached.",
     "log_sha256": "9647ffc09d6a0ae41565e9ac05a9eeb0ccbbabe60b6029f4a3f562f2a4395c3a"
+  },
+  "root_alias_extension": {
+    "root_occurrences": 9,
+    "physical_parameter_definitions": 6,
+    "added_occurrences": [
+      "null",
+      "reference to first parameter",
+      "reference to last parameter"
+    ],
+    "exact_stream_reconstruction": true,
+    "focused_module_tests_passed": 2,
+    "focused_module_seconds": 0.1,
+    "clippy_exit_code": 0,
+    "post_format_maximum_function_lines": 19,
+    "log_sha256": "4995f186e3f477edfc9867d5df4152302b2b0d89e56f05aad0dd48a7e97ceefe",
+    "scope": "Literal ordinary object-reference framing test; no additional independent Source replay or native occurrence population claimed",
+    "full_gate_exclusion": "This extension follows the active f8b7578a full PR gate source and is excluded from that run"
   }
 }

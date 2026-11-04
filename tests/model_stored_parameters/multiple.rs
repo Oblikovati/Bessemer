@@ -77,3 +77,35 @@ fn reverse_multiple_document(
     replace_owned_resolved_stream(&mut output, reverse.archive().to_bytes().unwrap());
     assert_eq!(output.to_bytes().unwrap(), document.to_bytes().unwrap());
 }
+
+#[test]
+fn root_alias_occurrences_do_not_duplicate_physical_parameter_definitions() {
+    let (_, original) = fixture(MULTIPLE_ORIGINAL);
+    let parameters = original.stored_parameters().unwrap();
+    let mut raw = MULTIPLE_ORIGINAL.to_vec();
+    raw[4..6].copy_from_slice(&9u16.to_le_bytes());
+    raw.extend_from_slice(&0u16.to_le_bytes());
+    for parameter in [&parameters[0], &parameters[5]] {
+        let field = original.resolve_field(parameter.definition()).unwrap();
+        let ModelFieldValue::ObjectTag(tag) = &field.value else {
+            panic!("expected a physical parameter object tag");
+        };
+        let ModelObjectRecord::New { index, .. } = tag.record else {
+            panic!("expected a new parameter definition");
+        };
+        raw.extend_from_slice(&u16::try_from(index.value()).unwrap().to_le_bytes());
+    }
+    assert_parameter_alias_counts(&raw);
+}
+
+fn assert_parameter_alias_counts(raw: &[u8]) {
+    let (_, source) = fixture(raw);
+    assert_eq!(source.root_count(), 9);
+    assert_eq!(source.root_graph().unwrap().roots().len(), 9);
+    let parameters = source.stored_parameters().unwrap();
+    assert_eq!(parameters.len(), 6);
+    for (kind, parameter) in parameters.iter().enumerate() {
+        assert_eq!(parameter.kind(), KINDS[kind]);
+    }
+    assert_eq!(source.to_bytes().unwrap(), raw);
+}
