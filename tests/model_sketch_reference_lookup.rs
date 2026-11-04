@@ -1,4 +1,10 @@
 //! Canonical saved sketch-reference keys and independent complete-root edits (#188).
+#[path = "model_sketch_reference_lookup/documents.rs"]
+mod documents;
+#[path = "support/owned_resolved_document.rs"]
+mod owned_resolved_document;
+#[path = "support/unselected_document_streams.rs"]
+mod unselected_document_streams;
 use bessemer::Document;
 use bessemer::header::ArchiveVersion;
 use bessemer::model_archives::*;
@@ -191,16 +197,18 @@ fn verify_lookup_operation(
     offsets: [usize; 2],
     expected: [i32; 2],
     result: &PartResolvedFeaturesEdit,
-) {
+) -> Vec<u8> {
     let mut literal = raw.to_vec();
     for (offset, value) in offsets.into_iter().zip(expected) {
         literal[offset..offset + 4].copy_from_slice(&value.to_le_bytes());
     }
-    assert_eq!(result.archive().to_bytes().unwrap(), literal);
+    let actual = result.archive().to_bytes().unwrap();
+    assert_eq!(actual, literal);
     verify_lookup_coverage(source, result);
     verify_lookup_history(source, state, result, expected);
     verify_lookup_rebound(result.archive(), state, expected);
     assert_eq!(source.to_bytes().unwrap(), raw);
+    actual
 }
 
 fn verify_lookup_owner(
@@ -209,6 +217,7 @@ fn verify_lookup_owner(
     source: &PartResolvedFeaturesArchive,
     raw: &[u8],
     state: &LookupState,
+    output: &mut Option<Vec<u8>>,
 ) {
     let (offsets, original) = lookup_literal_pair(case, owner);
     verify_lookup_projection(source, state, original);
@@ -217,7 +226,7 @@ fn verify_lookup_owner(
             let result = source
                 .edit_sketch_reference_lookup_keys(state, lookup_request(kind, value))
                 .unwrap();
-            verify_lookup_operation(
+            let actual = verify_lookup_operation(
                 source,
                 raw,
                 state,
@@ -225,12 +234,17 @@ fn verify_lookup_owner(
                 expected_lookup_keys(original, kind, value),
                 &result,
             );
+            append_lookup_export(output, &actual);
         }
     }
 }
 
 #[test]
 fn all_canonical_owned_lookup_key_edits_match_complete_literal_source_roots() {
+    let path = std::env::var_os("BESSEMER_LOOKUP_EXPORT_PATH");
+    let mut output = path
+        .as_ref()
+        .map(|_| [b"SKE1".as_slice(), &24000_u32.to_le_bytes()].concat());
     let (configuration, manager) = lookup_context();
     let parent = configuration.to_bytes().unwrap();
     for (case, raw) in lookup_images().into_iter().enumerate() {
@@ -238,10 +252,13 @@ fn all_canonical_owned_lookup_key_edits_match_complete_literal_source_roots() {
         let states = source.sketch_reference_lookup_states().unwrap();
         assert_eq!(states.len(), 2);
         for (owner, state) in states.iter().enumerate() {
-            verify_lookup_owner(case, owner, &source, raw, state);
+            verify_lookup_owner(case, owner, &source, raw, state, &mut output);
         }
     }
     assert_eq!(configuration.to_bytes().unwrap(), parent);
+    if let (Some(path), Some(bytes)) = (path, output) {
+        std::fs::write(path, bytes).unwrap();
+    }
 }
 
 fn verify_foreign_lookup_requests(foreign: &PartResolvedFeaturesArchive, state: &LookupState) {
@@ -388,4 +405,11 @@ fn verify_lookup_projection(
         .sketch_reference_lookup_state(&state.source_fields()[0])
         .unwrap();
     assert_eq!(rebound, *state);
+}
+
+fn append_lookup_export(output: &mut Option<Vec<u8>>, actual: &[u8]) {
+    if let Some(output) = output {
+        output.extend_from_slice(&u32::try_from(actual.len()).unwrap().to_le_bytes());
+        output.extend_from_slice(actual);
+    }
 }

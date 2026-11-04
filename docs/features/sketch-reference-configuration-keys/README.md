@@ -68,3 +68,12 @@ reference-free archive returns an empty list. All public key types compile
 as `Send + Sync`. Library and integration Clippy checks and the function-size
 audit passed. Actual-output Source replay, complete-document/native typed
 operations, fresh-process comparison, concurrency and full gates are pending.
+
+Two fresh processes passed the six-test owned gate. Each performed 2,400
+document edits and 2,400 fresh typed reversals, retaining the original
+container checkpoint. Reopened fields, unrelated stream order and bytes,
+original source/parent inputs, and exact whole-file restoration matched.
+Their 24,000-operation exports are byte-identical; independent literal
+checks accepted all 22,672 changes and 1,328 no-ops. Both original Source
+actual-output replays are running. These checks do not complete the remaining
+native, concurrency, full Cargo or remote publication gates.
