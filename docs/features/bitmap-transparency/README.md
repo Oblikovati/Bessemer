@@ -113,3 +113,11 @@ The humanizer skill is unavailable in this session; prose review is pending.
 The full Windows local gate passed at `45811c3`: 3935 tests passed,
 206 were ignored, and formatting, Clippy, build and doctest checks
 completed. Explicit native and Source gates remain separately recorded.
+
+The bitmap commits and proofs are integrated with the lookup-key work.
+All bitmap-specific committed paths match the tested checkout exactly;
+shared exports, docs and attributes retain both additive features. Combined
+checks passed seven bitmap tests and five lookup-key tests, library Clippy
+and formatting. The temporary checkout was removed after clean-state,
+ancestry and active-process checks; its tested commits remain in history.
+Remote publication remains pending.
