@@ -4,6 +4,8 @@ use crate::model_archives::{
     CompressedKernelContext, ModelFieldValue, ModelObjectRecord, ModelResolvedRootGraph,
     ModelResolvedRootOccurrence, ModelResolvedRootTarget, PartResolvedFeaturesArchive,
 };
+#[path = "native_exports.rs"]
+mod exports;
 
 fn assert_native_root_target(
     graph: &ModelResolvedRootGraph,
@@ -80,6 +82,7 @@ fn inspect_native_root_case(
     }
     assert_eq!(configuration.to_bytes().unwrap(), case.configuration);
     assert_eq!(source.to_bytes().unwrap(), case.features);
+    exports::export_root_case(case, &graph);
     totals
 }
 

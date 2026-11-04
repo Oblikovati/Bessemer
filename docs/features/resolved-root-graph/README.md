@@ -51,3 +51,51 @@ total records, retained losslessly in `native-case-results.tsv.gz`.
 This comparison uses Bessemer's admitted fields and loaded map identities. It does
 not replace the pending independent Source metadata comparison or establish
 feature dependency order, geometry or native application behavior.
+
+
+## Reproduce actual native metadata exports
+
+The manual native test can write the actual projected root values, including
+framing, record kind, object identity, class/schema and local/inherited target
+identity. It keeps implementation-specific field indexes and revision tokens in
+the Rust ownership tests; these are not Source wire values.
+
+Use an unused result directory and the existing retained BRF1 packet. Each Cargo
+invocation starts a fresh process. The kernel schema remains an explicit input:
+
+```powershell
+$resultRoot = Join-Path (Get-Location) 'target/resolved-root-actual-results'
+if (Test-Path -LiteralPath $resultRoot) { throw 'Expected an unused result directory' }
+New-Item -ItemType Directory -Path $resultRoot | Out-Null
+try {
+    foreach ($iteration in 1..2) {
+        $env:BESSEMER_ROOT_RESULT_PACKET = Join-Path $resultRoot "results-$iteration.bin"
+        cargo test --lib every_retained_native_root_preserves_physical_tags_and_loaded_target_links -- --ignored --nocapture
+        if ($LASTEXITCODE -ne 0) { throw "Native export process failed: $LASTEXITCODE" }
+    }
+} finally {
+    Remove-Item Env:BESSEMER_ROOT_RESULT_PACKET -ErrorAction SilentlyContinue
+}
+python -B -X utf8 docs/features/resolved-root-graph/verify_actual_reference.py
+```
+
+The verifier copies Source before importing it. A profiling observer records
+original object-method calls, reader dispatch and returns; it leaves every
+method and decoded result unchanged. It retains the defining archive and object
+identity so memory-address reuse cannot misclassify inherited objects, and it
+captures class/schema before a body can reference itself. The owned null/alias
+graph checks those observer roles separately from the native population.
+
+This is a scoped comparison of stored root metadata and loaded identities. It
+does not replace or weaken the independent known-byte accounting test in #177,
+which remains unresolved. Source field/geometry meanings and native application
+behavior remain separate requirements.
+
+
+The [actual-output proof](actual-output-verification.json) records a completed
+comparison of all 26,789 native roots with the frozen original Source reader.
+Both reference tests passed, including complete feature EOF and the import/content
+guard over 6,673 Python files. The two fresh Rust packets each contained 1,508,863
+bytes and matched byte for byte. This closes the scoped stored-metadata comparison;
+the known-byte accounting defect, publication gates and broader model/geometry
+requirements remain open.

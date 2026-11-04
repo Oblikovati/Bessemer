@@ -1,0 +1,46 @@
+{
+  "issue": 201,
+  "status": "Scoped original Source comparison passed; full publication and broader model/geometry parity remain open",
+  "native_cases": 906,
+  "roots": 26789,
+  "source_tests_passed": 2,
+  "source_failed": 0,
+  "source_process_exit_code": 0,
+  "source_python_files_frozen": 6673,
+  "source_snapshot_identity": "2e10d20f0891c793c55e723b735835ed877bce5c613d06da809c72c8dfdc2bb0",
+  "source_import_and_content_guard": "passed",
+  "source_collector_removed": true,
+  "source_methods_replaced": false,
+  "source_method_identity_checked_for_every_case": true,
+  "fresh_rust_processes": 3,
+  "packets_byte_identical": true,
+  "packet_bytes_each": 1508863,
+  "packet_sha256": "8c703cfcd0880137fc30aead4d2a08130bc50274c3952f8e53e1f5a9404cd4e7",
+  "checks": [
+    "Owned null/alias/definition observer matches independent literal tags, identities and schemas",
+    "Every native Source root reaches complete feature EOF",
+    "Every exported ordinal, tag, extension, record kind, object identity, class/schema and target classification/identity matches original Source",
+    "Original object method identity remains unchanged throughout",
+    "Observer retains archive and object ownership against memory identity reuse",
+    "Schema captured before body dispatch supports self references",
+    "Caller field indexes and revision tokens are validated separately by Rust ownership tests",
+    "Literal null exporter record test passed"
+  ],
+  "null_export_tests_passed": 1,
+  "logs_sha256": {
+    "resolved-root-graph-actual-source.log": "26d319e13b08e9dba42992344fa559807c589060a807811ff04a372efc0aefc5",
+    "resolved-root-graph-null-export.log": "fad8ec125c491d0bdfa17ce43f42f72884de761de185a91749dcd770b48fbbc1",
+    "resolved-root-graph-export-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "resolved-root-graph-export-format.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "first_export_log_sha256": "cf418b22b194c8c9822e58ab777aa444483c9ac82151149cfdbe5e21f4b569ff",
+  "second_export_log_sha256": "7655875f5be40834893a258714e2cf86ae45edc5f3e8f33061a1fc8f716eec17",
+  "remaining": [
+    "Combined full local and exact-head remote publication gates",
+    "The independent known-byte accounting failure #177 remains unresolved",
+    "Feature dependencies, structural edits and geometry/native application parity remain open in #2"
+  ],
+  "final_helper_refactor_packet_byte_identical": true,
+  "final_export_process_exit_code": 0,
+  "final_export_log_sha256": "1090221cd6d31221de9336f37550d20241eb8e3cb55ee6b51db099aeeb116109"
+}
