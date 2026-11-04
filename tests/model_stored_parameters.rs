@@ -63,6 +63,8 @@ fn edited_value(kind: usize) -> ModelParameterValue {
 
 #[path = "model_stored_parameters/alternate_matrix.rs"]
 mod alternate_matrix;
+#[path = "model_stored_parameters/boundaries.rs"]
+mod boundaries;
 #[path = "model_stored_parameters/edits.rs"]
 mod edits;
 #[path = "model_stored_parameters/inherited.rs"]

@@ -258,3 +258,21 @@ this does not establish other version/context or native-positive populations.
 python -B -X utf8 docs/features/stored-parameters/freeze_alternate_matrix_reference.py
 cargo test --test model_stored_parameters
 ```
+
+## Malformed input and budget controls
+
+All 17 focused tests pass. The added boundary checks reject every proper prefix
+and every appended octet for the 24 original graphs and both inherited graphs,
+before any partial parameter result can be published. Retained source snapshots
+and their values remain unchanged after these failures.
+
+Exact byte/field budget controls use complete graphs expanded to 4,097 roots
+with 4,096 explicit null roots. This preserves the single physical parameter
+while making feature bytes and fields exceed the shared configuration-manager
+requirements. The first setup incorrectly capped short feature streams below
+the manager's 1,968-byte input; that failed log is retained. Corrected exact caps
+pass and one below either rejects. Text growth beyond the retained byte budget
+also fails without changing source bytes, projected values or valid handles.
+
+`boundary-verification.json` records counts, scope and logs. These additions
+cover byte and field caps; other resource dimensions retain separate tests.
