@@ -35,9 +35,10 @@ The initial owned fixture pass accepted 264 bounded signed-index/selector
 cases and one complete root whose first owner contains all 65,536 selector
 codes. Both physical sketch definitions and their shared alias remain
 visible. Independent checks verified 16,913 stored indices, 67,652 groups
-and the complete 676,537-read byte partition. A fresh strict replay is in
-progress. Typed operations and their document/concurrency gates remain
-required.
+and the complete 676,537-read byte partition. A second fresh strict replay
+passed without rewriting artifacts; every consumed Source module was
+unchanged. The classification API is under operation validation; the index
+API and the remaining output/document/concurrency gates are pending.
 
 Implementation must reuse the complete archive readers and revision-owned
 edit/history contracts. Require independent complete roots and literal
