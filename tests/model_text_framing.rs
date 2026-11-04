@@ -1,10 +1,13 @@
 //! Exact CString prefix-only field edits and history, independent of semantic text equality (#200).
+#[path = "support/cstring_framing_fixture.rs"]
+mod cstring_framing_fixture;
 #[path = "support/owned_resolved_document.rs"]
 mod owned_resolved_document;
 #[path = "support/owned_saved_manager_document.rs"]
 mod owned_saved_manager_document;
 use bessemer::Document;
 use bessemer::model_archives::*;
+use cstring_framing_fixture::cstring_equation_wire;
 use owned_resolved_document::*;
 use owned_saved_manager_document::prepared_saved_manager_document;
 
@@ -15,59 +18,6 @@ const FRAMING_LIMITS: ModelArchiveLimits = ModelArchiveLimits {
     maximum_depth: 64,
     maximum_objects: 256,
 };
-const ORIGINAL_EQUATION: &[u8] = include_bytes!("fixtures/single-span-splines/owned-2.bin");
-
-fn framing_wire(wide: bool, width: usize) -> Vec<u8> {
-    let payload = if wide {
-        "Ω equation 0"
-            .encode_utf16()
-            .flat_map(u16::to_le_bytes)
-            .collect::<Vec<_>>()
-    } else {
-        b"ABC".to_vec()
-    };
-    let count = if wide { 12_u32 } else { 3_u32 };
-    let mut text = literal_count_prefix(wide, width, count);
-    text.extend_from_slice(&payload);
-    replace_equation_text_frame(text)
-}
-
-fn literal_count_prefix(wide: bool, width: usize, count: u32) -> Vec<u8> {
-    let mut text = if wide {
-        vec![0xff, 0xfe, 0xff]
-    } else {
-        Vec::new()
-    };
-    match width {
-        0 => text.push(count as u8),
-        1 => {
-            text.push(0xff);
-            text.extend_from_slice(&(count as u16).to_le_bytes());
-        }
-        2 => {
-            text.extend_from_slice(&[0xff, 0xff, 0xff]);
-            text.extend_from_slice(&count.to_le_bytes());
-        }
-        _ => panic!("prefix width {width}; expected0..=2"),
-    }
-    text
-}
-
-fn replace_equation_text_frame(text: Vec<u8>) -> Vec<u8> {
-    let mut needle = vec![0xff, 0xfe, 0xff, 12];
-    needle.extend("Ω equation 0".encode_utf16().flat_map(u16::to_le_bytes));
-    let positions: Vec<_> = ORIGINAL_EQUATION
-        .windows(needle.len())
-        .enumerate()
-        .filter(|(_, window)| *window == needle)
-        .map(|(index, _)| index)
-        .collect();
-    assert_eq!(positions.len(), 1);
-    let mut raw = ORIGINAL_EQUATION.to_vec();
-    raw.splice(positions[0]..positions[0] + needle.len(), text);
-    raw
-}
-
 fn framing_archive(raw: &[u8]) -> PartResolvedFeaturesArchive {
     read_owned_resolved_document(&prepared_saved_manager_document(raw), FRAMING_LIMITS)
 }
@@ -83,8 +33,8 @@ fn framing_field(source: &PartResolvedFeaturesArchive) -> usize {
 #[test]
 fn semantic_cstring_comparison_stays_equal_while_physical_field_framing_differs() {
     for wide in [false, true] {
-        let short = framing_archive(&framing_wire(wide, 0));
-        let extended = framing_archive(&framing_wire(wide, 1));
+        let short = framing_archive(&cstring_equation_wire(wide, 0));
+        let extended = framing_archive(&cstring_equation_wire(wide, 1));
         let index = framing_field(&short);
         assert_eq!(short.fields()[index].value, extended.fields()[index].value);
         assert_ne!(short.fields()[index], extended.fields()[index]);
@@ -103,8 +53,8 @@ fn all_prefix_width_transitions_preserve_requested_bytes_completion_and_history(
 }
 
 fn check_framing_transition(wide: bool, before: usize, after: usize) {
-    let original = framing_wire(wide, before);
-    let requested = framing_wire(wide, after);
+    let original = cstring_equation_wire(wide, before);
+    let requested = cstring_equation_wire(wide, after);
     let source = framing_archive(&original);
     let target = framing_archive(&requested);
     let index = framing_field(&source);
