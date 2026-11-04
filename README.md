@@ -844,6 +844,9 @@ ThreadSanitizer CI runs the complete library and integration test targets across
 eight deterministic partitions. Every partition instruments the library,
 dependencies and standard library; native-input exclusions remain unchanged.
 All eight partitions must succeed before the four full platform gates run.
+PR/full gates bound transient test artifacts by omitting test debug information
+and incremental caches. Assertions, overflow checks and the complete workload
+remain enabled. See [the storage policy](docs/features/ci-build-storage/README.md).
 `cargo xtask tsan` retains the complete local run. A matching local partition is
 `cargo xtask tsan --shard 0/8` on Linux x86_64. The planner rejects custom Cargo
 target layouts instead of silently dropping targets.

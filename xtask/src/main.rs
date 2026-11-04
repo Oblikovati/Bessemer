@@ -1,4 +1,5 @@
-use std::process::{Command, ExitCode};
+use std::process::ExitCode;
+mod build_storage;
 
 #[cfg(test)]
 mod formatting_tests;
@@ -56,8 +57,7 @@ fn run_commands(mut execute: impl FnMut(&[&str]) -> Result<(), String>) -> Resul
 
 fn run_cargo(arguments: &[&str]) -> Result<(), String> {
     let program = std::env::var_os("CARGO").unwrap_or_else(|| "cargo".into());
-    let status = Command::new(program)
-        .args(arguments)
+    let status = build_storage::gate_cargo_command(program, arguments)
         .status()
         .map_err(|error| format!("cargo {arguments:?}: {error}; expected executable cargo"))?;
     if status.success() {
