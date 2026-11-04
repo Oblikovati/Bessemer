@@ -1,0 +1,123 @@
+{
+  "issue": 166,
+  "behavior_version": "C851-local-layout-integers-v1",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "target_executed": false,
+  "kernel_decision": "Project only native local integer patterns through the explicit post-helper reads. Preserve enable0 early completion before optional facts; entry FC controls point/size versus wrapped range-difference/divide20 dependency order. Require pointX before a supplied post-helper state, then spacing, reread FC and short-circuited1B0/1B4 facts. Keep signed32 wrapping in spacing and vertical results. Retain every original parent, derived history, complete empty versus computed scalar completion, exact reached masks and zero pattern error. Do not infer helper completion, unchanged FC, runtime state writes, valid pointers or renderer output.",
+  "bound_renderer_instructions": 373,
+  "complete_c851_probe_instructions": 555,
+  "independent_c851_body_instructions": 552,
+  "division_certificate": "legend-step-layout-division-reference.json",
+  "division_sequence_instructions": 9,
+  "division_signed32_identity_proved": true,
+  "division_regression_cases": 8359,
+  "public_send_sync_types": 8,
+  "operation_cases": 35468,
+  "presence_cases": 24576,
+  "arithmetic_boundary_cases": 2700,
+  "generated_cases": 8192,
+  "owned_complete_contexts": 425,
+  "complete_fc_mutants": 268,
+  "native_accepted_contexts": 276,
+  "original_rejected_contexts": 8,
+  "hypothetical_contexts_per_parent": 8,
+  "local_requests": 43220,
+  "additional_stored_byte_credit": 0,
+  "rust": {
+    "checks": 15,
+    "failed": 0,
+    "ignored": 0,
+    "seconds": 0.24,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-step-layout-rust-final.log",
+      "bytes": 1637,
+      "sha256": "51f073e2e447e5a44b39f5b250ca81dff173d6079c9015e73d2aea84f7493f57"
+    }
+  },
+  "clippy": {
+    "arguments": "--all-targets --all-features -- -D warnings",
+    "seconds": 35.14,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-step-layout-clippy.log",
+      "bytes": 136,
+      "sha256": "ab828105c63ba69bff402a60375223a4febe43601c19e03f05232888e29e9391"
+    }
+  },
+  "initial_freeze": {
+    "checks": 23,
+    "seconds": 7.839,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-step-layout-source-write.log",
+      "bytes": 3705,
+      "sha256": "9bb8d7f914c3c4abe61e7beca00946c6effcdf24cdd1958e942c6e64f822b62d"
+    }
+  },
+  "strict_source": {
+    "checks": 23,
+    "seconds": 9.456,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-step-layout-source-strict.log",
+      "bytes": 3705,
+      "sha256": "0ce52cd8b6f42e5a6233030e9bc0174b3945dcd2c538df9cf10d632b013b500b"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/legend-step-source-snapshot.json",
+      "bytes": 625403,
+      "sha256": "de2541d01306a90c111b3c57cc6c816ceee8288666e53950cec4d7e1d43aa9f7"
+    }
+  },
+  "process_proof": "legend-step-layout-process-verification.json",
+  "operation_packet": {
+    "path": "tests/fixtures/simulation-post-dialog/legend-step-layout-operations.bin",
+    "bytes": 2837448,
+    "sha256": "d5db88b071ca9e990c670828bb8f17a2eacd4c0f036559c4161bd351ca13ef52"
+  },
+  "owned_projection_packet": {
+    "path": "tests/fixtures/simulation-post-dialog/legend-step-layout-projection.bin",
+    "bytes": 2005159,
+    "sha256": "024a64a7df886fd11447b100163dc73212641077909ad8822a69e2476b1cd73e"
+  },
+  "oracle_kinds": [
+    "Complete pinned C851 renderer/body/probe/source evidence and preserved original acceptance scopes",
+    "Signed32 quotient/remainder certificate over the entire domain, signed64 product bound and8359 independent emulation/division regressions",
+    "Unbounded integer expectations with explicit modulo32 normalization and truncation toward zero",
+    "Every optional fact mask across enable/FC/first-flag cases, signed arithmetic boundaries and generated positive/negative patterns",
+    "Complete owned/native/FC-mutant parent replay, exact archive bytes, stored absence and explicitly hypothetical post-helper state",
+    "Compile-time Send+Sync for all eight public types, input isolation and eight-worker operation/owned/native comparisons",
+    "Two fresh processes matched every independent expected byte and each other, with exact export-test execution checked"
+  ],
+  "excluded": [
+    "Native renderer or helper execution, helper arguments, localized text and helper completion",
+    "Inferring post-helper FC, flags or spacing from entry state",
+    "Runtime160 writes, font/drawing/later renderer effects and pointer/pixel validity",
+    "Universal FC visibility labels, missing-field defaults, new byte credit and expanded native acceptance"
+  ],
+  "pending": [
+    "Remaining documented feature166 models",
+    "Exact publication-head cargo xtask pr and all five platform gates"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 268,
+    "seconds": 500.038,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "53f2e6d00abdf48f8707a584ed3a11b50af27712",
+    "log": {
+      "path": "target/legend-step-layout-source-full.log",
+      "bytes": 59902,
+      "sha256": "247e936f908cdcd07a1a17ad0ef021c1bcfd02512b1d39d2fae3a931760af858"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 633446,
+      "sha256": "3f0a733f2ab34709dbd40b58493c9d17bf404a64df6c5ac3eba006f75840edab"
+    }
+  }
+}

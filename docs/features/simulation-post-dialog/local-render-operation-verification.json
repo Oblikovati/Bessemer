@@ -1,0 +1,111 @@
+{
+  "issue": 166,
+  "behavior_version": "C884-local-render-predicate-v1",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "kernel_decision": "Require positive signed counts and the exact conditional nonnegative-or-unordered position comparisons, without inventing allocation bounds, finite-value restrictions or missing legacy migration state.",
+  "floating_environment": {
+    "exceptions": "masked",
+    "denormals_are_zero": false
+  },
+  "target_executed": false,
+  "owned_cases": 18177,
+  "accepted": 5085,
+  "rejected": 13092,
+  "native_explicit_input_sets": 276,
+  "native_modeled_true": 276,
+  "owned_complete_contexts": 425,
+  "native_complete_contexts": 276,
+  "additional_stored_byte_credit": 0,
+  "rust": {
+    "checks": 6,
+    "failed": 0,
+    "ignored": 0,
+    "log": {
+      "path": "target/local-render-rust-tests.log",
+      "bytes": 809,
+      "sha256": "52534c69939484faedcceed52a5d214fefca2337260150bd32bbb316c4d6a563"
+    }
+  },
+  "clippy": {
+    "result": "passed",
+    "scope": "all-targets all-features -D warnings",
+    "log": {
+      "path": "target/local-render-clippy.log",
+      "bytes": 136,
+      "sha256": "4b7686dfbf1a889a9850eab1f36610055e2c951b4be63a23c6a2c47c900ee831"
+    }
+  },
+  "targeted_source": {
+    "checks": 10,
+    "seconds": 4.368,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/local-render-source-strict.log",
+      "bytes": 1740,
+      "sha256": "a466869c3b748239e5a32a74ba3633b4852a8479bc5d4f4dd9391ed88fd4a15c"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/local-render-source-snapshot.json",
+      "bytes": 544682,
+      "sha256": "96f959f6e040436948754ccbf883765e615c918e888af3e4e4361a1bbb0c714b"
+    }
+  },
+  "full_source": {
+    "checks": 139,
+    "seconds": 787.941,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/local-render-source-full.log",
+      "bytes": 35985,
+      "sha256": "104891e3eefa67c3d4ac187a1035561a89358e8fb0c4d37e1fc94e92cb78a015"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 551111,
+      "sha256": "182809fad040886dfd657bbd95bac590b2ae7ad94f0c5868108782987669367e"
+    }
+  },
+  "packet_references": [
+    "local-render-packets-reference.json",
+    "local-render-native-reference.json",
+    "local-render-projection-reference.json"
+  ],
+  "concurrency_workers": 8,
+  "process_proof": "local-render-process-verification.json",
+  "oracle_kinds": [
+    "Complete pinned original C884 report, exact source pins and qualified historical report transition",
+    "Full installed method/export and parent-reader subobject call bindings",
+    "All original native identities, byte offsets and raw inputs independently replayed from complete bytes",
+    "Signed count classes, every binary32 exponent and both independent position branches",
+    "Complete immutable parent/style projections retaining missing legacy fields",
+    "Eight-worker and two-fresh-process exact Source comparisons"
+  ],
+  "excluded": [
+    "Native execution or inferred actual MXCSR state",
+    "Complete rendering safety, archive validity or palette allocation bounds",
+    "Unmasked exceptions or DAZ-on behavior",
+    "Guessed pre700006 style migration defaults"
+  ],
+  "pending": [
+    "Cross-platform publication gates and local gates for subsequent changes",
+    "Remaining style/rendering/preference roles"
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "local_pr_gate": {
+    "runtime_revision": "58b3982ed74c5e306e0ccbc081d46b81dde9e71c",
+    "result": "passed",
+    "process_exit_code": 0,
+    "summaries": 278,
+    "passed": 3627,
+    "failed": 0,
+    "ignored": 146,
+    "log": {
+      "path": "target/local-render-pr-gate.log",
+      "bytes": 466328,
+      "sha256": "70c886e2d1549ee181dbe9ffb8970000f8a98c1faa1019d3398b69b3c97030c9"
+    }
+  }
+}

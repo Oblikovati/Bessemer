@@ -654,3 +654,155 @@ see [the Results header evidence](docs/features/simulation-results-headers/READM
 edits. Character-count strings retain raw code units and change length as one
 atomic value; unassigned eight-byte values retain their exact patterns. See
 [the graph parameter evidence](docs/features/simulation-post-graph/README.md).
+
+`SimulationPostInfo` supports the complete fixed-slot `DspPostInfo` helper with
+explicit version context, preserving all twelve slots independently of active
+counts. Version700002 alone carries an atomic character-text suffix with separate
+character, payload and aggregate budgets. See
+[the dialog helper evidence](docs/features/simulation-post-dialog/README.md).
+
+`SimulationPostStyle` supports the complete historical and modern `DspPostStyle`
+helper profiles, including the legacy style/legend partition, versioned color
+fields and atomic character text. It shares raw field/text representations with
+PostInfo and applies its own layout and explicit budgets; see
+[the dialog helper evidence](docs/features/simulation-post-dialog/README.md).
+
+
+`SimulationPostDialog` reads, constructs and edits complete versioned DGXPOST
+bodies. It retains atomic character text, opaque counted bytes, raw scalar bits
+and scoped reference archives, with explicit outer and embedded limits. Reads
+require EOF; isolated edits preserve every unselected field and report outer
+and nested provenance. Stored profiles do not establish application dispatch
+or geometry validity. See [the dialog evidence](docs/features/simulation-post-dialog/README.md).
+
+
+`SimulationPostDialog::range_view` selects the documented stored minimum and
+maximum patterns while retaining the original state and all four endpoints.
+`deformation_scale_view` retains both stored scale patterns and the signed
+selector, selecting literal float32 one for unrecognized selectors. These
+accessors preserve signed zero, subnormal and non-finite patterns without
+changing the document.
+
+
+`SimulationPostInfo::cut_primitive` exposes each of the twelve physical slots,
+with known primitive names and direction tokens, raw normal/center patterns,
+and the shared scalar's D sign-bit alias. Unknown codes remain unnamed and
+active-count words do not remove slots. `header_view` preserves all seven header
+words and exposes the bounded forward ContourType preference conversion.
+
+
+`SimulationPostInfoContourCode` retains raw codes and provides the documented
+forward, reverse and default preference conversions. Defaults accept explicit
+optional plot-type context; they do not inspect runtime objects or rewrite a
+document. `SimulationPostInfo::diff_ogl_render` compares the four stored header
+words selected by that named routine. It leaves cut primitives and active counts
+out of that bounded comparison.
+
+
+`SimulationPostDialog::colors` and `SimulationPostStyle::colors` expose outer
+stored RGBA colors with their structural paths and complete body spans,
+including legacy color regions. `SimulationRgbaColor` preserves all four scalar
+patterns and reconstructs exactly sixteen bytes. Its named-channel accessor
+returns numeric values only for finite patterns, preserving signed zero and
+subnormal values. The [preference-color projections](docs/features/simulation-post-dialog/preference-colors.md) keep initializer, explicit runtime applicability and raw alpha policy separate. Colors are not clamped or normalized; the separate [plot54 local plan](docs/features/simulation-post-dialog/plot54-color.md) records its alpha projection, and [element-segment local RGB reads](docs/features/simulation-post-dialog/segment-color.md) preserves the RGB consumer boundary; [conditional1DC RGB](docs/features/simulation-post-dialog/mode3-rgb.md) provides group-selection plans and isolated fixed-slot copies with explicit runtime facts.
+
+`legend_format_inputs` exposes present raw legend format controls on complete
+dialog and PostStyle snapshots. Its [local format plans](docs/features/simulation-post-dialog/legend-format.md)
+construct printf-style strings and select the bounded alternate branch from
+explicit runtime facts, retaining skipped assignments and missing inputs separately.
+Native numeric rendering and localization remain outside these operations.
+
+`legend_position_factors` exposes horizontal and vertical factors with exact raw
+bits, finite numeric views, source field IDs and absolute wire spans. The
+[position-factor evidence](docs/features/simulation-post-dialog/legend-position.md)
+retains conditional field absence and the native pixel-consumer qualifications.
+
+`legend_palette_inputs` preserves raw mapping, reversal, count and gray-enable
+words. Its [local dispatcher plans](docs/features/simulation-post-dialog/legend-palette.md)
+require only reached runtime facts and retain the fixed nine-slot framing,
+count-validity qualifications and unresolved destination algorithms.
+
+`legend_height_inputs` reads the raw cell-count multiplier. Its
+[height-product projection](docs/features/simulation-post-dialog/legend-height.md)
+combines that word with an explicit cell-height helper result using exact32
+wrapping arithmetic, retaining font, pixel and tick qualifications.
+
+`legend_yield_inputs` preserves all four D8 color words and raw reversal. Its
+[gray-call planner](docs/features/simulation-post-dialog/legend-yield.md) requires
+an explicit runtime split index and reached post-suffix rereads, retaining exact
+signed count forwarding, wrapped offsets and suffix-before-prefix call order.
+
+`legend_end_cell_inputs` preserves optional E8/EC words. The separate
+[`SimulationLegendEndCellRuntime::project_end_cell`](docs/features/simulation-post-dialog/legend-end-cell.md)
+requires actual read-time plot, flag and color facts, preserves short-circuit
+reads and copies RGB bits without consuming alpha or validating geometry.
+
+`legend_width_inputs` preserves optional B4 selectors. The separate
+[`SimulationLegendWidthRuntime::project_width_nearest_even`](docs/features/simulation-post-dialog/legend-width.md)
+requires actual entry font and selector facts, returns each exact binary32 stage
+under explicit nearest-even rounding, and retains native branch identities.
+
+`hidden_parts_migration_inputs` preserves the original version and stored 1F0.
+Its [legacy load projection](docs/features/simulation-post-dialog/hidden-migration.md)
+returns both derived runtime words and exact store coverage for versions
+700006..840007, retaining original values and leaving source bytes unchanged.
+
+[`legend_read_zero_assignments`](docs/features/simulation-post-dialog/legend-resets.md)
+selects only explicit reader zero stores from the existing version. It retains
+native member order and distinguishes unsupported raw-class versions from
+completed later profiles with no assignments, without changing stored words.
+
+[`legend_grouping_inputs`](docs/features/simulation-post-dialog/legend-grouping.md)
+preserves the optional raw C0 locale-grouping control. Nonzero values enable
+conditional grouping; locale characters and exact rendered strings remain
+runtime facts.
+
+[`legend_preference_inputs`](docs/features/simulation-post-dialog/legend-inverse.md)
+preserves optional A8 and projects the lossy preference word0 zero test.
+`SimulationLegendPreferenceRuntime::project_local_a8_assignment` requires explicit
+runtime plot/preference facts and preserves the setter's early-return branches.
+
+[`style_comparison_state`](docs/features/simulation-post-dialog/style-comparison.md)
+preserves optional style/legend facts. Its `compare_masked_exceptions_daz_off`
+operation follows the complete native dependency order, reports the first
+difference and retains both source states without applying load-time defaults.
+
+`legend_step_inputs` preserves the optional FC layout switch. The separate
+[`SimulationLegendStepRuntime::step_availability`](docs/features/simulation-post-dialog/legend-step.md)
+operation requires explicit runtime plot words, retains raw signed BEC returns
+and records the reached word reads without deriving availability from FC.
+
+`project_step_layout` computes the [local layout integers](docs/features/simulation-post-dialog/legend-step-layout.md)
+from explicit enable, point, size, range and post-helper facts. It preserves
+signed32 wrapping, exact division by20 and the separate FC reread without
+claiming complete rendering or valid pixels.
+
+`project_3d_body_requests` retains temporary buffer-size and drawing-call
+decisions from an entry count and explicit later count. The separate
+[`project_background_nearest_even`](docs/features/simulation-post-dialog/legend-3d.md)
+projection keeps packed color, precision-at-read and lighting facts explicit;
+both return local requests without allocating buffers or validating rendering.
+
+
+`SimulationRgbaColor::from_colorref_nearest_even` models the packed constructor:
+the low three bytes supply RGB and alpha becomes one. The high byte is ignored.
+`assigned_colorref_nearest_even` models the separate assignment overload and
+preserves every existing alpha bit. Integer rounding reproduces the specified
+binary32 nearest-even model independently of ambient floating-point state. These
+supplementary values leave the original stored color available to the caller.
+
+
+`SimulationRgbaColor::colorref_nearest_even` provides the documented conditional
+packed export. RGB multiplication, signed truncation and low-byte wrapping use
+integer arithmetic; alpha is ignored. The outcome retains the original color
+and either a packed value or a typed channel/domain exclusion. Nonfinite,
+nonzero subnormal and overflowing/out-of-range RGB inputs produce no packed
+value under this model.
+
+ThreadSanitizer CI runs the complete library and integration test targets across
+eight deterministic partitions. Every partition instruments the library,
+dependencies and standard library; native-input exclusions remain unchanged.
+All eight partitions must succeed before the four full platform gates run.
+`cargo xtask tsan` retains the complete local run. A matching local partition is
+`cargo xtask tsan --shard 0/8` on Linux x86_64. The planner rejects custom Cargo
+target layouts instead of silently dropping targets.

@@ -1,0 +1,73 @@
+{
+  "issue": 166,
+  "combined": {
+    "command": "cargo test --test simulation_post_dialog --test simulation_post_info --test simulation_post_style -- --include-ignored",
+    "parent": {
+      "passed": 21,
+      "failed": 0,
+      "seconds": 295.8
+    },
+    "info": {
+      "passed": 13,
+      "failed": 0,
+      "seconds": 0.49
+    },
+    "style": {
+      "passed": 14,
+      "failed": 0,
+      "seconds": 0.79
+    },
+    "log": {
+      "path": "target/post-dialog-complete-focused.log",
+      "bytes": 5018,
+      "sha256": "d99782f7c256369bc78e90c709a91c25857c58c9725ced88812e1a762581da1b"
+    }
+  },
+  "latest_cap_helpers": {
+    "path": "target/post-dialog-final-cap-helpers.log",
+    "bytes": 676,
+    "sha256": "2dac7095616406fe4258f236e4623f4b00ff3f8c8264fbd77a5a28a5635ae55f"
+  },
+  "reference_count_controls": {
+    "paths": 9,
+    "controls": 27,
+    "exact_accepted": 9,
+    "negative_or_excessive_rejected": 18,
+    "read_and_construction_exact_bytes": true,
+    "log": {
+      "path": "target/post-dialog-reference-count-caps.log",
+      "bytes": 469,
+      "sha256": "c2ab8aa24b3bd0d0a094c61bddd4dc1b082d3f7fcea5e59849354ad139fda902"
+    },
+    "independent_source_replay": {
+      "checks": 3,
+      "seconds": 11.254,
+      "result": "passed",
+      "log": {
+        "path": "target/post-dialog-reference-caps-source-write.log",
+        "bytes": 656,
+        "sha256": "728ed0c7105b4658182731375ab9dd42e6bb8f08ec640bf2ed20e004c2ac3c6b"
+      },
+      "reference": {
+        "path": "docs/features/simulation-post-dialog/reference-cap-reference.json",
+        "bytes": 6333,
+        "sha256": "b73ceeb2e72d2b3121e802f111c97a3e1b1fd7ed5f0e1cf751a27afb62f31a92"
+      }
+    },
+    "strict_source_replay": {
+      "checks": 3,
+      "seconds": 9.913,
+      "result": "passed",
+      "log": {
+        "path": "target/post-dialog-reference-caps-source-strict.log",
+        "bytes": 655,
+        "sha256": "47568f7f7d7a1380eabe9b7fb8d9cebac4b69798338c5f919f0fca7bea7338a1"
+      }
+    }
+  },
+  "pending": [
+    "Cross-platform acceptance and later documented consumer views."
+  ],
+  "fresh_process_evidence": "process-pair-verification.json",
+  "operation_verification": "parent-operation-verification.json"
+}

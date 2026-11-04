@@ -1,0 +1,78 @@
+{
+  "captures": [
+    {
+      "path": "legend-height-rea-ticks.json",
+      "sha256": "09aed3ab04abe3adec38eeb01c0adfa3d4e5c62539364a9738211ca47427bb34",
+      "evidence_id": "ev_0b7c7bed2650d614d9f946baac17ff0849d851b9197b4c337a73a6ce65dc4a95",
+      "instructions": 98,
+      "limitations": [
+        "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+        "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+        "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+        "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+        "This fast path reads only the requested function and does not invoke the decompiler or whole-program string/name inventories.",
+        "Instruction text is Ghidra-specific and does not claim textual equivalence with Hopper output.",
+        "Windows Ghidra P0 accepts native x86 and x86-64 PE applications and DLLs, and explicitly selected raw 6502 images; managed, hostile, sensitive, and mutable-path targets are unsupported.",
+        "The Windows bridge uses authenticated IPv4 loopback because Node path-based IPC does not expose Java AF_UNIX sockets; the endpoint file contains no bearer token.",
+        "Windows sessions require the matching packaged Windows x64 native addon, local NTFS targets and runtimes, and Windows 10 or later. Native handles enforce path admission, private DACLs, and Job Object ownership automatically.",
+        "The target references PDB DgxPost.pdb (GUID 2941ff25-ef79-4283-927f-343a2930ad26, age (hex) 1, signature unknown, version RSDS); Ghidra reports load state unknown. Original names and types may be missing; an empty name search does not prove a procedure is absent. Use list_procedures and address-based analysis to inspect recovered functions. REA does not admit a caller-selected PDB companion."
+      ]
+    },
+    {
+      "path": "legend-height-rea-title.json",
+      "sha256": "0cd287ae266c6ff7ea0c86d97020a6ccbfc9c2c7ba9310e7bfaadfba5f53c7ed",
+      "evidence_id": "ev_69cf2023e0eb860674f54795ae1c64196d9f7c9cb075f33255278b959260643b",
+      "instructions": 25,
+      "limitations": [
+        "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+        "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+        "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+        "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+        "This fast path reads only the requested function and does not invoke the decompiler or whole-program string/name inventories.",
+        "Instruction text is Ghidra-specific and does not claim textual equivalence with Hopper output.",
+        "Windows Ghidra P0 accepts native x86 and x86-64 PE applications and DLLs, and explicitly selected raw 6502 images; managed, hostile, sensitive, and mutable-path targets are unsupported.",
+        "The Windows bridge uses authenticated IPv4 loopback because Node path-based IPC does not expose Java AF_UNIX sockets; the endpoint file contains no bearer token.",
+        "Windows sessions require the matching packaged Windows x64 native addon, local NTFS targets and runtimes, and Windows 10 or later. Native handles enforce path admission, private DACLs, and Job Object ownership automatically.",
+        "The target references PDB DgxPost.pdb (GUID 2941ff25-ef79-4283-927f-343a2930ad26, age (hex) 1, signature unknown, version RSDS); Ghidra reports load state unknown. Original names and types may be missing; an empty name search does not prove a procedure is absent. Use list_procedures and address-based analysis to inspect recovered functions. REA does not admit a caller-selected PDB companion."
+      ]
+    },
+    {
+      "path": "legend-height-rea-total.json",
+      "sha256": "67e375a045eaddb83b0a1f5b0237379ea32c295ed65c21362a353c8510a71351",
+      "evidence_id": "ev_e2f8c692a0257bd24e790975bf394fe0da0a07b7018052a1cc467de269a9e999",
+      "instructions": 23,
+      "limitations": [
+        "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+        "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+        "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+        "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+        "This fast path reads only the requested function and does not invoke the decompiler or whole-program string/name inventories.",
+        "Instruction text is Ghidra-specific and does not claim textual equivalence with Hopper output.",
+        "Windows Ghidra P0 accepts native x86 and x86-64 PE applications and DLLs, and explicitly selected raw 6502 images; managed, hostile, sensitive, and mutable-path targets are unsupported.",
+        "The Windows bridge uses authenticated IPv4 loopback because Node path-based IPC does not expose Java AF_UNIX sockets; the endpoint file contains no bearer token.",
+        "Windows sessions require the matching packaged Windows x64 native addon, local NTFS targets and runtimes, and Windows 10 or later. Native handles enforce path admission, private DACLs, and Job Object ownership automatically.",
+        "The target references PDB DgxPost.pdb (GUID 2941ff25-ef79-4283-927f-343a2930ad26, age (hex) 1, signature unknown, version RSDS); Ghidra reports load state unknown. Original names and types may be missing; an empty name search does not prove a procedure is absent. Use list_procedures and address-based analysis to inspect recovered functions. REA does not admit a caller-selected PDB companion."
+      ]
+    },
+    {
+      "path": "legend-height-rea-cell.json",
+      "sha256": "44dd262ff72a156d85084dc76f374a4330892f4339a816b69057c2136005f068",
+      "evidence_id": "ev_7b53ae78e54f0331eeec5959275747f0b66baaa427aec4d0a8bd54fabedb1be9",
+      "instructions": 6,
+      "limitations": [
+        "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+        "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+        "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+        "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+        "This fast path reads only the requested function and does not invoke the decompiler or whole-program string/name inventories.",
+        "Instruction text is Ghidra-specific and does not claim textual equivalence with Hopper output.",
+        "Windows Ghidra P0 accepts native x86 and x86-64 PE applications and DLLs, and explicitly selected raw 6502 images; managed, hostile, sensitive, and mutable-path targets are unsupported.",
+        "The Windows bridge uses authenticated IPv4 loopback because Node path-based IPC does not expose Java AF_UNIX sockets; the endpoint file contains no bearer token.",
+        "Windows sessions require the matching packaged Windows x64 native addon, local NTFS targets and runtimes, and Windows 10 or later. Native handles enforce path admission, private DACLs, and Job Object ownership automatically.",
+        "The target references PDB DgxPost.pdb (GUID 2941ff25-ef79-4283-927f-343a2930ad26, age (hex) 1, signature unknown, version RSDS); Ghidra reports load state unknown. Original names and types may be missing; an empty name search does not prove a procedure is absent. Use list_procedures and address-based analysis to inspect recovered functions. REA does not admit a caller-selected PDB companion."
+      ]
+    }
+  ],
+  "independent_instruction_count": 152,
+  "target_executed": false
+}

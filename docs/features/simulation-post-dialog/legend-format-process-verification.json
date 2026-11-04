@@ -1,0 +1,25 @@
+{
+  "issue": 166,
+  "result": "passed",
+  "independent_operation_cases": 79488,
+  "owned_complete_contexts": 425,
+  "native_complete_contexts": 276,
+  "local_requests": 84395,
+  "expected_bytes": 4388540,
+  "expected_sha256": "61cebebece4361a79ae6b3cdb99010816ff329061742faec1f183a828326ec6c",
+  "processes": [
+    {
+      "process": 1,
+      "exit_code": 0,
+      "bytes": 4388540,
+      "sha256": "61cebebece4361a79ae6b3cdb99010816ff329061742faec1f183a828326ec6c"
+    },
+    {
+      "process": 2,
+      "exit_code": 0,
+      "bytes": 4388540,
+      "sha256": "61cebebece4361a79ae6b3cdb99010816ff329061742faec1f183a828326ec6c"
+    }
+  ],
+  "native_target_executed": false
+}

@@ -1,0 +1,20 @@
+{
+  "issue": 166,
+  "scope": "Extract the unchanged ordered optional signed-word reader for format and palette callers",
+  "behavior_changed": false,
+  "rust": {
+    "checks": 5,
+    "failed": 0,
+    "ignored": 2,
+    "seconds": 0.23,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-palette-word-reader-refactor-rust.log",
+      "bytes": 1063,
+      "sha256": "45ec7220b560d8556b82668b6ad3167cdfed17412a37c53a4a6e8cb98b4b70ee"
+    }
+  },
+  "excluded": [
+    "Existing native format checks remained explicitly ignored during the concurrent full Source rewrite"
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "issue": 166,
+  "behavior_version": "C889-triangle-color-local-plan-v1",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "target_executed": false,
+  "kernel_decision": "Preserve both stored caller variants and lazy external-result dependencies. Compose exact caller admission with the separate40C/410 signed group table, class then lookup then positive-count filters, both RGB origins and opaque payload forwarding. Implement MINSS against constant1 under explicit masked exceptions with DAZ/FTZ off. Return typed failures before any successful publication.",
+  "operation_cases": 25436,
+  "owned_complete_contexts": 425,
+  "owned_present": 405,
+  "owned_missing": 20,
+  "native_complete_contexts": 276,
+  "additional_stored_byte_credit": 0,
+  "rust": {
+    "checks": 7,
+    "failed": 0,
+    "ignored": 0,
+    "seconds": 0.23,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/triangle-color-rust-publication.log",
+      "bytes": 942,
+      "sha256": "43bb7bf7dac085f7f500b152ce64ea8ddb0f160325345ee63c62f3d2e73d9ede"
+    }
+  },
+  "allocation_regression": {
+    "checks": 1,
+    "failed": 0,
+    "seconds": 0,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/triangle-color-allocation-test.log",
+      "bytes": 485,
+      "sha256": "9bf70f72be14edd1429abeda1060389052bc9ca0d37805c05afed9c9aa6f9ec7"
+    }
+  },
+  "clippy": {
+    "scope": "all-targets all-features -D warnings",
+    "result": "passed",
+    "seconds": 2.49,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/triangle-color-clippy-publication.log",
+      "bytes": 135,
+      "sha256": "7823c9e3bc710d1453c89af6dc2d8e8886cc74cb65ac4031022b7424425360a9"
+    }
+  },
+  "targeted_source": {
+    "checks": 13,
+    "seconds": 8.346,
+    "process_exit_code": 0,
+    "result": "passed",
+    "log": {
+      "path": "target/triangle-color-operation-source-strict.log",
+      "bytes": 2419,
+      "sha256": "20e14d4716a8e3b3cd86c906fe147d7dcfd4756ef8ee52b24c0f1684c61e2529"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/triangle-selector-source-snapshot.json",
+      "bytes": 591694,
+      "sha256": "a710af8e0471f4cc86307c6dc8153accb4802701aa0b8e08446de20f16fe4059"
+    }
+  },
+  "native_bindings": "triangle-selector-installed-reference.json",
+  "independent_decoder": "triangle-selector-rea-reference.json",
+  "process_proof": "triangle-color-process-verification.json",
+  "concurrency_workers": 8,
+  "concurrency_scope": "All25436 independent operation cases compared byte for byte with serial output; all11 public plan/control/runtime types assert Send and Sync",
+  "oracle_kinds": [
+    "Complete installed caller/helper bodies, exact imports, named accessor, constant and concrete vtable slots",
+    "Independent Ghidra captures of all305 instruction locations and constant bytes",
+    "Original276 native selector/color identities, raw offsets and full RGBA from complete supplied archives",
+    "All425 owned version contexts including20 missing historical groups, complete EOF and unchanged archive bytes",
+    "Independent native-offset/stride group traversal and Intel MINSS ordered-comparison oracle covering1547 alpha patterns",
+    "Caller dependency order, signed/high-bit counts, resource limits and missing lookup after an earlier admitted request",
+    "Allthree RGB origins retain owned provenance after source group, payload, color, runtime and caller-control mutation",
+    "Eight workers and two fresh processes match independent expected request patterns"
+  ],
+  "excluded": [
+    "Native renderer execution, OpenGL and virtual state effects",
+    "Payload dereferencing or topology/geometry validation",
+    "Other hidden/model caller branches and complete scene traversal",
+    "Unmasked exceptions, DAZ/FTZ-enabled behavior or native MXCSR flag observations",
+    "Guessed runtime values or initialization for missing historical fields"
+  ],
+  "pending": [
+    "Complete publication-cut PR gate and five exact-head platform/ThreadSanitizer gates",
+    "Remaining named schema models and feature166 integration"
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 172,
+    "seconds": 518.974,
+    "process_exit_code": 0,
+    "result": "passed",
+    "verifier_cut": "319e029038fd119d618c0bef890aad14f70c1773",
+    "log": {
+      "path": "target/triangle-color-operation-source-full.log",
+      "bytes": 42190,
+      "sha256": "2573c4549384c974f4e98a5b5cc7f2a884abb651f5b64880a92db4eebd88b360"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 599046,
+      "sha256": "ba6118b775b2a121105d2909935b503a5df2a3b49ab3a1fe5886ba2ff3741020"
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "issue": 166,
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "scope": "C905 legend100 initialization and C907 eight conditional preference-color routes",
+  "target_executed": false,
+  "original_binary_written": false,
+  "complete_caller_instruction_counts": [
+    129,
+    65
+  ],
+  "independent_caller_instructions": 194,
+  "provider_constructor_and_copy_instruction_counts": [
+    6,
+    10
+  ],
+  "complete_packed_assignment_bytes": 80,
+  "packed_routes": 8,
+  "raw_alpha_overrides": 5,
+  "preserved_alpha_routes": 3,
+  "legend_call_precedes_guard": true,
+  "local_block_skip": "nonnull style2D0 and pointed signed32 type73; null pointer admits block",
+  "native_contexts": 276,
+  "owned_contexts": 425,
+  "owned_opaque_legacy": 20,
+  "native_legend_count": 109,
+  "native_legend_blue": 101,
+  "native_legend_white": 8,
+  "initializer_is_wire_default": false,
+  "additional_stored_byte_credit": 0,
+  "targeted_source": {
+    "checks": 18,
+    "seconds": 5.785,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/preference-color-source-strict.log",
+      "bytes": 2825,
+      "sha256": "e7cda468e422e965dc6031ccee81039a669382ee4eb24ebb4f7736608db2992f"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/preference-color-source-snapshot.json",
+      "bytes": 625579,
+      "sha256": "a72710150965dcb07430ec23bb6f760830238004e625a5b535eeac8f66b6ab9d"
+    }
+  },
+  "installed_proof": "preference-color-installed-reference.json",
+  "independent_decoder": "preference-color-rea-reference.json",
+  "route_proof": "preference-color-route-reference.json",
+  "source_pins": "preference-color-source-pins.json",
+  "oracle_kinds": [
+    "Every original source dependency matched exactly with no transitions",
+    "Complete129/65 instruction and byte comparisons, exact literal/argument/import chains",
+    "Independent194 Ghidra caller locations and complete contiguous body extents",
+    "Exact named provider constructor/copy leaves and packed-assignment body plus raw scale",
+    "All109 original legend identities and complete raw values, preserving stream multiplicity",
+    "Complete425 owned and276 native bodies and route-specific presence without defaults",
+    "Allthree original preference-model tests and original catalog/style/color obligations"
+  ],
+  "excluded": [
+    "Native target execution, actual preference bytes, actual context or invocation",
+    "Treating initialized blue as a wire restriction or global color purpose",
+    "Treating local style skipping as skipping the earlier legend call",
+    "A complete preference setter or undocumented display names",
+    "Unmasked or non-nearest-even native floating environment claims"
+  ],
+  "pending": [
+    "Remaining feature166 schemas and exact publication-cut PR/platform gates"
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 212,
+    "seconds": 434.935,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "8d5f3c5de7c2600835f722e0b2e81f21a58d9c96",
+    "log": {
+      "path": "target/preference-color-source-full.log",
+      "bytes": 49624,
+      "sha256": "bddd9d579124ac62d92b68f1d027f7fa409d96c0fb290bd51f099118c9536b51"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 632134,
+      "sha256": "be362983346560f5f0635572d246aad5bb5cd6246b7bfc3f9499225b413a2200"
+    }
+  },
+  "current_operation_proof": "preference-color-operation-verification.json"
+}

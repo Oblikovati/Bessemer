@@ -1,0 +1,94 @@
+{
+  "issue": 166,
+  "behavior_version": "CDspLegend-C871-masked-exceptions-daz-off-v1",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "kernel_decision": "Preserve explicit optional raw words; follow the named ordered short-circuit dependencies and conditional color predicates, with typed missing-input and count-domain errors.",
+  "model_environment": "masked_exceptions_daz_off",
+  "target_executed": false,
+  "owned_pairs": 8253,
+  "native_pairs": 7085,
+  "original_native_states": 109,
+  "native_matched_nonzero_a8_states": 17,
+  "owned_complete_styles": 200,
+  "native_complete_styles": 52,
+  "additional_stored_byte_credit": 0,
+  "rust": {
+    "checks": 10,
+    "failed": 0,
+    "ignored": 0,
+    "log": {
+      "path": "target/legend-comparison-rust.log",
+      "bytes": 1110,
+      "sha256": "31d512cf8b2431d63d0ad2c369249eac70555863502c6be202118669340ac38f"
+    },
+    "final_lint_clean_code": true
+  },
+  "clippy": {
+    "path": "target/legend-comparison-clippy.log",
+    "bytes": 136,
+    "sha256": "5a5df54cf86d16ce68e5b80780085ff73ac7ab4d47eefa6fde473947f19e9a87"
+  },
+  "source_initialization": {
+    "checks": 12,
+    "seconds": 9.435,
+    "log": {
+      "path": "target/legend-comparison-source-write.log",
+      "bytes": 2227,
+      "sha256": "90b7f2b7155c8c17f6ab3faa01d7fd04bfb9f29a3c67bb223839beeb3bd13fb6"
+    }
+  },
+  "source_strict": {
+    "checks": 12,
+    "seconds": 8.14,
+    "log": {
+      "path": "target/legend-comparison-source-strict.log",
+      "bytes": 2227,
+      "sha256": "8e44a9b0ce36af9ebb5dfe7785ab749721ab894fedede1f7509f0c8acaed712a"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/legend-comparison-source-snapshot.json",
+      "bytes": 528514,
+      "sha256": "09a16df5fabac86ccd9a7ce65ccc792f759ebac202f26d94b7876dc9d1ba10f9"
+    }
+  },
+  "packet_references": [
+    "legend-comparison-packets-reference.json",
+    "legend-style-projection-reference.json"
+  ],
+  "concurrency_workers": 8,
+  "process_proof": "legend-comparison-process-verification.json",
+  "oracle_kinds": [
+    "Pinned independent Source helper",
+    "Original 109-state C-871 identity census",
+    "Installed full method, export, imported color inequality and decompilation pins",
+    "Independent per-field and per-channel mutations",
+    "Complete stored-state projection and missing-state invariants",
+    "Eight-worker and fresh-process replay"
+  ],
+  "excluded": [
+    "Observed native floating-point environment and operator execution",
+    "Initialization or migration defaults for missing old-version state",
+    "Final rendering or UI equivalence"
+  ],
+  "pending": [
+    "Publication gates including latest-tree PR gate and cross-platform ThreadSanitizer",
+    "Remaining legend and PostStyle consumer policies"
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 90,
+    "seconds": 333.975,
+    "result": "passed",
+    "log": {
+      "path": "target/legend-comparison-source-full.log",
+      "bytes": 27834,
+      "sha256": "ab9adc50fbc0ae51341ef46b46cd0987370bfa8a89d3ed20eac03a51dc9da1f0"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 538146,
+      "sha256": "5761435428e49da10d1073231614ab62c2503ee5a939b9e5eb8dcd483c5c72c7"
+    }
+  }
+}

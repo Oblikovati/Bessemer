@@ -1,0 +1,136 @@
+{
+  "issue": 166,
+  "behavior_version": "C853-local-gate-rgb-v1",
+  "platform": "Windows x64",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "target_executed": false,
+  "kernel_decision": "Keep optional stored E8/EC views separate from actual read-time plot524, E8 and EC facts. Require plot524 first; zero completes inactive without later dependencies. Nonzero plot requires E8; zero E8 likewise completes inactive. Only an active gate requires the explicit later EC value, copying exactly its first three words without float conversion. Retain all supplied parents and unused alpha in immutable derived history, exact reached-read coverage, completion and zero local pattern error. Do not infer unchanged helper state or pointer/geometry/rendering validity.",
+  "complete_installed_instruction_count": 1638,
+  "independent_ghidra_instruction_count": 1638,
+  "exact_decoder_qualifications": 0,
+  "public_send_sync_types": 7,
+  "operation_cases": 7232,
+  "owned_complete_contexts": 425,
+  "complete_flag_color_mutants": 184,
+  "native_accepted_contexts": 276,
+  "original_rejected_contexts": 8,
+  "hypothetical_contexts_per_parent": 8,
+  "additional_stored_byte_credit": 0,
+  "rust_owned": {
+    "passed": 9,
+    "failed": 0,
+    "ignored": 2,
+    "seconds": 0.23,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-end-cell-rust-owned.log",
+      "bytes": 1356,
+      "sha256": "826be50419392888e69d515283115699e6fb9d85b8144b6afa26c30b7a834fde"
+    }
+  },
+  "rust_native": {
+    "passed": 1,
+    "failed": 0,
+    "ignored": 0,
+    "seconds": 0.17,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-end-cell-rust-native.log",
+      "bytes": 409,
+      "sha256": "f1904d5f3d78c823c7cfa594b0d87c7d175d918c3a36a6e2b2762707cf03bd18"
+    }
+  },
+  "clippy": {
+    "arguments": "--all-targets --all-features -- -D warnings",
+    "seconds": 38.02,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-end-cell-clippy.log",
+      "bytes": 136,
+      "sha256": "7a8c31948123506cb9a509ad3bc19b3a91bbe4fb33aca6213d5e6f65c283b94e"
+    }
+  },
+  "initial_freeze": {
+    "checks": 18,
+    "seconds": 6.374,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-end-cell-operation-source-initial.log",
+      "bytes": 2913,
+      "sha256": "7fb00b2d7b5ae8857d841b1febc20c3e923f36d339d4b53ba402446f5d074630"
+    }
+  },
+  "strict_source": {
+    "checks": 18,
+    "seconds": 7.508,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-end-cell-operation-source-strict.log",
+      "bytes": 2913,
+      "sha256": "d5a4082b00ef0de986dab7c7fcaa5acfbf422b87634c4cd48551a4a7911b0a9d"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/legend-end-cell-source-snapshot.json",
+      "bytes": 625089,
+      "sha256": "228e492db06dcd81918d30006fa2833a913e675f0aad200b97a7bc2e1f1d5c5e"
+    }
+  },
+  "operation_packet": {
+    "path": "tests/fixtures/simulation-post-dialog/legend-end-cell-operations.bin",
+    "bytes": 376072,
+    "sha256": "c1dab2f6884ce2684632a1eb01559d7384faa7463d053213b7638aaa51594842"
+  },
+  "owned_projection_packet": {
+    "path": "tests/fixtures/simulation-post-dialog/legend-end-cell-projection.bin",
+    "bytes": 1790623,
+    "sha256": "9ddd86306d2c8b09144deb0de815bd7ac60737e3c1c8711bd95130ab952c5173"
+  },
+  "process_proof": {
+    "path": "docs/features/simulation-post-dialog/legend-end-cell-process-verification.json",
+    "bytes": 978,
+    "sha256": "c48603f4203170da93d4a092cd2b101f452e9ffc1796a9be94bd0a7aedb2f845"
+  },
+  "oracle_kinds": [
+    "Original complete Source/native/field evidence with all acceptance qualifications",
+    "Complete GNU/Ghidra bodies and exact ordered gate/RGB load/store anchors in both branches",
+    "Independent short-circuit truth table and first-three-word raw identity over every presence combination",
+    "Signed boundaries, generated raw patterns, NaNs, infinities, signed zero and unused alpha variations",
+    "All complete owned/native parents,184 complete mutations and eight explicit hypothetical phase contexts",
+    "Seven public Send+Sync types, copied input isolation and eight-worker comparisons",
+    "Two fresh Rust processes matched all91182 independently expected words byte for byte"
+  ],
+  "excluded": [
+    "Native target execution, pointer validity, actual helpers and rendering",
+    "Independent geometry or floating coordinate projection, full UI activation and color100 identity",
+    "Stored-to-runtime initialization, unchanged post-helper fields, allowed colors or alpha compositing",
+    "New stored-byte credit or broader native acceptance"
+  ],
+  "pending": [
+    "Remaining feature166 models",
+    "Exact publication-head cargo xtask pr and all five platform gates including ThreadSanitizer"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_source_replay": {
+    "checks": 285,
+    "failed": 0,
+    "seconds": 536.873,
+    "process_exit_code": 0,
+    "accepted_source_cut": "95a45b3fced814f436da303a463c6cbd2c08d050",
+    "log": {
+      "path": "target/legend-end-cell-operation-source-full.log",
+      "bytes": 63087,
+      "sha256": "42413949935967f736e8d046f78d9326a90044df711114b4bee28a167b03bce2"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 633446,
+      "sha256": "ffcbf8608a2963b8c47fdd63f3b3a238195208dfce68fb64db9b717021876896"
+    },
+    "terminal_exit_reaped": true
+  }
+}

@@ -1,0 +1,3321 @@
+{
+  "evidence": "C-859",
+  "scope": "PostStyle span labels only; not all installed formats",
+  "catalog": [
+    {
+      "label": "style.legacy_raw",
+      "wire_type": "raw",
+      "purpose": null,
+      "purpose_status": "unresolved",
+      "evidence": [],
+      "present_at_probed_versions": [
+        700005
+      ],
+      "native_occurrences": 0
+    },
+    {
+      "label": "style.word_238",
+      "wire_type": "int32_le",
+      "purpose": "maximum_annotation_enabled_raw",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-887"
+      ],
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.word_234",
+      "wire_type": "int32_le",
+      "purpose": "minimum_annotation_enabled_raw",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-887"
+      ],
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.word_21c",
+      "wire_type": "int32_le",
+      "purpose": "model_tess_request_override_raw",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-873"
+      ],
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.word_240",
+      "wire_type": "int32_le",
+      "purpose": "runtime_seven_line_text_display_enabled_raw",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-890"
+      ],
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.word_23c",
+      "wire_type": "int32_le",
+      "purpose": "stored_primary_text_display_enabled_raw",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-890"
+      ],
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.color_1f4.component_0",
+      "wire_type": "binary32_le",
+      "purpose": "hidden_parts_triangle_color.red",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-889"
+      ],
+      "channel": "red",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.color_1f4.component_1",
+      "wire_type": "binary32_le",
+      "purpose": "hidden_parts_triangle_color.green",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-889"
+      ],
+      "channel": "green",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.color_1f4.component_2",
+      "wire_type": "binary32_le",
+      "purpose": "hidden_parts_triangle_color.blue",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-889"
+      ],
+      "channel": "blue",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.color_1f4.component_3",
+      "wire_type": "binary32_le",
+      "purpose": "hidden_parts_translucent_alpha",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-845"
+      ],
+      "channel": "alpha",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.color_1bc.component_0",
+      "wire_type": "binary32_le",
+      "purpose": "element_segment_primitive_color.red",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-892"
+      ],
+      "channel": "red",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.color_1bc.component_1",
+      "wire_type": "binary32_le",
+      "purpose": "element_segment_primitive_color.green",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-892"
+      ],
+      "channel": "green",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.color_1bc.component_2",
+      "wire_type": "binary32_le",
+      "purpose": "element_segment_primitive_color.blue",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-892"
+      ],
+      "channel": "blue",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.color_1bc.component_3",
+      "wire_type": "binary32_le",
+      "purpose": null,
+      "purpose_status": "unresolved",
+      "evidence": [
+        "C-844"
+      ],
+      "channel": "alpha",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.color_220.component_0",
+      "wire_type": "binary32_le",
+      "purpose": "model_tess_triangle_color.red",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-889"
+      ],
+      "channel": "red",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.color_220.component_1",
+      "wire_type": "binary32_le",
+      "purpose": "model_tess_triangle_color.green",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-889"
+      ],
+      "channel": "green",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.color_220.component_2",
+      "wire_type": "binary32_le",
+      "purpose": "model_tess_triangle_color.blue",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-889"
+      ],
+      "channel": "blue",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.color_220.component_3",
+      "wire_type": "binary32_le",
+      "purpose": "model_tess_translucent_alpha",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-845"
+      ],
+      "channel": "alpha",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.color_1dc.component_0",
+      "wire_type": "binary32_le",
+      "purpose": "mode3_geometry_rgb_candidate.red",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-893"
+      ],
+      "channel": "red",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.color_1dc.component_1",
+      "wire_type": "binary32_le",
+      "purpose": "mode3_geometry_rgb_candidate.green",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-893"
+      ],
+      "channel": "green",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.color_1dc.component_2",
+      "wire_type": "binary32_le",
+      "purpose": "mode3_geometry_rgb_candidate.blue",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-893"
+      ],
+      "channel": "blue",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.color_1dc.component_3",
+      "wire_type": "binary32_le",
+      "purpose": "translucent_model_alpha",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-845"
+      ],
+      "channel": "alpha",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.word_1b8",
+      "wire_type": "int32_le",
+      "purpose": "offset_request_mode_raw",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-876"
+      ],
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.word_1f0",
+      "wire_type": "int32_le",
+      "purpose": "hidden_parts_triangle_color_selector_raw",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-889"
+      ],
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.word_230",
+      "wire_type": "int32_le",
+      "purpose": "model_tess_triangle_group_color_selector_raw",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-889"
+      ],
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.word_a8",
+      "wire_type": "int32_le",
+      "purpose": "layer0_render_suppression_raw",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-872"
+      ],
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.word_c",
+      "wire_type": "int32_le",
+      "purpose": "reverse_base_palette_raw",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-848"
+      ],
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_18.component_0",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_0.red",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "red",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_18.component_1",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_0.green",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "green",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_18.component_2",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_0.blue",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "blue",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_18.component_3",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_0.alpha",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "alpha",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_28.component_0",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_1.red",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "red",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_28.component_1",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_1.green",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "green",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_28.component_2",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_1.blue",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "blue",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_28.component_3",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_1.alpha",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "alpha",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_38.component_0",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_2.red",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "red",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_38.component_1",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_2.green",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "green",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_38.component_2",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_2.blue",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "blue",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_38.component_3",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_2.alpha",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "alpha",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_48.component_0",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_3.red",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "red",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_48.component_1",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_3.green",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "green",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_48.component_2",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_3.blue",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "blue",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_48.component_3",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_3.alpha",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "alpha",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_58.component_0",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_4.red",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "red",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_58.component_1",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_4.green",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "green",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_58.component_2",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_4.blue",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "blue",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_58.component_3",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_4.alpha",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "alpha",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_68.component_0",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_5.red",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "red",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_68.component_1",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_5.green",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "green",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_68.component_2",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_5.blue",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "blue",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_68.component_3",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_5.alpha",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "alpha",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_78.component_0",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_6.red",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "red",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_78.component_1",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_6.green",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "green",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_78.component_2",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_6.blue",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "blue",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_78.component_3",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_6.alpha",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "alpha",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_88.component_0",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_7.red",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "red",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_88.component_1",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_7.green",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "green",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_88.component_2",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_7.blue",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "blue",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_88.component_3",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_7.alpha",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "alpha",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_98.component_0",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_8.red",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "red",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_98.component_1",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_8.green",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "green",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_98.component_2",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_8.blue",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "blue",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.color_98.component_3",
+      "wire_type": "binary32_le",
+      "purpose": "base_palette_slot_8.alpha",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-848"
+      ],
+      "channel": "alpha",
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.word_ac",
+      "wire_type": "binary32_le",
+      "purpose": "horizontal_position_factor",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-847"
+      ],
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.word_b0",
+      "wire_type": "binary32_le",
+      "purpose": "vertical_position_factor",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-847"
+      ],
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.word_10",
+      "wire_type": "int32_le",
+      "purpose": "base_palette_color_count",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-848"
+      ],
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.word_14",
+      "wire_type": "int32_le",
+      "purpose": "legend_height_cell_count",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-849"
+      ],
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.word_b8",
+      "wire_type": "int32_le",
+      "purpose": "number_format_mode",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-846"
+      ],
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.word_bc",
+      "wire_type": "int32_le",
+      "purpose": "number_format_precision",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-846"
+      ],
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.word_b4",
+      "wire_type": "int32_le",
+      "purpose": "edrawings_legend_width_selector_raw",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-854"
+      ],
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "legend.word_8",
+      "wire_type": "int32_le",
+      "purpose": "color_mapping_mode_raw",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-848"
+      ],
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.character_count",
+      "wire_type": "int32_le",
+      "purpose": "counted_utf16_code_units",
+      "purpose_status": "framing_role",
+      "evidence": [
+        "C-855"
+      ],
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.utf16",
+      "wire_type": "utf16le_code_units",
+      "purpose": "stored_primary_display_text_code_units",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-855",
+        "C-890"
+      ],
+      "present_at_probed_versions": [
+        700006,
+        700329,
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 276
+    },
+    {
+      "label": "style.word_28c",
+      "wire_type": "int32_le",
+      "purpose": "vector_size_raw",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-886"
+      ],
+      "present_at_probed_versions": [
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 224
+    },
+    {
+      "label": "style.word_290",
+      "wire_type": "int32_le",
+      "purpose": "vector_density_first_raw",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-886"
+      ],
+      "present_at_probed_versions": [
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 224
+    },
+    {
+      "label": "style.word_294",
+      "wire_type": "int32_le",
+      "purpose": "vector_density_second_raw",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-886"
+      ],
+      "present_at_probed_versions": [
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 224
+    },
+    {
+      "label": "style.word_298",
+      "wire_type": "int32_le",
+      "purpose": "vector_color_selector_raw",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-886"
+      ],
+      "present_at_probed_versions": [
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 224
+    },
+    {
+      "label": "style.color_29c.component_0",
+      "wire_type": "binary32_le",
+      "purpose": "vector_color.red",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-886"
+      ],
+      "channel": "red",
+      "present_at_probed_versions": [
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 224
+    },
+    {
+      "label": "style.color_29c.component_1",
+      "wire_type": "binary32_le",
+      "purpose": "vector_color.green",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-886"
+      ],
+      "channel": "green",
+      "present_at_probed_versions": [
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 224
+    },
+    {
+      "label": "style.color_29c.component_2",
+      "wire_type": "binary32_le",
+      "purpose": "vector_color.blue",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-886"
+      ],
+      "channel": "blue",
+      "present_at_probed_versions": [
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 224
+    },
+    {
+      "label": "style.color_29c.component_3",
+      "wire_type": "binary32_le",
+      "purpose": "vector_color.alpha",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-886"
+      ],
+      "channel": "alpha",
+      "present_at_probed_versions": [
+        700330,
+        810008,
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 224
+    },
+    {
+      "label": "legend.word_d4",
+      "wire_type": "int32_le",
+      "purpose": "show_gray_above_yield_enabled_raw",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-848"
+      ],
+      "present_at_probed_versions": [
+        810009,
+        810018,
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 212
+    },
+    {
+      "label": "legend.color_d8.component_0",
+      "wire_type": "binary32_le",
+      "purpose": "gray_above_yield_base_color.red",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-850"
+      ],
+      "channel": "red",
+      "present_at_probed_versions": [
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 212
+    },
+    {
+      "label": "legend.color_d8.component_1",
+      "wire_type": "binary32_le",
+      "purpose": "gray_above_yield_base_color.green",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-850"
+      ],
+      "channel": "green",
+      "present_at_probed_versions": [
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 212
+    },
+    {
+      "label": "legend.color_d8.component_2",
+      "wire_type": "binary32_le",
+      "purpose": "gray_above_yield_base_color.blue",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-850"
+      ],
+      "channel": "blue",
+      "present_at_probed_versions": [
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 212
+    },
+    {
+      "label": "legend.color_d8.component_3",
+      "wire_type": "binary32_le",
+      "purpose": "gray_above_yield_base_color.alpha",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-850"
+      ],
+      "channel": "alpha",
+      "present_at_probed_versions": [
+        810019,
+        820005,
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 212
+    },
+    {
+      "label": "style.color_2ac.component_0",
+      "wire_type": "binary32_le",
+      "purpose": "plot54_callback_render_color.red",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-891"
+      ],
+      "channel": "red",
+      "present_at_probed_versions": [
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 208
+    },
+    {
+      "label": "style.color_2ac.component_1",
+      "wire_type": "binary32_le",
+      "purpose": "plot54_callback_render_color.green",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-891"
+      ],
+      "channel": "green",
+      "present_at_probed_versions": [
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 208
+    },
+    {
+      "label": "style.color_2ac.component_2",
+      "wire_type": "binary32_le",
+      "purpose": "plot54_callback_render_color.blue",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-891"
+      ],
+      "channel": "blue",
+      "present_at_probed_versions": [
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 208
+    },
+    {
+      "label": "style.color_2ac.component_3",
+      "wire_type": "binary32_le",
+      "purpose": "plot54_callback_render_color.alpha",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-891"
+      ],
+      "channel": "alpha",
+      "present_at_probed_versions": [
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 208
+    },
+    {
+      "label": "style.color_2bc.component_0",
+      "wire_type": "binary32_le",
+      "purpose": null,
+      "purpose_status": "unresolved",
+      "evidence": [
+        "C-844"
+      ],
+      "channel": "red",
+      "present_at_probed_versions": [
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 208
+    },
+    {
+      "label": "style.color_2bc.component_1",
+      "wire_type": "binary32_le",
+      "purpose": null,
+      "purpose_status": "unresolved",
+      "evidence": [
+        "C-844"
+      ],
+      "channel": "green",
+      "present_at_probed_versions": [
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 208
+    },
+    {
+      "label": "style.color_2bc.component_2",
+      "wire_type": "binary32_le",
+      "purpose": null,
+      "purpose_status": "unresolved",
+      "evidence": [
+        "C-844"
+      ],
+      "channel": "blue",
+      "present_at_probed_versions": [
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 208
+    },
+    {
+      "label": "style.color_2bc.component_3",
+      "wire_type": "binary32_le",
+      "purpose": null,
+      "purpose_status": "unresolved",
+      "evidence": [
+        "C-844"
+      ],
+      "channel": "alpha",
+      "present_at_probed_versions": [
+        820006,
+        840007,
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 208
+    },
+    {
+      "label": "legend.word_c0",
+      "wire_type": "int32_le",
+      "purpose": "locale_thousands_grouping_enabled_raw",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-858"
+      ],
+      "present_at_probed_versions": [
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 160
+    },
+    {
+      "label": "style.word_1ec",
+      "wire_type": "int32_le",
+      "purpose": "hidden_parts_option_raw_integer",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-845"
+      ],
+      "present_at_probed_versions": [
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 160
+    },
+    {
+      "label": "style.word_204",
+      "wire_type": "int32_le",
+      "purpose": "auxiliary_triangle_pass_enabled_raw",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-888"
+      ],
+      "present_at_probed_versions": [
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 160
+    },
+    {
+      "label": "style.word_208",
+      "wire_type": "int32_le",
+      "purpose": "auxiliary_triangle_group_color_selector_raw",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-888"
+      ],
+      "present_at_probed_versions": [
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 160
+    },
+    {
+      "label": "style.color_20c.component_0",
+      "wire_type": "binary32_le",
+      "purpose": "auxiliary_triangle_pass_color.red",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-888"
+      ],
+      "channel": "red",
+      "present_at_probed_versions": [
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 160
+    },
+    {
+      "label": "style.color_20c.component_1",
+      "wire_type": "binary32_le",
+      "purpose": "auxiliary_triangle_pass_color.green",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-888"
+      ],
+      "channel": "green",
+      "present_at_probed_versions": [
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 160
+    },
+    {
+      "label": "style.color_20c.component_2",
+      "wire_type": "binary32_le",
+      "purpose": "auxiliary_triangle_pass_color.blue",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-888"
+      ],
+      "channel": "blue",
+      "present_at_probed_versions": [
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 160
+    },
+    {
+      "label": "style.color_20c.component_3",
+      "wire_type": "binary32_le",
+      "purpose": "auxiliary_triangle_pass_color.alpha",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-888"
+      ],
+      "channel": "alpha",
+      "present_at_probed_versions": [
+        840008,
+        840009,
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 160
+    },
+    {
+      "label": "legend.word_c4",
+      "wire_type": "int32_le",
+      "purpose": "alternate_number_format_enabled_raw",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-846"
+      ],
+      "present_at_probed_versions": [
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 160
+    },
+    {
+      "label": "legend.word_c8",
+      "wire_type": "int32_le",
+      "purpose": "alternate_number_format_selector_raw",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-846"
+      ],
+      "present_at_probed_versions": [
+        840010,
+        890102,
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 160
+    },
+    {
+      "label": "legend.word_e8",
+      "wire_type": "int32_le",
+      "purpose": "end_cell_extension_enabled_raw",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-853"
+      ],
+      "present_at_probed_versions": [
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 109
+    },
+    {
+      "label": "legend.word_fc",
+      "wire_type": "int32_le",
+      "purpose": "mode_shape_step_layout_switch_raw",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-851"
+      ],
+      "present_at_probed_versions": [
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 109
+    },
+    {
+      "label": "legend.color_ec.component_0",
+      "wire_type": "binary32_le",
+      "purpose": "end_cell_extension_color.red",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-853"
+      ],
+      "channel": "red",
+      "present_at_probed_versions": [
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 109
+    },
+    {
+      "label": "legend.color_ec.component_1",
+      "wire_type": "binary32_le",
+      "purpose": "end_cell_extension_color.green",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-853"
+      ],
+      "channel": "green",
+      "present_at_probed_versions": [
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 109
+    },
+    {
+      "label": "legend.color_ec.component_2",
+      "wire_type": "binary32_le",
+      "purpose": "end_cell_extension_color.blue",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-853"
+      ],
+      "channel": "blue",
+      "present_at_probed_versions": [
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 109
+    },
+    {
+      "label": "legend.color_ec.component_3",
+      "wire_type": "binary32_le",
+      "purpose": "end_cell_extension_color.alpha",
+      "purpose_status": "bound_consumer_role",
+      "evidence": [
+        "C-844",
+        "C-853"
+      ],
+      "channel": "alpha",
+      "present_at_probed_versions": [
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 109
+    },
+    {
+      "label": "legend.color_100.component_0",
+      "wire_type": "binary32_le",
+      "purpose": null,
+      "purpose_status": "unresolved",
+      "evidence": [
+        "C-844"
+      ],
+      "channel": "red",
+      "present_at_probed_versions": [
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 109
+    },
+    {
+      "label": "legend.color_100.component_1",
+      "wire_type": "binary32_le",
+      "purpose": null,
+      "purpose_status": "unresolved",
+      "evidence": [
+        "C-844"
+      ],
+      "channel": "green",
+      "present_at_probed_versions": [
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 109
+    },
+    {
+      "label": "legend.color_100.component_2",
+      "wire_type": "binary32_le",
+      "purpose": null,
+      "purpose_status": "unresolved",
+      "evidence": [
+        "C-844"
+      ],
+      "channel": "blue",
+      "present_at_probed_versions": [
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 109
+    },
+    {
+      "label": "legend.color_100.component_3",
+      "wire_type": "binary32_le",
+      "purpose": null,
+      "purpose_status": "unresolved",
+      "evidence": [
+        "C-844"
+      ],
+      "channel": "alpha",
+      "present_at_probed_versions": [
+        890103,
+        890701,
+        890702
+      ],
+      "native_occurrences": 109
+    },
+    {
+      "label": "style.color_1cc.component_0",
+      "wire_type": "binary32_le",
+      "purpose": null,
+      "purpose_status": "unresolved",
+      "evidence": [
+        "C-844"
+      ],
+      "channel": "red",
+      "present_at_probed_versions": [
+        890702
+      ],
+      "native_occurrences": 18
+    },
+    {
+      "label": "style.color_1cc.component_1",
+      "wire_type": "binary32_le",
+      "purpose": null,
+      "purpose_status": "unresolved",
+      "evidence": [
+        "C-844"
+      ],
+      "channel": "green",
+      "present_at_probed_versions": [
+        890702
+      ],
+      "native_occurrences": 18
+    },
+    {
+      "label": "style.color_1cc.component_2",
+      "wire_type": "binary32_le",
+      "purpose": null,
+      "purpose_status": "unresolved",
+      "evidence": [
+        "C-844"
+      ],
+      "channel": "blue",
+      "present_at_probed_versions": [
+        890702
+      ],
+      "native_occurrences": 18
+    },
+    {
+      "label": "style.color_1cc.component_3",
+      "wire_type": "binary32_le",
+      "purpose": null,
+      "purpose_status": "unresolved",
+      "evidence": [
+        "C-844"
+      ],
+      "channel": "alpha",
+      "present_at_probed_versions": [
+        890702
+      ],
+      "native_occurrences": 18
+    }
+  ],
+  "catalog_status_counts": {
+    "unresolved": 14,
+    "bound_consumer_role": 103,
+    "framing_role": 1
+  },
+  "native_accepted_streams": 276,
+  "native_span_status_counts": {
+    "bound_consumer_role": 25258,
+    "unresolved": 1616,
+    "framing_role": 276
+  },
+  "native_span_bytes_by_status": {
+    "bound_consumer_role": 99928,
+    "unresolved": 6464,
+    "framing_role": 1104
+  },
+  "unresolved_word_labels": [],
+  "provenance": [
+    {
+      "evidence": "C-845",
+      "file": "cosworks-post-style-alpha-fields-native-evidence.json",
+      "sha256": "16d6e806d88f74e0736630e603843d56cac7bc43d97466a997ebf64387aea5d3"
+    },
+    {
+      "evidence": "C-847",
+      "file": "cosworks-legend-position-fields-native-evidence.json",
+      "sha256": "51b7f46bae6335a555d2c7a4cd12a177d2eaf66f346622624cdff7c86cf18484"
+    },
+    {
+      "evidence": "C-846",
+      "file": "cosworks-legend-number-format-native-evidence.json",
+      "sha256": "18130dc75f3acba5c3dfaaa5d4680ac896d2f21983483e5b27a2e5cabd76a7ef"
+    },
+    {
+      "evidence": "C-848",
+      "file": "cosworks-legend-color-policy-fields-native-evidence.json",
+      "sha256": "209d41f62113d1c0d7f76319032d3ba661c453cb85c38fa342cf76afce497f26"
+    },
+    {
+      "evidence": "C-849",
+      "file": "cosworks-legend-height-fields-native-evidence.json",
+      "sha256": "5702835d639dd3de10ccfa1602d9bd71996280abafadd367a640d4a4042bc6d3"
+    },
+    {
+      "evidence": "C-850",
+      "file": "cosworks-legend-yield-color-native-evidence.json",
+      "sha256": "0111ec3e83d601b81b80c96e510b3716a6d864dc0a912dc1d0bb273d9e8f4797"
+    },
+    {
+      "evidence": "C-851",
+      "file": "cosworks-legend-step-policy-native-evidence.json",
+      "sha256": "ed26539a2aaa3a61ad71d797b0ea6ca04bb3fcc577d32bd9c8732846625f307c"
+    },
+    {
+      "evidence": "C-853",
+      "file": "cosworks-legend-end-cell-native-evidence.json",
+      "sha256": "82b2d539cdbed5419dceaa926c503734e1b420b0c1739ee4249827378f32fd02"
+    },
+    {
+      "evidence": "C-854",
+      "file": "cosworks-legend-width-selector-native-evidence.json",
+      "sha256": "ac902bdb365d4028a49f47d034e5c1ad57fd018831fa5be6a54c9eec0aa1c3e8"
+    },
+    {
+      "evidence": "C-855",
+      "file": "cosworks-post-style-text-view-native-evidence.json",
+      "sha256": "c48457153da0f01efd3fe5badc9da5d947da5d8f9b1dd2e800fcfaa87cfb6f37"
+    },
+    {
+      "evidence": "C-858",
+      "file": "cosworks-legend-grouping-native-evidence.json",
+      "sha256": "72c8efa016e3d65e0d81ab75626c89cacac6401e078ff2cc2308173de340cfa9"
+    },
+    {
+      "evidence": "C-872",
+      "file": "cosworks-legend-render-gate-native-evidence.json",
+      "sha256": "d8133daa1f81cba58e4ccea8d075a95a1c3a8494602647167e89180cf5065230"
+    },
+    {
+      "evidence": "C-873",
+      "file": "cosworks-need-model-tess-native-evidence.json",
+      "sha256": "da41dec36ac8fffd0510a1c30dfb8930babcf161e228097d9ecba29143d04fe4"
+    },
+    {
+      "evidence": "C-876",
+      "file": "cosworks-need-offset-native-evidence.json",
+      "sha256": "6ecc3c89acb78bda9a8d00639d5770be39e307b2ea6162aa0ebf0d6f924a0989"
+    },
+    {
+      "evidence": "C-886",
+      "file": "cosworks-vector-style-fields-native-evidence.json",
+      "sha256": "c3a7b1355a5a77e830727a1073c33bb0f8bda97798e9ce753e102368b3df8078"
+    },
+    {
+      "evidence": "C-887",
+      "file": "cosworks-extrema-annotation-native-evidence.json",
+      "sha256": "978b3a76dd121da5314fa09c59ed7e43fa53762701cf3c5d0cb04d5789f7980c"
+    },
+    {
+      "evidence": "C-888",
+      "file": "cosworks-aux-triangle-fields-native-evidence.json",
+      "sha256": "1def5aa84777de82542fe0e79a56b7793586d108634c682600fbcd20c3866959"
+    },
+    {
+      "evidence": "C-889",
+      "file": "cosworks-triangle-color-selectors-native-evidence.json",
+      "sha256": "b14230d13586fdcdf49f7a71e107a14047ea6f7dd48068b959d1ba621bca1a92"
+    },
+    {
+      "evidence": "C-890",
+      "file": "cosworks-style-text-controls-native-evidence.json",
+      "sha256": "5c5ff71eb2b7557c94a7905d449d4e9745e7992abe7e9015431fd40c65f62dfa"
+    },
+    {
+      "evidence": "C-891",
+      "file": "cosworks-plot54-color-native-evidence.json",
+      "sha256": "46a2a96dd8529545cb7aa939a2a95a21f9a372f336cd6b4d2d9abbbcb9e2d4cc"
+    },
+    {
+      "evidence": "C-892",
+      "file": "cosworks-element-segment-color-native-evidence.json",
+      "sha256": "5ae706da50cb9d49c6aa01c57eb000d4fddea349bacdb06a13ae9ca1a89e26b8"
+    },
+    {
+      "evidence": "C-893",
+      "file": "cosworks-mode3-rgb-native-evidence.json",
+      "sha256": "79b7c4db3ee037d06e70ec801207683c95d78c071b87f22b12cad848373840e7"
+    }
+  ],
+  "tests": {
+    "run": 4,
+    "output": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.000s\n\nOK\n"
+  },
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_post_style_field_catalog_audit.py": "71b7bb7aa71f9e7ef4f27ea46aa4af841293be5e81ab8ab8258acde3d8914739",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_post_style_field_catalog.py": "e7466b3b0ef35d4bdf92cc924eb2b4a57bd7aae5d0ecf7b27c554d1e06c63708",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\test_cosworks_post_style_field_catalog.py": "b2ff04522eec970765c39d141bc117f65f371928c95b73be42249525b9aa726a",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_post_style_layout.py": "3bbb7feb95bc490dc8d3c80365a1cae41b3cdccb8013b48ce5f8158a91982145",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-post-color-fields-native-evidence.json": "3efb4ca03307aa6f8dc7205c49e435bf3588f9f8d8ed65b66af39d3b90f3546e",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-post-style-alpha-fields-native-evidence.json": "16d6e806d88f74e0736630e603843d56cac7bc43d97466a997ebf64387aea5d3",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-legend-position-fields-native-evidence.json": "51b7f46bae6335a555d2c7a4cd12a177d2eaf66f346622624cdff7c86cf18484",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-legend-number-format-native-evidence.json": "18130dc75f3acba5c3dfaaa5d4680ac896d2f21983483e5b27a2e5cabd76a7ef",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-legend-color-policy-fields-native-evidence.json": "209d41f62113d1c0d7f76319032d3ba661c453cb85c38fa342cf76afce497f26",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-legend-height-fields-native-evidence.json": "5702835d639dd3de10ccfa1602d9bd71996280abafadd367a640d4a4042bc6d3",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-legend-yield-color-native-evidence.json": "0111ec3e83d601b81b80c96e510b3716a6d864dc0a912dc1d0bb273d9e8f4797",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-legend-step-policy-native-evidence.json": "ed26539a2aaa3a61ad71d797b0ea6ca04bb3fcc577d32bd9c8732846625f307c",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-legend-end-cell-native-evidence.json": "82b2d539cdbed5419dceaa926c503734e1b420b0c1739ee4249827378f32fd02",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-legend-width-selector-native-evidence.json": "ac902bdb365d4028a49f47d034e5c1ad57fd018831fa5be6a54c9eec0aa1c3e8",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-post-style-text-view-native-evidence.json": "c48457153da0f01efd3fe5badc9da5d947da5d8f9b1dd2e800fcfaa87cfb6f37",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-legend-grouping-native-evidence.json": "72c8efa016e3d65e0d81ab75626c89cacac6401e078ff2cc2308173de340cfa9",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-legend-render-gate-native-evidence.json": "d8133daa1f81cba58e4ccea8d075a95a1c3a8494602647167e89180cf5065230",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-need-model-tess-native-evidence.json": "da41dec36ac8fffd0510a1c30dfb8930babcf161e228097d9ecba29143d04fe4",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-need-offset-native-evidence.json": "6ecc3c89acb78bda9a8d00639d5770be39e307b2ea6162aa0ebf0d6f924a0989",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-vector-style-fields-native-evidence.json": "c3a7b1355a5a77e830727a1073c33bb0f8bda97798e9ce753e102368b3df8078",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-extrema-annotation-native-evidence.json": "978b3a76dd121da5314fa09c59ed7e43fa53762701cf3c5d0cb04d5789f7980c",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-aux-triangle-fields-native-evidence.json": "1def5aa84777de82542fe0e79a56b7793586d108634c682600fbcd20c3866959",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-triangle-color-selectors-native-evidence.json": "b14230d13586fdcdf49f7a71e107a14047ea6f7dd48068b959d1ba621bca1a92",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-style-text-controls-native-evidence.json": "5c5ff71eb2b7557c94a7905d449d4e9745e7992abe7e9015431fd40c65f62dfa",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-plot54-color-native-evidence.json": "46a2a96dd8529545cb7aa939a2a95a21f9a372f336cd6b4d2d9abbbcb9e2d4cc",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-element-segment-color-native-evidence.json": "5ae706da50cb9d49c6aa01c57eb000d4fddea349bacdb06a13ae9ca1a89e26b8",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-mode3-rgb-native-evidence.json": "79b7c4db3ee037d06e70ec801207683c95d78c071b87f22b12cad848373840e7"
+  },
+  "target_executed": false,
+  "coverage_credit": 0,
+  "limitations": [
+    "Consumer role does not prove complete enum/domain/rendering semantics",
+    "Binary32 RGBA component identity alone does not bind enclosing color purpose",
+    "Version probes describe representative gate boundaries, not new native observations",
+    "Counts include zero-byte text spans; byte counts reported separately",
+    "Catalog is not a global semantic coverage denominator"
+  ]
+}

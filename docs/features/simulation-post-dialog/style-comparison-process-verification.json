@@ -1,0 +1,32 @@
+{
+  "issue": 166,
+  "behavior_version": "C863-style-comparison-masked-daz-off-v1",
+  "platform": "Windows x64",
+  "owned_pairs": 17125,
+  "native_stored_fact_pairs": 8508,
+  "complete_parent_views": 701,
+  "words": 658350,
+  "original_history_and_input_isolation_asserted_for_every_completed_pair": true,
+  "oracle": "Restricted native107-instruction body with all93 semantic instructions visited and independent original C864/C871 callees",
+  "executable_sha256": "f2eb8f6e5fe92854d26cfa12f04f4a26426d5c15c1b18fb12834b5ccdb7d8750",
+  "runs": [
+    {
+      "process": 1,
+      "exit_code": 0,
+      "seconds": 1.0761393001303077,
+      "bytes": 2633400,
+      "sha256": "e6fcd3cd8d7efa5985662c7364d7f9d9910eb9b23f4ae1deacb70140cb18f17c"
+    },
+    {
+      "process": 2,
+      "exit_code": 0,
+      "seconds": 1.0632131998427212,
+      "bytes": 2633400,
+      "sha256": "e6fcd3cd8d7efa5985662c7364d7f9d9910eb9b23f4ae1deacb70140cb18f17c"
+    }
+  ],
+  "comparison": "Both fresh Rust processes matched all658350 independent completion/error/ordered-check words byte for byte; exact export-test execution checked",
+  "native_target_executed": false,
+  "previous_release_comparator": "No previous published style-comparator API",
+  "peak_memory": "Not measured in this local correctness proof"
+}

@@ -1,0 +1,37 @@
+{
+  "issue": 166,
+  "command": "cargo xtask pr",
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0 x86_64-pc-windows-msvc",
+  "exit_code": 0,
+  "process_reaped": true,
+  "starting_source_cut": "82292028e21dc86ba72e85ac55859fcd9cdd3898",
+  "observed_head_at_completion": "72556c0b705764a8f1557ffe11ccd27c19c679bb",
+  "rust_and_test_trees_unchanged_during_gate": true,
+  "tree_entries": [
+    "040000 tree 0c4075fefb8e5cf974a5fdd2614125de1331ee58\t.cargo",
+    "100644 blob b5b8a15af3025ff50cd10eec25e219d506aabb33\tCargo.lock",
+    "100644 blob 9b01f12f6cf6438926743d87434d243c7f904a5d\tCargo.toml",
+    "100644 blob b432996f101609389fcd631582395680520eb494\trust-toolchain.toml",
+    "040000 tree 11f38ed65dabda8f4b505bd4a8c59cf9f2720558\tsrc",
+    "040000 tree 871c3e3fe5b98ac6147b0edd529f424db0721a76\ttests",
+    "040000 tree 424b0b986342a419095e476d6450537d4432a035\txtask"
+  ],
+  "summary": {
+    "harness_summaries": 303,
+    "passed": 3802,
+    "failed": 0,
+    "ignored": 192
+  },
+  "log": {
+    "path": "target/post-dialog-consolidated-pr-gate.log",
+    "bytes": 492573,
+    "sha256": "c2ff7b68c3813918158da4aeb7243ea3d24ffe116297789b2d21de348d00b644"
+  },
+  "qualifications": [
+    "The gate began on the immutable dialog acceptance cut. Later local commits touched only documentation and Python evidence support for feature174.",
+    "The Rust sources, tests, xtask and Cargo configuration remained byte-identical in Git; the changed Python capture adapter was separately replayed by the strict eleven-check feature174 gate.",
+    "The 192 ignored tests are not claimed executed by cargo xtask pr. The separate 355-test/37-harness dialog native-fixture run executed its ignored tests explicitly.",
+    "This local acceptance proof does not replace a fresh gate on the eventual immutable publication head or any required platform check."
+  ]
+}

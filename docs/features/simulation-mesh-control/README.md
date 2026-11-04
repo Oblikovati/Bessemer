@@ -133,8 +133,11 @@ The complete local PR gate passed on `31a0d8a`: 3,479 tests passed, none failed
 and 98 were explicitly ignored across 263 summaries. The final strict reference
 replay passed all 20 checks; its process exited successfully after cleanup.
 [Combined full gate verification](combined-full-gate-verification.json) records
-the exact revision, logs, source snapshot and exclusions. Exact-head platform
-and ThreadSanitizer acceptance remain pending in the serial integration queue.
+the exact revision, logs, source snapshot and exclusions.
+[PR #171](https://github.com/Oblikovati/Bessemer/pull/171) passed all five exact-head
+platform checks, including Linux ThreadSanitizer, and merged into the candidate
+branch. The [integration record](integration-verification.json) retains the
+publication head, merge, checks and completed branch/worktree/build cleanup.
 Native writer/application and geometry acceptance, field
 meanings, unrepresented native profiles and whole-format parity remain unproven.
 Humanizer was unavailable; maintainer prose review remains pending.

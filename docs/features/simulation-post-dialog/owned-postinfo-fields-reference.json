@@ -1,0 +1,4576 @@
+{
+  "contexts": 5,
+  "physical_slots": 60,
+  "rows": [
+    {
+      "rotation": 0,
+      "fields": {
+        "header_words": [
+          {
+            "offset": 0,
+            "raw_hex": "00000080",
+            "signed_view": -2147483648
+          },
+          {
+            "offset": 4,
+            "raw_hex": "ffffffff",
+            "signed_view": -1
+          },
+          {
+            "offset": 8,
+            "raw_hex": "00000000",
+            "signed_view": 0
+          },
+          {
+            "offset": 12,
+            "raw_hex": "01000000",
+            "signed_view": 1
+          },
+          {
+            "offset": 16,
+            "raw_hex": "ffffff7f",
+            "signed_view": 2147483647
+          },
+          {
+            "offset": 20,
+            "raw_hex": "00000080",
+            "signed_view": -2147483648
+          },
+          {
+            "offset": 24,
+            "raw_hex": "ffffffff",
+            "signed_view": -1
+          }
+        ],
+        "contour_type": {
+          "offset": 8,
+          "raw_hex": "00000000",
+          "signed_view": 0,
+          "preference_integer_view": 0
+        },
+        "section_active_count": {
+          "offset": 20,
+          "raw_hex": "00000080",
+          "signed_view": -2147483648
+        },
+        "iso_active_count": {
+          "offset": 24,
+          "raw_hex": "ffffffff",
+          "signed_view": -1
+        },
+        "records": [
+          {
+            "group": "section",
+            "index": 0,
+            "offset": 28,
+            "end": 64,
+            "raw_hex": "00000000ffffffff0000000000000080010000000000807f4200c07f0000000000000080",
+            "primitive_type": {
+              "offset": 28,
+              "raw_hex": "00000000",
+              "signed_view": 0
+            },
+            "primitive_name": "cylinder",
+            "cut_direction": {
+              "offset": 32,
+              "raw_hex": "ffffffff",
+              "signed_view": -1
+            },
+            "cut_direction_display_token": "Yon",
+            "normal_components": [
+              {
+                "offset": 36,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 40,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 44,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 48,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 52,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 56,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              }
+            ],
+            "shared_scalar": {
+              "offset": 60,
+              "stored_raw_hex": "00000080",
+              "view_raw_hex": "00000080",
+              "finite_value": -0.0
+            },
+            "negated_D_view": {
+              "offset": 60,
+              "stored_raw_hex": "00000080",
+              "view_raw_hex": "00000000",
+              "finite_value": 0.0
+            }
+          },
+          {
+            "group": "section",
+            "index": 1,
+            "offset": 64,
+            "end": 100,
+            "raw_hex": "010000000100000000000080010000000000807f4200c07f000000000000008001000000",
+            "primitive_type": {
+              "offset": 64,
+              "raw_hex": "01000000",
+              "signed_view": 1
+            },
+            "primitive_name": "plane",
+            "cut_direction": {
+              "offset": 68,
+              "raw_hex": "01000000",
+              "signed_view": 1
+            },
+            "cut_direction_display_token": "Hither",
+            "normal_components": [
+              {
+                "offset": 72,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 76,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 80,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 84,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 88,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 92,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              }
+            ],
+            "shared_scalar": {
+              "offset": 96,
+              "stored_raw_hex": "01000000",
+              "view_raw_hex": "01000000",
+              "finite_value": 1.401298464324817e-45
+            },
+            "negated_D_view": {
+              "offset": 96,
+              "stored_raw_hex": "01000000",
+              "view_raw_hex": "01000080",
+              "finite_value": -1.401298464324817e-45
+            }
+          },
+          {
+            "group": "section",
+            "index": 2,
+            "offset": 100,
+            "end": 136,
+            "raw_hex": "0200000002000000010000000000807f4200c07f0000000000000080010000000000807f",
+            "primitive_type": {
+              "offset": 100,
+              "raw_hex": "02000000",
+              "signed_view": 2
+            },
+            "primitive_name": "sphere",
+            "cut_direction": {
+              "offset": 104,
+              "raw_hex": "02000000",
+              "signed_view": 2
+            },
+            "cut_direction_display_token": "Both",
+            "normal_components": [
+              {
+                "offset": 108,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 112,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 116,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 120,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 124,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 128,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              }
+            ],
+            "shared_scalar": {
+              "offset": 132,
+              "stored_raw_hex": "0000807f",
+              "view_raw_hex": "0000807f",
+              "finite_value": null
+            },
+            "negated_D_view": {
+              "offset": 132,
+              "stored_raw_hex": "0000807f",
+              "view_raw_hex": "000080ff",
+              "finite_value": null
+            }
+          },
+          {
+            "group": "section",
+            "index": 3,
+            "offset": 136,
+            "end": 172,
+            "raw_hex": "03000000000000800000807f4200c07f0000000000000080010000000000807f4200c07f",
+            "primitive_type": {
+              "offset": 136,
+              "raw_hex": "03000000",
+              "signed_view": 3
+            },
+            "primitive_name": "iso",
+            "cut_direction": {
+              "offset": 140,
+              "raw_hex": "00000080",
+              "signed_view": -2147483648
+            },
+            "cut_direction_display_token": null,
+            "normal_components": [
+              {
+                "offset": 144,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 148,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 152,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 156,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 160,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 164,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              }
+            ],
+            "shared_scalar": {
+              "offset": 168,
+              "stored_raw_hex": "4200c07f",
+              "view_raw_hex": "4200c07f",
+              "finite_value": null
+            },
+            "negated_D_view": {
+              "offset": 168,
+              "stored_raw_hex": "4200c07f",
+              "view_raw_hex": "4200c0ff",
+              "finite_value": null
+            }
+          },
+          {
+            "group": "section",
+            "index": 4,
+            "offset": 172,
+            "end": 208,
+            "raw_hex": "04000000ffffff7f4200c07f0000000000000080010000000000807f4200c07f00000000",
+            "primitive_type": {
+              "offset": 172,
+              "raw_hex": "04000000",
+              "signed_view": 4
+            },
+            "primitive_name": null,
+            "cut_direction": {
+              "offset": 176,
+              "raw_hex": "ffffff7f",
+              "signed_view": 2147483647
+            },
+            "cut_direction_display_token": null,
+            "normal_components": [
+              {
+                "offset": 180,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 184,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 188,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 192,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 196,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 200,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              }
+            ],
+            "shared_scalar": {
+              "offset": 204,
+              "stored_raw_hex": "00000000",
+              "view_raw_hex": "00000000",
+              "finite_value": 0.0
+            },
+            "negated_D_view": {
+              "offset": 204,
+              "stored_raw_hex": "00000000",
+              "view_raw_hex": "00000080",
+              "finite_value": -0.0
+            }
+          },
+          {
+            "group": "section",
+            "index": 5,
+            "offset": 208,
+            "end": 244,
+            "raw_hex": "00000000ffffffff0000000000000080010000000000807f4200c07f0000000000000080",
+            "primitive_type": {
+              "offset": 208,
+              "raw_hex": "00000000",
+              "signed_view": 0
+            },
+            "primitive_name": "cylinder",
+            "cut_direction": {
+              "offset": 212,
+              "raw_hex": "ffffffff",
+              "signed_view": -1
+            },
+            "cut_direction_display_token": "Yon",
+            "normal_components": [
+              {
+                "offset": 216,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 220,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 224,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 228,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 232,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 236,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              }
+            ],
+            "shared_scalar": {
+              "offset": 240,
+              "stored_raw_hex": "00000080",
+              "view_raw_hex": "00000080",
+              "finite_value": -0.0
+            },
+            "negated_D_view": {
+              "offset": 240,
+              "stored_raw_hex": "00000080",
+              "view_raw_hex": "00000000",
+              "finite_value": 0.0
+            }
+          },
+          {
+            "group": "iso",
+            "index": 0,
+            "offset": 244,
+            "end": 280,
+            "raw_hex": "010000000100000000000080010000000000807f4200c07f000000000000008001000000",
+            "primitive_type": {
+              "offset": 244,
+              "raw_hex": "01000000",
+              "signed_view": 1
+            },
+            "primitive_name": "plane",
+            "cut_direction": {
+              "offset": 248,
+              "raw_hex": "01000000",
+              "signed_view": 1
+            },
+            "cut_direction_display_token": "Hither",
+            "normal_components": [
+              {
+                "offset": 252,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 256,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 260,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 264,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 268,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 272,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              }
+            ],
+            "shared_scalar": {
+              "offset": 276,
+              "stored_raw_hex": "01000000",
+              "view_raw_hex": "01000000",
+              "finite_value": 1.401298464324817e-45
+            },
+            "negated_D_view": {
+              "offset": 276,
+              "stored_raw_hex": "01000000",
+              "view_raw_hex": "01000080",
+              "finite_value": -1.401298464324817e-45
+            }
+          },
+          {
+            "group": "iso",
+            "index": 1,
+            "offset": 280,
+            "end": 316,
+            "raw_hex": "0200000002000000010000000000807f4200c07f0000000000000080010000000000807f",
+            "primitive_type": {
+              "offset": 280,
+              "raw_hex": "02000000",
+              "signed_view": 2
+            },
+            "primitive_name": "sphere",
+            "cut_direction": {
+              "offset": 284,
+              "raw_hex": "02000000",
+              "signed_view": 2
+            },
+            "cut_direction_display_token": "Both",
+            "normal_components": [
+              {
+                "offset": 288,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 292,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 296,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 300,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 304,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 308,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              }
+            ],
+            "shared_scalar": {
+              "offset": 312,
+              "stored_raw_hex": "0000807f",
+              "view_raw_hex": "0000807f",
+              "finite_value": null
+            },
+            "negated_D_view": {
+              "offset": 312,
+              "stored_raw_hex": "0000807f",
+              "view_raw_hex": "000080ff",
+              "finite_value": null
+            }
+          },
+          {
+            "group": "iso",
+            "index": 2,
+            "offset": 316,
+            "end": 352,
+            "raw_hex": "03000000000000800000807f4200c07f0000000000000080010000000000807f4200c07f",
+            "primitive_type": {
+              "offset": 316,
+              "raw_hex": "03000000",
+              "signed_view": 3
+            },
+            "primitive_name": "iso",
+            "cut_direction": {
+              "offset": 320,
+              "raw_hex": "00000080",
+              "signed_view": -2147483648
+            },
+            "cut_direction_display_token": null,
+            "normal_components": [
+              {
+                "offset": 324,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 328,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 332,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 336,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 340,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 344,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              }
+            ],
+            "shared_scalar": {
+              "offset": 348,
+              "stored_raw_hex": "4200c07f",
+              "view_raw_hex": "4200c07f",
+              "finite_value": null
+            },
+            "negated_D_view": {
+              "offset": 348,
+              "stored_raw_hex": "4200c07f",
+              "view_raw_hex": "4200c0ff",
+              "finite_value": null
+            }
+          },
+          {
+            "group": "iso",
+            "index": 3,
+            "offset": 352,
+            "end": 388,
+            "raw_hex": "04000000ffffff7f4200c07f0000000000000080010000000000807f4200c07f00000000",
+            "primitive_type": {
+              "offset": 352,
+              "raw_hex": "04000000",
+              "signed_view": 4
+            },
+            "primitive_name": null,
+            "cut_direction": {
+              "offset": 356,
+              "raw_hex": "ffffff7f",
+              "signed_view": 2147483647
+            },
+            "cut_direction_display_token": null,
+            "normal_components": [
+              {
+                "offset": 360,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 364,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 368,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 372,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 376,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 380,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              }
+            ],
+            "shared_scalar": {
+              "offset": 384,
+              "stored_raw_hex": "00000000",
+              "view_raw_hex": "00000000",
+              "finite_value": 0.0
+            },
+            "negated_D_view": {
+              "offset": 384,
+              "stored_raw_hex": "00000000",
+              "view_raw_hex": "00000080",
+              "finite_value": -0.0
+            }
+          },
+          {
+            "group": "iso",
+            "index": 4,
+            "offset": 388,
+            "end": 424,
+            "raw_hex": "00000000ffffffff0000000000000080010000000000807f4200c07f0000000000000080",
+            "primitive_type": {
+              "offset": 388,
+              "raw_hex": "00000000",
+              "signed_view": 0
+            },
+            "primitive_name": "cylinder",
+            "cut_direction": {
+              "offset": 392,
+              "raw_hex": "ffffffff",
+              "signed_view": -1
+            },
+            "cut_direction_display_token": "Yon",
+            "normal_components": [
+              {
+                "offset": 396,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 400,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 404,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 408,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 412,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 416,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              }
+            ],
+            "shared_scalar": {
+              "offset": 420,
+              "stored_raw_hex": "00000080",
+              "view_raw_hex": "00000080",
+              "finite_value": -0.0
+            },
+            "negated_D_view": {
+              "offset": 420,
+              "stored_raw_hex": "00000080",
+              "view_raw_hex": "00000000",
+              "finite_value": 0.0
+            }
+          },
+          {
+            "group": "iso",
+            "index": 5,
+            "offset": 424,
+            "end": 460,
+            "raw_hex": "010000000100000000000080010000000000807f4200c07f000000000000008001000000",
+            "primitive_type": {
+              "offset": 424,
+              "raw_hex": "01000000",
+              "signed_view": 1
+            },
+            "primitive_name": "plane",
+            "cut_direction": {
+              "offset": 428,
+              "raw_hex": "01000000",
+              "signed_view": 1
+            },
+            "cut_direction_display_token": "Hither",
+            "normal_components": [
+              {
+                "offset": 432,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 436,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 440,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 444,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 448,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 452,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              }
+            ],
+            "shared_scalar": {
+              "offset": 456,
+              "stored_raw_hex": "01000000",
+              "view_raw_hex": "01000000",
+              "finite_value": 1.401298464324817e-45
+            },
+            "negated_D_view": {
+              "offset": 456,
+              "stored_raw_hex": "01000000",
+              "view_raw_hex": "01000080",
+              "finite_value": -1.401298464324817e-45
+            }
+          }
+        ],
+        "raw_hex": "00000080ffffffff0000000001000000ffffff7f00000080ffffffff00000000ffffffff0000000000000080010000000000807f4200c07f0000000000000080010000000100000000000080010000000000807f4200c07f0000000000000080010000000200000002000000010000000000807f4200c07f0000000000000080010000000000807f03000000000000800000807f4200c07f0000000000000080010000000000807f4200c07f04000000ffffff7f4200c07f0000000000000080010000000000807f4200c07f0000000000000000ffffffff0000000000000080010000000000807f4200c07f0000000000000080010000000100000000000080010000000000807f4200c07f0000000000000080010000000200000002000000010000000000807f4200c07f0000000000000080010000000000807f03000000000000800000807f4200c07f0000000000000080010000000000807f4200c07f04000000ffffff7f4200c07f0000000000000080010000000000807f4200c07f0000000000000000ffffffff0000000000000080010000000000807f4200c07f0000000000000080010000000100000000000080010000000000807f4200c07f000000000000008001000000",
+        "sha256": "c7495f3ca70e0f6c75a9951e383c3910aab280f2ce5216a5d9125445e0b78b63"
+      }
+    },
+    {
+      "rotation": 1,
+      "fields": {
+        "header_words": [
+          {
+            "offset": 0,
+            "raw_hex": "ffffffff",
+            "signed_view": -1
+          },
+          {
+            "offset": 4,
+            "raw_hex": "00000000",
+            "signed_view": 0
+          },
+          {
+            "offset": 8,
+            "raw_hex": "01000000",
+            "signed_view": 1
+          },
+          {
+            "offset": 12,
+            "raw_hex": "ffffff7f",
+            "signed_view": 2147483647
+          },
+          {
+            "offset": 16,
+            "raw_hex": "00000080",
+            "signed_view": -2147483648
+          },
+          {
+            "offset": 20,
+            "raw_hex": "ffffffff",
+            "signed_view": -1
+          },
+          {
+            "offset": 24,
+            "raw_hex": "00000000",
+            "signed_view": 0
+          }
+        ],
+        "contour_type": {
+          "offset": 8,
+          "raw_hex": "01000000",
+          "signed_view": 1,
+          "preference_integer_view": 1
+        },
+        "section_active_count": {
+          "offset": 20,
+          "raw_hex": "ffffffff",
+          "signed_view": -1
+        },
+        "iso_active_count": {
+          "offset": 24,
+          "raw_hex": "00000000",
+          "signed_view": 0
+        },
+        "records": [
+          {
+            "group": "section",
+            "index": 0,
+            "offset": 28,
+            "end": 64,
+            "raw_hex": "010000000100000000000080010000000000807f4200c07f000000000000008001000000",
+            "primitive_type": {
+              "offset": 28,
+              "raw_hex": "01000000",
+              "signed_view": 1
+            },
+            "primitive_name": "plane",
+            "cut_direction": {
+              "offset": 32,
+              "raw_hex": "01000000",
+              "signed_view": 1
+            },
+            "cut_direction_display_token": "Hither",
+            "normal_components": [
+              {
+                "offset": 36,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 40,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 44,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 48,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 52,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 56,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              }
+            ],
+            "shared_scalar": {
+              "offset": 60,
+              "stored_raw_hex": "01000000",
+              "view_raw_hex": "01000000",
+              "finite_value": 1.401298464324817e-45
+            },
+            "negated_D_view": {
+              "offset": 60,
+              "stored_raw_hex": "01000000",
+              "view_raw_hex": "01000080",
+              "finite_value": -1.401298464324817e-45
+            }
+          },
+          {
+            "group": "section",
+            "index": 1,
+            "offset": 64,
+            "end": 100,
+            "raw_hex": "0200000002000000010000000000807f4200c07f0000000000000080010000000000807f",
+            "primitive_type": {
+              "offset": 64,
+              "raw_hex": "02000000",
+              "signed_view": 2
+            },
+            "primitive_name": "sphere",
+            "cut_direction": {
+              "offset": 68,
+              "raw_hex": "02000000",
+              "signed_view": 2
+            },
+            "cut_direction_display_token": "Both",
+            "normal_components": [
+              {
+                "offset": 72,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 76,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 80,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 84,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 88,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 92,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              }
+            ],
+            "shared_scalar": {
+              "offset": 96,
+              "stored_raw_hex": "0000807f",
+              "view_raw_hex": "0000807f",
+              "finite_value": null
+            },
+            "negated_D_view": {
+              "offset": 96,
+              "stored_raw_hex": "0000807f",
+              "view_raw_hex": "000080ff",
+              "finite_value": null
+            }
+          },
+          {
+            "group": "section",
+            "index": 2,
+            "offset": 100,
+            "end": 136,
+            "raw_hex": "03000000000000800000807f4200c07f0000000000000080010000000000807f4200c07f",
+            "primitive_type": {
+              "offset": 100,
+              "raw_hex": "03000000",
+              "signed_view": 3
+            },
+            "primitive_name": "iso",
+            "cut_direction": {
+              "offset": 104,
+              "raw_hex": "00000080",
+              "signed_view": -2147483648
+            },
+            "cut_direction_display_token": null,
+            "normal_components": [
+              {
+                "offset": 108,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 112,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 116,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 120,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 124,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 128,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              }
+            ],
+            "shared_scalar": {
+              "offset": 132,
+              "stored_raw_hex": "4200c07f",
+              "view_raw_hex": "4200c07f",
+              "finite_value": null
+            },
+            "negated_D_view": {
+              "offset": 132,
+              "stored_raw_hex": "4200c07f",
+              "view_raw_hex": "4200c0ff",
+              "finite_value": null
+            }
+          },
+          {
+            "group": "section",
+            "index": 3,
+            "offset": 136,
+            "end": 172,
+            "raw_hex": "04000000ffffff7f4200c07f0000000000000080010000000000807f4200c07f00000000",
+            "primitive_type": {
+              "offset": 136,
+              "raw_hex": "04000000",
+              "signed_view": 4
+            },
+            "primitive_name": null,
+            "cut_direction": {
+              "offset": 140,
+              "raw_hex": "ffffff7f",
+              "signed_view": 2147483647
+            },
+            "cut_direction_display_token": null,
+            "normal_components": [
+              {
+                "offset": 144,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 148,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 152,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 156,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 160,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 164,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              }
+            ],
+            "shared_scalar": {
+              "offset": 168,
+              "stored_raw_hex": "00000000",
+              "view_raw_hex": "00000000",
+              "finite_value": 0.0
+            },
+            "negated_D_view": {
+              "offset": 168,
+              "stored_raw_hex": "00000000",
+              "view_raw_hex": "00000080",
+              "finite_value": -0.0
+            }
+          },
+          {
+            "group": "section",
+            "index": 4,
+            "offset": 172,
+            "end": 208,
+            "raw_hex": "00000000ffffffff0000000000000080010000000000807f4200c07f0000000000000080",
+            "primitive_type": {
+              "offset": 172,
+              "raw_hex": "00000000",
+              "signed_view": 0
+            },
+            "primitive_name": "cylinder",
+            "cut_direction": {
+              "offset": 176,
+              "raw_hex": "ffffffff",
+              "signed_view": -1
+            },
+            "cut_direction_display_token": "Yon",
+            "normal_components": [
+              {
+                "offset": 180,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 184,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 188,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 192,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 196,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 200,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              }
+            ],
+            "shared_scalar": {
+              "offset": 204,
+              "stored_raw_hex": "00000080",
+              "view_raw_hex": "00000080",
+              "finite_value": -0.0
+            },
+            "negated_D_view": {
+              "offset": 204,
+              "stored_raw_hex": "00000080",
+              "view_raw_hex": "00000000",
+              "finite_value": 0.0
+            }
+          },
+          {
+            "group": "section",
+            "index": 5,
+            "offset": 208,
+            "end": 244,
+            "raw_hex": "010000000100000000000080010000000000807f4200c07f000000000000008001000000",
+            "primitive_type": {
+              "offset": 208,
+              "raw_hex": "01000000",
+              "signed_view": 1
+            },
+            "primitive_name": "plane",
+            "cut_direction": {
+              "offset": 212,
+              "raw_hex": "01000000",
+              "signed_view": 1
+            },
+            "cut_direction_display_token": "Hither",
+            "normal_components": [
+              {
+                "offset": 216,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 220,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 224,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 228,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 232,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 236,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              }
+            ],
+            "shared_scalar": {
+              "offset": 240,
+              "stored_raw_hex": "01000000",
+              "view_raw_hex": "01000000",
+              "finite_value": 1.401298464324817e-45
+            },
+            "negated_D_view": {
+              "offset": 240,
+              "stored_raw_hex": "01000000",
+              "view_raw_hex": "01000080",
+              "finite_value": -1.401298464324817e-45
+            }
+          },
+          {
+            "group": "iso",
+            "index": 0,
+            "offset": 244,
+            "end": 280,
+            "raw_hex": "0200000002000000010000000000807f4200c07f0000000000000080010000000000807f",
+            "primitive_type": {
+              "offset": 244,
+              "raw_hex": "02000000",
+              "signed_view": 2
+            },
+            "primitive_name": "sphere",
+            "cut_direction": {
+              "offset": 248,
+              "raw_hex": "02000000",
+              "signed_view": 2
+            },
+            "cut_direction_display_token": "Both",
+            "normal_components": [
+              {
+                "offset": 252,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 256,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 260,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 264,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 268,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 272,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              }
+            ],
+            "shared_scalar": {
+              "offset": 276,
+              "stored_raw_hex": "0000807f",
+              "view_raw_hex": "0000807f",
+              "finite_value": null
+            },
+            "negated_D_view": {
+              "offset": 276,
+              "stored_raw_hex": "0000807f",
+              "view_raw_hex": "000080ff",
+              "finite_value": null
+            }
+          },
+          {
+            "group": "iso",
+            "index": 1,
+            "offset": 280,
+            "end": 316,
+            "raw_hex": "03000000000000800000807f4200c07f0000000000000080010000000000807f4200c07f",
+            "primitive_type": {
+              "offset": 280,
+              "raw_hex": "03000000",
+              "signed_view": 3
+            },
+            "primitive_name": "iso",
+            "cut_direction": {
+              "offset": 284,
+              "raw_hex": "00000080",
+              "signed_view": -2147483648
+            },
+            "cut_direction_display_token": null,
+            "normal_components": [
+              {
+                "offset": 288,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 292,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 296,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 300,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 304,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 308,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              }
+            ],
+            "shared_scalar": {
+              "offset": 312,
+              "stored_raw_hex": "4200c07f",
+              "view_raw_hex": "4200c07f",
+              "finite_value": null
+            },
+            "negated_D_view": {
+              "offset": 312,
+              "stored_raw_hex": "4200c07f",
+              "view_raw_hex": "4200c0ff",
+              "finite_value": null
+            }
+          },
+          {
+            "group": "iso",
+            "index": 2,
+            "offset": 316,
+            "end": 352,
+            "raw_hex": "04000000ffffff7f4200c07f0000000000000080010000000000807f4200c07f00000000",
+            "primitive_type": {
+              "offset": 316,
+              "raw_hex": "04000000",
+              "signed_view": 4
+            },
+            "primitive_name": null,
+            "cut_direction": {
+              "offset": 320,
+              "raw_hex": "ffffff7f",
+              "signed_view": 2147483647
+            },
+            "cut_direction_display_token": null,
+            "normal_components": [
+              {
+                "offset": 324,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 328,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 332,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 336,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 340,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 344,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              }
+            ],
+            "shared_scalar": {
+              "offset": 348,
+              "stored_raw_hex": "00000000",
+              "view_raw_hex": "00000000",
+              "finite_value": 0.0
+            },
+            "negated_D_view": {
+              "offset": 348,
+              "stored_raw_hex": "00000000",
+              "view_raw_hex": "00000080",
+              "finite_value": -0.0
+            }
+          },
+          {
+            "group": "iso",
+            "index": 3,
+            "offset": 352,
+            "end": 388,
+            "raw_hex": "00000000ffffffff0000000000000080010000000000807f4200c07f0000000000000080",
+            "primitive_type": {
+              "offset": 352,
+              "raw_hex": "00000000",
+              "signed_view": 0
+            },
+            "primitive_name": "cylinder",
+            "cut_direction": {
+              "offset": 356,
+              "raw_hex": "ffffffff",
+              "signed_view": -1
+            },
+            "cut_direction_display_token": "Yon",
+            "normal_components": [
+              {
+                "offset": 360,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 364,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 368,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 372,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 376,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 380,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              }
+            ],
+            "shared_scalar": {
+              "offset": 384,
+              "stored_raw_hex": "00000080",
+              "view_raw_hex": "00000080",
+              "finite_value": -0.0
+            },
+            "negated_D_view": {
+              "offset": 384,
+              "stored_raw_hex": "00000080",
+              "view_raw_hex": "00000000",
+              "finite_value": 0.0
+            }
+          },
+          {
+            "group": "iso",
+            "index": 4,
+            "offset": 388,
+            "end": 424,
+            "raw_hex": "010000000100000000000080010000000000807f4200c07f000000000000008001000000",
+            "primitive_type": {
+              "offset": 388,
+              "raw_hex": "01000000",
+              "signed_view": 1
+            },
+            "primitive_name": "plane",
+            "cut_direction": {
+              "offset": 392,
+              "raw_hex": "01000000",
+              "signed_view": 1
+            },
+            "cut_direction_display_token": "Hither",
+            "normal_components": [
+              {
+                "offset": 396,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 400,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 404,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 408,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 412,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 416,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              }
+            ],
+            "shared_scalar": {
+              "offset": 420,
+              "stored_raw_hex": "01000000",
+              "view_raw_hex": "01000000",
+              "finite_value": 1.401298464324817e-45
+            },
+            "negated_D_view": {
+              "offset": 420,
+              "stored_raw_hex": "01000000",
+              "view_raw_hex": "01000080",
+              "finite_value": -1.401298464324817e-45
+            }
+          },
+          {
+            "group": "iso",
+            "index": 5,
+            "offset": 424,
+            "end": 460,
+            "raw_hex": "0200000002000000010000000000807f4200c07f0000000000000080010000000000807f",
+            "primitive_type": {
+              "offset": 424,
+              "raw_hex": "02000000",
+              "signed_view": 2
+            },
+            "primitive_name": "sphere",
+            "cut_direction": {
+              "offset": 428,
+              "raw_hex": "02000000",
+              "signed_view": 2
+            },
+            "cut_direction_display_token": "Both",
+            "normal_components": [
+              {
+                "offset": 432,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 436,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 440,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 444,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 448,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 452,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              }
+            ],
+            "shared_scalar": {
+              "offset": 456,
+              "stored_raw_hex": "0000807f",
+              "view_raw_hex": "0000807f",
+              "finite_value": null
+            },
+            "negated_D_view": {
+              "offset": 456,
+              "stored_raw_hex": "0000807f",
+              "view_raw_hex": "000080ff",
+              "finite_value": null
+            }
+          }
+        ],
+        "raw_hex": "ffffffff0000000001000000ffffff7f00000080ffffffff00000000010000000100000000000080010000000000807f4200c07f0000000000000080010000000200000002000000010000000000807f4200c07f0000000000000080010000000000807f03000000000000800000807f4200c07f0000000000000080010000000000807f4200c07f04000000ffffff7f4200c07f0000000000000080010000000000807f4200c07f0000000000000000ffffffff0000000000000080010000000000807f4200c07f0000000000000080010000000100000000000080010000000000807f4200c07f0000000000000080010000000200000002000000010000000000807f4200c07f0000000000000080010000000000807f03000000000000800000807f4200c07f0000000000000080010000000000807f4200c07f04000000ffffff7f4200c07f0000000000000080010000000000807f4200c07f0000000000000000ffffffff0000000000000080010000000000807f4200c07f0000000000000080010000000100000000000080010000000000807f4200c07f0000000000000080010000000200000002000000010000000000807f4200c07f0000000000000080010000000000807f",
+        "sha256": "dee451af953268ca4d5a5c79fee4e163371b7438870c9058d4c0da25a4ba67c2"
+      }
+    },
+    {
+      "rotation": 2,
+      "fields": {
+        "header_words": [
+          {
+            "offset": 0,
+            "raw_hex": "00000000",
+            "signed_view": 0
+          },
+          {
+            "offset": 4,
+            "raw_hex": "01000000",
+            "signed_view": 1
+          },
+          {
+            "offset": 8,
+            "raw_hex": "ffffff7f",
+            "signed_view": 2147483647
+          },
+          {
+            "offset": 12,
+            "raw_hex": "00000080",
+            "signed_view": -2147483648
+          },
+          {
+            "offset": 16,
+            "raw_hex": "ffffffff",
+            "signed_view": -1
+          },
+          {
+            "offset": 20,
+            "raw_hex": "00000000",
+            "signed_view": 0
+          },
+          {
+            "offset": 24,
+            "raw_hex": "01000000",
+            "signed_view": 1
+          }
+        ],
+        "contour_type": {
+          "offset": 8,
+          "raw_hex": "ffffff7f",
+          "signed_view": 2147483647,
+          "preference_integer_view": 6
+        },
+        "section_active_count": {
+          "offset": 20,
+          "raw_hex": "00000000",
+          "signed_view": 0
+        },
+        "iso_active_count": {
+          "offset": 24,
+          "raw_hex": "01000000",
+          "signed_view": 1
+        },
+        "records": [
+          {
+            "group": "section",
+            "index": 0,
+            "offset": 28,
+            "end": 64,
+            "raw_hex": "0200000002000000010000000000807f4200c07f0000000000000080010000000000807f",
+            "primitive_type": {
+              "offset": 28,
+              "raw_hex": "02000000",
+              "signed_view": 2
+            },
+            "primitive_name": "sphere",
+            "cut_direction": {
+              "offset": 32,
+              "raw_hex": "02000000",
+              "signed_view": 2
+            },
+            "cut_direction_display_token": "Both",
+            "normal_components": [
+              {
+                "offset": 36,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 40,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 44,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 48,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 52,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 56,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              }
+            ],
+            "shared_scalar": {
+              "offset": 60,
+              "stored_raw_hex": "0000807f",
+              "view_raw_hex": "0000807f",
+              "finite_value": null
+            },
+            "negated_D_view": {
+              "offset": 60,
+              "stored_raw_hex": "0000807f",
+              "view_raw_hex": "000080ff",
+              "finite_value": null
+            }
+          },
+          {
+            "group": "section",
+            "index": 1,
+            "offset": 64,
+            "end": 100,
+            "raw_hex": "03000000000000800000807f4200c07f0000000000000080010000000000807f4200c07f",
+            "primitive_type": {
+              "offset": 64,
+              "raw_hex": "03000000",
+              "signed_view": 3
+            },
+            "primitive_name": "iso",
+            "cut_direction": {
+              "offset": 68,
+              "raw_hex": "00000080",
+              "signed_view": -2147483648
+            },
+            "cut_direction_display_token": null,
+            "normal_components": [
+              {
+                "offset": 72,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 76,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 80,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 84,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 88,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 92,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              }
+            ],
+            "shared_scalar": {
+              "offset": 96,
+              "stored_raw_hex": "4200c07f",
+              "view_raw_hex": "4200c07f",
+              "finite_value": null
+            },
+            "negated_D_view": {
+              "offset": 96,
+              "stored_raw_hex": "4200c07f",
+              "view_raw_hex": "4200c0ff",
+              "finite_value": null
+            }
+          },
+          {
+            "group": "section",
+            "index": 2,
+            "offset": 100,
+            "end": 136,
+            "raw_hex": "04000000ffffff7f4200c07f0000000000000080010000000000807f4200c07f00000000",
+            "primitive_type": {
+              "offset": 100,
+              "raw_hex": "04000000",
+              "signed_view": 4
+            },
+            "primitive_name": null,
+            "cut_direction": {
+              "offset": 104,
+              "raw_hex": "ffffff7f",
+              "signed_view": 2147483647
+            },
+            "cut_direction_display_token": null,
+            "normal_components": [
+              {
+                "offset": 108,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 112,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 116,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 120,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 124,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 128,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              }
+            ],
+            "shared_scalar": {
+              "offset": 132,
+              "stored_raw_hex": "00000000",
+              "view_raw_hex": "00000000",
+              "finite_value": 0.0
+            },
+            "negated_D_view": {
+              "offset": 132,
+              "stored_raw_hex": "00000000",
+              "view_raw_hex": "00000080",
+              "finite_value": -0.0
+            }
+          },
+          {
+            "group": "section",
+            "index": 3,
+            "offset": 136,
+            "end": 172,
+            "raw_hex": "00000000ffffffff0000000000000080010000000000807f4200c07f0000000000000080",
+            "primitive_type": {
+              "offset": 136,
+              "raw_hex": "00000000",
+              "signed_view": 0
+            },
+            "primitive_name": "cylinder",
+            "cut_direction": {
+              "offset": 140,
+              "raw_hex": "ffffffff",
+              "signed_view": -1
+            },
+            "cut_direction_display_token": "Yon",
+            "normal_components": [
+              {
+                "offset": 144,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 148,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 152,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 156,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 160,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 164,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              }
+            ],
+            "shared_scalar": {
+              "offset": 168,
+              "stored_raw_hex": "00000080",
+              "view_raw_hex": "00000080",
+              "finite_value": -0.0
+            },
+            "negated_D_view": {
+              "offset": 168,
+              "stored_raw_hex": "00000080",
+              "view_raw_hex": "00000000",
+              "finite_value": 0.0
+            }
+          },
+          {
+            "group": "section",
+            "index": 4,
+            "offset": 172,
+            "end": 208,
+            "raw_hex": "010000000100000000000080010000000000807f4200c07f000000000000008001000000",
+            "primitive_type": {
+              "offset": 172,
+              "raw_hex": "01000000",
+              "signed_view": 1
+            },
+            "primitive_name": "plane",
+            "cut_direction": {
+              "offset": 176,
+              "raw_hex": "01000000",
+              "signed_view": 1
+            },
+            "cut_direction_display_token": "Hither",
+            "normal_components": [
+              {
+                "offset": 180,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 184,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 188,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 192,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 196,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 200,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              }
+            ],
+            "shared_scalar": {
+              "offset": 204,
+              "stored_raw_hex": "01000000",
+              "view_raw_hex": "01000000",
+              "finite_value": 1.401298464324817e-45
+            },
+            "negated_D_view": {
+              "offset": 204,
+              "stored_raw_hex": "01000000",
+              "view_raw_hex": "01000080",
+              "finite_value": -1.401298464324817e-45
+            }
+          },
+          {
+            "group": "section",
+            "index": 5,
+            "offset": 208,
+            "end": 244,
+            "raw_hex": "0200000002000000010000000000807f4200c07f0000000000000080010000000000807f",
+            "primitive_type": {
+              "offset": 208,
+              "raw_hex": "02000000",
+              "signed_view": 2
+            },
+            "primitive_name": "sphere",
+            "cut_direction": {
+              "offset": 212,
+              "raw_hex": "02000000",
+              "signed_view": 2
+            },
+            "cut_direction_display_token": "Both",
+            "normal_components": [
+              {
+                "offset": 216,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 220,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 224,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 228,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 232,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 236,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              }
+            ],
+            "shared_scalar": {
+              "offset": 240,
+              "stored_raw_hex": "0000807f",
+              "view_raw_hex": "0000807f",
+              "finite_value": null
+            },
+            "negated_D_view": {
+              "offset": 240,
+              "stored_raw_hex": "0000807f",
+              "view_raw_hex": "000080ff",
+              "finite_value": null
+            }
+          },
+          {
+            "group": "iso",
+            "index": 0,
+            "offset": 244,
+            "end": 280,
+            "raw_hex": "03000000000000800000807f4200c07f0000000000000080010000000000807f4200c07f",
+            "primitive_type": {
+              "offset": 244,
+              "raw_hex": "03000000",
+              "signed_view": 3
+            },
+            "primitive_name": "iso",
+            "cut_direction": {
+              "offset": 248,
+              "raw_hex": "00000080",
+              "signed_view": -2147483648
+            },
+            "cut_direction_display_token": null,
+            "normal_components": [
+              {
+                "offset": 252,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 256,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 260,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 264,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 268,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 272,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              }
+            ],
+            "shared_scalar": {
+              "offset": 276,
+              "stored_raw_hex": "4200c07f",
+              "view_raw_hex": "4200c07f",
+              "finite_value": null
+            },
+            "negated_D_view": {
+              "offset": 276,
+              "stored_raw_hex": "4200c07f",
+              "view_raw_hex": "4200c0ff",
+              "finite_value": null
+            }
+          },
+          {
+            "group": "iso",
+            "index": 1,
+            "offset": 280,
+            "end": 316,
+            "raw_hex": "04000000ffffff7f4200c07f0000000000000080010000000000807f4200c07f00000000",
+            "primitive_type": {
+              "offset": 280,
+              "raw_hex": "04000000",
+              "signed_view": 4
+            },
+            "primitive_name": null,
+            "cut_direction": {
+              "offset": 284,
+              "raw_hex": "ffffff7f",
+              "signed_view": 2147483647
+            },
+            "cut_direction_display_token": null,
+            "normal_components": [
+              {
+                "offset": 288,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 292,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 296,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 300,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 304,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 308,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              }
+            ],
+            "shared_scalar": {
+              "offset": 312,
+              "stored_raw_hex": "00000000",
+              "view_raw_hex": "00000000",
+              "finite_value": 0.0
+            },
+            "negated_D_view": {
+              "offset": 312,
+              "stored_raw_hex": "00000000",
+              "view_raw_hex": "00000080",
+              "finite_value": -0.0
+            }
+          },
+          {
+            "group": "iso",
+            "index": 2,
+            "offset": 316,
+            "end": 352,
+            "raw_hex": "00000000ffffffff0000000000000080010000000000807f4200c07f0000000000000080",
+            "primitive_type": {
+              "offset": 316,
+              "raw_hex": "00000000",
+              "signed_view": 0
+            },
+            "primitive_name": "cylinder",
+            "cut_direction": {
+              "offset": 320,
+              "raw_hex": "ffffffff",
+              "signed_view": -1
+            },
+            "cut_direction_display_token": "Yon",
+            "normal_components": [
+              {
+                "offset": 324,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 328,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 332,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 336,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 340,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 344,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              }
+            ],
+            "shared_scalar": {
+              "offset": 348,
+              "stored_raw_hex": "00000080",
+              "view_raw_hex": "00000080",
+              "finite_value": -0.0
+            },
+            "negated_D_view": {
+              "offset": 348,
+              "stored_raw_hex": "00000080",
+              "view_raw_hex": "00000000",
+              "finite_value": 0.0
+            }
+          },
+          {
+            "group": "iso",
+            "index": 3,
+            "offset": 352,
+            "end": 388,
+            "raw_hex": "010000000100000000000080010000000000807f4200c07f000000000000008001000000",
+            "primitive_type": {
+              "offset": 352,
+              "raw_hex": "01000000",
+              "signed_view": 1
+            },
+            "primitive_name": "plane",
+            "cut_direction": {
+              "offset": 356,
+              "raw_hex": "01000000",
+              "signed_view": 1
+            },
+            "cut_direction_display_token": "Hither",
+            "normal_components": [
+              {
+                "offset": 360,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 364,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 368,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 372,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 376,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 380,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              }
+            ],
+            "shared_scalar": {
+              "offset": 384,
+              "stored_raw_hex": "01000000",
+              "view_raw_hex": "01000000",
+              "finite_value": 1.401298464324817e-45
+            },
+            "negated_D_view": {
+              "offset": 384,
+              "stored_raw_hex": "01000000",
+              "view_raw_hex": "01000080",
+              "finite_value": -1.401298464324817e-45
+            }
+          },
+          {
+            "group": "iso",
+            "index": 4,
+            "offset": 388,
+            "end": 424,
+            "raw_hex": "0200000002000000010000000000807f4200c07f0000000000000080010000000000807f",
+            "primitive_type": {
+              "offset": 388,
+              "raw_hex": "02000000",
+              "signed_view": 2
+            },
+            "primitive_name": "sphere",
+            "cut_direction": {
+              "offset": 392,
+              "raw_hex": "02000000",
+              "signed_view": 2
+            },
+            "cut_direction_display_token": "Both",
+            "normal_components": [
+              {
+                "offset": 396,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 400,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 404,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 408,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 412,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 416,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              }
+            ],
+            "shared_scalar": {
+              "offset": 420,
+              "stored_raw_hex": "0000807f",
+              "view_raw_hex": "0000807f",
+              "finite_value": null
+            },
+            "negated_D_view": {
+              "offset": 420,
+              "stored_raw_hex": "0000807f",
+              "view_raw_hex": "000080ff",
+              "finite_value": null
+            }
+          },
+          {
+            "group": "iso",
+            "index": 5,
+            "offset": 424,
+            "end": 460,
+            "raw_hex": "03000000000000800000807f4200c07f0000000000000080010000000000807f4200c07f",
+            "primitive_type": {
+              "offset": 424,
+              "raw_hex": "03000000",
+              "signed_view": 3
+            },
+            "primitive_name": "iso",
+            "cut_direction": {
+              "offset": 428,
+              "raw_hex": "00000080",
+              "signed_view": -2147483648
+            },
+            "cut_direction_display_token": null,
+            "normal_components": [
+              {
+                "offset": 432,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 436,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 440,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 444,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 448,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 452,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              }
+            ],
+            "shared_scalar": {
+              "offset": 456,
+              "stored_raw_hex": "4200c07f",
+              "view_raw_hex": "4200c07f",
+              "finite_value": null
+            },
+            "negated_D_view": {
+              "offset": 456,
+              "stored_raw_hex": "4200c07f",
+              "view_raw_hex": "4200c0ff",
+              "finite_value": null
+            }
+          }
+        ],
+        "raw_hex": "0000000001000000ffffff7f00000080ffffffff00000000010000000200000002000000010000000000807f4200c07f0000000000000080010000000000807f03000000000000800000807f4200c07f0000000000000080010000000000807f4200c07f04000000ffffff7f4200c07f0000000000000080010000000000807f4200c07f0000000000000000ffffffff0000000000000080010000000000807f4200c07f0000000000000080010000000100000000000080010000000000807f4200c07f0000000000000080010000000200000002000000010000000000807f4200c07f0000000000000080010000000000807f03000000000000800000807f4200c07f0000000000000080010000000000807f4200c07f04000000ffffff7f4200c07f0000000000000080010000000000807f4200c07f0000000000000000ffffffff0000000000000080010000000000807f4200c07f0000000000000080010000000100000000000080010000000000807f4200c07f0000000000000080010000000200000002000000010000000000807f4200c07f0000000000000080010000000000807f03000000000000800000807f4200c07f0000000000000080010000000000807f4200c07f",
+        "sha256": "4b42639b58cfed334cf76308c17e96b1c8e5f107eb132789ae0d36223ebc4ab1"
+      }
+    },
+    {
+      "rotation": 3,
+      "fields": {
+        "header_words": [
+          {
+            "offset": 0,
+            "raw_hex": "01000000",
+            "signed_view": 1
+          },
+          {
+            "offset": 4,
+            "raw_hex": "ffffff7f",
+            "signed_view": 2147483647
+          },
+          {
+            "offset": 8,
+            "raw_hex": "00000080",
+            "signed_view": -2147483648
+          },
+          {
+            "offset": 12,
+            "raw_hex": "ffffffff",
+            "signed_view": -1
+          },
+          {
+            "offset": 16,
+            "raw_hex": "00000000",
+            "signed_view": 0
+          },
+          {
+            "offset": 20,
+            "raw_hex": "01000000",
+            "signed_view": 1
+          },
+          {
+            "offset": 24,
+            "raw_hex": "ffffff7f",
+            "signed_view": 2147483647
+          }
+        ],
+        "contour_type": {
+          "offset": 8,
+          "raw_hex": "00000080",
+          "signed_view": -2147483648,
+          "preference_integer_view": 6
+        },
+        "section_active_count": {
+          "offset": 20,
+          "raw_hex": "01000000",
+          "signed_view": 1
+        },
+        "iso_active_count": {
+          "offset": 24,
+          "raw_hex": "ffffff7f",
+          "signed_view": 2147483647
+        },
+        "records": [
+          {
+            "group": "section",
+            "index": 0,
+            "offset": 28,
+            "end": 64,
+            "raw_hex": "03000000000000800000807f4200c07f0000000000000080010000000000807f4200c07f",
+            "primitive_type": {
+              "offset": 28,
+              "raw_hex": "03000000",
+              "signed_view": 3
+            },
+            "primitive_name": "iso",
+            "cut_direction": {
+              "offset": 32,
+              "raw_hex": "00000080",
+              "signed_view": -2147483648
+            },
+            "cut_direction_display_token": null,
+            "normal_components": [
+              {
+                "offset": 36,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 40,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 44,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 48,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 52,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 56,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              }
+            ],
+            "shared_scalar": {
+              "offset": 60,
+              "stored_raw_hex": "4200c07f",
+              "view_raw_hex": "4200c07f",
+              "finite_value": null
+            },
+            "negated_D_view": {
+              "offset": 60,
+              "stored_raw_hex": "4200c07f",
+              "view_raw_hex": "4200c0ff",
+              "finite_value": null
+            }
+          },
+          {
+            "group": "section",
+            "index": 1,
+            "offset": 64,
+            "end": 100,
+            "raw_hex": "04000000ffffff7f4200c07f0000000000000080010000000000807f4200c07f00000000",
+            "primitive_type": {
+              "offset": 64,
+              "raw_hex": "04000000",
+              "signed_view": 4
+            },
+            "primitive_name": null,
+            "cut_direction": {
+              "offset": 68,
+              "raw_hex": "ffffff7f",
+              "signed_view": 2147483647
+            },
+            "cut_direction_display_token": null,
+            "normal_components": [
+              {
+                "offset": 72,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 76,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 80,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 84,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 88,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 92,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              }
+            ],
+            "shared_scalar": {
+              "offset": 96,
+              "stored_raw_hex": "00000000",
+              "view_raw_hex": "00000000",
+              "finite_value": 0.0
+            },
+            "negated_D_view": {
+              "offset": 96,
+              "stored_raw_hex": "00000000",
+              "view_raw_hex": "00000080",
+              "finite_value": -0.0
+            }
+          },
+          {
+            "group": "section",
+            "index": 2,
+            "offset": 100,
+            "end": 136,
+            "raw_hex": "00000000ffffffff0000000000000080010000000000807f4200c07f0000000000000080",
+            "primitive_type": {
+              "offset": 100,
+              "raw_hex": "00000000",
+              "signed_view": 0
+            },
+            "primitive_name": "cylinder",
+            "cut_direction": {
+              "offset": 104,
+              "raw_hex": "ffffffff",
+              "signed_view": -1
+            },
+            "cut_direction_display_token": "Yon",
+            "normal_components": [
+              {
+                "offset": 108,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 112,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 116,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 120,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 124,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 128,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              }
+            ],
+            "shared_scalar": {
+              "offset": 132,
+              "stored_raw_hex": "00000080",
+              "view_raw_hex": "00000080",
+              "finite_value": -0.0
+            },
+            "negated_D_view": {
+              "offset": 132,
+              "stored_raw_hex": "00000080",
+              "view_raw_hex": "00000000",
+              "finite_value": 0.0
+            }
+          },
+          {
+            "group": "section",
+            "index": 3,
+            "offset": 136,
+            "end": 172,
+            "raw_hex": "010000000100000000000080010000000000807f4200c07f000000000000008001000000",
+            "primitive_type": {
+              "offset": 136,
+              "raw_hex": "01000000",
+              "signed_view": 1
+            },
+            "primitive_name": "plane",
+            "cut_direction": {
+              "offset": 140,
+              "raw_hex": "01000000",
+              "signed_view": 1
+            },
+            "cut_direction_display_token": "Hither",
+            "normal_components": [
+              {
+                "offset": 144,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 148,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 152,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 156,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 160,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 164,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              }
+            ],
+            "shared_scalar": {
+              "offset": 168,
+              "stored_raw_hex": "01000000",
+              "view_raw_hex": "01000000",
+              "finite_value": 1.401298464324817e-45
+            },
+            "negated_D_view": {
+              "offset": 168,
+              "stored_raw_hex": "01000000",
+              "view_raw_hex": "01000080",
+              "finite_value": -1.401298464324817e-45
+            }
+          },
+          {
+            "group": "section",
+            "index": 4,
+            "offset": 172,
+            "end": 208,
+            "raw_hex": "0200000002000000010000000000807f4200c07f0000000000000080010000000000807f",
+            "primitive_type": {
+              "offset": 172,
+              "raw_hex": "02000000",
+              "signed_view": 2
+            },
+            "primitive_name": "sphere",
+            "cut_direction": {
+              "offset": 176,
+              "raw_hex": "02000000",
+              "signed_view": 2
+            },
+            "cut_direction_display_token": "Both",
+            "normal_components": [
+              {
+                "offset": 180,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 184,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 188,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 192,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 196,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 200,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              }
+            ],
+            "shared_scalar": {
+              "offset": 204,
+              "stored_raw_hex": "0000807f",
+              "view_raw_hex": "0000807f",
+              "finite_value": null
+            },
+            "negated_D_view": {
+              "offset": 204,
+              "stored_raw_hex": "0000807f",
+              "view_raw_hex": "000080ff",
+              "finite_value": null
+            }
+          },
+          {
+            "group": "section",
+            "index": 5,
+            "offset": 208,
+            "end": 244,
+            "raw_hex": "03000000000000800000807f4200c07f0000000000000080010000000000807f4200c07f",
+            "primitive_type": {
+              "offset": 208,
+              "raw_hex": "03000000",
+              "signed_view": 3
+            },
+            "primitive_name": "iso",
+            "cut_direction": {
+              "offset": 212,
+              "raw_hex": "00000080",
+              "signed_view": -2147483648
+            },
+            "cut_direction_display_token": null,
+            "normal_components": [
+              {
+                "offset": 216,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 220,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 224,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 228,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 232,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 236,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              }
+            ],
+            "shared_scalar": {
+              "offset": 240,
+              "stored_raw_hex": "4200c07f",
+              "view_raw_hex": "4200c07f",
+              "finite_value": null
+            },
+            "negated_D_view": {
+              "offset": 240,
+              "stored_raw_hex": "4200c07f",
+              "view_raw_hex": "4200c0ff",
+              "finite_value": null
+            }
+          },
+          {
+            "group": "iso",
+            "index": 0,
+            "offset": 244,
+            "end": 280,
+            "raw_hex": "04000000ffffff7f4200c07f0000000000000080010000000000807f4200c07f00000000",
+            "primitive_type": {
+              "offset": 244,
+              "raw_hex": "04000000",
+              "signed_view": 4
+            },
+            "primitive_name": null,
+            "cut_direction": {
+              "offset": 248,
+              "raw_hex": "ffffff7f",
+              "signed_view": 2147483647
+            },
+            "cut_direction_display_token": null,
+            "normal_components": [
+              {
+                "offset": 252,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 256,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 260,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 264,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 268,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 272,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              }
+            ],
+            "shared_scalar": {
+              "offset": 276,
+              "stored_raw_hex": "00000000",
+              "view_raw_hex": "00000000",
+              "finite_value": 0.0
+            },
+            "negated_D_view": {
+              "offset": 276,
+              "stored_raw_hex": "00000000",
+              "view_raw_hex": "00000080",
+              "finite_value": -0.0
+            }
+          },
+          {
+            "group": "iso",
+            "index": 1,
+            "offset": 280,
+            "end": 316,
+            "raw_hex": "00000000ffffffff0000000000000080010000000000807f4200c07f0000000000000080",
+            "primitive_type": {
+              "offset": 280,
+              "raw_hex": "00000000",
+              "signed_view": 0
+            },
+            "primitive_name": "cylinder",
+            "cut_direction": {
+              "offset": 284,
+              "raw_hex": "ffffffff",
+              "signed_view": -1
+            },
+            "cut_direction_display_token": "Yon",
+            "normal_components": [
+              {
+                "offset": 288,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 292,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 296,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 300,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 304,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 308,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              }
+            ],
+            "shared_scalar": {
+              "offset": 312,
+              "stored_raw_hex": "00000080",
+              "view_raw_hex": "00000080",
+              "finite_value": -0.0
+            },
+            "negated_D_view": {
+              "offset": 312,
+              "stored_raw_hex": "00000080",
+              "view_raw_hex": "00000000",
+              "finite_value": 0.0
+            }
+          },
+          {
+            "group": "iso",
+            "index": 2,
+            "offset": 316,
+            "end": 352,
+            "raw_hex": "010000000100000000000080010000000000807f4200c07f000000000000008001000000",
+            "primitive_type": {
+              "offset": 316,
+              "raw_hex": "01000000",
+              "signed_view": 1
+            },
+            "primitive_name": "plane",
+            "cut_direction": {
+              "offset": 320,
+              "raw_hex": "01000000",
+              "signed_view": 1
+            },
+            "cut_direction_display_token": "Hither",
+            "normal_components": [
+              {
+                "offset": 324,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 328,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 332,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 336,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 340,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 344,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              }
+            ],
+            "shared_scalar": {
+              "offset": 348,
+              "stored_raw_hex": "01000000",
+              "view_raw_hex": "01000000",
+              "finite_value": 1.401298464324817e-45
+            },
+            "negated_D_view": {
+              "offset": 348,
+              "stored_raw_hex": "01000000",
+              "view_raw_hex": "01000080",
+              "finite_value": -1.401298464324817e-45
+            }
+          },
+          {
+            "group": "iso",
+            "index": 3,
+            "offset": 352,
+            "end": 388,
+            "raw_hex": "0200000002000000010000000000807f4200c07f0000000000000080010000000000807f",
+            "primitive_type": {
+              "offset": 352,
+              "raw_hex": "02000000",
+              "signed_view": 2
+            },
+            "primitive_name": "sphere",
+            "cut_direction": {
+              "offset": 356,
+              "raw_hex": "02000000",
+              "signed_view": 2
+            },
+            "cut_direction_display_token": "Both",
+            "normal_components": [
+              {
+                "offset": 360,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 364,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 368,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 372,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 376,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 380,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              }
+            ],
+            "shared_scalar": {
+              "offset": 384,
+              "stored_raw_hex": "0000807f",
+              "view_raw_hex": "0000807f",
+              "finite_value": null
+            },
+            "negated_D_view": {
+              "offset": 384,
+              "stored_raw_hex": "0000807f",
+              "view_raw_hex": "000080ff",
+              "finite_value": null
+            }
+          },
+          {
+            "group": "iso",
+            "index": 4,
+            "offset": 388,
+            "end": 424,
+            "raw_hex": "03000000000000800000807f4200c07f0000000000000080010000000000807f4200c07f",
+            "primitive_type": {
+              "offset": 388,
+              "raw_hex": "03000000",
+              "signed_view": 3
+            },
+            "primitive_name": "iso",
+            "cut_direction": {
+              "offset": 392,
+              "raw_hex": "00000080",
+              "signed_view": -2147483648
+            },
+            "cut_direction_display_token": null,
+            "normal_components": [
+              {
+                "offset": 396,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 400,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 404,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 408,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 412,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 416,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              }
+            ],
+            "shared_scalar": {
+              "offset": 420,
+              "stored_raw_hex": "4200c07f",
+              "view_raw_hex": "4200c07f",
+              "finite_value": null
+            },
+            "negated_D_view": {
+              "offset": 420,
+              "stored_raw_hex": "4200c07f",
+              "view_raw_hex": "4200c0ff",
+              "finite_value": null
+            }
+          },
+          {
+            "group": "iso",
+            "index": 5,
+            "offset": 424,
+            "end": 460,
+            "raw_hex": "04000000ffffff7f4200c07f0000000000000080010000000000807f4200c07f00000000",
+            "primitive_type": {
+              "offset": 424,
+              "raw_hex": "04000000",
+              "signed_view": 4
+            },
+            "primitive_name": null,
+            "cut_direction": {
+              "offset": 428,
+              "raw_hex": "ffffff7f",
+              "signed_view": 2147483647
+            },
+            "cut_direction_display_token": null,
+            "normal_components": [
+              {
+                "offset": 432,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 436,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 440,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 444,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 448,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 452,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              }
+            ],
+            "shared_scalar": {
+              "offset": 456,
+              "stored_raw_hex": "00000000",
+              "view_raw_hex": "00000000",
+              "finite_value": 0.0
+            },
+            "negated_D_view": {
+              "offset": 456,
+              "stored_raw_hex": "00000000",
+              "view_raw_hex": "00000080",
+              "finite_value": -0.0
+            }
+          }
+        ],
+        "raw_hex": "01000000ffffff7f00000080ffffffff0000000001000000ffffff7f03000000000000800000807f4200c07f0000000000000080010000000000807f4200c07f04000000ffffff7f4200c07f0000000000000080010000000000807f4200c07f0000000000000000ffffffff0000000000000080010000000000807f4200c07f0000000000000080010000000100000000000080010000000000807f4200c07f0000000000000080010000000200000002000000010000000000807f4200c07f0000000000000080010000000000807f03000000000000800000807f4200c07f0000000000000080010000000000807f4200c07f04000000ffffff7f4200c07f0000000000000080010000000000807f4200c07f0000000000000000ffffffff0000000000000080010000000000807f4200c07f0000000000000080010000000100000000000080010000000000807f4200c07f0000000000000080010000000200000002000000010000000000807f4200c07f0000000000000080010000000000807f03000000000000800000807f4200c07f0000000000000080010000000000807f4200c07f04000000ffffff7f4200c07f0000000000000080010000000000807f4200c07f00000000",
+        "sha256": "d5fdc514fe050107ce5dea42c6bb629c8f9282b2e3893e492496f9b0ce1451db"
+      }
+    },
+    {
+      "rotation": 4,
+      "fields": {
+        "header_words": [
+          {
+            "offset": 0,
+            "raw_hex": "ffffff7f",
+            "signed_view": 2147483647
+          },
+          {
+            "offset": 4,
+            "raw_hex": "00000080",
+            "signed_view": -2147483648
+          },
+          {
+            "offset": 8,
+            "raw_hex": "ffffffff",
+            "signed_view": -1
+          },
+          {
+            "offset": 12,
+            "raw_hex": "00000000",
+            "signed_view": 0
+          },
+          {
+            "offset": 16,
+            "raw_hex": "01000000",
+            "signed_view": 1
+          },
+          {
+            "offset": 20,
+            "raw_hex": "ffffff7f",
+            "signed_view": 2147483647
+          },
+          {
+            "offset": 24,
+            "raw_hex": "00000080",
+            "signed_view": -2147483648
+          }
+        ],
+        "contour_type": {
+          "offset": 8,
+          "raw_hex": "ffffffff",
+          "signed_view": -1,
+          "preference_integer_view": 6
+        },
+        "section_active_count": {
+          "offset": 20,
+          "raw_hex": "ffffff7f",
+          "signed_view": 2147483647
+        },
+        "iso_active_count": {
+          "offset": 24,
+          "raw_hex": "00000080",
+          "signed_view": -2147483648
+        },
+        "records": [
+          {
+            "group": "section",
+            "index": 0,
+            "offset": 28,
+            "end": 64,
+            "raw_hex": "04000000ffffff7f4200c07f0000000000000080010000000000807f4200c07f00000000",
+            "primitive_type": {
+              "offset": 28,
+              "raw_hex": "04000000",
+              "signed_view": 4
+            },
+            "primitive_name": null,
+            "cut_direction": {
+              "offset": 32,
+              "raw_hex": "ffffff7f",
+              "signed_view": 2147483647
+            },
+            "cut_direction_display_token": null,
+            "normal_components": [
+              {
+                "offset": 36,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 40,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 44,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 48,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 52,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 56,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              }
+            ],
+            "shared_scalar": {
+              "offset": 60,
+              "stored_raw_hex": "00000000",
+              "view_raw_hex": "00000000",
+              "finite_value": 0.0
+            },
+            "negated_D_view": {
+              "offset": 60,
+              "stored_raw_hex": "00000000",
+              "view_raw_hex": "00000080",
+              "finite_value": -0.0
+            }
+          },
+          {
+            "group": "section",
+            "index": 1,
+            "offset": 64,
+            "end": 100,
+            "raw_hex": "00000000ffffffff0000000000000080010000000000807f4200c07f0000000000000080",
+            "primitive_type": {
+              "offset": 64,
+              "raw_hex": "00000000",
+              "signed_view": 0
+            },
+            "primitive_name": "cylinder",
+            "cut_direction": {
+              "offset": 68,
+              "raw_hex": "ffffffff",
+              "signed_view": -1
+            },
+            "cut_direction_display_token": "Yon",
+            "normal_components": [
+              {
+                "offset": 72,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 76,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 80,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 84,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 88,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 92,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              }
+            ],
+            "shared_scalar": {
+              "offset": 96,
+              "stored_raw_hex": "00000080",
+              "view_raw_hex": "00000080",
+              "finite_value": -0.0
+            },
+            "negated_D_view": {
+              "offset": 96,
+              "stored_raw_hex": "00000080",
+              "view_raw_hex": "00000000",
+              "finite_value": 0.0
+            }
+          },
+          {
+            "group": "section",
+            "index": 2,
+            "offset": 100,
+            "end": 136,
+            "raw_hex": "010000000100000000000080010000000000807f4200c07f000000000000008001000000",
+            "primitive_type": {
+              "offset": 100,
+              "raw_hex": "01000000",
+              "signed_view": 1
+            },
+            "primitive_name": "plane",
+            "cut_direction": {
+              "offset": 104,
+              "raw_hex": "01000000",
+              "signed_view": 1
+            },
+            "cut_direction_display_token": "Hither",
+            "normal_components": [
+              {
+                "offset": 108,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 112,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 116,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 120,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 124,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 128,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              }
+            ],
+            "shared_scalar": {
+              "offset": 132,
+              "stored_raw_hex": "01000000",
+              "view_raw_hex": "01000000",
+              "finite_value": 1.401298464324817e-45
+            },
+            "negated_D_view": {
+              "offset": 132,
+              "stored_raw_hex": "01000000",
+              "view_raw_hex": "01000080",
+              "finite_value": -1.401298464324817e-45
+            }
+          },
+          {
+            "group": "section",
+            "index": 3,
+            "offset": 136,
+            "end": 172,
+            "raw_hex": "0200000002000000010000000000807f4200c07f0000000000000080010000000000807f",
+            "primitive_type": {
+              "offset": 136,
+              "raw_hex": "02000000",
+              "signed_view": 2
+            },
+            "primitive_name": "sphere",
+            "cut_direction": {
+              "offset": 140,
+              "raw_hex": "02000000",
+              "signed_view": 2
+            },
+            "cut_direction_display_token": "Both",
+            "normal_components": [
+              {
+                "offset": 144,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 148,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 152,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 156,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 160,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 164,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              }
+            ],
+            "shared_scalar": {
+              "offset": 168,
+              "stored_raw_hex": "0000807f",
+              "view_raw_hex": "0000807f",
+              "finite_value": null
+            },
+            "negated_D_view": {
+              "offset": 168,
+              "stored_raw_hex": "0000807f",
+              "view_raw_hex": "000080ff",
+              "finite_value": null
+            }
+          },
+          {
+            "group": "section",
+            "index": 4,
+            "offset": 172,
+            "end": 208,
+            "raw_hex": "03000000000000800000807f4200c07f0000000000000080010000000000807f4200c07f",
+            "primitive_type": {
+              "offset": 172,
+              "raw_hex": "03000000",
+              "signed_view": 3
+            },
+            "primitive_name": "iso",
+            "cut_direction": {
+              "offset": 176,
+              "raw_hex": "00000080",
+              "signed_view": -2147483648
+            },
+            "cut_direction_display_token": null,
+            "normal_components": [
+              {
+                "offset": 180,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 184,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 188,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 192,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 196,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 200,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              }
+            ],
+            "shared_scalar": {
+              "offset": 204,
+              "stored_raw_hex": "4200c07f",
+              "view_raw_hex": "4200c07f",
+              "finite_value": null
+            },
+            "negated_D_view": {
+              "offset": 204,
+              "stored_raw_hex": "4200c07f",
+              "view_raw_hex": "4200c0ff",
+              "finite_value": null
+            }
+          },
+          {
+            "group": "section",
+            "index": 5,
+            "offset": 208,
+            "end": 244,
+            "raw_hex": "04000000ffffff7f4200c07f0000000000000080010000000000807f4200c07f00000000",
+            "primitive_type": {
+              "offset": 208,
+              "raw_hex": "04000000",
+              "signed_view": 4
+            },
+            "primitive_name": null,
+            "cut_direction": {
+              "offset": 212,
+              "raw_hex": "ffffff7f",
+              "signed_view": 2147483647
+            },
+            "cut_direction_display_token": null,
+            "normal_components": [
+              {
+                "offset": 216,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 220,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 224,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 228,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 232,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 236,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              }
+            ],
+            "shared_scalar": {
+              "offset": 240,
+              "stored_raw_hex": "00000000",
+              "view_raw_hex": "00000000",
+              "finite_value": 0.0
+            },
+            "negated_D_view": {
+              "offset": 240,
+              "stored_raw_hex": "00000000",
+              "view_raw_hex": "00000080",
+              "finite_value": -0.0
+            }
+          },
+          {
+            "group": "iso",
+            "index": 0,
+            "offset": 244,
+            "end": 280,
+            "raw_hex": "00000000ffffffff0000000000000080010000000000807f4200c07f0000000000000080",
+            "primitive_type": {
+              "offset": 244,
+              "raw_hex": "00000000",
+              "signed_view": 0
+            },
+            "primitive_name": "cylinder",
+            "cut_direction": {
+              "offset": 248,
+              "raw_hex": "ffffffff",
+              "signed_view": -1
+            },
+            "cut_direction_display_token": "Yon",
+            "normal_components": [
+              {
+                "offset": 252,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 256,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 260,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 264,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 268,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 272,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              }
+            ],
+            "shared_scalar": {
+              "offset": 276,
+              "stored_raw_hex": "00000080",
+              "view_raw_hex": "00000080",
+              "finite_value": -0.0
+            },
+            "negated_D_view": {
+              "offset": 276,
+              "stored_raw_hex": "00000080",
+              "view_raw_hex": "00000000",
+              "finite_value": 0.0
+            }
+          },
+          {
+            "group": "iso",
+            "index": 1,
+            "offset": 280,
+            "end": 316,
+            "raw_hex": "010000000100000000000080010000000000807f4200c07f000000000000008001000000",
+            "primitive_type": {
+              "offset": 280,
+              "raw_hex": "01000000",
+              "signed_view": 1
+            },
+            "primitive_name": "plane",
+            "cut_direction": {
+              "offset": 284,
+              "raw_hex": "01000000",
+              "signed_view": 1
+            },
+            "cut_direction_display_token": "Hither",
+            "normal_components": [
+              {
+                "offset": 288,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 292,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 296,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 300,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 304,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 308,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              }
+            ],
+            "shared_scalar": {
+              "offset": 312,
+              "stored_raw_hex": "01000000",
+              "view_raw_hex": "01000000",
+              "finite_value": 1.401298464324817e-45
+            },
+            "negated_D_view": {
+              "offset": 312,
+              "stored_raw_hex": "01000000",
+              "view_raw_hex": "01000080",
+              "finite_value": -1.401298464324817e-45
+            }
+          },
+          {
+            "group": "iso",
+            "index": 2,
+            "offset": 316,
+            "end": 352,
+            "raw_hex": "0200000002000000010000000000807f4200c07f0000000000000080010000000000807f",
+            "primitive_type": {
+              "offset": 316,
+              "raw_hex": "02000000",
+              "signed_view": 2
+            },
+            "primitive_name": "sphere",
+            "cut_direction": {
+              "offset": 320,
+              "raw_hex": "02000000",
+              "signed_view": 2
+            },
+            "cut_direction_display_token": "Both",
+            "normal_components": [
+              {
+                "offset": 324,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 328,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 332,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 336,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 340,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 344,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              }
+            ],
+            "shared_scalar": {
+              "offset": 348,
+              "stored_raw_hex": "0000807f",
+              "view_raw_hex": "0000807f",
+              "finite_value": null
+            },
+            "negated_D_view": {
+              "offset": 348,
+              "stored_raw_hex": "0000807f",
+              "view_raw_hex": "000080ff",
+              "finite_value": null
+            }
+          },
+          {
+            "group": "iso",
+            "index": 3,
+            "offset": 352,
+            "end": 388,
+            "raw_hex": "03000000000000800000807f4200c07f0000000000000080010000000000807f4200c07f",
+            "primitive_type": {
+              "offset": 352,
+              "raw_hex": "03000000",
+              "signed_view": 3
+            },
+            "primitive_name": "iso",
+            "cut_direction": {
+              "offset": 356,
+              "raw_hex": "00000080",
+              "signed_view": -2147483648
+            },
+            "cut_direction_display_token": null,
+            "normal_components": [
+              {
+                "offset": 360,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 364,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 368,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 372,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 376,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 380,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              }
+            ],
+            "shared_scalar": {
+              "offset": 384,
+              "stored_raw_hex": "4200c07f",
+              "view_raw_hex": "4200c07f",
+              "finite_value": null
+            },
+            "negated_D_view": {
+              "offset": 384,
+              "stored_raw_hex": "4200c07f",
+              "view_raw_hex": "4200c0ff",
+              "finite_value": null
+            }
+          },
+          {
+            "group": "iso",
+            "index": 4,
+            "offset": 388,
+            "end": 424,
+            "raw_hex": "04000000ffffff7f4200c07f0000000000000080010000000000807f4200c07f00000000",
+            "primitive_type": {
+              "offset": 388,
+              "raw_hex": "04000000",
+              "signed_view": 4
+            },
+            "primitive_name": null,
+            "cut_direction": {
+              "offset": 392,
+              "raw_hex": "ffffff7f",
+              "signed_view": 2147483647
+            },
+            "cut_direction_display_token": null,
+            "normal_components": [
+              {
+                "offset": 396,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 400,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 404,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 408,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              },
+              {
+                "offset": 412,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 416,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              }
+            ],
+            "shared_scalar": {
+              "offset": 420,
+              "stored_raw_hex": "00000000",
+              "view_raw_hex": "00000000",
+              "finite_value": 0.0
+            },
+            "negated_D_view": {
+              "offset": 420,
+              "stored_raw_hex": "00000000",
+              "view_raw_hex": "00000080",
+              "finite_value": -0.0
+            }
+          },
+          {
+            "group": "iso",
+            "index": 5,
+            "offset": 424,
+            "end": 460,
+            "raw_hex": "00000000ffffffff0000000000000080010000000000807f4200c07f0000000000000080",
+            "primitive_type": {
+              "offset": 424,
+              "raw_hex": "00000000",
+              "signed_view": 0
+            },
+            "primitive_name": "cylinder",
+            "cut_direction": {
+              "offset": 428,
+              "raw_hex": "ffffffff",
+              "signed_view": -1
+            },
+            "cut_direction_display_token": "Yon",
+            "normal_components": [
+              {
+                "offset": 432,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              },
+              {
+                "offset": 436,
+                "stored_raw_hex": "00000080",
+                "view_raw_hex": "00000080",
+                "finite_value": -0.0
+              },
+              {
+                "offset": 440,
+                "stored_raw_hex": "01000000",
+                "view_raw_hex": "01000000",
+                "finite_value": 1.401298464324817e-45
+              }
+            ],
+            "center_components": [
+              {
+                "offset": 444,
+                "stored_raw_hex": "0000807f",
+                "view_raw_hex": "0000807f",
+                "finite_value": null
+              },
+              {
+                "offset": 448,
+                "stored_raw_hex": "4200c07f",
+                "view_raw_hex": "4200c07f",
+                "finite_value": null
+              },
+              {
+                "offset": 452,
+                "stored_raw_hex": "00000000",
+                "view_raw_hex": "00000000",
+                "finite_value": 0.0
+              }
+            ],
+            "shared_scalar": {
+              "offset": 456,
+              "stored_raw_hex": "00000080",
+              "view_raw_hex": "00000080",
+              "finite_value": -0.0
+            },
+            "negated_D_view": {
+              "offset": 456,
+              "stored_raw_hex": "00000080",
+              "view_raw_hex": "00000000",
+              "finite_value": 0.0
+            }
+          }
+        ],
+        "raw_hex": "ffffff7f00000080ffffffff0000000001000000ffffff7f0000008004000000ffffff7f4200c07f0000000000000080010000000000807f4200c07f0000000000000000ffffffff0000000000000080010000000000807f4200c07f0000000000000080010000000100000000000080010000000000807f4200c07f0000000000000080010000000200000002000000010000000000807f4200c07f0000000000000080010000000000807f03000000000000800000807f4200c07f0000000000000080010000000000807f4200c07f04000000ffffff7f4200c07f0000000000000080010000000000807f4200c07f0000000000000000ffffffff0000000000000080010000000000807f4200c07f0000000000000080010000000100000000000080010000000000807f4200c07f0000000000000080010000000200000002000000010000000000807f4200c07f0000000000000080010000000000807f03000000000000800000807f4200c07f0000000000000080010000000000807f4200c07f04000000ffffff7f4200c07f0000000000000080010000000000807f4200c07f0000000000000000ffffffff0000000000000080010000000000807f4200c07f0000000000000080",
+        "sha256": "50ad3a25677ef06f46a0e4e5812132f35e840e19c6bbee13861abdbdec7f821e"
+      }
+    }
+  ]
+}

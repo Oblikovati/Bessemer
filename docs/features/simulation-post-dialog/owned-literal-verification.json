@@ -1,0 +1,42 @@
+{
+  "feature_issue": 166,
+  "implementation_parent": "be3c3629ffe8019612b63e33b37c84488d797511",
+  "behavior_profile": 1,
+  "reference_checks": 45,
+  "all_exit_codes": 0,
+  "all_processes_reaped": true,
+  "owned_contexts": 495,
+  "distinct_versions": 175,
+  "family_contexts": {
+    "dialog": 225,
+    "postinfo": 70,
+    "poststyle": 200
+  },
+  "logical_bytes": 1462773,
+  "all_literal_spans_endpoints_and_reconstruction_match": true,
+  "closed_form_postinfo_rotations": 5,
+  "closed_form_fixed_record_slots": 60,
+  "source_snapshot_identity": "a5e0371e1fb10ec2810d931e916e4ac86ca2f50a82421495cc1cd73ceeebafa9",
+  "family_logical_bytes": {
+    "0": 1355987,
+    "1": 32294,
+    "2": 74492
+  },
+  "oracles": {
+    "owned-reference.json": "17fde0b66ab42b53731d3f155bfbf81a541002dce61e2a8a994e6bcf20966bc7",
+    "owned-postinfo-fields-reference.json": "91a3298eab3af4d23606fa0aea3e5f3465997c1be2919b10078c980cd70f9516"
+  },
+  "logs": {
+    "target/post-dialog-owned-final-write.log": "6113f1639d6401b86d0d904fa18379dc4083b0cb5cf669563c566dcd0f5368e5",
+    "target/post-dialog-owned-final-strict.log": "e9e77cbf614772153d28358f8bf185896cf2bd4fb5072e49bd9442093674d96b"
+  },
+  "exclusions": [
+    "Complete primitive/history/resource operation packets",
+    "Remaining documented bounded policy/consumer views",
+    "Typed Rust read/construction/edit and atomic text profiles",
+    "Malformed/extents/caps, edits, isolation, concurrency and process exports",
+    "Local/platform/ThreadSanitizer gates",
+    "Additional 251-carrier grammar/context resolution",
+    "Native application opening and whole-format parity"
+  ]
+}

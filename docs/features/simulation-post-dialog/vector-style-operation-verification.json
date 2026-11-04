@@ -1,0 +1,106 @@
+{
+  "issue": 166,
+  "behavior_version": "C886-vector-style-local-writes-v1",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "kernel_decision": "Preserve signed raw vector controls and all RGBA bits. Model only bound writes under explicit active-object presence; compose packed nearest-even construction with whole-color copy including alpha one. Preserve older missing groups without initializer fallbacks.",
+  "target_executed": false,
+  "stored_integer_controls": 4,
+  "stored_color_components": 4,
+  "request_contexts": 2922,
+  "active_requests": 1461,
+  "bypassed_requests": 1461,
+  "owned_complete_contexts": 425,
+  "owned_present": 385,
+  "owned_missing": 40,
+  "native_complete_contexts": 276,
+  "native_present": 224,
+  "native_missing": 52,
+  "original_native_stored_sets": 224,
+  "additional_stored_byte_credit": 0,
+  "rust": {
+    "checks": 6,
+    "failed": 0,
+    "ignored": 0,
+    "seconds": 0.2,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/vector-style-rust.log",
+      "bytes": 861,
+      "sha256": "e678a6c5dbf36ba74c638fb061768a74b979a86e016eeb612a1705d590923192"
+    }
+  },
+  "clippy": {
+    "scope": "all-targets all-features -D warnings",
+    "result": "passed",
+    "seconds": 34.77,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/vector-style-clippy.log",
+      "bytes": 136,
+      "sha256": "209c3cc54e639e78f4c534d9b29f8dea215caf7ab4b84b9212a3a6bded90dcad"
+    }
+  },
+  "targeted_source": {
+    "checks": 13,
+    "seconds": 8.711,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/vector-style-request-source-strict.log",
+      "bytes": 2412,
+      "sha256": "6c8f3dc94a692030aba4c712a8ee9798dd936e5b949b3a09100c9ab6d371b446"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/vector-style-source-snapshot.json",
+      "bytes": 562359,
+      "sha256": "0a13f7f1dfe48b8ffbce747c33cf04b643e5e7b9dd12222b2d145c489dcada9e"
+    }
+  },
+  "full_source": {
+    "checks": 150,
+    "seconds": 470.746,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/vector-style-source-full.log",
+      "bytes": 38188,
+      "sha256": "c47460a396ea5899aef753f4d94fd5ff8366bfc6da2822cf4fa526491bf7dedd"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 569390,
+      "sha256": "e0ea3b6938189658ea4f7e869548adb8513838c70d60569a5d226eba874b9372"
+    }
+  },
+  "packet_references": [
+    "vector-style-native-reference.json",
+    "vector-style-projection-reference.json",
+    "vector-style-requests-reference.json"
+  ],
+  "concurrency_workers": 8,
+  "concurrency_scope": "All2922 requests and425 complete owned parent/style views",
+  "process_proof": "vector-style-process-verification.json",
+  "oracle_kinds": [
+    "Every original C886 source/probe pin and exact qualified historical native-color-report transition",
+    "All seven complete installed chain functions, exact object-base links, named exports and contiguous decoded byte coverage",
+    "Complete twelve-byte size leaf, exact stores and packed-constructor/whole-copy import bindings",
+    "Every original native identity, integer, raw RGBA component and byte offset from complete supplied body bytes",
+    "Every packed RGB byte/high byte and raw alpha classes through the actual copied Source constructor",
+    "Signed control boundaries, active/null requests, immutable views, eight-worker and two-fresh-process comparisons",
+    "Regression checks for existing C885 method bindings and rejection of meaningful prefix/operand changes"
+  ],
+  "excluded": [
+    "Actual SolidWorks execution or observed per-file setter invocation",
+    "Inferred pixel units, density meanings or selector value restrictions",
+    "Guessed older field defaults or legacy migration values",
+    "Ambient native floating-point rounding state",
+    "Downstream density recalculation/update effects and complete native return/failure behavior",
+    "Geometry/rendering validity and global coverage credit"
+  ],
+  "pending": [
+    "Latest complete publication-cut PR and cross-platform/ThreadSanitizer gates",
+    "Remaining annotation, style, rendering and preference roles"
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+}

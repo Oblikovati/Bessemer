@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Partitioned the complete ThreadSanitizer workload across eight required CI jobs to keep validation within hosted-runner time limits. (#183)
+
 - Corrected the planned Simulation Material text contract to retain accepted odd-byte frames without a UTF-16 view. (#141)
 
 - Fixed load edits that discarded embedded CString length-prefix changes as semantic no-ops. (#137)
@@ -37,6 +39,82 @@
 - Fixed reference-plane point roles rejecting documented endpoint and loft-sync subclasses for fresh and cached pointers. (#46)
 
 ### Added
+
+- Added complete conditional PostStyle comparison plans with ordered checks, shared scalar/color storage, preserved source histories and explicit SSE assumptions. (#166)
+
+- Added local A8/preference zero-test projections with original signed values, guarded assignment paths and completed early-return results. (#166)
+
+- Added optional legend locale-grouping views that retained arbitrary signed C0 controls and kept absent wire fields separate from reader resets and runtime locale state. (#166)
+
+- Added explicit legend reader reset plans with ordered derived zero assignments, version history and separate unsupported raw-class results. (#166)
+
+- Added explicit legacy hidden-parts load projections with both derived runtime words, exact adjacent-store coverage and retained original wire values. (#166)
+
+- Added optional legend B4 views and exact nearest-even width projections with explicit font/selector facts, preserved intermediate bits and independent rational rounding checks. (#166)
+
+- Added optional legend end-cell E8/EC views and exact local gate/RGB projections with explicit read-time facts, short-circuit completion and preserved alpha provenance. (#166)
+
+- Added local 3D legend buffer/mapping request and background-input projections with explicit phase facts, exact saturation/wrapping, packed constructor bits and rendering-validity exclusions. (#166)
+
+- Added local legend step-layout projections with explicit post-helper FC/runtime facts, exact signed division and wrapping arithmetic, early-return completion and reached-read diagnostics. (#166)
+
+- Added optional legend FC layout views and exact runtime step-availability results with raw signed BEC returns, complete runtime history and reached-word coverage. (#166)
+
+- Added stored legend yield-color views and exact local gray-mapper call plans with explicit runtime split and post-suffix facts, raw color preservation, signed counts and wrapped byte offsets. (#166)
+
+- Added raw legend cell-count views and immutable exact32 height-product projections from explicit helper results, preserving overflow bits and runtime/font qualifications. (#166)
+
+- Added typed legend palette controls and immutable local dispatcher plans with explicit gray-helper/plot facts, raw count diagnostics and consumed-parent history. (#166)
+
+- Added immutable legend position-factor views with raw binary32 values, exact wire spans, revision-bound field IDs and copied-source provenance. (#166)
+
+- Added typed legend format construction and alternate selection with raw signed controls, explicit runtime facts, wrapping widths and complete local provenance. (#166)
+
+- Added eight typed preference-color projections with explicit pointer/type applicability, nearest-even RGB, preserved/raw-copy alpha policies and consumed-source history. (#166)
+
+- Added immutable conditional1DC RGB group plans and fixed-slot array copies with distinct primary/reflected filters, explicit growth facts and complete parent history. (#166)
+
+- Added guarded element-segment RGB reads with explicit runtime dependencies, preserved raw RGBA and separate endpoint-geometry exclusions. (#166)
+
+- Added numeric plot54 local color plans with ordered runtime dependencies, original copied colors and explicit masked alpha semantics. (#166)
+
+- Added explicit Simulation primary-text assignment and eight-position display selection, preserving unknown runtime state, counted payloads and per-stage provenance. (#166)
+
+- Added complete local Simulation hidden-parts/model-tessellation triangle color plans with explicit caller facts, ordered lookup filters, owned provenance and masked DAZ/FTZ-off alpha semantics. (#166)
+
+- Added auxiliary-triangle controls and bounded immutable call plans with runtime rejection reasons, color provenance and explicit payload-validation exclusions. (#166)
+
+- Added independent raw Min/Max annotation controls and the separate glyph-material adjustment predicate with explicit runtime context. (#166)
+
+- Added raw vector-style controls and explicit local size, density and whole-color write models with preserved older field absence. (#166)
+
+- Added raw PostStyle word views, explicit initializer assignments and local preference transitions with preserved missing state. (#166)
+
+- Added the conditional local rendering predicate over exact stored counts and position bits, with explicit missing legacy state. (#166)
+
+- Added numeric unit selection with explicit optional runtime context, exact ActualFreqDispFlag gating and typed missing-context results. (#166)
+- Added the static component-vector model with verified tables, exact four-word outputs, dispatch provenance and explicit loaded-text context. (#166)
+- Added optional-state offset decisions and raw-preserving fringe views with explicit modeled runtime transitions and call-order effects. (#166)
+- Added raw-preserving legend body-entry and model-tessellation request views with explicit runtime presence and missing-state errors. (#166)
+- Added explicit loaded legend comparison inputs, conditional native comparison dependencies and typed missing-state/count failures. (#166)
+- Added conditional RGBA comparison predicates with explicit masked-exception/DAZ-off semantics, preserving stored bitwise equality. (#166)
+- Added explicit nearest-even COLORREF export with signed truncation, byte wrapping and typed outside-model diagnostics. (#166)
+
+- Added explicit nearest-even COLORREF construction and assignment models with exact alpha handling and integer-only rounding. (#166)
+
+- Added shared raw RGBA views for parent dialogs and PostStyle bodies with complete color spans and finite-channel values. (#166)
+
+- Added typed ContourType conversions, explicit plot-context defaults and the bounded four-word PostInfo render comparison. (#166)
+
+- Added named PostInfo slot and header views with preserved unknown codes, raw vectors and exact D sign-bit aliases. (#166)
+
+- Added raw-preserving dialog range and deformation-scale views with explicit unknown-selector fallback. (#166)
+
+- Added complete versioned DGXPOST dialog reads, construction and isolated typed edits with bounded reference archives and ordered provenance. (#166)
+
+- Added complete versioned PostStyle reads, construction and isolated edits with legacy style/legend partitions, exact color bits and atomic character text. (#166)
+
+- Added complete fixed-slot PostInfo reads, construction and isolated edits with preserved float32 patterns and the exact version700002 character-text suffix. (#166)
 
 - Added complete documented graph parameter reads, construction and isolated edits with atomic character-count text and preserved raw eight-byte values. (#165)
 

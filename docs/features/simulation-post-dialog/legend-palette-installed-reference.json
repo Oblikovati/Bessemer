@@ -1,0 +1,21 @@
+{
+  "module_sha256": "2fa0173c92d0f3193deeb048c008bd04c37daaefb80cc175704249164acff44a",
+  "complete_instruction_counts": [
+    36,
+    584
+  ],
+  "exact_decoder_qualifications": 1,
+  "qualifications": [
+    {
+      "address": "0x1800da9cc",
+      "original": "1800da9cc add rcx, -0xc",
+      "canonical": "1800da9cc add rcx, 0xfffffffffffffff4",
+      "raw_hex": "4883c1f4",
+      "kind": "Exact sign-extended immediate-byte assembly spelling; #172"
+    }
+  ],
+  "target_executed": false,
+  "interpolation_modeled": false,
+  "actual_runtime_plot_known": false,
+  "gray_output_established": false
+}

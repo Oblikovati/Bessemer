@@ -1,0 +1,80 @@
+{
+  "issue": 166,
+  "scope": "named physical PostInfo cut slots, stored header and forward contour preference view",
+  "source_contexts": 5,
+  "source_slots": 60,
+  "packet_reference": "cut-view-packet-reference.json",
+  "rust": {
+    "checks": 17,
+    "failed": 0,
+    "ignored": 0,
+    "seconds": 0.5,
+    "log": {
+      "path": "target/postinfo-named-views-all.log",
+      "bytes": 1683,
+      "sha256": "6545794bf4a30d5e44aba5f0ca3a4ce11f859347f0049597b410888aa3914ba4"
+    }
+  },
+  "clippy": {
+    "path": "target/postinfo-named-views-clippy.log",
+    "bytes": 136,
+    "sha256": "6e1c49b1ea71138b086449406af0ea7bdea4149621c10634131d7fefd42aa0ad"
+  },
+  "targeted_source": {
+    "checks": 10,
+    "seconds": 2.18,
+    "log": {
+      "path": "target/postinfo-named-views-source-strict.log",
+      "bytes": 1463,
+      "sha256": "c29035e9c27aae1527acbc6e4315b41f54a4f3559e8656d489070e68dc9eb94f"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/postinfo-view-source-snapshot.json",
+      "bytes": 515649,
+      "sha256": "45868b294ad4eacb6991585c885152298bfb72c2bebc822d803c13e55922f699"
+    }
+  },
+  "pending": [
+    "Publication gates and later consumer roles, reverse/default contour policy and runtime comparison."
+  ],
+  "exclusions": [
+    "No inferred geometry, coordinate frame, normalization, active-slot rule or unknown-code fallback."
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "final_rust": {
+    "checks": 18,
+    "failed": 0,
+    "ignored": 0,
+    "log": {
+      "path": "target/postinfo-named-views-final.log",
+      "bytes": 1784,
+      "sha256": "b6613586eecde573163207deea6e01d4eadf248b26968b517e982d6a17445758"
+    }
+  },
+  "final_clippy": {
+    "path": "target/postinfo-named-views-final-clippy.log",
+    "bytes": 135,
+    "sha256": "ca88248f2a4ba2d871f10bde542c8296b4a24e224b5babaddaee1a1537a6f305"
+  },
+  "full_source": {
+    "checks": 61,
+    "seconds": 352.335,
+    "log": {
+      "path": "target/postinfo-named-views-full-strict.log",
+      "bytes": 23337,
+      "sha256": "94c4eb75f55f00dd413b46b4d9532d4cea659a5335e6bf264e3c618032e21102"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 524288,
+      "sha256": "cffb25bf9a5ecfcdf8ef40f050e9925a3806f92c31b7d972d1368f0dbb672b9d"
+    }
+  },
+  "native_named_roles": {
+    "physical_blocks": 60,
+    "physical_slots": 720,
+    "retained_helper_arguments": 120,
+    "repeated_slot_observations": 1440,
+    "additional_byte_credit": 0
+  }
+}

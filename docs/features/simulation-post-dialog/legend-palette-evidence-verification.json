@@ -1,0 +1,89 @@
+{
+  "issue": 166,
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "target_executed": false,
+  "additional_stored_byte_credit": 0,
+  "complete_installed_instruction_counts": [
+    36,
+    584
+  ],
+  "independent_ghidra_instruction_count": 620,
+  "native_accepted_contexts": 276,
+  "native_raw_word_observations": 1040,
+  "original_rejected_contexts": 8,
+  "owned_complete_contexts": 425,
+  "opaque_older_owned_contexts": 20,
+  "exact_historical_color_report_transitions": 1,
+  "exact_decoder_qualifications": 1,
+  "decoder_bug": 172,
+  "initial_decoder_failure": {
+    "checks": 17,
+    "failed": 1,
+    "seconds": 5.345,
+    "process_exit_code": 1,
+    "reason": "Exact signed immediate-byte text alias at 0x1800da9cc; original/canonical strings and 4883c1f4 bytes remain pinned",
+    "log": {
+      "path": "target/legend-palette-source-write.log",
+      "bytes": 3751,
+      "sha256": "31734189104846c0ab8d80403cdd43be2338c8d43c82526796f85c61bd816bc5"
+    }
+  },
+  "strict_source": {
+    "checks": 17,
+    "seconds": 6.483,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-palette-source-strict.log",
+      "bytes": 2624,
+      "sha256": "b59d89d658afba33de2b7a0b2caf3b24fc8cf24fdc95654130eb0dbfe2a83274"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/legend-palette-source-snapshot.json",
+      "bytes": 625435,
+      "sha256": "4e925f1676922c40391b22af9efd5e32ea594d7f2697407ca0aeadb5272bd065"
+    }
+  },
+  "installed_proof": "legend-palette-installed-reference.json",
+  "independent_decoder": "legend-palette-rea-reference.json",
+  "oracle_kinds": [
+    "Original unchanged Source raw-control model and both original tests",
+    "Exact complete36/584 installed instruction bodies, named exports, three dispatcher targets, provider constructor/copy imports and decompilation pins",
+    "Independent620 Ghidra instruction locations and both complete contiguous body extents",
+    "All276 accepted native contexts with original identities/multiplicity, selected versions, prefix/EOF scope, raw values and supplementary flag/count diagnostics",
+    "All eight rejected identities matched to complete retained failed helper attempts",
+    "All425 complete owned contexts, actual spans, opaque older styles and version-conditioned D4 absence",
+    "Exact four-byte/address/original-text qualification with all single-byte mutations, changed register/immediate/operand width and unknown-address rejection; global normalization unchanged"
+  ],
+  "excluded": [
+    "Native target execution, complete interpolation and actual runtime color output",
+    "Inferring gray output from the stored flag, or a runtime plot pointer/word from stored mode4",
+    "Count-sized wire arrays, native runtime count validity from the 0..9 diagnostic, clamping or unknown enum names",
+    "Absent-field defaults, new byte credit and whole-format acceptance from original prefix scopes"
+  ],
+  "pending": [
+    "Remaining documented feature166 models",
+    "Exact publication-cut PR and all five platform gates",
+    "Bug172 integration with feature166"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 238,
+    "seconds": 467.785,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "1b204b9039a02c1c44b25c593e1388c29b1128d3",
+    "log": {
+      "path": "target/legend-palette-source-full.log",
+      "bytes": 54380,
+      "sha256": "45814980911982b6fbac7a5a58ea66d4610a1ea0a84d25bdc202b0a5bd479c5d"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 633132,
+      "sha256": "5ea5c703086d933141b651273e7969b61c4c4260f3286269cb215db518184e33"
+    }
+  },
+  "current_operation_proof": "legend-palette-operation-verification.json"
+}

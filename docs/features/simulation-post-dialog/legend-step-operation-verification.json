@@ -1,0 +1,128 @@
+{
+  "issue": 166,
+  "behavior_version": "C851-explicit-runtime-availability-v1",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "target_executed": false,
+  "kernel_decision": "Keep optional raw FC as a stored layout role with no availability input path. Require all six explicit signed32 runtime plot words, evaluate the complete ordinary gate/plot21 override/analysis8-BE8 branch and preserve the exact raw BEC return. Record the native reached-read mask, including BD8 before the later override, and retain every original runtime parent in immutable derived history. Return zero/nonzero completion, exact coverage, zero pattern error and pointer/native/renderer qualifications without runtime inference or boolean normalization.",
+  "complete_probe_instruction_counts": [
+    14,
+    14,
+    129,
+    373,
+    25
+  ],
+  "independent_body_instruction_count": 552,
+  "separately_pinned_int3_tail_bytes": 3,
+  "public_send_sync_types": 7,
+  "operation_cases": 102272,
+  "owned_complete_contexts": 425,
+  "complete_fc_mutants": 268,
+  "native_accepted_contexts": 276,
+  "original_rejected_contexts": 8,
+  "owned_absent_fc_contexts": 312,
+  "native_absent_fc_contexts": 167,
+  "hypothetical_contexts_per_parent": 8,
+  "runtime_requests": 110024,
+  "stored_fc_views": 969,
+  "additional_stored_byte_credit": 0,
+  "exact_historical_color_report_transitions": 1,
+  "exact_decoder_qualifications": 0,
+  "rust": {
+    "checks": 11,
+    "failed": 0,
+    "ignored": 0,
+    "seconds": 0.24,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-step-rust-final.log",
+      "bytes": 1229,
+      "sha256": "f5fd58c820158a32687e63c86692a84af3cf1636b3aa9a72e1ba669fe8d39dd2"
+    }
+  },
+  "clippy": {
+    "arguments": "--all-targets --all-features -- -D warnings",
+    "seconds": 44.06,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-step-clippy.log",
+      "bytes": 136,
+      "sha256": "8a081d9b3f648e70c1262d6d2084542dadf27c159d1923db3e8ead993207d6ec"
+    }
+  },
+  "initial_freeze": {
+    "checks": 20,
+    "seconds": 6.966,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-step-operation-source-write.log",
+      "bytes": 3105,
+      "sha256": "fb65910e17d99be3e0d5b865b0cefab36a47264fe6001604d8298fd52d74e3c9"
+    }
+  },
+  "strict_source": {
+    "checks": 20,
+    "seconds": 6.794,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-step-operation-source-strict.log",
+      "bytes": 3105,
+      "sha256": "2c9f9d80c8d8b835f2f1d8857c854c17da8c562b3338b505588460a312043387"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/legend-step-source-snapshot.json",
+      "bytes": 625403,
+      "sha256": "803327a693daa74fc43d7496613cbbc858bee2b8c419b85f431215c0c20f954b"
+    }
+  },
+  "process_proof": "legend-step-process-verification.json",
+  "operation_packet": {
+    "path": "tests/fixtures/simulation-post-dialog/legend-step-operations.bin",
+    "bytes": 3681800,
+    "sha256": "4a40a1c254455907aae7ee106c34ee92cac7e718f9adc0f80fbf067919287791"
+  },
+  "owned_projection_packet": {
+    "path": "tests/fixtures/simulation-post-dialog/legend-step-projection.bin",
+    "bytes": 1766767,
+    "sha256": "3a995ac205c7ff02d3780fcd4b8c0534d366573affa8f26466f715e76c0c46c9"
+  },
+  "oracle_kinds": [
+    "All original C851 instruction/probe/body/source evidence and original acceptance/rejection scopes",
+    "Original frozen Source explicit-word availability policy plus independently bound native reached-read predicates",
+    "Every count/type/analysis/BD8/BE8/BEC boundary combination and deterministic generated raw returns",
+    "425 owned and276 native complete parents plus268 complete FC mutants, preserving bytes, absence and raw signed words",
+    "Compile-time Send+Sync for all seven public types, input isolation and eight-worker operation/owned/native comparisons",
+    "Two fresh Rust processes matched all332010 independent expected words byte for byte with exact export-test execution checked"
+  ],
+  "excluded": [
+    "Native execution and runtime pointer safety",
+    "Availability inferred from FC, a stored step number or default runtime words",
+    "Boolean-normalized BEC values or UI visibility labels",
+    "Local layout/renderer/text/pixel output or helper-boundary state assumptions",
+    "New stored-byte credit or broader original native acceptance"
+  ],
+  "pending": [
+    "Remaining documented feature166 models",
+    "Exact publication-head cargo xtask pr and all five platform gates"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 265,
+    "seconds": 476.008,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "3da9e7655f870b99eab490fe0247e05b4d6122fe",
+    "log": {
+      "path": "target/legend-step-operation-source-full.log",
+      "bytes": 59302,
+      "sha256": "4cdade7536bed0c212fcf5bda8745c6f8c9a57359fe86758cbf40679882ed508"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 633446,
+      "sha256": "13353a22a7beee22307c77d750ac3c3ed2574f78e8b8f5a9275a81600e1dc5f9"
+    }
+  },
+  "current_layout_operation_proof": "legend-step-layout-operation-verification.json"
+}

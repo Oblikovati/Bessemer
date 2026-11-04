@@ -1,0 +1,57 @@
+{
+  "issue": 166,
+  "operation": "complete versioned parent DGXPOST read, construction and isolated edit",
+  "local_status": "passed",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "pr_gate": {
+    "command": "cargo xtask pr",
+    "passed": 3561,
+    "failed": 0,
+    "ignored": 118,
+    "summaries": 269,
+    "log": {
+      "path": "target/post-dialog-operation-pr-gate.log",
+      "bytes": 452802,
+      "sha256": "6ab16d8b31aacab99f5eb0cdf0befb696f23e46b461f95f9713b660709d012f1"
+    },
+    "scope": "Runtime code and 23-test parent suite at gate compilation; later added boundary tests and public alias assertions verified separately."
+  },
+  "supplemental_checks": {
+    "boundary_and_traits": {
+      "path": "target/post-dialog-final-boundaries.log",
+      "bytes": 754,
+      "sha256": "d093e1e9cd53f01a5a45cc9575e0beb7e9ea8e7c7a84dfb634f99ad1d0736572"
+    },
+    "all_target_clippy": {
+      "path": "target/post-dialog-final-clippy.log",
+      "bytes": 135,
+      "sha256": "e4fafdbd56bc73c15d886fd9ef64b7908eb660ded535570ec04ab1b43c4b8d79"
+    }
+  },
+  "source": {
+    "checks": 61,
+    "seconds": 492.705,
+    "log": {
+      "path": "target/post-dialog-sixty-one-strict.log",
+      "bytes": 23337,
+      "sha256": "43d941c0b5496e6a3e7864df636ec8a12d413a67f20f2df2c8767fc59975afec"
+    }
+  },
+  "proofs": [
+    "parent-focused-verification.json",
+    "resource-verification.json",
+    "cap-verification.json",
+    "process-pair-verification.json"
+  ],
+  "owned_contexts": 225,
+  "native_contexts": 224,
+  "unresolved_legacy_contexts_retained": 251,
+  "remaining": [
+    "Cross-platform and ThreadSanitizer acceptance at publication.",
+    "Later documented named field roles and bounded consumer views under issue #166."
+  ],
+  "exclusions": [
+    "Stored profiles do not establish application dispatch or geometry validity.",
+    "No lower version is selected for the unresolved legacy cohort."
+  ]
+}

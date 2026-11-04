@@ -1,0 +1,96 @@
+{
+  "issue": 166,
+  "behavior_version": "C846-local-format-v1",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "target_executed": false,
+  "kernel_decision": "Primary requires B8 then BC and constructs the Source-selected e/f/g format with signed32 wrapping width. Alternate requires output-pointer presence, mode, enable, original binary32 magnitude, selector then precision in native order, skipping unused dependencies. Sign-cleared binary32 integer classification uses the independently proven inclusive endpoints 0x3a83126f and 0x447a0000 under masked exceptions and DAZ-off assumptions. Completed plans retain every supplied parent, explicit bypass/constructed status, optional derived string, read mask, diagnostics and zero local pattern error without edits or native formatting.",
+  "operation_cases": 79488,
+  "owned_complete_contexts": 425,
+  "native_complete_contexts": 276,
+  "hypothetical_calls_per_context": 7,
+  "local_requests": 84395,
+  "additional_stored_byte_credit": 0,
+  "rust": {
+    "checks": 7,
+    "failed": 0,
+    "ignored": 0,
+    "seconds": 0.24,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-format-rust-final.log",
+      "bytes": 913,
+      "sha256": "735a3eac42dd714b508b93bb4a2121a97c0f7ac82033ef7a6c012f39a5598bde"
+    }
+  },
+  "clippy": {
+    "scope": "all-targets all-features -D warnings",
+    "result": "passed",
+    "seconds": 0.79,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-format-clippy.log",
+      "bytes": 135,
+      "sha256": "e8db17a0e4df2bbd5e32fdc986968243abc5f8893b4a7b613551b6581ed30e82"
+    }
+  },
+  "strict_source": {
+    "checks": 19,
+    "seconds": 6.175,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-format-operation-source-strict.log",
+      "bytes": 3046,
+      "sha256": "3a20440dce4f70f31bbc42dff1334ec5b60ff939840822a33c0208ad3b3a1227"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/legend-format-source-snapshot.json",
+      "bytes": 625411,
+      "sha256": "02e5197e21b6988b889f91be434d0e3d69d2e5ade930c2584f6bbd8b8bf6a933"
+    }
+  },
+  "kernel_proof": "legend-format-kernel-reference.json",
+  "installed_proof": "legend-format-installed-reference.json",
+  "independent_decoder": "legend-format-rea-reference.json",
+  "evidence_proof": "legend-format-evidence-verification.json",
+  "process_proof": "legend-format-process-verification.json",
+  "concurrency_workers": 8,
+  "public_send_sync_assertions": 8,
+  "ownership": "Plans own bounded Strings and retain copied scalar/optional input and runtime parents. No borrowed archive/runtime storage or mutation path survives publication. Every fixture checks original inputs unchanged on success/failure; all six completed branches remain unchanged after original words/runtime mutation. Owned and native complete-body projections retain round-trip bytes and repeated getters and match serial/eight-worker results.",
+  "oracle_kinds": [
+    "Unchanged pinned Source format_string and decode_fields models, both original tests and original complete corpus observations",
+    "Complete146 installed instructions, exact exports, five literals, three constants, complete Ghidra extents and branch-order anchors",
+    "Independent Python binary32 decoding and binary64 lower-bound comparison, adjacent endpoints and340 signed raw magnitude patterns",
+    "All16 word-presence masks, unknown/null/present runtime pointers, unknown/known values, signed wrapping widths, unknown modes and raw nonzero flags/selectors",
+    "Complete425 owned and276 native retained contexts with seven explicitly hypothetical calls each and no filling absent fields",
+    "Eight workers and two fresh processes match all84395 independent expected result packets"
+  ],
+  "excluded": [
+    "Native target execution, native CString/printf numeric rendering, actual invocation and FP environment",
+    "Output-string contents after skipped assignment, localization or actual runtime value/pointer state",
+    "Initializer defaults, whole-format acceptance from prefix scopes, new byte coverage or wire edits"
+  ],
+  "pending": [
+    "Exact publication-cut PR validation and all five platform checks",
+    "Remaining feature166 documented models and integration"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 223,
+    "seconds": 711.138,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "c3795b0d205af68008ae6a5223060130fe62e42b",
+    "log": {
+      "path": "target/legend-format-operation-source-full.log",
+      "bytes": 51705,
+      "sha256": "006afa942b460908a025ef29b8f6c6aeedab3f50e58a776e5c5010471f4695dd"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 632456,
+      "sha256": "3a6622e528f7b5947ca02b3049ff39e4cf033b4888f69eae9a79a4ddfde5fa59"
+    }
+  }
+}

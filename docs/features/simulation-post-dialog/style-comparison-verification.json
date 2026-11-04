@@ -1,0 +1,128 @@
+{
+  "issue": 166,
+  "specification": "14.483/C-863",
+  "scope": "Evidence foundation for conditional PostStyle comparison and cross-check of existing local preference copy",
+  "platform": "Windows x64",
+  "module_sha256": "2fa0173c92d0f3193deeb048c008bd04c37daaefb80cc175704249164acff44a",
+  "native_target_executed": false,
+  "complete_instruction_counts": [
+    107,
+    38
+  ],
+  "complete_body_bytes": 676,
+  "exact_decoder_qualifications": 0,
+  "color_inequality_call_sites": 7,
+  "original_report_rows": 284,
+  "accepted_native_contexts": 276,
+  "rejected_native_candidates": 8,
+  "original_control_words": 2136,
+  "original_control_bytes": 8544,
+  "owned_complete_contexts": 425,
+  "owned_raw_class_absences": 20,
+  "additional_byte_credit": 0,
+  "initial_source": {
+    "checks": 12,
+    "seconds": 8.64,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/style-comparison-source-initial.log",
+      "bytes": 2052,
+      "sha256": "1584ca3fbf34dc2d3100de50d0da72d8ae5d92e5c8a689e1a95f53bb17da22fa"
+    }
+  },
+  "strict_source": {
+    "checks": 12,
+    "seconds": 7.626,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/style-comparison-source-strict.log",
+      "bytes": 2052,
+      "sha256": "ee6c7c7f73f973170ac122b7faa638a0af4be9aba5766c4031e381dc2111c143"
+    }
+  },
+  "snapshot": {
+    "path": "docs/features/simulation-post-dialog/style-comparison-source-snapshot.json",
+    "bytes": 624751,
+    "sha256": "fced78aac99064e29fbc549e2ab73a5de50f4800a3d73cde00dcab4f1790ea89"
+  },
+  "captures": [
+    {
+      "path": "docs/features/simulation-post-dialog/style-comparison-rea-diff.json",
+      "bytes": 16233,
+      "sha256": "a8b3eb6e71de9235df03adbafcef75e0f59698cbba8ab60b6fdda3d4d608c883"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/style-comparison-rea-copy.json",
+      "bytes": 10073,
+      "sha256": "9dd18c89d81c558783fd3ae417e3d73c860b35562fc3d5543a77ee01e6e841f9"
+    }
+  ],
+  "delegate_coverage": {
+    "legend_comparison": "Complete existing C871 body verified",
+    "color_comparison": "Both complete existing C864 leaves verified",
+    "legend_preference_copy": "Named call destination verified; implementation excluded"
+  },
+  "kernel_decision": "Bind complete native instruction order and conditional payload dependencies without treating raw equality as float/color equality. Preserve original control patterns and inactive payloads. Keep stored legacy1F0 words separate from loaded migration results. Cross-check the already modeled local234/238 copy branch rather than adding a duplicate implementation. Retain typed-comparator and independent operation-oracle work as pending.",
+  "oracle_kinds": [
+    "Complete original GNU/Ghidra method bodies and all145 exact instruction locations",
+    "Exact exports,decompilation hashes,seven color IAT calls and named legend compare/copy destinations",
+    "Original276 accepted identities,eight rejected candidates and2136 absolute raw word spans",
+    "425 complete owned parents,arbitrary raw controls and20 raw-class absences",
+    "All2776 captured old routing cases and four original style/color tests"
+  ],
+  "excluded": [
+    "Native execution or observed SSE environment",
+    "Complete typed style comparator or whole preference-copy emulation",
+    "Wire words as actual loaded state,constructor defaults or automatic legacy migrations",
+    "UI enum ranges,discarding inactive payloads,additional byte credit or expanded native admission"
+  ],
+  "pending": [
+    "Remaining feature166 models",
+    "Exact publication-head cargo xtask pr and all five platform gates"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "legend_constructor_extraction": {
+    "public_behavior_changed": false,
+    "public_api_added": false,
+    "owned_tests_passed": 7,
+    "native_tests_deferred": 3,
+    "fixture_changes": false,
+    "log": {
+      "path": "target/style-comparison-legend-extraction.log",
+      "bytes": 1331,
+      "sha256": "3434f73493c07d97238ba43113230b119da9a1d2da859f6bc547fecd48ad7959"
+    },
+    "owned_fixtures": [
+      {
+        "path": "tests/fixtures/simulation-post-dialog/legend-comparison.bin",
+        "bytes": 4390604,
+        "sha256": "85e8a69d20a2d49f3a1ba16ebdcfa9e0f220c81e9ccfc67f551a4b2fd0e1f747"
+      },
+      {
+        "path": "tests/fixtures/simulation-post-dialog/legend-style-projection.bin",
+        "bytes": 128900,
+        "sha256": "f1d63caf65b78f6b3b4acb0809b01266e79ffb049d677c54c85112321485bad5"
+      }
+    ]
+  },
+  "full_integrated_source": {
+    "checks": 336,
+    "seconds": 566.186,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "accepted_source_cut": "a0e62ea608a059e036aba451d7c5c95f2b9fec69",
+    "log": {
+      "path": "target/style-comparison-source-full.log",
+      "bytes": 72424,
+      "sha256": "c97270c7b05a01aa946a96a4418e65ea62d880d0d22aacf71b484ff20b5bf51a"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 634468,
+      "sha256": "9010175a40a5db53f3809241cde3ff26a0727123216e063ffa987e5260ac9403"
+    }
+  },
+  "typed_operation_verification": "style-comparison-operation-verification.json"
+}
