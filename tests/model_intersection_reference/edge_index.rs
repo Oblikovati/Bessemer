@@ -160,12 +160,7 @@ fn last_edge_in_complete_full_domain_owner_accepts_arbitrary_signed_index() {
         .intersection_edge_index(&source.field_handle(position).unwrap())
         .unwrap();
     assert_eq!(state.value(), i32::MAX);
-    let row = include_str!("../fixtures/intersection-index-classification/scalars.tsv")
-        .lines()
-        .filter(|row| row.starts_with("264\tindex\t"))
-        .nth(16383)
-        .unwrap();
-    let offset = row.split('\t').nth(2).unwrap().parse().unwrap();
+    let offset = role_domain_scalar_offset("index", 16383);
     verify_index_edit(&source, raw, &state, offset, i32::MIN);
     assert_eq!(source.to_bytes().unwrap(), raw);
 }

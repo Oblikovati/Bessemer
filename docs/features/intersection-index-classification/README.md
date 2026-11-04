@@ -42,8 +42,10 @@ all u16 selector replacements and the complete signed-index matrix preserve
 unselected fields and exact history. Both fresh Source processes accepted
 every actual signed-index output. The bounded document matrix also passed
 all 2,640 changes and reversals per process, preserving unrelated streams
-and restoring each original file byte for byte. Selector output replay and
-the remaining large/native/concurrency/publication gates are pending.
+and restoring each original file byte for byte. Two fresh runs also passed
+both late-field edits in the complete 16,384-edge owner, including full
+document reopen and exact reversal. Selector output replay and the remaining
+native/concurrency/publication gates are pending.
 
 Implementation must reuse the complete archive readers and revision-owned
 edit/history contracts. Require independent complete roots and literal

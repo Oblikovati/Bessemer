@@ -34,6 +34,27 @@ const CONTROL: &[u8] = include_bytes!("fixtures/intersection-reference-match/con
 const MATRIX: &[u8] = include_bytes!("fixtures/intersection-reference-match/matrix.bin");
 const WORDS: &str = include_str!("fixtures/intersection-reference-match/matrix-words.tsv");
 const ROLE_PACKET: &[u8] = include_bytes!("fixtures/intersection-index-classification/roots.bin");
+const ROLE_FULL_LIMITS: ModelArchiveLimits = ModelArchiveLimits {
+    maximum_bytes: 64 * 1024 * 1024,
+    maximum_fields: 2_000_000,
+    maximum_entries: 2_000_000,
+    maximum_depth: 128,
+    maximum_objects: 100_000,
+};
+
+fn role_domain_scalar_offset(kind: &str, ordinal: usize) -> usize {
+    let prefix = format!("264\t{kind}\t");
+    include_str!("fixtures/intersection-index-classification/scalars.tsv")
+        .lines()
+        .filter(|row| row.starts_with(&prefix))
+        .nth(ordinal)
+        .unwrap()
+        .split('\t')
+        .nth(2)
+        .unwrap()
+        .parse()
+        .unwrap()
+}
 
 fn intersection_context() -> (PartConfigurationArchive, Vec<u8>) {
     let document = Document::from_bytes(include_bytes!("fixtures/blank-part.SLDPRT")).unwrap();

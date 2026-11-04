@@ -181,14 +181,8 @@ pub(super) fn full_selector_domain_archive() -> (PartResolvedFeaturesArchive, &'
     }
     let raw = next_intersection_image(&mut cursor);
     assert!(cursor.is_empty());
-    let limits = ModelArchiveLimits {
-        maximum_bytes: 64 * 1024 * 1024,
-        maximum_fields: 2_000_000,
-        maximum_entries: 2_000_000,
-        maximum_depth: 128,
-        maximum_objects: 100_000,
-    };
-    let source = PartResolvedFeaturesArchive::from_bytes(raw, context, &manager, limits).unwrap();
+    let source =
+        PartResolvedFeaturesArchive::from_bytes(raw, context, &manager, ROLE_FULL_LIMITS).unwrap();
     (source, raw)
 }
 
@@ -212,19 +206,6 @@ fn full_selector_domain_fields(source: &PartResolvedFeaturesArchive) -> Vec<(usi
         .collect()
 }
 
-fn final_full_domain_group_offset() -> usize {
-    include_str!("../fixtures/intersection-index-classification/scalars.tsv")
-        .lines()
-        .filter(|row| row.starts_with("264\tgroup\t"))
-        .nth(65535)
-        .unwrap()
-        .split('\t')
-        .nth(2)
-        .unwrap()
-        .parse()
-        .unwrap()
-}
-
 #[test]
 fn complete_full_u16_owner_reconstructs_every_selector_and_edits_its_last_physical_group() {
     let (source, raw) = full_selector_domain_archive();
@@ -243,7 +224,7 @@ fn complete_full_u16_owner_reconstructs_every_selector_and_edits_its_last_physic
         &source,
         raw,
         &state,
-        final_full_domain_group_offset(),
+        role_domain_scalar_offset("group", 65535),
         0x5aa5,
     );
     assert_eq!(source.to_bytes().unwrap(), raw);

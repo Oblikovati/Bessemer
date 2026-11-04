@@ -1,0 +1,88 @@
+{
+  "issue": 185,
+  "stage": "Complete bounded and full-u16-owner document role edits",
+  "processes_reaped": 2,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "tests_per_process": 2,
+  "test_seconds": [
+    23.22,
+    19.91
+  ],
+  "bounded_cases_per_process": 264,
+  "large_cases_per_process": 1,
+  "large_feature_bytes": 1672584,
+  "large_owner_edges": 16384,
+  "large_owner_selectors": 65536,
+  "bounded_forward_edits_per_process": 2640,
+  "large_forward_edits_per_process": 2,
+  "total_forward_edits_per_process": 2642,
+  "total_typed_reversals_per_process": 2642,
+  "artifacts": [
+    {
+      "path": "tests/model_intersection_reference.rs",
+      "bytes": 6211,
+      "sha256": "fd96b97685cf8e00a7db12e1c64343a7fcefc051e4e5eeabd1ba58af8c3d6bc9"
+    },
+    {
+      "path": "tests/model_intersection_reference/classification.rs",
+      "bytes": 8538,
+      "sha256": "203223b1613e99fb30495969f86f496d366b955bc83031c9089b2b0e861e5407"
+    },
+    {
+      "path": "tests/model_intersection_reference/edge_index.rs",
+      "bytes": 5728,
+      "sha256": "03e3edb862a62bd8238ad204ab8362febc9bab2e9e9ce789177d1dd11e3a93c4"
+    },
+    {
+      "path": "tests/model_intersection_reference/role_documents.rs",
+      "bytes": 6281,
+      "sha256": "45c309329b95d4cb98703040b7b016634479a0b4c0b2472b574255ac373269c3"
+    },
+    {
+      "path": "target/role-large-document-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/role-large-document-final-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/role-large-document-process-1.log",
+      "bytes": 9737,
+      "sha256": "f07515d7fe471b5e077d1febec3b2d97a6d27b4a471c740ce6d095d181cb9c4e"
+    },
+    {
+      "path": "target/role-large-document-process-2.log",
+      "bytes": 9737,
+      "sha256": "2f3def7245738af0b71d1e0ec24a314bcf94c9cc6f1b892710122f3eed4e5a33"
+    },
+    {
+      "path": "target/role-large-document-clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/role-large-document-format.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "coverage_credit": 0,
+  "checks": [
+    "Both fresh processes repeat every bounded classification/index document operation and add the last selector and signed index of the16384-edge full-domain owner.",
+    "The large document is serialized with a real compression checkpoint, reopened through the complete public header/configuration/CMgr/feature reader using explicit large limits, and checked against the retained complete source bytes.",
+    "Both large forward edits reuse independent literal byte patches, full expected fields and exact history/coverage/fidelity/diagnostic checks. Reopened fields match the complete typed result.",
+    "Every unrelated stream and stream ordering remains unchanged. Fresh typed views reverse each change; all reversed fields, feature bytes and the entire original document bytes are restored. Inputs remain unchanged.",
+    "The final helper consolidates the existing limits and Source scalar-offset lookup without changing values. Standalone Clippy, workspace formatting and function/file-size audit pass."
+  ],
+  "qualifications": [
+    "Only the two specified late fields are changed in the large document; all65536 selectors are decoded and retained, but not each edited as a separate large document.",
+    "No changed-document export packet or independent cross-process changed-file comparison is claimed. Exact per-case complete-file reversal is enforced.",
+    "Native role edits, mixed concurrency, full Cargo and exact-head publication remain required. Selector actual-output Source replay is still active. No native geometry/application acceptance is claimed. Humanizer unavailable; prose review pending."
+  ]
+}
