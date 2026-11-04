@@ -1,0 +1,26 @@
+{
+  "issue": 196,
+  "passed": true,
+  "process_exit_code": 0,
+  "command": "cargo xtask pr",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "tested_runtime_revision": "39af132d60e5abe8f7bac2be0e1910e582f959e2",
+  "source_changes_since_tested_revision": [],
+  "test_summaries": 315,
+  "tests_passed": 3959,
+  "tests_failed": 0,
+  "tests_ignored": 215,
+  "log_sha256": "ff927be6f4e7424371b75059bdbdcc92c40b1b05b2bf75f2ad3958f50e59905e",
+  "artifact_measurement": {
+    "observed_utc": "2026-11-04T13:16:12Z",
+    "stage": "After successful complete local PR gate; not a peak measurement",
+    "debug_all_bytes": 5560119686,
+    "debug_deps_bytes": 3736037228,
+    "qualification": "Isolated Windows repair build includes dev bootstrap/build artifacts. Not a matched Linux before/after measurement."
+  },
+  "remaining": [
+    "All required remote checks on the published repaired head",
+    "Live exhaustive native complete-document lookup acceptance"
+  ]
+}

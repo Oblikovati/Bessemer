@@ -22,5 +22,9 @@ ThreadSanitizer command and its instrumentation settings are unchanged.
 The related Windows working-tree artifact cache's `debug/deps` directory held
 19,994,028,848 bytes when inspected. That cache includes broader and earlier
 working-tree builds; it is supporting storage-pressure evidence, not a matched
-before/after Linux measurement. The fix still needs its exact-head complete
-local gate, artifact measurements and the full remote matrix before integration.
+before/after Linux measurement. The complete local PR gate passed 3,959 tests with zero failures
+(215 explicit exclusions). The final isolated Windows build occupied
+5,560,119,686 bytes under `debug`, including
+3,736,037,228 bytes under `debug/deps`. These are
+post-run sizes, not peak or Linux before/after measurements. The full remote
+matrix must pass on the published repair before integration.
