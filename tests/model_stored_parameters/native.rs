@@ -4,6 +4,8 @@ use crate::model_archives::{
     CompressedKernelContext, ModelField, ModelFieldValue, ModelObjectRecord,
     ModelParameterStoredState, PartResolvedFeaturesArchive,
 };
+#[path = "native_exports.rs"]
+mod exports;
 
 fn physical_parameter_count(fields: &[ModelField]) -> usize {
     fields
@@ -65,6 +67,7 @@ fn inspect_native_parameter_case(
     let feature_parameters = source.stored_parameters().unwrap();
     assert_native_parameter_views(&configuration_parameters, configuration.fields());
     assert_native_parameter_views(&feature_parameters, source.fields());
+    exports::export_parameter_case(case, &configuration_parameters, &feature_parameters);
     assert_eq!(configuration.to_bytes().unwrap(), case.configuration);
     assert_eq!(source.to_bytes().unwrap(), case.features);
     [configuration_parameters.len(), feature_parameters.len()]

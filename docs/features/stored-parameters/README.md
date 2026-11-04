@@ -80,3 +80,41 @@ This is a read/projection and internal consistency check. Fresh original Source
 comparison of actual parameter exports, native edits and whole native document
 reopen/reversal remain open. It does not establish a class-by-context/version
 population matrix or native application and geometry acceptance.
+
+## Actual output comparison
+
+The owned output check compares Bessemer's actual exported records with the
+unchanged original reference methods. Two fresh Rust processes produced the
+same 6,566-byte packet for all 30 owned graphs. The original readers matched
+every physical definition and name tag, decoded text and CString frame, raw
+numeric image, presence byte and alternate value. Profiling observes calls and
+returns; it does not replace reader methods. Source hashes, method identities,
+import origins and complete EOF remain checked.
+
+The exporter reuses the root-graph packet helpers. After that extraction, a
+fresh 906-case root run produced the same 1,508,863 bytes as the retained
+pre-extraction output. The parameter decoder also has three literal and
+malformed-input tests. Native parameter output equality remains pending.
+
+To reproduce the complete comparison, use a fresh unused
+`target/stored-parameter-actual-results` directory, the retained
+`target/resolved-native-probe.bin` packet and the explicit kernel-schema setup
+used by the native corpus tests. For each run number `1` and `2`, set
+`BESSEMER_PARAMETER_OWNED_PACKET` to the corresponding absolute `owned-N.bin`
+path and run:
+
+```text
+cargo test --lib owned_parameter_exports_cover_every_class_name_style_and_independent_primary_edit
+```
+
+Set `BESSEMER_PARAMETER_RESULT_PACKET` to the corresponding absolute
+`native-N.bin` path and run:
+
+```text
+cargo test --lib every_native_parameter_definition_matches_physical_population_and_keeps_complete_carriers -- --ignored --nocapture
+python -B -X utf8 docs/features/stored-parameters/verify_parameter_exports.py
+```
+
+Run the Python comparison after both native exports finish. The `--owned-only`
+option permits an early owned comparison while native exports are running.
+Packet files append records, so reuse would invalidate the fresh-process check.

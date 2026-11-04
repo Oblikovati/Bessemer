@@ -12,12 +12,16 @@ pub(super) fn export_root_case(case: &ResolvedCorpusCase<'_>, graph: &ModelResol
     for root in graph.roots() {
         put_root(&mut packet, graph, root);
     }
+    append_packet(path, &packet);
+}
+
+pub(crate) fn append_packet(path: impl AsRef<std::path::Path>, packet: &[u8]) {
     let mut output = std::fs::OpenOptions::new()
         .create(true)
         .append(true)
         .open(path)
         .unwrap();
-    output.write_all(&packet).unwrap();
+    output.write_all(packet).unwrap();
 }
 
 fn put_root(
@@ -26,13 +30,17 @@ fn put_root(
     root: &ModelResolvedRootOccurrence,
 ) {
     put_word(packet, u32::try_from(root.ordinal).unwrap());
-    put_word(packet, u32::from(root.tag.framing.tag));
-    put_word(packet, u32::from(root.tag.framing.extended.is_some()));
-    if let Some(extension) = root.tag.framing.extended {
+    put_tag(packet, &root.tag);
+    put_target(packet, graph, root);
+}
+
+pub(crate) fn put_tag(packet: &mut Vec<u8>, tag: &crate::model_archives::ModelObjectTag) {
+    put_word(packet, u32::from(tag.framing.tag));
+    put_word(packet, u32::from(tag.framing.extended.is_some()));
+    if let Some(extension) = tag.framing.extended {
         put_word(packet, extension);
     }
-    put_object_record(packet, &root.tag.record);
-    put_target(packet, graph, root);
+    put_object_record(packet, &tag.record);
 }
 
 fn put_target(
@@ -79,11 +87,11 @@ fn put_object_record(packet: &mut Vec<u8>, record: &ModelObjectRecord) {
     put_word(packet, u32::from(class.schema));
 }
 
-fn put_word(packet: &mut Vec<u8>, word: u32) {
+pub(crate) fn put_word(packet: &mut Vec<u8>, word: u32) {
     packet.extend_from_slice(&word.to_le_bytes());
 }
 
-fn put_frame(packet: &mut Vec<u8>, bytes: &[u8]) {
+pub(crate) fn put_frame(packet: &mut Vec<u8>, bytes: &[u8]) {
     put_word(packet, u32::try_from(bytes.len()).unwrap());
     packet.extend_from_slice(bytes);
 }

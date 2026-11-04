@@ -5,7 +5,7 @@ use crate::model_archives::{
     ModelResolvedRootOccurrence, ModelResolvedRootTarget, PartResolvedFeaturesArchive,
 };
 #[path = "native_exports.rs"]
-mod exports;
+pub(crate) mod exports;
 
 fn assert_native_root_target(
     graph: &ModelResolvedRootGraph,
