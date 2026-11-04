@@ -17,6 +17,8 @@ mod stored_intersection_references;
 mod stored_node_views;
 #[path = "../model_sketch_reference_lookup/native.rs"]
 mod stored_sketch_lookup_keys;
+#[path = "../model_spline_equation_state/native.rs"]
+mod stored_spline_equations;
 #[path = "../model_visual_carriers/native.rs"]
 mod stored_visual_carriers;
 

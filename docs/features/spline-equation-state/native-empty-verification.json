@@ -1,0 +1,44 @@
+{
+  "issue": 199,
+  "status": "Native empty-result and byte-preservation gate passed; native positive equation edits remain unproved",
+  "native_carriers": 906,
+  "equation_flag_population": 0,
+  "published_equation_states": 0,
+  "native_positive_edit_requests": 0,
+  "native_process_exit_code": 0,
+  "owned_scan_test_passed": 1,
+  "owned_scan_process_exit_code": 0,
+  "comparison": "Direct saved flags in Bessemer fields versus the typed projection; not a fresh original Source semantic comparison",
+  "checks": [
+    "Every retained configuration and feature stream reconstructed byte for byte",
+    "Every carrier completed typed equation enumeration",
+    "Direct field scan and typed counts agreed at zero",
+    "Complete packet EOF checked",
+    "Two fresh process case/total records matched byte for byte",
+    "Owned positive and absent fixtures exercise the population scan separately",
+    "Core/test Clippy and function/file size checks passed",
+    "cargo fmt check passed"
+  ],
+  "corpus_packet_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "corpus_packet_bytes": 129189574,
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "runtime_scope": "82283408 production runtime with later test-only native population checks; no production change",
+  "case_results_gzip": "native-empty-case-results.tsv.gz",
+  "case_results_raw_sha256": "429546fa7f1f1bc7d4ec07585289d12a606dafaad4ea72c9f5747fd1cffba053",
+  "case_results_gzip_sha256": "8b2649d83c0ad62c9a8f9026873297a776b53dcd66578d1d4e1e4e4a170d66c7",
+  "cases_and_total_records": 907,
+  "logs_sha256": {
+    "spline-equation-native-read-tests.log": "a8dee554f69f76f0b29690782cc0e1b23b1e3a2ab6d943a0f7d1c8a8a24a76de",
+    "spline-equation-native-read-final-tests.log": "b7cf42523a78230a6b125761d32ffb3e6ca6ccf2782d6aa01cc77e668ff46140",
+    "spline-equation-native-read-owned-scan.log": "49eb05f5c8a1711c584e0c15b34176ea83a8490c53937bdec50fc1dd1451f66b",
+    "spline-equation-native-read-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spline-equation-native-read-format.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "limitations": [
+    "This frozen corpus contains no positive equation spline examples",
+    "No native positive edit, setter, expression or geometry acceptance follows",
+    "No Native/COM application execution",
+    "Known original Source accounting bug #177 remains open",
+    "Combined default gate currently runs on82283408 and excludes this later test-only addition; publication still needs exact-head checks"
+  ]
+}

@@ -178,3 +178,19 @@ These are owned feature graphs inside native contexts. They do not establish
 acceptance of the documents' original feature streams or resolve the separate
 Source accounting failure in #177. Native outcome preservation and full combined
 publication gates remain open.
+
+
+## Native empty-result gate
+
+The [native read proof](native-empty-verification.json) records complete typed
+projection and byte preservation for all 906 retained native carriers. Both the
+direct saved-field scan and typed enumeration found zero equation-bearing
+splines. Two processes produced identical case and total records; the complete
+907-line record is retained losslessly in `native-empty-case-results.tsv.gz`.
+An owned positive/absent test checks the scan separately.
+
+This corpus supplies empty-result acceptance, not native positive edit coverage.
+The comparison uses Bessemer's stored fields rather than a fresh original Source
+semantic replay. The Source accounting defect in #177 remains open. Positive
+native equation examples, native application behavior and exact-head publication
+checks remain unproved.
