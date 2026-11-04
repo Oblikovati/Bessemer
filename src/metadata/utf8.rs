@@ -115,6 +115,10 @@ impl Utf8XmlDocument {
     pub(crate) fn parent(&self, ordinal: usize) -> Option<usize> {
         self.model.elements[ordinal].parent
     }
+
+    pub(crate) fn children(&self, ordinal: usize) -> &[usize] {
+        &self.model.elements[ordinal].children
+    }
 }
 
 fn decode_utf8<'a>(bytes: &'a [u8], limits: XmlLimits, subject: &str) -> Result<(&'a str, bool)> {

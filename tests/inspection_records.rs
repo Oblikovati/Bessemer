@@ -2,6 +2,9 @@ use bessemer::inspection::records::*;
 use bessemer::inspection::{InspectionEnvelope, InspectionProfile};
 use bessemer::metadata::XmlLimits;
 
+#[path = "inspection_records/load.rs"]
+mod load;
+
 const OWNED: &[u8] = include_bytes!("fixtures/inspection-records/ordered.xml");
 const LIMITS: XmlLimits = XmlLimits {
     maximum_bytes: 1_000_000,

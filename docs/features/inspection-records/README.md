@@ -20,8 +20,10 @@ check that literal record views use the documented scope.
 
 The selected native load projections in §§14.18 and 14.16.24 have a different contract:
 they accept all direct element children and default absent selected attributes to
-empty strings. Independent reference tests keep that projection separate from
-named record views; a Rust native-load projection remains unfinished. Relationship
+empty strings. `loaded_measurements` and `loaded_custom_properties` expose those
+ordered input projections for a revision-bound characteristic. Each keeps the
+source element's expanded name and selected strings, including empty defaults.
+Independent reference tests keep that projection separate from named record views. Relationship
 dictionary insertion (§§14.19–14.20), numeric conversion, tolerance calculation,
 source path access and application acceptance remain separate requirements.
 
@@ -39,7 +41,10 @@ The focused record suite checks one measurement-value edit through encryption,
 reopen and exact reversal under both current and historical cipher profiles. It
 also checks the populated tutorial's 158 named records, exact escaping, all record
 parents, stale and foreign identities, failed-edit isolation, empty completed
-indexes and eight concurrent edits against the serial result. Explicit limit
+indexes and eight concurrent edits against the serial result. The load-view tests
+also check repeated exact containers, qualified and differently named children,
+comments, processing instructions, nested descendants, empty characteristics and
+rejection of wrong-role, foreign and stale identities. Explicit limit
 boundaries, wider native templates, fresh-process equality and unchanged Source
 acceptance of actual Rust outputs still need their feature gates. The complete
 local and exact-head remote checks remain required before integration.

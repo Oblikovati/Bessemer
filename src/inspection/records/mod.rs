@@ -1,5 +1,6 @@
 //! Ordered literal standalone Inspection records, with lossless existing-attribute edits.
 mod edit;
+mod load;
 mod projection;
 mod types;
 
@@ -8,6 +9,7 @@ use crate::archive_codec::ArchiveRevision;
 use crate::metadata::Utf8XmlDocument;
 use crate::{BessemerError, FailureClass, Result};
 pub use edit::InspectionRecordEdit;
+pub use load::{InspectionLoadedCustomProperty, InspectionLoadedMeasurement};
 use std::sync::Arc;
 pub use types::*;
 

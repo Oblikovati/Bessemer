@@ -7,6 +7,18 @@ ROOT = Path(__file__).resolve().parents[3]
 
 
 class InspectionRecordReferenceTests(unittest.TestCase):
+    def test_repeated_exact_containers_and_native_attribute_spelling(self) -> None:
+        """Retain arbitrary direct element tags while rejecting container/name decoys."""
+        raw = (ROOT / 'tests/fixtures/inspection-records/load-projections.xml').read_bytes()
+        records_view = records.read(raw)['sheets'][0]['groups'][0]['characteristics']
+        loaded = records_view[0]['loaded_measurements']
+        self.assertEqual([(m['Name'], m['Value']) for m in loaded], [('N', 'Pass'), ('', ''), ('W', ''), ('last', '-0.00')])
+        self.assertEqual(loaded[0], dict(Name='N', Value='Pass', PartName='P', Type='custom', CreationTime='arbitrary'))
+        properties = records_view[0]['loaded_custom_properties']
+        self.assertEqual([(p['Name'], p['Value']) for p in properties], [('P', '1'), ('P', '2'), ('', ''), ('W', '')])
+        self.assertEqual(records_view[1]['loaded_measurements'], [])
+        self.assertEqual(records_view[1]['loaded_custom_properties'], [])
+
     def test_order_scope_and_missing_values(self) -> None:
         """Keep literal names, direct-child scope, duplicates and absence distinct."""
         raw = (ROOT / 'tests/fixtures/inspection-records/ordered.xml').read_bytes()
