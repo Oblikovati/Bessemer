@@ -1,0 +1,65 @@
+{
+  "issue": 2,
+  "edition": "Edition 0.3077 \u00b7 2026-11-04 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "specification_sha256": "7bfb1d21f60cc68500a7eeda3a3ab290890be4b3207e0fa3e7679597360a900c",
+  "clauses": [
+    "11.1821",
+    "11.1822",
+    "11.91",
+    "11.98",
+    "11.100",
+    "11.135",
+    "11.142",
+    "11.145",
+    "11.187",
+    "11.206"
+  ],
+  "snapshot_path": "docs/features/resolved-features/property-domain-schema-3077-snapshot.md",
+  "snapshot_representation": "Literal selected sections normalized to LF, stripped trailing whitespace only at each section boundary, and joined with one blank line",
+  "snapshot_sha256": "e77708cfa2261f14d85a565fcabd419130d4dfba4c43380796de0eb30b8e6d41",
+  "reader_sha256": {
+    "features.rs": "09bf3005f7c9dc41a41f03063266792a45158199019c5a77a2a53d4fbfaade46",
+    "body_chooser_records.rs": "ef7da1442d72309ed116c314a521a27f1a30d7c891f52f52c1bc67313c978620",
+    "body_end_specs.rs": "07d64b6dc80d333cef2eb40f6b257221624504fa08da730980a2c3e35cd1ffab",
+    "fillets.rs": "a0ad6721abbcf1ea9058d569cb2c126d0ab113cd7c1ebe39dc3fc1614621b275",
+    "chamfer_records.rs": "d801ecb9af31d005286242034d50c8687d41e717e3efeb9e7494c223e5018125",
+    "reference_planes.rs": "6f712f8085b9c29ceb5330bde6b4bcf036b618e327f8eaceb6aebc46c6df8815",
+    "polyline_records.rs": "2a6f3c0e178a4cdd69d27a56c9a415dfb4c79fe5eb35e2fdf95d3753fd08ae79"
+  },
+  "decisions": [
+    "Folder unknown_358/unknown_368 retain full signed32 values. Native ShowInFeatureManager/LockedMatesFolder names and the selected browser-skip query do not impose Boolean wire domains or final tree behavior.",
+    "Chooser raw_6c remains signed32 UnUsed state; native setters writing zero/one do not constrain saved integers. Filename CString and reference_a0 identities remain stored observations, not filesystem or evaluated origin-transform contracts.",
+    "EndSpec integer pairs remain raw signed32 with existing type/version gates. FromEndSpec saved type4 selects binary64 and saved3/5 select a tagged dimension; offline reading does not execute native current-type3 to stored4/5 conversion or LOAD dimension evaluation.",
+    "Revolution word_818 remains signed32 and byte_81c/byte_8e0 remain raw u8. The native type2 selection of a populated dimension_808 does not omit its tagged pointer occurrence or justify filtering saved pointer identities.",
+    "Revolution end value_38/value_40 are exact saved binary64. Native SurfOffsetDist dimension queries, the fallback0.01 and runtime angle members do not supply saved units, finite-value restrictions or angle interpretations.",
+    "Fillet integer/u8 fields retain all stored bits despite native fullword accessors, low-byte STORE, zeroextension, OverflowType clamps and curvature flag normalization. Native setter names do not establish physical quantities for paired doubles.",
+    "Chamfer raw_8b8 remains signed32. Its native packed-word getter/setter masks differ, so offline reconstruction does not normalize to a closed enum or universal bit-preservation policy.",
+    "Reference-plane flags_6d4 remain raw unsigned32 and retain bit0x4 and all other saved bits. Native environment/version mappings are not replayed offline.",
+    "PLine project raw_20/raw_24 remain full signed32 values; IsDirectional/FlipDir names do not impose Boolean domains. Direct array framing, owner roles and pointer slots remain unchanged.",
+    "Variable-fillet existing Octet/Signed fields and version>17000 octet gate remain unchanged. Own-class bindings do not transfer Fillet clamps or infer resets from skipped reads."
+  ],
+  "implementation_effect": "No production parser, public API, class/version admission or geometry change. Add signed32 boundary-value regression over existing owned folder fixtures.",
+  "acceptance_credit": "No new native population, source replay, accounting, geometry, whole-class completion or complete parity credit.",
+  "verification": {
+    "status": "Focused module passed",
+    "retained_cases": 63,
+    "folder_records": 36,
+    "selected_words": 72,
+    "signed32_values_per_word": 6,
+    "expected_literal_splices": 432,
+    "tests_passed": 4,
+    "tests_failed": 0,
+    "seconds": 0.09,
+    "process_exit_code": 0,
+    "clippy_exit_code": 0,
+    "format_exit_code": 0,
+    "new_function_maximum_lines": 20,
+    "log_sha256": "87b6a6782a6f7c8ed8cf1b5d5e1d4a2ea04db4573b1dd08850a6aa04464a2cf0"
+  },
+  "remaining": [
+    "Full local gate at this test revision and exact-head integration remain pending",
+    "Complete documented schema and Corliss parity remain open in issue2",
+    "Native application/kernel geometry acceptance and source accounting Bug177 remain separate",
+    "Humanizer is unavailable; maintainer prose review remains pending"
+  ]
+}

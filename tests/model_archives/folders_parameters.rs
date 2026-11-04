@@ -1,6 +1,7 @@
 use super::annotation_view_tests::decode;
 use super::encode_fields;
 use super::lightweight_section_tests::next_case;
+use super::{ModelField, ModelFieldValue};
 use crate::archive_codec::ArchiveCursor;
 
 const CASES: &[u8] = include_bytes!("../fixtures/model-archives/folder-parameter-cases.bin");
@@ -46,4 +47,53 @@ fn parameter_and_folder_snapshots_own_strings_flags_and_float_bits() {
         source.fill(0xa5);
         assert_eq!(encode_fields(&fields, 30000).unwrap(), bytes);
     }
+}
+
+#[test]
+fn folder_property_words_keep_signed32_values_without_native_boolean_queries() {
+    let mut cursor = ArchiveCursor::new(CASES);
+    let (mut cases, mut words) = (0, 0);
+    while cursor.remaining() != 0 {
+        let (_, version, bytes, _) = next_case(&mut cursor);
+        words += assert_folder_property_domains(version, bytes);
+        cases += 1;
+    }
+    assert_eq!((cases, words, words * 6), (63, 72, 432));
+}
+
+fn assert_folder_property_domains(version: u32, bytes: &[u8]) -> usize {
+    let fields = decode(version, bytes).unwrap();
+    let selected: Vec<usize> = fields
+        .iter()
+        .enumerate()
+        .filter_map(|(index, field)| {
+            (field.path.ends_with(".unknown_358") || field.path.ends_with(".unknown_368"))
+                .then_some(index)
+        })
+        .collect();
+    // Exact own-class property names do not close the stored integer domain (schema C-3506).
+    for &index in &selected {
+        for value in [i32::MIN, -1, 0, 1, 2, i32::MAX] {
+            assert_folder_property_splice(version, bytes, &fields, index, value);
+        }
+    }
+    selected.len()
+}
+
+fn assert_folder_property_splice(
+    version: u32,
+    original: &[u8],
+    fields: &[ModelField],
+    selected: usize,
+    value: i32,
+) {
+    let mut changed = fields.to_vec();
+    changed[selected].value = ModelFieldValue::I32(value);
+    let offset = encode_fields(&fields[..selected], 30000).unwrap().len();
+    let mut expected = original.to_vec();
+    expected[offset..offset + 4].copy_from_slice(&value.to_le_bytes());
+    let encoded = encode_fields(&changed, 30000).unwrap();
+    assert_eq!(encoded, expected);
+    assert_eq!(decode(version, &encoded).unwrap(), changed);
+    assert_eq!(encode_fields(fields, 30000).unwrap(), original);
 }
