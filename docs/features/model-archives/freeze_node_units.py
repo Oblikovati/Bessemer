@@ -6,6 +6,7 @@ import struct
 import sys
 from freeze_blank_part import reference_snapshot
 from owned_name_edit import short_wide_name
+from fixture_object_map import object_tag
 
 WORKSPACE = Path(__file__).resolve().parents[3]
 REFERENCE = WORKSPACE.parent / "inventor-interface/solidworks"
@@ -27,11 +28,6 @@ BASE = ["moUserUnits_c","moNumberUserUnits_c","moFloatNumberUserUnits_c",
 CODED = ["moAngleUserUnits_c","moUnitSysUnits_c","moForceUnits_c"]
 ENERGY = ["moPowerUnits_c","moEnergyUnits_c","moTimeUnits_c"]
 LENGTH = ["moLengthUserUnits_c","moPercentUserUnits_c"]
-
-
-def object_tag(name: str, schema: int = 7) -> bytes:
-    encoded = name.encode("ascii")
-    return struct.pack("<HHH",65535,schema,len(encoded)) + encoded
 
 
 def base_wire(version: int) -> bytes:

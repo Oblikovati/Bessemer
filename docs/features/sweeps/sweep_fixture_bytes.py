@@ -8,6 +8,7 @@ from freeze_component_references import base as component_base
 from freeze_model_references import wrapper
 from freeze_geometric_references import wire as geometric
 from display_dimension_fixture_bytes import body as stripped, shared, suffix
+from fixture_object_map import shared_object
 
 
 @dataclass(frozen=True)
@@ -18,17 +19,6 @@ class SweepOptions:
     angular: int = 7
     first_direction: bool = False
     second_direction: bool = False
-
-
-def shared_object(mapping: WireMap, identities: dict[str, int], key: str, name: str,
-                   contents: Callable[[], bytes]) -> bytes:
-    """Reserve identity before nested objects and retain aliases; e.g. shared_object(mapping, ids, 'profile', 'moCompProfile_c', body)."""
-    if key in identities:
-        return struct.pack('<H', identities[key])
-    def reserved() -> bytes:
-        identities[key] = mapping.slot
-        return contents()
-    return mapping.new(name, reserved)
 
 
 def profile(mapping: WireMap, version: int, identities: dict[str, int]) -> bytes:

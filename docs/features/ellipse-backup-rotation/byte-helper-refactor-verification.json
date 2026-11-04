@@ -1,0 +1,53 @@
+{
+  "issue": 192,
+  "scope": "Behavior-preserving extraction of literal fixture object-map helpers, separate from new stored-role behavior.",
+  "passed": true,
+  "literal_helper_tests": 3,
+  "existing_source_fixture_tests": 2,
+  "existing_complete_graphs": 174,
+  "existing_primitive_observations": 3653,
+  "existing_owned_streams": 12,
+  "all_existing_fixture_bytes_and_observations_unchanged": true,
+  "source_process_reaped": true,
+  "source_exit_code": 0,
+  "source_seconds": 72.526,
+  "source_hash_import_guards_passed": true,
+  "snapshot_identity": "067f8fe41492a7b4cbde4cfe39db6642089853d8eba7e4d66b46755d8ce8614e",
+  "snapshot_sha256": "24aeb5713c129ec974bd58a6e15f29a8439749532520203390ae8d4fb6aad6c8",
+  "literal_log_sha256": "8ee4669655aaed29bbc70e28a8ef25f73d1ebe2b002448e637699b5a2cbcaa41",
+  "source_log_sha256": "ad2abac803fbcf79d9880894bca00d84c68a39bfe22145092f06e684c5d3936c",
+  "collector_sha256": "24b7ab14afaa164258b67950891d024feee0a670cf39add2b792938ad84512fc",
+  "initial_attempts": [
+    {
+      "kind": "Live reader import rejected before independent fixture initialization was accepted",
+      "log_sha256": "a26432806733a417b6ebe5565cc49e00929c7cfbba061ea594ab3a1eb9de573d"
+    },
+    {
+      "kind": "Source file changed during immutable copy; failed before tests. Fresh full snapshot/replay passed without an exception.",
+      "log_sha256": "f29bd2ace5362c89586790851069787205dfe8d362a39e012b632c6afb733570"
+    }
+  ],
+  "files": [
+    {
+      "path": "docs/features/model-archives/fixture_object_map.py",
+      "sha256": "d052554d5dd9122c9c67a93e261cc6a9d8161fe0dd3595d05906b8774abca47d"
+    },
+    {
+      "path": "docs/features/model-archives/freeze_node_units.py",
+      "sha256": "5ad062683eb21251b12ef9ebe61360855595fa47ede9c0160019080627d01db9"
+    },
+    {
+      "path": "docs/features/model-archives/sketch_tail_fixture_bytes.py",
+      "sha256": "bc669f05b25f0883e4c93bf9f8f0c74ece735e84bea2cf9653703664885dcfd9"
+    },
+    {
+      "path": "docs/features/sweeps/sweep_fixture_bytes.py",
+      "sha256": "abb4fa6a696ae5ab64e57faeae2dcbbc9c3c3a5445e6f61b80a1b77c27c02403"
+    },
+    {
+      "path": "docs/features/ellipse-backup-rotation/test_literal_object_map.py",
+      "sha256": "6baf44f16865faff965edf51bccb28758492473d867a666e581b17e22bd7a3df"
+    }
+  ],
+  "qualification": "Default schema7, slot reservation, handle bytes, short/extended counts and aliases remain unchanged. Explicit schema1 is used only by newly owned canonical fixtures. No production Rust parser or baseline changed."
+}

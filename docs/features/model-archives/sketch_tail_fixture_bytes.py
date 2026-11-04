@@ -6,24 +6,10 @@ from owned_name_edit import short_wide_name
 from sketch_reference_fixture_bytes import entity
 from sketch_dimension_fixture_bytes import logical, logical_body
 from freeze_boundary_references import base as boundary_base
+from fixture_object_map import WireMap
 
 P = struct.pack
 VECTOR = P('<3d', -0.0, 1.25, -2.5)
-
-
-class WireMap:
-    def __init__(self) -> None:
-        self.slot = 0
-
-    def new(self, name: str, body: Callable[[], bytes]) -> bytes:
-        self.slot += 2
-        return object_tag(name)+body()
-
-    def handle(self, name: str = 'sgPointHandle') -> bytes:
-        return self.new(name, lambda: P('<Hiii', 0x777f, -1, -19, 2**31-1))
-
-    def array(self, name: str = 'suObArray', extended: bool = False) -> bytes:
-        return self.new(name, lambda: (P('<HI', 65535, 2) if extended else P('<H', 2))+bytes(4))
 
 
 def points(w: WireMap, rich: bool) -> bytes:
