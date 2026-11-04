@@ -131,7 +131,10 @@ fn put_bytes(packet: &mut Vec<u8>, value: &[u8]) {
 }
 
 fn assert_sheet_history(result: &InspectionRelationshipViews) {
-    assert_eq!(result.history[0].parents.as_ref(), &[result.sheet.clone()]);
+    assert_eq!(
+        result.history[0].parents.as_ref(),
+        std::slice::from_ref(&result.sheet)
+    );
     assert_eq!(result.history[0].result, result.sheet);
     assert_eq!(result.history[0].relation, InspectionRecordRelation::Copied);
     assert!(result.source.record(&result.sheet).is_ok());
