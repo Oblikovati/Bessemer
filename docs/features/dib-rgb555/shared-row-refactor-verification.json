@@ -1,0 +1,75 @@
+{
+  "issue": 210,
+  "change": "Extracted checked row layout without new format admission",
+  "source_parent": "bb5faccdc7e8ef5336a5cb53076a9c92486c7a99",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "compile_exit_code": 0,
+  "clippy_test_library_exit_code": 0,
+  "integration_suite_exit_code": 0,
+  "integration_tests_passed": 33,
+  "unit_tests_passed": 2,
+  "unit_test_exit_code": 0,
+  "unit_log_sha256": "63b0891f8bdbffb5b4b8f6b9ecda066141f1e5ba8f1e20dcef50d6b8cf3d1659",
+  "logs": {
+    "target/shared-dib-rows-preview_indexed_rgb-tests.log": {
+      "passed": 7,
+      "ignored": 0,
+      "sha256": "b5d4b95c90a0a25c0dee598bd26e227729365afc5c3b1d7a5ca068dd804add06"
+    },
+    "target/shared-dib-rows-preview_bgr24-tests.log": {
+      "passed": 7,
+      "ignored": 0,
+      "sha256": "419065dd723710860e8ff8340588aa0e3af7063def475e9ac1c53147193d6983"
+    },
+    "target/shared-dib-rows-preview_rgb_zero_size-tests.log": {
+      "passed": 5,
+      "ignored": 0,
+      "sha256": "aa90042a03ee7fa4d6c621cde20feb1b477eca18ebe878d534dad360244f05d5"
+    },
+    "target/shared-dib-rows-preview-tests.log": {
+      "passed": 5,
+      "ignored": 0,
+      "sha256": "10898085cda8cd92ecfd1be30bd342ac3adf6915aab71edf849dd58217496b40"
+    },
+    "target/shared-dib-rows-preview_adversarial-tests.log": {
+      "passed": 5,
+      "ignored": 0,
+      "sha256": "43d7191efb3b65f8780bf95c67914c0a0cfa064b419baba57dedea3a737a6cb6"
+    },
+    "target/shared-dib-rows-preview_document-tests.log": {
+      "passed": 2,
+      "ignored": 0,
+      "sha256": "9ef0ed6ff1f0f2e872322adb2ddb7e7893e0b68cae3c47f9a00b92ab446d9160"
+    },
+    "target/shared-dib-rows-preview_isolation-tests.log": {
+      "passed": 2,
+      "ignored": 0,
+      "sha256": "fb6d655783fa3f4e1752481595dd21428abbcdd7723ad1ff51634a78a076ed0b"
+    }
+  },
+  "fresh_example_processes": 3718,
+  "process_exit_code": 0,
+  "unchanged_owned_fixture_content": true,
+  "accepted_format_set_unchanged": true,
+  "superseded_helpers_removed": [
+    "bgr24::row_stride",
+    "bgr24::byte_count",
+    "indexed_rgb::row_stride",
+    "indexed_rgb::byte_count",
+    "codec::rgb_byte_count",
+    "codec::bgrx_byte_count"
+  ],
+  "production_sha256": {
+    "src/preview/mod.rs": "5b7c16c2e06d8d946892e160dd083c99e2d8952c50cd25e0d4a062542d8cf2c0",
+    "src/preview/bgr24.rs": "32cb6d8bf21bf08712456bdfbda3f96ec16e4e2793945a749548393248395471",
+    "src/preview/indexed_rgb.rs": "ae3921ba0f60a275a043681baf1d4eb86c40b77e7629a23871aa6ff3cb3dd45e",
+    "src/preview/codec.rs": "8a1763f52808aa8cf5a69fb3926c4b5daea1784755e0eebe8200c153bbb67843",
+    "src/preview/rows.rs": "9852460207a943b38dba8d04f01d9fbb62735b37723734777444dadb031692a2"
+  },
+  "exclusions": [
+    "RGB555 remains unsupported at this cut; independent new-form oracles do not establish production acceptance",
+    "Full local gate and exact-head remote checks at this refactor cut remain pending",
+    "No native application/geometry or complete parity credit"
+  ]
+}

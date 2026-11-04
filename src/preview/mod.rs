@@ -6,6 +6,7 @@ mod indexed_rgb;
 mod pixels;
 mod png;
 mod rle;
+mod rows;
 mod types;
 
 use crate::{BessemerError, FailureClass, Result, archive_codec::PreservedContents};

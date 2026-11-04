@@ -1,27 +1,5 @@
-use super::{invalid, pixels::stored_row, types::ImageShape};
+use super::{invalid, pixels::stored_row, rows::row_stride, types::ImageShape};
 use crate::Result;
-
-pub(super) fn byte_count(shape: ImageShape, bits: u8) -> Result<usize> {
-    let stride = row_stride(shape.width, bits)?;
-    stride.checked_mul(shape.height).ok_or_else(|| {
-        invalid(format!(
-            "indexed RGB stride {stride} and height {}; expected byte size in usize",
-            shape.height
-        ))
-    })
-}
-
-fn row_stride(width: usize, bits: u8) -> Result<usize> {
-    width
-        .checked_mul(bits as usize)
-        .and_then(|count| count.checked_add(31))
-        .map(|count| (count & !31) / 8)
-        .ok_or_else(|| {
-            invalid(format!(
-                "indexed RGB width {width} at {bits} bits; expected aligned row size in usize"
-            ))
-        })
-}
 
 pub(super) fn validate_indices(
     bytes: &[u8],
@@ -29,7 +7,7 @@ pub(super) fn validate_indices(
     bits: u8,
     palette: usize,
 ) -> Result<()> {
-    let stride = row_stride(shape.width, bits)?;
+    let stride = row_stride(shape)?;
     if let Some(index) = (0..shape.count)
         .map(|position| pixel_index(bytes, shape, bits, stride, position))
         .find(|index| *index as usize >= palette)
@@ -42,7 +20,7 @@ pub(super) fn validate_indices(
 }
 
 pub(super) fn decode(bytes: &[u8], shape: ImageShape, bits: u8) -> Result<Vec<Option<u8>>> {
-    let stride = row_stride(shape.width, bits)?;
+    let stride = row_stride(shape)?;
     Ok((0..shape.count)
         .map(|position| Some(pixel_index(bytes, shape, bits, stride, position)))
         .collect())
@@ -54,7 +32,7 @@ pub(super) fn replace(
     bits: u8,
     indices: &[u8],
 ) -> Result<Vec<u8>> {
-    let stride = row_stride(shape.width, bits)?;
+    let stride = row_stride(shape)?;
     let mut bytes = source.to_vec();
     for (position, &value) in indices.iter().enumerate() {
         let (offset, shift) = location(shape, bits, stride, position);

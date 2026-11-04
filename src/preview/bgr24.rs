@@ -1,8 +1,5 @@
 use super::{
-    DibPreview, codec, invalid,
-    pixels::stored_row,
-    types::{DibEncoding, ImageShape},
-    unsupported,
+    DibPreview, codec, pixels::stored_row, rows::row_stride, types::DibEncoding, unsupported,
 };
 use crate::Result;
 
@@ -60,28 +57,4 @@ impl DibPreview {
         }
         self.with_pixel_bytes(bytes, maximum_pixels)
     }
-}
-
-pub(super) fn row_stride(shape: ImageShape) -> Result<usize> {
-    shape
-        .width
-        .checked_mul(3)
-        .and_then(|bytes| bytes.checked_add(3))
-        .map(|bytes| bytes & !3)
-        .ok_or_else(|| {
-            invalid(format!(
-                "BGR24 width {}; expected aligned row byte size in usize",
-                shape.width
-            ))
-        })
-}
-
-pub(super) fn byte_count(shape: ImageShape) -> Result<usize> {
-    let stride = row_stride(shape)?;
-    stride.checked_mul(shape.height).ok_or_else(|| {
-        invalid(format!(
-            "BGR24 stride {stride} and height {}; expected stored byte size in usize",
-            shape.height
-        ))
-    })
 }
