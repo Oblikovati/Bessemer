@@ -15,6 +15,8 @@ mod stored_dimension_views;
 mod stored_intersection_references;
 #[path = "../model_node_state/native.rs"]
 mod stored_node_views;
+#[path = "../model_stored_parameters/native.rs"]
+mod stored_parameters;
 #[path = "../model_resolved_root_graph/native.rs"]
 mod stored_root_graphs;
 #[path = "../model_sketch_reference_lookup/native.rs"]

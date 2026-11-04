@@ -46,6 +46,8 @@
 
 ### Added
 
+- Added typed stored parameter snapshots and exact value edits for complete part configuration and resolved-feature archives, retaining independent name pointers, alternate presence bytes and copied field history. (#202)
+
 - Added immutable resolved-feature root snapshots with stored order, aliases, loaded target identities and copied provenance. (#201)
 
 - Added physical spline equation stored-state views and exact lock, signed-option and CString edits with retained source provenance. (#199)

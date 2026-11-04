@@ -129,6 +129,11 @@ update bits and class-scoped parameter flags from complete part configurations
 and resolved-feature archives. Selected-bit edits preserve other fields and bits
 and return the existing complete archive validation and structural history.
 Stored flags remain separate from effective native predicates and setter cascades.
+The [stored parameter API](docs/features/stored-parameters/README.md) reads both
+name pointers and exact primary/alternate values from complete part configuration
+and resolved-feature archives. Typed value edits preserve floating-point bits,
+CString framing and unselected fields, with revision checks and complete archive
+history. Stored alternates remain separate from evaluated effective values.
 The [stored entity visual API](docs/features/entity-visual-state/api.md) projects
 layer/style, ByLayer, cache, color and raw width values from complete part/assembly
 configurations, resolved part feature archives and physical component visuals from display and

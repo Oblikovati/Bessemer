@@ -25,6 +25,10 @@ struct ResolvedArchiveState {
 }
 
 impl PartResolvedFeaturesArchive {
+    pub(super) fn configuration_archive(&self) -> &PartConfigurationArchive {
+        &self.state.source
+    }
+
     /// Reads a complete feature stream against an owned model snapshot and complete CMgr.
     ///
     /// ```no_run

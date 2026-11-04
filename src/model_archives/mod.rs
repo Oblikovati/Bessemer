@@ -243,6 +243,11 @@ mod move_faces;
 mod node;
 mod node_state;
 pub use node_state::{ModelNodeStoredFlag, ModelNodeStoredState};
+mod stored_parameters;
+pub use stored_parameters::{
+    ModelParameterDiagnostic, ModelParameterFieldCopy, ModelParameterKind, ModelParameterName,
+    ModelParameterSource, ModelParameterStoredEdit, ModelParameterStoredState, ModelParameterValue,
+};
 mod dimension_state;
 pub use dimension_state::{ModelDimensionStoredEdit, ModelDimensionStoredState};
 mod ellipse_backup_rotation;
