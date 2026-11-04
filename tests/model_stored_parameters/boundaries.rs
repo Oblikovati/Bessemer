@@ -119,3 +119,33 @@ fn parameter_budget_graph(raw: &[u8]) -> Vec<u8> {
     expanded.resize(raw.len() + 8192, 0);
     expanded
 }
+
+#[test]
+fn explicit_null_roots_require_the_exact_root_entry_budget() {
+    let configuration = retained_configuration();
+    for roots in fixtures::ORIGINAL {
+        for raw in roots {
+            assert_parameter_root_cap(raw, &configuration);
+        }
+    }
+    for raw in fixtures::INHERITED {
+        assert_parameter_root_cap(raw, &configuration);
+    }
+}
+
+fn assert_parameter_root_cap(raw: &[u8], configuration: &PartConfigurationArchive) {
+    let expanded = parameter_budget_graph(raw);
+    let limits = ModelArchiveLimits {
+        maximum_entries: 4097,
+        ..LIMITS
+    };
+    let source = boundary_read(&expanded, configuration, limits).unwrap();
+    assert_eq!(source.to_bytes().unwrap(), expanded);
+    assert_eq!(source.stored_parameters().unwrap().len(), 1);
+    let insufficient = ModelArchiveLimits {
+        maximum_entries: 4096,
+        ..limits
+    };
+    assert!(boundary_read(&expanded, configuration, insufficient).is_err());
+    assert_eq!(source.to_bytes().unwrap(), expanded);
+}

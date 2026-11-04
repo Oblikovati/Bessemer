@@ -261,7 +261,7 @@ cargo test --test model_stored_parameters
 
 ## Malformed input and budget controls
 
-All 17 focused tests pass. The added boundary checks reject every proper prefix
+The boundary checks reject every proper prefix
 and every appended octet for the 24 original graphs and both inherited graphs,
 before any partial parameter result can be published. Retained source snapshots
 and their values remain unchanged after these failures.
@@ -275,4 +275,6 @@ pass and one below either rejects. Text growth beyond the retained byte budget
 also fails without changing source bytes, projected values or valid handles.
 
 `boundary-verification.json` records counts, scope and logs. These additions
-cover byte and field caps; other resource dimensions retain separate tests.
+cover byte and field caps. An additional entry-cap check accepts exactly 4,097
+roots and rejects a cap of 4,096 across all 26 complete graphs, preserving one
+physical parameter per graph. Other resource dimensions retain separate tests.
