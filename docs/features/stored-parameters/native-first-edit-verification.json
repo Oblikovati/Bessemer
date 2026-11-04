@@ -1,0 +1,61 @@
+{
+  "issue": 202,
+  "source_revision": "f3daaddabb54379e2ddcb6d33981209960cf88eb",
+  "status": "First native parameter edits passed independent Source spans, exact stream changes, full document reopens and byte-exact typed reversals",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "native_case": 0,
+  "model_version": 11000,
+  "input_label": "0: C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\CAM Examples\\tutorial_parts\\Mill\\mill3axii_5.sldprt::Contents/Config-0",
+  "input_file_bytes": 217757,
+  "input_file_sha256": "a0babf7e45dde717b9bd2ee42052bb9d49d2d024fcafa75fe2bf12cd91016b4e",
+  "contexts": [
+    "Configuration density primary",
+    "Resolved-feature length primary"
+  ],
+  "native_edit_count": 2,
+  "fresh_typed_reversals": 2,
+  "independent_source_span_packet_bytes": 72,
+  "independent_source_span_packet_sha256": "41d10eb06bdd5fdf7ee4ac9bbc8a0afda55525c5b8266fdf9a23416ab1c72721",
+  "source_definition_ids": [
+    360,
+    505
+  ],
+  "source_byte_offsets": [
+    18891,
+    17867
+  ],
+  "changed_bit_rule": "old_raw_u64 XOR1 at the original reader double position",
+  "source_original_and_edited_projected_records_checked": true,
+  "all_other_stream_bytes_preserved": true,
+  "complete_original_file_bytes_restored": true,
+  "input_isolation": true,
+  "source_initial_exit_code": 0,
+  "source_regeneration_exit_code": 0,
+  "rust_tests_passed": 1,
+  "rust_tests_failed": 0,
+  "rust_test_seconds": 0.41,
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "function_file_size_audit_exit_code": 0,
+  "default_fixture_guard_control_passed": true,
+  "mutated_fixture_bytes_and_extra_files_rejected": true,
+  "source_snapshot_identity": "4874fd33bf1961cfde6c74bb066f9ceecc3726d7d16db132f1a8330d93b4f7a5",
+  "logs_sha256": {
+    "native-parameter-primary-source-initial.log": "fbc3648d8970c8d329b994a6a2867475560c69d22679942a4ff273ce279819fe",
+    "native-parameter-primary-source-regeneration.log": "0b766104fff2d652980802949390637334fdada0a2c0fbc02f0d63ce9ec4549e",
+    "native-parameter-primary-build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native-parameter-primary-tests.log": "7fccb6d6110346bd759a990446784b689651dcb828bdb5bf06d9d5bf23d9f098",
+    "native-parameter-primary-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native-parameter-primary-format.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native-parameter-primary-function-sizes.log": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "parameter-fixture-regeneration-guard.log": "04340d3cf0d63c532e115db9e39faae9dc9aff6df9e52f10ff32b97a7c8cfb26"
+  },
+  "exclusions": [
+    "Only the first retained native case and one primary double in each context; not the43917-parameter edit census",
+    "Native integer/string, alternate/presence and other version/context edits require separate acceptance",
+    "Native SolidWorks application, equation/unit evaluation, setter cascades and geometry are not exercised",
+    "Source accounting Bug #177 is unchanged",
+    "Latest complete publication gates remain open; current full gate excludes this later first-native test"
+  ]
+}

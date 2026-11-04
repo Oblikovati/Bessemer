@@ -108,7 +108,7 @@ release benchmark.
 All six classes occur in resolved features; four occur in configurations.
 The native name-pointer population contains null and local pointers but no
 inherited pointers. The independent positive inherited check below covers that
-missing population. Native edits, whole native document
+missing population. Broader native edits, whole native document
 reopen/reversal and application/geometry acceptance remain separate. Bug #177's
 unknown-byte accounting oracle is unchanged.
 
@@ -170,3 +170,32 @@ That checkout contains the first parameter operation and 12 integration tests;
 later exports and the 13th inherited test have separate focused evidence.
 `full-local-gate-verification.json` records this boundary. Exact-head remote
 publication and the broader native editing/application requirements remain open.
+
+## First complete native edits
+
+The first retained native case now passes one configuration-density edit and
+one resolved-feature length edit at model version 11000. The unchanged original
+reader supplies the primary double offsets 18891 and 17867 and defining object
+IDs 360 and 505. Independent one-bit replacements are reparsed by Source; every
+other projected parameter value, name and identity remains equal. A fresh run
+regenerated the 72-byte span oracle exactly.
+
+The typed editor matches each complete expected stream byte for byte. Both
+edited documents reopen through the public archive readers, preserve all
+unrelated streams and reverse through fresh typed states to the original file
+bytes. Input isolation and one-parent changed-field history also pass. The
+native test completed in 0.41 seconds; Clippy with warnings denied, formatting
+and function/file size checks passed. `native-first-edit-verification.json`
+records the input hash, source snapshot, commands' log hashes and exclusions.
+
+Regenerate the oracle with:
+
+```text
+python -B -X utf8 docs/features/stored-parameters/freeze_native_primary_reference.py
+cargo test --lib first_native_parameter_edits_match_original_spans_reopen_and_reverse_complete_documents -- --ignored --nocapture
+```
+
+The native test requires the retained corpus packet, its original installed
+sample file and the explicit kernel schema. This proves the first complete
+native operation in both contexts. It does not cover the full parameter edit
+population, other stored kinds, native application opening or geometric validity.
