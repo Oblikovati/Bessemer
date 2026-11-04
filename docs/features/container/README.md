@@ -78,3 +78,12 @@ or geometry API is shipped. Legacy compound files and unobserved container versi
 remain outside this first slice. ThreadSanitizer, application opens, cross-platform
 CI, previous-release benchmarks, and full-corpus checks must be recorded separately
 when executed. There is no previous Bessemer release to benchmark.
+
+The [current writer-requirements map](writer-requirements-audit.json) records
+the inspected W-01–W-10 behavior and its limits. The editor preserves inherited
+keys/signatures, name bytes, timestamps and untouched stored payloads, while
+rewriting offsets and changed-entry checksums/lengths without filler. It does
+not create a new container or repair missing XML attribute bits. The reader
+also accepts stored entries and per-entry extras/comments; preserving these
+permissive inputs is not presented as universal canonical-writer conformance.
+Native reload/save and full schema acceptance remain separate requirements.
