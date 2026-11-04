@@ -132,3 +132,11 @@ The process exited successfully. That source cut predates the later native
 lookup tests and feature189; their integration needs its own final gate.
 Remote publication, ThreadSanitizer and complete native operation acceptance
 remain separate requirements.
+
+The [complete native archive edit gate](native-archive-operation-verification.json)
+passed all 906 cases and 20,589 requests over 6,863 physical key pairs. Every
+per-case count matched the independent Source span oracle, including all
+112 empty streams. Literal full bytes, every field, history, stale revisions
+and source isolation passed. The process exited successfully after
+15,462.05 seconds. The exhaustive complete-document reversal job remains
+active; no document pass or whole-schema completion is claimed.
