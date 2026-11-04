@@ -1,0 +1,56 @@
+{
+  "issue": 95,
+  "scope": "Documentation-to-code audit of new qualified equation bindings; no behavior version, parser or baseline changed.",
+  "specification_sha256": "2782173ca3c23a456feab408141f6e1dc07601859513db3506ef4fa80cd2d08b",
+  "clauses": [
+    {
+      "clause": "11.1699",
+      "section_sha256": "05dd2d10e45e7794a1db650d8aec7ae8cfc71c8a4ad1c9e8ff320ff25b2a1284",
+      "wire_requirement": "Preserve six distinct CString fields and full signed compatibility word. Do not replace loaded values with the current STORE literal one.",
+      "status": "Existing wire behavior agrees; selected native runtime workflows are not implemented by this decoder."
+    },
+    {
+      "clause": "11.1702",
+      "section_sha256": "9440d1fd46f3cde32b7f7acf76e2058da701c92a4b48352bdc33c46db2b350e4",
+      "wire_requirement": "Retain coordinate-expression and declared-character text without conversion, evaluation, character-count filtering or coordinate-frame inference.",
+      "status": "Existing wire behavior agrees; selected native runtime workflows are not implemented by this decoder."
+    },
+    {
+      "clause": "11.1703",
+      "section_sha256": "15be2e3c0e7090515474164c0ef46a0a4c097269c3027cf6e81499fd374c7c8b",
+      "wire_requirement": "Retain both numeric-expression strings as text, without evaluating, imposing bounds order or recomputing sample inputs.",
+      "status": "Existing wire behavior agrees; selected native runtime workflows are not implemented by this decoder."
+    },
+    {
+      "clause": "11.1704",
+      "section_sha256": "17f8c903274961f5435e3293cc72659543a0b2fb04097d867f46a5e01d0ced28",
+      "wire_requirement": "Retain all30 raw fixed-transform words and the existing perspective guard. Do not apply the matrix during archive decoding.",
+      "status": "Existing wire behavior agrees; selected native runtime workflows are not implemented by this decoder."
+    }
+  ],
+  "source_files": [
+    {
+      "path": "src/model_archives/sketch_splines.rs",
+      "sha256": "bacc4fe2abc1749fe1640457aae8e216bb1c57c2016fd2d6cec688bd114e0dd2"
+    },
+    {
+      "path": "src/model_archives/fixed_transform_records.rs",
+      "sha256": "3c2aa95243639b67cfbe1136ef49d524731429b68b4c49b77267504a1f31d326"
+    },
+    {
+      "path": "tests/model_archives/sketch_splines.rs",
+      "sha256": "fedf612df735f56c5a447ee7d6e50a0edd239f4769b6b405ce8af695b5d5f716"
+    },
+    {
+      "path": "docs/features/spline-equation-transform/migration.json",
+      "sha256": "ff558729ee14b22cce0fcbd13fd38b440707013b8c256a68fe630278dcbd60d9"
+    }
+  ],
+  "previous_integrated_gate": "docs/features/bitmap-appearance/final-local-gate-verification.json",
+  "current_full_gate": "Running at runtime/test commit3430287220a6835f039becbef7f0fa8ccf15ef08; no pass claimed.",
+  "remaining": [
+    "Full expression grammar/evaluation and native workflow equivalence",
+    "Geometric interpretation and validation",
+    "Whole-schema parity"
+  ]
+}

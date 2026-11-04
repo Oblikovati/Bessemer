@@ -23,3 +23,12 @@ The full local gate passed 1,102 library tests and 277 doctests,
 with 2,607 passing tests across 189 executables and 3 intentional ignores. Raw geometry meanings and native
 application acceptance remain outside this framing correction. The humanizer
 skill was unavailable; prose review is left to the maintainer.
+
+The [latest equation wire audit](latest-schema-audit.json) checked clauses
+11.1699 and 11.1702–11.1704 against the existing codec. Six CString fields
+and the signed compatibility word remain raw, and the fixed transform keeps
+all thirty words. The new selected native consumer bindings do not introduce
+load-time expression evaluation, declared-character filtering, compatibility
+word replacement or matrix application. Frames, expression grammar, geometry
+and native workflow equivalence remain separate. No behavior version or
+expected fixture was changed.
