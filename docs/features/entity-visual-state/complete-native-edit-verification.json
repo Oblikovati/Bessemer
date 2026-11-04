@@ -1,0 +1,36 @@
+{
+  "issue": 181,
+  "passed": true,
+  "processes_reaped": true,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "part_and_assembly_gates": [
+    {
+      "path": "target\\entity-visual-native-rgb-edits.log",
+      "sha256": "eaab4832d440233d92bc253ce414a5aec15e02ec89e52cf506d5d50e13ceefd0",
+      "cases": 906,
+      "counts": [
+        9586,
+        127773
+      ],
+      "seconds": 39092.45
+    },
+    {
+      "path": "target\\entity-visual-native-assembly-rgb-edits.log",
+      "sha256": "463acb568e993de761b2f74b586f206268d12c3fdd459554c7057bc1ae4fb8cc",
+      "cases": 180,
+      "counts": [
+        2516,
+        0
+      ],
+      "seconds": 56.06
+    }
+  ],
+  "clippy": {
+    "passed": true,
+    "log_sha256": "2461a72155cf7a0eae2ed00a7512eb91b605ff03f7523904331fea9b8cbdb850"
+  },
+  "qualification": "The long-running part gate began before later additions; the serialized assembly gate compiled the integrated tree. Both use independently retained native source spans. This is focused edit acceptance, not native application or whole-schema equivalence."
+}

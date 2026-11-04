@@ -296,3 +296,10 @@ python -B -X utf8 docs/features/entity-visual-state/freeze_visual_state.py
 ```
 
 The humanizer skill is unavailable; its prose pass remains for maintainer review.
+
+The long-running native part edit gate completed successfully: all 906 cases
+covered 9,586 configuration and 127,773 feature RGB edits. The serialized
+assembly follow-up passed all 180 configurations and 2,516 edits, followed
+by Clippy with warnings denied. The [complete native edit record](complete-native-edit-verification.json)
+retains log hashes and source-cut qualifications. Native application
+equivalence and remote publication remain separate.
