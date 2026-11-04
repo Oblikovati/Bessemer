@@ -1,0 +1,47 @@
+{
+  "issue": 196,
+  "revision": "39af132d",
+  "external_probe_process_exit_code": 0,
+  "harness_tests_passed": 3,
+  "nested_cargo_tests_passed": 1,
+  "probe": "Actual private gate_cargo_command built and ran an isolated standard-library-only crate with the repository test optimization/assertion/overflow settings",
+  "observations": [
+    "cfg(debug_assertions) true",
+    "Runtime u32::MAX + 1 panicked inside catch_unwind",
+    "Compiler omitted debug information",
+    "No incremental artifact entries",
+    "Caller Cargo home and target root explicitly injected"
+  ],
+  "logs": {
+    "stdout": {
+      "path": "profile-probe-stdout.log",
+      "sha256": "cc9f56c3ba7a838a3e3550fdc32a35d499ad31dd0cee279cba23de0021112e14",
+      "bytes": 318,
+      "original_capture_sha256": "cc9f56c3ba7a838a3e3550fdc32a35d499ad31dd0cee279cba23de0021112e14"
+    },
+    "stderr": {
+      "path": "profile-probe-stderr.log",
+      "sha256": "ce66e98264c0f76ec986ee50fce5c5895a3789e65bb2e8c3590f2db7f7efebf3",
+      "bytes": 2104,
+      "original_capture_sha256": "ce66e98264c0f76ec986ee50fce5c5895a3789e65bb2e8c3590f2db7f7efebf3"
+    },
+    "harness": {
+      "path": "profile-probe-harness.log",
+      "sha256": "03adfa744105d9a1f450c7190e42f8085e362a0ee07c36947e405eb4f81b48c7",
+      "bytes": 437,
+      "original_capture_sha256": "b1204fae771641506308acb2856e7ee984618fc1514d02d864527ba6d8f823aa"
+    }
+  },
+  "probe_source_sha256": "58772c616da0c2255d9ba92406e283e52eb169db9b2c6241e4f810d52bd929e0",
+  "driver_sha256": "88039afd15f0b6d4043b960812fbd408413e746e9f7df1a50ed893c5595b0e16",
+  "in_progress_artifact_measurement": {
+    "stage": "After complete test compilation, during test execution",
+    "debug_deps_bytes": 3736037228,
+    "qualification": "Not final peak and not an exact-head default-policy comparison"
+  },
+  "remaining": [
+    "Complete local PR gate",
+    "Final artifact measurement",
+    "Exact-head remote matrix"
+  ]
+}
