@@ -1,0 +1,85 @@
+{
+  "issue": 2,
+  "edition": "Edition 0.3031 \u00b7 2026-11-04 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "specification_sha256": "b2a8c4af268cddcc0e435b9b36ec6838194a665b22007e170d3a9cc2daa2248e",
+  "snapshot_path": "docs/features/resolved-features/runtime-schema-3031-snapshot.md",
+  "snapshot_representation": "Owned excerpt normalized to LF; original specification hash retains original bytes",
+  "snapshot_sha256": "b05e121f11f4a3b6bb09335463bcb62ea9b0a7ef5b8a1af18880574d45687eb1",
+  "scope": "Eleven selected clauses11.1745 through11.1755; not a whole-schema audit",
+  "clauses": [
+    {
+      "clause": "11.1745",
+      "section_sha256_normalized_lf": "a0cdf089c28e735c3aa7140dda8770b1120cab31e9964cd10c1ff9717f8ba4a6",
+      "qualification": "Old G3 Quadrant uses a runtime parameter-pointer map below0x2DD; no extra inline word or legacy admission",
+      "implementation_status": "No new runtime emulation or legacy/class admission. Existing admitted raw wire transport remains unchanged."
+    },
+    {
+      "clause": "11.1746",
+      "section_sha256_normalized_lf": "64cc0a452b5574dd8807068539294585cf018a5f118f084d75b43d85f3f43794",
+      "qualification": "Tangency vector magnitude has a qualified UI scale role; raw stored vector and geometry meanings remain separate",
+      "implementation_status": "No new runtime emulation or legacy/class admission. Existing admitted raw wire transport remains unchanged."
+    },
+    {
+      "clause": "11.1747",
+      "section_sha256_normalized_lf": "59b0e163f53b519de54b212dd2cb02ccb90fe6b039ca68c33872aaf012d9a137",
+      "qualification": "Curvature vectorF0 has a guarded evaluation-output role; provider validity and evaluation success remain qualified",
+      "implementation_status": "No new runtime emulation or legacy/class admission. Existing admitted raw wire transport remains unchanged."
+    },
+    {
+      "clause": "11.1748",
+      "section_sha256_normalized_lf": "d5dfc49c3944d407ee71f1a304f2726876116544df79d010826e8e1a62c82d4b",
+      "qualification": "Endpoint reference has a scoped parameter and exact override selector; no inferred broad enum or geometry rule",
+      "implementation_status": "No new runtime emulation or legacy/class admission. Existing admitted raw wire transport remains unchanged."
+    },
+    {
+      "clause": "11.1749",
+      "section_sha256_normalized_lf": "899d311b3fdb9c6835088e8e64695cb66d3b6771541a704bfa1c0b3c904129b8",
+      "qualification": "Curvature scalar108 receives a guarded reciprocal write; raw scalar domain is unchanged",
+      "implementation_status": "No new runtime emulation or legacy/class admission. Existing admitted raw wire transport remains unchanged."
+    },
+    {
+      "clause": "11.1750",
+      "section_sha256_normalized_lf": "fe7844a7df7c83cc1fc5e6fc6bbe2d60fcd35342eb57e1a9e0668c23d8212839",
+      "qualification": "Legacy control LOAD migration uses runtime context transforms, with no new inline archive transform",
+      "implementation_status": "No new runtime emulation or legacy/class admission. Existing admitted raw wire transport remains unchanged."
+    },
+    {
+      "clause": "11.1751",
+      "section_sha256_normalized_lf": "dd382d0ac66dfb9f5b20795ae812d174747d763aabc87e2ca714c4b4bc89e178",
+      "qualification": "Hatch point indices feed incident-entity extraction under current provider and identity conditions",
+      "implementation_status": "No new runtime emulation or legacy/class admission. Existing admitted raw wire transport remains unchanged."
+    },
+    {
+      "clause": "11.1752",
+      "section_sha256_normalized_lf": "49664b18564a1c3dca336af90e00a83732a706ba86210a974288e2c7609e420c",
+      "qualification": "Hatch creation-ID arrays have a scoped producer; no universal point-index identity follows",
+      "implementation_status": "No new runtime emulation or legacy/class admission. Existing admitted raw wire transport remains unchanged."
+    },
+    {
+      "clause": "11.1753",
+      "section_sha256_normalized_lf": "6c45b5b8b4b93abd6bb0c6aa92afda5732b462715b2acfcd0b4f89184e4e2eb4",
+      "qualification": "Dimension-help old LOAD omits state below0x9F8 while STORE writes low16; complete old parent admission remains excluded",
+      "implementation_status": "No new runtime emulation or legacy/class admission. Existing admitted raw wire transport remains unchanged."
+    },
+    {
+      "clause": "11.1754",
+      "section_sha256_normalized_lf": "b8988436719be5be74a34db45d70ee4ca6e2dc0e1ba07e3c483d1ff77f386043",
+      "qualification": "Current hatch Scale estimates and candidate-output consumers retain provider and geometric qualifications",
+      "implementation_status": "No new runtime emulation or legacy/class admission. Existing admitted raw wire transport remains unchanged."
+    },
+    {
+      "clause": "11.1755",
+      "section_sha256_normalized_lf": "e8b5298fc15398aaffea3a68b22efd5c39b12270b976924fc49438b9e70faa60",
+      "qualification": "Nonnull skHatchData_c has canonical class/schema and point-block/body dependencies, but complete base/kernel/DB/source admission remains unproved",
+      "implementation_status": "No new runtime emulation or legacy/class admission. Existing admitted raw wire transport remains unchanged."
+    }
+  ],
+  "hatch_data_admission_required": [
+    "Complete inherited-base profile and ordinary versus DB grammar",
+    "Point-block bounds and arithmetic policy independent of native wraparound/unchecked Read",
+    "Complete body-helper encoding, suppression and kernel context",
+    "Canonical containing parent, source population and independent complete fixtures"
+  ],
+  "coverage_credit": 0,
+  "native_execution": false
+}
