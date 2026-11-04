@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Bounded transient test build artifacts in PR/full gates after the hosted Linux runner exhausted disk. (#196)
+
 - Partitioned the complete ThreadSanitizer workload across eight required CI jobs to keep validation within hosted-runner time limits. (#183)
 
 - Corrected the planned Simulation Material text contract to retain accepted odd-byte frames without a UTF-16 view. (#141)

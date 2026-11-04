@@ -1,0 +1,35 @@
+{
+  "issue": 196,
+  "base_revision": "425f7034dfa70a587abda229adbcaed4d007a5fa",
+  "pull_request": 191,
+  "failed_workflow_run": 41796193257,
+  "failed_job": 126561115912,
+  "failure": "Hosted Linux runner disk exhaustion; runner log upload unavailable after crash",
+  "failure_annotation_sha256": "b2cc9c7f58a94d43893b06d45c61f1c68f350b4e6b4f781533845948f0060b32",
+  "supporting_local_debug_deps_bytes": 19994028848,
+  "measurement_qualification": "Broader Windows working-tree cache containing multiple earlier builds; not a matched Linux before/after measurement",
+  "xtask_tests_passed": 17,
+  "xtask_failed": 0,
+  "xtask_ignored": 0,
+  "xtask_process_exit_code": 0,
+  "test_log_sha256": "0ffae26a4d86c02de2bb6a0271f52bd979d92c994badc2a1586b0fff4a2218f5",
+  "policy": {
+    "CARGO_PROFILE_TEST_DEBUG": "0",
+    "CARGO_PROFILE_TEST_INCREMENTAL": "false"
+  },
+  "unchanged": [
+    "All Cargo gate arguments",
+    "Test optimization level",
+    "Debug assertions",
+    "Overflow checks",
+    "Warnings-denied lint",
+    "Sanitizer command and instrumentation",
+    "Ordinary contributor cargo test defaults",
+    "Running xtask dev build profile"
+  ],
+  "remaining": [
+    "Complete exact-head local PR gate",
+    "Artifact storage measurement",
+    "All exact-head remote checks"
+  ]
+}
