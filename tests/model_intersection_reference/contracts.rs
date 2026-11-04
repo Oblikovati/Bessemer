@@ -3,7 +3,7 @@ use ModelIntersectionReferenceStoredEdit as Edit;
 use ModelIntersectionReferenceStoredState as State;
 use ModelIntersectionReferenceStoredWords as Words;
 
-fn reference_oracle(columns: &[&str]) -> Words {
+pub(super) fn reference_oracle(columns: &[&str]) -> Words {
     assert_eq!(columns.len(), 7);
     Words {
         raw_state: columns[3].parse().unwrap(),
@@ -20,7 +20,7 @@ fn paired_reference_request(span_count_state: i32, backward_offset_state: i32) -
     }
 }
 
-fn reference_requests(words: Words) -> [(Edit, [i32; 2]); 4] {
+pub(super) fn reference_requests(words: Words) -> [(Edit, [i32; 2]); 4] {
     let span = words.span_count_state ^ 0x1357_9bdf;
     let backward = words.backward_offset_state ^ 0x2468_ace0;
     [
@@ -204,12 +204,7 @@ fn verify_reference_coverage(
 }
 
 fn verify_reference_noops(source: &PartResolvedFeaturesArchive, state: &State) {
-    let words = state.words();
-    for edit in [
-        Edit::SpanCountState(words.span_count_state),
-        Edit::BackwardOffsetState(words.backward_offset_state),
-        paired_reference_request(words.span_count_state, words.backward_offset_state),
-    ] {
+    for edit in reference_noop_requests(state.words()) {
         let result = source
             .edit_intersection_reference_state(state, edit)
             .unwrap();
@@ -224,4 +219,12 @@ fn verify_reference_noops(source: &PartResolvedFeaturesArchive, state: &State) {
             state
         );
     }
+}
+
+pub(super) fn reference_noop_requests(words: Words) -> [Edit; 3] {
+    [
+        Edit::SpanCountState(words.span_count_state),
+        Edit::BackwardOffsetState(words.backward_offset_state),
+        paired_reference_request(words.span_count_state, words.backward_offset_state),
+    ]
 }

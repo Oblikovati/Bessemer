@@ -2,14 +2,20 @@
 use bessemer::Document;
 use bessemer::header::ArchiveVersion;
 use bessemer::model_archives::*;
+#[path = "model_intersection_reference/concurrency.rs"]
+mod concurrency;
 #[path = "model_intersection_reference/contracts.rs"]
 mod contracts;
 #[path = "model_intersection_reference/documents.rs"]
 mod documents;
+#[path = "support/model_operation_snapshot.rs"]
+mod model_operation_snapshot;
 #[path = "support/owned_resolved_document.rs"]
 mod owned_resolved_document;
 #[path = "support/unselected_document_streams.rs"]
 mod unselected_document_streams;
+#[path = "support/visual_workers.rs"]
+mod visual_workers;
 
 const LIMITS: ModelArchiveLimits = ModelArchiveLimits {
     maximum_bytes: 30000,

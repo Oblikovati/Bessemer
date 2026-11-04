@@ -49,8 +49,11 @@ processes. Native archive edits passed all 68 physical groups in the eight
 complete C-3307 streams, with literal byte patches and complete field/history
 checks. Native complete-document edits also passed all 68 groups in two fresh
 processes: reopen preserved every unrelated stream and reversal restored the
-original files byte for byte. Wider version/caller boundaries, concurrency
-and publication gates remain pending. The newer index and classification roles
+original files byte for byte. All 1,344 owned cases also passed mixed requests
+across eight workers in two fresh processes. Complete operation traces and
+wire exports match byte for byte, including resolved history and typed errors.
+Wider version/caller boundaries, ThreadSanitizer and publication gates remain
+pending. The newer index and classification roles
 are tracked separately in #185.
 File-operation acceptance does not establish geometry,
 native application opening or rendering. The humanizer skill is unavailable;
