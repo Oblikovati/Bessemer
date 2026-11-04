@@ -45,8 +45,10 @@ archives. Other caller APIs need complete positive carriers before addition.
 The owned matrix has accepted original Source roots and typed Rust edits.
 Two fresh unchanged Source processes also accepted every actual exported edit
 output. The owned document matrix passed complete edit/reopen/reversal in two
-processes. Native operation/document edits, wider version/caller boundaries,
-concurrency and publication gates remain pending.
+processes. Native archive edits passed all 68 physical groups in the eight
+complete C-3307 streams, with literal byte patches and complete field/history
+checks. Native document edits, wider version/caller boundaries, concurrency
+and publication gates remain pending.
 File-operation acceptance does not establish geometry,
 native application opening or rendering. The humanizer skill is unavailable;
 prose review remains pending.
