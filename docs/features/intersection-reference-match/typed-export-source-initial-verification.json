@@ -1,0 +1,73 @@
+{
+  "issue": 184,
+  "stage": "First complete unchanged Source acceptance of actual typed stored-role outputs",
+  "processes_reaped": 1,
+  "exit_code": 0,
+  "cases": 1344,
+  "complete_roots": 44352,
+  "changed_roots": 43008,
+  "scalar_projections": 1419264,
+  "packet_bytes": 67503748,
+  "packet_sha256": "9f1caef0a67f45721f090275aa6369354afc333e0d4f504bede21fa745ece47f",
+  "context_streams_sha256": [
+    "3b98a8dfe9082f76c546219eb38b4b358c9a682d5aafc1a44b33c099c1a22495",
+    "2bb4c6306071b4bd20be2cda0207c376e5a6c803e884c77c95ee68f44632d8f7",
+    "f6387400850ae80dedbc5d2f5dc77fb1dd38ad4b8afb1e6fb2ffc2ad35edb27d"
+  ],
+  "source_python_files": 5757,
+  "artifacts": [
+    {
+      "path": "target/replay-intersection-typed-source.py",
+      "bytes": 6780,
+      "sha256": "d1e20e740dc3baf039523375fc5549686defb10e0cf8fe7ce53f7f74a1d5eedb"
+    },
+    {
+      "path": "target/intersection-reference-typed-source-1.json",
+      "bytes": 733875,
+      "sha256": "7a21756c3b5ae664945d26efbf5517aab04f54159c6580f75310f0fcdd9658e5"
+    },
+    {
+      "path": "target/intersection-reference-typed-source-1.log",
+      "bytes": 50044,
+      "sha256": "56c79cd385bbcbe3aaeb1753a5e70e0732b21f10e0483c62c596b18f047e0946"
+    },
+    {
+      "path": "target/intersection-reference-typed-source-import-order-failure.log",
+      "bytes": 7216,
+      "sha256": "9bad7753ca70602c1ae087fc7bbf45704a88062aeb3cd67693570ca1846622b7"
+    },
+    {
+      "path": "target/intersection-reference-typed-source-forward-cast-failure.log",
+      "bytes": 1319,
+      "sha256": "7d3088bc84a2f75a7751d866e6fc3ddf0dc66e8dd1ab5c5173d6103058ee3764"
+    },
+    {
+      "path": "docs/features/intersection-reference-match/typed-export-source-initial-snapshot.json",
+      "bytes": 718447,
+      "sha256": "875a38d3e9730b13b191175d1073698b87bd404600cb33232d2c7cd6a96a3d36"
+    }
+  ],
+  "checks": [
+    "Every actual Rust original and changed root matches the independent complete signed-word literal expectation before Source parsing.",
+    "Unchanged complete resolved-feature readers reach EOF with the expected two definitions, alias identity, object map and all eight reference groups.",
+    "All1419264 state/raw20/span/backward scalar projections match independent expected values without an accounting adapter or float/version/registry override.",
+    "The pre-freeze guard admits no live Source imports. Final checks verify every imported Source module belongs to the immutable copy and every copied Python file remains unchanged.",
+    "The complete original model context stream hashes match the owned blank-part context."
+  ],
+  "rejected_attempts": [
+    "An initial helper import occurred before FrozenSourceImports installation. The run was deliberately cancelled and excluded before acceptance; its77 completed case rows are diagnostic only.",
+    "The next collector rejected at case0 because a type-checking-only alias was evaluated by cast. A forward string annotation fixed the collector; no fixture, original reader or acceptance assertion changed."
+  ],
+  "cleanup_limit": {
+    "path": "C:/Users/vmiguel/AppData/Local/Temp/bessemer-intersection-typed-source-p7wd5d8e",
+    "status": "preserved",
+    "reason": "Automatic approval review rejected recursive cleanup as blocked by policy; the folder is not reused or accepted"
+  },
+  "coverage_credit": 0,
+  "qualifications": [
+    "Second fresh Source replay is running and is not accepted by this first-process record.",
+    "Original Source unit suites remain separate; this run performs explicit complete-root checks rather than a unittest selection.",
+    "Native operation edits, wider caller/version boundaries, complete documents, mixed concurrency and exact-head Cargo/platform publication gates remain required.",
+    "No native application, matcher, geometry or full schema parity is claimed. Humanizer unavailable; prose review remains pending."
+  ]
+}

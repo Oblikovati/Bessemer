@@ -102,6 +102,14 @@ integration tests and standalone Clippy pass. Cargo/platform, fresh Source
 changed-output, native edit, broader caller/version, whole-document and
 concurrency gates remain required; this does not complete Feature #184.
 
+The [first fresh typed-output Source replay](typed-export-source-initial-verification.json)
+accepted all 44,352 actual exported roots, including 43,008 changed outputs and
+1,419,264 scalar projections. Complete unchanged readers retained aliases, map
+sizes, all physical groups and EOF. Every output also matched an independent
+literal patch. The corrected run passed its pre-import and final frozen-source
+guards; the rejected import-order and cast attempts remain excluded. A second
+fresh-process replay is running. No accounting adapter or native target ran.
+
 Regenerate the matrix only during explicit oracle initialization:
 
 ```powershell
