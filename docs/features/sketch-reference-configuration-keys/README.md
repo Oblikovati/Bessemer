@@ -85,3 +85,28 @@ bytes, history, coverage, diagnostics and typed errors matched across eight
 workers. Source, foreign archive and configuration inputs stayed unchanged.
 The seven-test owned suite and integration Clippy passed; native operations,
 ThreadSanitizer, full Cargo and remote publication acceptance remain open.
+
+Native validation reuses the existing 906-case resolved-feature corpus reader.
+The independent oracle contains 6,863 paired signed-key spans across 794
+streams and versions 11000, 18000 and 19000. The view test checks every
+corpus case, including streams without canonical references. The edit test
+checks all three request kinds against full literal byte patches, stored
+fields, history and stale-revision errors. These tests require the retained
+native corpus and an explicit kernel schema; execution results remain pending.
+The new native code passed Clippy with warnings denied and the function-size
+audit.
+
+Both actual-output Source replay processes completed successfully. Each
+accepted all 24,000 exports: 22,672 changes and 1,328 no-ops. The consumed
+Source modules matched between the two immutable snapshots. Full graph/map
+fingerprints, floating-point bits, aliases, spans, EOF and original accounting
+signatures matched the independently patched expectations. Both processes
+exited successfully; their snapshots, log hashes and collector hashes are
+retained in the actual-output verification record.
+
+The native view gate passed all 906 corpus cases in 89.21 seconds. It
+matched 6,863 physical key pairs in 794 streams and returned empty key lists
+for the remaining 112 streams. Full native reconstruction, literal signed
+words and explicit revision-owned projections agreed with the oracle.
+The separate 20,589-edit native gate is running; native document operations,
+instruction provenance and remote publication remain unproven.

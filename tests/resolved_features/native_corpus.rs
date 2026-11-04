@@ -12,6 +12,8 @@ mod stored_dimension_views;
 mod stored_intersection_references;
 #[path = "../model_node_state/native.rs"]
 mod stored_node_views;
+#[path = "../model_sketch_reference_lookup/native.rs"]
+mod stored_sketch_lookup_keys;
 #[path = "../model_visual_carriers/native.rs"]
 mod stored_visual_carriers;
 
