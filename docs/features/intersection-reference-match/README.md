@@ -110,6 +110,13 @@ literal patch. The corrected run passed its pre-import and final frozen-source
 guards; the rejected import-order and cast attempts remain excluded. A second
 fresh-process replay is running. No accounting adapter or native target ran.
 
+The [second complete typed-output replay](typed-export-source-verification.json)
+subsequently accepted the same 44,352 roots and 1,419,264 scalar projections.
+All 5,757 common Source files match across snapshots; nine added research files
+are listed separately. Both corrected processes passed frozen-import and file
+integrity checks. Native edits, caller/version boundaries, complete documents,
+concurrency and publication gates remain open.
+
 Regenerate the matrix only during explicit oracle initialization:
 
 ```powershell

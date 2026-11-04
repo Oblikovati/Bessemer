@@ -42,9 +42,9 @@ fn replace_first_span(source: &PartResolvedFeaturesArchive) -> bessemer::Result<
 
 The first implementation covers complete ordinary part resolved-feature
 archives. Other caller APIs need complete positive carriers before addition.
-The owned matrix has accepted original Source roots and typed Rust edits;
-fresh Source replay of the actual changed outputs, native operation edits,
-wider version/caller boundaries, whole documents, concurrency and publication
-gates remain pending. File-operation acceptance does not establish geometry,
+The owned matrix has accepted original Source roots and typed Rust edits.
+Two fresh unchanged Source processes also accepted every actual exported edit
+output. Native operation edits, wider version/caller boundaries, whole
+documents, concurrency and publication gates remain pending. File-operation acceptance does not establish geometry,
 native application opening or rendering. The humanizer skill is unavailable;
 prose review remains pending.
