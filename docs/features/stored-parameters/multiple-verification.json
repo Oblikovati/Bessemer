@@ -18,17 +18,27 @@
   },
   "clippy_exit_code": 0,
   "post_format_maximum_rust_function_lines": 19,
-  "active_strict_replay": {
-    "session": 49108,
-    "log": "target/parameter-multiple-source-regeneration.log"
-  },
   "logs_sha256": {
     "parameter-multiple-source-initial.log": "e3be180f9db0674341d9aa96d0aec2e90ced0a75d982a4d10232574a8962489e",
     "parameter-multiple-tests.log": "a5fa8baf93a4049bf3deeccdad2594c909d6a6ceb9013871ba7dae9dd6684993",
-    "parameter-complete-multiple-tests.log": "8780863bc2df56d83e7b23b5d3c427a536be9dd2a9c54f4ceb93c2f84eaaacaf"
+    "parameter-complete-multiple-tests.log": "8780863bc2df56d83e7b23b5d3c427a536be9dd2a9c54f4ceb93c2f84eaaacaf",
+    "parameter-multiple-source-regeneration.log": "ea48412bb305954f2af8cbeef829a6bda17b576dcd4c170e335e4670409a1aeb"
   },
   "exclusions": [
     "No new native population, context/version admission, geometry or application acceptance",
     "Complete PR publication and full native primary corpus acceptance remain separate"
-  ]
+  ],
+  "strict_replay": {
+    "exit_code": 0,
+    "tests_passed": 1,
+    "seconds": 1.798,
+    "all_fixture_bytes_unchanged": true,
+    "snapshot_identity": "a9cb194e89c0bdd43167c00c3faab3baec3d26177026615e3af31b50936035b7"
+  },
+  "full_gate_first_attempt": {
+    "source_revision": "798fd59c",
+    "exit_code": 1,
+    "cause": "New integration module declarations were not in rustfmt order; runtime tests were not reached.",
+    "log_sha256": "9647ffc09d6a0ae41565e9ac05a9eeb0ccbbabe60b6029f4a3f562f2a4395c3a"
+  }
 }

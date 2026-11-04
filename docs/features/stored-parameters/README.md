@@ -289,6 +289,6 @@ names, primary, alternate and presence remained unchanged.
 Bessemer matched all six complete expected streams, reopened each complete
 document, and reversed each edit from a fresh typed snapshot to the original
 file bytes. All 21 focused tests passed. The frozen source snapshot and
-`multiple-verification.json` record the acceptance scope; a fresh strict
-regeneration run is active. This does not extend native population, version or
+`multiple-verification.json` record the acceptance scope. A fresh strict
+regeneration run passed and reproduced every fixture byte. This does not extend native population, version or
 geometry acceptance.
