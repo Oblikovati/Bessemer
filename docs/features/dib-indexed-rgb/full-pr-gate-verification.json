@@ -1,0 +1,20 @@
+{
+  "issues": [202, 204, 205, 206, 207, 208, 209],
+  "command": "cargo xtask pr",
+  "process_exit_code": 0,
+  "passed": true,
+  "source_revision": "bb5faccdc7e8ef5336a5cb53076a9c92486c7a99",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "tests_passed": 4121,
+  "tests_failed": 0,
+  "tests_ignored": 231,
+  "test_summaries": 330,
+  "log_sha256": "570b408de7074e5aacfd3a9f85ebf9e3a39ca0b52bc945419d0c537c3322254d",
+  "scope": "All local changes through indexed RGB previews and the schema-3077 folder property regression at bb5faccd",
+  "exclusions": [
+    "Later shared row-layout extraction and RGB555 implementation are excluded",
+    "Ignored native primary edit census remains separate",
+    "Exact-head remote CI, native application/kernel acceptance and complete schema parity remain separate"
+  ]
+}
