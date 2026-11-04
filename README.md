@@ -827,3 +827,5 @@ integer arithmetic; alpha is ignored. The outcome retains the original color
 and either a packed value or a typed channel/domain exclusion. Nonfinite,
 nonzero subnormal and overflowing/out-of-range RGB inputs produce no packed
 value under this model.
+
+Stored bitmap transparency settings expose full signed has-transparency, level and type values through `bitmap_transparency_states()` and isolated `edit_bitmap_transparency()` operations. See [the feature contract](docs/features/bitmap-transparency/README.md) for the qualified scope and validation status.

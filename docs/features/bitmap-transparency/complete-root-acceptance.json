@@ -1,0 +1,26 @@
+{
+  "issue": 187,
+  "source_snapshot_identity": "e854df22d4551d756bc32fc35bc3bc3da664c690198bce8f463ba48a96369f92",
+  "source_python_files": 5926,
+  "source_consumed_modules": 167,
+  "complete_cases": 731,
+  "physical_definitions": 1462,
+  "aliases": 731,
+  "source_primitive_reads": 34361,
+  "independent_framing_checks": 731,
+  "source_and_rust_packet_sha256": "d18e87585378e49c558c0695d6f1c9d071391e1079d7e3585c44c30c16d98881",
+  "rust_probe_artifacts": {
+    "target/bitmap-root-parser-probe.rs": "ca2f5a11fcc74a236b6ac8aab5be5ca5f9608b68a2ecdbb2a55870f63aff3ea3",
+    "target/bitmap-root-parser-probe.exe": "c76b16b7611c0d942f097dc79a9c39c49a5603e594a03e01fc49b5ad3ed4a522",
+    "target/bitmap-root-parser-probe.log": "2db4d736c6f4b2b7c1457560c53872a1d9e1945a5037316ef70bc28d277bc793",
+    "target/libbessemer_edge_index.rlib": "f884e0bac383deb33f4cb677ed34afba77945476352fe225927c6fdc9ed433da"
+  },
+  "rust_probe_result": "1 passed,0 failed; all731 complete streams reconstructed byte for byte and six saved role scalars per case matched literal wire bytes",
+  "remaining": [
+    "Revision-owned typed setting API",
+    "Typed edit behavior, history and isolation tests",
+    "Native API operations and complete-document validation",
+    "Fresh-process byte comparisons and concurrency checks",
+    "Full local and required CI gates"
+  ]
+}

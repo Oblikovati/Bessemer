@@ -350,6 +350,11 @@ fn model_failure(mut error: BessemerError) -> BessemerError {
 
 mod entity_visual_state;
 pub use entity_visual_state::ModelEntityVisualStoredState;
+mod bitmap_transparency;
+pub use bitmap_transparency::{
+    ModelBitmapTransparencyEdit, ModelBitmapTransparencyState, ModelBitmapTransparencyWords,
+};
+
 mod intersection_reference;
 pub use intersection_reference::{
     ModelIntersectionEdgeStoredIndex, ModelIntersectionReferenceStoredEdit,
