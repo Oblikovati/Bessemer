@@ -846,3 +846,5 @@ Stored bitmap matching-color, transparent-color and ink-markup settings are
 available through `bitmap_appearance_states()` and `edit_bitmap_appearance()`.
 Values retain their full signed or unsigned width; historical archives can
 omit the ink-markup word. See [the appearance contract](docs/features/bitmap-appearance/README.md).
+
+Model-field edits retain CString count-prefix changes as physical changes, including completion and derived field history; decoded string comparison remains semantic. See the [framing regression](docs/features/model-text-framing/README.md).
