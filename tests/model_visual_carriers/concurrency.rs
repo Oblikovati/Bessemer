@@ -1,4 +1,5 @@
 use super::*;
+use crate::model_operation_snapshot::{ModelVisualOperation, model_visual_operation};
 use bessemer::entity_visual::EntityVisualStoredEdit as Edit;
 use bessemer::{BessemerError, FailureClass};
 use flate2::{Compression, write::ZlibEncoder};
@@ -7,67 +8,10 @@ use std::io::Write;
 type ModelTrace = Option<ZlibEncoder<Vec<u8>>>;
 
 #[derive(Debug, PartialEq, Eq)]
-struct ModelVisualRelation {
-    path: String,
-    relation: ModelFieldRelation,
-    parents: Vec<ModelField>,
-    result: Option<ModelField>,
-}
-
-#[derive(Debug, PartialEq, Eq)]
-struct ModelVisualOperation {
-    bytes: Vec<u8>,
-    fields: Vec<ModelField>,
-    completion: ModelEditCompletion,
-    coverage: ModelArchiveCoverage,
-    fidelity: ModelEditFidelity,
-    diagnostics: Vec<ModelArchiveDiagnostic>,
-    history: Vec<ModelVisualRelation>,
-}
-
-#[derive(Debug, PartialEq, Eq)]
 struct ModelVisualMixedOutcome {
     changed: ModelVisualOperation,
     rejected: BessemerError,
     unchanged: ModelVisualOperation,
-}
-
-fn model_visual_relation(
-    source: &PartResolvedFeaturesArchive,
-    result: &PartResolvedFeaturesEdit,
-    change: &ModelFieldChange,
-) -> ModelVisualRelation {
-    ModelVisualRelation {
-        path: change.path().to_owned(),
-        relation: change.relation(),
-        parents: change
-            .parents()
-            .iter()
-            .map(|parent| source.resolve_field(parent).unwrap().clone())
-            .collect(),
-        result: change
-            .result()
-            .map(|field| result.archive().resolve_field(field).unwrap().clone()),
-    }
-}
-
-fn model_visual_operation(
-    source: &PartResolvedFeaturesArchive,
-    result: &PartResolvedFeaturesEdit,
-) -> ModelVisualOperation {
-    ModelVisualOperation {
-        bytes: result.archive().to_bytes().unwrap(),
-        fields: result.archive().fields().to_vec(),
-        completion: result.completion(),
-        coverage: result.coverage(),
-        fidelity: result.fidelity(),
-        diagnostics: result.diagnostics().to_vec(),
-        history: result
-            .changes()
-            .iter()
-            .map(|change| model_visual_relation(source, result, change))
-            .collect(),
-    }
 }
 
 fn shared_model_rgb(
