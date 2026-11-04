@@ -38,9 +38,9 @@ def retain_parameter_snapshot(raw: bytes, prefix: str = 'owned-source-snapshot')
     (FEATURE / f'{prefix}.json').write_bytes((json.dumps(index, indent=2) + '\n').encode())
 
 
-def verify_parameter_regeneration(generated: Path) -> None:
+def verify_parameter_regeneration(generated: Path, expected: Path | None = None) -> None:
     """Compare every reviewed fixture byte without updating goldens; e.g. verify_parameter_regeneration(out)."""
-    expected = ROOT / 'tests/fixtures/stored-parameters'
+    expected = expected or ROOT / 'tests/fixtures/stored-parameters'
     if not expected.exists():
         return
     names = sorted(path.name for path in expected.iterdir() if path.is_file())

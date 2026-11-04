@@ -5,7 +5,7 @@ import os
 import sys
 import tempfile
 import unittest
-from freeze_owned_reference import ROOT, FEATURE, FrozenSourceImports, copy_sources, record_snapshot, retain_parameter_snapshot
+from freeze_owned_reference import ROOT, FEATURE, FrozenSourceImports, copy_sources, record_snapshot, retain_parameter_snapshot, verify_parameter_regeneration
 
 
 def run_inherited_reference(pin: Path, destination: Path, actual_exports: bool = False) -> unittest.TestResult:
@@ -23,13 +23,7 @@ def run_inherited_reference(pin: Path, destination: Path, actual_exports: bool =
 
 def verify_inherited_regeneration(generated: Path) -> None:
     """Preserve every already-reviewed inherited fixture; e.g. verify_inherited_regeneration(out)."""
-    expected = ROOT / 'tests/fixtures/stored-parameters/inherited'
-    if not expected.exists():
-        return
-    names = sorted(path.name for path in expected.iterdir() if path.is_file())
-    assert names == sorted(path.name for path in generated.iterdir() if path.is_file()), 'expected identical inherited fixture sets'
-    for name in names:
-        assert (expected / name).read_bytes() == (generated / name).read_bytes(), f'{name}; expected unchanged inherited parameter bytes'
+    verify_parameter_regeneration(generated, ROOT / 'tests/fixtures/stored-parameters/inherited')
 
 
 def main() -> int:

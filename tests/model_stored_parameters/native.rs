@@ -4,6 +4,8 @@ use crate::model_archives::{
     CompressedKernelContext, ModelField, ModelFieldValue, ModelObjectRecord,
     ModelParameterStoredState, PartResolvedFeaturesArchive,
 };
+#[path = "native_documents.rs"]
+mod documents;
 #[path = "native_exports.rs"]
 mod exports;
 
