@@ -1,0 +1,61 @@
+{
+  "issue": 192,
+  "application_acceptance_executed": false,
+  "process_running": false,
+  "pointer_bytes": 8,
+  "application_path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\SLDWORKS.exe",
+  "application_bytes": 718424,
+  "application_file_version": "34.2.1.0002",
+  "application_sha256": "8863b3a07e4616868eda1677fc065f3e8c4767ed18ef20f1cfff536430995b66",
+  "registry_checks": [
+    {
+      "view": "Registry64",
+      "prog_id": "SldWorks.Application",
+      "registered": false
+    },
+    {
+      "view": "Registry64",
+      "prog_id": "SldWorks.Application.34",
+      "registered": false
+    },
+    {
+      "view": "Registry32",
+      "prog_id": "SldWorks.Application",
+      "registered": false
+    },
+    {
+      "view": "Registry32",
+      "prog_id": "SldWorks.Application.34",
+      "registered": false
+    }
+  ],
+  "qualification": "Executable and SDK files are installed. The unversioned/2026 automation ProgIDs and SDK application/interface LocalServer32 entries are absent in both registry views. This is read-only host qualification, not an activation or reload/save test. No registration, application, input file or expected baseline was changed.",
+  "remaining": "Native application reload/save acceptance remains open; wire and Source gates are separate.",
+  "sdk_class_registration_checks": [
+    {
+      "type": "SolidWorks.Interop.sldworks.SldWorks",
+      "guid": "{83a33d22-27c5-11ce-bfd4-00400513bb57}",
+      "view": "Registry64",
+      "local_server_registered": false
+    },
+    {
+      "type": "SolidWorks.Interop.sldworks.SldWorks",
+      "guid": "{83a33d22-27c5-11ce-bfd4-00400513bb57}",
+      "view": "Registry32",
+      "local_server_registered": false
+    },
+    {
+      "type": "SolidWorks.Interop.sldworks.SldWorksClass",
+      "guid": "{666aaee2-7a21-40fc-b768-2078840a88c3}",
+      "view": "Registry64",
+      "local_server_registered": false
+    },
+    {
+      "type": "SolidWorks.Interop.sldworks.SldWorksClass",
+      "guid": "{666aaee2-7a21-40fc-b768-2078840a88c3}",
+      "view": "Registry32",
+      "local_server_registered": false
+    }
+  ],
+  "sdk_assembly_sha256": "bb8cc4837bf45c47d4a553a0e88c4c584e5b3f2c9d07a4d05e6fe15cfbe468f4"
+}

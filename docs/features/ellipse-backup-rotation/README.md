@@ -107,3 +107,10 @@ aliases and raw float bits after only the intended scalar replacement. Root
 spans, class counts and unknown totals stayed unchanged. The frozen content
 and import guards passed, and the process exited successfully. The current
 full local repository gate and later exact-head remote gates remain pending.
+
+The [application-host check](application-host-qualification.json) found the
+installed executable and SDK, but the usual automation ProgIDs and the SDK
+application-class LocalServer32 registrations are absent in both registry
+views. No application was launched or registered, and no reload/save pass is
+claimed. Native application acceptance remains open independently of the
+completed wire and Source checks.
