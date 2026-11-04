@@ -2,6 +2,8 @@
 mod edit;
 mod load;
 mod projection;
+mod source_identity;
+mod source_md5;
 mod types;
 
 use super::InspectionEnvelope;
@@ -10,6 +12,10 @@ use crate::metadata::Utf8XmlDocument;
 use crate::{BessemerError, FailureClass, Result};
 pub use edit::InspectionRecordEdit;
 pub use load::{InspectionLoadedCustomProperty, InspectionLoadedMeasurement};
+pub use source_identity::{
+    InspectionSourceCheckMode, InspectionSourceComparison, InspectionSourceCompletion,
+    InspectionSourceCoverage, InspectionSourceDiagnostic, InspectionSourceIdentityValues,
+};
 use std::sync::Arc;
 pub use types::*;
 
