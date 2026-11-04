@@ -43,5 +43,16 @@
     "Active full PR gate at f8b7578a excludes this later Bug204 fix",
     "Main-first bugfix integration, forwarding and exact-head platform checks remain pending",
     "No native negative-count population, CAD application, kernel/geometry or whole-schema parity acceptance"
-  ]
+  ],
+  "native_regression": {
+    "cases": 906,
+    "accepted": 906,
+    "failed": 0,
+    "exit_code": 0,
+    "seconds": 77.78,
+    "forced_typed_feature_construction_and_public_reconstruction": true,
+    "packet_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+    "log_sha256": "94a75f4ef06ef7a6e63c2baa00293bb10cfd90c6dc57371e9feb71a8d231368d",
+    "scope": "Existing native packet reconstruction; no native negative-count population or application acceptance"
+  }
 }
