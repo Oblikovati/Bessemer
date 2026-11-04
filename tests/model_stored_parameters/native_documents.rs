@@ -8,6 +8,8 @@ use crate::model_archives::{
 };
 #[path = "corpus_primary.rs"]
 mod corpus_primary;
+#[path = "version_contexts.rs"]
+mod version_contexts;
 
 struct NativePrimaryRow {
     context: u32,

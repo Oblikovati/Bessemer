@@ -292,3 +292,27 @@ file bytes. All 21 focused tests passed. The frozen source snapshot and
 `multiple-verification.json` record the acceptance scope. A fresh strict
 regeneration run passed and reproduced every fixture byte. This does not extend native population, version or
 geometry acceptance.
+
+## Owned parameters in older native contexts
+
+All six parameter classes now have four original layouts and one primary-edit
+golden in each of two independently loaded native contexts: version 11000,
+case 0 with 413 inherited map slots, and version 18000, case 210 with 145 slots.
+The 60 owned graphs use those actual map identities. Unchanged original Source
+readers completed every configuration and feature stream. A fresh guarded run
+reproduced all fixture bytes.
+
+Bessemer read the 48 original graphs, matched all 12 primary edits to the
+independent expected streams, reopened the complete documents and reversed each
+edit from a fresh snapshot to the exact owned input file. The original native
+documents and unrelated streams remained unchanged. The focused test and Clippy
+passed; `version-contexts-verification.json` records the source pins and scope.
+
+These are generated parameter graphs inside native configuration contexts.
+They do not add native parameter populations, prove application opening or
+geometry validity, or establish every older containing-body layout.
+
+```text
+python -B -X utf8 docs/features/stored-parameters/freeze_multiple_reference.py --versions
+cargo test --lib all_parameter_classes_in_older_native_contexts_reopen_and_reverse_owned_documents -- --ignored
+```
