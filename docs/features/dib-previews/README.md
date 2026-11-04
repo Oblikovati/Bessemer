@@ -10,7 +10,10 @@ clause 8.2 datastream.
 The immutable archive retains every BITMAPINFOHEADER field, every RGBQUAD byte,
 the complete declared image bytes, absolute-run alignment bytes, and bytes after
 the RLE end marker. The outer size is derived when rebuilding. Stored image size
-must match the complete image payload, including for BGRX. Raw fourth bytes in
+must match the complete image payload. BGRX also accepts a zero image-size
+declaration and derives the exact extent from dimensions, preserving the zero
+through edits and fresh reversals; see [the regression evidence](../dib-zero-image-size/README.md).
+Raw fourth bytes in
 palette and BGRX entries are preserved without assuming alpha semantics.
 
 RLE decoding follows Microsoft's [bitmap compression contract](https://learn.microsoft.com/windows/win32/gdi/bitmap-compression).
@@ -32,7 +35,8 @@ contents and reverts preserve the original bytes. `new` forces reconstruction.
 255 indices, EOL for every row, and EOB. It deliberately replaces the original
 command encoding, including any unwritten positions and trailing bytes.
 `with_bgrx_pixels` replaces all four bytes per pixel in the original row orientation.
-Both methods retain the header observations and palette, and update image size.
+Both methods retain the header observations and palette, and update explicit image
+sizes. BGRX edits preserve an omitted image size.
 They reject replacements whose count or format differs from the source.
 
 ## Usage

@@ -94,8 +94,11 @@ impl DibPreview {
 
     fn with_pixel_bytes(&self, bytes: Vec<u8>, maximum_pixels: usize) -> Result<Self> {
         let mut contents = self.contents().clone();
-        contents.header.image_size = u32::try_from(bytes.len())
-            .map_err(|_| invalid(format!("replacement bytes {}; expected u32", bytes.len())))?;
+        // Preserve legal omitted BI_RGB sizes across fresh edit/reversal checkpoints (#208).
+        if contents.header.compression != 0 || contents.header.image_size != 0 {
+            contents.header.image_size = u32::try_from(bytes.len())
+                .map_err(|_| invalid(format!("replacement bytes {}; expected u32", bytes.len())))?;
+        }
         contents.pixel_bytes = bytes;
         self.with_contents(contents, maximum_pixels)
     }

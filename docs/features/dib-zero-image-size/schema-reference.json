@@ -1,0 +1,9 @@
+{
+  "issue": 208,
+  "schema_path": "../inventor-interface/docs/solidworks-file-format/specification.md",
+  "schema_raw_sha256": "6edf58991610e466a8be03cd592f82fc0e968101bfeeb149b419e9b71c8ba11a",
+  "excerpt_sha256": "2169054b5c2e44c8bb7a0d1adfb515e5cc866ca2465963cf320422cc2666ee11",
+  "clause": "8.1 Preview",
+  "primary_header_reference": "https://learn.microsoft.com/en-us/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader",
+  "interpretation": "Observed RLE8 framing remains explicit. The referenced DIB header permits a zero byte declaration for uncompressed RGB; only existing BI_RGB32 support is corrected here. No native zero-size SolidWorks population is claimed."
+}

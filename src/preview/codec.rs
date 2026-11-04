@@ -1,5 +1,5 @@
 use super::{
-    DibContents, PaletteEntry, header, invalid, rle,
+    BitmapInfoHeader, DibContents, PaletteEntry, header, invalid, rle,
     types::{DibEncoding, ImageShape},
 };
 use crate::{Result, archive_codec::ArchiveCursor};
@@ -11,7 +11,7 @@ pub(super) fn decode(bytes: &[u8], maximum_pixels: usize) -> Result<DibContents>
     let shape = header::image_shape(&header, maximum_pixels)?;
     let count = header::palette_count(&header, shape)?;
     let palette = read_palette(cursor.take(palette_size(count)?)?);
-    let pixel_bytes = cursor.take(header.image_size as usize)?.to_vec();
+    let pixel_bytes = cursor.take(image_byte_count(&header, shape)?)?.to_vec();
     cursor.finish()?;
     let contents = DibContents {
         header,
@@ -59,9 +59,10 @@ pub(super) fn validate(contents: &DibContents, maximum_pixels: usize) -> Result<
     let shape = header::image_shape(&contents.header, maximum_pixels)?;
     let palette = header::palette_count(&contents.header, shape)?;
     require_palette_length(contents, palette)?;
-    if contents.pixel_bytes.len() != contents.header.image_size as usize {
+    let expected_bytes = image_byte_count(&contents.header, shape)?;
+    if contents.pixel_bytes.len() != expected_bytes {
         return Err(invalid(format!(
-            "image byte length {}; expected declared {}",
+            "image byte length {}; expected {expected_bytes} for declared image size {}",
             contents.pixel_bytes.len(),
             contents.header.image_size
         )));
@@ -85,12 +86,7 @@ fn require_palette_length(contents: &DibContents, expected: usize) -> Result<()>
 }
 
 fn require_bgrx_size(contents: &DibContents, shape: ImageShape) -> Result<()> {
-    let expected = shape.count.checked_mul(4).ok_or_else(|| {
-        invalid(format!(
-            "BGRX count {}; expected byte size in usize",
-            shape.count
-        ))
-    })?;
+    let expected = bgrx_byte_count(shape)?;
     if contents.pixel_bytes.len() == expected {
         return Ok(());
     }
@@ -98,6 +94,23 @@ fn require_bgrx_size(contents: &DibContents, shape: ImageShape) -> Result<()> {
         "BGRX bytes {}; expected {expected}",
         contents.pixel_bytes.len()
     )))
+}
+
+fn image_byte_count(header: &BitmapInfoHeader, shape: ImageShape) -> Result<usize> {
+    // BI_RGB permits an omitted size; dimensions still bound the exact stored extent (#208).
+    if header.image_size == 0 && shape.encoding == DibEncoding::Bgrx32 {
+        return bgrx_byte_count(shape);
+    }
+    Ok(header.image_size as usize)
+}
+
+fn bgrx_byte_count(shape: ImageShape) -> Result<usize> {
+    shape.count.checked_mul(4).ok_or_else(|| {
+        invalid(format!(
+            "BGRX count {}; expected byte size in usize",
+            shape.count
+        ))
+    })
 }
 
 fn stream_size(contents: &DibContents) -> Result<u32> {

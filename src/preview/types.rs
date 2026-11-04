@@ -13,7 +13,7 @@ pub struct BitmapInfoHeader {
     pub bit_count: u16,
     /// Windows BI_RLE8 (1) or BI_RGB (0).
     pub compression: u32,
-    /// Declared stored pixel-byte count.
+    /// Declared stored pixel-byte count; zero omits the count for uncompressed BGRX.
     pub image_size: u32,
     /// Signed horizontal resolution observation.
     pub x_pixels_per_metre: i32,
