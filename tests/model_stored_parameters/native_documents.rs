@@ -6,6 +6,8 @@ use crate::model_archives::{
     ConfigurationId, ModelEditCompletion, ModelFieldChange, ModelParameterSource,
     ModelParameterStoredEdit, ModelParameterValue, StoredDouble,
 };
+#[path = "corpus_primary.rs"]
+mod corpus_primary;
 
 struct NativePrimaryRow {
     context: u32,
@@ -120,14 +122,22 @@ fn parameter_at(
     source: &ModelParameterSource,
     row: &NativePrimaryRow,
 ) -> ModelParameterStoredState {
+    parameter_definition_at(source, row.ordinal, row.identity)
+}
+
+fn parameter_definition_at(
+    source: &ModelParameterSource,
+    ordinal: usize,
+    identity: crate::model_archives::ModelObjectId,
+) -> ModelParameterStoredState {
     let mut parameters = match source {
         ModelParameterSource::Configuration(source) => source.stored_parameters().unwrap(),
         ModelParameterSource::ResolvedFeatures(source) => source.stored_parameters().unwrap(),
     };
-    let parameter = parameters.remove(row.ordinal);
+    let parameter = parameters.remove(ordinal);
     let field = source.resolve_field(parameter.definition()).unwrap();
     assert!(matches!(&field.value, ModelFieldValue::ObjectTag(tag)
-        if matches!(&tag.record, ModelObjectRecord::New { index, .. } if *index == row.identity)));
+        if matches!(&tag.record, ModelObjectRecord::New { index, .. } if *index == identity)));
     parameter
 }
 
@@ -136,18 +146,28 @@ fn edit_native_primary(
     parameter: &ModelParameterStoredState,
     bits: u64,
 ) -> ModelParameterSource {
-    let request = ModelParameterStoredEdit::Primary(ModelParameterValue::Double(
-        StoredDouble::from_bits(bits),
-    ));
+    edit_native_value(
+        source,
+        parameter,
+        ModelParameterValue::Double(StoredDouble::from_bits(bits)),
+    )
+}
+
+fn edit_native_value(
+    source: &ModelParameterSource,
+    parameter: &ModelParameterStoredState,
+    value: ModelParameterValue,
+) -> ModelParameterSource {
+    let request = ModelParameterStoredEdit::Primary(value);
     match source {
         ModelParameterSource::Configuration(archive) => {
             let edit = archive.edit_stored_parameter(parameter, request).unwrap();
-            assert_primary_history(source, edit.completion(), edit.changes());
+            assert_primary_history(source, parameter, edit.completion(), edit.changes());
             ModelParameterSource::Configuration(edit.archive().clone())
         }
         ModelParameterSource::ResolvedFeatures(archive) => {
             let edit = archive.edit_stored_parameter(parameter, request).unwrap();
-            assert_primary_history(source, edit.completion(), edit.changes());
+            assert_primary_history(source, parameter, edit.completion(), edit.changes());
             ModelParameterSource::ResolvedFeatures(edit.archive().clone())
         }
     }
@@ -155,6 +175,7 @@ fn edit_native_primary(
 
 fn assert_primary_history(
     source: &ModelParameterSource,
+    parameter: &ModelParameterStoredState,
     completion: ModelEditCompletion,
     changes: &[ModelFieldChange],
 ) {
@@ -162,8 +183,17 @@ fn assert_primary_history(
     assert_eq!(changes.len(), 1);
     assert_eq!(changes[0].parents().len(), 1);
     let parent = source.resolve_field(&changes[0].parents()[0]).unwrap();
-    assert!(parent.path.ends_with(".value"));
-    assert!(matches!(parent.value, ModelFieldValue::F64(_)));
+    let owner = source.resolve_field(parameter.definition()).unwrap();
+    let suffix = match parameter.kind() {
+        crate::model_archives::ModelParameterKind::AttributeScalar
+        | crate::model_archives::ModelParameterKind::AttributeString => ".raw_value_50",
+        _ => ".value",
+    };
+    assert_eq!(parent.path.strip_prefix(owner.path.as_ref()), Some(suffix));
+    assert!(matches!(
+        parent.value,
+        ModelFieldValue::F64(_) | ModelFieldValue::I32(_) | ModelFieldValue::Text(_)
+    ));
 }
 
 fn native_parameter_stream(case: &ResolvedCorpusCase<'_>, row: &NativePrimaryRow) -> String {

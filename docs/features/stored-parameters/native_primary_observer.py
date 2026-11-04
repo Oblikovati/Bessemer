@@ -34,11 +34,11 @@ class NativePrimaryObserver(ParameterObserver):
                 for (identity, _), (value, _) in sorted(self.parameters.items()) if identity == id(archive)]
 
 
-def observe_native_primary(document: object, stream: str) -> tuple[object, ...]:
+def observe_native_primary(document: object, stream: str, observer: NativePrimaryObserver | None = None) -> tuple[object, ...]:
     """Run original complete readers and return both projected rows and raw spans; e.g. observe_native_primary(doc,stream)."""
     import mfcobjects, swarchive, modelprefix, resolvedfeatures
     methods = mfcobjects.ObjectArchive.object, swarchive.Archive.cstring, swarchive.Archive.f64
-    observer = NativePrimaryObserver(*(method.__code__ for method in methods))
+    observer = observer or NativePrimaryObserver(*(method.__code__ for method in methods))
     import sys
     previous = sys.getprofile()
     try:
