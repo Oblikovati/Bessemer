@@ -43,8 +43,13 @@ against the complete serial results in a fixed order.
 
 Stored size and checksum text will remain uninterpreted: missing and empty
 metadata stay distinct, leading zeros in a stored size are not normalized, and
-uppercase stored checksum text is not silently lowercased. Fresh-process Rust
-outputs and unchanged Source agreement with those actual outputs still need their
-feature gates. Complete local and exact-head remote checks remain required before
+uppercase stored checksum text is not silently lowercased. Two fresh processes
+each passed nine tests and exported 197 complete comparisons. The packets were
+byte-identical. The unchanged Source reader and comparison function matched every
+stored/actual value and flag; the independent result decoder also checked exact
+caller XML, coverage and provenance invariants through packet EOF. The immutable
+single-reader snapshot and import/content guard passed.
+
+Complete local and exact-head remote checks remain required before
 integration. Application acceptance remains separate from this lexical checksum
 comparison.

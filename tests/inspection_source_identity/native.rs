@@ -3,6 +3,11 @@ use super::*;
 #[test]
 #[ignore = "requires explicit BESSEMER_INSPECTION_PDF_SOURCE installed tutorial PDF"]
 fn original_tutorial_source_and_modified_or_truncated_bytes_match_independent_native_oracles() {
+    let (source, bytes) = tutorial_source();
+    check_native_variants(&source, &bytes);
+}
+
+pub(super) fn tutorial_source() -> (InspectionRecords, Vec<u8>) {
     let path = std::env::var_os("BESSEMER_INSPECTION_PDF_SOURCE")
         .expect("expected explicit tutorial PDF source path");
     let bytes = std::fs::read(path).unwrap();
@@ -14,7 +19,7 @@ fn original_tutorial_source_and_modified_or_truncated_bytes_match_independent_na
     )
     .unwrap();
     let source = InspectionRecords::from_envelope(&envelope).unwrap();
-    check_native_variants(&source, &bytes);
+    (source, bytes)
 }
 
 fn check_native_variants(source: &InspectionRecords, bytes: &[u8]) {

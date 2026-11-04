@@ -5,6 +5,8 @@ use bessemer::metadata::XmlLimits;
 
 #[path = "inspection_source_identity/contracts.rs"]
 mod contracts;
+#[path = "inspection_source_identity/exports.rs"]
+mod exports;
 #[path = "inspection_source_identity/fixtures.rs"]
 mod fixtures;
 #[path = "inspection_source_identity/native.rs"]
@@ -85,12 +87,21 @@ fn check_comparison_contract(
     assert_eq!(result.history[0].parents.as_ref(), std::slice::from_ref(id));
     assert_eq!(result.history[0].result, *id);
     assert_eq!(result.history[0].relation, InspectionRecordRelation::Copied);
+    check_retained_source(source, result);
+    assert_eq!(result.diagnostics, EXPECTED_SOURCE_DIAGNOSTICS);
+    assert!(source.record(&result.document).is_ok());
+}
+
+fn check_retained_source(source: &InspectionRecords, result: &InspectionSourceComparison) {
     assert_eq!(
         result.source.envelope().xml_bytes(),
         source.envelope().xml_bytes()
     );
-    assert_eq!(result.diagnostics, EXPECTED_SOURCE_DIAGNOSTICS);
-    assert!(source.record(&result.document).is_ok());
+    assert_eq!(
+        result.source.envelope().profile(),
+        source.envelope().profile()
+    );
+    assert!(result.source.record(&result.document).is_ok());
 }
 
 #[test]
