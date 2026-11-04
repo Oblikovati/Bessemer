@@ -44,8 +44,11 @@ every actual signed-index output. The bounded document matrix also passed
 all 2,640 changes and reversals per process, preserving unrelated streams
 and restoring each original file byte for byte. Two fresh runs also passed
 both late-field edits in the complete 16,384-edge owner, including full
-document reopen and exact reversal. Selector output replay and the remaining
-native/concurrency/publication gates are pending.
+document reopen and exact reversal. Native archive operations passed all
+68 selectors and 17 indices across the eight complete streams in two fresh
+processes, with literal patches, complete fields and exact history checked.
+Selector output replay and native document/concurrency/publication gates
+remain pending.
 
 Implementation must reuse the complete archive readers and revision-owned
 edit/history contracts. Require independent complete roots and literal

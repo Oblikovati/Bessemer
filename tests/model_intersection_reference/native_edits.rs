@@ -8,6 +8,8 @@ use crate::model_archives::{
 
 #[path = "native_documents.rs"]
 mod documents;
+#[path = "native_roles.rs"]
+mod roles;
 
 type NativeReferenceCheck =
     fn(&ResolvedCorpusCase<'_>, &NativeReferenceOracle, Option<CompressedKernelContext>);
