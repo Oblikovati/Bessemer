@@ -50,6 +50,8 @@
 
 ### Added
 
+- Added 24-bit BI_RGB preview reading and pixel replacement, preserving row padding, palettes, orientations and image-size declarations. (#207)
+
 - Added direct legacy references in ordinary component prefixes with preserved raw presence, generic pointer identity and four-byte time values. (#206)
 
 - Added complete direct boundary chooser-time and downstream identifier bodies, preserving signed counts, duplicate pairs, zero values and versioned tails. (#205)

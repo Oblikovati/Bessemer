@@ -1,12 +1,17 @@
 # Native GDI+ supplies an independent RGB oracle; BGRX fourth bytes stay raw in Rust.
-param([string]$RepositoryRoot = (Resolve-Path "$PSScriptRoot/../../..").Path)
+param(
+    [string]$RepositoryRoot = (Resolve-Path "$PSScriptRoot/../../..").Path,
+    [string]$FixtureDirectory = 'tests/fixtures/preview-zero-size',
+    [ValidateSet(3,4)][int]$PixelWidth = 4,
+    [string]$RasterExtension = 'bgrx'
+)
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.Drawing
-$fixtureRoot = Join-Path $RepositoryRoot 'tests/fixtures/preview-zero-size'
+$fixtureRoot = Join-Path $RepositoryRoot $FixtureDirectory
 $nativeResults = @()
 foreach ($fixtureCase in (Get-Content "$fixtureRoot/manifest.json" -Raw | ConvertFrom-Json)) {
     $packed = [IO.File]::ReadAllBytes("$fixtureRoot/$($fixtureCase.name).bin")
-    $expected = [IO.File]::ReadAllBytes("$fixtureRoot/$($fixtureCase.name).bgrx")
+    $expected = [IO.File]::ReadAllBytes("$fixtureRoot/$($fixtureCase.name).$RasterExtension")
     $bmpSize = $packed.Length + 10
     $pixelOffset = 54 + 4 * $fixtureCase.palette_count
     $bmpHeader = [byte[]](0x42,0x4d) + [BitConverter]::GetBytes([uint32]$bmpSize) + [byte[]](0,0,0,0) + [BitConverter]::GetBytes([uint32]$pixelOffset)
@@ -15,14 +20,14 @@ foreach ($fixtureCase in (Get-Content "$fixtureRoot/manifest.json" -Raw | Conver
     try {
         $nativeBitmap = [Drawing.Bitmap]::new($bitmapStream)
         $nativeRgb = [Collections.Generic.List[byte]]::new()
-        for ($pixelIndex = 0; $pixelIndex -lt $expected.Length / 4; $pixelIndex++) {
+        for ($pixelIndex = 0; $pixelIndex -lt $expected.Length / $PixelWidth; $pixelIndex++) {
             $color = $nativeBitmap.GetPixel($pixelIndex % $fixtureCase.width, [int][Math]::Floor($pixelIndex / $fixtureCase.width))
             $actualRgb = [byte[]]($color.B,$color.G,$color.R)
-            $expectedRgb = $expected[($pixelIndex*4)..($pixelIndex*4+2)]
+            $expectedRgb = $expected[($pixelIndex*$PixelWidth)..($pixelIndex*$PixelWidth+2)]
             if ([Convert]::ToHexString($actualRgb) -ne [Convert]::ToHexString($expectedRgb)) { throw "Pixel $pixelIndex of $($fixtureCase.name) did not match literal BGR" }
             $nativeRgb.AddRange($actualRgb)
         }
-        $nativeResults += @{name=$fixtureCase.name; pixels=$expected.Length/4; rgb_sha256=[Convert]::ToHexString([Security.Cryptography.SHA256]::HashData($nativeRgb.ToArray())).ToLowerInvariant()}
+        $nativeResults += @{name=$fixtureCase.name; pixels=$expected.Length/$PixelWidth; rgb_sha256=[Convert]::ToHexString([Security.Cryptography.SHA256]::HashData($nativeRgb.ToArray())).ToLowerInvariant()}
     } finally {
         if ($null -ne $nativeBitmap) { $nativeBitmap.Dispose() }
         $bitmapStream.Dispose()

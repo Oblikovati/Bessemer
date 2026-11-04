@@ -1,5 +1,5 @@
 use super::{
-    DibPixels, DibPreview, codec, invalid, rle,
+    DibContents, DibPixels, DibPreview, codec, invalid, rle,
     types::{DibEncoding, ImageShape},
     unsupported,
 };
@@ -7,6 +7,7 @@ use crate::Result;
 
 impl DibPreview {
     /// Decodes top-to-bottom pixels without inventing values for unwritten RLE positions.
+    /// For 24-bit BGR, use `decode_bgr24_pixels` to retain three-byte pixel values.
     ///
     /// ```no_run
     /// # fn example(preview: &bessemer::preview::DibPreview) -> bessemer::Result<()> {
@@ -17,17 +18,13 @@ impl DibPreview {
     pub fn decode_pixels(&self, maximum_pixels: usize) -> Result<DibPixels> {
         let contents = self.contents();
         let shape = codec::validate(contents, maximum_pixels)?;
-        if shape.encoding == DibEncoding::Bgrx32 {
-            return Ok(DibPixels::Bgrx(decode_bgrx(&contents.pixel_bytes, shape)));
+        match shape.encoding {
+            DibEncoding::Bgrx32 => Ok(DibPixels::Bgrx(decode_bgrx(&contents.pixel_bytes, shape))),
+            DibEncoding::Rle8 => decode_rle(contents, shape),
+            DibEncoding::Bgr24 => Err(unsupported(
+                "24-bit BI_RGB pixels; expected decode_bgr24_pixels for three-byte BGR values",
+            )),
         }
-        let mut pixels = vec![None; shape.count];
-        rle::walk_rle(
-            &contents.pixel_bytes,
-            shape,
-            contents.palette.len(),
-            Some(&mut pixels),
-        )?;
-        Ok(DibPixels::Indexed(pixels))
     }
 
     /// Replaces every RLE8 pixel with checked top-to-bottom indices and deterministic runs.
@@ -70,7 +67,7 @@ impl DibPreview {
         self.with_pixel_bytes(bytes, maximum_pixels)
     }
 
-    fn replacement_shape(
+    pub(super) fn replacement_shape(
         &self,
         expected: DibEncoding,
         count: usize,
@@ -83,16 +80,11 @@ impl DibPreview {
                 shape.encoding
             )));
         }
-        if count != shape.count {
-            return Err(invalid(format!(
-                "replacement pixel count {count}; expected {}",
-                shape.count
-            )));
-        }
+        require_replacement_count(count, shape.count)?;
         Ok(shape)
     }
 
-    fn with_pixel_bytes(&self, bytes: Vec<u8>, maximum_pixels: usize) -> Result<Self> {
+    pub(super) fn with_pixel_bytes(&self, bytes: Vec<u8>, maximum_pixels: usize) -> Result<Self> {
         let mut contents = self.contents().clone();
         // Preserve legal omitted BI_RGB sizes across fresh edit/reversal checkpoints (#208).
         if contents.header.compression != 0 || contents.header.image_size != 0 {
@@ -102,6 +94,26 @@ impl DibPreview {
         contents.pixel_bytes = bytes;
         self.with_contents(contents, maximum_pixels)
     }
+}
+
+fn require_replacement_count(count: usize, expected: usize) -> Result<()> {
+    if count == expected {
+        return Ok(());
+    }
+    Err(invalid(format!(
+        "replacement pixel count {count}; expected {expected}"
+    )))
+}
+
+fn decode_rle(contents: &DibContents, shape: ImageShape) -> Result<DibPixels> {
+    let mut pixels = vec![None; shape.count];
+    rle::walk_rle(
+        &contents.pixel_bytes,
+        shape,
+        contents.palette.len(),
+        Some(&mut pixels),
+    )?;
+    Ok(DibPixels::Indexed(pixels))
 }
 
 fn decode_bgrx(bytes: &[u8], shape: ImageShape) -> Vec<[u8; 4]> {
@@ -114,7 +126,7 @@ fn decode_bgrx(bytes: &[u8], shape: ImageShape) -> Vec<[u8; 4]> {
     pixels
 }
 
-fn stored_row(row: usize, shape: ImageShape) -> usize {
+pub(super) fn stored_row(row: usize, shape: ImageShape) -> usize {
     if shape.top_down {
         return row;
     }
