@@ -848,3 +848,9 @@ omit the ink-markup word. See [the appearance contract](docs/features/bitmap-app
 arrays and edits opaque payloads with count-width preservation, diagnostics,
 coverage and field history. Stream selection is explicit; no pixel layout or
 runtime resize is inferred. See [the resource contract](docs/features/bitmap-resource-arrays/README.md).
+
+Stored ellipse-backup rotation snapshots expose the complete signed word through
+`ellipse_backup_rotation_states()` and `edit_ellipse_backup_rotation()`. Physical
+class admission and revision guards preserve aliases and unselected fields.
+See [the snapshot contract](docs/features/ellipse-backup-rotation/README.md) for
+validation status and the native restoration/geometry exclusions.

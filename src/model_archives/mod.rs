@@ -245,6 +245,8 @@ mod node_state;
 pub use node_state::{ModelNodeStoredFlag, ModelNodeStoredState};
 mod dimension_state;
 pub use dimension_state::{ModelDimensionStoredEdit, ModelDimensionStoredState};
+mod ellipse_backup_rotation;
+pub use ellipse_backup_rotation::ModelEllipseBackupRotationState;
 mod note_text;
 mod object_body;
 mod object_values;
