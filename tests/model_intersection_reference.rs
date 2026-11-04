@@ -16,6 +16,8 @@ mod edge_index;
 mod model_operation_snapshot;
 #[path = "support/owned_resolved_document.rs"]
 mod owned_resolved_document;
+#[path = "model_intersection_reference/role_documents.rs"]
+mod role_documents;
 #[path = "support/unselected_document_streams.rs"]
 mod unselected_document_streams;
 #[path = "support/visual_workers.rs"]

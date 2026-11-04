@@ -56,7 +56,7 @@ fn verify_classification_change(
     );
 }
 
-fn verify_classification_edit(
+pub(super) fn verify_classification_edit(
     source: &PartResolvedFeaturesArchive,
     raw: &[u8],
     state: &ModelIntersectionReferenceStoredState,

@@ -39,8 +39,11 @@ and the complete 676,537-read byte partition. A second fresh strict replay
 passed without rewriting artifacts; every consumed Source module was
 unchanged. Both stored-role APIs passed their initial Rust operation gates:
 all u16 selector replacements and the complete signed-index matrix preserve
-unselected fields and exact history. Fresh Source replay of actual outputs
-and the remaining native/document/concurrency/publication gates are pending.
+unselected fields and exact history. Both fresh Source processes accepted
+every actual signed-index output. The bounded document matrix also passed
+all 2,640 changes and reversals per process, preserving unrelated streams
+and restoring each original file byte for byte. Selector output replay and
+the remaining large/native/concurrency/publication gates are pending.
 
 Implementation must reuse the complete archive readers and revision-owned
 edit/history contracts. Require independent complete roots and literal

@@ -1,0 +1,95 @@
+{
+  "issue": 185,
+  "stage": "Complete bounded role document edit/reopen/reversal",
+  "processes_reaped": 2,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "tests_per_process": 1,
+  "test_seconds": [
+    18.74,
+    19.21
+  ],
+  "bounded_cases_per_process": 264,
+  "classification_edits_per_case": 8,
+  "index_edits_per_case": 2,
+  "total_changed_documents_per_process": 2640,
+  "total_typed_reversals_per_process": 2640,
+  "artifacts": [
+    {
+      "path": "tests/model_intersection_reference.rs",
+      "bytes": 5604,
+      "sha256": "d252b2215542ab7747d3e10a575f1feabd301547c927b9399e8c59ee338b8723"
+    },
+    {
+      "path": "tests/model_intersection_reference/role_documents.rs",
+      "bytes": 4195,
+      "sha256": "e194a0316fd680fa7ba98a1d071939b94ad3a4b13d51121d472a47788dcf3c4e"
+    },
+    {
+      "path": "tests/model_intersection_reference/classification.rs",
+      "bytes": 9058,
+      "sha256": "9006d1f4e98c9b17c6f9914d9968541c7080717cd215abfce1dfd5609fd43ddc"
+    },
+    {
+      "path": "tests/model_intersection_reference/edge_index.rs",
+      "bytes": 5934,
+      "sha256": "3768b32b71c8876d2b56844dac9ecc9035a2767eb924bdff8b17d07f30a72201"
+    },
+    {
+      "path": "tests/support/owned_resolved_document.rs",
+      "bytes": 1415,
+      "sha256": "47a533d44bb065f860b80fcdc5a90939534293b03ff45acaae6dab6853b715f8"
+    },
+    {
+      "path": "tests/support/unselected_document_streams.rs",
+      "bytes": 713,
+      "sha256": "cef16204fd410c34c6d5f4103b1078b51e0af8cf1844741520d724f367347d78"
+    },
+    {
+      "path": "target/role-document-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/role-document-final-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/role-document-process-1.log",
+      "bytes": 9628,
+      "sha256": "6f135a5a2786b201d4c28270ec6070aad608e336345bc3ab1ca60fc29d251809"
+    },
+    {
+      "path": "target/role-document-process-2.log",
+      "bytes": 9628,
+      "sha256": "037e92f2ad138af2b14c8269cf8bfc42a1b547fab2f40244c3d5b60958abafea"
+    },
+    {
+      "path": "target/role-document-clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/role-document-format.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "coverage_credit": 0,
+  "checks": [
+    "All Source-owned bounded signed-index/selector cases use the real complete document container and public model reader with retained header/configuration/CMgr context.",
+    "Each forward request reuses independent literal patch, whole-field, completion, exact history, coverage/fidelity, diagnostics, stale-view and revision checks.",
+    "Every changed document serializes and reopens; complete fields match the expected typed result. Every unrelated stream and stream order remains unchanged.",
+    "Reversal binds fresh revision-owned state from the reopened archive, restores the original feature bytes, and restores the complete original serialized file byte for byte. Inputs remain unchanged.",
+    "The final process also checks all reversed archive fields explicitly. Standalone integration Clippy, workspace formatting and function/file-size audit pass."
+  ],
+  "qualifications": [
+    "The first process returned reversal bytes; the final helper returns the typed edit result and adds complete reversed-field equality. Both processes retain every whole-file restoration assertion.",
+    "This is the complete264-case bounded role matrix. Large full-u16 owner documents and native file edits remain separate acceptance work.",
+    "No full changed-document export packet or cross-process changed-file comparison was performed. Per-case exact whole-file reversal is checked in both processes.",
+    "Mixed concurrency, native, full Cargo and exact-head publication gates remain pending. No geometry or native application opening claim follows. Humanizer unavailable; prose review pending."
+  ]
+}

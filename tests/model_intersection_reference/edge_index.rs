@@ -54,7 +54,7 @@ fn verify_changed_index_history(
     );
 }
 
-fn verify_index_edit(
+pub(super) fn verify_index_edit(
     source: &PartResolvedFeaturesArchive,
     raw: &[u8],
     state: &ModelIntersectionEdgeStoredIndex,
