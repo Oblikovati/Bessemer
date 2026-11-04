@@ -94,7 +94,23 @@ import origins and complete EOF remain checked.
 The exporter reuses the root-graph packet helpers. After that extraction, a
 fresh 906-case root run produced the same 1,508,863 bytes as the retained
 pre-extraction output. The parameter decoder also has three literal and
-malformed-input tests. Native parameter output equality remains pending.
+malformed-input tests.
+
+The complete native comparison also passed: every exported record for all
+906 cases matched unchanged frozen original Source, including 4,430
+configuration and 39,487 resolved-feature parameters. Two fresh Rust processes
+produced identical 7,263,585-byte packets. The two Source tests completed in
+323.748 seconds; the complete 6,733-file source snapshot and import evidence
+are retained losslessly. This timing is a verification measurement, not a
+release benchmark.
+
+`native-actual-output-census.json` records the class/version/context populations.
+All six classes occur in resolved features; four occur in configurations.
+The native name-pointer population contains null and local pointers but no
+inherited pointers. The positive inherited-name Rust test therefore still
+needs its own original-reader comparison. Native edits, whole native document
+reopen/reversal and application/geometry acceptance remain separate. Bug #177's
+unknown-byte accounting oracle is unchanged.
 
 To reproduce the complete comparison, use a fresh unused
 `target/stored-parameter-actual-results` directory, the retained

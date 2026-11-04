@@ -1,0 +1,48 @@
+{
+  "issue": 202,
+  "source_revision": "f5033f32117d81db8900f22e261706eed54c7de4",
+  "status": "Actual native and owned parameter outputs matched unchanged frozen original Source; broader operation/publication acceptance remains open",
+  "process_exit_code": 0,
+  "tests_passed": 2,
+  "tests_failed": 0,
+  "unittest_seconds": 323.748,
+  "native_cases": 906,
+  "native_configuration_parameters": 4430,
+  "native_resolved_parameters": 39487,
+  "owned_graphs": 30,
+  "fresh_native_processes": 2,
+  "fresh_native_packets_byte_identical": true,
+  "native_packet_bytes": 7263585,
+  "native_packet_sha256": "d1a805a8e34b765054256f8b229e457c1a85078c3f72693a31227fefbd6e7598",
+  "owned_packet_bytes": 6566,
+  "owned_packet_sha256": "a8c8569838a0bbc95a595ed0645dcbee8c78fceb630cf5898481f0f575fa1651",
+  "original_methods_unchanged": true,
+  "complete_configuration_and_feature_eof": true,
+  "immutable_source_and_import_guards_passed": true,
+  "source_python_files": 6733,
+  "source_snapshot_identity": "060b4137a2e6b983b53c4a4199614465f2813ac621437ac427ecc84b4dc343bb",
+  "checked": [
+    "Exact physical definition/class/schema tags in wire order",
+    "Both exact node/parameter name pointer tags, null/local origin and decoded text plus retained CString wire bytes",
+    "All primary/alternate numeric bit images, signed integers, full presence bytes and CString values/framing",
+    "Complete two-process result packets, every original-reader result record and packet EOF"
+  ],
+  "logs_sha256": {
+    "stored-parameter-export-build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stored-parameter-native-export-1.log": "292ba6d69ff4201dbb30d1de694fa76f95b9f021e2e39b5b0a0328c7d8acc5ed",
+    "stored-parameter-native-export-2.log": "b5808b3d769f8c49b3565e611b312f466b3ead6b1d034fc54ac77a9e9554b2e2",
+    "stored-parameter-native-actual-source.log": "12e70caad6c806c61491c5753a69df85e9cd06565a6213c331ca246129509a6a",
+    "stored-parameter-export-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stored-parameter-export-format.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stored-parameter-export-function-sizes.log": "7f78e4e153effdb653b66f9dcea75c44831dc1883e87a73f5ac5ea8acb7c5d9f"
+  },
+  "exclusions": [
+    "Native inherited name pointer population is zero; the positive owned inherited Rust test does not establish original Source equality there",
+    "Native class population differs by version/context; all six classes are present in resolved features, four in configurations",
+    "Native parameter edits and whole native document reopen/reversal remain open",
+    "IR revision nonces and implementation-specific field indices are not compared across implementations; typed history and ownership retain separate tests",
+    "Source unknown-byte accounting Bug #177 is unchanged and receives no acceptance credit",
+    "Native application, units/equation/native-setter semantics and geometry remain outside these stored comparisons",
+    "Full local and exact-head remote publication gates remain open"
+  ]
+}
