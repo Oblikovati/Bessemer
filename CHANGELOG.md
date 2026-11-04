@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Partitioned the complete ThreadSanitizer workload across eight required CI jobs to keep validation within hosted-runner time limits. (#183)
+
 - Corrected the planned Simulation Material text contract to retain accepted odd-byte frames without a UTF-16 view. (#141)
 
 - Fixed load edits that discarded embedded CString length-prefix changes as semantic no-ops. (#137)

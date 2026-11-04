@@ -3,6 +3,7 @@ use std::process::{Command, ExitCode};
 #[cfg(test)]
 mod formatting_tests;
 mod sanitizer;
+mod sanitizer_shard;
 
 const MODEL_TEST_REGISTRY: &str = concat!(
     env!("CARGO_MANIFEST_DIR"),

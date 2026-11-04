@@ -831,3 +831,10 @@ value under this model.
 Canonical stored sketch-reference configuration keys are available through `sketch_reference_lookup_states()` and `edit_sketch_reference_lookup_keys()`. These operations preserve full signed object/record keys without runtime lookup or STORE-time sentinel projection. See [the feature contract](docs/features/sketch-reference-configuration-keys/README.md).
 
 Stored bitmap transparency settings expose full signed has-transparency, level and type values through `bitmap_transparency_states()` and isolated `edit_bitmap_transparency()` operations. See [the feature contract](docs/features/bitmap-transparency/README.md) for the qualified scope and validation status.
+ThreadSanitizer CI runs the complete library and integration test targets across
+eight deterministic partitions. Every partition instruments the library,
+dependencies and standard library; native-input exclusions remain unchanged.
+All eight partitions must succeed before the four full platform gates run.
+`cargo xtask tsan` retains the complete local run. A matching local partition is
+`cargo xtask tsan --shard 0/8` on Linux x86_64. The planner rejects custom Cargo
+target layouts instead of silently dropping targets.
