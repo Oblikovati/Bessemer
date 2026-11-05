@@ -1,0 +1,43 @@
+{
+  "issue": 217,
+  "status": "partial",
+  "target": {
+    "path": "C:/Program Files/SOLIDWORKS Corp/SOLIDWORKS/sldMoPartu.dll",
+    "sha256": "2201edfa07b1a7484acedb6db4600fa7a00e55b16090a03b92fe7d9b14cb2128",
+    "format": "PE32+",
+    "architecture": "x86_64",
+    "executed": false
+  },
+  "primary_table_source": {
+    "path": "../inventor-interface/solidworks/research/parting-geometry-native-evidence.json",
+    "evidence_id": "C-2971",
+    "sha256": "a6f3370f257a28aa1a4da27d2c85ac44e2fa2edec8733b3278eb8a9b8c851b3c",
+    "class": "moMoldPartingGeom_c",
+    "object_offset": 0,
+    "vftable": "0x18042c338"
+  },
+  "observed_file_bytes": {
+    "method": "Read immutable installed file; parse PE section raw mappings with Python struct; require exactly one file-backed mapping for each address",
+    "slot_offset": "0xab0",
+    "slot_address": "0x18042cde8",
+    "slot_file_offset": 4373992,
+    "target_address": "0x1800e3930",
+    "target_file_offset": 929072,
+    "target_first_16_bytes_hex": "33c0c3cccccccccccccccccccccccccc"
+  },
+  "inference": {
+    "instructions": "xor eax,eax; ret",
+    "return_value": 0,
+    "consequence": "Use the existing inline reference-surface payload framing for this derived class; a nonzero archive backend marker alone does not bypass sheets or their attributes"
+  },
+  "unresolved": [
+    "Constructor binding of the pre-existing direct child at moMoldPartingGeomData_c member +0x178",
+    "Complete direct child serialization when saved selector +0x170 equals 1",
+    "Independent owned-document fixture and edit/reopen/reversal acceptance"
+  ],
+  "limitations": [
+    "Static source-file bytes and retained RTTI only; no target execution or runtime object inspection",
+    "REA Ghidra parent-function analysis is still running; no result from that analysis is claimed here",
+    "No native application, geometry, historical-context or whole-schema acceptance credit"
+  ]
+}
