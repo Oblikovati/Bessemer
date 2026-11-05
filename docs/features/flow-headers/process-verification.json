@@ -1,0 +1,22 @@
+{
+  "cases": 4,
+  "guid_edits": 12,
+  "noops": 12,
+  "metadata_guid_strings": 12,
+  "expected_sha256": "1c85c26947e3ea1ed39184dc5631a44c3da2d2e64fe372c1a5d014ece95bb932",
+  "bytes_per_process": 17619435,
+  "processes": [
+    {
+      "path": "target\\flow-header-one.bin",
+      "bytes": 17619435,
+      "sha256": "1c85c26947e3ea1ed39184dc5631a44c3da2d2e64fe372c1a5d014ece95bb932"
+    },
+    {
+      "path": "target\\flow-header-two.bin",
+      "bytes": 17619435,
+      "sha256": "1c85c26947e3ea1ed39184dc5631a44c3da2d2e64fe372c1a5d014ece95bb932"
+    }
+  ],
+  "oracle": "Source physical partition/header parser plus Python uuid.UUID(bytes_le=...) and independent complete record reconstruction",
+  "native_execution": false
+}

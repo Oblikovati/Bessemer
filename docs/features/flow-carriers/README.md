@@ -29,7 +29,8 @@ opaque payload-byte count and zero achieved byte error. Successful empty carrier
 retain a valid version word and report zero records. Diagnostics exclude payload
 schemas, alternate compressed terminal-index interpretation and native application
 acceptance. Physical replacement does not update opaque index offsets or infer
-payload cross-references. GUID-prefix metadata, compressed record 433, grouped
+payload cross-references. The [GUID-header view](../flow-headers/README.md)
+separately reads and edits established prefixes. Compressed record 433, grouped
 record 404 and the later documented Flow schemas remain separate required work.
 
 The frozen packet includes all three installed carriers: 66 records across

@@ -1,0 +1,47 @@
+{
+  "issue": 241,
+  "behavior_version": 1,
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0",
+  "tests_passed": 11,
+  "tests_failed": 0,
+  "header_tests": 5,
+  "carrier_regressions": 6,
+  "native_carriers": 3,
+  "owned_extended_carriers": 1,
+  "guid_edits": 12,
+  "noops": 12,
+  "fresh_reversals": 24,
+  "short_prefix_cases": 52,
+  "workers": 8,
+  "commands": [
+    {
+      "command": "cargo test --test flow_carriers --test flow_headers --locked",
+      "exit_code": 0
+    },
+    {
+      "command": "cargo clippy --lib --test flow_carriers --test flow_headers --locked -- -D warnings",
+      "exit_code": 0
+    }
+  ],
+  "source_sha256": {
+    "src/flow/mod.rs": "3ce982705749ff54fc5aae9c2ebcfec63a14f6f7fc11852288df47b1c42c8a0c",
+    "src/flow/header.rs": "8e793ef574052a0ea0df37f98b1025f68a3ff662d1d202d6883adb76e0e0de0a",
+    "tests/flow_headers.rs": "f74d77e05859b3b288598d69367cd7fb31d9bb17158e835c3d152a725a39ee33",
+    "tests/flow_carriers/fixture.rs": "da94869a44a7dc28c10e5b105a3be50d40993986d889c9c89b89c4f790ea2bea"
+  },
+  "log_sha256": {
+    "target/flow-headers-final-tests.log": "78e8f7c53b0e519ac33006207f350572125a8b008f0194884ca73a5a8831c670",
+    "target/flow-headers-final-clippy.log": "465d49374e5add26f24e4b51f7c9ffcc767086e8c68fafb59d831e74efb2bbee",
+    "target/flow-headers-process-build.log": "ba1dcbdb00314b7e577c3f90e137f41a30c772329934762df5d92c78c685fa72"
+  },
+  "native_execution": false,
+  "exclusions": [
+    "Control-word semantics",
+    "Static-settings body/cache transitions",
+    "Result-type lookup and filesystem ordering",
+    "Opaque index or related-file repair",
+    "Native application and geometry acceptance",
+    "Full repository gate for this newer source cut"
+  ]
+}

@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added selected Flow GUID-header reads and typed sixteen-byte edits with Windows GUID formatting and preserved extension bytes. (#241)
+
 - Added bounded ordinary Flow result carrier reads and isolated physical payload replacements with exact checkpoints and complete record history. (#241)
 
 - Composed Electrical userdata query results with prior storage, preserving EOF state and requiring explicit provider effects for present rows. (#231)
