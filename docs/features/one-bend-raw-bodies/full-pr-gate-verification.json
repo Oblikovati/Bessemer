@@ -1,0 +1,28 @@
+{
+  "issue": 220,
+  "source_commit": "c415c5065274c34102c3f2d1966c88c0b814143d",
+  "command": "cargo xtask pr",
+  "terminal_exit_code": 0,
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0",
+  "checkout": "C:/bessemer214-ci, detached and unchanged until completion",
+  "target_dir": "C:/Users/vmiguel/git/Bessemer/target/relationships-pr-build",
+  "kernel_schema": "C:/Program Files/SOLIDWORKS Corp/SOLIDWORKS/data/pschema/sch_13006.s_t",
+  "log": "target/sketch-one-bend-combined-full-pr-gate-v2.log",
+  "log_sha256": "f90cdb8ac6b833e2bf832f21085c64252cd3575aa441ffd3e8191577635b653d",
+  "passed": 4272,
+  "failed": 0,
+  "ignored": 231,
+  "test_result_summaries": 339,
+  "scope": "Formatting, workspace Clippy with warnings denied, build, workspace tests and doctests through canonical SketchBend219, OneBend raw bodies220 and formatter fix221",
+  "exclusions": [
+    "Later database header222, packed time223 and hash buffer224 are excluded",
+    "Exact-head remote checks remain required before merge",
+    "Ignored native workloads are not credited as executed by this gate",
+    "No native application, geometry or whole-schema parity acceptance"
+  ],
+  "related_issues": [
+    219,
+    221
+  ]
+}
