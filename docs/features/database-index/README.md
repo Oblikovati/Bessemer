@@ -43,6 +43,13 @@ the independent default-hash reference.
 This cohort contains neither continuation map pages nor free-list pages.
 Owned tests cover those branches, complete record boundaries, cycles,
 cross-role aliases, missing roles, invalid partitions and duplicate records.
+The complete-file fixture adds a linked bucket, two free pages, an empty value,
+inline values and a value spanning two overflow pages. Four independent edits
+change only declared value spans, preserve every other byte and reverse to
+the original file. `tests/fixtures/database-index/complete-file.bin.gz` retains
+the original and complete expected results in BFI1 framing. Its integrity
+record pins both the compressed and decompressed bytes. Two independent writes
+and regeneration against the checked-in fixture are tested.
 Run them with:
 
 ```powershell
