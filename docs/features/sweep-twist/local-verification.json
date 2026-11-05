@@ -29,7 +29,6 @@
     "target/sweep-twist-owned-fixture-source.log": "6981569daec172af45f3c1851a104bf4a7fcffc4a15231aed6bcdc688180b97f"
   },
   "pending": [
-    "Complete native 906-document regression on new binary",
     "Complete sweep-reference-surface-containing document fixtures",
     "Explicit nonordinary-context rejection regression",
     "Additional history/failure/cancellation validation as applicable",
@@ -40,5 +39,24 @@
     "Original production Source still rejects fresh twist class; fixture-only callback is explicitly classified",
     "No native producer replay, units, geometry or application acceptance",
     "No package version change or release tag"
-  ]
+  ],
+  "native_resolved_regression": {
+    "source_revision": "02b5676eb7636d70b9ad745907302ff47d356fd8",
+    "accepted": 906,
+    "total": 906,
+    "process_exit_code": 0,
+    "seconds": 75.31,
+    "log_sha256": "7efcf86e1595b4ec4971e45b0e6b492f219a1302d0271966c38bffc87a94d5cb",
+    "scope": "Exact typed reconstruction of existing native resolved corpus; not a native populated twist producer census"
+  },
+  "full_pr_gate": {
+    "source_revision": "02b5676eb7636d70b9ad745907302ff47d356fd8",
+    "session": 55492,
+    "status": "running",
+    "completed_stages": [
+      "lint",
+      "clippy",
+      "build"
+    ]
+  }
 }
