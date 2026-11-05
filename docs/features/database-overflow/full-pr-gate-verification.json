@@ -1,0 +1,18 @@
+{
+  "issue": 229,
+  "command": "cargo xtask pr",
+  "source_revision": "83f3aacf",
+  "process_exit_code": 0,
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "tests_passed": 4331,
+  "tests_failed": 0,
+  "tests_ignored": 231,
+  "test_summaries": 344,
+  "log_sha256": "c24b6aefa143e152ffafd9d32d81ec4fd3b6d2a821933e9b231fb44718388237",
+  "exclusions": [
+    "Later full native census/document tests and shared-reader refactor excluded",
+    "Mixed bucket integration not included",
+    "Exact-head remote and complete schema/application acceptance remain separate"
+  ]
+}
