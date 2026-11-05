@@ -49,7 +49,13 @@
     "clippy_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "test_source_sha256": "3a13e84a0f358ec201e3c93170aaecfa3737a818f0c660b348a142a4c5f5fdfd",
     "full_gate": "Later audit tests are excluded from running gate 55492 at02b5676e; latest complete gate remains4132 passes throughdb3dc993",
-    "remote_integration": "PR191 merged ated15e0e8; these later unpushed tests are not integrated"
+    "remote_integration": "PR191 merged ated15e0e8; these later unpushed tests are not integrated",
+    "shared_helper_followup": {
+      "scope": "Helper visibility/name changed for reuse without changing literal values or assertions",
+      "source_sha256": "729fb2c88c8b09199d3a664ac9fbe80ee4e6e50e5e308440552aec674ee2176e",
+      "tests_passed": 2,
+      "log_sha256": "f0e6eb3144602a34c3f2a9b21314e0d4fe95d4528326f5357139589090a5c8a9"
+    }
   },
   "reader_sha256": {
     "sew_surfaces.rs": "7858f9d8da8f192cdb63a1a8b2da69009d451b168e359b9bb71757e49fc2cd56",

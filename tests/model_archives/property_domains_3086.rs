@@ -24,7 +24,7 @@ const NUMREV_BITS: [u64; 12] = [
     0xfff0_0000_0000_0001,
 ];
 
-fn assert_property_splice(
+pub(super) fn assert_property_splice(
     version: u32,
     fields: &[ModelField],
     path: &str,
@@ -43,7 +43,7 @@ fn assert_property_splice(
     assert_eq!(super::encode_fields(&decoded, 30000).unwrap(), changed);
 }
 
-fn assert_split_setting_domain(version: u32, fields: &[ModelField], path: &str) {
+pub(super) fn assert_signed_property_domain(version: u32, fields: &[ModelField], path: &str) {
     for value in SIGNED_BOUNDARIES {
         assert_property_splice(
             version,
@@ -76,7 +76,7 @@ fn split_named_parent_settings_preserve_full_signed32_without_boolean_or_enum_pr
     for (_, version, raw, _, _) in rows.into_iter().filter(|row| row.0 < 6) {
         let fields = decode_graph(version, raw, true).unwrap().0;
         for (index, path) in split_setting_paths(&fields) {
-            assert_split_setting_domain(version, &fields, path);
+            assert_signed_property_domain(version, &fields, path);
             occurrences[index] += 1;
         }
     }

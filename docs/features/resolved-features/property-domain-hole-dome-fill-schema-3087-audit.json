@@ -1,0 +1,58 @@
+{
+  "issue": 2,
+  "edition": "Edition 0.3087 \u00b7 2026-11-05 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "specification_sha256": "947b021b16f22e039cf648ceaba9e1f4c8927b19138765eb58052d6d47152b3e",
+  "clauses": [
+    "11.151",
+    "11.159",
+    "11.231"
+  ],
+  "snapshot_path": "docs/features/resolved-features/property-domain-hole-dome-fill-schema-3087-snapshot.md",
+  "snapshot_representation": "Literal selected sections normalized to LF, stripped trailing whitespace at section boundaries, joined with one blank line",
+  "snapshot_sha256": "ecced52140b82d894f7d255ce9b392032a0cac908b3e10f34de4356471c99d0c",
+  "decisions": [
+    "HoleWizard named integer and enum-signature fields retain full signed32 values, not closed enum or Boolean domains. Existing IsSlot nonzero, count/version gates and HoleSeriesHole relocation remain unchanged. SlotLength is a raw stored double without units/finite constraints. useExistingSketch stays a raw octet despite native getter/setter and STORE/LOAD Boolean projections. Runtime post-load migration and opaque updates are not replayed offline.",
+    "Dome ReverseDir/DoEllipticSurf and the full Tangency-projected raw_860 remain signed32 stored words. The destructive native Tangency setter does not restrict saved upper bits. Dimension-backed setHeight adds no saved scalar. Tagged DomeApex/DomeDir/DomeFaces identities are preserved; native provider/release/setter alias effects do not imply deep-copy or geometry behavior offline.",
+    "Fill options raw_70 preserve residual packed bits and values outside local NumSpanFactor/Vendor setter ranges. raw_78/raw_74 remain signed32 and the native writer current2-to1 mutation is not applied. raw_10c retains its complete octet and its derivable signed-char representation; AlwaysMakeSurface/MergedWithParents are runtime predicates/transitions, not two saved Booleans. The existing direct keeper and all historical gates remain unchanged."
+  ],
+  "implementation_effect": "No production parser, public API, class/context/version admission or geometry change. Existing raw-field contracts already match these clauses.",
+  "acceptance_credit": "No new native population, original Source execution, semantic accounting, geometry or complete parity credit.",
+  "remaining_review": [
+    "Other properties after0.3077, including the new0.3087 Punch/Ruled/NetBlend associations, remain outside this record"
+  ],
+  "verification": {
+    "status": "Focused Clippy and nine tests passed",
+    "process_exit_code": 0,
+    "new_domain_tests_passed": 3,
+    "earlier_domain_tests_passed": 2,
+    "existing_positive_tests_passed": 4,
+    "dome_signed_splices": 2304,
+    "holewizard_signed_splices": 5448,
+    "holewizard_byte_splices": 4096,
+    "fill_signed_splices": 1782,
+    "fill_byte_splices": 25344,
+    "new_literal_splices": 38974,
+    "original_golden_graphs": 466,
+    "log_sha256": {
+      "target/property-domains-3087-focused-0.log": "ae3bb16ed059c42af732e543096b059bfbde97e3ac9fc3f60a5b62a7d6ff323b",
+      "target/property-domains-3087-focused-1.log": "f0e6eb3144602a34c3f2a9b21314e0d4fe95d4528326f5357139589090a5c8a9",
+      "target/property-domains-3087-focused-2.log": "c7893a8e9b705aa6d14ada6cfc97eeb4fc27e22861031906034d80f6994dd435",
+      "target/property-domains-3087-focused-3.log": "8baae65e18b2226175def13f34a16da102c14dfea6053403320a276c0e5c8844",
+      "target/property-domains-3087-focused-4.log": "768fbf1e2b1c4e94f4f5abaf03898e9c2560c9f952634e94639f369db71fa9a7",
+      "target/property-domains-3087-focused-5.log": "8d4b1520708e9f3b337be83fa58020ccbedc417235572b90ea4fc35957128aea"
+    },
+    "clippy_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test_sha256": {
+      "tests/model_archives/property_domains_3086.rs": "729fb2c88c8b09199d3a664ac9fbe80ee4e6e50e5e308440552aec674ee2176e",
+      "tests/model_archives/property_domains_3087.rs": "381fb8580d8cf0bd049eddd227f571131a63e85bb6aceea94becc7176033dbaa"
+    },
+    "full_gate": "Excluded from running gate55492 at02b5676e; latest-cut gate required before push",
+    "native_application_acceptance": "Not performed or claimed"
+  },
+  "reader_sha256": {
+    "hole_wizard.rs": "353821335998b11247a9a607d29021aeebad85ef133456b3c3917a6521d72e2c",
+    "hole_parameters.rs": "b9f488e7969fb3ddf2be63a9971fdce83450cb9f557c65cd7e03a3be180e68a1",
+    "dome_records.rs": "94453922ba6183331e01f60825d707af870ddd88860e3c33f8ae24ea8bf23624",
+    "filled_surfaces.rs": "aeb9bfa3eb781930ecc0f4f6e6817d6b7f10b069f48e5c4a7896dfa880473535"
+  }
+}
