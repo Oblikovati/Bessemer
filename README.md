@@ -244,6 +244,8 @@ ordered-face groups, required end specifications and concrete keeper identities.
 
 [Ordinary-part sweeps and sweep cuts](docs/features/sweeps/README.md) preserve conditional
 dimensions, versioned controls and complete shared reference dependencies.
+[Schema-1 bidirectional sweep twists](docs/features/sweep-twist/README.md) retain
+the full raw byte and both stored double bit patterns in modern ordinary-part contexts.
 
 [Toolbox specifications](docs/features/configuration-toolbox/README.md) retain
 shared metadata items, raw string framing and exact floating-point bits.

@@ -26,13 +26,12 @@ extension, not original production class-reader acceptance or native producer re
 Source files are copied and hash-checked before imports; import origins and the
 complete snapshot are retained in the compressed source reports.
 
-Production admission is deliberately still pending. Before adding it, complete
-owned sweep/cut graphs must verify fresh/cached/shared identities, actual inherited
-context, independent expected edits, whole-container reopen/fresh reversal,
-history, budgets, malformed input, isolation and concurrency. The older 160 sweep
-fixtures must remain unchanged. Fresh unproved schemas and nonordinary/older
-contexts retain explicit errors. No speculative public API is needed: the existing
-sweep pointer role and resolved-feature read/edit functions are callers.
+The local production reader now admits schema 1 in modern ordinary-part contexts.
+It reads exactly 17 body bytes and preserves the raw byte and both double bit
+patterns. Unknown schemas and older/nonordinary contexts retain explicit errors.
+The existing pointer role and resolved-feature read/edit functions are callers;
+there is no new public API. Full gates and the remaining focused validation still
+precede integration.
 
 The new class must remain distinct from the original unsupported profile in the
 verification record. There is no new native-population, byte-accounting, application,
@@ -55,5 +54,13 @@ the surrounding features, inherited context and MBSM tail; the operation-local
 fixture callback reads only the documented twist primitives. Shared pointers keep
 object identity and cached-class pointers create distinct objects. Unextended
 original parsing rejected all 12 new streams. This remains fixture-only evidence;
-Bessemer production parsing, retained owned streams and public document edits are
-pending. The initial source snapshot and verification record preserve this scope.
+The initial source snapshot and verification record preserve this historical scope.
+
+A later pinned run passed 11 tests, including byte-identical regeneration of all
+160 older sweep records and seven owned fixture sets. It retained 48 new complete
+streams (12 originals and 36 field edits) in a 69,612-byte packet. Bessemer's focused
+runtime checks passed the 6,144 bare cases, and public document checks passed exact
+stream/container reconstruction, reopen, 36 independent edits and fresh reversals.
+An eight-worker test exercised concurrent edits of the 12 original immutable
+archives and confirmed source isolation. ThreadSanitizer and full-gate acceptance
+for this new reader remain pending; this stress test does not replace them.

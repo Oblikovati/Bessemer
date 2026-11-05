@@ -45,6 +45,19 @@ class OwnedTwistOracleTests(unittest.TestCase):
                 self.assertEqual(generated.read_bytes(),
                                  (WORKSPACE / 'tests/fixtures/sweeps' / generated.name).read_bytes())
 
+    def test_retained_owned_packet_matches_all_complete_original_reads(self) -> None:
+        from owned_twist_cases import owned_twist_cases, write_owned_twists
+        reference = cast(Path, fixture.REFERENCE)
+        document, context = owned_twist_context(reference)
+        records = owned_twist_cases(len(context.map)-1)
+        self.assertEqual(len(records), 48)
+        for row in records:
+            result = read_owned_twist(reference, document, context, row.raw, True)
+            self.assertEqual(len(cast(OwnedTwistArchive, result['archive']).map), row.slots)
+            style = 'shared' if '-shared-' in row.label else 'cached-class' if '-cached-class-' in row.label else 'fresh'
+            self.assert_twist_objects(result, list(row.object_slots), row.payloads, style)
+        write_owned_twists(Path(__file__).resolve().parents[3] / 'target/sweep-twist-owned-fixtures', records)
+
     def assert_twist_objects(self, result: dict[str, object], slots: list[int],
                              payloads: tuple[bytes, ...], style: str) -> None:
         archive = cast(OwnedTwistArchive, result['archive'])

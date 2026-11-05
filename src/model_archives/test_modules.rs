@@ -693,3 +693,6 @@ mod assembly_object_tests;
 
 #[path = "../../tests/model_archives/embedded_field_projection.rs"]
 mod embedded_field_projection_tests;
+
+#[path = "../../tests/model_archives/sweep_twists.rs"]
+mod sweep_twist_tests;

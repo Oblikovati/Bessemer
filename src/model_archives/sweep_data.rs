@@ -1,7 +1,7 @@
 use super::display_records::declared;
 use super::{ModelDecoder, ModelObjectRole, model_lists};
-use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
+use crate::{BessemerError, FailureClass, Result};
 
 pub(super) struct SweepControls {
     pub dimensions: bool,
@@ -92,5 +92,23 @@ fn arrays(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader, offsets: &[&str
             ModelObjectRole::Any,
         )?;
     }
+    Ok(())
+}
+
+pub(super) fn twist(reader: &mut ModelDecoder<'_>, schema: u16) -> Result<()> {
+    reader.require_ordinary_part()?;
+    if schema != 1 {
+        return reader.checked(Err(BessemerError::new(
+            "model archive",
+            "moTwistDataForBiDirectionalSweep_c",
+            FailureClass::Unsupported,
+            format!(
+                "moTwistDataForBiDirectionalSweep_c schema {schema}; expected documented schema 1"
+            ),
+        )));
+    }
+    // #211 / C-3524: the wire has no runtime-structure padding or boolean restriction.
+    reader.u8("raw_08")?;
+    reader.f64s(&["raw_10", "raw_18"])?;
     Ok(())
 }

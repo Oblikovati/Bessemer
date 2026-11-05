@@ -50,6 +50,8 @@
 
 ### Added
 
+- Added schema-1 bidirectional sweep-twist fields for modern ordinary-part archives, preserving raw byte values and exact double bits. (#211)
+
 - Added 16-bit BI_RGB555 preview word decoding and replacement, retaining unused high bits, padding, palettes and size declarations. (#210)
 
 - Added uncompressed 1-, 4- and 8-bit indexed DIB previews with exact palette indices, padding and unused-bit preservation during pixel edits. (#209)
