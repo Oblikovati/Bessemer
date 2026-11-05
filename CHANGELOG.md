@@ -52,6 +52,8 @@
 
 ### Added
 
+- Added bounded conditional deferred-value MsgPack reading and construction for all 17 installed writers and both declared byte-order modes. (#227)
+
 - Added bounded inline hash-page reconstruction and isolated value replacement with raw chain metadata, local coverage and history. (#224)
 
 - Added exact wrapping database packed-time conversion with signed-second shifts and raw component domains. (#223)

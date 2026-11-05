@@ -20,6 +20,11 @@ wrapping and arithmetic-shift behavior when converting those stored words.
 replaces fixed-length values with local coverage and history. See the
 [hash-buffer evidence](docs/features/database-hash/README.md) for chain checks,
 native-page results and the remaining overflow/file-graph work.
+`bessemer::deferred_values` reads and constructs the documented conditional
+deferred-object MsgPack blobs with explicit byte-order control, ordered duplicate
+pairs and raw float/string/extension bytes. See the
+[deferred-value evidence](docs/features/deferred-values/README.md) for supported
+writer forms, limits and producer qualifications.
 
 `bessemer::simulation` reads, constructs and writes complete observed MAS tables
 and paired family-8 GEN images. It exposes stored mesh fields and isolated cell
