@@ -227,5 +227,12 @@
     "issue": 216,
     "verification": "docs/features/mold-parting-line/local-verification.json",
     "scope": "Feature/settings/edge/split-info grammar implemented;42 focused Rust and2 Python tests passed, including17 graphs and12 containing streams; latest-cut full local/remote gates remain pending."
+  },
+  "parting_geometry_wire_feature": {
+    "issue": 217,
+    "source_commit": "f79bbbb330c4954da43b158fa7dd5a47db59971b",
+    "verification": "docs/features/mold-parting-geometry/local-verification.json",
+    "native_regression": "docs/features/mold-parting-geometry/native-resolved-regression-verification.json",
+    "scope": "Inline reference surface, direct settings, constructor-dependent child and connected-component grammar implemented;59 focused Rust and2 Python checks passed over30 literal graphs/21 containing streams,14 edits/fresh reversals and8 workers. Retained906 selected native stream sets reconstructed exactly with explicit kernel schema. Latest-cut full local/remote gates, fresh native mold branches and application/geometry acceptance remain pending."
   }
 }
