@@ -88,7 +88,12 @@ def native_cell(raw: bytes, bucket: bytes, offset: int) -> ExpectedCell:
 def native_bucket(index: int, fixtures: Path) -> BucketCase:
     """Retain one explicit native bucket at8192 with its referenced pages; e.g. native_bucket(2,root)."""
     raw = (fixtures / f'native-{index}.db').read_bytes()
-    bucket = raw[8192:12288]
+    return native_bucket_bytes(raw, 2)
+
+
+def native_bucket_bytes(raw: bytes, page_index: int) -> BucketCase:
+    """Read a selected4096-byte native bucket, without file-wide role inference; e.g. native_bucket_bytes(raw,2)."""
+    bucket = raw[page_index * 4096:(page_index + 1) * 4096]
     offset = int.from_bytes(bucket[:2], 'big')
     cells: list[ExpectedCell] = []
     seen: set[int] = set()

@@ -17,6 +17,7 @@ class NativeCensusRow(TypedDict):
     value_sha256: str
     path: str
     stream: str
+    bucket_page_index: int
 
 
 def native_value(raw: bytes, extent: int, first: int, length: int) -> bytes:

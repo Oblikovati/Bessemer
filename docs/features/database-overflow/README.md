@@ -161,3 +161,34 @@ length-prefixed test record contains `<IBIII` extent/rejection/page/free/cell
 counts, a complete bucket, `<Q`-identified complete pages, `<HHH` free records
 and `<HIHQIQ` cell offset/hash/next/first/key-length/value-length followed by the
 expected key and value bytes. This test framing is separate from stored database bytes.
+
+The full selected native mixed-bucket cohort now covers 1,023 buckets across 440
+streams: 8,702 inline cells and 5,140 overflow cells. Each complete input database
+matched its retained source hash, and every overflow payload matched the earlier
+independent span hashes. The frozen `BCW1` packet retains all bucket metadata,
+free records, owned pages and expected cell bytes; regeneration matched every
+one of its 30,575,144 uncompressed bytes.
+
+The expanded Rust suite passed 25 tests, with two source-dependent native tests
+ignored by default; 19 Python tests passed. Every one of the 13,842 mixed-cell
+edits matched independent complete images and reversed from fresh buckets. A
+second process repeated that complete byte census. The explicitly executed
+original-document test also passed all 13,842 edits across 357 native files in
+157.16 seconds, preserving unrelated stream names/order/bytes and restoring exact
+complete original file bytes with retained checkpoints. All full source-file
+lengths and SHA256 hashes matched before and after the run.
+
+`native-buckets-reference.json` binds the packet; each length-prefixed record in
+`BCW1` carries a source u32 ordinal, u32 bucket index and u32 encoded-record length,
+followed by the existing `BWB1` record body. `mixed-native-census-verification.json`
+records executed checks and exclusions. This selected-bucket acceptance does not
+validate a universal database page index, allocation, key/length-changing writes,
+native multi-page keys, engine transactions or application/geometry behavior.
+
+```powershell
+cargo test --test database_overflow all_native_mixed_bucket_cells_reopen_original_documents_and_reverse_exactly_with_checkpoints -- --ignored --nocapture
+```
+
+This test uses the same explicit samples-root environment and full-file preflight
+as the earlier native document census. Its broader packet and tests are outside
+the current frozen `c5c44001` full-gate checkout and require later full acceptance.

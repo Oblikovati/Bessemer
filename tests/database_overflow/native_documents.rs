@@ -7,19 +7,19 @@ use std::{
 };
 #[path = "../support/unselected_document_streams.rs"]
 mod unselected_document_streams;
-use unselected_document_streams::assert_unselected_document_streams;
+pub(crate) use unselected_document_streams::assert_unselected_document_streams;
 
-struct DocumentBinding {
+pub(crate) struct DocumentBinding {
     relative: String,
-    stream: String,
+    pub(crate) stream: String,
     length: usize,
 }
 
-struct NativeDocumentInput {
-    original: Vec<u8>,
-    document: Document,
-    stream: String,
-    raw: Vec<u8>,
+pub(crate) struct NativeDocumentInput {
+    pub(crate) original: Vec<u8>,
+    pub(crate) document: Document,
+    pub(crate) stream: String,
+    pub(crate) raw: Vec<u8>,
 }
 
 fn manifest_text(cursor: &mut &[u8]) -> String {
@@ -46,7 +46,7 @@ fn document_binding(cursor: &mut &[u8]) -> (u32, DocumentBinding) {
     )
 }
 
-fn document_sources() -> BTreeMap<u32, DocumentBinding> {
+pub(crate) fn document_sources() -> BTreeMap<u32, DocumentBinding> {
     let compressed = include_bytes!("../fixtures/database-overflow/native-documents.bin.gz");
     let reader = flate2::read::GzDecoder::new(compressed.as_slice());
     let mut raw = Vec::new();
@@ -155,7 +155,7 @@ fn check_native_document(input: &NativeDocumentInput, case: &NativeChainCase) {
     );
 }
 
-fn cached_document<'a>(
+pub(crate) fn cached_document<'a>(
     current: &'a mut Option<(u32, NativeDocumentInput)>,
     root: &Path,
     sources: &BTreeMap<u32, DocumentBinding>,
@@ -167,13 +167,17 @@ fn cached_document<'a>(
     &current.as_ref().unwrap().1
 }
 
+pub(crate) fn sample_root() -> PathBuf {
+    std::env::var_os("BESSEMER_OVERFLOW_SAMPLE_ROOT")
+        .map(PathBuf::from)
+        .filter(|path| path.is_dir())
+        .expect("expected explicit existing BESSEMER_OVERFLOW_SAMPLE_ROOT")
+}
+
 #[test]
 #[ignore = "requires explicit BESSEMER_OVERFLOW_SAMPLE_ROOT and verified original installed samples"]
 fn every_native_overflow_edit_reopens_original_document_and_reverses_with_retained_checkpoint() {
-    let root = std::env::var_os("BESSEMER_OVERFLOW_SAMPLE_ROOT")
-        .map(PathBuf::from)
-        .filter(|path| path.is_dir())
-        .expect("expected explicit existing BESSEMER_OVERFLOW_SAMPLE_ROOT");
+    let root = sample_root();
     let sources = document_sources();
     let raw = unpack_census();
     let mut cursor = &raw[8..];

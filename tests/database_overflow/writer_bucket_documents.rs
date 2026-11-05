@@ -1,8 +1,16 @@
 use super::*;
 
 fn native_database_bytes(bucket: &HashWriterBucket) -> Vec<u8> {
-    let mut raw = NATIVE_STREAMS[2].to_vec();
-    raw[8192..12288].copy_from_slice(&bucket.to_bytes());
+    write_selected_bucket(NATIVE_STREAMS[2], 2, bucket)
+}
+
+pub(super) fn write_selected_bucket(
+    original: &[u8],
+    index: usize,
+    bucket: &HashWriterBucket,
+) -> Vec<u8> {
+    let mut raw = original.to_vec();
+    raw[index * 4096..(index + 1) * 4096].copy_from_slice(&bucket.to_bytes());
     for page in bucket.to_overflow_pages() {
         let start = page.identifier.get() as usize * 4096;
         raw[start..start + 4096].copy_from_slice(&page.bytes);
@@ -11,6 +19,14 @@ fn native_database_bytes(bucket: &HashWriterBucket) -> Vec<u8> {
 }
 
 fn bucket_from_database(raw: &[u8], case: &BucketCase) -> HashWriterBucket {
+    read_selected_bucket(raw, 2, case)
+}
+
+pub(super) fn read_selected_bucket(
+    raw: &[u8],
+    index: usize,
+    case: &BucketCase,
+) -> HashWriterBucket {
     let pages: Vec<_> = case
         .pages
         .iter()
@@ -23,7 +39,7 @@ fn bucket_from_database(raw: &[u8], case: &BucketCase) -> HashWriterBucket {
         })
         .collect();
     HashWriterBucket::from_bytes(
-        &raw[8192..12288],
+        &raw[index * 4096..(index + 1) * 4096],
         &pages,
         bucket_context(case),
         case.free.len() + case.cells.len(),

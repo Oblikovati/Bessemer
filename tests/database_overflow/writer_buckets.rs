@@ -1,5 +1,7 @@
 use super::packet::{decode_pages, take, word};
 use super::*;
+#[path = "writer_bucket_census.rs"]
+mod bucket_census;
 #[path = "writer_bucket_documents.rs"]
 mod bucket_documents;
 use bessemer::database_hash::*;
