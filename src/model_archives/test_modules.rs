@@ -726,3 +726,6 @@ mod property_domains_combine_mid_thin_tests;
 
 #[path = "../../tests/model_archives/sheet_material_ranges.rs"]
 mod sheet_material_range_tests;
+
+#[path = "../../tests/model_archives/property_domains_sketch_deform.rs"]
+mod property_domains_sketch_deform_tests;
