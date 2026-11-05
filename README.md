@@ -18,6 +18,8 @@ flags and auxiliaries while preserving other bytes and complete history.
 The [static-settings identity and selection view](docs/features/flow-settings/README.md)
 preserves optional identity presence and projects the documented binary-key cache
 precedence under explicit normal-return semantics.
+The [fixed settings arrays](docs/features/flow-fixed-settings/README.md) read records
+7/102 and edit existing raw slots while preserving integer and binary64 bits.
 
 `bessemer::electrical` reads and edits complete Electrical ZIP32 project carriers
 and lexical ASCII Archive.ini records. It preserves duplicate occurrences,

@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added strict Flow record-7/102 settings-array reads and isolated slot edits with preserved integer and binary64 bit patterns. (#241)
+
 - Added Flow static-settings identity views and exact binary-GUID cache-selection projections with explicit normal-return and execution coverage. (#241)
 
 - Added typed Flow record-404 groups for payload versions 3–6 with explicit raw/zlib contexts, complete bounded validation and isolated wire-field edits. (#241)

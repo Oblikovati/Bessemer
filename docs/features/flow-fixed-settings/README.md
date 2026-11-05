@@ -11,8 +11,15 @@ signed integer boundaries, signed zero, infinity, subnormal values and NaN paylo
 bits. Expected slots come from `../inventor-interface/solidworks/flowfixedsettings.py`;
 Rust independently rebuilds every payload and checks carrier retention.
 
-This commit establishes fixtures before the typed reader and slot editor. Those
-APIs remain unimplemented. Native runtime normalization, individual slot meanings,
+`FlowCarrier::fixed_settings` reads either typed profile and retains the selected
+record identity and source checkpoint. `slot` returns raw integer or binary64 bits;
+signed and floating-point interpretations are optional views. `replace_slot`
+requires the matching profile, edits an isolated copy, reparses the complete
+carrier and checks the full patched payload before returning physical record
+history. No-op edits retain original wire bytes. Replacing the original slot
+value in a fresh operation restores the original carrier exactly.
+
+Native runtime normalization, individual slot meanings,
 loader execution and application acceptance are separate requirements. These
 fixtures do not establish complete Flow interoperability or global byte coverage.
 
