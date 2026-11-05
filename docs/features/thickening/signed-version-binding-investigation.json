@@ -1,0 +1,35 @@
+{
+  "issue": 213,
+  "status": "Open: native effective-version mapping has not been established",
+  "source_clause": "11.221 / C-3523",
+  "capture_path": "../inventor-interface/solidworks/research/parallel_constraint_thicken_serializer_capture.json",
+  "capture_sha256": "addab5e0944e8a1b2442364b78cfcf818c83db06517b5aa8d28a2d9867de48b3",
+  "native_serializer_entry": "0x18035b030",
+  "native_checkpoint": "The captured LOAD suffix compares latched ESI with signed conditional branches. It obtains a version from model state at +0x780 or a fallback query.",
+  "signed_load_thresholds": {
+    "raw_820": "0x3DA",
+    "dimension_800": "0x3E2",
+    "raw_824": "0x6A1",
+    "raw_828": "0x709",
+    "direction_830": "0x2F74"
+  },
+  "conditional_oracle": "If the normalized 0xFFFFFFFF archive value were passed unchanged as signed32 -1, all five signed LOAD gates would be false. That mapping is not proven.",
+  "retained_profile": "ArchiveVersion is unsigned. The THK1 corpus has 126 complete graphs, including six Thicken graphs at 0xFFFFFFFF; their full suffix is an unsigned synthetic compatibility profile.",
+  "decision": "Preserve existing admission, source fixtures and exact replay expectations. Do not cast the version or reject high-bit archives without an independently established provider mapping and a versioned policy decision.",
+  "remaining_work": [
+    "Bind the native model-state/fallback effective version to directory and profile versions.",
+    "Obtain independent expected bytes for the resulting boundary cases.",
+    "Choose and document a versioned admission policy while preserving prior replay until migration."
+  ],
+  "credit": "Documentation/provenance correction only; no new native execution, parser, geometry, application acceptance or full-parity credit.",
+  "fixture_sha256": "7ba0cde2e46ed75a7d7530420c8b2fab2e834d17837cbf1f0b804bd485daefb8",
+  "verification": {
+    "command_filters": [
+      "complete_thickening_graphs_match_independent_fields_bytes_and_slots",
+      "thickening_suffix_minimum_and_inclusive_direction_boundary_match_native_layout"
+    ],
+    "binary": "target/property-domains-draft-shell-scale-tests.exe",
+    "result": "2 passed; 126 original complete graphs retained; unchanged production and test code",
+    "humanizer": "Unavailable; maintainer prose review pending"
+  }
+}

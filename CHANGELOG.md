@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Qualified synthetic high-bit Thicken replay coverage pending the native signed-version binding. (#213)
+
 - Accepted zero image-size declarations in uncompressed BGRX previews and preserved them through pixel edits and fresh reversals. (#208)
 
 - Preserved negative component-edge reference counts while continuing the conditional composite-reference pair and retaining positive-count bounds. (#204)
