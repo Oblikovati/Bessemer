@@ -80,7 +80,7 @@ fn verify_replacement(
     Ok(())
 }
 
-fn span_history(
+pub(super) fn span_history(
     length: usize,
     value: Range<usize>,
     completion: HashBufferCompletion,
@@ -93,7 +93,7 @@ fn span_history(
     ]
 }
 
-fn span(range: Range<usize>, derived: bool) -> HashBufferHistory {
+pub(super) fn span(range: Range<usize>, derived: bool) -> HashBufferHistory {
     HashBufferHistory {
         parent: range.clone(),
         result: range,

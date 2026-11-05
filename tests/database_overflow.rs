@@ -10,6 +10,8 @@ use packet::packet_cases;
 mod documents;
 #[path = "database_overflow/native_census.rs"]
 mod native_census;
+#[path = "database_overflow/writer_buckets.rs"]
+mod writer_buckets;
 
 #[derive(Clone)]
 struct OwnedOverflowCase {

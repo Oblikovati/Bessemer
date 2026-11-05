@@ -2,8 +2,9 @@
 
 Feature #229 tracks complete overflow key/value storage operations.
 `database_overflow::OverflowPayload` reads complete explicitly supplied chains
-under the `InstalledWriter` profile. The separate `database_hash` bucket codec
-still accepts inline cells only.
+under the `InstalledWriter` profile. `database_hash::HashWriterBucket` reads mixed
+inline/overflow buckets under that explicit profile. The earlier `HashPageBuffer`
+API keeps its strict inline-only behavior.
 
 Callers supply nonzero provider page identities, complete images, an explicit
 engine extent and the cell's key/value lengths. No page-to-file mapping is
@@ -126,7 +127,37 @@ $env:BESSEMER_OVERFLOW_SAMPLE_ROOT="C:/Users/Public/Documents/SOLIDWORKS/SOLIDWO
 cargo test --test database_overflow every_native_overflow_edit_reopens_original_document_and_reverses_with_retained_checkpoint -- --ignored --nocapture
 ```
 
-The full local and exact-head remote gates remain required. Native keys spanning
+The full supplied-overflow gate passed 4,331 tests at `83f3aacf`; later native
+census, shared-reader and mixed-bucket additions need their own full gate. Native keys spanning
 pages still need independent evidence. These operations do not validate
 file-wide indexing, allocation, transactions, commits, geometry or application
 opening. The humanizer skill is unavailable; maintainer prose review is pending.
+
+The mixed-bucket API reads cell lengths and first overflow identities from the
+stored 26-byte headers. Callers supply complete bucket bytes, the exact union of
+referenced overflow pages, an `OverflowStorageContext` and the aggregate free/cell
+record limit. Page and byte limits include the bucket; the payload limit includes
+all cell keys and values. Shared, cyclic, missing, duplicate or unused overflow
+images fail without publishing a partial bucket. No file-offset mapping is inferred.
+
+Mixed edits retain immutable source/result snapshots, validate all other cells and
+metadata, and return bucket spans followed by overflow spans in page-ID/byte order.
+The shared metadata reader and inline history policy are reused. Raw free sizes
+still carry no allocator-fit guarantee; outgoing bucket links are preserved
+without file-graph validation. Values remain opaque.
+
+The mixed corpus contains 122 complete images: 117 owned inline/overflow
+compositions, empty/inline-only controls and three native buckets with 36 cells.
+Six conditional cursor-wrap cases reject. All 259 admitted cell edits matched
+independent complete images and reversed from fresh buckets. Every cell in the
+12-cell native mixed bucket also reopened and reversed in a complete owned
+containing document. The expanded suite passed 24 Rust tests and 16 Python tests;
+all 11 earlier inline tests passed unchanged. Two fresh processes emitted identical
+4,518,654-byte packets matching every independently expected edited bucket/page.
+
+`bucket-fixture-reference.json` binds the `BWB1` fixture, and
+`bucket-local-verification.json` records executed checks and exclusions. Each
+length-prefixed test record contains `<IBIII` extent/rejection/page/free/cell
+counts, a complete bucket, `<Q`-identified complete pages, `<HHH` free records
+and `<HIHQIQ` cell offset/hash/next/first/key-length/value-length followed by the
+expected key and value bytes. This test framing is separate from stored database bytes.

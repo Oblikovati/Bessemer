@@ -33,7 +33,7 @@ pub(super) fn payload_from_stream(raw: &[u8], case: &OwnedOverflowCase) -> Overf
     .unwrap()
 }
 
-fn assert_unselected_streams(source: &Document, result: &Document) {
+pub(super) fn assert_unselected_streams(source: &Document, result: &Document) {
     for stream in source.streams().filter(|stream| stream.name != STREAM) {
         assert_eq!(
             source.read_stream(stream.name).unwrap(),
@@ -42,7 +42,7 @@ fn assert_unselected_streams(source: &Document, result: &Document) {
     }
 }
 
-fn containing_document() -> Document {
+pub(super) fn containing_document() -> Document {
     let mut source = Document::from_bytes(include_bytes!("../fixtures/blank-part.SLDPRT")).unwrap();
     source
         .replace_stream(STREAM, NATIVE_STREAMS[2].to_vec())

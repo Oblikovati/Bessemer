@@ -1,0 +1,52 @@
+{
+  "issue": 229,
+  "parent_revision": "d44af275fa005961de77d429e824c708e822acf8",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "rust_suite_passed": 24,
+  "rust_suite_failed": 0,
+  "native_optional_tests_ignored": 1,
+  "legacy_inline_regression_tests_passed": 11,
+  "python_tests_passed": 16,
+  "independent_bucket_cases": 122,
+  "admitted_cases": 116,
+  "cursor_wrap_rejections": 6,
+  "complete_cell_edits_and_reversals": 259,
+  "native_sample_cells": 36,
+  "complete_owned_containing_document_edits_and_reversals": 12,
+  "shared_workers": 8,
+  "new_public_types_send_sync": true,
+  "function_and_file_caps_passed": true,
+  "formatter_exit_code": 0,
+  "clippy_exit_code": 0,
+  "source_sha256": {
+    "src/database_hash/writer_bucket/decode.rs": "c7db2f89ba2b6842ccbda035f6f39872a4a64a2d73a1a78e7b75cdecb8a33444",
+    "src/database_hash/writer_bucket/edit.rs": "3fff9560e228547d2599b39ff5508f98e5f87461c9781f5311085913ee413adc",
+    "src/database_hash/writer_bucket/mod.rs": "a7467c1ac89937aa39c0aeea7fea061a9dc0a6b24c971c6d761cb32896196a52",
+    "src/database_hash/writer_bucket/types.rs": "57550c4640dce942d4db71e9eb91d726fe08eb025e3554c5a3602fa3eebc48ad",
+    "src/database_hash/mod.rs": "c1d5dfa280d6a76f3e803825e374e557f0c3508d85ed9586f602b5248fa9e643",
+    "src/database_hash/page_reader.rs": "1bd6c96547efc47773b8b8c8c7cd911b834e8c54d16b71c8bba761dd604a458d",
+    "src/database_hash/edit.rs": "d38960f999e47dd1566d650b6762dd3f721e16c50c422a4140f14ce110433ddc",
+    "tests/database_overflow.rs": "a6f4365a4151e38cdea347770d8a0e4cf3722cd482a1292b17a62400ca3384dd",
+    "tests/database_overflow/documents.rs": "79dc5032ac7c7b8fda9047fd097ca0a9d3ede94d00c53f471bb50505c7ccc555",
+    "tests/database_overflow/writer_buckets.rs": "87521148d34162838bf24d871427894dea9f7537506cdd4e80c51a06f009dc7b",
+    "tests/database_overflow/writer_bucket_documents.rs": "b357680983d1844bb11b2ea950a2f16d59e3aa5578d6fd43cdf5fcafef03846b",
+    "docs/features/database-overflow/bucket_fixtures.py": "2856846ee2347e7c0170a179ebabf45a513bd4a6e73816ffebd9b2a086279c4e",
+    "docs/features/database-overflow/test_bucket_fixtures.py": "4a0afd0784fe5975200bffc4ab9081e08e395fae99c002aec29ce43217ef0f38"
+  },
+  "logs_sha256": {
+    "hash-writer-bucket-final-library-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hash-writer-bucket-final-tests-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hash-writer-bucket-final-tests.log": "c16236b951889a21837d00ba758f75e1a470f40a46f99294c5d711cb438bfc24",
+    "hash-writer-bucket-python-tests.log": "699a97265545c96acf6d7d5db19bf61afd7e99d71b746d2b14072c91f9c43c17",
+    "hash-writer-legacy-regression-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hash-writer-legacy-regression-tests.log": "428ef1bbf273203d753d3023f8a86f4df1d5de7adfb1eb4a09feb445d7c2dd3f",
+    "hash-writer-bucket-final-format-check.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "exclusions": [
+    "Full latest-cut cargo xtask pr and exact-head remote checks remain required",
+    "Broader440-stream mixed-bucket Rust/native-document census remains separate from earlier5140 standalone-chain acceptance",
+    "Key/length/allocation operations and whole-file index/provider/engine/transaction/geometry/application acceptance remain open"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending"
+}

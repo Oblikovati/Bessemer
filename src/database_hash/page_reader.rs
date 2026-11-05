@@ -7,11 +7,13 @@ pub(super) struct PageReader<'a> {
     pub(super) occupied: BTreeMap<usize, usize>,
 }
 
+#[derive(Clone, Debug, PartialEq, Eq)]
 pub(super) struct InlinePayloads {
     pub(super) key: Box<[u8]>,
     pub(super) value: Box<[u8]>,
 }
 
+#[derive(Clone, Debug, PartialEq, Eq)]
 pub(super) struct StoredCellHeader {
     pub(super) offset: u16,
     pub(super) hash: u32,

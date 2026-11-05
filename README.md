@@ -20,6 +20,10 @@ wrapping and arithmetic-shift behavior when converting those stored words.
 replaces fixed-length values with local coverage and history. See the
 [hash-buffer evidence](docs/features/database-hash/README.md) for chain checks,
 native-page results and the remaining overflow/file-graph work.
+Its explicit `HashWriterBucket` API reads complete mixed inline/overflow cells
+with supplied page identities and edits existing same-length values. It returns
+aggregate coverage and ordered bucket/page history; file indexing and allocation
+remain separate. See the [mixed-bucket evidence](docs/features/database-overflow/README.md).
 `bessemer::database_overflow` reads complete explicitly supplied writer page
 chains and replaces existing same-length values, retaining every other page
 byte. See the [overflow evidence](docs/features/database-overflow/README.md) for

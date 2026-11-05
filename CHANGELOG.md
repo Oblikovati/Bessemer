@@ -52,7 +52,7 @@
 
 ### Added
 
-- Added complete supplied-writer overflow key/value decoding and isolated fixed-length value edits with exact local coverage and page-qualified history. (#229)
+- Added complete supplied-writer overflow and mixed-bucket decoding, with isolated fixed-length value edits, exact local coverage and ordered bucket/page history. (#229)
 
 - Added bounded conditional deferred-value MsgPack reading and construction for all 17 installed writers and both declared byte-order modes. (#227)
 

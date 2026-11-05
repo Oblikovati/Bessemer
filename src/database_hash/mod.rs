@@ -3,9 +3,11 @@ mod decode;
 mod edit;
 mod page_reader;
 mod types;
+mod writer_bucket;
 use crate::{BessemerError, FailureClass, Result};
 pub use edit::HashBufferEdit;
 pub use types::*;
+pub use writer_bucket::*;
 
 /// Immutable complete buffer, ordered chains and owned inline cell payloads.
 #[derive(Clone, Debug, PartialEq, Eq)]
