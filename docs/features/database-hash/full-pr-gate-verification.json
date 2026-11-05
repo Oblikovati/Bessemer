@@ -1,0 +1,29 @@
+{
+  "issue": 224,
+  "source_commit": "0a9e8cd246e281d4f1fa0fe078e94ff5187cd011",
+  "command": "cargo xtask pr",
+  "terminal_exit_code": 0,
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0",
+  "checkout": "C:/bessemer214-ci, detached and unchanged until completion",
+  "target_dir": "C:/Users/vmiguel/git/Bessemer/target/relationships-pr-build",
+  "kernel_schema": "C:/Program Files/SOLIDWORKS Corp/SOLIDWORKS/data/pschema/sch_13006.s_t",
+  "log": "target/database-hash-combined-full-pr-gate.log",
+  "log_sha256": "1a669d32264356c22dbeec67fba3646a0aed4f4b0ac2da26d1f0bb5cacae2353",
+  "passed": 4303,
+  "failed": 0,
+  "ignored": 231,
+  "test_result_summaries": 342,
+  "scope": "Formatting, workspace Clippy with warnings denied, build, workspace tests and doctests through database header222, packed time223, inline hash224 and regression225",
+  "exclusions": [
+    "Later deferred MessagePack227 and overflow investigation226 are excluded",
+    "Required exact-head remote checks remain necessary before merge",
+    "Ignored native workloads are not credited as executed by this gate",
+    "No native application, geometry, whole-database or complete-schema parity acceptance"
+  ],
+  "related_issues": [
+    222,
+    223,
+    225
+  ]
+}
