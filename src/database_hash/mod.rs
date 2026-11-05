@@ -1,6 +1,7 @@
 //! Conditional installed inline hash-page buffers (9.2 / C-3595 / C-3601–3603).
 mod decode;
 mod edit;
+mod page_reader;
 mod types;
 use crate::{BessemerError, FailureClass, Result};
 pub use edit::HashBufferEdit;

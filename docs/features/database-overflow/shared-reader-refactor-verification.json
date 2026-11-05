@@ -1,0 +1,28 @@
+{
+  "issue": 229,
+  "kind": "Internal structural refactor before mixed-bucket behavior",
+  "parent_revision": "d84f2ddfd0a0b6c7c9a6a861a7bce54c1516e8c9",
+  "public_behavior_changed": false,
+  "tests_before": 11,
+  "tests_after": 11,
+  "same_test_names_and_success_outcomes": true,
+  "owned_fixtures_changed": false,
+  "checks": "Moved bounded span/header/free/cell metadata decoding to one private shared reader. Inline profile still rejects nonzero overflow IDs with the same diagnostic and preserves all owned/native bytes.",
+  "source_sha256": {
+    "src/database_hash/decode.rs": "a6cc229d9facc7c1051a742eb0ae99c271ef8c8031e57b649c56deb74db45cb7",
+    "src/database_hash/page_reader.rs": "74db7af46b3d52dd175cfb7ee94a33723b76ac705b81fbcf0450eeb04d870aa6",
+    "src/database_hash/mod.rs": "f742f2c6c9b8f2adcb050f01f7f79e9d1016ec45827e5099ee6de55c9433b902",
+    "tests/database_hash.rs": "35afe750096c5d6135caaddc2d7e2b2f362ef4b517bcd85723581f5d56d907a8"
+  },
+  "logs_sha256": {
+    "hash-shared-reader-baseline-tests.log": "fa9a64d1aef385dfe7af4051e38c0ed24f7a67090176978a0eba6474344684cb",
+    "hash-shared-reader-after-tests.log": "6fda0e6825bc0b2d882c2eaa323c3d717ebccfa6c90c6d8011dae34bace028d2",
+    "hash-shared-reader-library-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hash-shared-reader-after-build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "formatter_exit_code": 0,
+  "clippy_exit_code": 0,
+  "function_and_file_caps_passed": true,
+  "scope": "No mixed/overflow bucket admission or public API introduced by this refactor",
+  "full_gate": "Live35374 remains older83f3aacf; this refactor retains separate latest-cut full acceptance"
+}
