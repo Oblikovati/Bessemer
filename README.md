@@ -28,6 +28,11 @@ remain separate. See the [mixed-bucket evidence](docs/features/database-overflow
 chains and replaces existing same-length values, retaining every other page
 byte. See the [overflow evidence](docs/features/database-overflow/README.md) for
 page-identity requirements, native samples and the remaining file/allocator work.
+`bessemer::database_index` reads complete explicitly selected default-provider
+hash file graphs and edits existing same-length values. It checks unique page
+roles, complete maps, default hashes and routing, and returns full-file coverage
+and history. See the [file-index evidence](docs/features/database-index/README.md)
+for explicit extent requirements and remaining allocation/transaction work.
 `bessemer::deferred_values` reads and constructs the documented conditional
 deferred-object MsgPack blobs with explicit byte-order control, ordered duplicate
 pairs and raw float/string/extension bytes. See the

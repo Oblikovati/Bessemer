@@ -20,6 +20,7 @@ pub mod compound;
 mod compression;
 pub mod database_hash;
 pub mod database_header;
+pub mod database_index;
 pub mod database_overflow;
 pub mod deferred_values;
 pub mod display_lists;

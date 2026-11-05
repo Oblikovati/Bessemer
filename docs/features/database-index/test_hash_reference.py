@@ -1,9 +1,21 @@
 """Pin unsigned, empty, unrolled-loop and2048-byte default-hash boundaries."""
 import unittest
+import gzip
+from pathlib import Path
+import tempfile
+from freeze_hash_vectors import hash_packet, freeze_hashes
 from hash_reference import default_hash, closed_form_hash, requested_bucket
 
 
 class NativeHashReferenceTests(unittest.TestCase):
+    def test_frozen_polynomial_hash_vectors_match_regeneration(self) -> None:
+        root = Path(__file__).resolve().parents[3] / 'tests/fixtures/database-index'
+        stored = (root / 'hash-vectors.bin.gz').read_bytes()
+        self.assertEqual(gzip.decompress(stored), hash_packet())
+        with tempfile.TemporaryDirectory() as temporary:
+            freeze_hashes(Path(temporary))
+            self.assertEqual((Path(temporary) / 'hash-vectors.bin.gz').read_bytes(), stored)
+
     def test_empty_test_word_unsigned_bytes_and_all_unrolled_length_boundaries(self) -> None:
         self.assertEqual(default_hash(b''), 5381)
         self.assertEqual(default_hash(b'chm@symisc'), 0x03f523f5)

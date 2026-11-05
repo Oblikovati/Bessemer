@@ -117,5 +117,7 @@ def check_partition(index: NativeIndex) -> None:
     """Admit the selected canonical partition; e.g. check_partition(index)."""
     assert index.maximum > 0 and index.maximum & (index.maximum - 1) == 0
     assert index.split < index.maximum
+    if not index.entries and index.split == 0 and index.maximum == 1:
+        return
     logical = sorted(identity for identity, _ in index.entries)
     assert logical == list(range(index.split + index.maximum))

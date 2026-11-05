@@ -28,7 +28,10 @@ def inline_cell(raw: bytearray, page: int, key: bytes, value: bytes) -> FileValu
 def file_header(raw: bytearray) -> None:
     """Assign literal header/index/free/continuation roles; e.g. file_header(raw)."""
     raw[:11] = b"unqlite\xdb\x7c\x27\x12"
+    struct.pack_into('>I', raw, 15, 512)
     struct.pack_into('>I', raw, 19, 4096)
+    struct.pack_into('>H', raw, 23, 4)
+    raw[25:29] = b'hash'
     struct.pack_into('>IIQQQQI', raw, 4096, 0xfa782dcb, 0x03f523f5, 4, 0, 2, 3, 1)
     struct.pack_into('>QQ', raw, 4096 + 44, 0, 2)
     struct.pack_into('>QIQQ', raw, 3 * 4096, 0, 1, 1, 5)

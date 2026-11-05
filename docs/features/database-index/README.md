@@ -1,9 +1,17 @@
 # Conditional database file index (#230)
 
-This investigation supplies independent reference checks for the installed
-SolidWorks database engine. It does not yet expose a Rust file-index API.
-The selected physical profile uses complete 4096-byte pages at page-ID offsets
-in an already extracted database stream.
+`bessemer::database_index::HashFileGraph` reads complete explicitly selected
+default-provider hash files and replaces existing same-length values by physical
+bucket/cell identity. It returns immutable source/result snapshots, exact graph
+coverage, diagnostics and complete byte-ordered history. Edits reparse the entire
+result before publication and preserve all unrelated bytes.
+
+The caller declares the provider, current engine extent and current pager extent.
+This operation requires equal extents in 512..=65536 and matches the pager extent
+to stored P; it does not infer that equality from native buffer code. It reuses
+the header, bucket and overflow codecs. File sizes must contain complete pages,
+and the stored engine name must be exactly `hash`. Aggregate byte, page, record
+and payload budgets are checked before constructing successful owned results.
 
 ## Native evidence
 
@@ -26,7 +34,10 @@ and its ordered 16-byte logical/physical pairs at 44. Continuation pages
 store the next page at 0, count at 8 and pairs at 12. The reference reader
 preserves duplicate entries before applying its selected canonical-partition
 admission check. Native cache insertion and rebuilding need further analysis
-before defining duplicate-key lookup precedence.
+before defining duplicate-key lookup precedence. The Rust complete-graph API
+rejects duplicate logical IDs, missing partition mappings and physical aliases.
+It also admits the initialized empty state with maximum1, split0 and no mappings.
+No lookup precedence or repair is inferred for rejected saved indexes.
 
 The native map reader can return success after consuming only a prefix of
 the declared records. The reference check requires every declared pair to fit
@@ -50,15 +61,35 @@ the original file. `tests/fixtures/database-index/complete-file.bin.gz` retains
 the original and complete expected results in BFI1 framing. Its integrity
 record pins both the compressed and decompressed bytes. Two independent writes
 and regeneration against the checked-in fixture are tested.
+The `hash-file-graph-v1` fixture revision adds S512 and the exact `hash` name to
+the earlier index-only fixture header so the complete header codec can validate
+it. The value intervals and edit expectations are unchanged.
+`hash-vectors.bin.gz` supplies 34 independent polynomial-hash cases, including
+unsigned bytes, empty keys and both sides of the 2048-byte prefix limit. Rust
+checks each vector through a complete 8192-byte-page file.
+
+`native-files.bin.gz` retains all 2486 authenticated source streams, complete
+cell payloads and independent value intervals in BFG1 framing. Its integrity
+record pins 63,716,892 decompressed bytes and the original census hash. The Rust
+corpus test checks all 22,748 cell edits against complete expected file bytes,
+reopens each result and reverses it to the original file. It includes inline
+cells in streams without overflow, beyond the earlier mixed-bucket cohort.
+Four owned containing-document edits also reopen and reverse exactly while
+preserving every unrelated stream. Two fresh processes produced identical
+5,361,664-byte reconstruction/edit/reversal output for the owned graph and
+three retained native files. `file-graph-local-verification.json` records the
+executed checks and exclusions; the full PR gate and Linux ThreadSanitizer
+remain separate gates.
 Run them with:
 
 ```powershell
 python -m unittest discover -s docs/features/database-index -p 'test_*.py' -v
+cargo test --test database_index
 ```
 
 These checks establish selected framing, ownership and routing. They do not
 establish native allocation, transactions, custom hash callbacks, arbitrary
-page-provider behavior, application acceptance or geometry validity. Complete
-typed file operations and independent mutation expectations remain required
-before the public API is added. Maintainer prose review remains pending because
+page-provider behavior, application acceptance or geometry validity. Key edits,
+length changes, allocation writes and lossless access to noncanonical saved
+indexes remain unfinished under Feature230. Maintainer prose review remains pending because
 the humanizer skill is unavailable in this environment.
