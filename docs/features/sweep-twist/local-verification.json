@@ -8,16 +8,16 @@
   "owned_cases": 48,
   "independent_edits_and_fresh_reversals": 36,
   "old_sweep_runtime_tests_passed": 6,
-  "new_twist_runtime_tests_passed": 3,
-  "public_document_tests_passed": 4,
+  "new_twist_runtime_tests_passed": 4,
+  "public_document_tests_passed": 5,
   "concurrent_workers": 8,
   "clippy_unit_and_integration_exit_code": 0,
   "hashes": {
     "src/model_archives/sweep_data.rs": "91a4e60ff7a88946aa90a639137a4d20bf3bba6715fcd096e90f319ba74cd5f4",
     "src/model_archives/sweep_objects.rs": "960d4038b5c4ca77273bd916511f03c164f800f303843ff0e6bcc9b677b2b590",
     "src/model_archives/object_body.rs": "d821c12a035577b7295a964d03d76fe40d39c21a01b4d29b3a88874b938343c6",
-    "tests/model_archives/sweep_twists.rs": "633783bddc84f31b79cb8f4367b7d9771c9c117525c9cec46921ba5001330122",
-    "tests/resolved_sweep_twists.rs": "1d08effaf9394ca84b4f8148d4e795602da8cc4633a846d4b9154ceaa9ac8851",
+    "tests/model_archives/sweep_twists.rs": "b37b5b7a7f563171f54762d17193764346ddecfc94b5774c53fafde097d678a5",
+    "tests/resolved_sweep_twists.rs": "e8360bdb7a20e55b18a7ec9d6997a7b36085b9c7d1431313ba2e802587c5d863",
     "tests/support/sweep_twist_cases.rs": "852132e4603c8114f94e19c63ba99843887a8bbbc34f11b589aa40c732fb46b7",
     "tests/fixtures/sweep-twist/owned-cases.bin": "980d06ffb7979de41aad647deda0332de50e898ccaec8abac1fdf3fb98952a9a",
     "docs/features/sweep-twist/owned_twist_cases.py": "ddb37a8697db54c6cc53b75c2a08121aa61e58fecb3549ddea79e03ddb3649b6",
@@ -26,12 +26,14 @@
     "target/sweep-twist-document-tests-v4.log": "8d8335efc6af6d3546503132a0dc7cf997135045e043f4a10b598af5c6f0fcf6",
     "target/sweep-twist-clippy-unit-build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "target/sweep-twist-integration-clippy-v2.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "target/sweep-twist-owned-fixture-source.log": "6981569daec172af45f3c1851a104bf4a7fcffc4a15231aed6bcdc688180b97f"
+    "target/sweep-twist-owned-fixture-source.log": "6981569daec172af45f3c1851a104bf4a7fcffc4a15231aed6bcdc688180b97f",
+    "target/sweep-twist-context-clippy-build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/sweep-twist-context-runtime-tests.log": "3b8b1a6083ae97ae107491a28fb93c3ba01924ca49a4fe52fa2dc77e09855f2e",
+    "target/sweep-twist-history-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/sweep-twist-history-document-tests.log": "8bfd421479b1cfb18a6196658926bf4f930451d8b22cbc60a73c1805280c8756"
   },
   "pending": [
     "Complete sweep-reference-surface-containing document fixtures",
-    "Explicit nonordinary-context rejection regression",
-    "Additional history/failure/cancellation validation as applicable",
     "New complete local PR gate",
     "Exact-head remote full matrix and ThreadSanitizer before integration"
   ],
@@ -57,6 +59,16 @@
       "lint",
       "clippy",
       "build"
+    ],
+    "exclusions": [
+      "Later context/history tests and surface fixture work are not in the gate checkout"
     ]
-  }
+  },
+  "history_cases": 36,
+  "rejected_nonordinary_contexts": [
+    "Unspecified",
+    "SimulationEmbedded",
+    "Assembly",
+    "RoutingAssembly"
+  ]
 }

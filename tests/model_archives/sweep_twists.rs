@@ -75,3 +75,36 @@ fn sweep_twist_enforces_byte_field_depth_and_object_budgets() {
         assert!(twist_with_limits(raw, limit).is_err());
     }
 }
+
+fn assert_rejected_twist_context(context: super::reader::ModelArchiveContext) {
+    let (_, _, raw) = cases().pop().unwrap();
+    let mut reader = super::ModelDecoder::new_in_context(
+        raw,
+        crate::header::ArchiveVersion::new(19000),
+        super::annotation_view_tests::LIMITS,
+        context,
+    )
+    .unwrap();
+    let error = reader
+        .object(
+            "twist",
+            &mut crate::archive_codec::ObjectReader::new(),
+            super::ModelObjectRole::Any,
+        )
+        .unwrap_err();
+    assert_eq!(error.class, crate::FailureClass::Unsupported);
+    assert!(reader.finish().is_err());
+}
+
+#[test]
+fn sweep_twists_reject_unspecified_simulation_and_both_assembly_contexts() {
+    use super::reader::ModelArchiveContext;
+    for context in [
+        ModelArchiveContext::Unspecified,
+        ModelArchiveContext::SimulationEmbedded,
+        ModelArchiveContext::OrdinaryAssemblyExternalXml(super::AssemblyRootKind::Assembly),
+        ModelArchiveContext::OrdinaryAssemblyExternalXml(super::AssemblyRootKind::RoutingAssembly),
+    ] {
+        assert_rejected_twist_context(context);
+    }
+}

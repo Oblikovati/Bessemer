@@ -171,3 +171,34 @@ fn rejected_sweep_twist_field_types_leave_source_and_document_unchanged() {
     assert_eq!(archive.to_bytes().unwrap(), case.raw);
     assert_eq!(document.to_bytes().unwrap(), original);
 }
+
+fn assert_twist_history(source: &PartResolvedFeaturesArchive, offset: usize) {
+    use bessemer::model_archives::ModelFieldRelation;
+    let edit = source
+        .edit_fields(edited_first_twist(source, offset))
+        .unwrap();
+    let change = &edit.changes()[0];
+    assert_eq!(change.relation(), ModelFieldRelation::Derived);
+    assert_eq!(change.parents().len(), 1);
+    let parent = source.resolve_field(&change.parents()[0]).unwrap();
+    let result = edit
+        .archive()
+        .resolve_field(change.result().unwrap())
+        .unwrap();
+    assert_eq!(change.path(), parent.path.as_ref());
+    assert_eq!(parent.path, result.path);
+    assert_ne!(parent.value, result.value);
+    assert!(source.resolve_field(change.result().unwrap()).is_err());
+    assert!(edit.archive().resolve_field(&change.parents()[0]).is_err());
+    assert_eq!(edit.unchanged_fields(), source.fields().len() - 1);
+}
+
+#[test]
+fn all_twist_field_edits_return_complete_revision_bound_derived_history() {
+    for group in owned_twist_cases().as_chunks::<4>().0 {
+        let source = parsed(&document_with(group[0].raw));
+        for offset in 0..3 {
+            assert_twist_history(&source, offset);
+        }
+    }
+}
