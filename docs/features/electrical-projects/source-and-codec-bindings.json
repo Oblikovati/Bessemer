@@ -1,0 +1,46 @@
+{
+  "issue": 231,
+  "lexical_reference_comparisons": 265,
+  "lexical_comparisons_equal": true,
+  "ascii_generated_lengths": [
+    0,
+    256
+  ],
+  "native_archives": 4,
+  "native_members": 49,
+  "electrical_source_sha256": "e425802b353cf52d318c040794163fa9fa1cc8d5de72302265e97bcb7a2e886a",
+  "specification_sha256": "b4bb3248711dddee9c5982c29608ab4df0bcaa01d50045b29023aa907778664d",
+  "temporary_probe_sha256": "710077f0f316f703b9d17f4dd215f2def91b0d7eabdb8368e08db19e98ccf88f",
+  "temporary_verifier_sha256": "6d0ac4a1e843ab90e6556d89f0d6abee2d5ae1591cbb1558655c3740e90c8632",
+  "linked_bessemer_rlib_sha256": "a4fb5deb8ab18b9b11d549eb08910fa7d3aa72d2cc20cbfa10b811786e4ac845",
+  "exclusions": [
+    "No public Electrical API implemented",
+    "No SQLite schema/record mutation or EWG semantics validated",
+    "No native Electrical loader, migrations or application acceptance exercised"
+  ],
+  "installed_source_archives_unmodified": true,
+  "reference_tests_passed": 8,
+  "reference_test_log_sha256": "4e781a7100cb8ea41868a3aebc95d2d7356de5fb7a7191b1823f6bac910b6925",
+  "python_reference_sources_sha256": {
+    "archive_fixtures.py": "fce037fb1e73c4709cbd1befb9298625bb565dc2d62de396978ab9966129d446",
+    "freeze_fixtures.py": "ff71351a0d2c37dd3af2a9a78aa7016a61511829567493b8d36774cb88849153",
+    "ini_reference.py": "98c2d3b9427aad717c2bc0eae9039898b09589ee9ad8f57fd5e80a40dc573286",
+    "test_fixtures.py": "5edce8cdd5a79f543f84f0c51c2d126703ea6285b1f9955859f0ad1b66c37015",
+    "zip_reference.py": "4c5b557810d985f0500b9582b8e170912a94fc26a1a09b764a4c86d402b8f255"
+  },
+  "composer_source_sha256": {
+    "src\\composer\\decode.rs": "6da4fa4c9583d902594766ac0cad39329eb157e1cd62ddc8f084590cc399fb34",
+    "src\\composer\\encode.rs": "4fb885422c39c7ddf7cfdb510aa130aee7ab5084e93009aeb38bc023c92a0b39",
+    "src\\composer\\mod.rs": "3e9a3358c9e218bcb2fa6251ebcbe75bbdf9ade68b3b71d577704e26f31d0709",
+    "src\\composer\\names.rs": "2d13232b75bd060958ef6f4bb7eed23d54b91309dc2e38c1a5b52da4f8ce0d04",
+    "src\\composer\\payload.rs": "a7527bde104fe869312b0d52555df78d78a809cea55ef2f2b5d7e1a0ab61daf7",
+    "src\\composer\\types.rs": "e6dbd252221db0fb84b5b461706c5861d1575f860204791a3df2e63574ec9ac1"
+  },
+  "temporary_implementations_removed_after_verification": true,
+  "rust_toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "optimization": 1,
+  "debug_assertions": true,
+  "overflow_checks": true,
+  "probe_terminal_exit_code": 0,
+  "independent_verifier_terminal_exit_code": 0
+}
