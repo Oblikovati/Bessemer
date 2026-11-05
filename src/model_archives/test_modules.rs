@@ -708,3 +708,6 @@ mod property_domains_punch_netblend_tests;
 
 #[path = "../../tests/model_archives/property_domains_pattern_trim.rs"]
 mod property_domains_pattern_trim_tests;
+
+#[path = "../../tests/model_archives/property_domains_blend_circular.rs"]
+mod property_domains_blend_circular_tests;

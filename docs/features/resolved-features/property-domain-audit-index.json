@@ -32,7 +32,7 @@
     },
     {
       "report": "docs/features/resolved-features/property-domain-hole-dome-fill-schema-3087-audit.json",
-      "report_sha256": "3b0cd351810be5f354acf34f3711cdcdc872b232f31316787bbcad094cf735e6",
+      "report_sha256": "da80ac4c617e768418135314b4289687d1aa5245ebb24a366e568ffd874c3e83",
       "clauses": [
         "11.151",
         "11.159",
@@ -58,6 +58,15 @@
         "11.222"
       ],
       "scope": "Property/domain decisions only in the selected modern zero-condition contexts; not complete class/geometry acceptance"
+    },
+    {
+      "report": "docs/features/resolved-features/property-domain-blend-circular-schema-3088-audit.json",
+      "report_sha256": "d95b45b30d906df3f386fe570734b20719b514b1191a4b92a964b367f561e605",
+      "clauses": [
+        "11.148",
+        "11.158"
+      ],
+      "scope": "Property/domain decisions only in selected modern contexts; no backend/COM/geometry completion"
     }
   ],
   "post_3077_changes": [
@@ -94,17 +103,17 @@
     {
       "edition": "0.3082",
       "literal_annex_i_row": "| 0.3082 | 2026-11-05 | Qualified Pattern exact-one predicate, Trim rollback bit and Blend matching-code provenance in existing11.94/11.222/11.158; C-3530-C-3532; no coverage change. | Minor |",
-      "status": "Pattern exact-one and Trim rollback reviewed; Blend matching provenance remains unaudited"
+      "status": "Pattern exact-one, Trim rollback and Blend matching provenance reviewed; no native runtime/geometry replay"
     },
     {
       "edition": "0.3081",
       "literal_annex_i_row": "| 0.3081 | 2026-11-05 | Qualified shared Pattern, Blend and SurfaceCut properties in existing11.94/11.158/11.222; C-3527-C-3529; no coverage change. | Minor |",
-      "status": "Pattern and SurfaceCut properties reviewed; Blend properties remain unaudited"
+      "status": "Pattern, Blend and SurfaceCut property joins reviewed; no complete-class/native acceptance"
     },
     {
       "edition": "0.3080",
       "literal_annex_i_row": "| 0.3080 | 2026-11-05 | Qualified nested sweep-twist grammar, trim settings and circular-pattern properties in existing11.156/11.222/11.148; C-3524-C-3526; no coverage change. | Minor |",
-      "status": "Trim properties reviewed and C-3524 twist wire reader locally validated; circular-pattern properties remain unaudited"
+      "status": "Trim and circular properties reviewed; C-3524 twist wire locally validated, with later exact-head gates still required"
     },
     {
       "edition": "0.3079",
