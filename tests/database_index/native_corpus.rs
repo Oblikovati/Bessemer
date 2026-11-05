@@ -55,18 +55,19 @@ fn expected_bytes(raw: &[u8], spans: &[std::ops::Range<usize>], replacement: &[u
     expected
 }
 
-fn verify_native_file(cursor: &mut &[u8], ordinal: u32) -> (usize, usize) {
+fn verify_native_file(cursor: &mut &[u8], ordinal: u32) -> (usize, usize, usize) {
     assert_eq!(u32::from_le_bytes(word(cursor)), ordinal);
     let length = u32::from_le_bytes(word(cursor)) as usize;
     let count = u32::from_le_bytes(word(cursor)) as usize;
     let raw = take(cursor, length);
     let graph = parse(raw);
+    let mappings = super::saved_buffers::verify_native_saved_index(raw);
     assert_eq!(graph.coverage().cells, count);
     for _ in 0..count {
         let case = native_case(cursor, raw, &graph);
         verify_case(&graph, raw, &case);
     }
-    (graph.coverage().pages, count)
+    (graph.coverage().pages, count, mappings)
 }
 
 #[test]
@@ -77,11 +78,13 @@ fn all_native_file_graphs_match_every_independent_cell_edit_and_fresh_reversal()
     assert_eq!(u32::from_le_bytes(word(&mut cursor)), 2486);
     let mut pages = 0;
     let mut cells = 0;
+    let mut mappings = 0;
     for ordinal in 0..2486 {
         let checked = verify_native_file(&mut cursor, ordinal);
         pages += checked.0;
         cells += checked.1;
+        mappings += checked.2;
     }
-    assert_eq!((pages, cells), (13406, 22748));
+    assert_eq!((pages, cells, mappings), (13406, 22748, 3162));
     assert!(cursor.is_empty());
 }

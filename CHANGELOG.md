@@ -52,6 +52,8 @@
 
 ### Added
 
+- Added lossless saved hash-index reads and isolated header/mapping edits with explicit index-only coverage. (#230)
+
 - Added complete conditional default-provider hash-file graph reads and isolated same-length value edits with full coverage and history. (#230)
 
 - Added complete supplied-writer overflow and mixed-bucket decoding, with isolated fixed-length value edits, exact local coverage and ordered bucket/page history. (#229)

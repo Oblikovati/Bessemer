@@ -33,6 +33,8 @@ hash file graphs and edits existing same-length values. It checks unique page
 roles, complete maps, default hashes and routing, and returns full-file coverage
 and history. See the [file-index evidence](docs/features/database-index/README.md)
 for explicit extent requirements and remaining allocation/transaction work.
+Its `HashFileIndexBuffer` API also preserves and edits raw saved index words
+and ordered duplicate pairs under an explicit index-only check mode.
 `bessemer::deferred_values` reads and constructs the documented conditional
 deferred-object MsgPack blobs with explicit byte-order control, ordered duplicate
 pairs and raw float/string/extension bytes. See the

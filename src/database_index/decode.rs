@@ -5,7 +5,7 @@ use crate::database_overflow::{OverflowPageImage, OverflowStorageContext, Overfl
 use std::{collections::BTreeSet, num::NonZeroU64};
 
 pub(super) fn file(bytes: &[u8], context: HashFileContext) -> Result<HashFileGraph> {
-    let mut reader = new_reader(bytes, context)?;
+    let mut reader = bounded_file_reader(bytes, context)?;
     reader.claim(0, HashFilePageRole::Header)?;
     let index = index::read(&mut reader)?;
     let buckets = read_buckets(&mut reader, &index)?;
@@ -22,7 +22,10 @@ pub(super) fn file(bytes: &[u8], context: HashFileContext) -> Result<HashFileGra
     })
 }
 
-fn new_reader(bytes: &[u8], context: HashFileContext) -> Result<FileReader<'_>> {
+pub(super) fn bounded_file_reader(
+    bytes: &[u8],
+    context: HashFileContext,
+) -> Result<FileReader<'_>> {
     check_extent(bytes, context)?;
     Ok(FileReader {
         bytes,

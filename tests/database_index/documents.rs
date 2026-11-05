@@ -61,3 +61,36 @@ fn complete_owned_graph_edits_reopen_in_containing_documents_and_reverse_exactly
         check_containing_document(&source, &case);
     }
 }
+
+#[test]
+fn saved_duplicate_mapping_reopens_in_its_owned_document_without_graph_validity_credit() {
+    let (raw, _) = cases();
+    let source = document_with_graph(&raw);
+    let saved = HashFileIndexBuffer::from_bytes(&raw, context(raw.len(), 4096)).unwrap();
+    let pair = HashFileMapEntry {
+        logical: 0,
+        physical: 2,
+    };
+    let edit = saved.edit_mapping(1, pair).unwrap();
+    check_saved_document(&source, &saved, edit.result());
+}
+
+fn check_saved_document(
+    source: &Document,
+    original: &HashFileIndexBuffer,
+    result: &HashFileIndexBuffer,
+) {
+    let mut output = source.clone();
+    output.replace_stream(STREAM, result.to_bytes()).unwrap();
+    let mut reopened = Document::from_bytes(&output.to_bytes().unwrap()).unwrap();
+    let raw = reopened.read_stream(STREAM).unwrap();
+    assert_eq!(raw, result.to_bytes());
+    assert_eq!(unrelated_streams(source), unrelated_streams(&reopened));
+    assert!(HashFileGraph::from_bytes(&raw, context(raw.len(), 4096)).is_err());
+    let fresh = HashFileIndexBuffer::from_bytes(&raw, context(raw.len(), 4096)).unwrap();
+    let reverse = fresh.edit_mapping(1, original.mappings()[1]).unwrap();
+    reopened
+        .replace_stream(STREAM, reverse.result().to_bytes())
+        .unwrap();
+    assert_eq!(reopened.to_bytes().unwrap(), source.to_bytes().unwrap());
+}

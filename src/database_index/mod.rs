@@ -2,10 +2,12 @@
 mod decode;
 mod edit;
 mod index;
+mod saved;
 mod types;
 use crate::database_hash::HashWriterBucket;
 use crate::{BessemerError, FailureClass, Result};
 pub use edit::HashFileEdit;
+pub use saved::*;
 use std::collections::BTreeMap;
 pub use types::*;
 

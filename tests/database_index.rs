@@ -9,6 +9,8 @@ mod documents;
 mod hash_vectors;
 #[path = "database_index/native_corpus.rs"]
 mod native_corpus;
+#[path = "database_index/saved_buffers.rs"]
+mod saved_buffers;
 #[path = "database_index/typed_errors.rs"]
 mod typed_errors;
 
@@ -431,6 +433,12 @@ fn public_graph_types_are_send_and_sync() {
     assert_send_sync::<HashFileCoverage>();
     assert_send_sync::<HashFileCheckMode>();
     assert_send_sync::<HashFileDiagnostic>();
+    assert_send_sync::<HashFileIndexBuffer>();
+    assert_send_sync::<HashFileIndexEdit>();
+    assert_send_sync::<HashIndexHeader>();
+    assert_send_sync::<HashIndexCoverage>();
+    assert_send_sync::<HashIndexCheckMode>();
+    assert_send_sync::<HashIndexDiagnostic>();
 }
 
 #[test]

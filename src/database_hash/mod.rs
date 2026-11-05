@@ -6,6 +6,7 @@ mod types;
 mod writer_bucket;
 use crate::{BessemerError, FailureClass, Result};
 pub use edit::HashBufferEdit;
+pub(crate) use edit::span_history;
 pub use types::*;
 pub use writer_bucket::*;
 

@@ -6,6 +6,7 @@ pub(super) struct FileIndex {
     pub split: u64,
     pub maximum: u64,
     pub entries: Vec<HashFileMapEntry>,
+    pub locations: Vec<usize>,
 }
 
 pub(super) struct FileReader<'a> {
@@ -105,6 +106,7 @@ pub(super) fn read_saved(reader: &mut FileReader<'_>) -> Result<FileIndex> {
         split: u64::from_be_bytes(integer(root, 16)?),
         maximum: u64::from_be_bytes(integer(root, 24)?),
         entries: Vec::new(),
+        locations: Vec::new(),
     };
     read_maps(reader, &mut index)?;
     Ok(index)
@@ -116,7 +118,8 @@ fn read_maps(reader: &mut FileReader<'_>, index: &mut FileIndex) -> Result<()> {
         reader.claim(current, HashFilePageRole::Index)?;
         let (start, count, next) = map_header(reader.page(current)?, current)?;
         reader.charge_records(count)?;
-        append_pairs(reader.page(current)?, start, count, &mut index.entries)?;
+        let base = current as usize * reader.context.pager_extent;
+        append_pairs(reader.page(current)?, start, count, base, index)?;
         reader.interpreted += start + count * 16;
         current = next;
     }
@@ -143,13 +146,15 @@ fn append_pairs(
     page: &[u8],
     start: usize,
     count: usize,
-    entries: &mut Vec<HashFileMapEntry>,
+    base: usize,
+    index: &mut FileIndex,
 ) -> Result<()> {
     for offset in (start..start + count * 16).step_by(16) {
-        entries.push(HashFileMapEntry {
+        index.entries.push(HashFileMapEntry {
             logical: u64::from_be_bytes(integer(page, offset)?),
             physical: u64::from_be_bytes(integer(page, offset + 8)?),
         });
+        index.locations.push(base + offset);
     }
     Ok(())
 }

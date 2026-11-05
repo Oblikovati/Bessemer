@@ -38,6 +38,9 @@ before defining duplicate-key lookup precedence. The Rust complete-graph API
 rejects duplicate logical IDs, missing partition mappings and physical aliases.
 It also admits the initialized empty state with maximum1, split0 and no mappings.
 No lookup precedence or repair is inferred for rejected saved indexes.
+The separate [lossless saved-index API](saved-indexes.md) retains those raw
+words and ordered duplicates under an explicit index-only check mode, and
+supports isolated header/pair edits with complete byte history.
 
 The native map reader can return success after consuming only a prefix of
 the declared records. The reference check requires every declared pair to fit
@@ -90,6 +93,6 @@ cargo test --test database_index
 These checks establish selected framing, ownership and routing. They do not
 establish native allocation, transactions, custom hash callbacks, arbitrary
 page-provider behavior, application acceptance or geometry validity. Key edits,
-length changes, allocation writes and lossless access to noncanonical saved
-indexes remain unfinished under Feature230. Maintainer prose review remains pending because
+length changes and allocation writes remain unfinished under Feature230.
+Maintainer prose review remains pending because
 the humanizer skill is unavailable in this environment.

@@ -80,7 +80,7 @@ fn verify_replacement(
     Ok(())
 }
 
-pub(super) fn span_history(
+pub(crate) fn span_history(
     length: usize,
     value: Range<usize>,
     completion: HashBufferCompletion,
