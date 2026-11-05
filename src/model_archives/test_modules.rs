@@ -717,3 +717,6 @@ mod property_domains_refcurve_movecopy_tests;
 
 #[path = "../../tests/model_archives/property_domains_draft_shell_scale.rs"]
 mod property_domains_draft_shell_scale_tests;
+
+#[path = "../../tests/model_archives/property_domains_sweep_thicken.rs"]
+mod property_domains_sweep_thicken_tests;

@@ -86,6 +86,15 @@
         "11.174"
       ],
       "scope": "Property/domain decisions only in existing modern contexts; no whole-class/native geometry acceptance"
+    },
+    {
+      "report": "docs/features/resolved-features/property-domain-sweep-thicken-schema-3091-audit.json",
+      "report_sha256": "a602e4b6e703f26826a363b21602c4d0b6ee610b4adf14fe0cf33e69a3c5a619",
+      "clauses": [
+        "11.156",
+        "11.221"
+      ],
+      "scope": "Only the property/domain decisions in the report; issue213 version binding remains open; not whole-clause or geometry completion"
     }
   ],
   "post_3077_changes": [
@@ -156,5 +165,6 @@
     "scope": "Schema-1 twist grammar only; not a full audit of all sweep property qualifiers"
   },
   "acceptance": "Complete schema and Corliss parity remain open. Stored-field audits and independent fixtures do not establish native runtime setters, semantic geometry, application opening or full model acceptance.",
-  "integration": "PR212 is open at exact verified headf506fa65; later local audit commits are excluded and remain unpublished"
+  "integration": "PR212 is open at exact verified headf506fa65; later local audit commits are excluded and remain unpublished",
+  "open_version_binding_issue": 213
 }
