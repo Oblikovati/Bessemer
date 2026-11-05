@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added complete Electrical userdata storage transitions for supplied provider effects, retaining raw UTF-16 slots, branch coverage and field history. (#231)
+
 - Added isolated Electrical userdata TEXT-cell writes with complete stored-database checks, bounded page growth, composed member/cell history and exact source checkpoints. (#238)
 
 - Added complete Electrical direct field-read maps with observed reader kinds, runtime destinations, unchanged SQLite values and preserved unmatched columns. (#231)

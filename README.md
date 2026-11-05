@@ -21,6 +21,9 @@ occurrences, file-type constants and whole-operation bounds.
 The [userdata query and ID-gate views](docs/features/electrical-userdata/README.md)
 retain exact two-part SQLite selection, separate lexical object-ID matches and
 the documented signed-ID transition without guessing provider conversions.
+`ElectricalUserdataState::project_recordset` also applies explicit provider
+destination effects to all twenty UTF-16 slots, retaining flags, identity fields,
+before/after storage and branch-specific history.
 The [direct file-field map](docs/features/electrical-file-fields/README.md) pairs
 all 38 observed typed read requests with unchanged stored values and distinguishes
 runtime fields from reused temporaries.
