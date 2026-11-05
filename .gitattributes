@@ -75,3 +75,12 @@ tests/fixtures/boundary-direct-data/*.bin binary
 docs/features/boundary-direct-data/*.gz binary
 tests/fixtures/component-legacy-reference/*.bin binary
 docs/features/component-legacy-reference/*.gz binary
+
+# These evidence trees bind scripts and native reports to their original byte hashes.
+docs/features/dib-*/** -text whitespace=cr-at-eol
+docs/features/sweep-twist/** -text whitespace=cr-at-eol
+tests/fixtures/preview*/*.bin binary
+tests/fixtures/preview*/*.bgr binary
+tests/fixtures/preview*/*.bgrx binary
+tests/fixtures/sweep-twist/*.bin binary
+docs/features/sweep-twist/*.gz binary

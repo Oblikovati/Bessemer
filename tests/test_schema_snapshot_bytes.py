@@ -1,7 +1,9 @@
 """Schema snapshot provenance must survive Windows output without baseline changes."""
 import hashlib
 import json
+import os
 from pathlib import Path
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -10,7 +12,34 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'docs/features/model-
 from schema_snapshot_bytes import PAIRS, repair, section_manifest, verified_snapshot, write_verified_snapshot
 
 
+class FakeEvidenceRepository:
+    def __init__(self, root: Path) -> None:
+        self.root = root
+        self.environment = {name: value for name, value in os.environ.items() if not name.startswith('GIT_')}
+        self.environment.update(GIT_CONFIG_GLOBAL=os.devnull, GIT_CONFIG_NOSYSTEM='1', GIT_ATTR_NOSYSTEM='1')
+        subprocess.run(['git', 'init', '--quiet', '--template=', '--object-format=sha1', str(root)],
+                       env=self.environment, check=True, capture_output=True)
+        attributes = Path(__file__).resolve().parents[1]/'.gitattributes'
+        (root/'.gitattributes').write_bytes(attributes.read_bytes())
+
+    def filtered_blob_id(self, relative: str, raw: bytes) -> str:
+        result = subprocess.run(['git', '-C', str(self.root), 'hash-object', '--path='+relative, '--stdin'],
+                                input=raw, env=self.environment, check=True, capture_output=True)
+        return result.stdout.decode('ascii').strip()
+
+
 class SchemaSnapshotBytesTests(unittest.TestCase):
+    def test_git_filters_keep_hash_bound_native_evidence_and_oracle_sources_exact(self) -> None:
+        raw = b'header\r\nschema 1\r\nfields u8 f64 f64\r\n'
+        expected = hashlib.sha1(f'blob {len(raw)}\0'.encode()+raw).hexdigest()
+        paths = ('dib-previews', 'dib-zero-image-size', 'dib-bgr24', 'dib-indexed-rgb', 'dib-rgb555', 'sweep-twist')
+        with tempfile.TemporaryDirectory() as temporary:
+            repository = FakeEvidenceRepository(Path(temporary))
+            for feature in paths:
+                for name in ('native-schema-evidence.json', 'schema-snapshot.md', 'fixture_reader.py'):
+                    relative = f'docs/features/{feature}/{name}'
+                    self.assertEqual(repository.filtered_blob_id(relative, raw), expected, relative)
+
     def test_crlf_source_bytes_are_not_translated_when_written(self) -> None:
         source = b'### 11.18 Example\r\n\r\nStored words.\r\n'
         expected = {'11.18': hashlib.sha256(source).hexdigest()}
