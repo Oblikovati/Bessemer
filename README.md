@@ -22,6 +22,8 @@ The [fixed settings arrays](docs/features/flow-fixed-settings/README.md) read re
 7/102 and edit existing raw slots while preserving integer and binary64 bits.
 The [diagnostic field projection](docs/features/flow-settings-fields/README.md)
 derives seven documented labels with explicit missing guard and floating-point context.
+The [related-carrier lookup](docs/features/flow-links/README.md) searches explicit
+candidate order by typed GUID roles and preserves the CPT/settings lookup gates.
 
 `bessemer::electrical` reads and edits complete Electrical ZIP32 project carriers
 and lexical ASCII Archive.ini records. It preserves duplicate occurrences,

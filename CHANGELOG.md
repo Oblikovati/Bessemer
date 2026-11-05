@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added ordered Flow GUID lookup and related-carrier selection with explicit result types, nil-key behavior and CPT/settings lookup gates. (#241)
+
 - Added seven Flow settings diagnostic projections with preserved stored bits and explicit unresolved integer-guard and floating-point prerequisites. (#241)
 
 - Added strict Flow record-7/102 settings-array reads and isolated slot edits with preserved integer and binary64 bit patterns. (#241)

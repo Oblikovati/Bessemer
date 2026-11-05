@@ -1,0 +1,43 @@
+{
+  "feature_issue": 241,
+  "production_base": "6edd02c9876f71a6494478095ecfb8a45faea340",
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0",
+  "rust_command": "cargo test --test flow_links --test flow_headers --test flow_settings --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 20,
+  "rust_failed": 0,
+  "rust_ignored": 0,
+  "python_command": "python -m unittest discover -s docs/features/flow-links -p test_links.py -v",
+  "python_exit_code": 0,
+  "python_passed": 2,
+  "clippy_command": "cargo clippy --lib --test flow_links --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "oracle": "1260 Source lookup requests and 21 related selections; literal empty-path gate and executed-empty settings search",
+  "result_type_boundary": "All 65536 u16 words plus u32::MAX; only 1/2/4 accepted",
+  "concurrency": "Eight workers match serial related CPT selection from retained immutable candidates",
+  "input_isolation": "Caller candidate list cleared after projection; retained paths and complete carrier checkpoints unchanged",
+  "development_failure": "A test-helper extraction initially produced unmatched syntax; corrected and reran formatting, complete focused tests, caps and Clippy before acceptance",
+  "source_lf_sha256": {
+    "src\\flow\\links\\mod.rs": "8042050da2494d080cb9e81a87a476a150b9fd3f26d95df6fa415f783b0e4a49",
+    "src\\flow\\links\\select.rs": "2ba9e78b4eb7f9bd672873dcd89d90a0a766132e9701d870f5e2bf9d966a58b7",
+    "src\\flow\\links\\types.rs": "75d0bec4b1381ae2fc5f381879a73a216cc4bf0c85d2cd172e6664fad8cb8f98",
+    "src\\flow\\links\\view.rs": "32ad3e310c4f5b5593bdb877993e40b5ee89b4a3682dbabb4d5d4f47c397b6c5",
+    "tests\\flow_links\\fixture.rs": "e206e5612b8194c93580fde638e10523ea169b7bbb465663515a41b0aa176273",
+    "tests\\flow_links.rs": "52220102434f2720d8b1a96ac563eacfe8d58d0900a0cd580b336bd807d767ad"
+  },
+  "log_sha256": {
+    "target/flow-links-focused-tests.log": "f321a24db76829ab781559966d9fb08c4e2ee72f5fd5db80274daf06e3e1c6c9",
+    "target/flow-links-clippy.log": "07a7ff28f83243d9cd4de87221bf5f0d1b0080ad10ea27e8354b1f6c565c43f5",
+    "target/flow-links-python-tests.log": "1409bb6e0dcb61519495ed71529b31604cbb3ac92494c9ca128559a6cd23344c"
+  },
+  "exclusions": [
+    "No filesystem enumeration, path validation or native result-info execution",
+    "Only fresh candidate key strings modeled; no stale reused result-info state",
+    "No payload loading or native application acceptance",
+    "Live full gate 18974 covers source 6edd02c9 and excludes this lookup implementation",
+    "No new dependency or version change; no global schema parity claim"
+  ]
+}
