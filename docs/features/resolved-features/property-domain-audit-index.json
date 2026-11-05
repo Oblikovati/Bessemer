@@ -1,7 +1,7 @@
 {
   "issue": 2,
-  "as_of_edition": "Edition 0.3087 \u00b7 2026-11-05 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
-  "specification_sha256": "947b021b16f22e039cf648ceaba9e1f4c8927b19138765eb58052d6d47152b3e",
+  "as_of_edition": "Edition 0.3088 \u00b7 2026-11-05 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "specification_sha256": "7f34a13ec961c1397114d71c0f404614e7df6ae2c32bad312a1fc591a3eafd13",
   "audits": [
     {
       "report": "docs/features/resolved-features/property-domain-schema-3077-audit.json",
@@ -49,9 +49,23 @@
         "11.235"
       ],
       "scope": "Only the property/domain decisions in the report; not whole-clause or geometry completion"
+    },
+    {
+      "report": "docs/features/resolved-features/property-domain-pattern-trim-schema-3088-audit.json",
+      "report_sha256": "5f056f87cce54178584db1c8f7acd6426be0b5c3dfb153d26262f342da5c9d6b",
+      "clauses": [
+        "11.94",
+        "11.222"
+      ],
+      "scope": "Property/domain decisions only in the selected modern zero-condition contexts; not complete class/geometry acceptance"
     }
   ],
   "post_3077_changes": [
+    {
+      "edition": "0.3088",
+      "literal_annex_i_row": "| 0.3088 | 2026-11-05 | Named Combine associations, MidSurface consumers and ThinSpec parameters in existing11.220/11.337/11.191; C-3545-C-3547; no coverage change. | Minor |",
+      "status": "Combine/MidSurface/ThinSpec changes remain unaudited"
+    },
     {
       "edition": "0.3087",
       "literal_annex_i_row": "| 0.3087 | 2026-11-05 | Named Punch properties, Ruled parameter/provider policies and NetBlend body options in existing11.235/11.229/11.226; C-3542-C-3544; no coverage change. | Minor |",
@@ -75,27 +89,27 @@
     {
       "edition": "0.3083",
       "literal_annex_i_row": "| 0.3083 | 2026-11-05 | Named TrimData AllTools/Surfaces collections, ordered OriginalTools operations and UseRollback query in existing11.222; C-3533; no coverage change. | Minor |",
-      "status": "Not yet audited in the property-domain review"
+      "status": "Trim collection aliases and rollback query reviewed; native provider operations not executed"
     },
     {
       "edition": "0.3082",
       "literal_annex_i_row": "| 0.3082 | 2026-11-05 | Qualified Pattern exact-one predicate, Trim rollback bit and Blend matching-code provenance in existing11.94/11.222/11.158; C-3530-C-3532; no coverage change. | Minor |",
-      "status": "Not yet audited in the property-domain review"
+      "status": "Pattern exact-one and Trim rollback reviewed; Blend matching provenance remains unaudited"
     },
     {
       "edition": "0.3081",
       "literal_annex_i_row": "| 0.3081 | 2026-11-05 | Qualified shared Pattern, Blend and SurfaceCut properties in existing11.94/11.158/11.222; C-3527-C-3529; no coverage change. | Minor |",
-      "status": "Not yet audited in the property-domain review"
+      "status": "Pattern and SurfaceCut properties reviewed; Blend properties remain unaudited"
     },
     {
       "edition": "0.3080",
       "literal_annex_i_row": "| 0.3080 | 2026-11-05 | Qualified nested sweep-twist grammar, trim settings and circular-pattern properties in existing11.156/11.222/11.148; C-3524-C-3526; no coverage change. | Minor |",
-      "status": "C-3524 twist wire reader locally implemented and focused-tested; other changes remain unaudited and full gates pending"
+      "status": "Trim properties reviewed and C-3524 twist wire reader locally validated; circular-pattern properties remain unaudited"
     },
     {
       "edition": "0.3079",
       "literal_annex_i_row": "| 0.3079 | 2026-11-05 | Qualified linear-pattern, sweep and thickening field groups in existing11.94/11.156/11.221; C-3521-C-3523; no coverage change. | Minor |",
-      "status": "Not yet audited in the property-domain review"
+      "status": "Linear-pattern properties reviewed; sweep and thickening groups remain unaudited"
     },
     {
       "edition": "0.3078",

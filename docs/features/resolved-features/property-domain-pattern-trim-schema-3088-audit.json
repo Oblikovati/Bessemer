@@ -1,0 +1,59 @@
+{
+  "issue": 2,
+  "edition": "Edition 0.3088 \u00b7 2026-11-05 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "specification_sha256": "7f34a13ec961c1397114d71c0f404614e7df6ae2c32bad312a1fc591a3eafd13",
+  "clauses": [
+    "11.94",
+    "11.222"
+  ],
+  "evidence_joins": [
+    "C-3521",
+    "C-3525",
+    "C-3527",
+    "C-3529",
+    "C-3530",
+    "C-3531",
+    "C-3533"
+  ],
+  "snapshot_path": "docs/features/resolved-features/property-domain-pattern-trim-schema-3088-snapshot.md",
+  "snapshot_representation": "Literal selected sections normalized to LF, stripped boundary whitespace and joined with one blank line",
+  "snapshot_sha256": "bdb1e2fae6b0e09361d5254837432c41c732453b7f14de1fbd275494bd3cdca6",
+  "decisions": [
+    "Pattern940 remains the exact saved legacy octet or modern signed32 word with its existing0x42CF list/width gate. Native isPttnBody is exact-one, but is not an offline normalization or closed stored enum. The public PatternBodyArray runtime-owner commit bridge remains unbound; it is not used to label other numeric codes.",
+    "Shared and linear-derived named fields retain their existing raw u8/i32 codecs. Full32 runtime APIs, legacy equality/nonzero projections and dimension-provider callbacks do not impose Boolean file domains, native setter replay or final pattern geometry. Existing variation, array, dimension and version gates stay unchanged.",
+    "SurfaceCut SheetIndex remains full signed32 and surface-feature808 retains its typed tagged association. Native sequential pair writes add no index bounds, pointer/index consistency constraint or atomic update to the stored reader.",
+    "Trim packed raw_10 remains one unsigned32 word preserving MutualTrim, RemovePicked, SpacePartition, Consuming, UseRollback, unassigned bits and the complete high fragment. Provider-backed CompleteOpts getter mutations and native setters are not executed offline. Native SpacePartition coupling is not imposed as a universal file invariant.",
+    "Trim raw_08/raw_0c remain signed32. AllTools20/Surfaces48 remain distinct direct arrays with unchanged map/keeper/chooser order; runtime collection aliases and ordered SetSize/Append do not prove deep copying or justify collapsing physical occurrences."
+  ],
+  "implementation_effect": "No production parser, public API, geometry, context/version admission or native operation changed.",
+  "acceptance_credit": "No original Source execution, new native population, semantic accounting, public COM bridge, geometry or complete parity credit.",
+  "verification": {
+    "status": "Clippy and11 focused tests passed",
+    "process_exit_code": 0,
+    "new_domain_tests": 2,
+    "all_property_domain_tests": 9,
+    "positive_golden_tests": 2,
+    "original_golden_records": 798,
+    "pattern_legacy_byte_patches": 74240,
+    "pattern_modern_signed_patches": 696,
+    "trim_and_surfacecut_patches": 4984,
+    "new_literal_patches": 79920,
+    "log_sha256": {
+      "target/property-domains-pattern-trim-focused-0.log": "4066f226b956b58da84958f5f2cb2e4a7ccc569a96b457606f75a7d5352bdfb3",
+      "target/property-domains-pattern-trim-focused-1.log": "44b71b47ab925cb62859d4f8cbf8507f863102c6cd90a9aad82a87127d7eb9b9",
+      "target/property-domains-pattern-trim-focused-2.log": "318c854aa360bf98a31ff72b5ed824e0b2c6d4b99a08caec7127365c72ad2d23"
+    },
+    "clippy_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test_sha256": "9ab93f9dd050d1843557f63cc73b895ccbdcadc6a5857184f194279258827eec",
+    "full_gate": "Later tests excluded from active gate21829 atf506fa65; completed prior gate4139 passes at02b5676e remains separate"
+  },
+  "reader_sha256": {
+    "linear_patterns.rs": "e1600a0b4c7b1e085a4e228c5361ccc63657b9c159e48c1a075db8aff5d1c4aa",
+    "pattern_variation.rs": "293db5ce0eafdedbabefa2ad4b40fd8d7516a3c4bc5db67c76c6e4850f42ee86",
+    "surface_operations.rs": "fee4fad30e4b305693ff33d1fa9a7fdca8d814c1b89bc0386b1481fda6b6a48d"
+  },
+  "context_exclusions": [
+    "Archive condition0x2000 seed substitution remains outside the zero-condition Pattern review; no admission added",
+    "Native getter/setter/provider calls and complete geometric/COM mapping remain outside stored-archive checks"
+  ]
+}

@@ -705,3 +705,6 @@ mod property_domains_3087_tests;
 
 #[path = "../../tests/model_archives/property_domains_punch_netblend.rs"]
 mod property_domains_punch_netblend_tests;
+
+#[path = "../../tests/model_archives/property_domains_pattern_trim.rs"]
+mod property_domains_pattern_trim_tests;
