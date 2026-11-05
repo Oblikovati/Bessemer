@@ -15,6 +15,7 @@ mod archive_codec;
 pub mod biography;
 pub mod bitmap_resource;
 pub mod block_stream;
+mod bounded_zlib;
 pub mod composer;
 pub mod compound;
 mod compression;
