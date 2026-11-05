@@ -1,0 +1,28 @@
+{
+  "issue": 222,
+  "terminal_exit_codes": [
+    0,
+    0
+  ],
+  "fresh_processes": 2,
+  "packets_per_process": 6,
+  "packet_lengths": [
+    512,
+    512,
+    31631,
+    512,
+    512,
+    31591
+  ],
+  "bytes_per_process": 65294,
+  "outputs_equal": true,
+  "output_sha256": "c3442376df39d1a8b6ffaf63b6eefaed6d88f4a92685cdf50bcb7a3dbdd46ea5",
+  "checks": "Both original header buffers, both independently expected changed headers and both complete reconstructed containing documents; fresh reopen and every unrelated logical stream checked",
+  "probe_retained": false,
+  "sha256": {
+    "target/database-header-process-probe.rs": "50b8ed08dceef1fb8b4fd57f7b409976558230ab48385f0fcd808027914151c8",
+    "target/database-header-process-probe.exe": "993f3f4070531bd5ab4fca1e43c2c74ef08fa48fa91c1e55377342b93eb25cb6",
+    "target/libbessemer_database_header.rlib": "b2dbce568314369153071fe855290f107c87683dba07b97c0c47721f7cc0075c",
+    "tests/fixtures/blank-part.SLDPRT": "b52e080ba2cc64d1d07ed28306f27281b07521aef550bc0c7fea8cd54be2b276"
+  }
+}

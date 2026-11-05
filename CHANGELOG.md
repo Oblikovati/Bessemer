@@ -52,6 +52,8 @@
 
 ### Added
 
+- Added explicit-profile database header-buffer reconstruction with separate stored S/P checks and preserved raw names, time words and trailing bytes. (#222)
+
 - Added framed OneBend raw-body lists and signed optional bodies with explicit kernel context and bounded decoding. (#220)
 
 - Added an explicit canonical SketchBend kind-7 profile with complete owned grids, strict trailing raw bodies and context-preserving edits. (#219)

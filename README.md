@@ -9,6 +9,12 @@ replaces existing streams on isolated snapshots, including mini-stream cutoff
 changes. See the [compound-file evidence](docs/features/compound-files/README.md)
 for allocation checks, native corpus results and validation limits.
 
+`bessemer::database_header` reads and reconstructs the documented conditional
+512-byte database header buffer with an explicit provider profile. It preserves
+raw name/time fields and uninterpreted trailing bytes. See the
+[header-buffer evidence](docs/features/database-header/README.md) for validation
+scope and database limitations.
+
 `bessemer::simulation` reads, constructs and writes complete observed MAS tables
 and paired family-8 GEN images. It exposes stored mesh fields and isolated cell
 and coordinate-pattern edits, including complete CWR stream replacement. See the
