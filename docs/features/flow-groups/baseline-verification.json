@@ -1,0 +1,26 @@
+{
+  "issue": 241,
+  "platform": "Windows x64 Rust 1.99.0",
+  "rust_baseline_tests_passed": 3,
+  "python_tests_passed": 3,
+  "failed": 0,
+  "clippy_exit_code": 0,
+  "cases": 26,
+  "owned_cases": 24,
+  "native_carriers": 2,
+  "native_payload_variants": 1,
+  "scope": "Existing physical Flow carrier read and exact reference-field reconstruction only; no typed record-404 production decoder credit",
+  "source_sha256": {
+    "docs/features/flow-groups/freeze_groups.py": "3e4a674efd3f93ef74aa2e3c2fed22628857de08759f8c0b062df9c462b75880",
+    "docs/features/flow-groups/test_groups.py": "b8f07b2f6c98567caaa9b19429285244638599ca4ca2852a523693164f38a907",
+    "tests/flow_group_fixtures.rs": "740bbaeaf459e29c04a13543168ceddecbfcd35977f441cd6c23a5a25f4f993c",
+    "tests/flow_groups/fixture.rs": "520b54ffb4a41fe6f2e884d4839ea28cef55e0e5ca1805e6838d1bf5f887a5d5"
+  },
+  "log_sha256": {
+    "target/flow-group-fixture-tests.log": "e8f27a48858ecaa638aa83f246ac96d96b95665aa612b2554ac68bd3e6e69005",
+    "target/flow-group-fixture-clippy.log": "35c62d52d91a9fbfe49b01980a630a3614fa0daca8ebfa308feeb551ac339c2e",
+    "target/flow-group-fixture-python-tests.log": "5e585e2dac2a40ddf95cdf42cea87c17780518597cf1b8e9db7b9beeae2cc573"
+  },
+  "native_execution": false,
+  "full_repository_gate": false
+}
