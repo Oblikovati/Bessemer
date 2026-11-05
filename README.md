@@ -16,6 +16,10 @@ raw name/time fields and uninterpreted trailing bytes. See the
 scope and database limitations.
 [Packed-time helpers](docs/features/database-time/README.md) preserve the native
 wrapping and arithmetic-shift behavior when converting those stored words.
+`bessemer::database_hash` reads complete selected inline bucket buffers and
+replaces fixed-length values with local coverage and history. See the
+[hash-buffer evidence](docs/features/database-hash/README.md) for chain checks,
+native-page results and the remaining overflow/file-graph work.
 
 `bessemer::simulation` reads, constructs and writes complete observed MAS tables
 and paired family-8 GEN images. It exposes stored mesh fields and isolated cell

@@ -52,6 +52,8 @@
 
 ### Added
 
+- Added bounded inline hash-page reconstruction and isolated value replacement with raw chain metadata, local coverage and history. (#224)
+
 - Added exact wrapping database packed-time conversion with signed-second shifts and raw component domains. (#223)
 
 - Added explicit-profile database header-buffer reconstruction with separate stored S/P checks and preserved raw names, time words and trailing bytes. (#222)
