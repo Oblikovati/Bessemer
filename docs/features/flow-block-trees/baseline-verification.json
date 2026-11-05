@@ -1,0 +1,39 @@
+{
+  "feature_issue": 241,
+  "production_base": "db8b7635",
+  "phase": "Independent full wire-forest fixtures before typed tree API",
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0",
+  "rust_command": "cargo test --test flow_block_tree_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 2,
+  "python_command": "python -m unittest discover -s docs/features/flow-block-trees -p test_trees.py -v",
+  "python_exit_code": 0,
+  "python_passed": 4,
+  "clippy_command": "cargo clippy --lib --test flow_block_tree_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "cases": 81,
+  "native_payloads": 1,
+  "native_stored_bytes": 340,
+  "native_decoded_bytes": 8908,
+  "native_roots": 792,
+  "native_nodes": 4440,
+  "native_splits": 456,
+  "native_leaves": 3984,
+  "oracle": "Source full root/node metadata; independent Rust iterative byte reconstruction, interval/first-index-fast checks and full eight-child forest closed forms",
+  "boundaries": "Explicit legacy/stored bounds; raw/zlib; zero ranges; full i32 inclusive ranges giving inactive grid count 2^96; depth 255/256 and modulo-256 level bytes; discarded prefix/leaf fields",
+  "exclusions": [
+    "No new production API; typed reader and editor remain next",
+    "Active delegated version-4-plus layouts remain unsupported",
+    "Wire traversal does not prove native parallel block-vector order or runtime count provenance",
+    "No native application execution or global semantic byte coverage claim",
+    "Full gate 83746 runs on earlier 58a5ad52 and excludes this baseline"
+  ],
+  "log_sha256": {
+    "target/flow-block-trees-baseline-tests.log": "7d8e0955cf589fcc4cb108569b4e104c32359dada936886bd021291323e85fba",
+    "target/flow-block-trees-baseline-clippy.log": "d3357263b82c87b7a218055e69b501bfed134a9d3d8af7558ff6f625d4a2d114",
+    "target/flow-block-trees-python-tests.log": "69d9b377c064a4742b05284762fdacae7713bb28f2f87bfcf7bb5840091057c8"
+  }
+}
