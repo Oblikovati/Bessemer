@@ -235,5 +235,13 @@
     "verification": "docs/features/mold-parting-geometry/local-verification.json",
     "native_regression": "docs/features/mold-parting-geometry/native-resolved-regression-verification.json",
     "scope": "Inline reference surface, direct settings, constructor-dependent child and connected-component grammar implemented;59 focused Rust and2 Python checks passed over30 literal graphs/21 containing streams,14 edits/fresh reversals and8 workers. Retained906 selected native stream sets reconstructed exactly with explicit kernel schema. Latest-cut full local/remote gates, fresh native mold branches and application/geometry acceptance remain pending."
+  },
+  "conic_bend_wire_feature": {
+    "issue": 218,
+    "source_commit": "e74f8456c9685668e874a3a5c1ee45ac48dd9c6a",
+    "verification": "docs/features/conic-bend/local-verification.json",
+    "native_regression": "docs/features/conic-bend/native-resolved-regression-verification.json",
+    "process_determinism": "docs/features/conic-bend/process-determinism-verification.json",
+    "scope": "Schema-1 ordinary72-byte conic grammar implemented through complete OneBend callers in both saved helper states.41 focused Rust/3 Python checks passed;576 numeric graphs,18 containing streams,12 edits/fresh reversals,8 workers and2 fresh-process byte comparisons passed.684 old graphs and6 helper-one streams stayed unchanged;906 retained selected native stream sets reconstructed exactly. Full conic-cut local/remote gates, fresh native conic/factory, DB and application/geometry acceptance remain pending."
   }
 }
