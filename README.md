@@ -4,6 +4,12 @@ Bessemer is a Rust library being built to read and write SolidWorks documents
 (parts .sldprt, assemblies .sldasm, and drawings .slddrw).
 CAD kernels use it to exchange data with SolidWorks files. Martensite is its first consumer.
 
+`bessemer::electrical` reads and edits complete Electrical ZIP32 project carriers
+and lexical ASCII Archive.ini records. It preserves duplicate occurrences,
+unknown members and encoded representations of untouched members. See the
+[Electrical evidence](docs/features/electrical-projects/README.md) for limits,
+history and the remaining SQLite/project-schema work.
+
 `bessemer::compound` reads and reconstructs MS-CFB version-3/4 carriers and
 replaces existing streams on isolated snapshots, including mini-stream cutoff
 changes. See the [compound-file evidence](docs/features/compound-files/README.md)

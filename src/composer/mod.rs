@@ -8,6 +8,7 @@ mod names;
 mod payload;
 pub mod references;
 mod types;
+mod wire;
 
 use crate::archive_codec::ArchiveRevision;
 use crate::{BessemerError, FailureClass, Result};

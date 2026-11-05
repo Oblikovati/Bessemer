@@ -52,6 +52,8 @@
 
 ### Added
 
+- Added Electrical ZIP32 carrier reads, member edits and lossless ASCII Archive.ini value operations with coverage and history. (#231)
+
 - Added lossless saved hash-index reads and isolated header/mapping edits with explicit index-only coverage. (#230)
 
 - Added complete conditional default-provider hash-file graph reads and isolated same-length value edits with full coverage and history. (#230)

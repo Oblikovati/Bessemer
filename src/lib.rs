@@ -25,6 +25,7 @@ pub mod database_overflow;
 pub mod deferred_values;
 pub mod display_lists;
 mod document;
+pub mod electrical;
 pub mod entity_visual;
 mod error;
 pub mod header;
