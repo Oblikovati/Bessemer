@@ -95,6 +95,16 @@
         "11.221"
       ],
       "scope": "Only the property/domain decisions in the report; issue213 version binding remains open; not whole-clause or geometry completion"
+    },
+    {
+      "report": "docs/features/resolved-features/property-domain-combine-mid-thin-schema-3093-audit.json",
+      "report_sha256": "234fa04804a4c02d5cbe92ecacce3b8e24ce45a8c1db8745de94c369825eaabc",
+      "clauses": [
+        "11.220",
+        "11.337",
+        "11.191"
+      ],
+      "scope": "Stored scalar properties only; no native provider/geometry or complete-class acceptance"
     }
   ],
   "post_3077_changes": [
@@ -106,7 +116,7 @@
     {
       "edition": "0.3088",
       "literal_annex_i_row": "| 0.3088 | 2026-11-05 | Named Combine associations, MidSurface consumers and ThinSpec parameters in existing11.220/11.337/11.191; C-3545-C-3547; no coverage change. | Minor |",
-      "status": "Combine/MidSurface/ThinSpec changes remain unaudited"
+      "status": "Combine/MidSurface/ThinSpec property joins reviewed in referenced audit; no native geometry/application acceptance"
     },
     {
       "edition": "0.3087",
@@ -151,7 +161,7 @@
     {
       "edition": "0.3079",
       "literal_annex_i_row": "| 0.3079 | 2026-11-05 | Qualified linear-pattern, sweep and thickening field groups in existing11.94/11.156/11.221; C-3521-C-3523; no coverage change. | Minor |",
-      "status": "Linear-pattern properties reviewed; sweep and thickening groups remain unaudited"
+      "status": "Linear-pattern and sweep properties reviewed; Thicken scalar fields tested at positive signed-modern versions; issue213 effective-version binding remains open"
     },
     {
       "edition": "0.3078",
@@ -166,5 +176,9 @@
   },
   "acceptance": "Complete schema and Corliss parity remain open. Stored-field audits and independent fixtures do not establish native runtime setters, semantic geometry, application opening or full model acceptance.",
   "integration": "PR212 is open at exact verified headf506fa65; later local audit commits are excluded and remain unpublished",
-  "open_version_binding_issue": 213
+  "open_version_binding_issue": 213,
+  "new_wire_feature": {
+    "issue": 214,
+    "scope": "C-3559 material parameters and37-byte direct ranges remain unimplemented; no parser credit"
+  }
 }

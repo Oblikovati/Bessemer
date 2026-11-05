@@ -1,0 +1,60 @@
+{
+  "issue": 2,
+  "edition": "Edition 0.3093 \u00b7 2026-11-05 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "specification_sha256": "cd20e168ce565073c6ee7dc97e69811abf1516c1137e44df310ad30f3dcc58df",
+  "clauses": [
+    "11.220",
+    "11.337",
+    "11.191"
+  ],
+  "evidence_joins": [
+    "C-3545",
+    "C-3546",
+    "C-3547"
+  ],
+  "snapshot_path": "docs/features/resolved-features/property-domain-combine-mid-thin-schema-3093-snapshot.md",
+  "snapshot_representation": "Literal selected sections normalized to LF, stripped boundary whitespace and joined with one blank line",
+  "snapshot_sha256": "427f7e0c1069c76ddff0adc4d1b1f94418b77e7fad7ab4cd4c8046320f49c655",
+  "decisions": [
+    "Combine OperationType/raw_828 remains signed32 without limiting it to the native setData guard0..2. Transparency/raw_838 retains the exact saved byte at the existing unsigned >=0x3F08 gate; native LOAD/STORE normalization and provider-based ToolBodies replacement are not replayed. MainBody identity and direct ToolBodies ordering remain unchanged.",
+    "MidSurfData KnitFlag/raw_10 remains signed32, without Boolean closure or successful knitting claims. MidSurface list traversal and MidRef placement are separate provider operations; native placement default50 and range[-100,100] do not constrain raw_800 or invent a stored scalar.",
+    "ThinSpec Direction/raw_28, CapEnds/raw_2c and AddBends/raw_50 remain signed32. EndThickness/raw_30 retains all binary64 bits without units or finite/positive bounds. Thickness/Thickness2/BendRadius remain distinct tagged dimension/provider associations; no extra raw scalar or option-dependent omission is added."
+  ],
+  "reader_sha256": {
+    "combine_bodies.rs": "94dbf7c0fc3679e5dc291c6d70cf9e7364a5c7c45ae84dd9d58fa027f665094e",
+    "mid_surfaces.rs": "8d0ef574c5a71f020e4ae7fbb694fd970c0ea8199fe11c8a0d061914e457c7a7",
+    "thin_extrusions.rs": "105cb3ae7420823af05b9ece4e5a12e5fc76d2363296312aed3a85c816c9efa1"
+  },
+  "implementation_effect": "No production parser, public API, context/version admission, native provider or geometry change.",
+  "acceptance_credit": "Stored-field audit only; no new native execution/population, geometry/application acceptance or full parity.",
+  "context_exclusions": [
+    "Historical/DB/Simulation/assembly and native STORE/history paths remain excluded.",
+    "Native provider mutation, normalization, exceptions and geometry operations are not emulated."
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending",
+  "verification": {
+    "status": "Clippy and10 focused tests passed; all22 property-domain tests passed",
+    "process_exit_code": 0,
+    "new_domain_tests": 3,
+    "original_golden_records": 882,
+    "new_literal_patches": 7272,
+    "combine_patches": 4788,
+    "mid_surface_patches": 324,
+    "thin_specification_patches": 2160,
+    "all_property_domain_tests": 22,
+    "log_sha256": {
+      "target/property-domains-combine-mid-thin-focused-0.log": "2dc183815d435330c77298b89aee94158b43013b6ed80eb844c4bfb405f4d513",
+      "target/property-domains-combine-mid-thin-focused-1.log": "ad14168a4def37b55f5401c24b6b1bd44d5f7932cbd864d4cbd68678aa7b1b85",
+      "target/property-domains-combine-mid-thin-focused-2.log": "b83b0ba73537da98d7fda26424d40356c68478c08dea2482b3d89b336d7ae77c",
+      "target/property-domains-combine-mid-thin-focused-3.log": "df7f600362187aa8bae1f410e8b9580fe77443675ae4596a42257cbdc671cf0d",
+      "target/property-domains-combine-mid-thin-focused-4.log": "597a145cfcdb6cc4fe0a6819c8eeb2cfec505f88f59e14fb561242c66027c1da",
+      "target/property-domains-combine-mid-thin-focused-5.log": "7ebf7cd76984503290293d70b36ba48d2e52f1b7fecf59f0c4ef27d1bbc2faca",
+      "target/property-domains-combine-mid-thin-focused-6.log": "1115d2a37b8b8674a697beccc2dd2187a10b88ee9f144df84cbbf6242725ba26",
+      "target/property-domains-combine-mid-thin-focused-7.log": "a2c75fb9014813d9ec618bdb9010446f5888296e16334cd08f133437e7c0a445"
+    },
+    "all_domain_log_sha256": "d9db07285f560e880b727d5df373e19a388558d73cd86bfaa0c9ea74161acfec",
+    "clippy_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test_sha256": "3416594e8615cd8f58ddc5bf6f4b2a64237bcf456440b4fb109d0c80f4eeba75",
+    "integration": "Excluded from PR212 headf506fa65; full gate and remote acceptance required"
+  }
+}
