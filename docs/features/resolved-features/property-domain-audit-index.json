@@ -1,7 +1,7 @@
 {
   "issue": 2,
-  "as_of_edition": "Edition 0.3088 \u00b7 2026-11-05 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
-  "specification_sha256": "7f34a13ec961c1397114d71c0f404614e7df6ae2c32bad312a1fc591a3eafd13",
+  "as_of_edition": "Edition 0.3089 \u00b7 2026-11-05 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "specification_sha256": "f47316e546e7d093fb0968b2c6a9cecc89138ac79c3835a365b8571315c0e360",
   "audits": [
     {
       "report": "docs/features/resolved-features/property-domain-schema-3077-audit.json",
@@ -67,9 +67,23 @@
         "11.158"
       ],
       "scope": "Property/domain decisions only in selected modern contexts; no backend/COM/geometry completion"
+    },
+    {
+      "report": "docs/features/resolved-features/property-domain-refcurve-movecopy-schema-3089-audit.json",
+      "report_sha256": "210be8dd87c6488fa95b3156dfdb0ef9adf58432b250a2774467f695e287fd60",
+      "clauses": [
+        "11.218",
+        "11.338"
+      ],
+      "scope": "Property/domain decisions only within documented modern ordinary contexts; no whole-class/native/geometry acceptance"
     }
   ],
   "post_3077_changes": [
+    {
+      "edition": "0.3089",
+      "literal_annex_i_row": "| 0.3089 | 2026-11-05 | Qualified SketchOffset relation-array consumer, Deform parameter joins and Planar collection operations in existing11.63/11.357/11.139; C-3548-C-3550; no coverage change. | Minor |",
+      "status": "SketchOffset/Deform/Planar property joins remain unaudited"
+    },
     {
       "edition": "0.3088",
       "literal_annex_i_row": "| 0.3088 | 2026-11-05 | Named Combine associations, MidSurface consumers and ThinSpec parameters in existing11.220/11.337/11.191; C-3545-C-3547; no coverage change. | Minor |",
@@ -93,7 +107,7 @@
     {
       "edition": "0.3084",
       "literal_annex_i_row": "| 0.3084 | 2026-11-05 | Named RefCurve settings/projection masks and MoveCopyData settings/collection operations in existing11.338/11.218; C-3534-C-3535; no coverage change. | Minor |",
-      "status": "Not yet audited in the property-domain review"
+      "status": "RefCurve/MoveCopy property joins reviewed; no provider replay or additional contexts admitted"
     },
     {
       "edition": "0.3083",

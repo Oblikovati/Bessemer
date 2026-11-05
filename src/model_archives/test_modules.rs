@@ -711,3 +711,6 @@ mod property_domains_pattern_trim_tests;
 
 #[path = "../../tests/model_archives/property_domains_blend_circular.rs"]
 mod property_domains_blend_circular_tests;
+
+#[path = "../../tests/model_archives/property_domains_refcurve_movecopy.rs"]
+mod property_domains_refcurve_movecopy_tests;
