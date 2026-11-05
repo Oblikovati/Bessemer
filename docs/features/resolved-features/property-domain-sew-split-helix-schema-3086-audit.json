@@ -55,6 +55,16 @@
       "source_sha256": "729fb2c88c8b09199d3a664ac9fbe80ee4e6e50e5e308440552aec674ee2176e",
       "tests_passed": 2,
       "log_sha256": "f0e6eb3144602a34c3f2a9b21314e0d4fe95d4528326f5357139589090a5c8a9"
+    },
+    "shared_helper_reuse": {
+      "scope": "Literal double patterns and integer assertions unchanged; helper names/visibility generalized for new callers",
+      "source_sha256": {
+        "tests/model_archives/property_domains_3086.rs": "eddffa0711ae552171980c19a30e05aaf293ecfcc75d28b27cdbb4ac33bbd4d8",
+        "tests/model_archives/property_domains_3087.rs": "d7d4703dcd133b686d3206c218cd42953cebcc7e97b4d579259cf7703915ab8c",
+        "tests/model_archives/property_domains_punch_netblend.rs": "1a07017f1afd8f29d1046816510a1f6307794430f696d43f5a2f3b17aa7f4952"
+      },
+      "all_property_tests_passed": 7,
+      "log_sha256": "9dae8360297f9dd6c9492b69f6cd4ac2c6ca4aa35102c3738b3801b825456565"
     }
   },
   "reader_sha256": {

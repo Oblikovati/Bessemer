@@ -47,7 +47,17 @@
       "tests/model_archives/property_domains_3087.rs": "381fb8580d8cf0bd049eddd227f571131a63e85bb6aceea94becc7176033dbaa"
     },
     "full_gate": "Excluded from running gate55492 at02b5676e; latest-cut gate required before push",
-    "native_application_acceptance": "Not performed or claimed"
+    "native_application_acceptance": "Not performed or claimed",
+    "shared_helper_reuse": {
+      "scope": "Literal double patterns and integer assertions unchanged; helper names/visibility generalized for new callers",
+      "source_sha256": {
+        "tests/model_archives/property_domains_3086.rs": "eddffa0711ae552171980c19a30e05aaf293ecfcc75d28b27cdbb4ac33bbd4d8",
+        "tests/model_archives/property_domains_3087.rs": "d7d4703dcd133b686d3206c218cd42953cebcc7e97b4d579259cf7703915ab8c",
+        "tests/model_archives/property_domains_punch_netblend.rs": "1a07017f1afd8f29d1046816510a1f6307794430f696d43f5a2f3b17aa7f4952"
+      },
+      "all_property_tests_passed": 7,
+      "log_sha256": "9dae8360297f9dd6c9492b69f6cd4ac2c6ca4aa35102c3738b3801b825456565"
+    }
   },
   "reader_sha256": {
     "hole_wizard.rs": "353821335998b11247a9a607d29021aeebad85ef133456b3c3917a6521d72e2c",

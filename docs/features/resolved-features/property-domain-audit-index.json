@@ -18,34 +18,44 @@
         "11.187",
         "11.206"
       ],
-      "scope": "Only the property/domain decisions in the referenced report; not whole-clause or geometry completion"
+      "scope": "Only the property/domain decisions in the report; not whole-clause or geometry completion"
     },
     {
       "report": "docs/features/resolved-features/property-domain-sew-split-helix-schema-3086-audit.json",
-      "report_sha256": "d6bd98a73e321496bed7b1f3cc2356f3fa3bc118843f734f926e182e1aa7646c",
+      "report_sha256": "4018b580588c89495bca399fdba056f1732cb6748aea4317043c005acb8c757d",
       "clauses": [
         "11.184",
         "11.227",
         "11.234"
       ],
-      "scope": "Only the property/domain decisions in the referenced report; not whole-clause or geometry completion"
+      "scope": "Only the property/domain decisions in the report; not whole-clause or geometry completion"
     },
     {
       "report": "docs/features/resolved-features/property-domain-hole-dome-fill-schema-3087-audit.json",
-      "report_sha256": "c512d6af089ea00b256f50d5d4bf66f377db812e9c2d37e2764dcdee2860e96b",
+      "report_sha256": "3b0cd351810be5f354acf34f3711cdcdc872b232f31316787bbcad094cf735e6",
       "clauses": [
         "11.151",
         "11.159",
         "11.231"
       ],
-      "scope": "Only the property/domain decisions in the referenced report; not whole-clause or geometry completion"
+      "scope": "Only the property/domain decisions in the report; not whole-clause or geometry completion"
+    },
+    {
+      "report": "docs/features/resolved-features/property-domain-punch-ruled-netblend-schema-3087-audit.json",
+      "report_sha256": "55aa2031d2db6a294a7a9a43b2b794c8fbad40f9b9b37c2d2bab89f659503c82",
+      "clauses": [
+        "11.226",
+        "11.229",
+        "11.235"
+      ],
+      "scope": "Only the property/domain decisions in the report; not whole-clause or geometry completion"
     }
   ],
   "post_3077_changes": [
     {
       "edition": "0.3087",
       "literal_annex_i_row": "| 0.3087 | 2026-11-05 | Named Punch properties, Ruled parameter/provider policies and NetBlend body options in existing11.235/11.229/11.226; C-3542-C-3544; no coverage change. | Minor |",
-      "status": "Not yet audited in the property-domain review"
+      "status": "Punch/Ruled/NetBlend property joins reviewed in the referenced audit; no new native acceptance"
     },
     {
       "edition": "0.3086",

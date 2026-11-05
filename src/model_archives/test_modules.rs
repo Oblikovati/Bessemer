@@ -702,3 +702,6 @@ mod property_domains_3086_tests;
 
 #[path = "../../tests/model_archives/property_domains_3087.rs"]
 mod property_domains_3087_tests;
+
+#[path = "../../tests/model_archives/property_domains_punch_netblend.rs"]
+mod property_domains_punch_netblend_tests;

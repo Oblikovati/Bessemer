@@ -10,7 +10,12 @@ fn named_payload(path: &str, labels: &[&str]) -> bool {
     prefix.ends_with(".payload") && labels.contains(&label)
 }
 
-fn integer_family(packet: &'static [u8], magic: &[u8], count: u32, labels: &[&str]) -> usize {
+pub(super) fn integer_family(
+    packet: &'static [u8],
+    magic: &[u8],
+    count: u32,
+    labels: &[&str],
+) -> usize {
     let mut occurrences = 0;
     let mut covered = std::collections::BTreeSet::new();
     for (_, version, raw, _, _) in records_with_count(packet, magic, count) {

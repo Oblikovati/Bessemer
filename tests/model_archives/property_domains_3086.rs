@@ -9,7 +9,7 @@ const SPLIT_SETTINGS: [&str; 9] = [
     "910", "914", "918", "91c", "920", "924", "928", "9d8", "a20",
 ];
 const SIGNED_BOUNDARIES: [i32; 6] = [i32::MIN, -1, 0, 1, 2, i32::MAX];
-const NUMREV_BITS: [u64; 12] = [
+const DOUBLE_DOMAIN_BITS: [u64; 12] = [
     0,
     0x8000_0000_0000_0000,
     1,
@@ -92,16 +92,16 @@ fn helix_numrev_preserves_ieee_bits_without_count_unit_or_finiteness_constraints
     let mut cases = 0;
     for (_, version, raw, _, _) in rows.into_iter().filter(|row| row.0 == 0) {
         let fields = decode_graph(version, raw, true).unwrap().0;
-        assert_numrev_domain(version, &fields, path);
-        cases += NUMREV_BITS.len();
+        assert_stored_double_domain(version, &fields, path);
+        cases += DOUBLE_DOMAIN_BITS.len();
     }
 
     assert!(cases > 0);
     eprintln!("HELIX_NUMREV_SPLICES\t{cases}");
 }
 
-fn assert_numrev_domain(version: u32, fields: &[ModelField], path: &str) {
-    for bits in NUMREV_BITS {
+pub(super) fn assert_stored_double_domain(version: u32, fields: &[ModelField], path: &str) {
+    for bits in DOUBLE_DOMAIN_BITS {
         let expected = ModelFieldValue::F64(StoredDouble::from_bits(bits));
         assert_property_splice(version, fields, path, &bits.to_le_bytes(), expected);
     }

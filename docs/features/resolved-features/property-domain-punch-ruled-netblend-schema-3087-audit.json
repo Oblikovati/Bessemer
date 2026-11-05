@@ -1,0 +1,54 @@
+{
+  "issue": 2,
+  "edition": "Edition 0.3087 \u00b7 2026-11-05 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "property_join_edition": "0.3087",
+  "specification_sha256": "947b021b16f22e039cf648ceaba9e1f4c8927b19138765eb58052d6d47152b3e",
+  "clauses": [
+    "11.226",
+    "11.229",
+    "11.235"
+  ],
+  "snapshot_path": "docs/features/resolved-features/property-domain-punch-ruled-netblend-schema-3087-snapshot.md",
+  "snapshot_representation": "Literal selected sections normalized to LF and joined with one blank line after stripping section-boundary whitespace",
+  "snapshot_sha256": "f409bf1d3429139bbe28a29c187a9dfbebc4f1bc387f3022c5528a84d80ffd31",
+  "decisions": [
+    "Punch Exclude/ClearanceDirection/Cut/CutDir remain signed32 stored options at their signed internal-revision gates, independent of enclosing file version/schema. Thickness/Clearance remain tagged dimensions, not new scalar fields. Native Clearance input sign-bit clearing and provider effects are not applied to saved dimension bytes. Offline replay does not pretend to reproduce the unconditional current native STORE as an older writer specification.",
+    "Ruled Length/Angle raw storage remains raw_90/raw_b0. Native dimension-provider queries and the observed Angle fallback to raw_90 do not rename or normalize those stored doubles. DirectInput/MakeConnectSrf/TrimAndSew remain full signed32, AlongDirection remains an unnormalized stored vector, and DirSpec retains its declared tagged pointer role. Independent historical reads and modern-only admission remain unchanged.",
+    "NetBlend IsCut/MergeBody/WantSolid/WantThinSolid retain all stored octets despite full32 runtime APIs. Loader zero-extension does not invoke coupled native setters, so nonzero thin with zero solid remains valid stored framing. Thickness doubles retain all bits; BodyCreationMethod/ThinSolidType remain signed32. The existing nonzero thin and exact mode3 pointer gates remain shape constraints, not closed scalar domains."
+  ],
+  "implementation_effect": "No production parser, API, geometry, version/context or native-writer behavior changed. Test helpers were shared without changing their literal patterns or assertions.",
+  "acceptance_credit": "No new native population, original Source execution, geometry/application or complete parity acceptance.",
+  "verification": {
+    "status": "Clippy and12 focused tests passed",
+    "process_exit_code": 0,
+    "new_domain_tests": 2,
+    "earlier_domain_tests": 5,
+    "existing_positive_or_predicate_tests": 5,
+    "punch_signed_option_patches": 3600,
+    "netblend_body_option_patches": 17986,
+    "original_golden_graphs": 1026,
+    "log_sha256": {
+      "target/property-domains-punch-netblend-focused-0.log": "9dae8360297f9dd6c9492b69f6cd4ac2c6ca4aa35102c3738b3801b825456565",
+      "target/property-domains-punch-netblend-focused-1.log": "d7306a0b9fdd218d94d1c4bb01f3f3ebaf7794957cbc69c86d31652169f2cc33",
+      "target/property-domains-punch-netblend-focused-2.log": "24bc5d39c14fc0d802c11a5e0507144755beedae63d62a0bd784c3cfb095b380",
+      "target/property-domains-punch-netblend-focused-3.log": "d6b8fc504ef590316f5deb88cd3cb00ae05a419a88c097f075acd731ada44dc1",
+      "target/property-domains-punch-netblend-focused-4.log": "69d5606280bedd7003b9ff9ffd867d99bccf76e64fc5ac8b3f9bbb90f13d2250",
+      "target/property-domains-punch-netblend-focused-5.log": "91df0fdbf68b4dfb213973659a4bcb5a5178107e13a2b1ea5056430fbbeeb691"
+    },
+    "clippy_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test_sha256": {
+      "tests/model_archives/property_domains_3086.rs": "eddffa0711ae552171980c19a30e05aaf293ecfcc75d28b27cdbb4ac33bbd4d8",
+      "tests/model_archives/property_domains_3087.rs": "d7d4703dcd133b686d3206c218cd42953cebcc7e97b4d579259cf7703915ab8c",
+      "tests/model_archives/property_domains_punch_netblend.rs": "1a07017f1afd8f29d1046816510a1f6307794430f696d43f5a2f3b17aa7f4952"
+    },
+    "shape_policy": "Thin byte varies within zero/nonzero framing class; ThinSolidType3 retains its separate pointer shape. Existing predicate fixtures cover the shape boundaries. WantSolid is varied independently, including zero with populated thin dimensions.",
+    "full_gate": "New tests excluded from completed4139-pass gate at02b5676e; latest-cut gate required before push"
+  },
+  "reader_sha256": {
+    "punches.rs": "3096e00538375b1d3a3465b7ba14d682bbb98db2db53c8a82f4a2a0478de8e28",
+    "punch_arrays.rs": "248f10a2941cd61975edc01bab3df6986b5622ccd013355607e66f23e81c0807",
+    "punch_extensions.rs": "8ef439b02350e694eec767ab2fcae30684ad802e1b6d25322547c65eba562b6d",
+    "ruled_surfaces.rs": "6c99121a33008d4e3ae251fb9a413a8e2d01f6029ce011933711ca64675da9b7",
+    "net_blends.rs": "a786c49f4b68d2d044759be5e1405ef1f3825758073f4cf57ba93fee15d9589d"
+  }
+}

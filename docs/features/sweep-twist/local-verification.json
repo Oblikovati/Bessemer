@@ -61,15 +61,11 @@
   },
   "full_pr_gate": {
     "source_revision": "02b5676eb7636d70b9ad745907302ff47d356fd8",
-    "session": 55492,
-    "status": "running",
-    "completed_stages": [
-      "lint",
-      "clippy",
-      "build"
-    ],
+    "status": "passed",
+    "tests_passed": 4139,
+    "proof": "full-pr-gate-verification.json",
     "exclusions": [
-      "Later context/history tests and surface fixture work are not in the gate checkout"
+      "Later context/history/surface test additions, candidate forward merge and property audits remain excluded; next latest-cut gate required"
     ]
   },
   "history_cases": 66,
