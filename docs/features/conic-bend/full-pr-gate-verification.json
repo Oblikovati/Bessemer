@@ -1,0 +1,24 @@
+{
+  "issue": 218,
+  "source_commit": "e74f8456c9685668e874a3a5c1ee45ac48dd9c6a",
+  "command": "cargo xtask pr",
+  "terminal_exit_code": 0,
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0",
+  "checkout": "C:/bessemer214-ci, detached and unchanged until completion",
+  "target_dir": "C:/Users/vmiguel/git/Bessemer/target/relationships-pr-build",
+  "kernel_schema": "C:/Program Files/SOLIDWORKS Corp/SOLIDWORKS/data/pschema/sch_13006.s_t",
+  "log": "target/conic-bend-combined-full-pr-gate.log",
+  "log_sha256": "933e1e5fe34b7331ba68626ddf1b5746c630e8142f212d69a8d52a4e9506807f",
+  "passed": 4241,
+  "failed": 0,
+  "ignored": 231,
+  "test_result_summaries": 337,
+  "scope": "Formatting, workspace Clippy with warnings denied, build, workspace tests and doctests at exact conic-bend cut",
+  "exclusions": [
+    "Later canonical SketchBend profile219 and OneBend raw-body feature220 are excluded",
+    "Required exact-head remote checks remain necessary before merge",
+    "Ignored native workloads are not credited as executed by this gate",
+    "No native application, geometry or whole-schema parity acceptance"
+  ]
+}

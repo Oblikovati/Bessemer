@@ -17,6 +17,7 @@ pub(super) struct ParsedPartArchive {
     version: ArchiveVersion,
     limits: ModelFieldLimits,
     kernel: Option<super::kernel_frames::CompressedKernelContext>,
+    sketch_bend_owned: Option<super::SketchBendOwnedProfile>,
     pub(super) object_map: ObjectMapSnapshot,
 }
 
@@ -38,18 +39,19 @@ pub(super) fn read(
     version: ArchiveVersion,
     limits: ModelFieldLimits,
 ) -> Result<ParsedPartArchive> {
-    read_with_kernel(bytes, header, version, limits, None)
+    read_with_profile(bytes, header, version, limits, None, None)
 }
 
-pub(super) fn read_with_kernel(
+pub(super) fn read_with_profile(
     bytes: &[u8],
     header: Arc<DocumentHeader>,
     version: ArchiveVersion,
     limits: ModelFieldLimits,
     kernel: Option<super::kernel_frames::CompressedKernelContext>,
+    sketch_bend_owned: Option<super::SketchBendOwnedProfile>,
 ) -> Result<ParsedPartArchive> {
     let plan = ModelHeaderLoadPlan::new(header.clone(), version, limits.maximum_entries)?;
-    let mut reader = part_decoder(bytes, version, limits, kernel.clone())?;
+    let mut reader = part_decoder(bytes, version, limits, kernel.clone(), sketch_bend_owned)?;
     let mut map = ObjectReader::new();
     let lightweight = lightweight::read(&mut reader, &mut map, plan)?;
     let size = reader.section_size("resolved_size")?;
@@ -65,6 +67,7 @@ pub(super) fn read_with_kernel(
         version,
         limits,
         kernel,
+        sketch_bend_owned,
         object_map: map.into_snapshot(),
     })
 }
@@ -74,6 +77,7 @@ fn part_decoder(
     version: ArchiveVersion,
     limits: ModelFieldLimits,
     kernel: Option<super::kernel_frames::CompressedKernelContext>,
+    sketch_bend_owned: Option<super::SketchBendOwnedProfile>,
 ) -> Result<ModelDecoder<'_>> {
     ModelDecoder::new_in_context(
         bytes,
@@ -81,7 +85,11 @@ fn part_decoder(
         limits,
         ModelArchiveContext::OrdinaryPartExternalXml,
     )
-    .map(|reader| reader.with_kernel(kernel))
+    .map(|reader| {
+        reader
+            .with_kernel(kernel)
+            .with_sketch_bend_owned_profile(sketch_bend_owned)
+    })
 }
 
 /// Reuse the resolved body with its actual lightweight selectors and shared map.
@@ -129,6 +137,7 @@ impl ParsedPartArchive {
             self.version,
             self.limits,
             self.kernel.clone(),
+            self.sketch_bend_owned,
         )
     }
 
@@ -151,10 +160,11 @@ pub(super) fn construct(
     version: ArchiveVersion,
     limits: ModelFieldLimits,
     kernel: Option<super::kernel_frames::CompressedKernelContext>,
+    sketch_bend_owned: Option<super::SketchBendOwnedProfile>,
 ) -> Result<ParsedPartArchive> {
     super::construction::section_lengths(&mut fields, limits.maximum_bytes)?;
     let bytes = encode_fields(&fields, limits.maximum_bytes)?;
-    let parsed = read_with_kernel(&bytes, header, version, limits, kernel)?;
+    let parsed = read_with_profile(&bytes, header, version, limits, kernel, sketch_bend_owned)?;
     if parsed.fields != fields {
         return Err(super::field_mismatch::construction_mismatch(
             &fields,

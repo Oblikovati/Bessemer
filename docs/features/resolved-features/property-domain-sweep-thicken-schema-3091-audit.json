@@ -1,0 +1,52 @@
+{
+  "issue": 2,
+  "edition": "Edition 0.3093 \u00b7 2026-11-05 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "specification_sha256": "cd20e168ce565073c6ee7dc97e69811abf1516c1137e44df310ad30f3dcc58df",
+  "clauses": [
+    "11.156",
+    "11.221"
+  ],
+  "evidence_joins": [
+    "C-3522",
+    "C-3523"
+  ],
+  "snapshot_path": "docs/features/resolved-features/property-domain-sweep-thicken-schema-3091-snapshot.md",
+  "snapshot_representation": "Literal selected sections normalized to LF, stripped boundary whitespace and joined with one blank line",
+  "snapshot_sha256": "d7e01d4d9ab07bb13fc52cad14cba3f7a334d8fe13f93e9de0da30e4e0fad2be",
+  "decisions": [
+    "Sweep raw_78 retains all256 saved octets. Thin-sweep raw_234 retains noncanonical nonzero bytes within its reached dimension shape. End-capping raw_230 retains full signed32 values without an invented enum domain. Native setter transformations are not replayed.",
+    "Sweep whole-word ==2 directions and exact8/9 angular selectors retain their distinct existing predicates. Twist remains its separate validated schema1 body.",
+    "Thicken raw_818, raw_81c, raw_820 and raw_828 retain signed32 values; raw_810 retains binary64 bits independently of dimension/provider getter behavior. Scalar audit credit is restricted to36 positive signed-modern graphs."
+  ],
+  "context_exclusions": [
+    "Issue213 remains open: native signed effective version is not bound to normalized unsigned archive versions. Six synthetic high-bit Thicken graphs retain earlier unsigned replay expectations without native high-bit acceptance credit.",
+    "Historical, STORE/history, DB, assembly and Simulation contexts remain excluded."
+  ],
+  "reader_sha256": {
+    "sweep_data.rs": "91a4e60ff7a88946aa90a639137a4d20bf3bba6715fcd096e90f319ba74cd5f4",
+    "thicken_records.rs": "5be17a7fafd8c490f53a3a31e36074c9df2199e388d504f7b745783270377234"
+  },
+  "implementation_effect": "Tests only: no production parser, public API, admission policy or geometry change.",
+  "acceptance_credit": "No new native execution, population, geometry/application acceptance or full-parity credit.",
+  "verification": {
+    "status": "Clippy and5 focused tests passed",
+    "process_exit_code": 0,
+    "original_golden_records": 286,
+    "sweep_literal_patches": 53984,
+    "thicken_literal_patches": 1296,
+    "new_literal_patches": 55280,
+    "log_sha256": {
+      "target/property-domains-sweep-thicken-focused-0.log": "f0b2b4f353991804b1035f442194c423be8f95e94f024779f27377be1b337619",
+      "target/property-domains-sweep-thicken-focused-1.log": "9c3b024555eacd3f18d3a04ae734ba42e946aeb0c0b5fa4a78d734bc289235ed",
+      "target/property-domains-sweep-thicken-focused-2.log": "cefa3b22b765dbc75cff1db414cdab2934e136c82c1af50f656aea7ec478bf02",
+      "target/property-domains-sweep-thicken-focused-3.log": "ffa9892187cd46f6ebbae4e8e5c11065bcdd2c42cab75c91ef668fd0cca40fac",
+      "target/property-domains-sweep-thicken-all-domain.log": "9fd87e822251c30994ae41b7b93b4c5a35ea4073605fb1f16d8262434879dfd0"
+    },
+    "clippy_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test_sha256": "d6e5dc8f5c715f48120e46ce7f1f609dac0949dbe5f16f3bbe90a95497bef336",
+    "integration": "Excluded from PR212 headf506fa65; full gate and remote acceptance required",
+    "all_property_domain_tests": 19,
+    "all_property_domain_tests_result": "19 passed;0 failed"
+  },
+  "humanizer": "Unavailable; maintainer prose review pending"
+}

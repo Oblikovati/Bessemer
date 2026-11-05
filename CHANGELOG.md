@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Qualified synthetic high-bit Thicken replay coverage pending the native signed-version binding. (#213)
+
 - Accepted zero image-size declarations in uncompressed BGRX previews and preserved them through pixel edits and fresh reversals. (#208)
 
 - Preserved negative component-edge reference counts while continuing the conditional composite-reference pair and retaining positive-count bounds. (#204)
@@ -49,6 +51,26 @@
 - Fixed reference-plane point roles rejecting documented endpoint and loft-sync subclasses for fresh and cached pointers. (#46)
 
 ### Added
+
+- Added bounded inline hash-page reconstruction and isolated value replacement with raw chain metadata, local coverage and history. (#224)
+
+- Added exact wrapping database packed-time conversion with signed-second shifts and raw component domains. (#223)
+
+- Added explicit-profile database header-buffer reconstruction with separate stored S/P checks and preserved raw names, time words and trailing bytes. (#222)
+
+- Added framed OneBend raw-body lists and signed optional bodies with explicit kernel context and bounded decoding. (#220)
+
+- Added an explicit canonical SketchBend kind-7 profile with complete owned grids, strict trailing raw bodies and context-preserving edits. (#219)
+
+- Added ordinary schema-1 conic bend data inside OneBend archives, preserving exact numeric bits, shared references and fresh edit reversals. (#218)
+
+- Preserved mold parting-geometry surfaces, direct settings and constructor-dependent child records through exact stored-field edits and fresh reversals. (#217)
+
+- Added modern mold parting-line features, settings and edge/split-info archives, with strict kernel frames, lossless edits and fresh reversals. (#216)
+
+- Added complete modern mold core/cavity feature and data archives, preserving owner cycles, shared direct lists and isolated setting edits. (#215)
+
+- Added sheet-metal material parameter archives and direct thickness-range records, with lossless document edits and fresh reversals. (#214)
 
 - Added schema-1 bidirectional sweep-twist fields for modern ordinary-part archives, preserving raw byte values and exact double bits. (#211)
 

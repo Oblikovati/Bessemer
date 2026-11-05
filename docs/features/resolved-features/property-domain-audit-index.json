@@ -1,7 +1,7 @@
 {
   "issue": 2,
-  "as_of_edition": "Edition 0.3087 \u00b7 2026-11-05 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
-  "specification_sha256": "947b021b16f22e039cf648ceaba9e1f4c8927b19138765eb58052d6d47152b3e",
+  "as_of_edition": "Edition 0.3094 \u00b7 2026-11-05 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "specification_sha256": "981b62d253f0f14dac27a3805b9d0fdaf142d70cd0d66983b272d3e9d86ab4e2",
   "audits": [
     {
       "report": "docs/features/resolved-features/property-domain-schema-3077-audit.json",
@@ -32,7 +32,7 @@
     },
     {
       "report": "docs/features/resolved-features/property-domain-hole-dome-fill-schema-3087-audit.json",
-      "report_sha256": "3b0cd351810be5f354acf34f3711cdcdc872b232f31316787bbcad094cf735e6",
+      "report_sha256": "da80ac4c617e768418135314b4289687d1aa5245ebb24a366e568ffd874c3e83",
       "clauses": [
         "11.151",
         "11.159",
@@ -49,9 +49,110 @@
         "11.235"
       ],
       "scope": "Only the property/domain decisions in the report; not whole-clause or geometry completion"
+    },
+    {
+      "report": "docs/features/resolved-features/property-domain-pattern-trim-schema-3088-audit.json",
+      "report_sha256": "5f056f87cce54178584db1c8f7acd6426be0b5c3dfb153d26262f342da5c9d6b",
+      "clauses": [
+        "11.94",
+        "11.222"
+      ],
+      "scope": "Property/domain decisions only in the selected modern zero-condition contexts; not complete class/geometry acceptance"
+    },
+    {
+      "report": "docs/features/resolved-features/property-domain-blend-circular-schema-3088-audit.json",
+      "report_sha256": "d95b45b30d906df3f386fe570734b20719b514b1191a4b92a964b367f561e605",
+      "clauses": [
+        "11.148",
+        "11.158"
+      ],
+      "scope": "Property/domain decisions only in selected modern contexts; no backend/COM/geometry completion"
+    },
+    {
+      "report": "docs/features/resolved-features/property-domain-refcurve-movecopy-schema-3089-audit.json",
+      "report_sha256": "210be8dd87c6488fa95b3156dfdb0ef9adf58432b250a2774467f695e287fd60",
+      "clauses": [
+        "11.218",
+        "11.338"
+      ],
+      "scope": "Property/domain decisions only within documented modern ordinary contexts; no whole-class/native/geometry acceptance"
+    },
+    {
+      "report": "docs/features/resolved-features/property-domain-draft-shell-scale-schema-3089-audit.json",
+      "report_sha256": "32752de1e35b2dbda6d3f31afc259d54808f5821467793b48a8b4e2060fb2c8f",
+      "clauses": [
+        "11.147",
+        "11.150",
+        "11.174"
+      ],
+      "scope": "Property/domain decisions only in existing modern contexts; no whole-class/native geometry acceptance"
+    },
+    {
+      "report": "docs/features/resolved-features/property-domain-sweep-thicken-schema-3091-audit.json",
+      "report_sha256": "a602e4b6e703f26826a363b21602c4d0b6ee610b4adf14fe0cf33e69a3c5a619",
+      "clauses": [
+        "11.156",
+        "11.221"
+      ],
+      "scope": "Only the property/domain decisions in the report; issue213 version binding remains open; not whole-clause or geometry completion"
+    },
+    {
+      "report": "docs/features/resolved-features/property-domain-combine-mid-thin-schema-3093-audit.json",
+      "report_sha256": "234fa04804a4c02d5cbe92ecacce3b8e24ce45a8c1db8745de94c369825eaabc",
+      "clauses": [
+        "11.220",
+        "11.337",
+        "11.191"
+      ],
+      "scope": "Stored scalar properties only; no native provider/geometry or complete-class acceptance"
+    },
+    {
+      "report": "docs/features/resolved-features/property-domain-sketch-deform-planar-schema-3094-audit.json",
+      "report_sha256": "3956fed0bec148786473feb153c26836588128b8266515cdd35c4312fc423479",
+      "clauses": [
+        "11.63",
+        "11.357",
+        "11.139"
+      ],
+      "scope": "Property/domain decisions only; no native provider/geometry or complete-clause acceptance"
     }
   ],
   "post_3077_changes": [
+    {
+      "edition": "0.3094",
+      "literal_annex_i_row": "| 0.3094 | 2026-11-05 | Qualified Fold requests, EdgeFlange options, Mitered numeric parameters and Jog integer properties in existing11.246/11.243/11.250/11.248; C-3565-C-3568; no coverage change. | Minor |",
+      "status": "Property joins remain unaudited"
+    },
+    {
+      "edition": "0.3093",
+      "literal_annex_i_row": "| 0.3093 | 2026-11-05 | Qualified SketchBend producer, BaseFlange and MiteredFlange options, and material range comparison/selection in existing11.249/11.155/11.250/11.154; C-3561-C-3564; no coverage change. | Minor |",
+      "status": "Property joins remain unaudited"
+    },
+    {
+      "edition": "0.3092",
+      "literal_annex_i_row": "| 0.3092 | 2026-11-05 | Qualified common bend and allowance requests, new static material thickness-range grammar and parting-geometry associations in existing11.154/11.1291; C-3557-C-3560; no coverage change. | Minor |",
+      "status": "Property joins remain unaudited; C-3559 material wire grammar is implemented separately at7f6fe735 with full gate pending"
+    },
+    {
+      "edition": "0.3091",
+      "literal_annex_i_row": "| 0.3091 | 2026-11-05 | Qualified Rib dimension providers, sheet-metal saved settings and parting-line data properties in existing11.92/11.154/11.1284; C-3554-C-3556; no coverage change. | Minor |",
+      "status": "Property joins remain unaudited"
+    },
+    {
+      "edition": "0.3090",
+      "literal_annex_i_row": "| 0.3090 | 2026-11-05 | Qualified sgOffset saved-word comparisons, Core/Cavity parameters and DeleteFace collection access in existing11.64/11.1320/11.230; C-3551-C-3553; no coverage change. | Minor |",
+      "status": "Core/Cavity wire grammar and saved parameter order implemented separately in issue215; sgOffset comparison and DeleteFace collection property joins remain unaudited."
+    },
+    {
+      "edition": "0.3089",
+      "literal_annex_i_row": "| 0.3089 | 2026-11-05 | Qualified SketchOffset relation-array consumer, Deform parameter joins and Planar collection operations in existing11.63/11.357/11.139; C-3548-C-3550; no coverage change. | Minor |",
+      "status": "SketchOffset/Deform/Planar property joins reviewed in referenced audit; no native provider/geometry acceptance"
+    },
+    {
+      "edition": "0.3088",
+      "literal_annex_i_row": "| 0.3088 | 2026-11-05 | Named Combine associations, MidSurface consumers and ThinSpec parameters in existing11.220/11.337/11.191; C-3545-C-3547; no coverage change. | Minor |",
+      "status": "Combine/MidSurface/ThinSpec property joins reviewed in referenced audit; no native geometry/application acceptance"
+    },
     {
       "edition": "0.3087",
       "literal_annex_i_row": "| 0.3087 | 2026-11-05 | Named Punch properties, Ruled parameter/provider policies and NetBlend body options in existing11.235/11.229/11.226; C-3542-C-3544; no coverage change. | Minor |",
@@ -70,37 +171,37 @@
     {
       "edition": "0.3084",
       "literal_annex_i_row": "| 0.3084 | 2026-11-05 | Named RefCurve settings/projection masks and MoveCopyData settings/collection operations in existing11.338/11.218; C-3534-C-3535; no coverage change. | Minor |",
-      "status": "Not yet audited in the property-domain review"
+      "status": "RefCurve/MoveCopy property joins reviewed; no provider replay or additional contexts admitted"
     },
     {
       "edition": "0.3083",
       "literal_annex_i_row": "| 0.3083 | 2026-11-05 | Named TrimData AllTools/Surfaces collections, ordered OriginalTools operations and UseRollback query in existing11.222; C-3533; no coverage change. | Minor |",
-      "status": "Not yet audited in the property-domain review"
+      "status": "Trim collection aliases and rollback query reviewed; native provider operations not executed"
     },
     {
       "edition": "0.3082",
       "literal_annex_i_row": "| 0.3082 | 2026-11-05 | Qualified Pattern exact-one predicate, Trim rollback bit and Blend matching-code provenance in existing11.94/11.222/11.158; C-3530-C-3532; no coverage change. | Minor |",
-      "status": "Not yet audited in the property-domain review"
+      "status": "Pattern exact-one, Trim rollback and Blend matching provenance reviewed; no native runtime/geometry replay"
     },
     {
       "edition": "0.3081",
       "literal_annex_i_row": "| 0.3081 | 2026-11-05 | Qualified shared Pattern, Blend and SurfaceCut properties in existing11.94/11.158/11.222; C-3527-C-3529; no coverage change. | Minor |",
-      "status": "Not yet audited in the property-domain review"
+      "status": "Pattern, Blend and SurfaceCut property joins reviewed; no complete-class/native acceptance"
     },
     {
       "edition": "0.3080",
       "literal_annex_i_row": "| 0.3080 | 2026-11-05 | Qualified nested sweep-twist grammar, trim settings and circular-pattern properties in existing11.156/11.222/11.148; C-3524-C-3526; no coverage change. | Minor |",
-      "status": "C-3524 twist wire reader locally implemented and focused-tested; other changes remain unaudited and full gates pending"
+      "status": "Trim and circular properties reviewed; C-3524 twist wire locally validated, with later exact-head gates still required"
     },
     {
       "edition": "0.3079",
       "literal_annex_i_row": "| 0.3079 | 2026-11-05 | Qualified linear-pattern, sweep and thickening field groups in existing11.94/11.156/11.221; C-3521-C-3523; no coverage change. | Minor |",
-      "status": "Not yet audited in the property-domain review"
+      "status": "Linear-pattern and sweep properties reviewed; Thicken scalar fields tested at positive signed-modern versions; issue213 effective-version binding remains open"
     },
     {
       "edition": "0.3078",
       "literal_annex_i_row": "| 0.3078 | 2026-11-05 | Qualified handle cache paths, Draft, Shell and Scale properties in existing11.27/11.174/11.147/11.150; C-3517-C-3520; no coverage change. | Minor |",
-      "status": "Not yet audited in the property-domain review"
+      "status": "Draft/Shell/Scale property joins reviewed; handle-cache paths in11.27 remain unaudited"
     }
   ],
   "separate_wire_feature": {
@@ -109,5 +210,60 @@
     "scope": "Schema-1 twist grammar only; not a full audit of all sweep property qualifiers"
   },
   "acceptance": "Complete schema and Corliss parity remain open. Stored-field audits and independent fixtures do not establish native runtime setters, semantic geometry, application opening or full model acceptance.",
-  "integration": "PR191 merged ated15e0e8; later local work remains unpushed pending latest-cut gates"
+  "integration": "PR212 is open at exact verified headf506fa65; later local audit commits are excluded and remain unpublished",
+  "open_version_binding_issue": 213,
+  "new_wire_feature": {
+    "issue": 214,
+    "verification": "docs/features/sheet-material-ranges/local-verification.json",
+    "source_commit": "7f6fe735c08677aeea1a957ef7a0dc96da2c45c1",
+    "scope": "C-3559 material parent and37-byte direct ranges implemented at7f6fe735;21 focused tests, full4174-test PR gate and906 retained native stream sets passed. Remote acceptance remains pending."
+  },
+  "next_wire_feature": {
+    "issue": 215,
+    "verification": "docs/features/mold-core-cavity/local-verification.json",
+    "scope": "Complete ordinary modern core/cavity grammar implemented at0acde5cb;27 focused Rust,2 Python tests and full4189-test PR gate passed; remote acceptance pending."
+  },
+  "parting_line_wire_feature": {
+    "issue": 216,
+    "verification": "docs/features/mold-parting-line/local-verification.json",
+    "full_gate": "docs/features/mold-parting-line/full-pr-gate-verification.json",
+    "scope": "Feature/settings/edge/split-info grammar implemented;42 focused Rust and2 Python tests passed, including17 graphs and12 containing streams. Full cargo xtask pr at a4ff89bf passed4205 tests with231 ignored and no failures. Later parting-geometry/conic features are excluded; remote acceptance remains pending."
+  },
+  "parting_geometry_wire_feature": {
+    "issue": 217,
+    "source_commit": "f79bbbb330c4954da43b158fa7dd5a47db59971b",
+    "verification": "docs/features/mold-parting-geometry/local-verification.json",
+    "native_regression": "docs/features/mold-parting-geometry/native-resolved-regression-verification.json",
+    "full_gate": "docs/features/mold-parting-geometry/full-pr-gate-verification.json",
+    "scope": "Inline reference surface, direct settings, constructor-dependent child and connected-component grammar implemented;59 focused Rust and2 Python checks passed over30 literal graphs/21 containing streams,14 edits/fresh reversals and8 workers. Retained906 selected native stream sets reconstructed exactly with explicit kernel schema. Full cargo xtask pr passed4227 tests at f79bbbb3, with231 ignored and no failures. Later conic/profile features are excluded; remote checks, fresh native mold branches and application/geometry acceptance remain pending."
+  },
+  "conic_bend_wire_feature": {
+    "issue": 218,
+    "source_commit": "e74f8456c9685668e874a3a5c1ee45ac48dd9c6a",
+    "verification": "docs/features/conic-bend/local-verification.json",
+    "native_regression": "docs/features/conic-bend/native-resolved-regression-verification.json",
+    "process_determinism": "docs/features/conic-bend/process-determinism-verification.json",
+    "scope": "Schema-1 ordinary72-byte conic grammar implemented through complete OneBend callers in both saved helper states.41 focused Rust/3 Python checks passed;576 numeric graphs,18 containing streams,12 edits/fresh reversals,8 workers and2 fresh-process byte comparisons passed.684 old graphs and6 helper-one streams stayed unchanged;906 retained selected native stream sets reconstructed exactly. Full conic-cut local PR gate passed4241 tests/0 failed/231 ignored at e74f8456. Remote gates, fresh native conic/factory, DB and application/geometry acceptance remain pending.",
+    "full_pr_gate": "docs/features/conic-bend/full-pr-gate-verification.json"
+  },
+  "canonical_sketch_owned_profile": {
+    "issue": 219,
+    "source_commit": "99d892bf354978ff2073a217f655067e7bb17308",
+    "verification": "docs/features/sketch-bend-owned/local-verification.json",
+    "native_regression": "docs/features/sketch-bend-owned/native-resolved-regression-verification.json",
+    "process_determinism": "docs/features/sketch-bend-owned/process-determinism-verification.json",
+    "scope": "Explicit current canonical nonnull ruled-face/grid, ordinary-array, schema1 profile implemented through complete kind7 SketchBend, shared suffix and required strict raw BF0 frame. Default rejection remains selectable.62 focused Rust/5 Python checks,576 numeric graphs,18 owned streams,12 edits/fresh reversals,8 workers,2 fresh processes and906 retained default-profile native stream sets passed. Current-layout qualification is caller-declared; arbitrary/null-grid/DB/all-kind7 and application/geometry acceptance remain unproven. Full profile-cut local gate passed4272 tests at c415c506; remote acceptance remains pending.",
+    "full_pr_gate": "docs/features/one-bend-raw-bodies/full-pr-gate-verification.json",
+    "local_gate_status": "Full local PR gate passed4272 tests/0 failed/231 ignored at exact c415c506. Later database features222/223/224 excluded; remote acceptance and native application/geometry qualification remain pending."
+  },
+  "one_bend_raw_body_profile": {
+    "issue": 220,
+    "source_commit": "4e86c82dd39d6a0e4bde679e91689108bfe412a2",
+    "verification": "docs/features/one-bend-raw-bodies/local-verification.json",
+    "native_regression": "docs/features/one-bend-raw-bodies/native-resolved-regression-verification.json",
+    "process_determinism": "docs/features/one-bend-raw-bodies/process-determinism-verification.json",
+    "scope": "C-285 surrounding OneBend grammar plus hash-bound named raw-loader evidence. Positive AE0/B00 lists and signed nonzero B40/B50 presences reuse the explicit-context strict compressed Parasolid decoder.70 focused Rust checks,3 Python checks,114 version/shape graphs,18 owned streams,12 edits/fresh reversals,8 workers,2 fresh processes and906 retained native configurations passed. Kernel-edit oracle compares independently generated typed transmit contents; unchanged/presence-only streams require independent exact bytes. Full feature-cut local gate passed4272 tests at c415c506; remote acceptance and fresh native populated raw bodies remain pending. No native cleanup, conversion, geometry/application or full-schema parity credit.",
+    "full_pr_gate": "docs/features/one-bend-raw-bodies/full-pr-gate-verification.json",
+    "local_gate_status": "Full local PR gate passed4272 tests/0 failed/231 ignored at exact c415c506. Later database features222/223/224 excluded; remote acceptance and native application/geometry qualification remain pending."
+  }
 }

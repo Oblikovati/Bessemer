@@ -18,6 +18,8 @@ const GEOMETRY_CLASSES: &[&str] = &[
     "moBlendRefSurface_c",
     // #54 / C-275 proves the complete reference-geometry base.
     "moSweepRefSurface_c",
+    // #217 / C-2971: parting geometry inherits this exact reference-geometry role.
+    "moMoldPartingGeom_c",
 ];
 
 pub(super) fn reference_plane(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {

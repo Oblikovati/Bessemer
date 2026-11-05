@@ -10,31 +10,26 @@ fn named_payload(path: &str, labels: &[&str]) -> bool {
     prefix.ends_with(".payload") && labels.contains(&label)
 }
 
-pub(super) fn integer_family(
-    packet: &'static [u8],
-    magic: &[u8],
-    count: u32,
-    labels: &[&str],
-) -> usize {
+pub(super) fn integer_family(wire: &'static [u8], tag: &[u8], total: u32, keys: &[&str]) -> usize {
     let mut occurrences = 0;
     let mut covered = std::collections::BTreeSet::new();
-    for (_, version, raw, _, _) in records_with_count(packet, magic, count) {
+    for (_, version, raw, _, _) in records_with_count(wire, tag, total) {
         let fields = decode_graph(version, raw, true).unwrap().0;
         for field in fields
             .iter()
-            .filter(|field| named_payload(&field.path, labels))
+            .filter(|field| named_payload(&field.path, keys))
         {
             assert_signed_property_domain(version, &fields, &field.path);
             covered.insert(field.path.rsplit('.').next().unwrap().to_owned());
             occurrences += 1;
         }
     }
-    assert_eq!(covered.len(), labels.len());
+    assert_eq!(covered.len(), keys.len());
     assert!(occurrences > 0);
     occurrences
 }
 
-fn byte_domain(version: u32, fields: &[ModelField], path: &str) {
+pub(super) fn byte_domain(version: u32, fields: &[ModelField], path: &str) {
     for byte in 0..=u8::MAX {
         assert_property_splice(version, fields, path, &[byte], ModelFieldValue::U8(byte));
     }

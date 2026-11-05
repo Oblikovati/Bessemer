@@ -6,7 +6,8 @@ Specification 11.221 / C-249 binds the complete feature prefix, ordinary node
 hooks and both reference layers. Installed module hashes match the evidence.
 
 Thickening preserves its scalar bits, signed words, tagged list and display
-dimension. A tagged direction occurs only at version `0x2F74` or later. The
+dimension. The retained unsigned replay profile includes a tagged direction at
+version `0x2F74` or later. The
 list is a normal object with its own identity; it is not a direct container.
 Constant-surface references reuse the verified atom-geometry wrapper, raw word,
 signed body presence, strict kernel body and direct attribute-list grammar.
@@ -21,7 +22,12 @@ inherited version gates, raw floating bits, signed presence extremes, absent,
 suppressed and serialized kernel bodies, complete shared attributes, lists,
 distance dimensions, directions and reference-axis geometry. Distinct equal
 roots and shared nested targets are checked separately from byte partitions and
-map counts. Nineteen containing streams use the actual 97-slot document map,
+map counts. The six Thicken graphs at `0xFFFFFFFF` exercise the retained
+unsigned replay profile; they do not establish native high-bit version support.
+C-3523 uses signed comparisons against a latched native version whose mapping
+to the normalized archive version remains unbound. [Issue #213](https://github.com/Oblikovati/Bessemer/issues/213)
+tracks that binding and the required versioned admission decision. The original
+fixtures and their exact byte expectations remain unchanged. Nineteen containing streams use the actual 97-slot document map,
 including an independently assembled single-word edit.
 
 Thickening fixture roots include a complete rib before the thickening records.

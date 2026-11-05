@@ -50,6 +50,8 @@ pub(super) fn read(
         return result;
     }
     match class.name.as_str() {
+        "moSketchBend_c" => super::sketch_bends::read(reader, map, class.schema),
+        "moConicBendData_c" => super::conic_bend::read(reader, class.schema),
         "moCameraFeature_c" => super::camera_features::read(reader, map),
         "moDome_c" => super::dome_records::read(reader, map),
         "moExtruRefSurface_c" => super::extruded_surfaces::read(reader, map),

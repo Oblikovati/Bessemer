@@ -1,7 +1,7 @@
 # Edge flanges
 
-Bessemer reads and edits the six native classes documented in section 11.243,
-C-285: `moEdgeFlange_c`, `moEdgeFlangeData_c`, `moOneBend_c`,
+The original C-285 support covers six native classes in section 11.243:
+`moEdgeFlange_c`, `moEdgeFlangeData_c`, `moOneBend_c`,
 `moMultiEdgeFlangeDataPerEdge_c`, `moEdgeGeom_c` and `moLinearEdgeGeom_c`.
 The behavior version is `C285-edge-flanges-v1`.
 
@@ -18,8 +18,10 @@ primitive observations and 42 complete document streams. Shared references,
 signed extrema and exact floating-point payload bits are preserved.
 
 Positive single-bend raw-body counts and nonzero raw-body presence fields return
-explicit unsupported errors. Nonnull conic-bend objects still require an
-implemented serializer. These stops do not constitute complete file support.
+explicit unsupported errors. [Conic bend data](../conic-bend/README.md) now has
+the complete ordinary schema-1 72-byte codec from C-3579, preserving point/vector
+bits and full signed state words. Populated native conic, DB and application
+acceptance remain unproven. These scopes do not constitute complete file support.
 
 Two fresh native-corpus processes retained the same 821 complete configurations
 and 85 explicit failures. Their statuses and failure causes matched exactly.

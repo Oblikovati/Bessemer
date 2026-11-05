@@ -1,0 +1,19 @@
+{
+  "issue": 220,
+  "processes": 2,
+  "terminal_exit_codes": [
+    0,
+    0
+  ],
+  "streams_per_process": 18,
+  "bytes_per_process": 85574,
+  "output_sha256": "44da2ec51eb5fd76c6d179b8a6ea74388ebcefcb4e05aa576fd167ad9c4d2a7f",
+  "outputs_equal": true,
+  "oracle": "Every edited stream compared against independently generated typed contents, unchanged framing and exact fresh re-encoding; presence-only edits also matched independent compressed bytes",
+  "sha256": {
+    "target\\one-bend-raw-process-probe.exe": "631fad6d168835fbb41f253bdf7a1c5bdab903fbf2178f16d0982ef0c8012859",
+    "target\\one-bend-raw-process-probe.rs": "a69989f589d1e441552f173067fd95e83a8c90fa4f95c213917d16a3c9d325e9",
+    "target\\libbessemer_one_bend_raw.rlib": "b9cfe0f6f70a9904cb1863ce7e2558955741c25669af0e21031e674dbbc1c90b"
+  },
+  "probe_retained": false
+}

@@ -1,0 +1,116 @@
+{
+  "issue": 220,
+  "source_base": "0bfa3711",
+  "behavior_version": "C285-one-bend-raw-v1",
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0",
+  "source_identity": "Working tree after source_base; exact source hashes below",
+  "standalone_clippy": "-D warnings -D missing_docs -F unsafe_code; all three final builds exited0",
+  "rust_tests": [
+    {
+      "log": "target\\one-bend-raw-body-focused-v3.log",
+      "passed": 8,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "log": "target\\one-bend-raw-body-integration-v3.log",
+      "passed": 5,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "log": "target\\one-bend-raw-regression-conic_bend_tests.log",
+      "passed": 10,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "log": "target\\one-bend-raw-regression-edge_flange_tests.log",
+      "passed": 9,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "log": "target\\one-bend-raw-regression-kernel_frame_tests.log",
+      "passed": 7,
+      "failed": 0,
+      "ignored": 1
+    },
+    {
+      "log": "target\\one-bend-raw-regression-sheet_fold_tests.log",
+      "passed": 9,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "log": "target\\one-bend-raw-regression-sketch_bend_owned_tests.log",
+      "passed": 10,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "log": "target\\one-bend-raw-regression-sketch_bend_tests.log",
+      "passed": 6,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "log": "target\\one-bend-raw-regression-ui_bend_tests.log",
+      "passed": 6,
+      "failed": 0,
+      "ignored": 0
+    }
+  ],
+  "rust_passed": 70,
+  "rust_ignored": 1,
+  "python_passed": 3,
+  "native_regression": "native-resolved-regression-verification.json",
+  "fresh_processes": "process-determinism-verification.json",
+  "fixture_streams": 18,
+  "version_graph_cases": 114,
+  "version_values": 19,
+  "owned_edits_and_fresh_reversals": 12,
+  "concurrent_workers": 8,
+  "independent_oracles": [
+    "Literal signed counts/presences and gate predicates",
+    "Independent Python structural transmit bytes and complete document assemblers",
+    "Exact original and presence-edit carriers; typed kernel-edit contents with fresh byte reconstruction"
+  ],
+  "full_pr_gate": "Not yet run at this feature cut; the live conic-cut gate excludes this feature and profile219",
+  "remote_gate": "PR212 exact f506fa65 only; this feature is unpublished",
+  "preacceptance_corrections": [
+    "Retained trailing sibling objects when replacing the first nested raw tail",
+    "Used independent transmit contents for kernel edit comparisons because Python zlib and the existing Rust fast backend produce different compressed carriers",
+    "Kept the existing context-free document helper in a legacy regression to satisfy unused-code lint"
+  ],
+  "sha256": {
+    "src\\model_archives\\one_bends.rs": "b7404c3ca782d6758e6e73353212a5573954f3ee3d3e72b833e7eecb2bd4c72c",
+    "tests\\resolved_features\\one_bend_raw_bodies.rs": "d73c2a22f3860475592b9cb8f6f7df6df2940360e381348758940dc12c064a69",
+    "tests\\resolved_one_bend_raw_bodies.rs": "93c458e40ffc74ea06c05fd97d37c11d218825916df013839bae78ec4cf54207",
+    "src\\model_archives\\test_modules.rs": "3eb4701151c1f51194c81164e6c7951ac23edbb92066a48d014b73991cbb0e6e",
+    "tests\\resolved_features\\edge_flanges.rs": "8ef31d1121fca3f4430cf3106cbcf4f723048e18a3a27cf8f5508f1cd54ef05e",
+    "target\\one-bend-raw-body-tests-v3.exe": "fb012c994de0183ca9ab58ab9091a8db4838dfd73f25361b3fa3a010274f83c3",
+    "target\\libbessemer_one_bend_raw.rlib": "b9cfe0f6f70a9904cb1863ce7e2558955741c25669af0e21031e674dbbc1c90b",
+    "target\\one-bend-raw-body-integration-v3.exe": "bfd0cbef62fef3fac35a9019264f11bbe348afda2bee78aaac60e2658a54914f",
+    "target\\one-bend-raw-body-clippy-v3.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target\\one-bend-raw-library-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target\\one-bend-raw-body-integration-clippy-v3.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target\\one-bend-raw-python-tests.log": "98b2d50ba4fbcd79bb51f4031dee0c4e8f765d0fa9572ad37492374996997a9c",
+    "target\\one-bend-raw-body-focused-v3.log": "1c85fc5351f428870bde388bd5450dc24eeaf775bfe5c922cd746fb4f97b3dde",
+    "target\\one-bend-raw-body-integration-v3.log": "5f6bae9d16b6d9eb6f7d0cf572d0154532d3d37d09da46f255e62357ab03961c",
+    "target\\one-bend-raw-regression-conic_bend_tests.log": "39335b3be84dd7938ac7e02eda64d9e4ebee9c92bd0e82313fedc6b35811dd6b",
+    "target\\one-bend-raw-regression-edge_flange_tests.log": "7ad98cc9c041e9ed84892a8cedbcf9001c92a03934513c76d969dc7f58eb0676",
+    "target\\one-bend-raw-regression-kernel_frame_tests.log": "13add024653fa99cadd5bf4ad84b32de75cdce8cc3adcc080ac17378088086dd",
+    "target\\one-bend-raw-regression-sheet_fold_tests.log": "76b4f75439b7d8f89ac55cf69b7143ff0f00fe47085f6a4e56616fea856e6066",
+    "target\\one-bend-raw-regression-sketch_bend_owned_tests.log": "38f9248a541ee2c08491db129f070082ba98d089b0bab2e63258635a3e78580d",
+    "target\\one-bend-raw-regression-sketch_bend_tests.log": "cf67a8b4259cd892c619fadbd334b1cc576a095605b5c8ad169a382855684c16",
+    "target\\one-bend-raw-regression-ui_bend_tests.log": "566038f86176a7285bbc24fe66597bd415decfa97c3a1f1019fc8353fa95fb2e"
+  },
+  "exclusions": [
+    "No new native populated raw-body sample",
+    "No native loader execution, cleanup, conversion or geometry/application acceptance",
+    "No whole-schema or Corliss parity claim"
+  ],
+  "humanizer": "Unavailable; maintainer prose review remains"
+}

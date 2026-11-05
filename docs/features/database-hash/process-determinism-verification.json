@@ -1,0 +1,31 @@
+{
+  "issue": 224,
+  "fresh_processes": 2,
+  "terminal_exit_codes": [
+    0,
+    0
+  ],
+  "outputs_equal": true,
+  "bytes_per_process": 91433,
+  "output_sha256": "f77ab4c488ae62ff963f7bf04fd7eb90eaf7ca916adac5349742bed3c424ee03",
+  "independent_literal_originals_and_edits": 120,
+  "native_original_and_edited_pages": 4,
+  "containing_documents": 2,
+  "native_packet_lengths": [
+    4096,
+    4096,
+    31516,
+    4096,
+    4096,
+    31509
+  ],
+  "fresh_document_reopens": true,
+  "probe_retained": false,
+  "sha256": {
+    "target/hash-buffer-process-probe.rs": "0686f173b57b6c259072d3b4810a49eee9c26526b6d9b16de50f4dc6c0638dd7",
+    "target/hash-buffer-process-probe.exe": "58df484254b140e4a5114ca9806be443b05c8942041c78ea4441966d9d7f607d",
+    "target/libbessemer_database_hash.rlib": "413f5436b2160d5653aaf80d5699804ff5b776df4bd98797e78025d317e80aae",
+    "tests/fixtures/database-hash/cases.bin": "4c3ecc8afa4f7ff67ca179c5ecb8dfd4fdd9edf43426b9d7f97f1586a3be23dc",
+    "tests/fixtures/blank-part.SLDPRT": "b52e080ba2cc64d1d07ed28306f27281b07521aef550bc0c7fea8cd54be2b276"
+  }
+}

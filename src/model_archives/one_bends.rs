@@ -1,10 +1,10 @@
 use super::display_dimension::CLASSES as DIMENSIONS;
 use super::display_records::declared;
-use super::{ModelDecoder, ModelObjectRole, body_features, component_references, part_objects};
+use super::{ModelDecoder, ModelObjectRole, body_features, component_references, kernel_frames};
+use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
-use crate::{BessemerError, FailureClass, Result};
 
-/// Preserve the complete single-bend body, direct handles and bounded raw-body stops.
+/// Preserve the complete single-bend body, direct handles and framed raw bodies.
 /// Example: `one_bends::read(reader, map)?` for the native single-bend class.
 pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
     read_kind(reader, map).map(|_| ())
@@ -101,15 +101,13 @@ fn components(
 }
 
 fn tail(reader: &mut ModelDecoder<'_>) -> Result<()> {
-    nonpositive_count(reader, "raw_body_count_ae0")?;
+    raw_bodies(reader, "ae0")?;
     if reader.version() > 0x335a {
-        nonpositive_count(reader, "raw_body_count_b00")?;
+        raw_bodies(reader, "b00")?;
     }
     for (offset, gate) in [("b40", 0x334c), ("b50", 0x334f)] {
         if reader.version() >= gate {
-            let label = format!("body_presence_{offset}");
-            let present = reader.i32(&label)?;
-            part_objects::absent_payload(reader, &label, present)?;
+            optional_body(reader, offset)?;
         }
     }
     if reader.version() > 0x3734 {
@@ -118,17 +116,21 @@ fn tail(reader: &mut ModelDecoder<'_>) -> Result<()> {
     reader.i32s(&["raw_a58", "raw_a5c", "raw_d54"])
 }
 
-fn nonpositive_count(reader: &mut ModelDecoder<'_>, label: &str) -> Result<()> {
-    let count = reader.i32(label)?;
-    if count <= 0 {
+fn raw_bodies(reader: &mut ModelDecoder<'_>, offset: &str) -> Result<()> {
+    let label = format!("raw_body_count_{offset}");
+    let count = super::configuration_io::positive_count(reader, &label, 4)?;
+    for index in 0..count {
+        reader.scope(
+            &format!("raw_bodies_{offset}[{index}]"),
+            kernel_frames::read_raw_body,
+        )?;
+    }
+    Ok(())
+}
+
+fn optional_body(reader: &mut ModelDecoder<'_>, offset: &str) -> Result<()> {
+    if reader.i32(&format!("body_presence_{offset}"))? == 0 {
         return Ok(());
     }
-    reader.checked(Err(BessemerError::new(
-        "model archive",
-        "single-bend raw body",
-        FailureClass::Unsupported,
-        format!(
-            "{label} count {count}; expected <= 0 until positive raw-kernel bodies are verified"
-        ),
-    )))
+    reader.scope(&format!("body_{offset}"), kernel_frames::read_raw_body)
 }

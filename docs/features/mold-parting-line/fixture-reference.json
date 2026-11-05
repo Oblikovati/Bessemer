@@ -1,0 +1,271 @@
+{
+  "issue": 216,
+  "files": {
+    "feature-0-0.bin": "0bcb2d279071b34c544267ed4a7237999749b60a4423f09d4eb5a8ceb27ded64",
+    "feature-1--2147483648.bin": "6c601728c5affafac4830c36ee66cde6dd7f620027d2890f1f484457821aabb7",
+    "feature-1-2.bin": "e0fdaa1026479cabefa456b97da3a2e9c7ba2bbf2be15c84cc3cf6b98ce6f330",
+    "feature-serialized.bin": "8a3bf619d43814ac49782174f0a63fc1fab69e49285cb18d6a833d36afb65a09",
+    "feature-minimum.bin": "546e11812b3a6d833ea58f100f275d3a3e45c7db9827a8bce6182268f2746d52",
+    "owned-empty-0.bin": "742d049ce6f34cf52a5877e554a0120ddc8370daf4b457f90f6985fa8b209396",
+    "owned-empty-1.bin": "5a433718e7afd501ef73b0eaa02d5765f0d942e51508a66b920472309d314636",
+    "owned-empty-2.bin": "102138d77b5c76ae339b4b8faef6e04e27f049e58c5f5165485cb4e886367862",
+    "owned-suppressed-0.bin": "49a3d1b0603d7cbe7f86954b30d118c97ba31999967335da27d5945b0f42d5fb",
+    "owned-suppressed-1.bin": "66c0f25c5d117766ea894b32b8c6855e78cd5d4e827154a8dcfebd2730b36598",
+    "owned-suppressed-2.bin": "043fbad795a64bf5bef8f340c33ea9fcbdd78063d58518408192e1bda97be099",
+    "owned-serialized-0.bin": "8aa0b5b858e3a0da94108d730f2cd9b707ef301cd601266cf6bf50bbf6ca7bd4",
+    "owned-serialized-1.bin": "c3f020d2aa583a2d6fddcb5b7910e163bf7c22a9bdfa6f8778d52f79fa00f24d",
+    "owned-serialized-2.bin": "5a90ba7d85023da5cbd435aa617e975a989deb8b397b176fdb9da7695a679e34",
+    "owned-negative-0.bin": "cb11aaef263314d2438bdf6a3635693ae6bdc89a89ab04bbc22782cb73d3feba",
+    "owned-negative-1.bin": "0524a081f09d671176c50dfee90781ec70fe630afef701965a5170b67cfdc8f7",
+    "owned-negative-2.bin": "5c129e3669e391bf1588d5c55990519fafbb90d75c16c7d2dee2c5e2b95ee026"
+  },
+  "oracle": "Independent literal native-order composition with reviewed inherited/component/direction codecs; no Bessemer encoder used",
+  "initial_fixture_correction": "The original generator reused data flag seed-31 in feature tailAF8 while the test independently expected-11. The generator tail was corrected before freezing; production parser and test expectation were unchanged.",
+  "cases": [
+    {
+      "file": "feature-0-0.bin",
+      "version": 19000,
+      "body_count": 0,
+      "serialized": false,
+      "slots": 7,
+      "identities": {
+        "feature": 2,
+        "settings": 6
+      }
+    },
+    {
+      "file": "feature-1-2.bin",
+      "version": 19000,
+      "body_count": 2,
+      "serialized": false,
+      "slots": 21,
+      "identities": {
+        "feature": 2,
+        "settings": 8,
+        "moCompEdge_c": 10,
+        "direction": 12,
+        "moCompAtomBody_c": 14,
+        "element": 16,
+        "split": 18,
+        "moCompFace_c": 20
+      }
+    },
+    {
+      "file": "feature-1--2147483648.bin",
+      "version": 19000,
+      "body_count": -2147483648,
+      "serialized": false,
+      "slots": 21,
+      "identities": {
+        "feature": 2,
+        "settings": 8,
+        "moCompEdge_c": 10,
+        "direction": 12,
+        "moCompAtomBody_c": 14,
+        "element": 16,
+        "split": 18,
+        "moCompFace_c": 20
+      }
+    },
+    {
+      "file": "feature-serialized.bin",
+      "version": 19000,
+      "body_count": 2,
+      "serialized": true,
+      "slots": 21,
+      "identities": {
+        "feature": 2,
+        "settings": 8,
+        "moCompEdge_c": 10,
+        "direction": 12,
+        "moCompAtomBody_c": 14,
+        "element": 16,
+        "split": 18,
+        "moCompFace_c": 20
+      }
+    },
+    {
+      "file": "feature-minimum.bin",
+      "version": 10188,
+      "body_count": 2,
+      "serialized": false,
+      "slots": 21,
+      "identities": {
+        "feature": 2,
+        "settings": 8,
+        "moCompEdge_c": 10,
+        "direction": 12,
+        "moCompAtomBody_c": 14,
+        "element": 16,
+        "split": 18,
+        "moCompFace_c": 20
+      }
+    }
+  ],
+  "kernel_schema_fixture_sha256": "44e22d3da573eaf1d57cd7c7265b294bc5637770ab55713165dc90d5a84bea07",
+  "kernel_oracle": "Existing independent structural XT/frame generator; two one-record partitions, not a geometric validity oracle.",
+  "owned_cases": {
+    "owned-empty-0.bin": {
+      "slots": 103,
+      "identities": {
+        "feature": 98,
+        "settings": 102
+      },
+      "bytes": 439,
+      "edit": 0
+    },
+    "owned-empty-1.bin": {
+      "slots": 103,
+      "identities": {
+        "feature": 98,
+        "settings": 102
+      },
+      "bytes": 439,
+      "edit": 1
+    },
+    "owned-empty-2.bin": {
+      "slots": 103,
+      "identities": {
+        "feature": 98,
+        "settings": 102
+      },
+      "bytes": 439,
+      "edit": 2
+    },
+    "owned-suppressed-0.bin": {
+      "slots": 117,
+      "identities": {
+        "feature": 98,
+        "settings": 104,
+        "moCompEdge_c": 106,
+        "direction": 108,
+        "moCompAtomBody_c": 110,
+        "element": 112,
+        "split": 114,
+        "moCompFace_c": 116
+      },
+      "bytes": 1449,
+      "edit": 0
+    },
+    "owned-suppressed-1.bin": {
+      "slots": 117,
+      "identities": {
+        "feature": 98,
+        "settings": 104,
+        "moCompEdge_c": 106,
+        "direction": 108,
+        "moCompAtomBody_c": 110,
+        "element": 112,
+        "split": 114,
+        "moCompFace_c": 116
+      },
+      "bytes": 1449,
+      "edit": 1
+    },
+    "owned-suppressed-2.bin": {
+      "slots": 117,
+      "identities": {
+        "feature": 98,
+        "settings": 104,
+        "moCompEdge_c": 106,
+        "direction": 108,
+        "moCompAtomBody_c": 110,
+        "element": 112,
+        "split": 114,
+        "moCompFace_c": 116
+      },
+      "bytes": 1449,
+      "edit": 2
+    },
+    "owned-serialized-0.bin": {
+      "slots": 117,
+      "identities": {
+        "feature": 98,
+        "settings": 104,
+        "moCompEdge_c": 106,
+        "direction": 108,
+        "moCompAtomBody_c": 110,
+        "element": 112,
+        "split": 114,
+        "moCompFace_c": 116
+      },
+      "bytes": 1835,
+      "edit": 0
+    },
+    "owned-serialized-1.bin": {
+      "slots": 117,
+      "identities": {
+        "feature": 98,
+        "settings": 104,
+        "moCompEdge_c": 106,
+        "direction": 108,
+        "moCompAtomBody_c": 110,
+        "element": 112,
+        "split": 114,
+        "moCompFace_c": 116
+      },
+      "bytes": 1835,
+      "edit": 1
+    },
+    "owned-serialized-2.bin": {
+      "slots": 117,
+      "identities": {
+        "feature": 98,
+        "settings": 104,
+        "moCompEdge_c": 106,
+        "direction": 108,
+        "moCompAtomBody_c": 110,
+        "element": 112,
+        "split": 114,
+        "moCompFace_c": 116
+      },
+      "bytes": 1835,
+      "edit": 2
+    },
+    "owned-negative-0.bin": {
+      "slots": 117,
+      "identities": {
+        "feature": 98,
+        "settings": 104,
+        "moCompEdge_c": 106,
+        "direction": 108,
+        "moCompAtomBody_c": 110,
+        "element": 112,
+        "split": 114,
+        "moCompFace_c": 116
+      },
+      "bytes": 1447,
+      "edit": 0
+    },
+    "owned-negative-1.bin": {
+      "slots": 117,
+      "identities": {
+        "feature": 98,
+        "settings": 104,
+        "moCompEdge_c": 106,
+        "direction": 108,
+        "moCompAtomBody_c": 110,
+        "element": 112,
+        "split": 114,
+        "moCompFace_c": 116
+      },
+      "bytes": 1447,
+      "edit": 1
+    },
+    "owned-negative-2.bin": {
+      "slots": 117,
+      "identities": {
+        "feature": 98,
+        "settings": 104,
+        "moCompEdge_c": 106,
+        "direction": 108,
+        "moCompAtomBody_c": 110,
+        "element": 112,
+        "split": 114,
+        "moCompFace_c": 116
+      },
+      "bytes": 1447,
+      "edit": 2
+    }
+  }
+}

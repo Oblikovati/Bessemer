@@ -1,0 +1,85 @@
+{
+  "issue": 220,
+  "behavior_version": "C285-one-bend-raw-v1",
+  "target_executed": false,
+  "producer_parser_executed": false,
+  "verified_sha256": {
+    "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldsmmu.dll": "ae20d533b36f105f22de4ed5984fb2245bbf03fb91a84ae473e0941a4b9e3c54",
+    "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\edge-flange-native-evidence.json": "2c62500a047f9a60b36f0f39f5fbbfac0618005be943f63f55f99ea540ec6800",
+    "C:\\Users\\vmiguel\\git\\Bessemer\\docs\\features\\ui-bends\\native-binding-reference.json": "30ed90970765a3eabb6a881da103b58ffb006ca367f4d31d5b954961f1fef05a",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\edge-flange\\FUN_3db64540.c": "82bf524843e5579f28937755b9843dbb932a254af0537d645ef1474937b5ffeb",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\ui-bend\\FUN_4c2608f0.c": "63105a16cc299bfe3d7a51939c05c5955ffaec102750f93c231dca58680277a4"
+  },
+  "functions": {
+    "0x3db64540": {
+      "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldsmmu.dll",
+      "end": "0x3db65802",
+      "byte_count": 4802,
+      "sha256": "d6ea2a367b6626cd22c4ff8bb615fa064556a2d1c88aaec9066acc4e7e481d9e"
+    },
+    "0x4c2608f0": {
+      "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+      "end": "0x4c260c84",
+      "byte_count": 916,
+      "sha256": "0364099ffda382478093eba69922b81cb6759146b6d0cbbf3f40c5999c1e6809"
+    }
+  },
+  "one_bend_raw_imports": [
+    {
+      "address": "0x3db65126",
+      "iat": "0x3dbd59e0",
+      "module": "SLDMODU.dll",
+      "symbol": "?mo_storeBodyToArchiveRaw@@YAHPEAVgcBody_w@@AEAVsu_CArchive@@HHHHH@Z"
+    },
+    {
+      "address": "0x3db65196",
+      "iat": "0x3dbd59e0",
+      "module": "SLDMODU.dll",
+      "symbol": "?mo_storeBodyToArchiveRaw@@YAHPEAVgcBody_w@@AEAVsu_CArchive@@HHHHH@Z"
+    },
+    {
+      "address": "0x3db651eb",
+      "iat": "0x3dbd59e0",
+      "module": "SLDMODU.dll",
+      "symbol": "?mo_storeBodyToArchiveRaw@@YAHPEAVgcBody_w@@AEAVsu_CArchive@@HHHHH@Z"
+    },
+    {
+      "address": "0x3db6523a",
+      "iat": "0x3dbd59e0",
+      "module": "SLDMODU.dll",
+      "symbol": "?mo_storeBodyToArchiveRaw@@YAHPEAVgcBody_w@@AEAVsu_CArchive@@HHHHH@Z"
+    },
+    {
+      "address": "0x3db6530a",
+      "iat": "0x3dbd59d8",
+      "module": "SLDMODU.dll",
+      "symbol": "?mo_loadBodyFromArchiveRaw@@YAHPEAPEAVgcBody_w@@AEAVsu_CArchive@@HHHHPEAH@Z"
+    },
+    {
+      "address": "0x3db653da",
+      "iat": "0x3dbd59d8",
+      "module": "SLDMODU.dll",
+      "symbol": "?mo_loadBodyFromArchiveRaw@@YAHPEAPEAVgcBody_w@@AEAVsu_CArchive@@HHHHPEAH@Z"
+    },
+    {
+      "address": "0x3db654a8",
+      "iat": "0x3dbd59d8",
+      "module": "SLDMODU.dll",
+      "symbol": "?mo_loadBodyFromArchiveRaw@@YAHPEAPEAVgcBody_w@@AEAVsu_CArchive@@HHHHPEAH@Z"
+    },
+    {
+      "address": "0x3db65570",
+      "iat": "0x3dbd59d8",
+      "module": "SLDMODU.dll",
+      "symbol": "?mo_loadBodyFromArchiveRaw@@YAHPEAPEAVgcBody_w@@AEAVsu_CArchive@@HHHHPEAH@Z"
+    }
+  ],
+  "interpretation": {
+    "load_mode": "OneBend selects 0/1 or 2 as param_3; param_4,param_5,param_6 are zero",
+    "framing": "param_4 zero reads length and kernel type independently of param_3; modern frame end is checked",
+    "param_3": "May convert current/saved kernel types and skips post-read attribute cleanup for mode 2; no extra prefix",
+    "supported_profile": "Existing strict type-0 compressed Parasolid with explicit schema and limits",
+    "excluded": "Sentinel length1, nonzero kernel types, native conversion/cleanup/partition mutation, geometry/application acceptance"
+  }
+}

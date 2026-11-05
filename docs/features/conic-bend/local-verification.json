@@ -1,0 +1,86 @@
+{
+  "issue": 218,
+  "behavior_version": "C3579-conic-bend-v1",
+  "source_base": "86fed4a288482cb5b8f0a38c274564572b056174",
+  "source_identity": "Conic feature working tree after source_base; exact Rust/fixture-source hashes below identify the tested contents",
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0",
+  "clippy": "Unit test, production rlib and public integration builds completed with -D warnings; unit/library also -D missing_docs -F unsafe_code",
+  "focused_rust_passed": 41,
+  "new_private_tests": 10,
+  "public_tests": 4,
+  "affected_regression_tests": 27,
+  "python_tests_passed": 3,
+  "default_builder_graphs_unchanged": 684,
+  "default_helper_one_streams_unchanged": 6,
+  "bare_conic_graphs": 576,
+  "containing_graphs": 4,
+  "owned_streams": 18,
+  "fixture_files": 23,
+  "independent_edits": 12,
+  "fresh_reversals": 12,
+  "concurrent_workers": 8,
+  "native_retained_cases_accepted": 906,
+  "native_verification": "native-resolved-regression-verification.json",
+  "process_verification": "process-determinism-verification.json",
+  "rust_source_sha256": {
+    "src/model_archives/conic_bend.rs": "86f42a0fd7f1e8bf31d8f9717f03ee2ceae18aceb6304a8f19688abbca8f9212",
+    "src/model_archives/mod.rs": "5a3926ada304e50e44bf0a78f3fef98c6051ed61ceec6e5f939918a414d9c789",
+    "src/model_archives/object_body.rs": "f2a977c47e575e9302b42e13f9b98da96749648f9c6bf294f752cf19c104080e",
+    "src/model_archives/test_modules.rs": "af176c15f33ad64babfd2d051a9b7d3d816c9ead2dc8be9e65032ff2ea86463e",
+    "tests/model_archives/conic_bend.rs": "25323c76c3adbadd27a253d52285321cf2bbbabd18028dbd60cbe9e1e5b3a60e",
+    "tests/resolved_conic_bend.rs": "03c80498280bbbe33ee1d7e0a406eb980253a5c70ae8f786496ac80274238ecd"
+  },
+  "fixture_source_sha256": {
+    "docs/features/edge-flanges/one_bend_bytes.py": "bc87bea13c1f469e98757f49a35dd3079cee54b3a16dc920263af7bd6347e8b2",
+    "docs/features/edge-flanges/edge_fixture_bytes.py": "b0b3ca6723aea347164b3276bc63c5b54234026f7747a9f911829012999549c6",
+    "docs/features/conic-bend/fixture_bytes.py": "d7d44b59c77baa2bd5fbb366cd43f64616d6b9d4ee4325494ba4bdacac059221",
+    "docs/features/conic-bend/test_fixture_bytes.py": "8ad20305511fc1db603e5d4f9c2563dfff75c932b9af10f781ec5bbf67d5add8"
+  },
+  "artifact_sha256": {
+    "target/conic-bend-tests-v2.exe": "7016e8a6a53bb7fafd2562894813aefd3b139524c483860491e99790d3e61ed6",
+    "target/libbessemer_conic_bend.rlib": "7b3cbc845b4526dcce44cedf8b148d230a87bca1f375022da59a61fea7bcfcc4",
+    "target/conic-bend-integration-tests.exe": "d7b23e76aa9cdcc614a1348bf3be083e9059ce84d130a1b082deb216f4233c02"
+  },
+  "results": [
+    {
+      "log": "target/conic-bend-regression-0.log",
+      "sha256": "d59ba7d5a6f817521c36363c813c1a4faa73ad3a014936cc6db23b16755ef6d0",
+      "passed": 10,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "log": "target/conic-bend-regression-1.log",
+      "sha256": "af99382270fcee2043e5e8b2d57436fae756ade746105f4488db5c546af8201e",
+      "passed": 9,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "log": "target/conic-bend-regression-2.log",
+      "sha256": "07b39b52aed7b064491197f831ad049edef4a798b0fd9266108e347a59047800",
+      "passed": 18,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "log": "target/conic-bend-integration.log",
+      "sha256": "bc3d3303e5df5ae54f9f833f43ca3c9d563b1b584fbf39db3292896ff512ffdc",
+      "passed": 4,
+      "failed": 0,
+      "ignored": 0
+    }
+  ],
+  "pre_acceptance_correction": "A test initially used a nonexistent ModelFieldValue::Object variant; corrected it to inspect ObjectTag.record. Production parser and expected fixture bytes unchanged.",
+  "pending": [
+    "Exact-cut full cargo xtask pr for conic feature218",
+    "Required remote checks; PR212 remains the sole open PR at an earlier cut"
+  ],
+  "exclusions": [
+    "No new native populated conic sample or factory execution",
+    "No producer-parser or native DLL execution",
+    "No geometry, application, DB/historical/special-context or whole-schema parity acceptance",
+    "No dependency, package version, tag or release change"
+  ]
+}

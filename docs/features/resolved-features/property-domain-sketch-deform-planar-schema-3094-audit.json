@@ -1,0 +1,61 @@
+{
+  "issue": 2,
+  "edition": "Edition 0.3094 \u00b7 2026-11-05 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "specification_sha256": "981b62d253f0f14dac27a3805b9d0fdaf142d70cd0d66983b272d3e9d86ab4e2",
+  "clauses": [
+    "11.63",
+    "11.357",
+    "11.139"
+  ],
+  "evidence_joins": [
+    "C-3548",
+    "C-3549",
+    "C-3550"
+  ],
+  "snapshot_path": "docs/features/resolved-features/property-domain-sketch-deform-planar-schema-3094-snapshot.md",
+  "snapshot_representation": "Literal selected sections normalized to LF, stripped boundary whitespace and joined with one blank line",
+  "snapshot_sha256": "b6e5b80aba8a6a6573a510b8c721b8cc5631bff9624826718aac0ae8acfb232c",
+  "decisions": [
+    "SketchOffset relations keep their existing u32 bit view of signed32 native archive entries. The current logical-G2 lookup sign-extends a runtime index and uses runtime stride0x158; it supplies no safe file-domain restriction, global ID, extra saved owner pointer or stable file/current identity.",
+    "DeformSquare/geometry raw_d8 and SurfacePushPrimitiveData selector/raw_678 remain whole signed32 values; the nested geometry revision independently gates raw_678/primitive_680. DragPointUv remains all three stored binary64 components without UV bounds or dimensional reduction. PullForce/PullRadius remain dimension-provider associations rather than new saved doubles. Native provider mutation/assignment is not emulated.",
+    "Planar EdgePLCompRefs remains its existing direct suObArray with Any pointer items; its current native runtime array pointer does not add a tag/presence word. Destructive array replacement and the current provider-based edge/planarity filter neither narrow saved item classes nor establish geometry planarity. Raw7B8 is unchanged."
+  ],
+  "reader_sha256": {
+    "sketch_offsets.rs": "ac44db7f903a6bcd64cbc8ea6a4996d8bca9b39765ddada8e78d35a68a9405a0",
+    "deform_features.rs": "c5f572e862ffd29129649aa5172a708588573a75d145767de70aaed5657b17a7",
+    "deform_geometry.rs": "ca44daa05190dfb387133b02d90faa641ad96601d352704541b2ad0f50042749",
+    "planar_surface_records.rs": "b87cfabc96a75afca0f73f4f1cab57028b954b82515ac1af73cacb8eb785f40d"
+  },
+  "implementation_effect": "Test/evidence review only; no production parser, public API, admission or geometry change.",
+  "acceptance_credit": "No native provider execution, native application/geometry acceptance or complete schema/Corliss parity credit.",
+  "context_exclusions": [
+    "Native providers, solver/manipulator execution, alias-sensitive setters and geometry operations are not emulated.",
+    "No historical/DB/helper contexts are newly admitted."
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending",
+  "verification": {
+    "status": "Clippy and8 focused tests passed; all24 property-domain tests passed",
+    "process_exit_code": 0,
+    "new_domain_tests": 2,
+    "deform_literal_patches": 16200,
+    "sketch_unsigned_boundary_values": 5,
+    "new_literal_cases": 16205,
+    "deformation_golden_records": 384,
+    "sketch_tail_golden_records": 1038,
+    "planar_reference_edit_and_gate_tests": 3,
+    "all_property_domain_tests": 24,
+    "log_sha256": {
+      "target/property-domains-sketch-deform-focused-0.log": "8a3985b3781e47824e5a4c2a2de439b59796baac46c4b49adbc16d458dca206c",
+      "target/property-domains-sketch-deform-focused-1.log": "860a9f44e561a194ffbdcd344b211faf7b47a6fc39ddc2a152410b2e44be01ff",
+      "target/property-domains-sketch-deform-focused-2.log": "dc1ec5b93d9b7c17bd1165789c4c5d628341353b9dff18109c2f024ad74d22eb",
+      "target/property-domains-sketch-deform-focused-3.log": "59179a9cdf45e56a3d18345974507e7211f43ce7714834f4c353cb2d9ed07b27",
+      "target/property-domains-sketch-deform-focused-4.log": "f756bea672d226069f4420014f9c644dbe8969c6ceafe666979f107b79fcf278",
+      "target/property-domains-sketch-deform-focused-5.log": "801491180c8740c62266cd52f4c2bb043065116f6a181217ab79931090bf3aeb",
+      "target/property-domains-sketch-deform-focused-6.log": "3eac16b677eab2fd3a6526a85ff7554e469713e237889e8e6399df88aea22796"
+    },
+    "all_domain_log_sha256": "a7ccedb2dadf6f418ccc1e42d9b373b441a07ea26e4acb1112469f4ad81bd962",
+    "clippy_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test_sha256": "6a0e215b5bd4cfdb3e8c990c567f4173589752ad1c4cfb43f46cf76af60dfca4",
+    "integration": "Excluded from both PR212 headf506fa65 and running material full-gate cut7f6fe735; latest-cut full gate/remote acceptance required"
+  }
+}

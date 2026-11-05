@@ -2,8 +2,10 @@
 
 Bessemer retains the complete One Bend base before the sketch-bend continuation.
 The stored signed bend-kind word is read once and returned through the shared
-base reader. Kind 7 stops before its unimplemented direct owned data; no guessed
-tag or kernel body replaces that branch.
+base reader. Default contexts still stop before kind-7 owned data. The explicit
+[canonical owned profile](../sketch-bend-owned/README.md) adds the reviewed nonnull
+ruled-grid layout and required strict raw kernel frame, with separate profile and
+kernel declarations. It does not admit arbitrary kind-7 runtime layouts.
 
 For other modern kinds, the suffix contains a tagged sketch, three tagged
 handles, a curve-reference pointer and a final signed word. Stored handle objects
@@ -39,7 +41,7 @@ covering 69,268,963 resolved bytes and all four source-stream hashes. The full
 `cargo xtask pr` gate passed formatting, Clippy, build, 1,026 library tests,
 all integration tests and 277 doctests. Three external-fixture tests remain
 ignored by the default gate.
-Kind-7 owned data, inherited positive raw-kernel branches, whole-schema parity
-and native application acceptance remain unfinished.
+Unqualified kind-7 layouts, inherited positive raw-kernel branches, whole-schema
+parity and native application acceptance remain unfinished.
 
 The humanizer skill was unavailable; its prose review is left to the maintainer.

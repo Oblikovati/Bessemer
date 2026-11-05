@@ -12,9 +12,21 @@ pub struct PartConfigurationContext {
     pub(super) version: ArchiveVersion,
     pub(super) header: Arc<DocumentHeader>,
     pub(super) kernel: Option<CompressedKernelContext>,
+    pub(super) sketch_bend_owned: Option<super::SketchBendOwnedProfile>,
 }
 
 impl PartConfigurationContext {
+    /// Declares the resolved kind-7 canonical nonnull owned/grid and ordinary-array profile.
+    /// The declaration persists through parsing and edits; arbitrary runtime overrides remain excluded.
+    /// Example: `let context = context.with_sketch_bend_owned_profile(SketchBendOwnedProfile::CanonicalRuledGrid);`.
+    pub fn with_sketch_bend_owned_profile(
+        mut self,
+        profile: super::SketchBendOwnedProfile,
+    ) -> Self {
+        self.sketch_bend_owned = Some(profile);
+        self
+    }
+
     /// Declares the supported dialect and checks that the header and model outer versions match.
     ///
     /// ```no_run
@@ -37,6 +49,7 @@ impl PartConfigurationContext {
             version,
             header,
             kernel,
+            sketch_bend_owned: None,
         })
     }
 

@@ -9,6 +9,18 @@ replaces existing streams on isolated snapshots, including mini-stream cutoff
 changes. See the [compound-file evidence](docs/features/compound-files/README.md)
 for allocation checks, native corpus results and validation limits.
 
+`bessemer::database_header` reads and reconstructs the documented conditional
+512-byte database header buffer with an explicit provider profile. It preserves
+raw name/time fields and uninterpreted trailing bytes. See the
+[header-buffer evidence](docs/features/database-header/README.md) for validation
+scope and database limitations.
+[Packed-time helpers](docs/features/database-time/README.md) preserve the native
+wrapping and arithmetic-shift behavior when converting those stored words.
+`bessemer::database_hash` reads complete selected inline bucket buffers and
+replaces fixed-length values with local coverage and history. See the
+[hash-buffer evidence](docs/features/database-hash/README.md) for chain checks,
+native-page results and the remaining overflow/file-graph work.
+
 `bessemer::simulation` reads, constructs and writes complete observed MAS tables
 and paired family-8 GEN images. It exposes stored mesh fields and isolated cell
 and coordinate-pattern edits, including complete CWR stream replacement. See the
@@ -380,6 +392,9 @@ body-feature layouts, cached-array branches and versioned kernel-body lists.
 retain exact native spellings, shared direct blend data and raw surface bytes.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
+[Material thickness ranges](docs/features/sheet-material-ranges/README.md) retain
+complete material parameters, table names and direct 37-byte range records, with
+isolated stored-field edits and exact document reconstruction.
 [Stored spline equation state](docs/features/spline-equation-state/README.md)
 exposes the six saved string roles, full signed option and equation-path endpoint
 lock bits. Typed edits preserve unrelated stored fields and use complete archive
@@ -448,6 +463,11 @@ shared non-default plane layout and its typed containing-plane role.
 
 [Edge flanges](docs/features/edge-flanges/README.md) covers complete edge-flange,
 single-bend and per-edge records, including verified saved sheet-metal state.
+[OneBend raw bodies](docs/features/one-bend-raw-bodies/README.md) supports positive
+body lists and signed optional bodies with an explicit kernel schema and limits.
+[Conic bend data](docs/features/conic-bend/README.md) preserves complete
+schema-1 point/vector/scalar records and signed byte-backed words inside
+OneBend documents, including shared identities and fresh edit reversals.
 
 [Sheet-metal folds](docs/features/sheet-folds/README.md) documents complete 3D bends,
 folds and unfolds, including raw compressed bodies and ordered maps.
@@ -488,7 +508,9 @@ selection items, direct lists and shared comment and wrapper identities.
 records, bounded raw byte planes and conditional compact transforms.
 
 [Sketch bends](docs/features/sketch-bends/README.md) cover complete inherited
-One Bend records, tagged stored handles and explicit kind-7 dependency stops.
+One Bend records and tagged stored handles. The explicit
+[canonical kind-7 profile](docs/features/sketch-bend-owned/README.md) adds direct
+ruled-grid data and strict trailing raw frames while preserving default stops.
 
 [Mitered flanges](docs/features/mitered-flanges/README.md) cover direct object and
 DWORD collections and four sketch-associated handle groups.
@@ -502,6 +524,15 @@ bodies, direct lists, empty keepers and end-condition-dependent pointers.
 [Punch records](docs/features/punches/README.md) cover internal revisions, bounded
 dynamic arrays, ordered extension tags and legacy direct keeper data.
 
+[Mold parting-line archives](docs/features/mold-parting-line/README.md) preserve
+shared edge/split-info records, signed flags and counted kernel frames, with
+explicit kernel schemas and isolated stored-field edits.
+[Mold parting-geometry archives](docs/features/mold-parting-geometry/README.md)
+preserve inline surfaces, direct settings and constructor-dependent child
+graphs, including shared connected-component records and exact numeric bits.
+[Mold core/cavity archives](docs/features/mold-core-cavity/README.md) preserve
+complete feature/data graphs, shared body lists and dimension pointers, with
+exact carrier reconstruction and isolated stored-setting edits.
 [Body extensions](docs/features/body-extensions/README.md) cover cavities,
 transformed stock and sketch holes through their complete inherited bodies.
 

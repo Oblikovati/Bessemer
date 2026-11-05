@@ -57,7 +57,7 @@ pub(super) fn read(
         "moPunch_c" => super::punches::read(reader, map),
         "moCurveInFile_c" => super::curve_files::read(reader, map),
         "moSMMiteredFlange_c" => super::mitered_flanges::read(reader, map),
-        "moSketchBend_c" => super::sketch_bends::read(reader, map),
+        "moSMParamsFromMat_c" => super::sheet_material_ranges::read(reader),
         "moSketchBitmap_c" => super::sketch_bitmaps::read(reader, map),
         "moSketchBitmapData_c" => super::sketch_bitmaps::payload(reader, map),
         "moMoveCopyBody_c" => super::move_copy_bodies::read(reader, map),
@@ -67,6 +67,21 @@ pub(super) fn read(
         "moSurfaceBodyRef_w" => super::stock_references::body(reader, map),
         // #54 / C-396 binds the complete stock body with no modern suffix.
         "moStock_c" | "moXformStock_c" => super::stock_features::read(reader, map, false),
+        "moMoldPartingGeom_c" => super::mold_parting_geometry::read_geometry(reader, map),
+        "moPartingDataNew_c" => super::mold_parting_child::read_child(reader, map),
+        "moMoldPartingConnectedComponent_c" => {
+            super::mold_parting_child::read_connected(reader, map)
+        }
+        "moMoldPartingLine_c" => super::mold_parting_line::read_parting_line_feature(reader, map),
+        "moMoldPartingLineData_c" => {
+            super::mold_parting_line::read_parting_line_settings(reader, map)
+        }
+        "moMPLEdgeElem" => super::mold_parting_line::read_mpl_edge(reader, map),
+        "moMPLFaceSplitInfo_c" => super::mold_parting_line::read_mpl_split_info(reader, map),
+        "moMoldCoreCavitySolids_c" => super::mold_core_cavity::read_mold_feature(reader, map),
+        "moMoldCoreCavitySolidsData_c" => {
+            super::mold_core_cavity::read_mold_solids_data(reader, map)
+        }
         "moCavity_c" => super::cavity_features::read(reader, map),
         "moMoveFace_c" => super::move_faces::read(reader, map),
         "moBending_c" => super::bending_features::read(reader, map),

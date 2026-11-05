@@ -536,6 +536,9 @@ mod edge_flange_tests;
 #[path = "../../tests/resolved_features/end_caps.rs"]
 mod end_cap_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/one_bend_raw_bodies.rs"]
+mod one_bend_raw_body_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/weldment_finishing.rs"]
 mod weldment_finishing_tests;
 
@@ -705,3 +708,42 @@ mod property_domains_3087_tests;
 
 #[path = "../../tests/model_archives/property_domains_punch_netblend.rs"]
 mod property_domains_punch_netblend_tests;
+
+#[path = "../../tests/model_archives/property_domains_pattern_trim.rs"]
+mod property_domains_pattern_trim_tests;
+
+#[path = "../../tests/model_archives/property_domains_blend_circular.rs"]
+mod property_domains_blend_circular_tests;
+
+#[path = "../../tests/model_archives/property_domains_refcurve_movecopy.rs"]
+mod property_domains_refcurve_movecopy_tests;
+
+#[path = "../../tests/model_archives/property_domains_draft_shell_scale.rs"]
+mod property_domains_draft_shell_scale_tests;
+
+#[path = "../../tests/model_archives/property_domains_sweep_thicken.rs"]
+mod property_domains_sweep_thicken_tests;
+
+#[path = "../../tests/model_archives/property_domains_combine_mid_thin.rs"]
+mod property_domains_combine_mid_thin_tests;
+
+#[path = "../../tests/model_archives/sheet_material_ranges.rs"]
+mod sheet_material_range_tests;
+
+#[path = "../../tests/model_archives/property_domains_sketch_deform.rs"]
+mod property_domains_sketch_deform_tests;
+
+#[path = "../../tests/model_archives/mold_core_cavity.rs"]
+mod mold_core_cavity_tests;
+
+#[path = "../../tests/model_archives/mold_parting_line.rs"]
+mod mold_parting_line_tests;
+
+#[path = "../../tests/model_archives/mold_parting_geometry.rs"]
+mod mold_parting_geometry_tests;
+
+#[path = "../../tests/model_archives/conic_bend.rs"]
+mod conic_bend_tests;
+
+#[path = "../../tests/model_archives/sketch_bend_owned.rs"]
+mod sketch_bend_owned_tests;

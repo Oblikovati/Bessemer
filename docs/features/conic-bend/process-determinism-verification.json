@@ -1,0 +1,20 @@
+{
+  "issue": 218,
+  "method": "Two freshly spawned processes reopened all18 complete owned documents, selected the saved helper, decoded through the public resolved-feature API and emitted length-prefixed reconstructed streams; both outputs matched each other and every independent golden byte",
+  "processes": 2,
+  "streams_per_process": 18,
+  "output_bytes_per_process": 64128,
+  "expected_output_sha256": "ae53ac130a344547a8d57a6394064a08cd0f22abb836e567a8b11711a09f5f7d",
+  "actual_output_sha256": [
+    "ae53ac130a344547a8d57a6394064a08cd0f22abb836e567a8b11711a09f5f7d",
+    "ae53ac130a344547a8d57a6394064a08cd0f22abb836e567a8b11711a09f5f7d"
+  ],
+  "harness_source_sha256": "2bd7b2815fc7491f20a0900315517781093710d93caa665c7d83927d8d40bf00",
+  "harness_executable_sha256": "fe2de5dd8ccd73f7aa4b3cac84e9616698d329753a7d84ef3e9534bd427b4ed4",
+  "library_sha256": "7b3cbc845b4526dcce44cedf8b148d230a87bca1f375022da59a61fea7bcfcc4",
+  "cleanup": "The temporary harness source/executable were removed after successful verification; findings and measurements retained here",
+  "thread_comparison": "The integration suite separately compares8 concurrent workers and serial edits/fresh reversals against these same literal stream bytes",
+  "exclusions": [
+    "Stored archive determinism only; no native DLL execution, native application or geometry acceptance"
+  ]
+}
