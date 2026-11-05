@@ -7,6 +7,10 @@ use crate::{BessemerError, FailureClass, Result};
 use std::sync::Arc;
 pub use types::*;
 
+pub(crate) fn validate_limits(limits: SqliteLimits) -> Result<()> {
+    connection::check_limits(limits)
+}
+
 /// Owned checked image; no connection or mutable engine state survives publication.
 #[derive(Clone, Debug)]
 pub struct SqliteImage {

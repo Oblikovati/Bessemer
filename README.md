@@ -14,6 +14,10 @@ and reads bounded schema metadata and complete named-table rows, retaining NULLs
 duplicate rows and raw text/blob values. See the
 [SQLite evidence](docs/features/sqlite-images/README.md) for native fixtures,
 resource limits and application acceptance exclusions.
+Electrical project views also retain complete catalog/project records, distinct
+version rows and every literal database/drawing match. The
+[record evidence](docs/features/electrical-records/README.md) covers duplicate
+occurrences, file-type constants and whole-operation bounds.
 
 `bessemer::compound` reads and reconstructs MS-CFB version-3/4 carriers and
 replaces existing streams on isolated snapshots, including mini-stream cutoff

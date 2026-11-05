@@ -1,3 +1,6 @@
+use crate::sqlite_wire::{
+    write_sqlite_blob as blob, write_sqlite_count as word, write_sqlite_value as value,
+};
 use bessemer::sqlite_image::{SqliteImage, SqliteRows, SqliteSchemaObject, SqliteValue};
 
 pub(super) fn render(image: &SqliteImage) -> Vec<u8> {
@@ -40,35 +43,4 @@ fn rows(encoded: &mut Vec<u8>, rows: &SqliteRows) {
             value(encoded, cell);
         }
     }
-}
-
-fn value(encoded: &mut Vec<u8>, cell: &SqliteValue) {
-    match cell {
-        SqliteValue::Null => encoded.push(0),
-        SqliteValue::Integer(number) => {
-            encoded.push(1);
-            encoded.extend(number.to_le_bytes());
-        }
-        SqliteValue::RealBits(bits) => {
-            encoded.push(2);
-            encoded.extend(bits.to_le_bytes());
-        }
-        SqliteValue::Text(bytes) => {
-            encoded.push(3);
-            blob(encoded, bytes);
-        }
-        SqliteValue::Blob(bytes) => {
-            encoded.push(4);
-            blob(encoded, bytes);
-        }
-    }
-}
-
-fn word(encoded: &mut Vec<u8>, count: usize) {
-    encoded.extend(u32::try_from(count).unwrap().to_le_bytes());
-}
-
-fn blob(encoded: &mut Vec<u8>, bytes: &[u8]) {
-    word(encoded, bytes.len());
-    encoded.extend(bytes);
 }

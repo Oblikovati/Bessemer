@@ -2,10 +2,12 @@
 mod carrier;
 mod edit;
 mod ini;
+mod projects;
 mod types;
 use crate::composer::{ComposerArchive, ComposerCompression, ComposerMember};
 use crate::{BessemerError, FailureClass, Result};
 pub use ini::*;
+pub use projects::*;
 pub use types::*;
 
 /// Immutable complete Electrical ZIP carrier; member payload schemas remain separate.

@@ -27,7 +27,7 @@ fn check_header(bytes: &[u8], maximum: usize) -> Result<()> {
     Err(failure(FailureClass::Invalid, "header", cause))
 }
 
-fn check_limits(limits: SqliteLimits) -> Result<()> {
+pub(super) fn check_limits(limits: SqliteLimits) -> Result<()> {
     let bounds = [
         limits.maximum_image_bytes,
         limits.maximum_schema_objects,

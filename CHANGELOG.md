@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added complete bounded Electrical project/catalog records, literal database and drawing relationships, and observed-build file-type constant names. (#231)
+
 - Added bounded in-memory Electrical/CAM SQLite image validation, complete schema metadata and named-table row snapshots with exact original-byte retention. (#233)
 
 - Added Electrical ZIP32 carrier reads, member edits and lossless ASCII Archive.ini value operations with coverage and history. (#231)
