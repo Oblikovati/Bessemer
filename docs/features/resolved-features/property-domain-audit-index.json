@@ -244,5 +244,13 @@
     "native_regression": "docs/features/conic-bend/native-resolved-regression-verification.json",
     "process_determinism": "docs/features/conic-bend/process-determinism-verification.json",
     "scope": "Schema-1 ordinary72-byte conic grammar implemented through complete OneBend callers in both saved helper states.41 focused Rust/3 Python checks passed;576 numeric graphs,18 containing streams,12 edits/fresh reversals,8 workers and2 fresh-process byte comparisons passed.684 old graphs and6 helper-one streams stayed unchanged;906 retained selected native stream sets reconstructed exactly. Full conic-cut local/remote gates, fresh native conic/factory, DB and application/geometry acceptance remain pending."
+  },
+  "canonical_sketch_owned_profile": {
+    "issue": 219,
+    "source_commit": "99d892bf354978ff2073a217f655067e7bb17308",
+    "verification": "docs/features/sketch-bend-owned/local-verification.json",
+    "native_regression": "docs/features/sketch-bend-owned/native-resolved-regression-verification.json",
+    "process_determinism": "docs/features/sketch-bend-owned/process-determinism-verification.json",
+    "scope": "Explicit current canonical nonnull ruled-face/grid, ordinary-array, schema1 profile implemented through complete kind7 SketchBend, shared suffix and required strict raw BF0 frame. Default rejection remains selectable.62 focused Rust/5 Python checks,576 numeric graphs,18 owned streams,12 edits/fresh reversals,8 workers,2 fresh processes and906 retained default-profile native stream sets passed. Current-layout qualification is caller-declared; arbitrary/null-grid/DB/all-kind7 and application/geometry acceptance remain unproven. Full profile-cut local/remote gates remain pending."
   }
 }
