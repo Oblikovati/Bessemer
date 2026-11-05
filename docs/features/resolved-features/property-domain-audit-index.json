@@ -1,0 +1,103 @@
+{
+  "issue": 2,
+  "as_of_edition": "Edition 0.3087 \u00b7 2026-11-05 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "specification_sha256": "947b021b16f22e039cf648ceaba9e1f4c8927b19138765eb58052d6d47152b3e",
+  "audits": [
+    {
+      "report": "docs/features/resolved-features/property-domain-schema-3077-audit.json",
+      "report_sha256": "7e576c8d6db6f7159e00147c54bc0e06708e7f36993b73b3cac6b4a68c93cc66",
+      "clauses": [
+        "11.1821",
+        "11.1822",
+        "11.91",
+        "11.98",
+        "11.100",
+        "11.135",
+        "11.142",
+        "11.145",
+        "11.187",
+        "11.206"
+      ],
+      "scope": "Only the property/domain decisions in the referenced report; not whole-clause or geometry completion"
+    },
+    {
+      "report": "docs/features/resolved-features/property-domain-sew-split-helix-schema-3086-audit.json",
+      "report_sha256": "d6bd98a73e321496bed7b1f3cc2356f3fa3bc118843f734f926e182e1aa7646c",
+      "clauses": [
+        "11.184",
+        "11.227",
+        "11.234"
+      ],
+      "scope": "Only the property/domain decisions in the referenced report; not whole-clause or geometry completion"
+    },
+    {
+      "report": "docs/features/resolved-features/property-domain-hole-dome-fill-schema-3087-audit.json",
+      "report_sha256": "c512d6af089ea00b256f50d5d4bf66f377db812e9c2d37e2764dcdee2860e96b",
+      "clauses": [
+        "11.151",
+        "11.159",
+        "11.231"
+      ],
+      "scope": "Only the property/domain decisions in the referenced report; not whole-clause or geometry completion"
+    }
+  ],
+  "post_3077_changes": [
+    {
+      "edition": "0.3087",
+      "literal_annex_i_row": "| 0.3087 | 2026-11-05 | Named Punch properties, Ruled parameter/provider policies and NetBlend body options in existing11.235/11.229/11.226; C-3542-C-3544; no coverage change. | Minor |",
+      "status": "Not yet audited in the property-domain review"
+    },
+    {
+      "edition": "0.3086",
+      "literal_annex_i_row": "| 0.3086 | 2026-11-05 | Named HoleWizard scalars, Dome properties and Fill packed/status operations in existing11.151/11.159/11.231; C-3539-C-3541; no coverage change. | Minor |",
+      "status": "Property-domain joins reviewed in the referenced three-clause audit; no new native acceptance"
+    },
+    {
+      "edition": "0.3085",
+      "literal_annex_i_row": "| 0.3085 | 2026-11-05 | Named Split settings, Sew/Knit runtime/wire conversions and Helix definition properties in existing11.234/11.227/11.184; C-3536-C-3538; no coverage change. | Minor |",
+      "status": "Property-domain joins reviewed in the referenced three-clause audit; no new native acceptance"
+    },
+    {
+      "edition": "0.3084",
+      "literal_annex_i_row": "| 0.3084 | 2026-11-05 | Named RefCurve settings/projection masks and MoveCopyData settings/collection operations in existing11.338/11.218; C-3534-C-3535; no coverage change. | Minor |",
+      "status": "Not yet audited in the property-domain review"
+    },
+    {
+      "edition": "0.3083",
+      "literal_annex_i_row": "| 0.3083 | 2026-11-05 | Named TrimData AllTools/Surfaces collections, ordered OriginalTools operations and UseRollback query in existing11.222; C-3533; no coverage change. | Minor |",
+      "status": "Not yet audited in the property-domain review"
+    },
+    {
+      "edition": "0.3082",
+      "literal_annex_i_row": "| 0.3082 | 2026-11-05 | Qualified Pattern exact-one predicate, Trim rollback bit and Blend matching-code provenance in existing11.94/11.222/11.158; C-3530-C-3532; no coverage change. | Minor |",
+      "status": "Not yet audited in the property-domain review"
+    },
+    {
+      "edition": "0.3081",
+      "literal_annex_i_row": "| 0.3081 | 2026-11-05 | Qualified shared Pattern, Blend and SurfaceCut properties in existing11.94/11.158/11.222; C-3527-C-3529; no coverage change. | Minor |",
+      "status": "Not yet audited in the property-domain review"
+    },
+    {
+      "edition": "0.3080",
+      "literal_annex_i_row": "| 0.3080 | 2026-11-05 | Qualified nested sweep-twist grammar, trim settings and circular-pattern properties in existing11.156/11.222/11.148; C-3524-C-3526; no coverage change. | Minor |",
+      "status": "C-3524 twist wire reader locally implemented and focused-tested; other changes remain unaudited and full gates pending"
+    },
+    {
+      "edition": "0.3079",
+      "literal_annex_i_row": "| 0.3079 | 2026-11-05 | Qualified linear-pattern, sweep and thickening field groups in existing11.94/11.156/11.221; C-3521-C-3523; no coverage change. | Minor |",
+      "status": "Not yet audited in the property-domain review"
+    },
+    {
+      "edition": "0.3078",
+      "literal_annex_i_row": "| 0.3078 | 2026-11-05 | Qualified handle cache paths, Draft, Shell and Scale properties in existing11.27/11.174/11.147/11.150; C-3517-C-3520; no coverage change. | Minor |",
+      "status": "Not yet audited in the property-domain review"
+    }
+  ],
+  "separate_wire_feature": {
+    "issue": 211,
+    "verification": "docs/features/sweep-twist/local-verification.json",
+    "scope": "Schema-1 twist grammar only; not a full audit of all sweep property qualifiers"
+  },
+  "acceptance": "Complete schema and Corliss parity remain open. Stored-field audits and independent fixtures do not establish native runtime setters, semantic geometry, application opening or full model acceptance.",
+  "integration": "PR191 merged ated15e0e8; later local work remains unpushed pending latest-cut gates"
+}
