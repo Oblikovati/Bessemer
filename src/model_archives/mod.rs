@@ -63,6 +63,8 @@ mod configuration_tables;
 mod configuration_toolbox;
 mod configuration_visual_maps;
 mod conic_bend;
+mod sketch_bend_owned;
+pub use sketch_bend_owned::SketchBendOwnedProfile;
 mod connection_payload;
 mod connection_points;
 mod constraint_planes;

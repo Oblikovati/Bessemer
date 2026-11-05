@@ -39,12 +39,13 @@ impl PartConfigurationArchive {
         context: PartConfigurationContext,
         limits: ModelArchiveLimits,
     ) -> Result<Self> {
-        let parsed = part_archive::read_with_kernel(
+        let parsed = part_archive::read_with_profile(
             bytes,
             context.header.clone(),
             context.version,
             limits,
             context.kernel.clone(),
+            context.sketch_bend_owned,
         )
         .map_err(|error| selected_error(error, context.configuration))?;
         Ok(Self {
@@ -102,6 +103,7 @@ impl PartConfigurationArchive {
             context.version,
             limits,
             context.kernel.clone(),
+            context.sketch_bend_owned,
         )
         .map_err(|error| selected_error(error, context.configuration))?;
         Ok(Self {

@@ -494,7 +494,9 @@ selection items, direct lists and shared comment and wrapper identities.
 records, bounded raw byte planes and conditional compact transforms.
 
 [Sketch bends](docs/features/sketch-bends/README.md) cover complete inherited
-One Bend records, tagged stored handles and explicit kind-7 dependency stops.
+One Bend records and tagged stored handles. The explicit
+[canonical kind-7 profile](docs/features/sketch-bend-owned/README.md) adds direct
+ruled-grid data and strict trailing raw frames while preserving default stops.
 
 [Mitered flanges](docs/features/mitered-flanges/README.md) cover direct object and
 DWORD collections and four sketch-associated handle groups.

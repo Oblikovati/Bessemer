@@ -52,6 +52,8 @@
 
 ### Added
 
+- Added an explicit canonical SketchBend kind-7 profile with complete owned grids, strict trailing raw bodies and context-preserving edits. (#219)
+
 - Added ordinary schema-1 conic bend data inside OneBend archives, preserving exact numeric bits, shared references and fresh edit reversals. (#218)
 
 - Preserved mold parting-geometry surfaces, direct settings and constructor-dependent child records through exact stored-field edits and fresh reversals. (#217)

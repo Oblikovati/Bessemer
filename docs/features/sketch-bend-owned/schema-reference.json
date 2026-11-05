@@ -1,0 +1,69 @@
+{
+  "issue": 219,
+  "source": "..\\inventor-interface\\docs\\solidworks-file-format\\specification.md",
+  "edition": "Edition 0.3101 \u00b7 2026-11-05 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "source_sha256": "f9bcbf2769f047fcc4c1ea2797aca15c0b0af26c784286e61eaac7423b4a6bdd",
+  "clause": "11.249",
+  "evidence": "C-3582 / C-291",
+  "snapshot_sha256": "71dafad13c3a98ab1516c31573234b232c9dc73c7b2b02ed1105b7c8062e7ace",
+  "retained_owned_grammar": "..\\inventor-interface\\solidworks\\research\\parallel_patterns_sketchbend_owned_grammar.json",
+  "retained_owned_grammar_sha256": "38c34e2dc56f99f3a8cb89ef8d057fc8587710cf20ea51571e8ae934e99148df",
+  "verified_source_hashes": {
+    "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldsmmu.dll": "ae20d533b36f105f22de4ed5984fb2245bbf03fb91a84ae473e0941a4b9e3c54",
+    "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldgcu.dll": "18504858be55efd17d5ea96afc9c64a362a8d47cd500479c3bae068b87eec03f",
+    "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmgu.dll": "e3e218060ceb4d09724e9956b94cdf4ea371b33072e3d471abe6cb87ec026fde",
+    "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmfcu.dll": "9ab6733de9a90a1564f671f83b9298c3ed15f205a359849d6b2fd68c90e95290",
+    "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\swccu.dll": "9992e50f1dc70b721f060d4f5871147882cd5e86b454e190ae3d64f3272003db",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_patterns_sketchbend_factory_capture.json": "415ee9c15a9c449ea5560a3ca26448f1ff0218d887377ddc67369e87130947b7",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_patterns_sketchbend_constructor_capture.json": "0b3618631ac428422a69b75a21980f577238b805cbb57cf8ec94b8b07e3f8bda",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_patterns_develop_ruled_serializer_capture.json": "896c9785b3e38343abe76d439ea6cb5c006c8135e5577b2eebf5ed1155b22dc0",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_patterns_develop_grid_serializer_capture.json": "0be14dcc4ffeafa519a9e1f797ae65ae537ca9d9fbaec23a1ece7a4ce5125c46",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_patterns_develop_grid_constructor_capture.json": "dacda3ea06f2480dc08a2e2eb63f4fc591ad56c3bf884bd019ba59219d7ce6f2"
+  },
+  "runtime_class": {
+    "address": "0x3ddaf7a0",
+    "bytes_hex": "c893c63d00000000800e0000010000801068b53d00000000d067b53d000000000000000000000000",
+    "object_size": 3712,
+    "schema_u32": "0x80000001",
+    "factory": "0x3db56810"
+  },
+  "parent_serializer": {
+    "evidence": "..\\inventor-interface\\solidworks\\research\\sketch-bend-native-evidence.json",
+    "evidence_sha256": "916ca1b239cbcb9d0afcdad25970daedbb7c030b686a54758e7798f227c317f1",
+    "address": "0x3db69880",
+    "native_bytes_sha256": "14c7fb3b33f6729d6a870ad119c6b3244120b1b1163395fbebb27a4eb987481d",
+    "raw_body_imports": [
+      {
+        "address": "0x3db699b7",
+        "iat": "0x3dbd59e0",
+        "module": "SLDMODU.dll",
+        "symbol": "?mo_storeBodyToArchiveRaw@@YAHPEAVgcBody_w@@AEAVsu_CArchive@@HHHHH@Z"
+      },
+      {
+        "address": "0x3db699f9",
+        "iat": "0x3dbd59e0",
+        "module": "SLDMODU.dll",
+        "symbol": "?mo_storeBodyToArchiveRaw@@YAHPEAVgcBody_w@@AEAVsu_CArchive@@HHHHH@Z"
+      },
+      {
+        "address": "0x3db69bf1",
+        "iat": "0x3dbd59d8",
+        "module": "SLDMODU.dll",
+        "symbol": "?mo_loadBodyFromArchiveRaw@@YAHPEAPEAVgcBody_w@@AEAVsu_CArchive@@HHHHPEAH@Z"
+      }
+    ]
+  },
+  "profile_preconditions": [
+    "Caller explicitly declares normal canonical nonnull ruled-face/grid ownership",
+    "Ordinary embedded arrays with special flag0x10 clear",
+    "Schema1 moSketchBend_c and existing ordinary modern part context",
+    "Explicit strict framed compressed kernel base schema and limits",
+    "Inherited currently unsupported OneBend raw branches remain explicit stops"
+  ],
+  "target_executed": false,
+  "producer_parser_executed": false,
+  "exclusions": [
+    "No all-kind7 or arbitrary runtime override/null-grid admission",
+    "No DB, native application, semantic geometry or whole-schema acceptance"
+  ]
+}

@@ -741,3 +741,6 @@ mod mold_parting_geometry_tests;
 
 #[path = "../../tests/model_archives/conic_bend.rs"]
 mod conic_bend_tests;
+
+#[path = "../../tests/model_archives/sketch_bend_owned.rs"]
+mod sketch_bend_owned_tests;

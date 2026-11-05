@@ -1,0 +1,20 @@
+{
+  "issue": 219,
+  "method": "Two fresh processes selected explicit canonical profile/kernel context, reopened complete owned documents and reconstructed all18 resolved-feature streams through public APIs; both packets matched each other and independent goldens",
+  "processes": 2,
+  "streams_per_process": 18,
+  "output_bytes_per_process": 72114,
+  "expected_sha256": "0e755a2d5cb8fb7f5f5a09ed74ceb6af9136f7f5af59a37b57281c943dfccb2f",
+  "actual_sha256": [
+    "0e755a2d5cb8fb7f5f5a09ed74ceb6af9136f7f5af59a37b57281c943dfccb2f",
+    "0e755a2d5cb8fb7f5f5a09ed74ceb6af9136f7f5af59a37b57281c943dfccb2f"
+  ],
+  "harness_source_sha256": "360f031966f95ae730a514877469d5b5b590dca04accd6d4844960aac74d7e45",
+  "harness_executable_sha256": "70db81888ee2a4c5aadbad26e8b865020e8ef2fdecba955485d31c3d4746fac8",
+  "library_sha256": "cbe48be85100029ae175ef7a580b3ce79809047571fc98fdc8c597acf1ec6465",
+  "cleanup": "Temporary source, executable and debug database removed after successful comparison",
+  "thread_comparison": "Eight workers and serial execution separately matched independent edits/fresh reversals in the integration suite",
+  "exclusions": [
+    "Stored-wire profile determinism only; not native current-pointer qualification, application or geometry acceptance"
+  ]
+}

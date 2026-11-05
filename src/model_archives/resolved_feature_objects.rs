@@ -58,7 +58,6 @@ pub(super) fn read(
         "moCurveInFile_c" => super::curve_files::read(reader, map),
         "moSMMiteredFlange_c" => super::mitered_flanges::read(reader, map),
         "moSMParamsFromMat_c" => super::sheet_material_ranges::read(reader),
-        "moSketchBend_c" => super::sketch_bends::read(reader, map),
         "moSketchBitmap_c" => super::sketch_bitmaps::read(reader, map),
         "moSketchBitmapData_c" => super::sketch_bitmaps::payload(reader, map),
         "moMoveCopyBody_c" => super::move_copy_bodies::read(reader, map),

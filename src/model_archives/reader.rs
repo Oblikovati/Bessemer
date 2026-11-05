@@ -38,6 +38,7 @@ pub(super) struct ModelDecoder<'a> {
     scene_context: SceneArchiveContext,
     fresh_class_scope: Option<(&'static [&'static str], &'static str)>,
     kernel: Option<super::kernel_frames::CompressedKernelContext>,
+    sketch_bend_owned: Option<super::SketchBendOwnedProfile>,
     kernel_expanded: usize,
     inherited_fields: Option<&'a [ModelField]>,
     verified_part_root: Option<super::part_archive::VerifiedPartRoot>,
@@ -128,6 +129,7 @@ impl<'a> ModelDecoder<'a> {
             scene_context: SceneArchiveContext::Unselected,
             fresh_class_scope: None,
             kernel: None,
+            sketch_bend_owned: None,
             kernel_expanded: 0,
             inherited_fields: None,
             verified_part_root: None,
@@ -268,6 +270,28 @@ impl<'a> ModelDecoder<'a> {
     ) -> Self {
         self.kernel = context;
         self
+    }
+
+    /// Carry the caller's immutable layout declaration; e.g. `reader.with_sketch_bend_owned_profile(profile)`.
+    pub(super) fn with_sketch_bend_owned_profile(
+        mut self,
+        profile: Option<super::SketchBendOwnedProfile>,
+    ) -> Self {
+        self.sketch_bend_owned = profile;
+        self
+    }
+
+    /// Reject ambiguous kind-7 layouts before consuming owned bytes; e.g. `reader.require_sketch_bend_owned(1)?`.
+    pub(super) fn require_sketch_bend_owned(&mut self, schema: u16) -> Result<()> {
+        if self.sketch_bend_owned == Some(super::SketchBendOwnedProfile::CanonicalRuledGrid)
+            && schema == 1
+        {
+            return Ok(());
+        }
+        self.checked(Err(BessemerError::new(
+            "model archive", "sketch-bend kind-7 owned profile", FailureClass::Unsupported,
+            format!("kind 7 profile {:?}, class schema {schema}; expected explicit CanonicalRuledGrid and schema 1", self.sketch_bend_owned),
+        )))
     }
 
     pub fn kernel_context(&self) -> Option<&super::kernel_frames::CompressedKernelContext> {

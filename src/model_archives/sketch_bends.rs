@@ -1,18 +1,26 @@
 use super::{ModelDecoder, ModelObjectRole, one_bends};
+use crate::Result;
 use crate::archive_codec::{MaterialRead, ObjectReader};
-use crate::{BessemerError, FailureClass, Result};
 
 /// Preserve the complete One Bend base before its tagged sketch-handle suffix.
-/// Example: `sketch_bends::read(reader, map)?` for `moSketchBend_c`.
-pub(super) fn read(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+/// Example: `sketch_bends::read(reader, map, 1)?` for `moSketchBend_c`.
+pub(super) fn read(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+    schema: u16,
+) -> Result<()> {
     let kind = reader.scope("one_bend", |reader| one_bends::read_kind(reader, map))?;
     if kind == 7 {
-        return reader.checked(Err(BessemerError::new(
-            "model archive", "sketch-bend kind", FailureClass::Unsupported,
-            format!("sketch-bend kind {kind}; expected a non-7 kind until its direct owned-data and raw kernel-body serializers are documented"),
-        )));
+        reader.require_sketch_bend_owned(schema)?;
+        reader.scope("owned_be8", |reader| {
+            super::sketch_bend_owned::read_face(reader, map)
+        })?;
     }
-    reader.scope("payload", |reader| continuation(reader, map))
+    reader.scope("payload", |reader| continuation(reader, map))?;
+    if kind == 7 {
+        reader.scope("body_bf0", super::kernel_frames::read_raw_body)?;
+    }
+    Ok(())
 }
 
 fn continuation(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {

@@ -92,11 +92,11 @@ class EdgeGraph:
             return raw+(struct.pack('<i',-2147483648) if self.version>=0x372f else b'')
         return self.shared(key,CLASSES[0],contents)
 
-    def one_bend(self, edited: bool, conic: Callable[[],bytes] | None=None) -> bytes:
+    def one_bend(self, edited: bool, conic: Callable[[],bytes] | None=None, kind: int=-1) -> bytes:
         """Compose the full inherited body before the two conditional direct handles; e.g. graph.one_bend(False)."""
         raw=body(self.mapping,self.version,self.style in (3,5),self.mapping.slot)
         raw+=common_bend(self.mapping,self.version,self.ids,SheetFixtureOptions(self.extended,False,0))+struct.pack('<3i',*WORDS[:3])
-        return raw+prefix(self)+ordinary_handle(self)+continuation(self,conic)+raw_tail(self.version,self.style,edited)
+        return raw+prefix(self)+ordinary_handle(self)+continuation(self,conic,kind)+raw_tail(self.version,self.style,edited)
 
     def geometry(self, edited: bool) -> bytes:
         """Keep both exact native geometry bindings at 124 bytes; e.g. graph.geometry(False)."""
