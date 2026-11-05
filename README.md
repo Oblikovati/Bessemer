@@ -505,6 +505,9 @@ bodies, direct lists, empty keepers and end-condition-dependent pointers.
 [Punch records](docs/features/punches/README.md) cover internal revisions, bounded
 dynamic arrays, ordered extension tags and legacy direct keeper data.
 
+[Mold parting-line archives](docs/features/mold-parting-line/README.md) preserve
+shared edge/split-info records, signed flags and counted kernel frames, with
+explicit kernel schemas and isolated stored-field edits.
 [Mold core/cavity archives](docs/features/mold-core-cavity/README.md) preserve
 complete feature/data graphs, shared body lists and dimension pointers, with
 exact carrier reconstruction and isolated stored-setting edits.

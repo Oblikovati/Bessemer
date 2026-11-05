@@ -1,0 +1,50 @@
+{
+  "issue": 216,
+  "status": "Clippy,42 focused Rust tests and2 Python fixture tests passed; full local/remote gates pending",
+  "platform": "Windows x64, Rust1.99.0",
+  "new_private_tests": 12,
+  "new_public_tests": 4,
+  "prior_regression_tests": 26,
+  "ignored_native_tests": 1,
+  "fixture_graphs": 17,
+  "containing_streams": 12,
+  "expected_edits": 8,
+  "fresh_reversals": 8,
+  "workers": 8,
+  "versions": [
+    10188,
+    19000
+  ],
+  "scope": "Complete ordinary modern stored archive fields, including explicitly supplied strict kernel schema. No native-modern population, legacy admission, runtime-provider/geometry or SolidWorks application acceptance credit.",
+  "reader_sha256": {
+    "src/model_archives/mold_parting_line.rs": "d2aeb6dd894ea44fb9a129ff79dae0cd37ee5a3f0df4c0be64fc9953f7a13135",
+    "src/model_archives/body_features.rs": "2ea0bca61c63c98f0062de5f9cbad0751e759189ee81ec848d084d1d1ba8abaa",
+    "src/model_archives/resolved_feature_objects.rs": "c1eb0fdd4ab0d4711b0b7bb0a3ca797c44257e67d5754cc5f8f1add266958d72"
+  },
+  "test_sha256": {
+    "tests/model_archives/mold_parting_line.rs": "c61d9979dde4c7761d7220c4e62a320dd0b13b5e9fa7cb2404c115e646ee1bab",
+    "tests/resolved_mold_parting_line.rs": "0bb0390ec648f667ac35c84b82dcba50ed6eb81e29ed91e9533eb08524cf54b6"
+  },
+  "log_sha256": {
+    "target/mold-parting-line-focused-v6.log": "89dfc0f9ba8843a62ac58fbc631e5cd7770338836d628098a6c2ad8cd9c6c3b5",
+    "target/mold-parting-line-integration.log": "d62679aa0a064de081d17d961043102a0c8a7aa5305554443d7ae59262c8d755",
+    "target/mold-parting-line-regression-0.log": "8beabba383c6888590e808e6c9e5bc5f78b9eb373825188695c18f10a4e21623",
+    "target/mold-parting-line-regression-1.log": "e47f558c12c90e24bd424085cc6d96bd6498fb3265f454f34f970f23851a874b",
+    "target/mold-parting-line-regression-2.log": "6d7a0763f687cb400ca27601e230bb9a27dc7024f1b56263ab0a938d5a23f3c5"
+  },
+  "clippy_log_sha256": {
+    "target/mold-parting-line-clippy-v6.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/mold-parting-line-library-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/mold-parting-line-integration-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "test_corrections": [
+    "Preserved existing Missing classification for absent kernel context.",
+    "The cached body-role negative case uses already loaded edge10, not forward face20; the role assertion checks the actual declared-pointer diagnostic."
+  ],
+  "outstanding": [
+    "Latest-cut full cargo xtask pr",
+    "Exact-head remote checks and integration after PR212 is green and merged"
+  ],
+  "integration": "Excluded from PR212 headf506fa65 and completed core/cavity full-gate cut0acde5cb. No new branch or PR.",
+  "humanizer": "Unavailable; maintainer prose review pending"
+}

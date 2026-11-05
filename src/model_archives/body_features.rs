@@ -220,6 +220,8 @@ pub(super) const CLASSES: &[&str] = &[
     "moCavity_c",
     // #215 / C-3002: exact native RTTI proves this concrete body-feature owner chain.
     "moMoldCoreCavitySolids_c",
+    // #216 / C-2964: retained parting-line RTTI and serializer bind this body-feature owner.
+    "moMoldPartingLine_c",
     "moLibraryFeature_c",
     // #54 / C-398 proves the complete body-feature owner chain.
     "moSculpt_c",

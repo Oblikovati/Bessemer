@@ -221,6 +221,11 @@
   "next_wire_feature": {
     "issue": 215,
     "verification": "docs/features/mold-core-cavity/local-verification.json",
-    "scope": "Complete ordinary modern core/cavity feature/data grammar implemented,27 focused Rust and2 Python tests passed; latest-cut full local/remote gates pending; no native-modern populated-file or geometry/application acceptance."
+    "scope": "Complete ordinary modern core/cavity grammar implemented at0acde5cb;27 focused Rust,2 Python tests and full4189-test PR gate passed; remote acceptance pending."
+  },
+  "parting_line_wire_feature": {
+    "issue": 216,
+    "verification": "docs/features/mold-parting-line/local-verification.json",
+    "scope": "Feature/settings/edge/split-info grammar implemented;42 focused Rust and2 Python tests passed, including17 graphs and12 containing streams; latest-cut full local/remote gates remain pending."
   }
 }

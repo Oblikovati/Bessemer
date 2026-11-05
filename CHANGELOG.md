@@ -52,6 +52,8 @@
 
 ### Added
 
+- Added modern mold parting-line features, settings and edge/split-info archives, with strict kernel frames, lossless edits and fresh reversals. (#216)
+
 - Added complete modern mold core/cavity feature and data archives, preserving owner cycles, shared direct lists and isolated setting edits. (#215)
 
 - Added sheet-metal material parameter archives and direct thickness-range records, with lossless document edits and fresh reversals. (#214)

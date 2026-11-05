@@ -732,3 +732,6 @@ mod property_domains_sketch_deform_tests;
 
 #[path = "../../tests/model_archives/mold_core_cavity.rs"]
 mod mold_core_cavity_tests;
+
+#[path = "../../tests/model_archives/mold_parting_line.rs"]
+mod mold_parting_line_tests;
