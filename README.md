@@ -26,6 +26,8 @@ The [related-carrier lookup](docs/features/flow-links/README.md) searches explic
 candidate order by typed GUID roles and preserves the CPT/settings lookup gates.
 The [versioned settings body](docs/features/flow-settings-body/README.md) reads
 record 511 versions 0–11 and edits present members with explicit legacy runtime context.
+The [feature identity list](docs/features/flow-feature-identities/README.md) reads
+record 143 and edits existing fields, raw UTF-16 strings and stored tail values.
 
 `bessemer::electrical` reads and edits complete Electrical ZIP32 project carriers
 and lexical ASCII Archive.ini records. It preserves duplicate occurrences,

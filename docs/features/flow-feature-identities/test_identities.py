@@ -8,9 +8,18 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 from freeze_identities import ROOT, freeze, native_cases, owned_cases, identities
 from swarchive import ArchiveError
+from process_reference import edit_cases, object_requests, packet
 
 
 class IdentityFixtures(unittest.TestCase):
+    def test_complete_process_oracle_pins_changed_and_noop_requests(self) -> None:
+        requests = list(edit_cases())
+        self.assertEqual(len(requests), 1080)
+        self.assertEqual(sum(changed for _, changed in requests), 612)
+        self.assertEqual(packet()[:8], b"FIA1\x16\0\0\0")
+        original = identities.read143(native_cases()[0][2])["objects"][0]
+        self.assertEqual(object_requests(original)[9], (4, b"\0\0\0\0"))
+
     def test_native_boundaries_and_known_keys(self) -> None:
         native = native_cases()
         self.assertEqual([len(case[2]) for case in native], [211, 8])

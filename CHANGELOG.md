@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added bounded Flow record-143 identity reads and isolated field, counted UTF-16 string and stored-tail edits with explicit virtual legacy-tail context. (#241)
+
 - Added strict Flow record-511 versioned body reads and isolated member edits with explicit legacy runtime context and preserved raw representations. (#241)
 
 - Added ordered Flow GUID lookup and related-carrier selection with explicit result types, nil-key behavior and CPT/settings lookup gates. (#241)

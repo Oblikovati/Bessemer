@@ -2,7 +2,7 @@
 
 Specification 14.37 defines record 143's identity-list grammar and record 144's
 empty/all-null list profile. The frozen FFI1 fixture establishes their independent
-wire expectations before a typed reader and editor are introduced.
+wire expectations independently of the typed identity reader and editor.
 
 The 37 cases comprise 22 identity lists and 15 null lists. Two native payloads
 account for 219 bytes: the FLD record-143 list contains three objects and an empty
@@ -27,10 +27,27 @@ every payload, validates exact object/text offsets and logical text prefixes, an
 checks complete physical carrier retention. Run
 `python -m unittest discover -s docs/features/flow-feature-identities -p test_identities.py`
 and `cargo test --test flow_feature_identity_fixtures`.
+The typed API checks run with `cargo test --test flow_feature_identities --test flow_feature_identity_fixtures --test flow_carriers`.
 
-The typed identity reader and editor remain to be implemented. Populated record
+`FlowCarrier::feature_identities` reads the last record 143 with positive object,
+total text-unit and stored-tail bounds. It retains the source checkpoint and
+revision-bound occurrence, exact entry intervals, raw/identity code units, factory
+classification, independent version words, state bytes and stored or virtual
+tail state. No runtime vector is allocated from the legacy count.
+
+`replace_object_field` edits an existing header, type code, body word, state byte
+or full counted wire string on a copy. Text edits may change length while retaining
+unrelated entries and the tail. They validate the total unit budget, terminator
+and carrier/payload growth before allocation. `replace_tail_value` edits existing
+stored values only; legacy descriptors cannot acquire invented wire values.
+The returned `FlowFeatureEdit` retains source/result typed views, exact coverage,
+diagnostics and complete physical carrier history. Each complete patched payload
+is reparsed and checked before publication. Fresh opposite edits restore exact
+original carrier bytes, including after string length changes.
+
+The record-144 null profile remains a fixture baseline; populated record
 144 belongs to the separate mapped-object grammar in specification 14.38. Native
 runtime matching, object merging, alternate string modes, registration side
 effects and application acceptance remain separate requirements. This fixture
-baseline supplies no new production API or global coverage claim. The maintainer
+baseline supplies no global coverage claim. The maintainer
 humanizer pass remains for review because that skill is unavailable here.

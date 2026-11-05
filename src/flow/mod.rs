@@ -2,6 +2,7 @@
 mod arrays;
 mod decode;
 mod edit;
+mod feature_identities;
 mod fixed_settings;
 mod groups;
 mod header;
@@ -13,6 +14,7 @@ mod settings_fields;
 mod types;
 use crate::{BessemerError, FailureClass, Result};
 pub use arrays::*;
+pub use feature_identities::*;
 pub use fixed_settings::*;
 pub use groups::*;
 pub use header::*;
