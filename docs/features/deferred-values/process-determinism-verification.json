@@ -1,0 +1,30 @@
+{
+  "issue": 227,
+  "fresh_processes": 2,
+  "terminal_exit_codes": [
+    0,
+    0
+  ],
+  "outputs_equal": true,
+  "bytes_per_process": 2965434,
+  "output_sha256": "0e725f638a324c59303a6f60133918c741fa09d7643036031c25514b50b73c2a",
+  "independent_writer_cases": 548,
+  "additional_nested_cases": 2,
+  "all_writer_bytes_match_goldens": true,
+  "constructed_storage_profiles": 2,
+  "blob_and_document_lengths": [
+    155,
+    31711,
+    155,
+    31711
+  ],
+  "fresh_document_reopens_and_unrelated_stream_checks": true,
+  "probe_retained": false,
+  "sha256": {
+    "target/deferred-values-process-probe.rs": "b3ae9749087b156771e840b6f37df45e206c7c0d597b012403fc5b6dbdd2da3c",
+    "target/deferred-values-process-probe.exe": "e43ba1e71a9aaa44a33073a12318356c2fe232671487ab504793c7908bc1addc",
+    "target/libbessemer_deferred_values.rlib": "f165ec2597f3a5dc49e805ac80a33e473dc22115eee64276b850c61d84c54bc0",
+    "tests/fixtures/deferred-values/cases.bin": "516d210202ec17e43a217f0dccdd24360c1aa6a9c3848d9dfc94100315298aa0",
+    "tests/fixtures/blank-part.SLDPRT": "b52e080ba2cc64d1d07ed28306f27281b07521aef550bc0c7fea8cd54be2b276"
+  }
+}

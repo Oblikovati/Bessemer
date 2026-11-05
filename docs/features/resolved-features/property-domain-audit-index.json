@@ -115,6 +115,16 @@
         "11.139"
       ],
       "scope": "Property/domain decisions only; no native provider/geometry or complete-clause acceptance"
+    },
+    {
+      "report": "docs/features/resolved-features/property-domain-singleface-shell-sweep-schema-3112-audit.json",
+      "report_sha256": "6f2f5affd3c8db2e6d8ef07a30609039cad01dbf16c2fb0af94390b04ef2cfa8",
+      "clauses": [
+        "11.16",
+        "11.147",
+        "11.156"
+      ],
+      "scope": "Only C-3618/C-3619/C-3620 saved-role compatibility decisions; no production change or whole-clause completion"
     }
   ],
   "post_3077_changes": [
@@ -210,7 +220,7 @@
     "scope": "Schema-1 twist grammar only; not a full audit of all sweep property qualifiers"
   },
   "acceptance": "Complete schema and Corliss parity remain open. Stored-field audits and independent fixtures do not establish native runtime setters, semantic geometry, application opening or full model acceptance.",
-  "integration": "PR212 is open at exact verified headf506fa65; later local audit commits are excluded and remain unpublished",
+  "integration": "PR212 merged exact tested f506fa65 into codex/interop-candidate at e83c696b after all13 required checks succeeded; later local commits remain unpublished on codex/interop-next",
   "open_version_binding_issue": 213,
   "new_wire_feature": {
     "issue": 214,

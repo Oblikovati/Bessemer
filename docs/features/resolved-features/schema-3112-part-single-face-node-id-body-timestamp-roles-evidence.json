@@ -1,0 +1,53 @@
+{
+  "evidence": "C-3618",
+  "status": "qualified existing-clause schema publication",
+  "scope": "Canonical SingleFace saved signed node-ID and unsigned body-timestamp checkpoints with reset and current-state limits",
+  "clause": "11.16",
+  "domain": "actionable part modelling selected by user; sketch gaps remain open; parts before assemblies; no phase advance",
+  "proof_peer_checks": [
+    61,
+    81
+  ],
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_patterns_single_face_id_timestamp_roles.json": "2fd1fa58b2945fb0401d1f2f2e67dd01b1977beef387ee22418b4064464071f0",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_patterns_single_face_id_timestamp_roles.py": "5d02f418584bf15cc50e5d0d2a4a940d6612b44658a58dcbb7cbae6506f62220",
+    "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part_visual_ui_mask_import_chain_audit.py": "31b03961ca85a21c3676cb5addc07afb4c1ed9c76c86d54bf6bcb0c73ef5de4e",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\rtti.py": "f3c844bc9cb08346518b8a7909230dde563ecd3f7eee68dde3af5b8241df362f",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_patterns_single_face_transformed_face_capture.json": "56a03cf90f624910ea7cfffb70b6819215b5ead305433c685781669507bcc179",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_patterns_single_face_transformed_face_capture.py": "c80520dc5a950631c8071eedb2fcf795ebefd174031e669e1dcac1614b840f60",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part_spline_scalar_access_audit.py": "082c9bb045a057d0c80e5187c19f11672eab028dc1d72894e21b49bf81b33216",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_profile_reference_array_owner_capture.json": "1af76b4ed644448586ba91244f212088a63b7c73ab98762ed1307b43f49766af",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-reference-face-gates-native-evidence.json": "83c9f7a86a8f97e4c528a76485c13f7f5166308ee0789358cd19aaa37c75fcd2",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_patterns_single_face_transformed_face_capture_attempt01.log": "9744e58c3a682ca0810ea016c6cd3c240d7c84fd97eb7fbfce185c04c1d147a4",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_single_face_id_timestamp_independent_review.json": "09ad4fc758e5d977cb05fdfac2cecdf6d22b53dacac12416e0ecafcccf7b996e",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_single_face_id_timestamp_independent_review.py": "dc7fa21d005ad00393d9c78fecddda829013e248131537895f7a2f0b1f07ea02",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_patterns_single_face_id_timestamp_roles_attempt01.log": "df07b40a36115b455d78a26b5f009170953b9738e89453393a8fe5490230a150",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_single_face_id_timestamp_independent_review_attempt01.log": "9691a9a53c55b3b96a52ddcf47484384311106d36c0f74adf6a594d61a265718",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\publish_root_singleface_shell_sweep_c3618_c3620.py": "d44c103dc29e16b449b1968505d415e2dfdb96f56acdc0c92559d056c10d7890"
+  },
+  "specification_before_sha256": "15777e84c1852114c6fa3163bb4a771b7ffee22a32b43f7dc0fa2e7ead07ab30",
+  "specification_after_sha256": "5af58ad68ecaf440b5e8b3db867f406fb1faca786c68b48ddbac1ab447b5ee49",
+  "exact_replacements": [
+    {
+      "evidence": "C-3618",
+      "clause": "11.16",
+      "before": "`moSingleFaceRef_w` uses the surface base, followed by `has_embedded_body` **i32**. When nonzero a kernel body and its attribute list follow; selected compressed-body framing is implemented in 11.156. After that optional body/list, the suffix is `unknown_c8` u32 and `unknown_d8` i32.",
+      "after": "`moSingleFaceRef_w` uses the surface base, followed by `has_embedded_body` **i32**. When nonzero a kernel body and its attribute list follow; selected compressed-body framing is implemented in 11.156. After that optional body/list, the suffix is `unknown_c8` u32 and `unknown_d8` i32.\n\n**Qualified source-face node ID and body timestamp.** The canonical moSingleFaceRef_w serializer and its face-base helper store the full unsigned32 member `+0xC8` and signed32 member `+0xD8`. The separate native LOAD queries use thresholds `0xCDD` and `0x4F6`, respectively; the selected STORE sites have no matching local version gates. These existing widths and raw parser keys remain unchanged.\n\nIn selected paths of its own getTransformedFace operation, the original receiver is preserved through two concrete source assignments. A current resolved face is passed to named gcEnt_w::getNodeId, whose signed32 result is stored in `+0xD8`. The then-current face is separately passed to gcFace_w::getBody; the resulting body is passed to gcBody_w::getTimeStamp with argument 0, and its unsigned32 result is stored in `+0xC8`. The method also explicitly resets `+0xC8` to zero on selected earlier or replacement paths. These are source-face node-ID and body-timestamp checkpoints, not a Boolean domain or a timestamp interpretation inferred from a default.\n\nA later path writes the timestamp of the current transformed body to `+0xC8` before installing that body at runtime `+0xD0`. It does not thereby refresh `+0xD8` to the node ID of the transformed output face. The two saved members and the current cached body therefore need not describe one coherent final object after arbitrary provider, alias or lifetime changes. The exact native TimeStamp name and argument 0 do not establish wall-clock time, a date, a monotonic revision or equivalence with a model UpdateStamp. NodeId likewise has no newly imposed uniqueness, sign or global identity domain.\n\nThe output pointer is cleared before component/provider guards, and the inspected path has no local null-output or current-component guard at that point. Valid receivers, current face/body pointers, imports/providers, buffer identities and normal callback completion remain requirements. Resolution, wrapper-state and class gates qualify the assignments; subsequent calls can change current state. Offline readers preserve stored values rather than reproducing these resets or native resolution. The proof authenticates previously retained hash-only serializer intervals before decoding and embeds those decoded intervals; it does not claim that their instruction text was previously retained. No parser alias, coverage credit, population claim or phase advance is added. Evidence: C-3618.",
+      "occurrences": 1
+    }
+  ],
+  "parser_changed": false,
+  "production_accounting_changed": false,
+  "coverage_credit": 0,
+  "target_executed": false,
+  "feature_parses": 0,
+  "container_reads": 0,
+  "proof_reruns": 0,
+  "peer_count_scope": "Independent original-owner native, codec and conditional-role review",
+  "primary_count_scope": "Scoped saved-member associations; assertion counts are not byte coverage or whole-field completion",
+  "proof_companions": [],
+  "mandatory_qualifications": [],
+  "capture_incident": null,
+  "external_references": []
+}

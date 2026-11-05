@@ -1,0 +1,28 @@
+{
+  "issue": 229,
+  "command_exit_code": 0,
+  "source_revision": "e6233748",
+  "corpus_cases": 906,
+  "unique_native_documents": 842,
+  "extracted_database_streams": 2486,
+  "extraction_failures": 0,
+  "selected_structural_overflow_cells": 5140,
+  "key_lengths": {
+    "3": 46,
+    "36": 5094
+  },
+  "multipage_values": 1,
+  "maximum_value_length": 4380,
+  "census_gzip_sha256": "64ec5709b5458fb3230fe52f598fa615b716991cf63f19cc87fb8709f1418185",
+  "extraction_log_sha256": "e60f54b0e35ee7f2db7ff3152f58b80198c83047f48d2cd2052e68cd111119bc",
+  "source_packet_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "qualification": "Candidate bucket selection checked bounded complete cell chains, plausible length/page identifiers and complete metadata-directed key/value payload graphs. This is a selected-layout structural census, not native engine or universal file validation. No native key crosses a page boundary.",
+  "retained_samples": 3,
+  "native_application_or_geometry_acceptance": false,
+  "fixture_unit_tests_passed": 6,
+  "fixture_unit_tests_log_sha256": "917a39c4a3fdd1d3c93d0f1b35d47de6a573fd84c62007ac663ce559c97cb2da",
+  "prose_review": "Humanizer unavailable; maintainer review pending",
+  "all_fixture_unit_tests_passed": 8,
+  "all_fixture_unit_tests_log_sha256": "420d417d042f541f9d7e560424c7fa2a6330b03bbb44b2fce4c472b77d86e69f",
+  "probe_retained": false
+}

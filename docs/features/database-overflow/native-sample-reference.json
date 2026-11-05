@@ -1,0 +1,160 @@
+{
+  "issue": 229,
+  "target_executed": false,
+  "producer": "Bessemer Document extraction followed by independent explicit BE field/range interpretation; no original producer parser",
+  "identifier_mapping_scope": "Selected native streams with extent4096 and physical byte offset equal to page identifier times4096; observed graph agreement is not universal provider admission",
+  "samples": [
+    {
+      "ordinal": 65,
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Design Scenarios\\hanger.sldprt",
+      "stream": "Contents/PMISemanticDataDB",
+      "extent": 4096,
+      "pages": 17,
+      "bucket_page_index": 2,
+      "cell": [
+        3762,
+        3934632522,
+        36,
+        304,
+        2636,
+        16
+      ],
+      "database_sha256": "30ae73d1cfeaf965c6ecfe30a80950722faf824fec4e50a5add00e0ee3bfc69a",
+      "key_sha256": "7dfda806cf92cbccdc29abd9f8480f045b5dd25fa398c317d18a05fcf0b98356",
+      "value_sha256": "5ed5a96511df6c0cff23d9ece71050fce511b4d0116a52c2ca6bd46a18f8ac36",
+      "value_start": [
+        16,
+        54
+      ],
+      "key_page_ids": [
+        16
+      ],
+      "value_page_ids": [
+        16
+      ],
+      "key_hex": "34656631623433622d396461622d343935372d393632622d386133663463666661353936",
+      "value_prefix_hex": "8ea8616e6e6f5479706501aa",
+      "fixture": "native-0.db",
+      "original_document_sha256": "9af395e78e327860da0e2f34d016da43833b784fe2d411dfc240fe4db84b8357",
+      "independent_key_span": [
+        65554,
+        65590
+      ],
+      "independent_value_spans": [
+        [
+          65590,
+          65894
+        ]
+      ],
+      "expected_key_fixture": "native-0.key.bin",
+      "expected_value_fixture": "native-0.value.bin",
+      "key_and_value_expected_sha256": [
+        "7dfda806cf92cbccdc29abd9f8480f045b5dd25fa398c317d18a05fcf0b98356",
+        "5ed5a96511df6c0cff23d9ece71050fce511b4d0116a52c2ca6bd46a18f8ac36"
+      ]
+    },
+    {
+      "ordinal": 183,
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\FloWorks\\handle.sldprt",
+      "stream": "Contents/3DExperienceExchange2",
+      "extent": 4096,
+      "pages": 4,
+      "bucket_page_index": 2,
+      "cell": [
+        12,
+        193471147,
+        3,
+        646,
+        3234,
+        3
+      ],
+      "database_sha256": "ac5f9d93a9aba2dc7c3f73e4837b131a1e6ff6c62f166b0c83b2009c4b17d016",
+      "key_sha256": "ecdd3e4a16f4cd304b166ab546e96844bf8f04ac41c8a0db88d27f26e23fe11f",
+      "value_sha256": "641b85ebfb2e8e58c554854435e450594926473c5f37c7bbc167e4076d8df422",
+      "value_start": [
+        3,
+        21
+      ],
+      "key_page_ids": [
+        3
+      ],
+      "value_page_ids": [
+        3
+      ],
+      "key_hex": "544f43",
+      "value_prefix_hex": "82a5636c617373aa6f626a65",
+      "fixture": "native-1.db",
+      "original_document_sha256": "be55924752d340ce218a3aac4904bc30792bd3553356965da00b4fed96eeb3a6",
+      "independent_key_span": [
+        12306,
+        12309
+      ],
+      "independent_value_spans": [
+        [
+          12309,
+          12955
+        ]
+      ],
+      "expected_key_fixture": "native-1.key.bin",
+      "expected_value_fixture": "native-1.value.bin",
+      "key_and_value_expected_sha256": [
+        "ecdd3e4a16f4cd304b166ab546e96844bf8f04ac41c8a0db88d27f26e23fe11f",
+        "641b85ebfb2e8e58c554854435e450594926473c5f37c7bbc167e4076d8df422"
+      ]
+    },
+    {
+      "ordinal": 1028,
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\learn\\Sheet Metal\\Simple Sheet Metal Part.SLDPRT",
+      "stream": "Contents/3DExperienceExchange2",
+      "extent": 4096,
+      "pages": 8,
+      "bucket_page_index": 2,
+      "cell": [
+        38,
+        1408746747,
+        36,
+        4380,
+        12,
+        4
+      ],
+      "database_sha256": "f2bd787b4254b1419d583aedb834c4323aaa5b24dd58a6c470b5d1e4fc69445e",
+      "key_sha256": "608f8612e7d5c7d00cfa2689e18ab2ed8a10a3e9e5fc98cf68a951b2a94da148",
+      "value_sha256": "03deb5ca51d9a79e11b0b36e4abaa7c7b5283e16586ebde88e1d421bef55711c",
+      "value_start": [
+        4,
+        54
+      ],
+      "key_page_ids": [
+        4
+      ],
+      "value_page_ids": [
+        4,
+        5
+      ],
+      "key_hex": "39656563623932382d303962622d346430312d616336342d616562386561656630353736",
+      "value_prefix_hex": "de0026a9496e7374616e6365",
+      "fixture": "native-2.db",
+      "original_document_sha256": "d2be1f8e35c749cef35bf693aaa5af01373e434f1cbdc8573eadf33eb00c8fb6",
+      "independent_key_span": [
+        16402,
+        16438
+      ],
+      "independent_value_spans": [
+        [
+          16438,
+          20480
+        ],
+        [
+          20488,
+          20826
+        ]
+      ],
+      "expected_key_fixture": "native-2.key.bin",
+      "expected_value_fixture": "native-2.value.bin",
+      "key_and_value_expected_sha256": [
+        "608f8612e7d5c7d00cfa2689e18ab2ed8a10a3e9e5fc98cf68a951b2a94da148",
+        "03deb5ca51d9a79e11b0b36e4abaa7c7b5283e16586ebde88e1d421bef55711c"
+      ]
+    }
+  ]
+}

@@ -205,7 +205,7 @@ sample file and the explicit kernel schema. This proves the first complete
 native operation in both contexts. It does not cover the full parameter edit
 population, other stored kinds, native application opening or geometric validity.
 
-## Complete native primary oracle and active edit gate
+## Complete native primary oracle and document edit gate
 
 The independent oracle now covers all 43,917 native primary values in all
 906 cases: 4,430 configuration values and 39,487 resolved-feature values.
@@ -221,12 +221,16 @@ including the reserved Latin-1 `0xFFFE` rule. Original primitive readers validat
 every replacement through EOF. This does not mean each changed whole model
 has already been replayed through Source.
 
-Strict source regeneration and the full native document edit gate are running.
-The latter checks every primary edit against the complete expected stream,
-reopens the document, checks unrelated streams, derives a fresh typed reversal
-and requires the original complete file bytes. Early numeric and string cases
-passed, but no completed corpus-edit acceptance is claimed yet.
-`all-primary-oracle-verification.json` records this boundary.
+Strict source regeneration passed. The full native document edit gate also
+passed: all 43,917 primary edits across 906 cases matched the complete expected
+streams, reopened their containing documents, preserved unrelated streams and
+reversed through fresh typed snapshots to the original complete file bytes.
+The run completed in 44,985.70 seconds with no failures. Its executable predates
+later features; this result does not validate those additions or establish
+native application or geometry acceptance.
+`all-primary-native-document-verification.json` records the terminal result and
+artifact hashes; `all-primary-oracle-verification.json` retains the earlier
+independent oracle evidence.
 
 ```text
 python -B -X utf8 docs/features/stored-parameters/freeze_all_primary_reference.py

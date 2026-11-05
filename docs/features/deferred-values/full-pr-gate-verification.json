@@ -1,0 +1,20 @@
+{
+  "issue": 227,
+  "command": "cargo xtask pr",
+  "source_revision": "f61a11e4ccc7d91e763d1b98150bb5309a560cd7",
+  "tree_matches_feature_revision": "d28235a205af09b469fb38d0f1253340a501860e",
+  "process_exit_code": 0,
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "tests_passed": 4317,
+  "tests_failed": 0,
+  "tests_ignored": 231,
+  "test_summaries": 343,
+  "log_sha256": "5e176bb36b075c34a18d22f108211f261520c97a88b8d14ae71f2749b979381f",
+  "log": "target/deferred-values-combined-full-pr-gate.log",
+  "exclusions": [
+    "Later native-census documentation and saved-role audits are outside this frozen checkout",
+    "Feature229 overflow fixture preparation is outside this checkout",
+    "Remote exact-head checks, original-producer/runtime/application and complete schema parity remain separate"
+  ]
+}

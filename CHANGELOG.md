@@ -52,6 +52,16 @@
 
 ### Added
 
+- Added Electrical ZIP32 carrier reads, member edits and lossless ASCII Archive.ini value operations with coverage and history. (#231)
+
+- Added lossless saved hash-index reads and isolated header/mapping edits with explicit index-only coverage. (#230)
+
+- Added complete conditional default-provider hash-file graph reads and isolated same-length value edits with full coverage and history. (#230)
+
+- Added complete supplied-writer overflow and mixed-bucket decoding, with isolated fixed-length value edits, exact local coverage and ordered bucket/page history. (#229)
+
+- Added bounded conditional deferred-value MsgPack reading and construction for all 17 installed writers and both declared byte-order modes. (#227)
+
 - Added bounded inline hash-page reconstruction and isolated value replacement with raw chain metadata, local coverage and history. (#224)
 
 - Added exact wrapping database packed-time conversion with signed-second shifts and raw component domains. (#223)

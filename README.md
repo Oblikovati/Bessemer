@@ -4,6 +4,12 @@ Bessemer is a Rust library being built to read and write SolidWorks documents
 (parts .sldprt, assemblies .sldasm, and drawings .slddrw).
 CAD kernels use it to exchange data with SolidWorks files. Martensite is its first consumer.
 
+`bessemer::electrical` reads and edits complete Electrical ZIP32 project carriers
+and lexical ASCII Archive.ini records. It preserves duplicate occurrences,
+unknown members and encoded representations of untouched members. See the
+[Electrical evidence](docs/features/electrical-projects/README.md) for limits,
+history and the remaining SQLite/project-schema work.
+
 `bessemer::compound` reads and reconstructs MS-CFB version-3/4 carriers and
 replaces existing streams on isolated snapshots, including mini-stream cutoff
 changes. See the [compound-file evidence](docs/features/compound-files/README.md)
@@ -20,6 +26,26 @@ wrapping and arithmetic-shift behavior when converting those stored words.
 replaces fixed-length values with local coverage and history. See the
 [hash-buffer evidence](docs/features/database-hash/README.md) for chain checks,
 native-page results and the remaining overflow/file-graph work.
+Its explicit `HashWriterBucket` API reads complete mixed inline/overflow cells
+with supplied page identities and edits existing same-length values. It returns
+aggregate coverage and ordered bucket/page history; file indexing and allocation
+remain separate. See the [mixed-bucket evidence](docs/features/database-overflow/README.md).
+`bessemer::database_overflow` reads complete explicitly supplied writer page
+chains and replaces existing same-length values, retaining every other page
+byte. See the [overflow evidence](docs/features/database-overflow/README.md) for
+page-identity requirements, native samples and the remaining file/allocator work.
+`bessemer::database_index` reads complete explicitly selected default-provider
+hash file graphs and edits existing same-length values. It checks unique page
+roles, complete maps, default hashes and routing, and returns full-file coverage
+and history. See the [file-index evidence](docs/features/database-index/README.md)
+for explicit extent requirements and remaining allocation/transaction work.
+Its `HashFileIndexBuffer` API also preserves and edits raw saved index words
+and ordered duplicate pairs under an explicit index-only check mode.
+`bessemer::deferred_values` reads and constructs the documented conditional
+deferred-object MsgPack blobs with explicit byte-order control, ordered duplicate
+pairs and raw float/string/extension bytes. See the
+[deferred-value evidence](docs/features/deferred-values/README.md) for supported
+writer forms, limits and producer qualifications.
 
 `bessemer::simulation` reads, constructs and writes complete observed MAS tables
 and paired family-8 GEN images. It exposes stored mesh fields and isolated cell

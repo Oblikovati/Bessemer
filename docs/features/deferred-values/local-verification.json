@@ -1,0 +1,72 @@
+{
+  "issue": 227,
+  "behavior_version": "C3590-deferred-values-v1",
+  "source_base": "d5908e8277ad4c1213f6c797faaf14ee01a94123",
+  "source_identity": "Working tree after source_base; exact source hashes below",
+  "platform": "Windows x64",
+  "toolchain": "Rust1.99.0",
+  "final_builds": "Library, unit and integration Clippy builds exited0 with debug assertions/overflow checks and -D warnings -D missing_docs -F unsafe_code",
+  "format_check": "Pinned formatter check on all changed Rust files exited0",
+  "rust_results": [
+    {
+      "log": "target/deferred-values-tests-v3.log",
+      "passed": 13,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "log": "target/deferred-values-unit-tests.log",
+      "passed": 1,
+      "failed": 0,
+      "ignored": 0
+    }
+  ],
+  "rust_passed": 14,
+  "python_fixture_verifier_exit_code": 0,
+  "native_writer_classes": 17,
+  "persisted_value_forms": 11,
+  "declared_profiles": 2,
+  "independent_writer_goldens": 548,
+  "additional_nested_goldens": 2,
+  "largest_count_boundary": 65536,
+  "host_depth_ceiling": 64,
+  "malformed_count_allocation_guard": "Declared immediate child count must fit both value budget and remaining minimum-width bytes before Vec allocation",
+  "all_public_types_send_sync_asserted": true,
+  "shared_workers": 8,
+  "process_determinism": "process-determinism-verification.json",
+  "constructed_storage_slot_checks": 2,
+  "constructed_storage_scope": "New known-format blobs written through opaque native inline slots/containing documents; original slot producer/format is not inferred",
+  "full_pr_gate": "Latest completed0a9e8cd2 gate passed4303 tests but excludes this module; latest-cut local/remote validation remains required",
+  "sha256": {
+    "src/lib.rs": "2009d37731b91cb395ef371a51bd912216fca2a6cca6bd6122a8f13b04ad713c",
+    "src/deferred_values/decode.rs": "283e8808dfb51e25edfdf95ed191cc31df37116652ee684ad9c9d794db83d8ff",
+    "src/deferred_values/encode.rs": "8c34bca8be70effa9e1c362ca17ea36eb81d792c8c1ba60d41b1e2ebe2fc7648",
+    "src/deferred_values/mod.rs": "31339cad0a564b06aa9dae9a8040306c8d1b633350fbe93c3e1ea7db5c2881c7",
+    "src/deferred_values/types.rs": "9275c6d503c5e3a9ecef4d3cfda01351cead94747b9bf0b242cecea800fadcc7",
+    "src/deferred_values/wire.rs": "bd46cec2b7624d05004df769202f394e4bc66adccdb33cfa5c4275fc1b93efb7",
+    "tests/deferred_values.rs": "61b047f8153c26ff3c0c9ee189e0375c4dcfa6e6dfd2e6c58e2183a7d0824277",
+    "tests/deferred_values/lengths.rs": "a171f5e6a6cf59c300c2336f50356e3e5f423e291e56e78c76fd3972c6f60532",
+    "target/deferred-values-tests-v3.log": "a9e4d5767b516985f5afc9bf3bd60369b6def827495274f784a9c3983846e6aa",
+    "target/deferred-values-unit-tests.log": "5ef2b10667624ee65481c77a83d25f705f35283ed19e5cea318671794ab0ff55",
+    "target/deferred-values-library-clippy-v2.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/deferred-values-unit-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/deferred-values-test-clippy-v3.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/deferred-values-format-check-v3.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/deferred-values-fixture-verification-v2.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/libbessemer_deferred_values.rlib": "f165ec2597f3a5dc49e805ac80a33e473dc22115eee64276b850c61d84c54bc0",
+    "target/deferred-values-unit-tests.exe": "b5645109103d6c2b4919413c1de0eca00d6eeab33745166bff4a4934f45ccbc7",
+    "target/deferred-values-tests-v3.exe": "bb02522965a078328042f280aca1ff293e481ba3c9a6e6a0b9fbc80894bc1cdc",
+    "tests/fixtures/deferred-values/cases.bin": "516d210202ec17e43a217f0dccdd24360c1aa6a9c3848d9dfc94100315298aa0",
+    "tests/fixtures/deferred-values/nested-0.bin": "7088bfe443563a31d89bdf1202bfeb99849a0466f7bc27d85349147383597968",
+    "tests/fixtures/deferred-values/nested-1.bin": "0f1af96bb4c537db1f6dcdc23c25986102866e5bb08214ea3f4eb7486993dcb4",
+    "tests/fixtures/blank-part.SLDPRT": "b52e080ba2cc64d1d07ed28306f27281b07521aef550bc0c7fea8cd54be2b276"
+  },
+  "exclusions": [
+    "No native DLL, writer callback, VFS or original producer-parser execution",
+    "Consistent caller-declared control state is not native global-state immutability proof",
+    "Other standard MessagePack encodings and mixed/unproved control traces are outside the selected profiles",
+    "No native tree construction/comparator, archive-mode, engine/commit/durability or application/geometry acceptance",
+    "Overflow issue226 and complete schema/Corliss parity remain open"
+  ],
+  "humanizer": "Unavailable; maintainer prose review remains"
+}

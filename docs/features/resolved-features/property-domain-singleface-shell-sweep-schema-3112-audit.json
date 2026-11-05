@@ -1,0 +1,141 @@
+{
+  "issue": 2,
+  "schema_source_edition": "Edition 0.3115 \u00b7 2026-11-05 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "specification_sha256": "647d815dabcd7827bacf1bb4d3b0cc13f58e648feba31799e1c38c06ed89474e",
+  "clauses": [
+    "11.16",
+    "11.147",
+    "11.156"
+  ],
+  "reviewed_delta": "Only C-3618 through C-3620; later clauses in the source edition are not credited",
+  "source_revision": "592f2ba65dcbe57462ce91de617cdb8e8be42339",
+  "production_change": "None: all selected saved members already preserve the documented representation",
+  "retained_evidence": [
+    {
+      "path": "docs/features/resolved-features/schema-3112-part-single-face-node-id-body-timestamp-roles-evidence.json",
+      "sha256": "81027649d5d1eb09b96b49b864f6fa0561c754f79d82193f5ed4c585eafe6aa7",
+      "evidence": "C-3618",
+      "clause": "11.16",
+      "verified_hash_references": 16
+    },
+    {
+      "path": "docs/features/resolved-features/schema-3112-part-shell-saved-role-consumer-evidence.json",
+      "sha256": "8f9e84c1ba27d2bc99c37f13d1bc3f617cb0230e03482d3355e937f9f706e273",
+      "evidence": "C-3619",
+      "clause": "11.147",
+      "verified_hash_references": 14
+    },
+    {
+      "path": "docs/features/resolved-features/schema-3112-part-sweep-data-saved-role-evidence.json",
+      "sha256": "83ca9d24c39b6c482c87940d2f368ff3d704fe0cb71cc101d6676f75505afec5",
+      "evidence": "C-3620",
+      "clause": "11.156",
+      "verified_hash_references": 45
+    }
+  ],
+  "verified_source_hashes": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_patterns_single_face_id_timestamp_roles.json": "2fd1fa58b2945fb0401d1f2f2e67dd01b1977beef387ee22418b4064464071f0",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_patterns_single_face_id_timestamp_roles.py": "5d02f418584bf15cc50e5d0d2a4a940d6612b44658a58dcbb7cbae6506f62220",
+    "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part_visual_ui_mask_import_chain_audit.py": "31b03961ca85a21c3676cb5addc07afb4c1ed9c76c86d54bf6bcb0c73ef5de4e",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\rtti.py": "f3c844bc9cb08346518b8a7909230dde563ecd3f7eee68dde3af5b8241df362f",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_patterns_single_face_transformed_face_capture.json": "56a03cf90f624910ea7cfffb70b6819215b5ead305433c685781669507bcc179",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_patterns_single_face_transformed_face_capture.py": "c80520dc5a950631c8071eedb2fcf795ebefd174031e669e1dcac1614b840f60",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part_spline_scalar_access_audit.py": "082c9bb045a057d0c80e5187c19f11672eab028dc1d72894e21b49bf81b33216",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_profile_reference_array_owner_capture.json": "1af76b4ed644448586ba91244f212088a63b7c73ab98762ed1307b43f49766af",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-reference-face-gates-native-evidence.json": "83c9f7a86a8f97e4c528a76485c13f7f5166308ee0789358cd19aaa37c75fcd2",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_patterns_single_face_transformed_face_capture_attempt01.log": "9744e58c3a682ca0810ea016c6cd3c240d7c84fd97eb7fbfce185c04c1d147a4",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_single_face_id_timestamp_independent_review.json": "09ad4fc758e5d977cb05fdfac2cecdf6d22b53dacac12416e0ecafcccf7b996e",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_single_face_id_timestamp_independent_review.py": "dc7fa21d005ad00393d9c78fecddda829013e248131537895f7a2f0b1f07ea02",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_patterns_single_face_id_timestamp_roles_attempt01.log": "df07b40a36115b455d78a26b5f009170953b9738e89453393a8fe5490230a150",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_single_face_id_timestamp_independent_review_attempt01.log": "9691a9a53c55b3b96a52ddcf47484384311106d36c0f74adf6a594d61a265718",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\publish_root_singleface_shell_sweep_c3618_c3620.py": "d44c103dc29e16b449b1968505d415e2dfdb96f56acdc0c92559d056c10d7890",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_shell_value_face_dimension_roles.json": "6f1c93b078ace5ff7dafeba4fe43ae4967af63f93841cac4c19adf480efc6c26",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_shell_value_face_dimension_roles.py": "e85c19230b94483afa88fc1a05976a00f45053a6e15e8a55e23cb3e0bebda45c",
+    "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldMoPartu.dll": "2201edfa07b1a7484acedb6db4600fa7a00e55b16090a03b92fe7d9b14cb2128",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-node-part-dll-state-access-evidence.json": "22f18c9cf4f36b2d5170c71c5544267de3fdcb661ec58c9915b4b8e4c6a26492",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\shell-native-evidence.json": "430e4522f23f6e779a9c34bf549b7e51353727de26c77203c60e5dedae4c1aa1",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_shell_scale_saved_properties.json": "cdb66f4b477966a8915b79a65ca2ea5bc9c8b70f43656f17464b05691c30469d",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_shell_scale_saved_properties.py": "3b4202dcf9f41066600463390705d0d3b96abaedc95d7743d5519c669b45b7d1",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-legacy-post-parting-reference-indices-evidence.json": "7d95da0b229ba7e66b06ff1f77d89470f6f23b87808e2ba686502735716a222b",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_patterns_shell_face_dimension_independent_review.json": "56d80f487577353c55d4c3a66b8a0e594891bf1a6b0713b8a2998ae72031012f",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_patterns_shell_face_dimension_independent_review.py": "f59390af918018cc781051c7a41b3f187ede17ec3b2b678bc728dda419ca5b44",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_shell_value_face_dimension_roles_attempt01.log": "787ce2cc10f859d29100d066a302dd6678fd95357b8296ec5e85e769c7fb7c73",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_patterns_shell_face_dimension_independent_review_attempt01.log": "6ca62bc502bebe75114ac86c8541916b2dafa6b9db44d142c581a245c10caee8",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_constraint_sweep_section_guide_path_roles_attempt05.json": "d59a7dfb5cf5196e8b76d53fd79b91303a6da52ef4f791fb1ded102b85b5e3ba",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_constraint_sweep_section_guide_path_roles_attempt05.py": "f319bc476ae38851fa802a9e7dbabcb3df259eacdf4ba2dbd744cb1ff631fb5c",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_constraint_sweep_section_guide_path_roles_attempt04.py": "3653c93912e202fba7e59917ea82296cf73a4ba489d2a8b6b9f48e63849e0927",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_constraint_sweep_collection_roles_attempt04_stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_constraint_sweep_collection_roles_attempt04_stderr.log": "e5ed09acc62ddbd74dd670a1eae50810f2ba0271c0aa1ffbd2c819db814c9785",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_constraint_sweep_section_guide_path_roles_attempt03.py": "02ab5e2bef83c0483fe917214dca01a96dad88cf73a222b411ad6aa98ca00fc7",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_constraint_sweep_collection_roles_attempt03_stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_constraint_sweep_collection_roles_attempt03_stderr.log": "ed957658953255e3a5dd2bb466db9d365610f7c0f04214698fc8e8ce5c76d0b3",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_constraint_sweep_section_guide_path_roles.py": "d62a69d206b5596767b28f67e8aaee866ef7236f7fa1f7a5e337ebef7d7c893c",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_constraint_sweep_collection_roles_attempt01_stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_constraint_sweep_collection_roles_attempt01_stderr.log": "1949afcaec5b2512085ed3f11cf2a15b55c081798de377893b92644454d58aa9",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_constraint_sweep_section_guide_path_roles_attempt02.py": "9c05809793126f18b0c2a5c6c08eb1112691650af4d18a4e88ccffd00691995c",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_constraint_sweep_collection_roles_attempt02_stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_constraint_sweep_collection_roles_attempt02_stderr.log": "6d43dfef26684b30c672ea2628e8d338826c5dcda539231329d5be6ad40b9f99",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_sweep_saved_request_roles_attempt02.json": "bff89af82413f9ed756eb582a707869a495d75d19ddd64132bf58306ec91bbdb",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_sweep_saved_request_roles_attempt02.py": "b156165d1c8a7416a02806d15805429e4c9ddb7630a6280ebf87c29823b91e8c",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_sweep_saved_request_roles.py": "1e3dd36bb3893bb0939e96cfbc76b8012d85033d9b7d85e67de21d14b0b6f8a3",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_sweep_saved_request_proof_attempt01.log": "c8c2496f159384717740eb60995bcd414d7a2d9bdd6d19f4980d64bce0634842",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_sweep_settings_selected_capture.json": "282d8ae3305628d2ca2c0a9b114422400c9f0a12efd599ff0cf44c1d77a5ad16",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_sweep_settings_selected_capture.py": "bb2b478bd4eca8490cb3adc53e2ff0c5bb4483bc52ea468c27d7de59f2bd2c39",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_sweep_settings_capture_attempt01.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_sweep_data_full_serializer_capture.json": "2a6650e8566a0a05b5f678d6f837efdc122d2cedc1c6f03328e32002e8a1b58b",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_sweep_data_full_serializer_capture.py": "5c1a750e6becb0a95a52a7a01c3c4b2f394d9341c3731f167785435b3f3f233b",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_sweep_data_full_serializer_capture_attempt01.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\sweep-native-evidence.json": "c5f04607397fe2f6277e8962391ca0f9eb91c197a30de897031f9de6c5c41c31",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-node-descendant-state-access-evidence.json": "b07e38f38fe676e9c6c545cc0698a4ed59494f2dd3b4a72af9a69851a8c99599",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_constraint_sweep_path_collection_methods_capture.json": "140f8a5034e1e547baf50f1e457bdb9b3a809e09028741cce72ff2ae67fe4255",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_constraint_sweep_path_collection_methods_capture.py": "57d3bd0dcbf6898f450995cf5b75e60b8b070542b78a354bffd17e674aa20229",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_constraint_sweep_guide_zero_helper_capture.json": "2eb367b40bbcdcf5cabba51aa6ef5eb5e128ba513b1655abcd8aba6488d11a29",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_constraint_sweep_guide_zero_helper_capture.py": "81f4d66db611875a4e9540888f246e600ba82eb91042bee983a80a48c9fb6560",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_constraint_sweep_path_capture_attempt01_stdout.log": "5e3227899b69a0dc689ff7acff37044f7a25a10e87466db8d2cdd948bd5088c7",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_constraint_sweep_path_capture_attempt01_stderr.log": "69e32783758c07407fa2182ad844674a09cac33394c919c9e036c00c7da3bafa",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_constraint_sweep_guide_zero_attempt01_stdout.log": "1af7590f2fdc3e6a0a8c4a0027f5d98024425813b27c660f50d9e7783149a937",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_constraint_sweep_guide_zero_attempt01_stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-node-primary-virtual-state-access-evidence.json": "971e6a080e4dde012667722552ecb7161de12673c48be150092314e5f3852bdd",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_spline_180_typed_callees_probe.json": "e178486f9c468cb8a9624b4a19279cceca121feb975b32df5e4e4866a6fb12f7",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_sweep_collection_independent_review.json": "fa853bbb5b8033356b08e62c057a6b0f999a616f225420a349f9d711904853c9",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_sweep_collection_independent_review.py": "5c28ee3510e993b49991475adbae34d9afa32d9971def1f26ade52654bb3c313",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_constraint_sweep_collection_roles_attempt05_stdout.log": "aad1e3b03125d7d562426304696c24f65f780118013f77850144bd1d81ba08ee",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_constraint_sweep_collection_roles_attempt05_stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_sweep_collection_independent_review_attempt01.log": "2a5c93fd56e6318ead444bb442d6eb920d239d4a07628c27b2f948b60c7d821a"
+  },
+  "decisions": [
+    "SingleFace unknown_c8 stays unsigned32 and unknown_d8 signed32. The existing surface base, signed nonzero embedded-body flag, kernel body and attribute list remain unchanged. No wall-clock, positivity, uniqueness, coherent final identity or native reset policy is inferred.",
+    "Shell dimension_810 and list_828/list_830 already retain tagged dimension and ordered list identities. Unequal lists and null/shared pointers remain admitted by the existing scoped codec. Value is not an extra inline double; no same-length, geometry-equality, provider or addUnique simulation is added. raw_818 remains the complete saved octet despite current runtime full32 API access.",
+    "SweepData arrays2c0/2e0/300 already use direct embedded pointer-array framing with Any item role. Descriptor requests do not justify narrower item classes, new tags, copying, filtering, deep ownership or coherent runtime path resolution. Existing version and conditional dimension rules remain unchanged."
+  ],
+  "codec_sha256": {
+    "src/model_archives/geometric_references.rs": "63d69a7478f7595d7065bf514028d91592c408e52198231dfa6b6d243914ceef",
+    "src/model_archives/shell_records.rs": "67cd0f203bca4de49b9b6f9cb58bcdeb2def7d6e9100284fc88f804560ddf52f",
+    "src/model_archives/sweep_data.rs": "91a4e60ff7a88946aa90a639137a4d20bf3bba6715fcd096e90f319ba74cd5f4",
+    "src/model_archives/sweep_records.rs": "d3de519d58b24ef01e617b082bce1b8d2a84d427c0d6b075cdec273e7221124d"
+  },
+  "verification": {
+    "tests_passed": 5,
+    "tests_failed": 0,
+    "logs_sha256": {
+      "target/schema-3112-single-face-gate.log": "bbe4928a681a81759d7702868a312142bab3aebe5368fcb4fee7f3dab135a8ef",
+      "target/schema-3112-resolved_shell_features-tests.log": "7b1f5714e61d147131c65614732e99e4c1fee342295d4f0e395daeed65d90fe0",
+      "target/schema-3112-resolved_sweeps-tests.log": "1350f996de253b17b6e36caf68deccd0c5cfe7a1fbf902212ce4f08556ee14c5"
+    },
+    "integration_build_logs_sha256": {
+      "target/schema-3112-resolved_shell_features-build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target/schema-3112-resolved_sweeps-build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "library_artifact_sha256": "f165ec2597f3a5dc49e805ac80a33e473dc22115eee64276b850c61d84c54bc0",
+    "unit_artifact_sha256": "b5645109103d6c2b4919413c1de0eca00d6eeab33745166bff4a4934f45ccbc7",
+    "scope": "Existing complete owned SingleFace reference graphs and whole-document Shell/Sweep read/edit/reopen/reversal tests; no new algorithm or native execution"
+  },
+  "exclusions": [
+    "Not a whole-clause, whole-schema or geometry acceptance audit",
+    "No native callback, provider, cache/lifetime or application behavior replay",
+    "Other C-3604 through C-3625 deltas require their own review",
+    "Current full local gate and exact PR228 remote gates remain separate"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending"
+}

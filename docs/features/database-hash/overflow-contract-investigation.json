@@ -1,0 +1,38 @@
+{
+  "bug": 226,
+  "status": "External native contract tracked; Bessemer inline behavior unchanged",
+  "source_reference": "docs/features/database-hash/schema-reference.json",
+  "source_reference_sha256": "2c21068df6003f983b24622206bd47c98819dc23f32211fcca76f2d19e7fe482",
+  "evidence": "C-3603",
+  "first_chunk_rule": "min(declared remaining key bytes, DWORD(P-8)) starting at18",
+  "literal_case": {
+    "P": 512,
+    "key_length": 504,
+    "requested_span": [
+      18,
+      522
+    ],
+    "nominal_page_span": [
+      0,
+      512
+    ],
+    "overrun_bytes": 10
+  },
+  "other_incomplete_success_paths": [
+    "Zero next-page ID can return0 with key bytes remaining",
+    "Accumulator callback can accept fewer bytes while loop accounts by requested count",
+    "Outer cell decoder can continue after payload failure"
+  ],
+  "required_next_evidence": [
+    "Distinguish native request buffers from actual stored writer pages",
+    "Bind first-page writer capacity, completion-page/cursor and value resume without guessed repair",
+    "Require complete supplied buffers and complete key bytes before publication",
+    "Obtain a populated native overflow sample and independent expected key/value spans"
+  ],
+  "forbidden_repairs": [
+    "Silently use P-18 in place of the documented native request",
+    "Treat native status0 as proof of full key reconstruction",
+    "Assign the current payload grammar to every database stream"
+  ],
+  "production_change": "None; nonzero overflow IDs remain explicitly unsupported in InstalledInline"
+}

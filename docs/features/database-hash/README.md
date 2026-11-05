@@ -52,3 +52,19 @@ pages and resume cursors, index/file-graph admission, allocation/relinking and
 length-changing edits. Native callbacks, key-function correctness, opaque value
 meaning, whole-database consistency, commit and durability remain unproved.
 This inline-buffer milestone does not replace those requirements.
+
+## Overflow writer investigation
+
+Static inspection of the installed writer now distinguishes stored pages from
+native key-reader requests. The writer copies the first key chunk from offset
+18 to the page end, then continues from offset 8 on later pages. It records the
+value start page and cursor before writing the value. The native key reader
+still requests `P-8` bytes from first-page offset 18; this mismatch remains
+tracked in #226.
+
+`overflow-writer-storage-investigation.json` records eight static dossiers,
+2,849 independently hashed code bytes and the remaining acceptance work. The
+compressed evidence retains complete assembly and decompiler observations.
+No target code ran. Overflow remains unsupported by the current public codec;
+complete page-graph fixtures and independently checked native spans are still
+required before admitting it.

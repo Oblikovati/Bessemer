@@ -1,0 +1,51 @@
+{
+  "evidence": "C-3619",
+  "status": "qualified existing-clause schema publication",
+  "scope": "Three Shell saved dimension/list associations and conditional same-index face-dimension output requests",
+  "clause": "11.147",
+  "domain": "actionable part modelling selected by user; sketch gaps remain open; parts before assemblies; no phase advance",
+  "proof_peer_checks": [
+    156,
+    90
+  ],
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_shell_value_face_dimension_roles.json": "6f1c93b078ace5ff7dafeba4fe43ae4967af63f93841cac4c19adf480efc6c26",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_shell_value_face_dimension_roles.py": "e85c19230b94483afa88fc1a05976a00f45053a6e15e8a55e23cb3e0bebda45c",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part_visual_ui_mask_import_chain_audit.py": "31b03961ca85a21c3676cb5addc07afb4c1ed9c76c86d54bf6bcb0c73ef5de4e",
+    "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldMoPartu.dll": "2201edfa07b1a7484acedb6db4600fa7a00e55b16090a03b92fe7d9b14cb2128",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-node-part-dll-state-access-evidence.json": "22f18c9cf4f36b2d5170c71c5544267de3fdcb661ec58c9915b4b8e4c6a26492",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\shell-native-evidence.json": "430e4522f23f6e779a9c34bf549b7e51353727de26c77203c60e5dedae4c1aa1",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_shell_scale_saved_properties.json": "cdb66f4b477966a8915b79a65ca2ea5bc9c8b70f43656f17464b05691c30469d",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_shell_scale_saved_properties.py": "3b4202dcf9f41066600463390705d0d3b96abaedc95d7743d5519c669b45b7d1",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-legacy-post-parting-reference-indices-evidence.json": "7d95da0b229ba7e66b06ff1f77d89470f6f23b87808e2ba686502735716a222b",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_patterns_shell_face_dimension_independent_review.json": "56d80f487577353c55d4c3a66b8a0e594891bf1a6b0713b8a2998ae72031012f",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_patterns_shell_face_dimension_independent_review.py": "f59390af918018cc781051c7a41b3f187ede17ec3b2b678bc728dda419ca5b44",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_display_shell_value_face_dimension_roles_attempt01.log": "787ce2cc10f859d29100d066a302dd6678fd95357b8296ec5e85e769c7fb7c73",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_patterns_shell_face_dimension_independent_review_attempt01.log": "6ca62bc502bebe75114ac86c8541916b2dafa6b9db44d142c581a245c10caee8",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\publish_root_singleface_shell_sweep_c3618_c3620.py": "d44c103dc29e16b449b1968505d415e2dfdb96f56acdc0c92559d056c10d7890"
+  },
+  "specification_before_sha256": "15777e84c1852114c6fa3163bb4a771b7ffee22a32b43f7dc0fa2e7ead07ab30",
+  "specification_after_sha256": "5af58ad68ecaf440b5e8b3db867f406fb1faca786c68b48ddbac1ab447b5ee49",
+  "exact_replacements": [
+    {
+      "evidence": "C-3619",
+      "clause": "11.147",
+      "before": "Named moShell_c::getOutward/setOutward move full 32-bit current member 0x818 values without normalization.",
+      "after": "**Value dimension and selected face-dimension lists.** The own moShell_c API binds current saved member `+0x810` to Value, `+0x828` to SelectedThicknessFaces and `+0x830` to ThicknessDimList. The two list getters return the current pointers without imposing item classes or ownership. Value is a tagged display-dimension association, not an extra inline double. Its getter returns positive zero for a null dimension and otherwise requests virtual `+0x868(0)`. Its setter skips a null dimension and otherwise forwards the original double to virtual `+0x860` with integer arguments 1 and 0. These are current provider requests, not units, an achieved thickness or a closed numeric domain.\n\nThe own getLiveFaceDims operation returns immediately for a null input face. Its selected paired-list path requires both current list pointers and nonzero counts; it then compares ordered multi-surface-ID representations under runtime compatibility and embedded-ID equality conditions. For an admitted match, the current selected reference's getIndex result in list `+0x828` supplies the same signed requested position to FindIndex in current list `+0x830`. A nonnegative index below that list's current count, a nonnull returned position and nonnull data select an addUnique request into the caller's existing output. There is no local output-clear request, its provider return is ignored, and the selected search stops after that request. This proves a conditional same-position request, not complete geometric face equality, universal equal list lengths, new insertion, successful uniqueness, all matches or final output contents.\n\nIf the paired path does not produce its selected request, the reached fallback tests ofFeature against the current Shell and, when nonzero, requests current `+0x810` through addUnique without a dimension-null guard at that site. The output is accumulated rather than replaced. Valid references, nodes, buffers, current providers, normal completion, aliases and lifetimes remain conditions; the operation returns void rather than a count or success result.\n\nThe canonical typed codec stores the dimension and list references. The selected STORE list calls are locally ungated; the corresponding LOAD list pair requires its independent current-version query to be at least `0x163`. Existing post-LOAD trimming and other repairs remain separate from this consumer and do not establish a universal paired-list invariant. The saved list `+0x820` and arbitrary list contents receive no new semantic role. Raw keys, pointer identity, parser/accounting and coverage remain unchanged. Evidence: C-3619.\n\nNamed moShell_c::getOutward/setOutward move full 32-bit current member 0x818 values without normalization.",
+      "occurrences": 1
+    }
+  ],
+  "parser_changed": false,
+  "production_accounting_changed": false,
+  "coverage_credit": 0,
+  "target_executed": false,
+  "feature_parses": 0,
+  "container_reads": 0,
+  "proof_reruns": 0,
+  "peer_count_scope": "Independent original-owner native, codec and conditional-role review",
+  "primary_count_scope": "Scoped saved-member associations; assertion counts are not byte coverage or whole-field completion",
+  "proof_companions": [],
+  "mandatory_qualifications": [],
+  "capture_incident": null,
+  "external_references": []
+}

@@ -1,10 +1,14 @@
 //! Conditional installed inline hash-page buffers (9.2 / C-3595 / C-3601–3603).
 mod decode;
 mod edit;
+mod page_reader;
 mod types;
+mod writer_bucket;
 use crate::{BessemerError, FailureClass, Result};
 pub use edit::HashBufferEdit;
+pub(crate) use edit::span_history;
 pub use types::*;
+pub use writer_bucket::*;
 
 /// Immutable complete buffer, ordered chains and owned inline cell payloads.
 #[derive(Clone, Debug, PartialEq, Eq)]
