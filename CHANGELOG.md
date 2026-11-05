@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added typed Flow record-404 groups for payload versions 3–6 with explicit raw/zlib contexts, complete bounded validation and isolated wire-field edits. (#241)
+
 - Added bounded Flow record-433 array reads and isolated signed-cell edits with explicit runtime-count checks, full decoded validation and retained source checkpoints. (#241)
 
 - Added selected Flow GUID-header reads and typed sixteen-byte edits with Windows GUID formatting and preserved extension bytes. (#241)

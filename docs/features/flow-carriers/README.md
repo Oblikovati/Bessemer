@@ -31,8 +31,9 @@ schemas, alternate compressed terminal-index interpretation and native applicati
 acceptance. Physical replacement does not update opaque index offsets or infer
 payload cross-references. The [GUID-header view](../flow-headers/README.md)
 separately reads and edits established prefixes. The [record-433 view](../flow-arrays/README.md)
-adds compressed signed arrays and existing-cell edits. Grouped record 404 and
-the later documented Flow schemas remain separate required work.
+adds compressed signed arrays and existing-cell edits. The [record-404 view](../flow-groups/README.md)
+adds versioned grouped words and stored-field edits. The later documented Flow
+schemas and native application acceptance remain required work.
 
 The frozen packet includes all three installed carriers: 66 records across
 2,936,303 original bytes, plus owned empty, duplicate-ID and reserved-ID cases.

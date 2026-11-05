@@ -2,11 +2,13 @@
 mod arrays;
 mod decode;
 mod edit;
+mod groups;
 mod header;
 mod payload_codec;
 mod types;
 use crate::{BessemerError, FailureClass, Result};
 pub use arrays::*;
+pub use groups::*;
 pub use header::*;
 use std::sync::Arc;
 pub use types::*;
