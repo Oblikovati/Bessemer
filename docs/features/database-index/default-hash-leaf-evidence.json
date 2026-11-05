@@ -1,0 +1,239 @@
+{
+  "provider_note": "No Ghidra procedure recovered at17940. Constructor binds exact callback. REA read112 bytes; Capstone reachable CFG selects109 bytes and excludes3 padding bytes. No invented procedure metadata.",
+  "constructor_evidence": "ev_15e81bb46739883ecf7346720b4c4660b212e05cbb8df47488f5d26f6b12f9da",
+  "read_evidence": "ev_c0a3751dfda9fb73eaa1b0191c5d3223600277e17042bdd248d13d03990dfa86",
+  "capstone_version": "5.0.7",
+  "source_span": {
+    "start": "0x180017940",
+    "end_exclusive": "0x1800179ad",
+    "file_offset": 93504,
+    "bytes": 109,
+    "sha256": "3d733a04fff9277fb3fb62cbb816431eaa7366913b2a3260a0560d42e5a38f64"
+  },
+  "instructions": [
+    {
+      "address": "0x180017940",
+      "bytes": "b800080000",
+      "mnemonic": "mov",
+      "operands": "eax, 0x800"
+    },
+    {
+      "address": "0x180017945",
+      "bytes": "41b805150000",
+      "mnemonic": "mov",
+      "operands": "r8d, 0x1505"
+    },
+    {
+      "address": "0x18001794b",
+      "bytes": "3bd0",
+      "mnemonic": "cmp",
+      "operands": "edx, eax"
+    },
+    {
+      "address": "0x18001794d",
+      "bytes": "0f46c2",
+      "mnemonic": "cmovbe",
+      "operands": "eax, edx"
+    },
+    {
+      "address": "0x180017950",
+      "bytes": "448bc8",
+      "mnemonic": "mov",
+      "operands": "r9d, eax"
+    },
+    {
+      "address": "0x180017953",
+      "bytes": "4c03c9",
+      "mnemonic": "add",
+      "operands": "r9, rcx"
+    },
+    {
+      "address": "0x180017956",
+      "bytes": "493bc9",
+      "mnemonic": "cmp",
+      "operands": "rcx, r9"
+    },
+    {
+      "address": "0x180017959",
+      "bytes": "734b",
+      "mnemonic": "jae",
+      "operands": "0x1800179a6"
+    },
+    {
+      "address": "0x18001795b",
+      "bytes": "0f1f440000",
+      "mnemonic": "nop",
+      "operands": "dword ptr [rax + rax]"
+    },
+    {
+      "address": "0x180017960",
+      "bytes": "0fb601",
+      "mnemonic": "movzx",
+      "operands": "eax, byte ptr [rcx]"
+    },
+    {
+      "address": "0x180017963",
+      "bytes": "48ffc1",
+      "mnemonic": "inc",
+      "operands": "rcx"
+    },
+    {
+      "address": "0x180017966",
+      "bytes": "416bd021",
+      "mnemonic": "imul",
+      "operands": "edx, r8d, 0x21"
+    },
+    {
+      "address": "0x18001796a",
+      "bytes": "03d0",
+      "mnemonic": "add",
+      "operands": "edx, eax"
+    },
+    {
+      "address": "0x18001796c",
+      "bytes": "493bc9",
+      "mnemonic": "cmp",
+      "operands": "rcx, r9"
+    },
+    {
+      "address": "0x18001796f",
+      "bytes": "7339",
+      "mnemonic": "jae",
+      "operands": "0x1800179aa"
+    },
+    {
+      "address": "0x180017971",
+      "bytes": "0fb601",
+      "mnemonic": "movzx",
+      "operands": "eax, byte ptr [rcx]"
+    },
+    {
+      "address": "0x180017974",
+      "bytes": "48ffc1",
+      "mnemonic": "inc",
+      "operands": "rcx"
+    },
+    {
+      "address": "0x180017977",
+      "bytes": "446bc221",
+      "mnemonic": "imul",
+      "operands": "r8d, edx, 0x21"
+    },
+    {
+      "address": "0x18001797b",
+      "bytes": "4403c0",
+      "mnemonic": "add",
+      "operands": "r8d, eax"
+    },
+    {
+      "address": "0x18001797e",
+      "bytes": "493bc9",
+      "mnemonic": "cmp",
+      "operands": "rcx, r9"
+    },
+    {
+      "address": "0x180017981",
+      "bytes": "7323",
+      "mnemonic": "jae",
+      "operands": "0x1800179a6"
+    },
+    {
+      "address": "0x180017983",
+      "bytes": "0fb601",
+      "mnemonic": "movzx",
+      "operands": "eax, byte ptr [rcx]"
+    },
+    {
+      "address": "0x180017986",
+      "bytes": "48ffc1",
+      "mnemonic": "inc",
+      "operands": "rcx"
+    },
+    {
+      "address": "0x180017989",
+      "bytes": "416bd021",
+      "mnemonic": "imul",
+      "operands": "edx, r8d, 0x21"
+    },
+    {
+      "address": "0x18001798d",
+      "bytes": "03d0",
+      "mnemonic": "add",
+      "operands": "edx, eax"
+    },
+    {
+      "address": "0x18001798f",
+      "bytes": "493bc9",
+      "mnemonic": "cmp",
+      "operands": "rcx, r9"
+    },
+    {
+      "address": "0x180017992",
+      "bytes": "7316",
+      "mnemonic": "jae",
+      "operands": "0x1800179aa"
+    },
+    {
+      "address": "0x180017994",
+      "bytes": "446bc221",
+      "mnemonic": "imul",
+      "operands": "r8d, edx, 0x21"
+    },
+    {
+      "address": "0x180017998",
+      "bytes": "0fb611",
+      "mnemonic": "movzx",
+      "operands": "edx, byte ptr [rcx]"
+    },
+    {
+      "address": "0x18001799b",
+      "bytes": "48ffc1",
+      "mnemonic": "inc",
+      "operands": "rcx"
+    },
+    {
+      "address": "0x18001799e",
+      "bytes": "4403c2",
+      "mnemonic": "add",
+      "operands": "r8d, edx"
+    },
+    {
+      "address": "0x1800179a1",
+      "bytes": "493bc9",
+      "mnemonic": "cmp",
+      "operands": "rcx, r9"
+    },
+    {
+      "address": "0x1800179a4",
+      "bytes": "72ba",
+      "mnemonic": "jb",
+      "operands": "0x180017960"
+    },
+    {
+      "address": "0x1800179a6",
+      "bytes": "418bc0",
+      "mnemonic": "mov",
+      "operands": "eax, r8d"
+    },
+    {
+      "address": "0x1800179a9",
+      "bytes": "c3",
+      "mnemonic": "ret",
+      "operands": ""
+    },
+    {
+      "address": "0x1800179aa",
+      "bytes": "8bc2",
+      "mnemonic": "mov",
+      "operands": "eax, edx"
+    },
+    {
+      "address": "0x1800179ac",
+      "bytes": "c3",
+      "mnemonic": "ret",
+      "operands": ""
+    }
+  ],
+  "rule": "Unsigned min(DWORD length,2048); seed5381; unsigned bytes; h=(33*h+b) modulo2^32. Empty length returns5381; odd/even prefix lengths return separate accumulator registers. Valid native pointers/arithmetic remain preconditions.",
+  "target_executed": false
+}

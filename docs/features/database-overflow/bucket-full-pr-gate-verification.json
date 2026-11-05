@@ -1,0 +1,16 @@
+{
+  "issue": 229,
+  "source_commit": "c5c44001",
+  "command": "cargo xtask pr",
+  "terminal_exit_code": 0,
+  "log": "target\\hash-writer-bucket-combined-full-pr-gate.log",
+  "log_sha256": "7711d32b0d450e7c61ab899432945b52474e9ee7db7a4ff177d1f30c50d5388e",
+  "test_summaries": 344,
+  "passed": 4341,
+  "failed": 0,
+  "ignored": 232,
+  "exclusions": [
+    "Later native mixed document census tests at 71f1417c",
+    "Database index investigation for issue 230"
+  ]
+}
