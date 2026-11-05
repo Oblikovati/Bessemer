@@ -738,3 +738,6 @@ mod mold_parting_line_tests;
 
 #[path = "../../tests/model_archives/mold_parting_geometry.rs"]
 mod mold_parting_geometry_tests;
+
+#[path = "../../tests/model_archives/conic_bend.rs"]
+mod conic_bend_tests;

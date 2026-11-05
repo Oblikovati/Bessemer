@@ -451,6 +451,9 @@ shared non-default plane layout and its typed containing-plane role.
 
 [Edge flanges](docs/features/edge-flanges/README.md) covers complete edge-flange,
 single-bend and per-edge records, including verified saved sheet-metal state.
+[Conic bend data](docs/features/conic-bend/README.md) preserves complete
+schema-1 point/vector/scalar records and signed byte-backed words inside
+OneBend documents, including shared identities and fresh edit reversals.
 
 [Sheet-metal folds](docs/features/sheet-folds/README.md) documents complete 3D bends,
 folds and unfolds, including raw compressed bodies and ordered maps.

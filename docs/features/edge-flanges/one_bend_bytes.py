@@ -1,6 +1,7 @@
 """Single-bend continuation and its explicit unsupported raw-body boundaries (#54)."""
 from __future__ import annotations
 import struct
+from collections.abc import Callable
 from typing import TYPE_CHECKING
 from freeze_views import transform
 if TYPE_CHECKING:
@@ -39,9 +40,10 @@ def ordinary_handle(graph: EdgeGraph) -> bytes:
     return (graph.marker() if present else bytes(2))+(direct_handle(graph.style) if present else b'')+graph.listing()
 
 
-def continuation(graph: EdgeGraph) -> bytes:
-    """Preserve both compact transforms and the conic null pointer; e.g. continuation(graph)."""
-    raw=graph.marker()+graph.component()+graph.component()+struct.pack('<i',-1)+bytes(2)
+def continuation(graph: EdgeGraph, conic: Callable[[],bytes] | None=None) -> bytes:
+    """Preserve transforms and default null or supplied complete conic pointer; e.g. continuation(graph)."""
+    raw=graph.marker()+graph.component()+graph.component()+struct.pack('<i',-1)
+    raw+=conic() if conic is not None else bytes(2)
     raw+=transform(graph.style%2==1,(0,7,0x1a,0x2b,0x40,0x4c)[graph.style])+transform(False,7)
     raw+=struct.pack('<5i',-2147483648,2147483647,-1,0,-32769)
     raw+=graph.marker()+graph.component()+graph.component()

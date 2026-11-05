@@ -52,6 +52,8 @@
 
 ### Added
 
+- Added ordinary schema-1 conic bend data inside OneBend archives, preserving exact numeric bits, shared references and fresh edit reversals. (#218)
+
 - Preserved mold parting-geometry surfaces, direct settings and constructor-dependent child records through exact stored-field edits and fresh reversals. (#217)
 
 - Added modern mold parting-line features, settings and edge/split-info archives, with strict kernel frames, lossless edits and fresh reversals. (#216)
