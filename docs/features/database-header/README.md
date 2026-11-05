@@ -16,6 +16,8 @@ Names retain embedded NUL and non-UTF-8 bytes. A declared name that exceeds the
 487 bytes available in the selected buffer is rejected with its count in the
 error. The native reader's clamp is not applied as an offline repair. Packed
 time remains an unchanged u32, without calendar validation or conversion.
+[Packed-time components](../database-time/README.md) provide the separately
+documented wrapping arithmetic and fixed-field extraction when explicitly used.
 
 `DatabaseHeaderBuffer` owns its fields and trailing bytes. Construction requires
 explicit fields plus enough trailing bytes to account for all 512 bytes. The

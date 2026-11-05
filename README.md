@@ -14,6 +14,8 @@ for allocation checks, native corpus results and validation limits.
 raw name/time fields and uninterpreted trailing bytes. See the
 [header-buffer evidence](docs/features/database-header/README.md) for validation
 scope and database limitations.
+[Packed-time helpers](docs/features/database-time/README.md) preserve the native
+wrapping and arithmetic-shift behavior when converting those stored words.
 
 `bessemer::simulation` reads, constructs and writes complete observed MAS tables
 and paired family-8 GEN images. It exposes stored mesh fields and isolated cell

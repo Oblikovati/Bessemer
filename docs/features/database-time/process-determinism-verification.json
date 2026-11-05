@@ -1,0 +1,31 @@
+{
+  "issue": 223,
+  "fresh_processes": 2,
+  "terminal_exit_codes": [
+    0,
+    0
+  ],
+  "outputs_equal": true,
+  "bytes_per_process": 227930,
+  "output_sha256": "c74433c5f518181ab3e09ec77b19695b2c3e83549ac42d36cda2919554078a9c",
+  "independent_packed_words_per_process": 8422,
+  "packed_words_match_independent_golden": true,
+  "containing_documents_per_process": 6,
+  "containing_document_lengths": [
+    31629,
+    33888,
+    31632,
+    31590,
+    33888,
+    31591
+  ],
+  "fresh_document_reopens": true,
+  "probe_retained": false,
+  "sha256": {
+    "target/database-time-process-probe.rs": "13605beaa61ca606ca6b5d4ae1064015bd6adffdb9f9c71a650cdf84875ff5df",
+    "target/database-time-process-probe.exe": "257916ff2335ef8bcbd497ae687b71cd672a3f0566c09b6ebedc081f94d6c4eb",
+    "target/libbessemer_database_time.rlib": "3f5d8e014b2d59930dedb7980ad9f9134e75661110c6042209f8c31bc238c108",
+    "tests/fixtures/database-time/cases.bin": "a2b3a1fd2cf62d62bc1c49a1d4d66bde84c443338ab1f1741d3b4f86655d87ac",
+    "tests/fixtures/blank-part.SLDPRT": "b52e080ba2cc64d1d07ed28306f27281b07521aef550bc0c7fea8cd54be2b276"
+  }
+}

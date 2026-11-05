@@ -3,7 +3,9 @@
 //! Profile selection declares the documented provider context. This codec checks
 //! the header prefix and retains the uninterpreted tail; it does not validate a database.
 mod codec;
+mod time;
 mod types;
+pub use time::DatabaseTimeComponents;
 pub use types::{DatabaseHeaderFields, DatabaseHeaderProfile};
 
 use crate::Result;
