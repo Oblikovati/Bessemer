@@ -1,0 +1,31 @@
+{
+  "issue": 181,
+  "stage": "Broad library unit regression acceptance after stored visual route implementation",
+  "exit_code": 0,
+  "process_reaped": true,
+  "passed": 1308,
+  "failed": 0,
+  "ignored": 10,
+  "test_seconds": 549.23,
+  "command": "target/entity-visual-native-assembly-tests.exe --nocapture",
+  "test_binary": {
+    "path": "target/entity-visual-native-assembly-tests.exe",
+    "bytes": 234493440,
+    "sha256": "0d330d444a34057cfd8139e6ed5bd9e910d573952228199dd7265e02f06f3531"
+  },
+  "compiler_binding": {
+    "path": "docs/features/entity-visual-state/native-assembly-rust-verification.json",
+    "bytes": 4715,
+    "sha256": "b76461e83a27facee7599bf92c852006140c77b18552e26b52679be870fbcd3e"
+  },
+  "log": {
+    "path": "target/entity-visual-library-regression.log",
+    "bytes": 166819,
+    "sha256": "ff1afe01f1d39db0cdd57674b367985571ab6e843fd33cad5427ef75c48fb5c1"
+  },
+  "qualifications": [
+    "This is the full nonignored library unit suite in the separately compiled unit executable, not a Cargo repository gate or an integration-suite rerun. Its compiler inputs/flags and binary hash are retained in the native assembly binding.",
+    "The ten private-native-input exclusions remain unchanged. The exhaustive part-native gate still runs separately, and local Cargo/Clippy plus fresh platform/publication gates remain required.",
+    "No rendering or geometry-validity claim is made. Humanizer unavailable; prose pass pending maintainer review."
+  ]
+}

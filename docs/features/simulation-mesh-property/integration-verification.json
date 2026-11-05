@@ -1,0 +1,63 @@
+{
+  "issue": 163,
+  "pr": "https://github.com/Oblikovati/Bessemer/pull/173",
+  "publication_head": "443d7cb7e5e7b991747eabe8829efc83e1874d1f",
+  "publication_tree": "950785c0eae4deb1673f831b2cee37e38ddeb85f",
+  "accepted_source_cut": "270c51a907e41c29efa18c667d9451add7592207",
+  "merge_commit": "ae7fedbd84461fad4c77c02dfe8e8bbdb331bd18",
+  "merged_at": "2026-11-02T01:49:16Z",
+  "integration_branch": "codex/interop-candidate",
+  "required_checks": [
+    {
+      "name": "PR gate (Linux x86_64)",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "completed_at": "2026-11-01T22:27:31Z",
+      "url": "https://github.com/Oblikovati/Bessemer/actions/runs/41355680108/job/124995080735"
+    },
+    {
+      "name": "Full gate (Linux x86_64)",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "completed_at": "2026-11-02T01:48:42Z",
+      "url": "https://github.com/Oblikovati/Bessemer/actions/runs/41355680108/job/124995080786"
+    },
+    {
+      "name": "Full gate (macOS x86_64)",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "completed_at": "2026-11-01T23:49:54Z",
+      "url": "https://github.com/Oblikovati/Bessemer/actions/runs/41355680108/job/124995080866"
+    },
+    {
+      "name": "Full gate (macOS arm64)",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "completed_at": "2026-11-01T22:40:58Z",
+      "url": "https://github.com/Oblikovati/Bessemer/actions/runs/41355680108/job/124995080734"
+    },
+    {
+      "name": "Full gate (Windows x64)",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "completed_at": "2026-11-01T22:57:27Z",
+      "url": "https://github.com/Oblikovati/Bessemer/actions/runs/41355680108/job/124995080857"
+    }
+  ],
+  "linux_full_includes_thread_sanitizer": true,
+  "issue_closed": true,
+  "publication_head_integrated": true,
+  "cleanup": {
+    "worktree_removed": true,
+    "local_branch_removed": true,
+    "remote_branch_removed": true,
+    "build_directory_removed": true,
+    "active_publication_processes": 0
+  },
+  "excluded": [
+    "Native application/writer execution",
+    "Geometry acceptance and unresolved field meanings",
+    "Whole-format parity",
+    "Package release or version bump"
+  ]
+}

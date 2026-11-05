@@ -6,6 +6,20 @@ use crate::archive_codec::ArchiveCursor;
 use crate::header::{ArchiveVersion, DocumentHeader};
 use std::sync::Arc;
 
+#[path = "../support/unselected_document_streams.rs"]
+mod unselected_document_streams;
+
+#[path = "../model_dimension_state/native.rs"]
+mod stored_dimension_views;
+#[path = "../model_intersection_reference/native_edits.rs"]
+mod stored_intersection_references;
+#[path = "../model_node_state/native.rs"]
+mod stored_node_views;
+#[path = "../model_sketch_reference_lookup/native.rs"]
+mod stored_sketch_lookup_keys;
+#[path = "../model_visual_carriers/native.rs"]
+mod stored_visual_carriers;
+
 const LIMITS: ModelArchiveLimits = ModelArchiveLimits {
     maximum_bytes: 64 * 1024 * 1024,
     maximum_fields: 2_000_000,
@@ -40,19 +54,7 @@ fn reconstruct(
     case: &ResolvedCorpusCase<'_>,
     kernel: Option<CompressedKernelContext>,
 ) -> Result<()> {
-    let configuration = ConfigurationId::from_stream_name(case.label.rsplit_once("::").unwrap().1)?;
-    let header = Arc::new(DocumentHeader::from_bytes(
-        case.header,
-        case.version,
-        LIMITS.maximum_objects,
-    )?);
-    let context = super::PartConfigurationContext::ordinary_external_xml(
-        configuration,
-        case.version,
-        header,
-        kernel,
-    )?;
-    let source = PartConfigurationArchive::from_bytes(case.configuration, context, LIMITS)?;
+    let source = configuration_for_case(case, kernel)?;
     let manager = super::configuration_manager::parse(case.manager, case.version, LIMITS)?;
     assert!(
         super::encode_fields(&manager.fields, LIMITS.maximum_bytes)? == case.manager,
@@ -67,8 +69,16 @@ fn reconstruct(
         case.manager,
         LIMITS,
     )?;
+    assert_reconstructed_fields(case, &public, &rebuilt.fields)
+}
+
+fn assert_reconstructed_fields(
+    case: &ResolvedCorpusCase<'_>,
+    public: &super::PartResolvedFeaturesArchive,
+    rebuilt: &[super::ModelField],
+) -> Result<()> {
     assert!(
-        public.fields() == rebuilt.fields,
+        public.fields() == rebuilt,
         "public fields differ for {}",
         case.label
     );
@@ -78,11 +88,30 @@ fn reconstruct(
         case.label
     );
     assert!(
-        super::encode_fields(&rebuilt.fields, LIMITS.maximum_bytes)? == case.features,
+        super::encode_fields(rebuilt, LIMITS.maximum_bytes)? == case.features,
         "complete feature reconstruction differs for {}",
         case.label
     );
     Ok(())
+}
+
+fn configuration_for_case(
+    case: &ResolvedCorpusCase<'_>,
+    kernel: Option<CompressedKernelContext>,
+) -> Result<PartConfigurationArchive> {
+    let configuration = ConfigurationId::from_stream_name(case.label.rsplit_once("::").unwrap().1)?;
+    let header = Arc::new(DocumentHeader::from_bytes(
+        case.header,
+        case.version,
+        LIMITS.maximum_objects,
+    )?);
+    let context = super::PartConfigurationContext::ordinary_external_xml(
+        configuration,
+        case.version,
+        header,
+        kernel,
+    )?;
+    PartConfigurationArchive::from_bytes(case.configuration, context, LIMITS)
 }
 
 fn reported_outcome(index: u32, result: Result<()>) -> bool {

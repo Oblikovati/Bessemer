@@ -1,0 +1,88 @@
+{
+  "issue": 185,
+  "stage": "Complete native selector/index archive operation cohort",
+  "processes_reaped": 2,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "tests_per_process": 1,
+  "test_seconds": [
+    66.19,
+    64.83
+  ],
+  "complete_native_streams": 8,
+  "selector_edits_per_process": 68,
+  "signed_index_edits_per_process": 17,
+  "total_edits_per_process": 85,
+  "artifacts": [
+    {
+      "path": "tests/model_intersection_reference/native_edits.rs",
+      "bytes": 7240,
+      "sha256": "54affceda9b9e3c9ef19ed3b335936ec59f00e5530cfb51c80b7d3f822398913"
+    },
+    {
+      "path": "tests/model_intersection_reference/native_roles.rs",
+      "bytes": 5344,
+      "sha256": "e22c02102ae8b0fa81b6832fc5b8fdfa5d5660f0485861bf14309480297a4d3f"
+    },
+    {
+      "path": "docs/features/intersection-index-classification/native-role-span-binding.json",
+      "bytes": 3030,
+      "sha256": "56a621baa45cb3cc817f9c624fa3ee36006fd6a8f5c43634ec24cde86b843d37"
+    },
+    {
+      "path": "target/intersection-role-native-index-spans.bin",
+      "bytes": 208,
+      "sha256": "f8ad2c5790c1377756f03cde20445ed40040a8452c8d75e89528eb7ae537afb8"
+    },
+    {
+      "path": "target/native-stored-role-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/native-stored-role-final-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/native-stored-role-process-1.log",
+      "bytes": 1027,
+      "sha256": "e967dff2ab172146ef9df00faa82c5e792770f5b17c9e5195f52c2300d253463"
+    },
+    {
+      "path": "target/native-stored-role-process-2.log",
+      "bytes": 1027,
+      "sha256": "5ec8515394bd54bc89824034a84adcbcfb12eb857229cc7d9428c6828e5255b7"
+    },
+    {
+      "path": "target/native-stored-role-projection-regression.log",
+      "bytes": 1728,
+      "sha256": "937c7ee64af6ffe55c635bf68ad30aad45deb7815065177d3bce7a9c4f5fdc9c"
+    },
+    {
+      "path": "target/native-stored-role-clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/native-stored-role-format.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "coverage_credit": 0,
+  "checks": [
+    "The retained complete906-case BRF1 identity is independently bound to all eight published Source feature hashes, versions and literal C3308/C3310 scalar spans. No state/value filter excludes records.",
+    "Each actual native typed view equals the original Source scalar words. All68 selector and17 saved-index replacements match independent complete-stream patches and complete expected fields.",
+    "Every edit reports Changed, one exact original parent and resolved result, derived history, correct unchanged count and stale-view rejection. Original source bytes remain unchanged.",
+    "The final process additionally asserts exact stored coverage mode and fidelity. Whole-unit Clippy, formatting, size audit and all12 reference/index projection regressions pass."
+  ],
+  "qualifications": [
+    "The first binary preceded the two explicit coverage-mode/fidelity assertions; the final binary includes both. Both processes cover the complete identical native cohort.",
+    "Tests require proprietary retained packets and the explicit native kernel schema and are deliberately ignored by ordinary cargo test; both executions explicitly included them.",
+    "No native document edits, actual changed native-output Source replay, concurrency, full Cargo or exact-head publication acceptance is claimed by this gate.",
+    "No target matcher, callback, provider, geometry or native application opening is executed. Humanizer unavailable; prose review pending."
+  ]
+}

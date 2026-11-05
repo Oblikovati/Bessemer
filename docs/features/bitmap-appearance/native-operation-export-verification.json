@@ -1,0 +1,18 @@
+{
+  "issue": 189,
+  "passed": true,
+  "primary_requests_per_process": 60,
+  "changed_per_process": 52,
+  "noops_per_process": 8,
+  "exports_byte_identical": true,
+  "export_bytes": 15379928,
+  "export_sha256": "49886cc560355294d74d200ee62a22da5bbff1dd59e2c059a1315d96ca5e0f81",
+  "checks": [
+    "All four native corpus inputs match original signed/unsigned scalar oracles",
+    "Every output is an exact complete literal single-word patch",
+    "Every version and stream extent matches",
+    "Both fresh exports are byte-identical",
+    "Packets reach exact EOF"
+  ],
+  "collector_sha256": "55a96d31c1c06df778ad03d8beedb0313c068ef38129e4d41b1f188c93534b5c"
+}

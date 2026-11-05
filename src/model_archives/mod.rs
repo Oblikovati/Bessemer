@@ -241,6 +241,10 @@ mod move_copy_bodies;
 mod move_copy_deformation;
 mod move_faces;
 mod node;
+mod node_state;
+pub use node_state::{ModelNodeStoredFlag, ModelNodeStoredState};
+mod dimension_state;
+pub use dimension_state::{ModelDimensionStoredEdit, ModelDimensionStoredState};
 mod note_text;
 mod object_body;
 mod object_values;
@@ -343,3 +347,25 @@ fn model_failure(mut error: BessemerError) -> BessemerError {
     error.entity = format!("model stream: {}", error.entity);
     error
 }
+
+mod entity_visual_state;
+pub use entity_visual_state::ModelEntityVisualStoredState;
+mod sketch_reference_lookup;
+pub use sketch_reference_lookup::{
+    ModelSketchReferenceStoredLookupEdit, ModelSketchReferenceStoredLookupKeys,
+    ModelSketchReferenceStoredLookupState,
+};
+mod bitmap_appearance;
+mod bitmap_transparency;
+pub use bitmap_appearance::{
+    ModelBitmapAppearanceEdit, ModelBitmapAppearanceState, ModelBitmapAppearanceWords,
+};
+pub use bitmap_transparency::{
+    ModelBitmapTransparencyEdit, ModelBitmapTransparencyState, ModelBitmapTransparencyWords,
+};
+
+mod intersection_reference;
+pub use intersection_reference::{
+    ModelIntersectionEdgeStoredIndex, ModelIntersectionReferenceStoredEdit,
+    ModelIntersectionReferenceStoredState, ModelIntersectionReferenceStoredWords,
+};

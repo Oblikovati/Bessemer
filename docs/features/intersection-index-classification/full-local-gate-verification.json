@@ -1,0 +1,54 @@
+{
+  "issues": [
+    184,
+    185,
+    186
+  ],
+  "passed": true,
+  "process_reaped": true,
+  "exit_code": 0,
+  "head": "cef6cdbad864c51c5568dd3f86f11b95c54968a3",
+  "platform": "Windows x64",
+  "toolchain": "Rust1.99.0-x86_64-pc-windows-msvc",
+  "command": "cargo xtask pr",
+  "target_directory": "target/stored-role-pr-build",
+  "build_jobs": 1,
+  "test_summaries": 312,
+  "tests_passed": 3928,
+  "tests_failed": 0,
+  "ignored_tests": 204,
+  "checks": [
+    "Changed Rust formatting including private included registry",
+    "Whole-workspace all-target Clippy with warnings denied",
+    "Workspace build with locked dependencies",
+    "Workspace unit, integration and documentation tests with locked dependencies",
+    "Exact HEAD and unchanged compiled-code/configuration guard"
+  ],
+  "separate_explicit_native_acceptance": "final-layout-native-verification.json",
+  "separate_actual_output_source_acceptance": "classification-actual-source-verification.json and edge-index-actual-source-verification.json",
+  "initial_attempt": "Prior963bbbc gate stopped on formatting of private included native test helpers. Original failure logs retained; prescribed formatter and private helper splits were committed ascef6cdb before this full restart. No behavior, fixture, assertion or tolerance was relaxed.",
+  "artifacts": {
+    "target/stored-role-isolated-pr-current.log": {
+      "bytes": 517116,
+      "sha256": "6d2efa6f2dd37ab2614e242c8c16c873c1c113d21aa8873041569046054bcb5d"
+    },
+    "target/stored-role-isolated-pr-current-followup.log": {
+      "bytes": 196,
+      "sha256": "676b99d5e1411ddd96b74b22a16b820963a281a44bb396ffd9f7b50def77fbdd"
+    },
+    "target/stored-role-isolated-pr.log": {
+      "bytes": 25122,
+      "sha256": "5cf74f43013ed6ec3b1d7120373cdc2fc3ce988a1723d235be61c61be0a2e2a3"
+    },
+    "target/stored-role-isolated-pr-followup.log": {
+      "bytes": 106,
+      "sha256": "1115cddf7d3399ac2298ea9915b71886b9afeca953ceccf18d38a0b269ef37a1"
+    }
+  },
+  "exclusions": [
+    "204 ignored checks were not run by this Cargo command; explicit native/Source gates remain separately scoped",
+    "No ThreadSanitizer claim from this Windows gate",
+    "No required remote-platform or exact-head publication acceptance claimed",
+    "No geometry or complete documented-schema parity claimed"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "issue": 188,
+  "passed": true,
+  "process_reaped": true,
+  "exit_code": 0,
+  "command": "cargo xtask pr",
+  "tested_head": "129b9faae2c4097ec8db2c53af466a58427f1c9e",
+  "tested_tree": "a637c15456a49254a04c1bc6001ed16a0d25d1ae",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "test_summaries": 314,
+  "tests_passed": 3953,
+  "tests_failed": 0,
+  "tests_ignored": 206,
+  "log_sha256": "9b0d85016c28eec64724ca3d9499a1abbf26e14d25bb1de0b9a7014e9c7a96f3",
+  "log_bytes": 519123,
+  "qualification": "Full local gate for the root source cut before integration of the new native lookup tests and feature189. Native ignored tests and remote exact-head checks remain independent.",
+  "excluded": [
+    "The three later native lookup tests",
+    "Feature189 bitmap appearance implementation",
+    "Exact-head remote publication and ThreadSanitizer",
+    "Native application/writer equivalence",
+    "Whole-schema parity"
+  ]
+}

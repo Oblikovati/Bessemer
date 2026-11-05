@@ -1,0 +1,30 @@
+{
+  "pull_request": 191,
+  "base_revision": "425f7034dfa70a587abda229adbcaed4d007a5fa",
+  "evidence_origin_revision": "a3b6d2917d1cfe164719568c7a4c8225e0bef034",
+  "production_module_paths_unchanged": [
+    "src/entity_visual",
+    "src/model_archives/sketch_reference_lookup",
+    "src/model_archives/entity_visual_state.rs",
+    "src/display_lists/entity_visual_state.rs"
+  ],
+  "method": "git diff base HEAD --name-only returned no paths for the listed production modules; test-source diff also returned no visual or lookup paths",
+  "copied_completed_evidence": [
+    {
+      "path": "docs/features/entity-visual-state/complete-native-edit-verification.json",
+      "origin_capture_sha256": "7c9b4efb6672befbd04f06da7e5f0aa3c7cb2d2b37da38252d22684f8635843c",
+      "sha256": "11b94605876683c04dd8c3908062ec39106f377cb0b7d79a8621dbd295baf7ed",
+      "representation": "Owned JSON normalized to LF; values unchanged"
+    },
+    {
+      "path": "docs/features/sketch-reference-configuration-keys/native-archive-operation-verification.json",
+      "origin_capture_sha256": "511ca691888b66ca716e8559f27d120cc54752003c3759b38aa2be924522efc6",
+      "sha256": "524baf3139b38d2d5cd02a00e99e03701826a284d73d111db840633570128cca",
+      "representation": "Owned JSON normalized to LF; values unchanged"
+    }
+  ],
+  "exclusions": [
+    "The complete-document native lookup forward/reverse process remains live; no pass is claimed.",
+    "No native application reload or whole-schema parity is established."
+  ]
+}

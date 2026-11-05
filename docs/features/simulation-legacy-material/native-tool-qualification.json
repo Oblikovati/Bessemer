@@ -1,0 +1,21 @@
+{
+  "requested_tool": "REA.inspect_with_objdump",
+  "operation": "file_headers",
+  "path": "C:/Program Files/SOLIDWORKS Corp/SOLIDWORKS/Simulation/cosworks.dll",
+  "error": {
+    "code": "capability_unavailable",
+    "category": "unsupported_provider",
+    "message": "This analysis is unavailable for the current target. Choose another analysis or target.",
+    "retryable": false,
+    "remediation": {
+      "action": "This analysis is unavailable for the current target. Choose another analysis or target."
+    },
+    "details": {
+      "provider_id": "objdump",
+      "operation": "inspect_with_objdump",
+      "reason": "Unable to run configured command (ERR_REA_WINDOWS_NATIVE)"
+    }
+  },
+  "artifact_evidence_produced": false,
+  "fallback": "Existing pefile reader with exact full-image and recorded-interval hashes; no target code execution"
+}

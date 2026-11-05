@@ -1,0 +1,29 @@
+{
+  "issue": 188,
+  "passed": true,
+  "process_reaped": true,
+  "exit_code": 0,
+  "corpus_cases": 906,
+  "nonempty_key_streams": 794,
+  "empty_key_streams": 112,
+  "physical_key_pairs": 6863,
+  "signed_scalar_checks": 13726,
+  "seconds": 89.21,
+  "executable_sha256": "82bc3816329daae90299527d4c3e8b5740a4af868b6ef1f2b1d990abe1f9991a",
+  "log_sha256": "6d366c5a7a07705097e7af4c7cd27a33ec5cf8ee187b8c026271d8eaca71c635",
+  "checks": [
+    "All complete native archives reconstruct exactly",
+    "Every enumerated key state agrees with independent signed scalar oracle",
+    "Explicit same-revision projection agrees with enumerated state",
+    "Each original key agrees with its literal saved byte span",
+    "Nonempty and empty stream counts agree with independent source evidence",
+    "No source input mutation"
+  ],
+  "excluded": [
+    "Native edit gate still running",
+    "Complete-document native reversal",
+    "Native target execution",
+    "Native instruction provenance",
+    "Exact-head remote publication"
+  ]
+}

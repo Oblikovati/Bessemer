@@ -1,0 +1,153 @@
+{
+  "evidence": "C-1910",
+  "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+  "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "target_executed": false,
+  "coverage_credit": 0,
+  "named_exports": 45766,
+  "functions": [
+    {
+      "method": "useColor",
+      "bit": 1,
+      "export": "?useColor@moEntVisProp_c@@QEAAHXZ",
+      "start": "0x4b2b4c60",
+      "end": "0x4b2b4c68",
+      "bytes": "0fbf410283e001c3",
+      "sha256": "73090152e20217c02735983759137d79647661bb62c12612ec47449fbb24377a"
+    },
+    {
+      "method": "setFlagColorByLayer",
+      "bit": 1,
+      "export": "?setFlagColorByLayer@moEntVisProp_c@@QEAAXXZ",
+      "start": "0x4b2b19f0",
+      "end": "0x4b2b19f6",
+      "bytes": "6683490201c3",
+      "sha256": "b9ddb7269d14109ecfc2d8ae3c81d88f8e001eb0b454162cb2b8186c7c9388d8"
+    },
+    {
+      "method": "unsetFlagColorByLayer",
+      "bit": 1,
+      "export": "?unsetFlagColorByLayer@moEntVisProp_c@@QEAAXXZ",
+      "start": "0x4b2b42d0",
+      "end": "0x4b2b42d6",
+      "bytes": "66836102fec3",
+      "sha256": "987fb669088b8c32101b31f0ebda0df14be98d6f62460d9c0d7686c9ac455d8e"
+    },
+    {
+      "method": "useFont",
+      "bit": 2,
+      "export": "?useFont@moEntVisProp_c@@QEAAHXZ",
+      "start": "0x4b2b4c70",
+      "end": "0x4b2b4c78",
+      "bytes": "0fbf410283e002c3",
+      "sha256": "8cb824a1e4994a45c7feb3ae06ac76313b63bd7cfd3f4ee803c7a45f31e24863"
+    },
+    {
+      "method": "setFlagFontByLayer",
+      "bit": 2,
+      "export": "?setFlagFontByLayer@moEntVisProp_c@@QEAAXXZ",
+      "start": "0x4b2b1a00",
+      "end": "0x4b2b1a06",
+      "bytes": "6683490202c3",
+      "sha256": "b5778a32eecec0493e0f4657e67be7986b14bc74eeb0b8e63a30aae833197508"
+    },
+    {
+      "method": "unsetFlagFontByLayer",
+      "bit": 2,
+      "export": "?unsetFlagFontByLayer@moEntVisProp_c@@QEAAXXZ",
+      "start": "0x4b2b42e0",
+      "end": "0x4b2b42e6",
+      "bytes": "66836102fdc3",
+      "sha256": "9ddb8ba3525d8d7a1b43bcfdd0bc54ba27baf7c58572994d5c1b926babddf5ac"
+    },
+    {
+      "method": "useWidth",
+      "bit": 4,
+      "export": "?useWidth@moEntVisProp_c@@QEAAHXZ",
+      "start": "0x4b2b4cc0",
+      "end": "0x4b2b4cc8",
+      "bytes": "0fbf410283e004c3",
+      "sha256": "ea7974a113d381859e90fc9ba48c1f8f25198c676b45923336382877955e9c17"
+    },
+    {
+      "method": "setFlagWidthByLayer",
+      "bit": 4,
+      "export": "?setFlagWidthByLayer@moEntVisProp_c@@QEAAXXZ",
+      "start": "0x4b2b1a30",
+      "end": "0x4b2b1a36",
+      "bytes": "6683490204c3",
+      "sha256": "180c608d6d55735e17dc1656cc3d83e5a5a48d89a1f5baa34100da9c81e8177a"
+    },
+    {
+      "method": "unsetFlagWidthByLayer",
+      "bit": 4,
+      "export": "?unsetFlagWidthByLayer@moEntVisProp_c@@QEAAXXZ",
+      "start": "0x4b2b4300",
+      "end": "0x4b2b4306",
+      "bytes": "66836102fbc3",
+      "sha256": "8078f9d091a12bc6abec5bd2e1c5d8b4e078e94e1b7764f710bbd359fca12a0f"
+    },
+    {
+      "method": "useFontSP",
+      "bit": 8,
+      "export": "?useFontSP@moEntVisProp_c@@QEAAHXZ",
+      "start": "0x4b2b4c80",
+      "end": "0x4b2b4c88",
+      "bytes": "0fbf410283e008c3",
+      "sha256": "e42aff17b7c6b5ea86a14a90908cb4fd94b326cee3170e023c5fc28afed6c5a9"
+    },
+    {
+      "method": "setFlagFontByLayerSP",
+      "bit": 8,
+      "export": "?setFlagFontByLayerSP@moEntVisProp_c@@QEAAXXZ",
+      "start": "0x4b2b1a10",
+      "end": "0x4b2b1a16",
+      "bytes": "6683490208c3",
+      "sha256": "854ce969b2365205ef5aa8c084a1fc25caf255267f552d65bd74d83b555ae870"
+    },
+    {
+      "method": "unsetFlagFontByLayerSP",
+      "bit": 8,
+      "export": "?unsetFlagFontByLayerSP@moEntVisProp_c@@QEAAXXZ",
+      "start": "0x4b2b42f0",
+      "end": "0x4b2b42f6",
+      "bytes": "66836102f7c3",
+      "sha256": "5d78c6b0ccabf6bf7149cd05f8ab7e56ef5e38d22af034e046605080f94e76ad"
+    },
+    {
+      "method": "useWidthSP",
+      "bit": 16,
+      "export": "?useWidthSP@moEntVisProp_c@@QEAAHXZ",
+      "start": "0x4b2b4cd0",
+      "end": "0x4b2b4cd8",
+      "bytes": "0fbf410283e010c3",
+      "sha256": "4860ac367d5ec87b47c198312936f157b5d2a7b914990fc549b5f463bc97e1c4"
+    },
+    {
+      "method": "setFlagWidthByLayerSP",
+      "bit": 16,
+      "export": "?setFlagWidthByLayerSP@moEntVisProp_c@@QEAAXXZ",
+      "start": "0x4b2b1a40",
+      "end": "0x4b2b1a46",
+      "bytes": "6683490210c3",
+      "sha256": "399191c2f4877a78c5aeee29ae16a7363080d20d74bef72327a74b1db04b9d91"
+    },
+    {
+      "method": "unsetFlagWidthByLayerSP",
+      "bit": 16,
+      "export": "?unsetFlagWidthByLayerSP@moEntVisProp_c@@QEAAXXZ",
+      "start": "0x4b2b4310",
+      "end": "0x4b2b4316",
+      "bytes": "66836102efc3",
+      "sha256": "108b56562c5abffc2b6aa6f938486a8da27814a4b73b7de187d477108d5799c1"
+    }
+  ],
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-entity-visual-fields-native-evidence.json": "7bae27e2d9e0d6069f72aa378f2b230f57f000afe11c7764f6311dde3357e0fa",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part_entity_visual_by_layer_bits_native_audit.py": "eddcdc7ce2a708c1fa58cab9eb90fc27fc706232f5ef7c966e520375c9010b11",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-entity-visual-by-layer-bits-native.txt": "300b485f8c861f298805f12deb88ef85bcbbfbd02193982b75de26eaa2297350"
+  },
+  "limitations": [
+    "SP retained as native suffix without expanding its meaning. Upper eleven bits remain unresolved. Named bit roles do not establish full enum domain or effective layer values."
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "issue": 181,
+  "scope": "Existing complete modern display carriers only; no new visual API or full-format claim",
+  "baselines": 16,
+  "physical_visual_definitions": 14,
+  "missing_definition_controls": 2,
+  "version": 19000,
+  "document_kinds": [
+    "part",
+    "assembly"
+  ],
+  "checks": [
+    "literal seven-field projection including signaling-NaN bits",
+    "forced complete reconstruction and unchanged history",
+    "RGB replacement against independently patched complete bytes",
+    "one derived field with one parent",
+    "unchanged original bytes",
+    "history parents and results resolve only in their owning revisions",
+    "all unselected typed fields equal including object aliases",
+    "edited complete archive reparses with identical contents",
+    "reverse operation restores exact complete original bytes and fields",
+    "all14 edits persisted in complete owned part or assembly containers",
+    "display context resolved from actual document markers and declarations",
+    "all unrelated streams and ordered stream names unchanged",
+    "reversing document edit restores exact complete original document bytes"
+  ],
+  "tests": [
+    {
+      "path": "tests/component_visual_carriers.rs",
+      "bytes": 6426,
+      "sha256": "a0a20533fece239bea51a17db2ed11d9a8f319f5670f4497099f1ce2e43f23ac"
+    },
+    {
+      "path": "tests/component_visual_carriers/documents.rs",
+      "bytes": 3191,
+      "sha256": "ac83277dafdb4b44b9f3e3df14cd0a4dd9428ebebe1ac329f4f86250f3902e94"
+    }
+  ],
+  "logs": [
+    {
+      "path": "target/entity-visual-component-rust-baselines.log",
+      "bytes": 477,
+      "sha256": "a91f4b00effd2233fbcd271f55ad5d125f1d98a04055c88e1317c9e9aff3c486"
+    },
+    {
+      "path": "target/entity-visual-component-rust-baselines-clippy.log",
+      "bytes": 135,
+      "sha256": "af19964a2fdd98e496e64bf93773e7561b0c45ba63f0c2841e4c794e06e59e0d"
+    }
+  ],
+  "results": {
+    "tests_passed": 1,
+    "tests_failed": 0,
+    "clippy": "passed",
+    "function_size_audit": "all at most20 nonblank body lines"
+  },
+  "fixture_packets": [
+    {
+      "path": "tests/fixtures/display-lists/component-properties.bin",
+      "bytes": 1623116,
+      "sha256": "a51fbaf30f9c42a5d318f8cfbca49f0fd4530e9af7120b409e3f9dd56ed696bb"
+    },
+    {
+      "path": "tests/fixtures/display-lists/component-property-holders-part.bin",
+      "bytes": 985963,
+      "sha256": "fde62edaae88fb8a48ec6dc1af7765101aee218120a656d8f49dc4deb1f0cfac"
+    },
+    {
+      "path": "tests/fixtures/display-lists/component-property-holders-assembly.bin",
+      "bytes": 1048203,
+      "sha256": "6631dae60ce4148a713d56500de707a4e6321fbcbdb9228b9809126654777c57"
+    }
+  ],
+  "exclusions": [
+    "full7662-case Source matrix still running",
+    "older version Source acceptance",
+    "new typed stored-role API",
+    "platform publication gates",
+    "native application acceptance",
+    "whole-document coverage beyond these14 modern owned visual cases"
+  ],
+  "artifact_git_revision": "d5d7cb832259de1dd8c65e1bc80583448b18c80e"
+}

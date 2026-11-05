@@ -1,0 +1,35 @@
+{
+  "issue": 188,
+  "source_report_sha256": "7ef21979a55168a205819944ed62cc0ddf51177bb63944c223e5a333f9bed853",
+  "corpus_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "oracle_sha256": "e46a5b87e604f2d61a1e782111630ba8d9f649c29152be48e3558caedd0b3400",
+  "oracle_bytes": 296357,
+  "rows": 6863,
+  "streams": 794,
+  "pairs_by_archive_version": {
+    "11000": 28,
+    "19000": 6435,
+    "18000": 400
+  },
+  "columns": [
+    "corpus_case",
+    "archive_version",
+    "complete_stream_bytes",
+    "object_key_offset",
+    "record_key_offset",
+    "object_key_i32",
+    "record_key_i32"
+  ],
+  "checks": [
+    "Complete corpus framing and EOF",
+    "Report hash matches retained byte-binding evidence",
+    "Each complete native stream SHA256",
+    "Each original signed scalar equals its literal byte span",
+    "Adjacent non-overlapping paired words",
+    "Deterministic case/offset ordering"
+  ],
+  "exclusions": [
+    "Rust typed native API not yet executed",
+    "Native instruction provenance not yet verified"
+  ]
+}

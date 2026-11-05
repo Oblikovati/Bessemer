@@ -1,0 +1,99 @@
+{
+  "module_sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "named_exports": 45766,
+  "all_declared_export_names_parsed": true,
+  "intervals": [
+    {
+      "start": "0x4b2a75d0",
+      "end": "0x4b2a75dd",
+      "bytes": 13,
+      "sha256": "865bb8e56cd85949a861e8f4a86236ace43978e7d1a95a3ca33fd1986e83fe4c",
+      "exports": [
+        "?getNoBrokenShift@moDisplayObject_c@@QEBAHXZ",
+        "?isApplicableToBendAngleRange@Dimension_c@@QEBAHXZ",
+        "?isMergedRow@moGrid_c@@QEBAHXZ"
+      ]
+    },
+    {
+      "start": "0x4be8bc60",
+      "end": "0x4be8bc79",
+      "bytes": 25,
+      "sha256": "d3a69ab9f0b79bf9b42e21bf371eb5cebb9543214d3a20dd4e6d53a5e9b07ee3",
+      "exports": [
+        "?setEnforceBendAngleRange@Dimension_c@@QEAAXH@Z",
+        "?setMergedRow@moGrid_c@@QEAAXH@Z"
+      ]
+    },
+    {
+      "start": "0x4c82a610",
+      "end": "0x4c82a61a",
+      "bytes": 10,
+      "sha256": "ef8682b34f93257ec226c5a3ddb941c9718cfe5b4eb4e3241ce1084e823bc460",
+      "exports": [
+        "?getFilletRefPointChangeNumber@Dimension_c@@QEAAHXZ"
+      ]
+    },
+    {
+      "start": "0x4c82a930",
+      "end": "0x4c82a957",
+      "bytes": 39,
+      "sha256": "dccc784491f42575c7ba797df0c54c9df2bc08040a71189a9811ddc2a7f1299a",
+      "exports": [
+        "?incFilletRefPointChangeNumber@Dimension_c@@QEAAXXZ"
+      ]
+    },
+    {
+      "start": "0x4c832980",
+      "end": "0x4c8331fb",
+      "bytes": 2171,
+      "sha256": "3b72c0d179ca337f5570553e7d68de74fc062d33e60aee8ff4e37d7684e1e769",
+      "exports": [
+        "?Serialize@Dimension_c@@UEAAXAEAVsu_CArchive@@@Z"
+      ]
+    },
+    {
+      "start": "0x4c84cf90",
+      "end": "0x4c84cfb1",
+      "bytes": 33,
+      "sha256": "704db48d870439cf6611460f356425e2929d21582b86783185d852c68433fa07",
+      "exports": [
+        "?getRedundantId@moDimHandle_c@@QEBAJXZ"
+      ]
+    },
+    {
+      "start": "0x4c84e830",
+      "end": "0x4c84ea66",
+      "bytes": 566,
+      "sha256": "a06a048f8aa2a89c4dd7f0c31cfaa024c1efffc43234f87ce7d5e5d4f89088b3",
+      "exports": [
+        "?iGetMoDim@moModDimHandle_c@@UEBAPEAVDimension_c@@H@Z"
+      ]
+    },
+    {
+      "start": "0x4c828a10",
+      "end": "0x4c828a8b",
+      "bytes": 123,
+      "sha256": "f1cdacaf33706b86daba36e70739c748769d439e17cf83f87048c9f05f14a904",
+      "exports": []
+    },
+    {
+      "start": "0x4c829e20",
+      "end": "0x4c829f89",
+      "bytes": 361,
+      "sha256": "ad50ce0204578f5339f8a1dd77d8b117a6c7ba8188984fe6c0bcfae20cd0a667",
+      "exports": []
+    }
+  ],
+  "recorded_bytes": 3341,
+  "resolver_binding": {
+    "class_name": "moModDimHandle_c",
+    "vftable": "0x4cd9fd70",
+    "slot": "0x730",
+    "target": "0x4c84e830",
+    "return_type": "Dimension_c*"
+  },
+  "resolver_vftable_target_matches": true,
+  "target_executed": false,
+  "coverage_credit": 0,
+  "provider": "Existing pefile reader; ordinary static observation, not REA Evidence"
+}

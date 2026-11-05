@@ -1,0 +1,82 @@
+{
+  "issue": 181,
+  "stage": "Two fresh unchanged Source processes accept all actual typed model RGB exports",
+  "processes_reaped": 2,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "cases_per_process": 11493,
+  "cases_per_caller": 3831,
+  "complete_roots_per_process": 34479,
+  "changed_roots_per_process": 22986,
+  "packet_bytes": 64222888,
+  "packet_sha256": "a587067ff1c3096e549cc4291da1a1aafc35dcb1c700a8266f14ff8e5b4defbb",
+  "common_source_files": 5635,
+  "changed_common_source_files": [],
+  "first_only_source_files": [],
+  "second_only_source_files": [
+    "research/parallel_root_intersection_transform_reader.py",
+    "research/parallel_root_intersection_transform_replay.py",
+    "research/parallel_root_intersection_transform_saved_verification.py",
+    "research/parallel_root_intersection_transform_smoke.py",
+    "research/parallel_sketch_intersection_reference_match_attempt01_reader.py",
+    "research/parallel_sketch_intersection_reference_match_attempt01_smoke.py",
+    "research/parallel_sketch_intersection_reference_match_consumer.py",
+    "research/parallel_sketch_intersection_reference_match_reader.py",
+    "research/parallel_sketch_intersection_reference_match_replay.py",
+    "research/parallel_sketch_intersection_reference_match_smoke.py",
+    "research/parallel_sketch_intersection_transform_compare_positive_review.py"
+  ],
+  "artifacts": [
+    {
+      "path": "target/entity-visual-model-typed-source-1.log",
+      "bytes": 479435,
+      "sha256": "d4f2b1f197da2a0ef553c76f151e8ac79861c66bb6a5c6630e1cd7df6deb5834"
+    },
+    {
+      "path": "target/entity-visual-model-typed-source-1.json",
+      "bytes": 715379,
+      "sha256": "499a61e325ddbbe12d684d683a2829beee3023e78ab7b4f9bca224c5c1b363cc"
+    },
+    {
+      "path": "target/entity-visual-model-typed-source-2.log",
+      "bytes": 479435,
+      "sha256": "d4f2b1f197da2a0ef553c76f151e8ac79861c66bb6a5c6630e1cd7df6deb5834"
+    },
+    {
+      "path": "target/entity-visual-model-typed-source-2.json",
+      "bytes": 716929,
+      "sha256": "ca082f7d5e4c82913432fb88aee07e337803274066c57d95b75ce31555aa23ff"
+    },
+    {
+      "path": "target/replay-visual-model-typed-exports.py",
+      "bytes": 6807,
+      "sha256": "6a59db519f67d8d88314a9760afd822764c9badab8cc1e1cdae15c2093efeeae"
+    },
+    {
+      "path": "docs/features/entity-visual-state/model-typed-export-source-snapshot.json",
+      "bytes": 701508,
+      "sha256": "66daec95d28f734d1d5b55d6a636fb25a34718cd6e939d134bc7abcd74e5f9b0"
+    },
+    {
+      "path": "docs/features/entity-visual-state/model-typed-export-source-repeat-snapshot.json",
+      "bytes": 703058,
+      "sha256": "aaa377bb673f5e9dc6b095af09573d4587946fabab14558d14b89bc62ca0a11b"
+    }
+  ],
+  "checks": [
+    "Every expected model/sketch/display case appears exactly once in order in each completed process.",
+    "Every original matches its retained Source-owned packet and word oracle; both actual RGB outputs match independent literal patches.",
+    "Complete unchanged readers reach EOF with expected map sizes, original alias identity and both focused visual scalar/role projections.",
+    "Every Source import belongs to its immutable copy; all copied files remain unchanged within each process and all shared files match across processes.",
+    "Both exported packets retain the byte-identical Rust two-process result already recorded in model-concurrency-verification.json."
+  ],
+  "coverage_credit": 0,
+  "qualifications": [
+    "This checks complete archive decoding, not native application opening, rendering or geometry validity.",
+    "Original Source unit suites remain separately recorded; this run replays actual exported roots.",
+    "Native part edits, Cargo/repository and exact-head publication gates remain required.",
+    "Temporary replay collectors are removed after recording their hashes and findings. Humanizer unavailable; prose review remains pending."
+  ]
+}

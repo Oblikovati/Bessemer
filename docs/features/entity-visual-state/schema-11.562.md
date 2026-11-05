@@ -1,0 +1,9 @@
+### 11.562 Complete visual-word access discovery and prior scan gaps
+
+*Status: exported-method discovery bounds corrected; no additional bit role or byte credit assigned.*
+
+**[C-2178]** (`part-visual-full-word-access-evidence.json` / `part_visual_full_word_access_audit.py`) revisits the largest retained unresolved group, **894,411 decoded visual-property bytes**. The earlier interior-byte probe used half-open **[2,3)** for the ByLayer member, although the saved word occupies **[2,4)**. An explicit byte access at +3 therefore could have been missed. Its named-method/constructor filter also did not include assignment and equality operator exports. This packet corrects both discovery gaps without rewriting the historical probe or treating its narrower scan as full-word coverage.
+
+The corrected scan retains **44 typed visual-property exports** with complete extents: chained native unwind groups where available, and non-unwind leaves bounded by the next known entry/padding with branch targets checked. Constructors, destructor, assignment and equality are included alongside named methods. Memory widths are considered for any overlapping ByLayer **[2,4)**, saved cache **[4,5)** or color **[8,12)** access. **13 additional candidate sites** are retained relative to the earlier probe. No explicit displacement-+3 access occurs in this exported-method scope.
+
+These are discovery candidates, not receiver ownership or new flag meanings. Wide accesses can cover neighboring runtime fields, and an output pointer can have a numerically overlapping displacement. The negative +3 result does not exclude inlined code, other module functions, external clients or other versions. It does not prove that upper bits are reserved, zero or invalid. Existing field aliases, masks and all unknown-byte charges remain unchanged.

@@ -1,0 +1,26 @@
+{
+  "issue": 185,
+  "stage": "Explicit native rerun after final private-helper formatting and splits",
+  "passed": true,
+  "process_reaped": true,
+  "exit_code": 0,
+  "head": "cef6cdbad864c51c5568dd3f86f11b95c54968a3",
+  "cargo_unit_executable_sha256": "0d649028559c4b85283ae0d1c1e9eb9ff8a7ecce704eceddaf9098c287a31731",
+  "native_streams": 8,
+  "selector_operations": 68,
+  "index_operations": 17,
+  "archive_operations": 85,
+  "document_forward_operations": 85,
+  "document_reverse_operations": 85,
+  "logs": {
+    "archive": {
+      "sha256": "b6a69d0f19a1e56421683e4ab2f9f4430c6b71b8214958a515dba74560a9b35b",
+      "seconds": 91.44
+    },
+    "documents": {
+      "sha256": "c6c502ab66426d0baab5a28c0ff4dd319d9d09fe799981045a8fb058159f80be",
+      "seconds": 210.62
+    }
+  },
+  "qualification": "Same final-layout Cargo-built unit executable used by the running full PR gate; explicit ignored native tests ran with retained packets, original installed files and explicit kernel schema. No native target or geometry execution."
+}

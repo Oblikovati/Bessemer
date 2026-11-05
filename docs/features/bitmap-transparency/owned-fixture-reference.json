@@ -1,0 +1,43 @@
+{
+  "issue": 187,
+  "behavior_version": 1,
+  "cases": 731,
+  "physical_definitions": 1462,
+  "aliases": 731,
+  "literal_setting_scalars": 4386,
+  "framing": "BTR1, u32LE case count, repeated u32LE byte length and complete ordinary resolved-feature stream",
+  "scalar_columns": [
+    "case",
+    "physical_owner",
+    "stored_role",
+    "stream_byte_offset",
+    "signed_i32_value"
+  ],
+  "artifacts": {
+    "roots.bin": {
+      "bytes": 171078,
+      "sha256": "d18e87585378e49c558c0695d6f1c9d071391e1079d7e3585c44c30c16d98881"
+    },
+    "scalars.tsv": {
+      "bytes": 144054,
+      "sha256": "983d93a99350d1c6ad851472e4e943d6f2b1acaf51586d01033e910d04461f5a"
+    }
+  },
+  "initialization": "Source-accepted immutable packet copied unchanged; scalar rows independently derived from original literal body offsets and values",
+  "baseline_update": "Requires reviewed reason and behavior version; strict replay never rewrites fixtures",
+  "native_span_oracle": {
+    "path": "native-spans.tsv",
+    "rows": 4,
+    "bytes": 149,
+    "sha256": "9bebe21a1cd170226fbba432b8b91c9f60557f284302918f5ec1e748fc1c71bb",
+    "columns": [
+      "native_case",
+      "archive_version",
+      "feature_bytes",
+      "raw70_offset",
+      "raw60_offset",
+      "raw6c_offset"
+    ],
+    "source": "C-3311 original12 native scalar observations; native-span-binding.json"
+  }
+}

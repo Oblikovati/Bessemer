@@ -1,0 +1,87 @@
+{
+  "evidence": "C-1924",
+  "target_executed": false,
+  "coverage_credit": 0,
+  "migrations": [
+    {
+      "test": "test_sketchprefix.SketchPrefixTests.test_installed_arc_prefix_checkpoint",
+      "before": 107494,
+      "after": 107458,
+      "delta": 36
+    },
+    {
+      "test": "test_sketchprefix.SketchPrefixTests.test_installed_conic_prefix_checkpoint",
+      "before": 107494,
+      "after": 107458,
+      "delta": 36
+    },
+    {
+      "test": "test_sketchprefix.SketchPrefixTests.test_installed_line_prefix_checkpoint",
+      "before": 110083,
+      "after": 110043,
+      "delta": 40
+    },
+    {
+      "test": "test_sketchprefix.SketchPrefixTests.test_installed_linear_pattern_checkpoint",
+      "before": 139462,
+      "after": 135138,
+      "delta": 4324
+    },
+    {
+      "test": "test_sketchprefix.SketchPrefixTests.test_installed_logical_checkpoint",
+      "before": 139462,
+      "after": 135138,
+      "delta": 4324
+    },
+    {
+      "test": "test_sketchprefix.SketchPrefixTests.test_installed_offset_checkpoint",
+      "before": 124138,
+      "after": 121734,
+      "delta": 2404
+    },
+    {
+      "test": "test_sketchprefix.SketchPrefixTests.test_installed_pattern_constraint_checkpoint",
+      "before": 139462,
+      "after": 135138,
+      "delta": 4324
+    },
+    {
+      "test": "test_sketchprefix.SketchPrefixTests.test_installed_point_prefix_checkpoint",
+      "before": 107404,
+      "after": 107364,
+      "delta": 40
+    },
+    {
+      "test": "test_sketchprefix.SketchPrefixTests.test_installed_spline_prefix_checkpoint",
+      "before": 107760,
+      "after": 107724,
+      "delta": 36
+    },
+    {
+      "test": "test_sketchprefix.SketchPrefixTests.test_installed_surface_prefix_checkpoint",
+      "before": 107760,
+      "after": 107724,
+      "delta": 36
+    },
+    {
+      "test": "test_sketchprefix.SketchPrefixTests.test_installed_valued_g1_checkpoint",
+      "before": 108880,
+      "after": 108684,
+      "delta": 196
+    },
+    {
+      "test": "test_sketchprefix.SketchPrefixTests.test_installed_valued_g2_checkpoint",
+      "before": 123918,
+      "after": 121558,
+      "delta": 2360
+    }
+  ],
+  "tests_run": 42,
+  "proof": "AST equality after only recorded unknown-total constants change; temporary capture rejects all other assertion differences.",
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\test_sketchprefix_pre_dimension_redundant_id_accounting.txt": "c21bdf86f8c7aecb98298799e2a45638044ab38114a1ba460ea825ddafd6408c",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\test_sketchprefix.py": "acb669e7ebba0bba099ce1e1eeb909ad989f093bd0aece48e883f30e738b8271",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part_dimension_redundant_id_checkpoint_audit.py": "859615d1e401d42f8a57b6dee29589eac607081478d598e39b06888ac182cf4f",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-dimension-redundant-id-native-evidence.json": "94eaaf4862df8bdd3baab7a03df23ef5718b9bd37b5e789ba940a4a59c125994"
+  }
+}

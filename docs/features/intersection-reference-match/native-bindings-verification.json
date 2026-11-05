@@ -1,0 +1,112 @@
+{
+  "issue": 184,
+  "provider": "ordinary pefile/Capstone; not REA Evidence",
+  "module_sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "capstone_version": "5.0.7",
+  "producer_report_sha256": "09f842f3b04da0213a05e75e937234f7d1737c903796d7ec7a9bad7d1f652db6",
+  "consumer_report_sha256": "742e05332cd65659d70018bbd1b0adbafcc37cb2c63c5c6b736dbd013f411fb8",
+  "import_calls": 76,
+  "edge_type": {
+    "table": "0x4d0a7bc8",
+    "locator": "0x4d34b770",
+    "rtti": ".?AVmoIntersectionEdge_c@@",
+    "primary_offset": 0
+  },
+  "constructor_table_site": "0x4bfbb4ed",
+  "constructor_table_instruction": "lea rax, [rip + 0x10ec6d4]",
+  "exact_instruction_assertions": 67,
+  "bounded_predecessor_review": {
+    "receiver_nearest_writes": [
+      "0x4bbebef3",
+      "0x4bbed0e9"
+    ],
+    "spill_nearest_writes": [
+      "0x4bbebef6"
+    ]
+  },
+  "predecessor_scope": "Directdecoded CFG predecessors only; mixedinterval/indirectswitch edges not universal completeness.",
+  "helper_instructions": 95,
+  "helper_jump_targets": [
+    "0x4bfbd32e",
+    "0x4bfbd32e",
+    "0x4bfbd317",
+    "0x4bfbd33a",
+    "0x4bfbd294",
+    "0x4bfbd27d",
+    "0x4bfbd33a",
+    "0x4bfbd2de",
+    "0x4bfbd33a",
+    "0x4bfbd2de",
+    "0x4bfbd33a",
+    "0x4bfbd33a",
+    "0x4bfbd2b8",
+    "0x4bfbd2bc",
+    "0x4bfbd33a",
+    "0x4bfbd2d7",
+    "0x4bfbd33a",
+    "0x4bfbd309",
+    "0x4bfbd33a",
+    "0x4bfbd333",
+    "0x4bfbd33a",
+    "0x4bfbd33a"
+  ],
+  "helper_input_offsets": [
+    -1,
+    0,
+    36,
+    40,
+    56,
+    64
+  ],
+  "passed": true,
+  "target_executed": false,
+  "coverage_credit": 0,
+  "qualification": "Installed static import slots, constructor table/RTTI and exact selected instructions; runtime DLL resolution, callbacks, geometry and universal CFG completeness remain unproven",
+  "bindings_artifact": {
+    "path": "docs/features/intersection-reference-match/native-import-bindings.json",
+    "records": 76,
+    "sha256": "4d4e1191910c4ad4152ab3206da646f48fa9af996b3fefffcc54b095049f933f"
+  },
+  "assertions_artifact": {
+    "path": "docs/features/intersection-reference-match/native-selected-instructions.json",
+    "records": 67,
+    "sha256": "00ec25a00c0c68b18f8c29292921d88b37b61eca2d48527fe6f5e1c7f38aaf76"
+  },
+  "process_reaped": true,
+  "exit_code": 0,
+  "artifacts": [
+    {
+      "path": "target/check-intersection-native-bindings.py",
+      "bytes": 7603,
+      "sha256": "01e488a2b400399153971d51731bfab065df28e86c7fdaf934e34d0878ade3ef"
+    },
+    {
+      "path": "target/intersection-match-native-bindings.log",
+      "bytes": 117,
+      "sha256": "0d5727c88308aafb15d5aaf095af788bc6bbbb7ee4781b7db8aa51a0a5de1290"
+    },
+    {
+      "path": "target/intersection-match-native-bindings-result.json",
+      "bytes": 28839,
+      "sha256": "f04c78d5953e62de87cc40fb61743566a2e32118f04e78687712e24fab15e49d"
+    }
+  ],
+  "checks": [
+    "All76 RIP-relative producer call instructions resolve to the exact retained import slots, DLL names, symbol names and ordinal representations.",
+    "The constructor LEA resolves to the retained table; its locator, primary offset, self-RVA and moIntersectionEdge RTTI spelling match actual file bytes.",
+    "All67 selected producer/consumer instructions match exactly inside the retained byte-bound captures.",
+    "Bounded direct-decoded predecessor searches reproduce both retained receiver definitions and the single retained spill definition.",
+    "All direct jumps in the95-instruction stackless helper target decoded helper instructions. Its selected input-base memory operands include24/28 and exclude20."
+  ],
+  "remaining": [
+    "Independent full owned signed/state carrier matrix and typed operations",
+    "Document, isolation, concurrency, two-process and actual changed-root Source gates",
+    "Local Cargo and exact-head publication gates"
+  ],
+  "limits": [
+    "The update predecessor graph excludes unresolved indirect/switch edges and does not establish a universal CFG.",
+    "No CAD/kernel/provider behavior, runtime DLL loading, callback stability, geometry or complete topology lifecycle is modeled or executed.",
+    "Published33688 producer and468752 consumer pure-model checks are retained original evidence, not rerun by this binding collector.",
+    "Historical transitive source pins remain historical; this does not turn them into current-file matches."
+  ]
+}

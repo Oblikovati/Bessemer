@@ -384,7 +384,7 @@ fn embedded_text_prefix_width_changes_are_not_semantic_noops() {
     let ordinal = role_index(&source, "record0.reference0.archive0");
     let short = super::load_strings::framed_string_archive(false, LIMITS.embedded);
     let extended = super::load_strings::framed_string_archive(true, LIMITS.embedded);
-    assert_eq!(short.fields(), extended.fields());
+    crate::model_field_semantics::assert_distinct_framing(short.fields(), extended.fields());
     let prepared = replace_value(&source, ordinal, Value::Embedded(Box::new(short)));
     let edit = replace_value(
         prepared.archive(),

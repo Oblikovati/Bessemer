@@ -1,0 +1,86 @@
+{
+  "issue": 181,
+  "artifact_git_revision": "8cb9f060fc68758a41a9ea0bb7cbfafb164a6cc3",
+  "stage": "Rust complete owned model/sketch/display carrier reconstruction; typed visual operation pending",
+  "command": "cargo test --test model_visual_carriers",
+  "platform": "Windows x64",
+  "toolchain": "Rust1.99.0 x86_64-pc-windows-msvc",
+  "exit_code": 0,
+  "process_reaped": true,
+  "passed": 3,
+  "failed": 0,
+  "ignored": 0,
+  "test_seconds": 6.58,
+  "complete_cases": 11493,
+  "focused_visual_records": 22986,
+  "no_op_full_field_reconstructions": 11493,
+  "source_fixture_git_revision": "64580d1dd6ce6d0759ea78ed08282860b1dfe607",
+  "corpora": [
+    {
+      "caller": "model",
+      "cases": 3831,
+      "packet": {
+        "path": "tests/fixtures/entity-visual-state/model.bin",
+        "bytes": 1256568,
+        "sha256": "35d8eafe447b26ccd0f3600f995a7645fe14150710c79318d485a16c5e116556"
+      },
+      "word_oracle": {
+        "path": "tests/fixtures/entity-visual-state/model-words.tsv",
+        "bytes": 247843,
+        "sha256": "7f409d1c1b03205ef21b23800f8d8bc0de462f9a9cf5af5b2e4c4a2f849b0ba2"
+      }
+    },
+    {
+      "caller": "sketch",
+      "cases": 3831,
+      "packet": {
+        "path": "tests/fixtures/entity-visual-state/sketch.bin",
+        "bytes": 6918786,
+        "sha256": "cda0870f069da5d941697168f2ee76fe3efc3a7687f5793dd273b15f77207a30"
+      },
+      "word_oracle": {
+        "path": "tests/fixtures/entity-visual-state/sketch-words.tsv",
+        "bytes": 251674,
+        "sha256": "3c0e9a9fcbfc5e4d443e85d6fadc01222ee22f48480abf92df010663de7027bd"
+      }
+    },
+    {
+      "caller": "display",
+      "cases": 3831,
+      "packet": {
+        "path": "tests/fixtures/entity-visual-state/display.bin",
+        "bytes": 13232274,
+        "sha256": "6ec2726afb9a56d57f53d14ad5a96901a5939f351c151d2bbf8ae2f6ded08d54"
+      },
+      "word_oracle": {
+        "path": "tests/fixtures/entity-visual-state/display-words.tsv",
+        "bytes": 259336,
+        "sha256": "ba25077762a2e1aecd9336f6162877038b82db8546a39db12bb78678fe344f38"
+      }
+    }
+  ],
+  "test_source": {
+    "path": "tests/model_visual_carriers.rs",
+    "bytes": 5533,
+    "sha256": "518a9dc87d7c1026e8d899a5811ed69b354145c0cb67b82d17cf48048af00941"
+  },
+  "log": {
+    "path": "target/entity-visual-rust-carriers-final.log",
+    "bytes": 634,
+    "sha256": "50afb17cfad54fb159ad1dd9d379e6b84d52dd403bc3d71adb0641607429de5d"
+  },
+  "clippy": {
+    "path": "target/entity-visual-rust-carriers-clippy.log",
+    "bytes": 135,
+    "sha256": "68fc58dec0328747fffb49c4ba006984bbab5060f41ef13280e6d6b197213265"
+  },
+  "qualifications": [
+    "All artifact paths and support hashes in this reconstruction-only record refer to artifact_git_revision; changed RGB writes have separate evidence.",
+    "Every complete Source-owned case was decoded by the existing public PartResolvedFeaturesArchive against its real owned configuration and CMgr context.",
+    "Both physical visual definitions matched independently checked literal offsets and exact integer/float bits. First-definition values also matched the retained word oracle.",
+    "Complete root counts and inherited/final object slots matched. The full edit_fields constructor reconstructed every archive byte, reported Unchanged completion and returned empty changed-field history.",
+    "No production decoder, accepted baseline, field path, dependency or version changed.",
+    "Component matrix/carrier acceptance, the typed visual operation, broader native scope and full publication gates remain pending.",
+    "Humanizer unavailable; prose pass pending maintainer review."
+  ]
+}

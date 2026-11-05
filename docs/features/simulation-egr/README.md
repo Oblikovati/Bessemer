@@ -3,6 +3,11 @@
 Tracking: [#124](https://github.com/Oblikovati/Bessemer/issues/124).
 Behavior profile: `simulation-egr-flat-v1`.
 
+The [current schema scope audit](scope-audit.md) maps all nine documented clauses
+to the existing implementation. It records a fresh eight-check Source replay,
+all18 focused Rust tests and two fresh-process outputs matching the historical
+baseline, while retaining the conditional transport and native-fixture limits.
+
 This profile follows approved `../inventor-interface` clauses 14.514–14.522,
 retained in `schema-snapshot.md`. Complete copied `simulationegr` and
 `simulationelementnames` modules supply reference outputs. Independent literal

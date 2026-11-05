@@ -24,3 +24,20 @@ tests/fixtures/simulation-persistent-scalars/*.bin binary
 tests/fixtures/simulation-lbc-final-streams/*.bin binary
 tests/fixtures/simulation-manager-property/*.bin binary
 tests/fixtures/simulation-parameter-sets/*.bin binary
+docs/features/model-node-state/reports/*.json -text whitespace=cr-at-eol
+tests/fixtures/model-node-state/*.bin binary
+docs/features/dimension-stored-state/reports/*.json -text whitespace=cr-at-eol
+tests/fixtures/dimension-stored-state/*.bin binary
+docs/features/entity-visual-state/reports/*.json -text whitespace=cr-at-eol
+tests/fixtures/entity-visual-state/*.bin binary
+docs/features/intersection-reference-match/reports/*.json -text whitespace=cr-at-eol
+docs/features/intersection-index-classification/reports/*.json -text whitespace=cr-at-eol
+tests/fixtures/intersection-index-classification/*.bin binary
+docs/features/sketch-reference-configuration-keys/reports/*.json -text whitespace=cr-at-eol
+tests/fixtures/sketch-reference-configuration-keys/*.bin binary
+tests/fixtures/sketch-reference-configuration-keys/*.zlib binary
+docs/features/bitmap-transparency/reports/*.json -text whitespace=cr-at-eol
+tests/fixtures/bitmap-transparency/*.bin binary
+
+docs/features/bitmap-appearance/part-sketch-bitmap64-68-80-completion-evidence.json -text
+tests/fixtures/bitmap-appearance/roots.bin binary

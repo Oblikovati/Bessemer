@@ -1,0 +1,23 @@
+{
+  "issue": 189,
+  "passed": true,
+  "process_reaped": true,
+  "exit_code": 0,
+  "command": "cargo xtask pr",
+  "tested_head": "14e0120c24ca991161b5460408a34404d0170f38",
+  "tested_tree": "32c4018297fadeed85b8fc1dd1f3b32eaa21587e",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "test_summaries": 315,
+  "tests_passed": 3957,
+  "tests_failed": 0,
+  "tests_ignored": 215,
+  "log_sha256": "42fd5c6388e7c37d19655d287e2cf75c4741cf56f09a4ec8ea7de3e6bdb80217",
+  "qualification": "Final integrated source includes native and whole-document test wiring. Ignored native cases have separate retained local evidence; long native lookup jobs are still running.",
+  "remaining": [
+    "Exact-head remote platform and ThreadSanitizer gates",
+    "Complete native lookup operation acceptance",
+    "Native application/writer equivalence",
+    "Whole-schema parity"
+  ]
+}

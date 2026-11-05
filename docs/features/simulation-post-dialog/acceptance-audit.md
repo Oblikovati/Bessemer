@@ -70,7 +70,7 @@ Required whole-feature checks:
 - Independent owned literals,prefix/remainder rejection,exact/one-below budgets,configuration caps,no-op identity and every-field mutation expectations remain frozen.
 - Input isolation,public Send/Sync assertions,eight-worker replay and two fresh-process comparisons remain required; a narrower consumer check does not replace the complete codec gates.
 - The consolidated37-harness suite includes native fixture tests and supplies every exporter an explicit workspace-local destination. Its first attempt failed because a required exporter variable was absent; the configured rerun retains all tests.
-- Exact publication-head `cargo xtask pr` and all five platform checks,including ThreadSanitizer,remain pending for feature166. PR173 is the sole publication PR and belongs to feature163.
+- Exact publication-head `cargo xtask pr` and all five platform checks,including ThreadSanitizer,remain pending for feature166. Feature163 merged through PR173 after all five checks; feature166 remains queued behind164/165.
 
 Clause14.488 is a separate unresolved DocumentInfo dispatch qualification. Its
 known primary-version suffix uses the existing explicit full/partial
@@ -83,9 +83,14 @@ are replayed by both Source and the ignored native Rust regression in
 [simulation_post_dialog.rs](../../../tests/simulation_post_dialog.rs). All remain
 rejected; no version is lowered to manufacture acceptance.
 
-The broader goal still includes the distinct legacy plot carrier14.459/14.526
-and separate Material/EGR clauses14.512–522. No legacy plot typed codec was
-found in the inspected tree. These are not counted as completed by this audit.
+The distinct legacy plot carrier14.459/14.526 now has its own typed codec in
+feature174, with [local operation acceptance](../simulation-legacy-plot/operation-verification.json)
+and [process proof](../simulation-legacy-plot/process-pair-verification.json).
+Its publication/platform gates remain separate from feature166. The
+[EGR scope audit](../simulation-egr/scope-audit.md) confirms the existing bounded
+implementation of14.514–522 and retains its native-fixture/cache/save limits.
+MaterialList14.458/14.512–513 still lacks a bound historical body grammar and
+is tracked in feature175. Neither is counted as completed by this feature166 audit.
 Native application/writer equivalence,universal runtime version selection and
 whole-format parity remain unproven.
 

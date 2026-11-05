@@ -1,0 +1,14 @@
+{
+  "issue": 187,
+  "stage": "Initial native test attempt before document checkpoint correction",
+  "native_archive_test": "passed;108 typed edit requests across four streams",
+  "native_document_test": "failed at final whole-container byte comparison; not accepted",
+  "failure_log_bytes": 15032924,
+  "failure_log_sha256": "bb977dc945e7bab3d5fe659e90476fcacd9d1134648285f6536820a53ce06c7f",
+  "failure_site": "tests/model_bitmap_transparency/native_documents.rs:73",
+  "observed": "Typed fields and complete feature bytes reversed exactly. Reversing through a new document parsed from the changed file re-encoded the changed compressed stream and could not recover discarded original compressed bytes.",
+  "contract": "Document retains original file bytes plus operation-local replacements; replace_stream removes a replacement only when it matches that Document original. Existing native operation tests retain the original builder through reopen and reversal.",
+  "correction": "Retain the edited original builder across serialization, reopen and fresh typed reversal, and apply reversal to that builder. Keep the exact complete-container assertion unchanged.",
+  "production_code_changed": false,
+  "native_target_executed": false
+}

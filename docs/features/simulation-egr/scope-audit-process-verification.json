@@ -1,0 +1,92 @@
+{
+  "issue": 124,
+  "stage": "Current scope audit replay using the unchanged EGR implementation",
+  "binary": {
+    "path": "target/pinned-1.99.0/debug/deps/simulation_egr-4177d3fc4d5c5224.exe",
+    "sha256": "b6fa0089c15eeef2c6958f4eb26ed78ee61773b136a2002f79369ecd58fd9cd2",
+    "current_cargo_test_source_cut": "4effc4cf512393579c8f46462d827e3dc8899db7"
+  },
+  "runs": [
+    {
+      "index": 1,
+      "exit_code": 0,
+      "seconds": 0.10899999993853271,
+      "bytes": 3693682,
+      "sha256": "9a3b6b0507f1f887998379d5f0ba77180f80301a3f49d938b97538eefbaaef58",
+      "log": "target/egr-scope-process-1.log"
+    },
+    {
+      "index": 2,
+      "exit_code": 0,
+      "seconds": 0.1410000000614673,
+      "bytes": 3693682,
+      "sha256": "9a3b6b0507f1f887998379d5f0ba77180f80301a3f49d938b97538eefbaaef58",
+      "log": "target/egr-scope-process-2.log"
+    }
+  ],
+  "matched_historical_baseline": true,
+  "native_complete_egr_fixtures": 0,
+  "conditional_profile": "simulation-egr-flat-v1",
+  "scope": {
+    "complete_owned_tables": 14,
+    "live_field_ranges": 3992,
+    "solver_name_contexts": 183,
+    "egroup_contexts": 936,
+    "public_send_sync_types": 30
+  },
+  "qualifications": [
+    "The focused Cargo gate rebuilt the integration binary on the current combined library before these fresh processes; the Results publication Cargo gate was already complete.",
+    "All25 EGR-specific runtime/test/fixture hashes match the historical complete proof. src/simulation/mod.rs only gained other modules/reexports; .gitattributes only gained other fixture globs.",
+    "Complete native EGR samples and native cache/save behavior remain unproven; this validates the explicitly constructor-bound flat profile."
+  ],
+  "focused_cargo_gate": {
+    "command": "cargo test --test simulation_egr -- --include-ignored",
+    "source_cut": "4effc4cf512393579c8f46462d827e3dc8899db7",
+    "passed": 18,
+    "failed": 0,
+    "ignored": 0,
+    "exit_code": 0,
+    "process_reaped": true,
+    "log": {
+      "path": "target/egr-current-scope-tests.log",
+      "bytes": 2176,
+      "sha256": "3f9f0e02c7e362566e091ffc72757e639463a5250b5ac31a3394cafe1bcb0130"
+    }
+  },
+  "runtime_hash_audit": {
+    "historical_implementation_commit": "a9b0f44a344db50ee85cf3ecd505bb59d2f23433",
+    "unchanged_egr_specific_files": [
+      "src/simulation/egr/allocation.rs",
+      "src/simulation/egr/decode.rs",
+      "src/simulation/egr/descriptor.rs",
+      "src/simulation/egr/edit.rs",
+      "src/simulation/egr/groups.rs",
+      "src/simulation/egr/header.rs",
+      "src/simulation/egr/ids.rs",
+      "src/simulation/egr/mod.rs",
+      "src/simulation/egr/names.rs",
+      "src/simulation/egr/outcome.rs",
+      "src/simulation/egr/parts.rs",
+      "src/simulation/egr/ranges.rs",
+      "src/simulation/egr/row.rs",
+      "src/simulation/egr/types.rs",
+      "tests/common/egr_export.rs",
+      "tests/common/egr_failures.rs",
+      "tests/common/egr_groups.rs",
+      "tests/common/egr_names.rs",
+      "tests/common/egr_packets.rs",
+      "tests/common/egr_ranges.rs",
+      "tests/fixtures/simulation-egr/fields.bin",
+      "tests/fixtures/simulation-egr/groups.bin",
+      "tests/fixtures/simulation-egr/names.bin",
+      "tests/fixtures/simulation-egr/tables.bin",
+      "tests/simulation_egr.rs"
+    ],
+    "explained_support_files": [
+      "src/simulation/mod.rs",
+      ".gitattributes"
+    ],
+    "support_diff_sha256": "9ab5d9b77d27e9c5f44bab7f5c128875c5a930ff5962046f75351bed64e31223",
+    "historical_baseline_changed": false
+  }
+}

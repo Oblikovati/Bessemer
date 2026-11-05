@@ -124,6 +124,29 @@ coverage, version boundaries, graph preservation, and remaining limits.
 The [forming-tool evidence](docs/features/forming-tools/README.md) records the
 shared-map inline-header and forming-tool readers, embedded edits and the
 906-configuration reconstruction gate.
+The [stored node-state API](docs/features/model-node-state/api.md) projects named
+update bits and class-scoped parameter flags from complete part configurations
+and resolved-feature archives. Selected-bit edits preserve other fields and bits
+and return the existing complete archive validation and structural history.
+Stored flags remain separate from effective native predicates and setter cascades.
+The [stored entity visual API](docs/features/entity-visual-state/api.md) projects
+layer/style, ByLayer, cache, color and raw width values from complete part/assembly
+configurations, resolved part feature archives and physical component visuals from display and
+drawing-bucket archives. Revision-bound edits preserve unselected words and bits
+and return the existing complete archive validation and history report.
+
+The [stored dimension API](docs/features/dimension-stored-state/api.md) projects
+the bend-angle flag, fillet reference-point change number and signed redundant
+identifier from direct or nested dimension bases. Isolated stored-value edits
+preserve raw mask bits, other fields and the existing complete archive history.
+The [stored intersection-reference API](docs/features/intersection-reference-match/api.md)
+projects signed span-count and backward-offset states from complete ordinary
+part resolved-feature archives. Revision-bound span/offset edits preserve the
+saved selector, raw20, references and all other fields, with complete history.
+The [classification-selector API](docs/features/intersection-index-classification/api.md)
+also reads and edits the saved u16 selector without evaluating native matching.
+Its [edge-index API](docs/features/intersection-index-classification/api.md)
+preserves arbitrary signed handle-array indices without building correspondence maps.
 The [assembly configuration API](docs/features/assembly-configurations/README.md)
 reads, constructs, edits and writes complete ordinary assembly and routing
 configurations. All 180 reference-readable modern configurations reconstruct
@@ -655,6 +678,12 @@ edits. Character-count strings retain raw code units and change length as one
 atomic value; unassigned eight-byte values retain their exact patterns. See
 [the graph parameter evidence](docs/features/simulation-post-graph/README.md).
 
+`SimulationLegacyPlot` reads, constructs and edits the historical named-plot
+helper, including both bulk layouts, all fixed fields and versioned counted
+texts. Its bounded wide-buffer views retain every byte after the first NUL.
+Helper completion remains separate from the caller-version gate and native
+runtime acceptance; see [the historical plot evidence](docs/features/simulation-legacy-plot/README.md).
+
 `SimulationPostInfo` supports the complete fixed-slot `DspPostInfo` helper with
 explicit version context, preserving all twelve slots independently of active
 counts. Version700002 alone carries an atomic character-text suffix with separate
@@ -799,10 +828,23 @@ and either a packed value or a typed channel/domain exclusion. Nonfinite,
 nonzero subnormal and overflowing/out-of-range RGB inputs produce no packed
 value under this model.
 
+Canonical stored sketch-reference configuration keys are available through `sketch_reference_lookup_states()` and `edit_sketch_reference_lookup_keys()`. These operations preserve full signed object/record keys without runtime lookup or STORE-time sentinel projection. See [the feature contract](docs/features/sketch-reference-configuration-keys/README.md).
+
+Stored bitmap transparency settings expose full signed has-transparency, level and type values through `bitmap_transparency_states()` and isolated `edit_bitmap_transparency()` operations. See [the feature contract](docs/features/bitmap-transparency/README.md) for the qualified scope and validation status.
 ThreadSanitizer CI runs the complete library and integration test targets across
 eight deterministic partitions. Every partition instruments the library,
 dependencies and standard library; native-input exclusions remain unchanged.
 All eight partitions must succeed before the four full platform gates run.
+PR/full gates bound transient test artifacts by omitting test debug information
+and incremental caches. Assertions, overflow checks and the complete workload
+remain enabled. See [the storage policy](docs/features/ci-build-storage/README.md).
 `cargo xtask tsan` retains the complete local run. A matching local partition is
 `cargo xtask tsan --shard 0/8` on Linux x86_64. The planner rejects custom Cargo
 target layouts instead of silently dropping targets.
+
+Stored bitmap matching-color, transparent-color and ink-markup settings are
+available through `bitmap_appearance_states()` and `edit_bitmap_appearance()`.
+Values retain their full signed or unsigned width; historical archives can
+omit the ink-markup word. See [the appearance contract](docs/features/bitmap-appearance/README.md).
+
+Model-field edits retain CString count-prefix changes as physical changes, including completion and derived field history; decoded string comparison remains semantic. See the [framing regression](docs/features/model-text-framing/README.md).

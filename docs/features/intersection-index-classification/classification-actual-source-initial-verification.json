@@ -1,0 +1,48 @@
+{
+  "issue": 185,
+  "stage": "First complete unchanged Source replay of actual classification outputs",
+  "passed": true,
+  "process_reaped": true,
+  "exit_code": 0,
+  "tests": 1,
+  "test_seconds": 2209.489,
+  "actual_roots": 65536,
+  "changed_roots": 65535,
+  "noops": 1,
+  "export_sha256": "9dfcf11ebebc4ba2c0b09a7421bdaf66f1abc09bde61ab0bd57fdeac040b5d83",
+  "source_python_files": 5868,
+  "artifacts": [
+    {
+      "path": "target/replay-classification-actual-exports.py",
+      "bytes": 5490,
+      "sha256": "2ed19aab53f3219cb6a489f53030b679bf5103c54a987fe512de116fe9e591fe"
+    },
+    {
+      "path": "target/classification-actual-source-1.log",
+      "bytes": 2566,
+      "sha256": "17a7184ff01e5f11ad619a41a69318006ad57d3cc23f248b6872c81848078160"
+    },
+    {
+      "path": "target/classification-actual-source-1.json",
+      "bytes": 951,
+      "sha256": "8809dcdd26440c5cd417cbdd6256d6aaf2664a16679774ea4d598bf21d0f6ad1"
+    },
+    {
+      "path": "docs/features/intersection-index-classification/classification-actual-source-1-snapshot.json",
+      "bytes": 742338,
+      "sha256": "52c8bbcb31a6740bcd341abe44561b7bcd6572b374e51f8677e7c1763288401c"
+    }
+  ],
+  "coverage_credit": 0,
+  "checks": [
+    "Every actual Rust output matches an independent literal patch before complete original Source parsing.",
+    "Complete original graph/map/f64-bit identity equals the baseline with only the expected saved selector replaced.",
+    "Root aliases, spans, EOF, original unknown totals and all sketch/detail accounting signatures are unchanged."
+  ],
+  "qualifications": [
+    "Expected output graph changes only an application-owned parsed baseline; original Source reader functions and output identities are never overridden.",
+    "No native matcher, cache/provider execution or geometry acceptance is claimed.",
+    "The original immutable Source import/hash/origin guard passed after all actual outputs. The temporary shared snapshot filename is restored to its exact tracked owned-fixture bytes; this process snapshot is retained separately.",
+    "The independent second fresh Source process is queued and has not been accepted yet. Native document, mixed concurrency and publication gates remain separate. Humanizer unavailable; prose review pending."
+  ]
+}

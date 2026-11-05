@@ -1,0 +1,178 @@
+{
+  "issue": 181,
+  "artifact_git_revision": "f9a79e68e117f33fbd5d976dcdf595385b74d3eb",
+  "stage": "Complete owned model-feature and sketch callers; remaining callers and runtime operation pending",
+  "source_checks": 120,
+  "unchanged_original_tests": 114,
+  "unchanged_original_test_modules": 11,
+  "separate_evidence_checks": 6,
+  "source_identity": "14b907f9baad37a243ea93e9bbef72635f789a04c07d51a8600d1b87dccf2ab6",
+  "source_python_files": 5167,
+  "initialization": {
+    "command": "python -B -X utf8 docs/features/entity-visual-state/freeze_visual_state.py --write-sketch",
+    "wrote_only_new_sketch_artifacts": true,
+    "exit_code": 0,
+    "process_reaped": true,
+    "seconds": 938.254,
+    "log": {
+      "path": "target/entity-visual-sketch-initialize.log",
+      "bytes": 18484,
+      "sha256": "4f342e672a37749b211599c9ec53501045458fbd04f62a3318489772dc2c5230"
+    }
+  },
+  "strict": {
+    "command": "python -B -X utf8 docs/features/entity-visual-state/freeze_visual_state.py",
+    "baseline_write_mode": false,
+    "exit_code": 0,
+    "process_reaped": true,
+    "seconds": 870.542,
+    "log": {
+      "path": "target/entity-visual-sketch-strict.log",
+      "bytes": 18484,
+      "sha256": "eea8f71b775193bb18bfaf16f989d93dfeb9b549f0285bcbab732bd985ce80ce"
+    }
+  },
+  "sketch": {
+    "caller": "complete sgSketch owners with direct points in resolved-feature carriers",
+    "cases": 3831,
+    "physical_records": 7662,
+    "instance_aliases": 3831,
+    "inherited_slots": 97,
+    "final_slots": 100,
+    "context_streams_sha256": [
+      "3b98a8dfe9082f76c546219eb38b4b358c9a682d5aafc1a44b33c099c1a22495",
+      "2bb4c6306071b4bd20be2cda0207c376e5a6c803e884c77c95ee68f44632d8f7",
+      "f6387400850ae80dedbc5d2f5dc77fb1dd38ad4b8afb1e6fb2ffc2ad35edb27d"
+    ],
+    "packet_bytes": 6918786,
+    "wire_bytes": 6903462,
+    "packet_sha256": "cda0870f069da5d941697168f2ee76fe3efc3a7687f5793dd273b15f77207a30",
+    "word_oracle_sha256": "3c0e9a9fcbfc5e4d443e85d6fadc01222ee22f48480abf92df010663de7027bd",
+    "primitive_reads": 2041923,
+    "primitives_sha256": "81b902fbe28b8be8750f101e64f70db4afdaee59c8a30d929f47fe093ba18eb4",
+    "literal_scalar_spans": 53634
+  },
+  "model_baseline_git_revision": "b0fd65418a25c98219290d51293ed836d2d41529",
+  "all_original_model_artifacts_byte_identical": true,
+  "artifacts": [
+    {
+      "path": "docs/features/entity-visual-state/source-snapshot.json",
+      "bytes": 648641,
+      "sha256": "53ffef12fceadf0897e1758f64df76808c2155be50f08eaa06f138c9378dd156"
+    },
+    {
+      "path": "docs/features/entity-visual-state/owned-sketch-reference.json",
+      "bytes": 846,
+      "sha256": "c50ab8d7b4495282e7658dc73b52023ef0010bbb24e2d59b3a49eaa5c8482eae"
+    },
+    {
+      "path": "tests/fixtures/entity-visual-state/sketch.bin",
+      "bytes": 6918786,
+      "sha256": "cda0870f069da5d941697168f2ee76fe3efc3a7687f5793dd273b15f77207a30"
+    },
+    {
+      "path": "tests/fixtures/entity-visual-state/sketch-words.tsv",
+      "bytes": 251674,
+      "sha256": "3c0e9a9fcbfc5e4d443e85d6fadc01222ee22f48480abf92df010663de7027bd"
+    },
+    {
+      "path": "tests/fixtures/entity-visual-state/sketch-primitives.tsv",
+      "bytes": 47422293,
+      "sha256": "81b902fbe28b8be8750f101e64f70db4afdaee59c8a30d929f47fe093ba18eb4"
+    }
+  ],
+  "source_support": [
+    {
+      "path": "docs/features/entity-visual-state/freeze_visual_state.py",
+      "bytes": 2806,
+      "sha256": "3291e9ea4c877ee7a3ba5102be30165d2f79ed6bf0a387abc74daec7d695bb41"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_native.py",
+      "bytes": 2689,
+      "sha256": "8a5eaf74ccd0d47a1fd48a82526a072d2b6f38828ec586f06daa1f856405b86f"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_native_catalog.py",
+      "bytes": 4408,
+      "sha256": "168dd9e2a0c0f1f9e592d0f264e549cc52eb07572b908b7b2c25d278bdb80576"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_native_image.py",
+      "bytes": 4602,
+      "sha256": "f21fddb4ddc50dd8ca63b1c675afdbc0f733ebb4d5f068188d4fa30095266e4c"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_owned_carriers.py",
+      "bytes": 2593,
+      "sha256": "65e6c595cc0822c18aba5e47170fa34be5c1dbbf4b172a608dc2d2b193701287"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_owned_corpus.py",
+      "bytes": 5332,
+      "sha256": "7983e65786fa52b72cb6bc9739aeca0c79e2df6c679324e1006d9dd064215259"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_owned_words.py",
+      "bytes": 4718,
+      "sha256": "e5e8148b6d38bf31023949dfc7b9624f3d40ac3b95db2138c2ae14f13552ac4e"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_sketch_carriers.py",
+      "bytes": 3478,
+      "sha256": "50c23ffb249e58509adac8251cd8037aed879e85d34df9a892155e9da7a28098"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_state_evidence.py",
+      "bytes": 3961,
+      "sha256": "3ef9bc94140d66d296b66ac145d26dd5339f437c514b621814d8a46d2018d156"
+    },
+    {
+      "path": "docs/features/model-archives/pinned_reference_tests.py",
+      "bytes": 4167,
+      "sha256": "6f95547f7dee070b1b8fe50cefaaea9a45721789636add2e67a919e42169b36e"
+    },
+    {
+      "path": "docs/features/model-archives/sketch_geometry_fixture_bytes.py",
+      "bytes": 2115,
+      "sha256": "87bf3a6f626819d3e9a2d9116dc3db92e1394cc02316a8b4c409abd895a2510f"
+    },
+    {
+      "path": "docs/features/model-archives/sketch_reference_fixture_bytes.py",
+      "bytes": 4328,
+      "sha256": "4c2c0cea876eaa1ada1d177f81d080fd26130484ed9facff20f895fcc9084118"
+    },
+    {
+      "path": "docs/features/model-archives/sketch_tail_fixture_bytes.py",
+      "bytes": 8319,
+      "sha256": "5e38af8d6c6659689e608c40fe4ed48a91b59c1869ad8373c425a5087012b109"
+    },
+    {
+      "path": "docs/features/dimension-stored-state/dimension_state_owned.py",
+      "bytes": 10861,
+      "sha256": "467c2d0a2518b5ecc0d9c2a49f875961fd5ef6bac47eb372a9039cca649be37f"
+    },
+    {
+      "path": "docs/features/dimension-stored-state/dimension_state_evidence.py",
+      "bytes": 4113,
+      "sha256": "1079db1c5ca007a8bf577f2f06929c53d75a0f9f035110cf4e585db47fc5125a"
+    }
+  ],
+  "earlier_owner_probe": {
+    "path": "target/entity-visual-sketch-owner-check.log",
+    "bytes": 112,
+    "sha256": "1a31156c96b88cdb05c9643fbe882f086b8ac7fca55d408a14e5b5b1857b8295"
+  },
+  "coverage_credit": 0,
+  "qualifications": [
+    "All artifacts and support hashes in this120-check record refer to artifact_git_revision; subsequent display-owner runs have separate evidence.",
+    "The direct point is embedded in each complete sgSketch owner; no top-level point reader registration or Source override was added.",
+    "Each stream contains new/loaded class definitions and a real first-instance alias against the inherited97-slot context. Every original primitive read partitions the complete stream.",
+    "Moving common corpus persistence and observation out of the folder helper preserved all four earlier model artifacts byte for byte; the strict run also reproduced every new sketch artifact.",
+    "The complete matrix covers all high color bytes, all cache bytes, all known ByLayer combinations with unresolved patterns, signed width limits, raw float edge patterns and layer/style boundaries.",
+    "The initial one-owner probe passed before corpus expansion; its temporary implementation was removed after its finding and stronger full-corpus proof were retained.",
+    "Historical117/118/119-check records remain tied to their original Git artifacts; no historical native accounting or baseline was rewritten.",
+    "Display/component/configuration caller acceptance, the public typed operation, native application, geometry and whole-format parity remain pending.",
+    "Humanizer unavailable; prose pass pending maintainer review."
+  ]
+}

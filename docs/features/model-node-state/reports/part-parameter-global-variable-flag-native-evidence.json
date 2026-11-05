@@ -1,0 +1,75 @@
+{
+  "evidence": "C-2191",
+  "target_executed": false,
+  "coverage_credit": 0,
+  "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+  "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "getter": {
+    "export": {
+      "name": "?isGlobalVarParam@moParameter_c@@QEAAHXZ",
+      "address": "0x4c1abcb0"
+    },
+    "bytes": "8b4128c1e81fc3",
+    "instructions": [
+      "4c1abcb0 mov eax, dword ptr [rcx + 0x28]",
+      "4c1abcb3 shr eax, 0x1f",
+      "4c1abcb6 ret "
+    ]
+  },
+  "rtti": {
+    "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+    "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+    "tables": [
+      {
+        "class_name": "moParameter_c",
+        "object_offset": 0,
+        "locator": "0x4d353b48",
+        "vftable": "0x4d124378",
+        "slots": [
+          "0x4c1859d0",
+          "0x4c1ab2a0",
+          "0x4cba273f",
+          "0x4b29dae0",
+          "0x4b29dae0",
+          "0x4c1896e0",
+          "0x4c04eb50",
+          "0x4c04d9b0"
+        ]
+      }
+    ]
+  },
+  "bases": [
+    {
+      "name": ".?AVmoParameter_c@@",
+      "member_displacement": 0,
+      "pointer_displacement": -1
+    },
+    {
+      "name": ".?AVmoNode_c@@",
+      "member_displacement": 0,
+      "pointer_displacement": -1
+    },
+    {
+      "name": ".?AVsu_CObject@@",
+      "member_displacement": 0,
+      "pointer_displacement": -1
+    },
+    {
+      "name": ".?AVCObject@@",
+      "member_displacement": 0,
+      "pointer_displacement": -1
+    }
+  ],
+  "findings": [
+    "Typed moParameter_c::isGlobalVarParam returns inherited node+0x28 bit31 as0/1 with no other state dependency. Primary RTTI proves the nonvirtual zero-offset moNode base.",
+    "Expose this stored meaning only through parameter_lightweight, not generic node lightweight. Raw flags28 and all other bits are preserved. This is not equation text, a global-variable name, or a complete parameter classification/flag-domain decode.",
+    "No unknown-byte credit: the remaining bit roles in the flag word remain unresolved. No CAD execution."
+  ],
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part_parameter_global_variable_flag_native_audit.py": "d626a020553208de29bbe23c81f964344bd6be5a2d98cab75a4838cfaab00542",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\sldmodu-complete-export-index.json": "fb3efcb81f1c79daf1ad32961f1ec1adb681297c1c2f41177250293ebe836ace",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\rtti.py": "f3c844bc9cb08346518b8a7909230dde563ecd3f7eee68dde3af5b8241df362f",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-node-word-leaf-candidates-evidence.json": "553d4dfcb995ebc9a827244e53d6a3e65a8cfd85fc86eff956a919dc3a064c76",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-parameter-node-flags-native-evidence.json": "8e4799da1e6f517fd075b3f84cc4b76f5fb7418100300c3f090a2f6328bfd8a6"
+  }
+}

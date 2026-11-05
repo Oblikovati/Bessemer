@@ -1,0 +1,114 @@
+{
+  "issue": 187,
+  "stage": "Read-only direct publication input inventory while stored-role gate holds HEAD fixed",
+  "evidence": "C-3311",
+  "report_sha256": "47ea6d433ad2473c8a9f32aea2d03d4a35314b4eadf1fa49b77bbc93e8962be7",
+  "direct_dependencies": [
+    {
+      "path": "solidworks/research/publish_sketch_bitmap_transparency_completion.py",
+      "expected_sha256": "7c5db5877344ec5fe055daca967c7431360d38cd825ba6fd3e5ee25b5c6f0638",
+      "actual_sha256": "7c5db5877344ec5fe055daca967c7431360d38cd825ba6fd3e5ee25b5c6f0638",
+      "matched": true
+    },
+    {
+      "path": "solidworks/research/parallel_sketch_bitmap_transparency_frozen_manifest.json",
+      "expected_sha256": "753f40f75e402f93cf00d9f3be01a1e01ff495d56131d8359e11620e97c3008d",
+      "actual_sha256": "753f40f75e402f93cf00d9f3be01a1e01ff495d56131d8359e11620e97c3008d",
+      "matched": true
+    },
+    {
+      "path": "solidworks/research/parallel_sketch_bitmap_transparency_final_review.json",
+      "expected_sha256": "0dfc606a825d98bfd8cfe9788a7b5b9f64c7a777897a404cb7cdda1a3c561ac8",
+      "actual_sha256": "0dfc606a825d98bfd8cfe9788a7b5b9f64c7a777897a404cb7cdda1a3c561ac8",
+      "matched": true
+    },
+    {
+      "path": "solidworks/research/parallel_sketch_bitmap_transparency_proof_review.json",
+      "expected_sha256": "cf81d1cf1e075753e606c4ae46dbf227fee83da35b475f3bd87e78f9b4f5313f",
+      "actual_sha256": "cf81d1cf1e075753e606c4ae46dbf227fee83da35b475f3bd87e78f9b4f5313f",
+      "matched": true
+    },
+    {
+      "path": "solidworks/research/parallel_sketch_bitmap_transparency_replay_evidence.json",
+      "expected_sha256": "4fb46de27776954b80e4e9bf349ac5555367ced5cb0b9831ee4f05c6af5b3f2c",
+      "actual_sha256": "4fb46de27776954b80e4e9bf349ac5555367ced5cb0b9831ee4f05c6af5b3f2c",
+      "matched": true
+    },
+    {
+      "path": "solidworks/research/parallel_sketch_bitmap_transparency_smoke_evidence.json",
+      "expected_sha256": "a1d4fabeccd87f0f5b887779a8721dc6dafe04ee0aabf7cc82509bbe5c6340c6",
+      "actual_sha256": "a1d4fabeccd87f0f5b887779a8721dc6dafe04ee0aabf7cc82509bbe5c6340c6",
+      "matched": true
+    },
+    {
+      "path": "solidworks/research/parallel_sketch_bitmap_transparency_saved_verification.json",
+      "expected_sha256": "57efd0457ad1c15ff162ed1c2b80d3863d5d2d515d3085d415984f6491d83a75",
+      "actual_sha256": "57efd0457ad1c15ff162ed1c2b80d3863d5d2d515d3085d415984f6491d83a75",
+      "matched": true
+    },
+    {
+      "path": "solidworks/research/parallel_root_bitmap_transparency_policy.json",
+      "expected_sha256": "266642ee8e51075f62675e057431b1e33cd4d7812ba18b034255bfc27495d00a",
+      "actual_sha256": "266642ee8e51075f62675e057431b1e33cd4d7812ba18b034255bfc27495d00a",
+      "matched": true
+    },
+    {
+      "path": "solidworks/research/parallel_sketch_bitmap_transparency_reader.py",
+      "expected_sha256": "d648d052d66bff9dc88a44b9350f866655208e584d9074d3233b0f9e497863ba",
+      "actual_sha256": "d648d052d66bff9dc88a44b9350f866655208e584d9074d3233b0f9e497863ba",
+      "matched": true
+    },
+    {
+      "path": "solidworks/research/parallel_sketch_bitmap_transparency_replay.py",
+      "expected_sha256": "6645574d93fc6a3524fec014529ceb2b3dbc0543fca2c2abb7d347e1b223057e",
+      "actual_sha256": "6645574d93fc6a3524fec014529ceb2b3dbc0543fca2c2abb7d347e1b223057e",
+      "matched": true
+    },
+    {
+      "path": "solidworks/research/parallel_sketch_bitmap_transparency_smoke.py",
+      "expected_sha256": "7d12fb23a459cdf0b629d8f221c56955b0bbaecbfe429e186780fa996b9ceea0",
+      "actual_sha256": "7d12fb23a459cdf0b629d8f221c56955b0bbaecbfe429e186780fa996b9ceea0",
+      "matched": true
+    },
+    {
+      "path": "solidworks/research/parallel_sketch_bitmap_transparency_saved_verification.py",
+      "expected_sha256": "af87d6f826c5f48f8a2e497b9c02e556cbd57eea23916d4c4362a41c65498351",
+      "actual_sha256": "af87d6f826c5f48f8a2e497b9c02e556cbd57eea23916d4c4362a41c65498351",
+      "matched": true
+    },
+    {
+      "path": "solidworks/research/parallel_sketch_bitmap_transparency_proof_review.py",
+      "expected_sha256": "61ab623004c81f6a5b81b21662ca3aaa4cc9dd4d7ca22d14fa1a46727b9c95af",
+      "actual_sha256": "61ab623004c81f6a5b81b21662ca3aaa4cc9dd4d7ca22d14fa1a46727b9c95af",
+      "matched": true
+    },
+    {
+      "path": "solidworks/research/parallel_sketch_bitmap_transparency_final_review.py",
+      "expected_sha256": "45444b9987280ad40f7962e51b12c2dcd22402745f2b7f3894934c8472660f54",
+      "actual_sha256": "45444b9987280ad40f7962e51b12c2dcd22402745f2b7f3894934c8472660f54",
+      "matched": true
+    },
+    {
+      "path": "solidworks/research/parallel_root_bitmap_transparency_policy.py",
+      "expected_sha256": "28ca080dded74a31c54746cdf45ff3a30e0110279374b8ecca9f278ecf288a0a",
+      "actual_sha256": "28ca080dded74a31c54746cdf45ff3a30e0110279374b8ecca9f278ecf288a0a",
+      "matched": true
+    }
+  ],
+  "matched": 15,
+  "total": 15,
+  "published_validation_packets": [
+    "parallel_sketch_bitmap_transparency_frozen_manifest.json",
+    "parallel_sketch_bitmap_transparency_final_review.json",
+    "parallel_sketch_bitmap_transparency_proof_review.json",
+    "parallel_sketch_bitmap_transparency_replay_evidence.json",
+    "parallel_sketch_bitmap_transparency_smoke_evidence.json",
+    "parallel_sketch_bitmap_transparency_saved_verification.json",
+    "parallel_root_bitmap_transparency_policy.json"
+  ],
+  "native_bindings_verified": false,
+  "source_replay_executed": false,
+  "runtime_implemented": false,
+  "coverage_credit": 0,
+  "qualification": "Preparation inventory only. Existing generic reader preserves raw70/raw60/raw6c as signed I32; typed roles and every acceptance gate remain unimplemented/unverified for this feature."
+}

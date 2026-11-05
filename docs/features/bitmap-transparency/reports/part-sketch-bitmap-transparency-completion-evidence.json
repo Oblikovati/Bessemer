@@ -1,0 +1,2301 @@
+{
+  "evidence": "C-3311",
+  "target_executed": false,
+  "coverage_credit": 0,
+  "measured_isolated_unknown_delta": 48,
+  "verified_unique_native_ranges": 13,
+  "source_pin_checks": 60,
+  "spec_before_sha256": "c569045b9dec71328db34fcfb2dc5b10a587d89cb71571fc6964e9b5c7e29ce9",
+  "validation": {
+    "parallel_sketch_bitmap_transparency_frozen_manifest.json": {
+      "files": {
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_proof_review.py": "61ab623004c81f6a5b81b21662ca3aaa4cc9dd4d7ca22d14fa1a46727b9c95af",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_proof_review.json": "cf81d1cf1e075753e606c4ae46dbf227fee83da35b475f3bd87e78f9b4f5313f",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_reader.py": "d648d052d66bff9dc88a44b9350f866655208e584d9074d3233b0f9e497863ba",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_replay.py": "6645574d93fc6a3524fec014529ceb2b3dbc0543fca2c2abb7d347e1b223057e",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_replay_evidence.json": "4fb46de27776954b80e4e9bf349ac5555367ced5cb0b9831ee4f05c6af5b3f2c",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_smoke.py": "7d12fb23a459cdf0b629d8f221c56955b0bbaecbfe429e186780fa996b9ceea0",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_smoke_evidence.json": "a1d4fabeccd87f0f5b887779a8721dc6dafe04ee0aabf7cc82509bbe5c6340c6",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_saved_verification.py": "af87d6f826c5f48f8a2e497b9c02e556cbd57eea23916d4c4362a41c65498351",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_saved_verification.json": "57efd0457ad1c15ff162ed1c2b80d3863d5d2d515d3085d415984f6491d83a75",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_root_bitmap_transparency_policy.py": "28ca080dded74a31c54746cdf45ff3a30e0110279374b8ecca9f278ecf288a0a",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_root_bitmap_transparency_policy.json": "266642ee8e51075f62675e057431b1e33cd4d7812ba18b034255bfc27495d00a",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_final_review.py": "45444b9987280ad40f7962e51b12c2dcd22402745f2b7f3894934c8472660f54",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_final_review.json": "0dfc606a825d98bfd8cfe9788a7b5b9f64c7a777897a404cb7cdda1a3c561ac8"
+      },
+      "coverage_credit": 0
+    },
+    "parallel_sketch_bitmap_transparency_final_review.json": {
+      "target_executed": false,
+      "coverage_credit": 0,
+      "final_review_checks": 47,
+      "native_source_review_checks": 64,
+      "independent_bounded_policy_cases": 118,
+      "complete_streams": 4,
+      "distinct_files": 4,
+      "bitmap_bodies": 4,
+      "field_observations": 12,
+      "research_unknown_delta": 48,
+      "adapted_whole_stream_feature_parses": 4,
+      "baseline_feature_parses": 0,
+      "diagnostic_feature_parses": 0,
+      "saved_verification_extra_feature_parses": 0,
+      "saved_verification_container_stream_reads": 4,
+      "fixture_counts": {
+        "checks": 5124,
+        "complete_bodies": 731,
+        "baseline_fixture_parses": 731,
+        "adapted_fixture_parses": 737,
+        "unrelated_field_reader_fixture_parses": 1,
+        "truncated_fixture_parse_attempts": 88459
+      },
+      "all_attempts": {
+        "proof_review_runs": 1,
+        "smoke_runs": 1,
+        "adapted_whole_stream_replay_runs": 1,
+        "saved_verification_runs": 1,
+        "failed_feature_parse_attempts": 0
+      },
+      "counter_checks": {
+        "container_stream_reads": 4,
+        "signed_unsigned_scalar_wire_checks": 12,
+        "sketch_origin_checks": 48,
+        "sketch_counter_checks": 48,
+        "sketch_changed_counters": 0,
+        "detail_origin_checks": 8,
+        "detail_counter_checks": 8,
+        "detail_changed_counters": 0
+      },
+      "raw_histograms": {
+        "raw_70": {
+          "00000000": 4
+        },
+        "raw_60": {
+          "00000000": 4
+        },
+        "raw_6c": {
+          "00000000": 4
+        }
+      },
+      "qualifications": [
+        "Explicitpolicy fulli32 settings only, schema1 canonicalclass/actualcaller/buffer/reader/context/version admitted.",
+        "All savedvalues zero inthiscohort, not a schema restriction; signedunrestrictedfixtures retainnoncanonicalvalues.",
+        "No policyinvocation or nativeclassification inreader; raw64/68/80 remaincharged and7C isnotserialized.",
+        "No production/specification/globalcoverage edit."
+      ]
+    },
+    "parallel_sketch_bitmap_transparency_proof_review.json": {
+      "target_executed": false,
+      "coverage_credit": 0,
+      "native_source_checks": 64,
+      "independent_bounded_policy_cases": 118,
+      "decision": "Sound scoped fulli32 roles for storedraw70/60/6C under explicitsetTransparencyAlphaType call. No generic renderer/enumlabels or automaticrefresh inference. Exactsameold/newtype1 skipsderive; enabled/levelsetters onlywrite. Runtime7C derivedcache remainsunserialized andunchargedtargetfields64/68/80 remainexcluded.",
+      "sources": {
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_proof_review.py": "61ab623004c81f6a5b81b21662ca3aaa4cc9dd4d7ca22d14fa1a46727b9c95af",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_root_bitmap_transparency_policy.json": "266642ee8e51075f62675e057431b1e33cd4d7812ba18b034255bfc27495d00a",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_root_bitmap_transparency_policy.py": "28ca080dded74a31c54746cdf45ff3a30e0110279374b8ecca9f278ecf288a0a"
+      }
+    },
+    "parallel_sketch_bitmap_transparency_replay_evidence.json": {
+      "target_executed": false,
+      "coverage_credit": 0,
+      "complete_streams": 4,
+      "explicit_stops": 0,
+      "baseline_parses": 0,
+      "distinct_part_files": 4,
+      "measured_unknown_delta": 48,
+      "historical_field_bytes": 48,
+      "retained_unqualified_field_bytes": 0,
+      "class_field_occurrences": {
+        "moSketchBitmapData_c": 12
+      },
+      "raw_histograms": {
+        "raw_70": {
+          "00000000": 4
+        },
+        "raw_60": {
+          "00000000": 4
+        },
+        "raw_6c": {
+          "00000000": 4
+        }
+      },
+      "streams": [
+        {
+          "path": "samples/learn/Carving Knife/Knife Handle-DEMO.SLDPRT",
+          "stream": "Contents/Config-0-ResolvedFeatures",
+          "sha256": "0660f382890665e6976ead90fecddd0ee1f16e602c9e98e9df9a906ffa1c0c53",
+          "bytes": 280010,
+          "status": "complete",
+          "end": 280010,
+          "root_count": 57,
+          "map_items": 6397,
+          "baseline_unknown": 30321,
+          "isolated_unknown": 30309,
+          "measured_unknown_delta": 12,
+          "historical_field_bytes": 12,
+          "retained_unqualified_field_bytes": 0,
+          "observations": [
+            {
+              "field": "raw_70",
+              "start": 54906,
+              "end": 54910,
+              "raw_hex": "00000000",
+              "raw_i32": 0,
+              "native_u32": 0,
+              "wire_class": "moSketchBitmapData_c",
+              "wire_schema": 1,
+              "archive_lane": 3,
+              "field_unknown_delta": 0,
+              "completed_body": true,
+              "role": "has_transparency_setting",
+              "body_start": 54572,
+              "body_end": 54931,
+              "archive_version": 19000,
+              "context": "ordinary_external_xml"
+            },
+            {
+              "field": "raw_60",
+              "start": 54910,
+              "end": 54914,
+              "raw_hex": "00000000",
+              "raw_i32": 0,
+              "native_u32": 0,
+              "wire_class": "moSketchBitmapData_c",
+              "wire_schema": 1,
+              "archive_lane": 3,
+              "field_unknown_delta": 0,
+              "completed_body": true,
+              "role": "transparency_level_parameter",
+              "body_start": 54572,
+              "body_end": 54931,
+              "archive_version": 19000,
+              "context": "ordinary_external_xml"
+            },
+            {
+              "field": "raw_6c",
+              "start": 54922,
+              "end": 54926,
+              "raw_hex": "00000000",
+              "raw_i32": 0,
+              "native_u32": 0,
+              "wire_class": "moSketchBitmapData_c",
+              "wire_schema": 1,
+              "archive_lane": 3,
+              "field_unknown_delta": 0,
+              "completed_body": true,
+              "role": "transparency_type_selector",
+              "body_start": 54572,
+              "body_end": 54931,
+              "archive_version": 19000,
+              "context": "ordinary_external_xml"
+            }
+          ],
+          "supported_bitmap_bodies": 1,
+          "sketch_accounting_checks": [
+            {
+              "origin_candidates": [
+                {
+                  "label": 0,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 5598,
+                "sketch_end": 6096,
+                "sketch_unknown_bytes": 17
+              },
+              "isolated_signature": {
+                "sketch_start": 5598,
+                "sketch_end": 6096,
+                "sketch_unknown_bytes": 17
+              },
+              "baseline_unknown": 17,
+              "isolated_unknown": 17,
+              "expected_field_delta": 0,
+              "start": 5598,
+              "end": 6096
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 1,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 6938,
+                "sketch_end": 10130,
+                "sketch_unknown_bytes": 335
+              },
+              "isolated_signature": {
+                "sketch_start": 6938,
+                "sketch_end": 10130,
+                "sketch_unknown_bytes": 335
+              },
+              "baseline_unknown": 335,
+              "isolated_unknown": 335,
+              "expected_field_delta": 0,
+              "start": 6938,
+              "end": 10130
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 2,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 10738,
+                "sketch_end": 16355,
+                "sketch_unknown_bytes": 450
+              },
+              "isolated_signature": {
+                "sketch_start": 10738,
+                "sketch_end": 16355,
+                "sketch_unknown_bytes": 450
+              },
+              "baseline_unknown": 450,
+              "isolated_unknown": 450,
+              "expected_field_delta": 0,
+              "start": 10738,
+              "end": 16355
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 3,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 17028,
+                "sketch_end": 25596,
+                "sketch_unknown_bytes": 704
+              },
+              "isolated_signature": {
+                "sketch_start": 17028,
+                "sketch_end": 25596,
+                "sketch_unknown_bytes": 704
+              },
+              "baseline_unknown": 704,
+              "isolated_unknown": 704,
+              "expected_field_delta": 0,
+              "start": 17028,
+              "end": 25596
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 4,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 26113,
+                "sketch_end": 31351,
+                "sketch_unknown_bytes": 377
+              },
+              "isolated_signature": {
+                "sketch_start": 26113,
+                "sketch_end": 31351,
+                "sketch_unknown_bytes": 377
+              },
+              "baseline_unknown": 377,
+              "isolated_unknown": 377,
+              "expected_field_delta": 0,
+              "start": 26113,
+              "end": 31351
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 5,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 38282,
+                "sketch_end": 44401,
+                "sketch_unknown_bytes": 475
+              },
+              "isolated_signature": {
+                "sketch_start": 38282,
+                "sketch_end": 44401,
+                "sketch_unknown_bytes": 475
+              },
+              "baseline_unknown": 475,
+              "isolated_unknown": 475,
+              "expected_field_delta": 0,
+              "start": 38282,
+              "end": 44401
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 6,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 46220,
+                "sketch_end": 50159,
+                "sketch_unknown_bytes": 346
+              },
+              "isolated_signature": {
+                "sketch_start": 46220,
+                "sketch_end": 50159,
+                "sketch_unknown_bytes": 346
+              },
+              "baseline_unknown": 346,
+              "isolated_unknown": 346,
+              "expected_field_delta": 0,
+              "start": 46220,
+              "end": 50159
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 7,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 50722,
+                "sketch_end": 53903,
+                "sketch_unknown_bytes": 447
+              },
+              "isolated_signature": {
+                "sketch_start": 50722,
+                "sketch_end": 53903,
+                "sketch_unknown_bytes": 447
+              },
+              "baseline_unknown": 447,
+              "isolated_unknown": 447,
+              "expected_field_delta": 0,
+              "start": 50722,
+              "end": 53903
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 8,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 55066,
+                "sketch_end": 57311,
+                "sketch_unknown_bytes": 130
+              },
+              "isolated_signature": {
+                "sketch_start": 55066,
+                "sketch_end": 57311,
+                "sketch_unknown_bytes": 130
+              },
+              "baseline_unknown": 130,
+              "isolated_unknown": 130,
+              "expected_field_delta": 0,
+              "start": 55066,
+              "end": 57311
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 9,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 57770,
+                "sketch_end": 64038,
+                "sketch_unknown_bytes": 690
+              },
+              "isolated_signature": {
+                "sketch_start": 57770,
+                "sketch_end": 64038,
+                "sketch_unknown_bytes": 690
+              },
+              "baseline_unknown": 690,
+              "isolated_unknown": 690,
+              "expected_field_delta": 0,
+              "start": 57770,
+              "end": 64038
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 10,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 64699,
+                "sketch_end": 67402,
+                "sketch_unknown_bytes": 356
+              },
+              "isolated_signature": {
+                "sketch_start": 64699,
+                "sketch_end": 67402,
+                "sketch_unknown_bytes": 356
+              },
+              "baseline_unknown": 356,
+              "isolated_unknown": 356,
+              "expected_field_delta": 0,
+              "start": 64699,
+              "end": 67402
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 11,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 82459,
+                "sketch_end": 83949,
+                "sketch_unknown_bytes": 176
+              },
+              "isolated_signature": {
+                "sketch_start": 82459,
+                "sketch_end": 83949,
+                "sketch_unknown_bytes": 176
+              },
+              "baseline_unknown": 176,
+              "isolated_unknown": 176,
+              "expected_field_delta": 0,
+              "start": 82459,
+              "end": 83949
+            }
+          ],
+          "detail_checkpoint_checks": [
+            {
+              "origin_candidates": [
+                {
+                  "label": 0,
+                  "lane": 2,
+                  "target": false
+                }
+              ],
+              "baseline_signature": {
+                "detail_prefix_start": 19498,
+                "detail_unknown_start": 7656,
+                "detail_end": 37318,
+                "detail_unknown_end": 21786
+              },
+              "isolated_signature": {
+                "detail_prefix_start": 19498,
+                "detail_unknown_start": 7656,
+                "detail_end": 37318,
+                "detail_unknown_end": 21786
+              },
+              "baseline_unknown": 7656,
+              "isolated_unknown": 7656,
+              "expected_field_delta": 0,
+              "kind": "detail_unknown_start",
+              "position": 19498
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 0,
+                  "lane": 2,
+                  "target": false
+                }
+              ],
+              "baseline_signature": {
+                "detail_prefix_start": 19498,
+                "detail_unknown_start": 7656,
+                "detail_end": 37318,
+                "detail_unknown_end": 21786
+              },
+              "isolated_signature": {
+                "detail_prefix_start": 19498,
+                "detail_unknown_start": 7656,
+                "detail_end": 37318,
+                "detail_unknown_end": 21786
+              },
+              "baseline_unknown": 21786,
+              "isolated_unknown": 21786,
+              "expected_field_delta": 0,
+              "kind": "detail_unknown_end",
+              "position": 37318
+            }
+          ],
+          "nonaccounting_graph_sha256": "fc4c52984ff813057bd1f346a5c7cfed3708f9bbd08e264c112d4d68a9d68559",
+          "baseline_spans_sha256": "ee55c0e6c18104e40d58d9b43601a3c9f5dffd5251070756eef972726863ca70"
+        },
+        {
+          "path": "samples/tutorial/dimxpert/advdimxpert/foot_board.sldprt",
+          "stream": "Contents/Config-0-ResolvedFeatures",
+          "sha256": "0db7800b952cb0a2be07f53207fc0f24f4551f969465a353946fffec98249687",
+          "bytes": 248443,
+          "status": "complete",
+          "end": 248443,
+          "root_count": 44,
+          "map_items": 3786,
+          "baseline_unknown": 22464,
+          "isolated_unknown": 22452,
+          "measured_unknown_delta": 12,
+          "historical_field_bytes": 12,
+          "retained_unqualified_field_bytes": 0,
+          "observations": [
+            {
+              "field": "raw_70",
+              "start": 205904,
+              "end": 205908,
+              "raw_hex": "00000000",
+              "raw_i32": 0,
+              "native_u32": 0,
+              "wire_class": "moSketchBitmapData_c",
+              "wire_schema": 1,
+              "archive_lane": 3,
+              "field_unknown_delta": 0,
+              "completed_body": true,
+              "role": "has_transparency_setting",
+              "body_start": 205806,
+              "body_end": 205929,
+              "archive_version": 19000,
+              "context": "ordinary_external_xml"
+            },
+            {
+              "field": "raw_60",
+              "start": 205908,
+              "end": 205912,
+              "raw_hex": "00000000",
+              "raw_i32": 0,
+              "native_u32": 0,
+              "wire_class": "moSketchBitmapData_c",
+              "wire_schema": 1,
+              "archive_lane": 3,
+              "field_unknown_delta": 0,
+              "completed_body": true,
+              "role": "transparency_level_parameter",
+              "body_start": 205806,
+              "body_end": 205929,
+              "archive_version": 19000,
+              "context": "ordinary_external_xml"
+            },
+            {
+              "field": "raw_6c",
+              "start": 205920,
+              "end": 205924,
+              "raw_hex": "00000000",
+              "raw_i32": 0,
+              "native_u32": 0,
+              "wire_class": "moSketchBitmapData_c",
+              "wire_schema": 1,
+              "archive_lane": 3,
+              "field_unknown_delta": 0,
+              "completed_body": true,
+              "role": "transparency_type_selector",
+              "body_start": 205806,
+              "body_end": 205929,
+              "archive_version": 19000,
+              "context": "ordinary_external_xml"
+            }
+          ],
+          "supported_bitmap_bodies": 1,
+          "sketch_accounting_checks": [
+            {
+              "origin_candidates": [
+                {
+                  "label": 0,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 6087,
+                "sketch_end": 6585,
+                "sketch_unknown_bytes": 17
+              },
+              "isolated_signature": {
+                "sketch_start": 6087,
+                "sketch_end": 6585,
+                "sketch_unknown_bytes": 17
+              },
+              "baseline_unknown": 17,
+              "isolated_unknown": 17,
+              "expected_field_delta": 0,
+              "start": 6087,
+              "end": 6585
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 1,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 7452,
+                "sketch_end": 25020,
+                "sketch_unknown_bytes": 1688
+              },
+              "isolated_signature": {
+                "sketch_start": 7452,
+                "sketch_end": 25020,
+                "sketch_unknown_bytes": 1688
+              },
+              "baseline_unknown": 1688,
+              "isolated_unknown": 1688,
+              "expected_field_delta": 0,
+              "start": 7452,
+              "end": 25020
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 2,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 33271,
+                "sketch_end": 35431,
+                "sketch_unknown_bytes": 281
+              },
+              "isolated_signature": {
+                "sketch_start": 33271,
+                "sketch_end": 35431,
+                "sketch_unknown_bytes": 281
+              },
+              "baseline_unknown": 281,
+              "isolated_unknown": 281,
+              "expected_field_delta": 0,
+              "start": 33271,
+              "end": 35431
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 3,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 40605,
+                "sketch_end": 42858,
+                "sketch_unknown_bytes": 277
+              },
+              "isolated_signature": {
+                "sketch_start": 40605,
+                "sketch_end": 42858,
+                "sketch_unknown_bytes": 277
+              },
+              "baseline_unknown": 277,
+              "isolated_unknown": 277,
+              "expected_field_delta": 0,
+              "start": 40605,
+              "end": 42858
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 4,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 48126,
+                "sketch_end": 51449,
+                "sketch_unknown_bytes": 376
+              },
+              "isolated_signature": {
+                "sketch_start": 48126,
+                "sketch_end": 51449,
+                "sketch_unknown_bytes": 376
+              },
+              "baseline_unknown": 376,
+              "isolated_unknown": 376,
+              "expected_field_delta": 0,
+              "start": 48126,
+              "end": 51449
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 5,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 56750,
+                "sketch_end": 59975,
+                "sketch_unknown_bytes": 376
+              },
+              "isolated_signature": {
+                "sketch_start": 56750,
+                "sketch_end": 59975,
+                "sketch_unknown_bytes": 376
+              },
+              "baseline_unknown": 376,
+              "isolated_unknown": 376,
+              "expected_field_delta": 0,
+              "start": 56750,
+              "end": 59975
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 6,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 65060,
+                "sketch_end": 84151,
+                "sketch_unknown_bytes": 1569
+              },
+              "isolated_signature": {
+                "sketch_start": 65060,
+                "sketch_end": 84151,
+                "sketch_unknown_bytes": 1569
+              },
+              "baseline_unknown": 1569,
+              "isolated_unknown": 1569,
+              "expected_field_delta": 0,
+              "start": 65060,
+              "end": 84151
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 7,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 91500,
+                "sketch_end": 99815,
+                "sketch_unknown_bytes": 718
+              },
+              "isolated_signature": {
+                "sketch_start": 91500,
+                "sketch_end": 99815,
+                "sketch_unknown_bytes": 718
+              },
+              "baseline_unknown": 718,
+              "isolated_unknown": 718,
+              "expected_field_delta": 0,
+              "start": 91500,
+              "end": 99815
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 8,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 118201,
+                "sketch_end": 162681,
+                "sketch_unknown_bytes": 3797
+              },
+              "isolated_signature": {
+                "sketch_start": 118201,
+                "sketch_end": 162681,
+                "sketch_unknown_bytes": 3797
+              },
+              "baseline_unknown": 3797,
+              "isolated_unknown": 3797,
+              "expected_field_delta": 0,
+              "start": 118201,
+              "end": 162681
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 9,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 172095,
+                "sketch_end": 179676,
+                "sketch_unknown_bytes": 670
+              },
+              "isolated_signature": {
+                "sketch_start": 172095,
+                "sketch_end": 179676,
+                "sketch_unknown_bytes": 670
+              },
+              "baseline_unknown": 670,
+              "isolated_unknown": 670,
+              "expected_field_delta": 0,
+              "start": 172095,
+              "end": 179676
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 10,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 193659,
+                "sketch_end": 196776,
+                "sketch_unknown_bytes": 274
+              },
+              "isolated_signature": {
+                "sketch_start": 193659,
+                "sketch_end": 196776,
+                "sketch_unknown_bytes": 274
+              },
+              "baseline_unknown": 274,
+              "isolated_unknown": 274,
+              "expected_field_delta": 0,
+              "start": 193659,
+              "end": 196776
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 11,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 206064,
+                "sketch_end": 242146,
+                "sketch_unknown_bytes": 2944
+              },
+              "isolated_signature": {
+                "sketch_start": 206064,
+                "sketch_end": 242146,
+                "sketch_unknown_bytes": 2944
+              },
+              "baseline_unknown": 2944,
+              "isolated_unknown": 2944,
+              "expected_field_delta": 0,
+              "start": 206064,
+              "end": 242146
+            }
+          ],
+          "detail_checkpoint_checks": [
+            {
+              "origin_candidates": [
+                {
+                  "label": 0,
+                  "lane": 2,
+                  "target": false
+                }
+              ],
+              "baseline_signature": {
+                "detail_prefix_start": 18254,
+                "detail_unknown_start": 7292,
+                "detail_end": 35632,
+                "detail_unknown_end": 21358
+              },
+              "isolated_signature": {
+                "detail_prefix_start": 18254,
+                "detail_unknown_start": 7292,
+                "detail_end": 35632,
+                "detail_unknown_end": 21358
+              },
+              "baseline_unknown": 7292,
+              "isolated_unknown": 7292,
+              "expected_field_delta": 0,
+              "kind": "detail_unknown_start",
+              "position": 18254
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 0,
+                  "lane": 2,
+                  "target": false
+                }
+              ],
+              "baseline_signature": {
+                "detail_prefix_start": 18254,
+                "detail_unknown_start": 7292,
+                "detail_end": 35632,
+                "detail_unknown_end": 21358
+              },
+              "isolated_signature": {
+                "detail_prefix_start": 18254,
+                "detail_unknown_start": 7292,
+                "detail_end": 35632,
+                "detail_unknown_end": 21358
+              },
+              "baseline_unknown": 21358,
+              "isolated_unknown": 21358,
+              "expected_field_delta": 0,
+              "kind": "detail_unknown_end",
+              "position": 35632
+            }
+          ],
+          "nonaccounting_graph_sha256": "895d3b14faae38227f041175ebebc120c9d7eb914b3756bd27880186d9d3b088",
+          "baseline_spans_sha256": "c5721ea76911ce4ebd98431933bbf5529cde81a4617e2e663949b9a4597d679d"
+        },
+        {
+          "path": "samples/tutorial/mbd/mbdadvanced/foot_board.sldprt",
+          "stream": "Contents/Config-0-ResolvedFeatures",
+          "sha256": "faa3c96608c6df0b63500750ecdf67904d10569f918284ea0123fd8170e02d34",
+          "bytes": 248421,
+          "status": "complete",
+          "end": 248421,
+          "root_count": 44,
+          "map_items": 3786,
+          "baseline_unknown": 22464,
+          "isolated_unknown": 22452,
+          "measured_unknown_delta": 12,
+          "historical_field_bytes": 12,
+          "retained_unqualified_field_bytes": 0,
+          "observations": [
+            {
+              "field": "raw_70",
+              "start": 205890,
+              "end": 205894,
+              "raw_hex": "00000000",
+              "raw_i32": 0,
+              "native_u32": 0,
+              "wire_class": "moSketchBitmapData_c",
+              "wire_schema": 1,
+              "archive_lane": 3,
+              "field_unknown_delta": 0,
+              "completed_body": true,
+              "role": "has_transparency_setting",
+              "body_start": 205792,
+              "body_end": 205915,
+              "archive_version": 19000,
+              "context": "ordinary_external_xml"
+            },
+            {
+              "field": "raw_60",
+              "start": 205894,
+              "end": 205898,
+              "raw_hex": "00000000",
+              "raw_i32": 0,
+              "native_u32": 0,
+              "wire_class": "moSketchBitmapData_c",
+              "wire_schema": 1,
+              "archive_lane": 3,
+              "field_unknown_delta": 0,
+              "completed_body": true,
+              "role": "transparency_level_parameter",
+              "body_start": 205792,
+              "body_end": 205915,
+              "archive_version": 19000,
+              "context": "ordinary_external_xml"
+            },
+            {
+              "field": "raw_6c",
+              "start": 205906,
+              "end": 205910,
+              "raw_hex": "00000000",
+              "raw_i32": 0,
+              "native_u32": 0,
+              "wire_class": "moSketchBitmapData_c",
+              "wire_schema": 1,
+              "archive_lane": 3,
+              "field_unknown_delta": 0,
+              "completed_body": true,
+              "role": "transparency_type_selector",
+              "body_start": 205792,
+              "body_end": 205915,
+              "archive_version": 19000,
+              "context": "ordinary_external_xml"
+            }
+          ],
+          "supported_bitmap_bodies": 1,
+          "sketch_accounting_checks": [
+            {
+              "origin_candidates": [
+                {
+                  "label": 0,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 6087,
+                "sketch_end": 6585,
+                "sketch_unknown_bytes": 17
+              },
+              "isolated_signature": {
+                "sketch_start": 6087,
+                "sketch_end": 6585,
+                "sketch_unknown_bytes": 17
+              },
+              "baseline_unknown": 17,
+              "isolated_unknown": 17,
+              "expected_field_delta": 0,
+              "start": 6087,
+              "end": 6585
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 1,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 7452,
+                "sketch_end": 25020,
+                "sketch_unknown_bytes": 1688
+              },
+              "isolated_signature": {
+                "sketch_start": 7452,
+                "sketch_end": 25020,
+                "sketch_unknown_bytes": 1688
+              },
+              "baseline_unknown": 1688,
+              "isolated_unknown": 1688,
+              "expected_field_delta": 0,
+              "start": 7452,
+              "end": 25020
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 2,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 33271,
+                "sketch_end": 35431,
+                "sketch_unknown_bytes": 281
+              },
+              "isolated_signature": {
+                "sketch_start": 33271,
+                "sketch_end": 35431,
+                "sketch_unknown_bytes": 281
+              },
+              "baseline_unknown": 281,
+              "isolated_unknown": 281,
+              "expected_field_delta": 0,
+              "start": 33271,
+              "end": 35431
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 3,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 40599,
+                "sketch_end": 42852,
+                "sketch_unknown_bytes": 277
+              },
+              "isolated_signature": {
+                "sketch_start": 40599,
+                "sketch_end": 42852,
+                "sketch_unknown_bytes": 277
+              },
+              "baseline_unknown": 277,
+              "isolated_unknown": 277,
+              "expected_field_delta": 0,
+              "start": 40599,
+              "end": 42852
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 4,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 48114,
+                "sketch_end": 51437,
+                "sketch_unknown_bytes": 376
+              },
+              "isolated_signature": {
+                "sketch_start": 48114,
+                "sketch_end": 51437,
+                "sketch_unknown_bytes": 376
+              },
+              "baseline_unknown": 376,
+              "isolated_unknown": 376,
+              "expected_field_delta": 0,
+              "start": 48114,
+              "end": 51437
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 5,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 56737,
+                "sketch_end": 59962,
+                "sketch_unknown_bytes": 376
+              },
+              "isolated_signature": {
+                "sketch_start": 56737,
+                "sketch_end": 59962,
+                "sketch_unknown_bytes": 376
+              },
+              "baseline_unknown": 376,
+              "isolated_unknown": 376,
+              "expected_field_delta": 0,
+              "start": 56737,
+              "end": 59962
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 6,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 65040,
+                "sketch_end": 84131,
+                "sketch_unknown_bytes": 1569
+              },
+              "isolated_signature": {
+                "sketch_start": 65040,
+                "sketch_end": 84131,
+                "sketch_unknown_bytes": 1569
+              },
+              "baseline_unknown": 1569,
+              "isolated_unknown": 1569,
+              "expected_field_delta": 0,
+              "start": 65040,
+              "end": 84131
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 7,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 91480,
+                "sketch_end": 99795,
+                "sketch_unknown_bytes": 718
+              },
+              "isolated_signature": {
+                "sketch_start": 91480,
+                "sketch_end": 99795,
+                "sketch_unknown_bytes": 718
+              },
+              "baseline_unknown": 718,
+              "isolated_unknown": 718,
+              "expected_field_delta": 0,
+              "start": 91480,
+              "end": 99795
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 8,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 118187,
+                "sketch_end": 162667,
+                "sketch_unknown_bytes": 3797
+              },
+              "isolated_signature": {
+                "sketch_start": 118187,
+                "sketch_end": 162667,
+                "sketch_unknown_bytes": 3797
+              },
+              "baseline_unknown": 3797,
+              "isolated_unknown": 3797,
+              "expected_field_delta": 0,
+              "start": 118187,
+              "end": 162667
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 9,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 172077,
+                "sketch_end": 179658,
+                "sketch_unknown_bytes": 670
+              },
+              "isolated_signature": {
+                "sketch_start": 172077,
+                "sketch_end": 179658,
+                "sketch_unknown_bytes": 670
+              },
+              "baseline_unknown": 670,
+              "isolated_unknown": 670,
+              "expected_field_delta": 0,
+              "start": 172077,
+              "end": 179658
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 10,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 193646,
+                "sketch_end": 196763,
+                "sketch_unknown_bytes": 274
+              },
+              "isolated_signature": {
+                "sketch_start": 193646,
+                "sketch_end": 196763,
+                "sketch_unknown_bytes": 274
+              },
+              "baseline_unknown": 274,
+              "isolated_unknown": 274,
+              "expected_field_delta": 0,
+              "start": 193646,
+              "end": 196763
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 11,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 206050,
+                "sketch_end": 242132,
+                "sketch_unknown_bytes": 2944
+              },
+              "isolated_signature": {
+                "sketch_start": 206050,
+                "sketch_end": 242132,
+                "sketch_unknown_bytes": 2944
+              },
+              "baseline_unknown": 2944,
+              "isolated_unknown": 2944,
+              "expected_field_delta": 0,
+              "start": 206050,
+              "end": 242132
+            }
+          ],
+          "detail_checkpoint_checks": [
+            {
+              "origin_candidates": [
+                {
+                  "label": 0,
+                  "lane": 2,
+                  "target": false
+                }
+              ],
+              "baseline_signature": {
+                "detail_prefix_start": 18244,
+                "detail_unknown_start": 7292,
+                "detail_end": 35622,
+                "detail_unknown_end": 21358
+              },
+              "isolated_signature": {
+                "detail_prefix_start": 18244,
+                "detail_unknown_start": 7292,
+                "detail_end": 35622,
+                "detail_unknown_end": 21358
+              },
+              "baseline_unknown": 7292,
+              "isolated_unknown": 7292,
+              "expected_field_delta": 0,
+              "kind": "detail_unknown_start",
+              "position": 18244
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 0,
+                  "lane": 2,
+                  "target": false
+                }
+              ],
+              "baseline_signature": {
+                "detail_prefix_start": 18244,
+                "detail_unknown_start": 7292,
+                "detail_end": 35622,
+                "detail_unknown_end": 21358
+              },
+              "isolated_signature": {
+                "detail_prefix_start": 18244,
+                "detail_unknown_start": 7292,
+                "detail_end": 35622,
+                "detail_unknown_end": 21358
+              },
+              "baseline_unknown": 21358,
+              "isolated_unknown": 21358,
+              "expected_field_delta": 0,
+              "kind": "detail_unknown_end",
+              "position": 35622
+            }
+          ],
+          "nonaccounting_graph_sha256": "fa1be8f76ba87659e312afcb5ff3cd7dc685f161a2ef5d12cc54e178dfdcc252",
+          "baseline_spans_sha256": "52bace1950d3d3a61e6dbbbea38aafef0ea136592feea2367f502fb9d190777a"
+        },
+        {
+          "path": "samples/tutorial/mbd/mbdoverview/foot_board.sldprt",
+          "stream": "Contents/Config-0-ResolvedFeatures",
+          "sha256": "3ca4e46772c570c24879602c367c4f0cff75a878f8a0c639dac7a73583490f3b",
+          "bytes": 248422,
+          "status": "complete",
+          "end": 248422,
+          "root_count": 44,
+          "map_items": 3786,
+          "baseline_unknown": 22464,
+          "isolated_unknown": 22452,
+          "measured_unknown_delta": 12,
+          "historical_field_bytes": 12,
+          "retained_unqualified_field_bytes": 0,
+          "observations": [
+            {
+              "field": "raw_70",
+              "start": 205891,
+              "end": 205895,
+              "raw_hex": "00000000",
+              "raw_i32": 0,
+              "native_u32": 0,
+              "wire_class": "moSketchBitmapData_c",
+              "wire_schema": 1,
+              "archive_lane": 3,
+              "field_unknown_delta": 0,
+              "completed_body": true,
+              "role": "has_transparency_setting",
+              "body_start": 205793,
+              "body_end": 205916,
+              "archive_version": 19000,
+              "context": "ordinary_external_xml"
+            },
+            {
+              "field": "raw_60",
+              "start": 205895,
+              "end": 205899,
+              "raw_hex": "00000000",
+              "raw_i32": 0,
+              "native_u32": 0,
+              "wire_class": "moSketchBitmapData_c",
+              "wire_schema": 1,
+              "archive_lane": 3,
+              "field_unknown_delta": 0,
+              "completed_body": true,
+              "role": "transparency_level_parameter",
+              "body_start": 205793,
+              "body_end": 205916,
+              "archive_version": 19000,
+              "context": "ordinary_external_xml"
+            },
+            {
+              "field": "raw_6c",
+              "start": 205907,
+              "end": 205911,
+              "raw_hex": "00000000",
+              "raw_i32": 0,
+              "native_u32": 0,
+              "wire_class": "moSketchBitmapData_c",
+              "wire_schema": 1,
+              "archive_lane": 3,
+              "field_unknown_delta": 0,
+              "completed_body": true,
+              "role": "transparency_type_selector",
+              "body_start": 205793,
+              "body_end": 205916,
+              "archive_version": 19000,
+              "context": "ordinary_external_xml"
+            }
+          ],
+          "supported_bitmap_bodies": 1,
+          "sketch_accounting_checks": [
+            {
+              "origin_candidates": [
+                {
+                  "label": 0,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 6087,
+                "sketch_end": 6585,
+                "sketch_unknown_bytes": 17
+              },
+              "isolated_signature": {
+                "sketch_start": 6087,
+                "sketch_end": 6585,
+                "sketch_unknown_bytes": 17
+              },
+              "baseline_unknown": 17,
+              "isolated_unknown": 17,
+              "expected_field_delta": 0,
+              "start": 6087,
+              "end": 6585
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 1,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 7452,
+                "sketch_end": 25020,
+                "sketch_unknown_bytes": 1688
+              },
+              "isolated_signature": {
+                "sketch_start": 7452,
+                "sketch_end": 25020,
+                "sketch_unknown_bytes": 1688
+              },
+              "baseline_unknown": 1688,
+              "isolated_unknown": 1688,
+              "expected_field_delta": 0,
+              "start": 7452,
+              "end": 25020
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 2,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 33271,
+                "sketch_end": 35431,
+                "sketch_unknown_bytes": 281
+              },
+              "isolated_signature": {
+                "sketch_start": 33271,
+                "sketch_end": 35431,
+                "sketch_unknown_bytes": 281
+              },
+              "baseline_unknown": 281,
+              "isolated_unknown": 281,
+              "expected_field_delta": 0,
+              "start": 33271,
+              "end": 35431
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 3,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 40599,
+                "sketch_end": 42852,
+                "sketch_unknown_bytes": 277
+              },
+              "isolated_signature": {
+                "sketch_start": 40599,
+                "sketch_end": 42852,
+                "sketch_unknown_bytes": 277
+              },
+              "baseline_unknown": 277,
+              "isolated_unknown": 277,
+              "expected_field_delta": 0,
+              "start": 40599,
+              "end": 42852
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 4,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 48114,
+                "sketch_end": 51437,
+                "sketch_unknown_bytes": 376
+              },
+              "isolated_signature": {
+                "sketch_start": 48114,
+                "sketch_end": 51437,
+                "sketch_unknown_bytes": 376
+              },
+              "baseline_unknown": 376,
+              "isolated_unknown": 376,
+              "expected_field_delta": 0,
+              "start": 48114,
+              "end": 51437
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 5,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 56737,
+                "sketch_end": 59962,
+                "sketch_unknown_bytes": 376
+              },
+              "isolated_signature": {
+                "sketch_start": 56737,
+                "sketch_end": 59962,
+                "sketch_unknown_bytes": 376
+              },
+              "baseline_unknown": 376,
+              "isolated_unknown": 376,
+              "expected_field_delta": 0,
+              "start": 56737,
+              "end": 59962
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 6,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 65040,
+                "sketch_end": 84131,
+                "sketch_unknown_bytes": 1569
+              },
+              "isolated_signature": {
+                "sketch_start": 65040,
+                "sketch_end": 84131,
+                "sketch_unknown_bytes": 1569
+              },
+              "baseline_unknown": 1569,
+              "isolated_unknown": 1569,
+              "expected_field_delta": 0,
+              "start": 65040,
+              "end": 84131
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 7,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 91480,
+                "sketch_end": 99795,
+                "sketch_unknown_bytes": 718
+              },
+              "isolated_signature": {
+                "sketch_start": 91480,
+                "sketch_end": 99795,
+                "sketch_unknown_bytes": 718
+              },
+              "baseline_unknown": 718,
+              "isolated_unknown": 718,
+              "expected_field_delta": 0,
+              "start": 91480,
+              "end": 99795
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 8,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 118187,
+                "sketch_end": 162667,
+                "sketch_unknown_bytes": 3797
+              },
+              "isolated_signature": {
+                "sketch_start": 118187,
+                "sketch_end": 162667,
+                "sketch_unknown_bytes": 3797
+              },
+              "baseline_unknown": 3797,
+              "isolated_unknown": 3797,
+              "expected_field_delta": 0,
+              "start": 118187,
+              "end": 162667
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 9,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 172077,
+                "sketch_end": 179658,
+                "sketch_unknown_bytes": 670
+              },
+              "isolated_signature": {
+                "sketch_start": 172077,
+                "sketch_end": 179658,
+                "sketch_unknown_bytes": 670
+              },
+              "baseline_unknown": 670,
+              "isolated_unknown": 670,
+              "expected_field_delta": 0,
+              "start": 172077,
+              "end": 179658
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 10,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 193647,
+                "sketch_end": 196764,
+                "sketch_unknown_bytes": 274
+              },
+              "isolated_signature": {
+                "sketch_start": 193647,
+                "sketch_end": 196764,
+                "sketch_unknown_bytes": 274
+              },
+              "baseline_unknown": 274,
+              "isolated_unknown": 274,
+              "expected_field_delta": 0,
+              "start": 193647,
+              "end": 196764
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 11,
+                  "lane": 3,
+                  "target": true
+                }
+              ],
+              "baseline_signature": {
+                "sketch_start": 206051,
+                "sketch_end": 242133,
+                "sketch_unknown_bytes": 2944
+              },
+              "isolated_signature": {
+                "sketch_start": 206051,
+                "sketch_end": 242133,
+                "sketch_unknown_bytes": 2944
+              },
+              "baseline_unknown": 2944,
+              "isolated_unknown": 2944,
+              "expected_field_delta": 0,
+              "start": 206051,
+              "end": 242133
+            }
+          ],
+          "detail_checkpoint_checks": [
+            {
+              "origin_candidates": [
+                {
+                  "label": 0,
+                  "lane": 2,
+                  "target": false
+                }
+              ],
+              "baseline_signature": {
+                "detail_prefix_start": 18244,
+                "detail_unknown_start": 7292,
+                "detail_end": 35622,
+                "detail_unknown_end": 21358
+              },
+              "isolated_signature": {
+                "detail_prefix_start": 18244,
+                "detail_unknown_start": 7292,
+                "detail_end": 35622,
+                "detail_unknown_end": 21358
+              },
+              "baseline_unknown": 7292,
+              "isolated_unknown": 7292,
+              "expected_field_delta": 0,
+              "kind": "detail_unknown_start",
+              "position": 18244
+            },
+            {
+              "origin_candidates": [
+                {
+                  "label": 0,
+                  "lane": 2,
+                  "target": false
+                }
+              ],
+              "baseline_signature": {
+                "detail_prefix_start": 18244,
+                "detail_unknown_start": 7292,
+                "detail_end": 35622,
+                "detail_unknown_end": 21358
+              },
+              "isolated_signature": {
+                "detail_prefix_start": 18244,
+                "detail_unknown_start": 7292,
+                "detail_end": 35622,
+                "detail_unknown_end": 21358
+              },
+              "baseline_unknown": 21358,
+              "isolated_unknown": 21358,
+              "expected_field_delta": 0,
+              "kind": "detail_unknown_end",
+              "position": 35622
+            }
+          ],
+          "nonaccounting_graph_sha256": "c352bc2201699877f282c0cb9ff56b5519289ca2807842b26375bd23b01aa398",
+          "baseline_spans_sha256": "094435ba5d8e54e4dea6c0aebaba7b9150a3bcf8f14483dc003f01481782809a"
+        }
+      ],
+      "sources": {
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_root_sketch_format_semantic_replay.py": "c43131a10fa8efcc4869752dc567ef8ef69e2924d12c6af43b28b9547bcac9c4",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_root_sketch_format_semantic_reader.py": "f16839627f80c29ac0b291ecef452c5be3cacaec28026f46c598ce8ebd9cfbc7",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_root_semantic_graph.py": "9db8802971444073e945b7bd73ccf4cc15af181a005e7942060d8968bba43a27",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_root_semantic_origins.py": "e3ae3d440405b0f534ffd21e99348f1bd0c0461cbaa007784986ea9fe3666bd9",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_format_completion_manifest.json": "fc2f0c5eb016590797399e4830ee540677acdae045670dbcc8d97ce4ad6dd8f9",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_format_completion_review.json": "9441e27157686a8ad6361e9c7816925c42bcf162fb1564d96434b52202cd9b35",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\sketchprefix.py": "9a8eae6a84dadaa2696d8b017b189b0a6f1ff41c63e3cbc94def329173893075",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\resolvedfeatures.py": "a1dae87cb2ac370f9f1ef435ad1991348aee832e93898f55e5756e7ecf60ada6",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\modelcomponents.py": "60f01bb82cc64d35e4ef350797d0bf115a38171a9716176adea69f06759a561f",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\xtbin.py": "3fb876a36e79402cf8ab90ca64e2c2de8e8a3f4b6290af41937ee6a9bfc8870d",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\assemblyprofiles.py": "ac010b460dfc7b84d15326ec67251d15003c2fe503cf13097ab65f449bd3c2de",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\modelprefix.py": "57bf2a5e26e2d049b84e4f931bd8c122cc9e9647f32a472f9e2e8d0a0e2f608e",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\mfcobjects.py": "eb7ad6c86ed8e4c4bc9e8b5ad6e14c2dbabc4a5ae53bb6cd9686061cef98aa16",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_point_mask_semantic_replay.py": "2e818f3d0b27a690b987129a0e07c79e99ecfa9587c572a7ab06eeb7141990d5",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_point_mask_semantic_reader.py": "4567b9f30114ae31173887640c0cf30b110c2a686d8e3b15b755240cf15f983d",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_point_mask_semantic_graph.py": "1d2abc30ea5f6873e586203a1d6004c020f2fa68da74765d71cc52af731ea736",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_root_sketch_format_semantic_replay_evidence.json": "f0a76109bc1666fe9c1f766793d0562704e251c0b49c3adc888df88ca59cfec7",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_point_mask_completion_review.json": "465b59e54eb7de60afc7ea1929a4e0b1e2b25f4c5528d3cb74cc7dfe199b19ec",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_point_mask_completion_manifest.json": "0eff5a390ae945eb5f62bd5cc5887001080a8ad54e4d052d0b09fe369d158988",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\swarchive.py": "49daa712eacb3d25077835c0177118e94790d435118f281d03f110e73cf5dbf8",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\swcontainer.py": "fa3eaf9159ae5deff97559ae7c4feb2a0d2c4425a86a62b4a99944c323ccec19",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\swcover.py": "f83d40bcd0ad324541e68d5edee60e2a86f69c2a73cc9656fd27ab9ad1116b46",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\sketchtail.py": "ec1c2e1d37da5c5c3682c6dd8c2fa3cc679a052c814fc6d018ca5ee379812e1e",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_replay.py": "6645574d93fc6a3524fec014529ceb2b3dbc0543fca2c2abb7d347e1b223057e",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_reader.py": "d648d052d66bff9dc88a44b9350f866655208e584d9074d3233b0f9e497863ba",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_root_text_direct_semantic_replay.py": "030b8b971e5c7afb816e1427064fb7a1f7521db0f269fd117fda5f768eb6a9f3",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_point_mask_semantic_replay_evidence.json": "b3c10bba52151fb40078a3ad227216a1441e1dd45f343faa55bc4f1148824bd0",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-resolved-unknown-field-attribution-post-profile-contour-bounds-evidence.json": "3a17859f0d5226aae36fde1b0e8a7b5b9e06f57862d49e8d96a37988bb111fd0",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_proof_review.json": "cf81d1cf1e075753e606c4ae46dbf227fee83da35b475f3bd87e78f9b4f5313f",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_root_bitmap_transparency_policy.json": "266642ee8e51075f62675e057431b1e33cd4d7812ba18b034255bfc27495d00a"
+      },
+      "limits": [
+        "Canonical exact bitmap-data wire profile; all raw i32 and sibling f64 bits retained.",
+        "Only raw70/60/6C explicit policy roles admitted; no native policy execution.",
+        "No native target, rendering, physicalunit, normalization, production or global credit."
+      ]
+    },
+    "parallel_sketch_bitmap_transparency_smoke_evidence.json": {
+      "target_executed": false,
+      "coverage_credit": 0,
+      "checks": 5124,
+      "complete_bodies": 731,
+      "baseline_fixture_parses": 731,
+      "adapted_fixture_parses": 737,
+      "unrelated_field_reader_fixture_parses": 1,
+      "truncated_fixture_parse_attempts": 88459,
+      "truncations_rejected": 88459,
+      "whole_stream_feature_parses": 0,
+      "sources": {
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_smoke.py": "7d12fb23a459cdf0b629d8f221c56955b0bbaecbfe429e186780fa996b9ceea0",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_reader.py": "d648d052d66bff9dc88a44b9350f866655208e584d9074d3233b0f9e497863ba",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_root_semantic_graph.py": "9db8802971444073e945b7bd73ccf4cc15af181a005e7942060d8968bba43a27",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\sketchbitmaps.py": "f92258c01d0f9194b412b15063b7a4ca5334c9dd6fc23a33fdb2fe7a894e7b46",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\test_sketchbitmaps.py": "781ae8cebc78b686efa47d62c42066a4a3a2cf346c8e26074062570195082811",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_proof_review.json": "cf81d1cf1e075753e606c4ae46dbf227fee83da35b475f3bd87e78f9b4f5313f"
+      },
+      "limits": [
+        "No native or simulatedclassification invoked byadapter; only rawsettingsobserved.",
+        "Plane absent for unrestrictednegativepixel siblings; optionalplane1/255 covered withvalid2x2payload.",
+        "raw64/68/80, allf64bits, references/maps andoutputgraph unchanged; runtime7Cnotserialized."
+      ]
+    },
+    "parallel_sketch_bitmap_transparency_saved_verification.json": {
+      "target_executed": false,
+      "coverage_credit": 0,
+      "saved_replay_sha256": "4fb46de27776954b80e4e9bf349ac5555367ced5cb0b9831ee4f05c6af5b3f2c",
+      "complete_streams": 4,
+      "distinct_part_files": 4,
+      "stored_bitmap_bodies": 4,
+      "resolved_bytes": 48,
+      "roots": 189,
+      "raw_field_bits_histogram": {
+        "raw_60": {
+          "00000000": 4
+        },
+        "raw_70": {
+          "00000000": 4
+        },
+        "raw_6c": {
+          "00000000": 4
+        }
+      },
+      "checks": {
+        "container_stream_reads": 4,
+        "signed_unsigned_scalar_wire_checks": 12,
+        "sketch_origin_checks": 48,
+        "sketch_counter_checks": 48,
+        "sketch_changed_counters": 0,
+        "detail_origin_checks": 8,
+        "detail_counter_checks": 8,
+        "detail_changed_counters": 0
+      },
+      "adapted_whole_stream_feature_parses": 4,
+      "baseline_feature_parses": 0,
+      "diagnostic_feature_parses": 0,
+      "saved_wire_revalidation_container_stream_reads": 4,
+      "extra_feature_parses_during_saved_verification": 0,
+      "source_pins_verified": 30,
+      "attempts": {
+        "proof_review_runs": 1,
+        "smoke_runs": 1,
+        "adapted_whole_stream_replay_runs": 1,
+        "saved_verification_runs": 1,
+        "failed_feature_parse_attempts": 0
+      },
+      "sources": {
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_saved_verification.py": "af87d6f826c5f48f8a2e497b9c02e556cbd57eea23916d4c4362a41c65498351",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_replay_evidence.json": "4fb46de27776954b80e4e9bf349ac5555367ced5cb0b9831ee4f05c6af5b3f2c",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_reader.py": "d648d052d66bff9dc88a44b9350f866655208e584d9074d3233b0f9e497863ba",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_smoke.py": "7d12fb23a459cdf0b629d8f221c56955b0bbaecbfe429e186780fa996b9ceea0",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_smoke_evidence.json": "a1d4fabeccd87f0f5b887779a8721dc6dafe04ee0aabf7cc82509bbe5c6340c6"
+      }
+    },
+    "parallel_root_bitmap_transparency_policy.json": {
+      "target_executed": false,
+      "coverage_credit": 0,
+      "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+      "module_sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+      "typed_exports": {
+        "?get_HasTransparency@moSketchBitmapData_c@@QEBAHXZ": "0x4b2c6900",
+        "?set_HasTransparency@moSketchBitmapData_c@@QEAAXH@Z": "0x4b2c6bb0",
+        "?getLevelOfTransparency@moSketchBitmapData_c@@QEBAHXZ": "0x4b2c6af0",
+        "?setLevelOfTransparency@moSketchBitmapData_c@@QEAAXH@Z": "0x4b2c6d60",
+        "?getTransparencyType@moSketchBitmapData_c@@QEBAHXZ": "0x4b2c69f0",
+        "?setTransparencyType@moSketchBitmapData_c@@QEAAXH@Z": "0x4c0fe880",
+        "?setTransparencyAlphaType@moSketchBitmapData_c@@QEAAXXZ": "0x4c0fe770",
+        "?getTransparencyAlphaType@moSketchBitmapData_c@@QEBA?AW4sketchBitmapAlphaType_e@@XZ": "0x4c0fde40",
+        "?initAlphaChannelData@moSketchBitmapData_c@@QEAAXXZ": "0x4c0fdf10"
+      },
+      "native": [
+        {
+          "entry": "0x4c0fe770",
+          "fragments": [
+            {
+              "start": "0x4c0fe770",
+              "end": "0x4c0fe7c7",
+              "bytes": "4883ec088b516c85d2741683ea01744583ea01742e83fa0175078b516085d2750cc7417c010000004883c408c333c081faff0000000f95c083c00389417c4883c408c333c03941600f95c0ffc089417c4883c408c333c0",
+              "sha256": "133b5575cde49aa485f37327c9bbc873de288a9ac113fb30f7ccaabe1bfa56df"
+            },
+            {
+              "start": "0x4c0fe7c7",
+              "end": "0x4c0fe7f0",
+              "bytes": "48895c24108bd8448bc039417074094c8b49404d85c97511c7417c01000000488b5c24104883c408c3",
+              "sha256": "5824fb31f4157ea68db7a9d0bfa64c762adc3a6d8de305ad21ed90e4fd8c4192"
+            },
+            {
+              "start": "0x4c0fe7f0",
+              "end": "0x4c0fe85a",
+              "bytes": "4d8b4908ba0100000089517c4d85c9746948893c24448bd88b794c0faf794885ff7e53450fb6114584d275048bdaeb0c4180faff440f42c285db74054585c0751241ffc349ffc1443bdf7cd785db741a4585c0488b3c240f95c0488b5c241083c00389417c4883c408c3",
+              "sha256": "2ad0488af611365e52c379ab1fcafc018d098cb92885fefdd26020d21e927849"
+            },
+            {
+              "start": "0x4c0fe85a",
+              "end": "0x4c0fe86a",
+              "bytes": "4585c07407c7417c02000000488b3c24",
+              "sha256": "83ffa681825d84e1d0027f3b1ce96f45fa6cf3c1dcc87a45e817974fb5d1f765"
+            },
+            {
+              "start": "0x4c0fe86a",
+              "end": "0x4c0fe874",
+              "bytes": "488b5c24104883c408c3",
+              "sha256": "71fbded45559f9869368b04599218ee56975bfc699a8af6ab8b8e2cebf4661d1"
+            }
+          ],
+          "instructions": [
+            "4c0fe770 sub rsp, 8",
+            "4c0fe774 mov edx, dword ptr [rcx + 0x6c]",
+            "4c0fe777 test edx, edx",
+            "4c0fe779 je 0x4c0fe791",
+            "4c0fe77b sub edx, 1",
+            "4c0fe77e je 0x4c0fe7c5",
+            "4c0fe780 sub edx, 1",
+            "4c0fe783 je 0x4c0fe7b3",
+            "4c0fe785 cmp edx, 1",
+            "4c0fe788 jne 0x4c0fe791",
+            "4c0fe78a mov edx, dword ptr [rcx + 0x60]",
+            "4c0fe78d test edx, edx",
+            "4c0fe78f jne 0x4c0fe79d",
+            "4c0fe791 mov dword ptr [rcx + 0x7c], 1",
+            "4c0fe798 add rsp, 8",
+            "4c0fe79c ret ",
+            "4c0fe79d xor eax, eax",
+            "4c0fe79f cmp edx, 0xff",
+            "4c0fe7a5 setne al",
+            "4c0fe7a8 add eax, 3",
+            "4c0fe7ab mov dword ptr [rcx + 0x7c], eax",
+            "4c0fe7ae add rsp, 8",
+            "4c0fe7b2 ret ",
+            "4c0fe7b3 xor eax, eax",
+            "4c0fe7b5 cmp dword ptr [rcx + 0x60], eax",
+            "4c0fe7b8 setne al",
+            "4c0fe7bb inc eax",
+            "4c0fe7bd mov dword ptr [rcx + 0x7c], eax",
+            "4c0fe7c0 add rsp, 8",
+            "4c0fe7c4 ret ",
+            "4c0fe7c5 xor eax, eax",
+            "4c0fe7c7 mov qword ptr [rsp + 0x10], rbx",
+            "4c0fe7cc mov ebx, eax",
+            "4c0fe7ce mov r8d, eax",
+            "4c0fe7d1 cmp dword ptr [rcx + 0x70], eax",
+            "4c0fe7d4 je 0x4c0fe7df",
+            "4c0fe7d6 mov r9, qword ptr [rcx + 0x40]",
+            "4c0fe7da test r9, r9",
+            "4c0fe7dd jne 0x4c0fe7f0",
+            "4c0fe7df mov dword ptr [rcx + 0x7c], 1",
+            "4c0fe7e6 mov rbx, qword ptr [rsp + 0x10]",
+            "4c0fe7eb add rsp, 8",
+            "4c0fe7ef ret ",
+            "4c0fe7f0 mov r9, qword ptr [r9 + 8]",
+            "4c0fe7f4 mov edx, 1",
+            "4c0fe7f9 mov dword ptr [rcx + 0x7c], edx",
+            "4c0fe7fc test r9, r9",
+            "4c0fe7ff je 0x4c0fe86a",
+            "4c0fe801 mov qword ptr [rsp], rdi",
+            "4c0fe805 mov r11d, eax",
+            "4c0fe808 mov edi, dword ptr [rcx + 0x4c]",
+            "4c0fe80b imul edi, dword ptr [rcx + 0x48]",
+            "4c0fe80f test edi, edi",
+            "4c0fe811 jle 0x4c0fe866",
+            "4c0fe813 movzx r10d, byte ptr [r9]",
+            "4c0fe817 test r10b, r10b",
+            "4c0fe81a jne 0x4c0fe820",
+            "4c0fe81c mov ebx, edx",
+            "4c0fe81e jmp 0x4c0fe82c",
+            "4c0fe820 cmp r10b, 0xff",
+            "4c0fe824 cmovb r8d, edx",
+            "4c0fe828 test ebx, ebx",
+            "4c0fe82a je 0x4c0fe831",
+            "4c0fe82c test r8d, r8d",
+            "4c0fe82f jne 0x4c0fe843",
+            "4c0fe831 inc r11d",
+            "4c0fe834 inc r9",
+            "4c0fe837 cmp r11d, edi",
+            "4c0fe83a jl 0x4c0fe813",
+            "4c0fe83c test ebx, ebx",
+            "4c0fe83e je 0x4c0fe85a",
+            "4c0fe840 test r8d, r8d",
+            "4c0fe843 mov rdi, qword ptr [rsp]",
+            "4c0fe847 setne al",
+            "4c0fe84a mov rbx, qword ptr [rsp + 0x10]",
+            "4c0fe84f add eax, 3",
+            "4c0fe852 mov dword ptr [rcx + 0x7c], eax",
+            "4c0fe855 add rsp, 8",
+            "4c0fe859 ret ",
+            "4c0fe85a test r8d, r8d",
+            "4c0fe85d je 0x4c0fe866",
+            "4c0fe85f mov dword ptr [rcx + 0x7c], 2",
+            "4c0fe866 mov rdi, qword ptr [rsp]",
+            "4c0fe86a mov rbx, qword ptr [rsp + 0x10]",
+            "4c0fe86f add rsp, 8",
+            "4c0fe873 ret "
+          ]
+        },
+        {
+          "entry": "0x4c0fdf10",
+          "fragments": [
+            {
+              "start": "0x4c0fdf10",
+              "end": "0x4c0fe04d",
+              "bytes": "48895c241048896c2418565741564883ec20488bd9488b41384885c00f84080100004c8b70084d85f60f84fb000000b928000000e80c54aa00488bf0488944244033ff4885c07413488bc8ff15bf0cc40090c7462001000000eb03488bf74885f67404f0ff4620488b6b40488973404885ed742ab8fffffffff00fc1452083f801751b48896c2440488bcdff158f0cc400ba28000000488bcde8728a1dff488b7340b8fffffffff00fc1462083f801752048897424404885f67416488bceff155c0cc400ba28000000488bcee83f8a1dff8b534c0faf534841b8ffffffff488b4b40ff15300cc400488b4b40ff15760fc400488b4340488b50088b434c0faf434885c07e25498d4e030f1f80000000000fb6018802488d4904ffc7488d52018b434c0faf43483bf87ce6488b5c2448488b6c24504883c420415e5f5ec3",
+              "sha256": "f2fe41f0105c89624a5584b31d760d2e5cefe2aba5f4a7c6c4ee44d8dfdeae1f"
+            }
+          ],
+          "instructions": [
+            "4c0fdf10 mov qword ptr [rsp + 0x10], rbx",
+            "4c0fdf15 mov qword ptr [rsp + 0x18], rbp",
+            "4c0fdf1a push rsi",
+            "4c0fdf1b push rdi",
+            "4c0fdf1c push r14",
+            "4c0fdf1e sub rsp, 0x20",
+            "4c0fdf22 mov rbx, rcx",
+            "4c0fdf25 mov rax, qword ptr [rcx + 0x38]",
+            "4c0fdf29 test rax, rax",
+            "4c0fdf2c je 0x4c0fe03a",
+            "4c0fdf32 mov r14, qword ptr [rax + 8]",
+            "4c0fdf36 test r14, r14",
+            "4c0fdf39 je 0x4c0fe03a",
+            "4c0fdf3f mov ecx, 0x28",
+            "4c0fdf44 call 0x4cba3355",
+            "4c0fdf49 mov rsi, rax",
+            "4c0fdf4c mov qword ptr [rsp + 0x40], rax",
+            "4c0fdf51 xor edi, edi",
+            "4c0fdf53 test rax, rax",
+            "4c0fdf56 je 0x4c0fdf6b",
+            "4c0fdf58 mov rcx, rax",
+            "4c0fdf5b call qword ptr [rip + 0xc40cbf]",
+            "4c0fdf61 nop ",
+            "4c0fdf62 mov dword ptr [rsi + 0x20], 1",
+            "4c0fdf69 jmp 0x4c0fdf6e",
+            "4c0fdf6b mov rsi, rdi",
+            "4c0fdf6e test rsi, rsi",
+            "4c0fdf71 je 0x4c0fdf77",
+            "4c0fdf73 lock inc dword ptr [rsi + 0x20]",
+            "4c0fdf77 mov rbp, qword ptr [rbx + 0x40]",
+            "4c0fdf7b mov qword ptr [rbx + 0x40], rsi",
+            "4c0fdf7f test rbp, rbp",
+            "4c0fdf82 je 0x4c0fdfae",
+            "4c0fdf84 mov eax, 0xffffffff",
+            "4c0fdf89 lock xadd dword ptr [rbp + 0x20], eax",
+            "4c0fdf8e cmp eax, 1",
+            "4c0fdf91 jne 0x4c0fdfae",
+            "4c0fdf93 mov qword ptr [rsp + 0x40], rbp",
+            "4c0fdf98 mov rcx, rbp",
+            "4c0fdf9b call qword ptr [rip + 0xc40c8f]",
+            "4c0fdfa1 mov edx, 0x28",
+            "4c0fdfa6 mov rcx, rbp",
+            "4c0fdfa9 call 0x4b2d6a20",
+            "4c0fdfae mov rsi, qword ptr [rbx + 0x40]",
+            "4c0fdfb2 mov eax, 0xffffffff",
+            "4c0fdfb7 lock xadd dword ptr [rsi + 0x20], eax",
+            "4c0fdfbc cmp eax, 1",
+            "4c0fdfbf jne 0x4c0fdfe1",
+            "4c0fdfc1 mov qword ptr [rsp + 0x40], rsi",
+            "4c0fdfc6 test rsi, rsi",
+            "4c0fdfc9 je 0x4c0fdfe1",
+            "4c0fdfcb mov rcx, rsi",
+            "4c0fdfce call qword ptr [rip + 0xc40c5c]",
+            "4c0fdfd4 mov edx, 0x28",
+            "4c0fdfd9 mov rcx, rsi",
+            "4c0fdfdc call 0x4b2d6a20",
+            "4c0fdfe1 mov edx, dword ptr [rbx + 0x4c]",
+            "4c0fdfe4 imul edx, dword ptr [rbx + 0x48]",
+            "4c0fdfe8 mov r8d, 0xffffffff",
+            "4c0fdfee mov rcx, qword ptr [rbx + 0x40]",
+            "4c0fdff2 call qword ptr [rip + 0xc40c30]",
+            "4c0fdff8 mov rcx, qword ptr [rbx + 0x40]",
+            "4c0fdffc call qword ptr [rip + 0xc40f76]",
+            "4c0fe002 mov rax, qword ptr [rbx + 0x40]",
+            "4c0fe006 mov rdx, qword ptr [rax + 8]",
+            "4c0fe00a mov eax, dword ptr [rbx + 0x4c]",
+            "4c0fe00d imul eax, dword ptr [rbx + 0x48]",
+            "4c0fe011 test eax, eax",
+            "4c0fe013 jle 0x4c0fe03a",
+            "4c0fe015 lea rcx, [r14 + 3]",
+            "4c0fe019 nop dword ptr [rax]",
+            "4c0fe020 movzx eax, byte ptr [rcx]",
+            "4c0fe023 mov byte ptr [rdx], al",
+            "4c0fe025 lea rcx, [rcx + 4]",
+            "4c0fe029 inc edi",
+            "4c0fe02b lea rdx, [rdx + 1]",
+            "4c0fe02f mov eax, dword ptr [rbx + 0x4c]",
+            "4c0fe032 imul eax, dword ptr [rbx + 0x48]",
+            "4c0fe036 cmp edi, eax",
+            "4c0fe038 jl 0x4c0fe020",
+            "4c0fe03a mov rbx, qword ptr [rsp + 0x48]",
+            "4c0fe03f mov rbp, qword ptr [rsp + 0x50]",
+            "4c0fe044 add rsp, 0x20",
+            "4c0fe048 pop r14",
+            "4c0fe04a pop rdi",
+            "4c0fe04b pop rsi",
+            "4c0fe04c ret "
+          ]
+        }
+      ],
+      "leaves": [
+        {
+          "entry": "0x4b2c6900",
+          "bytes": "8b4170c3",
+          "sha256": "6adcb7ca87b78d8ea2260c2586dbba1ec45af1f7781b84427c334943708e2b7f",
+          "scope": "through common return; every direct branch internal or exact captured tailtarget",
+          "instructions": [
+            "0x4b2c6900 mov eax, dword ptr [rcx + 0x70]",
+            "0x4b2c6903 ret "
+          ]
+        },
+        {
+          "entry": "0x4b2c6bb0",
+          "bytes": "895170c3",
+          "sha256": "d94ef11eefaf1886c3c1734a903f9fa79d3e89648df191c371f27e871cac0ac1",
+          "scope": "through common return; every direct branch internal or exact captured tailtarget",
+          "instructions": [
+            "0x4b2c6bb0 mov dword ptr [rcx + 0x70], edx",
+            "0x4b2c6bb3 ret "
+          ]
+        },
+        {
+          "entry": "0x4b2c6af0",
+          "bytes": "8b4160c3",
+          "sha256": "e6001fd7c43d35f244e418688ebe47d7777d15c557f62267ef4f2fb6c3bf7a74",
+          "scope": "through common return; every direct branch internal or exact captured tailtarget",
+          "instructions": [
+            "0x4b2c6af0 mov eax, dword ptr [rcx + 0x60]",
+            "0x4b2c6af3 ret "
+          ]
+        },
+        {
+          "entry": "0x4b2c6d60",
+          "bytes": "895160c3",
+          "sha256": "dbd4e6f9fedb7537da029376953e29a9d608ab27f5c21b221a22f4dc34d53961",
+          "scope": "through common return; every direct branch internal or exact captured tailtarget",
+          "instructions": [
+            "0x4b2c6d60 mov dword ptr [rcx + 0x60], edx",
+            "0x4b2c6d63 ret "
+          ]
+        },
+        {
+          "entry": "0x4b2c69f0",
+          "bytes": "8b416cc3",
+          "sha256": "0b27ad85b74e93b12f68ebe531271f15e322083184edc1e582fdf577a151cffc",
+          "scope": "through common return; every direct branch internal or exact captured tailtarget",
+          "instructions": [
+            "0x4b2c69f0 mov eax, dword ptr [rcx + 0x6c]",
+            "0x4b2c69f3 ret "
+          ]
+        },
+        {
+          "entry": "0x4c0fe880",
+          "bytes": "3b516c750583fa01740889516ce9defeffffc3",
+          "sha256": "834e06b19c4da17514cb82eab5ab8f5a4362a60b24c97feddc3098b76b59c735",
+          "scope": "through common return; every direct branch internal or exact captured tailtarget",
+          "instructions": [
+            "0x4c0fe880 cmp edx, dword ptr [rcx + 0x6c]",
+            "0x4c0fe883 jne 0x4c0fe88a",
+            "0x4c0fe885 cmp edx, 1",
+            "0x4c0fe888 je 0x4c0fe892",
+            "0x4c0fe88a mov dword ptr [rcx + 0x6c], edx",
+            "0x4c0fe88d jmp 0x4c0fe770",
+            "0x4c0fe892 ret "
+          ]
+        },
+        {
+          "entry": "0x4c0fde40",
+          "bytes": "8b417c85c0750cc7417c01000000b801000000c3",
+          "sha256": "94e3b093bad9fd4ea07bc4742c9752b5717408106873c392d8afbefe2e3ec7d0",
+          "scope": "through common return; every direct branch internal or exact captured tailtarget",
+          "instructions": [
+            "0x4c0fde40 mov eax, dword ptr [rcx + 0x7c]",
+            "0x4c0fde43 test eax, eax",
+            "0x4c0fde45 jne 0x4c0fde53",
+            "0x4c0fde47 mov dword ptr [rcx + 0x7c], 1",
+            "0x4c0fde4e mov eax, 1",
+            "0x4c0fde53 ret "
+          ]
+        }
+      ],
+      "native_assertions": 27,
+      "exact_instruction_assertions": {
+        "0x4b2c6900": "mov eax, dword ptr [rcx + 0x70]",
+        "0x4b2c6bb0": "mov dword ptr [rcx + 0x70], edx",
+        "0x4b2c6af0": "mov eax, dword ptr [rcx + 0x60]",
+        "0x4b2c6d60": "mov dword ptr [rcx + 0x60], edx",
+        "0x4b2c69f0": "mov eax, dword ptr [rcx + 0x6c]",
+        "0x4c0fe880": "cmp edx, dword ptr [rcx + 0x6c]",
+        "0x4c0fe888": "je 0x4c0fe892",
+        "0x4c0fe88a": "mov dword ptr [rcx + 0x6c], edx",
+        "0x4c0fe88d": "jmp 0x4c0fe770",
+        "0x4c0fe774": "mov edx, dword ptr [rcx + 0x6c]",
+        "0x4c0fe78a": "mov edx, dword ptr [rcx + 0x60]",
+        "0x4c0fe79f": "cmp edx, 0xff",
+        "0x4c0fe7d1": "cmp dword ptr [rcx + 0x70], eax",
+        "0x4c0fe7d6": "mov r9, qword ptr [rcx + 0x40]",
+        "0x4c0fe808": "mov edi, dword ptr [rcx + 0x4c]",
+        "0x4c0fe80b": "imul edi, dword ptr [rcx + 0x48]",
+        "0x4c0fe813": "movzx r10d, byte ptr [r9]",
+        "0x4c0fe820": "cmp r10b, 0xff",
+        "0x4c0fe824": "cmovb r8d, edx",
+        "0x4c0fde40": "mov eax, dword ptr [rcx + 0x7c]",
+        "0x4c0fde47": "mov dword ptr [rcx + 0x7c], 1",
+        "0x4c0fdf25": "mov rax, qword ptr [rcx + 0x38]",
+        "0x4c0fdf7b": "mov qword ptr [rbx + 0x40], rsi",
+        "0x4c0fe015": "lea rcx, [r14 + 3]",
+        "0x4c0fe020": "movzx eax, byte ptr [rcx]",
+        "0x4c0fe023": "mov byte ptr [rdx], al",
+        "0x4c0fe025": "lea rcx, [rcx + 4]"
+      },
+      "model_checks": 131456,
+      "roles": {
+        "raw_70": "stored fulli32 has-transparency setting; type1 alpha-class calculation testszero/NZ",
+        "raw_60": "stored fulli32 level-of-transparency parameter; explicit derived alpha-class computation useszero/NZ and exact255",
+        "raw_6c": "stored fulli32 transparency-type selector; explicit alpha-class computation has exact1/2/3/default policies"
+      },
+      "policy": "Type2: level0\u2192class1 else2. Type3: level0\u21921,level255\u21923,other\u21924. Type1: disabled/missingwrapper/missingdata/nonpositive nativepixelcount\u21921; otherwise zero-byte presence and intermediate-byte(1..254) presence yield neither\u21921,intermediateonly\u21922,zeroonly\u21923,both\u21924. Otherfull32type values\u21921.",
+      "lifecycle": "Type setter withsameold/new1 returnswithoutrecomputing; allothercases writefull6C then tailderivealpha class. Level60 andenabled70 namedsetters writefullword only, no automatic cache refresh proved. Getter for runtime7C convertszero\u21921;7C is separate derived cache, not a new serialized field.",
+      "alpha_plane": "ActualinitAlphaChannelData copies source38data8 fourthbyte(offset3,stride4) into owned40bytebuffer atstride1 for positive nativewidth*height. Existing serializer stores optional40plane. Pixelmemory format, renderer meaning of endpoint byte values and allallocationvalidity remain unassigned.",
+      "limits": [
+        "Selected typed normalcalls/validbuffers only; alpha-class integer labels not guessed as enum names. Native32 multiplication overflow and buffer-length safety are not reimplemented; puremodels use validfinite bounded arrays.",
+        "Raw60/6C/70i32 values remainunchanged offline, no range/Boolean normalization or native setter/classification invoked. No field credit until scoped replay/admission.",
+        "Exploratory staticcapture rejected a no-unwind getter before any output; bounded leaves now explicit. No targetexecution/corpus/baseline/fixture parses."
+      ],
+      "sources": {
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_root_bitmap_transparency_policy.py": "28ca080dded74a31c54746cdf45ff3a30e0110279374b8ecca9f278ecf288a0a",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\sketch-bitmap-native-evidence.json": "94ddb2e4592a0cc75d5ef192d7fb36999da5da4fceb9c1b817b853ce14ac522e",
+        "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\sketchbitmaps.py": "f92258c01d0f9194b412b15063b7a4ca5334c9dd6fc23a33fdb2fe7a894e7b46"
+      }
+    }
+  },
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\publish_sketch_bitmap_transparency_completion.py": "7c5db5877344ec5fe055daca967c7431360d38cd825ba6fd3e5ee25b5c6f0638",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_frozen_manifest.json": "753f40f75e402f93cf00d9f3be01a1e01ff495d56131d8359e11620e97c3008d",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_final_review.json": "0dfc606a825d98bfd8cfe9788a7b5b9f64c7a777897a404cb7cdda1a3c561ac8",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_proof_review.json": "cf81d1cf1e075753e606c4ae46dbf227fee83da35b475f3bd87e78f9b4f5313f",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_replay_evidence.json": "4fb46de27776954b80e4e9bf349ac5555367ced5cb0b9831ee4f05c6af5b3f2c",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_smoke_evidence.json": "a1d4fabeccd87f0f5b887779a8721dc6dafe04ee0aabf7cc82509bbe5c6340c6",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_saved_verification.json": "57efd0457ad1c15ff162ed1c2b80d3863d5d2d515d3085d415984f6491d83a75",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_root_bitmap_transparency_policy.json": "266642ee8e51075f62675e057431b1e33cd4d7812ba18b034255bfc27495d00a",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_reader.py": "d648d052d66bff9dc88a44b9350f866655208e584d9074d3233b0f9e497863ba",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_replay.py": "6645574d93fc6a3524fec014529ceb2b3dbc0543fca2c2abb7d347e1b223057e",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_smoke.py": "7d12fb23a459cdf0b629d8f221c56955b0bbaecbfe429e186780fa996b9ceea0",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_saved_verification.py": "af87d6f826c5f48f8a2e497b9c02e556cbd57eea23916d4c4362a41c65498351",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_proof_review.py": "61ab623004c81f6a5b81b21662ca3aaa4cc9dd4d7ca22d14fa1a46727b9c95af",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_sketch_bitmap_transparency_final_review.py": "45444b9987280ad40f7962e51b12c2dcd22402745f2b7f3894934c8472660f54",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\parallel_root_bitmap_transparency_policy.py": "28ca080dded74a31c54746cdf45ff3a30e0110279374b8ecca9f278ecf288a0a"
+  }
+}

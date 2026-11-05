@@ -1,0 +1,54 @@
+{
+  "issue": 181,
+  "stage": "Public typed visual projection across all retained906 native part cases",
+  "command": "cargo test --lib native_visual_carriers_bind_all906_streams_to_original_physical_record_counts -- --include-ignored --nocapture",
+  "platform": "Windows x64",
+  "toolchain": "Rust1.99.0 x86_64-pc-windows-msvc",
+  "exit_code": 0,
+  "process_reaped": true,
+  "passed": 1,
+  "failed": 0,
+  "ignored": 0,
+  "test_seconds": 50.37,
+  "cases": 906,
+  "configuration_visuals": 9586,
+  "resolved_feature_visuals": 127773,
+  "total_typed_projections": 137359,
+  "every_case_counts_match_previous_physical_gate": true,
+  "source_binding": "native-bindings-verification.json",
+  "packet": {
+    "path": "target/resolved-native-probe.bin",
+    "bytes": 129189574,
+    "sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f"
+  },
+  "support": {
+    "path": "tests/model_visual_carriers/native.rs",
+    "bytes": 4448,
+    "sha256": "7bae24d316f346e899e8fea432ce5f01226faf0155109f3320522b8400701820"
+  },
+  "log": {
+    "path": "target/entity-visual-native-typed-projection.log",
+    "bytes": 22627,
+    "sha256": "572a64837aae40e65f850d5d5ec2020eebc560f0292249f83e510be1220dd94a"
+  },
+  "clippy": {
+    "path": "target/entity-visual-native-typed-clippy.log",
+    "bytes": 136,
+    "sha256": "0a82c46e6b6b5bd092182f20df1340b6caf5a3122d3d2ff5142552e5ed62c2ac"
+  },
+  "checks": [
+    "Existing complete configuration and feature archive construction, exact feature bytes and all seven physical shape/type checks retained",
+    "Public entity_visual_states count equals independent physical field inspector for every configuration and feature stream",
+    "Every public stored word equals the original physical typed field, including signed width and raw custom float bits",
+    "All906 per-stream configuration/feature count rows equal the previously accepted physical gate byte for byte",
+    "C-1959 feature denominator127773 and separate configuration denominator9586 unchanged"
+  ],
+  "coverage_credit": 0,
+  "qualifications": [
+    "This is native complete-read/projection acceptance. Native typed edit byte oracles, Source replay of typed-operation exports, full operation history/concurrency/process gates and publication remain pending.",
+    "Source original identities/hashes/counts remain bound by the previous native-bindings-verification proof; no unknown-byte or semantic accounting credit was adopted.",
+    "The native packet is a private injected corpus input and is not committed. Required kernel context used the existing installed schema through BESSEMER_KERNEL_SCHEMA.",
+    "Humanizer unavailable; prose pass pending maintainer review."
+  ],
+  "artifact_git_revision": "4a953a14d1f1723f32f0b0dd24b6092c3fecae50"
+}

@@ -1,0 +1,190 @@
+{
+  "cases": 7662,
+  "cases_per_kind": 3831,
+  "physical_visual_definitions": 7662,
+  "selected_scalar_spans": 53634,
+  "complete_source_reads_per_case": true,
+  "no_reader_overrides": true,
+  "coverage_credit": 0,
+  "primitive_reads_checked": 16791273,
+  "baseline_controls": [
+    {
+      "stem": "component-properties",
+      "kind": "part",
+      "scenario": 0,
+      "bytes": 9899,
+      "primitive_reads": 2046,
+      "focus": [
+        8408
+      ],
+      "slots": 65
+    },
+    {
+      "stem": "component-properties",
+      "kind": "part",
+      "scenario": 2,
+      "bytes": 9899,
+      "primitive_reads": 2046,
+      "focus": [
+        8408
+      ],
+      "slots": 65
+    },
+    {
+      "stem": "component-properties",
+      "kind": "assembly",
+      "scenario": 0,
+      "bytes": 11016,
+      "primitive_reads": 2279,
+      "focus": [
+        9517
+      ],
+      "slots": 69
+    },
+    {
+      "stem": "component-properties",
+      "kind": "assembly",
+      "scenario": 2,
+      "bytes": 11016,
+      "primitive_reads": 2279,
+      "focus": [
+        9517
+      ],
+      "slots": 69
+    },
+    {
+      "stem": "component-property-holders-part",
+      "kind": "part",
+      "scenario": 16,
+      "bytes": 9986,
+      "primitive_reads": 2063,
+      "focus": [
+        8473
+      ],
+      "slots": 67
+    },
+    {
+      "stem": "component-property-holders-part",
+      "kind": "part",
+      "scenario": 18,
+      "bytes": 9986,
+      "primitive_reads": 2063,
+      "focus": [
+        8473
+      ],
+      "slots": 67
+    },
+    {
+      "stem": "component-property-holders-part",
+      "kind": "part",
+      "scenario": 17,
+      "bytes": 8807,
+      "primitive_reads": 1767,
+      "focus": [],
+      "slots": 65
+    },
+    {
+      "stem": "component-property-holders-part",
+      "kind": "part",
+      "scenario": 19,
+      "bytes": 10122,
+      "primitive_reads": 2087,
+      "focus": [
+        8605
+      ],
+      "slots": 69
+    },
+    {
+      "stem": "component-property-holders-part",
+      "kind": "part",
+      "scenario": 20,
+      "bytes": 9978,
+      "primitive_reads": 2061,
+      "focus": [
+        8473
+      ],
+      "slots": 67
+    },
+    {
+      "stem": "component-property-holders-part",
+      "kind": "part",
+      "scenario": 21,
+      "bytes": 10030,
+      "primitive_reads": 2075,
+      "focus": [
+        8469
+      ],
+      "slots": 68
+    },
+    {
+      "stem": "component-property-holders-assembly",
+      "kind": "assembly",
+      "scenario": 16,
+      "bytes": 11103,
+      "primitive_reads": 2296,
+      "focus": [
+        9582
+      ],
+      "slots": 71
+    },
+    {
+      "stem": "component-property-holders-assembly",
+      "kind": "assembly",
+      "scenario": 18,
+      "bytes": 11103,
+      "primitive_reads": 2296,
+      "focus": [
+        9582
+      ],
+      "slots": 71
+    },
+    {
+      "stem": "component-property-holders-assembly",
+      "kind": "assembly",
+      "scenario": 17,
+      "bytes": 9924,
+      "primitive_reads": 2000,
+      "focus": [],
+      "slots": 69
+    },
+    {
+      "stem": "component-property-holders-assembly",
+      "kind": "assembly",
+      "scenario": 19,
+      "bytes": 11239,
+      "primitive_reads": 2320,
+      "focus": [
+        9714
+      ],
+      "slots": 73
+    },
+    {
+      "stem": "component-property-holders-assembly",
+      "kind": "assembly",
+      "scenario": 20,
+      "bytes": 11095,
+      "primitive_reads": 2294,
+      "focus": [
+        9582
+      ],
+      "slots": 71
+    },
+    {
+      "stem": "component-property-holders-assembly",
+      "kind": "assembly",
+      "scenario": 21,
+      "bytes": 11147,
+      "primitive_reads": 2308,
+      "focus": [
+        9578
+      ],
+      "slots": 72
+    }
+  ],
+  "template_bytes": 21209,
+  "template_sha256": "bd6a110b8c8715ee1dd2d28e25c97cf90242d80db18ab566d0b7226434df8539",
+  "word_oracle_bytes": 1085660,
+  "word_oracle_sha256": "9ec16c0740fce1f0b9d0f706ecf49accc5030f321048184dfd64d788caa6d64a",
+  "primitive_oracle_bytes": 260386,
+  "primitive_oracle_sha256": "92023a97c0781e1e86d9d199117852498fad8710d4c05fffd7c50f6b265f4522"
+}

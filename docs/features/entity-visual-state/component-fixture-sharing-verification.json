@@ -1,0 +1,39 @@
+{
+  "issue": 181,
+  "stage": "Behavior-preserving extraction of complete matrix literal construction",
+  "cases": 7662,
+  "passed": 1,
+  "failed": 0,
+  "process_reaped": true,
+  "test_seconds": 117.53,
+  "export": {
+    "path": "target/entity-visual-component-shared-fixture.bin",
+    "bytes": 162319474,
+    "sha256": "07379c37eed970c67945ef413cf9fbf327943f1a9f05ff4d190b76382075a204"
+  },
+  "byte_identical_to_retained_typed_export": {
+    "path": "target/entity-visual-component-typed-process-1.bin",
+    "bytes": 162319474,
+    "sha256": "07379c37eed970c67945ef413cf9fbf327943f1a9f05ff4d190b76382075a204"
+  },
+  "support": {
+    "path": "tests/component_visual_carriers/matrix.rs",
+    "bytes": 7555,
+    "sha256": "24deb07d84dc37b7a15ebfe8332935b9579a898d06b46ae333c0021ef93256f9"
+  },
+  "log": {
+    "path": "target/entity-visual-component-shared-fixture.log",
+    "bytes": 347,
+    "sha256": "df65a07386d5ad1edd17f0a60344c1751e17a2ad4815b5e135b44306b67ca686"
+  },
+  "compiler_log": {
+    "path": "target/entity-visual-component-shared-fixture-compile.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "qualifications": [
+    "The existing complete matrix assertions and request behavior are unchanged; only the owned raw fixture constructor moved into a shared helper for the next concurrency gate.",
+    "The standalone integration binary used the same validated library and explicit test-profile compiler flags as the native graphics check; Cargo/repository gates remain separate. Humanizer unavailable; prose pass pending maintainer review."
+  ],
+  "artifact_git_revision": "9d81de77649fabcf67ed4979b53d69ee60def27a"
+}

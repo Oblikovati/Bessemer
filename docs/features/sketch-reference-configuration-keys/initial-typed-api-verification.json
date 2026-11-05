@@ -1,0 +1,58 @@
+{
+  "issue": 188,
+  "stage": "Initial typed saved-key API acceptance",
+  "passed": true,
+  "process_reaped": true,
+  "exit_code": 0,
+  "tests": 5,
+  "seconds": 3.17,
+  "complete_cases": 400,
+  "physical_owners": 800,
+  "edit_requests": 24000,
+  "request_kinds": [
+    "ConfigurationObjectKey",
+    "ConfigurationRecordKey",
+    "BothKeys"
+  ],
+  "signed_controls": [
+    -2147483648,
+    -2147483647,
+    -12346,
+    -12345,
+    -12344,
+    -1,
+    0,
+    1,
+    2147483646,
+    2147483647
+  ],
+  "checks": [
+    "Complete literal full-stream patches at independent Source scalar offsets",
+    "Full signed object and record roles remain distinct and uncoupled",
+    "Single-key and paired history has every exact parent/result field",
+    "Exact coverage, fidelity, diagnostics and unchanged-field counts",
+    "No-ops retain revision identity; all changed results reject stale state",
+    "Foreign revisions rejected before edits and all input/parent bytes unchanged",
+    "Unqualified schemas error rather than silently returning empty; genuine empty results succeed",
+    "All public key types satisfy Send and Sync"
+  ],
+  "clippy_library_and_integration": "passed with warnings denied",
+  "function_size_audit": "all new Rust functions <=20 nonblank body lines and files <500 lines",
+  "canonical_lf_code_hashes": {
+    "src/model_archives/sketch_reference_lookup/mod.rs": "33de9c4b6c82eca6cd64772977baec5f934309e3363087c04c1596fa9cbc9b8e",
+    "src/model_archives/sketch_reference_lookup/projection.rs": "5213d5373aab65fc8d4bd1078deae205253e211ab90267dff3424930ae763975",
+    "src/model_archives/sketch_reference_lookup/types.rs": "968c26de9c20c0fe8ccb2a733de3172fa65997cd3711332d9ebb9e19792ae12d",
+    "src/model_archives/mod.rs": "d2c123c0a46ad01d50c31aac1c012774239036b83aca181c8db380f3b0510ecc",
+    "tests/model_sketch_reference_lookup.rs": "fbe8d1faad7d444b17a2db206e23a1f9e618a5323f027dcd14179071de4e4ef2"
+  },
+  "library_sha256": "9f22d81da4d3d4eb3e610b13b046c71fc9d6128d40a0fd500f1b73bbff75bdf4",
+  "test_executable_sha256": "712c9611d1da7cf04afc364f4ee64000facc4e943b5450e8901783e76c0f6915",
+  "log_sha256": "bf5ff7b6b3dc59e9baa747ad220fac78859b49475dd20ae50ed966d87bbf97c4",
+  "remaining": [
+    "Actual-output unchanged Source replay",
+    "Complete-document reopen and reversal",
+    "Native typed operation gates",
+    "Two-process output comparisons and mixed concurrency",
+    "Full local and exact-head remote gates; ThreadSanitizer"
+  ]
+}

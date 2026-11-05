@@ -126,3 +126,6 @@ mod drawing_bucket_read;
 mod drawing_buckets;
 mod drawing_document;
 pub use drawing_buckets::DrawingBucketArchive;
+
+mod entity_visual_state;
+pub use entity_visual_state::DisplayEntityVisualStoredState;

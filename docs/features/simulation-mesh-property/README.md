@@ -3,8 +3,11 @@
 This feature implements the complete documented study `Mesh/Property` stream
 from specification 14.378–14.381. `SimulationMeshProperty` provides complete
 reading, field construction and isolated edits under an explicit version and
-caller budgets. Its initial functional checks pass; final acceptance work
-remains open.
+caller budgets. Its immutable publication head passed the local PR gate and
+all five required platform checks, including Linux ThreadSanitizer, and merged
+through PR173. The [integration proof](integration-verification.json) records
+the exact head, checks and completed branch/worktree/build cleanup. Native
+application/writer equivalence and whole-format parity remain separate.
 
 The retained reports cover the initial static layout (C-758), complete native
 replay and imported settings dispatch (C-759), populated nested direct records

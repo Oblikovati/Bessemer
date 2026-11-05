@@ -1,0 +1,38 @@
+{
+  "issue": 188,
+  "passed": true,
+  "process_reaped": true,
+  "exit_code": 0,
+  "tests": 3,
+  "seconds": 37.635,
+  "cases": 400,
+  "physical_owners": 800,
+  "aliases": 400,
+  "literal_keys": 1600,
+  "primitive_reads": 35200,
+  "independent_checks": [
+    "Every framed root equals its profile template with only four literal signed key patches",
+    "Every scalar offset and value equals independent Cartesian domain/complement expectations",
+    "Every complete primitive byte span partitions its root exactly with no gaps/overlap",
+    "Compressed primitive artifact has exact EOF and no trailing data",
+    "Original immutable Source hash/import/origin guard passed"
+  ],
+  "source_python_files": 6024,
+  "consumed_modules": 171,
+  "artifacts": {
+    "roots.bin": {
+      "bytes": 181608,
+      "sha256": "f4dd0d728f3cc2384ca98542af40631eeb19f207ee771688c411859abbc69a5b"
+    },
+    "scalars.tsv": {
+      "bytes": 67040,
+      "sha256": "6b6c00104042ebe75c716d6f72b4ecd3857b6d85ed228365ebaaf0a4552d0842"
+    },
+    "primitives.tsv.zlib": {
+      "bytes": 126184,
+      "sha256": "1be749a5ced7a5bf70d839f3cd15dddd3c907d724c44ebf115219db8599c6832"
+    }
+  },
+  "log_sha256": "d12754e362cd036117eabc5dbe4e960928ce8a7dc0104ad6c9bbea0248ed8d2d",
+  "scope": "Initial explicitly initialized complete-root goldens; strict no-rewrite repeat and runtime API are pending"
+}

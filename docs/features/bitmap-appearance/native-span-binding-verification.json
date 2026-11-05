@@ -1,0 +1,110 @@
+{
+  "issue": 189,
+  "passed": true,
+  "stage": "Independent byte binding without parsing native feature streams",
+  "corpus_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "source_record_sha256": "082b92543cf6aeff3507c2dea23d38e8de37d1c6df3a6114261429ef596033f5",
+  "streams": [
+    {
+      "case": 340,
+      "version": 19000,
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\learn\\Carving Knife\\Knife Handle-DEMO.SLDPRT",
+      "stream": "Contents/Config-0-ResolvedFeatures",
+      "bytes": 280010,
+      "sha256": "0660f382890665e6976ead90fecddd0ee1f16e602c9e98e9df9a906ffa1c0c53",
+      "offsets": [
+        54914,
+        54918,
+        54927
+      ],
+      "values": [
+        0,
+        16777215,
+        0
+      ],
+      "canonical_header_checked": true,
+      "alpha_plane_absent": true
+    },
+    {
+      "case": 675,
+      "version": 19000,
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\dimxpert\\advdimxpert\\foot_board.sldprt",
+      "stream": "Contents/Config-0-ResolvedFeatures",
+      "bytes": 248443,
+      "sha256": "0db7800b952cb0a2be07f53207fc0f24f4551f969465a353946fffec98249687",
+      "offsets": [
+        205912,
+        205916,
+        205925
+      ],
+      "values": [
+        0,
+        16777215,
+        0
+      ],
+      "canonical_header_checked": true,
+      "alpha_plane_absent": true
+    },
+    {
+      "case": 717,
+      "version": 19000,
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\mbd\\mbdadvanced\\foot_board.sldprt",
+      "stream": "Contents/Config-0-ResolvedFeatures",
+      "bytes": 248421,
+      "sha256": "faa3c96608c6df0b63500750ecdf67904d10569f918284ea0123fd8170e02d34",
+      "offsets": [
+        205898,
+        205902,
+        205911
+      ],
+      "values": [
+        0,
+        16777215,
+        0
+      ],
+      "canonical_header_checked": true,
+      "alpha_plane_absent": true
+    },
+    {
+      "case": 739,
+      "version": 19000,
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\mbd\\mbdoverview\\foot_board.sldprt",
+      "stream": "Contents/Config-0-ResolvedFeatures",
+      "bytes": 248422,
+      "sha256": "3ca4e46772c570c24879602c367c4f0cff75a878f8a0c639dac7a73583490f3b",
+      "offsets": [
+        205899,
+        205903,
+        205912
+      ],
+      "values": [
+        0,
+        16777215,
+        0
+      ],
+      "canonical_header_checked": true,
+      "alpha_plane_absent": true
+    }
+  ],
+  "canonical_bodies": 4,
+  "scalar_words": 12,
+  "scalar_bytes": 48,
+  "new_class_headers": 4,
+  "absent_alpha_planes": 4,
+  "positive_alpha_payload_bytes": 0,
+  "oracle_sha256": "8d3f01f9493c5a1f0858f8d91612a9fc4e02319da58f0d0160feb54589b9711a",
+  "oracle_columns": [
+    "case",
+    "version",
+    "original_path",
+    "stream",
+    "offset64",
+    "offset68",
+    "offset80",
+    "matching_i32",
+    "color_u32",
+    "ink_i32"
+  ],
+  "target_executed": false,
+  "coverage_credit": 0
+}

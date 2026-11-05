@@ -1,0 +1,46 @@
+{
+  "issue": 185,
+  "stage": "Fresh strict Source replay of complete role fixtures",
+  "passed": true,
+  "process_reaped": true,
+  "exit_code": 0,
+  "tests": 5,
+  "test_seconds": 271.657,
+  "initial_test_seconds": 258.485,
+  "source_python_files": [
+    5847,
+    5854
+  ],
+  "consumed_source_modules_unchanged": 172,
+  "fixture_rewrite_enabled": false,
+  "cases": 265,
+  "complete_roots": 795,
+  "indices": 16913,
+  "groups": 67652,
+  "literal_scalars": 287521,
+  "primitive_reads": 676537,
+  "artifacts": [
+    {
+      "path": "docs/features/intersection-index-classification/owned-role-reference.json",
+      "bytes": 31514,
+      "sha256": "d7871f5a42dff2091dbf9a9a9ddded45fba73e49e0056e0fa7272ffe85053d65"
+    },
+    {
+      "path": "docs/features/intersection-index-classification/owned-role-source-repeat-snapshot.json",
+      "bytes": 738307,
+      "sha256": "7710222e3eada9b19a39082800841a715819d5f6fb1f9aeb14d72c2065ad7e67"
+    },
+    {
+      "path": "target/intersection-role-owned-repeat.log",
+      "bytes": 9018,
+      "sha256": "c1c24a983ac7a7a452ed45a789073d753427694c9491aad8445e641b582bee4c"
+    }
+  ],
+  "coverage_credit": 0,
+  "qualifications": [
+    "All three complete fixture artifacts match their initially Source-accepted bytes without baseline initialization. Every consumed Source module is unchanged between the fresh immutable processes.",
+    "All65536 selectors occur in one complete ordinary sketch owner. The second physical owner and first-instance alias are retained; no scalar or state/value filter substitutes for the complete parse.",
+    "Source primitive methods are delegated unchanged; no semantic/accounting/float/version override is installed.",
+    "Runtime APIs and actual changed-output/document/concurrency/publication gates remain separate. Humanizer unavailable; prose review pending."
+  ]
+}

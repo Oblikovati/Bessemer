@@ -1,0 +1,34 @@
+{
+  "issue": 164,
+  "stage": "Fresh current-source replay before publication; immutable publication checkout unchanged",
+  "publication_head": "51f36224af629dd26961184716308ed23049a2d5",
+  "publication_tree": "572e33628268ffcd6f5890bdb440b113ec6929b0",
+  "accepted_source_cut": "2c33ac4e8302a8d0f256b1e579da2c51e024931d",
+  "checks": 22,
+  "seconds": 5.955,
+  "process_exit_code": 0,
+  "terminal_exit_reaped": true,
+  "baseline_update_mode": false,
+  "snapshot": {
+    "file": "publication-source-snapshot.json",
+    "bytes": 619563,
+    "sha256": "7bfc417545a321574e869609e55423aa8f5c96053aec3e922936ff15ed5844b3",
+    "source_identity": "99c84c47f7ba695f0a477771255dfe89a1401c8ce4ed2ef559af4060af54ada6",
+    "source_python_files": 5103
+  },
+  "log": {
+    "path": "target/results-property-publication-source.log",
+    "bytes": 3179,
+    "sha256": "1b1156666f4e2672887e49de75e311cfe1583bd89ed8d258e4b6d58c77f3eb6e"
+  },
+  "scope": {
+    "original_native_occurrences": 450,
+    "original_native_arguments": 481,
+    "accepted_arguments": 450,
+    "rejected_arguments": 31,
+    "owned_contexts": 660
+  },
+  "historical_snapshot_preserved": true,
+  "native_target_executed": false,
+  "publication_cargo_gate": "Running separately on the immutable publication head; no push or PR yet"
+}

@@ -4,6 +4,10 @@
 
 ### Fixed
 
+- Fixed model-field equality discarding CString count-prefix-only edits and their derived history. (#200)
+
+- Bounded transient test build artifacts in PR/full gates after the hosted Linux runner exhausted disk. (#196)
+
 - Partitioned the complete ThreadSanitizer workload across eight required CI jobs to keep validation within hosted-runner time limits. (#183)
 
 - Corrected the planned Simulation Material text contract to retain accepted odd-byte frames without a UTF-16 view. (#141)
@@ -39,6 +43,24 @@
 - Fixed reference-plane point roles rejecting documented endpoint and loft-sync subclasses for fresh and cached pointers. (#46)
 
 ### Added
+
+- Added revision-owned bitmap matching-color, unsigned transparent-color and optional ink-markup views with isolated saved-word edits. (#189)
+
+- Added revision-owned canonical sketch-reference configuration lookup key views and isolated or paired signed-key edits. (#188)
+
+- Added revision-owned signed bitmap transparency setting views and isolated raw70/raw60/raw6c edits. (#187)
+
+- Added revision-bound stored intersection classification-selector and edge-index access with isolated u16/i32 edits preserving siblings and object references. (#185)
+
+- Added revision-bound intersection-reference span and backward-offset views with isolated signed-word edits in complete ordinary part resolved-feature archives. (#184)
+
+- Added revision-bound stored entity visual-role projections and isolated value edits for complete part/assembly configuration, resolved part feature, display and drawing-bucket archives. (#181)
+
+- Added archive-backed stored dimension mask and redundant-identifier views with isolated value edits, preserved raw bits and revision-bound history. (#179)
+
+- Added archive-backed stored node and parameter flag views and isolated bit edits with revision-bound history and preserved unresolved bits. (#178)
+
+- Added complete historical named-plot reads, construction and isolated edits with fixed-buffer suffix preservation and explicit caller-version qualifications. (#174)
 
 - Added complete conditional PostStyle comparison plans with ordered checks, shared scalar/color storage, preserved source histories and explicit SSE assumptions. (#166)
 

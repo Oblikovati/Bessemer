@@ -1,0 +1,80 @@
+{
+  "issue": 184,
+  "stage": "Two complete fresh unchanged Source replays of actual typed stored-role outputs",
+  "processes_reaped": 2,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "cases_per_process": 1344,
+  "complete_roots_per_process": 44352,
+  "changed_roots_per_process": 43008,
+  "scalar_projections_per_process": 1419264,
+  "packet_bytes": 67503748,
+  "packet_sha256": "9f1caef0a67f45721f090275aa6369354afc333e0d4f504bede21fa745ece47f",
+  "common_source_files": 5757,
+  "changed_common_source_files": [],
+  "first_only_source_files": [],
+  "second_only_source_files": [
+    "research/parallel_constraint_point_inference_owner_arrays_check.py",
+    "research/parallel_root_intersection_count_axis_review.py",
+    "research/parallel_root_sketch_c3320_integrity_audit.py",
+    "research/parallel_root_sketch_priority_reconciliation_v25.py",
+    "research/parallel_sketch_ghost_drawing_owner_review.py",
+    "research/parallel_sketch_intersection_box_dispatch_instruction_model.py",
+    "research/parallel_sketch_intersection_box_dispatch_role.py",
+    "research/parallel_sketch_modelling_future_backlog.py",
+    "research/publish_sketch_intersection_count_axis_completion.py"
+  ],
+  "artifacts": [
+    {
+      "path": "target/intersection-reference-typed-source-1.log",
+      "bytes": 50044,
+      "sha256": "56c79cd385bbcbe3aaeb1753a5e70e0732b21f10e0483c62c596b18f047e0946"
+    },
+    {
+      "path": "target/intersection-reference-typed-source-1.json",
+      "bytes": 733875,
+      "sha256": "7a21756c3b5ae664945d26efbf5517aab04f54159c6580f75310f0fcdd9658e5"
+    },
+    {
+      "path": "target/intersection-reference-typed-source-2.log",
+      "bytes": 50044,
+      "sha256": "56c79cd385bbcbe3aaeb1753a5e70e0732b21f10e0483c62c596b18f047e0946"
+    },
+    {
+      "path": "target/intersection-reference-typed-source-2.json",
+      "bytes": 735100,
+      "sha256": "1c7ad213ec81a0cee8a8709df08f364247091fd2fa66e42241b89af39559218e"
+    },
+    {
+      "path": "target/replay-intersection-typed-source.py",
+      "bytes": 6780,
+      "sha256": "d1e20e740dc3baf039523375fc5549686defb10e0cf8fe7ce53f7f74a1d5eedb"
+    },
+    {
+      "path": "docs/features/intersection-reference-match/typed-export-source-initial-snapshot.json",
+      "bytes": 718447,
+      "sha256": "875a38d3e9730b13b191175d1073698b87bd404600cb33232d2c7cd6a96a3d36"
+    },
+    {
+      "path": "docs/features/intersection-reference-match/typed-export-source-repeat-snapshot.json",
+      "bytes": 719672,
+      "sha256": "63920f06da21f495cab5c51fd5f254bf29263122b0a06a8e3cde6a51585b5313"
+    }
+  ],
+  "checks": [
+    "Both corrected processes execute every declared case exactly once and accept every actual original/changed Rust output through complete unchanged Source readers.",
+    "Every changed root matches its independent complete raw signed-word patch before parsing; all physical group projections, map sizes, aliases and EOF match.",
+    "Neither process installs an accounting adapter, modifies original float/version methods or overrides the class registry.",
+    "Both pre-freeze guards exclude live Source modules; final origin/hash checks preserve each immutable copy. All common Python files match across the two copies.",
+    "Original model-context hashes and the byte-identical typed Rust export packet remain unchanged."
+  ],
+  "coverage_credit": 0,
+  "qualifications": [
+    "Rejected collector import-order/cast attempts and blocked abandoned-pin cleanup remain separately recorded in typed-export-source-initial-verification.json; they receive no acceptance.",
+    "The run performs explicit complete-root assertions, not an original Source unittest-suite rerun.",
+    "Native operation edits, broader caller/version boundaries, complete documents, mixed concurrency/history traces and full exact-head Cargo/platform gates remain required.",
+    "No native application, matcher, geometry or full schema parity is claimed. Humanizer unavailable; prose review remains pending."
+  ]
+}

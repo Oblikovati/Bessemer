@@ -1,0 +1,25 @@
+{
+  "issue": 189,
+  "passed": true,
+  "actual_roots_per_process": 24000,
+  "changed_roots_per_process": 19680,
+  "noops_per_process": 4320,
+  "byte_identical_process_exports": true,
+  "export_bytes": 5777008,
+  "export_sha256": "b234e02d50fa7670ce558548d01cc20c21175ff061f8b4fbd94babd007f6dd72",
+  "roots_by_version": {
+    "11000": 1500,
+    "18000": 11250,
+    "19000": 11250
+  },
+  "checks": [
+    "Both fresh exports match byte for byte",
+    "Every output matches an independent complete literal single-word patch",
+    "Signed input bit patterns preserved in signed and unsigned settings",
+    "All physical owners and all present roles visited in declared total order",
+    "Version and frame lengths match every complete fixture",
+    "Both fixture and export packets reach exact EOF"
+  ],
+  "source_replay_executed": false,
+  "collector_sha256": "0d5863b75a81e5fe505d1344d693c991309be77e2c0325167921dfa8d183b50e"
+}

@@ -1,0 +1,63 @@
+{
+  "issue": 187,
+  "stage": "Initial reviewed typed API operation acceptance in isolated detached checkout",
+  "passed": true,
+  "base_head": "cef6cdbad864c51c5568dd3f86f11b95c54968a3",
+  "tests": 5,
+  "seconds": 5.81,
+  "owned_cases": 731,
+  "physical_settings": 1462,
+  "signed_values": [
+    -2147483648,
+    -1,
+    0,
+    1,
+    2,
+    3,
+    255,
+    256,
+    2147483647
+  ],
+  "edit_requests": 39474,
+  "literal_scalar_rows": 4386,
+  "schema_exclusions": [
+    0,
+    2,
+    32769,
+    65535
+  ],
+  "checks": [
+    "All three full signed words equal independent literal scalar rows",
+    "Every edit equals a literal complete-stream four-byte patch",
+    "One-field derived history and exact parent/result handles",
+    "Completed no-ops preserve revision-owned handles",
+    "ExactStoredArchive coverage, ExactStoredFields fidelity and source diagnostics",
+    "Source bytes unchanged after every success, no-op and rejection",
+    "Foreign and stale errors equal independent resolve_field revision errors",
+    "Unqualified bitmap schemas return explicit errors rather than empty results",
+    "Complete bitmap-free archive returns an empty list",
+    "All public setting types compile as Send and Sync"
+  ],
+  "clippy_library_and_integration": "passed with warnings denied",
+  "function_size_audit": "all new functions <=20 nonblank body lines; files <500 lines",
+  "code_hashes": {
+    "src/model_archives/bitmap_transparency/mod.rs": "589fd0110c1ec1fb921a592062f2f785124bb4e6f17bec781bbc3cb97d776492",
+    "src/model_archives/bitmap_transparency/projection.rs": "76764c3b092d6a8f6257f5e6e21975fce6247465de4fb8aefd30ffad640afdb0",
+    "src/model_archives/bitmap_transparency/types.rs": "1de32262f4adf46297f77bdc39037a1d6042eb255b4ca60f78c68fba29fa7a2b",
+    "src/model_archives/mod.rs": "8104414128abdac2e05a1df8cfdd9018687958a63eb30afb635154d2b53f7718",
+    "tests/model_bitmap_transparency.rs": "8de92f3b54e1fe47ff488f7d8287eff6a4120003affbf6991bbb690d5e6a3386"
+  },
+  "artifacts": {
+    "target/libbessemer_bitmap_transparency_reviewed.rlib": "a5b85a6c8e79a2ea41f1cbd8a823f451e5f6caec6244569114de9e8e0ce71ba8",
+    "target/bitmap-transparency-reviewed-tests.exe": "99ab112cc1bb05438d1d18973b289c3c0c6b4ff76affe23ba2773e5dcb1a89f4",
+    "target/bitmap-transparency-reviewed-tests.log": "c558863d39fa9940857c0c8b3102aa08899a2f7b931118e805fd00bcc96517a9"
+  },
+  "not_yet_verified": [
+    "Second identical-code fresh-process output comparison",
+    "Actual-output original Source replay",
+    "Complete-document edit/reopen/reversal",
+    "Mixed concurrency and ThreadSanitizer",
+    "Native typed operations",
+    "Full Cargo and exact-head publication gates"
+  ]
+}

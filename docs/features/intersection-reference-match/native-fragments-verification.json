@@ -1,0 +1,109 @@
+{
+  "issue": 184,
+  "provider": "ordinary pefile and direct file slices; not REA Evidence",
+  "module_sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "image_base": "0x4b160000",
+  "reports": {
+    "parallel_sketch_intersection_reference_topology_producer.json": "09f842f3b04da0213a05e75e937234f7d1737c903796d7ec7a9bad7d1f652db6",
+    "parallel_sketch_intersection_reference_match_consumer.json": "742e05332cd65659d70018bbd1b0adbafcc37cb2c63c5c6b736dbd013f411fb8"
+  },
+  "unique_intervals": 13,
+  "bytes": 21607,
+  "intervals": [
+    {
+      "start": "0x4bbe4a50",
+      "end": "0x4bbe4b09",
+      "bytes": 185,
+      "file_offset": 11026000,
+      "sha256": "7f0bb59cf665e0804209528b4f436e1b157c0131343b976f878f2e4f428d978e"
+    },
+    {
+      "start": "0x4bbeb2d0",
+      "end": "0x4bbeb7f5",
+      "bytes": 1317,
+      "file_offset": 11052752,
+      "sha256": "b83d1da3f52efb17fd1ae5ee8f8357240bf684d90a160beb440d1ccc3d588ee8"
+    },
+    {
+      "start": "0x4bbebea0",
+      "end": "0x4bbeedb7",
+      "bytes": 12055,
+      "file_offset": 11055776,
+      "sha256": "463b07d4ffc35393eaba6695fde6ad9888f8afb5ba0dd4b11cfbbd7d344289c1"
+    },
+    {
+      "start": "0x4bbef2e0",
+      "end": "0x4bbef79a",
+      "bytes": 1210,
+      "file_offset": 11069152,
+      "sha256": "9839b632e745e7b6e2634f015132fe1549f573acc7369264e84301fbf08548ac"
+    },
+    {
+      "start": "0x4bbeff30",
+      "end": "0x4bbeffbb",
+      "bytes": 139,
+      "file_offset": 11072304,
+      "sha256": "1fbe94b1ace0f1a94eb79586955419b9d43d95495dbd3704357f24dd7e78fd49"
+    },
+    {
+      "start": "0x4bfbb4c0",
+      "end": "0x4bfbb69a",
+      "bytes": 474,
+      "file_offset": 15050944,
+      "sha256": "af4b46927e4fe335bad90d7f10309999c8d494befa02736169d52353266d5d2d"
+    },
+    {
+      "start": "0x4bfbb8b0",
+      "end": "0x4bfbb9e4",
+      "bytes": 308,
+      "file_offset": 15051952,
+      "sha256": "5d6c335ae653b0ee2f691d884be14a834410913c493d6828d8ed6549675819b0"
+    },
+    {
+      "start": "0x4bfbbc40",
+      "end": "0x4bfbbfe3",
+      "bytes": 931,
+      "file_offset": 15052864,
+      "sha256": "a33a3982812b6cc8b6f33044117c911c05e684166f050c6a686432f56e74231b"
+    },
+    {
+      "start": "0x4bfbc110",
+      "end": "0x4bfbc720",
+      "bytes": 1552,
+      "file_offset": 15054096,
+      "sha256": "0ba9ff9c33d13960cde8e62ee01f8189f36ba6abeae7e6f373bca091d56878fa"
+    },
+    {
+      "start": "0x4bfbc720",
+      "end": "0x4bfbd0ca",
+      "bytes": 2474,
+      "file_offset": 15055648,
+      "sha256": "06dc0b3b3989280cd48d245a627f52bcfd3311f779150bb27872800a381a450f"
+    },
+    {
+      "start": "0x4bfbd1f0",
+      "end": "0x4bfbd33e",
+      "bytes": 334,
+      "file_offset": 15058416,
+      "sha256": "72c32478894887cfc20c1cde3c1d7284552a007da0c757458366c6b77722279c"
+    },
+    {
+      "start": "0x4c4be220",
+      "end": "0x4c4be234",
+      "bytes": 20,
+      "file_offset": 20305440,
+      "sha256": "62b3a3bb748bf99c7f350e0356c87ea970a9fa26dad864a61c8e3e9dfb082c53"
+    },
+    {
+      "start": "0x4c58cc20",
+      "end": "0x4c58ce80",
+      "bytes": 608,
+      "file_offset": 21151776,
+      "sha256": "c0422cf09fbc18ebf2ace2ed593f04714c00adb1102c37adb2c993f940f19465"
+    }
+  ],
+  "passed": true,
+  "target_executed": false,
+  "coverage_credit": 0,
+  "qualification": "Exact installed fragment bytes only; instruction decoding, imports, RTTI and semantic/dataflow bindings remain separate"
+}

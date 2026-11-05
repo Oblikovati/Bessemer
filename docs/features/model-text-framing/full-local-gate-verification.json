@@ -1,0 +1,20 @@
+{
+  "issue": 200,
+  "passed": true,
+  "command": "cargo xtask pr",
+  "source_revision": "450172aa6ba6011a2ffce2ba3e9a771b567c9659",
+  "process_exit_code": 0,
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "tests_passed": 3961,
+  "tests_failed": 0,
+  "tests_ignored": 215,
+  "test_summaries": 316,
+  "log_sha256": "e04065f11a8a1558e1ee824ef956eb1555f8fd58d4fe37be0bbc949c9b2a8e97",
+  "qualification": "Complete isolated PR191 tree, including #196 and CString framing #200. Later root features #190/#192/#193/#194/#195/#197/#199 are excluded. The earlier failed gate is retained in simulation-regression-verification.json.",
+  "remaining": [
+    "Exact-head remote PR checks",
+    "Live native lookup complete-document gate",
+    "No native application or geometry equivalence claim"
+  ]
+}

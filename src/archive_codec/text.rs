@@ -74,6 +74,11 @@ impl ArchiveString {
         self.encoding
     }
 
+    pub(crate) fn same_stored_representation(&self, other: &Self) -> bool {
+        // #200: physical field identity also includes the retained CString count width.
+        self == other && self.width == other.width
+    }
+
     pub(crate) fn decode(cursor: &mut ArchiveCursor<'_>) -> Result<Self> {
         let (count, width, encoding) = string_header(cursor)?;
         read_text(cursor, count, width, encoding)
