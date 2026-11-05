@@ -16,10 +16,19 @@ codec. The byte locations and source identity are recorded in
 This is static evidence; no target code was executed.
 
 Selector `+0x170 == 1` invokes a pre-existing child at runtime member `+0x178`
-directly. Its constructor binding and saved body remain unresolved. Neither a
-tag nor a presence word may be inferred for that child. The measured legacy
-selector-2 examples do not establish selector-1 framing. Implementation and
-owned-document acceptance remain pending this investigation.
+directly. Constructor `0x18017A2E0` allocates that child when its method argument
+equals 1 and calls constructor `0x1801D8FF0`. That constructor installs primary
+table `0x180441348`, whose RTTI names `moPartingDataNew_c` and whose serializer
+slot selects `0x1801DAAE0`.
+
+[native-child-capture.json](native-child-capture.json) retains the constructor,
+serializer and one pointer-reader helper's instruction bytes. The serializer
+visits three direct collections and four pointer fields. Named imports bind
+three pointers to `moRefWrapper_c`, `moLoftSynchRef_c` and `moDirectionSpec_c`.
+The remaining pointer class, collection bindings and inherited base call still
+need verification. Neither a tag nor a presence word may be inferred around
+the direct child. The measured legacy selector-2 examples do not establish
+selector-1 framing. Implementation and owned-document acceptance remain pending.
 
 Native application acceptance, geometry acceptance, historical contexts and
 whole-schema parity remain unproven. The humanizer skill is unavailable in

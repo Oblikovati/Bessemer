@@ -31,10 +31,22 @@
     "consequence": "Use the existing inline reference-surface payload framing for this derived class; a nonzero archive backend marker alone does not bypass sheets or their attributes"
   },
   "unresolved": [
-    "Constructor binding of the pre-existing direct child at moMoldPartingGeomData_c member +0x178",
-    "Complete direct child serialization when saved selector +0x170 equals 1",
+    "Inherited base call, collection bindings and remaining pointer class in the moPartingDataNew_c serializer",
     "Independent owned-document fixture and edit/reopen/reversal acceptance"
   ],
+  "direct_child_binding": {
+    "parent_constructor": "0x18017a2e0",
+    "condition": "method argument equals 1",
+    "allocation_size": 152,
+    "child_constructor": "0x1801d8ff0",
+    "child_vftable": "0x180441348",
+    "child_locator": "0x1804eb540",
+    "child_type_name": ".?AVmoPartingDataNew_c@@",
+    "serializer_slot_offset": "0x28",
+    "serializer": "0x1801daae0",
+    "capture": "native-child-capture.json",
+    "coverage": "Static constructor path and primary-table binding; the complete child grammar is not yet accepted"
+  },
   "limitations": [
     "Static source-file bytes and retained RTTI only; no target execution or runtime object inspection",
     "REA Ghidra parent-function analysis is still running; no result from that analysis is claimed here",
