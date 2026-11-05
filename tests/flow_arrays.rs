@@ -367,3 +367,59 @@ fn worker_edit(arrays: &FlowMapArrays) -> FlowArrayEdit {
     );
     arrays.replace_value(FlowArrayGroup::Second, 0, 19).unwrap()
 }
+
+#[test]
+fn transport_failures_preserve_exact_operation_entity_class_and_cause() {
+    let case = fixture::cases().remove(2);
+    let payload = fixture::encoded(&case.decoded);
+    let bounded = FlowArrayOptions {
+        maximum_decoded_bytes: 8,
+        ..fixture::options()
+    };
+    assert_transport_failure(
+        &payload,
+        bounded,
+        FailureClass::Invalid,
+        "LimitExceeded { maximum: 8 }",
+    );
+    assert_transport_failure(
+        b"",
+        fixture::options(),
+        FailureClass::Integrity,
+        "NoProgress { status: BufError, consumed: 0, size: 0 }",
+    );
+}
+
+#[test]
+fn trailing_input_preserves_exact_record_433_consumption_diagnostic() {
+    let case = fixture::cases().remove(2);
+    let payload = fixture::encoded(&case.decoded);
+    let trailing = [&payload[..], &[0]].concat();
+    let details = format!(
+        "TrailingInput {{ consumed: {}, size: {} }}",
+        payload.len(),
+        trailing.len()
+    );
+    assert_transport_failure(
+        &trailing,
+        fixture::options(),
+        FailureClass::Integrity,
+        &details,
+    );
+}
+
+fn assert_transport_failure(
+    payload: &[u8],
+    options: FlowArrayOptions,
+    class: FailureClass,
+    details: &str,
+) {
+    let error = fixture::decode_payload(payload, options).unwrap_err();
+    assert_eq!(error.operation, "Flow record 433");
+    assert_eq!(error.entity, "zlib stream");
+    assert_eq!(error.class, class);
+    let expected = format!(
+        "{details}; expected one complete checksum-validated RFC 1950 stream within the configured output bound"
+    );
+    assert_eq!(error.cause, expected);
+}
