@@ -12,15 +12,21 @@ pub(super) fn charge(
     limits: SqliteLimits,
     entity: &str,
 ) -> Result<()> {
+    charge_accounted_bytes(used, amount, limits.maximum_output_bytes, entity)
+}
+
+pub(super) fn charge_accounted_bytes(
+    used: &mut usize,
+    amount: usize,
+    maximum: usize,
+    entity: &str,
+) -> Result<()> {
     let total = used.checked_add(amount);
-    if total.is_none_or(|count| count > limits.maximum_output_bytes) {
+    if total.is_none_or(|count| count > maximum) {
         return Err(failure(
             FailureClass::Invalid,
             entity,
-            format!(
-                "{used} + {amount} output bytes; expected at most {}",
-                limits.maximum_output_bytes
-            ),
+            format!("{used} + {amount} output bytes; expected at most {maximum}"),
         ));
     }
     *used += amount;
@@ -34,13 +40,24 @@ pub(super) fn read_rows(
     limits: SqliteLimits,
     used: &mut usize,
 ) -> Result<SqliteRows> {
+    read_bound_rows(database, sql, [], entity, limits, used)
+}
+
+pub(super) fn read_bound_rows<P: rusqlite::Params>(
+    database: &Connection,
+    sql: &str,
+    parameters: P,
+    entity: &str,
+    limits: SqliteLimits,
+    used: &mut usize,
+) -> Result<SqliteRows> {
     let before = *used;
     let mut statement = database
         .prepare(sql)
         .map_err(|error| engine_error(entity, error))?;
     check_column_count(statement.column_count(), limits, entity)?;
     let columns = read_columns(&statement, limits, used, entity)?;
-    let rows = collect_rows(&mut statement, limits, used, entity)?;
+    let rows = collect_rows(&mut statement, parameters, limits, used, entity)?;
     Ok(SqliteRows {
         columns: columns.into(),
         rows: rows.into(),
@@ -48,15 +65,16 @@ pub(super) fn read_rows(
     })
 }
 
-fn collect_rows(
+fn collect_rows<P: rusqlite::Params>(
     statement: &mut rusqlite::Statement<'_>,
+    parameters: P,
     limits: SqliteLimits,
     used: &mut usize,
     entity: &str,
 ) -> Result<Vec<Vec<SqliteValue>>> {
     let count = statement.column_count();
     let mut cursor = statement
-        .query([])
+        .query(parameters)
         .map_err(|error| engine_error(entity, error))?;
     let mut rows = Vec::new();
     while let Some(row) = cursor.next().map_err(|error| engine_error(entity, error))? {

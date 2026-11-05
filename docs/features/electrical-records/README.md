@@ -95,7 +95,9 @@ python -m unittest discover -s docs/features/electrical-records -p 'test_*.py' -
 cargo test --test electrical_records --test sqlite_images --locked
 ```
 
-The remaining Electrical work includes delegated userdata selection/identity
-behavior (14.27–14.28), the native typed file-load projection (14.26), database
-mutation and native migration/loader acceptance. Overall schema parity remains
+The [userdata views](../electrical-userdata/README.md) now provide the documented
+two-part SQL predicate, lexical object-ID matches and selected signed-ID gate.
+Remaining work includes complete native userdata delegate/provider state, the
+typed file-load projection (14.26), database mutation and native migration/loader
+acceptance. Overall schema parity remains
 incomplete. The humanizer skill is unavailable; its prose pass remains for review.

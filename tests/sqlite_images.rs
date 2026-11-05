@@ -5,6 +5,8 @@ mod fixture;
 mod projection;
 #[path = "sqlite_images/rejections.rs"]
 mod rejections;
+#[path = "support/sqlite_row_wire.rs"]
+mod sqlite_row_wire;
 #[path = "support/sqlite_wire.rs"]
 mod sqlite_wire;
 use bessemer::sqlite_image::{

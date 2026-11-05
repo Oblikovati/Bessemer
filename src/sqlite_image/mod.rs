@@ -3,6 +3,8 @@ mod connection;
 mod query;
 mod schema;
 mod types;
+mod userdata;
+mod userdata_lexical;
 use crate::{BessemerError, FailureClass, Result};
 use std::sync::Arc;
 pub use types::*;

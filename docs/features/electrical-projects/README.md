@@ -113,8 +113,9 @@ rather than the affected readback. The supplied reference code was not changed.
   and all named-table rows. Application catalog/record projections remain next.
 - The [project record view](../electrical-records/README.md) now retains complete
   catalog/project rows, separate versions and every literal database/drawing
-  match. Native typed file-load mappings and delegated userdata/query selection
-  remain separate work.
+  match. The [userdata views](../electrical-userdata/README.md) also retain exact
+  SQL selection, lexical ID matches and the selected ID gate. Complete native
+  provider/delegate state and typed file-load mappings remain separate work.
 - Preserve opaque EWG bodies and qualify native loader acceptance, migrations,
   SQL/application validity and geometry separately.
 

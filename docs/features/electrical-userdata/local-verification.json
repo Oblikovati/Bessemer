@@ -1,0 +1,56 @@
+{
+  "issue": 231,
+  "source_base_commit": "43e7cc641c33e636abfb44811642ce8a5cd53433",
+  "source_state": "New userdata working tree; exact files below",
+  "source_sha256": {
+    "src/electrical/mod.rs": "a32fe1cb2bee1210ad9c7299afc2eca1e217db670469c2a993891f26c2484851",
+    "src/electrical/userdata.rs": "68fb1c0741b64dabacf521869cac273234d37f55bdab426a78d23b8f7fe58327",
+    "src/sqlite_image/mod.rs": "9b0c0d7eed5286f72be7e944fa8c7297b1ebeb6930d5e3b2962c82dfbad7f326",
+    "src/sqlite_image/query.rs": "c95b16b5b208cbce9320053d8c3c32a3cf58e220946d69be7371e604518b7ba9",
+    "src/sqlite_image/userdata.rs": "4a40cdc961f920945547a8f64fab548e28eb0938078a066ad41e867cc85c5161",
+    "src/sqlite_image/userdata_lexical.rs": "b6e173350c2e71796e5d39858cb30cdbfc9276d093cc5251bc0b081f730e0985",
+    "tests/electrical_userdata.rs": "8b2b8938d4ee53728b35ff8e269ac54b74e1cb214e8e1f6e11968b1da64ef77d",
+    "tests/electrical_userdata/fixture.rs": "57c3ab4a70ad8da43da7f3ee3e633224d5120d132265a4436d0b8e97f093e714",
+    "tests/support/sqlite_row_wire.rs": "1c702b50ed6bb0dcdac14ba07a7b287a3d99fd3e15edbea0f91b5884c64a0fb0",
+    "tests/sqlite_images.rs": "ad5a6a1703cf1974d4ccf0fd8a208eb32acbb15268349c60b823dc02748b2b65",
+    "tests/sqlite_images/projection.rs": "af441cfa0ff273ab0e3784f2f63a5a31e7fe93d6b4498e7120c9a0fd9c506f95"
+  },
+  "reference_edition": "0.3136",
+  "reference_sha256": {
+    "../inventor-interface/solidworks/electrical.py": "e425802b353cf52d318c040794163fa9fa1cc8d5de72302265e97bcb7a2e886a",
+    "../inventor-interface/docs/solidworks-file-format/specification.md": "ad3859be88edab67b054f78eedd635e524cc780b895987a9dc02e86960adc81c",
+    "../inventor-interface/solidworks/research/electrical-userdata-native-evidence.json": "e5e3430179ccacc515d3abc2298409b4d5f34cdbd1269b0bce5c0496bd05bdf0",
+    "../inventor-interface/solidworks/research/electrical-userdata-query-native-evidence.json": "47a3def2d21180008372331f44a6960f52ac098928a4ab94eeda8e27d53f172c"
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "focused_tests": {
+    "userdata": 11,
+    "project_regressions": 12,
+    "sqlite_regressions": 11,
+    "failed": 0,
+    "terminal_exit_code": 0
+  },
+  "python_tests": {
+    "passed": 2,
+    "terminal_exit_code": 0
+  },
+  "clippy": {
+    "command": "cargo clippy --lib --test electrical_userdata --test electrical_records --test sqlite_images --locked -- -D warnings",
+    "terminal_exit_code": 0
+  },
+  "sql_queries": 78,
+  "recorded_native_successful_keys": 34,
+  "native_absent_queries": 17,
+  "owned_sql_queries": 27,
+  "id_transitions": 81,
+  "log_sha256": {
+    "electrical-userdata-rust-tests.log": "1f21e03e9f5b8ec8b115a060c7338194bc6dfcde4d2a19ee2871da9cd7781214",
+    "electrical-userdata-clippy.log": "ffe278c5f3dc5bf4560eaf8bfd756217b3fe676697650435016d6d73ee8b9291",
+    "electrical-userdata-python-tests.log": "5821c1eab1f8fbb1eb6144b97275da03e61c8d36c487642c8fa43b9c6735820e",
+    "electrical-userdata-process-build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "full_suite": "Pending; currently active full gate is on earlier SQLite source 8341361a",
+  "native_application_acceptance": false,
+  "provider_conversions": false,
+  "geometry_acceptance": false
+}

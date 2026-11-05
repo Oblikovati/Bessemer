@@ -1,7 +1,8 @@
+use crate::sqlite_row_wire::write_sqlite_rows as rows;
 use crate::sqlite_wire::{
     write_sqlite_blob as blob, write_sqlite_count as word, write_sqlite_value as value,
 };
-use bessemer::sqlite_image::{SqliteImage, SqliteRows, SqliteSchemaObject, SqliteValue};
+use bessemer::sqlite_image::{SqliteImage, SqliteSchemaObject, SqliteValue};
 
 pub(super) fn render(image: &SqliteImage) -> Vec<u8> {
     let mut encoded = Vec::new();
@@ -30,17 +31,4 @@ fn encode_object(encoded: &mut Vec<u8>, object: &SqliteSchemaObject, image: &Sql
     rows(encoded, object.columns.as_ref().unwrap());
     rows(encoded, object.foreign_keys.as_ref().unwrap());
     rows(encoded, &image.table_rows(&object.name).unwrap());
-}
-
-fn rows(encoded: &mut Vec<u8>, rows: &SqliteRows) {
-    word(encoded, rows.columns().len());
-    for name in rows.columns() {
-        blob(encoded, name.as_bytes());
-    }
-    word(encoded, rows.rows().len());
-    for row in rows.rows() {
-        for cell in row {
-            value(encoded, cell);
-        }
-    }
 }

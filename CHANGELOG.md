@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added bounded Electrical userdata queries with exact SQLite key comparisons, complete lexical object-ID matches and the documented signed-ID gate. (#231)
+
 - Added complete bounded Electrical project/catalog records, literal database and drawing relationships, and observed-build file-type constant names. (#231)
 
 - Added bounded in-memory Electrical/CAM SQLite image validation, complete schema metadata and named-table row snapshots with exact original-byte retention. (#233)
