@@ -39,11 +39,20 @@ fn owned_case(cursor: &mut &'static [u8]) -> OwnedTwistCase {
     }
 }
 
-pub fn owned_twist_cases() -> Vec<OwnedTwistCase> {
-    let mut cursor = include_bytes!("../fixtures/sweep-twist/owned-cases.bin").as_slice();
+pub fn read_twist_cases(packet: &'static [u8], expected_count: u32) -> Vec<OwnedTwistCase> {
+    let mut cursor = packet;
     assert_eq!(take_twist(&mut cursor, 4), b"BWO1");
-    assert_eq!(twist_u32(&mut cursor), 48);
-    let result = (0..48).map(|_| owned_case(&mut cursor)).collect();
+    assert_eq!(twist_u32(&mut cursor), expected_count);
+    let result = (0..expected_count)
+        .map(|_| owned_case(&mut cursor))
+        .collect();
     assert!(cursor.is_empty());
     result
+}
+
+pub fn owned_twist_cases() -> Vec<OwnedTwistCase> {
+    read_twist_cases(
+        include_bytes!("../fixtures/sweep-twist/owned-cases.bin"),
+        48,
+    )
 }

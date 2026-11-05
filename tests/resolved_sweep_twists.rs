@@ -84,10 +84,10 @@ fn edited_first_twist(
 ) -> Vec<bessemer::model_archives::ModelField> {
     let mut fields = archive.fields().to_vec();
     let suffix = ["raw_08", "raw_10", "raw_18"][offset];
-    let path = format!("root.features[0].payload.data.twist_298.{suffix}");
+    let path = format!("twist_298.{suffix}");
     let field = fields
         .iter_mut()
-        .find(|field| field.path.as_ref() == path)
+        .find(|field| field.path.ends_with(&path))
         .unwrap();
     field.value = twist_edit_value(offset);
     fields
@@ -177,6 +177,7 @@ fn assert_twist_history(source: &PartResolvedFeaturesArchive, offset: usize) {
     let edit = source
         .edit_fields(edited_first_twist(source, offset))
         .unwrap();
+    assert_twist_result_contract(source, &edit);
     let change = &edit.changes()[0];
     assert_eq!(change.relation(), ModelFieldRelation::Derived);
     assert_eq!(change.parents().len(), 1);
@@ -201,4 +202,18 @@ fn all_twist_field_edits_return_complete_revision_bound_derived_history() {
             assert_twist_history(&source, offset);
         }
     }
+}
+
+fn assert_twist_result_contract(
+    source: &PartResolvedFeaturesArchive,
+    edit: &bessemer::model_archives::PartResolvedFeaturesEdit,
+) {
+    use bessemer::model_archives::{ModelEditCheckMode, ModelEditCompletion, ModelEditFidelity};
+    assert_eq!(edit.completion(), ModelEditCompletion::Changed);
+    assert_eq!(edit.fidelity(), ModelEditFidelity::ExactStoredFields);
+    assert_eq!(edit.coverage().mode, ModelEditCheckMode::ExactStoredArchive);
+    assert_eq!(edit.coverage().wire_bytes, source.to_bytes().unwrap().len());
+    assert_eq!(edit.coverage().typed_fields, edit.archive().fields().len());
+    assert_eq!(edit.coverage(), edit.archive().coverage());
+    assert_eq!(edit.diagnostics(), source.diagnostics());
 }
