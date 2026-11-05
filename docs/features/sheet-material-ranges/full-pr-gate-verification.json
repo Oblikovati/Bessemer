@@ -1,0 +1,20 @@
+{
+  "issue": 214,
+  "source_revision": "7f6fe735c08677aeea1a957ef7a0dc96da2c45c1",
+  "command": "cargo xtask pr",
+  "platform": "Windows x64, Rust1.99.0",
+  "checkout": "C:/bessemer214-ci",
+  "cargo_target_dir": "C:/Users/vmiguel/git/Bessemer/target/relationships-pr-build",
+  "process_exit_code": 0,
+  "formatting": "passed",
+  "clippy": "passed",
+  "build": "passed",
+  "tests_passed": 4174,
+  "tests_failed": 0,
+  "tests_ignored": 231,
+  "test_summaries": 333,
+  "log_path": "target/sheet-material-combined-full-pr-gate.log",
+  "log_sha256": "f41074bc9874714801915aad30ce154de4c6d55793e33735214011c44b46a6fe",
+  "scope": "Exact committed7f6fe735 cut, including material grammar and prior audits through Combine/MidSurface/ThinSpec. Later SketchOffset/Deform/Planar audit and new core/cavity implementation are excluded.",
+  "integration": "Material changes remain excluded from sole open PR212 headf506fa65. Exact-head remote acceptance is still required; no new PR, branch, version or release."
+}

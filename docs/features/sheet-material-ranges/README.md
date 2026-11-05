@@ -24,6 +24,7 @@ contracts and isolated inputs. Eight workers repeat those edits concurrently.
 Context, budget, duplicate-record and prior sheet-metal regressions are checked
 separately from native geometry and application acceptance.
 
-The full local gate and exact-head remote checks remain required before
-integration. This feature is excluded from PR212. The humanizer skill is
+The full local gate passed at `7f6fe735`: 4,174 tests passed and 231 were
+ignored. Later source changes require their own acceptance. Exact-head remote
+checks remain required before integration. This feature is excluded from PR212. The humanizer skill is
 unavailable; its prose review remains with the maintainer.
