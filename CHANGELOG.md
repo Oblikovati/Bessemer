@@ -54,6 +54,8 @@
 
 ### Added
 
+- Composed Electrical userdata query results with prior storage, preserving EOF state and requiring explicit provider effects for present rows. (#231)
+
 - Added complete Electrical userdata storage transitions for supplied provider effects, retaining raw UTF-16 slots, branch coverage and field history. (#231)
 
 - Added isolated Electrical userdata TEXT-cell writes with complete stored-database checks, bounded page growth, composed member/cell history and exact source checkpoints. (#238)

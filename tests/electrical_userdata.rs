@@ -11,6 +11,79 @@ use bessemer::{
 };
 
 #[test]
+fn every_query_composes_eof_and_present_row_storage_without_provider_defaults() {
+    let (cases, _) = fixture::cases();
+    let mut branches = [0_usize; 2];
+    for case in cases {
+        let archive = fixture::archive(&case.raw);
+        for (key, _) in case.queries {
+            let query = fixture::query(&archive, key);
+            assert_query_storage(&query, &mut branches);
+        }
+    }
+    assert!(branches[0] > 0 && branches[1] > 0);
+    assert_eq!(branches.iter().sum::<usize>(), 78);
+}
+
+fn query_prior(key: ElectricalUserdataKey) -> ElectricalUserdataState {
+    ElectricalUserdataState {
+        context_word: 99,
+        load_flag: 7,
+        object_id: key.object_id,
+        object_no: key.object_no,
+        slots: std::array::from_fn(|index| std::sync::Arc::from([index as u16, 0xd800])),
+    }
+}
+
+fn query_effects() -> ElectricalUserdataReadEffects {
+    ElectricalUserdataReadEffects {
+        context_word: 31,
+        object_id: ElectricalUserdataEffect::Written(-19),
+        object_no: ElectricalUserdataEffect::Written(88),
+        slots: std::array::from_fn(|_| ElectricalUserdataEffect::Unchanged),
+    }
+}
+
+fn assert_query_storage(query: &ElectricalUserdataQuery, branches: &mut [usize; 2]) {
+    let prior = query_prior(query.key());
+    let result = query
+        .project_storage(&prior, Some(&query_effects()))
+        .unwrap();
+    assert_eq!(result.before, prior);
+    branches[usize::from(query.exists())] += 1;
+    if query.exists() {
+        assert_present_storage(query, &prior, &result);
+    } else {
+        assert_eq!(result.after, prior);
+        assert_eq!(result.branch, ElectricalUserdataReadBranch::QueryEof);
+        assert_eq!(query.project_storage(&prior, None).unwrap(), result);
+    }
+    let mut foreign = prior.clone();
+    foreign.object_no = prior.object_no.wrapping_add(1);
+    let error = query
+        .project_storage(&foreign, Some(&query_effects()))
+        .unwrap_err();
+    assert_eq!(error.class, bessemer::FailureClass::Invalid);
+    assert_eq!(result.before, prior);
+}
+
+fn assert_present_storage(
+    query: &ElectricalUserdataQuery,
+    prior: &ElectricalUserdataState,
+    result: &ElectricalUserdataStateRead,
+) {
+    assert_eq!(result.branch, ElectricalUserdataReadBranch::RejectedId);
+    assert_eq!(result.after.load_flag, 7);
+    assert_eq!(result.after.object_no, prior.object_no);
+    assert_eq!(result.after.object_id, -1);
+    assert!(result.after.slots.iter().all(|slot| slot.is_empty()));
+    assert_eq!(
+        query.project_storage(prior, None).unwrap_err().class,
+        bessemer::FailureClass::Missing
+    );
+}
+
+#[test]
 fn all_78_owned_and_native_queries_match_complete_independent_rows() {
     let (cases, _) = fixture::cases();
     assert_eq!(cases.len(), 7);

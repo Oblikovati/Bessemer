@@ -42,6 +42,8 @@ pub struct ElectricalUserdataReadEffects {
 /// Executed native reader branch, distinct from SQL row existence.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ElectricalUserdataReadBranch {
+    /// A completed empty query skipped the delegate entirely.
+    QueryEof,
     /// Null recordset returns without modifying storage.
     NullRecordset,
     /// Rejected ID clears strings and retains the load flag and object number.

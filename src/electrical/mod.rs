@@ -6,6 +6,7 @@ mod ini;
 mod projects;
 mod types;
 mod userdata;
+mod userdata_connection;
 mod userdata_state;
 mod userdata_write;
 use crate::composer::{ComposerArchive, ComposerCompression, ComposerMember};

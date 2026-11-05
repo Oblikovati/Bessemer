@@ -24,6 +24,9 @@ the documented signed-ID transition without guessing provider conversions.
 `ElectricalUserdataState::project_recordset` also applies explicit provider
 destination effects to all twenty UTF-16 slots, retaining flags, identity fields,
 before/after storage and branch-specific history.
+The [storage projection](docs/features/electrical-userdata-state/README.md) also
+composes checked queries: EOF preserves prior state, while present rows require
+explicit provider effects independently of ID-gate acceptance.
 The [direct file-field map](docs/features/electrical-file-fields/README.md) pairs
 all 38 observed typed read requests with unchanged stored values and distinguishes
 runtime fields from reused temporaries.

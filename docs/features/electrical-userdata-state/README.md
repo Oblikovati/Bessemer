@@ -27,6 +27,24 @@ The projection shares only immutable string allocations. It performs no external
 I/O and cannot publish partial state: every fixed-size input has a complete
 projection. It is separate from SQL row existence and stored-database mutation.
 
+`ElectricalUserdataQuery::project_storage` composes an already checked query
+with the prior state. The query's signed ID and object-number key must match
+the prior state, as the native connection reader builds its predicate from those
+members. A completed empty query returns the `QueryEof` branch, retaining every
+field and ignoring supplied effects. It does not execute the delegate's rejection
+branch. A present row requires explicit effects; absent effects produce a typed
+`Missing` error rather than fabricated converted values. Supplied effects may
+describe a rejected ID even though the query itself found a row. Duplicate rows
+remain in the checked query; callers must supply the actual selected-row effects,
+and this method establishes no native first-row priority.
+
+All 78 owned/native queries exercise this composition, including missing effects
+and mismatched prior identities. The 242-byte connection reader is separately
+authenticated in `connection-native-byte-verification.json`. Its EOF branch
+skips the virtual delegate call at +0x108; the present-row branch does not retest
+delegate validity. SQL errors remain errors in query construction, before this
+projection can run.
+
 The complete 225-byte reader binding and chained unwind ranges are retained in
 the neighboring userdata feature's `reader-native-byte-verification.json` (#240).
 Native provider conversions, context-helper semantics, malformed native arrays,
