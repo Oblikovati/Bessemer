@@ -31,7 +31,7 @@
     "consequence": "Use the existing inline reference-surface payload framing for this derived class; a nonzero archive backend marker alone does not bypass sheets or their attributes"
   },
   "unresolved": [
-    "Inherited base call, collection bindings and remaining pointer class in the moPartingDataNew_c serializer",
+    "Independent fixtures for the constructor-method and saved-selector branch product, including populated child collections and connected-component pointers",
     "Independent owned-document fixture and edit/reopen/reversal acceptance"
   ],
   "direct_child_binding": {
@@ -45,11 +45,14 @@
     "serializer_slot_offset": "0x28",
     "serializer": "0x1801daae0",
     "capture": "native-child-capture.json",
-    "coverage": "Static constructor path and primary-table binding; the complete child grammar is not yet accepted"
+    "coverage": "Static constructor path and primary-table binding; selected child and connected-component serializers/constructors are retained as separate Ghidra records; fixtures and operation acceptance remain pending",
+    "constructor_method_and_saved_selector_are_distinct": true,
+    "load_child_condition": "constructor method equals 1 and saved selector equals 1 and native allocation succeeded",
+    "native_store_inconsistent_pair": "Selector-1 STORE has no child null guard; successful native writing with a non-1 constructor method is unproven"
   },
   "limitations": [
     "Static source-file bytes and retained RTTI only; no target execution or runtime object inspection",
-    "REA Ghidra parent-function analysis is still running; no result from that analysis is claimed here",
+    "Selected Ghidra child serializer and constructor results are retained separately; parent analysis completed without target execution",
     "No native application, geometry, historical-context or whole-schema acceptance credit"
   ]
 }
