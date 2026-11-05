@@ -8,6 +8,8 @@ mod packet;
 use packet::packet_cases;
 #[path = "database_overflow/documents.rs"]
 mod documents;
+#[path = "database_overflow/native_census.rs"]
+mod native_census;
 
 #[derive(Clone)]
 struct OwnedOverflowCase {

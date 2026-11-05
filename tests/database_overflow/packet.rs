@@ -34,7 +34,11 @@ fn decode_case(mut cursor: &[u8]) -> OwnedOverflowCase {
     }
 }
 
-fn decode_pages(cursor: &mut &[u8], count: usize, extent: usize) -> Vec<OverflowPageImage> {
+pub(super) fn decode_pages(
+    cursor: &mut &[u8],
+    count: usize,
+    extent: usize,
+) -> Vec<OverflowPageImage> {
     (0..count)
         .map(|_| OverflowPageImage {
             identifier: identity(u64::from_le_bytes(word(cursor))),
@@ -43,11 +47,11 @@ fn decode_pages(cursor: &mut &[u8], count: usize, extent: usize) -> Vec<Overflow
         .collect()
 }
 
-fn word<const N: usize>(cursor: &mut &[u8]) -> [u8; N] {
+pub(super) fn word<const N: usize>(cursor: &mut &[u8]) -> [u8; N] {
     take(cursor, N).try_into().unwrap()
 }
 
-fn take<'a>(cursor: &mut &'a [u8], count: usize) -> &'a [u8] {
+pub(super) fn take<'a>(cursor: &mut &'a [u8], count: usize) -> &'a [u8] {
     let (selected, remaining) = cursor.split_at(count);
     *cursor = remaining;
     selected

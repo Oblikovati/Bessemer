@@ -76,6 +76,32 @@ owned containing document, reopened and reversed to exact original file bytes,
 preserving unrelated streams. Two fresh processes emitted identical 2,728,863-byte
 packets; all original and edited pages matched independent expected spans.
 
+The complete native candidate cohort now has a separate frozen regression packet:
+5,140 chains, including the one two-page value. Every database image was checked
+against its retained source hash; every expected key and value matched the
+earlier independent span hashes. Complete regeneration reproduced all 23,174,343
+packet bytes. The deterministic gzip image occupies 467,910 bytes.
+
+The expanded Rust suite passed 15 tests. Its native census checked every stored
+key/value, independently expected edited page, fresh reparse/reversal, source
+isolation, coverage and ordered history. A second fresh process repeated the
+complete census against the same expected bytes. Twelve Python tests also passed,
+including changed-source, truncated-chain and cycle rejection. This is page-level
+native corpus acceptance; complete original containing-document edits for every
+cell and native application opening remain separate.
+
+`native-packet-reference.json` and `native-rust-census-verification.json` retain
+the packet identity and executed checks. `BOV1` is a test format: magic and u32
+record count, then length-prefixed records. Each record starts with little-endian
+`<IIIQQI`: source ordinal, extent, key length, value length, first page ID and page
+count. Complete `<Q`-identified pages, expected key bytes and expected value bytes
+follow. Source ordinals refer to the retained candidate census.
+
+```text
+python -B -X utf8 docs/features/database-overflow/freeze_native_packet.py
+cargo test --test database_overflow
+```
+
 The full local and exact-head remote gates remain required. Native keys spanning
 pages still need independent evidence. These operations do not validate
 file-wide indexing, allocation, transactions, commits, geometry or application
