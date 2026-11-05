@@ -24,6 +24,8 @@ The [diagnostic field projection](docs/features/flow-settings-fields/README.md)
 derives seven documented labels with explicit missing guard and floating-point context.
 The [related-carrier lookup](docs/features/flow-links/README.md) searches explicit
 candidate order by typed GUID roles and preserves the CPT/settings lookup gates.
+The [versioned settings body](docs/features/flow-settings-body/README.md) reads
+record 511 versions 0–11 and edits present members with explicit legacy runtime context.
 
 `bessemer::electrical` reads and edits complete Electrical ZIP32 project carriers
 and lexical ASCII Archive.ini records. It preserves duplicate occurrences,

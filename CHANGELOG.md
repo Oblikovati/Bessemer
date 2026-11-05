@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added strict Flow record-511 versioned body reads and isolated member edits with explicit legacy runtime context and preserved raw representations. (#241)
+
 - Added ordered Flow GUID lookup and related-carrier selection with explicit result types, nil-key behavior and CPT/settings lookup gates. (#241)
 
 - Added seven Flow settings diagnostic projections with preserved stored bits and explicit unresolved integer-guard and floating-point prerequisites. (#241)
