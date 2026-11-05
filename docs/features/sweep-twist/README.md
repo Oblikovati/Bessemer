@@ -47,3 +47,13 @@ records, and no slot for shared-object references. Focused tests check literal
 schema-1 tags, inherited map offsets, isolation between operations, invalid plans,
 and insertion into 16 complete sweep/cut bodies across the four version boundaries.
 These constructor tests do not establish parser acceptance or document edit coverage.
+
+A pinned run against 6,957 original Python source files passed nine tests. It
+parsed 12 complete sweep/cut streams against the actual blank part configuration
+map, then parsed 36 independently assembled field edits. Original functions read
+the surrounding features, inherited context and MBSM tail; the operation-local
+fixture callback reads only the documented twist primitives. Shared pointers keep
+object identity and cached-class pointers create distinct objects. Unextended
+original parsing rejected all 12 new streams. This remains fixture-only evidence;
+Bessemer production parsing, retained owned streams and public document edits are
+pending. The initial source snapshot and verification record preserve this scope.
