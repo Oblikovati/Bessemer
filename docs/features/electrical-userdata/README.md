@@ -78,3 +78,17 @@ The [direct file-field map](../electrical-file-fields/README.md) now retains the
 38 verified reader/destination bindings. Full userdata delegate/provider state,
 native file-loader conversion effects, database mutation and broader Electrical/application schema parity remain
 incomplete. The humanizer skill is unavailable; its prose pass remains for review.
+
+The reader evidence supplement in `reader-native-byte-verification.json`
+corrects the coverage gap tracked in #240. The upstream packet retains only
+15 bytes at `0x1804a3580`; those bytes cover the initial unwind region.
+Three chained regions extend the logical reader through `0x1804a3661`.
+The supplement authenticates all 225 bytes against the installed DLL and
+retains all 65 decoded instructions. `test_native_reader.py` checks contiguous
+region coverage, the instruction byte stream, and the installed artifact hash.
+
+This is offline PE evidence, with no new REA or native execution credit.
+It confirms the null-input return, rejected-ID string clearing, and accepted-ID
+load flag and field reads. Provider conversions, the context helper's meaning,
+and application acceptance remain unverified. The source packet is preserved.
+The unavailable humanizer pass remains deferred to maintainer review.
