@@ -1,0 +1,21 @@
+{
+  "independent_expected_sha256": "1acbd4f022f92935491032e564540d89e5a066588bbfee5b418aa7594050f509",
+  "bytes_per_process": 157763248,
+  "physical_edits": 72,
+  "noops": 72,
+  "cases": 6,
+  "processes": [
+    {
+      "path": "target\\flow-process-one.bin",
+      "bytes": 157763248,
+      "sha256": "1acbd4f022f92935491032e564540d89e5a066588bbfee5b418aa7594050f509"
+    },
+    {
+      "path": "target\\flow-process-two.bin",
+      "bytes": 157763248,
+      "sha256": "1acbd4f022f92935491032e564540d89e5a066588bbfee5b418aa7594050f509"
+    }
+  ],
+  "oracle": "Reference Python record partition rebuilt with struct.pack and complete untouched payloads",
+  "native_execution": false
+}

@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added bounded ordinary Flow result carrier reads and isolated physical payload replacements with exact checkpoints and complete record history. (#241)
+
 - Composed Electrical userdata query results with prior storage, preserving EOF state and requiring explicit provider effects for present rows. (#231)
 
 - Added complete Electrical userdata storage transitions for supplied provider effects, retaining raw UTF-16 slots, branch coverage and field history. (#231)

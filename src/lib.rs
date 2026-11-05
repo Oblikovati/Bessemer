@@ -28,6 +28,7 @@ mod document;
 pub mod electrical;
 pub mod entity_visual;
 mod error;
+pub mod flow;
 pub mod header;
 pub mod history;
 pub mod inspection;
