@@ -1,0 +1,57 @@
+{
+  "issue": 233,
+  "bug": 234,
+  "source_base_commit": "7f182b610e88fdf77f248f3e9478bbce35450ad0",
+  "source_state": "New SQLite implementation in working tree; exact files below",
+  "source_sha256": {
+    "Cargo.lock": "245e31214ffcfe2bc86b23f982150a3a128f928f69eab77e7ce9084f00ffc84b",
+    "Cargo.toml": "c01c044c813d3a934385441ac8c51f30d2a4a3e30f1b459e84128ce584e03684",
+    "src/electrical/mod.rs": "9ebb317aed7c8ef52093e2d469fb41a92bed1b4909bc98ff34f25a36a0460828",
+    "src/lib.rs": "29815280ceb0dcc3fd62b396bbcdb2a6763e9614a81510c1716841f9dad26b9e",
+    "src/sqlite_image/connection.rs": "8ea2ba9475c3b6376998a788eac10d3e2a9e8daf27d1d3ce2e902591cd0d3bc4",
+    "src/sqlite_image/mod.rs": "a49a0bea6b0e530063802447cd51de96525b27be35413d7deaadd2fa6363cfd6",
+    "src/sqlite_image/query.rs": "b86f138f6196cef96d1bdc626022bde4c5fca4357a6b0527d7bb555ae6945f63",
+    "src/sqlite_image/schema.rs": "2aa534197ddb09f5a51fc8a375763da3f654f10718c7d18b1c40d57d02387518",
+    "src/sqlite_image/types.rs": "8e53bea6a0dd078c6d146fabd40997e24a4e77a9d7ccde3809e0672fc7ac3caa",
+    "tests/sqlite_images/fixture.rs": "23e7e5c9d619df35963c9d5d6eddfe89efdce0ca2cd4ab17cdbe67836ca15f51",
+    "tests/sqlite_images/projection.rs": "02b0aba7a7431d0f3cbc188cffac4f9fd6cd6c85570af04ae9f77c583f2a8b42",
+    "tests/sqlite_images/rejections.rs": "c9b10f3340112242187d6055679332ae85c59bc279e76e40f424776f40d1de99",
+    "tests/sqlite_images.rs": "46c13709eccec16888e38fec7d946284170515b11253f223c95cb374c23e49c1"
+  },
+  "reference_edition": "0.3134",
+  "reference_sha256": {
+    "../inventor-interface/solidworks/electrical.py": "e425802b353cf52d318c040794163fa9fa1cc8d5de72302265e97bcb7a2e886a",
+    "../inventor-interface/docs/solidworks-file-format/specification.md": "6abb4ec5ffc86e855128cd3e6402b8458c29bd496cf139f69452d0d3a63d0119",
+    "../inventor-interface/solidworks/research/electrical-cam-project-evidence.json": "3fdef3fda6ca57549ec0c5202e2a1e9102b66cc685f430b94cc024bcdeacc911"
+  },
+  "rust_focused_tests": {
+    "passed": 11,
+    "failed": 0,
+    "ignored": 0,
+    "terminal_exit_code": 0
+  },
+  "python_reference_tests": {
+    "passed": 2,
+    "terminal_exit_code": 0
+  },
+  "clippy": {
+    "command": "cargo clippy --lib --test sqlite_images --locked -- -D warnings",
+    "terminal_exit_code": 0
+  },
+  "dependency_checks": {
+    "deny_exit": 0,
+    "audit_exit": 0,
+    "policy_exceptions_added": false
+  },
+  "log_sha256": {
+    "sqlite-rust-tests.log": "0ad47c07e41d879eeec86df440d6edf0cbd34c0e4a9238da2fcd26b5881e4df9",
+    "sqlite-focused-clippy.log": "18c6e952b0ed28ef4972a19e841860ef661388ec6d8b3530406caa89927afbb8",
+    "sqlite-python-tests.log": "11ebd6a91115d53e45d89a557f7497390969acbd133dc386843b252b3389ef82",
+    "sqlite-cargo-deny.log": "aa2657b0ad2d2059d4692c2c2784aaa2894f31bbaa26f532ffd3855f5625cd84",
+    "sqlite-cargo-audit.log": "4e7c991da1e62113a162b693ad1f12229716f922ca473930f41900fe70837fa2",
+    "sqlite-initial-page-size-failure.log": "1506c94b4ec0dcbe79c492069ceebd4213df674170790f2b96de55ebd09b0ca3"
+  },
+  "full_gate": "Pending for this SQLite source; earlier Electrical gate excludes it",
+  "native_application_acceptance": false,
+  "geometry_acceptance": false
+}

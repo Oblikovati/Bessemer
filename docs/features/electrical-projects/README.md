@@ -108,8 +108,9 @@ rather than the affected readback. The supplied reference code was not changed.
 
 ## Remaining work
 
-- Implement the documented SQLite catalog and record views, including NULL,
-  unknown columns and the distinct stored version fields.
+- The separate [SQLite image reader](../sqlite-images/README.md) now checks
+  complete database images and retains schema metadata, NULLs, unknown columns
+  and all named-table rows. Application catalog/record projections remain next.
 - Bind project/drawing relationships, typed file-load mappings and delegated
   userdata/query selection without extending their documented native scope.
 - Preserve opaque EWG bodies and qualify native loader acceptance, migrations,

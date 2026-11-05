@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Initialized deserialized SQLite page metadata before validating exact image extents, preserving nondefault native page sizes. (#234)
+
 - Qualified synthetic high-bit Thicken replay coverage pending the native signed-version binding. (#213)
 
 - Accepted zero image-size declarations in uncompressed BGRX previews and preserved them through pixel edits and fresh reversals. (#208)
@@ -51,6 +53,8 @@
 - Fixed reference-plane point roles rejecting documented endpoint and loft-sync subclasses for fresh and cached pointers. (#46)
 
 ### Added
+
+- Added bounded in-memory Electrical/CAM SQLite image validation, complete schema metadata and named-table row snapshots with exact original-byte retention. (#233)
 
 - Added Electrical ZIP32 carrier reads, member edits and lossless ASCII Archive.ini value operations with coverage and history. (#231)
 

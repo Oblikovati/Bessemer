@@ -8,7 +8,12 @@ CAD kernels use it to exchange data with SolidWorks files. Martensite is its fir
 and lexical ASCII Archive.ini records. It preserves duplicate occurrences,
 unknown members and encoded representations of untouched members. See the
 [Electrical evidence](docs/features/electrical-projects/README.md) for limits,
-history and the remaining SQLite/project-schema work.
+history and the remaining project-schema work.
+`bessemer::sqlite_image` checks complete in-memory Electrical/CAM SQLite images
+and reads bounded schema metadata and complete named-table rows, retaining NULLs,
+duplicate rows and raw text/blob values. See the
+[SQLite evidence](docs/features/sqlite-images/README.md) for native fixtures,
+resource limits and application acceptance exclusions.
 
 `bessemer::compound` reads and reconstructs MS-CFB version-3/4 carriers and
 replaces existing streams on isolated snapshots, including mini-stream cutoff

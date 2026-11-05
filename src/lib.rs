@@ -38,6 +38,7 @@ pub mod plastics;
 pub mod preview;
 mod records;
 pub mod simulation;
+pub mod sqlite_image;
 pub mod tessellation;
 mod writer;
 

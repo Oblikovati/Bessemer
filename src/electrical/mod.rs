@@ -83,6 +83,14 @@ impl ElectricalArchive {
             },
         )
     }
+    /// Checks one complete SQLite member in memory; e.g. `let database = archive.sqlite_member(&id, limits)?`.
+    pub fn sqlite_member(
+        &self,
+        id: &ElectricalMemberId,
+        limits: crate::sqlite_image::SqliteLimits,
+    ) -> Result<crate::sqlite_image::SqliteImage> {
+        crate::sqlite_image::SqliteImage::from_bytes(self.read_member(id)?, limits)
+    }
 }
 
 fn electrical_member(member: ComposerMember) -> ElectricalMember {
