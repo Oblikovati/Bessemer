@@ -52,6 +52,8 @@
 
 ### Added
 
+- Added sheet-metal material parameter archives and direct thickness-range records, with lossless document edits and fresh reversals. (#214)
+
 - Added schema-1 bidirectional sweep-twist fields for modern ordinary-part archives, preserving raw byte values and exact double bits. (#211)
 
 - Added 16-bit BI_RGB555 preview word decoding and replacement, retaining unused high bits, padding, palettes and size declarations. (#210)

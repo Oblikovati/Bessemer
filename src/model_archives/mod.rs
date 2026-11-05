@@ -287,6 +287,7 @@ mod resolved_start;
 mod shared_tail;
 mod sheet_allowance;
 mod sheet_arrays;
+mod sheet_material_ranges;
 mod sheet_metal;
 mod sheet_payload;
 mod shell_records;

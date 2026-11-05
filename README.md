@@ -380,6 +380,9 @@ body-feature layouts, cached-array branches and versioned kernel-body lists.
 retain exact native spellings, shared direct blend data and raw surface bytes.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
+[Material thickness ranges](docs/features/sheet-material-ranges/README.md) retain
+complete material parameters, table names and direct 37-byte range records, with
+isolated stored-field edits and exact document reconstruction.
 [Stored spline equation state](docs/features/spline-equation-state/README.md)
 exposes the six saved string roles, full signed option and equation-path endpoint
 lock bits. Typed edits preserve unrelated stored fields and use complete archive

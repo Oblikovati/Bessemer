@@ -1,0 +1,35 @@
+{
+  "issue": 214,
+  "oracle": "Independent literal packing of specification11.154/C-3559; no Bessemer encoder or original Source parser used",
+  "records": 256,
+  "record_bytes": 37,
+  "method_octets": "all256",
+  "integer_words": [
+    -2147483648,
+    -1,
+    0,
+    1,
+    2,
+    2147483647
+  ],
+  "binary64_patterns": [
+    "0000000000000000",
+    "8000000000000000",
+    "0000000000000001",
+    "8000000000000001",
+    "3ff0000000000000",
+    "bff0000000000000",
+    "7ff0000000000000",
+    "fff0000000000000",
+    "7ff8000000001234",
+    "fff8000000005678",
+    "7ff0000000000001",
+    "fff0000000000001"
+  ],
+  "files": {
+    "empty.bin": "beff2de0162c00e8d8a8b5fdd432781e4541f1985b9e5f7d215eaa632db66aff",
+    "parent.bin": "8c6ae89054f690d3973f647fd3312ba9d17db3096deb42e4a3b96a135450ff6f",
+    "ranges.bin": "dd47bccc1c6cca5e462d5fb29791c838a833ba0ab0f6daa5834a528a08140ad6"
+  },
+  "credit": "Synthetic wire grammar only; no observed native populated material or geometry/application acceptance"
+}
