@@ -68,6 +68,11 @@ pub(super) fn read(
         "moSurfaceBodyRef_w" => super::stock_references::body(reader, map),
         // #54 / C-396 binds the complete stock body with no modern suffix.
         "moStock_c" | "moXformStock_c" => super::stock_features::read(reader, map, false),
+        "moMoldPartingGeom_c" => super::mold_parting_geometry::read_geometry(reader, map),
+        "moPartingDataNew_c" => super::mold_parting_child::read_child(reader, map),
+        "moMoldPartingConnectedComponent_c" => {
+            super::mold_parting_child::read_connected(reader, map)
+        }
         "moMoldPartingLine_c" => super::mold_parting_line::read_parting_line_feature(reader, map),
         "moMoldPartingLineData_c" => {
             super::mold_parting_line::read_parting_line_settings(reader, map)

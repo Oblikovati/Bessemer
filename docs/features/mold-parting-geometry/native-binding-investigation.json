@@ -1,6 +1,6 @@
 {
   "issue": 217,
-  "status": "partial",
+  "status": "bindings-recovered-with-independent-local-fixtures",
   "target": {
     "path": "C:/Program Files/SOLIDWORKS Corp/SOLIDWORKS/sldMoPartu.dll",
     "sha256": "2201edfa07b1a7484acedb6db4600fa7a00e55b16090a03b92fe7d9b14cb2128",
@@ -31,8 +31,8 @@
     "consequence": "Use the existing inline reference-surface payload framing for this derived class; a nonzero archive backend marker alone does not bypass sheets or their attributes"
   },
   "unresolved": [
-    "Independent fixtures for the constructor-method and saved-selector branch product, including populated child collections and connected-component pointers",
-    "Independent owned-document fixture and edit/reopen/reversal acceptance"
+    "Fresh native populated parting-geometry/child/connected-component acceptance",
+    "Native application and geometry acceptance, historical/special contexts and whole-schema parity"
   ],
   "direct_child_binding": {
     "parent_constructor": "0x18017a2e0",
@@ -45,7 +45,7 @@
     "serializer_slot_offset": "0x28",
     "serializer": "0x1801daae0",
     "capture": "native-child-capture.json",
-    "coverage": "Static constructor path and primary-table binding; selected child and connected-component serializers/constructors are retained as separate Ghidra records; fixtures and operation acceptance remain pending",
+    "coverage": "Static constructor path and primary-table binding; selected serializers/constructors are retained separately; 30 independent literal graphs and 14 owned-document edits/fresh reversals cover local stored-wire acceptance only",
     "constructor_method_and_saved_selector_are_distinct": true,
     "load_child_condition": "constructor method equals 1 and saved selector equals 1 and native allocation succeeded",
     "native_store_inconsistent_pair": "Selector-1 STORE has no child null guard; successful native writing with a non-1 constructor method is unproven"

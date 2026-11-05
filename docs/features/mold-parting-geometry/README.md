@@ -2,7 +2,7 @@
 
 Feature issue: [#217](https://github.com/Oblikovati/Bessemer/issues/217).
 
-The ordinary modern part codec needs the reference-surface base, the direct
+The ordinary modern part codec composes the reference-surface base, the direct
 edge-reference collection, the signed method and a directly serialized
 `moMoldPartingGeomData_c`. The settings body has no tagged object header.
 The reference is inventor-interface specification edition 0.3099, sections
@@ -38,16 +38,37 @@ retained in [connected-constructor-rea.json](connected-constructor-rea.json) and
 [connected-serializer-rea.json](connected-serializer-rea.json).
 Neither a tag nor a presence word may be inferred around the direct child.
 The measured legacy selector-2 examples do not establish selector-1 framing.
-Implementation and owned-document acceptance remain pending.
+The codec preserves this complete saved structure. The existing component-surface
+caller also accepts the native-bound parting-geometry class.
 
 The containing feature's method and the settings' saved selector are distinct
 inputs. The constructor allocates `+0x178` only when the method equals 1. The
 loader later invokes that existing child only when the saved selector equals 1
 and the pointer is nonnull. A codec must carry the method into the direct
-settings reader. It must not create a child solely because the saved selector
-equals 1. Fixtures must cover all four combinations of method/selector equal
+settings reader. It does not create a child solely because the saved selector
+equals 1. Fixtures cover all four combinations of method/selector equal
 to 1 or a different value. Native STORE has no null guard in its selector-1
 branch; successful native writing for an inconsistent pair is unproven.
+
+The independent literal builder reproduces 30 graphs: nine bare graphs and 21
+complete resolved-feature streams for seven owned-document contexts. These
+include empty and populated direct children, shared/null array entries,
+connected-component DWORD arrays, signed presence and nonpositive vector counts,
+the minimum modern version, suppressed bodies and a strict serialized kernel
+sheet. Existing base, component, dimension, synchronization and kernel fixture
+builders are reused. No Bessemer encoder or original producer parser generates
+the expected bytes.
+
+Focused validation covers 18 new private codec tests, four public document tests,
+37 affected regression tests and two Python fixture checks. The document tests
+exercise 14 independent Length/raw-word edits, fresh reversals, revision-bound
+history, all carrier bytes, input isolation after failure/source mutation and
+eight concurrent workers. Exact stored-archive coverage does not certify the
+geometry. Full PR and native-corpus gate outcomes are recorded separately.
+The retained native compatibility run accepted all 906 selected stream sets
+with an explicit installed kernel schema; its packet, executable, schema and
+log hashes are in
+[native-resolved-regression-verification.json](native-resolved-regression-verification.json).
 
 Native application acceptance, geometry acceptance, historical contexts and
 whole-schema parity remain unproven. The humanizer skill is unavailable in

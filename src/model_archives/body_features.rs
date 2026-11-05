@@ -222,6 +222,8 @@ pub(super) const CLASSES: &[&str] = &[
     "moMoldCoreCavitySolids_c",
     // #216 / C-2964: retained parting-line RTTI and serializer bind this body-feature owner.
     "moMoldPartingLine_c",
+    // #217 / C-2971: reference-surface ancestry retains the common atom-owner contract.
+    "moMoldPartingGeom_c",
     "moLibraryFeature_c",
     // #54 / C-398 proves the complete body-feature owner chain.
     "moSculpt_c",

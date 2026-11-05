@@ -735,3 +735,6 @@ mod mold_core_cavity_tests;
 
 #[path = "../../tests/model_archives/mold_parting_line.rs"]
 mod mold_parting_line_tests;
+
+#[path = "../../tests/model_archives/mold_parting_geometry.rs"]
+mod mold_parting_geometry_tests;

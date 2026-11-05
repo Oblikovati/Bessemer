@@ -1,0 +1,45 @@
+### 11.1287 Next parting-geometry serializer binding
+
+*Status: static native binding; sample body unread — Evidence: C-2971*
+
+RTTI binds `moMoldPartingGeom_c` to primary serializer `0x18017BF40`. Its ancestry includes `moRefSurface_c`, `moRefGeom_c` and `moAtomFeature_c`. It therefore requires the reference-surface inheritance rather than the preceding parting-line body-feature inheritance. The SHA-bound native capture and retained decompilation show the inherited reference-surface serializer, a direct virtual serializer at member `+0x7B0`, and a signed method field `+0x7D0` loaded when archive version exceeds `0x11B6`. Older loads default that field to2. The load path constructs `moMoldPartingGeomData_c` using that value and invokes its serializer directly; it does not read a tagged data-object header at this point. Constructor side effects and reference-use calls are not additional archive fields.
+
+Evidence `parting-geometry-native-evidence.json` retains native bytes and ancestry; `parting-geometry-decompilation-evidence.json` retains the decompilation. These are static findings only: no sample cursor advances and no coverage credit is assigned. The inherited reference-surface body and direct collection remain the next part-document dependencies. Native target code was not executed. Assembly work remains deferred while part-schema gaps remain.
+
+### 11.1290 Parting-geometry empty reference surface and direct edge collection
+
+*Status: measured legacy research boundary — Evidence: C-2974*
+
+The inherited reference-surface payload has archive-backend marker1, sheet count0 and extra-body presence0 in all three advancing streams. No sheet-body or attribute bytes are consumed for these empty cases; this measurement does not validate a populated sheet branch. The later word-vector gate at archive version `0x2BCD` does not apply to versions9000 and10000. The feature-specific direct collection at `+0x7B0` then contains58 complete `moEdgeRef_c` references in each stream. Signed method field `+0x7D0` is2 and remains charged unknown; the native constructor argument role alone does not establish every enum meaning. Cursors554710,604387 and561506 stop before the directly serialized `moMoldPartingGeomData_c` body; no tagged data-object header is consumed.
+
+Evidence `part-legacy-parting-geometry-surface-evidence.json` frames26220 additional bytes with15036 charged unknown across three advancing streams. All four cohort rows and53 other first-child exclusions remain represented; aircraft sketch C0 stays deferred at32457. The enclosing parting-geometry feature remains partial. No target native code executes, production readers are unchanged, and coverage credit is zero. Part-schema gaps remain prioritized over assembly work.
+
+### 11.1291 Direct parting-geometry data native binding
+
+*Status: static native binding — Evidence: C-2975*
+
+RTTI binds `moMoldPartingGeomData_c` to serializer `0x18017B720` with `moFeatureData_c` ancestry. The serializer begins with that base owner reference and a direct virtual collection at `+0x18`, then a tagged display-distance dimension at `+0x10`. Native load order continues through floating and signed fields, optional component references, a signed-count integer vector, ten float64 values, three words, a tagged direction and gated suffix words. At the measured archive versions9000 and10000, the pre-`0x95C` compatibility branches do not apply; the `+0x118`, `+0xB0`, `+0x124`, `+0x144` and `+0x170` version gates all apply. The final selector defaults to2 for versions at or below `0x11B6`; when it is1 and its pre-existing owned pointer is nonnull, another direct serializer is invoked. This branch remains unmeasured here.
+
+Exact own moMoldPartingGeomData_c methods bind three compound associations in the complete retained 2069-byte canonical serializer. Length uses tagged dimension 0x10 and the existing raw binary64 backup 0x88. The getter calls a nonnull current dimension's virtual slot 0x868(0), otherwise returns the backup. The setter stores its original input to 0x88 first. Its reached creation path requires current owner 0x08 nonnull, dimension null, and a nonzero result from owner virtual slot 0x1288; creation uses a sign-cleared re-read of CURRENT backup 0x88. A later nonnull current dimension receives the ORIGINAL input at slot 0x860 with arguments 1,0. Units, creation success and callback-stable identity remain unproved.
+
+EdgeDataArr is the declared const array-reference getter at embedded member 0x18 with its existing direct virtual codec. The named edge-count query reads current 0x28, and the CompEdge request uses backing pointer 0x20 and a sign-extended index without local bounds, backing-null or item-null checks. It returns the selected item's virtual slot 0x108 result; this is not an unconditional raw item-pointer return or a permitted file-index domain.
+
+DataNew methods declare a typed pointer getter/direct setter for 0x178. On STORE, current selector 0x170 equal to 1 reaches a DIRECT child virtual serializer through 0x178 without a null guard; a valid nonnull pointer is a precondition, not a tested presence gate. LOAD separately tests selector 1 and current pointer nonnull before the direct call. This adds no tagged-pointer field, explicit presence byte or allocation rule. LOAD initializes selector 0x170 to 2 before the independent unsigned effective-version query, then reads and replaces it only when that query is at least 0x11B7; the older path omits that read. The child's actual dynamic class/body and later opaque post-load routine remain open. OuterSketch methods identify runtime 0x180 but establish no direct saved-member codec in this serializer; they are excluded from saved-field claims, without asserting universal nonpersistence. No closed domains, coordinate frames, final geometry or current/file identity follow. Evidence: C-3560.
+
+Evidence `parting-geometry-data-native-evidence.json` preserves exact DLL hash, ancestry and native bytes; `parting-geometry-data-decompilation-evidence.json` preserves the decompilation. No tagged header is inferred for this directly constructed data object. No target native code executes and no sample or production coverage credit is assigned by this binding alone.
+
+### 11.1294 Parting-geometry distance completion and scalar prefix
+
+*Status: measured legacy research boundary — Evidence: C-2978*
+
+The tagged parallel-plane distance model follows the established length-parameter, tolerance, attachment, driven-word, point/vector and optional-transform grammar. Completing it closes the feature handle. Display placement, references, units, favorite, attachments, common tail and distance suffix then complete the measured display dimension. The enclosing data resumes with float64 fields `+0x88`, `+0x90`, `+0x98`, `+0xA0`, signed word `+0xB4`, float64 `+0xB8`, signed word `+0xC0` and float64 `+0x118`. In the first sample these values are0.05334,0,0.002159,0.002159,1,0.5235987755983,0,20 respectively. Values remain raw and charged unknown; no parameter-role or enum meaning is inferred. Cursors561152,610829 and567958 stop before the optional component fields.
+
+Evidence `part-legacy-parting-geometry-scalars-evidence.json` frames3127 additional bytes with1602 charged unknown across three advancing streams. Four cohort rows and53 other first-child exclusions remain represented; aircraft sketch C0 stays deferred at32457. No target native code executes, production readers are unchanged, and coverage credit is zero. Full part-schema decoding remains incomplete and retains priority over assemblies.
+
+### 11.1295 Parting-geometry data suffix and feature boundary
+
+*Status: measured legacy research boundary — Evidence: C-2979*
+
+The two signed presence words gate tagged component-feature references at `+0x78` and `+0x48`. The measured first is absent and the second contains a complete `moCompFeature_c`. A signed-count integer vector at `+0x58` is empty. Ten float64 values starting at `+0xC8` are zero in the first sample, followed by signed words `+0x38`, `+0xB0`, `+0x3C` equal to2,1,0. A complete tagged `moDirectionSpec_c` follows at `+0xA8`. Its existing optional array/vector grammar is preserved. Final gated signed words `+0x124`, `+0x144`, `+0x170` are0,2046,2 in the first sample. Selector2 consumes no optional owned-data serializer here; selector1 remains unmeasured. This completes the measured direct data and enclosing parting-geometry feature at561589,611266 and568395. The next unconsumed class in all three streams is `moProfileFeature_c`. Raw numbers remain charged unknown; feature framing does not prove their complete semantics.
+
+Evidence `part-legacy-parting-geometry-finish-evidence.json` frames1311 additional bytes with798 charged unknown across three advancing streams. Four cohort rows and53 other first-child exclusions remain represented; aircraft sketch C0 stays deferred at32457. No target native code executes, production readers are unchanged, and coverage credit is zero. Full part-schema decoding remains incomplete and retains priority over assemblies.
