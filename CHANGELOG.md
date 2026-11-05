@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added isolated Electrical userdata TEXT-cell writes with complete stored-database checks, bounded page growth, composed member/cell history and exact source checkpoints. (#238)
+
 - Added complete Electrical direct field-read maps with observed reader kinds, runtime destinations, unchanged SQLite values and preserved unmatched columns. (#231)
 
 - Added bounded Electrical userdata queries with exact SQLite key comparisons, complete lexical object-ID matches and the documented signed-ID gate. (#231)

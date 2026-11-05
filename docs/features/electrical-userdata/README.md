@@ -64,8 +64,10 @@ denied. It includes eight-worker mixed reads and source-buffer mutation, exact
 query row-budget exhaustion. Two fresh processes reproduced every carrier,
 SQL/lexical result and ID transition byte for byte. `local-verification.json`
 and `process-verification.json` retain the exact source/log/output hashes.
-Full-suite validation for this source remains pending; the completed gate on
-8341361a covers the earlier SQLite foundation only.
+Full-suite validation passed on source 13931532: 4,416 tests passed, zero failed
+and 233 were explicitly ignored across 349 result summaries. The proof is retained
+in `full-pr-gate-verification.json`. That source excludes the later direct field
+maps and [userdata writer](../electrical-userdata-write/README.md).
 
 ```powershell
 python -m unittest discover -s docs/features/electrical-userdata -p 'test_*.py' -v

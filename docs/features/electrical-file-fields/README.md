@@ -65,8 +65,9 @@ and typed missing-column errors byte for byte. `local-verification.json` and
 The REA target identity matched the same DLL, but its focused byte-read call
 timed out; that call contributes no byte evidence. The native session was closed
 successfully. `rea-observation.json` records that limitation separately from
-the successful offline PE comparisons. Full-suite validation for this new source
-remains pending; the active gate covers the earlier project/userdata source.
+the successful offline PE comparisons. Full-suite validation for this source
+remains pending; the completed 13931532 gate covers the earlier project/userdata
+read source.
 
 ```powershell
 python -m unittest discover -s docs/features/electrical-file-fields -p 'test_*.py' -v

@@ -48,16 +48,29 @@ pub(super) fn check_limits(limits: SqliteLimits) -> Result<()> {
 }
 
 pub(super) fn open_image(bytes: &[u8], limits: SqliteLimits) -> Result<Connection> {
+    open_selected_image(bytes, limits, true)
+}
+
+pub(super) fn open_writable_image(bytes: &[u8], limits: SqliteLimits) -> Result<Connection> {
+    open_selected_image(bytes, limits, false)
+}
+
+fn open_selected_image(bytes: &[u8], limits: SqliteLimits, read_only: bool) -> Result<Connection> {
     let mut database =
         Connection::open_in_memory().map_err(|error| engine_error("connection", error))?;
     configure_defensive(&database)?;
     configure_limits(&database, limits)?;
     configure_progress(&database, limits.maximum_vm_steps)?;
     database
-        .deserialize_read_exact(MAIN_DB, bytes, bytes.len(), true)
+        .deserialize_read_exact(MAIN_DB, bytes, bytes.len(), read_only)
         .map_err(|error| engine_error("deserialize", error))?;
+    let settings = if read_only {
+        "PRAGMA query_only=ON; PRAGMA trusted_schema=OFF; PRAGMA temp_store=MEMORY;"
+    } else {
+        "PRAGMA foreign_keys=ON; PRAGMA trusted_schema=OFF; PRAGMA temp_store=MEMORY;"
+    };
     database
-        .execute_batch("PRAGMA query_only=ON; PRAGMA trusted_schema=OFF; PRAGMA temp_store=MEMORY;")
+        .execute_batch(settings)
         .map_err(|error| engine_error("read-only configuration", error))?;
     Ok(database)
 }

@@ -6,6 +6,7 @@ mod ini;
 mod projects;
 mod types;
 mod userdata;
+mod userdata_write;
 use crate::composer::{ComposerArchive, ComposerCompression, ComposerMember};
 use crate::{BessemerError, FailureClass, Result};
 pub use file_fields::*;
@@ -13,6 +14,7 @@ pub use ini::*;
 pub use projects::*;
 pub use types::*;
 pub use userdata::*;
+pub use userdata_write::*;
 
 /// Immutable complete Electrical ZIP carrier; member payload schemas remain separate.
 #[derive(Clone, Debug)]

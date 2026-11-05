@@ -87,8 +87,9 @@ tables, empty results, caller-buffer mutation and eight concurrent independent
 replays. Two fresh processes produced identical 1,114,623-byte output containing
 every original carrier and complete graph projection. `local-verification.json`
 and `process-verification.json` retain source/log/output hashes and exclusions.
-The earlier SQLite full-suite run is a separate source cut and does not cover
-this new project-record implementation; its full gate remains pending.
+The full gate passed on source 13931532 with 4,416 tests, zero failures and 233
+explicitly ignored tests. The [userdata full-gate proof](../electrical-userdata/full-pr-gate-verification.json)
+covers this project-record source, excluding later field maps and SQL writes.
 
 ```powershell
 python -m unittest discover -s docs/features/electrical-records -p 'test_*.py' -v

@@ -5,9 +5,11 @@ mod schema;
 mod types;
 mod userdata;
 mod userdata_lexical;
+mod userdata_write;
 use crate::{BessemerError, FailureClass, Result};
 use std::sync::Arc;
 pub use types::*;
+pub(crate) use userdata_write::SqliteUserdataMutation;
 
 pub(crate) fn validate_limits(limits: SqliteLimits) -> Result<()> {
     connection::check_limits(limits)

@@ -24,6 +24,10 @@ the documented signed-ID transition without guessing provider conversions.
 The [direct file-field map](docs/features/electrical-file-fields/README.md) pairs
 all 38 observed typed read requests with unchanged stored values and distinguishes
 runtime fields from reused temporaries.
+Existing userdata TEXT cells can also be committed on isolated copies with
+whole-database logical checks and exact source checkpoints. See the
+[userdata writer](docs/features/electrical-userdata-write/README.md) for unique-key
+requirements, supported schema scope and physical rewrite limits.
 
 `bessemer::compound` reads and reconstructs MS-CFB version-3/4 carriers and
 replaces existing streams on isolated snapshots, including mini-stream cutoff
