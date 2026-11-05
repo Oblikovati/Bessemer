@@ -87,8 +87,7 @@ key/value, independently expected edited page, fresh reparse/reversal, source
 isolation, coverage and ordered history. A second fresh process repeated the
 complete census against the same expected bytes. Twelve Python tests also passed,
 including changed-source, truncated-chain and cycle rejection. This is page-level
-native corpus acceptance; complete original containing-document edits for every
-cell and native application opening remain separate.
+native corpus acceptance; the complete-document census below extends its scope.
 
 `native-packet-reference.json` and `native-rust-census-verification.json` retain
 the packet identity and executed checks. `BOV1` is a test format: magic and u32
@@ -100,6 +99,31 @@ follow. Source ordinals refer to the retained candidate census.
 ```text
 python -B -X utf8 docs/features/database-overflow/freeze_native_packet.py
 cargo test --test database_overflow
+```
+
+The complete-document native census also passed: all 5,140 edits across 440
+streams in 357 original documents reopened successfully and preserved unrelated
+stream names, order and bytes. Fresh typed reversals restored the selected
+database streams and exact complete original file bytes in 62.48 seconds.
+Each output retained the original document checkpoint to restore its compression
+provenance; the reverse payload came from a separately reopened document. This
+does not recover missing provenance from an arbitrary reopened file.
+
+All 357 complete source files matched their frozen lengths and SHA256 hashes
+before and after the run. Installed files were read only; edits and reopened
+documents stayed in memory. `native-document-census-verification.json` records
+the executed test, exact census-log agreement and source checks.
+
+The ignored native test requires an explicit samples root. The source-root
+preflight authenticates the full original file hashes; the Rust trial checks
+the selected frozen pages, whole-document reconstruction and input isolation.
+`BDD1` is its test manifest: u32 stream count, then each u32 ordinal, length-prefixed
+UTF8 relative path and stream name, u64 file length and 32-byte SHA256 digest.
+
+```powershell
+python -B -X utf8 docs/features/database-overflow/freeze_native_documents.py --source-root "C:/Users/Public/Documents/SOLIDWORKS/SOLIDWORKS 2026/samples"
+$env:BESSEMER_OVERFLOW_SAMPLE_ROOT="C:/Users/Public/Documents/SOLIDWORKS/SOLIDWORKS 2026/samples"
+cargo test --test database_overflow every_native_overflow_edit_reopens_original_document_and_reverses_with_retained_checkpoint -- --ignored --nocapture
 ```
 
 The full local and exact-head remote gates remain required. Native keys spanning

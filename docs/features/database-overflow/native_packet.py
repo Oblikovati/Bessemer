@@ -15,6 +15,8 @@ class NativeCensusRow(TypedDict):
     database_sha256: str
     key_sha256: str
     value_sha256: str
+    path: str
+    stream: str
 
 
 def native_value(raw: bytes, extent: int, first: int, length: int) -> bytes:

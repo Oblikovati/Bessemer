@@ -2,7 +2,7 @@ use super::*;
 use bessemer::Document;
 const STREAM: &str = "Contents/3DExperienceExchange2";
 
-fn stream_with_pages(raw: &[u8], payload: &OverflowPayload) -> Vec<u8> {
+pub(super) fn stream_with_pages(raw: &[u8], payload: &OverflowPayload) -> Vec<u8> {
     let mut output = raw.to_vec();
     for page in payload.pages() {
         let start = page.identifier.get() as usize * 4096;
@@ -11,7 +11,7 @@ fn stream_with_pages(raw: &[u8], payload: &OverflowPayload) -> Vec<u8> {
     output
 }
 
-fn payload_from_stream(raw: &[u8], case: &OwnedOverflowCase) -> OverflowPayload {
+pub(super) fn payload_from_stream(raw: &[u8], case: &OwnedOverflowCase) -> OverflowPayload {
     let pages: Vec<_> = case
         .pages
         .iter()

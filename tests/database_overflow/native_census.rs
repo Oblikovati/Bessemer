@@ -1,6 +1,8 @@
 use super::packet::{decode_pages, take, word};
 use super::*;
 use std::io::Read;
+#[path = "native_documents.rs"]
+mod native_documents;
 
 struct NativeChainCase {
     ordinal: u32,
