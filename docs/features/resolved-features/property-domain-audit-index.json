@@ -243,7 +243,8 @@
     "verification": "docs/features/conic-bend/local-verification.json",
     "native_regression": "docs/features/conic-bend/native-resolved-regression-verification.json",
     "process_determinism": "docs/features/conic-bend/process-determinism-verification.json",
-    "scope": "Schema-1 ordinary72-byte conic grammar implemented through complete OneBend callers in both saved helper states.41 focused Rust/3 Python checks passed;576 numeric graphs,18 containing streams,12 edits/fresh reversals,8 workers and2 fresh-process byte comparisons passed.684 old graphs and6 helper-one streams stayed unchanged;906 retained selected native stream sets reconstructed exactly. Full conic-cut local/remote gates, fresh native conic/factory, DB and application/geometry acceptance remain pending."
+    "scope": "Schema-1 ordinary72-byte conic grammar implemented through complete OneBend callers in both saved helper states.41 focused Rust/3 Python checks passed;576 numeric graphs,18 containing streams,12 edits/fresh reversals,8 workers and2 fresh-process byte comparisons passed.684 old graphs and6 helper-one streams stayed unchanged;906 retained selected native stream sets reconstructed exactly. Full conic-cut local PR gate passed4241 tests/0 failed/231 ignored at e74f8456. Remote gates, fresh native conic/factory, DB and application/geometry acceptance remain pending.",
+    "full_pr_gate": "docs/features/conic-bend/full-pr-gate-verification.json"
   },
   "canonical_sketch_owned_profile": {
     "issue": 219,
