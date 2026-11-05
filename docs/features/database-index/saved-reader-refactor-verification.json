@@ -1,0 +1,20 @@
+{
+  "issue": 230,
+  "kind": "Behavior-preserving extraction of saved index framing from graph partition admission",
+  "baseline_commit": "2851c87dab2832ea9a5cb40fd7fd7ff0727cf829",
+  "unchanged_rust_tests_passed": 16,
+  "unchanged_native_streams": 2486,
+  "unchanged_native_cell_edits_and_reversals": 22748,
+  "source_clippy_terminal_exit_code": 0,
+  "tests_terminal_exit_code": 0,
+  "source_sha256": "2566b47cfcc89856db5c3153a41075768e43b571858dabbd8020ca347ea120fe",
+  "logs": {
+    "target\\database-index-reader-refactor-tests.log": "76f5cf042d1d3810153f4ec379ac0dba1f5f456b0e128a479b35ade8ae4fe18d",
+    "target\\database-index-reader-refactor-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target\\database-index-reader-refactor-test-build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "exclusions": [
+    "Full gate at 2851c87d does not cover this later extraction",
+    "No public saved-index API in this refactor"
+  ]
+}

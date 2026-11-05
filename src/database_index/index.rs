@@ -85,6 +85,12 @@ pub(super) fn integer<const N: usize>(bytes: &[u8], offset: usize) -> Result<[u8
 }
 
 pub(super) fn read(reader: &mut FileReader<'_>) -> Result<FileIndex> {
+    let index = read_saved(reader)?;
+    validate_partition(&index)?;
+    Ok(index)
+}
+
+pub(super) fn read_saved(reader: &mut FileReader<'_>) -> Result<FileIndex> {
     let root = reader.page(1)?;
     let magic = u32::from_be_bytes(integer(root, 0)?);
     let test = u32::from_be_bytes(integer(root, 4)?);
@@ -101,7 +107,6 @@ pub(super) fn read(reader: &mut FileReader<'_>) -> Result<FileIndex> {
         entries: Vec::new(),
     };
     read_maps(reader, &mut index)?;
-    validate_partition(&index)?;
     Ok(index)
 }
 
