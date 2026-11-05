@@ -1,9 +1,11 @@
 //! Bounded ordinary physical Flow carriers, specification 14.29; payload schemas remain separate.
+mod arrays;
 mod decode;
 mod edit;
 mod header;
 mod types;
 use crate::{BessemerError, FailureClass, Result};
+pub use arrays::*;
 pub use header::*;
 use std::sync::Arc;
 pub use types::*;

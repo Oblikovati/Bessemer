@@ -1,0 +1,15 @@
+{
+  "cases": 13,
+  "requests": 38,
+  "changed": 19,
+  "noops": 19,
+  "bytes_per_process": 1405107,
+  "sha256": "584981605d64a39c886797e59c27ff695843d7a145252c1d1a56c775fc846301",
+  "processes": [
+    "target/flow-array-one.bin",
+    "target/flow-array-two.bin"
+  ],
+  "comparison": "Complete raw Rust output streams compared byte for byte",
+  "independent_oracle": "Source flowresults/flowmaps verified all source views, output decoded arrays, cell histories, no-op wire identities and every untouched carrier byte; changed compressed encodings are validated RFC 1950 streams, not a canonical Python byte encoding",
+  "native_execution": false
+}

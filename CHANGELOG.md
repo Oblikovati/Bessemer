@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added bounded Flow record-433 array reads and isolated signed-cell edits with explicit runtime-count checks, full decoded validation and retained source checkpoints. (#241)
+
 - Added selected Flow GUID-header reads and typed sixteen-byte edits with Windows GUID formatting and preserved extension bytes. (#241)
 
 - Added bounded ordinary Flow result carrier reads and isolated physical payload replacements with exact checkpoints and complete record history. (#241)

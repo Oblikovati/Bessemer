@@ -10,6 +10,8 @@ reserved and unknown records. See the [Flow carrier evidence](docs/features/flow
 for exact framing checks and the remaining index, payload and application work.
 The [GUID header view](docs/features/flow-headers/README.md) reads and edits the
 selected record-123/435 GUID prefixes while preserving control words and extensions.
+The [record-433 arrays](docs/features/flow-arrays/README.md) decode bounded zlib
+payloads and edit existing signed cells with explicit runtime-count coverage.
 
 `bessemer::electrical` reads and edits complete Electrical ZIP32 project carriers
 and lexical ASCII Archive.ini records. It preserves duplicate occurrences,

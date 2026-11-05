@@ -18,7 +18,7 @@ impl FlowCarrier {
     }
 }
 
-fn selected_span(carrier: &FlowCarrier, id: &FlowRecordId) -> Result<FlowSpan> {
+pub(super) fn selected_span(carrier: &FlowCarrier, id: &FlowRecordId) -> Result<FlowSpan> {
     if !Arc::ptr_eq(&carrier.revision, &id.revision) {
         return Err(identity_failure(id.ordinal, carrier.revision.spans.len()));
     }
