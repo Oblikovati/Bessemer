@@ -533,6 +533,9 @@ mod cosmetic_weld_tree_tests;
 #[path = "../../tests/resolved_features/edge_flanges.rs"]
 mod edge_flange_tests;
 #[cfg(test)]
+#[path = "../../tests/resolved_features/one_bend_raw_bodies.rs"]
+mod one_bend_raw_body_tests;
+#[cfg(test)]
 #[path = "../../tests/resolved_features/end_caps.rs"]
 mod end_cap_tests;
 #[cfg(test)]

@@ -451,6 +451,8 @@ shared non-default plane layout and its typed containing-plane role.
 
 [Edge flanges](docs/features/edge-flanges/README.md) covers complete edge-flange,
 single-bend and per-edge records, including verified saved sheet-metal state.
+[OneBend raw bodies](docs/features/one-bend-raw-bodies/README.md) supports positive
+body lists and signed optional bodies with an explicit kernel schema and limits.
 [Conic bend data](docs/features/conic-bend/README.md) preserves complete
 schema-1 point/vector/scalar records and signed byte-backed words inside
 OneBend documents, including shared identities and fresh edit reversals.

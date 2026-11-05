@@ -83,7 +83,7 @@ fn single_bends_preserve_negative_empty_raw_body_counts() {
 }
 
 #[test]
-fn positive_raw_body_counts_and_nonzero_presences_stop_explicitly() {
+fn positive_raw_body_counts_and_nonzero_presences_require_kernel_context() {
     for (_, version, bytes, _, _) in records().into_iter().filter(|r| r.0 == 12 && r.1 == 19000) {
         let fields = decode_graph(version, bytes, false).unwrap().0;
         for label in [
@@ -96,10 +96,14 @@ fn positive_raw_body_counts_and_nonzero_presences_stop_explicitly() {
             let changed =
                 super::manager_context_tests::replace_field(&fields, &path, &1i32.to_le_bytes());
             let Err(error) = decode_graph(version, &changed, false) else {
-                panic!("expected unsupported raw body at {path}")
+                panic!("expected missing kernel context at {path}")
             };
-            assert!(error.to_string().contains("Unsupported"));
-            assert!(error.to_string().contains(label));
+            assert_eq!(error.class, crate::FailureClass::Missing);
+            assert!(
+                error
+                    .to_string()
+                    .contains("explicit framed compressed Parasolid")
+            );
         }
     }
 }
