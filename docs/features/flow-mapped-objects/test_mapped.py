@@ -8,9 +8,18 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 from freeze_mapped import ROOT, freeze, source_cases, owned_cases, flowmappedobjects
 from swarchive import ArchiveError
+from process_reference import edit_rows, field_requests, packet
 
 
 class MappedFixtures(unittest.TestCase):
+    def test_complete_process_oracle_pins_every_editable_field(self) -> None:
+        self.assertEqual(len(list(edit_rows())), 3894)
+        self.assertEqual(packet()[:8], b"FMO1\xc0\0\0\0")
+        sources, _ = source_cases()
+        obj = flowmappedobjects.read_payload(sources[2][1], [1])["objects"][0]
+        first = next(field_requests(obj))
+        self.assertEqual(first, (0, 0, 13, b"\xfa", b"\x05"))
+
     def test_source_synthetic_products_and_raw_nonfinite_words(self) -> None:
         sources, audit = source_cases()
         self.assertEqual([row["present"] for row in audit], [False, False, True])

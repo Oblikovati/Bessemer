@@ -28,6 +28,8 @@ The [versioned settings body](docs/features/flow-settings-body/README.md) reads
 record 511 versions 0–11 and edits present members with explicit legacy runtime context.
 The [feature identity list](docs/features/flow-feature-identities/README.md) reads
 record 143 and edits existing fields, raw UTF-16 strings and stored tail values.
+The [mapped-object view](docs/features/flow-mapped-objects/README.md) reads record
+144 with explicit matched-count context and edits existing state, pair and numeric fields.
 
 `bessemer::electrical` reads and edits complete Electrical ZIP32 project carriers
 and lexical ASCII Archive.ini records. It preserves duplicate occurrences,

@@ -45,9 +45,9 @@ diagnostics and complete physical carrier history. Each complete patched payload
 is reparsed and checked before publication. Fresh opposite edits restore exact
 original carrier bytes, including after string length changes.
 
-The record-144 null profile remains a fixture baseline; populated record
-144 belongs to the separate [mapped-object grammar](../flow-mapped-objects/README.md)
-in specification 14.38. Native
+The separate [mapped-object view](../flow-mapped-objects/README.md) handles record
+144's null and populated wire profiles under explicit runtime-count context from
+specification 14.38. Native
 runtime matching, object merging, alternate string modes, registration side
 effects and application acceptance remain separate requirements. This fixture
 baseline supplies no global coverage claim. The maintainer

@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added bounded Flow record-144 mapped-object reads and isolated state, pair and numeric edits with explicit runtime cardinalities and complete version-5 blocks. (#241)
+
 - Added bounded Flow record-143 identity reads and isolated field, counted UTF-16 string and stored-tail edits with explicit virtual legacy-tail context. (#241)
 
 - Added strict Flow record-511 versioned body reads and isolated member edits with explicit legacy runtime context and preserved raw representations. (#241)
