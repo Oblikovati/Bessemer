@@ -237,6 +237,7 @@ mod mitered_flanges;
 mod model_arrays;
 mod model_lists;
 mod model_references;
+mod mold_core_cavity;
 mod move_copy_bodies;
 mod move_copy_deformation;
 mod move_faces;

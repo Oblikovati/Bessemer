@@ -729,3 +729,6 @@ mod sheet_material_range_tests;
 
 #[path = "../../tests/model_archives/property_domains_sketch_deform.rs"]
 mod property_domains_sketch_deform_tests;
+
+#[path = "../../tests/model_archives/mold_core_cavity.rs"]
+mod mold_core_cavity_tests;

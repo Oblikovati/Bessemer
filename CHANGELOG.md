@@ -52,6 +52,8 @@
 
 ### Added
 
+- Added complete modern mold core/cavity feature and data archives, preserving owner cycles, shared direct lists and isolated setting edits. (#215)
+
 - Added sheet-metal material parameter archives and direct thickness-range records, with lossless document edits and fresh reversals. (#214)
 
 - Added schema-1 bidirectional sweep-twist fields for modern ordinary-part archives, preserving raw byte values and exact double bits. (#211)

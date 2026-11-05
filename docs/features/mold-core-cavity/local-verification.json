@@ -1,0 +1,49 @@
+{
+  "issue": 215,
+  "status": "Clippy,27 focused Rust tests and2 Python fixture tests passed; full local/remote gates pending",
+  "platform": "Windows x64, Rust1.99.0",
+  "private_new_tests": 9,
+  "public_new_tests": 4,
+  "prior_private_regressions": 14,
+  "literal_fixture_cases": 12,
+  "owned_streams": 4,
+  "edit_operations": 2,
+  "fresh_reversals": 2,
+  "workers": 8,
+  "versions": [
+    10188,
+    19000
+  ],
+  "verification": [
+    "Exact complete graphs, map slots and owner/list/dimension aliases",
+    "Whole-carrier reconstruction, isolated scalar edits, fresh reversals and revision-bound history/result contracts",
+    "Resource, type-role, count-shape and old/unsupported-context rejection; every proper prefix and extra byte",
+    "Independent fixture reproduction retained every original byte and map identity, including minimum modern boundary"
+  ],
+  "reader_sha256": {
+    "src/model_archives/mold_core_cavity.rs": "6746234e42cf9c65b4542a219f71bb38b4dd124e6d638cbc85ac844e84b16bac",
+    "src/model_archives/body_features.rs": "f16970d262b6cd687225614124b7f84089ba403fe38837c05d542119b32f1a19",
+    "src/model_archives/resolved_feature_objects.rs": "f2b10c8a51b51bbd6eada9ffd5d09f1c380beb6722847b1fcb3198839e3036e4"
+  },
+  "test_sha256": {
+    "tests/model_archives/mold_core_cavity.rs": "3ee101e6c96d47ba60da6d097b8b2effa90c92b183ac4441fa5267a50530e818",
+    "tests/resolved_mold_core_cavity.rs": "48f1a2c308ac69edd2da3d8de305bc4a85dce16a1b7c599065b1cf0295da6ae6"
+  },
+  "log_sha256": {
+    "target/mold-core-cavity-focused-v4.log": "dafae53d8ac85d24732dfc431152535954abf5ef9047227a3132ecf149da2600",
+    "target/mold-core-cavity-integration.log": "9cf43cbd3908086af4c60e1ee603ccc07bd55d12e02531dbf42779f999def0d3",
+    "target/mold-core-cavity-regression-1.log": "3dd3fe0164182e795b4f8198dbae50b47a97aae2a82ea4cfd07ce15b0c7c2877",
+    "target/mold-core-cavity-regression-2.log": "7193f6e81095b1b445269c331621c41af0145795871ae488889a96898c53c819",
+    "target/mold-core-cavity-regression-3.log": "61510844709e2d39526f98c32227428ce882666ad74737ff91854f4f82635991",
+    "target/mold-core-cavity-regression-4.log": "f383ac474951ba74e5fdda2f8a0901f4320d420d8fe06bf55d702c2fd76eea89",
+    "target/mold-core-cavity-regression-5.log": "01ca7d1e0c3e19a00fc283a106f2f86c080f91e839e335aa08b1a9f151af9bba"
+  },
+  "clippy_log_sha256": {
+    "target/mold-core-cavity-clippy-v4.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/mold-core-cavity-library-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/mold-core-cavity-integration-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "scope": "Stored ordinary modern archive fields only. No measured legacy admission, new native populated-modern-file, geometry/provider execution, SolidWorks application or complete schema/Corliss parity credit.",
+  "integration": "Excluded from PR212 headf506fa65 and completed material full-gate cut7f6fe735. Latest-cut full local/remote gates still required.",
+  "humanizer": "Unavailable; maintainer prose review pending"
+}

@@ -505,6 +505,9 @@ bodies, direct lists, empty keepers and end-condition-dependent pointers.
 [Punch records](docs/features/punches/README.md) cover internal revisions, bounded
 dynamic arrays, ordered extension tags and legacy direct keeper data.
 
+[Mold core/cavity archives](docs/features/mold-core-cavity/README.md) preserve
+complete feature/data graphs, shared body lists and dimension pointers, with
+exact carrier reconstruction and isolated stored-setting edits.
 [Body extensions](docs/features/body-extensions/README.md) cover cavities,
 transformed stock and sketch holes through their complete inherited bodies.
 

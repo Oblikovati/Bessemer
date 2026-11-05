@@ -1,0 +1,158 @@
+{
+  "issue": 215,
+  "oracle": "Independent literal composition from retained native order and reviewed inherited body/profile/component/dimension builders; no Bessemer encoder used",
+  "files": {
+    "feature-0-edited.bin": "16f590213a0d5e17a7edea954c558589726b7d21e2ed9681ed63a99f08b577db",
+    "feature-0.bin": "baf59c86e576db78ae460ffc628b584bded2222c95921d0e409c86ffdd7a0824",
+    "feature-1-edited.bin": "f6898940aa6fa23fef2507ef3f7c2129e565731e0cb0b3d95676409d7f4dc95a",
+    "feature-1.bin": "a0baa6b425775cda31e53af2639c2c7c49cb764ab3cb25a05ebebd09280d322e",
+    "owned-0.bin": "5be583dcd7e4e1c72e360a002d936b171c8a36cca30683c1fd4fc11a4dfdb5e4",
+    "owned-0-edited.bin": "6bf8cbe31e9bd6b900c8b9e8ebf094918b24c85f41dfef40948d93f5d658b24f",
+    "owned-1.bin": "2c6e6d4e0a92f5089b65f06e112908b1b2961e9b881e35eb57b1f4ef6b29d032",
+    "owned-1-edited.bin": "9c3a31438ecbe9109c07848cbdfd206e28cf3e240eda47e17e6e4517f4fac3f9",
+    "feature-minimum-0.bin": "baf59c86e576db78ae460ffc628b584bded2222c95921d0e409c86ffdd7a0824",
+    "feature-minimum-0-edited.bin": "16f590213a0d5e17a7edea954c558589726b7d21e2ed9681ed63a99f08b577db",
+    "feature-minimum-1.bin": "067fcea877e463ff7ded8b65bd7d96baa5ced72aca71d254f831094e0013ed5d",
+    "feature-minimum-1-edited.bin": "ba466db637896ae2d288ac06ddbcb3ec10a87d6006eb384aabc0d21830e7981e"
+  },
+  "remaining": "Full local and exact-head remote gates remain pending; no native populated-modern-file, geometry or application acceptance credit.",
+  "initial_test_correction": "The first alias assertion guessed index8. Independent builder metadata assigns the populated component index10 because the rich inherited body allocates one more object. Fixture bytes and production code were unchanged; the corrected expectation comes from builder identities, not Bessemer output.",
+  "cases": {
+    "feature-0.bin": {
+      "bytes": 403,
+      "slots": 7,
+      "identities": {
+        "feature": 2,
+        "data": 6
+      },
+      "version": 19000
+    },
+    "feature-0-edited.bin": {
+      "bytes": 403,
+      "slots": 7,
+      "identities": {
+        "feature": 2,
+        "data": 6
+      },
+      "version": 19000
+    },
+    "feature-1.bin": {
+      "bytes": 4291,
+      "slots": 19,
+      "identities": {
+        "feature": 2,
+        "data": 8,
+        "moCompSurfaceBody_c": 10,
+        "profile": 12,
+        "moDisplayDistanceDim_c": 16,
+        "moDisplayAngularDim_c": 18
+      },
+      "version": 19000
+    },
+    "feature-1-edited.bin": {
+      "bytes": 4291,
+      "slots": 19,
+      "identities": {
+        "feature": 2,
+        "data": 8,
+        "moCompSurfaceBody_c": 10,
+        "profile": 12,
+        "moDisplayDistanceDim_c": 16,
+        "moDisplayAngularDim_c": 18
+      },
+      "version": 19000
+    },
+    "owned-0.bin": {
+      "bytes": 409,
+      "slots": 103,
+      "identities": {
+        "feature": 98,
+        "data": 102
+      },
+      "version": 19000
+    },
+    "owned-0-edited.bin": {
+      "bytes": 409,
+      "slots": 103,
+      "identities": {
+        "feature": 98,
+        "data": 102
+      },
+      "version": 19000
+    },
+    "owned-1.bin": {
+      "bytes": 4297,
+      "slots": 115,
+      "identities": {
+        "feature": 98,
+        "data": 104,
+        "moCompSurfaceBody_c": 106,
+        "profile": 108,
+        "moDisplayDistanceDim_c": 112,
+        "moDisplayAngularDim_c": 114
+      },
+      "version": 19000
+    },
+    "owned-1-edited.bin": {
+      "bytes": 4297,
+      "slots": 115,
+      "identities": {
+        "feature": 98,
+        "data": 104,
+        "moCompSurfaceBody_c": 106,
+        "profile": 108,
+        "moDisplayDistanceDim_c": 112,
+        "moDisplayAngularDim_c": 114
+      },
+      "version": 19000
+    },
+    "feature-minimum-0.bin": {
+      "bytes": 403,
+      "slots": 7,
+      "identities": {
+        "feature": 2,
+        "data": 6
+      },
+      "version": 10188
+    },
+    "feature-minimum-0-edited.bin": {
+      "bytes": 403,
+      "slots": 7,
+      "identities": {
+        "feature": 2,
+        "data": 6
+      },
+      "version": 10188
+    },
+    "feature-minimum-1.bin": {
+      "bytes": 4223,
+      "slots": 19,
+      "identities": {
+        "feature": 2,
+        "data": 8,
+        "moCompSurfaceBody_c": 10,
+        "profile": 12,
+        "moDisplayDistanceDim_c": 16,
+        "moDisplayAngularDim_c": 18
+      },
+      "version": 10188
+    },
+    "feature-minimum-1-edited.bin": {
+      "bytes": 4223,
+      "slots": 19,
+      "identities": {
+        "feature": 2,
+        "data": 8,
+        "moCompSurfaceBody_c": 10,
+        "profile": 12,
+        "moDisplayDistanceDim_c": 16,
+        "moDisplayAngularDim_c": 18
+      },
+      "version": 10188
+    }
+  },
+  "versions": [
+    10188,
+    19000
+  ]
+}
