@@ -16,8 +16,10 @@ wire version `0x27d9`. Runtime file version and model wire version stay distinct
 Complete wire-contact, component-profile, endpoint and loft-synchronization
 records support these graphs. Endpoint and synchronization records inherit the
 existing geometric wrapper with its version gates. Pointer families are finite;
-unrelated classes fail. Fresh bidirectional-twist bodies remain unsupported
-because their complete schema is undocumented. Section 11.177 establishes that
+unrelated classes fail. Fresh bidirectional-twist bodies remain unsupported pending
+[Feature #211](../sweep-twist/README.md). Edition 0.3080 documents the complete
+17-byte body in clause 11.156 / C-3524; its declared-wire oracles are being prepared
+separately from production admission. Section 11.177 establishes that
 modern sweep cuts inherit the complete sweep body and add zero suffix bytes.
 The historical cut-only fields fall below the supported version range.
 
@@ -26,7 +28,7 @@ recording 102,024 primitive observations. The matrix covers 64 sweeps and 64 swe
 versions and eight option combinations, plus 32 complete helper objects across
 four wrapper versions. Tests compare every primitive, reconstructed byte and
 final object slot; they reject truncation, trailing bytes, incorrect pointer
-families, unsupported context and fresh undocumented twist bodies.
+families, unsupported context and the fresh twist stop at that recorded checkpoint.
 
 Seven owned streams import the blank part's actual model and CMgr context with
 97 inherited slots. They cover empty and populated collections, enabled and
@@ -36,11 +38,11 @@ with independent expected bytes, check field history and preserve input
 documents. Three Python tests verify deterministic fixture regeneration,
 the version matrix and invalid constructor inputs.
 
-Two fresh native corpus runs produced identical outcomes and failure causes:
+At the recorded Feature #54 checkpoint, two fresh native corpus runs produced identical outcomes and failure causes:
 570 of 906 configurations reconstructed exactly, preserving all previous 548
 successes. The independent reference reader consumed all accepted feature
 streams to exact EOF, totaling 31,327,801 bytes, after checking four input-stream
-hashes for each case. The broad parity gate still fails for 336 explicit stops.
+hashes for each case. That checkpoint's broad parity gate failed for 336 explicit stops.
 `frontier-checkpoint.json` and `accepted-reference.json` retain this evidence.
 
 The staged `cargo xtask pr` passed on Windows x64 with Rust 1.99.0: 463 library
