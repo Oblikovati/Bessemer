@@ -1,0 +1,20 @@
+{
+  "issue": 211,
+  "scope": "Behavior-preserving surface fixture-builder extension; existing default output only",
+  "tests_passed": 2,
+  "process_exit_code": 0,
+  "existing_bare_graphs_byte_identical": 162,
+  "existing_owned_streams_byte_identical": 19,
+  "hashes": {
+    "docs/features/sweep-reference-surfaces/sweep_surface_bytes.py": "3ce4b05eec82d28abd56d69569f99852fdbdc648e637efadb172a6a3264fa984",
+    "docs/features/sweep-reference-surfaces/test_twist_builder_compatibility.py": "5f0dda16e4d177100f8527e51ea2947327ef66d41c710ec1f70fdb44c6fd19a8",
+    "target/sweep-twist-surface-builder-regression.log": "ca2857743b530e15f2d6ecdaf90bd3edc06aa467903c89cca96a51f8c98986e8"
+  },
+  "pending": [
+    "Pinned original Source surface-twist parsing and owned fixture retention (session 68932)",
+    "Bessemer public read/edit/reopen checks for the new surface-twist corpus"
+  ],
+  "exclusions": [
+    "These constructor regressions do not establish new surface-twist parser acceptance"
+  ]
+}
