@@ -1,0 +1,24 @@
+{
+  "issue": 216,
+  "source_commit": "a4ff89bf6294002b45236cf95c641db659c10a48",
+  "command": "cargo xtask pr",
+  "terminal_exit_code": 0,
+  "toolchain": "Rust 1.99.0",
+  "platform": "Windows x64",
+  "checkout": "C:/bessemer214-ci (detached and unchanged until terminal completion)",
+  "target_dir": "C:/Users/vmiguel/git/Bessemer/target/relationships-pr-build",
+  "kernel_schema": "C:/Program Files/SOLIDWORKS Corp/SOLIDWORKS/data/pschema/sch_13006.s_t",
+  "log": "target\\mold-parting-line-combined-full-pr-gate.log",
+  "log_sha256": "832720add92042b4ee3337ade6523a1bbe535cb9d440a7efc25a313b140eac14",
+  "passed": 4205,
+  "failed": 0,
+  "ignored": 231,
+  "test_result_summaries": 335,
+  "scope": "Formatting, workspace Clippy with warnings denied, build, workspace tests and doctests at exact source cut including parting-line feature216",
+  "exclusions": [
+    "Later mold parting-geometry feature217 and conic-bend feature218 are excluded",
+    "Required exact-head remote checks remain necessary before merge",
+    "Ignored native workloads are not credited as executed by this gate",
+    "No native geometry/application or full-schema parity acceptance"
+  ]
+}

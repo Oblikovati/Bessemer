@@ -226,7 +226,8 @@
   "parting_line_wire_feature": {
     "issue": 216,
     "verification": "docs/features/mold-parting-line/local-verification.json",
-    "scope": "Feature/settings/edge/split-info grammar implemented;42 focused Rust and2 Python tests passed, including17 graphs and12 containing streams; latest-cut full local/remote gates remain pending."
+    "full_gate": "docs/features/mold-parting-line/full-pr-gate-verification.json",
+    "scope": "Feature/settings/edge/split-info grammar implemented;42 focused Rust and2 Python tests passed, including17 graphs and12 containing streams. Full cargo xtask pr at a4ff89bf passed4205 tests with231 ignored and no failures. Later parting-geometry/conic features are excluded; remote acceptance remains pending."
   },
   "parting_geometry_wire_feature": {
     "issue": 217,
