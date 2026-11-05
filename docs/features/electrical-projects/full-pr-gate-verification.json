@@ -1,0 +1,15 @@
+{
+  "command": "cargo xtask pr",
+  "terminal_exit_code": 0,
+  "source_commit": "b8d453d42f394e9d9b2044af252f440bb768a834",
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "log": "target\\electrical-combined-full-pr-gate.log",
+  "log_sha256": "a1b1671b1beeb6eadbd12c66d8e880d587ef489a6d70f6b0c3f16e326f4b459f",
+  "test_result_summaries": 346,
+  "passed": 4382,
+  "failed": 0,
+  "ignored": 233,
+  "scope": "Complete Electrical archive/INI source cut and all prior local work; excludes later SQLite image source and dependencies",
+  "native_application_acceptance": false,
+  "remote_ci_credit": false
+}
