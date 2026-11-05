@@ -1,0 +1,19 @@
+{
+  "issue": 215,
+  "source_revision": "0acde5cbfa0676b7500e1f2c32f3c49b6c46fc97",
+  "command": "cargo xtask pr",
+  "checkout": "C:/bessemer214-ci",
+  "platform": "Windows x64, Rust1.99.0",
+  "process_exit_code": 0,
+  "formatting": "passed",
+  "clippy": "passed",
+  "build": "passed",
+  "tests_passed": 4189,
+  "tests_failed": 0,
+  "tests_ignored": 231,
+  "test_summaries": 334,
+  "log_path": "target/mold-core-cavity-combined-full-pr-gate.log",
+  "log_sha256": "aa6cc1e764b7737d669df72ebf891072176cd3d6c79d29e8e7356381c1773443",
+  "scope": "Complete committed0acde5cb cut, including core/cavity, prior material grammar and the SketchOffset/Deform/Planar audit. New uncommitted parting-line changes are excluded.",
+  "integration": "Excluded from sole open PR212 headf506fa65. Exact-head remote acceptance and integration remain pending; no branch, PR, version or release added."
+}

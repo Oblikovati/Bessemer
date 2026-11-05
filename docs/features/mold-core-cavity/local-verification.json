@@ -1,6 +1,6 @@
 {
   "issue": 215,
-  "status": "Clippy,27 focused Rust tests and2 Python fixture tests passed; full local/remote gates pending",
+  "status": "Clippy,27 focused Rust tests,2 Python tests and full4189-test PR gate passed at0acde5cb",
   "platform": "Windows x64, Rust1.99.0",
   "private_new_tests": 9,
   "public_new_tests": 4,
@@ -45,5 +45,12 @@
   },
   "scope": "Stored ordinary modern archive fields only. No measured legacy admission, new native populated-modern-file, geometry/provider execution, SolidWorks application or complete schema/Corliss parity credit.",
   "integration": "Excluded from PR212 headf506fa65 and completed material full-gate cut7f6fe735. Latest-cut full local/remote gates still required.",
-  "humanizer": "Unavailable; maintainer prose review pending"
+  "humanizer": "Unavailable; maintainer prose review pending",
+  "full_pr_gate": {
+    "proof": "full-pr-gate-verification.json",
+    "source_revision": "0acde5cbfa0676b7500e1f2c32f3c49b6c46fc97",
+    "tests_passed": 4189,
+    "tests_ignored": 231,
+    "process_exit_code": 0
+  }
 }

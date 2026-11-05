@@ -21,7 +21,8 @@ not serialized here and are not emulated.
 Nine private tests and four document tests cover exact graphs, whole-carrier
 reconstruction, independent edits and fresh reversals, revision-bound history,
 eight-worker isolation, source mutation, resource limits and typed-pointer
-rejection. Full local/remote gates are still required before integration. It is excluded from PR212 and the
+rejection. The full local gate passed at `0acde5cb`: 4,189 tests passed and 231 were
+ignored. Exact-head remote checks remain required before integration. It is excluded from PR212 and the
 completed material gate at7f6fe735. No new native populated-file, geometry or
 SolidWorks application acceptance is claimed. The humanizer skill is
 unavailable; its prose pass remains with the maintainer.
