@@ -1,0 +1,76 @@
+{
+  "issue": 2,
+  "related_wire_fix": 95,
+  "specification_edition": "Edition 0.3012 \u00b7 2026-11-04 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "specification_sha256": "6b3e89fe5c611b21d83d9f3e0e7815d3617e129ccf7d03bffb5a7c792296c194",
+  "excerpt_sha256": "f63e0a887f5f6692082e75725a578ccb76c9b50bd01c17c0e06ecf3639019a2c",
+  "scope": "Selected edition0.2990\u20130.3011 runtime qualifications compared with the existing cold wire decoder; no full runtime implementation or native proof rerun",
+  "clauses": [
+    {
+      "clause": "11.1706",
+      "section_sha256": "c65e8c0083d8834c2cbc170040b963c14765c4d2fc17c228a115cc82bfedfab1",
+      "qualification": "A nonzero producer control rebuilds the current runtime member through ordered provider calls; frames, units, callbacks and matrix conventions remain qualified.",
+      "status": "Selected runtime semantics remain unimplemented; existing cold archive transport is unchanged."
+    },
+    {
+      "clause": "11.1714",
+      "section_sha256": "2a640b1dffa280a8a3565ad471469cb884ba65258f4b61a0a1c29a84a7ca5846",
+      "qualification": "Parser output pointer/int pairs are transported through runtime calls; they are not additional archived fields or a complete expression language.",
+      "status": "Selected runtime semantics remain unimplemented; existing cold archive transport is unchanged."
+    },
+    {
+      "clause": "11.1715",
+      "section_sha256": "e5f6a8392dac67d652901b5cf6ac2e100c99358b6a82a78bf4a1050a758fa7e0",
+      "qualification": "The runtime integer10 is an inclusive candidate-degree cap; the100-sample check and MAXSD/nonfinite policy do not prove exact mathematical or geometric validity.",
+      "status": "Selected runtime semantics remain unimplemented; existing cold archive transport is unchanged."
+    },
+    {
+      "clause": "11.1716",
+      "section_sha256": "d5b80302834f95c2b10131d77fc06a69c7ae684901af8a6f86e372cbb68d0f8c",
+      "qualification": "Candidate interpolation uses integer construction nodes independently of the numerical validation operands; native floating operation order remains qualified.",
+      "status": "Selected runtime semantics remain unimplemented; existing cold archive transport is unchanged."
+    },
+    {
+      "clause": "11.1722",
+      "section_sha256": "59f370c20e42567d19a496fd68f95deb78f019872b06f0ff7bff5446e37d6995",
+      "qualification": "Interval matrix operations depend on a mutable current threshold; no immutable file-validity epsilon follows.",
+      "status": "Selected runtime semantics remain unimplemented; existing cold archive transport is unchanged."
+    },
+    {
+      "clause": "11.1723",
+      "section_sha256": "817f50deeae52821f55184859e97e253beee78ece7b47e7066920f705faf263f",
+      "qualification": "Integer triangle arithmetic wraps as32-bit storage and then converts signed values; unbounded binomial arithmetic is not a native replacement.",
+      "status": "Selected runtime semantics remain unimplemented; existing cold archive transport is unchanged."
+    },
+    {
+      "clause": "11.1725",
+      "section_sha256": "d648b9cc68adcdd0b3352a3ccc6b909d9b6a46b0ed4e3fde00a81ede9d5e97a7",
+      "qualification": "The qualified coefficient-basis composition is R*T, correcting earlier prose; it is separate from applying the stored fixed archive transform.",
+      "status": "Selected runtime semantics remain unimplemented; existing cold archive transport is unchanged."
+    },
+    {
+      "clause": "11.1726",
+      "section_sha256": "453b9e6b86c942b98f718c3a27d237edc6c4fd5c088badc538825ff2bf7f8265",
+      "qualification": "Selected budget checks involve mutable globals and aliased outputs; intermediate stores precede rejection and no whole-algorithm rollback or geometry-success guarantee follows.",
+      "status": "Selected runtime semantics remain unimplemented; existing cold archive transport is unchanged."
+    }
+  ],
+  "code_sha256": {
+    "src/model_archives/sketch_splines.rs": "bacc4fe2abc1749fe1640457aae8e216bb1c57c2016fd2d6cec688bd114e0dd2",
+    "src/model_archives/fixed_transform_records.rs": "3c2aa95243639b67cfbe1136ef49d524731429b68b4c49b77267504a1f31d326"
+  },
+  "code_unchanged_from_prior_wire_audit": true,
+  "retained_wire_contract": [
+    "Flags-gated six CString fields",
+    "Full signed equation_word and unknown_1e0",
+    "Exactly30 raw transform words",
+    "Existing word28 perspective guard"
+  ],
+  "exclusions": [
+    "No expression evaluation or sampled-pass validity claim",
+    "No runtime manager/context construction",
+    "No inferred geometric frame or physical units",
+    "No native target execution or proof rerun",
+    "No parser, baseline, behavior version or coverage credit changed"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "issue": 192,
+  "passed": true,
+  "process_reaped": true,
+  "exit_code": 0,
+  "source_tests": 4,
+  "source_seconds": 7.362,
+  "complete_contexts": 108,
+  "physical_ellipses": 216,
+  "aliases": 108,
+  "unrelated_arcs": 108,
+  "scalar_checks": 324,
+  "primitive_reads": 7569,
+  "source_hash_import_guards_passed": true,
+  "source_python_files": 6273,
+  "consumed_modules": 170,
+  "snapshot_identity": "33cb4b1c08da5cca25b039a447f0cab6f4c2ae2f380c1f68c780c3d5848b8131",
+  "snapshot_sha256": "ae1a5ded883c2a5a7b843cfbc0ce8b020c1543800966116e3cc3630c18db64cc",
+  "roots_sha256": "d5760c25494a434cf5bf9db116576a9b340bc0746d887af64704b0bdd5784f26",
+  "log_sha256": "3f252719aa77d2345c7f764d3ad998a5bc79d422aa8fba3cdcd738a187c3aa2b",
+  "accounting_adapter_installed": false,
+  "native_target_executed": false,
+  "global_accounting_credit": 0,
+  "checks": [
+    "Complete original-reader EOF and primitive partition",
+    "All saved scalar values and literal byte spans",
+    "Physical map identities, cached class and first-owner aliases",
+    "Unrelated arc field retained as negative role control",
+    "Authentic context file SHA256 pins"
+  ],
+  "remaining": [
+    "Typed Rust operation and independent edit goldens",
+    "Native cohort and whole-document operations",
+    "Fresh-process/concurrency and full local/remote gates"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "issue": 95,
+  "pull_request": 96,
+  "passed": true,
+  "candidate_ancestry_verified": true,
+  "integration": {
+    "headRefOid": "8cb5b8cafa43c9be54a644f7c2a511e30a5ac3ce",
+    "mergeCommit": {
+      "oid": "45034ef6c804f469cc953e2379a644aababc68e6"
+    },
+    "state": "MERGED",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-29T06:55:14Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/Oblikovati/Bessemer/actions/runs/40831052404/job/123305113281",
+        "name": "PR gate (Linux x86_64)",
+        "startedAt": "2026-10-29T06:44:40Z",
+        "status": "COMPLETED",
+        "workflowName": "bessemer"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-29T09:34:42Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/Oblikovati/Bessemer/actions/runs/40831052404/job/123305113814",
+        "name": "Full gate (Linux x86_64)",
+        "startedAt": "2026-10-29T06:44:39Z",
+        "status": "COMPLETED",
+        "workflowName": "bessemer"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-29T07:34:08Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/Oblikovati/Bessemer/actions/runs/40831052404/job/123305113737",
+        "name": "Full gate (macOS x86_64)",
+        "startedAt": "2026-10-29T06:44:43Z",
+        "status": "COMPLETED",
+        "workflowName": "bessemer"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-29T07:03:24Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/Oblikovati/Bessemer/actions/runs/40831052404/job/123305113795",
+        "name": "Full gate (macOS arm64)",
+        "startedAt": "2026-10-29T06:44:41Z",
+        "status": "COMPLETED",
+        "workflowName": "bessemer"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-29T07:07:46Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/Oblikovati/Bessemer/actions/runs/40831052404/job/123305113709",
+        "name": "Full gate (Windows x64)",
+        "startedAt": "2026-10-29T06:44:40Z",
+        "status": "COMPLETED",
+        "workflowName": "bessemer"
+      }
+    ]
+  },
+  "current_full_local_gate": "docs/features/bitmap-appearance/final-local-gate-verification.json",
+  "qualification": "The scoped requirement is integrated into the standing candidate with all original exact-head checks green. No release or whole-schema completion is implied."
+}

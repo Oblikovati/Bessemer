@@ -1,0 +1,75 @@
+{
+  "issue": 2,
+  "edition": "Edition 0.3086 \u00b7 2026-11-05 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "specification_sha256": "535a5e3981e785b81fe379e585fd088aebe90d9ef2b7aaeb0dfcb9924ed15b46",
+  "clauses": [
+    "11.184",
+    "11.227",
+    "11.234"
+  ],
+  "snapshot_path": "docs/features/resolved-features/property-domain-sew-split-helix-schema-3086-snapshot.md",
+  "snapshot_representation": "Literal selected sections normalized to LF, stripped trailing whitespace at section boundaries, joined with one blank line",
+  "snapshot_sha256": "d8550e51679c138caba1a063eb9d6b575c74baf66696eabc95fb68d6b790eecd",
+  "decisions": [
+    "Sew raw_flag_words[0..5] remain full signed32 stored values; native mode/Boolean STORE/LOAD projections do not restrict wire values. The raw double order remains raw_18,raw_28,raw_20; KnitTolerance/MinGapRange/MaxGapRange establish no units, ordering, positivity or finite bounds. Native mode side writes and the sixth constructed array are not replayed offline.",
+    "Split parent raw_910,raw_914,raw_918,raw_91c,raw_920,raw_924,raw_928,raw_9d8,raw_a20 remain signed32. Named Boolean-like/count-like settings impose no saved Boolean, enum or current body-count constraints; existing modern/historical gates, direct owned-data order, signed map loops and fixed transforms remain unchanged.",
+    "Helix data_788.raw_20 remains an exact stored binary64 NumRev, including signed zero, subnormals, negative values, infinities and NaN payloads. Runtime getDefData aliases/sequential optional outputs do not define archive snapshot ownership or name feature raw_780. Variable-pitch presence remains nonzero; dimension-table presence remains exact one."
+  ],
+  "implementation_effect": "No production parser, API, version/context admission, geometry or behavior change. Focused raw-domain tests supplement existing owned fixtures.",
+  "acceptance_credit": "No new native population, original source replay, semantic accounting, geometry or complete parity credit.",
+  "remaining_review": [
+    "All other property changes after edition0.3077, including remaining0.3078-0.3086 clauses, remain unaudited by this record"
+  ],
+  "verification": {
+    "status": "Focused tests and Clippy passed",
+    "process_exit_code": 0,
+    "new_domain_tests_passed": 2,
+    "existing_positive_oracle_tests_passed": 4,
+    "split_setting_occurrences": [
+      104,
+      104,
+      104,
+      104,
+      104,
+      104,
+      104,
+      104,
+      104
+    ],
+    "split_signed_literal_splices": 5616,
+    "helix_numrev_literal_splices": 2016,
+    "original_golden_graphs": 663,
+    "log_sha256": {
+      "target/property-domains-3086-focused-0.log": "6934b25aabdf1f75e8a5459e6226144528e1fff12d19ab9789c9d98d817c8dbd",
+      "target/property-domains-3086-focused-1.log": "ae4dad5fee4fcff6e4aff30db5dff9ddb1887eae9a108d94926f930b4934ddbb",
+      "target/property-domains-3086-focused-2.log": "005520429af50484545903b0ba67dc19894f884ebc1e40e41a0d09f4f039d27a",
+      "target/property-domains-3086-focused-3.log": "4ed6f6a1b570e99dc19316c0e773f0d1fcd9cb64e558de20fee8c359de905eb0",
+      "target/property-domains-3086-focused-4.log": "e24d18ded741ac505e54ffcc362fec16b7b98d471215e358dffc6016a95132bd"
+    },
+    "clippy_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test_source_sha256": "3a13e84a0f358ec201e3c93170aaecfa3737a818f0c660b348a142a4c5f5fdfd",
+    "full_gate": "Later audit tests are excluded from running gate 55492 at02b5676e; latest complete gate remains4132 passes throughdb3dc993",
+    "remote_integration": "PR191 merged ated15e0e8; these later unpushed tests are not integrated",
+    "shared_helper_followup": {
+      "scope": "Helper visibility/name changed for reuse without changing literal values or assertions",
+      "source_sha256": "729fb2c88c8b09199d3a664ac9fbe80ee4e6e50e5e308440552aec674ee2176e",
+      "tests_passed": 2,
+      "log_sha256": "f0e6eb3144602a34c3f2a9b21314e0d4fe95d4528326f5357139589090a5c8a9"
+    },
+    "shared_helper_reuse": {
+      "scope": "Literal double patterns and integer assertions unchanged; helper names/visibility generalized for new callers",
+      "source_sha256": {
+        "tests/model_archives/property_domains_3086.rs": "eddffa0711ae552171980c19a30e05aaf293ecfcc75d28b27cdbb4ac33bbd4d8",
+        "tests/model_archives/property_domains_3087.rs": "d7d4703dcd133b686d3206c218cd42953cebcc7e97b4d579259cf7703915ab8c",
+        "tests/model_archives/property_domains_punch_netblend.rs": "1a07017f1afd8f29d1046816510a1f6307794430f696d43f5a2f3b17aa7f4952"
+      },
+      "all_property_tests_passed": 7,
+      "log_sha256": "9dae8360297f9dd6c9492b69f6cd4ac2c6ca4aa35102c3738b3801b825456565"
+    }
+  },
+  "reader_sha256": {
+    "sew_surfaces.rs": "7858f9d8da8f192cdb63a1a8b2da69009d451b168e359b9bb71757e49fc2cd56",
+    "split_features.rs": "14231de1e201e4d337270e3adbf99b33014aaea66aec0b39ac4f75a78b9faf0b",
+    "helix_records.rs": "47e86fb2a4303fd3ee5c5f7cd7accda78597b6bf1449fb7072ece90485fe8d67"
+  }
+}

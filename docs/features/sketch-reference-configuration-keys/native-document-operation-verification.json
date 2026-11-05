@@ -1,0 +1,30 @@
+{
+  "issue": 188,
+  "passed": true,
+  "process_reaped": true,
+  "exit_code": 0,
+  "tests": 1,
+  "seconds": 42767.54,
+  "native_cases": 906,
+  "nonempty_streams": 794,
+  "empty_streams": 112,
+  "physical_key_pairs": 6863,
+  "primary_edit_requests": 20589,
+  "fresh_typed_reversals": 20589,
+  "all_case_counts_match_independent_source_oracle": true,
+  "log_sha256": "409a3e7cde5f0ec928ce8c1530eafa92a73a2e9d5e28191d08d03eed78a4b9e9",
+  "executable_sha256": "efb0146e08a3e63edc581e33130d8b7549a042bebff2e24c1307933b0a0633d5",
+  "checks": [
+    "Complete document forward edits reopen through the public typed API",
+    "Every unrelated stream remains unchanged",
+    "Fresh typed selection and reverse edit restore the original feature stream",
+    "Each complete output document reverses byte for byte",
+    "Immutable original document and archive inputs remain unchanged"
+  ],
+  "qualification": "Lookup-focused executable predates CString framing fix #200 and later features. This is the completed historical build gate, not an exact-head native run. Latest-head local/remote acceptance is recorded separately.",
+  "remaining": [
+    "Exact-head remote publication",
+    "Native application equivalence",
+    "Whole-schema parity"
+  ]
+}

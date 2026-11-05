@@ -1,0 +1,42 @@
+{
+  "issue": 192,
+  "passed": true,
+  "processes_reaped": true,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "tests_per_process": 10,
+  "process_seconds": [
+    90.04,
+    88.08
+  ],
+  "packets": [
+    {
+      "kind": "owned",
+      "records": 1080,
+      "changed": 960,
+      "unchanged": 120,
+      "bytes": 423188,
+      "sha256": "c4dab268ff3520d0cb8a0a679d86a96afd16eb420df711c668be6fa13858607c",
+      "fresh_process_packets_identical": true,
+      "all_literal_patches_exact": true
+    },
+    {
+      "kind": "native",
+      "records": 60,
+      "changed": 48,
+      "unchanged": 12,
+      "bytes": 23070908,
+      "sha256": "ef8ba1726bc94ae3d1325780518c455f636107e2ffc672bc61e5110c312382f3",
+      "fresh_process_packets_identical": true,
+      "all_literal_patches_exact": true
+    }
+  ],
+  "remaining": [
+    "Full local and exact-head remote gates",
+    "Native application equivalence",
+    "Whole-schema parity"
+  ],
+  "actual_output_source_acceptance": "docs/features/ellipse-backup-rotation/actual-output-source-verification.json"
+}

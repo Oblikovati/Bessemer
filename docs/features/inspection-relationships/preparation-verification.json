@@ -1,0 +1,48 @@
+{
+  "issue": 197,
+  "status": "Independent preparation only; no Rust relationship API implemented",
+  "original_source_tests_passed": 5,
+  "source_process_exit_code": 0,
+  "source_import_and_content_guard": "passed",
+  "source_scope": "Only unchanged inspectionrelationships.py copied before import; standard-library DOM dependency; no live Source imports or patched functions",
+  "source_snapshot_identity": "69e3447d8c3155e1036a95d8dfcbb821c09d8f02bd2d56958423b9eac55ae620",
+  "retained_node_attempts": 9,
+  "element_only_attempts": 6,
+  "selected_writer_entries": 3,
+  "tutorial_writer_entries": 48,
+  "tutorial_reciprocal_links": 120,
+  "exact_dom_node_name_namespace_cases": true,
+  "pure_native_string_domain_separate_from_valid_xml": true,
+  "specification_sha256": "b4a7e333846d5eddfc397b35451ad65f90c8caab939dcd26a5ed51884afbfe3d",
+  "excerpt_sha256": "2dcc9d34d45fad7d85696ad2e80492170f3912b6a64f4c88f77c528cd7babde6",
+  "files": {
+    "tests/fixtures/inspection-relationships/ordered.xml": {
+      "bytes": 1430,
+      "sha256": "f0c65928819179ed63e60f7c1f6929ebef0ec5bae9d7df2344ca5494613faa1a"
+    },
+    "tests/fixtures/standalone-inspection/historical.xml": {
+      "bytes": 361531,
+      "sha256": "d5ce41d90637a180975ac925cabed42c2f87628c446c3276a398e3c40e3d29ce"
+    },
+    "target/inspection-relationships-original-source.log": {
+      "bytes": 1530,
+      "sha256": "54b0dc6e0d76e685541c6886358412ab74167ce481567cd023f520133bc73f83"
+    },
+    "target/verify-inspection-relationships-source.py": {
+      "bytes": 1233,
+      "sha256": "78aeee6968db90c94a6bc027546caced436a16f1d29ae9cbf806c0cc33d7ff48"
+    }
+  },
+  "native_evidence_sha256": {
+    "inspection-qt-whitespace-evidence.json": "a0c90a805d1d778fbb488ffb9a5d430b1cb392e63ed78e2be6d5f64530487502",
+    "inspection-relationship-evidence.json": "93be4709f0638a5ee0b190845f3e23d6765891cf0208a66f74a8df76ba6d787b",
+    "inspection-relationship-map-native-evidence.json": "d075cbec637433188438cc034925d67bc9380e2532c198ca1e69e54729c3e23b"
+  },
+  "remaining": [
+    "Bounded shared XML representation and explicit retention policy",
+    "One complete Rust read/preserve/reopen operation",
+    "Typed source identity and isolated edit scope",
+    "Limits, concurrency and fresh-process Source acceptance",
+    "Complete local and exact-head remote gates"
+  ]
+}

@@ -97,6 +97,25 @@ pub(super) fn replace_attribute(
     lexical::replace_span(source, span, &lexical::escape(value, Some(quote))?)
 }
 
+pub(super) fn restore_attribute(
+    source: &str,
+    element: &super::types::ElementRecord,
+    ordinal: usize,
+    checkpoint: &str,
+    original: &super::types::ElementRecord,
+    local: &str,
+) -> Result<String> {
+    let current = find_attribute(element, ordinal, None, local)?;
+    let previous = find_attribute(original, ordinal, None, local)?;
+    let token = checkpoint.get(previous.span.clone()).ok_or_else(|| {
+        invalid(format!(
+            "checkpoint attribute range {:?}; expected valid UTF-8 lexical span",
+            previous.span
+        ))
+    })?;
+    lexical::replace_span(source, current.span.clone(), token)
+}
+
 fn find_attribute<'a>(
     element: &'a super::types::ElementRecord,
     ordinal: usize,

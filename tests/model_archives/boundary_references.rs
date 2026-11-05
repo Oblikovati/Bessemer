@@ -2,6 +2,8 @@ use super::annotation_view_tests::decode;
 use super::lightweight_section_tests::next_case;
 use super::{ModelFieldValue, encode_fields};
 use crate::archive_codec::ArchiveCursor;
+#[path = "boundary_direct_data.rs"]
+mod direct_data;
 
 const CASES: &[u8] = include_bytes!("../fixtures/model-archives/boundary-reference-cases.bin");
 

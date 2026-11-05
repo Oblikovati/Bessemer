@@ -1,0 +1,41 @@
+{
+  "issue": 202,
+  "status": "Actual owned parameter outputs matched unchanged frozen original Source; native comparison pending",
+  "tests_passed": 1,
+  "tests_failed": 0,
+  "process_exit_code": 0,
+  "owned_graphs": 30,
+  "fresh_rust_processes": 2,
+  "actual_packet_bytes": 6566,
+  "actual_packet_sha256": "a8c8569838a0bbc95a595ed0645dcbee8c78fceb630cf5898481f0f575fa1651",
+  "all_parameter_classes": 6,
+  "checked": [
+    "Physical definition/class/schema and both exact name pointer tags",
+    "Null/local origins in the owned population, original CString bytes and decoded text; native inherited links remain separately qualified",
+    "Raw double bits including signaling NaNs, full signed integers and raw alternate presence bytes",
+    "Complete source configuration and feature EOF, original method identities, immutable source hashes and import origins"
+  ],
+  "packet_decoder_unit_tests_passed": 3,
+  "shared_root_packet_regression": {
+    "cases": 906,
+    "roots": 26789,
+    "bytes": 1508863,
+    "sha256": "8c703cfcd0880137fc30aead4d2a08130bc50274c3952f8e53e1f5a9404cd4e7",
+    "equal_to_pre_refactor_actual_output": true
+  },
+  "source_snapshot_identity": "b9ad3072741ffcf84e1a8c76b5980bf7b4881f973ded98e23107d96127030503",
+  "logs_sha256": {
+    "stored-parameter-owned-export-1.log": "94c7b596dee8336fdd30a70eeb3659b29c8a7e6fbda52cbe5f1f66e18fca162e",
+    "stored-parameter-owned-export-2.log": "94c7b596dee8336fdd30a70eeb3659b29c8a7e6fbda52cbe5f1f66e18fca162e",
+    "stored-parameter-owned-actual-source.log": "9441328f5fb08cbcf6788a83cb3937eae253e8aefe5682bf597ca91f07d95986",
+    "stored-parameter-packet-tests.log": "8ee4669655aaed29bbc70e28a8ef25f73d1ebe2b002448e637699b5a2cbcaa41",
+    "stored-parameter-shared-packet-null.log": "86138bcbfc1bc91974cc374b2ba9b188f99382b5d43b895bddda065ad2596cb6",
+    "stored-parameter-shared-packet-native-roots.log": "8081860b3a2c2e76e9551a9cbf311950111dec9cdc64522cdee596ce722e8dc2",
+    "stored-parameter-export-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "exclusions": [
+    "Native actual output comparison is still pending and receives no credit here",
+    "Source unknown-byte accounting baseline #177 is unchanged",
+    "Native edits and application/geometry acceptance, all-class configuration goldens and publication gates remain open"
+  ]
+}

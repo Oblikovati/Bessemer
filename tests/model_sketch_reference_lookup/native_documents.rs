@@ -99,7 +99,9 @@ fn verify_native_lookup_document_edit(
     assert_eq!(source.to_bytes().unwrap(), case.features);
 }
 
-fn native_lookup_original_document(case: &ResolvedCorpusCase<'_>) -> (Document, Vec<u8>) {
+pub(crate) fn native_lookup_original_document(
+    case: &ResolvedCorpusCase<'_>,
+) -> (Document, Vec<u8>) {
     let path = case
         .label
         .split_once(": ")

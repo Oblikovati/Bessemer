@@ -1,0 +1,53 @@
+{
+  "issue": 193,
+  "bug": 194,
+  "tests_passed_each_process": 22,
+  "failed": 0,
+  "ignored": 0,
+  "process_exit_codes": [
+    0,
+    0
+  ],
+  "elapsed_test_seconds": [
+    45.56,
+    44.01
+  ],
+  "packet_format": "IRX1; u32 count; repeated u32 case, record-index, attribute-index, XML-length and exact edited XML bytes",
+  "outputs_each_process": 1349,
+  "unique_physical_edit_identities": 1349,
+  "case_counts": {
+    "0": 24,
+    "1": 3,
+    "2": 1288,
+    "3": 16,
+    "4": 16,
+    "5": 2
+  },
+  "byte_equal": true,
+  "every_primary_edit_reversed_to_original_lexical_bytes": true,
+  "files": {
+    "target\\inspection-record-process-1.bin": {
+      "bytes": 467509853,
+      "sha256": "1a4cc4ca78c570836578d8cebc4374180aeb4911a38683d8094096d37de1c011"
+    },
+    "target\\inspection-record-process-2.bin": {
+      "bytes": 467509853,
+      "sha256": "1a4cc4ca78c570836578d8cebc4374180aeb4911a38683d8094096d37de1c011"
+    },
+    "target\\inspection-record-process-1.log": {
+      "bytes": 2088,
+      "sha256": "ce2fe69ab32d6f465084a533efe95aa193543768bdfc7da079cff60c8bb572bb"
+    },
+    "target\\inspection-record-process-2.log": {
+      "bytes": 2088,
+      "sha256": "0078da6ffec92c94de4f45c9720d499290a56958a6ded69da7ad39b5ebf315db"
+    }
+  },
+  "coverage": "Every unqualified named-record attribute in two owned layouts, three accepted native plaintext variants and an alternate-quote/entity fixture. Encryption/reopen coverage is separate from these plaintext exports.",
+  "remaining": [
+    "Full local PR gate",
+    "Exact-head remote matrix",
+    "Native application reload"
+  ],
+  "actual_output_source_verification": "actual-output-source-verification.json"
+}

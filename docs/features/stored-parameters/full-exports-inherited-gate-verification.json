@@ -1,0 +1,21 @@
+{
+  "issue": 202,
+  "command": "cargo xtask pr",
+  "passed": true,
+  "process_exit_code": 0,
+  "source_revision": "8ac503d183750c8522e7d77faa7e134e8fc44a42",
+  "tree_matches_revision": "02fe930c",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "tests_passed": 4074,
+  "tests_failed": 0,
+  "tests_ignored": 228,
+  "test_summaries": 324,
+  "log_sha256": "bc671c20e4d57b1288231439f71d48b5d7aca978837b991472b30508419d7190",
+  "scope": "Complete typed parameter implementation,13 focused integration tests, actual export helpers and inherited positive tests through02fe930c",
+  "exclusions": [
+    "Later first-native edits and Bug203 helper-size correction are outside this checkout and retain separate acceptance",
+    "New full primary oracle/corpus gate is excluded and is still active",
+    "Exact-head remote publication, full alternate/presence/native application/geometry acceptance and whole-schema parity remain open"
+  ]
+}

@@ -1,5 +1,6 @@
 """Independent complete native-bound sweep surfaces and edge helpers (#54)."""
 import struct
+from collections.abc import Callable
 from fillet_fixture_bytes import WireMap
 from sweep_fixture_bytes import SweepOptions, sweep_data, shared_object, dimension, endpoint, synchronization
 from axis_owner_bytes import geometry_header
@@ -25,11 +26,12 @@ def edge_pointer(mapping: WireMap, ids: dict[str,int], version: int, style: int)
     return shared_object(mapping,ids,'edge-data',CLASSES[1],lambda:edge_body(mapping,ids,version,style))
 
 
-def direct_data(mapping: WireMap, ids: dict[str,int], version: int, style: int, edited: bool) -> bytes:
+def direct_data(mapping: WireMap, ids: dict[str,int], version: int, style: int, edited: bool,
+                twist: Callable[[WireMap], bytes] | None = None) -> bytes:
     """Reuse the complete sweep body and isolate its versioned final word; e.g. direct_data(mapping,ids,19000,2,True)."""
     options=SweepOptions(enabled=(0,1,128,255,2,254)[style],radial=(0,-1,1,-2147483648,0,2147483647)[style],
                          angular=(7,8,9,8,-1,9)[style],first_direction=style>=2,second_direction=style==5)
-    raw=sweep_data(mapping,version,ids,style>=2,options)
+    raw=sweep_data(mapping,version,ids,style>=2,options,twist)
     if not edited:
         return raw
     if version<=0x27d9 or raw[-4:]!=struct.pack('<i',-6):
@@ -37,9 +39,10 @@ def direct_data(mapping: WireMap, ids: dict[str,int], version: int, style: int, 
     return raw[:-4]+struct.pack('<i',12345)
 
 
-def payload(mapping: WireMap, ids: dict[str,int], version: int, style: int, edited: bool) -> bytes:
+def payload(mapping: WireMap, ids: dict[str,int], version: int, style: int, edited: bool,
+                twist: Callable[[WireMap], bytes] | None = None) -> bytes:
     """Keep surface suffix ordering independent of ordinary sweep suffixes; e.g. payload(mapping,ids,19000,2,False)."""
-    raw=direct_data(mapping,ids,version,style,edited)+bytes([0,1,128,254,255])
+    raw=direct_data(mapping,ids,version,style,edited,twist)+bytes([0,1,128,254,255])
     if style in (1,2,3,5):
         raw+=dimension(mapping,version,ids,'moDisplayAngularDim_c')+dimension(mapping,version,ids,'moDisplayAngularDim_c')
     count=COUNTS[style];raw+=struct.pack('<i',count)
@@ -50,19 +53,21 @@ def payload(mapping: WireMap, ids: dict[str,int], version: int, style: int, edit
     return raw
 
 
-def surface(mapping: WireMap, ids: dict[str,int], version: int, style: int, edited: bool) -> bytes:
+def surface(mapping: WireMap, ids: dict[str,int], version: int, style: int, edited: bool,
+                twist: Callable[[WireMap], bytes] | None = None) -> bytes:
     """Use the complete reference geometry, inline surface and actual inherited keeper; e.g. surface(mapping,ids,19000,3,False)."""
     keeper=lambda:shared_object(mapping,ids,'keeper',CLASSES[2],lambda:b'')
     raw=geometry_header(mapping,version,style in (3,5),keeper=keeper if style in (3,5) else None)
     raw+=surface_wire(mapping,ids,version,3 if style in (3,5) else 0)
-    return raw+payload(mapping,ids,version,style,edited)
+    return raw+payload(mapping,ids,version,style,edited,twist)
 
 
-def sweep_surface_object(kind: int, version: int, style: int, edited: bool=False, first_slot: int=0) -> tuple[bytes,int]:
+def sweep_surface_object(kind: int, version: int, style: int, edited: bool=False, first_slot: int=0,
+                         twist: Callable[[WireMap], bytes] | None = None) -> tuple[bytes,int]:
     """Keep distinct equal roots, repeated aliases and typed component owners; e.g. sweep_surface_object(0,19000,5)."""
     mapping=WireMap();mapping.slot=first_slot;ids: dict[str,int]={}
     def contents(key: str) -> bytes:
-        if kind==0:return surface(mapping,ids,version,style,edited and key=='first')
+        if kind==0:return surface(mapping,ids,version,style,edited and key=='first',twist)
         if kind==1:
             raw=edge_body(mapping,ids,version,style)
             return raw

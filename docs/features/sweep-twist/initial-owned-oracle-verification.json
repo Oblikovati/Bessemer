@@ -1,0 +1,37 @@
+{
+  "issue": 211,
+  "scope": "Original complete-stream framing and inherited document context with an operation-local fixture-only declared-wire twist reader",
+  "source_snapshot": "initial-owned-source-snapshot.json.gz",
+  "tests_passed": 9,
+  "exit_code": 0,
+  "complete_original_streams": 12,
+  "literal_field_edit_streams": 36,
+  "unextended_source_rejections": 12,
+  "styles": [
+    "fresh",
+    "shared",
+    "cached-class"
+  ],
+  "roots": [
+    "moSweep_c",
+    "moSweepCut_c"
+  ],
+  "owned_context_version": 19000,
+  "bits_checked": [
+    "raw_08",
+    "raw_10",
+    "raw_18"
+  ],
+  "log_sha256": "42b556762bb86563796aabf8c6bbd31a7d02c068606dd7280c7ec690a8e55186",
+  "pending": [
+    "Owned stream fixture retention",
+    "Pinned old sweep fixture byte regression (session 36462)",
+    "Bessemer production reader",
+    "Public document edit/reopen/fresh reversal/history/budgets/concurrency",
+    "Full local and exact-head remote gates"
+  ],
+  "exclusions": [
+    "No original production Source twist class-reader acceptance",
+    "No native producer replay or geometry/application acceptance"
+  ]
+}

@@ -15,8 +15,14 @@ mod stored_dimension_views;
 mod stored_intersection_references;
 #[path = "../model_node_state/native.rs"]
 mod stored_node_views;
+#[path = "../model_stored_parameters/native.rs"]
+mod stored_parameters;
+#[path = "../model_resolved_root_graph/native.rs"]
+mod stored_root_graphs;
 #[path = "../model_sketch_reference_lookup/native.rs"]
 mod stored_sketch_lookup_keys;
+#[path = "../model_spline_equation_state/native.rs"]
+mod stored_spline_equations;
 #[path = "../model_visual_carriers/native.rs"]
 mod stored_visual_carriers;
 

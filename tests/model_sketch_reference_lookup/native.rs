@@ -12,7 +12,7 @@ type NativeLookupCheck =
     fn(&ResolvedCorpusCase<'_>, &[&NativeLookupRow], Option<CompressedKernelContext>, bool);
 
 #[path = "native_documents.rs"]
-mod documents;
+pub(crate) mod documents;
 
 fn native_lookup_rows() -> Vec<NativeLookupRow> {
     include_str!("../fixtures/sketch-reference-configuration-keys/native-spans.tsv")

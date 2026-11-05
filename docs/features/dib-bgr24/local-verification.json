@@ -1,0 +1,87 @@
+{
+  "issue": 207,
+  "source_parent": "49358ad520eb658d06960089b9450088d6b2d6fa",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "before": {
+    "admission_probe_exit_code": 101,
+    "log_sha256": "fd840400198909432b1592707b7065b8ed43c0e78e0c034dd11bba35f171dd42"
+  },
+  "after": {
+    "combined_compile_and_test_exit_code": 0,
+    "tests_passed": 26,
+    "tests_failed": 0,
+    "logs": {
+      "target/bgr24-preview_bgr24-tests.log": {
+        "sha256": "905863846f2e796d409ac17c7398fdc9c919393fc9336d747e1c2bd4245cbc6f",
+        "passed": 7,
+        "ignored": 0
+      },
+      "target/bgr24-preview_rgb_zero_size-tests.log": {
+        "sha256": "9071ae03d60bf9a0ceab75b417c9c936a0831eede95e60bbc6fba75f22db69d3",
+        "passed": 5,
+        "ignored": 0
+      },
+      "target/bgr24-preview-tests.log": {
+        "sha256": "606b48ba3a1827daac0e9b96be5fbbf49e4431434a01e181d99be23ff144ae7d",
+        "passed": 5,
+        "ignored": 0
+      },
+      "target/bgr24-preview_adversarial-tests.log": {
+        "sha256": "889a8254740bbfc5d00a534c573479bbb34d3269440639f412ffa12a227ffdc9",
+        "passed": 5,
+        "ignored": 0
+      },
+      "target/bgr24-preview_document-tests.log": {
+        "sha256": "9ef0ed6ff1f0f2e872322adb2ddb7e7893e0b68cae3c47f9a00b92ab446d9160",
+        "passed": 2,
+        "ignored": 0
+      },
+      "target/bgr24-preview_isolation-tests.log": {
+        "sha256": "fb6d655783fa3f4e1752481595dd21428abbcdd7723ad1ff51634a78a076ed0b",
+        "passed": 2,
+        "ignored": 0
+      }
+    }
+  },
+  "coverage": {
+    "literal_original_edited_pairs": 64,
+    "whole_document_edit_reopen_fresh_reversals": 64,
+    "native_windows_images": 128,
+    "native_windows_pixels": 480,
+    "concurrent_workers": 8,
+    "fresh_example_processes": 256,
+    "generated_single_row_cases": true
+  },
+  "checks": {
+    "library_compile_exit_code": 0,
+    "library_clippy_exit_code": 0,
+    "integration_clippy_exit_code": 0,
+    "example_clippy_exit_code": 0,
+    "changed_rust_format_exit_code": 0,
+    "fixture_regeneration_byte_identity": true,
+    "previous_zero_size_windows_oracle_unchanged": true,
+    "new_and_changed_functions_at_most_20_lines": true,
+    "new_files_below_500_lines": true
+  },
+  "production_sha256": {
+    "src/preview/bgr24.rs": "4c38b7bb2873a7ec1821483dfb5e14513a34f090de6b0ac5c1f062c40e546cee",
+    "src/preview/codec.rs": "98d346bd186bb5f0dc46e2e2b1ceac8894661721c5fcea6ee013616b8c435ec7",
+    "src/preview/header.rs": "7427075ffb4a5559bcb7aa1d114956675091d4b0e580f63a98274656d9870157",
+    "src/preview/mod.rs": "f0b2637db353da31fb499a63bfab9f3be7a5d5d0325d46ad5f43d0a74b29f4c1",
+    "src/preview/pixels.rs": "b172b815a6bfe3b416682f3c6c142cac1447b7d83ac815e0ed9640c162155364",
+    "src/preview/types.rs": "dd7bb37cb42e4d6b200b1f988deb809e3fa15e67268fb26190f79a8fba93f3ff",
+    "examples/rebuild_dib.rs": "4a7fdcb1f4b3068e015edefae35bd4783a9b1e1326d2256c1ab2bcbad87ae86e"
+  },
+  "artifacts_sha256": {
+    "windows-oracle.json": "d3110cd536dd93bae8deda8c37680ab6986b0f0cac253ebfb4ca5be23ebe29dc",
+    "example-verification.json": "05fac593d0d42989afebed514ea7adb9d48bc9e033d0b9bea54797dfe77c8912",
+    "manifest.json": "1e4fb4b9cbca582e9c51db99ecc7bf926455ef03ef3a7a6078e1cc7a0bd6deec"
+  },
+  "exclusions": [
+    "Full cargo xtask pr at this code revision remains pending",
+    "Exact-head remote CI for this feature remains pending",
+    "Native SolidWorks BGR24 population, application opening, geometric acceptance and complete schema parity are not claimed",
+    "Humanizer is unavailable; maintainer prose review remains pending"
+  ]
+}

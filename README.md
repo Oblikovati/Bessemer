@@ -62,8 +62,10 @@ full/lightweight context.
 `bessemer::metadata` reads and writes all documented XML metadata families, with
 namespace-aware property views, exact source framing and isolated text/attribute edits.
 It also supports embedded `ThirdPty/InspectionXpert` projects and complete Job Number edits.
-`bessemer::preview` reads and writes packed DIB previews, decodes RLE8 and BGRX
-pixels, and supports isolated palette and pixel replacement.
+`bessemer::preview` reads and writes packed DIB previews, decodes RLE8, uncompressed
+1/4/8-bit indexed pixels, raw RGB555 words, BGR24 and BGRX, and supports isolated palette and pixel
+replacement. Packed RGB edits preserve stored row padding and unused index bits. Uncompressed RGB
+previews retain legal zero image-size declarations through edits and reversals.
 It also reads, constructs, edits, and writes static PNG previews, preserving stored
 chunks and exact samples across all defined color/depth pairs and Adam7 interlace.
 `bessemer::display_lists` currently provides lossless compact/fixed transform and
@@ -97,6 +99,16 @@ Older part layouts, assembly mate/feature streams, drawing model archives,
 geometric interpretation and validation, and semantic CAD editing remain to be
 implemented; this is not yet Corliss feature parity.
 
+Component-edge readers preserve signed reference counts, skip nonpositive
+reference loops, and continue the documented optional pointer pair. See the
+[signed-count regression evidence](docs/features/component-edge-counts/README.md).
+Boundary references also preserve direct chooser-time pairs and downstream
+identifier data, including duplicate keys, zero entries and both version gates.
+See the [direct boundary evidence](docs/features/boundary-direct-data/README.md).
+Ordinary component prefixes also retain direct legacy object/time payloads,
+including fresh and shared targets; the Simulation dialect keeps its existing
+restrictions. See the [legacy-reference evidence](docs/features/component-legacy-reference/README.md).
+
 ```rust
 let bytes = std::fs::read("part.sldprt")?;
 let mut doc = bessemer::Document::from_bytes(&bytes)?;
@@ -129,6 +141,11 @@ update bits and class-scoped parameter flags from complete part configurations
 and resolved-feature archives. Selected-bit edits preserve other fields and bits
 and return the existing complete archive validation and structural history.
 Stored flags remain separate from effective native predicates and setter cascades.
+The [stored parameter API](docs/features/stored-parameters/README.md) reads both
+name pointers and exact primary/alternate values from complete part configuration
+and resolved-feature archives. Typed value edits preserve floating-point bits,
+CString framing and unselected fields, with revision checks and complete archive
+history. Stored alternates remain separate from evaluated effective values.
 The [stored entity visual API](docs/features/entity-visual-state/api.md) projects
 layer/style, ByLayer, cache, color and raw width values from complete part/assembly
 configurations, resolved part feature archives and physical component visuals from display and
@@ -227,6 +244,8 @@ ordered-face groups, required end specifications and concrete keeper identities.
 
 [Ordinary-part sweeps and sweep cuts](docs/features/sweeps/README.md) preserve conditional
 dimensions, versioned controls and complete shared reference dependencies.
+[Schema-1 bidirectional sweep twists](docs/features/sweep-twist/README.md) retain
+the full raw byte and both stored double bit patterns in modern ordinary-part contexts.
 
 [Toolbox specifications](docs/features/configuration-toolbox/README.md) retain
 shared metadata items, raw string framing and exact floating-point bits.
@@ -361,6 +380,14 @@ body-feature layouts, cached-array branches and versioned kernel-body lists.
 retain exact native spellings, shared direct blend data and raw surface bytes.
 [Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
 direct allowances, raw strided payloads and fixed-face references.
+[Stored spline equation state](docs/features/spline-equation-state/README.md)
+exposes the six saved string roles, full signed option and equation-path endpoint
+lock bits. Typed edits preserve unrelated stored fields and use complete archive
+validation; they do not run the native equation setter or evaluate expressions.
+[Resolved root snapshots](docs/features/resolved-root-graph/README.md) expose every
+stored root, including nulls and aliases, with local or inherited target
+identities. They preserve physical provenance without inferring dependency order
+or geometry.
 
 
 This library is named after Sir Henry Bessemer (1813–1898) an English engineer, inventor, and entrepreneur 
@@ -496,6 +523,15 @@ direct plane-section geometry, strict collections and serialized section bodies.
 [Standalone Inspection envelopes](docs/features/standalone-inspection/README.md)
 cover current encrypted templates and historical projects, exact XML preservation
 and immutable complete-XML replacement.
+Its [ordered record views](docs/features/inspection-records/README.md) retain
+literal document, group, characteristic, measurement and custom-property
+occurrences, with isolated edits to existing unqualified attribute text.
+Its [source identity comparison](docs/features/inspection-source-identity/README.md)
+checks caller-supplied bytes against stored size/checksum text and retains
+explicit completion, coverage and document provenance.
+Its [relationship views](docs/features/inspection-relationships/README.md) expose
+ordered load attempts, first-insertion entries and the writer's empty-key filter
+under an explicit DOM retention policy, while preserving the original envelope.
 
 Library-feature configuration, cross-reference and atom-ID interoperability is
 documented in [the feature evidence](docs/features/library-features/README.md).
@@ -846,5 +882,16 @@ Stored bitmap matching-color, transparent-color and ink-markup settings are
 available through `bitmap_appearance_states()` and `edit_bitmap_appearance()`.
 Values retain their full signed or unsigned width; historical archives can
 omit the ink-markup word. See [the appearance contract](docs/features/bitmap-appearance/README.md).
+
+`bitmap_resource::BitmapResourceArray` reads complete headerless named bitmap
+arrays and edits opaque payloads with count-width preservation, diagnostics,
+coverage and field history. Stream selection is explicit; no pixel layout or
+runtime resize is inferred. See [the resource contract](docs/features/bitmap-resource-arrays/README.md).
+
+Stored ellipse-backup rotation snapshots expose the complete signed word through
+`ellipse_backup_rotation_states()` and `edit_ellipse_backup_rotation()`. Physical
+class admission and revision guards preserve aliases and unselected fields.
+See [the snapshot contract](docs/features/ellipse-backup-rotation/README.md) for
+validation status and the native restoration/geometry exclusions.
 
 Model-field edits retain CString count-prefix changes as physical changes, including completion and derived field history; decoded string comparison remains semantic. See the [framing regression](docs/features/model-text-framing/README.md).

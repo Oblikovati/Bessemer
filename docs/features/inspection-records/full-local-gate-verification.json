@@ -1,0 +1,19 @@
+{
+  "issue": 193,
+  "bug": 194,
+  "command": "cargo xtask pr",
+  "process_exit_code": 0,
+  "runtime_and_test_source_revision": "8991085c",
+  "root_revision_at_completion": "88a85046",
+  "summaries": 318,
+  "passed": 3991,
+  "failed": 0,
+  "ignored": 222,
+  "log_sha256": "2b887bad907e4c3729d91abf9b8159abccb6ae5d00f05970414af70b75e6f131",
+  "qualification": "Rust/tests/Cargo/xtask/workflow sources remained unchanged during the successful gate. Later commits added independent #195 docs and unused fixtures; its Rust implementation remained detached.",
+  "exclusions": [
+    "Source-comparison API #195",
+    "Exact-head remote matrix",
+    "Native application reload"
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "issue": 2,
+  "related_wire_fix": 95,
+  "edition": "Edition 0.3021 \u00b7 2026-11-04 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "specification_sha256": "fd591a55b486a0cb2151026d26efee7a0f3be32079dcbcbb697cf9d7b410a9b9",
+  "scope": "Selected10 new equation runtime/API clauses11.1727 through11.1736; not a complete schema/runtime audit",
+  "snapshot_path": "docs/features/spline-equation-transform/equation-api-runtime-schema-snapshot.md",
+  "snapshot_representation": "Owned excerpt normalized to LF before hashing; source specification hash retains original bytes",
+  "snapshot_sha256": "dc2481b4dd1b7aef91046ede191297576af2da0474e963ef231a49e94703c246",
+  "clauses": [
+    {
+      "clause": "11.1727",
+      "section_sha256_normalized_lf": "fb9f9b7a59ab1981050fc139eed1b19370680ee3022e05bf116c2dc4ad0d043f",
+      "qualification": "Provider outputs have qualified component/magnitude roles, aliased caller slots and a pre-cleanup zero checkpoint; no final geometry/error guarantee follows.",
+      "implementation_status": "Cold raw wire transport is unchanged; the selected runtime/API behavior is not implemented by this audit."
+    },
+    {
+      "clause": "11.1728",
+      "section_sha256_normalized_lf": "ae2fa04658f135b713c90bf953ae957d9965a0f4ddb564c29986d19d8ea792df",
+      "qualification": "Presence flags inspect converted BSTR lengths with a specific wire-to-request reordering; they do not classify raw saved string emptiness or prove all-mode completion.",
+      "implementation_status": "Cold raw wire transport is unchanged; the selected runtime/API behavior is not implemented by this audit."
+    },
+    {
+      "clause": "11.1729",
+      "section_sha256_normalized_lf": "11612b522094da62b1f9437e3e98392b269b223ab91be2ec523f76ea0e6a8398",
+      "qualification": "Full signed32 saved member1E0 has a selected option producer and post-evaluation parameter-copy multiplication by PI then division by180; the API role does not canonicalize raw values or prove loaded-value reuse.",
+      "implementation_status": "Cold raw wire transport is unchanged; the selected runtime/API behavior is not implemented by this audit."
+    },
+    {
+      "clause": "11.1730",
+      "section_sha256_normalized_lf": "3a83fe294e08d991b52963b43e25de31254a5aa10b784699b2fde0cd42f272ec",
+      "qualification": "One middle-expression fallback packs identity-parameter and divided polynomial coefficients under reached guards, with a raw fourth-component marker; other fallback and provider outcomes remain open.",
+      "implementation_status": "Cold raw wire transport is unchanged; the selected runtime/API behavior is not implemented by this audit."
+    },
+    {
+      "clause": "11.1731",
+      "section_sha256_normalized_lf": "6e7e5bc496655622f6319889360573cba39810a0257bd28d96db388d09c560d4",
+      "qualification": "A reached current/full32 option inequality admits an update with the new input; equality can still update, and current getter identity does not prove archive-instance reuse.",
+      "implementation_status": "Cold raw wire transport is unchanged; the selected runtime/API behavior is not implemented by this audit."
+    },
+    {
+      "clause": "11.1732",
+      "section_sha256_normalized_lf": "be07ba8adb819405ec0ec2cc61d98e44d7fa6860ec83c86f68d70d99d671fc61",
+      "qualification": "A reached nonconstant second-polynomial branch pads and shifts coefficients into ordered32-byte records; native-width overflow, downstream providers and geometry remain qualified.",
+      "implementation_status": "Cold raw wire transport is unchanged; the selected runtime/API behavior is not implemented by this audit."
+    },
+    {
+      "clause": "11.1733",
+      "section_sha256_normalized_lf": "a2297c7dde06ae47c77da33aa7e7d37d95e9079caa5a53e9e75726ed803cc7bc",
+      "qualification": "Saved transform components reach a guarded typed backend packing; converter failure is not checked by the caller, and word19/flags28/full-transform closure remain unproved.",
+      "implementation_status": "Cold raw wire transport is unchanged; the selected runtime/API behavior is not implemented by this audit."
+    },
+    {
+      "clause": "11.1734",
+      "section_sha256_normalized_lf": "40c51b9738d5180e7e7789acbb8dd95ec1dc59e7b87e1d35a6455ec21644dece",
+      "qualification": "A qualified stored-versus-requested selector compares projected angle and translation outputs; resolver identity, full matrix equality and units are not implied.",
+      "implementation_status": "Cold raw wire transport is unchanged; the selected runtime/API behavior is not implemented by this audit."
+    },
+    {
+      "clause": "11.1735",
+      "section_sha256_normalized_lf": "f9eeffbe1f557ca17810d25a072c8a709f65d968ec4abbd79cc1418abf954941",
+      "qualification": "Installed SET2 formals bind selected LockStart/LockEnd requests to32C masks0x10/0x20, not F4. API radians qualifications do not validate arbitrary stored fields or close raw flag domains.",
+      "implementation_status": "Cold raw wire transport is unchanged; the selected runtime/API behavior is not implemented by this audit."
+    },
+    {
+      "clause": "11.1736",
+      "section_sha256_normalized_lf": "f1daa0c11aa500aa9c19b895b49abba68c817c6ed968a2e334dfd98081a4aed4",
+      "qualification": "Installed GET2 formals bind current strings, range conversion outputs, raw signed1E0 and32C lock bits. Ignored provider/conversion returns prevent treating return1 as complete valid output.",
+      "implementation_status": "Cold raw wire transport is unchanged; the selected runtime/API behavior is not implemented by this audit."
+    }
+  ],
+  "code_sha256": {
+    "src/model_archives/sketch_splines.rs": "bacc4fe2abc1749fe1640457aae8e216bb1c57c2016fd2d6cec688bd114e0dd2",
+    "src/model_archives/fixed_transform_records.rs": "3c2aa95243639b67cfbe1136ef49d524731429b68b4c49b77267504a1f31d326"
+  },
+  "code_unchanged_from_previous_wire_and_runtime_audit": true,
+  "retained_contract": [
+    "Six raw CString fields",
+    "Full signed equation_word and unknown_1e0, without Boolean clamping",
+    "All30 raw transform words and existing perspective admission guard"
+  ],
+  "exclusions": [
+    "No expression evaluation, backend transform, provider request construction or native API emulation",
+    "No native target execution or earlier corpus proof rerun",
+    "No runtime failure/rollback, geometry validity, units or object identity guarantee",
+    "No baseline, parser, behavior version or coverage credit changed"
+  ]
+}

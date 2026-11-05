@@ -1,0 +1,76 @@
+{
+  "issue": 192,
+  "passed": true,
+  "process_reaped": true,
+  "exit_code": 0,
+  "tests": 9,
+  "seconds": 81.39,
+  "native_profiles": 5,
+  "physical_native_ellipses": 12,
+  "primary_native_edits": 60,
+  "changed_native_edits": 48,
+  "unchanged_native_edits": 12,
+  "fresh_document_forward_operations": 60,
+  "fresh_typed_reverse_operations": 60,
+  "native_case_outcomes": [
+    [
+      329,
+      20
+    ],
+    [
+      375,
+      0
+    ],
+    [
+      35,
+      0
+    ],
+    [
+      687,
+      20
+    ],
+    [
+      688,
+      20
+    ]
+  ],
+  "source_span_reference": "docs/features/ellipse-backup-rotation/native-source-verification.json",
+  "log_sha256": "59c20acae4dbc7141b16d7a48374b098d0766ffac366a3cfabdb679834c997fc",
+  "executable_sha256": "5b395d0489f09a82035462f024c79b1b80bb0731941d62dc452d0e25303960df",
+  "files": [
+    {
+      "path": "tests\\model_ellipse_backup_rotation.rs",
+      "sha256": "b4a329f6d6c94a4833383594e87f21f047814d72be4fa0c6fdfd9bf3bc66eae2"
+    },
+    {
+      "path": "tests\\model_ellipse_backup_rotation\\native.rs",
+      "sha256": "e86a10cfc1f0e4afdb5c3f34e7e534ae5981a1ef32e88a2d8793d2f2d88231b7"
+    },
+    {
+      "path": "tests\\model_ellipse_backup_rotation\\historical.rs",
+      "sha256": "236f64524616441105e36111fdc697273cc46c0196d2c3b28323c8b8e012c74e"
+    },
+    {
+      "path": "tests\\fixtures\\ellipse-backup-rotation\\native-cases.tsv",
+      "sha256": "cf0053f91cb90876c8b70b41b17b331472fd227aebab28b70bc7162a7df7dcdb"
+    }
+  ],
+  "checks": [
+    "Source scalar/map/schema identity and literal native byte spans",
+    "Exact full edited archive bytes and every field",
+    "Complete field history, completion, coverage and exclusions",
+    "Fresh complete document/context reopen",
+    "Every unselected logical stream and stream order preserved",
+    "Fresh typed reverse and exact original complete container",
+    "Original archive/document input isolation"
+  ],
+  "remaining": [
+    "Two-process exports and actual Source output acceptance",
+    "Full local repository gate",
+    "Exact-head remote platform/ThreadSanitizer gates",
+    "Native application/writer equivalence",
+    "Whole-schema parity"
+  ],
+  "clippy_warnings_denied": true,
+  "function_size_audit_passed": true
+}

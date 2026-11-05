@@ -1,0 +1,78 @@
+{
+  "issue": 195,
+  "runtime_revision": "9865a4dd",
+  "fresh_process_tests_passed": [
+    9,
+    9
+  ],
+  "failed": 0,
+  "ignored": 0,
+  "exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "outputs_per_process": 197,
+  "case_counts": {
+    "checksum_vectors": 172,
+    "metadata_cases": 22,
+    "native_pdf_variants": 3
+  },
+  "byte_equal": true,
+  "packet_bytes": 1164264,
+  "packet_sha256": "32592dc878e2770ced97fa66a175b91ded3f3d8a42c79528fab3af97aefdac21",
+  "source_tests_passed": 2,
+  "source_test_seconds": 0.055,
+  "original_reader_unchanged": true,
+  "source_import_and_content_guard": "passed",
+  "source_scope": "Only original inspectionrecords.py with standard-library imports; no live Source imports or reader patches",
+  "source_snapshot_identity": "1d41c0176484d2153c8b8270f6cd43bb01df872e29b655914821d36842c172be",
+  "checked_fields": [
+    "Exact unchanged caller XML",
+    "Missing versus empty stored metadata",
+    "Actual complete byte length and lowercase digest",
+    "Separate size/checksum flags",
+    "Completion, exact mode and semantic exclusions",
+    "Complete source-byte coverage",
+    "Copied document history and identity invariants"
+  ],
+  "retained_snapshot_checks": [
+    "Original XML bytes",
+    "Original cipher profile",
+    "Result document ID resolves in retained source"
+  ],
+  "files": {
+    "C:\\Users\\vmiguel\\git\\Bessemer\\target\\inspection-identity-process-1.bin": {
+      "bytes": 1164264,
+      "sha256": "32592dc878e2770ced97fa66a175b91ded3f3d8a42c79528fab3af97aefdac21"
+    },
+    "C:\\Users\\vmiguel\\git\\Bessemer\\target\\inspection-identity-process-2.bin": {
+      "bytes": 1164264,
+      "sha256": "32592dc878e2770ced97fa66a175b91ded3f3d8a42c79528fab3af97aefdac21"
+    },
+    "C:\\Users\\vmiguel\\git\\Bessemer\\target\\inspection-identity-process-1.log": {
+      "bytes": 939,
+      "sha256": "c21688a3bef1d261df9af3edb8c071067177e2ba24d428fdb1805ede66e5e356"
+    },
+    "C:\\Users\\vmiguel\\git\\Bessemer\\target\\inspection-identity-process-2.log": {
+      "bytes": 939,
+      "sha256": "faeb738616784423289e5120f8d5b0dc1788dc8ab45bc731df97c359f2279c5f"
+    },
+    "C:\\Users\\vmiguel\\git\\Bessemer\\target\\inspection-identity-actual-results-source-final.log": {
+      "bytes": 467,
+      "sha256": "5783757594b00fbbec71a6ead98cec3d4ac1c19165e84c81d39a88977a9c7d2d"
+    },
+    "C:\\Users\\vmiguel\\git\\Bessemer\\target\\verify-inspection-identity-results.py": {
+      "bytes": 1633,
+      "sha256": "c555a77a8be3ff9210895b78754512cb773abfb5a5b4fb13f7dc449a805f9601"
+    },
+    "C:\\bessemer195-identity\\docs\\features\\inspection-source-identity\\verify_result_reference.py": {
+      "bytes": 5528,
+      "sha256": "73660c50f4705d5c8c7939d65048a49322298a65f0b8ca2b50752faca6a00ab7"
+    }
+  },
+  "remaining": [
+    "Full local gate including source-comparison API",
+    "Exact-head remote integration matrix"
+  ]
+}

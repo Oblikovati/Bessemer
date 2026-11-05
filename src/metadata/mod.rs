@@ -1,6 +1,5 @@
 //! Lossless, namespace-aware SolidWorks XML metadata with immutable revision-scoped edits.
 mod attributes;
-mod composer;
 mod declaration;
 mod edit;
 mod encoding;
@@ -9,22 +8,27 @@ mod inspection;
 mod lexical;
 mod model;
 mod namespaces;
+mod ordered;
 mod properties;
 mod reader;
 mod stream;
 mod types;
+mod utf8;
 mod views;
 
 use crate::{BessemerError, FailureClass, Result, archive_codec::PreservedContents};
-pub(crate) use composer::ComposerXmlDocument;
 pub(crate) use inspection::validate as validate_inspection_xml;
+pub(crate) use ordered::OrderedXmlView;
 pub use properties::{MetadataProperty, PropertySection, PropertyValue, PropertyValueKind};
 use std::sync::Arc;
 pub use stream::{MetadataFamily, MetadataStream};
+pub(crate) use types::XmlContent;
 use types::XmlModel;
 pub use types::{
     ExpandedName, XmlAttribute, XmlElementId, XmlEncoding, XmlFormat, XmlLimits, XmlSource,
 };
+pub(crate) use utf8::Utf8XmlDocument;
+pub(crate) use utf8::Utf8XmlDocument as ComposerXmlDocument;
 pub use views::XmlElementRef;
 
 /// Immutable source plus a complete flat element/attribute model; reads take no lock.
@@ -225,3 +229,7 @@ fn missing(cause: impl Into<String>) -> BessemerError {
         cause,
     )
 }
+
+#[cfg(test)]
+#[path = "../../tests/metadata/ordered_capture.rs"]
+mod ordered_capture_tests;

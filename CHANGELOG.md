@@ -4,7 +4,13 @@
 
 ### Fixed
 
+- Accepted zero image-size declarations in uncompressed BGRX previews and preserved them through pixel edits and fresh reversals. (#208)
+
+- Preserved negative component-edge reference counts while continuing the conditional composite-reference pair and retaining positive-count bounds. (#204)
+
 - Fixed model-field equality discarding CString count-prefix-only edits and their derived history. (#200)
+
+- Preserved original Inspection attribute lexemes when reversing edits with a retained immutable checkpoint, including all replay history parents. (#194)
 
 - Bounded transient test build artifacts in PR/full gates after the hosted Linux runner exhausted disk. (#196)
 
@@ -43,6 +49,34 @@
 - Fixed reference-plane point roles rejecting documented endpoint and loft-sync subclasses for fresh and cached pointers. (#46)
 
 ### Added
+
+- Added schema-1 bidirectional sweep-twist fields for modern ordinary-part archives, preserving raw byte values and exact double bits. (#211)
+
+- Added 16-bit BI_RGB555 preview word decoding and replacement, retaining unused high bits, padding, palettes and size declarations. (#210)
+
+- Added uncompressed 1-, 4- and 8-bit indexed DIB previews with exact palette indices, padding and unused-bit preservation during pixel edits. (#209)
+
+- Added 24-bit BI_RGB preview reading and pixel replacement, preserving row padding, palettes, orientations and image-size declarations. (#207)
+
+- Added direct legacy references in ordinary component prefixes with preserved raw presence, generic pointer identity and four-byte time values. (#206)
+
+- Added complete direct boundary chooser-time and downstream identifier bodies, preserving signed counts, duplicate pairs, zero values and versioned tails. (#205)
+
+- Added typed stored parameter snapshots and exact value edits for complete part configuration and resolved-feature archives, retaining independent name pointers, alternate presence bytes and copied field history. (#202)
+
+- Added immutable resolved-feature root snapshots with stored order, aliases, loaded target identities and copied provenance. (#201)
+
+- Added physical spline equation stored-state views and exact lock, signed-option and CString edits with retained source provenance. (#199)
+
+- Added explicit-policy Inspection relationship load attempts, first-insertion map views and writer-filtered entries with immutable source provenance. (#197)
+
+- Added explicit caller-supplied Inspection source size/checksum comparisons with exact stored text, complete byte coverage and unchanged document provenance. (#195)
+
+- Added ordered standalone Inspection record views, selected DOM input projections and isolated existing-attribute edits with revision-bound identities and complete record provenance. (#193)
+
+- Added class-scoped full-width ellipse-backup rotation snapshot views and isolated stored-word edits. (#192)
+
+- Added bounded named bitmap resource-array reads, isolated payload edits and count/payload validation with complete field history. (#190)
 
 - Added revision-owned bitmap matching-color, unsigned transparent-color and optional ink-markup views with isolated saved-word edits. (#189)
 

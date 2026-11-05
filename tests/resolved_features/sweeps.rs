@@ -130,11 +130,11 @@ fn conditional_sweep_pointer_roles_reject_the_enclosing_feature() {
 }
 
 #[test]
-fn undocumented_fresh_twist_bodies_remain_explicit_unsupported_results() {
+fn undocumented_fresh_twist_schemas_remain_explicit_unsupported_results() {
     let name = b"moTwistDataForBiDirectionalSweep_c";
     let mut header = [
         u16::MAX.to_le_bytes(),
-        1u16.to_le_bytes(),
+        2u16.to_le_bytes(),
         (name.len() as u16).to_le_bytes(),
     ]
     .concat();

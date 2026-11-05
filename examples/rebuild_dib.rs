@@ -14,8 +14,26 @@ fn main() -> Result<(), Box<dyn Error>> {
     let source = DibPreview::from_bytes(&std::fs::read(source)?, 100_000_000)?;
     let rebuilt = DibPreview::new(source.contents().clone(), 100_000_000)?;
     std::fs::write(destination, rebuilt.to_bytes()?)?;
-    std::fs::write(raster, raster_bytes(source.decode_pixels(100_000_000)?))?;
+    std::fs::write(raster, preview_raster(&source)?)?;
     Ok(())
+}
+
+fn preview_raster(preview: &DibPreview) -> bessemer::Result<Vec<u8>> {
+    if preview.contents().header.bit_count == 16 {
+        return Ok(preview
+            .decode_bgr555_words(100_000_000)?
+            .into_iter()
+            .flat_map(u16::to_le_bytes)
+            .collect());
+    }
+    if preview.contents().header.bit_count == 24 {
+        return Ok(preview
+            .decode_bgr24_pixels(100_000_000)?
+            .into_iter()
+            .flatten()
+            .collect());
+    }
+    Ok(raster_bytes(preview.decode_pixels(100_000_000)?))
 }
 
 fn raster_bytes(pixels: DibPixels) -> Vec<u8> {

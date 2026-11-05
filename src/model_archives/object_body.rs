@@ -28,7 +28,7 @@ pub(super) fn read(
     if let Some(result) = super::resolved_feature_objects::read(reader, map, &class.name) {
         return result;
     }
-    if let Some(result) = super::sweep_objects::read(reader, map, &class.name) {
+    if let Some(result) = super::sweep_objects::read(reader, map, class) {
         return result;
     }
     if let Some(result) = super::configuration_objects::read(reader, map, &class.name) {

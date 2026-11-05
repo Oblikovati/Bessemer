@@ -1,0 +1,62 @@
+{
+  "issue": 193,
+  "source_revision": "591d475cf60f9504db942f4124609c48287fdfc5",
+  "owned_tests_passed": 10,
+  "native_tests_passed": 1,
+  "native_project_indexes": 38,
+  "native_geodes": 1787,
+  "native_unique_references": 4416,
+  "native_unmatched_references": 29,
+  "native_outputs_equal_retained_baseline": true,
+  "files": {
+    "tests/fixtures/composer-links/links.bin": {
+      "bytes": 4539,
+      "sha256": "2e3d615b882bcfebbbea8cd8bf2a38dfac52b12b17c4284b1f9031ec7a170714"
+    },
+    "target/composer-links-native.bin": {
+      "bytes": 67560999,
+      "sha256": "cc2648bd9df232c73d2bbd53cfc40e87c197aac09ed845e2326e8dac39840479"
+    },
+    "target/composer-links-native-edits.bin": {
+      "bytes": 89092608,
+      "sha256": "3cc9169490a9a443aedfd398631b7e6a4af16d46d6f706f25f68ad61ff7932d1"
+    },
+    "target/xml-facade-before/target/composer-links-native-edits.bin": {
+      "bytes": 89092608,
+      "sha256": "3cc9169490a9a443aedfd398631b7e6a4af16d46d6f706f25f68ad61ff7932d1"
+    },
+    "target/xml-facade-owned-before.log": {
+      "bytes": 942,
+      "sha256": "872660c8e5a5c7dfdd20e289677962e75c3c42ca68bf1346506060f93b576c28"
+    },
+    "target/xml-facade-native-before.log": {
+      "bytes": 202,
+      "sha256": "4483de0b25541a033d065dc65587333545a8130d0843634063c4676ee66fa23d"
+    }
+  },
+  "purpose": "Pre-refactor Composer XML facade baseline. No structural change or Inspection API acceptance claimed.",
+  "source_manifest_sha256": "2556fc5154765159a6baca5ce88f214523704e624191e84da3f7a68effdd7a4b",
+  "source_manifest_rule": "Sorted src/**/*.rs paths mapped to SHA256; UTF-8 JSON with sorted keys and compact separators.",
+  "facade_and_caller_sha256": {
+    "src/composer/links/catalog.rs": "f14f9d37a46edf12cb236551d3e84c503295a41c2c438a4bc603447076710326",
+    "src/composer/links/index.rs": "22f81129644bb0d78e751abf9adbbbe94434f17c8946f0b3df6e60502972ee30",
+    "src/composer/links/mod.rs": "255d4a7e7be76268dad7c5310a3463e8218cc34f454fcbe8e010be3c524cce4a",
+    "src/composer/links/types.rs": "35fd416cf318fd091f782afe0cf7565e40e38878fe95121cf9ff4438e0b6cc2d",
+    "src/metadata/attributes.rs": "b7771d2187f39bb82db17ab4877cf4d2fc28b862a04756da8cc71f852884586e",
+    "src/metadata/composer.rs": "2bbe757da6f2f7bf5698488901bf70019f1059c1beaab2a4221a1860a782ef75",
+    "src/metadata/declaration.rs": "3c0c3bc7a03811d5ba2073afe8bb4f38ae3eb5d170202d3d24ae6684a989945a",
+    "src/metadata/edit.rs": "a7a2398d2221113e2b10a0f2a1306f054cf394da160db7c3bead2f93a7e5a8cd",
+    "src/metadata/encoding.rs": "c24878aecb74d216d61f3cb51af73d722ef2e967c0abb7abe4b3c3b8e9b7d078",
+    "src/metadata/grammar.rs": "f0b0dbdfcf7cb1c1d57cbd28ae404ea6901fb9c8e691ec499d67636736ce3663",
+    "src/metadata/inspection.rs": "37187d08ef65ddd8314cf8c81f9b7afd0a0fc5d63474cac1f8848548b8b0a50e",
+    "src/metadata/lexical.rs": "5892a00c3ddab152aa0d6f7eb210d1b183952cd12b4a3ec82d0db5523457a461",
+    "src/metadata/mod.rs": "a0fc0c2b9dee5b7c4c4283e1349288b24cc9e1850908edcd22db608ab85f87ac",
+    "src/metadata/model.rs": "62ac79af474f6f97ff55a42ec04ee7a75db15781c7c49143a049e9a6fb3163cb",
+    "src/metadata/namespaces.rs": "1be508e5384047419803506569248644b2a24a274dd80e7523c05d356bc261f3",
+    "src/metadata/properties.rs": "41ff08a21f9b6db6607657e42f2c5648a12b682a24a14727df8842201ec24488",
+    "src/metadata/reader.rs": "cb7eb1662945a93c28d5055fcead2ab8101bf65281a40c346a0b828950658333",
+    "src/metadata/stream.rs": "62c2bbc760282c6ea0fc94469802523e14c494e3901388c3052a078a677e54ed",
+    "src/metadata/types.rs": "d7a55295665ca131f50bde33355010eb91174be5f992d9ebbb07a5d17c557cc1",
+    "src/metadata/views.rs": "cfa6c7f64d0afc3d8e824b8cee00bc117b15c777f62a86b2bef1e910b7fcb443"
+  }
+}

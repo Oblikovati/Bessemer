@@ -1,0 +1,19 @@
+{
+  "issue": 192,
+  "command": "cargo xtask pr",
+  "process_exit_code": 0,
+  "runtime_and_test_source_revision": "3430287220a6835f039becbef7f0fa8ccf15ef08",
+  "root_revision_at_completion": "ee592d7c",
+  "passed": 3971,
+  "failed": 0,
+  "ignored": 220,
+  "test_summaries": 317,
+  "log": "target\\ellipse-rotation-full-pr-gate.log",
+  "log_sha256": "3df28fff82a22dbe8cd045aed20100bcef373d646c2b3181f93908d63749bbd1",
+  "source_qualification": "No Rust, Cargo, xtask or CI source changes during this gate. Later root commits contained documentation and independent Python reference preparation plus an unused XML fixture. Feature193 Rust work remained in a detached checkout.",
+  "exclusions": [
+    "Exact-head remote matrix",
+    "Native application reload",
+    "Full documented schema parity"
+  ]
+}

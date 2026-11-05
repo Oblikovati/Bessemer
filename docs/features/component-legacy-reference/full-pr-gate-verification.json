@@ -1,0 +1,21 @@
+{
+  "issues": [202, 204, 205, 206],
+  "command": "cargo xtask pr",
+  "process_exit_code": 0,
+  "passed": true,
+  "source_revision": "9136b07a7b1dc463e22b3888203baf45597ccc7b",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "tests_passed": 4099,
+  "tests_failed": 0,
+  "tests_ignored": 231,
+  "test_summaries": 327,
+  "log_sha256": "3058718fe68a72e0fe42bb01502f5b5923421d0203d17d15e2051e1b4846cdb7",
+  "scope": "Complete direct boundary data and ordinary legacy-reference bodies, plus earlier parameter, stamp and signed-edge regressions through 9136b07a",
+  "exclusions": [
+    "Later zero-image-size BGRX correction, BGR24 and uncompressed indexed RGB additions are excluded",
+    "Later folder property-domain regression is excluded",
+    "Ignored native primary edit census remains separate",
+    "Exact-head remote checks, native application/kernel acceptance and complete schema parity remain separate"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "issue": 2,
+  "edition": "Edition 0.3069 \u00b7 2026-11-04 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "specification_sha256": "2769122e465ddc53d21731cb0006cc63f08016d298efdd8b54fb891efe905301",
+  "scope": "Selected nine clauses 11.1809 through 11.1817; no whole-schema acceptance",
+  "snapshot_path": "docs/features/resolved-features/conic-quadric-schema-3069-snapshot.md",
+  "snapshot_representation": "Owned excerpt normalized to LF before hashing; original specification bytes hashed separately",
+  "snapshot_sha256": "ea9eb608d6c0faaee8cf78d6fd0aa3f434eaeb5f05ebc40f8780988abde7801a",
+  "clauses": [
+    {
+      "clause": "11.1809",
+      "heading": "### 11.1809 Conic Eccentricity and Rho current scalar exchange operations",
+      "section_sha256_normalized_lf": "2c79db1774efab79564672d61241d0b0f77e175c243a91703a4da7f16ef4dade"
+    },
+    {
+      "clause": "11.1810",
+      "heading": "### 11.1810 BConic Rho finite-conic construction input and current curve installation",
+      "section_sha256_normalized_lf": "d80c6b6723b327128bfca27723be7a89c9b78b297bddd8f134ef2a16e7a2791d"
+    },
+    {
+      "clause": "11.1811",
+      "heading": "### 11.1811 Cone saved Sine/Cosine members and current named getter routes",
+      "section_sha256_normalized_lf": "40d071b8b2a48fd31d8428ae3978ff0e9c2045178e52b1ff10e387673411240c"
+    },
+    {
+      "clause": "11.1812",
+      "heading": "### 11.1812 Current cone scalar tuple to named inference addCone request",
+      "section_sha256_normalized_lf": "59b866c811295cb4d4d257236bee5130809a7f533ebf1748b194517bc627bb64"
+    },
+    {
+      "clause": "11.1813",
+      "heading": "### 11.1813 Canonical temporary cone axis, origin and scalar parameter producer",
+      "section_sha256_normalized_lf": "26171ebbb6d453f8263c377044283047de522ce7ac334b1ce6a151f4f9e48512"
+    },
+    {
+      "clause": "11.1814",
+      "heading": "### 11.1814 Canonical cylinder and sphere input producers",
+      "section_sha256_normalized_lf": "e5a389cbc8f54849af949972502e4a15126b39c3dc3612a240e29ef211565f44"
+    },
+    {
+      "clause": "11.1815",
+      "heading": "### 11.1815 Canonical cone append request and callback-sensitive current count policy",
+      "section_sha256_normalized_lf": "b8e444c33d917e27e0b56e8d65969d83ce7968f8e01191350f5259f1b956ff0f"
+    },
+    {
+      "clause": "11.1816",
+      "heading": "### 11.1816 Canonical Parabola current E8 trim-permission predicate",
+      "section_sha256_normalized_lf": "c10a047626b278bea8b28f795b883156392b193679047b9aa90c7bc4d77ea18c"
+    },
+    {
+      "clause": "11.1817",
+      "heading": "### 11.1817 Parabola E8 as a current unbounded-conic construction input",
+      "section_sha256_normalized_lf": "d3e33510199533bcedd4553896b01607096b05963926306b2055fbcab14f5801"
+    }
+  ],
+  "decisions": [
+    "Preserve conic Eccentricity and Rho raw binary64 values; current scalar exchanges do not define finite domains, clamps, defaults or geometric formulas.",
+    "Finite-conic Rho construction arguments and optional curve installation/copy are current native checkpoints, not archive identity, successful geometry or rollback guarantees.",
+    "Cone Sine/Cosine getters and canonical producers copy raw values; do not impose normalization or a trigonometric pair identity.",
+    "Keep current cone axis/origin/radius/sine/cosine request positions distinct; repeated getters are not a coherent saved-object snapshot.",
+    "Cylinder and sphere typed point/vector assignments do not prove bit-copy, normalization, units or frame; direct radius stores retain all 64 bits.",
+    "Cone owner member0xF8 and element stride0x108 are distinct runtime facts. Conditional array copy and callback-sensitive Count-1 are not stable entity IDs or final insertion guarantees.",
+    "Parabola trim comparisons admit ordered A<B or unordered on the first branch, with E8 consulted only otherwise; this is not a universal stored E8<1 constraint.",
+    "Parabola unbounded-conic E8 is the fourth formal argument, after two point references and a unit-vector reference; the fifth double comes from a separate provider.",
+    "Preserve failed-proof and diagnostic provenance qualifications. No native capture or frozen proof was rerun."
+  ],
+  "implementation_effect": "Documentation only; existing sketch_curves.rs conic eccentricity/rho raw-double codec remains unchanged. No unsupported context admission or runtime geometry emulation.",
+  "acceptance_credit": "No new native execution, source replay, population, accounting, geometry or full parity credit.",
+  "remaining": [
+    "Complete schema and Corliss read/write parity remains open in #2",
+    "Native application and geometry acceptance remain separate"
+  ]
+}

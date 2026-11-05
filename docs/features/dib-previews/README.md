@@ -3,14 +3,23 @@
 `bessemer::preview::DibPreview` implements the packed DIB stream in
 [clause 8.1](specification-8.md). This is DIB behavior version 1, tracked by #18.
 It supports the two installed-corpus formats: eight-bit BI_RLE8 and 32-bit BI_RGB
-BGRX. Other bit depths, compression modes and header types return typed
+BGRX. The [version 2 BGR24 extension](../dib-bgr24/README.md) adds 24-bit BI_RGB
+using dedicated pixel methods, while retaining version 1 RLE8/BGRX output.
+The [version 3 indexed RGB extension](../dib-indexed-rgb/README.md) adds uncompressed
+1-, 4- and 8-bit indices through the existing indexed-pixel API.
+The [version 4 RGB555 extension](../dib-rgb555/README.md) adds raw 16-bit word
+decoding and replacement while retaining the unused high bit.
+Other bit depths, compression modes and header types return typed
 unsupported errors. [PNG previews](../png-previews/README.md) implement the separate
 clause 8.2 datastream.
 
 The immutable archive retains every BITMAPINFOHEADER field, every RGBQUAD byte,
 the complete declared image bytes, absolute-run alignment bytes, and bytes after
 the RLE end marker. The outer size is derived when rebuilding. Stored image size
-must match the complete image payload, including for BGRX. Raw fourth bytes in
+must match the complete image payload. Uncompressed RGB also accepts a zero image-size
+declaration and derives the exact extent from dimensions, preserving the zero
+through edits and fresh reversals; see [the regression evidence](../dib-zero-image-size/README.md).
+Raw fourth bytes in
 palette and BGRX entries are preserved without assuming alpha semantics.
 
 RLE decoding follows Microsoft's [bitmap compression contract](https://learn.microsoft.com/windows/win32/gdi/bitmap-compression).
@@ -31,8 +40,13 @@ contents and reverts preserve the original bytes. `new` forces reconstruction.
 `with_indexed_pixels` replaces all pixels with deterministic RLE runs of at most
 255 indices, EOL for every row, and EOB. It deliberately replaces the original
 command encoding, including any unwritten positions and trailing bytes.
+For uncompressed indexed RGB, the same method edits packed indices while retaining
+row padding and unused bits; every decoded position is `Some(index)`.
 `with_bgrx_pixels` replaces all four bytes per pixel in the original row orientation.
-Both methods retain the header observations and palette, and update image size.
+`decode_bgr24_pixels` returns BGR triples in top-to-bottom order;
+`with_bgr24_pixels` replaces them while preserving each stored row's padding.
+Pixel replacement methods retain the header observations and palette, and update explicit image
+sizes. Uncompressed RGB edits preserve an omitted image size.
 They reject replacements whose count or format differs from the source.
 
 ## Usage
@@ -50,7 +64,10 @@ let stream_bytes = changed.to_bytes()?;
 
 `rebuild_dib INPUT OUTPUT RASTER` forces reconstruction and emits a verification
 raster: two bytes per indexed pixel (written marker, index), or four BGRX bytes
-per pixel. `set_preview_color SOURCE STREAM INDEX BLUE GREEN RED DESTINATION`
+per pixel, or three BGR bytes per 24-bit pixel.
+For RGB555, the raster contains two little-endian bytes per raw word, including
+the unused high bit; these are distinct from the indexed marker/index encoding.
+`set_preview_color SOURCE STREAM INDEX BLUE GREEN RED DESTINATION`
 performs a complete document palette edit, preserving the entry's reserved byte.
 
 ## Verification

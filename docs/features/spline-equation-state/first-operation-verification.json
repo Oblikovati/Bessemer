@@ -1,0 +1,47 @@
+{
+  "issue": 199,
+  "status": "First complete stored-state operation; broader acceptance and publication remain open",
+  "tests_passed": 9,
+  "failed": 0,
+  "ignored": 0,
+  "process_exit_code": 0,
+  "published_types_send_sync": 5,
+  "first_operation": "Physical read, exact LockStart replacement, complete document reopen and byte-exact reversal on both direct spline prototypes",
+  "covered": [
+    "All six getter-bound saved text slots",
+    "Full signed option boundaries and distinct compatibility word",
+    "Equation-present and absent enumeration",
+    "Copied physical history, complete source, coverage, completion, fidelity and stored-value disagreement",
+    "Foreign/wrong/stale field guards and unchanged-revision no-ops",
+    "All six text edit roles and both lock replacement branches"
+  ],
+  "dependency_bug": 200,
+  "dependency_qualification": "Exact framing edits require the physical ModelField equality fix; its own 18-transition regression passed separately and its isolated PR gate remains live.",
+  "checks": [
+    "Warnings and missing-docs denied",
+    "Unsafe forbidden",
+    "Library and integration-test Clippy passed",
+    "cargo fmt",
+    "Function/file-size checks passed"
+  ],
+  "logs": {
+    "spline-equation-state-typed-tests.log": "4939ec0f1530c7b0806ad6c63649711af6468b694d0f23d14cecefd9b5581947",
+    "spline-equation-state-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spline-equation-state-tests-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "source_sha256_normalized_lf": {
+    "src/model_archives/spline_equation_state/accessors.rs": "28fc50fa56e15e9604ac3645411441eebfb70617c4a716b752e6edaaaa7012bf",
+    "src/model_archives/spline_equation_state/edit.rs": "7a40d3e711a83b147004275bbe27d03c4dad0cb714b5ef21d4a6b6db5ad260d0",
+    "src/model_archives/spline_equation_state/mod.rs": "f54cce926d76f84e170edecc9f74483ee45dc544d29076d8c3d7c0b05a894592",
+    "src/model_archives/spline_equation_state/projection.rs": "398e8d43c824f08f1ba9daff663b0d9e870abe6f5bfc8bbd1c96eead2bda2494",
+    "src/model_archives/spline_equation_state/scope.rs": "a754082c1501e4c8ae19c643502a6fc2e156ab49b9b2052cbdbfcbfd30b6a42e",
+    "src/model_archives/spline_equation_state/types.rs": "e5a2b500bae85316157fb92ac29087eb95a3a4e4d9dae16203f96846849da623"
+  },
+  "remaining": [
+    "Complete guarded ownership, duplicate/alias, encoding and wire-image matrices",
+    "Eight-worker isolated results and actual fresh-process Source exports",
+    "Native outcome preservation",
+    "Complete local and exact-head remote gates",
+    "Runtime/API evaluation and native geometry remain separate in #2/#54"
+  ]
+}

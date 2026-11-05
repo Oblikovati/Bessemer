@@ -1,5 +1,6 @@
 //! Standalone Inspection encrypted XML envelopes with explicit recovered cipher profiles.
 mod cbc;
+pub mod records;
 mod rijndael;
 mod tables;
 

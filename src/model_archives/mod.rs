@@ -243,8 +243,15 @@ mod move_faces;
 mod node;
 mod node_state;
 pub use node_state::{ModelNodeStoredFlag, ModelNodeStoredState};
+mod stored_parameters;
+pub use stored_parameters::{
+    ModelParameterDiagnostic, ModelParameterFieldCopy, ModelParameterKind, ModelParameterName,
+    ModelParameterSource, ModelParameterStoredEdit, ModelParameterStoredState, ModelParameterValue,
+};
 mod dimension_state;
 pub use dimension_state::{ModelDimensionStoredEdit, ModelDimensionStoredState};
+mod ellipse_backup_rotation;
+pub use ellipse_backup_rotation::ModelEllipseBackupRotationState;
 mod note_text;
 mod object_body;
 mod object_values;
@@ -368,4 +375,16 @@ mod intersection_reference;
 pub use intersection_reference::{
     ModelIntersectionEdgeStoredIndex, ModelIntersectionReferenceStoredEdit,
     ModelIntersectionReferenceStoredState, ModelIntersectionReferenceStoredWords,
+};
+
+mod spline_equation_state;
+pub use spline_equation_state::{
+    ModelSplineEquationDiagnostic, ModelSplineEquationFieldCopy, ModelSplineEquationStoredEdit,
+    ModelSplineEquationStoredState, ModelSplineEquationTextRole,
+};
+
+mod resolved_root_graph;
+pub use resolved_root_graph::{
+    ModelResolvedRootCopy, ModelResolvedRootDiagnostic, ModelResolvedRootGraph,
+    ModelResolvedRootOccurrence, ModelResolvedRootTarget,
 };

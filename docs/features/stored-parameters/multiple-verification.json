@@ -1,0 +1,79 @@
+{
+  "issue": 202,
+  "scope": "One complete version19000 resolved-feature graph containing six physical parameter classes and six independent primary edits",
+  "independent_source_tests_passed": 1,
+  "source_initial_exit_code": 0,
+  "source_initial_seconds": 1.616,
+  "source_snapshot_identity": "a9cb194e89c0bdd43167c00c3faab3baec3d26177026615e3af31b50936035b7",
+  "physical_parameter_definitions": 6,
+  "complete_owned_document_edits_reopens_and_fresh_reversals": 6,
+  "typed_test_seconds": 0.04,
+  "unselected_parameter_values_names_alternates_and_presence_preserved": true,
+  "complete_focused_suite": {
+    "passed": 21,
+    "failed": 0,
+    "ignored": 0,
+    "seconds": 37.25,
+    "exit_code": 0
+  },
+  "clippy_exit_code": 0,
+  "post_format_maximum_rust_function_lines": 19,
+  "logs_sha256": {
+    "parameter-multiple-source-initial.log": "e3be180f9db0674341d9aa96d0aec2e90ced0a75d982a4d10232574a8962489e",
+    "parameter-multiple-tests.log": "a5fa8baf93a4049bf3deeccdad2594c909d6a6ceb9013871ba7dae9dd6684993",
+    "parameter-complete-multiple-tests.log": "8780863bc2df56d83e7b23b5d3c427a536be9dd2a9c54f4ceb93c2f84eaaacaf",
+    "parameter-multiple-source-regeneration.log": "ea48412bb305954f2af8cbeef829a6bda17b576dcd4c170e335e4670409a1aeb"
+  },
+  "exclusions": [
+    "No new native population, context/version admission, geometry or application acceptance",
+    "Complete PR publication and full native primary corpus acceptance remain separate"
+  ],
+  "strict_replay": {
+    "exit_code": 0,
+    "tests_passed": 1,
+    "seconds": 1.798,
+    "all_fixture_bytes_unchanged": true,
+    "snapshot_identity": "a9cb194e89c0bdd43167c00c3faab3baec3d26177026615e3af31b50936035b7"
+  },
+  "full_gate_first_attempt": {
+    "source_revision": "798fd59c",
+    "exit_code": 1,
+    "cause": "New integration module declarations were not in rustfmt order; runtime tests were not reached.",
+    "log_sha256": "9647ffc09d6a0ae41565e9ac05a9eeb0ccbbabe60b6029f4a3f562f2a4395c3a"
+  },
+  "root_alias_extension": {
+    "root_occurrences": 9,
+    "physical_parameter_definitions": 6,
+    "added_occurrences": [
+      "null",
+      "reference to first parameter",
+      "reference to last parameter"
+    ],
+    "exact_stream_reconstruction": true,
+    "focused_module_tests_passed": 2,
+    "focused_module_seconds": 0.1,
+    "clippy_exit_code": 0,
+    "post_format_maximum_function_lines": 19,
+    "log_sha256": "4995f186e3f477edfc9867d5df4152302b2b0d89e56f05aad0dd48a7e97ceefe",
+    "scope": "Literal ordinary object-reference framing and unchanged original Source complete parses; no additional native occurrence population claimed",
+    "full_gate_exclusion": "This extension follows the active f8b7578a full PR gate source and is excluded from that run",
+    "complete_focused_suite": {
+      "source_revision": "ca42e226",
+      "passed": 22,
+      "failed": 0,
+      "ignored": 0,
+      "seconds": 36.68,
+      "exit_code": 0,
+      "log_sha256": "2a64dddc34e39a4c23ef859baa66122ac2dc8f2de721df49953e0c6729965edb"
+    },
+    "independent_source": {
+      "tests_passed": 2,
+      "seconds": 1.693,
+      "exit_code": 0,
+      "immutable_source_and_import_guards_passed": true,
+      "all_seven_existing_fixtures_unchanged": true,
+      "snapshot_identity": "f5cf24c15484603612e96a0d4777fb9768a085f299fc295d9f9c13b2a6362d77",
+      "log_sha256": "34d4ec994f75dc74ee634f074e0cfde1c8af98e911d208a26760349296bcd151"
+    }
+  }
+}

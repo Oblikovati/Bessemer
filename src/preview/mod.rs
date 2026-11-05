@@ -1,9 +1,13 @@
 //! Packed DIB preview reading, immutable editing, and lossless archive preservation.
+mod bgr24;
+mod bgr555;
 mod codec;
 mod header;
+mod indexed_rgb;
 mod pixels;
 mod png;
 mod rle;
+mod rows;
 mod types;
 
 use crate::{BessemerError, FailureClass, Result, archive_codec::PreservedContents};

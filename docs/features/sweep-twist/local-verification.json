@@ -1,0 +1,80 @@
+{
+  "issue": 211,
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "behavior": "Schema 1, modern ordinary-part context, exactly u8 plus two binary64 fields; existing accepted wire is unchanged",
+  "source_tests_passed": 12,
+  "bare_cases": 6144,
+  "owned_cases": 88,
+  "independent_edits_and_fresh_reversals": 66,
+  "old_sweep_runtime_tests_passed": 6,
+  "new_twist_runtime_tests_passed": 4,
+  "public_document_tests_passed": 5,
+  "concurrent_workers": 8,
+  "clippy_unit_and_integration_exit_code": 0,
+  "hashes": {
+    "src/model_archives/sweep_data.rs": "91a4e60ff7a88946aa90a639137a4d20bf3bba6715fcd096e90f319ba74cd5f4",
+    "src/model_archives/sweep_objects.rs": "960d4038b5c4ca77273bd916511f03c164f800f303843ff0e6bcc9b677b2b590",
+    "src/model_archives/object_body.rs": "d821c12a035577b7295a964d03d76fe40d39c21a01b4d29b3a88874b938343c6",
+    "tests/model_archives/sweep_twists.rs": "b37b5b7a7f563171f54762d17193764346ddecfc94b5774c53fafde097d678a5",
+    "tests/resolved_sweep_twists.rs": "6a3c383583f11b9e3112026e06a74bb62d4a36cc5a07b0d022fcf1c410b22102",
+    "tests/support/sweep_twist_cases.rs": "1bca3c40f993474712cd2b8b8ea10fe07977b93811c0becf77f3874fece9f7c0",
+    "tests/fixtures/sweep-twist/owned-cases.bin": "980d06ffb7979de41aad647deda0332de50e898ccaec8abac1fdf3fb98952a9a",
+    "docs/features/sweep-twist/owned_twist_cases.py": "ddb37a8697db54c6cc53b75c2a08121aa61e58fecb3549ddea79e03ddb3649b6",
+    "target/sweep-twist-bare-runtime-tests-v4.log": "cfb648e02b099923884f19dd5363ba6e5a4688ff673cfd9f2428296f8496305e",
+    "target/sweep-twist-old-runtime-tests-v2.log": "63772fa8879ccdc53effad6bbd60cb9b2b9176839224a48a572d73807f545d9c",
+    "target/sweep-twist-document-tests-v4.log": "8d8335efc6af6d3546503132a0dc7cf997135045e043f4a10b598af5c6f0fcf6",
+    "target/sweep-twist-clippy-unit-build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/sweep-twist-integration-clippy-v2.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/sweep-twist-owned-fixture-source.log": "6981569daec172af45f3c1851a104bf4a7fcffc4a15231aed6bcdc688180b97f",
+    "target/sweep-twist-context-clippy-build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/sweep-twist-context-runtime-tests.log": "3b8b1a6083ae97ae107491a28fb93c3ba01924ca49a4fe52fa2dc77e09855f2e",
+    "target/sweep-twist-history-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/sweep-twist-history-document-tests.log": "8bfd421479b1cfb18a6196658926bf4f930451d8b22cbc60a73c1805280c8756",
+    "target/sweep-twist-contract-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/sweep-twist-contract-document-tests.log": "4849f32b7ffd5ea486067e5ce017a2eb094e4e17cc4573ff440a78169003de6c",
+    "docs/features/sweep-twist/surface_twist_cases.py": "7c82e6af8d7e4282499f7998531f828ee4d5069a6b6fbcff1269c196026bd7a9",
+    "docs/features/sweep-twist/test_surface_twist_oracle.py": "e79b4c0bd5aaf0c2fc70b0e4e4a059fa612e00fb23c873168c3f32f6b68c5d69",
+    "docs/features/sweep-twist/freeze_owned_reference.py": "f0724fa18492f394bda4e364064056bb5575b9a10a6f66f94a51e84e9fffb49e",
+    "tests/fixtures/sweep-twist/surface-cases.bin": "9f25f075e6b240470d06a6e010dce797c07562a657d34434ba3de908d430cbb2",
+    "target/sweep-twist-surface-source.log": "ccc032e355241acb645a107b66817cd09a584762412bcd12d7ff52532ce04db1",
+    "target/sweep-twist-surface-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/sweep-twist-surface-document-tests.log": "05cae0d6c807554b140614d72d201bf143c5bb60c15fd466be7a00908d0b1ae6"
+  },
+  "pending": [
+    "New complete local PR gate",
+    "Exact-head remote full matrix and ThreadSanitizer before integration"
+  ],
+  "exclusions": [
+    "Original production Source still rejects fresh twist class; fixture-only callback is explicitly classified",
+    "No native producer replay, units, geometry or application acceptance",
+    "No package version change or release tag"
+  ],
+  "native_resolved_regression": {
+    "source_revision": "02b5676eb7636d70b9ad745907302ff47d356fd8",
+    "accepted": 906,
+    "total": 906,
+    "process_exit_code": 0,
+    "seconds": 75.31,
+    "log_sha256": "7efcf86e1595b4ec4971e45b0e6b492f219a1302d0271966c38bffc87a94d5cb",
+    "scope": "Exact typed reconstruction of existing native resolved corpus; not a native populated twist producer census"
+  },
+  "full_pr_gate": {
+    "source_revision": "02b5676eb7636d70b9ad745907302ff47d356fd8",
+    "status": "passed",
+    "tests_passed": 4139,
+    "proof": "full-pr-gate-verification.json",
+    "exclusions": [
+      "Later context/history/surface test additions, candidate forward merge and property audits remain excluded; next latest-cut gate required"
+    ]
+  },
+  "history_cases": 66,
+  "rejected_nonordinary_contexts": [
+    "Unspecified",
+    "SimulationEmbedded",
+    "Assembly",
+    "RoutingAssembly"
+  ],
+  "result_contract_cases": 66,
+  "surface_verification": "surface-verification.json"
+}

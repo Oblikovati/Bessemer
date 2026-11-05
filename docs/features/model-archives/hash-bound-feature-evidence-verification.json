@@ -1,0 +1,33 @@
+{
+  "issue": 198,
+  "scope": "Committed native evidence and oracle source bytes for preview and sweep-twist evidence trees",
+  "before_process_exit_code": 1,
+  "before_tests_passed": 8,
+  "before_tests_failed": 1,
+  "after_process_exit_code": 0,
+  "after_tests_passed": 9,
+  "after_tests_failed": 0,
+  "regression": "A named fake repository uses actual Git filters with inherited Git configuration disabled; CRLF sample bytes must retain their Git blob identity for eighteen evidence/source paths.",
+  "staged_files_equal_worktree_bytes": 57,
+  "roots": [
+    "docs/features/dib-previews",
+    "docs/features/dib-zero-image-size",
+    "docs/features/dib-bgr24",
+    "docs/features/dib-indexed-rgb",
+    "docs/features/dib-rgb555",
+    "docs/features/sweep-twist"
+  ],
+  "recorded_expected_hashes_changed": false,
+  "restored_twist_expected_sha256": {
+    "twist_wire_fixtures.py": "14bf06342ef2cc6c34f7a550ea03b0262ce83f47cfe6ae951598197598eb27a9",
+    "native-schema-evidence.json": "a5ac91c1ab0f013cc77898b0a2e1565efd8d07e91e384f384a911bba8631c8d6"
+  },
+  "logs_sha256": {
+    "hash-bound-feature-evidence-before-tests.log": "a9ccd8fe7f045eed1c5a79f93807ecfadb71e2d719f43d23a78670658a9ea65b",
+    "hash-bound-feature-evidence-after-tests.log": "80c6ea44f53d9684eeda73ed32b2013f3eb22e6cbc2691ce42a0a35e2a97b1e6"
+  },
+  "exclusions": [
+    "Runtime parsing/output behavior, package version and released changelog sections are unchanged",
+    "Full gate and exact-head integration for this attribute fix remain pending"
+  ]
+}

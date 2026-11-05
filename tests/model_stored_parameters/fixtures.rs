@@ -1,0 +1,51 @@
+pub(super) const ORIGINAL: [[&[u8]; 4]; 6] = [
+    [
+        include_bytes!("../fixtures/stored-parameters/owned-0-0.bin"),
+        include_bytes!("../fixtures/stored-parameters/owned-0-1.bin"),
+        include_bytes!("../fixtures/stored-parameters/owned-0-2.bin"),
+        include_bytes!("../fixtures/stored-parameters/owned-0-3.bin"),
+    ],
+    [
+        include_bytes!("../fixtures/stored-parameters/owned-1-0.bin"),
+        include_bytes!("../fixtures/stored-parameters/owned-1-1.bin"),
+        include_bytes!("../fixtures/stored-parameters/owned-1-2.bin"),
+        include_bytes!("../fixtures/stored-parameters/owned-1-3.bin"),
+    ],
+    [
+        include_bytes!("../fixtures/stored-parameters/owned-2-0.bin"),
+        include_bytes!("../fixtures/stored-parameters/owned-2-1.bin"),
+        include_bytes!("../fixtures/stored-parameters/owned-2-2.bin"),
+        include_bytes!("../fixtures/stored-parameters/owned-2-3.bin"),
+    ],
+    [
+        include_bytes!("../fixtures/stored-parameters/owned-3-0.bin"),
+        include_bytes!("../fixtures/stored-parameters/owned-3-1.bin"),
+        include_bytes!("../fixtures/stored-parameters/owned-3-2.bin"),
+        include_bytes!("../fixtures/stored-parameters/owned-3-3.bin"),
+    ],
+    [
+        include_bytes!("../fixtures/stored-parameters/owned-4-0.bin"),
+        include_bytes!("../fixtures/stored-parameters/owned-4-1.bin"),
+        include_bytes!("../fixtures/stored-parameters/owned-4-2.bin"),
+        include_bytes!("../fixtures/stored-parameters/owned-4-3.bin"),
+    ],
+    [
+        include_bytes!("../fixtures/stored-parameters/owned-5-0.bin"),
+        include_bytes!("../fixtures/stored-parameters/owned-5-1.bin"),
+        include_bytes!("../fixtures/stored-parameters/owned-5-2.bin"),
+        include_bytes!("../fixtures/stored-parameters/owned-5-3.bin"),
+    ],
+];
+pub(super) const EDITED: [&[u8]; 6] = [
+    include_bytes!("../fixtures/stored-parameters/owned-0-0-edited.bin"),
+    include_bytes!("../fixtures/stored-parameters/owned-1-0-edited.bin"),
+    include_bytes!("../fixtures/stored-parameters/owned-2-0-edited.bin"),
+    include_bytes!("../fixtures/stored-parameters/owned-3-0-edited.bin"),
+    include_bytes!("../fixtures/stored-parameters/owned-4-0-edited.bin"),
+    include_bytes!("../fixtures/stored-parameters/owned-5-0-edited.bin"),
+];
+
+pub(super) const INHERITED: [&[u8]; 2] = [
+    include_bytes!("../fixtures/stored-parameters/inherited/original.bin"),
+    include_bytes!("../fixtures/stored-parameters/inherited/edited.bin"),
+];

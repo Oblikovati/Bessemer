@@ -1,0 +1,97 @@
+{
+  "issue": 209,
+  "source_parent": "43171cdf19ca307dc57db833609013ce172e0ebd",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "before": {
+    "admission_probe_exit_code": 101,
+    "log_sha256": "242ebfac94e3ffa3eb3e3e922bd2a6c823d9794b9e7971af4e9a3637b4a6a585"
+  },
+  "after": {
+    "combined_compile_and_test_exit_code": 0,
+    "tests_passed": 33,
+    "tests_failed": 0,
+    "logs": {
+      "target/indexed-rgb-preview_indexed_rgb-tests.log": {
+        "sha256": "32a8f41f213d67f953bc78bdde1b42ac258c0f04766dec9a8b731c2577a6c5da",
+        "passed": 7,
+        "ignored": 0
+      },
+      "target/indexed-rgb-preview_bgr24-tests.log": {
+        "sha256": "5a923f57f30b1d9c8d2c6933f0fedb29392ea68b5bf9c6a97ce44bd22568d1fb",
+        "passed": 7,
+        "ignored": 0
+      },
+      "target/indexed-rgb-preview_rgb_zero_size-tests.log": {
+        "sha256": "409a2a716062b36ce266c113d8faad7c81bf45192a0c113fd67f94508f4c76ce",
+        "passed": 5,
+        "ignored": 0
+      },
+      "target/indexed-rgb-preview-tests.log": {
+        "sha256": "d2d407cc1bdf129503da9b83a5906247146b7e1434340f5ca437116d6a1c8ba8",
+        "passed": 5,
+        "ignored": 0
+      },
+      "target/indexed-rgb-preview_adversarial-tests.log": {
+        "sha256": "655884d445be5d7c03c2e8770b5368cd2b23241b4eca8beb9ce22343fb0044ca",
+        "passed": 5,
+        "ignored": 0
+      },
+      "target/indexed-rgb-preview_document-tests.log": {
+        "sha256": "9ef0ed6ff1f0f2e872322adb2ddb7e7893e0b68cae3c47f9a00b92ab446d9160",
+        "passed": 2,
+        "ignored": 0
+      },
+      "target/indexed-rgb-preview_isolation-tests.log": {
+        "sha256": "fb6d655783fa3f4e1752481595dd21428abbcdd7723ad1ff51634a78a076ed0b",
+        "passed": 2,
+        "ignored": 0
+      }
+    }
+  },
+  "coverage": {
+    "matrix_original_edited_pairs": 864,
+    "additional_one_entry_palette_noop_cases": 3,
+    "whole_document_edit_reopen_fresh_reversals": 867,
+    "native_windows_images": 1731,
+    "native_windows_pixels": 137811,
+    "native_negative_oracle_rejected": true,
+    "concurrent_workers": 8,
+    "fresh_example_processes": 3462,
+    "all_four_padding_widths_at_each_bit_depth": true
+  },
+  "checks": {
+    "library_compile_exit_code": 0,
+    "library_clippy_exit_code": 0,
+    "integration_clippy_exit_code": 0,
+    "changed_rust_format_exit_code": 0,
+    "fixture_regeneration_byte_identity": true,
+    "new_and_changed_functions_at_most_20_lines": true,
+    "new_files_below_500_lines": true
+  },
+  "production_sha256": {
+    "src/preview/indexed_rgb.rs": "8853b675403d1da732483c6943cbd08aae8aec0b9349f2b47a980975300779a0",
+    "src/preview/codec.rs": "147e14b4b651028e5b16146e836a6fab32b92874d177a589244e03c9eeab50c8",
+    "src/preview/header.rs": "903d8474c9fd90e25454039462dd8dad92f9f885a4d8ee94d164e86860daede0",
+    "src/preview/mod.rs": "6a4e056fc7e15f693468be760d3a73a1999d9f2bc2aa5c0a79550f7f4db45274",
+    "src/preview/pixels.rs": "3cfa1e27ddf5d8ab57ada7e1582acdbc3630ecf87117f62de781be784eef418c",
+    "src/preview/types.rs": "3ea78e4f37366286a934ae6d06b2f3e8c30f5fad3f3a42092cf9e0b78c53635e"
+  },
+  "supporting_sha256": {
+    "tests/preview_indexed_rgb.rs": "43f939134567e80d322d40a1e138bdf3dc456b813822bf3e0a44aae099426c33",
+    "tests/support/indexed_rgb_cases.rs": "f26ee09d8f6eb80e0d779d986712d0bb817e305f192c8de06c57f9a571768537",
+    "docs/features/dib-indexed-rgb/generate_fixtures.py": "322dcb7d0c96eb440fa529ab61955807c89c0485384c7b557ee989e458085a54",
+    "docs/features/dib-indexed-rgb/verify_windows_oracle.ps1": "da0e463b1ff9a4e4bc4cda64897e4628362e9bd8e348b395b237a39ffcaf3115",
+    "docs/features/dib-indexed-rgb/verify_example.py": "fcb0d1dc96822b2e318b7de5ae6c9fed3dc1cac858e155df623f19788e376e03"
+  },
+  "artifacts_sha256": {
+    "windows-oracle.json": "5319dfee65a0e38fa308fbe6ffc620df82893a0a7d5b485be2b717e85bb4c1dd",
+    "example-verification.json": "7200f40529d6f014f9078adc590d664161424b044801b5e42e22d1416e63d128",
+    "manifest.json": "0eee9bc82a82bddb6ce61bb1b46010475f90f15bbd9bdf5fd4b080983b3b8e87"
+  },
+  "exclusions": [
+    "Full cargo xtask pr at this code revision remains pending",
+    "Exact-head remote CI for this feature remains pending",
+    "Native SolidWorks new-form population, application opening, geometry and complete schema parity are not claimed"
+  ]
+}

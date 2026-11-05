@@ -1,0 +1,91 @@
+{
+  "issue": 197,
+  "baseline_runtime_revision": "6397067259c10d39b3a89ba60084a8b28ef07027",
+  "candidate_runtime_revision": "c4a792ddb641cedf8ad267266ad106c6be07459a",
+  "platform": "Windows x64",
+  "rustc": "1.99.0",
+  "profile": "opt-level=1, assertions and overflow checks on, unsafe forbidden",
+  "workload": "128 accepted complete Inspection envelope/index reads alternating two fixtures, retaining first 32 immutable results",
+  "fixtures": {
+    "tests/fixtures/inspection-relationships/ordered.xml": "f0c65928819179ed63e60f7c1f6929ebef0ec5bae9d7df2344ca5494613faa1a",
+    "tests/fixtures/standalone-inspection/historical.xml": "d5ce41d90637a180975ac925cabed42c2f87628c446c3276a398e3c40e3d29ce"
+  },
+  "probe_source_sha256": "e985547ff60948fb4733f5a5bd86d76776dfe7805d50cb5057bdfe508d956195",
+  "trials": [
+    {
+      "variant": "old",
+      "trial": 1,
+      "elapsed_ns": 2307252500,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 43016192,
+      "exit_code": 0
+    },
+    {
+      "variant": "new",
+      "trial": 1,
+      "elapsed_ns": 2193961900,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 55009280,
+      "exit_code": 0
+    },
+    {
+      "variant": "old",
+      "trial": 2,
+      "elapsed_ns": 2277556800,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 43048960,
+      "exit_code": 0
+    },
+    {
+      "variant": "new",
+      "trial": 2,
+      "elapsed_ns": 2851510600,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 55472128,
+      "exit_code": 0
+    },
+    {
+      "variant": "old",
+      "trial": 3,
+      "elapsed_ns": 2294016800,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 43094016,
+      "exit_code": 0
+    },
+    {
+      "variant": "new",
+      "trial": 3,
+      "elapsed_ns": 3188612000,
+      "records": 10176,
+      "retained": 32,
+      "observed_peak_working_set_bytes": 55615488,
+      "exit_code": 0
+    }
+  ],
+  "medians": {
+    "old": {
+      "elapsed_ns": 2294016800,
+      "observed_peak_working_set_bytes": 43048960
+    },
+    "new": {
+      "elapsed_ns": 2851510600,
+      "observed_peak_working_set_bytes": 55472128
+    }
+  },
+  "elapsed_median_ratio": 1.2430208008938732,
+  "observed_peak_median_ratio": 1.288582302568982,
+  "memory_measurement": "Maximum OS-reported PeakWorkingSet64 sampled while live at roughly 20ms intervals. Final lifetime peak may be higher; does not count allocations or private bytes.",
+  "qualifications": [
+    "Three trials, always baseline then candidate; background repository/native tests remained active.",
+    "Fixture I/O and repeated envelope validation are included.",
+    "This compares the local pre-feature build, not a published previous release.",
+    "Not a statistically controlled performance acceptance gate."
+  ],
+  "decision": "Review opt-in content retention before accepting the storage change; current representation retains ordered content even for validation-only and unrelated metadata paths.",
+  "probe_source_executables_and_baseline_rlib_removed": true
+}

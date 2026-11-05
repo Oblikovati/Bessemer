@@ -1,4 +1,7 @@
 * text=auto eol=lf
+docs/features/inspection-relationships/schema-snapshot.md -text whitespace=cr-at-eol
+docs/features/spline-equation-transform/qualified-runtime-schema-snapshot.md -text whitespace=cr-at-eol
+tests/fixtures/inspection-source-identity/*.bin binary
 *.SLDPRT binary
 *.SLDASM binary
 *.SLDDRW binary
@@ -41,3 +44,43 @@ tests/fixtures/bitmap-transparency/*.bin binary
 
 docs/features/bitmap-appearance/part-sketch-bitmap64-68-80-completion-evidence.json -text
 tests/fixtures/bitmap-appearance/roots.bin binary
+
+docs/features/bitmap-resource-arrays/part-sketch-bitmap-named-resource-array-evidence.json -text whitespace=cr-at-eol
+tests/fixtures/bitmap-resource-arrays/arrays.bin binary
+
+docs/features/ellipse-backup-rotation/part-sketch-ellipse-backup-rotation-snapshot-evidence.json -text whitespace=cr-at-eol
+docs/features/ellipse-backup-rotation/part-sketch-ellipse-backup-rotation-restore-evidence.json -text whitespace=cr-at-eol
+tests/fixtures/ellipse-backup-rotation/*.bin binary
+
+tests/fixtures/spline-equation-state/*.bin binary
+tests/fixtures/spline-equation-state/*.tsv -text
+tests/fixtures/spline-equation-state/manifest.json -text
+
+docs/features/spline-equation-state/*.gz binary
+
+tests/fixtures/spline-equation-state/versions/**/*.bin binary
+
+docs/features/resolved-root-graph/*.gz binary
+docs/features/stored-parameters/*.gz binary
+tests/fixtures/stored-parameters/*.bin binary
+tests/fixtures/stored-parameters/inherited/*.bin binary
+tests/fixtures/stored-parameters/native-first/*.bin binary
+tests/fixtures/stored-parameters/native-primary-corpus/*.bin binary
+tests/fixtures/stored-parameters/alternate-matrix/*.bin binary
+tests/fixtures/stored-parameters/multiple/*.bin binary
+tests/fixtures/stored-parameters/version-contexts/*.bin binary
+tests/fixtures/component-edge-counts/*.bin binary
+docs/features/component-edge-counts/*.gz binary
+tests/fixtures/boundary-direct-data/*.bin binary
+docs/features/boundary-direct-data/*.gz binary
+tests/fixtures/component-legacy-reference/*.bin binary
+docs/features/component-legacy-reference/*.gz binary
+
+# These evidence trees bind scripts and native reports to their original byte hashes.
+docs/features/dib-*/** -text whitespace=cr-at-eol
+docs/features/sweep-twist/** -text whitespace=cr-at-eol
+tests/fixtures/preview*/*.bin binary
+tests/fixtures/preview*/*.bgr binary
+tests/fixtures/preview*/*.bgrx binary
+tests/fixtures/sweep-twist/*.bin binary
+docs/features/sweep-twist/*.gz binary

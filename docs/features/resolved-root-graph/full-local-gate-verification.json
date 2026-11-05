@@ -1,0 +1,20 @@
+{
+  "issue": 201,
+  "command": "cargo xtask pr",
+  "passed": true,
+  "process_exit_code": 0,
+  "source_revision": "24977630ffb0e31b329b8b703daf4e3137fd7e6a",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "tests_passed": 4054,
+  "tests_failed": 0,
+  "tests_ignored": 227,
+  "test_summaries": 323,
+  "log_sha256": "b97c9cd3b9847ef45b949a35311bcf7b76333e41296a1bbcdcf900df650c08cb",
+  "scope": "Combined stored root graph implementation, first seven root graph tests and native root scan, with earlier #197/#199/#200 implementation and test acceptance",
+  "exclusions": [
+    "Later root-only selector, boundary and actual Source export tests are covered separately, outside this checkout",
+    "Stored parameter #202 work is outside this checkout",
+    "Exact-head remote publication and broader model/geometry parity remain open"
+  ]
+}

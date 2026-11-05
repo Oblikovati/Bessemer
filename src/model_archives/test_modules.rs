@@ -693,3 +693,15 @@ mod assembly_object_tests;
 
 #[path = "../../tests/model_archives/embedded_field_projection.rs"]
 mod embedded_field_projection_tests;
+
+#[path = "../../tests/model_archives/sweep_twists.rs"]
+mod sweep_twist_tests;
+
+#[path = "../../tests/model_archives/property_domains_3086.rs"]
+mod property_domains_3086_tests;
+
+#[path = "../../tests/model_archives/property_domains_3087.rs"]
+mod property_domains_3087_tests;
+
+#[path = "../../tests/model_archives/property_domains_punch_netblend.rs"]
+mod property_domains_punch_netblend_tests;

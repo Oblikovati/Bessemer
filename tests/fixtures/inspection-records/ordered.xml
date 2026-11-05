@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i:SOLIDWORKSINSPECTION xmlns:i="http://www.extensiblecad.com" xmlns:x="urn:extension">
+  <!-- Known descendants are unqualified; extension names must not match them. -->
+  <INSPECTION_SHEET Name="first">
+    <DOCUMENT Uid="container"><DOCUMENT Uid="D" SourcePath="Z:\unavailable.pdf" ModelSize="3" ModelMD5HashData="900150983cd24fb0d6963f7d28e17f72"/><DOCUMENT Uid="D" Title=""/></DOCUMENT>
+    <PackageOptions><IXCharacteristics><IXGroupProxy Name="G">
+      <IXCharacteristic DocID="D" Nominal="3.503 / 3.496" PlusTol="+.003" MinusTol="-.005" Extension="&#x3bb;">
+        <Measurements>
+          <Measurement Name="same" Value=""/>
+          <Unexpected Name="same" Value="Pass" Extra="keep"/>
+          <Measurement Name="same"/>
+          <x:Measurement Name="qualified" Value="extension"/>
+          <Wrapper><Measurement Name="nested" Value="ignore"/></Wrapper>
+        </Measurements>
+        <CustomProperties><CustomProperty Name="P" Value="1"/><Other Name="P" Value="2"/><CustomProperty Name="P" Value=""/><CustomProperty/><x:CustomProperty Name="Q" Value="extension"/></CustomProperties>
+        <x:Unknown Text="a &amp; b &quot; c"/>
+      </IXCharacteristic>
+      <IXCharacteristic DocID="missing" Nominal="-0.00"/>
+      <x:IXCharacteristic Nominal="decoy"/>
+    </IXGroupProxy><IXGroupProxy Name="G"/></IXCharacteristics></PackageOptions>
+  </INSPECTION_SHEET>
+  <INSPECTION_SHEET Name="second"/>
+  <x:INSPECTION_SHEET Name="decoy"/>
+</i:SOLIDWORKSINSPECTION>

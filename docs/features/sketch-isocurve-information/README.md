@@ -41,3 +41,19 @@ from 816 to 817, with no prior success lost. The remaining 89 inputs failed
 explicitly; both aggregate corpus commands therefore exited 101. Independent
 source readers verified EOF for all 817 accepted configurations and all 69
 roots of the native isocurve witness, including fourteen twenty-byte bodies.
+
+The [latest wire-contract audit](latest-schema-audit.json) checked clauses
+11.1679–11.1683 against the existing reader and independent fixtures. The new
+producer and consumer evidence preserves the current wire behavior: raw f64
+ratio bits, four unsigned-short words and a signed dimension ID. In particular,
+FFFF remains 65535 and reference mode 65535 is distinct from mode one. Native
+creation, point projection, spline rebuilding and cache refresh do not become
+load-time normalization rules. The complete integrated local gate retained
+under bitmap appearance includes the existing seven private and three public
+IsoCurve tests. Runtime geometry workflows and broader parity remain open.
+
+A fresh frozen-Source replay passed both fixture tests against the current
+upstream readers. It regenerated the complete graph/owned-edit packets and
+matched their existing expectations. The file, import and origin guards also
+passed, and the process exited successfully. This confirms the existing wire
+contract; it does not execute the newly described native geometry workflows.
