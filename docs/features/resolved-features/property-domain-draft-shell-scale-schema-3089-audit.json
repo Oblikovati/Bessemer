@@ -1,0 +1,60 @@
+{
+  "issue": 2,
+  "edition": "Edition 0.3091 \u00b7 2026-11-05 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "specification_sha256": "702066ce12efac835b25a18328ff25f2e2db2c0a01fe8b3206d73e17bff28ff0",
+  "clauses": [
+    "11.147",
+    "11.150",
+    "11.174"
+  ],
+  "evidence_joins": [
+    "C-3518",
+    "C-3519",
+    "C-3520"
+  ],
+  "snapshot_path": "docs/features/resolved-features/property-domain-draft-shell-scale-schema-3089-snapshot.md",
+  "snapshot_representation": "Literal selected sections normalized to LF, stripped boundary whitespace and joined with one blank line",
+  "snapshot_sha256": "09894d18b8009bb246f5964eaba3ffd4adefd9380844a1071d158da2fb201391",
+  "decisions": [
+    "Draft named settings remain full signed32 values at their existing gates. IsStepDraft belongs to raw_840, not raw_844; raw_844 is retained before native remapping. MultipleAngles/raw_870 nonzero always consumes its existing dynamic body offline; native STORE pointer-null conditions do not permit omitting that reached LOAD body.",
+    "Shell Outward/raw_818 remains a saved octet despite full32 current APIs. All256 values remain valid raw representations; the six tagged pointer occurrences and following unaligned tags are preserved. Native post-load list trimming is not executed on stored lists.",
+    "Scale IsUniform/raw_80c and ScaleType/raw_808 remain signed32 without Boolean/enum closure. The three vector_810 binary64 components remain independent, including nonfinite/signalling-NaN patterns; no replication, normalization, coordinate frame or unit is imposed. Legacy scalar-replication loading remains outside modern admission."
+  ],
+  "context_exclusions": [
+    "Draft archive-condition1 and older migration contexts remain excluded",
+    "Shell filtered STORE/history contexts and native post-load changes are not emulated",
+    "Pre0x489 scale scalar-replication grammar remains outside this review"
+  ],
+  "reader_sha256": {
+    "draft_records.rs": "2c0b9b1225d784abd08a33abc80a93dde2144739431df52171f7cae19326697f",
+    "draft_keepers.rs": "c7276fff98a8aa7cb7fe96459280a577df7e9a36e15edd0d0555f5c68aa7c3de",
+    "shell_records.rs": "67cd0f203bca4de49b9b6f9cb58bcdeb2def7d6e9100284fc88f804560ddf52f",
+    "scale_records.rs": "95452d8ca4c8ea197693a86cd4f453c4350bfcffb1b361e557b252b547b589ca"
+  },
+  "implementation_effect": "No production parser, public API, context/version admission, geometry or native provider behavior changed.",
+  "acceptance_credit": "No original Source execution, new native population, semantic accounting, application/geometry or complete parity credit.",
+  "verification": {
+    "status": "Clippy and21 focused tests passed",
+    "process_exit_code": 0,
+    "new_domain_tests": 3,
+    "all_property_domain_tests": 17,
+    "positive_golden_tests": 3,
+    "negative_count_regressions": 1,
+    "original_golden_records": 112,
+    "draft_signed_patches": 1116,
+    "draft_multiple_angle_patches": 110,
+    "shell_byte_patches": 4608,
+    "scale_signed_and_ieee_patches": 96,
+    "new_literal_patches": 5930,
+    "log_sha256": {
+      "target/property-domains-draft-shell-scale-focused-0.log": "ce155a68a8378b54b38272a6fc86a8c709009d8c20db3cc45df9a747fc3ef8f4",
+      "target/property-domains-draft-shell-scale-focused-1.log": "6451722eba452afba14f5e93862178db9e631d75cb2ab43c43bab67116ff25c9",
+      "target/property-domains-draft-shell-scale-focused-2.log": "665fd0acbd6039d52a2b941a8429682411babf3e726b9d3cf4f0dbda2d7b38eb",
+      "target/property-domains-draft-shell-scale-focused-3.log": "c4e141160cefb962ae4e31b3e50108c58feb5fcbd6ac0b423257358430563c6e",
+      "target/property-domains-draft-shell-scale-focused-4.log": "c1e4b3cb6afe56ada136e6e2fe5ceef4b66e99b540c9eed8449931f78e0e77a4"
+    },
+    "clippy_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test_sha256": "285e70243c6316c9fd979b21f9d815b1f14b869f06fe72852554cdd8358d6241",
+    "integration": "Excluded from PR212 headf506fa65; latest-cut full gate and remote acceptance required"
+  }
+}

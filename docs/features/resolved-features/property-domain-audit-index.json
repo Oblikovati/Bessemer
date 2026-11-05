@@ -76,6 +76,16 @@
         "11.338"
       ],
       "scope": "Property/domain decisions only within documented modern ordinary contexts; no whole-class/native/geometry acceptance"
+    },
+    {
+      "report": "docs/features/resolved-features/property-domain-draft-shell-scale-schema-3089-audit.json",
+      "report_sha256": "32752de1e35b2dbda6d3f31afc259d54808f5821467793b48a8b4e2060fb2c8f",
+      "clauses": [
+        "11.147",
+        "11.150",
+        "11.174"
+      ],
+      "scope": "Property/domain decisions only in existing modern contexts; no whole-class/native geometry acceptance"
     }
   ],
   "post_3077_changes": [
@@ -137,7 +147,7 @@
     {
       "edition": "0.3078",
       "literal_annex_i_row": "| 0.3078 | 2026-11-05 | Qualified handle cache paths, Draft, Shell and Scale properties in existing11.27/11.174/11.147/11.150; C-3517-C-3520; no coverage change. | Minor |",
-      "status": "Not yet audited in the property-domain review"
+      "status": "Draft/Shell/Scale property joins reviewed; handle-cache paths in11.27 remain unaudited"
     }
   ],
   "separate_wire_feature": {
@@ -146,5 +156,5 @@
     "scope": "Schema-1 twist grammar only; not a full audit of all sweep property qualifiers"
   },
   "acceptance": "Complete schema and Corliss parity remain open. Stored-field audits and independent fixtures do not establish native runtime setters, semantic geometry, application opening or full model acceptance.",
-  "integration": "PR191 merged ated15e0e8; later local work remains unpushed pending latest-cut gates"
+  "integration": "PR212 is open at exact verified headf506fa65; later local audit commits are excluded and remain unpublished"
 }
