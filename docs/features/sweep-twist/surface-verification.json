@@ -1,0 +1,43 @@
+{
+  "issue": 211,
+  "scope": "Complete modern ordinary-part sweep-reference-surface streams with fixture-only declared-wire twist primitives in original Source",
+  "source_snapshot": "surface-source-snapshot.json.gz",
+  "source_python_files": 6978,
+  "source_tests_passed": 12,
+  "process_exit_code": 0,
+  "surface_streams": 40,
+  "surface_originals": 10,
+  "surface_independent_edits": 30,
+  "surface_forms": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "unextended_source_surface_rejections": 40,
+  "combined_owned_streams": 88,
+  "combined_independent_edits_fresh_reversals_and_history": 66,
+  "public_tests_passed": 5,
+  "concurrent_workers": 8,
+  "hashes": {
+    "docs/features/sweep-twist/surface_twist_cases.py": "7c82e6af8d7e4282499f7998531f828ee4d5069a6b6fbcff1269c196026bd7a9",
+    "docs/features/sweep-twist/test_surface_twist_oracle.py": "e79b4c0bd5aaf0c2fc70b0e4e4a059fa612e00fb23c873168c3f32f6b68c5d69",
+    "docs/features/sweep-twist/freeze_owned_reference.py": "f0724fa18492f394bda4e364064056bb5575b9a10a6f66f94a51e84e9fffb49e",
+    "tests/fixtures/sweep-twist/surface-cases.bin": "9f25f075e6b240470d06a6e010dce797c07562a657d34434ba3de908d430cbb2",
+    "tests/support/sweep_twist_cases.rs": "1bca3c40f993474712cd2b8b8ea10fe07977b93811c0becf77f3874fece9f7c0",
+    "tests/resolved_sweep_twists.rs": "6a3c383583f11b9e3112026e06a74bb62d4a36cc5a07b0d022fcf1c410b22102",
+    "target/sweep-twist-surface-source.log": "ccc032e355241acb645a107b66817cd09a584762412bcd12d7ff52532ce04db1",
+    "target/sweep-twist-surface-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/sweep-twist-surface-document-tests.log": "05cae0d6c807554b140614d72d201bf143c5bb60c15fd466be7a00908d0b1ae6"
+  },
+  "pending": [
+    "Complete local gate including these later tests",
+    "Exact-head remote matrix and ThreadSanitizer before integration"
+  ],
+  "exclusions": [
+    "No original production Source twist reader or native populated twist producer acceptance",
+    "No geometry/application acceptance or complete schema parity"
+  ]
+}

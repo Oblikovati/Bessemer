@@ -53,7 +53,7 @@ map, then parsed 36 independently assembled field edits. Original functions read
 the surrounding features, inherited context and MBSM tail; the operation-local
 fixture callback reads only the documented twist primitives. Shared pointers keep
 object identity and cached-class pointers create distinct objects. Unextended
-original parsing rejected all 12 new streams. This remains fixture-only evidence;
+original parsing rejected all 12 new streams. This remains fixture-only evidence.
 The initial source snapshot and verification record preserve this historical scope.
 
 A later pinned run passed 11 tests, including byte-identical regeneration of all
@@ -64,3 +64,16 @@ stream/container reconstruction, reopen, 36 independent edits and fresh reversal
 An eight-worker test exercised concurrent edits of the 12 original immutable
 archives and confirmed source isolation. ThreadSanitizer and full-gate acceptance
 for this new reader remain pending; this stress test does not replace them.
+
+The surface extension passed 12 pinned Source tests with 6,978 Python files.
+Forty retained surface streams cover all six existing forms, fresh twist objects,
+shared twists, cached-class twists and three independent field edits per original.
+The unextended Source reader rejected all 40. Separate constructor checks kept all
+162 older bare surface graphs and 19 owned streams byte-identical.
+
+The public document tests now cover 88 complete streams and 66 edits, fresh
+reversals and revision-bound history results. They check completion, exact stored
+fidelity, coverage and diagnostics together. Context regressions reject
+unspecified, Simulation, assembly and routing-assembly archives. These later tests
+are excluded from the full gate running at 02b5676e and need the next full gate;
+remote matrix and ThreadSanitizer acceptance remain pending.

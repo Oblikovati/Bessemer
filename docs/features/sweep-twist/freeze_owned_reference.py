@@ -4,7 +4,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[3]
 FEATURE = Path(__file__).resolve().parent
-for folder in ('model-archives', 'stored-parameters', 'trim-edge-identifiers', 'sweeps'):
+for folder in ('model-archives', 'stored-parameters', 'trim-edge-identifiers', 'sweeps', 'reference-axes', 'reference-axis-owners', 'revolved-surfaces', 'sweep-reference-surfaces'):
     sys.path.insert(0, str(ROOT / 'docs/features' / folder))
 from pinned_reference_tests import run
 from freeze_owned_reference import retain_parameter_snapshot
@@ -17,7 +17,7 @@ def main() -> int:
     passed = run(FEATURE, 'twist_wire_fixtures', ('modelcomponents', 'sweeps'),
                  ('mfcobjects', 'swarchive', 'swcontainer', 'modelprefix', 'resolvedfeatures'))
     snapshot = FEATURE / 'fixture-reference-snapshot.json'
-    retain_parameter_snapshot(snapshot.read_bytes(), 'owned-source-snapshot', FEATURE)
+    retain_parameter_snapshot(snapshot.read_bytes(), 'surface-source-snapshot', FEATURE)
     snapshot.unlink()
     return 0 if passed else 1
 

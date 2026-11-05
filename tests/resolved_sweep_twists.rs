@@ -7,7 +7,7 @@ use bessemer::model_archives::{
     ConfigurationId, ModelArchiveLimits, ModelFieldValue, ModelObjectRecord,
     PartResolvedFeaturesArchive, StoredDouble,
 };
-use sweep_twist_cases::{OwnedTwistCase, owned_twist_cases};
+use sweep_twist_cases::{OwnedTwistCase, complete_twist_cases as owned_twist_cases};
 
 const STREAM: &str = "Contents/Config-0-ResolvedFeatures";
 const LIMITS: ModelArchiveLimits = ModelArchiveLimits {
@@ -155,9 +155,7 @@ fn published_sweep_twists_support_concurrent_isolated_edits() {
     concurrent_twist_edits(&archives);
 }
 
-#[test]
-fn rejected_sweep_twist_field_types_leave_source_and_document_unchanged() {
-    let case = owned_twist_cases().remove(0);
+fn assert_rejected_twist_field_type(case: &OwnedTwistCase) {
     let document = document_with(case.raw);
     let original = document.to_bytes().unwrap();
     let archive = parsed(&document);
@@ -216,4 +214,11 @@ fn assert_twist_result_contract(
     assert_eq!(edit.coverage().typed_fields, edit.archive().fields().len());
     assert_eq!(edit.coverage(), edit.archive().coverage());
     assert_eq!(edit.diagnostics(), source.diagnostics());
+}
+
+#[test]
+fn rejected_sweep_twist_field_types_leave_source_and_document_unchanged() {
+    for group in owned_twist_cases().as_chunks::<4>().0 {
+        assert_rejected_twist_field_type(&group[0]);
+    }
 }

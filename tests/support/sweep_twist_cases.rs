@@ -56,3 +56,12 @@ pub fn owned_twist_cases() -> Vec<OwnedTwistCase> {
         48,
     )
 }
+
+pub fn complete_twist_cases() -> Vec<OwnedTwistCase> {
+    let mut cases = owned_twist_cases();
+    cases.extend(read_twist_cases(
+        include_bytes!("../fixtures/sweep-twist/surface-cases.bin"),
+        40,
+    ));
+    cases
+}
