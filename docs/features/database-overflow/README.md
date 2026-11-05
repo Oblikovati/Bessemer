@@ -34,12 +34,26 @@ Then come the complete bucket page, each `<Q` page identifier and complete page,
 and the expected key and value bytes. The packet framing is a test format.
 
 ```text
-python -B -X utf8 -m unittest discover -s docs/features/database-overflow -p test_writer_pages.py -v
+python -B -X utf8 -m unittest discover -s docs/features/database-overflow -p test_*.py -v
 python -B -X utf8 docs/features/database-overflow/freeze_writer_pages.py
 ```
 
+The native search extracted 2,486 database streams from all 842 distinct files
+in the 906-case corpus without extraction failures. A structural candidate scan
+found 5,140 overflow cells with complete key/value chains and matching value-start
+checkpoints. Keys have lengths 3 or 36; none cross a page boundary. One 4,380-byte
+value crosses two pages.
+
+Three complete native database streams are retained with literal reviewed key
+and value ranges and separate expected payload files. The two-page value uses
+stream ranges `[16438,20480)` and `[20488,20826)`. The tests compare these direct
+ranges with metadata-directed reconstruction. All eight fixture tests passed.
+The compressed census and `native-census-verification.json` retain the wider
+search evidence. Physical page identity times 4,096 matches these selected
+streams; this does not establish a universal engine/provider mapping.
+
 Production admission, isolated edit/reopen/reversal, malformed graph and resource
-checks remain required. Native acceptance also needs a populated installed
-overflow sample with independently checked spans. These fixtures do not validate
+checks remain required. Native keys spanning pages still need independent
+evidence. These fixtures do not validate
 file-wide indexing, allocation, transactions, commits, geometry or application
 opening. The humanizer skill is unavailable; maintainer prose review is pending.
