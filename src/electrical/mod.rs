@@ -1,12 +1,14 @@
 //! Electrical project ZIP32 carriers and lossless ASCII Archive.ini lexical records.
 mod carrier;
 mod edit;
+mod file_fields;
 mod ini;
 mod projects;
 mod types;
 mod userdata;
 use crate::composer::{ComposerArchive, ComposerCompression, ComposerMember};
 use crate::{BessemerError, FailureClass, Result};
+pub use file_fields::*;
 pub use ini::*;
 pub use projects::*;
 pub use types::*;

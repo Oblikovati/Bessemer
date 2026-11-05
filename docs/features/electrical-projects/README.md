@@ -115,7 +115,9 @@ rather than the affected readback. The supplied reference code was not changed.
   catalog/project rows, separate versions and every literal database/drawing
   match. The [userdata views](../electrical-userdata/README.md) also retain exact
   SQL selection, lexical ID matches and the selected ID gate. Complete native
-  provider/delegate state and typed file-load mappings remain separate work.
+  provider/delegate state remains separate work. The
+  [direct file-field map](../electrical-file-fields/README.md) retains all 38
+  verified reader/destination bindings without applying guessed conversions.
 - Preserve opaque EWG bodies and qualify native loader acceptance, migrations,
   SQL/application validity and geometry separately.
 

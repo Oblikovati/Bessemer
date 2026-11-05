@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added complete Electrical direct field-read maps with observed reader kinds, runtime destinations, unchanged SQLite values and preserved unmatched columns. (#231)
+
 - Added bounded Electrical userdata queries with exact SQLite key comparisons, complete lexical object-ID matches and the documented signed-ID gate. (#231)
 
 - Added complete bounded Electrical project/catalog records, literal database and drawing relationships, and observed-build file-type constant names. (#231)

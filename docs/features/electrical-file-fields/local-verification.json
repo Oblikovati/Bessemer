@@ -1,0 +1,52 @@
+{
+  "issue": 231,
+  "source_base_commit": "1393153206c9075e62a6bcc9ccd6a65e13f4e1b2",
+  "source_state": "New field-map working tree, exact files below",
+  "source_sha256": {
+    "src/electrical/mod.rs": "cb89ba8aa20bbac5e644ec6113837ed4d6c0cc0a6f5347843e88ad3185e576ca",
+    "src/electrical/file_fields/bindings.rs": "7b84efd464636f49e03970e101ae8c04f451af5be9a980cd05f20f73ee96f1a5",
+    "src/electrical/file_fields/mod.rs": "59eb2dff92ed1044fdbe90e5a3a6508a5ee23e2c520fcca86bedb90bd4860b8a",
+    "src/electrical/file_fields/types.rs": "279401654282561e1d393e8e223d2d3d3a2fe8146076aa5e9b716a7773d9cb11",
+    "tests/electrical_file_fields.rs": "85ffd5264168affc5de19cf50c486918dcf76cf4a9dfdc695efa43bfdc50248d",
+    "tests/electrical_file_fields/fixture.rs": "a4c55a4cba169da2401733c6a1c97b563669da7b975ffdba43a740fe8d77a342",
+    "tests/electrical_file_fields/projection.rs": "342290d1a002dfd91a9eea0905612c04a8b697a45f7bd373e2076ddfe79e0881"
+  },
+  "reference_sha256": {
+    "../inventor-interface/solidworks/research/electrical-file-field-native-evidence.json": "9e036a8b3de9009909aab4e77611ca4df65a2fa26915f386412f47cbe93e5d96",
+    "../inventor-interface/docs/solidworks-file-format/specification.md": "ae66cdab7072bf3d60294eda87b5296bdb810e34eb1348cc21ae1aef669a8840"
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "field_map_tests": {
+    "passed": 8,
+    "failed": 0,
+    "terminal_exit_code": 0
+  },
+  "project_regressions": {
+    "passed": 12,
+    "failed": 0
+  },
+  "python_fixture_tests": {
+    "passed": 3,
+    "terminal_exit_code": 0
+  },
+  "clippy": {
+    "command": "cargo clippy --lib --test electrical_file_fields --test electrical_records --locked -- -D warnings",
+    "terminal_exit_code": 0
+  },
+  "native_rows": 17,
+  "owned_complete_rows": 2,
+  "missing_column_cases": 38,
+  "required_fields": 38,
+  "native_range_verification": "82 complete original PE ranges; independent static file-offset comparisons, not REA byte Evidence",
+  "log_sha256": {
+    "electrical-file-fields-rust-tests.log": "3d7920b291ace90508262a8503b897fe1df1db89a4011e8c7a870295106b57ce",
+    "electrical-file-fields-final-rust-tests.log": "ab9d37c87099f6542070ec89cefccc7e1fcb4dd6eabb8ab5fd1d9ec87f61c622",
+    "electrical-file-fields-clippy.log": "5a9a442f5e0db707f1b6d26e9ef05e227e48e119f6d39d3aa471595be3577031",
+    "electrical-file-fields-python-tests.log": "d8ecce867a0e4fe3e9d6adb5b2e5314bec19ed25d70f3bf04847d59693e825f6",
+    "electrical-file-fields-process-build.log": "f946af679499461b099f793a84e0ee269ccf001fc6bde236e48e4e928e8bfc1b"
+  },
+  "full_suite": "Pending for this source; active gate on earlier 13931532 excludes direct file-field maps",
+  "provider_conversions": false,
+  "native_loader_execution": false,
+  "geometry_acceptance": false
+}

@@ -72,6 +72,7 @@ python -m unittest discover -s docs/features/electrical-userdata -p 'test_*.py' 
 cargo test --test electrical_userdata --test electrical_records --test sqlite_images --locked
 ```
 
-Full userdata delegate/provider state, the 38-field native file-load projection,
-database mutation and broader Electrical/application schema parity remain
+The [direct file-field map](../electrical-file-fields/README.md) now retains the
+38 verified reader/destination bindings. Full userdata delegate/provider state,
+native file-loader conversion effects, database mutation and broader Electrical/application schema parity remain
 incomplete. The humanizer skill is unavailable; its prose pass remains for review.

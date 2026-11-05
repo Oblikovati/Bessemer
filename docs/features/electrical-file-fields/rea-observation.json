@@ -1,0 +1,17 @@
+{
+  "skill": "C:/Users/vmiguel/.agents/skills/reverse-engineer-anything/SKILL.md",
+  "target": "C:/Program Files/SOLIDWORKS Corp/SOLIDWORKS Electrical/bin/ewadobject.dll",
+  "target_sha256": "a7162b856edf13280dab542fd5b7feb1c377b659c5cad2ef910bc3cebea33299",
+  "open_binary": "Succeeded; native PE x86_64 identity matched C-265",
+  "requested_read": {
+    "address": "0x180442850",
+    "length": 999,
+    "result": "MCP call timed out after 300 seconds; no REA byte evidence credited"
+  },
+  "prior_session_snapshot": "target/database-index-prior-rea-session.json",
+  "prior_close": "Snapshot written; initial cleanup reported a locked private cache file",
+  "final_close": "close_binary returned success; binary_session confirmed open=false and no observed analysis activity",
+  "offline_verification": "82 complete original PE byte ranges authenticated separately in native-byte-verification.json; this is not REA Evidence",
+  "native_execution": false,
+  "configuration_changes": false
+}

@@ -98,6 +98,8 @@ cargo test --test electrical_records --test sqlite_images --locked
 The [userdata views](../electrical-userdata/README.md) now provide the documented
 two-part SQL predicate, lexical object-ID matches and selected signed-ID gate.
 Remaining work includes complete native userdata delegate/provider state, the
-typed file-load projection (14.26), database mutation and native migration/loader
-acceptance. Overall schema parity remains
+provider effects of the typed file loader, database mutation and native
+migration/loader acceptance. The [direct file-field map](../electrical-file-fields/README.md)
+now retains all 38 verified reader/destination bindings with their original
+stored values. Overall schema parity remains
 incomplete. The humanizer skill is unavailable; its prose pass remains for review.

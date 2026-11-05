@@ -21,6 +21,9 @@ occurrences, file-type constants and whole-operation bounds.
 The [userdata query and ID-gate views](docs/features/electrical-userdata/README.md)
 retain exact two-part SQLite selection, separate lexical object-ID matches and
 the documented signed-ID transition without guessing provider conversions.
+The [direct file-field map](docs/features/electrical-file-fields/README.md) pairs
+all 38 observed typed read requests with unchanged stored values and distinguishes
+runtime fields from reused temporaries.
 
 `bessemer::compound` reads and reconstructs MS-CFB version-3/4 carriers and
 replaces existing streams on isolated snapshots, including mini-stream cutoff
