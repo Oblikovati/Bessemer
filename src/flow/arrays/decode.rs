@@ -7,8 +7,11 @@ pub(super) fn read(
 ) -> Result<FlowMapArrays> {
     validate_options(options)?;
     let compressed = record_payload(source, id)?;
-    let decoded = crate::bounded_zlib::inflate(compressed, options.maximum_decoded_bytes)
-        .map_err(inflate_failure)?;
+    let decoded = super::super::payload_codec::inflate_zlib(
+        compressed,
+        options.maximum_decoded_bytes,
+        "Flow record 433",
+    )?;
     let (selector, count) = array_shape(&decoded, options)?;
     let (first, second) = split_arrays(&decoded, selector, count);
     Ok(FlowMapArrays {
@@ -24,15 +27,7 @@ pub(super) fn read(
 }
 
 pub(super) fn record_payload<'a>(source: &'a FlowCarrier, id: &FlowRecordId) -> Result<&'a [u8]> {
-    let span = super::super::edit::selected_span(source, id)?;
-    if span.identifier != 433 {
-        return Err(array_failure(
-            "record",
-            FailureClass::Invalid,
-            format!("identifier {}; expected 433", span.identifier),
-        ));
-    }
-    Ok(&source.as_bytes()[span.start + 12..span.end])
+    super::super::payload_codec::record_payload(source, id, 433, "Flow record 433")
 }
 
 fn validate_options(options: FlowArrayOptions) -> Result<()> {
@@ -133,22 +128,4 @@ fn read_array(bytes: &[u8]) -> Arc<[i32]> {
 
 fn signed_word(bytes: &[u8]) -> i32 {
     i32::from_le_bytes([bytes[0], bytes[1], bytes[2], bytes[3]])
-}
-
-fn inflate_failure(error: crate::bounded_zlib::BoundedZlibError) -> BessemerError {
-    let class = if matches!(
-        error,
-        crate::bounded_zlib::BoundedZlibError::LimitExceeded { .. }
-    ) {
-        FailureClass::Invalid
-    } else {
-        FailureClass::Integrity
-    };
-    array_failure(
-        "zlib stream",
-        class,
-        format!(
-            "{error:?}; expected one complete checksum-validated RFC 1950 stream within the configured output bound"
-        ),
-    )
 }

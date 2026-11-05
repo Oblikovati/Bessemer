@@ -1,6 +1,4 @@
 use super::*;
-use flate2::{Compression, write::ZlibEncoder};
-use std::io::Write;
 
 struct SelectedCell {
     group: FlowArrayGroup,
@@ -84,7 +82,7 @@ fn edited_carrier(arrays: &FlowMapArrays, cell: &SelectedCell) -> Result<FlowCar
     }
     let mut decoded = arrays.decoded.to_vec();
     decoded[cell.offset..cell.offset + 4].copy_from_slice(&cell.after.to_le_bytes());
-    let compressed = encode_zlib(&decoded)?;
+    let compressed = super::super::payload_codec::encode_zlib(&decoded, "Flow record 433")?;
     arrays.source.replace_payload(&arrays.record, &compressed)
 }
 
@@ -120,20 +118,6 @@ fn cell_history(
             FlowPayloadRelation::Derived
         },
     }
-}
-
-fn encode_zlib(bytes: &[u8]) -> Result<Vec<u8>> {
-    let mut encoder = ZlibEncoder::new(Vec::new(), Compression::fast());
-    encoder.write_all(bytes).map_err(encode_failure)?;
-    encoder.finish().map_err(encode_failure)
-}
-
-fn encode_failure(error: std::io::Error) -> BessemerError {
-    array_failure(
-        "zlib encoding",
-        FailureClass::Integrity,
-        format!("{error}; expected complete RFC 1950 encoding"),
-    )
 }
 
 fn verify_decoded_edit(

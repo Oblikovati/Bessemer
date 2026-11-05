@@ -3,6 +3,7 @@ mod arrays;
 mod decode;
 mod edit;
 mod header;
+mod payload_codec;
 mod types;
 use crate::{BessemerError, FailureClass, Result};
 pub use arrays::*;
