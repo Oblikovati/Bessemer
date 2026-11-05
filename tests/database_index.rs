@@ -1,3 +1,4 @@
+//! Complete conditional hash file graphs, independent edits and fresh reversals.
 use bessemer::database_hash::{HashBufferCompletion, HashBufferRelation};
 use bessemer::database_index::*;
 use bessemer::{FailureClass, Result};
