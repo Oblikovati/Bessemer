@@ -1,0 +1,141 @@
+{
+  "issue": 226,
+  "status": "Writer storage framing recovered; production overflow support not yet implemented",
+  "target_executed": false,
+  "binary_sha256": "9ed14e1fe283219313fce71eefdf6f817fabf53743297b639f6821542e358b83",
+  "provider": "Ghidra12.1.4 via reverse-engineer-anything REA",
+  "retained_evidence": "docs/features/database-hash/overflow-native-rea-evidence.json.gz",
+  "retained_gzip_sha256": "f61402a2cf6b4d4e73925a6947a4ea720f69ace48ff36f87772f2ef28022156b",
+  "uncompressed_sha256": "0f61bdc8f033c49302e3a247e4013d04cc30cdf849136417846d938d5a44bd99",
+  "selected_dossiers": 8,
+  "source_file_ranges": [
+    {
+      "procedure": "0x180014600",
+      "evidence_id": "ev_0678016f0217ad0f16063dd55189c607af24969bf6e923330ae59520ba657447",
+      "body_bytes": 723,
+      "spans": [
+        {
+          "start": "0x180014600",
+          "end_inclusive": "0x1800148d2",
+          "file_offset": 80384,
+          "bytes": 723,
+          "sha256": "a0c0f701d6493dda501379f5ca699d23f1d6944590c02fb904eee5c8c6d3053c"
+        }
+      ]
+    },
+    {
+      "procedure": "0x180013580",
+      "evidence_id": "ev_21446183d904a08f04c026f3290ac8f379199cb5d71a7046c3d9779b488a20db",
+      "body_bytes": 97,
+      "spans": [
+        {
+          "start": "0x180013580",
+          "end_inclusive": "0x1800135e0",
+          "file_offset": 76160,
+          "bytes": 97,
+          "sha256": "e292cd72fc1ace7d2be4593a33b9f8f2f44a47632dd7e2dafc609d77d3b2a65d"
+        }
+      ]
+    },
+    {
+      "procedure": "0x180017340",
+      "evidence_id": "ev_261047ab0354e3672164da6c19dc106e585beab438e689ac34ad1b24bccd9868",
+      "body_bytes": 415,
+      "spans": [
+        {
+          "start": "0x180017340",
+          "end_inclusive": "0x1800174de",
+          "file_offset": 91968,
+          "bytes": 415,
+          "sha256": "7b3eb64691f2a60c37f3c3d45c69f117ee35d93bdfc321130ecee9ee5f9f14d5"
+        }
+      ]
+    },
+    {
+      "procedure": "0x180014a50",
+      "evidence_id": "ev_471fca9f5ae1ccd178ee0866063577040d404d62d158acd480cec710df37880b",
+      "body_bytes": 387,
+      "spans": [
+        {
+          "start": "0x180014a50",
+          "end_inclusive": "0x180014bd2",
+          "file_offset": 81488,
+          "bytes": 387,
+          "sha256": "c0074595143f98166a0572f0798ef541f51f58913e8b53aaca89cf31f61a3830"
+        }
+      ]
+    },
+    {
+      "procedure": "0x1800174e0",
+      "evidence_id": "ev_76a8c23b7fb03c43822fcb0288048a5f0272bed6651a8307d4415e378261b27d",
+      "body_bytes": 241,
+      "spans": [
+        {
+          "start": "0x1800174e0",
+          "end_inclusive": "0x1800175d0",
+          "file_offset": 92384,
+          "bytes": 241,
+          "sha256": "dd82248881c0bc440070a9ac73a08e9a0f75629d89ed07450199ea8c4ec99a31"
+        }
+      ]
+    },
+    {
+      "procedure": "0x180016340",
+      "evidence_id": "ev_85bb575743f41fb23f4aac00b687a20c7bc8816def24c46f4b150f344e861a99",
+      "body_bytes": 301,
+      "spans": [
+        {
+          "start": "0x180016340",
+          "end_inclusive": "0x18001646c",
+          "file_offset": 87872,
+          "bytes": 301,
+          "sha256": "59261bc4d0dd8ea099886a3bbc23851d73e44dfc45b72d9866d6ad1d574ca23f"
+        }
+      ]
+    },
+    {
+      "procedure": "0x1800161f0",
+      "evidence_id": "ev_938973962034604feefd06b5124d7a4bba0c1b65e1ce9914daa77c11371d6404",
+      "body_bytes": 326,
+      "spans": [
+        {
+          "start": "0x1800161f0",
+          "end_inclusive": "0x180016335",
+          "file_offset": 87536,
+          "bytes": 326,
+          "sha256": "b68ba44e0ea534d0c7a3b38b0867e53f20d0538522031c01b40414161b286b09"
+        }
+      ]
+    },
+    {
+      "procedure": "0x1800148e0",
+      "evidence_id": "ev_fdbba2763d2248182a733fb86ecd664f9cc1f7bbdff734ce6c7e7135508791d3",
+      "body_bytes": 359,
+      "spans": [
+        {
+          "start": "0x1800148e0",
+          "end_inclusive": "0x180014a46",
+          "file_offset": 81120,
+          "bytes": 359,
+          "sha256": "8a88f53506388be9f5636579eedcb5ca0264cd726ecce268d65598832fabc82e"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    "Caller17340 requests a full inline allocation first, then26-byte cell-only storage before calling overflow writer14600. The call passes key pointer/length and value pointer/length plus a null terminator; exact calling convention retained in assembly.",
+    "Writer14600 initializes the first page next link to0, starts key bytes at18 and limits each copy by actual page end P. Continuation pages initialize next link0, start at8 and copy only to P. Copy helper13580 writes from first pointer to second.",
+    "After all key bytes, writer records the current page identifier and unsigned16 cursor in both cell state and first overflow page bytes8..17. Value bytes resume at that cursor and continue from8 on later pages.",
+    "Key reader14a50 independently requests min(remainingKey,DWORD(P-8)) even for first-page offset18. This confirms an actual writer/reader distinction, not permission to normalize native reader requests silently.",
+    "Value reader148e0 begins with stored value page and cursor, uses DWORD(P-cursor) first, then DWORD(P-8). It can return status0 when next page0 ends the chain while bytes remain; complete required length remains an offline admission invariant."
+  ],
+  "decision": "A complete stored-page grammar can now be distinguished from native key-reader requests. Future file decoding must require bounded complete key/value byte counts, valid metadata/cursor, acyclic supplied page graph and independently expected spans. No engine callback or native status alone establishes completeness.",
+  "remaining": [
+    "Independent boundary fixtures and parser/constructor round trips across page boundaries",
+    "Populated native overflow sample with externally checked key/value spans",
+    "Explicit provider/page-id graph admission and ownership/coverage/error contracts",
+    "Matched writer vararg and engine extent constraints through boundary tests",
+    "No application, transaction, allocator, commit or durability acceptance"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending"
+}
