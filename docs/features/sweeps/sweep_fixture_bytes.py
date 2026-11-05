@@ -85,20 +85,21 @@ def data_prefix(mapping: WireMap, version: int, identities: dict[str, int], rich
     return raw+pointer_array(mapping, version, identities, 2 if rich else 0, rich)
 
 
-def sweep_data(mapping: WireMap, version: int, identities: dict[str, int], rich: bool, options: SweepOptions) -> bytes:
+def sweep_data(mapping: WireMap, version: int, identities: dict[str, int], rich: bool, options: SweepOptions,
+               twist: Callable[[WireMap], bytes] | None = None) -> bytes:
     """Retain the complete direct data body and versioned final word; e.g. sweep_data(mapping, 19000, ids, True, options)."""
     raw = data_prefix(mapping, version, identities, rich, options)
     raw += struct.pack('<iBB2d3i2diBBid', -1, 251, options.enabled, 1.5, 2.5, options.second_mode,
         -2, -3, 3.5, 4.5, -4, 250, 249, options.radial, 5.5)
-    raw += bytes(2)+(endpoint(mapping, version, identities, True) if rich else bytes(2))+bytes([248])
+    raw += (twist(mapping) if twist else bytes(2))+(endpoint(mapping, version, identities, True) if rich else bytes(2))+bytes([248])
     raw += pointer_array(mapping, version, identities, int(rich), rich)+pointer_array(mapping, version, identities, 0, rich)
     return raw+(struct.pack('<i', -6) if version > 0x27d9 else b'')
 
 
 def sweep_suffix(mapping: WireMap, version: int, identities: dict[str, int], rich: bool,
-                  options: SweepOptions, edited: bool) -> bytes:
+                  options: SweepOptions, edited: bool, twist: Callable[[WireMap], bytes] | None = None) -> bytes:
     """Construct each optional dimension predicate independently; e.g. sweep_suffix(mapping, 19000, ids, True, options, False)."""
-    raw = sweep_data(mapping, version, identities, rich, options)+struct.pack('<i5B', 12345 if edited else -5, 247, 246, 245, 244, 243)
+    raw = sweep_data(mapping, version, identities, rich, options, twist)+struct.pack('<i5B', 12345 if edited else -5, 247, 246, 245, 244, 243)
     if options.enabled:
         raw += dimension(mapping, version, identities, 'moDisplayDistanceDim_c')
         if options.second_mode == 3:
@@ -113,7 +114,7 @@ def sweep_suffix(mapping: WireMap, version: int, identities: dict[str, int], ric
 
 
 def sweep_object(version: int, rich: bool, options: SweepOptions, first_slot: int = 0, edited: bool = False,
-                 name: str = 'moSweep_c') -> tuple[bytes, int]:
+                 name: str = 'moSweep_c', twist: Callable[[WireMap], bytes] | None = None) -> tuple[bytes, int]:
     """Compose a complete feature in either inherited context; e.g. sweep_object(19000, True, SweepOptions(), 96)."""
     if first_slot < 0 or not 0 <= options.enabled <= 255:
         raise ValueError(f'sweep slot/enabled {(first_slot, options.enabled)}; expected nonnegative slot and u8 enablement')
@@ -122,7 +123,7 @@ def sweep_object(version: int, rich: bool, options: SweepOptions, first_slot: in
     mapping = WireMap();mapping.slot = first_slot;identities: dict[str, int] = {}
     def contents() -> bytes:
         owner = mapping.slot
-        return body(mapping, version, rich, owner)+sweep_suffix(mapping, version, identities, rich, options, edited)
+        return body(mapping, version, rich, owner)+sweep_suffix(mapping, version, identities, rich, options, edited, twist)
     raw = mapping.new(name, contents)
     return raw, mapping.slot+1
 

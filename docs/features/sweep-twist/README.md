@@ -39,3 +39,11 @@ verification record. There is no new native-population, byte-accounting, applica
 geometry or full-parity credit. Full local and exact-head remote gates remain
 required before serial integration. No dependency, package version or release tag
 changed. Humanizer is unavailable; maintainer prose review remains pending.
+
+The complete-sweep fixture builder now accepts an optional operation-local twist
+pointer writer. Its default remains a null pointer. The pointer writer reserves
+separate class/object slots for fresh records, one object slot for cached-class
+records, and no slot for shared-object references. Focused tests check literal
+schema-1 tags, inherited map offsets, isolation between operations, invalid plans,
+and insertion into 16 complete sweep/cut bodies across the four version boundaries.
+These constructor tests do not establish parser acceptance or document edit coverage.
