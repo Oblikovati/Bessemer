@@ -91,8 +91,11 @@ and row projection. Their elapsed times were 30.35 and 19.60 seconds, with obser
 peak working sets of 115,613,696 and 114,618,368 bytes. These measurements do not
 claim a speedup over an earlier release. `local-verification.json` and
 `process-verification.json` retain the exact scope and hashes. Full-suite
-verification for this source is still pending; the earlier Electrical full gate
-does not cover the new SQLite dependency or implementation.
+verification also passed on source 8341361a: 4,393 tests passed, zero failed and
+233 were explicitly ignored across 347 result summaries. The proof is retained
+in `full-pr-gate-verification.json`. This foundation source excludes the later
+Electrical project-record and userdata implementations; their whole-suite checks
+are separate.
 
 ```powershell
 python -m unittest discover -s docs/features/sqlite-images -p 'test_*.py' -v

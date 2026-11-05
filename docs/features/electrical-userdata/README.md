@@ -64,7 +64,7 @@ denied. It includes eight-worker mixed reads and source-buffer mutation, exact
 query row-budget exhaustion. Two fresh processes reproduced every carrier,
 SQL/lexical result and ID transition byte for byte. `local-verification.json`
 and `process-verification.json` retain the exact source/log/output hashes.
-Full-suite validation for this source remains pending; the running gate on
+Full-suite validation for this source remains pending; the completed gate on
 8341361a covers the earlier SQLite foundation only.
 
 ```powershell
