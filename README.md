@@ -20,6 +20,8 @@ preserves optional identity presence and projects the documented binary-key cach
 precedence under explicit normal-return semantics.
 The [fixed settings arrays](docs/features/flow-fixed-settings/README.md) read records
 7/102 and edit existing raw slots while preserving integer and binary64 bits.
+The [diagnostic field projection](docs/features/flow-settings-fields/README.md)
+derives seven documented labels with explicit missing guard and floating-point context.
 
 `bessemer::electrical` reads and edits complete Electrical ZIP32 project carriers
 and lexical ASCII Archive.ini records. It preserves duplicate occurrences,

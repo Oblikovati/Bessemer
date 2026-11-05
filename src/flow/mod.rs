@@ -7,6 +7,7 @@ mod groups;
 mod header;
 mod payload_codec;
 mod settings;
+mod settings_fields;
 mod types;
 use crate::{BessemerError, FailureClass, Result};
 pub use arrays::*;
@@ -14,6 +15,7 @@ pub use fixed_settings::*;
 pub use groups::*;
 pub use header::*;
 pub use settings::*;
+pub use settings_fields::*;
 use std::sync::Arc;
 pub use types::*;
 

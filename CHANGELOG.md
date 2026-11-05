@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added seven Flow settings diagnostic projections with preserved stored bits and explicit unresolved integer-guard and floating-point prerequisites. (#241)
+
 - Added strict Flow record-7/102 settings-array reads and isolated slot edits with preserved integer and binary64 bit patterns. (#241)
 
 - Added Flow static-settings identity views and exact binary-GUID cache-selection projections with explicit normal-return and execution coverage. (#241)
