@@ -107,6 +107,10 @@ cargo audit
 ## Remaining scope
 
 This operation does not write SQLite cells or reconstruct application schemas.
+The [userdata-write investigation](../electrical-userdata-write/README.md)
+proved 680 native-copy logical edits and identified the need for exact source
+checkpoints; a production writer and its broader owned acceptance cases remain
+under #238.
 Project/drawing relationships, native file-load mappings and delegated userdata
 query selection remain under #231. Integrity checking does not verify foreign-key
 consistency, native migration/loader acceptance, EWG drawings or geometry. Those
