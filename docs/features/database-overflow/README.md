@@ -1,7 +1,23 @@
 # Supplied-page database overflow interoperability
 
-Feature #229 tracks complete overflow key/value storage operations. The current
-public `database_hash` codec still accepts inline cells only.
+Feature #229 tracks complete overflow key/value storage operations.
+`database_overflow::OverflowPayload` reads complete explicitly supplied chains
+under the `InstalledWriter` profile. The separate `database_hash` bucket codec
+still accepts inline cells only.
+
+Callers supply nonzero provider page identities, complete images, an explicit
+engine extent and the cell's key/value lengths. No page-to-file mapping is
+inferred. Every supplied page must belong to the one complete chain; duplicate,
+missing, cyclic, extra and prematurely terminated pages fail. The value-start
+checkpoint must equal the exact key end, including the untruncated cursor.
+Byte, page and payload budgets are checked before owned payload allocation.
+
+`edit_value` replaces an existing same-length value on private copies and
+reparses the complete result. It returns immutable source/result checkpoints,
+changed/no-op completion, exact local coverage, zero reparse error, exclusions
+and page-ID/byte-ordered history covering every supplied page. Keys, metadata,
+links and opaque tails remain unchanged. Length changes and page allocation
+require further work; this operation does not simulate an engine update.
 
 The independent fixture corpus follows the stored-page writes recovered from
 installed `sldDBImplu.dll`, rather than the distinct native key-reader callback
@@ -52,8 +68,15 @@ The compressed census and `native-census-verification.json` retain the wider
 search evidence. Physical page identity times 4,096 matches these selected
 streams; this does not establish a universal engine/provider mapping.
 
-Production admission, isolated edit/reopen/reversal, malformed graph and resource
-checks remain required. Native keys spanning pages still need independent
-evidence. These fixtures do not validate
+Fourteen focused Rust tests passed, including all 111 admitted owned chains,
+six wrapped-cursor rejections, three native chains, exact/one-below budgets,
+malformed pages and graph checks, input isolation, shared concurrent edits and
+page-order independence. The two-page native value was edited inside a complete
+owned containing document, reopened and reversed to exact original file bytes,
+preserving unrelated streams. Two fresh processes emitted identical 2,728,863-byte
+packets; all original and edited pages matched independent expected spans.
+
+The full local and exact-head remote gates remain required. Native keys spanning
+pages still need independent evidence. These operations do not validate
 file-wide indexing, allocation, transactions, commits, geometry or application
 opening. The humanizer skill is unavailable; maintainer prose review is pending.

@@ -1,0 +1,49 @@
+{
+  "issue": 229,
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "rust_tests_passed": 14,
+  "rust_tests_failed": 0,
+  "owned_cases_admitted": 111,
+  "cursor_wrap_cases_rejected": 6,
+  "native_cases": 3,
+  "focused_scope": [
+    "Complete explicit installed-writer chains with independent key/value expectations",
+    "114 fixed-length edit/reparse/reversal operations, with independent complete page images",
+    "One complete containing-document reopen/reversal using the retained native two-page value",
+    "Exact/one-below bytes/pages/payload limits, malformed extents, duplicate/missing/extra/cyclic/early-ended graphs and bad checkpoints",
+    "All public types Send/Sync,8 shared workers and input-order determinism",
+    "Two fresh processes with independent comparison of2728863 output bytes"
+  ],
+  "source_sha256": {
+    "src/database_overflow/decode.rs": "0299ee0404b1655fd06677cdf45deab2301f81f742e195575a585bc1579a94b0",
+    "src/database_overflow/edit.rs": "f84bc560694fb7c4ba844e0185aa526e709d2869e164bf20c5579469869e94a2",
+    "src/database_overflow/mod.rs": "8acd702e05099eff69fdd495e07b913b865bdf08f16deb26370a08e391a27553",
+    "src/database_overflow/types.rs": "eb1313d91297bb18c4acfdd01d08462ecffaecd59ea17f65c4c0c31ebd80f765",
+    "src/lib.rs": "b33c3b707304b0b3cc10a374dad5187f55fb9ae06265d16a5cbb4a64ea74ee61",
+    "tests/database_overflow.rs": "6de332b07db37e060168f698e4b0d9ec8e46bba8ab4d3eea082e86b22dd3ccf1",
+    "tests/database_overflow/documents.rs": "0a852691d1be56247e1834c04ca48fc5fd73880c240eedf989ae9c29389c8de6",
+    "tests/database_overflow/packet.rs": "a25ded17626dc45c0dc640ddaa5dd4d32f3ab02b58f8eed346a3eaed7a6f5e2c"
+  },
+  "logs_sha256": {
+    "database-overflow-library-clippy-v2.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "database-overflow-integration-clippy-v3.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "database-overflow-integration-tests-v3.log": "4200974d2fcf77c0093f4fd0d52929859869b41c9ab2608e3d32dfc165820ba8",
+    "database-overflow-final-format-check.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "database-overflow-size-audit.log": "d111bb94987255f2ec25a9bb7fa79a99ae0ff61cf67833bfc110ea6c1403907a"
+  },
+  "function_and_file_caps_passed": true,
+  "formatter_exit_code": 0,
+  "library_clippy_exit_code": 0,
+  "integration_clippy_exit_code": 0,
+  "unsafe_code": "Forbidden",
+  "dependencies_changed": false,
+  "full_pr_gate": "Required before push; not credited from focused tests",
+  "exclusions": [
+    "Caller supplies identities, lengths and engine extent; no universal file page mapping or bucket overflow admission",
+    "Variable-length changes, page allocation and key edits require further work",
+    "Wider5140-cell native Rust edit census remains required",
+    "No original producer target execution, geometry, application, transaction or commit/durability acceptance"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending"
+}

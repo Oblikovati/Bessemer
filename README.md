@@ -20,6 +20,10 @@ wrapping and arithmetic-shift behavior when converting those stored words.
 replaces fixed-length values with local coverage and history. See the
 [hash-buffer evidence](docs/features/database-hash/README.md) for chain checks,
 native-page results and the remaining overflow/file-graph work.
+`bessemer::database_overflow` reads complete explicitly supplied writer page
+chains and replaces existing same-length values, retaining every other page
+byte. See the [overflow evidence](docs/features/database-overflow/README.md) for
+page-identity requirements, native samples and the remaining file/allocator work.
 `bessemer::deferred_values` reads and constructs the documented conditional
 deferred-object MsgPack blobs with explicit byte-order control, ordered duplicate
 pairs and raw float/string/extension bytes. See the

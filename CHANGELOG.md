@@ -52,6 +52,8 @@
 
 ### Added
 
+- Added complete supplied-writer overflow key/value decoding and isolated fixed-length value edits with exact local coverage and page-qualified history. (#229)
+
 - Added bounded conditional deferred-value MsgPack reading and construction for all 17 installed writers and both declared byte-order modes. (#227)
 
 - Added bounded inline hash-page reconstruction and isolated value replacement with raw chain metadata, local coverage and history. (#224)
