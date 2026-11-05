@@ -15,6 +15,9 @@ payloads and edit existing signed cells with explicit runtime-count coverage.
 The [record-404 grouped-word view](docs/features/flow-groups/README.md) reads versions
 3–6 under explicit compression contexts and edits stored words, wide values,
 flags and auxiliaries while preserving other bytes and complete history.
+The [static-settings identity and selection view](docs/features/flow-settings/README.md)
+preserves optional identity presence and projects the documented binary-key cache
+precedence under explicit normal-return semantics.
 
 `bessemer::electrical` reads and edits complete Electrical ZIP32 project carriers
 and lexical ASCII Archive.ini records. It preserves duplicate occurrences,
