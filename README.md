@@ -89,6 +89,9 @@ map assumption and edits raw wide patterns with context-bound identities.
 The [object-record view](docs/features/flow-object-records/README.md) reads record
 304 versions 0–7 and edits existing signed fields and opaque bytes, keeping
 counted rows separate from the conditional legacy trailer.
+The [auxiliary wide-value view](docs/features/flow-aux-wide-values/README.md) reads
+record 444's whole-zlib versions 0–1 and edits existing raw patterns and the
+version-zero discarded member while retaining their serialized values.
 The [legacy link view](docs/features/flow-link-records/README.md) reads record 402
 and edits existing fields while preserving code bytes, sentinel references and versioned tails.
 The [legacy table view](docs/features/flow-legacy-tables/README.md) reads records

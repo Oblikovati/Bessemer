@@ -1,6 +1,12 @@
 //! Complete owned record444 bodies retain raw values discarded by the native reader.
+#[path = "flow_aux_wide_values/api.rs"]
+mod api;
 #[path = "flow_field_values/packet.rs"]
 mod packet;
+#[path = "flow_state_tables/carrier.rs"]
+mod state_carrier;
+#[path = "flow_state_tables/process.rs"]
+mod state_process;
 #[path = "flow_state_tables/streams.rs"]
 mod state_streams;
 use packet::*;

@@ -41,6 +41,27 @@ provenance and regenerates the packet under a temporary root. Rust reconstructs
 all decoded bytes, verifies exact zlib consumption and checks the same independent
 bit and count coverage.
 
-The typed reader and isolated editor remain to be implemented. Native runtime
-population, engineering roles and SolidWorks application acceptance remain
-unverified.
+`FlowCarrier::record_444_aux_wides` opens a complete `FlowAuxWideValues` view with
+explicit decoded-byte and actual-value limits. A zero value limit admits an empty
+array. `discarded_legacy` distinguishes a physically stored zero from version-one
+absence, and `values` exposes every pattern through `FlowTableWideArray`.
+`native_values_discarded` reports the documented native observation while the
+library retains the bytes for round-trip edits.
+
+`replace_pattern` and `replace_discarded_legacy` return
+`FlowSimpleTableEdit<FlowAuxWideValues>` with the original checkpoint, completely
+reopened result and full physical carrier history. Coverage reports exact zlib
+framing, stored and decoded extents and the raw-wide count. Diagnostics leave
+native runtime population, engineering roles and application acceptance explicit.
+
+Tests read every owned pattern. They edit every stored legacy member and every
+value when the count is at most 257, plus all 180 native values. Larger generated
+arrays receive first, middle and last value edits. Each edit has an independent
+expected byte patch, compressed no-op preservation, complete history and a fresh
+decoded reversal. Reversals do not require another compressor's original byte
+encoding. Tests also check resource boundaries, malformed streams and bodies,
+absent fields, source isolation, public thread traits, eight-worker operation
+agreement and byte-for-byte replay in two fresh processes.
+
+Native runtime population, engineering roles and SolidWorks application
+acceptance remain unverified.

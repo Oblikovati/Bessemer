@@ -106,7 +106,7 @@ pub struct FlowSimpleTableCoverage {
     pub decoded_bytes: usize,
     /// Actual fixed-row tuples for records 437/411; zero for the other profiles.
     pub wire_rows: usize,
-    /// Actual raw wide words across parallel arrays or leaf pairs.
+    /// Actual raw wide words across parallel arrays, leaf pairs or counted-wide profiles.
     pub wide_words: usize,
     /// Actual raw 32-bit words in five-word rows.
     pub raw_words: usize,

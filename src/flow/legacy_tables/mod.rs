@@ -1,4 +1,5 @@
 //! Exact legacy pointer-index and raw-word tables with explicit independent context.
+mod aux_wide_values;
 mod block_extras;
 mod byte_states;
 mod conditional_items;
@@ -29,6 +30,7 @@ mod wire;
 mod words;
 use super::*;
 use crate::archive_codec::ArchiveCursor;
+pub use aux_wide_values::*;
 pub use block_extras::*;
 pub use byte_states::*;
 pub use conditional_items::*;
