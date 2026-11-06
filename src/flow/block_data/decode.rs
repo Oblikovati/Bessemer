@@ -66,20 +66,15 @@ fn expand(stored: &[u8], options: FlowBlockDataOptions) -> Result<Vec<u8>> {
 
 fn count_prefix(cursor: &mut ArchiveCursor<'_>) -> Result<FlowBlockCountPrefix> {
     let version = legacy_version(cursor)?;
-    let g_fluid = cursor.i32()?;
-    let g_solid = cursor.i32()?;
-    if g_fluid < 0 || g_solid < 0 {
-        return Err(invalid_block(format!(
-            "G.Fluid {g_fluid}, G.Solid {g_solid}; expected nonnegative signed-i32 count profile"
-        )));
-    }
-    let mathematical_total = g_fluid as u64 + g_solid as u64;
+    let counts =
+        super::super::global_counts::GlobalCountPair::read(cursor, "Flow legacy block data")?;
+    let [g_fluid, g_solid] = counts.pair();
     Ok(FlowBlockCountPrefix {
         version,
         g_fluid,
         g_solid,
-        mathematical_total,
-        native_total: mathematical_total as u32 as i32,
+        mathematical_total: counts.mathematical_total(),
+        native_total: counts.native_total(),
     })
 }
 

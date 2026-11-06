@@ -6,6 +6,7 @@ mod decode;
 mod edit;
 mod feature_identities;
 mod fixed_settings;
+mod global_counts;
 mod groups;
 mod header;
 mod links;
