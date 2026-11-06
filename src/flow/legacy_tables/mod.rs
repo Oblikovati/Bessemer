@@ -1,4 +1,5 @@
 //! Exact legacy pointer-index and raw-word tables with explicit independent context.
+mod block_extras;
 mod edit;
 mod fields;
 mod link_records;
@@ -9,6 +10,7 @@ mod wire;
 mod words;
 use super::*;
 use crate::archive_codec::ArchiveCursor;
+pub use block_extras::*;
 pub use fields::*;
 pub use link_records::*;
 pub use types::*;

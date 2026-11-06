@@ -40,6 +40,8 @@ The [root-index projection](docs/features/flow-root-indices/README.md) derives n
 root storage offsets and complete local leaf paths under an explicit fresh-grid assumption.
 The [count-prefix and conditional binding view](docs/features/flow-count-binding/README.md)
 retains record 406's opaque body and binds record 433 only under an explicit absent-map initialization assumption.
+The [block-extra view](docs/features/flow-block-extras/README.md) reads record 408
+with explicit runtime context and edits revision-bound, typed existing fields.
 The [legacy link view](docs/features/flow-link-records/README.md) reads record 402
 and edits existing fields while preserving code bytes, sentinel references and versioned tails.
 The [legacy table view](docs/features/flow-legacy-tables/README.md) reads records

@@ -31,6 +31,32 @@ recorded intervals. Python pins fixed hex, version gates, context admission and
 complete regeneration. Native totals are 3,984 leaves, 1,936 bodies, list counts
 of 4,636/19,880/3,904 and 25,632 fourth-list elements.
 
-This is the independent fixture baseline for a typed reader/editor. Tree-order
-assignment, native object-reference resolution, runtime reconstruction and
-native application acceptance remain unproved.
+`FlowCarrier::record_408_extras` requires a validated `FlowLeafCount` and an
+explicit `FlowBlockExtrasEnabled::AssumeEnabled` selection. Raw/zlib transport is
+supplied separately. Independent limits bound decoded bytes, blocks, scope
+descriptors, field descriptors and total stored scalar/array elements.
+
+The immutable view enumerates typed scopes and typed fields in deterministic
+parse order. Scope keys retain all physical parent ordinals. Nested indices
+report whether they were stored or derived. Fields expose their exact encoding,
+count, first-byte offset and stride, plus checked typed values and raw element
+bytes. Version-eight mixed arrays have twelve-byte strides; they do not pretend
+to be contiguous arrays. Empty fields retain their physical presence and offset.
+
+Each edit uses a revision-bound field ID and an existing element index. IDs also
+retain the leaf-count interpretation. Counts and version are read-only. The
+editor patches an isolated decoded copy, reopens the complete carrier, reparses
+the entire payload under the original options and requires identical scope and
+field layouts before publishing. Source/result checkpoints and full physical
+history accompany the result. No-ops preserve original stored bytes and revision
+identity. Fresh raw reversals restore whole carrier bytes; compressed reversals
+restore decoded bytes without assuming canonical zlib output.
+
+The supplementary field oracle reconstructs the Source parser's complete
+structured values independently, checks every declared interval and proves that
+field elements cover every decoded byte exactly once. Its separate `FEO1`
+packet leaves the original `FBE1` baseline unchanged. Read tests compare every
+scope, index source, role, encoding, stride and raw element against that oracle.
+
+Tree-order assignment, native object-reference resolution, runtime reconstruction
+and native application acceptance remain unproved.

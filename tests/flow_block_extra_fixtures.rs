@@ -1,4 +1,6 @@
 //! Complete independent wire reconstruction before the typed record-408 reader/editor.
+#[path = "flow_block_extras/api.rs"]
+mod api;
 #[path = "flow_block_extras/fixture.rs"]
 mod fixture;
 #[path = "flow_block_extras/rebuild.rs"]
