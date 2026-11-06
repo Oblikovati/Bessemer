@@ -1,0 +1,96 @@
+{
+  "source_parent": "c1f0721f7d657b271217f15d7e9b69ab8c489f9b",
+  "issue": 241,
+  "platform": "Windows x64 MSVC Rust1.99.0 Python3",
+  "commands": [
+    "cargo test --locked --test flow_state_table_fixtures --test flow_load_state_fixtures --test flow_conditional_item_fixtures",
+    "cargo test --locked --test flow_state_table_fixtures",
+    "cargo clippy --tests --locked -- -D warnings",
+    "cargo fmt --all -- --check",
+    "python -m unittest discover -s docs/features/flow-state-tables -p test_state_tables.py -v"
+  ],
+  "terminal_exit_codes": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "broad_regressions": {
+    "passed": 61,
+    "failed": 0,
+    "ignored": 5
+  },
+  "final_state_table_regressions": {
+    "passed": 32,
+    "failed": 0,
+    "ignored": 3
+  },
+  "ignored_scope": "Standalone process workers, each invoked twice by its regular parent test",
+  "python": {
+    "passed": 9,
+    "failed": 0
+  },
+  "complete_source_cases": 237,
+  "existing_index_edits": 1600,
+  "existing_wide_edits": 21836,
+  "edit_oracles": [
+    "No-op exact original carrier and record identity",
+    "Full payload patch at every Source-frozen index/wide field offset",
+    "Independent reconstruction of complete duplicate-occurrence carrier",
+    "Full copied/derived physical history and fresh raw reversal",
+    "Original payload and complete carrier remain equal to frozen input after every case"
+  ],
+  "independent_oracles": [
+    "Twelve-byte version1 two-empty-group record with zero word/wide budgets",
+    "Twenty-byte record with one raw index and present-empty wide array, versus absent second array",
+    "Eighty-byte record with independent2/3 and3/2 counts: floor quotients1/0, fixed intervals and signed/NaN raw patterns",
+    "Maximum signed counts rejected by available bytes even with unbounded aggregate limits"
+  ],
+  "thread_safety": {
+    "public_send_sync_types": 8,
+    "workers": 8,
+    "edits_per_worker": 32,
+    "oracle": "Complete carrier bytes versus serial execution",
+    "fresh_processes": 2,
+    "process_scope": "All237 source-checked states and first/middle/last existing array elements",
+    "selected_process_edits": 2176,
+    "thread_sanitizer": "Pending future required CI for this exact implementation"
+  },
+  "native": {
+    "payload_bytes": 12,
+    "version": 1,
+    "index_words": 0,
+    "wide_arrays": 0,
+    "scope": "Audited native empty framing only; populated layouts are generated"
+  },
+  "source_sha256": {
+    "src/flow/legacy_tables/mod.rs": "4dee1204afafa857c5e0c1a0d2765d363c47d39f5d18e88a5738ed1a606ba1a2",
+    "src/flow/legacy_tables/paired_state/decode.rs": "842a0e4bce45c1a347219a48df454ee0d80fcbc8c80b091070d2fe96c2a093a3",
+    "src/flow/legacy_tables/paired_state/edit.rs": "e2017894c4696fd6f07653666bd8fc6271f4347af1393eeca500fc78bda30cda",
+    "src/flow/legacy_tables/paired_state/mod.rs": "b9a8f85e3154a60edfc7fc26db12985cf0ca16b9416310b7f215dae636b00ac9",
+    "src/flow/legacy_tables/paired_state/types.rs": "356205efe5cead2e26ea05b04f1cb933709c4eec26093f6319f65da2a66f104d",
+    "src/flow/legacy_tables/paired_state/view.rs": "f3e41094618a4f06388b6d8044c599cb5bfadf21a7b28e21bb5914e2ee585fee",
+    "tests/flow_state_table_fixtures.rs": "69948b4bdf7e73810c0aeb2fd90425f8f06d8b3702ff234917f51231849c6c14",
+    "tests/flow_state_tables/paired_api.rs": "5c4a442aec0b37b039104c8d891bf1e0f191615f87d9764d68799b5bfea665fe",
+    "tests/flow_state_tables/paired_contracts.rs": "c5724104a8e54f1704b9e956bd1119a2367e6135f3d6901f5ffd7f29f5d3590c",
+    "tests/flow_state_tables/paired_edit.rs": "487fded01adc7c064a954343d15fb7e8e691e25f3492cafcf17b5227898dd693",
+    "tests/flow_state_tables/paired_replay.rs": "a127686dd31e159f9c100192e806a4dbcff1ac0d5c9b4a381c1843bef9158bd3"
+  },
+  "log_sha256": {
+    "target/flow-paired-state-api-tests.log": "b4df73ddbf0b5e987512dd1fcf453ecd4d71fb8a369aec2d9816554380085014",
+    "target/flow-paired-state-api-clippy.log": "4a91a861edda9dd2b200491d3ccf90a371412b154c5e578b7c664b8e37d90e2c",
+    "target/flow-paired-state-final-tests.log": "099477fd42dd5c34eff2dc32703f453d8608d952628112de2c0505c829302b2f",
+    "target/flow-paired-state-final-clippy.log": "76f0e3b93ac21e8b39e42d145363a52795f21d72f93a85a4ff1f13ae71664b05",
+    "target/flow-paired-state-python.log": "6a7b607106a49b59b9192a17e20280defe3b483cde1d248ecec813ed26bc9927"
+  },
+  "reference_sha256": "142e21ef8ca3ebaa70bd810633ea1b84c3ab6e59c856eb185396f49bdd9d36b6",
+  "function_file_caps": "Passed: functions at most20 nonblank/noncomment body lines; source/test files below500 lines",
+  "exclusions": [
+    "Populated native record417 acceptance",
+    "Native allocation/population, engineering interpretation and SolidWorks application acceptance",
+    "Full gate for this API: current broader gate is frozen at8d6ecd15 and excludes it",
+    "Remote CI: current PR245 excludes this API"
+  ],
+  "humanizer": "Maintainer prose review pending; humanizer skill unavailable"
+}

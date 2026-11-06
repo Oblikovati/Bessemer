@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added complete record-417 paired-state reads and isolated index/wide edits, preserving independent counts, absent arrays and floor quotients for nondivisible counts. (#241)
+
 - Added complete record-138 context-state reads and isolated index/tail edits with explicit native count assumptions and independent serialized bounds. (#241)
 
 - Added complete raw record-432 stored-state reads and isolated signed-member edits, preserving discarded-member absence and reporting native recomputation requirements. (#241)
