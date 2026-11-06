@@ -1,0 +1,66 @@
+{
+  "issue": 241,
+  "source_revision_before_baseline": "0209efed87ce021a5000305cda7cc67fc8fa4b68",
+  "scope": "Owned complete record444 baseline; production API pending",
+  "results": {
+    "rust_passed": 4,
+    "python_passed": 8,
+    "failed": 0,
+    "ignored": 0,
+    "clippy": "passed",
+    "format": "passed",
+    "function_file_caps": "passed"
+  },
+  "logs": {
+    "tests": {
+      "path": "target/flow-aux-wide-values-baseline-tests.log",
+      "sha256": "5602323c7487495195a944b5b25b885dd28292dd0078d3667e430246fcf0b626"
+    },
+    "python": {
+      "path": "target/flow-aux-wide-values-baseline-python.log",
+      "sha256": "3a37a86eed28e58b3f993ada1463fb5a782c60ad41978788480c3798fe9096c8"
+    },
+    "clippy": {
+      "path": "target/flow-aux-wide-values-baseline-clippy.log",
+      "sha256": "6c298eb6ef80384c63995eb0ce570f57b267d756a32455cc268e250e328aa12e"
+    },
+    "format": {
+      "path": "target/flow-aux-wide-values-baseline-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "initial_failures": {
+    "python": {
+      "exit_code": 1,
+      "cause": "Independent all-ones coverage check exposed missing version-one generated case; added explicit all-ones pattern",
+      "log_sha256": "40eb59ea6c60832085815cb41a3ccca6397bf8b6aef9ff24b6d898baa2152792"
+    },
+    "clippy": {
+      "exit_code": 101,
+      "cause": "Replaced constant-size chunks_exact with as_chunks in test only",
+      "log_sha256": "2322ed901c23cedd6095a218e9bd965a5dada7993a060352669c558f33d33d0a"
+    }
+  },
+  "helper_lf_sha256": {
+    "freeze_wides.py": "ddf7ea0c337a3845fb93d90bb05d68d9f4ba71a02f30e187042a6af212faf01a",
+    "test_wides.py": "2134fe48f758f118676029008383b56ce7dbaff3880ae440b465f2ee8731c344",
+    "wide_requests.py": "c690edad385912c3a3813b58988af38689fffbd75a3d43ef72c37a1f3448163c"
+  },
+  "oracles": [
+    "Complete original schema projection",
+    "Independent version/count length equation",
+    "Literal raw signed and wide bit sets",
+    "Exact decoded reconstruction and zlib stream consumption",
+    "Full native source, payload and projection verification",
+    "Temporary-root regeneration"
+  ],
+  "exclusions": [
+    "Typed production read and edit pending",
+    "Full workspace gate acceptance of this baseline pending",
+    "Hosted matrix and sanitizer acceptance pending",
+    "Only version zero observed in native source",
+    "Native runtime population and engineering roles not reproduced",
+    "Native application not checked"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose review pending"
+}
