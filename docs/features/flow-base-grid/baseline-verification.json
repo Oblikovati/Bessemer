@@ -1,0 +1,19 @@
+{
+  "feature_issue": 241,
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "rust_command": "cargo test --test flow_base_grid_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 1,
+  "rust_failed": 0,
+  "clippy_command": "cargo clippy --test flow_base_grid_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "python_command": "python -m unittest discover -s docs/features/flow-base-grid -p test_grid.py -v",
+  "python_exit_code": 0,
+  "python_passed": 2,
+  "format_exit_code": 0,
+  "log_sha256": {
+    "target\\flow-base-grid-baseline-tests.log": "d2664ef4e390aa5a021ca1928909637a02b224553d1406d030862ac62db7e53b",
+    "target\\flow-base-grid-baseline-clippy.log": "c5b579142169e86d44b4285bb3a97c7808155202add1738d6bf6630964546bd5"
+  },
+  "scope": "Fixture baseline only; no new public API or native application acceptance. Full gate running separately on ff7b855f excludes this later baseline."
+}
