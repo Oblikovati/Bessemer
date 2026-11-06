@@ -1,0 +1,20 @@
+{
+  "command": "cargo xtask pr",
+  "terminal_exit_code": 0,
+  "source_commit": "551b77c9fdfa7b3c729e74d7b646923cf8d3ed66",
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "native_schema": "Installed SolidWorks sch_13006.s_t",
+  "result_summaries": 387,
+  "passed": 4811,
+  "failed": 0,
+  "ignored": 246,
+  "log": "target/flow-conditional-items-combined-full-pr-gate.log",
+  "log_sha256": "78b289d43c3162d2fe899e13b04bf65c6de212e6f9194870fa5e664e02398880",
+  "scope": "Complete conditional-item record126/315/128 read/edit API and all preceding Flow work",
+  "exclusions": [
+    "Later shared UTF16 fixture tag and StoredField helper changes",
+    "Record11 load-state baseline and typed API",
+    "Raw state-table baselines for129/138/139/417/432",
+    "Remote CI and native application acceptance"
+  ]
+}
