@@ -124,52 +124,21 @@ impl<'a> ProfileReader<'a> {
         Ok((references_start, references))
     }
     pub fn outer_references(&mut self) -> Result<OuterReferences> {
-        let count = self.cursor.nonnegative_count(20, "outer references")?;
-        spend(
-            &mut self.remaining_references,
-            count,
-            "total reference occurrences",
-        )?;
-        let start = self.position();
-        let keys = references(
+        outer_references(
             &mut self.cursor,
-            count,
+            self.backend.metadata_prefix().payload_bytes().len(),
             &self.second_keys,
-            "fresh second table",
-        )?;
-        let (attributes_start, attributes) = self.read_attributes(count)?;
-        Ok(OuterReferences {
-            start,
-            keys: keys.into(),
-            attributes_start,
-            attributes: attributes.into(),
-        })
-    }
-    fn read_attributes(&mut self, count: usize) -> Result<(usize, Vec<i32>)> {
-        let attributes_start = self.position();
-        let mut attributes = Vec::with_capacity(count);
-        for _ in 0..count {
-            attributes.push(self.cursor.i32()?);
-        }
-        final_empty(&mut self.cursor)?;
-        final_empty(&mut self.cursor)?;
-        Ok((attributes_start, attributes))
+            &mut self.remaining_references,
+            "kind-one",
+        )
     }
 }
+
 fn kind_one(cursor: &mut ArchiveCursor<'_>) -> Result<()> {
     let kind = cursor.i32()?;
     if kind != 1 {
         return Err(metadata_invalid(format!(
             "profile object kind {kind}; expected kind one"
-        )));
-    }
-    Ok(())
-}
-fn final_empty(cursor: &mut ArchiveCursor<'_>) -> Result<()> {
-    let count = cursor.i32()?;
-    if count != 0 {
-        return Err(metadata_invalid(format!(
-            "final outer collection count {count}; expected zero for supported kind-one profile"
         )));
     }
     Ok(())

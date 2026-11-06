@@ -85,13 +85,6 @@ pub(super) struct ReferenceObject {
     pub references_start: usize,
     pub references: Arc<[FlowGuid]>,
 }
-#[derive(Clone, Debug)]
-pub(super) struct OuterReferences {
-    pub start: usize,
-    pub keys: Arc<[FlowGuid]>,
-    pub attributes_start: usize,
-    pub attributes: Arc<[i32]>,
-}
 /// Complete immutable kind-one record; all physical duplicate-key occurrences remain distinct.
 #[derive(Clone, Debug)]
 pub struct FlowMediumKindOneProfile {

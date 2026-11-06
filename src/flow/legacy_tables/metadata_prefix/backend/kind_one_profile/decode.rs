@@ -6,7 +6,7 @@ pub(super) fn read(
     id: &FlowRecordId,
     options: FlowMediumProfileOptions,
 ) -> Result<FlowMediumKindOneProfile> {
-    validate_options(options)?;
+    validate_profile_options(options)?;
     let prefix = source.record_424_metadata_prefix(id, options.metadata)?;
     let backend = prefix.medium_backend_prefix()?;
     let mut reader = ProfileReader::new(&backend, options)?;
@@ -26,22 +26,4 @@ pub(super) fn read(
         words: options.maximum_total_wide_words - reader.remaining_words,
         name_units: options.maximum_total_name_units - reader.remaining_names,
     })
-}
-fn validate_options(options: FlowMediumProfileOptions) -> Result<()> {
-    let bounds = [
-        options.maximum_first_objects,
-        options.maximum_reference_objects,
-        options.maximum_references,
-        options.maximum_total_wide_words,
-        options.maximum_total_name_units,
-        options.body.maximum_body_bytes,
-        options.body.maximum_wide_words,
-        options.body.maximum_name_units,
-    ];
-    if bounds.contains(&0) {
-        return Err(metadata_invalid(format!(
-            "profile options {options:?}; expected all independent bounds positive"
-        )));
-    }
-    Ok(())
 }
