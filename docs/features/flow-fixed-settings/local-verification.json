@@ -1,0 +1,33 @@
+{
+  "feature_issue": 241,
+  "fixture_base": "a5b507ab",
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0",
+  "rust_command": "cargo test --test flow_fixed_fixtures --test flow_carriers --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 9,
+  "rust_failed": 0,
+  "rust_ignored": 0,
+  "python_command": "python -m unittest discover -s docs/features/flow-fixed-settings -p test_fixed.py",
+  "python_passed": 4,
+  "python_exit_code": 0,
+  "clippy_command": "cargo clippy --lib --test flow_fixed_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "slot_oracle": "All 1260 frozen Source slots, with independent whole-wire byte patch expectations",
+  "changed_edits": 1260,
+  "exact_noops": 1260,
+  "fresh_exact_reversals": 1260,
+  "malformed_checks": "Every shorter length for 400/2560-byte profiles, plus one extended byte; last malformed duplicate rejects",
+  "concurrency": "Eight workers share an immutable numeric view and independently edit/reverse different slots",
+  "history": "Existing complete physical record history returned with source/result carrier checkpoints",
+  "initial_compile_failure": "Integration tests initially accessed private FlowCarrierEdit fields; corrected tests to public accessors before passing validation",
+  "exclusions": [
+    "No constructor normalization or per-slot semantic interpretation",
+    "No native loader execution or application acceptance",
+    "No full current-source PR gate completion yet; session 95818 remains live on earlier committed source",
+    "No new dependency or version change",
+    "No complete Flow or global schema parity claim"
+  ]
+}

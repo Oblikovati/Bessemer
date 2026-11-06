@@ -1,0 +1,15 @@
+{
+  "issue": 241,
+  "production_commit": "e0b86927a1b3df5b01634ab8549125a2dc1fc937",
+  "stage": "Before sharing record-payload transport; production sources unchanged from accepted record-433 API",
+  "command": "cargo test --test flow_arrays --test flow_carriers --test flow_headers --test png_zlib_contract --locked",
+  "exit_code": 0,
+  "passed": 25,
+  "failed": 0,
+  "ignored": 1,
+  "log": "target\\flow-transport-before-tests.log",
+  "log_sha256": "42a36b02d2334df04c0dc5371ebfcaae79301ed6b3c8bcdcafd5753cdbd0fa9b",
+  "contract_test_sha256": "019a78455d9d325a931687ff6bb9c64808601dbb067ce872887f268e560060d4",
+  "native_census_reference": "docs/features/flow-arrays/local-verification.json",
+  "native_execution": false
+}

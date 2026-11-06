@@ -1,0 +1,69 @@
+{
+  "issue": 241,
+  "behavior_version": 1,
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "source_base_commit": "459cbc7d2a4fba110e4baf69adab118b4e437532",
+  "regular_tests_passed": 39,
+  "regular_tests_failed": 0,
+  "regular_native_censuses_ignored": 2,
+  "python_tests_passed": 3,
+  "native_census": {
+    "passed": 1,
+    "carriers": 2,
+    "unique_native_payload_variants": 1,
+    "field_edits": 24336,
+    "logical_reversals": 24336,
+    "elapsed_seconds": 41.86
+  },
+  "fixtures": 26,
+  "workers": 8,
+  "source_sha256": {
+    "src\\flow\\groups\\decode.rs": "e473457b5aba3f6cee08dc391d4dac6a57bc71ef425ea483ef5d5f185f9a5e81",
+    "src\\flow\\groups\\edit.rs": "239d2298b4f035f6acfacc8d0e63b3c226c24d55a227bd4ec9539f05d2e73eff",
+    "src\\flow\\groups\\fields.rs": "c7caf7d474f59f692737c9d74f8ee3252f09d19fc59938e8138b005021ee9195",
+    "src\\flow\\groups\\mod.rs": "282a531fbfcab95d87be6c53143c606e738c7612a231c2fd49dbe6cfc368d0f2",
+    "src\\flow\\groups\\types.rs": "09d11aaee08d91d26808cdc9146c5d4cf1d94d863b3c6e48d1cf0b69be011e07",
+    "src\\flow\\groups\\view.rs": "bc5b568dadee0167c8c7d28d2e66756ff9bd3068999a3297571ad5070238e5fc",
+    "src\\flow\\mod.rs": "41ccc189bb83481af8789267d70feee92cf39e383d85373a6afa3fadf49640ca",
+    "tests\\flow_groups.rs": "3169fc6902c5b59ed04682023e9482fb95af020e7372d0010166d7c53c2c6ccd",
+    "tests\\flow_groups\\census.rs": "7c02c7c2de3c45b529fa37c105039653c58dcdabd8eb6609dcffeef2c0eebfbb",
+    "tests\\flow_groups\\checks.rs": "74ae2e2fa5e84d8e5042409ef5179a78b654d978c0213bbd323229bc2843aea7",
+    "tests\\flow_groups\\contracts.rs": "01c1428614ca1d8bbf1f851b4cdffe20714c38c66dc492e886b55eaac0e082ba",
+    "tests\\flow_groups\\fixture.rs": "520b54ffb4a41fe6f2e884d4839ea28cef55e0e5ca1805e6838d1bf5f887a5d5"
+  },
+  "log_sha256": {
+    "target/flow-groups-final-tests.log": "b1e7f3e20aea5078289bbe26ecbcada8b5369ab285e21ef45a033b5eeb0c4b20",
+    "target/flow-groups-final-clippy.log": "5719fcb4c107b0c9e97434880da4f401ab4a64e9358e9d1ca2bb43d81c456d0e",
+    "target/flow-groups-final-native-census.log": "46217f0cb71c818a5078c1d201ad13e55e2a8ac02afa7643422b5eb14c5a2d92",
+    "target/flow-groups-api-python-tests.log": "5946a3433f306318112e772c79a2d0fd4bfd3307ff20a769c1e72889dfaf452e",
+    "target/flow-groups-process-build.log": "bd1217f274b521d57ea18d60daa4eced87cdb48e09ec3880b5ed994fd503ccc6"
+  },
+  "commands": [
+    {
+      "command": "cargo test --test flow_groups --test flow_group_fixtures --test flow_arrays --test flow_carriers --test flow_headers --test png_zlib_contract --locked",
+      "exit_code": 0
+    },
+    {
+      "command": "cargo clippy --lib --test flow_groups --test flow_group_fixtures --test flow_arrays --test flow_carriers --test flow_headers --test png_zlib_contract --locked -- -D warnings",
+      "exit_code": 0
+    },
+    {
+      "command": "cargo test --test flow_groups --locked every_native_group_word -- --ignored --nocapture",
+      "exit_code": 0
+    },
+    {
+      "command": "python docs/features/flow-groups/test_groups.py",
+      "exit_code": 0
+    }
+  ],
+  "native_application_execution": false,
+  "exclusions": [
+    "Member/auxiliary/flag meanings and value domains",
+    "Native owner compression-state reconstruction",
+    "Version/count/cardinality edits and new-record construction",
+    "Fresh zlib reverse original encoding",
+    "Native application and geometry acceptance",
+    "Full repository gate for this newer source cut",
+    "Previous-release time and peak-memory comparison"
+  ]
+}

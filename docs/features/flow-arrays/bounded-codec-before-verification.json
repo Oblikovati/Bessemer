@@ -1,0 +1,13 @@
+{
+  "production_commit": "94a2b117",
+  "stage": "Before codec extraction; new owned contract tests, unchanged production decoder",
+  "command": "cargo test --test png --test png_adversarial --test png_document --test png_isolation --test png_zlib_contract --locked",
+  "exit_code": 0,
+  "passed": 25,
+  "failed": 0,
+  "ignored": 0,
+  "log": "target\\bounded-zlib-before-tests.log",
+  "log_sha256": "2525f4a03e5d0b7eaf9221d07bacdb89bb462420e32371d7e3f1286a44da86dc",
+  "contract_test_sha256": "cebbff7bf6726df56aa18259c20116c6b8c73034efc9f392e121183b521f3c24",
+  "original_decoder_sha256": "ebcd8e632729c19352da0f5dfd8bdd21f84192c5bbfe73d4c19dbe3b352f5c24"
+}

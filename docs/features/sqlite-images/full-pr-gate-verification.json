@@ -1,0 +1,15 @@
+{
+  "command": "cargo xtask pr",
+  "terminal_exit_code": 0,
+  "source_commit": "8341361a6d9d05ca762e4948a0b29efe9dc1ece5",
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "log": "target/sqlite-combined-full-pr-gate.log",
+  "log_sha256": "3029c6b55e0a72f7bf9a919cd06db544cc7cb55b11cf263fb897c55ec43d6c71",
+  "result_summaries": 347,
+  "passed": 4393,
+  "failed": 0,
+  "ignored": 233,
+  "scope": "SQLite image foundation and all prior source; excludes later project-record and userdata implementations",
+  "native_application_acceptance": false,
+  "remote_ci_credit": false
+}

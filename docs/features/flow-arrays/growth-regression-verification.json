@@ -1,0 +1,28 @@
+{
+  "issue": 242,
+  "behavior_version": 1,
+  "classification": "Test growth precondition corrected; production size limits and all thirteen frozen array expectations preserved",
+  "native_observation": {
+    "value": 19,
+    "original_bytes": 102498,
+    "edited_bytes": 102232
+  },
+  "owned_observation": {
+    "selector": 1,
+    "count": 1024,
+    "original_zero_values": true,
+    "value": 287454020,
+    "original_bytes": 63,
+    "edited_bytes": 74,
+    "strict_wire_bound": 63
+  },
+  "failed_log_sha256": {
+    "target/flow-arrays-focused-tests.log": "7ad65bb1e781eabe7c21dd8e1e3a02017d5d465250e22f4f8b11dabf7de375e0",
+    "target/flow-arrays-final-clippy.log": "141156c93a5f2c409dc8bef8c1d35b95a60d6e869fa1b5b03148301a8f7e44bd",
+    "target/flow-arrays-growth-observation.log": "33806662c55df05adfbb00e0be317cb1e8fcb327c0e98e9d4d2a187a3e97002b",
+    "target/flow-arrays-growth-corrected-observation.log": "4d06e85439eb76522a12ead787ddb733418da4fde52a2961a1687a8047c705ec"
+  },
+  "fix": "Used a constructed zero-array source that actually grows, retained positive-growth assertion and required failure at the original wire bound; input isolation remains checked",
+  "separate_lint_fix": "Used typed four-byte as_chunks iteration as requested by Rust 1.99 Clippy; no warning suppression",
+  "fixture_packet_sha256": "2aadfe102b103099dd138539541a790981c97121bf20b7192c4af1bcbfdfd482"
+}

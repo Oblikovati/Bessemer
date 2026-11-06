@@ -1,0 +1,31 @@
+{
+  "issue": 241,
+  "scope": "Private record-payload identity and zlib transport extraction; record-433 public behavior and messages retained",
+  "baseline_commit": "fb71e41f",
+  "platform": "Windows x64 Rust 1.99.0",
+  "unchanged_contract_sha256": "019a78455d9d325a931687ff6bb9c64808601dbb067ce872887f268e560060d4",
+  "passed": 25,
+  "failed": 0,
+  "ignored": 1,
+  "native_census": {
+    "passed": 1,
+    "edits": 11904,
+    "logical_reversals": 11904,
+    "seconds": 4.71
+  },
+  "source_sha256": {
+    "src/flow/mod.rs": "b446e6e7c8ec9db5cc390832156ba16bda68f1e20611673223f84daa24b9c725",
+    "src/flow/payload_codec.rs": "0f971ce54c91c8724392489247cdf7a41748f8e0570630df6b4bc27c6bde89be",
+    "src/flow/arrays/decode.rs": "a912fe1eec8556672218aa315a38af4f1a80bcb405ebd69c3d686ea56b0661e6",
+    "src/flow/arrays/edit.rs": "c1648cddfb0ea31fc99fbcc75838c66949c047deff789e8874ef02394aeda1a7",
+    "tests/flow_arrays.rs": "019a78455d9d325a931687ff6bb9c64808601dbb067ce872887f268e560060d4"
+  },
+  "log_sha256": {
+    "target/flow-transport-after-tests.log": "892752d09eac9c8e98ad28437335e6f3fc31334d533f0b7f6d46b6b6c7e0b83e",
+    "target/flow-transport-clippy.log": "0136aa2e69304026a8125c3211be9a4e4c1a9c5dca2134c0dc1fec63a97372cc",
+    "target/flow-transport-native-census.log": "fce9050565654bb466595e027922cdc603f745b4fb9f161eb8e929006ec96586"
+  },
+  "clippy_exit_code": 0,
+  "native_execution": false,
+  "full_repository_gate": false
+}

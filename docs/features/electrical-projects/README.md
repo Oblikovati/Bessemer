@@ -108,10 +108,16 @@ rather than the affected readback. The supplied reference code was not changed.
 
 ## Remaining work
 
-- Implement the documented SQLite catalog and record views, including NULL,
-  unknown columns and the distinct stored version fields.
-- Bind project/drawing relationships, typed file-load mappings and delegated
-  userdata/query selection without extending their documented native scope.
+- The separate [SQLite image reader](../sqlite-images/README.md) now checks
+  complete database images and retains schema metadata, NULLs, unknown columns
+  and all named-table rows. Application catalog/record projections remain next.
+- The [project record view](../electrical-records/README.md) now retains complete
+  catalog/project rows, separate versions and every literal database/drawing
+  match. The [userdata views](../electrical-userdata/README.md) also retain exact
+  SQL selection, lexical ID matches and the selected ID gate. Complete native
+  provider/delegate state remains separate work. The
+  [direct file-field map](../electrical-file-fields/README.md) retains all 38
+  verified reader/destination bindings without applying guessed conversions.
 - Preserve opaque EWG bodies and qualify native loader acceptance, migrations,
   SQL/application validity and geometry separately.
 

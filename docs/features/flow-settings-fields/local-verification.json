@@ -1,0 +1,32 @@
+{
+  "feature_issue": 241,
+  "production_base": "370e8383",
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0",
+  "rust_command": "cargo test --test flow_settings_fields --test flow_fixed_fixtures --test flow_carriers --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 13,
+  "rust_failed": 0,
+  "rust_ignored": 0,
+  "python_command": "python -m unittest discover -s docs/features/flow-settings-fields -p test_fields.py -v",
+  "python_exit_code": 0,
+  "python_passed": 3,
+  "clippy_command": "cargo clippy --lib --test flow_settings_fields --test flow_fixed_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "cases": 141,
+  "projected_fields": 980,
+  "reference_cases": "Three source-bound native selections plus 23 binary64 patterns crossed with six guard states",
+  "concurrency": "Eight workers match complete serial field arrays",
+  "input_isolation": "Raw arrays and source checkpoints retained unchanged; existing numeric slot edits compose through fresh projections",
+  "missing_context": "Absent numeric record returns no projection; absent integer guard and unsupported floating-point conversions remain distinct typed states",
+  "selection": "Malformed selected duplicates reject; absent numeric record does not load malformed orphan integer record",
+  "exclusions": [
+    "No native execution or loader acceptance",
+    "No stored-array normalization or engineering-domain validation",
+    "No U_DIM_EXT_MAX projection without owner context",
+    "No complete Flow or global schema parity claim",
+    "Live full gate 95818 covers earlier source, not this implementation"
+  ]
+}

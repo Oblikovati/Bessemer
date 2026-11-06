@@ -1,0 +1,68 @@
+{
+  "artifact": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS Electrical\\bin\\ewadobject.dll",
+  "sha256": "a7162b856edf13280dab542fd5b7feb1c377b659c5cad2ef910bc3cebea33299",
+  "source_sha256": "47a3def2d21180008372331f44a6960f52ac098928a4ab94eeda8e27d53f172c",
+  "address": "0x1804a3670",
+  "end": "0x1804a3762",
+  "native_bytes": "48895c24104889742418574883ec70488bda488bf94032f6488d8c2480000000ff15824d060090488d4c2440e84f960200908b4720448b471c89442438488d05d4fe080048894424304489442428488d0553fe080048894424204c8d0d77fe08004c8b05c0232900488d15d1da0b00488d8c2480000000ff15eb4c06004c8d842480000000488bd3488d4c2440e8eea4020084c0742d488d4c2440e8209b020084c0751440b601488b07488d542440488bcfff9008010000488d4c2440e82e99020090488d4c2440e80396020090488d8c2480000000ff15a44c0600400fb6c64c8d5c2470498b5b18498b7320498be35fc3",
+  "control_transfers": [
+    {
+      "address": "0x1804a3690",
+      "mnemonic": "call",
+      "operands": "qword ptr [rip + 0x64d82]"
+    },
+    {
+      "address": "0x1804a369c",
+      "mnemonic": "call",
+      "operands": "0x1804cccf0"
+    },
+    {
+      "address": "0x1804a36e7",
+      "mnemonic": "call",
+      "operands": "qword ptr [rip + 0x64ceb]"
+    },
+    {
+      "address": "0x1804a36fd",
+      "mnemonic": "call",
+      "operands": "0x1804cdbf0"
+    },
+    {
+      "address": "0x1804a3704",
+      "mnemonic": "je",
+      "operands": "0x1804a3733"
+    },
+    {
+      "address": "0x1804a370b",
+      "mnemonic": "call",
+      "operands": "0x1804cd230"
+    },
+    {
+      "address": "0x1804a3712",
+      "mnemonic": "jne",
+      "operands": "0x1804a3728"
+    },
+    {
+      "address": "0x1804a3722",
+      "mnemonic": "call",
+      "operands": "qword ptr [rax + 0x108]"
+    },
+    {
+      "address": "0x1804a372d",
+      "mnemonic": "call",
+      "operands": "0x1804cd060"
+    },
+    {
+      "address": "0x1804a3738",
+      "mnemonic": "call",
+      "operands": "0x1804ccd40"
+    },
+    {
+      "address": "0x1804a3746",
+      "mnemonic": "call",
+      "operands": "qword ptr [rip + 0x64ca4]"
+    }
+  ],
+  "native_execution": false,
+  "method": "Offline original PE byte comparison and Capstone decoding; not new REA output",
+  "scope": "Complete query-reader byte binding; provider behavior and first-row priority not established"
+}

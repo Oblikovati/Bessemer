@@ -1,12 +1,23 @@
 //! Electrical project ZIP32 carriers and lossless ASCII Archive.ini lexical records.
 mod carrier;
 mod edit;
+mod file_fields;
 mod ini;
+mod projects;
 mod types;
+mod userdata;
+mod userdata_connection;
+mod userdata_state;
+mod userdata_write;
 use crate::composer::{ComposerArchive, ComposerCompression, ComposerMember};
 use crate::{BessemerError, FailureClass, Result};
+pub use file_fields::*;
 pub use ini::*;
+pub use projects::*;
 pub use types::*;
+pub use userdata::*;
+pub use userdata_state::*;
+pub use userdata_write::*;
 
 /// Immutable complete Electrical ZIP carrier; member payload schemas remain separate.
 #[derive(Clone, Debug)]
@@ -82,6 +93,14 @@ impl ElectricalArchive {
                 maximum_records: self.limits.maximum_ini_records,
             },
         )
+    }
+    /// Checks one complete SQLite member in memory; e.g. `let database = archive.sqlite_member(&id, limits)?`.
+    pub fn sqlite_member(
+        &self,
+        id: &ElectricalMemberId,
+        limits: crate::sqlite_image::SqliteLimits,
+    ) -> Result<crate::sqlite_image::SqliteImage> {
+        crate::sqlite_image::SqliteImage::from_bytes(self.read_member(id)?, limits)
     }
 }
 

@@ -1,0 +1,136 @@
+{
+  "format": "SQI1",
+  "cases": [
+    {
+      "name": "owned-empty",
+      "image_bytes": 4096,
+      "image_sha256": "66f7423306d3554fc53cdeb9a0de1e393d5caf6bee0458a55df44b4be1130710",
+      "projection_bytes": 4,
+      "projection_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+    },
+    {
+      "name": "owned-mixed",
+      "image_bytes": 176128,
+      "image_sha256": "c32e1fbf08afe1581be79390dc45063934c604dc1ac9e0b5c4560b414c52f5e2",
+      "projection_bytes": 133948,
+      "projection_sha256": "29a56912856539a0712ecc332a5c3845cc967fb0b070604e52338e420008a831"
+    },
+    {
+      "name": "owned-pages-512",
+      "image_bytes": 1024,
+      "image_sha256": "2427878ba6781250752ba0ac0de80d2f34a8fd4f6d2418dc44a53b1ce7c01bd4",
+      "projection_bytes": 287,
+      "projection_sha256": "8d349288fd59f3a491288786c6c46535d5a887e4cfa18ea130f13d7c60ca2a0a"
+    },
+    {
+      "name": "owned-pages-1024",
+      "image_bytes": 2048,
+      "image_sha256": "f299e7086f6110facbaeb0fae1b1beb1273a931d2a84398b0c09eeedc0781751",
+      "projection_bytes": 287,
+      "projection_sha256": "8d349288fd59f3a491288786c6c46535d5a887e4cfa18ea130f13d7c60ca2a0a"
+    },
+    {
+      "name": "owned-pages-65536",
+      "image_bytes": 131072,
+      "image_sha256": "a43dc19539f3e162c1aefb2aef15ce691296f75a17006f31b6f467310f68c08b",
+      "projection_bytes": 287,
+      "projection_sha256": "8d349288fd59f3a491288786c6c46535d5a887e4cfa18ea130f13d7c60ca2a0a"
+    },
+    {
+      "name": "ANSI.proj.tewzip:Database/tew_app_data.sqlite",
+      "image_bytes": 118784,
+      "image_sha256": "15b42973ec16fd5aa69fbb3b91865e17b450ff9878896158dcdae0963c026e13",
+      "projection_bytes": 54192,
+      "projection_sha256": "c00e38c0313275220163b00fdff3dc4dbcadd06326ed4a3451ab813155c1bffc"
+    },
+    {
+      "name": "ANSI.proj.tewzip:Database/tew_classification.sqlite",
+      "image_bytes": 31744,
+      "image_sha256": "3cac520f5681d92270726c1828543c7f0014c7f82d11164d217796c4e5ade657",
+      "projection_bytes": 13921,
+      "projection_sha256": "fcc35908dc56d72aa8584944b0b325387d818892b8c9cde335b2df3da685dd10"
+    },
+    {
+      "name": "IEC.proj.tewzip:Database/tew_app_project.sqlite",
+      "image_bytes": 23552,
+      "image_sha256": "47fa88b7e67e1593041b0d72a41e7ea90da9556fd7c22c80f3e14aab0a500baa",
+      "projection_bytes": 14541,
+      "projection_sha256": "d0202d700c39d4e8f92cb947f85cc6bc5cc69e083507fbc622a644d02453ea28"
+    },
+    {
+      "name": "ANSI.proj.tewzip:Projects/2/Database/tew_project_data.sqlite",
+      "image_bytes": 814080,
+      "image_sha256": "5e365c223363813d9fb3c8d598bb34570e80cb44c74bac6a97f236fa46a1a2be",
+      "projection_bytes": 478855,
+      "projection_sha256": "b2b4e52cc4a6480fd5a35b7f1b8ddf2cd277575707b104b7b55f33a2f6c6ef65"
+    },
+    {
+      "name": "GB_Chinese.proj.tewzip:Database/tew_app_project.sqlite",
+      "image_bytes": 24576,
+      "image_sha256": "6d8b76a4a67e6ffdd539f5bc69337387b276ff8065d7fa64015d1010a5d3b1c0",
+      "projection_bytes": 14763,
+      "projection_sha256": "9ff1dc802a264c51bb3189a9ea49a3803d11c718a0b86339e28c59b0beeccb3b"
+    },
+    {
+      "name": "IEC.proj.tewzip:Projects/2/Database/tew_project_data.sqlite",
+      "image_bytes": 813056,
+      "image_sha256": "6f1e640a03541cef38dd24251cf40cdac6f83cae8d8cb76287be81d58ef07500",
+      "projection_bytes": 476756,
+      "projection_sha256": "87da8f2f2a0fca4454113269393dee180e6dbc13c19609d72a91d72f98cf347a"
+    },
+    {
+      "name": "JIS.proj.tewzip:Projects/2/Database/tew_project_data.sqlite",
+      "image_bytes": 812032,
+      "image_sha256": "71c78fcb90a0c9b4a57453f39445c0e5b91344bac6a864dbcde0df4622bd566d",
+      "projection_bytes": 474755,
+      "projection_sha256": "2e8d8c2da5cee2dd50cf8e2acd0c912cd4eda12196d0557f7b6d9c134852db6a"
+    },
+    {
+      "name": "JIS.proj.tewzip:Database/tew_app_project.sqlite",
+      "image_bytes": 23552,
+      "image_sha256": "92204f47b102d41ca46517ee0c3fcfb157214a1dce9b70c3a9403bbf4f798e00",
+      "projection_bytes": 13351,
+      "projection_sha256": "d06db35034b08be646ee210323614853794465c4f088695029bb47de612138fa"
+    },
+    {
+      "name": "GB_Chinese.proj.tewzip:Projects/2/Database/tew_project_data.sqlite",
+      "image_bytes": 812032,
+      "image_sha256": "aa09969a41b05d31d88b182bcc35080237ee2c50517cfc2625f7f801679c8138",
+      "projection_bytes": 474796,
+      "projection_sha256": "737c80376572a40ddaa5c695acf491ed71be21552a2d8831bda58f46933ca8a7"
+    },
+    {
+      "name": "ANSI.proj.tewzip:Database/tew_app_macro.sqlite",
+      "image_bytes": 23552,
+      "image_sha256": "b126177267ec33d84726c87b39b0aa51e7bf1648ead7f06efca3bcb472105221",
+      "projection_bytes": 12463,
+      "projection_sha256": "45b6d6bf1fb5d80abed5a2498372ab0a8ae36f8d4077587624bee640f76b08fc"
+    },
+    {
+      "name": "ANSI.proj.tewzip:Database/tew_catalog.sqlite",
+      "image_bytes": 46080,
+      "image_sha256": "c11552a4a4d2070eb21f97a643812924671ed8c16264eaefbdfba2cbc12dbd9b",
+      "projection_bytes": 22241,
+      "projection_sha256": "91a9d4c3c2444d8d368f33202057680bea6b0d1c5067f5c4dad7a81aeed168cc"
+    },
+    {
+      "name": "ANSI.proj.tewzip:Database/tew_app_project.sqlite",
+      "image_bytes": 23552,
+      "image_sha256": "dd21229537261b68433e3f946d2aa94c225e8af3ba57208dbb957e84520fa3c5",
+      "projection_bytes": 14555,
+      "projection_sha256": "ed96ffd08a44c4c7bcb9f414e58b20782584560b36abdf8cdf5308b94b1fa8e5"
+    },
+    {
+      "name": "native-CAM-TechDB.cwdb",
+      "image_bytes": 15835136,
+      "image_sha256": "ebc8787c5150e8a90c445e20f72e33bf5863fc1880ca51b0efe8e50349784806",
+      "projection_bytes": 18463733,
+      "projection_sha256": "012653b7e4458ffeb40721c2d3f5ac071b32a75f5cd9d1974e8c90ab6f1a6d9d"
+    }
+  ],
+  "raw_bytes": 40380773,
+  "raw_sha256": "33873c5e4fc9710ad75836fec031a4cb6dcf721ce1d2ba23a28acc8310f72d96",
+  "gzip_bytes": 3034895,
+  "gzip_sha256": "69a6014d5be9d20719e57da589b68b283fded11d1ec57932ac551e6044f0df47",
+  "oracle": "Python sqlite3 3.50.4"
+}

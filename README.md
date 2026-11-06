@@ -4,11 +4,55 @@ Bessemer is a Rust library being built to read and write SolidWorks documents
 (parts .sldprt, assemblies .sldasm, and drawings .slddrw).
 CAD kernels use it to exchange data with SolidWorks files. Martensite is its first consumer.
 
+`bessemer::flow` reads ordinary Flow result carriers with observed version words
+7/8 and replaces physical payloads on isolated copies. It retains duplicate,
+reserved and unknown records. See the [Flow carrier evidence](docs/features/flow-carriers/README.md)
+for exact framing checks and the remaining index, payload and application work.
+The [GUID header view](docs/features/flow-headers/README.md) reads and edits the
+selected record-123/435 GUID prefixes while preserving control words and extensions.
+The [record-433 arrays](docs/features/flow-arrays/README.md) decode bounded zlib
+payloads and edit existing signed cells with explicit runtime-count coverage.
+The [record-404 grouped-word view](docs/features/flow-groups/README.md) reads versions
+3–6 under explicit compression contexts and edits stored words, wide values,
+flags and auxiliaries while preserving other bytes and complete history.
+The [static-settings identity and selection view](docs/features/flow-settings/README.md)
+preserves optional identity presence and projects the documented binary-key cache
+precedence under explicit normal-return semantics.
+The [fixed settings arrays](docs/features/flow-fixed-settings/README.md) read records
+7/102 and edit existing raw slots while preserving integer and binary64 bits.
+The [diagnostic field projection](docs/features/flow-settings-fields/README.md)
+derives seven documented labels with explicit missing guard and floating-point context.
+
 `bessemer::electrical` reads and edits complete Electrical ZIP32 project carriers
 and lexical ASCII Archive.ini records. It preserves duplicate occurrences,
 unknown members and encoded representations of untouched members. See the
 [Electrical evidence](docs/features/electrical-projects/README.md) for limits,
-history and the remaining SQLite/project-schema work.
+history and the remaining project-schema work.
+`bessemer::sqlite_image` checks complete in-memory Electrical/CAM SQLite images
+and reads bounded schema metadata and complete named-table rows, retaining NULLs,
+duplicate rows and raw text/blob values. See the
+[SQLite evidence](docs/features/sqlite-images/README.md) for native fixtures,
+resource limits and application acceptance exclusions.
+Electrical project views also retain complete catalog/project records, distinct
+version rows and every literal database/drawing match. The
+[record evidence](docs/features/electrical-records/README.md) covers duplicate
+occurrences, file-type constants and whole-operation bounds.
+The [userdata query and ID-gate views](docs/features/electrical-userdata/README.md)
+retain exact two-part SQLite selection, separate lexical object-ID matches and
+the documented signed-ID transition without guessing provider conversions.
+`ElectricalUserdataState::project_recordset` also applies explicit provider
+destination effects to all twenty UTF-16 slots, retaining flags, identity fields,
+before/after storage and branch-specific history.
+The [storage projection](docs/features/electrical-userdata-state/README.md) also
+composes checked queries: EOF preserves prior state, while present rows require
+explicit provider effects independently of ID-gate acceptance.
+The [direct file-field map](docs/features/electrical-file-fields/README.md) pairs
+all 38 observed typed read requests with unchanged stored values and distinguishes
+runtime fields from reused temporaries.
+Existing userdata TEXT cells can also be committed on isolated copies with
+whole-database logical checks and exact source checkpoints. See the
+[userdata writer](docs/features/electrical-userdata-write/README.md) for unique-key
+requirements, supported schema scope and physical rewrite limits.
 
 `bessemer::compound` reads and reconstructs MS-CFB version-3/4 carriers and
 replaces existing streams on isolated snapshots, including mini-stream cutoff

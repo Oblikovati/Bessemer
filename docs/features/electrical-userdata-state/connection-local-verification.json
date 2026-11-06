@@ -1,0 +1,34 @@
+{
+  "issue": 231,
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0",
+  "tests_passed": 17,
+  "tests_failed": 0,
+  "query_cases": 78,
+  "commands": [
+    {
+      "command": "cargo test --test electrical_userdata_state --test electrical_userdata --locked",
+      "exit_code": 0
+    },
+    {
+      "command": "cargo clippy --lib --test electrical_userdata_state --test electrical_userdata --locked -- -D warnings",
+      "exit_code": 0
+    }
+  ],
+  "source_and_log_sha256": {
+    "src/electrical/mod.rs": "ce75dd5dbfccfd1fce8080dcca9cdaf0f30412763b65460c072e726c5b040154",
+    "src/electrical/userdata_state.rs": "3b2622a5aa41d6e2055b2f4fccca896510bcec2c9096fed56d1c13a311884d33",
+    "src/electrical/userdata_connection.rs": "d73f0e5219fd2894bb6637ebcc6edc00b37c34fde25608647364e6ba7adc013e",
+    "tests/electrical_userdata.rs": "2b0bdee1e75b4b0b2fc77e781a63190ed89fe19daf4871cfa0a0d6f31c4885b2",
+    "tests/electrical_userdata_state.rs": "7f2510198a6ba9c38274b43884f2f7952fc1f9d3131ad4dca4f5c9c64d5e047b",
+    "target/userdata-connection-focused-tests.log": "320359dcfd605bad5df7e5238385bdca5d784a6bb767bf7af7a8f3b63c1f1ebb",
+    "target/userdata-connection-clippy.log": "e5073dbc3d75e94e8572d9786d0c183c5c2cf6a5eed5cd9e5f5000de60c68d74",
+    "docs/features/electrical-userdata-state/connection-native-byte-verification.json": "848cf4941e75385d9ad291cc48556b54481f26ceced8c4e0cd77dc988b9399e9"
+  },
+  "native_execution": false,
+  "exclusions": [
+    "Native provider conversion and row priority",
+    "Whole application acceptance",
+    "Full repository gate for this newer source cut"
+  ]
+}

@@ -1,0 +1,48 @@
+use super::{ElectricalFileReadDestination as Destination, ElectricalFileReaderKind as Reader};
+use Destination::{
+    IdentityTemporary as Identity, ObjectByteOffset as Object, SharedBoolTemporary as Boolean,
+    SharedDoubleTemporary as DoubleTemporary, SharedLongTemporary as Integer,
+};
+use Reader::{Bool, Date, Double, Long, Str};
+
+// Specification 14.26/C-265 binds each tuple to a separate descriptor initializer and getter call.
+pub(super) const FILE_READ_BINDINGS: [(&str, Reader, Destination); 38] = [
+    ("fil_id", Long, Identity),
+    ("fil_bun_id", Long, Object(0x40)),
+    ("fil_fol_id", Long, Object(0x44)),
+    ("fil_filename", Str, Object(0x48)),
+    ("fil_loc_id", Long, Object(0x108)),
+    ("fil_fun_id", Long, Object(0x10c)),
+    ("fil_filetype", Long, Object(0x50)),
+    ("fil_titleblock", Str, Object(0x58)),
+    ("fil_tit_iswithline", Bool, Boolean),
+    ("fil_tit_lineindex", Long, Integer),
+    ("fil_tit_linesize", Double, DoubleTemporary),
+    ("fil_tit_linemargin", Double, DoubleTemporary),
+    ("fil_tit_iswithcolumn", Bool, Boolean),
+    ("fil_tit_columnindex", Long, Integer),
+    ("fil_tit_columnsize", Double, DoubleTemporary),
+    ("fil_tit_columnmargin", Double, DoubleTemporary),
+    ("fil_tit_xreflimits", Double, DoubleTemporary),
+    ("fil_tit_scalenumerator", Double, DoubleTemporary),
+    ("fil_tit_scaledenominator", Double, DoubleTemporary),
+    ("fil_tit_linenumberingoption", Long, Integer),
+    ("fil_tit_linenumber", Long, Integer),
+    ("fil_tit_columnnumber", Long, Integer),
+    ("fil_tit_modificationdate", Date, Object(0xc0)),
+    ("fil_revisionno", Long, Object(0x110)),
+    ("fil_bomtemplate", Str, Object(0x118)),
+    ("fil_bomfilter", Str, Object(0x120)),
+    ("fil_com_id", Long, Object(0x130)),
+    ("fil_sw_fileid", Long, Object(0x114)),
+    ("fil_tbcount", Long, Object(0x134)),
+    ("fil_optiontype", Long, Object(0x1c0)),
+    ("fil_title", Str, Object(0x20)),
+    ("fil_orderno", Long, Object(0x30)),
+    ("fil_lock", Bool, Object(0x38)),
+    ("fil_manual", Long, Object(0x3c)),
+    ("fil_tagposition", Long, Object(0x34)),
+    ("fil_scfilepath", Str, Object(0x128)),
+    ("fil_txtidentifier", Long, Object(0x1c4)),
+    ("fil_txtseparator", Long, Object(0x1c8)),
+];

@@ -1,0 +1,44 @@
+{
+  "issue": 241,
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0",
+  "rust_tests_passed": 6,
+  "python_tests_passed": 2,
+  "failures": 0,
+  "clippy_exit_code": 0,
+  "native_carriers": 3,
+  "native_records": 66,
+  "all_fixture_records": 72,
+  "record_edit_requests": 216,
+  "fresh_reversals": 216,
+  "raw_version_words_tested": 65536,
+  "workers": 8,
+  "source_sha256": {
+    "src\\flow\\decode.rs": "ee3013b1e46fd6789856433c712c490de7c116c6876b693379903ee8be52c41c",
+    "src\\flow\\edit.rs": "563c50458a50809b96bd4648b3f82393ccff1510da62f55f4808f988671670ca",
+    "src\\flow\\mod.rs": "d44f24a4f560f25eced9a470d747ef48da70c5e0f97781a1bacb90a4157e7567",
+    "src\\flow\\types.rs": "65958683bd002ffd18e6d3a09fd2b2b9fc24ec8ab81e2ce3134c055ae377508c",
+    "src\\lib.rs": "81eadf8bd6dc91f68b2e0620d2cc79bdb9a17bcce22e3a8fdd17ecd9838c31a8",
+    "tests\\flow_carriers.rs": "eaa62090b23632a0928ed67fcea2ad4b95330c0e7ade0920510859d0fca162e9",
+    "tests\\flow_carriers\\fixture.rs": "da94869a44a7dc28c10e5b105a3be50d40993986d889c9c89b89c4f790ea2bea",
+    "docs\\features\\flow-carriers\\freeze_carriers.py": "63456a917c327e6d5016c99b2d311774bdf12fc00adcf9c0eb3b0fa13776e63d",
+    "docs\\features\\flow-carriers\\test_carriers.py": "16d3ffe599d20281b889fbf256387017d08d6efaa42b68283654b891dd8c2015"
+  },
+  "log_sha256": {
+    "target/flow-carriers-final-tests.log": "7921fe547097487244f0355c45a99537c6f319608c9e2641fcb999388579755f",
+    "target/flow-carriers-clippy.log": "e28a7c1918e1f924cf099b04d5e99637f64248ef24172523ffbe4aecf0a5d457",
+    "target/flow-carriers-python-tests.log": "dee6ee7954a0d4bcb87c6641b27f4fd1aa8dde3c7fb2e1590ef2e6b4cecfdab7"
+  },
+  "commands": [
+    "cargo test --test flow_carriers --locked",
+    "cargo clippy --lib --test flow_carriers --locked -- -D warnings",
+    "python docs/features/flow-carriers/test_carriers.py"
+  ],
+  "excluded": [
+    "GUID prefixes and all decoded payload schemas",
+    "Alternate native terminal-index adoption",
+    "Native application and geometry acceptance",
+    "Full repository gate for this newer source cut"
+  ],
+  "native_execution": false
+}

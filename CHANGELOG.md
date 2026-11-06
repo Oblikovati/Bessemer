@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Initialized deserialized SQLite page metadata before validating exact image extents, preserving nondefault native page sizes. (#234)
+
 - Qualified synthetic high-bit Thicken replay coverage pending the native signed-version binding. (#213)
 
 - Accepted zero image-size declarations in uncompressed BGRX previews and preserved them through pixel edits and fresh reversals. (#208)
@@ -51,6 +53,34 @@
 - Fixed reference-plane point roles rejecting documented endpoint and loft-sync subclasses for fresh and cached pointers. (#46)
 
 ### Added
+
+- Added seven Flow settings diagnostic projections with preserved stored bits and explicit unresolved integer-guard and floating-point prerequisites. (#241)
+
+- Added strict Flow record-7/102 settings-array reads and isolated slot edits with preserved integer and binary64 bit patterns. (#241)
+
+- Added Flow static-settings identity views and exact binary-GUID cache-selection projections with explicit normal-return and execution coverage. (#241)
+
+- Added typed Flow record-404 groups for payload versions 3–6 with explicit raw/zlib contexts, complete bounded validation and isolated wire-field edits. (#241)
+
+- Added bounded Flow record-433 array reads and isolated signed-cell edits with explicit runtime-count checks, full decoded validation and retained source checkpoints. (#241)
+
+- Added selected Flow GUID-header reads and typed sixteen-byte edits with Windows GUID formatting and preserved extension bytes. (#241)
+
+- Added bounded ordinary Flow result carrier reads and isolated physical payload replacements with exact checkpoints and complete record history. (#241)
+
+- Composed Electrical userdata query results with prior storage, preserving EOF state and requiring explicit provider effects for present rows. (#231)
+
+- Added complete Electrical userdata storage transitions for supplied provider effects, retaining raw UTF-16 slots, branch coverage and field history. (#231)
+
+- Added isolated Electrical userdata TEXT-cell writes with complete stored-database checks, bounded page growth, composed member/cell history and exact source checkpoints. (#238)
+
+- Added complete Electrical direct field-read maps with observed reader kinds, runtime destinations, unchanged SQLite values and preserved unmatched columns. (#231)
+
+- Added bounded Electrical userdata queries with exact SQLite key comparisons, complete lexical object-ID matches and the documented signed-ID gate. (#231)
+
+- Added complete bounded Electrical project/catalog records, literal database and drawing relationships, and observed-build file-type constant names. (#231)
+
+- Added bounded in-memory Electrical/CAM SQLite image validation, complete schema metadata and named-table row snapshots with exact original-byte retention. (#233)
 
 - Added Electrical ZIP32 carrier reads, member edits and lossless ASCII Archive.ini value operations with coverage and history. (#231)
 

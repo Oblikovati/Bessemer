@@ -1,0 +1,12 @@
+{
+  "cases": 26,
+  "member_views_checked": 8144,
+  "changed_field_edits": 100,
+  "noops": 100,
+  "bytes_per_process": 19629088,
+  "sha256": "0e1d491457b7d06ea4c13fcb3f02a031453c5d1038b76e6ed36c40b93ec7ef2d",
+  "processes": 2,
+  "comparison": "Complete raw Rust output streams compared byte for byte",
+  "independent_oracle": "Source grouped-word decoder checked every view, exact decoded field patch, scalar history, complete output payload, no-op wire identity and all unselected carrier bytes; changed zlib encodings validated without a canonical Python compressed-byte oracle",
+  "native_execution": false
+}
