@@ -1,0 +1,18 @@
+{
+  "command": "cargo xtask pr",
+  "terminal_exit_code": 0,
+  "source_commit": "f545daeb819743fd0db008d51ca12649ba09cd6f",
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "log": "target\\flow-block-extras-combined-full-pr-gate.log",
+  "log_sha256": "0ea532894691b1fb78ae63dfc5b6acdc15ed5053206c7bf2739eb6acb0d538a4",
+  "result_summaries": 379,
+  "passed": 4628,
+  "failed": 0,
+  "ignored": 241,
+  "scope": "Record-408 complete typed API and supplementary field oracle, record-402 test function extraction, four-table independent baseline and earlier work",
+  "exclusions": [
+    "Later four-table 407/437/411/413 typed API and native acceptance",
+    "Later record-421 independent fixture baseline",
+    "Native application acceptance and remote CI"
+  ]
+}
