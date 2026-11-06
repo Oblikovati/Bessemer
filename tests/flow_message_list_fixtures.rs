@@ -1,8 +1,14 @@
 //! Complete owned message-list framing and modern/legacy string transfer oracles.
+#[path = "flow_message_lists/api.rs"]
+mod api;
 #[path = "flow_message_lists/fixture.rs"]
 mod fixture;
 #[path = "flow_field_values/packet.rs"]
 mod packet;
+#[path = "flow_state_tables/carrier.rs"]
+mod state_carrier;
+#[path = "flow_state_tables/process.rs"]
+mod state_process;
 #[path = "flow_field_values/stored_fields.rs"]
 mod stored_fields;
 use fixture::{MessageCase, MessageText};

@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added complete record-301 message-list reads and isolated member/text edits, preserving legacy byte counts, modern UTF-16 suffixes and independent list presence. (#241)
+
 - Added complete record-129 tagged-state reads and isolated tag/value/tail edits, preserving body presence, raw tag bytes and exact wide patterns. (#241)
 
 - Added complete record-139 fixed-state reads and isolated member/settings edits, preserving absent counts, raw slot bits and version-dependent field presence. (#241)

@@ -74,6 +74,9 @@ absent counts, version-dependent fields and complete carrier history.
 The [tagged-state view](docs/features/flow-tagged-state/README.md) reads record
 129's separate tag block and row bodies and edits existing tags, wide values
 and tails while preserving body presence and complete physical history.
+The [message-list view](docs/features/flow-message-lists/README.md) reads record
+301 versions 0–3 and edits existing member words and text elements, preserving
+legacy byte transfers, full UTF-16 units and independent list presence.
 The [legacy link view](docs/features/flow-link-records/README.md) reads record 402
 and edits existing fields while preserving code bytes, sentinel references and versioned tails.
 The [legacy table view](docs/features/flow-legacy-tables/README.md) reads records
