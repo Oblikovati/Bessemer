@@ -1,5 +1,60 @@
 use super::*;
 
+pub(super) fn versioned<F>(
+    source: &FlowCarrier,
+    id: &FlowRecordId,
+    identifier: u32,
+    compression: FlowLegacyTableTransport,
+    operation: &'static str,
+    expand_body: F,
+) -> Result<TableWire>
+where
+    F: FnOnce(&[u8], i32) -> Result<Vec<u8>>,
+{
+    let stored = super::super::payload_codec::record_payload(source, id, identifier, operation)?;
+    let version = ArchiveCursor::new(stored).i32()?;
+    let decoded = expand_body(&stored[4..], version)?;
+    Ok(TableWire {
+        source: source.clone(),
+        record: id.clone(),
+        decoded: decoded.into(),
+        version,
+        stored_bytes: stored.len(),
+        compression,
+        identifier,
+    })
+}
+
+pub(super) fn edited_versioned(
+    wire: &TableWire,
+    body: &[u8],
+    operation: &'static str,
+) -> Result<FlowCarrierEdit> {
+    if body == wire.decoded.as_ref() {
+        let stored = super::super::payload_codec::record_payload(
+            &wire.source,
+            &wire.record,
+            wire.identifier,
+            operation,
+        )?;
+        return wire.source.replace_payload(&wire.record, stored);
+    }
+    let payload = versioned_payload(wire, body, operation)?;
+    wire.source.replace_payload(&wire.record, &payload)
+}
+
+fn versioned_payload(wire: &TableWire, body: &[u8], operation: &'static str) -> Result<Vec<u8>> {
+    let encoded = match wire.compression {
+        FlowLegacyTableTransport::Raw => body.to_vec(),
+        FlowLegacyTableTransport::Zlib => {
+            super::super::payload_codec::encode_zlib(body, operation)?
+        }
+    };
+    let mut payload = wire.version.to_le_bytes().to_vec();
+    payload.extend_from_slice(&encoded);
+    Ok(payload)
+}
+
 pub(super) fn read(
     source: &FlowCarrier,
     id: &FlowRecordId,

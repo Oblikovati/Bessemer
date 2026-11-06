@@ -38,6 +38,13 @@ descriptors and total values independently before allocation or iteration.
 Preserve ordered duplicates and present empty fields without allocating one
 object for every numeric value.
 
+The shared raw-version/body read and edit paths now live in
+`src/flow/legacy_tables/wire.rs`. Record 108 calls those helpers with its original
+version gate, body expansion and operation name. This preserves its validation
+order, errors, zero-body cases and exact stored no-ops while providing the same
+transport boundary for record 128. The shared helpers do not decode conditional
+items; the complete family parser and its public API remain unfinished.
+
 The first operation must read and edit every existing nonstructural stored
 field, completely reparse the result and require unchanged physical scope and
 field layouts. Version/count fields remain structural. Mode, gate, presence,
