@@ -40,18 +40,6 @@ fn read(
         options.maximum_payload_bytes,
     )?;
     let count = wire.version;
-    validate_count(count, wire.decoded.len() - 4, options.maximum_values)?;
+    wire::validate_counted_bytes(12, count, wire.decoded.len() - 4, options.maximum_values)?;
     Ok(FlowCountedBytes { wire, options })
-}
-fn validate_count(count: i32, available: usize, maximum: usize) -> Result<()> {
-    if count >= 0 && count as usize == available && available <= maximum {
-        return Ok(());
-    }
-    Err(table_failure(
-        12,
-        FailureClass::Invalid,
-        format!(
-            "stored count {count}, remaining bytes {available}, value limit {maximum}; expected a nonnegative signed-i32 count equal to the remaining raw bytes and at most the value limit"
-        ),
-    ))
 }

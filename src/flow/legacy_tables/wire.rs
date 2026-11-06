@@ -165,6 +165,23 @@ pub(super) fn mode(wire: &TableWire) -> FlowLegacyTableCheckMode {
 pub(super) fn signed_at(raw: &[u8], offset: usize) -> i32 {
     unsigned_at(raw, offset) as i32
 }
+pub(super) fn validate_counted_bytes(
+    identifier: u32,
+    count: i32,
+    available: usize,
+    maximum: usize,
+) -> Result<()> {
+    if count >= 0 && count as usize == available && available <= maximum {
+        return Ok(());
+    }
+    Err(table_failure(
+        identifier,
+        FailureClass::Invalid,
+        format!(
+            "stored count {count}, remaining bytes {available}, value limit {maximum}; expected a nonnegative signed-i32 count equal to the remaining raw bytes and at most the value limit"
+        ),
+    ))
+}
 pub(super) fn element_offset(
     identifier: u32,
     start: usize,
