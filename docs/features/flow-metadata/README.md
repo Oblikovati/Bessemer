@@ -68,3 +68,25 @@ workers compare complete map and assignment transcripts after input isolation
 checks. Two fresh processes reproduce the entire independent FIS1 packet byte
 for byte. Native identifier roles and application acceptance remain unverified;
 this API adds no record-424 backend coverage.
+
+## Backend boundary baseline
+
+The section-14.53 backend reader consumes version zero, then up to two
+version-zero table headers. An empty first table continues to the second header.
+A populated table stops after its first signed kind tag; only first-table kind
+one also stores a 16-byte key before that boundary. The declared populated count
+need not fit the remaining bytes because object bodies have not been decoded.
+Other kind tags remain raw, including negative and boundary values.
+
+The FMB1 baseline freezes 1,039 views: the native backend, empty framing with and
+without a tail, both table positions, 259 kind tags and counts one and signed
+maximum. Rust reconstructs every known byte and retains the exact opaque tail.
+The native backend contains 13,079 bytes and stops at byte 26 before the first
+kind-one body. Completed empty backend framing still does not establish complete
+record framing; following bytes belong to the outer record and remain opaque.
+Python checks every proper prefix of each known span, every unsupported version
+byte at all three version positions and negative counts at both table positions.
+
+This is fixture evidence for the next backend implementation. The documented
+kind-one and kind-two bodies, typed references, outer collections and finite
+curve evaluation still require separate implementation and verification.

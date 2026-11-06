@@ -1,6 +1,8 @@
 //! Independent complete ID/state contracts and explicitly partial metadata-prefix accounting.
 #[path = "flow_metadata/api.rs"]
 mod api;
+#[path = "flow_metadata/backend.rs"]
+mod backend;
 #[path = "flow_metadata/fixture.rs"]
 mod fixture;
 #[path = "flow_field_values/packet.rs"]
