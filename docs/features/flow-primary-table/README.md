@@ -1,0 +1,50 @@
+# Flow record 439 primary-class tables
+
+Issue: #241. Reference: `../inventor-interface/solidworks/flowrecord439.py`.
+
+Bessemer currently preserves record 439 as raw carrier bytes. This feature starts
+with the complete documented primary-class grammar for versions 0 through 3.
+The reference binds that profile to native vtable `0x1809ec4b0`; the serialized
+bytes do not establish native object allocation or engineering meanings.
+
+Each item stores a kind byte and element-kind byte, followed by exactly two
+groups. Version three adds a stored mode byte before each group's two signed
+members and presence byte. Any nonzero presence byte introduces a body with two
+independently counted raw 32-bit vectors, three signed members and fixed arrays
+of six and three raw wide patterns. Version zero also stores nine legacy wide
+patterns. Versions two and three store a flag whose native projection is true
+only for the exact byte value one. Other nonzero flag bytes remain false in that
+projection while retaining their stored bits.
+
+Kinds two and three add a typed-element list after each group, including groups
+whose optional body is absent. A zero list accepts every unused element-kind
+byte. A populated list requires one of four layouts: a raw 32-bit word, two raw
+32-bit words, a word plus a raw 64-bit pattern, or word/wide/word. Their serialized
+strides are 4, 8, 12 and 16 bytes. Each element contains independently counted
+ragged rows and independently counted blocks of sixteen wide patterns. Empty
+rows, empty elements, absent bodies and absent typed lists remain distinct.
+
+The F439 packet freezes 5,685 complete payloads. It covers all versions, every
+kind, unused element-kind, mode, presence and stored-flag byte, all four typed
+layouts, consecutive and reversed items, independent vector counts, empty rows,
+1,024-entry rows, 128 empty rows/elements and 128 wide blocks. Raw numeric cases
+cover each single bit and complement, signed zero, infinities, NaNs and
+subnormals. Expected data retains every field and nested item/group/body/element/
+row/block interval, and Rust reconstructs the complete payload from those fields.
+
+The audited native CPT sample has an eight-byte version-two payload with zero
+items. Its whole-file and payload hashes are recorded in
+`baseline-verification.json`. This proves the empty native framing only;
+populated primary-class layouts use generated fixtures. No populated installed
+fixture, native runtime behavior, engineering role or application acceptance is
+claimed.
+
+Python independently rebuilds every record, regenerates the packet in a temporary
+root, checks all proper prefixes of compact layouts, mutates every reached
+nested count to negative/impossible values and rejects trailing bytes. It also
+pins the distinction between an unused factory tag and a populated unsupported
+tag. Four Rust tests check complete reconstruction, native empty framing, all
+byte-valued roles, every typed stride and raw numeric pattern coverage.
+
+There is no production typed record-439 API yet. The implementation constraints
+are recorded in `design.md`; the existing raw carrier remains available.

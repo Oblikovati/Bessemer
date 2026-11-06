@@ -9,6 +9,8 @@ mod fixture;
 mod kind_two;
 #[path = "flow_field_values/packet.rs"]
 mod packet;
+#[path = "flow_field_values/packet_wide.rs"]
+mod packet_wide;
 #[path = "flow_medium_objects/profile.rs"]
 mod profile;
 #[path = "flow_medium_objects/rebuild.rs"]

@@ -53,9 +53,7 @@ pub(super) fn curve(cursor: &mut PacketCursor) -> BodyCurve {
         extra_second: words(cursor),
     }
 }
-pub(super) fn wide(cursor: &mut PacketCursor) -> u64 {
-    u64::from_le_bytes(number(cursor))
-}
+pub(super) use crate::packet_wide::wide;
 pub(super) fn words(cursor: &mut PacketCursor) -> Vec<u64> {
     counted(cursor, wide)
 }
