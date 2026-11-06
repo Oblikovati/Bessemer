@@ -1,0 +1,36 @@
+{
+  "feature_issue": 241,
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "rust_command": "cargo test --test flow_block_extra_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 2,
+  "rust_failed": 0,
+  "clippy_command": "cargo clippy --test flow_block_extra_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "python_command": "python -m unittest discover -s docs/features/flow-block-extras -p test_extras.py -v",
+  "python_exit_code": 0,
+  "python_passed": 8,
+  "format_command": "rustfmt --edition 2021 tests/flow_block_extra_fixtures.rs",
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed for Rust and Python",
+  "views": 289,
+  "native_views": 1,
+  "scope": "Independent fixture baseline before the typed record-408 reader/editor: complete wire reconstruction, every declared interval, flag presence and value, all list and nested arrays, versioned widths, stored/runtime indices and explicit enabled/leaf context",
+  "source_lf_sha256": {
+    "tests\\flow_block_extra_fixtures.rs": "958bb5b5802e3ad373f74a23bc87a46c2be3cc82065d6ad76bc37178cc33b29b",
+    "tests\\flow_block_extras\\fixture.rs": "9e9ef66c487c10cc4bb143f1254c32a11335da3e2b1f83b53f254f83aa0851ff",
+    "tests\\flow_block_extras\\rebuild.rs": "6cec85f03fd09b7d6ed8b616dff2407b3b6dfa067df885f577e465300b84596e",
+    "tests\\flow_block_extras\\types.rs": "d4a13b8b8e907684fb4a8acd339fc34f348560b15de0d2b126a5392a33271c7c",
+    "docs\\features\\flow-block-extras\\freeze_extras.py": "c919b4303c6eea35b715ebee179780ba6577d6d8570fb6e2f477f8babe74adb6",
+    "docs\\features\\flow-block-extras\\test_extras.py": "6f58b2e4ea771027776a0eb0bbbc4e1721c72f5dbe3e830d0b21cee13d87b618"
+  },
+  "log_sha256": {
+    "target\\flow-block-extras-baseline-tests.log": "262c5b00b138e15f23fcddb39c7c4c580e15587a399bd830cd6cee247daa26b7",
+    "target\\flow-block-extras-baseline-clippy.log": "b6a1562859622625e66744c2de70954b9f4cc81c3c9c3622df9fae3d65efaa0a",
+    "target\\flow-block-extras-baseline-python-tests.log": "146dc5d4e833ab3c5116c0ac3a856b824c537c251140c80ea491b099fc3b5481"
+  },
+  "exclusions": [
+    "No tree-order assignment, native reference resolution, native runtime reconstruction or application acceptance",
+    "Full gate at b8b5aaac excludes this later fixture baseline"
+  ]
+}
