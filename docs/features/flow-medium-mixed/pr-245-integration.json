@@ -1,0 +1,84 @@
+{
+  "pull_request": "https://github.com/Oblikovati/Bessemer/pull/245",
+  "merge": {
+    "baseRefName": "codex/interop-candidate",
+    "headRefOid": "0bf2c72f46bb57038b9b15ac20413c770b5c015a",
+    "mergeCommit": {
+      "oid": "256430557d9690134f30cae29f18e794f76f8ae1"
+    },
+    "mergedAt": "2026-11-06T18:10:36Z",
+    "state": "MERGED"
+  },
+  "checks": [
+    {
+      "link": "https://github.com/Oblikovati/Bessemer/actions/runs/42215059085/job/127993757140",
+      "name": "Full gate (macOS arm64)",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/Oblikovati/Bessemer/actions/runs/42215059085/job/127993756967",
+      "name": "Full gate (macOS x86_64)",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/Oblikovati/Bessemer/actions/runs/42215059085/job/127993757105",
+      "name": "Full gate (Windows x64)",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/Oblikovati/Bessemer/actions/runs/42215059085/job/127993757095",
+      "name": "Full gate (Linux x86_64)",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/Oblikovati/Bessemer/actions/runs/42215059085/job/127882880079",
+      "name": "ThreadSanitizer partition 4/8",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/Oblikovati/Bessemer/actions/runs/42215059085/job/127882880138",
+      "name": "ThreadSanitizer partition 2/8",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/Oblikovati/Bessemer/actions/runs/42215059085/job/127882880046",
+      "name": "ThreadSanitizer partition 5/8",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/Oblikovati/Bessemer/actions/runs/42215059085/job/127882879952",
+      "name": "ThreadSanitizer partition 6/8",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/Oblikovati/Bessemer/actions/runs/42215059085/job/127882880214",
+      "name": "ThreadSanitizer partition 7/8",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/Oblikovati/Bessemer/actions/runs/42215059085/job/127882880053",
+      "name": "ThreadSanitizer partition 3/8",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/Oblikovati/Bessemer/actions/runs/42215059085/job/127882879541",
+      "name": "PR gate (Linux x86_64)",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/Oblikovati/Bessemer/actions/runs/42215059085/job/127882879938",
+      "name": "ThreadSanitizer partition 1/8",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/Oblikovati/Bessemer/actions/runs/42215059085/job/127882880038",
+      "name": "ThreadSanitizer partition 0/8",
+      "state": "SUCCESS"
+    }
+  ],
+  "completed_feature_branch": "codex/flow-medium-profiles",
+  "local_and_remote_feature_branch_deleted": true,
+  "open_pull_requests_after_cleanup": 0,
+  "candidate": "256430557d9690134f30cae29f18e794f76f8ae1",
+  "scope": "Mixed medium profiles only; later evaluator, primary/conditional/load/state/message work excluded from this merged head"
+}
