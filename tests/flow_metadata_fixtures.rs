@@ -7,6 +7,8 @@ mod backend;
 mod fixture;
 #[path = "flow_field_values/packet.rs"]
 mod packet;
+#[path = "flow_metadata/prefix_api.rs"]
+mod prefix_api;
 #[path = "flow_metadata/rebuild.rs"]
 mod rebuild;
 #[path = "flow_metadata/types.rs"]

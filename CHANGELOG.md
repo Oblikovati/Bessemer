@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added bounded Flow metadata-prefix reads and isolated fixed-field edits with lossless UTF-16 projections and exact opaque-backend preservation. (#241)
+
 - Added complete raw Flow ID/state reads, isolated fixed-field edits and ordered map projections with explicit input snapshots and assignment history. (#241)
 
 - Added version-prefixed Flow field-value reads and isolated edits with explicit runtime layouts, strict width projections and complete body-codec boundaries. (#241)

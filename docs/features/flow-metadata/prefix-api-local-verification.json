@@ -1,0 +1,49 @@
+{
+  "feature_issue": 241,
+  "fixture_base": "91dd254a",
+  "backend_fixture_base": "74b72e38",
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "rust_command": "cargo test --test flow_metadata_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 22,
+  "rust_failed": 0,
+  "rust_ignored": 0,
+  "clippy_command": "cargo clippy --test flow_metadata_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "python_passed": 15,
+  "python_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "views": 537,
+  "coverage": "Complete documented prefix only: every raw version and state byte, vector/object/string intervals and signed values, raw code units and first-NUL native projections, version-two fallback, exact known/opaque partition.",
+  "edits": "Every small existing field and larger vector/string endpoints, including all native prefix fields. No-op identity, independent whole-carrier patch bytes, all physical history and fresh reverse. Structural version changes and terminal-NUL removal rejected; semantic NUL and surrogate edits verified.",
+  "boundaries": "Every known prefix up to 4096 bytes; missing terminators; exact/one-below/zero independent payload/vector/object/total-value/total-unit limits; negative and physically impossible counts; wrong/foreign/stale IDs, missing rows and absent strings.",
+  "concurrency": "All eleven public types asserted Send/Sync; eight workers match complete native-text/state/edit-carrier/tail transcripts across all537views. Caller source mutation leaves published snapshots unchanged.",
+  "exclusions": [
+    "Backend bodies and final outer collections",
+    "Native runtime and application acceptance",
+    "Full record-424 schema"
+  ],
+  "full_gate": "The live frozen 3b377e0c gate excludes this API and the record410API; full-gate acceptance is not claimed here.",
+  "humanizer": "Unavailable in installed skill catalog; prose pass left to maintainer review.",
+  "reference_sha256": "8dec7de6b29c9128ab20c2726e7a38afe30b56b4fb098de19ff0b0b408edc1db",
+  "source_lf_sha256": {
+    "src\\flow\\legacy_tables\\metadata_prefix\\decode.rs": "c30411c3e648683a105ec1c9bb2dc99b335b235d2abc242ad4cf21d64eae3688",
+    "src\\flow\\legacy_tables\\metadata_prefix\\edit.rs": "8d64fcb7fc4dcbd1ba2e3b7504238f09daa4f8e7c39fdf97f72683c3eca4c495",
+    "src\\flow\\legacy_tables\\metadata_prefix\\items.rs": "9687427536753302da5f2bcd4e53e8f3a7dc80401d2d381fcbff28462f87e77f",
+    "src\\flow\\legacy_tables\\metadata_prefix\\mod.rs": "429af34bb5b34c32c67854d1fc0f2ebe3d13d91802e7df6cf4ae4497c91f5314",
+    "src\\flow\\legacy_tables\\metadata_prefix\\types.rs": "a26a54d9097dffed7230e516b5463e4fb446b62c549abb5624b82c3ee8a607b3",
+    "src\\flow\\legacy_tables\\metadata_prefix\\view.rs": "891352a5d2182f043922b1f6ab732ef7cefa3f393b97657408d50b43ad8ef426",
+    "src\\flow\\legacy_tables\\mod.rs": "ac84be4698cd23b65b1bbac4add7566dbcbf42f6baffabd6957d8aa134dd207a",
+    "tests\\flow_metadata_fixtures.rs": "afa079eeaa37cbb5e3957645e538fcb30ae3682fed52238ea8e1971385329986",
+    "tests\\flow_metadata\\prefix_api.rs": "303df62a8ee03f2221ac93556601808af2cbbc28f9955327cb6f320dc10a5e4c",
+    "tests\\flow_metadata\\prefix_api\\contracts.rs": "626be5fe335e223271474109f54ad507096b3dbee020c3a323e17e3f040426d1",
+    "tests\\flow_metadata\\prefix_api\\edit.rs": "cab05e029c0870ead898ec636208acfab17649b37739601c1753156a4038b6e0",
+    "tests\\flow_metadata\\prefix_api\\read.rs": "a26262abfd6d2054ff89f8878a17fc89c56e0181718c7bb342f97ff7a5db82e1"
+  },
+  "log_sha256": {
+    "target\\flow-metadata-prefix-api-tests.log": "d2f8f87573efd4894010afa19732f4c0cf9354e903a49534ee547154aa9bf702",
+    "target\\flow-metadata-prefix-api-clippy.log": "583f068857cce4f33c280c2e6be0f76efd1383622211800e7d06a9b603203afd",
+    "target\\flow-metadata-prefix-api-python-tests.log": "ef69c252681381b2ea400c96935b335bbf7c14715bb3f4573b04957fe0189fbb"
+  }
+}

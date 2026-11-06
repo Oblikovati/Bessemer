@@ -35,7 +35,7 @@ has 112 known prefix bytes and 13,079 opaque backend bytes. The baseline always
 retains `full_payload_schema = false`, including when no tail bytes remain.
 This prefix evidence does not establish complete record-424 acceptance.
 
-Record 424 remains an independent fixture baseline before its typed API. Native map allocation,
+The initial fixture baseline remains independent of the typed APIs. Native map allocation,
 runtime state, engineering meanings, backend decoding and native application
 acceptance remain separate work. The fixture reader reuses the existing binary
 packet decoder; the field-value-specific 64-bit helpers remain with that feature's
@@ -90,3 +90,41 @@ byte at all three version positions and negative counts at both table positions.
 This is fixture evidence for the next backend implementation. The documented
 kind-one and kind-two bodies, typed references, outer collections and finite
 curve evaluation still require separate implementation and verification.
+
+## Record 424 metadata-prefix API
+
+`FlowCarrier::record_424_metadata_prefix` reads the raw prefix under an explicit
+`NativeUtf16` string mode. Independent limits bound complete payload bytes,
+vector headers, object headers, total vector values and total stored string
+units. Counts are checked against the physical payload before allocation.
+
+`FlowMetadataPrefix` retains its carrier and occurrence identity, every vector
+and object boundary, and all undecoded bytes. Borrowed strings distinguish an
+absent fourth field from a stored empty string and distinguish zero units from
+a stored NUL. Raw bytes retain invalid Unicode scalar sequences. Native text
+projections borrow UTF-16LE bytes before the first NUL; version two derives the
+fourth text from the first stored string. State bytes retain all bits beside
+an explicit Boolean projection.
+
+Existing vector values, object state bytes, signed member-C4 words and stored
+UTF-16 units can be edited. A terminal NUL cannot be removed. String-unit edits
+recompute native first-NUL text and its version-two fallback. Version edits are
+accepted only when reparsing preserves all collection and stored-string layouts.
+Every edit reopens the complete carrier, checks the full patched payload and
+retains source/result checkpoints and all physical history relations. Exact
+no-ops retain wire identity; fresh reversals reproduce the original carrier.
+
+All 537 frozen views match the typed reader. Every small existing field and the
+endpoints of larger vectors/strings receive independent patch, no-op, history
+and reverse checks. The complete native prefix is included. Tests cover all
+small known-prefix truncations, missing terminators, wrong/foreign/stale IDs,
+invalid indices, absent fourth fields, exact/one-below/zero resource limits,
+input isolation and matching results across eight workers. Two fresh processes
+reproduce the complete independent FMP1 packet, including every native text
+projection and opaque byte.
+
+Coverage always reports `full_payload_schema = false`, even with an empty tail.
+The explicit stop identifies either the inactive signed-version branch or the
+backend virtual-call boundary. Backend framing and medium bodies have separate
+reference schemas; they are not decoded by this prefix API. Native runtime
+state and application acceptance remain unverified.

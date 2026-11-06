@@ -1031,5 +1031,5 @@ Model-field edits retain CString count-prefix changes as physical changes, inclu
 
 The [Flow metadata API](docs/features/flow-metadata/README.md) reads and edits
 complete raw record-410 state rows and applies them to explicit immutable maps,
-retaining duplicate assignments and their preceding values. Record 424 remains
-a prefix fixture baseline with an opaque backend tail.
+retaining duplicate assignments and their preceding values. Record 424 supports bounded typed prefix reads and fixed-field edits, with
+lossless UTF-16, explicit incomplete coverage and an opaque backend tail.
