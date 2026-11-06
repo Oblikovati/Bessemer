@@ -66,7 +66,7 @@ fn open(raw: &[u8], options: FlowMediumBodyOptions) -> bessemer::Result<FlowMedi
 type ExpectedWide = (FlowMediumWideField, usize, Vec<u64>);
 fn fields(case: &BodyCase) -> Vec<ExpectedWide> {
     let mut result = Vec::new();
-    for (ordinal, curve) in case.curves.iter().enumerate() {
+    for (ordinal, curve) in case.prefix.curves.iter().enumerate() {
         curve_fields(&mut result, ordinal, curve);
     }
     let offset = shared_fields(&mut result, case);
@@ -115,8 +115,14 @@ fn curve_arrays(curve: &BodyCurve) -> [(FlowMediumCurveArray, &[u64]); 4] {
 }
 
 fn shared_fields(result: &mut Vec<ExpectedWide>, case: &BodyCase) -> usize {
-    let mut offset = case.curves.last().unwrap().end as usize + 4;
-    for (array, words) in case.first.iter().chain(&case.second).enumerate() {
+    let mut offset = case.prefix.curves.last().unwrap().end as usize + 4;
+    for (array, words) in case
+        .prefix
+        .first
+        .iter()
+        .chain(&case.prefix.second)
+        .enumerate()
+    {
         if array == 2 {
             offset += 4;
         }

@@ -43,12 +43,13 @@ fn totals(case: &ProfileCase) -> [usize; 5] {
     let units = case
         .first
         .iter()
-        .map(|entry| entry.body.text.units as usize)
+        .map(|entry| entry.body.prefix.text.units as usize)
         .sum();
     [case.first.len(), case.second.len(), refs, words, units]
 }
 fn body_words(body: &BodyCase) -> usize {
     let curves = body
+        .prefix
         .curves
         .iter()
         .map(|curve| {
@@ -60,9 +61,10 @@ fn body_words(body: &BodyCase) -> usize {
         .sum::<usize>();
     curves
         + body
+            .prefix
             .first
             .iter()
-            .chain(&body.second)
+            .chain(&body.prefix.second)
             .map(Vec::len)
             .sum::<usize>()
         + body.footer.scalars.len()

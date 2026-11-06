@@ -1,17 +1,6 @@
 use super::types::*;
 pub fn body(case: &BodyCase) -> Vec<u8> {
-    assert_eq!(case.version, 0);
-    assert!(!case.base_dispatch);
-    assert_eq!(case.key.len(), 16);
-    let mut raw = vec![case.version, case.base];
-    raw.extend_from_slice(&case.key);
-    append_text(&mut raw, &case.text);
-    assert_eq!(case.curves.len(), 7);
-    for curve in &case.curves {
-        append_curve(&mut raw, curve);
-    }
-    append_arrays(&mut raw, case.first_count, &case.first, 2);
-    append_arrays(&mut raw, case.second_count, &case.second, 4);
+    let mut raw = prefix(&case.prefix);
     assert_eq!(case.footer.scalars.len(), 4);
     append_words(&mut raw, &case.footer.scalars);
     raw.push(case.footer.state);
@@ -83,4 +72,20 @@ fn check_extra_lengths(curve: &BodyCurve) {
     };
     assert_eq!(curve.extra_first.len(), extra);
     assert_eq!(curve.extra_second.len(), extra);
+}
+
+pub(super) fn prefix(prefix: &BodyPrefix) -> Vec<u8> {
+    assert_eq!(prefix.version, 0);
+    assert!(!prefix.base_dispatch);
+    assert_eq!(prefix.key.len(), 16);
+    let mut raw = vec![prefix.version, prefix.base];
+    raw.extend_from_slice(&prefix.key);
+    append_text(&mut raw, &prefix.text);
+    assert_eq!(prefix.curves.len(), 7);
+    for curve in &prefix.curves {
+        append_curve(&mut raw, curve);
+    }
+    append_arrays(&mut raw, prefix.first_count, &prefix.first, 2);
+    append_arrays(&mut raw, prefix.second_count, &prefix.second, 4);
+    raw
 }

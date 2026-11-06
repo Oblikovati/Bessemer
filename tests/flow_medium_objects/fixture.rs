@@ -12,16 +12,7 @@ pub(super) fn body(cursor: &mut PacketCursor) -> BodyCase {
     BodyCase {
         name: String::from_utf8(blob(cursor)).unwrap(),
         raw: blob(cursor),
-        version: byte(cursor),
-        base: byte(cursor),
-        base_dispatch: boolean(cursor),
-        key: blob(cursor),
-        text: text(cursor),
-        curves: counted(cursor, curve),
-        first_count: count_word(cursor),
-        first: counted(cursor, words),
-        second_count: count_word(cursor),
-        second: counted(cursor, words),
+        prefix: prefix(cursor),
         footer: footer(cursor),
     }
 }
@@ -71,4 +62,19 @@ fn words(cursor: &mut PacketCursor) -> Vec<u64> {
 
 fn count_word(cursor: &mut PacketCursor) -> u32 {
     u32::try_from(signed(cursor)).unwrap()
+}
+
+pub(super) fn prefix(cursor: &mut PacketCursor) -> BodyPrefix {
+    BodyPrefix {
+        version: byte(cursor),
+        base: byte(cursor),
+        base_dispatch: boolean(cursor),
+        key: blob(cursor),
+        text: text(cursor),
+        curves: counted(cursor, curve),
+        first_count: count_word(cursor),
+        first: counted(cursor, words),
+        second_count: count_word(cursor),
+        second: counted(cursor, words),
+    }
 }

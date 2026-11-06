@@ -35,26 +35,29 @@ fn native_body_retains_all_seven_curve_arrays_and_its_exact_following_backend_by
     assert_eq!(exact.raw.len(), 12973);
     assert!(exact.footer.tail.is_empty());
     assert_eq!(&native.raw[..native.footer.end as usize], exact.raw);
-    assert_eq!((native.first_count, native.second_count), (50, 100));
+    assert_eq!(
+        (native.prefix.first_count, native.prefix.second_count),
+        (50, 100)
+    );
     check_native_curves(native);
     check_native_text_and_state(native);
 }
 #[test]
 fn every_base_state_and_flag_byte_and_raw_wide_pattern_has_owned_independent_coverage() {
     let cases = fixture::cases();
-    let bases: std::collections::BTreeSet<_> = cases.iter().map(|case| case.base).collect();
+    let bases: std::collections::BTreeSet<_> = cases.iter().map(|case| case.prefix.base).collect();
     let states: std::collections::BTreeSet<_> =
         cases.iter().map(|case| case.footer.state).collect();
     let flags: std::collections::BTreeSet<_> = cases
         .iter()
-        .flat_map(|case| case.curves.iter().map(|curve| curve.flag))
+        .flat_map(|case| case.prefix.curves.iter().map(|curve| curve.flag))
         .collect();
     assert_eq!(bases.len(), 256);
     assert_eq!(states.len(), 256);
     assert_eq!(flags.len(), 256);
     let words: std::collections::BTreeSet<_> = cases
         .iter()
-        .flat_map(|case| case.curves.iter().map(|curve| curve.scalar))
+        .flat_map(|case| case.prefix.curves.iter().map(|curve| curve.scalar))
         .collect();
     for bit in 0..64 {
         assert!(words.contains(&(1u64 << bit)));
@@ -64,6 +67,7 @@ fn every_base_state_and_flag_byte_and_raw_wide_pattern_has_owned_independent_cov
 
 fn check_native_curves(native: &types::BodyCase) {
     let curves: Vec<_> = native
+        .prefix
         .curves
         .iter()
         .map(|curve| (curve.count, curve.flag))
@@ -85,7 +89,7 @@ fn check_native_curves(native: &types::BodyCase) {
 fn check_native_text_and_state(native: &types::BodyCase) {
     assert_eq!(
         (
-            native.text.units,
+            native.prefix.text.units,
             native.footer.state,
             native.footer.loaded_state
         ),

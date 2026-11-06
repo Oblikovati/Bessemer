@@ -82,14 +82,19 @@ def curve_packet(value: dict) -> bytes:
 
 def case_packet(name: str, raw: bytes) -> bytes:
     value = schema.read_kind1_body(raw, string_mode=0)
-    out = blob(name.encode()) + blob(raw) + bytes((value["version"], value["base_byte"], value["base_byte_dispatch"]))
+    out = blob(name.encode()) + blob(raw) + prefix_packet(value)
+    out += counted(value["scalar_patterns"], "Q") + bytes((value["state_byte"], value["native_state_after_load"]))
+    out += struct.pack("<I", value["body_end"]) + blob(value["opaque_tail"])
+    return out + bytes((value["body_framing_complete"], value["native_runtime_state_reproduced"], value["engineering_columns_assigned"]))
+
+
+def prefix_packet(value: dict) -> bytes:
+    out = bytes((value["version"], value["base_byte"], value["base_byte_dispatch"]))
     out += blob(value["base_key_raw"]) + text_packet(value["name"])
     out += struct.pack("<I", len(value["curves"])) + b"".join(map(curve_packet, value["curves"]))
     for key, arrays in (("first_count", "first_arrays"), ("second_count", "second_arrays")):
         out += struct.pack("<II", value[key], len(value[arrays])) + b"".join(counted(row, "Q") for row in value[arrays])
-    out += counted(value["scalar_patterns"], "Q") + bytes((value["state_byte"], value["native_state_after_load"]))
-    out += struct.pack("<I", value["body_end"]) + blob(value["opaque_tail"])
-    return out + bytes((value["body_framing_complete"], value["native_runtime_state_reproduced"], value["engineering_columns_assigned"]))
+    return out
 
 
 def freeze(output_root: Path = ROOT) -> None:

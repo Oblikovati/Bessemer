@@ -9,8 +9,8 @@ fn every_complete_kind_one_body_matches_all_frozen_fields_spans_and_exclusions()
 pub(crate) fn check_body(body: &FlowMediumKindOne, case: &BodyCase) {
     assert_eq!(body.body_bytes(), &case.raw[..case.footer.end as usize]);
     assert_eq!(body.opaque_tail(), case.footer.tail);
-    assert_eq!(body.base_byte(), case.base);
-    assert_eq!(body.base_key_bytes(), case.key);
+    assert_eq!(body.base_byte(), case.prefix.base);
+    assert_eq!(body.base_key_bytes(), case.prefix.key);
     assert_eq!(body.state_byte(), case.footer.state);
     assert_eq!(body.native_state_after_load(), case.footer.loaded_state);
     assert_eq!(
@@ -32,18 +32,18 @@ fn check_text(body: &FlowMediumKindOne, case: &BodyCase) {
     assert_eq!(
         text.payload_interval(),
         (
-            base + case.text.start as usize,
-            base + case.text.end as usize
+            base + case.prefix.text.start as usize,
+            base + case.prefix.text.end as usize
         )
     );
-    assert_eq!(text.stored_units(), case.text.units as usize);
-    assert_eq!(text.raw_bytes(), case.text.raw);
-    assert_eq!(text.native_text_bytes(), case.text.native);
+    assert_eq!(text.stored_units(), case.prefix.text.units as usize);
+    assert_eq!(text.raw_bytes(), case.prefix.text.raw);
+    assert_eq!(text.native_text_bytes(), case.prefix.text.native);
 }
 fn check_curves(body: &FlowMediumKindOne, case: &BodyCase) {
     assert_eq!(body.curves().len(), 7);
     assert!(body.curve(7).is_none());
-    for (curve, expected) in body.curves().zip(&case.curves) {
+    for (curve, expected) in body.curves().zip(&case.prefix.curves) {
         assert_eq!(
             curve.body_interval(),
             (expected.start as usize, expected.end as usize)
@@ -84,7 +84,7 @@ fn check_coverage(body: &FlowMediumKindOne, case: &BodyCase) {
         coverage.wide_words,
         fields(case).iter().map(|(_, _, words)| words.len()).sum()
     );
-    assert_eq!(coverage.name_units, case.text.units as usize);
+    assert_eq!(coverage.name_units, case.prefix.text.units as usize);
     assert!(coverage.body_framing_complete);
     assert!(!coverage.full_record_schema);
     assert_eq!(coverage.achieved_error, 0);

@@ -8,11 +8,10 @@ fn every_small_body_prefix_unsupported_version_and_negative_or_impossible_count_
             }
         }
     }
-    let case = fixture::cases()
-        .into_iter()
-        .find(|case| case.name == "flag-0-count-0")
-        .unwrap();
-    for offset in std::iter::once(0).chain(case.curves.iter().map(|curve| curve.start as usize)) {
+    let case = empty_curve_case();
+    for offset in
+        std::iter::once(0).chain(case.prefix.curves.iter().map(|curve| curve.start as usize))
+    {
         for version in 1..=255 {
             let mut raw = case.raw.clone();
             raw[offset] = version;
@@ -22,9 +21,14 @@ fn every_small_body_prefix_unsupported_version_and_negative_or_impossible_count_
     check_bad_counts(&case);
 }
 fn check_bad_counts(case: &BodyCase) {
-    let last = case.curves.last().unwrap().end as usize;
+    let last = case.prefix.curves.last().unwrap().end as usize;
     for offset in std::iter::once(18)
-        .chain(case.curves.iter().map(|curve| curve.start as usize + 9))
+        .chain(
+            case.prefix
+                .curves
+                .iter()
+                .map(|curve| curve.start as usize + 9),
+        )
         .chain([last, last + 4])
     {
         for count in [-1i32, i32::MAX] {
@@ -41,7 +45,7 @@ fn exact_body_word_and_name_budgets_are_independent_and_tail_bytes_do_not_spend_
         let exact = FlowMediumBodyOptions {
             maximum_body_bytes: case.footer.end as usize,
             maximum_wide_words: words,
-            maximum_name_units: (case.text.units as usize).max(1),
+            maximum_name_units: (case.prefix.text.units as usize).max(1),
         };
         assert!(open(&case.raw, exact).is_ok());
         for axis in 0..3 {
@@ -54,7 +58,7 @@ fn check_below_budget(case: &BodyCase, exact: FlowMediumBodyOptions, axis: usize
     match axis {
         0 => below.maximum_body_bytes -= 1,
         1 => below.maximum_wide_words -= 1,
-        _ => below.maximum_name_units = case.text.units.saturating_sub(1) as usize,
+        _ => below.maximum_name_units = case.prefix.text.units.saturating_sub(1) as usize,
     }
     assert!(open(&case.raw, below).is_err());
     let mut zero = exact;
@@ -157,4 +161,11 @@ fn check_invalid_selections(body: &FlowMediumKindOne) {
         })
         .is_err()
     );
+}
+
+fn empty_curve_case() -> BodyCase {
+    fixture::cases()
+        .into_iter()
+        .find(|case| case.name == "flag-0-count-0")
+        .unwrap()
 }

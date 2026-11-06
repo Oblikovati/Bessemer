@@ -1,16 +1,7 @@
 pub struct BodyCase {
     pub name: String,
     pub raw: Vec<u8>,
-    pub version: u8,
-    pub base: u8,
-    pub base_dispatch: bool,
-    pub key: Vec<u8>,
-    pub text: BodyText,
-    pub curves: Vec<BodyCurve>,
-    pub first_count: u32,
-    pub first: Vec<Vec<u64>>,
-    pub second_count: u32,
-    pub second: Vec<Vec<u64>>,
+    pub prefix: BodyPrefix,
     pub footer: BodyFooter,
 }
 pub struct BodyText {
@@ -44,4 +35,17 @@ pub struct BodyFooter {
     pub complete: bool,
     pub runtime: bool,
     pub engineering: bool,
+}
+
+pub struct BodyPrefix {
+    pub version: u8,
+    pub base: u8,
+    pub base_dispatch: bool,
+    pub key: Vec<u8>,
+    pub text: BodyText,
+    pub curves: Vec<BodyCurve>,
+    pub first_count: u32,
+    pub first: Vec<Vec<u64>>,
+    pub second_count: u32,
+    pub second: Vec<Vec<u64>>,
 }
