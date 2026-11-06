@@ -1,4 +1,6 @@
 //! Independent complete wire reconstruction before the typed simple-table reader/editor.
+#[path = "flow_simple_tables/api.rs"]
+mod api;
 #[path = "flow_simple_tables/fixture.rs"]
 mod fixture;
 use fixture::*;

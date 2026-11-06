@@ -1,0 +1,67 @@
+{
+  "feature_issue": 241,
+  "fixture_base": "25801dd9",
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "rust_command": "cargo test --test flow_simple_table_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 15,
+  "rust_failed": 0,
+  "rust_ignored": 1,
+  "clippy_command": "cargo clippy --lib --test flow_simple_table_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "python_command": "python -m unittest discover -s docs/features/flow-simple-tables -p test_tables.py -v",
+  "python_exit_code": 0,
+  "python_passed": 7,
+  "format_command": "cargo fmt",
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "views": 118,
+  "coverage": "Every raw field/interval and context across parallel 407, per-leaf 437, raw five-word 411 and raw-byte 413; stored/external/unspecified counts and inactive layouts stay distinct. Huge inactive counts do not allocate rows. Later populated restore layouts remain Unsupported.",
+  "editing": "Every owned existing word, byte and presence scalar: exact no-op bytes/revision, independent full decoded patch, complete three-record physical history, source isolation and fresh raw whole-wire or compressed decoded reversal. Presence edits must retain array structure, including present empty arrays.",
+  "boundaries": "All owned proper prefixes/extensions; exact/one-below decoded and actual-value limits; missing/unused legacy context and native domains; negative versions/counts, huge impossible extents with unlimited value caps; absent/empty/inactive selectors; invalid indices; valid alternate empty presence layouts rejected by fixed-structure editor; foreign/stale/wrong IDs; checksum/wrapper/concatenation failures; measured compressed growth at original carrier limits for all four profiles",
+  "concurrency": "Eight workers match complete serial edits for all four profiles after caller storage mutation; every public type and each completed edit instantiation asserted Send/Sync",
+  "native_census": {
+    "status": "running; no acceptance credit yet",
+    "command": "cargo test --test flow_simple_table_fixtures every_native_existing_simple_table_field --locked -- --ignored --nocapture",
+    "expected_requests": [
+      15618,
+      7968,
+      20280,
+      0
+    ],
+    "expected_total": 43866,
+    "log": "target/flow-simple-tables-native-census.log"
+  },
+  "source_lf_sha256": {
+    "src\\flow\\legacy_tables\\simple_tables\\decode\\parallel.rs": "b3b298ea46357de2c9c2c94266c4ee341a1751ebb63e97e2342af0727d9e8f71",
+    "src\\flow\\legacy_tables\\simple_tables\\decode.rs": "18a6923d22d8153c3c5fe9f3929e01e29a880926f506a22bc60c0b5b03f81378",
+    "src\\flow\\legacy_tables\\simple_tables\\edit.rs": "f135200038eb7b594f5a1e73896590d00ce27c954a72ae6c9412edfd21b37b6a",
+    "src\\flow\\legacy_tables\\simple_tables\\mod.rs": "652fba886011677223e0fe518f3d4d9cf18a51c260f9c6c19c101d705ad8d140",
+    "src\\flow\\legacy_tables\\simple_tables\\options.rs": "ab1ceb0b3f0498b58a0b8e51495ff7de4090d1963535a80f32445e73e9180c45",
+    "src\\flow\\legacy_tables\\simple_tables\\types.rs": "2ab69b3540ca387d201204d02ae5404f02a8f91ddf3b0d802e59e1323701ae0c",
+    "src\\flow\\legacy_tables\\simple_tables\\view\\checkpoints.rs": "fc7a8a07236ff9c1c4d51bd1ca092918c1553e7f8d53abf928f75794c616b982",
+    "src\\flow\\legacy_tables\\simple_tables\\view\\rows.rs": "9951dd490b3e845d7a45c86a3154cffb65b4d6d4810699c0590f42867660eaa8",
+    "src\\flow\\legacy_tables\\simple_tables\\view.rs": "2348f630807577dd9290667abb66e0afe4fce40d79603d5cf9bbb6ab3b923a56",
+    "tests\\flow_simple_tables\\api\\read.rs": "48de89466064a72e3ff51c7ec60d567737562cce3d3b921083a128f63b8e8179",
+    "tests\\flow_simple_tables\\api.rs": "f5c6e58e6d4d5514563bf2d8f38a45c0c9434da4bbbddc2490adeed71fe3c82e",
+    "tests\\flow_simple_tables\\bounds.rs": "e9db534bce518a515b01b1bc161702acbcb6e7a5bab3c68c9b98b57e1a290cbf",
+    "tests\\flow_simple_tables\\concurrency.rs": "a8055302d7ce038e44b466018cfad03c0fd6f600262b7465015eaebbf757b253",
+    "tests\\flow_simple_tables\\edits\\apply.rs": "37cf76e014d20b7bd8ac5af21ae501549f3858220011189165ee72d37a0f908b",
+    "tests\\flow_simple_tables\\edits\\patches.rs": "3018db62e64dc442350055de33c510f5f05b233decaf1671870c4f4c7ad1c142",
+    "tests\\flow_simple_tables\\edits.rs": "1ba9ec8183c16c656648683e2221d79b82c144fcbb274760cbe78d64bf6945b3",
+    "tests\\flow_simple_tables\\fixture.rs": "8837b637c2ff7daf385947b8b789907185e07d552cc3f3ec6f54b341e4fe186e",
+    "tests\\flow_simple_tables\\growth.rs": "228d6bc7b127af068181bbf7afa1ff2317471d8af7fd6646abc2b8821a56f57b",
+    "src\\flow\\legacy_tables\\mod.rs": "f90750a48d14e1ef51a8efb4404116d7a72b98413f5ad8cee11a41821affcb59",
+    "tests\\flow_simple_table_fixtures.rs": "5af55daaa4fa8d2f85e25ca252d6f8e5f207ad1c9a8a8be873c60921b758bc61"
+  },
+  "log_sha256": {
+    "target\\flow-simple-tables-api-final-tests.log": "f91f2fa4692e1426dec98d342e49904594c1dde1bb81f9ba1104be903bdec541",
+    "target\\flow-simple-tables-api-final-clippy.log": "822385ec939343a4712ed72b64311dd7f705fea5d16c036bad1243dfcdbfe982",
+    "target\\flow-simple-tables-api-python-tests.log": "7f482cfbd3e7182b468a74dc92ad99001700a5efd13a32c626eb73d76d46b7b2"
+  },
+  "exclusions": [
+    "Engineering roles, native runtime state, leaf-to-tree ordering and native application acceptance",
+    "Full gate at f545daeb excludes this later four-table API",
+    "PR 244 excludes this later four-table API and baseline"
+  ]
+}

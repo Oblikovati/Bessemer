@@ -33,6 +33,29 @@ parallel counts 1,944/1,960, 3,984 leaf pairs, 4,056 five-word rows and zero byt
 Native record-402 members match the two observed table counts; this observation
 does not assign field roles or infer caller context.
 
-This is the fixture baseline for the typed readers/editors. Engineering roles,
-native runtime reconstruction, tree ordering and native application acceptance
-remain unproved.
+`FlowCarrier::record_407_arrays`, `record_437_leaf_pairs`, `record_411_rows` and
+`record_413_bytes` expose separate typed views and options. Record 437 requires
+`FlowLeafCount`; legacy member counts use validated `FlowSimpleLegacyCount`.
+Missing required context and unused context in stored-count versions are errors.
+Declared count, count origin and actual wire storage remain independently
+observable. The readers do not allocate rows for inactive external counts.
+
+Resource limits bound complete decoded bytes and actual serialized wide words,
+rows or raw bytes. Huge declared counts with absent arrays or inactive rows do
+not consume those value budgets. Zlib transport requires a complete RFC 1950
+stream with checksum and exact decoded EOF. Views borrow arrays and rows without
+allocating per value, preserve every raw pattern, and report serialized coverage
+separately from native and engineering exclusions.
+
+Existing-field writers replace parallel/pair wide words, five-word raw values,
+raw bytes and stored parallel presence words. Counts and versions remain
+read-only. Presence edits must retain array structure, including the distinction
+between absent and present-empty arrays. Writers patch isolated copies, reparse
+the complete carrier and selected payload under original options, and publish
+`FlowSimpleTableEdit<T>` with typed source/result checkpoints and full physical
+history. Exact no-ops retain stored bytes and revision identity. Fresh raw
+reversals restore complete carrier bytes; compressed reversals restore decoded
+bytes without assuming canonical zlib output.
+
+Engineering roles, native runtime reconstruction, tree ordering and native
+application acceptance remain unproved.

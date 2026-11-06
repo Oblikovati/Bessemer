@@ -4,6 +4,7 @@ mod edit;
 mod fields;
 mod link_records;
 mod pointers;
+mod simple_tables;
 mod types;
 mod view;
 mod wire;
@@ -13,6 +14,7 @@ use crate::archive_codec::ArchiveCursor;
 pub use block_extras::*;
 pub use fields::*;
 pub use link_records::*;
+pub use simple_tables::*;
 pub use types::*;
 use types::{GroupBodySpan, GroupSpan, TableWire};
 
