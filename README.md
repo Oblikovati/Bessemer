@@ -40,6 +40,16 @@ The [root-index projection](docs/features/flow-root-indices/README.md) derives n
 root storage offsets and complete local leaf paths under an explicit fresh-grid assumption.
 The [count-prefix and conditional binding view](docs/features/flow-count-binding/README.md)
 retains record 406's opaque body and binds record 433 only under an explicit absent-map initialization assumption.
+The [simple table views](docs/features/flow-simple-tables/README.md) read records
+407/437/411/413 and edit existing raw values while retaining count origins and inactive layouts.
+The [pointer-pool and body view](docs/features/flow-pointer-bodies/README.md) reads
+record 421 versions 0–5 with explicit counts and current runtime codes and edits existing payload values.
+The [reference-group view](docs/features/flow-reference-groups/README.md) reads
+record 416 versions 0–17 and edits existing fields without applying native pointer fixups or mapping shifts.
+The [field-value view](docs/features/flow-field-values/README.md) reads record 108
+with its raw version prefix and explicit object/region layouts, projects supplied runtime widths and edits existing raw patterns.
+The [block-extra view](docs/features/flow-block-extras/README.md) reads record 408
+with explicit runtime context and edits revision-bound, typed existing fields.
 The [legacy link view](docs/features/flow-link-records/README.md) reads record 402
 and edits existing fields while preserving code bytes, sentinel references and versioned tails.
 The [legacy table view](docs/features/flow-legacy-tables/README.md) reads records
@@ -1018,3 +1028,30 @@ See [the snapshot contract](docs/features/ellipse-backup-rotation/README.md) for
 validation status and the native restoration/geometry exclusions.
 
 Model-field edits retain CString count-prefix changes as physical changes, including completion and derived field history; decoded string comparison remains semantic. See the [framing regression](docs/features/model-text-framing/README.md).
+
+The [Flow metadata API](docs/features/flow-metadata/README.md) reads and edits
+complete raw record-410 state rows and applies them to explicit immutable maps,
+retaining duplicate assignments and their preceding values. Record 424 supports bounded typed prefix reads and fixed-field edits, with
+lossless UTF-16, explicit incomplete coverage and an opaque backend tail.
+
+Record 424's metadata view also reads the documented medium-backend boundary,
+retaining reached counts, kind tags and conditional keys. Existing-field edits
+preserve framing and all opaque body bytes; complete medium objects remain
+outside this prefix API.
+
+The [medium kind-one body API](docs/features/flow-medium-objects/README.md)
+reads and edits the complete first reached kind-one body, retaining every raw
+wide pattern, curve flag, name unit and following byte. Body framing is checked
+independently of the remaining reference tables and outer-record collections.
+
+The [complete kind-one record profile](docs/features/flow-medium-references/README.md)
+validates both tables, every ordered reference, outer attributes and exact EOF
+under an explicit fresh-backend assumption. Isolated key/reference edits and
+composed metadata/body edits retain full carrier history and revalidate the
+complete supported record. The [fresh mixed-kind profile](docs/features/flow-medium-mixed/README.md) also
+validates both body kinds with separate reference maps and composes their edits.
+
+The [medium kind-two body API](docs/features/flow-medium-kind-two/README.md)
+reads and edits all six documented model layouts, including independent table
+counts and raw 32-bit words. It preserves the following record bytes and reports
+body framing separately from complete-record and installed native acceptance.

@@ -1,0 +1,47 @@
+{
+  "feature_issue": 241,
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "rust_command": "cargo test --test flow_field_value_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 3,
+  "rust_failed": 0,
+  "clippy_command": "cargo clippy --test flow_field_value_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "python_command": "python -m unittest discover -s docs/features/flow-field-values -p test_values.py -v",
+  "python_exit_code": 0,
+  "python_passed": 9,
+  "reference_python_tests_passed": 6,
+  "format_command": "cargo fmt",
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed for Rust and Python",
+  "field_views": 203,
+  "width_requests": 315,
+  "width_accepted": 289,
+  "width_rejected": 26,
+  "native_payloads": 1,
+  "native_context_views": 3,
+  "scope": "Independent complete version/body wire reconstruction and byte accounting; explicit legacy/region layouts, optional expected-width checks, all context values, every interval and raw pattern; integer-only binary64 truncation oracle validates every width outcome",
+  "source_lf_sha256": {
+    "docs\\features\\flow-field-values\\freeze_values.py": "ee0b87c257efe3a0e3a958b98b3a7fda4cae907af41c5a29ab7c5be4bee8b20d",
+    "docs\\features\\flow-field-values\\freeze_widths.py": "b607e5679e7d55929acb3c0f945d70396381e89eeab6e7091c290753a13f9a6a",
+    "docs\\features\\flow-field-values\\test_values.py": "fc7717bd2b6ce2d4b84b53334f7461d7f6c23b1747a532bad47601f6821c2b2a",
+    "docs\\features\\flow-field-values\\wire_packet.py": "922cfd31244fa44f67552e4b16806075af52422f14e2f965781cbad4cabcd376",
+    "tests\\flow_field_value_fixtures.rs": "95ebf0f55d709ff4507724d61e845487a6f7bd1aaca6354e6778f290f354b3db",
+    "tests\\flow_field_values\\fixture.rs": "59b98887e6b9b32359533042deb042747b07f76f8353317b3c5996124b0c754c",
+    "tests\\flow_field_values\\packet.rs": "77fd5d64450fdb7d9098c49860acc3dc9487cbde2bd0c8e0b3e2deb51c1b585d",
+    "tests\\flow_field_values\\rebuild.rs": "213e4b8c019deeeba53ed8a1277926439e95251d9506e902160a30c1592625ab",
+    "tests\\flow_field_values\\types.rs": "3f5732bf90681f2788e37beabb1cb5ac1d2313643a9f82451ccda38774e01ac7"
+  },
+  "log_sha256": {
+    "target\\flow-field-values-baseline-tests.log": "2c29d653b08d2d92a1852cdfdb8014d351c5d251e3c7bda55d0faaaedc9fc797",
+    "target\\flow-field-values-baseline-clippy.log": "3922ffd88f2d12e10b2878850609f3c1fb605cb555b6cdbfdab8b52a1ab50c06",
+    "target\\flow-field-values-baseline-python-tests.log": "73f722b06bafee86450108348d40ec3ca774babc29cb0cb440d7f800a6a1f99a"
+  },
+  "reference_sha256": "ee64e8c6de4e96d00ecf9ba514f82bf377286fec4f30b00273725f1057e5c733",
+  "exclusions": [
+    "Production record-108 reader/editor and width projection are not implemented by this baseline",
+    "Native runtime-layout inference, selected numeric-data binding, native storage/exception state, engineering columns and application acceptance",
+    "Active full gate at 53bc0baf excludes this later fixture baseline"
+  ],
+  "prose_review": "Humanizer unavailable; left for maintainer review"
+}

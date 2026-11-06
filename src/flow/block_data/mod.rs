@@ -11,6 +11,7 @@ use super::*;
 use crate::archive_codec::ArchiveCursor;
 pub use context::*;
 pub use fields::*;
+pub(super) use fields::{FieldSelection, ScalarKind, encode};
 pub use types::*;
 use types::{BlockSpan, EntrySpan};
 

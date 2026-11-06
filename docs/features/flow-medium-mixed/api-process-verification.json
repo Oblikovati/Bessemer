@@ -1,0 +1,22 @@
+{
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "processes": 2,
+  "terminal_exit_codes": [
+    0,
+    0
+  ],
+  "views": 3753,
+  "bytes_per_process": 18014309,
+  "sha256": "ded672066f68ea1a75996c19a603c7ba4d4c89a571cd3a35e42510c8e50a05de",
+  "all_process_bytes_equal": true,
+  "independent_expected_packet_equal": true,
+  "temporary_probe_sha256": "4849b00be87eb67040a28c8a688d950f9f042d79f2d2c674193f8275d97e6f6b",
+  "temporary_oracle_sha256": "1a5faceac3873245174e13d5e768b83837bfdc4724c2d2209afb64fb74bf7908",
+  "scope": "Actual complete payloads, backend/entry/body intervals, typed keys and raw body slices, conditional stored/native reference states, ordered typed and outer references, signed attributes and whole three-record carriers after an independently expected attribute edit. Input buffers were overwritten after carrier construction. Complete numeric projections are checked separately by the Rust FML1 field oracle.",
+  "exclusions": [
+    "Engineering/model evaluation",
+    "Installed native kind-two, runtime and application acceptance",
+    "Native duplicate-key lookup identity"
+  ],
+  "verified_after_final_production_changes": true
+}

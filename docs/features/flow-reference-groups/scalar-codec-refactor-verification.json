@@ -1,0 +1,30 @@
+{
+  "feature_issue": 241,
+  "predecessor_commit": "836512c0d606f7742b062bfff7035b285fe7c8bf",
+  "change": "Moved the existing scalar encoder beside its decoder and reused it through private Flow visibility; shared raw-word view storage remains private outside Flow",
+  "rust_command": "cargo test --test flow_block_data --test flow_block_data_fixtures --locked",
+  "rust_exit_code": 0,
+  "passed": 18,
+  "failed": 0,
+  "ignored": 1,
+  "clippy_command": "cargo clippy --test flow_block_data --test flow_block_data_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "format_command": "cargo fmt",
+  "format_exit_code": 0,
+  "fixture_and_test_diff": "unchanged",
+  "source_lf_sha256": {
+    "src\\flow\\block_data\\edit\\patch.rs": "af116a51cf55ea31c44308524a7afdcb841e0af5abeaa8c5a341c1a8096f94f4",
+    "src\\flow\\block_data\\fields.rs": "993bf953b4f30733326f93851ff11967aa87382253468c3f16b43a0c0872f26d",
+    "src\\flow\\block_data\\mod.rs": "8e240a403da1f0649b4e8b947b7c96e33b1ced386cbebf543471b84e7dad2460",
+    "src\\flow\\block_data\\selection.rs": "5052c39433d4566735939938043548774624f2548be6986f56fc33b1a871165a",
+    "src\\flow\\block_data\\types.rs": "25f05641cec0f14ef23c278ccd58e5fd2da29ef52c4c5b76fe6b9e32d3bac163"
+  },
+  "log_sha256": {
+    "target\\flow-entry-scalar-codec-regression-tests.log": "01f12f6f894a1b938c8480f8c0db77a40ac196aad376b09c3c7e434ab7c30d25",
+    "target\\flow-entry-scalar-codec-regression-clippy.log": "7b33bddcab4fc899333cd79ca60cddfe2462b013325b71550f91265820402764"
+  },
+  "exclusions": [
+    "No record-416 production API added by this structural refactor",
+    "No new native census or full-gate credit"
+  ]
+}

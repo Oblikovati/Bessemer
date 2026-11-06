@@ -110,8 +110,8 @@ pub struct FlowLegacyBlockEntry<'a> {
 /// Borrowed exact raw unsigned 32-bit array with decoded offsets.
 #[derive(Clone, Copy, Debug)]
 pub struct FlowBlockWordArray<'a> {
-    pub(super) bytes: &'a [u8],
-    pub(super) start: usize,
+    pub(in crate::flow) bytes: &'a [u8],
+    pub(in crate::flow) start: usize,
 }
 
 /// Complete exact wire check scope, separate from native runtime acceptance.

@@ -1,0 +1,37 @@
+{
+  "feature_issue": 241,
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "rust_command": "cargo test --test flow_pointer_body_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 2,
+  "rust_failed": 0,
+  "clippy_command": "cargo clippy --test flow_pointer_body_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "python_command": "python -m unittest discover -s docs/features/flow-pointer-bodies -p test_bodies.py -v",
+  "python_exit_code": 0,
+  "python_passed": 8,
+  "format_command": "cargo fmt",
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed for Rust and Python",
+  "views": 2109,
+  "native_payloads": 1,
+  "scope": "Independent complete wire reconstruction and interval baseline before typed record-421 reader/editor; explicit external counts and current runtime-code context",
+  "source_lf_sha256": {
+    "tests\\flow_pointer_body_fixtures.rs": "7d0c81ef7c57eedfcfc1a7b55a022e20e23a5cb76c9f919030d34049207488bf",
+    "tests\\flow_pointer_bodies\\fixture.rs": "f888f0ddc5615baaf63f1973af82288c8208b690a6401fd46f5d458010be4ce7",
+    "tests\\flow_pointer_bodies\\rebuild.rs": "3b9dd378335de28ac30e53707cd4a9463e9ecef35369bad375b1c1b83ef61c31",
+    "tests\\flow_pointer_bodies\\types.rs": "e442ffa0df1b158f235eb796e119962c3eeb51827179f7f82cc0129bddf34953",
+    "docs\\features\\flow-pointer-bodies\\freeze_bodies.py": "669455b471c00038a1e88eaf16b02003eaf2ba4d1920502b10ed56fd1b328af9",
+    "docs\\features\\flow-pointer-bodies\\test_bodies.py": "59dcfb5a548f872e5d09d59fdc7859aced132eecd4a53b99b20124e2b2b63a2d"
+  },
+  "log_sha256": {
+    "target\\flow-pointer-bodies-baseline-tests.log": "9a1e25099f68422bc71cbb93416ef17bbb311d98b29b168fd86e364c1360b765",
+    "target\\flow-pointer-bodies-baseline-clippy.log": "3ce7df3b24abac6e05577d04bef2d21061440359f533911eff0e661fd9367038",
+    "target\\flow-pointer-bodies-baseline-python-tests.log": "2a2e0f43220dc58ce57ee2d465939c3d90cef307b3a56ba8517a42c3b8533ddd"
+  },
+  "exclusions": [
+    "Typed production record-421 reader/editor is not implemented by this baseline",
+    "Native runtime reconstruction, orientation postprocessing, tree ordering, engineering roles and native application acceptance",
+    "The active full gate at f545daeb excludes this later fixture baseline"
+  ]
+}

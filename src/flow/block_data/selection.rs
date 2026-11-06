@@ -1,5 +1,5 @@
 use super::*;
-use fields::{FieldSelection, ScalarKind};
+use super::{FieldSelection, ScalarKind};
 
 pub(super) fn block_field(
     block: FlowLegacyBlock<'_>,

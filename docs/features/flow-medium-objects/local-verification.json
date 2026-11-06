@@ -1,0 +1,46 @@
+{
+  "feature_issue": 241,
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "rust_command": "cargo test --test flow_medium_object_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 3,
+  "rust_failed": 0,
+  "rust_ignored": 0,
+  "clippy_command": "cargo clippy --test flow_medium_object_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "python_command": "python -m unittest discover -s docs/features/flow-medium-objects -p test_objects.py -v",
+  "python_exit_code": 0,
+  "python_passed": 6,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "views": 912,
+  "native_body_bytes": 12973,
+  "native_following_bytes": 80,
+  "scope": "Independent complete kind-one body framing, all raw numeric/string bits and intervals, explicit extra-array branch and stored/native state distinction. No production API, evaluation or full backend acceptance.",
+  "exclusions": [
+    "Typed body and complete reference/profile implementation",
+    "Engineering meanings and numeric evaluation",
+    "Native runtime and application acceptance",
+    "Running frozen full gate excludes this later test-only baseline"
+  ],
+  "humanizer": "Unavailable in installed skill catalog; prose pass left to maintainer review.",
+  "reference_sha256": {
+    "flowmediumobjects.py": "d22904f57af71281cc06fbd75ceee184e54065401e392eb5facddd9974c8dea7",
+    "flowmetadataprefix.py": "8dec7de6b29c9128ab20c2726e7a38afe30b56b4fb098de19ff0b0b408edc1db",
+    "flowlegacytables.py": "52309d35baa5ecc33046fb2f7a98f4eadc7bfbd22db5b9803e41898131924420",
+    "research/flow-metadata-prefix-corpus.json": "cfd8ba17b07ab89683b30fb69209ac00ee60b56e9f48279bd440b029f80575f5"
+  },
+  "source_lf_sha256": {
+    "tests\\flow_medium_object_fixtures.rs": "0efef7b46e3c5989bd8804002018a18cffea0ab1a4e5d186ca8cce8e58cb6381",
+    "tests\\flow_medium_objects\\fixture.rs": "81e1efcb0bc87b9d6ae508bc08864214c1ea90f4a0bfc193ddc205a6e28a4029",
+    "tests\\flow_medium_objects\\rebuild.rs": "c55c7ccdcdeefd5c86c837d66bc5ca2104eb9c94a0ce7385ad2e08746476700e",
+    "tests\\flow_medium_objects\\types.rs": "d4fdae57762f7f69e81c8b537d114fca3732322764cc14940b681611b1d84b9d",
+    "docs\\features\\flow-medium-objects\\freeze_objects.py": "412e770917e31a30aae60f4cba46d95e7a8f6d41775e2327163613dd926fe289",
+    "docs\\features\\flow-medium-objects\\test_objects.py": "987086aa0348e18fea009b0659c73ab627ed3165eb088b86f7b491a79131bfed"
+  },
+  "log_sha256": {
+    "target\\flow-medium-objects-baseline-tests.log": "95f76c6ddb4984d354731443180299d32a680ae1a7a924384ed28004593cd5c3",
+    "target\\flow-medium-objects-baseline-clippy.log": "48195aab4d529bfb83d1e91ccb94ad8a1e0f3dabbcdce67bceb520aea7516211",
+    "target\\flow-medium-objects-baseline-python-tests.log": "6981724a9e89803221f320566cb82122723d15d62fb6fcdb76425223888068dc"
+  }
+}

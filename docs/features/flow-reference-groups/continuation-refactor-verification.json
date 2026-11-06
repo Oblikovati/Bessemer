@@ -1,0 +1,33 @@
+{
+  "feature_issue": 241,
+  "predecessor_commit": "b98d5728673d5f120fe33fdc3927a1d53367d65d",
+  "change": "Private shared continuation extraction; record-406 preamble, version gates, field offsets, array budgets, error construction and publication remain unchanged",
+  "rust_command": "cargo test --test flow_block_data --test flow_block_data_fixtures --test flow_reference_group_fixtures --locked",
+  "rust_exit_code": 0,
+  "passed": 20,
+  "failed": 0,
+  "ignored": 1,
+  "clippy_command": "cargo clippy --test flow_block_data --test flow_block_data_fixtures --test flow_reference_group_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "format_command": "cargo fmt",
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "owned_record_406_views": 273,
+  "reference_group_baseline_views": 1397,
+  "fixture_and_test_diff": "git diff --exit-code predecessor -- tests docs/features/flow-block-data passed unchanged",
+  "source_lf_sha256": {
+    "src\\flow\\entry_continuation.rs": "9f5725c9901d4c8376630ad6fc6a6c496b76e2b8dad80b177c522a2f2020d692",
+    "src\\flow\\block_data\\entry.rs": "47952b1be7a5053f0d9b7421f7bc91ac2304840ca64cc522c3a45d54a0b87359",
+    "src\\flow\\mod.rs": "aaacf4161424c097c30068717487e834990f42c38458060533d776f7ddcb52a4"
+  },
+  "log_sha256": {
+    "target\\flow-entry-continuation-regression-tests.log": "1d8876b5c322dcac10813fa08e317ab70460671454eff9defe9bb74c7efe410a",
+    "target\\flow-entry-continuation-regression-clippy.log": "1b72a2afd186f6e942c2229d681af1ae7b6d02c0f4d5cc6947808e8542587416"
+  },
+  "exclusions": [
+    "Record-416 production API and its version-zero continuation dialect are not yet added",
+    "Native record-406 exhaustive census was accepted at the historical pre-refactor revision, not re-executed here",
+    "Active full gate at 9c3f2f4f excludes this later structural extraction",
+    "No native application acceptance or remote CI credit"
+  ]
+}

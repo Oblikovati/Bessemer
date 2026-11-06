@@ -1,0 +1,55 @@
+{
+  "feature_issue": 241,
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "rust_passed": 77,
+  "rust_failed": 0,
+  "rust_ignored": 0,
+  "clippy_exit_code": 0,
+  "python_passed": 8,
+  "python_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "public_types_send_sync": 10,
+  "workers": 8,
+  "views": 3753,
+  "source_lf_sha256": {
+    "src/flow/legacy_tables/metadata_prefix/backend/kind_two/mod.rs": "94f4d78500ebfd491ff2929405d380057d916e653f971594fefa1cf6b8aef41d",
+    "src/flow/legacy_tables/metadata_prefix/backend/mixed_profile/decode.rs": "07afb091ad2b9c736a8f98e6015e678c7d6028a9b607a4ea7cd35c2358624f2d",
+    "src/flow/legacy_tables/metadata_prefix/backend/mixed_profile/edit.rs": "efcd76e9c73653e9204c70c03b48e1bdca83de660054d4d2beec795e8c2b5f87",
+    "src/flow/legacy_tables/metadata_prefix/backend/mixed_profile/entries.rs": "726aeda3274d81796cf026c212567536f85ad8d189f1bb7fade2ef6e9b672aad",
+    "src/flow/legacy_tables/metadata_prefix/backend/mixed_profile/mod.rs": "ff4cfb0491e0f05b289672852984f95dce697104f07736f5b877291c70c33a22",
+    "src/flow/legacy_tables/metadata_prefix/backend/mixed_profile/scan.rs": "89614fc5330b675eaba1289c0256f72ba5d5cf5b01a48c12e26fc841e5a85dda",
+    "src/flow/legacy_tables/metadata_prefix/backend/mixed_profile/types.rs": "5a2be8535df8ebfda6da6c0614e6fceb5a9a819b4af00f5537e1e3fdbdb80b35",
+    "src/flow/legacy_tables/metadata_prefix/backend/mixed_profile/view.rs": "537b01d243bc6ef21d095138ff9f79defb64c3520b52515c2fa85dc7e5a4b44d",
+    "src/flow/legacy_tables/metadata_prefix/backend/mod.rs": "f71cb047f2582c839e3fe083307d230d20bf10c4dfbfd45b94db058bc2d6641a",
+    "tests/flow_medium_objects/api.rs": "f55f11f1cc3f048b4580108894ddee25c6b7d1276c2caa5b84dbd7e4f4d397a3",
+    "tests/flow_medium_objects/kind_two/api/expected.rs": "4780fe57f0a948ca3d925f2ca971cff29f2a82e4b01fec17b27ae1b53e66b3e5",
+    "tests/flow_medium_objects/kind_two/api/read.rs": "09249e79860448beb11d4bbaaccb4b2ecd8c8391ea543142f4c1c7d2c9eaf6fb",
+    "tests/flow_medium_objects/kind_two/api.rs": "b900e63a937f96340dd5afb8ed1b6a584f46d077cc1dd719f8f4f54136fcba14",
+    "tests/flow_medium_objects/kind_two/mixed/api/contracts.rs": "544a65d8dea0c7bc94383e4c368c830a9ba887e89546f920657920551da68fba",
+    "tests/flow_medium_objects/kind_two/mixed/api/edit.rs": "03152fa97125951c9ab01a11c9efce28a4f475fe6c5522ebd2537de4bb80ef44",
+    "tests/flow_medium_objects/kind_two/mixed/api/read.rs": "c67626ee23572e0a689ebc5d0527f923196fce660eff166ed99edd17cef8718d",
+    "tests/flow_medium_objects/kind_two/mixed/api.rs": "a4649866e5bd9abb40ad6e5d445a2f7ca83527a090558284db25445a10189cd6",
+    "tests/flow_medium_objects/kind_two/mixed.rs": "ff226e4c6d8112a7ee0a09e9b2fd67244dc22d5a0bc8ca89831d9fb5cc3f5351"
+  },
+  "log_sha256": {
+    "flow-medium-mixed-api-tests.log": "9a2b2ae88b844a88d5c992d8da73d75d5c7c20e47d3574198f6d1ab9faf2617a",
+    "flow-medium-mixed-api-clippy.log": "0a7d5d81f899375aab4315aaedaef88c851b45c211cb8d733c6f271c5917f5dd",
+    "flow-medium-mixed-api-python-tests.log": "3564e5ed684b59333733119bbf760058a44ee0914b88a8451075cc68103a0563"
+  },
+  "unchanged_packet_gzip_sha256": {
+    "tests/fixtures/flow-medium-objects/kind1.bin.gz": "8fbee903057eb2a23b321ffc57751cf4652066d23bb52a3d9b5ae7b390801839",
+    "tests/fixtures/flow-medium-references/bodies.bin.gz": "b1e666a46dc2d1e130ce45000cbeb62ef79210c029aa8bc51d2e4a7c9a3b092f",
+    "tests/fixtures/flow-medium-references/profiles.bin.gz": "fa43ba510d7df86904ba32c1b741253b4931dbf3d44063a414d9be3c428fa019",
+    "tests/fixtures/flow-medium-kind-two/bodies.bin.gz": "2a5410e6e447ef404ae176cf370727d2bb28313dfe407c34362d21ac945c656b",
+    "tests/fixtures/flow-medium-mixed/profiles.bin.gz": "b81a6748ac80e05565325af8cecd8a1d0903e26fb09de5965ccb98110382995b"
+  },
+  "humanizer": "Unavailable; prose pass left to maintainer review",
+  "scope": "Complete fresh mixed-kind profile read/edit API: all nested FML1 body fields, typed maps and ordered references; exact/one-below/zero limits across eleven axes; compact prefixes, malformed framing and membership failures; all existing key/reference/state/attribute fields, nested base/state and metadata composition with exact no-ops, independent whole-carrier patches, history and fresh reversals; immutable input isolation and concurrent read/edit transcripts.",
+  "test_helper_adaptation": "Original standalone kind-two body assertions still use offset35; the shared checker also accepts an independently expected nested offset. No expected packet or production interval changed.",
+  "exclusions": [
+    "Engineering/model evaluation",
+    "Installed native kind-two, runtime and application acceptance",
+    "Remote CI and complete combined full gate for this API"
+  ]
+}

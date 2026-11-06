@@ -1,0 +1,65 @@
+{
+  "feature_issue": 241,
+  "shared_prefix_refactor": "5df2285f",
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "rust_command": "cargo test --test flow_medium_object_fixtures --test flow_medium_reference_fixtures --test flow_metadata_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 60,
+  "rust_failed": 0,
+  "rust_ignored": 0,
+  "clippy_exit_code": 0,
+  "python_new_passed": 8,
+  "python_regressions_passed": 20,
+  "python_exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "views": 2492,
+  "model_tags": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "all_earlier_packets_unchanged": true,
+  "installed_fixture_validated": false,
+  "scope": "Complete generated kind-two bodies, all common prefix and six model fields, raw numeric/state words, exact intervals and following tails; table counts varied independently. Three new Rust checks plus all57 prior Rust regressions.",
+  "helper_changes": "Existing raw wide/curve fixture helpers have test-only parent visibility. Python common-prefix reconstruction was extracted without changing previous expected packets or assertion scope.",
+  "exclusions": [
+    "Production kind-two body and mixed-kind profile APIs",
+    "Installed native kind-two fixture acceptance",
+    "Engineering/model evaluation, native runtime and application acceptance",
+    "Running frozene24c2b78 full gate excludes this later test-only baseline and shared fixture refactor"
+  ],
+  "humanizer": "Unavailable in installed skill catalog; prose pass left to maintainer review.",
+  "reference_sha256": {
+    "flowmediumkind2.py": "4af1c5c19d801e217e5fdeda35166dd09364b325181ff64ce9a641790db861e5",
+    "flowmediumobjects.py": "d22904f57af71281cc06fbd75ceee184e54065401e392eb5facddd9974c8dea7",
+    "flowmetadataprefix.py": "8dec7de6b29c9128ab20c2726e7a38afe30b56b4fb098de19ff0b0b408edc1db",
+    "flowlegacytables.py": "52309d35baa5ecc33046fb2f7a98f4eadc7bfbd22db5b9803e41898131924420"
+  },
+  "source_lf_sha256": {
+    "docs\\features\\flow-medium-kind-two\\freeze_kind_two.py": "d241016465e8540f964e856bcaa2f482ec62361fa8b4937ffdc191920dd4fb9a",
+    "docs\\features\\flow-medium-kind-two\\test_kind_two.py": "6d19a88e12eb026090f1bc9c0f463ca3f6874214c06a21f576d1fe79730e631f",
+    "docs\\features\\flow-medium-objects\\test_objects.py": "0e549c5e9cf91abd8003a06d76d90856470bba4a6825dbcce3f7513b07651225",
+    "tests\\flow_medium_object_fixtures.rs": "06d6937566a5f99ba99d75e69c4b9a25e51ef2c01a3a7181d5916526720c5415",
+    "tests\\flow_medium_objects\\fixture.rs": "f595dae3ff730cdab952f4dc537efe3a38995c8dfbcd0b9d9f185faed34458e6",
+    "tests\\flow_medium_objects\\rebuild.rs": "e0236b1bc77ceeb64c2e5dfbf84650f5468280bc857657f36c99bcf3973674a5",
+    "tests\\flow_medium_objects\\kind_two.rs": "b8f237f510d61e444a075f0c6115f6444c7977a20f28f4e10e880192c79f6dbe",
+    "tests\\flow_medium_objects\\kind_two\\fixture.rs": "83f3d25fa00f9f617c76e722b7cd4741bf8eab176359ad8f7b2b790cd861df46",
+    "tests\\flow_medium_objects\\kind_two\\rebuild.rs": "cd40b6630682c2fc91c9d40cb1fbbe8ea900e1f066f12f4be98146149af4cc7c",
+    "tests\\flow_medium_objects\\kind_two\\types.rs": "3f0cf4214998ee92e797c7cad957572d55fee43c4e3dafe02617e0279fae9130"
+  },
+  "log_sha256": {
+    "target\\flow-kind-two-baseline-tests.log": "46ce2e55b263e462b005c40ae4044d021f77eb65aa836a1da8ea92ba9085203f",
+    "target\\flow-kind-two-baseline-clippy.log": "35a7cd9b821165b722d85a2beacc8477394dcd804377e028f31f4ccecf23408a",
+    "target\\flow-kind-two-baseline-python-tests.log": "fd4b0db5caae5406d14215979f674bb648c067c458a4f065b1185cf3b1659866",
+    "target\\flow-kind-two-common-object-python-regressions.log": "9551e5f9223b080b57812c95428c6004e7ff1e246ca8b752152bed67363ee1c0",
+    "target\\flow-kind-two-common-profile-python-regressions.log": "7660b4444a1f9cfb646f93a0e7192adef2bb40d1ba47c57728a3d959ce9fb3dd"
+  }
+}

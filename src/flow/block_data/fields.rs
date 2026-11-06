@@ -1,3 +1,5 @@
+use super::*;
+
 /// Raw field value with explicit stored/logical width; no engineering conversion.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum FlowBlockFieldValue {
@@ -109,7 +111,7 @@ pub enum FlowBlockFieldEdit {
 }
 
 #[derive(Clone, Copy, Debug)]
-pub(super) enum ScalarKind {
+pub(in crate::flow) enum ScalarKind {
     Byte,
     Word16,
     Signed32,
@@ -120,13 +122,13 @@ pub(super) enum ScalarKind {
 }
 
 #[derive(Clone, Copy)]
-pub(super) struct FieldSelection {
-    pub(super) offset: usize,
-    pub(super) kind: ScalarKind,
+pub(in crate::flow) struct FieldSelection {
+    pub(in crate::flow) offset: usize,
+    pub(in crate::flow) kind: ScalarKind,
 }
 
 impl FieldSelection {
-    pub(super) fn read(self, raw: &[u8]) -> FlowBlockFieldValue {
+    pub(in crate::flow) fn read(self, raw: &[u8]) -> FlowBlockFieldValue {
         let bytes = &raw[self.offset..];
         match self.kind {
             ScalarKind::Byte => FlowBlockFieldValue::Byte(bytes[0]),
@@ -146,4 +148,29 @@ impl FieldSelection {
 
 pub(super) fn u32_word(raw: &[u8]) -> u32 {
     u32::from_le_bytes([raw[0], raw[1], raw[2], raw[3]])
+}
+
+pub(in crate::flow) fn encode(kind: ScalarKind, value: FlowBlockFieldValue) -> Result<Vec<u8>> {
+    use FlowBlockFieldValue::*;
+    let bytes = match (kind, value) {
+        (ScalarKind::Byte, Byte(byte)) => vec![byte],
+        (ScalarKind::NarrowWord16, Word16(word)) if word <= u8::MAX.into() => vec![word as u8],
+        (ScalarKind::Word16, Word16(word)) => word.to_le_bytes().to_vec(),
+        (ScalarKind::Signed32, Signed32(word)) => word.to_le_bytes().to_vec(),
+        (ScalarKind::Word32, Word32(word)) => word.to_le_bytes().to_vec(),
+        (ScalarKind::Signed8, Signed32(word)) if (-128..=127).contains(&word) => {
+            vec![word as i8 as u8]
+        }
+        (ScalarKind::UnsignedCount16, Signed32(word)) if (0..=65535).contains(&word) => {
+            (word as u16).to_le_bytes().to_vec()
+        }
+        _ => return Err(encoding_error(kind, value)),
+    };
+    Ok(bytes)
+}
+
+fn encoding_error(kind: ScalarKind, value: FlowBlockFieldValue) -> BessemerError {
+    invalid_block(format!(
+        "field value {value:?}; expected matching stored kind and representable width {kind:?}"
+    ))
 }

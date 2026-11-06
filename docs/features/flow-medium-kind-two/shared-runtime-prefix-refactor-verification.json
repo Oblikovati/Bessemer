@@ -1,0 +1,37 @@
+{
+  "feature_issue": 241,
+  "baseline_commit": "365054e4",
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "scope": "Behavior-preserving production extraction of medium-body prefix, curve spans, shared arrays and bounded wide-word reads. The existing kind-one reader is the shipped caller. Original kind-one version labels, checks, byte ranges and curve metadata ownership remain unchanged; no new public surface or kind-two acceptance.",
+  "rust_command": "cargo test --test flow_medium_object_fixtures --test flow_medium_reference_fixtures --test flow_metadata_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 60,
+  "rust_failed": 0,
+  "rust_ignored": 0,
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "all_owned_fixtures_unchanged": true,
+  "exclusions": [
+    "Typed kind-two body and mixed-kind profile implementation",
+    "Installed native kind-two and native application acceptance",
+    "Running frozene24c2b78 full gate excludes this later refactor"
+  ],
+  "source_lf_sha256": {
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\mod.rs": "61d10af04f1610b5715d86d2dab5c4de517e19250dd196aabc9b7b9ae2f09647",
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\kind_one\\mod.rs": "5f0e9e6815a07ec02034cd25bc509b7fdb50d01a1f3c336a8e5398d26c40b930",
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\kind_one\\types.rs": "61a15df886294399eb8f3a4b498a007d2161a932d8c4bec469756dff99d7946b",
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\kind_one\\decode.rs": "91232ac19d8a595463635a25803a786af4595d40fa4ac0a52a8883f3926af47c",
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\medium_body\\mod.rs": "c70b8851722ea129bf27a936faf9a8cb48d37b8f2c6618cc71b534729ccd3711"
+  },
+  "fixture_sha256": {
+    "tests\\fixtures\\flow-medium-objects\\kind1.bin.gz": "8fbee903057eb2a23b321ffc57751cf4652066d23bb52a3d9b5ae7b390801839",
+    "tests\\fixtures\\flow-medium-references\\bodies.bin.gz": "b1e666a46dc2d1e130ce45000cbeb62ef79210c029aa8bc51d2e4a7c9a3b092f",
+    "tests\\fixtures\\flow-medium-references\\profiles.bin.gz": "fa43ba510d7df86904ba32c1b741253b4931dbf3d44063a414d9be3c428fa019",
+    "tests\\fixtures\\flow-medium-kind-two\\bodies.bin.gz": "2a5410e6e447ef404ae176cf370727d2bb28313dfe407c34362d21ac945c656b"
+  },
+  "log_sha256": {
+    "target\\flow-medium-shared-runtime-prefix-tests.log": "8f62b8b21975abad35fe513e9f4bad2b96504b526ed5be10a216013a278f6248",
+    "target\\flow-medium-shared-runtime-prefix-clippy.log": "76bbbf11d8d9662a75d3daccfd9f657b03e2c6664b2f215324227c0714fbf448"
+  }
+}

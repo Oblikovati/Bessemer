@@ -1,0 +1,23 @@
+{
+  "feature_issue": 241,
+  "source_commit": "83d0569f",
+  "rust_passed": 70,
+  "rust_failed": 0,
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "scope": "Shared existing profile option validation, immutable outer reference storage, outer membership/attribute reading and final zero-count checks. The kind-one caller retains its grammar, limits and diagnostic context; no public API or storage change.",
+  "source_lf_sha256": {
+    "src/flow/legacy_tables/metadata_prefix/backend/profile_wire.rs": "9ac6c1ad67e6ec4aade8ec97b811a3944e88f8d1872a5f304e5256d614abb42a",
+    "src/flow/legacy_tables/metadata_prefix/backend/kind_one_profile/decode.rs": "1f200f8d2c3ff93d5ffa14dc421901a1cc7017b2c606844a5315f0004fbec119",
+    "src/flow/legacy_tables/metadata_prefix/backend/kind_one_profile/decode/scan.rs": "67b2052ac864fe107e26e61ab2a4dae49ee0a813f363a531e311f09cea3b4e70",
+    "src/flow/legacy_tables/metadata_prefix/backend/kind_one_profile/types.rs": "50a3ff6ad00f358ec1d18ee6683084e612f523048dc18fc68f85613817bd5115"
+  },
+  "log_sha256": {
+    "flow-profile-outer-refactor-tests.log": "d5af251dd15d382a136310d38d984eff14c7f27d07820334be0d80d8a8b4bc20",
+    "flow-profile-outer-refactor-clippy.log": "cc34806cb5529b25d7f5a74b8d577f14f650bb816d16d2c9d29ba05ebfb0ec7c"
+  },
+  "exclusions": [
+    "Later mixed-profile API",
+    "Current full gate frozen at 01aebaea"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "feature_issue": 241,
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "new_unit_tests_passed": 3,
+  "regression_tests_passed": 70,
+  "rust_failed": 0,
+  "clippy_exit_codes": [
+    0,
+    0
+  ],
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "scope": "Moved the first-kind gate to the public first-body entry point; private selected-offset parsing and edits retain independent limits, full-carrier reopening and exact body boundaries. Existing kind-one public profile grammar remains unchanged.",
+  "independent_oracle": {
+    "source": "flowmediumliquids.py",
+    "source_sha256": "97f736b02a1cc00fff3740ef7ec63191910877d74f11716eba18a38670372cb7",
+    "fixture_bytes": 431,
+    "fixture_sha256": "1b38e91d9ed6ad8794a9b8c6de38037f4b38599fb0350bd079cebe3cc238c373",
+    "first_kinds": [
+      2,
+      1
+    ],
+    "selected_body_interval": [
+      253,
+      414
+    ],
+    "complete_record_accepted": true
+  },
+  "source_lf_sha256": {
+    "src/flow/legacy_tables/metadata_prefix/backend/kind_one/decode.rs": "483ca79455d86c2f4b63d634fe818de992292104197b8ad634eebb92e81b4c79",
+    "src/flow/legacy_tables/metadata_prefix/backend/kind_one/decode_tests.rs": "61c70f1a6cc614931960c78d80bd73f61ea32f8ce5b7b3b909c025ee3f725b93",
+    "src/flow/legacy_tables/metadata_prefix/backend/kind_one/mod.rs": "dafbdbc320baed4c67e53fd4ebc839cbbfe2ea70667dbeb72bd92b02acfbea4c"
+  },
+  "log_sha256": {
+    "flow-selected-body-final-tests.log": "3c16181126275f90a4dc4d2ddb0341d97f33c72b0a482204072ed6aeab8b23b4",
+    "flow-selected-body-regressions.log": "a68c7a3d3f6e13079f5b367160522edbf5ada48db58384d6f852dbccfa05fff1",
+    "flow-selected-body-clippy.log": "78ea53d1b9c0da6d9d35f14f00922a1d2f6a26e47183f622d841460f51f4c307",
+    "flow-selected-body-final-clippy.log": "9d2f80581197ed3f66e3256193935473b56a466d0ccfabaca646e9d9b285decf"
+  },
+  "exclusions": [
+    "Production mixed-profile API",
+    "Installed kind-two, engineering and native application acceptance",
+    "Current full gate is frozen at 01aebaea and excludes this internal change"
+  ]
+}

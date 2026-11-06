@@ -173,27 +173,27 @@ fn extra(cursor: &mut Cursor<&[u8]>) -> Option<ExtraMixedTail> {
     })
 }
 
-fn number<const N: usize>(cursor: &mut Cursor<&[u8]>) -> [u8; N] {
+pub(super) fn number<const N: usize>(cursor: &mut Cursor<&[u8]>) -> [u8; N] {
     let mut raw = [0; N];
     cursor.read_exact(&mut raw).unwrap();
     raw
 }
 
-fn byte(cursor: &mut Cursor<&[u8]>) -> u8 {
+pub(super) fn byte(cursor: &mut Cursor<&[u8]>) -> u8 {
     number::<1>(cursor)[0]
 }
 
-fn boolean(cursor: &mut Cursor<&[u8]>) -> bool {
+pub(super) fn boolean(cursor: &mut Cursor<&[u8]>) -> bool {
     let value = byte(cursor);
     assert!(value <= 1);
     value != 0
 }
 
-fn word(cursor: &mut Cursor<&[u8]>) -> u32 {
+pub(super) fn word(cursor: &mut Cursor<&[u8]>) -> u32 {
     u32::from_le_bytes(number(cursor))
 }
 
-fn signed(cursor: &mut Cursor<&[u8]>) -> i32 {
+pub(super) fn signed(cursor: &mut Cursor<&[u8]>) -> i32 {
     i32::from_le_bytes(number(cursor))
 }
 
@@ -211,7 +211,7 @@ fn wide(cursor: &mut Cursor<&[u8]>) -> Vec<u64> {
         .collect()
 }
 
-fn blob(cursor: &mut Cursor<&[u8]>) -> Vec<u8> {
+pub(super) fn blob(cursor: &mut Cursor<&[u8]>) -> Vec<u8> {
     let mut raw = vec![0; word(cursor) as usize];
     cursor.read_exact(&mut raw).unwrap();
     raw

@@ -1,16 +1,30 @@
 //! Exact legacy pointer-index and raw-word tables with explicit independent context.
+mod block_extras;
 mod edit;
+mod field_values;
 mod fields;
+mod id_states;
 mod link_records;
+mod metadata_prefix;
+mod pointer_bodies;
 mod pointers;
+mod reference_groups;
+mod simple_tables;
 mod types;
 mod view;
 mod wire;
 mod words;
 use super::*;
 use crate::archive_codec::ArchiveCursor;
+pub use block_extras::*;
+pub use field_values::*;
 pub use fields::*;
+pub use id_states::*;
 pub use link_records::*;
+pub use metadata_prefix::*;
+pub use pointer_bodies::*;
+pub use reference_groups::*;
+pub use simple_tables::*;
 pub use types::*;
 use types::{GroupBodySpan, GroupSpan, TableWire};
 

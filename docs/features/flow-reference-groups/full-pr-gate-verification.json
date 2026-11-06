@@ -1,0 +1,19 @@
+{
+  "command": "cargo xtask pr",
+  "terminal_exit_code": 0,
+  "source_commit": "53bc0baf7d95f9e3dcddf626cfbde532a464cab1",
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "log": "target\\flow-reference-groups-combined-full-pr-gate.log",
+  "log_sha256": "14e7d278737dd3b8328ec8078bc09e878f70dde248c4f9c39c30836e2c25592d",
+  "result_summaries": 381,
+  "passed": 4672,
+  "failed": 0,
+  "ignored": 243,
+  "verified_reference_source_files": 21,
+  "scope": "Complete record-416 API, independent baseline and native field contracts; shared record-406 continuation/scalar refactors; record-421 typed API and accepted historical native edit evidence; earlier features",
+  "exclusions": [
+    "Later record-108 field-value baseline/API and its native acceptance",
+    "Later metadata 410/424 baseline and test-only shared packet extraction",
+    "Native application acceptance and remote CI"
+  ]
+}

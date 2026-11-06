@@ -81,23 +81,7 @@ fn sentinel_and_context_limits_apply_again_to_edits_and_structure_stays_fixed() 
     bounded.global_pointer_count = Some(FlowGlobalPointerCount::try_from(2).unwrap());
     let source = read_bytes(&case.stored, bounded).unwrap();
     let field = reference_field();
-    for value in [-2, 2, i32::MAX] {
-        assert!(
-            source
-                .replace_field(field, FlowLinkRecordValue::Signed32(value))
-                .is_err()
-        );
-    }
-    assert!(
-        source
-            .replace_field(field, FlowLinkRecordValue::Signed32(-1))
-            .is_ok()
-    );
-    assert!(
-        links(&case)
-            .replace_field(field, FlowLinkRecordValue::Signed32(i32::MIN))
-            .is_ok()
-    );
+    check_reference_ranges(&source, &case, field);
     check_structural_edits(&source);
     assert_eq!(source.decoded_bytes(), case.decoded);
 }
@@ -311,4 +295,24 @@ fn compressed(raw: &[u8], compression: flate2::Compression) -> Vec<u8> {
     let mut encoder = flate2::write::ZlibEncoder::new(Vec::new(), compression);
     encoder.write_all(raw).unwrap();
     encoder.finish().unwrap()
+}
+
+fn check_reference_ranges(source: &FlowLinkRecords, case: &LinkCase, field: FlowLinkRecordField) {
+    for value in [-2, 2, i32::MAX] {
+        assert!(
+            source
+                .replace_field(field, FlowLinkRecordValue::Signed32(value))
+                .is_err()
+        );
+    }
+    assert!(
+        source
+            .replace_field(field, FlowLinkRecordValue::Signed32(-1))
+            .is_ok()
+    );
+    assert!(
+        links(case)
+            .replace_field(field, FlowLinkRecordValue::Signed32(i32::MIN))
+            .is_ok()
+    );
 }
