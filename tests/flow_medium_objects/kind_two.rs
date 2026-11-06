@@ -1,5 +1,7 @@
 #[path = "kind_two/api.rs"]
 mod api;
+#[path = "kind_two/mixed.rs"]
+mod mixed;
 use super::{fixture, packet::*, rebuild, types::*};
 #[path = "kind_two/fixture.rs"]
 mod kind_fixture;

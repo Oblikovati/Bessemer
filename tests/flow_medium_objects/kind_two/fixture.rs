@@ -8,7 +8,7 @@ pub fn cases() -> Vec<KindTwoCase> {
     finish(&cursor);
     result
 }
-fn body(cursor: &mut PacketCursor) -> KindTwoCase {
+pub(super) fn body(cursor: &mut PacketCursor) -> KindTwoCase {
     KindTwoCase {
         name: String::from_utf8(blob(cursor)).unwrap(),
         raw: blob(cursor),
