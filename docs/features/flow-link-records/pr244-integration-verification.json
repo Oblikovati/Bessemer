@@ -1,0 +1,163 @@
+{
+  "pull_request": 244,
+  "integration": {
+    "baseRefName": "codex/interop-candidate",
+    "headRefOid": "c49688efa1b937ef2d41f7bf31b68cf54a823246",
+    "mergeCommit": {
+      "oid": "2a7fe67481ed151f44abe6b1b1b877e5f94ac3e0"
+    },
+    "mergedAt": "2026-11-06T11:52:22Z",
+    "number": 244,
+    "state": "MERGED",
+    "url": "https://github.com/Oblikovati/Bessemer/pull/244"
+  },
+  "checks": [
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-06T05:41:07Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/Oblikovati/Bessemer/actions/runs/42164276634/job/127716960220",
+      "name": "PR gate (Linux x86_64)",
+      "startedAt": "2026-11-06T04:44:30Z",
+      "status": "COMPLETED",
+      "workflowName": "bessemer"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-06T09:22:42Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/Oblikovati/Bessemer/actions/runs/42164276634/job/127716960802",
+      "name": "ThreadSanitizer partition 0/8",
+      "startedAt": "2026-11-06T04:49:15Z",
+      "status": "COMPLETED",
+      "workflowName": "bessemer"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-06T04:55:57Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/Oblikovati/Bessemer/actions/runs/42164276634/job/127716960640",
+      "name": "ThreadSanitizer partition 1/8",
+      "startedAt": "2026-11-06T04:44:30Z",
+      "status": "COMPLETED",
+      "workflowName": "bessemer"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-06T04:58:01Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/Oblikovati/Bessemer/actions/runs/42164276634/job/127716960566",
+      "name": "ThreadSanitizer partition 2/8",
+      "startedAt": "2026-11-06T04:44:30Z",
+      "status": "COMPLETED",
+      "workflowName": "bessemer"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-06T05:08:28Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/Oblikovati/Bessemer/actions/runs/42164276634/job/127716960562",
+      "name": "ThreadSanitizer partition 3/8",
+      "startedAt": "2026-11-06T04:44:30Z",
+      "status": "COMPLETED",
+      "workflowName": "bessemer"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-06T04:51:45Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/Oblikovati/Bessemer/actions/runs/42164276634/job/127716960613",
+      "name": "ThreadSanitizer partition 4/8",
+      "startedAt": "2026-11-06T04:44:30Z",
+      "status": "COMPLETED",
+      "workflowName": "bessemer"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-06T05:59:40Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/Oblikovati/Bessemer/actions/runs/42164276634/job/127716960736",
+      "name": "ThreadSanitizer partition 5/8",
+      "startedAt": "2026-11-06T04:44:30Z",
+      "status": "COMPLETED",
+      "workflowName": "bessemer"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-06T05:21:05Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/Oblikovati/Bessemer/actions/runs/42164276634/job/127716960631",
+      "name": "ThreadSanitizer partition 6/8",
+      "startedAt": "2026-11-06T04:44:30Z",
+      "status": "COMPLETED",
+      "workflowName": "bessemer"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-06T06:33:03Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/Oblikovati/Bessemer/actions/runs/42164276634/job/127716960899",
+      "name": "ThreadSanitizer partition 7/8",
+      "startedAt": "2026-11-06T04:44:30Z",
+      "status": "COMPLETED",
+      "workflowName": "bessemer"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-06T10:17:58Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/Oblikovati/Bessemer/actions/runs/42164276634/job/127814532673",
+      "name": "Full gate (Linux x86_64)",
+      "startedAt": "2026-11-06T09:22:44Z",
+      "status": "COMPLETED",
+      "workflowName": "bessemer"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-06T11:43:04Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/Oblikovati/Bessemer/actions/runs/42164276634/job/127814532644",
+      "name": "Full gate (macOS x86_64)",
+      "startedAt": "2026-11-06T09:22:45Z",
+      "status": "COMPLETED",
+      "workflowName": "bessemer"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-06T10:25:00Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/Oblikovati/Bessemer/actions/runs/42164276634/job/127814532649",
+      "name": "Full gate (macOS arm64)",
+      "startedAt": "2026-11-06T09:22:50Z",
+      "status": "COMPLETED",
+      "workflowName": "bessemer"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-06T10:43:35Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/Oblikovati/Bessemer/actions/runs/42164276634/job/127814532770",
+      "name": "Full gate (Windows x64)",
+      "startedAt": "2026-11-06T09:22:44Z",
+      "status": "COMPLETED",
+      "workflowName": "bessemer"
+    }
+  ],
+  "root_before": "f59f9c119a85fe7fd5f9e238b8848555a98cee46",
+  "root_merge": "cfe3355e0e124450bdfd5dd85e6c96ef134a338f",
+  "root_before_tree": "49345fe7f0aba020144d330086ce2bc5840070f8",
+  "root_after_tree": "49345fe7f0aba020144d330086ce2bc5840070f8",
+  "root_source_tree_unchanged": true,
+  "candidate_merge": "2a7fe67481ed151f44abe6b1b1b877e5f94ac3e0",
+  "publication_head_ancestor_of_candidate": true,
+  "candidate_ancestor_of_root": true,
+  "publication_branch_deleted_local": true,
+  "publication_branch_deleted_remote": true,
+  "remaining_worktrees": "worktree C:/Users/vmiguel/git/Bessemer\nHEAD cfe3355e0e124450bdfd5dd85e6c96ef134a338f\nbranch refs/heads/codex/sqlite-images\n\nworktree C:/bessemer214-ci\nHEAD d7bc6b16fe4d7ad694a1910cf5d4f6284fdb60ad\ndetached",
+  "local_status": "?? AGENTS.md",
+  "scope": "Accepted PR244 exact publication head with all13 required checks successful, candidate forward integration into the active working branch without changing its tree, and guarded publication-branch cleanup. Main/release state unchanged; later local work retained.",
+  "exclusions": [
+    "Later numeric evaluation and other local features were not part of PR244 acceptance",
+    "Current full gate frozen at d7bc6b16 remains a separate live validation"
+  ]
+}
