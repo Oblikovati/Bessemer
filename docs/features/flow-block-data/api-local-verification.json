@@ -20,10 +20,17 @@
   "native_census": {
     "command": "cargo test --test flow_block_data --locked every_native_stored_field -- --ignored --nocapture",
     "requests": 125471,
-    "status": "running",
-    "terminal_exit_code": null,
-    "handle": 76903,
-    "scope": "Original no-op, changed complete decoded patch, history and fresh reverse for every request; no success credit until terminal exit zero"
+    "status": "passed",
+    "terminal_exit_code": 0,
+    "scope": "Original no-op, changed complete decoded patch, history and fresh reverse for every request; no success credit until terminal exit zero",
+    "passed": 1,
+    "failed": 0,
+    "test_seconds": 2250.28,
+    "wall_seconds": 2250.7723966,
+    "source_commit": "8c8102f9ed69e67b0231397d273ff95c1415e451",
+    "source_file_hashes_match": true,
+    "log": "target\\flow-block-data-native-census.log",
+    "log_sha256": "516d4e465d41203a5bfe664a26a46377288d7a7b4bc47d65e3a694caf295ec9e"
   },
   "concurrency": "Eight workers, caller input mutation, isolated raw reversals and immutable source checkpoint",
   "allocation_scope": "Bounded decoded bytes, blocks, total entries and integer words; flat metadata and borrowed arrays, no allocation per entry array or per word",
@@ -67,8 +74,7 @@
     "No arbitrary bitmap/entry/array cardinality or version changes",
     "No canonical changed zlib representation claim",
     "No dependency or version change",
-    "Earlier full gate on ff7b855f excludes base-grid and record-406 changes; next combined gate required",
-    "Native census remains live and uncredited",
-    "No complete schema parity claim"
+    "No complete schema parity claim",
+    "Combined full gate live on 5c851c29 covers this implementation but has no terminal success credit yet"
   ]
 }
