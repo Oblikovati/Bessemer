@@ -3,6 +3,7 @@ mod decode;
 mod edit;
 mod types;
 mod view;
+use super::profile_wire::*;
 use super::*;
 use std::collections::BTreeSet;
 pub use types::*;

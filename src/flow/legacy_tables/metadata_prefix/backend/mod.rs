@@ -5,6 +5,7 @@ mod kind_one;
 mod kind_one_profile;
 mod kind_two;
 mod medium_body;
+mod profile_wire;
 mod types;
 mod view;
 use super::*;
