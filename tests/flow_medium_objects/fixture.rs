@@ -38,7 +38,7 @@ fn text(cursor: &mut PacketCursor) -> BodyText {
         native: blob(cursor),
     }
 }
-fn curve(cursor: &mut PacketCursor) -> BodyCurve {
+pub(super) fn curve(cursor: &mut PacketCursor) -> BodyCurve {
     BodyCurve {
         start: word(cursor),
         end: word(cursor),
@@ -53,14 +53,14 @@ fn curve(cursor: &mut PacketCursor) -> BodyCurve {
         extra_second: words(cursor),
     }
 }
-fn wide(cursor: &mut PacketCursor) -> u64 {
+pub(super) fn wide(cursor: &mut PacketCursor) -> u64 {
     u64::from_le_bytes(number(cursor))
 }
-fn words(cursor: &mut PacketCursor) -> Vec<u64> {
+pub(super) fn words(cursor: &mut PacketCursor) -> Vec<u64> {
     counted(cursor, wide)
 }
 
-fn count_word(cursor: &mut PacketCursor) -> u32 {
+pub(super) fn count_word(cursor: &mut PacketCursor) -> u32 {
     u32::try_from(signed(cursor)).unwrap()
 }
 

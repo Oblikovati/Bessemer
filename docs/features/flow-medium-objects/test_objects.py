@@ -17,6 +17,13 @@ def rebuild_curve(curve: dict) -> bytes:
 
 
 def rebuild_body(value: dict) -> bytes:
+    raw = rebuild_prefix(value)
+    raw += frozen.packed(value["scalar_patterns"], "Q") + bytes((value["state_byte"],))
+    assert len(raw) == value["body_end"]
+    return raw + value["opaque_tail"]
+
+
+def rebuild_prefix(value: dict) -> bytes:
     raw = bytes((value["version"], value["base_byte"])) + value["base_key_raw"]
     raw += struct.pack("<i", value["name"]["stored_units"]) + value["name"]["raw_bytes"]
     for curve in value["curves"]:
@@ -25,9 +32,7 @@ def rebuild_body(value: dict) -> bytes:
         assert len(raw) == curve["end"]
     for count, arrays in (("first_count", "first_arrays"), ("second_count", "second_arrays")):
         raw += struct.pack("<i", value[count]) + b"".join(frozen.packed(row, "Q") for row in value[arrays])
-    raw += frozen.packed(value["scalar_patterns"], "Q") + bytes((value["state_byte"],))
-    assert len(raw) == value["body_end"]
-    return raw + value["opaque_tail"]
+    return raw
 
 
 class MediumObjectBaselineTests(unittest.TestCase):

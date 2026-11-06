@@ -26,7 +26,7 @@ fn append_text(raw: &mut Vec<u8>, text: &BodyText) {
     raw.extend_from_slice(&text.raw);
     assert_eq!(raw.len(), text.end as usize);
 }
-fn append_curve(raw: &mut Vec<u8>, curve: &BodyCurve) {
+pub(super) fn append_curve(raw: &mut Vec<u8>, curve: &BodyCurve) {
     assert_eq!(raw.len(), curve.start as usize);
     assert_eq!(curve.version, 0);
     raw.push(curve.version);
@@ -50,7 +50,7 @@ fn append_arrays(raw: &mut Vec<u8>, count: u32, arrays: &[Vec<u64>], arity: usiz
         append_words(raw, values);
     }
 }
-fn append_words(raw: &mut Vec<u8>, values: &[u64]) {
+pub(super) fn append_words(raw: &mut Vec<u8>, values: &[u64]) {
     for value in values {
         raw.extend_from_slice(&value.to_le_bytes());
     }

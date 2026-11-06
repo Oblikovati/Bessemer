@@ -3,6 +3,8 @@
 mod api;
 #[path = "flow_medium_objects/fixture.rs"]
 mod fixture;
+#[path = "flow_medium_objects/kind_two.rs"]
+mod kind_two;
 #[path = "flow_field_values/packet.rs"]
 mod packet;
 #[path = "flow_medium_objects/profile.rs"]
