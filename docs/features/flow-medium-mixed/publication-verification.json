@@ -1,0 +1,29 @@
+{
+  "accepted_source_commit": "d7bc6b16fe4d7ad694a1910cf5d4f6284fdb60ad",
+  "accepted_source_tree": "c5f6e3eab5a18046ec6e0956aacbd0b5118e3594",
+  "publication_merge_commit": "211d24c0ebdcce7ea2bec819cf1d1ebd238e79b6",
+  "publication_tree_before_metadata": "c5f6e3eab5a18046ec6e0956aacbd0b5118e3594",
+  "all_repository_blobs_identical_before_metadata": true,
+  "publication_metadata_only_files": [
+    "docs/features/flow-medium-mixed/full-pr-gate-verification.json",
+    "docs/features/flow-medium-mixed/publication-verification.json"
+  ],
+  "full_gate": {
+    "command": "cargo xtask pr",
+    "terminal_exit_code": 0,
+    "passed": 4770,
+    "failed": 0,
+    "ignored": 244,
+    "log_sha256": "67d0dd5293ca4e046b480c16d752978f85f315fe8666e43ca733a296c4793739"
+  },
+  "base": "codex/interop-candidate",
+  "base_commit": "2a7fe67481ed151f44abe6b1b1b877e5f94ac3e0",
+  "published_tags_checked": [],
+  "published_releases_checked": [],
+  "scope": "Typed Flow408,407/437/411/413,421,416,108 and410 APIs plus complete424 metadata, kind-one/two bodies and fresh kind-one/mixed profiles; independent fixture, history, reversal, limits and concurrency evidence",
+  "exclusions": [
+    "Later FEV1 numeric fixtures and FiniteOrderedV1 API",
+    "Native engineering/runtime/application acceptance and installed kind-two fixtures",
+    "Remote CI acceptance remains required on the publication head"
+  ]
+}
