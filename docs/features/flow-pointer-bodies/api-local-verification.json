@@ -27,9 +27,17 @@
     "scope": "Native v0 payload in owned three-record carrier; full read projection plus sixteen deterministic first/last edit samples"
   },
   "native_census": {
-    "status": "not_started",
+    "status": "passed",
     "command": "cargo test --test flow_pointer_body_fixtures every_native_existing_pointer_body_field --locked -- --ignored --nocapture",
-    "expected_requests": 107712
+    "expected_requests": 107712,
+    "terminal_exit_code": 0,
+    "source_commit": "f56093d364adfe9ad9013e4bd82205a5ecdd0325",
+    "verified_source_files": 18,
+    "field_requests": 107712,
+    "test_seconds": 1677.82,
+    "log": "target\\flow-pointer-bodies-native-census.log",
+    "log_sha256": "a6d0c0819b383f62c3dd05b25c99aa7baa8f67795c8e21c81fb36604455a3d47",
+    "scope": "All native v0 existing pool words and vector bytes in an owned three-record carrier: no-ops, independent full decoded patches, all history relations and fresh reversals; no native application acceptance"
   },
   "source_lf_sha256": {
     "src\\flow\\legacy_tables\\mod.rs": "b0ea3c9c5c9d4c4575fd8162ff843c4e938bfb632983f743e7772b7885c7485c",
@@ -59,7 +67,6 @@
   "reference_sha256": "40213a7f5eb4859d203c16f99be7fabafd03d1132b6f24540dc752f1296397ec",
   "exclusions": [
     "Active full gate at 9c3f2f4f excludes this later record-421 API",
-    "Complete native edit census has not yet been accepted",
     "Native runtime state, orientation, tree ordering, engineering roles, packed decoding and native application acceptance",
     "Remote CI and ThreadSanitizer for this later revision remain pending"
   ],
