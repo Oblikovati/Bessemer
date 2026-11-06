@@ -1,0 +1,19 @@
+{
+  "command": "cargo xtask pr",
+  "terminal_exit_code": 0,
+  "source_commit": "7fec3a3b25fe9ff69285eb97febeaf958108c7fd",
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "log": "target\\flow-link-records-accepted-full-pr-gate.log",
+  "log_sha256": "8e23932581960eb7837f7527005310124380cdc8094c75a93a6f27ae1ff3ded6",
+  "result_summaries": 378,
+  "passed": 4614,
+  "failed": 0,
+  "ignored": 240,
+  "scope": "Complete record-402 fixtures/API, alternate-parse regression and corrected repository formatting, plus record-408 original wire baseline and earlier work",
+  "exclusions": [
+    "Later record-402 test-only function extraction b8be9a23",
+    "Later record-408 API/supplementary field oracle",
+    "Later four-table 407/437/411/413 baseline and API",
+    "No native application acceptance or remote CI credit"
+  ]
+}
