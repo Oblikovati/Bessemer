@@ -1,0 +1,57 @@
+{
+  "issue": 241,
+  "scope": "Complete record-304 owned baseline; no typed production reader or editor yet",
+  "source_revision_before_baseline": "ff19a0f5",
+  "results": {
+    "rust_passed": 3,
+    "python_passed": 8,
+    "failed": 0,
+    "ignored": 0,
+    "clippy": "passed",
+    "format": "passed"
+  },
+  "logs": {
+    "tests": {
+      "path": "target/flow-object-records-baseline-tests.log",
+      "sha256": "3c268faf680cbf704c39124f842e338bd062bad7d6ff520e3b89ab6478fd82c6"
+    },
+    "clippy": {
+      "path": "target/flow-object-records-baseline-clippy.log",
+      "sha256": "0f003f53732b89e42e773742a8e28e6d4bdbec5ac395a83754ef08a24d119901"
+    },
+    "python": {
+      "path": "target/flow-object-records-baseline-python.log",
+      "sha256": "2de963ac6cb08ee2adf8d6b0d4c3604714822ea93bc3ab49d43c4db235d97ea9"
+    },
+    "format": {
+      "path": "target/flow-object-records-baseline-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "helpers": {
+    "freeze_objects.py": "12ccfa5fb86bfac8dd386bc425c269679c64d67b2ca2c1266c1771a02aa411ed",
+    "object_requests.py": "0af35563f953436e2f14382ef87873b598bfa1ec1d77ea6a9c8e49d98fa3573f",
+    "test_objects.py": "ec36dd11101144bf66e5722b26619ea7b9d725cf70f9adad6fd19f01c8769670"
+  },
+  "compression": {
+    "python": "3.14.6",
+    "zlib": "1.3.1.zlib-ng"
+  },
+  "oracles": [
+    "Original documented schema projections",
+    "Independent version stride and conditional trailer equations",
+    "Exact raw byte reconstruction",
+    "Full native source and payload digests with complete manifest projections",
+    "Malformed prefix and extension rejection",
+    "Temporary-root packet regeneration"
+  ],
+  "exclusions": [
+    "Typed Rust read and write pending",
+    "Full cargo xtask pr acceptance of this revision pending",
+    "Hosted matrix and sanitizer acceptance pending",
+    "Only version 3 observed in native sources",
+    "Native runtime population and identity-list binding not reproduced",
+    "Native application not checked"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose review pending"
+}
