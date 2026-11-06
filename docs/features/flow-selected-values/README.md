@@ -40,9 +40,40 @@ existing `FlowLinkRecords` and `FlowByteStates` views. Compression checks reuse
 the existing exact-stream fixture helper; state-header no-ops retain complete
 compressed carrier bytes and physical history.
 
-The record-112 context/read/edit API is still to be implemented against this
-baseline. It must retain immutable input revisions and the explicit fresh-map
-assumption, edit existing values without changing selection, completely reopen
-results and return carrier history. Native runtime scatter, reused nonempty maps,
-owner binding, engineering meanings and SolidWorks application acceptance remain
-outside this fresh serialized profile.
+`FlowSelectionContext::derive` takes complete `FlowLinkRecords` and
+`FlowByteStates` inputs with explicit `FlowSelectionContextOptions`. The caller
+declares `FreshEmptyMap`; actual map entries and selected ordinals have independent
+bounds. State arrays must be empty or match the physical link count. Contexts
+retain both immutable input revisions and do not update when callers edit those
+inputs elsewhere. Coverage distinguishes exact fresh-map derivation from native
+owner and runtime acceptance.
+
+`FlowCarrier::record_112_selected_values` checks a complete raw payload under
+that retained context and independent byte/value bounds. A complete empty
+selection admits a zero-byte payload and zero budgets. `values` borrows dense
+raw patterns; `entry_value` and `entry_value_id` preserve unselected entries
+separately from selected zero values. Value identities bind the value revision,
+both input revisions, link transport and the fresh-map assumption.
+Identities belong to parsed checkpoints; parsing identical bytes again creates
+a foreign revision. Context-isolation checks reuse the same value checkpoint
+while changing only a retained input revision.
+
+`replace_value` accepts a checked identity and raw bits, edits a copy and reopens
+the entire payload under the same context and bounds. Selection stays fixed.
+The reused `FlowSimpleTableEdit` returns immutable checkpoints and full physical
+carrier history. No-ops preserve original bytes, while fresh reversals recover
+the whole carrier exactly. Stale and foreign value/context identities fail
+without mutating the original snapshots.
+
+Typed reads check all 15,104 stored patterns and every optional entry projection
+in the 2,729-case corpus. Edit checks cover every generated pattern and distinct
+first/middle/last native values: 11,231 positions, including three of the 3,876
+native values. Each selected edit has an independent byte patch, no-op check,
+complete history and fresh whole-carrier reversal. Two fresh processes compare
+the same source-checked contexts, values and selected edits byte for byte. Eight
+workers compare concurrent derivations and edits against serial results.
+Compile-time checks cover ten new public types and two reused wide/edit types.
+The native edit policy is selected coverage; full reads cover every native value.
+
+Native runtime scatter, reused nonempty maps, owner binding, engineering meanings
+and SolidWorks application acceptance remain outside this fresh serialized profile.

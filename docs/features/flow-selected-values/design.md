@@ -1,8 +1,8 @@
 # Flow selected values and byte-state dependency
 
 Issue: #241. References: `../inventor-interface/solidworks/flowrecord112.py`
-and `flowauxrecords.py`. This is the contract for the remaining selected-value
-and context API; the input link and byte-state views are already implemented.
+and `flowauxrecords.py`. This is the contract for the selected-value/context API
+and its existing typed link and byte-state inputs.
 
 Record 112 consumes exactly one raw 64-bit pattern for each selected entry in
 an explicitly derived dense map. It has no version or count prefix. Complete

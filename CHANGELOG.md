@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added record-112 fresh selection contexts and complete headerless value reads/edits, binding value identities to retained link/state revisions and preserving optional entry projections. (#241)
+
 - Added complete record-316 byte-state reads and isolated header/byte edits with bounded inflation, compressed no-op preservation and complete carrier history. (#241)
 
 - Added complete record-12 counted-byte reads and isolated existing-byte edits, preserving raw values, empty results and physical carrier history. (#241)
