@@ -1,5 +1,7 @@
 //! Complete kind-one serialized body, independent of numeric engineering interpretation.
 mod decode;
+#[cfg(test)]
+mod decode_tests;
 mod edit;
 mod fields;
 mod types;

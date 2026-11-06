@@ -3,6 +3,7 @@ pub(super) fn read(
     backend: &FlowMediumBackendPrefix,
     options: FlowMediumBodyOptions,
 ) -> Result<FlowMediumKindOne> {
+    required_kind(backend, options)?;
     let start = backend.metadata_prefix().end + backend.end;
     read_at(backend, start, options)
 }
@@ -11,7 +12,7 @@ pub(super) fn read_at(
     start: usize,
     options: FlowMediumBodyOptions,
 ) -> Result<FlowMediumKindOne> {
-    required_kind(backend, options)?;
+    valid_options(options)?;
     let prefix = backend.metadata_prefix();
     let raw = prefix.payload_bytes();
     let suffix = raw.get(start..).ok_or_else(|| {
@@ -29,7 +30,7 @@ pub(super) fn read_at(
         span,
     })
 }
-fn required_kind(backend: &FlowMediumBackendPrefix, options: FlowMediumBodyOptions) -> Result<()> {
+fn valid_options(options: FlowMediumBodyOptions) -> Result<()> {
     if [
         options.maximum_body_bytes,
         options.maximum_wide_words,
@@ -41,6 +42,10 @@ fn required_kind(backend: &FlowMediumBackendPrefix, options: FlowMediumBodyOptio
             "kind-one options {options:?}; expected all independent bounds positive"
         )));
     }
+    Ok(())
+}
+fn required_kind(backend: &FlowMediumBackendPrefix, options: FlowMediumBodyOptions) -> Result<()> {
+    valid_options(options)?;
     if backend.stop() != FlowMediumBackendStop::FirstTableObjectBody
         || backend.table(0).and_then(|table| table.first_kind()) != Some(1)
     {

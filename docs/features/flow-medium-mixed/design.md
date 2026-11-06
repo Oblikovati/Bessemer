@@ -8,17 +8,19 @@ Second-table entries share an outer key domain but retain their declared kind
 and conditional state-byte presence.
 
 Reuse the existing metadata reader, both complete body readers, GUID parser,
-carrier editing and physical history paths. Avoid a second copy of the profile
-scanner: isolate shared framing and reference-budget logic, preserve the
-kind-one adapter, then introduce the mixed adapter against FML1. Structural
+carrier editing and physical history paths. The private profile-wire module now shares table framing, GUID decoding,
+reference membership and budget spending with the existing kind-one scanner.
+Preserve that adapter and reuse these checks when introducing the mixed
+adapter against FML1. Structural
 changes require the owned earlier packets to pass unchanged before mixed-kind
 behavior is added.
 
-The private kind-one body reader currently checks the backend's first kind,
-which would reject a later kind-one entry when kind two appears first. Move
-that gate to the public first-body entry point before the mixed scanner calls
-it. A per-entry scanner must select and validate its own kind. Both body readers
-must retain explicit body offsets through edits and full-carrier reopening.
+The kind-one first-body gate now remains at the public entry point. Its private
+body reader accepts an explicit offset independently of the backend's first
+kind, so a later kind-one body can follow kind two. Independent bounds still
+apply, and edits retain that body offset through full-carrier reopening. The
+mixed scanner must select and validate each entry's own kind before calling
+either body reader.
 
 Carry independent per-body limits alongside total wide-word, raw 32-bit-word,
 name-unit, object and reference limits. Empty collections spend zero budget;
