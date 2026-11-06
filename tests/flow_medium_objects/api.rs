@@ -5,8 +5,8 @@ mod contracts;
 #[path = "api/edit.rs"]
 mod edit;
 #[path = "api/read.rs"]
-mod read;
-fn options() -> FlowMediumBodyOptions {
+pub(super) mod read;
+pub(super) fn options() -> FlowMediumBodyOptions {
     FlowMediumBodyOptions {
         maximum_body_bytes: 1_000_000,
         maximum_wide_words: 100_000,
@@ -29,7 +29,7 @@ fn backend(raw: &[u8], kind: i32) -> FlowMediumBackendPrefix {
         .medium_backend_prefix()
         .unwrap()
 }
-fn carrier(payload: &[u8]) -> FlowCarrier {
+pub(super) fn carrier(payload: &[u8]) -> FlowCarrier {
     let mut wire = 8u16.to_le_bytes().to_vec();
     for (id, bytes) in [
         (424u32, &b"decoy"[..]),
@@ -50,7 +50,7 @@ fn carrier(payload: &[u8]) -> FlowCarrier {
     )
     .unwrap()
 }
-fn prefix_options() -> FlowMetadataPrefixOptions {
+pub(super) fn prefix_options() -> FlowMetadataPrefixOptions {
     FlowMetadataPrefixOptions {
         string_mode: FlowMetadataStringMode::NativeUtf16,
         maximum_payload_bytes: 1_000_000,

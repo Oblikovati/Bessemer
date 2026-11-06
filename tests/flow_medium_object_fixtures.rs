@@ -5,6 +5,8 @@ mod api;
 mod fixture;
 #[path = "flow_field_values/packet.rs"]
 mod packet;
+#[path = "flow_medium_objects/profile.rs"]
+mod profile;
 #[path = "flow_medium_objects/rebuild.rs"]
 mod rebuild;
 #[path = "flow_medium_objects/types.rs"]

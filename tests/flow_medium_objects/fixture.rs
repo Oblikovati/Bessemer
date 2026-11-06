@@ -8,7 +8,7 @@ pub fn cases() -> Vec<BodyCase> {
     finish(&cursor);
     cases
 }
-fn body(cursor: &mut PacketCursor) -> BodyCase {
+pub(super) fn body(cursor: &mut PacketCursor) -> BodyCase {
     BodyCase {
         name: String::from_utf8(blob(cursor)).unwrap(),
         raw: blob(cursor),

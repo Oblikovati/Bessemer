@@ -6,7 +6,7 @@ fn every_complete_kind_one_body_matches_all_frozen_fields_spans_and_exclusions()
         check_body(&body, &case);
     }
 }
-fn check_body(body: &FlowMediumKindOne, case: &BodyCase) {
+pub(crate) fn check_body(body: &FlowMediumKindOne, case: &BodyCase) {
     assert_eq!(body.body_bytes(), &case.raw[..case.footer.end as usize]);
     assert_eq!(body.opaque_tail(), case.footer.tail);
     assert_eq!(body.base_byte(), case.base);
