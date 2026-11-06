@@ -1,0 +1,98 @@
+{
+  "source_parent": "cfb4711249f8d61c22863fc442ba38bb98b73970",
+  "issue": 241,
+  "platform": "Windows x64 MSVC Rust 1.99.0 Python3",
+  "commands": [
+    "cargo test --locked --test flow_byte_state_fixtures",
+    "cargo clippy --locked --test flow_byte_state_fixtures -- -D warnings",
+    "python -m unittest discover -s docs/features/flow-byte-states -p test_byte_states.py -v",
+    "cargo fmt --all -- --check"
+  ],
+  "terminal_exit_codes": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "rust": {
+    "passed": 4,
+    "failed": 0,
+    "ignored": 0
+  },
+  "python": {
+    "passed": 8,
+    "failed": 0
+  },
+  "complete_source_cases": 965,
+  "header_bit_patterns": 66,
+  "all_raw_value_bytes": 1042308,
+  "native_census": {
+    "3": 90,
+    "4": 90,
+    "236": 1476,
+    "253": 3876
+  },
+  "native_census_oracle": "Full auxiliary manifest raw_hex reviewed independently and matched to the original source payload; no frozen packet values changed",
+  "compression_coverage": {
+    "levels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "strategies": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "window_bits": [
+      9,
+      15
+    ]
+  },
+  "oracle_kinds": [
+    "Complete original schema projections",
+    "Literal signed-header/count/raw-byte reconstruction",
+    "Independent zlib decompression and exact stored stream end",
+    "Whole source and payload hashes and complete native manifest projection",
+    "Reviewed native value census",
+    "All compact stored/decoded prefixes and outer/inner extensions",
+    "Checksum corruption, concatenation, raw-deflate/gzip rejection, malformed counts and carrier guards",
+    "Temporary-root packet and hash-report regeneration"
+  ],
+  "source_files_lf_sha256": {
+    "docs/features/flow-byte-states/byte_state_requests.py": "c86757b41ac0b6a912426e8724d57d04b6663b03d033a25936fba1f874b7bad4",
+    "docs/features/flow-byte-states/freeze_byte_states.py": "68807684d63d0c8993008da94e88a6d7b7209b597a3ad0dd1ae895e1b0a627d2",
+    "docs/features/flow-byte-states/test_byte_states.py": "df6442f0ff7c4e11029755fc664559bf16a8ce82f741d9c3795e92e3142bb2f3",
+    "tests/flow_byte_state_fixtures.rs": "25a5ab631de1650b9d0276505939e88ade8e84f0d3af3f689fb6fdbe7bb79c7f"
+  },
+  "logs_sha256": {
+    "target/flow-byte-states-tests.log": "a14b5ceaae43d5b0cfd31fad5b11868b875818c5103a7b3914a4cc4d10438d59",
+    "target/flow-byte-states-clippy.log": "0d603a83d021df64f9cd47c86b5f05764e69b0f6235ccfe32864cf5b82428e20",
+    "target/flow-byte-states-python.log": "4450b152e2700fc09edb5be4579453a314914eb2355fd01e7647e24ff7bb6c0f",
+    "target/flow-byte-states-format.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "style": {
+    "files_under_500_lines": true,
+    "functions_at_most_20_body_lines": true,
+    "whitespace_check_exit": 0
+  },
+  "scope": "Complete record316 baseline only; typed API and record112 selection/context API remain unimplemented",
+  "exclusions": [
+    "Native header dispatch",
+    "Native owner binding",
+    "Runtime object/index mapping and scatter",
+    "Engineering/boolean meanings",
+    "SolidWorks application acceptance",
+    "Full current-source PR gate and hosted full matrix"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose pass remains for review"
+}
