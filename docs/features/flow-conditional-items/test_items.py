@@ -28,6 +28,12 @@ def read_decoded(identifier: int, decoded: bytes, outer: int = 6) -> dict:
 
 
 class ConditionalItemTests(unittest.TestCase):
+    def test_shared_field_packet_preserves_utf16_units_with_a_distinct_two_byte_tag(self) -> None:
+        field=snapshot.StoredField(('units',),12,'H',(0,0xd800,0xdc00,0xffff))
+        raw=frozen.field_packet(field)
+        path=frozen.path_bytes(field.path)
+        self.assertEqual(raw,path+struct.pack('<IBII4H',12,4,4,8,0,0xd800,0xdc00,0xffff))
+
     def test_packet_regenerates_exactly_in_a_temporary_root(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory);frozen.freeze(root)

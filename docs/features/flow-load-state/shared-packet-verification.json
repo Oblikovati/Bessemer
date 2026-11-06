@@ -1,0 +1,21 @@
+{
+  "feature_issue": 241,
+  "base_commit": "551b77c9fdfa7b3c729e74d7b646923cf8d3ed66",
+  "python_passed": 9,
+  "failed": 0,
+  "scope": "Extended shared test-packet field encoding with distinct UTF16 tag4, retaining tags0..3 and every existing conditional-item packet unchanged; direct two-byte raw-unit framing and complete temporary-root corpus regeneration",
+  "log": "target/flow-snapshot-utf16-refactor-python-tests.log",
+  "log_sha256": "11837aa376d1df99b61ec6c48a728f54211ca1d1cb1109ee9f50e0e5878bb00c",
+  "unchanged_fixture_gzip_sha256": {
+    "record126.bin.gz": "4552e974beb38e5be717c730f56b208625382c182057f413b657e2c9773b89ac",
+    "record128.bin.gz": "0f8a1985f5356f3d7b91990a9308dc577cfc8906bb2a5a5bd40b4c0a3a63a6be",
+    "record315.bin.gz": "da3364cb79595200e59a790b92a50b09734f152f7229bc32afb1d71b58ae1647"
+  },
+  "source_lf_sha256": {
+    "docs/features/flow-conditional-items/freeze_items.py": "709ac9192ee9cc2e8ad5501fc11b5b4cd6cd773b38fc31e4a5b9d4f20aa6f17a",
+    "docs/features/flow-conditional-items/test_items.py": "327ff21d7675f73e80e2e079fc28e46de258e9d088c6e05a7acfc7d215456658"
+  },
+  "exclusions": [
+    "Public scalar encoding enums and production APIs were unchanged"
+  ]
+}

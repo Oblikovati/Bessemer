@@ -16,7 +16,7 @@ def path_bytes(path: snapshot.Path) -> bytes:
 
 def field_packet(value: snapshot.StoredField) -> bytes:
     raw=struct.pack('<'+value.encoding*len(value.values),*value.values)
-    tag={'B':0,'i':1,'I':2,'Q':3}[value.encoding]
+    tag={'B':0,'i':1,'I':2,'Q':3,'H':4}[value.encoding]
     return path_bytes(value.path)+struct.pack('<IBI',value.offset,tag,len(value.values))+blob(raw)
 
 
