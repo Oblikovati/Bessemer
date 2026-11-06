@@ -39,6 +39,28 @@ It regenerates the packet and proof under a temporary root. The packet has
 2,284,533 uncompressed bytes; its digest and source revisions are recorded in
 `baseline-verification.json`.
 
-The typed Rust reader and editor remain to be implemented. Native identity-list
-binding, legacy flag lifecycle, runtime population, engineering meanings and
-SolidWorks application acceptance remain outside this baseline's evidence.
+`FlowCarrier::record_304_objects` opens a complete immutable `FlowObjectRecords`
+view with explicit payload-byte and actual-row limits. A zero row budget admits
+stored-empty payloads. `row` returns a checked borrowed row; `legacy_trailer`
+retains physical trailer presence separately from the stored count and native
+append predicate. Named accessors preserve every discarded word, optional signed
+member, raw block, state byte and opaque extension.
+
+Row and trailer `field_id` methods mint `FlowObjectFieldId` values for physically
+stored signed words or bytes. The view's `signed` and `byte` methods check both
+revision and encoding. `replace_signed` and `replace_byte` copy the complete
+carrier, patch one existing scalar and reopen the whole payload. They return
+`FlowSimpleTableEdit<FlowObjectRecords>` with the original checkpoint, validated
+result, exact coverage, explicit diagnostics and physical carrier history.
+No-op edits retain all bytes; fresh byte reversals restore the original carrier.
+
+Tests read every field in every owned case. Edit checks cover every field in rows
+when the stored count is at most 32, and the first, middle and last rows for
+larger cases. Every present trailer field is edited. Both native rows and trailers
+receive complete field-edit coverage. Tests also check malformed framing, exact
+and one-below resource limits, absent fields, stale and foreign identities,
+encoding mismatches, source isolation, public thread traits, eight-worker replay
+and byte-for-byte agreement between two fresh processes.
+
+Native identity-list binding, legacy flag lifecycle, runtime population,
+engineering meanings and SolidWorks application acceptance remain unverified.

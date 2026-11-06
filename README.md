@@ -86,6 +86,9 @@ bounded inflation, exact decoded framing and compressed no-op preservation.
 The [selected-value view](docs/features/flow-selected-values/README.md) derives
 record 112's count from complete typed link/state inputs under an explicit fresh
 map assumption and edits raw wide patterns with context-bound identities.
+The [object-record view](docs/features/flow-object-records/README.md) reads record
+304 versions 0–7 and edits existing signed fields and opaque bytes, keeping
+counted rows separate from the conditional legacy trailer.
 The [legacy link view](docs/features/flow-link-records/README.md) reads record 402
 and edits existing fields while preserving code bytes, sentinel references and versioned tails.
 The [legacy table view](docs/features/flow-legacy-tables/README.md) reads records

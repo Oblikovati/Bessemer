@@ -1,6 +1,12 @@
-//! Owned complete record-304 projections before introducing a typed editor.
+//! Owned complete record-304 projections, typed reads and isolated field edits.
+#[path = "flow_object_records/api.rs"]
+mod api;
 #[path = "flow_field_values/packet.rs"]
 mod packet;
+#[path = "flow_state_tables/carrier.rs"]
+mod state_carrier;
+#[path = "flow_state_tables/process.rs"]
+mod state_process;
 use packet::*;
 use std::collections::BTreeSet;
 

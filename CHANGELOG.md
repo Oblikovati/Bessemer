@@ -56,6 +56,8 @@
 
 ### Added
 
+- Added complete record-304 object-row and legacy-trailer reads with revision-bound signed-field and byte edits, exact framing and complete carrier history. (#241)
+
 - Added record-112 fresh selection contexts and complete headerless value reads/edits, binding value identities to retained link/state revisions and preserving optional entry projections. (#241)
 
 - Added complete record-316 byte-state reads and isolated header/byte edits with bounded inflation, compressed no-op preservation and complete carrier history. (#241)
