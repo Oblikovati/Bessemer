@@ -1,4 +1,6 @@
 //! Independent record-108 body reconstruction and integer-only width oracle.
+#[path = "flow_field_values/api.rs"]
+mod api;
 #[path = "flow_field_values/fixture.rs"]
 mod fixture;
 #[path = "flow_field_values/packet.rs"]

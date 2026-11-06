@@ -49,7 +49,48 @@ and results above the native signed maximum are rejected. The packet is 10,938
 bytes with SHA-256
 `a6ddced69e5421fe601977b58652bf683b385ed2c2271f309ca7fba8f1e58d14`.
 
-This is the independent fixture baseline before the typed reader/editor. Runtime
-layout inference, selected numeric-data binding, native storage/exception state,
-engineering columns and native application acceptance remain open. The width
-calculation must not silently substitute global record-102 numeric values.
+`FlowCarrier::record_108_values` reads these layouts with `FlowFieldValueOptions`.
+`FlowFieldCount` admits native count/width values once. Immutable
+`FlowLegacyFieldLayout` and `FlowRegionFieldLayout` retain explicit object order,
+wildcard checks and region row/storage context. Independent positive limits bound
+metadata positions, width-table words and actual wide patterns. The body-byte
+limit separately admits zero. Inactive dimensions are retained without allocating
+their declared products. Every successful read reaches exact decoded EOF.
+
+Borrowed objects and regions expose body intervals and raw patterns. Coverage
+keeps raw version bytes, stored body bytes and logical decoded size separate,
+alongside optional-check presence and actual physical value totals. Diagnostics
+retain the runtime assumptions and engineering exclusions.
+
+The editors replace existing object/region patterns and signed legacy table
+words on isolated carriers. Explicit expected table entries reject mismatched
+edits; unchecked and wildcard slots may retain negative signed values. Each edit
+preserves the raw version, encodes only the body, reopens the complete typed result
+under its original context and limits, compares all item spans and verifies the
+full patched body. Results carry both typed checkpoints and complete physical
+history. No-ops preserve the original stored bytes and revision. Raw reversals
+restore the complete carrier; zlib reversals restore the decoded body without
+assuming canonical compression.
+
+`project_flow_region_width` implements the isolated documented width calculation
+with a validated signed type and explicit cached/selected numeric inputs. It
+retains the immutable input checkpoint, selected origin, exact count error and
+native-state exclusions. Unused inputs remain uninterpreted. Binary64 conversion
+checks finiteness and truncates before validating the nonnegative signed count;
+the independent bit-decomposition oracle checks this path without sharing that
+floating-point implementation.
+
+The implementation decision is exact serialized field interoperability under the
+supplied layout, with four raw version bytes and an explicitly selected body codec.
+The focused gate passed 18 Rust tests and nine Python checks. It covers all 203
+field views, all 315 width requests, every small owned existing field, first/last
+larger-array samples, 48 deterministic native edit samples, complete physical
+history, fresh reversals, exact budgets, malformed boundaries and measured codec
+growth. Eight workers compare all width successes/failures and complete field
+edits under both layout families and transports. Each public type is checked for
+`Send`/`Sync`. The separately invoked native census targets 47,153 existing fields;
+its acceptance is recorded independently of this focused gate.
+
+Runtime layout inference, selected numeric-data binding, native storage/exception
+state, engineering columns and native application acceptance remain open. The
+width calculation does not substitute global record-102 numeric values.

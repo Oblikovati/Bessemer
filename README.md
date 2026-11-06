@@ -46,6 +46,8 @@ The [pointer-pool and body view](docs/features/flow-pointer-bodies/README.md) re
 record 421 versions 0–5 with explicit counts and current runtime codes and edits existing payload values.
 The [reference-group view](docs/features/flow-reference-groups/README.md) reads
 record 416 versions 0–17 and edits existing fields without applying native pointer fixups or mapping shifts.
+The [field-value view](docs/features/flow-field-values/README.md) reads record 108
+with its raw version prefix and explicit object/region layouts, projects supplied runtime widths and edits existing raw patterns.
 The [block-extra view](docs/features/flow-block-extras/README.md) reads record 408
 with explicit runtime context and edits revision-bound, typed existing fields.
 The [legacy link view](docs/features/flow-link-records/README.md) reads record 402

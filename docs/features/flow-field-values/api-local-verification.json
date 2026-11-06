@@ -1,0 +1,72 @@
+{
+  "feature_issue": 241,
+  "fixture_base": "5152586a",
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "rust_command": "cargo test --test flow_field_value_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 18,
+  "rust_failed": 0,
+  "rust_ignored": 1,
+  "clippy_command": "cargo clippy --test flow_field_value_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "python_command": "python -m unittest discover -s docs/features/flow-field-values -p test_values.py -v",
+  "python_exit_code": 0,
+  "python_passed": 9,
+  "format_command": "cargo fmt",
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "field_views": 203,
+  "width_requests": 315,
+  "width_accepted": 289,
+  "width_rejected": 26,
+  "coverage": "Complete raw-version/body separation, all explicit legacy/region layouts and optional expected-table presence, every value/interval/byte count, zero-body zero-bound acceptance, inactive large products without allocation; all isolated width outcomes match Source and independent integer bit decomposition",
+  "edits": "Every small owned existing field and first/last larger-array values; exact no-ops, independent full-body patches, raw version preservation, every physical history relation, complete reparse under original options and fresh reversals",
+  "boundaries": "Every small stored prefix and trailing body byte; exact/one-below/zero limits on body and metadata axes; native count/type domains; layout mismatches; compatibility before decompression; stored region count/width mismatches; missing/inactive fields and invalid indices; zlib wrapper/checksum/single-member boundaries; foreign/wrong/stale IDs; checked versus wildcard table edits; measured compressed growth at original carrier limits for versions five/six and region profiles through native signed maximum",
+  "concurrency": "All public types asserted Send/Sync; eight workers compare complete serial field edits for both layout families/transports after input mutation, and all 315 success/failure width outcomes; isolated projection input checkpoint survives Arc caller mutation",
+  "native_samples": {
+    "passed": 48,
+    "contexts": 3,
+    "scope": "Native version-five FLD payload under explicit object layout and checked/unchecked/wildcard table contexts, in owned three-record carriers; complete read projections plus deterministic first/last edit samples"
+  },
+  "native_census": {
+    "status": "not_started",
+    "command": "cargo test --test flow_field_value_fixtures every_native_existing_field_value --locked -- --ignored --nocapture",
+    "expected_requests": 47153,
+    "scope": "47,152 editable wide patterns and one existing checked table word retained as an exact no-op; explicit conditional native layout, no application acceptance"
+  },
+  "source_lf_sha256": {
+    "src\\flow\\legacy_tables\\field_values\\context.rs": "957c7bab33fd7d927c56ebe2911944631c17fe434bff1a51f6d578533f54c4d5",
+    "src\\flow\\legacy_tables\\field_values\\decode.rs": "caaea7385f16b54aa6f504a612da16eb42f6710b508b068ed7346855a6b9c3b7",
+    "src\\flow\\legacy_tables\\field_values\\edit.rs": "0f310db11b6b783d9998a30ba17b85bdde98f817fddb54669f782925d9c5b4bb",
+    "src\\flow\\legacy_tables\\field_values\\mod.rs": "3e0bd27adc29ec15fd2e3372176b9018c315226acb9ed6bbc286114e2e6247b8",
+    "src\\flow\\legacy_tables\\field_values\\projection.rs": "cd4bf682d8af2371e4da813a43144f9ed412aaaf2e6ea7b0efa359cb7a7fb041",
+    "src\\flow\\legacy_tables\\field_values\\types.rs": "b91b06f052fd7989c1c6b52fd61c68b99268523b6f109bd3df3e4180424e6b63",
+    "src\\flow\\legacy_tables\\field_values\\view\\checkpoints.rs": "21dc737561387d764fb909dedf75bf46504e84e45a11823f24cb7b81eecebc2f",
+    "src\\flow\\legacy_tables\\field_values\\view\\items.rs": "251aaa859608b1695e58a914f61f14849cd183cf1d435bde1f479333ba3a0fd2",
+    "src\\flow\\legacy_tables\\field_values\\view.rs": "2741d6dd9657b7b3dee23fcd41fbe336316f8c1721f4a438b5841d327462710b",
+    "src\\flow\\legacy_tables\\mod.rs": "603e7e96bf987d6357a13a488636a73bc0b413e1115ce6efe4f0c8369099c4da",
+    "src\\flow\\legacy_tables\\wire.rs": "03cba696f572b5d262a083ad8dc46021cea608225cc5e81d4ea7e7809b931ce7",
+    "src\\flow\\payload_codec.rs": "0f971ce54c91c8724392489247cdf7a41748f8e0570630df6b4bc27c6bde89be",
+    "tests\\flow_field_value_fixtures.rs": "fed4948608a1846fde6288ee173cbceea4066fe47cce5e2534cb521a19641fbd",
+    "tests\\flow_field_values\\api\\bounds.rs": "b3892b52963453724c4692323af1cda54d95e7046726de7c717991e78f706e65",
+    "tests\\flow_field_values\\api\\edits\\cells.rs": "a1a186627d4c56390ac0f61d45e9b6000244acc0735170683ed05ed2c82de418",
+    "tests\\flow_field_values\\api\\edits.rs": "972787224d0351b1b20fad019dcd08eb1d31105f41efc988789477f685c351e6",
+    "tests\\flow_field_values\\api\\growth.rs": "ef5239155d062ceb9eca0cc22e3ec2b6a9c4c44afda07f6ca45313f416672058",
+    "tests\\flow_field_values\\api\\read.rs": "603deafe6bdd2eab2b3a8680d4c39f7b3456ed18812ff40761fc725eca4471fb",
+    "tests\\flow_field_values\\api\\widths.rs": "843d5ca5a3e0f2eb2af481acb73546cbdd0e67eac15ed099536d52346e3f6764",
+    "tests\\flow_field_values\\api.rs": "50d6a8da79e655c1ab94dc55baa4ee628b36c85ba0e287942b24fc8d4cd02082"
+  },
+  "log_sha256": {
+    "target\\flow-field-values-api-final-tests.log": "1634c9e13ae2ef386b1bf554534afc75810c5e308787cc507ac8fdce5333a735",
+    "target\\flow-field-values-api-final-clippy.log": "4b0e9592b74d3692bedb22b4d267ffd22a8bc9674274419cd01d8e7763352543",
+    "target\\flow-field-values-api-python-tests.log": "f52632ef1b239e5a76ad6099d328323f4f09385e71cf58c85de575bdebb59dfc"
+  },
+  "reference_sha256": "ee64e8c6de4e96d00ecf9ba514f82bf377286fec4f30b00273725f1057e5c733",
+  "exclusions": [
+    "Active full gate at 53bc0baf excludes this later record-108 API and independent baseline",
+    "Complete native existing-field census has not yet been accepted",
+    "Native runtime layout/numeric binding, object-form/storage flags, floating-point exception state, engineering columns and application acceptance",
+    "Remote CI and ThreadSanitizer for this later revision are pending"
+  ],
+  "prose_review": "Humanizer unavailable; left for maintainer review"
+}
