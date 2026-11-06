@@ -1,7 +1,8 @@
 # Flow selected values and byte-state dependency
 
 Issue: #241. References: `../inventor-interface/solidworks/flowrecord112.py`
-and `flowauxrecords.py`. This is remaining implementation work, not a shipped API.
+and `flowauxrecords.py`. This is the contract for the remaining selected-value
+and context API; the input link and byte-state views are already implemented.
 
 Record 112 consumes exactly one raw 64-bit pattern for each selected entry in
 an explicitly derived dense map. It has no version or count prefix. Complete
@@ -10,7 +11,8 @@ arbitrary external count would omit the documented selection behavior.
 
 The context combines complete legacy record-402 links, versions zero through
 nine, with complete record-316 state bytes under an explicit fresh-map
-assumption. Record 316 is a whole-zlib payload whose decoded body contains an
+assumption. Reuse `FlowLinkRecords` and `FlowByteStates` as the typed inputs.
+Record 316 is a whole-zlib payload whose decoded body contains an
 arbitrary signed header, a nonnegative signed count and exactly that many raw
 bytes. Its header is retained without native dispatch. It is distinct from
 record 12's raw count-plus-bytes layout and record 413's versioned layout.

@@ -1,0 +1,98 @@
+{
+  "source_parent": "026a6101886c32ac799685824516228ad604c0f3",
+  "issue": 241,
+  "platform": "Windows x64 MSVC Rust 1.99.0 Python3",
+  "commands": [
+    "cargo test --locked --test flow_selected_value_fixtures --test flow_byte_state_fixtures",
+    "cargo clippy --locked --test flow_selected_value_fixtures --test flow_byte_state_fixtures -- -D warnings",
+    "python -m unittest discover -s docs/features/flow-selected-values -p test_selected.py -v",
+    "cargo fmt --all -- --check"
+  ],
+  "terminal_exit_codes": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "rust": {
+    "passed": 22,
+    "failed": 0,
+    "ignored": 1
+  },
+  "ignored_scope": "Existing byte-state Source-verifying process worker invoked twice by its regular parent test",
+  "python": {
+    "passed": 9,
+    "failed": 0
+  },
+  "complete_source_cases": 2729,
+  "packet_count": 3,
+  "packet_bytes": 19736426,
+  "packet_limit_bytes": 8000000,
+  "selection_predicate": {
+    "accepted_converted_codes": 35,
+    "exhaustive_raw_code_state_combinations_per_version": 65536,
+    "exhaustive_versions": [
+      0,
+      9
+    ],
+    "boundary_versions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "boundary_code_state_combinations": 12288
+  },
+  "typed_input_bindings": "Every complete original402 link and316 state record matched through the existing FlowLinkRecords/FlowByteStates APIs, including spans, raw/converted codes, state header/values and exact compressed header no-ops with physical history",
+  "oracles": [
+    "Independent reviewed35-code truth set",
+    "Independent version0 conversion and high-bit selection",
+    "Full dense-map and selected-ordinal reconstruction",
+    "Exact raw-wide/end/count reconstruction and optional entry projections",
+    "Every wide single bit and complement; zero, negative zero, infinities and NaN payloads",
+    "Complete original three-input native context and projection with whole-file/payload/manifest hashes",
+    "Typed-input composition and temporary-root packet/hash regeneration",
+    "Fresh-map/count/ordinal/dense-map guards, raw-value prefixes/extensions and carrier guards"
+  ],
+  "native": {
+    "link_count": 5532,
+    "selected_count": 3876,
+    "raw_value_bytes": 31008,
+    "automatic_pairing_proven": false,
+    "tag_equality_is_observation_only": true
+  },
+  "source_files_lf_sha256": {
+    "docs/features/flow-selected-values/freeze_selected.py": "2ca81d58dcbfdffcaf3921cda42291d90a3fd42f10cb3e2e54fec1811015e5c8",
+    "docs/features/flow-selected-values/selected_requests.py": "2f89d8aab52cd0d0c2b39d9540f85ff4efe3ada5d9bebe15979539380989d746",
+    "docs/features/flow-selected-values/test_selected.py": "02e0d3e43764f7935d7606739e9fd1204b8557358c95a695615b8fd6615df8bd",
+    "tests/flow_selected_value_fixtures.rs": "8b6138841e6243ae8a2048fb9779ebd87ffda0334c415d90ef5d1c7ac2c00168",
+    "tests/flow_selected_values/fixture.rs": "bac258409715a0a0a7799c9b2606ca19ef27f912cf2bc33245896145e2457866",
+    "tests/flow_selected_values/input_bindings.rs": "dbbdbe01fd977bb2b88c95ad107a9616dd7b6fb0a8d498c5b3cdbde53ed947e1",
+    "tests/flow_state_tables/streams.rs": "56eef17aa01e68b12938c990beec036d84c66b3679e121c6fb99279255ccb483"
+  },
+  "logs_sha256": {
+    "target/flow-selected-values-tests.log": "3da9834db320460f33990a1fa6f972f3ef749b7c7c29bbb77124d2c06167e71a",
+    "target/flow-selected-values-clippy.log": "1bc9d20963d28f63511d68b8a979f5f6cc70d629d5c779b9b0e491425c32086d",
+    "target/flow-selected-values-python.log": "62a1d2eb2b48bf353e5ea13090885af59b9ad35cbbcdad13668059e503487c06",
+    "target/flow-selected-values-format.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "style": {
+    "files_under_500_lines": true,
+    "functions_at_most_20_body_lines": true,
+    "whitespace_check_exit": 0
+  },
+  "scope": "Complete selected-value/context baseline and existing typed input composition; record112 context/read/edit public API remains unimplemented",
+  "exclusions": [
+    "Reused nonempty native maps",
+    "Native owner/file pairing",
+    "Native runtime scatter and scheduling",
+    "Engineering meanings",
+    "SolidWorks application acceptance",
+    "Full current-source PR gate and hosted full matrix"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose pass remains for review"
+}
