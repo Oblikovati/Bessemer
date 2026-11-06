@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added complete raw Flow ID/state reads, isolated fixed-field edits and ordered map projections with explicit input snapshots and assignment history. (#241)
+
 - Added version-prefixed Flow field-value reads and isolated edits with explicit runtime layouts, strict width projections and complete body-codec boundaries. (#241)
 
 - Added complete legacy Flow reference-group reads and isolated typed edits with explicit mapping context, preserved signed counts and full carrier history. (#241)

@@ -1028,3 +1028,8 @@ See [the snapshot contract](docs/features/ellipse-backup-rotation/README.md) for
 validation status and the native restoration/geometry exclusions.
 
 Model-field edits retain CString count-prefix changes as physical changes, including completion and derived field history; decoded string comparison remains semantic. See the [framing regression](docs/features/model-text-framing/README.md).
+
+The [Flow metadata API](docs/features/flow-metadata/README.md) reads and edits
+complete raw record-410 state rows and applies them to explicit immutable maps,
+retaining duplicate assignments and their preceding values. Record 424 remains
+a prefix fixture baseline with an opaque backend tail.

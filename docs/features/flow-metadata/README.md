@@ -35,8 +35,36 @@ has 112 known prefix bytes and 13,079 opaque backend bytes. The baseline always
 retains `full_payload_schema = false`, including when no tail bytes remain.
 This prefix evidence does not establish complete record-424 acceptance.
 
-These are independent fixtures before typed metadata APIs. Native map allocation,
+Record 424 remains an independent fixture baseline before its typed API. Native map allocation,
 runtime state, engineering meanings, backend decoding and native application
 acceptance remain separate work. The fixture reader reuses the existing binary
 packet decoder; the field-value-specific 64-bit helpers remain with that feature's
 fixture reader. Both fixture suites run after that internal extraction.
+
+## Record 410 API
+
+`FlowCarrier::record_410_states` validates the complete raw payload under
+independent byte and row limits. `FlowIdStates` retains the full unsigned header
+word, signed identifiers, every state bit and exact row intervals. The header
+does not select a native version. Empty tables are completed results.
+
+`replace_header_word`, `replace_identifier` and `replace_state` edit existing
+fields on an isolated carrier, reparse the entire result and retain typed source
+and result checkpoints plus every physical history relation. Counts remain
+structural. Exact no-ops preserve the original wire identity.
+
+`apply_to` requires a `FlowIdStateMap` containing the explicit existing state.
+It applies every row in wire order and preserves unmentioned keys. The immutable
+projection retains both maps, its source record and all assignments, including
+equal-value updates and the value immediately before each duplicate assignment.
+Created and derived relations distinguish absent keys from existing zero values.
+Sorted result iteration provides deterministic output without modeling native
+hash allocation or iteration order.
+
+The focused suite checks all 1,880 views, malformed boundaries and independent
+limits. Every existing field in all distinct wire layouts, including the complete
+native payload, receives no-op, patch, history and fresh reverse checks. Eight
+workers compare complete map and assignment transcripts after input isolation
+checks. Two fresh processes reproduce the entire independent FIS1 packet byte
+for byte. Native identifier roles and application acceptance remain unverified;
+this API adds no record-424 backend coverage.
