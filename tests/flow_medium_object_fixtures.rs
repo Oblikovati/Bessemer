@@ -1,6 +1,8 @@
 //! Independent complete serialized kind-one bodies, without engineering interpretation.
 #[path = "flow_medium_objects/api.rs"]
 mod api;
+#[path = "flow_medium_objects/evaluation.rs"]
+mod evaluation;
 #[path = "flow_medium_objects/fixture.rs"]
 mod fixture;
 #[path = "flow_medium_objects/kind_two.rs"]
