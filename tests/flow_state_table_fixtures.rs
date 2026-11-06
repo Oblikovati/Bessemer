@@ -19,6 +19,8 @@ mod state_process;
 mod stored_api;
 #[path = "flow_field_values/stored_fields.rs"]
 mod stored_fields;
+#[path = "flow_state_tables/tagged_api.rs"]
+mod tagged_api;
 use fixture::StateCase;
 use packet::*;
 use std::collections::BTreeSet;

@@ -71,6 +71,9 @@ values while preserving absent arrays and integer quotient projections.
 The [fixed-state view](docs/features/flow-fixed-state/README.md) reads record
 139 versions 0–4 and edits existing member and settings slots while retaining
 absent counts, version-dependent fields and complete carrier history.
+The [tagged-state view](docs/features/flow-tagged-state/README.md) reads record
+129's separate tag block and row bodies and edits existing tags, wide values
+and tails while preserving body presence and complete physical history.
 The [legacy link view](docs/features/flow-link-records/README.md) reads record 402
 and edits existing fields while preserving code bytes, sentinel references and versioned tails.
 The [legacy table view](docs/features/flow-legacy-tables/README.md) reads records
