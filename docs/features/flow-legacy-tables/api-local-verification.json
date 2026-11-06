@@ -21,10 +21,15 @@
   "failures": "All small proper prefixes/extensions; invalid options/count domains; unsupported versions; missing/unused contexts; malformed zlib boundaries/checksum/wrappers; foreign/stale/wrong IDs; invalid/missing fields; compressed growth beyond original payload limit.",
   "concurrency": "Eight workers perform isolated edits and reversals after caller input mutation; all public types asserted Send/Sync.",
   "native_census": {
-    "status": "running; no acceptance credit yet",
+    "status": "passed",
     "command": "cargo test --test flow_legacy_table_fixtures every_native_existing_field --locked -- --ignored --nocapture",
     "log": "target/flow-legacy-tables-native-census.log",
-    "expected_field_requests": 85344
+    "expected_field_requests": 85344,
+    "terminal_exit_code": 0,
+    "field_requests": 85344,
+    "test_seconds": 380.86,
+    "log_sha256": "6e2bbe1db5249d817c9dc74e7c151a5b7ed89e3a02aeb29d029719f5f82fab16",
+    "scope": "All three native-payload views in an owned three-record carrier: original exact no-ops, full independent decoded patch, full physical history and fresh decoded reversals; no application acceptance"
   },
   "source_lf_sha256": {
     "src\\flow\\legacy_tables\\edit\\select.rs": "0b3c1f4867fb6b9e40d80cccc99087a1ec642c105bd8606b61feb92b7eab92a5",
