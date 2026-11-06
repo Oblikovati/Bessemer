@@ -13,14 +13,14 @@ fn link_options(compressed: bool) -> FlowLinkRecordOptions {
         maximum_array_elements: 2_000_000,
     }
 }
-fn links(row: &SelectionCase) -> FlowLinkRecords {
+pub(super) fn links(row: &SelectionCase) -> FlowLinkRecords {
     let carrier = state_carrier::carrier(402, &row.inputs.links_stored);
     let id = carrier.records().nth(1).unwrap().id;
     carrier
         .record_402_links(&id, link_options(row.inputs.compressed_links))
         .unwrap()
 }
-fn states(row: &SelectionCase) -> FlowByteStates {
+pub(super) fn states(row: &SelectionCase) -> FlowByteStates {
     let carrier = state_carrier::carrier(316, &row.inputs.states_stored);
     let id = carrier.records().nth(1).unwrap().id;
     carrier
