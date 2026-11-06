@@ -1,0 +1,18 @@
+{
+  "command": "cargo xtask pr",
+  "terminal_exit_code": 0,
+  "source_commit": "38c3ee18a6936d454a85609572f6dc683e8fe090",
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "native_schema": "Installed SolidWorks sch_13006.s_t",
+  "result_summaries": 385,
+  "passed": 4781,
+  "failed": 0,
+  "ignored": 244,
+  "log": "target/flow-evaluation-combined-full-pr-gate.log",
+  "log_sha256": "9251ae3b14d45d6b788b779bde10a5b9a072840b65a74077e27d457f2469c2c6",
+  "scope": "FiniteOrderedV1 curve evaluator and FEV1 baseline together with complete mixed medium profiles and preceding Flow implementation",
+  "exclusions": [
+    "Later record439 baseline, patch oracle and typed implementation",
+    "Remote CI and native application acceptance"
+  ]
+}
