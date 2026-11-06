@@ -5,6 +5,8 @@ mod fixture;
 mod packet;
 #[path = "flow_field_values/packet_wide.rs"]
 mod packet_wide;
+#[path = "flow_primary_table/patches.rs"]
+mod patches;
 #[path = "flow_primary_table/rebuild.rs"]
 mod rebuild;
 #[path = "flow_primary_table/types.rs"]

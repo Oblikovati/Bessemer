@@ -48,3 +48,15 @@ byte-valued roles, every typed stride and raw numeric pattern coverage.
 
 There is no production typed record-439 API yet. The implementation constraints
 are recorded in `design.md`; the existing raw carrier remains available.
+
+The separate F4EP packet supplies 1,402 expected fixed-shape edits for that API.
+The oracle changes a field in the reference reader's parsed tree, serializes the
+whole changed tree and reparses it before comparing the changed byte interval.
+This keeps the expected output independent of Bessemer's future patching code.
+It covers versions zero through three, both groups, all four row layouts,
+optional-body values, wide blocks, unused factory tags and flag transitions to
+and from the exact-one native projection. Structural counts and version bytes
+are excluded. Python checks field locations against all 5,685 original payloads
+and regenerates F4EP in a temporary directory. Rust verifies each complete
+expected patch and its byte-for-byte reversal. These are oracle checks; they do
+not establish production editor or native application acceptance.
