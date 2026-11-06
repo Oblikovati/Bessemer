@@ -30,13 +30,32 @@ decoded reconstruction, both kinds of compact truncation, outer and inner
 extensions, concatenated streams, header/checksum corruption, raw deflate, gzip,
 invalid counts and carrier guards. Fixture regeneration uses a temporary root.
 
-This baseline precedes the typed read/edit API. That API must bound inflation
-and actual values independently, retain the signed header without dispatch,
-edit existing bytes and header values on isolated copies, and reopen the whole
-stream under the original bounds. No-ops must preserve stored bytes; other
-edits must preserve untouched carrier payloads and exact decoded reversibility.
-Complete history, immutable checkpoints, source isolation, thread safety and
-fresh-process equality remain required before publication.
+`FlowCarrier::record_316_byte_states` returns an immutable `FlowByteStates`
+under explicit `FlowByteStateOptions`. The decoded byte bound must admit the
+eight-byte header/count prefix. The actual-value bound may be zero for an
+empty array. Inflation is bounded before parsing; exact count/EOF agreement and
+the value limit are checked before publication. No per-byte descriptors are
+allocated. The header is retained as a signed word without version selection.
+
+`replace_header` and `replace_byte` edit copies, reopen the complete compressed
+payload under its original bounds and return `FlowSimpleTableEdit` checkpoints
+with physical carrier history. Counts stay fixed. No-ops preserve the original
+compressed bytes, including native and alternative compression representations.
+Other edits preserve untouched carrier payloads and exact decoded reversibility;
+they do not promise to reproduce the original compressor's stored bytes on a
+fresh reversal. Coverage reports exact zlib framing and actual transfers, while
+diagnostics retain the runtime, engineering and application exclusions.
+
+Typed reads cover every raw byte in all 965 owned cases. Edit checks cover every
+header and every byte in cases of at most 257 values, every native position,
+and distinct first/middle/last positions in larger generated cases. This selects
+32,851 byte positions, including all 5,532 native positions. Each has an
+independent literal patch, a compressed no-op check, complete physical history
+and a fresh decoded reversal. Two fresh processes compare the same source-checked
+corpus and selected edits byte for byte. Eight workers compare mixed header/byte
+edits against serial results. Compile-time checks cover both new types and the
+three reused edit, coverage and diagnostic types. Selected edit checks do not
+claim an edit test for every large generated position.
 
 Record 112 combines these bytes with converted record-402 codes under an
 explicit fresh-map assumption. Selection requires a high-bit state and an

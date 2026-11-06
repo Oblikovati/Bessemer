@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added complete record-316 byte-state reads and isolated header/byte edits with bounded inflation, compressed no-op preservation and complete carrier history. (#241)
+
 - Added complete record-12 counted-byte reads and isolated existing-byte edits, preserving raw values, empty results and physical carrier history. (#241)
 
 - Added complete record-301 message-list reads and isolated member/text edits, preserving legacy byte counts, modern UTF-16 suffixes and independent list presence. (#241)

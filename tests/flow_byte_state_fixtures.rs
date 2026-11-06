@@ -1,6 +1,12 @@
-//! Complete owned record-316 whole-zlib bodies before typed byte-state API work.
+//! Complete owned record-316 whole-zlib bodies, typed reads and isolated edits.
+#[path = "flow_byte_states/api.rs"]
+mod api;
 #[path = "flow_field_values/packet.rs"]
 mod packet;
+#[path = "flow_state_tables/carrier.rs"]
+mod state_carrier;
+#[path = "flow_state_tables/process.rs"]
+mod state_process;
 use packet::*;
 use std::collections::{BTreeMap, BTreeSet};
 use std::io::Read;

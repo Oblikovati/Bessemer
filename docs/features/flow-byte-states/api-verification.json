@@ -1,0 +1,95 @@
+{
+  "source_parent": "1905c3dd4b245cbbc43188ad237e6d6150f7d817",
+  "issue": 241,
+  "platform": "Windows x64 MSVC Rust 1.99.0 Python3",
+  "environment": {
+    "CARGO_BUILD_JOBS": "1",
+    "CARGO_TARGET_DIR": "target/sqlite-build"
+  },
+  "commands": [
+    "cargo test --locked --test flow_byte_state_fixtures --test flow_counted_byte_fixtures --test flow_simple_table_fixtures",
+    "cargo clippy --locked --test flow_byte_state_fixtures --test flow_counted_byte_fixtures --test flow_simple_table_fixtures -- -D warnings",
+    "cargo fmt --all -- --check",
+    "python -m unittest discover -s docs/features/flow-byte-states -p test_byte_states.py -v"
+  ],
+  "terminal_exit_codes": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "rust": {
+    "passed": 43,
+    "failed": 0,
+    "ignored": 3
+  },
+  "ignored_scope": [
+    "Two Source-verifying process workers, each invoked twice by its regular parent",
+    "Existing full native simple-table field census requiring explicit complete native arguments"
+  ],
+  "python": {
+    "passed": 8,
+    "failed": 0
+  },
+  "complete_record316_cases": 965,
+  "all_stored_byte_reads": 1042308,
+  "header_edits": 965,
+  "selected_byte_edits": 32851,
+  "selected_native_byte_edits": 5532,
+  "read_policy": "Every stored byte, header, count, interval, complete decoded body and coverage field in all owned cases",
+  "edit_policy": "Every header; every index in cases with at most257 values and every native index; distinct first/middle/last indices in larger generated cases",
+  "oracles": [
+    "Independent literal decoded byte patches",
+    "Exact original compressed no-op preservation across all frozen compression representations",
+    "Complete physical history and unchanged unrelated payloads",
+    "Fresh exact decoded reversals without promising original compressor reproduction",
+    "Typed malformed framing/count and stale/foreign/wrong-record errors",
+    "Caller and external edit isolation"
+  ],
+  "concurrency": {
+    "workers": 8,
+    "operations_per_worker": 32,
+    "mixed_header_and_byte_edits": true,
+    "fresh_source_verifying_processes": 2,
+    "public_send_sync_types": 5,
+    "new_types": 2,
+    "reused_types": 3
+  },
+  "bounds": [
+    "Complete bounded inflation, minimum8 decoded bytes",
+    "Actual raw byte count, including complete zero-count arrays"
+  ],
+  "style": {
+    "files_under_500_lines": true,
+    "functions_at_most_20_body_lines": true,
+    "whitespace_check_exit": 0
+  },
+  "logs_sha256": {
+    "target/flow-byte-states-api-tests.log": "9e4d8617481b1e41297078ec11f92897c0dc2d8c93175e80aa415a057089de26",
+    "target/flow-byte-states-api-clippy.log": "cea17f8a4bd5c7d7318512a3312920365b8cf91708fa778bc16baff12b3a0be0",
+    "target/flow-byte-states-api-format.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/flow-byte-states-api-python.log": "a7699856a382cd76670cfd9c4d035413eab955f2b29c49be0397cfad95008fda"
+  },
+  "source_files_lf_sha256": {
+    "src/flow/legacy_tables/byte_states/edit.rs": "5454ae9542d80dc529a12a9c765f281c4d80f3abf5b05e90c2e7320b11efd035",
+    "src/flow/legacy_tables/byte_states/mod.rs": "938d6f437e700d1814fc44980d239c5425367000afe5c37bfe2789a9496286ce",
+    "src/flow/legacy_tables/byte_states/view.rs": "e4d5739680608a2c7a48dc5c3821d99d6272f1e26bfb2b2251acaf407dd8fe61",
+    "src/flow/legacy_tables/counted_bytes/mod.rs": "41b438e36061db12f0de25d1bf96a5364b0cd23637c1ff8a0f269f152f180054",
+    "src/flow/legacy_tables/wire.rs": "928d7099c6748455f94aa9fe9ab97d2e61279237579f2313ced1fdf07da8c21f",
+    "tests/flow_byte_state_fixtures.rs": "59c732dc2139646d6e5063c3564875eeba44103ea13d37d7a8483a1e9971ea38",
+    "tests/flow_byte_states/api.rs": "bbf1c76ad415f87f5b522201ace973d19035c07fa4facc476c17efe99a5b1d71",
+    "tests/flow_byte_states/contracts.rs": "aa9d577712a2163929f4100193bac2cf1099994a8a77bef307b3aa9e99a3a691",
+    "tests/flow_byte_states/replay.rs": "9dc5c7134feb9ed4511b226ea42fd99c9805aff067f7429b8d408b6817e1949f"
+  },
+  "baseline": "baseline-verification.json",
+  "exclusions": [
+    "Native header dispatch",
+    "Native owner binding",
+    "Runtime object/index mapping and scatter",
+    "Engineering/boolean meanings",
+    "SolidWorks application acceptance",
+    "Every large generated edit position outside the selected policy",
+    "Full current-source PR gate, hosted full matrix and ThreadSanitizer"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose pass remains for review"
+}

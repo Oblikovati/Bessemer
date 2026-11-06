@@ -80,6 +80,9 @@ legacy byte transfers, full UTF-16 units and independent list presence.
 The [counted-byte view](docs/features/flow-counted-bytes/README.md) reads record
 12's count and uninterpreted bytes and edits existing positions with exact
 framing, independent resource bounds and complete carrier history.
+The [byte-state view](docs/features/flow-byte-states/README.md) reads record
+316's whole-zlib body and edits its raw header and existing bytes while retaining
+bounded inflation, exact decoded framing and compressed no-op preservation.
 The [legacy link view](docs/features/flow-link-records/README.md) reads record 402
 and edits existing fields while preserving code bytes, sentinel references and versioned tails.
 The [legacy table view](docs/features/flow-legacy-tables/README.md) reads records

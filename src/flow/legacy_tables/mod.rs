@@ -1,5 +1,6 @@
 //! Exact legacy pointer-index and raw-word tables with explicit independent context.
 mod block_extras;
+mod byte_states;
 mod conditional_items;
 mod context_state;
 mod counted_bytes;
@@ -27,6 +28,7 @@ mod words;
 use super::*;
 use crate::archive_codec::ArchiveCursor;
 pub use block_extras::*;
+pub use byte_states::*;
 pub use conditional_items::*;
 pub use context_state::*;
 pub use counted_bytes::*;
