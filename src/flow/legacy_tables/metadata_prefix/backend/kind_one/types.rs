@@ -93,7 +93,9 @@ pub struct FlowMediumKindOne {
 /// Borrowed curve preserving raw flags and numeric bit patterns.
 #[derive(Clone, Copy, Debug)]
 pub struct FlowMediumCurve<'a> {
-    pub(super) owner: &'a FlowMediumKindOne,
+    pub(super) raw: &'a [u8],
+    pub(super) span: &'a CurveSpan,
+    pub(super) body_start: usize,
     pub(super) ordinal: usize,
 }
 /// Isolated existing-field body edit with typed checkpoints and full carrier history.

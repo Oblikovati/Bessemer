@@ -40,17 +40,16 @@ impl FlowMediumKindOne {
     }
     /// Enumerates all seven curves in wire order; e.g. `let count = body.curves().len()`.
     pub fn curves(&self) -> impl ExactSizeIterator<Item = FlowMediumCurve<'_>> {
-        (0..7).map(|ordinal| FlowMediumCurve {
-            owner: self,
-            ordinal,
+        self.span.curves.iter().enumerate().map(|(ordinal, span)| {
+            FlowMediumCurve::from_span(self.raw(), span, self.span.start, ordinal)
         })
     }
     /// Borrows an existing curve; e.g. `let first = body.curve(0)`.
     pub fn curve(&self, ordinal: usize) -> Option<FlowMediumCurve<'_>> {
-        (ordinal < 7).then_some(FlowMediumCurve {
-            owner: self,
-            ordinal,
-        })
+        self.span
+            .curves
+            .get(ordinal)
+            .map(|span| FlowMediumCurve::from_span(self.raw(), span, self.span.start, ordinal))
     }
     /// Returns all stored state bits, independently of native load-time replacement; e.g. `let state = body.state_byte()`.
     pub fn state_byte(&self) -> u8 {
@@ -88,26 +87,20 @@ impl FlowMediumCurve<'_> {
     }
     /// Returns the full interval relative to the body; e.g. `let span = curve.body_interval()`.
     pub fn body_interval(self) -> (usize, usize) {
-        let span = &self.owner.span.curves[self.ordinal];
-        (
-            span.start - self.owner.span.start,
-            span.end - self.owner.span.start,
-        )
+        let span = self.span;
+        (span.start - self.body_start, span.end - self.body_start)
     }
     /// Returns the declared array count; e.g. `let count = curve.value_count()`.
     pub fn value_count(self) -> usize {
-        self.owner.span.curves[self.ordinal].count
+        self.span.count
     }
     /// Returns the unnormalized scalar pattern; e.g. `let bits = curve.scalar_pattern()`.
     pub fn scalar_pattern(self) -> u64 {
-        wire::wide_at(
-            self.owner.raw(),
-            self.owner.span.curves[self.ordinal].scalar,
-        )
+        wire::wide_at(self.raw, self.span.scalar)
     }
     /// Returns all extra-array flag bits; e.g. `let flag = curve.extra_flag_byte()`.
     pub fn extra_flag_byte(self) -> u8 {
-        self.owner.raw()[self.owner.span.curves[self.ordinal].flag]
+        self.raw[self.span.flag]
     }
     /// Distinguishes an active empty branch from an absent branch; e.g. `let active = curve.extra_arrays_active()`.
     pub fn extra_arrays_active(self) -> bool {

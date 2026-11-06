@@ -23,3 +23,19 @@ impl FlowMediumKindOne {
         decode::read_at(backend, start, options).map_err(|error| table_boundary(error, 424))
     }
 }
+
+impl<'a> FlowMediumCurve<'a> {
+    pub(super) fn from_span(
+        raw: &'a [u8],
+        span: &'a CurveSpan,
+        body_start: usize,
+        ordinal: usize,
+    ) -> Self {
+        Self {
+            raw,
+            span,
+            body_start,
+            ordinal,
+        }
+    }
+}
