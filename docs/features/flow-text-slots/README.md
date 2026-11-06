@@ -47,7 +47,37 @@ record wrappers and native provenance. It regenerates the packet under a tempora
 root. The Rust baseline checks the same raw reconstruction and state projections
 without converting unpaired surrogates into Rust strings.
 
-Source and fixture digests are recorded in `baseline-verification.json`. The
-typed reader, isolated editor and existing-state projection API remain to be
-implemented. Slot purposes, native runtime updates and SolidWorks application
-acceptance remain unverified.
+Source and fixture digests are recorded in `baseline-verification.json`.
+
+`FlowCarrier::record_311_text_slots` opens an immutable `FlowTextSlots` view under
+`FlowTextSlotOptions`. The caller declares `NativeUtf16`; payload-byte and total
+stored-unit bounds include hidden suffixes and terminators. A zero unit bound
+admits fifty stored-empty strings. The signed header remains uninterpreted.
+Checked borrowed slots expose complete raw bytes, stored units, physical intervals
+and the separate native prefix. No Unicode scalar conversion is required.
+
+`FlowTextSlotState::from_units` takes ownership of exactly fifty `Vec<u16>` values
+under an actual-unit bound and publishes immutable state. It exposes no mutable
+unit references. `project` validates an independent result-unit bound before
+constructing output, then retains immutable previous values for empty prefixes
+and copies nonempty source prefixes into owned UTF-16 values. The returned
+`FlowTextSlotProjection` retains the source record, previous state, result state,
+coverage and fifty physical-ordinal history relations. A nonempty prefix remains
+an applied-source relation even when its units equal the previous value.
+
+`replace_header` and `replace_unit` return `FlowSimpleTableEdit<FlowTextSlots>`
+after copying and reopening the complete carrier. Unit edits preserve stored
+counts and revalidate terminal NULs. Interior-NUL changes recompute native
+prefixes and subsequent state projection. No-op edits retain all wire bytes;
+fresh reversals restore the original raw carrier with full physical history.
+
+Tests read every stored unit and verify every frozen prior/result state. They
+exercise every header and every native-sample unit, all units in generated strings
+of at most 64 units, and first/middle/last positions in larger strings. Terminal
+units receive no-op and rejected nonzero-edit checks. Other checks cover literal
+byte patches, exact resource boundaries, malformed framing, foreign and stale
+identities, caller-buffer mutation/drop, public thread traits, eight-worker
+operation agreement and byte-for-byte replay in two fresh processes.
+
+Slot purposes, native runtime updates and SolidWorks application acceptance remain
+unverified. Diagnostics retain the explicit mode assumption and those exclusions.

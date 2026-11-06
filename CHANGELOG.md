@@ -56,6 +56,8 @@
 
 ### Added
 
+- Added complete record-311 UTF-16 slot reads, isolated header/unit edits and lossless existing-state projections with explicit mode, preserved empty-prefix behavior and complete provenance. (#241)
+
 - Added complete record-122/434 owner-state reads and isolated field edits with exact gated update projections, preferred latest-occurrence selection and no parse-error fallback. (#241)
 
 - Added complete record-148 wide-vector reads and isolated raw-pattern edits with bounded length tables, preserved empty-vector ordinals and complete carrier history. (#241)

@@ -1,6 +1,12 @@
 //! Complete record311 slots preserve raw UTF-16, native prefixes and existing text state.
+#[path = "flow_text_slots/api.rs"]
+mod api;
 #[path = "flow_field_values/packet.rs"]
 mod packet;
+#[path = "flow_state_tables/carrier.rs"]
+mod state_carrier;
+#[path = "flow_state_tables/process.rs"]
+mod state_process;
 use packet::*;
 use std::collections::BTreeSet;
 struct TextSlot {
