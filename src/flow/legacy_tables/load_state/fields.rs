@@ -1,9 +1,5 @@
 use super::*;
 
-pub(super) fn unit_at(raw: &[u8], start: usize) -> u16 {
-    u16::from_le_bytes([raw[start], raw[start + 1]])
-}
-
 impl FlowLoadFieldId {
     /// Borrows the original physical occurrence; e.g. `let record = id.record()`.
     pub fn record(&self) -> &FlowRecordId {
@@ -73,7 +69,7 @@ impl<'a> FlowLoadField<'a> {
             FlowLoadEncoding::Scalar(encoding) => {
                 FlowLoadValue::Scalar(wire::scalar_value(encoding, raw))
             }
-            FlowLoadEncoding::Utf16Unit => FlowLoadValue::Utf16Unit(unit_at(raw, 0)),
+            FlowLoadEncoding::Utf16Unit => FlowLoadValue::Utf16Unit(wire::unit_at(raw, 0)),
         })
     }
     /// Resolves a typed native offset only on the nine-word member field; e.g. `let value = field.native_member(offset)`.
