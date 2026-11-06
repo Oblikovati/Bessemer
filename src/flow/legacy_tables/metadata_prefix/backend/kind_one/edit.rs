@@ -47,10 +47,8 @@ impl FlowMediumKindOne {
     }
     fn patch(&self, offset: usize, bytes: &[u8]) -> Result<FlowMediumBodyEdit> {
         let prefix_edit = self.backend.metadata_prefix().patch(offset, bytes)?;
-        let result = prefix_edit
-            .result()
-            .medium_backend_prefix()?
-            .first_kind_one_body(self.options)?;
+        let backend = prefix_edit.result().medium_backend_prefix()?;
+        let result = Self::read_at(&backend, self.span.start, self.options)?;
         self.check_layout(&result)?;
         Ok(FlowMediumBodyEdit {
             source: self.clone(),

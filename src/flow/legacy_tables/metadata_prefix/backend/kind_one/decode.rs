@@ -3,19 +3,26 @@ pub(super) fn read(
     backend: &FlowMediumBackendPrefix,
     options: FlowMediumBodyOptions,
 ) -> Result<FlowMediumKindOne> {
+    let start = backend.metadata_prefix().end + backend.end;
+    read_at(backend, start, options)
+}
+pub(super) fn read_at(
+    backend: &FlowMediumBackendPrefix,
+    start: usize,
+    options: FlowMediumBodyOptions,
+) -> Result<FlowMediumKindOne> {
     required_kind(backend, options)?;
     let prefix = backend.metadata_prefix();
-    let start = prefix.end + backend.end;
     let raw = prefix.payload_bytes();
-    let mut cursor = ArchiveCursor::new(&raw[start..]);
+    let suffix = raw.get(start..).ok_or_else(|| {
+        metadata_invalid(format!(
+            "kind-one start {start}; expected within payload {} bytes",
+            raw.len()
+        ))
+    })?;
+    let mut cursor = ArchiveCursor::new(suffix);
     let span = body(&mut cursor, raw, start, options)?;
-    if span.end - start > options.maximum_body_bytes {
-        return Err(metadata_invalid(format!(
-            "kind-one body {} bytes; expected at most {}",
-            span.end - start,
-            options.maximum_body_bytes
-        )));
-    }
+    check_body_bound(&span, options)?;
     Ok(FlowMediumKindOne {
         backend: backend.clone(),
         options,
@@ -152,4 +159,16 @@ fn header(cursor: &mut ArchiveCursor<'_>, raw: &[u8], maximum_units: usize) -> R
     cursor.take(16)?;
     let mut remaining = maximum_units;
     metadata_decode::text(cursor, raw, &mut remaining)
+}
+
+fn check_body_bound(span: &BodySpan, options: FlowMediumBodyOptions) -> Result<()> {
+    let start = span.start;
+    if span.end - start > options.maximum_body_bytes {
+        return Err(metadata_invalid(format!(
+            "kind-one body {} bytes; expected at most {}",
+            span.end - start,
+            options.maximum_body_bytes
+        )));
+    }
+    Ok(())
 }
