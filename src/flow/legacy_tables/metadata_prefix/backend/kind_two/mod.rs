@@ -17,3 +17,13 @@ impl FlowMediumBackendPrefix {
         decode::read(self, options).map_err(|error| table_boundary(error, 424))
     }
 }
+
+impl FlowMediumKindTwo {
+    pub(super) fn read_at(
+        backend: &FlowMediumBackendPrefix,
+        start: usize,
+        options: FlowMediumKindTwoOptions,
+    ) -> Result<Self> {
+        decode::read_at(backend, start, options).map_err(|error| table_boundary(error, 424))
+    }
+}

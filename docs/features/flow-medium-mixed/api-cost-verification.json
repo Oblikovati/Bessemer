@@ -1,0 +1,46 @@
+{
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "temporary_benchmark_sha256": "29444f185369533225f03a419c90883e051d1ac3e94a0cbca614438e33de13bc",
+  "accepted_views_per_pass": 1163,
+  "passes_per_sample": 10,
+  "samples": 5,
+  "measurements": {
+    "one": {
+      "samples_ns": [
+        46353700,
+        45951000,
+        44703000,
+        46696400,
+        45367300
+      ],
+      "median_ns": 45951000,
+      "observed_peak_working_set_bytes": 10964992,
+      "checksum": "checksum=129689100"
+    },
+    "mixed": {
+      "samples_ns": [
+        52916900,
+        49483600,
+        48777400,
+        57293200,
+        57374900
+      ],
+      "median_ns": 52916900,
+      "observed_peak_working_set_bytes": 10960896,
+      "checksum": "checksum=129689100"
+    }
+  },
+  "mixed_to_kind_one_median_ratio": 1.1515940893560532,
+  "type_sizes_bytes": {
+    "kind_one_body": 352,
+    "kind_two_body": 536,
+    "mixed_body_enum": 536,
+    "mixed_entry": 568
+  },
+  "scope": "Current complete kind-one API compared with the new mixed API on identical independently accepted FCP1 records; carrier construction excluded, full profile parsing/ownership and dropping included. Existing kind-one behavior was pinned at d994c593. No previous release provides a mixed-profile API.",
+  "limitations": [
+    "Shared machine with concurrent validation",
+    "Windows observed process peak working set includes code/input corpus and is not an allocation count",
+    "Single process per API with five samples; narrow common-kind-one workload, not a release-wide performance claim"
+  ]
+}

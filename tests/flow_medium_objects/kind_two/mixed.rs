@@ -1,3 +1,5 @@
+#[path = "mixed/api.rs"]
+mod api;
 use super::*;
 #[path = "mixed/fixture.rs"]
 mod mixed_fixture;

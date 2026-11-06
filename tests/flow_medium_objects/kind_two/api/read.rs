@@ -6,8 +6,11 @@ fn every_frozen_kind_two_body_matches_all_six_typed_models_raw_fields_spans_and_
         check_body(&body, &case);
     }
 }
-fn check_body(body: &FlowMediumKindTwo, case: &KindTwoCase) {
-    check_header(body, case);
+pub(crate) fn check_body(body: &FlowMediumKindTwo, case: &KindTwoCase) {
+    check_body_at(body, case, 35);
+}
+pub(crate) fn check_body_at(body: &FlowMediumKindTwo, case: &KindTwoCase, start: usize) {
+    check_header(body, case, start);
     check_name(body, &case.prefix.text);
     check_curves(body, FlowMediumCurveScope::Body, &case.prefix.curves);
     check_model(body, &case.model);
@@ -121,10 +124,13 @@ fn check_coverage(body: &FlowMediumKindTwo, case: &KindTwoCase) {
     check_diagnostics(body);
 }
 
-fn check_header(body: &FlowMediumKindTwo, case: &KindTwoCase) {
+fn check_header(body: &FlowMediumKindTwo, case: &KindTwoCase, start: usize) {
     assert_eq!(body.body_bytes(), &case.raw[..case.footer.end as usize]);
     assert_eq!(body.opaque_tail(), case.footer.tail);
-    assert_eq!(body.payload_interval(), (35, 35 + case.footer.end as usize));
+    assert_eq!(
+        body.payload_interval(),
+        (start, start + case.footer.end as usize)
+    );
     assert_eq!(body.base_byte(), case.prefix.base);
     assert_eq!(body.base_key_bytes(), case.prefix.key);
     assert_eq!(body.model_kind().as_i32(), case.model.kind);
@@ -134,6 +140,9 @@ fn check_header(body: &FlowMediumKindTwo, case: &KindTwoCase) {
     );
     assert_eq!(body.state_byte(), case.footer.state);
     assert_eq!(body.native_state_after_load(), case.footer.loaded);
+    check_header_context(body);
+}
+fn check_header_context(body: &FlowMediumKindTwo) {
     assert_eq!(
         body.options().maximum_word_patterns,
         options().maximum_word_patterns

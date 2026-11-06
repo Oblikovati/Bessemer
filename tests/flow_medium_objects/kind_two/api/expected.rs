@@ -1,7 +1,7 @@
 use super::FlowMediumKindTwoWideField as WideField;
 use super::*;
 pub(super) type Wide = (FlowMediumKindTwoWideField, usize, Vec<u64>);
-pub(super) fn fields(case: &KindTwoCase) -> Vec<Wide> {
+pub(crate) fn fields(case: &KindTwoCase) -> Vec<Wide> {
     let mut result = Vec::new();
     let mut shared = Vec::new();
     for (ordinal, curve) in case.prefix.curves.iter().enumerate() {

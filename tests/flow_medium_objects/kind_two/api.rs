@@ -5,9 +5,9 @@ mod contracts;
 #[path = "api/edit.rs"]
 mod edit;
 #[path = "api/expected.rs"]
-mod expected;
+pub(crate) mod expected;
 #[path = "api/read.rs"]
-mod read;
+pub(crate) mod read;
 fn options() -> FlowMediumKindTwoOptions {
     FlowMediumKindTwoOptions {
         body: crate::api::options(),

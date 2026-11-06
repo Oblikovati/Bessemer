@@ -27,8 +27,36 @@ count/tag/version framing, populated final collections and explicit fresh-state,
 active-outer and string-mode requirements. The packet is regenerated in a
 temporary directory to verify reproducibility.
 
-This baseline adds no production mixed-record API. The existing complete
-kind-one profile and both individual body APIs remain separately supported.
+The production entry point is `FlowCarrier::record_424_mixed_profile`. Pass
+`FlowMediumMixedOptions` containing the existing fresh-profile options plus
+independent per-body and total raw 32-bit-word limits. All configured bounds
+must be positive. Body bytes, wide patterns and name units retain their existing
+per-body and total limits; empty collections spend zero budget.
+
+`first_objects()` borrows ordered immutable entries with independent table keys
+and a `FlowMediumBody` enum containing the complete kind-one or kind-two view.
+`reference_objects()` retains each declared kind, ordered typed references and
+an optional state byte. Kind two has no stored reference state. Coverage reports
+`ExactFreshMixedRecord`, complete supported framing and zero serialized error,
+alongside the explicit engineering and native exclusions.
+
+Existing key, reference, state and attribute edits reparse the whole record.
+Changing a key cannot leave a dangling reference in its typed domain. The
+profile also composes existing metadata and either body edit, checking the
+current checkpoint and selected body offset first. Completed edits retain the
+unchanged source, complete result and physical carrier history. Tests cover
+all existing profile fields and base/state composition for every nested body,
+with exact no-ops, independently patched carriers and fresh reversals.
+
+The 77 focused Rust checks include all earlier regressions, complete FML1 field
+projections, eleven independent bound axes, compact proper prefixes and malformed
+framing, stale/foreign composition, ten public Send/Sync types and eight-worker
+read/edit transcripts after overwriting input buffers. Two fresh processes match
+an independently expected transcript of typed entry projections and edited
+carriers; the complete numeric field oracle is checked separately. Measurements
+in `api-cost-verification.json` compare the existing kind-one reader with the
+mixed reader on their common accepted corpus, with explicit workload limits.
+
 Installed kind-two acceptance, engineering/model evaluation, native runtime
 behavior and application acceptance remain unverified. The complete profile
 requires an explicit fresh backend and zero final collection counts, matching

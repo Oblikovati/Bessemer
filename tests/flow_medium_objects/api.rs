@@ -64,7 +64,7 @@ fn open(raw: &[u8], options: FlowMediumBodyOptions) -> bessemer::Result<FlowMedi
     backend(raw, 1).first_kind_one_body(options)
 }
 type ExpectedWide = (FlowMediumWideField, usize, Vec<u64>);
-fn fields(case: &BodyCase) -> Vec<ExpectedWide> {
+pub(crate) fn fields(case: &BodyCase) -> Vec<ExpectedWide> {
     let mut result = Vec::new();
     for (ordinal, curve) in case.prefix.curves.iter().enumerate() {
         curve_fields(&mut result, ordinal, curve);

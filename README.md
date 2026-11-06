@@ -1048,7 +1048,8 @@ The [complete kind-one record profile](docs/features/flow-medium-references/READ
 validates both tables, every ordered reference, outer attributes and exact EOF
 under an explicit fresh-backend assumption. Isolated key/reference edits and
 composed metadata/body edits retain full carrier history and revalidate the
-complete supported record. Kind-two and mixed-kind profiles remain separate work.
+complete supported record. The [fresh mixed-kind profile](docs/features/flow-medium-mixed/README.md) also
+validates both body kinds with separate reference maps and composes their edits.
 
 The [medium kind-two body API](docs/features/flow-medium-kind-two/README.md)
 reads and edits all six documented model layouts, including independent table

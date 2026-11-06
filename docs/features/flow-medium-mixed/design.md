@@ -10,8 +10,8 @@ and conditional state-byte presence.
 Reuse the existing metadata reader, both complete body readers, GUID parser,
 carrier editing and physical history paths. The private profile-wire module now shares table framing, GUID decoding,
 reference membership and budget spending with the existing kind-one scanner.
-Preserve that adapter and reuse these checks when introducing the mixed
-adapter against FML1. Structural
+Preserve that adapter and reuse these checks in the mixed
+reader verified against FML1. Structural
 changes require the owned earlier packets to pass unchanged before mixed-kind
 behavior is added.
 
@@ -35,3 +35,10 @@ reference. Body and metadata composition must check current checkpoint identity
 and the selected body offset. Tests must include no-ops, independently expected
 patches, history, fresh reversals, source isolation and concurrent deterministic
 results across the complete packet before publishing the new API.
+
+The mixed reader and existing-field editor now implement this supported profile.
+`FlowMediumKind` is normalized once at each entry boundary. Both typed key maps
+are operation-local ordered sets; immutable entry slices retain every physical
+duplicate and ordered reference. Existing kind-one public options and its exact
+check mode remain unchanged. Complete engineering and installed kind-two
+acceptance still require independent evidence.

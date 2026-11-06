@@ -1,0 +1,18 @@
+{
+  "command": "cargo xtask pr",
+  "terminal_exit_code": 0,
+  "source_commit": "01aebaeab417f4d08fba698cfda1f9976131d7f8",
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "result_summaries": 385,
+  "passed": 4758,
+  "failed": 0,
+  "ignored": 244,
+  "log": "target/flow-kind-two-combined-full-pr-gate.log",
+  "log_sha256": "958e89adf8a73d64582094460eb87b69eb659cffc0a5e4494c18af82aa0c8560",
+  "scope": "Complete kind-two six-model API, shared medium body/curve refactors, all earlier kind-one body/profile and metadata APIs and earlier features",
+  "exclusions": [
+    "Later FML1 mixed-profile baseline and shared wire/outer refactors",
+    "Later selected-offset body-gate refactor and mixed-profile API",
+    "Remote CI and native application acceptance"
+  ]
+}
