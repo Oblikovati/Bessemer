@@ -8,6 +8,8 @@ CAD kernels use it to exchange data with SolidWorks files. Martensite is its fir
 7/8 and replaces physical payloads on isolated copies. It retains duplicate,
 reserved and unknown records. See the [Flow carrier evidence](docs/features/flow-carriers/README.md)
 for exact framing checks and the remaining index, payload and application work.
+The [solver selector](docs/features/flow-solver-selectors/README.md) selects the
+latest ordinary solver occurrence and rejects all three reserved control IDs.
 The [GUID header view](docs/features/flow-headers/README.md) reads and edits the
 selected record-123/435 GUID prefixes while preserving control words and extensions.
 The [record-433 arrays](docs/features/flow-arrays/README.md) decode bounded zlib

@@ -56,6 +56,8 @@
 
 ### Added
 
+- Added ordinary solver record selection with last-occurrence identities and explicit rejection of all three reserved control identifiers. (#241)
+
 - Added explicit record-121 viewer-prefix reads and isolated known-field edits with exact compressed framing, preserved opaque suffixes and visible incomplete full-body validation. (#241)
 
 - Added complete record-311 UTF-16 slot reads, isolated header/unit edits and lossless existing-state projections with explicit mode, preserved empty-prefix behavior and complete provenance. (#241)

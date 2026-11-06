@@ -1,0 +1,57 @@
+{
+  "issue": 241,
+  "scope": "Targeted Flow follow-up audit; not a repository-wide or whole-schema parity claim",
+  "source_root": "../inventor-interface/solidworks",
+  "requirements": [
+    {
+      "source": "flowsolverselectors.py",
+      "source_lf_sha256": "3ad8185e72097f10219129b17c9e7cc49b68b6889a9efc43d454869d831ef65c",
+      "status": "Typed unsigned selector API implemented; focused Rust, corpus Python and original reference tests accepted; full gate pending"
+    },
+    {
+      "source": "flowcontrolrecords.py",
+      "source_lf_sha256": "bb3d4c7326cb67e0e9fe6b22bfe5c938b805b125687c5a440970da801797337d",
+      "status": "No typed saved-span or terminal-index payload API found"
+    },
+    {
+      "source": "flowresultdefinitions.py",
+      "source_lf_sha256": "e8d6993720cfac848300347a9f2aa4324c84b9819c0d95fbf913a253d7e5c5ac",
+      "status": "No typed record500 definition API found"
+    },
+    {
+      "source": "flowresultvalues.py",
+      "source_lf_sha256": "ce4b40d917a7a809fd450dac4e81ab6e2994d6b12a1626168474715c7ea53bb2",
+      "status": "No typed record501 paired fresh-definition API found"
+    },
+    {
+      "source": "flowcheckpointcomponents.py",
+      "source_lf_sha256": "98430fb615a2281af300ff97d8d5564df93e38a248d9164ff8a089d3788516d8",
+      "status": "No typed logical checkpoint component API found"
+    },
+    {
+      "source": "flowrecord121.py",
+      "source_lf_sha256": "4820c39058e7aaff2c55341daaafcd0bb95145726130c3d2bab6a18326e87dbc",
+      "status": "Explicit viewer prefix implemented; full decoded body remains incomplete and graph components have a distinct logical context"
+    }
+  ],
+  "search": {
+    "roots": [
+      "src/flow",
+      "tests"
+    ],
+    "patterns": [
+      "record_500",
+      "record_501",
+      "read_saved_spans",
+      "solver_latest",
+      "graph1_object"
+    ],
+    "limitation": "Identifier searches identify follow-up work; they do not establish absence of equivalent unnamed implementations"
+  },
+  "next": "Finish selector acceptance, then freeze complete record500 IMS-definition framing before implementing paired values",
+  "exclusions": [
+    "Other Flow modules need a requirement-by-requirement audit",
+    "Other SolidWorks schema families need a fresh source audit",
+    "Engineering interpretation and native runtime/application acceptance are separate gates"
+  ]
+}

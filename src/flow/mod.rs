@@ -19,6 +19,7 @@ mod root_indices;
 mod settings;
 mod settings_body;
 mod settings_fields;
+mod solver_selectors;
 mod trees;
 mod types;
 use crate::{BessemerError, FailureClass, Result};
