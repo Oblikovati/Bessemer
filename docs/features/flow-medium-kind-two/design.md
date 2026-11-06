@@ -3,7 +3,8 @@
 The independent FMO2 baseline covers all six documented model layouts. The
 production shared prefix reader now handles the common name, seven curves,
 shared arrays and bounded wide-pattern spans without changing kind-one behavior.
-The typed kind-two body and mixed-kind profile APIs remain unfinished.
+The typed kind-two body API now uses this reader. The complete mixed-kind
+profile API remains unfinished.
 
 The backend-prefix reader in `flowmediumbackend.py` consumes the first-table
 kind-one key, but stops immediately after a kind-two tag. The complete grammar
@@ -25,10 +26,11 @@ Existing-field edits must preserve every nested curve/model boundary, array
 cardinality, state-field presence and the following opaque bytes, then reopen
 the full carrier. Model tags and count/version framing remain structural.
 
-The existing public curve view currently borrows a kind-one owner. Reusing it
-for common and model curves needs a measured internal adapter or another shared
-view implementation; it must retain immutable ownership, existing semantics and
-Send/Sync guarantees. No new public view stub is shipped ahead of its caller.
+The shared public curve view now borrows immutable raw bytes and a curve span.
+Its stack size changed from 16 to 40 bytes; construction and copying allocate
+no heap storage and acquire no locks. Existing kind-one fixtures and public
+semantics remain unchanged. The recorded microbenchmark measures view copying
+and scalar reads only; it does not establish overall parser performance.
 
 Private body parsing for later mixed-kind profiles must validate the selected
 entry's kind rather than assuming every entry has the backend's first kind.

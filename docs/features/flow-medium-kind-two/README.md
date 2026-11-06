@@ -44,9 +44,24 @@ prefixes, all nonzero version bytes at reached body/model/curve positions,
 unsupported tags, negative/impossible counts, invalid string modes and missing
 terminators. Existing kind-one and complete-profile regression suites also run.
 
-This is a fixture baseline for the typed kind-two implementation. It adds no
-production kind-two body or mixed-kind record API. The reference reader explicitly
-reports `installed_fixture_validated = false`: these generated cases do not
-establish native installed-file acceptance. Engineering meanings, numeric
-model evaluation, native runtime state and application acceptance remain outside
-this serialized-framing evidence and required scope toward schema parity.
+The typed API reads the complete first reached kind-two body with
+`FlowMediumBackendPrefix::first_kind_two_body`. Its options bound body bytes,
+wide words, name units and raw 32-bit words separately. Model tags are parsed
+once into `FlowMediumModelKind`; borrowed curve and array views preserve raw
+patterns. Coverage reports complete body framing while retaining the remaining
+record as an exact opaque tail.
+
+Existing-field edits reopen the complete carrier and preserve model boundaries,
+array cardinalities and following bytes. Tests check exact no-ops, independent
+expected patches, physical history and fresh reversals. The eight public types
+are Send and Sync; eight workers check the entire generated corpus. Two fresh
+processes reproduce the complete independent FMO2 packet byte for byte.
+
+The first kind-two table key is distinct from the body's base key. The API
+checks and skips its sixteen bytes before reading the body. Model tags, counts
+and version framing cannot be changed through these fixed-shape edits.
+
+Generated cases do not establish installed native kind-two acceptance; coverage
+keeps `installed_fixture_validated = false`. Complete mixed-kind records,
+engineering/model evaluation, native runtime and application acceptance remain
+required work toward schema parity.

@@ -1049,3 +1049,8 @@ validates both tables, every ordered reference, outer attributes and exact EOF
 under an explicit fresh-backend assumption. Isolated key/reference edits and
 composed metadata/body edits retain full carrier history and revalidate the
 complete supported record. Kind-two and mixed-kind profiles remain separate work.
+
+The [medium kind-two body API](docs/features/flow-medium-kind-two/README.md)
+reads and edits all six documented model layouts, including independent table
+counts and raw 32-bit words. It preserves the following record bytes and reports
+body framing separately from complete-record and installed native acceptance.

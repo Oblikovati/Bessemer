@@ -32,17 +32,10 @@ impl FlowMediumKindOne {
     }
     fn curve_array(&self, ordinal: usize, role: FlowMediumCurveArray) -> Result<(usize, usize)> {
         let curve = self.required_curve(ordinal)?;
-        let index = match role {
-            FlowMediumCurveArray::First => 0,
-            FlowMediumCurveArray::Second => 1,
-            FlowMediumCurveArray::ExtraFirst => 2,
-            FlowMediumCurveArray::ExtraSecond => 3,
-        };
-        if index >= 2 && self.raw()[curve.flag] == 0 {
-            return Err(metadata_invalid(format!(
+        medium_body::curve_array(self.raw(), curve, role).ok_or_else(|| {
+            metadata_invalid(format!(
                 "curve {ordinal} array {role:?}; expected active extra-array flag"
-            )));
-        }
-        Ok(curve.arrays[index])
+            ))
+        })
     }
 }

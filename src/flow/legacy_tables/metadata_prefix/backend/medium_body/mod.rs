@@ -10,6 +10,7 @@ pub(super) struct CurveSpan {
     pub arrays: [(usize, usize); 4],
 }
 
+#[derive(Clone, Debug, PartialEq, Eq)]
 pub(super) struct PrefixSpan {
     pub name: TextSpan,
     pub curves: Arc<[CurveSpan]>,
@@ -131,4 +132,21 @@ pub(super) fn byte_position(cursor: &mut ArchiveCursor<'_>, length: usize) -> Re
     let start = length - cursor.remaining();
     cursor.u8()?;
     Ok(start)
+}
+
+pub(super) fn curve_array(
+    raw: &[u8],
+    curve: &CurveSpan,
+    role: FlowMediumCurveArray,
+) -> Option<(usize, usize)> {
+    let index = match role {
+        FlowMediumCurveArray::First => 0,
+        FlowMediumCurveArray::Second => 1,
+        FlowMediumCurveArray::ExtraFirst => 2,
+        FlowMediumCurveArray::ExtraSecond => 3,
+    };
+    if index >= 2 && raw[curve.flag] == 0 {
+        return None;
+    }
+    Some(curve.arrays[index])
 }

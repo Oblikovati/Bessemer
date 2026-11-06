@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added typed read/edit views for all six medium kind-two body models with bounded raw patterns, exact carrier history and explicit body-only coverage. (#241)
+
 - Added complete fresh-backend Flow kind-one record reads and isolated reference, attribute, metadata and body edits with exact EOF and typed key validation. (#241)
 
 - Added complete Flow medium kind-one body reads and isolated fixed-field edits with raw numeric patterns, lossless names and explicit body-versus-record coverage. (#241)

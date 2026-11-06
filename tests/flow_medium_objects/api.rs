@@ -69,7 +69,7 @@ fn fields(case: &BodyCase) -> Vec<ExpectedWide> {
     for (ordinal, curve) in case.prefix.curves.iter().enumerate() {
         curve_fields(&mut result, ordinal, curve);
     }
-    let offset = shared_fields(&mut result, case);
+    let offset = shared_fields(&mut result, &case.prefix);
     push_wide(
         &mut result,
         FlowMediumWideField::FinalScalars,
@@ -86,7 +86,7 @@ fn push_wide(
 ) {
     result.push((field, offset, words.to_vec()));
 }
-fn curve_fields(result: &mut Vec<ExpectedWide>, ordinal: usize, curve: &BodyCurve) {
+pub(super) fn curve_fields(result: &mut Vec<ExpectedWide>, ordinal: usize, curve: &BodyCurve) {
     let field = FlowMediumWideField::CurveScalar { curve: ordinal };
     push_wide(result, field, curve.start as usize + 1, &[curve.scalar]);
     let mut offset = curve.start as usize + 13;
@@ -114,15 +114,9 @@ fn curve_arrays(curve: &BodyCurve) -> [(FlowMediumCurveArray, &[u64]); 4] {
     ]
 }
 
-fn shared_fields(result: &mut Vec<ExpectedWide>, case: &BodyCase) -> usize {
-    let mut offset = case.prefix.curves.last().unwrap().end as usize + 4;
-    for (array, words) in case
-        .prefix
-        .first
-        .iter()
-        .chain(&case.prefix.second)
-        .enumerate()
-    {
+pub(super) fn shared_fields(result: &mut Vec<ExpectedWide>, prefix: &BodyPrefix) -> usize {
+    let mut offset = prefix.curves.last().unwrap().end as usize + 4;
+    for (array, words) in prefix.first.iter().chain(&prefix.second).enumerate() {
         if array == 2 {
             offset += 4;
         }
