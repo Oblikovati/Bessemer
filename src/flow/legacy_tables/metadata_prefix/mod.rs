@@ -1,10 +1,12 @@
 //! Bounded record-424 metadata prefix, retaining every backend byte as opaque.
+mod backend;
 mod decode;
 mod edit;
 mod items;
 mod types;
 mod view;
 use super::*;
+pub use backend::*;
 use std::sync::Arc;
 pub use types::*;
 

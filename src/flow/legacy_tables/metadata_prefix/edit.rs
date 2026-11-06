@@ -57,7 +57,7 @@ impl FlowMetadataPrefix {
             .get(ordinal)
             .ok_or_else(|| table_index_error(424, "object", ordinal, self.objects.len()))
     }
-    fn patch(&self, offset: usize, bytes: &[u8]) -> Result<FlowMetadataPrefixEdit> {
+    pub(super) fn patch(&self, offset: usize, bytes: &[u8]) -> Result<FlowMetadataPrefixEdit> {
         let mut raw = self.raw.to_vec();
         raw[offset..offset + bytes.len()].copy_from_slice(bytes);
         let carrier_edit = self.source.replace_payload(&self.record, &raw)?;

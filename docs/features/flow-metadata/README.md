@@ -87,7 +87,7 @@ record framing; following bytes belong to the outer record and remain opaque.
 Python checks every proper prefix of each known span, every unsupported version
 byte at all three version positions and negative counts at both table positions.
 
-This is fixture evidence for the next backend implementation. The documented
+This fixture evidence is independent of the backend-prefix implementation. The documented
 kind-one and kind-two bodies, typed references, outer collections and finite
 curve evaluation still require separate implementation and verification.
 
@@ -126,5 +126,45 @@ projection and opaque byte.
 Coverage always reports `full_payload_schema = false`, even with an empty tail.
 The explicit stop identifies either the inactive signed-version branch or the
 backend virtual-call boundary. Backend framing and medium bodies have separate
-reference schemas; they are not decoded by this prefix API. Native runtime
+reference schemas. The metadata-prefix API does not decode them; backend
+framing can be requested explicitly as described below. Native runtime
 state and application acceptance remain unverified.
+
+## Medium-backend prefix API
+
+`FlowMetadataPrefix::medium_backend_prefix` requires an active outer version.
+It validates the version-zero backend and reached table headers, retaining signed
+counts and kind tags. Populated counts remain declarations rather than bounds
+on decoded objects. A first-table kind-one key retains its sixteen raw bytes.
+The returned immutable view owns its metadata/carrier checkpoint and exposes
+relative backend intervals, exact opaque bytes and an explicit stop reason.
+
+Both empty tables complete backend framing, while full-record coverage remains
+false. A populated first or second table stops at its first object-body boundary.
+The inherited diagnostics retain backend, runtime and application exclusions.
+No object length is inferred from a kind tag or the remaining payload.
+
+Editors replace existing counts, first-kind tags and conditional keys. Counts
+must preserve the empty/populated branch; kind edits must preserve conditional
+key presence. Every edit reparses the outer metadata and backend framing,
+checks identical boundaries and full patched bytes, and returns typed before/after
+checkpoints with the complete physical carrier history. Exact no-ops retain
+identity and fresh reversals reproduce the original carrier.
+
+The typed reader matches all 1,039 FMB1 views. Every existing header/key field
+receives no-op, independent patch, history and reverse checks. The complete native
+outer metadata composes with the backend reader and the same edit checks.
+Tests reject every proper known-prefix truncation, all nonzero version bytes at
+reached headers, negative counts, inactive outer versions, missing fields and
+layout-changing edits. Five public types are asserted Send/Sync; eight workers
+match reads and complete edited carrier bytes after caller input mutation.
+Two fresh processes reproduce the entire independent backend packet exactly.
+
+The next complete framing target is the documented fresh-backend kind-one/two
+profile. The current native record passes both reference profile readers: its
+metadata ends at byte 112, backend ends at 13,159, and the full record ends at
+13,191. It has one first-table object, one second-table object and one outer
+reference; both final collection counts are zero. Those reference-reader results
+establish the next fixture target, not Bessemer implementation or native
+application acceptance. Engineering meanings and native runtime state remain
+outside their complete-framing claim.

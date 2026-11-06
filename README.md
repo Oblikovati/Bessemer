@@ -1033,3 +1033,8 @@ The [Flow metadata API](docs/features/flow-metadata/README.md) reads and edits
 complete raw record-410 state rows and applies them to explicit immutable maps,
 retaining duplicate assignments and their preceding values. Record 424 supports bounded typed prefix reads and fixed-field edits, with
 lossless UTF-16, explicit incomplete coverage and an opaque backend tail.
+
+Record 424's metadata view also reads the documented medium-backend boundary,
+retaining reached counts, kind tags and conditional keys. Existing-field edits
+preserve framing and all opaque body bytes; complete medium objects remain
+outside this prefix API.

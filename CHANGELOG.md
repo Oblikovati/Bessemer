@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added exact Flow medium-backend prefix reads and isolated header/key edits with explicit populated-object stops and preserved opaque tails. (#241)
+
 - Added bounded Flow metadata-prefix reads and isolated fixed-field edits with lossless UTF-16 projections and exact opaque-backend preservation. (#241)
 
 - Added complete raw Flow ID/state reads, isolated fixed-field edits and ordered map projections with explicit input snapshots and assignment history. (#241)

@@ -115,3 +115,6 @@ fn native_backend_stops_at_the_first_kind_one_body_without_claiming_record_accep
     assert!(!native.runtime);
     check_case(&native);
 }
+
+#[path = "backend/api.rs"]
+mod api;

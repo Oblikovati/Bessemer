@@ -1,0 +1,47 @@
+{
+  "feature_issue": 241,
+  "fixture_base": "74b72e38",
+  "metadata_api_base": "2d5b88c2",
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "rust_command": "cargo test --test flow_metadata_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 29,
+  "rust_failed": 0,
+  "rust_ignored": 0,
+  "clippy_exit_code": 0,
+  "python_passed": 15,
+  "python_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "views": 1039,
+  "coverage": "All reached version-zero headers, signed declared counts and kind tags, conditional key, exact stop/relative intervals/opaque tails; explicit partial record scope.",
+  "edits": "Every existing exposed header/key field in every view, plus complete native outer-prefix composition: no-op identity, independent full byte patches, all physical history and fresh whole-carrier reversals. Readonly version-zero bytes are verified and all other versions rejected.",
+  "boundaries": "Every proper known-prefix truncation and every unsupported version at every reached header; negative counts, inactive outer versions, missing/unreached fields, empty/populated and conditional-key layout changes.",
+  "concurrency": "All five public backend types asserted Send/Sync; eight workers match actual reads and edited carriers for every view after input mutation.",
+  "exclusions": [
+    "Populated object bodies and following outer collections",
+    "Native runtime and application acceptance",
+    "Full record-424 schema"
+  ],
+  "full_gate": "Live frozen 3b377e0c gate excludes this API and the preceding record410/424 APIs; no full-gate acceptance claimed here.",
+  "humanizer": "Unavailable in installed skill catalog; prose pass left to maintainer review.",
+  "reference_sha256": "31ad8ac19d69d297233fc8356342573020038179ed9ad2c1a2f76205d3f37adc",
+  "source_lf_sha256": {
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\decode.rs": "cc97025e7145bf9dba83faba10cc4bf617708348dddd668ce9506b6fd74a1efa",
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\edit.rs": "127bbf81c6174b8e44e7390ba35f36cd44481234bf68ac7a648f47e8d026e4ab",
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\mod.rs": "5de364d84e95621ec6476ebf4add4664fb6599f10f8e4cb479e1cdaaeef17180",
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\types.rs": "3497fef24373a842c27a9ff532a602a92e19fca6bcf7632e1caed2e34c817b64",
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\view.rs": "295986f94824cb1d41ca0d14132284971d9848140df6f87e1f6479ba4822fe68",
+    "src\\flow\\legacy_tables\\metadata_prefix\\mod.rs": "470b5bafc5e65716d5aa13d49f9fcbeb077d14ab20869ec5d0f2e9999bcb7628",
+    "src\\flow\\legacy_tables\\metadata_prefix\\edit.rs": "73cec051315637cad06122443657a12d072267d23b85b9e0968fdd7185e784e7",
+    "tests\\flow_metadata\\backend.rs": "2d37c92514bbc4eee950cb0da5cf22d7dc2e29a0678851f1468b6635be53e6c5",
+    "tests\\flow_metadata\\backend\\api.rs": "845ef7fd1b1a8fc7cb1e8a052763b333fa1b38df12664981437faf00aa177f2e",
+    "tests\\flow_metadata\\backend\\contracts.rs": "9ebb570b9dadc11c363617e32d83e423dae59971ef1db8c19b43a483b7712f03",
+    "tests\\flow_metadata\\backend\\edit.rs": "17203300b21c40fd5dd489a15e01c0e13db4653ae525a40d5fff37fb932bc022"
+  },
+  "log_sha256": {
+    "target\\flow-medium-backend-api-tests.log": "86141f5681e57eb4c2c8e1bf40d628d9d4a5a375eacfb92fc9a0b6bf9837e25c",
+    "target\\flow-medium-backend-api-clippy.log": "e8db17a0e4df2bbd5e32fdc986968243abc5f8893b4a7b613551b6581ed30e82",
+    "target\\flow-medium-backend-api-python-tests.log": "f84609c62474ac886c061a177210342c748e0eb72d8bd186af744185e11e9bed"
+  }
+}
