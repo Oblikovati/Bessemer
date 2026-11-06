@@ -1,0 +1,105 @@
+{
+  "source_parent": "065e15fbe91c4ea9ce2542f5dce7fb28324e3082",
+  "issue": 241,
+  "platform": "Windows x64 MSVC Rust1.99.0 Python3",
+  "commands": [
+    "cargo test --locked --test flow_state_table_fixtures --test flow_fixed_fixtures --test flow_settings --test flow_load_state_fixtures --test flow_conditional_item_fixtures",
+    "cargo test --locked --test flow_state_table_fixtures --test flow_fixed_fixtures --test flow_settings",
+    "cargo clippy --tests --locked -- -D warnings",
+    "cargo fmt --all -- --check",
+    "python -m unittest discover -s docs/features/flow-state-tables -p test_state_tables.py -v"
+  ],
+  "terminal_exit_codes": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "broad_regressions": {
+    "passed": 81,
+    "failed": 0,
+    "ignored": 6
+  },
+  "final_regressions": {
+    "passed": 52,
+    "failed": 0,
+    "ignored": 4
+  },
+  "ignored_scope": "Standalone process workers, each invoked twice by its regular parent test",
+  "python": {
+    "passed": 9,
+    "failed": 0
+  },
+  "complete_source_cases": 562,
+  "complete_source_rows": 589,
+  "leading_wide_member_edits": 1178,
+  "settings_wide_edits": 141440,
+  "settings_word_edits": 44200,
+  "final_member_edits": 295,
+  "total_existing_value_edits": 187113,
+  "edit_oracles": [
+    "No-op exact original carrier and record identity, including NaN payloads",
+    "Full payload patches at every Source-frozen field/element offset",
+    "Independent reconstruction of complete duplicate-occurrence carrier",
+    "Full copied/derived physical history and fresh raw reversal",
+    "Original raw payload and carrier remain equal to the frozen input after all edits in each case"
+  ],
+  "independent_oracles": [
+    "Four-byte version0 absent count versus eight-byte stored-zero count in versions1..4, all with zero row budgets",
+    "Twenty-four-byte version1 row with signed-zero and signaling-NaN patterns and no serialized settings/final",
+    "Exact16/2976/2980-byte Source-independent row-width expectations",
+    "Maximum signed counts rejected by available bytes with unbounded row limits",
+    "Wrong fixed-slot kinds return typed record139 errors without importing global settings meanings"
+  ],
+  "thread_safety": {
+    "public_send_sync_types": 11,
+    "workers": 8,
+    "edits_per_worker": 32,
+    "oracle": "Complete carrier bytes versus serial execution across all edit methods and both settings kinds",
+    "fresh_processes": 2,
+    "process_scope": "All562 source-checked states, every leading/final member and first/middle/last settings slots",
+    "selected_process_edits": 4125,
+    "thread_sanitizer": "Pending future required CI for this exact implementation"
+  },
+  "native": {
+    "payload_bytes": 2988,
+    "version": 4,
+    "rows": 1,
+    "leading_patterns": "0x7FEFFFFFFFFFFFFF",
+    "final_member": 0,
+    "independent_manifest": "native-manifest-verification.json",
+    "native_settings_application_reproduced": false,
+    "global_settings_slot_meanings_inferred": false
+  },
+  "source_sha256": {
+    "src/flow/legacy_tables/fixed_state/decode.rs": "f338b2b410daa21236bb4b1e41c7df2dcd0420f08463bcbfcfaa7d73f4732a71",
+    "src/flow/legacy_tables/fixed_state/edit.rs": "f8a7ab2d335bab3864ffabf92f0e104f598bf9f27d88504f6dc96964a059e19a",
+    "src/flow/legacy_tables/fixed_state/layout.rs": "4e622678eeb54fbd5169e70395db5a16203bc66f07de52268da412586fde104e",
+    "src/flow/legacy_tables/fixed_state/mod.rs": "1bed7aa8411e38926ced6a398e6dcf46ce8d8dee005e274e64b45377855d3e4a",
+    "src/flow/legacy_tables/fixed_state/types.rs": "d7becfc620cf22142889324968506f61c1e708ce0ec4124e8ab1ab1e5dc417d7",
+    "src/flow/legacy_tables/fixed_state/view.rs": "a24e65d9dd15b241473926d81d2d65af0e2856435b1abb2f2ee2d2d03d2c80d9",
+    "src/flow/legacy_tables/mod.rs": "ac50c0b011baf4987de1d8fd70cbb12f81aaa032a9e20f4b9b73b066ada101cc",
+    "tests/flow_state_table_fixtures.rs": "e6aeb18639d2dda065f6bbbf235949c866d19cde90cd7af5cb915e7476aa842b",
+    "tests/flow_state_tables/fixed_api.rs": "8b185974b8d65a30e77dad9729b0b350f8f51f5fd9f1a54356952d1ec38d1bb6",
+    "tests/flow_state_tables/fixed_contracts.rs": "847a7bd8803e850afc3c43d14ab48ecc8705e3170c837a1a0f2829cca9a14736",
+    "tests/flow_state_tables/fixed_edit.rs": "8c945e740a2168dd85a5fb3540cf05c9b8924afc3911addbe678d93e2c732c4d",
+    "tests/flow_state_tables/fixed_replay.rs": "c0a149638b63f036874166a28f561ecceac323e4229847a9121888cc8a54bb35"
+  },
+  "log_sha256": {
+    "target/flow-fixed-state-api-tests.log": "8f2abc3dcb536102fd30e42000cbdf98950bd5b4dc5ed441d43f1d6a32171f3e",
+    "target/flow-fixed-state-api-clippy.log": "18422933aadcbe1c98ccfad744d3cc517c50b1c62398b88d19afde780c97d64f",
+    "target/flow-fixed-state-final-tests.log": "318cd9d7fbc33c6a98f03f2f2e069a3c49edc10ef39f3b800694408ff681c967",
+    "target/flow-fixed-state-final-clippy.log": "8d60557a60b79785f20875bce8805ee6f4bf65328369234bca6febe0abb07ee1",
+    "target/flow-fixed-state-python.log": "7c57c17f295b3df6a4cfb7620c3ff3f168ff8f90f15209b630d37d86076f3a6a"
+  },
+  "reference_sha256": "2b766b9a6177dfc7257f72348427171efa3499f77f39795e74b2d6c7e6caa0e6",
+  "function_file_caps": "Passed: functions at most20 nonblank/noncomment body lines; source/test files below500 lines",
+  "exclusions": [
+    "Native settings application, runtime destination capacity and engineering interpretation",
+    "SolidWorks application acceptance",
+    "Full gate for this API: prior completed gate is frozen at8d6ecd15 and excludes it",
+    "Remote CI: current PR245 excludes this API"
+  ],
+  "humanizer": "Maintainer prose review pending; humanizer skill unavailable"
+}

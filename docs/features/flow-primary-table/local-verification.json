@@ -1,0 +1,51 @@
+{
+  "feature_issue": 241,
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "python_version": "3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)]",
+  "rust_passed": 89,
+  "rust_failed": 0,
+  "rust_ignored": 0,
+  "final_primary_recheck_passed": 4,
+  "python_passed": 8,
+  "clippy_command": "cargo clippy --tests --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "source_lf_sha256": {
+    "tests/flow_primary_table_fixtures.rs": "4a757141f85a3ad5125ca45faf21f8bc6a3776ab3d53c22a771ca1187288984e",
+    "tests/flow_primary_table/fixture.rs": "58c32ba28d2b2003bf1603fba005dd1a6b8552d53e1f1eeca79324571cf4ddfa",
+    "tests/flow_primary_table/rebuild.rs": "a58a72ec0d4c422b6725d9ab93e810c4f447d5dac62c0c8d4e78fe7be1d40ecb",
+    "tests/flow_primary_table/types.rs": "40addfd1e7117198509c1ace55888a5f255cef16e90ab4e03e9c1a1459566239",
+    "tests/flow_field_values/packet_wide.rs": "6cf72f68f6aaba1d72a5d9d846b3ee5d4c6cf4208ed84f09ed2472960d006858",
+    "tests/flow_medium_objects/fixture.rs": "8d3f7ffa9228cf7b29004293fff881cb6614da000aeb7ab921afda68cf1f15fe",
+    "tests/flow_medium_object_fixtures.rs": "b37dc704f5076b367c12231c03dd3522bd6024a807211be861ef3cfc941395d7",
+    "docs/features/flow-primary-table/bounds.py": "282d9d2d6f9b8fa6ae2210da57c1585fdddf0d45a8ce3302c4880b632f89b389",
+    "docs/features/flow-primary-table/cases.py": "c6381f9403cc32dbddfc88c646970cf8feb423c2690e460d91e3ef6637c547dc",
+    "docs/features/flow-primary-table/freeze_primary.py": "5b947f59ac7ff99da37e74cef62411ddbdc77cddbb7afc7a7444a02864e5348c",
+    "docs/features/flow-primary-table/packet.py": "c70603aed9355e0e463bdd6f58a723ee2e83c00b2772d0dc4a1ee9a665c7ca65",
+    "docs/features/flow-primary-table/test_primary.py": "44d5930e55e2f208e73611ad542e01d3e071f6088931e054b12ba64d6cf972ea"
+  },
+  "log_sha256": {
+    "flow-primary-table-rust-tests.log": "e2b119cba39fd024a2473f39f7f1705380211169d9fd5bb1c1fd7324dd138b24",
+    "flow-primary-table-final-tests.log": "97e993427d6ad75d276112fa339c388a7a7e1ec2f32dabe0df82192741d82799",
+    "flow-primary-table-clippy.log": "0f003f53732b89e42e773742a8e28e6d4bdbec5ac395a83754ef08a24d119901",
+    "flow-primary-table-python-tests.log": "d77c2272cfa0cc5616f5f5bab8af080f4f84f82fcb418f0376cf63dfb69aeddd"
+  },
+  "unchanged_packet_gzip_sha256": {
+    "tests/fixtures/flow-medium-objects/kind1.bin.gz": "8fbee903057eb2a23b321ffc57751cf4652066d23bb52a3d9b5ae7b390801839",
+    "tests/fixtures/flow-medium-references/bodies.bin.gz": "b1e666a46dc2d1e130ce45000cbeb62ef79210c029aa8bc51d2e4a7c9a3b092f",
+    "tests/fixtures/flow-medium-references/profiles.bin.gz": "fa43ba510d7df86904ba32c1b741253b4931dbf3d44063a414d9be3c428fa019",
+    "tests/fixtures/flow-medium-kind-two/bodies.bin.gz": "2a5410e6e447ef404ae176cf370727d2bb28313dfe407c34362d21ac945c656b",
+    "tests/fixtures/flow-medium-mixed/profiles.bin.gz": "b81a6748ac80e05565325af8cecd8a1d0903e26fb09de5965ccb98110382995b",
+    "tests/fixtures/flow-medium-evaluation/curves.bin.gz": "2162b01d3027461d67ccd8212eb6250ba242856ecdc57d8e1c7c1c09af77e996"
+  },
+  "shared_primitive": "Moved the unchanged u64 fixture reader into a module included only by the medium-object and primary-table fixture crates. No lint suppression; byte/key-only fixture crates do not include it.",
+  "humanizer": "Unavailable; prose pass left to maintainer review",
+  "scope": "Complete F439 fields/intervals and exact reconstruction for5685 primary-profile payloads; four new Rust checks plus85 regressions, all-test-target Clippy, eight Python regeneration/byte/grammar/prefix/count/factory/wrapper checks. Native evidence is one empty version-two CPT payload only.",
+  "exclusions": [
+    "Production typed record439 API",
+    "Populated installed primary-class acceptance",
+    "Native object allocation, engineering roles and application execution",
+    "Current full gate frozen at38c3ee18 excludes this later baseline"
+  ]
+}

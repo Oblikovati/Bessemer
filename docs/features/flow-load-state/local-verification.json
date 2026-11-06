@@ -1,0 +1,40 @@
+{
+  "feature_issue": 241,
+  "base_commit": "5007d04b774c8a6ee5ff967a42f5b8a9d33f4b35",
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "python_passed": 9,
+  "rust_passed": 4,
+  "regression_conditional_passed": 14,
+  "failed": 0,
+  "ignored_regression": 1,
+  "ignored_explanation": "Conditional replay worker is invoked twice by its passing parent test",
+  "clippy_command": "cargo clippy --test flow_load_state_fixtures --test flow_conditional_item_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "source_lf_sha256": {
+    "docs/features/flow-load-state/freeze_load_state.py": "dcbc692a381442cab2531e0c17f6ee8b2ec5779833b6565182e743330194c451",
+    "docs/features/flow-load-state/load_requests.py": "9949547bf00c020573fd46d8d23c7156cf974bbc185050f296d7d2d7204f7cf5",
+    "docs/features/flow-load-state/load_snapshot.py": "0c3ac31f2baced5b497bd057841cea0e0deb36bbb66fd077840d539821f36940",
+    "docs/features/flow-load-state/test_load_state.py": "b3ce37acf706e9e447d6097db187df0a62f4c2549226a81315cf4663a94b2512",
+    "docs/features/flow-load-state/design.md": "ccb742c067cfe58b3da688be71842e8ee8e1a78da2c0d4c3cf6a78ead0b95629",
+    "docs/features/flow-load-state/README.md": "e4919e608a559a08cb67005af2108adf4a4cc0eb2f2465058778eed7f83835c5",
+    "tests/flow_load_state_fixtures.rs": "cce03f7d39ce9841242d33b020dce9afe27177678acb4cfb5c7559ab207db3be",
+    "tests/flow_load_state/fixture.rs": "56a7e52f88f64350a03775716c6811f58840f47ee5a0986c38f832aba781cbb3",
+    "tests/flow_load_state/types.rs": "c9f87fc329f69222ac1a30bfe69dc31fb5fb87a637ccc4258b16670de48359bc"
+  },
+  "log_sha256": {
+    "flow-load-state-python-tests.log": "27df9bce55d55d879c2f95e98ba4e0d3719a8a20ff761671c064d5c12f0aee00",
+    "flow-load-state-rust-tests.log": "223b490ec189a92cf63cf8319b1aeca03e0e4c54cac3a11ddfe8f3cc29633ae5",
+    "flow-load-state-clippy.log": "f2292c1b67d747aebdb711ab00ff82b7ade816006f9de9db6fda20eb512a2335"
+  },
+  "fixture_gzip_sha256": "963c6a00c49ab9c9179161801eff596f36006fb55db9d5a49da0b362b1491b10",
+  "scope": "Complete Source-derived record11 version18 raw load-state corpus, all356 payload/field reconstructions, item/string/count intervals, first-NUL UTF16 projections and all65536 units, both explicit load modes and empty suppression; original native false-mode assumption vs separately derived true-mode prefix",
+  "exclusions": [
+    "Production typed record11 read/edit API",
+    "Native owner/load-mode provenance",
+    "Native runtime transformations, engineering and application acceptance",
+    "Running full gate frozen at551b77c9fdfa7b3c729e74d7b646923cf8d3ed66 excludes this baseline and shared fixture extensions"
+  ],
+  "humanizer": "Unavailable; prose pass left to maintainer review"
+}

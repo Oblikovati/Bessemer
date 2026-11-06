@@ -1,0 +1,78 @@
+{
+  "cases": 6659,
+  "bytes": 22762409,
+  "packets": [
+    {
+      "identifier": 126,
+      "cases": 1671,
+      "bytes": 3999462,
+      "sha256": "90477d0b5b6e62496ca6985421834f084a9efa231f658a5bd79a6e45fc692ca0"
+    },
+    {
+      "identifier": 315,
+      "cases": 1663,
+      "bytes": 9229515,
+      "sha256": "fa609c44dcf69e1121fddabb316370e0016ea9b780659d8a1ff4ce2abbe795f4"
+    },
+    {
+      "identifier": 128,
+      "cases": 3325,
+      "bytes": 9533432,
+      "sha256": "d16fe4f03943946d471ff611b872d347288646ea1b36cba91934897ef872fb13"
+    }
+  ],
+  "references": {
+    "flowrecord126.py": "aef5a82bbdf436547fcea37c2e619bf63174def567d3f1048085d81f7dbb5adf",
+    "flowrecord315.py": "16b44ce5dffc94342b333924cc0ba28ad207e434c838b3b55cad611a5ab2b405",
+    "flowrecord128.py": "fc72d75236d2585ea1dfbe446d28043a0c26915751b7b99b75fd00cfc46e505d",
+    "flowresultdefinitions.py": "e8d6993720cfac848300347a9f2aa4324c84b9819c0d95fbf913a253d7e5c5ac",
+    "flowlegacytables.py": "52309d35baa5ecc33046fb2f7a98f4eadc7bfbd22db5b9803e41898131924420"
+  },
+  "native_records": [
+    {
+      "identifier": 126,
+      "source_sha256": "069aefb4da9fa292bd4eea27b619b9073cc33acc46dda1411b749b0a968706a8",
+      "payload_sha256": "df20620103de81ce10d1bc983bb565e9cd4a8aedf6c39dcde5090361662704cc",
+      "stored_bytes": 84301,
+      "decoded_bytes": 84301,
+      "version": 2
+    },
+    {
+      "identifier": 315,
+      "source_sha256": "069aefb4da9fa292bd4eea27b619b9073cc33acc46dda1411b749b0a968706a8",
+      "payload_sha256": "a99175d85510d4284652dfc238cf72e7a3451f7ba0cd13b69649c4cd56e0f571",
+      "stored_bytes": 32005,
+      "decoded_bytes": 64956,
+      "version": 4
+    },
+    {
+      "identifier": 128,
+      "source_sha256": "069aefb4da9fa292bd4eea27b619b9073cc33acc46dda1411b749b0a968706a8",
+      "payload_sha256": "38595f11efef611dee5d675392946ef7c20c4d2eaa4a9f89c305c7e0b2c176a4",
+      "stored_bytes": 70322,
+      "decoded_bytes": 283045,
+      "version": 6
+    }
+  ],
+  "identifiers": [
+    126,
+    315,
+    128
+  ],
+  "item_versions": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "block_element_bytes": [
+    72,
+    48
+  ],
+  "scope": "Complete conditional-item framing and all raw values, fields, scope intervals, count offsets and native mode projections; raw126, whole-zlib315 and raw-version-plus-zlib128",
+  "native_runtime_reproduced": false,
+  "engineering_fields_assigned": false,
+  "native_application_checked": false
+}

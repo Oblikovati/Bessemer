@@ -50,6 +50,27 @@ The [field-value view](docs/features/flow-field-values/README.md) reads record 1
 with its raw version prefix and explicit object/region layouts, projects supplied runtime widths and edits existing raw patterns.
 The [block-extra view](docs/features/flow-block-extras/README.md) reads record 408
 with explicit runtime context and edits revision-bound, typed existing fields.
+The [primary-table view](docs/features/flow-primary-table/README.md) reads record
+439 versions 0–3 and edits existing typed fields with exact raw framing and
+explicit primary-class selection.
+The [conditional-item views](docs/features/flow-conditional-items/README.md) read
+records 126/315/128 with their distinct codec boundaries and block widths, and
+edit existing fields while preserving complete physical history.
+The [load-state view](docs/features/flow-load-state/README.md) reads record 11
+version 18 under an explicit load-mode assumption and edits raw fields and
+UTF-16 units while retaining exact string prefixes and carrier history.
+The [stored-state view](docs/features/flow-stored-state/README.md) reads record
+432's complete raw signed members and edits existing slots while reporting the
+native recomputation version rule separately from stored values.
+The [context-state view](docs/features/flow-context-state/README.md) reads record
+138 with explicit index-count context and edits existing raw words and signed
+tails while keeping stored object count independent of index width.
+The [paired-state view](docs/features/flow-paired-state/README.md) reads record
+417's two independently counted groups and edits existing raw index and wide
+values while preserving absent arrays and integer quotient projections.
+The [fixed-state view](docs/features/flow-fixed-state/README.md) reads record
+139 versions 0–4 and edits existing member and settings slots while retaining
+absent counts, version-dependent fields and complete carrier history.
 The [legacy link view](docs/features/flow-link-records/README.md) reads record 402
 and edits existing fields while preserving code bytes, sentinel references and versioned tails.
 The [legacy table view](docs/features/flow-legacy-tables/README.md) reads records
@@ -1055,3 +1076,8 @@ The [medium kind-two body API](docs/features/flow-medium-kind-two/README.md)
 reads and edits all six documented model layouts, including independent table
 counts and raw 32-bit words. It preserves the following record bytes and reports
 body framing separately from complete-record and installed native acceptance.
+
+The [kind-one curve evaluator](docs/features/flow-medium-evaluation/README.md)
+implements the documented finite/ordered profile for ordinals 1, 2 and 4. Its
+versioned result retains arithmetic classification, source provenance, complete
+selected-input checks and achieved-error information without editing the file.

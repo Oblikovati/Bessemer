@@ -61,7 +61,7 @@ impl FlowFieldValues {
     fn patch(&self, offset: usize, bytes: &[u8]) -> Result<FlowFieldValueEdit> {
         let mut body = self.wire.decoded.to_vec();
         body[offset..offset + bytes.len()].copy_from_slice(bytes);
-        let carrier_edit = edited_body(&self.wire, &body)?;
+        let carrier_edit = wire::edited_versioned(&self.wire, &body, "Flow field values")?;
         let id = wire::result_id(&self.wire, carrier_edit.result())?;
         let result = carrier_edit
             .result()
@@ -85,25 +85,4 @@ impl FlowFieldValues {
         }
         Ok(())
     }
-}
-
-fn edited_body(wire: &TableWire, body: &[u8]) -> Result<FlowCarrierEdit> {
-    if body == wire.decoded.as_ref() {
-        let stored = super::super::super::payload_codec::record_payload(
-            &wire.source,
-            &wire.record,
-            108,
-            "Flow field values",
-        )?;
-        return wire.source.replace_payload(&wire.record, stored);
-    }
-    let encoded = match wire.compression {
-        FlowLegacyTableTransport::Raw => body.to_vec(),
-        FlowLegacyTableTransport::Zlib => {
-            super::super::super::payload_codec::encode_zlib(body, "Flow field values")?
-        }
-    };
-    let mut payload = wire.version.to_le_bytes().to_vec();
-    payload.extend_from_slice(&encoded);
-    wire.source.replace_payload(&wire.record, &payload)
 }

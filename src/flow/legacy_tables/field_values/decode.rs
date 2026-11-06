@@ -47,20 +47,17 @@ fn versioned_wire(
     id: &FlowRecordId,
     options: &FlowFieldValueOptions,
 ) -> Result<TableWire> {
-    let stored =
-        super::super::super::payload_codec::record_payload(source, id, 108, "Flow field values")?;
-    let version = ArchiveCursor::new(stored).i32()?;
-    version_gate(version, options.compatibility_restriction)?;
-    let decoded = expanded_body(&stored[4..], options)?;
-    Ok(TableWire {
-        source: source.clone(),
-        record: id.clone(),
-        version,
-        decoded: decoded.into(),
-        stored_bytes: stored.len(),
-        compression: options.body_compression,
-        identifier: 108,
-    })
+    wire::versioned(
+        source,
+        id,
+        108,
+        options.body_compression,
+        "Flow field values",
+        |body, version| {
+            version_gate(version, options.compatibility_restriction)?;
+            expanded_body(body, options)
+        },
+    )
 }
 
 fn version_gate(version: i32, restriction: bool) -> Result<()> {

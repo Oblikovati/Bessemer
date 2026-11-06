@@ -190,7 +190,10 @@ impl FlowFixedSettings {
     }
 }
 
-fn replacement_bytes(kind: FlowFixedSettingsKind, value: FlowFixedSlot) -> Result<Vec<u8>> {
+pub(in crate::flow) fn replacement_bytes(
+    kind: FlowFixedSettingsKind,
+    value: FlowFixedSlot,
+) -> Result<Vec<u8>> {
     match (kind, value) {
         (FlowFixedSettingsKind::Integer, FlowFixedSlot::Integer(bits)) => {
             Ok(bits.to_le_bytes().to_vec())
