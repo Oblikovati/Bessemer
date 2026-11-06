@@ -1,7 +1,7 @@
 use super::*;
 #[path = "edits/patches.rs"]
 mod patches;
-use patches::{patches, LinkPatch};
+use patches::{LinkPatch, patches};
 
 #[test]
 fn every_owned_existing_field_has_exact_noop_patch_history_and_fresh_reverse() {

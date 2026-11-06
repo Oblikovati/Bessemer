@@ -82,16 +82,22 @@ fn sentinel_and_context_limits_apply_again_to_edits_and_structure_stays_fixed() 
     let source = read_bytes(&case.stored, bounded).unwrap();
     let field = reference_field();
     for value in [-2, 2, i32::MAX] {
-        assert!(source
-            .replace_field(field, FlowLinkRecordValue::Signed32(value))
-            .is_err());
+        assert!(
+            source
+                .replace_field(field, FlowLinkRecordValue::Signed32(value))
+                .is_err()
+        );
     }
-    assert!(source
-        .replace_field(field, FlowLinkRecordValue::Signed32(-1))
-        .is_ok());
-    assert!(links(&case)
-        .replace_field(field, FlowLinkRecordValue::Signed32(i32::MIN))
-        .is_ok());
+    assert!(
+        source
+            .replace_field(field, FlowLinkRecordValue::Signed32(-1))
+            .is_ok()
+    );
+    assert!(
+        links(&case)
+            .replace_field(field, FlowLinkRecordValue::Signed32(i32::MIN))
+            .is_ok()
+    );
     check_structural_edits(&source);
     assert_eq!(source.decoded_bytes(), case.decoded);
 }
@@ -176,15 +182,19 @@ fn foreign_stale_wrong_record_and_bad_compressed_streams_reject() {
     let case = raw_case(0);
     let source = links(&case);
     let foreign = carrier(&case.stored, 1_000_000);
-    assert!(foreign
-        .record_402_links(source.record(), options(&case))
-        .is_err());
+    assert!(
+        foreign
+            .record_402_links(source.record(), options(&case))
+            .is_err()
+    );
     check_stale_identity(&source, &case);
     let wrong = source.source().records().nth(2).unwrap().id;
-    assert!(source
-        .source()
-        .record_402_links(&wrong, options(&case))
-        .is_err());
+    assert!(
+        source
+            .source()
+            .record_402_links(&wrong, options(&case))
+            .is_err()
+    );
     check_bad_streams();
 }
 
@@ -220,18 +230,22 @@ fn all_public_link_types_are_send_and_sync() {
 }
 
 fn check_structural_edits(source: &FlowLinkRecords) {
-    assert!(source
-        .replace_field(
-            FlowLinkRecordField::Control,
-            FlowLinkRecordValue::Signed32(0)
-        )
-        .is_err());
-    assert!(source
-        .replace_field(
-            FlowLinkRecordField::TailMember { index: 6 },
-            FlowLinkRecordValue::Signed32(4)
-        )
-        .is_err());
+    assert!(
+        source
+            .replace_field(
+                FlowLinkRecordField::Control,
+                FlowLinkRecordValue::Signed32(0)
+            )
+            .is_err()
+    );
+    assert!(
+        source
+            .replace_field(
+                FlowLinkRecordField::TailMember { index: 6 },
+                FlowLinkRecordValue::Signed32(4)
+            )
+            .is_err()
+    );
 }
 
 fn check_stale_identity(source: &FlowLinkRecords, case: &LinkCase) {
@@ -241,11 +255,13 @@ fn check_stale_identity(source: &FlowLinkRecords, case: &LinkCase) {
             FlowLinkRecordValue::Byte(0),
         )
         .unwrap();
-    assert!(changed
-        .result()
-        .source()
-        .record_402_links(source.record(), options(case))
-        .is_err());
+    assert!(
+        changed
+            .result()
+            .source()
+            .record_402_links(source.record(), options(case))
+            .is_err()
+    );
 }
 
 fn reference_field() -> FlowLinkRecordField {
@@ -267,12 +283,14 @@ fn measured_compressed_growth_obeys_the_original_physical_payload_limit() {
     let start = changed.len() - 8192;
     changed[start..start + 8].copy_from_slice(&0x123456789abcdef0_u64.to_le_bytes());
     assert!(compressed(&changed, flate2::Compression::fast()).len() > case.stored.len());
-    assert!(links
-        .replace_field(
-            FlowLinkRecordField::FinalValue { index: 0 },
-            FlowLinkRecordValue::WideBits(0x123456789abcdef0)
-        )
-        .is_err());
+    assert!(
+        links
+            .replace_field(
+                FlowLinkRecordField::FinalValue { index: 0 },
+                FlowLinkRecordValue::WideBits(0x123456789abcdef0)
+            )
+            .is_err()
+    );
     assert_eq!(links.decoded_bytes(), case.decoded);
     assert_eq!(links.source().as_bytes(), source.as_bytes());
 }

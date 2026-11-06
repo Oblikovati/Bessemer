@@ -49,10 +49,12 @@ fn check_entry_semantics(entry: &LinkEntry, case: &LinkCase) {
     };
     assert_eq!(entry.native_code, converted);
     if let Some(count) = case.pointer_count {
-        assert!(entry
-            .references
-            .iter()
-            .all(|&v| v == -1 || (v >= 0 && v < count)));
+        assert!(
+            entry
+                .references
+                .iter()
+                .all(|&v| v == -1 || (v >= 0 && v < count))
+        );
     }
 }
 

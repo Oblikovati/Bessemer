@@ -74,7 +74,11 @@ impl<'a> LinkReader<'a> {
         if count > self.options.maximum_entries
             || count > self.cursor.remaining().saturating_sub(44) / 66
         {
-            return Err(link_invalid(format!("entry count {count}; expected <= {} entries and complete 66-byte entries plus 44-byte tail within {} bytes", self.options.maximum_entries, self.cursor.remaining())));
+            return Err(link_invalid(format!(
+                "entry count {count}; expected <= {} entries and complete 66-byte entries plus 44-byte tail within {} bytes",
+                self.options.maximum_entries,
+                self.cursor.remaining()
+            )));
         }
         let mut entries = Vec::with_capacity(count);
         for _ in 0..count {
@@ -100,7 +104,10 @@ impl<'a> LinkReader<'a> {
     fn array(&mut self, count: usize, width: usize) -> Result<(usize, usize)> {
         let available = self.options.maximum_array_elements - self.elements;
         if count > available || count > self.cursor.remaining() / width {
-            return Err(link_invalid(format!("array count {count}, width {width}; expected <= {available} additional elements and <= {} complete elements in remaining bytes", self.cursor.remaining() / width)));
+            return Err(link_invalid(format!(
+                "array count {count}, width {width}; expected <= {available} additional elements and <= {} complete elements in remaining bytes",
+                self.cursor.remaining() / width
+            )));
         }
         let start = self.position();
         self.cursor.take(count * width)?;
@@ -129,7 +136,9 @@ fn validate_options(options: FlowLinkRecordOptions) -> Result<()> {
         || options.maximum_entries == 0
         || options.maximum_array_elements == 0
     {
-        return Err(link_invalid(format!("limits {options:?}; expected decoded bytes >= 52, positive entry and array-element limits")));
+        return Err(link_invalid(format!(
+            "limits {options:?}; expected decoded bytes >= 52, positive entry and array-element limits"
+        )));
     }
     Ok(())
 }

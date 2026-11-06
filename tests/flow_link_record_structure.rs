@@ -1,6 +1,6 @@
 //! A valid alternate parse must not make a scalar edit a structural operation.
-use bessemer::flow::*;
 use bessemer::FailureClass;
+use bessemer::flow::*;
 
 #[test]
 fn member_edit_rejects_an_alternate_complete_parse_with_different_tail_spans() {

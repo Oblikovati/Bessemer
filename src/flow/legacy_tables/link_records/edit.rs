@@ -34,7 +34,9 @@ fn field_bytes(
         (1, FlowLinkRecordValue::Byte(v)) => Ok(vec![v]),
         (4, FlowLinkRecordValue::Signed32(v)) => Ok(v.to_le_bytes().to_vec()),
         (8, FlowLinkRecordValue::WideBits(v)) => Ok(v.to_le_bytes().to_vec()),
-        _ => Err(link_invalid(format!("field {field:?} value {value:?}; expected exact {width}-byte Byte/Signed32/WideBits variant"))),
+        _ => Err(link_invalid(format!(
+            "field {field:?} value {value:?}; expected exact {width}-byte Byte/Signed32/WideBits variant"
+        ))),
     }
 }
 
@@ -47,5 +49,7 @@ fn check_structure(
     if before.entries == after.entries && before.tail == after.tail {
         return Ok(());
     }
-    Err(link_invalid(format!("field {field:?} value {value:?} changed parsed intervals; expected unchanged entry and tail structure")))
+    Err(link_invalid(format!(
+        "field {field:?} value {value:?} changed parsed intervals; expected unchanged entry and tail structure"
+    )))
 }
