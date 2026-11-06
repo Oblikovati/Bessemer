@@ -42,8 +42,9 @@ The shared raw-version/body read and edit paths now live in
 `src/flow/legacy_tables/wire.rs`. Record 108 calls those helpers with its original
 version gate, body expansion and operation name. This preserves its validation
 order, errors, zero-body cases and exact stored no-ops while providing the same
-transport boundary for record 128. The shared helpers do not decode conditional
-items; the complete family parser and its public API remain unfinished.
+transport boundary for record 128. The family parser uses these transport helpers
+and the shared exact scalar codecs. Its typed fields and ancestry are compared
+with the complete frozen FCI1 expectations.
 
 The first operation must read and edit every existing nonstructural stored
 field, completely reparse the result and require unchanged physical scope and

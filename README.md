@@ -53,6 +53,9 @@ with explicit runtime context and edits revision-bound, typed existing fields.
 The [primary-table view](docs/features/flow-primary-table/README.md) reads record
 439 versions 0–3 and edits existing typed fields with exact raw framing and
 explicit primary-class selection.
+The [conditional-item views](docs/features/flow-conditional-items/README.md) read
+records 126/315/128 with their distinct codec boundaries and block widths, and
+edit existing fields while preserving complete physical history.
 The [legacy link view](docs/features/flow-link-records/README.md) reads record 402
 and edits existing fields while preserving code bytes, sentinel references and versioned tails.
 The [legacy table view](docs/features/flow-legacy-tables/README.md) reads records

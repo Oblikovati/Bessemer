@@ -1,4 +1,6 @@
 //! Independent complete shared-item grammar for raw126, compressed315 and versioned128.
+#[path = "flow_conditional_items/api.rs"]
+mod api;
 #[path = "flow_conditional_items/fixture.rs"]
 mod fixture;
 #[path = "flow_field_values/packet.rs"]

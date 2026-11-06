@@ -1,0 +1,65 @@
+{
+  "feature_issue": 241,
+  "base_commit": "7219511fc25dadab31b84532c49e9213d9617c05",
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "command": "cargo test --test flow_conditional_item_fixtures --test flow_primary_table_fixtures --test flow_field_value_fixtures --locked",
+  "passed": 48,
+  "failed": 0,
+  "ignored": 3,
+  "ignored_explanation": [
+    "Existing exhaustive native record108 export remains separately gated",
+    "Primary and conditional standalone replay workers are invoked twice each by their passing parent tests"
+  ],
+  "conditional_passed": 14,
+  "complete_source_cases": 6659,
+  "representative_edit_cases": 512,
+  "selected_field_elements": 15261,
+  "edit_sampling": "All elements for arrays of length0..4, otherwise first/middle/last; every selected element gets noop, patch, retained-view reverse and fresh-open decoded reverse",
+  "clippy_command": "cargo clippy --tests --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "send_sync_public_types": 16,
+  "concurrency_workers": 8,
+  "separate_processes_compared": 2,
+  "source_lf_sha256": {
+    "src/flow/legacy_tables/mod.rs": "694f1290376e97ff8f4f8e25521bc81c793b369886e1c07a01b639dc347ae6a3",
+    "tests/flow_conditional_item_fixtures.rs": "169239d61816e1f71ebebc1709f413e0a021edbdd09e3bf54e1399927695d152",
+    "tests/flow_conditional_items/api.rs": "d9fa19c14b10aac373c15fb46efc3cb89431c9b6f87ab4e45ce10b90a6e252fe",
+    "README.md": "6d59fc07f7f6d300bb763103132cd51cd2e5bf6addc7b4bc6ab2fd1eb96d0972",
+    "CHANGELOG.md": "afa2b2625262b1f13b9e0f4e6d37a80d78957b8eba59d5405d2c4841c5634fbb",
+    "docs/features/flow-conditional-items/README.md": "c5af6e4eccf2495b976ceda663469cf3de97bca433c41282cb00a156851a4547",
+    "docs/features/flow-conditional-items/design.md": "4a3f5d293c0e175433c10ff55d9255d0964279394323b8ffb30aef51e215ac39",
+    "src/flow/legacy_tables/conditional_items/decode.rs": "dc06bf1459cfe5d508358d2cd7d24cb72421772ae1534d42c4ac85d2ba32360b",
+    "src/flow/legacy_tables/conditional_items/edit.rs": "b87bca208b0ef6cfc5841ed92364d14cd495936c466154a8d0ccf006fb9a54d4",
+    "src/flow/legacy_tables/conditional_items/fields.rs": "2e650bcf182b2f2cbdc41aa806f61d9b767fe52e635590e20f58f994d2ac2535",
+    "src/flow/legacy_tables/conditional_items/items.rs": "172e2d25172e36d33fd2c9c390c5e52ced9d2de42518114f53bae6a4d62e23ff",
+    "src/flow/legacy_tables/conditional_items/mod.rs": "6c75e37d9ffdcb5a7fdd5738a41b31cfebc0b7d18bead3669f9f3d32189b5cd0",
+    "src/flow/legacy_tables/conditional_items/schema.rs": "cabc035f2569c49eef1e90ba4a763810a6e2881e6a26a9d0e32305657e2079bb",
+    "src/flow/legacy_tables/conditional_items/transport.rs": "c0a6c1c81914804e574635efb0ba365d90bb7275b3d93f1cbcb72bca66c7b88f",
+    "src/flow/legacy_tables/conditional_items/types.rs": "374e2bcc55eea40763a081692a3c31160380ce15cd2b1c2904f3f0d94f643dfb",
+    "src/flow/legacy_tables/conditional_items/view.rs": "474296a93a5af2353c7b3bc8a417a642920eea8fd70139cdfcd4b1d2f14abfff",
+    "tests/flow_conditional_items/api/contracts.rs": "b6f6ee23b8e7fe871394b9984f927bde9ebe29830b3df5be81ff9f0f15d282b2",
+    "tests/flow_conditional_items/api/edit.rs": "b0d557164188bf028738db9dc0cee35cd99fb00456dfebe3e8f0b3e78285d199",
+    "tests/flow_conditional_items/api/paths.rs": "d9749680ab1b3b8c8e0b821c8c37576df1fe8dc98a4cb3685aa9a96270b78ee3",
+    "tests/flow_conditional_items/api/read.rs": "c9da82c8d9dc1c1a510b0d5bb2468add93b18f24d726037433935fc9dc98e9c2",
+    "tests/flow_conditional_items/api/replay.rs": "1b6636006219649f5223691f7b48d2bd81dbeda8308f7362dc195f4623adb0a5"
+  },
+  "log_sha256": {
+    "flow-conditional-items-api-tests.log": "7fd0af3e8240dcae937228d407a5f3dabba5ccce7469970058daf7af0b8d29a7",
+    "flow-conditional-items-api-clippy.log": "18d0d1785403120279c6b53f4fae3e9e7c0ececab1cd14c156bbabb3bce2773c"
+  },
+  "unchanged_fixture_gzip_sha256": {
+    "record126.bin.gz": "4552e974beb38e5be717c730f56b208625382c182057f413b657e2c9773b89ac",
+    "record128.bin.gz": "0f8a1985f5356f3d7b91990a9308dc577cfc8906bb2a5a5bd40b4c0a3a63a6be",
+    "record315.bin.gz": "da3364cb79595200e59a790b92a50b09734f152f7229bc32afb1d71b58ae1647"
+  },
+  "scope": "Complete record126/315/128 grammar, all Source fields/scopes/values and exact codec boundaries; supported item versions0..5, dimensions, mode and protocol gates, complete malformed counts/prefixes, independent resource axes, isolated fixed-field edits and physical history; exact raw carrier reversal and decoded compressed reversal, immutable input retention and deterministic process/concurrent results",
+  "exclusions": [
+    "Exact original compressed bytes from a fresh reencoding; original streams remain in source checkpoints",
+    "Native allocation/runtime conversion/inverse maps/engineering/application acceptance",
+    "New combined full gate and remote CI for this revision",
+    "Release performance comparison: no earlier typed conditional-item API or published release comparator exists"
+  ],
+  "humanizer": "Unavailable; prose pass left to maintainer review"
+}

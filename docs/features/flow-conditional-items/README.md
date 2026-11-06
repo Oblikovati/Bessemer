@@ -37,5 +37,23 @@ serialization, mutates every reached compact-profile count, rejects every
 proper decoded prefix and trailing byte, and checks exact compressed-stream
 boundaries. Rust reconstructs the decoded payloads from their frozen fields and
 checks transport, scope/count accounting, raw patterns and mode projections.
-There is no typed production API for this family yet; `design.md` records the
-requirements for that implementation.
+The typed entry points are `FlowCarrier::record_126_items`, `record_315_items`
+and `record_128_items`. They return immutable `FlowConditionalItems` views with
+revision-bound field and scope IDs. Field views preserve physical encoding,
+count and stride, including empty vectors. Scope views retain complete intervals,
+parents and physical positions. Coverage reports the exact codec boundary,
+raw-prefix bytes, block multiplier and complete aggregate counts.
+
+Independent bounds cover stored/decoded bytes, presence positions, present
+items, groups, subrecords, vector values, all stored values and both descriptor
+collections. Existing-field edits reparse the whole decoded record and require
+unchanged fields and scopes. Version/count fields are read-only. Other control
+fields can change only when their supported profile and physical structure stay
+valid. No-ops preserve original wire and checkpoint identity; completed edits
+return both validated views and full carrier history.
+
+Compressed edits reencode their bodies. Freshly opened reversals restore decoded
+bytes; exact original compressed streams remain available through the retained
+source checkpoint. Raw record126 reversals restore the complete original carrier
+byte for byte. Native runtime conversion, inverse maps, engineering meanings and
+application acceptance remain excluded.
