@@ -28,7 +28,8 @@
     "status": "running; no acceptance credit yet",
     "command": "cargo test --test flow_link_record_fixtures every_native_existing_link_field --locked -- --ignored --nocapture",
     "expected_field_requests": 213980,
-    "log": "target/flow-link-records-native-census.log"
+    "log": "target/flow-link-records-native-census.log",
+    "source_commit": "f9128e745e83b11afa3262f56a2014a2bb97f903"
   },
   "source_lf_sha256": {
     "src\\flow\\legacy_tables\\link_records\\decode\\tails.rs": "3a44e93dd8e8b220a4ef0da4925ea428841a2ecf060696923103cf4446a148b9",
@@ -47,16 +48,26 @@
     "tests\\flow_link_records\\edits\\patches.rs": "8a90208ee5d9c7e4bda961f94d95b3e209251be44cda5a65d469e21d946dd818",
     "tests\\flow_link_records\\edits.rs": "4c037aa4e6fc14ded8dca8b62ce65e650ff8f9a645456d695993aec7a2088402",
     "tests\\flow_link_records\\fixture.rs": "55078075c9c3c6910d688518a46689d0d9864bb0ddc747eb9c2ce9b370c933a6",
-    "tests\\flow_link_record_fixtures.rs": "79900b37a6835f17539309ff9ef3295512a92ba69931fe81be11cebeda8194f3"
+    "tests\\flow_link_record_fixtures.rs": "79900b37a6835f17539309ff9ef3295512a92ba69931fe81be11cebeda8194f3",
+    "tests\\flow_link_record_structure.rs": "7c20056b1f6f45807a202ac3d269cacfc5ac934bb80fee548c8705fdc001e03f"
   },
   "log_sha256": {
     "target\\flow-link-records-api-final-tests.log": "bafcccbf09eda97d99e9c2f6e744511cb61d47a0e9bb23a51f68ab08cc5d2370",
     "target\\flow-link-records-api-final-clippy.log": "bd413a0d8c2b25770cd933f6db8511407234a17d124c93cea482ea4a2e92d26e",
-    "target\\flow-link-records-api-python-tests.log": "cdc982765bd628a385dc157e1e75dcb86be950d49043b0efa682c769915d74ba"
+    "target\\flow-link-records-api-python-tests.log": "cdc982765bd628a385dc157e1e75dcb86be950d49043b0efa682c769915d74ba",
+    "target\\flow-link-records-structure-tests.log": "d7082b0e9ea1f562ded2ea5ef2c921ab83f08ceb83f955650358a7c1d0f25e83",
+    "target\\flow-link-records-structure-clippy.log": "c4a96a5c63b02b58fb5104acc193fd3ebc0fe5e70e32dbe874953ea660e381ae"
   },
   "exclusions": [
     "Native runtime state and object-reference resolution",
     "Engineering roles and native application acceptance",
     "Full gate at b8b5aaac excludes this later record-402 implementation"
-  ]
+  ],
+  "structural_regression": {
+    "command": "cargo test --test flow_link_record_structure --locked",
+    "terminal_exit_code": 0,
+    "passed": 1,
+    "clippy_exit_code": 0,
+    "scope": "Hand-built version-six bytes admit two complete valid parses under member-0x290 values two and zero; scalar editing rejects the alternate span partition despite exact EOF and preserves the original checkpoint"
+  }
 }
