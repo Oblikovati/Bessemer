@@ -62,6 +62,9 @@ UTF-16 units while retaining exact string prefixes and carrier history.
 The [stored-state view](docs/features/flow-stored-state/README.md) reads record
 432's complete raw signed members and edits existing slots while reporting the
 native recomputation version rule separately from stored values.
+The [context-state view](docs/features/flow-context-state/README.md) reads record
+138 with explicit index-count context and edits existing raw words and signed
+tails while keeping stored object count independent of index width.
 The [legacy link view](docs/features/flow-link-records/README.md) reads record 402
 and edits existing fields while preserving code bytes, sentinel references and versioned tails.
 The [legacy table view](docs/features/flow-legacy-tables/README.md) reads records

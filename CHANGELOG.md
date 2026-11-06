@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added complete record-138 context-state reads and isolated index/tail edits with explicit native count assumptions and independent serialized bounds. (#241)
+
 - Added complete raw record-432 stored-state reads and isolated signed-member edits, preserving discarded-member absence and reporting native recomputation requirements. (#241)
 
 - Added complete raw Flow record-11 version-18 load-state reading and isolated field/UTF-16 edits, with explicit mode context, lossless first-NUL projections and exact carrier reversals. (#241)

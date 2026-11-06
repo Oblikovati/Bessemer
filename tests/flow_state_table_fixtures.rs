@@ -1,12 +1,14 @@
 //! Owned complete state-table baselines before adding typed readers or editors.
-#[path = "flow_state_tables/carrier.rs"]
-mod state_carrier;
-#[path = "flow_state_tables/process.rs"]
-mod state_process;
+#[path = "flow_state_tables/context_api.rs"]
+mod context_api;
 #[path = "flow_state_tables/fixture.rs"]
 mod fixture;
 #[path = "flow_field_values/packet.rs"]
 mod packet;
+#[path = "flow_state_tables/carrier.rs"]
+mod state_carrier;
+#[path = "flow_state_tables/process.rs"]
+mod state_process;
 #[path = "flow_state_tables/stored_api.rs"]
 mod stored_api;
 #[path = "flow_field_values/stored_fields.rs"]
