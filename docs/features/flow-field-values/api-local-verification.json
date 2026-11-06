@@ -29,10 +29,17 @@
     "scope": "Native version-five FLD payload under explicit object layout and checked/unchecked/wildcard table contexts, in owned three-record carriers; complete read projections plus deterministic first/last edit samples"
   },
   "native_census": {
-    "status": "not_started",
+    "status": "passed",
     "command": "cargo test --test flow_field_value_fixtures every_native_existing_field_value --locked -- --ignored --nocapture",
     "expected_requests": 47153,
-    "scope": "47,152 editable wide patterns and one existing checked table word retained as an exact no-op; explicit conditional native layout, no application acceptance"
+    "scope": "47,152 editable wide patterns and one existing checked table word retained as an exact no-op; explicit conditional native layout, no application acceptance",
+    "terminal_exit_code": 0,
+    "source_commit": "ac11f43908675cf257095a559899d04fa70897d9",
+    "verified_source_files": 20,
+    "field_requests": 47153,
+    "test_seconds": 485.1,
+    "log": "target\\flow-field-values-native-census.log",
+    "log_sha256": "2295ace4cd3c51b69f7363eb6ad7f427586e567e283c2e76cce46d6aa5da544c"
   },
   "source_lf_sha256": {
     "src\\flow\\legacy_tables\\field_values\\context.rs": "957c7bab33fd7d927c56ebe2911944631c17fe434bff1a51f6d578533f54c4d5",
@@ -64,7 +71,6 @@
   "reference_sha256": "ee64e8c6de4e96d00ecf9ba514f82bf377286fec4f30b00273725f1057e5c733",
   "exclusions": [
     "Active full gate at 53bc0baf excludes this later record-108 API and independent baseline",
-    "Complete native existing-field census has not yet been accepted",
     "Native runtime layout/numeric binding, object-form/storage flags, floating-point exception state, engineering columns and application acceptance",
     "Remote CI and ThreadSanitizer for this later revision are pending"
   ],
