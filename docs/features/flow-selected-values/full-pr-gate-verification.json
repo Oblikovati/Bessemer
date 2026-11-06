@@ -1,0 +1,28 @@
+{
+  "issue": 241,
+  "source_revision": "c1243b5bfcc8ba7441d443e5bebc7689e669f588",
+  "command": "cargo xtask pr",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "cargo_build_jobs": 1,
+  "native_schema": "C:/Program Files/SOLIDWORKS Corp/SOLIDWORKS/data/pschema/sch_13006.s_t",
+  "session": 63817,
+  "exit_code": 0,
+  "results": {
+    "summaries": 393,
+    "passed": 4942,
+    "failed": 0,
+    "ignored": 256
+  },
+  "log": "target/flow-selected-and-byte-state-combined-full-pr-gate.log",
+  "log_sha256": "789a1f7de0acd408c70750b315a291e54dd4669fce4addfebfe7521cc5e6c840",
+  "included": "Combined source through complete typed record112 fresh-map selection, record316 byte states and record12 counted bytes; includes earlier message lists and state tables",
+  "excluded": [
+    "Later bounded identity diagnostics fix #248",
+    "Record304 baseline and API",
+    "Record444 baseline and API",
+    "Record148 baseline and API",
+    "Hosted matrix and sanitizer acceptance"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose review pending"
+}
