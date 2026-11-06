@@ -44,6 +44,8 @@ The [simple table views](docs/features/flow-simple-tables/README.md) read record
 407/437/411/413 and edit existing raw values while retaining count origins and inactive layouts.
 The [pointer-pool and body view](docs/features/flow-pointer-bodies/README.md) reads
 record 421 versions 0–5 with explicit counts and current runtime codes and edits existing payload values.
+The [reference-group view](docs/features/flow-reference-groups/README.md) reads
+record 416 versions 0–17 and edits existing fields without applying native pointer fixups or mapping shifts.
 The [block-extra view](docs/features/flow-block-extras/README.md) reads record 408
 with explicit runtime context and edits revision-bound, typed existing fields.
 The [legacy link view](docs/features/flow-link-records/README.md) reads record 402

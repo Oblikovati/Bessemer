@@ -10,6 +10,7 @@ pub(super) struct EntryContinuationContext {
     pub invalid: fn(String) -> BessemerError,
 }
 
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub(super) struct EntryContinuationSpan {
     pub scalars: [Option<usize>; 6],
     pub descriptors: usize,
@@ -87,7 +88,7 @@ impl ContinuationReader<'_, '_> {
     fn secondary_count(&mut self) -> Result<i32> {
         match self.context.version {
             1 => Ok(i32::from(self.cursor.u8()? as i8)),
-            2..=9 => Ok(i32::from(self.cursor.u16()?)),
+            0 | 2..=9 => Ok(i32::from(self.cursor.u16()?)),
             _ => self.cursor.i32(),
         }
     }

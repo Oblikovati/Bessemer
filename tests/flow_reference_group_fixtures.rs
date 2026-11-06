@@ -1,4 +1,6 @@
 //! Independent complete record-416 field/interval baseline before typed readers/editors.
+#[path = "flow_reference_groups/api.rs"]
+mod api;
 #[path = "flow_reference_groups/fixture.rs"]
 mod fixture;
 #[path = "flow_reference_groups/rebuild.rs"]

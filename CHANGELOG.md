@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added complete legacy Flow reference-group reads and isolated typed edits with explicit mapping context, preserved signed counts and full carrier history. (#241)
+
 - Added complete legacy Flow pointer-pool and body reads with explicit runtime codes, opaque tagged payloads and isolated edits with full carrier history. (#241)
 
 - Added explicit-count Flow parallel, per-leaf, five-word and raw-byte table reads with isolated existing-field edits and complete carrier history. (#241)
