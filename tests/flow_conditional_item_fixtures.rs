@@ -5,6 +5,8 @@ mod api;
 mod fixture;
 #[path = "flow_field_values/packet.rs"]
 mod packet;
+#[path = "flow_field_values/stored_fields.rs"]
+mod stored_fields;
 #[path = "flow_conditional_items/types.rs"]
 mod types;
 use packet::*;
@@ -204,19 +206,5 @@ fn check_specials(wides: &BTreeSet<u64>) {
 }
 
 fn conditional_patterns(cases: &[ConditionalCase], encoding: u8) -> BTreeSet<u64> {
-    cases
-        .iter()
-        .flat_map(|case| &case.fields)
-        .filter(|field| field.encoding == encoding)
-        .flat_map(|field| field.raw.chunks_exact(field.width()))
-        .map(pattern_value)
-        .collect()
-}
-
-fn pattern_value(raw: &[u8]) -> u64 {
-    match raw.len() {
-        4 => u64::from(u32::from_le_bytes(raw.try_into().unwrap())),
-        8 => u64::from_le_bytes(raw.try_into().unwrap()),
-        other => panic!("Fixture pattern width {other}; expected4/8"),
-    }
+    stored_fields::patterns(cases.iter().flat_map(|case| &case.fields), encoding)
 }

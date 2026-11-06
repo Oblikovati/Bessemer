@@ -14,25 +14,9 @@ pub struct ConditionalCase {
     pub runtime: bool,
     pub engineering: bool,
 }
-pub struct ConditionalField {
-    pub path: String,
-    pub offset: u32,
-    pub encoding: u8,
-    pub count: u32,
-    pub raw: Vec<u8>,
-}
+pub use crate::stored_fields::StoredField as ConditionalField;
 pub struct ConditionalScope {
     pub path: String,
     pub start: u32,
     pub end: u32,
-}
-impl ConditionalField {
-    pub fn width(&self) -> usize {
-        match self.encoding {
-            0 => 1,
-            1 | 2 => 4,
-            3 => 8,
-            other => panic!("Fixture encoding {other}; expected0..3"),
-        }
-    }
 }
