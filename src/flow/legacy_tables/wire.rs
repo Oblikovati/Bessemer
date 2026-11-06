@@ -165,6 +165,18 @@ pub(super) fn mode(wire: &TableWire) -> FlowLegacyTableCheckMode {
 pub(super) fn signed_at(raw: &[u8], offset: usize) -> i32 {
     unsigned_at(raw, offset) as i32
 }
+pub(super) fn element_offset(
+    identifier: u32,
+    start: usize,
+    count: usize,
+    index: usize,
+    width: usize,
+) -> Result<usize> {
+    if index < count {
+        return Ok(start + index * width);
+    }
+    Err(table_index_error(identifier, "array element", index, count))
+}
 
 pub(super) fn unsigned_at(raw: &[u8], offset: usize) -> u32 {
     let span = &raw[offset..offset + 4];

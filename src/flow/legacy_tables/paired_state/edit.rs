@@ -8,7 +8,13 @@ impl FlowPairedState {
         bits: u32,
     ) -> Result<FlowPairedStateEdit> {
         let array = self.existing_group(group)?.indices();
-        let offset = element_offset(array.payload_interval().0, array.word_count(), index, 4)?;
+        let offset = wire::element_offset(
+            417,
+            array.payload_interval().0,
+            array.word_count(),
+            index,
+            4,
+        )?;
         self.edit_offset(offset, &bits.to_le_bytes())
     }
     /// Replaces one existing wide pattern without floating conversion; e.g. `let edit = state.replace_wide(1, 0, 0x8000000000000000)?`.
@@ -21,7 +27,13 @@ impl FlowPairedState {
         let array = self.existing_group(group)?.wides().ok_or_else(|| {
             table_failure(417, FailureClass::Missing, format!("group {group} wide array None; expected a present wide array after a positive index count"))
         })?;
-        let offset = element_offset(array.payload_interval().0, array.word_count(), index, 8)?;
+        let offset = wire::element_offset(
+            417,
+            array.payload_interval().0,
+            array.word_count(),
+            index,
+            8,
+        )?;
         self.edit_offset(offset, &bits.to_le_bytes())
     }
     fn existing_group(&self, ordinal: usize) -> Result<FlowPairedStateGroup<'_>> {
@@ -47,10 +59,4 @@ impl FlowPairedState {
             carrier_edit,
         })
     }
-}
-fn element_offset(start: usize, count: usize, index: usize, width: usize) -> Result<usize> {
-    if index < count {
-        return Ok(start + index * width);
-    }
-    Err(table_index_error(417, "array element", index, count))
 }

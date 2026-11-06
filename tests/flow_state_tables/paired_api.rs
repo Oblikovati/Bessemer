@@ -101,17 +101,7 @@ fn check_wides(case: &fixture::StateCase, group: FlowPairedStateGroup<'_>) {
         return;
     };
     let field = expected_field(case, ordinal, "wide_patterns");
-    assert_eq!(array.as_bytes(), field.raw);
-    assert_eq!(array.word_count(), field.count as usize);
-    let origin = field.offset as usize;
-    assert_eq!(array.payload_interval(), (origin, origin + field.raw.len()));
-    let (chunks, remainder) = field.raw.as_chunks::<8>();
-    assert!(remainder.is_empty());
-    for (index, raw) in chunks.iter().enumerate() {
-        assert_eq!(array.raw_bits(index), Some(u64::from_le_bytes(*raw)));
-    }
-    assert_eq!(array.raw_bits(array.word_count()), None);
-    assert_eq!(array.raw_bits(usize::MAX), None);
+    crate::state_arrays::check_wides(array, field);
 }
 fn check_coverage(state: &FlowPairedState) {
     let coverage = state.coverage();
