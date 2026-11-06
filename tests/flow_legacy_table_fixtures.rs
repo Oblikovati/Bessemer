@@ -1,4 +1,6 @@
 //! Independent reconstruction of every raw legacy table field before the typed reader/editor.
+#[path = "flow_legacy_tables/api.rs"]
+mod api;
 #[path = "flow_legacy_tables/fixture.rs"]
 mod fixture;
 use fixture::*;
@@ -14,6 +16,7 @@ fn all_173_tables_rebuild_exact_wire_without_losing_context_presence_or_discarde
         }
         assert_eq!(raw, case.frame.decoded, "{}", case.frame.name);
         check_transport(&case.frame);
+        api::check_case(&case);
     }
 }
 

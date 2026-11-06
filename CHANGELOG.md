@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added complete legacy Flow pointer-index and raw-word table reads with isolated existing-field edits, explicit context checks and full carrier history. (#241)
+
 - Added exact Flow count-prefix views with retained opaque bodies and explicit conditional absent-map count binding for record-433 arrays. (#241)
 
 - Added bounded Flow root-storage index and local leaf-path projections, retaining complete source checkpoints and true depth-256 paths. (#241)

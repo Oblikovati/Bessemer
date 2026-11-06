@@ -1,0 +1,57 @@
+{
+  "feature_issue": 241,
+  "fixture_base": "494bf6e9",
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "rust_command": "cargo test --test flow_legacy_table_fixtures --test flow_count_binding_fixtures --locked",
+  "rust_exit_code": 0,
+  "legacy_table_tests_passed": 13,
+  "legacy_table_tests_failed": 0,
+  "legacy_table_tests_ignored": 1,
+  "clippy_command": "cargo clippy --lib --test flow_legacy_table_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "python_command": "python -m unittest discover -s docs/features/flow-legacy-tables -p test_tables.py -v",
+  "python_passed": 5,
+  "python_exit_code": 0,
+  "format_command": "cargo fmt --check",
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "views": 173,
+  "coverage": "Complete raw/zlib legacy 401 versions 0..3 and 405 versions 0..1, preserving context presence, empty bodies, discards, duplicate/signed pairs and every raw numeric bit. Independent decoded/pair/wide/word limits and exact EOF.",
+  "editing": "All owned existing fields: exact no-op identity/wire, independent complete decoded patch, full physical history, fresh reverse and original checkpoint isolation. Range context applies again on reparse.",
+  "failures": "All small proper prefixes/extensions; invalid options/count domains; unsupported versions; missing/unused contexts; malformed zlib boundaries/checksum/wrappers; foreign/stale/wrong IDs; invalid/missing fields; compressed growth beyond original payload limit.",
+  "concurrency": "Eight workers perform isolated edits and reversals after caller input mutation; all public types asserted Send/Sync.",
+  "native_census": {
+    "status": "running; no acceptance credit yet",
+    "command": "cargo test --test flow_legacy_table_fixtures every_native_existing_field --locked -- --ignored --nocapture",
+    "log": "target/flow-legacy-tables-native-census.log",
+    "expected_field_requests": 85344
+  },
+  "source_lf_sha256": {
+    "src\\flow\\legacy_tables\\edit\\select.rs": "0b3c1f4867fb6b9e40d80cccc99087a1ec642c105bd8606b61feb92b7eab92a5",
+    "src\\flow\\legacy_tables\\edit.rs": "23c4b33eedaace9d944c86b0671b8c42b1d78a991eb4efc5e1dd52eac62fabd1",
+    "src\\flow\\legacy_tables\\fields.rs": "536ec981d1e3bd4dc1516813334b0f84fd18a0545349d9dc38baeec6da80e424",
+    "src\\flow\\legacy_tables\\mod.rs": "0c15ed6fb205419e24dd3e9d7bba174b1013abea292d56f6cf8cbb7ca77447d0",
+    "src\\flow\\legacy_tables\\pointers.rs": "795d136ebc536944835e6eb06e92a3ff8ae73214a33ad99f4ebb136b81d016b2",
+    "src\\flow\\legacy_tables\\types.rs": "ae6652c0664c1957331cdb66405e8f4b7af197506edf3bf8c7678163fd8103be",
+    "src\\flow\\legacy_tables\\view\\checkpoints.rs": "86950e38fd7a0bee1e1235cd402138ea5b668e200c49fb4c07a9dabad76e3252",
+    "src\\flow\\legacy_tables\\view.rs": "b1dd15c5c8dcb63e22e4f57aafb2d7df1425d65c12ff443f848464a3d897a64d",
+    "src\\flow\\legacy_tables\\wire.rs": "03cba696f572b5d262a083ad8dc46021cea608225cc5e81d4ea7e7809b931ce7",
+    "src\\flow\\legacy_tables\\words.rs": "29f63984afd56074e04d860a5c067c12374ced717812f1f33f4e108a0b75cf26",
+    "tests\\flow_legacy_tables\\api.rs": "5501cbcc51092416a4c15741ee85ee9e446dfb32b7dea27dc9b18b03b5f3614f",
+    "tests\\flow_legacy_tables\\bounds.rs": "8ebf199e72b919b4e4ffe23aa2014f499ee9463f3420636fb9552a5e44e9546a",
+    "tests\\flow_legacy_tables\\edits.rs": "b610b26e1344ea07334fe3cf82cf0f9c28dbe11925b48d25f51edc0d45bf15b7",
+    "tests\\flow_legacy_tables\\fixture.rs": "d672e06396ac2c0b7f687b94a0216a58e82930ce55390548d638935159d98918",
+    "tests\\flow_legacy_tables\\patches.rs": "af166d5f9ee3425b848ca870da810e3bbe047ef6979618646dfe50c143de80bf",
+    "tests\\flow_legacy_table_fixtures.rs": "4ab123faf1e91a1689e4e0bbe1c79b6926f324e49da5b1ce2dd7a5cb6771f4b6"
+  },
+  "log_sha256": {
+    "target\\flow-legacy-tables-api-accepted-tests.log": "60ad06ed33a071b83eebe254b2dd92a4ce7a4557f0dd68ee2b5087c603689723",
+    "target\\flow-legacy-tables-api-accepted-clippy.log": "941e93389fc50c9ec48ba3638b944dbaedbd79340d00f391960aac116e3b8e26",
+    "target\\flow-legacy-tables-api-python-tests.log": "68a2817eea62a0f5c1ceda70ebf69bcc760690537634bcb94a113a4143a6d0ec"
+  },
+  "exclusions": [
+    "Native pointer population and record-405 engineering roles",
+    "Native application acceptance",
+    "Full gate at 7e23bb88 excludes this later implementation; focused validation only"
+  ]
+}

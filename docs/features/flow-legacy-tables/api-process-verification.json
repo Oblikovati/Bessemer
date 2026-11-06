@@ -1,0 +1,21 @@
+{
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "processes": 2,
+  "terminal_exit_codes": [
+    0,
+    0
+  ],
+  "bytes_per_process": 1075890,
+  "sha256": "327ae4e6cfdf773a099bb3f5b1eca964a2f7048b358d125160084737b3df61d9",
+  "all_process_bytes_equal": true,
+  "complete_independent_FLT1_packet_equal": true,
+  "views": 173,
+  "scope": "Complete typed read projections: decoded bytes, version, both contexts including presence, both groups, discarded fields, every array interval/raw bit and pair, and every record-405 word. Frame name, identifier, transport and stored bytes are frozen input framing.",
+  "edit_scope": "Owned and native field edits are verified separately by focused and explicit census tests; process comparison covers read projections only.",
+  "temporary_probe_sha256": "d4ebb93fee71bb220a8ab3fb07217f738698cdf4d315357dc2a36fb8edb523fe",
+  "exclusions": [
+    "Native pointer population",
+    "Engineering roles of record-405 words",
+    "Native application acceptance"
+  ]
+}
