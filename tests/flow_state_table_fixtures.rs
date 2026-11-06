@@ -3,6 +3,8 @@
 mod fixture;
 #[path = "flow_field_values/packet.rs"]
 mod packet;
+#[path = "flow_state_tables/stored_api.rs"]
+mod stored_api;
 #[path = "flow_field_values/stored_fields.rs"]
 mod stored_fields;
 use fixture::StateCase;

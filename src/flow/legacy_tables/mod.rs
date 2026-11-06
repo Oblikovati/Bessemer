@@ -13,6 +13,7 @@ mod pointers;
 mod primary_table;
 mod reference_groups;
 mod simple_tables;
+mod stored_state;
 mod types;
 mod view;
 mod wire;
@@ -31,6 +32,7 @@ pub use pointer_bodies::*;
 pub use primary_table::*;
 pub use reference_groups::*;
 pub use simple_tables::*;
+pub use stored_state::*;
 pub use types::*;
 use types::{GroupBodySpan, GroupSpan, TableWire};
 

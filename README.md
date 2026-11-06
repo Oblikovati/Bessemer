@@ -59,6 +59,9 @@ edit existing fields while preserving complete physical history.
 The [load-state view](docs/features/flow-load-state/README.md) reads record 11
 version 18 under an explicit load-mode assumption and edits raw fields and
 UTF-16 units while retaining exact string prefixes and carrier history.
+The [stored-state view](docs/features/flow-stored-state/README.md) reads record
+432's complete raw signed members and edits existing slots while reporting the
+native recomputation version rule separately from stored values.
 The [legacy link view](docs/features/flow-link-records/README.md) reads record 402
 and edits existing fields while preserving code bytes, sentinel references and versioned tails.
 The [legacy table view](docs/features/flow-legacy-tables/README.md) reads records
