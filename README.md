@@ -50,6 +50,9 @@ The [field-value view](docs/features/flow-field-values/README.md) reads record 1
 with its raw version prefix and explicit object/region layouts, projects supplied runtime widths and edits existing raw patterns.
 The [block-extra view](docs/features/flow-block-extras/README.md) reads record 408
 with explicit runtime context and edits revision-bound, typed existing fields.
+The [primary-table view](docs/features/flow-primary-table/README.md) reads record
+439 versions 0–3 and edits existing typed fields with exact raw framing and
+explicit primary-class selection.
 The [legacy link view](docs/features/flow-link-records/README.md) reads record 402
 and edits existing fields while preserving code bytes, sentinel references and versioned tails.
 The [legacy table view](docs/features/flow-legacy-tables/README.md) reads records

@@ -1,4 +1,6 @@
 //! Independent complete primary-class record439 fields and intervals.
+#[path = "flow_primary_table/api.rs"]
+mod api;
 #[path = "flow_primary_table/fixture.rs"]
 mod fixture;
 #[path = "flow_field_values/packet.rs"]

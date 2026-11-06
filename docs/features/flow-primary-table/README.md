@@ -2,8 +2,8 @@
 
 Issue: #241. Reference: `../inventor-interface/solidworks/flowrecord439.py`.
 
-Bessemer currently preserves record 439 as raw carrier bytes. This feature starts
-with the complete documented primary-class grammar for versions 0 through 3.
+Bessemer reads and edits record 439's complete documented primary-class grammar
+for versions 0 through 3 with `FlowCarrier::record_439_primary_table`.
 The reference binds that profile to native vtable `0x1809ec4b0`; the serialized
 bytes do not establish native object allocation or engineering meanings.
 
@@ -46,17 +46,41 @@ pins the distinction between an unused factory tag and a populated unsupported
 tag. Four Rust tests check complete reconstruction, native empty framing, all
 byte-valued roles, every typed stride and raw numeric pattern coverage.
 
-There is no production typed record-439 API yet. The implementation constraints
-are recorded in `design.md`; the existing raw carrier remains available.
+The typed view requires an explicit primary-class selection and raw transport.
+Independent aggregate limits bound payload bytes, items, elements, rows, wide
+blocks, scopes, field descriptors and stored values. Zero collection limits
+admit empty collections. Immutable scopes retain every physical ancestor and
+complete interval; field views retain exact encoding, count and stride without
+allocating one object per numeric value. Counts and version are read-only.
+Existing-field edits use revision-bound IDs, reparse the complete payload and
+require unchanged scope intervals and field layouts. No-ops keep the original
+checkpoint. Each completed edit returns both typed views and complete carrier
+history through `FlowPrimaryTableEdit::carrier_edit`. Native allocation,
+engineering meanings and application acceptance remain excluded.
 
 The separate F4EP packet supplies 1,402 expected fixed-shape edits for that API.
 The oracle changes a field in the reference reader's parsed tree, serializes the
 whole changed tree and reparses it before comparing the changed byte interval.
-This keeps the expected output independent of Bessemer's future patching code.
+This keeps the expected output independent of Bessemer's patching code.
 It covers versions zero through three, both groups, all four row layouts,
 optional-body values, wide blocks, unused factory tags and flag transitions to
 and from the exact-one native projection. Structural counts and version bytes
 are excluded. Python checks field locations against all 5,685 original payloads
 and regenerates F4EP in a temporary directory. Rust verifies each complete
 expected patch and its byte-for-byte reversal. These are oracle checks; they do
-not establish production editor or native application acceptance.
+not establish native application acceptance.
+
+The typed API tests compare all 5,685 complete payloads with their frozen Source
+values, field roles, ancestry and scope intervals. Every byte belongs to exactly
+one stored field element; independently counted descriptors retain present
+empty columns. All 1,402 expected edits run through the production editor, check
+complete carrier bytes and history, preserve no-op checkpoints and reverse from
+freshly opened results. Malformed checks span every supported version and
+factory, all reached count fields, proper prefixes, trailing bytes and unknown
+populated factories. Resource limits are checked at their exact bounds and one
+below. Fourteen public types have compile-time Send/Sync assertions; eight
+workers compare serial reads and isolated edits. Two fresh processes also
+compare complete canonical field transcripts, each checked against the Source
+tree. The subprocess worker is skipped as a standalone test and executed twice
+by its regular parent test. Full-gate and native-application acceptance are
+reported separately from these focused checks.

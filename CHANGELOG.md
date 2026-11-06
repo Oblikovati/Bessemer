@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added complete raw Flow record-439 primary-class tables for versions zero through three, with bounded immutable field/scope views and isolated fixed-field edits carrying full carrier history. (#241)
+
 - Added versioned evaluation for the three documented kind-one medium curve accessors, with exact input checks, source provenance and explicit arithmetic/error coverage. (#241)
 
 - Added complete fresh mixed-kind medium record read/edit profiles with typed reference maps, independent resource bounds and whole-carrier history. (#241)
