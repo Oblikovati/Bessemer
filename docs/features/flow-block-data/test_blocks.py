@@ -3,11 +3,33 @@ import gzip
 import struct
 import tempfile
 import unittest
+import zlib
 from pathlib import Path
 import freeze_blocks as baseline
+import process_reference
 
 
 class BlockBaselineTests(unittest.TestCase):
+    def test_process_oracle_requires_complete_expected_raw_carrier(self) -> None:
+        raw = baseline.owned_case(14, "populated", False)["decoded"]
+        wire = process_reference.carrier(raw)
+        process_reference.check_wire(wire, raw, False)
+        with self.assertRaises(AssertionError):
+            process_reference.check_wire(wire[:-1] + b"x", raw, False)
+
+    def test_process_oracle_checks_noncanonical_zlib_end_and_checksum(self) -> None:
+        raw = baseline.owned_case(14, "populated", False)["decoded"]
+        stored = zlib.compress(raw, 1)
+        process_reference.check_wire(process_reference.carrier(stored), raw, True)
+        for malformed in (stored[:-1], stored + b"x", stored + stored):
+            with self.assertRaises(AssertionError):
+                process_reference.check_wire(process_reference.carrier(malformed), raw, True)
+
+    def test_process_edit_scope_is_explicit_for_native_and_owned_views(self) -> None:
+        native = baseline.native_cases()[0]
+        self.assertEqual(len(process_reference.requests(native)), 53)
+        self.assertEqual(sum(len(process_reference.requests(case)) for case in baseline.owned_cases()), 4654)
+
     def test_regeneration_matches_owned_fixture(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

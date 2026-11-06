@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added complete legacy Flow block-data reads and isolated existing-field edits, with explicit leaf-count context and fresh full-grid cardinality derivation. (#241)
+
 - Added bounded Flow base-grid reads and isolated raw boundary-word edits with exact framing coverage, default tree bounds and complete carrier history. (#241)
 
 - Added bounded iterative Flow record-400 forest reads and isolated wire-field edits with explicit compression/bounds, preserved discarded fields and exact checkpoints. (#241)
