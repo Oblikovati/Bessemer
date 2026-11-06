@@ -1,0 +1,68 @@
+{
+  "issue": 241,
+  "source_revision_before_baseline": "cbc2eb29f66875c373078f9c89356d5b3a09a299",
+  "scope": "Complete record311 strict UTF-16 mode-zero framing and pure existing-state projections; production API pending",
+  "results": {
+    "rust_passed": 5,
+    "python_passed": 8,
+    "failed": 0,
+    "ignored": 0,
+    "clippy": "passed",
+    "format": "passed",
+    "function_file_caps": "passed",
+    "maximum_rust_body_lines": 17
+  },
+  "logs": {
+    "tests": {
+      "path": "target/flow-text-slots-baseline-tests.log",
+      "sha256": "e0a83746eaaa153e5bc0019894e014cc63be9cc08ffe06395ef2d5d1fcefad20"
+    },
+    "python": {
+      "path": "target/flow-text-slots-baseline-python.log",
+      "sha256": "c2ac23371934165b1408927a6fab56e53fd188ebfbb098688e4bf4b052796529"
+    },
+    "clippy": {
+      "path": "target/flow-text-slots-baseline-clippy.log",
+      "sha256": "13b47b7558831eaae1b3faa91f58c248a984586119ffa08825821ea5c362230f"
+    },
+    "format": {
+      "path": "target/flow-text-slots-baseline-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "coverage": {
+    "cases": 755,
+    "slots": 37750,
+    "stored_utf16_units": 284300,
+    "nonempty_native_prefixes": 3060,
+    "retained_previous_slots": 34690,
+    "distinct_utf16_code_units": 65536,
+    "native_cases": 1,
+    "native_slots": 50,
+    "native_units": 220
+  },
+  "helper_lf_sha256": {
+    "freeze_slots.py": "49815c66a03b2d495fa7ee3cc13aebccd66d7b67c51d481d21e3c8fe5c81970d",
+    "slot_requests.py": "fe3412c82c26f30df7c40d5c7657752712b27c9528cec2d845c88b3b2b29e1ef",
+    "test_slots.py": "b34178de04d0a35c1ca4e828d58d2b2881cf06601c6ff0d0bd852616615ed05c"
+  },
+  "oracles": [
+    "Complete original schema projection and native manifest",
+    "Independent code-unit first-NUL prefix bytes without Unicode normalization",
+    "Exact slot counts, spans, header and complete wire reconstruction",
+    "Literal all-code-unit, header-bit and boundary-length sets",
+    "Independent nonempty-prefix replacement versus complete previous-text preservation",
+    "Previous-state input snapshot remains unchanged",
+    "Temporary-root fixture and proof regeneration"
+  ],
+  "exclusions": [
+    "Typed reader, isolated editor and existing-state projection API pending",
+    "Full cargo xtask pr acceptance of this revision pending",
+    "Hosted matrix and sanitizer acceptance pending",
+    "Native owner-mode provenance not verified; mode zero is explicit",
+    "Native runtime text updates not executed",
+    "Engineering slot purposes not assigned",
+    "Native application not checked"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose review pending"
+}
