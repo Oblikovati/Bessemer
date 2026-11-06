@@ -1,17 +1,17 @@
 # Record 148 typed interoperability
 
-The reader will admit only raw version-zero bodies and require complete EOF. It
-will bound payload bytes, actual vector count and total raw-wide values before
-allocating vector metadata. All signed lengths will be validated before exposing
-the immutable view. Zero vectors and present-empty vectors will remain distinct;
-a zero total-value budget will still admit an all-empty length table within the
+The reader admits only raw version-zero bodies and requires complete EOF. It
+bounds payload bytes, actual vector count and total raw-wide values before
+allocating vector metadata. All signed lengths are validated before exposing
+the immutable view. Zero vectors and present-empty vectors remain distinct;
+a zero total-value budget admits an all-empty length table within the
 vector-count and payload-byte bounds.
 
-Each vector will expose its exact original interval through the existing raw
-wide-array view. Edits will replace existing patterns while preserving the full
-length table, vector count and physical order. They will copy the carrier, reparse
+Each vector exposes its exact original interval through the existing raw
+wide-array view. Edits replace existing patterns while preserving the full
+length table, vector count and physical order. They copy the carrier, reparse
 the complete replacement and return validation coverage, diagnostics and physical
-history. No-op edits and fresh reversals will preserve the raw carrier bytes.
+history. No-op edits and fresh reversals preserve the raw carrier bytes.
 
 Acceptance requires every owned vector read, independent expected byte patches,
 no-op preservation, full history, fresh reversals and exact resource boundaries.

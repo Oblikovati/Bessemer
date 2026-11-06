@@ -92,6 +92,9 @@ counted rows separate from the conditional legacy trailer.
 The [auxiliary wide-value view](docs/features/flow-aux-wide-values/README.md) reads
 record 444's whole-zlib versions 0–1 and edits existing raw patterns and the
 version-zero discarded member while retaining their serialized values.
+The [wide-vector view](docs/features/flow-wide-vectors/README.md) reads record
+148's complete length table and raw arrays and edits existing patterns while
+preserving physical vector order and stored-empty vectors.
 The [legacy link view](docs/features/flow-link-records/README.md) reads record 402
 and edits existing fields while preserving code bytes, sentinel references and versioned tails.
 The [legacy table view](docs/features/flow-legacy-tables/README.md) reads records

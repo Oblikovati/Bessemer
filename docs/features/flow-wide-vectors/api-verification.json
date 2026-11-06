@@ -1,0 +1,95 @@
+{
+  "issue": 241,
+  "source_revision_before_api": "0a96c055972fbd2759a1d011d3ae1235f4af7cfe",
+  "scope": "Complete raw record148 lengths-before-bodies layout with typed reads and isolated fixed-pattern edits",
+  "platform": "Windows x64; Rust 1.99.0; CARGO_BUILD_JOBS=1",
+  "results": {
+    "rust_passed": 14,
+    "rust_failed": 0,
+    "ignored_workers": 1,
+    "worker_invocations_by_parent": 2,
+    "python_passed": 8,
+    "clippy": "passed",
+    "format": "passed",
+    "function_file_caps": "passed; maximum function body 20 nonblank lines"
+  },
+  "commands": {
+    "tests": {
+      "command": "cargo test --locked --test flow_wide_vector_fixtures",
+      "exit_code": 0,
+      "log": "target/flow-wide-vectors-api-tests.log",
+      "sha256": "ea58025381dd2ca517b15d94812b4e744ba46c342b035350e05332876bbcc709"
+    },
+    "clippy": {
+      "command": "cargo clippy --locked --test flow_wide_vector_fixtures -- -D warnings",
+      "exit_code": 0,
+      "log": "target/flow-wide-vectors-api-clippy.log",
+      "sha256": "7cf35053be084fa94fa7ef38ab68e3b1b1fd198732865d962078f05a03e618af"
+    },
+    "format": {
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "log": "target/flow-wide-vectors-api-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "python": {
+      "command": "python -m unittest discover -s docs/features/flow-wide-vectors -p test_vectors.py",
+      "exit_code": 0,
+      "log": "target/flow-wide-vectors-api-python.log",
+      "sha256": "18dea38974adbfdd35a5191ee56aa58c8201b4808629e983559a292963c4fbfa"
+    }
+  },
+  "coverage": {
+    "cases": 394,
+    "vectors": 32912,
+    "stored_empty_vectors": 28339,
+    "raw_pattern_reads": 448818,
+    "pattern_edits": 16760,
+    "native_pattern_edits": 1,
+    "edit_policy": "Every element for each vector of at most 257 values; first/middle/last values for larger vectors",
+    "oracles": [
+      "Complete original schema projections and native manifest",
+      "Independent lengths-before-bodies layout and byte-length equation",
+      "Exact source vector body intervals and raw wide patterns",
+      "Literal expected byte patches",
+      "Unchanged complete length table",
+      "No-op raw wire preservation",
+      "Complete three-record physical history",
+      "Fresh complete raw carrier reversal"
+    ],
+    "contracts": [
+      "Three exact and one-below resource bounds",
+      "Zero vectors and stored-empty vectors with zero value budget",
+      "Total value budget enforced across multiple vectors",
+      "Unsupported versions, every small prefix and extension rejected",
+      "Negative and absurd counts/lengths and impossible totals rejected",
+      "Failed edits and foreign/wrong/stale record occurrences reject without changing inputs",
+      "Caller buffer mutation/drop and unrelated carrier edits remain isolated"
+    ],
+    "new_public_types_send_sync": 3,
+    "reused_public_types_send_sync": 4,
+    "concurrent_workers": 8,
+    "operations_per_worker": 32,
+    "process_replay": "Two fresh Source-verifying processes compared all reads and the same selected edits byte for byte"
+  },
+  "source_lf_sha256": {
+    "src/flow/legacy_tables/wide_vectors/edit.rs": "1d16a1978fbbd3761a27a358be0ed11358fc7b4b26bb2575186f5d1651255fb0",
+    "src/flow/legacy_tables/wide_vectors/mod.rs": "523c2065855742c5b3b8ea69fb2791860b8eb67160db3ea03d12cf8c1da627a1",
+    "src/flow/legacy_tables/wide_vectors/read.rs": "67a30c99cc3d633b2145e51c8f01f1dbd6570f68b953a3e659a034a4997b0d52",
+    "src/flow/legacy_tables/wide_vectors/view.rs": "c0af9306f9dab6dcfc39e2f1dad2240a1e5ec295ebdd8f21372fd1a9895560cc",
+    "tests/flow_wide_vectors/api.rs": "378e3472744a0973aa98fa95001c9e4964598250da97ccf1682f58e3ab544bfc",
+    "tests/flow_wide_vectors/contracts.rs": "92637b273aff4cc4e7b000899d62c0ba1c110a980ce59bb1b76c37d75e8cf255",
+    "tests/flow_wide_vectors/edit.rs": "eff57a3efefc8361fb2f2b5c188d84b711062ed84d192033adc32bc614914ea7",
+    "tests/flow_wide_vectors/replay.rs": "debdc64f8446d7e53fe95246b52f9a050f1a5b9a125166859b9e4b0d6a15ee56",
+    "src/flow/legacy_tables/mod.rs": "5e4fd16f3f84f41bc0465bc29f61274f2ece1ea1c4b774ee0fd2f41ebdff3401",
+    "tests/flow_wide_vector_fixtures.rs": "4f4950f1676680bdf848d21716a26242ed05477ecd2ba46637fcb29c01dfb834"
+  },
+  "exclusions": [
+    "Full workspace cargo xtask pr acceptance of this revision pending",
+    "Hosted matrix and sanitizer acceptance pending",
+    "Only a single-vector single-value native payload observed",
+    "Native runtime population and engineering roles not reproduced",
+    "Native application not checked"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose review pending"
+}

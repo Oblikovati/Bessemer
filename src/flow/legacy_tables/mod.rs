@@ -26,6 +26,7 @@ mod stored_state;
 mod tagged_state;
 mod types;
 mod view;
+mod wide_vectors;
 mod wire;
 mod words;
 use super::*;
@@ -55,6 +56,7 @@ pub use stored_state::*;
 pub use tagged_state::*;
 pub use types::*;
 use types::{GroupBodySpan, GroupSpan, TableWire};
+pub use wide_vectors::*;
 
 impl FlowCarrier {
     /// Reads one selected legacy pointer table; e.g. `let table = carrier.record_401_pointer_table(&id, options)?`.

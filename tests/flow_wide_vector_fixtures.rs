@@ -1,6 +1,12 @@
 //! Complete raw record148 projections preserve the full length table and empty vectors.
+#[path = "flow_wide_vectors/api.rs"]
+mod api;
 #[path = "flow_field_values/packet.rs"]
 mod packet;
+#[path = "flow_state_tables/carrier.rs"]
+mod state_carrier;
+#[path = "flow_state_tables/process.rs"]
+mod state_process;
 use packet::*;
 use std::collections::BTreeSet;
 
