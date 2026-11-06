@@ -12,6 +12,7 @@ mod payload_codec;
 mod settings;
 mod settings_body;
 mod settings_fields;
+mod trees;
 mod types;
 use crate::{BessemerError, FailureClass, Result};
 pub use arrays::*;
@@ -25,6 +26,7 @@ pub use settings::*;
 pub use settings_body::*;
 pub use settings_fields::*;
 use std::sync::Arc;
+pub use trees::*;
 pub use types::*;
 
 #[derive(Debug)]

@@ -2,7 +2,7 @@
 
 Specification 14.40 defines record 400's legacy eight-child wire grammar for
 versions 0–3 and the inactive prefix of later delegated versions. The FBT1 fixture
-pins that grammar before a typed bounded reader and editor are introduced.
+pins that grammar independently of the typed bounded reader and editor.
 
 The 81 cases contain one native CPT zlib payload and 80 owned raw/zlib cases.
 The native payload has 340 stored bytes and 8,908 decoded bytes. Its 792 present
@@ -33,13 +33,32 @@ directories and retain the frozen golden bytes.
 
 Run `cargo test --test flow_block_tree_fixtures` and
 `python -m unittest discover -s docs/features/flow-block-trees -p test_trees.py`.
-The typed reader/editor remain next work, with bounded decoded bytes, roots,
-nodes and depth checked before publication. Caller bounds and compression must
-stay explicit. Native parallel block-vector order, validation against global
+`FlowCarrier::record_400_trees` reads a revision-bound occurrence with explicit
+compression, optional legacy bounds and independent decoded-byte, root, node and
+depth limits. `FlowTreeBounds` retains all signed pairs and computes the exact
+u128 grid product. A flat node table and explicit pending-task stack keep parsing,
+publication and drop independent of recursive tree ownership. Empty leaves share
+an immutable empty child slice. Published views retain every root/node interval,
+child link, raw marker, discarded field, source checkpoint and accepted options.
+
+`replace_field` edits existing leaf markers, child-prefix bytes, version-2 leaf
+words and stored root presence bytes while retaining their null/non-null branch.
+It checks the complete decoded patch by reparsing the full output carrier and
+forest, then returns source/result typed views and complete physical occurrence
+history. No-op edits preserve the original stored bytes and record identity.
+Fresh opposite raw edits restore exact carrier bytes. Fresh zlib reversals restore
+decoded bytes; the earlier checkpoint retains exact original compressed bytes.
+Structural changes to roots, bounds, versions or split cardinality remain
+separate work. Active delegated layouts fail explicitly.
+
+The typed checks run with `cargo test --test flow_block_trees --test flow_block_tree_fixtures --test flow_groups --test flow_arrays`.
+The full native field census is explicit:
+`cargo test --test flow_block_trees every_native_stored_wire_field -- --ignored --nocapture`.
+Caller bounds and compression remain explicit. Native parallel block-vector order, validation against global
 base-grid dimensions, delegated active layouts and application acceptance remain
 separate requirements. Wire node/leaf counts alone do not identify record 406's
 runtime context or record 433's expected count.
 
 Decoded/stored tree measures use different byte bases and supply no additional
-global semantic coverage claim. This fixture baseline adds no production API.
+global semantic coverage claim.
 The maintainer humanizer pass remains for review because that skill is unavailable.

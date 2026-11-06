@@ -30,6 +30,8 @@ The [feature identity list](docs/features/flow-feature-identities/README.md) rea
 record 143 and edits existing fields, raw UTF-16 strings and stored tail values.
 The [mapped-object view](docs/features/flow-mapped-objects/README.md) reads record
 144 with explicit matched-count context and edits existing state, pair and numeric fields.
+The [block-tree view](docs/features/flow-block-trees/README.md) reads record 400's
+legacy wire forests and inactive delegated prefixes, with isolated existing-field edits.
 
 `bessemer::electrical` reads and edits complete Electrical ZIP32 project carriers
 and lexical ASCII Archive.ini records. It preserves duplicate occurrences,

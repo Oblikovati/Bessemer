@@ -7,9 +7,17 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 from freeze_trees import ROOT, UNIT, FULL, owned_decoded, native_cases, freeze, header, flowblocktrees
 from swarchive import ArchiveError
+from process_reference import edit_cases, requests, cases
 
 
 class TreeFixtures(unittest.TestCase):
+    def test_complete_native_and_owned_process_request_shapes(self) -> None:
+        selected = cases()
+        native = requests(selected[0])
+        self.assertEqual(len(native), 8424)
+        self.assertEqual(native[0], (0, 0, 0, 29, b"\0", b"\1"))
+        self.assertTrue(all(len(request[4]) == len(request[5]) for _, request in edit_cases()))
+
     def test_native_full_eight_child_forest(self) -> None:
         native, audit = native_cases()
         self.assertEqual([row["present"] for row in audit], [False, True, False])
