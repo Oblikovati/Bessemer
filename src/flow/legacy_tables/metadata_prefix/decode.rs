@@ -121,7 +121,11 @@ fn object(cursor: &mut ArchiveCursor<'_>, raw: &[u8], remaining: &mut usize) -> 
         state,
     })
 }
-fn text(cursor: &mut ArchiveCursor<'_>, raw: &[u8], remaining: &mut usize) -> Result<TextSpan> {
+pub(super) fn text(
+    cursor: &mut ArchiveCursor<'_>,
+    raw: &[u8],
+    remaining: &mut usize,
+) -> Result<TextSpan> {
     let start = raw.len() - cursor.remaining();
     let count = bounded_count(cursor, 2, *remaining, "metadata UTF-16 units")?;
     let bytes = cursor.take(count * 2)?;

@@ -40,8 +40,54 @@ generation, rejects all proper prefixes of small and native bodies, checks every
 unsupported version at the body and seven curve positions, and rejects negative
 or physically impossible counts, invalid string modes and missing terminators.
 
-This is a fixture baseline for the typed body implementation. It establishes
-complete serialized body framing under explicit native UTF-16 mode zero. It
-adds no production body reader or editor, complete backend/outer-reference
-profile, engineering interpretation, curve evaluation or native runtime and
-application acceptance. Those remain required work toward schema parity.
+This independent fixture baseline predates the typed body API below. Its scope
+is complete serialized body framing under explicit native UTF-16 mode zero.
+Complete backend/outer-reference profiles, engineering interpretation, curve
+evaluation and native runtime/application acceptance remain separate requirements.
+
+## Typed body API
+
+`FlowMediumBackendPrefix::first_kind_one_body` requires the first-table kind-one
+boundary and explicit positive limits on consumed body bytes, total wide patterns
+and stored name units. Following bytes do not spend the body-byte bound. Physical
+array extents and wide-word budgets are checked before taking each borrowed span.
+The decoder reuses the metadata UTF-16 dialect and existing raw wide-array views.
+It allocates fixed curve metadata rather than one object per numeric value.
+
+`FlowMediumKindOne` retains its immutable backend and carrier checkpoints. It
+exposes the base byte and key, lossless name, all seven curve views, shared arrays,
+final scalars and complete stored state byte. `FlowMediumWideField` selects a
+curve scalar, a physical curve-array role, one of six shared arrays or the final
+four scalars. Array intervals use record-payload offsets; curve intervals are
+relative to the body. Inactive extra arrays are absent selections, while active
+zero-count arrays are completed empty views.
+
+Existing base/key/state bytes, wide patterns, curve flags and name units can be
+edited. Flag replacements retain their zero/nonzero presence branch, and name
+edits retain counts and terminal NULs. Each edit reopens the complete carrier,
+metadata prefix, backend boundary and body, checks every structural interval and
+the complete patched payload, and retains typed before/after checkpoints with all
+physical history relations. Exact no-ops preserve identity; fresh reversals
+reproduce the original full carrier. Count and version framing are read-only.
+
+The focused suite matches every field and interval across all 912 views. Every
+existing field in small arrays/strings and both endpoints of larger ones receives
+no-op, independent patch, full history and fresh reverse checks. This includes
+all 1,611 native wide patterns, six name units, three base/key/state fields and
+seven flags in each native body view. Read-only version/count framing is checked
+against the independent fixtures and malformed-input controls.
+
+The complete native record also composes through its actual metadata and backend
+boundaries: the body occupies payload bytes 138 through 13,111, leaving 80 bytes
+untouched. Name edits recompute first-NUL text without normalizing surrogates.
+Stored state zero remains zero even though the explicit native loaded-state
+projection returns one. Tests cover independent exact/one-below/zero limits,
+small truncations, all unsupported body/curve version bytes, invalid counts,
+wrong kinds, missing arrays, invalid indices, terminal-NUL removal and branch
+changes. Eight public types are asserted Send/Sync; eight workers match complete
+reads and edited carriers after caller input mutation. Two fresh processes
+reproduce the entire independent FMO1 packet byte for byte.
+
+Coverage reports complete body framing and `full_record_schema = false`.
+Engineering meanings, numeric evaluation, following references/outer collections,
+native runtime state and application acceptance remain explicitly unchecked.

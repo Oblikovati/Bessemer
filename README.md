@@ -1038,3 +1038,8 @@ Record 424's metadata view also reads the documented medium-backend boundary,
 retaining reached counts, kind tags and conditional keys. Existing-field edits
 preserve framing and all opaque body bytes; complete medium objects remain
 outside this prefix API.
+
+The [medium kind-one body API](docs/features/flow-medium-objects/README.md)
+reads and edits the complete first reached kind-one body, retaining every raw
+wide pattern, curve flag, name unit and following byte. Body framing is checked
+independently of the remaining reference tables and outer-record collections.

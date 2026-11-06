@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added complete Flow medium kind-one body reads and isolated fixed-field edits with raw numeric patterns, lossless names and explicit body-versus-record coverage. (#241)
+
 - Added exact Flow medium-backend prefix reads and isolated header/key edits with explicit populated-object stops and preserved opaque tails. (#241)
 
 - Added bounded Flow metadata-prefix reads and isolated fixed-field edits with lossless UTF-16 projections and exact opaque-backend preservation. (#241)
