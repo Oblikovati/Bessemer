@@ -1,0 +1,13 @@
+{
+  "views": 81,
+  "edit_requests": 8982,
+  "changed": 8974,
+  "noop_after_requests": 8,
+  "processes": 2,
+  "bytes_per_process": 16393302,
+  "sha256": "872d9206050ec87ebca94c2d31c7a68c68553e3b46c16deb91509e7ca75831a2",
+  "comparison": "Two fresh Rust processes equal byte for byte; independent Source views and strict complete-carrier decoded patch checks",
+  "native_execution": false,
+  "compression_scope": "Changed zlib streams validated for exact checksum/termination and decoded bytes, without a canonical compressed-wire oracle",
+  "reversals": "Every request reverses decoded bytes exactly; raw reversals and all original checkpoints restore exact wire bytes"
+}

@@ -1,0 +1,15 @@
+{
+  "views": 273,
+  "requests": 4707,
+  "changed": 3953,
+  "noop_after_requests": 754,
+  "native_sample_requests": 53,
+  "owned_requests": 4654,
+  "processes": 2,
+  "bytes_per_process": 32959502,
+  "sha256": "92958f36a8330594ce05f824711458894de9ca3957320412699077509bd6c468",
+  "comparison": "Two fresh Rust processes match byte for byte; complete frozen Source views and independent whole-carrier patches",
+  "native_execution": false,
+  "native_edit_scope": "First and last bitmap bytes, blocks and entries plus both global count fields in process comparison; separate full Rust native census passed all 125471 requests",
+  "compression_scope": "Strict complete checksum-validated RFC 1950 decoded patches without canonical compressed-wire comparison"
+}

@@ -1,0 +1,18 @@
+{
+  "command": "cargo xtask pr",
+  "terminal_exit_code": 0,
+  "source_commit": "5c851c2947a1d9f2dc512d13984deee17bc1395f",
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "log": "target\\flow-block-data-combined-full-pr-gate.log",
+  "log_sha256": "f125136696da48a9092e0751ec895d3c0af035dbf49575006b2d4b26badcda9d",
+  "result_summaries": 373,
+  "passed": 4575,
+  "failed": 0,
+  "ignored": 238,
+  "scope": "Base-grid fixtures/API, complete legacy block-data fixtures/API and root-index fixture baseline, plus earlier work",
+  "exclusions": [
+    "Subsequent root-index projection implementation",
+    "Subsequent private global-count extraction and conditional count-binding fixtures/API",
+    "No native application acceptance or remote CI credit"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "command": "cargo xtask pr",
+  "terminal_exit_code": 0,
+  "source_commit": "b8b5aaac97bab2d8dbd1eb89465b26676a75206a",
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "log": "target\\flow-legacy-tables-combined-full-pr-gate.log",
+  "log_sha256": "8baa54c5729cc1cbe48db91eba58271f8913de24af50a071a73466ca81e522be",
+  "result_summaries": 375,
+  "passed": 4599,
+  "failed": 0,
+  "ignored": 239,
+  "scope": "Complete legacy record-401/405 fixtures and typed reader/editor, plus root-index/count-binding and earlier work",
+  "exclusions": [
+    "Later record-402 fixtures, API and structural alternate-parse regression",
+    "Later record-408 fixtures and reader/editor work",
+    "No native application acceptance or remote CI credit"
+  ]
+}

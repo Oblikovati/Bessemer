@@ -1,0 +1,27 @@
+{
+  "command": "cargo test --test flow_block_data --test flow_block_data_fixtures --test flow_count_binding_fixtures --locked",
+  "terminal_exit_code": 0,
+  "passed": 20,
+  "failed": 0,
+  "ignored": 1,
+  "clippy_command": "cargo clippy --lib --test flow_block_data --test flow_count_binding_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "fixture_hashes": {
+    "tests\\fixtures\\flow-block-data\\blocks.bin.gz": "827fe20a98871760636c49d35c319786342b86736202372b362188007bfcc5af",
+    "tests\\fixtures\\flow-count-binding\\binding.bin.gz": "f1f68bd3bd9fe23918e1a5e132d325b2067c3f073d6228da94676a3f26986a40"
+  },
+  "source_lf_sha256": {
+    "src\\flow\\global_counts.rs": "ee641302301172a021c5f5c32ce837895144d66a4b1d38a95b3f055ed483bbf1",
+    "src\\flow\\block_data\\decode.rs": "8d1a32e7b078797c893c493e8d4bc17eef19e5f2a5d514684f789d4472256b6f",
+    "src\\flow\\mod.rs": "49c989d7a1d952d9977116ad7f09f93088f39652c0ead7b4f583f181d61dd92f"
+  },
+  "log_sha256": {
+    "target\\flow-shared-counts-refactor-tests.log": "e218340d55977bbb54f945417febea866d9374b493e1f028f7e75f81edc69707",
+    "target\\flow-shared-counts-refactor-clippy.log": "c8859ce892d36bb5845a938f84aade83acc4e14a94f055955ae5b994731d013c"
+  },
+  "scope": "Private extraction only: same cursor reads, signed profile, mathematical/native totals, legacy version gate and negative-count error text/operation/entity",
+  "prior_native_census_commit": "8c8102f9ed69e67b0231397d273ff95c1415e451",
+  "native_census_scope": "Prior full native census is historical credit for 8c8102f9, not a rerun after this private extraction",
+  "public_surface_changed": false
+}

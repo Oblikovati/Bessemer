@@ -1,0 +1,31 @@
+{
+  "feature_issue": 241,
+  "input_api_commit": "8c8102f9ed69e67b0231397d273ff95c1415e451",
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "rust_command": "cargo test --test flow_root_index_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 1,
+  "rust_failed": 0,
+  "clippy_command": "cargo clippy --test flow_root_index_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "python_command": "python -m unittest discover -s docs/features/flow-root-indices -p test_indices.py -v",
+  "python_exit_code": 0,
+  "python_passed": 4,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "scope": "Frozen root storage/stride arithmetic and full local child-path replay on existing grid/tree APIs; no new projection public API yet",
+  "source_lf_sha256": {
+    "tests\\flow_root_index_fixtures.rs": "21211a70dfbd83e74b5b8a6f7853edac6949d25f9db092584dbbe4f3c25bf9b2",
+    "tests\\flow_root_indices\\fixture.rs": "9d25ea337cd22187e0b8d4ee28ca5d4aef22782ca5991f7760e5d72c719e00d6"
+  },
+  "log_sha256": {
+    "target\\flow-root-indices-baseline-tests.log": "bbfd8705c315991085fe1fb31d5a791c6ee7e0237bb37a7f6be3119df0329828",
+    "target\\flow-root-indices-baseline-clippy.log": "4b0e9592b74d3692bedb22b4d267ffd22a8bc9674274419cd01d8e7763352543",
+    "target\\flow-root-indices-baseline-python-tests.log": "de06988fbe0dd1edd7c07973f07880792d17332f2a529786ea0a7db5be60f1ff"
+  },
+  "exclusions": [
+    "No native context execution",
+    "No global block ordinals or validated parallel scan offsets",
+    "No native application acceptance"
+  ]
+}

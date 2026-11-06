@@ -54,6 +54,27 @@
 
 ### Added
 
+- Added complete legacy Flow link-record reads and isolated fixed-field edits with sentinel-aware reference bounds and preserved versioned tails. (#241)
+- Added complete legacy Flow pointer-index and raw-word table reads with isolated existing-field edits, explicit context checks and full carrier history. (#241)
+
+- Added exact Flow count-prefix views with retained opaque bodies and explicit conditional absent-map count binding for record-433 arrays. (#241)
+
+- Added bounded Flow root-storage index and local leaf-path projections, retaining complete source checkpoints and true depth-256 paths. (#241)
+
+- Added complete legacy Flow block-data reads and isolated existing-field edits, with explicit leaf-count context and fresh full-grid cardinality derivation. (#241)
+
+- Added bounded Flow base-grid reads and isolated raw boundary-word edits with exact framing coverage, default tree bounds and complete carrier history. (#241)
+
+- Added bounded iterative Flow record-400 forest reads and isolated wire-field edits with explicit compression/bounds, preserved discarded fields and exact checkpoints. (#241)
+
+- Added bounded Flow record-144 mapped-object reads and isolated state, pair and numeric edits with explicit runtime cardinalities and complete version-5 blocks. (#241)
+
+- Added bounded Flow record-143 identity reads and isolated field, counted UTF-16 string and stored-tail edits with explicit virtual legacy-tail context. (#241)
+
+- Added strict Flow record-511 versioned body reads and isolated member edits with explicit legacy runtime context and preserved raw representations. (#241)
+
+- Added ordered Flow GUID lookup and related-carrier selection with explicit result types, nil-key behavior and CPT/settings lookup gates. (#241)
+
 - Added seven Flow settings diagnostic projections with preserved stored bits and explicit unresolved integer-guard and floating-point prerequisites. (#241)
 
 - Added strict Flow record-7/102 settings-array reads and isolated slot edits with preserved integer and binary64 bit patterns. (#241)

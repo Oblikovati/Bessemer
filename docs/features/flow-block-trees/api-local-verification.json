@@ -1,0 +1,54 @@
+{
+  "feature_issue": 241,
+  "fixture_base": "e15b8128",
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "rust_command": "cargo test --test flow_block_trees --test flow_block_tree_fixtures --test flow_groups --test flow_arrays --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 36,
+  "rust_failed": 0,
+  "rust_ignored": 3,
+  "clippy_command": "cargo clippy --lib --test flow_block_trees --test flow_block_tree_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "python_command": "python -m unittest discover -s docs/features/flow-block-trees -p test_trees.py -v",
+  "python_passed": 5,
+  "python_exit_code": 0,
+  "format_exit_code": 0,
+  "views": 81,
+  "native_census": {
+    "command": "cargo test --test flow_block_trees --locked every_native_stored_wire_field -- --ignored --nocapture",
+    "exit_code": 0,
+    "passed": 1,
+    "fields": 8424,
+    "test_seconds": 9.92,
+    "wall_seconds": 10.2876336,
+    "checks": "Every field no-op, changed complete decoded payload, fresh logical reverse, unselected records and physical history"
+  },
+  "concurrency": "Eight workers; source input buffer mutated after publication; immutable shared source and isolated edits",
+  "bounds": "All small owned proper prefixes and extensions; exact and one-below decoded/root/node/depth caps; depth 255/256; inactive u128 grid 2^96; malformed zlib and revision identities; measured compressed growth rejection",
+  "source_lf_sha256": {
+    "src\\flow\\trees\\decode.rs": "cdcb5942e48a8463ef0e955628449cc7efe7e7fd1bb2a78892c56291917e1e30",
+    "src\\flow\\trees\\edit.rs": "e20cd36e72cd3dd795d49775e3ce6d304f7b2b8d7251b44010039995479ada0c",
+    "src\\flow\\trees\\forest.rs": "d5dd9fe70666010843f4d195c80249164b08df4921544cd878a79b6e3d40b5fd",
+    "src\\flow\\trees\\mod.rs": "36297c390454a2fc20bc51c930819deebadcfa10906f66bb110be6742cfc5234",
+    "src\\flow\\trees\\types.rs": "5e86f980ea02ce849e2e25039a5347208583f866d2a277d17bf8fcf8a446ecef",
+    "src\\flow\\trees\\view.rs": "0e765fc7cddba91aa9bac9a8b95306bf4649e07f7d4e45c8ec007fe08e4bddac",
+    "tests\\flow_block_trees\\bounds.rs": "49e519b8c4d020e50ce7195f85663ad66bd15c948c163b8433be1926b458ee79",
+    "tests\\flow_block_trees\\checks.rs": "de157ed43c637d848635ca1a5fdd0f782b074579882f9b9632c8bb1e871879af",
+    "tests\\flow_block_trees\\edits.rs": "7b2ec4b0e29f1cee49ea307e53984dc3686f1dbd426e7112cd069338140270f3",
+    "tests\\flow_block_trees\\fixture.rs": "c55834f8986e8c7d79f8746bee965b677778046d2c693ae486811f300c45161f",
+    "tests\\flow_block_trees.rs": "63e46247b88bd2a7117eeab3d4664320805aa23aa872c32886214ea568f5a42d"
+  },
+  "log_sha256": {
+    "target\\flow-block-trees-api-final-tests.log": "2a13cb367a39b9d5bae0542dd728b4eac9dd99602a10ba58279c87175dbb8fc5",
+    "target\\flow-block-trees-api-final-clippy.log": "1106a9ad310fb7dad1e52e800dd675c5047c745442ba576f2a79c2ffc481d595",
+    "target\\flow-block-trees-native-census.log": "017161a38946312e828a2dd3b6bc48aab348f0e59778c5e20e5812ac60dbb891",
+    "target\\flow-block-trees-api-python-tests.log": "5119a812e78c31f5ee15a414cb95025975fefc2fc185f9c9ce1c239345fcf57e"
+  },
+  "exclusions": [
+    "Native application and native block-vector ordering not validated",
+    "Global grid binding and owner compression context supplied explicitly",
+    "Structural changes to bounds, versions, node cardinalities or split topology excluded",
+    "Previous full gate on 58a5ad52 excludes this implementation; next combined gate required",
+    "No peak-memory or prior-release benchmark claim; no complete schema parity claim"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "feature_issue": 241,
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "rust_command": "cargo test --test flow_block_data_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 2,
+  "rust_failed": 0,
+  "clippy_command": "cargo clippy --test flow_block_data_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "python_command": "python -m unittest discover -s docs/features/flow-block-data -p test_blocks.py -v",
+  "python_exit_code": 0,
+  "python_passed": 4,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "source_lf_sha256": {
+    "tests\\flow_block_data_fixtures.rs": "a233c2531c305e0a534121ed196d91cd78a06e3e39b46015458b8bfe9d6037b0",
+    "tests\\flow_block_data\\fixture.rs": "1012214cae766010a58576a853d75769b1c3812dbbe5d5f660410fc61e712c1a"
+  },
+  "log_sha256": {
+    "target\\flow-block-data-baseline-tests.log": "d2014b8c9f28bc2529fa5f720f228e8b638a3b2d86c5903dca9481e64e48ec1f",
+    "target\\flow-block-data-baseline-clippy.log": "40a3413264493879d774a7dac19916baf433c228b27a18862b401363be626f55",
+    "target\\flow-block-data-baseline-python-tests.log": "e3e6a370874581117c12b72101bfe40745f0beec21ca285c7d59c92abbe56aca"
+  },
+  "scope": "Fixture baseline only. Native full decoded payload rebuilt through EOF; runtime block/tree ordering and native flags remain unproved. Combined gate on ff7b855f excludes this later baseline."
+}

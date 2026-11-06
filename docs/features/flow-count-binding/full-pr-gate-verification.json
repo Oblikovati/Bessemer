@@ -1,0 +1,17 @@
+{
+  "command": "cargo xtask pr",
+  "terminal_exit_code": 0,
+  "source_commit": "7e23bb88239d07935d7078a290b0f4355bb66b7e",
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "log": "target\\flow-count-binding-combined-full-pr-gate.log",
+  "log_sha256": "a1e294d2c1847e2295e31761c3499140e3ea3b14016087704d5c739dc5f091f3",
+  "result_summaries": 374,
+  "passed": 4586,
+  "failed": 0,
+  "ignored": 238,
+  "scope": "Root-index projection, shared global-count extraction and conditional count-binding fixtures/API, plus earlier work",
+  "exclusions": [
+    "Subsequent legacy record-401/405 fixtures and reader/editor implementation",
+    "No native application acceptance or remote CI credit"
+  ]
+}

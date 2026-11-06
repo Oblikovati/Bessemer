@@ -1,22 +1,43 @@
 //! Bounded ordinary physical Flow carriers, specification 14.29; payload schemas remain separate.
 mod arrays;
+mod base_grid;
+mod block_data;
+mod count_binding;
 mod decode;
 mod edit;
+mod feature_identities;
 mod fixed_settings;
+mod global_counts;
 mod groups;
 mod header;
+mod legacy_tables;
+mod links;
+mod mapped_objects;
 mod payload_codec;
+mod root_indices;
 mod settings;
+mod settings_body;
 mod settings_fields;
+mod trees;
 mod types;
 use crate::{BessemerError, FailureClass, Result};
 pub use arrays::*;
+pub use base_grid::*;
+pub use block_data::*;
+pub use count_binding::*;
+pub use feature_identities::*;
 pub use fixed_settings::*;
 pub use groups::*;
 pub use header::*;
+pub use legacy_tables::*;
+pub use links::*;
+pub use mapped_objects::*;
+pub use root_indices::*;
 pub use settings::*;
+pub use settings_body::*;
 pub use settings_fields::*;
 use std::sync::Arc;
+pub use trees::*;
 pub use types::*;
 
 #[derive(Debug)]

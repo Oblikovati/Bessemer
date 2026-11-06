@@ -1,0 +1,32 @@
+{
+  "feature_issue": 241,
+  "production_base": "58a5ad52",
+  "phase": "Independent populated-record-144 oracle before typed API",
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0",
+  "rust_command": "cargo test --test flow_mapped_object_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 2,
+  "python_command": "python -m unittest discover -s docs/features/flow-mapped-objects -p test_mapped.py -v",
+  "python_exit_code": 0,
+  "python_passed": 4,
+  "clippy_command": "cargo clippy --lib --test flow_mapped_object_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "cases": 192,
+  "oracle": "Source-normalized complete entries, all raw numeric words, signed pairs, explicit matched counts and full version-5 blocks; independent Rust whole-payload reconstruction",
+  "native_scope": "One empty eight-byte payload and two absent records; populated cases synthetic",
+  "exclusions": [
+    "No new production API; bounded typed reader and wire edits remain next",
+    "No runtime matching or native-context validation",
+    "No additional native-byte ledger credit",
+    "Full gate 83746 is running on 58a5ad52 and excludes this baseline",
+    "No complete Flow or global schema parity claim"
+  ],
+  "log_sha256": {
+    "target/flow-mapped-objects-baseline-tests.log": "b2331b48597f5b95f82c25039697dca3f3f803ab905393c7157e72498973e07f",
+    "target/flow-mapped-objects-baseline-clippy.log": "7143f321f6a993a7df059ac2735e4bef0ccaae181af895bcc18a54442796b4c2",
+    "target/flow-mapped-objects-python-tests.log": "6bbfc61b3ea87c76cc2376bf713a4b529e352b64e19db8d4040289c79d0c2667"
+  }
+}

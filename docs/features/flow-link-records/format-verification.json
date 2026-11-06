@@ -1,0 +1,19 @@
+{
+  "command": "cargo fmt",
+  "terminal_exit_code": 0,
+  "repository_edition": "2024",
+  "reason": "The first later full gate rejected standalone edition-2021 formatting; corrected repository formatting without semantic changes or baseline changes",
+  "failed_gate_source": "299bc7b2159e368ed488f965dcf24f6ec2089c4e",
+  "failed_gate_exit_code": 1,
+  "failed_gate_log": "target/flow-link-records-combined-full-pr-gate.log",
+  "failed_gate_log_sha256": "a739e2f6c256fb680ff9582f26835632fe73bc7d3dc9ca427f18c6cc6ce505e4",
+  "formatted_source_lf_sha256": {
+    "src/flow/legacy_tables/link_records/decode.rs": "5c8704d3e5b31bc0c674b700bf090f019154ea6958039db5656c380b626a7abf",
+    "src/flow/legacy_tables/link_records/edit.rs": "5716c4ac1c037552c270fe3b2666d5b1ddfa8ad5f1087cfe1566015ed9cdb6fd",
+    "tests/flow_link_record_fixtures.rs": "79d7f0dbe53104518c65f74c9a397e067a6946997d8b9f465e63433256fd066c",
+    "tests/flow_link_record_structure.rs": "96ddad6e066711ca29de2d6d33feb1845a861ef91910d378677833f02663fdca",
+    "tests/flow_link_records/bounds.rs": "28d08070cd9450a5a797b34ff9e360105cfc238b0bf639b403eff713fe0f849b",
+    "tests/flow_link_records/edits.rs": "e97459a3e8e9819a4e8033ade7c8ad3c066fb31ec2e6d13c20397fd61412e5f4"
+  },
+  "native_census_note": "The running native census uses frozen f9128e74; no retrospective acceptance credit is assigned to later changes. These listed changes only apply repository formatting."
+}

@@ -22,6 +22,28 @@ The [fixed settings arrays](docs/features/flow-fixed-settings/README.md) read re
 7/102 and edit existing raw slots while preserving integer and binary64 bits.
 The [diagnostic field projection](docs/features/flow-settings-fields/README.md)
 derives seven documented labels with explicit missing guard and floating-point context.
+The [related-carrier lookup](docs/features/flow-links/README.md) searches explicit
+candidate order by typed GUID roles and preserves the CPT/settings lookup gates.
+The [versioned settings body](docs/features/flow-settings-body/README.md) reads
+record 511 versions 0–11 and edits present members with explicit legacy runtime context.
+The [feature identity list](docs/features/flow-feature-identities/README.md) reads
+record 143 and edits existing fields, raw UTF-16 strings and stored tail values.
+The [mapped-object view](docs/features/flow-mapped-objects/README.md) reads record
+144 with explicit matched-count context and edits existing state, pair and numeric fields.
+The [block-tree view](docs/features/flow-block-trees/README.md) reads record 400's
+legacy wire forests and inactive delegated prefixes, with isolated existing-field edits.
+The [base-grid view](docs/features/flow-base-grid/README.md) reads record 101's
+dimensions and raw boundary words and edits existing words on isolated copies.
+The [legacy block-data view](docs/features/flow-block-data/README.md) reads record
+406 versions 1–17 with explicit leaf context and edits existing fields with complete history.
+The [root-index projection](docs/features/flow-root-indices/README.md) derives native
+root storage offsets and complete local leaf paths under an explicit fresh-grid assumption.
+The [count-prefix and conditional binding view](docs/features/flow-count-binding/README.md)
+retains record 406's opaque body and binds record 433 only under an explicit absent-map initialization assumption.
+The [legacy link view](docs/features/flow-link-records/README.md) reads record 402
+and edits existing fields while preserving code bytes, sentinel references and versioned tails.
+The [legacy table view](docs/features/flow-legacy-tables/README.md) reads records
+401/405 and edits existing pair, scalar, wide-pattern and raw-word fields with explicit context.
 
 `bessemer::electrical` reads and edits complete Electrical ZIP32 project carriers
 and lexical ASCII Archive.ini records. It preserves duplicate occurrences,
