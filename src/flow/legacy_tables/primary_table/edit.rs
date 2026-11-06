@@ -10,7 +10,7 @@ impl FlowPrimaryTable {
     ) -> Result<FlowPrimaryTableEdit> {
         let field = self.field(id)?;
         let offset = editable_offset(field, index)?;
-        let bytes = replacement_bytes(field.encoding(), value)?;
+        let bytes = wire::scalar_bytes(439, field.encoding(), value)?;
         let mut decoded = self.wire.decoded.to_vec();
         decoded[offset..offset + bytes.len()].copy_from_slice(&bytes);
         let carrier_edit = wire::edited(&self.wire, &decoded)?;
@@ -38,24 +38,6 @@ fn editable_offset(field: FlowPrimaryField<'_>, index: usize) -> Result<usize> {
     field
         .element_offset(index)
         .ok_or_else(|| table_index_error(439, "field element", index, field.layout().element_count))
-}
-
-fn replacement_bytes(encoding: FlowPrimaryEncoding, value: FlowPrimaryValue) -> Result<Vec<u8>> {
-    match (encoding, value) {
-        (FlowPrimaryEncoding::Byte, FlowPrimaryValue::Byte(value)) => Ok(vec![value]),
-        (FlowPrimaryEncoding::Signed32, FlowPrimaryValue::Signed32(value)) => {
-            Ok(value.to_le_bytes().to_vec())
-        }
-        (FlowPrimaryEncoding::WordBits, FlowPrimaryValue::WordBits(value)) => {
-            Ok(value.to_le_bytes().to_vec())
-        }
-        (FlowPrimaryEncoding::WideBits, FlowPrimaryValue::WideBits(value)) => {
-            Ok(value.to_le_bytes().to_vec())
-        }
-        _ => Err(primary_invalid(format!(
-            "field value {value:?}; expected exact {encoding:?} encoding"
-        ))),
-    }
 }
 
 fn check_structure(

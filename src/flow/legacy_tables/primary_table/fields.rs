@@ -60,12 +60,7 @@ impl<'a> FlowPrimaryField<'a> {
     /// Reads a checked exact typed value; e.g. `let value = field.value(0)`.
     pub fn value(self, index: usize) -> Option<FlowPrimaryValue> {
         let raw = self.element_bytes(index)?;
-        Some(match self.span.encoding {
-            FlowPrimaryEncoding::Byte => FlowPrimaryValue::Byte(raw[0]),
-            FlowPrimaryEncoding::Signed32 => FlowPrimaryValue::Signed32(wire::signed_at(raw, 0)),
-            FlowPrimaryEncoding::WordBits => FlowPrimaryValue::WordBits(wire::unsigned_at(raw, 0)),
-            FlowPrimaryEncoding::WideBits => FlowPrimaryValue::WideBits(wire::wide_at(raw, 0)),
-        })
+        Some(wire::scalar_value(self.span.encoding, raw))
     }
     /// Projects only a stored body flag, using exact equality to one; e.g. `let flag = field.native_flag()`.
     pub fn native_flag(self) -> Option<bool> {

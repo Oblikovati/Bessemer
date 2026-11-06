@@ -1,0 +1,31 @@
+{
+  "feature_issue": 241,
+  "base_commit": "c77202314472dc8e439aa9b1e0a1431794ee679b",
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "command": "cargo test --test flow_primary_table_fixtures --locked",
+  "passed": 16,
+  "failed": 0,
+  "ignored": 1,
+  "ignored_explanation": "The standalone worker is invoked twice by the passing separate-process parent test",
+  "clippy_command": "cargo clippy --lib --test flow_primary_table_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "source_lf_sha256": {
+    "src/flow/legacy_tables/wire.rs": "bb649eb99f169ed34c311b407eededbdf196678f70a9ba75e8e113a1ae813ee1",
+    "src/flow/legacy_tables/primary_table/fields.rs": "aa5fe1db48d6abd436c9d274e5df79ad768a9285f763167bbf4cd23b07fcd7c4",
+    "src/flow/legacy_tables/primary_table/edit.rs": "c0eb6877a678464e2035cbb28b746020e27ba2c5f782bc13d3dec191cdd751c9"
+  },
+  "log_sha256": {
+    "flow-scalar-wire-refactor-tests.log": "bfd93f7b9083c8f95187f97438d2bf0664ce0d4eb42cb4926507e609404523cd",
+    "flow-scalar-wire-refactor-clippy.log": "f68ff73dcff9d59e048ee7d428db65b28e1e6c65b409bbefa965306a988baf35"
+  },
+  "unchanged_fixture_gzip_sha256": {
+    "patches.bin.gz": "4fce86bfa7140c22c46ea5320baf4ec808f481fab152cc1271d3374470be6f59",
+    "primary.bin.gz": "d27ccd851de32cdcd855c6ba4a91ad5f879ab6a43b7a0e149148b1597359f7e6"
+  },
+  "scope": "Behavior-preserving extraction of checked exact scalar conversion and existing scalar encoding from primary-table fields into wire helpers; all5685 complete read cases and1402 independent edit expectations, original errors/noops/history/reversals retained",
+  "exclusions": [
+    "Conditional-item API caller",
+    "Running combined gate frozen at caa007185b01a9f41e8466edbec8cdb542f4ec43 excludes this refactor"
+  ]
+}

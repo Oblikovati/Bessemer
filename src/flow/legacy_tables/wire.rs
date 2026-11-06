@@ -174,3 +174,36 @@ pub(super) fn unsigned_at(raw: &[u8], offset: usize) -> u32 {
 pub(super) fn wide_at(raw: &[u8], offset: usize) -> u64 {
     u64::from(unsigned_at(raw, offset)) | u64::from(unsigned_at(raw, offset + 4)) << 32
 }
+
+pub(super) fn scalar_value(encoding: FlowPrimaryEncoding, raw: &[u8]) -> FlowPrimaryValue {
+    match encoding {
+        FlowPrimaryEncoding::Byte => FlowPrimaryValue::Byte(raw[0]),
+        FlowPrimaryEncoding::Signed32 => FlowPrimaryValue::Signed32(signed_at(raw, 0)),
+        FlowPrimaryEncoding::WordBits => FlowPrimaryValue::WordBits(unsigned_at(raw, 0)),
+        FlowPrimaryEncoding::WideBits => FlowPrimaryValue::WideBits(wide_at(raw, 0)),
+    }
+}
+
+pub(super) fn scalar_bytes(
+    identifier: u32,
+    encoding: FlowPrimaryEncoding,
+    value: FlowPrimaryValue,
+) -> Result<Vec<u8>> {
+    match (encoding, value) {
+        (FlowPrimaryEncoding::Byte, FlowPrimaryValue::Byte(value)) => Ok(vec![value]),
+        (FlowPrimaryEncoding::Signed32, FlowPrimaryValue::Signed32(value)) => {
+            Ok(value.to_le_bytes().to_vec())
+        }
+        (FlowPrimaryEncoding::WordBits, FlowPrimaryValue::WordBits(value)) => {
+            Ok(value.to_le_bytes().to_vec())
+        }
+        (FlowPrimaryEncoding::WideBits, FlowPrimaryValue::WideBits(value)) => {
+            Ok(value.to_le_bytes().to_vec())
+        }
+        _ => Err(table_failure(
+            identifier,
+            FailureClass::Invalid,
+            format!("field value {value:?}; expected exact {encoding:?} encoding"),
+        )),
+    }
+}
