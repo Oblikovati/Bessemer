@@ -25,7 +25,7 @@ pub fn optional<T>(cursor: &mut PacketCursor, read: fn(&mut PacketCursor) -> T) 
     boolean(cursor).then(|| read(cursor))
 }
 
-fn number<const N: usize>(cursor: &mut PacketCursor) -> [u8; N] {
+pub(super) fn number<const N: usize>(cursor: &mut PacketCursor) -> [u8; N] {
     let mut raw = [0; N];
     cursor.read_exact(&mut raw).unwrap();
     raw
@@ -44,12 +44,6 @@ pub fn word(cursor: &mut PacketCursor) -> u32 {
 }
 pub fn signed(cursor: &mut PacketCursor) -> i32 {
     i32::from_le_bytes(number(cursor))
-}
-pub fn wide(cursor: &mut PacketCursor) -> u64 {
-    u64::from_le_bytes(number(cursor))
-}
-pub fn signed_wide(cursor: &mut PacketCursor) -> i64 {
-    i64::from_le_bytes(number(cursor))
 }
 
 pub fn blob(cursor: &mut PacketCursor) -> Vec<u8> {

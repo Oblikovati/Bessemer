@@ -1,0 +1,49 @@
+{
+  "feature_issue": 241,
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "rust_command": "cargo test --test flow_metadata_fixtures --test flow_field_value_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 21,
+  "rust_failed": 0,
+  "rust_ignored": 1,
+  "new_metadata_tests_passed": 3,
+  "clippy_command": "cargo clippy --test flow_metadata_fixtures --test flow_field_value_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "python_command": "python -m unittest discover -s docs/features/flow-metadata -p test_metadata.py -v",
+  "python_exit_code": 0,
+  "python_passed": 10,
+  "reference_python_tests_passed": 6,
+  "format_command": "cargo fmt",
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed for Rust and Python",
+  "state_views": 1880,
+  "prefix_views": 537,
+  "native_payloads": 2,
+  "scope": "Independent complete state wire reconstruction, last-wins maps and previous-value assignment chains; complete known metadata prefixes, lossless raw UTF-16/native text projections, derived version-two text and exact opaque-tail retention with no full-record acceptance",
+  "fixture_reader_extraction": "Shared binary packet primitives reused; wide/signed-wide helpers moved to the field-value fixture reader. All original field-value fixture bytes/proofs remained unchanged and the full focused field-value suite passed.",
+  "source_lf_sha256": {
+    "docs\\features\\flow-metadata\\freeze_prefix.py": "cb4861e21616fd91819d9ab1eab5047f00ced3e5fbd74f9d2b92aa02b796fdba",
+    "docs\\features\\flow-metadata\\freeze_states.py": "c48a3f275233d787d108822edda0761a600f6dfe5a57d9a57312f40c746cdb68",
+    "docs\\features\\flow-metadata\\test_metadata.py": "3f9a96bebeb041f40cc3987c76e9a2a2ada403b543cb1847305cd15a481dd49f",
+    "docs\\features\\flow-metadata\\wire_packet.py": "623048cdcb831f07632c43f48d0050de8ebcafeb297d433c6c643837cca8f581",
+    "tests\\flow_field_values\\fixture.rs": "aa5509036b0a2b9657dc3878a0d679a5835e75b731eff2193e5bd2706a0295c2",
+    "tests\\flow_field_values\\packet.rs": "a0057c2e8398f02e12c8c27fc05d4da531d2e984e6a15770fda0b67f8f1696ea",
+    "tests\\flow_metadata\\fixture.rs": "88d523cdecd724451bf1836b5549f933498730bdaa6e4990484797412fa06f37",
+    "tests\\flow_metadata\\rebuild.rs": "1fb5111bff65d54acd318da6e41be81afff67902e3be9f253516dba451cb7041",
+    "tests\\flow_metadata\\types.rs": "17cd83247101f86e8574f7f9e03b2280d74367062fd0024237c94dc19016b65d",
+    "tests\\flow_metadata_fixtures.rs": "23833e9b9539ca5817f087a57b50b693b119cf4883bb9ce5a39455e1c6b7f370"
+  },
+  "log_sha256": {
+    "target\\flow-metadata-baseline-tests.log": "57ea65bd53982fa08ef8b4ab917dd404a3b2af2d1971c56b808d4b16c866b7dc",
+    "target\\flow-metadata-baseline-clippy.log": "4f0650d660cb21c699e49322f63b610477989edeeb3fe0dbcda50eeee9f51e79",
+    "target\\flow-metadata-baseline-python-tests.log": "3c5cb8bb74156750840691bd4fa12dd70d7e0fd3a69c0addb972b60b8373bc15"
+  },
+  "reference_sha256": "8dec7de6b29c9128ab20c2726e7a38afe30b56b4fb098de19ff0b0b408edc1db",
+  "exclusions": [
+    "Typed record-410 and scoped record-424 APIs are not added by this fixture baseline",
+    "Record-424 backend, full schema acceptance, engineering roles, native runtime state and application acceptance",
+    "Native field-value exhaustive acceptance is historical at ac11f439, before the test-only packet-reader extraction; not re-executed in this focused gate",
+    "Active full gate at 53bc0baf excludes this later metadata baseline"
+  ],
+  "prose_review": "Humanizer unavailable; left for maintainer review"
+}

@@ -122,3 +122,10 @@ fn width_number(cursor: &mut PacketCursor) -> WidthNumber {
         kind => panic!("numeric kind {kind}; expected signed zero or binary64 one"),
     }
 }
+
+fn wide(cursor: &mut PacketCursor) -> u64 {
+    u64::from_le_bytes(number(cursor))
+}
+fn signed_wide(cursor: &mut PacketCursor) -> i64 {
+    i64::from_le_bytes(number(cursor))
+}
