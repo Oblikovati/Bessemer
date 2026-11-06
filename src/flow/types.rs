@@ -12,10 +12,30 @@ pub struct FlowLimits {
 }
 
 /// Identity of one exact occurrence in one immutable revision.
-#[derive(Clone, Debug)]
+/// Debug output contains bounded framing metadata rather than retained carrier buffers.
+#[derive(Clone)]
 pub struct FlowRecordId {
     pub(super) revision: Arc<FlowRevision>,
     pub(super) ordinal: usize,
+}
+
+// #248: identities retain complete carriers, so diagnostics must not expand their buffers.
+impl std::fmt::Debug for FlowRecordId {
+    fn fmt(&self, formatter: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let identifier = self
+            .revision
+            .spans
+            .get(self.ordinal)
+            .map(|span| span.identifier);
+        formatter
+            .debug_struct("FlowRecordId")
+            .field("identifier", &identifier)
+            .field("ordinal", &self.ordinal)
+            .field("revision_version", &self.revision.version)
+            .field("wire_bytes", &self.revision.wire.len())
+            .field("records", &self.revision.spans.len())
+            .finish()
+    }
 }
 
 impl PartialEq for FlowRecordId {

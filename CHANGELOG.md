@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Bounded Flow identity diagnostics to framing metadata, keeping retained carrier buffers out of foreign and stale identity errors. (#248)
+
 - Initialized deserialized SQLite page metadata before validating exact image extents, preserving nondefault native page sizes. (#234)
 
 - Qualified synthetic high-bit Thicken replay coverage pending the native signed-version binding. (#213)
