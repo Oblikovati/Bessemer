@@ -1,4 +1,37 @@
 use super::*;
+fn messages_with_opaque(bytes: usize) -> FlowMessageLists {
+    let messages = open(&compact(3), options()).unwrap();
+    let source = messages.source();
+    let opaque = source.records().nth(2).unwrap().id;
+    let edit = source.replace_payload(&opaque, &vec![0xa5; bytes]).unwrap();
+    let record = edit.result().records().nth(1).unwrap().id;
+    edit.result()
+        .record_301_message_lists(&record, options())
+        .unwrap()
+}
+#[test]
+fn foreign_text_identity_errors_stay_small_with_large_unrelated_opaque_payloads() {
+    let foreign = open(&compact(3), options())
+        .unwrap()
+        .text_at(0)
+        .unwrap()
+        .id();
+    for bytes in [0, 65_536, 524_288] {
+        let messages = messages_with_opaque(bytes);
+        let error = messages.text(&foreign).unwrap_err();
+        assert_eq!(error.class, bessemer::FailureClass::Invalid);
+        assert!(
+            error.cause.len() < 512,
+            "foreign text error length {} for {bytes} opaque bytes",
+            error.cause.len()
+        );
+        assert!(!error.cause.contains("wire: [") && !error.cause.contains("spans: ["));
+        assert_eq!(
+            messages.text_at(0).unwrap().raw_bytes(),
+            &[65, 0, 66, 0, 0, 0]
+        );
+    }
+}
 fn compact(version: i32) -> Vec<u8> {
     let mut raw = Vec::new();
     for value in [version, 1, 4, 3] {
