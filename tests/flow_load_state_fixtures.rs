@@ -1,4 +1,6 @@
 //! Complete Source-frozen record11 fields, UTF16 units and explicit load-mode boundaries.
+#[path = "flow_load_state/api.rs"]
+mod api;
 #[path = "flow_load_state/fixture.rs"]
 mod fixture;
 #[path = "flow_field_values/packet.rs"]

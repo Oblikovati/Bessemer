@@ -39,4 +39,20 @@ checks every proper compact-profile prefix and trailing byte, mutates all
 reached counts and verifies strict version/mode/wrapper gates. Rust rebuilds
 every payload from the frozen fields and checks complete intervals, counts,
 UTF-16 prefixes, numeric bits and the distinction between absent and present
-empty arrays. There is no typed production record-11 API yet.
+empty arrays.
+
+`FlowCarrier::record_11_load_state` now returns a complete immutable
+`FlowLoadState`. `FlowLoadStateOptions` requires an explicit `FlowLoadMode`
+assumption and independent byte, item, text-unit, array-value, stored-value and
+descriptor bounds. Empty records spend no array budget on an unused width.
+Field IDs bind both the original occurrence/revision and the external mode.
+Text views expose all raw UTF-16 units and the separate first-NUL prefix without
+converting them to lossy Unicode strings. Typed `FlowLoadMemberOffset` values
+preserve the unusual nine-word native-offset order.
+
+`replace_field` edits existing nonstructural values on isolated copies, reparses
+the complete payload and requires unchanged physical fields and scopes. It
+recomputes text prefixes after unit edits. Version, count, width and string
+length fields remain read-only. Completed edits retain both validated views and
+complete carrier history. No-ops preserve the original wire/checkpoint, and
+freshly opened raw reversals restore every original byte.
