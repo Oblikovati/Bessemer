@@ -68,6 +68,9 @@ tails while keeping stored object count independent of index width.
 The [paired-state view](docs/features/flow-paired-state/README.md) reads record
 417's two independently counted groups and edits existing raw index and wide
 values while preserving absent arrays and integer quotient projections.
+The [fixed-state view](docs/features/flow-fixed-state/README.md) reads record
+139 versions 0–4 and edits existing member and settings slots while retaining
+absent counts, version-dependent fields and complete carrier history.
 The [legacy link view](docs/features/flow-link-records/README.md) reads record 402
 and edits existing fields while preserving code bytes, sentinel references and versioned tails.
 The [legacy table view](docs/features/flow-legacy-tables/README.md) reads records

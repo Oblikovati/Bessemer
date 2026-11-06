@@ -1,0 +1,34 @@
+{
+  "scope": "Independent comparison with the dedicated native state-record manifest; full payloads/projections, whole-file hashes and physical boundaries",
+  "corpus_sha256": "b47eafa861f4e8749ae4179ec1e254d9bde6be501da1963e837d1ee97c5bb619",
+  "native_evidence_report_sha256": "45da0bd00ca5c6f46ddfc3b52067568c9e0de5468bdfe7c592d9574d5c2dae7d",
+  "schema_sha256": {
+    "flowrecord139.py": "2b766b9a6177dfc7257f72348427171efa3499f77f39795e74b2d6c7e6caa0e6",
+    "flowrecord417.py": "142e21ef8ca3ebaa70bd810633ea1b84c3ab6e59c856eb185396f49bdd9d36b6"
+  },
+  "verified": [
+    {
+      "identifier": 139,
+      "source_sha256": "069aefb4da9fa292bd4eea27b619b9073cc33acc46dda1411b749b0a968706a8",
+      "payload_sha256": "88c9d5e2de5dcbf527ad040a182c56815881c00677033477c4c2f028749a00d3",
+      "record_start": 998738,
+      "record_end": 1001738,
+      "payload_bytes": 2988,
+      "version": 4,
+      "complete_projection_matched": true
+    },
+    {
+      "identifier": 417,
+      "source_sha256": "069aefb4da9fa292bd4eea27b619b9073cc33acc46dda1411b749b0a968706a8",
+      "payload_sha256": "ca888f40c3caca805b37a5434c75de5550616e0795e7602fb91156f22dd90851",
+      "record_start": 1001770,
+      "record_end": 1001794,
+      "payload_bytes": 12,
+      "version": 1,
+      "complete_projection_matched": true
+    }
+  ],
+  "qualification": "Native code ranges and runtime claims were supplied by inventor-interface; this check replays their complete installed139/417 payload projections without executing native settings application",
+  "native_settings_application_reproduced": false,
+  "global_settings_slot_meanings_inferred": false
+}
