@@ -1,6 +1,12 @@
 //! Owned complete record-12 raw-byte baseline, independent of runtime object indexing.
+#[path = "flow_counted_bytes/api.rs"]
+mod api;
 #[path = "flow_field_values/packet.rs"]
 mod packet;
+#[path = "flow_state_tables/carrier.rs"]
+mod state_carrier;
+#[path = "flow_state_tables/process.rs"]
+mod state_process;
 use packet::*;
 use std::collections::BTreeSet;
 

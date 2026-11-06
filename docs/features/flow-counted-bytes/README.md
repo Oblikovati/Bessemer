@@ -27,8 +27,29 @@ and `cargo test --test flow_counted_byte_fixtures`. The Python checks include
 all compact truncations, extensions, invalid counts and carrier guards. Rust
 rebuilds every complete payload and checks raw value, length and native coverage.
 
-The baseline precedes the typed read/edit API. That API must preserve exact raw
-bytes, bound actual transfers before access, keep counts fixed in existing-byte
-edits, reparse results completely and return immutable checkpoints with carrier
-history. Runtime index mapping, byte-swapped stream modes, engineering meanings
-and SolidWorks application acceptance remain outside this framing baseline.
+`FlowCarrier::record_12_counted_bytes` returns an immutable `FlowCountedBytes`
+view under explicit `FlowCountedByteOptions`. The payload bound must admit at
+least the four-byte count; the actual-value bound may be zero for a complete
+empty record. Exact count/EOF agreement and both limits are checked before
+publishing the view. No per-byte descriptors are allocated.
+
+`raw_bytes`, `byte` and `stored_count` retain every raw value. `replace_byte`
+changes an existing position on a copy and reopens the complete payload under
+the original bounds. Counts remain fixed. The reused `FlowSimpleTableEdit`
+returns typed source/result checkpoints and complete physical carrier history;
+no-ops preserve the original bytes. Coverage reports exact framing and actual
+transfers. Diagnostics retain the runtime, engineering and application exclusions.
+
+Typed reads check every stored byte in all 681 owned cases. Existing-byte edit
+checks select every position in payloads of at most 257 values and every native
+position, plus distinct first/middle/last positions in larger generated cases:
+14,017 positions in total, including all 3,984 native positions. Each selected
+position has an independent literal byte patch, a no-op, complete history and a
+fresh whole-carrier reversal. Two fresh processes compare complete reads and
+selected edits byte for byte; eight workers compare distinct edits against
+serial results. Compile-time checks cover both new public types and the three
+reused coverage, diagnostic and edit types. This policy does not claim an edit
+test for every position in the larger generated cases.
+
+Runtime index mapping, byte-swapped stream modes, engineering meanings and
+SolidWorks application acceptance remain outside this serialized profile.

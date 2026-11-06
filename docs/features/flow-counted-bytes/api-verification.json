@@ -1,0 +1,91 @@
+{
+  "source_parent": "3c2fdcba67a5a9762663b2e89cd9f0d2bf883a78",
+  "issue": 241,
+  "platform": "Windows x64 MSVC Rust 1.99.0 Python3",
+  "environment": {
+    "CARGO_BUILD_JOBS": "1",
+    "CARGO_TARGET_DIR": "target/sqlite-build"
+  },
+  "commands": [
+    "cargo test --locked --test flow_counted_byte_fixtures --test flow_simple_table_fixtures",
+    "cargo clippy --locked --test flow_counted_byte_fixtures --test flow_simple_table_fixtures -- -D warnings",
+    "cargo fmt --all -- --check",
+    "python -m unittest discover -s docs/features/flow-counted-bytes -p test_counted_bytes.py -v"
+  ],
+  "terminal_exit_codes": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "rust": {
+    "passed": 28,
+    "failed": 0,
+    "ignored": 2
+  },
+  "ignored_scope": [
+    "One Source-verifying process worker invoked twice by a regular parent test",
+    "Existing full native simple-table field census requiring explicit complete native arguments"
+  ],
+  "python": {
+    "passed": 7,
+    "failed": 0
+  },
+  "complete_record12_cases": 681,
+  "all_stored_byte_reads": 1003054,
+  "selected_byte_edits": 14017,
+  "selected_native_byte_edits": 3984,
+  "read_policy": "Every stored byte, count, interval, raw payload and coverage field in every owned case",
+  "edit_policy": "Every index in cases with at most257 raw bytes and all3984 native indices; distinct first/middle/last indices in larger generated cases",
+  "edit_oracles": [
+    "Independent literal byte patches",
+    "No-op preservation",
+    "Complete physical history",
+    "Fresh whole-carrier reversals",
+    "Caller mutation and external edit isolation",
+    "Typed stale/foreign/wrong-record failures and malformed framing"
+  ],
+  "concurrency": {
+    "workers": 8,
+    "operations_per_worker": 32,
+    "fresh_source_verifying_processes": 2,
+    "public_send_sync_types": 5,
+    "new_public_types": 2,
+    "reused_public_types": 3
+  },
+  "bounds": [
+    "Complete raw payload bytes, minimum4",
+    "Actual stored bytes, including valid zero"
+  ],
+  "style": {
+    "files_under_500_lines": true,
+    "functions_at_most_20_body_lines": true,
+    "whitespace_check_exit": 0
+  },
+  "source_files_lf_sha256": {
+    "src/flow/legacy_tables/counted_bytes/edit.rs": "5fe92ff0d36d26d7369d578ac443ac562592ec2889137f42886cbabe2ef465ab",
+    "src/flow/legacy_tables/counted_bytes/mod.rs": "9a658836530bbec7c8ec43ab13ce731faa1b3f608865c8bfd8c94c3f3bbcdc5b",
+    "src/flow/legacy_tables/counted_bytes/view.rs": "bdb44e26c6367624717810f94ccace432a517fa966d97a901773bb926b243b4e",
+    "src/flow/legacy_tables/simple_tables/types.rs": "1171eef9705edecc05ce9f30a8300e5a54bf5bc42dfd3f87b67bac195921040f",
+    "tests/flow_counted_byte_fixtures.rs": "301145a397c3bcc9c4a9a5f2b0fff0fcb523937e3796cdd2dd7adce35023723a",
+    "tests/flow_counted_bytes/api.rs": "4bdf9dd1d83346a20a6609a4772333d8cb3cb3446ad8fe71e96f5bf6cd2cad3c",
+    "tests/flow_counted_bytes/contracts.rs": "163bcccee2d73592e29f5538cb260995d21f2a11f53645fd9f041418a3ba9bde",
+    "tests/flow_counted_bytes/replay.rs": "fd8ed4aa9edde468f24e0894f53efe3e7f5f743716632911bbc4e482575a1fb0"
+  },
+  "logs_sha256": {
+    "target/flow-counted-bytes-api-tests.log": "36d49146c0970743a3169829a27ec632794fbbed9424804d8df256405266b99f",
+    "target/flow-counted-bytes-api-clippy.log": "9f52fa2c876761a9dab13c4021278019ca0d90c5adcd8d03d3695d179c86c538",
+    "target/flow-counted-bytes-api-format.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/flow-counted-bytes-api-python.log": "9cb0a45cfb1885e01b35cad8ca73cef3bf2bab1620b69bd4468df58ee7ed4164"
+  },
+  "baseline": "baseline-verification.json",
+  "exclusions": [
+    "Runtime object/index mapping",
+    "Engineering and boolean field meanings",
+    "Byte-swapped stream modes",
+    "SolidWorks application acceptance",
+    "Every large generated edit position outside selected policy",
+    "Full current-source PR gate and hosted full matrix"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose pass remains for review"
+}

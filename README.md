@@ -77,6 +77,9 @@ and tails while preserving body presence and complete physical history.
 The [message-list view](docs/features/flow-message-lists/README.md) reads record
 301 versions 0–3 and edits existing member words and text elements, preserving
 legacy byte transfers, full UTF-16 units and independent list presence.
+The [counted-byte view](docs/features/flow-counted-bytes/README.md) reads record
+12's count and uninterpreted bytes and edits existing positions with exact
+framing, independent resource bounds and complete carrier history.
 The [legacy link view](docs/features/flow-link-records/README.md) reads record 402
 and edits existing fields while preserving code bytes, sentinel references and versioned tails.
 The [legacy table view](docs/features/flow-legacy-tables/README.md) reads records

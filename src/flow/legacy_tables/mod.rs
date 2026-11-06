@@ -2,6 +2,7 @@
 mod block_extras;
 mod conditional_items;
 mod context_state;
+mod counted_bytes;
 mod edit;
 mod field_values;
 mod fields;
@@ -28,6 +29,7 @@ use crate::archive_codec::ArchiveCursor;
 pub use block_extras::*;
 pub use conditional_items::*;
 pub use context_state::*;
+pub use counted_bytes::*;
 pub use field_values::*;
 pub use fields::*;
 pub use fixed_state::*;
