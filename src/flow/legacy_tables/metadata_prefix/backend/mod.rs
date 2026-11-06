@@ -3,6 +3,7 @@ mod decode;
 mod edit;
 mod kind_one;
 mod kind_one_profile;
+mod medium_body;
 mod types;
 mod view;
 use super::*;

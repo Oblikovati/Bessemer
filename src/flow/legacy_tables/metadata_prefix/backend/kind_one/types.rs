@@ -73,15 +73,6 @@ pub enum FlowMediumBodyDiagnostic {
     NativeApplicationNotChecked,
 }
 #[derive(Clone, Debug, PartialEq, Eq)]
-pub(super) struct CurveSpan {
-    pub start: usize,
-    pub end: usize,
-    pub scalar: usize,
-    pub count: usize,
-    pub flag: usize,
-    pub arrays: [(usize, usize); 4],
-}
-#[derive(Clone, Debug, PartialEq, Eq)]
 pub(super) struct BodySpan {
     pub start: usize,
     pub end: usize,

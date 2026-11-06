@@ -4,7 +4,7 @@ mod edit;
 mod fields;
 mod types;
 mod view;
-use super::super::decode as metadata_decode;
+use super::medium_body::{self, CurveSpan};
 use super::*;
 pub use types::*;
 impl FlowMediumBackendPrefix {
