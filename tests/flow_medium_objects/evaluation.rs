@@ -1,3 +1,5 @@
+#[path = "evaluation/api.rs"]
+mod api;
 use super::{fixture, packet::*, rebuild, types::*};
 #[path = "evaluation/fixture.rs"]
 mod evaluation_fixture;

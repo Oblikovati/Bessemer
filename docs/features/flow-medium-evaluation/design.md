@@ -29,3 +29,10 @@ arithmetic result and achieved-error information together. No file edit occurs;
 retain the unchanged input checkpoint identity. Keep application acceptance,
 engineering units, unsupported accessors and native floating-point environment
 behavior distinct from this documented arithmetic operation.
+
+The typed production operation and immutable result now implement this decision.
+It reads borrowed raw-word views, validates the complete selected inputs per
+query and keeps the input revision identity in each result. FEV1 and the mixed
+record reversal test verify the operation separately from complete engineering
+or native-application acceptance. No numerical cache or global algorithm state
+was introduced.

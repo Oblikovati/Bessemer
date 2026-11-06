@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added versioned evaluation for the three documented kind-one medium curve accessors, with exact input checks, source provenance and explicit arithmetic/error coverage. (#241)
+
 - Added complete fresh mixed-kind medium record read/edit profiles with typed reference maps, independent resource bounds and whole-carrier history. (#241)
 
 - Added typed read/edit views for all six medium kind-two body models with bounded raw patterns, exact carrier history and explicit body-only coverage. (#241)

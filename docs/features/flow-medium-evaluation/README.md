@@ -41,9 +41,36 @@ arbitrary future requests. Arithmetic NaNs are compared by classification becaus
 their payload and sign are not portable across targets. All finite and infinity
 results, including signed zero, retain exact expected bits.
 
-This is an owned evaluation baseline. It adds no production numeric API yet.
-Rust reconstructs every complete body and compares the existing typed body views,
-then checks guards, branches, exact constant/clamp results and affine closed forms.
-Python independently reconstructs all fields and verifies packet reproducibility
-in a temporary directory. Native application execution, engineering units, other
-accessors and model evaluation remain outside this evidence.
+The production entry point is `FlowMediumKindOne::evaluate_curve`, accepting a
+typed `FlowMediumCurveAccessor` and a finite binary64 query. Accessors are
+`CurveOne`, `CurveTwo` and `CurveFour`, corresponding to the zero-based wire
+ordinals 1, 2 and 4. `TryFrom<i32>` rejects every unsupported ordinal. The stable
+behavior version is `FiniteOrderedV1`; input checking is reported as
+`ExactSelectedFiniteOrderedV1`.
+
+The immutable result owns the source checkpoint identity, body/curve intervals,
+accessor, query bits, result bits, arithmetic classification and selected branch.
+Coverage counts every finite-value and ordering check. Copied scalar/clamp values
+report zero achieved error; interpolation reports no runtime forward-error
+certificate. Nonfinite arithmetic carries an explicit diagnostic. The native
+floating-point environment, engineering units and application acceptance remain
+unchecked. Evaluation leaves the file bytes and source identity unchanged.
+
+Rust reconstructs every complete fixture body and checks the typed numeric API
+against all requests. Tests cover failed-input isolation, source edits and
+destruction, all eight public types as Send/Sync and eight-worker transcripts.
+A complete mixed-record test evaluates a later kind-one body after kind two,
+applies a nested scalar edit, reevaluates and reverses the entire carrier.
+Three internal tests cover shape/bounds failures and guard precedence. The
+focused gate passed 85 integration tests plus those three internal tests;
+Clippy passed. The eight independent Python checks retain exact-rational and
+closed-form oracles and regenerate the packet in a temporary directory.
+Two fresh processes match the independent typed-result transcript. Its NaN
+payload normalization is confined to verification; the API returns its actual
+arithmetic bits.
+
+Measurements in `api-cost-verification.json` record an initial accepted-workload
+baseline and the 104-byte result size on Windows x64. There is no earlier
+Bessemer numeric API for a release comparison. Native application execution,
+engineering units, other accessors and model evaluation remain outside this
+supported operation.

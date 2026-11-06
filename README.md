@@ -1055,3 +1055,8 @@ The [medium kind-two body API](docs/features/flow-medium-kind-two/README.md)
 reads and edits all six documented model layouts, including independent table
 counts and raw 32-bit words. It preserves the following record bytes and reports
 body framing separately from complete-record and installed native acceptance.
+
+The [kind-one curve evaluator](docs/features/flow-medium-evaluation/README.md)
+implements the documented finite/ordered profile for ordinals 1, 2 and 4. Its
+versioned result retains arithmetic classification, source provenance, complete
+selected-input checks and achieved-error information without editing the file.
