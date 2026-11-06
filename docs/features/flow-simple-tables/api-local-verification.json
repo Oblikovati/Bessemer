@@ -21,7 +21,7 @@
   "boundaries": "All owned proper prefixes/extensions; exact/one-below decoded and actual-value limits; missing/unused legacy context and native domains; negative versions/counts, huge impossible extents with unlimited value caps; absent/empty/inactive selectors; invalid indices; valid alternate empty presence layouts rejected by fixed-structure editor; foreign/stale/wrong IDs; checksum/wrapper/concatenation failures; measured compressed growth at original carrier limits for all four profiles",
   "concurrency": "Eight workers match complete serial edits for all four profiles after caller storage mutation; every public type and each completed edit instantiation asserted Send/Sync",
   "native_census": {
-    "status": "running; no acceptance credit yet",
+    "status": "passed",
     "command": "cargo test --test flow_simple_table_fixtures every_native_existing_simple_table_field --locked -- --ignored --nocapture",
     "expected_requests": [
       15618,
@@ -30,7 +30,14 @@
       0
     ],
     "expected_total": 43866,
-    "log": "target/flow-simple-tables-native-census.log"
+    "log": "target/flow-simple-tables-native-census.log",
+    "terminal_exit_code": 0,
+    "field_requests": 43866,
+    "test_seconds": 116.02,
+    "source_commit": "1a728275d7bd0cf74cf6ff4f6fbf3a1a193979ea",
+    "verified_source_files": 20,
+    "log_sha256": "b7d4ec8d6cec66ec08933a932970b600d39ee4b198dba9c05b309d6175fad549",
+    "scope": "All existing native fields in four payloads wrapped in owned three-record carriers: exact no-ops, independent full decoded patches, complete physical history and fresh reversals; native record 413 completed empty with zero edit requests; no application acceptance"
   },
   "source_lf_sha256": {
     "src\\flow\\legacy_tables\\simple_tables\\decode\\parallel.rs": "b3b298ea46357de2c9c2c94266c4ee341a1751ebb63e97e2342af0727d9e8f71",
