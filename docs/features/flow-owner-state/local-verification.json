@@ -1,0 +1,65 @@
+{
+  "issue": 241,
+  "source_revision_before_baseline": "17efc399fd57573ee52901ece7185961caadd933",
+  "scope": "Owned complete raw record122/434 fields, independent native update projections and complete selection carriers; production typed API pending",
+  "results": {
+    "rust_passed": 4,
+    "python_passed": 8,
+    "failed": 0,
+    "ignored": 0,
+    "clippy": "passed",
+    "format": "passed",
+    "function_file_caps": "passed",
+    "maximum_rust_body_lines": 19
+  },
+  "logs": {
+    "tests": {
+      "path": "target/flow-owner-state-baseline-tests.log",
+      "sha256": "7886c2894853a026be4243137ab954cb3e13d30582e154010d2cbdf45e4c3cf0"
+    },
+    "python": {
+      "path": "target/flow-owner-state-baseline-python.log",
+      "sha256": "5f82e1c5d547fd78cd1f36910400aec6e9a0d9b726ac44f7ddf4709adbd3d6f7"
+    },
+    "clippy": {
+      "path": "target/flow-owner-state-baseline-clippy.log",
+      "sha256": "bbb90d7df92a1023bdf8e7399f8a2eb17b6b9287be418c17912c2f215f5bba3a"
+    },
+    "format": {
+      "path": "target/flow-owner-state-baseline-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "coverage": {
+    "record_cases": 4613,
+    "selection_cases": 27,
+    "native_physical_records": 3,
+    "native_unique_payloads": 2,
+    "native_selection_projections": 2
+  },
+  "helper_lf_sha256": {
+    "freeze_owner.py": "25bc463f6639429c4025e2ddfe0101e4a94cc68f6c6a5911e37b229f9b833273",
+    "owner_requests.py": "2f25ec72bae5e95dce582ed9bc02eb773551cd729a77dfa2d96f88816e715527",
+    "test_owner.py": "beb00cb7529fef6fafd50e55c8f713d34558ff67914aa61b7299a1222a0acac3"
+  },
+  "oracles": [
+    "Complete original schema projections",
+    "Independent literal native member offset equations",
+    "Exact all-ones legacy gate without header dispatch",
+    "All raw field bit patterns and unsigned state bytes",
+    "Latest occurrence selected after identifier priority, before parsing",
+    "Malformed preferred records reject without fallback; malformed shadowed records ignored",
+    "Full native source, record extent, payload and complete manifest projection",
+    "Temporary-root fixture and proof regeneration"
+  ],
+  "exclusions": [
+    "Typed readers, isolated editors and update projection API pending",
+    "Frozen native selection carriers contain relevant records only, in original relative order",
+    "Full cargo xtask pr acceptance of this revision pending",
+    "Hosted matrix and sanitizer acceptance pending",
+    "Native runtime updates not executed",
+    "Engineering meanings not assigned",
+    "Native application not checked"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose review pending"
+}
