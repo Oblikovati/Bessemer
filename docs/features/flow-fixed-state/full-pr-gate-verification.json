@@ -1,0 +1,23 @@
+{
+  "source_revision": "aa32993381b5064fd4a15bd696b83a5adf0d493b",
+  "command": "cargo xtask pr",
+  "terminal_exit_code": 0,
+  "environment": {
+    "CARGO_BUILD_JOBS": "1",
+    "BESSEMER_KERNEL_SCHEMA": "C:/Program Files/SOLIDWORKS Corp/SOLIDWORKS/data/pschema/sch_13006.s_t"
+  },
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "test_summaries": 389,
+  "rust": {
+    "passed": 4869,
+    "failed": 0,
+    "ignored": 251
+  },
+  "log": "target/flow-fixed-state-combined-full-pr-gate-serial.log",
+  "log_sha256": "6116660121ac3f5e8639d22543146aabb16a17433eea5fc48346ab9e31035cbe",
+  "included": "All earlier mixed/evaluation/primary/conditional/load APIs and typed records 432/138/417/139; complete state-table FST2 corpus",
+  "excluded": "Later typed record129, message-list301 baseline/API and counted-byte12 baseline; hosted full matrix and release acceptance",
+  "prior_failed_attempt": "full-pr-gate-attempt.json",
+  "memory_workaround": "One compiler build job; no tests or runtime test concurrency reduced",
+  "bug": 246
+}
