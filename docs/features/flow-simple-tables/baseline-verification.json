@@ -1,0 +1,34 @@
+{
+  "feature_issue": 241,
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "rust_command": "cargo test --test flow_simple_table_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 2,
+  "rust_failed": 0,
+  "clippy_command": "cargo clippy --test flow_simple_table_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "python_command": "python -m unittest discover -s docs/features/flow-simple-tables -p test_tables.py -v",
+  "python_exit_code": 0,
+  "python_passed": 7,
+  "format_command": "cargo fmt",
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed for Rust and Python",
+  "views": 118,
+  "native_payloads": 4,
+  "scope": "Independent fixture baseline before typed readers/editors: complete wire reconstruction, every interval, absent versus present-empty arrays, declared counts versus wire rows, context absence/presence and raw patterns for all four record types",
+  "source_lf_sha256": {
+    "tests\\flow_simple_table_fixtures.rs": "496b65d30a59190a1eb5f979e84aa6f59c8a22fed5cd6b93603222915f1554d8",
+    "tests\\flow_simple_tables\\fixture.rs": "8837b637c2ff7daf385947b8b789907185e07d552cc3f3ec6f54b341e4fe186e",
+    "docs\\features\\flow-simple-tables\\freeze_tables.py": "15c48b8d730ac5b9188b524cb5bb37ddfacfb9aa95b6d62378ec175473235af5",
+    "docs\\features\\flow-simple-tables\\test_tables.py": "eb0e8a3b1df3eb431f59fe7e9c0dcbc03551a1b2671cb7e8c72ac5d3a354db1d"
+  },
+  "log_sha256": {
+    "target\\flow-simple-tables-baseline-tests.log": "f898c2b8092da927f253d7cb512d3be52b162661db40a3bcefdd04b62d821b1b",
+    "target\\flow-simple-tables-baseline-clippy.log": "84e284e7e9f4e35a32627e94018e3249f4a26c07d500c930de4440e7482a4bfd",
+    "target\\flow-simple-tables-baseline-python-tests.log": "5384430f2c932e67709b1dcd9399eeaa6e4db286284a27b4990e42e0fa5ff541"
+  },
+  "exclusions": [
+    "Native runtime state, engineering roles, leaf-to-tree ordering and native application acceptance",
+    "Full gate at 7fec3a3b excludes this later four-table fixture baseline"
+  ]
+}
