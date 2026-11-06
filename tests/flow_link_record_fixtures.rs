@@ -1,4 +1,6 @@
 //! Independent reconstruction of every documented legacy record-402 field.
+#[path = "flow_link_records/api.rs"]
+mod api;
 #[path = "flow_link_records/fixture.rs"]
 mod fixture;
 use fixture::*;
@@ -22,6 +24,7 @@ fn every_link_field_reconstructs_exact_wire_and_context_presence() {
         assert_eq!(case.checked, case.pointer_count.is_some());
         assert!(!case.runtime && !case.roles);
         check_transport(&case);
+        api::check_case(&case);
     }
 }
 

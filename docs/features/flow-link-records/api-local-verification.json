@@ -1,0 +1,62 @@
+{
+  "feature_issue": 241,
+  "fixture_base": "6842d85c",
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "rust_command": "cargo test --test flow_link_record_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 12,
+  "rust_failed": 0,
+  "rust_ignored": 1,
+  "expanded_regression_command": "cargo test --test flow_link_record_fixtures --test flow_legacy_table_fixtures --locked",
+  "expanded_regression_exit_code": 0,
+  "expanded_regression_passed": 24,
+  "expanded_regression_ignored": 2,
+  "clippy_command": "cargo clippy --lib --test flow_link_record_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "python_command": "python -m unittest discover -s docs/features/flow-link-records -p test_links.py -v",
+  "python_exit_code": 0,
+  "python_passed": 5,
+  "format_command": "rustfmt --edition 2021 src/flow/legacy_tables/mod.rs tests/flow_link_record_fixtures.rs",
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "views": 954,
+  "coverage": "Complete legacy versions zero through nine, raw/zlib, all entry fields, code conversion, every tail gate and field, raw nonfinite bits and explicit sentinel-aware reference context",
+  "editing": "Every owned existing field: exact no-op identity/stored bytes, independent complete decoded patch, all physical history and fresh raw whole-wire or compressed decoded reverse. Cardinality-changing member/control edits reject and parsed spans remain identical.",
+  "boundaries": "Every small owned proper prefix and extra byte; exact/one-below decoded, entry and shared dynamic-array limits; nonpositive options; negative/impossible counts; delegated versions; missing fields/invalid selectors/widths; foreign/stale/wrong IDs; strict checksum/wrapper/concatenation failures; measured compressed growth rejected by original carrier payload limit",
+  "concurrency": "Eight workers edit immutable views after caller storage mutation; every public link type asserted Send/Sync",
+  "native_census": {
+    "status": "running; no acceptance credit yet",
+    "command": "cargo test --test flow_link_record_fixtures every_native_existing_link_field --locked -- --ignored --nocapture",
+    "expected_field_requests": 213980,
+    "log": "target/flow-link-records-native-census.log"
+  },
+  "source_lf_sha256": {
+    "src\\flow\\legacy_tables\\link_records\\decode\\tails.rs": "3a44e93dd8e8b220a4ef0da4925ea428841a2ecf060696923103cf4446a148b9",
+    "src\\flow\\legacy_tables\\link_records\\decode.rs": "acec5a8a63fc0f006801fab2d60bb132db59d3aa965e5a35dc8d5ad12cf34a12",
+    "src\\flow\\legacy_tables\\link_records\\edit\\select.rs": "4cecff12b9194b1b42c0370719779d26f861802d6ee2f3c94021e1f7f557f0ec",
+    "src\\flow\\legacy_tables\\link_records\\edit.rs": "a8c5ae4ece35cefb0e7d438dacb1f31620438bf085aa7202be172a0c2fcc5a64",
+    "src\\flow\\legacy_tables\\link_records\\fields.rs": "67dcee910a0092774a36525f2de516f95f5e3c5f3c6d28d48daff4718734a7d3",
+    "src\\flow\\legacy_tables\\link_records\\mod.rs": "a39aeefbe126963db8dc9e178ce51d7cbf5bfc4d997ddabcfc05d43269092cf5",
+    "src\\flow\\legacy_tables\\link_records\\types.rs": "7eca7f4ab9477b02a60aaf97506ddb53fc38360a44cadf15b5398812633d1672",
+    "src\\flow\\legacy_tables\\link_records\\view\\arrays.rs": "a3b945538e46abce682658e14e71a421057bc9bc453c4152c56675e0410178aa",
+    "src\\flow\\legacy_tables\\link_records\\view\\checkpoints.rs": "e7ca692e165d215ba7fd93c37371758ecdfdedad87c787da897d4e1127b79d98",
+    "src\\flow\\legacy_tables\\link_records\\view\\tails.rs": "daab67f3f6ad2174428613f2e3f8199697989608fe4b1213e613373bef612c0a",
+    "src\\flow\\legacy_tables\\link_records\\view.rs": "88d23a2499b53f1a53af3f901cb19c1cb696ff08c35919a0ac5fe0802fd9ae9c",
+    "tests\\flow_link_records\\api.rs": "cd9e5519b8bdb30a01db13bfb262a2173b22afb631378dcdde60e1a53f8f2b35",
+    "tests\\flow_link_records\\bounds.rs": "b441b9efb4984383223f6ce6207643b657b28e0df24bcd0a8859f07eb9bb2800",
+    "tests\\flow_link_records\\edits\\patches.rs": "8a90208ee5d9c7e4bda961f94d95b3e209251be44cda5a65d469e21d946dd818",
+    "tests\\flow_link_records\\edits.rs": "4c037aa4e6fc14ded8dca8b62ce65e650ff8f9a645456d695993aec7a2088402",
+    "tests\\flow_link_records\\fixture.rs": "55078075c9c3c6910d688518a46689d0d9864bb0ddc747eb9c2ce9b370c933a6",
+    "tests\\flow_link_record_fixtures.rs": "79900b37a6835f17539309ff9ef3295512a92ba69931fe81be11cebeda8194f3"
+  },
+  "log_sha256": {
+    "target\\flow-link-records-api-final-tests.log": "bafcccbf09eda97d99e9c2f6e744511cb61d47a0e9bb23a51f68ab08cc5d2370",
+    "target\\flow-link-records-api-final-clippy.log": "bd413a0d8c2b25770cd933f6db8511407234a17d124c93cea482ea4a2e92d26e",
+    "target\\flow-link-records-api-python-tests.log": "cdc982765bd628a385dc157e1e75dcb86be950d49043b0efa682c769915d74ba"
+  },
+  "exclusions": [
+    "Native runtime state and object-reference resolution",
+    "Engineering roles and native application acceptance",
+    "Full gate at b8b5aaac excludes this later record-402 implementation"
+  ]
+}

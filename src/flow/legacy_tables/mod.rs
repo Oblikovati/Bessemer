@@ -1,6 +1,7 @@
 //! Exact legacy pointer-index and raw-word tables with explicit independent context.
 mod edit;
 mod fields;
+mod link_records;
 mod pointers;
 mod types;
 mod view;
@@ -9,6 +10,7 @@ mod words;
 use super::*;
 use crate::archive_codec::ArchiveCursor;
 pub use fields::*;
+pub use link_records::*;
 pub use types::*;
 use types::{GroupBodySpan, GroupSpan, TableWire};
 
