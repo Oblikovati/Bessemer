@@ -95,6 +95,9 @@ version-zero discarded member while retaining their serialized values.
 The [wide-vector view](docs/features/flow-wide-vectors/README.md) reads record
 148's complete length table and raw arrays and edits existing patterns while
 preserving physical vector order and stored-empty vectors.
+The [owner-state views](docs/features/flow-owner-state/README.md) preserve all
+record-122/434 fields and their gated native-member projections. Selection prefers
+the latest record 434 over record 122 and preserves selected parse failures.
 The [legacy link view](docs/features/flow-link-records/README.md) reads record 402
 and edits existing fields while preserving code bytes, sentinel references and versioned tails.
 The [legacy table view](docs/features/flow-legacy-tables/README.md) reads records

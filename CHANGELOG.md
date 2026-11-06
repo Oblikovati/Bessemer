@@ -56,6 +56,8 @@
 
 ### Added
 
+- Added complete record-122/434 owner-state reads and isolated field edits with exact gated update projections, preferred latest-occurrence selection and no parse-error fallback. (#241)
+
 - Added complete record-148 wide-vector reads and isolated raw-pattern edits with bounded length tables, preserved empty-vector ordinals and complete carrier history. (#241)
 
 - Added complete record-444 auxiliary wide-value reads and isolated raw-pattern and discarded-member edits with bounded inflation, compressed no-op preservation and complete carrier history. (#241)

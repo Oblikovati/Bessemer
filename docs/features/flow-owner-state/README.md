@@ -51,6 +51,34 @@ It also regenerates the packet under a temporary root. Rust reconstructs every
 field, checks the independent member equations and verifies the frozen selection
 outcomes against ordinary typed carrier lookup.
 
-The typed readers, isolated field editors and update projection API remain to be
-implemented. No native runtime updates were executed. Engineering interpretation
-and SolidWorks application acceptance remain unverified.
+`FlowCarrier::record_122_owner_state` and `record_434_owner_state` open explicit
+occurrences as immutable `FlowOwnerState` views under a complete-payload byte bound.
+`FlowOwnerStateKind` distinguishes the layouts; `version` returns absent for the
+legacy layout. `words` exposes every raw word, `modern_member` reads a checked
+signed modern field and `state_byte` retains legacy absence.
+
+`updates_enabled` implements the exact legacy gate. `updates` returns an optional
+`FlowOwnerUpdates` value with seven signed native-member projections; the modern
+state byte is widened without sign extension. `FlowOwnerMember` identifies native
+offsets without assigning engineering roles. These projections are pure values.
+
+`FlowCarrier::owner_state` selects before parsing and returns a completed absent
+result when neither identifier exists, including under a zero payload budget.
+A selected disabled legacy record remains present with absent updates. Resource
+limits and parse errors on a selected preferred record are returned directly.
+
+`replace_word`, `replace_modern_member` and `replace_state_byte` copy the carrier,
+replace existing fields and reopen the complete selected occurrence. They return
+`FlowSimpleTableEdit<FlowOwnerState>` with original and validated checkpoints and
+complete physical history. Legacy gate transitions recompute the projection.
+Version and layout remain fixed; no-op and fresh reversed edits retain raw bytes.
+
+Tests read every owned field and edit every stored word and state byte, checking
+literal byte patches, independent update equations, no-op preservation, history
+and fresh whole-carrier reversals. They cover selection outcomes and edits at
+different physical ordinals, exact resource boundaries, malformed layouts,
+foreign and stale identities, source isolation, public thread traits, eight-worker
+agreement and byte-for-byte replay in two fresh processes.
+
+No native runtime updates were executed. Engineering interpretation and
+SolidWorks application acceptance remain unverified.

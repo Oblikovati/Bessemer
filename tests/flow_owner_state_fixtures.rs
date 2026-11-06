@@ -1,6 +1,12 @@
 //! Complete raw owner-state fields and documented latest-preferred update projections.
+#[path = "flow_owner_state/api.rs"]
+mod api;
 #[path = "flow_field_values/packet.rs"]
 mod packet;
+#[path = "flow_state_tables/carrier.rs"]
+mod state_carrier;
+#[path = "flow_state_tables/process.rs"]
+mod state_process;
 use bessemer::flow::*;
 use packet::*;
 use std::collections::BTreeSet;
