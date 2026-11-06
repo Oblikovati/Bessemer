@@ -1,0 +1,21 @@
+{
+  "source_revision": "cd74cf5262af2068e9c95678c61ddfbc782bfc25",
+  "command": "cargo xtask pr",
+  "terminal_exit_code": 0,
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "environment": {
+    "CARGO_BUILD_JOBS": "1",
+    "BESSEMER_KERNEL_SCHEMA": "C:/Program Files/SOLIDWORKS Corp/SOLIDWORKS/data/pschema/sch_13006.s_t"
+  },
+  "test_summaries": 391,
+  "rust": {
+    "passed": 4899,
+    "failed": 0,
+    "ignored": 253
+  },
+  "log": "target/flow-message-and-tagged-combined-full-pr-gate.log",
+  "log_sha256": "c345a1fd8512e89a1001f76c28a05b9bb0c9ed38ef6d3bd8abc4836339b4d7d7",
+  "included": "All earlier work plus typed129, shared UTF16 primitives, complete301 baseline/API and record12 baseline",
+  "excluded": "Later record12 API, record316 baseline/API, record112 baseline/API, hosted full matrix and release acceptance",
+  "attempt": "combined-pr-gate-attempt.json"
+}
