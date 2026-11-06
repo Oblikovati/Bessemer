@@ -1,0 +1,21 @@
+{
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "processes": 2,
+  "terminal_exit_codes": [
+    0,
+    0
+  ],
+  "views": 2109,
+  "bytes_per_process": 2358701,
+  "sha256": "84e78e582a4abfc7ab4e3ea00286a5f4cfdf272cdb530f6592663bd22ac6a7aa",
+  "all_process_bytes_equal": true,
+  "complete_independent_FPB1_packet_equal": true,
+  "scope": "Complete typed read projections: versions, explicit count/code contexts, every pool/group/entry interval, all raw words/vector bytes/tagged payloads, branch kinds, count/decode-flag presence and documented exclusions. Names and transport are input framing; stored bytes are read from original checkpoints.",
+  "edit_scope": "No-ops, independent byte patches, full physical history and fresh reversals are tested separately; this process comparison covers read projections only.",
+  "temporary_probe_sha256": "32fd080c24811fdc29af41050e6076cdb4219ef616a599c5e31ce29f35d63dc2",
+  "exclusions": [
+    "Native runtime reconstruction and orientation postprocessing",
+    "Tree ordering and engineering roles",
+    "Native application acceptance"
+  ]
+}

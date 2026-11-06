@@ -1,4 +1,6 @@
 //! Independent complete pool/body wire reconstruction before the typed record-421 API.
+#[path = "flow_pointer_bodies/api.rs"]
+mod api;
 #[path = "flow_pointer_bodies/fixture.rs"]
 mod fixture;
 #[path = "flow_pointer_bodies/rebuild.rs"]

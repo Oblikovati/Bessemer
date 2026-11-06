@@ -32,6 +32,40 @@ regeneration. Native totals are 3,984 pools, 10,144 pool triplets and collection
 counts 9,338/6,542/5,532. The native fixture explicitly supplies codes and counts
 from the documented prior fields; this does not reproduce mutable runtime state.
 
-This is the fixture baseline for a typed reader/editor. Native runtime state,
-orientation postprocessing, tree ordering, engineering roles and native
-application acceptance remain unproved.
+`FlowCarrier::record_421_bodies` reads these layouts with `FlowPointerBodyOptions`.
+`FlowPointerBodyCounts` admits each collection count independently to the native
+signed domain and retains their mathematical sum without wrapping. The options
+retain an immutable optional code slice, including an explicitly present unused
+slice for an empty legacy third collection. Tagged layouts reject that context.
+Independent positive limits bound pools, entries, vector descriptors, wide words
+and opaque bytes, in addition to the complete decoded-byte bound. Counts are
+checked against remaining bytes before creating descriptors or multiplying widths.
+
+Borrowed pools and entries expose raw patterns, vector boundaries, tag bytes,
+stored counts, runtime codes and complete decoded intervals. Unknown tags have
+no fabricated count, payload or decode flag. Coverage states the exact raw/zlib
+mode and actual stored/decoded totals; diagnostics retain the documented exclusions.
+
+The editors replace existing pool/body wide words, vector bytes, opaque tagged
+bytes and shape-preserving tags. Counts and vector lengths remain structural.
+Every edit builds an isolated carrier, reopens the entire typed record under the
+original context, compares every pool/entry/vector descriptor and verifies the
+complete patched decoded payload. No-ops retain the original stored bytes and
+revision. Results include original/result checkpoints and all physical carrier
+history. A raw reverse restores the complete original carrier; a zlib reverse
+restores the decoded payload without requiring a canonical compressed encoding.
+
+The implementation decision is exact serialized interoperability for documented
+versions 0–5, with no inferred runtime-code substitution or packed-payload decoding.
+Later delegated versions return a typed unsupported error. Native runtime state,
+orientation postprocessing, tree ordering, engineering roles and native application
+acceptance remain unproved.
+
+The focused gate passed 17 Rust tests and eight Python checks. Both fresh-process
+read projections matched the complete independent FPB1 packet byte for byte:
+2,358,701 bytes across 2,109 views. Owned small fields received exhaustive
+existing-value edit checks; larger arrays used first/last samples. Sixteen native
+edit samples passed. The separately invoked complete native census covers
+107,712 existing values: 30,432 pool words and 77,280 vector bytes. Its acceptance
+is recorded separately from the focused gate. All six versions also passed
+measured compressed-growth rejection and eight-worker isolation checks.
