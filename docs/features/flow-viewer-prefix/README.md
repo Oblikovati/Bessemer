@@ -48,7 +48,30 @@ native provenance, then regenerates the packet under a temporary root. Rust
 reconstructs every decoded byte, checks exact zlib consumption, verifies known and
 unknown extents, and checks independent raw-pattern coverage.
 
-Source and fixture digests are recorded in `baseline-verification.json`. The typed
-prefix reader and isolated editor remain to be implemented. Full record-121 body
+The typed reader requires `FlowViewerPrefixProfile::InflateMetadataQuery` and
+independent decoded-byte and known-wide-value bounds. The wide bound includes the
+three discarded tuple values. For example:
+
+```rust,ignore
+let prefix = carrier.record_121_viewer_prefix(&record, FlowViewerPrefixOptions {
+    profile: FlowViewerPrefixProfile::InflateMetadataQuery,
+    maximum_decoded_bytes: 2_000_000,
+    maximum_prefix_wide_values: 1_000_000,
+})?;
+let edit = prefix.replace_signed(FlowViewerSignedField::StoredSecond, 1)?;
+assert_eq!(edit.result().native_metadata().second_i32, 2);
+assert_eq!(edit.coverage().body_validation, FlowViewerBodyValidation::Incomplete);
+```
+
+Views expose all known scalar fields, array intervals and raw patterns, the
+metadata projection and the entire opaque suffix. Editors replace existing signed,
+array or discarded tuple values on an isolated carrier. They preserve lengths,
+outer version and suffix, then reparse the same explicit profile. No-op edits
+retain original compressed bytes; fresh reversals restore decoded bytes without
+requiring the original compressor encoding. The dedicated prefix edit result
+keeps incomplete full-body validation visible alongside carrier history.
+
+Source and fixture digests are recorded in `baseline-verification.json`; focused
+API acceptance is recorded in `api-verification.json`. Full record-121 body
 decoding, other native profiles, runtime output mutation and native application
 acceptance remain unverified.

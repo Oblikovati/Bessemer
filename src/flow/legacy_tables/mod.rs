@@ -28,6 +28,7 @@ mod tagged_state;
 mod text_slots;
 mod types;
 mod view;
+mod viewer_prefix;
 mod wide_vectors;
 mod wire;
 mod words;
@@ -60,6 +61,7 @@ pub use tagged_state::*;
 pub use text_slots::*;
 pub use types::*;
 use types::{GroupBodySpan, GroupSpan, TableWire};
+pub use viewer_prefix::*;
 pub use wide_vectors::*;
 
 impl FlowCarrier {
