@@ -1,4 +1,6 @@
 //! Independent storage arithmetic and exact child-path replay before the projection API.
+#[path = "flow_root_indices/api.rs"]
+mod api;
 #[path = "flow_root_indices/fixture.rs"]
 mod fixture;
 use bessemer::flow::*;
@@ -23,6 +25,7 @@ fn all_233_root_projections_replay_exact_leaf_paths_and_storage_arithmetic() {
             leaves += expected.leaves.len();
         }
         assert_eq!(leaves, case.leaf_count as usize);
+        api::check_projection(&case, &context);
     }
 }
 

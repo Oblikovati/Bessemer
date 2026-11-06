@@ -1,0 +1,48 @@
+{
+  "feature_issue": 241,
+  "fixture_base": "5c851c29",
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "rust_command": "cargo test --test flow_root_index_fixtures --test flow_base_grid_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 12,
+  "rust_failed": 0,
+  "rust_ignored": 0,
+  "final_focused_command": "cargo test --test flow_root_index_fixtures --locked",
+  "final_focused_exit_code": 0,
+  "final_focused_passed": 4,
+  "clippy_command": "cargo clippy --lib --test flow_root_index_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "python_command": "python -m unittest discover -s docs/features/flow-root-indices -p test_indices.py -v",
+  "python_exit_code": 0,
+  "python_passed": 4,
+  "python_reference_unchanged": true,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "views": 233,
+  "coverage": "Every root coordinate/storage index/byte offset and every local leaf ordinal/path/wire interval; source checkpoint identities and all coverage/exclusion fields",
+  "bounds": "Exact and one-below root, leaf and total child-path byte limits for every case; zero limits rejected; empty grids complete",
+  "concurrency": "Caller input grid/tree byte containers mutated after publication; eight workers match the serial complete path packet at depth 256",
+  "ownership": "Flat immutable root/leaf metadata, one shared path-byte array and retained complete fresh source context; no per-view allocation or recursive traversal/ownership",
+  "source_lf_sha256": {
+    "src\\flow\\root_indices\\mod.rs": "a9d5a5dba43f682831be8c6504260645590c3d7edb43eadace1b554157f89691",
+    "src\\flow\\root_indices\\project.rs": "1814c292bdb28c60078b035725129c12e23bda5b01043c2611aa4cea83e6e4e2",
+    "src\\flow\\root_indices\\types.rs": "7eadbc2518558eb7bda19c313baf7ad33cb7733860f135acea9d9ae0cac3bfba",
+    "src\\flow\\root_indices\\view.rs": "e1af524b0808685e59f32cf062ab0c890999d9068e3c008fd9fe22dba6ba68ea",
+    "tests\\flow_root_index_fixtures.rs": "2acfaed865941c4bc6e8e41441056ca393e1e2f2cd7fd9ee622238810337cad3",
+    "tests\\flow_root_indices\\api.rs": "5765c0969ce6bc8f1bf4039753538d684e403529555c3781eaf4d9b0add56923"
+  },
+  "log_sha256": {
+    "target\\flow-root-indices-api-tests.log": "0d23804ab9410ba303ed96d0353996cc3627ac82733bb20c370198c6c653d547",
+    "target\\flow-root-indices-api-clippy.log": "3754a69dbb42a6e98d2c14c0265a55a40409976f2d22271031056fc447efb02a",
+    "target\\flow-root-indices-api-final-tests.log": "0041379eaa5d0ed54b20d2aee77088c5d2377151f9deaba700a2b017e5b0febc",
+    "target\\flow-root-indices-api-final-clippy.log": "c272bc998e20823fe33b9bb27761c5cf4638e888268b7a3a59a041c0d561f2a9",
+    "target\\flow-root-indices-baseline-python-tests.log": "de06988fbe0dd1edd7c07973f07880792d17332f2a529786ea0a7db5be60f1ff"
+  },
+  "exclusions": [
+    "No native context construction or native application acceptance",
+    "No global block ordinals or validated parallel scan offsets",
+    "Full gate running on earlier 5c851c29 excludes this projection implementation",
+    "No additional direct native-byte ledger credit, dependency or version change",
+    "No complete schema parity claim"
+  ]
+}

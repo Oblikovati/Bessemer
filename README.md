@@ -36,6 +36,8 @@ The [base-grid view](docs/features/flow-base-grid/README.md) reads record 101's
 dimensions and raw boundary words and edits existing words on isolated copies.
 The [legacy block-data view](docs/features/flow-block-data/README.md) reads record
 406 versions 1–17 with explicit leaf context and edits existing fields with complete history.
+The [root-index projection](docs/features/flow-root-indices/README.md) derives native
+root storage offsets and complete local leaf paths under an explicit fresh-grid assumption.
 
 `bessemer::electrical` reads and edits complete Electrical ZIP32 project carriers
 and lexical ASCII Archive.ini records. It preserves duplicate occurrences,
