@@ -1,0 +1,46 @@
+{
+  "feature_issue": 241,
+  "fixture_base": "91dd254a",
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "rust_command": "cargo test --test flow_metadata_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 11,
+  "rust_failed": 0,
+  "rust_ignored": 0,
+  "clippy_command": "cargo clippy --test flow_metadata_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "python_passed": 10,
+  "python_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "views": 1880,
+  "coverage": "Complete raw header, row intervals, all signed identifiers and state bits; every ordered explicit-map assignment and preceding value; exact EOF and independent bounds.",
+  "edits": "Every existing field in all distinct wire layouts including the entire native payload: independent whole-carrier patches, exact no-ops, complete physical history and fresh reverse.",
+  "concurrency": "All public types asserted Send/Sync; eight workers compare all 1880 complete map/history transcripts and isolated edited bytes; caller map and wire mutations do not affect published snapshots.",
+  "exclusions": [
+    "Native identifier meaning, allocation and hash order",
+    "Native application acceptance",
+    "Record 424 production API and backend"
+  ],
+  "full_gate": "Separate frozen 3b377e0c gate is running and excludes this API; no full-gate acceptance claimed here.",
+  "humanizer": "Unavailable in installed skill catalog; prose pass left to maintainer review.",
+  "reference_sha256": "8dec7de6b29c9128ab20c2726e7a38afe30b56b4fb098de19ff0b0b408edc1db",
+  "source_lf_sha256": {
+    "src\\flow\\legacy_tables\\id_states\\decode.rs": "5fa1f2edcb4acbd0e4ab118c3a3b738da4a2cce983e470abb2a20b6600e334bc",
+    "src\\flow\\legacy_tables\\id_states\\edit.rs": "9b78058cbe98bb04af8d3fc86be7636b4b6c56ccb15a67c658e2cdc5eddcd9c7",
+    "src\\flow\\legacy_tables\\id_states\\mod.rs": "42adffcacbb353a77565938f6528e8515f52b361bbeea243158dbd120930b1ca",
+    "src\\flow\\legacy_tables\\id_states\\projection.rs": "d7b173c74bb4a5738a7a07be195e8d579a285e00cf70b5e8937faa27ef93cb47",
+    "src\\flow\\legacy_tables\\id_states\\types.rs": "719b256f711289ce6b51c6ec40fd56b387c411c187dfcea85bbd92a0818a6697",
+    "src\\flow\\legacy_tables\\id_states\\view.rs": "deb59c7f78369611c29a4aca84e352eaefdff15d2bdf4820989376249d058edf",
+    "src\\flow\\legacy_tables\\mod.rs": "b2d5f7336ae5aef9ae392393679a51a9926a8926a6fdb78c381bf10bd682d356",
+    "tests\\flow_metadata_fixtures.rs": "4065f1b2acc3676db5652a514e4fe9682c147762fd104efe1864b465fe32fd6a",
+    "tests\\flow_metadata\\api.rs": "1002bc6fff025b88bacbb8dc551181eea95c31af484d552f09328d3a6b8808c4",
+    "tests\\flow_metadata\\api\\contracts.rs": "9eb84bf7eb4be0b4a4ad26dce270660eaaed270997b7eaa2b2d39c6727d375e3",
+    "tests\\flow_metadata\\api\\read.rs": "1871a8251c7399dc4a6bea789e6f019613bf891087804419b816ba1aafb900d4"
+  },
+  "log_sha256": {
+    "target\\flow-id-states-api-final-tests.log": "5096051a6c053b757d4efa335955ff0d151daa891defc928885759b75e62a66b",
+    "target\\flow-id-states-api-final-clippy.log": "bae7d995144c302ce8d2fe5e3a60b242e8d83fa95286ee59e30de2627e649b83",
+    "target\\flow-id-states-api-python-tests.log": "dec74d92a2afecf49973ff00b79b2046d4ff592039f48868c90410c1fe156f4e"
+  }
+}

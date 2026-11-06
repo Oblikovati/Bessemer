@@ -1,0 +1,39 @@
+{
+  "feature_issue": 241,
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "rust_command": "cargo test --test flow_reference_group_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 2,
+  "rust_failed": 0,
+  "clippy_command": "cargo clippy --test flow_reference_group_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "python_command": "python -m unittest discover -s docs/features/flow-reference-groups -p test_groups.py -v",
+  "python_exit_code": 0,
+  "python_passed": 8,
+  "reference_python_tests_passed": 6,
+  "format_command": "cargo fmt",
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed for Rust and Python",
+  "views": 1397,
+  "native_payloads": 1,
+  "scope": "Independent complete wire reconstruction and group/entry intervals before the typed record-416 API; all eighteen versions, explicit mapping branches, every signed-byte secondary count, maximum-width arrays and native accounting",
+  "source_lf_sha256": {
+    "docs\\features\\flow-reference-groups\\freeze_groups.py": "5352c138373b4cdfba4c5be79a0a10825fa69e1efc051aa5b45cc59873606e9c",
+    "docs\\features\\flow-reference-groups\\test_groups.py": "5268b727d749350ac158f5d6391360e945632f0b9267d2956321220287aeafa6",
+    "tests\\flow_reference_group_fixtures.rs": "791fac83092e59c75b13c883c283abf06a0d0f719cd87c97d4486ad97fe92e06",
+    "tests\\flow_reference_groups\\fixture.rs": "bd0c8f8c34b8f9471fe7bb1a244ff1ee8fa117dc43b8f4567a1c1db83d190ef5",
+    "tests\\flow_reference_groups\\rebuild.rs": "69df44c6f7974f84542b88a8a8f46b92a7aa04ada6fb530bf7bb10fc2d0dd0e5",
+    "tests\\flow_reference_groups\\types.rs": "a4610749272be4467776e14cabdd0da2bb674110c69dd3208eb1d8c81d66cd50"
+  },
+  "log_sha256": {
+    "target\\flow-reference-groups-baseline-tests.log": "ceb191472830d5cd834a47ff3de66c8848642eabe60cabece15c12dee42b8644",
+    "target\\flow-reference-groups-baseline-clippy.log": "c6fcf6d620782f32ef3a01696baeb5790a181fbe1fe2e0b8b6d4ecfda05e6510",
+    "target\\flow-reference-groups-baseline-python-tests.log": "a55633349ad7a489c8a7d03bb7f0f63819da074511ebcfdb2783d282526a5eee"
+  },
+  "exclusions": [
+    "Production record-416 reader/editor is not provided by this baseline",
+    "Native mapping-state provenance, reference fixups, refinement, engineering roles and application acceptance",
+    "Active full gate at 9c3f2f4f excludes this later fixture baseline"
+  ],
+  "prose_review": "Humanizer unavailable; left to maintainer review"
+}

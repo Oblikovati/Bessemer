@@ -5,6 +5,7 @@ mod block_data;
 mod count_binding;
 mod decode;
 mod edit;
+mod entry_continuation;
 mod feature_identities;
 mod fixed_settings;
 mod global_counts;

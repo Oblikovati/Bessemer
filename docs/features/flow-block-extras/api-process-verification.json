@@ -1,0 +1,22 @@
+{
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "processes": 2,
+  "terminal_exit_codes": [
+    0,
+    0
+  ],
+  "views": 289,
+  "bytes_per_process": 13336240,
+  "sha256": "a3cdc565500c1f4e0e5989fe300b19ac08634c0c661768836dca70cd25fab296",
+  "all_process_bytes_equal": true,
+  "complete_independent_FEO1_packet_equal": true,
+  "scope": "Every actual typed scope/interval/stored-or-derived index and every field scope/role/encoding/editability/layout/raw element. Frame names are frozen input framing. The independent oracle reconstructs complete FBE1 wire bytes and verifies exact nonoverlapping element coverage before freezing FEO1.",
+  "edit_scope": "Owned complete patches and native field-family samples are separately validated; process comparison covers read projections only.",
+  "temporary_probe_sha256": "320ba9290142ee40f14f5ca10eb895e9484dfe15684a8ef44edac1eb52465213",
+  "exclusions": [
+    "Tree-order assignment",
+    "Native references, engineering roles and runtime state",
+    "Native application acceptance",
+    "Exhaustive native field-element edits"
+  ]
+}

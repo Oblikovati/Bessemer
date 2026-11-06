@@ -1,0 +1,18 @@
+{
+  "command": "cargo xtask pr",
+  "terminal_exit_code": 0,
+  "source_commit": "9c3f2f4fe0d9a88ff2a0ddd90a42042fc3f9c1b8",
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "log": "target\\flow-simple-tables-combined-full-pr-gate.log",
+  "log_sha256": "15afaa54dc02e140c449fe7a1c497c15a89dba5ff2d8bfb84d20dc1a8910d373",
+  "result_summaries": 380,
+  "passed": 4643,
+  "failed": 0,
+  "ignored": 242,
+  "scope": "Complete four-table 407/437/411/413 typed API and native acceptance evidence, record-421 original independent baseline, earlier block-extra/link-record work",
+  "exclusions": [
+    "Later record-421 typed API and native edit census",
+    "Later record-416 baseline, shared continuation/scalar extraction and typed API",
+    "No native application acceptance or remote CI credit"
+  ]
+}

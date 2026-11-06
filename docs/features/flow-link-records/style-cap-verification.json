@@ -1,0 +1,12 @@
+{
+  "change": "Extracted existing reference-bound assertions into a helper after edition-2024 formatting increased the containing function beyond twenty lines; behavior and fixtures unchanged",
+  "compile_command": "rustc --edition=2024 --test tests/flow_link_record_fixtures.rs -D warnings -L dependency=target/sqlite-build/debug/deps --extern bessemer=target/sqlite-build/debug/deps/libbessemer-d046eefe32a2c922.rlib --extern flate2=target/sqlite-build/debug/deps/libflate2-2d1ec62b5c8ec434.rlib -o target/link-record-format-regression.exe",
+  "test_command": "target/link-record-format-regression.exe sentinel_and_context_limits --nocapture",
+  "terminal_exit_code": 0,
+  "passed": 1,
+  "reason_for_separate_executable": "The original integration-test executable remains in use by the frozen native census; the temporary executable was removed after validation",
+  "source_lf_sha256": "20cd070c68f19b77dae12bb8f4791148f01a6c41002e24a9548cf62a2835e75d",
+  "log_sha256": "6dfe4025ca422e13f1ef32dc337c97e199dec6cf1b30eb59e60de8cf624ee520",
+  "caps": "passed",
+  "scope": "Focused reference and structural-bound assertion regression only; no additional full-gate or native-census credit"
+}

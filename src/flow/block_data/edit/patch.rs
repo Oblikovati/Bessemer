@@ -1,5 +1,5 @@
+use super::super::encode;
 use super::*;
-use fields::ScalarKind;
 
 pub(super) fn selected(
     body: &FlowLegacyBlockData,
@@ -120,29 +120,6 @@ fn check_entry_cardinality(
         )));
     }
     Ok(())
-}
-
-fn encode(kind: ScalarKind, value: FlowBlockFieldValue) -> Result<Vec<u8>> {
-    use FlowBlockFieldValue::*;
-    let bytes = match (kind, value) {
-        (ScalarKind::Byte, Byte(byte)) => vec![byte],
-        (ScalarKind::NarrowWord16, Word16(word)) if word <= u8::MAX.into() => vec![word as u8],
-        (ScalarKind::Word16, Word16(word)) => word.to_le_bytes().to_vec(),
-        (ScalarKind::Signed32, Signed32(word)) => word.to_le_bytes().to_vec(),
-        (ScalarKind::Word32, Word32(word)) => word.to_le_bytes().to_vec(),
-        (ScalarKind::Signed8, Signed32(word)) if (-128..=127).contains(&word) => {
-            vec![word as i8 as u8]
-        }
-        (ScalarKind::UnsignedCount16, Signed32(word)) if (0..=65535).contains(&word) => {
-            (word as u16).to_le_bytes().to_vec()
-        }
-        _ => {
-            return Err(invalid_block(format!(
-                "field value {value:?}; expected matching stored kind and representable width {kind:?}"
-            )));
-        }
-    };
-    Ok(bytes)
 }
 
 fn structural(cause: String) -> BessemerError {

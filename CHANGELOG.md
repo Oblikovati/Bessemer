@@ -54,6 +54,28 @@
 
 ### Added
 
+- Added complete fresh mixed-kind medium record read/edit profiles with typed reference maps, independent resource bounds and whole-carrier history. (#241)
+
+- Added typed read/edit views for all six medium kind-two body models with bounded raw patterns, exact carrier history and explicit body-only coverage. (#241)
+
+- Added complete fresh-backend Flow kind-one record reads and isolated reference, attribute, metadata and body edits with exact EOF and typed key validation. (#241)
+
+- Added complete Flow medium kind-one body reads and isolated fixed-field edits with raw numeric patterns, lossless names and explicit body-versus-record coverage. (#241)
+
+- Added exact Flow medium-backend prefix reads and isolated header/key edits with explicit populated-object stops and preserved opaque tails. (#241)
+
+- Added bounded Flow metadata-prefix reads and isolated fixed-field edits with lossless UTF-16 projections and exact opaque-backend preservation. (#241)
+
+- Added complete raw Flow ID/state reads, isolated fixed-field edits and ordered map projections with explicit input snapshots and assignment history. (#241)
+
+- Added version-prefixed Flow field-value reads and isolated edits with explicit runtime layouts, strict width projections and complete body-codec boundaries. (#241)
+
+- Added complete legacy Flow reference-group reads and isolated typed edits with explicit mapping context, preserved signed counts and full carrier history. (#241)
+
+- Added complete legacy Flow pointer-pool and body reads with explicit runtime codes, opaque tagged payloads and isolated edits with full carrier history. (#241)
+
+- Added explicit-count Flow parallel, per-leaf, five-word and raw-byte table reads with isolated existing-field edits and complete carrier history. (#241)
+- Added complete legacy Flow block-extra reads and isolated typed field edits with explicit runtime context, strided arrays and full carrier history. (#241)
 - Added complete legacy Flow link-record reads and isolated fixed-field edits with sentinel-aware reference bounds and preserved versioned tails. (#241)
 - Added complete legacy Flow pointer-index and raw-word table reads with isolated existing-field edits, explicit context checks and full carrier history. (#241)
 

@@ -1,0 +1,20 @@
+{
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "processes": 2,
+  "terminal_exit_codes": [
+    0,
+    0
+  ],
+  "views": 1039,
+  "bytes_per_process": 170648,
+  "sha256": "dc38fa3dbba8348fc3eb9fd432dc889296ce5208cd37d9a2b321198330968a85",
+  "all_process_bytes_equal": true,
+  "complete_independent_packet_equal": true,
+  "temporary_probe_sha256": "43c905a3ab9de289bd048be4edade182f36333160c16bd98acd565e043bcdede",
+  "scope": "Every actual reached backend/table version, signed count/kind, conditional raw key, interval, stop, exact coverage and opaque tail. Names and original payloads are input framing; expected fields are skipped before invoking the API. Edits and whole physical history are checked separately.",
+  "exclusions": [
+    "Populated object bodies and following outer collections",
+    "Native runtime and application acceptance",
+    "Complete record-424 schema"
+  ]
+}
