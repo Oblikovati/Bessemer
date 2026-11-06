@@ -114,28 +114,7 @@ fn check_edit(
     );
     assert_eq!(edit.result().coverage(), state.coverage());
 }
-fn check_carrier_history(edit: &FlowCarrierEdit) {
-    assert_eq!(edit.history().len(), 3);
-    assert_eq!(edit.result().records().len(), 3);
-    for ((before, after), entry) in edit
-        .source()
-        .records()
-        .zip(edit.result().records())
-        .zip(edit.history())
-    {
-        assert_eq!((&entry.source, &entry.result), (&before.id, &after.id));
-        let relation = if before.payload == after.payload {
-            FlowPayloadRelation::Copied
-        } else {
-            FlowPayloadRelation::Derived
-        };
-        assert_eq!(entry.relation, relation);
-    }
-    let before: Vec<_> = edit.source().records().collect();
-    let after: Vec<_> = edit.result().records().collect();
-    assert_eq!(before[0].payload, after[0].payload);
-    assert_eq!(before[2].payload, after[2].payload);
-}
+use crate::state_carrier::check_history as check_carrier_history;
 #[test]
 fn complete_state_rejects_every_prefix_extension_negative_version_and_bad_limit() {
     for version in [0i32, 1, 2, 3, i32::MAX] {

@@ -55,23 +55,4 @@ fn check_edit(state: &FlowContextState, edit: &FlowContextStateEdit, offset: usi
     assert_eq!(edit.result().object_count(), state.object_count());
     check_history(edit.carrier_edit());
 }
-pub(super) fn check_history(edit: &FlowCarrierEdit) {
-    assert_eq!(edit.history().len(), 3);
-    for ((before, after), entry) in edit
-        .source()
-        .records()
-        .zip(edit.result().records())
-        .zip(edit.history())
-    {
-        assert_eq!((&entry.source, &entry.result), (&before.id, &after.id));
-        let relation = if before.payload == after.payload {
-            FlowPayloadRelation::Copied
-        } else {
-            FlowPayloadRelation::Derived
-        };
-        assert_eq!(entry.relation, relation);
-        if before.id.ordinal() != 1 {
-            assert_eq!(before.payload, after.payload);
-        }
-    }
-}
+pub(super) use crate::state_carrier::check_history;

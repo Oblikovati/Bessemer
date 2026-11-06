@@ -1,4 +1,6 @@
 //! Owned complete state-table baselines before adding typed readers or editors.
+#[path = "flow_state_tables/arrays.rs"]
+mod state_arrays;
 #[path = "flow_state_tables/context_api.rs"]
 mod context_api;
 #[path = "flow_state_tables/fixture.rs"]
