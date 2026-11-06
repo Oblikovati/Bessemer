@@ -10,25 +10,7 @@ fn options(maximum: usize) -> FlowStoredStateOptions {
     }
 }
 fn carrier(payload: &[u8]) -> FlowCarrier {
-    let mut raw = 8u16.to_le_bytes().to_vec();
-    for (id, bytes) in [
-        (432u32, &b"decoy"[..]),
-        (432, payload),
-        (999, &b"opaque"[..]),
-    ] {
-        raw.extend_from_slice(&id.to_le_bytes());
-        raw.extend_from_slice(&(bytes.len() as u64).to_le_bytes());
-        raw.extend_from_slice(bytes);
-    }
-    FlowCarrier::from_bytes(
-        &raw,
-        FlowLimits {
-            maximum_wire_bytes: 1000,
-            maximum_payload_bytes: 100,
-            maximum_records: 3,
-        },
-    )
-    .unwrap()
+    super::state_carrier::carrier(432, payload)
 }
 fn open(raw: &[u8], maximum: usize) -> bessemer::Result<FlowStoredState> {
     let source = carrier(raw);

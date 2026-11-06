@@ -8,30 +8,11 @@ fn independent_processes_replay_every_source_verified_state_and_edit_byte_for_by
     assert_eq!(process(), process());
 }
 fn process() -> Vec<u8> {
-    let result = std::process::Command::new(std::env::current_exe().unwrap())
-        .args([
-            "--exact",
-            "stored_api::replay::stored_state_process_worker",
-            "--ignored",
-            "--nocapture",
-        ])
-        .output()
-        .unwrap();
-    assert!(
-        result.status.success(),
-        "{}",
-        String::from_utf8_lossy(&result.stdout)
-    );
-    assert!(result.stderr.is_empty());
-    let start = marker(&result.stdout, BEGIN) + BEGIN.len();
-    let end = marker(&result.stdout, END);
-    assert!(end > start);
-    result.stdout[start..end].to_vec()
-}
-fn marker(raw: &[u8], pattern: &[u8]) -> usize {
-    raw.windows(pattern.len())
-        .position(|bytes| bytes == pattern)
-        .unwrap()
+    crate::state_process::transcript(
+        "stored_api::replay::stored_state_process_worker",
+        BEGIN,
+        END,
+    )
 }
 #[test]
 #[ignore = "The regular two-process test invokes this Source-verifying worker twice"]
