@@ -1,3 +1,5 @@
+#[path = "profile/api.rs"]
+mod api_tests;
 use super::{api, fixture, packet::*, rebuild, types::*};
 #[path = "profile/fixture.rs"]
 mod profile_fixture;

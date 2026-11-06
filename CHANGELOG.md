@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added complete fresh-backend Flow kind-one record reads and isolated reference, attribute, metadata and body edits with exact EOF and typed key validation. (#241)
+
 - Added complete Flow medium kind-one body reads and isolated fixed-field edits with raw numeric patterns, lossless names and explicit body-versus-record coverage. (#241)
 
 - Added exact Flow medium-backend prefix reads and isolated header/key edits with explicit populated-object stops and preserved opaque tails. (#241)

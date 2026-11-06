@@ -1,0 +1,56 @@
+{
+  "feature_issue": 241,
+  "fixture_base": "96da0332",
+  "offset_parser_refactor": "5be2265a",
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "rust_command": "cargo test --test flow_medium_object_fixtures --test flow_metadata_fixtures --test flow_medium_reference_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 57,
+  "rust_failed": 0,
+  "rust_ignored": 0,
+  "body_and_profile_tests": 25,
+  "reference_fixture_tests": 3,
+  "metadata_regressions": 29,
+  "clippy_exit_code": 0,
+  "python_passed": 14,
+  "python_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "complete_profiles": 1163,
+  "all_owned_fixtures_unchanged": true,
+  "coverage": "Complete supported fresh-backend kind-one record framing: all physical duplicate-key entries, every nested body field, complete reference lists and signed outer attributes, zero final collections and exact EOF. Native and generated full records match the independent profile oracle.",
+  "edits": "Every exposed first/second key, reference, state and attribute: exact no-op, independent key-membership acceptance/rejection prediction, complete patched bytes, physical history and fresh reverse. Composed state/base operations at every physical body offset; metadata edits at every metadata object with exact backend preservation. Invalid, foreign, stale, misdirected and backend-changing metadata edits rejected.",
+  "boundaries": "All native/small proper prefixes and every appended byte; all unsupported reached table/reference versions, unsupported kinds, negative counts, populated final collections, missing keys and invalid indices. Independent exact/one-below/zero total object/reference/wide/name budgets, with explicit exhausted-name-budget/later-zero-unit regression.",
+  "concurrency": "All nine public profile types asserted Send/Sync; eight workers compare every complete read and nested edited-carrier transcript after input mutation. Source bytes independently snapshotted around all field edits, including rejected edits.",
+  "exclusions": [
+    "Kind-two/mixed-kind profiles and populated final collections",
+    "Engineering meanings, numeric evaluation, native runtime and application acceptance",
+    "Accepted frozen49b8ebec full gate excludes this later API; new full gate pending"
+  ],
+  "humanizer": "Unavailable in installed skill catalog; prose pass left to maintainer review.",
+  "reference_sha256": {
+    "flowmediumobjects.py": "d22904f57af71281cc06fbd75ceee184e54065401e392eb5facddd9974c8dea7",
+    "flowmediumliquids.py": "97f736b02a1cc00fff3740ef7ec63191910877d74f11716eba18a38670372cb7",
+    "flowmetadataprefix.py": "8dec7de6b29c9128ab20c2726e7a38afe30b56b4fb098de19ff0b0b408edc1db",
+    "flowlegacytables.py": "52309d35baa5ecc33046fb2f7a98f4eadc7bfbd22db5b9803e41898131924420"
+  },
+  "source_lf_sha256": {
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\kind_one_profile\\decode.rs": "1a797797206e9d772af00ae0682c1db6db6ede9a676850f6ef8ebc9652c6a876",
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\kind_one_profile\\edit.rs": "7e80eb1171ce104c9d43eb21bd0845f05391d4a9030d39acc62971f11570a80f",
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\kind_one_profile\\mod.rs": "0186edf33d55717dc86a1f1a0b6c0d1c9cf8b55d3dc715074a4a049208727811",
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\kind_one_profile\\types.rs": "2aeeeb8a95a09aadf3b686684aa9443a66b8c77b9c108308d63ea2f448c51f6c",
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\kind_one_profile\\view.rs": "ed5a33165a4d3bbc9905e676635cd5fa59458fa2873f32329c95ecfda8057c74",
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\kind_one_profile\\decode\\scan.rs": "bd0370613451ed4a0ace554d9624c95e4d165d06301dbed875b851865f2c37c8",
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\mod.rs": "91c942ad6b9dbb4065fd50409eb7ede9c5a91a85364fbd52a87cfb3f2c5bc20b",
+    "tests\\flow_medium_objects\\profile.rs": "b1fa2ed42565f07f9b0fb785520ac595f9ae70ec8c5c7dcebe395f9f44c12802",
+    "tests\\flow_medium_objects\\profile\\api.rs": "46192fcebad955a07319f145062df5a16028f380cdd19e3fec0e32e6a0583d80",
+    "tests\\flow_medium_objects\\profile\\api\\contracts.rs": "7209d642dd5493998503330b26689706c07057e2d877d07a079f78f9fb2f6616",
+    "tests\\flow_medium_objects\\profile\\api\\edit.rs": "3468f0197d8470bb321963766b2ce75e6f60bd246c02981d31b4adeb5e525b32",
+    "tests\\flow_medium_objects\\profile\\api\\read.rs": "b1ee0075446da3b8a18725e173fe68d3c31aef203a8c0c88f5040a94ea3745ef"
+  },
+  "log_sha256": {
+    "target\\flow-kind-one-profile-api-tests.log": "4187084348b6081cdbe04079713c6fc69bb0b4a6cebecc41c5427e88e32423ff",
+    "target\\flow-kind-one-profile-api-clippy.log": "d0533cefa87375c888dea776af8fdb9e81f8a1df79ae403c4a826187948f833a",
+    "target\\flow-kind-one-profile-api-python-tests.log": "4eb4d5f20208f8527c30544bba0f5509a64c9f17e992bfa3580314bdb04a5612"
+  }
+}
