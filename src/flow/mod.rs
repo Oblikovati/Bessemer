@@ -2,6 +2,7 @@
 mod arrays;
 mod base_grid;
 mod block_data;
+mod count_binding;
 mod decode;
 mod edit;
 mod feature_identities;
@@ -22,6 +23,7 @@ use crate::{BessemerError, FailureClass, Result};
 pub use arrays::*;
 pub use base_grid::*;
 pub use block_data::*;
+pub use count_binding::*;
 pub use feature_identities::*;
 pub use fixed_settings::*;
 pub use groups::*;

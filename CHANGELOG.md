@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added exact Flow count-prefix views with retained opaque bodies and explicit conditional absent-map count binding for record-433 arrays. (#241)
+
 - Added bounded Flow root-storage index and local leaf-path projections, retaining complete source checkpoints and true depth-256 paths. (#241)
 
 - Added complete legacy Flow block-data reads and isolated existing-field edits, with explicit leaf-count context and fresh full-grid cardinality derivation. (#241)

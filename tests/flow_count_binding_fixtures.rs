@@ -1,4 +1,6 @@
 //! Pin conditional initialization arithmetic separately from opaque record-406 bodies.
+#[path = "flow_count_binding/api.rs"]
+mod api;
 #[path = "flow_count_binding/fixture.rs"]
 mod fixture;
 use bessemer::flow::*;
@@ -19,6 +21,7 @@ fn all_193_prefixes_rebuild_exact_bytes_and_preserve_wrapped_totals_and_opaque_b
         assert_eq!(rebuilt, case.decoded, "{}", case.name);
         check_transport(case.compressed, &case.stored, &case.decoded);
         check_binding(&case);
+        api::check_case(&case);
     }
 }
 

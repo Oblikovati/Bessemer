@@ -38,6 +38,8 @@ The [legacy block-data view](docs/features/flow-block-data/README.md) reads reco
 406 versions 1–17 with explicit leaf context and edits existing fields with complete history.
 The [root-index projection](docs/features/flow-root-indices/README.md) derives native
 root storage offsets and complete local leaf paths under an explicit fresh-grid assumption.
+The [count-prefix and conditional binding view](docs/features/flow-count-binding/README.md)
+retains record 406's opaque body and binds record 433 only under an explicit absent-map initialization assumption.
 
 `bessemer::electrical` reads and edits complete Electrical ZIP32 project carriers
 and lexical ASCII Archive.ini records. It preserves duplicate occurrences,
