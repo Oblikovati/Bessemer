@@ -1,5 +1,6 @@
 //! Bounded ordinary physical Flow carriers, specification 14.29; payload schemas remain separate.
 mod arrays;
+mod base_grid;
 mod decode;
 mod edit;
 mod feature_identities;
@@ -16,6 +17,7 @@ mod trees;
 mod types;
 use crate::{BessemerError, FailureClass, Result};
 pub use arrays::*;
+pub use base_grid::*;
 pub use feature_identities::*;
 pub use fixed_settings::*;
 pub use groups::*;

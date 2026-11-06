@@ -32,6 +32,8 @@ The [mapped-object view](docs/features/flow-mapped-objects/README.md) reads reco
 144 with explicit matched-count context and edits existing state, pair and numeric fields.
 The [block-tree view](docs/features/flow-block-trees/README.md) reads record 400's
 legacy wire forests and inactive delegated prefixes, with isolated existing-field edits.
+The [base-grid view](docs/features/flow-base-grid/README.md) reads record 101's
+dimensions and raw boundary words and edits existing words on isolated copies.
 
 `bessemer::electrical` reads and edits complete Electrical ZIP32 project carriers
 and lexical ASCII Archive.ini records. It preserves duplicate occurrences,

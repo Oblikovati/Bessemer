@@ -54,6 +54,8 @@
 
 ### Added
 
+- Added bounded Flow base-grid reads and isolated raw boundary-word edits with exact framing coverage, default tree bounds and complete carrier history. (#241)
+
 - Added bounded iterative Flow record-400 forest reads and isolated wire-field edits with explicit compression/bounds, preserved discarded fields and exact checkpoints. (#241)
 
 - Added bounded Flow record-144 mapped-object reads and isolated state, pair and numeric edits with explicit runtime cardinalities and complete version-5 blocks. (#241)

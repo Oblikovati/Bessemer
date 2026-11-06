@@ -1,5 +1,7 @@
 //! Pin exact boundary bits and zero-dimension behavior before introducing a typed reader.
 use std::io::{Cursor, Read};
+#[path = "flow_base_grid/api.rs"]
+mod api;
 
 #[test]
 fn all_56_reference_views_rebuild_exact_raw_and_compressed_payloads() {
@@ -34,6 +36,7 @@ fn check_case(cursor: &mut Cursor<&[u8]>) {
     }
     assert_eq!(rebuilt, decoded, "{name}");
     check_transport(compressed, &stored, &decoded);
+    api::check_case(compressed, &stored, &decoded, dimensions);
 }
 
 fn append_boundaries(cursor: &mut Cursor<&[u8]>, dimension: i32, rebuilt: &mut Vec<u8>) {
