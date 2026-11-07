@@ -129,18 +129,8 @@ pub(super) fn text(
     let start = raw.len() - cursor.remaining();
     let count = bounded_count(cursor, 2, *remaining, "metadata UTF-16 units")?;
     let bytes = cursor.take(count * 2)?;
-    if count > 0 && bytes[bytes.len() - 2..] != [0, 0] {
-        return Err(metadata_invalid(format!(
-            "UTF-16 string at {start} with {count} units; expected terminal NUL"
-        )));
-    }
+    let native_units = wire::utf16_text_prefix(424, start, bytes)?;
     *remaining -= count;
-    let native_units = bytes
-        .as_chunks::<2>()
-        .0
-        .iter()
-        .position(|unit| *unit == [0, 0])
-        .unwrap_or(count);
     Ok(TextSpan {
         start,
         end: raw.len() - cursor.remaining(),

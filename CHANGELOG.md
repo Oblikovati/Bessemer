@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Bounded Flow identity diagnostics to framing metadata, keeping retained carrier buffers out of foreign and stale identity errors. (#248)
+
 - Initialized deserialized SQLite page metadata before validating exact image extents, preserving nondefault native page sizes. (#234)
 
 - Qualified synthetic high-bit Thicken replay coverage pending the native signed-version binding. (#213)
@@ -53,6 +55,30 @@
 - Fixed reference-plane point roles rejecting documented endpoint and loft-sync subclasses for fresh and cached pointers. (#46)
 
 ### Added
+
+- Added ordinary solver record selection with last-occurrence identities and explicit rejection of all three reserved control identifiers. (#241)
+
+- Added explicit record-121 viewer-prefix reads and isolated known-field edits with exact compressed framing, preserved opaque suffixes and visible incomplete full-body validation. (#241)
+
+- Added complete record-311 UTF-16 slot reads, isolated header/unit edits and lossless existing-state projections with explicit mode, preserved empty-prefix behavior and complete provenance. (#241)
+
+- Added complete record-122/434 owner-state reads and isolated field edits with exact gated update projections, preferred latest-occurrence selection and no parse-error fallback. (#241)
+
+- Added complete record-148 wide-vector reads and isolated raw-pattern edits with bounded length tables, preserved empty-vector ordinals and complete carrier history. (#241)
+
+- Added complete record-444 auxiliary wide-value reads and isolated raw-pattern and discarded-member edits with bounded inflation, compressed no-op preservation and complete carrier history. (#241)
+
+- Added complete record-304 object-row and legacy-trailer reads with revision-bound signed-field and byte edits, exact framing and complete carrier history. (#241)
+
+- Added record-112 fresh selection contexts and complete headerless value reads/edits, binding value identities to retained link/state revisions and preserving optional entry projections. (#241)
+
+- Added complete record-316 byte-state reads and isolated header/byte edits with bounded inflation, compressed no-op preservation and complete carrier history. (#241)
+
+- Added complete record-12 counted-byte reads and isolated existing-byte edits, preserving raw values, empty results and physical carrier history. (#241)
+
+- Added complete record-301 message-list reads and isolated member/text edits, preserving legacy byte counts, modern UTF-16 suffixes and independent list presence. (#241)
+
+- Added complete record-129 tagged-state reads and isolated tag/value/tail edits, preserving body presence, raw tag bytes and exact wide patterns. (#241)
 
 - Added complete record-139 fixed-state reads and isolated member/settings edits, preserving absent counts, raw slot bits and version-dependent field presence. (#241)
 

@@ -1,0 +1,65 @@
+{
+  "issue": 241,
+  "source_revision_before_baseline": "1855a350fcf40f19da643365c6b6f5413dd16b06",
+  "scope": "Owned complete raw record148 projections; typed production API pending",
+  "results": {
+    "rust_passed": 4,
+    "python_passed": 8,
+    "failed": 0,
+    "ignored": 0,
+    "clippy": "passed",
+    "format": "passed",
+    "function_file_caps": "passed",
+    "maximum_rust_body_lines": 16
+  },
+  "logs": {
+    "tests": {
+      "path": "target/flow-wide-vectors-baseline-tests.log",
+      "sha256": "ff6e03119ed6ad530e7e40b64a24d6e62e23977ff6b74ea8b36f462c91672ba6"
+    },
+    "python": {
+      "path": "target/flow-wide-vectors-baseline-python.log",
+      "sha256": "b43f5ac4fd3a627f8fb397fdc64ed1f278936fb7e9ca4773368eda749d3ca9b4"
+    },
+    "clippy": {
+      "path": "target/flow-wide-vectors-baseline-clippy.log",
+      "sha256": "24fc81f1f509bc5043b1edb0c329ea8e98d3472187bec3611cf26720135c1dfd"
+    },
+    "format": {
+      "path": "target/flow-wide-vectors-baseline-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "coverage": {
+    "cases": 394,
+    "vectors": 32912,
+    "stored_empty_vectors": 28339,
+    "raw_wide_patterns": 448818,
+    "native_cases": 1,
+    "native_vectors": 1,
+    "native_patterns": 1
+  },
+  "helper_lf_sha256": {
+    "freeze_vectors.py": "c0b2ba497219260406564f267ca601424ee8175327e3c7d7837b266e3206eb87",
+    "test_vectors.py": "d9fc6aa2ad55e061e1d8d74b7bbd924ba67e6e72e45576527d99abe528208884",
+    "vector_requests.py": "a78c8bf4b5fefe968ed9b450db3062933292e8cdce23bcd9c1d36ca53184097d"
+  },
+  "oracles": [
+    "Complete original schema projection",
+    "Independent all-lengths-before-bodies literal layout",
+    "Independent complete byte-length equation",
+    "Exact byte reconstruction and every vector interval",
+    "Literal raw-wide bit and boundary-count sets",
+    "Full native source, record extent, payload and complete manifest projection",
+    "Temporary-root fixture regeneration"
+  ],
+  "exclusions": [
+    "Typed Rust reader and editor pending",
+    "Full cargo xtask pr acceptance of this revision pending",
+    "Hosted matrix and sanitizer acceptance pending",
+    "Only one single-vector native payload observed",
+    "Native runtime population and engineering roles not reproduced",
+    "Native application not checked"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose review pending"
+}

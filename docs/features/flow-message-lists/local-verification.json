@@ -1,0 +1,62 @@
+{
+  "source_parent": "64eca696cdf89bdeb4f737c4a2a70f6a8dfde450",
+  "issue": 241,
+  "platform": "Windows x64 MSVC Rust1.99.0 Python3",
+  "environment": {
+    "CARGO_BUILD_JOBS": "1"
+  },
+  "scope": "Owned complete record301 FM31 baseline only; no production API added",
+  "cases": 992,
+  "strings": 12055,
+  "legacy_strings": 2567,
+  "modern_strings": 9488,
+  "python": {
+    "passed": 9,
+    "failed": 0
+  },
+  "rust": {
+    "passed": 5,
+    "failed": 0,
+    "ignored": 0
+  },
+  "commands": [
+    "python -m unittest discover -s docs/features/flow-message-lists -p test_messages.py -v",
+    "cargo test --locked --test flow_message_list_fixtures",
+    "cargo clippy --test flow_message_list_fixtures --locked -- -D warnings",
+    "cargo fmt --all -- --check"
+  ],
+  "terminal_exit_codes": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "independent_oracles": [
+    "Twenty-three-byte legacy record with stored count3 consuming exactly3 raw bytes and no text projection",
+    "Modern count0 versus count1 terminal-NUL string; strict final-NUL check despite an earlier embedded NUL",
+    "All65536 UTF16 units and all256 raw bytes; distinct NFC/NFD payloads",
+    "Full native version3/count1 payload at328-byte EOF with two independent singleton lists"
+  ],
+  "source_sha256": {
+    "docs/features/flow-message-lists/freeze_messages.py": "bbe0e30c22bdef96160eec2e309becac906b56ad7d926ea72bfc5ecbab20d870",
+    "docs/features/flow-message-lists/message_requests.py": "2191ee670057a9abff1a43a1776999aebac3589ebcb5e3af66c911b215f42ebc",
+    "docs/features/flow-message-lists/message_snapshot.py": "bd410d2c4538c40e57d1b78cd7cc87fc7170c4c01325051453b0bc802d70a8f1",
+    "docs/features/flow-message-lists/test_messages.py": "4777fb09dfd131c1a160cf399d00c4883701b17fe6a2eecffeb656e205c5837a",
+    "tests/flow_message_list_fixtures.rs": "200ab92041a6fdb219416ab36b2c9a6066ef0096a459f7ed460e1e24603af495",
+    "tests/flow_message_lists/fixture.rs": "f7b13d8910a80bb89948ad78d6366c55f63565aff2b57bfb391d59ecb1f40f45"
+  },
+  "log_sha256": {
+    "target/flow-message-lists-python.log": "7b5ce81ae3e5c0eec1e690473bd487bb8164af4b2179bde66cab63278e3ae733",
+    "target/flow-message-lists-tests.log": "834660633ddfc29941d57f648ca538424a3a3c0850760a4fc697addde1278cab",
+    "target/flow-message-lists-clippy.log": "44e9bbefb778b386ebfbc5833e0e6fd48c98867b5e1930f6e3a41cb32f183500"
+  },
+  "function_file_caps": "Passed: Rust/Python functions at most20 nonblank/noncomment body lines; files below500 lines",
+  "exclusions": [
+    "Production typed read/edit API",
+    "Native owner string-mode provenance, legacy interpretation and runtime capacity",
+    "Engineering meanings and SolidWorks application acceptance",
+    "Full gate for these new fixtures: current retry frozen ataa329933 excludes them",
+    "Remote CI: current PR245 excludes these fixtures"
+  ],
+  "humanizer": "Maintainer prose review pending; humanizer skill unavailable"
+}

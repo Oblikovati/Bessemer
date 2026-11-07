@@ -1,0 +1,67 @@
+{
+  "issue": 241,
+  "source_revision_before_baseline": "86eb8e407eda6a46db5bcf62a73e71be16a02e79",
+  "scope": "Explicit viewer-query profile only: exact outer/zlib framing, known decoded prefix and complete retained opaque suffix",
+  "results": {
+    "rust_passed": 4,
+    "python_passed": 8,
+    "failed": 0,
+    "ignored": 0,
+    "clippy": "passed",
+    "format": "passed",
+    "function_file_caps": "passed",
+    "maximum_rust_body_lines": 20
+  },
+  "logs": {
+    "tests": {
+      "path": "target/flow-viewer-prefix-baseline-tests.log",
+      "sha256": "d39d4c24f6796b026d5e80cf802b797e17d5c58ad475d5fd1a3c0cb3571620a9"
+    },
+    "python": {
+      "path": "target/flow-viewer-prefix-baseline-python.log",
+      "sha256": "ec1657305f9d622ee24b8d8e5ffe183bdaa6b73d52f6ef384c8cc5c4c2207d52"
+    },
+    "clippy": {
+      "path": "target/flow-viewer-prefix-baseline-clippy.log",
+      "sha256": "4b0e9592b74d3692bedb22b4d267ffd22a8bc9674274419cd01d8e7763352543"
+    },
+    "format": {
+      "path": "target/flow-viewer-prefix-baseline-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "coverage": {
+    "cases": 525,
+    "native_known_prefix_bytes": 616,
+    "native_opaque_decoded_bytes": 141227,
+    "native_decoded_body_bytes": 141843,
+    "native_stored_payload_bytes": 33601,
+    "complete_payload_framing": false
+  },
+  "helper_lf_sha256": {
+    "freeze_viewer.py": "c6bc59e67233a651852515653774bfe6ff1e5f1915c8c32d3c40388a39c13502",
+    "test_viewer.py": "1b6c9784a60b1709d3af2df34383be9137648e5e3aec5d45c0798972361668e8",
+    "viewer_requests.py": "00452f25e3d6da9436f491f7c50a391a84345f1a138438432546a9c31b518c07"
+  },
+  "oracles": [
+    "Complete original prefix projection and opaque-tail native evidence",
+    "Independent prefix size 48 + 8 * sum(array lengths)",
+    "Exact positive array spans, discarded tuple and scalar reconstruction",
+    "Independent stored-second-one to native-output-two rule",
+    "Raw signed and wide bit-pattern sets",
+    "Arbitrary decoded suffix preservation without full-body credit",
+    "Complete compressed stream consumption and malformed known-prefix rejection",
+    "Temporary-root fixture regeneration"
+  ],
+  "exclusions": [
+    "Typed prefix reader and isolated editor pending",
+    "Full payload body framing remains incomplete even with empty suffix",
+    "FWCPT01 version-six graph and other native profiles not implemented by this work",
+    "No proportional compressed-byte semantic credit assigned",
+    "Full cargo xtask pr acceptance of this revision pending",
+    "Hosted matrix and sanitizer acceptance pending",
+    "Native runtime output mutation and engineering meanings not reproduced",
+    "Native application not checked"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose review pending"
+}

@@ -1,0 +1,101 @@
+{
+  "issue": 241,
+  "source_revision_before_api": "0f255e7dc3bac576529bbdcbe1b311f4a8b8f252",
+  "scope": "Complete record444 whole-zlib versions zero and one; typed reads and isolated fixed-field edits",
+  "platform": "Windows x64; Rust 1.99.0; CARGO_BUILD_JOBS=1",
+  "results": {
+    "rust_passed": 13,
+    "rust_failed": 0,
+    "ignored_workers": 1,
+    "worker_invocations_by_parent": 2,
+    "python_passed": 8,
+    "clippy": "passed",
+    "format": "passed",
+    "function_file_caps": "passed; maximum body 16 nonblank lines"
+  },
+  "commands": {
+    "tests": {
+      "command": "cargo test --locked --test flow_aux_wide_value_fixtures",
+      "exit_code": 0,
+      "log": "target/flow-aux-wide-values-api-tests.log",
+      "sha256": "df636fee34e43fdbb0938bf670475eee949fdd864819887922de7ce33dff19b0"
+    },
+    "clippy": {
+      "command": "cargo clippy --locked --test flow_aux_wide_value_fixtures -- -D warnings",
+      "exit_code": 0,
+      "log": "target/flow-aux-wide-values-api-clippy.log",
+      "sha256": "7ab9b79bbd8ef9592b78235139a1b5b286d6c7592fdcb07d873367dcced8a63a"
+    },
+    "format": {
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "log": "target/flow-aux-wide-values-api-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "python": {
+      "command": "python -m unittest discover -s docs/features/flow-aux-wide-values -p test_wides.py",
+      "exit_code": 0,
+      "log": "target/flow-aux-wide-values-api-python.log",
+      "sha256": "21fda78dc8160762222a33bfcfae43a53b10da1e44f03cae027d969dc1d78f87"
+    }
+  },
+  "initial_clippy": {
+    "exit_code": 101,
+    "cause": "Used the standard is_multiple_of alignment check before running tests",
+    "log": "target/flow-aux-wide-values-api-clippy-first.log",
+    "sha256": "0eea064c300858213f5a8d6135c862716ddb8f2464ac7b759316b064cc29dcb5"
+  },
+  "coverage": {
+    "owned_cases": 559,
+    "raw_pattern_reads": 335670,
+    "pattern_edits": 12248,
+    "discarded_legacy_edits": 379,
+    "native_edits": 181,
+    "edit_policy": "Every stored legacy member; all values for counts <=257 and all native values; first/middle/last values for larger generated arrays",
+    "oracles": [
+      "Original complete schema projections and exact native manifest",
+      "Independent header/count byte equations",
+      "Literal signed and raw-wide bit sets",
+      "Independent raw byte patches",
+      "Compressed no-op wire preservation",
+      "Complete physical carrier history",
+      "Fresh decoded reversal without compressor byte equivalence"
+    ],
+    "contracts": [
+      "Exact and one-below decoded-byte and value-count limits",
+      "Zero-value budgets admit complete empty arrays",
+      "Every small decoded prefix and extension rejected",
+      "Unsupported versions and negative/impossible counts rejected",
+      "Compressed prefixes, checksum changes, concatenation and suffixes rejected",
+      "Absent legacy word and out-of-range edits rejected without source changes",
+      "Foreign and wrong record occurrences rejected",
+      "Caller buffer mutation/drop and unrelated carrier edits remain isolated"
+    ],
+    "new_public_types_send_sync": 2,
+    "reused_public_types_send_sync": 5,
+    "concurrent_workers": 8,
+    "operations_per_worker": 32,
+    "process_replay": "Two fresh processes compared complete source-checked reads and the same selected edits byte for byte"
+  },
+  "source_lf_sha256": {
+    "src/flow/legacy_tables/aux_wide_values/edit.rs": "6b979c8ba33496d37b1e1a80e5c61721fb2cd27670be4519a4579751461d90fc",
+    "src/flow/legacy_tables/aux_wide_values/mod.rs": "0a878bce9975969eaf5a46f710db2ab5d4f6982521494476d72a9f6b3ed7e3a4",
+    "src/flow/legacy_tables/aux_wide_values/view.rs": "4c27e047ccbf5153b0627e0a15a3704a764abfed5ad1b96c580d5d930c3ce213",
+    "tests/flow_aux_wide_values/api.rs": "d17576432a40a6ff9f61ff36fc701e8759e6ed129921cee65498af895fe2ad2b",
+    "tests/flow_aux_wide_values/contracts.rs": "13a74069e7b5681b7f59e18618a947b0eae9dfaeaca70ea3f7b14d1e5b19636c",
+    "tests/flow_aux_wide_values/edit.rs": "3ad4059528983db5c2f83d591db794d9c7cabc9eb0a1981dcb2b0f8e0088dcad",
+    "tests/flow_aux_wide_values/replay.rs": "7b3d4e2454f6138b91b0de8d12d7f210ac05d05a6245b91f41323952dba477bb",
+    "src/flow/legacy_tables/mod.rs": "d7239e7d945375a0d6533434f6bf3f0325329b2055825c27f629e573dacb3dbe",
+    "src/flow/legacy_tables/simple_tables/types.rs": "f9da6f7eaa8a84cb9562a6f0e95c5886ecba6cde7ab33f8f09ec17dcb950a933",
+    "tests/flow_aux_wide_value_fixtures.rs": "c069ef64fd71cdc1274e5dc3ac783d7b463dde29bc8b482987164c31d79f1a69"
+  },
+  "exclusions": [
+    "Full workspace cargo xtask pr acceptance of this revision pending",
+    "Hosted matrix and sanitizer acceptance pending",
+    "Only version zero observed in native source",
+    "Native runtime population and engineering roles not reproduced",
+    "Native application not checked",
+    "Fresh compressed reversals promise decoded identity, not original compressor wire identity"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose review pending"
+}

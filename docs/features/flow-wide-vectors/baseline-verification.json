@@ -1,0 +1,34 @@
+{
+  "cases": 394,
+  "bytes": 7858997,
+  "sha256": "a373c331b3d0161ccf771d359671266eab32ae231ba182447bee45e442700518",
+  "native": {
+    "source_sha256": "069aefb4da9fa292bd4eea27b619b9073cc33acc46dda1411b749b0a968706a8",
+    "payload_sha256": "a271f91ce25eeaeca073e8620b5c4dd18e9d5eba9d09ed13a0b9f404b9689490",
+    "record_start": 1001738,
+    "record_end": 1001770,
+    "count": 1,
+    "lengths": [
+      1
+    ],
+    "patterns": [
+      [
+        4698062975489146916
+      ]
+    ],
+    "payload_bytes": 20,
+    "manifest_sha256": "19db5b2b7f50644148349d5bb0d43833533be2cbd57f8a58e56084bd325a3dcf"
+  },
+  "references": {
+    "flowauxrecords.py": "336b34576d010c042ac1d5023d012bc445b9bfc66fef9321f629e5ed900b2f21",
+    "flowlegacytables.py": "52309d35baa5ecc33046fb2f7a98f4eadc7bfbd22db5b9803e41898131924420"
+  },
+  "helper_lf_sha256": {
+    "wide_requests.py": "c690edad385912c3a3813b58988af38689fffbd75a3d43ef72c37a1f3448163c",
+    "freeze_objects.py": "555ada236f89763cb704e45af4bd51c3d7b0fbd60482d560e8ed93b97f035e08"
+  },
+  "scope": "Complete raw version-zero vector count, all signed lengths before array bodies, all raw wide patterns and exact EOF",
+  "native_runtime_population_reproduced": false,
+  "engineering_fields_assigned": false,
+  "native_application_checked": false
+}

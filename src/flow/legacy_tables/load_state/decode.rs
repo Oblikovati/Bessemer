@@ -151,9 +151,7 @@ impl<'a> LoadReader<'a> {
         self.spend(1, count, self.options.maximum_text_units, "UTF16 units")?;
         let units_field = self.fields.len();
         let units_start = self.field(scope, Kind::TextUnits, FlowLoadEncoding::Utf16Unit, count)?;
-        let prefix_units = (0..count)
-            .position(|unit| fields::unit_at(self.raw, units_start + unit * 2) == 0)
-            .unwrap_or(count);
+        let prefix_units = wire::utf16_prefix_units(&self.raw[units_start..self.position()]);
         self.texts.push(LoadTextSpan {
             scope,
             interval: (start, self.position()),

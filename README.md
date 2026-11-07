@@ -8,6 +8,8 @@ CAD kernels use it to exchange data with SolidWorks files. Martensite is its fir
 7/8 and replaces physical payloads on isolated copies. It retains duplicate,
 reserved and unknown records. See the [Flow carrier evidence](docs/features/flow-carriers/README.md)
 for exact framing checks and the remaining index, payload and application work.
+The [solver selector](docs/features/flow-solver-selectors/README.md) selects the
+latest ordinary solver occurrence and rejects all three reserved control IDs.
 The [GUID header view](docs/features/flow-headers/README.md) reads and edits the
 selected record-123/435 GUID prefixes while preserving control words and extensions.
 The [record-433 arrays](docs/features/flow-arrays/README.md) decode bounded zlib
@@ -71,6 +73,39 @@ values while preserving absent arrays and integer quotient projections.
 The [fixed-state view](docs/features/flow-fixed-state/README.md) reads record
 139 versions 0–4 and edits existing member and settings slots while retaining
 absent counts, version-dependent fields and complete carrier history.
+The [tagged-state view](docs/features/flow-tagged-state/README.md) reads record
+129's separate tag block and row bodies and edits existing tags, wide values
+and tails while preserving body presence and complete physical history.
+The [message-list view](docs/features/flow-message-lists/README.md) reads record
+301 versions 0–3 and edits existing member words and text elements, preserving
+legacy byte transfers, full UTF-16 units and independent list presence.
+The [counted-byte view](docs/features/flow-counted-bytes/README.md) reads record
+12's count and uninterpreted bytes and edits existing positions with exact
+framing, independent resource bounds and complete carrier history.
+The [byte-state view](docs/features/flow-byte-states/README.md) reads record
+316's whole-zlib body and edits its raw header and existing bytes while retaining
+bounded inflation, exact decoded framing and compressed no-op preservation.
+The [selected-value view](docs/features/flow-selected-values/README.md) derives
+record 112's count from complete typed link/state inputs under an explicit fresh
+map assumption and edits raw wide patterns with context-bound identities.
+The [object-record view](docs/features/flow-object-records/README.md) reads record
+304 versions 0–7 and edits existing signed fields and opaque bytes, keeping
+counted rows separate from the conditional legacy trailer.
+The [auxiliary wide-value view](docs/features/flow-aux-wide-values/README.md) reads
+record 444's whole-zlib versions 0–1 and edits existing raw patterns and the
+version-zero discarded member while retaining their serialized values.
+The [wide-vector view](docs/features/flow-wide-vectors/README.md) reads record
+148's complete length table and raw arrays and edits existing patterns while
+preserving physical vector order and stored-empty vectors.
+The [owner-state views](docs/features/flow-owner-state/README.md) preserve all
+record-122/434 fields and their gated native-member projections. Selection prefers
+the latest record 434 over record 122 and preserves selected parse failures.
+The [text-slot view](docs/features/flow-text-slots/README.md) reads record 311's
+fifty strict UTF-16 slots, edits existing units and projects nonempty native
+prefixes onto immutable prior text state without Unicode normalization.
+The [viewer-query prefix](docs/features/flow-viewer-prefix/README.md) reads and
+edits record 121's explicitly selected known prefix, preserving its opaque suffix
+and reporting full-body validation as incomplete after every operation.
 The [legacy link view](docs/features/flow-link-records/README.md) reads record 402
 and edits existing fields while preserving code bytes, sentinel references and versioned tails.
 The [legacy table view](docs/features/flow-legacy-tables/README.md) reads records

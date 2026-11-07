@@ -1,0 +1,27 @@
+{
+  "issue": 241,
+  "source_revision": "32522021ed46d11a05b4f050c843f3e9f0fe7411",
+  "command": "cargo xtask pr",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "cargo_build_jobs": 1,
+  "native_schema": "C:/Program Files/SOLIDWORKS Corp/SOLIDWORKS/data/pschema/sch_13006.s_t",
+  "session": 40510,
+  "exit_code": 0,
+  "results": {
+    "summaries": 397,
+    "passed": 4985,
+    "failed": 0,
+    "ignored": 259
+  },
+  "log": "target/flow-object-and-auxiliary-combined-full-pr-gate.log",
+  "log_sha256": "76585ddffb05d4bd4acc79d3769d71dbf6746a116e81084418809a1e69293fb2",
+  "included": "Combined source through record148 wide vectors, including record304 object rows/trailers, record444 auxiliary wide values and bounded identity diagnostics fix248, plus all earlier work",
+  "excluded": [
+    "Later record122/434 owner-state baseline and API",
+    "Record311 text-slot baseline and API",
+    "Record121 viewer-query prefix baseline and API",
+    "Hosted matrix and sanitizer acceptance"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose review pending"
+}

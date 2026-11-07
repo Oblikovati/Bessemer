@@ -1,0 +1,79 @@
+{
+  "issue": 241,
+  "source_revision_before_api": "5bdc5ecbfdf12409b584f38eda734ded691b7126",
+  "scope": "Complete unsigned ordinary solver selector policy; physical/header lookup contracts preserved",
+  "platform": "Windows x64; Rust1.99.0; CARGO_BUILD_JOBS=1",
+  "results": {
+    "rust_passed": 4,
+    "rust_failed": 0,
+    "python_passed": 3,
+    "source_python_passed": 3,
+    "clippy": "passed",
+    "format": "passed",
+    "function_file_caps": "passed",
+    "maximum_rust_function_body_lines": 18
+  },
+  "commands": {
+    "tests": {
+      "command": "cargo test --locked --test flow_solver_selectors",
+      "exit_code": 0,
+      "log": "target/flow-solver-selectors-tests.log",
+      "sha256": "cb98ecbdcac8500ab9cac939504783e53e8bd8a33332cac19ed76178cbbd3ad4"
+    },
+    "clippy": {
+      "command": "cargo clippy --locked --test flow_solver_selectors -- -D warnings",
+      "exit_code": 0,
+      "log": "target/flow-solver-selectors-clippy.log",
+      "sha256": "bc6ddfa9c3710d196007f04d2d07168cde7c25778ee06cd7e2375a846208d28a"
+    },
+    "format": {
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "log": "target/flow-solver-selectors-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "python": {
+      "command": "python -m unittest discover -s docs/features/flow-solver-selectors -p test_selectors.py",
+      "exit_code": 0,
+      "log": "target/flow-solver-selectors-python.log",
+      "sha256": "b49a2145539f9ce59a9ea016d8c24778b271444b8ebb31f7ac21c1de92fe01ca"
+    },
+    "source-tests": {
+      "command": "python -m unittest test_flowsolverselectors (reference directory)",
+      "exit_code": 0,
+      "log": "target/flow-solver-selectors-source-tests.log",
+      "sha256": "8ee4669655aaed29bbc70e28a8ef25f73d1ebe2b002448e637699b5a2cbcaa41"
+    }
+  },
+  "coverage": {
+    "physical_records": 1120,
+    "reference_queries": 561,
+    "physical_versions": [
+      7,
+      8
+    ],
+    "oracles": [
+      "Frozen reference selector decisions",
+      "Independent last-occurrence ordinal equation",
+      "All unsigned single bits/complements and low/high byte boundaries",
+      "Reserved versus absent distinction even in empty carriers",
+      "Existing header selector accepts saved spans while solver selector rejects it",
+      "New revision selects changed payload and identity without changing retained source"
+    ]
+  },
+  "source_lf_sha256": {
+    "src/flow/solver_selectors.rs": "c4a6e83fa1b9d94a7ecba72f989dbea6dc9385bd58d3e8e83e77ea68930663b6",
+    "tests/flow_solver_selectors.rs": "de8df90a6a539d0fa9d0ff89f4b50233d862a076de0eb8da921a1e8ac4e3751f",
+    "src/flow/mod.rs": "d78aee95c2b849481f8bd79f61fef288a779ac4ca4435abea2c4ab5c9e1a72a6",
+    "docs/features/flow-solver-selectors/freeze_selectors.py": "cc39ce8aa4c829821b647fb1105110519492f992bbe253f55b3f719c265a6651",
+    "docs/features/flow-solver-selectors/test_selectors.py": "e80918c4830ffde376b07b3ef76b11c61c4b69c7e46f427c63a0ffcefe345bd9"
+  },
+  "exclusions": [
+    "Running full gate afa3aae0 excludes this solver-selector API",
+    "Full local PR gate for this source pending",
+    "Hosted acceptance pending",
+    "Control payload schemas and native index-state reconstruction pending",
+    "Native application acceptance not checked"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose review pending"
+}

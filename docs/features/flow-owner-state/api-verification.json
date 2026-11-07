@@ -1,0 +1,102 @@
+{
+  "issue": 241,
+  "source_revision_before_api": "0bfef8ebe1c8da01ed69a31e7429e80aafc7f6f6",
+  "scope": "Complete record122/434 fixed fields, pure native-member projection, preferred latest-occurrence selection and isolated fixed-field edits",
+  "platform": "Windows x64; Rust 1.99.0; CARGO_BUILD_JOBS=1",
+  "results": {
+    "rust_passed": 15,
+    "rust_failed": 0,
+    "ignored_workers": 1,
+    "worker_invocations_by_parent": 2,
+    "python_passed": 8,
+    "clippy": "passed",
+    "format": "passed",
+    "function_file_caps": "passed; maximum function body 20 nonblank lines"
+  },
+  "commands": {
+    "tests": {
+      "command": "cargo test --locked --test flow_owner_state_fixtures",
+      "exit_code": 0,
+      "log": "target/flow-owner-state-api-tests.log",
+      "sha256": "6c10f1bd9973d56e8a511c5caad7fd9263ee0b68285bd2ccf892ab0e9c446436"
+    },
+    "clippy": {
+      "command": "cargo clippy --locked --test flow_owner_state_fixtures -- -D warnings",
+      "exit_code": 0,
+      "log": "target/flow-owner-state-api-clippy.log",
+      "sha256": "90e0bf14e0729d6a0171940f08a0e39464f1a29008fc22f86f9ebf4f62a01faf"
+    },
+    "format": {
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "log": "target/flow-owner-state-api-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "python": {
+      "command": "python -m unittest discover -s docs/features/flow-owner-state -p test_owner.py",
+      "exit_code": 0,
+      "log": "target/flow-owner-state-api-python.log",
+      "sha256": "49bb73bb439ced34d55f3bfd384f2be51ee16b25aa29b0c61d1e40267550c1b1"
+    }
+  },
+  "coverage": {
+    "cases": 4613,
+    "selection_cases": 27,
+    "raw_word_reads": 173230,
+    "signed_modern_member_reads": 7830,
+    "state_byte_reads": 1305,
+    "matrix_field_edits": 174535,
+    "native_field_edits": 107,
+    "additional_edits": "Signed/raw modern aliases, explicit legacy gate transitions and selected physical ordinals tested separately",
+    "edit_policy": "Every stored word and every modern state byte in every frozen record",
+    "oracles": [
+      "Complete original schema projections and separately verified native manifest",
+      "Independent literal native member-index equations",
+      "Exact all-ones gate without legacy version dispatch",
+      "Raw-word and unsigned-byte patterns with typed native member offsets",
+      "Literal expected byte patches with recomputed independent projection",
+      "Exact raw no-op preservation",
+      "Complete physical history and fresh complete-carrier reversals"
+    ],
+    "contracts": [
+      "Exact and one-below payload limits",
+      "Completed absent selection with zero budget remains distinct from disabled legacy projection",
+      "Unsupported modern versions, small prefixes and suffixes rejected",
+      "Missing modern fields and out-of-range edits rejected",
+      "Foreign/wrong/stale record identities rejected without source changes",
+      "Preferred latest record chosen before parse; selected errors returned without fallback",
+      "Malformed shadowed records retained and ignored; duplicate occurrences preserved",
+      "Caller buffer mutation/drop and unrelated carrier edits remain isolated"
+    ],
+    "new_public_types_send_sync": 6,
+    "reused_public_types_send_sync": 4,
+    "concurrent_workers_per_layout": 8,
+    "layouts": 2,
+    "operations_per_worker_per_layout": 32,
+    "process_replay": "Each of two fresh workers independently verified frozen fields, projections and selection outcomes; complete record and edit wire transcripts compared byte for byte"
+  },
+  "source_lf_sha256": {
+    "src/flow/legacy_tables/owner_state/edit.rs": "791d1984e0c30c23c541f491f2497920b0d38c1e2a19229b60c70d430f7f11ab",
+    "src/flow/legacy_tables/owner_state/mod.rs": "6635acd2f8151a05d74966ec02fe2ac45aac91456aad07c5b223ab087e30cbc1",
+    "src/flow/legacy_tables/owner_state/projection.rs": "b6e89c531391c6cea780fc77e36fc603dc1e81f4afc1f02e9f362546f4ac4d5f",
+    "src/flow/legacy_tables/owner_state/read.rs": "c77003e127aecaf49f35dcfe6fc68714e16613406ed4768b80ba128a2d68aaa7",
+    "src/flow/legacy_tables/owner_state/types.rs": "56351ad73f19d4d449b1302a80ed404866ac8ebc5c07ad6ae4a3ec9f7c1d839d",
+    "src/flow/legacy_tables/owner_state/view.rs": "ce022368c17b8a264361233df1476f242d4381d407df913555f5c89195a0b17c",
+    "tests/flow_owner_state/api.rs": "0077cee57c3ad0cc45185ef1f1401fb9a597cc579e4ea5d16fac98e797e92b0d",
+    "tests/flow_owner_state/contracts.rs": "027071ec30220ad0d773203239c37c253ade335b8e7b5cfd40d4b380b69c3b5d",
+    "tests/flow_owner_state/edit.rs": "35875573476dfd7aa6ab6fe1a912fa22cc87873de694d213c55601eb1817748d",
+    "tests/flow_owner_state/replay.rs": "b452336f5813a959dacb2bc0ef3ff40ed80eeb8a2021cd4d6fafeee9702971ae",
+    "tests/flow_owner_state/selection.rs": "1513a1c59182c1c2fbb2a274aae93894dcea0de179c2559b59381b36c51ff051",
+    "src/flow/legacy_tables/mod.rs": "48bfe9c84ff09df0ff8c276466d26ce1c2229fba69fa1f036dca77a565b94b61",
+    "tests/flow_owner_state_fixtures.rs": "61b98b1ab1064765255713a13b0b9a50ce68e644891f2ea0a5a622a16b4770e9"
+  },
+  "exclusions": [
+    "Running combined full gate tests source32522021 and excludes this API",
+    "Full cargo xtask pr acceptance of this source revision pending",
+    "Hosted matrix and sanitizer acceptance pending",
+    "Native runtime updates not executed",
+    "Engineering roles not assigned",
+    "Native application not checked"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose review pending"
+}

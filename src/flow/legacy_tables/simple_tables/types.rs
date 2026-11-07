@@ -106,11 +106,11 @@ pub struct FlowSimpleTableCoverage {
     pub decoded_bytes: usize,
     /// Actual fixed-row tuples for records 437/411; zero for the other profiles.
     pub wire_rows: usize,
-    /// Actual raw wide words across parallel arrays or leaf pairs.
+    /// Actual raw wide words across parallel arrays, leaf pairs or counted-wide profiles.
     pub wide_words: usize,
     /// Actual raw 32-bit words in five-word rows.
     pub raw_words: usize,
-    /// Actual record-413 bytes.
+    /// Actual raw bytes in counted-byte and record-413 profiles.
     pub raw_bytes: usize,
     /// Exact serialized error, without approximation.
     pub achieved_error: usize,
@@ -134,7 +134,7 @@ pub enum FlowSimpleTableDiagnostic {
 /// Completed isolated simple-table edit with typed checkpoints and full physical history.
 #[derive(Clone, Debug)]
 pub struct FlowSimpleTableEdit<T: Send + Sync> {
-    pub(super) source: T,
-    pub(super) result: T,
-    pub(super) carrier_edit: FlowCarrierEdit,
+    pub(in crate::flow::legacy_tables) source: T,
+    pub(in crate::flow::legacy_tables) result: T,
+    pub(in crate::flow::legacy_tables) carrier_edit: FlowCarrierEdit,
 }

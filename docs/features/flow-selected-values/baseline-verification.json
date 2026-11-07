@@ -1,0 +1,90 @@
+{
+  "cases": 2729,
+  "packets": [
+    {
+      "path": "tests/fixtures/flow-selected-values/part0.bin.gz",
+      "cases": 218,
+      "bytes": 7983029,
+      "sha256": "97c8b204c7849425c98365cf907f6483f6377be98762dcae90e022ec630d6454"
+    },
+    {
+      "path": "tests/fixtures/flow-selected-values/part1.bin.gz",
+      "cases": 2237,
+      "bytes": 7980236,
+      "sha256": "2985a50e35e3c6ded31767c458592a490f0443e1aed4daf6a6c6a1eae29f6782"
+    },
+    {
+      "path": "tests/fixtures/flow-selected-values/part2.bin.gz",
+      "cases": 274,
+      "bytes": 3773161,
+      "sha256": "600f10df234393c72857dfd54109c553a5833b97450a2858329eeac83256473a"
+    }
+  ],
+  "native": {
+    "inputs": [
+      {
+        "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\FloWorks\\1\\1.cpt",
+        "source_sha256": "ad03c2a0bc279faba94e123d088afc434252afa0befe71b4665b37c441404fc7",
+        "identifier": 402,
+        "record_start": 646714,
+        "record_end": 943898,
+        "payload_sha256": "2ae674b335ea519f7a815c0dff673f039af243740cf77ee5c9b176675fd4e9b6"
+      },
+      {
+        "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\FloWorks\\1\\1.fld",
+        "source_sha256": "069aefb4da9fa292bd4eea27b619b9073cc33acc46dda1411b749b0a968706a8",
+        "identifier": 316,
+        "record_start": 6745,
+        "record_end": 7022,
+        "payload_sha256": "1a7c0d3fde15636c210e5cf149f41dda71f0dd8c6fce7bbe3fae43fd5eca579b"
+      },
+      {
+        "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\FloWorks\\1\\1.fld",
+        "source_sha256": "069aefb4da9fa292bd4eea27b619b9073cc33acc46dda1411b749b0a968706a8",
+        "identifier": 112,
+        "record_start": 7022,
+        "record_end": 38042,
+        "payload_sha256": "b7b5dddc79ff28a963aa9f875a82d0b822c4656a6d2c862d298acae219099a09"
+      }
+    ],
+    "link_count": 5532,
+    "selected_count": 3876,
+    "value_bytes": 31008,
+    "manifest_sha256": "b2a331b77e232fc55686b457aff5e614497e1410033753059760f1d5cbbe7a32",
+    "automatic_pairing_proven": false,
+    "tag_equality_is_observation_only": true
+  },
+  "references": {
+    "flowrecord112.py": "a346582d27b93dc8f9f6b8f4a6cfcd34fc2f51d3c9ab2975ad911596ef12d317",
+    "flowlinkrecords.py": "a3b77bfe1936e9e157d0b603d46d22e526a5138204244e3008b4dbd6958b394f",
+    "flowauxrecords.py": "336b34576d010c042ac1d5023d012bc445b9bfc66fef9321f629e5ed900b2f21",
+    "flowlegacytables.py": "52309d35baa5ecc33046fb2f7a98f4eadc7bfbd22db5b9803e41898131924420",
+    "flowresultdefinitions.py": "e8d6993720cfac848300347a9f2aa4324c84b9819c0d95fbf913a253d7e5c5ac"
+  },
+  "owned_helpers": {
+    "flow-counted-bytes/counted_requests.py": "4851593dffd619ca5b69caad625f48ce7fd25ac8f400f1972716bae3fcf8fc76",
+    "flow-link-records/freeze_links.py": "155991ed448b63443c0fbdc7180fdeebc3a673478147f0b1764e97f86e4aebac",
+    "flow-medium-objects/freeze_objects.py": "555ada236f89763cb704e45af4bd51c3d7b0fbd60482d560e8ed93b97f035e08"
+  },
+  "compression_generator": {
+    "build_version": "1.3.1.zlib-ng",
+    "runtime_version": "1.3.1.zlib-ng"
+  },
+  "scope": "Complete real402/316 inputs, fresh dense maps, raw112 wide patterns and optional per-entry projections",
+  "exhaustive_code_state_versions": [
+    0,
+    9
+  ],
+  "other_version_states": [
+    0,
+    1,
+    127,
+    128,
+    129,
+    255
+  ],
+  "native_owner_binding_verified": false,
+  "native_runtime_scatter_reproduced": false,
+  "engineering_fields_assigned": false,
+  "native_application_checked": false
+}

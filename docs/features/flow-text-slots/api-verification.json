@@ -1,0 +1,107 @@
+{
+  "issue": 241,
+  "source_revision_before_api": "fdbd52a9a337ce59dd85ee69e29b1479020a0fc8",
+  "scope": "Complete record311 strict UTF-16 mode-zero framing, isolated header/unit edits and pure immutable prior-state projection",
+  "platform": "Windows x64; Rust 1.99.0; CARGO_BUILD_JOBS=1",
+  "results": {
+    "rust_passed": 19,
+    "rust_failed": 0,
+    "ignored_workers": 1,
+    "worker_invocations_by_parent": 2,
+    "python_passed": 8,
+    "clippy": "passed",
+    "format": "passed",
+    "function_file_caps": "passed",
+    "maximum_function_body_lines": 20
+  },
+  "commands": {
+    "tests": {
+      "command": "cargo test --locked --test flow_text_slot_fixtures",
+      "exit_code": 0,
+      "log": "target/flow-text-slots-api-tests.log",
+      "sha256": "a2be0f42c35ada70db318dba832d6c25c47ed98bef363d58686bcf2133aaa081"
+    },
+    "clippy": {
+      "command": "cargo clippy --locked --test flow_text_slot_fixtures -- -D warnings",
+      "exit_code": 0,
+      "log": "target/flow-text-slots-api-clippy.log",
+      "sha256": "dfa5ae9e34203dce82920198ed578666348730b36fee5ff87ee7bd12303076f2"
+    },
+    "format": {
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "log": "target/flow-text-slots-api-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "python": {
+      "command": "python -m unittest discover -s docs/features/flow-text-slots -p test_slots.py",
+      "exit_code": 0,
+      "log": "target/flow-text-slots-api-python.log",
+      "sha256": "8762300bb8d85692ac415a5e304229d4c242d29ba3835d7d0a94831681dc952e"
+    }
+  },
+  "coverage": {
+    "cases": 755,
+    "slots": 37750,
+    "stored_unit_reads": 284300,
+    "prior_and_result_slot_values": 37750,
+    "header_matrix_edits": 755,
+    "unit_matrix_attempts": 9923,
+    "unit_matrix_changed_edits": 6236,
+    "unit_matrix_terminal_rejections": 3687,
+    "native_unit_matrix_attempts": 220,
+    "unit_edit_policy": "All native units and all units in generated strings <=64 units; first/middle/last units in larger generated strings; every selected terminal receives no-op and nonzero rejection checks",
+    "oracles": [
+      "Complete original framing and apply-state projections",
+      "Independent raw code-unit first-NUL prefix equation without Unicode normalization",
+      "Exact intervals, counts and literal byte reconstruction",
+      "Raw signed header bits and every UTF-16 code unit",
+      "Independent prior-state retention versus native-prefix replacement",
+      "Literal header/unit byte patches with recomputed native prefixes",
+      "Raw no-op preservation, complete physical history and fresh whole-carrier reversal",
+      "Per-slot projection history retains both immutable parent checkpoints"
+    ],
+    "contracts": [
+      "Exact and one-below payload, transferred-unit, previous-state and output-state budgets",
+      "Zero-unit read and previous state; zero-output-unit complete empty projection",
+      "Malformed prefixes/suffixes, negative/absurd counts and missing terminal NUL rejected",
+      "Checked slot/unit/state indices and foreign/wrong/stale record occurrences",
+      "Interior-NUL edits recompute prefix and retained/applied state decisions",
+      "Equal nonempty native replacement retains applied-source provenance",
+      "Caller source buffers and prior-state vectors can mutate/drop without affecting retained results",
+      "Failed projections preserve input state and source"
+    ],
+    "new_public_types_send_sync": 9,
+    "reused_public_types_send_sync": 3,
+    "concurrent_workers": 8,
+    "operations_per_worker": 32,
+    "concurrency": "Mixed header and unit edits, exact prior-state projections and failure paths matched serial output",
+    "process_replay": "Two fresh workers independently verified full frozen reads/state projections and identical selected edits; wire and projected UTF-16 state transcripts compared byte for byte"
+  },
+  "source_lf_sha256": {
+    "src/flow/legacy_tables/text_slots/edit.rs": "1fd583b7a4eb9e6146d714c0025badf0200ca6992ff81b34f8cb83e7965c2819",
+    "src/flow/legacy_tables/text_slots/mod.rs": "b305721e079a77ea513e06cb901dd3ee7690041611ef126681882090d9cb2eca",
+    "src/flow/legacy_tables/text_slots/projection.rs": "6e098c648f3189c843db836e10a4cd5d3dbec537dec0a937a0bd9a08a6c117b2",
+    "src/flow/legacy_tables/text_slots/read.rs": "04985106b0fd4bec8e722af0a18d175e70edb381c742ea1467a7410323638443",
+    "src/flow/legacy_tables/text_slots/state.rs": "cb8b179ac84c5018e0b35812054d2095b284b4e31c8f9a00ef4c6f15499f37d2",
+    "src/flow/legacy_tables/text_slots/types.rs": "769a4831b516c1c9ad8fb05d9c6af717597c358eeabefa060933226525182a91",
+    "src/flow/legacy_tables/text_slots/view.rs": "0eb7ea38327c9c39502e3ea3e5ac3b8d450503a1532b8ca49050266bd485c115",
+    "tests/flow_text_slots/api.rs": "96dc865ab641a3261ddc403059ca255b321db9c29e636b36b3eb940f48842308",
+    "tests/flow_text_slots/contracts.rs": "086eced4dc2bb0f920f0575037a054feaa9278ed013db5e4d3b5736201fc80e8",
+    "tests/flow_text_slots/edit.rs": "72a26b93c8ffa3d448c0ff149263152ef29e0d51bc141362f5c6c8a6949f5b12",
+    "tests/flow_text_slots/projection.rs": "2920bb19e56e23d08e695fd69ac4c8fb7f312e81cde981936412659f37138cbe",
+    "tests/flow_text_slots/replay.rs": "e6fdd6a412529572803fd245959afe45261e86bb3e5b009271b841eb523d2046",
+    "src/flow/legacy_tables/mod.rs": "e40db0f775f0fc040c130e037a4efb749de2c4303d4947219f0fdb4cfff85452",
+    "tests/flow_text_slot_fixtures.rs": "8e88190f168ac3aee6171ebd5d0a135160747cce1d59a3dae8ad539822138548"
+  },
+  "exclusions": [
+    "Running full gate source32522021 excludes this API",
+    "Full cargo xtask pr acceptance of this source revision pending",
+    "Hosted matrix and sanitizer acceptance pending",
+    "Native owner-mode provenance not verified; NativeUtf16 is explicit",
+    "Native runtime updates not executed",
+    "Engineering slot purposes not assigned",
+    "Native application not checked"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose review pending"
+}

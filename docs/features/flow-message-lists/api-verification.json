@@ -1,0 +1,99 @@
+{
+  "source_parent": "04bc00bb9d181e4e6f4c04d4cfbfc3288b4da52d",
+  "issue": 241,
+  "platform": "Windows x64 MSVC Rust 1.99.0 Python 3",
+  "environment": {
+    "CARGO_BUILD_JOBS": "1",
+    "CARGO_TARGET_DIR": "target/sqlite-build"
+  },
+  "commands": [
+    "cargo test --locked --test flow_message_list_fixtures --test flow_load_state_fixtures --test flow_metadata_fixtures --test flow_medium_object_fixtures",
+    "cargo clippy --tests --locked -- -D warnings",
+    "cargo fmt --all -- --check",
+    "python -m unittest discover -s docs/features/flow-message-lists -p test_messages.py -v"
+  ],
+  "terminal_exit_codes": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "rust": {
+    "passed": 113,
+    "failed": 0,
+    "ignored": 2
+  },
+  "python": {
+    "passed": 9,
+    "failed": 0
+  },
+  "ignored_scope": "Two process workers, each invoked twice by a regular Source-verifying parent test",
+  "complete_source_cases": 992,
+  "items": 1188,
+  "strings": 12055,
+  "read_policy": "Every stored byte/unit, raw field, prefix and physical string ancestry in all owned cases",
+  "edit_policy": "Every member word; distinct first/middle/last element of every nonempty string, including native strings; terminal UTF16 edits preserve NUL",
+  "selected_text_edits": {
+    "legacy_bytes": 4380,
+    "modern_units": 20681,
+    "total": 25061
+  },
+  "edit_oracles": [
+    "Independent expected byte patches",
+    "Complete physical carrier history",
+    "Exact whole-carrier reversals",
+    "No-op identity",
+    "Source isolation after success/failure/caller mutation"
+  ],
+  "concurrency": {
+    "workers": 8,
+    "operations_per_worker": 32,
+    "fresh_source_verifying_processes": 2,
+    "public_send_sync_types": 11
+  },
+  "bounds": [
+    "payload bytes",
+    "items",
+    "strings",
+    "transferred text bytes",
+    "stored scalar values",
+    "scope descriptors"
+  ],
+  "style": {
+    "files_under_500_lines": true,
+    "functions_at_most_20_body_lines": true,
+    "whitespace_check_exit": 0
+  },
+  "logs_sha256": {
+    "target/flow-message-lists-api-final-tests.log": "ba32c1c600fd6a58499762978cefc2855baf513711ee7e3cb3adfab5dbba8eb7",
+    "target/flow-message-lists-api-clippy.log": "6ef2243f9346641c2192c1e3d475622ab5577a0a6b588d111657541f64dbf520",
+    "target/flow-message-lists-api-format.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/flow-message-lists-api-python.log": "3d9a37928419a9de8da958ca7e5502e78758f37e0d63ed3ce08cb418ebdd9cca"
+  },
+  "source_files_lf_sha256": {
+    "src/flow/legacy_tables/message_lists/decode.rs": "b9e34bc1cc2b5023289a1554df53dc23f55f2ba1311f6397f7bcccdf53337de7",
+    "src/flow/legacy_tables/message_lists/edit.rs": "a15bea5db9d9fb72064b0208917e8fc400b707528aeccb91a479fc0db1220576",
+    "src/flow/legacy_tables/message_lists/mod.rs": "a419d607fe9f8bcf35b37bdc8220b771d576626d89a9c72fd6c946ef54906ea2",
+    "src/flow/legacy_tables/message_lists/scan.rs": "c117287f3c05e21351354e56c626fb2a9b7176183aab80ac160f1b1b3f41dfdd",
+    "src/flow/legacy_tables/message_lists/schema.rs": "3dbfb88eb6093eca2a799feb145b1705c9072223aa520f7304dd505b683cefed",
+    "src/flow/legacy_tables/message_lists/types.rs": "9361c1c6dbcfcdd5b27dca9a3c2c78c8b394e3a8d624a390ed8c968a8a80850f",
+    "src/flow/legacy_tables/message_lists/view.rs": "6ba2c3c782a06ca6cb1b7c81b539ff3598eca1aeaa2c9be855ab422bf7bf0bd8",
+    "src/flow/legacy_tables/mod.rs": "ce2d0a37f2d0f0720fd965c2820bd1f7d5d80607de846670c216556be164d5d2",
+    "tests/flow_message_list_fixtures.rs": "ef8897f1946865484d80c7da37173fa88844c811aaedf5d5647d8eb37d9545ba",
+    "tests/flow_message_lists/api.rs": "52d11bbe107698baf1b0176169361b137c61a7e8ae7c94868fc3884db0945f21",
+    "tests/flow_message_lists/contracts.rs": "91a89a8d13dfb84f6d3bf1f2423a14121f5575a6b4543e044658e76750c5fa98",
+    "tests/flow_message_lists/fixture.rs": "f7b13d8910a80bb89948ad78d6366c55f63565aff2b57bfb391d59ecb1f40f45",
+    "tests/flow_message_lists/replay.rs": "196b8362b7a75daab1afa7ea75ae1f59cb9d0e6c0f344616d993ff1bbb2be291"
+  },
+  "baseline": "baseline-verification.json",
+  "exclusions": [
+    "Legacy byte text interpretation",
+    "Native mode-owner binding",
+    "Native runtime allocation and capacity",
+    "Engineering field meanings",
+    "SolidWorks application acceptance",
+    "Exhaustive edit positions beyond the selected policy",
+    "Current tree full matrix and release acceptance"
+  ],
+  "humanizer": "Unavailable in the supplied skill catalog; maintainer prose pass remains for review"
+}

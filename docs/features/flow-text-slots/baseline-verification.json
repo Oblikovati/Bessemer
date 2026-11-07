@@ -1,0 +1,33 @@
+{
+  "cases": 755,
+  "bytes": 3643920,
+  "sha256": "6d2ebd3e68ada479b5ed69ff43c66f2bf44bb92c8271d8b16fcbed587eea19ff",
+  "native": {
+    "source_sha256": "069aefb4da9fa292bd4eea27b619b9073cc33acc46dda1411b749b0a968706a8",
+    "payload_sha256": "6fdd46852b28b9f1cba242260e8f077f5ae603c301f8d19cc79f72e9c669e354",
+    "record_start": 5846,
+    "record_end": 6502,
+    "header": 0,
+    "slots": 50,
+    "units": 220,
+    "payload_bytes": 644,
+    "manifest_sha256": "19db5b2b7f50644148349d5bb0d43833533be2cbd57f8a58e56084bd325a3dcf",
+    "mode_assumption": 0,
+    "native_owner_mode_verified": false
+  },
+  "references": {
+    "flowauxrecords.py": "336b34576d010c042ac1d5023d012bc445b9bfc66fef9321f629e5ed900b2f21",
+    "flowmetadataprefix.py": "8dec7de6b29c9128ab20c2726e7a38afe30b56b4fb098de19ff0b0b408edc1db",
+    "flowlegacytables.py": "52309d35baa5ecc33046fb2f7a98f4eadc7bfbd22db5b9803e41898131924420"
+  },
+  "helper_lf_sha256": {
+    "message_requests.py": "2191ee670057a9abff1a43a1776999aebac3589ebcb5e3af66c911b215f42ebc",
+    "load_requests.py": "9949547bf00c020573fd46d8d23c7156cf974bbc185050f296d7d2d7204f7cf5",
+    "object_requests.py": "0af35563f953436e2f14382ef87873b598bfa1ec1d77ea6a9c8e49d98fa3573f"
+  },
+  "scope": "Complete arbitrary signed header and fifty strict UTF-16 slots under explicit mode zero; empty native prefixes retain prior text state",
+  "native_header_dispatch": false,
+  "native_runtime_updates_executed": false,
+  "engineering_fields_assigned": false,
+  "native_application_checked": false
+}

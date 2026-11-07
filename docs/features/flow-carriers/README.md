@@ -5,6 +5,8 @@
 records with a four-byte identifier, eight-byte payload length and exact payload.
 The parser requires complete physical EOF. Unknown, duplicate, reserved and
 empty records remain in their original order, with revision-bound occurrence IDs.
+Identity debug output reports bounded framing metadata and omits retained carrier
+buffers. See [identity diagnostics](../flow-identity-diagnostics/README.md).
 `latest` selects the final ordinary occurrence and explicitly rejects the two
 reserved native index selectors, -99 and -101.
 

@@ -1,0 +1,101 @@
+{
+  "issue": 241,
+  "source_revision_before_api": "91fe16ab0bee124dfd71761aa8634fe01639b5b9",
+  "scope": "Complete raw record-304 versions 0..7 with typed reads and isolated fixed-field writes",
+  "results": {
+    "rust_passed": 13,
+    "rust_failed": 0,
+    "ignored_workers": 1,
+    "worker_invocations_by_parent": 2,
+    "python_passed": 8,
+    "clippy": "passed",
+    "format": "passed",
+    "function_file_caps": "passed; maximum function body 19 nonblank lines"
+  },
+  "commands": {
+    "tests": {
+      "command": "cargo test --locked --test flow_object_record_fixtures",
+      "exit_code": 0,
+      "log": "target/flow-object-records-api-tests.log",
+      "sha256": "4330e4bfc006960bf3aa7c53217890eb3176939dbfcc7933861ca371431b5578"
+    },
+    "clippy": {
+      "command": "cargo clippy --locked --test flow_object_record_fixtures -- -D warnings",
+      "exit_code": 0,
+      "log": "target/flow-object-records-api-clippy.log",
+      "sha256": "598440f744405d4e86339748e555852b607a0e3481d0bafb9c6b195988e04761"
+    },
+    "python": {
+      "command": "python -m unittest discover -s docs/features/flow-object-records -p test_objects.py",
+      "exit_code": 0,
+      "log": "target/flow-object-records-api-python.log",
+      "sha256": "af1931c513cd3ab1061d3f5ab6e257afb19197d6f7269f135a4198bfc487ff2e"
+    },
+    "format": {
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "log": "target/flow-object-records-api-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "initial_clippy": {
+    "exit_code": 101,
+    "cause": "Unnecessary borrow in concurrency test Arc clone; removed without changing production behavior",
+    "log": "target/flow-object-records-api-clippy-first.log",
+    "sha256": "0e9d80af0a9df60c9a040f504d327fb1f520735d1f4bf26f552a9a5cd07ab2c1"
+  },
+  "coverage": {
+    "cases": 2690,
+    "stored_rows": 19714,
+    "signed_scalar_reads": 80535,
+    "byte_scalar_reads": 485168,
+    "signed_field_edits": 23575,
+    "byte_field_edits": 154088,
+    "native_field_edits": 76,
+    "edit_policy": "Every field in every row for counts <=32; first/middle/last rows for larger counts; every trailer field",
+    "edit_assertions": [
+      "Independent frozen-projection field intervals",
+      "Literal expected raw byte patch",
+      "Exact raw no-op carrier preservation",
+      "Complete three-record physical history",
+      "Fresh whole-carrier byte reversal",
+      "Stale identity rejection and source isolation"
+    ],
+    "contracts": [
+      "Exact and one-below payload and actual-row budgets; zero rows accepted",
+      "Every small-layout prefix and trailing extension rejected",
+      "Unsupported versions; negative and impossible counts rejected",
+      "Absent fields and checked row/field/trailer bounds",
+      "Foreign/stale identities and wrong scalar encodings rejected",
+      "Caller buffers and unrelated carrier edits remain isolated"
+    ],
+    "new_public_types_send_sync": 9,
+    "reused_public_types_send_sync": 2,
+    "concurrent_workers": 8,
+    "operations_per_worker": 32,
+    "process_replay": "Two fresh processes byte-for-byte, full Source-checked reads and same selected edit policy"
+  },
+  "source_lf_sha256": {
+    "src/flow/legacy_tables/object_records/edit.rs": "952bb730db8608fd6349702e2972ca8f528fb046fff2fb882d078d0a80020a91",
+    "src/flow/legacy_tables/object_records/fields.rs": "a472332c72a999e80a967d22c6d5d0a6ac91effd84818fbbf9e3f8065ef702fa",
+    "src/flow/legacy_tables/object_records/mod.rs": "8ee64c7c126584d554308e58b91d035cb989ab1ef8dbc39cd1a74acb057fa9b2",
+    "src/flow/legacy_tables/object_records/row.rs": "63cd1416b3c9441658b354e1623f05c38b461ff93504c5cec9fd9b7bb7a3a516",
+    "src/flow/legacy_tables/object_records/types.rs": "81b401d58e5cba6f1fa3390d0b2c8e305c947468245410be6b6a1fbd0b471e4c",
+    "src/flow/legacy_tables/object_records/view.rs": "902072d01369edeec24f8392a72bd3a1c4d8fb16682b62b7141a494c17c1a97c",
+    "tests/flow_object_records/api.rs": "e8b0e280545b6c660eebf215703f59a1bc7a3cd7677c2dbf5deea301cbb3391c",
+    "tests/flow_object_records/contracts.rs": "ce3e89abd9f23e8b91a3bfa9c9c8a141c3ef7eea78acbdeb3d736dabfc16a4d7",
+    "tests/flow_object_records/edit.rs": "61a413c342b4d77a86caf591d59bfc6345645f6cd54cad271c5d4f9de44bb03b",
+    "tests/flow_object_records/replay.rs": "1c29115c1cf6376e160ea9340a73d0490bc97ce82d4d4d4fac27d31ceef92bd1",
+    "tests/flow_object_record_fixtures.rs": "1f95e6d0db72aca6b8f198ce301e6367c165be6012e43a8a63c3812aa5fbd500",
+    "src/flow/legacy_tables/mod.rs": "7b568c3b9ce7ab53bee322cbdfa545b6eee82a20cb72826bdb69fd0280272f66"
+  },
+  "exclusions": [
+    "Full cargo xtask pr for this source revision pending",
+    "Hosted matrix and sanitizer acceptance pending",
+    "Only version 3 observed in native samples",
+    "Native runtime population, identity-list binding and legacy flag lifecycle not reproduced",
+    "Engineering meanings not assigned",
+    "Native application not checked"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose review pending"
+}
