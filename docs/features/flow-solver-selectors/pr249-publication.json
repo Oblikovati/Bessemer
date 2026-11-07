@@ -1,0 +1,28 @@
+{
+  "issue": 241,
+  "pr": 249,
+  "url": "https://github.com/Oblikovati/Bessemer/pull/249",
+  "head": "a1f41b28920210cf32eda1e7de3287217a2770e4",
+  "base": "codex/interop-candidate",
+  "validated_source": "419844f281d62e92ee211da4d46fdb6095d8da45",
+  "publication_difference": [
+    "docs/features/flow-solver-selectors/full-pr-gate-verification.json"
+  ],
+  "source_and_fixture_bytes_unchanged": true,
+  "workflow_run": "42337394790",
+  "required_hosted_checks": 13,
+  "hosted_acceptance": false,
+  "review": {
+    "pros": [
+      "Complete focused independent oracles and accepted full local gate",
+      "Explicit prefix, context, runtime and engineering scopes retained",
+      "Bounded identity diagnostics fix included"
+    ],
+    "limitations": [
+      "Hosted matrix/sanitizers pending",
+      "Native application acceptance remains separate",
+      "Later IMS500/501 and strict control work excluded"
+    ],
+    "recommended_action": "Wait for all13 checks to complete successfully on the exact published head, then merge and delete the publication branch"
+  }
+}
