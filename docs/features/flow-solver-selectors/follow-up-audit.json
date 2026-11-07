@@ -41,7 +41,7 @@
     {
       "source": "flowlegacyfields.py",
       "source_lf_sha256": "2956d2854bf47265a8a5799a7549406117ead69858716d823fade7bb25505a41",
-      "status": "Missing typed 105/113/155 bindings, scalar queries and 113-before-155 selection confirmed by module, entry-point and identifier audit; owned baselines accepted: 1007 word cases, 90601 scalar pairs, 1986 groups and 400 selections; public APIs pending"
+      "status": "Typed 105/113/155 readers, scalar queries, preferred selection and existing-value editors implemented; 16 Rust, 8 baseline Python, 5 Source tests and earlier conditional 14 suite accepted with frozen typed values/paths, exact bounds, malformed framing, history, inverse wires, isolation, eight-worker and two-process checks; clippy/format/caps passed; full gate and hosted acceptance pending"
     }
   ],
   "search": {
@@ -58,7 +58,7 @@
     ],
     "limitation": "Identifier searches identify follow-up work; they do not establish absence of equivalent unnamed implementations"
   },
-  "next": "Implement the frozen 105/113/155 layouts, scalar decisions and selection; reuse the conditional grammar without extending or mislabeling existing public formats; retain the running f2902881 gate and await all hosted checks before integration",
+  "next": "Finish the running f2902881 gate without changing its source; merge PR249 after all 13 exact-head hosted jobs pass; gate newer legacy APIs before publication; continue requirement-by-requirement audits of other documented Flow and SolidWorks schemas",
   "exclusions": [
     "Other Flow modules need a requirement-by-requirement audit",
     "Other SolidWorks schema families need a fresh source audit",

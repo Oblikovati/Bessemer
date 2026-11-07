@@ -30,19 +30,13 @@ impl FlowConditionalItems {
         self.fields
             .iter()
             .enumerate()
-            .map(|(ordinal, span)| FlowConditionalField {
-                owner: &self.wire,
-                ordinal,
-                span,
-            })
+            .map(|(ordinal, span)| field_view(&self.wire, ordinal, span))
     }
     /// Resolves a physical field ordinal; e.g. `let version = items.field_at(0)`.
     pub fn field_at(&self, ordinal: usize) -> Option<FlowConditionalField<'_>> {
-        Some(FlowConditionalField {
-            owner: &self.wire,
-            ordinal,
-            span: self.fields.get(ordinal)?,
-        })
+        self.fields
+            .get(ordinal)
+            .map(|span| field_view(&self.wire, ordinal, span))
     }
     /// Resolves only an original revision-bound field; e.g. `let field = items.field(&id)?`.
     pub fn field(&self, id: &FlowConditionalFieldId) -> Result<FlowConditionalField<'_>> {
@@ -61,19 +55,13 @@ impl FlowConditionalItems {
         self.scopes
             .iter()
             .enumerate()
-            .map(|(ordinal, span)| FlowConditionalScope {
-                owner: &self.wire,
-                ordinal,
-                span,
-            })
+            .map(|(ordinal, span)| scope_view(&self.wire, ordinal, span))
     }
     /// Resolves one scope by physical descriptor ordinal; e.g. `let root = items.scope_at(0)`.
     pub fn scope_at(&self, ordinal: usize) -> Option<FlowConditionalScope<'_>> {
-        Some(FlowConditionalScope {
-            owner: &self.wire,
-            ordinal,
-            span: self.scopes.get(ordinal)?,
-        })
+        self.scopes
+            .get(ordinal)
+            .map(|span| scope_view(&self.wire, ordinal, span))
     }
     /// Resolves only an original revision-bound scope; e.g. `let scope = items.scope(&id)?`.
     pub fn scope(&self, id: &FlowConditionalScopeId) -> Result<FlowConditionalScope<'_>> {
@@ -88,16 +76,7 @@ impl FlowConditionalItems {
         })
     }
     fn check_record(&self, record: &FlowRecordId) -> Result<()> {
-        if *record == self.wire.record {
-            return Ok(());
-        }
-        Err(conditional_invalid(
-            self.format,
-            format!(
-                "identity record {record:?}; expected {:?}",
-                self.wire.record
-            ),
-        ))
+        check_record_wire(&self.wire, record)
     }
     /// Returns complete framing/value accounting; e.g. `let bytes = items.coverage().decoded_bytes`.
     pub fn coverage(&self) -> FlowConditionalCoverage {
@@ -188,5 +167,38 @@ impl FlowConditionalItemEdit {
     /// Borrows full carrier checkpoints and physical history; e.g. `let history = edit.carrier_edit().history()`.
     pub fn carrier_edit(&self) -> &FlowCarrierEdit {
         &self.carrier_edit
+    }
+}
+
+pub(super) fn check_record_wire(wire: &TableWire, record: &FlowRecordId) -> Result<()> {
+    if *record == wire.record {
+        return Ok(());
+    }
+    Err(table_failure(
+        wire.identifier,
+        FailureClass::Invalid,
+        format!("identity record {record:?}; expected {:?}", wire.record),
+    ))
+}
+pub(super) fn field_view<'a>(
+    wire: &'a TableWire,
+    ordinal: usize,
+    span: &'a ConditionalFieldSpan,
+) -> FlowConditionalField<'a> {
+    FlowConditionalField {
+        owner: wire,
+        ordinal,
+        span,
+    }
+}
+pub(super) fn scope_view<'a>(
+    wire: &'a TableWire,
+    ordinal: usize,
+    span: &'a ConditionalScopeSpan,
+) -> FlowConditionalScope<'a> {
+    FlowConditionalScope {
+        owner: wire,
+        ordinal,
+        span,
     }
 }

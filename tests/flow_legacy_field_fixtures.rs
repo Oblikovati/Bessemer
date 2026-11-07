@@ -1,6 +1,12 @@
 //! Frozen legacy105/113/155 framing, pure comparison branches and selection precedence.
+#[path = "flow_legacy_fields/api.rs"]
+mod api;
+#[path = "flow_state_tables/carrier.rs"]
+mod carrier;
 #[path = "flow_conditional_items/case_reader.rs"]
 mod case_reader;
+#[path = "flow_conditional_items/roles.rs"]
+mod conditional_roles;
 #[path = "flow_conditional_items/types.rs"]
 mod conditional_types;
 #[path = "flow_legacy_fields/fixture.rs"]
@@ -9,6 +15,8 @@ mod fixture;
 mod oracles;
 #[path = "flow_field_values/packet.rs"]
 mod packet;
+#[path = "flow_state_tables/process.rs"]
+mod process;
 #[path = "flow_field_values/stored_fields.rs"]
 mod stored_fields;
 use conditional_types::*;

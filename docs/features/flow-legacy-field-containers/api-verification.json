@@ -1,0 +1,122 @@
+{
+  "issue": 241,
+  "status": "focused checks passed; exact-source full PR gate and hosted acceptance pending",
+  "baseline_commit": "50aa224c",
+  "private_core_refactor_commit": "ae792a1b",
+  "test_path_refactor_commit": "966c9746",
+  "platform": "Windows x64; Rust 1.99.0; CARGO_BUILD_JOBS=1",
+  "scope": "Complete documented raw 105/113 words, raw version-zero 155 group, modeled scalar branches, latest 113 before latest 155 selection, existing-value edits and complete carrier byte history",
+  "results": {
+    "legacy_rust_passed": 16,
+    "earlier_conditional_passed": 14,
+    "rust_failed": 0,
+    "ignored_workers": 2,
+    "worker_process_executions": 4,
+    "baseline_python_passed": 8,
+    "source_python_passed": 5,
+    "clippy": "passed -D warnings",
+    "format": "passed",
+    "function_file_caps": "passed",
+    "maximum_function_body_lines": 20
+  },
+  "commands": {
+    "rust": "cargo test --locked --test flow_legacy_field_fixtures --test flow_conditional_item_fixtures",
+    "clippy": "cargo clippy --locked --lib --test flow_legacy_field_fixtures --test flow_conditional_item_fixtures -- -D warnings",
+    "format": "cargo fmt --all -- --check",
+    "python": "python -m unittest discover -s docs/features/flow-legacy-field-containers -p test_legacy_fields.py",
+    "source_python": "python -m unittest test_flowlegacyfields (reference directory)"
+  },
+  "logs": {
+    "rust": {
+      "log": "target/flow-legacy-fields-api-final-tests.log",
+      "exit_code": 0,
+      "sha256": "0c932a08ab66db39d08ac83f860fba68e5cc7871b502f85699e1e6b7a1b7611b"
+    },
+    "clippy": {
+      "log": "target/flow-legacy-fields-api-clippy.log",
+      "exit_code": 0,
+      "sha256": "72084c16decdc9d525670179a086e5108be2f3f64aa0154e6acff1ae64790e8e"
+    },
+    "format": {
+      "log": "target/flow-legacy-fields-api-format.log",
+      "exit_code": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "python": {
+      "log": "target/flow-legacy-fields-api-python.log",
+      "exit_code": 0,
+      "sha256": "79f6ab1a31b6b08e8568f07940165a6b013dc2fd677c49dfb51be0ee4b52ec47"
+    },
+    "source_python": {
+      "log": "target/flow-legacy-fields-api-source-tests.log",
+      "exit_code": 0,
+      "sha256": "549ec3352f033ceb482b5282903236acd9651c659f82a3b543ddaf9a34eddca8"
+    }
+  },
+  "coverage": {
+    "word_cases": 1007,
+    "native_payloads": 3,
+    "native_payload_bytes": 32068,
+    "scalar_pairs": 90601,
+    "raw155_cases": 1986,
+    "selections": 400,
+    "field_reads": "All frozen patterns, typed values, field/scope paths and intervals",
+    "word_edits": "Every element through 3,368 patterns; otherwise first/middle/last; inverse full-wire checks",
+    "group_edits": "Every editable field element through 64; otherwise first/middle/last; frozen offsets, noops, full history and inverse complete wires",
+    "bounds": "Both word limits and all ten group limits at exact totals and one below on every fixture",
+    "malformed": "All 2,560 fixed105 prefixes, all payload extensions, compact155 prefixes, reached negative counts and hostile113 declarations",
+    "ownership": "Caller input mutation/drop, successful edits and expected failures preserve sources; 8 workers times 32 group requests against serial wires",
+    "processes": "Two fresh legacy workers Source-verify every read/query/selection and compare compressed complete read and representative edited-wire transcripts byte for byte",
+    "send_sync": "9 new public types and 2 reused edit instantiations compile checked"
+  },
+  "source_lf_sha256": {
+    "src/flow/legacy_tables/conditional_items/body.rs": "2ca4931cb562e196ba1810cdbfa802ce7e93cc648d263eca6047439e58db952f",
+    "src/flow/legacy_tables/conditional_items/decode.rs": "80f1d368b10b433f82d03c10e8625c0b3a2d04a42002214e400d5ae4c2d51eb4",
+    "src/flow/legacy_tables/conditional_items/mod.rs": "a4cad205f54ab8581b4c1574a8248c23c9adca35ad95cee38530a3de1225d4de",
+    "src/flow/legacy_tables/conditional_items/view.rs": "3bfccd6f8e387c7adf0cfa4a52dd7b91e9bb088d4b823396768a087149def383",
+    "src/flow/legacy_tables/field_containers/group155.rs": "5cd83ee190254624259a350d6addf875dc0bfb8960c32a934cde85661e2c92f4",
+    "src/flow/legacy_tables/field_containers/mod.rs": "9419c2e4ae83fde872f230fc84cbd33f86e68ee81b80f2761feb5c66abf632dd",
+    "src/flow/legacy_tables/field_containers/queries.rs": "195e54b3920634e3c2713b96826052728f06d3dd81832b496993a5febb4ce0e3",
+    "src/flow/legacy_tables/field_containers/selection.rs": "2f4a139eb409e034f7b176aedf67b33a4d94874e09ad0203495476c235db599f",
+    "src/flow/legacy_tables/field_containers/types.rs": "92dd51aea9e9816887daa74e533df8fcfd5da2e56b3eb5272fca39589a03c71b",
+    "src/flow/legacy_tables/field_containers/word_view.rs": "70c6a4bb142424d82a432ae7734eb00207340a2a11e19b1abf53365879b4cc0d",
+    "src/flow/legacy_tables/field_containers/words.rs": "2dca762252cda1bc8de7cf9fd222fad431cc9a4cf2ada36d455cb143030ec063",
+    "src/flow/legacy_tables/mod.rs": "50835d8b1afb238c9d2c06647b71fac0e3e43416181fb8ce2be6de66263057c8",
+    "tests/flow_conditional_item_fixtures.rs": "e31d0e6b7c8006845474f14c99c869db1fcb7d449b4aa971b0aed58b8352af1b",
+    "tests/flow_conditional_items/api/paths.rs": "131b8ebdc44777a33cabec8c782769c35c4628974789e9d68f03149aec80df93",
+    "tests/flow_conditional_items/roles.rs": "9128eae08dd54fb000e08903b8c15351179d1fb858457da29cb5e282cd0981db",
+    "tests/flow_legacy_field_fixtures.rs": "b73b01c20ba295c8a86160114ccd1de8a76b543df000ee2a9bba8346a1d3aa9f",
+    "tests/flow_legacy_fields/api/contracts.rs": "db014b854ef67231a3fb3b3e53b9e8fb1fced88c5c2d240b10f9e06bfb554ebc",
+    "tests/flow_legacy_fields/api/paths.rs": "98c73b82946d149c35b3ad0bd00c3e0f87abb7648962b5b5173691ee76036e4d",
+    "tests/flow_legacy_fields/api/replay.rs": "bfe830ae7891147c4db793dbab1a9437ed479b8cb22814db1e17dcd88a812c41",
+    "tests/flow_legacy_fields/api.rs": "8fcf13b6048547061667eb14e2b50a7398b07b2d14fe8f42e8ffab4c2feb583d",
+    "tests/flow_legacy_fields/fixture.rs": "0982a1096a16a32b947c7840bfce82b3cf5275098f5a08fedbab94428e9fb3e1",
+    "tests/flow_legacy_fields/oracles.rs": "8d2af906864e68c89ece6c717184c6e76a26433bbcfa26d85aa679ee815b0630"
+  },
+  "reference_source_lf_sha256": "2956d2854bf47265a8a5799a7549406117ead69858716d823fade7bb25505a41",
+  "self_review": {
+    "pros": [
+      "Explicit actual identities and exactEOF; no invented 105/113 version or 155 format alias",
+      "Shared conditional grammar preserves earlier public enum and fourteen tests",
+      "Independent Source fields, paths, bytes, inverse wires and limits passed"
+    ],
+    "cons": [
+      "No authenticated native155 payload",
+      "Full PR gate and hosted sanitizer/matrix acceptance of this snapshot pending"
+    ],
+    "recommended_fix": "Complete the pending integration gates; retain explicit native/engineering exclusions; no focused-check blocker found"
+  },
+  "exclusions": [
+    "Native runtime conversion, inverse maps and engineering meaning",
+    "Native floating-point faults and virtual method execution/results",
+    "Native application loading",
+    "Whole-schema parity and exact-source full PR/hosted gate acceptance"
+  ],
+  "remaining": [
+    "Run exact-source cargo xtask pr before push",
+    "Merge PR249 only when all 13 exact-head required jobs pass; open no second PR while it remains open",
+    "Continue requirement-by-requirement audits of other documented schemas"
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending",
+  "dependencies": "None added or updated; no version bump, tag or release"
+}

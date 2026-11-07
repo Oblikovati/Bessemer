@@ -35,6 +35,19 @@ pub(super) fn read(
     })
 }
 
+pub(super) fn read_raw155(
+    wire: &TableWire,
+    options: FlowConditionalItemOptions,
+) -> Result<ConditionalBody> {
+    let mut reader = ConditionalReader::context(wire, options, wire.identifier, 1, 1);
+    reader.record155()?;
+    Ok(ConditionalBody {
+        fields: reader.fields.into(),
+        scopes: reader.scopes.into(),
+        totals: reader.totals,
+    })
+}
+
 impl<'a> ConditionalReader<'a> {
     fn new(
         wire: &'a TableWire,
@@ -46,11 +59,26 @@ impl<'a> ConditionalReader<'a> {
         } else {
             1
         };
+        Self::context(
+            wire,
+            options,
+            format.identifier(),
+            format.dimension(),
+            scale,
+        )
+    }
+    fn context(
+        wire: &'a TableWire,
+        options: FlowConditionalItemOptions,
+        identifier: u32,
+        expected_dimension: i32,
+        scale: usize,
+    ) -> Self {
         Self {
             cursor: ArchiveCursor::new(&wire.decoded),
             raw: &wire.decoded,
-            identifier: format.identifier(),
-            expected_dimension: format.dimension(),
+            identifier,
+            expected_dimension,
             options,
             fields: Vec::new(),
             scopes: Vec::new(),
@@ -78,6 +106,19 @@ impl<'a> ConditionalReader<'a> {
         Ok(())
     }
 
+    fn record155(&mut self) -> Result<()> {
+        let root = self.begin(Scope::Record, None, 0)?;
+        let version = self.signed(root, Kind::Version)?;
+        self.require(
+            version == 0,
+            format!("outer version {version}; expected zero"),
+        )?;
+        self.spend(2, 1, self.options.maximum_groups, "groups")?;
+        self.header(root, 0)?;
+        self.cursor.finish()?;
+        self.end(root);
+        Ok(())
+    }
     fn record126(&mut self, root: usize, version: i32) -> Result<()> {
         self.signed(root, Kind::Version)?;
         if version == 1 {

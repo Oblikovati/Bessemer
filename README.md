@@ -58,6 +58,9 @@ explicit primary-class selection.
 The [conditional-item views](docs/features/flow-conditional-items/README.md) read
 records 126/315/128 with their distinct codec boundaries and block widths, and
 edit existing fields while preserving complete physical history.
+The [legacy field containers](docs/features/flow-legacy-field-containers/README.md)
+read unversioned records 105/113 and raw version-zero record 155, edit existing
+values, and preserve the documented scalar decisions and preferred-container selection.
 The [load-state view](docs/features/flow-load-state/README.md) reads record 11
 version 18 under an explicit load-mode assumption and edits raw fields and
 UTF-16 units while retaining exact string prefixes and carrier history.

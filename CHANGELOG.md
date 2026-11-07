@@ -56,6 +56,8 @@
 
 ### Added
 
+- Added complete raw record-105/113/155 field reads and isolated existing-value edits, with unversioned word framing, scalar branch projections, preferred-container selection and complete carrier history. (#241)
+
 - Added bounded logical checkpoint component reads and typed existing-field edits for graph objects, auxiliary grids, trailing containers and opaque chunks, with revision-bound identities and complete byte history. (#241)
 
 - Added bounded fresh-map Flow logical index replay with explicit physical-scan and preferred-terminal policies, retained control provenance and unvalidated ordinary-target diagnostics. (#241)

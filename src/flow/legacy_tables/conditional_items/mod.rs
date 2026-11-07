@@ -1,4 +1,5 @@
 //! Complete conditional item grammar shared by records 126, 315 and 128.
+mod body;
 mod decode;
 mod edit;
 mod fields;
@@ -8,9 +9,16 @@ mod transport;
 mod types;
 mod view;
 use super::*;
+pub(super) use body::ConditionalBody;
 pub use schema::*;
 pub use types::*;
 use types::{ConditionalFieldSpan, ConditionalScopeSpan};
+pub(super) fn read_raw155(
+    wire: &TableWire,
+    options: FlowConditionalItemOptions,
+) -> Result<ConditionalBody> {
+    decode::read_raw155(wire, options)
+}
 
 impl FlowCarrier {
     /// Reads the complete raw record-126 grammar; e.g. `let items = carrier.record_126_items(&id, options)?`.
