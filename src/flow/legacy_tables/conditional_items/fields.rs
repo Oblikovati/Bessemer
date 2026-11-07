@@ -24,14 +24,14 @@ impl<'a> FlowConditionalField<'a> {
     /// Returns a revision-bound existing-field identity; e.g. `let id = field.id()`.
     pub fn id(self) -> FlowConditionalFieldId {
         FlowConditionalFieldId {
-            record: self.owner.wire.record.clone(),
+            record: self.owner.record.clone(),
             ordinal: self.ordinal,
         }
     }
     /// Returns its complete physical scope identity; e.g. `let scope = items.scope(&field.scope())?`.
     pub fn scope(self) -> FlowConditionalScopeId {
         FlowConditionalScopeId {
-            record: self.owner.wire.record.clone(),
+            record: self.owner.record.clone(),
             ordinal: self.span.scope,
         }
     }
@@ -65,7 +65,6 @@ impl<'a> FlowConditionalField<'a> {
     pub fn element_bytes(self, index: usize) -> Option<&'a [u8]> {
         let start = self.element_offset(index)?;
         self.owner
-            .wire
             .decoded
             .get(start..start + self.span.encoding.width())
     }

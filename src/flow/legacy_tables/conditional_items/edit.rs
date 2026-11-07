@@ -27,10 +27,11 @@ impl FlowConditionalItems {
 }
 
 fn editable_offset(field: FlowConditionalField<'_>, index: usize) -> Result<usize> {
-    let format = field.owner.format;
+    let identifier = field.owner.identifier;
     if !field.is_editable() {
-        return Err(conditional_invalid(
-            format,
+        return Err(table_failure(
+            identifier,
+            FailureClass::Invalid,
             format!(
                 "structural field {:?}; expected existing nonstructural field",
                 field.kind()
@@ -39,7 +40,7 @@ fn editable_offset(field: FlowConditionalField<'_>, index: usize) -> Result<usiz
     }
     field.element_offset(index).ok_or_else(|| {
         table_index_error(
-            format.identifier(),
+            identifier,
             "field element",
             index,
             field.layout().element_count,

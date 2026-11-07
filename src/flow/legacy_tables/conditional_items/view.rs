@@ -31,7 +31,7 @@ impl FlowConditionalItems {
             .iter()
             .enumerate()
             .map(|(ordinal, span)| FlowConditionalField {
-                owner: self,
+                owner: &self.wire,
                 ordinal,
                 span,
             })
@@ -39,7 +39,7 @@ impl FlowConditionalItems {
     /// Resolves a physical field ordinal; e.g. `let version = items.field_at(0)`.
     pub fn field_at(&self, ordinal: usize) -> Option<FlowConditionalField<'_>> {
         Some(FlowConditionalField {
-            owner: self,
+            owner: &self.wire,
             ordinal,
             span: self.fields.get(ordinal)?,
         })
@@ -62,7 +62,7 @@ impl FlowConditionalItems {
             .iter()
             .enumerate()
             .map(|(ordinal, span)| FlowConditionalScope {
-                owner: self,
+                owner: &self.wire,
                 ordinal,
                 span,
             })
@@ -70,7 +70,7 @@ impl FlowConditionalItems {
     /// Resolves one scope by physical descriptor ordinal; e.g. `let root = items.scope_at(0)`.
     pub fn scope_at(&self, ordinal: usize) -> Option<FlowConditionalScope<'_>> {
         Some(FlowConditionalScope {
-            owner: self,
+            owner: &self.wire,
             ordinal,
             span: self.scopes.get(ordinal)?,
         })
@@ -151,7 +151,7 @@ impl FlowConditionalScope<'_> {
     /// Returns a revision-bound scope identity; e.g. `let id = scope.id()`.
     pub fn id(self) -> FlowConditionalScopeId {
         FlowConditionalScopeId {
-            record: self.owner.wire.record.clone(),
+            record: self.owner.record.clone(),
             ordinal: self.ordinal,
         }
     }
@@ -170,7 +170,7 @@ impl FlowConditionalScope<'_> {
     /// Returns a checked parent identity, or None for the root; e.g. `let parent = scope.parent()`.
     pub fn parent(self) -> Option<FlowConditionalScopeId> {
         Some(FlowConditionalScopeId {
-            record: self.owner.wire.record.clone(),
+            record: self.owner.record.clone(),
             ordinal: self.span.parent?,
         })
     }

@@ -6,7 +6,8 @@ use FlowConditionalScopeKind as Scope;
 pub(super) struct ConditionalReader<'a> {
     pub(super) cursor: ArchiveCursor<'a>,
     pub(super) raw: &'a [u8],
-    pub(super) format: FlowConditionalFormat,
+    pub(super) identifier: u32,
+    pub(super) expected_dimension: i32,
     pub(super) options: FlowConditionalItemOptions,
     pub(super) fields: Vec<ConditionalFieldSpan>,
     pub(super) scopes: Vec<ConditionalScopeSpan>,
@@ -22,7 +23,7 @@ pub(super) fn read(
 ) -> Result<FlowConditionalItems> {
     let wire = transport::read(source, id, format, options)?;
     let mut reader = ConditionalReader::new(&wire, format, options);
-    reader.record(wire.version)?;
+    reader.record(format, wire.version)?;
     Ok(FlowConditionalItems {
         fields: reader.fields.into(),
         scopes: reader.scopes.into(),
@@ -48,7 +49,8 @@ impl<'a> ConditionalReader<'a> {
         Self {
             cursor: ArchiveCursor::new(&wire.decoded),
             raw: &wire.decoded,
-            format,
+            identifier: format.identifier(),
+            expected_dimension: format.dimension(),
             options,
             fields: Vec::new(),
             scopes: Vec::new(),
@@ -61,9 +63,9 @@ impl<'a> ConditionalReader<'a> {
         self.raw.len() - self.cursor.remaining()
     }
 
-    fn record(&mut self, version: i32) -> Result<()> {
+    fn record(&mut self, format: FlowConditionalFormat, version: i32) -> Result<()> {
         let root = self.begin(Scope::Record, None, 0)?;
-        match self.format {
+        match format {
             FlowConditionalFormat::Record126 => self.record126(root, version)?,
             FlowConditionalFormat::Record315 => self.record315(root)?,
             FlowConditionalFormat::Record128 => {
@@ -173,8 +175,9 @@ impl<'a> ConditionalReader<'a> {
         if used <= limit && additional <= limit - used {
             return Ok(());
         }
-        Err(conditional_invalid(
-            self.format,
+        Err(table_failure(
+            self.identifier,
+            FailureClass::Invalid,
             format!("{role} additional {additional}, used {used}; expected total at most {limit}"),
         ))
     }
@@ -195,7 +198,7 @@ impl<'a> ConditionalReader<'a> {
         if accepted {
             return Ok(());
         }
-        Err(conditional_invalid(self.format, cause))
+        Err(table_failure(self.identifier, FailureClass::Invalid, cause))
     }
 
     pub(super) fn dimension(&mut self, scope: usize, expected: i32) -> Result<()> {

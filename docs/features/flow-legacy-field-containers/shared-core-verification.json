@@ -1,0 +1,43 @@
+{
+  "issue": 241,
+  "source_revision_before_refactor": "50aa224c",
+  "scope": "Behavior-preserving private conditional parser/view boundary extraction before a real record155 binding",
+  "changes": [
+    "Kept the public format enum and all public method signatures unchanged",
+    "Stored the real operation record identifier and expected item dimension in operation-local parser state",
+    "Borrowed fields and scopes refer directly to their existing TableWire checkpoint without changing descriptor storage or identities"
+  ],
+  "owned_cases": 6659,
+  "results": {
+    "passed": 14,
+    "failed": 0,
+    "ignored": 1,
+    "clippy": "passed",
+    "format": "cargo fmt --all completed"
+  },
+  "commands": {
+    "tests": {
+      "log": "target/flow-legacy-fields-shared-core-tests.log",
+      "exit_code": 0,
+      "sha256": "792263df2732b676b02e7649e1ed3ceec87f2daa90d14e354efe2e8afe669362"
+    },
+    "clippy": {
+      "log": "target/flow-legacy-fields-shared-core-clippy.log",
+      "exit_code": 0,
+      "sha256": "b453e7b2a2582d1c048d8bbee200446945d4d35f2f704a34df2950b5419b2f37"
+    }
+  },
+  "source_lf_sha256": {
+    "src/flow/legacy_tables/conditional_items/decode.rs": "3ad94fbbe1fa290a8a5ef846895a62cb85475da0c094c805078b04c3edd4dcad",
+    "src/flow/legacy_tables/conditional_items/edit.rs": "1d9272e077de6cabf0d8ad3763ec949585c0f396cf5d1c93ac663726638a838a",
+    "src/flow/legacy_tables/conditional_items/fields.rs": "b6054b26428d99d7a1fc2339dbf046c65eb73766742c429357c01540c09c9d65",
+    "src/flow/legacy_tables/conditional_items/items.rs": "4fcf5a3b71dd294b7be28605e932efa4dd758a4dd8e2870c5d270aa6e99c8daf",
+    "src/flow/legacy_tables/conditional_items/types.rs": "0dc8e9fbb7dcb86cf13c782260eeb6cf22e1f1b134ddb4f5777bd54b24d1d5ac",
+    "src/flow/legacy_tables/conditional_items/view.rs": "cb4663c9eebab87b8cdce4a69e7acf194ce2abb3f18150df1e70db0e9120e909"
+  },
+  "acceptance": "Earlier record126/315/128 value, field, scope, transport, edit, isolation, concurrency and process baselines passed unchanged",
+  "exclusions": [
+    "No new record155 behavior is included in this refactor",
+    "Full PR gate for this exact extraction pending; current gate covers earlier f2902881 source"
+  ]
+}

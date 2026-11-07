@@ -65,7 +65,7 @@ impl ConditionalReader<'_> {
         if version < 4 {
             self.item_groups(scope, 2, false)?;
         }
-        self.dimension(scope, self.format.dimension())?;
+        self.dimension(scope, self.expected_dimension)?;
         if version < 3 {
             self.signed(scope, Kind::LegacyWord)?;
         }

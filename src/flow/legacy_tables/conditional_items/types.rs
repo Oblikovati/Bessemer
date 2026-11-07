@@ -70,7 +70,7 @@ pub struct FlowConditionalFieldId {
 /// Borrowed complete physical scope and ancestry.
 #[derive(Clone, Copy, Debug)]
 pub struct FlowConditionalScope<'a> {
-    pub(super) owner: &'a FlowConditionalItems,
+    pub(super) owner: &'a TableWire,
     pub(super) ordinal: usize,
     pub(super) span: &'a ConditionalScopeSpan,
 }
@@ -78,7 +78,7 @@ pub struct FlowConditionalScope<'a> {
 /// Borrowed existing scalar/vector descriptor, with checked typed access.
 #[derive(Clone, Copy, Debug)]
 pub struct FlowConditionalField<'a> {
-    pub(super) owner: &'a FlowConditionalItems,
+    pub(super) owner: &'a TableWire,
     pub(super) ordinal: usize,
     pub(super) span: &'a ConditionalFieldSpan,
 }
