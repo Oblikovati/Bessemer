@@ -2,16 +2,20 @@
   "issue": 241,
   "source_revision": "a4da784815e57743acc1a4d941e823db96d42383",
   "command": "cargo xtask pr",
-  "status": "running",
+  "status": "completed",
   "session": 10458,
   "worktree": "C:/bessemer214-ci",
   "cargo_build_jobs": 1,
   "log": "target/flow-ims-and-control-combined-full-pr-gate.log",
   "scope": "Combined source through complete IMS500 definitions, paired IMS501 values and strict saved-span/terminal-index control writer profiles; earlier accepted source retained",
-  "accepted": false,
+  "accepted": true,
   "exclusions": [
-    "Terminal local gate result pending",
-    "PR249 hosted checks cover earlier source only",
-    "Hosted acceptance of this revision pending"
-  ]
+    "Later logical index API 0eeab7ef is not covered",
+    "Later checkpoint baselines and reader/editor work are not covered",
+    "PR249 hosted checks cover earlier publication source a1f41b28",
+    "Hosted full-matrix/ThreadSanitizer acceptance of a4da7848 remains pending",
+    "Ignored native/runtime/application cases remain excluded; this result does not establish complete schema parity"
+  ],
+  "exit_code": 0,
+  "verification": "full-pr-gate-verification.json"
 }

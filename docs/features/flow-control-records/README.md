@@ -89,3 +89,8 @@ key/value meaning, physical target validation, logical index replay and native
 application acceptance remain separate work.
 
 The humanizer skill is unavailable; maintainer prose review remains pending.
+
+The combined local PR gate passed on source `a4da7848`: 5,096 tests passed,
+none failed, and 265 were ignored. See the [gate evidence](../flow-control-records/full-pr-gate-verification.json)
+for the exact revision and exclusions. Hosted matrix acceptance of that snapshot
+remains pending.
