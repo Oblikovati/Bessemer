@@ -1,0 +1,23 @@
+{
+  "issue": 241,
+  "source_revision": "419844f281d62e92ee211da4d46fdb6095d8da45",
+  "command": "cargo xtask pr",
+  "exit_code": 0,
+  "platform": "Windows x64; Rust1.99.0; CARGO_BUILD_JOBS=1",
+  "worktree": "C:/bessemer214-ci",
+  "kernel_schema": "C:/Program Files/SOLIDWORKS Corp/SOLIDWORKS/data/pschema/sch_13006.s_t",
+  "log": "target/flow-integrated-selector-full-pr-gate.log",
+  "sha256": "5c86a6850f26b51040c94d3549ecde20700386a2dbe7cbd6ef9d6871e137e4d0",
+  "results": {
+    "passed": 5038,
+    "failed": 0,
+    "ignored": 262,
+    "result_summaries": 401
+  },
+  "scope": "Integrated PR247 ancestry and all subsequent local Flow APIs through solver selectors, including bounded identities #248, tagged129, messages301, byte12/316, selected112, objects304, auxiliary444, wide148, owner122/434, text311 and viewer121 prefix",
+  "exclusions": [
+    "Later record500 and record501 APIs and baselines excluded",
+    "Strict control-record baseline/API excluded",
+    "Hosted matrix and sanitizer acceptance of this revision pending"
+  ]
+}
