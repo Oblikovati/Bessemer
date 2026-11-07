@@ -1,6 +1,7 @@
 use std::collections::BTreeSet;
 use std::ops::Range;
 
+use crate::container_signatures::{self, ContainerSignatures};
 use crate::records::{archive_offset, dword, equal, invalid, name_bytes, region, require, word};
 use crate::{BessemerError, FailureClass, Result};
 
@@ -30,16 +31,17 @@ struct ArchiveLayout {
     local: Vec<u8>,
 }
 
-pub(crate) fn parse(bytes: &[u8], version: u32) -> Result<Directory> {
+pub(crate) fn parse(bytes: &[u8], version: u32, key: u32) -> Result<Directory> {
+    let registered = container_signatures::for_key(key);
     let mut failure = invalid(format!(
-        "{} bytes; expected a nonempty SolidWorks directory",
+        "{} bytes; expected a complete SolidWorks directory with recoverable signatures",
         bytes.len()
     ));
     for end in (8..bytes.len().saturating_sub(21)).rev() {
         if !possible_end(bytes, end) {
             continue;
         }
-        match candidate(bytes, version, end) {
+        match candidate(bytes, version, end, key, registered) {
             Ok(directory) => return Ok(directory),
             Err(error) if error.class == FailureClass::Unsupported => failure = error,
             Err(_) => {}
@@ -49,13 +51,21 @@ pub(crate) fn parse(bytes: &[u8], version: u32) -> Result<Directory> {
 }
 
 fn possible_end(bytes: &[u8], end: usize) -> bool {
-    bytes[end + 4..end + 8] == [0; 4]
-        && bytes[end + 8..end + 10] == bytes[end + 10..end + 12]
-        && bytes[end + 10..end + 12] != [0; 2]
+    bytes[end + 4..end + 8] == [0; 4] && bytes[end + 8..end + 10] == bytes[end + 10..end + 12]
 }
 
-fn candidate(bytes: &[u8], version: u32, end: usize) -> Result<Directory> {
-    let layout = archive_layout(bytes, end)?;
+fn candidate(
+    bytes: &[u8],
+    version: u32,
+    end: usize,
+    key: u32,
+    registered: Option<ContainerSignatures>,
+) -> Result<Directory> {
+    let layout = if word(bytes, end + 10)? == 0 {
+        empty_layout(bytes, end, key, registered)?
+    } else {
+        archive_layout(bytes, end)?
+    };
     let entries = read_directory(bytes, version, &layout)?;
     validate_entries(&entries, layout.start)?;
     Ok(Directory {
@@ -88,6 +98,38 @@ fn directory_start(bytes: &[u8], end: usize) -> Result<usize> {
         format!("directory {start}+{size}; expected end {end}"),
     )?;
     Ok(start)
+}
+
+fn empty_layout(
+    bytes: &[u8],
+    end: usize,
+    key: u32,
+    registered: Option<ContainerSignatures>,
+) -> Result<ArchiveLayout> {
+    let start = directory_start(bytes, end)?;
+    let signatures = empty_signatures(key, registered)?;
+    equal(
+        region(bytes, end, 4)?,
+        &signatures.end,
+        "registered empty end signature",
+    )?;
+    Ok(ArchiveLayout {
+        start,
+        end,
+        count: 0,
+        central: signatures.central.to_vec(),
+        local: signatures.local.to_vec(),
+    })
+}
+
+fn empty_signatures(
+    key: u32,
+    registered: Option<ContainerSignatures>,
+) -> Result<ContainerSignatures> {
+    registered.ok_or_else(|| BessemerError::new(
+        "parse", "empty directory", FailureClass::Unsupported,
+        format!("empty-container key {key:#010x}; expected one of the 1000 registered signature sets"),
+    ))
 }
 
 fn read_directory(bytes: &[u8], version: u32, layout: &ArchiveLayout) -> Result<Vec<Entry>> {

@@ -45,7 +45,7 @@ impl Document {
                 format!("version {version}; expected observed container version 4"),
             ));
         }
-        let directory = archive::parse(bytes, version)?;
+        let directory = archive::parse(bytes, version, key)?;
         Ok(Self {
             original: bytes.to_vec(),
             directory,

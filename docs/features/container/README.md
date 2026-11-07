@@ -28,6 +28,14 @@ Migration from behavior version 1 to 2 changes only equivalent-edit handling; no
 on-disk migration is needed. The former recompression behavior is retired by this
 recorded migration, and the owned fixture bytes remain unchanged.
 
+Container behavior version 3 also accepts registered zero-stream version-4
+containers. Their signatures come from the supplied key corpus because no first
+record exists. This retires version 2's empty-directory rejection through the
+recorded [migration and kernel decision](../container-empty/design.md).
+Existing nonempty signature recovery and no-op output remain unchanged. See the
+[empty-container evidence](../container-empty/README.md) for the independent
+positive cases and pending integration gates.
+
 ## Evidence
 
 Reference revision: `inventor-interface` commit

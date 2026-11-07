@@ -1,5 +1,11 @@
 //! Source-positive empty wires; the pending reader fix must preserve this baseline.
 use bessemer::Document;
+#[path = "container_empty/api.rs"]
+mod api;
+#[path = "../src/container_signatures.rs"]
+mod container_signatures;
+#[path = "flow_state_tables/process.rs"]
+mod process;
 
 const EMPTY: &[u8] = include_bytes!("fixtures/container-empty/empty.bin");
 const NATIVE: &[u8] = include_bytes!("fixtures/container-empty/native.bin");
@@ -37,6 +43,19 @@ fn empty_cases() -> Vec<EmptyReference<'static>> {
         .iter()
         .map(empty_reference)
         .collect()
+}
+
+#[test]
+fn private_registered_lookup_matches_every_independent_frozen_signature_word() {
+    for row in empty_cases() {
+        let set = container_signatures::for_key(row.key).unwrap();
+        assert_eq!(
+            (set.local, set.central, set.end),
+            (row.local, row.central, row.end)
+        );
+    }
+    assert!(container_signatures::for_key(0).is_none());
+    assert!(container_signatures::for_key(u32::MAX).is_none());
 }
 #[test]
 fn all_1000_source_accepted_empty_wires_have_complete_canonical_header_and_end_shapes() {

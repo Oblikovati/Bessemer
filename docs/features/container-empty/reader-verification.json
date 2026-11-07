@@ -1,0 +1,113 @@
+{
+  "bug": 251,
+  "reference_bug": 252,
+  "status": "focused checks passed; full PR/hosted gates and integration pending",
+  "source_revision_before_fix": "c07b936bc5c0b8a80f1f91928cc02b89d405b7f1",
+  "baseline_commit": "364fb9af",
+  "shared_bounds_refactor_commit": "c07b936b",
+  "behavior_version": 3,
+  "recorded_migration": "docs/features/container-empty/design.md",
+  "platform": "Windows x64; Rust 1.99.0; CARGO_BUILD_JOBS=1",
+  "scope": "Registered-key zero-stream version-4 container framing and exact source retention; nonempty recovery unchanged",
+  "results": {
+    "empty_reader_rust_passed": 8,
+    "container_regression_passed": 7,
+    "timestamp_regression_passed": 12,
+    "rust_failed": 0,
+    "ignored_workers_invoked_twice_each": 2,
+    "python_passed": 6,
+    "clippy": "passed -D warnings",
+    "format": "passed",
+    "function_file_caps": "passed; maximum body 19 lines"
+  },
+  "coverage": {
+    "registered_keys_and_signature_sets": 1000,
+    "canonical_empty_wires": 1000,
+    "proper_prefix_rejections": 30000,
+    "bad_header_end_signature_or_field_cases": 9000,
+    "unsupported_empty_key_cases": 1000,
+    "source_verified_filler_layouts": 18000,
+    "original_native_signature_sets": 3,
+    "positive_nonempty_unknown_key_cases": 3,
+    "source_isolation": "All 1000 caller buffers mutated and dropped without changing their parsed result",
+    "concurrency": "Eight workers independently verify all canonical/filler results against serial bytes",
+    "processes": "Two fresh workers independently roundtrip the complete canonical/filler corpus and match serial bytes",
+    "missing_entities": "Every registered empty file returns typed Missing for reads and replacements of absent streams"
+  },
+  "registry": {
+    "bytes": 16000,
+    "raw_sha256": "b1439f50f19059f0a781d8bf568596101dcfa4951cfdefc3877b6e4cc32bed4a",
+    "source": "Exact registered words from the independently frozen Source-positive corpus",
+    "runtime_dependencies": "None; no native DLL or cache reads",
+    "lookup": "Binary search of sorted unsigned big-endian keys, normalized once at Document header parsing"
+  },
+  "logs": {
+    "rust": {
+      "command": "cargo test --locked --test container_empty_fixtures --test container --test container_timestamp_fixtures",
+      "exit_code": 0,
+      "log": "target/container-empty-reader-tests.log",
+      "sha256": "c22a61c4101018bf03dac203dbbbb9bc205cc5875b3daa0df2c096aa9cf9717d"
+    },
+    "python": {
+      "command": "python -m unittest discover -s docs/features/container-empty -p test_empty.py",
+      "exit_code": 0,
+      "log": "target/container-empty-reader-python.log",
+      "sha256": "d1d84c0753d91ae1b43b9ce5fa45bd86fc9b7f860878512a80d78ff744f97d0b"
+    },
+    "clippy": {
+      "command": "cargo clippy --locked --lib --test container --test container_timestamp_fixtures --test container_empty_fixtures -- -D warnings",
+      "exit_code": 0,
+      "log": "target/container-empty-reader-clippy.log",
+      "sha256": "00d32468a0e3753a8c3530bbba987567631eaa9b5934c6ca704a3289b1a9a14c"
+    },
+    "format": {
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "log": "target/container-empty-reader-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "source_lf_sha256": {
+    "src/archive.rs": "1d855dc93ba2d3a7834e80ae6a617347c58f67a95af3355acd6e6160ee100466",
+    "src/document.rs": "401d8ce52dea83dcce5df63bf9d71308c1912a6b5320659c11c7c0da43d5d103",
+    "src/lib.rs": "4df06e9984fa10fa09c4f8ccdd10e0f51095d2dc4f929204728702d95742e9f2",
+    "src/container_signatures.rs": "dc971c43b1ac373390da2e81b8e1523035f727ff75b9187d36d3b0a1126d8ecb",
+    "tests/container_empty_fixtures.rs": "e17c5a0b162e1b1988aff900cdf778e6f60698a5277a36939475a19163766818",
+    "tests/container_empty/api.rs": "71ede0869fe6f09891620b757a30c5b1eb86d929021fa0cc45d5eae05124f384",
+    "docs/features/container-empty/freeze_empty.py": "d0441281231d3da0a01e10ea843e9da9c57961403c4374222c8bcd43f88bae4a",
+    "docs/features/container-empty/test_empty.py": "5b50eda3e04f9d2571d14f03eb0ae9abb9b5e490f06a1a5e1d0f019e5bc40c7c"
+  },
+  "integration": {
+    "required_order": "Main first, then candidate forwarding",
+    "main_head": "7e5e8fac2ea989528f160d09b45f3bc2617b6a43",
+    "fresh_main_tree": [
+      ".gitignore",
+      "LICENSE",
+      "README.md"
+    ],
+    "condition": "Main has no Cargo.toml or src yet, so the patch cannot be integrated independently before the initial library merge",
+    "user_clarification": "Integration order requested asynchronously; local patch preparation continues",
+    "publication": "No additional branch or PR created; retain PR249 head while its four platform gates run"
+  },
+  "self_review": {
+    "pros": [
+      "Successful empty results now match all Source-positive frames",
+      "Full signature table and native fixture fields pinned independently",
+      "Malformed fields, unknown keys, legacy recovery and exact no-op bytes covered"
+    ],
+    "cons": [
+      "Full gate and hosted acceptance of this source pending",
+      "Main-first integration requires the initial library bootstrap decision",
+      "No native CAD application acceptance of an empty model"
+    ],
+    "recommended_fix": "Complete whole-source checks and resolve initial main bootstrap order before publication; no focused-check blocker found"
+  },
+  "exclusions": [
+    "Native model/payload semantics or application acceptance",
+    "Reference builder Bug 252 remains unchanged",
+    "Current gate 73867 covers older timestamp source b21f26b4 only",
+    "New-file construction and whole-schema parity"
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending",
+  "dependencies": "None added or changed; no version bump or release"
+}

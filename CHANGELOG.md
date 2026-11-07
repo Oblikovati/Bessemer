@@ -4,6 +4,8 @@
 
 ### Fixed
 
+- Accepted valid zero-stream version-4 containers using registered signature sets, preserving exact bytes and typed missing-stream failures. (#251)
+
 - Bounded Flow identity diagnostics to framing metadata, keeping retained carrier buffers out of foreign and stale identity errors. (#248)
 
 - Initialized deserialized SQLite page metadata before validating exact image extents, preserving nondefault native page sizes. (#234)

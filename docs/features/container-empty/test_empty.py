@@ -17,6 +17,16 @@ class EmptyContainerBaselineTests(unittest.TestCase):
             self.assertEqual(row[12:16], row[24:28])
             self.assertEqual(row[28:], bytes(18))
 
+    def test_all_18000_empty_filler_layouts_are_accepted_by_the_source_reader(self) -> None:
+        signatures = frozen.table()
+        count = 0
+        for key, value in signatures.items():
+            for raw in frozen.filler_wires(key, value):
+                document = frozen.swcontainer.Document(raw, table=signatures)
+                self.assertEqual(document.entries, [])
+                count += 1
+        self.assertEqual(count, 18000)
+
     def test_native_signature_rows_reuse_the_existing_owned_fixtures(self) -> None:
         rows = frozen.native_rows()
         self.assertEqual(len(rows), 3)

@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import struct
 import sys
+from collections.abc import Iterator
 from typing import TypedDict
 ROOT = Path(__file__).resolve().parents[3]
 SOURCE = ROOT.parent / 'inventor-interface/solidworks'
@@ -79,6 +80,26 @@ def accepted_rows() -> list[bytes]:
         assert not document.entries and document.cd_at == 8 and document.cd_size == 0
         rows.append(signature_row(key, value) + wire)
     return rows
+
+
+def filler_wire(key: str, value: SignatureValues, before: int, after: int, at_end: bool) -> bytes:
+    signatures = bytes.fromhex(value['end'])
+    byte = bytes([next(word for word in range(256) if word not in signatures)])
+    start = before if at_end else 0
+    header = bytes.fromhex(key) + struct.pack('>I', 4)
+    end = signatures + struct.pack('<HHHHIIH', 0, 0, 0, 0, before - start, start, 0)
+    return header + byte * before + end + byte * after
+
+
+def trailing_variants(key: str, value: SignatureValues, before: int) -> Iterator[bytes]:
+    for after in (0, 1, 255):
+        for at_end in (False, True):
+            yield filler_wire(key, value, before, after, at_end)
+
+
+def filler_wires(key: str, value: SignatureValues) -> Iterator[bytes]:
+    for before in (0, 1, 255):
+        yield from trailing_variants(key, value, before)
 
 
 def native_rows() -> list[bytes]:
