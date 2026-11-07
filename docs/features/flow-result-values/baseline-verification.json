@@ -1,0 +1,38 @@
+{
+  "cases": 3798,
+  "bytes": 14846265,
+  "sha256": "500ab9bcd3d1229912f8bbca478cd7285536330bd6f6585ef060ad98b9e5840f",
+  "native": {
+    "source_sha256": "069aefb4da9fa292bd4eea27b619b9073cc33acc46dda1411b749b0a968706a8",
+    "payload_sha256": "0215099bd066f3231bda1fcf869aef7ec2a767108212913733668c732e69bc32",
+    "record_start": 1256070,
+    "record_end": 1593852,
+    "stored_bytes": 337770,
+    "definitions": {
+      "source_sha256": "6348bed3cb8e9e23d574b5b6972c3a9c7fbb585c34d5b5f00d322b3d605ef80a",
+      "payload_sha256": "342f725f99d31c5ae33df4f6159a1837a43e2f9b13a60fa7040c6b74dc36916c",
+      "record_start": 65378,
+      "record_end": 72157,
+      "stored_bytes": 6767,
+      "manifest_sha256": "f584c237bcda55c6c22a147643227346e14caede12d12467290646a6bcec5f20"
+    }
+  },
+  "references": {
+    "flowresultvalues.py": "ce4b40d917a7a809fd450dac4e81ab6e2994d6b12a1626168474715c7ea53bb2",
+    "flowresultdefinitions.py": "e8d6993720cfac848300347a9f2aa4324c84b9819c0d95fbf913a253d7e5c5ac",
+    "flowlegacytables.py": "52309d35baa5ecc33046fb2f7a98f4eadc7bfbd22db5b9803e41898131924420"
+  },
+  "compression": {
+    "build": "1.3.1.zlib-ng",
+    "runtime": "1.3.1.zlib-ng"
+  },
+  "helper_lf_sha256": {
+    "definition_requests.py": "592033bf67bf6ccff41e6a71bf54b44abcdf4981df6871f9ad76b129c6cec7b2",
+    "wide_requests.py": "c690edad385912c3a3813b58988af38689fffbd75a3d43ef72c37a1f3448163c",
+    "freeze_objects.py": "555ada236f89763cb704e45af4bd51c3d7b0fbd60482d560e8ed93b97f035e08"
+  },
+  "scope": "Complete version-two record501 / version-three IMS values and BL version-zero rows; explicit fresh version-two allocation-zero definitions",
+  "native_runtime_state_reproduced": false,
+  "engineering_columns_assigned": false,
+  "native_application_checked": false
+}
