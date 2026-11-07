@@ -6,7 +6,7 @@
     {
       "source": "flowsolverselectors.py",
       "source_lf_sha256": "3ad8185e72097f10219129b17c9e7cc49b68b6889a9efc43d454869d831ef65c",
-      "status": "Typed unsigned selector API implemented; focused Rust, corpus Python and original reference tests accepted; full gate pending"
+      "status": "Typed unsigned selector API implemented; focused checks and full PR gate accepted at 419844f2; hosted PR249 checks pending"
     },
     {
       "source": "flowcontrolrecords.py",
@@ -36,7 +36,7 @@
     {
       "source": "flowindex.py",
       "source_lf_sha256": "6c9117accb71203ace520c125280daa9259f5ffd30c96536390d220c2d4ddcdb",
-      "status": "Logical physical-scan/terminal-index recognition, fallback and active/saved-map replay API not found; separate from strict control payload parsing"
+      "status": "Typed fresh-map reader implemented; all 2140 frozen requested outcomes, bounds, retained control provenance, isolation, 8-lane stress and two-process comparisons accepted in 12 Rust tests; clippy/format/caps passed; full gate pending"
     }
   ],
   "search": {
@@ -53,7 +53,7 @@
     ],
     "limitation": "Identifier searches identify follow-up work; they do not establish absence of equivalent unnamed implementations"
   },
-  "next": "Freeze and implement logical index recognition/fallback/replay, then audit checkpoint components separately from viewer-prefix121",
+  "next": "Complete the logical-index full gate and hosted checks, then freeze and implement checkpoint components separately from viewer-prefix121",
   "exclusions": [
     "Other Flow modules need a requirement-by-requirement audit",
     "Other SolidWorks schema families need a fresh source audit",

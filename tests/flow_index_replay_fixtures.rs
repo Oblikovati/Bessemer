@@ -1,10 +1,16 @@
 //! Logical index oracles preserve recognition/fallback distinctions and explicit incomplete-document qualifiers.
+#[path = "flow_index_replay/api.rs"]
+mod api;
 #[path = "flow_index_replay/fixture.rs"]
 mod fixture;
 #[path = "flow_index_replay/oracles.rs"]
 mod oracles;
 #[path = "flow_field_values/packet.rs"]
 mod packet;
+#[path = "flow_state_tables/process.rs"]
+mod process;
+#[path = "flow_index_replay/runtime.rs"]
+mod runtime;
 use bessemer::flow::*;
 use fixture::*;
 use std::collections::BTreeMap;

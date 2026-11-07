@@ -115,6 +115,10 @@ and 18-column BL rows while preserving physical presence and definition identity
 The [strict control profiles](docs/features/flow-control-records/README.md) read and
 edit saved-span and terminal-index writer payloads with explicit footer context,
 checked recompression distances and preserved raw entry order.
+The [logical index reader](docs/features/flow-index-replay/README.md) builds fresh
+active and saved maps through forced physical scanning or recognized modern
+terminal adoption, retaining selected control provenance and explicit exclusions
+for ordinary target validation and complete document decoding.
 The [legacy link view](docs/features/flow-link-records/README.md) reads record 402
 and edits existing fields while preserving code bytes, sentinel references and versioned tails.
 The [legacy table view](docs/features/flow-legacy-tables/README.md) reads records

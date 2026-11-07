@@ -5,10 +5,11 @@
 Physical version 7/8 framing is validated before replay. Forced scanning never
 interprets control payloads. Preferred replay checks the final 12 bytes for
 the modern signed eight-byte backward distance and index identifier. The
-distance must select a physical index record ending at EOF with a zero
-eight-byte marker. A recognition miss falls back to scanning. Once recognized,
-a malformed marker, compressed body, table, footer, or selected saved-span
-record rejects the preferred read. The four-byte writer footer does not
+distance must select a physical index record ending at EOF. A candidate with
+fewer than eight marker bytes rejects the preferred read; a nonzero marker
+falls back to scanning. Other recognition misses also fall back to scanning.
+After a zero marker is recognized, a malformed compressed body, table, footer,
+or selected saved-span record rejects the preferred read. The four-byte writer footer does not
 establish a modern terminal index and falls back to scanning.
 
 ## Maps and provenance
@@ -37,6 +38,19 @@ projection explicitly reports that ordinary payloads were not decoded,
 ordinary indexed targets were not validated, and the complete document schema
 was not covered. Native execution and application acceptance are excluded.
 
-The future public reader must preserve these distinctions, expose an explicit
-replay policy and bounded options, and publish immutable results with typed
-errors. This baseline ships no speculative public reader or editing API.
+The public reader preserves these distinctions through an explicit replay
+policy, bounded options, immutable results, and typed errors. It performs no
+edits. Physical source identities and selected controls provide replay
+provenance; ordinary spans remain raw values rather than validated identities.
+
+Operation-local builders own mutable maps. Publication moves them into shared
+immutable maps, and cloning a result retains the same immutable source and
+control views. No global state or caches participate in replay. Absolute-start
+lookups use the already validated physical ordering instead of allocating a
+second record index.
+
+The reader rejects a new distinct key before insertion when its bound is
+exhausted. It retains the existing strict control decoder's checks and error
+class while naming the logical replay operation at the API boundary. Forced
+scans do not validate unused control options, because no control allocation or
+decode occurs on that path.

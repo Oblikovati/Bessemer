@@ -56,6 +56,8 @@
 
 ### Added
 
+- Added bounded fresh-map Flow logical index replay with explicit physical-scan and preferred-terminal policies, retained control provenance and unvalidated ordinary-target diagnostics. (#241)
+
 - Added strict saved-span and terminal-index writer-profile reads and isolated field edits with explicit footer context, bounded decoding, checked distance recomputation and complete carrier history. (#241)
 
 - Added complete paired record-501 IMS-value reads and isolated raw flag, shared-array and BL-row edits with retained definition provenance, explicit fresh-state assumptions and independent resource bounds. (#241)
