@@ -96,7 +96,7 @@
     "cons": [
       "Payload CRC and model semantics intentionally remain outside the structural check mode",
       "Native calendar provenance and application acceptance remain unverified",
-      "Current full gate17115 covers earlier f0bd5f21 source; hosted PR249 covers older publication source only"
+      "Current full gate 73867 covers b21f26b4 source; hosted PR249 covers older publication source only"
     ],
     "recommended_fix": "Complete the exact-source PR gate and hosted checks before publication; no focused-check blocker found"
   },
@@ -107,5 +107,23 @@
     "Continue the wider documented-schema audit"
   ],
   "humanizer": "Unavailable; maintainer prose review pending",
-  "dependencies": "None added or changed; no version bump, release tag or publication"
+  "dependencies": "None added or changed; no version bump, release tag or publication",
+  "full_pr_gate": {
+    "issue": 250,
+    "source_revision": "b21f26b4adafa649777a5d0b40d00f8674f28fe3",
+    "command": "cargo xtask pr",
+    "status": "running",
+    "accepted": false,
+    "session": 73867,
+    "worktree": "C:/bessemer214-ci",
+    "cargo_build_jobs": 1,
+    "log": "target/container-timestamps-combined-full-pr-gate.log",
+    "scope": "Combined source through explicit native ZIP timestamp packing, immutable existing-entry views and isolated timestamp edits, including earlier legacy/index/checkpoint/IMS/control source",
+    "exclusions": [
+      "Authoritative terminal result pending",
+      "PR249 hosted checks cover older publication source only",
+      "Later empty-container investigation and fixtures excluded",
+      "No native application or whole-schema parity acceptance"
+    ]
+  }
 }

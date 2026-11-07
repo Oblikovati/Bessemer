@@ -60,3 +60,7 @@ input isolation, and eight workers sharing an immutable record-155 view.
 See [api-verification.json](api-verification.json) for exact check scope and
 remaining publication gates, and [design.md](design.md) for layout constraints.
 The humanizer skill is unavailable; the maintainer prose pass remains for review.
+
+The combined local `cargo xtask pr` gate passed at `f0bd5f21`: 5,138 tests
+passed, none failed, and 268 were ignored. Later timestamp work and hosted
+acceptance are excluded. See [full-pr-gate-verification.json](full-pr-gate-verification.json).

@@ -41,7 +41,7 @@
     {
       "source": "flowlegacyfields.py",
       "source_lf_sha256": "2956d2854bf47265a8a5799a7549406117ead69858716d823fade7bb25505a41",
-      "status": "Typed 105/113/155 readers, scalar queries, preferred selection and existing-value editors implemented; 16 Rust, 8 baseline Python, 5 Source tests and earlier conditional 14 suite accepted with frozen typed values/paths, exact bounds, malformed framing, history, inverse wires, isolation, eight-worker and two-process checks; clippy/format/caps passed; full gate and hosted acceptance pending"
+      "status": "Typed 105/113/155 readers, scalar queries, preferred selection and existing-value editors implemented; 16 Rust, 8 baseline Python, 5 Source tests and earlier conditional 14 suite accepted with frozen typed values/paths, exact bounds, malformed framing, history, inverse wires, isolation, eight-worker and two-process checks; clippy/format/caps passed; combined local full PR gate accepted at f0bd5f21; hosted acceptance pending"
     }
   ],
   "search": {
@@ -58,7 +58,7 @@
     ],
     "limitation": "Identifier searches identify follow-up work; they do not establish absence of equivalent unnamed implementations"
   },
-  "next": "Retain the running f0bd5f21 full gate for the newer legacy-field APIs; merge PR249 after all 13 exact-head hosted jobs pass; continue requirement-by-requirement audits of other documented Flow and SolidWorks schemas",
+  "next": "Retain the running b21f26b4 timestamp full gate; merge PR249 after all 13 exact-head hosted jobs pass; prepare Bug251 for main first and forward it to the candidate; continue the broader schema audit",
   "exclusions": [
     "Other Flow modules need a requirement-by-requirement audit",
     "Other SolidWorks schema families need a fresh source audit",

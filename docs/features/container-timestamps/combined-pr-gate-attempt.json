@@ -1,0 +1,18 @@
+{
+  "issue": 250,
+  "source_revision": "b21f26b4adafa649777a5d0b40d00f8674f28fe3",
+  "command": "cargo xtask pr",
+  "status": "running",
+  "accepted": false,
+  "session": 73867,
+  "worktree": "C:/bessemer214-ci",
+  "cargo_build_jobs": 1,
+  "log": "target/container-timestamps-combined-full-pr-gate.log",
+  "scope": "Combined source through explicit native ZIP timestamp packing, immutable existing-entry views and isolated timestamp edits, including earlier legacy/index/checkpoint/IMS/control source",
+  "exclusions": [
+    "Authoritative terminal result pending",
+    "PR249 hosted checks cover older publication source only",
+    "Later empty-container investigation and fixtures excluded",
+    "No native application or whole-schema parity acceptance"
+  ]
+}

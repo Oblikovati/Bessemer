@@ -1,0 +1,25 @@
+{
+  "issue": 241,
+  "source_revision": "f0bd5f219326251c3ebb3bc1c6519c45aaf31339",
+  "command": "cargo xtask pr",
+  "exit_code": 0,
+  "worktree": "C:/bessemer214-ci",
+  "worktree_clean_at_terminal_verification": true,
+  "platform": "Windows x64; Rust 1.99.0; CARGO_BUILD_JOBS=1",
+  "kernel_schema": "C:/Program Files/SOLIDWORKS Corp/SOLIDWORKS/data/pschema/sch_13006.s_t",
+  "scope": "Combined source through all raw105/113/155 readers/editors, scalar decisions and preferred-container selection; includes earlier logical index/checkpoints/IMS/control source",
+  "results": {
+    "passed": 5138,
+    "failed": 0,
+    "ignored": 268,
+    "result_summaries": 407
+  },
+  "log": "target/flow-legacy-fields-combined-full-pr-gate.log",
+  "log_sha256": "0ebdd758f9ef73cf835b4bff5ea148bc52fed52b412c61fe8bf369d64cf425e6",
+  "exclusions": [
+    "Later timestamp baseline and runtime API not covered",
+    "PR249 hosted checks cover older a1f41b28 publication source only",
+    "Hosted matrix and sanitizer acceptance of f0bd5f21 pending",
+    "Ignored native/runtime/application cases and whole-schema parity remain excluded"
+  ]
+}

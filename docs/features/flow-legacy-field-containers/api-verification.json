@@ -1,6 +1,6 @@
 {
   "issue": 241,
-  "status": "focused checks passed; exact-source full PR gate and hosted acceptance pending",
+  "status": "focused checks and exact-source local full PR gate passed; hosted acceptance pending",
   "baseline_commit": "50aa224c",
   "private_core_refactor_commit": "ae792a1b",
   "test_path_refactor_commit": "966c9746",
@@ -121,9 +121,15 @@
   "dependencies": "None added or updated; no version bump, tag or release",
   "full_pr_gate": {
     "source_revision": "f0bd5f219326251c3ebb3bc1c6519c45aaf31339",
-    "status": "running",
-    "session": 17115,
-    "log": "target/flow-legacy-fields-combined-full-pr-gate.log",
-    "accepted": false
+    "status": "completed",
+    "exit_code": 0,
+    "accepted": true,
+    "results": {
+      "passed": 5138,
+      "failed": 0,
+      "ignored": 268,
+      "result_summaries": 407
+    },
+    "verification": "docs/features/flow-legacy-field-containers/full-pr-gate-verification.json"
   }
 }
