@@ -1,0 +1,67 @@
+{
+  "issue": 241,
+  "source_revision_before_baseline": "9ddcc85146db5bec60453baf394bd4f0c721f10c",
+  "scope": "Owned raw105/113/155 and scalar-query/selection fixture baseline; no new public runtime profile",
+  "platform": "Windows x64; Rust 1.99.0; CARGO_BUILD_JOBS=1",
+  "results": {
+    "rust_passed": 4,
+    "rust_failed": 0,
+    "python_passed": 8,
+    "source_python_passed": 5,
+    "clippy": "passed",
+    "format": "passed",
+    "function_file_caps": "passed",
+    "maximum_rust_body_lines": 18
+  },
+  "commands": {
+    "tests": {
+      "command": "cargo test --locked --test flow_legacy_field_fixtures",
+      "exit_code": 0,
+      "log": "target/flow-legacy-fields-baseline-tests.log",
+      "sha256": "39a2cb1f47d43c66d0b6a548b3147024fa93b97b3cdd2cf87d81398b0cf8188c"
+    },
+    "clippy": {
+      "command": "cargo clippy --locked --test flow_legacy_field_fixtures -- -D warnings",
+      "exit_code": 0,
+      "log": "target/flow-legacy-fields-baseline-clippy.log",
+      "sha256": "95ee7623ec448210a1708c25d1086b49313653a5fbaeeb8b07dcc2ef4d559255"
+    },
+    "format": {
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "log": "target/flow-legacy-fields-baseline-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "python": {
+      "command": "python -m unittest discover -s docs/features/flow-legacy-field-containers -p test_legacy_fields.py",
+      "exit_code": 0,
+      "log": "target/flow-legacy-fields-baseline-python.log",
+      "sha256": "4b2e384bad07ad732b5f23e01ad13f3a7e5ab827d3174af378a0c95e9ae7fe20"
+    },
+    "source-tests": {
+      "command": "python -m unittest test_flowlegacyfields (reference directory)",
+      "exit_code": 0,
+      "log": "target/flow-legacy-fields-baseline-source-tests.log",
+      "sha256": "0384e66e06c2773063f5843d5817f4f92a43004df8665ae6e3a8062103fd7cad"
+    }
+  },
+  "coverage": {
+    "word_cases": 1007,
+    "word105_cases": 862,
+    "word113_cases": 145,
+    "native_payloads": 3,
+    "native_payload_bytes": 32068,
+    "scalar_domain_patterns": 301,
+    "scalar_pairs": 90601,
+    "raw_record155_cases": 1986,
+    "ordered_selection_cases": 400
+  },
+  "exclusions": [
+    "No new public105/113/155 API yet",
+    "No installed native record155 payload authenticated",
+    "No native virtual results, floating-point faults, runtime conversion or application acceptance",
+    "Engineering meanings and units remain unresolved",
+    "Full PR gate for this baseline pending; current running gate covers earlier f2902881"
+  ],
+  "humanizer": "Unavailable; maintainer prose pass pending"
+}

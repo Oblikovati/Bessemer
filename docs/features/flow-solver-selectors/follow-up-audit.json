@@ -37,6 +37,11 @@
       "source": "flowindex.py",
       "source_lf_sha256": "6c9117accb71203ace520c125280daa9259f5ffd30c96536390d220c2d4ddcdb",
       "status": "Typed fresh-map reader implemented; all 2140 frozen requested outcomes, bounds, retained control provenance, isolation, 8-lane stress and two-process comparisons accepted in 12 Rust tests; clippy/format/caps passed; full gate pending"
+    },
+    {
+      "source": "flowlegacyfields.py",
+      "source_lf_sha256": "2956d2854bf47265a8a5799a7549406117ead69858716d823fade7bb25505a41",
+      "status": "Missing typed 105/113/155 bindings, scalar queries and 113-before-155 selection confirmed by module, entry-point and identifier audit; owned baselines accepted: 1007 word cases, 90601 scalar pairs, 1986 groups and 400 selections; public APIs pending"
     }
   ],
   "search": {
@@ -53,7 +58,7 @@
     ],
     "limitation": "Identifier searches identify follow-up work; they do not establish absence of equivalent unnamed implementations"
   },
-  "next": "Complete the combined logical-index/checkpoint-component gate and hosted acceptance, then audit the remaining Flow and other SolidWorks schema requirements without treating these bounded component operations as whole-document parity",
+  "next": "Implement the frozen 105/113/155 layouts, scalar decisions and selection; reuse the conditional grammar without extending or mislabeling existing public formats; retain the running f2902881 gate and await all hosted checks before integration",
   "exclusions": [
     "Other Flow modules need a requirement-by-requirement audit",
     "Other SolidWorks schema families need a fresh source audit",
