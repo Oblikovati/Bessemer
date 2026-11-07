@@ -1,0 +1,7 @@
+Document::from_bytes rejects a valid zero-stream version-4 container because archive::possible_end excludes a zero entry count and archive_layout assumes the first central and local records exist.
+
+Independent reproduction: for every one of the 1,000 registered keys, assemble the documented eight-byte version-4 header and that key's 22-byte end record with zero disk numbers, counts, directory size, offset and comment. The reference swcontainer.Document accepts all 1,000 wires with no entries. The existing Rust replace_stream example rejects the 30-byte wire before lookup with FailureClass::Invalid and the message "expected a nonempty SolidWorks directory". The original CLI log is retained at target/container-empty-original-rejection.log.
+
+Accept complete empty containers using an authenticated registered signature set; keep nonempty signature recovery unchanged. Preserve exact bytes and empty iteration, reject malformed boundaries or unknown empty signature sets, and add owned independent fixtures and regression tests for all keys, limits, truncation, malformed fields, source isolation and deterministic reads. Do not infer signatures from nonexistent records.
+
+This is a reader bug fix. It must land on main before forwarding into the candidate branch. Keep the current PR249 head unchanged, open no second PR while it is pending, and do not bump versions or tag a release. Native application acceptance of an empty CAD model is outside the container framing claim.

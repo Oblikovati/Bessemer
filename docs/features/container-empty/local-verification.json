@@ -1,0 +1,96 @@
+{
+  "bug": 251,
+  "reference_bug": 252,
+  "scope": "Independent Source-positive empty-frame and registered signature baseline only; no runtime reader fix",
+  "source_revision_before_baseline": "291f250fe0a1a5e087693ce43702c6e9d89cadd7",
+  "platform": "Windows x64; Rust 1.99.0; CARGO_BUILD_JOBS=1",
+  "results": {
+    "rust_passed": 2,
+    "rust_failed": 0,
+    "python_passed": 5,
+    "clippy": "passed -D warnings",
+    "format": "passed",
+    "function_file_caps": "passed",
+    "maximum_rust_body_lines": 13
+  },
+  "commands": {
+    "rust": "cargo test --locked --test container_empty_fixtures",
+    "python": "python -m unittest discover -s docs/features/container-empty -p test_empty.py",
+    "clippy": "cargo clippy --locked --test container_empty_fixtures -- -D warnings",
+    "format": "cargo fmt --all -- --check"
+  },
+  "logs": {
+    "rust": {
+      "exit_code": 0,
+      "log": "target/container-empty-baseline-tests.log",
+      "sha256": "2fef77ac078b16953e164a96d8afe4ee5fd44e2f8b4d8d4731d2ff1f12b8d65e"
+    },
+    "python": {
+      "exit_code": 0,
+      "log": "target/container-empty-baseline-python.log",
+      "sha256": "2c492d11440dec7fd10d7f02dc497bba261ffdd4d18b74c2504fcc91aa90b2a4"
+    },
+    "clippy": {
+      "exit_code": 0,
+      "log": "target/container-empty-baseline-clippy.log",
+      "sha256": "ff4362baca8e69a8821944aa543c9425912fca0450fa67684271f72d7ee62c36"
+    },
+    "format": {
+      "exit_code": 0,
+      "log": "target/container-empty-baseline-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "original_reproduction": {
+    "command": "cargo run --locked --example replace_stream -- target/reference-empty-container.sldprt missing target/reference-empty-container.sldprt target/never-created-empty-output.sldprt",
+    "cargo_process_exit": 1,
+    "failure_class": "Invalid",
+    "cause": "30 bytes; expected a nonempty SolidWorks directory",
+    "log": "target/container-empty-original-rejection.log",
+    "sha256": "a1ef95abd2c1005d23385a195d003ed70e2fd1cec371d8cb2898df3b204bcf5e",
+    "note": "Expected pre-fix rejection, not a successful gate or intended behavior; probe input removed after freezing the owned cases"
+  },
+  "coverage": {
+    "registered_keys": 1000,
+    "source_accepted_empty_wires": 1000,
+    "canonical_empty_wire_bytes": 30,
+    "native_signature_sets": 3,
+    "packet_replay": "Byte-identical regeneration under injected temporary root",
+    "known_source_defect": "UnboundLocalError for off in swcontainer.build on an empty list; reference source remains unchanged"
+  },
+  "local_lf_sha256": {
+    "docs/features/container-empty/freeze_empty.py": "a4a8370e66ca34039bae18682629125ad6fddae982e5aef76318577ced6e228c",
+    "docs/features/container-empty/test_empty.py": "c284e727055620a8a6c041d5ffb60f21e9393630b9d811e19e8e4dc0ee598739",
+    "tests/container_empty_fixtures.rs": "faf7c2262572b195f402ac91d65c1b00085d4ca6954ad0df0c0d2275ed5c3a6c"
+  },
+  "initial_corrections": [
+    "Fixed the test-only clippy constant chunks_exact warning with typed as_chunks arrays; initial log retained",
+    "Retained filler metadata when reproducing the reference builder failure; the normalized signature corpus otherwise hid that separate failure behind a missing-field error"
+  ],
+  "self_review": {
+    "pros": [
+      "All positive empty shapes accepted by the unchanged Source reader",
+      "All registered rows and native header signatures independently pinned",
+      "No production public API, stubs or tests locking in the known rejection introduced"
+    ],
+    "cons": [
+      "Bessemer empty-container fix remains pending",
+      "No exact-source full PR or hosted acceptance for this newer baseline"
+    ],
+    "recommended_fix": "Implement Bug251 independently on the patch path and integrate main first; keep Source builder Bug252 separate"
+  },
+  "remaining": [
+    "Implement registered empty-signature resolution and focused malformed/identity/isolation regression tests",
+    "Run exact-source cargo xtask pr before publication",
+    "Merge PR249 only after all 13 exact-head hosted jobs pass; open no additional PR meanwhile",
+    "Land Bug251 on main before candidate forwarding"
+  ],
+  "exclusions": [
+    "Native application acceptance of a zero-stream CAD model",
+    "New-container construction API",
+    "Current running timestamp full gate 73867 covers older b21f26b4 source only",
+    "Whole-schema parity"
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending",
+  "dependencies": "None added or changed; no version bump or release"
+}
