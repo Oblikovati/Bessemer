@@ -1,0 +1,61 @@
+{
+  "issue": 241,
+  "source_revision_before_baseline": "ef1133e83d7e1f6c9b544a39f1b9a28394d395ec",
+  "scope": "Logical index replay fixture baseline only; no public replay API",
+  "platform": "Windows x64; Rust 1.99.0; CARGO_BUILD_JOBS=1",
+  "results": {
+    "rust_passed": 4,
+    "rust_failed": 0,
+    "python_passed": 9,
+    "source_python_passed": 6,
+    "clippy": "passed",
+    "format": "passed",
+    "function_file_caps": "passed",
+    "maximum_rust_function_body_lines": 19
+  },
+  "outcomes": {
+    "requested": 2140,
+    "physical_scan": 1474,
+    "terminal_index": 649,
+    "rejected_preference": 17,
+    "forced_scan_completed": 1070
+  },
+  "commands": {
+    "tests": {
+      "command": "cargo test --locked --test flow_index_replay_fixtures",
+      "exit_code": 0,
+      "log": "target/flow-index-replay-baseline-tests.log",
+      "sha256": "56aed11d416669ed0b42558cfff13e235509479961b5ed209e66517a32290095"
+    },
+    "clippy": {
+      "command": "cargo clippy --locked --test flow_index_replay_fixtures -- -D warnings",
+      "exit_code": 0,
+      "log": "target/flow-index-replay-baseline-clippy.log",
+      "sha256": "29402e3af9865891d0b8eae23ec2e5eefa075f288e41c12566302720657b04b4"
+    },
+    "format": {
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "log": "target/flow-index-replay-baseline-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "python": {
+      "command": "python -m unittest discover -s docs/features/flow-index-replay -p test_replay.py",
+      "exit_code": 0,
+      "log": "target/flow-index-replay-baseline-python.log",
+      "sha256": "803b55dc52472f2af40a80d93997363c85d2bfa22958ef477c6dfcfe6d0a4c14"
+    },
+    "source-tests": {
+      "command": "python -m unittest test_flowindex (reference directory)",
+      "exit_code": 0,
+      "log": "target/flow-index-replay-baseline-source-tests.log",
+      "sha256": "9fffdea0efcd3158e0ccb98821834c20fd1bae324487987a4e66293ade84ab8b"
+    }
+  },
+  "native_execution": false,
+  "installed_terminal_payloads": false,
+  "ordinary_indexed_targets_validated": false,
+  "complete_document_schema": false,
+  "full_pr_gate": "Not run for this baseline; running combined gate covers earlier source only",
+  "humanizer": "Unavailable; maintainer prose review pending"
+}

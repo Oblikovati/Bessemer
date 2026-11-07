@@ -1,0 +1,51 @@
+{
+  "cases": 1070,
+  "packets": {
+    "native": {
+      "cases": 3,
+      "bytes": 2940515,
+      "sha256": "b196eb8ce2f0877c64594a28ee9157ad5115362944c4181daab58b02c0e6bd77"
+    },
+    "scan7": {
+      "cases": 94,
+      "bytes": 14231921,
+      "sha256": "eda200b98a4c65ce02fb51bed4654c21f32f0fb6976f70793c90003bbb051276"
+    },
+    "scan8": {
+      "cases": 94,
+      "bytes": 14231921,
+      "sha256": "0fbf6c5571a386f41a37c2bb82846e3848818ac427a4e65466beb1ad4b5844a3"
+    },
+    "terminal": {
+      "cases": 879,
+      "bytes": 10695529,
+      "sha256": "857229caf050d1329b54415ecbc9193ec3716bcd1ac4fabc195352cad0fd1765"
+    }
+  },
+  "reference": {
+    "evidence_sha256": "968b785a6ccdc8879ccd8f13d34f6c93528a607d7043bec433132d9b771e6228",
+    "corpus_sha256": "e2d78d9a8b55c0815fb4d80e5f344137a837b0cf13cde9a2d2c499aa1471bf46",
+    "synthetic_sha256": "7039610c465140fc086212afa82097faf5cefee070b646b44b5f3bb90c8203bf",
+    "limitations": [
+      "Bounded little-endian version7/8 physical carriers and fresh index/saved-map context only",
+      "Strict writer-profile terminal payloads; malformed matched compression raises rather than emulating all native recovery paths",
+      "All ordinary indexed targets remain unvalidated; only a referenced -100 span is checked against physical records",
+      "Installed samples exercise scan only; populated terminal adoption has native/synthetic evidence",
+      "No ordinary result payload decode, byte credit or complete-document claim"
+    ]
+  },
+  "references": {
+    "flowindex.py": "6c9117accb71203ace520c125280daa9259f5ffd30c96536390d220c2d4ddcdb",
+    "flowresults.py": "5f5917c14771194fd368750e72f8aabd24c6156e0994e3a779a1c5bdb715af93",
+    "flowcontrolrecords.py": "bb3d4c7326cb67e0e9fe6b22bfe5c938b805b125687c5a440970da801797337d"
+  },
+  "map_order": "Unsigned key order for deterministic map comparison; raw control-entry order is preserved separately",
+  "compression": {
+    "build": "1.3.1.zlib-ng",
+    "runtime": "1.3.1.zlib-ng"
+  },
+  "native_terminal_payload_fixtures": false,
+  "native_execution": false,
+  "indexed_ordinary_targets_validated": false,
+  "complete_document_schema": false
+}
