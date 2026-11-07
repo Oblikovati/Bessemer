@@ -1,0 +1,21 @@
+{
+  "source_commit": "b21f26b4adafa649777a5d0b40d00f8674f28fe3",
+  "command": "cargo xtask pr",
+  "terminal_exit": 0,
+  "platform": "Windows x64",
+  "toolchain": "1.99.0",
+  "passed": 5150,
+  "failed": 0,
+  "ignored": 269,
+  "summaries": 408,
+  "log": "target\\container-timestamps-combined-full-pr-gate.log",
+  "log_sha256": "1adc67f4bd24cbd75623fc7d56763141e0e6e570f3298ba1ba7fdbfbe2f2c39d",
+  "worktree": "C:/bessemer214-ci",
+  "worktree_status": "clean at terminal completion",
+  "exclusions": [
+    "Later registered empty-container changes and release tooling are excluded; their release gate is separate",
+    "Native application acceptance and complete schema parity"
+  ],
+  "review": "No observed gate failures; preserve feature-specific validation exclusions.",
+  "humanizer": "Unavailable; maintainer prose review pending"
+}
