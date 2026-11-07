@@ -1,0 +1,37 @@
+{
+  "source_parent": "7839cb6ff0b81d487c547a746db3b655e01582ce",
+  "issue": 241,
+  "platform": "Windows x64 MSVC Rust1.99.0 Python3",
+  "python_tests": {
+    "passed": 9,
+    "failed": 0
+  },
+  "rust_tests": {
+    "passed": 4,
+    "failed": 0,
+    "ignored": 0
+  },
+  "clippy_exit_code": 0,
+  "formatter": "cargo fmt --all",
+  "source_sha256": {
+    "docs/features/flow-state-tables/freeze_state_tables.py": "1d539b62b2ddcacc0aee27a0c0b69ea73277dd3377a325be0f7a589011e4361d",
+    "docs/features/flow-state-tables/state_requests.py": "668d5f65c48d5224d6fae66b293e9f6403a868a70eecd820943586cb447c4ca0",
+    "docs/features/flow-state-tables/state_snapshot.py": "0c7832187fa3e788893bf5229bc4cd2587454918e7a14b5cfaa0fba89ab47d3b",
+    "docs/features/flow-state-tables/test_state_tables.py": "1a7a6ee96163e48bf788294be42f78cada3fd05eb0b08107ead2b60b8fab3bce",
+    "tests/flow_state_table_fixtures.rs": "7f980a8330877d18210f2dfd7079f660d2bd3db339c9ecc00c3b403478bf703d",
+    "tests/flow_state_tables/fixture.rs": "10cdb49cce50b2434111d2263df92fdb822598da01bf67698a889f52ab5dc45f"
+  },
+  "log_sha256": {
+    "target/flow-state-tables-tests.log": "3521d31a9123513f492c1f16ad925fba358112c7aee34c3f10647b2732688bdd",
+    "target/flow-state-tables-clippy.log": "0598a465ef1079392d270df8a4e6ce88c11158b816d41e2d7f13a3d645359c3f",
+    "target/flow-state-tables-python.log": "7a338d2d02feb00957b5211a732dff9afe7a4ed9544e6ac2ad85087be37fb4fd"
+  },
+  "scope": "Owned complete raw state-table baseline only; no production API added",
+  "exclusions": [
+    "Native owner context verification for138",
+    "Native runtime and engineering interpretation",
+    "SolidWorks application acceptance",
+    "Full gate for these new fixtures"
+  ],
+  "humanizer": "Maintainer review pending: humanizer skill unavailable"
+}

@@ -1,0 +1,42 @@
+{
+  "cases": 356,
+  "bytes": 2534942,
+  "sha256": "19de0be7fc685a97eddae9b7023096ca8d07b8adc8510deb96ecef255a8cc182",
+  "references": {
+    "flowrecord11.py": "68ea326030ae0bf583007a3f5658cad0a0b549814e35fde62026490d27354df6",
+    "flowlegacytables.py": "52309d35baa5ecc33046fb2f7a98f4eadc7bfbd22db5b9803e41898131924420"
+  },
+  "native": {
+    "source_sha256": "069aefb4da9fa292bd4eea27b619b9073cc33acc46dda1411b749b0a968706a8",
+    "payload_sha256": "9e004e3823216c5408e9347440727b1ba76fe7f25618d054416680c58d1059c7",
+    "original_mode_assumption": false,
+    "original_payload_bytes": 11474,
+    "items": 7,
+    "width": 40,
+    "true_mode_prefix_end": 11282,
+    "true_mode_opaque_bytes": 192,
+    "true_mode_opaque_sha256": "5d89f056865052bcb89c910d2d62872e029fb273c3db03f8968a52a41593c1b5",
+    "derived_true_mode_prefix_sha256": "ad9755d6b74ec853ec3c7975df063c141982b8b31223f9d1c876fce555bd5be1",
+    "native_owner_mode_verified": false
+  },
+  "member_order": [
+    8,
+    24,
+    12,
+    16,
+    20,
+    28,
+    40,
+    36,
+    44
+  ],
+  "load_modes": [
+    false,
+    true
+  ],
+  "scope": "Complete record11 version18 raw framing under explicit load modes, all scalar/array/string values and intervals, all65536 UTF16 units and exact first-NUL prefix units; original native false-mode payload and separately labelled derived true-mode prefix",
+  "native_owner_mode_verified": false,
+  "runtime_transformations_reproduced": false,
+  "engineering_fields_assigned": false,
+  "native_application_checked": false
+}

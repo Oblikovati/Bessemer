@@ -1,0 +1,71 @@
+{
+  "feature_issue": 241,
+  "base_commit": "2e7fba8df74ceeb99b3731eff09988d0f624eb23",
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "command": "cargo test --test flow_load_state_fixtures --test flow_conditional_item_fixtures --test flow_primary_table_fixtures --test flow_field_value_fixtures --locked",
+  "passed": 63,
+  "failed": 0,
+  "ignored": 4,
+  "ignored_explanation": [
+    "Three standalone replay workers are invoked twice each by their passing parent tests",
+    "Existing exhaustive native record108 export remains separately gated"
+  ],
+  "load_state_passed": 15,
+  "complete_cases": 356,
+  "selected_edit_elements": 16734,
+  "edit_sampling": "All elements for length0..4; otherwise first/middle/last. Each selected nonstructural element receives noop, patch and fresh-open complete raw reversal checks.",
+  "source_minimal_layout_oracle": [
+    {
+      "mode": false,
+      "bytes": 304,
+      "item_bytes": 88,
+      "sha256": "18ca1f0db0a3c66a602632075af61b331a074a01b94ba04ea6d2c05bba33d313"
+    },
+    {
+      "mode": true,
+      "bytes": 112,
+      "item_bytes": 88,
+      "sha256": "0b6448a4de8a492e0896567f97cf9673dacfd0ae8269cf99d445cbdc01fc7836"
+    }
+  ],
+  "public_send_sync_types": 17,
+  "concurrency_workers": 8,
+  "separate_processes_compared": 2,
+  "clippy_command": "cargo clippy --tests --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "source_lf_sha256": {
+    "src/flow/legacy_tables/mod.rs": "1f1b35ff2a60c1df121b7aeb9822d58b4288cb511b1e97e5b558a972194cda38",
+    "tests/flow_load_state_fixtures.rs": "c159be7c71366fbfe7d1f302fc95142a853871a64cbb0a44f890bcc87ef420cf",
+    "tests/flow_load_state/api.rs": "0c33e3e3fe71d5ffe3ecd597db3504097a35e4c30f08244a7355c613ed00e6ad",
+    "README.md": "8252a7e5bb639a81bcf0690a90abbfa6aae5cd2fb12af3c270e024a72ab27cdb",
+    "CHANGELOG.md": "a68d1a7757f0580717e4d2cfdd5209cd3ff33c5e4efe2dbf0a6d3c01bf8776aa",
+    "docs/features/flow-load-state/README.md": "5af695137234049bc5bbfd3b96cb03cc91cc3292a4dfbd9d5300349b14f606dc",
+    "src/flow/legacy_tables/load_state/decode.rs": "8d38eaaaf949ac0cf31031d9f7da337ff4382688a889d57bd72a6fe8be75c427",
+    "src/flow/legacy_tables/load_state/edit.rs": "355d16ff99977be31d1a96f48df5dd498be3f76cb2655b884e05cd1425ccc641",
+    "src/flow/legacy_tables/load_state/fields.rs": "11cb369407d255e41760cba707de524626b1ec43b09636f70f7e069522712329",
+    "src/flow/legacy_tables/load_state/mod.rs": "1a5b5f571e307fb0279086a34b9c076c977b0b5aff4cea5d7ba08605e841580e",
+    "src/flow/legacy_tables/load_state/schema.rs": "f00d91602a225974ff58c29e73098f09c63023161e4ed66dfb0ad57777169e64",
+    "src/flow/legacy_tables/load_state/types.rs": "33c83a5e6f7a77a3b8e8b0043429ccad72d796125233ccbd46b6ac1f5f9b19d3",
+    "src/flow/legacy_tables/load_state/view.rs": "43fa9c56ad7793e27d8183eb1aaa950bde2be5bbf5eb5f03788f88cada0c7fc8",
+    "tests/flow_load_state/api/contracts.rs": "666691b7df518e90d6f2dc9876be1d94b8180cc8f1df042a462c2e2b53eac484",
+    "tests/flow_load_state/api/edit.rs": "b05d411cefcc8268468fd04a63f9a0de3c8f41c35ab7d83ea0689a08c296f12b",
+    "tests/flow_load_state/api/read.rs": "7b5af22824c452987ae4d6a0cc8ce1676128d46b37b9ac865523e04196602b5b",
+    "tests/flow_load_state/api/replay.rs": "5ca39d0b204d8a145a9390b8543f810aac829c7b8f63e42d6ffc193db3ab66a6"
+  },
+  "log_sha256": {
+    "flow-load-state-api-tests.log": "2eb2364efdb12ff1ab28fcfebc86818433964427bd67b2d6ff85357f70b4bc9e",
+    "flow-load-state-api-clippy.log": "1644b06f479601b991e5d65dcd70e7193fdb608b0eedc1ec2d11d71efe7023dd"
+  },
+  "unchanged_fixture_gzip_sha256": "963c6a00c49ab9c9179161801eff596f36006fb55db9d5a49da0b362b1491b10",
+  "scope": "Complete raw record11 version18 under explicit mode, all Source fields/scopes/native-offset order/raw units/first-NUL prefixes, independent budgets and malformed inputs, minimal empty strings and unused widths; mode/revision-bound fixed edits, full physical history and raw reversals, immutable input isolation and process/concurrent determinism",
+  "exclusions": [
+    "Native owner mode provenance and actual runtime transformations",
+    "Engineering meanings and native application acceptance",
+    "Running full gate frozen at551b77c9fdfa7b3c729e74d7b646923cf8d3ed66 excludes this later API",
+    "Cross-platform and ThreadSanitizer CI for this new revision",
+    "Release performance comparison: no earlier typed record11 API or published release comparator exists"
+  ],
+  "humanizer": "Unavailable; prose pass left to maintainer review"
+}

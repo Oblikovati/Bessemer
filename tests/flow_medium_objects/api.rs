@@ -60,7 +60,10 @@ pub(super) fn prefix_options() -> FlowMetadataPrefixOptions {
         maximum_string_units: 100_000,
     }
 }
-fn open(raw: &[u8], options: FlowMediumBodyOptions) -> bessemer::Result<FlowMediumKindOne> {
+pub(crate) fn open(
+    raw: &[u8],
+    options: FlowMediumBodyOptions,
+) -> bessemer::Result<FlowMediumKindOne> {
     backend(raw, 1).first_kind_one_body(options)
 }
 type ExpectedWide = (FlowMediumWideField, usize, Vec<u64>);

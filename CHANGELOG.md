@@ -54,6 +54,22 @@
 
 ### Added
 
+- Added complete record-139 fixed-state reads and isolated member/settings edits, preserving absent counts, raw slot bits and version-dependent field presence. (#241)
+
+- Added complete record-417 paired-state reads and isolated index/wide edits, preserving independent counts, absent arrays and floor quotients for nondivisible counts. (#241)
+
+- Added complete record-138 context-state reads and isolated index/tail edits with explicit native count assumptions and independent serialized bounds. (#241)
+
+- Added complete raw record-432 stored-state reads and isolated signed-member edits, preserving discarded-member absence and reporting native recomputation requirements. (#241)
+
+- Added complete raw Flow record-11 version-18 load-state reading and isolated field/UTF-16 edits, with explicit mode context, lossless first-NUL projections and exact carrier reversals. (#241)
+
+- Added complete Flow record-126/315/128 conditional-item views and isolated typed field edits, preserving raw version prefixes, exact codec boundaries and versioned block-vector widths. (#241)
+
+- Added complete raw Flow record-439 primary-class tables for versions zero through three, with bounded immutable field/scope views and isolated fixed-field edits carrying full carrier history. (#241)
+
+- Added versioned evaluation for the three documented kind-one medium curve accessors, with exact input checks, source provenance and explicit arithmetic/error coverage. (#241)
+
 - Added complete fresh mixed-kind medium record read/edit profiles with typed reference maps, independent resource bounds and whole-carrier history. (#241)
 
 - Added typed read/edit views for all six medium kind-two body models with bounded raw patterns, exact carrier history and explicit body-only coverage. (#241)

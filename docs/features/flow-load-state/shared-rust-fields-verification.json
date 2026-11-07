@@ -1,0 +1,30 @@
+{
+  "feature_issue": 241,
+  "base_commit": "7cbbd6e3e1f59f0b4215fafa464e24190aa55d0e",
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "scope": "Shared immutable test-field descriptors and raw numeric pattern collection between conditional-item and load-state corpora; tags0..3 retain original widths, tag4 has two-byte UTF16 units; all original conditional fixtures unchanged",
+  "conditional_passed": 14,
+  "conditional_ignored": 1,
+  "load_state_passed": 4,
+  "failed": 0,
+  "clippy_command": "cargo clippy --test flow_load_state_fixtures --test flow_conditional_item_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "source_lf_sha256": {
+    "tests/flow_field_values/stored_fields.rs": "4dbb12c692acd2e6fd62c1efb821acaeb596e67cf731778bc6701c60346bdb16",
+    "tests/flow_conditional_items/types.rs": "00c590ea428c8a8c328e637b7018780c05049bcfdf59cbdb4f46a9eae4c70061",
+    "tests/flow_conditional_item_fixtures.rs": "dee4fa35b447986244851cc3e8267d4748a5d0ddd85c3dd5a5763ca12a5419dc"
+  },
+  "log_sha256": {
+    "flow-load-state-rust-tests.log": "223b490ec189a92cf63cf8319b1aeca03e0e4c54cac3a11ddfe8f3cc29633ae5",
+    "flow-load-state-clippy.log": "f2292c1b67d747aebdb711ab00ff82b7ade816006f9de9db6fda20eb512a2335"
+  },
+  "unchanged_fixture_gzip_sha256": {
+    "record126.bin.gz": "4552e974beb38e5be717c730f56b208625382c182057f413b657e2c9773b89ac",
+    "record128.bin.gz": "0f8a1985f5356f3d7b91990a9308dc577cfc8906bb2a5a5bd40b4c0a3a63a6be",
+    "record315.bin.gz": "da3364cb79595200e59a790b92a50b09734f152f7229bc32afb1d71b58ae1647"
+  },
+  "exclusions": [
+    "Production scalar enums and wire behavior were unchanged",
+    "Load-state production API remains unfinished"
+  ]
+}

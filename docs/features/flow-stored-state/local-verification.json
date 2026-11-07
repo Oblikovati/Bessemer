@@ -1,0 +1,61 @@
+{
+  "source_parent": "8d6ecd1589f0da09db3937a9d4537f38db63bc7e",
+  "issue": 241,
+  "platform": "Windows x64 MSVC Rust1.99.0 Python3",
+  "commands": [
+    "cargo test --locked --test flow_state_table_fixtures --test flow_load_state_fixtures --test flow_conditional_item_fixtures",
+    "cargo clippy --tests --locked -- -D warnings",
+    "cargo fmt --all -- --check",
+    "python -m unittest discover -s docs/features/flow-state-tables -p test_state_tables.py -v"
+  ],
+  "terminal_exit_codes": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "rust": {
+    "passed": 39,
+    "failed": 0,
+    "ignored": 3,
+    "ignored_scope": "Three standalone workers, each invoked twice by its regular two-process parent test"
+  },
+  "python": {
+    "passed": 9,
+    "failed": 0
+  },
+  "complete_source_cases": 746,
+  "existing_member_edits": 2513,
+  "independent_oracle": "Physical signed tuple [1, i32::MIN, -1, i32::MAX, 0x12345678] and Source-frozen raw field offsets",
+  "thread_safety": {
+    "public_send_sync_types": 6,
+    "workers": 8,
+    "edits_per_worker": 32,
+    "oracle": "Complete carrier bytes from serial edits",
+    "thread_sanitizer": "Pending future CI for this exact implementation"
+  },
+  "fresh_processes": 2,
+  "source_sha256": {
+    "src/flow/legacy_tables/mod.rs": "2e56608d598e8cd0d89b16ed083bf5863cb9f30bc14b909e676136f71453fea9",
+    "src/flow/legacy_tables/stored_state/edit.rs": "ee261637cea9669f6ee03510386fa696fa164961a739e821fe3f943d5c6cc01e",
+    "src/flow/legacy_tables/stored_state/mod.rs": "0793495c2f24f9ade581a5af630256703ebf458a1c0273d4aa6737b025c818fd",
+    "src/flow/legacy_tables/stored_state/types.rs": "f964f34010c319715fd4e9f6ebd7d7bd4b9168e2cfeef5cc8e49d2ef7c62d5e5",
+    "src/flow/legacy_tables/stored_state/view.rs": "0268c82a9f64512822d25234555e48be2662a115fbd05832b4b458d0ad32b0f2",
+    "tests/flow_state_table_fixtures.rs": "257814967d021df4757b76e6e12cda19c3ba5ac873d920f7a23f393e9913015b",
+    "tests/flow_state_tables/stored_api.rs": "960b8c3f2a23d582d0eb82a5bb86ac848df7df856e198a70a0590b42e03517ac",
+    "tests/flow_state_tables/stored_replay.rs": "bcbf285f7ea5343153d694119c16f9fb8987c01cf5c3c16d860555bb1f861d83"
+  },
+  "log_sha256": {
+    "target/flow-stored-state-api-tests.log": "eb90707de44cf29a0aaa4352b0a6fd814c0ae38cffafdb819d689b14eb83d3c5",
+    "target/flow-stored-state-api-clippy.log": "266c7b6997661dc026456068b7c4da196575b8e65084720f890534ea037370dd",
+    "target/flow-stored-state-python.log": "5e60b60cfe68ec20b7568ef2badda1e253f66a0e7ef0dcac8bb4709107c88772"
+  },
+  "reference_sha256": "6ae017334720f69beb41a683bd67d9006f3f4e4099534090d63aafaca4e1e905",
+  "exclusions": [
+    "Native recomputation and runtime population",
+    "Engineering interpretation and SolidWorks application acceptance",
+    "Full gate for this API: current broader gate is frozen at8d6ecd15 and excludes it",
+    "Remote CI: current PR245 excludes this API"
+  ],
+  "humanizer": "Maintainer prose review pending; humanizer skill unavailable"
+}

@@ -1,0 +1,27 @@
+{
+  "source_parent": "bbc9703e9a72bf57c53c41ced375a7e74c5256b7",
+  "scope": "Extracted shared duplicate-occurrence carrier and fresh-process transcript helpers; no production behavior changes",
+  "validation": {
+    "command": "cargo test --locked --test flow_state_table_fixtures",
+    "passed": 20,
+    "failed": 0,
+    "ignored": 2,
+    "clippy_all_tests_exit": 0,
+    "formatter_exit": 0
+  },
+  "source_sha256": {
+    "tests/flow_state_tables/carrier.rs": "293e292b0443ea55239d7512d44f5456a93963f33222e487998057cec0975edb",
+    "tests/flow_state_tables/process.rs": "c5eed290d13519cef26b4f23ccdf05c0a4488d056bd50d9ff14143352c18a131",
+    "tests/flow_state_tables/stored_api.rs": "b143a5e8c90e0f8d96ed21ad3227cb87ca6ce85e682fae53821638d656494be4",
+    "tests/flow_state_tables/stored_replay.rs": "3ecb952eecb07c67c96016d312f3a06eb810f0496ec78fdffbf390b71f5f33ea"
+  },
+  "indexed_root_sha256": "740b62c5cd6e1d2be5e43c550a6d451fb54bd2ea4fcfc875abc06f5e9918690d",
+  "fixture_compressed_sha256": {
+    "tests/fixtures/flow-state-tables/record129.bin.gz": "be78d2521e603e95b52765795ab7b7d332306c66ba241c61f496bc763a6f6fc8",
+    "tests/fixtures/flow-state-tables/record138.bin.gz": "3584ba8136db1541f8039f21add1269b17b0ae6e58d319a2f4bb5a05233db938",
+    "tests/fixtures/flow-state-tables/record139.bin.gz": "a7f830d7e545269300debdd3e30b4664de17a144ea7610871daae58a9e2e753f",
+    "tests/fixtures/flow-state-tables/record417.bin.gz": "0bff6b1786abd42a94e7ae8a85cc94856df565c9b8cf13c2ba3294cbd9112c6a",
+    "tests/fixtures/flow-state-tables/record432.bin.gz": "418e9631af8f7bc680e6d704ac82d65ff501e5921a6cd2953158b554819576ae"
+  },
+  "qualification": "Validation ran with the new record138 implementation present in the worktree; this structural commit includes only the shared test helpers and existing record432 callers"
+}

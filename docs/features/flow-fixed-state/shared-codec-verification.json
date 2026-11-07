@@ -1,0 +1,33 @@
+{
+  "source_parent": "df757f06d70881b8f455dae2deaaf5455cb87f1e",
+  "scope": "Reused existing fixed-slot byte codec through flow-private visibility; moved unchanged checked element-offset arithmetic to shared wire helpers; extracted wide-array test conformance",
+  "behavior": "Existing records7/102/417 values, noops, errors, bounds, physical history and fresh reversals remain unchanged",
+  "broad_regressions": {
+    "passed": 81,
+    "failed": 0,
+    "ignored": 6
+  },
+  "final_regressions": {
+    "passed": 52,
+    "failed": 0,
+    "ignored": 4
+  },
+  "clippy_all_tests_exit": 0,
+  "formatter_exit": 0,
+  "python_tests": 9,
+  "source_sha256": {
+    "src/flow/fixed_settings.rs": "be5e46576a64eaaf3165990ac102c3d92d594d8487dce992e2341cd5cd70be3c",
+    "src/flow/legacy_tables/wire.rs": "048c374e327821841aeefb4f021d4dbb9d6937f1fcc928fe6ebc20b14fbfc6b3",
+    "src/flow/legacy_tables/paired_state/edit.rs": "ccf0e636a037f7ae4ba62e66e3074a97a673304b2fb47638789998b2f991dc18",
+    "tests/flow_state_tables/arrays.rs": "9ba174bb142b01dcefbd14dc939e352bb7d65347a0ae1670a74918668efd941a",
+    "tests/flow_state_tables/paired_api.rs": "996b982cc7961beae7b0d7028c704290b23295f6ff22e489f56a05ef6513ce12"
+  },
+  "fixture_compressed_sha256": {
+    "tests/fixtures/flow-state-tables/record129.bin.gz": "be78d2521e603e95b52765795ab7b7d332306c66ba241c61f496bc763a6f6fc8",
+    "tests/fixtures/flow-state-tables/record138.bin.gz": "3584ba8136db1541f8039f21add1269b17b0ae6e58d319a2f4bb5a05233db938",
+    "tests/fixtures/flow-state-tables/record139.bin.gz": "a7f830d7e545269300debdd3e30b4664de17a144ea7610871daae58a9e2e753f",
+    "tests/fixtures/flow-state-tables/record417.bin.gz": "0bff6b1786abd42a94e7ae8a85cc94856df565c9b8cf13c2ba3294cbd9112c6a",
+    "tests/fixtures/flow-state-tables/record432.bin.gz": "418e9631af8f7bc680e6d704ac82d65ff501e5921a6cd2953158b554819576ae"
+  },
+  "qualification": "Validation ran with the new record139 implementation present in the worktree; this structural commit excludes the new API"
+}

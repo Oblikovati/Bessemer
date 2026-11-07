@@ -3,11 +3,13 @@ mod decode;
 #[cfg(test)]
 mod decode_tests;
 mod edit;
+mod evaluation;
 mod fields;
 mod types;
 mod view;
 use super::medium_body::{self, CurveSpan};
 use super::*;
+pub use evaluation::*;
 pub use types::*;
 impl FlowMediumBackendPrefix {
     /// Reads the first reached kind-one body under explicit limits; e.g. `let body = backend.first_kind_one_body(options)?`.

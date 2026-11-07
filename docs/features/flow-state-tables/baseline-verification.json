@@ -1,0 +1,101 @@
+{
+  "cases": 2404,
+  "bytes": 5882649,
+  "packets": [
+    {
+      "identifier": 129,
+      "cases": 773,
+      "bytes": 2189485,
+      "sha256": "c01df530bc0d96dd1c3b30c3a0517f1453c008c9c5d3c4dc9670f697e016ccd0"
+    },
+    {
+      "identifier": 138,
+      "cases": 86,
+      "bytes": 121464,
+      "sha256": "e3beffbb3b95b6504d378ef3d75c56e2bd89bac069e240b025d2c2d0684060f8"
+    },
+    {
+      "identifier": 139,
+      "cases": 562,
+      "bytes": 2853001,
+      "sha256": "b565196af4232353713866213de1214359a77b748114dbcf636e3beeb58682c3"
+    },
+    {
+      "identifier": 417,
+      "cases": 237,
+      "bytes": 498442,
+      "sha256": "fe94956283d4ed6f3b74ad5b9fb15393f8fca00342c9ee5993f07c46fff11a74"
+    },
+    {
+      "identifier": 432,
+      "cases": 746,
+      "bytes": 220257,
+      "sha256": "12c2b8cd4c50a53c455784e44e1fcd7a3983850e02e5ac18356faae21090ce22"
+    }
+  ],
+  "native": [
+    {
+      "identifier": 138,
+      "source_sha256": "6348bed3cb8e9e23d574b5b6972c3a9c7fbb585c34d5b5f00d322b3d605ef80a",
+      "payload_sha256": "dcfdb6a36d5e7254933eb8ad2cbc1ce92ac5a3cd3db0f882d8c1e242fe687c78",
+      "bytes": 13488,
+      "version": 3,
+      "context": 3369,
+      "context_provenance": "extent-derived explicit assumption",
+      "native_context_verified": false
+    },
+    {
+      "identifier": 432,
+      "source_sha256": "ad03c2a0bc279faba94e123d088afc434252afa0befe71b4665b37c441404fc7",
+      "payload_sha256": "00f3bd3987f04a0e332d8fe21b32307bfa7e5668650100d5c30334945b77421a",
+      "bytes": 20,
+      "version": 1,
+      "context": null,
+      "context_provenance": "not applied",
+      "native_context_verified": false
+    },
+    {
+      "identifier": 129,
+      "source_sha256": "069aefb4da9fa292bd4eea27b619b9073cc33acc46dda1411b749b0a968706a8",
+      "payload_sha256": "2239fda4efa54fd991eea654a9293c7a3f3193918a5b8624169b01a652e3b2e0",
+      "bytes": 507048,
+      "version": 9,
+      "context": null,
+      "context_provenance": "not applied",
+      "native_context_verified": false
+    },
+    {
+      "identifier": 139,
+      "source_sha256": "069aefb4da9fa292bd4eea27b619b9073cc33acc46dda1411b749b0a968706a8",
+      "payload_sha256": "88c9d5e2de5dcbf527ad040a182c56815881c00677033477c4c2f028749a00d3",
+      "bytes": 2988,
+      "version": 4,
+      "context": null,
+      "context_provenance": "not applied",
+      "native_context_verified": false
+    },
+    {
+      "identifier": 417,
+      "source_sha256": "069aefb4da9fa292bd4eea27b619b9073cc33acc46dda1411b749b0a968706a8",
+      "payload_sha256": "ca888f40c3caca805b37a5434c75de5550616e0795e7602fb91156f22dd90851",
+      "bytes": 12,
+      "version": 1,
+      "context": null,
+      "context_provenance": "not applied",
+      "native_context_verified": false
+    }
+  ],
+  "references": {
+    "flowrecord129.py": "bb97e87384763c10035a5ee638fa76055bc50fb5f5e394195450b305d76bfe47",
+    "flowrecord138.py": "979bf779f316ca9f861dfe7775fabd52ee465ea822164165f1c6a4668dd33e57",
+    "flowrecord139.py": "2b766b9a6177dfc7257f72348427171efa3499f77f39795e74b2d6c7e6caa0e6",
+    "flowrecord417.py": "142e21ef8ca3ebaa70bd810633ea1b84c3ab6e59c856eb185396f49bdd9d36b6",
+    "flowrecord432.py": "6ae017334720f69beb41a683bd67d9006f3f4e4099534090d63aafaca4e1e905",
+    "flowlegacytables.py": "52309d35baa5ecc33046fb2f7a98f4eadc7bfbd22db5b9803e41898131924420"
+  },
+  "scope": "Complete raw129 tagged rows,138 explicit-count state,139 fixed settings rows,417 independently counted word/wide groups and432 stored/recomputed-version flags; all fields, scopes, count offsets and derived quotients",
+  "native_context_verified": false,
+  "native_runtime_reproduced": false,
+  "engineering_fields_assigned": false,
+  "native_application_checked": false
+}

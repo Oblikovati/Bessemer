@@ -1,0 +1,43 @@
+{
+  "feature_issue": 241,
+  "base_commit": "caa007185b01a9f41e8466edbec8cdb542f4ec43",
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "python_passed": 8,
+  "rust_passed": 4,
+  "failed": 0,
+  "ignored": 0,
+  "clippy_command": "cargo clippy --test flow_conditional_item_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "cases": 6659,
+  "source_lf_sha256": {
+    "docs/features/flow-conditional-items/freeze_items.py": "dbf5d3452107f76ba13881e934fa6584ed6ee8134f0ef0b59307be570c7f54bf",
+    "docs/features/flow-conditional-items/requests.py": "02e8da4d98ad6e7cd907cd80b520597081370ba93413c955433980bf41e4e81c",
+    "docs/features/flow-conditional-items/snapshot.py": "943c8bd1d19214588beed70dcf200a9f45902a4aac25c1b67e4f6ca3121516c1",
+    "docs/features/flow-conditional-items/test_items.py": "da01f423e5b2de9b6aae9b0563c363041d664e6dece48284cdd42774fce6de5e",
+    "docs/features/flow-conditional-items/design.md": "6100bd0e18cf2ba5014e9d03341363a129fae8e2a869df9ea080ba690a922f54",
+    "docs/features/flow-conditional-items/README.md": "3b05f93fdba1d466b62fa5a31347dd8563e61479ddda5c17a916fe39aad0bde2",
+    "tests/flow_conditional_item_fixtures.rs": "a4a1cd7541874d979059be1c811af9987e153ef7ebcc7898de3d5c3f34b6f20a",
+    "tests/flow_conditional_items/fixture.rs": "c418761f970e0452fd94994d74d634db06d06e779722186016297e8a5373151f",
+    "tests/flow_conditional_items/types.rs": "12abdb57e5ce9ddcb358beef818a02c2eb55585421f1eb2f6c5982464f025706"
+  },
+  "log_sha256": {
+    "flow-conditional-items-python-tests.log": "b55baccbe103e5060f540f468c3a4dc259942027ad9abf11941e6b52774c1757",
+    "flow-conditional-items-rust-tests.log": "51b76779010439371712710ede5828e4987fe0371b28b970efed911052793861",
+    "flow-conditional-items-clippy.log": "555e064c98dd33fdf332899f73e11d5de5d3976c68ff56fca15425c6ff85f5f9"
+  },
+  "fixture_gzip_sha256": {
+    "record126.bin.gz": "4552e974beb38e5be717c730f56b208625382c182057f413b657e2c9773b89ac",
+    "record128.bin.gz": "0f8a1985f5356f3d7b91990a9308dc577cfc8906bb2a5a5bd40b4c0a3a63a6be",
+    "record315.bin.gz": "da3364cb79595200e59a790b92a50b09734f152f7229bc32afb1d71b58ae1647"
+  },
+  "scope": "Complete Source-derived field/interval/count/projection expectations for records126/315/128 and all six item versions; exact independent reconstruction, compact prefix/count/profile/codec failures and temporary-root regeneration; populated native126/128 items and native315 numeric arrays with empty groups",
+  "exclusions": [
+    "Production typed conditional-item API",
+    "Native versions beyond the three explicitly frozen records",
+    "Native allocation, inverse maps, runtime conversion, engineering and application acceptance",
+    "Running full gate is frozen at caa007185b01a9f41e8466edbec8cdb542f4ec43 and excludes this new baseline"
+  ],
+  "humanizer": "Unavailable; prose pass left to maintainer review"
+}

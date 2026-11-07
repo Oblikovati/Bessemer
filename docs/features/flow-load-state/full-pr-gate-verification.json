@@ -1,0 +1,20 @@
+{
+  "command": "cargo xtask pr",
+  "terminal_exit_code": 0,
+  "source_commit": "8d6ecd15",
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "native_schema": "Installed SolidWorks sch_13006.s_t",
+  "result_summaries": 389,
+  "passed": 4830,
+  "failed": 0,
+  "ignored": 247,
+  "log": "target/flow-load-and-state-combined-full-pr-gate.log",
+  "log_sha256": "d793d4e42ab7e58f61ca37852e9cf421bd2059cf24d105c37fff5561ef2c774f",
+  "scope": "Complete record11 load-state typed read/edit API and FL11 corpus; complete FST2 raw state-table baselines129/138/139/417/432; all preceding Flow work",
+  "exclusions": [
+    "Later typed state APIs432/138/417/139",
+    "Later shared state carrier/process/array/history fixture helpers",
+    "Later shared element-offset and fixed-slot codec access refactors",
+    "Remote CI and native application acceptance"
+  ]
+}
