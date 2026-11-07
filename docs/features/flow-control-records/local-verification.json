@@ -1,0 +1,78 @@
+{
+  "issue": 241,
+  "source_revision_before_baseline": "a61c4d68f2c039b94db6586a752d280dd14ab9d0",
+  "scope": "Strict zero-marker saved-span and explicit4/8-byte terminal-index writer payload profiles; synthetic examples only",
+  "platform": "Windows x64; Rust1.99.0; CARGO_BUILD_JOBS=1",
+  "results": {
+    "rust_passed": 4,
+    "rust_failed": 0,
+    "python_passed": 11,
+    "source_python_passed": 6,
+    "clippy": "passed",
+    "format": "passed",
+    "function_file_caps": "passed",
+    "maximum_rust_function_body_lines": 17
+  },
+  "commands": {
+    "tests": {
+      "command": "cargo test --locked --test flow_control_record_fixtures",
+      "exit_code": 0,
+      "log": "target/flow-control-records-baseline-tests.log",
+      "sha256": "1a921bae99e884995a460b8e779edb5f151bc9dcb502725a56939587a487108c"
+    },
+    "clippy": {
+      "command": "cargo clippy --locked --test flow_control_record_fixtures -- -D warnings",
+      "exit_code": 0,
+      "log": "target/flow-control-records-baseline-clippy.log",
+      "sha256": "fa0eecc446760c32d39df6e3b29432cc5dc8fd76ff137d181b628fd708e19a55"
+    },
+    "format": {
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "log": "target/flow-control-records-baseline-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "python": {
+      "command": "python -m unittest discover -s docs/features/flow-control-records -p test_controls.py",
+      "exit_code": 0,
+      "log": "target/flow-control-records-baseline-python.log",
+      "sha256": "20ba6288caf98a846463286e0912aa44a11a898677b96d8ce127d3376e96d066"
+    },
+    "source-tests": {
+      "command": "python -m unittest test_flowcontrolrecords (reference directory)",
+      "exit_code": 0,
+      "log": "target/flow-control-records-baseline-source-tests.log",
+      "sha256": "fa59defc26fd5febca5ba4add6b3520374cf9d7bec67bd8928f4b0654c070fcb"
+    }
+  },
+  "oracles": [
+    "Authenticated original synthetic writer bytes and full projections",
+    "Three installed native carriers rehashed and physically rescanned; no saved-span/terminal-index records found",
+    "Complete decoded body reconstruction and exact zlib member consumption",
+    "Independent footer-start/width/backward-distance/identifier equations",
+    "Full unsigned raw-pattern and identifier-bit census",
+    "Ordered duplicate keys/identifiers, reserved targets and unreconciled spans preserved",
+    "Exact and one-below decode budgets and malformed body/codec/footer boundaries",
+    "Temporary-root deterministic regeneration of both packets and proof"
+  ],
+  "source_lf_sha256": {
+    "tests/flow_control_records/fixture.rs": "85bd620543550f2864aa20a56ed0d81116ced16d6c291f1c1df06a04b65d725f",
+    "tests/flow_control_records/rebuild.rs": "07d293ebd0d0bfd66debf25ddb96b91ea52948fd908424cbcdeac95c830a8156",
+    "tests/flow_control_record_fixtures.rs": "c4ec10d5186be0cd9dca28eda97b7ec725064dcde9c068bf6fc31530b392d94e",
+    "docs/features/flow-control-records/control_requests.py": "39e109e5bcd0a9a1509317fbe548fbeca59cd864fded33c40dbd41c0e01af54b",
+    "docs/features/flow-control-records/freeze_controls.py": "342328a3da80c440d624da591a61c500fee13fe2aa0a70e19e0f372bea3fbe38",
+    "docs/features/flow-control-records/test_controls.py": "9acb6a23621e69f949fded87d628457254003e64ba8ad31fecdc5eadbeaee048"
+  },
+  "exclusions": [
+    "Typed control-payload readers/editors pending",
+    "Running full gate419844f2 excludes this baseline and later APIs",
+    "Full local/hosted acceptance pending",
+    "No installed native control payload fixture or native execution",
+    "Writer zero-marker profiles are not universal native reader acceptance",
+    "Four-byte footer context does not extend ordinary physical carrier formats",
+    "No automatic index adoption, saved-span semantics or target-span reconciliation",
+    "Logical flowindex recognition/fallback/replay pending",
+    "Native application acceptance not checked"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose review pending"
+}

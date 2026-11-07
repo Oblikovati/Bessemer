@@ -11,7 +11,7 @@
     {
       "source": "flowcontrolrecords.py",
       "source_lf_sha256": "bb3d4c7326cb67e0e9fe6b22bfe5c938b805b125687c5a440970da801797337d",
-      "status": "No typed saved-span or terminal-index payload API found"
+      "status": "Strict writer-profile baseline frozen and focused Rust/Python checks accepted; native installed payloads absent; typed readers/editors pending"
     },
     {
       "source": "flowresultdefinitions.py",
@@ -32,6 +32,11 @@
       "source": "flowrecord121.py",
       "source_lf_sha256": "4820c39058e7aaff2c55341daaafcd0bb95145726130c3d2bab6a18326e87dbc",
       "status": "Explicit viewer prefix implemented; full decoded body remains incomplete and graph components have a distinct logical context"
+    },
+    {
+      "source": "flowindex.py",
+      "source_lf_sha256": "6c9117accb71203ace520c125280daa9259f5ffd30c96536390d220c2d4ddcdb",
+      "status": "Logical physical-scan/terminal-index recognition, fallback and active/saved-map replay API not found; separate from strict control payload parsing"
     }
   ],
   "search": {
@@ -48,7 +53,7 @@
     ],
     "limitation": "Identifier searches identify follow-up work; they do not establish absence of equivalent unnamed implementations"
   },
-  "next": "Freeze documented saved-span and terminal-index control profiles, then audit logical checkpoint components separately from the record121 viewer prefix",
+  "next": "Implement strict control-payload readers/editors, then freeze logical index recognition/fallback/replay and audit checkpoint components",
   "exclusions": [
     "Other Flow modules need a requirement-by-requirement audit",
     "Other SolidWorks schema families need a fresh source audit",
