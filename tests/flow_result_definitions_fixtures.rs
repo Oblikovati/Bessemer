@@ -1,10 +1,16 @@
 //! Complete reference IMS-definition frames retain every array and physical object ordinal.
+#[path = "flow_result_definitions/api.rs"]
+mod api;
 #[path = "flow_result_definitions/fixture.rs"]
 mod fixture;
 #[path = "flow_field_values/packet.rs"]
 mod packet;
 #[path = "flow_result_definitions/rebuild.rs"]
 mod rebuild;
+#[path = "flow_state_tables/carrier.rs"]
+mod state_carrier;
+#[path = "flow_state_tables/process.rs"]
+mod state_process;
 #[path = "flow_state_tables/streams.rs"]
 mod streams;
 use fixture::*;

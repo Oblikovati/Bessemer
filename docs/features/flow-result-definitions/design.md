@@ -1,7 +1,7 @@
 # Flow result-definition profile
 
 Issue: #241. Reference: `../inventor-interface/solidworks/flowresultdefinitions.py`.
-This is planned work; no record-500 public API is shipped yet.
+The complete record-500 reader and existing-field editor implement this profile.
 
 The documented profile contains one exact zlib stream. Its decoded body starts
 with byte version one and contains five consecutive collections. Each collection
@@ -18,10 +18,10 @@ an unsigned 64-bit count limited to the signed native-transfer range, and raw
 32-bit patterns. All arrays, including empty arrays, retain their intervals and
 physical presence. Complete decoded EOF is required.
 
-The reader will bound complete inflated bytes, object count and total array
-values independently before allocation. Views will retain the complete source,
+The reader bounds complete inflated bytes, object count and total array
+values independently before allocation. Views retain the complete source,
 physical object ordinals, signed identifiers, versions, raw GUID and allocation
-byte, array intervals and raw patterns. Existing-field edits will preserve count,
+byte, array intervals and raw patterns. Existing-field edits preserve count,
 GUID and version structure, operate on a copy and reparse the same profile.
 Compressed no-ops must retain the original stored payload. Fresh reversals must
 restore decoded bytes; they need not reproduce another compressor's encoding.
@@ -29,9 +29,9 @@ restore decoded bytes; they need not reproduce another compressor's encoding.
 The independent native manifest contains one record-500 sample from the installed
 CFLD carrier: record offsets 65,378 through 72,157, a 6,767-byte stored payload,
 one primary IMS version-two definition, allocation byte zero and array lengths
-3,876 and 4,056. The source, record extent, payload and complete normalized
-projection must be authenticated before freezing this sample. Generated cases
-must cover all four definition versions, raw bit patterns, allocation bytes,
+3,876 and 4,056. The freeze authenticates the source, record extent, payload and
+complete normalized projection against the native manifest. Generated cases
+cover all four definition versions, raw bit patterns, allocation bytes,
 multiple and duplicate signed identifiers, empty collections/arrays, compression
 variants and resource boundaries. Malformed markers, counts, GUIDs, versions,
 secondary nonempty collections, truncations and suffixes must be rejected.

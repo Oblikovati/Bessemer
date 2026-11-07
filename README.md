@@ -106,6 +106,9 @@ prefixes onto immutable prior text state without Unicode normalization.
 The [viewer-query prefix](docs/features/flow-viewer-prefix/README.md) reads and
 edits record 121's explicitly selected known prefix, preserving its opaque suffix
 and reporting full-body validation as incomplete after every operation.
+The [IMS result-definition view](docs/features/flow-result-definitions/README.md)
+reads record 500's complete version-one profile and edits existing identifiers,
+allocation bytes and raw array values, retaining duplicate order and array presence.
 The [legacy link view](docs/features/flow-link-records/README.md) reads record 402
 and edits existing fields while preserving code bytes, sentinel references and versioned tails.
 The [legacy table view](docs/features/flow-legacy-tables/README.md) reads records

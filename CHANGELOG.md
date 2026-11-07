@@ -56,6 +56,8 @@
 
 ### Added
 
+- Added complete record-500 IMS-definition reads and isolated identifier, allocation-byte and raw-array edits with independent bounds, preserved duplicate order and full carrier history. (#241)
+
 - Added ordinary solver record selection with last-occurrence identities and explicit rejection of all three reserved control identifiers. (#241)
 
 - Added explicit record-121 viewer-prefix reads and isolated known-field edits with exact compressed framing, preserved opaque suffixes and visible incomplete full-body validation. (#241)
