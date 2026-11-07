@@ -1,0 +1,63 @@
+{
+  "issue": 241,
+  "source_revision_before_baseline": "419844f281d62e92ee211da4d46fdb6095d8da45",
+  "platform": "Windows x64; Rust1.99.0; CARGO_BUILD_JOBS=1",
+  "results": {
+    "rust_passed": 4,
+    "rust_failed": 0,
+    "python_passed": 8,
+    "source_python_passed": 4,
+    "clippy": "passed",
+    "format": "passed",
+    "function_file_caps": "passed",
+    "maximum_rust_function_body_lines": 17
+  },
+  "commands": {
+    "tests": {
+      "command": "cargo test --locked --test flow_result_definitions_fixtures",
+      "exit_code": 0,
+      "log": "target/flow-result-definitions-baseline-tests.log",
+      "sha256": "ee8ef6a2ff338225e31794354230766552e0e68472b487487d470bd28c048f5f"
+    },
+    "clippy": {
+      "command": "cargo clippy --locked --test flow_result_definitions_fixtures -- -D warnings",
+      "exit_code": 0,
+      "log": "target/flow-result-definitions-baseline-clippy.log",
+      "sha256": "9c3b6630f696b05bda870d2543493b0f4d9c7bc41fa1f04e8fdc4c36669396d6"
+    },
+    "format": {
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "log": "target/flow-result-definitions-baseline-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "python": {
+      "command": "python -m unittest discover -s docs/features/flow-result-definitions -p test_definitions.py",
+      "exit_code": 0,
+      "log": "target/flow-result-definitions-baseline-python.log",
+      "sha256": "020bd065af2fbebd5ba1269d1d011fe99d4741ed5033f2d52ffd9dbbe2e2c6ef"
+    },
+    "source-tests": {
+      "command": "python -m unittest test_flowresultdefinitions (reference directory)",
+      "exit_code": 0,
+      "log": "target/flow-result-definitions-baseline-source-tests.log",
+      "sha256": "4a203f958ef9d765ff1f89816631e1bdf553b4acf1d56449f1d10ad92bb46ff3"
+    }
+  },
+  "source_lf_sha256": {
+    "tests/flow_result_definitions/fixture.rs": "84acc0f18ed4ac5dc2982910091a03b4ec03c77980ad414305b991c658c5a4b3",
+    "tests/flow_result_definitions/rebuild.rs": "4f21112e3e87d4139cb964708efa715559ea10438bf71a945ecfc0205b4ae1f9",
+    "tests/flow_result_definitions_fixtures.rs": "4f8af5bfff94b10858def0b1adcf5e20185a4c7c5dc99064868db5438317eda0",
+    "docs/features/flow-result-definitions/definition_requests.py": "592033bf67bf6ccff41e6a71bf54b44abcdf4981df6871f9ad76b129c6cec7b2",
+    "docs/features/flow-result-definitions/freeze_definitions.py": "4771cbce6e9c1f6767747d3d3f56c7efa6b4e42bcae98f2fb8635fc145c8d81a",
+    "docs/features/flow-result-definitions/test_definitions.py": "d958fc64d0578c0acdffd4a1bc8f224bc2c3fe5e2260d005fd95ab8163ee8f75"
+  },
+  "exclusions": [
+    "No typed record500 API yet",
+    "Running integrated full gate excludes this baseline",
+    "Full local/hosted acceptance pending",
+    "Record501 paired-value API pending",
+    "Native runtime, engineering meaning and application acceptance not verified"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose review pending"
+}
