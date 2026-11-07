@@ -66,13 +66,7 @@ fn candidate(bytes: &[u8], version: u32, end: usize) -> Result<Directory> {
 }
 
 fn archive_layout(bytes: &[u8], end: usize) -> Result<ArchiveLayout> {
-    equal(word(bytes, end + 20)?, 0, "archive comment length")?;
-    let start = archive_offset(bytes, end + 16)?;
-    let size = dword(bytes, end + 12)? as usize;
-    require(
-        start.checked_add(size) == Some(end),
-        format!("directory {start}+{size}; expected end {end}"),
-    )?;
+    let start = directory_start(bytes, end)?;
     let central = region(bytes, start, 4)?.to_vec();
     let local_at = archive_offset(bytes, start + 42)?;
     let local = region(bytes, local_at, 4)?.to_vec();
@@ -83,6 +77,17 @@ fn archive_layout(bytes: &[u8], end: usize) -> Result<ArchiveLayout> {
         central,
         local,
     })
+}
+
+fn directory_start(bytes: &[u8], end: usize) -> Result<usize> {
+    equal(word(bytes, end + 20)?, 0, "archive comment length")?;
+    let start = archive_offset(bytes, end + 16)?;
+    let size = dword(bytes, end + 12)? as usize;
+    require(
+        start.checked_add(size) == Some(end),
+        format!("directory {start}+{size}; expected end {end}"),
+    )?;
+    Ok(start)
 }
 
 fn read_directory(bytes: &[u8], version: u32, layout: &ArchiveLayout) -> Result<Vec<Entry>> {
