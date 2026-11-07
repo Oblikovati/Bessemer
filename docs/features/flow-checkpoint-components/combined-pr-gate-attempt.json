@@ -1,0 +1,18 @@
+{
+  "issue": 241,
+  "source_revision": "f29028812b7ba44014ed993bb7cf7feff7b94a2a",
+  "command": "cargo xtask pr",
+  "status": "running",
+  "accepted": false,
+  "session": 67230,
+  "worktree": "C:/bessemer214-ci",
+  "cargo_build_jobs": 1,
+  "log": "target/flow-logical-index-and-checkpoint-full-pr-gate.log",
+  "scope": "Combined source through logical index replay and all five standalone logical checkpoint component readers/existing-field editors, retaining earlier accepted IMS/control source",
+  "exclusions": [
+    "Authoritative terminal local result pending",
+    "PR249 hosted checks cover earlier publication source a1f41b28 only",
+    "Hosted full-matrix and ThreadSanitizer acceptance of this snapshot pending",
+    "No complete physical parent or chunk-codec acceptance is implied"
+  ]
+}
