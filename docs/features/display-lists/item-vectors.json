@@ -1,0 +1,45 @@
+{
+  "context": {
+    "display_version": 19000,
+    "file_version": 19000,
+    "kind": "part"
+  },
+  "scope": "wire interoperability; no model validity or application acceptance claim",
+  "fixtures": [
+    {
+      "fixture": "items-present",
+      "bytes": 9353,
+      "sha256": "c03b5bc3ca20def6e4504745cf1eef99abacfdc99724087a193ece0069e0b616",
+      "view_start": 3187,
+      "view_end": 6388,
+      "items": 48,
+      "scalar_fields": 440,
+      "extended_count": true
+    },
+    {
+      "fixture": "items-absent",
+      "bytes": 8929,
+      "sha256": "bf815b2c1ffaa31762aa56ad4b845e4efa307feb00eb726dfd566f3e85d2bd55",
+      "view_start": 3187,
+      "view_end": 5964,
+      "items": 48,
+      "scalar_fields": 385,
+      "extended_count": false
+    },
+    {
+      "fixture": "items-edited",
+      "bytes": 9353,
+      "sha256": "01c9b5a1696e3ae286dd771e3699c50e56cc29705027ca2b285be6bcaa74cd49",
+      "view_start": 3187,
+      "view_end": 6388,
+      "items": 48,
+      "scalar_fields": 440,
+      "extended_count": true
+    }
+  ],
+  "source_hashes": {
+    "dl_doc.py": "6342a5285d5261d7ef5d07430d021aeea5aae878b0e61de9c7488b187f2aa8bc",
+    "dl_ui.py": "e05dc94cbb12be1af55ba163ada18d04793ce89023fe80c220f70ee0371a536c",
+    "displaylists.py": "2016e6267d2d13d08e3f1b1904dfe4c9e4ca06e12a619cecec3189ddf7e337b8"
+  }
+}

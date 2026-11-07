@@ -1,0 +1,23 @@
+{
+  "issue": 190,
+  "passed": true,
+  "process_reaped": true,
+  "exit_code": 0,
+  "command": "cargo xtask pr",
+  "checkout": "C:/bessemer190-resource",
+  "captured_runtime_test_commit": "ec3c0a1b7851a46cab92ee53a1c4cbf70b38bfad",
+  "root_runtime_tests_cargo_ci_equal_captured_commit": true,
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "test_summaries": 316,
+  "tests_passed": 3964,
+  "tests_failed": 0,
+  "tests_ignored": 217,
+  "log_sha256": "43bc7afcce6ffd554e7fed6fa075683b3b7e433c3b6d92221a0e57aba7413199",
+  "qualification": "Gate started from the feature working tree after the enum documentation correction. The feature commit captured the same Rust/test/Cargo/xtask sources while the gate ran; supporting prose and Git metadata were finalized separately. Ignored native cases and controlled exports passed in two separately recorded focused processes. Exact-head remote publication remains required.",
+  "remaining": [
+    "Feature190 exact-head remote platform and ThreadSanitizer gates after PR191 serial integration",
+    "Native application/writer equivalence",
+    "Whole-schema parity"
+  ]
+}

@@ -1,0 +1,52 @@
+** Independently assembled schema fixture; only the listed declarations exist.
+**PART1;KEY=SCH_13006;
+**END_OF_HEADER
+T
+1
+: SCHEMA FILE created for Bessemer tests;
+202 6 38 0
+1 NULLP; Null; 1 0 0
+3 PARTITION; Partition; 1 2 0
+current_pmark; p; 1 4 0
+highest_id; d; 1 0 0
+4 PMARK; Pmark; 1 10 0
+preceding; p; 1 4 0
+first_following; p; 1 4 0
+next_sibling; p; 1 4 0
+prev_sibling; p; 1 4 0
+n_new_nodes; d; 1 0 0
+n_del_nodes; d; 1 0 0
+n_copy_mod_nodes; d; 1 0 0
+delta_key; d; 1 0 0
+delta_is_forward; l; 1 0 0
+id; d; 1 0 0
+101 WORLD; World; 1 11 0
+assembly; p; 1 10 0
+attribute; p; 1 81 0
+body; p; 1 12 0
+transform; p; 1 100 0
+surface; p; 1 1006 0
+curve; p; 1 1008 0
+point; p; 1 29 0
+alive; l; 1 0 0
+attrib_def; p; 1 80 0
+highest_id; d; 1 0 0
+current_id; d; 1 0 0
+200 ALL_KINDS; Independent primitive coverage; 1 13 1
+integer; d; 1 0 0
+pointer; p; 1 3 0
+byte; u; 1 0 0
+character; c; 1 0 0
+logical; l; 1 0 0
+short; n; 1 0 0
+wide; w; 1 0 0
+real; f; 1 0 0
+interval; i; 1 0 0
+vector; v; 1 0 0
+hvec; h; 1 0 0
+box; b; 1 0 0
+tail; u; 1 0 1
+201 SCHEMA_ONLY; Definitions without a documented wire encoding; 0 2 0
+callback; q; 1 0 0
+tag; t; 1 0 0
+**************** end of schema ****************

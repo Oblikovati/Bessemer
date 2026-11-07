@@ -1,0 +1,167 @@
+{
+  "issue": 187,
+  "report_sha256": "47ea6d433ad2473c8a9f32aea2d03d4a35314b4eadf1fa49b77bbc93e8962be7",
+  "corpus_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "corpus_cases": 906,
+  "complete_streams": 4,
+  "scalar_checks": 12,
+  "streams": [
+    {
+      "case": 340,
+      "label": "340: C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\learn\\Carving Knife\\Knife Handle-DEMO.SLDPRT::Contents/Config-0",
+      "version": 19000,
+      "sha256": "0660f382890665e6976ead90fecddd0ee1f16e602c9e98e9df9a906ffa1c0c53",
+      "bytes": 280010,
+      "fields": [
+        {
+          "field": "raw_70",
+          "role": "has_transparency_setting",
+          "start": 54906,
+          "end": 54910,
+          "raw_i32": 0,
+          "raw_hex": "00000000",
+          "body_start": 54572,
+          "body_end": 54931
+        },
+        {
+          "field": "raw_60",
+          "role": "transparency_level_parameter",
+          "start": 54910,
+          "end": 54914,
+          "raw_i32": 0,
+          "raw_hex": "00000000",
+          "body_start": 54572,
+          "body_end": 54931
+        },
+        {
+          "field": "raw_6c",
+          "role": "transparency_type_selector",
+          "start": 54922,
+          "end": 54926,
+          "raw_i32": 0,
+          "raw_hex": "00000000",
+          "body_start": 54572,
+          "body_end": 54931
+        }
+      ]
+    },
+    {
+      "case": 675,
+      "label": "675: C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\dimxpert\\advdimxpert\\foot_board.sldprt::Contents/Config-0",
+      "version": 19000,
+      "sha256": "0db7800b952cb0a2be07f53207fc0f24f4551f969465a353946fffec98249687",
+      "bytes": 248443,
+      "fields": [
+        {
+          "field": "raw_70",
+          "role": "has_transparency_setting",
+          "start": 205904,
+          "end": 205908,
+          "raw_i32": 0,
+          "raw_hex": "00000000",
+          "body_start": 205806,
+          "body_end": 205929
+        },
+        {
+          "field": "raw_60",
+          "role": "transparency_level_parameter",
+          "start": 205908,
+          "end": 205912,
+          "raw_i32": 0,
+          "raw_hex": "00000000",
+          "body_start": 205806,
+          "body_end": 205929
+        },
+        {
+          "field": "raw_6c",
+          "role": "transparency_type_selector",
+          "start": 205920,
+          "end": 205924,
+          "raw_i32": 0,
+          "raw_hex": "00000000",
+          "body_start": 205806,
+          "body_end": 205929
+        }
+      ]
+    },
+    {
+      "case": 717,
+      "label": "717: C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\mbd\\mbdadvanced\\foot_board.sldprt::Contents/Config-0",
+      "version": 19000,
+      "sha256": "faa3c96608c6df0b63500750ecdf67904d10569f918284ea0123fd8170e02d34",
+      "bytes": 248421,
+      "fields": [
+        {
+          "field": "raw_70",
+          "role": "has_transparency_setting",
+          "start": 205890,
+          "end": 205894,
+          "raw_i32": 0,
+          "raw_hex": "00000000",
+          "body_start": 205792,
+          "body_end": 205915
+        },
+        {
+          "field": "raw_60",
+          "role": "transparency_level_parameter",
+          "start": 205894,
+          "end": 205898,
+          "raw_i32": 0,
+          "raw_hex": "00000000",
+          "body_start": 205792,
+          "body_end": 205915
+        },
+        {
+          "field": "raw_6c",
+          "role": "transparency_type_selector",
+          "start": 205906,
+          "end": 205910,
+          "raw_i32": 0,
+          "raw_hex": "00000000",
+          "body_start": 205792,
+          "body_end": 205915
+        }
+      ]
+    },
+    {
+      "case": 739,
+      "label": "739: C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\mbd\\mbdoverview\\foot_board.sldprt::Contents/Config-0",
+      "version": 19000,
+      "sha256": "3ca4e46772c570c24879602c367c4f0cff75a878f8a0c639dac7a73583490f3b",
+      "bytes": 248422,
+      "fields": [
+        {
+          "field": "raw_70",
+          "role": "has_transparency_setting",
+          "start": 205891,
+          "end": 205895,
+          "raw_i32": 0,
+          "raw_hex": "00000000",
+          "body_start": 205793,
+          "body_end": 205916
+        },
+        {
+          "field": "raw_60",
+          "role": "transparency_level_parameter",
+          "start": 205895,
+          "end": 205899,
+          "raw_i32": 0,
+          "raw_hex": "00000000",
+          "body_start": 205793,
+          "body_end": 205916
+        },
+        {
+          "field": "raw_6c",
+          "role": "transparency_type_selector",
+          "start": 205907,
+          "end": 205911,
+          "raw_i32": 0,
+          "raw_hex": "00000000",
+          "body_start": 205793,
+          "body_end": 205916
+        }
+      ]
+    }
+  ],
+  "scope": "Direct original-byte binding only; no parser execution or coverage credit."
+}

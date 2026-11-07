@@ -1,0 +1,28 @@
+{
+  "issue": 166,
+  "scope": "Complete independent owned parent-field edit grammar/preservation expectations",
+  "source_checks": 58,
+  "strict_exit_code": 0,
+  "strict_log_sha256": "f660730c2d81a63cf06c51b1906284f1b56057eedd4c01759e5e00c5ec609abe",
+  "initializer_exit_code": 0,
+  "initializer_log_sha256": "d5a587899ac4a640f5d8d92bb54d1b35b671a05aecfcc797c6c221bddcba678f",
+  "contexts": 225,
+  "field_mutations": 117435,
+  "valid_isolated_edits": 115312,
+  "rejected_structural_edits": 2123,
+  "retained_missing_terminator_controls": 662,
+  "matrix": {
+    "edit-matrix.bin": {
+      "bytes": 4655288,
+      "sha256": "7d31153e626d1f0f80f1bd082cf6455e6be6f2588ff162596596a5ca21e41cc9"
+    }
+  },
+  "input_sha256": "8ceb9945fdee41cb17f71312b68416e91920cb4ba56ee4c187a11e6b554f833f",
+  "rust_checks_completed": 13,
+  "rust_log_sha256": "853e62d335365a34842fe96999c7b1d935b2ed70edbf3562896b3e5e71b4f356",
+  "exclusions": [
+    "Expanded prefix/concurrency/cap Rust suite is running separately",
+    "Parent full PR gate and later bounded views remain pending",
+    "Native application execution and expanded legacy grammar remain unproven"
+  ]
+}

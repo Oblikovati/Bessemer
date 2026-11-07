@@ -1,0 +1,35 @@
+{
+  "issue": 54,
+  "issue_type": "Feature",
+  "runtime_base_revision": "b7dc9baec257d620ead0ebb38cff69d608f89b61",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "fixture_graphs": 162,
+  "primitive_reads": 3942,
+  "owned_streams": 63,
+  "checks": {
+    "private": "7 passed",
+    "public": "3 passed",
+    "python": "2 passed against verified source snapshot",
+    "cargo_xtask_pr": "838 library tests, 4 xtask tests, all integrations, 274 doctests; 3 external-fixture tests explicitly ignored",
+    "native_processes": "Two fresh processes matched all 906 outcomes and causes; exit 101 for aggregate 817/906 completeness assertion"
+  },
+  "previous_complete": 816,
+  "complete": 817,
+  "newly_complete": [
+    343
+  ],
+  "no_prior_success_lost": true,
+  "source_snapshot": "e958483e394e7db43d643f69d5c7b2a496f8195f375a3c561333b7fbeb15b4ef",
+  "source_python_files": 1681,
+  "native_objects": 14,
+  "native_body_bytes": 280,
+  "native_root_count": 69,
+  "exclusions": [
+    "89 native inputs remain explicit failures",
+    "Historical/internal contexts, scalar meanings, geometry validity, application acceptance and whole-schema parity remain incomplete",
+    "Humanizer unavailable; maintainer prose review remains open"
+  ],
+  "artifact_sha256": "864e8c06c075d7afd67871720b67fa6154136f2fbf52f88a1789475be8083232",
+  "gate_log_sha256": "d9796cc2bc4142a5ea130fd4ae3265db790eb5637ed1277ef6bbc077f3a709f7",
+  "before_log_sha256": "fb30810f39c69d12eddca837323537312695a7b70e6b34cb224037d06686c338"
+}

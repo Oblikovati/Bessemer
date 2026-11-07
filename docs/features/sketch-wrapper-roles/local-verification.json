@@ -1,0 +1,58 @@
+{
+  "base_revision": "288d0e561c0b9deaccde0d7067bad51173a00e41",
+  "issue": 46,
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "focused": {
+    "private_tests": 6,
+    "public_tests": 3,
+    "python_tests": 2,
+    "cases": 1188,
+    "primitive_observations": 71568,
+    "owned_streams": 126,
+    "unrelated_fresh_body_reads": 19,
+    "source_target_identities_verified": true,
+    "source_role_oracle": false,
+    "regression_failed_before_fix": true,
+    "before_fix_log_sha256": "80e544aa6803cdc03a23161d34ed526c882c05b12ddb1675f55bbaa03c69242c"
+  },
+  "native": {
+    "cases": 906,
+    "previous_complete": 761,
+    "complete": 761,
+    "explicit_stops": 145,
+    "new_complete": 0,
+    "cases_advanced_to_later_stops": 1,
+    "fresh_processes": 2,
+    "all_outcomes_and_causes_identical": true,
+    "artifact_stable_across_gate": true,
+    "artifact_sha256": "e2602fc7aeab5c8afcc120d3fca6dd9c3ef0f883c923a9d2f3c8dcbce54198db",
+    "independent_prior_report_binding_sha256": "b8ec09410bf379c99b74f1b3e2f2d7e6d21ec04572559418b2e73c813c9f7711",
+    "independent_feature_bytes": 48364098,
+    "logs_sha256": [
+      "2897c7eab8da09fc1daa363624c48fb321d750298e2671b194750fa9320a3401",
+      "887e1801a267404e473a9cc60f72609f436e76bb66280934c0abdb576632fe01"
+    ]
+  },
+  "corpus_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "schema_snapshot_sha256": "75dfc6eab3a7464ef04877a0d7e0ab1520d065aa2466ba84446794a0aa23c120",
+  "fixture_reference_sha256": "772ea496dc172a80a6f74756615b870f11316b569eecc0d97760dfb20b3db585",
+  "gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 697,
+    "library_ignored": 3,
+    "xtask_passed": 4,
+    "doctests_passed": 265,
+    "all_integration_tests_passed": true,
+    "shared_display_policy_regression_passed": true,
+    "log_sha256": "79c0c734ee6391e38a6f93fd3f8321df94859b10ab5309e110c5314efec5d4d6"
+  },
+  "exclusions": [
+    "No new complete native input",
+    "Source expected-class arguments do not enforce role compatibility",
+    "Geometry validity and SolidWorks application acceptance",
+    "Broader all-schema parity remains unproven"
+  ]
+}

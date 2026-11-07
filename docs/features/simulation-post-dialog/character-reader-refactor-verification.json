@@ -1,0 +1,18 @@
+{
+  "issue": 166,
+  "scope": "Behavior-preserving private character-frame reader extraction for PostInfo and PostStyle",
+  "checks_including_native": 27,
+  "exit_code": 0,
+  "log_sha256": "09223f6529faf42857467d1664faa0af974566069ca27c17520444df4567d3e8",
+  "preserved_oracles": [
+    "All 70 owned and 120 native PostInfo contexts",
+    "All 200 owned and 120 native PostStyle candidates",
+    "Complete frozen physical fields and ordered literal edit histories",
+    "Exact text/resource boundaries, no-op identity and caller isolation"
+  ],
+  "profile_selection": "Callers retain their explicit character caps; bounded two-byte units are charged before payload validation",
+  "exclusions": [
+    "Unregistered parent-dialog implementation is not part of this refactor acceptance",
+    "No public API or persisted behavior change"
+  ]
+}

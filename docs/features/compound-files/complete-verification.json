@@ -1,0 +1,121 @@
+{
+  "parent_revision": "e1f63c93ce0db039acb3603edd9e34a6099f1235",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "behavior": 1,
+  "issues": [
+    106,
+    107,
+    109,
+    110
+  ],
+  "local_pr_gate": {
+    "command": "cargo xtask pr",
+    "passed": 2913,
+    "failed": 0,
+    "ignored": 11,
+    "summaries": 222,
+    "log_sha256": "f20a5f7a2ab49917a61a096574ae44910ce16fc7f7e7c967ccf6905790266f21"
+  },
+  "owned": {
+    "complete_inputs": 10,
+    "independent_complete_canonical_goldens": 10,
+    "fixture_sha256": "5190c861ad63f20b46192ea91327825a0931e95b9af60c7f8044c5e1f1c4a551",
+    "all_short_prefixes_small_case": true,
+    "legal_normal_mini_root_capacity_cases": 3
+  },
+  "native": {
+    "files": 43,
+    "versions": {
+      "3": 40,
+      "4": 3
+    },
+    "physical_bytes": 9090560,
+    "streams": 528,
+    "logical_bytes": 8763115,
+    "probe": {
+      "bytes": 17962903,
+      "sha256": "df9667b57fa4b0c45628e845e0049f4a0a0fb8d4488b243e4a59d4077de97dc8"
+    },
+    "isolated_edits": 528,
+    "edited_bundle_bytes": 77248200,
+    "edited_bundle_sha256": "0f1f9360d3eb8d88b12cf3293a8dcaa90d8a5d9036e48b04e14b3d003f9dfacb",
+    "all_edited_outputs_reference_reopened": true,
+    "all_streams_and_metadata_compared": true,
+    "two_process_byte_comparison_equal": true
+  },
+  "large_address_checks": {
+    "oracle": "independent byte offsets, spans, cardinalities and explicit mapped FAT links",
+    "reserved_physical_sector": 524286,
+    "normal_and_mini_indices_distinguished": true,
+    "table_self_coverage_checked": true,
+    "exclusive_reserved_ownership_checked": true,
+    "maximum_identifier_bounds_checked": true,
+    "full_multi_gigabyte_file_executed": false
+  },
+  "thread_checks": {
+    "public_Send_Sync_assertions": true,
+    "six_concurrent_isolated_edits_equal": true,
+    "source_mutation_and_drop_isolation": true,
+    "failed_operation_input_isolation": true
+  },
+  "source_snapshots": {
+    "source-snapshot.json": {
+      "snapshot_identity": "0562471e86b5d2e5480979fab48b95c2d98246323107cfa95d3e5888d82f445c",
+      "tests_run": 2,
+      "successful": true
+    },
+    "native-edit-source-snapshot.json": {
+      "snapshot_identity": "0562471e86b5d2e5480979fab48b95c2d98246323107cfa95d3e5888d82f445c",
+      "tests_run": 1,
+      "successful": true
+    }
+  },
+  "benchmark": {
+    "profile": "Cargo test opt-level 1",
+    "observed_peak_working_set_bytes": 132698112,
+    "previous_release_comparison": "No previously published compound-file implementation",
+    "workload": "43 complete carrier reconstructions and 528 isolated stream edits with full logical comparisons",
+    "rust": "1.99.0",
+    "native_application_executed": false,
+    "cache": "warm local fixture",
+    "process_elapsed_seconds": 0.5750193,
+    "platform": "Windows x64"
+  },
+  "runtime_sha256": {
+    "src/compound/address/tests.rs": "e04620d10516d59554757c81af0384201a5067d7957983ab829eaf707a5d5822",
+    "src/compound/address.rs": "d07fe37eac0711c6a463bbb6b2e9907ca5cec2fc2edac47d599292f6cd307fbf",
+    "src/compound/directory.rs": "6bfa89838bcf2a3e54806dc03cc00860f91a781272301ca3ffb5b06c805cd4d3",
+    "src/compound/header.rs": "a74f5a9e9263b239bc580615f08b6c8a0d7cd62fb850c105f3cdf89d664d17fb",
+    "src/compound/layout.rs": "83aa188f68088a778a4806e6fd485a1030ff95e1c155fe5e0fc99d1ec84d0612",
+    "src/compound/layout_tests.rs": "5fbf013bc203bee2d6cbde392857c30b4e03146d0565d4c11e38ce21a984546c",
+    "src/compound/mod.rs": "15ff14079cde2b9fd9e59667c3973121734fdffcf0807ae81ed2f5615fa8ca5f",
+    "src/compound/read.rs": "4df9e4a8c6b9de87a442bd6e23d60bcd153267559de8030cd027fa9d764775f2",
+    "src/compound/table_tests.rs": "c5147ac274322e620f3b3024535038a0e6d625af0497356a6e57aa8cab5f01f9",
+    "src/compound/tables.rs": "86d0dee5330093c734d8c505aa61947b231127fff4a13c33c839f79697fe309f",
+    "src/compound/types.rs": "993de5e20e5d03ed48ac90e60b82fdc04060f5742feec6ea22395065f37cde8f",
+    "src/compound/verify.rs": "7128bd6243da76e5941c5c65ddc09044dc70b55dfa3f91a9281e1cf5d8d70ae0",
+    "src/compound/write.rs": "92da2149468fd33a30f79bfa75df8421a8d9b957f96c38e6706d08a3c0998725",
+    "src/compound/write_tests.rs": "cffa839d3b0eb8397fea4795d1947a678a490b51037fd8f4703d6415f63dae1c",
+    "src/lib.rs": "b3dd4cae00a11f3972bf04aa24caa4b76f02d7592bdcf4800dd11ef34de92d6d"
+  },
+  "test_sha256": {
+    "tests/compound_files.rs": "acaa22b3fb5a752fb8f04ee8c1e97263cafc50b412c6393556ab56cbb64ee852",
+    "tests/common/compound_files.rs": "a52317578d66e2ed82ef86f2573d1ba0c0964ef99aebc25fe13138cbcffb05ea",
+    "tests/common/compound_failures.rs": "54e8bd4ac2c1d7c152d472e49b53851b21a8b609e62a6bf19fa885a199aa12dd",
+    "tests/fixtures/compound-files/owned.bin": "5190c861ad63f20b46192ea91327825a0931e95b9af60c7f8044c5e1f1c4a551"
+  },
+  "exclusions": [
+    "complete multi-gigabyte native-file execution",
+    "full Unicode directory collation and red-black balance checks",
+    "user-stream payload semantics",
+    "native application acceptance",
+    "structural directory insertion/deletion/rename/reordering",
+    "automatic dispatch through the existing newer-container Document API",
+    "ThreadSanitizer for this unpushed feature"
+  ],
+  "post_gate_comment_only_paths": [
+    "src/compound/address.rs",
+    "src/compound/tables.rs"
+  ]
+}

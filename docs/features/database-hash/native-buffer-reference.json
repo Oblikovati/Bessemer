@@ -1,0 +1,187 @@
+{
+  "issue": 224,
+  "producer": "Existing Bessemer Document stream extraction followed by independent Python BE field/span interpretation; original producer parser not executed",
+  "probe_retained": false,
+  "streams": [
+    {
+      "stream": "Contents/3DExperienceExchange2",
+      "stream_sha256": "d396afeb2de4621f18fa644c3063e97704b1d2cd73eb403da6132e1eeeb9d2f2",
+      "page_index": 2,
+      "explicit_engine_extent": 4096,
+      "selected_span": [
+        8192,
+        12288
+      ],
+      "page_sha256": "d30131b61788f19cf716a17bf73e9a5117284a7dd92e1ccd55cc0a43172d3f3f",
+      "header": {
+        "cell_head": 2239,
+        "free_head": 12,
+        "next_page": 0
+      },
+      "cells": [
+        {
+          "offset": 2239,
+          "hash": 1543621904,
+          "key_length": 36,
+          "value_length": 155,
+          "next": 1821,
+          "key_span": [
+            2265,
+            2301
+          ],
+          "value_span": [
+            2301,
+            2456
+          ],
+          "key_sha256": "5f5e85fe98784d77f605e73039c30fe13add11cee664646340aca40d3d2559a8",
+          "value_sha256": "2b1fe2ac75187e1f8c2675ca1923a52f9816e4597513851e8ad87cc69188c875"
+        },
+        {
+          "offset": 1821,
+          "hash": 193471147,
+          "key_length": 3,
+          "value_length": 389,
+          "next": 1360,
+          "key_span": [
+            1847,
+            1850
+          ],
+          "value_span": [
+            1850,
+            2239
+          ],
+          "key_sha256": "ecdd3e4a16f4cd304b166ab546e96844bf8f04ac41c8a0db88d27f26e23fe11f",
+          "value_sha256": "8bebea7507833079af5bc94ef10e77d61c6a3f63556e8713cb04ef35833d8b82"
+        },
+        {
+          "offset": 1360,
+          "hash": 470228468,
+          "key_length": 36,
+          "value_length": 399,
+          "next": 903,
+          "key_span": [
+            1386,
+            1422
+          ],
+          "value_span": [
+            1422,
+            1821
+          ],
+          "key_sha256": "f3b787d86da97133fa8581fe2826ac8fa461931015a371d1e7c7886a1578b57f",
+          "value_sha256": "89d4d73c9d600239d12d2d548facc487a4bf08b797d2d8ded6a6b186dac9c672"
+        },
+        {
+          "offset": 903,
+          "hash": 1956558411,
+          "key_length": 36,
+          "value_length": 395,
+          "next": 442,
+          "key_span": [
+            929,
+            965
+          ],
+          "value_span": [
+            965,
+            1360
+          ],
+          "key_sha256": "cc4fa6fd2227b6973d1c539b05b743ea5db913b0431b14402eef8a7df1fed532",
+          "value_sha256": "d6dc0bba17064b9351c5b4ee42c3719366ae680b003bee39fec8527e63aff4d8"
+        },
+        {
+          "offset": 442,
+          "hash": 2503134428,
+          "key_length": 36,
+          "value_length": 399,
+          "next": 186,
+          "key_span": [
+            468,
+            504
+          ],
+          "value_span": [
+            504,
+            903
+          ],
+          "key_sha256": "dabdff6e54517ced52d59fdc93e58df2bfa75327634443efa747260c51a2d61b",
+          "value_sha256": "fe0c2fe375681ef04364d7f4fd34645bb24ddcf2b252ed8c8e7f72a1d24614af"
+        },
+        {
+          "offset": 186,
+          "hash": 1376572803,
+          "key_length": 36,
+          "value_length": 194,
+          "next": 0,
+          "key_span": [
+            212,
+            248
+          ],
+          "value_span": [
+            248,
+            442
+          ],
+          "key_sha256": "c14055469759ccd47ddda4a4b049833c8bd7af2e40b51a1d3d10e698956c2d7d",
+          "value_sha256": "44da322ea258096ac3d6e83d05689bc0f779b5208fe7049fa4229a1ac31a2b46"
+        }
+      ],
+      "free_records": [
+        {
+          "offset": 12,
+          "next": 2456,
+          "size": 174
+        },
+        {
+          "offset": 2456,
+          "next": 0,
+          "size": 1640
+        }
+      ]
+    },
+    {
+      "stream": "Contents/3DExperienceExchange_ConfigHeader",
+      "stream_sha256": "d3259a5fdbd45147a6ae5a9dbb59e93db9a7ba781e42a6931ad8c9fd8f6a37d4",
+      "page_index": 2,
+      "explicit_engine_extent": 4096,
+      "selected_span": [
+        8192,
+        12288
+      ],
+      "page_sha256": "3725a7a7a16b011edff038be38d1fd7a8b62c20c4a3d1a2c6c67281f6166a837",
+      "header": {
+        "cell_head": 12,
+        "free_head": 166,
+        "next_page": 0
+      },
+      "cells": [
+        {
+          "offset": 12,
+          "hash": 1988042647,
+          "key_length": 36,
+          "value_length": 92,
+          "next": 0,
+          "key_span": [
+            38,
+            74
+          ],
+          "value_span": [
+            74,
+            166
+          ],
+          "key_sha256": "cd655e498d4a1694ba4e8e5e687da466911a8e8a76075fad8413d5c002674578",
+          "value_sha256": "30359c98300a7282dc1c4cc85d40d61183d6c29eb553dca1f315aa061777a6b6"
+        }
+      ],
+      "free_records": [
+        {
+          "offset": 166,
+          "next": 0,
+          "size": 3930
+        }
+      ]
+    }
+  ],
+  "sha256": {
+    "tests/fixtures/blank-part.SLDPRT": "b52e080ba2cc64d1d07ed28306f27281b07521aef550bc0c7fea8cd54be2b276",
+    "target/hash-page-probe.rs": "fbf1bfe12216e36dd0dd47d629adf54bd6cf0290f5a2f08fd645eda7fec0538a",
+    "target/hash-page-probe.exe": "6300e0cb9f3c364293a36e3ba1785c9b2554ce18ec17d8d5a6980b54160c603f",
+    "target/libbessemer_database_time.rlib": "3f5d8e014b2d59930dedb7980ad9f9134e75661110c6042209f8c31bc238c108"
+  }
+}

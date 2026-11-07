@@ -1,0 +1,98 @@
+{
+  "issue": 166,
+  "evidence": "C-857",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "target_executed": false,
+  "complete_installed_instruction_count": 181,
+  "independent_ghidra_instruction_count": 181,
+  "complete_reader_bytes": 747,
+  "exact_decoder_qualifications": 0,
+  "native_accepted_contexts": 276,
+  "original_rejected_contexts": 8,
+  "native_reset_counts": {
+    "legend.word_c0": 116,
+    "legend.word_c4": 116,
+    "legend.word_c8": 116
+  },
+  "native_derived_assignments": 348,
+  "native_three_reset_contexts": 116,
+  "native_no_reset_contexts": 160,
+  "owned_complete_contexts": 425,
+  "owned_raw_class_unsupported_contexts": 20,
+  "owned_reset_count_contexts": {
+    "3": 181,
+    "2": 22,
+    "0": 202
+  },
+  "additional_stored_byte_credit": 0,
+  "initial_freeze": {
+    "checks": 19,
+    "seconds": 5.94,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-resets-source-initial.log",
+      "bytes": 2964,
+      "sha256": "8e64fa7f03c26d2113af95ab789d3dcda930f9cc809c04e11fea8efc669a85a8"
+    }
+  },
+  "strict_source": {
+    "checks": 19,
+    "seconds": 7.209,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-resets-source-strict.log",
+      "bytes": 2964,
+      "sha256": "ea333ad8973001b54476f7f765c1629911672c7df466579c519318cee7aaa937"
+    }
+  },
+  "snapshot": {
+    "path": "docs/features/simulation-post-dialog/legend-resets-source-snapshot.json",
+    "bytes": 625403,
+    "sha256": "a09d73c2d1897ee1cb5909975fc08ccc8e99b13e3a09f14effd2f4f8d39f6ffa"
+  },
+  "evidence_capture": {
+    "path": "docs/features/simulation-post-dialog/legend-resets-rea-reader.json",
+    "bytes": 21399,
+    "sha256": "681f902762222a62f13999729dedd5d052280f22a4093fcbaa1f54509cb0ba2c"
+  },
+  "kernel_decision": "Evidence only: bind the explicit>=700006 reader context, raw-class bypass, zero-register setup,840008/840010 gates and all three32-bit zero stores. Keep derived C0/C4/C8 assignments disjoint from actual wire spans and preserve unsupported raw-class context as unknown rather than an empty completed map. Do not infer resets or constructor defaults for skipped D4/D8/E8/FC/EC/100 fields.",
+  "oracle_kinds": [
+    "Complete GNU/Ghidra reader bodies and all181 exact instruction locations",
+    "Exact named export,decompilation hash,version/read/store boundaries and skipped-field gates",
+    "Independent interval masks,raw-class/noninteger/signed32 boundary rejection and both original Source tests",
+    "All276 original native identities/eight rejections,348 derived assignments and425 complete owned parents",
+    "Wire/reset disjointness and complete three-member wire-or-reset partition in explicit profiles",
+    "All2776 owned old reader-selection cases and eight original catalog/style/color checks"
+  ],
+  "excluded": [
+    "Native target execution or confirmation that a caller invoked this load path",
+    "Constructor/prior-object defaults,raw-class conversion and blanket missing-field zeros",
+    "New wire words/offsets,byte rewrites or expanded original native admission"
+  ],
+  "pending": [
+    "Remaining feature166 models",
+    "Exact publication-head cargo xtask pr and all five platform gates"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_integrated_source": {
+    "checks": 313,
+    "seconds": 483.353,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "accepted_source_cut": "960d24d896659f32ee254f50e5b4a0f4cd31accd",
+    "log": {
+      "path": "target/legend-resets-source-full.log",
+      "bytes": 68198,
+      "sha256": "c1c94a1adf38606af11475791ab64c1b803f58a71dc9512c426c7f67c4c53382"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 634126,
+      "sha256": "a3c714569fbc7b4dd8e11be7241b9e57c01d0b22c429ba42093446bcb6b87684"
+    }
+  },
+  "typed_operation_verification": "legend-resets-operation-verification.json"
+}

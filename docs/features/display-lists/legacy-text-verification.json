@@ -1,0 +1,23 @@
+{
+  "fixtures": 262,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "two_processes_identical": true,
+  "all_forced_bytes_match_independent_fixtures": true,
+  "input_sha256": "88c07686fa6696ff4f8308941884115237766e83f979d474a2bfdef2a2e15c73",
+  "result_sha256": "b527c4e3b83994370ae0ea63b801780d8f29168e4c881b0e121d90d9a181df6d",
+  "trace_sha256": "b92f12f73e7ccb5451880f035fd0e94b7c017123964a3d9591282cafc0c7e2f2",
+  "source_sha256": {
+    "modern_root": "dba3d236cae856ad0513f31c010ec88c9d5ac2759aa5fbc2fc93dfa9764837df",
+    "modern_body_tess": "646c75693cbbaa6651761c8ee0dc9d35568cbaf27f75edd8997e1ceac841d076",
+    "modern_part_tess": "dbd30b267aa2b2cafd99c6115811f49f1f53be4fc88a52ae16381e4c7bde7601",
+    "modern_item_text": "de71635cce21d95f44974035cfed84318607f60254f81b9b8558d61c1ccdb065",
+    "modern_material": "1538ffaccceddf0fba4a3bb6a12385476b5a07b683c6fb6cc1e89692ebc2fc9d",
+    "modern_ui": "573153936b7a0873d4a5ea3499bda81b78df700bff6b24d14555f8d4d06641b0",
+    "modern_component": "f8d9c5d3c2f5df8fc0aa5a571af7f01224cde1cfbdfeade2a0426f7e0aea504b",
+    "legacy_bucket_poly": "391e452fc3bc1b3ffe3ad5948f35e4ce014824448dff6660847fae0e72919f6c",
+    "modern_bucket": "d05eda7245088303d94ba2af824bb1471982bb2965f8eaef742543304b375ebd",
+    "textured_planes": "294a53dcd19997e475193c4daf216189a7aa9f154693e27f8a80c27f5e9dc80f",
+    "legacy_bucket_visibility": "8bdc0f766ea3f03434a108e82d2510c19a7c1a386fc7e9eb555ffc5f7719450a"
+  },
+  "scope": "byte reconstruction and process determinism; field oracles checked separately by integration tests"
+}

@@ -1,0 +1,1457 @@
+{
+  "evidence": "C-742",
+  "model_sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "id_bindings": [
+    {
+      "class_name": "moSimpleEdgeIdRep_c",
+      "vtable": "0x4cf02940",
+      "serializer": "0x4bbbde70",
+      "suffix": "0x4bbb6d50"
+    },
+    {
+      "class_name": "moCopySurfIdRep_c",
+      "vtable": "0x4cf6f908",
+      "serializer": "0x4bbbbc30",
+      "suffix": "0x4d333900"
+    },
+    {
+      "class_name": "moMacroFeatRefSurfIdRep_c",
+      "vtable": "0x4cf74148",
+      "serializer": "0x4bbbd420",
+      "suffix": "0x4bbbf630"
+    },
+    {
+      "class_name": "moEndCapChamferSurfIdRep_c",
+      "vtable": "0x4cf73e98",
+      "serializer": "0x4bbb79b0",
+      "suffix": "0x4bbbf3f0"
+    }
+  ],
+  "module_sha256": "f4cf8adfc0f6e2e36c3a29765d28bd0d073f952e5078c5dcc7cc0d5a0d409c36",
+  "functions": [
+    {
+      "address": "0x181334da0",
+      "end": "0x18133500e",
+      "raw_sha256": "2053db07cb85dab7af5125f00b459fa933ed82b353927a16f44055d384dc73d4"
+    },
+    {
+      "address": "0x180a32600",
+      "end": "0x180a3292d",
+      "raw_sha256": "6d7a380a41726e095c9acd961dacbe38f569445f66424293fe76c8631c1b0b41"
+    },
+    {
+      "address": "0x180a5ba00",
+      "end": "0x180a5c1c1",
+      "raw_sha256": "218d5ba05196d02572ece69ad600f7b1d7cdeb89b03b5f7c6aa3c175449cf29f"
+    },
+    {
+      "address": "0x181345a50",
+      "end": "0x181346a85",
+      "raw_sha256": "6590472ba02fb85de1c4cc3942695f84755a9a85cfc43e16409d06843a05f37a"
+    },
+    {
+      "address": "0x1813acc90",
+      "end": "0x1813ad821",
+      "raw_sha256": "bdc75f34d20dbfab787a5cbcf4bd6e82757eed101d0fd89be1bde87158cb2a9e"
+    }
+  ],
+  "constructor": "0x181334da0",
+  "vtable": "0x18205a7d0",
+  "reader_slot": "0x18205aa30",
+  "reader": "0x181345a50",
+  "version_constants": [
+    {
+      "address": "0x181f61f68",
+      "value": 800066,
+      "raw_hex": "00000000846a2841"
+    },
+    {
+      "address": "0x18201a2f8",
+      "value": 840013,
+      "raw_hex": "000000009aa22941"
+    },
+    {
+      "address": "0x181f553d0",
+      "value": 840014,
+      "raw_hex": "000000009ca22941"
+    },
+    {
+      "address": "0x18205ecd8",
+      "value": 870017,
+      "raw_hex": "00000000028d2a41"
+    }
+  ],
+  "summary": {
+    "streams": 20,
+    "bytes": 736,
+    "complete": 19,
+    "complete_bytes": 732
+  },
+  "rows": [
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Composites\\tjoint.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/ShellManager/Shells/Shell 1/CompositeExtra",
+      "bytes": 64,
+      "sha256": "98874e8edba25cc52ef2e3e35a9faa7ec0b28bceaf7abae94e0a01d75ec64705",
+      "attempts": [
+        {
+          "version": 890911,
+          "wire_profile": "reader",
+          "success": false,
+          "end": 12,
+          "spans": [
+            {
+              "label": "member37c",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f0",
+              "offset": 4,
+              "end": 8,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f4",
+              "offset": 8,
+              "end": 12,
+              "raw_hex": "00000000"
+            }
+          ],
+          "error": "unconsumed remainder at 12: 52 bytes"
+        },
+        {
+          "version": 890911,
+          "wire_profile": "writer",
+          "success": true,
+          "end": 64,
+          "spans": [
+            {
+              "label": "member37c",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f0",
+              "offset": 4,
+              "end": 8,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f4",
+              "offset": 8,
+              "end": 12,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f8",
+              "offset": 12,
+              "end": 16,
+              "raw_hex": "04000000"
+            },
+            {
+              "label": "six_double_bits",
+              "offset": 16,
+              "end": 64,
+              "raw_hex": "000000000000f03f000000000000000000000000000000000000000000000000000000000000f03f0000000000000000"
+            }
+          ],
+          "values": {
+            "member37c": 0,
+            "member3f0": 0,
+            "member3f4": 0,
+            "member3f8": 4
+          },
+          "archives": [],
+          "reconstruction_sha256": "98874e8edba25cc52ef2e3e35a9faa7ec0b28bceaf7abae94e0a01d75ec64705"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Composites\\tjoint.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/ShellManager/Shells/Shell 1/CompositeFlipTurn",
+      "bytes": 20,
+      "sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab",
+      "attempts": [
+        {
+          "version": 890911,
+          "wire_profile": "reader",
+          "success": true,
+          "end": 20,
+          "spans": [
+            {
+              "label": "count",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "four_word_records",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "00000000000000000000000000000000"
+            }
+          ],
+          "values": {
+            "count": 1
+          },
+          "archives": [],
+          "reconstruction_sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab"
+        },
+        {
+          "version": 890911,
+          "wire_profile": "writer",
+          "success": true,
+          "end": 20,
+          "spans": [
+            {
+              "label": "count",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "four_word_records",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "00000000000000000000000000000000"
+            }
+          ],
+          "values": {
+            "count": 1
+          },
+          "archives": [],
+          "reconstruction_sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Composites\\tjoint.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/ShellManager/Shells/Shell 2/CompositeExtra",
+      "bytes": 64,
+      "sha256": "98874e8edba25cc52ef2e3e35a9faa7ec0b28bceaf7abae94e0a01d75ec64705",
+      "attempts": [
+        {
+          "version": 890911,
+          "wire_profile": "reader",
+          "success": false,
+          "end": 12,
+          "spans": [
+            {
+              "label": "member37c",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f0",
+              "offset": 4,
+              "end": 8,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f4",
+              "offset": 8,
+              "end": 12,
+              "raw_hex": "00000000"
+            }
+          ],
+          "error": "unconsumed remainder at 12: 52 bytes"
+        },
+        {
+          "version": 890911,
+          "wire_profile": "writer",
+          "success": true,
+          "end": 64,
+          "spans": [
+            {
+              "label": "member37c",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f0",
+              "offset": 4,
+              "end": 8,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f4",
+              "offset": 8,
+              "end": 12,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f8",
+              "offset": 12,
+              "end": 16,
+              "raw_hex": "04000000"
+            },
+            {
+              "label": "six_double_bits",
+              "offset": 16,
+              "end": 64,
+              "raw_hex": "000000000000f03f000000000000000000000000000000000000000000000000000000000000f03f0000000000000000"
+            }
+          ],
+          "values": {
+            "member37c": 0,
+            "member3f0": 0,
+            "member3f4": 0,
+            "member3f8": 4
+          },
+          "archives": [],
+          "reconstruction_sha256": "98874e8edba25cc52ef2e3e35a9faa7ec0b28bceaf7abae94e0a01d75ec64705"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Composites\\tjoint.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/ShellManager/Shells/Shell 2/CompositeFlipTurn",
+      "bytes": 20,
+      "sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab",
+      "attempts": [
+        {
+          "version": 890911,
+          "wire_profile": "reader",
+          "success": true,
+          "end": 20,
+          "spans": [
+            {
+              "label": "count",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "four_word_records",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "00000000000000000000000000000000"
+            }
+          ],
+          "values": {
+            "count": 1
+          },
+          "archives": [],
+          "reconstruction_sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab"
+        },
+        {
+          "version": 890911,
+          "wire_profile": "writer",
+          "success": true,
+          "end": 20,
+          "spans": [
+            {
+              "label": "count",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "four_word_records",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "00000000000000000000000000000000"
+            }
+          ],
+          "values": {
+            "count": 1
+          },
+          "archives": [],
+          "reconstruction_sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Composites\\tjoint.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/ShellManager/Shells/Shell 1/CompositeExtra",
+      "bytes": 64,
+      "sha256": "98874e8edba25cc52ef2e3e35a9faa7ec0b28bceaf7abae94e0a01d75ec64705",
+      "attempts": [
+        {
+          "version": 890911,
+          "wire_profile": "reader",
+          "success": false,
+          "end": 12,
+          "spans": [
+            {
+              "label": "member37c",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f0",
+              "offset": 4,
+              "end": 8,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f4",
+              "offset": 8,
+              "end": 12,
+              "raw_hex": "00000000"
+            }
+          ],
+          "error": "unconsumed remainder at 12: 52 bytes"
+        },
+        {
+          "version": 890911,
+          "wire_profile": "writer",
+          "success": true,
+          "end": 64,
+          "spans": [
+            {
+              "label": "member37c",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f0",
+              "offset": 4,
+              "end": 8,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f4",
+              "offset": 8,
+              "end": 12,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f8",
+              "offset": 12,
+              "end": 16,
+              "raw_hex": "04000000"
+            },
+            {
+              "label": "six_double_bits",
+              "offset": 16,
+              "end": 64,
+              "raw_hex": "000000000000f03f000000000000000000000000000000000000000000000000000000000000f03f0000000000000000"
+            }
+          ],
+          "values": {
+            "member37c": 0,
+            "member3f0": 0,
+            "member3f4": 0,
+            "member3f8": 4
+          },
+          "archives": [],
+          "reconstruction_sha256": "98874e8edba25cc52ef2e3e35a9faa7ec0b28bceaf7abae94e0a01d75ec64705"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Composites\\tjoint.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/ShellManager/Shells/Shell 1/CompositeFlipTurn",
+      "bytes": 20,
+      "sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab",
+      "attempts": [
+        {
+          "version": 890911,
+          "wire_profile": "reader",
+          "success": true,
+          "end": 20,
+          "spans": [
+            {
+              "label": "count",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "four_word_records",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "00000000000000000000000000000000"
+            }
+          ],
+          "values": {
+            "count": 1
+          },
+          "archives": [],
+          "reconstruction_sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab"
+        },
+        {
+          "version": 890911,
+          "wire_profile": "writer",
+          "success": true,
+          "end": 20,
+          "spans": [
+            {
+              "label": "count",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "four_word_records",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "00000000000000000000000000000000"
+            }
+          ],
+          "values": {
+            "count": 1
+          },
+          "archives": [],
+          "reconstruction_sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Composites\\tjoint.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/ShellManager/Shells/Shell 2/CompositeExtra",
+      "bytes": 64,
+      "sha256": "98874e8edba25cc52ef2e3e35a9faa7ec0b28bceaf7abae94e0a01d75ec64705",
+      "attempts": [
+        {
+          "version": 890911,
+          "wire_profile": "reader",
+          "success": false,
+          "end": 12,
+          "spans": [
+            {
+              "label": "member37c",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f0",
+              "offset": 4,
+              "end": 8,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f4",
+              "offset": 8,
+              "end": 12,
+              "raw_hex": "00000000"
+            }
+          ],
+          "error": "unconsumed remainder at 12: 52 bytes"
+        },
+        {
+          "version": 890911,
+          "wire_profile": "writer",
+          "success": true,
+          "end": 64,
+          "spans": [
+            {
+              "label": "member37c",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f0",
+              "offset": 4,
+              "end": 8,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f4",
+              "offset": 8,
+              "end": 12,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f8",
+              "offset": 12,
+              "end": 16,
+              "raw_hex": "04000000"
+            },
+            {
+              "label": "six_double_bits",
+              "offset": 16,
+              "end": 64,
+              "raw_hex": "000000000000f03f000000000000000000000000000000000000000000000000000000000000f03f0000000000000000"
+            }
+          ],
+          "values": {
+            "member37c": 0,
+            "member3f0": 0,
+            "member3f4": 0,
+            "member3f8": 4
+          },
+          "archives": [],
+          "reconstruction_sha256": "98874e8edba25cc52ef2e3e35a9faa7ec0b28bceaf7abae94e0a01d75ec64705"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Composites\\tjoint.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/ShellManager/Shells/Shell 2/CompositeFlipTurn",
+      "bytes": 20,
+      "sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab",
+      "attempts": [
+        {
+          "version": 890911,
+          "wire_profile": "reader",
+          "success": true,
+          "end": 20,
+          "spans": [
+            {
+              "label": "count",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "four_word_records",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "00000000000000000000000000000000"
+            }
+          ],
+          "values": {
+            "count": 1
+          },
+          "archives": [],
+          "reconstruction_sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab"
+        },
+        {
+          "version": 890911,
+          "wire_profile": "writer",
+          "success": true,
+          "end": 20,
+          "spans": [
+            {
+              "label": "count",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "four_word_records",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "00000000000000000000000000000000"
+            }
+          ],
+          "values": {
+            "count": 1
+          },
+          "archives": [],
+          "reconstruction_sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_ic30.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/ShellManager/Shells/Shell 1/CompositeExtra",
+      "bytes": 4,
+      "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+      "attempts": [
+        {
+          "version": 840030,
+          "wire_profile": "reader",
+          "success": false,
+          "end": 4,
+          "spans": [
+            {
+              "label": "member37c",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "01000000"
+            }
+          ],
+          "error": "member3f0: truncated at 4, need 4"
+        },
+        {
+          "version": 840030,
+          "wire_profile": "writer",
+          "success": false,
+          "end": 4,
+          "spans": [
+            {
+              "label": "member37c",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "01000000"
+            }
+          ],
+          "error": "member3f0: truncated at 4, need 4"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_ic31.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/ShellManager/Shells/Shell 1/CompositeFlipTurn",
+      "bytes": 20,
+      "sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab",
+      "attempts": [
+        {
+          "version": 840030,
+          "wire_profile": "reader",
+          "success": true,
+          "end": 20,
+          "spans": [
+            {
+              "label": "count",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "four_word_records",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "00000000000000000000000000000000"
+            }
+          ],
+          "values": {
+            "count": 1
+          },
+          "archives": [],
+          "reconstruction_sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab"
+        },
+        {
+          "version": 840030,
+          "wire_profile": "writer",
+          "success": true,
+          "end": 20,
+          "spans": [
+            {
+              "label": "count",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "four_word_records",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "00000000000000000000000000000000"
+            }
+          ],
+          "values": {
+            "count": 1
+          },
+          "archives": [],
+          "reconstruction_sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0031-2.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/ShellManager/Shells/Shell 1/CompositeFlipTurn",
+      "bytes": 20,
+      "sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab",
+      "attempts": [
+        {
+          "version": 830038,
+          "wire_profile": "reader",
+          "success": true,
+          "end": 20,
+          "spans": [
+            {
+              "label": "count",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "four_word_records",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "00000000000000000000000000000000"
+            }
+          ],
+          "values": {
+            "count": 1
+          },
+          "archives": [],
+          "reconstruction_sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab"
+        },
+        {
+          "version": 830038,
+          "wire_profile": "writer",
+          "success": true,
+          "end": 20,
+          "spans": [
+            {
+              "label": "count",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "four_word_records",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "00000000000000000000000000000000"
+            }
+          ],
+          "values": {
+            "count": 1
+          },
+          "archives": [],
+          "reconstruction_sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0031-2.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/ShellManager/Shells/Shell 1/CompositeFlipTurn",
+      "bytes": 20,
+      "sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab",
+      "attempts": [
+        {
+          "version": 830038,
+          "wire_profile": "reader",
+          "success": true,
+          "end": 20,
+          "spans": [
+            {
+              "label": "count",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "four_word_records",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "00000000000000000000000000000000"
+            }
+          ],
+          "values": {
+            "count": 1
+          },
+          "archives": [],
+          "reconstruction_sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab"
+        },
+        {
+          "version": 830038,
+          "wire_profile": "writer",
+          "success": true,
+          "end": 20,
+          "spans": [
+            {
+              "label": "count",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "four_word_records",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "00000000000000000000000000000000"
+            }
+          ],
+          "values": {
+            "count": 1
+          },
+          "archives": [],
+          "reconstruction_sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\tjoint.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/ShellManager/Shells/Shell 1/CompositeExtra",
+      "bytes": 64,
+      "sha256": "98874e8edba25cc52ef2e3e35a9faa7ec0b28bceaf7abae94e0a01d75ec64705",
+      "attempts": [
+        {
+          "version": 860006,
+          "wire_profile": "reader",
+          "success": false,
+          "end": 12,
+          "spans": [
+            {
+              "label": "member37c",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f0",
+              "offset": 4,
+              "end": 8,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f4",
+              "offset": 8,
+              "end": 12,
+              "raw_hex": "00000000"
+            }
+          ],
+          "error": "unconsumed remainder at 12: 52 bytes"
+        },
+        {
+          "version": 860006,
+          "wire_profile": "writer",
+          "success": true,
+          "end": 64,
+          "spans": [
+            {
+              "label": "member37c",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f0",
+              "offset": 4,
+              "end": 8,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f4",
+              "offset": 8,
+              "end": 12,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f8",
+              "offset": 12,
+              "end": 16,
+              "raw_hex": "04000000"
+            },
+            {
+              "label": "six_double_bits",
+              "offset": 16,
+              "end": 64,
+              "raw_hex": "000000000000f03f000000000000000000000000000000000000000000000000000000000000f03f0000000000000000"
+            }
+          ],
+          "values": {
+            "member37c": 0,
+            "member3f0": 0,
+            "member3f4": 0,
+            "member3f8": 4
+          },
+          "archives": [],
+          "reconstruction_sha256": "98874e8edba25cc52ef2e3e35a9faa7ec0b28bceaf7abae94e0a01d75ec64705"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\tjoint.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/ShellManager/Shells/Shell 1/CompositeFlipTurn",
+      "bytes": 20,
+      "sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab",
+      "attempts": [
+        {
+          "version": 860006,
+          "wire_profile": "reader",
+          "success": true,
+          "end": 20,
+          "spans": [
+            {
+              "label": "count",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "four_word_records",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "00000000000000000000000000000000"
+            }
+          ],
+          "values": {
+            "count": 1
+          },
+          "archives": [],
+          "reconstruction_sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab"
+        },
+        {
+          "version": 860006,
+          "wire_profile": "writer",
+          "success": true,
+          "end": 20,
+          "spans": [
+            {
+              "label": "count",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "four_word_records",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "00000000000000000000000000000000"
+            }
+          ],
+          "values": {
+            "count": 1
+          },
+          "archives": [],
+          "reconstruction_sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\tjoint.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/ShellManager/Shells/Shell 2/CompositeExtra",
+      "bytes": 64,
+      "sha256": "98874e8edba25cc52ef2e3e35a9faa7ec0b28bceaf7abae94e0a01d75ec64705",
+      "attempts": [
+        {
+          "version": 860006,
+          "wire_profile": "reader",
+          "success": false,
+          "end": 12,
+          "spans": [
+            {
+              "label": "member37c",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f0",
+              "offset": 4,
+              "end": 8,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f4",
+              "offset": 8,
+              "end": 12,
+              "raw_hex": "00000000"
+            }
+          ],
+          "error": "unconsumed remainder at 12: 52 bytes"
+        },
+        {
+          "version": 860006,
+          "wire_profile": "writer",
+          "success": true,
+          "end": 64,
+          "spans": [
+            {
+              "label": "member37c",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f0",
+              "offset": 4,
+              "end": 8,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f4",
+              "offset": 8,
+              "end": 12,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f8",
+              "offset": 12,
+              "end": 16,
+              "raw_hex": "04000000"
+            },
+            {
+              "label": "six_double_bits",
+              "offset": 16,
+              "end": 64,
+              "raw_hex": "000000000000f03f000000000000000000000000000000000000000000000000000000000000f03f0000000000000000"
+            }
+          ],
+          "values": {
+            "member37c": 0,
+            "member3f0": 0,
+            "member3f4": 0,
+            "member3f8": 4
+          },
+          "archives": [],
+          "reconstruction_sha256": "98874e8edba25cc52ef2e3e35a9faa7ec0b28bceaf7abae94e0a01d75ec64705"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\tjoint.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/ShellManager/Shells/Shell 2/CompositeFlipTurn",
+      "bytes": 20,
+      "sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab",
+      "attempts": [
+        {
+          "version": 860006,
+          "wire_profile": "reader",
+          "success": true,
+          "end": 20,
+          "spans": [
+            {
+              "label": "count",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "four_word_records",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "00000000000000000000000000000000"
+            }
+          ],
+          "values": {
+            "count": 1
+          },
+          "archives": [],
+          "reconstruction_sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab"
+        },
+        {
+          "version": 860006,
+          "wire_profile": "writer",
+          "success": true,
+          "end": 20,
+          "spans": [
+            {
+              "label": "count",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "four_word_records",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "00000000000000000000000000000000"
+            }
+          ],
+          "values": {
+            "count": 1
+          },
+          "archives": [],
+          "reconstruction_sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\tjoint.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/ShellManager/Shells/Shell 1/CompositeExtra",
+      "bytes": 64,
+      "sha256": "98874e8edba25cc52ef2e3e35a9faa7ec0b28bceaf7abae94e0a01d75ec64705",
+      "attempts": [
+        {
+          "version": 860006,
+          "wire_profile": "reader",
+          "success": false,
+          "end": 12,
+          "spans": [
+            {
+              "label": "member37c",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f0",
+              "offset": 4,
+              "end": 8,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f4",
+              "offset": 8,
+              "end": 12,
+              "raw_hex": "00000000"
+            }
+          ],
+          "error": "unconsumed remainder at 12: 52 bytes"
+        },
+        {
+          "version": 860006,
+          "wire_profile": "writer",
+          "success": true,
+          "end": 64,
+          "spans": [
+            {
+              "label": "member37c",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f0",
+              "offset": 4,
+              "end": 8,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f4",
+              "offset": 8,
+              "end": 12,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f8",
+              "offset": 12,
+              "end": 16,
+              "raw_hex": "04000000"
+            },
+            {
+              "label": "six_double_bits",
+              "offset": 16,
+              "end": 64,
+              "raw_hex": "000000000000f03f000000000000000000000000000000000000000000000000000000000000f03f0000000000000000"
+            }
+          ],
+          "values": {
+            "member37c": 0,
+            "member3f0": 0,
+            "member3f4": 0,
+            "member3f8": 4
+          },
+          "archives": [],
+          "reconstruction_sha256": "98874e8edba25cc52ef2e3e35a9faa7ec0b28bceaf7abae94e0a01d75ec64705"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\tjoint.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/ShellManager/Shells/Shell 1/CompositeFlipTurn",
+      "bytes": 20,
+      "sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab",
+      "attempts": [
+        {
+          "version": 860006,
+          "wire_profile": "reader",
+          "success": true,
+          "end": 20,
+          "spans": [
+            {
+              "label": "count",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "four_word_records",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "00000000000000000000000000000000"
+            }
+          ],
+          "values": {
+            "count": 1
+          },
+          "archives": [],
+          "reconstruction_sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab"
+        },
+        {
+          "version": 860006,
+          "wire_profile": "writer",
+          "success": true,
+          "end": 20,
+          "spans": [
+            {
+              "label": "count",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "four_word_records",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "00000000000000000000000000000000"
+            }
+          ],
+          "values": {
+            "count": 1
+          },
+          "archives": [],
+          "reconstruction_sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\tjoint.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/ShellManager/Shells/Shell 2/CompositeExtra",
+      "bytes": 64,
+      "sha256": "98874e8edba25cc52ef2e3e35a9faa7ec0b28bceaf7abae94e0a01d75ec64705",
+      "attempts": [
+        {
+          "version": 860006,
+          "wire_profile": "reader",
+          "success": false,
+          "end": 12,
+          "spans": [
+            {
+              "label": "member37c",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f0",
+              "offset": 4,
+              "end": 8,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f4",
+              "offset": 8,
+              "end": 12,
+              "raw_hex": "00000000"
+            }
+          ],
+          "error": "unconsumed remainder at 12: 52 bytes"
+        },
+        {
+          "version": 860006,
+          "wire_profile": "writer",
+          "success": true,
+          "end": 64,
+          "spans": [
+            {
+              "label": "member37c",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f0",
+              "offset": 4,
+              "end": 8,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f4",
+              "offset": 8,
+              "end": 12,
+              "raw_hex": "00000000"
+            },
+            {
+              "label": "member3f8",
+              "offset": 12,
+              "end": 16,
+              "raw_hex": "04000000"
+            },
+            {
+              "label": "six_double_bits",
+              "offset": 16,
+              "end": 64,
+              "raw_hex": "000000000000f03f000000000000000000000000000000000000000000000000000000000000f03f0000000000000000"
+            }
+          ],
+          "values": {
+            "member37c": 0,
+            "member3f0": 0,
+            "member3f4": 0,
+            "member3f8": 4
+          },
+          "archives": [],
+          "reconstruction_sha256": "98874e8edba25cc52ef2e3e35a9faa7ec0b28bceaf7abae94e0a01d75ec64705"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\tjoint.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/ShellManager/Shells/Shell 2/CompositeFlipTurn",
+      "bytes": 20,
+      "sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab",
+      "attempts": [
+        {
+          "version": 860006,
+          "wire_profile": "reader",
+          "success": true,
+          "end": 20,
+          "spans": [
+            {
+              "label": "count",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "four_word_records",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "00000000000000000000000000000000"
+            }
+          ],
+          "values": {
+            "count": 1
+          },
+          "archives": [],
+          "reconstruction_sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab"
+        },
+        {
+          "version": 860006,
+          "wire_profile": "writer",
+          "success": true,
+          "end": 20,
+          "spans": [
+            {
+              "label": "count",
+              "offset": 0,
+              "end": 4,
+              "raw_hex": "01000000"
+            },
+            {
+              "label": "four_word_records",
+              "offset": 4,
+              "end": 20,
+              "raw_hex": "00000000000000000000000000000000"
+            }
+          ],
+          "values": {
+            "count": 1
+          },
+          "archives": [],
+          "reconstruction_sha256": "21fc3f955c14305ed66b2f6064de082e8447f29048da3ab7c5c01090c1b722ab"
+        }
+      ]
+    }
+  ],
+  "tests": {
+    "run": 10,
+    "output": "..........\n----------------------------------------------------------------------\nRan 10 tests in 0.002s\n\nOK\n"
+  },
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_embedded_const_surface.py": "4e7dfa04987e10e590188f0fa949d93915f16244374b183e32ed0f2d9b834994",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\test_cosworks_embedded_const_surface.py": "06a9e4d508c1591dace06118c88117d98d594ccc8d9f4003de27341b634e01eb",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\thicken-native-evidence.json": "0aa355b1958c4be374753b4801866ceb25696392f2891dcbe42278c3bd7620bb",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-plane-section-rtti.json": "b4920c2336cf79884c8ff4be35d1e2fbc5debfdcb2b38b5554c7964e165b45a0",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\configuration-body-state-native-evidence.json": "97418e8b10ccff6e0af13f464f85375ff0140cc9b2fe6693bcba367fcf0c00db",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\FUN_4bbbbad0.c": "3b36cdd74749c0d00ed8dfdaa76f337675a42a720ce8ac07287b2f39d1cf7b62",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\FUN_4bbba2d0.c": "ab26de09accb6d8d8cfb614a7da6e48925b7e1576c961c5e2235dfac705ff4be",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_embedded_solid.py": "8a1928b027b17e6707d51d52bcf1e80e7875edee5cbcd0ca49e27ce684627224",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_embedded_body_ids.py": "9b87ab043e87b3534113186467dfd05b986e3532a25e5870c2d4823094bd4d14",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\test_cosworks_embedded_body_ids.py": "21e24375dc6342b8fc31595fe2441cf3a7d62a478c38e6713951993521dc8608",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\appearance-id-virtuals.json": "75912daef33c4619103fceccea9096302502231e1e5de38c4fec9236d5b6784c",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\remaining-appearance-virtuals.json": "502e71835e61df6a06073f06e1c271acf8368ead98684c65e8bb9ea20ebed405",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\modelboundary.py": "e1b4356b42c02e6330e6754c975bab76bb5b79e6a1616495e97d3e44c0d4ed3b",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\configurationremainingids.py": "725f76a8988e7c65cc0b55bbd2d7c44d83c4f19c26dc7aefa6b3da475c015ef2",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_composite_audit.py": "085ae5dae8a26bca80892ed26aa43227a4d0153461c29707c826d79fb8311e18",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_composite_layout.py": "138bcada101f174b435c540288492848de7ba1eb5990a4532966cad30d87486b",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\test_cosworks_composite.py": "83c90890900566d5c7c68c4540f888f135b9a3702cddb8b56510ec3fac1fc67b",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-shell-child-constructor-probe.json": "58cf202f1ab2aa83781f603290aae50f0960c7852b38157a20a10aa2a8177950",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-material-body-callers-probe.json": "39028b35ee8d67bcb8d0fa451dc21f65b2f7e5f3c43245e7256cca72a70e3291",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\cosworks-material-body-callers\\FUN_1813acc90.c": "76d210b400e04d79510df424481123a6429853f463cebc1cbec335e252e7b0fb",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\cosworks-solid-child\\FUN_1813b5db0.c": "bf49d71c9b2239a43fa0128b8c4d2a93524481c194a610c26a8174dc81c2ace3",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-body-property-static-evidence.json": "4448f0fc855f9b46859a8c6f05a9a3bc4a41c85771e000d4fc7c3d9d4b712acb",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_binary_thermal_transform_audit.py": "e4e9c50808b9d52cc8291df1a9fc6eaa6793a44db8b62fefcae827599b6109fb",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_force_optional_audit.py": "06326328127568c14914a5c5d6dca7e7295b6f4bfae8300c047b69c773e9148a",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_embedded_transform_wrapper.py": "1c723cf03c773cfa0781ab3c149eb062d42196115566ab0aaf93b3d4cb29bc7d",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_embedded_component_holder.py": "cf88c52d0d8ba77bd3b22941e1757c79f71c3577808b45261262f0c047a5fa06",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\appearance-id-rtti.json": "eac3090cd207d649890b053c3554cd2d4d31dd400ba4d8909a6a6da9167c0727",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\remaining-appearance-rtti.json": "b9fda83b572e874399ade007dfed356bf12e0ae48a111664ac09c43e872b8a76",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\third-party-storage-corpus.json": "3559b35ad01d27ac07d4de4b696e18a85283614f980d5ce125e17e3c20e6a9db"
+  },
+  "target_executed": false,
+  "coverage_credit": 0,
+  "limitations": [
+    "Candidate versions do not prove storage-suffix/runtime-index identity",
+    "Separate composite streams only; shell Property and populated transform-reference branches remain open"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "feature_issue": 159,
+  "command": "cargo xtask pr",
+  "code_commit": "a527c066e3a4f71aa3445fdd0c5e5137876aae10",
+  "code_tree": "0eb9403a19701a05efde60ae931e637531166499",
+  "platform": "Windows x86_64",
+  "toolchain": "1.99.0",
+  "exit_code": 0,
+  "process_reaped": true,
+  "summaries": 260,
+  "passed": 3447,
+  "failed": 0,
+  "ignored": 91,
+  "log_sha256": "a7f5a44042f72b207ea9e764be523bc074995d66d532e76212846052e105b4be",
+  "strict_reference_checks": 39,
+  "strict_reference_exit_code": 0,
+  "strict_reference_process_reaped": true,
+  "strict_reference_log_sha256": "3d3395d53ebd143797fb70f6c94738f4464393552435a77a9cfd63bcf4991ba7",
+  "focused_rust_tests_including_native": 24,
+  "focused_log_sha256": "00e77ca6d3ca55a87dda83b962bb4991ca3660650fc2a5f34c949dde43b0a9a3",
+  "clippy_log_sha256": "dd6eaed56a0bb62c5cd480c157689c8128e62c6673e083b12fce47825059da14",
+  "source_snapshot_sha256": "4e4a7bd823077363d5f1011a76d5228171affd6baca77dd233d53534af218f22",
+  "exclusions": [
+    "Exact-head platform gates and ThreadSanitizer for this feature remain pending.",
+    "Historical shell test bytes remain unavailable; historical native outcomes are verified.",
+    "Native writer/application and geometry acceptance remain unproven."
+  ]
+}

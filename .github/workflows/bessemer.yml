@@ -1,0 +1,70 @@
+name: bessemer
+
+on:
+  pull_request:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      mode:
+        type: choice
+        options: [validation, release]
+        default: validation
+      version:
+        type: string
+        description: Release version without the v prefix
+        required: false
+
+permissions:
+  contents: read
+
+jobs:
+  pr:
+    name: PR gate (Linux x86_64)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - run: rustup toolchain install 1.99.0 --profile minimal --component rustfmt,clippy
+      - name: Validate release version
+        if: inputs.mode == 'release'
+        env:
+          RELEASE_VERSION: ${{ inputs.version }}
+        run: cargo xtask release --version "$RELEASE_VERSION"
+      - name: Validate tagged version
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: cargo xtask release --version "${RELEASE_TAG#v}"
+      - run: cargo xtask pr
+  tsan:
+    name: ThreadSanitizer partition ${{ matrix.shard }}/8
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7]
+    steps:
+      - uses: actions/checkout@v5
+      - run: rustup toolchain install 1.99.0 --profile minimal --component rustfmt,clippy
+      - run: rustup toolchain install nightly-2026-10-23 --profile minimal --component rust-src
+      - run: cargo xtask tsan --shard ${{ matrix.shard }}/8
+  full:
+    needs: tsan
+    name: Full gate (${{ matrix.name }})
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Linux x86_64
+            os: ubuntu-24.04
+          - name: macOS x86_64
+            os: macos-15-intel
+          - name: macOS arm64
+            os: macos-15
+          - name: Windows x64
+            os: windows-2025
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v5
+      - run: rustup toolchain install 1.99.0 --profile minimal --component rustfmt,clippy
+      - run: cargo xtask full

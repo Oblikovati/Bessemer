@@ -1,0 +1,60 @@
+{
+  "parent_revision": "db9549b95ee775157954c670b0a9d58fb4d5c9bc",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "behavior": 1,
+  "local_pr_gate": {
+    "command": "cargo xtask pr",
+    "passed": 2876,
+    "failed": 0,
+    "ignored": 9,
+    "summaries": 220
+  },
+  "owned_complete_scene_xml_pairs": 11,
+  "native": {
+    "files": 38,
+    "xml_bytes": 21529648,
+    "geodes": 1787,
+    "references": 4445,
+    "unique": 4416,
+    "unmatched": 29,
+    "probe_sha256": "cc2648bd9df232c73d2bbd53cfc40e87c197aac09ed845e2326e8dac39840479",
+    "edited_bundle_sha256": "3cc9169490a9a443aedfd398631b7e6a4af16d46d6f706f25f68ad61ff7932d1",
+    "two_process_byte_comparison_equal": true,
+    "all_original_and_edited_projections_match_frozen_reader": true,
+    "independent_expat_lexical_edit_check": true
+  },
+  "schema": {
+    "clause": "14.91",
+    "requirement": "C-467",
+    "issue": 104,
+    "source_sha256": "2d08056e1c03300ea336d720c2ae9975baa2c524722cd44a3170ca5a9d63bd20",
+    "snapshot_sha256": "686027988dea34a4a4f1a79d0823b6d637b843dabd535c63f46cdcf7736c5f0f"
+  },
+  "runtime_sha256": {
+    "src/composer/links/catalog.rs": "f14f9d37a46edf12cb236551d3e84c503295a41c2c438a4bc603447076710326",
+    "src/composer/links/index.rs": "22f81129644bb0d78e751abf9adbbbe94434f17c8946f0b3df6e60502972ee30",
+    "src/composer/links/mod.rs": "255d4a7e7be76268dad7c5310a3463e8218cc34f454fcbe8e010be3c524cce4a",
+    "src/composer/links/types.rs": "35fd416cf318fd091f782afe0cf7565e40e38878fe95121cf9ff4438e0b6cc2d",
+    "src/composer/mod.rs": "d8b67000bf790eb8a1f5de431be14312f85e02b09e443b3e3f7fe6894859a1bd",
+    "src/metadata/composer.rs": "2bbe757da6f2f7bf5698488901bf70019f1059c1beaab2a4221a1860a782ef75",
+    "src/metadata/edit.rs": "a7a2398d2221113e2b10a0f2a1306f054cf394da160db7c3bead2f93a7e5a8cd",
+    "src/metadata/mod.rs": "a0fc0c2b9dee5b7c4c4283e1349288b24cc9e1850908edcd22db608ab85f87ac"
+  },
+  "verification": [
+    "eleven owned full reference projections",
+    "literal independent edit golden and XML metacharacters",
+    "all seven resource budgets",
+    "foreign revision rejection and no-op identity",
+    "source mutation/drop isolation and six concurrent edits",
+    "public Send/Sync assertions",
+    "frozen reader origin checks and complete scene EOF"
+  ],
+  "exclusions": [
+    "native runtime resolution",
+    "graph side effects and cloning",
+    "complete Composer actor/property/project semantics",
+    "native application acceptance",
+    "ThreadSanitizer for this local unpushed feature"
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "issue": 166,
+  "behavior_version": "C856-hidden-parts-load-v1",
+  "platform": "Windows x64",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "target_executed": false,
+  "kernel_decision": "Keep original typed version and optional signed wire1F0 separate from derived object1EC/1F0. Require explicit700006..840007 scope before the word read; reject raw-class/later paths without fallback. Preserve all three exact store identities including the64-bit adjacent overwrite. Return both runtime words, zero/nonzero completion, complete original-input derived history, exact store coverage and zero local pattern error without wire edits, native pointer approval or full visibility semantics.",
+  "complete_installed_instruction_count": 227,
+  "independent_ghidra_instruction_count": 227,
+  "exact_decoder_qualifications": 0,
+  "public_send_sync_types": 8,
+  "operation_cases": 4336,
+  "owned_complete_contexts": 425,
+  "complete_word_1f0_mutants": 140,
+  "native_accepted_contexts": 276,
+  "original_migration_contexts": 116,
+  "later_native_contexts": 160,
+  "original_rejected_contexts": 8,
+  "hypothetical_contexts_per_parent": 8,
+  "additional_stored_byte_credit": 0,
+  "rust_owned": {
+    "passed": 8,
+    "failed": 0,
+    "ignored": 2,
+    "seconds": 0.18,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/hidden-migration-rust-owned.log",
+      "bytes": 1343,
+      "sha256": "9dd4df52c25f636d1fcb701c1ee28799607ba6b09da8ffc7f2f41670af9031a2"
+    }
+  },
+  "rust_native": {
+    "passed": 1,
+    "failed": 0,
+    "ignored": 0,
+    "seconds": 0.14,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/hidden-migration-rust-native.log",
+      "bytes": 410,
+      "sha256": "e162dd627d748ad22ac07db2fd6ea941552d300ede959d724cda27b3836dbba5"
+    }
+  },
+  "clippy": {
+    "arguments": "--all-targets --all-features -- -D warnings",
+    "seconds": 36.73,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/hidden-migration-clippy.log",
+      "bytes": 136,
+      "sha256": "18005fbfebd1853d501edfae7157f19857319702ce2e6e8529555db34b05d14c"
+    }
+  },
+  "initial_freeze": {
+    "checks": 20,
+    "seconds": 8.747,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/hidden-migration-operation-source-initial.log",
+      "bytes": 3291,
+      "sha256": "4eabd4343f261de7b387cb887c50a103e8cc8e6963adcc6007894256128d68b2"
+    }
+  },
+  "strict_source": {
+    "checks": 20,
+    "seconds": 5.956,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/hidden-migration-operation-source-strict.log",
+      "bytes": 3291,
+      "sha256": "01aeb14218c8cda84562ffc60115fc789a6e48be210908bf803d183aac90a7ed"
+    }
+  },
+  "snapshot": {
+    "path": "docs/features/simulation-post-dialog/hidden-migration-source-snapshot.json",
+    "bytes": 625455,
+    "sha256": "846f20064ee272c5882f8925aa604c3807369ab0321f0639eb8c2e1557d5dbfd"
+  },
+  "operation_packet": {
+    "path": "tests/fixtures/simulation-post-dialog/hidden-migration-operations.bin",
+    "bytes": 190792,
+    "sha256": "d8bc38b4827c4974302d7026682f81bee8dab901b0bf3e2e931fa301fbeb9127"
+  },
+  "owned_projection_packet": {
+    "path": "tests/fixtures/simulation-post-dialog/hidden-migration-projection.bin",
+    "bytes": 1682687,
+    "sha256": "59b208bd8503f9e0085d67195ea898a1b3a55f31a512a2266c55f1f3104194df"
+  },
+  "process_proof": {
+    "path": "docs/features/simulation-post-dialog/hidden-migration-process-verification.json",
+    "bytes": 988,
+    "sha256": "6dda09242455cd1a99089943370966b9674a108fa658d2af8b9fc3bb0ed4bee5"
+  },
+  "oracle_kinds": [
+    "Complete original Source/native reader evidence with exact version/read/store boundaries",
+    "Frozen migration helper and independent little-endian byte-store/unsigned-decrement emulation",
+    "All scope/presence/store branches, signed32 boundaries and generated raw patterns",
+    "All425 owned/276 native parents,140 complete1F0 mutants and eight explicit word contexts retaining actual versions",
+    "Eight public Send+Sync types, success/failure/source-mutation isolation and eight-worker comparisons",
+    "Two fresh Rust processes matched all90194 independently expected words byte for byte"
+  ],
+  "excluded": [
+    "Native target/store execution, native object pointer validity and full visibility decision",
+    "Raw-class conversion before700006 and later direct reads; those are unsupported migration contexts",
+    "New stored1EC fields, inferred constructor/default state, wire rewrites or broader native admission",
+    "Nonzero native migration observation and full visual meanings of1F0"
+  ],
+  "pending": [
+    "Remaining feature166 models",
+    "Exact publication-head cargo xtask pr and all five platform gates including ThreadSanitizer"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_source_replay": {
+    "checks": 304,
+    "failed": 0,
+    "seconds": 547.37,
+    "process_exit_code": 0,
+    "accepted_source_cut": "b8d1cfec9d47748f758caf6556e69f32e400fd14",
+    "log": {
+      "path": "target/hidden-migration-operation-source-full.log",
+      "bytes": 66637,
+      "sha256": "3acef50f786a84cd4fe2cce350c6d8f5dec147d66857c348334df5815b6b2ad2"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 633812,
+      "sha256": "4f58f36d927d1ba31c866113208a182c34e486665d2994121fd9ebda54a8a206"
+    },
+    "terminal_exit_reaped": true
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "base_revision": "1926156ea7919563f1831a058fee6ae3e4c4ee36",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 434,
+    "library_ignored": 3,
+    "all_integration_suites_passed": true,
+    "doctests_passed": 265,
+    "log_sha256": "a739b40ddcf8e80f399af4704017f4ac798e27a1bdb942be1d508e22d81e6472"
+  },
+  "focused": {
+    "private_tests": 3,
+    "public_tests": 2,
+    "python_tests": 3,
+    "final_public_slot_assertions_passed": true
+  },
+  "native_corpus": {
+    "cases": 906,
+    "accepted": 463,
+    "rejected": 443,
+    "fresh_process_outcomes_identical": true,
+    "expected_full_parity_exit_code": 101
+  },
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "exclusions": [
+    "Full documented schema parity",
+    "Native geometry and topology validation",
+    "Native application acceptance",
+    "Non-Windows execution is checked by the integration PR matrix"
+  ],
+  "dependencies_changed": false,
+  "version_changed": false,
+  "final_staged_gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 434,
+    "library_ignored": 3,
+    "all_integration_suites_passed": true,
+    "doctests_passed": 265,
+    "log_sha256": "09154dfe902ab8bd83d77ec111c11a19642d13cdea93b8a0cf19af385586808b"
+  }
+}

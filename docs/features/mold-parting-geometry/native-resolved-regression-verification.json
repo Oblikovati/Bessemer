@@ -1,0 +1,31 @@
+{
+  "issue": 217,
+  "source_identity": "See local-verification.json Rust source hashes for the compiled working tree",
+  "command": "BESSEMER_KERNEL_SCHEMA=<installed sch_13006.s_t> target/mold-parting-geometry-tests-v4.exe --ignored --exact model_archives::resolved_corpus_tests::complete_native_resolved_corpus_requires_exact_typed_reconstruction --nocapture",
+  "terminal_exit_code": 0,
+  "cases_accepted": 906,
+  "ordered_case_indices": "0..905 inclusive, exactly once each",
+  "test_result": "1 passed; 0 failed",
+  "seconds": 80.35,
+  "packet_eof": "The executed test requires the BRF1 header, exactly 906 records, cursor.remaining() == 0, and accepted == count",
+  "sha256": {
+    "target\\mold-parting-geometry-native-resolved-regression-selected-schema.log": "80743ff45a7cb98a73c0741f42e92efec91a2ae0ef21a312a71c2d566fa23ac7",
+    "target/mold-parting-geometry-tests-v4.exe": "2e26651aee30c20aa8f5899ca7a360abf99fb6a42eec512bf8751001a27e3a43",
+    "target/resolved-native-probe.bin": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+    "C:/Program Files/SOLIDWORKS Corp/SOLIDWORKS/data/pschema/sch_13006.s_t": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af"
+  },
+  "scope": "Previously retained selected native model-header, configuration, manager and resolved-feature stream sets; public/private typed reconstruction and exact re-encoding",
+  "earlier_unselected_schema_run": {
+    "terminal_exit_code": 101,
+    "cases_accepted": 450,
+    "reason": "BESSEMER_KERNEL_SCHEMA was absent; strict kernel-context failures for streams requiring a schema",
+    "log": "target/mold-parting-geometry-native-resolved-regression.log",
+    "sha256": "9e77138f3c4d85baa4167c41a55bb44376ea6025bd08eb438d667a243eb8c8c3",
+    "action": "Reran unchanged code and test with explicitly selected installed schema; no fallback or relaxed assertion"
+  },
+  "exclusions": [
+    "No newly observed native populated parting-geometry/child/connected-component body",
+    "No source producer-parser execution or native DLL execution",
+    "No whole-document, geometry, native application, historical/special-context or whole-schema parity credit"
+  ]
+}

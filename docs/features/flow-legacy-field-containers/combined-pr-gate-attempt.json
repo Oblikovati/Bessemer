@@ -1,0 +1,26 @@
+{
+  "issue": 241,
+  "source_revision": "f0bd5f219326251c3ebb3bc1c6519c45aaf31339",
+  "command": "cargo xtask pr",
+  "status": "completed",
+  "accepted": true,
+  "session": 17115,
+  "worktree": "C:/bessemer214-ci",
+  "cargo_build_jobs": 1,
+  "log": "target/flow-legacy-fields-combined-full-pr-gate.log",
+  "scope": "Combined source through raw105/113/155 runtime APIs and their frozen oracles, including prior logical index/checkpoint/IMS/control source",
+  "exclusions": [
+    "Later timestamp baseline and runtime API not covered",
+    "PR249 hosted checks cover older a1f41b28 publication source only",
+    "Hosted matrix and sanitizer acceptance of f0bd5f21 pending",
+    "Ignored native/runtime/application cases and whole-schema parity remain excluded"
+  ],
+  "exit_code": 0,
+  "results": {
+    "passed": 5138,
+    "failed": 0,
+    "ignored": 268,
+    "result_summaries": 407
+  },
+  "log_sha256": "0ebdd758f9ef73cf835b4bff5ea148bc52fed52b412c61fe8bf369d64cf425e6"
+}

@@ -1,0 +1,59 @@
+{
+  "base_revision": "53156157abc4d011ba1de0ed735151f6b5f0c388",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "gate": {
+    "command": "cargo xtask pr",
+    "staged": true,
+    "exit_code": 0,
+    "library_passed": 478,
+    "library_ignored": 3,
+    "xtask_tests_passed": 4,
+    "all_integration_suites_passed": true,
+    "doctests_passed": 265,
+    "log_sha256": "af21204f60cf24b03f20761d8cabaad5a365b49c6e3c8954bca2ca81798a5285"
+  },
+  "focused": {
+    "private_tests": 4,
+    "public_tests": 2,
+    "python_tests": 3,
+    "object_cases": 152,
+    "primitive_reads": 21264,
+    "owned_streams": 7,
+    "case_and_owned_facts_and_packet_unchanged_after_sharing_builder": true
+  },
+  "native_corpus": {
+    "cases": 906,
+    "accepted": 593,
+    "rejected": 313,
+    "previous_588_preserved": true,
+    "changed_frontiers": 25,
+    "fresh_process_outcomes_identical": true,
+    "expected_full_parity_exit_code": 101,
+    "independent_exact_eof_bytes": 34598692
+  },
+  "reference_audit": {
+    "pinned_python_files": 1042,
+    "snapshot_identity": "41e75c124c45c56112414002d7b9e0a1291ca60a69a8151ad227ee20f6ad4bf1",
+    "snapshot_copy_verified_against_stable_original": true,
+    "snapshot_hashes_stable_during_audit": true,
+    "temporary_snapshot_removed": true
+  },
+  "required_regression_fix": "53156157abc4d011ba1de0ed735151f6b5f0c388 / Bug #46",
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "source_file_sha256": {
+    "src/model_archives/component_references.rs": "dcbb67f204dd7836058864d21f7212a0b1f7b496bee6c027cb5811654a6a9040",
+    "src/model_archives/object_body.rs": "111d263dbbe6da7adbffd45c989bc9b63ce89660c0bd96982dd8b552b50e75a6",
+    "src/model_archives/test_modules.rs": "c48dc818c2fc64ab1153f8dc14e96c428bb3acd4ff2dec4c042c3980fc8d6731",
+    "tests/resolved_features/component_geometry.rs": "4b2bfb2e392a785343c95da33e5b9bbf2f907798b2925ecb19c949e70a049a95",
+    "tests/resolved_component_geometry.rs": "67eb9047e118f3483959fc24e2d8c0a8eec84349c1628f8b2d2e7fd134c880a3"
+  },
+  "exclusions": [
+    "Full documented schema parity",
+    "Native geometry and topology validation",
+    "Native application acceptance",
+    "Non-Windows execution awaits the feature integration PR matrix"
+  ],
+  "dependencies_changed": false,
+  "version_changed": false
+}

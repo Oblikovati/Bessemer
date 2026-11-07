@@ -1,0 +1,112 @@
+{
+  "issue": 166,
+  "behavior_version": "C850-explicit-post-suffix-call-plan-v1",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "target_executed": false,
+  "kernel_decision": "Preserve optional D8 and raw reversal. Copy D8 and construct explicit nearest-even packed white before requiring runtime index178. Plan only reached calls: sentinel-2 forwards the entire signed requested count, invalid indices complete an empty fallback, and partial paths retain suffix before prefix including zero prefix count. Compute offset as sign-extension of low32 triple then times4. Require explicit post-suffix reversal/count/index rereads without assuming helper state isolation. Retain all original parents, derived history, exact integer coverage, zero raw-pattern error, conditional native return and downstream exclusions.",
+  "complete_installed_instruction_counts": [
+    67,
+    52
+  ],
+  "independent_ghidra_instruction_count": 119,
+  "public_send_sync_types": 10,
+  "operation_cases": 13632,
+  "owned_complete_contexts": 425,
+  "complete_color_reversal_mutants": 210,
+  "native_accepted_contexts": 276,
+  "original_rejected_contexts": 8,
+  "hypothetical_contexts_per_parent": 8,
+  "local_requests": 20920,
+  "additional_stored_byte_credit": 0,
+  "exact_historical_color_report_transitions": 1,
+  "exact_decoder_qualifications": 1,
+  "decoder_bug": 172,
+  "rust": {
+    "checks": 13,
+    "failed": 0,
+    "ignored": 0,
+    "seconds": 0.27,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-yield-rust-final.log",
+      "bytes": 1387,
+      "sha256": "dfb2b67652a0c1a48e9260b1792158b23b98245948cdd5fcea431ebfa934d4c1"
+    }
+  },
+  "clippy": {
+    "arguments": "--all-targets --all-features -- -D warnings",
+    "seconds": 34.15,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-yield-clippy.log",
+      "bytes": 136,
+      "sha256": "0a04709112a66a61a5cfc667b2af6672c68a929320a8524de52699c8f1aed79c"
+    }
+  },
+  "strict_source": {
+    "checks": 17,
+    "seconds": 6.163,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-yield-operation-source-strict-final.log",
+      "bytes": 2732,
+      "sha256": "9f2c0d69415ebb66cffa0b65205bcda72502eb3e9a82e9f5adb879cae414f5fc"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/legend-yield-source-snapshot.json",
+      "bytes": 625257,
+      "sha256": "70f0fe4a09d923d5ae4d46abe0ee2a78b962a2997504aff5bdd45b5fd2aa87cf"
+    }
+  },
+  "fresh_process_proof": "legend-yield-process-verification.json",
+  "operation_packet": {
+    "path": "tests/fixtures/simulation-post-dialog/legend-yield-operations.bin",
+    "bytes": 1526792,
+    "sha256": "c509e3bdeeb54ad429b5bace63e7b3473123b2c26e34e9e1dede429888ea4a18"
+  },
+  "owned_projection_packet": {
+    "path": "tests/fixtures/simulation-post-dialog/legend-yield-projection.bin",
+    "bytes": 2080167,
+    "sha256": "ca9180889fd3dcae474031c087dc55655af32aa85ba2faa1006491435a94c3af"
+  },
+  "oracle_kinds": [
+    "All prior complete C850 native evidence and original acceptance/rejection qualifications",
+    "Independent Python unbounded comparisons, modulo32 triple, signed64 displacement and exact native dependency order",
+    "Every presence-mask/boundary combination, high-bit LCG presence variation and generated successful partial paths",
+    "Complete versioned Source/Rust parent replay, arbitrary raw color/reversal mutations and retained archive bytes",
+    "Eight-worker comparisons for generated operations and owned/native parents, compile-time Send+Sync for every public type",
+    "Two fresh processes compared byte for byte to every independent expected result"
+  ],
+  "excluded": [
+    "Native target execution and actual gray-path invocation",
+    "Complete tick adjustment, runtime index derivation or exceptional FP behavior",
+    "Mapping helper interpolation/state changes, pointer validity or mapped colors",
+    "Inferring post-suffix facts from entry state",
+    "Gray/alpha validity constraints, count-sized wire framing, absent-field defaults and new stored-byte credit"
+  ],
+  "pending": [
+    "Remaining documented feature166 models",
+    "Exact publication-head cargo xtask pr and all five platform gates",
+    "Bug172 integration with feature166"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 255,
+    "seconds": 542.274,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "b9266b80fef02e92aefd59649b5a3d96755603be",
+    "log": {
+      "path": "target/legend-yield-operation-source-full.log",
+      "bytes": 57600,
+      "sha256": "1db41249667dc4952afd9c9a3b387d264603d18f022ba4d41e7aae197ef9ebeb"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 633132,
+      "sha256": "c39e9617e27ff82c8c77aae4ecadfaaf43eaf3ca55f4c95dfa057f548a18db82"
+    }
+  }
+}

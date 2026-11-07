@@ -1,0 +1,94 @@
+{
+  "feature_issue": 163,
+  "scope": "Complete independent owned/native fields, physical extents and ordered scalar-edit provenance; Rust implementation remains pending",
+  "implementation_parent": "f4d3e05d5a9ddd846eef994e80b4508f2b2444cd",
+  "behavior_profile": 1,
+  "reference_checks": 32,
+  "original_tests": 20,
+  "initialization_exit_code": 0,
+  "initialization_process_reaped": true,
+  "strict_exit_code": 0,
+  "strict_process_reaped": true,
+  "owned": {
+    "contexts": 588,
+    "versions": 98,
+    "logical_bytes": 1151425,
+    "null_text_controls": 98,
+    "direct_records": 574,
+    "nested_records": 716,
+    "packets": {
+      "input": {
+        "bytes": 1355313,
+        "sha256": "9c5b0a27262e8c815742a62f5f30962b3670ade377c55cc09090c7506b5de4d1"
+      },
+      "projection": {
+        "bytes": 7465950,
+        "sha256": "63f513a582cf4ab243dbf958ea9d42427455124bb7f655f03ff2a1b891620603"
+      },
+      "history": {
+        "bytes": 10998495,
+        "sha256": "e881f46d8ceba500a551d970d7428df2ecab457731dda78138d38a9ac6c5f043"
+      }
+    }
+  },
+  "native": {
+    "streams": 357,
+    "accepted_arguments": 357,
+    "original_arguments": 391,
+    "original_failed_arguments": 34,
+    "packets": {
+      "projection": {
+        "bytes": 805362,
+        "sha256": "31d4bf470de1b3ce0a861b65d2985368ed1ad1128ed6c8dac17727c838fb8a13"
+      },
+      "history": {
+        "bytes": 1256706,
+        "sha256": "85e08b565d361f7708b17ef3108b49369609c34ad1166d1810d0855cadbad046"
+      }
+    }
+  },
+  "source_snapshot_identity": "d9d4198ce15b4d3fa2be8686ffa50076e365cb9bcce55ab3cf0746dc20fc5244",
+  "all_owned_literal_and_nested_spans_match_actual_source": true,
+  "all_nonstructural_scalar_edits_match_complete_source_fields_and_ordered_parents": true,
+  "unassigned_raw64_fields_projected_as_fixed_bytes": true,
+  "original_thermal_fixture_bytes_preserved": true,
+  "earlier_owned_packets_preserved_as_exact_prefixes": true,
+  "function_and_file_bounds_audited": true,
+  "artifacts": {
+    "target/mesh-property-final-oracle-write.log": {
+      "bytes": 4595,
+      "sha256": "8b0708e0aa0f3afadf1f5206856a125c1c637bcd33b66d7f9c778040baf20d5b"
+    },
+    "target/mesh-property-final-oracle-strict.log": {
+      "bytes": 4595,
+      "sha256": "8e4e58b774a5e2305c2493e31b79a0ece88b67f466e1673b24bf31397d037d7b"
+    }
+  },
+  "oracle_sources": {
+    "freeze_mesh_property.py": "47f603969f13b079f156d41473de3f1ce0b7e6ffa24d388326db784bcf4a8baa",
+    "owned_property.py": "ce767c15490864f125aede7106149d58d5d976fb16deca7e5ee35f0bebfa5d3e",
+    "property_bindings.py": "ab60ec022a71eb573a3610b3afb1f7faaf3dd5e924135d3d9af5547a0b24e27f",
+    "property_collection_literals.py": "50a2ee4f10da4d44aa244dbfadfa52e3cf5739056123b149dc17abaef5f8019c",
+    "property_evidence.py": "787fe82f2a436ec079369758bea26af662b899aec81dc83ceb2b0771d7ecda3f",
+    "property_history.py": "9d5c97f28b750eab9b4a8a9d5dbaf66c42aa7863d547cf952b9871195b7c4c51",
+    "property_initial_literals.py": "fd807348ffa772355388d1e8403f02a3b2c11bbcecc2c6764be5d05311f0a311",
+    "property_literal_values.py": "51615a3c8585007fb8b2e500ec2410df2bb307a867e2dba7284cb6ae0e5cdd9b",
+    "property_native.py": "2ea7b2f5768da624c7f605cddcee83985fc2f815b32f031108ef8a2545513e93",
+    "property_native_operations.py": "048e1476b8c4f1f4d89008029ded4dda35d8c449707e193b583468adb27ed5a7",
+    "property_nested_literals.py": "df36e2fa5e3d348e541500dd3e401c88beecacf04a62e458576b4bd82ee80b11",
+    "property_owned_packets.py": "effb9402afae3ac2aca30bcc86f7d87710a40319a48c38e9d32da91f22758e22",
+    "property_projection.py": "800da74836bb8992466a4150e34a31dde532583e057b2c78245051c540460d99"
+  },
+  "exclusions": [
+    "Typed Rust read/construction/edit and operation result contracts",
+    "Complete malformed controls and sufficient-payload fixed caps",
+    "Exact/one-below resource budgets and full input/failure isolation",
+    "All changed value kinds and mixed concurrency",
+    "Two fresh Rust process exports",
+    "Full local and exact-head platform/ThreadSanitizer gates",
+    "Native populated nested/set fixtures",
+    "Native application/writer and geometry acceptance",
+    "Whole-format schema parity"
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending"
+}

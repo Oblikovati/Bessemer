@@ -1,0 +1,67 @@
+{
+  "issue": 241,
+  "behavior_version": 1,
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "source_base_commit": "efd34bcadc754a1e7dbb4bbee06328fb334304b6",
+  "source_sha256": {
+    "src\\flow\\arrays\\decode.rs": "048ea54ad2d002f8324a381a5394ea8a83569ac5781a3e015aa5aacacbfc8025",
+    "src\\flow\\arrays\\edit.rs": "6c4bb61065eabdd565674ae23974f0661e65e633346dc6a4f8707a2c3780b4f5",
+    "src\\flow\\arrays\\mod.rs": "1d1a0e76b8e80db633d4573046b93230ba6e2a4bc6528c361b320246f29823b3",
+    "src\\flow\\arrays\\types.rs": "652240a40c069b38abeaa02b03aa81d78663efcf8f4708daf779aad63bbe78f6",
+    "src\\flow\\mod.rs": "cb4973f5d2de88a3cb0c847347802c1dc5bd90e5185804a617ba9cfb41388e2e",
+    "src\\flow\\edit.rs": "7d776c1255e83be5b69025bb0426e3b118106c2ddc8b83ecf4d1a9bbe07f3e4b",
+    "tests\\flow_arrays.rs": "0532bb39ae4f579536ea34dc1692fc5ba9f848fc3ca3f8fd5e1800bcea066cc2",
+    "tests\\flow_arrays\\census.rs": "5716d17e8125605b5430e6a42cef54ce01f41bdc96120c8a3173e18893236e2c",
+    "tests\\flow_arrays\\fixture.rs": "d40be8ca6745ce7544e0fc8bf8299c8f3e3d79a58197ffd370fc56191b6e8f6a",
+    "docs\\features\\flow-arrays\\freeze_arrays.py": "de1d3ebff2b5d129f859bccbfbd4dbadee7450fba0b0937ead5bac52c332fd27",
+    "docs\\features\\flow-arrays\\test_arrays.py": "2dcc335fca975b91370adb44350c13506a70c39d5c6b24c44f26145c54ff36bf"
+  },
+  "regular_tests_passed": 23,
+  "regular_tests_failed": 0,
+  "regular_native_census_ignored": 1,
+  "python_tests_passed": 2,
+  "native_census": {
+    "passed": 1,
+    "cell_edits": 11904,
+    "logical_reversals": 11904,
+    "elapsed_seconds": 4.29,
+    "native_application_execution": false
+  },
+  "fixtures": 13,
+  "native_elements_per_array": 5952,
+  "workers": 8,
+  "commands": [
+    {
+      "command": "cargo test --test flow_arrays --test flow_carriers --test flow_headers --test png_zlib_contract --locked",
+      "exit_code": 0
+    },
+    {
+      "command": "cargo clippy --lib --test flow_arrays --test flow_carriers --test flow_headers --test png_zlib_contract --locked -- -D warnings",
+      "exit_code": 0
+    },
+    {
+      "command": "cargo test --test flow_arrays --locked every_native_signed_cell -- --ignored --nocapture",
+      "exit_code": 0
+    },
+    {
+      "command": "python docs/features/flow-arrays/test_arrays.py",
+      "exit_code": 0
+    }
+  ],
+  "log_sha256": {
+    "target/flow-arrays-accepted-tests.log": "180b0b369a975f4d511422a03b494816e6256415bae98f2e31d9f1b8271b1aa2",
+    "target/flow-arrays-accepted-clippy.log": "b52a1007e983afe197a8296da138a145d3c5489857d821e22ade1f8a591dd875",
+    "target/flow-arrays-accepted-native-census.log": "6165dd1db366341932240c778940ea03fecb52e38b524de68ed9e743c41ab4af",
+    "target/flow-arrays-accepted-python-tests.log": "5e177c0988e7b2c87c01713cf35b21a42bf46b7eee455f8b36bdfbfb3e38f0cc",
+    "target/flow-arrays-process-build.log": "a7a8d6dfee1cd1390ecc042734050ad7898fa995cc854156e016425f4b9687c3"
+  },
+  "exclusions": [
+    "Array semantic domains and units",
+    "Native runtime-count provenance and owner population",
+    "Selector/count/length edits and new record construction",
+    "Fresh reverse original compressed-wire identity",
+    "Native application and geometry acceptance",
+    "Full repository gate for this newer source cut",
+    "Previous-release time/peak-memory comparison"
+  ]
+}

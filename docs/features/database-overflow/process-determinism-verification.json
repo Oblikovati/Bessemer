@@ -1,0 +1,19 @@
+{
+  "issue": 229,
+  "processes": 2,
+  "process_exit_codes": [
+    0,
+    0
+  ],
+  "identical_bytes": 2728863,
+  "output_sha256": "22cced8d0f900a272131b797d03b462e65c3759bbed2d089c67904ba01973689",
+  "owned_complete_chains": 111,
+  "native_complete_chains": 3,
+  "independent_checks": "Every original page, edited page and value matches the independent closed-form owned spans or literal native spans; every fresh reverse matched original snapshot before emission",
+  "probe_retained": false,
+  "exclusions": [
+    "No native target or original producer executed",
+    "Containing-document reopen/reversal covered by focused test, not included in this process packet",
+    "Full local and exact-head remote gates remain required"
+  ]
+}

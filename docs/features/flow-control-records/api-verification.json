@@ -1,0 +1,116 @@
+{
+  "issue": 241,
+  "source_revision_before_api": "e21ae7438e4262da210f0da40dc9fafd1daac015",
+  "scope": "Complete strict saved-span and explicit4/8-byte terminal-index writer payload reads and isolated existing-field edits; no automatic adoption/reconciliation",
+  "platform": "Windows x64; Rust1.99.0; CARGO_BUILD_JOBS=1",
+  "results": {
+    "rust_integration_passed": 18,
+    "rust_failed": 0,
+    "ignored_workers": 1,
+    "worker_invocations_by_parent": 2,
+    "unit_passed": 1,
+    "unit_filtered_out": 1478,
+    "python_passed": 11,
+    "clippy": "passed",
+    "format": "passed",
+    "function_file_caps": "passed",
+    "maximum_function_body_lines": 19
+  },
+  "commands": {
+    "tests": {
+      "command": "cargo test --locked --test flow_control_record_fixtures",
+      "exit_code": 0,
+      "log": "target/flow-control-records-api-tests.log",
+      "sha256": "6971aba3c438ce143ae5c1c2550b6f1943a4e2ad22d62f47dc2abf62b6abd689"
+    },
+    "unit": {
+      "command": "cargo test --locked --lib distance_width_checks_the_exact_four_byte_overflow_without_allocating_a_giant_payload",
+      "exit_code": 0,
+      "log": "target/flow-control-records-api-unit.log",
+      "sha256": "a3be77f00742cea101b718133703f94d4726269fc90e41082aa59c9fe93e1c18"
+    },
+    "clippy": {
+      "command": "cargo clippy --locked --test flow_control_record_fixtures -- -D warnings",
+      "exit_code": 0,
+      "log": "target/flow-control-records-api-clippy.log",
+      "sha256": "183f9bec31cd3648555187a41cff85fd5e74ba762a7b240a3e55574b196bc29a"
+    },
+    "format": {
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "log": "target/flow-control-records-api-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "python": {
+      "command": "python -m unittest discover -s docs/features/flow-control-records -p test_controls.py",
+      "exit_code": 0,
+      "log": "target/flow-control-records-api-python.log",
+      "sha256": "0c68d43abdad7ca337dfaeed936ff043585c178dcada2366efea2b305d294747"
+    }
+  },
+  "coverage": {
+    "cases": 1071,
+    "saved_cases": 313,
+    "index_cases": 758,
+    "saved_entries": 132381,
+    "index_entries": 264894,
+    "saved_field_reads": 264762,
+    "index_field_reads": 794682,
+    "total_field_reads": 1059444,
+    "saved_matrix_edits": 1114,
+    "index_matrix_edits": 3738,
+    "total_matrix_edits": 4852,
+    "edit_policy": "Every field in tables <=64 entries; distinct first/middle/last entries and all their fields in larger tables; all original synthetic example fields",
+    "oracles": [
+      "Independent frozen ordered raw fields, complete decoded bodies and transport/footer extents",
+      "Literal key/value/identifier/start/span byte patches",
+      "Stored no-op preservation, complete physical history and fresh decoded reversals",
+      "Changed compression extents force checked footer-distance recomputation for both widths",
+      "Exact four-byte maximum/overflow and full eight-byte distance literals without giant allocation"
+    ],
+    "contracts": [
+      "Exact/one-below decoded and entry budgets; complete empty headers with zero-entry bounds",
+      "Unsigned saved count retains full64-bit profile without an invented signed cap",
+      "Nonnegative signed index counts and impossible native-width bounds",
+      "Every marker/footer bit, wrong declared width and strict complete decoded EOF",
+      "Checksum/truncation/concatenation/junk and non-zlib wrapper rejection",
+      "Direct reserved control reads do not change ordinary or solver selector policy",
+      "Invalid indices and foreign/wrong/stale identities preserve sources",
+      "Caller buffers mutate/drop and unrelated physical edits preserve retained views"
+    ],
+    "new_public_types_send_sync": 9,
+    "reused_public_types_send_sync": 3,
+    "concurrent_workers": 8,
+    "operations_per_worker": 32,
+    "concurrency": "Mixed saved/index edits and failure paths matched serial output for both footer widths",
+    "process_replay": "Two fresh source-verifying workers checked all owned reads/coverage and selected edits, comparing complete wire/coverage transcripts byte for byte"
+  },
+  "source_lf_sha256": {
+    "src/flow/legacy_tables/control_records/edit.rs": "e8b89fb6e228ab2dc57f9b174ade55205461c7f274e616a9dedc0af36e99cdad",
+    "src/flow/legacy_tables/control_records/mod.rs": "9302b6fc859f15d114fc271024efb1afae45f0563766ceadffa63872068a8da2",
+    "src/flow/legacy_tables/control_records/read.rs": "a106366e086550193d09fd1509858fa9d7a4dd14bd79c246dc98a6a21f1119e9",
+    "src/flow/legacy_tables/control_records/transport.rs": "7fa8d5ff6b0150d57d907bb4c3bcbd37fef29d608a43f42319f8ad82d5bb17d4",
+    "src/flow/legacy_tables/control_records/types.rs": "9b0c1b5ce6607bb015838780cf7ea3908419e051e7cad2b5345c0ddbf7a28c0f",
+    "src/flow/legacy_tables/control_records/view/index.rs": "718b62284fe40a9abc12d28d8ec26ef9427561de89f84502c59335fb0142b351",
+    "src/flow/legacy_tables/control_records/view.rs": "0f26892ba20556529610a50924f5967560c93b6a91d06fc631893ac036cd1b7d",
+    "tests/flow_control_records/api/contracts.rs": "5ba3e25db6c71001b0b453a6060e3b04bbbedb174e4291fb80ca693310022f6a",
+    "tests/flow_control_records/api/edit.rs": "53ad3925388fa2177e25fabdb24af2a4f6ccb0842eaf0f942c649a5a3d14e91f",
+    "tests/flow_control_records/api/replay.rs": "18c36b89d4ea7007a234958de2f615edf79db8e5a8d08bf49921962b3889d9df",
+    "tests/flow_control_records/api.rs": "5ada7d2b1beea4d4c57c6144f522deb756169fb72622006abf4077b3431c08a5",
+    "tests/flow_control_records/fixture.rs": "85bd620543550f2864aa20a56ed0d81116ced16d6c291f1c1df06a04b65d725f",
+    "tests/flow_control_records/rebuild.rs": "07d293ebd0d0bfd66debf25ddb96b91ea52948fd908424cbcdeac95c830a8156",
+    "src/flow/legacy_tables/mod.rs": "d814c85340b9c16e1c779d4f3c2b561cfae1cb46c41505cc5ff3dece9a2ffa73",
+    "tests/flow_control_record_fixtures.rs": "b3c3092b6ba720fb586106eead3f6b9af3984195243c68b3aca04fa84b762e26"
+  },
+  "exclusions": [
+    "Full gate419844f2 accepted only earlier source and excludes this API plus IMS500/501",
+    "Full cargo xtask pr acceptance of this source revision pending",
+    "PR249 and its hosted checks exclude this API plus IMS500/501",
+    "No installed native control-payload fixtures or native execution verified",
+    "Strict zero-marker writer framing is not universal native reader acceptance",
+    "Four-byte footer context does not establish another physical carrier format",
+    "Saved key/value semantics, target-span validation and automatic adoption/reconciliation not performed",
+    "Logical index replay and native application acceptance pending"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose review pending"
+}

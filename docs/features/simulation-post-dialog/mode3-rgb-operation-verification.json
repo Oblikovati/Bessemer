@@ -1,0 +1,98 @@
+{
+  "issue": 166,
+  "behavior_version": "C893-local-color-and-triple-write-v1",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "target_executed": false,
+  "kernel_decision": "Require the canonical stored mode and unconditional complete1DC copy before group eligibility. Preserve mode-dependent face/copy dependency order and both complete group parents. Apply the plot54/selector1-or2 filter only in the primary pass. For an admitted fixed count1/index5 request, require signed capacity and the reached existing or accepted-growth destination, check at least six complete triples, and copy only cell5 on an isolated snapshot. Unknown facts never become defaults, allocator success or geometry validity.",
+  "operation_cases": 15342,
+  "owned_complete_contexts": 425,
+  "owned_present": 405,
+  "owned_missing": 20,
+  "native_complete_contexts": 276,
+  "additional_stored_byte_credit": 0,
+  "rust": {
+    "checks": 8,
+    "failed": 0,
+    "ignored": 0,
+    "seconds": 0.12,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/mode3-rgb-operations-rust-final.log",
+      "bytes": 1047,
+      "sha256": "88a654485d8f22472b9f8a5a9b89ea8baa7c8c24c356bcafded5419e20d84e1e"
+    }
+  },
+  "clippy": {
+    "scope": "all-targets all-features -D warnings",
+    "result": "passed",
+    "seconds": 0.76,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/mode3-rgb-operations-clippy.log",
+      "bytes": 135,
+      "sha256": "b6a1562859622625e66744c2de70954b9f4cc81c3c9c3622df9fae3d65efaa0a"
+    }
+  },
+  "targeted_source": {
+    "checks": 18,
+    "seconds": 5.458,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/mode3-rgb-operation-source-strict.log",
+      "bytes": 2894,
+      "sha256": "106a745dda458014ad6e0227500bad0de29ccbe614ed0899336dea69133a300c"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/mode3-rgb-source-snapshot.json",
+      "bytes": 625089,
+      "sha256": "8d8b6e155d2f3c04a5c980e8e6014c5aa378256185a5d4170fc5a72cf14817ef"
+    }
+  },
+  "native_bindings": "mode3-rgb-installed-reference.json",
+  "independent_decoder": "mode3-rgb-rea-reference.json",
+  "kernel_contract": "mode3-rgb-kernel-reference.json",
+  "process_proof": "mode3-rgb-process-verification.json",
+  "concurrency_workers": 8,
+  "public_send_sync_assertions": 14,
+  "ownership": "File and group facts are copied scalar options and RGBA arrays. Triple snapshots copy borrowed constructor buffers into private immutable Arc slices, expose no mutable path, retain explicit budgets and patch a separate operation-local Vec. Every case checks unchanged inputs after success/failure; all completed stages and both selected destination parents remain isolated after later source/context replacement.",
+  "oracle_kinds": [
+    "All504 caller/helper instructions, exact copy import and five-byte thunk; all505 independent Ghidra locations/extents",
+    "Reviewed primary/reflected pass differences, signed capacity/growth boundaries and fixed offset5*12=60",
+    "Independent packed signed-word decoding, unsigned selector subtraction and dependency ordering",
+    "Generated raw float classes and seeded mixed words; alpha retained independently of selected RGB",
+    "Every425 owned and276 native complete retained body, repeated getters, full EOF and unchanged wire bytes",
+    "Every other destination cell and the before/after selected parent checked, including missing/empty/growth-rejected/bounds failures",
+    "Zero-budget and borrowed-buffer mutation regressions",
+    "Eight workers and two fresh processes match independent expected words"
+  ],
+  "excluded": [
+    "Target execution or observed native runtime/pass/array facts",
+    "Native allocator execution, renderer/alpha state changes, reflection admission and exceptional paths",
+    "Geometry membership/validity, complete traversal or rendering",
+    "Replacing serialized1DC with group RGB or derived destination words"
+  ],
+  "pending": [
+    "Exact publication-cut PR validation and allfive platform checks",
+    "Remaining feature166 documented schemas and integration"
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 204,
+    "seconds": 441.091,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "59d78bd74206b70d57b4f28386843099b5b85130",
+    "log": {
+      "path": "target/mode3-rgb-operation-source-full.log",
+      "bytes": 48202,
+      "sha256": "d99ee49b23f9ba7e896e649e808b794a849b56b51aa5970cd31ea5d06554a075"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 631800,
+      "sha256": "217c3896df5515756c9bba97cb1073256ccf9dc1453adc88d824d6e2926bfa04"
+    }
+  }
+}

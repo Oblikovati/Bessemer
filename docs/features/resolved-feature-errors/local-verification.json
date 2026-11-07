@@ -1,0 +1,21 @@
+{
+  "integration_base": "4caf82c0256b72b0de6644cd91a9ebd17568ce4e",
+  "validated_base_tree": "5233de6371d94261cba4d747168e607ee8493946",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "command": "cargo xtask pr",
+  "exit_code": 0,
+  "library_passed": 427,
+  "external_gates_ignored": 3,
+  "doctests_passed": 265,
+  "focused_error_tests": 6,
+  "existing_resolved_tests": 9,
+  "line_public_tests": 2,
+  "log_sha256": "7f3ebd66ab60031bd9b52d4559825a70394761d1f42f9b4d87c12b57b924a7c8",
+  "exclusions": [
+    "Full schema parity (419/906 native feature configurations accepted)",
+    "Geometry/topology certification",
+    "Native application acceptance",
+    "Release benchmark: no published baseline"
+  ]
+}

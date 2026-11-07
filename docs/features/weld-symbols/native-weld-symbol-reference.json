@@ -1,0 +1,159 @@
+{
+  "packet": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\weld-end-cap-corpus.json",
+  "packet_sha256": "db539b63a0dad37846291ba6481597bf21153b8ff38e14e29071f210c4ad99df",
+  "records": [
+    {
+      "index": 547,
+      "path": "samples/tutorial/api/insert_weld.sldprt",
+      "configuration": "Contents/Config-0",
+      "source_sha256": "3b61d301983c4ea911e2150e110ab365038b096f84b990e18048e3a24623c3a9",
+      "source_complete_roots": 24,
+      "reviewed_prefix_roots": 24,
+      "rust_complete": false,
+      "objects": [
+        {
+          "class_name": "moCosmeticWeldBeadAttachPoint_c",
+          "start": 1558,
+          "end": 1783,
+          "sha256": "c08b7b5c12ad4071c0a7bf5525d28178c4b5a6949e8bf3e0d698138374f72743"
+        },
+        {
+          "class_name": "moSFSymbol_c",
+          "start": 1991,
+          "end": 2245,
+          "sha256": "ea80e873c346b2a285aeb88759f6cad878156e8e6f6ad3e14b638881b475c9a7",
+          "direct_text": ""
+        },
+        {
+          "class_name": "moSFSymbol_c",
+          "start": 2247,
+          "end": 2501,
+          "sha256": "ea80e873c346b2a285aeb88759f6cad878156e8e6f6ad3e14b638881b475c9a7",
+          "direct_text": ""
+        },
+        {
+          "class_name": "moCosmeticWeldBeadSymbol_c",
+          "start": 1467,
+          "end": 2937,
+          "sha256": "4d3a2884ac0a8e608f0fad1316dcb026ddcf2cb3ee2a3ba5a532f21709ed81d2",
+          "direct_texts": {
+            "text_188": "",
+            "text_2e0": "",
+            "text_438": ""
+          },
+          "cosmetic_suffix": "00000000000000000000000000000000000000000000f0bf9cc420b07268913f0000000000000000"
+        }
+      ]
+    },
+    {
+      "index": 615,
+      "path": "samples/tutorial/api/weldment_box3.sldprt",
+      "configuration": "Contents/Config-0",
+      "source_sha256": "94b377ab68492fa72394f54b2637af3e8bf93a1f06c22fd7532f4c381c8926e2",
+      "source_complete_roots": 43,
+      "reviewed_prefix_roots": 32,
+      "rust_complete": false,
+      "objects": [
+        {
+          "class_name": "moWeldSymbol_c",
+          "start": 1468,
+          "end": 2736,
+          "sha256": "a25f64672799b25f109a9df39b6d5d681376df1cbb2b7ef84205c99454bcd727",
+          "direct_texts": {
+            "text_188": "",
+            "text_2e0": "",
+            "text_438": ""
+          }
+        },
+        {
+          "class_name": "moWeldSymbol_c",
+          "start": 3779,
+          "end": 5002,
+          "sha256": "b31e8ecea9fa9077419cdc0b49b27a57b53e4d1edd748a0fcaa283bd4da3947d",
+          "direct_texts": {
+            "text_188": "",
+            "text_2e0": "",
+            "text_438": ""
+          }
+        },
+        {
+          "class_name": "moWeldSymbol_c",
+          "start": 6000,
+          "end": 7223,
+          "sha256": "f6b7d6b362ed518922bcdc956602ca4d99139b0771c74ac95bf87c6c5fd8eb3a",
+          "direct_texts": {
+            "text_188": "",
+            "text_2e0": "",
+            "text_438": ""
+          }
+        },
+        {
+          "class_name": "moWeldSymbol_c",
+          "start": 8221,
+          "end": 9444,
+          "sha256": "d08785df78308e01748471ebc7a9be9d403726a3aa04d6df2d418c1161368ee5",
+          "direct_texts": {
+            "text_188": "",
+            "text_2e0": "",
+            "text_438": ""
+          }
+        }
+      ]
+    },
+    {
+      "index": 905,
+      "path": "samples/tutorial/weldments/weldment_box2.sldprt",
+      "configuration": "Contents/Config-0",
+      "source_sha256": "92295a061fe0b3317e718858f52f3c935dfd4d8e24c651dbce1a582eeff01629",
+      "source_complete_roots": 52,
+      "reviewed_prefix_roots": 35,
+      "rust_complete": false,
+      "objects": [
+        {
+          "class_name": "moWeldSymbol_c",
+          "start": 2704,
+          "end": 3972,
+          "sha256": "dcc47f5bc07f6959a81c343550f53c178eaf03e0fd1c7f7c1ff3364df55a4c00",
+          "direct_texts": {
+            "text_188": "",
+            "text_2e0": "",
+            "text_438": ""
+          }
+        },
+        {
+          "class_name": "moWeldSymbol_c",
+          "start": 5015,
+          "end": 6238,
+          "sha256": "2e2412a05e6b5ddf6fe2d556dec86bf39bf1f4300c2dd80b6e25658201259041",
+          "direct_texts": {
+            "text_188": "",
+            "text_2e0": "",
+            "text_438": ""
+          }
+        },
+        {
+          "class_name": "moWeldSymbol_c",
+          "start": 7236,
+          "end": 8459,
+          "sha256": "83478cd441d3e0e82a2757034274d8e9e2f2fc58a9c5c7b909daf35fbb0c6af8",
+          "direct_texts": {
+            "text_188": "",
+            "text_2e0": "",
+            "text_438": ""
+          }
+        },
+        {
+          "class_name": "moWeldSymbol_c",
+          "start": 9457,
+          "end": 10680,
+          "sha256": "b749d5b99947f432018d78d8f109dcc60d180337b72a8c5db81498218200ed8d",
+          "direct_texts": {
+            "text_188": "",
+            "text_2e0": "",
+            "text_438": ""
+          }
+        }
+      ]
+    }
+  ]
+}

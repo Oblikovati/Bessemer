@@ -1,0 +1,20 @@
+{
+  "issue": 156,
+  "status": "Independent owned primitive boundaries and scalar-edited reader outcomes verified; Rust API/parity pending",
+  "strict_reference_checks": 12,
+  "header_cases": 30,
+  "group_cases": 72,
+  "group_no_op_controls": 12,
+  "changed_group_cases": 60,
+  "scope": "All original report outcomes, source and installed bindings still match; group native payloads remain empty.",
+  "oracles": {
+    "header-oracle-reference.json": {
+      "bytes": 28256,
+      "sha256": "ac0de56262c055aaba5b7780dd055277735b7577a6a4809b57466ef9adf3521c"
+    },
+    "literal-oracle-reference.json": {
+      "bytes": 7576773,
+      "sha256": "0c9161c510dc3bad6258aa410b273e7c45433a809e94d5d9a460d8e2b3014615"
+    }
+  }
+}

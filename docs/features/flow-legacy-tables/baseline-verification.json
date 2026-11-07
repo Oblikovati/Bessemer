@@ -1,0 +1,33 @@
+{
+  "feature_issue": 241,
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "rust_command": "cargo test --test flow_legacy_table_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 2,
+  "rust_failed": 0,
+  "clippy_command": "cargo clippy --test flow_legacy_table_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "python_command": "python -m unittest discover -s docs/features/flow-legacy-tables -p test_tables.py -v",
+  "python_exit_code": 0,
+  "python_passed": 5,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "views": 173,
+  "pointer_views": 154,
+  "word_views": 19,
+  "scope": "Fixture baseline before the typed 401/405 reader/editor; exact field reconstruction, context presence, discarded fields, native multiplicity and range-checking semantics",
+  "source_lf_sha256": {
+    "tests\\flow_legacy_table_fixtures.rs": "8a34e1f6b003445ea112f31deb36a84aece5512319de51493c93b1b471227171",
+    "tests\\flow_legacy_tables\\fixture.rs": "d672e06396ac2c0b7f687b94a0216a58e82930ce55390548d638935159d98918"
+  },
+  "log_sha256": {
+    "target\\flow-legacy-tables-baseline-tests.log": "b3f6adec2a1ea503c1bab788dff8a8ef7db875efe0121e5ec9ce68da610e1105",
+    "target\\flow-legacy-tables-baseline-clippy.log": "7eb21c0cd5c3123c2ac0536ae4d6c63570dc57055d6a2ca71e49ac116da2a00b",
+    "target\\flow-legacy-tables-baseline-python-tests.log": "bdf32671a58e5cae0ead79007e42faec8192e01f4ee668383e96f6d18788fae8"
+  },
+  "exclusions": [
+    "No native pointer population, application acceptance or engineering word semantics",
+    "Global pointer-index range context does not establish actual object references",
+    "Current full gate on 7e23bb88 excludes this later fixture baseline"
+  ]
+}

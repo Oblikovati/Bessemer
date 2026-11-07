@@ -1,0 +1,114 @@
+{
+  "issue": 241,
+  "source_revision_before_api": "6487bda560af4b282c2c1ede8739e1abfb797664",
+  "scope": "Complete record501 byte-version2 / IMS-value-version3 / BL-version0 profile under exact retained fresh definitions; isolated existing flags/shared/BL patterns",
+  "platform": "Windows x64; Rust1.99.0; CARGO_BUILD_JOBS=1",
+  "results": {
+    "rust_passed": 21,
+    "rust_failed": 0,
+    "ignored_workers": 1,
+    "worker_invocations_by_parent": 2,
+    "python_passed": 10,
+    "clippy": "passed",
+    "format": "passed",
+    "function_file_caps": "passed",
+    "maximum_function_body_lines": 20
+  },
+  "commands": {
+    "tests": {
+      "command": "cargo test --locked --test flow_result_values_fixtures",
+      "exit_code": 0,
+      "log": "target/flow-result-values-api-tests.log",
+      "sha256": "38db86e0a87c7a40378877fc88639fe8fddd5e14ee087068209e6b3d2463dd68"
+    },
+    "clippy": {
+      "command": "cargo clippy --locked --test flow_result_values_fixtures -- -D warnings",
+      "exit_code": 0,
+      "log": "target/flow-result-values-api-clippy.log",
+      "sha256": "a77aebc5d2d281548b3053fb574c6208444a0f06acd24280cf538146b30cfc1f"
+    },
+    "format": {
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "log": "target/flow-result-values-api-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "python": {
+      "command": "python -m unittest discover -s docs/features/flow-result-values -p test_values.py",
+      "exit_code": 0,
+      "log": "target/flow-result-values-api-python.log",
+      "sha256": "5cd60c3538ba9d614d496aa055aac1be58fdce59dde92e96c72db3bf98da8d63"
+    }
+  },
+  "coverage": {
+    "cases": 3798,
+    "physical_objects": 4134,
+    "shared_raw_reads": 410367,
+    "bl_rows": 11212,
+    "bl_raw_reads": 201816,
+    "total_raw_reads": 612183,
+    "flag_matrix_fields": 12402,
+    "zero_flag_noop_only": 2438,
+    "flag_presence_transition_rejections": 12402,
+    "shared_matrix_edits": 13119,
+    "bl_matrix_edits": 52758,
+    "total_matrix_fields": 78279,
+    "changed_matrix_fields": 75841,
+    "native_matrix_fields": 240,
+    "native_zero_flag_noop_only": 1,
+    "edit_policy": "All flags; all shared values for arrays <=257 and first/middle/last for larger arrays; all18 BL columns for all rows <=16 and first/middle/last rows for larger BL bodies; same policy for native and generated cases",
+    "extra_composite": "Three repeated complete value bodies with inherited identifiers7/-1/7 independently verified exact aggregate shared12 / BL rows3 / BL values54 and one-below rejection for each",
+    "oracles": [
+      "Complete independent frozen fields, intervals, raw flags, array/BL presence and paired identifier projections",
+      "Literal shared/BL/flag patches with independent flag-byte offsets",
+      "Full raw pattern reads including native74004 values and all18 BL columns",
+      "Raw compressed no-ops, fresh decoded reversals and complete physical history",
+      "Retained exact definition revision; equivalent fresh parse differs while clones remain equal"
+    ],
+    "contracts": [
+      "Explicit fresh declaration and all definition versions/allocation gates",
+      "Exact and one-below whole-body/object/shared/BL-row/BL-value limits",
+      "Zero-object and zero-value/row bounds preserve absent versus present-empty storage",
+      "Aggregate budgets across duplicate-identifier objects",
+      "All unknown outer bytes, invalid value/BL versions, markers and native unsigned counts",
+      "Truncated/corrupt/concatenated/extended compressed streams and decoded suffixes",
+      "Checked objects/arrays/rows/columns, absence and rejected presence-class transitions",
+      "Wrong/foreign/stale value occurrences and mismatched context counts",
+      "Caller definition/value buffers can mutate/drop; later definition edits cannot change retained views"
+    ],
+    "new_public_types_send_sync": 10,
+    "reused_public_types_send_sync": 3,
+    "concurrent_workers": 8,
+    "operations_per_worker": 32,
+    "concurrency": "Mixed flags/shared/BL edits and failures matched serial wire output",
+    "process_replay": "Two fresh source-verifying workers checked all frozen reads/contexts and selected edits; both parent carriers, coverage and edited wire transcripts compared byte for byte"
+  },
+  "source_lf_sha256": {
+    "src/flow/legacy_tables/result_values/context.rs": "784627eae7ae0f76e64da1238a86ec6c2b7b7785239c1eeacadab4dbf80ee9be",
+    "src/flow/legacy_tables/result_values/edit.rs": "28fcda32d9670cd1f093c5629e168d63b483d384c7380e5e089b48121d122341",
+    "src/flow/legacy_tables/result_values/mod.rs": "1d9758415b59ed63007b57db48cd8a342cab1dcebf3499551a9c50e4aa00a4c2",
+    "src/flow/legacy_tables/result_values/read/layout/blocks.rs": "001f04a4346295eb6ef93ed66c4ee2baf27c97601d07ed10bf0961394511938e",
+    "src/flow/legacy_tables/result_values/read/layout.rs": "ff606f7cdec606ded0be38fc64c71a7ef9f90435a1aae121d477e2085264605f",
+    "src/flow/legacy_tables/result_values/read.rs": "07050fc70bd95a722581a4bd4fe8d3c22aae5e65422324ccf89f7731a8c72390",
+    "src/flow/legacy_tables/result_values/types.rs": "c39c71bee327e0e0ffb7510ccb296ce210edce946a0dd2f115ddc3349e06de79",
+    "src/flow/legacy_tables/result_values/view.rs": "d29c372af2daf901a5b0d9bfb245114399597818c6185d065fe210e07e574e26",
+    "tests/flow_result_values/api/contracts.rs": "ddfde6cfc53359cecef7d371cf2d52867b2756cfdcfd4778fdfa1526439b5bac",
+    "tests/flow_result_values/api/edit.rs": "d08217f0d742102aee75da72a3513ccbaa03d3682f83507ae10ddf2f50f8fed6",
+    "tests/flow_result_values/api/replay.rs": "82ece80c20f9cc915fc37968a66f1428b01e2e19567750995878d15c45ed8f6a",
+    "tests/flow_result_values/api.rs": "e0911b898dcb36e242e4bd0ee15cdd5f88a6a9aa28801ca737fc344cfa11e5e5",
+    "tests/flow_result_values/fixture.rs": "5ce5ac4049613dc4de27f8e447a42e06786c275a660432f4456d462d691262c0",
+    "tests/flow_result_values/rebuild.rs": "64a60d3f4ec67d4f066f04732afd19f0a3e4afc2177229903588a342f6f95fd3",
+    "src/flow/legacy_tables/mod.rs": "00451bf9d2c859c4ad5df6582f536b71b91194d03b5a522ca4ef8ce690186401",
+    "tests/flow_result_values_fixtures.rs": "39e2a16a0bcd9957219f99ff7f33563e842f5474b8741d253602caeb578ce9b6"
+  },
+  "exclusions": [
+    "Running full gate419844f2 excludes this API, record500 API and these baselines",
+    "Full cargo xtask pr acceptance of this source revision pending",
+    "Hosted matrix and sanitizer acceptance pending",
+    "Fresh native objects and definition/value pairing are explicit caller assumptions",
+    "Native loading and partial-on-failure mutation not executed",
+    "BL state-after-load zero is a reference observation, not serialized data or native execution",
+    "Nonfresh loads, engineering columns and native application acceptance not verified"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose review pending"
+}

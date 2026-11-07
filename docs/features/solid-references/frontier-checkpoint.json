@@ -1,0 +1,67 @@
+{
+  "cases": 906,
+  "accepted": 736,
+  "rejected": 170,
+  "newly_accepted": 2,
+  "previous_complete_preserved": true,
+  "fresh_process_outcomes_and_causes_identical": true,
+  "artifact_stable_during_replay": true,
+  "artifact_sha256": "f6a62a81ba8a7cbf22fa1764cf1c09d29ed97692b74a03e7c084fe82bfac1f83",
+  "changes": [
+    {
+      "index": 14,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moSolidRef_w\" schema 1; expected an implemented complete model object body"
+      },
+      "after": {
+        "status": "accepted",
+        "cause": ""
+      }
+    },
+    {
+      "index": 281,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"references_570[0]\" has runtime class \"moSolidRef_w\"; expected one of [\"moRefWrapper_c\", \"moGeneralSurfRef_w\", \"moGeneralCurveRef_w\", \"moSingleFaceRef_w\", \"moCircleRef_w\", \"moCylinderRef_w\", \"moSphereRef_w\", \"moPlaneRef_w\", \"moPointRef_w\", \"moEndPointRef_w\", \"moLoftSynchRef_c\", \"moLineRef_w\", \"moLoopRef_w\", \"moSketchExtRef_w\", \"moTempAxisRef_w\", \"moCoordSysRef_w\"]"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"point_reference_88\" has runtime class \"moEndPointRef_w\"; expected one of [\"moPointRef_w\"]"
+      }
+    },
+    {
+      "index": 550,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moSolidRef_w\" schema 1; expected an implemented complete model object body"
+      },
+      "after": {
+        "status": "accepted",
+        "cause": ""
+      }
+    },
+    {
+      "index": 687,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moSolidRef_w\" schema 1; expected an implemented complete model object body"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moMirrorSolid_c\" schema 1; expected an implemented complete model object body"
+      }
+    },
+    {
+      "index": 688,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moSolidRef_w\" schema 1; expected an implemented complete model object body"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moMirrorSolid_c\" schema 1; expected an implemented complete model object body"
+      }
+    }
+  ]
+}

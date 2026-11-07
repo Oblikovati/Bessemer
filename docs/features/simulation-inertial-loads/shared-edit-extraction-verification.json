@@ -1,0 +1,41 @@
+{
+  "issue": 136,
+  "change": "Shared private revision-bound identity, isolated field replacement and complete ordered history algorithms through a private snapshot interface; preserved existing public thermal API",
+  "baseline_revision": "d6b17119d59ca2bba132fa9e755cb6c27a890106",
+  "complete_exports": [
+    {
+      "label": "outer",
+      "bytes": 5953224,
+      "sha256": "94974b6d2f67bd933b043ebbab5605372dc16331a03d5aaa03ce2fef957a0687"
+    },
+    {
+      "label": "outer-history",
+      "bytes": 8780754,
+      "sha256": "257b403c2fadb8347578d1e53da8a22a33bca023da7ab6fbc400c80202ad33bc"
+    },
+    {
+      "label": "maps",
+      "bytes": 822634,
+      "sha256": "ef4c229e37255b441cd35f8dc19606a8b6a162701c76bf1ff3bdc58eb2e7812e"
+    },
+    {
+      "label": "nested-fields",
+      "bytes": 1382060,
+      "sha256": "50c0dcbac7377ce4a2204693fde9209d4960de18db0b0e5dff5a59490c795063"
+    },
+    {
+      "label": "nested-history",
+      "bytes": 9687810,
+      "sha256": "93a73a7b09304f09a02e52b2e52ac670793e402390c78d3e9f0bd3dba4f0146c"
+    }
+  ],
+  "bytes": 26626482,
+  "every_byte_unchanged": true,
+  "thermal_edit_regressions": "All edits:: tests passed",
+  "clippy_exit": 0,
+  "exclusions": [
+    "New inertial edit behavior",
+    "Final new-feature gates",
+    "Native application acceptance"
+  ]
+}

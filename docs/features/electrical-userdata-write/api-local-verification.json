@@ -1,0 +1,69 @@
+{
+  "issue": 238,
+  "source_base_commit": "53d3ce152842268489afb22572a9fae75a70dbd2",
+  "source_state": "New writer working tree, exact source files below",
+  "source_sha256": {
+    "src/electrical/mod.rs": "104a794a5dbf1d3bead0c75c5220686f9ee82db77fcaa79bf67bf3f9e3e3f017",
+    "src/sqlite_image/mod.rs": "0e7d1addaafdce2b56bdf389dd532615806e30248c613057f50c086a79460dd5",
+    "src/sqlite_image/connection.rs": "4bcd7633745301fab113e4f1dc853a0d7bea9305863a59d1acebd8209da4faca",
+    "src/electrical/userdata_write/mod.rs": "73727a7b70348ec15acf38cb22fbbe84db51f21dbd28119be89834179d791095",
+    "src/electrical/userdata_write/types.rs": "d6e6d7bfecea6388c0358c4a50da1c586e35413c194961c4920ce2bf1e81f84c",
+    "src/sqlite_image/userdata_write/checks.rs": "8f31e3757fa35bd27abf3cfed4bef6cdb7ff7f235227bc854cfe4c28c51c25dc",
+    "src/sqlite_image/userdata_write/compare.rs": "78373dc670adde51cf8b755a32975dc22d883ca684205209b3e179287b7b6455",
+    "src/sqlite_image/userdata_write/mod.rs": "abd6a224a8e0b1f74859e3486e6a7458b7fbdfb4464348092c350fcd0e71a10e",
+    "src/sqlite_image/userdata_write/snapshot.rs": "c4271a557cc83207348125e25a7166b8b1858e4fda726999bfff24c0a8a14704",
+    "src/sqlite_image/userdata_write/update.rs": "9ab71b34a15b9b07788e139428323c72bb2c73e3e296ac12220f36e965d31d48",
+    "tests/electrical_userdata_write.rs": "b7fb0bfe04147b1d532a884ef29283566100b10d72d4ecb9bee70c9123ffe1fa",
+    "tests/electrical_userdata_write/fixture.rs": "8cf251fdf65592b90a96a244a2b926348bab6b86df539226194050be708aa30a",
+    "tests/electrical_userdata_write/native.rs": "3da1daf3ca2c7bd33b704e3c6f85a0e54db0da233d2684a6de30207d3daa6c25",
+    "tests/electrical_userdata_write/projection.rs": "80b90ca625d5409efca35836e94c63f581aae749a9faa3bf32c713f2bc9e4e27"
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "focused_tests": {
+    "passed": 51,
+    "failed": 0,
+    "ignored": 1,
+    "terminal_exit_code": 0
+  },
+  "final_owned_tests": {
+    "passed": 9,
+    "failed": 0,
+    "ignored": 1,
+    "terminal_exit_code": 0
+  },
+  "native_census": {
+    "command": "cargo test --test electrical_userdata_write --locked complete_native_key_and_slot -- --ignored --nocapture",
+    "terminal_exit_code": 0,
+    "edits": 680,
+    "exact_noops": 680,
+    "seconds": 100.34,
+    "checks": "Complete stored database, source checkpoint and encoded unrelated ZIP payloads for each edit",
+    "source_scope": "Same production core as hashes below; later changes only refactored test helpers and strengthened owned/concurrency assertions"
+  },
+  "python_fixture_tests": {
+    "passed": 2,
+    "terminal_exit_code": 0
+  },
+  "clippy": {
+    "terminal_exit_code": 0,
+    "warnings_denied": true
+  },
+  "log_sha256": {
+    "userdata-write-focused-tests.log": "70a9c011e29ee6d8b670aa747f19b26d13f61f690a2ffd2c7652d63b6832f95a",
+    "userdata-write-final-owned-tests.log": "d0829869a7f5de05dc8fc4efc5db76e9df29aa2241109326f782aefcf30ad705",
+    "userdata-write-native-census.log": "a832c6b020d0a4ec27b0b52f2b016444717e1621b402de8ee5b9db1d48182bc5",
+    "userdata-write-clippy.log": "c4522f09fc388f9acb185a3a44dfc1a00db39a1febed202902211d1461cf5f62",
+    "userdata-write-final-clippy.log": "f74a6bd9ccbd99a952c7fd187130677f55994c74675cd35bd1c11fc915bdec9b",
+    "userdata-write-python-tests.log": "75d78d472eab1d192dacf7602107a6bcf10b6bf9e3693d3c80a4f55745b89146",
+    "userdata-write-process-build.log": "1e4373be4c887d634e2e721955b5c7e113b26a1ba1d4b1651caac57e04c09fc4"
+  },
+  "full_suite": "Pending for this writer and direct field maps; previous read-only 13931532 gate passed 4416 tests",
+  "native_application_acceptance": false,
+  "provider_conversions": false,
+  "geometry_acceptance": false,
+  "python_fixture_and_provenance_tests": {
+    "passed": 3,
+    "terminal_exit_code": 0,
+    "log_sha256": "ad6ddd5de30157c0887b4dcc7e77bb01c82a2abce095dc8fd083a7a661a204e3"
+  }
+}

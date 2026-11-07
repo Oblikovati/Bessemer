@@ -1,0 +1,53 @@
+{
+  "issue": 181,
+  "stage": "Complete owned model/sketch/nested-display whole-document edit/reopen/reversal matrix",
+  "process_reaped": true,
+  "exit_code": 0,
+  "passed": 1,
+  "failed": 0,
+  "ignored": 0,
+  "test_seconds": 210.82,
+  "complete_cases": 11493,
+  "cases_per_caller": 3831,
+  "focused_document_edits": 22986,
+  "typed_color_reversals": 22986,
+  "support": [
+    {
+      "path": "tests/model_visual_carriers/documents.rs",
+      "bytes": 5227,
+      "sha256": "7add74ee31cd9239f4901d51b33265f5572dd9d2d83591648fa97cc0d4831652"
+    },
+    {
+      "path": "tests/support/unselected_document_streams.rs",
+      "bytes": 713,
+      "sha256": "cef16204fd410c34c6d5f4103b1078b51e0af8cf1844741520d724f367347d78"
+    }
+  ],
+  "log": {
+    "path": "target/entity-visual-model-document-matrix.log",
+    "bytes": 345544,
+    "sha256": "6a92a8f6fac8da647a31069f898b64770ffcff4a8ec58cd3ec9300047744a892"
+  },
+  "compiler_log": {
+    "path": "target/entity-visual-model-document-matrix-compile.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "direct_clippy_log": {
+    "path": "target/entity-visual-model-document-clippy.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "coverage_credit": 0,
+  "checks": [
+    "Every complete owned original stream is installed into a real blank-part document, serialized and reopened as an immutable baseline.",
+    "The public document reader parses every baseline and every edited reopened feature archive against actual model/header/CMgr streams. Both focused visual definitions in every case are edited.",
+    "Complete reopened fields match the changed archive; all unrelated stream bytes, names and order remain identical.",
+    "Typed color reversal on the reopened archive restores complete original feature bytes/fields. Replacing them in the retained document restores every original container byte. The baseline document remains unchanged."
+  ],
+  "qualifications": [
+    "This first full run is retained before adding independent changed-field/history assertions and a repeat process. It does not complete the remaining native part or repository/publication gates.",
+    "Standalone compilation and direct Clippy checks use pinned existing artifacts and explicit test-profile flags; no Cargo commands overlap. Native rendering/geometry validity remain unproven. Humanizer unavailable; prose pass pending maintainer review."
+  ],
+  "artifact_git_revision": "1ed05b48a4bedb52034722a4721e871229906fb7"
+}

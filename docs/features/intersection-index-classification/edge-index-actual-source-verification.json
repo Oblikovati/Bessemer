@@ -1,0 +1,71 @@
+{
+  "issue": 185,
+  "stage": "Two fresh original Source parses of actual typed signed-index outputs",
+  "passed": true,
+  "processes_reaped": 2,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "actual_roots_per_process": 4224,
+  "changed_per_process": 3696,
+  "noops_per_process": 528,
+  "source_test_seconds": [
+    168.203,
+    172.69
+  ],
+  "consumed_source_modules_unchanged": 169,
+  "source_python_files": [
+    5888,
+    5889
+  ],
+  "export_sha256": "b3b00882ef2361d72bed4ebfee215ab4d077f2bd9378e520318d47c62001a1b8",
+  "artifacts": [
+    {
+      "path": "target/replay-edge-index-actual-exports.py",
+      "bytes": 5747,
+      "sha256": "c6821db1281e843e8ecd43f7fdd24fcdf66ce48e984aef622f066371a5726260"
+    },
+    {
+      "path": "target/edge-index-actual-source-1.log",
+      "bytes": 8479,
+      "sha256": "8dc2ddbc3829fe92e6bf920fffa63d0e8cd53c326fe63c38b440a907e2316aee"
+    },
+    {
+      "path": "target/edge-index-actual-source-2.log",
+      "bytes": 8479,
+      "sha256": "d99ba4751db3b70d6a584b43b0913208a95d2ca5694a06ae6518b6537ca9650f"
+    },
+    {
+      "path": "target/edge-index-actual-source-1.json",
+      "bytes": 877,
+      "sha256": "427c1df96badd94c6f9d2fefd343c81fd0dbd3ad5bcb512aee37a56ce352eeea"
+    },
+    {
+      "path": "target/edge-index-actual-source-2.json",
+      "bytes": 877,
+      "sha256": "99aa82eaf13183e410369cdef076da4dbc7e254ddfa199bca8cf9a6b533f916a"
+    },
+    {
+      "path": "docs/features/intersection-index-classification/edge-index-actual-source-1-snapshot.json",
+      "bytes": 744405,
+      "sha256": "d032fab8e773aff7cb8149423f4cd99103c27aba4194946001e19850f9c4c734"
+    },
+    {
+      "path": "docs/features/intersection-index-classification/edge-index-actual-source-2-snapshot.json",
+      "bytes": 744547,
+      "sha256": "da86e457a79c02b9097453b423e1455147e11f774180422f100f26abb93cb18a"
+    }
+  ],
+  "collector_removed_after_verification": true,
+  "coverage_credit": 0,
+  "checks": [
+    "Every actual Rust output matches a literal raw168 replacement before unmodified complete Source parsing.",
+    "Complete graph/map/f64-bit identity matches the original graph with exactly the expected signed index changed. Root aliases, spans, EOF and original sketch/detail/unknown accounting remain unchanged.",
+    "All Source imports originate in each immutable copy. Every consumed Source module is unchanged between the fresh processes; original Source files and reader functions are not modified."
+  ],
+  "qualifications": [
+    "Expected graph mutation is application-owned test state only; no Source output identity, semantic/accounting adapter, float or version override is substituted.",
+    "Native/document/concurrency, full Cargo and exact-head publication gates remain separate. No native mapping/matcher, provider, geometry or complete schema parity is claimed. Humanizer unavailable; prose review pending."
+  ]
+}

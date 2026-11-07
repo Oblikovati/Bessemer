@@ -1,0 +1,96 @@
+{
+  "issue": 181,
+  "stage": "Strict non-writing full modern component matrix replay",
+  "artifact_git_revision": "73ed0a3322b3f873d16be5389ab00d767c1d64da",
+  "command": "python -B -X utf8 docs/features/entity-visual-state/freeze_component_visuals.py",
+  "exit_code": 0,
+  "process_reaped": true,
+  "passed": 3,
+  "failed": 0,
+  "test_seconds": 5162.718,
+  "cases": 7662,
+  "cases_per_document_kind": 3831,
+  "fresh_source_primitive_reads": 16791273,
+  "selected_scalar_spans": 53634,
+  "total_wire_bytes": 81129087,
+  "snapshot": {
+    "path": "docs/features/entity-visual-state/component-source-snapshot.json",
+    "bytes": 654115,
+    "sha256": "691dc810460965767c0588f9ec10e967abcf8dca267053e1a03255b7d942f8f9"
+  },
+  "initial_snapshot": {
+    "path": "docs/features/entity-visual-state/component-initialization-source-snapshot.json",
+    "bytes": 635814,
+    "sha256": "6534121c18ddede3fd33477582be0a13d486007a2f6e028bafb44f66134405f1"
+  },
+  "source_snapshot_identity": "3631504a7aa5d339707b8cf19e05a26429926ef47dc168be9384e5265aca2a45",
+  "source_python_files": 5369,
+  "unchanged_common_source_files": 5229,
+  "changed_common_source_files": 0,
+  "added_source_files": 140,
+  "fixtures": [
+    {
+      "path": "tests/fixtures/entity-visual-state/component-templates.bin",
+      "bytes": 21209,
+      "sha256": "bd6a110b8c8715ee1dd2d28e25c97cf90242d80db18ab566d0b7226434df8539"
+    },
+    {
+      "path": "tests/fixtures/entity-visual-state/component-words.tsv",
+      "bytes": 1085660,
+      "sha256": "9ec16c0740fce1f0b9d0f706ecf49accc5030f321048184dfd64d788caa6d64a"
+    },
+    {
+      "path": "tests/fixtures/entity-visual-state/component-primitives.tsv",
+      "bytes": 260386,
+      "sha256": "92023a97c0781e1e86d9d199117852498fad8710d4c05fffd7c50f6b265f4522"
+    }
+  ],
+  "support": [
+    {
+      "path": "docs/features/entity-visual-state/freeze_component_visuals.py",
+      "bytes": 1943,
+      "sha256": "d147ebe1d4ce66d914081cd720f6a29c8789fe6820efc573701f503ca9bd784d"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_component_seeds.py",
+      "bytes": 3500,
+      "sha256": "ecc9c054d5fb8c83ed9e5459d204fd49b0cb2a65d50e91e81a3876cb31aa2659"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_component_source.py",
+      "bytes": 3686,
+      "sha256": "31d4767398ebc37fc75a169e9265febb4dfb17e115c03a4e62ea1b7d180c6e83"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_component_baselines.py",
+      "bytes": 2860,
+      "sha256": "a12ac602e749ede1d72e1b24ece1ab004c34460b966b976af28c22f4f53c6e34"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_component_matrix.py",
+      "bytes": 4503,
+      "sha256": "933581203f3a9dac70ad58af3fa130a8952558aac5d58517d55679ebb508a2c6"
+    },
+    {
+      "path": "docs/features/entity-visual-state/visual_component_corpus.py",
+      "bytes": 4370,
+      "sha256": "2062345c86d40a55804086fc1c71f061f2e59d461f23de3962a090f4714de377"
+    }
+  ],
+  "metadata": {
+    "path": "docs/features/entity-visual-state/owned-component-reference.json",
+    "bytes": 4074,
+    "sha256": "c9bb163cf8a95ccba7e15f545ed523d8eb4f542f8528703236ddb6424cb90102"
+  },
+  "log": {
+    "path": "target/entity-visual-component-strict-replay.log",
+    "bytes": 616,
+    "sha256": "961b1f0b8c4d457c2914f3bf2217c0a25503528f7583edcb4202c2affb3a7353"
+  },
+  "coverage_credit": 0,
+  "qualifications": [
+    "All retained fixtures, metadata and six matrix helpers match initialization hashes. Both complete owner matrices were reparsed through unchanged original Source readers without writing fixtures.",
+    "Typed operation export acceptance, remaining native edit-byte oracles and publication gates are separate requirements. This replay does not prove native application rendering or geometry validity.",
+    "Humanizer unavailable; prose pass pending maintainer review."
+  ]
+}

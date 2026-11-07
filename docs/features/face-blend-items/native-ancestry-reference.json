@@ -1,0 +1,210 @@
+{
+  "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\face-blend-pair-native-evidence.json",
+  "source_sha256": "b774a4793171faf0b0ba92a7f575ab3551df394b6f366756a92c6f12c4066e8f",
+  "evidence": {
+    "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldMoPartu.dll",
+    "sha256": "2201edfa07b1a7484acedb6db4600fa7a00e55b16090a03b92fe7d9b14cb2128",
+    "bindings": [
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldMoPartu.dll",
+          "sha256": "2201edfa07b1a7484acedb6db4600fa7a00e55b16090a03b92fe7d9b14cb2128",
+          "tables": [
+            {
+              "class_name": "moFaceBlendItemPair_c",
+              "object_offset": 0,
+              "locator": "0x1804efa78",
+              "vftable": "0x180480d98",
+              "slots": [
+                "0x1802d9640",
+                "0x1802d95a0",
+                "0x1803ace24",
+                "0x1800e3360",
+                "0x1800e3360",
+                "0x1802d9660",
+                "0x1803ace66",
+                "0x1803ace60"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "01000000000000000000000058b46000a0fa4e0078fa4e00",
+        "bases": [
+          ".?AVmoFaceBlendItemPair_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@"
+        ]
+      },
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldMoPartu.dll",
+          "sha256": "2201edfa07b1a7484acedb6db4600fa7a00e55b16090a03b92fe7d9b14cb2128",
+          "tables": [
+            {
+              "class_name": "moFaceBlendItem_c",
+              "object_offset": 0,
+              "locator": "0x1804ef9f0",
+              "vftable": "0x180480d08",
+              "slots": [
+                "0x1802d9650",
+                "0x1802d95f0",
+                "0x1803ace24",
+                "0x1800e3360",
+                "0x1800e3360",
+                "0x1802d96d0",
+                "0x1803ace66",
+                "0x1803ace60"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "01000000000000000000000030b4600018fa4e00f0f94e00",
+        "bases": [
+          ".?AVmoFaceBlendItem_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@"
+        ]
+      }
+    ],
+    "functions": {
+      "0x1802d9660": {
+        "end": "0x1802d96cf",
+        "native_bytes": "48895c24084889742410574883ec20488bfa488bd9ff15051f1100488bcfff1524201100488d5308488bcf85c07420e8ccfeffff488d5310488bcf488b5c2430488b7424384883c4205fe9b1feffffe82cfeffff488d5310488bcf488b5c2430488b7424384883c4205fe911feffff",
+        "sha256": "b352436b7cf23ebc0c529fef91e10df1521d547e4c1c45fb72b5771d56eedbe4",
+        "imports": [
+          {
+            "call_va": "0x1802d9675",
+            "iat": "0x1803eb580",
+            "module": "swccu.dll",
+            "symbol": "?Serialize@su_CObject@@UEAAXAEAVsu_CArchive@@@Z",
+            "descriptor_bytes": "c02b5b0000000000000000000e935f0068b33e00",
+            "lookup_index": 67,
+            "lookup_bytes": "64835f0000000000"
+          },
+          {
+            "call_va": "0x1802d967e",
+            "iat": "0x1803eb6a8",
+            "module": "swccu.dll",
+            "symbol": "?IsStoring@su_CArchive@@QEBAHXZ",
+            "descriptor_bytes": "c02b5b0000000000000000000e935f0068b33e00",
+            "lookup_index": 104,
+            "lookup_bytes": "a67d5f0000000000"
+          }
+        ],
+        "decompilation": "\nvoid FUN_1802d9660(su_CObject *param_1,su_CArchive *param_2)\n\n{\n  int iVar1;\n  \n  su_CObject::Serialize(param_1,param_2);\n  iVar1 = su_CArchive::IsStoring(param_2);\n  if (iVar1 != 0) {\n    operator<<(param_2,(moFaceBlendItem_c **)(param_1 + 8));\n    operator<<(param_2,(moFaceBlendItem_c **)(param_1 + 0x10));\n    return;\n  }\n  operator>>(param_2,(moFaceBlendItem_c **)(param_1 + 8));\n  operator>>(param_2,(moFaceBlendItem_c **)(param_1 + 0x10));\n  return;\n}\n\n"
+      },
+      "0x1802d96d0": {
+        "end": "0x1802d97c4",
+        "native_bytes": "48895c24085556574883ec20488bda488bf9ff15981e1100c644245000488bcbff15b21f1100488d5708488bcb85c0744dff1521901000488d5710488bcbff152490100048837f18000f95c288542450488bcbff151f1d1100807c2450000f8483000000488bd3488b4f18ff152f121100488b5c24404883c4205f5e5dc3ff15dc8f1000488d5710488bcbff15df8f1000488d542450488bcbff15e11c1100807c245000743bb918000000e8e53e0d0048894424584885c0740a488bc8ff15d50f11009048894718488bd3488bc8ff15d4111100488b5c24404883c4205f5e5dc333c048894718488b5c24404883c4205f5e5dc3",
+        "sha256": "0903cf6c9cec12fef52d9ffb3900b410393fb4c932f0e07298e3bade56f95f4f",
+        "imports": [
+          {
+            "call_va": "0x1802d96e2",
+            "iat": "0x1803eb580",
+            "module": "swccu.dll",
+            "symbol": "?Serialize@su_CObject@@UEAAXAEAVsu_CArchive@@@Z",
+            "descriptor_bytes": "c02b5b0000000000000000000e935f0068b33e00",
+            "lookup_index": 67,
+            "lookup_bytes": "64835f0000000000"
+          },
+          {
+            "call_va": "0x1802d96f0",
+            "iat": "0x1803eb6a8",
+            "module": "swccu.dll",
+            "symbol": "?IsStoring@su_CArchive@@QEBAHXZ",
+            "descriptor_bytes": "c02b5b0000000000000000000e935f0068b33e00",
+            "lookup_index": 104,
+            "lookup_bytes": "a67d5f0000000000"
+          },
+          {
+            "call_va": "0x1802d9701",
+            "iat": "0x1803e2728",
+            "module": "SLDMODU.dll",
+            "symbol": "??6@YAAEAVsu_CArchive@@AEAV0@AEAPEAVmoFaceRef_c@@@Z",
+            "descriptor_bytes": "888e5a000000000000000000ca7c5f0030163e00",
+            "lookup_index": 543,
+            "lookup_bytes": "96f05e0000000000"
+          },
+          {
+            "call_va": "0x1802d970e",
+            "iat": "0x1803e2738",
+            "module": "SLDMODU.dll",
+            "symbol": "??6@YAAEAVsu_CArchive@@AEAV0@AEAPEAVmoEdgeRef_c@@@Z",
+            "descriptor_bytes": "888e5a000000000000000000ca7c5f0030163e00",
+            "lookup_index": 545,
+            "lookup_bytes": "2af05e0000000000"
+          },
+          {
+            "call_va": "0x1802d9723",
+            "iat": "0x1803eb448",
+            "module": "swccu.dll",
+            "symbol": "??6su_CArchive@@QEAAAEAV0@E@Z",
+            "descriptor_bytes": "c02b5b0000000000000000000e935f0068b33e00",
+            "lookup_index": 28,
+            "lookup_bytes": "a88d5f0000000000"
+          },
+          {
+            "call_va": "0x1802d973b",
+            "iat": "0x1803ea970",
+            "module": "sldmgu.dll",
+            "symbol": "?save@mgPoint_c@@QEBAXAEAVsu_CArchive@@@Z",
+            "descriptor_bytes": "f01e5b00000000000000000044f25f0098a63e00",
+            "lookup_index": 91,
+            "lookup_bytes": "2acf5f0000000000"
+          },
+          {
+            "call_va": "0x1802d974e",
+            "iat": "0x1803e2730",
+            "module": "SLDMODU.dll",
+            "symbol": "??5@YAAEAVsu_CArchive@@AEAV0@AEAPEAVmoFaceRef_c@@@Z",
+            "descriptor_bytes": "888e5a000000000000000000ca7c5f0030163e00",
+            "lookup_index": 544,
+            "lookup_bytes": "60f05e0000000000"
+          },
+          {
+            "call_va": "0x1802d975b",
+            "iat": "0x1803e2740",
+            "module": "SLDMODU.dll",
+            "symbol": "??5@YAAEAVsu_CArchive@@AEAV0@AEAPEAVmoEdgeRef_c@@@Z",
+            "descriptor_bytes": "888e5a000000000000000000ca7c5f0030163e00",
+            "lookup_index": 546,
+            "lookup_bytes": "f4ef5e0000000000"
+          },
+          {
+            "call_va": "0x1802d9769",
+            "iat": "0x1803eb450",
+            "module": "swccu.dll",
+            "symbol": "??5su_CArchive@@QEAAAEAV0@AEAE@Z",
+            "descriptor_bytes": "c02b5b0000000000000000000e935f0068b33e00",
+            "lookup_index": 29,
+            "lookup_bytes": "c88d5f0000000000"
+          },
+          {
+            "call_va": "0x1802d978d",
+            "iat": "0x1803ea768",
+            "module": "sldmgu.dll",
+            "symbol": "??0mgPoint_c@@QEAA@XZ",
+            "descriptor_bytes": "f01e5b00000000000000000044f25f0098a63e00",
+            "lookup_index": 26,
+            "lookup_bytes": "8ec55f0000000000"
+          },
+          {
+            "call_va": "0x1802d979e",
+            "iat": "0x1803ea978",
+            "module": "sldmgu.dll",
+            "symbol": "?restore@mgPoint_c@@QEAAXAEAVsu_CArchive@@@Z",
+            "descriptor_bytes": "f01e5b00000000000000000044f25f0098a63e00",
+            "lookup_index": 92,
+            "lookup_bytes": "56cf5f0000000000"
+          }
+        ],
+        "decompilation": "\nvoid FUN_1802d96d0(su_CObject *param_1,su_CArchive *param_2)\n\n{\n  int iVar1;\n  mgPoint_c *this;\n  uchar local_res18 [8];\n  mgPoint_c *local_res20;\n  \n  su_CObject::Serialize(param_1,param_2);\n  local_res18[0] = '\\0';\n  iVar1 = su_CArchive::IsStoring(param_2);\n  if (iVar1 == 0) {\n    operator>>(param_2,(moFaceRef_c **)(param_1 + 8));\n    operator>>(param_2,(moEdgeRef_c **)(param_1 + 0x10));\n    su_CArchive::operator>>(param_2,local_res18);\n    if (local_res18[0] != '\\0') {\n      local_res20 = operator_new(0x18);\n      this = (mgPoint_c *)0x0;\n      if (local_res20 != (mgPoint_c *)0x0) {\n        this = (mgPoint_c *)mgPoint_c::mgPoint_c(local_res20);\n      }\n      *(mgPoint_c **)(param_1 + 0x18) = this;\n      mgPoint_c::restore(this,param_2);\n      return;\n    }\n    *(undefined8 *)(param_1 + 0x18) = 0;\n  }\n  else {\n    operator<<(param_2,(moFaceRef_c **)(param_1 + 8));\n    operator<<(param_2,(moEdgeRef_c **)(param_1 + 0x10));\n    local_res18[0] = *(longlong *)(param_1 + 0x18) != 0;\n    su_CArchive::operator<<(param_2,local_res18[0]);\n    if (local_res18[0] != '\\0') {\n      mgPoint_c::save(*(mgPoint_c **)(param_1 + 0x18),param_2);\n      return;\n    }\n  }\n  return;\n}\n\n"
+      }
+    },
+    "limitations": [
+      "Ordinary non-DB external-XML version >27CB only; ordinary su_CObject base contributes no wire bytes",
+      "No runtime allocation size used as serialized length",
+      "Pointer targets and optional point meanings remain partial; no whole-document/project coverage claim"
+    ]
+  }
+}

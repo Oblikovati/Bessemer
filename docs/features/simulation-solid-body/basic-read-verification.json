@@ -1,0 +1,27 @@
+{
+  "issue": 150,
+  "scope": "Basic read/construction prototype only; full production acceptance pending",
+  "focused_tests": 4,
+  "failed": 0,
+  "native_arguments": 745,
+  "native_accepted": 691,
+  "native_failed": 54,
+  "owned_profiles": 240,
+  "identifier_version_cases": 24,
+  "identifier_accepted": 12,
+  "identifier_rejected": 12,
+  "full_fields": {
+    "fresh_processes": 2,
+    "bytes": 3113446,
+    "sha256": "062411270ace26c4263e95ce1f767fa5b9485297653abd6e93b6b91caba87823"
+  },
+  "strict_source_checks": 13,
+  "clippy": "passed with -D warnings",
+  "remaining": [
+    "Complete scalar/raw-text/blob/double/embedded edits and independent ordered outer/nested history",
+    "Independent malformed/resource gates and degenerate cases",
+    "Input isolation, all public Send/Sync types and concurrency",
+    "Full local and exact-head platform gates"
+  ],
+  "initial_native_failure": "The first native prototype run failed on four undeclared Simulation embedded identity classes. The explicit C-734 modern dispatch additions reuse existing layouts and retain the 4307 minimum; complete native outcomes and independent boundary cases now pass."
+}

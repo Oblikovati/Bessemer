@@ -1,0 +1,14 @@
+{
+  "certificate": {
+    "multiplier": 1717986919,
+    "denominator": 34359738368,
+    "excess": 12,
+    "largest_magnitude": 2147483648,
+    "largest_quotient": 107374182,
+    "largest_remainder_numerator": 33930241645
+  },
+  "regression_cases": 8359,
+  "complete_signed32_identity_proved": true,
+  "target_executed": false,
+  "proof": "For |n|=20q+r, 0<=r<=19, the excess numerator12q+Mr is below2^35, and positive for nonzero n; floor/negative ceiling plus sign correction yields truncation toward zero."
+}

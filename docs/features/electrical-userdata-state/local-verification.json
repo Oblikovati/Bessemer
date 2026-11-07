@@ -1,0 +1,48 @@
+{
+  "issue": 231,
+  "behavior_version": 1,
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0",
+  "scope": "Complete fixed twenty-slot delegate storage projection for explicit post-provider effects; no SQLite/provider conversion inference",
+  "tests": {
+    "new_state_tests": 5,
+    "existing_userdata_tests": 11,
+    "failed": 0,
+    "ignored": 0,
+    "signed_id_pairs": 81,
+    "raw_flags": [
+      0,
+      1,
+      7,
+      255
+    ],
+    "workers": 8
+  },
+  "commands": [
+    {
+      "command": "cargo test --test electrical_userdata_state --test electrical_userdata --locked",
+      "exit_code": 0
+    },
+    {
+      "command": "cargo clippy --lib --test electrical_userdata_state --test electrical_userdata --locked -- -D warnings",
+      "exit_code": 0
+    }
+  ],
+  "source_and_log_sha256": {
+    "src/electrical/mod.rs": "c8b052f1036c4f63eee3812eeba2e14680fea983cc15fe7d5ce5b6cc8743061c",
+    "src/electrical/userdata_state.rs": "c1ccf2e5d7cc64085b9d1d0ce95c78383e8fd59bd6511a21d3e52005b506763a",
+    "tests/electrical_userdata_state.rs": "7f2510198a6ba9c38274b43884f2f7952fc1f9d3131ad4dca4f5c9c64d5e047b",
+    "target/userdata-state-focused-tests.log": "987fe4696b01b9393458f3e930b5f03fcbbdfd3ba50918308c28cd6223d0f3ed",
+    "target/userdata-state-clippy.log": "976f62986f3ddfce1ed67bed49f24f10dc1837fedf00f67dd1c2dc6ef70baa7a",
+    "docs/features/electrical-userdata/reader-native-byte-verification.json": "13543b37b712b3c0f37ffe752f1b02b3a07a10abe0f467bcb0b481f690ccadda"
+  },
+  "native_execution": false,
+  "excluded": [
+    "Provider conversions and failure write effects",
+    "Connection context acquisition semantics",
+    "Malformed native arrays",
+    "SQL first-row priority",
+    "Native application and geometry acceptance",
+    "Full repository gate for this newer source cut"
+  ]
+}

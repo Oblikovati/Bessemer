@@ -1,0 +1,22 @@
+{
+  "scope": "Line-reference correction before diagnostic-context changes.",
+  "base_revision": "5233de6371d94261cba4d747168e607ee8493946",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "command": "cargo xtask pr",
+  "exit_code": 0,
+  "library_passed": 427,
+  "external_gates_ignored": 3,
+  "doctests_passed": 265,
+  "focused_role_tests": 3,
+  "public_reconstruction_edit_tests": 2,
+  "python_fixture_tests": 3,
+  "log_sha256": "3b554494ae77c37d60ccc6f12ebd586921fbb37d1d79b35933ea04882ef1a088",
+  "accepted": 419,
+  "total": 906,
+  "exclusions": [
+    "Full documented parity",
+    "Geometry and topology certification",
+    "Native application acceptance"
+  ]
+}

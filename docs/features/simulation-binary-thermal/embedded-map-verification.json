@@ -1,0 +1,67 @@
+{
+  "issue": 134,
+  "status": "Unfinished local feature; complete nested pointer identities independently verified",
+  "revision": "55ad3b8c6a10db705ad33206309c9680fbf7b9ef",
+  "owned": {
+    "cases": 1595,
+    "bytes": 516958,
+    "sha256": "35f5e6e7839542dece7409b80529c9e94357b7932c04890abaa9a986313de977"
+  },
+  "native": {
+    "cases": 242,
+    "bytes": 305676,
+    "sha256": "d2d4b08d68fea0eed37533049aa6fd4cce00e47ea2838c74d4a3018da60b8572"
+  },
+  "fresh_processes": {
+    "owned_roots": 1595,
+    "native_roots": 242,
+    "scope": "Every ordered MFC pointer framing and extension, resolved meaning, object-map index, class name/schema and final object-map extent, plus complete original images",
+    "processes": [
+      {
+        "path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\embedded-map-projection-process-0.bin",
+        "bytes": 822634,
+        "sha256": "ef4c229e37255b441cd35f8dc19606a8b6a162701c76bf1ff3bdc58eb2e7812e",
+        "exit": 0
+      },
+      {
+        "path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\embedded-map-projection-process-1.bin",
+        "bytes": 822634,
+        "sha256": "ef4c229e37255b441cd35f8dc19606a8b6a162701c76bf1ff3bdc58eb2e7812e",
+        "exit": 0
+      }
+    ],
+    "byte_identical_to_independent_source": true,
+    "byte_identical_between_processes": true,
+    "handles_reaped": true
+  },
+  "new_map_tests": {
+    "passed": 2,
+    "failed": 0,
+    "ignored": 0
+  },
+  "strict_actual_source_checks": {
+    "passed": 17,
+    "failed": 0
+  },
+  "clippy_exit": 0,
+  "oracle": "Operation-local Python profile observer reads calls and resolved frame locals of the actual pinned ObjectArchive.object implementation; no reader replacement, facade, ordinary context substitution or source edits",
+  "scope": [
+    "All 1595 owned roots covering all 61 declared classes",
+    "All 242 complete native embedded roots",
+    "Every ordered physical pointer framing and extension",
+    "Resolved null/new/reference meaning",
+    "Every object-map index and class name/schema",
+    "Actual final map slot count",
+    "Original aliases and cached class identities",
+    "Full original byte images",
+    "Two fresh-process complete byte comparisons",
+    "Function/file audit and git diff --check passed"
+  ],
+  "exclusions": [
+    "Independent nested primitive-field projection",
+    "Final full local PR gate",
+    "Final platform matrix",
+    "SolidWorks native application execution",
+    "Complete schema parity"
+  ]
+}

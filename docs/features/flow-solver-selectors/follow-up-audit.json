@@ -1,0 +1,67 @@
+{
+  "issue": 241,
+  "scope": "Targeted Flow follow-up audit; not a repository-wide or whole-schema parity claim",
+  "source_root": "../inventor-interface/solidworks",
+  "requirements": [
+    {
+      "source": "flowsolverselectors.py",
+      "source_lf_sha256": "3ad8185e72097f10219129b17c9e7cc49b68b6889a9efc43d454869d831ef65c",
+      "status": "Typed unsigned selector API implemented; focused checks and full PR gate accepted at 419844f2; hosted PR249 checks pending"
+    },
+    {
+      "source": "flowcontrolrecords.py",
+      "source_lf_sha256": "bb3d4c7326cb67e0e9fe6b22bfe5c938b805b125687c5a440970da801797337d",
+      "status": "Complete strict writer-profile readers/editors implemented; focused field/codec/footer/isolation/concurrency/two-process checks and distance-overflow unit accepted; combined local PR gate accepted at a4da7848; hosted acceptance pending; native payload fixtures absent"
+    },
+    {
+      "source": "flowresultdefinitions.py",
+      "source_lf_sha256": "e8d6993720cfac848300347a9f2aa4324c84b9819c0d95fbf913a253d7e5c5ac",
+      "status": "Complete documented IMS-definition reader/editor implemented; focused corpus, concurrency and two-process checks accepted; combined local PR gate accepted at a4da7848; hosted acceptance pending"
+    },
+    {
+      "source": "flowresultvalues.py",
+      "source_lf_sha256": "ce4b40d917a7a809fd450dac4e81ab6e2994d6b12a1626168474715c7ea53bb2",
+      "status": "Complete documented paired reader/editor and exact-definition fresh context implemented; focused corpus/concurrency/two-process checks accepted; combined local PR gate accepted at a4da7848; hosted acceptance pending"
+    },
+    {
+      "source": "flowcheckpointcomponents.py",
+      "source_lf_sha256": "98430fb615a2281af300ff97d8d5564df93e38a248d9164ff8a089d3788516d8",
+      "status": "All five standalone logical readers and typed existing-field editors implemented; 2899 frozen cases, 2851821 field values, 21662 edits, bounds, isolation, eight-lane stress and two-process checks accepted in 14 Rust tests; clippy/format/caps passed; combined local full PR gate accepted at f2902881; hosted acceptance pending; parent record and codecs excluded"
+    },
+    {
+      "source": "flowrecord121.py",
+      "source_lf_sha256": "4820c39058e7aaff2c55341daaafcd0bb95145726130c3d2bab6a18326e87dbc",
+      "status": "Explicit viewer prefix implemented; full decoded body remains incomplete and graph components have a distinct logical context"
+    },
+    {
+      "source": "flowindex.py",
+      "source_lf_sha256": "6c9117accb71203ace520c125280daa9259f5ffd30c96536390d220c2d4ddcdb",
+      "status": "Typed fresh-map reader implemented; all 2140 frozen requested outcomes, bounds, retained control provenance, isolation, 8-lane stress and two-process comparisons accepted in 12 Rust tests; clippy/format/caps passed; combined local full PR gate accepted at f2902881; hosted acceptance pending"
+    },
+    {
+      "source": "flowlegacyfields.py",
+      "source_lf_sha256": "2956d2854bf47265a8a5799a7549406117ead69858716d823fade7bb25505a41",
+      "status": "Typed 105/113/155 readers, scalar queries, preferred selection and existing-value editors implemented; 16 Rust, 8 baseline Python, 5 Source tests and earlier conditional 14 suite accepted with frozen typed values/paths, exact bounds, malformed framing, history, inverse wires, isolation, eight-worker and two-process checks; clippy/format/caps passed; combined local full PR gate accepted at f0bd5f21; hosted acceptance pending"
+    }
+  ],
+  "search": {
+    "roots": [
+      "src/flow",
+      "tests"
+    ],
+    "patterns": [
+      "record_500",
+      "record_501",
+      "read_saved_spans",
+      "solver_latest",
+      "graph1_object"
+    ],
+    "limitation": "Identifier searches identify follow-up work; they do not establish absence of equivalent unnamed implementations"
+  },
+  "next": "Retain the running b21f26b4 timestamp full gate; merge PR249 after all 13 exact-head hosted jobs pass; prepare Bug251 for main first and forward it to the candidate; continue the broader schema audit",
+  "exclusions": [
+    "Other Flow modules need a requirement-by-requirement audit",
+    "Other SolidWorks schema families need a fresh source audit",
+    "Engineering interpretation and native runtime/application acceptance are separate gates"
+  ]
+}

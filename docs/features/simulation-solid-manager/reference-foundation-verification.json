@@ -1,0 +1,40 @@
+{
+  "issue": 148,
+  "status": "Reference foundation only; production operations and acceptance remain pending",
+  "commands": [
+    "python -B -X utf8 docs/features/simulation-solid-manager/freeze_solid_manager.py --write",
+    "python -B -X utf8 docs/features/simulation-solid-manager/freeze_solid_manager.py"
+  ],
+  "checks_passed": 7,
+  "failed": 0,
+  "native": {
+    "streams": 361,
+    "arguments": 395,
+    "accepted": 365,
+    "failed": 30,
+    "bytes": 22880,
+    "sha256": "5373a81cc718d870e25acce0efccece38747b48944f67ceae63493632bbb50c8"
+  },
+  "native_logical_bytes": 5136,
+  "owned": {
+    "cases": 68,
+    "bytes": 5000,
+    "sha256": "4f2fbab32c97b36b7c31355cade9093540b3342ac23fe59df422e190b1d03581"
+  },
+  "checks": [
+    "Fresh approved envelope/nested extraction and all 395 exact complete original outcomes",
+    "All 361 native identities preserve size/hash and all successful raw spans/reconstruction hashes",
+    "All original sources/decompilation dependencies and complete schema clause",
+    "Installed module, constructor/reader function bytes, reader slot and all five floating threshold patterns",
+    "Original three actual Source boundary/list/version tests",
+    "All 68 independent historical/raw/list profiles",
+    "Immutable Source import origins and unchanged snapshot"
+  ],
+  "exclusions": [
+    "Native populated-list fixtures (all retained lists are empty)",
+    "Production reads/construction/edits, complete field/history and resource/malformed/concurrency corpora",
+    "Local and exact-head platform gates",
+    "Child/folder/body/persist-ID grammars",
+    "Native runtime/application/writer, physical or geometric acceptance"
+  ]
+}

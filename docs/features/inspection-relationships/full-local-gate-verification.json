@@ -1,0 +1,21 @@
+{
+  "issue": 197,
+  "passed": true,
+  "command": "cargo xtask pr",
+  "process_exit_code": 0,
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "tested_runtime_revision": "6be8e8bfda7d0cce7cdaa324d406ef03373260ad",
+  "runtime_changes_during_gate": [],
+  "tests_passed": 4015,
+  "tests_failed": 0,
+  "tests_ignored": 225,
+  "test_summaries": 320,
+  "log_sha256": "e743da4612664dedcc23e915bfa01e0e2a396d5ecdea37490ca7b4a24ab7a34a",
+  "qualification": "Complete operation-local relationship implementation including CI artifact policy #196. Later root-worktree spline Feature #199 and CString Bug #200 are excluded. Prior stopped storage implementation and failed test-layout attempt are not counted as passed.",
+  "remaining": [
+    "Forward-integrate subsequent fixes and run integration checks",
+    "Exact-head remote publication and required checks",
+    "Native application semantics remain outside the stored relationship projection scope"
+  ]
+}

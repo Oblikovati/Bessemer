@@ -1,0 +1,100 @@
+{
+  "evidence_source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\backup-frontier-native-evidence.json",
+  "evidence_source_sha256": "7e0c2facaaabee60a82465bdd53daec1887922371e000c3886eb827bcdc99028",
+  "module_sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "installed_module_sha256_verified": true,
+  "tables": [
+    {
+      "class_name": "moParabolaBackedUpData_c",
+      "object_offset": 0,
+      "locator": "0x4d359d30",
+      "vftable": "0x4d1641c8",
+      "slots": [
+        "0x4c2797e0",
+        "0x4c297f30",
+        "0x4cba273f",
+        "0x4b29dae0",
+        "0x4b29dae0",
+        "0x4c280780",
+        "0x4cba274b",
+        "0x4cba2751"
+      ],
+      "bases": [
+        ".?AVmoParabolaBackedUpData_c@@",
+        ".?AVmoSegmentBackedUpData_c@@",
+        ".?AVmoBackedUpData_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ]
+    },
+    {
+      "class_name": "mo3DCylinderBackedUpData_c",
+      "object_offset": 0,
+      "locator": "0x4d358c18",
+      "vftable": "0x4d158180",
+      "slots": [
+        "0x4c2792d0",
+        "0x4c2785e0",
+        "0x4cba273f",
+        "0x4b29dae0",
+        "0x4b29dae0",
+        "0x4c279cd0",
+        "0x4cba274b",
+        "0x4cba2751"
+      ],
+      "bases": [
+        ".?AVmo3DCylinderBackedUpData_c@@",
+        ".?AVmo3DSurfaceBackedUpData_c@@",
+        ".?AVmoBackedUpData_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ]
+    },
+    {
+      "class_name": "sgConicHandle",
+      "object_offset": 0,
+      "locator": "0x4d3681d8",
+      "vftable": "0x4d1d01e0",
+      "slots": [
+        "0x4c581de0",
+        "0x4c5fa0f0",
+        "0x4cba273f",
+        "0x4b29dae0",
+        "0x4b29dae0",
+        "0x4c591ed0",
+        "0x4cba274b",
+        "0x4cba2751"
+      ],
+      "bases": [
+        ".?AVsgConicHandle@@",
+        ".?AVsgSegmentHandle@@",
+        ".?AVsgEntHandle@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ]
+    },
+    {
+      "class_name": "sg3DCylinderHandle",
+      "object_offset": 0,
+      "locator": "0x4d321eb8",
+      "vftable": "0x4ced9680",
+      "slots": [
+        "0x4c58c250",
+        "0x4b950240",
+        "0x4cba273f",
+        "0x4b29dae0",
+        "0x4b29dae0",
+        "0x4c591ed0",
+        "0x4cba274b",
+        "0x4cba2751"
+      ],
+      "bases": [
+        ".?AVsg3DCylinderHandle@@",
+        ".?AVsg3DSurfaceHandle@@",
+        ".?AVsgEntHandle@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ]
+    }
+  ]
+}

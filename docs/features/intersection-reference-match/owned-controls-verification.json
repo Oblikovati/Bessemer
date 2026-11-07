@@ -1,0 +1,104 @@
+{
+  "issue": 184,
+  "passed": true,
+  "complete_roots": 3,
+  "physical_sketches": 2,
+  "groups": 8,
+  "literal_scalar_spans": 32,
+  "primitive_reads": 451,
+  "packet_bytes": 1518,
+  "packet_sha256": "e75d60beec167841c83bb9054c026720f564a02782ddc21a9a50112560920100",
+  "starts": [
+    440,
+    460,
+    480,
+    500,
+    1187,
+    1207,
+    1227,
+    1247
+  ],
+  "context_streams_sha256": [
+    "3b98a8dfe9082f76c546219eb38b4b358c9a682d5aafc1a44b33c099c1a22495",
+    "2bb4c6306071b4bd20be2cda0207c376e5a6c803e884c77c95ee68f44632d8f7",
+    "f6387400850ae80dedbc5d2f5dc77fb1dd38ad4b8afb1e6fb2ffc2ad35edb27d"
+  ],
+  "source_python_files": 5669,
+  "qualification": "Explicit complete-carrier assertions and invalid builder controls; no unittest suite was run",
+  "stage": "First complete owned intersection reference carrier and maintained regression controls",
+  "corrected_source_process_reaped": true,
+  "corrected_source_exit_code": 0,
+  "final_regression_process_reaped": true,
+  "final_regression_exit_code": 0,
+  "final_regression_tests": 6,
+  "final_regression_seconds": 1.465,
+  "artifacts": [
+    {
+      "path": "docs/features/intersection-reference-match/owned_intersection_match.py",
+      "bytes": 2701,
+      "sha256": "c0fa46585322423556645790005ce77971954a49045eb3dc9386b7b7577628bf"
+    },
+    {
+      "path": "docs/features/intersection-reference-match/test_owned_intersection_match.py",
+      "bytes": 3858,
+      "sha256": "b259c591044faace5b61420902aa1e3d33340c9c5b4f6ba473f5039fded2fe13"
+    },
+    {
+      "path": "docs/features/intersection-reference-match/freeze_owned_controls.py",
+      "bytes": 551,
+      "sha256": "8af82b11a509d3d634f4d8918f3df9f55451758f73d32a78b1b4411ce00bdc2c"
+    },
+    {
+      "path": "docs/features/intersection-reference-match/owned-controls-source-snapshot.json",
+      "bytes": 715972,
+      "sha256": "8a1dec4b040bfeafe298bf5154794a4763d6e3fddd53d93b3d91b3d9bc65d8bc"
+    },
+    {
+      "path": "docs/features/intersection-reference-match/fixture-reference-snapshot.json",
+      "bytes": 712876,
+      "sha256": "0ee63dfda9929082d549f7242e647e93dbd8d07ca758af5a645496478eed68f1"
+    },
+    {
+      "path": "tests/fixtures/intersection-reference-match/controls.bin",
+      "bytes": 1518,
+      "sha256": "e75d60beec167841c83bb9054c026720f564a02782ddc21a9a50112560920100"
+    },
+    {
+      "path": "target/intersection-match-owned-controls.log",
+      "bytes": 679,
+      "sha256": "628769b3b2afe569c482b97711bdd0892a7683768de645e8d03bb13295f03aaa"
+    },
+    {
+      "path": "target/intersection-match-owned-unit-tests.log",
+      "bytes": 109,
+      "sha256": "b32a0fbc9924c227313604fdb7c7fa1f019a83874e4b3ebd9221d4b01168c663"
+    },
+    {
+      "path": "target/intersection-match-owned-controls-new-test-path-failure.log",
+      "bytes": 259,
+      "sha256": "e348370adecd08cea57b6142af3d414754a98aff7403c2fb9413d745581f0452"
+    },
+    {
+      "path": "target/check-intersection-owned-controls.py",
+      "bytes": 4984,
+      "sha256": "de0a05087f3336d029c3ee1f439fd1e844e1610402c47a381c8263bd4a2cfcfb"
+    }
+  ],
+  "checks": [
+    "Two complete ordinary sketch definitions and a first-instance alias reconstruct through unchanged resolved-feature readers with97 inherited/100 final map slots.",
+    "All451 physical primitive reads partition the1518-byte root stream; all32 literal state/raw20/span/backward scalar spans match exactly.",
+    "Every group has distinct signed/sentinel controls, including INT_MIN, INT_MAX, -2, -1, zero and one; state values are retained without an enum or activity filter.",
+    "Builder regression tests preserve the complete Source-accepted literal, exact offsets, null reference siblings and all invalid signed/state/group-count controls.",
+    "Both accepted frozen Source processes record unchanged source files and origins. The final regression snapshot also matches all six prepared reader/test pins."
+  ],
+  "initial_failure": "The first new test used the wrong dictionary level for intersections. Its KeyError is retained; only the assertion path changed to styled_intersections/intersections, without fixture or reader changes.",
+  "coverage_credit": 0,
+  "runtime_implemented": false,
+  "artifact_git_revision": "244f6973582b3dc074b29722eac4134217c4fd36",
+  "remaining": [
+    "Full owned signed/state matrix and independent operation oracles",
+    "Complete native instruction/import/dataflow admission beyond exact fragment bytes",
+    "Typed views/edits and document/concurrency/two-process export gates",
+    "Local Cargo and exact-head publication gates"
+  ]
+}

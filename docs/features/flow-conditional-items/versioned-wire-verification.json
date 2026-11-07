@@ -1,0 +1,43 @@
+{
+  "feature_issue": 241,
+  "base_commit": "34b158a80e1613af4f49092c3c913f36d1454449",
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "command": "cargo test --test flow_field_value_fixtures --test flow_primary_table_fixtures --test flow_conditional_item_fixtures --locked",
+  "passed": 38,
+  "failed": 0,
+  "ignored": 2,
+  "ignored_explanation": [
+    "Existing exhaustive native field-value export test remains separately gated",
+    "Primary standalone subprocess worker is invoked twice by its regular passing parent test"
+  ],
+  "clippy_command": "cargo clippy --tests --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "source_lf_sha256": {
+    "src/flow/legacy_tables/wire.rs": "ee251413a8d7572003be1f685d05bb00b5300f84ec63fd94fd505185dc540cb8",
+    "src/flow/legacy_tables/field_values/decode.rs": "55340cfe8a21480bd13d46a143a4de99634d92878eedb774b3dbfa0d5141992a",
+    "src/flow/legacy_tables/field_values/edit.rs": "ac77e6c39eca25f4bd2b294b55c56b00c3a732ebe13f64ff6af22de7fb5f0c5b",
+    "docs/features/flow-conditional-items/design.md": "d60f65bb2303ca72279a9d6ea83a689df5b2056a264c25f203c2fc4141dcd1ed"
+  },
+  "log_sha256": {
+    "flow-versioned-wire-refactor-tests.log": "c131438c229ad650359899ebc39734742fe03f6fa57b129c87a90429a09675b2",
+    "flow-versioned-wire-refactor-clippy.log": "0f3c1c7f29629cc75fd71f670fd8f7546be97043a943d221408ceae180bc8166"
+  },
+  "unchanged_fixture_gzip_sha256": {
+    "tests/fixtures/flow-field-values/values.bin.gz": "7c5527a79efd16199fc8de031bf2912d78f8c3dc0eb9e4df335f9921b1304f61",
+    "tests/fixtures/flow-field-values/widths.bin.gz": "24d72c32b294d9c700732cf394742c0584f80674b0c11b4edbbe9eafabfa6e88",
+    "tests/fixtures/flow-primary-table/patches.bin.gz": "4fce86bfa7140c22c46ea5320baf4ec808f481fab152cc1271d3374470be6f59",
+    "tests/fixtures/flow-primary-table/primary.bin.gz": "d27ccd851de32cdcd855c6ba4a91ad5f879ab6a43b7a0e149148b1597359f7e6",
+    "tests/fixtures/flow-conditional-items/record126.bin.gz": "4552e974beb38e5be717c730f56b208625382c182057f413b657e2c9773b89ac",
+    "tests/fixtures/flow-conditional-items/record128.bin.gz": "0f8a1985f5356f3d7b91990a9308dc577cfc8906bb2a5a5bd40b4c0a3a63a6be",
+    "tests/fixtures/flow-conditional-items/record315.bin.gz": "da3364cb79595200e59a790b92a50b09734f152f7229bc32afb1d71b58ae1647"
+  },
+  "scope": "Behavior-preserving extraction of record108 raw-version/body framing and existing-body edits into shared helpers; unchanged caller version/body validation and error operation, original stored noops and prefix placement; existing owned/native-context regressions, isolated edits, full carrier history and reversal",
+  "exclusions": [
+    "Production record128 caller and conditional-item parser",
+    "Exhaustive native record108 edit export",
+    "Running full gate is frozen at caa007185b01a9f41e8466edbec8cdb542f4ec43 and excludes this refactor"
+  ],
+  "humanizer": "Unavailable; prose pass left to maintainer review"
+}

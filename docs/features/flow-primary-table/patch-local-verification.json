@@ -1,0 +1,34 @@
+{
+  "feature_issue": 241,
+  "source_revision": "384f981d3d3cf49f4ea2d08047b56dd14ad989a2",
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "python_passed": 4,
+  "rust_passed": 5,
+  "failed": 0,
+  "ignored": 0,
+  "clippy_exit_code": 0,
+  "source_lf_sha256": {
+    "docs/features/flow-primary-table/patch_fields.py": "bf270f6b3565975b0b03dbb7f3c77d40f2f9f9fd0289f4aaef8765eb459b5026",
+    "docs/features/flow-primary-table/patch_oracle.py": "585fc3fd24a759770589ec306e587cdcded4ef40f2b64615a591f2b7c9dcd62b",
+    "docs/features/flow-primary-table/freeze_patches.py": "7bc7554f810449832c862262c04dfa54f8adc5943f4aa7e4036ccc804615cf4b",
+    "docs/features/flow-primary-table/test_patches.py": "2fb7e6ae4dcc30c3074430553df5f9938eb75cdc83b9c7aa35af844ad8ca620c",
+    "docs/features/flow-primary-table/patch-verification.json": "bfe053a59360b3c0784a2c3d238baee6678e9ecf8b0ddfed1e45c515ad384e7b",
+    "docs/features/flow-primary-table/README.md": "bd2e6314a41973236f46ce12b589ea2c9d186f93d757a52414037721c7c2c14f",
+    "tests/flow_primary_table/patches.rs": "cb449f854455debb1c8ecdf816ec7c03cd5fd46d1c45f49adb51715e6daec19e",
+    "tests/flow_primary_table_fixtures.rs": "3c30863386f1a0783a3ed74e2ccc17deb938529d1fc3abfbf560e19ae55ae183"
+  },
+  "log_sha256": {
+    "flow-primary-table-patch-python-tests.log": "9e97d03ee770960ca8aea5b02c52ec5f3491febf768f45f468b472a11adbe5e9",
+    "flow-primary-table-patch-rust-tests.log": "22544bde7914670e9b023fa03f3cb749becd133bc6f1e7bbfccc102b07355361",
+    "flow-primary-table-patch-clippy.log": "c7573f70abec8d403e4ae3ce13302a003dbbd83465f73170ec69d91a5eb62735"
+  },
+  "fixture_gzip_sha256": "4fce86bfa7140c22c46ea5320baf4ec808f481fab152cc1271d3374470be6f59",
+  "scope": "Independent edit oracle and complete original-corpus field locations, temporary-root reproducibility, exact expected field bytes and untouched remainder, full raw patch/reversal. No production API change.",
+  "exclusions": [
+    "Bessemer typed record439 read/edit API",
+    "Populated native fixtures",
+    "Native runtime and application acceptance",
+    "Running combined gate is frozen before these test-only additions"
+  ],
+  "humanizer": "Unavailable; prose pass left to maintainer review"
+}

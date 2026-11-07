@@ -1,0 +1,42 @@
+{
+  "status": "independent reference baseline; complete Bessemer blank-part and blank-assembly checkpoints implemented; full corpus pending",
+  "records": [
+    {
+      "fixture": "blank-part.SLDPRT",
+      "payload_bytes": 6316,
+      "payload_sha256": "bb5c6d68ebf2b21fd6ed10cbfb0cd9b5ba631788bef0705a01463d312c51dcce",
+      "display_version": 19000,
+      "kind": "part",
+      "classes": {
+        "uiUserModelEnv_c": 1,
+        "uiLineFontMgr_c": 1,
+        "uiLFConfig_c": 40,
+        "moAmbientLight_c": 1,
+        "moDirectionLight_c": 1,
+        "moVisualProperties_c": 2
+      },
+      "map_slots": 53,
+      "views": 1,
+      "has_shaded_data": 1
+    },
+    {
+      "fixture": "blank-assembly.SLDASM",
+      "payload_bytes": 5446,
+      "payload_sha256": "ef3c061f0d265ddb53dbecf120b432fc177c9e276eea3557f4ec4d86d8fda1be",
+      "display_version": 19000,
+      "kind": "assembly",
+      "classes": {
+        "uiUserModelEnv_c": 1,
+        "uiLineFontMgr_c": 1,
+        "uiLFConfig_c": 40,
+        "moAmbientLight_c": 1,
+        "moDirectionLight_c": 1,
+        "moVisualProperties_c": 1,
+        "uoTempSubAssemblySHDData_c": 1
+      },
+      "map_slots": 54,
+      "views": 1,
+      "has_shaded_data": 1
+    }
+  ]
+}

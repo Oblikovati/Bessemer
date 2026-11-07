@@ -1,0 +1,27 @@
+{
+  "base_commit": "8cefb149295cd22ffe219826ede9e97d7b7a8ffa",
+  "scope": "serializer token equality after explicit reader/type/module/context substitutions; frozen result baselines unchanged",
+  "serializers": [
+    {
+      "previous": "src/display_lists/modern_material.rs",
+      "current": "src/archive_codec/material.rs",
+      "previous_sha256": "f29bac5eaecbe944e53fae73d45464e9846a450478014009f892627b130d3219",
+      "current_sha256": "8c6f1c936e6e5a71880ac826dc737d8c0f4e61fa49276cccf858886e3d028b52",
+      "mechanical_extraction_tokens_match": true
+    },
+    {
+      "previous": "src/display_lists/modern_dspbr.rs",
+      "current": "src/archive_codec/dspbr.rs",
+      "previous_sha256": "f001762f867da61d5c52e7879988af9901c2240d642cc23d09cda49bd7d7a280",
+      "current_sha256": "9a4846f5e5139ad8c2e318158c407495b81fce898a9299c447a7c532672cc9fe",
+      "mechanical_extraction_tokens_match": true
+    },
+    {
+      "previous": "src/display_lists/modern_lights.rs:user_properties/property",
+      "current": "src/archive_codec/material_properties.rs",
+      "previous_sha256": "3fd8d4d08e5affc8598ab1420ff94973eb1258909d0e3be5754f8b51bd60d359",
+      "current_sha256": "88d1b2dc929b38cbb387f590dc7f308330172d1c66f3119d7d1ea7be151e2e14",
+      "mechanical_extraction_tokens_match": true
+    }
+  ]
+}

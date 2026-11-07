@@ -1,0 +1,26 @@
+{
+  "feature_issue": 241,
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "rust_passed": 13,
+  "rust_failed": 0,
+  "rust_ignored": 0,
+  "rust_exit_code": 0,
+  "clippy_exit_code": 0,
+  "python_passed": 15,
+  "python_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "scope": "Frozen backend boundary only; two new Rust tests plus existing 11 metadata regressions. No production API or complete record-424 claim.",
+  "humanizer": "Unavailable in installed skill catalog; prose pass left to maintainer review.",
+  "source_lf_sha256": {
+    "docs\\features\\flow-metadata\\freeze_backend.py": "9bd1aa0b563f1aee8a33d2ca60944e036431641cfb3e0fde1b776a4644f96b36",
+    "docs\\features\\flow-metadata\\test_backend.py": "619458b3510e8d81c33a8acf22ec30c9800031ddae4704bbf89928c3028b2167",
+    "tests\\flow_metadata\\backend.rs": "05c86c518723dd03440239efd483e79fda32fa04c0c86ec4dea9a518000c273d",
+    "tests\\flow_metadata_fixtures.rs": "2b01ca082493b7ec38abc9f312d23ff8fbcf4ec69f9d776a263af8e04a8771ed"
+  },
+  "log_sha256": {
+    "target\\flow-backend-baseline-tests.log": "28284fcbf30243ceb73848707895754a7d8172891b6ceec3886d156f7532016b",
+    "target\\flow-backend-baseline-clippy.log": "4b0e9592b74d3692bedb22b4d267ffd22a8bc9674274419cd01d8e7763352543",
+    "target\\flow-backend-baseline-python-tests.log": "ad2454c2646726303ad3c713c8c4093de08fefc50a2ca87fed638cd7f431ae82"
+  }
+}

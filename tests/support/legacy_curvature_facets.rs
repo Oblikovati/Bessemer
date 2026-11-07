@@ -1,0 +1,73 @@
+//! Independently assembled complete facet records across the curvature layout boundary.
+
+pub(super) fn curvature_facet_bytes(version: u32, index: usize, edited: usize) -> &'static [u8] {
+    FACETS.iter().find(|row| row.0 == version).unwrap().1[index][edited]
+}
+
+const FACETS: [(u32, [[&[u8]; 2]; 2]); 5] = [
+    (
+        773,
+        [
+            [
+                include_bytes!("../fixtures/display-lists/legacy-curvature-facet-773-0-0.bin"),
+                include_bytes!("../fixtures/display-lists/legacy-curvature-facet-773-0-1.bin"),
+            ],
+            [
+                include_bytes!("../fixtures/display-lists/legacy-curvature-facet-773-1-0.bin"),
+                include_bytes!("../fixtures/display-lists/legacy-curvature-facet-773-1-1.bin"),
+            ],
+        ],
+    ),
+    (
+        774,
+        [
+            [
+                include_bytes!("../fixtures/display-lists/legacy-curvature-facet-774-0-0.bin"),
+                include_bytes!("../fixtures/display-lists/legacy-curvature-facet-774-0-1.bin"),
+            ],
+            [
+                include_bytes!("../fixtures/display-lists/legacy-curvature-facet-774-1-0.bin"),
+                include_bytes!("../fixtures/display-lists/legacy-curvature-facet-774-1-1.bin"),
+            ],
+        ],
+    ),
+    (
+        816,
+        [
+            [
+                include_bytes!("../fixtures/display-lists/legacy-curvature-facet-816-0-0.bin"),
+                include_bytes!("../fixtures/display-lists/legacy-curvature-facet-816-0-1.bin"),
+            ],
+            [
+                include_bytes!("../fixtures/display-lists/legacy-curvature-facet-816-1-0.bin"),
+                include_bytes!("../fixtures/display-lists/legacy-curvature-facet-816-1-1.bin"),
+            ],
+        ],
+    ),
+    (
+        817,
+        [
+            [
+                include_bytes!("../fixtures/display-lists/legacy-curvature-facet-817-0-0.bin"),
+                include_bytes!("../fixtures/display-lists/legacy-curvature-facet-817-0-1.bin"),
+            ],
+            [
+                include_bytes!("../fixtures/display-lists/legacy-curvature-facet-817-1-0.bin"),
+                include_bytes!("../fixtures/display-lists/legacy-curvature-facet-817-1-1.bin"),
+            ],
+        ],
+    ),
+    (
+        903,
+        [
+            [
+                include_bytes!("../fixtures/display-lists/legacy-curvature-facet-903-0-0.bin"),
+                include_bytes!("../fixtures/display-lists/legacy-curvature-facet-903-0-1.bin"),
+            ],
+            [
+                include_bytes!("../fixtures/display-lists/legacy-curvature-facet-903-1-0.bin"),
+                include_bytes!("../fixtures/display-lists/legacy-curvature-facet-903-1-1.bin"),
+            ],
+        ],
+    ),
+];

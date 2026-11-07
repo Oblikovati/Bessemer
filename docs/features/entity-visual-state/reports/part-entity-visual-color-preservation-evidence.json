@@ -1,0 +1,237 @@
+{
+  "evidence": "C-1960",
+  "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+  "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "target_executed": false,
+  "coverage_credit": 0,
+  "functions": [
+    {
+      "start": "0x4c1603e0",
+      "end": "0x4c16049f",
+      "exports": [
+        "??0moEntVisProp_c@@QEAA@FW4swByLayer_e@0@KFVutLineWidth_c@@@Z"
+      ],
+      "bytes": "48895c2410488974241848894c240857415641574883ec30418bf1418bf80fb7da4c8bf94c8d71084c8974242041c706ffffffff6641c74604ffff498d4e08ff156348bd009033c049894718418947206641891f6641897f024189360fb7442470664189470c488b542478488d4c2420ff152a48bd00488bd84889442428498d4e08488bd0ff150548bd0090488bcbff150348bd0041c7470403000000488b4c2478ff15f047bd00498bc7488b5c2458488b7424604883c430415f415e5fc3",
+      "sha256": "21660ada963d66739833462db4693ed2b9f6cba2bbf3f2c77b6c7e6807b86a6f",
+      "disassembly": [
+        "4c1603e0 mov qword ptr [rsp + 0x10], rbx",
+        "4c1603e5 mov qword ptr [rsp + 0x18], rsi",
+        "4c1603ea mov qword ptr [rsp + 8], rcx",
+        "4c1603ef push rdi",
+        "4c1603f0 push r14",
+        "4c1603f2 push r15",
+        "4c1603f4 sub rsp, 0x30",
+        "4c1603f8 mov esi, r9d",
+        "4c1603fb mov edi, r8d",
+        "4c1603fe movzx ebx, dx",
+        "4c160401 mov r15, rcx",
+        "4c160404 lea r14, [rcx + 8]",
+        "4c160408 mov qword ptr [rsp + 0x20], r14",
+        "4c16040d mov dword ptr [r14], 0xffffffff",
+        "4c160414 mov word ptr [r14 + 4], 0xffff",
+        "4c16041b lea rcx, [r14 + 8]",
+        "4c16041f call qword ptr [rip + 0xbd4863]",
+        "4c160425 nop ",
+        "4c160426 xor eax, eax",
+        "4c160428 mov qword ptr [r15 + 0x18], rax",
+        "4c16042c mov dword ptr [r15 + 0x20], eax",
+        "4c160430 mov word ptr [r15], bx",
+        "4c160434 mov word ptr [r15 + 2], di",
+        "4c160439 mov dword ptr [r14], esi",
+        "4c16043c movzx eax, word ptr [rsp + 0x70]",
+        "4c160441 mov word ptr [r15 + 0xc], ax",
+        "4c160446 mov rdx, qword ptr [rsp + 0x78]",
+        "4c16044b lea rcx, [rsp + 0x20]",
+        "4c160450 call qword ptr [rip + 0xbd482a]",
+        "4c160456 mov rbx, rax",
+        "4c160459 mov qword ptr [rsp + 0x28], rax",
+        "4c16045e lea rcx, [r14 + 8]",
+        "4c160462 mov rdx, rax",
+        "4c160465 call qword ptr [rip + 0xbd4805]",
+        "4c16046b nop ",
+        "4c16046c mov rcx, rbx",
+        "4c16046f call qword ptr [rip + 0xbd4803]",
+        "4c160475 mov dword ptr [r15 + 4], 3",
+        "4c16047d mov rcx, qword ptr [rsp + 0x78]",
+        "4c160482 call qword ptr [rip + 0xbd47f0]",
+        "4c160488 mov rax, r15",
+        "4c16048b mov rbx, qword ptr [rsp + 0x58]",
+        "4c160490 mov rsi, qword ptr [rsp + 0x60]",
+        "4c160495 add rsp, 0x30",
+        "4c160499 pop r15",
+        "4c16049b pop r14",
+        "4c16049d pop rdi",
+        "4c16049e ret "
+      ]
+    },
+    {
+      "start": "0x4c1604a0",
+      "end": "0x4c1604f9",
+      "exports": [
+        "??0moEntVisProp_c@@QEAA@XZ"
+      ],
+      "bytes": "48895c241848894c2408574883ec20488bd9b8ffffffffc701ffff000033ffc74104030000004883c10848894c2438c701ffffffff668941044883c108ff15a547bd009048897b18897b20488bc3488b5c24404883c4205fc3",
+      "sha256": "a07f04f682f6d01e4b7fba3e6755b1a51e40d72f34cb8009d26ec01803e5447f",
+      "disassembly": [
+        "4c1604a0 mov qword ptr [rsp + 0x18], rbx",
+        "4c1604a5 mov qword ptr [rsp + 8], rcx",
+        "4c1604aa push rdi",
+        "4c1604ab sub rsp, 0x20",
+        "4c1604af mov rbx, rcx",
+        "4c1604b2 mov eax, 0xffffffff",
+        "4c1604b7 mov dword ptr [rcx], 0xffff",
+        "4c1604bd xor edi, edi",
+        "4c1604bf mov dword ptr [rcx + 4], 3",
+        "4c1604c6 add rcx, 8",
+        "4c1604ca mov qword ptr [rsp + 0x38], rcx",
+        "4c1604cf mov dword ptr [rcx], 0xffffffff",
+        "4c1604d5 mov word ptr [rcx + 4], ax",
+        "4c1604d9 add rcx, 8",
+        "4c1604dd call qword ptr [rip + 0xbd47a5]",
+        "4c1604e3 nop ",
+        "4c1604e4 mov qword ptr [rbx + 0x18], rdi",
+        "4c1604e8 mov dword ptr [rbx + 0x20], edi",
+        "4c1604eb mov rax, rbx",
+        "4c1604ee mov rbx, qword ptr [rsp + 0x40]",
+        "4c1604f3 add rsp, 0x20",
+        "4c1604f7 pop rdi",
+        "4c1604f8 ret "
+      ]
+    },
+    {
+      "start": "0x4c160aa0",
+      "end": "0x4c160b12",
+      "exports": [
+        "?setLayer@moEntVisProp_c@@QEAAXFW4swLayerMask_e@@HHVutLineWidth_c@@@Z"
+      ],
+      "bytes": "48895c2408564883ec30488bf16683faff7505668911eb4466891144894104448949080fb74424606689410c488b542468488d4c2420ff15a441bd00488bd84889442428488d4e10488bd0ff157f41bd0090488bcbff157d41bd0090488b4c2468488b5c24404883c4305e48ff256641bd00",
+      "sha256": "1a45b59d0f8f196bfbdcc4f0c81fae2e2d87c6412a37a753f248f52dcc400cb9",
+      "disassembly": [
+        "4c160aa0 mov qword ptr [rsp + 8], rbx",
+        "4c160aa5 push rsi",
+        "4c160aa6 sub rsp, 0x30",
+        "4c160aaa mov rsi, rcx",
+        "4c160aad cmp dx, -1",
+        "4c160ab1 jne 0x4c160ab8",
+        "4c160ab3 mov word ptr [rcx], dx",
+        "4c160ab6 jmp 0x4c160afc",
+        "4c160ab8 mov word ptr [rcx], dx",
+        "4c160abb mov dword ptr [rcx + 4], r8d",
+        "4c160abf mov dword ptr [rcx + 8], r9d",
+        "4c160ac3 movzx eax, word ptr [rsp + 0x60]",
+        "4c160ac8 mov word ptr [rcx + 0xc], ax",
+        "4c160acc mov rdx, qword ptr [rsp + 0x68]",
+        "4c160ad1 lea rcx, [rsp + 0x20]",
+        "4c160ad6 call qword ptr [rip + 0xbd41a4]",
+        "4c160adc mov rbx, rax",
+        "4c160adf mov qword ptr [rsp + 0x28], rax",
+        "4c160ae4 lea rcx, [rsi + 0x10]",
+        "4c160ae8 mov rdx, rax",
+        "4c160aeb call qword ptr [rip + 0xbd417f]",
+        "4c160af1 nop ",
+        "4c160af2 mov rcx, rbx",
+        "4c160af5 call qword ptr [rip + 0xbd417d]",
+        "4c160afb nop ",
+        "4c160afc mov rcx, qword ptr [rsp + 0x68]",
+        "4c160b01 mov rbx, qword ptr [rsp + 0x40]",
+        "4c160b06 add rsp, 0x30",
+        "4c160b0a pop rsi",
+        "4c160b0b jmp qword ptr [rip + 0xbd4166]"
+      ]
+    },
+    {
+      "start": "0x4b299740",
+      "end": "0x4b2997ae",
+      "exports": [
+        "??0moEntVisProp_c@@QEAA@AEBV0@@Z"
+      ],
+      "bytes": "48895c241848894c2408574883ec20488bda488bf90fb7026689010fb74202668941028b42048941044883c10848894c24388b420889010fb7420c668941044883c1084883c210ff15f3b4a901908b43188947188b431c89471c8b4320894720488bc7488b5c24404883c4205fc3",
+      "sha256": "2acbf5dcfc70721daf57b7f6cac4fe483e9982fe9397b29deabd1e12b0b11fcb",
+      "disassembly": [
+        "4b299740 mov qword ptr [rsp + 0x18], rbx",
+        "4b299745 mov qword ptr [rsp + 8], rcx",
+        "4b29974a push rdi",
+        "4b29974b sub rsp, 0x20",
+        "4b29974f mov rbx, rdx",
+        "4b299752 mov rdi, rcx",
+        "4b299755 movzx eax, word ptr [rdx]",
+        "4b299758 mov word ptr [rcx], ax",
+        "4b29975b movzx eax, word ptr [rdx + 2]",
+        "4b29975f mov word ptr [rcx + 2], ax",
+        "4b299763 mov eax, dword ptr [rdx + 4]",
+        "4b299766 mov dword ptr [rcx + 4], eax",
+        "4b299769 add rcx, 8",
+        "4b29976d mov qword ptr [rsp + 0x38], rcx",
+        "4b299772 mov eax, dword ptr [rdx + 8]",
+        "4b299775 mov dword ptr [rcx], eax",
+        "4b299777 movzx eax, word ptr [rdx + 0xc]",
+        "4b29977b mov word ptr [rcx + 4], ax",
+        "4b29977f add rcx, 8",
+        "4b299783 add rdx, 0x10",
+        "4b299787 call qword ptr [rip + 0x1a9b4f3]",
+        "4b29978d nop ",
+        "4b29978e mov eax, dword ptr [rbx + 0x18]",
+        "4b299791 mov dword ptr [rdi + 0x18], eax",
+        "4b299794 mov eax, dword ptr [rbx + 0x1c]",
+        "4b299797 mov dword ptr [rdi + 0x1c], eax",
+        "4b29979a mov eax, dword ptr [rbx + 0x20]",
+        "4b29979d mov dword ptr [rdi + 0x20], eax",
+        "4b2997a0 mov rax, rdi",
+        "4b2997a3 mov rbx, qword ptr [rsp + 0x40]",
+        "4b2997a8 add rsp, 0x20",
+        "4b2997ac pop rdi",
+        "4b2997ad ret "
+      ]
+    }
+  ],
+  "assertions": {
+    "0x4c1603f8": [
+      "mov",
+      "esi, r9d"
+    ],
+    "0x4c160404": [
+      "lea",
+      "r14, [rcx + 8]"
+    ],
+    "0x4c160439": [
+      "mov",
+      "dword ptr [r14], esi"
+    ],
+    "0x4c1604c6": [
+      "add",
+      "rcx, 8"
+    ],
+    "0x4c1604cf": [
+      "mov",
+      "dword ptr [rcx], 0xffffffff"
+    ],
+    "0x4c160abf": [
+      "mov",
+      "dword ptr [rcx + 8], r9d"
+    ],
+    "0x4b299772": [
+      "mov",
+      "eax, dword ptr [rdx + 8]"
+    ],
+    "0x4b299775": [
+      "mov",
+      "dword ptr [rcx], eax"
+    ]
+  },
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\sldmodu-complete-export-index.json": "fb3efcb81f1c79daf1ad32961f1ec1adb681297c1c2f41177250293ebe836ace",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part_entity_visual_color_preservation_audit.py": "3273be3f7263fe5fa1887dd078da7e16948c6da5e898b573a23af414c8947377",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\visual-color-population-run.txt": "d071e79e0b7d9a766a196d97c4c9b397216e454db35e9eb98829d4a255a0e494",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-entity-visual-rgb-native-evidence.json": "a1188579b1dae81a7bb25e55f5d40201662402715053402f7b76b59d92696454",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\visual-color-population\\FUN_4c1603e0.c": "e53ed9ff65d61374aada97edf61ba007d3795c249522c5e01962e567f5091d2c",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\visual-color-population\\FUN_4c1604a0.c": "7e3d5ce439b3007219b97fdb37392f66910597c1ee1461210315580ffc5ce317",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\visual-color-population\\FUN_4c160aa0.c": "8e6c8894df93abd6129653a7a82857869002d7cc207057261b56290dfc936d40",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\visual-color-population\\FUN_4b299740.c": "15c52c87eebd943c14428764df34aac35ceb4b5440ce75af821aba21dca8d0ce"
+  },
+  "findings": [
+    "Explicit constructor stores its full unsigned-long color argument; default constructor stores all-one missing sentinel. Copy construction preserves all 32 bits. Explicit layer setter preserves its full color int on its non-sentinel layer branch. None of these paths normalizes the stored high byte."
+  ],
+  "limitations": [
+    "Preservation does not establish the purpose of the high byte, its complete valid domain, alpha semantics, or reserved status. The existing graphics getter discards it before RGB consumption. No decoder or coverage change."
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "packets": {
+    "words": {
+      "cases": 1007,
+      "bytes": 5644466,
+      "sha256": "474e25b265f3695ad5dc0bc04798297e61acc32491c867496212821fb0fdff04"
+    },
+    "queries": {
+      "cases": 90601,
+      "bytes": 2004969,
+      "sha256": "7f3d7dd06791b3c420dcf7e484997cf3b8febd17d98263c14ecf973aa2d7df55"
+    },
+    "groups": {
+      "cases": 1986,
+      "bytes": 8217584,
+      "sha256": "568e4da8bd094a9121e591e8759a01e25f25febac5d3a610fc3fada1b9364203"
+    },
+    "selections": {
+      "cases": 400,
+      "bytes": 38111,
+      "sha256": "ea352cb2cc40004acbac09a2ea932fa4116f23daa1a612a0a612df999ceb89d8"
+    }
+  },
+  "query_domain_patterns": 301,
+  "native_reference": {
+    "evidence_sha256": "8e93cb4a2132fc0313ff611a1edede55255e9fe1570fd65b57a2a80799a5044d",
+    "corpus_sha256": "691464cd147716f8c06603474f7fd464a97ebf1df4a43e105702fd0024db808a",
+    "scalar_constants": {
+      "0x180958bd8": {
+        "native_bytes": "0000000000a88140",
+        "value": 565.0
+      },
+      "0x180967758": {
+        "native_bytes": "0000000000a06f40",
+        "value": 253.0
+      }
+    },
+    "limitations": [
+      "Record-155 fallback has native/synthetic evidence only",
+      "Native virtual method results, conversion and full runtime acceptance are not reproduced",
+      "Scalar model follows completed comparison branches; native floating-point faults are not emulated",
+      "Engineering units, field semantics and global project denominator remain open"
+    ]
+  },
+  "references": {
+    "flowlegacyfields.py": "2956d2854bf47265a8a5799a7549406117ead69858716d823fade7bb25505a41",
+    "flowrecord126.py": "aef5a82bbdf436547fcea37c2e619bf63174def567d3f1048085d81f7dbb5adf",
+    "flowrecord315.py": "16b44ce5dffc94342b333924cc0ba28ad207e434c838b3b55cad611a5ab2b405",
+    "flowlegacytables.py": "52309d35baa5ecc33046fb2f7a98f4eadc7bfbd22db5b9803e41898131924420"
+  },
+  "reused_helpers": {
+    "requests.py": "02e8da4d98ad6e7cd907cd80b520597081370ba93413c955433980bf41e4e81c",
+    "snapshot.py": "943c8bd1d19214588beed70dcf200a9f45902a4aac25c1b67e4f6ca3121516c1",
+    "freeze_items.py": "709ac9192ee9cc2e8ad5501fc11b5b4cd6cd773b38fc31e4a5b9d4f20aa6f17a"
+  },
+  "queries": "All domain pairs; completed comparison branches only, without native faults or virtual calls",
+  "native_record155_payload": false,
+  "native_execution": false,
+  "engineering_fields_assigned": false
+}

@@ -1,0 +1,55 @@
+{
+  "cases": 906,
+  "previous_complete": 750,
+  "complete": 751,
+  "explicit_stops": 155,
+  "new_complete": [
+    230
+  ],
+  "changed": [
+    {
+      "index": 230,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moBlendRefSurface_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    },
+    {
+      "index": 342,
+      "before": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"component_reference\" has runtime class \"moCompRefCurve_c\"; expected one of [\"moCompBody_c\", \"moCompSolidBody_c\", \"moCompSurfaceBody_c\", \"moCompRef_c\", \"moCompEntGroup_c\", \"moCompMultiEdge_c\", \"moCompEdge_c\", \"moCompFace_c\", \"moCompLoop_c\", \"moCompGlobalVar_c\", \"moFeatureDimHandle_c\", \"moSkDimHandleRadial_c\", \"moSkDimHandleOffset_c\", \"moSkDimHandleValG2_c\", \"moSkDimHandleValG3_c\", \"moCompSketchEntHandle_c\", \"moCompSilhVertex_c\", \"moCompRefPlane_c\", \"moCompRefSurface_c\", \"moCompRefAxis_c\", \"moCompRefPoint_c\", \"moCompSilhEdge_c\", \"moCompVertex_c\", \"moCompFeature_c\", \"moCompBodyFeature_c\", \"moCompProfile_c\", \"moCompReferenceCurve_c\", \"moCompCoordSys_c\", \"moCompHolder_c\"]"
+      ],
+      "after": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moSweepRefSurface_c\" schema 1; expected an implemented complete model object body"
+      ]
+    },
+    {
+      "index": 351,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moBlendRefSurface_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moCompEntGroup_c\" schema 1; expected an implemented complete model object body"
+      ]
+    },
+    {
+      "index": 749,
+      "before": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"component_reference\" has runtime class \"moCompRefCurve_c\"; expected one of [\"moCompBody_c\", \"moCompSolidBody_c\", \"moCompSurfaceBody_c\", \"moCompRef_c\", \"moCompEntGroup_c\", \"moCompMultiEdge_c\", \"moCompEdge_c\", \"moCompFace_c\", \"moCompLoop_c\", \"moCompGlobalVar_c\", \"moFeatureDimHandle_c\", \"moSkDimHandleRadial_c\", \"moSkDimHandleOffset_c\", \"moSkDimHandleValG2_c\", \"moSkDimHandleValG3_c\", \"moCompSketchEntHandle_c\", \"moCompSilhVertex_c\", \"moCompRefPlane_c\", \"moCompRefSurface_c\", \"moCompRefAxis_c\", \"moCompRefPoint_c\", \"moCompSilhEdge_c\", \"moCompVertex_c\", \"moCompFeature_c\", \"moCompBodyFeature_c\", \"moCompProfile_c\", \"moCompReferenceCurve_c\", \"moCompCoordSys_c\", \"moCompHolder_c\"]"
+      ],
+      "after": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moDeform_c\" schema 1; expected an implemented complete model object body"
+      ]
+    }
+  ]
+}

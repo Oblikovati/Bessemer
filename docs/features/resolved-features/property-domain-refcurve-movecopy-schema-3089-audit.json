@@ -1,0 +1,58 @@
+{
+  "issue": 2,
+  "edition": "Edition 0.3089 \u00b7 2026-11-05 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "specification_sha256": "f47316e546e7d093fb0968b2c6a9cecc89138ac79c3835a365b8571315c0e360",
+  "clauses": [
+    "11.218",
+    "11.338"
+  ],
+  "evidence_joins": [
+    "C-3534",
+    "C-3535"
+  ],
+  "snapshot_path": "docs/features/resolved-features/property-domain-refcurve-movecopy-schema-3089-snapshot.md",
+  "snapshot_representation": "Literal selected sections normalized to LF, stripped boundary whitespace and joined with one blank line",
+  "snapshot_sha256": "6bb7f9004985f5ead6488999e280e963a0750e875a1a2d832d50a3e8cc24f3d5",
+  "decisions": [
+    "RefCurve BiDir/raw_934 and Direction/raw_930 retain full signed32 values at their existing gates. No Boolean or engineering-direction enum is inferred. BlankFlag/raw_858 remains unsigned16 on wire despite full32 current APIs and callback effects; no four-byte field, sign extension or effective visibility state is substituted.",
+    "RefCurve projection raw_878 remains a complete signed32 stored word. Native isSketchFaceProjection returns mask1 and isSketchSketchProjection returns mask2 without Boolean normalization. Only bit1 selects the existing8A8 versus reference-array/plane branch; residual bits and the independent reference-count/version gates remain preserved.",
+    "MoveCopy AbsoluteXform/raw_4c0 and EnableEulerAngles/raw_4a4 remain signed32; the latter retains its>=0x3B0C reached read gate. Names imply no Boolean domain, coordinate frame, Euler convention or angular unit. StockFeature remains the typed tagged stock_3d0 occurrence.",
+    "MoveCopy Surfaces remains the distinct direct array_370. Native SetSize/Copy order and aliases do not prove deep copying, atomic replacement or safe self-aliasing. The ordinary zero-byte suPtrArray contributes no count/tag, and runtime-only API-distance flags add no wire fields. Fixed-transform, zero-multivector, conformal-selector and historical exclusions remain unchanged."
+  ],
+  "context_exclusions": [
+    "Legacy/nonordinary archive modes and suPtrArray flag0x10-set paths remain excluded",
+    "Unsupported nonzero multivectors/function objects/special transforms remain explicit stops",
+    "No native setters/provider calls, source accounting or geometry/application acceptance was established"
+  ],
+  "implementation_effect": "No production parser, public API, version/context admission or geometry changed.",
+  "verification": {
+    "status": "Clippy and18 focused tests passed",
+    "process_exit_code": 0,
+    "new_domain_tests": 3,
+    "all_property_domain_tests": 14,
+    "positive_golden_tests": 2,
+    "branch_or_version_regressions": 2,
+    "original_golden_records": 222,
+    "blankflag_unsigned16_patches": 65536,
+    "refcurve_direction_projection_patches": 7218,
+    "absolute_xform_signed_patches": 648,
+    "euler_enable_signed_patches": 360,
+    "new_literal_patches": 73762,
+    "shape_policy": "Projection flags vary every bit/complement while retaining mask2 branch selection; named direction/BiDir and MoveCopy words vary at reached version gates",
+    "log_sha256": {
+      "target/property-domains-refcurve-movecopy-focused-0.log": "69eb313ae23d506b062664e11cfd9d1dc080cf167d157f1768e1c55a42c2c9cd",
+      "target/property-domains-refcurve-movecopy-focused-1.log": "e6006ce14c830b25f31ac1067008e166b7181021c79478de52db11f7a23ffe17",
+      "target/property-domains-refcurve-movecopy-focused-2.log": "9c7e99e8135d7273c13117b75940a4f3d2f63f18c26c4ea05532b0604815d9fb",
+      "target/property-domains-refcurve-movecopy-focused-3.log": "a76abd8ab8c0bc627da0e659ec644cc2d66030ef351b8192e54552c32b032913",
+      "target/property-domains-refcurve-movecopy-focused-4.log": "8b3919cf1b24902702127b3669c0ec932eee4d8c5e1d288e5dc8e779853d31c7"
+    },
+    "clippy_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test_sha256": "fe730605a9bb409618642f493f5a56f657d80139dd3ba952fa4a3e0d0ec20237",
+    "full_gate": "Excluded from active gate21829 atf506fa65; prior complete production gate4139 passes at02b5676e remains separate"
+  },
+  "reader_sha256": {
+    "reference_curves.rs": "47cd44473f7291118be69194d37de357a455ae76c691406a0b29312b6b9519c8",
+    "move_copy_bodies.rs": "cbaa6b100347d4e84ddb7443a58bb3655a34f17517f5745f00a2558552f4cfbe",
+    "move_copy_deformation.rs": "ab7a5372802c709246313b694ca6d3a0b6e27319b54289bb07d42b69bfc8842b"
+  }
+}

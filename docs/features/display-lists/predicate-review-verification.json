@@ -1,0 +1,402 @@
+{
+  "scope": "Caller and negative-case review of the one-sided comparisons in the owned part/assembly audit; this is not geometric or model-schema acceptance.",
+  "reviewed_comparisons": 29,
+  "review_groups": [
+    {
+      "id": "uncounted-windows",
+      "classification": "explicit-negative-layout",
+      "reason": "Positive independent streams exclude the uncounted-window interval; explicit negative tests require Unsupported for that interval.",
+      "predicates": [
+        {
+          "source": "displaylists.py:71:29",
+          "function": "display_lists",
+          "expression": "8109 < v < 8143",
+          "observed_outcomes": [
+            "false"
+          ]
+        }
+      ],
+      "evidence_sha256": {
+        "tests/support/legacy_zero.rs": "560f99070cce634b48ffaaddd0e6884468924e986540b0bcb033900e9612caad",
+        "src/display_lists/modern_root.rs": "1b80b31a3980c04984bed7772f4d46b07cdbda4cc12bbdaac4d93d625f62136c"
+      },
+      "covered_by": []
+    },
+    {
+      "id": "drawing-textured-plane-suffix",
+      "classification": "different-caller-context",
+      "reason": "The comparison is behind non-null bitmap AND drawing context. The audited root kinds are part and assembly; unresolved non-null bitmap objects are rejected explicitly.",
+      "predicates": [
+        {
+          "source": "dl_doc.py:235:46",
+          "function": "read_TexturedPlanes",
+          "expression": "a.version > 4261",
+          "observed_outcomes": []
+        }
+      ],
+      "evidence_sha256": {
+        "../inventor-interface/solidworks/dl_doc.py": "6342a5285d5261d7ef5d07430d021aeea5aae878b0e61de9c7488b187f2aa8bc",
+        "tests/display_textured_planes.rs": "76b8fc9ee765f4269097662830f5168440d46fe78134c6aaefb7413f05d9d209"
+      },
+      "covered_by": []
+    },
+    {
+      "id": "inlined-view-reader",
+      "classification": "alternate-reference-helper",
+      "reason": "The complete reference root reads views inline rather than calling read_view_record. The corresponding comparisons in that actual caller have both outcomes.",
+      "predicates": [
+        {
+          "source": "dl_doc.py:705:7",
+          "function": "read_view_record",
+          "expression": "a.version > 2998",
+          "observed_outcomes": []
+        },
+        {
+          "source": "dl_doc.py:709:7",
+          "function": "read_view_record",
+          "expression": "a.version > 2374",
+          "observed_outcomes": []
+        },
+        {
+          "source": "dl_doc.py:712:7",
+          "function": "read_view_record",
+          "expression": "a.version > 772",
+          "observed_outcomes": []
+        }
+      ],
+      "evidence_sha256": {
+        "../inventor-interface/solidworks/displaylists.py": "2016e6267d2d13d08e3f1b1904dfe4c9e4ca06e12a619cecec3189ddf7e337b8"
+      },
+      "covered_by": [
+        "displaylists.py:61:11",
+        "displaylists.py:65:11",
+        "displaylists.py:68:11"
+      ]
+    },
+    {
+      "id": "embedded-scene-wall",
+      "classification": "enclosing-root-guard",
+      "reason": "This embedded wall reader is reached through root scenes above 3934. It is not a registered CObject reader and generic thread keys cannot select it directly.",
+      "predicates": [
+        {
+          "source": "dl_light.py:621:7",
+          "function": "read_swWall_c",
+          "expression": "v > 3908",
+          "observed_outcomes": [
+            "true"
+          ]
+        }
+      ],
+      "evidence_sha256": {
+        "../inventor-interface/solidworks/displaylists.py": "2016e6267d2d13d08e3f1b1904dfe4c9e4ca06e12a619cecec3189ddf7e337b8",
+        "src/display_lists/modern_scene.rs": "b60bd466ce0766d2144594892cf49444c9a61998ee807f31b087812a07b3cf02"
+      },
+      "covered_by": []
+    },
+    {
+      "id": "embedded-scene-node",
+      "classification": "enclosing-root-guard",
+      "reason": "These embedded node/concept readers belong to root scenes above 3934. Neither is a registered object reader; moNodeName_c has a separate CString-only reader.",
+      "predicates": [
+        {
+          "source": "dl_light.py:683:7",
+          "function": "read_moNode_LWData",
+          "expression": "v >= 107",
+          "observed_outcomes": [
+            "true"
+          ]
+        },
+        {
+          "source": "dl_light.py:685:7",
+          "function": "read_moNode_LWData",
+          "expression": "v > 225",
+          "observed_outcomes": [
+            "true"
+          ]
+        },
+        {
+          "source": "dl_light.py:687:7",
+          "function": "read_moNode_LWData",
+          "expression": "v > 327",
+          "observed_outcomes": [
+            "true"
+          ]
+        },
+        {
+          "source": "dl_light.py:705:7",
+          "function": "read_moConcept_c",
+          "expression": "v <= 3196",
+          "observed_outcomes": [
+            "false"
+          ]
+        },
+        {
+          "source": "dl_light.py:710:7",
+          "function": "read_moConcept_c",
+          "expression": "v > 421",
+          "observed_outcomes": [
+            "true"
+          ]
+        },
+        {
+          "source": "dl_light.py:713:7",
+          "function": "read_moConcept_c",
+          "expression": "2557 < v < 3451",
+          "observed_outcomes": [
+            "false"
+          ]
+        }
+      ],
+      "evidence_sha256": {
+        "../inventor-interface/solidworks/displaylists.py": "2016e6267d2d13d08e3f1b1904dfe4c9e4ca06e12a619cecec3189ddf7e337b8",
+        "src/display_lists/modern_scene.rs": "b60bd466ce0766d2144594892cf49444c9a61998ee807f31b087812a07b3cf02"
+      },
+      "covered_by": []
+    },
+    {
+      "id": "embedded-sw-scene",
+      "classification": "enclosing-root-guard",
+      "reason": "The root introduces this embedded scene above 3934. Generic object routes can select registered pwSceneData_c, but not this unregistered swScene reader. The former has separate early fixtures.",
+      "predicates": [
+        {
+          "source": "dl_light.py:735:7",
+          "function": "read_swScene_c",
+          "expression": "v < 3576",
+          "observed_outcomes": [
+            "false"
+          ]
+        },
+        {
+          "source": "dl_light.py:758:7",
+          "function": "read_swScene_c",
+          "expression": "v > 3665",
+          "observed_outcomes": [
+            "true"
+          ]
+        },
+        {
+          "source": "dl_light.py:760:7",
+          "function": "read_swScene_c",
+          "expression": "v > 3897",
+          "observed_outcomes": [
+            "true"
+          ]
+        }
+      ],
+      "evidence_sha256": {
+        "../inventor-interface/solidworks/displaylists.py": "2016e6267d2d13d08e3f1b1904dfe4c9e4ca06e12a619cecec3189ddf7e337b8",
+        "src/display_lists/modern_root.rs": "1b80b31a3980c04984bed7772f4d46b07cdbda4cc12bbdaac4d93d625f62136c"
+      },
+      "covered_by": []
+    },
+    {
+      "id": "component-entity-visibility",
+      "classification": "enclosing-reader-guard",
+      "reason": "The registered component-property caller embeds this reader only above 1170, already beyond 1095.",
+      "predicates": [
+        {
+          "source": "dl_light.py:803:7",
+          "function": "read_moEntVisProp_c",
+          "expression": "_v(a) >= 1095",
+          "observed_outcomes": [
+            "true"
+          ]
+        }
+      ],
+      "evidence_sha256": {
+        "../inventor-interface/solidworks/dl_light.py": "a5a23b81b19dec625339e487d8fb5bf818391b4a0ccf0188e75802feda03f58c"
+      },
+      "covered_by": []
+    },
+    {
+      "id": "delegated-light-line-width",
+      "classification": "delegated-reference-helper",
+      "reason": "dl_light imports dl_ui and delegates before this fallback. The complete display reader also requires dl_ui; the delegated implementation has both comparison outcomes.",
+      "predicates": [
+        {
+          "source": "dl_light.py:816:21",
+          "function": "read_utLineWidth",
+          "expression": "_v(a) < 3905",
+          "observed_outcomes": []
+        }
+      ],
+      "evidence_sha256": {
+        "../inventor-interface/solidworks/dl_light.py": "a5a23b81b19dec625339e487d8fb5bf818391b4a0ccf0188e75802feda03f58c"
+      },
+      "covered_by": [
+        "dl_ui.py:155:21"
+      ]
+    },
+    {
+      "id": "generic-component-properties",
+      "classification": "generic-entry-guard",
+      "reason": "The earliest generic entry is a bucket thread key above 2770. Scene lists/floor selections, configurations and graphics-reference objects start later. Recursive generic fields cannot lower the first-entry guard; declared root pointers do not name these unrelated property classes.",
+      "predicates": [
+        {
+          "source": "dl_light.py:844:7",
+          "function": "r_moComponentProperty",
+          "expression": "v > 1170",
+          "observed_outcomes": [
+            "true"
+          ]
+        },
+        {
+          "source": "dl_light.py:846:7",
+          "function": "r_moComponentProperty",
+          "expression": "v >= 1303",
+          "observed_outcomes": [
+            "true"
+          ]
+        },
+        {
+          "source": "dl_light.py:864:7",
+          "function": "r_moComponentPropertyHolder",
+          "expression": "v < 2606",
+          "observed_outcomes": [
+            "false"
+          ]
+        },
+        {
+          "source": "dl_light.py:868:11",
+          "function": "r_moComponentPropertyHolder",
+          "expression": "v > 2710",
+          "observed_outcomes": [
+            "true"
+          ]
+        },
+        {
+          "source": "dl_light.py:871:7",
+          "function": "r_moComponentPropertyHolder",
+          "expression": "v < 2139",
+          "observed_outcomes": [
+            "false"
+          ]
+        }
+      ],
+      "evidence_sha256": {
+        "src/display_lists/modern_bucket.rs": "1b4806222f5721979ec659cb8049c4fe2be94d91342c798ec6b1fa76e40099fa",
+        "docs/features/display-lists/legacy-visibility-layouts.md": "cf44a383bfd2f6e0bc77b95fa8dd9163326455f95c889907825a9f8cc99324f9"
+      },
+      "covered_by": []
+    },
+    {
+      "id": "decal-texture-minimum-version",
+      "classification": "enclosing-reader-guard",
+      "reason": "This texture reader is called by decals. All body, part and component decal-list callers begin above 4055, beyond this suffix boundary.",
+      "predicates": [
+        {
+          "source": "dl_tess.py:163:7",
+          "function": "read_uoMaterialTextureProperties",
+          "expression": "v > 3869",
+          "observed_outcomes": [
+            "true"
+          ]
+        }
+      ],
+      "evidence_sha256": {
+        "../inventor-interface/solidworks/dl_tess.py": "b5f460b353ffb057437e05819be9a5c5fb4f7f45a17faad9b1d9372d7da8faa2",
+        "src/display_lists/modern_decals.rs": "63167e881ab284c7caa87902cae33c3008250823bb47878b0aedc852edbcb348"
+      },
+      "covered_by": []
+    },
+    {
+      "id": "annotation-visibility-caller",
+      "classification": "enclosing-reader-guard",
+      "reason": "The part configuration caller invokes visibility above 11135; the assembly caller invokes it above 11127. Neither reaches the helper's early return.",
+      "predicates": [
+        {
+          "source": "dl_tess.py:682:7",
+          "function": "read_AnnotationViewVisibilityVsConfig",
+          "expression": "v <= 11127",
+          "observed_outcomes": [
+            "false"
+          ]
+        }
+      ],
+      "evidence_sha256": {
+        "../inventor-interface/solidworks/dl_tess.py": "b5f460b353ffb057437e05819be9a5c5fb4f7f45a17faad9b1d9372d7da8faa2"
+      },
+      "covered_by": []
+    },
+    {
+      "id": "configuration-root-entry",
+      "classification": "enclosing-root-guard",
+      "reason": "The root invokes assembly configurations from 9220, so the older assembly prefix is not part of a complete root. Part configurations have a distinct branch and start above 11102.",
+      "predicates": [
+        {
+          "source": "dl_tess.py:744:7",
+          "function": "multiple_configs",
+          "expression": "v < 9220",
+          "observed_outcomes": [
+            "false"
+          ]
+        },
+        {
+          "source": "dl_tess.py:746:11",
+          "function": "multiple_configs",
+          "expression": "v > 9181",
+          "observed_outcomes": []
+        },
+        {
+          "source": "dl_tess.py:751:7",
+          "function": "multiple_configs",
+          "expression": "v > 9219",
+          "observed_outcomes": [
+            "true"
+          ]
+        }
+      ],
+      "evidence_sha256": {
+        "../inventor-interface/solidworks/displaylists.py": "2016e6267d2d13d08e3f1b1904dfe4c9e4ca06e12a619cecec3189ddf7e337b8",
+        "src/display_lists/modern_root.rs": "1b80b31a3980c04984bed7772f4d46b07cdbda4cc12bbdaac4d93d625f62136c"
+      },
+      "covered_by": []
+    },
+    {
+      "id": "unresolved-inline-facet-objects",
+      "classification": "explicit-negative-layout",
+      "reason": "Positive roots may use empty or external facets in this interval. Inline object-backed facet bodies have no resolved schema and explicit negative tests require failure at that payload.",
+      "predicates": [
+        {
+          "source": "facettess.py:160:7",
+          "function": "facet_container",
+          "expression": "2596 < V < 3196",
+          "observed_outcomes": [
+            "false"
+          ]
+        }
+      ],
+      "evidence_sha256": {
+        "tests/display_pre_facet_roots.rs": "00593229955cfc4e684e530a60b5587eb91101da2d044133d7d84abde601000f",
+        "src/tessellation/context.rs": "426dfb0d34b05b19ce76563b5a60cfc9f9f3425cbc3514c822b1641a4769c0ec"
+      },
+      "covered_by": []
+    },
+    {
+      "id": "drawing-archive-implementation-mode",
+      "classification": "different-caller-context",
+      "reason": "Part/assembly full roots use the default false archive-mode-90 property. The preceding disjunction therefore short-circuits. Drawing VBLists has its own explicit mode and corpus gate.",
+      "predicates": [
+        {
+          "source": "facettess.py:193:73",
+          "function": "facet_container",
+          "expression": "V < 11237",
+          "observed_outcomes": []
+        }
+      ],
+      "evidence_sha256": {
+        "../inventor-interface/solidworks/facettess.py": "18a415aba6918e7fcafa041a540e05952d91de34244ddf76ad7a9e65e0e6415f",
+        "src/display_lists/modern_body_tess.rs": "f96536ad110a31cb48fa52a648dc849b7cf76b2fe919315ea83a7fd4ce5ae764",
+        "docs/features/drawing-buckets/native-verification.json": "1fa1e06e8d88f46adaf055e68a54461c3ded12bec24258626b2c2e6caaecdff0"
+      },
+      "covered_by": []
+    }
+  ],
+  "registered_classes_with_owned_witnesses": 27,
+  "geometry_and_native_application_acceptance": false,
+  "input_sha256": {
+    "C:/Users/vmiguel/git/Bessemer/docs/features/display-lists/predicate-reviews.json": "53af99c715959641936a267ca2cf4b56a7f7ce9a0fca1f4d3999859c1f382abb",
+    "C:/Users/vmiguel/git/Bessemer/docs/features/display-lists/verify_predicate_reviews.py": "b285a97f1e4d3a91311c2ff1f67d113fe2ad95524eb9da488e26439d59c033bf",
+    "C:/Users/vmiguel/git/Bessemer/docs/features/display-lists/version-predicate-audit.json": "3edbcac3fe8d032f45af3eac56a8f99fee28c5177fed94b59583a4983e0259d4"
+  }
+}

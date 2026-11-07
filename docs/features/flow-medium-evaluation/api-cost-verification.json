@@ -1,0 +1,25 @@
+{
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "accepted_requests_per_pass": 5184,
+  "passes_per_sample": 10,
+  "samples_ns": [
+    62027900,
+    55766700,
+    51130900,
+    53694600,
+    45692300
+  ],
+  "median_ns": 53694600,
+  "median_ns_per_request": 1035.775462962963,
+  "observed_peak_working_set_bytes": 82690048,
+  "result_size_bytes": 104,
+  "checksum": "checksum=2835592437547904",
+  "terminal_exit_code": 0,
+  "temporary_benchmark_sha256": "98264ef3d8ae4b28521841034838e1c7d78e603c483d063b38a9d9a3fafaa704",
+  "scope": "All accepted FEV1 requests on predecoded bodies; full per-query numeric guards, search, arithmetic, owned provenance and result drop included. Body decoding excluded from timing. No earlier Bessemer release/API offers this evaluation operation; this is an initial baseline, not a release comparison.",
+  "limitations": [
+    "Shared machine with concurrent full validation",
+    "Observed process peak working set includes input frame and cached decoded corpus",
+    "One process and five samples; no general throughput or allocation-count claim"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "cases": 18,
+  "comparison": "two fresh processes byte-for-byte; each emits name, original image and complete schema/row projection",
+  "output_bytes": 40380981,
+  "output_sha256": "c62f0aeb93daab7e024920dac54e5f55ef2521bf8a6d5e8259c03461059ba01d",
+  "measurements": [
+    {
+      "elapsed_seconds": 30.3466715,
+      "exit_code": 0,
+      "observed_peak_working_set_bytes": 115613696
+    },
+    {
+      "observed_peak_working_set_bytes": 114618368,
+      "exit_code": 0,
+      "elapsed_seconds": 19.5962152
+    }
+  ],
+  "platform": "Windows-11-10.0.26200-SP0",
+  "comparison_to_previous_release": "No previous SQLite image operation exists; no speedup claim",
+  "native_application_acceptance": false,
+  "probe_removed_after_verification": true
+}

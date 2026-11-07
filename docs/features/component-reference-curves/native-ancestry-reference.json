@@ -1,0 +1,141 @@
+{
+  "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\component-reference-curve-native-evidence.json",
+  "source_sha256": "03608ff25df7cd4f207ee7071feeacbb7d4b803e89c0ed37131774d553a84dea",
+  "evidence": {
+    "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+    "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+    "bindings": [
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+          "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+          "tables": [
+            {
+              "class_name": "moCompReferenceCurve_c",
+              "object_offset": 0,
+              "locator": "0x4d2ed388",
+              "vftable": "0x4cd92880",
+              "slots": [
+                "0x4bbaa5a0",
+                "0x4b29d470",
+                "0x4cba273f",
+                "0x4b29dae0",
+                "0x4b29dae0",
+                "0x4bbb8c20",
+                "0x4b821210",
+                "0x4b29dae0"
+              ]
+            },
+            {
+              "class_name": "moCompReferenceCurve_c",
+              "object_offset": 256,
+              "locator": "0x4d2ed430",
+              "vftable": "0x4cd92cf0",
+              "slots": [
+                "0x4b29cb48",
+                "0x4b2a53d8",
+                "0x4b2a5418",
+                "0x4b2a5368",
+                "0x4b2a54b8",
+                "0x4b2af794",
+                "0x4b2a22ac",
+                "0x18ffffff18"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "01000000000000000000000040b99a02b0d3180288d31802",
+        "bases": [
+          ".?AVmoCompReferenceCurve_c@@",
+          ".?AVmoCompCompositeCurve_c@@",
+          ".?AVmoCompFeature_c@@",
+          ".?AVmoCompRef_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@",
+          ".?AVutDisplayedEntity_c@@"
+        ]
+      },
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+          "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+          "tables": [
+            {
+              "class_name": "moCompFeature_c",
+              "object_offset": 0,
+              "locator": "0x4d319d10",
+              "vftable": "0x4ce97878",
+              "slots": [
+                "0x4bba79b0",
+                "0x4b82d890",
+                "0x4cba273f",
+                "0x4b29dae0",
+                "0x4b29dae0",
+                "0x4bbb9a60",
+                "0x4b821210",
+                "0x4b29dae0"
+              ]
+            },
+            {
+              "class_name": "moCompFeature_c",
+              "object_offset": 256,
+              "locator": "0x4d319d38",
+              "vftable": "0x4ce97cd0",
+              "slots": [
+                "0x4b82d874",
+                "0x4b2a53d8",
+                "0x4b2a5418",
+                "0x4b2a5368",
+                "0x4b2a54b8",
+                "0x4b2af794",
+                "0x4b2a22ac",
+                "0x18ffffff18"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "01000000000000000000000090b69a0240c71802109d1b02",
+        "bases": [
+          ".?AVmoCompFeature_c@@",
+          ".?AVmoCompRef_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@",
+          ".?AVutDisplayedEntity_c@@"
+        ]
+      }
+    ],
+    "functions": {
+      "0x4bbb8c20": {
+        "end": "0x4bbb8c9b",
+        "native_bytes": "48895c2408574883ec30488bf9488bda488d4c2420ff1555c01701488b4424204885c074438b808007000085c0750cff154bc01701ff153dc01701488bd3488bcf3dd10200007310e8035c0000488b5c24404883c4305fc3e8e30d0000488b5c24404883c4305fc34533c0baffffffffb901000000e8d9a6fe00cc",
+        "sha256": "5b674bb97c11123a1614279217c89cc60238b07954e63afc9e81cf264ba2793e",
+        "decompilation": "\nvoid FUN_4bbb8c20(undefined8 param_1,su_CArchive *param_2)\n\n{\n  uint uVar1;\n  longlong local_18 [2];\n  \n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_18,param_2);\n  if (local_18[0] == 0) {\n                    /* WARNING: Subroutine does not return */\n    AfxThrowFileException(1,-1,(wchar_t *)0x0);\n  }\n  uVar1 = *(uint *)(local_18[0] + 0x780);\n  if (uVar1 == 0) {\n    moVersionManager_c::get();\n    uVar1 = moVersionManager_c::getCurrentFileVerion();\n  }\n  if (uVar1 < 0x2d1) {\n    FUN_4bbbe870();\n    return;\n  }\n  FUN_4bbb9a60(param_1,param_2);\n  return;\n}\n\n"
+      },
+      "0x4bbb9a60": {
+        "end": "0x4bbb9f2d",
+        "native_bytes": "48895c240848897424105557415441564157488bec4883ec40488bfa488bd9488bcaff15684d180185c0741348837b0800740c488b03488bcbff90e8030000488bd7488d4de8ff15e4b11701488bd7488bcbe8d90b0000488b45e84885c00f84430400008b808007000085c0750cff15ccb11701ff15beb117013dc90200000f82ed0300004533f644897540ba01000000488d4de8ff15a5a7170185c00f84c4000000ba00000100488d4de8ff158ea7170185c00f84ad000000488bcfff15cd4c180185c00f848f000000488d4de8ff15f3a91701488bf04885c0746fe83e206600488bd0488bcee83298fe0085c00f84c5030000488b16488bceff92a801000085c07447488b06488bceff90c016000085c07537488b4b584885c9742e488b01ff906801000085c0742133d2488bcbe8dbfac5ff85c07413ba01000000895540488bcfff15564c1801eb1b8b5540488bcfff15484c1801eb0d488d5540488bcfff15414c1801443975400f851f020000ba01000000488d4de8ff15c0a6170185c00f8408020000ba00002000488d4de8ff15a9a6170185c00f85f1010000488bcfff15e84b180185c07417ba00000008488d4de8ff1585a6170185c00f85cd010000488b45e84439b0340800000f85bc0100004439b0540800000f85af010000488bcfff15a64b180185c00f84b2010000488b03488bcbff90e8030000488bf0488b45e84885c00f84ac0200004c3970400f85ce000000f64010010f8498020000486388c002000083f9017c27488bd1498bce488b80b80200000f1f440000483b300f849d00000048ffc14883c008483bca7cebba00000001488d4de8ff15dca5170185c0757e488b4de84885c90f8445020000f64110010f843b0200004881c1f8020000488bd6ff1519b0170185c07553488b45e84885c0740cf7804008000004000000753e41bf010000004885f67436488b06488bceff90881200004c8be04885c07422e824c6f5ff488bd0498bcce84896fe0085c0740e41f68424a0020000047403458bfeba20000000488d4de8ff1548a5170185c0742cba00000100488d4de8ff1535a5170185c07519ba00000200488d4de8ff1522a5170185c0740641be010000004585ff7455ba00080000488d4de8ff1504a5170185c075054585f6742d4885f67428488b06488bceff9098040000488bf04885c07414e88d1f6600488bd0488bcee8b195fe0085c0751033d2488bcfff15234a1801e9fb000000ba01000000488bcfff15104a1801488bd7488b8bf0000000e821e8f8ffe9d900000044897548488d5548488bcfff15f3491801443975480f8483000000ba00080000488d4de8ff1572a4170185c07417488b45e84885c00f84b5000000c780d805000001000000488bd7488b8bf0000000e8c8e7f8ffba00080000488d4de8ff1539a4170185c074724c8b83f0000000488b45e84885c074794d85c07414488d88b80500008b5110ff15084a1801488b45e84885c0745b4489b0d8050000eb3b4c39b3f00000007532b918000000e8a094fe00488945e04885c0740b488bc8e8aadff8ff4c8bf04c89b3f0000000eb0b488bd7488bcbe873680000488b5c2470488b7424784883c440415f415e415c5f5dc34533c0baffffffffb901000000e86d94fe00cc4533c0baffffffffb901000000e85a94fe00cc4533c0baffffffffb901000000e84794fe00cc",
+        "sha256": "07a4ba4bd30cf63ad0950565557e5dddb38b338fd5b225097e7ae08500cf739c",
+        "decompilation": "\nvoid FUN_4bbb9a60(moCompRef_c *param_1,su_CArchive *param_2)\n\n{\n  bool bVar1;\n  bool bVar2;\n  int iVar3;\n  uint uVar4;\n  moFiledConcept_c *this;\n  CRuntimeClass *pCVar5;\n  moFeature_c *this_00;\n  longlong *plVar6;\n  CObject *pCVar7;\n  void *pvVar8;\n  moArchiveHelper_c *this_01;\n  longlong lVar9;\n  moFeature_c *this_02;\n  long local_res18 [2];\n  long local_res20 [2];\n  longlong local_40 [3];\n  \n  iVar3 = su_CArchive::IsStoring(param_2);\n  if ((iVar3 != 0) && (*(longlong *)(param_1 + 8) != 0)) {\n    (**(code **)(*(longlong *)param_1 + 1000))(param_1);\n  }\n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_40,param_2);\n  moCompRef_c::Serialize(param_1,param_2);\n  if (local_40[0] == 0) {\n                    /* WARNING: Subroutine does not return */\n    AfxThrowFileException(1,-1,(wchar_t *)0x0);\n  }\n  uVar4 = *(uint *)(local_40[0] + 0x780);\n  if (uVar4 == 0) {\n    moVersionManager_c::get();\n    uVar4 = moVersionManager_c::getCurrentFileVerion();\n  }\n  if (uVar4 < 0x2c9) {\n    FUN_4bbc0750(param_1,param_2);\n    return;\n  }\n  lVar9 = 0;\n  bVar2 = false;\n  local_res18[0] = 0;\n  iVar3 = moArchiveHelper_c::hasCondition((moArchiveHelper_c *)local_40,1);\n  if ((iVar3 != 0) &&\n     (iVar3 = moArchiveHelper_c::hasCondition((moArchiveHelper_c *)local_40,0x10000), iVar3 != 0)) {\n    iVar3 = su_CArchive::IsStoring(param_2);\n    if (iVar3 == 0) {\n      su_CArchive::operator>>(param_2,local_res18);\n    }\n    else {\n      this_01 = (moArchiveHelper_c *)local_40;\n      this = moArchiveHelper_c::getInternalFiledOwner(this_01);\n      if (this != (moFiledConcept_c *)0x0) {\n        pCVar5 = moModel_c::GetRuntimeClass((moModel_c *)this_01);\n        iVar3 = CObject::IsKindOf((CObject *)this,pCVar5);\n        if (iVar3 == 0) goto LAB_4bbb9f1a;\n        iVar3 = (**(code **)(*(longlong *)this + 0x1a8))(this);\n        if ((((iVar3 != 0) && (iVar3 = (**(code **)(*(longlong *)this + 0x16c0))(this), iVar3 == 0))\n            && (*(longlong **)(param_1 + 0x58) != (longlong *)0x0)) &&\n           ((iVar3 = (**(code **)(**(longlong **)(param_1 + 0x58) + 0x168))(), iVar3 != 0 &&\n            (iVar3 = moCompRef_c::iIsExternal(param_1,(moFiledConcept_c *)0x0), iVar3 != 0)))) {\n          local_res18[0] = 1;\n          su_CArchive::operator<<(param_2,1);\n          goto LAB_4bbb9bc7;\n        }\n      }\n      su_CArchive::operator<<(param_2,local_res18[0]);\n    }\n  }\nLAB_4bbb9bc7:\n  if (((local_res18[0] != 0) ||\n      (iVar3 = moArchiveHelper_c::hasCondition((moArchiveHelper_c *)local_40,1), iVar3 == 0)) ||\n     ((iVar3 = moArchiveHelper_c::hasCondition((moArchiveHelper_c *)local_40,0x200000), iVar3 != 0\n      || ((((iVar3 = su_CArchive::IsStoring(param_2), iVar3 != 0 &&\n            (iVar3 = moArchiveHelper_c::hasCondition((moArchiveHelper_c *)local_40,0x8000000),\n            iVar3 != 0)) || (*(int *)(local_40[0] + 0x834) != 0)) ||\n          (*(int *)(local_40[0] + 0x854) != 0)))))) goto LAB_4bbb9df0;\n  iVar3 = su_CArchive::IsStoring(param_2);\n  if (iVar3 == 0) {\n    local_res20[0] = 0;\n    su_CArchive::operator>>(param_2,local_res20);\n    if (local_res20[0] == 0) {\n      if (*(longlong *)(param_1 + 0xf0) != 0) {\n        return;\n      }\n      pvVar8 = operator_new(0x18);\n      if (pvVar8 != (void *)0x0) {\n        lVar9 = FUN_4bb47e70(pvVar8);\n      }\n      *(longlong *)(param_1 + 0xf0) = lVar9;\n      return;\n    }\n    iVar3 = moArchiveHelper_c::hasCondition((moArchiveHelper_c *)local_40,0x800);\n    if (iVar3 != 0) {\n      if (local_40[0] == 0) goto LAB_4bbb9ef4;\n      *(undefined4 *)(local_40[0] + 0x5d8) = 1;\n    }\n    FUN_4bb48620(*(undefined8 *)(param_1 + 0xf0),param_2);\n    iVar3 = moArchiveHelper_c::hasCondition((moArchiveHelper_c *)local_40,0x800);\n    if (iVar3 == 0) {\n      return;\n    }\n    if (local_40[0] != 0) {\n      if (*(CObject **)(param_1 + 0xf0) != (CObject *)0x0) {\n        su_CObArray::SetAtGrow\n                  ((su_CObArray *)(local_40[0] + 0x5b8),*(int *)(local_40[0] + 0x5c8),\n                   *(CObject **)(param_1 + 0xf0));\n      }\n      if (local_40[0] != 0) {\n        *(undefined4 *)(local_40[0] + 0x5d8) = 0;\n        return;\n      }\n    }\nLAB_4bbb9ef4:\n                    /* WARNING: Subroutine does not return */\n    AfxThrowFileException(1,-1,(wchar_t *)0x0);\n  }\n  this_00 = (moFeature_c *)(**(code **)(*(longlong *)param_1 + 1000))(param_1);\n  if (local_40[0] == 0) {\nLAB_4bbb9f1a:\n                    /* WARNING: Subroutine does not return */\n    AfxThrowFileException(1,-1,(wchar_t *)0x0);\n  }\n  if (*(longlong *)(local_40[0] + 0x40) == 0) {\n    if ((*(byte *)(local_40[0] + 0x10) & 1) == 0) goto LAB_4bbb9f1a;\n    if (0 < *(int *)(local_40[0] + 0x2c0)) {\n      plVar6 = *(longlong **)(local_40[0] + 0x2b8);\n      do {\n        if (this_00 == (moFeature_c *)*plVar6) goto LAB_4bbb9d46;\n        lVar9 = lVar9 + 1;\n        plVar6 = plVar6 + 1;\n      } while (lVar9 < *(int *)(local_40[0] + 0x2c0));\n    }\n    iVar3 = moArchiveHelper_c::hasCondition((moArchiveHelper_c *)local_40,0x1000000);\n    if (iVar3 != 0) goto LAB_4bbb9d46;\n    if ((local_40[0] == 0) || ((*(byte *)(local_40[0] + 0x10) & 1) == 0)) goto LAB_4bbb9f1a;\n    iVar3 = suPtrArray::isIn((suPtrArray *)(local_40[0] + 0x2f8),this_00);\n    if ((iVar3 != 0) || ((local_40[0] != 0 && ((*(uint *)(local_40[0] + 0x840) & 4) != 0))))\n    goto LAB_4bbb9d46;\n    bVar1 = true;\n    if ((this_00 != (moFeature_c *)0x0) &&\n       (this_02 = this_00, pCVar7 = (CObject *)(**(code **)(*(longlong *)this_00 + 0x1288))(),\n       pCVar7 != (CObject *)0x0)) {\n      pCVar5 = moFeature_c::GetRuntimeClass(this_02);\n      iVar3 = CObject::IsKindOf(pCVar7,pCVar5);\n      if ((iVar3 != 0) && (((byte)pCVar7[0x2a0] & 4) != 0)) goto LAB_4bbb9d46;\n    }\n  }\n  else {\nLAB_4bbb9d46:\n    bVar1 = false;\n  }\n  iVar3 = moArchiveHelper_c::hasCondition((moArchiveHelper_c *)local_40,0x20);\n  if (((iVar3 != 0) &&\n      (iVar3 = moArchiveHelper_c::hasCondition((moArchiveHelper_c *)local_40,0x10000), iVar3 == 0))\n     && (iVar3 = moArchiveHelper_c::hasCondition((moArchiveHelper_c *)local_40,0x20000), iVar3 != 0)\n     ) {\n    bVar2 = true;\n  }\n  if (bVar1) {\n    iVar3 = moArchiveHelper_c::hasCondition((moArchiveHelper_c *)local_40,0x800);\n    if (((iVar3 == 0) && (!bVar2)) ||\n       ((this_00 == (moFeature_c *)0x0 ||\n        (pCVar7 = (CObject *)(**(code **)(*(longlong *)this_00 + 0x498))(), pCVar7 == (CObject *)0x0\n        )))) {\nLAB_4bbb9dd2:\n      su_CArchive::operator<<(param_2,0);\n      return;\n    }\n    pCVar5 = moPart_c::GetRuntimeClass((moPart_c *)this_00);\n    iVar3 = CObject::IsKindOf(pCVar7,pCVar5);\n    if (iVar3 == 0) goto LAB_4bbb9dd2;\n  }\n  su_CArchive::operator<<(param_2,1);\nLAB_4bbb9df0:\n  FUN_4bb48620(*(undefined8 *)(param_1 + 0xf0),param_2);\n  return;\n}\n\n"
+      },
+      "0x4bb48620": {
+        "end": "0x4bb48942",
+        "native_bytes": "48895c2408488974241055574156488bec4883ec50488bda488bf9488d4df0ff154bc61e01488bcbff15a2611f01488bcb85c074308b17ff15a3611f01488b470848894530488d5530488bcbff15be661f01488b5c2470488b7424784883c450415e5f5dc3488bd7ff157a611f01488b45f04885c00f84940200008b808007000085c0750cff15f5c51e01ff15e7c51e013da50400007368488d4d38ff15aed71e0190488d5538488bcbff15e0621f01488b45f04885c00f843f0200008b808007000085c0750cff15b3c51e01ff15a5c51e013da9040000731c488b45388378f00074124c8d4538488bd7488d4df0ff1533b51e0190488d4d38ff1530d71e01488d5708488bcbff150b661f01488b45f04885c00f84f50100008b888007000085c97512ff1556c51e01ff1548c51e018bc8488b45f04533f681f97b0d00007315488d5538488bcbff157a621f0144897710488b45f0448975304885c00f84ac0100008b888007000085c97512ff150dc51e01ff15ffc41e018bc8488b45f081f9770c000073334885c00f847f0100008b808007000085c0750cff15e0c41e01ff15d2c41e013d640a0000720d488d5530488bcbff152e601f01ba00080000488d4df0ff15b7ba1e0185c07464488b45f04885c00f84350100004439b0d8050000754e488b0b4885c974464439355e110202753d4c8975e0488b4708488945e8488d45e048894424204c8d4d384c8d45e88b17e8e8760c0085c0740f488b45e0488947088b45388907eb06c707ffffffffba00200001488d4df0ff1540ba1e0185c0740aff15ae5c1f0148894708ba00200000488d4df0ff1523ba1e0185c00f84edfdffff443935e41002020f85e0fdffff8b0f4c8b4df04d85c974064d8b4130eb034d8bc64c8b151b130202498b4208498bd2443870197523660f1f4400004c394020750b3948287d06488b4010eb06488bd0488b004438701974e3443872190f858bfdffff4c3b422075093b4a280f8c7cfdffff493bd20f8473fdfffff7d9890f4d85c974044d8b7130498bd6488bcfe8190c0000e956fdffff4533c0baffffffffb901000000e845aa0501904533c0baffffffffb901000000e832aa0501cc",
+        "sha256": "ed04b7464a42c231f325cdc18114f279af4d6737ff4b026167b823a430a8cab2",
+        "decompilation": "\nvoid FUN_4bb48620(moFRData_c *param_1,su_CArchive *param_2)\n\n{\n  char cVar1;\n  undefined8 *puVar2;\n  int iVar3;\n  uint uVar4;\n  __int64 _Var5;\n  undefined8 *puVar6;\n  undefined8 *puVar7;\n  longlong lVar8;\n  longlong lVar9;\n  undefined8 local_res18;\n  ulong local_res20;\n  undefined4 uStackX_24;\n  undefined8 local_38;\n  undefined8 local_30;\n  longlong local_28 [2];\n  \n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_28,param_2);\n  iVar3 = su_CArchive::IsStoring(param_2);\n  if (iVar3 != 0) {\n    su_CArchive::operator<<(param_2,*(long *)param_1);\n    local_res18 = *(longlong *)(param_1 + 8);\n    operator<<(param_2,&local_res18);\n    return;\n  }\n  su_CArchive::operator>>(param_2,(long *)param_1);\n  if (local_28[0] != 0) {\n    uVar4 = *(uint *)(local_28[0] + 0x780);\n    if (uVar4 == 0) {\n      moVersionManager_c::get();\n      uVar4 = moVersionManager_c::getCurrentFileVerion();\n    }\n    if (uVar4 < 0x4a5) {\n      ATL::CStringT<wchar_t,StrTraitMFC_DLL<wchar_t,ATL::ChTraitsCRT<wchar_t>_>_>::\n      CStringT<wchar_t,StrTraitMFC_DLL<wchar_t,ATL::ChTraitsCRT<wchar_t>_>_>\n                ((CStringT<wchar_t,StrTraitMFC_DLL<wchar_t,ATL::ChTraitsCRT<wchar_t>_>_> *)\n                 &local_res20);\n      operator>>(param_2,(CStringT<wchar_t,StrTraitMFC_DLL<wchar_t,ATL::ChTraitsCRT<wchar_t>_>_> *)\n                         &local_res20);\n      if (local_28[0] == 0) {\n                    /* WARNING: Subroutine does not return */\n        AfxThrowFileException(1,-1,(wchar_t *)0x0);\n      }\n      uVar4 = *(uint *)(local_28[0] + 0x780);\n      if (uVar4 == 0) {\n        moVersionManager_c::get();\n        uVar4 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if ((uVar4 < 0x4a9) && (*(int *)(CONCAT44(uStackX_24,local_res20) + -0x10) != 0)) {\n        moArchiveHelper_c::updateOldFrDataNameMap\n                  ((moArchiveHelper_c *)local_28,param_1,\n                   (CStringT<wchar_t,StrTraitMFC_DLL<wchar_t,ATL::ChTraitsCRT<wchar_t>_>_> *)\n                   &local_res20);\n      }\n      ATL::CStringT<wchar_t,StrTraitMFC_DLL<wchar_t,ATL::ChTraitsCRT<wchar_t>_>_>::\n      ~CStringT<wchar_t,StrTraitMFC_DLL<wchar_t,ATL::ChTraitsCRT<wchar_t>_>_>\n                ((CStringT<wchar_t,StrTraitMFC_DLL<wchar_t,ATL::ChTraitsCRT<wchar_t>_>_> *)\n                 &local_res20);\n    }\n    operator>>(param_2,(su_CTime *)(param_1 + 8));\n    if (local_28[0] != 0) {\n      uVar4 = *(uint *)(local_28[0] + 0x780);\n      if (uVar4 == 0) {\n        moVersionManager_c::get();\n        uVar4 = moVersionManager_c::getCurrentFileVerion();\n      }\n      lVar9 = 0;\n      if (uVar4 < 0xd7b) {\n        su_CArchive::operator>>(param_2,&local_res20);\n        *(undefined4 *)(param_1 + 0x10) = 0;\n      }\n      local_res18 = (ulonglong)local_res18._4_4_ << 0x20;\n      if (local_28[0] != 0) {\n        uVar4 = *(uint *)(local_28[0] + 0x780);\n        if (uVar4 == 0) {\n          moVersionManager_c::get();\n          uVar4 = moVersionManager_c::getCurrentFileVerion();\n        }\n        if (uVar4 < 0xc77) {\n          if (local_28[0] == 0) goto LAB_4bb4892f;\n          uVar4 = *(uint *)(local_28[0] + 0x780);\n          if (uVar4 == 0) {\n            moVersionManager_c::get();\n            uVar4 = moVersionManager_c::getCurrentFileVerion();\n          }\n          if (0xa63 < uVar4) {\n            su_CArchive::operator>>(param_2,(long *)&local_res18);\n          }\n        }\n        iVar3 = moArchiveHelper_c::hasCondition((moArchiveHelper_c *)local_28,0x800);\n        if (iVar3 != 0) {\n          if (local_28[0] == 0) goto LAB_4bb4892f;\n          if (((*(int *)(local_28[0] + 0x5d8) == 0) && (*(longlong *)param_2 != 0)) &&\n             (DAT_4db69970 == 0)) {\n            local_38 = 0;\n            local_30 = *(undefined8 *)(param_1 + 8);\n            iVar3 = FUN_4bc0ff20(*(longlong *)param_2,*(undefined4 *)param_1,&local_30,&local_res20,\n                                 &local_38);\n            if (iVar3 == 0) {\n              *(undefined4 *)param_1 = 0xffffffff;\n            }\n            else {\n              *(undefined8 *)(param_1 + 8) = local_38;\n              *(ulong *)param_1 = local_res20;\n            }\n          }\n        }\n        iVar3 = moArchiveHelper_c::hasCondition((moArchiveHelper_c *)local_28,0x1002000);\n        if (iVar3 != 0) {\n          _Var5 = ut_getUnsetTime();\n          *(__int64 *)(param_1 + 8) = _Var5;\n        }\n        iVar3 = moArchiveHelper_c::hasCondition((moArchiveHelper_c *)local_28,0x2000);\n        if (iVar3 == 0) {\n          return;\n        }\n        if (DAT_4db69970 != 0) {\n          return;\n        }\n        iVar3 = *(int *)param_1;\n        lVar8 = lVar9;\n        if (local_28[0] != 0) {\n          lVar8 = *(longlong *)(local_28[0] + 0x30);\n        }\n        cVar1 = *(char *)((longlong)DAT_4db69bc8[1] + 0x19);\n        puVar6 = (undefined8 *)DAT_4db69bc8[1];\n        puVar2 = DAT_4db69bc8;\n        while (puVar7 = puVar6, cVar1 == '\\0') {\n          if ((puVar7[4] == lVar8) && (*(int *)(puVar7 + 5) < iVar3)) {\n            puVar6 = (undefined8 *)puVar7[2];\n            puVar7 = puVar2;\n          }\n          else {\n            puVar6 = (undefined8 *)*puVar7;\n          }\n          cVar1 = *(char *)((longlong)puVar6 + 0x19);\n          puVar2 = puVar7;\n        }\n        if (*(char *)((longlong)puVar2 + 0x19) != '\\0') {\n          return;\n        }\n        if ((lVar8 == puVar2[4]) && (iVar3 < *(int *)(puVar2 + 5))) {\n          return;\n        }\n        if (puVar2 == DAT_4db69bc8) {\n          return;\n        }\n        *(int *)param_1 = -iVar3;\n        if (local_28[0] != 0) {\n          lVar9 = *(longlong *)(local_28[0] + 0x30);\n        }\n        FUN_4bb49530(param_1,lVar9);\n        return;\n      }\n    }\n  }\nLAB_4bb4892f:\n                    /* WARNING: Subroutine does not return */\n  AfxThrowFileException(1,-1,(wchar_t *)0x0);\n}\n\n"
+      }
+    },
+    "scope": {
+      "minimum_version_exclusive": "0x27cb",
+      "shared_reader": "modelcomponents.component_feature",
+      "obsolete_branch": "v < 0x2D1",
+      "derived_suffix": "none in supported modern branch"
+    },
+    "limitations": [
+      "Ordinary non-DB external-XML modern component context only",
+      "Shared optional reference-info and old component payloads retain explicit stops",
+      "Feature IDs/times and reference identities retain existing semantic limits",
+      "Pdata may describe fragments; full module hash binds out-of-line code",
+      "No complete-document/project coverage claim"
+    ]
+  }
+}

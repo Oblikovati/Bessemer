@@ -1,0 +1,47 @@
+### 11.122 Assembly reference patterns, smart parts, toolbox records and chains
+
+*Status: Native serializers and all 174 ordinary assembly shared lightweight tails; assembly-specific suffix and bit semantics remain incomplete · Evidence: [C-137]*
+
+These records use the same ordinary context and version floor as 11.121. They are installed only in the assembly archive's reader registry. Class and object pointers retain their original map identities, including repeated references. Direct arrays and configurations reserve no class/object slots.
+
+A `moReferencePattern_c` starts with the complete reference body from 11.121 and appends i32 `+560`, a **nonnull** tagged `moPatternItemId_c`, a tagged seed `moReference_c`, and i32 `+578`. Retain the raw `578` word although the native loader normalizes it to a boolean. Additional fields are i32 `+57C` above `332D` hex, i32 `+580` above `42D0`, and CString `+558` at or above `42E2`. Keep the base-reference end separate from the complete derived-object end when recording spans.
+
+Two concrete pattern-item serializers are verified. `moLPatternItemId_c` stores i32 `+20`, i32 `+24`, u8 `+08`, and f64 `+10`. `moCirPatternItemId_c` instead stores i32 `+18`, i32 `+1C`, u8 `+08`, and f64 `+10`. Both bodies are 17 bytes in this scope. Older circular-index migration and the byte/double gates precede the supported version floor; do not apply those runtime migrations to modern stored values. The ordinary `su_CObject` base adds no bytes. Only these concrete new-class bodies are implemented; other derived pattern-ID bodies remain unsupported.
+
+`moSmartPartData_c` stores a CString (`+10`), an **i32** count followed by that many tagged `moSmartRelation_c` pointers, then i32 `+64` and i32 `+68`. Null relations are discarded by native runtime insertion; a lossless reader preserves serialized nulls, duplicates and order. Assignment of the owning reference is a runtime callback and does not add an owner pointer to the body. New smart-relation bodies remain unsupported.
+
+`moToolboxPartSpecArray_c` begins with a direct object-array body: packed u16/extended-u32 count and tagged item pointers. It then stores eight CStrings at `20,30,38,40,48,50,58,60`, i32 `+7C`, CString `+70`, and i32 `+80`, in that order. The loader's assignment of `+78 = 1` is not a wire field. Each `moToolboxPartSpec_c` body stores i32 `+08`, CStrings `+10` and `+18`, f64 `+20`, and i32 values `+28` and `+2C`. Their physical/property meanings remain unproved; preserve raw values, including nonfinite doubles.
+
+The supported `moChainComponent_c` path begins with the modern component base's **single tagged owner pointer**. It does not have the additional unit-component byte from 11.17. The reader accepts a null owner or an already-supported part/assembly owner, then reads a tagged `moReferenceChain_c` and u32 `+30`. External-owner resolution and legacy external-model paths remain unsupported; do not select their early-return behavior from pointer truthiness alone.
+
+A modern ordinary `moReferenceChain_c` stores u16 `+24`, a tagged `moExtFeatureList_c`, i32 `+20`, then a direct referenced configuration (CString name and i32 ID) at `+40`. Its default constructor proves that embedded type. The modern ordinary owner is supplied from archive context rather than an extra wire pointer. The tagged feature list uses an **i32** count followed by tagged `moExtFeature_c` entries; it is not the packed-count object-array serializer. Native reference counting, replacement/canonicalization and configuration registration do not add bytes. Those runtime changes are not applied to the lossless wire graph.
+
+The shared lightweight model-tail audit now succeeds in **all 174** ordinary modern assembly configurations: **1,091,222 cumulative prefix bytes**, of which **696,908** retain unresolved meanings. The unit-stage totals are **1,035,313** and **675,266** bytes. The passing graphs contain 878 ordinary references and 127 reference patterns (1,005 reference-base bodies), 99 linear and 28 circular pattern IDs, 15 smart-part records with empty relation lists, and 16 toolbox arrays containing 232 specifications (14 arrays of 15, two of 11). Two chain components each contain a chain with one external-feature list entry. Exact per-object body spans, raw-byte hashes, unknown-byte counts and list cardinalities are retained in the corpus report.
+
+All earlier ordinary dependency stops are resolved for this corpus. Edition 0.122 still stopped before the assembly-specific lightweight suffix: 171 cases had 166 bytes remaining, three had six bytes remaining. Clause 11.123 supplies that suffix; those bytes were not padding. Six routing roots, three older assembly configurations, resolved assembly data, drawing schemas and installed project formats remain part of the incomplete overall objective. Complete shared-prefix framing does not grant 100% bit coverage.
+
+
+### 11.285 Toolbox specifications in part configuration managers
+
+*Status: Partial · 49 arrays and 699 specification bodies; nineteen additional complete managers · Evidence: C-327*
+
+The tagged +0x658 Toolbox pointer in a part configuration uses the same ordinary serializers as assembly-reference Toolbox data. Primary RTTI binds **moToolboxPartSpecArray_c** vtable **0x4CE68780**, locator **0x4D30D940**, Serialize **0x4B691460**; **moToolboxPartSpec_c** vtable **0x4CE686F0**, locator **0x4D30FB10**, Serialize **0x4B691690**. The hash-bound native bodies add no part-manager-specific prefix. Reuse is limited to the existing ordinary external-XML component scope above version 0x27CB.
+
+The array body first calls `su_CObArray::Serialize`: packed ReadCount followed by that many tagged object pointers. Its suffix is eight CStrings at runtime +0x20,+0x30,+0x38,+0x40,+0x48,+0x50,+0x58,+0x60, then i32 +0x7C, CString +0x70, and i32 +0x80. Native input gates +0x7C above 0x10CB, +0x70 above 0x12F5 and +0x80 at or above 0x131D; all are present in the supported scope. Runtime +0x78 is set to one without consuming a field. The modern empty-array minimum is **19 bytes**, excluding its outer class/object tag.
+
+Each specification body calls the ordinary no-payload `su_CObject` branch, then reads **i32 +0x08, CString +0x10, CString +0x18, f64 +0x20, i32 +0x28, i32 +0x2C**. Its modern minimum is **22 bytes**, excluding the tagged header. Field meanings remain raw; the complete specification body contributes unknown bytes. The array's string/integer suffix is also raw. Object/count framing remains known structure.
+
+`configurationtoolbox.py` wraps the existing assembly readers with packed-count preflight, start/end cursors, declared counts, exact wire slices and unknown-byte deltas. The count probe uses an ObjectArchive's u16/escaped-u32 primitives and rejects a positive count exceeding the minimum remaining tagged-pointer capacity before consuming actual input. Shared/null mapped entries retain ordinary MFC identity; no second body is manufactured for a back-reference. The supported manager defaults to **`toolbox=True`**, with **`toolbox=False`** preserving the edition 0.304 frontier. Prefix callers use **`toolbox_records=True`** to install the two body readers locally.
+
+Native replay retains **49 array bodies totaling 71,711 bytes**, including **699 fresh specification bodies totaling 43,556 bytes**. Array counts are fifteen in 43 cases, eleven in four and five in two. Their raw unknown total is **69,778 bytes**, of which the 43,556 specification-body bytes are a contained subset; those nested intervals are not counted again. The array-body known structure total is 1,933 bytes. All nineteen previously stopped files complete their guarded manager roots.
+
+`configuration-manager-supported-0.305.json` records **822 complete supported managers / 97 explicit stops** among the same **919 part occurrences**, preserving every previous 803 positive summary exactly. New complete streams add **331,367 decoded bytes**: **126,904 known** and **204,463 unknown**. Cumulative complete streams total **8,217,717 bytes**, split into **3,470,349 known structure bytes** and **4,747,368 unknown bytes**.
+
+The versioned regrade adds **28,754 stored part bytes**, bringing cumulative CMgr credit to **737,716 bytes**, with **1,128,396 stored CMgr bytes** still unknown in the unchanged 1,866,112-byte denominator. Total unknown part file bytes become **68,507,013**. Rounded coverage remains **69.8% / 63.3%** for parts, 83.8% / 81.3% for assemblies and 57.3% / 49.9% for drawings. Installed project formats remain outside this measured container denominator.
+
+`configuration_toolbox_evidence.py` revalidates both primary tables and exact native function ranges, binds the retained decompilation hashes, checks 49/699 native intervals and preserves all old positives. `test_configurationtoolbox.py` verifies full native replay, shared item identity, noncanonical floating-bit retention, raw accounting, truncation, count preflight and context rejection. Historical replay scripts explicitly disable Toolbox integration where needed. Remaining raw meanings, version/layout/dependency stops and full part/assembly/drawing/all-installed-project semantic bit coverage remain open; no whole document is completed.
+
+Validation: all **978 regression tests pass** (113.003 seconds); specification lint reports zero findings (509 headings, 96 anchors).
+
+Evidence: C-327.
+

@@ -1,0 +1,29 @@
+{
+  "feature_issue": 241,
+  "production_base": "16efcd69",
+  "phase": "Independent fixtures before typed fixed-settings reader and editor",
+  "rust_command": "cargo test --test flow_fixed_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 1,
+  "python_command": "python -m unittest discover -s docs/features/flow-fixed-settings -p test_fixed.py -v",
+  "python_exit_code": 0,
+  "python_passed": 4,
+  "clippy_command": "cargo clippy --lib --test flow_fixed_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "format_command": "cargo fmt",
+  "format_exit_code": 0,
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0",
+  "native_payloads": 4,
+  "native_payload_bytes": 5920,
+  "owned_payloads": 2,
+  "checked_slots": 1260,
+  "packet_sha256": "f16e4d3a778f938d7b281a637f47f2f67ddbcb12ec555a708b0553186fe7544c",
+  "exclusions": [
+    "No new public production API",
+    "No typed settings body reader or editor yet",
+    "No native runtime execution or normalization",
+    "No application acceptance or complete Flow schema claim",
+    "Live full gate 95818 excludes this fixture baseline"
+  ]
+}

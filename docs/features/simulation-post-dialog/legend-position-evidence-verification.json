@@ -1,0 +1,74 @@
+{
+  "issue": 166,
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "target_executed": false,
+  "additional_stored_byte_credit": 0,
+  "complete_installed_instruction_counts": [
+    13,
+    12
+  ],
+  "independent_ghidra_instruction_count": 25,
+  "native_accepted_contexts": 276,
+  "native_position_annotations": 552,
+  "original_rejected_contexts": 8,
+  "owned_complete_contexts": 425,
+  "opaque_older_owned_contexts": 20,
+  "exact_historical_color_report_transitions": 1,
+  "exact_decoder_qualifications": 0,
+  "strict_source": {
+    "checks": 17,
+    "seconds": 6.873,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-position-source-strict.log",
+      "bytes": 2637,
+      "sha256": "954a1c5765bba339e837e66bd3b37672093962c9010e226ea7e0e3dcdd242f2b"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/legend-position-source-snapshot.json",
+      "bytes": 625419,
+      "sha256": "e24aa09263cf09f72e5d4a3673342a49a9162513eb6baebdc5f874a9ccd188af"
+    }
+  },
+  "installed_proof": "legend-position-installed-reference.json",
+  "independent_decoder": "legend-position-rea-reference.json",
+  "oracle_kinds": [
+    "Original unchanged Source decode_fields and both original tests",
+    "Exact complete installed 13/12 instruction leaves, raw bytes, named exports and full conversion/factor/output/addition argument sequence",
+    "Independent Ghidra instruction locations and complete contiguous body extents",
+    "All276 accepted native contexts with exact identities/multiplicity, original scope, selected version, span offsets, raw words and finite views",
+    "All eight rejected identities matched to retained failed helper attempts",
+    "All425 complete owned contexts with older-field absences, byte-consistent spans and raw-value census"
+  ],
+  "excluded": [
+    "Native target execution, pixel emulation and actual signed viewport dimensions",
+    "Universal screen origin, actual SSE environment or reinterpretation as mathematical floor",
+    "Clamping, normalization, replacing nearby raw words, absent-field defaults or new byte coverage",
+    "Promoting original modern prefix scope into whole-format acceptance"
+  ],
+  "pending": [
+    "Remaining documented feature166 models",
+    "Exact publication-cut PR and all five platform gates"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 230,
+    "seconds": 457.537,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "3244781bcdb1ac99f5836b44a76d4718e00d083e",
+    "log": {
+      "path": "target/legend-position-source-full.log",
+      "bytes": 52939,
+      "sha256": "73ee3f2d5676317fb4434a961eb5a2300619c2461c121ca29a60a44f22d3f157"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 632786,
+      "sha256": "7be3da043a5d9544c0b847ff2c0ea74f36290ca5a5e9c3eae54143e70c9ca198"
+    }
+  },
+  "current_operation_proof": "legend-position-operation-verification.json"
+}

@@ -1,0 +1,48 @@
+{
+  "issue": 136,
+  "status": "Complete scoped local acceptance passed; exact-head platform integration remains pending",
+  "behavior_profile": "simulation-inertial-loads-v1",
+  "revision": "062e3c81c20efacc62daf5f397cb5837a3b4a71d",
+  "tree": "dae669fdf2069fef3d4fae3198ad61ead48d750d",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "full_local_gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "passed": 3204,
+    "failed": 0,
+    "ignored": 43,
+    "summary_count": 244,
+    "log_sha256": "a4b46cf9f104e217763856516bf1fb6cf6ba260c0d4a957d28e0b9bb1bd2e651"
+  },
+  "focused_tests": {
+    "passed": 25,
+    "failed": 0,
+    "ignored": 0,
+    "explicit_native_inputs": 5
+  },
+  "strict_reference_checks": {
+    "inertial": 7,
+    "thermal": 21
+  },
+  "owned_contexts": 135,
+  "native_contexts": 18,
+  "malformed_cases": 15927,
+  "independent_history_bytes": 7242144,
+  "production_and_compiled_test_source_unchanged_in_later_commits": true,
+  "later_test_path_additions": [
+    "tests/fixtures/simulation-mass-element-property/owned.bin"
+  ],
+  "scope_note": "The later mass-element owned fixture is an unregistered reference foundation; it adds no production or compiled-test code to this validated cut",
+  "environment": {
+    "CARGO_TARGET_DIR": "target/pinned-1.99.0",
+    "BESSEMER_KERNEL_SCHEMA": "C:/Program Files/SOLIDWORKS Corp/SOLIDWORKS/data/pschema/sch_13006.s_t"
+  },
+  "initial_gate_attempt": "Cached xtask executable retained a deleted checkout path; rebuilding only xtask corrected the environment before this successful complete run",
+  "exclusions": [
+    "All five exact-head platform feature checks",
+    "Native application acceptance",
+    "Physical/geometric interpretation and validation",
+    "Complete installed-schema parity"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "scope": "version-19000 wire interoperability; model and application validity not established",
+  "fixtures": [
+    {
+      "fixture": "bucket-2d",
+      "bytes": 5766,
+      "sha256": "3b869feb83929aeb33d7590a24d4cc7f70dbdb6db4bc7eb602d493f6adfb5c6d",
+      "view_start": 3187,
+      "first_map_index": 46,
+      "semantic_fields": 345,
+      "aggregate_entries": 86,
+      "objects": 45
+    },
+    {
+      "fixture": "bucket-3d",
+      "bytes": 5276,
+      "sha256": "ae382d62d6f1671e97b0e41dbf08d0108ac021f3cac78c6f59cf5bf303bb6ce2",
+      "view_start": 3187,
+      "first_map_index": 46,
+      "semantic_fields": 282,
+      "aggregate_entries": 91,
+      "objects": 45
+    },
+    {
+      "fixture": "bucket-empty",
+      "bytes": 3539,
+      "sha256": "9aad28a8d5a7fb7fe6a829538428fcf632cdffdf80ac919d013f2ca138f8fe68",
+      "view_start": 3187,
+      "first_map_index": 46,
+      "semantic_fields": 21,
+      "aggregate_entries": 45,
+      "objects": 43
+    },
+    {
+      "fixture": "bucket-edited",
+      "bytes": 5766,
+      "sha256": "7aac2c32e0bbda687e1dddc86575bc1c092a31c1c5d4301040da83bb6bb9fc58",
+      "view_start": 3187,
+      "first_map_index": 46,
+      "semantic_fields": 345,
+      "aggregate_entries": 86,
+      "objects": 45
+    }
+  ],
+  "source_hashes": {
+    "dl_doc.py": "6342a5285d5261d7ef5d07430d021aeea5aae878b0e61de9c7488b187f2aa8bc",
+    "dl_ui.py": "e05dc94cbb12be1af55ba163ada18d04793ce89023fe80c220f70ee0371a536c",
+    "mfcobjects.py": "eb7ad6c86ed8e4c4bc9e8b5ad6e14c2dbabc4a5ae53bb6cd9686061cef98aa16"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "base_revision": "29a1a63",
+  "private_tests": 3,
+  "public_tests": 3,
+  "python_tests": 2,
+  "independent_cases": 18,
+  "primitive_observations": 366,
+  "owned_streams": 4,
+  "shared_frontier": "../end-spec-point-roles/frontier-checkpoint.json",
+  "shared_independent_audit": "../end-spec-point-roles/accepted-reference.json",
+  "native_cases_advanced": 4,
+  "native_cases_completed": 0,
+  "gate": {
+    "command": "cargo xtask pr",
+    "staged": true,
+    "exit_code": 0,
+    "library_passed": 551,
+    "library_ignored": 3,
+    "xtask_tests_passed": 4,
+    "all_integration_suites_passed": true,
+    "doctests_passed": 265,
+    "log_sha256": "c6d86f80180ef132d2aeefc1504f2ab829c60bff5e354002b0ca85d08ce3b012"
+  }
+}

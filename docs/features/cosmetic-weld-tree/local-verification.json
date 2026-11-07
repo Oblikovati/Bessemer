@@ -1,0 +1,50 @@
+{
+  "issue": 54,
+  "issue_type": "Feature",
+  "behavior_version": "C389-cosmetic-weld-tree-v1",
+  "runtime_base_revision": "91503b39fdddcd54356f7652330b222d94675765",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "fixture_graphs": 324,
+  "primitive_reads": 38477,
+  "owned_streams": 42,
+  "checks": {
+    "private": "8 focused tests passed",
+    "public": "3 passed",
+    "python": "2 regeneration/inventory tests passed",
+    "cargo_xtask_pr": "903 library tests, all integrations, 4 xtask tests and 274 doctests passed; 3 external-fixture tests explicitly ignored",
+    "native_processes": "Two fresh processes matched all 906 outcomes and causes; exit 101 for aggregate corpus incompleteness"
+  },
+  "previous_complete": 818,
+  "complete": 819,
+  "newly_complete": [
+    547
+  ],
+  "no_prior_success_lost": true,
+  "source_snapshot": "90423fdd7deb23e4607938e9cedace690bcf77dac77efaa24e0e67bfbfb6b250",
+  "source_python_files": 1866,
+  "source_pin_unchanged": true,
+  "independent_feature_bytes": 54868201,
+  "native_objects": {
+    "moWeldWireEdgeToFaceMap_c": 2,
+    "moCosmeticWeldBeadData_c": 1,
+    "moCosmeticWeldBead_c": 1,
+    "moCosmeticWeldSubFolder_c": 1
+  },
+  "native_direct_endpoints": 2,
+  "kernel_decision": "Constructor-owned direct endpoints/arrays, exact pointer families and preserved negative-empty counts; strict existing kernel codec, no repair",
+  "exclusions": [
+    "87 native inputs remain explicit failures",
+    "Fixed positive parameter records are native-bound and synthetically tested; the observed native parameter/symbol pointers are null",
+    "Historical/internal contexts, unsupported display-item bodies, geometry validity, scalar meanings, application acceptance and whole-schema parity remain incomplete",
+    "Humanizer unavailable; maintainer prose review remains open"
+  ],
+  "artifact_sha256": "6b2a09278206d3c5af63169bed5cd045dcd2a56dac8f283a3627851aab05ead7",
+  "gate_log_sha256": "73a48e81e949f9e519bc5e1da2ead712f1e9946d5bca22b2b8aa0989a0402567",
+  "before_log_sha256": "1ca1eaf27f434127a0e776580e85db01c7f77fd19c4cd3bff0c9f4233a9e03f7",
+  "native_log_sha256": "e872d1a4fe60eba03ba1023c1b7899be46f3297281c491fa63d1db9c9aac4d5e",
+  "native_repeat_log_sha256": "ae4fac3b5577ea0f1838d6b03dc64ccbf57e706d56605a5d3b9efb76b38fe7bb",
+  "source_audit_log_sha256": "d15c013cacd6bfa54c35fcdbc3965bf13faf85e12da386ba8851a0736de1de49",
+  "fixture_packet_sha256": "2a3a55f06dc24ba27b4fd1f80cd4331a2d04ff2d85b04ea8d2eb6d823421a3df",
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af"
+}

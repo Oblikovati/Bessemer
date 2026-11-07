@@ -1,0 +1,74 @@
+{
+  "feature_issue": 161,
+  "scope": "Independent counted-record fixtures and complete primitive/edit/history reference oracles; Rust codec remains pending",
+  "implementation_parent": "504c0a725ff0a52d58a281cd4c1b745369f6d5b6",
+  "strict_reference_checks": 17,
+  "failures": 0,
+  "exit_code": 0,
+  "process_reaped": true,
+  "log_sha256": "efd2c06d73ef36e252f88a3de52a8ed492d6874d57179b5d4990a21a7c849f15",
+  "owned": {
+    "cases": 322,
+    "versions": 62,
+    "records": 446,
+    "empty_collections": 62,
+    "logical_bytes": 390672,
+    "packets": {
+      "input": {
+        "bytes": 394536,
+        "sha256": "8146a1f3e1a03eaaad51a009338b4d83275e26eee9b0d6613017a3ec3e689b63"
+      },
+      "projection": {
+        "bytes": 2375958,
+        "sha256": "0da2bae6e2a67930be602b56b0b1bf317a15203d09e8835c93dd5146f8eac8e5"
+      },
+      "history": {
+        "bytes": 3705178,
+        "sha256": "032379de79def98da8201617ecbb3d9fc4b6468d8226e54a5a4578163f6bd03b"
+      }
+    }
+  },
+  "native": {
+    "streams": 12,
+    "arguments": 12,
+    "records": 16,
+    "packets": {
+      "input": {
+        "bytes": 86503,
+        "sha256": "1e974cd000c4b60309761077ad9031ee406e8e9e3a68c746400cc730ea39ae49"
+      },
+      "projection": {
+        "bytes": 247948,
+        "sha256": "469de8afaf4ca43a2d1cfe3221cd6f84d8a4188bbde79e5406c5a093683e8d0e"
+      },
+      "history": {
+        "bytes": 566571,
+        "sha256": "d603daad8e2575b9129081f76351aecd9c392df1728bb7192829500885bc6b84"
+      }
+    }
+  },
+  "old_native_input_packet_unchanged": true,
+  "owned_record_boundaries_independently_constructed": true,
+  "all_source_spans_contiguous_hash_checked_and_complete": true,
+  "completed_empty_collections_have_count_noop_histories": true,
+  "nonempty_histories_edit_only_first_record_base_integer": true,
+  "zero_count_curve_mode_extreme_controls": 12,
+  "scope_shape_and_profile_substitutions_rejected": true,
+  "source_snapshot_sha256": "b6f60926f63a9c429b7ba6083c2acb0436d553aea1455bef458e0b998a714d8f",
+  "scripts_sha256": {
+    "freeze_mesh_control.py": "bcc74f789ac5528bcd9110c1b588934a80a2333c73a1231031948601d217a349",
+    "mesh_control_evidence.py": "1d547bc39d2032b60fa9d6f92ca7dbed63b7df7d55083e911e09df389b77221b",
+    "mesh_header_packets.py": "52b07aab7b4367f908538b07085fc26ff304cea70fee79693bf8103e86b5084b",
+    "mesh_record_history.py": "96acbe4958dc534e557cbca3126bed9b002f99eabcadb1917fb9756cad4212ff",
+    "mesh_record_packets.py": "1713edef8e67fdcd85f1c16d6b16fe2c351c21eb773bf19b5b3ff161ebed216e",
+    "mesh_record_projection.py": "78a8c7b96ef5031106643073d35277553453721f8592fb60905f54022fbdeb34",
+    "owned_mesh_headers.py": "838738bb0fe4ceb7bc26d5467de5b83e1eafa32347d51cc2a2065ee15892d245",
+    "owned_mesh_records.py": "b341411618b3a234b87f8689fe4b00cdd4a0a71da21d00a66160874ff38cd37a"
+  },
+  "exclusions": [
+    "Counted-record production read/construction/edit and full Rust/source parity remain pending.",
+    "Counted-record budget/fixed-cap, malformed grammar, proper-prefix/trailing, isolation and concurrency gates remain pending.",
+    "Exact immutable publication-cut and five exact-head platform gates remain pending.",
+    "Native writer/application, DocumentInfo dispatch, geometry and whole-format acceptance remain unproven."
+  ]
+}

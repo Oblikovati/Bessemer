@@ -1,0 +1,78 @@
+{
+  "cases": 906,
+  "accepted": 719,
+  "rejected": 187,
+  "newly_accepted": 3,
+  "previous_complete_preserved": true,
+  "fresh_process_outcomes_and_causes_identical": true,
+  "artifact_stable_during_replay": true,
+  "artifact_sha256": "9e962c2be723e9c83280da997dc144c04a482089bee0a9713e7f12708b19269b",
+  "changes": [
+    {
+      "index": 58,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moBackDraftSurfIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+      },
+      "after": {
+        "status": "accepted",
+        "cause": ""
+      }
+    },
+    {
+      "index": 330,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moBackDraftSurfIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+      },
+      "after": {
+        "status": "accepted",
+        "cause": ""
+      }
+    },
+    {
+      "index": 436,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moBackDraftSurfIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+      },
+      "after": {
+        "status": "accepted",
+        "cause": ""
+      }
+    },
+    {
+      "index": 746,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moDraftSurfIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moFaceBlendItemPair_c\" schema 1; expected an implemented complete model object body"
+      }
+    },
+    {
+      "index": 747,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moDraftSurfIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moFaceBlendItemPair_c\" schema 1; expected an implemented complete model object body"
+      }
+    },
+    {
+      "index": 748,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moDraftSurfIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moFaceBlendItemPair_c\" schema 1; expected an implemented complete model object body"
+      }
+    }
+  ]
+}

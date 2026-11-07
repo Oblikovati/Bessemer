@@ -1,0 +1,95 @@
+{
+  "issue": 174,
+  "accepted_source_cut": "b27da6cf0f22001a4fba7c77e450f7d6c69e6ee0",
+  "platform": "Windows x64",
+  "toolchain": "Rust1.99.0 x86_64-pc-windows-msvc",
+  "source_checks": 14,
+  "source_initialization_and_strict_replay_passed": true,
+  "rust_integration": {
+    "command": "cargo test --test simulation_legacy_plot -- --include-ignored",
+    "passed": 15,
+    "failed": 0,
+    "ignored": 0
+  },
+  "clippy": {
+    "command": "cargo clippy --all-targets --all-features -- -D warnings",
+    "passed": true,
+    "seconds": 30.35
+  },
+  "scope": {
+    "owned_cases": 52,
+    "owned_versions": 13,
+    "proper_owned_prefixes": 92944,
+    "native_streams": 60,
+    "native_candidate_attempts": 120,
+    "native_helper_successful_arguments": 96,
+    "original_native_wide_views": 240,
+    "public_send_sync_types": 16,
+    "rust_functions_audited": 95
+  },
+  "source_snapshot": {
+    "file": "source-snapshot.json",
+    "sha256": "0e5935b9d8d08682c2e6f257e51ce187574726ceaa26b5fdb26b367e61d860aa",
+    "identity": "99c84c47f7ba695f0a477771255dfe89a1401c8ce4ed2ef559af4060af54ada6"
+  },
+  "logs": [
+    {
+      "path": "target/legacy-plot-operation-source.log",
+      "bytes": 1034,
+      "sha256": "76372cfaa95aab386cbacab2f625b104fa8f437dcbb2cc9fb69c2d2a66620fde",
+      "exit_code": 1,
+      "process_reaped": true
+    },
+    {
+      "path": "target/legacy-plot-operation-complete-source.log",
+      "bytes": 2415,
+      "sha256": "81abdb7c9b0a14eb2301b26bfdfbd652bdd94232e744675473e97109bf0f10ea",
+      "exit_code": 0,
+      "process_reaped": true
+    },
+    {
+      "path": "target/legacy-plot-operation-strict-source.log",
+      "bytes": 2415,
+      "sha256": "a2208531b3ff414ac4e03455a452213351d48d02bdff0c1b42f8883c83822ccd",
+      "exit_code": 0,
+      "process_reaped": true
+    },
+    {
+      "path": "target/legacy-plot-clippy.log",
+      "bytes": 826,
+      "sha256": "f6b08b9045efe7487c1c2165e556bf4d4340028282e438cae91078c4615c4a96",
+      "exit_code": 101,
+      "process_reaped": true
+    },
+    {
+      "path": "target/legacy-plot-clippy-corrected.log",
+      "bytes": 136,
+      "sha256": "28d841a782c0579acb4c62933064639df2526786669781092338e324ecd6e518",
+      "exit_code": 0,
+      "process_reaped": true
+    },
+    {
+      "path": "target/legacy-plot-final-all-tests.log",
+      "bytes": 1884,
+      "sha256": "b62a4e1cb25c646746e964e9ad41142eeb9387922e16dbced08ff7e8c16b9871",
+      "exit_code": 0,
+      "process_reaped": true
+    }
+  ],
+  "corrections": [
+    "The first operation Source launch lacked the existing shared packet helper graph module path; the configured complete initialization and strict replay passed.",
+    "Clippy required as_chunks::<2>() for the bounded fixed-size scan. The final implementation passed Clippy and all fifteen integration tests again."
+  ],
+  "process_proof": "process-pair-verification.json",
+  "pending": [
+    "Fresh cargo xtask pr on the exact publication head",
+    "All five exact-head platform checks, including ThreadSanitizer",
+    "Serialized integration after queued features164/165/166"
+  ],
+  "excluded": [
+    "Native SolidWorks runtime, CString trimming and native writer equivalence",
+    "Geometry acceptance and inferred physical meanings",
+    "Universal caller-version selection and whole-format parity",
+    "Dependency changes, version bumps, tags and releases"
+  ]
+}

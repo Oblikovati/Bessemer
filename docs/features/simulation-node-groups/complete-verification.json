@@ -1,0 +1,96 @@
+{
+  "issue": 122,
+  "behavior_profile": "simulation-node-groups-v1",
+  "base_revision": "e50cb614790105e1e297c54e490c23038ca1a6b7",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "gate": "cargo xtask pr",
+  "gate_exit": 0,
+  "gate_log_sha256": "a9b5f5c5daac25751c23d28af81e58dd18a2d470e4990ea63bd12660641cd48e",
+  "test_summaries": 231,
+  "passed": 2997,
+  "failed": 0,
+  "ignored": 21,
+  "focused_with_native": {
+    "node_groups_passed": 7,
+    "previous_selection_compatibility_passed": 11,
+    "failed": 0
+  },
+  "owned_cases": {
+    "blocks": 6,
+    "nodes": 81933,
+    "signed_word_patterns": 65536,
+    "chunk_boundary_nodes": 16387
+  },
+  "native_pairs": 3,
+  "native_nodes": 45246,
+  "native_tag_bytes": 90492,
+  "native_contiguous_runs": 5,
+  "native_supplied_body_queries": 5,
+  "native_cross_tag_selected_nodes": 152,
+  "native_cross_tag_ordinals_retained": true,
+  "synthetic_negative_tag_and_body_65535_shared_reference_preserved": true,
+  "two_fresh_processes_ran_all_seven_tests": true,
+  "native_projection_outputs_compared_byte_for_byte": true,
+  "native_projection_output_bytes": 725356,
+  "native_projection_output_sha256": "375bd7fcb225336fac7763462c54bd541277cc6eb93182a402a32a0bc672b801",
+  "actual_frozen_readers_verified_the_entire_rust_projection_packet": true,
+  "original_gen_and_typed_first_last_node_parents_retained": true,
+  "all_run_records_partitioned_and_checked_exactly_once": true,
+  "tag_pattern_error_bits": 0,
+  "source_isolation_and_parallel_bytes_verified": true,
+  "observations": [
+    {
+      "observed_peak_working_set_bytes": 43302912,
+      "seconds": 0.6504698,
+      "run": 1
+    },
+    {
+      "observed_peak_working_set_bytes": 42467328,
+      "seconds": 0.3826152,
+      "run": 2
+    }
+  ],
+  "observation_scope": "All seven focused tests per process, including 81,933 owned nodes, the full signed word domain, malformed inputs, five native runs and five actual supplied body queries. Elapsed includes startup; the full local gate was running concurrently. Working set sampled around 1 ms is a lower bound. First implementation; no prior published release or statistical speed claim.",
+  "runtime_and_test_sha256": {
+    "src/simulation/gen/groups.rs": "8dc52db7256564b38f8bcd80b66f98e4ca6eff4c4b8c8ef2bda573243aa76cd7",
+    "src/simulation/gen/mod.rs": "13fe8fca6592ae4deb8ec2c8cb0031c4b5f87162bdf27e90d4b53270deec8a50",
+    "tests/common/node_group_packets.rs": "8a4abb0ffad15df79dcb95edb5b7eff7d01fad8f306ab38250bd2abe559d6229",
+    "tests/fixtures/simulation-node-groups/groups.bin": "ec97e8462246ccad96ed4ac344d5001d3429187e434400abb220711601c9abfd",
+    "tests/simulation_node_groups.rs": "aa063586b5b1a710a4c6ee883eb065a01c69dc96538eb0f1ee1d49eeabc477d0"
+  },
+  "verification_dependency_sha256": {
+    ".gitattributes": "35ef564a146783200385f9f0a3e7e768b053116a9b0e4367ee68420b74418407",
+    "docs/features/compound-files/freeze_compound.py": "b16b5c4ab53a0876218a89b03aae096b17e30d254ac942ec094baf5a3706771a",
+    "docs/features/model-archives/pinned_reference_tests.py": "6f95547f7dee070b1b8fe50cefaaea9a45721789636add2e67a919e42169b36e",
+    "docs/features/simulation-images/freeze_images.py": "d47b59435889b89e93f30ce1fd366e976dfbc76a7389f733f5a632ffa87b02c7",
+    "docs/features/simulation-images/owned_images.py": "9f5cece11e36398d0f1afc92765b01486ab993e38ccf873c004b1bd0a3aa753f",
+    "docs/features/simulation-node-groups/freeze_groups.py": "245f0a18e0bac67f8943798fc08823786536be5974c08d8904936c85f21eae11",
+    "docs/features/simulation-node-groups/owned_groups.py": "582bc46706f837e63d319d6f5c5873898bbb06c462fa9ad2e8ba8c2de9e40a69",
+    "tests/common/selection_failures.rs": "ae56177be6f783e07fe1607feeb1c71fb5f902eeac3040a06732ec60f0db363c",
+    "tests/common/selection_packets.rs": "77d4cee0ad7ca5de54d2848d0b8cb78e0336eabf848b944dd413bfda535b9fdd",
+    "tests/common/simulation_images.rs": "7089399bf3c684254e38a2d4b646317ea2e113a30cf54231c4c9dbc2536f0eef",
+    "tests/simulation_selection.rs": "a1a51ad9190d4f960b6982490c4267b9a153856a809a2487cdec1a13be4315c0"
+  },
+  "reference_snapshot_identity": "935e11f6f2ad167b3c48ad471db4a46324a83347d77aa57ae02fdf9afe544e8a",
+  "actual_reader_sha256": {
+    "cfb.py": "a55a2ceb4798c8f66b5b6ae37a8555dca83b90e12d587f673573fb6bc0137091",
+    "simulationmaster.py": "6213855a290cf1627e852daff1630089752c1a82fdf311c9e5c55c3c7cfedb42",
+    "simulationgen.py": "c562670bf27fc0a8f833f3295413661c76a85351fdbd8d383e2157087a80ea92",
+    "simulationmesh.py": "3a8cd7bff23f93a77cf4f5dffd0dcba01b9cf1f4d75a7a1c56915acf56db3f5c",
+    "simulationbodynodes.py": "309ff4eef82c37996ed80ec75db5588f97813cfd7b594e4a669d3d5720e8bb70"
+  },
+  "exact_simulation_index_fixture_packets_verified": 13,
+  "check_mode": "ExactAllStoredTagsAndContiguousRuns",
+  "acceptance_exclusions": [
+    "Complete tag domain semantics and CAD body mapping",
+    "Native element-driven producer traversal, historical cursor and transition context",
+    "Exclusive body ownership or relabeling/healing of shared references",
+    "Native execution or global format completeness",
+    "Geometry, topology consistency, self-intersection and tolerance validity",
+    "SolidWorks application acceptance",
+    "ThreadSanitizer execution on this Windows host; required Linux CI remains separate"
+  ],
+  "humanizer": "Unavailable; prose pass left for review",
+  "dependencies_added": false
+}

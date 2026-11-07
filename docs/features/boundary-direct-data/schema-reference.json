@@ -1,0 +1,29 @@
+{
+  "issue": 205,
+  "status": "Implemented and passed focused/native checks; full gate and integration remain separate",
+  "edition": "Edition 0.3071 \u00b7 2026-11-04 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "specification_sha256": "7b932c09f4bbd7fcbdf7847303ec849f6c9cb03a83e82b8293bcd71631a7c381",
+  "clauses": [
+    "11.393",
+    "11.394"
+  ],
+  "snapshot_representation": "LF-normalized excerpts, each with one final newline, hashed before staging",
+  "snapshot_sha256": "37687bb389e1eeb527c6ddd231be851fab4adbc226145c245fac28761536483c",
+  "approved_source_reader_sha256": "401f25dcdc739157fb58de249232090228d4237fc3809fa32ce3e43e24dba511",
+  "current_gaps": [
+    "temporary_count rejects every nonzero value through absent_payload",
+    "has_direct_model_data rejects every nonzero presence through absent_payload"
+  ],
+  "constraints": [
+    "Each direct time pair is two u32 archive words, not two runtime-sized time objects",
+    "Preserve negative declared counts while skipping only their loops",
+    "Preserve raw nonzero presence, duplicate pairs, original order and zero vector entries",
+    "Direct bodies create no object/class map slots",
+    "Keep existing unknown_ec signed raw alias and both documented version gates",
+    "No new public surface, unproved archive mode, geometry semantics or native population credit"
+  ],
+  "next_acceptance": "Independent unchanged original Source full-body goldens and complete owned document operation before extending the codec",
+  "pre_implementation_sha256": "bfd3b9b0426b38dceca63e6d1c2652f08fd31c1a378c7242bc9a1b323905a760",
+  "pre_implementation_revision": "67c0c91c3a25fec50c7dcd7b4b7fa0d8657e62a3",
+  "behavior_transition": "Direct boundary payload profile1 reads formerly unsupported documented bodies. Zero-body baselines remain identical; no on-disk conversion or version bump. Prior rejection can be replayed at the recorded pre-implementation revision."
+}

@@ -1,0 +1,37 @@
+{
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "base_revision": "98789499d2571f17f16077d6d83f458a1b5d217b",
+  "checks": [
+    {
+      "command": "cargo xtask pr",
+      "exit_code": 0,
+      "library_passed": 424,
+      "external_gates_ignored": 3,
+      "doctests_passed": 265
+    },
+    {
+      "command": "cargo test --lib reference_axis_tests",
+      "exit_code": 0,
+      "passed": 5
+    },
+    {
+      "command": "python -B -X utf8 -m unittest discover -s docs/features/reference-axes",
+      "exit_code": 0,
+      "passed": 2
+    }
+  ],
+  "log_sha256": {
+    "reference-axis-publish-gate.log": "cd4b9702b8a0e28db55eb02433a8fbc7d312670fc04412db9e69f7abaa5264aa",
+    "reference-axis-final-tests.log": "5a2b59a5295f9f3b42252288f3511ed5cf6cfc9c79a3ae0497d549db1f359ea1"
+  },
+  "kernel_schema": "sch_13006.s_t",
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "exclusions": [
+    "Full corpus parity (418/906 accepted)",
+    "Native application acceptance",
+    "Geometry/topology certification",
+    "Database contexts",
+    "Release comparison: no published release baseline"
+  ]
+}

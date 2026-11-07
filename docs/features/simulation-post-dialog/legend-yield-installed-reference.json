@@ -1,0 +1,19 @@
+{
+  "complete_instruction_counts": [
+    67,
+    52
+  ],
+  "exact_decoder_qualifications": [
+    {
+      "address": "0x1800db110",
+      "original": "1800db110 cmp r9d, -2",
+      "canonical": "1800db110 cmp r9d, 0xfffffffe",
+      "raw_hex": "4183f9fe",
+      "kind": "Exact sign-extended immediate-byte sentinel spelling; #172"
+    }
+  ],
+  "target_executed": false,
+  "runtime_split_serialized": false,
+  "complete_tick_adjustment_modeled": false,
+  "mapping_helper_modeled": false
+}

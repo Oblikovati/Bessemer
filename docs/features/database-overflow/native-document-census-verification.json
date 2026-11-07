@@ -1,0 +1,55 @@
+{
+  "issue": 229,
+  "parent_revision": "32ebc398",
+  "production_revision": "83f3aacf",
+  "production_code_changed": false,
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "process_exit_code": 0,
+  "ignored_test_explicitly_executed": true,
+  "native_test_passed": 1,
+  "native_test_failed": 0,
+  "seconds": 62.48,
+  "native_edits": 5140,
+  "fresh_typed_reversals": 5140,
+  "cell_bearing_streams": 440,
+  "original_documents": 357,
+  "every_census_record_matched_execution_log": true,
+  "regular_rust_tests_passed": 15,
+  "regular_native_tests_ignored": 1,
+  "python_tests_passed": 14,
+  "original_full_file_hashes_pre_and_post": "All357 originals matched the frozen full-length/SHA256 source-root manifest before and after execution",
+  "checkpoint_policy": "Original compressed file checkpoint retained in the isolated output document; reverse pages derived from a separately reopened document. No claim that reopened bytes recover absent original compression provenance.",
+  "checks": [
+    "Every original selected page equals frozen native input",
+    "Every edited page matches independent expected bytes",
+    "Complete output document reopened with unchanged unrelated stream names/order/bytes",
+    "Fresh typed reverse restores full selected database stream and exact original complete document",
+    "Original source snapshots and installed files remained unchanged"
+  ],
+  "source_sha256": {
+    "tests/database_overflow/native_documents.rs": "ff9ba30f9485a61aca6b1f1207354f5792100db2c88f37f4c9567e51b555a2ee",
+    "tests/database_overflow/native_census.rs": "887ea754f6465e4c8d4ec2b232b8c537d858ce4c4f6ccab3340516ef8b924028",
+    "tests/database_overflow/documents.rs": "c8ebfa041fcda53d5a499c12d897918b29557a58da8c2becfce0b6f2204a4157",
+    "docs/features/database-overflow/native_packet.py": "193944c7a5b2f80eadc6d52f79569204bd5eaa0759d834bac255280a0077ffdd",
+    "docs/features/database-overflow/freeze_native_documents.py": "fd6102a40cad56100424df6b27ef39ef6d64e943162384d967a996610fe3b1b0",
+    "docs/features/database-overflow/test_native_documents.py": "ea99f0ef641ac8d445fe3627a1afa39418d48e3b1fd27f948125cd7cabee7d9c"
+  },
+  "logs_sha256": {
+    "database-overflow-native-documents-source-preflight.log": "93328b574138e2bbc800b885908b471942a518e756dfb8f7b0697cca7d7550ec",
+    "database-overflow-native-documents-source-postflight.log": "93328b574138e2bbc800b885908b471942a518e756dfb8f7b0697cca7d7550ec",
+    "database-overflow-native-documents-full-census.log": "4cfc3126772b9f88fc86cf9260e4cf9a9d37801f0b7a86b2f82f9d7bd773c508",
+    "database-overflow-native-documents-regular-tests.log": "cf7cc893a3ed5775d2be05ebb533c24e5fdb014c74b064ad75854cdf66ae3873",
+    "database-overflow-native-documents-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "database-overflow-native-documents-python-tests.log": "2d0b21eec5f8dcba8982b9fc9db99479f7dac2bd7e50975acf76dd46e9fbd283",
+    "database-overflow-native-documents-final-format.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "exclusions": [
+    "Live full gate35374 at83f3aacf excludes later native census/document test additions",
+    "No native application/geometry, engine, allocation, transaction, durability or universal file-page mapping acceptance",
+    "Native multi-page keys absent; key/allocation/length-changing operations and bucket integration remain open"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending",
+  "formatter_exit_code": 0,
+  "function_and_file_caps_passed": true
+}

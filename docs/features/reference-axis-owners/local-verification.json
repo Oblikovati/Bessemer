@@ -1,0 +1,55 @@
+{
+  "bug_issue": 46,
+  "base_revision": "c09fcae61d11c92293b367e42a61bad24864fd5f",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "regression": {
+    "before_passed": 1,
+    "before_failed": 2,
+    "after_passed": 3,
+    "after_failed": 0,
+    "before_log_sha256": "3e1b9a4b22295cf0ca46dee8f74cdf85c68db5089db2d0e70f17368d7d64f031",
+    "after_log_sha256": "6e7c8bfa66210385f37a91cc1168638c592df3235fca66bc759784922305f207"
+  },
+  "gate": {
+    "command": "cargo xtask pr",
+    "staged": true,
+    "exit_code": 0,
+    "library_passed": 474,
+    "library_ignored": 3,
+    "xtask_tests_passed": 4,
+    "all_integration_suites_passed": true,
+    "doctests_passed": 265,
+    "log_sha256": "947d9ae6380f96be8e2483504c65724e246c353649b6247e81bf4a564a782774"
+  },
+  "focused": {
+    "private_tests": 3,
+    "public_tests": 2,
+    "python_tests": 3,
+    "bare_cases": 4,
+    "primitive_reads": 678,
+    "owned_streams": 3
+  },
+  "native_corpus": {
+    "cases": 906,
+    "accepted": 588,
+    "rejected": 318,
+    "all_906_outcomes_and_causes_unchanged": true,
+    "fresh_process_outcomes_identical": true,
+    "expected_full_parity_exit_code": 101
+  },
+  "source_file_sha256": {
+    "src/model_archives/body_features.rs": "cfc06682cf89aa6c49087443b543e0b5c134998ed827c4435c89ff785e2b0271",
+    "src/model_archives/test_modules.rs": "e7b0d6c818b9d08164a5479f882b857d83357eac5edd5fbc156881e95cbe59dd",
+    "tests/resolved_features/reference_axis_owners.rs": "89dc786a804ff49fab154671897503df3c7bb7cacfed7ac963c2d1b73af8fe2a",
+    "tests/resolved_reference_axis_owners.rs": "f70a92a17823d598b8df11571002539312bc34d520237ca87c597c5fff34d673"
+  },
+  "exclusions": [
+    "Full documented schema parity",
+    "Native geometry and topology validation",
+    "Native application acceptance",
+    "Non-Windows execution is checked by the integration PR matrix"
+  ],
+  "dependencies_changed": false,
+  "version_changed": false
+}

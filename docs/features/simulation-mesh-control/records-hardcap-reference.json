@@ -1,0 +1,87 @@
+{
+  "cases": [
+    {
+      "name": "records",
+      "count": 10000,
+      "success": true,
+      "fields": 370001,
+      "bytes": 1940004,
+      "sha256": "127e40aee131646b51fc45e8d0eef3fc4779b716266b45ca8879d59cf0e70500"
+    },
+    {
+      "name": "records",
+      "count": 10001,
+      "success": false,
+      "fields": 0,
+      "bytes": 1940198,
+      "sha256": "4a18e653e42e26aad87bc6de6cab6cda835f43890ebea83a246c952391425955"
+    },
+    {
+      "name": "references",
+      "count": 10000,
+      "success": true,
+      "fields": 100038,
+      "bytes": 390198,
+      "sha256": "eb9b055bcf9cd8b07e3b1aff62eb907b8eec5f9d4b28a309ad727e9f5da52f39"
+    },
+    {
+      "name": "references",
+      "count": 10001,
+      "success": false,
+      "fields": 0,
+      "bytes": 390237,
+      "sha256": "a687b2cfe609d14ceef610e99f977891fc732ebf95fa47dd4f51eadbc6614db4"
+    },
+    {
+      "name": "blob",
+      "count": 1000000,
+      "success": true,
+      "fields": 48,
+      "bytes": 1000234,
+      "sha256": "40e2d094f689a64eb7546f3e95f583b43b6d7d7c0c1ac66440bca3d5bbbd4d3c"
+    },
+    {
+      "name": "blob",
+      "count": 1000001,
+      "success": false,
+      "fields": 0,
+      "bytes": 1000235,
+      "sha256": "ea3474cd62ebe21546ce8ce0e7908638437eb4d1c90349735394abf213473677"
+    },
+    {
+      "name": "curves",
+      "count": 50,
+      "success": true,
+      "fields": 1614,
+      "bytes": 9513,
+      "sha256": "fab61ca168e619fff62e67f469c0d9a380678c2cbf45c8cf6c13443895fef2da"
+    },
+    {
+      "name": "curves",
+      "count": 51,
+      "success": false,
+      "fields": 0,
+      "bytes": 9697,
+      "sha256": "9f26343800d6590a3c7242e90e2d751ebfc0d2909de4907d7f1fbb1afa248201"
+    },
+    {
+      "name": "optional_pairs",
+      "count": 100000,
+      "success": true,
+      "fields": 200064,
+      "bytes": 1600342,
+      "sha256": "1d7e72e5a6ac7a1e961837dc79a7f0ec82bd47ab6362e08b04e754c2b79966f0"
+    },
+    {
+      "name": "optional_pairs",
+      "count": 100001,
+      "success": false,
+      "fields": 0,
+      "bytes": 1600358,
+      "sha256": "8eda2eeed16bb6c362a2d72677beaa7b601cd57b7c3b7313b10739da43c2de61"
+    }
+  ],
+  "contexts": 10,
+  "bytes": 9881216,
+  "sha256": "c15de9881cacdeef99cb40e685fa7873d0c9cedf6299b5650aca04fc38840239"
+}

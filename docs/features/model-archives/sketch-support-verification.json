@@ -1,0 +1,62 @@
+{
+  "behavior_version": "private-model-sketch-support-v1",
+  "decision": "Complete documented support records and dimension-text bodies; no partial sketch-root reader or sketch-solving algorithm.",
+  "migration": "Initial unpublished model codec; previous fixture and corpus baselines retained.",
+  "checks": {
+    "focused Rust": "12 passed",
+    "all model tests": "182 passed; two external-input tests ignored, six core tests filtered",
+    "all-target Clippy": "passed",
+    "Python": "50 passed",
+    "fresh reference processes": "all five wire fixtures reproduced exactly",
+    "native corpus": "866/906; all 906 outcomes unchanged from preceding checkpoint; complete acceptance failed",
+    "full PR gate": "earlier geometric/kernel checkpoint; rerun before push"
+  },
+  "cases": {
+    "support": 259,
+    "dimension_text": 128
+  },
+  "independent_scalar_values": {
+    "support": 2960,
+    "dimension_text": 5760
+  },
+  "exact_array_budget": {
+    "entries": 19,
+    "one_below_rejected": 18
+  },
+  "exclusions": [
+    "complete sgSketch root collections, patterns and tail",
+    "minimal-owner sketch entity grammar",
+    "two tracked role failures",
+    "public model API and history/result contracts",
+    "geometry and native application acceptance",
+    "remote platform matrix"
+  ],
+  "artifact_sha256": {
+    "docs/features/model-archives/freeze_sketch_references.py": "1113f5491ecd694dc4e126f4c7fedd62c839fdc19fbf1e493e7c14c0a8f6e942",
+    "docs/features/model-archives/freeze_sketch_text.py": "0922adf4c6c2f69f6a83bd83492f61d2b24be98385e73bfd73aba48029a40899",
+    "docs/features/model-archives/sketch-reference-cases.json": "95beccfbcd290812d5a6bb0042eb2d89046acdfda4a3d94386815c24e054b637",
+    "docs/features/model-archives/sketch-support-schema-reference.json": "1aefae14e0d010d29bd30fa037452d98b5ba977d77910d0806f07afe8c402ec9",
+    "docs/features/model-archives/sketch-support-schema-snapshot.md": "791a096af52471846b7641751c5aecf7e6431f430d548f45cf39485da9fb3d60",
+    "docs/features/model-archives/sketch-text-cases.json": "1a54505b41d5480e9494e54f0985285852d5bd45700ceefca5f0b9e204b7e678",
+    "docs/features/model-archives/sketch_reference_fixture_bytes.py": "df02a4f06a11f77811fc320b6e776aaf5589a750fafa737ea2d1464023a1ba6a",
+    "src/model_archives/mod.rs": "c02db71c3a9a0905f63efa6059aa2097d10d7b4094b3b403968e8d3cfa49abe9",
+    "src/model_archives/object_body.rs": "1f3a5890b1cdbe76e27a382f291649c55f970766d53f5f7e8781e98c8dc082be",
+    "src/model_archives/sketch_backups.rs": "3b6195ee677d8c540b314e20081108e0c784b1118d55b2c4beca06e3cf46486d",
+    "src/model_archives/sketch_entities.rs": "0c2f05aa34dc022106c7f944ecd660f754067aacba48de33ff8fb4225189bad5",
+    "src/model_archives/sketch_references.rs": "24aa5ce9682a7b3d5aba4c32990e0ee223c9c9974c9426791386429fe39fa677",
+    "src/model_archives/sketch_text.rs": "fe0eb64900f4dabe74ee0bf2c63c5a81bf7e567d6c0f5b85be89333146134451",
+    "tests/fixtures/model-archives/sketch-handle-edited.bin": "6e651628b9ddc5ba25c01bd7f6893bd45739c5353fdb50769c5ae43f7163763e",
+    "tests/fixtures/model-archives/sketch-reference-cases.bin": "98edb092a0bc2b391fd65597ed4b9cadf9b3deb2f3ce3f2e4cd1f6f7ae544706",
+    "tests/fixtures/model-archives/sketch-text-cases.bin": "ff856857cc65adefe71edf83c3c3c1f76b28a9296963cfc4361b2c61247937be",
+    "tests/fixtures/model-archives/sketch-text-edited.bin": "b45f4d48e3e77f4479a234302cc41ff63733e6cdd546a4bcbf08ff3284520be6",
+    "tests/fixtures/model-archives/sketch-text-original.bin": "eca824645774257461432781a7bc3a7d17a5f9ac1e07c12126384fed088c62be",
+    "tests/model_archives/sketch_references.rs": "01f1865bb4960519d90925a5ab7f483b1b0af0e09edba3a15273726e97886044",
+    "tests/model_archives/sketch_text.rs": "ee66e6e92cfe40682659b965c20d2a9583abf03fbb4418d40c8f2beef379d609"
+  },
+  "log_sha256": {
+    "model-sketch-tests.log": "aac9136c6b3d4288d4bc9495144d1f6bfe7d4b0478bad032d04b3b0e020c3ce0",
+    "model-sketch-clippy.log": "0d841c2e4b8eaa8ec62335f992ea238c2e9040e4ec1018ff6ed9ec000ce1248c",
+    "model-sketch-all-model.log": "4a5821bbd077fd7f3e7167cdb0f54968a333cb05d8575e5ecce0d3ca99b0d244",
+    "model-sketch-python.log": "fb3bb0f9d55ed77fa0f86a5611666b9c49612bcabe451d33c3ea176953507c99"
+  }
+}

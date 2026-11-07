@@ -1,0 +1,286 @@
+{
+  "base_revision": "59efc2108cbb7fc1b0af674b7a516f2d7f1f97fd",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 511,
+    "library_ignored": 3,
+    "xtask_tests_passed": 4,
+    "all_integration_suites_passed": true,
+    "doctests_passed": 265,
+    "log_sha256": "9137ebe7f38e1db3c635356c178621fdb4f9822d59ce2a20150a78bf4d8a5921"
+  },
+  "focused": {
+    "private_tests": 4,
+    "public_tests": 3,
+    "python_tests": 3,
+    "sheet_metal_python_regression_tests": 5,
+    "object_cases": 202,
+    "projected_reads": 74248,
+    "owned_streams": 4
+  },
+  "native_corpus": {
+    "cases": 906,
+    "accepted": 638,
+    "previous_complete_preserved": true,
+    "fresh_process_outcomes_and_causes_identical": true,
+    "artifact_stable_during_replay": true,
+    "artifact_sha256": "19b84a98f4c20ab4e84512663a4b4b25496e43913f4cce27d092236d899862e8",
+    "changes": [
+      {
+        "index": 124,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moSMBaseFlange_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFlatPattern_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 188,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moSMBaseFlange_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFlatPattern_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 196,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moSMBaseFlange_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFlatPattern_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 197,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moSMBaseFlange_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFlatPattern_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 224,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moSMBaseFlange_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFlatPattern_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 228,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moSMBaseFlange_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFlatPattern_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 243,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moSMBaseFlange_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFlatPattern_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 251,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moSMBaseFlange_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFlatPattern_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 298,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moSMBaseFlange_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFlatPattern_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 306,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moSMBaseFlange_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFlatPattern_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 307,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moSMBaseFlange_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFlatPattern_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 318,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moSMBaseFlange_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moHem_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 319,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moSMBaseFlange_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moHem_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 329,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moSMBaseFlange_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moEdgeFlange_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 355,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moSMBaseFlange_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moEdgeFlange_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 456,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moSMBaseFlange_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moEdgeFlange_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 457,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moSMBaseFlange_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moEdgeFlange_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 542,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moSMBaseFlange_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moSketchBend_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 589,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moSMBaseFlange_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moSketchBend_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 785,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moSMBaseFlange_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moFlatPattern_c\" schema 1; expected an implemented complete model object body"
+        }
+      }
+    ],
+    "previous_independent_eof_report": "../coordinate-systems/accepted-reference.json",
+    "previous_independent_eof_report_sha256": "3b03125d6499bdd08da38797c05726468f870522aa030cc8ce93cfe70aa7bacf",
+    "accepted_input_set_unchanged": true,
+    "expected_full_parity_exit_code": 101
+  },
+  "reference_audit": {
+    "snapshot_identity": "6dcc9dcb0d1a02d3d76591620b7a8d72a3da41c2f938697f412280439c13eb38",
+    "snapshot_python_files": 1105,
+    "source_origin": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks",
+    "snapshot_verified_against_source": true,
+    "reader_hashes_stable_during_generation_and_regeneration": true,
+    "owned_snapshot_removed_after_process_exit": true
+  },
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "source_file_sha256": {
+    "src/model_archives/base_flanges.rs": "47cd3881d6c9bf2e96e2fa27680830b0b149cedc2060ed493d1959942f78c043",
+    "src/model_archives/base_flange_directions.rs": "1e323beb66bdb90f07bc0c2737e435a0dbaafd10b03a42952040f5387d475cbc",
+    "src/model_archives/body_features.rs": "b314226a7b29192ff2ec7712df3c024bc9a6c2f9d60696fafb15cd4e148372ec",
+    "src/model_archives/sheet_payload.rs": "f542f39f8271afe77eaff7d8e0ff179f34299bdb176910dfb07e961874db76df",
+    "tests/resolved_features/base_flanges.rs": "d8521227320e5f49f944a9a7230de3cdb2d77485c4ca199420c5959725147d73",
+    "tests/resolved_base_flanges.rs": "d4c399e71775b84a53bda8f2b81e8232a44b5064e237e885bf898b84a4637a62"
+  },
+  "exclusions": [
+    "Full documented schema parity",
+    "Native application acceptance",
+    "Geometry and topology validation",
+    "DB/deferred storage and historical formats",
+    "Native runtime filtering and ownership changes",
+    "Engineering meanings of raw words",
+    "Non-Windows execution awaits integration PR matrix"
+  ],
+  "dependencies_changed": false,
+  "version_changed": false
+}

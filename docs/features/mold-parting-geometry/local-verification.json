@@ -1,0 +1,93 @@
+{
+  "issue": 217,
+  "source_base": "6189b7cb",
+  "source_identity": "Feature working tree after source_base; exact Rust file hashes below identify the compiled source, not the base commit alone",
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0",
+  "clippy": "Unit-test library, production rlib and public integration binary all completed with -D warnings; unit/library additionally -D missing_docs -F unsafe_code",
+  "fixture_graphs": 30,
+  "owned_streams": 21,
+  "independent_edits": 14,
+  "fresh_reversals": 14,
+  "new_private_tests": 18,
+  "public_tests": 4,
+  "affected_regression_tests": 37,
+  "focused_rust_passed": 59,
+  "python_fixture_tests_passed": 2,
+  "eight_workers": true,
+  "rust_source_sha256": {
+    "src/model_archives/mold_parting_geometry.rs": "8ff75a51a862832a3b4f1a89773a443208d01b91a8505530b0945f7738e3dc09",
+    "src/model_archives/mold_parting_child.rs": "32bf34c6b9da57b83a38957d813f1939526f630bb43fe33d418bc6867b035609",
+    "src/model_archives/body_features.rs": "6ac21addf3fef513a15b34d018ee5b756aacf946b71327094bfbba2cfbfab87a",
+    "src/model_archives/component_references.rs": "1ae434cd510680489ab18559d50c801df56650d5b9fd8fda3629d718326fa92a",
+    "src/model_archives/mod.rs": "ce1379d6ca698a38da5338789c08bad3d8247cb8ad5f5ba55b4cc6c2c917748a",
+    "src/model_archives/resolved_feature_objects.rs": "3cd4b3f056689dea561910ddbf39b9c48dd39032dab6f90923f17036340dbcc4",
+    "src/model_archives/test_modules.rs": "7ae10dd0364be721a1300f7cdceaf2b3f96d0371643ffe936b6d108ed882be62",
+    "tests/model_archives/mold_parting_geometry.rs": "27960cbc454371c135feef214d271c4b163512cb4cf286fdf4d8580ab466c4a1",
+    "tests/resolved_mold_parting_geometry.rs": "b9aeef91fd5c17efa49851816097efae9cde573e0f85b44ca58dba942094d551"
+  },
+  "results": [
+    {
+      "log": "target/mold-parting-geometry-regression-0.log",
+      "sha256": "cff0294cf1920aaf9e0ef1d188e758cf92ed062c9f794d3212de740c702f94de",
+      "passed": 18,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "log": "target/mold-parting-geometry-regression-1.log",
+      "sha256": "3ca439203810579f575beb44fad9b1b6a26cd363e4867f07a39e30204f49dbe1",
+      "passed": 12,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "log": "target/mold-parting-geometry-regression-2.log",
+      "sha256": "4a12fbd9367fd09630357fe7a254e83e5c9a38008a18bb53e63db0cf6276d14b",
+      "passed": 9,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "log": "target/mold-parting-geometry-regression-3.log",
+      "sha256": "591d33ce5cae125c4f97ac66c9d6aced7b227c622bdc980c17225adf93407f92",
+      "passed": 9,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "log": "target/mold-parting-geometry-regression-4.log",
+      "sha256": "d0c44abe7b0488b0bc99366cd44b152733264b73e4efe03724aaf5804ac2041c",
+      "passed": 7,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "log": "target/mold-parting-geometry-integration-v3.log",
+      "sha256": "7a8f1a695f932d24a69573fb11be610be941b41030a5f20cf3049599083abcc3",
+      "passed": 4,
+      "failed": 0,
+      "ignored": 0
+    }
+  ],
+  "artifacts": {
+    "target/mold-parting-geometry-tests-v4.exe": "2e26651aee30c20aa8f5899ca7a360abf99fb6a42eec512bf8751001a27e3a43",
+    "target/libbessemer_mold_parting_geometry_v2.rlib": "fa4434359e1904dea5763ef5b0f03e81156e059fd7c6269eb5bc1bdefd45c48b",
+    "target/mold-parting-geometry-integration-tests-v3.exe": "f5ee646b62926166d7312f4063340a0ad0687cb0f5360e65fe0178da278277f6"
+  },
+  "pre_acceptance_corrections": [
+    "Compile-time test assertion referenced a nonexistent ModelField.offset; replaced with owner literal byte assertion. Production parser unchanged.",
+    "Unsupported component fixture-builder call emitted an atom-body suffix under moCompFeature_c; corrected to independently established component base plus i32 feature ID/u32 feature time. Production parser unchanged."
+  ],
+  "pending": [
+    "Exact-cut full cargo xtask pr and required remote checks"
+  ],
+  "exclusions": [
+    "No native target execution",
+    "No newly observed native populated mold geometry/child/connected-component body",
+    "No geometry, native application, historical/special-context or whole-schema parity credit",
+    "No release or version change"
+  ],
+  "native_resolved_cases_accepted": 906,
+  "native_verification": "native-resolved-regression-verification.json"
+}

@@ -1,0 +1,100 @@
+{
+  "issue": 166,
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "target_executed": false,
+  "complete_installed_instruction_counts": [
+    67,
+    52
+  ],
+  "independent_ghidra_instruction_count": 119,
+  "complete_caller_bytes": 450,
+  "native_accepted_contexts": 276,
+  "native_stored_colors": 212,
+  "native_absent_colors": 64,
+  "original_rejected_contexts": 8,
+  "owned_complete_contexts": 425,
+  "owned_absent_colors": 116,
+  "additional_stored_byte_credit": 0,
+  "exact_historical_color_report_transitions": 1,
+  "exact_decoder_qualifications": 1,
+  "decoder_bug": 172,
+  "initial_assertion_failure": {
+    "checks": 15,
+    "failed": 1,
+    "seconds": 5.674,
+    "process_exit_code": 1,
+    "reason": "The newly written return-site assertion omitted the middle return. Corrected to require all three original return instructions.",
+    "log": {
+      "path": "target/legend-yield-source-initial.log",
+      "bytes": 3255,
+      "sha256": "92c7edd44e82ed9bc67cc9f8d377e6e61c5b4ac2fa0b9be85447be5f0f7634e2"
+    }
+  },
+  "initial_freeze": {
+    "checks": 15,
+    "seconds": 5.574,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-yield-source-write.log",
+      "bytes": 2329,
+      "sha256": "a2406d540d87f561e3d22d9cbb4e41c360db4adae95c6f082f601a8d6f8b3986"
+    }
+  },
+  "strict_source": {
+    "checks": 15,
+    "seconds": 5.139,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-yield-source-strict.log",
+      "bytes": 2329,
+      "sha256": "c75793e4a61d0600dcb0ddaca5410b54540f428d752d7caac507beffe90c8ff5"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/legend-yield-source-snapshot.json",
+      "bytes": 625089,
+      "sha256": "75a4edd38fb9d4d26111e83bc69b0a887b81eaaee2447c9fbab2e0e0b8266d69"
+    }
+  },
+  "installed_proof": "legend-yield-installed-reference.json",
+  "independent_decoder": "legend-yield-rea-reference.json",
+  "oracle_kinds": [
+    "Complete original C850 report, exact source pins and one qualified historical color-report transition",
+    "Complete GNU disassembly and whole-module hashes, exact exports, constructor IATs, provider bodies and inverse scale",
+    "Independent Ghidra captures of both complete method bodies and every instruction location",
+    "Complete current parent replay with original accepted identity multiplicity and all eight rejected identities",
+    "425 complete owned parents with version-conditioned absence and exact four-channel raw spans",
+    "Exact sentinel qualification rejects every byte mutation and changed operands; unknown locations remain unqualified"
+  ],
+  "excluded": [
+    "Native execution and actual gray-path invocation",
+    "Runtime yield/split derivation and complete exceptional-float adjustment",
+    "Mapping helper interpolation, helper state transitions, valid output pointers or final output colors",
+    "Equal-channel/alpha validity rules, absent-field defaults and new stored-byte coverage"
+  ],
+  "pending": [
+    "Remaining documented feature166 models",
+    "Exact publication-head PR validation and all five platform gates",
+    "Bug172 integration with feature166"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 253,
+    "seconds": 504.527,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "8dc2d30b87ae47088a16e13b0077998a5f7fce1a",
+    "log": {
+      "path": "target/legend-yield-source-full.log",
+      "bytes": 57197,
+      "sha256": "5d27a43b7013f5ecbbb4c70a00b2896850a7424dd254faa423eba9b0ca3aeb65"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 633132,
+      "sha256": "a5db2be4c346d59a899a509f87460ee7f2946b2824f99fb656c85a1947b35038"
+    }
+  },
+  "current_operation_proof": "legend-yield-operation-verification.json"
+}

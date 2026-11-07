@@ -1,0 +1,31 @@
+{
+  "command": "cargo xtask pr",
+  "source_commit": "aa32993381b5064fd4a15bd696b83a5adf0d493b",
+  "terminal_exit_code": 1,
+  "completed_stages": [
+    "Clippy",
+    "Library build"
+  ],
+  "failure_stage": "Integration-test compilation",
+  "failure_class": "Compiler/linker memory exhaustion",
+  "observed": [
+    "rustc-LLVM ERROR: out of memory",
+    "LINK : fatal error LNK1102: out of memory",
+    "Cascading compiler import/prelude failures during memory exhaustion"
+  ],
+  "functional_test_failures_observed": 0,
+  "qualification": "Tests did not execute; this is not an accepted full gate",
+  "issue": 246,
+  "log": "target/flow-fixed-state-combined-full-pr-gate.log",
+  "log_sha256": "c8dc3b71bce81de4ac49a6278f5852ecaa40e6bf72484d20cc04d1c9b5aa9b2c",
+  "retry": {
+    "command": "cargo xtask pr",
+    "source_commit": "aa32993381b5064fd4a15bd696b83a5adf0d493b",
+    "environment": {
+      "CARGO_BUILD_JOBS": "1"
+    },
+    "log": "target/flow-fixed-state-combined-full-pr-gate-serial.log",
+    "status": "Running at this recorded snapshot; not yet accepted",
+    "qualification": "Complete test/assertion/runtime-concurrency workload retained; compilation serialized after local validation completed"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "issue": 166,
+  "behavior_version": "C850-explicit-post-suffix-call-plan-v1",
+  "platform": "Windows x64",
+  "requests": 20920,
+  "words_per_request": 17,
+  "oracle": "Concatenated independent Python expected words from13632 operation cases and eight hypothetical contexts over635 owned/mutant and276 native parents",
+  "runs": [
+    {
+      "process": 1,
+      "exit_code": 0,
+      "bytes": 1422560,
+      "sha256": "af044f911626ce67649b015ba03ec0a06cb16c8382dc3c64f0df82d0dcd5cd79"
+    },
+    {
+      "process": 2,
+      "exit_code": 0,
+      "bytes": 1422560,
+      "sha256": "af044f911626ce67649b015ba03ec0a06cb16c8382dc3c64f0df82d0dcd5cd79"
+    }
+  ],
+  "comparison": "Both fresh Rust test processes matched every independent expected byte and each other",
+  "native_executed": false
+}

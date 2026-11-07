@@ -1,0 +1,50 @@
+{
+  "base_revision": "b35db42",
+  "integration_base": "357072035fec546bd3b85dacd65b4ccea863eb5d",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "gate": {
+    "command": "cargo xtask pr",
+    "staged": true,
+    "exit_code": 0,
+    "library_passed": 457,
+    "library_ignored": 3,
+    "xtask_tests_passed": 4,
+    "all_integration_suites_passed": true,
+    "doctests_passed": 265,
+    "log_sha256": "5cce1281f4a4485968d9cf2c110766fef9f3f401134c9db5c65c980fa713abd1"
+  },
+  "focused": {
+    "private_tests": 7,
+    "public_tests": 2,
+    "python_tests": 3,
+    "original_58_preparation_case_facts_preserved": true,
+    "native_keeper_role_roots": 26,
+    "native_keeper_role_configurations": 21
+  },
+  "native_corpus": {
+    "cases": 906,
+    "accepted": 548,
+    "rejected": 358,
+    "fresh_process_outcomes_identical": true,
+    "expected_full_parity_exit_code": 101
+  },
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "source_file_sha256": {
+    "src/model_archives/extruded_surfaces.rs": "51b95ffb581d3a2581de78251042ed54e3e8505ba28b1602044db5b9d433c904",
+    "src/model_archives/body_features.rs": "802148b3eb30458b761bfa63a9557ae0c0429aecf5dd753b7587584d7eb7c35d",
+    "src/model_archives/object_body.rs": "766c871031d7c9f9bd8f84562fc560a60b71eaaf01fe917999b77b0f891f295d",
+    "src/model_archives/mod.rs": "19e7c48e8f11849c788e25487935873823b802c6c989b7652b81e3b005bea539",
+    "src/model_archives/test_modules.rs": "bd4d983c0ac76fd3f68b5340eaa153585c6da34370434e2ca953ea0af309719d",
+    "tests/resolved_features/extruded_surfaces.rs": "a6d4b5d8437fb764899ff5cd17e69de2d68185db029249b274f278cf3f9ffa03",
+    "tests/resolved_extruded_surfaces.rs": "e2b3dbcba5acdacddb20bc781867dc71a18579c9237323a4e407a4910d54dba5"
+  },
+  "exclusions": [
+    "Full documented schema parity",
+    "Native geometry and topology validation",
+    "Native application acceptance",
+    "Non-Windows execution is checked by the integration PR matrix"
+  ],
+  "dependencies_changed": false,
+  "version_changed": false
+}

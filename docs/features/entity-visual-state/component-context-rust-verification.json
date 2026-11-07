@@ -1,0 +1,75 @@
+{
+  "issue": 181,
+  "stage": "Existing complete public component decoder/writer over all retained declared contexts",
+  "command": "cargo test --test component_visual_carriers",
+  "exit_code": 0,
+  "process_reaped": true,
+  "passed": 1,
+  "failed": 0,
+  "ignored": 0,
+  "test_seconds": 22.51,
+  "complete_baselines": 88,
+  "physical_visuals": 86,
+  "versions": [
+    5000,
+    5102,
+    5103,
+    5243,
+    5244,
+    9138,
+    9139,
+    14136,
+    14137,
+    19000
+  ],
+  "changed_rgb_requests": 86,
+  "changed_single_bit_requests": 11696,
+  "physical_bits_per_visual": 136,
+  "whole_document_rgb_cases": 14,
+  "source_baseline_oracle": "component-context-probe-verification.json",
+  "independent_expected_bytes": "Complete original bytes with exactly one selected literal bit XORed, or only RGB word replaced with FE798668",
+  "checks": [
+    "Complete literal seven-field projection and forced unchanged reconstruction",
+    "Every stored bit changed independently, including all unresolved words and float bits",
+    "All unselected typed fields and paths equal",
+    "Each changed field has exactly its original revision-bound history parent and derived result",
+    "Foreign source/result history handles rejected",
+    "RGB outputs reparse and reverse exactly for all86 visuals",
+    "Modern14 RGB document edits reparse, preserve every unrelated stream and reverse to exact original bytes"
+  ],
+  "support": [
+    {
+      "path": "tests/component_visual_carriers.rs",
+      "bytes": 6731,
+      "sha256": "a4cd75200112a80addddbd196b4a7e4aa3888ac9d85e93aba7ecb6fbb52b35a9"
+    },
+    {
+      "path": "tests/component_visual_carriers/bit_edits.rs",
+      "bytes": 1786,
+      "sha256": "1f9bd145f242efabf87f62289a890203b1f1aec31223b734f22b36782d957ad6"
+    },
+    {
+      "path": "tests/component_visual_carriers/documents.rs",
+      "bytes": 3191,
+      "sha256": "ac83277dafdb4b44b9f3e3df14cd0a4dd9428ebebe1ac329f4f86250f3902e94"
+    }
+  ],
+  "log": {
+    "path": "target/entity-visual-component-rust-contexts.log",
+    "bytes": 462,
+    "sha256": "1af77462cd7c0cd447f8cbcc40120695a14382e9a08bca99366f4522f0e100a4"
+  },
+  "clippy": {
+    "path": "target/entity-visual-component-rust-contexts-clippy.log",
+    "bytes": 135,
+    "sha256": "b9ca620d15a20ee35169a5765884714a01d09661d6eb0eb26c9276ba4b91fb82"
+  },
+  "qualifications": [
+    "No production API or codec changed. The typed stored-role operation remains pending.",
+    "Original Source acceptance covers all88 baseline inputs. Single-bit changed outputs are checked by the existing Rust decoder/writer against independent literal expected bytes; fresh Source changed-output replay across all older contexts remains separate work.",
+    "Actual document-derived context and whole-document checks cover only14 modern owned RGB cases. Older declared contexts are explicit inputs, not fabricated native save acceptance.",
+    "Below5000 and absent custom-float layouts, drawing/model configuration callers, complete operation gates and publication remain pending. Coverage credit stays zero.",
+    "Humanizer unavailable; prose pass pending maintainer review."
+  ],
+  "artifact_git_revision": "a272e1f338a7f09ec20595c24b7d6ce24d810806"
+}

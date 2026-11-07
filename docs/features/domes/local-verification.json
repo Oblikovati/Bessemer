@@ -1,0 +1,60 @@
+{
+  "base_revision": "d67f485",
+  "integration_base": "357072035fec546bd3b85dacd65b4ccea863eb5d",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "gate": {
+    "command": "cargo xtask pr",
+    "staged": true,
+    "exit_code": 0,
+    "library_passed": 471,
+    "library_ignored": 3,
+    "xtask_tests_passed": 4,
+    "all_integration_suites_passed": true,
+    "doctests_passed": 265,
+    "log_sha256": "685caf88e8a71843b19e7464925a624aded9fa4a2a987511d364a617a3608cfd"
+  },
+  "focused": {
+    "private_tests": 4,
+    "public_tests": 2,
+    "python_tests": 3,
+    "object_cases": 128,
+    "primitive_reads": 42006,
+    "owned_streams": 4
+  },
+  "native_corpus": {
+    "cases": 906,
+    "accepted": 588,
+    "rejected": 318,
+    "previous_574_preserved": true,
+    "fresh_process_outcomes_identical": true,
+    "expected_full_parity_exit_code": 101,
+    "independent_exact_eof_bytes": 33922124
+  },
+  "reference_audit": {
+    "rejected_live_checkout_attempts": 2,
+    "pinned_python_files": 1018,
+    "snapshot_identity": "de863449d1204f65b333e937a63a32f0e4d57a7bdd3641905584217ca7e275b6",
+    "snapshot_copy_verified_against_stable_original": true,
+    "snapshot_hashes_stable_during_audit": true,
+    "temporary_snapshot_removed": true
+  },
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "source_file_sha256": {
+    "src/model_archives/dome_records.rs": "94453922ba6183331e01f60825d707af870ddd88860e3c33f8ae24ea8bf23624",
+    "src/model_archives/body_features.rs": "566c5d06116d8ea4903932989ffb9dbacd7a6648f01e3e6cc39a4a5c78c39fee",
+    "src/model_archives/object_body.rs": "730e264f8d32246c2d1146727a801cec5d0d6158f07280679fc232f36aab574b",
+    "src/model_archives/mod.rs": "4d85a9364e8641708a1a9f071a19497b8a9c49e82d4cde892acd12564b6079d4",
+    "src/model_archives/test_modules.rs": "79e6d85b9bbc869fb0a4d138b9b252fbc922351bf536c2af590b73962be79c2b",
+    "tests/resolved_features/domes.rs": "5df406778b62953633765433e42c1c7fec7d77770fe4c3904b60eeb50a3c7e2b",
+    "tests/resolved_domes.rs": "f3a8375661995318cdca59a81b238c5cda527b50e5c0f09be1ee7fc3521f17f0"
+  },
+  "exclusions": [
+    "Full documented schema parity",
+    "Native geometry and topology validation",
+    "Native application acceptance",
+    "Non-Windows execution is checked by the integration PR matrix"
+  ],
+  "dependencies_changed": false,
+  "version_changed": false
+}

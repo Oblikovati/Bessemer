@@ -1,0 +1,53 @@
+{
+  "issue": 202,
+  "status": "Complete parameter boundary and input-isolation controls passed",
+  "focused_tests_passed": 17,
+  "focused_tests_failed": 0,
+  "focused_test_seconds": 41.01,
+  "boundary_tests_passed": 3,
+  "complete_owned_graphs": 26,
+  "proper_prefixes_rejected": 2861,
+  "appended_octet_variants_rejected": 6656,
+  "budget_axes_newly_checked": [
+    "maximum_bytes",
+    "maximum_fields"
+  ],
+  "budget_fixture": "Each owned graph is expanded to4097 roots by appending4096 explicit null roots; the single physical parameter is preserved",
+  "exact_caps": "Complete expanded feature byte and physical-field counts pass; one below either cap rejects",
+  "budget_scope_correction": "Initial tight caps incorrectly used the short feature stream size while the same cap also governs the1968-byte CMgr. Retained the failed test log; corrected controls ensure feature bytes/fields dominate the manager before checking the intended boundary.",
+  "rejected_text_growth_preserves_complete_source_and_handles": true,
+  "clippy_exit_code": 0,
+  "post_format_size_exit_code": 0,
+  "logs_sha256": {
+    "parameter-boundary-tests-first-manager-scope.log": "6077d8b4422a5162f64288c375d911a748cf1e26d75bb175536c83c0ee03844f",
+    "parameter-boundary-tests.log": "a273bba920264f4c1ee43297816d78048c59c9e7c76c276b41d04bf0604b4604",
+    "parameter-complete-focused-tests.log": "dcd6672d9f446f9feecd82d4ee2e8dc3833cad5c5de607195d6089c10daf0bd2",
+    "parameter-boundary-build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "parameter-boundary-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "parameter-boundary-post-format-sizes.log": "9c695c3ebdd4c3e177d7f2ea160559186c3a342b885b3cc12615083fb69cc2e6"
+  },
+  "exclusions": [
+    "These added tests cover byte and field budgets, not every resource dimension",
+    "Native document primary gate and publication checks remain separate",
+    "Source/native application/equation/geometry acceptance is not inferred from rejection tests"
+  ],
+  "root_entry_budget_extension": {
+    "owned_graphs": 26,
+    "exact_root_entries": 4097,
+    "one_below_rejected": 4096,
+    "physical_parameters_per_graph": 1,
+    "focused_test_passed": 1,
+    "seconds": 0.18,
+    "clippy_exit_code": 0,
+    "post_format_maximum_function_lines": 18,
+    "log_sha256": "395acfe23be99ed12c579b68ed98adcd9d9f737bce0a67e409fdc5dfe46d65e6",
+    "complete_focused_suite": {
+      "passed": 20,
+      "failed": 0,
+      "ignored": 0,
+      "seconds": 31.37,
+      "exit_code": 0,
+      "log_sha256": "243f77d76a0637f57160a71042f65a9dde09041131a4b93904996be1a850e22d"
+    }
+  }
+}

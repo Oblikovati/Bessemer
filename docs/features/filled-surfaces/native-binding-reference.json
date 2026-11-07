@@ -1,0 +1,111 @@
+{
+  "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\filled-surface-native-evidence.json",
+  "source_sha256": "91bf04d9a6b09c81f7932a5cbf434003cfde35e38b42aa4ae589f6118a6cdd88",
+  "clause": "11.231 / C-273",
+  "modules": [
+    {
+      "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldMoPartu.dll",
+      "sha256": "2201edfa07b1a7484acedb6db4600fa7a00e55b16090a03b92fe7d9b14cb2128"
+    },
+    {
+      "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+      "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c"
+    }
+  ],
+  "bindings": [
+    {
+      "module": "sldMoPartu.dll",
+      "class_name": "moFillRefSurface_c",
+      "vtable": "0x1804888e8",
+      "serializer": "0x1802f43d0",
+      "ancestry": [
+        ".?AVmoFillRefSurface_c@@",
+        ".?AVmoBodyFeature_c@@",
+        ".?AVmoAtomFeature_c@@",
+        ".?AVmoModelFeature_c@@",
+        ".?AVmoFeature_c@@",
+        ".?AVmoConcept_c@@",
+        ".?AVmoLoggedNode_c@@",
+        ".?AVmoNode_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@",
+        ".?AVutDisplayedEntity_c@@"
+      ]
+    },
+    {
+      "module": "sldMoPartu.dll",
+      "class_name": "moFillRefSurfIdKeeper_c",
+      "vtable": "0x180488738",
+      "serializer": "0x1803ac8fc",
+      "ancestry": [
+        ".?AVmoFillRefSurfIdKeeper_c@@",
+        ".?AVmoEdgeSurfIdKeeper_c@@",
+        ".?AVmoSurfIdKeeper_c@@",
+        ".?AVmoSurfaceIdHelper_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ],
+      "thunk": {
+        "bytes": "ff2506710300",
+        "iat": "0x1803e3a08",
+        "module": "SLDMODU.dll",
+        "symbol": "?Serialize@moEdgeSurfIdKeeper_c@@UEAAXAEAVsu_CArchive@@@Z"
+      }
+    },
+    {
+      "module": "sldMoPartu.dll",
+      "class_name": "moFillSurfData_c",
+      "vtable": "0x180488848",
+      "serializer": "0x1803ace78",
+      "ancestry": [
+        ".?AVmoFillSurfData_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ],
+      "thunk": {
+        "bytes": "ff2502e70300",
+        "iat": "0x1803eb580",
+        "module": "swccu.dll",
+        "symbol": "?Serialize@su_CObject@@UEAAXAEAVsu_CArchive@@@Z"
+      }
+    },
+    {
+      "module": "sldmodu.dll",
+      "class_name": "moEdgeSurfIdKeeper_c",
+      "vtable": "0x4cdf0c98",
+      "serializer": "0x4bbbbf40",
+      "ancestry": [
+        ".?AVmoEdgeSurfIdKeeper_c@@",
+        ".?AVmoSurfIdKeeper_c@@",
+        ".?AVmoSurfaceIdHelper_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ]
+    },
+    {
+      "module": "sldmodu.dll",
+      "class_name": "moCurveContact_c",
+      "vtable": "0x4d2e4778",
+      "serializer": "0x4cb6e990",
+      "ancestry": [
+        ".?AVmoCurveContact_c@@",
+        ".?AVmoContact_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ]
+    },
+    {
+      "module": "sldmodu.dll",
+      "class_name": "moCurveContactData_c",
+      "vtable": "0x4d2e45d8",
+      "serializer": "0x4cb6ee80",
+      "ancestry": [
+        ".?AVmoCurveContactData_c@@",
+        ".?AVmoContactData_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ]
+    }
+  ],
+  "scope": "Native owned payload, array-bearing keeper and contact bindings; no tagged owned-data reader and no body-header keeper family expansion."
+}

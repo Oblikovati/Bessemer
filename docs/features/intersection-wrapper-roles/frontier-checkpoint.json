@@ -1,0 +1,37 @@
+{
+  "previous_complete": 810,
+  "complete": 812,
+  "newly_complete": [
+    67,
+    693
+  ],
+  "no_prior_success_lost": true,
+  "all_906_statuses_and_causes_identical": true,
+  "explicit_remaining_failures": 94,
+  "changed_stops": [
+    {
+      "index": 67,
+      "before": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"reference_10\" has runtime class \"moSingleFaceRef_w\"; expected one of [\"moRefWrapper_c\"]"
+      ],
+      "after": [
+        "accepted"
+      ]
+    },
+    {
+      "index": 693,
+      "before": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"reference_10\" has runtime class \"moSingleFaceRef_w\"; expected one of [\"moRefWrapper_c\"]"
+      ],
+      "after": [
+        "accepted"
+      ]
+    }
+  ],
+  "logs": {
+    "intersection-frontier.log": "832f10bc5c20652711deb84ae20fd1aa97216bbce2bb89da3fdc1bb60c87f351",
+    "intersection-frontier-repeat.log": "5f33975f22b84f5502fb52d46c2a8d4370478dbcbcbbd7694fe2c58e21ed4160"
+  }
+}

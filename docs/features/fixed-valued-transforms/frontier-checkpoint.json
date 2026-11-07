@@ -1,0 +1,37 @@
+{
+  "previous_complete": 812,
+  "complete": 814,
+  "newly_complete": [
+    7,
+    10
+  ],
+  "no_prior_success_lost": true,
+  "all_906_statuses_and_causes_identical": true,
+  "explicit_remaining_failures": 92,
+  "changed_stops": [
+    {
+      "index": 7,
+      "before": [
+        "rejected",
+        "model archive model stream: archive: Invalid: map index 18548; expected < 225"
+      ],
+      "after": [
+        "accepted"
+      ]
+    },
+    {
+      "index": 10,
+      "before": [
+        "rejected",
+        "model archive model stream: archive: Invalid: map index 18548; expected < 325"
+      ],
+      "after": [
+        "accepted"
+      ]
+    }
+  ],
+  "logs": {
+    "valued-transform-frontier.log": "2713f0df98631bbe87cc9b5ce34810e837a12f1c0069f007ea9bf706cdd59a74",
+    "valued-transform-frontier-repeat.log": "c06d04799537b893023ddb85a003d75d0a53fce06d003288bb7ea4666ec6f3b2"
+  }
+}

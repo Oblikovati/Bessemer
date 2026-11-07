@@ -1,0 +1,33 @@
+{
+  "issue": 202,
+  "process_exit_code": 0,
+  "tests_passed": 1,
+  "tests_failed": 0,
+  "seconds": 44985.7,
+  "cases": 906,
+  "primary_edits": 43917,
+  "fresh_typed_reversals": 43917,
+  "configuration_edits": 4430,
+  "resolved_feature_edits": 39487,
+  "oracle_source_revision": "b1799d792c6c9728cb82d6af63e4666134240d6b",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "artifacts": {
+    "target/all-native-parameter-primary-document-gate.log": "35e43db8a283e967387c43dcd9bb06c1ee20a47ec14cd3a8b4df302b1e30c959",
+    "target/all-native-parameter-primary-tests.exe": "46743c90d6bc9e7d3287afa851ec3245ce46de67e34edc319b1d024569071bdd",
+    "tests/fixtures/stored-parameters/native-primary-corpus/spans.bin": "8460c6e501af5af73d094be80953227305b56f73b3210e64d07a413bb488fe3b",
+    "target/resolved-native-probe.bin": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f"
+  },
+  "checked": [
+    "All original spans and independently constructed replacement streams",
+    "Complete containing-document reopen and unrelated logical streams",
+    "Fresh typed reversal to original complete file bytes",
+    "Input isolation and complete EOF for both 906-case packets"
+  ],
+  "exclusions": [
+    "Executable predates later features; this census does not validate the latest source tree",
+    "No original producer full-model replay for every changed model",
+    "No native application opening, geometry acceptance or positive native alternate population"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending"
+}

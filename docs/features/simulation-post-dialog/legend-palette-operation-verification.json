@@ -1,0 +1,98 @@
+{
+  "issue": 166,
+  "behavior_version": "C848-local-palette-dispatch-v1",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "target_executed": false,
+  "kernel_decision": "Preserve all four optional signed controls and Source zero/nonzero/count-within-nine diagnostics without count-sized wire arrays or native validity claims. Require gray enable first, then a reached helper return; nonzero return selects early exit without requiring mode/plot. Otherwise require mode, selecting regular for every non4 value. Exactly4 requires known present plot pointer before raw plot18; unknown presence is missing and known null is an explicitly unsupported projection context. Plot18 equal3 selects material, all other known values thickness. Immutable completed plans retain all supplied parents, branch-specific completion, exact consumed masks/runtime reads, diagnostics and zero local pattern error without mapper execution or wire edits.",
+  "operation_cases": 74592,
+  "owned_complete_contexts": 425,
+  "native_complete_contexts": 276,
+  "complete_control_mutants": 2205,
+  "hypothetical_calls_per_parent": 7,
+  "local_requests": 94934,
+  "additional_stored_byte_credit": 0,
+  "rust": {
+    "checks": 7,
+    "failed": 0,
+    "ignored": 0,
+    "seconds": 0.4,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-palette-rust-final.log",
+      "bytes": 899,
+      "sha256": "999aa3dc0399f396ecc97d70805747df4a2d5e8f5dc4234787da8b486850169f"
+    }
+  },
+  "clippy": {
+    "scope": "all-targets all-features -D warnings",
+    "result": "passed",
+    "seconds": 35.43,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-palette-clippy.log",
+      "bytes": 136,
+      "sha256": "041e76e214e522caa212c15d7defeee97bf5b25c122aa6b928ff9a97beaa0432"
+    }
+  },
+  "strict_source": {
+    "checks": 19,
+    "seconds": 9.503,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-palette-operation-source-strict.log",
+      "bytes": 3020,
+      "sha256": "017e3ddb3680111612d67fcd44d2a77d9187fd1d62bf8b0e20ed1057c19dc6bc"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/legend-palette-source-snapshot.json",
+      "bytes": 625435,
+      "sha256": "b5addb3eef242d4936034203cbe76f002116acfad247f716543029dfdaeedebb"
+    }
+  },
+  "installed_proof": "legend-palette-installed-reference.json",
+  "independent_decoder": "legend-palette-rea-reference.json",
+  "evidence_proof": "legend-palette-evidence-verification.json",
+  "process_proof": "legend-palette-process-verification.json",
+  "concurrency_workers": 8,
+  "public_send_sync_assertions": 8,
+  "ownership": "Completed plans retain only copied optional scalar controls/runtime facts, enums and coverage. There are no borrowed inputs, mutable publication paths, caches or global state. Every operation checks supplied inputs unchanged on success/failure; all four completed routes remain unchanged after original inputs/runtime mutation. Complete-parent tests retain exact bytes, repeated getters, actual field absence and unchanged named-slot counts across all raw count mutations. Owned/native projections and operation cases match serial/eight-worker results and two fresh processes.",
+  "oracle_kinds": [
+    "Unchanged copied Source raw-control diagnostics, both original tests and original native corpus observations",
+    "Exact620 installed instructions, complete independent Ghidra locations/extents, ordered dispatcher anchors and copy/count/reversal arguments",
+    "All16 presence masks, nonboolean signed flags and returns, raw mode fallback, explicit unknown/null/present pointers and unknown/known pointed words",
+    "All425 owned and276 native retained parents with seven hypothetical calls each and2205 complete fixed-framing control mutations",
+    "Typed failure classes and immutable copied-parent history for every reached branch",
+    "Eight public thread traits, eight workers and two fresh processes match all94934 independently expected result packets"
+  ],
+  "excluded": [
+    "Native target execution, complete interpolation, destination gray/shell/regular algorithms and actual mapped color output",
+    "Whole-call argument forwarding, actual invocation, runtime plot production and helper execution",
+    "Native null dereference behavior and native count validity from the0..9 slot comparison",
+    "Count-sized wire arrays, absent-field defaults, new byte coverage or whole-format acceptance from prefix scopes"
+  ],
+  "pending": [
+    "Exact publication-cut PR validation and all five platform checks",
+    "Remaining feature166 documented models and integration",
+    "Bug172 integration with feature166"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 240,
+    "seconds": 492.633,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "a724858a7b5cb2d3089d13de9e14752f45dd0822",
+    "log": {
+      "path": "target/legend-palette-operation-source-full.log",
+      "bytes": 54776,
+      "sha256": "df4036d6b937098007a986e7d60ffa6aa3dd1982075ebe038d62b057a5867371"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 633132,
+      "sha256": "f8140fa4a3e2e94ac4f3c6a5922b2573c763a6a94a47f72dcf4a280b0768e025"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "issue": 134,
+  "status": "Local draft; full embedded registry and thermal collections remain unfinished",
+  "fixture": "tests/fixtures/simulation-binary-thermal/embedded.bin",
+  "fixture_sha256": "4713735fbf9ce113ff1c7e2aaab920ac57973994dd46c47d6ba12bcccf8fbd8f",
+  "owned_complete_wrappers": 198,
+  "integration_tests": {"command": "cargo test --test simulation_embedded_archives", "passed": 12, "failed": 0},
+  "context_tests": {"command": "cargo test --lib simulation_embedded_context_tests", "passed": 2, "failed": 0},
+  "ordinary_wrapper_regressions": {"command": "cargo test --lib model_reference_tests", "passed": 4, "failed": 0},
+  "clippy": {"command": "cargo clippy --lib --test simulation_embedded_archives -- -D warnings", "exit": 0},
+  "independent_reference": {"command": "python -B -X utf8 docs/features/simulation-binary-thermal/freeze_thermal.py", "passed": 5, "failed": 0},
+  "concurrency": {"threads": 8, "operations_per_thread": 32, "scope": "Owned immutable source, exact reconstruction and unchanged-edit identity"},
+  "checks": [
+    "Complete read and construction through EOF with exact byte equality",
+    "Independent typed transform pattern reconstruction and both direct suffix boundaries",
+    "Changed and unchanged edits with source-bound field history",
+    "Input and returned-buffer mutation isolation",
+    "Failed replacement isolation",
+    "Input byte, field, object and scope budgets",
+    "All prefixes of a populated wrapper and extra-byte rejection",
+    "Explicit Modern and Legacy4281 profile selection",
+    "Unknown embedded class rejection without ordinary fallback",
+    "Ordinary model context guard preservation",
+    "Compile-time Send and Sync assertions for all three new public types"
+  ],
+  "exclusions": [
+    "Complete additive embedded registry",
+    "Legacy4281 nonnull ancestry completion",
+    "Thermal collection implementation",
+    "Full native Rust corpus replay",
+    "Two fresh-process exports",
+    "PR gate and full platform matrix for this unfinished feature",
+    "Native writer and application acceptance"
+  ]
+}

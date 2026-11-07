@@ -1,0 +1,20 @@
+{
+  "issue": 54,
+  "status": "Design only; not implemented",
+  "runtime_base": "d40767b4cd7f28e3d05759083f43168e26fce956",
+  "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\weldinternal.py",
+  "source_sha256": "1dff10b14b6d8869774a20b79db34e0d3f26867aec95e84332112db0576fda0d",
+  "native": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\weld-internal-native-evidence.json",
+  "native_sha256": "0ab6430fdf2eceaaa4b55b203238cb7cf6eb4be6440a3817ec846726a6260a21",
+  "required_predicate_source": "\"\"\"Native-bound current-part unit-component branch for weld detail references.\"\"\"\nfrom modelcomponents import need_context,component_reference\nfrom modelfeatures import unknown\nfrom swarchive import ArchiveError\n\ndef verified_current_unit(a,component):\n root=getattr(a,'model_root_object',None)\n return (getattr(a,'model_root_verified',False) is True and getattr(a,'model_root_class',None)=='moPart_c' and isinstance(root,dict) and root.get('_class')=='moPart_c' and any(v is root for v in a.map) and component.get('_class')=='moUnitComponent_c' and component.get('has_external_model',1)==0 and component.get('owner') is root)\n\ndef component(a,schema=1):\n need_context(a);out=dict(component_reference=component_reference(a,schema));unit=out['component_reference']['component']\n if unit is not None and not verified_current_unit(a,unit):raise ArchiveError('unsupported weld component owner/model identity')\n out['detail_e8']=a.object('moDetailItem_c');out['detail_f8']=a.object('moDetailItem_c');unknown(a,out,'raw_100',a.i32)\n return out\n",
+  "modules": {
+    "sldmodu.dll": {
+      "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+      "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c"
+    },
+    "sldMoPartu.dll": {
+      "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldMoPartu.dll",
+      "sha256": "2201edfa07b1a7484acedb6db4600fa7a00e55b16090a03b92fe7d9b14cb2128"
+    }
+  }
+}

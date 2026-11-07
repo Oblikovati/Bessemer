@@ -1,0 +1,48 @@
+{
+  "base_revision": "b2313936e89913120e9310a6b771d77ce3f27264",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 564,
+    "library_ignored": 3,
+    "xtask_tests_passed": 4,
+    "all_integration_suites_passed": true,
+    "doctests_passed": 265,
+    "log_sha256": "37f2cea2196bfdd85dcc1a7b9c3230c6dcd2170aaa6697bf1b5c3894f0746086"
+  },
+  "focused": {
+    "private_tests": 5,
+    "public_tests": 3,
+    "python_tests": 2,
+    "cases": 174,
+    "primitive_observations": 3653,
+    "owned_streams": 12,
+    "legacy_handle_cases_preserved": 144,
+    "legacy_handle_owned_streams_preserved": 8
+  },
+  "native": {
+    "cases": 906,
+    "previous_complete": 709,
+    "complete": 710,
+    "explicit_stops": 196,
+    "new_complete": 1,
+    "cases_advanced_to_later_stops": 2,
+    "fresh_processes": 2,
+    "all_outcomes_and_causes_identical": true,
+    "artifact_stable": true,
+    "artifact_sha256": "7db0c114b823af1c0659278f560b6ea55fb5966763be465b14cdacb63631c947",
+    "independent_feature_bytes": 42734730,
+    "independent_snapshot_identity": "1f4cf685881cbb83f4bcf28fda437a46eb17b5bbe311bf34b2461cc1b93c8358",
+    "independent_python_files": 1153,
+    "independent_report_sha256": "ed70ccc6522a85ae27d9cd2cbb1621538ed87ac270814c767de47086b538c419"
+  },
+  "corpus_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "exclusions": [
+    "Native geometric and index validity and application acceptance",
+    "Historical/DB and special-owner contexts",
+    "Remaining 196 configurations and all documented file-schema parity"
+  ]
+}

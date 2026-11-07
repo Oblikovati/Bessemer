@@ -1,0 +1,22 @@
+{
+  "issue": 219,
+  "source_identity": "See local-verification.json exact source hashes",
+  "command": "BESSEMER_KERNEL_SCHEMA=<installed sch_13006.s_t> target/sketch-bend-owned-tests-v3.exe --ignored --exact model_archives::resolved_corpus_tests::complete_native_resolved_corpus_requires_exact_typed_reconstruction --nocapture",
+  "terminal_exit_code": 0,
+  "cases_accepted": 906,
+  "ordered_case_indices": "0..905 inclusive, exactly once each",
+  "seconds": 75.59,
+  "packet_eof": "Executed test requires BRF1, exactly906 records, cursor.remaining()==0 and accepted==count",
+  "sha256": {
+    "target\\sketch-bend-owned-native-resolved-regression.log": "3ae4bbc88098c3d06b5f1e04c5b15906b14d6875072ceb047c3879d38c35f1ee",
+    "target/sketch-bend-owned-tests-v3.exe": "e607fbf781a4f17f422f5870ffc3a2bb5a8e437a191467ec0a269bcd9849f6b7",
+    "target/resolved-native-probe.bin": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+    "C:/Program Files/SOLIDWORKS Corp/SOLIDWORKS/data/pschema/sch_13006.s_t": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af"
+  },
+  "scope": "Default unselected-profile compatibility for previously retained selected native model-header/configuration/manager/resolved-feature stream sets; private/public exact reconstruction",
+  "exclusions": [
+    "No newly observed native kind7 populated body/current-pointer qualification",
+    "No producer-parser or native DLL execution",
+    "No geometry, application, DB/historical/special-context or whole-schema parity acceptance"
+  ]
+}

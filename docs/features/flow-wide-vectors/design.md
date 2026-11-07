@@ -1,0 +1,22 @@
+# Record 148 typed interoperability
+
+The reader admits only raw version-zero bodies and requires complete EOF. It
+bounds payload bytes, actual vector count and total raw-wide values before
+allocating vector metadata. All signed lengths are validated before exposing
+the immutable view. Zero vectors and present-empty vectors remain distinct;
+a zero total-value budget admits an all-empty length table within the
+vector-count and payload-byte bounds.
+
+Each vector exposes its exact original interval through the existing raw
+wide-array view. Edits replace existing patterns while preserving the full
+length table, vector count and physical order. They copy the carrier, reparse
+the complete replacement and return validation coverage, diagnostics and physical
+history. No-op edits and fresh reversals preserve the raw carrier bytes.
+
+Acceptance requires every owned vector read, independent expected byte patches,
+no-op preservation, full history, fresh reversals and exact resource boundaries.
+Malformed lengths, impossible totals, prefixes, suffixes and unsupported versions
+must fail without exposing partial successful views. Input isolation, public
+thread traits, concurrent operation agreement and two-process byte agreement are
+also required. Native runtime population and engineering interpretation remain
+separate from serialized framing and raw-pattern preservation.

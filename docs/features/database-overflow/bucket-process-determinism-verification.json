@@ -1,0 +1,17 @@
+{
+  "issue": 229,
+  "processes": 2,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "identical_bytes": 4518654,
+  "output_sha256": "e3189fbe25dff020c6a04c6b81f27d2ca346aaa357d35620710aa47540d93a97",
+  "complete_bucket_edits": 259,
+  "independent_checks": "Every complete edited bucket and owned overflow page equals Python literal/closed-form expected images; each process also restored exact original typed snapshots",
+  "probe_retained": false,
+  "exclusions": [
+    "Complete-document operations are covered by the focused12-cell native containing-document test, not this process packet",
+    "No native target/application or whole-file indexing/allocator acceptance"
+  ]
+}

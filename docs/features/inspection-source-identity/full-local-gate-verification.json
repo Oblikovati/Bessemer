@@ -1,0 +1,28 @@
+{
+  "issue": 195,
+  "passed": true,
+  "process_exit_code": 0,
+  "command": "cargo xtask pr",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "tested_runtime_revision": "6397067259c10d39b3a89ba60084a8b28ef07027",
+  "runtime_rust_source_changes_since_gate_start": [],
+  "later_unused_fixture_additions": [
+    "tests/fixtures/inspection-relationships/ordered.xml"
+  ],
+  "unused_fixture_check": "git grep at the tested revision found no source/test references to inspection-relationships",
+  "tests_passed": 3998,
+  "tests_failed": 0,
+  "tests_ignored": 224,
+  "test_summaries": 319,
+  "log_sha256": "2380a05371cec9becf593fb6ff89cefe0bf69b96d3e47fe2c8ba157fdea80a84",
+  "process_environment": {
+    "CARGO_PROFILE_TEST_DEBUG": "0",
+    "CARGO_PROFILE_TEST_INCREMENTAL": "false"
+  },
+  "qualification": "This root xtask predates the #196 child-command builder; the same two test-profile settings were explicitly supplied to the parent process. Rust and Cargo source did not change during this run. The later owned relationship fixture is not referenced by the tested sources. Relationship feature #197 is in a separate checkout and excluded from this gate.",
+  "remaining": [
+    "Exact-head remote integration",
+    "Native application acceptance is outside the explicit caller-byte comparison scope"
+  ]
+}

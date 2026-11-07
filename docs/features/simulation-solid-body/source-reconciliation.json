@@ -1,0 +1,21 @@
+{
+  "issue": 150,
+  "reference_profile": 1,
+  "file": "solidworks/modelboundary.py",
+  "original_c734_sha256": "e1b4356b42c02e6330e6754c975bab76bb5b79e6a1616495e97d3e44c0d4ed3b",
+  "current_sha256": "401f25dcdc739157fb58de249232090228d4237fc3809fa32ce3e43e24dba511",
+  "decision": "Pin the newer bytes only as an unused source dependency. The complete original C-734 report and initial failed guard remain retained. This is not approval to substitute these general readers into the scoped embedded callback.",
+  "evidence": {
+    "full_replay_profile_calls": 0,
+    "profile_includes_module_execution": true,
+    "module_in_frozen_import_origins": false,
+    "native_arguments_unchanged": 745,
+    "native_accepted_unchanged": 691,
+    "native_failed_unchanged": 54,
+    "owned_profiles_complete": 240,
+    "earlier_c731_successes_preserved": true,
+    "all_other_original_source_hashes_required": true,
+    "dispatch": "The unchanged cosworks_embedded_reference_archive and cosworks_embedded_archive_4281 callbacks assign their own ObjectArchive instance reader dictionaries; cosworks_embedded_body_ids adds the four explicitly bound readers. modelboundary is neither imported nor called in this replay."
+  },
+  "future_guard": "Any other changed file, another modelboundary hash, or an imported modelboundary module fails this reconciliation. Production operations and their full field/history gates remain separate."
+}

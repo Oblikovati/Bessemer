@@ -1,0 +1,33 @@
+{
+  "issue": 184,
+  "stage": "Transitive dependency inventory; admission incomplete",
+  "reports": 615,
+  "references": 30306,
+  "matched": 25646,
+  "unmatched": 4660,
+  "external_references": 142779,
+  "immediate_family_mismatches": [
+    {
+      "report": "solidworks/research/parallel_sketch_intersection_reference_match_attempt_01.json",
+      "path": "solidworks/research/parallel_sketch_intersection_reference_match_reader.py",
+      "expected": "c1d28fca49808776a6ea51b0192a273fcc57c6fbb5930d4c4291ce7f1ec2d57c",
+      "actual": "4105c4ce351b9191ae54baf6176bda14c762ae283cfafab7b95ef2951666c7a7",
+      "matches": false
+    }
+  ],
+  "inventory": {
+    "path": "target/intersection-match-dependency-inventory.json",
+    "bytes": 49825700,
+    "sha256": "1c683a4e8f8024ca6d9d700d7f93e29608aab3f2a9e8012bb696a890b69adc42"
+  },
+  "qualification": "Inventory of recognized sources maps and path/sha256 objects; not a proof of complete native or dependency admission",
+  "findings": [
+    "The broad graph reaches earlier evidence families with point-in-time reader hashes. Current files cannot stand in for those historical revisions.",
+    "The failed first reference-match adapter remains separately preserved by the publisher. Its old hash is not the current corrected reader pin.",
+    "All fourteen direct C-3307 dependencies matched during preparation. This inventory neither expands that claim to the full graph nor changes any expected hash.",
+    "A reviewed binding inventory must distinguish current reader requirements, retained historical artifacts and actual native byte ranges before admission."
+  ],
+  "full_dependency_admission": false,
+  "native_bindings_reverified": false,
+  "coverage_credit": 0
+}

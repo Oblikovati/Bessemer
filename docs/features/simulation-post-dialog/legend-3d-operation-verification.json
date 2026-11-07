@@ -1,0 +1,133 @@
+{
+  "issue": 166,
+  "behavior_version": "C852-local-request-background-v1",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "target_executed": false,
+  "kernel_decision": "Project only conditional local requests from explicit word/argument reads. Use the stored allocation-entry count separately from a mandatory later count; preserve low32 pair/float/request arithmetic and the bound signed-extension/unsigned64 saturated byte calculation. Treat the rendering argument as the bound plain by-value integer, not a stored enum. Background construction uses the original explicit nearest-even model, actual supplied precision+10 and raw lighting result. Retain all original parents, derived history, completion, exact coverage and zero pattern error without allocation, getter buffers, geometry, dimensions or actual GL state.",
+  "complete_installed_instruction_counts": [
+    185,
+    247
+  ],
+  "independent_ghidra_instruction_count": 432,
+  "allocation_saturation_identity_proved": true,
+  "public_send_sync_types": 11,
+  "operation_cases": 26784,
+  "owned_complete_contexts": 425,
+  "complete_count_precision_mutants": 452,
+  "native_accepted_contexts": 276,
+  "original_rejected_contexts": 8,
+  "hypothetical_contexts_per_parent": 16,
+  "local_requests": 45232,
+  "additional_stored_byte_credit": 0,
+  "rust": {
+    "checks": 14,
+    "failed": 0,
+    "ignored": 0,
+    "seconds": 0.24,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-3d-rust-final.log",
+      "bytes": 1542,
+      "sha256": "bcf847bb108fceaa529bc4ad371b89b463dd6780ff567a9a7ae9c81af29bfe5e"
+    }
+  },
+  "initial_clippy_failure": {
+    "process_exit_code": 101,
+    "rule": "manual_saturating_arithmetic",
+    "resolution": "Replaced checked_mul plus u64::MAX fallback with equivalent saturating_mul; all Rust/process checks rerun unchanged.",
+    "log": {
+      "path": "target/legend-3d-clippy-initial.log",
+      "bytes": 854,
+      "sha256": "078a3ff7545c0caa443e24079e6c79bdeb78035fc88eec01ab3edbbb902a1ca1"
+    }
+  },
+  "clippy": {
+    "arguments": "--all-targets --all-features -- -D warnings",
+    "seconds": 27.99,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-3d-clippy.log",
+      "bytes": 136,
+      "sha256": "2dcdc69609555241cb13798ff93b5420e86f65e99b9a4ffb5852598e8c0d10d1"
+    }
+  },
+  "initial_freeze": {
+    "checks": 19,
+    "seconds": 8.18,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-3d-operation-source-write.log",
+      "bytes": 3078,
+      "sha256": "3ef9fe722fb627a9bbf08879d19d8a1994aaae5c1bc07ea2001203f70a0c9010"
+    }
+  },
+  "strict_source": {
+    "checks": 19,
+    "seconds": 7.375,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/legend-3d-operation-source-strict.log",
+      "bytes": 3078,
+      "sha256": "4e8b90174c3430564d8be960ca888f4a355786f8f24786c56947eeb82de26035"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/legend-3d-source-snapshot.json",
+      "bytes": 625245,
+      "sha256": "21fe95935ff83fd558accc775c11a231340d77a408a6242a247b7ef655cec8af"
+    }
+  },
+  "process_proof": "legend-3d-process-verification.json",
+  "integer_binding_proof": "legend-3d-integer-reference.json",
+  "operation_packet": {
+    "path": "tests/fixtures/simulation-post-dialog/legend-3d-operations.bin",
+    "bytes": 1821320,
+    "sha256": "c84c24945c3ffe993ed936591d01a045d648a783f3a5ecb756d7f15bedfe20c8"
+  },
+  "owned_projection_packet": {
+    "path": "tests/fixtures/simulation-post-dialog/legend-3d-projection.bin",
+    "bytes": 2527063,
+    "sha256": "0e28068264e20457a49a07bf2af852e3368a80fb837af24263f5f3270af68a75"
+  },
+  "oracle_kinds": [
+    "All original C852 complete native/source/field evidence and acceptance qualifications",
+    "Independently bound allocation instruction sequences, immutable by-value argument reads and full signed32 saturation proof",
+    "Independent unbounded modulo32 arithmetic, negative/nonnegative unsigned byte-request classification and exact plain-argument branches",
+    "Original frozen packed-constructor nearest-even model; constructed RGBA is distinct from getter/GL output",
+    "Complete owned/native count/precision parents plus452 complete mutations, explicit phase changes and all raw GLboolean bytes",
+    "All eleven public Send+Sync types, input isolation and eight-worker operation/owned/native comparisons",
+    "Two fresh Rust processes matched all542784 independent expected words byte for byte, with exact export-test execution checked"
+  ],
+  "excluded": [
+    "Native allocation/helper/rendering execution and actual successful buffer/loop bounds",
+    "Inferring an unchanged later count or actual BC/lighting from stored defaults",
+    "Stored ContourType/color aliases, final GL-state approval or alpha-compositing semantics",
+    "Float-getter buffers, background dimensions, positive-count geometry and pointer/pixel validity",
+    "New stored-byte credit or expanded native acceptance"
+  ],
+  "pending": [
+    "Independent positive-count body geometry/floating-point behavior if projected",
+    "Remaining documented feature166 models",
+    "Exact publication-head cargo xtask pr and all five platform gates"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_source_replay": {
+    "checks": 277,
+    "failed": 0,
+    "seconds": 493.863,
+    "process_exit_code": 0,
+    "accepted_source_cut": "361ca2ed0d915fce246d00207548682d13afb937",
+    "log": {
+      "path": "target/legend-3d-operation-source-full.log",
+      "bytes": 61577,
+      "sha256": "2d66252bd3ba845b9c06f38ba9aa9600f5994becdb6d4a5f213c314f8c1c2622"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 633446,
+      "sha256": "910c19698e5e6a54858e9101a299c7bf36438944037d4181e242a55327b58ffa"
+    },
+    "terminal_exit_reaped": true
+  }
+}

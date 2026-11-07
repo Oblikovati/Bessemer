@@ -1,0 +1,100 @@
+{
+  "cases": 906,
+  "accepted": 725,
+  "rejected": 181,
+  "newly_accepted": 5,
+  "previous_complete_preserved": true,
+  "fresh_process_outcomes_and_causes_identical": true,
+  "artifact_stable_during_replay": true,
+  "artifact_sha256": "76ff1332445e6a5c22086bec70eda68d7d630c3bfb020890a365c9fb8f0f8be7",
+  "changes": [
+    {
+      "index": 110,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moRevolvRefSurf_c\" schema 1; expected an implemented complete model object body"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moRefCurve_c\" schema 1; expected an implemented complete model object body"
+      }
+    },
+    {
+      "index": 133,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moRevolvRefSurf_c\" schema 1; expected an implemented complete model object body"
+      },
+      "after": {
+        "status": "accepted",
+        "cause": ""
+      }
+    },
+    {
+      "index": 149,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moRevolvRefSurf_c\" schema 1; expected an implemented complete model object body"
+      },
+      "after": {
+        "status": "accepted",
+        "cause": ""
+      }
+    },
+    {
+      "index": 150,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moRevolvRefSurf_c\" schema 1; expected an implemented complete model object body"
+      },
+      "after": {
+        "status": "accepted",
+        "cause": ""
+      }
+    },
+    {
+      "index": 158,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moRevolvRefSurf_c\" schema 1; expected an implemented complete model object body"
+      },
+      "after": {
+        "status": "accepted",
+        "cause": ""
+      }
+    },
+    {
+      "index": 234,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moRevolvRefSurf_c\" schema 1; expected an implemented complete model object body"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"reference_80\" has runtime class \"moConeRef_w\"; expected one of [\"moSurfaceRef_w\", \"moGeneralSurfRef_w\", \"moSingleFaceRef_w\", \"moPlaneRef_w\", \"moCylinderRef_w\", \"moSphereRef_w\"]"
+      }
+    },
+    {
+      "index": 340,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moRevolvRefSurf_c\" schema 1; expected an implemented complete model object body"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moSketchBitmap_c\" schema 1; expected an implemented complete model object body"
+      }
+    },
+    {
+      "index": 549,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moRevolvRefSurf_c\" schema 1; expected an implemented complete model object body"
+      },
+      "after": {
+        "status": "accepted",
+        "cause": ""
+      }
+    }
+  ]
+}

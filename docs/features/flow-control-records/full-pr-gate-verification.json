@@ -1,0 +1,26 @@
+{
+  "issue": 241,
+  "source_revision": "a4da784815e57743acc1a4d941e823db96d42383",
+  "command": "cargo xtask pr",
+  "exit_code": 0,
+  "worktree": "C:/bessemer214-ci",
+  "worktree_clean": true,
+  "platform": "Windows x64; Rust 1.99.0; CARGO_BUILD_JOBS=1",
+  "kernel_schema": "C:/Program Files/SOLIDWORKS Corp/SOLIDWORKS/data/pschema/sch_13006.s_t",
+  "scope": "Combined source through IMS500 definitions, paired IMS501 values and strict saved-span/terminal-index writer payload reads/edits; includes all earlier Flow work",
+  "results": {
+    "passed": 5096,
+    "failed": 0,
+    "ignored": 265,
+    "result_summaries": 404
+  },
+  "log": "target/flow-ims-and-control-combined-full-pr-gate.log",
+  "log_sha256": "967da25544cb5e8ef1006dfcde4b1889a2431331da9c7cdda21e2f6349f45b9b",
+  "exclusions": [
+    "Later logical index API 0eeab7ef is not covered",
+    "Later checkpoint baselines and reader/editor work are not covered",
+    "PR249 hosted checks cover earlier publication source a1f41b28",
+    "Hosted full-matrix/ThreadSanitizer acceptance of a4da7848 remains pending",
+    "Ignored native/runtime/application cases remain excluded; this result does not establish complete schema parity"
+  ]
+}

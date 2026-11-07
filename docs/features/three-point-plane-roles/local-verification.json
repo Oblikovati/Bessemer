@@ -1,0 +1,88 @@
+{
+  "issue": 46,
+  "issue_type": "Bug",
+  "base_revision": "18776bd78f29cdda8938b0bebef03637c3417d71",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "regression": {
+    "before_passed": 0,
+    "before_failed": 1,
+    "before_log_sha256": "cdd2ec9072fa30ae8eccc5f4a30d216c39d547d6c109dd94ccc9d77cb168c24d",
+    "cause": "Complete cached moEndPointRef_w rejected at point_reference_88; expected singleton moPointRef_w"
+  },
+  "native_modules_verified": {
+    "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c"
+  },
+  "native_body_hashes_verified": [
+    "3213cb8b669ea579150b124c08a1685880c9dd6d6b3dab5fab72646b311359a5",
+    "bd3c9c943ed44967fed8ee11e47fb15a0e9284b382fd43daf1b1d205dd1d857a",
+    "48907a9b241b88a7d6148ef2f56451ad3f34395bd58a9a16ab32359569d07d68",
+    "9221a5a2b0ac42a75807129cd6c65055920dbe0811448b71d256a399bb38008e",
+    "9a97f18e8b5a5124e98131e79e55c69e74c71ed64fc92a7c072fa267f2f2c335",
+    "5df61893ea16fc9efbaca6b1d62d16b887dde975ab36110d84b9d7c9d363d814",
+    "52512e59108972eb0107dae3aec9c6b66059bd0b02b4db2f5c96a9496d445942",
+    "386341e872220db549b19e1f412c15a6891b7262f165ab134ee47907e744e6cd",
+    "7e89c3d665687253b19d7b0797e8bc0776cf1e967cad7911779d37c533c57b05",
+    "07746b92926e81fc1cb5d344bb1bff5f2346bdd11a236198abd9c929dcf19fbc",
+    "73cc811ae4cdecf7c79904b2199e57ed2a2377f0a7be4d575cd06ce7b1d9c22e",
+    "45cc5b977509b51e08d7044da70b3735558199f29b025189918a0252a4d80f8d",
+    "3eb8db4b8dd399c2c451069812ea1facdaa836d68bb71c08c10e34ff827ca81f",
+    "57f42962628e7ca5fe7f73bd165737ebed0d597a9f743fd0e5779c8df8676652",
+    "82bd22c32bc20eedd53575a63857395bdd1653dad1ad60ed2a50c9054b6bcfd4",
+    "1e0d3e5731e6002a58a9dbb6ea593aaa47d5f44cdb29bb236a8616ebebca41f4",
+    "33d5d7f642adbadcc4164b12962eabc86ff510fed4e892a2b7fb61c2db7d9be8",
+    "b2ca993d229d7cf8ca7ebfdb8a8a51920e1ceeb01caeb656ec6040980067766c",
+    "2a401b214046f71394c4d89b319e61b1b485620a59fa4d3186adbf5eeb1a9888"
+  ],
+  "artifact_sha256": "865dfb06808fcc8dc84617b1a2ee58afbaceaa3f143131c6882fce7482e0cf79",
+  "fixture_graphs": 78,
+  "primitive_reads": 10084,
+  "owned_streams": 7,
+  "negative_complete_wrapper_witnesses": 2,
+  "checks": {
+    "cargo_xtask_pr": "passed; 780 library tests, 4 xtask tests, all integrations, 274 doctests, 3 explicit external-fixture tests ignored",
+    "focused": "6 passed after the finite-role fix",
+    "public": "3 passed; coordinate edits, complete documents and rejected edit isolation",
+    "python": "3 regeneration tests passed",
+    "native": "two fresh processes matched every status and cause across 906 cases; exit 101 only for the aggregate 801/906 completeness assertion"
+  },
+  "previous_complete": 800,
+  "complete": 801,
+  "no_prior_success_lost": true,
+  "newly_complete": [
+    281
+  ],
+  "independent_feature_bytes": 51614897,
+  "source_snapshot": "f95c011b27f74da2ce1fbe8002371a03360af1a7eeec0d317cb784610efe6a0e",
+  "source_python_files": 1429,
+  "native_case_281": {
+    "index": 281,
+    "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\knob.sldprt",
+    "configuration": "Contents/Config-48",
+    "stream_sha256": [
+      "cd0629f395087587c327c1e432a7ea31cc8295c8588ff25e9bcadee3ded9df4e",
+      "ed08f997e76b097855801d7167aed930498ec583817477b5c07653f9619bd7c0",
+      "b029c8c4bca8ae03b1f6fc28a9486e341c4220408db35f25d3273f096ce05323",
+      "0018c201924d361c2ad31bd042a73756c619faa9de979546d9d9b5369b5661c5"
+    ],
+    "three_point_data": [
+      {
+        "slot": 3081,
+        "point_classes": [
+          "moEndPointRef_w",
+          "moPointRef_w",
+          "moPointRef_w"
+        ],
+        "first_second_same": false,
+        "first_third_same": false
+      }
+    ],
+    "exact_eof": 165766
+  },
+  "exclusions": [
+    "105 native cases remain explicit failures",
+    "No point distinctness, geometric validity, application acceptance or full schema parity is claimed",
+    "Historical contexts remain unsupported where previously unsupported",
+    "Humanizer unavailable; maintainer prose review remains open"
+  ]
+}

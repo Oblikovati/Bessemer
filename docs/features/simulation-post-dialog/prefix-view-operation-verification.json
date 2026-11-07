@@ -1,0 +1,65 @@
+{
+  "issue": 166,
+  "scope": "bounded raw-preserving prefix range and deformation-scale accessors, specification 14.492\u201314.493",
+  "owned_contexts": 225,
+  "branch_cases": 210,
+  "rust_checks": {
+    "passed": 4,
+    "failed": 0,
+    "log": {
+      "path": "target/post-dialog-views-focused.log",
+      "bytes": 707,
+      "sha256": "f6b1ccfa7c71cd5dd1ec498246aadde05ac6a47e9c56450bebd59dbf1ff27646"
+    }
+  },
+  "clippy": {
+    "path": "target/post-dialog-views-clippy.log",
+    "bytes": 136,
+    "sha256": "103404f5e4e2bdd71d57f0a2143dd7f38f90e1c7afe05fe83ad52072bc0cf526"
+  },
+  "targeted_source_replay": {
+    "checks": 4,
+    "seconds": 2.013,
+    "log": {
+      "path": "target/post-dialog-views-source-strict.log",
+      "bytes": 888,
+      "sha256": "a05c4729c953b7058634e7c88ab8122573ace2d0ef54a2805040088d497f5c09"
+    }
+  },
+  "packet_reference": "parent-view-packet-reference.json",
+  "source_snapshot": {
+    "path": "docs/features/simulation-post-dialog/parent-view-source-snapshot.json",
+    "bytes": 513050,
+    "sha256": "48abe7f719f99c42677353481539b918ea2f4f23bd36d02caa61c53fdb64173f"
+  },
+  "pending": [
+    "Publication gates and later documented consumer roles."
+  ],
+  "exclusions": [
+    "No UI mode names, effective runtime display range, rendering or geometry acceptance are inferred."
+  ],
+  "full_source_replay": {
+    "checks": 61,
+    "seconds": 354.072,
+    "result": "passed",
+    "log": {
+      "path": "target/post-dialog-views-full-strict.log",
+      "bytes": 23337,
+      "sha256": "38717581680d35c911a239006ad9ebd058f666773aebc83915ba08d8818847e5"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 522301,
+      "sha256": "e061844bcaa8d9e411ce6305e649f7ff14de9a97fe14ae261d944cab2e54d544"
+    }
+  },
+  "snapshot_selection_modes": {
+    "passed": 5,
+    "log": {
+      "path": "target/post-dialog-view-snapshot-modes.log",
+      "bytes": 25,
+      "sha256": "d4a4c3b390529125a513bfc182039e09a898e3fb560a8a02a2baa5b321bb6aad"
+    }
+  },
+  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+}

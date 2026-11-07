@@ -1,0 +1,398 @@
+//! Complete ordinary modern part and assembly configurations with explicit header/kernel context.
+//! Validation covers the stored archive; geometric validity and external documents are separate.
+
+#[cfg(test)]
+include!("test_modules.rs");
+
+mod alignment_display;
+mod alignment_groups;
+mod annotation_extras;
+mod deform_features;
+mod deform_geometry;
+mod deform_matching;
+mod dimension_patterns;
+mod forming_tools;
+mod library_features;
+mod library_references;
+mod mfc_string_maps;
+mod pattern_extensions;
+mod pattern_transform_words;
+mod photoworks_materials;
+mod resolved_model;
+mod sculpt_features;
+mod smart_components;
+mod smart_items;
+mod three_dimensional_views;
+
+mod assembly_archive;
+mod assembly_context;
+mod assembly_decoder;
+mod assembly_edit;
+mod assembly_explosion;
+mod assembly_references;
+mod assembly_tail;
+mod camera_features;
+pub use assembly_archive::{AssemblyConfigurationArchive, AssemblyConfigurationEdit};
+pub use assembly_context::{AssemblyConfigurationContext, AssemblyRootKind};
+
+mod archive;
+mod attachment_records;
+mod attribute_records;
+mod base_flange_directions;
+mod base_flanges;
+mod blend_columns;
+mod blend_records;
+mod blend_reference_surfaces;
+mod body_chooser_records;
+mod browser_folders;
+mod bucket_adapter;
+mod chamfer_records;
+mod combine_bodies;
+mod composite_curves;
+mod configuration;
+mod configuration_atoms;
+mod configuration_base;
+mod configuration_decals;
+mod configuration_graph;
+mod configuration_io;
+mod configuration_manager;
+mod configuration_objects;
+mod configuration_scenes;
+mod configuration_suffix;
+mod configuration_tables;
+mod configuration_toolbox;
+mod configuration_visual_maps;
+mod conic_bend;
+mod sketch_bend_owned;
+pub use sketch_bend_owned::SketchBendOwnedProfile;
+mod connection_payload;
+mod connection_points;
+mod constraint_planes;
+mod context;
+mod corner_hems;
+mod cosmetic_weld_cut_lists;
+mod cosmetic_weld_tree;
+mod deleted_faces;
+mod edge_flange_data;
+mod edge_flange_records;
+mod end_caps;
+mod feature_states;
+mod flatten_bends;
+mod hem_chains;
+mod jog_corners;
+mod one_bends;
+mod plane_geometry_flags;
+mod ruled_surfaces;
+mod sheet_folds;
+mod ui_bends;
+mod weldment_finishing;
+pub use plane_geometry_flags::PlaneGeometryFlag;
+mod context_chains;
+mod coordinate_systems;
+mod custom_properties;
+mod cut_list_folders;
+mod detail_folder_records;
+mod dimension_plane_tags;
+mod edit;
+mod edit_history;
+mod edit_types;
+mod field_change;
+mod field_mismatch;
+mod filled_surfaces;
+mod fixed_transform_records;
+mod flat_pattern_boxes;
+mod flat_patterns;
+mod fold_transforms;
+mod frontier_feature_helpers;
+mod helix_records;
+mod manager_dialect;
+mod manager_scalar_records;
+mod manager_tail;
+mod mirror_solids;
+mod net_blend_components;
+mod net_blends;
+mod offset_surfaces;
+mod planar_surface_records;
+mod polyline_records;
+mod reference_curves;
+mod reference_dimensions;
+mod resolved_archive;
+mod resolved_edit;
+mod revolved_surfaces;
+mod split_features;
+mod split_items;
+mod split_maps;
+mod structural_contours;
+pub use split_maps::SplitIntegerMap;
+mod structural_member_objects;
+mod structural_member_records;
+mod structural_member_references;
+mod surface_operations;
+mod thicken_records;
+mod thin_extrusions;
+mod weld_corners;
+mod weldment_records;
+pub use resolved_edit::PartResolvedFeaturesEdit;
+mod resolved_failure;
+mod resolved_features;
+pub use resolved_archive::PartResolvedFeaturesArchive;
+mod scale_records;
+mod scene_adapter;
+mod schema_references;
+mod sensor_records;
+mod sew_surfaces;
+mod validation;
+pub use crate::archive_codec::{
+    ArchiveClass as ModelClass, ArchiveMapIndex as ModelObjectId,
+    FramedObjectRecord as ModelObjectTag, ObjectFraming as ModelObjectFraming,
+    ObjectRecord as ModelObjectRecord,
+};
+pub use crate::archive_codec::{
+    ArchiveString, CompactTransform, StoredDouble, StoredFloat, TextEncoding,
+};
+pub use crate::display_lists::{
+    DisplayEditCheckMode as ModelEditCheckMode, DisplayEditCompletion as ModelEditCompletion,
+    DisplayEditFidelity as ModelEditFidelity, DisplayFieldRelation as ModelFieldRelation,
+};
+pub use archive::PartConfigurationArchive;
+pub use configuration::ConfigurationId;
+pub use context::PartConfigurationContext;
+pub use edit_types::{
+    ModelArchiveCoverage, ModelArchiveDiagnostic, ModelFieldChange, ModelFieldHandle,
+    PartConfigurationEdit,
+};
+pub use kernel_frames::{CompressedKernelContext, KernelFrame};
+pub use reader::ModelFieldLimits as ModelArchiveLimits;
+pub use values::{ModelField, ModelFieldValue};
+
+mod annotation_defaults;
+mod annotation_view;
+mod atom;
+mod bending_features;
+mod body_end_specs;
+mod body_features;
+mod boundary_references;
+mod cavity_features;
+mod center_helpers;
+mod circular_patterns;
+mod component_coordinates;
+mod component_detail_provenance;
+mod component_detail_references;
+mod component_references;
+mod concentric_mates;
+mod construction;
+mod contour_objects;
+mod cosmetic_thread_data;
+mod cosmetic_threads;
+mod curve_files;
+mod datum_helpers;
+mod derived_references;
+mod detail_definitions;
+mod detail_helpers;
+mod detail_prefix;
+mod detail_tail;
+mod dimension_defaults;
+mod dimension_handles;
+mod dimensions;
+mod display_dimension;
+mod display_dimension_tail;
+mod display_item;
+mod display_notes;
+mod display_object;
+mod display_placement;
+mod display_records;
+mod display_suffixes;
+mod display_weld;
+mod dome_records;
+mod draft_keepers;
+mod draft_records;
+mod entity_representations;
+mod environment;
+mod explosion;
+mod extend_surfaces;
+mod external_references;
+mod extruded_surfaces;
+mod feature_comments;
+mod feature_edit_values;
+mod features;
+mod fillet_cache;
+mod fillets;
+mod geometric_references;
+mod header_imports;
+mod header_order;
+mod hole_parameters;
+mod hole_wizard;
+mod imported_bodies;
+mod kernel_frames;
+mod label_defaults;
+mod layers;
+mod lightweight;
+mod lightweight_part;
+mod lightweight_post;
+mod lightweight_shared;
+mod linear_patterns;
+mod mate_plane_collections;
+mod material;
+mod mid_surface_pairs;
+mod mid_surfaces;
+mod mirror_patterns;
+mod mitered_flanges;
+mod model_arrays;
+mod model_lists;
+mod model_references;
+mod mold_core_cavity;
+mod mold_parting_child;
+mod mold_parting_geometry;
+mod mold_parting_line;
+mod move_copy_bodies;
+mod move_copy_deformation;
+mod move_faces;
+mod node;
+mod node_state;
+pub use node_state::{ModelNodeStoredFlag, ModelNodeStoredState};
+mod stored_parameters;
+pub use stored_parameters::{
+    ModelParameterDiagnostic, ModelParameterFieldCopy, ModelParameterKind, ModelParameterName,
+    ModelParameterSource, ModelParameterStoredEdit, ModelParameterStoredState, ModelParameterValue,
+};
+mod dimension_state;
+pub use dimension_state::{ModelDimensionStoredEdit, ModelDimensionStoredState};
+mod ellipse_backup_rotation;
+pub use ellipse_backup_rotation::ModelEllipseBackupRotationState;
+mod note_text;
+mod object_body;
+mod object_values;
+mod objects;
+mod part_archive;
+mod part_objects;
+mod part_tail;
+mod pattern_shape;
+mod pattern_variation;
+mod plane_section_geometry;
+mod plane_sections;
+mod position_groups;
+mod post_views;
+mod primitives;
+mod profile_chains;
+mod profile_features;
+mod profile_geometry;
+mod punch_arrays;
+mod punch_extensions;
+mod punches;
+mod raw_fields;
+mod reader;
+mod reference_axes;
+mod reference_geometry_objects;
+mod reference_planes;
+mod reference_point_data;
+mod reference_points;
+mod reference_tail;
+mod relations;
+mod resolved_feature_objects;
+mod resolved_managers;
+mod resolved_start;
+mod shared_tail;
+mod sheet_allowance;
+mod sheet_arrays;
+mod sheet_material_ranges;
+mod sheet_metal;
+mod sheet_payload;
+mod shell_records;
+mod simulation_embedded;
+mod sketch_archive;
+mod sketch_arrays;
+mod sketch_backups;
+mod sketch_bends;
+mod sketch_bitmaps;
+mod sketch_collections;
+mod sketch_constraints;
+mod sketch_curves;
+mod sketch_dimensions;
+mod sketch_entities;
+mod sketch_geometry;
+mod sketch_intersections;
+mod sketch_logical;
+mod sketch_managers;
+mod sketch_offsets;
+mod sketch_patterns;
+mod sketch_references;
+mod sketch_splines;
+mod sketch_surfaces;
+mod sketch_tail;
+mod sketch_text;
+mod spatial_objects;
+pub use simulation_embedded::{
+    SimulationEmbeddedArchive, SimulationEmbeddedEdit, SimulationEmbeddedProfile,
+};
+mod spline_arrays;
+mod spline_controls;
+mod stock_collections;
+mod stock_features;
+mod stock_references;
+mod sweep_data;
+mod sweep_objects;
+mod sweep_records;
+mod sweep_reference_records;
+mod sweep_surfaces;
+mod swift_layout;
+mod table_defaults;
+mod tolerance_helpers;
+mod units;
+mod values;
+mod views;
+mod weld_helpers;
+mod weld_symbols;
+
+use crate::{BessemerError, FailureClass};
+use objects::ModelObjectRole;
+use reader::{ModelDecoder, ModelFieldLimits};
+use values::encode_fields;
+
+fn invalid(cause: impl Into<String>) -> BessemerError {
+    BessemerError::new(
+        "model archive",
+        "model stream",
+        FailureClass::Invalid,
+        cause,
+    )
+}
+
+fn model_failure(mut error: BessemerError) -> BessemerError {
+    error.operation = "model archive";
+    error.entity = format!("model stream: {}", error.entity);
+    error
+}
+
+mod entity_visual_state;
+pub use entity_visual_state::ModelEntityVisualStoredState;
+mod sketch_reference_lookup;
+pub use sketch_reference_lookup::{
+    ModelSketchReferenceStoredLookupEdit, ModelSketchReferenceStoredLookupKeys,
+    ModelSketchReferenceStoredLookupState,
+};
+mod bitmap_appearance;
+mod bitmap_transparency;
+pub use bitmap_appearance::{
+    ModelBitmapAppearanceEdit, ModelBitmapAppearanceState, ModelBitmapAppearanceWords,
+};
+pub use bitmap_transparency::{
+    ModelBitmapTransparencyEdit, ModelBitmapTransparencyState, ModelBitmapTransparencyWords,
+};
+
+mod intersection_reference;
+pub use intersection_reference::{
+    ModelIntersectionEdgeStoredIndex, ModelIntersectionReferenceStoredEdit,
+    ModelIntersectionReferenceStoredState, ModelIntersectionReferenceStoredWords,
+};
+
+mod spline_equation_state;
+pub use spline_equation_state::{
+    ModelSplineEquationDiagnostic, ModelSplineEquationFieldCopy, ModelSplineEquationStoredEdit,
+    ModelSplineEquationStoredState, ModelSplineEquationTextRole,
+};
+
+mod resolved_root_graph;
+pub use resolved_root_graph::{
+    ModelResolvedRootCopy, ModelResolvedRootDiagnostic, ModelResolvedRootGraph,
+    ModelResolvedRootOccurrence, ModelResolvedRootTarget,
+};

@@ -1,0 +1,65 @@
+{
+  "behavior_version": "private-model-sketch-dimension-pattern-v1",
+  "decision": "Typed documented modern bodies; preserve raw flags, direct/tagged distinctions and map identities; no normalization or geometry evaluation.",
+  "migration": "Initial unpublished codec; earlier independent wire fixtures retained.",
+  "cases": 632,
+  "independent_scalar_values": 19916,
+  "checks": {
+    "dimension/pattern tests": "9 passed, including exhaustive prefixes and trailing bytes",
+    "all model tests": "224 passed; two external-input tests ignored, six core tests filtered",
+    "all-target Clippy": "passed",
+    "Python": "51 passed",
+    "native corpus": "866/906; all 906 outcomes identical to spline checkpoint; complete acceptance failed",
+    "full PR gate": "earlier geometric/kernel source state; rerun before push"
+  },
+  "loaded_target_checks": {
+    "referencing_cases": 72,
+    "seeded_cases_without_references": 32,
+    "body_coverage": "Explicit loaded note/count identities only; no new target body claimed"
+  },
+  "fixture_repeat": {
+    "identical": true,
+    "fresh_processes": 2,
+    "sha256": {
+      "sketch-dimension-pattern-cases.bin": "17758b6470831e6d510bdc97337b9b4621a84c7326f24b84efc1db62269e2f41",
+      "sketch-pattern-original.bin": "75aa695aefa6922793df7712a7eeea558e4d4e3d8754d72e46b5f1097b318e55",
+      "sketch-pattern-edited.bin": "5641f2e70537899ad4b9a5470ec968db4cf5612d9e84668959e3ce638b752a29"
+    }
+  },
+  "oracle_exclusions": [
+    "derived logicals and pattern_constraints completion flags"
+  ],
+  "exclusions": [
+    "complete sketch tail/root",
+    "new note/count-dimension bodies",
+    "two tracked role failures",
+    "public model API and result/history contracts",
+    "geometry/native application acceptance",
+    "remote platform matrix"
+  ],
+  "artifact_sha256": {
+    "src/model_archives/mod.rs": "4bfcf66ba8b03eb9b281bff5a0c66a27bfe009cd910e4e1c7976c17967aad998",
+    "src/model_archives/object_body.rs": "e397d720e0f7e0e97ae409b6e67bcb28574fdfd3ea1240f275e1812b14510875",
+    "src/model_archives/sketch_collections.rs": "a43c687fd4299b072f1e3ec13bb093dfc66afae6679e84cca2cd096c3b20300e",
+    "src/model_archives/sketch_dimensions.rs": "5ce3ad6404481491e7812cd91f9e9bd362fc1ee9fd10844680d59b5a3041015a",
+    "src/model_archives/sketch_logical.rs": "d988ff4230c89966975ed5bcfef6b6c66741c72be25e9cb2737eab67b86b4928",
+    "src/model_archives/sketch_patterns.rs": "6998b02f38d2825ce57c9eac3eab03c838e17b94eb6831ae269d309b92fcc59e",
+    "tests/model_archives/sketch_dimensions.rs": "952287c6049f2f7095a6608b7975f73548643cf760c657ee2ca88a742afca1e1",
+    "docs/features/model-archives/freeze_sketch_dimensions.py": "cb12a75880c2f1b15ff9c57de8c4016a75d09908a540fe8b84a9a90b06b83cd6",
+    "docs/features/model-archives/sketch_dimension_fixture_bytes.py": "2b7dfb3215ac392c73e6b36a2c37339e09b53ccacebe20356c17d08e38a26999",
+    "docs/features/model-archives/sketch_pattern_fixture_bytes.py": "b82ff8aab4a904757df966f54c409f00d5838c463192a896e9ea105559f37fbe",
+    "docs/features/model-archives/sketch-dimension-pattern-cases.json": "22fcc628b4d07a7947c53b05488b48eddb767a641fb7ea17fb826ed67398eb11",
+    "docs/features/model-archives/sketch-dimension-pattern-schema-reference.json": "98f5d989971896a2db0638de48a0ea354e8dec39a1510549488c168adaedf327",
+    "docs/features/model-archives/sketch-dimension-pattern-schema-snapshot.md": "3af3fedd3ef2ba2172204c6fc4fa23e953a7217ac81f02a20773519d79d4d055",
+    "tests/fixtures/model-archives/sketch-dimension-pattern-cases.bin": "17758b6470831e6d510bdc97337b9b4621a84c7326f24b84efc1db62269e2f41",
+    "tests/fixtures/model-archives/sketch-pattern-original.bin": "75aa695aefa6922793df7712a7eeea558e4d4e3d8754d72e46b5f1097b318e55",
+    "tests/fixtures/model-archives/sketch-pattern-edited.bin": "5641f2e70537899ad4b9a5470ec968db4cf5612d9e84668959e3ce638b752a29"
+  },
+  "log_sha256": {
+    "model-sketch-dimension-tests.log": "c8eb6a5d56858590686ef32edda6e973a71fb8cc76fba595578350206fe655e4",
+    "model-sketch-dimension-all-model.log": "eba4cfb692293f3de48c75da450270bc92647ece9e65a7321b9d17094f18b7a3",
+    "model-sketch-dimension-clippy.log": "a98aa6e349aebf891db20b7e8362c6686125cffec8c3a42761f2508193f03359",
+    "model-sketch-dimension-python.log": "2220273ffbdd1db03c490af8faa6fc1a8218f8eb34429c2923c5bf3b1261029d",
+    "model-native-corpus-sketch-dimensions.log": "ebc4d50ae916bd943944ed39accf77240c961fd182925b3e9eb16f4ad5e39699"
+  }
+}

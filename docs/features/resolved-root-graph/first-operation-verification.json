@@ -1,0 +1,61 @@
+{
+  "issue": 201,
+  "status": "First complete stored-root read operation; broader acceptance and publication remain open",
+  "tests_passed": 7,
+  "failed": 0,
+  "ignored": 0,
+  "process_exit_code": 0,
+  "spline_regression_tests_passed": 20,
+  "spline_regression_failed": 0,
+  "published_types_send_sync": 5,
+  "owned_roots": 5,
+  "owned_local_definitions": 2,
+  "owned_aliases": 2,
+  "owned_nulls": 1,
+  "independent_expected_tags": [
+    65535,
+    98,
+    0,
+    65535,
+    100
+  ],
+  "expected_local_object_ids": [
+    98,
+    100
+  ],
+  "prior_original_source_alias_proof": "docs/features/spline-equation-state/alias-verification.json",
+  "concurrency": {
+    "workers": 8,
+    "iterations": 16,
+    "total_snapshots": 128
+  },
+  "covered": [
+    "Complete stored root order, exact tags, class/schema and map identities",
+    "Local root definitions and aliases, local nested definitions, inherited targets and nulls",
+    "Source bytes, copied physical root provenance, coverage, completion, fidelity, zero copied-value disagreement and semantic exclusions",
+    "Empty lists and explicit nonroot/foreign/stale selection failures",
+    "Original source isolation after successful archive edits",
+    "Immutable concurrent reads"
+  ],
+  "first_nested_fixture_attempt": "Minimal owned handle had no nested definition and the test failed. Replaced only the fixture selection with the existing populated array fixture; no production fallback or weaker assertion.",
+  "remaining": [
+    "Fresh original Source comparison of all projected root metadata and links",
+    "Native corpus and adversarial/resource/failure matrices",
+    "Combined full local and exact-head remote publication gates",
+    "Higher-level model, structural edit and geometry parity in #2 remains open"
+  ],
+  "logs_sha256": {
+    "root-graph-model_resolved_root_graph-tests.log": "0f555cc0e0d6f399ca86febb9a6b97762cc02dfadd558b53f40a3dbad49a398f",
+    "root-graph-model_spline_equation_state-tests.log": "b4b1a9c61b89c560f6d205f1fd99aa3ad67c904bc27273672839450ba5061e70",
+    "resolved-root-graph-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "resolved-root-graph-tests-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "resolved-root-graph-format.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "resolved-root-graph-before-nested-fixture-correction.log": "72846b313993f9856458af154b37623e3c2b99640b749000ec6bbad0036648f7"
+  },
+  "source_sha256_normalized_lf": {
+    "src/model_archives/resolved_root_graph/accessors.rs": "39b53c9cbea690b4635ad039ca8534d8da33960a60b7eee74705f082f6dffc61",
+    "src/model_archives/resolved_root_graph/mod.rs": "822a948ad071a61f2955654f42f7e850c7ee0c2bf80c62b4173241999d750c35",
+    "src/model_archives/resolved_root_graph/projection.rs": "b1a2b1329363c5baaeee98fbb0733fa32cc88f53d742fdc523a16c0337d21cde",
+    "src/model_archives/resolved_root_graph/types.rs": "0c2e0d8aaed394cdbc873ada1b2adcff9cfe4ea3689e33e8691654c8e4f3c389"
+  }
+}

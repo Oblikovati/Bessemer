@@ -1,0 +1,97 @@
+{
+  "fixture_sha256": "b52e080ba2cc64d1d07ed28306f27281b07521aef550bc0c7fea8cd54be2b276",
+  "manager_bytes": 1968,
+  "manager_sha256": "f6387400850ae80dedbc5d2f5dc77fb1dd38ad4b8afb1e6fb2ffc2ad35edb27d",
+  "manager_end": 1968,
+  "manager_unknown_bytes": 1117,
+  "manager_root_class": "moConfigurationMgr_c",
+  "selected_configuration_class": "moPartConfiguration_c",
+  "selected_alias_same_identity": true,
+  "root_configurations": 1,
+  "postload_distinct_nodes": 1,
+  "saved_state": {
+    "value": 1,
+    "position": 1886,
+    "stream": "Contents/CMgr",
+    "source_sha256": "f6387400850ae80dedbc5d2f5dc77fb1dd38ad4b8afb1e6fb2ffc2ad35edb27d",
+    "version": 19000
+  },
+  "configuration_map_slots": 97,
+  "resolved_map_slots": 161,
+  "rejections": {
+    "manager_trailing_byte": {
+      "rejected": true,
+      "cause": "configuration-manager has trailing bytes"
+    },
+    "invalid_saved_state_2": {
+      "rejected": true,
+      "cause": "unsupported persisted sheet-metal helper state"
+    },
+    "saved_state_0_with_present_tail": {
+      "rejected": true,
+      "cause": "resolved-feature stream has trailing bytes"
+    }
+  },
+  "reference_sources": {
+    "configurationmanager.py": "9a7bde722004fa3dc866be4299dae6e4d37bc63f6e18c3d3b6ff3041e39f0090",
+    "modelprefix.py": "57bf2a5e26e2d049b84e4f931bd8c122cc9e9647f32a472f9e2e8d0a0e2f608e",
+    "resolvedfeatures.py": "d71edaa0ae5b0345c7608577289cdfa2ec8abf6a426fd70ee81072533e1a6075",
+    "resolvedmbsm.py": "03d70f79f9ced2e2993d046e5aa948714eac271ae7ed5e09f3056c6b204500ab",
+    "mfcobjects.py": "eb7ad6c86ed8e4c4bc9e8b5ad6e14c2dbabc4a5ae53bb6cd9686061cef98aa16",
+    "swcontainer.py": "fa3eaf9159ae5deff97559ae7c4feb2a0d2c4425a86a62b4a99944c323ccec19",
+    "test_resolvedcoverage.py": "f47ec7e5eda46ba9e2c37f413212825327ad0631ed58827b0943bd6ab637f439",
+    "frontierfeatures.py": "eb87f017afe92dad9f5e75fc540e15dc98fe5d67c33f2eda501fc158edba045d"
+  },
+  "complete_source_inventory_sha256": "94feff4844489e050feeeee05534bfd6f65ac5764c1e694789b70ad965f199e1",
+  "resolved_stream": {
+    "stream": "Contents/Config-0-ResolvedFeatures",
+    "stream_bytes": 5558,
+    "stream_sha256": "d7ba8160aafa1e390850ba9beceadf00fb3ef6b5b3cf9fc0b7cee7be2d6000b0",
+    "end": 5558,
+    "raw_prefix": 97,
+    "feature_count": 17,
+    "root_classes": [
+      "moCommentsFolder_c",
+      "moFavoriteFolder_c",
+      "moHistoryFolder_c",
+      "moSelectionSetFolder_c",
+      "moSensorFolder_c",
+      "moDocsFolder_c",
+      "moDetailCabinet_c",
+      "moSurfaceBodyFolder_c",
+      "moSolidBodyFolder_c",
+      "moEnvFolder_c",
+      "moInkMarkupFolder_c",
+      "moEqnFolder_c",
+      "moMaterialFolder_c",
+      "moRefPlane_c",
+      "moRefPlane_c",
+      "moRefPlane_c",
+      "moOriginProfileFeature_c"
+    ],
+    "mbsm_present": true,
+    "unknown_bytes": 2724,
+    "final_map_slots": 161
+  },
+  "scope": "Reference-only owned-fixture investigation; no Bessemer resolved-feature support claimed.",
+  "source_drift_revalidation": {
+    "changed_sources": {
+      "resolvedfeatures.py": {
+        "previous": "8fd571cbf99926e9ffa39708682e9fce7c9975da5961903ccaf834c9c32274eb",
+        "repeated": "d71edaa0ae5b0345c7608577289cdfa2ec8abf6a426fd70ee81072533e1a6075"
+      }
+    },
+    "owned_results_unchanged": true,
+    "fresh_process_repetitions": 2
+  },
+  "latest_reference_audit": {
+    "path": "research/resolved-frontier-audit-0.370.json",
+    "sha256": "3fdd416f5fe6972b7c9c52b32c35989d342a6288d99ee0b3d24442fcc0d8f64a",
+    "totals": {
+      "stream_complete": 880,
+      "explicit_stop": 26
+    },
+    "coverage_credit": 0,
+    "scope": "Source report only; not independently rerun or a Bessemer result."
+  }
+}

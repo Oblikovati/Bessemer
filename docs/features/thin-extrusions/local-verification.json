@@ -1,0 +1,67 @@
+{
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "issue": 54,
+  "native_modules_verified": {
+    "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c"
+  },
+  "native_body_hashes_verified": [
+    "a5a65aff02d3e715ec7636b81061a68ef0eb032976514bd75c8afc38a3637a80",
+    "f8dd17f300742436f8804da1954bb96fc0152eb4057a17d3f082cd6c2c254a53",
+    "8cd87f89bb3a7a0e6b0933a1e827cdbb57314d83cb2d386ccdf3ea946035a77c",
+    "ddce78eb21eae6ff10048610ae415f0a1dcd65c32be0d690362637b439bbed5f",
+    "d62a8ff17ea74609cc51a19e32a9e96c7a12abe9bde7fe323c8d830418434699",
+    "505786864b6467a228b77a22a1204374894384fc37b684c8f456a0123380c216",
+    "099c4d9ad4e61fff56c9ec69fbb7bb04d4bf67587df5142bc261e87b34ab55e1",
+    "f6b1f2a1e4a14abcee954a46731e3e7b2ea7b47989b4142ed2f3c9cb9c5bd2a3",
+    "03b1385960a4bb2694e1c8e12fed6cb0d8783ef561a552cdb92cf77dc05d1f59",
+    "d55276457f260cc3866ef0e1b78bc204e5e30a4d1ed29b2813f54c3e13396a67",
+    "7efe86b6827066bcca230898bcc415596edf0934ad5a44447b4ea4491715aae1",
+    "21d65d11c4d4aeae9cf579cf99bdb274601a91127cb7fd8f193500ffd4e41e97",
+    "a5a65aff02d3e715ec7636b81061a68ef0eb032976514bd75c8afc38a3637a80",
+    "857cf36de44b4b548071e85f5af480da18fd837519ebfc5e5b54895257db3890",
+    "a2f8cc563ad8bea2a0e5f7ba7274884442de22200b02216b8dbddbb9b6abbe5f",
+    "94e90cdb19bc0d304788aae1589471d728af69ed92d2bcfeaca033bb96c7aba8",
+    "a5a65aff02d3e715ec7636b81061a68ef0eb032976514bd75c8afc38a3637a80",
+    "ddce78eb21eae6ff10048610ae415f0a1dcd65c32be0d690362637b439bbed5f",
+    "f8dd17f300742436f8804da1954bb96fc0152eb4057a17d3f082cd6c2c254a53",
+    "099c4d9ad4e61fff56c9ec69fbb7bb04d4bf67587df5142bc261e87b34ab55e1",
+    "8c3ccc96015ccc98dcbcad6167c3431db84ad7ce508e0f9093d6a1598cb08e70"
+  ],
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "artifact_sha256": "4df2444c59e38b5613580833366628e257d7de3ef64a3a700de95f1e36f1a9cb",
+  "fixture_graphs": 360,
+  "primitive_reads": 256702,
+  "owned_streams": 35,
+  "count_boundary_records": 65535,
+  "count_boundary_bytes": 786424,
+  "checks": {
+    "cargo_xtask_pr": "passed; 774 library tests, 4 xtask tests, all integrations, 274 doctests, 3 explicit external-fixture tests ignored",
+    "focused_thin_tests": "11 passed, including every truncated prefix/extra byte/old context across all 360 graphs in the initial run",
+    "continuing_prefix_gate": "30 latest-version class/style combinations; all 360 graphs retain byte/field/map checks and inherited readers retain version-boundary corpora",
+    "public_thin_tests": "3 passed",
+    "python_regeneration": "3 passed under the same immutable 1,408-module pin",
+    "source_stability": "three direct freezes discarded on concurrent source changes; before/copy/after verified pin and immutable generation/regeneration passed",
+    "native_processes": "two fresh processes matched all 906 outcomes and causes; exit 101 only for aggregate 800/906 completeness assertion"
+  },
+  "previous_complete": 786,
+  "complete": 800,
+  "independent_feature_bytes": 51449131,
+  "source_snapshot": "79ed441e0b341e044cb307d5953cdea7696e9de41ad1e26544ea46e8ec8e28b1",
+  "source_python_files": 1408,
+  "native_configuration_replays": 16,
+  "native_distinct_configurations": 16,
+  "native_target_roots": 19,
+  "native_target_classes": {
+    "moBossThin_c": 5,
+    "moExtruThin_c": 6,
+    "moRevolutionThin_c": 5,
+    "moCutThin_c": 3
+  },
+  "exclusions": [
+    "106 native cases still fail explicitly",
+    "Case 300 advances to moOneBend_c without completion credit",
+    "Historical contexts, geometry validity, application acceptance and all-schema parity remain incomplete",
+    "Humanizer unavailable; maintainer prose review remains open"
+  ]
+}

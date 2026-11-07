@@ -1,0 +1,41 @@
+{
+  "issue": 54,
+  "issue_type": "Feature",
+  "runtime_base_revision": "ee7d4b2c3bf8863f5976f84ab4089966b8cd5091",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "fixture_graphs": 252,
+  "primitive_reads": 28606,
+  "owned_streams": 51,
+  "checks": {
+    "private": "7 passed, plus three expanded wrapper-family coverage gates",
+    "public": "3 passed",
+    "python": "3 independent regeneration and inventory tests passed",
+    "cargo_xtask_pr": "845 library tests, 4 xtask tests, all integrations, 274 doctests; 3 external-fixture tests explicitly ignored",
+    "native_processes": "Two fresh processes matched all 906 outcomes and causes; exit 101 for aggregate 818/906 completeness assertion"
+  },
+  "previous_complete": 817,
+  "complete": 818,
+  "newly_complete": [
+    234
+  ],
+  "no_prior_success_lost": true,
+  "independent_feature_bytes": 54838261,
+  "source_snapshot": "caf9d488206932cb07ad894cb8b098a49668cbd5404a030d3ebc7761885b2e13",
+  "source_python_files": 1708,
+  "native_witness_roots": 21,
+  "native_cone_objects": 1,
+  "native_suffix_bytes": 64,
+  "exclusions": [
+    "88 native inputs remain explicit failures",
+    "Historical/internal contexts, scalar meanings, geometry validity, application acceptance and whole-schema parity remain incomplete",
+    "Humanizer unavailable; maintainer prose review remains open"
+  ],
+  "artifact_sha256": "e033045d4e5815fac320fb1b8a6639cedfcc54ba422e88a6c42dc8516f6a130e",
+  "gate_log_sha256": "4e85da3eb202829afd31a63bf8b88a86eeb08f481325d1a814def46196829043",
+  "before_log_sha256": "61762268ec1305b217b1e6dc94cd7389705e5c21d5eb9a5b59bf291f7ae16973",
+  "native_log_sha256": "75806563dcce6afe80eed22bec97656b2e3063066255481902432c87506c78da",
+  "native_repeat_log_sha256": "17d7e991389fd249d3e8d260e2f4e3e83f2264a052bec61923580063465a9dcb",
+  "cone_packet_sha256": "93b54fd511fdde24f1de81f41daa4da871c841412454674a98742045ef3081cb",
+  "wrapper_packet_sha256": "0a7ea255dc1d003fd08117680773caf28dde2a7fae20ab533167e79dcd2ab2e9"
+}

@@ -1,0 +1,48 @@
+{
+  "feature_issue": 241,
+  "production_base": "a1881cd2",
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0",
+  "rust_command": "cargo test --test flow_settings_body --test flow_fixed_fixtures --test flow_settings_fields --test flow_carriers --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 20,
+  "rust_failed": 0,
+  "rust_ignored": 0,
+  "python_command": "python -m unittest discover -s docs/features/flow-settings-body -p test_body.py -v",
+  "python_exit_code": 0,
+  "python_passed": 4,
+  "clippy_command": "cargo clippy --lib --test flow_settings_body --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "populated_fixture_scope": "Twelve synthetic versions, 72 supplied runtime-context projections, 145 existing members",
+  "native_scope": "Three complete owned native carrier fixtures confirm record-511 absence without inference from record 7",
+  "edits": "145 changed members, 145 exact noops, 145 fresh exact reversals; whole-wire expected patches and all copied/derived occurrence parents checked",
+  "malformed": "Every truncated prefix, trailing byte, unsupported outer/inner versions, malformed last duplicate and wrong same-width representation reject",
+  "concurrency": "Eight workers independently edit and reverse the same retained immutable view",
+  "initial_clippy_failure": "Nested if-let in legacy-member accessor triggered collapsible_if; replaced with a let chain and reran complete focused validation without allowances",
+  "source_lf_sha256": {
+    "src\\flow\\settings_body\\edit.rs": "cc6c1b3815a72871bf0a72609b5b48dc3812d9225ce990a3f9d80cfe1869e9fc",
+    "src\\flow\\settings_body\\mod.rs": "0bacdc52d3714e686488e84e1d3da0b19b0544d47342a3438e3366646e9f5dca",
+    "src\\flow\\settings_body\\types.rs": "6ebc4e28d795667851587593083f48e0480eda7ee6f005d0de1eacf06302fb87",
+    "src\\flow\\settings_body\\view.rs": "f2ff44996668054c08851e7f2f3a1eabd97d0b4f16fc5ee4628c8627e95557fa",
+    "src\\flow\\settings_body\\wire.rs": "21fcc4cc1a3476ee95350e71d1915d5b003a087335a6e1ec901f9f9a8a061c2a",
+    "tests\\flow_settings_body\\fixture.rs": "e8182074e0d4dc14e90caa7c01508b4b5029693015d46f3d59e93523e2536261",
+    "tests\\flow_settings_body.rs": "f5a1ace9b0793e71509a036641bafd9c4e4073e06c2fc8ad205381e9fab48050"
+  },
+  "log_sha256": {
+    "target/flow-settings-body-focused-tests.log": "281379e60707aa6815c4ec77c5994eb92084205dd238d5fbab76936999c4eb9b",
+    "target/flow-settings-body-clippy.log": "ccc207a1fa6daba2989d9ab1110334d4207cdd2841becfe9c3f8a769f8dd67de",
+    "target/flow-settings-body-final-tests.log": "58deb54f876f3f06230d80b0121b4f2861628570f92ba7f4bd01817647d152f6",
+    "target/flow-settings-body-final-clippy.log": "52dbed43926f977dc0381222613587c2f75003796a5f2bfb7ab8dc679b176ead",
+    "target/flow-settings-body-python-tests.log": "4f95f5c379962c85519af91c78e4d90c3b78ffc1134ccaa9373f12c6800f5a9d"
+  },
+  "exclusions": [
+    "No populated native record-511 sample exists in the retained corpus",
+    "No native execution, runtime normalization or configuration mutation",
+    "No engineering meaning inferred from native destination offsets",
+    "No record construction or body-version migration",
+    "Full gate 18974 remains live on earlier source 6edd02c9 and excludes this implementation",
+    "No new dependency, version bump or global schema parity claim"
+  ]
+}

@@ -1,0 +1,142 @@
+use super::header_imports::{ImportedHeaderMap, ModelHeaderLoadPlan};
+use super::{
+    ModelDecoder, ModelObjectRole, invalid, lightweight_part, lightweight_post, lightweight_shared,
+    node,
+};
+use crate::Result;
+use crate::archive_codec::{ArchiveMapIndex, MaterialRead, ObjectReader, ObjectRecord};
+
+pub(super) struct ModelLightweightState {
+    pub root_identity: ArchiveMapIndex,
+    pub imports: ImportedHeaderMap,
+    pub node: node::ModelNodePrefix,
+    pub raw_1614: i32,
+}
+
+#[derive(Clone, Copy)]
+pub(super) enum UnitComponentContext {
+    External,
+    Inline,
+}
+
+pub(super) fn read(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+    header: ModelHeaderLoadPlan,
+) -> Result<ModelLightweightState> {
+    reader.require_ordinary_part()?;
+    let root_identity = root_tag(reader, map)?;
+    let size = reader.section_size("lightweight_size")?;
+    reader.bounded(size, |reader| body(reader, map, header, root_identity))
+}
+
+fn body(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+    header: ModelHeaderLoadPlan,
+    root_identity: ArchiveMapIndex,
+) -> Result<ModelLightweightState> {
+    let imports = header.append(reader, map)?;
+    let (node, raw_1614) = after_header(reader, map, UnitComponentContext::External)?;
+    Ok(ModelLightweightState {
+        root_identity,
+        imports,
+        node,
+        raw_1614,
+    })
+}
+
+/// Reuse the section body without importing an external header a second time.
+/// Example: `lightweight::after_header(reader, map, UnitComponentContext::External)?`.
+pub(super) fn after_header(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+    context: UnitComponentContext,
+) -> Result<(node::ModelNodePrefix, i32)> {
+    let node = model_after_header(reader, map, context)?;
+    reader.scope("part_appearances", |reader| {
+        lightweight_part::appearances(reader, map)
+    })?;
+    let raw_1614 = reader.scope("part_tail", lightweight_part::tail)?;
+    Ok((node, raw_1614))
+}
+
+/// Decode the shared model stage before selecting a part or assembly continuation.
+/// Example: `lightweight::model_after_header(reader, map, UnitComponentContext::External)?`.
+pub(super) fn model_after_header(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+    context: UnitComponentContext,
+) -> Result<node::ModelNodePrefix> {
+    reader.i32("unknown_a8")?;
+    reader.u32("unknown_ac")?;
+    let node = reader.scope("node", |reader| node::lightweight(reader, map))?;
+    concept(reader, map, context)?;
+    model_continuation(reader, map)?;
+    Ok(node)
+}
+
+fn root_tag(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<ArchiveMapIndex> {
+    let root = reader.object_tag("root", map, ModelObjectRole::Declared(&["moPart_c"]))?;
+    let shape = match root {
+        ObjectRecord::New { index, .. } => Ok(index),
+        actual => Err(invalid(format!(
+            "root {actual:?}; expected a new moPart_c object"
+        ))),
+    };
+    reader.checked(shape)
+}
+
+fn concept(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+    context: UnitComponentContext,
+) -> Result<()> {
+    merged_features(reader, map)?;
+    reader.object(
+        "visual_properties",
+        map,
+        ModelObjectRole::Declared(&["moVisualProperties_c"]),
+    )?;
+    reader.object("units", map, ModelObjectRole::Declared(&["moUnitsTable_c"]))?;
+    if matches!(context, UnitComponentContext::Inline) {
+        return reader.object("unit_component", map, ModelObjectRole::Any);
+    }
+    reader.required_object(
+        "unit_component",
+        map,
+        ModelObjectRole::Declared(&["moUnitComponent_c"]),
+    )
+}
+
+fn merged_features(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    let merged = reader.i32("has_merged_feature_list")?;
+    if merged != 0 {
+        for index in 0..reader.object_count("merged_feature_count")? {
+            reader.object(
+                &format!("merged_features[{index}]"),
+                map,
+                ModelObjectRole::Any,
+            )?;
+        }
+        reader.i32("merged_feature_unknown_tail")?;
+    }
+    Ok(())
+}
+
+fn model_continuation(reader: &mut ModelDecoder<'_>, map: &mut ObjectReader) -> Result<()> {
+    reader.scope("face_properties", |reader| {
+        lightweight_shared::face_appearances(reader, map)
+    })?;
+    reader.scope("spatial", |reader| lightweight_shared::spatial(reader, map))?;
+    reader.scope("metadata", |reader| {
+        lightweight_shared::metadata(reader, map)
+    })?;
+    reader.scope("manager", |reader| lightweight_shared::manager(reader, map))?;
+    reader.scope("postmanager", lightweight_post::array)?;
+    reader.scope("model_flags", lightweight_post::flags)?;
+    reader.scope("collections", |reader| {
+        lightweight_post::collections(reader, map)
+    })?;
+    reader.scope("model_tail", |reader| lightweight_post::tail(reader, map))
+}

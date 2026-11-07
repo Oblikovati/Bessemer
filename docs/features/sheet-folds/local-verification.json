@@ -1,0 +1,41 @@
+{
+  "base_revision": "ce6bb0bc4f2193637c3f3c7dbe7c1e710a78aa6b",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "behavior_version": "C288-sheet-folds-v1",
+  "pr_gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 941,
+    "external_fixture_tests_ignored": 3,
+    "doctests_passed": 274,
+    "test_binaries": 166,
+    "log_sha256": "e8a34a361a234c397f82432ffee1448239896fcb250d4cd76d721c1949e6c3f4"
+  },
+  "focused_private_tests": 9,
+  "public_document_tests": 3,
+  "independent_fixture_tests": 2,
+  "independent_native_tests": 1,
+  "native_corpus": {
+    "cases": 906,
+    "complete": 821,
+    "incomplete": 85,
+    "two_fresh_processes_identical": true,
+    "previous_complete_preserved": true
+  },
+  "oracles": [
+    "actual independent serializer primitive observations",
+    "independent complete document scalar edit goldens",
+    "native source test with seven hash-bound roots",
+    "all-prefix truncation and version rejection",
+    "typed kernel context and unsupported transform checks",
+    "impossible map and body counts rejected before iteration"
+  ],
+  "exclusions": [
+    "special fixed-transform payloads",
+    "populated native unfold maps and raw-body lists are not claimed",
+    "later unsupported native classes",
+    "geometric validity of structural kernel fixtures",
+    "complete documented schema parity remains unfinished"
+  ]
+}

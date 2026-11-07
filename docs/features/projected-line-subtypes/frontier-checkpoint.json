@@ -1,0 +1,128 @@
+{
+  "cases": 906,
+  "previous_complete": 767,
+  "complete": 775,
+  "fresh_processes": 2,
+  "all_outcomes_and_causes_identical": true,
+  "artifact_sha256": "f78032552b55aa3b93c7a883be22933eeac4ce545add57029e06312336566847",
+  "changed": [
+    {
+      "index": 79,
+      "previous": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"data_808\" has runtime class \"moPLineDraft_c\"; expected one of [\"moPLineData_c\", \"moPLineProject_c\"]"
+      ],
+      "current": [
+        "accepted"
+      ]
+    },
+    {
+      "index": 86,
+      "previous": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"data_808\" has runtime class \"moPLineDraft_c\"; expected one of [\"moPLineData_c\", \"moPLineProject_c\"]"
+      ],
+      "current": [
+        "accepted"
+      ]
+    },
+    {
+      "index": 153,
+      "previous": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"data_808\" has runtime class \"moPLineIntersect_c\"; expected one of [\"moPLineData_c\", \"moPLineProject_c\"]"
+      ],
+      "current": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"plane_data\" has runtime class \"moPntSurfRefPlnData_c\"; expected one of [\"moRefPlnData_c\", \"moFixedRefPlnData_c\", \"moDefaultRefPlnData_c\", \"moFaceRefPlnData_c\", \"moFacePtRefPlnData_c\", \"moLinePtRefPlnData_c\", \"moPerLinePtRefPlnData_c\", \"moRefAtAngleData_c\", \"moRefThreePtsData_c\"]"
+      ]
+    },
+    {
+      "index": 274,
+      "previous": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moSurfaceRef_w\" schema 1; expected an implemented complete model object body"
+      ],
+      "current": [
+        "accepted"
+      ]
+    },
+    {
+      "index": 288,
+      "previous": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"data_808\" has runtime class \"moPLineDraft_c\"; expected one of [\"moPLineData_c\", \"moPLineProject_c\"]"
+      ],
+      "current": [
+        "accepted"
+      ]
+    },
+    {
+      "index": 296,
+      "previous": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moSurfaceRef_w\" schema 1; expected an implemented complete model object body"
+      ],
+      "current": [
+        "accepted"
+      ]
+    },
+    {
+      "index": 305,
+      "previous": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"data_808\" has runtime class \"moPLineIntersect_c\"; expected one of [\"moPLineData_c\", \"moPLineProject_c\"]"
+      ],
+      "current": [
+        "accepted"
+      ]
+    },
+    {
+      "index": 651,
+      "previous": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"data_808\" has runtime class \"moPLineDraft_c\"; expected one of [\"moPLineData_c\", \"moPLineProject_c\"]"
+      ],
+      "current": [
+        "accepted"
+      ]
+    },
+    {
+      "index": 769,
+      "previous": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"data_808\" has runtime class \"moPLineIntersect_c\"; expected one of [\"moPLineData_c\", \"moPLineProject_c\"]"
+      ],
+      "current": [
+        "accepted"
+      ]
+    }
+  ],
+  "logs_sha256": [
+    "2de74346b4834d1832d618436d596d11e3064fe6fec643e0f4abcec53961b015",
+    "d3e8018dffbe1de8ac4977f32f9d1f9f77f34008464ed0daeedc75bd7d0ec6dc"
+  ],
+  "explicit_stops": 131,
+  "new_complete": [
+    79,
+    86,
+    274,
+    288,
+    296,
+    305,
+    651,
+    769
+  ],
+  "expected_probe_exit": 101,
+  "expected_probe_failure": "Only the aggregate completeness assertion: 775 != 906.",
+  "resolved_reported_draft_cases": [
+    79,
+    86,
+    288,
+    651
+  ],
+  "advanced_to_plane_role_bug": [
+    153
+  ],
+  "bug_issue": 46
+}

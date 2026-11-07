@@ -1,0 +1,63 @@
+{
+  "issue": 175,
+  "stage": "Installed current-reader route only; historical body remains unbound",
+  "source_checks": 12,
+  "initialization_and_strict_replay_passed": true,
+  "current_report_source_pins_unchanged": true,
+  "source_hash_exceptions": 0,
+  "snapshot": {
+    "file": "source-snapshot.json",
+    "sha256": "4d38231adb5a61d29c38f117729e734095b3573527d1695524a19fdccd796058",
+    "identity": "0ec15c472733c060ae0d09dbacde25841ec65af8b6724b39d274c6b1043123b0",
+    "revision": "115fa770b6e20483ea1f7587eab82e653052156b"
+  },
+  "installed_reference": {
+    "file": "installed-current-reader-reference.json",
+    "sha256": "e0a96dac596312efe888c283b124339978091d07c92c5c1ff710ea2cdd026669",
+    "recorded_intervals": 10,
+    "recorded_bytes": 19007,
+    "current_serializer_direct_calls": 15,
+    "module_sha256": "f4cf8adfc0f6e2e36c3a29765d28bd0d073f952e5078c5dcc7cc0d5a0d409c36",
+    "revision": "115fa770b6e20483ea1f7587eab82e653052156b"
+  },
+  "logs": [
+    {
+      "path": "target/legacy-material-current-reader-source.log",
+      "bytes": 2569,
+      "sha256": "e559fe0b6656888550448b279daa04bd0fa0de55f42d75f07744ef18b85f7d8a",
+      "exit_code": 1,
+      "process_reaped": true
+    },
+    {
+      "path": "target/legacy-material-current-reader-corrected-source.log",
+      "bytes": 1726,
+      "sha256": "c2ea884b81bb2aa0dfc604a991b69f1285eb4daf73e23e83de146541043dfcd4",
+      "exit_code": 0,
+      "process_reaped": true
+    },
+    {
+      "path": "target/legacy-material-current-reader-strict-source.log",
+      "bytes": 1726,
+      "sha256": "c1f356a4e5adeb2cf0bc37edaddd74d676773e280d786a1aa503d70b53ff24d4",
+      "exit_code": 0,
+      "process_reaped": true
+    }
+  ],
+  "corrections": [
+    "The first expanded gate unnecessarily enforced the older modern-Material checkpoint model pin df9aa8356cb30dfa77b6c63fcd85ba3baf7b5f9570994afb1096ce9e57b1cbf2. Canonical C838/C894/C895 reports instead pin the current d7e60364f3b4ea749c9e8b995ad881e27993341ebcf5303bf7d1cf3d29d873bc model.",
+    "The original strict current historical-report source check was retained without any pin override; the older hash-bound report supplies only its native interval descriptors. Its obsolete pure-model source pins are not adopted."
+  ],
+  "native_tool_qualification": "native-tool-qualification.json",
+  "scope": {
+    "known_current_route_verified": true,
+    "historical_candidate_body_bound": false,
+    "fresh_native_payload_replay": false,
+    "completed_schema_records": 0,
+    "target_executed": false
+  },
+  "pending": [
+    "Fresh extraction and exact replay of all70 original native header/failure/candidate outcomes",
+    "Historical body producer/consumer or context binding, including the21-text contract",
+    "Typed complete legacy codec and native writer equivalence remain unproven"
+  ]
+}

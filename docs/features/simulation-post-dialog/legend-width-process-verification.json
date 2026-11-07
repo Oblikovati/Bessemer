@@ -1,0 +1,27 @@
+{
+  "issue": 166,
+  "behavior_version": "C854-nearest-even-width-v1",
+  "platform": "Windows x64",
+  "operation_cases": 18040,
+  "complete_parents": 836,
+  "hypothetical_contexts_per_parent": 8,
+  "words": 199496,
+  "oracle": "Exact rational intermediate stages with neighboring-binary32 search/midpoint parity, native branch identity and complete optional parent selectors",
+  "executable_sha256": "cfed9f06661cf91dd70ff399187582037a297d79bf7340e27d201ac0b4939fc1",
+  "runs": [
+    {
+      "process": 1,
+      "exit_code": 0,
+      "bytes": 797984,
+      "sha256": "487ac9dee55cbb6406381aea8906c3ebbe6b1277f7788ed654c79461d60faa5c"
+    },
+    {
+      "process": 2,
+      "exit_code": 0,
+      "bytes": 797984,
+      "sha256": "487ac9dee55cbb6406381aea8906c3ebbe6b1277f7788ed654c79461d60faa5c"
+    }
+  ],
+  "comparison": "Both fresh Rust processes matched all199496 independent expected words byte for byte; exact export-test execution checked",
+  "native_target_executed": false
+}

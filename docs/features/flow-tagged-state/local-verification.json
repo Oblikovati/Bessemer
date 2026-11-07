@@ -1,0 +1,109 @@
+{
+  "source_parent": "de7bb3af709644402fa96e0e3f904e0b6c246c27",
+  "issue": 241,
+  "platform": "Windows x64 MSVC Rust1.99.0 Python3",
+  "environment": {
+    "CARGO_BUILD_JOBS": "1"
+  },
+  "commands": [
+    "cargo test --locked --test flow_state_table_fixtures --test flow_fixed_fixtures --test flow_settings --test flow_load_state_fixtures --test flow_conditional_item_fixtures",
+    "cargo clippy --tests --locked -- -D warnings",
+    "cargo fmt --all -- --check",
+    "python -m unittest discover -s docs/features/flow-state-tables -p test_state_tables.py -v"
+  ],
+  "terminal_exit_codes": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "rust": {
+    "passed": 92,
+    "failed": 0,
+    "ignored": 7
+  },
+  "ignored_scope": "Seven standalone process workers across five targets, each invoked twice by a regular Source-verifying parent test",
+  "python": {
+    "passed": 9,
+    "failed": 0
+  },
+  "complete_source_cases": 773,
+  "complete_source_rows": 9661,
+  "complete_source_wide_values": 64519,
+  "edit_scope": "Every generated row/tag/value; native rows first per distinct tag/width shape plus first/middle/last, with first/middle/last values; all present tails",
+  "tag_assignments": 4134,
+  "changed_tag_edits": 2236,
+  "zero_tag_noop_assignments": 1898,
+  "wide_edits": 3868,
+  "tail_edits": 772,
+  "total_selected_assignments": 8774,
+  "native_selected_rows": 5,
+  "native_selected_wide_elements": 9,
+  "edit_oracles": [
+    "Full patches at independent Source-frozen tag/value/tail offsets",
+    "No-op exact original carrier and record identity, including zero tags and NaN bits",
+    "Complete duplicate-occurrence carrier reconstruction and copied/derived history",
+    "Unchanged complete row intervals/widths through every selected edit",
+    "Fresh raw carrier reversal and original source isolation"
+  ],
+  "independent_oracles": [
+    "Eight-byte empty record without tail under zero row/wide budgets",
+    "Thirteen-byte single zero tag with zero-body interval and signed tail",
+    "Thirty-one-byte split tag block [0,255,1], absent/empty/one-value bodies, signaling-NaN bits and signed minimum tail",
+    "Every stored tag byte retained; zero/nonzero presence transitions rejected even for present-empty arrays",
+    "Malformed counts checked with unbounded descriptor/wide limits before allocation or multiplication"
+  ],
+  "thread_safety": {
+    "public_send_sync_types": 7,
+    "workers": 8,
+    "edits_per_worker": 32,
+    "oracle": "Complete serial carrier bytes across tag/value/tail edits",
+    "fresh_processes": 2,
+    "process_scope": "All773 source-checked reads and the same selected edits",
+    "thread_sanitizer": "Pending future required CI for this exact implementation"
+  },
+  "native": {
+    "payload_bytes": 507048,
+    "version": 9,
+    "rows": 5532,
+    "wide_values": 60660,
+    "tag_values": [
+      0,
+      1,
+      3
+    ],
+    "tail": 0,
+    "tag_width_shapes": 3,
+    "selected_rows": 5,
+    "native_context_validation_reproduced": false,
+    "native_runtime_state_reproduced": false
+  },
+  "source_sha256": {
+    "src/flow/legacy_tables/mod.rs": "3d157a3ad4f769e588645fc674115eb06977d60e7825e520851553e06c225671",
+    "src/flow/legacy_tables/tagged_state/decode.rs": "e9769dd820a1844bbb515b06ae00235adeebd4509ef8f7801ff71e9776f55445",
+    "src/flow/legacy_tables/tagged_state/edit.rs": "e6811c8d64965127fc25b02e2d2b65110a1a49001042ae334b4514f43ef4fc7c",
+    "src/flow/legacy_tables/tagged_state/mod.rs": "a8a37a665f615ce0111d26f7307c053cba85d62d41052fe37efb07ce0b1d8145",
+    "src/flow/legacy_tables/tagged_state/types.rs": "894db3f2751016e15b44ad9ddca7f66056b4a7b3e966e52e10f2bb880f3c1cf3",
+    "src/flow/legacy_tables/tagged_state/view.rs": "490cb72b4be8535894412e5ffbae79d1db23780a81e3a3de6dfb79aa9008c5ca",
+    "tests/flow_state_table_fixtures.rs": "53600da3995a1725e1ab53c776dfa9474efb3cb0fcc258a98aeebdd58ecab825",
+    "tests/flow_state_tables/tagged_api.rs": "833d2744595894f38f97d7a34c21b65c12c90e46e3eca99fc4c2fc86b9e5d0f3",
+    "tests/flow_state_tables/tagged_contracts.rs": "5cee6c3d53db84acc2888f863b458758a0af5acb2567eec3226d7c18ebb3c28c",
+    "tests/flow_state_tables/tagged_edit.rs": "10b269031940a7cbc6c8c453c2627e01c4a0af4911001e4c3446f53e483fafd8",
+    "tests/flow_state_tables/tagged_replay.rs": "ae6a3c5a32f967b53b583f4549610483f4b83011b31ab2788c03624579f8f137"
+  },
+  "log_sha256": {
+    "target/flow-tagged-state-api-tests.log": "566b36119c7980b6335c0da6301cda62cac526380ad38d9bf7aab524a9b6b7dc",
+    "target/flow-tagged-state-api-clippy.log": "97471b5b973163f05a18495250a1c0a7f33afe35559f31cf5d76feb504d10dd5",
+    "target/flow-tagged-state-python.log": "df70a35412ea60914f61edb69b4c9dadd9eb2713591c3b1c819759ed751fc964"
+  },
+  "reference_sha256": "bb97e87384763c10035a5ee638fa76055bc50fb5f5e394195450b305d76bfe47",
+  "function_file_caps": "Passed: functions at most20 nonblank/noncomment body lines; source/test files below500 lines",
+  "exclusions": [
+    "Exhaustive native value edits: all native fields are read, edits use the declared representative policy",
+    "Native tag/context validation, runtime population, engineering column roles and SolidWorks application acceptance",
+    "Full gate for this API: current retry is frozen ataa329933 and excludes it",
+    "Remote CI: current PR245 excludes this API"
+  ],
+  "build_memory_issue": 246,
+  "humanizer": "Maintainer prose review pending; humanizer skill unavailable"
+}

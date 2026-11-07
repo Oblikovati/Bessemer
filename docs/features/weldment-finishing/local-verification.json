@@ -1,0 +1,59 @@
+{
+  "issue": 54,
+  "issue_type": "Feature",
+  "behavior_version": "C391-weldment-finishing-v1",
+  "runtime_base_revision": "2ef2f99085387db1ebd77f64a3f8bb6c4da4984e",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "fixture_graphs": 396,
+  "primitive_reads": 191366,
+  "owned_streams": 21,
+  "checks": {
+    "private": "9 focused parser tests passed",
+    "public": "3 passed",
+    "python": "2 finishing tests and both earlier end-cap tests passed with immutable actual reference readers",
+    "cargo_xtask_pr": "923 library tests, all integrations, 4 xtask tests and 274 doctests passed; 3 external-fixture tests explicitly ignored",
+    "native_processes": "Two fresh processes matched all 906 outcomes and causes; exit 101 for aggregate corpus incompleteness"
+  },
+  "previous_complete": 819,
+  "complete": 821,
+  "newly_complete": [
+    615,
+    905
+  ],
+  "no_prior_success_lost": true,
+  "source_snapshot": "5e2e04dd9ab4751fe0e6ac1d3df6f3434c2923a9ab3fb7d71d32ead1d01a95b7",
+  "source_python_files": 1937,
+  "source_pin_unchanged": true,
+  "fixture_source_snapshot": "7ee4a1f34420c727d16b647b3fe3035d25f81cc6fe2bbc38e3a5270ca73b8367",
+  "critical_reader_hashes_identical_across_snapshots": [
+    "gussets.py",
+    "weldbeadfeatures.py",
+    "bodyfeatures.py",
+    "displaydimensions.py",
+    "modelfeatures.py",
+    "mfcobjects.py",
+    "modelcomponents.py",
+    "swarchive.py",
+    "dl_ui.py"
+  ],
+  "independent_feature_bytes": 55590941,
+  "native_objects": {
+    "moGusset_c": 8,
+    "weldBeadSideData_c": 16,
+    "moWeldBeadFeat_c": 8
+  },
+  "kernel_decision": "Complete extrusion/body parents, declared ordinary helper-clear dialect, preserved packed words and transform operators; no byte-probing fallback",
+  "exclusions": [
+    "85 native inputs remain explicit failures",
+    "Nonzero helper overrides, earlier/internal contexts, scalar meanings, geometry validity, application acceptance and whole-schema parity remain incomplete",
+    "Humanizer unavailable; maintainer prose review remains open"
+  ],
+  "artifact_sha256": "8aa4236921a54fa0201d101d9f2e03f8b24c8b1fd2b54d300efba937626ef302",
+  "gate_log_sha256": "bd422daca297a338602ab56c8837a4a91de44ef6c91ce809fe507b7c6806eaea",
+  "native_log_sha256": "5e35d4028521b1b8b0dcc5e80c4142d5bc6a561fdfde9e1d01fd8a5bbb736b37",
+  "native_repeat_log_sha256": "6cb2e21e98aeee468c07b49ad9662f50cb0983fe873b843bbf68b853393df5c0",
+  "source_audit_log_sha256": "78b21a74c547a73b8cd7aa05b4027a624005432ed06b5064a116c1dd29a8eec2",
+  "fixture_packet_sha256": "9cd44bc924b96eac59016f7f219d674fb01bdf8165ad97353fe9aba0c068caa9",
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af"
+}

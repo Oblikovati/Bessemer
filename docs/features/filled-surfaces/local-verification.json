@@ -1,0 +1,58 @@
+{
+  "base_revision": "8d2dbe5c9592e6792570d5b913e5cfbbcefcbad6",
+  "issue": 54,
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "focused": {
+    "private_tests": 7,
+    "public_tests": 3,
+    "python_tests": 2,
+    "cases": 264,
+    "primitive_observations": 63543,
+    "owned_streams": 27,
+    "source_target_identities_verified": true,
+    "rejected_unstable_source_regeneration_runs": 1,
+    "rejected_unstable_source_pins": 1
+  },
+  "native": {
+    "cases": 906,
+    "previous_complete": 761,
+    "complete": 764,
+    "explicit_stops": 142,
+    "new_complete": 3,
+    "cases_advanced_to_later_stops": 1,
+    "fresh_processes": 2,
+    "all_outcomes_and_causes_identical": true,
+    "artifact_stable_across_gate": true,
+    "artifact_sha256": "f71dafefa0b009ee0358a9c33a8547b14293aa5c97914cf98596189d2c4009fb",
+    "independent_feature_bytes": 48978769,
+    "independent_snapshot_identity": "798d49d8c4599b5375065ff6c814f426cab807c14614185f14c7f8c64b119dd9",
+    "independent_python_files": 1323,
+    "independent_report_sha256": "c9d55ca4301339f80bcb9d9253eabcf6e819124e75aa3b0796d19b7cff2acf2c",
+    "independent_sentinel_sha256": "cb7ec45611b5fb03a72233af17e1052ebe0a15a15169d1adaa4ceda511959437",
+    "logs_sha256": [
+      "8c9b6d871377c9181bf91ef3993ab40c66d326df3f1629027d2c9717f99facd2",
+      "a6cff7ecec718e5179a5e5eae22681d7000017133b879eb93775b9b14202613e"
+    ]
+  },
+  "corpus_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "schema_snapshot_sha256": "4b19bdf47b7ea7ba36998d0ee51c2a705d699419f20d94548e95809f324b1174",
+  "fixture_reference_sha256": "cfbb7789a054582a1a7b0d3934b2ca769fa5ac3684ccd09f31fdb903da7a82a0",
+  "gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 710,
+    "library_ignored": 3,
+    "xtask_passed": 4,
+    "doctests_passed": 265,
+    "all_integration_tests_passed": true,
+    "log_sha256": "fc4e7a1273ed076a806afdf14b033a495ee3f448801f6f5ff6605097ac1e1fff"
+  },
+  "exclusions": [
+    "142 explicit native corpus stops",
+    "Legacy migrations outside the declared modern context",
+    "Geometry validity and SolidWorks application acceptance",
+    "Broader all-schema parity remains unproven"
+  ]
+}

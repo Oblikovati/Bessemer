@@ -1,0 +1,97 @@
+{
+  "reference_bug": 177,
+  "feature_issue": 54,
+  "scope": "Diagnostic full current-source corpus measurement; original source gate remains failed",
+  "cases": 906,
+  "completed_framing": 906,
+  "failed_framing": 0,
+  "accounting_disagreements": 906,
+  "original_audit_known_bytes": 53900337,
+  "current_source_known_bytes": 75659073,
+  "known_byte_difference": 21758736,
+  "fresh_processes": 2,
+  "outcome_bytes_identical": true,
+  "source_identity": "99c84c47f7ba695f0a477771255dfe89a1401c8ce4ed2ef559af4060af54ada6",
+  "source_python_files": 5103,
+  "elapsed_seconds": [
+    36.803,
+    30.261
+  ],
+  "process_exit_codes": [
+    0,
+    0
+  ],
+  "processes_reaped": true,
+  "input_identities_matching_rust_manifest": 906,
+  "input_stream_hashes_matching_rust_manifest": 3624,
+  "original_test_expectations_unchanged": true,
+  "source_hash_exceptions": 0,
+  "measurement": {
+    "path": "docs/features/resolved-features/current-source-outcomes.json",
+    "bytes": 618396,
+    "sha256": "5aa5bb9138f1f47e156fd52703137ebcc2d16a94f65f5a99e556fbb2f992bbfd"
+  },
+  "snapshots": [
+    {
+      "path": "target/resolved-current-measure-first-snapshot.json",
+      "bytes": 639729,
+      "sha256": "11427b4833ebd730afd7df77dd6e927b696efacba9b944a498797a0c089cb98a"
+    },
+    {
+      "path": "docs/features/resolved-features/current-measured-source-snapshot.json",
+      "bytes": 639729,
+      "sha256": "0ba332bce901fa4e01c5019b5a9f599ec0fd4c9b7da1315bf711aeb82a9792ca"
+    }
+  ],
+  "logs": [
+    {
+      "path": "target/resolved-current-measure-first.log",
+      "bytes": 2190,
+      "sha256": "e42d0bc8d761f90de6165c26a8ad62ffe07570eb889011ba124fb8c6c9c2b4bc"
+    },
+    {
+      "path": "target/resolved-current-measure-corrected.log",
+      "bytes": 296,
+      "sha256": "3cb06a7f778fb40e2590d759d34c709ffbc5f63dd6538e3ddd6008ddbd935403"
+    },
+    {
+      "path": "target/resolved-current-measure-second.log",
+      "bytes": 296,
+      "sha256": "b0b8906d231eba259460b6b8c578de930bb7e9f629cfe4b9e167ddf1f82c7215"
+    }
+  ],
+  "harness_files": [
+    {
+      "path": "docs/features/resolved-features/freeze_current_resolved.py",
+      "bytes": 3639,
+      "sha256": "a247d78ff79566fffcff9a4b8158d59214f4f0598b5139123277a58f9529e0ec"
+    },
+    {
+      "path": "docs/features/resolved-features/current_resolved_measurement.py",
+      "bytes": 2897,
+      "sha256": "531cd476973bcb2e4a132602289468cfa2dc62f63fdf6611cc8586211f1e30f9"
+    }
+  ],
+  "qualification": "The initial diagnostic wrapper failed before reading fixtures because unittest requires a named callable; the standard update_wrapper pattern corrected that harness issue. Both complete runs retain every original row and exact input. This measurement does not update or replace the original failing source test or its audit baseline, and does not establish correctness of the changed semantic byte accounting.",
+  "final_original_gate": {
+    "tests": 3,
+    "passed": 2,
+    "failed": 1,
+    "errored": 0,
+    "elapsed_seconds": 1.473,
+    "exit_code": 1,
+    "process_reaped": true,
+    "source_identity": "99c84c47f7ba695f0a477771255dfe89a1401c8ce4ed2ef559af4060af54ada6",
+    "snapshot": {
+      "path": "docs/features/resolved-features/current-original-final-source-snapshot.json",
+      "bytes": 639087,
+      "sha256": "0a01d2d433c9cef85919dbc292e9c0c897e66515259c8840c0b568dd151aff5f"
+    },
+    "log": {
+      "path": "target/resolved-current-original-final.log",
+      "bytes": 1305,
+      "sha256": "40457b125486f96bed9e0042a56e7d5b22adbbc50733724e03959c43eb08eafe"
+    },
+    "original_assertion_retained": "84979 != 51395 for mill3axii_5.sldprt::Contents/Config-0"
+  }
+}

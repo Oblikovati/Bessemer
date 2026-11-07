@@ -1,0 +1,51 @@
+{
+  "issue": 53,
+  "baseline_revision": "ec04099f17957de205913407bec188f9846a02ea",
+  "decision": {
+    "opt-level": 1,
+    "debug-assertions": true,
+    "overflow-checks": true,
+    "production_profiles": "unchanged"
+  },
+  "benchmark": {
+    "workload": "714-case linear-pattern suite; all eight tests and every prefix",
+    "execution_seconds": {
+      "debug": 270.66,
+      "level_1": 71.52,
+      "level_3": 70.02
+    },
+    "initial_optimized_measurement": "Public API work in progress; frozen inputs and parser expectations unchanged.",
+    "packet_sha256": "0ab6882804a6ac78bd2c8600f6ee6f3c282acded6c9afcbeb2a99dbf6bc9ce7b",
+    "memory": "not measured",
+    "compilation": "excluded from execution timings"
+  },
+  "private_baseline_gate": {
+    "library_passed": 302,
+    "library_seconds": 89.61,
+    "total_passed": 1374,
+    "suite_count": 80,
+    "ignored_external_input_tests": 2,
+    "native_accepted": 906,
+    "native_seconds": 4.1,
+    "native_rows_unchanged": true
+  },
+  "guards": {
+    "enabled": "passed in full gate",
+    "debug_disabled": "failed as expected",
+    "overflow_disabled": "failed as expected"
+  },
+  "sha256": {
+    "Cargo.toml": "ae151ee1e036b5651310ab5c86a26b13093ee262c0341a1a6371dd64d56bb177",
+    "tests/test_profile_invariants.rs": "4429417acc164099a1f3fe79ec9557527a1860c8f01042e730943516034071d5",
+    "docs/features/model-archives/test-performance.md": "02b7743666d5c14ec7644d7a3fc1f9ca4f122ad08993ed12404b9c93e0e19847"
+  },
+  "log_sha256": {
+    "model-linear-tests.log": "16fde86e6d8960dcb477e15cf14cc5e99cefa21536546bc186ac72c5a012fa80",
+    "model-optimized-prefix-benchmark.log": "0654f674a8ed95c25e906787ff37daedc6e3de420ba209c83debec7495bebdbb",
+    "model-optimized3-prefix-benchmark.log": "579cf6edec81cbdf65829ee51acd1370108977d96970540ea374ccee0044e96b",
+    "model-profile-pr-gate.log": "cd544cf476621630b814d68587fa95393d2b15a6aef245a967673bb0cd026c34",
+    "model-profile-native.log": "a201ed59c83301289b367af72fdde732c2b51d80f1f37332f23139ababfc1740",
+    "model-profile-no-debug.log": "22181f719491da15d100bd5efdeb5845a7e3d78b76854208cf263e6aed725950",
+    "model-profile-no-overflow.log": "21cf92b9ee4645c2e7f2acc51a3a9e1550881b52b3af9abb0e84d03360d13370"
+  }
+}

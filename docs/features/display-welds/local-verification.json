@@ -1,0 +1,44 @@
+{
+  "issue": 54,
+  "issue_type": "Feature",
+  "runtime_base_revision": "83903a69dd2b1dda00b18e7a878d4784862b82da",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "fixture_graphs": 162,
+  "primitive_reads": 32724,
+  "owned_streams": 21,
+  "checks": {
+    "private": "7 passed",
+    "public": "3 passed",
+    "python": "2 independent regeneration and inventory tests passed",
+    "cargo_xtask_pr": "859 library tests, 4 xtask tests, all integrations, 274 doctests; 3 external-fixture tests explicitly ignored",
+    "native_processes": "Two fresh processes matched all 906 outcomes and causes; exit 101 for aggregate 818/906 completeness assertion"
+  },
+  "previous_complete": 818,
+  "complete": 818,
+  "newly_complete": [],
+  "no_prior_success_lost": true,
+  "partial_advances_without_completion_credit": [
+    547,
+    615,
+    905
+  ],
+  "independent_feature_bytes": 54838261,
+  "source_snapshot": "df0411d40a9de72de85c8cfbf4d4d97a08b2335b3a1c748ad27b4c808a1a7b0a",
+  "source_python_files": 1737,
+  "native_witness_configurations": 3,
+  "native_reviewed_prefix_roots": 91,
+  "native_payloads": 9,
+  "exclusions": [
+    "88 native inputs remain explicit failures",
+    "Cases 547, 615 and 905 advance to an unimplemented component-detail reference without completion credit",
+    "Other symbol/component classes, historical/internal contexts, scalar meanings, geometry validity, application acceptance and whole-schema parity remain incomplete",
+    "Humanizer unavailable; maintainer prose review remains open"
+  ],
+  "artifact_sha256": "4991bc4ee0f0a05f2296f67a1a9a98701d138085c3452649c49a2726e9492ae7",
+  "gate_log_sha256": "615d4326916b2a1efd2ac83d989a61a26220afee1f40411b659c23c72c89f487",
+  "before_log_sha256": "5603f2f172184175f9b4686a9ff9eabb8e166c3723c050ba6b84099a1915bda8",
+  "native_log_sha256": "6c40e005655ffc0d990e473ed5a055f23610dc5cb8d895c2a831afd1dbe3c857",
+  "native_repeat_log_sha256": "aa0e5cf208428de15f5d2a682508c6e316f6d4f0a480f7e75ae088d2251b0350",
+  "fixture_packet_sha256": "176ace551bfb8bada4a7acadd0a1531def568c63769d8190e5a4535e702f7d96"
+}

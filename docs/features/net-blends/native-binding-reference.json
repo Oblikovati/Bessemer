@@ -1,0 +1,333 @@
+{
+  "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\net-blend-native-evidence.json",
+  "source_sha256": "7ea55714e2a9f7ca13307c9dc77e700c3a98475025b7f7044423a029e147fe62",
+  "clause": "11.226 / C-268",
+  "artifact": {
+    "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+    "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c"
+  },
+  "bindings": [
+    {
+      "class_name": "moNetBlend_c",
+      "object_offset": 0,
+      "locator": "0x4d37fef8",
+      "vftable": "0x4d2d55f8",
+      "slots": [
+        "0x4cb1ec20",
+        "0x4caff010",
+        "0x4cba273f",
+        "0x4b29dae0",
+        "0x4b29dae0",
+        "0x4cb200d0",
+        "0x4b7a8f10",
+        "0x4b29dae0"
+      ],
+      "ancestors": [
+        ".?AVmoNetBlend_c@@",
+        ".?AVmoSketchedFeature_c@@",
+        ".?AVmoBodyFeature_c@@",
+        ".?AVmoAtomFeature_c@@",
+        ".?AVmoModelFeature_c@@",
+        ".?AVmoFeature_c@@",
+        ".?AVmoConcept_c@@",
+        ".?AVmoLoggedNode_c@@",
+        ".?AVmoNode_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@",
+        ".?AVutDisplayedEntity_c@@"
+      ],
+      "verified_serializer": "0x4cb200d0"
+    },
+    {
+      "class_name": "moNetBlendCut_c",
+      "object_offset": 0,
+      "locator": "0x4d37fff8",
+      "vftable": "0x4d2d7c90",
+      "slots": [
+        "0x4cb1ff50",
+        "0x4cafef70",
+        "0x4cba273f",
+        "0x4b29dae0",
+        "0x4b29dae0",
+        "0x4cb200d0",
+        "0x4b7a8f10",
+        "0x4b29dae0"
+      ],
+      "ancestors": [
+        ".?AVmoNetBlendCut_c@@",
+        ".?AVmoNetBlend_c@@",
+        ".?AVmoSketchedFeature_c@@",
+        ".?AVmoBodyFeature_c@@",
+        ".?AVmoAtomFeature_c@@",
+        ".?AVmoModelFeature_c@@",
+        ".?AVmoFeature_c@@",
+        ".?AVmoConcept_c@@",
+        ".?AVmoLoggedNode_c@@",
+        ".?AVmoNode_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@",
+        ".?AVutDisplayedEntity_c@@"
+      ],
+      "verified_serializer": "0x4cb200d0"
+    },
+    {
+      "class_name": "moNetBlendData_c",
+      "object_offset": 0,
+      "locator": "0x4d380780",
+      "vftable": "0x4d2df340",
+      "slots": [
+        "0x4cb1ff60",
+        "0x4cb1faf0",
+        "0x4cba273f",
+        "0x4b29dae0",
+        "0x4b29dae0",
+        "0x4cb1ffc0",
+        "0x4cba274b",
+        "0x4cba2751"
+      ],
+      "ancestors": [
+        ".?AVmoNetBlendData_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ],
+      "verified_serializer": "0x4cb1ffc0"
+    },
+    {
+      "class_name": "mo_NetCurveSet_c",
+      "object_offset": 0,
+      "locator": "0x4d380b48",
+      "vftable": "0x4d2df100",
+      "slots": [
+        "0x4cb1ff90",
+        "0x4cb1fde0",
+        "0x4cba273f",
+        "0x4b29dae0",
+        "0x4b29dae0",
+        "0x4cb20410",
+        "0x4cba274b",
+        "0x4cba2751"
+      ],
+      "ancestors": [
+        ".?AVmo_NetCurveSet_c@@",
+        ".?AVmoCurveSet_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ],
+      "verified_serializer": "0x4cb20410"
+    },
+    {
+      "class_name": "mo_CL_CurveSet_c",
+      "object_offset": 0,
+      "locator": "0x4d380c38",
+      "vftable": "0x4d2df190",
+      "slots": [
+        "0x4cb1ff80",
+        "0x4cb1fd00",
+        "0x4cba273f",
+        "0x4b29dae0",
+        "0x4b29dae0",
+        "0x4cb20390",
+        "0x4cba274b",
+        "0x4cba2751"
+      ],
+      "ancestors": [
+        ".?AVmo_CL_CurveSet_c@@",
+        ".?AVmoCurveSet_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ],
+      "verified_serializer": "0x4cb20390"
+    },
+    {
+      "class_name": "mo_Body_Options_c",
+      "object_offset": 0,
+      "locator": "0x4d380a58",
+      "vftable": "0x4d2df070",
+      "slots": [
+        "0x4cb1ff70",
+        "0x4cb1fca0",
+        "0x4cba273f",
+        "0x4b29dae0",
+        "0x4b29dae0",
+        "0x4cb20250",
+        "0x4cba274b",
+        "0x4cba2751"
+      ],
+      "ancestors": [
+        ".?AVmo_Body_Options_c@@",
+        ".?AVgc_Body_Options_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ],
+      "verified_serializer": "0x4cb20250"
+    },
+    {
+      "class_name": "mo_SurfaceDegree_c",
+      "object_offset": 0,
+      "locator": "0x4d380cc8",
+      "vftable": "0x4d2df2b0",
+      "slots": [
+        "0x4cb1ffb0",
+        "0x4cb1fec0",
+        "0x4cba273f",
+        "0x4b29dae0",
+        "0x4b29dae0",
+        "0x4cb20690",
+        "0x4cba274b",
+        "0x4cba2751"
+      ],
+      "ancestors": [
+        ".?AVmo_SurfaceDegree_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ],
+      "verified_serializer": "0x4cb20690"
+    },
+    {
+      "class_name": "mo_CurveSet_Data_c",
+      "object_offset": 0,
+      "locator": "0x4d380808",
+      "vftable": "0x4d2def50",
+      "slots": [
+        "0x4cb2ac60",
+        "0x4cb1fd80",
+        "0x4cba273f",
+        "0x4b29dae0",
+        "0x4b29dae0",
+        "0x4cb2b290",
+        "0x4cba274b",
+        "0x4cba2751"
+      ],
+      "ancestors": [
+        ".?AVmo_CurveSet_Data_c@@",
+        ".?AVgc_CurveSet_Data_c@@",
+        ".?AVgc_CurveSet_Options_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ],
+      "verified_serializer": "0x4cb2b290"
+    },
+    {
+      "class_name": "mo_CenterLine_Data_c",
+      "object_offset": 0,
+      "locator": "0x4d37f9e0",
+      "vftable": "0x4d2d0218",
+      "slots": [
+        "0x4cad4c00",
+        "0x4cad4ba0",
+        "0x4cba273f",
+        "0x4b29dae0",
+        "0x4b29dae0",
+        "0x4cad4c10",
+        "0x4cba274b",
+        "0x4cba2751"
+      ],
+      "ancestors": [
+        ".?AVmo_CenterLine_Data_c@@",
+        ".?AVgc_CenterLine_Data_c@@",
+        ".?AVgc_CenterLine_Options_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ],
+      "verified_serializer": "0x4cad4c10"
+    },
+    {
+      "class_name": "moContactData_c",
+      "object_offset": 0,
+      "locator": "0x4d381328",
+      "vftable": "0x4d2e4530",
+      "slots": [
+        "0x4cb6d740",
+        "0x4cb6e510",
+        "0x4cba273f",
+        "0x4b29dae0",
+        "0x4b29dae0",
+        "0x4cb6e910",
+        "0x4cba274b",
+        "0x4cba2751"
+      ],
+      "ancestors": [
+        ".?AVmoContactData_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ],
+      "verified_serializer": "0x4cb6e910"
+    },
+    {
+      "class_name": "moCompEntGroup_c",
+      "object_offset": 0,
+      "locator": "0x4d319bf8",
+      "vftable": "0x4ce97398",
+      "slots": [
+        "0x4b823b70",
+        "0x4b823ac0",
+        "0x4cba273f",
+        "0x4b29dae0",
+        "0x4b29dae0",
+        "0x4b823b80",
+        "0x4b821420",
+        "0x4b809c30"
+      ],
+      "ancestors": [
+        ".?AVmoCompEntGroup_c@@",
+        ".?AVmoCompRef_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ],
+      "verified_serializer": "0x4b823b80"
+    },
+    {
+      "class_name": "moCompMultiEdge_c",
+      "object_offset": 0,
+      "locator": "0x4d31aca8",
+      "vftable": "0x4ce9cb60",
+      "slots": [
+        "0x4b837dd0",
+        "0x4b837d40",
+        "0x4cba273f",
+        "0x4b29dae0",
+        "0x4b29dae0",
+        "0x4b8380f0",
+        "0x4b821420",
+        "0x4b809c30"
+      ],
+      "ancestors": [
+        ".?AVmoCompMultiEdge_c@@",
+        ".?AVmoCompRef_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ],
+      "verified_serializer": "0x4b8380f0"
+    },
+    {
+      "class_name": "moCompMultiEdgeImpl_c",
+      "object_offset": 0,
+      "locator": "0x4d31ac20",
+      "vftable": "0x4ce9cf98",
+      "slots": [
+        "0x4b837dc0",
+        "0x4b837cf0",
+        "0x4cba273f",
+        "0x4b29dae0",
+        "0x4b29dae0",
+        "0x4b837de0",
+        "0x4cba274b",
+        "0x4cba2751"
+      ],
+      "ancestors": [
+        ".?AVmoCompMultiEdgeImpl_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ],
+      "verified_serializer": "0x4b837de0"
+    }
+  ],
+  "thin_getter": {
+    "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldgcu.dll",
+    "sha256": "18504858be55efd17d5ea96afc9c64a362a8d47cd500479c3bae068b87eec03f",
+    "address": "0x439abb30",
+    "symbol": "?getWantThinSolid@gc_Body_Options_c@@QEBAHXZ",
+    "bytes": "8b4118c3"
+  },
+  "scope": "Hash-bound supplied native serializer and constructor evidence; embedded types are direct wire bodies, not added tagged readers."
+}

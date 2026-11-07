@@ -1,0 +1,45 @@
+{
+  "cases": 906,
+  "accepted": 710,
+  "rejected": 196,
+  "newly_accepted": 1,
+  "previous_complete_preserved": true,
+  "fresh_process_outcomes_and_causes_identical": true,
+  "artifact_stable_during_replay": true,
+  "artifact_sha256": "7db0c114b823af1c0659278f560b6ea55fb5966763be465b14cdacb63631c947",
+  "changes": [
+    {
+      "index": 10,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"backup\" has runtime class \"mo3DCylinderBackedUpData_c\"; expected one of [\"moPointBackedUpData_c\", \"moLineBackedUpData_c\", \"moSegmentBackedUpData_c\", \"moArcBackedUpData_c\", \"moEllipseBackedUpData_c\", \"mo3DPlaneBackedUpData_c\", \"mo3DSphereBackedUpData_c\"]"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: archive: Invalid: map index 18548; expected < 325"
+      }
+    },
+    {
+      "index": 342,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"backup\" has runtime class \"moParabolaBackedUpData_c\"; expected one of [\"moPointBackedUpData_c\", \"moLineBackedUpData_c\", \"moSegmentBackedUpData_c\", \"moArcBackedUpData_c\", \"moEllipseBackedUpData_c\", \"mo3DPlaneBackedUpData_c\", \"mo3DSphereBackedUpData_c\"]"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moRefCurve_c\" schema 1; expected an implemented complete model object body"
+      }
+    },
+    {
+      "index": 584,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"backup\" has runtime class \"mo3DCylinderBackedUpData_c\"; expected one of [\"moPointBackedUpData_c\", \"moLineBackedUpData_c\", \"moSegmentBackedUpData_c\", \"moArcBackedUpData_c\", \"moEllipseBackedUpData_c\", \"mo3DPlaneBackedUpData_c\", \"mo3DSphereBackedUpData_c\"]"
+      },
+      "after": {
+        "status": "accepted",
+        "cause": ""
+      }
+    }
+  ]
+}

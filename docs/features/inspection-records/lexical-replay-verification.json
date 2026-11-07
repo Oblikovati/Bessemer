@@ -1,0 +1,42 @@
+{
+  "issue": 194,
+  "affected_scope": "Unreleased #193 record API; absent from the released main API",
+  "decision": "Retain the initial immutable lexical checkpoint; replay only the selected original attribute token when restoring its value; preserve other later edits and expose all current/checkpoint history parents",
+  "baseline_revision": "69098a41",
+  "before_failure": "lexical-replay-failure-verification.json",
+  "fresh_process_acceptance": "process-export-verification.json",
+  "original_source_acceptance": "actual-output-source-verification.json",
+  "regressions": [
+    "Hexadecimal numeric reference reversal",
+    "Single-quote named-entity and spacing replay",
+    "Multiple edits retain unrelated later changes",
+    "Both history parents resolve in immutable snapshots",
+    "A reopened edited envelope uses its own observed checkpoint"
+  ],
+  "checks": [
+    "Core and integration-test Clippy with warnings denied",
+    "Missing public docs denied",
+    "Unsafe forbidden",
+    "cargo fmt check",
+    "Function bodies at most 20 nonblank lines",
+    "Source files below 500 lines"
+  ],
+  "source_manifest_sha256": "d4f0ee38b2ced1d2eaacf2d35cc6337b5ca3484d989d4fab39032835a310cfdc",
+  "source_manifest_rule": "Sorted src/**/*.rs paths mapped to SHA256; UTF-8 JSON with sorted keys and compact separators",
+  "file_sha256": {
+    "src/inspection/records/edit.rs": "2b6a08432a226babd364fe6589271744c4f5c644700aaabf055ab47a10cd0065",
+    "src/inspection/records/mod.rs": "530f9675e2030f00617184cd37a709772168f4f4ce73f0e712e49e0a55882024",
+    "src/metadata/edit.rs": "c16e4a74fe561b770b815f0781aa671a09b138a657a70ef42e56e330849ce74c",
+    "src/metadata/utf8.rs": "29ddffe86700dee57d9414d3108d806219b3389cf7a0d607aa5e1225a3ab6ae7",
+    "tests/inspection_records/replay.rs": "b4e851f57821c8d70b7a6bea3915a58ff0706b15652a0608a9c4e656698b9cd6",
+    "tests/inspection_records/exports.rs": "a4481a0ffeb551c06eeecc689be85dccaf93b927d4408d7505d8fda6fc0201e0",
+    "tests/fixtures/inspection-records/single-quotes.xml": "e07d8028ee95d3a72d8c1a73dbd65263a264dc5cca72b066c43340cf4ac94ae7"
+  },
+  "platform": "win32",
+  "rustc": "rustc 1.99.0 (b940084d7 2026-09-28)",
+  "remaining": [
+    "Full local PR gate",
+    "Exact-head remote integration checks",
+    "Native application reload"
+  ]
+}

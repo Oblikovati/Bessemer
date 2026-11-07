@@ -1,0 +1,113 @@
+{
+  "issue": 219,
+  "behavior_version": "C3582-canonical-sketch-owned-v1",
+  "source_base": "15e1d8bbcea382eba72f48bccead5e60ce66b86c",
+  "source_identity": "Profile feature working tree after source_base; exact Rust hashes identify tested source",
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0",
+  "clippy": "Unit, rlib and public integration builds passed -D warnings; unit/library also -D missing_docs -F unsafe_code",
+  "focused_rust_passed": 62,
+  "new_private_tests": 10,
+  "public_tests": 8,
+  "affected_regression_tests": 44,
+  "python_tests_passed": 5,
+  "bare_numeric_graphs": 576,
+  "containing_graphs": 4,
+  "owned_streams": 18,
+  "fixture_files": 23,
+  "independent_edits": 12,
+  "fresh_reversals": 12,
+  "workers": 8,
+  "earlier_sketch_graphs_unchanged": 198,
+  "earlier_edge_graphs_unchanged": 684,
+  "earlier_helper_one_streams_unchanged": 6,
+  "earlier_conic_fixtures_unchanged": 23,
+  "native_cases_accepted": 906,
+  "source_sha256": {
+    "src/model_archives/sketch_bend_owned.rs": "764409ecd714a460b95e0bab843ee567f6e770b170d8f1037db65c1a93dc386f",
+    "src/model_archives/sketch_bends.rs": "89db13ddcadf5933a82a4e23aec4cf942648191a6aa8932180619109e6cb34d7",
+    "src/model_archives/context.rs": "a7251f1ea691236d90ac6873a8cce4ee14ec419da49c696c0dc5e88ecd815d75",
+    "src/model_archives/reader.rs": "904adb3b2e9f5ecbabef533676a43f7f4d59b39cc2644c62c89d47072ba2adda",
+    "src/model_archives/part_archive.rs": "410161481e204e034a9f225cd45905df62c34dfdbe9b5f7fa807377a45f0130c",
+    "src/model_archives/archive.rs": "067f200ed492fb2e7f30eaaa3f70e61afb1985473f29edc42d3f873009a6e9af",
+    "src/model_archives/resolved_features.rs": "6fb4f322760b2e9266dbbff5b49de3613addaee5b5f8c1c039f8e123ac13c7c4",
+    "src/model_archives/object_body.rs": "37b07cf8234b019102f691d32c6d6291e2f1f326cf4d86bc7db92e6e967d3d68",
+    "src/model_archives/resolved_feature_objects.rs": "4d14c50c3d6b1f77e7a7e3426d00737d6e3ee2d75fe32680dae97bb293ca826f",
+    "src/model_archives/mod.rs": "abb192456063e4c5b08161b43c2106eeb215667d03e38369b74336f222453046",
+    "src/model_archives/test_modules.rs": "32e6d50bc627029f3b934fd9f77baca49e7c694a51f0388f1bb50c1891615445",
+    "tests/model_archives/sketch_bend_owned.rs": "3060b56c1d31781c9bac2f92a6fb5e85bcfc833c9bafa8cd9eec537bc4ad739a",
+    "tests/resolved_sketch_bend_owned.rs": "f07fd3c56630ed32eb2fa69dae3857b75b1881aee63e047cce814b1ec48bd0dd"
+  },
+  "artifact_sha256": {
+    "target/sketch-bend-owned-tests-v3.exe": "e607fbf781a4f17f422f5870ffc3a2bb5a8e437a191467ec0a269bcd9849f6b7",
+    "target/libbessemer_sketch_bend_owned.rlib": "cbe48be85100029ae175ef7a580b3ce79809047571fc98fdc8c597acf1ec6465",
+    "target/sketch-bend-owned-integration-tests-v3.exe": "4fe3d2cfe3fa102c375f407a0d26050b613a3d3a09a94bec43e16b10507447f5"
+  },
+  "results": [
+    {
+      "log": "target/sketch-bend-owned-focused-v3.log",
+      "sha256": "2d232361e09299d05d2fe06ed791d484272d536652fde926e3ac0e985dd1e070",
+      "passed": 10,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "log": "target/sketch-bend-owned-integration-v3.log",
+      "sha256": "b574758afbe7086ee2cec032d747cfcef0f4041d98ce4d295c2790eb6053c8e0",
+      "passed": 8,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "log": "target/sketch-bend-owned-regression-0.log",
+      "sha256": "f9b6dcccf2c69aa05461af2b725bc3b65b23fa475aac26f0af8e5b880a816622",
+      "passed": 6,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "log": "target/sketch-bend-owned-regression-1.log",
+      "sha256": "99d5387b3c3936e4792aefa3f8930dc551ab116bbede5ae829319db85f1c7cfd",
+      "passed": 10,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "log": "target/sketch-bend-owned-regression-2.log",
+      "sha256": "01c05d4720518d27727be293f3cd98601e3ed18bf5f4378939e2d8af1505a600",
+      "passed": 6,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "log": "target/sketch-bend-owned-regression-3.log",
+      "sha256": "9b6651648c73d7fb9c223ab727a00399516fdac133834df4ce8c5da43f7c2ad1",
+      "passed": 12,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "log": "target/sketch-bend-owned-configuration-regression.log",
+      "sha256": "6a1c58f1c342525ce736c07b502f1647a75751be1f3407066d70aaf29a119085",
+      "passed": 10,
+      "failed": 0,
+      "ignored": 0
+    }
+  ],
+  "native_verification": "native-resolved-regression-verification.json",
+  "process_determinism": "process-determinism-verification.json",
+  "pre_acceptance_corrections": [
+    "Removed an unused MaterialRead import from new private tests; production parser unchanged.",
+    "Exercised the shared default reader through an explicit legacy OneBend regression instead of suppressing its unused-function warning in the profile-only integration crate."
+  ],
+  "pending": [
+    "Exact-cut full cargo xtask pr and required remote checks for profile219",
+    "Fresh native current-layout qualification and application/geometry acceptance"
+  ],
+  "exclusions": [
+    "Current nonnull canonical owned/grid/ordinary-array layout is explicitly declared by the caller, not inferred solely from constructor evidence",
+    "No arbitrary overrides, null-grid, DB or all-kind7 admission",
+    "Inherited unsupported OneBend raw branches remain stops",
+    "No dependency, package version, tag or release change"
+  ]
+}

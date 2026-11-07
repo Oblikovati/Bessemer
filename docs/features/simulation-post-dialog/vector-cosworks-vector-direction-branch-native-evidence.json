@@ -1,0 +1,3907 @@
+{
+  "evidence": "C-878",
+  "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\Simulation\\DgxPost.dll",
+  "module_sha256": "2fa0173c92d0f3193deeb048c008bd04c37daaefb80cc175704249164acff44a",
+  "method": {
+    "address": "0x1800907b0",
+    "end": "0x180090808",
+    "sha256": "4ca3fe7730d29188b3985424a9581f86fdf53e6467a33c014dc2ae5e0f9e7efd",
+    "instructions": [
+      "1800907b0 sub rsp, 0x38",
+      "1800907b4 cmp dword ptr [rcx + 0x570], 0",
+      "1800907bb jl 0x1800907ea",
+      "1800907bd mov rax, qword ptr [rcx + 0x578]",
+      "1800907c4 cmp dword ptr [rax - 0x10], 0",
+      "1800907c8 je 0x1800907ea",
+      "1800907ca mov dword ptr [rdx + 8], 0x3f800000",
+      "1800907d1 mov dword ptr [rdx + 4], 0x3f800000",
+      "1800907d8 mov dword ptr [rdx], 0x3f800000",
+      "1800907de mov dword ptr [rdx + 0xc], 0",
+      "1800907e5 add rsp, 0x38",
+      "1800907e9 ret ",
+      "1800907ea mov r9d, dword ptr [rcx + 0x14]",
+      "1800907ee mov r8d, dword ptr [rcx + 0x18]",
+      "1800907f2 mov qword ptr [rsp + 0x20], rdx",
+      "1800907f7 mov edx, dword ptr [rcx + 0x10]",
+      "1800907fa mov ecx, dword ptr [rcx + 0xc]",
+      "1800907fd call qword ptr [rip + 0x23bbb5]",
+      "180090803 add rsp, 0x38",
+      "180090807 ret "
+    ]
+  },
+  "delegate": {
+    "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\Simulation\\cwPostCommon.dll",
+    "sha256": "6bcca4be3b3d9e3c81ea31cfeeac82681de635c908f062a9bc8553fb96606fad",
+    "iat": "0x1802cc3b8",
+    "exports": [
+      {
+        "name": "?dgxPostCommonGetComponentVectorDir@@YAXHHHHQEAM@Z",
+        "address": "0x18002ebb0"
+      }
+    ]
+  },
+  "rows": [
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\3plates-surfaces.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "5fa9b8bfe7ffffed064dff82048ee86cc3859a733a88656b234bd0de274c5038",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\3plates-surfaces.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/MeshQuality/Plot1/cwPostDlgParam",
+      "sha256": "2f740899036c56301151b919e565d5eef13c8d06ee11a120f171bcc44c4a4c48",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\actuator.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/MeshQuality/Plot1/cwPostDlgParam",
+      "sha256": "54896733111030027ae14d4ca3fd77685eacc5cbb7a41e533847ce27bf40e38d",
+      "selected_version": 890912,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\actuator.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/MeshQuality/Plot1/cwPostDlgParam",
+      "sha256": "3ea7fd35ccbc81c234c62e83027049c0acef0ec64a0a6705ca7a9ed545b8ab8e",
+      "selected_version": 890912,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Beams\\beam_truss.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/MeshQuality/Plot1/cwPostDlgParam",
+      "sha256": "8ca505bb0d2c8dcd1082010ff7b8024232a3a9a3c11bf4d23d477a13e7b172fc",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\bikeframe.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "e308e2ab315e8ba638f094e5f9abbc7aaf84294b73fba086e8fc3659228c54eb",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\bikeframe.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/MeshQuality/Plot1/cwPostDlgParam",
+      "sha256": "c7809ca7ada91158c3c430527be2278f192f7f23802555637c4d25233d8bc4b9",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\bikeframe.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Strain/Plot1/cwPostDlgParam",
+      "sha256": "704780f30714b8d6db35ac4da7b399506c17dc978b8583f8795435adcf70c21d",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\bikeframe.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "18a0a5dbb01e6c994427fef3a3b176d2e3b71c8a0ba810ec6c3e669f2db23f7b",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\car_model.sldasm",
+      "stream": "Cosworks/StudyManager/SimStudy-7/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "4a3e6b9445f724a09b23569d8e631c8ec2e64a0dd869279595fc96a8b7ab4ac1",
+      "selected_version": 891107,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\car_model.sldasm",
+      "stream": "Cosworks/StudyManager/SimStudy-7/Results/MeshQuality/Plot1/cwPostDlgParam",
+      "sha256": "8542ce4a7cca71fa60493bb8c1be99e2dff8ed0404a554d2e24452bec06cc2ab",
+      "selected_version": 891107,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\car_model.sldasm",
+      "stream": "Cosworks/StudyManager/SimStudy-7/Results/Strain/Plot1/cwPostDlgParam",
+      "sha256": "4c5e79b17196263f25c033f12b8bdb9c92b5a740c9d532b93633b8054951115a",
+      "selected_version": 891107,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\car_model.sldasm",
+      "stream": "Cosworks/StudyManager/SimStudy-7/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "736f405029058642f7a03a1e446c3e70fd31a9bac58bb59ed8a73de66c9699f5",
+      "selected_version": 891107,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Design Scenarios\\hanger.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "780f237eb3d66553bd5ad297c1050b57b9a5317241bef2e4b807b607f94844d3",
+      "selected_version": 890116,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Design Scenarios\\hanger.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot2/cwPostDlgParam",
+      "sha256": "ea4292ad9753f1b8f9e4a9e3ccfa3970c06fd1ae9f9c56659ffd1683f2ee4efd",
+      "selected_version": 890116,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Drop Test\\hd_packaging.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/MeshQuality/Plot1/cwPostDlgParam",
+      "sha256": "eefdf2a2d5cc0549d7fa19fcf7ba73270ce9118e803ee1559b36cd102e7befd5",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Drop Test\\hd_packaging.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Response/Plot1/cwPostDlgParam",
+      "sha256": "fdbb77049efe547e182a252c793e1896e1542874bb99efe3b8c0de46950f165c",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Drop Test\\twoblocks.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "4d5923208e6602b60815265de7527d7ffa5b28cfbaee8b4682c8c262703883c9",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Drop Test\\twoblocks.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/MeshQuality/Plot1/cwPostDlgParam",
+      "sha256": "eefdf2a2d5cc0549d7fa19fcf7ba73270ce9118e803ee1559b36cd102e7befd5",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Drop Test\\twoblocks.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "d3a699578b1e8b7ac38f8cf1ac62829d70a871d86377647eef84c1bad83a7d0a",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Fatigue\\vehiclesuspension.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/FatigueResults/Plot1/cwPostDlgParam",
+      "sha256": "d6cfb69885c1b49f5a9b3deb07406fcaf30132409df05bb31a90fcd5ddb115fd",
+      "selected_version": 890112,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Fatigue\\vehiclesuspension.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/FatigueResults/Plot2/cwPostDlgParam",
+      "sha256": "98273024175e3e97e802fee300ef5c949c51d9ab4ca248ad61b61b25a0769554",
+      "selected_version": 890112,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Fatigue\\vehiclesuspension.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/FatigueResults/Plot3/cwPostDlgParam",
+      "sha256": "80c0c0ecc6b4c5ea270064d9a628ab8075c2420934c64c163dd382f115d14d6b",
+      "selected_version": 890112,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\mixed-1-solid.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Deformation/Plot1/cwPostDlgParam",
+      "sha256": "9ffb48522076b47c266afa0123b16c98358b09e2cae677aa7b1391c9be2ca1be",
+      "selected_version": 830033,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\mixed-1-solid.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Design Check/Plot1/cwPostDlgParam",
+      "sha256": "75d84bda80dd04e1628207d2c02e861f4be2ae4222d6d09b69aaa96927484eb2",
+      "selected_version": 830033,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\mixed-1-solid.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "7f2d1f61105a6563974d0cb349ef7dd7c9da469d3a5e7e65d366f839af929edb",
+      "selected_version": 830033,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\mixed-1-solid.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Strain/Plot1/cwPostDlgParam",
+      "sha256": "416e239be4b3989b0432945cdfeba94509cd8e3281bd340b962f01d89a9be8c0",
+      "selected_version": 830033,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\mixed-1-solid.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "9607cb6c69ef0e665b9692ac5b2651b5b1e8cc735c0f82de1cb505c670a77a1d",
+      "selected_version": 830033,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\mixed-1-solid.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Deformation/Plot1/cwPostDlgParam",
+      "sha256": "9beb65ffe856c527e60446fdae6bd466fa9ad864d333ef49933052b1c244dcf4",
+      "selected_version": 830033,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\mixed-1-solid.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "9323562f65a703c83dc822701e98e485218bacb52ba7a5c5990f1b6519458527",
+      "selected_version": 830033,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\mixed-1-solid.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Strain/Plot1/cwPostDlgParam",
+      "sha256": "8f0116378e7bec65b677fb73f067ecef4c48d9ffd61f003e4ea2082f2afdf32e",
+      "selected_version": 830033,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\mixed-1-solid.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "547fbcc9f9518fd26c0ab7e7211ae61636cf780897f73eafa8038bd508fbc31d",
+      "selected_version": 830033,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Nonlinear\\2dsimplification\\bolt_nut.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "f1e77d99aa82aa118777567d12406296a008696c34b79d83f09c30e1dc5bd97d",
+      "selected_version": 890913,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Nonlinear\\2dsimplification\\bolt_nut.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Strain/Plot1/cwPostDlgParam",
+      "sha256": "02225b2106b485327aad25128b619fb4b807c3b26dd19c2c127681aee4e13e87",
+      "selected_version": 890913,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Nonlinear\\2dsimplification\\bolt_nut.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "a2763e94d2fc442dbb5fdad77550d404ff133fdae8e4ff65cc2eec205d38401d",
+      "selected_version": 890913,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Nonlinear\\nl_o_ring.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "f6f28f8c63db7014c1f79f0326edfb3a54ca39c22489693b0a9f906bc4852811",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Nonlinear\\nl_o_ring.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/MeshQuality/Plot1/cwPostDlgParam",
+      "sha256": "b7d26c2a01d6919f5096d586e8d4a5e64b952db797f3475b949a05952386f176",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Nonlinear\\nl_o_ring.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/MeshQuality/Plot2/cwPostDlgParam",
+      "sha256": "07b4b2d74a7524c4fc0aa9b76bb2cb7d88a4ac9c327b94959ee69550f8109a7c",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Nonlinear\\nl_o_ring.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Strain/Plot1/cwPostDlgParam",
+      "sha256": "814263730773869839c5113e8fed5007266545e3edb15b948a0dfe8193b82efb",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Nonlinear\\nl_o_ring.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "a0c3e72d2220d3ff4a0cbe9ad4a84f249fab293abfcc712def1f82a42d74a453",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Optimization\\brake rotor.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/MeshQuality/Plot1/cwPostDlgParam",
+      "sha256": "1e7978a5d076e833fb0f9198dae9bb8e535aac58369bb98bf700e9a246ade353",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\pipingassembly.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "4a3e6b9445f724a09b23569d8e631c8ec2e64a0dd869279595fc96a8b7ab4ac1",
+      "selected_version": 890912,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\pipingassembly.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/MeshQuality/Plot1/cwPostDlgParam",
+      "sha256": "54896733111030027ae14d4ca3fd77685eacc5cbb7a41e533847ce27bf40e38d",
+      "selected_version": 890912,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\pipingassembly.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/PinBoltBearing/Plot1/cwPostDlgParam",
+      "sha256": "f98357952d6a312e3ca296c28240e94da3564b9892b338edfa3c507677707e7d",
+      "selected_version": 890912,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\pipingassembly.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Strain/Plot1/cwPostDlgParam",
+      "sha256": "4c5e79b17196263f25c033f12b8bdb9c92b5a740c9d532b93633b8054951115a",
+      "selected_version": 890912,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\pipingassembly.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "29ebdd05d4a3bf8d37e2d2cf6e4a6c28594a4d99204b7c420e301884234e26ab",
+      "selected_version": 890912,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\pliers.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "c132a1abfd592a9d72cdd5ebdc4f5e66ae3ab5709a3111e1da343b12d77e844c",
+      "selected_version": 890912,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\pliers.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/MeshQuality/Plot1/cwPostDlgParam",
+      "sha256": "54896733111030027ae14d4ca3fd77685eacc5cbb7a41e533847ce27bf40e38d",
+      "selected_version": 890912,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\pliers.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Strain/Plot1/cwPostDlgParam",
+      "sha256": "1c552d0c06979337b2e51953758caeb8aae2d0409d6aa006cb428bc84df559cb",
+      "selected_version": 890912,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\pliers.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "c031c70b2bb4e4cf68b7a6a4d2fa6b2dbe9147b47a67ce1377cdddef451f24c7",
+      "selected_version": 890912,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\shaft.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "39a7a7a1ec05a7704919fb617f85ef1ffac0fee0ffd3de368e6388c91e3b99a3",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\shaft.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot2/cwPostDlgParam",
+      "sha256": "ec3a6e82ac0095f3c5c10377a5bed1d6c229889045eaa979f256882f213db1df",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\shaft.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot3/cwPostDlgParam",
+      "sha256": "b8e80a5f367577eecb451b734730948440563b880a23101a23576c5cb402bc13",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\shaft.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot4/cwPostDlgParam",
+      "sha256": "a153412484e2dffd1c82a6c32b28b14d609f2f42413b31360996bacfea0dc83f",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\shaft.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot5/cwPostDlgParam",
+      "sha256": "2c7a793ce49bfdc229ede6651de8623ed8c3938c3736fcd1c5f3449167cc98ba",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\shaft.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/MeshQuality/Plot1/cwPostDlgParam",
+      "sha256": "728b6d218a411fee1f1bbcca1a9502ba948e331159e80a5bb32c04bae561e87c",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Thermal\\computer_chip.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/MeshQuality/Plot1/cwPostDlgParam",
+      "sha256": "4bec8b94407bb044c4d41b444ac7d44d5779394ab2e9d93293e4d18854ad3984",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Thermal\\computer_chip.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Thermal/Plot1/cwPostDlgParam",
+      "sha256": "d60371cd21e8e61a8c3460b6d9e32e752bbbabe635cec358f9a6f1d9252746d2",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Thermal\\computer_chip.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/MeshQuality/Plot1/cwPostDlgParam",
+      "sha256": "5d81e774304682099c91f6096522f50e9e538b9f3a7a82bd5cc1a41244ed26ae",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Thermal\\computer_chip.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Thermal/Plot1/cwPostDlgParam",
+      "sha256": "869912747ac18a6d017eef768a3d3044368fb1f1fbd2c7c2ab12b135b33e6669",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Thermal\\computer_chip.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "b3e87e6464218af3e74bd66f1391f7c5a5c28c7e28f9c02fbee5361ee5caa177",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Thermal\\computer_chip.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Strain/Plot1/cwPostDlgParam",
+      "sha256": "35d0d0316ea33fac00466135a09fe2baed7bae24fd77f8761bc8ada891998791",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Thermal\\computer_chip.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "c838a6a39ae2ccfe02fbde6f216be48380aca4a7633bc10d9b97ccb887aaf5dc",
+      "selected_version": 890620,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\asly1.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Deformation/Plot1/cwPostDlgParam",
+      "sha256": "afe8cffe04469475cbb2b087938930c1d934b0cc3bab55474c44ad91f579669d",
+      "selected_version": 800078,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\asly1.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "84b4af0db6b9e4d067f676bd051179788e9297be43b3035388af858033522a3a",
+      "selected_version": 800078,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\frequency_11.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Deformation/Plot1/cwPostDlgParam",
+      "sha256": "aa13232830889d8b8fcfdd96c2d3ce6db0b5aef8e81f28f31c5014039b6df483",
+      "selected_version": 800078,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\frequency_11.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "c5bb81268d281bd1067c8f814c96312e95043a6da21c37915ec7bb8f857b5053",
+      "selected_version": 800078,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\motor_frame.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "e610c1faa9a9f4628037da0963dff3c861a4039b5e77bf35c0faf136009363be",
+      "selected_version": 850023,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\motor_frame.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Strain/Plot1/cwPostDlgParam",
+      "sha256": "128a633ae26b444fe02ebf5ce028ff8243b8eea10ea82f06d88685185ddc819e",
+      "selected_version": 850023,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\motor_frame.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "68b5e2b6e5dc71efc4c24834b3f3e2e2b7ab3de90de43a2ecff65114ee1601b1",
+      "selected_version": 850023,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_3dnlg1.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "f223d7c07801cba0ae43617cd9923195bc7525e63e01faa9bd0f952f93f3c6aa",
+      "selected_version": 890518,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_3dnlg1.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Response/Plot1/cwPostDlgParam",
+      "sha256": "b0aff0b4d0be9ecd9f643ccebd3621aa7dbaf1beb987d0fa1323c73eb39b74eb",
+      "selected_version": 890518,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_3dnlg5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "a106095cc7887aecebbc84d0bd693c7b02068011cdba28b29f5172cc4b9193d8",
+      "selected_version": 890518,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_3dnlg5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot2/cwPostDlgParam",
+      "sha256": "cd069fd18ade23ec8b6231762debc24e5151cbd61af9a0fae5db5c95411f52e2",
+      "selected_version": 890518,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_3dnlg5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot3/cwPostDlgParam",
+      "sha256": "4199750a5ea81bf824eb193ecbfeaa00de6267be6f944ba43b542586a3373abe",
+      "selected_version": 890518,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_3dnlg5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot4/cwPostDlgParam",
+      "sha256": "b100f5668fcf0a909c1a2105ca1eafa8e4b0d1b87ffe8405ea9c015750da82ce",
+      "selected_version": 890518,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_3dnlg5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot5/cwPostDlgParam",
+      "sha256": "6d1c67487e04e5b26ccdc997b0cd545a276ee52706bd110a48dee52e1a1645ed",
+      "selected_version": 890518,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_3dnlg5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot6/cwPostDlgParam",
+      "sha256": "83c14022f32113004228b8eb419ef8609e26cbabb81f6a46e0485d0377c7a8b0",
+      "selected_version": 890518,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_3dnlg5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Response/Plot1/cwPostDlgParam",
+      "sha256": "6fdab8ada69a43418acf13117a9e088e5cc67843ee4830bf778e285ee78d7b36",
+      "selected_version": 890518,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_3dnlg5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Response/Plot2/cwPostDlgParam",
+      "sha256": "21b361b7e24a7fe7b8d1e5d25ff163d715cace6d122ed8afb0d2dfe0829b1566",
+      "selected_version": 890518,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_3dnlg5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Response/Plot3/cwPostDlgParam",
+      "sha256": "6ecfaca934feae1688e7cc7c785554ed01424a79b0982891201543ebe290d8c0",
+      "selected_version": 890518,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_3dnlg5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "940634bf6b3159081e85986b0d655039c724d52e881321fcbc9043c0d5da0871",
+      "selected_version": 890518,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_3dnlg5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Response/Plot1/cwPostDlgParam",
+      "sha256": "c4b2467747f782fc353065e47ee5ba7b1c6551af85002edda5ca6872fa524f59",
+      "selected_version": 890518,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_3dnlg5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Response/Plot2/cwPostDlgParam",
+      "sha256": "e2cd585c87b686a2b528f5d89f4267d45bc740129b15bd437f27c634f2f4f147",
+      "selected_version": 890518,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_3dnlg5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Response/Plot3/cwPostDlgParam",
+      "sha256": "d25018418d69baa559bb4bae714bc52cde6d91184045dd065b2fdc1987d1336c",
+      "selected_version": 890518,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_3dnlg9.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "ec60ee8ef2aee634984a4d63442100b599d2383b0d58525ae79172ee1f33effa",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": 5,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "41007800690073003100",
+      "text_code_units": [
+        65,
+        120,
+        105,
+        115,
+        49
+      ],
+      "wire_text_presence_assumption": true,
+      "conditional_branch_view": {
+        "branch": "fixed_output",
+        "fixed_output_raw_hex": "0000803f0000803f0000803f00000000"
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_3dnlg9.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Strain/Plot1/cwPostDlgParam",
+      "sha256": "8e3461df43d76a211079feb020cd78e8a7f04b97835b6855f29ac55847b328de",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_3dnlg9.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "2b1b8f838b3c13741a6c0634020dbe8d33dbcc9338a92cd268d43ea82b8c6003",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_gnl5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "33c07acdd3c81265e6533fce622980e996bc081771f898191a6415bb9b7a3a7f",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_gnl5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Response/Plot1/cwPostDlgParam",
+      "sha256": "c4b2467747f782fc353065e47ee5ba7b1c6551af85002edda5ca6872fa524f59",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_gnl5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Response/Plot2/cwPostDlgParam",
+      "sha256": "e2cd585c87b686a2b528f5d89f4267d45bc740129b15bd437f27c634f2f4f147",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_gnl5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Response/Plot3/cwPostDlgParam",
+      "sha256": "c72665047e7f52a12062272a49e25eae243c1f3002aef73c624ae9888767406b",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_gnl5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "f93d57f5940dc13d1e439bb9ce70bf95c9cca78ccf562f1be7b4d26b2ba45779",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_gnl5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Response/Plot1/cwPostDlgParam",
+      "sha256": "97c317339c0549db002c3de9c0be9c70ea64ee4c0431d631e13497e951951dc5",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_gnl5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Response/Plot2/cwPostDlgParam",
+      "sha256": "b672f73d359232195c9c609868d26c136ebfb459349f89fb240404e0104afca9",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_gnl5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Response/Plot3/cwPostDlgParam",
+      "sha256": "d25018418d69baa559bb4bae714bc52cde6d91184045dd065b2fdc1987d1336c",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_gnl5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "14fe5370cdb39b8ae5f9d4e7e482bb01d517acded15c0975c404e2f7bd5af038",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_gnl5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Response/Plot1/cwPostDlgParam",
+      "sha256": "aae4316887e7ed324b850b753ae6ea3b8690799517ac7c6e9a9f8936f1f16c66",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_gnl5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Response/Plot2/cwPostDlgParam",
+      "sha256": "4e8cf8736a8b83842698c5db15c1946cf5720dceaf2fef80d43e11d051a42f75",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_gnl5.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Response/Plot3/cwPostDlgParam",
+      "sha256": "d7684730601662459286ed7abda57eeadb9d52aaeffe09159fa32ac72bb8b032",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_gnl6.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "dcdb02f3ec3e0075136752a4abab1c9b33897bdd2e057f34040b23ecd146c147",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_gnl6.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Response/Plot1/cwPostDlgParam",
+      "sha256": "faf96f937daeeae9f0584a14a5eddf1d05175377e6e18f9049d2f0fa85fcc97c",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_gnl6.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Response/Plot2/cwPostDlgParam",
+      "sha256": "ca21bb8001811842adc5e1baf32fd9ce593dca4742de75b3fe093fc700383812",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_gnl6.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Strain/Plot1/cwPostDlgParam",
+      "sha256": "30a70e4d1f3ee4bd8a01d3e557f00daba1e909da640e709cfe4eb7e35241e664",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_gnl6.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "5499ada23c56b7dc50240f068795ad2d1c032af3cf20786b06d6b60386795b2c",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_gnl7.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "0c16b73f7a4705c9255b5eb5c851dba2de79050418e9d4ac81cbdcc2b3f13069",
+      "selected_version": 890518,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_gnl7.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Response/Plot1/cwPostDlgParam",
+      "sha256": "22ebe487adf5903d996b0af43fd2e48784049053cc6fcaa4308b879776abbf81",
+      "selected_version": 890518,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_ic43.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "779f7a9c44d2bd5c1a4808609946de9b42ac38af406ee09efb55a061e1c9e7db",
+      "selected_version": 840023,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_ic43.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot2/cwPostDlgParam",
+      "sha256": "04c0d56d060e82f2dfda1d91472d0c31ca3c0592032ddb2e98ead88eca966441",
+      "selected_version": 840023,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_nl5a_b.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "d1f8b63589a55994b8f6083ee49099cd443846a98cb94b58f1f73bd1d9cfb86e",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_nl5a_b.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Response/Plot1/cwPostDlgParam",
+      "sha256": "e981b3c700965c43aacccf681142f49519d9de4f5b65c79f94f1b912a7053123",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_nl5a_b.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Strain/Plot1/cwPostDlgParam",
+      "sha256": "1233c6ef8d636a47f8f0d6cb27da4af20af160f8e30fa61eed50f221da2b899b",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_nl5a_b.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "0080532b731f037f1e925eb582061ef0607202781c0d7487ecc6aa9b55693007",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_nl5a_b.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "d50280855e037d39a24c1c0b98a3defbd5909e91613f5dc1a10c91b511924b8f",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_nl5a_b.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Response/Plot1/cwPostDlgParam",
+      "sha256": "c4b2467747f782fc353065e47ee5ba7b1c6551af85002edda5ca6872fa524f59",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_nl5a_b.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Strain/Plot1/cwPostDlgParam",
+      "sha256": "2d70e2c529906d97b67734fb6bcde71a523eab5209722d432bdfa5531896722b",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_nl5a_b.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "1894070c37df4e75ddb92d667c1ce315da9afdb66b4b2709998cb38610a37a1f",
+      "selected_version": 890610,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_nl9.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Thermal/Plot1/cwPostDlgParam",
+      "sha256": "e6b068d41cf33d5b7c3079bf2acd8448c5457516f131f6d4ddc3d42367278f9d",
+      "selected_version": 890518,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_nl9.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "fae086d29c6433a0eae347cdd008bf15638499b567d68a21ea37d9f5cff2f316",
+      "selected_version": 890518,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_nl9.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Strain/Plot1/cwPostDlgParam",
+      "sha256": "9d1743be9e2cc849dd65f3228968c8801513efbee4524b90265e6b448149afdf",
+      "selected_version": 890518,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_nl9.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "b57556b440f9b6dbee1ee6677afa78e5c894c20b7bffdb5794498bf1d3d31b53",
+      "selected_version": 890518,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_nl9.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Stress/Plot2/cwPostDlgParam",
+      "sha256": "1977f95d5f74e621af527be17dabc3f7cbd09927c44d77e248828b1c0848396a",
+      "selected_version": 890518,
+      "scope": "strict_eof",
+      "word570": 5,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "41007800690073003100",
+      "text_code_units": [
+        65,
+        120,
+        105,
+        115,
+        49
+      ],
+      "wire_text_presence_assumption": true,
+      "conditional_branch_view": {
+        "branch": "fixed_output",
+        "fixed_output_raw_hex": "0000803f0000803f0000803f00000000"
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_nl9.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Stress/Plot3/cwPostDlgParam",
+      "sha256": "1127ddb39a267b1d851b5f43505f0a85ad1840a80c984ceab9dae24bed2aa1e0",
+      "selected_version": 890518,
+      "scope": "strict_eof",
+      "word570": 5,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "41007800690073003100",
+      "text_code_units": [
+        65,
+        120,
+        105,
+        115,
+        49
+      ],
+      "wire_text_presence_assumption": true,
+      "conditional_branch_view": {
+        "branch": "fixed_output",
+        "fixed_output_raw_hex": "0000803f0000803f0000803f00000000"
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "831f8bf11b9b14b75ee054c42879e226fa0367e7175f6bd827b76b153c0751d1",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot10/cwPostDlgParam",
+      "sha256": "c9cb8f29ce9091704fb2c2c2ec42f26514ea62ed6d5de5544c04ae1ee40d774a",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot11/cwPostDlgParam",
+      "sha256": "e18265765d4ca46ae835c8791da5b10a467c19fd4eb93c82d3c2c4317b75fe16",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot12/cwPostDlgParam",
+      "sha256": "dadb712142d3eebc04dbac0dbd8017b96e2bcb9a27cd0782a5badfdbade23dde",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot13/cwPostDlgParam",
+      "sha256": "aa3f72b2fbbca9b9aab611ba37d390981ec321fb7b5734ee94be3fb926a96503",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot14/cwPostDlgParam",
+      "sha256": "a0d29424ee436d7653c009010b366d340d94247c567686204005c8df6a4ea3d6",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot15/cwPostDlgParam",
+      "sha256": "cf5e8849a63b03ee541b248fac4207d57e82bbf25c9a270ca2319281514c6fb1",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot16/cwPostDlgParam",
+      "sha256": "ae72cb6c1b7a0a42ae9ad27f09b64e199b4158de0bf9bb10d81234e493aaa870",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot2/cwPostDlgParam",
+      "sha256": "c1b7f6bc00ec90666b5ddbcaab77edcca368937e0fe1dd2a489f6439643c98c6",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot3/cwPostDlgParam",
+      "sha256": "4a37b31a59bb8c393a1d06ff1861aafaac802ef106af910642d04d62ac28e001",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot4/cwPostDlgParam",
+      "sha256": "dc42a3e413a19781be843ec593d4038afc74ea40b2500794f2b9711dd7025b9f",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot5/cwPostDlgParam",
+      "sha256": "fef147bfd7c9f76d02a554dec9954e680e682d09de955860099a173348854e1d",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot6/cwPostDlgParam",
+      "sha256": "1263228391e21867525bdca85ba6d03865f6464c83e6b0adf5794a1294957e1f",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot7/cwPostDlgParam",
+      "sha256": "e326e9222cf3704d7ec00e7ec40257c1c07843af2aa692cc89436fd620fd6a66",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot8/cwPostDlgParam",
+      "sha256": "be5608afec9e1f257ed32ec6e3d17d9f8a49ca9c5dabecaa30344a6658eb893e",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test13r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot9/cwPostDlgParam",
+      "sha256": "8f50467ed5b16760a450ddb4b4d2da24e1954dafc1921d7ec303fb529850e45a",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "1439770ea162d4f4421e48d61a8c0bebb4a11571dd86fc15a9a687a035efaf9e",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Response/Plot1/cwPostDlgParam",
+      "sha256": "8140a272bd1dff60c9d01b2715ca8bb42e8ce3e71834909ba0a966e007d3f693",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Response/Plot2/cwPostDlgParam",
+      "sha256": "5eda29b76d844809ec07e51639ab710d9b935af6a1942636f71abca16b7e6eb7",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "3068cf52febe9e0dee938d232da3df07c6d39403f29b36772474646726e903ca",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "80590926f48383ddcb7c5489eb654c0baf5657077dbd2593f422a5be38d0d673",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Response/Plot1/cwPostDlgParam",
+      "sha256": "8140a272bd1dff60c9d01b2715ca8bb42e8ce3e71834909ba0a966e007d3f693",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Response/Plot2/cwPostDlgParam",
+      "sha256": "5eda29b76d844809ec07e51639ab710d9b935af6a1942636f71abca16b7e6eb7",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "64666b69a3e9313fd2958ff980ffa12ff18d4bedebc31326b6ab5a0dcf4215bd",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "06540332de568fa3db843e90ac4413fd7e548c8b9093126b8563f957e26ac088",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot10/cwPostDlgParam",
+      "sha256": "89761bd7d55ecf12a2554c81d1146228141528e59d8bb38b1ed267bfae5c116f",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot11/cwPostDlgParam",
+      "sha256": "c3ab099c12fb634f801cf6ef9cc86d71ffda6309410eaf4e3999ea40370248f5",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot12/cwPostDlgParam",
+      "sha256": "d3b9ccecc5500237900e228fba5313151b5e92ba7b394ec223cb19a2a441b15a",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot13/cwPostDlgParam",
+      "sha256": "4a20d2f7dab233ae0a26ef304040312380a576d033a83dfcbc4fd417e86358a5",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot14/cwPostDlgParam",
+      "sha256": "ab2923cb7e16a27f57e6ef3457d995571f8e7bb8ae6cf6e0075440521f911815",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot15/cwPostDlgParam",
+      "sha256": "6606b6c21ff79d2dffa8b3360f6a889fb7bb71dafe753a87dca9266aa4c800e8",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot16/cwPostDlgParam",
+      "sha256": "30e22f90c2c7948ba996acf7f7e5902b162e46bbe596f464e75735e5033b8a13",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot2/cwPostDlgParam",
+      "sha256": "2ef513126f625eed613971b0126b9d57286fe37d3747d05485ac5faf8b7b7a4f",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot3/cwPostDlgParam",
+      "sha256": "9ff55e61ba4f04cf4571ac613f12c140ad1a849a25919f63e39aa2687a0d9376",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot4/cwPostDlgParam",
+      "sha256": "eec0f33a40dc7f6e3a4b0a4d58868d697370fb584e05b4302787f589fb3746bb",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot5/cwPostDlgParam",
+      "sha256": "534b390d53154cab054f3615b0066f7de895347e9ce581d26b223a68a53f41d3",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot6/cwPostDlgParam",
+      "sha256": "3a8bce9b7ef1abb525f231eb89bd43a31dd907262d4bdde6427f14a6b5b928f6",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot7/cwPostDlgParam",
+      "sha256": "3aacdc4213bbea79ab6b4dfbfdc015d80a82e419747f9037aca192dc7a32d33a",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot8/cwPostDlgParam",
+      "sha256": "89ad0912e28d6798d77575bb0d8b66dc6a8aa1f15157d220df31f945786fb5fb",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21h.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-2/Results/Displacement/Plot9/cwPostDlgParam",
+      "sha256": "55cb1a273cc83e3f7fc9ac3f16c5981d5b1b381086749c28684b0d21c02ebd1a",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "831f8bf11b9b14b75ee054c42879e226fa0367e7175f6bd827b76b153c0751d1",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot10/cwPostDlgParam",
+      "sha256": "c9cb8f29ce9091704fb2c2c2ec42f26514ea62ed6d5de5544c04ae1ee40d774a",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot11/cwPostDlgParam",
+      "sha256": "e18265765d4ca46ae835c8791da5b10a467c19fd4eb93c82d3c2c4317b75fe16",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot12/cwPostDlgParam",
+      "sha256": "dadb712142d3eebc04dbac0dbd8017b96e2bcb9a27cd0782a5badfdbade23dde",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot13/cwPostDlgParam",
+      "sha256": "aa3f72b2fbbca9b9aab611ba37d390981ec321fb7b5734ee94be3fb926a96503",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot14/cwPostDlgParam",
+      "sha256": "a0d29424ee436d7653c009010b366d340d94247c567686204005c8df6a4ea3d6",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot15/cwPostDlgParam",
+      "sha256": "cf5e8849a63b03ee541b248fac4207d57e82bbf25c9a270ca2319281514c6fb1",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot16/cwPostDlgParam",
+      "sha256": "ae72cb6c1b7a0a42ae9ad27f09b64e199b4158de0bf9bb10d81234e493aaa870",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot2/cwPostDlgParam",
+      "sha256": "c1b7f6bc00ec90666b5ddbcaab77edcca368937e0fe1dd2a489f6439643c98c6",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot3/cwPostDlgParam",
+      "sha256": "4a37b31a59bb8c393a1d06ff1861aafaac802ef106af910642d04d62ac28e001",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot4/cwPostDlgParam",
+      "sha256": "dc42a3e413a19781be843ec593d4038afc74ea40b2500794f2b9711dd7025b9f",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot5/cwPostDlgParam",
+      "sha256": "fef147bfd7c9f76d02a554dec9954e680e682d09de955860099a173348854e1d",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot6/cwPostDlgParam",
+      "sha256": "1263228391e21867525bdca85ba6d03865f6464c83e6b0adf5794a1294957e1f",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot7/cwPostDlgParam",
+      "sha256": "e326e9222cf3704d7ec00e7ec40257c1c07843af2aa692cc89436fd620fd6a66",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot8/cwPostDlgParam",
+      "sha256": "be5608afec9e1f257ed32ec6e3d17d9f8a49ca9c5dabecaa30344a6658eb893e",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nafems_r0016_test21r.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot9/cwPostDlgParam",
+      "sha256": "8f50467ed5b16760a450ddb4b4d2da24e1954dafc1921d7ec303fb529850e45a",
+      "selected_version": 840017,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nl2a_part1.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "f2506d1a6dc6c185a76a0dedd9b9c2de44de6e56a8b259ba7eb816f4135184b1",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nl2a_part1.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Strain/Plot1/cwPostDlgParam",
+      "sha256": "d2345eca1990d9d6636ada3cc66b7604aaa1f10785cdcf4bcafd6d29807861d5",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nl2a_part1.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "aa4478ea99bc125899a0ab86e3c8046a197a4318ae1d6447f17b1fc367678a09",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nl2a_part2.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "f2506d1a6dc6c185a76a0dedd9b9c2de44de6e56a8b259ba7eb816f4135184b1",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nl2a_part2.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Strain/Plot1/cwPostDlgParam",
+      "sha256": "d2345eca1990d9d6636ada3cc66b7604aaa1f10785cdcf4bcafd6d29807861d5",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nl2a_part2.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "aa4478ea99bc125899a0ab86e3c8046a197a4318ae1d6447f17b1fc367678a09",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nl2a_part3.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "f2506d1a6dc6c185a76a0dedd9b9c2de44de6e56a8b259ba7eb816f4135184b1",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nl2a_part3.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Strain/Plot1/cwPostDlgParam",
+      "sha256": "d2345eca1990d9d6636ada3cc66b7604aaa1f10785cdcf4bcafd6d29807861d5",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nl2a_part3.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "aa4478ea99bc125899a0ab86e3c8046a197a4318ae1d6447f17b1fc367678a09",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nl2c_part1c.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "f2506d1a6dc6c185a76a0dedd9b9c2de44de6e56a8b259ba7eb816f4135184b1",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nl2c_part1c.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Strain/Plot1/cwPostDlgParam",
+      "sha256": "d2345eca1990d9d6636ada3cc66b7604aaa1f10785cdcf4bcafd6d29807861d5",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nl2c_part1c.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "aa4478ea99bc125899a0ab86e3c8046a197a4318ae1d6447f17b1fc367678a09",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nl2c_part3.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "f2506d1a6dc6c185a76a0dedd9b9c2de44de6e56a8b259ba7eb816f4135184b1",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nl2c_part3.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Strain/Plot1/cwPostDlgParam",
+      "sha256": "d2345eca1990d9d6636ada3cc66b7604aaa1f10785cdcf4bcafd6d29807861d5",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nl2c_part3.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "aa4478ea99bc125899a0ab86e3c8046a197a4318ae1d6447f17b1fc367678a09",
+      "selected_version": 830038,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nonlinear_static_5a.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Deformation/Plot1/cwPostDlgParam",
+      "sha256": "7e86471a217fbbd99edf5c54c13e9072cfd17be827e8e9f6a3aae9f999459043",
+      "selected_version": 800078,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nonlinear_static_5a.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/ures/cwPostDlgParam",
+      "sha256": "a5d0849c6fbe9810adb9afa133b0b9ad87dd5b581b9c9192223cf4d3ecc1d730",
+      "selected_version": 800078,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nonlinear_static_5a.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/ux/cwPostDlgParam",
+      "sha256": "76fbd3f4fe031f28bb40e0ed831ad069e225c945ba9c821704cf0f135f33cb43",
+      "selected_version": 800078,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nonlinear_static_5a.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/uy/cwPostDlgParam",
+      "sha256": "5a11ef0a5d5487f2fffe945e17134c925874430bf3393a5543328dd011477b86",
+      "selected_version": 800078,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nonlinear_static_5a.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/uz/cwPostDlgParam",
+      "sha256": "abfc984188bb0e1923e3f7d11f9b7dfd407ff89e09601e5f3e1c57f6ca442f6b",
+      "selected_version": 800078,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nonlinear_static_5a.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Response/Plot1/cwPostDlgParam",
+      "sha256": "65c5d29aa36de9fa02827d3d1682b10421c581f05ca744d72564675252cfd916",
+      "selected_version": 800078,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nonlinear_static_5a.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Strain/Plot1/cwPostDlgParam",
+      "sha256": "8d0c2756efb79876ae962758ecd0244b842aeccb02622b326f04606a1eb42d7f",
+      "selected_version": 800078,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nonlinear_static_5a.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "b06fd5363a219b88381703fdf9276d1fb3a5b2669b018cd10418454f32b52caf",
+      "selected_version": 800078,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\vessel weldment.sldprt",
+      "stream": "CosmosXpress/StudyManager/COSMOSXpressStudy/Results/Deformation/Plot3/cwPostDlgParam",
+      "sha256": "e54ed43ad1b4df4e89c543b8d2953129a0462d97005e13cab8bfb363ba7a9695",
+      "selected_version": 810030,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\vessel weldment.sldprt",
+      "stream": "CosmosXpress/StudyManager/COSMOSXpressStudy/Results/Design Check/Plot4/cwPostDlgParam",
+      "sha256": "7038d7f669948d8159189b93063f99f912680d5721c3b4c15c68b2c6472379c3",
+      "selected_version": 810030,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\vessel weldment.sldprt",
+      "stream": "CosmosXpress/StudyManager/COSMOSXpressStudy/Results/Displacement/Plot2/cwPostDlgParam",
+      "sha256": "409493e3985a81adf477c6f933db45250c0f6238df56f71d8cca996a60054ab1",
+      "selected_version": 810030,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\vessel weldment.sldprt",
+      "stream": "CosmosXpress/StudyManager/COSMOSXpressStudy/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "5187aefdfb73ced61e75c664ecaf1452ac5267c0735d3a8377811f8c0055009e",
+      "selected_version": 810030,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\beam_boltconnection.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "d87947d31dd7d9ad79f61ae436e1296187a9ebe299e5eeadffc0ae032d898eda",
+      "selected_version": 890319,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\beam_boltconnection.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/PinBoltBearing/Plot1/cwPostDlgParam",
+      "sha256": "63cc1c6713e8e0990cc71c83d14551003c983be8affd6ec7314861a8b8128235",
+      "selected_version": 890319,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\beam_boltconnection.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Strain/Plot1/cwPostDlgParam",
+      "sha256": "36328f3a5fedeb012acf5f3b188e3537e8dcd01b164862485d51c0847e315037",
+      "selected_version": 890319,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\beam_boltconnection.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "87e305f17e2e8b246d0a971c59da648e4395e49325f809fe22b2d7c2e7e3dc28",
+      "selected_version": 890319,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\lineardynamic.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "352bcb72784e233cf17dab01ac1648ea93f22a257285a0f1da991dd20ad8cf81",
+      "selected_version": 880012,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\lineardynamic.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Strain/Plot1/cwPostDlgParam",
+      "sha256": "b7506c9a4677d336db537bd2fc7105db3d8dd918053b5575cd9561b56457fc3f",
+      "selected_version": 880012,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\lineardynamic.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "5f73c0459237951786a4ca6d0b7fc93df8c4802c843bf8835987463414b40505",
+      "selected_version": 880012,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\loop.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "bbd0cdd353c9ea850ff0212cf1f258869d90e819d7376f0ba5cca2f2b347c48a",
+      "selected_version": 850024,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\loop.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Shear Moment Plot/Plot1/cwPostDlgParam",
+      "sha256": "2275d05c5a2affff9c9a8044f2a7757e59c64c7ad5270805d8d3b90574cc9d9e",
+      "selected_version": 850024,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\loop.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "9fa59b730a4a40738bb0c0edc5126ae24bd93bdb708dfa9982ba89b80e9a65a1",
+      "selected_version": 850024,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\remoteload.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "d0931adfdde4d0bfe3785b49973e8f3d6afd4f0e18e9879a9e89be2b43d32947",
+      "selected_version": 870014,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\tjoint.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "6969b0d66273ede6917adc01f37db1d32fb800fba072d9c233f15baa00deaee7",
+      "selected_version": 860006,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\tjoint.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/EdgeWeldConnector/Plot1/cwPostDlgParam",
+      "sha256": "78f96eda1d8637a0b8c0dabb0b8eb81eae939630a9877d6a71b1a553c9ddea73",
+      "selected_version": 860006,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\tjoint.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Strain/Plot1/cwPostDlgParam",
+      "sha256": "997711760cc41b4be77ebc26ce145646341f6369cccee53d11c58eb78021168a",
+      "selected_version": 860006,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\tjoint.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "b138e9bf519a22979502ba634332d8e83a49e0020f2cb44d2bf55e728453db22",
+      "selected_version": 860006,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\weldment_box3.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Deformation/Plot1/cwPostDlgParam",
+      "sha256": "a74e96d3bded3d5165229dd27c60dc9a454a3543d8335c8a4d4a2653223bdc39",
+      "selected_version": 870014,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\weldment_box3.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Displacement/Plot1/cwPostDlgParam",
+      "sha256": "fb2f7e727c2ca496cb4f51ad316eebb04182cc7589826e42ebb9b0fc21432a45",
+      "selected_version": 870014,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\tutorial\\api\\weldment_box3.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/Results/Stress/Plot1/cwPostDlgParam",
+      "sha256": "3a68129f2d78d65444ba322ed61be3916830821af1d207cdc5115e24b29d4926",
+      "selected_version": 870014,
+      "scope": "strict_eof",
+      "word570": -1,
+      "selector_wire_offset": 132,
+      "text_wire_offset": 140,
+      "text_raw_hex": "",
+      "text_code_units": [],
+      "wire_text_presence_assumption": false,
+      "conditional_branch_view": {
+        "branch": "cwPostCommon_delegate",
+        "fixed_output_raw_hex": null
+      }
+    }
+  ],
+  "summary": {
+    "ordinary_text_payloads": 224,
+    "cwPostCommon_delegate": 221,
+    "fixed_output": 3
+  },
+  "repeated_native_summary": {
+    "streams": 224,
+    "bytes": 496979,
+    "complete_streams": 224,
+    "complete_bytes": 496979
+  },
+  "repeated_tests": {
+    "run": 14,
+    "output": "..............\n----------------------------------------------------------------------\nRan 14 tests in 0.171s\n\nOK\n"
+  },
+  "tests": {
+    "run": 2,
+    "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+  },
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_vector_direction_branch_audit.py": "3a0ca369b0af9a9d004bc1d6e27272f24f95f5e25a4bc9fc26e1bf15f2e19be7",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-post-vector-data-probe.json": "0d29a62a08891a49ad95bb634d618bfa23e9a788bd388009c694796a0b767c89",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_vector_direction_branch.py": "0a1797c5a256101e54a47b9ff1bf5d01f3a3d10d04e83b0c3440e8330b3fefca",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\test_cosworks_vector_direction_branch.py": "526fda7f658a001f730a09404e8499cededf6687957b4ef1d139639190c71f8a",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_post_dialog_prefix.py": "f593624a59b5b3b0631d3258e5b00c1389a2cedf44da632f7a1ab3abf3dfe696",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-post-dialog-reader-probe.json": "23d21a615ce401c785b98d5f64a3bcd5049d70280c919b5ef95168d3537f1d21",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-post-dialog-native-evidence.json": "d679aabfee88349b87a2d4d31e242c89eee65f3ab77dc4168325cf4cb6526547"
+  },
+  "target_executed": false,
+  "coverage_credit": 0,
+  "limitations": [
+    "Loaded CString presence supplied explicitly; native views condition it on ordinary wire text, not observed reused-object state",
+    "Embedded-NUL wire strings are excluded from inferred text-presence views",
+    "Delegate body and complete vector/coordinate-system semantics not decoded here",
+    "Four output words are preserved without homogeneous-coordinate or normalization assumptions"
+  ]
+}

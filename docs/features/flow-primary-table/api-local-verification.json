@@ -1,0 +1,59 @@
+{
+  "feature_issue": 241,
+  "base_commit": "d4abfa5c324dd68353230f1aa77a713c619ed5d8",
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "command": "cargo test --test flow_primary_table_fixtures --test flow_medium_object_fixtures --test flow_medium_reference_fixtures --test flow_metadata_fixtures --locked",
+  "passed": 101,
+  "failed": 0,
+  "ignored": 1,
+  "ignored_explanation": "Primary subprocess worker is ignored standalone and executed twice by the passing parent test",
+  "primary_passed": 16,
+  "complete_read_cases": 5685,
+  "independent_patch_cases": 1402,
+  "clippy_command": "cargo clippy --tests --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "public_send_sync_types": 14,
+  "concurrency_workers": 8,
+  "fresh_processes_compared": 2,
+  "source_lf_sha256": {
+    "src/flow/legacy_tables/mod.rs": "e1f489f3a788f6cd673e0a45cb36f4f6a3f04b59812e23caa06b56acea6b4455",
+    "tests/flow_primary_table_fixtures.rs": "4f3d61b5f2df6388f6f178925608d304ed7cef78cdb369c61ef04335e287b8cf",
+    "README.md": "084e5c3e76765fef52a2e9129b1c5a9eaa88738cb8662bb72edacb9298e1801d",
+    "CHANGELOG.md": "f6e86766e4d715655ebb896890a7dd9d653ffe30ad4f6772a63ea78b95af95b0",
+    "docs/features/flow-primary-table/README.md": "203e7302d7be8498ee79766a078f8eff3c45fb172c3881e45fdca88f298cc290",
+    "src/flow/legacy_tables/primary_table/decode.rs": "1d5470cebf7206222f47cd8738998381094b6611bf8a8732d36973cd63ec5b7b",
+    "src/flow/legacy_tables/primary_table/edit.rs": "827493c4713326ecc63e3b6902340fe91f004126376b1b519c1e96a36dcbdd93",
+    "src/flow/legacy_tables/primary_table/fields.rs": "90f4c2c720c086640ed2d6712c67d277afdf55d343c4517f4121d23209e5f4c2",
+    "src/flow/legacy_tables/primary_table/mod.rs": "d0dfade9b6e9bc18527dac9d87e3c6059a126b050d02c14595963daf48a0c1a2",
+    "src/flow/legacy_tables/primary_table/scan.rs": "82889179059c233a3383c5e3d54b17e49f53deb012aa0bc8a13f73c65af50be5",
+    "src/flow/legacy_tables/primary_table/schema.rs": "3a16331dea76f0e09558daec7829e185a26cd1e565ee908f6997c72e2484eb84",
+    "src/flow/legacy_tables/primary_table/types.rs": "cd584f5ed2a1096f463bf8fc67836f1108b5b38c24f7e63f7584ff6727a6b7d3",
+    "src/flow/legacy_tables/primary_table/view.rs": "6401f7af5f1d8619077ac25b40bcbaf19d554aec661093dcf15eb643085f9b1b",
+    "tests/flow_primary_table/api/contracts.rs": "4fcdc59db839eb07aadaa59bdc1bd6bd6967f2aae0a8afc4675f4a0717dc508f",
+    "tests/flow_primary_table/api/edit.rs": "a18607d85ee73203e1d3ac6483460c5a9e238c146b55807771d1116eb7b19d25",
+    "tests/flow_primary_table/api/expected.rs": "cc506744b3c5740b25df7668e253d3a7596257f21d469f99a74ab530512a724f",
+    "tests/flow_primary_table/api/read.rs": "fffd842eeba0bb30f4aae04626695815d7912f091cc1edb8a0ff4154284ea675",
+    "tests/flow_primary_table/api/replay.rs": "6f3764a5b43605a9476498b5649abf3535eaa954b532a3a52a87b48b47af16f4",
+    "tests/flow_primary_table/api.rs": "c68c4f7191993a5f5161e5a40cde994c90f31681751a7585e1e3892614f30d29"
+  },
+  "log_sha256": {
+    "flow-primary-table-api-tests.log": "7224a385fa54333999114e9e8e030ac65b5daffdf28f5a606a4fa0f8c11c6639",
+    "flow-primary-table-api-clippy.log": "0dc11d2f65d27b5895fbafc8367f48ad6c18443ba0d21d64bee18ad185725024"
+  },
+  "reference_sha256": "f70e6110125bc3c3c3cf5acbf2166bb2d5d1e8def2b808228486f395c3e8e331",
+  "fixture_gzip_sha256": {
+    "patches.bin.gz": "4fce86bfa7140c22c46ea5320baf4ec808f481fab152cc1271d3374470be6f59",
+    "primary.bin.gz": "d27ccd851de32cdcd855c6ba4a91ad5f879ab6a43b7a0e149148b1597359f7e6"
+  },
+  "scope": "Complete raw primary-class versions0..3; all Source values, roles, ancestry and intervals; disjoint complete field-byte coverage; independently counted present empty descriptors; exact typed patches, noops, history, fresh reversals; all compact version/factory prefixes and counts; independent aggregate bounds; immutable revision-bound views and isolated concurrent edits",
+  "exclusions": [
+    "Populated native fixture acceptance",
+    "Native allocation/runtime/engineering/application acceptance",
+    "Full PR gate for this new frozen revision",
+    "Cross-platform ThreadSanitizer CI for this new revision",
+    "Performance comparison: no earlier typed record439 API or published release comparator exists"
+  ],
+  "humanizer": "Unavailable; prose pass left to maintainer review"
+}

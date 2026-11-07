@@ -1,0 +1,48 @@
+{
+  "issue": 195,
+  "status": "First complete comparison operation; broader integration gates remain open",
+  "baseline_revision": "88a85046",
+  "tests_passed": 8,
+  "failed": 0,
+  "ignored": 0,
+  "process_exit_code": 0,
+  "independent_checksum_vectors": 172,
+  "metadata_cases": 22,
+  "native_pdf_variants": 3,
+  "concurrent_workers": 8,
+  "repetitions_per_worker": 8,
+  "comparisons_in_worker_stress": 11008,
+  "thread_comparison": "Complete values, completion, coverage, diagnostics, copied history, document ID and original XML against serial results in fixed order",
+  "ownership_checks": [
+    "Caller byte mutation cannot alter completed results",
+    "Failed comparisons leave source IDs valid",
+    "Duplicate stored Uid strings retain distinct physical owners",
+    "All six published source-comparison types explicitly assert Send/Sync"
+  ],
+  "checks": [
+    "Core Clippy warnings and missing docs denied",
+    "Integration-test Clippy warnings and missing docs denied",
+    "Unsafe forbidden",
+    "cargo fmt",
+    "Function bodies at most 20 nonblank lines",
+    "Source and integration files below 500 lines"
+  ],
+  "checksum_scope": "Private standard-library compatibility checksum; no dependency or public cryptography API added",
+  "rustc": "rustc 1.99.0 (b940084d7 2026-09-28)",
+  "file_sha256": {
+    "src/inspection/records/mod.rs": "2a15c36b2b7e1236b6727202a156586f355d5ca465ce01d1d983632d878b2f18",
+    "src/inspection/records/source_identity.rs": "8efb5c896dc15eab4aaac09f1f723a56a46dcfe4fa6bb6c9b56f4b58da4ef8aa",
+    "src/inspection/records/source_md5.rs": "aa6cf2c0a74cc82d96fc3d96b2bea52be66c982a973ae146f5c539daee194bcd",
+    "tests/inspection_source_identity.rs": "1957bdfb07eaef96b924c355af93555064a681cd27c13c8cd70b61ebc78321cf",
+    "tests/inspection_source_identity/contracts.rs": "eed80e25e68d72e9d605a86ef7236d91742f139f090108703a134195f07ca0cb",
+    "tests/inspection_source_identity/fixtures.rs": "2873600596ef55f169f6d04f22f218833611b78ca082f44b2d229713073ffc1e",
+    "tests/inspection_source_identity/native.rs": "34d3fdfc4d30913b74c780f93fb27734e2dc104b731affa2339abd9f61e5aac4"
+  },
+  "log_sha256": "c118e70f2892eaef7f45bd1e94b2619388b7a44368437ad8747300b37f9f5796",
+  "remaining": [
+    "Fresh-process Rust result bytes",
+    "Unchanged Source agreement with actual Rust results",
+    "Complete local PR gate including new comparison API",
+    "Exact-head remote matrix"
+  ]
+}

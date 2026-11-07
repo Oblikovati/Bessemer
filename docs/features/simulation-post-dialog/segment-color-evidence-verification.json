@@ -1,0 +1,115 @@
+{
+  "issue": 166,
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "scope": "C892 stored1BC RGB consumer evidence",
+  "target_executed": false,
+  "original_binary_written": false,
+  "complete_method_instruction_counts": [
+    275,
+    136,
+    145
+  ],
+  "full_gnu_instructions": 556,
+  "independent_ghidra_instructions": 555,
+  "independent_exclusion": {
+    "address": "0x18015ece3",
+    "instruction": "nop",
+    "cause": "Ghidra no-return flow assumption after terminal call18015ecde",
+    "full_byte_verifier_retains": true
+  },
+  "decoder_qualification": {
+    "issue": 169,
+    "exact_captured_comisd_qualifiers": 6,
+    "changed_bytes_rejected": true,
+    "changed_text_rejected": true,
+    "unknown_addresses_preserved": true
+  },
+  "native_contexts": 276,
+  "native_distinct_rgb": 4,
+  "owned_contexts": 425,
+  "owned_named_colors": 405,
+  "owned_legacy_opaque": 20,
+  "wire_gate": "version>=700006",
+  "additional_stored_byte_credit": 0,
+  "targeted_source": {
+    "checks": 15,
+    "seconds": 5.214,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/segment-color-source-strict.log",
+      "bytes": 2365,
+      "sha256": "f00314a86e5fca22818bb3bfc23202658fcb18fe4ff4312b177e0de918b9a6bf"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/segment-color-source-snapshot.json",
+      "bytes": 613899,
+      "sha256": "456fa9c0ae021f2e2fe85be3d05eeebf4d7a90df776069e4570db0b138706e3c"
+    }
+  },
+  "shared_refactor_regression": {
+    "result": "passed unchanged",
+    "scope": "All original C887 complete bindings and qualification rejection boundaries",
+    "log": {
+      "path": "target/shared-decoder-qualification-regression.log",
+      "bytes": 102,
+      "sha256": "ac11c4054354bc391ad07f8964e3a15de09fc8e01be45e2710bdf625b19f0cb7"
+    }
+  },
+  "development_correction": {
+    "cause": "Twenty owned pre700006 contexts have opaque legacy styles; do not require or invent named1BC components",
+    "initial_source_errors": 1,
+    "initial_log": {
+      "path": "target/segment-color-source-write.log",
+      "bytes": 3317,
+      "sha256": "3815fbece482390fce69b6c0563f71721b0a487c077cb08183f6b6faa3d34b09"
+    },
+    "corrected_write_checks": 15,
+    "corrected_write_seconds": 6.393,
+    "corrected_write_exit_code": 0,
+    "corrected_write_log": {
+      "path": "target/segment-color-source-write-corrected.log",
+      "bytes": 2365,
+      "sha256": "8a7bc38b7b4b2797749c95a43e473969b148f7f8aebf341ef262a7645abbac1e"
+    }
+  },
+  "independent_capture_proof": "segment-color-rea-reference.json",
+  "installed_proof": "segment-color-installed-reference.json",
+  "oracle_kinds": [
+    "Complete byte/operand equality and exact named import slots",
+    "Independent Ghidra instruction locations, scalar widths and resolved RIP targets",
+    "Every original276 identity and all four raw component words from complete archive EOF",
+    "All425 owned complete archive contexts and exact legacy availability boundary",
+    "Exact-text/byte negative qualification regressions"
+  ],
+  "excluded": [
+    "Fourth component purpose or global nonuse",
+    "Actual runtime mode, helper invocation or drawing",
+    "Endpoint validity, assembly transforms, graphics state or complete geometry",
+    "New public operation API or stub"
+  ],
+  "pending": [
+    "Complete local operation with typed reached runtime and endpoint dependencies",
+    "Exact publication-cut PR validation and five platform gates",
+    "Remaining feature166 schemas and integration"
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 194,
+    "seconds": 517.964,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "74a56d6195f7b1285bcf4da9231d45d394fea890",
+    "log": {
+      "path": "target/segment-color-source-full.log",
+      "bytes": 46321,
+      "sha256": "07f68a35b76a3cc9badb1df0e3a40c05ed58c96798c6ec318bc73de86ce7facc"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 621169,
+      "sha256": "7fe24119ece7c25e571a3aceb06e3f0cce60db7af289b79fcab4a536bbdc8de0"
+    }
+  }
+}

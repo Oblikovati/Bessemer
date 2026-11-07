@@ -1,0 +1,129 @@
+{
+  "issue": 250,
+  "status": "focused checks passed; exact-source full PR and hosted gates pending",
+  "baseline_commit": "f3bf87a6",
+  "source_revision_before_api": "f3bf87a69fd840d1101ca1f720e116eade0237a3",
+  "platform": "Windows x64; Rust 1.99.0; CARGO_BUILD_JOBS=1",
+  "behavior_profile": 1,
+  "scope": "Explicit native unsigned timestamp arithmetic, immutable bounded existing-entry views, isolated two-copy edits and complete original-file byte history",
+  "results": {
+    "timestamp_rust_passed": 12,
+    "container_regression_passed": 7,
+    "rust_failed": 0,
+    "ignored_worker_invoked_twice": 1,
+    "baseline_python_passed": 6,
+    "reference_python_passed": 4,
+    "clippy": "passed -D warnings",
+    "format": "passed",
+    "file_function_caps": "passed",
+    "maximum_body_lines": 20
+  },
+  "coverage": {
+    "source_arithmetic_requests": 22398,
+    "native_documents": 3,
+    "native_entries": 113,
+    "native_entry_edit_cases": 7910,
+    "expected_bytes": "Literal independent frozen local/central offsets; all unrelated bytes must match",
+    "inverses": "Every native-entry pattern edit reparses a fresh result and restores the complete original file; a pending-payload Document checkpoint also has an inverse proof",
+    "limits": "Exact file bound and one below on every native entry",
+    "identities": "Foreign and changed-revision handles fail; noops retain the original identity; identity diagnostics exclude carrier buffers",
+    "history": "All bytes covered in ordered source/result copied or derived intervals",
+    "ownership": "Caller buffers mutated/dropped; later source Document payload replacement cannot change either checkpoint",
+    "concurrency": "8 workers times 32 mixed success/failure requests on each of 3 native files against serial wires",
+    "processes": "Two fresh workers Source-verify every arithmetic request, all native entry views and representative full edited wires before byte-for-byte comparison",
+    "send_sync_public_types": 10,
+    "pending_payload_edits": "Snapshot taken from Document.to_bytes retains a pending PreviewPNG replacement through timestamp changes, later Document mutation and a complete current-checkpoint inverse",
+    "source_requests_through_complete_editor": 22398
+  },
+  "implementation": [
+    "Reused the existing container parser, raw field accessors, immutable revision token and completion enum",
+    "Retained the already parsed central-directory start for this shipped reader",
+    "No changes to ordinary Document serialization policy or StreamInfo fields",
+    "Only explicit four-byte timestamp fields are patched; no clock, calendar or timezone policy"
+  ],
+  "logs": {
+    "rust": {
+      "command": "cargo test --locked --test container_timestamp_fixtures --test container",
+      "exit_code": 0,
+      "log": "target/container-timestamps-api-tests.log",
+      "sha256": "6f5a091ab637715dbfd74b2453a8faf51f46f77d243b87aebe171af8c0908d07"
+    },
+    "clippy": {
+      "command": "cargo clippy --locked --lib --test container_timestamp_fixtures --test container -- -D warnings",
+      "exit_code": 0,
+      "log": "target/container-timestamps-api-clippy.log",
+      "sha256": "72084c16decdc9d525670179a086e5108be2f3f64aa0154e6acff1ae64790e8e"
+    },
+    "format": {
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "log": "target/container-timestamps-api-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "python": {
+      "command": "python -m unittest discover -s docs/features/container-timestamps -p test_timestamps.py",
+      "exit_code": 0,
+      "log": "target/container-timestamps-api-python.log",
+      "sha256": "df380241d2ca4abf545a6b1467ba94a376b19c611da0ab4d76326e483f6d7127"
+    },
+    "source_python": {
+      "command": "python -m unittest test_ziptimestamps (reference directory)",
+      "exit_code": 0,
+      "log": "target/container-timestamps-api-source-tests.log",
+      "sha256": "1b6f69157102cc03f5264c937d138171570f1a3f06ab9ba2d8345507e1df7261"
+    }
+  },
+  "source_lf_sha256": {
+    "src/archive.rs": "2142a7d3b38b56e724ea04c99c80d9c8c9eef84f7a1a952bddb3fc1dedc42d36",
+    "src/container_timestamps/arithmetic.rs": "3bc6763d3c9bcbf87b2b30edf06d89c15ef363d1542c3a2f9487202025e68abd",
+    "src/container_timestamps/edit.rs": "f2a9ee2ae9c3fcfd5c72fb6a245e7c26094205159a91c97cd844db59879d0960",
+    "src/container_timestamps/mod.rs": "a65ae1ae799dfb0849393f4619620ba53ba5e1b81b62e801288de5e3bbc27eb9",
+    "src/container_timestamps/read.rs": "32f5a29b8157565030f4ed9f59ca83255689c0a7ac6725f88fe9f9ed83e20b7c",
+    "src/container_timestamps/types.rs": "3c0b0c8bc32c84dab28e2e9ff4733a4bbe6730cbf7a2e6fb158d0cb03dec719a",
+    "src/container_timestamps/view.rs": "ecf7d64103a9881d55222b828842280ccba82af3fcac5cceb2bbf323d7090b87",
+    "src/lib.rs": "7b5eea734b36562e6b228622f66fe895c25fa5333a28347620ece40bcdcbc328",
+    "tests/container_timestamp_fixtures.rs": "14f1e5eb3b3f4ee2c4407ee5063403220b9230262a8d3c7162f594d63342f805",
+    "tests/container_timestamps/api.rs": "d26a992916e4afe2ca82168a37e36111abb50866b1cc33dd877514f911c08d18",
+    "tests/container_timestamps/replay.rs": "08e59cd9c1f775a990e303679ce460b848cadebbb3936b2864b8bb1bcd0bf588"
+  },
+  "initial_correction": "Error helper entity parameter changed from generic Into<String> to the existing BessemerError &str contract; initial compiler log retained at target/container-timestamps-api-tests-initial.log",
+  "self_review": {
+    "pros": [
+      "Every frozen arithmetic request matches the independent weighted oracle",
+      "Native edits preserve complete stored payloads, filler and decoys with fresh inverse proofs",
+      "Published snapshots are immutable and IDs do not retain or print full file buffers"
+    ],
+    "cons": [
+      "Payload CRC and model semantics intentionally remain outside the structural check mode",
+      "Native calendar provenance and application acceptance remain unverified",
+      "Current full gate 73867 covers b21f26b4 source; hosted PR249 covers older publication source only"
+    ],
+    "recommended_fix": "Complete the exact-source PR gate and hosted checks before publication; no focused-check blocker found"
+  },
+  "remaining": [
+    "Run cargo xtask pr on this source before push",
+    "Merge PR249 after all 13 exact-head required checks pass; open no second PR while it remains open",
+    "Complete hosted matrix and sanitizer acceptance before integration",
+    "Continue the wider documented-schema audit"
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending",
+  "dependencies": "None added or changed; no version bump, release tag or publication",
+  "full_pr_gate": {
+    "issue": 250,
+    "source_revision": "b21f26b4adafa649777a5d0b40d00f8674f28fe3",
+    "command": "cargo xtask pr",
+    "status": "running",
+    "accepted": false,
+    "session": 73867,
+    "worktree": "C:/bessemer214-ci",
+    "cargo_build_jobs": 1,
+    "log": "target/container-timestamps-combined-full-pr-gate.log",
+    "scope": "Combined source through explicit native ZIP timestamp packing, immutable existing-entry views and isolated timestamp edits, including earlier legacy/index/checkpoint/IMS/control source",
+    "exclusions": [
+      "Authoritative terminal result pending",
+      "PR249 hosted checks cover older publication source only",
+      "Later empty-container investigation and fixtures excluded",
+      "No native application or whole-schema parity acceptance"
+    ]
+  }
+}

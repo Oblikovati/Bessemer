@@ -1,0 +1,47 @@
+{
+  "base_revision": "a1137823acc4355511d68191b4a55d1e198aff7f",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "checks": [
+    {
+      "command": "cargo xtask pr",
+      "exit_code": 0,
+      "library_passed": 431,
+      "external_gates_ignored": 3,
+      "doctests_passed": 265
+    },
+    {
+      "command": "cargo test --lib mirror_pattern_tests",
+      "passed": 4,
+      "exit_code": 0
+    },
+    {
+      "command": "cargo test --test resolved_mirror_patterns",
+      "passed": 2,
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -X utf8 -m unittest discover -s docs/features/mirror-patterns",
+      "passed": 3,
+      "exit_code": 0
+    }
+  ],
+  "accepted": 451,
+  "total": 906,
+  "log_sha256": {
+    "mirror-pr-gate.log": "db5740effb07b1a7f0fd47f1df351d4dcd60f964de7ccd61e716298ea5fe17fd",
+    "mirror-reader-tests.log": "66e04f9aa2e5c73b304935e80853a22b1509d85eb974b5ce37d91fc2f526f954",
+    "mirror-public-tests.log": "d0459f729d096a93cf2ba61951da02010a15b2097708fa77ac95a661293eaaab"
+  },
+  "kernel_schema": "sch_13006.s_t",
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "exclusions": [
+    "Full documented schema parity",
+    "Database archive modes",
+    "Geometry/topology certification",
+    "Native application acceptance",
+    "Release benchmark: no published baseline"
+  ],
+  "integration_base": "27fee8d12fb7e6fb5c47e645921066bdb6860bc7",
+  "base_tree_matches_validated_head": true
+}

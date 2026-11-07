@@ -1,0 +1,50 @@
+{
+  "feature_issue": 241,
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "rust_passed": 68,
+  "rust_failed": 0,
+  "rust_ignored": 0,
+  "python_passed": 8,
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "views": 2492,
+  "public_types_send_sync": 8,
+  "workers": 8,
+  "installed_fixture_validated": false,
+  "full_record_schema": false,
+  "humanizer": "Unavailable; prose pass left to maintainer review",
+  "source_lf_sha256": {
+    "src/flow/legacy_tables/metadata_prefix/backend/kind_two/decode.rs": "12bbf801e4398029398f5069d6517e482eb992dcf6d4485d9286dfca5352c914",
+    "src/flow/legacy_tables/metadata_prefix/backend/kind_two/edit.rs": "cbd2477067a01522ea9a7b8fd3eda6b7f27c5e914ef81e399f41b219bb9f5459",
+    "src/flow/legacy_tables/metadata_prefix/backend/kind_two/fields.rs": "653465f54c90fb8350ab49fba612b654dc4b33563d6dc70ddd3679658a003ad7",
+    "src/flow/legacy_tables/metadata_prefix/backend/kind_two/mod.rs": "e307687588adec47ccb35233af0fc7ceb215fc0fffbe094b0409f3f93b63b278",
+    "src/flow/legacy_tables/metadata_prefix/backend/kind_two/model.rs": "d51fad5db20e5f752300ac0b4d0a459a925ac01c7662174c3eb28ccc8318125d",
+    "src/flow/legacy_tables/metadata_prefix/backend/kind_two/types.rs": "1ec2e2fa1cf684ba574467ac6b516de2effb00c40da7ccd6b7dccb7fb7aee4fb",
+    "src/flow/legacy_tables/metadata_prefix/backend/kind_two/view.rs": "a27fa42c1ba8d1226fbbfb04fc5a1046f9ac9b30f03088ccd088ec340b3323a2",
+    "tests/flow_medium_objects/kind_two/api.rs": "19ceb2560a6d73eb1ee3e312f595006ac1ccb942b92d7b4cabe9b184c4e22d61",
+    "tests/flow_medium_objects/kind_two/fixture.rs": "83f3d25fa00f9f617c76e722b7cd4741bf8eab176359ad8f7b2b790cd861df46",
+    "tests/flow_medium_objects/kind_two/rebuild.rs": "cd40b6630682c2fc91c9d40cb1fbbe8ea900e1f066f12f4be98146149af4cc7c",
+    "tests/flow_medium_objects/kind_two/types.rs": "3f0cf4214998ee92e797c7cad957572d55fee43c4e3dafe02617e0279fae9130",
+    "tests/flow_medium_objects/kind_two/api/contracts.rs": "dbade35bde1a7460ac1fc0c84cc74f167d347ca5897e8abb703176c40049e152",
+    "tests/flow_medium_objects/kind_two/api/edit.rs": "de416c902cdc49dc3240b39eaa521ead1ab1339151a93b796070bd56d46e8d31",
+    "tests/flow_medium_objects/kind_two/api/expected.rs": "cd73959562c673684e4c10ecfc823ab0ccd88a3fb3834a74f15d220a2771b914",
+    "tests/flow_medium_objects/kind_two/api/read.rs": "a527f28312130cb2fe1c094f8591adb29ee0d4f6fb803447f74753514e2fcf28",
+    "src/flow/legacy_tables/metadata_prefix/backend/mod.rs": "44d2b99eda3f44982e65bf2adc612ad3c2c23b696db5590d606e85d78daa9011",
+    "src/flow/legacy_tables/metadata_prefix/backend/medium_body/mod.rs": "dd04f9ea1a04b46b724444c47d65e318711320928b66f4ab7679d2a3dee9a118",
+    "src/flow/legacy_tables/metadata_prefix/backend/kind_one/fields.rs": "cd08b1a6d57163fc73b5ca1747d10e56a0bf3545372d2645e5b51aeec04c67ae",
+    "tests/flow_medium_objects/api.rs": "343d4ccc2aa762c43c144f6a5a4dac0040ca89c96e4210f982205433da1b8013",
+    "tests/flow_medium_objects/kind_two.rs": "b8389d6df60aafc1d20b990753362315771cbea7374ea5fa7d026596e25d720d"
+  },
+  "log_sha256": {
+    "flow-kind-two-api-tests.log": "e9824771e312daeccdd7bf287a1cddc6ded7c7e1e53ae7f88c3fbd2d2559800a",
+    "flow-kind-two-api-clippy.log": "7b33bddcab4fc899333cd79ca60cddfe2462b013325b71550f91265820402764",
+    "flow-kind-two-api-python-tests.log": "e0b42323eafeb4c0734ee77a8c6047487c1b61c6a94272e9e2f711c74779a028"
+  },
+  "scope": "All six body models; all small fields through 128 elements and large endpoints; exact no-ops, independent patches, whole-carrier history and fresh reversals; table-key truncation, NUL/surrogate/native-state, limits, version/count/tag/role failures; source isolation and concurrent corpus projections.",
+  "exclusions": [
+    "Installed native kind-two fixtures",
+    "Mixed-kind complete records",
+    "Engineering/model evaluation and native runtime/application acceptance"
+  ]
+}

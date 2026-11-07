@@ -1,0 +1,58 @@
+{
+  "feature_issue": 241,
+  "body_api_base": "a4abfa2b",
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "rust_command": "cargo test --test flow_medium_object_fixtures --test flow_medium_reference_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 17,
+  "rust_failed": 0,
+  "rust_ignored": 0,
+  "clippy_exit_code": 0,
+  "python_command": "python -m unittest discover -s docs/features/flow-medium-references -p 'test_*.py' -v",
+  "python_passed": 14,
+  "python_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "reference_body_views": 2580,
+  "complete_kind_one_profiles": 1163,
+  "coverage": "Independent complete kind-one/two reference bodies with explicit key contexts and same-wire ambiguity; complete fresh kind-one records through nested body fields, all physical key occurrences, references, attributes and exact EOF. Existing typed metadata/first-body readers rechecked on every complete profile.",
+  "helper_changes": "Only test-helper visibility was broadened to reuse the existing nested-body packet decoder and typed projection assertions. Original FMO1 fixture bytes and all eleven body regression tests remain unchanged.",
+  "exclusions": [
+    "Production reference-body and complete-profile APIs",
+    "Complete kind-two bodies and mixed-kind profile acceptance",
+    "Populated final collections",
+    "Engineering interpretation, numeric evaluation and native runtime/application acceptance",
+    "Running frozen49b8ebec full gate excludes these later fixtures and body API"
+  ],
+  "humanizer": "Unavailable in installed skill catalog; prose pass left to maintainer review.",
+  "reference_sha256": {
+    "flowmediumliquids.py": "97f736b02a1cc00fff3740ef7ec63191910877d74f11716eba18a38670372cb7",
+    "flowmediumobjects.py": "d22904f57af71281cc06fbd75ceee184e54065401e392eb5facddd9974c8dea7",
+    "flowmetadataprefix.py": "8dec7de6b29c9128ab20c2726e7a38afe30b56b4fb098de19ff0b0b408edc1db",
+    "flowlegacytables.py": "52309d35baa5ecc33046fb2f7a98f4eadc7bfbd22db5b9803e41898131924420",
+    "research/flow-metadata-prefix-corpus.json": "cfd8ba17b07ab89683b30fb69209ac00ee60b56e9f48279bd440b029f80575f5"
+  },
+  "source_lf_sha256": {
+    "tests\\flow_medium_reference_fixtures.rs": "2b4324a3ac2c55e5546843db00e25bde10f5c3e941c195bf29b18e9c404a830f",
+    "tests\\flow_medium_references\\fixture.rs": "a1cb0ec3d2c0dbb989849e0516e9a67e36ac57af0d5cdc239755acfa56cd16b1",
+    "tests\\flow_medium_references\\rebuild.rs": "ef849c00cad53916b7080537fad77ed88c12ea30190972dea69203c7a3484f52",
+    "tests\\flow_medium_references\\types.rs": "10c45d5301d70cd798af0ef2bf7a514f7242dbf832441c1d92a7b110bd5c4155",
+    "tests\\flow_medium_objects\\profile.rs": "82cfc8dd90bfd751ea2c1e902b1eebbc5b45794bd55fb2744eb7a091e19e7999",
+    "tests\\flow_medium_objects\\profile\\fixture.rs": "ffb99a671db62e958360c12dbfc4a852f61beb5da9bc90a94ea7a8f03e9c1946",
+    "tests\\flow_medium_objects\\profile\\rebuild.rs": "98405287386388cafa2c1948329eb74348a92c1762a589bba41735919e8c0405",
+    "tests\\flow_medium_objects\\profile\\types.rs": "a95be6389de58cfc9a62665cea2d54c2ed8820421e1caac343548636414dfd93",
+    "tests\\flow_medium_object_fixtures.rs": "feff4459c10536641de6ff077fa60a3f64fef84f9c49812a54674b96ecfb679d",
+    "tests\\flow_medium_objects\\fixture.rs": "9947303d1730af1686d38a6a01474ab7cef6a992f5ffb041604f26a444a8f34d",
+    "tests\\flow_medium_objects\\api.rs": "b495b86373b2f16ec9c36dea4feef13a61e9f331420a4f7a7104a6510c58d890",
+    "tests\\flow_medium_objects\\api\\read.rs": "62949491fce664465cc7bc597d4b75a0e2bdb18a1f52030f96ce8557a343f82c",
+    "docs\\features\\flow-medium-references\\freeze_profiles.py": "c6179fdeaf6f108e3dc4c080336954684f1db4f5aa905fe3a4b020157f45a0ee",
+    "docs\\features\\flow-medium-references\\freeze_references.py": "81cb7b2f00dc0e8fd723d478934364db14b14cc6882f92d8f281647d9109daa2",
+    "docs\\features\\flow-medium-references\\test_profiles.py": "e3b1527a52721fc3425108aff54929e18a231cf1eb59c921da96d9d3e92b9311",
+    "docs\\features\\flow-medium-references\\test_references.py": "936306b4c7de12be6ba472900228f00387e81960db80db92f05c62b93dfe0402"
+  },
+  "log_sha256": {
+    "target\\flow-medium-reference-baseline-tests.log": "375133a093e9f6c5052a417c608dfd333d28d71fcfa8665bd59b65dcc7b53eec",
+    "target\\flow-medium-reference-baseline-clippy.log": "00717a544e6a115b3200e774b127e6e15bce5311e63e7b0b1eb72685d4e75b11",
+    "target\\flow-medium-reference-baseline-python-tests.log": "cb27aa759a8dfc2e4190e0847e536676b8214cb50590b6024290294453beaa31"
+  }
+}

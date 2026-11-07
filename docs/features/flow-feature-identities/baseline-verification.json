@@ -1,0 +1,35 @@
+{
+  "feature_issue": 241,
+  "production_base": "cf1646ad",
+  "phase": "Independent fixtures before typed identity read/edit APIs",
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0",
+  "rust_command": "cargo test --test flow_feature_identity_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 2,
+  "python_command": "python -m unittest discover -s docs/features/flow-feature-identities -p test_identities.py -v",
+  "python_exit_code": 0,
+  "python_passed": 4,
+  "clippy_command": "cargo clippy --lib --test flow_feature_identity_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "cases": 37,
+  "identity_lists": 22,
+  "null_lists": 15,
+  "native_payloads": 2,
+  "native_payload_bytes": 219,
+  "oracle": "Source-normalized raw fields and context descriptors; independent Rust complete-payload reconstruction and literal Python boundaries/keys",
+  "exclusions": [
+    "No new production API",
+    "Typed identity reader/editor remain next work",
+    "No populated record-144 mapped objects, runtime matching or native execution",
+    "Full gate 18974 remains live on earlier source 6edd02c9 and excludes these fixtures",
+    "No global schema parity claim"
+  ],
+  "log_sha256": {
+    "target\\flow-feature-identities-baseline-tests.log": "da00835c07253f8d366949b1a9488a6e4c3e400009c3a874aa9994da5b36399b",
+    "target\\flow-feature-identities-baseline-clippy.log": "09c821bd1a26aea9997dea247fa8aa9053a400cbd631bba0a22294bb00278a4d",
+    "target\\flow-feature-identities-python-tests.log": "648c31c3ff738fbb317df7e7079fba0c69f733e5d88a2d0831f892b7bbda28ad"
+  }
+}

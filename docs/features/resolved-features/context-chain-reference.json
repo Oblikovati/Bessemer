@@ -1,0 +1,79 @@
+{
+  "sources": {
+    "contextchains.py": "8417ec0c88a0033c206cb98944d7d6dafe6d087dd31884bdccc109d72be049c7",
+    "assemblyreferences.py": "e62242a2e5e041ea82d7a5d1c9ffca4c87fc0c3c59e42e67666b53253e3ac151"
+  },
+  "cases": [
+    {
+      "runtime_class": "moChainComponent_c",
+      "body_hex": "0000000098badcfe",
+      "body_sha256": "9810be195ee2e4b19092ebe3d0cf7d891bab29325a0a4e12af39777a7c72a4bb",
+      "end": 8,
+      "parsed": {
+        "owner": null,
+        "chain": null,
+        "raw_30": 4275878552
+      }
+    },
+    {
+      "runtime_class": "moContextChainComponent_c",
+      "body_hex": "0000000098badcfe0000f9ffffff",
+      "body_sha256": "f0b86acd20c3e291b990be7fb23a2ae8769d4e773c74f5908ff3042abebd24ba",
+      "end": 14,
+      "parsed": {
+        "chain_component": {
+          "owner": null,
+          "chain": null,
+          "raw_30": 4275878552
+        },
+        "payload_start": 8,
+        "payload": {
+          "external_object_40": null,
+          "raw_48": -7
+        }
+      }
+    },
+    {
+      "runtime_class": "moContextUnitComponent_c",
+      "body_hex": "00000000f9ffffff0141feffffff",
+      "body_sha256": "bd78ddcaec83d4c6cca4f31ce1a6124219392f79b1da734461b3efb4cae751ae",
+      "end": 14,
+      "parsed": {
+        "owner": null,
+        "external_object_28": null,
+        "raw_30": -7,
+        "configuration_38": {
+          "name": "A",
+          "id": -2
+        }
+      }
+    },
+    {
+      "runtime_class": "moReferenceChain_c",
+      "body_hex": "ffff0000f9ffffff0141feffffff",
+      "body_sha256": "28091539a734e0243e930402efa0ec409b71931c9285f1d0b2c6bfc8968680fc",
+      "end": 14,
+      "parsed": {
+        "raw_24": 65535,
+        "features": null,
+        "raw_20": -7,
+        "configuration": {
+          "name": "A",
+          "id": -2
+        }
+      }
+    },
+    {
+      "runtime_class": "moExtFeatureList_c",
+      "body_hex": "0200000000000000",
+      "body_sha256": "d86e8112f3c4c4442126f8e9f44f16867da487f29052bf91b810457db34209a4",
+      "end": 8,
+      "parsed": {
+        "items": [
+          null,
+          null
+        ]
+      }
+    }
+  ]
+}

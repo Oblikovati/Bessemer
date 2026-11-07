@@ -1,0 +1,37 @@
+{
+  "scope": "synthetic only; no populated native list fixture",
+  "cases": [
+    {
+      "version": 870004,
+      "first_count": 100000,
+      "second_count": 0,
+      "accepted": true,
+      "bytes": 400020,
+      "sha256": "2b85b6e3cb95f2a9647688601980743e827e660c16722cf9eeedf9d61ddb3085"
+    },
+    {
+      "version": 870008,
+      "first_count": 100000,
+      "second_count": 100000,
+      "accepted": true,
+      "bytes": 800024,
+      "sha256": "012acbd8601fba57e8cdcd7ed56cbd60dc8211daa24a667edc1a62391e43a3a6"
+    },
+    {
+      "version": 870004,
+      "first_count": 100001,
+      "second_count": 0,
+      "accepted": false,
+      "bytes": 400024,
+      "sha256": "4e5b2541b2e75698f44b95a2058d3fcf557821fda18de986065023a795f8a1b7"
+    },
+    {
+      "version": 870008,
+      "first_count": 0,
+      "second_count": 100001,
+      "accepted": false,
+      "bytes": 400028,
+      "sha256": "f1effab153bff3281e113fa7c5f90614b644dee8e2b5e5bc11bd2bfb5bcb1cf5"
+    }
+  ]
+}

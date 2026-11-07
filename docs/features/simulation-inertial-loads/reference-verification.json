@@ -1,0 +1,51 @@
+{
+  "issue": 136,
+  "status": "Reference baseline verified; Rust implementation not started",
+  "revision": "55ad3b8c6a10db705ad33206309c9680fbf7b9ef",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "native": {
+    "streams": 18,
+    "bytes": 17928,
+    "attempts": 18,
+    "accepted": 18,
+    "packet_bytes": 24304,
+    "packet_sha256": "0772fcee4cba53ba024e958c16321ea91e4fd830413beb306b4ec50c7fa29295",
+    "callbacks": "Original retained and full actual C-716 additive registry"
+  },
+  "owned": {
+    "cases": 135,
+    "packet_bytes": 481704,
+    "packet_sha256": "5e1405bc8929cac42926150d2b1078016ee0b0e1ffcd871e2c549acc04653d52"
+  },
+  "reference_tests": {
+    "command": "python -B -X utf8 docs/features/simulation-inertial-loads/freeze_inertial.py",
+    "passed": 3,
+    "failed": 0,
+    "strict": true
+  },
+  "source_snapshot": "source-snapshot.json",
+  "checks": [
+    "Fresh actual document/CFB extraction with full envelope and nested payload hash checks",
+    "Every retained original candidate outcome compared completely",
+    "Both original retained callbacks and full actual C-716 additive callback agree",
+    "135 complete independent two-record owned images accepted through exact EOF",
+    "All common and derived threshold neighbors represented",
+    "Two nonnull embedded profiles in every modern reference",
+    "Populated optional bodies and terminal table records",
+    "Raw null/empty/odd/unpaired text frames and nonfinite double patterns",
+    "High-bit unsigned BaseExcitation headers retained distinctly",
+    "Complete owned input/span fixture frozen byte for byte",
+    "No copied source modifications or live source imports",
+    "Function/file size audit and git diff --check passed"
+  ],
+  "thermal_code_changed_during_gate": false,
+  "exclusions": [
+    "Rust read/construction/edit implementation",
+    "Rust malformed/budget/ownership/concurrency gates",
+    "Independent complete typed-field/history exports",
+    "Two fresh-process Rust exports",
+    "Local PR and platform integration gates for this feature",
+    "Native application acceptance",
+    "Complete schema parity"
+  ]
+}

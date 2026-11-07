@@ -1,0 +1,77 @@
+{
+  "fix_revision": "bda977ee9c81a2e112d2bde7680250beb637f218",
+  "issue": 248,
+  "issue_type": "Bug",
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "commands": [
+    "cargo test --locked --test flow_identity_diagnostics --test flow_message_list_fixtures --test flow_primary_table_fixtures --test flow_conditional_item_fixtures --test flow_load_state_fixtures --test flow_medium_object_fixtures --test flow_metadata_fixtures --test flow_selected_value_fixtures",
+    "cargo clippy --locked --test flow_identity_diagnostics --test flow_message_list_fixtures --test flow_primary_table_fixtures --test flow_conditional_item_fixtures --test flow_load_state_fixtures --test flow_medium_object_fixtures --test flow_metadata_fixtures --test flow_selected_value_fixtures -- -D warnings",
+    "cargo fmt --all -- --check"
+  ],
+  "terminal_exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "rust": {
+    "passed": 164,
+    "failed": 0,
+    "ignored": 5
+  },
+  "ignored_scope": "Five Source-verifying process workers, each invoked twice by a regular parent test",
+  "red_regression": {
+    "terminal_exit_code": 101,
+    "passed": 1,
+    "failed": 1,
+    "observation": "Derived identity debug was507 characters even for a zero-byte selected payload; compact maximum256 assertion failed",
+    "log_sha256": "0e5ea75290b2952052635d86725f7e12d1e1cba26f412928c5ca38d4c68e8538"
+  },
+  "identity_diagnostics": {
+    "compact_limit_chars": 256,
+    "pretty_limit_chars": 512,
+    "payload_bytes": [
+      0,
+      1,
+      65536,
+      524288
+    ],
+    "metadata_fields": [
+      "identifier",
+      "ordinal",
+      "revision_version",
+      "wire_bytes",
+      "records"
+    ],
+    "identity_semantics_unchanged": true
+  },
+  "record301_regression": {
+    "opaque_payload_bytes": [
+      0,
+      65536,
+      524288
+    ],
+    "maximum_error_cause_chars": 512,
+    "actual_error_path": "FlowMessageLists::text foreign identity",
+    "unchanged_primary_raw_units": true
+  },
+  "audit": [
+    "Block-extra field identities",
+    "Conditional-item record identities",
+    "Load-state field identities",
+    "Primary-table field identities",
+    "Message-list text identities",
+    "Medium-profile metadata/body source identities"
+  ],
+  "logs_sha256": {
+    "target/flow-identity-diagnostics-tests.log": "5be8ef805aafb06497bd1c76b868f0ae3e7284469a6c593f79b0937ea93a22d4",
+    "target/flow-identity-diagnostics-clippy.log": "21d3e260153b70330cba738f53ae2aa8ffbabf0d6f3ee6895095019b19d6ad11",
+    "target/flow-identity-diagnostics-format.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "branch_scope": "Flow is absent from main; fix targets the unreleased feature line. No new integration PR was created.",
+  "exclusions": [
+    "Hosted full matrix and full-gate acceptance of the fix",
+    "Already explicit carrier/view debug dumps outside identity formatting",
+    "Global changes to revision equality, serialization or native acceptance"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose pass remains for review"
+}

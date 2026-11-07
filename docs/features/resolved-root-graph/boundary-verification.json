@@ -1,0 +1,26 @@
+{
+  "issue": 201,
+  "status": "Owned malformed-stream and source-budget checks passed; publication gates remain open",
+  "tests_passed": 11,
+  "failed": 0,
+  "ignored": 0,
+  "process_exit_code": 0,
+  "proper_prefixes_rejected": 3686,
+  "single_appended_byte_variants_rejected": 256,
+  "exact_byte_cap": 3686,
+  "exact_field_cap": "Complete admitted source field count, derived before tightening the caller budget",
+  "one_below_byte_and_field_caps_rejected": true,
+  "scope": "Complete owned alias feature stream with prevalidated immutable configuration and saved manager; no partial root graph is published",
+  "input_isolation_after_failures": true,
+  "logs_sha256": {
+    "resolved-root-graph-boundary-tests.log": "96093f61158f60ea3d1fd9183714c5425b8374dcb8279668cf13988f458c1906",
+    "resolved-root-graph-boundary-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "resolved-root-graph-boundary-format.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "qualification": "These added checks cover byte and field caps. Other decoder resource dimensions retain their existing tests; no claim that this matrix newly covers every resource cap.",
+  "remaining": [
+    "Combined full local and exact-head remote publication gates",
+    "Higher-level model, structural edit and geometry parity remain open in #2"
+  ],
+  "format_check_passed": true
+}

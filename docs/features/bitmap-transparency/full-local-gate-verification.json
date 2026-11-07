@@ -1,0 +1,32 @@
+{
+  "issue": 187,
+  "passed": true,
+  "process_reaped": true,
+  "exit_code": 0,
+  "head": "45811c377670161cf96ec97b00c8aa6280ff2976",
+  "platform": "Windows x64",
+  "toolchain": "Rust1.99.0-x86_64-pc-windows-msvc",
+  "command": "cargo xtask pr",
+  "target_directory": "target/bitmap-pr-build",
+  "build_jobs": 1,
+  "test_summaries": 313,
+  "tests_passed": 3935,
+  "tests_failed": 0,
+  "ignored_tests": 206,
+  "log_sha256": "24593b2ac9fde043251a6d9a0729817b4b2f6c6b4f20381a3291ed0f84d9cb21",
+  "followup_sha256": "3d0fdded626d717b3598f83bcb93068239ed688d405108a94a9ee9abe8883e64",
+  "checks": [
+    "Formatting including private included registry",
+    "Whole-workspace all-target Clippy with warnings denied",
+    "Locked workspace build and tests including doctests",
+    "Exact HEAD and unchanged compiled-code/configuration guard"
+  ],
+  "separate_native_acceptance": "native-typed-verification.json",
+  "separate_actual_source_acceptance": "actual-output-source-verification.json",
+  "exclusions": [
+    "Ignored tests require separately scoped explicit runs",
+    "No ThreadSanitizer acceptance from this Windows gate",
+    "Required exact-head remote publication checks remain pending",
+    "No native classifier/renderer/geometry or complete schema parity claim"
+  ]
+}

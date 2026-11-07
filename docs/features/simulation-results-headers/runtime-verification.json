@@ -1,0 +1,42 @@
+{
+  "feature_issue": 164,
+  "implementation_parent": "1c3452a6c4d103690ee2ac19d23eb763a3241b6f",
+  "behavior_profile": 1,
+  "focused_including_native": 9,
+  "owned_contexts": 660,
+  "native_accepted_arguments": 450,
+  "all_exit_codes": 0,
+  "all_processes_reaped": true,
+  "clippy_warnings": 0,
+  "compile_time_send_sync_types": 16,
+  "exports": {
+    "fields": {
+      "bytes": 147387,
+      "sha256": "0c82031f004ed7ce6acb701778274fe3227d6ca6b0f768f2ecc714d2049b2d53",
+      "fresh_processes": 2,
+      "complete_source_match": true
+    },
+    "history": {
+      "bytes": 254504,
+      "sha256": "2626851bcb9ce345c356d95a9dc5bfdccea2f39bd25dd0c01804adff6b9bc39a",
+      "fresh_processes": 2,
+      "complete_source_match": true
+    }
+  },
+  "logs": {
+    "target/results-property-complete-focused.log": "936afde11d76f0663cb028d53b0db4a5393980d73de8d481385f6e2df5467448",
+    "target/results-property-initial-clippy.log": "c5af7547126643944c16b48a8222e003489a86cd2c19051eb1d01e84dd7d5f67",
+    "target/results-property-first-export.log": "9dda86adaba8b8a3fbb8892b14519e7179ac06ed9b0372296522778fbd7be26c",
+    "target/results-property-second-export.log": "97d87d5e47ade33e7147e8b244eabf9642bf0f8d562ebae7cbc9a5c491ba6919"
+  },
+  "exclusions": [
+    "Independent resource statistics and exact/one-below budgets",
+    "Sufficient-payload category count caps",
+    "Generated targeted malformed outcomes",
+    "Changed unsigned and variable text values",
+    "Caller input/vector isolation",
+    "Mixed concurrency",
+    "Full local and exact-head platform/ThreadSanitizer gates",
+    "Native application opening, business meanings and whole-format parity"
+  ]
+}

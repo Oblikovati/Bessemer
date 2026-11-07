@@ -1,0 +1,89 @@
+{
+  "issue": 2,
+  "edition": "Edition 0.3221 \u00b7 2026-11-06 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "scope": "Four selected clauses for the Edition0.3220 direct-map reconciliation and0.3221 Trim producer qualification; not a whole-schema audit",
+  "production_change": "None: actual direct-map framing and the complete saved unsigned32 Trim word are already preserved",
+  "specification_raw_sha256": "d8a65613d933b83a1387b03f07a00e553ec9d10341b2149d31ed1678ff04242a",
+  "snapshot_path": "docs/features/resolved-features/schema-3221-atom-trim-snapshot.md",
+  "snapshot_representation": "Selected complete clauses normalized to LF, boundary whitespace stripped and joined with one blank line",
+  "snapshot_lf_sha256": "0c4d812000cc6336b678a90a8418c41f7a4601983f95a8fd2790d06f086264ee",
+  "clauses": [
+    {
+      "clause": "11.89",
+      "heading": "### 11.89 Atom partition/maps, late fields and body-feature suffix",
+      "line": 3115,
+      "lf_sha256": "8777f814eeb0f1a2aab9d1f8ab6c748e08c7a834ed0e42444105718faaa037ee"
+    },
+    {
+      "clause": "11.173",
+      "heading": "### 11.173 Direct atom-feature surface identifier maps",
+      "line": 6750,
+      "lf_sha256": "df324e114ecba4ab59ef0d71fea86ce7c66ddacd4ea17332c7143c353cba6676"
+    },
+    {
+      "clause": "11.222",
+      "heading": "### 11.222 Surface-cut and trim-reference-surface features",
+      "line": 8580,
+      "lf_sha256": "eb75f18ce1f357ff9e6a1bbd81db6d3d9f8d3589894e036164d3d4d1f66ce7d7"
+    },
+    {
+      "clause": "11.1988",
+      "heading": "### 11.1988 UI producer requests for the saved Trim CompleteOpts fragment",
+      "line": 35982,
+      "lf_sha256": "5266472d8d90179ae625871e1f9536d90e5dab745297e097d7ba686fb4c2fa52"
+    }
+  ],
+  "decisions": [
+    "Nonzero raw6A0 presence continues through the direct map body before face names, index names and word6B4; no tagged-map slot is introduced",
+    "Direct entries retain unsigned keys, signed values, ordered duplicates and conditional signed child arrays",
+    "Trim raw_10 remains one unsigned32 stored word including all high16 bits and unassigned bits",
+    "The four native CompleteOpts producer requests establish no additional wire field, closed numeric domain, default, final persistence or offline setter replay",
+    "No current-provider pointer ownership, aliasing, coherence, atomicity or final-state claim is inferred"
+  ],
+  "verification": {
+    "accepted_full_gate_source": "f29028812b7ba44014ed993bb7cf7feff7b94a2a",
+    "full_gate_command": "cargo xtask pr",
+    "exit_code": 0,
+    "log": "target/flow-logical-index-and-checkpoint-full-pr-gate.log",
+    "log_sha256": "f56693d33eae65b9f42dc43bb0b68d24f069ae3ef08d7c8df4e6a455a3ea280f",
+    "required_tests_observed_passed": [
+      "body_feature_tests::complete_body_features_planes_and_end_specs_match_independent_values_and_bytes",
+      "body_feature_tests::inherited_body_and_plane_prefixes_and_trailing_bytes_reject_partial_publication",
+      "body_feature_tests::body_feature_parallel_writes_preserve_duplicate_maps_and_surface_children",
+      "property_domains_pattern_trim_tests::trim_packed_components_and_surface_sheet_indices_preserve_all_saved_fragments"
+    ],
+    "owned_sources_and_fixtures_unchanged_since_accepted_gate": true,
+    "complete_body_feature_cases": 576,
+    "complete_body_feature_fields": 37239,
+    "trim_surface_operation_cases": 84,
+    "previously_imported_source_files_still_byte_identical": 176,
+    "fresh_source_direct_map_tests": 3,
+    "fresh_source_tests_exit_code": 0,
+    "fresh_source_tests_log": "target/schema-3221-direct-map-source-tests.log",
+    "fresh_source_tests_log_sha256": "8ee4669655aaed29bbc70e28a8ef25f73d1ebe2b002448e637699b5a2cbcaa41"
+  },
+  "owned_raw_sha256": {
+    "src/model_archives/body_features.rs": "6ac21addf3fef513a15b34d018ee5b756aacf946b71327094bfbba2cfbfab87a",
+    "src/model_archives/surface_operations.rs": "fee4fad30e4b305693ff33d1fa9a7fdca8d814c1b89bc0386b1481fda6b6a48d",
+    "tests/model_archives/body_features.rs": "3c912f596a65ccb3aff01f9deed2b3f6f7dbc74ff8d65301a1e8850aa94f32e1",
+    "tests/model_archives/property_domains_pattern_trim.rs": "9ab93f9dd050d1843557f63cc73b895ccbdcadc6a5857184f194279258827eec",
+    "tests/fixtures/model-archives/body-feature-cases.bin": "454b672a5fe77639d832cfadd0bed2a45779a071a8d0433b9596ac1be828c4b2",
+    "tests/fixtures/model-archives/body-feature-original.bin": "6588bdf3f51e5f686abbc6cec7c257f41afe34ff3cd956709bb40763ad686ca2",
+    "tests/fixtures/model-archives/body-feature-edited.bin": "c32c11e27be8896272390b4c2fe4bf65e18e4e259add431bdc92c10c30f34c8c",
+    "tests/fixtures/surface-operations/cases.bin": "d4ad740eb64885d3f0ddaf8a9f44d00d51a018d9a40c38109a505a3c7c1f2705"
+  },
+  "reference_raw_sha256": {
+    "../inventor-interface/solidworks/atomsurfaceids.py": "a99564bdbb59afc97ae34b102cacf0805412878bd08a61a3a0fc6f4eb674de6d",
+    "../inventor-interface/solidworks/test_atomsurfaceids.py": "fa4dfea0013c7e4130e3039b510db2cfd321ba28193fd00c5d6fca40c883565d",
+    "../inventor-interface/solidworks/bodyfeatures.py": "9781d8f0f240b74b41f202461f3ea172b012b4aaa461c702311a4fbbfcb192a8",
+    "../inventor-interface/solidworks/test_bodyfeatures.py": "2113a8342c8934cafca0388568c6d05463deef0ffa4b5b09277eeadc3919cd66"
+  },
+  "exclusions": [
+    "Other newly documented clauses are not audited here",
+    "No native UI/provider execution or engineering interpretation",
+    "No additional native corpus or application acceptance",
+    "No whole-schema parity claim",
+    "Current root full gate and hosted matrix acceptance remain pending"
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending"
+}

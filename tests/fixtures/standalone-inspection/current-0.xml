@@ -1,0 +1,933 @@
+<?xml version="1.0"?>
+<iex:SOLIDWORKSINSPECTION xmlns:iex="http://www.extensiblecad.com">
+    <INSPECTION_SHEET DateCreated="08/09/2017 08-09-2017  12-36-07" CreatedByVersion="2018.0.0.15" LastSavedByVersion="2018.0.0.15" CMMState="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;DMDataSet/&gt;    &lt;DMDataSet/&gt;" CapturesVisible="false">
+        <DOCUMENT>
+            <DOCUMENT AnnotationLoadMechanism="PMIUNDERANNOTATIONSETNODE" IsRevisionMangementComplete="TRUE" LastModifiedDate="02/08/2017 10:03 AM" LoadMechanism="ROOTASSEMBLY" ModelMD5HashData="9a64b856374835971b005a59bfca84d8" ModelProjectVersion="1.2018.00.15" ModelSize="2116090" Name="LOWER PLATE CMM - C4" SourcePath="G:/IXProjects/IX/Build/TestCase/LOWER PLATE CMM - C4.PDF" Title="LOWER PLATE CMM - C4" Uid="0">
+                <DefaultGridOptions>
+                    <GridOption ColLabelsToExclude="" ColumnCount="6" ColumnDirection="LeftToRight" ColumnLabelType="Letters" ColumnStartValue="A" Display="GridAndLabels" Enabled="FALSE" GridExtents="FALSE" LabelColor="-16776961" LineColor="-16711936" RowCount="4" RowDirection="TopToBottom" RowLabelType="Numbers" RowLabelsToExclude="" RowStartValue="1">
+                        <GridRegion BottomOffset="0" LeftOffset="0" MarkupIndex="-1" RightOffset="0" TopOffset="0"/>
+                    </GridOption>
+                    <GridOption ColLabelsToExclude="" ColumnCount="6" ColumnDirection="LeftToRight" ColumnLabelType="Letters" ColumnStartValue="A" Display="GridAndLabels" Enabled="FALSE" GridExtents="FALSE" LabelColor="-16776961" LineColor="-16711936" RowCount="4" RowDirection="TopToBottom" RowLabelType="Numbers" RowLabelsToExclude="" RowStartValue="1">
+                        <GridRegion BottomOffset="0" LeftOffset="0" MarkupIndex="-1" RightOffset="0" TopOffset="0"/>
+                    </GridOption>
+                </DefaultGridOptions>
+                <PageRotation>
+                    <Page>0</Page>
+                    <Page>0</Page>
+                </PageRotation>
+            </DOCUMENT>
+            <DefaultGridSettings>
+                <GridOption ColLabelsToExclude="" ColumnCount="6" ColumnDirection="LeftToRight" ColumnLabelType="Letters" ColumnStartValue="A" Display="GridAndLabels" Enabled="FALSE" GridExtents="FALSE" LabelColor="-16776961" LineColor="-16711936" RowCount="4" RowDirection="TopToBottom" RowLabelType="Numbers" RowLabelsToExclude="" RowStartValue="1">
+                    <GridRegion BottomOffset="0" LeftOffset="0" MarkupIndex="-1" RightOffset="0" TopOffset="0"/>
+                </GridOption>
+            </DefaultGridSettings>
+        </DOCUMENT>
+        <PackageOptions>
+            <GeneralOptions>
+                <Ballooning>
+                    <LeaderLineColor R="255" G="0" B="0"/>
+                    <ShowLeaderLines>FALSE</ShowLeaderLines>
+                    <BalloonStartValue>1</BalloonStartValue>
+                    <BalloonIncrement>1</BalloonIncrement>
+                    <BalloonShape>Circle</BalloonShape>
+                    <SizeOnFirstCaptureHeight>TRUE</SizeOnFirstCaptureHeight>
+                    <CustomBalloonSize>12</CustomBalloonSize>
+                    <CustomBalloonSizeUnits>pt</CustomBalloonSizeUnits>
+                    <BalloonMaxCharCount>3</BalloonMaxCharCount>
+                    <BalloonBorderColor R="255" G="0" B="0"/>
+                    <BalloonFillColor R="255" G="0" B="0"/>
+                    <BalloonTextColor R="255" G="255" B="255"/>
+                    <BalloonLocation Bottom_Left="FALSE" Bottom_Right="FALSE" Middle_Bottom="FALSE" Middle_Left="TRUE" Middle_Right="FALSE" Middle_Top="FALSE" Top_Left="FALSE" Top_Right="FALSE"/>
+                    <LargeBalloonNumberHandlingMethod>0</LargeBalloonNumberHandlingMethod>
+                    <KeyCharIdentificationTable/>
+                </Ballooning>
+                <CharacteristicsDefaultSettings>
+                    <Type>
+                        <Name>Datum Target</Name>
+                        <DefaultSubType></DefaultSubType>
+                        <SubType>
+                            <Name>Datum Target</Name>
+                            <Units></Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                    </Type>
+                    <Type>
+                        <Name>Dimension</Name>
+                        <DefaultSubType>Length</DefaultSubType>
+                        <SubType>
+                            <Name>Length</Name>
+                            <Units>,µm,mm,cm,m,µin,mil,in,ft</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Angle</Name>
+                            <Units>,sec,min,deg,grad,rad,sterad,spat</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>deg</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Radius</Name>
+                            <Units>,µm,mm,cm,m,µin,mil,in,ft</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Diameter</Name>
+                            <Units>,µm,mm,cm,m,µin,mil,in,ft</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Curvilinear</Name>
+                            <Units>,µm,mm,cm,m,µin,mil,in,ft</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Chamfer Size</Name>
+                            <Units>,µm,mm,cm,m,µin,mil,in,ft</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Chamfer Angle</Name>
+                            <Units>,sec,min,deg,rad,grad</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>deg</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Bend Radius</Name>
+                            <Units>,µm,mm,cm,µin,mil,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Counterbore Depth</Name>
+                            <Units>,µm,mm,cm,m,µin,mil,in,ft</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Counterbore Diameter</Name>
+                            <Units>,µm,mm,cm,m,µin,mil,in,ft</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Countersink Angle</Name>
+                            <Units>,sec,min,deg,rad,grad</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>deg</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Countersink Depth</Name>
+                            <Units>,µm,mm,cm,m,µin,mil,in,ft</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Countersink Diameter</Name>
+                            <Units>,µm,mm,cm,m,µin,mil,in,ft</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Depth</Name>
+                            <Units>,µm,mm,cm,m,µin,mil,in,ft</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Edge Radius</Name>
+                            <Units>,µm,mm,cm,m,µin,mil,in,ft</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Thickness</Name>
+                            <Units>,µm,mm,cm,µin,mil,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Edge burr size</Name>
+                            <Units>,µm,mm,cm,µin,mil,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Edge undercut size</Name>
+                            <Units>,µm,mm,cm,µin,mil,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Edge passing size</Name>
+                            <Units>,µm,mm,cm,µin,mil,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                    </Type>
+                    <Type>
+                        <Name>Geometric Tolerance</Name>
+                        <DefaultSubType>Flatness</DefaultSubType>
+                        <SubType>
+                            <Name>Profile of a Surface</Name>
+                            <Units>,μm,mm,μin,mil,cm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Position</Name>
+                            <Units>,μm,mm,μin,mil,cm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Flatness</Name>
+                            <Units>,μm,mm,μin,mil,cm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Perpendicularity</Name>
+                            <Units>,μm,mm,μin,mil,cm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Angularity</Name>
+                            <Units>,sec,min,deg,rad,grad</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>deg</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Circularity</Name>
+                            <Units>,μm,mm,μin,mil,cm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Runout</Name>
+                            <Units>,μm,mm,μin,mil,cm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Total Runout</Name>
+                            <Units>,μm,mm,μin,mil,cm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Profile of a Line </Name>
+                            <Units>,μm,mm,μin,mil,cm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Cylindricity</Name>
+                            <Units>,μm,mm,μin,mil,cm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Concentricity</Name>
+                            <Units>,μm,mm,μin,mil,cm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Symmetry</Name>
+                            <Units>,μm,mm,μin,mil,cm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Parallelism</Name>
+                            <Units>,μm,mm,μin,mil,cm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Straightness</Name>
+                            <Units>,μm,mm,μin,mil,cm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                    </Type>
+                    <Type>
+                        <Name>Note</Name>
+                        <DefaultSubType>Note</DefaultSubType>
+                        <SubType>
+                            <Name>Note</Name>
+                            <Units></Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Flag Note</Name>
+                            <Units></Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                    </Type>
+                    <Type>
+                        <Name>Other</Name>
+                        <DefaultSubType></DefaultSubType>
+                        <SubType>
+                            <Name>Temperature</Name>
+                            <Units>,deg C,deg F,K</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Time</Name>
+                            <Units>,days,hr,min,months,ms,s,years</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Torque</Name>
+                            <Units>,N-cm,N-m,lbf-ft,lbf-in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Voltage</Name>
+                            <Units>,mV,V,kV</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Temper Conductivity</Name>
+                            <Units>,%IACS</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Temper Verification</Name>
+                            <Units>,HR-15N,HR-15T,HRA,HRB,HRB-W,HRC,HRD,HRF</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Sound</Name>
+                            <Units>,dB</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Frequency</Name>
+                            <Units>,Hz,MHz,cycles/min,kHz,pulses/s</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Thread</Name>
+                            <Units></Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Capacitance</Name>
+                            <Units>,µF,F</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Electric Current</Name>
+                            <Units>,mA,A,kA</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Resistance</Name>
+                            <Units>,mΩ,Ω,kΩ</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Datum Target</Name>
+                            <Units></Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Production Method</Name>
+                            <Units></Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Annotation Table</Name>
+                            <Units></Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Table</Name>
+                            <Units></Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Cell</Name>
+                            <Units></Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Callout</Name>
+                            <Units></Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Datum</Name>
+                            <Units></Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Balloon</Name>
+                            <Units></Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Electric Charge</Name>
+                            <Units>,C</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Inductance</Name>
+                            <Units>,H</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Apparent Power</Name>
+                            <Units>,VA</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Reactive Power</Name>
+                            <Units>,var</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Electric Power</Name>
+                            <Units>,W,dB-mW,dB-W</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Conductance</Name>
+                            <Units>,S</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Admittance</Name>
+                            <Units>,S</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Electric Flux</Name>
+                            <Units>,V-m</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Magnetic Field</Name>
+                            <Units>,T,G</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Magnetic Flux</Name>
+                            <Units>,Wb</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Area</Name>
+                            <Units>,sq-mm,sq-cm,sq-m,sq-in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Resistivity</Name>
+                            <Units>,Ω.m</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Conductivity</Name>
+                            <Units>,S/m</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Electric Field</Name>
+                            <Units>,V/m,N/C</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                    </Type>
+                    <Type>
+                        <Name>Surface Finish</Name>
+                        <DefaultSubType>Roughness</DefaultSubType>
+                        <SubType>
+                            <Name>Roughness</Name>
+                            <Units>,µm,µin,mm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>µin</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Roughness(Ra)</Name>
+                            <Units>,µm,µin,mm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>µin</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Roughness(Rz)</Name>
+                            <Units>,µm,µin,mm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>µin</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Roughness(Rt)</Name>
+                            <Units>,µm,µin,mm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>µin</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Roughness(Rq)</Name>
+                            <Units>,µm,µin,mm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>µin</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Roughness(Rp)</Name>
+                            <Units>,µm,µin,mm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>µin</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Roughness(Rv)</Name>
+                            <Units>,µm,µin,mm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>µin</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Roughness (Rsk)</Name>
+                            <Units></Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Roughness (Rku)</Name>
+                            <Units></Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Lay</Name>
+                            <Units></Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Waviness</Name>
+                            <Units>,µm,µin,mm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>µin</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Waviness(Wp)</Name>
+                            <Units>,µm,µin,mm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>µin</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Waviness(Wv)</Name>
+                            <Units>,µm,µin,mm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>µin</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Waviness(Wz)</Name>
+                            <Units>,µm,µin,mm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>µin</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Waviness(Wc)</Name>
+                            <Units>,µm,µin,mm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>µin</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Waviness(Wt)</Name>
+                            <Units>,µm,µin,mm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>µin</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Waviness(Wa)</Name>
+                            <Units>,µm,µin,mm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>µin</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Waviness(Wq)</Name>
+                            <Units>,µm,µin,mm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>µin</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Waviness(Wsk)</Name>
+                            <Units></Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Waviness(Wku)</Name>
+                            <Units></Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Structure</Name>
+                            <Units>,µm,µin,mm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>µin</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Structure(Pp)</Name>
+                            <Units>,µm,µin,mm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>µin</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Structure(Pv)</Name>
+                            <Units>,µm,µin,mm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>µin</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Structure(Pz)</Name>
+                            <Units>,µm,µin,mm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>µin</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Structure(Pc)</Name>
+                            <Units>,µm,µin,mm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>µin</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Structure(Pt)</Name>
+                            <Units>,µm,µin,mm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>µin</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Structure(Pa)</Name>
+                            <Units>,µm,µin,mm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>µin</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Structure(Pq)</Name>
+                            <Units>,µm,µin,mm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>µin</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Structure(Psk)</Name>
+                            <Units></Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Structure(Pku)</Name>
+                            <Units></Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Material Removal Allowance</Name>
+                            <Units>,µm,µin,mm,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>µin</DefaultUnitOfMeasure>
+                        </SubType>
+                    </Type>
+                    <Type>
+                        <Name>Weld</Name>
+                        <DefaultSubType></DefaultSubType>
+                        <SubType>
+                            <Name>Size</Name>
+                            <Units>,µm,mm,cm,µin,mil,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Convexity</Name>
+                            <Units>,µm,mm,cm,µin,mil,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Reinforcement</Name>
+                            <Units>,µm,mm,cm,µin,mil,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Additional Characteristic</Name>
+                            <Units></Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Bead Contour</Name>
+                            <Units></Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Depth of Bevel</Name>
+                            <Units>,µm,mm,cm,µin,mil,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Penetration</Name>
+                            <Units>,µm,mm,cm,µin,mil,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Length</Name>
+                            <Units>,µm,mm,cm,µin,mil,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Location</Name>
+                            <Units></Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure></DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Pitch</Name>
+                            <Units>,µm,mm,cm,µin,mil,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                        <SubType>
+                            <Name>Root Opening</Name>
+                            <Units>,µm,mm,cm,µin,mil,in</Units>
+                            <DefaultInspectionMethod></DefaultInspectionMethod>
+                            <DefaultUnitOfMeasure>in</DefaultUnitOfMeasure>
+                        </SubType>
+                    </Type>
+                    <Type>
+                        <Name>User Defined</Name>
+                        <DefaultSubType></DefaultSubType>
+                    </Type>
+                </CharacteristicsDefaultSettings>
+                <NominalValuePattern>UpperLowerLimit</NominalValuePattern>
+                <Tolerances ToleranceSource="0">
+                    <LengthPrecsionTolerances Preference="TRUE">
+                        <item MinusTol="-.1" PlusTol="+.1" Precision="0"/>
+                        <item MinusTol="-.1" PlusTol="+.1" Precision="1"/>
+                        <item MinusTol="-.05" PlusTol="+.05" Precision="2"/>
+                        <item MinusTol="-.005" PlusTol="+.005" Precision="3"/>
+                    </LengthPrecsionTolerances>
+                    <AngularPrecsionTolerances Preference="TRUE">
+                        <item Precision="3" PlusTol="+1" MinusTol="-1"/>
+                        <item Precision="2" PlusTol="+1" MinusTol="-1"/>
+                        <item Precision="1" PlusTol="+1" MinusTol="-1"/>
+                    </AngularPrecsionTolerances>
+                    <LengthRangeTolerances>
+                        <item UpperLimit="100" LowerLimit="0.5" PlusTol="+.2" MinusTol="-.2"/>
+                        <item UpperLimit="10000" LowerLimit="100" PlusTol="+.5" MinusTol="-.5"/>
+                    </LengthRangeTolerances>
+                    <AngularRangeTolerances>
+                        <item UpperLimit="360" LowerLimit="0.5" PlusTol="+.5" MinusTol="-.5"/>
+                    </AngularRangeTolerances>
+                </Tolerances>
+                <FileExport AdjustImageCapturesInExcel="TRUE" DefaultExcelExportFolder="" DefaultPDFExportFolder="" ExcelAutoSizeCellHeights="TRUE" ExcelAutoSizeCellWidths="TRUE" ExcelAutoSizeImages="TRUE" ExcelPrefix="" ExcelPrompt="TRUE" ExcelSuffix="" ImageContrastValue="1" ImageResizeOption="1" ImageZoomFactor="125" PDFIncludeWatermark="TRUE" PDFMarkupsAsAnnotations="FALSE" PDFPrefix="" PDFPrompt="TRUE" PDFResolution="75" PDFSuffix="-ballooned" PDFWatermarkLocation="TopEdgeLeft" SeparatePDFOnExport="TRUE" ViewExcelAfterSaving="TRUE" ViewPDFAfterSaving="TRUE" ViewXMLAfterSaving="TRUE"/>
+                <AutoSave ChangesBeforeAutoSave="" Enabled=""/>
+                <OCR Dilate="0" Edge="1" Font="standard" NoteFont="standard" Resolution="300" Sharpen="1" Stretch="0"/>
+                <Performance Disk_Cache_Folder="" Enable_Disk_Caching="FALSE"/>
+                <ToleranceMultiplier>
+                    <UseToleranceMultiplier>FALSE</UseToleranceMultiplier>
+                    <ToleranceMultiplierValue>1</ToleranceMultiplierValue>
+                </ToleranceMultiplier>
+                <Export2DPDFSettings>
+                    <Resolution>LOW</Resolution>
+                    <PageSize>A2</PageSize>
+                    <IncludeCapture>TRUE</IncludeCapture>
+                    <IncludeViews>TRUE</IncludeViews>
+                    <RememberSettings>TRUE</RememberSettings>
+                </Export2DPDFSettings>
+                <ExportCaptureSettings>
+                    <Captures>
+                        <Capture DocID="0" FullLocation="&lt;ComponentName&gt;LOWER PLATE CMM - C4&lt;/ComponentName&gt;\&lt;ViewLocationType&gt;PAGE&lt;/ViewLocationType&gt;&lt;ViewLocationName&gt;1&lt;/ViewLocationName&gt;" IsCustom="FALSE" IsExcelPublished="FALSE" IsPublished="TRUE" Name="1"/>
+                        <Capture DocID="0" FullLocation="&lt;ComponentName&gt;LOWER PLATE CMM - C4&lt;/ComponentName&gt;\&lt;ViewLocationType&gt;PAGE&lt;/ViewLocationType&gt;&lt;ViewLocationName&gt;2&lt;/ViewLocationName&gt;" IsCustom="FALSE" IsExcelPublished="FALSE" IsPublished="TRUE" Name="2"/>
+                    </Captures>
+                </ExportCaptureSettings>
+                <FAIOptions DetailFAI="TRUE" FullFAI="TRUE">
+                    <BaselinePartNumber></BaselinePartNumber>
+                    <ReasonForPartialFAI></ReasonForPartialFAI>
+                    <IsNewProject>FALSE</IsNewProject>
+                </FAIOptions>
+                <AnnotationDisplayStatus>SHOW_ALL</AnnotationDisplayStatus>
+            </GeneralOptions>
+            <ExportTemplateList>
+                <ExportTemplate Active="FALSE" TemplateName="AS9102 (Image captures) - MXpert.xlt" TemplateType="Excel" AllSheets="TRUE" TemplatePath="C:\ProgramData\SOLIDWORKS\SOLIDWORKS Inspection 2018 Standalone\Templates\AS9102 (Image captures) - MXpert.xlt" IsImported="FALSE"/>
+                <ExportTemplate Active="FALSE" TemplateName="AS9102 (Image Captures).xlt" TemplateType="Excel" AllSheets="TRUE" TemplatePath="C:\ProgramData\SOLIDWORKS\SOLIDWORKS Inspection 2018 Standalone\Templates\AS9102 (Image Captures).xlt" IsImported="FALSE"/>
+                <ExportTemplate Active="FALSE" TemplateName="AS9102 - MXpert.xlt" TemplateType="Excel" AllSheets="TRUE" TemplatePath="C:\ProgramData\SOLIDWORKS\SOLIDWORKS Inspection 2018 Standalone\Templates\AS9102 - MXpert.xlt" IsImported="FALSE"/>
+                <ExportTemplate Active="FALSE" TemplateName="AS9102.xlt" TemplateType="Excel" AllSheets="TRUE" TemplatePath="C:\ProgramData\SOLIDWORKS\SOLIDWORKS Inspection 2018 Standalone\Templates\AS9102.xlt" IsImported="FALSE"/>
+                <ExportTemplate Active="FALSE" TemplateName="AS9102B.xlt" TemplateType="Excel" AllSheets="TRUE" TemplatePath="C:\ProgramData\SOLIDWORKS\SOLIDWORKS Inspection 2018 Standalone\Templates\AS9102B.xlt" IsImported="FALSE"/>
+                <ExportTemplate Active="FALSE" TemplateName="OMNEX AQua Pro.xlt" TemplateType="Excel" AllSheets="TRUE" TemplatePath="C:\ProgramData\SOLIDWORKS\SOLIDWORKS Inspection 2018 Standalone\Templates\OMNEX AQua Pro.xlt" IsImported="FALSE"/>
+                <ExportTemplate Active="FALSE" TemplateName="PPAP Results (image captures).xlt" TemplateType="Excel" AllSheets="TRUE" TemplatePath="C:\ProgramData\SOLIDWORKS\SOLIDWORKS Inspection 2018 Standalone\Templates\PPAP Results (image captures).xlt" IsImported="FALSE"/>
+                <ExportTemplate Active="FALSE" TemplateName="PPAP Results (text with GDT).xlt" TemplateType="Excel" AllSheets="TRUE" TemplatePath="C:\ProgramData\SOLIDWORKS\SOLIDWORKS Inspection 2018 Standalone\Templates\PPAP Results (text with GDT).xlt" IsImported="FALSE"/>
+                <ExportTemplate Active="FALSE" TemplateName="Process Performance (image captures).xlt" TemplateType="Excel" AllSheets="TRUE" TemplatePath="C:\ProgramData\SOLIDWORKS\SOLIDWORKS Inspection 2018 Standalone\Templates\Process Performance (image captures).xlt" IsImported="FALSE"/>
+                <ExportTemplate Active="FALSE" TemplateName="Process Performance.xlt" TemplateType="Excel" AllSheets="TRUE" TemplatePath="C:\ProgramData\SOLIDWORKS\SOLIDWORKS Inspection 2018 Standalone\Templates\Process Performance.xlt" IsImported="FALSE"/>
+                <ExportTemplate Active="FALSE" TemplateName="SimpleReportTemplateforCADNostic.xlt" TemplateType="Excel" AllSheets="TRUE" TemplatePath="C:\ProgramData\SOLIDWORKS\SOLIDWORKS Inspection 2018 Standalone\Templates\SimpleReportTemplateforCADNostic.xlt" IsImported="FALSE"/>
+            </ExportTemplateList>
+            <ProjectProperties>
+                <Property>
+                    <Name>Part Name</Name>
+                    <Value></Value>
+                    <MappingNode></MappingNode>
+                </Property>
+                <Property>
+                    <Name>Part Number</Name>
+                    <Value></Value>
+                    <MappingNode></MappingNode>
+                </Property>
+                <Property>
+                    <Name>Part Revision</Name>
+                    <Value></Value>
+                    <MappingNode></MappingNode>
+                </Property>
+                <Property>
+                    <Name>Drawing Name</Name>
+                    <Value></Value>
+                    <MappingNode></MappingNode>
+                </Property>
+                <Property>
+                    <Name>Drawing Number</Name>
+                    <Value></Value>
+                    <MappingNode></MappingNode>
+                </Property>
+                <Property>
+                    <Name>Drawing Revision</Name>
+                    <Value></Value>
+                    <MappingNode></MappingNode>
+                </Property>
+                <Property>
+                    <Name>Material</Name>
+                    <Value></Value>
+                </Property>
+                <Property>
+                    <Name>Work order number</Name>
+                    <Value></Value>
+                </Property>
+                <Property>
+                    <Name>Organization name</Name>
+                    <Value></Value>
+                </Property>
+                <Property>
+                    <Name>Supplier code</Name>
+                    <Value></Value>
+                </Property>
+                <Property>
+                    <Name>P.O. number</Name>
+                    <Value></Value>
+                </Property>
+                <Property>
+                    <Name>Additional changes</Name>
+                    <Value></Value>
+                </Property>
+                <Property>
+                    <Name>Ballooned by</Name>
+                    <Value></Value>
+                </Property>
+                <Property>
+                    <Name>Inspected by</Name>
+                    <Value></Value>
+                </Property>
+                <Sampling>
+                    <LotSize>200</LotSize>
+                    <Level>II</Level>
+                    <Type>NORMAL</Type>
+                    <AQL></AQL>
+                </Sampling>
+            </ProjectProperties>
+            <IXExtractionSettings>
+                <CharacteristicInfo>
+                    <CreateForEachInstance>false</CreateForEachInstance>
+                </CharacteristicInfo>
+                <Dimensions>
+                    <Include>true</Include>
+                    <InspectionOnly>false</InspectionOnly>
+                    <ReferenceDimensions>true</ReferenceDimensions>
+                    <BasicDimensions>true</BasicDimensions>
+                    <SecondaryUnits>true</SecondaryUnits>
+                    <SplitChamferDimensions>true</SplitChamferDimensions>
+                </Dimensions>
+                <Notes>
+                    <Include>true</Include>
+                    <AutoExplode>true</AutoExplode>
+                    <CorrelateFlagNotes>false</CorrelateFlagNotes>
+                    <ExtractFullFlagNoteText>true</ExtractFullFlagNoteText>
+                    <Datums>true</Datums>
+                    <DatumTargets>true</DatumTargets>
+                    <FlagNotes>true</FlagNotes>
+                    <SectionViewMarkers>true</SectionViewMarkers>
+                </Notes>
+                <GDTs>
+                    <Include>true</Include>
+                </GDTs>
+                <HoleCallouts>
+                    <Include>true</Include>
+                    <AutoExplode>true</AutoExplode>
+                </HoleCallouts>
+                <Welds>
+                    <Include>true</Include>
+                </Welds>
+                <SurfaceFinishes>
+                    <Include>true</Include>
+                </SurfaceFinishes>
+                <GeometryOptions>
+                    <LoadInvisibleComponents>false</LoadInvisibleComponents>
+                </GeometryOptions>
+                <InspectionCriteria>
+                    <DefaultClassification></DefaultClassification>
+                </InspectionCriteria>
+            </IXExtractionSettings>
+            <BalloonSequences>
+                <BalloonSequenceItem>
+                    <Uid>7e532509-722c-4edc-bbf6-4bff7f3f1cde</Uid>
+                    <Name>Default</Name>
+                    <Value>1</Value>
+                </BalloonSequenceItem>
+            </BalloonSequences>
+        </PackageOptions>
+    </INSPECTION_SHEET>
+</iex:SOLIDWORKSINSPECTION>

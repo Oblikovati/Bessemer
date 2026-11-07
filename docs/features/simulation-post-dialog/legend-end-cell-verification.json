@@ -1,0 +1,82 @@
+{
+  "issue": 166,
+  "evidence": "C-853",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "target_executed": false,
+  "complete_installed_instruction_count": 1638,
+  "independent_ghidra_instruction_count": 1638,
+  "complete_body_bytes": 6873,
+  "exact_decoder_qualifications": 0,
+  "original_candidate_rows": 284,
+  "native_accepted_contexts": 276,
+  "original_rejected_contexts": 8,
+  "native_present_pairs": 109,
+  "native_absent_pairs": 167,
+  "native_zero_flags": 109,
+  "owned_complete_contexts": 425,
+  "owned_absent_pairs": 312,
+  "additional_stored_byte_credit": 0,
+  "initial_freeze": {
+    "checks": 16,
+    "seconds": 5.521,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-end-cell-source-initial.log",
+      "bytes": 2540,
+      "sha256": "bfb2081fe9eddf6fa2d8264dbde0931abd53fd026d41aee5196d0119afc2e6fb"
+    }
+  },
+  "strict_source": {
+    "checks": 16,
+    "seconds": 5.104,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/legend-end-cell-source-strict.log",
+      "bytes": 2540,
+      "sha256": "51c3be70192a01bf13f6c1b7f66802638002d4a4266fbdc53f864a6164417022"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/legend-end-cell-source-snapshot.json",
+      "bytes": 625089,
+      "sha256": "367bd433b27a1eb50073e1ee1eacfaf0cc3beb0dcc69aef03431050ba063fb67"
+    }
+  },
+  "evidence_capture": {
+    "path": "docs/features/simulation-post-dialog/legend-end-cell-rea.json",
+    "bytes": 155507,
+    "sha256": "e573c2478e995e917fa1f208a86f79c3aa3f403b588db8dc444f5df6761432c9"
+  },
+  "kernel_decision": "Evidence only: preserve signed E8 and all four EC color words, original source identities and complete native bodies. Keep runtime plot524 distinct and earlier than the stored E8 read; do not infer active native behavior from zero-flag fixtures.",
+  "excluded": [
+    "Native DLL execution",
+    "Typed end-cell operation and geometry/floating-point projection",
+    "Alpha compositing, allowed color values, color100 identity and broader UI activation",
+    "New stored-byte credit or expanded original prefix-only admission"
+  ],
+  "pending": [
+    "Remaining feature166 models",
+    "Exact publication-head cargo xtask pr and all five platform gates"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_source_replay": {
+    "checks": 283,
+    "failed": 0,
+    "seconds": 483.104,
+    "process_exit_code": 0,
+    "accepted_source_cut": "83ca11804d49fae7556c0e771bfd1a7e8dd398a2",
+    "log": {
+      "path": "target/legend-end-cell-source-full.log",
+      "bytes": 62714,
+      "sha256": "8f0586417d2c3d9b7b2575dc0a37d25d1ef6dc8954030d3e8ce6c2082c2315fb"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 633446,
+      "sha256": "fc3454e002cc2bd12d3995d4b5d1ebfaf4d5faa394cf247be3bb0ee4da21a93d"
+    },
+    "terminal_exit_reaped": true
+  }
+}

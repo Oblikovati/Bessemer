@@ -1,0 +1,72 @@
+{
+  "issue": 153,
+  "behavior_profile": 1,
+  "focused_including_native": {
+    "passed": 20,
+    "failed": 0,
+    "ignored": 0
+  },
+  "strict_reference_checks": 11,
+  "native": {
+    "streams": 232,
+    "logical_bytes": 34672,
+    "complete_streams": 226,
+    "complete_bytes": 33778,
+    "arguments": 237,
+    "accepted": 228,
+    "failed": 9
+  },
+  "owned_profiles": 96,
+  "mutation_outcomes": {
+    "unchanged_accepted_controls": 96,
+    "rejected": 570
+  },
+  "independent_exact_one_below_budget_contexts": 96,
+  "outer_budget_axes": 4,
+  "proper_prefixes_and_trailing_bytes": "all owned contexts rejected",
+  "populated_list_cap": "list-cap-reference.json",
+  "send_sync_types": 13,
+  "concurrency": {
+    "workers": 8,
+    "iterations": 32,
+    "mixed_serial_options": 3
+  },
+  "value_kinds": [
+    "Signed",
+    "Text",
+    "DoubleBits"
+  ],
+  "historical_regression": {
+    "native_cases": 6,
+    "outer_version": 860006,
+    "result": "typed Invalid error, no partial SurfaceBody",
+    "known_complete_prefix": "original C-740 spans/failure/raw tail retained",
+    "required_next_bytes": 8,
+    "remaining_bytes": 4,
+    "complete_native_same_version_comparators": 0,
+    "complete_synthetic_control": "synthetic-860006-reference.json"
+  },
+  "exports": {
+    "fields": {
+      "bytes": 228182,
+      "sha256": "f588d33883fc96f464f2e775e1d29ecd5ea09993cce1df2c1a1734bf9fb757b8",
+      "fresh_processes": 2,
+      "scope": "96 owned + 228 accepted native arguments, complete fields"
+    },
+    "history": {
+      "bytes": 382542,
+      "sha256": "17bbd5629a68c6e1e514a964a8395453cfe96d5bfcf74352ad74ad145842a35c",
+      "fresh_processes": 2,
+      "scope": "96 owned + 228 accepted native arguments, complete edited fields and all ordered outer parents"
+    }
+  },
+  "clippy": "passed -D warnings",
+  "full_local_gate": "passed; see full-gate-verification.json",
+  "platform_integration": "pending",
+  "exclusions": [
+    "Resolution of six incomplete historical streams",
+    "Whole manager inventory, physical meanings",
+    "Native target/writer/application and geometric acceptance"
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending"
+}

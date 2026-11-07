@@ -1,0 +1,38 @@
+{
+  "issue": 193,
+  "kind": "Behavior-preserving internal module and type extraction",
+  "baseline_revision": "ee592d7c",
+  "function_bodies_and_diagnostics": "unchanged; exact text comparison after internal type/module documentation substitution",
+  "owned_tests_passed": 10,
+  "native_tests_passed": 1,
+  "native_project_indexes": 38,
+  "native_output_byte_equal": true,
+  "native_output_bytes": 89092608,
+  "cargo_fmt_check": "passed",
+  "core_clippy_warnings_denied": "passed",
+  "missing_docs_denied": "passed",
+  "unsafe_forbidden": "passed",
+  "files": {
+    "target/xml-facade-owned-after.log": {
+      "bytes": 942,
+      "sha256": "c3db6365fc695a8cb8374a05c7f19a0562a2f1e49f87924eebaf08317ce00361"
+    },
+    "target/xml-facade-native-after.log": {
+      "bytes": 202,
+      "sha256": "020e48c73da0c356b84fb7dfa2d3d67a698fc4593d2cc997e3ac4367e1b7adf2"
+    },
+    "target/xml-facade-after/target/composer-links-native-edits.bin": {
+      "bytes": 89092608,
+      "sha256": "3cc9169490a9a443aedfd398631b7e6a4af16d46d6f706f25f68ad61ff7932d1"
+    }
+  },
+  "changed_modules": {
+    "src/metadata/mod.rs": "c5dc14bc1c38de510837770e76329dee63ea4ed941344c1a4bb2f332ef18c1ee",
+    "src/metadata/utf8.rs": "dce7ad238606375b6589f2992df8c56ce889f17f04c3f564a2352b3edc2efc45"
+  },
+  "exclusions": [
+    "No Inspection record API yet",
+    "No application reload claim",
+    "Complete post-integration PR gate and exact-head remote matrix remain required"
+  ]
+}

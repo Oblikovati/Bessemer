@@ -1,0 +1,59 @@
+{
+  "base_revision": "23fab4f4373db14bafda807af29d681a3304103f",
+  "issue": 46,
+  "issue_type": "Bug",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "gate": {
+    "command": "cargo xtask pr",
+    "staged": true,
+    "exit_code": 0,
+    "library_passed": 497,
+    "library_ignored": 3,
+    "xtask_tests_passed": 4,
+    "all_integration_suites_passed": true,
+    "doctests_passed": 265,
+    "log_sha256": "49dc54b593a65f3042a6ac07636a859a307a31154cdcc17eca70caa39e628f08"
+  },
+  "regression": {
+    "before_passed": 1,
+    "before_failed": 2,
+    "after_passed": 3,
+    "after_failed": 0,
+    "before_log_sha256": "191d2e177d2137e2816e0b06b6d1cb55f264e768f2a76424d4f151e2dd89efa4",
+    "after_log_sha256": "767f21dfa1e8f5bb16456aab80ebe6773297e7071a595622ead2ada2c7f4c3ff",
+    "python_tests": 3,
+    "object_cases": 24,
+    "primitive_reads": 3428,
+    "corrected_cached_coordinate_identity_verified": true
+  },
+  "native_corpus": {
+    "cases": 906,
+    "accepted": 638,
+    "rejected": 268,
+    "previous_638_preserved": true,
+    "all_outcomes_and_causes_identical": true,
+    "fresh_process_outcomes_identical": true,
+    "final_artifact_stable": true,
+    "artifact_sha256": "8bdb22547c2d5c0be5ad2ecb05fcd424f52f647bc0d83deba01cde3b124d2987",
+    "expected_full_parity_exit_code": 101,
+    "previous_independent_eof_report": "../coordinate-systems/accepted-reference.json",
+    "previous_independent_eof_report_sha256": "3b03125d6499bdd08da38797c05726468f870522aa030cc8ce93cfe70aa7bacf"
+  },
+  "source_file_sha256": {
+    "src/model_archives/component_references.rs": "568782c1dd2832f74e0a4224721f3ebadb51b7b6dfaaf9382a51f67c1e1f9c2a",
+    "src/model_archives/test_modules.rs": "3f1db37a18c97bf8a5440b5a561a17b0f384021a4521d1374c7499b7de606953",
+    "tests/resolved_features/component_geometry_roles.rs": "35d4512815edb16c3e007af8c8070f2a3a51388134da9ffa5c5c74b7fa2c97b8",
+    "docs/features/component-coordinate-systems/geometry_role_fixtures.py": "ca26f2cb61849f318b7d9f0d97cf66ee1b9d754c779482c547c5190b19f0bbe4",
+    "docs/features/component-coordinate-systems/test_geometry_roles.py": "e821e798a2cd58ce8493612c1cb4d077d6150fe86278da314c2915a1b5aba507"
+  },
+  "exclusions": [
+    "Full documented schema parity",
+    "Native geometry and topology validation",
+    "Native application acceptance",
+    "Component coordinate-system serializer",
+    "Non-Windows execution awaits integration PR matrix"
+  ],
+  "dependencies_changed": false,
+  "version_changed": false
+}

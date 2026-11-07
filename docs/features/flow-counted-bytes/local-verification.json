@@ -1,0 +1,32 @@
+{
+  "source_parent": "4fb874e9080b4a68d140579ebbaf2674a89cc487",
+  "issue": 241,
+  "platform": "Windows x64 MSVC Rust 1.99.0 Python3",
+  "commands": [
+    "cargo test --locked --test flow_counted_byte_fixtures",
+    "cargo clippy --locked --test flow_counted_byte_fixtures -- -D warnings",
+    "python -m unittest discover -s docs/features/flow-counted-bytes -p test_counted_bytes.py -v"
+  ],
+  "terminal_exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "rust": {
+    "passed": 3,
+    "failed": 0,
+    "ignored": 0
+  },
+  "python": {
+    "passed": 7,
+    "failed": 0
+  },
+  "complete_source_cases": 681,
+  "logs_sha256": {
+    "target/flow-counted-bytes-tests.log": "20f07dfb4eb17c86e23ed52d83dd82bcb32e15c70ba3ee759957d07de5f695df",
+    "target/flow-counted-bytes-clippy.log": "5292f627786f5373d1c16fa891653dcfdb826f36d71ad1e5bde77ddd1a790ff0",
+    "target/flow-counted-bytes-python.log": "60c2da262e71a29a0e36bede278538c661bf67064a952915ae8e3ce74a14a2e8"
+  },
+  "scope": "Complete owned count/byte framing baseline; production typed API not added yet",
+  "humanizer": "Unavailable in the supplied skill catalog; maintainer prose pass remains for review"
+}

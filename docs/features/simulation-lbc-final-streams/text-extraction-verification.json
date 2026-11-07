@@ -1,0 +1,22 @@
+{
+  "issue": 130,
+  "change": "Private behavior-preserving text sequence and exact byte splice extraction",
+  "base_revision": "01885d15cde1f4ac9bcf557a62bee6ab2d20bebf",
+  "public_api_changed": false,
+  "unsigned_study_count_actual_leading_text_and_existing_error_entities_preserved": true,
+  "focused_existing_persistence_tests_with_native_export_passed": 31,
+  "clippy_with_warnings_denied_passed": true,
+  "complete_owned_native_projection_bytes": 4486980,
+  "complete_bytes_equal_pre_refactor_reference": true,
+  "projection_sha256": "004c89cb2624da2e2bf4e1030e1cc7af42e756ca04c094b3c99f4f1294e1e597",
+  "owned_reference_cases": 1497,
+  "native_reference_cases": 5012,
+  "source_sha256": {
+    "src/simulation/persistence/mod.rs": "e335f995a3aac02516d222ef9de035b92befbaded7116590753dcbf5ab12c888",
+    "src/simulation/persistence/study.rs": "b1bad666ac94c9222c69ad13a88073dcedbc2a0850fc88228385b94455675a68",
+    "src/simulation/persistence/study_edit.rs": "f3aa46bba8da7c4405c46526eb918f19218b12fbed3036fa81345a73a7bce259",
+    "src/simulation/persistence/text_sequence.rs": "01cf9d8898197b832c95ac4b9bc856b71118efacc51d5b0109e159c26185d968"
+  },
+  "new_lbc_behavior_included": false,
+  "full_pr_gate_required_before_push": true
+}

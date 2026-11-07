@@ -1,0 +1,24 @@
+{
+  "issue": 197,
+  "status": "Operation-local capture with unchanged complete relationship results; full gate pending",
+  "targeted_capture_tests_passed": 3,
+  "fresh_processes": 2,
+  "fresh_process_tests_passed_each": 13,
+  "failed": 0,
+  "packet_bytes": 381601,
+  "packet_sha256": "3c4706cb9e8604c65b397d8b51360af85b97fff995e1f5a561e31fae87e65aa0",
+  "packets_unchanged_from_original_source_verified_baseline": true,
+  "regression_tests_passed": 33,
+  "existing_composer_reference_exclusions": 1,
+  "logs": {
+    "inspection-relationships-operation-local-tests.log": "87f40c54a827e75e3adab56740a049a257be323cfa630bb7dde38eec7b227834",
+    "relationships-operation-local-xml_metadata-regression.log": "b0eec41351ad9aec1f9f670944616bfcf56172f1460fd0632e06a7ac39eacc3e",
+    "relationships-operation-local-composer_containers-regression.log": "6b4e81cd15e9702c30c628db983e4bed03eb67b14436dd75cd9feed6686d9549",
+    "relationships-operation-local-composer_links-regression.log": "b464324cb230524c45ab99314b196e05ba1d739db77eadb45489a999d9f4f923",
+    "relationships-operation-local-composer_references-regression.log": "a7b48b966baf7d65c82cd4da595e6db83c3c9a346bbc8b81ada4eee92d864da3"
+  },
+  "remaining": [
+    "All-target lint and complete local repository gate",
+    "Exact-head remote integration"
+  ]
+}

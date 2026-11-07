@@ -1,0 +1,58 @@
+{
+  "parent_revision": "1c662abd0fad33476ed719906fc63b373cca1c4c",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "behavior": "NearestEvenGradual79V1",
+  "arithmetic": "integer binary32 nearest-even / gradual underflow / separate operations",
+  "local_pr_gate": {
+    "command": "cargo xtask pr",
+    "passed": 2845,
+    "ignored": 7,
+    "summaries": 214
+  },
+  "native": {
+    "files": 38,
+    "vector_blocks": 4367,
+    "components": 16562558,
+    "output_bytes": 66250232,
+    "full_reference_output_equal": true,
+    "two_process_byte_comparison_equal": true,
+    "output_sha256": "c0f398436fb06eaf215f1db477e290f33857ab56bb8e8db88045ab675142a6ff",
+    "probe_sha256": "b4e13e412a564cbe33415088a1da215162d0cf3f0445d5d6233b982bf5f27ae1"
+  },
+  "independent_oracles": {
+    "exhaustive_weights": 65792,
+    "owned_cases": 8224,
+    "reviewed_endpoint_pairs": 15,
+    "generated_finite_pairs": 8192,
+    "installed_rational_samples": 32286,
+    "closed_form_checks": [
+      "nearest-even ties",
+      "subnormal/normal boundary",
+      "gradual underflow",
+      "overflow",
+      "signed zero",
+      "sticky-bit cancellation"
+    ]
+  },
+  "input_report_sha256": {
+    "owned-reference.json": "87f140f35cb015f5b822433f19b5a1530e1280fab0bd891a8c6232583053b380",
+    "native-reference.json": "d10058b3782e8f1c099bd239ab444070264cdbefb120a3329c2be9dbb4a98315",
+    "native-probe-reference.json": "0f2b402d4aa8319ef09f8516914ff565b5cb129afd20b4e2d830e149ae5bd7b8"
+  },
+  "runtime_sha256": {
+    "src/composer/arrays/binary32.rs": "848011b306017bca1315d2dc07809a8837439c2938e9d29208c6611d85691c4c",
+    "src/composer/arrays/values.rs": "7c3701ec258716ee77cf7eac3476f370deb25c0ce64388f04b349683ccc6d8ca",
+    "src/composer/arrays/value_types.rs": "66e71ee2d93b17a8431079279a886f67d46f05cee6f7e68689182837f8e6d0c5",
+    "src/composer/arrays/vectors.rs": "ef17061c107e9624ead05988bec679598762b108c2aaa0cd026fb20847c82042",
+    "src/composer/arrays/mod.rs": "d0d5537a23e805e77340ec693e7a98918aff4b50fe84189f3efb6d42ac884e6e"
+  },
+  "exclusions": [
+    "native floating control state, traps and exception flags",
+    "nonfinite quantized endpoint arithmetic",
+    "quantization error against original geometry",
+    "geode snapping/transforms/rendering",
+    "topology/geometry/self-intersection/tolerance checks",
+    "whole project schema and native application acceptance"
+  ]
+}

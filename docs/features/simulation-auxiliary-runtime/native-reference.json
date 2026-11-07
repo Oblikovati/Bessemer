@@ -1,0 +1,89 @@
+{
+  "files": 3,
+  "supplied_allocation_result": 0,
+  "allocation_result_is_synthetic": true,
+  "totals": {
+    "rows": 5,
+    "name_buffer_bytes": 1280,
+    "prefix_including_nul_bytes": 146,
+    "residual_bytes": 1134,
+    "residual_nonzero_bytes": 565,
+    "legacy_trials": 4
+  },
+  "records": [
+    {
+      "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldBenchmarking\\Macro\\Mold\\Moldbase\\sw3dps-hasco metric intermediate plate-study 1.cwr",
+      "carrier_sha256": "77270fef06e31dc7850a4d98b07bb9b3d6c7936b5c6e1a0b7e4bce0bbdbb2a4b",
+      "oracle_sha256": "114b8a9d0fe805370c32920fcd9b31f85aad633f4c9d9266eaa42e5c51e297e6",
+      "stride": 288,
+      "rows": [
+        {
+          "trial_offset": 3306164,
+          "trial_sha256": "117a807d417c6dc8d941ce590eff0ec03c5a782171a889b1ddc4fc3061a075a5",
+          "normalized_sha256": "117a807d417c6dc8d941ce590eff0ec03c5a782171a889b1ddc4fc3061a075a5",
+          "legacy": false,
+          "prefix": "Move Face2",
+          "prefix_including_nul_bytes": 22,
+          "residual_bytes": 234,
+          "residual_nonzero_bytes": 19
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Composites\\tjoint-ready - 16 plies.cwr",
+      "carrier_sha256": "14e9a4d71a66cfcaa7915ccea1d509d2af62f491638f5eb8a00f9ca0bc17dd47",
+      "oracle_sha256": "0c4c207b4d3abdd979a19db3ee4e24235711369ba73b696e4a215eb2c24a07c3",
+      "stride": 284,
+      "rows": [
+        {
+          "trial_offset": 1282240,
+          "trial_sha256": "baf8c215cd1d994c6f0c6210ca7a14bb2ceb7a13c7f0e872526f9de56bce8fd5",
+          "normalized_sha256": "8e4f323b75f01c8d31365a93e5d31c306239130f159517460e4146bb66dfa3b8",
+          "legacy": true,
+          "prefix": "Surface-Trim1",
+          "prefix_including_nul_bytes": 28,
+          "residual_bytes": 228,
+          "residual_nonzero_bytes": 137
+        },
+        {
+          "trial_offset": 1282528,
+          "trial_sha256": "e99ba1cb552fa2db7e80764adf355530d2d47f714ab55b6d67d600f51de25758",
+          "normalized_sha256": "b568a93f9c93014cd7562041d4273a0c56fa893083c9cd5f7adb2d1eb985df52",
+          "legacy": true,
+          "prefix": "Surface-Extrude2",
+          "prefix_including_nul_bytes": 34,
+          "residual_bytes": 222,
+          "residual_nonzero_bytes": 136
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Composites\\tjoint-ready - 8 plies.cwr",
+      "carrier_sha256": "8826681fe7b0344f92a6d1e95213b58fbf1a50665cc91c6cca84024d9eb091e1",
+      "oracle_sha256": "94ccac281ecfc2880f29837fb87a4371be3642c47919ae3fb9269a60f5cb873b",
+      "stride": 284,
+      "rows": [
+        {
+          "trial_offset": 1282240,
+          "trial_sha256": "9a7e28355bb7172b16368f838a29026eaab125105488572b3e28d9a596c81ae8",
+          "normalized_sha256": "d8e8e2548ad462e71f26fcb336a2ab1d5d34270ec79c32dd6d05ab64dcfed3a4",
+          "legacy": true,
+          "prefix": "Surface-Trim1",
+          "prefix_including_nul_bytes": 28,
+          "residual_bytes": 228,
+          "residual_nonzero_bytes": 137
+        },
+        {
+          "trial_offset": 1282528,
+          "trial_sha256": "a9a0ae09a5954bd72b21fdcb2e25e0c21cfb1c8b733aad6befd736883cbeb1db",
+          "normalized_sha256": "a8b737351cd90aaf42f011e2cab19c73e18a48a89720c9a822b8b3d380156679",
+          "legacy": true,
+          "prefix": "Surface-Extrude2",
+          "prefix_including_nul_bytes": 34,
+          "residual_bytes": 222,
+          "residual_nonzero_bytes": 136
+        }
+      ]
+    }
+  ]
+}

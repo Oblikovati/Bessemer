@@ -1,0 +1,64 @@
+{
+  "issue": 223,
+  "source_base": "939b26cd5a8429edb41534475d9fc92284c0a952",
+  "behavior_version": "C3597-database-time-v1",
+  "source_identity": "Working tree after source_base; exact source hashes below",
+  "platform": "Windows x64",
+  "toolchain": "Rust1.99.0",
+  "builds": "Final library and both integration Clippy builds exited0, with debug assertions/overflow checks and -D warnings -D missing_docs -F unsafe_code",
+  "format_check": "Pinned cargo fmt --all -- --check on all changed Rust files exited0",
+  "rust_tests": [
+    {
+      "log": "target/database_time-packed-time-tests-v2.log",
+      "passed": 8,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "log": "target/database_header-packed-time-tests.log",
+      "passed": 11,
+      "failed": 0,
+      "ignored": 0
+    }
+  ],
+  "rust_passed": 19,
+  "new_time_tests": 8,
+  "header_regression_tests": 11,
+  "python_fixture_verifier_exit_code": 0,
+  "independent_vectors": 8422,
+  "single_component_boundaries": 38,
+  "full_width_seeded_vectors": 8192,
+  "bit_basis_and_complement_replays": 64,
+  "sixteen_bit_half_replay_cases": 262144,
+  "native_streams": 2,
+  "containing_document_replacements_and_fresh_reversals": 6,
+  "concurrent_workers": 8,
+  "process_determinism": "process-determinism-verification.json",
+  "closed_form_replay_invariant": "Stored widths7+4+5+5+6+5 partition32 bits. Since1980+68 is divisible by128, the extracted year contribution returns its original7 bits; the remaining extracted contributions occupy their disjoint stored ranges and even seconds cancel SAR1.",
+  "native_literal_word": "0x5d384126 extracts raw components2026,9,24,8,9,12",
+  "zeroed_literal_word": "0x88000000 from six zero components",
+  "full_pr_gate": "The live c415c506 gate excludes header222 and time223; exact-cut full/remote gates remain required",
+  "sha256": {
+    "src/database_header/mod.rs": "57d9918b6fb602831aff99d8c233d9de93c19490eba4dd4844c0cf143dc9e7c5",
+    "src/database_header/time.rs": "296d36b0eb9dab9e14517077cbaa94c49b27df2521151e7db235940d76754b32",
+    "tests/database_time.rs": "1c53389800d2617914e9e716e627bd339e60fa1e57aab117fa873c3ba62fa2be",
+    "target/database_time-packed-time-tests-v2.log": "33c4a790307d61f2d182757babf2605977a94ff0a73e597c825fa50c6ae36abe",
+    "target/database_header-packed-time-tests.log": "7adf4af6905b85d86fba38e386c0652b6268be300c1dc4e158d3e20f3066a26c",
+    "target/database-time-library-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/database_time-packed-time-clippy-v2.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/database_header-packed-time-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/database-time-format-check.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/database-time-fixture-verification.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/libbessemer_database_time.rlib": "3f5d8e014b2d59930dedb7980ad9f9134e75661110c6042209f8c31bc238c108",
+    "target/database_time-packed-time-tests-v2.exe": "ead3f3f33267d60ec7ce0625c3eb3b4ed083083b6e36e1a536701831d8e1243b",
+    "target/database_header-packed-time-tests.exe": "f35e825c14baab32b4cfa616fa2931bd6bf66c4b1188f41c1837a3a20896ed6d",
+    "tests/fixtures/database-time/cases.bin": "a2b3a1fd2cf62d62bc1c49a1d4d66bde84c443338ab1f1741d3b4f86655d87ac",
+    "tests/fixtures/blank-part.SLDPRT": "b52e080ba2cc64d1d07ed28306f27281b07521aef550bc0c7fea8cd54be2b276"
+  },
+  "exclusions": [
+    "No calendar-validity, arbitrary component round-trip, UTC/local conversion or callback invocation",
+    "No VFS, native DLL or original producer-parser execution",
+    "No whole-database, commit/durability, geometry/application or complete-schema parity credit"
+  ],
+  "humanizer": "Unavailable; maintainer prose review remains"
+}

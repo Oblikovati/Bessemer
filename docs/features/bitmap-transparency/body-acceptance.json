@@ -1,0 +1,16 @@
+{
+  "issue": 187,
+  "stage": "Body acceptance complete; complete roots and production API pending",
+  "body_verification": {
+    "bodies": 731,
+    "truncations_rejected": 88459,
+    "scope": "Original Source body reader, no complete feature root or native execution"
+  },
+  "source_python_files": 5926,
+  "source_snapshot_identity": "e854df22d4551d756bc32fc35bc3bc3da664c690198bce8f463ba48a96369f92",
+  "consumed_module_count": 101,
+  "failed_attempt": "target/bitmap-candidate-source.log",
+  "failure_cause": "Verification script used25-byte class tag; actual canonical class tag is26 bytes",
+  "correction": "Only expected floating-point byte slice changed25:73 to26:74; original fixture packet and Source reader unchanged",
+  "successful_log_sha256": "ad49a390ad9d15201bc10a0d637604122a08e2965e98bd3d993ad18d29c0e9bd"
+}

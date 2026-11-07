@@ -1,0 +1,78 @@
+{
+  "issue": 241,
+  "source_revision_before_baseline": "0eeab7ef397e28c3cfe17321c2ccc54c4cc663a6",
+  "scope": "Five logical version-six-context component layouts and opaque version-zero chunk framing; no public API",
+  "platform": "Windows x64; Rust 1.99.0; CARGO_BUILD_JOBS=1",
+  "python": "3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)]",
+  "results": {
+    "rust_passed": 4,
+    "rust_failed": 0,
+    "python_passed": 8,
+    "source_python_passed": 7,
+    "clippy": "passed",
+    "format": "passed",
+    "function_file_caps": "passed",
+    "maximum_rust_body_lines": 20
+  },
+  "commands": {
+    "tests": {
+      "command": "cargo test --locked --test flow_checkpoint_component_fixtures",
+      "exit_code": 0,
+      "log": "target/flow-checkpoint-components-baseline-tests.log",
+      "sha256": "94bbc6cf8430a8be1dff4c22c964bb3dbd3bee1bb00d7a67e999e89ee5b01469"
+    },
+    "clippy": {
+      "command": "cargo clippy --locked --test flow_checkpoint_component_fixtures -- -D warnings",
+      "exit_code": 0,
+      "log": "target/flow-checkpoint-components-baseline-clippy.log",
+      "sha256": "a02dca74f50bc6c3646609663552ad8615417a4679561de1ae0eb20f5397cc6c"
+    },
+    "format": {
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "log": "target/flow-checkpoint-components-baseline-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "python": {
+      "command": "python -m unittest discover -s docs/features/flow-checkpoint-components -p test_components.py",
+      "exit_code": 0,
+      "log": "target/flow-checkpoint-components-baseline-python.log",
+      "sha256": "c71d191ca04156b3a93a861dfd57866c90136ae9275d1fd6d89834f631213183"
+    },
+    "source-tests": {
+      "command": "python -m unittest test_flowcheckpointcomponents (reference directory)",
+      "exit_code": 0,
+      "log": "target/flow-checkpoint-components-baseline-source-tests.log",
+      "sha256": "e5c3e3d5ce2dc32441a76d433a40cc1349b2f23ef2099b89177b61a27bf33dce"
+    }
+  },
+  "coverage": {
+    "cases": 2899,
+    "source_bytes": 14582647,
+    "small_prefix_rejections": 130257,
+    "extension_rejections": 2899,
+    "wide_array_patterns": 1267591,
+    "index_patterns": 840930,
+    "presence_bytes": 422594,
+    "slot_tags": 210681,
+    "numeric_containers": 837,
+    "encoded_chunks": 70274,
+    "encoded_bytes": 104556
+  },
+  "fixture_provenance": {
+    "authenticated_reference_examples": 5,
+    "all_synthetic": true,
+    "source_dependency_hashes": "baseline-verification.json",
+    "largest_decompressed_packet_bytes": 11899811,
+    "existing_shared_packet_bound_bytes": 16000000
+  },
+  "exclusions": [
+    "No public component reader/editor yet",
+    "No installed native version-six component fixture",
+    "No complete physical parent record or record121 version-three body decoder",
+    "No chunk codec or decoded-size validation",
+    "No engineering assignment, native runtime execution or application acceptance",
+    "Full PR gate for this baseline not run; running gate covers earlier a4da7848 source"
+  ],
+  "humanizer": "Unavailable; maintainer prose pass pending"
+}

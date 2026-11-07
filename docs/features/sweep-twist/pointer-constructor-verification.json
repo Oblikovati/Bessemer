@@ -1,0 +1,22 @@
+{
+  "issue": 211,
+  "scope": "Fixture constructors only; no production parser admission",
+  "tests": {
+    "command": "python -B -X utf8 -m unittest test_twist_pointer_sequence -v",
+    "passed": 4,
+    "exit_code": 0,
+    "complete_sweep_insertions": 16
+  },
+  "sha256": {
+    "docs/features/sweeps/sweep_fixture_bytes.py": "e41afdd6bd61ac0d2d3d678c91ab9b9923ad4b781871b2ef0626cda1661c4f10",
+    "docs/features/sweep-twist/twist_pointer_sequence.py": "3fe0923bacfa631f43f22c6d001f5663ac1e16de77b1494526597de285b73a9a",
+    "docs/features/sweep-twist/test_twist_pointer_sequence.py": "0be8f4cb9ae2a143c804d8f8411eadd8ab61a7a3c42575b168c8ba8393454cef",
+    "target/sweep-twist-pointer-tests.log": "b111c6d98ffe3bce8f3096ee063dcd786abce805e71f6fdbd73faedaa88f8efa"
+  },
+  "pending": [
+    "Original 160-record and seven-owned-fixture regeneration (live session 41877)",
+    "Configured independent full-document oracle",
+    "Production reader and read/edit/reopen validation",
+    "Full local and exact-head remote gates"
+  ]
+}

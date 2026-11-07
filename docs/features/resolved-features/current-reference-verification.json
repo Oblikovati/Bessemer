@@ -1,0 +1,95 @@
+{
+  "scope": "Current reference reader only; not Bessemer support or geometry validation.",
+  "report_sha256": "2245edaeabc8444a651920942b8331b9105411b266f23e2dac762d902adfa23c",
+  "fresh_processes": 2,
+  "outcome_rows_identical": true,
+  "retained_previous_complete_rows_identical": 873,
+  "previous_without_frontier": {
+    "complete": 873,
+    "known_bytes": 49781219
+  },
+  "current": {
+    "complete": 880,
+    "rejected": 26,
+    "known_bytes": 50486789
+  },
+  "additional_known_bytes": 705570,
+  "new_complete_cases": [
+    {
+      "path": "samples/learn/Mouse/On Off Switch.SLDPRT",
+      "configuration": "Contents/Config-0",
+      "previous_cause": "no reader for class moTrimWireExtEdgeIdRep_c at 0xa685",
+      "stream_bytes": 167509,
+      "known_bytes": 86720
+    },
+    {
+      "path": "samples/Simulation Examples/pipes.sldprt",
+      "configuration": "Contents/Config-0",
+      "previous_cause": "no reader for class moPttnBodyEdgeIdRep_c at 0xa48a",
+      "stream_bytes": 129172,
+      "known_bytes": 75812
+    },
+    {
+      "path": "samples/tutorial/api/db15-e.sldprt",
+      "configuration": "Contents/Config-0",
+      "previous_cause": "no reader for class featRadiusObject_c at 0xcb80",
+      "stream_bytes": 322471,
+      "known_bytes": 207990
+    },
+    {
+      "path": "samples/tutorial/api/electronic housing.sldprt",
+      "configuration": "Contents/Config-0",
+      "previous_cause": "no reader for class moLPatternItemId_c at 0x15078",
+      "stream_bytes": 137465,
+      "known_bytes": 91108
+    },
+    {
+      "path": "samples/tutorial/api/freezebarneedsrebuild2.sldprt",
+      "configuration": "Contents/Config-0",
+      "previous_cause": "no reader for class moLockFeature_c at 0x2f26",
+      "stream_bytes": 17234,
+      "known_bytes": 10459
+    },
+    {
+      "path": "samples/tutorial/dimxpert/bracket_auto_manual.sldprt",
+      "configuration": "Contents/Config-0",
+      "previous_cause": "no reader for class featRadiusObject_c at 0xbab7",
+      "stream_bytes": 233110,
+      "known_bytes": 142356
+    },
+    {
+      "path": "samples/tutorial/routing/electrical/electronic housing.sldprt",
+      "configuration": "Contents/Config-0",
+      "previous_cause": "no reader for class moLPatternItemId_c at 0x15082",
+      "stream_bytes": 137482,
+      "known_bytes": 91125
+    }
+  ],
+  "remaining_rejections": {
+    "no reader for class moAlignGroup_c at 0x1acd": 1,
+    "unsupported sketch spline subtype mask 0x80": 1,
+    "no reader for class moSculpt_c at 0x81617": 1,
+    "no reader for class moSketchPattern_c at 0x3eaf3": 1,
+    "object reference 1 at 0x2bd4 names a class": 1,
+    "object tag 0x4874 at 0x296b: index 18548 not yet mapped": 1,
+    "no reader for class moMoveFace_c at 0x1a7f": 1,
+    "object tag 0x4874 at 0x35f3: index 18548 not yet mapped": 1,
+    "invalid sketch valued-G2 count": 1,
+    "sketch text kernel body is not implemented": 2,
+    "no reader for class moCavity_c at 0x5710": 1,
+    "no reader for class moPlaneSection_c at 0x127": 1,
+    "no reader for class moMateConcentric at 0x2a0c3": 1,
+    "no reader for class moCavity_c at 0x2abe": 1,
+    "no reader for class moDimPattern_c at 0xb355": 1,
+    "no reader for class moSmartComponentFeature_c at 0x335": 1,
+    "no reader for class moTextDataBorder_c at 0x6f72": 1,
+    "unsupported unit-component owner": 1,
+    "no reader for class moBending_c at 0xc60e": 1,
+    "no reader for class moTablePattern_c at 0x5062": 1,
+    "no reader for class moCThreadInstanceId_c at 0x34618": 1,
+    "no reader for class moLibraryFeature_c at 0x2880a": 1,
+    "no reader for class moDeform_c at 0x9f42": 1,
+    "no reader for class moSketchHole at 0x23958": 1,
+    "no reader for class moSketchHole at 0x23a01": 1
+  }
+}

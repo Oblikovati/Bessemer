@@ -1,0 +1,17 @@
+{
+  "bug": 221,
+  "failed_source_commit": "25091836a7d6d4639041def8594c025970c5cd45",
+  "failed_command": "cargo xtask pr",
+  "failed_terminal_exit_code": 1,
+  "failure": "The formatting gate requires end_cap_tests before one_bend_raw_body_tests; no compilation/tests ran",
+  "fix": "Pinned cargo fmt --all -- src/model_archives/test_modules.rs reordered only the two test module declarations",
+  "regression_command": "cargo fmt --all -- --check src/model_archives/test_modules.rs",
+  "regression_terminal_exit_code": 0,
+  "behavior_change": "None; test registry order only",
+  "exact_cut_full_gate": "Rerun required after the corrective commit",
+  "sha256": {
+    "target/sketch-one-bend-combined-full-pr-gate.log": "c883ad9c22cb52977f1c857b1f07b26b3a64e8ed80060df82a6a8d03ea12efb7",
+    "target/one-bend-module-order-format-check.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/model_archives/test_modules.rs": "6c8d38e13ecc4984befebc8a9b85684b8af10048e6d697daa91520555b43b011"
+  }
+}

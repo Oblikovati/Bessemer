@@ -1,0 +1,75 @@
+{
+  "issue": 241,
+  "source_revision_before_baseline": "615fb1950dc018b98b56e14d3c3fbfbd44fac3d8",
+  "scope": "Complete paired record501 byte-version2 / IMS-value-version3 / BL-version0 framing with explicit fresh IMS-version2 allocation-zero definitions",
+  "platform": "Windows x64; Rust1.99.0; CARGO_BUILD_JOBS=1",
+  "results": {
+    "rust_passed": 4,
+    "rust_failed": 0,
+    "python_passed": 10,
+    "source_python_passed": 4,
+    "clippy": "passed",
+    "format": "passed",
+    "function_file_caps": "passed",
+    "maximum_rust_function_body_lines": 19
+  },
+  "commands": {
+    "tests": {
+      "command": "cargo test --locked --test flow_result_values_fixtures",
+      "exit_code": 0,
+      "log": "target/flow-result-values-baseline-tests.log",
+      "sha256": "7cac8bb9058d1cbac947031108b42ed3274da4a1e8aa414f9d0ad685a5ee3fbd"
+    },
+    "clippy": {
+      "command": "cargo clippy --locked --test flow_result_values_fixtures -- -D warnings",
+      "exit_code": 0,
+      "log": "target/flow-result-values-baseline-clippy.log",
+      "sha256": "09e4d2cfcf16feddd3d7922ccbc8cf24e0a4e5155084edde4b17172179f18ab6"
+    },
+    "format": {
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "log": "target/flow-result-values-baseline-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "python": {
+      "command": "python -m unittest discover -s docs/features/flow-result-values -p test_values.py",
+      "exit_code": 0,
+      "log": "target/flow-result-values-baseline-python.log",
+      "sha256": "c8741bdc7b40f1cd440fc6fe1bd4d6b3f81d2f7f34d95d7f9009c0bc4eaab135"
+    },
+    "source-tests": {
+      "command": "python -m unittest test_flowresultvalues (reference directory)",
+      "exit_code": 0,
+      "log": "target/flow-result-values-baseline-source-tests.log",
+      "sha256": "638d287c0b0a39696192d173099f90dfd19c0b1b2df974802576f431e7c9eb0b"
+    }
+  },
+  "oracles": [
+    "Authenticated separate native definition/value carrier extents, hashes and full normalized projections",
+    "Complete value-byte reconstruction and exact compressed-stream consumption",
+    "Frozen paired signed identifiers checked through typed record500 definitions",
+    "Independent shared-array and 18-word BL-row size equations",
+    "Every raw flag byte, single-bit/complement and NaN/infinity patterns across all21 data positions",
+    "Explicit fresh-context rejection, invalid profile/collection/GUID/allocation conditions",
+    "Malformed nested and compressed frames and complete EOF",
+    "Temporary-root deterministic regeneration of owned bytes and proof"
+  ],
+  "source_lf_sha256": {
+    "tests/flow_result_values/fixture.rs": "5ce5ac4049613dc4de27f8e447a42e06786c275a660432f4456d462d691262c0",
+    "tests/flow_result_values/rebuild.rs": "64a60d3f4ec67d4f066f04732afd19f0a3e4afc2177229903588a342f6f95fd3",
+    "tests/flow_result_values_fixtures.rs": "a23ec28dda233f5a97b51ddd08c06082fc21febb819b1f4f934e80ad4b3ea05b",
+    "docs/features/flow-result-values/freeze_values.py": "b8365264644a93ba1d8c0391339d62ef1713119322fa90a71bc3476848c21f69",
+    "docs/features/flow-result-values/test_values.py": "c52a887ca13db7bcba8bcd5bda9b0c9bb371dad8748c9cdd5f9323d36e15a059",
+    "docs/features/flow-result-values/value_requests.py": "cc9247ed5d686fd4e889d0898990600809a48c1f2d7858823b5cd2e41990d24e"
+  },
+  "exclusions": [
+    "Typed record501 value reader/editor and provenance-bound context pending",
+    "Running full gate419844f2 excludes this baseline and record500API",
+    "Full local/hosted acceptance pending",
+    "Fresh-object declaration is an explicit context assumption; native initialization not executed",
+    "BL state-byte-after-load zero is an observation, not serialized storage or native execution",
+    "Engineering columns and application acceptance not verified"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose review pending"
+}

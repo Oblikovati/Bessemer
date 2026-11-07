@@ -1,0 +1,30 @@
+{
+  "documents": 170,
+  "complete_link_documents": 170,
+  "incomplete_missing_targets": 0,
+  "invalid_links": 0,
+  "unsupported_ambiguous_links": 0,
+  "integrity_failures": 0,
+  "counts": {
+    "requested_faces": 35242,
+    "directory_entries": 1258,
+    "blocks": 193,
+    "unlocated_entries": 470,
+    "resolved_face_references": 35242,
+    "unique_resolved_faces": 35242
+  },
+  "all_statuses_match_independent_reference": true,
+  "all_complete_facet_bytes_match": true,
+  "no_partial_facets_after_failure": true,
+  "two_processes_identical": true,
+  "input_manifest_sha256": "f773168914ae36264c14293789e005ffe051f1cdba5add54d5d2e3dec1670aa1",
+  "result_sha256": "faf76ef49302eecea707999b9484ee9aa70e2d6009ca9f24555a519cbb4cd560",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "scope": "exact archive links only; incomplete caches remain incomplete and geometry validity is not certified",
+  "source_sha256": {
+    "src/display_lists/external_face_links.rs": "2e771f50d9c023f29476e25f27c490623869c3e5169d4cbbcd8c03956968a91b",
+    "src/display_lists/external_face_coverage.rs": "9766801e232307c90dbc965e7fef76d6c8b0ff145f52eef6ef7b203868e40de0",
+    "src/display_lists/external_face_errors.rs": "f7f9572c241f5e0145ce421e8e805427dd3a0d01b46ba08c46c2bcaa762ea7d4",
+    "examples/check_external_display_links.rs": "eef71c4df6af45d353adddae2aeeaec539aad85dea0784469d83cb528f8a7f0a"
+  }
+}

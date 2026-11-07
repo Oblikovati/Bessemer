@@ -1,0 +1,48 @@
+{
+  "issue": 54,
+  "issue_type": "Feature",
+  "runtime_base_revision": "85ca27ffce84f686efef524d77c6214a133c9760",
+  "fixture_preparation_commit": "25c27670943f5f779e6ffdfce44ed22970e27051",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "artifact_sha256": "72864aa6b9cb33ec1ecd0d27aad0df0052004c263688efbe46f75230be8fe614",
+  "regression": {
+    "before_passed": 0,
+    "before_failed": 1,
+    "before_log_sha256": "f8d12c78ef245226f1455dba72cf7dddf79dfcc5f6c03acce0929de7af867a5f",
+    "cause": "valued_g3[0] rejected sgArcLenDist; expected sgValG3Dim alone"
+  },
+  "fixture_graphs": 306,
+  "primitive_reads": 56073,
+  "owned_streams": 21,
+  "preserved_pre_correction_builder_hashes": 442,
+  "checks": {
+    "private": "8 passed in final PR gate",
+    "public": "3 passed",
+    "python": "4 pinned-source regeneration, guard and legacy-replay tests passed",
+    "cargo_xtask_pr": "831 library tests, 4 xtask tests, all integrations, 274 doctests; 3 external-fixture tests explicitly ignored",
+    "native_processes": "Two fresh processes matched all 906 outcomes and causes; exit 101 only for aggregate 816/906 completeness assertion"
+  },
+  "previous_complete": 814,
+  "complete": 816,
+  "newly_complete": [
+    152,
+    774
+  ],
+  "no_prior_success_lost": true,
+  "partial_advances_without_completion_credit": [
+    343
+  ],
+  "independent_feature_bytes": 54306681,
+  "source_snapshot": "3eeb65e7aae64b5835b64073e3a6adfe8e2b803eb5e7c0998825ee210d691a46",
+  "source_python_files": 1663,
+  "native_witness_configurations": 5,
+  "native_derived_objects": 5,
+  "gate_log_sha256": "0343767e8714dbdaa8811b5f58ac0cdc8f79e81161b151d03f77f51ca430d493",
+  "exclusions": [
+    "90 native inputs remain explicit failures",
+    "Case 343 advances to moSkIsoCurveInfo_c and receives no completion credit",
+    "Historical/internal contexts, scalar meanings, geometry validity, application acceptance and whole-schema parity remain incomplete",
+    "Humanizer unavailable; maintainer prose review remains open"
+  ]
+}

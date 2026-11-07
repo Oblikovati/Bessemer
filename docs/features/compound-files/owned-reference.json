@@ -1,0 +1,447 @@
+{
+  "fixture_sha256": "5190c861ad63f20b46192ea91327825a0931e95b9af60c7f8044c5e1f1c4a551",
+  "cases": [
+    {
+      "label": "empty-v3",
+      "bytes": 1536,
+      "sha256": "443bdd7d94614d6181d9cacfedaaed619ca5d2f63eb76282721f82250a975b3e",
+      "oracle_sha256": "77a433529f137c17659957ef7824d91b624e4384db6e3022bea16dbbd6a9ae3f",
+      "canonical_sha256": "3e8b1d997a42a7eff98bbc1e3e0ff5bc309afe57278e6c9ec5322d11f9a8db14",
+      "major": 3,
+      "sector_bytes": 512,
+      "directory_slots": 4,
+      "root_color": 1,
+      "active_entries": 1,
+      "orphan_entries": 0,
+      "fat_sectors": 1,
+      "difat_sectors": 0,
+      "mini_fat_sectors": 0,
+      "streams": [],
+      "allocation_observations": {
+        "normal_duplicate_claims": 0,
+        "mini_duplicate_claims": 0,
+        "stream_extent_mismatches": 0,
+        "unowned_allocated_sectors": 0,
+        "empty_start_values": {
+          "4294967294": 1
+        },
+        "directory_chain_sectors": 1,
+        "mini_fat_chain_sectors": 0,
+        "legacy_high_size_words": 0
+      }
+    },
+    {
+      "label": "empty-v4",
+      "bytes": 12288,
+      "sha256": "82ebbc6a1c8929371acfd9e0884bed0feb52e7f195f898eb750abda82e23bde7",
+      "oracle_sha256": "19f71a940894f370ff4742d503dee39b7c4fd48a1e55da4593fa1f4f5c36d178",
+      "canonical_sha256": "55df0ef15b80a78d0f472d241926a3594400d0feb7b9683ef6448ed0bae1be8c",
+      "major": 4,
+      "sector_bytes": 4096,
+      "directory_slots": 32,
+      "root_color": 1,
+      "active_entries": 1,
+      "orphan_entries": 0,
+      "fat_sectors": 1,
+      "difat_sectors": 0,
+      "mini_fat_sectors": 0,
+      "streams": [],
+      "allocation_observations": {
+        "normal_duplicate_claims": 0,
+        "mini_duplicate_claims": 0,
+        "stream_extent_mismatches": 0,
+        "unowned_allocated_sectors": 0,
+        "empty_start_values": {
+          "4294967294": 1
+        },
+        "directory_chain_sectors": 1,
+        "mini_fat_chain_sectors": 0,
+        "legacy_high_size_words": 0
+      }
+    },
+    {
+      "label": "v3-7001-fragmented-False",
+      "bytes": 10240,
+      "sha256": "a8268a5b681b7ff3b2dc48be3986e0a45158f245c4db9a8c27771d7e25c2cf63",
+      "oracle_sha256": "dcffae919e7fdb7fd5315f54592108bb28431fdd799e053c4668ad99e301d1d0",
+      "canonical_sha256": "d2975235b983b2a353d063d74833ca8a56bf5637a45816313c1a0f396b10708f",
+      "major": 3,
+      "sector_bytes": 512,
+      "directory_slots": 8,
+      "root_color": 1,
+      "active_entries": 5,
+      "orphan_entries": 0,
+      "fat_sectors": 1,
+      "difat_sectors": 0,
+      "mini_fat_sectors": 1,
+      "streams": [
+        {
+          "id": 2,
+          "path": "S/A",
+          "bytes": 39,
+          "sha256": "3e6b7c9df2bdb7e657672baace8f78c6729dc8c38fd8a05400f763d40d30394b"
+        },
+        {
+          "id": 3,
+          "path": "S/B",
+          "bytes": 7001,
+          "sha256": "b894f45e72ae2f66169a29c0d522e2a76abfc808e6a1304557cbb20d363bea49"
+        },
+        {
+          "id": 4,
+          "path": "S/C",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "allocation_observations": {
+        "normal_duplicate_claims": 0,
+        "mini_duplicate_claims": 0,
+        "stream_extent_mismatches": 0,
+        "unowned_allocated_sectors": 0,
+        "empty_start_values": {
+          "4294967294": 1
+        },
+        "directory_chain_sectors": 2,
+        "mini_fat_chain_sectors": 1,
+        "legacy_high_size_words": 0
+      }
+    },
+    {
+      "label": "v4-8193-fragmented-True",
+      "bytes": 32768,
+      "sha256": "4acff08f98a246d302935e3ac4b446a455fc5f106ef834beeea6b95b60a5111f",
+      "oracle_sha256": "bcf7b4d8d3237016e3fa33bdfe975966dba5ff3af42560c1df5cf61ebe523f99",
+      "canonical_sha256": "50f30e46e96338261820681ec36b30253a6397089afec5ce601381d5177f1f40",
+      "major": 4,
+      "sector_bytes": 4096,
+      "directory_slots": 32,
+      "root_color": 1,
+      "active_entries": 5,
+      "orphan_entries": 0,
+      "fat_sectors": 1,
+      "difat_sectors": 0,
+      "mini_fat_sectors": 1,
+      "streams": [
+        {
+          "id": 2,
+          "path": "S/A",
+          "bytes": 39,
+          "sha256": "3e6b7c9df2bdb7e657672baace8f78c6729dc8c38fd8a05400f763d40d30394b"
+        },
+        {
+          "id": 3,
+          "path": "S/B",
+          "bytes": 8193,
+          "sha256": "db8e82fcacaeceb336ecb8be90fad31da698c72a6c10fd1ea68a2e5874b78b17"
+        },
+        {
+          "id": 4,
+          "path": "S/C",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "allocation_observations": {
+        "normal_duplicate_claims": 0,
+        "mini_duplicate_claims": 0,
+        "stream_extent_mismatches": 0,
+        "unowned_allocated_sectors": 0,
+        "empty_start_values": {
+          "4294967294": 1
+        },
+        "directory_chain_sectors": 1,
+        "mini_fat_chain_sectors": 1,
+        "legacy_high_size_words": 0
+      }
+    },
+    {
+      "label": "v3-7300123-fragmented-True",
+      "bytes": 7361536,
+      "sha256": "321a1616c523c2d6b91ad42eef2802e0b138ded676ff8ea60ae48790a3b748ea",
+      "oracle_sha256": "5bbd169deee8ef59b8c72985a86cfc37a978f7378ad693d20df44280c690249a",
+      "canonical_sha256": "dd5057dd940c14e29b2d3e3f374f2f2ca6d01c1f34aefce259c4838680b8d68f",
+      "major": 3,
+      "sector_bytes": 512,
+      "directory_slots": 8,
+      "root_color": 1,
+      "active_entries": 5,
+      "orphan_entries": 0,
+      "fat_sectors": 113,
+      "difat_sectors": 1,
+      "mini_fat_sectors": 1,
+      "streams": [
+        {
+          "id": 2,
+          "path": "S/A",
+          "bytes": 39,
+          "sha256": "3e6b7c9df2bdb7e657672baace8f78c6729dc8c38fd8a05400f763d40d30394b"
+        },
+        {
+          "id": 3,
+          "path": "S/B",
+          "bytes": 7300123,
+          "sha256": "624ee37b7c8b533af6a80dafeada5dc073549b62843eafd8ba22abee7c19473f"
+        },
+        {
+          "id": 4,
+          "path": "S/C",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "allocation_observations": {
+        "normal_duplicate_claims": 0,
+        "mini_duplicate_claims": 0,
+        "stream_extent_mismatches": 0,
+        "unowned_allocated_sectors": 0,
+        "empty_start_values": {
+          "4294967294": 1
+        },
+        "directory_chain_sectors": 2,
+        "mini_fat_chain_sectors": 1,
+        "legacy_high_size_words": 0
+      }
+    },
+    {
+      "label": "legacy-v3-uninitialized-high-size",
+      "bytes": 10240,
+      "sha256": "59ff6ed270c67cc6509b7081a8ad1ee3ed8a608d72d5d7f7dc9ced9872f53b5b",
+      "oracle_sha256": "e08676b41cc29f0ff9c0900900bcd8f276662b31a61fd2f1a78420391ce83198",
+      "canonical_sha256": "d2975235b983b2a353d063d74833ca8a56bf5637a45816313c1a0f396b10708f",
+      "major": 3,
+      "sector_bytes": 512,
+      "directory_slots": 8,
+      "root_color": 1,
+      "active_entries": 5,
+      "orphan_entries": 0,
+      "fat_sectors": 1,
+      "difat_sectors": 0,
+      "mini_fat_sectors": 1,
+      "streams": [
+        {
+          "id": 2,
+          "path": "S/A",
+          "bytes": 39,
+          "sha256": "3e6b7c9df2bdb7e657672baace8f78c6729dc8c38fd8a05400f763d40d30394b"
+        },
+        {
+          "id": 3,
+          "path": "S/B",
+          "bytes": 7001,
+          "sha256": "b894f45e72ae2f66169a29c0d522e2a76abfc808e6a1304557cbb20d363bea49"
+        },
+        {
+          "id": 4,
+          "path": "S/C",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "allocation_observations": {
+        "normal_duplicate_claims": 0,
+        "mini_duplicate_claims": 0,
+        "stream_extent_mismatches": 0,
+        "unowned_allocated_sectors": 0,
+        "empty_start_values": {
+          "4294967294": 1
+        },
+        "directory_chain_sectors": 2,
+        "mini_fat_chain_sectors": 1,
+        "legacy_high_size_words": 2
+      }
+    },
+    {
+      "label": "root-color-red-107",
+      "bytes": 10240,
+      "sha256": "716ae2ca5ac63135440536aa49371959ac4d08318da98aa64af4631a847fffa9",
+      "oracle_sha256": "5c9efd3956aa43d7ee5dc13a3aba28caf01851f99320a0465a6ce3f1a90b71e7",
+      "canonical_sha256": "877caf3468ac711aa4bb72117905f766225c8e8fbf8a8c196247f6511a53287c",
+      "major": 3,
+      "sector_bytes": 512,
+      "directory_slots": 8,
+      "root_color": 0,
+      "active_entries": 5,
+      "orphan_entries": 0,
+      "fat_sectors": 1,
+      "difat_sectors": 0,
+      "mini_fat_sectors": 1,
+      "streams": [
+        {
+          "id": 2,
+          "path": "S/A",
+          "bytes": 39,
+          "sha256": "3e6b7c9df2bdb7e657672baace8f78c6729dc8c38fd8a05400f763d40d30394b"
+        },
+        {
+          "id": 3,
+          "path": "S/B",
+          "bytes": 7001,
+          "sha256": "b894f45e72ae2f66169a29c0d522e2a76abfc808e6a1304557cbb20d363bea49"
+        },
+        {
+          "id": 4,
+          "path": "S/C",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "allocation_observations": {
+        "normal_duplicate_claims": 0,
+        "mini_duplicate_claims": 0,
+        "stream_extent_mismatches": 0,
+        "unowned_allocated_sectors": 0,
+        "empty_start_values": {
+          "4294967294": 1
+        },
+        "directory_chain_sectors": 2,
+        "mini_fat_chain_sectors": 1,
+        "legacy_high_size_words": 0
+      }
+    },
+    {
+      "label": "preallocated-normal",
+      "bytes": 10752,
+      "sha256": "22ec5257caba4afd12bc9bba1f8fa0ff090eda2fe0e77ec62357c25a93dffe49",
+      "oracle_sha256": "4d3f0396d2046fc64f58f12fbef2fa5156b0258d44b5925cae1f08d52c058f5c",
+      "canonical_sha256": "d2975235b983b2a353d063d74833ca8a56bf5637a45816313c1a0f396b10708f",
+      "major": 3,
+      "sector_bytes": 512,
+      "directory_slots": 8,
+      "root_color": 1,
+      "active_entries": 5,
+      "orphan_entries": 0,
+      "fat_sectors": 1,
+      "difat_sectors": 0,
+      "mini_fat_sectors": 1,
+      "streams": [
+        {
+          "id": 2,
+          "path": "S/A",
+          "bytes": 39,
+          "sha256": "3e6b7c9df2bdb7e657672baace8f78c6729dc8c38fd8a05400f763d40d30394b"
+        },
+        {
+          "id": 3,
+          "path": "S/B",
+          "bytes": 7001,
+          "sha256": "b894f45e72ae2f66169a29c0d522e2a76abfc808e6a1304557cbb20d363bea49"
+        },
+        {
+          "id": 4,
+          "path": "S/C",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "allocation_observations": {
+        "normal_duplicate_claims": 0,
+        "mini_duplicate_claims": 0,
+        "stream_extent_mismatches": 1,
+        "unowned_allocated_sectors": 0,
+        "empty_start_values": {
+          "4294967294": 1
+        },
+        "directory_chain_sectors": 2,
+        "mini_fat_chain_sectors": 1,
+        "legacy_high_size_words": 0
+      }
+    },
+    {
+      "label": "preallocated-mini",
+      "bytes": 10240,
+      "sha256": "9aa80047b3c5c06c0572a501e7108f23959f8a0ac248e362840c5016c03d0f79",
+      "oracle_sha256": "86655bf1898300544d259e6962906d056b18d9e5cca54f2a74684cd0d83404ed",
+      "canonical_sha256": "d2975235b983b2a353d063d74833ca8a56bf5637a45816313c1a0f396b10708f",
+      "major": 3,
+      "sector_bytes": 512,
+      "directory_slots": 8,
+      "root_color": 1,
+      "active_entries": 5,
+      "orphan_entries": 0,
+      "fat_sectors": 1,
+      "difat_sectors": 0,
+      "mini_fat_sectors": 1,
+      "streams": [
+        {
+          "id": 2,
+          "path": "S/A",
+          "bytes": 39,
+          "sha256": "3e6b7c9df2bdb7e657672baace8f78c6729dc8c38fd8a05400f763d40d30394b"
+        },
+        {
+          "id": 3,
+          "path": "S/B",
+          "bytes": 7001,
+          "sha256": "b894f45e72ae2f66169a29c0d522e2a76abfc808e6a1304557cbb20d363bea49"
+        },
+        {
+          "id": 4,
+          "path": "S/C",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "allocation_observations": {
+        "normal_duplicate_claims": 0,
+        "mini_duplicate_claims": 0,
+        "stream_extent_mismatches": 1,
+        "unowned_allocated_sectors": 0,
+        "empty_start_values": {
+          "4294967294": 1
+        },
+        "directory_chain_sectors": 2,
+        "mini_fat_chain_sectors": 1,
+        "legacy_high_size_words": 0
+      }
+    },
+    {
+      "label": "preallocated-root",
+      "bytes": 10752,
+      "sha256": "0deb2f31ad574acb862614b8650db82c7b5344e98a00b28acea51206fbe84a5f",
+      "oracle_sha256": "dcffae919e7fdb7fd5315f54592108bb28431fdd799e053c4668ad99e301d1d0",
+      "canonical_sha256": "d2975235b983b2a353d063d74833ca8a56bf5637a45816313c1a0f396b10708f",
+      "major": 3,
+      "sector_bytes": 512,
+      "directory_slots": 8,
+      "root_color": 1,
+      "active_entries": 5,
+      "orphan_entries": 0,
+      "fat_sectors": 1,
+      "difat_sectors": 0,
+      "mini_fat_sectors": 1,
+      "streams": [
+        {
+          "id": 2,
+          "path": "S/A",
+          "bytes": 39,
+          "sha256": "3e6b7c9df2bdb7e657672baace8f78c6729dc8c38fd8a05400f763d40d30394b"
+        },
+        {
+          "id": 3,
+          "path": "S/B",
+          "bytes": 7001,
+          "sha256": "b894f45e72ae2f66169a29c0d522e2a76abfc808e6a1304557cbb20d363bea49"
+        },
+        {
+          "id": 4,
+          "path": "S/C",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "allocation_observations": {
+        "normal_duplicate_claims": 0,
+        "mini_duplicate_claims": 0,
+        "stream_extent_mismatches": 1,
+        "unowned_allocated_sectors": 0,
+        "empty_start_values": {
+          "4294967294": 1
+        },
+        "directory_chain_sectors": 2,
+        "mini_fat_chain_sectors": 1,
+        "legacy_high_size_words": 0
+      }
+    }
+  ]
+}

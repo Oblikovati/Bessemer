@@ -1,0 +1,101 @@
+{
+  "issue": 241,
+  "source_revision_before_api": "7905d2c2df904ae9473665b098580cc6fac9b66d",
+  "scope": "Fresh-map modern logical-index replay and explicit forced physical scanning; ordinary payload and target semantics excluded",
+  "platform": "Windows x64; Rust 1.99.0; CARGO_BUILD_JOBS=1",
+  "results": {
+    "rust_passed": 12,
+    "rust_failed": 0,
+    "ignored_workers": 1,
+    "worker_invocations_by_parent": 2,
+    "clippy": "passed",
+    "format": "passed",
+    "function_file_caps": "passed",
+    "maximum_function_body_lines": 20
+  },
+  "commands": {
+    "tests": {
+      "command": "cargo test --locked --test flow_index_replay_fixtures",
+      "exit_code": 0,
+      "log": "target/flow-index-replay-api-tests.log",
+      "sha256": "7eb6ac719998ec175e24387ecd4b0f7c9ddae358db5771b6ffa64f71c3d27791"
+    },
+    "clippy": {
+      "command": "cargo clippy --locked --test flow_index_replay_fixtures -- -D warnings",
+      "exit_code": 0,
+      "log": "target/flow-index-replay-api-clippy.log",
+      "sha256": "fa0eecc446760c32d39df6e3b29432cc5dc8fd76ff137d181b628fd708e19a55"
+    },
+    "format": {
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "log": "target/flow-index-replay-api-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "reference_baseline": "baseline-verification.json",
+  "python_acceptance_reused_from": "local-verification.json; Python sources and frozen packets unchanged",
+  "requested_outcomes": {
+    "total": 2140,
+    "physical_scan": 1474,
+    "terminal_index": 649,
+    "rejected_preference": 17,
+    "forced_scan_completed": 1070
+  },
+  "checks": {
+    "all_frozen_maps_and_selected_terminal_bytes": true,
+    "exact_distinct_key_limits_and_one_below": true,
+    "exact_control_decoded_and_stored_entry_limits_and_one_below": true,
+    "unused_control_limits_not_applied_to_scan": true,
+    "revision_bound_selected_control_provenance": true,
+    "caller_buffer_and_changed_source_isolation_cases": 3,
+    "public_send_sync_types": 7,
+    "concurrent_lanes": 8,
+    "iterations_per_lane": 32,
+    "successful_and_rejected_calls_compared_to_serial": true,
+    "two_fresh_processes": "Source bytes, sorted maps, selected decoded controls, coverage, diagnostics and errors compared byte for byte",
+    "map_limit_case_scope": {
+      "carriers": 1070,
+      "completed_requested_outcomes": 2123,
+      "scope": "All frozen cases, including 65536-entry maps and native carriers; exact distinct limits and each applicable one-below limit"
+    }
+  },
+  "production_and_test_lf_sha256": {
+    "src/flow/logical_index/build.rs": "5e68140c712e48ad94f628bdfd8f75e8279e4599a680228f5e2f9036e8b79dc2",
+    "src/flow/logical_index/mod.rs": "fd0733426ff9a2bab93c6deaeaddf9313d70ea4aed8752159ceb82e02a90a99d",
+    "src/flow/logical_index/recognize.rs": "e9cdfa3383ce361c85f46e2a42a3225a2b63c16ce7153097b05c54d23de78a84",
+    "src/flow/logical_index/types.rs": "c814f0b81d552036b0bdf8b7defeb4053d2fc0f4b53a45f3996e3936af318364",
+    "src/flow/logical_index/view.rs": "f88e98c67c3b11954304fd54215cfd9c3ba61bfd34a4f0071a3c2443b1e53be3",
+    "tests/flow_index_replay/api.rs": "180d19d6201649a0f4d38d3a916a3306697ef0a6d2d0eeebdc3738f2d5988628",
+    "tests/flow_index_replay/fixture.rs": "309f9f8f8e51e0dd1ce829520d856ae0d642663aa17bc56b59b86b8d88687d92",
+    "tests/flow_index_replay/oracles.rs": "e4556402fb19904301b9333e5af2014b61bed093f8603494fec09ac7aaf2450e",
+    "tests/flow_index_replay/runtime.rs": "620343f1a91774627fcd63a69138ba67d1ca0d712ba4a664eddfb75337b065cd",
+    "src/flow/mod.rs": "20c89e45d076b5f3d25390299c98a32a5f93ef15f61e2bf92c85355b22bdbb3d",
+    "tests/flow_index_replay_fixtures.rs": "78e91a10a0b813431ac6b04141df2286bec3b203ea4152d9286cc3f854961735"
+  },
+  "initial_lint": {
+    "cause": "collapsible_if in new saved-map matching; corrected before final acceptance",
+    "log": "target/flow-index-replay-api-clippy-collapsible-if.log",
+    "sha256": "aea43b635b816b385823c53dda661a9e02853cb392e38584d9c66267bc4dfccb"
+  },
+  "exclusions": [
+    "No installed populated terminal-index payload fixture",
+    "No native execution or application acceptance",
+    "Ordinary payloads and indexed ordinary targets remain unvalidated",
+    "Full document schema is not covered",
+    "Full PR gate and hosted ThreadSanitizer for this API are pending; running gate covers earlier a4da7848 source"
+  ],
+  "review": {
+    "pros": [
+      "Recognition misses and recognized failures remain distinct",
+      "Immutable published maps retain physical and selected control provenance",
+      "Bounds are checked before each new distinct insertion"
+    ],
+    "limitations": [
+      "Strict control writer profiles do not emulate all native recovery",
+      "Only selected saved-map targets are required to match exact physical occurrences"
+    ],
+    "recommended_next": "Complete the full gate and hosted matrix before integrating this API; audit logical checkpoint components next"
+  },
+  "humanizer": "Unavailable; maintainer prose review pending"
+}

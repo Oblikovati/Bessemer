@@ -1,0 +1,88 @@
+{
+  "behavior_version": "private-model-ordinary-sketch-root-v1",
+  "decision": "Compose every documented ordinary default-helper stage; preserve stored identities, flags, keys, widths and signed sentinel counts. Unsupported nested bodies fail the containing operation.",
+  "migration": "Initial unpublished codec; earlier wire baselines retained. Bug #46 adds only two documented derived classes to sgExtEnt_c.reference.",
+  "cases": 1038,
+  "independent_scalar_values": 33645,
+  "checks": {
+    "tail/root tests": "11 passed in the final all-model run",
+    "all model tests": "235 passed; two external-input tests ignored, six core tests filtered",
+    "all-target Clippy": "passed",
+    "Python": "51 passed",
+    "native corpus": "866/906; two final processes have identical outcomes; complete acceptance failed",
+    "full PR gate": "earlier geometric/kernel source state; rerun before push"
+  },
+  "entry_budgets": {
+    "dynamic_groups_and_words": {
+      "pass": 6,
+      "reject": 5
+    },
+    "offset_four_parallel_arrays": {
+      "pass": 12,
+      "reject": 11
+    }
+  },
+  "fixture_repeat": {
+    "identical": true,
+    "fresh_processes": 2,
+    "sha256": {
+      "sketch-tail-cases.bin": "4576c3183f63d10bc5883e01ee6c1cc39a30ba58322e3948c170141a668d0333",
+      "sketch-tail-original.bin": "b5ef82ef05f7455ef6a4fb358ab23db082ce142c2f8439f6cd45cca9bf804098",
+      "sketch-tail-edited.bin": "e5ec28e583ca67e9108471cf4ad4b149b1f8f3e1a6e0b688d0bda3d3cfb93a0d"
+    }
+  },
+  "oracle_exclusions": [
+    "derived presence/completion flags, including surfaces",
+    "sketch start/end/unknown-byte summaries"
+  ],
+  "oracle_correction": "The initial 1010-case packet mistakenly counted surfaces=True as stored. Removing the derived expectation changed no wire bytes; the final packet also adds 28 derived-wrapper cases.",
+  "native_failures": {
+    "model archive Contents/Config-0: Unsupported: runtime class \"moDisplayDistanceDim_c\" schema 1; expected an implemented complete model object body": 29,
+    "model archive Contents/Config-0: Unsupported: runtime class \"moDisplayRadialDim_c\" schema 1; expected an implemented complete model object body": 3,
+    "model archive Contents/Config-0: Unsupported: runtime class \"moRevolution_c\" schema 1; expected an implemented complete model object body": 1,
+    "model archive Contents/Config-0: Unsupported: runtime class \"moBoss_c\" schema 1; expected an implemented complete model object body": 5,
+    "model archive Contents/Config-0: Invalid: object role \"handle\" has runtime class \"moSkDimHandleValG2_c\"; expected one of [\"moDimHandle_c\"]": 1,
+    "model archive Contents/Config-0: Invalid: object role \"component_reference\" has runtime class \"moCompRefPlane_c\"; expected one of [\"moCompRef_c\"]": 1
+  },
+  "native_changed_first_stops": 38,
+  "exclusions": [
+    "arbitrary inherited/nondefault sketch helper modes",
+    "zero-marker silhouettes and modern kind 8/9 offset kernel continuations",
+    "unimplemented new display-dimension, block and handle-data objects",
+    "six newly reached boss/revolution feature dependencies",
+    "two older role failures and selected-configuration diagnostics",
+    "public model result/history contracts",
+    "native application/geometry acceptance",
+    "remote platform matrix"
+  ],
+  "artifact_sha256": {
+    "src/model_archives/sketch_archive.rs": "8c2fe3f39074198a70154f72e090fb84033cc05d46d7e4a9d6e0cf5bbd60fc1d",
+    "src/model_archives/sketch_constraints.rs": "5ba072078f6b243434dcfe8b1d426a3e1910e9e4a9a8b6245abca2f5120b3cf7",
+    "src/model_archives/sketch_intersections.rs": "f5e535452e20d6715011a7a32a390f478dae315c65d39df97047d6c6464cb383",
+    "src/model_archives/sketch_managers.rs": "c01fa0c50c7a204b9a5ce8f946f8fadb44f918d791d894a9b2b6197c1d708635",
+    "src/model_archives/sketch_offsets.rs": "aac59ba4137a27af07b378bb07c54d6c73a20138020384d537cc3cd54ee62254",
+    "src/model_archives/sketch_tail.rs": "e80fd949175b73bedcfbc74effe0a76252a5a1ee124059081faf2a4d5c64388d",
+    "src/model_archives/sketch_references.rs": "21162288f12ea26ed8fa168492e5bbd5d6badded1dee4917290dc06dfda2a279",
+    "src/model_archives/sketch_logical.rs": "5eb74ae37a61d7c970f09c8467b1c8765b1be3ba34dd01ffe5905d9762872ae8",
+    "src/model_archives/object_body.rs": "6e591d05dc42a943c62728c973071d3e3774c2289c6c13730603934078179f10",
+    "src/model_archives/mod.rs": "60e618bb8d3121fc1b9e35b4c9aa8cc1de6448f0ebf733c896bcf3d54414c1d0",
+    "tests/model_archives/sketch_tail.rs": "3ba80807a01be24e38f28994cbe0306663b50e42b5bcd2cf4a558340747b6063",
+    "docs/features/model-archives/freeze_sketch_tail.py": "1a2ed18c41334cd87dcbe2a6ca907a5285b231b52f8149c2eb7856e721532a0b",
+    "docs/features/model-archives/sketch_tail_fixture_bytes.py": "1f4d8d25b641f1240a29f4b2f5ddf62dc53b62303acb338af8608567a8c5df5f",
+    "docs/features/model-archives/sketch-tail-cases.json": "5f870d819ef71c8ef3c9c96807d7385229d953b860f55cdf3f8f0cfe6fe5a237",
+    "docs/features/model-archives/sketch-tail-schema-reference.json": "e1f747a3c83957fdd5ab0b9121c0ed12e650d5b0837370e73dacee5051ae130c",
+    "docs/features/model-archives/sketch-tail-schema-snapshot.md": "0d8950d5ad3cff5c93d32a5c5b4d35c2f89e5d365921b4fccb61df6c24a0bea6",
+    "tests/fixtures/model-archives/sketch-tail-cases.bin": "4576c3183f63d10bc5883e01ee6c1cc39a30ba58322e3948c170141a668d0333",
+    "tests/fixtures/model-archives/sketch-tail-original.bin": "b5ef82ef05f7455ef6a4fb358ab23db082ce142c2f8439f6cd45cca9bf804098",
+    "tests/fixtures/model-archives/sketch-tail-edited.bin": "e5ec28e583ca67e9108471cf4ad4b149b1f8f3e1a6e0b688d0bda3d3cfb93a0d"
+  },
+  "log_sha256": {
+    "model-native-corpus-sketch-tail.log": "122bec9028a3c74b6e7ebccf4fd0a2f824a4a5f7bd55d44770c23bc7ea0f6bf5",
+    "model-native-corpus-sketch-tail-roles.log": "56ff4ad9485be8815077290e3ca0d66c9b89abe2f2d8ed424b1016b53c734ed7",
+    "model-native-corpus-sketch-tail-repeat.log": "f5e697a9b9e1f4b55a28d62d85025861afd2777cbbc5515a8fbbcb08e5bd9602",
+    "model-sketch-tail-role-red.log": "b15700ec70b4f0a28b32f7971f43bff85bac7a9b741fe75ed66eadaf0e7e554a",
+    "model-sketch-tail-all-model.log": "b237083296c9184a830b334971dd041751866f7051891dcd97c6a3c39a19aece",
+    "model-sketch-tail-clippy.log": "e20dad50db2c951e95b989cd0648eda5a989ac50cdf4350313357ecb842c5f6d",
+    "model-sketch-tail-python.log": "e534eb74aac5d2e10d6b289b3976e0658fca6dd12bdf21d663fb850c0870474f"
+  }
+}

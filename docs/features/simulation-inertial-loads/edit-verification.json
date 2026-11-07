@@ -1,0 +1,61 @@
+{
+  "issue": 136,
+  "status": "Complete scoped local gate and focused corpora passed; platform integration pending",
+  "revision": "b1c868b709c6468180631d5fde96a00d07b2651a",
+  "owned_contexts": 135,
+  "native_contexts": 18,
+  "owned_edit_oracle": {
+    "cases": 135,
+    "bytes": 753012,
+    "sha256": "544a94be2ac2f1f5b232ae49ecc8a4a260937de31c7da25176f9820319bb94fe"
+  },
+  "native_edit_oracle": {
+    "cases": 18,
+    "bytes": 36216,
+    "sha256": "533ea0ab3601f1afd45d90c0e87545afad180bd9c7dc82632ec79c0d12fd75d8"
+  },
+  "focused_tests": {
+    "passed": 25,
+    "failed": 0,
+    "ignored": 0
+  },
+  "strict_reference_checks": {
+    "passed": 7,
+    "failed": 0
+  },
+  "public_types_and_aliases_with_send_sync_assertions": 16,
+  "concurrency": {
+    "families": 3,
+    "threads_per_family": 8,
+    "edits_per_thread": 32,
+    "serial_expected_variants": 4,
+    "checks": "Complete bytes, every outer parent/relation, source isolation and copied nested relation coverage"
+  },
+  "checks": [
+    "All six typed replacement kinds across every family",
+    "Opaque revision-bound IDs and foreign/stale/out-of-range rejection",
+    "Full original/replacement/result retention",
+    "Exact prefix and suffix preservation outside the edited value",
+    "All ordered outer source/replacement parents",
+    "Composed nested copy, derivation, deletion and creation relations",
+    "Authentic no-op outer and embedded identity retention",
+    "Complete scalar-edited images compared with independent actual-reader expectations in all owned/native contexts",
+    "Bug #137 framing regression passes for inertial and thermal entry points",
+    "All 15927 independent targeted mutation outcomes match actual reference rejection",
+    "All 135 contexts pass exact independent outer/nested budgets and reject each applicable one-below budget",
+    "Every proper prefix and trailing byte is rejected across all 135 complete owned contexts"
+  ],
+  "bug_fix": {
+    "issue": 137,
+    "commit": "747257b979590f33a9f5faefeeb4cf78aee490d9",
+    "fixed_cut": "0be00025db21885560c91e667f1494eae7ae9249",
+    "exact_cut_full_gate": "Passed: 3184 tests, 0 failures, 38 ignored, 243 summaries; detached checkout removed after process completion"
+  },
+  "exclusions": [
+    "All five exact-head platform feature checks",
+    "Native application acceptance",
+    "Complete schema parity"
+  ],
+  "history_verification": "history-verification.json",
+  "acceptance": "acceptance.json"
+}

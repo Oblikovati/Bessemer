@@ -1,0 +1,94 @@
+{
+  "issue": 241,
+  "source_revision_before_api": "16bae06caab1e5d47d3bdf20b138876d10cb8787",
+  "scope": "Explicit viewer-query profile: exact outer version and zlib framing, known prefix reads and isolated edits; full-body validation always incomplete",
+  "platform": "Windows x64; Rust 1.99.0; CARGO_BUILD_JOBS=1",
+  "results": {
+    "rust_passed": 15,
+    "rust_failed": 0,
+    "ignored_workers": 1,
+    "worker_invocations_by_parent": 2,
+    "python_passed": 8,
+    "clippy": "passed",
+    "format": "passed",
+    "function_file_caps": "passed",
+    "maximum_function_body_lines": 20
+  },
+  "commands": {
+    "tests": {
+      "command": "cargo test --locked --test flow_viewer_prefix_fixtures",
+      "exit_code": 0,
+      "log": "target/flow-viewer-prefix-api-tests.log",
+      "sha256": "aff8c94a1f96311e0a03205a9785a22e4dc2607d2bb5523388826fca4109bda0"
+    },
+    "clippy": {
+      "command": "cargo clippy --locked --test flow_viewer_prefix_fixtures -- -D warnings",
+      "exit_code": 0,
+      "log": "target/flow-viewer-prefix-api-clippy.log",
+      "sha256": "5c89334fc8eca36d05c7c20edc588ff360d6eb934a4735d4aead9f4a66ee3482"
+    },
+    "format": {
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "log": "target/flow-viewer-prefix-api-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "python": {
+      "command": "python -m unittest discover -s docs/features/flow-viewer-prefix -p test_viewer.py",
+      "exit_code": 0,
+      "log": "target/flow-viewer-prefix-api-python.log",
+      "sha256": "7aa81793b3af67ea5c4dd5bc945e3198818ea51e6b0efa7bfada6b3e2fb367bb"
+    }
+  },
+  "coverage": {
+    "cases": 525,
+    "wide_pattern_reads": 436216,
+    "signed_matrix_edits": 1575,
+    "discarded_matrix_edits": 1575,
+    "array_matrix_edits": 7744,
+    "total_matrix_edits": 10894,
+    "native_matrix_edits": 77,
+    "edit_policy": "All signed/discarded fields; all array values for native cases and generated arrays <=64; first/middle/last values for larger generated arrays",
+    "oracles": [
+      "Frozen independent full prefix projection and literal intervals",
+      "Exact entire decoded patches and recomputed native metadata",
+      "Opaque suffix identity, compressed no-op preservation and fresh decoded reversals",
+      "Full physical carrier history and immutable source isolation"
+    ],
+    "contracts": [
+      "Exact and one-below decoded and known-wide budgets including discarded triplet",
+      "Malformed known prefixes, nonpositive/absurd lengths and invalid versions",
+      "Truncated, corrupt, concatenated and extended compressed streams",
+      "Empty or extended opaque suffix never promotes body coverage",
+      "Invalid indices and foreign/wrong/stale identities",
+      "Caller buffer mutation/drop and unrelated carrier edits preserve retained snapshots"
+    ],
+    "new_public_types_send_sync": 10,
+    "reused_public_types_send_sync": 2,
+    "concurrent_workers": 8,
+    "operations_per_worker": 32,
+    "process_replay": "Two fresh workers independently verify all frozen reads and selected edits, comparing complete wire/coverage transcripts byte for byte"
+  },
+  "source_lf_sha256": {
+    "src/flow/legacy_tables/viewer_prefix/edit.rs": "70d0cea72c707aafa580de79d339169cb425b72eb987579bde6289d0421a3793",
+    "src/flow/legacy_tables/viewer_prefix/mod.rs": "69c81a8a1fece9c1ade975e2f879a9455b7ed7df8382f50f6e8d3f363ee1b9d6",
+    "src/flow/legacy_tables/viewer_prefix/read.rs": "7eae7cb06414e3fdbc99c31eeaab30142610877c78d83b43c0c5a83e9a15d41e",
+    "src/flow/legacy_tables/viewer_prefix/types.rs": "7b0b9098972d13754c45a5fbdc367792a73f5b6b06f134b4121c60897d14d171",
+    "src/flow/legacy_tables/viewer_prefix/view.rs": "47eea71106d1aadae77bc3f06eb9694f92d8b02e40a17050779bc9adbd171de5",
+    "tests/flow_viewer_prefix/api.rs": "a158b0afa5607841305310d45b9c760b4d74b6564169e5b191fd71a8676d2573",
+    "tests/flow_viewer_prefix/contracts.rs": "969d53010d1acbecf3cb3202c29dadb53ef575be35e4c0f8b0474846541053a6",
+    "tests/flow_viewer_prefix/edit.rs": "55da1e810f830ea9e8511aeeb061efe73561b1582f28e772482c6eb45c41ae95",
+    "tests/flow_viewer_prefix/replay.rs": "beda4b7aba1beb85224f07af338b0b76490f561225d7023f21a86c9d05cc740b",
+    "src/flow/legacy_tables/mod.rs": "9e7d5b2e71258c4b9a2377803f7087de70b1439337ba5ea0b45043b345306e6c",
+    "tests/flow_viewer_prefix_fixtures.rs": "37ff54d0500311edfa839fbd445f5facd988384f5ff5ad52618ef5d216af9d9c"
+  },
+  "exclusions": [
+    "Full cargo xtask pr acceptance of this source revision pending",
+    "Hosted matrix and sanitizer acceptance pending",
+    "Entire decoded record121 body remains incomplete",
+    "Other record121 profiles are not inferred",
+    "Native owner context and runtime mutation not reconstructed",
+    "Engineering meanings and native application acceptance not verified"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose review pending"
+}

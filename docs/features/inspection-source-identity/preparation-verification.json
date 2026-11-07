@@ -1,0 +1,57 @@
+{
+  "issue": 195,
+  "status": "Independent preparation only; Rust checksum/comparison API not implemented",
+  "python_oracle_tests_passed": 4,
+  "original_source_tests_passed": 4,
+  "process_exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "independent_dotnet_digest_cases": 172,
+  "rfc_literal_vectors": 7,
+  "stored_metadata_cases": 22,
+  "source_binary_input_comparisons": 172,
+  "native_pdf_variants": 3,
+  "source_scope": "Only original inspectionrecords.py copied before import; standard-library dependencies; no live Source imports, module/function patches or hash exceptions",
+  "source_python_files": 1,
+  "source_reader_unchanged_from_record_acceptance": true,
+  "source_snapshot_identity": "1d41c0176484d2153c8b8270f6cd43bb01df872e29b655914821d36842c172be",
+  "source_import_and_content_guard": "passed",
+  "python": "3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)]",
+  "hashlib_provider": "_hashlib",
+  "openssl": "OpenSSL 3.5.7 9 Jun 2026",
+  "files": {
+    "tests/fixtures/inspection-source-identity/vectors.bin": {
+      "bytes": 1231591,
+      "sha256": "395bb9db5fe510dac26b90a3a14ac86388e2cd276b03f6b2938a40f4cd259b44"
+    },
+    "tests/fixtures/inspection-source-identity/vectors.tsv": {
+      "bytes": 20848,
+      "sha256": "43321ef25f69d63bbac57adfdf81fd5ba68411a06c9f67cdeb182a0ffedae6ba"
+    },
+    "tests/fixtures/inspection-source-identity/metadata.bin": {
+      "bytes": 6511,
+      "sha256": "1d15df1d887ebf07cc86ff12eeb99e1d9ac1a48efacc0066636245510df765f1"
+    },
+    "target/inspection-identity-python-oracles.log": {
+      "bytes": 1130,
+      "sha256": "99eb8791c1336921bf51a831bcee265ed7e4ce440cb51b070ac0b9600871998d"
+    },
+    "target/inspection-identity-original-source-all-inputs.log": {
+      "bytes": 1162,
+      "sha256": "77a59de1826e4b8c4d5edbf3c63f88daa24fc37b84c95a5755305fec202a9d61"
+    },
+    "target/verify-inspection-identity-source.py": {
+      "bytes": 1370,
+      "sha256": "f88a3faa03a800b7b821f7075d4b2bda8b9210885308f83ddc9880f6667ad499"
+    }
+  },
+  "remaining": [
+    "Rust private compatibility checksum and typed source operation",
+    "Stale/foreign/wrong-role caller checks",
+    "Rust input isolation and concurrency",
+    "Fresh-process Rust outputs with original Source agreement",
+    "Full local and exact-head remote gates"
+  ]
+}

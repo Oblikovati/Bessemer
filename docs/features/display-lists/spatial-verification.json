@@ -1,0 +1,32 @@
+{
+  "status": "3D-view component verified; complete display-list archive incomplete",
+  "feature_issue": 28,
+  "date": "2026-10-25",
+  "platform": "Windows x64",
+  "rust": "1.99.0 MSVC",
+  "native_documents": 1086,
+  "spatial_view_collections": 1086,
+  "spatial_views": 22,
+  "native_spatial_view_bytes": 435030,
+  "distinct_versioned_collections": 11,
+  "display_stream_manifest_sha256": "94047d85dc01ed0f391378374f2c15f5464301bb26990d4214eecdd600723a87",
+  "owned_vectors": 51,
+  "owned_vectors_sha256": "ae002611b65a37f89874efaa09318911bca5d20d932b4ef6c8074be04220668b",
+  "reference_excerpt_sha256": "b29e5ee9ca578d5f6ba019e093509b609a6ab50fb32b38df85d0b7662bcc6fbc",
+  "checks": [
+    "forced reconstruction and independent field traces for every distinct native collection",
+    "independent reference field traces for all 51 owned vectors",
+    "all conditional boundaries, absent/empty collections and nonboolean flags",
+    "raw bitmap framing, signed products, exact inclusive size bound and payload lengths",
+    "every truncation, malformed headers and collection counts",
+    "all optional-slot shape contracts and byte/view/cumulative plane budgets",
+    "equivalent-prefix budget regression",
+    "input/source/bitmap-clone isolation, authentic reverts and parallel byte identity"
+  ],
+  "exclusions": [
+    "packed DIB or bitmap pixel interpretation",
+    "complete Bessemer display-list archive decoding and writing (pending)",
+    "native application acceptance",
+    "geometric validity"
+  ]
+}

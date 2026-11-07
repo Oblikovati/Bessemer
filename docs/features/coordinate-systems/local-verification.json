@@ -1,0 +1,63 @@
+{
+  "base_revision": "c126cb6cac2f00365a52614b64098c2a070aa8ab",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "gate": {
+    "command": "cargo xtask pr",
+    "staged": true,
+    "exit_code": 0,
+    "library_passed": 494,
+    "library_ignored": 3,
+    "xtask_tests_passed": 4,
+    "all_integration_suites_passed": true,
+    "doctests_passed": 265,
+    "log_sha256": "8c2e090f15bc2c08a639d4c15ec569b11c2a304b74d189a3036b290f0966d44d"
+  },
+  "focused": {
+    "private_tests": 4,
+    "public_tests": 2,
+    "python_tests": 3,
+    "object_cases": 304,
+    "primitive_reads": 61976,
+    "owned_streams": 7
+  },
+  "native_corpus": {
+    "cases": 906,
+    "accepted": 638,
+    "rejected": 268,
+    "previous_630_preserved": true,
+    "changed_frontiers": 10,
+    "newly_accepted": 8,
+    "fresh_process_outcomes_identical": true,
+    "final_selector_helper_replayed": true,
+    "expected_full_parity_exit_code": 101,
+    "independent_exact_eof_bytes": 37003070
+  },
+  "reference_audit": {
+    "pinned_python_files": 1068,
+    "snapshot_identity": "0cd7facfa8d2ff4cf48355096daa1639d6bbb458966538e5a2d059a7cfebb645",
+    "snapshot_copy_verified_against_stable_original": true,
+    "snapshot_hashes_stable_during_regeneration_tests_and_audit": true,
+    "temporary_snapshot_removed": true,
+    "temporary_import_finder_removed": true
+  },
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "source_file_sha256": {
+    "src/model_archives/coordinate_systems.rs": "609eb400d15d691888055ecb1fb6d765fbb8530075ba821b4bb398624303f11f",
+    "src/model_archives/body_features.rs": "432531ee65fd4055cfb35619811111bdf4a794a45ecb198e33f715f531f4eb94",
+    "src/model_archives/mod.rs": "b45660858dbdc14772e17e5e91693671350b70cfd780597be1eb37c434024cd6",
+    "src/model_archives/object_body.rs": "5f1b659dbf5217b5e7840c96a1bca02921f573c21271b00dda4464b1a892a0d9",
+    "src/model_archives/test_modules.rs": "d86388b0fc0f240edf9b5ed37671444823b5f37cd53337e69324c9aef12bfdb2",
+    "tests/resolved_features/coordinate_systems.rs": "d3c964b93782accc2cb7d66e94b52b30017efeab44619357fe22067ada41d3ba",
+    "tests/resolved_coordinate_systems.rs": "ec908ce845e0d889d4c7449c9e1323ef7135fca4221d2a3f287b4459ea9c6f33"
+  },
+  "exclusions": [
+    "Full documented schema parity",
+    "Native geometry and topology validation",
+    "Native writer validity for load-only selector combinations",
+    "Native application acceptance",
+    "Non-Windows execution awaits the feature integration PR matrix"
+  ],
+  "dependencies_changed": false,
+  "version_changed": false
+}

@@ -1,0 +1,94 @@
+{
+  "source_sha256": "a6a227b223afcc4cdfb8bdccf919a3a63caa0a1fbe8494db3e5d8330c58c853b",
+  "artifacts": {
+    "viewer": {
+      "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS Flow Simulation\\binCFW\\vwr09inc.dll",
+      "sha256": "0058e03164066d87c62829e67f31bfce1f76ff78cc3e8383b2964428e4278b41"
+    },
+    "zlib": {
+      "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS Flow Simulation\\binCFW\\NGP_Zlib.dll",
+      "sha256": "20fb445b82c1b4d0d71d6cae29276a55f7651e12c093513ebcdf0a18dc039d92"
+    }
+  },
+  "retained_ranges": [
+    {
+      "module": "viewer",
+      "address": "0x18016b4c0",
+      "bytes": 1493,
+      "sha256": "eca012d0ef7a09b5084114c23311e5a0a571a9f90fb5688cf2e2a2e7bb6f3ada"
+    },
+    {
+      "module": "viewer",
+      "address": "0x180040590",
+      "bytes": 325,
+      "sha256": "42b34fdac087b909344bb27575b36083a41d158bf6e325591ce505c6e681a3fc"
+    },
+    {
+      "module": "viewer",
+      "address": "0x180044e90",
+      "bytes": 608,
+      "sha256": "0b68cfd4689d61c007e1c7aa5ca855311c00a5f3a232414d19c09f99ea4e3254"
+    },
+    {
+      "module": "viewer",
+      "address": "0x18003d050",
+      "bytes": 119,
+      "sha256": "99ba3be5a620bb357073b503039436aa7e1cbb569109068d0c1e9befde8e9609"
+    },
+    {
+      "module": "viewer",
+      "address": "0x1800b7c30",
+      "bytes": 461,
+      "sha256": "fa3e3493a937a10ea7484aa1588291da88eaccf6db9018f7ac1549355d2d9494"
+    },
+    {
+      "module": "viewer",
+      "address": "0x1800b7e00",
+      "bytes": 353,
+      "sha256": "3ffcc0038df7bb176b3ea02307801b7f4ba5fb7bdfe6facb16bafbfd64870d63"
+    },
+    {
+      "module": "viewer",
+      "address": "0x1800b6cc0",
+      "bytes": 48,
+      "sha256": "71659ea1df6848290f697d1bd2967b6fec2a9a38eaf4c0a328a99b6ed50c9e65"
+    },
+    {
+      "module": "viewer",
+      "address": "0x1800b6ad0",
+      "bytes": 254,
+      "sha256": "053df53f9362fcb84e2026bbfb50a048836fafb542f5e7f03e10f64c61059c98"
+    },
+    {
+      "module": "viewer",
+      "address": "0x1800ad770",
+      "bytes": 143,
+      "sha256": "a08223564e466da5d2bc29082f82c03ad80499e45ea831d55ca8e10d1f71462d"
+    },
+    {
+      "module": "zlib",
+      "address": "0x180001450",
+      "bytes": 33,
+      "sha256": "ea642925f332c2e44c0ba7391fa9f068d89cb89a8c6acf066d1d95109c05ae7c"
+    },
+    {
+      "module": "zlib",
+      "address": "0x18000f4b0",
+      "bytes": 646,
+      "sha256": "886a6cd614eab4134638203e96e69a3c5045028c37406874eeb58daa19e8d45d"
+    },
+    {
+      "module": "zlib",
+      "address": "0x18000f740",
+      "bytes": 16,
+      "sha256": "6e856405d8a3520060c5064a21acd0e64c28f85b4f61514a5e6872a2335e7603"
+    }
+  ],
+  "delay_import": {
+    "iat": "0x180cb7a78",
+    "module": "NGP_Zlib.dll",
+    "symbol": "?NGP_inflateInit@NGP_z_stream@CNGP_Zlib@@QEAAHXZ"
+  },
+  "native_execution": false,
+  "scope": "Offline byte authentication of retained native ranges and delay import, including exact window-bits-15 initializer; not new REA output or runtime acceptance"
+}

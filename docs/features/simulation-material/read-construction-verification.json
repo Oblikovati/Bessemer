@@ -1,0 +1,91 @@
+{
+  "issue": 140,
+  "status": "Complete local operation corpus and full local gate passed; exact-head platform integration pending",
+  "base_revision": "c3690b5790212e8b4df73a0cf10a7543a3540d86",
+  "owned_contexts": 300,
+  "native_candidate_attempts": 1297,
+  "accepted_native_arguments": 1230,
+  "failed_native_alternates": 67,
+  "focused_tests": {
+    "passed": 23,
+    "failed": 0,
+    "ignored": 0,
+    "explicit_native_inputs": 3
+  },
+  "strict_reference_checks": 7,
+  "public_types_with_send_sync_assertions": 14,
+  "fresh_complete_field_export": {
+    "bytes": 38170224,
+    "sha256": "29a290d5f109341552686020fe69f07007e00bbfcbe39527be7461b0921ad28b",
+    "processes": 2,
+    "independent_source_match": true
+  },
+  "checks": [
+    "All actual original source input/span outcomes including failed alternatives",
+    "Every accepted field path, type, physical offset and raw value",
+    "Complete independently validated construction",
+    "Standalone EOF and explicit complete-prefix scope",
+    "Every text parent is rebound to the consumed body and excludes following carrier bytes",
+    "An exact body-byte prefix limit accepts a 2 MB following suffix and rejects one-below body bytes",
+    "Null/empty/odd/unpaired-surrogate/embedded-NUL text distinctions",
+    "Count-only 10000 declarations retain no payload and are included in aggregate entry accounting",
+    "Foreign and out-of-range opaque identities reject",
+    "Complete empty properties and zero declared-entry budget remain completed bodies",
+    "All three material wire value kinds support isolated typed edits",
+    "Every physical field relation retains ordered source/replacement parents",
+    "Exact no-ops preserve original IDs; invalid/foreign/stale requests preserve source",
+    "Count-only edits update declared-entry coverage without inventing point pairs",
+    "Prefix-origin edits retain only the owned source body"
+  ],
+  "storage_note": "Standalone and exact-window prefixes reuse their existing exact body parent; a prefix window containing following bytes creates one consumed-body copy and rebinds text parents. Existing load paths do not call the new sealing helper.",
+  "exclusions": [
+    "Exact-head platform integration",
+    "Native runtime/application/material-model/geometric acceptance",
+    "Complete documented schema parity"
+  ],
+  "existing_inertial_and_mass_regressions": {
+    "passed": 45,
+    "failed": 0,
+    "ignored": 0
+  },
+  "fresh_complete_history_export": {
+    "bytes": 56008596,
+    "sha256": "c948b8457ae10381fa3a134a0b562215db2000ec4187f391692856d0d0674bc6",
+    "processes": 2,
+    "independent_source_match": true
+  },
+  "adversarial": {
+    "inputs": 40622,
+    "accepted": 13816,
+    "rejected": 26806,
+    "identity_positive_controls": 300,
+    "budget_contexts": 300,
+    "limit_modes": [
+      "Standalone",
+      "Prefix"
+    ],
+    "limits": [
+      "bytes",
+      "fields",
+      "declared entries",
+      "text bytes"
+    ],
+    "proper_prefixes": "Every owned proper prefix in both modes"
+  },
+  "concurrency": {
+    "threads": 8,
+    "edits_per_thread": 32,
+    "serial_variants": 4,
+    "comparisons": [
+      "bytes",
+      "fields",
+      "coverage",
+      "ordered parents and identities",
+      "preservation"
+    ]
+  },
+  "shared_mutation_helper_regressions": {
+    "passed": 6,
+    "failed": 0
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "issue": 250,
+  "scope": "Independent frozen timestamp arithmetic and native header metadata baseline only; runtime packing and editing APIs pending",
+  "source_revision_before_baseline": "c17ebfe4291e643e8aaf3384b0526d905c92e97c",
+  "platform": "Windows x64; Rust 1.99.0; CARGO_BUILD_JOBS=1",
+  "results": {
+    "rust_passed": 3,
+    "rust_failed": 0,
+    "python_passed": 6,
+    "reference_python_passed": 4,
+    "clippy": "passed -D warnings",
+    "format": "passed",
+    "file_function_caps": "passed; Rust maximum body17 lines"
+  },
+  "commands": {
+    "rust": "cargo test --locked --test container_timestamp_fixtures",
+    "python": "python -m unittest discover -s docs/features/container-timestamps -p test_timestamps.py",
+    "source_python": "python -m unittest test_ziptimestamps (reference directory)",
+    "clippy": "cargo clippy --locked --test container_timestamp_fixtures -- -D warnings",
+    "format": "cargo fmt --all -- --check"
+  },
+  "logs": {
+    "rust": {
+      "exit_code": 0,
+      "log": "target/container-timestamps-baseline-tests.log",
+      "sha256": "b3b9461669a42c27aa0f8915e1fb5a2c7ef92bda56023eb099961ae820f7aa32"
+    },
+    "clippy": {
+      "exit_code": 0,
+      "log": "target/container-timestamps-baseline-clippy.log",
+      "sha256": "a9a099e47c3e5c8537c365f4707ce8fe98324b71e5bbd166d109bc5d8299c7b3"
+    },
+    "format": {
+      "exit_code": 0,
+      "log": "target/container-timestamps-baseline-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "python": {
+      "exit_code": 0,
+      "log": "target/container-timestamps-baseline-python.log",
+      "sha256": "3b322f1b0d0ca5940e0cad44ebbe3d55a29e34086693974687ddb5a91890a28b"
+    },
+    "source_python": {
+      "exit_code": 0,
+      "log": "target/container-timestamps-baseline-source-tests.log",
+      "sha256": "1b6f69157102cc03f5264c937d138171570f1a3f06ab9ba2d8345507e1df7261"
+    }
+  },
+  "coverage": {
+    "source_requests": 22398,
+    "native_entries": 113,
+    "native_documents": 3,
+    "oracle": "Independent widened weighted integer arithmetic; no floating-point/calendar library",
+    "native_patterns": "All single bits and complements plus zero/all ones and noncanonical threshold examples",
+    "replay": "Both gzip packets regenerate byte for byte in an injected temporary root"
+  },
+  "specification": {
+    "edition": "Edition 0.3221 \u00b7 2026-11-06 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+    "raw_sha256": "d8a65613d933b83a1387b03f07a00e553ec9d10341b2149d31ed1678ff04242a",
+    "clauses": [
+      "7.3.1",
+      "7.3.2"
+    ],
+    "owned_snapshot_lf_sha256": "e79517121a4fd7dd486257a2ea4e8c87bd4d20741c9afc1033ac8a398dd29d69"
+  },
+  "local_source_lf_sha256": {
+    "docs/features/container-timestamps/freeze_timestamps.py": "bd16276844d3224c0cf5698f896501c069896f25bf4b56af0af15dc6718d0655",
+    "docs/features/container-timestamps/test_timestamps.py": "f5650c52612e9c52fed045786561a91eb9fd9814e72c5bf7bf3ba4cf765d6c3b",
+    "tests/container_timestamp_fixtures.rs": "54dad8da1f9b99f5a1a3d4dda824156a4d073da2fcdc5d34b2336dad358c557b"
+  },
+  "initial_corrections": [
+    "Clippy needless_range_loop fixed by iterating native fixtures with enumerate; initial log retained",
+    "Initial Source unittest invoked from wrong working directory; repeated successfully from the reference directory; initial log retained"
+  ],
+  "self_review": {
+    "pros": [
+      "No production source or public stubs introduced",
+      "Exact Source packets and independent integer oracle agree across all requests",
+      "Native metadata uses the existing owned fixtures and independent reference header offsets"
+    ],
+    "cons": [
+      "Native packing/edit runtime API not yet implemented",
+      "Full PR gate for this new baseline is pending; active17115 covers earlier f0bd5f21 source"
+    ],
+    "recommended_fix": "Implement one complete isolated existing-entry operation against this unchanged baseline, then run all focused/integration gates"
+  },
+  "exclusions": [
+    "No new runtime API or native writer/application execution",
+    "No whole installed-corpus or whole-schema parity credit",
+    "No current running f0bd5f21 gate acceptance of this newer baseline"
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending",
+  "dependencies": "None added or changed; no version bump or release"
+}

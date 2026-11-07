@@ -1,0 +1,115 @@
+{
+  "issue": 231,
+  "reference_bugs": [
+    236,
+    237
+  ],
+  "source_base_commit": "8341361a6d9d05ca762e4948a0b29efe9dc1ece5",
+  "source_state": "Project-record working tree; exact source files below",
+  "source_sha256": {
+    "src/electrical/mod.rs": "a9f5a309644bb2c6ba72a5a60b9e90f09e55881eeaa8a8918973250b53124099",
+    "src/electrical/projects/budget.rs": "719880f832a90f532b11959c2ca72ab9130f0c5264b92f38875bea3451b69d4d",
+    "src/electrical/projects/file_types.rs": "f033a357103a6cfb922a470be81c19cff692c2de7558dc6c681342d6477344e8",
+    "src/electrical/projects/links.rs": "d72d9dcf8b5865efa6a554fbe30ddbab47bd1aa6e74429d26d32b97d77f1ec1d",
+    "src/electrical/projects/mod.rs": "6bd15365288906707eefe84a1b4afbdd08e99fdffccf5c5fd9506ac107f13b15",
+    "src/electrical/projects/read.rs": "be4a5a4bd7de3c2b1c8805ea7b30c7606c0e86b26ef314ed417432c155516292",
+    "src/electrical/projects/types.rs": "6532a373f4e188d1836b71370886a581d22eb2021b0200bc39d7f5af84f5627d",
+    "src/sqlite_image/connection.rs": "125b56d7495585ba73805866bee8aafb39f23b826991e03e4a6ca330c251c4c8",
+    "src/sqlite_image/mod.rs": "880caba598018ed9c0d0abffe805db3caf09583c125c4a69a6b9644d4560ffee",
+    "tests/electrical_records/fixture.rs": "140cc1bd7127782ee8ead5ab8207f59c5a68137f266e27180595d54b915a89c1",
+    "tests/electrical_records/projection.rs": "5457bab05413cb67d47d0a4e12e4725da9875702dc823d1d04ff2b9d1109bcc1",
+    "tests/electrical_records/rejections.rs": "fa3011bae48524f50b68b3fabe8257044bab3bb021b317dcb7d031ef6dbbe56e",
+    "tests/electrical_records.rs": "62bf75ab07193f7373640095d4b3b10085bb68c5994366b524101b6805a6476b",
+    "tests/sqlite_images/projection.rs": "5c030aecd65a0ee5bfacb8707a1b9bd3938c15e0ec879779501b79b9b6c94328",
+    "tests/sqlite_images.rs": "c394b927d6f4c63aa62b66a004834f79b1bfc540e676051947537ec947cb1197",
+    "tests/support/sqlite_wire.rs": "9fd59821a8ff82ccd2574bd8583cf3b9de7fcd7e9ae7a8693b9b5e89d551dd07"
+  },
+  "reference_sha256": {
+    "../inventor-interface/solidworks/electrical.py": "e425802b353cf52d318c040794163fa9fa1cc8d5de72302265e97bcb7a2e886a",
+    "../inventor-interface/solidworks/research/electrical-project-record-evidence.json": "c18fb5cb53115e4995068fe14532d6917d9e57c8e48658bb105df1869d9aa1bd",
+    "../inventor-interface/docs/solidworks-file-format/specification.md": "ad3859be88edab67b054f78eedd635e524cc780b895987a9dc02e86960adc81c"
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "focused_graph_tests": {
+    "passed": 12,
+    "failed": 0,
+    "terminal_exit_code": 0
+  },
+  "unchanged_sqlite_regressions": {
+    "passed": 11,
+    "failed": 0,
+    "terminal_exit_code": 0
+  },
+  "python_tests": {
+    "passed": 3,
+    "terminal_exit_code": 0
+  },
+  "clippy": {
+    "command": "cargo clippy --lib --test electrical_records --test sqlite_images --locked -- -D warnings",
+    "terminal_exit_code": 0
+  },
+  "native_graphs": 4,
+  "native_drawing_links": 17,
+  "owned_graphs": 3,
+  "owned_duplicate_graph": {
+    "projects": 12,
+    "database_links": 10,
+    "file_links": 50,
+    "drawing_matches": 24,
+    "checked_images": 5,
+    "checked_tables": 22
+  },
+  "initial_failures": "Reference ZIP backslash normalization, uncommitted owned enum fixture, and guessed table/match count assertions; corrected from raw names, committed input rows and explicit selected-table sets, without changing native expected graphs or production join behavior",
+  "initial_manifest": {
+    "cases": [
+      {
+        "name": "owned-empty",
+        "archive_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+        "projection_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+      },
+      {
+        "name": "owned-duplicates",
+        "archive_sha256": "e4058052efae5420d4a01b96b4a70ea19adf14dba169ee2ef8152c6f6b758604",
+        "projection_sha256": "da114af995998d6440c66fca7251e6cb88c1e1eb1be21fe458ca9e2c2bd4375d"
+      },
+      {
+        "name": "owned-all-constants",
+        "archive_sha256": "4b0e69319edf0d48ad751c3930710f9025ce45a3a163901465882ba9c8a48b9f",
+        "projection_sha256": "7e04f4947d8044be8e159592189a85659344cfb38b698626b664be2e7239d2a3"
+      },
+      {
+        "name": "ANSI.proj.tewzip",
+        "archive_sha256": "ff2f46b236261cec33f7323c7abf4174b87dc4e5e6a1e41fba202c3f27a22921",
+        "projection_sha256": "b4acf8fb1a6446dbf179718adfa17d767c862aa47e555cc6347413cd03f770a4"
+      },
+      {
+        "name": "GB_Chinese.proj.tewzip",
+        "archive_sha256": "05f8ac8787b909ec150474f0fc8e16feb31ab51f83742d5eb0a1443990ad555b",
+        "projection_sha256": "113e09b883ff8c6cab0729ea03e0a1819e66189cc50cff5132b22176ad847398"
+      },
+      {
+        "name": "IEC.proj.tewzip",
+        "archive_sha256": "ca4b66413e35a2099e217024d9f7de2baac838ef1d82c601b9b7ee61b0dc294c",
+        "projection_sha256": "ccad116a52a41a9a56567b643d1312854dd70da5d0bcf504172fb75a2f234762"
+      },
+      {
+        "name": "JIS.proj.tewzip",
+        "archive_sha256": "1d5bbdd41e1ff060e34e6bbee4da80f8ab0b3ce3a0175bb47830ec015c6a762f",
+        "projection_sha256": "24397cbdb1fc9572fa5471d2869a0ed4de9aaa28494ca31bc14ed9867994aada"
+      }
+    ],
+    "raw_bytes": 1112695,
+    "raw_sha256": "a32f76ed74ff3b10d478276699f0404c815ded44d55bb440d88cb98206c2f8e9",
+    "gzip_sha256": "29703f432808ba47863554658a32db42ab18f74148e3be25bdde0c210b3b82a5"
+  },
+  "log_sha256": {
+    "electrical-records-rust-tests.log": "1f1a9b398086b17ec885d01ab1bf2e0182528fb0ebd080c51de6f1277f424532",
+    "electrical-records-final-rust-tests.log": "9cb3269d1f91bff1c32847b1d878ac1c9ef7b5c88b007e1490aa8d17a055558d",
+    "electrical-records-python-tests.log": "563a7281e79e8b6fd341f8b23b2d9de21009960c0fa705b3f8987b4f9d58150e",
+    "electrical-records-clippy.log": "6c9f43d8b3859ba0b7e7f17aa3b61f22979cde8bee2e821382b79fdeef471b77",
+    "electrical-records-initial-failure.log": "d88ecf5d3c63e045d0fc90f1f85fe45aef0f2b8a0b43e27ae18f1bc1c5bd264f"
+  },
+  "full_suite": "Pending for this new source; active SQLite full suite is on earlier 8341361a",
+  "native_application_acceptance": false,
+  "geometry_acceptance": false
+}

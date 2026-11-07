@@ -1,0 +1,15 @@
+{
+  "fixtures": 130,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "two_processes_identical": true,
+  "all_forced_bytes_match_independent_fixtures": true,
+  "input_sha256": "1c96257ce63b15bd6ce658c8cf0cbe24d85472410cacec2a8d750fdedab8fbb8",
+  "result_sha256": "2491740dd2e8cf02d2c77c35da3be5d8f21012759e42b0584874d2b86e377786",
+  "trace_sha256": "6658263dd1f019ceba34e6d1eec2fe89e372562ed7c308d75877f1de21a4e856",
+  "source_sha256": {
+    "modern_root": "b7dd9ca7e298e25d126b32b30b197466cbaab34a90ebd185556b1d94794f8ba8",
+    "modern_body_tess": "4aa48a7f21676632cb8e9e6e59eac683ad6853c4769b8279c0ca81869a504158",
+    "modern_part_tess": "5b6f5aba6536dff1ab6c16c24d2fdb768fd646fbd0afcf45691572e3bd644cde"
+  },
+  "scope": "byte reconstruction and process determinism; field oracles checked separately by integration tests"
+}

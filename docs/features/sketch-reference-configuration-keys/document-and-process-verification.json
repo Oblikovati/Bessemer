@@ -1,0 +1,49 @@
+{
+  "issue": 188,
+  "passed": true,
+  "processes_reaped": true,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "tests_per_process": 6,
+  "cases": 400,
+  "physical_owners": 800,
+  "archive_requests_per_process": 24000,
+  "changed_archive_requests_per_process": 22672,
+  "noop_archive_requests_per_process": 1328,
+  "document_forward_edits_per_process": 2400,
+  "document_reverse_edits_per_process": 2400,
+  "export_bytes": 10896008,
+  "export_sha256": "5a366bd30d0578bfdca39dcdb7c88c083cfeb82b1e91d6f607ec42e593ae8963",
+  "same_executable_sha256": "17512fcfe5c27060a83c87e05a94a4eaf84f5b1de8b4ea7bc139e112b9480c45",
+  "logs": [
+    {
+      "process": 1,
+      "seconds": 20.95,
+      "sha256": "a655ed1ca67262eeed5aaff15e9be2cdaf6900b28713846b21df1b72ff7e91b4"
+    },
+    {
+      "process": 2,
+      "seconds": 17.28,
+      "sha256": "29a6be7d03451aed20fec7e2a6897d7e8cc757c71bd58b22fd0eca0eceb20d94"
+    }
+  ],
+  "checks": [
+    "Independent full-stream single-key and paired literal patches accepted every actual operation output",
+    "Complete document reopen retains all typed fields",
+    "Unselected stream names, order and bytes unchanged",
+    "Fresh typed reversals restore original fields and feature bytes",
+    "Retained original document builder restores exact entire original file",
+    "Input documents, source archives and parent configuration unchanged",
+    "Full exports identical across fresh processes"
+  ],
+  "clippy": "integration check passed with warnings denied",
+  "function_size_audit": "all new Rust functions <=20 nonblank body lines; files <500 lines",
+  "source_replays": "Both fresh immutable actual-output Source replays running; not accepted here",
+  "remaining": [
+    "Native typed operations",
+    "Mixed concurrency",
+    "Full local/remote gates and ThreadSanitizer"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "issue": 152,
+  "status": "reference-foundation-verified",
+  "production_api_added": false,
+  "checks": {
+    "passed": 14,
+    "failed": 0
+  },
+  "native": {
+    "streams": 406,
+    "logical_bytes": 267786,
+    "arguments": 453,
+    "accepted": 427,
+    "failed": 26,
+    "bytes": 327967,
+    "sha256": "11cfbf864c90205edbd3a9e022e522d32d026d753e762ab34464300422f46200"
+  },
+  "owned": {
+    "cases": 20,
+    "bytes": 14216,
+    "sha256": "3b7f7b974865a2a9d0aef1d24656b33c2e528e3128e5c71176c88f39f6aa210b"
+  },
+  "bindings": [
+    "Component storage reader slot 18205EB98 -> 1813B5FD0",
+    "Exact Component PersistID UTF-16 stream literal at 18205EC18",
+    "Full installed image/function/threshold hashes",
+    "ID primary/suffix and constant-surface/plane-section bindings"
+  ],
+  "unused_source_pin": "../simulation-solid-body/source-reconciliation.json, guarded unimported in this replay",
+  "original_tests": 9,
+  "initial_and_strict_processes_reaped": true,
+  "strict_log_sha256": "04ad4197316565ab0a75143f30295ee129d4080de80ca017ccda5086ce9da951",
+  "exclusions": [
+    "Production operations and full field/history oracles",
+    "Opaque blob meanings and physical semantics",
+    "Whole manager inventory and unresolved SurfaceBody trailers",
+    "Native writer/application and geometric acceptance"
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending",
+  "complete_oracles": {
+    "native": "native-oracle-reference.json",
+    "owned_fields": "owned-projection-reference.json",
+    "owned_history": "owned-history-reference.json",
+    "scope": "Independent expected bytes/fields/outer and nested parents only; Rust operation parity remains pending"
+  },
+  "oracle_strict_log_sha256": "4492458055224054a94eae8f5608802b380a19375e9546f261392ff517bedab7"
+}

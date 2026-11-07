@@ -1,0 +1,42 @@
+{
+  "issue": 183,
+  "publication_issue": 166,
+  "publication_pr": "https://github.com/Oblikovati/Bessemer/pull/182",
+  "head": "16a8cdf36e0051b2784241d61ab53596351c157f",
+  "checkout": "C:\\bessemer166",
+  "exit_code": 0,
+  "process_reaped": true,
+  "command": "cargo xtask pr",
+  "build_jobs": 1,
+  "target_directory": "target/post-dialog-publication-build",
+  "passing_result_summaries": 303,
+  "summed_passed": 3813,
+  "summed_ignored": 192,
+  "failed": 0,
+  "artifacts": [
+    {
+      "path": "target/post-dialog-ci-correction-pr.log",
+      "bytes": 508689,
+      "sha256": "c29eb3439c732147a14e8ac0ffa3a992deddf317942acb4c30e8caa95cb2e603"
+    },
+    {
+      "path": "target/post-dialog-ci-correction-isolated-followup.log",
+      "bytes": 215,
+      "sha256": "da3c96b0822680887df9fb18a2ee770b8fac9aa98534a533fe432c822e0d68a0"
+    },
+    {
+      "path": "target/run-ci-correction-isolated.ps1",
+      "bytes": 1098,
+      "sha256": "f571e8d4bb1533c33d9f47c9acd309016c6795e7150404ed19d86350790ca6d1"
+    }
+  ],
+  "scheduling": "The waiting-only helper was cancelled after process/child/log checks. The exact-head PR gate ran in its existing clean worktree and a separate target directory while the native corpus process continued. Build jobs were limited to one; no test exclusions or harness-thread changes were added.",
+  "hosted_workflow": "https://github.com/Oblikovati/Bessemer/actions/runs/41748302945",
+  "hosted_acceptance": false,
+  "merge_pending": true,
+  "qualifications": [
+    "The pushed exact head requires five platform checks and all eight sanitizer partitions before merge. A head-guarded watcher is active.",
+    "This gate validates only Feature166 and the CI correction, not later unpublished work in the root checkout.",
+    "No dependency, package version, release or tag changed."
+  ]
+}

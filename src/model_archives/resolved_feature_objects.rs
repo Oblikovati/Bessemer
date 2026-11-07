@@ -1,0 +1,226 @@
+use super::ModelDecoder;
+use crate::Result;
+use crate::archive_codec::ObjectReader;
+
+pub(super) fn read(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+    name: &str,
+) -> Option<Result<()>> {
+    if let Some(result) = super::cut_list_folders::read_object(reader, map, name) {
+        return Some(result);
+    }
+    if let Some(result) = super::reference_dimensions::read(reader, map, name) {
+        return Some(result);
+    }
+    if let Some(result) = super::structural_member_objects::read(reader, map, name) {
+        return Some(result);
+    }
+    if let Some(result) = super::fold_transforms::read_object(reader, map, name) {
+        return Some(result);
+    }
+    let result = match name {
+        "moDeform_c" => super::deform_features::read(reader, map),
+        "moSmartComponentFeature_c" => super::smart_components::read(reader, map),
+        "moSmartComponentFeatureData_c" => super::smart_components::feature_data(reader, map),
+        "moSensorDiaMapList_c" => super::smart_components::sensor_map(reader, map),
+        "moSmartComponentFeatFolder_c"
+        | "moSmartComponentCompFolder_c"
+        | "moSmartComponentRefFolder_c" => super::smart_components::folder(reader, map),
+        "moSCItemData_c" => super::smart_items::base(reader, map),
+        "moSCFeatureItemData_c" => super::smart_items::feature(reader, map),
+        "moSCCompItemData_c" => super::smart_items::component(reader, map),
+        "moSCRefItemData_c" => super::smart_items::reference(reader, map),
+        "moTextDataBorder_c" => super::annotation_extras::border(reader, map),
+        "moTextDataSymbol_c" => super::annotation_extras::symbol(reader),
+        "moCThreadInstanceId_c" => super::annotation_extras::thread_instances(reader, map),
+        "moCTInstId_c" => super::annotation_extras::thread_item(reader),
+        "sgLinearPattCntDim" | "sgCircularPattCntDim" => {
+            super::annotation_extras::pattern_count(reader, map)
+        }
+        "moTablePattern_c" => super::pattern_extensions::table(reader, map),
+        "moSketchPattern_c" => super::pattern_extensions::sketch(reader, map),
+        "moDimPattern_c" => super::dimension_patterns::read(reader, map),
+        "moDimPatternFeatInstance_c" => super::pattern_extensions::instance(reader, map),
+        "moAllRangeDim_c" => super::pattern_extensions::all_range(reader, map),
+        "moAlignGroup_c" => super::alignment_groups::read(reader, map),
+        "moSculpt_c" => super::sculpt_features::read(reader, map),
+        "moFormToolInstance_c" => super::forming_tools::read(reader, map),
+        "moFormFeatureSIdKeeper_c" => super::fillets::keeper(reader, map),
+        "moLibraryFeature_c" => super::library_features::read(reader, map),
+        "moXConfigData_c" => super::library_references::configuration(reader, map),
+        "moXFeatureData_c" => super::library_references::feature(reader),
+        "moXRefPlaneData_c" => super::library_references::plane(reader),
+        "moXRefData_c" => super::library_references::reference(reader, map),
+        "moAtomIdToFeatIdNode_c" => super::library_references::atom_node(reader, map),
+        "moAtomIdToFeatIds_c" => super::library_references::atom_ids(reader, map),
+        "moPunch_c" => super::punches::read(reader, map),
+        "moCurveInFile_c" => super::curve_files::read(reader, map),
+        "moSMMiteredFlange_c" => super::mitered_flanges::read(reader, map),
+        "moSMParamsFromMat_c" => super::sheet_material_ranges::read(reader),
+        "moSketchBitmap_c" => super::sketch_bitmaps::read(reader, map),
+        "moSketchBitmapData_c" => super::sketch_bitmaps::payload(reader, map),
+        "moMoveCopyBody_c" => super::move_copy_bodies::read(reader, map),
+        "moMoveCopyBodyData_c" => super::move_copy_bodies::payload(reader, map),
+        "moPSMeshToleranceHandler_c" => super::move_copy_deformation::mesh(reader),
+        "moDerivedFeatRef_w" => super::derived_references::read(reader, map),
+        "moSurfaceBodyRef_w" => super::stock_references::body(reader, map),
+        // #54 / C-396 binds the complete stock body with no modern suffix.
+        "moStock_c" | "moXformStock_c" => super::stock_features::read(reader, map, false),
+        "moMoldPartingGeom_c" => super::mold_parting_geometry::read_geometry(reader, map),
+        "moPartingDataNew_c" => super::mold_parting_child::read_child(reader, map),
+        "moMoldPartingConnectedComponent_c" => {
+            super::mold_parting_child::read_connected(reader, map)
+        }
+        "moMoldPartingLine_c" => super::mold_parting_line::read_parting_line_feature(reader, map),
+        "moMoldPartingLineData_c" => {
+            super::mold_parting_line::read_parting_line_settings(reader, map)
+        }
+        "moMPLEdgeElem" => super::mold_parting_line::read_mpl_edge(reader, map),
+        "moMPLFaceSplitInfo_c" => super::mold_parting_line::read_mpl_split_info(reader, map),
+        "moMoldCoreCavitySolids_c" => super::mold_core_cavity::read_mold_feature(reader, map),
+        "moMoldCoreCavitySolidsData_c" => {
+            super::mold_core_cavity::read_mold_solids_data(reader, map)
+        }
+        "moCavity_c" => super::cavity_features::read(reader, map),
+        "moMoveFace_c" => super::move_faces::read(reader, map),
+        "moBending_c" => super::bending_features::read(reader, map),
+        "moBendingData_c" => super::bending_features::payload(reader, map),
+        "moMidSurface_c" => super::mid_surfaces::read(reader, map),
+        "moMidRefSurface_c" => super::mid_surfaces::reference(reader, map),
+        "moRefSurface_c" => super::mid_surfaces::base_reference(reader, map),
+        "moMidSurfData_c" => super::mid_surfaces::data(reader, map),
+        "moFacePair_c" => super::mid_surface_pairs::faces(reader, map),
+        "moFaceToHeuristicEdges_c" => super::mid_surface_pairs::face_edges(reader, map),
+        "moEdgePair_c" => super::mid_surface_pairs::edges(reader, map),
+        "moMirrorStock_c" => super::stock_features::read(reader, map, true),
+        "moBodyRef_w" => super::stock_references::body(reader, map),
+        "moCompBody_c" => super::stock_references::component(reader, map),
+        "moDisplayNote_c" => super::display_notes::read(reader, map),
+        "moCompNote_c" => super::display_notes::component(reader, map),
+        "moNoteData_c" => super::display_notes::note_data(reader, map),
+        "moGenericText_c" => super::note_text::read(reader, map),
+        "moGenTextDataList_c" => super::note_text::data_list(reader, map),
+        "moTextDataLineHead_c" => super::note_text::line_head(reader, map),
+        "moTextDataChar_c" => super::note_text::character(reader),
+        "moAbsolutePoint_c" => super::dimensions::attachment(reader, map),
+        "moJog_c" => super::jog_corners::jog(reader, map),
+        "moBreakCornerFeat_c" => super::jog_corners::break_corner(reader, map),
+        "moFlattenBends_c" => super::flatten_bends::read(reader, map),
+        "moProcessBends_c" => super::flatten_bends::process(reader, map),
+        "featureStateData_c" => super::feature_states::read(reader),
+        "moUiBend_c" => super::ui_bends::read(reader, map),
+        "moRuledBendLineData_c" => super::ui_bends::ruled_line(reader),
+        "moBendSketchLineData_c" => super::ui_bends::sketch_line(reader),
+        "moCornerFeat_c" => super::corner_hems::corner(reader, map),
+        "moFaceGeom_c" | "moPlanarFaceGeom_c" => super::corner_hems::face_geometry(reader),
+        "moHem_c" => super::corner_hems::hem(reader, map),
+        "moHemData_c" => super::corner_hems::hem_data(reader, map),
+        "moHemEdgeChainData_c" => super::hem_chains::chain_data(reader, map),
+        "moHemEdgeChain_c" => super::hem_chains::chain(reader, map),
+        "moHemEdgeChainElement_c" => super::hem_chains::element(reader, map),
+        "moReliefData_c" => super::hem_chains::relief(reader),
+        "moSM3dBend_c" => super::sheet_folds::bend(reader, map),
+        "moFold_c" => super::sheet_folds::fold(reader, map),
+        "moUnFold_c" => super::sheet_folds::unfold(reader, map),
+        "su_CMapObToInt" => super::sheet_folds::object_integer_map(reader, map),
+        "moEdgeFlange_c" => super::edge_flange_records::read(reader, map),
+        "moEdgeFlangeData_c" => super::edge_flange_data::read(reader, map),
+        "moOneBend_c" => super::one_bends::read(reader, map),
+        "moMultiEdgeFlangeDataPerEdge_c" => super::edge_flange_records::per_edge(reader, map),
+        "moEdgeGeom_c" | "moLinearEdgeGeom_c" => super::edge_flange_records::geometry(reader),
+        "moGusset_c" => super::weldment_finishing::gusset(reader, map),
+        "moWeldBeadFeat_c" => super::weldment_finishing::bead(reader, map),
+        "weldBeadSideData_c" => super::weldment_finishing::side(reader, map),
+        "moEndCap_c" => super::end_caps::read(reader, map),
+        "moCosmeticWeldSubFolder_c" => super::cosmetic_weld_tree::subfolder(reader, map),
+        "moCosmeticWeldBead_c" => super::cosmetic_weld_tree::bead(reader, map),
+        "moCosmeticWeldBeadData_c" => super::cosmetic_weld_tree::bead_data(reader, map),
+        "moCWeldBeadFromToParams_c" => super::cosmetic_weld_tree::from_to(reader),
+        "moIntermittentCWeldBeadParams_c" => super::cosmetic_weld_tree::intermittent(reader),
+        "moWeldWireEdgeToFaceMap_c" => super::cosmetic_weld_tree::wire_map(reader),
+        "moCosmeticWeldCutList_c" => super::cosmetic_weld_cut_lists::read(reader, map),
+        "moAttachPointData_c" => super::attachment_records::data(reader, map),
+        "moParametricPoint_c" => super::attachment_records::parametric(reader, map),
+        "moWeldSymbol_c" => super::weld_symbols::read(reader, map),
+        "moCosmeticWeldBeadSymbol_c" => super::weld_symbols::cosmetic(reader, map),
+        "moSFSymbol_c" => super::weld_symbols::surface_finish(reader, map),
+        "moCosmeticWeldBeadAttachPoint_c" => super::weld_symbols::attachment(reader, map),
+        "moCompDetailItem_c" => super::component_detail_references::read(reader, map),
+        "moDetailItem_c" => super::component_detail_references::detail_item(reader, map),
+        "moRuledSrfFromEdge_c" => super::ruled_surfaces::read(reader, map),
+        "moRuledSrfFromEdgeData_c" => super::ruled_surfaces::data(reader, map),
+        "moCompositeCurve_c" => super::composite_curves::read(reader, map),
+        "moDelFace_c" => super::deleted_faces::read(reader, map),
+        "moDelFaceData_c" => super::deleted_faces::data(reader, map),
+        // #54 / C-219, C-235 and C-278 bind the identical complete extrusion serializer.
+        "moExtruThin_c" | "moBossThin_c" | "moCutThin_c" => {
+            super::thin_extrusions::extrusion(reader, map)
+        }
+        "moRevolutionThin_c" => super::thin_extrusions::revolution(reader, map),
+        "moThinSpec_c" => super::thin_extrusions::specification(reader, map),
+        "moSplit_c" => super::split_features::read(reader, map),
+        "moSplitItem_c" => super::split_items::read(reader, map),
+        // #54 / C-276: these tagged serializers are empty; the parent writes owned data directly.
+        "moSplitData_c" | "moSplitBodyIdKeeper_c" => super::extruded_surfaces::keeper(reader),
+        "moFillRefSurface_c" => super::filled_surfaces::read(reader, map),
+        "moFillRefSurfIdKeeper_c" => super::filled_surfaces::keeper(reader, map),
+        "moCurveContact_c" => super::filled_surfaces::contact(reader, map),
+        "moCurveContactData_c" => super::filled_surfaces::contact_data(reader, map),
+        "moSewRefSurface_c" => super::sew_surfaces::read(reader, map),
+        // #54 / C-269 binds this exact zero-byte su_CObject serializer thunk.
+        "moSewRefSurfIdKeeper_c" => super::extruded_surfaces::keeper(reader),
+        "moNetBlend_c" | "moNetBlendCut_c" => super::net_blends::read(reader, map),
+        "moContactData_c" => super::net_blend_components::contact(reader, map),
+        "moCompEntGroup_c" => super::net_blend_components::group(reader, map),
+        "moCompMultiEdge_c" => super::net_blend_components::multi_edge(reader, map),
+        // #54 / 11.350 / C-392 binds both suffix-free native feature dispatches.
+        "moLockFeature_c" => super::features::read(reader, map),
+        "moSMEnvTableFeat_c" => super::body_features::model_feature(reader, map),
+        "moLPatternItemId_c" => super::frontier_feature_helpers::pattern_item(reader),
+        "edgeParamsObject_c" => super::frontier_feature_helpers::edge_parameters(reader, map),
+        "featRadiusObject_c" => super::frontier_feature_helpers::feature_radius(reader, map),
+        "moRefCurve_c" => super::reference_curves::read(reader, map),
+        "moSurfCut_c" => super::surface_operations::cut(reader, map),
+        "moTrimRefSurface_c" => super::surface_operations::trim(reader, map),
+        "moCombineBodies_c" => super::combine_bodies::combine(reader, map),
+        "moDeleteBody_c" => super::combine_bodies::delete(reader, map),
+        "moDeleteBodyData_c" => super::combine_bodies::delete_data(reader, map),
+        "moMirrorSolid_c" => super::mirror_solids::read(reader, map),
+        "suUIntArray" => super::mirror_solids::unsigned_array(reader),
+        "moWeldCornerFeat_c" => super::weld_corners::read(reader, map),
+        "moWeldBodyData_c" => super::weld_corners::body_data(reader, map),
+        "moWeldTrimmedBodyData_c" => super::weld_corners::trimmed(reader, map),
+        "moWeldTrimToolData_c" => super::weld_corners::tool(reader, map),
+        "moDraft_c" => super::draft_records::read(reader, map),
+        "moDraftSIdKeeper_c" | "moEdgeFaceSIdKeeper_c" => super::draft_keepers::read(reader, map),
+        "moSplineTangencyControl_c" => super::spline_controls::tangency(reader, map),
+        "moSplineControlPolygonControl_c" => super::spline_controls::polygon(reader, map),
+        "moSplineCurvatureControl_c" => super::spline_controls::curvature(reader, map),
+        "moWeldmentFeature_c" => super::weldment_records::read(reader, map),
+        "moCustomProperty" => super::custom_properties::record(reader),
+        "moBlend_c" | "moBlendCut_c" => super::blend_records::read(reader, map),
+        "moFaceBlendItemPair_c" => super::blend_records::face_pair(reader, map),
+        "moFaceBlendItem_c" => super::blend_records::face_item(reader, map),
+        // #54 / C-371 proves an exact delegation thunk with no template-class suffix.
+        "moFlatPattern_c" | "moTemplateFlatPattern_c" => super::flat_patterns::read(reader, map),
+        "moFlatPatBoundBox_c" => super::flat_pattern_boxes::read(reader),
+        "moBoundBoxData_c" => super::flat_pattern_boxes::contents(reader),
+        "moSMBaseFlange_c" => super::base_flanges::read(reader, map),
+        "moSheetMetal_c"
+        | "moTemplateSheetMetal_c"
+        | "moFixedFaceInFlat_c"
+        | "moCompSheetmetalFeat_c" => super::sheet_metal::read(reader, map, name),
+        "moLPattern_c" => super::linear_patterns::read(reader, map),
+        "moMirrorPattern_c" => super::mirror_patterns::read(reader, map),
+        "moShell_c" => super::shell_records::read(reader, map),
+        "moCirPattern_c" => super::circular_patterns::read(reader, map),
+        "moHoleWzd_c" => super::hole_wizard::read(reader, map),
+        "moImported_c" => super::imported_bodies::read(reader, map, false),
+        "moBaseBody_c" => super::imported_bodies::read(reader, map, true),
+        "moSlotCenterAxisData_c" => super::hole_wizard::slot_axis(reader),
+        "moMatrixIndexHelper_c" => super::linear_patterns::matrix_helper(reader, map),
+        _ => return None,
+    };
+    Some(result)
+}

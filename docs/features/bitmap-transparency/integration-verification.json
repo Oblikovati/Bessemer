@@ -1,0 +1,42 @@
+{
+  "issues": [
+    187,
+    188
+  ],
+  "passed": true,
+  "integrated_head": "408729a693ceba0bd15f8343903489806575a69f",
+  "tested_bitmap_source_commits": [
+    "45811c377670161cf96ec97b00c8aa6280ff2976",
+    "d3b887afed683f2294ec43ce52aa7c0694f818c6"
+  ],
+  "source_commits_retained_as_ancestors": true,
+  "source_specific_paths_verified": 38,
+  "shared_resolution": "Preserved both additive APIs, README/CHANGELOG entries and scoped binary/report attributes. No implementation changed.",
+  "provenance_merge_tree_unchanged_from": "28b2522a",
+  "tests": {
+    "bitmap": {
+      "passed": 7,
+      "ignored": 2,
+      "seconds": 33.02,
+      "sha256": "2aabe10c32dea61a256c5293436129958fe31c9b9239fd86c9dd32c5f70278d1"
+    },
+    "lookup": {
+      "passed": 5,
+      "ignored": 0,
+      "seconds": 4.9,
+      "sha256": "b7a009fb40660833ed760ddc313252c39065ae2c51d5917177a65688cef9a650"
+    }
+  },
+  "combined_library_sha256": "5cc68945fa3ad8e2a2094d4eff45113f1fa7b059ab06b60cfddbef20f0301760",
+  "library_clippy": "passed with warnings denied",
+  "formatting": "passed including private included registry",
+  "cleanup": {
+    "worktree": "C:/bessemer187",
+    "removed": true,
+    "clean_head": "d3b887afed683f2294ec43ce52aa7c0694f818c6",
+    "active_process_references": 0,
+    "branch_created": false,
+    "retained_build_artifacts": "target/bitmap-pr-build and target bitmap verification outputs"
+  },
+  "remaining": "Required remote publication gates remain pending; lookup-key broader operation gates remain separate."
+}

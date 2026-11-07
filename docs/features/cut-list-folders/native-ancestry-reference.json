@@ -1,0 +1,923 @@
+{
+  "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cut-list-folder-native-evidence.json",
+  "source_sha256": "28f43060b2adc1053af9ea3a9093a96d07fd3e02e48377e4a4d74a070ac477e2",
+  "evidence": {
+    "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+    "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+    "bindings": [
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+          "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+          "tables": [
+            {
+              "class_name": "moFeatSolidBodyFolder_c",
+              "object_offset": 0,
+              "locator": "0x4d346810",
+              "vftable": "0x4d05a378",
+              "slots": [
+                "0x4bec2540",
+                "0x4bec1330",
+                "0x4cba273f",
+                "0x4b29dae0",
+                "0x4b29dae0",
+                "0x4c224970",
+                "0x4bb66bb0",
+                "0x4bb54930"
+              ]
+            },
+            {
+              "class_name": "moFeatSolidBodyFolder_c",
+              "object_offset": 136,
+              "locator": "0x4d3468d8",
+              "vftable": "0x4d05c098",
+              "slots": [
+                "0x4bec0dc0",
+                "0x4b2a53f0",
+                "0x4b2a52c0",
+                "0x4b29c5a0",
+                "0x4b29c5a0",
+                "0x4b29dae0",
+                "0x4b29c5a0",
+                "0x4d346900"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "010000000000000000000000404f9d0238681e0210681e02",
+        "bases": [
+          ".?AVmoFeatSolidBodyFolder_c@@",
+          ".?AVmoSolidBodyFolder_c@@",
+          ".?AVmoAtomBodyFolder_c@@",
+          ".?AVmoFolder_c@@",
+          ".?AVmoFeature_c@@",
+          ".?AVmoConcept_c@@",
+          ".?AVmoLoggedNode_c@@",
+          ".?AVmoNode_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@",
+          ".?AVutDisplayedEntity_c@@"
+        ],
+        "slot_bytes": "7049224c00000000"
+      },
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+          "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+          "tables": [
+            {
+              "class_name": "moFeatSurfaceBodyFolder_c",
+              "object_offset": 0,
+              "locator": "0x4d346720",
+              "vftable": "0x4d058618",
+              "slots": [
+                "0x4bec2550",
+                "0x4bec13a0",
+                "0x4cba273f",
+                "0x4b29dae0",
+                "0x4b29dae0",
+                "0x4c224970",
+                "0x4bb66bb0",
+                "0x4bb54930"
+              ]
+            },
+            {
+              "class_name": "moFeatSurfaceBodyFolder_c",
+              "object_offset": 136,
+              "locator": "0x4d3467e8",
+              "vftable": "0x4d05a338",
+              "slots": [
+                "0x4bec0dcc",
+                "0x4b2a53f0",
+                "0x4b2a52c0",
+                "0x4b29c5a0",
+                "0x4b29c5a0",
+                "0x4b29dae0",
+                "0x4b29c5a0",
+                "0x4d346810"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "010000000000000000000000104f9d0248671e0220671e02",
+        "bases": [
+          ".?AVmoFeatSurfaceBodyFolder_c@@",
+          ".?AVmoSurfaceBodyFolder_c@@",
+          ".?AVmoAtomBodyFolder_c@@",
+          ".?AVmoFolder_c@@",
+          ".?AVmoFeature_c@@",
+          ".?AVmoConcept_c@@",
+          ".?AVmoLoggedNode_c@@",
+          ".?AVmoNode_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@",
+          ".?AVutDisplayedEntity_c@@"
+        ],
+        "slot_bytes": "7049224c00000000"
+      },
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+          "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+          "tables": [
+            {
+              "class_name": "moCutListFolder_c",
+              "object_offset": 0,
+              "locator": "0x4d350dc0",
+              "vftable": "0x4d0ffd80",
+              "slots": [
+                "0x4c222f90",
+                "0x4c114830",
+                "0x4cba273f",
+                "0x4b29dae0",
+                "0x4b29dae0",
+                "0x4c2308d0",
+                "0x4bb66bb0",
+                "0x4bb54930"
+              ]
+            },
+            {
+              "class_name": "moCutListFolder_c",
+              "object_offset": 136,
+              "locator": "0x4d350fc8",
+              "vftable": "0x4d101ab0",
+              "slots": [
+                "0x4c11480c",
+                "0x4b2a53f0",
+                "0x4b2a52c0",
+                "0x4b29c5a0",
+                "0x4b29c5a0",
+                "0x4b29dae0",
+                "0x4b29c5a0",
+                "0x4e0045004c0022"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "01000000000000000000000090a19a02e80d1f02c00d1f02",
+        "bases": [
+          ".?AVmoCutListFolder_c@@",
+          ".?AVmoSubWeldFolder_c@@",
+          ".?AVmoSubAtomFolder_c@@",
+          ".?AVmoAtomBodyFolder_c@@",
+          ".?AVmoFolder_c@@",
+          ".?AVmoFeature_c@@",
+          ".?AVmoConcept_c@@",
+          ".?AVmoLoggedNode_c@@",
+          ".?AVmoNode_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@",
+          ".?AVutDisplayedEntity_c@@"
+        ],
+        "slot_bytes": "d008234c00000000"
+      },
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+          "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+          "tables": [
+            {
+              "class_name": "moSubWeldFolder_c",
+              "object_offset": 0,
+              "locator": "0x4d350ff0",
+              "vftable": "0x4d0fe010",
+              "slots": [
+                "0x4c21ba50",
+                "0x4c114930",
+                "0x4cba273f",
+                "0x4b29dae0",
+                "0x4b29dae0",
+                "0x4c2390b0",
+                "0x4bb66bb0",
+                "0x4bb54930"
+              ]
+            },
+            {
+              "class_name": "moSubWeldFolder_c",
+              "object_offset": 136,
+              "locator": "0x4d351018",
+              "vftable": "0x4d0ffd40",
+              "slots": [
+                "0x4c114824",
+                "0x4b2a53f0",
+                "0x4b2a52c0",
+                "0x4b29c5a0",
+                "0x4b29c5a0",
+                "0x4b29dae0",
+                "0x4b29c5a0",
+                "0x4d350dc0"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "010000000000000000000000f8aa9a02b80e1f02f00f1f02",
+        "bases": [
+          ".?AVmoSubWeldFolder_c@@",
+          ".?AVmoSubAtomFolder_c@@",
+          ".?AVmoAtomBodyFolder_c@@",
+          ".?AVmoFolder_c@@",
+          ".?AVmoFeature_c@@",
+          ".?AVmoConcept_c@@",
+          ".?AVmoLoggedNode_c@@",
+          ".?AVmoNode_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@",
+          ".?AVutDisplayedEntity_c@@"
+        ],
+        "slot_bytes": "b090234c00000000"
+      },
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+          "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+          "tables": [
+            {
+              "class_name": "moSubAtomFolder_c",
+              "object_offset": 0,
+              "locator": "0x4d351040",
+              "vftable": "0x4d0fc2a0",
+              "slots": [
+                "0x4c21cdf0",
+                "0x4c1148e0",
+                "0x4cba273f",
+                "0x4b29dae0",
+                "0x4b29dae0",
+                "0x4c238e70",
+                "0x4bb66bb0",
+                "0x4bb54930"
+              ]
+            },
+            {
+              "class_name": "moSubAtomFolder_c",
+              "object_offset": 136,
+              "locator": "0x4d351068",
+              "vftable": "0x4d0fdfd0",
+              "slots": [
+                "0x4c114818",
+                "0x4b2a53f0",
+                "0x4b2a52c0",
+                "0x4b29c5a0",
+                "0x4b29c5a0",
+                "0x4b29dae0",
+                "0x4b29c5a0",
+                "0x4d350ff0"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "010000000000000000000000687b9d02580f1f0240101f02",
+        "bases": [
+          ".?AVmoSubAtomFolder_c@@",
+          ".?AVmoAtomBodyFolder_c@@",
+          ".?AVmoFolder_c@@",
+          ".?AVmoFeature_c@@",
+          ".?AVmoConcept_c@@",
+          ".?AVmoLoggedNode_c@@",
+          ".?AVmoNode_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@",
+          ".?AVutDisplayedEntity_c@@"
+        ],
+        "slot_bytes": "708e234c00000000"
+      },
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+          "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+          "tables": [
+            {
+              "class_name": "moAtomBodyFolder_c",
+              "object_offset": 0,
+              "locator": "0x4d346298",
+              "vftable": "0x4d04f398",
+              "slots": [
+                "0x4c21c8b0",
+                "0x4bec0f40",
+                "0x4cba273f",
+                "0x4b29dae0",
+                "0x4b29dae0",
+                "0x4c224970",
+                "0x4bb66bb0",
+                "0x4bb54930"
+              ]
+            },
+            {
+              "class_name": "moAtomBodyFolder_c",
+              "object_offset": 136,
+              "locator": "0x4d346358",
+              "vftable": "0x4d0510b8",
+              "slots": [
+                "0x4bec0c90",
+                "0x4b2a53f0",
+                "0x4b2a52c0",
+                "0x4b29c5a0",
+                "0x4b29c5a0",
+                "0x4b29dae0",
+                "0x4b29c5a0",
+                "0x4d346380"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "010000000000000000000000284e9d02c0621e0298621e02",
+        "bases": [
+          ".?AVmoAtomBodyFolder_c@@",
+          ".?AVmoFolder_c@@",
+          ".?AVmoFeature_c@@",
+          ".?AVmoConcept_c@@",
+          ".?AVmoLoggedNode_c@@",
+          ".?AVmoNode_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@",
+          ".?AVutDisplayedEntity_c@@"
+        ],
+        "slot_bytes": "7049224c00000000"
+      },
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+          "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+          "tables": [
+            {
+              "class_name": "moRefAxisFtrFolder_c",
+              "object_offset": 0,
+              "locator": "0x4d347cf8",
+              "vftable": "0x4d07d6d0",
+              "slots": [
+                "0x4bed2690",
+                "0x4bed0830",
+                "0x4cba273f",
+                "0x4b29dae0",
+                "0x4b29dae0",
+                "0x4c231170",
+                "0x4bb66bb0",
+                "0x4bb54930"
+              ]
+            },
+            {
+              "class_name": "moRefAxisFtrFolder_c",
+              "object_offset": 136,
+              "locator": "0x4d347dc8",
+              "vftable": "0x4d07f418",
+              "slots": [
+                "0x4bed0048",
+                "0x4b2a53f0",
+                "0x4b2a52c0",
+                "0x4b29c5a0",
+                "0x4b29c5a0",
+                "0x4b29dae0",
+                "0x4b29c5a0",
+                "0x4d347df0"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "01000000000000000000000068549d02207d1e02f87c1e02",
+        "bases": [
+          ".?AVmoRefAxisFtrFolder_c@@",
+          ".?AVmoStockFtrFolder_c@@",
+          ".?AVmoFtrFolder_c@@",
+          ".?AVmoFolder_c@@",
+          ".?AVmoFeature_c@@",
+          ".?AVmoConcept_c@@",
+          ".?AVmoLoggedNode_c@@",
+          ".?AVmoNode_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@",
+          ".?AVutDisplayedEntity_c@@"
+        ],
+        "slot_bytes": "7011234c00000000"
+      },
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+          "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+          "tables": [
+            {
+              "class_name": "moCoordSysFtrFolder_c",
+              "object_offset": 0,
+              "locator": "0x4d347df0",
+              "vftable": "0x4d07f458",
+              "slots": [
+                "0x4bed2580",
+                "0x4bed0140",
+                "0x4cba273f",
+                "0x4b29dae0",
+                "0x4b29dae0",
+                "0x4c231170",
+                "0x4bb66bb0",
+                "0x4bb54930"
+              ]
+            },
+            {
+              "class_name": "moCoordSysFtrFolder_c",
+              "object_offset": 136,
+              "locator": "0x4d347eb8",
+              "vftable": "0x4d0811a0",
+              "slots": [
+                "0x4becfeec",
+                "0x4b2a53f0",
+                "0x4b2a52c0",
+                "0x4b29c5a0",
+                "0x4b29c5a0",
+                "0x4b29dae0",
+                "0x4b29c5a0",
+                "0x4d347ee0"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "01000000000000000000000098549d02187e1e02f07d1e02",
+        "bases": [
+          ".?AVmoCoordSysFtrFolder_c@@",
+          ".?AVmoStockFtrFolder_c@@",
+          ".?AVmoFtrFolder_c@@",
+          ".?AVmoFolder_c@@",
+          ".?AVmoFeature_c@@",
+          ".?AVmoConcept_c@@",
+          ".?AVmoLoggedNode_c@@",
+          ".?AVmoNode_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@",
+          ".?AVutDisplayedEntity_c@@"
+        ],
+        "slot_bytes": "7011234c00000000"
+      },
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+          "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+          "tables": [
+            {
+              "class_name": "moCurveFtrFolder_c",
+              "object_offset": 0,
+              "locator": "0x4d347fd0",
+              "vftable": "0x4d082f68",
+              "slots": [
+                "0x4bed2590",
+                "0x4bed01e0",
+                "0x4cba273f",
+                "0x4b29dae0",
+                "0x4b29dae0",
+                "0x4c231170",
+                "0x4bb66bb0",
+                "0x4bb54930"
+              ]
+            },
+            {
+              "class_name": "moCurveFtrFolder_c",
+              "object_offset": 136,
+              "locator": "0x4d348098",
+              "vftable": "0x4d084cb0",
+              "slots": [
+                "0x4becfef8",
+                "0x4b2a53f0",
+                "0x4b2a52c0",
+                "0x4b29c5a0",
+                "0x4b29c5a0",
+                "0x4b29dae0",
+                "0x4b29c5a0",
+                "0x4d3480c0"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "010000000000000000000000f8549d02f87f1e02d07f1e02",
+        "bases": [
+          ".?AVmoCurveFtrFolder_c@@",
+          ".?AVmoStockFtrFolder_c@@",
+          ".?AVmoFtrFolder_c@@",
+          ".?AVmoFolder_c@@",
+          ".?AVmoFeature_c@@",
+          ".?AVmoConcept_c@@",
+          ".?AVmoLoggedNode_c@@",
+          ".?AVmoNode_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@",
+          ".?AVutDisplayedEntity_c@@"
+        ],
+        "slot_bytes": "7011234c00000000"
+      },
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+          "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+          "tables": [
+            {
+              "class_name": "moMirroredCompFeatFtrFolder_c",
+              "object_offset": 0,
+              "locator": "0x4d348390",
+              "vftable": "0x4d08a588",
+              "slots": [
+                "0x4bed2660",
+                "0x4bed0670",
+                "0x4cba273f",
+                "0x4b29dae0",
+                "0x4b29dae0",
+                "0x4c231170",
+                "0x4bb66bb0",
+                "0x4bb54930"
+              ]
+            },
+            {
+              "class_name": "moMirroredCompFeatFtrFolder_c",
+              "object_offset": 136,
+              "locator": "0x4d348450",
+              "vftable": "0x4d08c2d8",
+              "slots": [
+                "0x4bed0024",
+                "0x4b2a53f0",
+                "0x4b2a52c0",
+                "0x4b29c5a0",
+                "0x4b29c5a0",
+                "0x4b29dae0",
+                "0x4b29c5a0",
+                "0x4d348478"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "010000000000000000000000c0559d02b8831e0290831e02",
+        "bases": [
+          ".?AVmoMirroredCompFeatFtrFolder_c@@",
+          ".?AVmoFtrFolder_c@@",
+          ".?AVmoFolder_c@@",
+          ".?AVmoFeature_c@@",
+          ".?AVmoConcept_c@@",
+          ".?AVmoLoggedNode_c@@",
+          ".?AVmoNode_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@",
+          ".?AVutDisplayedEntity_c@@"
+        ],
+        "slot_bytes": "7011234c00000000"
+      },
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+          "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+          "tables": [
+            {
+              "class_name": "moProfileFtrFolder_c",
+              "object_offset": 0,
+              "locator": "0x4d3482a0",
+              "vftable": "0x4d088800",
+              "slots": [
+                "0x4bed2680",
+                "0x4bed0790",
+                "0x4cba273f",
+                "0x4b29dae0",
+                "0x4b29dae0",
+                "0x4c231170",
+                "0x4bb66bb0",
+                "0x4bb54930"
+              ]
+            },
+            {
+              "class_name": "moProfileFtrFolder_c",
+              "object_offset": 136,
+              "locator": "0x4d348368",
+              "vftable": "0x4d08a548",
+              "slots": [
+                "0x4bed003c",
+                "0x4b2a53f0",
+                "0x4b2a52c0",
+                "0x4b29c5a0",
+                "0x4b29c5a0",
+                "0x4b29dae0",
+                "0x4b29c5a0",
+                "0x4d348390"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "01000000000000000000000090559d02c8821e02a0821e02",
+        "bases": [
+          ".?AVmoProfileFtrFolder_c@@",
+          ".?AVmoStockFtrFolder_c@@",
+          ".?AVmoFtrFolder_c@@",
+          ".?AVmoFolder_c@@",
+          ".?AVmoFeature_c@@",
+          ".?AVmoConcept_c@@",
+          ".?AVmoLoggedNode_c@@",
+          ".?AVmoNode_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@",
+          ".?AVutDisplayedEntity_c@@"
+        ],
+        "slot_bytes": "7011234c00000000"
+      },
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+          "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+          "tables": [
+            {
+              "class_name": "moRefPlaneFtrFolder_c",
+              "object_offset": 0,
+              "locator": "0x4d3480c0",
+              "vftable": "0x4d084cf0",
+              "slots": [
+                "0x4bed26a0",
+                "0x4bed08d0",
+                "0x4cba273f",
+                "0x4b29dae0",
+                "0x4b29dae0",
+                "0x4c231170",
+                "0x4bb66bb0",
+                "0x4bb54930"
+              ]
+            },
+            {
+              "class_name": "moRefPlaneFtrFolder_c",
+              "object_offset": 136,
+              "locator": "0x4d348188",
+              "vftable": "0x4d086a38",
+              "slots": [
+                "0x4bed0054",
+                "0x4b2a53f0",
+                "0x4b2a52c0",
+                "0x4b29c5a0",
+                "0x4b29c5a0",
+                "0x4b29dae0",
+                "0x4b29c5a0",
+                "0x4d3481b0"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "01000000000000000000000028559d02e8801e02c0801e02",
+        "bases": [
+          ".?AVmoRefPlaneFtrFolder_c@@",
+          ".?AVmoStockFtrFolder_c@@",
+          ".?AVmoFtrFolder_c@@",
+          ".?AVmoFolder_c@@",
+          ".?AVmoFeature_c@@",
+          ".?AVmoConcept_c@@",
+          ".?AVmoLoggedNode_c@@",
+          ".?AVmoNode_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@",
+          ".?AVutDisplayedEntity_c@@"
+        ],
+        "slot_bytes": "7011234c00000000"
+      },
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+          "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+          "tables": [
+            {
+              "class_name": "moRefPointFtrFolder_c",
+              "object_offset": 0,
+              "locator": "0x4d347ee0",
+              "vftable": "0x4d0811e0",
+              "slots": [
+                "0x4bed26b0",
+                "0x4bed0970",
+                "0x4cba273f",
+                "0x4b29dae0",
+                "0x4b29dae0",
+                "0x4c231170",
+                "0x4bb66bb0",
+                "0x4bb54930"
+              ]
+            },
+            {
+              "class_name": "moRefPointFtrFolder_c",
+              "object_offset": 136,
+              "locator": "0x4d347fa8",
+              "vftable": "0x4d082f28",
+              "slots": [
+                "0x4bed0060",
+                "0x4b2a53f0",
+                "0x4b2a52c0",
+                "0x4b29c5a0",
+                "0x4b29c5a0",
+                "0x4b29dae0",
+                "0x4b29c5a0",
+                "0x4d347fd0"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "010000000000000000000000c8549d02087f1e02e07e1e02",
+        "bases": [
+          ".?AVmoRefPointFtrFolder_c@@",
+          ".?AVmoStockFtrFolder_c@@",
+          ".?AVmoFtrFolder_c@@",
+          ".?AVmoFolder_c@@",
+          ".?AVmoFeature_c@@",
+          ".?AVmoConcept_c@@",
+          ".?AVmoLoggedNode_c@@",
+          ".?AVmoNode_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@",
+          ".?AVutDisplayedEntity_c@@"
+        ],
+        "slot_bytes": "7011234c00000000"
+      },
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+          "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+          "tables": [
+            {
+              "class_name": "moStockFtrFolder_c",
+              "object_offset": 0,
+              "locator": "0x4d347c08",
+              "vftable": "0x4d07b948",
+              "slots": [
+                "0x4becbf90",
+                "0x4bed0a10",
+                "0x4cba273f",
+                "0x4b29dae0",
+                "0x4b29dae0",
+                "0x4c231170",
+                "0x4bb66bb0",
+                "0x4bb54930"
+              ]
+            },
+            {
+              "class_name": "moStockFtrFolder_c",
+              "object_offset": 136,
+              "locator": "0x4d347cd0",
+              "vftable": "0x4d07d690",
+              "slots": [
+                "0x4bed006c",
+                "0x4b2a53f0",
+                "0x4b2a52c0",
+                "0x4b29c5a0",
+                "0x4b29c5a0",
+                "0x4b29dae0",
+                "0x4b29c5a0",
+                "0x4d347cf8"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "01000000000000000000000038549d02307c1e02087c1e02",
+        "bases": [
+          ".?AVmoStockFtrFolder_c@@",
+          ".?AVmoFtrFolder_c@@",
+          ".?AVmoFolder_c@@",
+          ".?AVmoFeature_c@@",
+          ".?AVmoConcept_c@@",
+          ".?AVmoLoggedNode_c@@",
+          ".?AVmoNode_c@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@",
+          ".?AVutDisplayedEntity_c@@"
+        ],
+        "slot_bytes": "7011234c00000000"
+      },
+      {
+        "rtti": {
+          "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+          "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+          "tables": [
+            {
+              "class_name": "moCustomPropertyList",
+              "object_offset": 0,
+              "locator": "0x4d342ac8",
+              "vftable": "0x4d038618",
+              "slots": [
+                "0x4be70970",
+                "0x4be70820",
+                "0x4cba273f",
+                "0x4b29dae0",
+                "0x4b29dae0",
+                "0x4be70eb0",
+                "0x4cba274b",
+                "0x4cba2751"
+              ]
+            }
+          ]
+        },
+        "locator_bytes": "010000000000000000000000403d9d02f02a1e02c82a1e02",
+        "bases": [
+          ".?AVmoCustomPropertyList@@",
+          ".?AVsu_CObject@@",
+          ".?AVCObject@@"
+        ],
+        "slot_bytes": "b00ee74b00000000"
+      }
+    ],
+    "functions": {
+      "0x4c2308d0": {
+        "end": "0x4c230c2d",
+        "native_bytes": "48895c2408574883ec30488bf9488bda488d4c2420ff15a543b000488bd3488bcfe8ba870000488bcbff15f1deb00085c00f84d1000000488d9790040000488bcbe8ea1d98ff8b979c040000488bcb89542458ff15d7deb0008b9798040000488bcbff15c8deb0000fb69784040000488bcbff1578e0b000488b4424204885c00f84c40200008b808007000085c0750cff153a43b000ff152c43b0003d421400007242488d9760040000488bcbe86e670400f20f108f68040000488bcbff15fddfb000f20f108f70040000488bcbff15ecdfb000f20f108f78040000488bcbff15dbdfb0008b97a8040000488bcbff153cdeb0008b97ac040000488bcbff152ddeb000e922020000488b4424204885c00f84340200008b888007000085c97513ff15aa42b000ff159c42b0008bc8488b44242081f9520a000072604885c00f84060200008b808007000085c0750cff157c42b000ff156e42b000488bcb3d7f0a0000730e488d9788040000e8b0848effeb0c488d9790040000e8f2d197ff488d542458488bcbff15acddb0008b44245889879c040000488b4424204885c00f84a60100008b888007000085c97513ff151c42b000ff150e42b0008bc8488b44242081f9350e00007215488d9798040000488bcbff155fddb000488b4424204885c00f84630100008b888007000085c97513ff15d941b000ff15cb41b0008bc8488b44242081f9151200007223488d542450c644245000488bcbff15d9deb0000fb6442450898784040000488b4424204885c00f84120100008b888007000085c97513ff158841b000ff157a41b0008bc8488b44242081f9421400007244488d9760040000488bcbe8a42e0400488d9768040000488bcbff154cdeb000488d9770040000488bcbff153cdeb000488d9778040000488bcbff152cdeb000488b4424204885c00f84a00000008b888007000085c97513ff151641b000ff150841b0008bc8488b442420488d97a804000081f9eb1b00007210488bcbff1559dcb000488b442420eb06c702000000004885c074598b808007000085c0750cff15cf40b000ff15c140b0003d491c00007212488d97ac040000488bcbff151adcb000eb0ac787ac04000001000000488bcbff15eddbb00085c07508488bcfe87162f0ff488b5c24404883c4305fc34533c0baffffffffb901000000e847279700cc",
+        "sha256": "df6dcb539f930f0112c5949ecb245f6780d076241281f8f870a45011184b2e26",
+        "decompilation": "\nvoid FUN_4c2308d0(longlong param_1,su_CArchive *param_2)\n\n{\n  int iVar1;\n  uint uVar2;\n  byte local_res18 [8];\n  long local_res20 [2];\n  longlong local_18 [2];\n  \n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_18,param_2);\n  FUN_4c2390b0(param_1,param_2);\n  iVar1 = su_CArchive::IsStoring(param_2);\n  if (iVar1 == 0) {\n    if (local_18[0] != 0) {\n      uVar2 = *(uint *)(local_18[0] + 0x780);\n      if (uVar2 == 0) {\n        moVersionManager_c::get();\n        uVar2 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (0xa51 < uVar2) {\n        if (local_18[0] == 0) goto LAB_4c230c1a;\n        uVar2 = *(uint *)(local_18[0] + 0x780);\n        if (uVar2 == 0) {\n          moVersionManager_c::get();\n          uVar2 = moVersionManager_c::getCurrentFileVerion();\n        }\n        if (uVar2 < 0xa7f) {\n          operator>>(param_2,(moAtomFeature_c **)(param_1 + 0x488));\n        }\n        else {\n          operator>>(param_2,(moCompFeature_c **)(param_1 + 0x490));\n        }\n        su_CArchive::operator>>(param_2,local_res20);\n        *(long *)(param_1 + 0x49c) = local_res20[0];\n      }\n      if (local_18[0] != 0) {\n        uVar2 = *(uint *)(local_18[0] + 0x780);\n        if (uVar2 == 0) {\n          moVersionManager_c::get();\n          uVar2 = moVersionManager_c::getCurrentFileVerion();\n        }\n        if (0xe34 < uVar2) {\n          su_CArchive::operator>>(param_2,(long *)(param_1 + 0x498));\n        }\n        if (local_18[0] != 0) {\n          uVar2 = *(uint *)(local_18[0] + 0x780);\n          if (uVar2 == 0) {\n            moVersionManager_c::get();\n            uVar2 = moVersionManager_c::getCurrentFileVerion();\n          }\n          if (0x1214 < uVar2) {\n            local_res18[0] = 0;\n            su_CArchive::operator>>(param_2,local_res18);\n            *(uint *)(param_1 + 0x484) = (uint)local_res18[0];\n          }\n          if (local_18[0] != 0) {\n            uVar2 = *(uint *)(local_18[0] + 0x780);\n            if (uVar2 == 0) {\n              moVersionManager_c::get();\n              uVar2 = moVersionManager_c::getCurrentFileVerion();\n            }\n            if (0x1441 < uVar2) {\n              operator>>(param_2,(moPlaneRef_w **)(param_1 + 0x460));\n              su_CArchive::operator>>(param_2,(double *)(param_1 + 0x468));\n              su_CArchive::operator>>(param_2,(double *)(param_1 + 0x470));\n              su_CArchive::operator>>(param_2,(double *)(param_1 + 0x478));\n            }\n            if (local_18[0] != 0) {\n              uVar2 = *(uint *)(local_18[0] + 0x780);\n              if (uVar2 == 0) {\n                moVersionManager_c::get();\n                uVar2 = moVersionManager_c::getCurrentFileVerion();\n              }\n              if (uVar2 < 0x1beb) {\n                *(long *)(param_1 + 0x4a8) = 0;\n              }\n              else {\n                su_CArchive::operator>>(param_2,(long *)(param_1 + 0x4a8));\n              }\n              if (local_18[0] != 0) {\n                uVar2 = *(uint *)(local_18[0] + 0x780);\n                if (uVar2 == 0) {\n                  moVersionManager_c::get();\n                  uVar2 = moVersionManager_c::getCurrentFileVerion();\n                }\n                if (uVar2 < 0x1c49) {\n                  *(undefined4 *)(param_1 + 0x4ac) = 1;\n                }\n                else {\n                  su_CArchive::operator>>(param_2,(long *)(param_1 + 0x4ac));\n                }\n                goto LAB_4c230bfa;\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n  else {\n    operator<<(param_2,(moCompFeature_c **)(param_1 + 0x490));\n    local_res20[0] = *(long *)(param_1 + 0x49c);\n    su_CArchive::operator<<(param_2,local_res20[0]);\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x498));\n    su_CArchive::operator<<(param_2,*(uchar *)(param_1 + 0x484));\n    if (local_18[0] != 0) {\n      uVar2 = *(uint *)(local_18[0] + 0x780);\n      if (uVar2 == 0) {\n        moVersionManager_c::get();\n        uVar2 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (0x1441 < uVar2) {\n        operator<<(param_2,(moPlaneRef_w **)(param_1 + 0x460));\n        su_CArchive::operator<<(param_2,*(double *)(param_1 + 0x468));\n        su_CArchive::operator<<(param_2,*(double *)(param_1 + 0x470));\n        su_CArchive::operator<<(param_2,*(double *)(param_1 + 0x478));\n      }\n      su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x4a8));\n      su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x4ac));\nLAB_4c230bfa:\n      iVar1 = su_CArchive::IsStoring(param_2);\n      if (iVar1 == 0) {\n        FUN_4c136e80(param_1);\n      }\n      return;\n    }\n  }\nLAB_4c230c1a:\n                    /* WARNING: Subroutine does not return */\n  AfxThrowFileException(1,-1,(wchar_t *)0x0);\n}\n\n"
+      },
+      "0x4c2390b0": {
+        "end": "0x4c23929c",
+        "native_bytes": "48895c24084889742410574883ec50488bf2488bd9488d4c2438ff15c0bbaf00488bd6488bcbe895fdffff488bceff150c57b00085c07453488bbb480400004885ff752bb928000000ff153157b00048894424704885c0740d488bc8e8ef73c3ff488bf8eb0233ff4889bb48040000488b07488bd6488bcfff5028488b5c2460488b7424684883c4505fc3488b4424384885c00f84400100008b808007000085c0750cff1547bbaf00ff1539bbaf0033ff3d000a00007311488bcbe830caeeff48898348040000eb35b928000000ff15ac56b00048894424704885c0740d488bc8e86a73c3ff488bc8eb03488bcf48898b48040000488b01488bd6ff5028488bd6488d4c2428ff15d4baaf00488b4424284885c00f84bf0000008b888007000085c97513ff15c6baaf00ff15b8baaf008bc8488b44242881f9f31b00000f8238ffffff4885c00f848d0000008b808007000085c0750cff1594baaf00ff1586baaf003df81b00000f830effffffc7442470ffffffffc7442478ffffffff488d542470488bceff15cd55b000bb01000000395c24700f8ce1feffff660f1f440000488d542478488bceff15aa55b00048897c2420488d542420488bceff151757b000ffc33b5c24707ed7488b5c2460488b7424684883c4505fc34533c0baffffffffb901000000e8d8a09600cc",
+        "sha256": "c7f169a062c34fb7b605284920f53678eb0fa1d77ab3344ff0f8e7059a1e4908",
+        "decompilation": "\nvoid FUN_4c2390b0(longlong param_1,su_CArchive *param_2)\n\n{\n  int iVar1;\n  uint uVar2;\n  longlong *plVar3;\n  undefined8 uVar4;\n  moCustomPropertyList *local_res18;\n  long local_res20 [2];\n  CObject *local_38;\n  longlong local_30 [2];\n  longlong local_20 [3];\n  \n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_20,param_2);\n  FUN_4c238e70(param_1,param_2);\n  iVar1 = su_CArchive::IsStoring(param_2);\n  if (iVar1 != 0) {\n    plVar3 = *(longlong **)(param_1 + 0x448);\n    if (plVar3 == (longlong *)0x0) {\n      local_res18 = su_CObject::operator_new(0x28);\n      if (local_res18 == (moCustomPropertyList *)0x0) {\n        plVar3 = (longlong *)0x0;\n      }\n      else {\n        plVar3 = (longlong *)moCustomPropertyList::moCustomPropertyList(local_res18);\n      }\n      *(longlong **)(param_1 + 0x448) = plVar3;\n    }\n    (**(code **)(*plVar3 + 0x28))(plVar3,param_2);\n    return;\n  }\n  if (local_20[0] != 0) {\n    uVar2 = *(uint *)(local_20[0] + 0x780);\n    if (uVar2 == 0) {\n      moVersionManager_c::get();\n      uVar2 = moVersionManager_c::getCurrentFileVerion();\n    }\n    plVar3 = (longlong *)0x0;\n    if (uVar2 < 0xa00) {\n      uVar4 = FUN_4c125ba0(param_1);\n      *(undefined8 *)(param_1 + 0x448) = uVar4;\n    }\n    else {\n      local_res18 = su_CObject::operator_new(0x28);\n      if (local_res18 != (moCustomPropertyList *)0x0) {\n        plVar3 = (longlong *)moCustomPropertyList::moCustomPropertyList(local_res18);\n      }\n      *(longlong **)(param_1 + 0x448) = plVar3;\n      (**(code **)(*plVar3 + 0x28))(plVar3,param_2);\n    }\n    moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_30,param_2);\n    if (local_30[0] != 0) {\n      uVar2 = *(uint *)(local_30[0] + 0x780);\n      if (uVar2 == 0) {\n        moVersionManager_c::get();\n        uVar2 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (0x1bf2 < uVar2) {\n        if (local_30[0] == 0) goto LAB_4c239289;\n        uVar2 = *(uint *)(local_30[0] + 0x780);\n        if (uVar2 == 0) {\n          moVersionManager_c::get();\n          uVar2 = moVersionManager_c::getCurrentFileVerion();\n        }\n        if (uVar2 < 0x1bf8) {\n          local_res18 = (moCustomPropertyList *)CONCAT44(local_res18._4_4_,0xffffffff);\n          local_res20[0] = -1;\n          su_CArchive::operator>>(param_2,(long *)&local_res18);\n          iVar1 = 1;\n          if (0 < (int)local_res18) {\n            do {\n              su_CArchive::operator>>(param_2,local_res20);\n              local_38 = (CObject *)0x0;\n              operator>>(param_2,&local_38);\n              iVar1 = iVar1 + 1;\n            } while (iVar1 <= (int)local_res18);\n            return;\n          }\n        }\n      }\n      return;\n    }\n  }\nLAB_4c239289:\n                    /* WARNING: Subroutine does not return */\n  AfxThrowFileException(1,-1,(wchar_t *)0x0);\n}\n\n"
+      },
+      "0x4c238e70": {
+        "end": "0x4c2390a5",
+        "native_bytes": "48895c2408488974241048897c242041564883ec30488bda488bf9488d4c2420ff15fabdaf00488bd3488bcfe8cfbafeff488bcbff154659b000488d97d8030000488bcb85c07458ff153abdaf008b97e0030000488bcbff153359b000488d97e8030000488bcbe8842a8eff8b97f4030000488bcbff151559b0008b97e4030000488bcbff150659b000488b5c2440488b742448488b7c24584883c430415ec3ff15eabcaf00488d97e0030000488bcbff15e258b000488b4424204885c00f845e0100008b808007000085c0750cff155cbdaf00ff154ebdaf003d000a00000f83b7000000b928000000ff15d058b00048894424504885c0740d488bc8e88e75c3ff488bc8eb0233c948898f40040000488b01488bd3ff5028488b4424204885c00f84fb0000008b808007000085c0750cff15f9bcaf00ff15ebbcaf003d410900007358488b4424204885c00f84d00000008b808007000085c0750cff15cebcaf00ff15c0bcaf003d0e090000723c48c744245000000000488d542450488bcbe84b4c97ff488b4c24504885c9741c488b01ba01000000ff5008eb0f488d97e8030000488bcbe835088eff488b4424204885c0746d8b808007000085c0750cff156bbcaf00ff155dbcaf003db61100007210488d97f4030000488bcbff15b657b000488b4424204885c074368b808007000085c0750cff1534bcaf00ff1526bcaf003df31700000f827dfeffff488d97e4030000488bcbff157b57b000e968feffff4533c0baffffffffb901000000e8cfa29600cc",
+        "sha256": "1c756329cf7bbfd1240a8720e4dbedc1a4cfeee07f753de728adad50e096e654",
+        "decompilation": "\nvoid FUN_4c238e70(longlong param_1,su_CArchive *param_2)\n\n{\n  int iVar1;\n  uint uVar2;\n  longlong *plVar3;\n  moCompFeature_c *local_res18;\n  longlong local_18 [2];\n  \n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_18,param_2);\n  FUN_4c224970(param_1,param_2);\n  iVar1 = su_CArchive::IsStoring(param_2);\n  if (iVar1 != 0) {\n    operator<<(param_2,(suObList **)(param_1 + 0x3d8));\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x3e0));\n    operator<<(param_2,(moFeatureRefWrapper_c **)(param_1 + 1000));\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x3f4));\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x3e4));\n    return;\n  }\n  operator>>(param_2,(suObList **)(param_1 + 0x3d8));\n  su_CArchive::operator>>(param_2,(long *)(param_1 + 0x3e0));\n  if (local_18[0] == 0) goto LAB_4c239092;\n  uVar2 = *(uint *)(local_18[0] + 0x780);\n  if (uVar2 == 0) {\n    moVersionManager_c::get();\n    uVar2 = moVersionManager_c::getCurrentFileVerion();\n  }\n  if (uVar2 < 0xa00) {\n    local_res18 = su_CObject::operator_new(0x28);\n    if (local_res18 == (moCompFeature_c *)0x0) {\n      plVar3 = (longlong *)0x0;\n    }\n    else {\n      plVar3 = (longlong *)\n               moCustomPropertyList::moCustomPropertyList((moCustomPropertyList *)local_res18);\n    }\n    *(longlong **)(param_1 + 0x440) = plVar3;\n    (**(code **)(*plVar3 + 0x28))(plVar3,param_2);\n    if (local_18[0] == 0) goto LAB_4c239092;\n    uVar2 = *(uint *)(local_18[0] + 0x780);\n    if (uVar2 == 0) {\n      moVersionManager_c::get();\n      uVar2 = moVersionManager_c::getCurrentFileVerion();\n    }\n    if (0x940 < uVar2) goto LAB_4c23900c;\n    if (local_18[0] == 0) goto LAB_4c239092;\n    uVar2 = *(uint *)(local_18[0] + 0x780);\n    if (uVar2 == 0) {\n      moVersionManager_c::get();\n      uVar2 = moVersionManager_c::getCurrentFileVerion();\n    }\n    if (0x90d < uVar2) {\n      local_res18 = (moCompFeature_c *)0x0;\n      operator>>(param_2,&local_res18);\n      if (local_res18 != (moCompFeature_c *)0x0) {\n        (**(code **)(*(longlong *)local_res18 + 8))(local_res18,1);\n      }\n    }\n  }\n  else {\nLAB_4c23900c:\n    operator>>(param_2,(moFeatureRefWrapper_c **)(param_1 + 1000));\n  }\n  if (local_18[0] != 0) {\n    uVar2 = *(uint *)(local_18[0] + 0x780);\n    if (uVar2 == 0) {\n      moVersionManager_c::get();\n      uVar2 = moVersionManager_c::getCurrentFileVerion();\n    }\n    if (0x11b5 < uVar2) {\n      su_CArchive::operator>>(param_2,(long *)(param_1 + 0x3f4));\n    }\n    if (local_18[0] != 0) {\n      uVar2 = *(uint *)(local_18[0] + 0x780);\n      if (uVar2 == 0) {\n        moVersionManager_c::get();\n        uVar2 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (0x17f2 < uVar2) {\n        su_CArchive::operator>>(param_2,(long *)(param_1 + 0x3e4));\n      }\n      return;\n    }\n  }\nLAB_4c239092:\n                    /* WARNING: Subroutine does not return */\n  AfxThrowFileException(1,-1,(wchar_t *)0x0);\n}\n\n"
+      },
+      "0x4c224970": {
+        "end": "0x4c224b96",
+        "native_bytes": "48895c2408574883ec30488bf9488bda488d4c2420ff150503b100488bd3488bcfe85ae1c9ff488bcbff15519eb10085c00f84920000008b9774030000488bcbff154a9eb1008b9778030000488bcb89542450ff15379eb100488b878003000048c7442458000000004885c0740e83b8900200000075054889442458488d542458488bcbe827bfc9ff488bcbff15f69db100488b97d00300004c8d05786d8c01488bcb85c07411ff15d39eb100488b5c24404883c4305fc3ff15ea9db100488b5c24404883c4305fc3488b4424204885c00f843c0100008b888007000085c97513ff154902b100ff153b02b1008bc8488b44242081f9390a00007215488d9774030000488bcbff158c9db100488b4424204885c00f84f90000008b888007000085c97513ff150602b100ff15f801b1008bc8488b44242081f9520a0000721f488d542450488bcbff154b9db1008b442450898778030000488b442420eb0ac78778030000000000004885c00f84a20000008b888007000085c97513ff15af01b100ff15a101b1008bc8488b44242081f99f1000007214488d9780030000488bcbe82bb6c9ff488b4424204885c074648b808007000085c0750cff157101b100ff156301b1003dcb2300007224488bcbff15b39cb100488d153c6c8c01488bcb85c07418ff159f9db100488987d0030000488b5c24404883c4305fc3ff159f9cb100488b5c2440488987d00300004883c4305fc34533c0baffffffffb901000000e8dee79700cc",
+        "sha256": "d79d4835fff7366e9684425deaf5dcf57deb69e74c41f3563f9d19204b4e4153",
+        "decompilation": "\nvoid FUN_4c224970(moFolder_c *param_1,su_CArchive *param_2)\n\n{\n  moMaterialFolder_c *pmVar1;\n  int iVar2;\n  uint uVar3;\n  CObject *pCVar4;\n  long local_res18 [2];\n  moMaterialFolder_c *local_res20;\n  longlong local_18 [2];\n  \n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_18,param_2);\n  moFolder_c::Serialize(param_1,param_2);\n  iVar2 = su_CArchive::IsStoring(param_2);\n  if (iVar2 != 0) {\n    su_CArchive::operator<<(param_2,*(long *)(param_1 + 0x374));\n    local_res18[0] = *(long *)(param_1 + 0x378);\n    su_CArchive::operator<<(param_2,local_res18[0]);\n    pmVar1 = *(moMaterialFolder_c **)(param_1 + 0x380);\n    local_res20 = (moMaterialFolder_c *)0x0;\n    if ((pmVar1 != (moMaterialFolder_c *)0x0) && (*(int *)(pmVar1 + 0x290) == 0)) {\n      local_res20 = pmVar1;\n    }\n    operator<<(param_2,&local_res20);\n    iVar2 = su_CArchive::IsDBStream(param_2);\n    if (iVar2 != 0) {\n      su_CDBArchive::WriteObject\n                ((su_CDBArchive *)param_2,*(CObject **)(param_1 + 0x3d0),\n                 (CRuntimeClass *)&moCutListSortOptions_c::classmoCutListSortOptions_c);\n      return;\n    }\n    su_CArchive::WriteObject\n              (param_2,*(CObject **)(param_1 + 0x3d0),\n               (CRuntimeClass *)&moCutListSortOptions_c::classmoCutListSortOptions_c);\n    return;\n  }\n  if (local_18[0] != 0) {\n    uVar3 = *(uint *)(local_18[0] + 0x780);\n    if (uVar3 == 0) {\n      moVersionManager_c::get();\n      uVar3 = moVersionManager_c::getCurrentFileVerion();\n    }\n    if (0xa38 < uVar3) {\n      su_CArchive::operator>>(param_2,(long *)(param_1 + 0x374));\n    }\n    if (local_18[0] != 0) {\n      uVar3 = *(uint *)(local_18[0] + 0x780);\n      if (uVar3 == 0) {\n        moVersionManager_c::get();\n        uVar3 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (uVar3 < 0xa52) {\n        *(undefined4 *)(param_1 + 0x378) = 0;\n      }\n      else {\n        su_CArchive::operator>>(param_2,local_res18);\n        *(long *)(param_1 + 0x378) = local_res18[0];\n      }\n      if (local_18[0] != 0) {\n        uVar3 = *(uint *)(local_18[0] + 0x780);\n        if (uVar3 == 0) {\n          moVersionManager_c::get();\n          uVar3 = moVersionManager_c::getCurrentFileVerion();\n        }\n        if (0x109e < uVar3) {\n          operator>>(param_2,(moMaterialFolder_c **)(param_1 + 0x380));\n        }\n        if (local_18[0] != 0) {\n          uVar3 = *(uint *)(local_18[0] + 0x780);\n          if (uVar3 == 0) {\n            moVersionManager_c::get();\n            uVar3 = moVersionManager_c::getCurrentFileVerion();\n          }\n          if (0x23ca < uVar3) {\n            iVar2 = su_CArchive::IsDBStream(param_2);\n            if (iVar2 == 0) {\n              pCVar4 = su_CArchive::ReadObject\n                                 (param_2,(CRuntimeClass *)\n                                          &moCutListSortOptions_c::classmoCutListSortOptions_c);\n              *(CObject **)(param_1 + 0x3d0) = pCVar4;\n              return;\n            }\n            pCVar4 = su_CDBArchive::ReadObject\n                               ((su_CDBArchive *)param_2,\n                                (CRuntimeClass *)\n                                &moCutListSortOptions_c::classmoCutListSortOptions_c);\n            *(CObject **)(param_1 + 0x3d0) = pCVar4;\n          }\n          return;\n        }\n      }\n    }\n  }\n                    /* WARNING: Subroutine does not return */\n  AfxThrowFileException(1,-1,(wchar_t *)0x0);\n}\n\n"
+      },
+      "0x4be70eb0": {
+        "end": "0x4be70fab",
+        "native_bytes": "48895c240848896c2410565741564883ec30488bea488bf9488d4c2420ff15bd3dec00488bd5488bcfff1531daec00488bcdff1508d9ec00488bcd85c0744c48635f188bd3ff1505d9ec0033f64c8bf385db0f8e9000000033db660f1f4400004885db780f3b77187d0a488b4710488b0cd8eb0233c9488b01488bd5ff5028ffc648ffc3493bde7cd7eb5d488d542460ff15c2d8ec0033f6397424607e4a6690b940000000ff15d5d8ec0048894424684885c0740d488bc8e8a3f1ffff488bd8eb0233db488b03488bd5488bcbff50284c8bc38b5718488d4f08ff15e0d8ec00ffc63b7424607cb8488b5c2450488b6c24584883c430415e5f5ec3",
+        "sha256": "b05b26d31a56d0f6d42583cce92b0f157ad5a88dd055f08ff29cf0fd51834dc9",
+        "decompilation": "\nvoid FUN_4be70eb0(su_CObject *param_1,su_CArchive *param_2)\n\n{\n  int iVar1;\n  longlong *plVar2;\n  longlong lVar3;\n  int iVar4;\n  int local_res18 [2];\n  void *local_res20;\n  moArchiveHelper_c local_28 [16];\n  \n  moArchiveHelper_c::moArchiveHelper_c(local_28,param_2);\n  su_CObject::Serialize(param_1,param_2);\n  iVar1 = su_CArchive::IsStoring(param_2);\n  if (iVar1 == 0) {\n    su_CArchive::operator>>(param_2,local_res18);\n    iVar1 = 0;\n    if (0 < local_res18[0]) {\n      do {\n        local_res20 = su_CObject::operator_new(0x40);\n        if (local_res20 == (void *)0x0) {\n          plVar2 = (longlong *)0x0;\n        }\n        else {\n          plVar2 = (longlong *)FUN_4be70110(local_res20);\n        }\n        (**(code **)(*plVar2 + 0x28))(plVar2,param_2);\n        su_CPtrArray::SetAtGrow((su_CPtrArray *)(param_1 + 8),*(int *)(param_1 + 0x18),plVar2);\n        iVar1 = iVar1 + 1;\n      } while (iVar1 < local_res18[0]);\n    }\n  }\n  else {\n    iVar1 = *(int *)(param_1 + 0x18);\n    su_CArchive::operator<<(param_2,iVar1);\n    iVar4 = 0;\n    if (0 < iVar1) {\n      lVar3 = 0;\n      do {\n        if ((lVar3 < 0) || (*(int *)(param_1 + 0x18) <= iVar4)) {\n          plVar2 = (longlong *)0x0;\n        }\n        else {\n          plVar2 = *(longlong **)(*(longlong *)(param_1 + 0x10) + lVar3 * 8);\n        }\n        (**(code **)(*plVar2 + 0x28))(plVar2,param_2);\n        iVar4 = iVar4 + 1;\n        lVar3 = lVar3 + 1;\n      } while (lVar3 < iVar1);\n    }\n  }\n  return;\n}\n\n"
+      },
+      "0x4be70500": {
+        "end": "0x4be70532",
+        "native_bytes": "48894c2408534883ec20488bd9ff150de3ec0090488d05fd801c01488903488d4b08ff15d847ec0090488bc34883c4205bc3",
+        "sha256": "88bf418c70be75b53301ad5dc762805cd7989e692b1181363661bcc11cf7bce9",
+        "decompilation": "\n/* public: __cdecl moCustomPropertyList::moCustomPropertyList(void) __ptr64 */\n\nmoCustomPropertyList * __thiscall\nmoCustomPropertyList::moCustomPropertyList(moCustomPropertyList *this)\n\n{\n                    /* 0xd10500  942  ??0moCustomPropertyList@@QEAA@XZ */\n  su_CObject::su_CObject((su_CObject *)this);\n  *(undefined ***)this = vftable;\n  suPtrArray::suPtrArray((suPtrArray *)(this + 8));\n  return this;\n}\n\n"
+      },
+      "0x4c231170": {
+        "end": "0x4c23122f",
+        "native_bytes": "48895c2410574883ec30488bf9488bda488d4c2420ff15053bb000488bd3488bcfe85a19c9ff488bcbff1551d6b00085c00f8483000000488bcbff1548d6b000488b97800300004c8d056aa28b01488bcb85c07408ff1525d7b000eb06ff1545d6b0008b9774030000488bcbff151ed6b0008b978c030000488bcbff150fd6b000488b07488bcfff90400a000085c0740f8b9770030000488bcbff15f0d5b0008b9794030000488bcbff15e1d5b000488b5c24484883c4305fc3488b442420",
+        "sha256": "6375b7c71df4ea250d297eba56c5eeae65e1fcafe86ebce197f92b39fe3a5289",
+        "decompilation": "\n/* public: virtual void __cdecl moFtrFolder_c::Serialize(class su_CArchive & __ptr64) __ptr64 */\n\nvoid __thiscall moFtrFolder_c::Serialize(moFtrFolder_c *this,su_CArchive *param_1)\n\n{\n  int iVar1;\n  uint uVar2;\n  CObject *pCVar3;\n  undefined8 uVar4;\n  longlong local_18 [2];\n  \n                    /* 0x10d1170  12723  ?Serialize@moFtrFolder_c@@UEAAXAEAVsu_CArchive@@@Z */\n  moArchiveHelper_c::moArchiveHelper_c((moArchiveHelper_c *)local_18,param_1);\n  moFolder_c::Serialize((moFolder_c *)this,param_1);\n  iVar1 = su_CArchive::IsStoring(param_1);\n  if (iVar1 != 0) {\n    iVar1 = su_CArchive::IsDBStream(param_1);\n    if (iVar1 == 0) {\n      su_CArchive::WriteObject\n                (param_1,*(CObject **)(this + 0x380),(CRuntimeClass *)&classmoFtrFolder_c);\n    }\n    else {\n      su_CDBArchive::WriteObject\n                ((su_CDBArchive *)param_1,*(CObject **)(this + 0x380),\n                 (CRuntimeClass *)&classmoFtrFolder_c);\n    }\n    su_CArchive::operator<<(param_1,*(long *)(this + 0x374));\n    su_CArchive::operator<<(param_1,*(long *)(this + 0x38c));\n    iVar1 = (**(code **)(*(longlong *)this + 0xa40))(this);\n    if (iVar1 != 0) {\n      su_CArchive::operator<<(param_1,*(long *)(this + 0x370));\n    }\n    su_CArchive::operator<<(param_1,*(long *)(this + 0x394));\n    return;\n  }\n  if (local_18[0] == 0) {\n    uVar4 = 0;\n  }\n  else {\n    uVar4 = *(undefined8 *)(local_18[0] + 0x30);\n  }\n  (**(code **)(*(longlong *)this + 0x1290))(this,uVar4);\n  iVar1 = su_CArchive::IsDBStream(param_1);\n  if (iVar1 == 0) {\n    pCVar3 = su_CArchive::ReadObject(param_1,(CRuntimeClass *)&classmoFtrFolder_c);\n  }\n  else {\n    pCVar3 = su_CDBArchive::ReadObject\n                       ((su_CDBArchive *)param_1,(CRuntimeClass *)&classmoFtrFolder_c);\n  }\n  *(CObject **)(this + 0x380) = pCVar3;\n  su_CArchive::operator>>(param_1,(long *)(this + 0x374));\n  *(undefined4 *)(this + 0x370) = 0;\n  if (local_18[0] != 0) {\n    uVar2 = *(uint *)(local_18[0] + 0x780);\n    if (uVar2 == 0) {\n      moVersionManager_c::get();\n      uVar2 = moVersionManager_c::getCurrentFileVerion();\n    }\n    if (0xf61 < uVar2) {\n      su_CArchive::operator>>(param_1,(long *)(this + 0x38c));\n    }\n    iVar1 = (**(code **)(*(longlong *)this + 0xa40))(this);\n    if (iVar1 != 0) {\n      if (local_18[0] == 0) goto LAB_4c231364;\n      uVar2 = *(uint *)(local_18[0] + 0x780);\n      if (uVar2 == 0) {\n        moVersionManager_c::get();\n        uVar2 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (0x23b9 < uVar2) {\n        su_CArchive::operator>>(param_1,(long *)(this + 0x370));\n      }\n    }\n    if (local_18[0] != 0) {\n      uVar2 = *(uint *)(local_18[0] + 0x780);\n      if (uVar2 == 0) {\n        moVersionManager_c::get();\n        uVar2 = moVersionManager_c::getCurrentFileVerion();\n      }\n      if (0x279b < uVar2) {\n        su_CArchive::operator>>(param_1,(long *)(this + 0x394));\n      }\n      return;\n    }\n  }\nLAB_4c231364:\n                    /* WARNING: Subroutine does not return */\n  AfxThrowFileException(1,-1,(wchar_t *)0x0);\n}\n\n"
+      }
+    },
+    "feature_solid_folder_node_hooks": {
+      "0x4b8": "0x4c189b60",
+      "0x4c0": "0x4c18a920"
+    },
+    "feature_surface_folder_node_hooks": {
+      "0x4b8": "0x4c189b60",
+      "0x4c0": "0x4c18a920"
+    },
+    "axis_folder_optional_word_hook": {
+      "vtable": "0x4d07d6d0",
+      "slot": "0xa40",
+      "target": "0x4b29c5a0",
+      "native_bytes": "33c0c3",
+      "returns": 0
+    },
+    "shared_feature_folder_hooks": {
+      "moRefAxisFtrFolder_c": {
+        "0x4b8": "0x4c189b60",
+        "0x4c0": "0x4c18a920",
+        "0xa40": "0x4b29c5a0"
+      },
+      "moCoordSysFtrFolder_c": {
+        "0x4b8": "0x4c189b60",
+        "0x4c0": "0x4c18a920",
+        "0xa40": "0x4b29c5a0"
+      },
+      "moCurveFtrFolder_c": {
+        "0x4b8": "0x4c189b60",
+        "0x4c0": "0x4c18a920",
+        "0xa40": "0x4b29c5a0"
+      },
+      "moMirroredCompFeatFtrFolder_c": {
+        "0x4b8": "0x4c189b60",
+        "0x4c0": "0x4c18a920",
+        "0xa40": "0x4b29c5a0"
+      },
+      "moProfileFtrFolder_c": {
+        "0x4b8": "0x4c189b60",
+        "0x4c0": "0x4c18a920",
+        "0xa40": "0x4b29c5a0"
+      },
+      "moRefPlaneFtrFolder_c": {
+        "0x4b8": "0x4c189b60",
+        "0x4c0": "0x4c18a920",
+        "0xa40": "0x4b29c5a0"
+      },
+      "moRefPointFtrFolder_c": {
+        "0x4b8": "0x4c189b60",
+        "0x4c0": "0x4c18a920",
+        "0xa40": "0x4b29c5a0"
+      },
+      "moStockFtrFolder_c": {
+        "0x4b8": "0x4c189b60",
+        "0x4c0": "0x4c18a920",
+        "0xa40": "0x4b29c5a0"
+      }
+    },
+    "direct_property_binding": {
+      "member": "0x448",
+      "constructor": "0x4be70500",
+      "primary": "0x4d038618",
+      "serializer": "0x4be70eb0",
+      "interpretation": "Allocated runtime list serialized directly; no class tag or object-map entry for list/property bodies"
+    },
+    "limitations": [
+      "Ordinary non-DB external-XML version >27CB only; all selected folder gates precede this minimum",
+      "Obsolete 1BF3..1BF7 temporary records and pre-A00 property migrations excluded",
+      "Raw byte +484 is retained at wire width; native runtime update is not executed",
+      "Populated property strings preserved before localized/runtime rewriting; engineering field meanings remain partial",
+      "Old/special contexts, additional folder references and full part/assembly/drawing/all-installed-project bit coverage remain open",
+      "Pdata ranges may be fragments; complete module hash binds out-of-line bodies"
+    ]
+  }
+}

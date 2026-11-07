@@ -1,0 +1,20 @@
+{
+  "command": "cargo xtask pr",
+  "terminal_exit_code": 0,
+  "source_commit": "caa007185b01a9f41e8466edbec8cdb542f4ec43",
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "native_schema": "Installed SolidWorks sch_13006.s_t",
+  "result_summaries": 386,
+  "passed": 4797,
+  "failed": 0,
+  "ignored": 245,
+  "log": "target/flow-primary-table-combined-full-pr-gate.log",
+  "log_sha256": "10e6f3c6547d45fbabac9f9babb553b9753749819a96da3604d79b78ccef0fba",
+  "scope": "Complete record439 primary-class typed read/edit API and owned read/edit oracles, plus finite ordered curve evaluation and preceding Flow implementation",
+  "exclusions": [
+    "Later conditional-item FCI1 baseline",
+    "Later versioned-body and scalar-codec refactors",
+    "New record126/315/128 typed API",
+    "Remote CI and native application acceptance"
+  ]
+}

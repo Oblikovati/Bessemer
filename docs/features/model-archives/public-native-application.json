@@ -1,0 +1,43 @@
+{
+  "application": "SOLIDWORKS 2026",
+  "revision": "34.2.1",
+  "platform": "Windows x64",
+  "operation": "Silent read-only open; close only owned copies; no saves.",
+  "existing_documents": {
+    "before": 3,
+    "after": 3,
+    "unchanged": true
+  },
+  "results": [
+    {
+      "errors": 0,
+      "warnings": 0,
+      "facts": {
+        "features": 17,
+        "bodies": 0,
+        "configurations": 1
+      },
+      "source_sha256": "B52E080BA2CC64D1D07ED28306F27281B07521AEF550BC0C7FEA8CD54BE2B276",
+      "case": "baseline"
+    },
+    {
+      "errors": 0,
+      "warnings": 0,
+      "facts": {
+        "features": 17,
+        "bodies": 0,
+        "configurations": 1
+      },
+      "source_sha256": "1D258AA7C7A4652C4F68C0C1240635A578F7EE81A52292E4FBF2397DBC5CCA42",
+      "case": "name-edited"
+    }
+  ],
+  "raw_report_sha256": "4e01e1f8526f1c5e242094694f53433b1f8b5525f6a4b8fd8f06088a6c4bf0f6",
+  "probe_script_sha256": "c267199355828e4c9d7f17533e8688a73cad1bbfb2075c3bb0ac11df1c0e4263",
+  "approved_bridge_sha256": "e3e2d8b544e2f0de866a6900b47f35c43730d15dd5655a457899ec4642c5658b",
+  "exclusions": [
+    "only the owned empty part was opened; not all 906 native corpus documents",
+    "no save/rebuild or geometric certification was performed"
+  ],
+  "example": "cargo run --example edit_part_configuration -- tests/fixtures/blank-part.SLDPRT target/bessemer-model-name-edited.SLDPRT \"Bessemer \u03a9\""
+}

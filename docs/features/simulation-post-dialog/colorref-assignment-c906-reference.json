@@ -1,0 +1,68 @@
+{
+  "evidence": "C-906",
+  "provider": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\Simulation\\DspOGL.dll",
+  "provider_sha256": "842108f8a7846719e0ab012505c0913d8e15a51fc77719aa665e2bf248c22dd2",
+  "export": "??4COGLColor@@QEAAAEAV0@AEBK@Z",
+  "start": "0x180003b90",
+  "end": "0x180003be0",
+  "raw_hex": "448b0a440fb64201f30f100dd0dc0000410fb6c141c1e910660f6ec00f5bc0410fb6c1f30f59c1f30f110166410f6ec00f5bc0f30f59c1f30f114104660f6ec0488bc10f5bc0f30f59c1f30f114108c3",
+  "instructions": [
+    "180003b90 mov r9d, dword ptr [rdx]",
+    "180003b93 movzx r8d, byte ptr [rdx + 1]",
+    "180003b98 movss xmm1, dword ptr [rip + 0xdcd0]",
+    "180003ba0 movzx eax, r9b",
+    "180003ba4 shr r9d, 0x10",
+    "180003ba8 movd xmm0, eax",
+    "180003bac cvtdq2ps xmm0, xmm0",
+    "180003baf movzx eax, r9b",
+    "180003bb3 mulss xmm0, xmm1",
+    "180003bb7 movss dword ptr [rcx], xmm0",
+    "180003bbb movd xmm0, r8d",
+    "180003bc0 cvtdq2ps xmm0, xmm0",
+    "180003bc3 mulss xmm0, xmm1",
+    "180003bc7 movss dword ptr [rcx + 4], xmm0",
+    "180003bcc movd xmm0, eax",
+    "180003bd0 mov rax, rcx",
+    "180003bd3 cvtdq2ps xmm0, xmm0",
+    "180003bd6 mulss xmm0, xmm1",
+    "180003bda movss dword ptr [rcx + 8], xmm0",
+    "180003bdf ret "
+  ],
+  "scale_raw_hex": "8180803b",
+  "destination_store_offsets": [
+    0,
+    4,
+    8
+  ],
+  "native_colors_checked": 4836,
+  "original_alpha_counts": {
+    "0000003f": 279,
+    "0000803f": 3848,
+    "cdcccc3d": 700,
+    "00000000": 8,
+    "0000803e": 1
+  },
+  "tests": {
+    "run": 3,
+    "output": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n"
+  },
+  "repeated_tests": {
+    "run": 4,
+    "output": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.008s\n\nOK\n"
+  },
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_colorref_assignment_audit.py": "2f2a162e8135a21d7b01c2899b5b26f1eeca2df5bd6698ab839632114f60caab",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-post-color-binding.json": "56788c96475f23995fe8d578c908f0eaeb416695225f254c3f7232fdc3b1efe0",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-post-color-fields-native-evidence.json": "97f4f83c3dad71727f9d6edb209acc776753680d74ea770c2b7edc349a1e415d",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_colorref_import_view.py": "2f20a1942112c9cb700912529d402dacd84eb2c6ecd86df4090346a0421cc32b",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\test_cosworks_colorref_assignment.py": "d7b40886e1ebb8192fa99147e1d21a823143c35aeb5419c9edba1f414d95dfeb"
+  },
+  "target_executed": false,
+  "coverage_credit": 0,
+  "limitations": [
+    "Nearest-even multiplication is an explicit supplementary-model assumption",
+    "Packed value0 used to verify alpha preservation on native color bytes; not an observed application preference value",
+    "Assignment preserves alpha bits without reading or validating them",
+    "No display-purpose binding for style+1CC or other unresolved colors"
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "issue": 184,
+  "artifact_git_revision": "383822a6dbce81ea6c9bcbf90f48ee674e83699d",
+  "stage": "Native stored intersection reference archive edits",
+  "source_evidence": "C-3307",
+  "processes_reaped": 3,
+  "exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "test_seconds": [
+    39.28,
+    40.62,
+    40.13
+  ],
+  "streams_per_process": 8,
+  "physical_groups_per_process": 68,
+  "changed_paired_edits_per_process": 68,
+  "scalar_replacements_per_process": 136,
+  "artifacts": [
+    {
+      "path": "tests/model_intersection_reference/native_edits.rs",
+      "bytes": 6709,
+      "sha256": "2c304906712b4d9b7b55fc696d59db8c0bc4b97cd90233d3e0404e21061bfd4c"
+    },
+    {
+      "path": "tests/resolved_features/native_corpus.rs",
+      "bytes": 5956,
+      "sha256": "dd5493ec24dd9c0309e72ca50396f752a17032fb3c5124a3ecd954868dcb7840"
+    },
+    {
+      "path": "docs/features/intersection-reference-match/native-span-binding.json",
+      "bytes": 6373,
+      "sha256": "0d321f69aaf91429f7cde1688beeb8aaeeb4344b421572453a6e1109c967d586"
+    },
+    {
+      "path": "target/prepare-intersection-native-oracle.py",
+      "bytes": 3677,
+      "sha256": "c1c572f87f85c38f4e3197a9f23044715301c418d6a3e7d94d83840f25e34ffb"
+    },
+    {
+      "path": "target/intersection-reference-native-source-spans.bin",
+      "bytes": 2344,
+      "sha256": "56cdbaf472b9e6ad8f70162495b78a8e89d584a726561f1093ea74fe8a167e10"
+    },
+    {
+      "path": "target/intersection-reference-native-source-spans.log",
+      "bytes": 120,
+      "sha256": "062a9ecf86c943034a6329ac374ae9178c1ac7fa4b230200af1bcc3925bd288f"
+    },
+    {
+      "path": "target/intersection-reference-native-edits-initial.log",
+      "bytes": 546,
+      "sha256": "fb1ab78947343c8a7202fcb1e625f80f3ed6c9ef35855154f2ba0281314193c5"
+    },
+    {
+      "path": "target/intersection-reference-native-edits-repeat.log",
+      "bytes": 546,
+      "sha256": "43e9713cf3d07a078bde2ff182307cc895aa0ada71871ca1368d997a4887e9f0"
+    },
+    {
+      "path": "target/intersection-reference-native-edits-final.log",
+      "bytes": 546,
+      "sha256": "0bf87e51ce3fd8e357f024fce0d87eb1074aa80b137ccda9c110fefd038f33a6"
+    },
+    {
+      "path": "target/intersection-reference-native-clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/intersection-reference-native-format.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "checks": [
+    "All eight complete native stream contexts match the retained BRF1 labels, versions and Source feature hashes. Both signed words and their state/raw20 prefixes match physical Source spans.",
+    "Each typed paired edit matches a literal complete-stream byte patch, the complete expected field vector, Changed completion and both exact parent/path/result history entries. The original stream remains unchanged and stale views fail.",
+    "Helper splits retain the identical cohort and assertions. Final standalone Clippy, workspace cargo fmt --check and function/file-size audit passed."
+  ],
+  "coverage_credit": 0,
+  "qualifications": [
+    "Native corpus operation test remains explicitly ignored by ordinary cargo test because retained proprietary BRF1 and span packets plus a native kernel schema are required. All three runs explicitly included it.",
+    "No native matcher, CAD application execution, geometry, native whole-document edits, broader version/caller coverage or concurrency acceptance is claimed.",
+    "Full Cargo and exact-head platform publication gates for Feature184 remain pending; PR182 validates a separate earlier publication cut.",
+    "Humanizer skill unavailable; prose review remains pending."
+  ]
+}

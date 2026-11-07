@@ -1,0 +1,57 @@
+{
+  "base_revision": "f47dc3a177db3ff5109cc412c9e9c0d1cccfd0cd",
+  "issue": 54,
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "focused": {
+    "private_tests": 13,
+    "public_tests": 4,
+    "python_tests": 2,
+    "cases": 312,
+    "primitive_observations": 48522,
+    "owned_streams": 27,
+    "source_target_identities_verified": true,
+    "source_role_oracle": false,
+    "nonnull_inherited_keeper_tested": true,
+    "rejected_unstable_fixture_freezes": 1,
+    "rejected_unstable_source_pins": 2
+  },
+  "native": {
+    "cases": 906,
+    "previous_complete": 765,
+    "complete": 765,
+    "explicit_stops": 141,
+    "new_complete": 0,
+    "cases_advanced_to_later_stops": 0,
+    "fresh_processes": 2,
+    "all_outcomes_and_causes_identical": true,
+    "native_corpus_reaches_new_split_classes": false,
+    "artifact_sha256": "e254e8d95717eb5b8efe5832b139fb6c44d988744980f00907350b0503fb106a",
+    "independent_feature_bytes": 49094182,
+    "independent_snapshot_identity": "e4135e39bd6e72a20a76094b5d8bff2b85638383a7a53da1894a3b24a9aaa5da",
+    "independent_python_files": 1357,
+    "independent_report_sha256": "b15b7667fa46a13054985f9c69519ed31d0e10220007afe941ac7dff9b266ead",
+    "independent_sentinel_sha256": "9a7df2ddba9e10be14eeb3974024b82f0f5de4aadb0b9501887f6c6bde4f1692"
+  },
+  "corpus_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "schema_snapshot_sha256": "4af67c679a25f7a1d0185a6ab1f9d96aa8adb11c8704f970f2832bcfe0aa8f3d",
+  "fixture_reference_sha256": "2fc3db7c40813bc5fa005327189dc3618172dea9c393d47a19ce93c9fc73043f",
+  "gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 735,
+    "library_ignored": 3,
+    "xtask_passed": 4,
+    "doctests_passed": 270,
+    "all_integration_tests_passed": true,
+    "log_sha256": "fff5a6f04658553e4e7bdc495605c39c6a84867893c4729a182e376ce5700ed1"
+  },
+  "exclusions": [
+    "141 unchanged native corpus stops before the new split classes",
+    "Historical migrations and alternate body-handle contexts",
+    "Suppressed split-item return boundaries and special fixed-transform kinds",
+    "Geometry validity and SolidWorks application acceptance",
+    "Broader all-schema parity remains unproven"
+  ]
+}

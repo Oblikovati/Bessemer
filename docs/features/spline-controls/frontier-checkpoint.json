@@ -1,0 +1,122 @@
+{
+  "cases": 906,
+  "accepted": 709,
+  "rejected": 197,
+  "newly_accepted": 1,
+  "previous_complete_preserved": true,
+  "fresh_process_outcomes_and_causes_identical": true,
+  "artifact_stable_during_replay": true,
+  "artifact_sha256": "00f0c2d3628bb0b71f7d05cced9ca70d844307f5edbcc711a90d17f33467d6c4",
+  "changes": [
+    {
+      "index": 317,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"user_objects[0]\" has runtime class \"moSplineTangencyControl_c\"; expected one of [\"moSketchToolsUserObject_c\", \"moExtensionLineIndicator_c\"]"
+      },
+      "after": {
+        "status": "accepted",
+        "cause": ""
+      }
+    },
+    {
+      "index": 342,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"user_objects[0]\" has runtime class \"moSplineTangencyControl_c\"; expected one of [\"moSketchToolsUserObject_c\", \"moExtensionLineIndicator_c\"]"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"contour_handles[0]\" has runtime class \"sgParabolaHandle\"; expected one of [\"sgEntHandle\", \"sgLineHandle\", \"sgArcHandle\", \"sgPointHandle\", \"sgSplineHandle\", \"sgEllipseHandle\", \"sgTextHandle\", \"sg3DPlaneHandle\", \"sg3DSphereHandle\"]"
+      }
+    },
+    {
+      "index": 350,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"user_objects[0]\" has runtime class \"moSplineTangencyControl_c\"; expected one of [\"moSketchToolsUserObject_c\", \"moExtensionLineIndicator_c\"]"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moStock_c\" schema 1; expected an implemented complete model object body"
+      }
+    },
+    {
+      "index": 351,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"user_objects[0]\" has runtime class \"moSplineTangencyControl_c\"; expected one of [\"moSketchToolsUserObject_c\", \"moExtensionLineIndicator_c\"]"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moRefCurve_c\" schema 1; expected an implemented complete model object body"
+      }
+    },
+    {
+      "index": 675,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"user_objects[0]\" has runtime class \"moSplineTangencyControl_c\"; expected one of [\"moSketchToolsUserObject_c\", \"moExtensionLineIndicator_c\"]"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moSketchBitmap_c\" schema 1; expected an implemented complete model object body"
+      }
+    },
+    {
+      "index": 717,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"user_objects[0]\" has runtime class \"moSplineTangencyControl_c\"; expected one of [\"moSketchToolsUserObject_c\", \"moExtensionLineIndicator_c\"]"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moSketchBitmap_c\" schema 1; expected an implemented complete model object body"
+      }
+    },
+    {
+      "index": 739,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"user_objects[0]\" has runtime class \"moSplineTangencyControl_c\"; expected one of [\"moSketchToolsUserObject_c\", \"moExtensionLineIndicator_c\"]"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moSketchBitmap_c\" schema 1; expected an implemented complete model object body"
+      }
+    },
+    {
+      "index": 746,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"user_objects[0]\" has runtime class \"moSplineTangencyControl_c\"; expected one of [\"moSketchToolsUserObject_c\", \"moExtensionLineIndicator_c\"]"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moDraft_c\" schema 1; expected an implemented complete model object body"
+      }
+    },
+    {
+      "index": 747,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"user_objects[0]\" has runtime class \"moSplineTangencyControl_c\"; expected one of [\"moSketchToolsUserObject_c\", \"moExtensionLineIndicator_c\"]"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moDraft_c\" schema 1; expected an implemented complete model object body"
+      }
+    },
+    {
+      "index": 748,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Invalid: object role \"user_objects[0]\" has runtime class \"moSplineTangencyControl_c\"; expected one of [\"moSketchToolsUserObject_c\", \"moExtensionLineIndicator_c\"]"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moDraft_c\" schema 1; expected an implemented complete model object body"
+      }
+    }
+  ]
+}

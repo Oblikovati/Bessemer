@@ -1,0 +1,49 @@
+{
+  "issue": 86,
+  "issue_type": "Bug",
+  "behavior_version": "C395-fixed-valued-v1",
+  "runtime_base_revision": "96dc6a3740b277513a80cde925d5e0996a35cdea",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "artifact_sha256": "962da673035314d891ae837d68c965c36e149a9325427b128712c6c928a2a4a8",
+  "regression": {
+    "before_passed": 0,
+    "before_failed": 1,
+    "before_log_sha256": "6e90bd28e6b97b4803f4cdc7391d730efc67975340e7e92984763c451f14f9f8",
+    "cause": "Fixed transform bytes misread as compact framing; false map index 7505, expected < 3"
+  },
+  "fixture_graphs": 216,
+  "primitive_reads": 16645,
+  "owned_streams": 28,
+  "preserved_legacy_rejected_vectors": 104,
+  "preserved_legacy_builder_hashes": 442,
+  "migrated_positive_cases": 632,
+  "migrated_positive_oracle_fields": 21164,
+  "previous_positive_oracle_fields": 19916,
+  "checks": {
+    "private": "6 passed",
+    "public": "3 passed",
+    "python": "3 pinned-source regeneration and legacy-replay tests passed",
+    "cargo_xtask_pr": "823 library tests, 4 xtask tests, all integrations, 274 doctests; 3 explicit external-fixture tests ignored",
+    "native_processes": "Two fresh processes matched all 906 statuses and causes; exit 101 only for aggregate 814/906 completeness assertion"
+  },
+  "previous_complete": 812,
+  "complete": 814,
+  "newly_complete": [
+    7,
+    10
+  ],
+  "no_prior_success_lost": true,
+  "independent_feature_bytes": 54231178,
+  "source_snapshot": "0d4e9b47be09c5ec5ba0b3c5ebab279a6ba08053be13231c5daa3224b565f7cd",
+  "source_python_files": 1646,
+  "native_witness_configurations": 4,
+  "native_fixed_transforms": 13,
+  "native_fixed_words": 390,
+  "gate_log_sha256": "c750a7e0e0e9b5f25ba1b887d66cf10391b3fe633a168fcf6007d928453e3fcd",
+  "exclusions": [
+    "92 native inputs remain explicit failures",
+    "Historical/internal contexts, transform semantics, geometry validity, application acceptance and all-schema parity remain incomplete",
+    "Humanizer unavailable; maintainer prose review remains open"
+  ]
+}

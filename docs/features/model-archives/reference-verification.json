@@ -1,0 +1,22 @@
+{
+  "feature_issue": 44,
+  "scope": "reference fixtures and oracle tools; model codec remains pending",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.14",
+  "executed_tests": {
+    "command": "python -B -m unittest discover -s tests -p test_model_primitive_inventory.py",
+    "passed": 12
+  },
+  "reference_processes": 2,
+  "oracle_sha256": "d41f928d206974fff781ad53cbd606688a1400fc1af2e8cc845bb28c929744f0",
+  "primitive_reads": 5171,
+  "stream_bytes": 24028,
+  "map_slots": 97,
+  "loaded_class_names": 36,
+  "owned_edit": "owned-name-edit-reference.json",
+  "exclusions": [
+    "No Bessemer model parser, writer or edit outcome yet",
+    "No model whole-document acceptance",
+    "No native application or geometry acceptance"
+  ]
+}

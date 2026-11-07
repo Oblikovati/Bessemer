@@ -1,0 +1,247 @@
+{
+  "base_revision": "2c1ad0242e8177bad3bdf15b4a9a75e01295370a",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "gate": {
+    "command": "cargo xtask pr",
+    "staged": true,
+    "exit_code": 0,
+    "library_passed": 540,
+    "library_ignored": 3,
+    "xtask_tests_passed": 4,
+    "all_integration_suites_passed": true,
+    "doctests_passed": 265,
+    "log_sha256": "3c49f4eada4e3d707e9a812910ec2faa540b316d3cfec838d32ca15714d1fc43"
+  },
+  "focused": {
+    "private_tests": 5,
+    "public_tests": 3,
+    "python_tests": 3,
+    "object_cases": 90,
+    "primitive_observations": 25171,
+    "owned_streams": 6,
+    "supported_classes": 9
+  },
+  "native_corpus": {
+    "cases": 906,
+    "accepted": 696,
+    "rejected": 210,
+    "previous_complete_preserved": true,
+    "newly_accepted": 10,
+    "fresh_process_outcomes_and_causes_identical": true,
+    "artifact_stable_during_replay": true,
+    "artifact_sha256": "0c1934881bca61d508a96d1e42ba226860859ef945b177281f2163e55a3261e1",
+    "changes": [
+      {
+        "index": 14,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldMemberFeat_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldCornerFeat_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 65,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moProfileRef_w\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moDraft_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 108,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldMemberFeat_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 118,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldMemberFeat_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 134,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldMemberFeat_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 139,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldMemberFeat_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 141,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldMemberFeat_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 145,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldMemberFeat_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 238,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldMemberFeat_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 274,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moProfileRef_w\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moSurfaceRef_w\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 276,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moProfileRef_w\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 296,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moProfileRef_w\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moSurfaceRef_w\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 297,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moProfileRef_w\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 523,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moProfileRef_w\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 550,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldMemberFeat_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldCornerFeat_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 692,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moProfileRef_w\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moDraft_c\" schema 1; expected an implemented complete model object body"
+        }
+      }
+    ],
+    "expected_full_parity_exit_code": 101
+  },
+  "independent_audit": {
+    "report": "accepted-reference.json",
+    "report_sha256": "6d96afff75643be332fa6c4f9f5875e762cb128f6c7545a149e00bf909431891",
+    "accepted": 696,
+    "feature_bytes": 40804987,
+    "four_input_hashes_verified_per_case": true,
+    "snapshot_identity": "6d666b293b7d48aede0785978fbf68e02d0b4181a0e37f5075537bfc6cee58bd",
+    "snapshot_python_files": 1124,
+    "snapshot_removed_after_process_exit": true
+  },
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "source_file_sha256": {
+    "src/model_archives/structural_member_records.rs": "a28288df37f345640aebe8448b19105321887fc56b5829e562f4e61169af4c7d",
+    "src/model_archives/structural_member_objects.rs": "12a945cfa0e86f8125ebe562c77c0c4aa2076e1ae09cfa05c99df53123ffd44b",
+    "src/model_archives/structural_member_references.rs": "00a3625a1bb2c71d845413df6dc8cf4c69797239c8328ceb0a72a1a158e95941",
+    "src/model_archives/structural_contours.rs": "bbd6f1d5bb953b44b99832a10569ba4d6e5d159a7df9e93ded8bfd0b97213aad",
+    "src/model_archives/reference_point_data.rs": "c4925aa99fd21aaf17dedc2016f5ff56dfbb9533fccf677e531e0b24ca41bfef",
+    "src/model_archives/body_features.rs": "4e7cc940cb5046e1eb424a1d81f5f67e01bc32ea72fa5b6de3613be925be4994",
+    "tests/resolved_features/structural_members.rs": "fc6c7a53ba7d951bf47346dd5c200d20e7f07f1d32cad998a4e1964d77033ff0",
+    "tests/resolved_structural_members.rs": "645eddda210a0a7ca3750278ec8d27c6e7384a94cdbbb2c8061df086538c9fb2"
+  },
+  "exclusions": [
+    "Full documented schema parity",
+    "Fresh unsupported dependencies",
+    "Native application acceptance",
+    "Geometry and topology validation",
+    "Native contour construction and mode-based store rewrites",
+    "Engineering meanings and arbitrary native writer validity",
+    "DB/deferred and historical archives",
+    "Non-Windows execution awaits future integration PR matrix"
+  ],
+  "dependencies_changed": false,
+  "version_changed": false
+}

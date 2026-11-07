@@ -1,0 +1,26 @@
+{
+  "previous_complete": 816,
+  "complete": 817,
+  "newly_complete": [
+    343
+  ],
+  "no_prior_success_lost": true,
+  "all_906_statuses_and_causes_identical": true,
+  "explicit_remaining_failures": 89,
+  "changed_stops": [
+    {
+      "index": 343,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moSkIsoCurveInfo_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted"
+      ]
+    }
+  ],
+  "logs": {
+    "isocurve-frontier.log": "be7a6d5a6f63410c3c31e36a1aed8d0e46141b7b929ba15ef9a61e92c63eb828",
+    "isocurve-frontier-repeat.log": "b6b9d14c756cd142eb0ff2e752d6ef5947afd47a12ab97b2b009797abcdc9a06"
+  }
+}

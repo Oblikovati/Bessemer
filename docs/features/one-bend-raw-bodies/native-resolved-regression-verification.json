@@ -1,0 +1,23 @@
+{
+  "issue": 220,
+  "source_base": "0bfa3711",
+  "command": "BESSEMER_KERNEL_SCHEMA=<installed sch_13006.s_t> target/one-bend-raw-body-tests-v3.exe --ignored --exact model_archives::resolved_corpus_tests::complete_native_resolved_corpus_requires_exact_typed_reconstruction --nocapture",
+  "terminal_exit_code": 0,
+  "cases_accepted": 906,
+  "ordered_case_indices": "0..905 inclusive, exactly once each",
+  "test_result": "1 passed; 0 failed",
+  "seconds": 72.59,
+  "packet_eof": "Executed test requires BRF1, exactly906 records, cursor.remaining()==0 and accepted==count",
+  "sha256": {
+    "C:\\Users\\vmiguel\\git\\Bessemer\\target\\one-bend-raw-native-resolved-regression.log": "e51741f4d8ad6814c826628ee24304bf1c1ba6ae4e0c3f3afedc3fb93fe34d45",
+    "C:\\Users\\vmiguel\\git\\Bessemer\\target\\one-bend-raw-body-tests-v3.exe": "fb012c994de0183ca9ab58ab9091a8db4838dfd73f25361b3fa3a010274f83c3",
+    "C:\\Users\\vmiguel\\git\\Bessemer\\target\\resolved-native-probe.bin": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+    "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\data\\pschema\\sch_13006.s_t": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af"
+  },
+  "scope": "Selected native model-header/configuration/manager/resolved-feature stream sets; exact typed reconstruction",
+  "exclusions": [
+    "No new populated native OneBend raw-body sample",
+    "No producer-parser or native DLL execution",
+    "No geometry, application, historical/DB/special-context or whole-schema parity credit"
+  ]
+}

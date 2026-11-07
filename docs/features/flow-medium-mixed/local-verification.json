@@ -1,0 +1,41 @@
+{
+  "feature_issue": 241,
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "rust_passed": 70,
+  "rust_failed": 0,
+  "rust_ignored": 0,
+  "clippy_exit_code": 0,
+  "python_passed": 8,
+  "python_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "source_lf_sha256": {
+    "docs/features/flow-medium-mixed/freeze_mixed.py": "440f12895f89a8d2b592ceeb7be845b8d77a241a22484b5d92b01b481cab0216",
+    "docs/features/flow-medium-mixed/test_mixed.py": "4b558a713281c8ad1024d13c48d8796b1ff582f17a4406e51c584ee30d54d663",
+    "tests/flow_medium_objects/kind_two/mixed/fixture.rs": "4938aa6ade8f7b7621cc01a84c64c23c9a8efbbf245529a0dc0772bc93bd0618",
+    "tests/flow_medium_objects/kind_two/mixed/rebuild.rs": "cd11e698564d01e89d549c49cad3bc3a1a37ba388c8d8a0aea84285e581e17a6",
+    "tests/flow_medium_objects/kind_two/mixed/types.rs": "8e832386aa9bd76a6b76940d5446a3412969724abd2365db0ba7f20b5ebd1210",
+    "tests/flow_medium_objects/kind_two/mixed.rs": "80df8744c85f69e2fb6ec5fc34aa5a4c1bafe6018de8f39b96682c1c35f98d1d",
+    "tests/flow_medium_objects/kind_two.rs": "10b53fa190faf53f00f0e3ff7fdc2108ecb2b3d8676a6508ac93c8df03dbf540",
+    "tests/flow_medium_objects/kind_two/fixture.rs": "45887dfc6a4fc97e0b2d6b020902802897eeefe3e6f750163d9a80b509794c7a"
+  },
+  "log_sha256": {
+    "flow-medium-mixed-rust-tests.log": "4af46cbe698cd3944ab4985abe9d0f8c6dac32596afe913e3660638d33f629ba",
+    "flow-medium-mixed-clippy.log": "228fc28771a2940646e4b56e34f855eae11bc86e0cc4d84e2cc6552492af8899",
+    "flow-medium-mixed-python-tests.log": "ef0e1684cbae9984775b6a406edbdc8e1ec6f1f2768c80e39689124563a2ff60"
+  },
+  "unchanged_packet_sha256": {
+    "tests/fixtures/flow-medium-objects/kind1.bin.gz": "3980270bd1c4ec2ea2d6029fa7ba368ce7a75afa9e38d905c137a51e9dc96cd0",
+    "tests/fixtures/flow-medium-references/bodies.bin.gz": "2000cfabf874163c902cdcda921f0fb5d7bfa6052b3ab0582e0403fbd4564f78",
+    "tests/fixtures/flow-medium-references/profiles.bin.gz": "d7678e1c4d3560b66d6c03db1a27db071c9c7f2b09c1c54e66cee5499b5b82e3",
+    "tests/fixtures/flow-medium-kind-two/bodies.bin.gz": "786bab66b1a7b99c43271a6e06badf2385277df38eebc048f6ff00b5e8b7e64e"
+  },
+  "humanizer": "Unavailable; prose pass left to maintainer review",
+  "scope": "Complete generated mixed-kind record baseline and independent full nested reconstruction; 2 new Rust tests and all68 prior regressions; no production mixed-profile API",
+  "exclusions": [
+    "Installed kind-two acceptance",
+    "Native runtime and engineering/model evaluation",
+    "Application acceptance",
+    "Current full gate is frozen at 01aebaea and excludes this later baseline"
+  ]
+}

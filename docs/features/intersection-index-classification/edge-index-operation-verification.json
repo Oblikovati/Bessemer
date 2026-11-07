@@ -1,0 +1,138 @@
+{
+  "issue": 185,
+  "stage": "Revision-owned signed stored edge-index views and isolated archive edits",
+  "processes_reaped": 2,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "tests_per_process": [
+    2,
+    3
+  ],
+  "test_seconds": [
+    3.76,
+    4.32
+  ],
+  "bounded_complete_cases": 264,
+  "physical_views_per_matrix_process": 528,
+  "requests_per_process": 4224,
+  "changed_per_process": 3696,
+  "noops_per_process": 528,
+  "independent_exports": [
+    {
+      "path": "target/edge-index-operation-process-1.bin",
+      "bytes": 6428932,
+      "sha256": "b3b00882ef2361d72bed4ebfee215ab4d077f2bd9378e520318d47c62001a1b8"
+    },
+    {
+      "path": "target/edge-index-operation-process-2.bin",
+      "bytes": 6428932,
+      "sha256": "b3b00882ef2361d72bed4ebfee215ab4d077f2bd9378e520318d47c62001a1b8"
+    }
+  ],
+  "all_export_bytes_equal": true,
+  "large_owner_last_edge_changed_edits": 1,
+  "projection_tests": 12,
+  "regression_tests": 12,
+  "artifacts": [
+    {
+      "path": "src/model_archives/intersection_reference/edge_index.rs",
+      "bytes": 4597,
+      "sha256": "40450c27c1db567cb2fa90b65779493763c5df2f23f7faef6851124818bf1461"
+    },
+    {
+      "path": "src/model_archives/intersection_reference/admission.rs",
+      "bytes": 4756,
+      "sha256": "f675ba693841afc8725a2dd1a59f9923277418c42a394cb6604c5063e73793ff"
+    },
+    {
+      "path": "src/model_archives/mod.rs",
+      "bytes": 8692,
+      "sha256": "8c9efad18ee80354d47628c5ba8653dedf44b1061b2ef43560b6aa0428745ed4"
+    },
+    {
+      "path": "tests/model_intersection_reference/edge_index.rs",
+      "bytes": 5923,
+      "sha256": "5828c773b7ed21514e12a5d05126cf7c9f7af343a7b43ed0ac72d200a583e2a2"
+    },
+    {
+      "path": "tests/model_intersection_reference/edge_index_unit.rs",
+      "bytes": 3263,
+      "sha256": "0c42a27918a8be10980589ae8dbb22ea980eaa85a6d50ed34f92f9b00a056d3c"
+    },
+    {
+      "path": "target/edge-index-library-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/edge-index-operation-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/edge-index-operation-final-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/edge-index-final-unit-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/edge-index-library-clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/edge-index-operation-clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/edge-index-format.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/edge-index-operation-process-1.log",
+      "bytes": 301,
+      "sha256": "e294ae884c0529c5e0144b3574efbdfff2baba737e80814ff5aad200be858483"
+    },
+    {
+      "path": "target/edge-index-operation-process-2.log",
+      "bytes": 397,
+      "sha256": "c52270b5ac48beaf319ff3d822ad367f68d50a64b445a55eccbb0450c72dbc70"
+    },
+    {
+      "path": "target/edge-index-final-unit.log",
+      "bytes": 1728,
+      "sha256": "df14a8abecc410f625d221f9387c6a15e2ad0913b5598ebc208321f9cf362ad1"
+    },
+    {
+      "path": "target/edge-index-existing-regression.log",
+      "bytes": 98754,
+      "sha256": "1c426efad9402d11169d864cd7a8e0ecd1f8d395aa83833ea5951f61f9119ea1"
+    },
+    {
+      "path": "target/edge-index-operation-independent.json",
+      "bytes": 516,
+      "sha256": "f2cf4de5abcad2dda1ba5bbf10b871be0986b016c53a061221e871d2a0161f36"
+    }
+  ],
+  "coverage_credit": 0,
+  "checks": [
+    "Admission requires actual preceding sgSketch definition, marker0, positive/bounded physical edge count, canonical indices and all five adjacent same-scope I32 header fields. The saved index value is not constrained by the container position.",
+    "Every signed replacement matches a literal complete-root patch and full expected fields, exact derived parent/result history, unchanged counts, completion, coverage/fidelity and diagnostics. No-op identity and stale/foreign rejection preserve input bytes.",
+    "All eight signed boundary controls are used for both physical owners in every bounded Source case. Both actual exports match byte for byte and an independent stdlib checker verifies every one of4224 roots per process.",
+    "The last edge16383 of the complete full-u16 owner projects signedMAX and edits to signedMIN while preserving the entire remaining archive.",
+    "Focused projection tests reject malformed types, scopes, indices, markers and counts; the public index type passes compile-time Send/Sync. Existing classification, role matrix, document and empty-result regressions pass. Standalone Clippy, formatting and size audit pass."
+  ],
+  "qualifications": [
+    "The final process includes the additional large-owner test and behavior-preserving test helper splits. Both complete bounded operation exports remain identical.",
+    "Fresh unchanged Source parsing of both actual index exports is running and remains pending. Native/document/concurrency and full Cargo/exact-head publication gates remain required for Feature185.",
+    "No correspondence-map creation, native matcher, callbacks, geometry or complete schema parity is claimed. Humanizer unavailable; prose review pending."
+  ]
+}

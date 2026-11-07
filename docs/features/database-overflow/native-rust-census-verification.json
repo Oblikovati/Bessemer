@@ -1,0 +1,46 @@
+{
+  "issue": 229,
+  "parent_production_revision": "83f3aacf",
+  "production_code_changed": false,
+  "native_cells_checked": 5140,
+  "native_edits": 5140,
+  "fresh_reversals": 5140,
+  "native_multipage_values": 1,
+  "rust_suite_passed": 15,
+  "rust_suite_failed": 0,
+  "second_fresh_process_census_passed": 1,
+  "python_tests_passed": 12,
+  "strict_source_regeneration": "Every5140 source-bound record matched all23174343 frozen packet bytes",
+  "checks": [
+    "Every source key/value matched independent expected bytes",
+    "Every edited page matched independent closed-form positions",
+    "Fresh reparse and exact reversal, unchanged source snapshots",
+    "Exact coverage and complete page-qualified copied/derived history"
+  ],
+  "logs_sha256": {
+    "database-overflow-native-census-rust-tests.log": "46dccbd280fb42ec2edebf8d0a560a4227e993521b9c6c1205ba4af2b7b744de",
+    "database-overflow-native-census-fresh-second.log": "d8d848aa8fc8ba97cd20788d383fe29d3364aa79a0eb583a57814573ef76eb50",
+    "database-overflow-native-census-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "database-overflow-native-packet-python-tests.log": "69b07814dcb1e7523c4735cf9e42bc834d2b2a4b2bdc3fd5f0cda21c6860fd46",
+    "database-overflow-native-packet-regeneration.log": "b130abc1a102f6295dc91fb45e2c502952e59649764c7e7bb51cc10560592cc0",
+    "database-overflow-native-census-final-format.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "source_sha256": {
+    "tests/database_overflow.rs": "8212f4a4ce8b4e6d8ab4ea4a447376719f11152d63e8aaf742e6898601c8008a",
+    "tests/database_overflow/packet.rs": "6a97f948807545e92e52a2f8b718c79e4ad916d677ccb79e59c0c7438edfba91",
+    "tests/database_overflow/native_census.rs": "7837bbe7f008ba8fa48ee3b557280e3df341be034a7c9dca0cca234ca953ceaa",
+    "docs/features/database-overflow/native_packet.py": "46f597bb95f97da76594d1cabc2c5d59f414b616562d9404e6e3f5ff29373551",
+    "docs/features/database-overflow/freeze_native_packet.py": "eea1802803321ce0fe13d911a92824278d06e6652428595da595b4ca7b23285d",
+    "docs/features/database-overflow/test_native_packet.py": "f49c3fc694a33b863eaffd88395549347525b98d7fb1fa4a5213c881e59a098d"
+  },
+  "function_and_file_caps_passed": true,
+  "formatter_exit_code": 0,
+  "clippy_exit_code": 0,
+  "exclusions": [
+    "Live full gate35374 at83f3aacf excludes this newly added census test and packet",
+    "Whole original containing-document edits for all5140 cells remain separate",
+    "Native keys crossing page boundaries are absent in this cohort",
+    "No original producer execution, engine/allocator/transaction, application or geometry acceptance"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending"
+}

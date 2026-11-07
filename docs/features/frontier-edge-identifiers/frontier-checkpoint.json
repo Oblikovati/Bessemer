@@ -1,0 +1,31 @@
+{
+  "cases": 906,
+  "previous_complete": 751,
+  "complete": 751,
+  "explicit_stops": 155,
+  "new_complete": [],
+  "changed": [
+    {
+      "index": 291,
+      "before": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"representation\" has runtime class \"moPttnBodyEdgeIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+      ],
+      "after": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moLPatternItemId_c\" schema 1; expected an implemented complete model object body"
+      ]
+    },
+    {
+      "index": 353,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moTrimWireExtEdgeIdRep_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moNetBlend_c\" schema 1; expected an implemented complete model object body"
+      ]
+    }
+  ]
+}

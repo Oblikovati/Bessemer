@@ -1,0 +1,59 @@
+{
+  "evidence": "C-1922",
+  "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+  "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "target_executed": false,
+  "coverage_credit": 0,
+  "functions": [
+    {
+      "start": "0x4c84cf90",
+      "end": "0x4c84cfb1",
+      "bytes": "4883ec28488b0133d2ff90300700004885c074088b405c4883c428c34883c428c3",
+      "sha256": "704db48d870439cf6611460f356425e2929d21582b86783185d852c68433fa07"
+    },
+    {
+      "start": "0x4c84e830",
+      "end": "0x4c84ea66",
+      "bytes": "48895c240848896c24104889742418574881ec500100008bea488bf985d2751d3991180100007415488b8900010000488b01ff90a0010000e9d90100004883b9e8000000000f84bb010000488b49584885c90f84ae01000048c787f000000000000000488b01ff9028010000488bd84885c00f8409010000488b8fe8000000ff1523794e0083f8030f85e0000000488b13488bcbff92a81c000085c00f84cc000000488d4c2430e884aca4ff90488d8c24c0000000e876aca4ff90488b4f58488b0133d2ff9078020000488bd0488d4c2430e859b0a4ff660f1f840000000000488d542430488d8c24c0000000e83eb0a4ff488d542430488d8c24c0000000e83ce6a4ff83f8017549488d4c2430e8cdfea4ff488b084c8b81c81c0000ba01000000488bc841ffd0488bf04885c07424488bc8e898c656ff488bd8488b8fe8000000ff1570784e00488b0848390b7590eb0233f6488d8c24c0000000e83fafa4ff90488d4c2430e834afa4ffeb34488b03ba01000000488bcbff90c81c0000eb1e488b4f58488b01ff90e801000085c07574488b4f58488b01ff90a8000000488bf04885f6745f488b06488bceff90e0160000488bd84885c0744b488bc8e89de37eff85c07413488b4f584c8b094c8bc333d241ff91e800000048c7442420000000004c8bcb33d241b801000000488b8fe8000000e8d6f528ff4885c07407488987f0000000488b87f00000004885c0750b85ed7507488b87000100004c8d9c2450010000498b5b10498b6b18498b7320498be35fc3",
+      "sha256": "a06a048f8aa2a89c4dd7f0c31cfaa024c1efffc43234f87ce7d5e5d4f89088b3"
+    },
+    {
+      "start": "0x4c828a10",
+      "end": "0x4c828a8b",
+      "bytes": "48895c241048894c2408574883ec20488bda488bf9ff15f55d510090488d052d80a100488907c74708feffffff33c048894710488947188947204889472889473088473489473848895f4048894748c74750ffffffff4889475489475c48894760668947684889477048894778488bc7488b5c24384883c4205fc3",
+      "sha256": "f1cdacaf33706b86daba36e70739c748769d439e17cf83f87048c9f05f14a904"
+    },
+    {
+      "start": "0x4c829e20",
+      "end": "0x4c829f89",
+      "bytes": "48895c24185556574883ec20488bf2488bf933ed48896a18896a20488b49284885c9747e488b01ff9018050000488bd8488b084c8b81d804000033d2488bc841ffd048895e28488b4f28488b01ff9088000000488b083969f07447837f50ff7541488b07488bcfff90a00100004885c07430488b07488bcfff90a0010000488b10488bc8ff9298040000488b10488bc8ff92f8110000488bc8ff1581c35000894750488b4740488946408b47588946588b475c89465c48396f487429b9c8000000ff154949510048894424404885c0740f488b5748488bc8ff15f29c5000eb03488bc5eb03488bc548894648488b57784885d27467488d4c2440ff1540bf5000488bd84889442448488b7e784885ff7416488bcfff1516bf5000ba08000000488bcfe8d9caaafeb908000000e8049437004885c0740c488bc8ff1511bf5000488be848896e78488bd3488bcdff15d6be500090488bcbff15d4be5000488b5c24504883c4205f5e5dc3",
+      "sha256": "ad50ce0204578f5339f8a1dd77d8b117a6c7ba8188984fe6c0bcfae20cd0a667"
+    }
+  ],
+  "resolver_binding": {
+    "class_name": "moModDimHandle_c",
+    "vftable": "0x4cd9fd70",
+    "slot": "0x730",
+    "target": "0x4c84e830",
+    "return_type": "Dimension_c*"
+  },
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-dimension-base-mask-native-evidence.json": "128e4b46503131f3983f7ce56164e72cb5d8e701f81e405dbb2212cb781f9a77",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\sldmodu-complete-export-index.json": "fb3efcb81f1c79daf1ad32961f1ec1adb681297c1c2f41177250293ebe836ace",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\dimension-handle-redundant-id-rtti.json": "ec3764f165d6f5973895dc36b32a2ccd26d132dac8af7ccd937317009877923e",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part_dimension_redundant_id_native_audit.py": "e7cb2d00544cf82836261cb5adc4a5e2edc15057e690c9af5103b511898ec713",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\dimension-5c-module-displacements.txt": "a38e52da25dc70f4da829f28c197e077707d6cc112814f575297bc70a0b58d6a",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-dimension-redundant-id-native.txt": "5e66989e141523c3b526c2576a5a8f68d7aeff518b6f937988c8ce46d30f89f6",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\dimension-redundant-id\\FUN_4c84cf90.c": "5c7cfe8de8d41343497c8d988b6bba2998f9a126b23643ae34d072c54985ccc5",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\dimension-redundant-resolver\\FUN_4c84e830.c": "7419b65409fe51a54ab1d051622e8dedb634bb97c93bab02d1a1f1f8b3dbf32c",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\dimension-redundant-id\\FUN_4c828a10.c": "c801ea68e00743dfc378f2990a8adb486bb5443effa0ce7c7fa8d7620b91e1e7",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\dimension-redundant-id\\FUN_4c829e20.c": "3bedd4885f7aad6bd84c49a4238caf70e7d7ae7d34345d4ac03205419e1d39c6",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\dimension-base-state\\FUN_4c832980.c": "fb4e022ae6dcf2ec66ecb39ff3dedf26d3477b4d8394be9a291d1c7a61b8b694",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\dimension-redundant-id-run.txt": "05f2b574ade200ed85b1dee109c89c7a446278cdb0d41639683ff3560c439a9e",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\dimension-redundant-resolver-run.txt": "8963f2e947fa0988d8efc145749ee184dab94969573029ea366637ae059b8bce",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\dimension-5c-module-run.txt": "9fed5fa32e37121b8892a2f633bcb67f5cc976503ce47ba463d3a0c72565e2a0"
+  },
+  "limitations": [
+    "Signed native long and wire i32 preserved. Zero constructor/default and null-handle getter result do not constrain stored domain. No positive-ID, uniqueness, index or external-reference semantics inferred. Supported modern scope satisfies serializer gate version greater than 0xDDD."
+  ]
+}

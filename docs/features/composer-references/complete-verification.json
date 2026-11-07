@@ -1,0 +1,82 @@
+{
+  "parent_revision": "8436842cc246e025a8bf213937f5d50736cecd74",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "behavior": 1,
+  "local_pr_gate": {
+    "command": "cargo xtask pr",
+    "passed": 2884,
+    "failed": 0,
+    "ignored": 10,
+    "summaries": 221,
+    "log_sha256": "e7823258c7c5fc05db324d7a27c3806fc930b7622d3f3d677ea03a8383751375"
+  },
+  "owned_cases": {
+    "splits": 45,
+    "paths": 13,
+    "servers": 24,
+    "lookups": 10
+  },
+  "native": {
+    "files": 38,
+    "references": 4445,
+    "nonnull_matches": 4416,
+    "misses": 29,
+    "attempts": 4532,
+    "probe_sha256": "a5dd2e53d49e368cedc02215895d082338a109e70e3a125074a1714b290cb9a0",
+    "output": {
+      "bytes": 252458,
+      "sha256": "65c8af510a5c612354876568852d6904eae41ceea5646f98af7f56404cd1bb60"
+    },
+    "two_process_byte_comparison_equal": true,
+    "complete_real_geometry_and_xml_inputs": true,
+    "context": "Explicit member-name registration and project-member context; opaque token equals original entry index plus one"
+  },
+  "schema": {
+    "clauses": [
+      "14.92",
+      "14.93"
+    ],
+    "requirements": [
+      "C-468",
+      "C-469"
+    ],
+    "issue": 105,
+    "snapshot_sha256": "b55e8ba8f1cbb3aef5cc20499c74d615d19db185fe9199f84776b87e755e6668"
+  },
+  "source_snapshot_identity": "6a50add05412efc20e1f6bba7d5a8e72240f317515e69fecf81ce81914602561",
+  "source_checks": 3,
+  "source_successful": true,
+  "runtime_sha256": {
+    "src/composer/mod.rs": "3e9a3358c9e218bcb2fa6251ebcbe75bbdf9ade68b3b71d577704e26f31d0709",
+    "src/composer/references/mod.rs": "8ccb8384d92433068b095286122b8253796d5ddb459e31ddcbb7f63a191ea838",
+    "src/composer/references/paths.rs": "19a0d7ba2ae31d3fa12486a7fd330cc576c3eca1c8f278901061014528d15305",
+    "src/composer/references/server.rs": "a512ad9912420ec6c963e6599f5919568284fbeb28001016f144e6148d3dcb3d",
+    "src/composer/references/text.rs": "f5441520e8a2c6f78c4c6c9a309164307eb25f0818ab02490d19b56fdb4d9b02",
+    "src/composer/references/types.rs": "c7c0014f86999e1eb385168b5e219fc97bb1540be0d008a6fa5d9cc4f8a0f63e"
+  },
+  "test_sha256": {
+    "tests/composer_references.rs": "23918b561a4a80e6b6a779555f67e75f6c4f552ca321920cbb88395f0c4626f1",
+    "tests/common/composer_reference_oracle.rs": "3d64dbb3b94ee1cf769da1fe6a5e34abe5f6207485e6bd85b1f03095898ef4e6",
+    "tests/fixtures/composer-references/owned.bin": "935f891b1d3e513d8b9ad55f145ec2018f544456c1137961b91d3ba663de26aa"
+  },
+  "verification": [
+    "exact UTF-16 marker and first-separator branches including surrogate split",
+    "all supplied primary/override null and insertion branches",
+    "all four ordered fallback stop positions and duplicate attempts",
+    "all allocation budgets and failure isolation",
+    "source mutation/drop and six concurrent isolated edits",
+    "public Send/Sync assertions",
+    "full u64 token and completed-empty cases",
+    "every native attempt compared against actual frozen readers"
+  ],
+  "exclusions": [
+    "actual native registration context/order",
+    "external file resolution and resource loading",
+    "callbacks and graph side effects",
+    "empty-GUID merging and cloning",
+    "running CRT locale",
+    "native application acceptance",
+    "ThreadSanitizer for this unpushed feature"
+  ]
+}

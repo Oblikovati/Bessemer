@@ -1,0 +1,54 @@
+{
+  "feature_issue": 44,
+  "scope": "private ordered header imports and retained graph; full model root pending",
+  "base_commit": "8ad332a57da6bd727dbe7ac36b51b341fed22865",
+  "branch": "codex/model-archives",
+  "source_manifest": "header-load-plan-source-hashes.json",
+  "source_manifest_sha256": "e6ce9d3469da0a338b6497188746d666d430a093e4930b581537ae1c95ec3fd7",
+  "checks": [
+    {
+      "command": "cargo xtask pr --offline",
+      "result": "passed",
+      "doctests": 204,
+      "scope": "shared header descriptor and model load plan",
+      "log": "target/model-header-load-plan-pr.log"
+    },
+    {
+      "command": "cargo test --offline --lib model_archives",
+      "result": "passed",
+      "tests": 29,
+      "header_load_plan_tests": 11,
+      "scope": "final test cleanup"
+    },
+    {
+      "command": "cargo clippy --offline --all-targets -- -D warnings",
+      "result": "passed",
+      "scope": "final source"
+    }
+  ],
+  "import_boundary": "version > 0x27BC; equal header/model outer versions",
+  "unchanged_full_component_boundary": "version > 0x27CB",
+  "native_import_slot": 3,
+  "native_next_node_slot": 5,
+  "retained_header_graph": true,
+  "unchanged_header_external_list_role_validation": true,
+  "parallel_header_readers": 4,
+  "display_pr": {
+    "number": 43,
+    "state": "merged",
+    "head": "8cefb149295cd22ffe219826ede9e97d7b7a8ffa",
+    "merge_commit": "8ad332a57da6bd727dbe7ac36b51b341fed22865",
+    "all_five_exact_head_checks": "success",
+    "local_and_remote_feature_branch_deleted": true
+  },
+  "uncommitted": true,
+  "published_model_api": false,
+  "whole_model_root_verified": false,
+  "whole_model_document_verified": false,
+  "exclusions": [
+    "complete section and object-body parsing",
+    "scoped-map transitions",
+    "automatic length reconstruction",
+    "model corpus and native application acceptance"
+  ]
+}

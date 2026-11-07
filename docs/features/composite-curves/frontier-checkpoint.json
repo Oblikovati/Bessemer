@@ -1,0 +1,37 @@
+{
+  "previous_complete": 806,
+  "complete": 808,
+  "newly_complete": [
+    611,
+    747
+  ],
+  "no_prior_success_lost": true,
+  "all_906_statuses_and_causes_identical": true,
+  "explicit_remaining_failures": 98,
+  "changed_stops": [
+    {
+      "index": 611,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moCompositeCurve_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted"
+      ]
+    },
+    {
+      "index": 747,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moCompositeCurve_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted"
+      ]
+    }
+  ],
+  "logs": {
+    "composite-frontier.log": "6359b25171c0070fc39df615965b532d3ef57eb4b07857e6131f5d10c9068f86",
+    "composite-frontier-repeat.log": "03808fa5ac11c4ba52163550c1d52391891e2dfcf95c58582f8126d62b0f45ab"
+  }
+}

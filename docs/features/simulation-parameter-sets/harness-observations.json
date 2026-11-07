@@ -1,0 +1,43 @@
+{
+  "scope": "All fifteen tests including full owned/native export; same cases, fields, history and complete byte images. Host workload not isolated; sampled working sets are lower bounds, not statistical performance claims.",
+  "before": [
+    {
+      "run": 1,
+      "observed_peak_working_set_bytes": 3216531456,
+      "projection_sha256": "65d3ba20da1fd136864cb9f119e3ade3295bc279df360ac1f4eaa9b5cd681db6",
+      "seconds": 8.5212729,
+      "all_fifteen_tests_with_native_export": true,
+      "exe_sha256": "1081b993310a923d3ae3974b52a2ca2e627ac58f233e0eac2326b9a667f3a6f7"
+    },
+    {
+      "run": 2,
+      "observed_peak_working_set_bytes": 3240800256,
+      "projection_sha256": "65d3ba20da1fd136864cb9f119e3ade3295bc279df360ac1f4eaa9b5cd681db6",
+      "seconds": 8.4913858,
+      "all_fifteen_tests_with_native_export": true,
+      "exe_sha256": "1081b993310a923d3ae3974b52a2ca2e627ac58f233e0eac2326b9a667f3a6f7"
+    }
+  ],
+  "after": [
+    {
+      "projection_sha256": "65d3ba20da1fd136864cb9f119e3ade3295bc279df360ac1f4eaa9b5cd681db6",
+      "all_fifteen_tests_with_native_export": true,
+      "seconds": 7.2811702,
+      "run": 1,
+      "exe_sha256": "6f43bb406e7d6121df8f0906a9257cb81fdd2893c67d678c33fc0cc7acf8a26e",
+      "observed_peak_working_set_bytes": 302268416
+    },
+    {
+      "projection_sha256": "65d3ba20da1fd136864cb9f119e3ade3295bc279df360ac1f4eaa9b5cd681db6",
+      "all_fifteen_tests_with_native_export": true,
+      "seconds": 7.3139628,
+      "run": 2,
+      "exe_sha256": "6f43bb406e7d6121df8f0906a9257cb81fdd2893c67d678c33fc0cc7acf8a26e",
+      "observed_peak_working_set_bytes": 302133248
+    }
+  ],
+  "complete_export_bytes": 742113027,
+  "complete_export_sha256": "65d3ba20da1fd136864cb9f119e3ade3295bc279df360ac1f4eaa9b5cd681db6",
+  "complete_byte_comparison_passed": true,
+  "production_library_code_changed": false
+}

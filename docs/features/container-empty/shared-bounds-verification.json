@@ -1,0 +1,26 @@
+{
+  "bug": 251,
+  "scope": "Behavior-preserving extraction of comment/directory-extent checks before empty-layout handling; no new reader admission",
+  "source_revision_before_refactor": "364fb9af",
+  "results": {
+    "passed": 21,
+    "failed": 0,
+    "ignored_worker_invoked_twice": 1,
+    "clippy": "passed -D warnings",
+    "format": "cargo fmt --all completed"
+  },
+  "commands": {
+    "tests": "cargo test --locked --test container --test container_timestamp_fixtures --test container_empty_fixtures",
+    "clippy": "cargo clippy --locked --lib --test container --test container_timestamp_fixtures --test container_empty_fixtures -- -D warnings"
+  },
+  "logs": {
+    "target/container-empty-shared-bounds-tests.log": "f8aa75ed798a10e24c57d82c1e8a33140d4370363142245a8999d3424dd2849c",
+    "target/container-empty-shared-bounds-clippy.log": "005df21ac28fd0f0aa8f0172c7e307be0f6177435873318ee6ed1e9a7a352073"
+  },
+  "source_lf_sha256": "8245ccb32975e6457df76fc405177b9eff44feafd1ba09398075eea4f34a17a2",
+  "exclusions": [
+    "The registered empty reader fix is not implemented in this commit",
+    "No full PR gate or hosted acceptance for this refactor",
+    "Patch integration must land on main first"
+  ]
+}

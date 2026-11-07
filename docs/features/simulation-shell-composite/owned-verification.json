@@ -1,0 +1,24 @@
+{
+  "issue": 157,
+  "status": "Independent owned complete values/boundaries verified; primitive/edit/history projections and production API pending",
+  "strict_reference_checks": 16,
+  "original_reference_tests": 10,
+  "owned_cases": 270,
+  "families": {
+    "CompositeFlipTurn": 60,
+    "CompositeExtra": 210
+  },
+  "owned_reference": {
+    "bytes": 716854,
+    "sha256": "1c3cfef7257d531ce64bd07c011e9f965af4af7b2d41858bad0e1a08790ee799"
+  },
+  "versions": [
+    0,
+    840001,
+    840002,
+    840003,
+    2147483647
+  ],
+  "native_scope": "All 40 original attempts remain exact; one four-byte historical Extra fails both profiles.",
+  "callback": "Exact cosworks_embedded_const_surface.archive_reader; no model-boundary import or general-profile relaxation"
+}

@@ -1,0 +1,36 @@
+{
+  "issue": 54,
+  "issue_type": "Feature",
+  "runtime_base_revision": "70e61a31506c29d09515a622468263bee033d668",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "artifact_sha256": "71672fa3ffb412bcd12a0e4e70d2c3b9989365c309ad7e537cbd258227415fc6",
+  "fixture_graphs": 156,
+  "primitive_reads": 99634,
+  "owned_streams": 14,
+  "checks": {
+    "private": "8 passed in the final PR gate",
+    "public": "3 passed",
+    "python": "2 regeneration tests passed",
+    "cargo_xtask_pr": "809 library tests, 4 xtask tests, all integrations, 274 doctests; 3 explicit external-fixture tests ignored",
+    "native_processes": "Two fresh processes matched all 906 outcomes and causes; exit 101 only for aggregate 810/906 completeness assertion"
+  },
+  "previous_complete": 808,
+  "complete": 810,
+  "newly_complete": [
+    746,
+    748
+  ],
+  "no_prior_success_lost": true,
+  "independent_feature_bytes": 53644440,
+  "source_snapshot": "b4da12e37309c18d8284e3ff85ad591134071b20f44b10d0868c2efd03ce7416",
+  "source_python_files": 1597,
+  "native_ruled_roots": 1,
+  "native_ruled_root_bytes": 8261,
+  "gate_log_sha256": "d61953555b1e92cf913ae36d54293cc85d29457ce8c5121927959f5efa3d4c59",
+  "exclusions": [
+    "96 native inputs remain explicit failures",
+    "Historical/internal contexts, scalar semantics, geometry validity, application acceptance and all-schema parity remain incomplete",
+    "Humanizer unavailable; maintainer prose review remains open"
+  ]
+}

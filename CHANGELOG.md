@@ -1,0 +1,727 @@
+# Changelog
+
+## [Unreleased]
+
+## [0.1.0] - 2026-11-07
+
+### Fixed
+
+- Accepted valid zero-stream version-4 containers using registered signature sets, preserving exact bytes and typed missing-stream failures. (#251)
+
+- Bounded Flow identity diagnostics to framing metadata, keeping retained carrier buffers out of foreign and stale identity errors. (#248)
+
+- Initialized deserialized SQLite page metadata before validating exact image extents, preserving nondefault native page sizes. (#234)
+
+- Qualified synthetic high-bit Thicken replay coverage pending the native signed-version binding. (#213)
+
+- Accepted zero image-size declarations in uncompressed BGRX previews and preserved them through pixel edits and fresh reversals. (#208)
+
+- Preserved negative component-edge reference counts while continuing the conditional composite-reference pair and retaining positive-count bounds. (#204)
+
+- Fixed model-field equality discarding CString count-prefix-only edits and their derived history. (#200)
+
+- Preserved original Inspection attribute lexemes when reversing edits with a retained immutable checkpoint, including all replay history parents. (#194)
+
+- Bounded transient test build artifacts in PR/full gates after the hosted Linux runner exhausted disk. (#196)
+
+- Partitioned the complete ThreadSanitizer workload across eight required CI jobs to keep validation within hosted-runner time limits. (#183)
+
+- Corrected the planned Simulation Material text contract to retain accepted odd-byte frames without a UTF-16 view. (#141)
+
+- Fixed load edits that discarded embedded CString length-prefix changes as semantic no-ops. (#137)
+
+- Fixed the new compound allocator using the reserved range-lock sector for data or tables when growing version-4 files above 2 GB. (#110)
+
+- Fixed the new compound reader rejecting legal surplus stream capacity while preserving complete allocation ownership checks. (#109)
+
+- Fixed the new compound reader rejecting documented red root-directory colors, preserving installed CWR and legacy carrier metadata. (#107)
+
+- Fixed spline equation transforms consuming compact restore bytes instead of the documented fixed 120-byte operator. (#95)
+
+- Fixed reviewed sketch-bend curve and One Bend parent roles rejecting complete fresh or cached derived references while preserving unrelated-class rejection. (#46)
+
+- Fixed present sketch valued-dimension transforms using compact framing instead of the documented fixed 30-word archive operator, preserving raw presence, words and suffix identities. (#86)
+
+- Fixed all four sketch-intersection wrapper fields rejecting complete reviewed subclasses while preserving nulls, shared identities and unrelated-class checks. (#46)
+
+- Fixed extrusion, starting-end and revolution-end wrapper references rejecting complete reviewed subclasses while preserving conditional fields, nulls and identity. (#46)
+
+- Fixed three-point-plane reference fields rejecting documented endpoint and loft-sync subclasses while retaining nulls, identity and unrelated-class checks. (#46)
+
+- Fixed reference-plane data and common-wrapper roles rejecting documented constraint, point/surface and base-surface objects while retaining finite class checks. (#46)
+
+- Fixed projected-line data roles rejecting documented draft and intersection objects while retaining nonnull-owner and unrelated-class checks. (#46)
+
+- Fixed sketch external-entity references rejecting complete known wrapper subclasses, including fresh and cached single-face references, while retaining unrelated-class rejection. (#46)
+
+- Fixed extrusion and revolution end-specification point roles rejecting documented endpoint and loft-sync subclasses through fresh or cached pointers. (#46)
+
+- Fixed reference-plane point roles rejecting documented endpoint and loft-sync subclasses for fresh and cached pointers. (#46)
+
+### Added
+
+- Added explicit release-version checks and release-mode workflow validation. (#254)
+
+- Added explicit native ZIP timestamp packing and isolated existing-entry edits with revision-bound identities, exact header coverage and complete byte history. (#250)
+
+- Added complete raw record-105/113/155 field reads and isolated existing-value edits, with unversioned word framing, scalar branch projections, preferred-container selection and complete carrier history. (#241)
+
+- Added bounded logical checkpoint component reads and typed existing-field edits for graph objects, auxiliary grids, trailing containers and opaque chunks, with revision-bound identities and complete byte history. (#241)
+
+- Added bounded fresh-map Flow logical index replay with explicit physical-scan and preferred-terminal policies, retained control provenance and unvalidated ordinary-target diagnostics. (#241)
+
+- Added strict saved-span and terminal-index writer-profile reads and isolated field edits with explicit footer context, bounded decoding, checked distance recomputation and complete carrier history. (#241)
+
+- Added complete paired record-501 IMS-value reads and isolated raw flag, shared-array and BL-row edits with retained definition provenance, explicit fresh-state assumptions and independent resource bounds. (#241)
+
+- Added complete record-500 IMS-definition reads and isolated identifier, allocation-byte and raw-array edits with independent bounds, preserved duplicate order and full carrier history. (#241)
+
+- Added ordinary solver record selection with last-occurrence identities and explicit rejection of all three reserved control identifiers. (#241)
+
+- Added explicit record-121 viewer-prefix reads and isolated known-field edits with exact compressed framing, preserved opaque suffixes and visible incomplete full-body validation. (#241)
+
+- Added complete record-311 UTF-16 slot reads, isolated header/unit edits and lossless existing-state projections with explicit mode, preserved empty-prefix behavior and complete provenance. (#241)
+
+- Added complete record-122/434 owner-state reads and isolated field edits with exact gated update projections, preferred latest-occurrence selection and no parse-error fallback. (#241)
+
+- Added complete record-148 wide-vector reads and isolated raw-pattern edits with bounded length tables, preserved empty-vector ordinals and complete carrier history. (#241)
+
+- Added complete record-444 auxiliary wide-value reads and isolated raw-pattern and discarded-member edits with bounded inflation, compressed no-op preservation and complete carrier history. (#241)
+
+- Added complete record-304 object-row and legacy-trailer reads with revision-bound signed-field and byte edits, exact framing and complete carrier history. (#241)
+
+- Added record-112 fresh selection contexts and complete headerless value reads/edits, binding value identities to retained link/state revisions and preserving optional entry projections. (#241)
+
+- Added complete record-316 byte-state reads and isolated header/byte edits with bounded inflation, compressed no-op preservation and complete carrier history. (#241)
+
+- Added complete record-12 counted-byte reads and isolated existing-byte edits, preserving raw values, empty results and physical carrier history. (#241)
+
+- Added complete record-301 message-list reads and isolated member/text edits, preserving legacy byte counts, modern UTF-16 suffixes and independent list presence. (#241)
+
+- Added complete record-129 tagged-state reads and isolated tag/value/tail edits, preserving body presence, raw tag bytes and exact wide patterns. (#241)
+
+- Added complete record-139 fixed-state reads and isolated member/settings edits, preserving absent counts, raw slot bits and version-dependent field presence. (#241)
+
+- Added complete record-417 paired-state reads and isolated index/wide edits, preserving independent counts, absent arrays and floor quotients for nondivisible counts. (#241)
+
+- Added complete record-138 context-state reads and isolated index/tail edits with explicit native count assumptions and independent serialized bounds. (#241)
+
+- Added complete raw record-432 stored-state reads and isolated signed-member edits, preserving discarded-member absence and reporting native recomputation requirements. (#241)
+
+- Added complete raw Flow record-11 version-18 load-state reading and isolated field/UTF-16 edits, with explicit mode context, lossless first-NUL projections and exact carrier reversals. (#241)
+
+- Added complete Flow record-126/315/128 conditional-item views and isolated typed field edits, preserving raw version prefixes, exact codec boundaries and versioned block-vector widths. (#241)
+
+- Added complete raw Flow record-439 primary-class tables for versions zero through three, with bounded immutable field/scope views and isolated fixed-field edits carrying full carrier history. (#241)
+
+- Added versioned evaluation for the three documented kind-one medium curve accessors, with exact input checks, source provenance and explicit arithmetic/error coverage. (#241)
+
+- Added complete fresh mixed-kind medium record read/edit profiles with typed reference maps, independent resource bounds and whole-carrier history. (#241)
+
+- Added typed read/edit views for all six medium kind-two body models with bounded raw patterns, exact carrier history and explicit body-only coverage. (#241)
+
+- Added complete fresh-backend Flow kind-one record reads and isolated reference, attribute, metadata and body edits with exact EOF and typed key validation. (#241)
+
+- Added complete Flow medium kind-one body reads and isolated fixed-field edits with raw numeric patterns, lossless names and explicit body-versus-record coverage. (#241)
+
+- Added exact Flow medium-backend prefix reads and isolated header/key edits with explicit populated-object stops and preserved opaque tails. (#241)
+
+- Added bounded Flow metadata-prefix reads and isolated fixed-field edits with lossless UTF-16 projections and exact opaque-backend preservation. (#241)
+
+- Added complete raw Flow ID/state reads, isolated fixed-field edits and ordered map projections with explicit input snapshots and assignment history. (#241)
+
+- Added version-prefixed Flow field-value reads and isolated edits with explicit runtime layouts, strict width projections and complete body-codec boundaries. (#241)
+
+- Added complete legacy Flow reference-group reads and isolated typed edits with explicit mapping context, preserved signed counts and full carrier history. (#241)
+
+- Added complete legacy Flow pointer-pool and body reads with explicit runtime codes, opaque tagged payloads and isolated edits with full carrier history. (#241)
+
+- Added explicit-count Flow parallel, per-leaf, five-word and raw-byte table reads with isolated existing-field edits and complete carrier history. (#241)
+- Added complete legacy Flow block-extra reads and isolated typed field edits with explicit runtime context, strided arrays and full carrier history. (#241)
+- Added complete legacy Flow link-record reads and isolated fixed-field edits with sentinel-aware reference bounds and preserved versioned tails. (#241)
+- Added complete legacy Flow pointer-index and raw-word table reads with isolated existing-field edits, explicit context checks and full carrier history. (#241)
+
+- Added exact Flow count-prefix views with retained opaque bodies and explicit conditional absent-map count binding for record-433 arrays. (#241)
+
+- Added bounded Flow root-storage index and local leaf-path projections, retaining complete source checkpoints and true depth-256 paths. (#241)
+
+- Added complete legacy Flow block-data reads and isolated existing-field edits, with explicit leaf-count context and fresh full-grid cardinality derivation. (#241)
+
+- Added bounded Flow base-grid reads and isolated raw boundary-word edits with exact framing coverage, default tree bounds and complete carrier history. (#241)
+
+- Added bounded iterative Flow record-400 forest reads and isolated wire-field edits with explicit compression/bounds, preserved discarded fields and exact checkpoints. (#241)
+
+- Added bounded Flow record-144 mapped-object reads and isolated state, pair and numeric edits with explicit runtime cardinalities and complete version-5 blocks. (#241)
+
+- Added bounded Flow record-143 identity reads and isolated field, counted UTF-16 string and stored-tail edits with explicit virtual legacy-tail context. (#241)
+
+- Added strict Flow record-511 versioned body reads and isolated member edits with explicit legacy runtime context and preserved raw representations. (#241)
+
+- Added ordered Flow GUID lookup and related-carrier selection with explicit result types, nil-key behavior and CPT/settings lookup gates. (#241)
+
+- Added seven Flow settings diagnostic projections with preserved stored bits and explicit unresolved integer-guard and floating-point prerequisites. (#241)
+
+- Added strict Flow record-7/102 settings-array reads and isolated slot edits with preserved integer and binary64 bit patterns. (#241)
+
+- Added Flow static-settings identity views and exact binary-GUID cache-selection projections with explicit normal-return and execution coverage. (#241)
+
+- Added typed Flow record-404 groups for payload versions 3–6 with explicit raw/zlib contexts, complete bounded validation and isolated wire-field edits. (#241)
+
+- Added bounded Flow record-433 array reads and isolated signed-cell edits with explicit runtime-count checks, full decoded validation and retained source checkpoints. (#241)
+
+- Added selected Flow GUID-header reads and typed sixteen-byte edits with Windows GUID formatting and preserved extension bytes. (#241)
+
+- Added bounded ordinary Flow result carrier reads and isolated physical payload replacements with exact checkpoints and complete record history. (#241)
+
+- Composed Electrical userdata query results with prior storage, preserving EOF state and requiring explicit provider effects for present rows. (#231)
+
+- Added complete Electrical userdata storage transitions for supplied provider effects, retaining raw UTF-16 slots, branch coverage and field history. (#231)
+
+- Added isolated Electrical userdata TEXT-cell writes with complete stored-database checks, bounded page growth, composed member/cell history and exact source checkpoints. (#238)
+
+- Added complete Electrical direct field-read maps with observed reader kinds, runtime destinations, unchanged SQLite values and preserved unmatched columns. (#231)
+
+- Added bounded Electrical userdata queries with exact SQLite key comparisons, complete lexical object-ID matches and the documented signed-ID gate. (#231)
+
+- Added complete bounded Electrical project/catalog records, literal database and drawing relationships, and observed-build file-type constant names. (#231)
+
+- Added bounded in-memory Electrical/CAM SQLite image validation, complete schema metadata and named-table row snapshots with exact original-byte retention. (#233)
+
+- Added Electrical ZIP32 carrier reads, member edits and lossless ASCII Archive.ini value operations with coverage and history. (#231)
+
+- Added lossless saved hash-index reads and isolated header/mapping edits with explicit index-only coverage. (#230)
+
+- Added complete conditional default-provider hash-file graph reads and isolated same-length value edits with full coverage and history. (#230)
+
+- Added complete supplied-writer overflow and mixed-bucket decoding, with isolated fixed-length value edits, exact local coverage and ordered bucket/page history. (#229)
+
+- Added bounded conditional deferred-value MsgPack reading and construction for all 17 installed writers and both declared byte-order modes. (#227)
+
+- Added bounded inline hash-page reconstruction and isolated value replacement with raw chain metadata, local coverage and history. (#224)
+
+- Added exact wrapping database packed-time conversion with signed-second shifts and raw component domains. (#223)
+
+- Added explicit-profile database header-buffer reconstruction with separate stored S/P checks and preserved raw names, time words and trailing bytes. (#222)
+
+- Added framed OneBend raw-body lists and signed optional bodies with explicit kernel context and bounded decoding. (#220)
+
+- Added an explicit canonical SketchBend kind-7 profile with complete owned grids, strict trailing raw bodies and context-preserving edits. (#219)
+
+- Added ordinary schema-1 conic bend data inside OneBend archives, preserving exact numeric bits, shared references and fresh edit reversals. (#218)
+
+- Preserved mold parting-geometry surfaces, direct settings and constructor-dependent child records through exact stored-field edits and fresh reversals. (#217)
+
+- Added modern mold parting-line features, settings and edge/split-info archives, with strict kernel frames, lossless edits and fresh reversals. (#216)
+
+- Added complete modern mold core/cavity feature and data archives, preserving owner cycles, shared direct lists and isolated setting edits. (#215)
+
+- Added sheet-metal material parameter archives and direct thickness-range records, with lossless document edits and fresh reversals. (#214)
+
+- Added schema-1 bidirectional sweep-twist fields for modern ordinary-part archives, preserving raw byte values and exact double bits. (#211)
+
+- Added 16-bit BI_RGB555 preview word decoding and replacement, retaining unused high bits, padding, palettes and size declarations. (#210)
+
+- Added uncompressed 1-, 4- and 8-bit indexed DIB previews with exact palette indices, padding and unused-bit preservation during pixel edits. (#209)
+
+- Added 24-bit BI_RGB preview reading and pixel replacement, preserving row padding, palettes, orientations and image-size declarations. (#207)
+
+- Added direct legacy references in ordinary component prefixes with preserved raw presence, generic pointer identity and four-byte time values. (#206)
+
+- Added complete direct boundary chooser-time and downstream identifier bodies, preserving signed counts, duplicate pairs, zero values and versioned tails. (#205)
+
+- Added typed stored parameter snapshots and exact value edits for complete part configuration and resolved-feature archives, retaining independent name pointers, alternate presence bytes and copied field history. (#202)
+
+- Added immutable resolved-feature root snapshots with stored order, aliases, loaded target identities and copied provenance. (#201)
+
+- Added physical spline equation stored-state views and exact lock, signed-option and CString edits with retained source provenance. (#199)
+
+- Added explicit-policy Inspection relationship load attempts, first-insertion map views and writer-filtered entries with immutable source provenance. (#197)
+
+- Added explicit caller-supplied Inspection source size/checksum comparisons with exact stored text, complete byte coverage and unchanged document provenance. (#195)
+
+- Added ordered standalone Inspection record views, selected DOM input projections and isolated existing-attribute edits with revision-bound identities and complete record provenance. (#193)
+
+- Added class-scoped full-width ellipse-backup rotation snapshot views and isolated stored-word edits. (#192)
+
+- Added bounded named bitmap resource-array reads, isolated payload edits and count/payload validation with complete field history. (#190)
+
+- Added revision-owned bitmap matching-color, unsigned transparent-color and optional ink-markup views with isolated saved-word edits. (#189)
+
+- Added revision-owned canonical sketch-reference configuration lookup key views and isolated or paired signed-key edits. (#188)
+
+- Added revision-owned signed bitmap transparency setting views and isolated raw70/raw60/raw6c edits. (#187)
+
+- Added revision-bound stored intersection classification-selector and edge-index access with isolated u16/i32 edits preserving siblings and object references. (#185)
+
+- Added revision-bound intersection-reference span and backward-offset views with isolated signed-word edits in complete ordinary part resolved-feature archives. (#184)
+
+- Added revision-bound stored entity visual-role projections and isolated value edits for complete part/assembly configuration, resolved part feature, display and drawing-bucket archives. (#181)
+
+- Added archive-backed stored dimension mask and redundant-identifier views with isolated value edits, preserved raw bits and revision-bound history. (#179)
+
+- Added archive-backed stored node and parameter flag views and isolated bit edits with revision-bound history and preserved unresolved bits. (#178)
+
+- Added complete historical named-plot reads, construction and isolated edits with fixed-buffer suffix preservation and explicit caller-version qualifications. (#174)
+
+- Added complete conditional PostStyle comparison plans with ordered checks, shared scalar/color storage, preserved source histories and explicit SSE assumptions. (#166)
+
+- Added local A8/preference zero-test projections with original signed values, guarded assignment paths and completed early-return results. (#166)
+
+- Added optional legend locale-grouping views that retained arbitrary signed C0 controls and kept absent wire fields separate from reader resets and runtime locale state. (#166)
+
+- Added explicit legend reader reset plans with ordered derived zero assignments, version history and separate unsupported raw-class results. (#166)
+
+- Added explicit legacy hidden-parts load projections with both derived runtime words, exact adjacent-store coverage and retained original wire values. (#166)
+
+- Added optional legend B4 views and exact nearest-even width projections with explicit font/selector facts, preserved intermediate bits and independent rational rounding checks. (#166)
+
+- Added optional legend end-cell E8/EC views and exact local gate/RGB projections with explicit read-time facts, short-circuit completion and preserved alpha provenance. (#166)
+
+- Added local 3D legend buffer/mapping request and background-input projections with explicit phase facts, exact saturation/wrapping, packed constructor bits and rendering-validity exclusions. (#166)
+
+- Added local legend step-layout projections with explicit post-helper FC/runtime facts, exact signed division and wrapping arithmetic, early-return completion and reached-read diagnostics. (#166)
+
+- Added optional legend FC layout views and exact runtime step-availability results with raw signed BEC returns, complete runtime history and reached-word coverage. (#166)
+
+- Added stored legend yield-color views and exact local gray-mapper call plans with explicit runtime split and post-suffix facts, raw color preservation, signed counts and wrapped byte offsets. (#166)
+
+- Added raw legend cell-count views and immutable exact32 height-product projections from explicit helper results, preserving overflow bits and runtime/font qualifications. (#166)
+
+- Added typed legend palette controls and immutable local dispatcher plans with explicit gray-helper/plot facts, raw count diagnostics and consumed-parent history. (#166)
+
+- Added immutable legend position-factor views with raw binary32 values, exact wire spans, revision-bound field IDs and copied-source provenance. (#166)
+
+- Added typed legend format construction and alternate selection with raw signed controls, explicit runtime facts, wrapping widths and complete local provenance. (#166)
+
+- Added eight typed preference-color projections with explicit pointer/type applicability, nearest-even RGB, preserved/raw-copy alpha policies and consumed-source history. (#166)
+
+- Added immutable conditional1DC RGB group plans and fixed-slot array copies with distinct primary/reflected filters, explicit growth facts and complete parent history. (#166)
+
+- Added guarded element-segment RGB reads with explicit runtime dependencies, preserved raw RGBA and separate endpoint-geometry exclusions. (#166)
+
+- Added numeric plot54 local color plans with ordered runtime dependencies, original copied colors and explicit masked alpha semantics. (#166)
+
+- Added explicit Simulation primary-text assignment and eight-position display selection, preserving unknown runtime state, counted payloads and per-stage provenance. (#166)
+
+- Added complete local Simulation hidden-parts/model-tessellation triangle color plans with explicit caller facts, ordered lookup filters, owned provenance and masked DAZ/FTZ-off alpha semantics. (#166)
+
+- Added auxiliary-triangle controls and bounded immutable call plans with runtime rejection reasons, color provenance and explicit payload-validation exclusions. (#166)
+
+- Added independent raw Min/Max annotation controls and the separate glyph-material adjustment predicate with explicit runtime context. (#166)
+
+- Added raw vector-style controls and explicit local size, density and whole-color write models with preserved older field absence. (#166)
+
+- Added raw PostStyle word views, explicit initializer assignments and local preference transitions with preserved missing state. (#166)
+
+- Added the conditional local rendering predicate over exact stored counts and position bits, with explicit missing legacy state. (#166)
+
+- Added numeric unit selection with explicit optional runtime context, exact ActualFreqDispFlag gating and typed missing-context results. (#166)
+- Added the static component-vector model with verified tables, exact four-word outputs, dispatch provenance and explicit loaded-text context. (#166)
+- Added optional-state offset decisions and raw-preserving fringe views with explicit modeled runtime transitions and call-order effects. (#166)
+- Added raw-preserving legend body-entry and model-tessellation request views with explicit runtime presence and missing-state errors. (#166)
+- Added explicit loaded legend comparison inputs, conditional native comparison dependencies and typed missing-state/count failures. (#166)
+- Added conditional RGBA comparison predicates with explicit masked-exception/DAZ-off semantics, preserving stored bitwise equality. (#166)
+- Added explicit nearest-even COLORREF export with signed truncation, byte wrapping and typed outside-model diagnostics. (#166)
+
+- Added explicit nearest-even COLORREF construction and assignment models with exact alpha handling and integer-only rounding. (#166)
+
+- Added shared raw RGBA views for parent dialogs and PostStyle bodies with complete color spans and finite-channel values. (#166)
+
+- Added typed ContourType conversions, explicit plot-context defaults and the bounded four-word PostInfo render comparison. (#166)
+
+- Added named PostInfo slot and header views with preserved unknown codes, raw vectors and exact D sign-bit aliases. (#166)
+
+- Added raw-preserving dialog range and deformation-scale views with explicit unknown-selector fallback. (#166)
+
+- Added complete versioned DGXPOST dialog reads, construction and isolated typed edits with bounded reference archives and ordered provenance. (#166)
+
+- Added complete versioned PostStyle reads, construction and isolated edits with legacy style/legend partitions, exact color bits and atomic character text. (#166)
+
+- Added complete fixed-slot PostInfo reads, construction and isolated edits with preserved float32 patterns and the exact version700002 character-text suffix. (#166)
+
+- Added complete documented graph parameter reads, construction and isolated edits with atomic character-count text and preserved raw eight-byte values. (#165)
+
+- Added complete documented Results root, category and plot Property reads, construction and isolated edits with explicit hierarchy and current-writer contexts. (#164)
+
+- Added complete documented Mesh Property reads, construction and isolated edits with explicit versions, populated nested records, preserved integer-set keys and ordered provenance. (#163)
+
+- Added complete study MeshControlManager headers and counted MeshControl read, construction and isolated edits with explicit header profiles, exact budgets and ordered outer/nested history. (#161)
+
+- Added combined ShellManager corpus read and construction validation with exact identity bindings, named profiles and explicit incomplete payloads. (#160)
+
+- Added complete Shells and MidSurfShells Property reads, construction and isolated edits with explicit layer context, scoped inline Material fields, aggregate budgets and ordered histories. (#159)
+
+- Added complete shell composite read, construction and isolated edits with explicit reader/writer profiles, delegated ID archives, bounded resources and ordered history. (#157)
+
+- Added complete ShellManager headers and direct group records with explicit late-field profiles, retained MFC string frames, aggregate budgets and isolated edit history. (#156)
+
+- Added fresh seven-family SolidManager inventory reconciliation and typed complete-read/construction gates while retaining six incomplete SurfaceBody occurrences as failures. (#154)
+
+- Added exact SurfaceBody read, construction and isolated edits with ordered history, preserving typed failures for six unresolved historical partial-word cases. (#153)
+
+- Added standalone Component PersistID reads, construction and isolated edits with exact EOF, coordinated blob/count validation and complete ordered nested history. (#152)
+
+- Added complete inherited SolidManager sheet Property reads, construction and isolated edits, with exact class-specific 4281 surface continuations and ordered nested history. (#151)
+
+- Added complete SolidManager solid-body Property read, construction and isolated edits with exact historical gates, nested history and four explicitly bound embedded identity suffixes. (#150)
+
+- Added explicit Simulation SolidManager component and static folder header read, construction and isolated edits with scoped validation and complete field history. (#149)
+
+- Added complete direct SolidManager Property reads, typed construction and isolated edits with raw text lists, exact resource limits and complete stored-profile history. (#148)
+
+- Added complete Simulation joint/group/list bodies and static beam-folder headers with explicit child-count scope, typed construction, isolated edits and complete stored-profile history. (#144)
+
+- Added complete Simulation beam child Property reads, typed construction and isolated edits with signed-short widths, explicit embedded profiles, complete history and exact stored-profile coverage. (#142)
+
+- Added complete study-manager Simulation Material reads, construction, body-prefix operations and isolated typed edits with immutable fields, complete history and exact stored-profile coverage. (#140)
+
+- Added complete single-body MassElement child Property reads, construction and isolated typed edits with explicit versions, immutable identities and composed history. (#138)
+
+- Added bounded Gravity, CentriFugal and BaseExcitation binary reads, complete construction and isolated typed edits with explicit versions, composed history and exact field validation. (#136)
+
+- Added explicit Simulation embedded archive profiles and reference registry, plus complete binary thermal reads, construction and isolated typed edits with composed source/replacement history across all five families. (#134)
+
+- Added complete bounded Simulation ParameterSets construction, raw primitive/text framing and isolated typed-field edits with full array preservation and ordered history. (#133)
+
+- Added complete direct Simulation BeamManager and MassElementManager Property profiles, exact construction and isolated signed-word edits with revision-bound field history. (#131)
+
+- Added complete Simulation LBC name-order and legacy three-group map framing, exact construction and isolated text/word edits with ordered history and explicit native-operation exclusions. (#130)
+
+- Added lossless counted Simulation version arrays and UniqueIds tables with metadata-only allocation capacity, typed field edits, exact reconstruction and complete history. (#129)
+
+- Added explicit LBC Property reader-version and fixed-writer profiles with lossless word construction, isolated field edits, complete history and preserved version/layout failures. (#128)
+
+- Added lossless Cosworks persistence text, study-order streams and explicit primary/legacy version carriers, with exact reconstruction, isolated text edits and preserved provenance. (#127)
+
+- Added exact UTF-16 Simulation logical storage locators with preserved whole-input last-dot components, native mode patterns and explicit lexical-only completion. (#126)
+
+- Added complete conditional flat Simulation EGR framing and construction, typed existing-field edits, preserved solver-name states, descriptor proposals and exact integer EGROUP projections. (#124)
+
+- Added bounded lossless Plastics USD records, explicit Unicode writer-layout projections and isolated exact record edits with complete source identities and history. (#123)
+
+- Added complete signed Simulation node-group runs with retained GEN identities and shared-reference evidence (#122).
+
+- Added exact auxiliary UTF-16 name views and supplied-destination stores, original GEN trial snapshots, explicit workspace normalization and ID-gated memory-only allocation/result projections with composed byte history. (#121)
+
+- Added complete stored Simulation auxiliary body-range rows, isolated three-field edits, conditional runtime input proposals and exact exclusive body-type queries with early-stop history and explicit descriptor limits. (#120)
+
+- Added native Simulation family-mask and scalar/exclusion gates and complete supplied-context body node-mark projections with exact checks, preserved prior values and ordered parent/write history. (#119)
+
+- Added complete Simulation element snapshots, independent numeric classification, explicit legacy stored-code rewrite projections and named topology/first-record predicate views. (#118)
+
+- Added Simulation GUID-string and bare scalar codecs, optional caller-writer projections, supplied update-stamp helper projections and isolated existing-stream CWR edits with composed history. (#116)
+
+- Added complete native Simulation ELF initializer interoperability, isolated CWR parameter edits, selected-directory and explicit mapping projections, header-only write proposals and exact scalar-record construction. (#115)
+
+- Added complete observed Simulation OUT report syntax, exact decimal and ordered legend views, isolated numeric-token edits, CWR replacement and explicit paired mesh-total comparisons. (#114)
+
+- Added complete observed Simulation MAS and paired family-8 GEN image reading, construction and writing, stored mesh accessors, isolated field edits and CWR coordinate replacement. (#112)
+
+- Added MS-CFB version-3/4 stream reading, full logical reconstruction and isolated existing-stream replacement with allocation and ownership checks. (#106)
+
+- Added exact Composer reference splitting, lexical file keys and immutable supplied-state geode lookup and registration with explicit native-resolution exclusions. (#105)
+
+- Added complete local Composer XML/geode identifier indexing and isolated reference edits with preserved XML markup, all duplicate candidates, revision-scoped identities and explicit runtime-resolution exclusions. (#104)
+
+- Added complete Composer geometry-stream reading, typed construction, isolated field edits and gzip writing, with explicit import context, derived bounded sizes, preserved patterns and revision-bound field identities. (#103)
+
+- Added versioned Composer vector reconstruction with integer binary32 rounding, exact raw-lane copies, explicit output limits and reported profile coverage, provenance and native-control-state exclusions. (#101)
+
+- Added complete Composer packed-vector and index block reading, construction and isolated code edits with explicit caller context, exact wire reconstruction and preserved constant/endpoint patterns. (#101)
+
+- Added complete Composer SMG ZIP32 container reading, construction and isolated member replacement with exact no-op reconstruction, duplicate-name identities, preserved metadata and full payload-integrity checks. (#100)
+
+- Added complete ordinary assembly and routing configuration reading, construction, isolated field edits and writing, with exact section boundaries, shared object identities and structural edit history. (#99)
+
+- Added 64-bit MFC string maps with preserved count and text-prefix widths, ordered duplicate keys and raw UTF-16 code units. (#99)
+
+- Added complete ordinary forming-tool instances, direct surface-ID keepers, attributed-body collections and ordered transform maps, with derived section sizes for embedded edits. (#54)
+
+- Added bounded inline part bodies for forming-tool pointers with shared-map headers and caller-context restoration. (#54)
+
+- Added shared-map inline model headers with scoped body-version overrides and preserved tagged references. (#54)
+
+- Added exact version-11000 configuration-manager interoperability with absent-field gates, older scene input and preserved unsigned suffix words. (#54)
+
+- Added complete configuration decal parameters and nested association arrays with recursive fresh-class scopes and shared reference preservation. (#54)
+
+- Added complete direct PhotoWorks material managers and typed property records with shared unit references and original path/default preservation. (#54)
+
+- Added ordered direct configuration visual maps with complete versioned appearance bodies, duplicate keys and signed count preservation. (#54)
+
+- Added complete Deform feature interoperability with independent stored versions, two-pass matching, fixed geometry operators, extension records and reviewed curve-point roles. (#54)
+
+- Added modern configuration-manager 3D views with complete base transforms, direct annotation records, ordered duplicate keys and high/low count framing. (#54)
+
+- Added complete smart-component feature, data, folder, item and sensor-map interoperability with direct containers and preserved owner identities. (#54)
+
+- Added complete text borders, symbols, pattern-count dimensions and handles, and direct thread-instance arrays with their raw item records. (#54)
+
+- Added complete table, sketch and dimension pattern interoperability, including raw bulk arrays, direct regeneration records, instances and range helpers. (#54)
+
+- Added complete alignment groups, order-display and valued-dimension aliases, and strict present sketch-text kernel records. (#54)
+
+- Added saved external unit-component owners and model references with completed-part context guards and preserved shared identities. (#54)
+
+- Added lossless sculpt features, owned trim and chooser records, sculpt edge identifiers the second bounding-box center class and inherited scalar display dimensions. (#54)
+
+- Added complete exact-mode single-span spline records, including secondary interpolation with zero control points. (#54)
+
+- Added lossless ordinary library-feature configuration, cross-reference and atom-ID archive records. (#54)
+
+- Added complete ordinary concentric mates and plane sections with bounded collections, direct geometry and guarded serialized kernel bodies. (#54)
+
+- Added complete template flat-pattern aliases and both gusset corner surface-ID representations, preserving saved helper state and raw suffix words. (#54)
+
+- Added complete ordinary manager feature-ID pairs and custom material-property records with exact scalar values, names and shared identities. (#54)
+
+- Added complete ordinary mid-surfaces, reference-surface backend framing, direct surface-ID keepers, face/edge pairs and modified-surface IDs. (#54)
+
+- Added complete ordinary move-face and bending records with compact transforms, required bending data and direct owned-array framing. (#54)
+
+- Added complete ordinary cavity, transformed-stock and sketch-hole records with inherited serializer bodies and typed cavity references. (#54)
+
+- Added complete ordinary punch records with internal revision gates, bounded dynamic arrays, ordered extensions and legacy keeper data. (#54)
+
+- Added complete ordinary extended reference surfaces, mode-selected extension data and empty native keepers. (#54)
+
+- Added complete ordinary curves-from-file archives with retained filenames, bounded signed point lists and versioned point references. (#54)
+
+- Added complete ordinary mitered-flange records with direct object and DWORD collections and sketch-associated handle groups. (#54)
+
+- Added ordinary sketch-bend continuations with complete One Bend prefixes, shared tagged handles and explicit kind-7 dependency errors. (#54)
+
+- Added complete ordinary sketch-bitmap records with bounded raw byte planes, conditional references and compact transforms. (#54)
+
+- Added complete ordinary selection-set and selection-item archives with versioned comments, ordered lists and shared identities. (#54)
+
+- Added complete ordinary move/copy body archives, nested payloads, mesh-tolerance records and documented zero-scale conformal branches. (#54)
+
+- Added complete modern derived-feature and surface-body reference reconstruction, including signed point presence, shared arrays and generic wrapper callers. (#54)
+
+- Added standalone Inspection project/template envelope reading and writing for current and historical cipher profiles, with exact XML replacement and bounded validation. (#92)
+
+- Added ordinary stock and mirrored-stock record reconstruction, including direct collections, body references, component boxes and independent kernel controls. (#54)
+
+- Added complete ordinary display-note and generic-text record reconstruction, preserving paragraph fields, character units, shared identities and versioned note tails. (#54)
+
+- Added explicitly scoped version-18000 configuration-manager reading and reconstruction, including owned scenes and the historical display-map boundary. (#54)
+
+- Added complete jog and break-corner framing with stored reference presence, direct owned keepers, tagged arrays and both version gates. (#54)
+
+- Added flatten/process-bend framing with containing-node flag selection, preserved signed body presence and strict compressed raw bodies. (#54)
+
+- Added scoped feature-state records with both signed native words preserved for reading and editing. (#54)
+
+- Added complete UI-bend and line-data framing with both saved helper layouts, preserved signed line counts and direct ruled-line bodies. (#54)
+
+- Added complete sheet-metal corner and hem framing with directly owned data, independent arrays, chain records, relief bodies and both saved helper layouts. (#54)
+
+- Added complete 3D bend, fold and unfold framing with ordered object-to-integer maps, strict compressed raw bodies and fixed archive transforms. (#54)
+
+- Added edge-flange, single-bend, per-edge and edge-geometry framing with verified saved sheet-metal state, direct handles and independent edit fixtures. (#54)
+
+- Added absolute reference-plane data with the verified shared non-default layout and typed containing-plane references. (#54)
+
+- Added complete gusset, ordinary weld-bead feature and side-data framing with preserved extrusion suffixes, transform operators, packed words and shared identities. (#54)
+
+- Added complete ordinary end-cap framing with shared distance dimensions, native pointer order and explicit rejection of unsupported arc-length bodies. (#54)
+
+- Added complete cosmetic weld subfolders, beads, bead data and parameter records with direct endpoint ownership, strict kernel framing and preserved signed wire-map counts. (#54)
+
+- Added complete cosmetic weld cut-list framing with preserved kernel bodies, shared parent references and native signed-word order. (#54)
+
+- Added distinct attachment-data and parametric-point framing with exact inherited attachment roles and preserved raw values. (#54)
+
+- Added complete weld, cosmetic weld, surface-finish and cosmetic attachment framing with direct text ownership and exact native subtype roles. (#54)
+
+- Added complete detail-item and internal component-detail framing with verified current-part unit ownership and preserved shared identities. (#54)
+
+- Added complete ordinary display-weld framing with preserved raw values, CString encodings and payload identities. (#54)
+
+- Added exact top-surface and end-cap chamfer entity-ID representations with preserved signed words and shared identities. (#54)
+
+- Added exact cone-reference framing with preserved raw doubles and shared surface-axis references. (#54)
+
+- Added ordinary sketch isocurve information reading, editing and writing with exact twenty-byte numeric bodies, retained floating-point bits and shared external-entity references. (#54)
+
+- Added spline-tangent magnitude, arc-length and plane-to-plane valued-dimension reading, editing and writing through their exact native base serializers and collection roles. (#54)
+
+- Added ordinary ruled-from-edge surface and data reading, editing and writing with direct owned data, strict inline surface frames and retained WORD arrays. (#54)
+
+- Added ordinary composite-curve reading, editing and writing with strict kernel frames, shared tagged arrays and five independently counted direct containers. (#54)
+
+- Added ordinary deleted-face feature and data reading, editing and writing with independent nullable arrays, unsigned DWORDs and retained shared identities. (#54)
+
+- Added ordinary thin extrusion, boss, cut and revolution reading, editing and writing with shared thin specifications and exact u16 bend-triple counts. (#54)
+
+- Added ordinary constraint-plane data, interfaces and geometry reading, editing and writing with shared identities and immutable raw/native flag observations. (#54)
+
+- Added ordinary projected-line draft/intersection and surface-base reading, editing and writing with retained nullable arrays, tagged list identities and exact floating-point bits. (#54)
+
+- Added ordinary PLine silhouette edge identifier reading, editing and writing with direct source identities, exact native dispatch and retained signed suffix words. (#54)
+
+- Added ordinary split-feature and split-item reading, editing and writing with direct owned arrays, compressed bodies, fixed transforms and immutable raw/native integer-map views. (#54)
+
+- Added ordinary sweep-reference surface and edge-data reading, editing and writing with shared direct sweep data, signed edge counts, retained null entries and independent conditional dimensions. (#54)
+
+- Added ordinary copy, trim/extend and reference edge identifier reading, editing and writing with exact native dispatches, direct entity-ID members and retained signed words. (#54)
+
+- Added ordinary filled-surface and curve-contact reading, editing and writing with direct owned keepers, retained signed-byte bits and exact contact pointer order. (#54)
+
+- Added ordinary sew-reference surface reading, editing and writing with five direct arrays, retained flag words, native double order and empty inherited keepers. (#54)
+
+- Added ordinary net-blend/cut and contact/group/multi-edge reading, editing and writing with direct curve-set bodies, independent signed point counts and retained thin-dimension options. (#54)
+
+- Added ordinary lock/environment feature, pattern-item and edge/radius helper reading, editing and writing with exact scalar widths and preserved arbitrary object references. (#54)
+
+- Added ordinary trim-wire and pattern-body edge identifier reading, editing and writing with shared complete references, signed suffixes and direct entity-ID members. (#54)
+
+- Added ordinary component-curve and blend-reference surface reading, editing and writing with exact native spellings, shared blend data and five-byte surface suffixes. (#54)
+
+- Added ordinary reference-curve reading, editing and writing with cached-array branch selection, versioned kernel-body lists and retained raw DWORDs. (#54)
+
+- Added ordinary offset-surface reading, editing and writing with required data, retained signed array presence, shared references and binary-empty keepers. (#54)
+
+- Added ordinary left/right trim-edge identifier reading, editing and writing with complete source representations, shared feature references and direct entity-ID members. (#54)
+
+- Added ordinary surface-cut and trim-surface reading, editing and writing with direct chooser ownership, independent arrays and complete reference records. (#54)
+
+- Added ordinary thickening and surface-reference reading, editing and writing with shared dimensions, versioned directions and strict selected kernel bodies. (#54)
+
+- Added ordinary combine/delete-body reading, editing and writing with complete typed payloads, shared body references and raw versioned option bytes. (#54)
+
+- Added ordinary mirrored-solid reading, editing and writing with independent planes and arrays, shared matrix helpers and complete unsigned-array records. (#54)
+
+- Added ordinary solid-reference reading, editing and writing with complete wrapper fields, retained signed presence, typed selected kernel bodies and direct attribute lists. (#54)
+
+- Added ordinary weld-corner reading, editing and writing with complete body-data layers, independent direct arrays, unsigned DWORDs and preserved trimming-tool scalar bits. (#54)
+
+- Added ordinary cut-list folder reading, editing and writing with complete inherited layers, direct property lists and fourteen native-bound folder classes. (#54)
+
+- Added ordinary component-reference curve reading, editing and writing with complete inherited fields, shared unit-component targets and preserved feature ID/time pairs. (#54)
+
+- Added ordinary helix reading, editing and writing with typed kernel wires, variable-pitch arrays, exact dimension predicates and shared wire-edge identifiers. (#54)
+
+- Added ordinary revolved reference-surface reading, editing and writing with shared angular dimensions, preserved data words and exact zero-byte keepers. (#54)
+
+- Added ordinary face-blend item and pair reading, editing and writing with shared identities, typed boundary references and preserved optional point bytes. (#54)
+
+- Added ordinary draft and back-draft surface-identifier reading, editing and writing with complete inherited references and preserved signed words. (#54)
+
+- Added ordinary draft reading, editing and writing with direct identifier keepers, strided payloads, counted face groups and retained signed option words. (#54)
+
+- Added ordinary parabola and 3D-cylinder backup reading, editing and writing with complete point-backup identities and shared conic/cylinder handles. (#54)
+
+- Added ordinary parabola and 3D parametric-surface handle reading, editing and writing with shared identities and retained escaped-index encodings. (#54)
+
+- Added ordinary spline tangency, control-polygon and curvature reading, editing and writing with complete sketch owners and direct embedded handles. (#54)
+
+- Added ordinary radiated-edge identifier reading, editing and writing with complete inherited references, signed words and shared declared-role pointers. (#54)
+
+- Added ordinary reference-dimension reading, editing and writing with complete one- and two-entity records, sketch handles and direct dimension-plane tags. (#54)
+
+- Added ordinary structural-member reading, field editing and writing with complete contour, orientation, segment, index and profile-reference records and preserved full-width point metadata. (#54)
+
+- Added ordinary weldment reading, field editing and writing with direct custom-property lists, tagged property records and preserved duplicate records and expressions. (#54)
+
+- Added ordinary blend and blend-cut reading, field editing and writing with independent count retention, complete numeric columns and distinct direction/dimension conditions. (#54)
+
+- Added ordinary fold-folder, transform and property reading, field editing and writing with typed matrix extensions, ordered shared property pairs and direct byte arrays. (#54)
+
+- Added ordinary flat-pattern reading, field editing and writing with typed raw compressed bodies, direct bounding boxes, shared references and ordered duplicate pair keys. (#54)
+
+- Added ordinary base-flange reading, field editing and writing with selected directions, shared sketch-handle collections and preserved bend-group records. (#54)
+
+- Added ordinary sheet-metal and template reading, field editing and writing with validated saved-state handoff, strided allowance payloads, fixed-face framing and complete component references. (#54)
+
+- Added ordinary component coordinate-system reading, field editing and writing with shared geometry, preserved fixed-transform words and explicit special-kind errors. (#54)
+
+- Added ordinary coordinate-system reading, field editing and writing with equality-selected axes, direct axis arrays, shared identities and preserved raw selector/vector values. (#54)
+
+- Added ordinary feature-comment reading, field editing and writing with direct lists, shared text items, versioned extra members and preserved four-byte time values. (#54)
+
+- Added ordinary connection-point and route-point reading, field editing and writing with preserved direct parameters, compatibility fields, shared references and complete radial-dimension dependencies. (#54)
+
+- Added ordinary reference-point reading, field editing and writing with all seven point-data layouts, required tagged data, shared typed references and independent complete-stream fixtures. (#54)
+
+- Added ordinary component-axis and component-point reading, field editing and writing with shared inherited layouts, typed geometry pointers and independent wrapper/whole-stream fixtures. (#54)
+
+- Added ordinary part dome reading, field editing and writing with independent nullable pointers, tagged lists, shared geometric references and complete-stream edit fixtures. (#54)
+
+- Added ordinary Toolbox specification arrays and items with preserved shared references, nonfinite floating-point bits, raw strings and independently verified Unicode edits. (#54)
+
+- Added ordinary part sweep and sweep-cut reading, field editing and writing with versioned controls, conditional dimensions, shared references and complete endpoint, wire-contact and loft-synchronization dependencies. (#54)
+
+- Added ordinary part extruded reference-surface reading, field editing and writing with required end specifications, ordered-face groups, preserved shared references and context-checked binary-empty keepers. (#54)
+
+- Added ordinary part imported and base-body reading, field editing and writing with preserved external markers and names, explicit typed inline kernel frames and signed base-body vectors. (#54)
+
+- Added ordinary part Hole Wizard reading, field editing and writing with compatibility gates, preserved raw parameters, direct slot-axis bodies, shared dimensions and independent Unicode-edit fixtures. (#54)
+
+- Added ordinary part circular-pattern reading, field editing and writing with required dimension alternatives, preserved ordered integer collections, versioned geometry tails and independent complete-stream fixtures. (#54)
+
+- Added ordinary part shell-feature reading, field editing and writing with preserved unequal lists, shared object references, complete dimension and component dependencies and independent full-stream fixtures. (#54)
+
+- Added ordinary part mirror-pattern reading, field editing and writing with shared pattern bodies, tagged and direct plane references, exact inherited object maps and independent complete-stream fixtures. (#54)
+
+- Added ordinary part reference-axis reading, field editing and writing with eight axis-data layouts, required typed data pointers and preserved shared references and floating-point bits. (#54)
+
+- Added ordinary part detail-folder reading, editing and writing with shared graphics bucket and display-item codecs, typed BOM references and independent reconstruction fixtures. (#54)
+
+- Added complete supported ordinary part resolved-feature reading, isolated edits and writing with explicit inherited model context, exact stored-field coverage, revision-bound history and geometry exclusions. (#54)
+
+- Added complete ordinary modern-part configuration reading, typed construction, isolated edits and writing with explicit header/kernel context, exact stored-schema coverage and revision-bound field history. (#44)
+
+- Added validated display-archive edit outcomes with completion, exact stored-field fidelity, validation coverage, explicit exclusions and revision-bound structural field history. (#28)
+
+- Added complete drawing `Contents/VBLists` reading, validated edits and writing with unsigned model-version context, shared object graphs and shaded part/assembly models. (#38)
+
+- Added exact display-to-face-cache link checks with borrowed facets, explicit coverage and typed failures for missing, invalid or ambiguous targets. (#28)
+
+- Added lossless display-list transform and view codecs, plus part/assembly archive reading, validated edits and writing for unsigned display versions including zero outside the uncounted-window interval `0x1FAE`–`0x1FCE`, with shared object identities, revision-scoped object handles, typed whole-document context resolution, shared line-style, layer-manager and component-property graphs, direct and wrapped body-property maps, inline facets, external face references, all seven reference-geometry kinds, versioned appearance and scene layouts, display-item payloads, versioned view buckets with explicit native file-version context and gated tangent lists, graphics-reference graphs, markup-ink grids, per-configuration data, decals, legacy wall records with null material pointers, textured-plane records with null bitmap pointers and all five old-light classes. Unresolved bodies and window-dependent layouts returned typed failures without opaque fallback. (#28)
+
+- Added embedded SolidWorks Inspection project XML reading, construction and writing, with preserved unknown content and a complete drawing Job Number edit example. (#26)
+
+- Added lossless namespace-aware XML metadata reading, construction, section-scoped property views, immutable text and attribute edits, and writing for all 17 documented stream families, with bounded parsing and preserved Unicode and keyword framing. (#22)
+
+- Added static PNG preview reading, typed raster construction, sample editing, and writing, with exact chunks, CRC and zlib checks, all color/depth pairs, Adam7, bounded metadata expansion, and ancillary copy rules. (#20)
+- Added packed DIB preview reading, construction, palette and pixel editing, and writing, with checked RLE8 and BGRX decoding, retained raw fields, explicit unwritten pixels, and allocation limits. (#18)
+- Added typed face tessellation directory, block, and facet reading, construction, editing, and writing, preserving version-dependent fields, raw arrays, exact floating-point bits, and component links. (#16)
+- Added typed Parasolid binary transmit partition and delta reading, construction, field editing, and writing, with explicit base schemas, both byte orders, layout edits, pointer flags, and exact floating-point bits. (#14)
+- Added typed SolidWorks biography archive reading, construction, record editing, and writing, with retained environment observations and explicit repeated-string expansion and abbreviation. (#12)
+- Added typed SolidWorks header archive reading, construction, graph editing, and writing, preserving shared external references, unknown fields, embedded version overrides, and exact bounding-box bits. (#10)
+- Added typed standalone SolidWorks version-history reading, graph editing, and writing, preserving shared date-code objects, unknown fields, and equivalent-edit byte identity. (#8)
+- Added a Linux x86_64 ThreadSanitizer gate that instrumented the library, dependencies, and standard library in the full CI gate. (#8)
+- Added compressed-block carrier decoding and chunk replacement with explicit framing, expansion limits, zlib integrity checks, and preservation of untouched chunk encodings. (#4)
+- Added SolidWorks version-4 container reading, checked stream extraction, and stream replacement that preserved untouched compressed bytes. (#1)
+
+### Changed
+
+- Expanded BeamManager corpus validation to replay every retained payload family together with exact identity manifests, complete construction and all candidate outcomes. (#146)
+
+- Optimized test builds while retaining debug assertions, checked integer arithmetic and every exhaustive validation case. (#53)
+
+### Fixed
+
+- Accepted documented coordinate-system targets through shared component geometry pointers while retaining unrelated-class rejection. (#46)
+
+- Fixed populated reference axes being rejected as inherited atom owners while retaining strict checks for unrelated classes and aliases. (#46)
+
+- Fixed private model-test formatting coverage in local and CI gates after declarations moved behind an included registry. (#69)
+
+- Fixed resolved-feature failures mislabeled as configuration operations and streams, retaining their failure classes, causes and CMgr dependency locations. (#64)
+
+- Fixed valid temporary-axis references rejected by revolution, reference-plane and sketch line fields while retaining finite declared-type checks. (#46)
+
+- Corrected model errors to identify the selected configuration instead of a hardcoded configuration zero. (#47)
+- Reported the first mismatched model field, expected shape and bounded object-identity details during construction. (#52)
+- Accepted all five complete display-dimension variants in sketch-loop slots while retaining unrelated-class rejection. (#46)
+
+- Restored early PW scene layouts reached through generic bucket thread keys, preserving implicit wall keys, compact wall records and versioned background suffixes. (#41)
+
+- Retained the temporary simple-text float in early display archives, including signaling NaN bits and validated edits. (#37)
+
+- Restored inline part configuration tessellation before display version `0x2B67` and retained the short-lived assembly annotation-visibility prefix. (#36)
+
+- Preserved the original file when a stream replacement matched its original content, including after an intermediate edit. (#5)

@@ -1,0 +1,46 @@
+{
+  "base_revision": "679fe3303930d27d283fc386b2decdbf3172bd06",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "gate": {
+    "command": "cargo xtask pr",
+    "staged": true,
+    "exit_code": 0,
+    "library_passed": 445,
+    "library_ignored": 3,
+    "all_integration_suites_passed": true,
+    "doctests_passed": 265,
+    "log_sha256": "e1e095c9f78f95c8a1b03c55df5e02e0fb988da6d40b96de00c73a5a33ff02ca"
+  },
+  "focused": {
+    "private_tests": 6,
+    "public_tests": 2,
+    "python_tests": 3,
+    "preparation_case_facts_identical": true
+  },
+  "native_corpus": {
+    "cases": 906,
+    "accepted": 516,
+    "rejected": 390,
+    "fresh_process_outcomes_identical": true,
+    "expected_full_parity_exit_code": 101
+  },
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "source_file_sha256": {
+    "src/model_archives/hole_parameters.rs": "b9f488e7969fb3ddf2be63a9971fdce83450cb9f557c65cd7e03a3be180e68a1",
+    "src/model_archives/hole_wizard.rs": "353821335998b11247a9a607d29021aeebad85ef133456b3c3917a6521d72e2c",
+    "src/model_archives/body_features.rs": "8faaa257976754d7ba5f64619d57ef10c79eb0ecefa5e474fcb1f134b78d6861",
+    "src/model_archives/object_body.rs": "2bf693cbc5520bcfa74e5eb803e7c0ab1c0fc5798410770519cbf79479bd27ea",
+    "src/model_archives/mod.rs": "09b43fad8cc40a7d6c21bc73c384c4643103e34ef020f71997cf761d668289f3",
+    "tests/resolved_features/hole_wizard.rs": "995d247a61ecb630a3ef3abfd85d784afeeef7aa61dea6f6c9783d9eb0ead11e",
+    "tests/resolved_hole_wizard.rs": "5aa4dd36519e23ef38d1eb6bc3b6b719d119747ac396d594de25b40c0bd9c4c0"
+  },
+  "exclusions": [
+    "Full documented schema parity",
+    "Native geometry and topology validation",
+    "Native application acceptance",
+    "Non-Windows execution is checked by the integration PR matrix"
+  ],
+  "dependencies_changed": false,
+  "version_changed": false
+}

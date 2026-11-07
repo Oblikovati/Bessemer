@@ -1,0 +1,21 @@
+{
+  "issue": 134,
+  "status": "Full retained embedded gate passed; outer thermal collection feature remains unfinished",
+  "required_archives": 242,
+  "exact_reads_constructions_and_noop_edits": 242,
+  "remaining_archive_count": 0,
+  "remaining_named_roots": {},
+  "declared_classes_checked_against_actual_callback_declarations": 61,
+  "owned_reference_archives": 1191,
+  "representation_depth_boundary": {"accepted": 128, "rejected": 129},
+  "native_command": "BESSEMER_EMBEDDED_NATIVE_INPUT=target/simulation-embedded-native.bin cargo test --test simulation_embedded_components complete_native_embedded_archives_reconstruct_and_construct_exactly -- --ignored --exact",
+  "native_exit": 0,
+  "owned_holder_archives": 66,
+  "owned_chain_feature_and_external_archives": 140,
+  "owned_component_tests_including_explicit_native_gate": {"passed": 12, "failed": 0, "native_test_ignored_by_default": 1},
+  "strict_actual_reference_tests": {"passed": 11, "failed": 0},
+  "clippy": {"command": "cargo clippy --lib --test simulation_embedded_archives --test simulation_embedded_components -- -D warnings", "exit": 0},
+  "function_and_file_size_audit": "Passed for the new Rust modules, component tests and feature Python helpers",
+  "next_requirement": "Complete independent field/history projections, the shared load base and five thermal collection grammars",
+  "exclusions": ["Outer thermal Rust replay", "Two fresh-process full projections", "PR and full platform gates for this unfinished feature", "Complete installed schema parity", "Native application acceptance"]
+}

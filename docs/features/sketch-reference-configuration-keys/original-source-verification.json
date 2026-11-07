@@ -1,0 +1,29 @@
+{
+  "issue": 188,
+  "passed": true,
+  "process_reaped": true,
+  "exit_code": 0,
+  "complete_streams": 794,
+  "canonical_bodies": 6863,
+  "scalar_checks": 13726,
+  "sketch_signature_checks": 4745,
+  "detail_signature_checks": 1588,
+  "seconds": 192.863,
+  "source_python_files": 5993,
+  "consumed_modules": 181,
+  "snapshot_identity": "7d93e318a2b91de1010c80135ef5df2aacf0d32049e61248e90457900b27a96f",
+  "checks": [
+    "Exact original stream SHA256 and complete EOF",
+    "Published complete graph/map identity including f64 bits and root spans",
+    "Original unknown totals and all sketch/detail signature baselines",
+    "Actual map class slots equal canonical schema1 moSketchExtRef_w tuples",
+    "Actual mapped owner dictionaries contain each expected signed key",
+    "Every scalar agrees with its literal saved native byte span",
+    "Immutable Source import/hash/origin guard passed"
+  ],
+  "collector_sha256": "752e33e68d8fab9d37a2e23b4e60215676451570e25101087483592a9154a608",
+  "log_sha256": "1be584879db5dbda20bdcf49356b4f8d09faa3b56e4ca8d8269833f1c5bd7d28",
+  "accounting_adapter_installed": false,
+  "native_target_executed": false,
+  "scope": "Original baseline only; no new typed API operation or installed native instruction verification accepted here"
+}

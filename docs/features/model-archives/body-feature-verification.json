@@ -1,0 +1,89 @@
+{
+  "behavior_version": "private-model-body-feature-plane-v1",
+  "decision": "Complete documented ordinary feature/plane layouts with typed fields, finite roles and checked arrays. Preserve raw values and identities; unsupported nested objects fail the containing operation.",
+  "migration": "Initial unpublished codec; preceding owned fixtures retained across silhouette-prefix and shared-reference reuse.",
+  "cases": 576,
+  "independent_values": 37239,
+  "checks": {
+    "focused": "10 passed",
+    "all model tests": "263 passed; two external-input tests ignored and six core tests filtered",
+    "all-target Clippy": "passed",
+    "Python": "51 passed",
+    "full PR gate": "earlier geometric/kernel checkpoint; rerun before push"
+  },
+  "entry_budget": {
+    "pass": 53,
+    "reject": 52,
+    "breakdown": [
+      4,
+      9,
+      8,
+      8,
+      12,
+      2,
+      10
+    ]
+  },
+  "null_required_curve_cases": 48,
+  "fixture_repeat": {
+    "fresh_processes": 2,
+    "identical": true,
+    "sha256": {
+      "body-feature-cases.bin": "454b672a5fe77639d832cfadd0bed2a45779a071a8d0433b9596ac1be828c4b2",
+      "body-feature-original.bin": "6588bdf3f51e5f686abbc6cec7c257f41afe34ff3cd956709bb40763ad686ca2",
+      "body-feature-edited.bin": "c32c11e27be8896272390b4c2fe4bf65e18e4e259add431bdc92c10c30f34c8c"
+    }
+  },
+  "native": {
+    "accepted": 893,
+    "document_paths": 829,
+    "versions": {
+      "11000": 1,
+      "19000": 882,
+      "18000": 10
+    },
+    "new_indices": [
+      505,
+      559
+    ]
+  },
+  "native_complete_gate": "failed: thirteen profile-feature first stops",
+  "exclusions": [
+    "complete profile-feature bodies and their nested dependencies",
+    "unknown new keeper/assembly-feature/geometry objects",
+    "public operation and history contracts",
+    "selected-configuration diagnostics",
+    "native application/geometry acceptance",
+    "remote platform matrix"
+  ],
+  "oracle_exclusions": [],
+  "artifact_sha256": {
+    "src/model_archives/body_features.rs": "df8d9652dc7ec233fad365ad3d1d0446850ed7a36cfb601c7d71f33cb7c5b2fc",
+    "src/model_archives/body_end_specs.rs": "4962dcb916b9b99b91e1da1250095ded7f50eb1f54d5f9392ae5c737fc8d7d41",
+    "src/model_archives/reference_planes.rs": "871d51a3226fdec34b806293b3ce15c43f6ba5221c01a2fd70506bfe2e8655ee",
+    "src/model_archives/boundary_references.rs": "db7182df28095b8fb549508f40a644e246bc4dfd324f7ce8076fbec676d2e667",
+    "src/model_archives/sketch_references.rs": "1bf5844e247d8edc62700276ea8dfa7f90da659ea40a946cff2a3f75f6385f96",
+    "src/model_archives/geometric_references.rs": "51af29549b0c84b1fda212ca18921a8a933c88a4ba694d31bb4a3f89953b1406",
+    "src/model_archives/object_body.rs": "5d63aba966ca28db3e5bd9485ccf5310008442e46950ea85e587952b62b869a9",
+    "src/model_archives/mod.rs": "3af8c4a4f0cc99698132acb56b5b5b689748b37e5481ad6750214c208b972eed",
+    "tests/model_archives/body_features.rs": "0d2c7310844ef44ab37190e0321a80a10abfd3e4ec4531d65df8fc9a2c2408b3",
+    "docs/features/model-archives/freeze_body_features.py": "60dab137f1e80fe711e88418f8ab7ac20ad00a4ace6f5ecc9f696b14a8f34e88",
+    "docs/features/model-archives/body_feature_fixture_bytes.py": "7db441d6b76e2cb18eeacc05cebcb7acd42b5dbd5058cf9e65e8f4a08b739278",
+    "docs/features/model-archives/reference_plane_fixture_bytes.py": "35315b232f81653b2485386501438098bc3eca008f8e9b9105f5e6a121caff2d",
+    "docs/features/model-archives/body-feature-cases.json": "dbc94de66b98007af344e26e13282bb495baea113409403b67682fdd532ef880",
+    "docs/features/model-archives/body-feature-schema-reference.json": "12f13db4e9fa59569ba4a4db25dc6f600475367c01334f7fe0777251834a6c8d",
+    "docs/features/model-archives/body-feature-schema-snapshot.md": "15725c6ace7e8b28015098a9c50b764fbbaa25d67147101163b11593e2812075",
+    "tests/fixtures/model-archives/body-feature-cases.bin": "454b672a5fe77639d832cfadd0bed2a45779a071a8d0433b9596ac1be828c4b2",
+    "tests/fixtures/model-archives/body-feature-original.bin": "6588bdf3f51e5f686abbc6cec7c257f41afe34ff3cd956709bb40763ad686ca2",
+    "tests/fixtures/model-archives/body-feature-edited.bin": "c32c11e27be8896272390b4c2fe4bf65e18e4e259add431bdc92c10c30f34c8c"
+  },
+  "log_sha256": {
+    "model-body-feature-tests.log": "0dce724a58b6bac991c4d73402af1f93e990334531d2848282428584a33afaad",
+    "model-body-feature-all-model.log": "15da39fd976aacb71f8ca2e00c6edaf63ae0645c56b533bf427f2da835da70a2",
+    "model-body-feature-clippy.log": "d4631a4cc026b5c2aeddc46bdfa3867e0dbccd345de7760747dfb3ee4e0072d3",
+    "model-body-feature-python.log": "d6457fce343f4b025a95fc5cabe5d1c928fdab9fc9d80048cf2aee95a34c035a",
+    "model-native-corpus-body-features-first.log": "b7540b9489943ab340b16207cbc50803be42866e0df4b6c9fc2bbfa27168c83c",
+    "model-native-corpus-body-features.log": "128b9ba6f211f4c6056f24e611be616903faf7dcafa65c200d6545003faa6dcd",
+    "model-native-corpus-body-features-repeat.log": "8830c416af6a3d7b7b53a9992144c2fcf721b567a481cee4c2052dd84570bf31"
+  }
+}

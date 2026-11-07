@@ -1,0 +1,62 @@
+{
+  "issue": 134,
+  "status": "Local feature verification; full integration gates pending",
+  "revision": "55ad3b8c6a10db705ad33206309c9680fbf7b9ef",
+  "scope": "Complete nested stored types, offsets and raw values observed from unmodified source calls",
+  "owned": {
+    "cases": 1595,
+    "bytes": 892052,
+    "sha256": "bd50d6d1f33d984b884f00fef47b69895600fa6f044f54bd0ebe4c60be27d9d9"
+  },
+  "native": {
+    "cases": 242,
+    "bytes": 490008,
+    "sha256": "03239282bcdb12fbb8d47de86b96050dd25606b16131502e0c2a88c163cc7017"
+  },
+  "fresh_processes": {
+    "owned_roots": 1595,
+    "native_roots": 242,
+    "scope": "Every ordered nested field type, exact byte range and raw encoded value, including CString framing and complete compact transforms",
+    "processes": [
+      {
+        "path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\embedded-field-projection-process-0.bin",
+        "bytes": 1382060,
+        "sha256": "50c0dcbac7377ce4a2204693fde9209d4960de18db0b0e5dff5a59490c795063",
+        "exit": 0
+      },
+      {
+        "path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\embedded-field-projection-process-1.bin",
+        "bytes": 1382060,
+        "sha256": "50c0dcbac7377ce4a2204693fde9209d4960de18db0b0e5dff5a59490c795063",
+        "exit": 0
+      }
+    ],
+    "byte_identical_to_independent_source": true,
+    "byte_identical_between_processes": true,
+    "handles_reaped": true
+  },
+  "focused_new_tests": {
+    "passed": 2,
+    "failed": 0,
+    "ignored": 0
+  },
+  "strict_actual_source_checks": {
+    "passed": 19,
+    "failed": 0
+  },
+  "clippy_exit": 0,
+  "source_readers_modified": false,
+  "checks": [
+    "Every complete expected image and all exported bytes compared",
+    "Original source profile restored after each observation",
+    "All scalar-edit nested handles validated against their owning revisions",
+    "Source and result nested paths agree for each retained occurrence",
+    "Function/file audit and git diff --check passed"
+  ],
+  "exclusions": [
+    "Final full local PR gate",
+    "Final platform matrix",
+    "Native SolidWorks application execution",
+    "Complete installed schema parity"
+  ]
+}

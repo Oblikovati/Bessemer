@@ -1,0 +1,22 @@
+{
+  "issue": 223,
+  "behavior_version": "C3597-database-time-v1",
+  "clause": "9.2",
+  "evidence_id": "C-3597",
+  "containing_header_source_commit": "939b26cd",
+  "parent_reference": "docs/features/database-header/schema-reference.json",
+  "parent_reference_sha256": "0c073fe30bb8d8a52a6b15c49af5ae775e3b6166a824a4cf6af4efdbfd4ae665",
+  "reverified_source_hashes": 54,
+  "snapshot_sha256": "6a1be950ab31cd639a16333780a2203e16467150ce3fb0af80f9dd1c95adf66b",
+  "native_time_math_capture": "../inventor-interface/solidworks/research/parallel_constraint_db_physical_header_grammar_attempt02.json",
+  "native_time_math_capture_sha256": "4d0ed873bb0df7cdf82472a22f9518fb9e5ec1a5df3b7c684213542e8641ddba",
+  "target_executed": false,
+  "producer_parser_executed": false,
+  "arithmetic_contract": "All32-bit additions/shifts wrap; seconds SAR32; date OR clock. No component masks or calendar admission. Fixed stored-bit extraction preserves replay.",
+  "exclusions": [
+    "No callback/GetSystemTime/VFS execution",
+    "Zero-based month originates only from the documented default callback",
+    "No arbitrary input component round-trip or calendar guarantee",
+    "Other unpacked runtime fields are not extra persisted fields"
+  ]
+}

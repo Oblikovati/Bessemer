@@ -1,0 +1,60 @@
+{
+  "issue": 153,
+  "status": "reference-foundation-verified-with-explicit-incomplete-native-cases",
+  "production_api_added": false,
+  "checks": {
+    "passed": 8,
+    "failed": 0
+  },
+  "native": {
+    "streams": 232,
+    "logical_bytes": 34672,
+    "complete_streams": 226,
+    "arguments": 237,
+    "accepted": 228,
+    "failed": 9,
+    "bytes": 54800,
+    "sha256": "b77207bd7e4ebb1a6f4e5240790b6133a74bae41365c49648d1535897283f342"
+  },
+  "owned": {
+    "cases": 96,
+    "bytes": 13036,
+    "sha256": "2048dc2d716f14aba61c9db91d769638579fa511480b5c4ba8c909cdf4ac45a3"
+  },
+  "native_oracles": {
+    "projection": {
+      "accepted_arguments": 228,
+      "bytes": 182004,
+      "sha256": "9177b3e39697cbcbfb08c18aa0d7301f33eb8bbdd467c84e47ac0d50085ec51b"
+    },
+    "history": {
+      "accepted_arguments": 228,
+      "bytes": 303288,
+      "sha256": "1515207f2b7940b73f9fdad179c22bf9b68f41ff7b3c1f91dc2d24929dc3a9ee"
+    }
+  },
+  "historical_failures": {
+    "streams": 6,
+    "bytes": 894,
+    "outer_version": 860006,
+    "complete_same_version_comparators": 0,
+    "actual_stop": "words100_94 requires eight bytes; only four unclassified bytes remain",
+    "original_prefix_spans_raw_bytes_and_failure_preserved": true,
+    "not_a_valid_suffix_after_complete_parse": true
+  },
+  "earlier_reports": [
+    "initial-reference.json",
+    "initial-tail-reference.json"
+  ],
+  "original_tests": 3,
+  "bindings": "Full installed image/function/threshold/storage bytes checked without target execution",
+  "initial_and_strict_processes_reaped": true,
+  "strict_log_sha256": "e0e027560f4c412bdbbed370da12f9cfcdec70c34eab370c86a74309fe544b4a",
+  "exclusions": [
+    "Production Rust operations and parity with full expected fields/history",
+    "Resolution of six incomplete historical streams",
+    "Whole manager inventory and physical semantics",
+    "Native writer/application and geometric acceptance"
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending"
+}

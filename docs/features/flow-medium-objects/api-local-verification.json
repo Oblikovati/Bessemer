@@ -1,0 +1,57 @@
+{
+  "feature_issue": 241,
+  "fixture_base": "9891ae65",
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "rust_command": "cargo test --test flow_medium_object_fixtures --test flow_metadata_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 40,
+  "rust_failed": 0,
+  "rust_ignored": 0,
+  "body_tests_passed": 11,
+  "metadata_regressions_passed": 29,
+  "clippy_exit_code": 0,
+  "python_passed": 6,
+  "python_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "views": 912,
+  "coverage": "Complete raw kind-one body, all curve/shared/scalar patterns and intervals, raw name/native-text projection, explicit active-empty extras, stored/native-loaded state distinction and exact following bytes.",
+  "edits": "Every existing field for arrays/strings up to256 entries and endpoints above256, including all native wide patterns/name units/base/key/state/flags in both native views. No-op identity, independent whole-carrier patches, full physical history and fresh reversals. Complete native metadata/backend/body composition and reverse also passed.",
+  "native_wide_patterns": 1611,
+  "native_exposed_field_requests_per_view": 1627,
+  "boundaries": "Every small proper body prefix, all unsupported versions at body and seven curves, negative/impossible name/curve/shared counts, independent exact/one-below/zero body-byte/wide-word/name-unit limits, wrong kind, missing arrays, invalid indices, flag presence and string terminator rejection.",
+  "concurrency": "All eight public body types asserted Send/Sync; eight workers match complete body/tail/native-name and edited-carrier transcripts across all912 views after input mutation.",
+  "exclusions": [
+    "Kind-two bodies and complete reference/profile implementation",
+    "Engineering interpretation and numeric evaluation",
+    "Native runtime and application acceptance",
+    "Live frozen49b8ebec full gate excludes this later baseline and API"
+  ],
+  "humanizer": "Unavailable in installed skill catalog; prose pass left to maintainer review.",
+  "reference_sha256": {
+    "flowmediumobjects.py": "d22904f57af71281cc06fbd75ceee184e54065401e392eb5facddd9974c8dea7",
+    "flowmetadataprefix.py": "8dec7de6b29c9128ab20c2726e7a38afe30b56b4fb098de19ff0b0b408edc1db",
+    "flowmediumbackend.py": "31ad8ac19d69d297233fc8356342573020038179ed9ad2c1a2f76205d3f37adc",
+    "flowlegacytables.py": "52309d35baa5ecc33046fb2f7a98f4eadc7bfbd22db5b9803e41898131924420"
+  },
+  "source_lf_sha256": {
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\kind_one\\decode.rs": "370ae645be3b69348011c0dcc2573f0e0e6f6e97f863341623130ac0ea0a99c4",
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\kind_one\\edit.rs": "30c0f99411281559bebf0fc899d5d285a36a949bd14519d508437387e698861b",
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\kind_one\\fields.rs": "808ee7309bdda5867213e0438b5b8b9b2bb41524481344445de41f36db0645f8",
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\kind_one\\mod.rs": "76e44888c42b12630950de3022be9b2e0c4596d03a6d0c8a416e5d43e73e6dbd",
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\kind_one\\types.rs": "42b2aec52df47cc887ea0af3510b919bbf913f5777ae7d09f5b88adf27648da5",
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\kind_one\\view.rs": "9bc67fc502f94ddb7f4c45b7632fb93e397d762c464284fbd2798ce255505f8a",
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\mod.rs": "035d8bf8db69079a476bfd922cf63f58787e8557c3ee4f57e5cc8a960c71586f",
+    "src\\flow\\legacy_tables\\metadata_prefix\\decode.rs": "32a023c3bc607b3e277f74d27f2b439e6b7a6a6a7403431bcdee36dc5e8f5a50",
+    "tests\\flow_medium_object_fixtures.rs": "56997804045dd50d8a005805b39acaa2c0fa6d86a12aaff11e0904cea299e980",
+    "tests\\flow_medium_objects\\api.rs": "780ffed1a8ae993dcdfeb74ec04a718dc121ba9a4f410b864985c5aad2c3ef28",
+    "tests\\flow_medium_objects\\api\\contracts.rs": "36252677f09cf4f661f1d831e127d68c0fcc5b5733b2552d69457e13f2ebbebf",
+    "tests\\flow_medium_objects\\api\\edit.rs": "aa1f96a2a79999c61424ebdc0f67b748438204b2bff233a00e8ed5fe8505689b",
+    "tests\\flow_medium_objects\\api\\read.rs": "3e0d1fba82bad2a5e13c3b1e6cdde2eb5ca62dd3f12f0420ba70e7c4def4e925"
+  },
+  "log_sha256": {
+    "target\\flow-kind-one-api-tests.log": "b627762563484e988d125cbbb08608a10330d4de65bf32e5b37a047ddab73f41",
+    "target\\flow-kind-one-api-clippy.log": "d0533cefa87375c888dea776af8fdb9e81f8a1df79ae403c4a826187948f833a",
+    "target\\flow-kind-one-api-python-tests.log": "8a4d7793e9ecb16696c62026d5790519d6ff1751f1986962913bcbd7754d6daa"
+  }
+}

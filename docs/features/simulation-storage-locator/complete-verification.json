@@ -1,0 +1,88 @@
+{
+  "issue": 126,
+  "behavior_profile": "simulation-storage-locator-v1",
+  "base_revision": "a9b0f44a344db50ee85cf3ecd505bb59d2f23433",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "gate": "cargo xtask pr",
+  "gate_exit": 0,
+  "gate_log_sha256": "88d0f60ef46303791bf8945ee2bfcd93943cf85db8e88a2b001baa9b8ad7940b",
+  "test_summaries": 234,
+  "passed": 3035,
+  "failed": 0,
+  "ignored": 24,
+  "focused_with_export": {
+    "locator_passed": 6,
+    "previous_egr_compatibility_passed": 18,
+    "failed": 0
+  },
+  "owned_cases": {
+    "complete_locator_goldens": 256,
+    "excluded_utf16_shapes": 13
+  },
+  "entire_input_last_dot_used_without_directory_stripping": true,
+  "raw_surrogates_case_spaces_and_empty_components_preserved": true,
+  "normalized_boundary_and_complete_input_parent_retained": true,
+  "storage_mode_pattern": 16,
+  "storage_format_pattern": 0,
+  "stream_mode_pattern": 16,
+  "native_io_executed": false,
+  "native_name_acceptance_established": false,
+  "payload_decoded": false,
+  "requested_pattern_error_bits": 0,
+  "source_drop_and_returned_arc_mutation_isolation_verified": true,
+  "public_types_send_sync_asserted": 4,
+  "eight_threads_repeated_complete_components_match_serial": true,
+  "two_fresh_processes_ran_all_six_tests": true,
+  "complete_projection_outputs_compared_byte_for_byte": true,
+  "projection_output_bytes": 19400,
+  "projection_output_sha256": "d8d257cc62b70827c445b59889a6fac4c40f62998931818bbb86b6a259c79922",
+  "actual_frozen_reader_verified_the_entire_rust_projection_packet": true,
+  "projection_inputs_are_owned_synthetic": true,
+  "observations": [
+    {
+      "observed_peak_working_set_bytes": 5722112,
+      "run": 1,
+      "seconds": 0.228402
+    },
+    {
+      "observed_peak_working_set_bytes": 2912256,
+      "run": 2,
+      "seconds": 0.0603424
+    }
+  ],
+  "observation_scope": "All six focused tests per fresh process, including 256 complete locator parents/components/modes, excluded input shapes, literal directory-dot/empty/surrogate cases, source isolation and concurrent reuse. Elapsed includes startup; the full local gate was running concurrently. Working set sampled around 1 ms is a lower bound and may miss actual peaks. First implementation; no prior published locator release or statistical speed claim.",
+  "runtime_and_test_sha256": {
+    "src/simulation/locator.rs": "6d7e903148ca74a0764f35d62c6062218f72dfd3fe9a5b8fff1b610ecd691228",
+    "src/simulation/mod.rs": "18ad5650bf15d0c73f284b9dcf20a25d174fc08db054520788df619eec71ba63",
+    "tests/fixtures/simulation-storage-locator/locators.bin": "cdc5a0543745e592edcbc528a3feb002a0b74869ad11385b45dc6b849a73fe80",
+    "tests/simulation_storage_locator.rs": "2d3b768c5ef13444ebb91a8efb9e8955947df49189409ef9b0c7fa89c8d3e1d8"
+  },
+  "verification_dependency_sha256": {
+    ".gitattributes": "ef2c54ad61b6a1231ede84a4be573a52d6e3cbf71bb94a9edf5060e3e0b9aa37",
+    "docs/features/model-archives/pinned_reference_tests.py": "6f95547f7dee070b1b8fe50cefaaea9a45721789636add2e67a919e42169b36e",
+    "docs/features/simulation-images/freeze_images.py": "d47b59435889b89e93f30ce1fd366e976dfbc76a7389f733f5a632ffa87b02c7",
+    "docs/features/simulation-storage-locator/freeze_locator.py": "b9c77365db691e5d33c450177ae2bec2ddaf77a486504d0bfee584908914d652",
+    "docs/features/simulation-storage-locator/owned_locator.py": "dc8eb2840f8946ad96130de7fa12e9b8471c35c159c02b4f313e9a4d92e36eb0",
+    "src/error.rs": "4a10ca63c2ea2cfcb30d65b72f242dc7b8feafdd2f715e06adfbe2335a1b0a47",
+    "tests/common/simulation_images.rs": "7089399bf3c684254e38a2d4b646317ea2e113a30cf54231c4c9dbc2536f0eef",
+    "tests/simulation_egr.rs": "5fbaa37fb44cf10947d684bf6b13f8668ed5795d526f073b37d880bdb42060cb"
+  },
+  "reference_snapshot_identity": "d6894c1c377a9a00e5b1e3f7ba2f880f32d68d50add91b6cbc9ef165742e61e2",
+  "actual_reader_sha256": {
+    "simulationstorage.py": "4b04ef7464748166b5d5c490942b23582e8d3cf73bbd41afc7bc769cc310d788"
+  },
+  "exact_indexed_simulation_and_usd_fixture_packets_verified": 22,
+  "check_mode": "ExactLastDotUtf16LexicalProjection",
+  "acceptance_exclusions": [
+    "Native filesystem/COM name acceptance, case matching and stream-name legality",
+    "Filesystem resolution, existence-probe wildcard effects and actual storage operations",
+    "No-dot or embedded-NUL native behavior",
+    "GEN/MAS or other stream payload decoding",
+    "Suffix-based guesses for EGR flat transport or other file grammars",
+    "SolidWorks application acceptance",
+    "ThreadSanitizer execution on this Windows host; required Linux CI remains separate"
+  ],
+  "humanizer": "Unavailable; prose pass left for review",
+  "dependencies_added": false
+}

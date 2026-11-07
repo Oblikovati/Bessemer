@@ -1,0 +1,26 @@
+{
+  "issue": 202,
+  "source_revision": "35feaf56f0b914b91ff2f39c7f046fa410211107",
+  "status": "Complete native stored parameter projections passed; broader operation acceptance remains open",
+  "process_exit_code": 0,
+  "tests_passed": 1,
+  "tests_failed": 0,
+  "seconds": 306.06,
+  "cases": 906,
+  "configuration_parameter_definitions": 4430,
+  "resolved_feature_parameter_definitions": 39487,
+  "projection_population_matches_independent_physical_class_scan": true,
+  "all_name_and_history_dependencies_resolved": true,
+  "complete_configuration_and_feature_stream_bytes_unchanged": true,
+  "log_sha256": "6aa2842dc3e67d9a95caf2cd7229ce9e338c4a891282c6c58b81394c496e7284",
+  "case_records_sha256": "81af3b80a05e497cd02cb03edfca107f92b983c8e2edaa617a838a5a72bfabe3",
+  "case_records_gzip_sha256": "537be4585becbbd9c69b0deeb035d0ca54fb0f4cea2a69e7bbfd3a9e2973cef1",
+  "scope": "One complete retained native read/projection process using the explicit installed kernel schema; physical population and dependency checks are internal consistency checks, not fresh original Source equality",
+  "exclusions": [
+    "Fresh actual Source comparison of exported parameter values and name identities",
+    "Native parameter edits, complete native document reopen/reversal and fresh-process result comparison",
+    "No assertion that every parameter class is populated in every native context or admitted version",
+    "No native SolidWorks application, native setter, equation, unit or geometry acceptance",
+    "Full local and exact-head remote publication gates remain open"
+  ]
+}

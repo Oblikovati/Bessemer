@@ -1,0 +1,61 @@
+{
+  "cases": 2899,
+  "packets": {
+    "graph1": {
+      "cases": 946,
+      "bytes": 148521,
+      "sha256": "71ba0a8c7ca14e69669f7fd90f45e8e0e95d9789d0406e8051ff7b122101346a"
+    },
+    "graph2": {
+      "cases": 765,
+      "bytes": 5199588,
+      "sha256": "97b32ef3417af468772172d28cd04db5de9b81e8eb681512a27354cfc3a975d7"
+    },
+    "graph2-containers": {
+      "cases": 498,
+      "bytes": 11899811,
+      "sha256": "3863e990bf2f127900180a918db794053928b3b58002f75eafb748bd3678ef95"
+    },
+    "auxiliary": {
+      "cases": 509,
+      "bytes": 3462728,
+      "sha256": "b6a35c5ec8a19b3cd98a49507d08abf588bcdea416037a39a7c4a06573b477a7"
+    },
+    "trailing": {
+      "cases": 28,
+      "bytes": 11759421,
+      "sha256": "9b63159badb808e11bc4a196b27165d98e81794f6ce86063f1aea054896196db"
+    },
+    "chunks": {
+      "cases": 153,
+      "bytes": 1346371,
+      "sha256": "743b94848e4408453f168162c909db985d13a1ae29d2e6567e7255c734cef6f4"
+    }
+  },
+  "reference": {
+    "evidence_sha256": "fe4b1a770a2f51399513ef4ea4fc81dd0a56ce405e579002c4f90e1ff56dfd3c",
+    "synthetic_sha256": "53b1e74a79f963a88ad4d8bb3e66bd4fb8717d7bba8c2317a4e8772c9e6ee323",
+    "limitations": [
+      "Logical component buffers and version-0 chunk framing only",
+      "Chunk codec and decoded-size agreement are not verified",
+      "Installed record-121 version 3 still unsupported; no version-6 native fixture",
+      "Runtime allocations, sentinel pointers, scalar engineering meanings and full parent graph framing remain open",
+      "No global coverage increase or denominator"
+    ]
+  },
+  "source_lf_sha256": "98430fb615a2281af300ff97d8d5564df93e38a248d9164ff8a089d3788516d8",
+  "source_dependencies_lf_sha256": {
+    "flowmetadataprefix.py": "8dec7de6b29c9128ab20c2726e7a38afe30b56b4fb098de19ff0b0b408edc1db",
+    "flowlegacytables.py": "52309d35baa5ecc33046fb2f7a98f4eadc7bfbd22db5b9803e41898131924420",
+    "swarchive.py": "49daa712eacb3d25077835c0177118e94790d435118f281d03f110e73cf5dbf8"
+  },
+  "compression": {
+    "build": "1.3.1.zlib-ng",
+    "runtime": "1.3.1.zlib-ng"
+  },
+  "installed_native_component_fixtures": false,
+  "complete_parent_record": false,
+  "chunk_codec_decoded": false,
+  "native_execution": false,
+  "engineering_fields_assigned": false
+}

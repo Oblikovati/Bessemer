@@ -1,0 +1,140 @@
+{
+  "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\frontier-features-native-evidence.json",
+  "source_sha256": "e6d5882132e560c64b4f81377161ed27bfe8dd93226c3d80479d5c4cc45fd1bd",
+  "clause": "11.350 / C-392",
+  "modules": {
+    "sldmodu.dll": {
+      "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+      "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+      "primary_tables": [
+        {
+          "class_name": "moLockFeature_c",
+          "object_offset": 0,
+          "locator": "0x4d3387e0",
+          "vftable": "0x4cf93428",
+          "slots": [
+            "0x4bc237a0",
+            "0x4bc23d50",
+            "0x4cba273f",
+            "0x4b29dae0",
+            "0x4b29dae0",
+            "0x4bc23e20",
+            "0x4bb66bb0",
+            "0x4bb54930"
+          ],
+          "bases": [
+            ".?AVmoLockFeature_c@@",
+            ".?AVmoFeature_c@@",
+            ".?AVmoConcept_c@@",
+            ".?AVmoLoggedNode_c@@",
+            ".?AVmoNode_c@@",
+            ".?AVsu_CObject@@",
+            ".?AVCObject@@",
+            ".?AVutDisplayedEntity_c@@"
+          ]
+        },
+        {
+          "class_name": "moSMEnvTableFeat_c",
+          "object_offset": 0,
+          "locator": "0x4d3695c0",
+          "vftable": "0x4d1e79d0",
+          "slots": [
+            "0x4c644ee0",
+            "0x4c644e70",
+            "0x4cba273f",
+            "0x4b29dae0",
+            "0x4b29dae0",
+            "0x4b8d7ca0",
+            "0x4bb66bb0",
+            "0x4bb54930"
+          ],
+          "bases": [
+            ".?AVmoSMEnvTableFeat_c@@",
+            ".?AVmoModelFeature_c@@",
+            ".?AVmoFeature_c@@",
+            ".?AVmoConcept_c@@",
+            ".?AVmoLoggedNode_c@@",
+            ".?AVmoNode_c@@",
+            ".?AVsu_CObject@@",
+            ".?AVCObject@@",
+            ".?AVutDisplayedEntity_c@@"
+          ]
+        },
+        {
+          "class_name": "moLPatternItemId_c",
+          "object_offset": 0,
+          "locator": "0x4d3546d8",
+          "vftable": "0x4d129340",
+          "slots": [
+            "0x4b67d280",
+            "0x4baa5180",
+            "0x4cba273f",
+            "0x4b29dae0",
+            "0x4b29dae0",
+            "0x4b6859b0",
+            "0x4cba274b",
+            "0x4cba2751"
+          ],
+          "bases": [
+            ".?AVmoLPatternItemId_c@@",
+            ".?AVmoPatternItemId_c@@",
+            ".?AVsu_CObject@@",
+            ".?AVCObject@@"
+          ]
+        }
+      ]
+    },
+    "sldMoPartu.dll": {
+      "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldMoPartu.dll",
+      "sha256": "2201edfa07b1a7484acedb6db4600fa7a00e55b16090a03b92fe7d9b14cb2128",
+      "primary_tables": [
+        {
+          "class_name": "edgeParamsObject_c",
+          "object_offset": 0,
+          "locator": "0x1804eebf0",
+          "vftable": "0x18047ae70",
+          "slots": [
+            "0x18026f9e0",
+            "0x18026eb30",
+            "0x1803ace24",
+            "0x1800e3360",
+            "0x1800e3360",
+            "0x180272390",
+            "0x1803ace66",
+            "0x1803ace60"
+          ],
+          "bases": [
+            ".?AVedgeParamsObject_c@@",
+            ".?AVedgeRadiusObject_c@@",
+            ".?AVradiusObject_c@@",
+            ".?AVsu_CObject@@",
+            ".?AVCObject@@"
+          ]
+        },
+        {
+          "class_name": "featRadiusObject_c",
+          "object_offset": 0,
+          "locator": "0x1804eeb60",
+          "vftable": "0x18047ad38",
+          "slots": [
+            "0x18026fa30",
+            "0x18026eea0",
+            "0x1803ace24",
+            "0x1800e3360",
+            "0x1800e3360",
+            "0x180272670",
+            "0x1803ace66",
+            "0x1803ace60"
+          ],
+          "bases": [
+            ".?AVfeatRadiusObject_c@@",
+            ".?AVradiusObject_c@@",
+            ".?AVsu_CObject@@",
+            ".?AVCObject@@"
+          ]
+        }
+      ]
+    }
+  },
+  "scope": "Supplied native serializer and RTTI evidence; complete code retained at the hash-bound source."
+}

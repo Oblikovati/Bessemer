@@ -1,0 +1,74 @@
+{
+  "issue": 112,
+  "behavior_profile": "simulation-paired-images-v1",
+  "base_revision": "b9d21da9e48755a3a3f22fe6c6ac14f87dc623b8",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "gate": "cargo xtask pr",
+  "gate_exit": 0,
+  "gate_log_sha256": "5cd3e07dcf3fe62e258c27589fe3b1992faf9481b0d09916cfd87a796039afdd",
+  "test_summaries": 223,
+  "passed": 2919,
+  "failed": 0,
+  "ignored": 12,
+  "focused_with_native": {
+    "passed": 7,
+    "failed": 0
+  },
+  "two_fresh_process_outputs_compared_byte_for_byte": true,
+  "native_edit_bundle_bytes": 6037524,
+  "native_edit_bundle_sha256": "717715a54055e413294ff072e8e200d3b3c56c848713d9f7dfc34856950a5520",
+  "observations": [
+    {
+      "observed_peak_working_set_bytes": 47026176,
+      "seconds": 0.1165819,
+      "run": 1,
+      "bundle_sha256": "717715a54055e413294ff072e8e200d3b3c56c848713d9f7dfc34856950a5520"
+    },
+    {
+      "observed_peak_working_set_bytes": 61374464,
+      "seconds": 0.0959501,
+      "run": 2,
+      "bundle_sha256": "717715a54055e413294ff072e8e200d3b3c56c848713d9f7dfc34856950a5520"
+    }
+  ],
+  "benchmark_scope": "One complete three-carrier native reference comparison and coordinate-edit workload per process; elapsed includes process startup; observed peak working set sampled at approximately 1 ms. First implementation, no prior published release for comparison. No statistical speed claim.",
+  "runtime_and_test_sha256": {
+    "src/simulation/mod.rs": "3e86b2ba7cfcd1ed8becb4e73ac584e63e2554c281bd0ac22d724d4228b33060",
+    "src/simulation/study.rs": "92e360ff4c9ca2311bcb9ad3fc42eebe036f5785e082ac0c37dd6f95ccdbffe2",
+    "src/simulation/wire.rs": "fe58740fc3579aa620c96453564429a795e7e04f820922d5200bc43e834929ff",
+    "src/simulation/gen/framing.rs": "79961cda17b227bc50516b6fa0f5bf2722e4848fd00b88cda9174fe3faf8171a",
+    "src/simulation/gen/mesh.rs": "8425e706f0a929c23a62ebe6627fbdaf40cabb9d3f45081052956b9ce33322b7",
+    "src/simulation/gen/mod.rs": "32d6ba2b4c743f5f9d815cb89fdce8f2398970ed37a9383d3567710d0e42d8d7",
+    "src/simulation/gen/outcome.rs": "496dd8c5b661495c8f24e7c8d0cfc12d602202e01cd79ee93e499cb3c5c86f42",
+    "src/simulation/gen/parts.rs": "4412af27f0a142630895da86676b070859b98358f3da92f2920894c468438a2f",
+    "src/simulation/master/codec.rs": "407d229aea74be259f4db01fc488020b7f9275ccd07960d9ef0b76b49c921c2c",
+    "src/simulation/master/mod.rs": "35260854fa886a6ed7caae51139afe0ce6ec2d2754dacb0ef6a9789ba5fa3ced",
+    "src/simulation/master/types.rs": "962689069e34d1457a4775639af73bfd79e67a0b4f02d0e17f1dce9413a8739d",
+    "tests/fixtures/simulation-images/owned.bin": "461ac883a02dd9491d42122a11ad92c37f6968a637f30d48667b877bab3c07c6",
+    "src/lib.rs": "ec79e61148421e86d60aeac95910bea8d3fdc84c5d73a9f68819d82252fdb146",
+    "tests/simulation_images.rs": "bfbb19a396d4767a41668fca2bce6e0fb18725b87a8ce85f051bef5868c451bc",
+    "tests/common/simulation_images.rs": "7089399bf3c684254e38a2d4b646317ea2e113a30cf54231c4c9dbc2536f0eef",
+    "tests/common/simulation_failures.rs": "cec47e90a9470f9b74288691a7fb63d24d8699b2fa07e20b5709ef96fae7bf1f"
+  },
+  "acceptance_exclusions": [
+    "solver and unknown field semantics",
+    "geometry, topology, self-intersection and tolerance consistency",
+    "native SolidWorks application",
+    "ThreadSanitizer on Windows",
+    "other versions and nonempty delegated collections"
+  ],
+  "humanizer": "Unavailable; prose pass left for review",
+  "dependencies_added": false,
+  "reference_snapshots": {
+    "source-snapshot.json": "94715ce7b22294501db738c9b0d84e364d78a0347f942f9595efa50f61d85169",
+    "native-edit-source-snapshot.json": "f4a1afb3d748135ccd08febe79fc5642169b5c597d2bbe2104b74de1ba500ab9"
+  },
+  "actual_reader_sha256": {
+    "cfb.py": "a55a2ceb4798c8f66b5b6ae37a8555dca83b90e12d587f673573fb6bc0137091",
+    "simulationmaster.py": "6213855a290cf1627e852daff1630089752c1a82fdf311c9e5c55c3c7cfedb42",
+    "simulationgen.py": "c562670bf27fc0a8f833f3295413661c76a85351fdbd8d383e2157087a80ea92",
+    "simulationmesh.py": "3a8cd7bff23f93a77cf4f5dffd0dcba01b9cf1f4d75a7a1c56915acf56db3f5c"
+  },
+  "reference_revalidation": "The full source tree gained unrelated research files and sketch-prefix changes while verification ran; all four actual Simulation/CFB reader hashes remained unchanged and both reference revalidations passed."
+}

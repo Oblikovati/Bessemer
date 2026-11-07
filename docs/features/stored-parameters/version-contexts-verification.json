@@ -1,0 +1,46 @@
+{
+  "issue": 202,
+  "scope": "Sixty owned parameter graphs using complete actual native configuration contexts; no added native parameter population",
+  "contexts": [
+    {
+      "version": 11000,
+      "case": 0,
+      "inherited_slots": 413
+    },
+    {
+      "version": 18000,
+      "case": 210,
+      "inherited_slots": 145
+    }
+  ],
+  "original_graphs_read": 48,
+  "independent_edited_goldens": 12,
+  "original_source_tests_passed": 1,
+  "initial_source_seconds": 11.262,
+  "initial_source_exit_code": 0,
+  "strict_regeneration_seconds": 20.894,
+  "strict_regeneration_exit_code": 0,
+  "all_fixture_bytes_unchanged": true,
+  "strict_source_snapshot_identity": "e7a3fef0523f971bcd6f79bfad34c12f8214682fa0ee04d11df603c025da69fa",
+  "typed_tests_passed": 1,
+  "typed_tests_failed": 0,
+  "typed_test_seconds": 1.23,
+  "typed_exit_code": 0,
+  "complete_document_edits_reopens_and_fresh_reversals": 12,
+  "original_native_documents_isolated": true,
+  "unselected_streams_preserved": true,
+  "clippy_exit_code": 0,
+  "post_format_maximum_function_lines": 19,
+  "logs_sha256": {
+    "parameter-version-contexts-source-initial.log": "2a87acfc16a20bfdf439b30c9cabb4848402c4ac2787f4ebecccd39d95a2c3ab",
+    "parameter-version-contexts-source-regeneration.log": "5a7654553b9c56efb125e11edfbe59cb496beebf4992d78a00986c64f33987a6",
+    "parameter-version-context-build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "parameter-version-context-tests.log": "7c1a72ac6eb5c6427d6a395c3d669838daeef467be1ea455eee4ec9a0be7ba93",
+    "parameter-version-context-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "exclusions": [
+    "The active full PR gate at f8b7578a excludes these later additions",
+    "Native positive parameter populations are unchanged",
+    "No application, geometry, unit/equation evaluation, complete older containing-body or whole-format parity claim"
+  ]
+}

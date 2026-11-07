@@ -1,0 +1,60 @@
+{
+  "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\frontier-features-native-evidence.json",
+  "source_sha256": "e6d5882132e560c64b4f81377161ed27bfe8dd93226c3d80479d5c4cc45fd1bd",
+  "installed_module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+  "installed_sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "primary_tables": [
+    {
+      "class_name": "moTrimWireExtEdgeIdRep_c",
+      "object_offset": 0,
+      "locator": "0x4d329918",
+      "vftable": "0x4cf050a0",
+      "slots": [
+        "0x4bbb6e90",
+        "0x4ba95a40",
+        "0x4cba273f",
+        "0x4b29dae0",
+        "0x4b29dae0",
+        "0x4bbbbec0",
+        "0x4cba274b",
+        "0x4cba2751"
+      ],
+      "bases": [
+        ".?AVmoTrimWireExtEdgeIdRep_c@@",
+        ".?AVmoDoubleEdgeIdRep_c@@",
+        ".?AVmoEdgeIdRep_c@@",
+        ".?AVmoEntityIdRep_c@@",
+        ".?AVgcEntityIdRep_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ]
+    },
+    {
+      "class_name": "moPttnBodyEdgeIdRep_c",
+      "object_offset": 0,
+      "locator": "0x4d329f10",
+      "vftable": "0x4cf06af0",
+      "slots": [
+        "0x4bbb6b10",
+        "0x4ba95ab0",
+        "0x4cba273f",
+        "0x4b29dae0",
+        "0x4b29dae0",
+        "0x4bbbd460",
+        "0x4cba274b",
+        "0x4cba2751"
+      ],
+      "bases": [
+        ".?AVmoPttnBodyEdgeIdRep_c@@",
+        ".?AVmoRefEdgeIdRep_c@@",
+        ".?AVmoEdgeIdRep_c@@",
+        ".?AVmoEntityIdRep_c@@",
+        ".?AVgcEntityIdRep_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ]
+    }
+  ],
+  "clause": "11.350 / C-392",
+  "scope": "Native evidence supplied by the schema project; complete evidence retained at source path. No inferred wire slots for direct entity-ID members."
+}

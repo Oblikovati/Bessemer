@@ -1,0 +1,52 @@
+{
+  "feature_issue": 241,
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "python_version": "3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)]",
+  "baseline_commit": "9d7a07a8",
+  "rust_integration_passed": 85,
+  "rust_internal_passed": 3,
+  "rust_failed": 0,
+  "python_baseline_passed": 8,
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "public_types_send_sync": 8,
+  "workers": 8,
+  "requests": 5424,
+  "accepted": 5184,
+  "rejected": 240,
+  "source_lf_sha256": {
+    "src/flow/legacy_tables/metadata_prefix/backend/kind_one/evaluation/compute.rs": "eaf11d3cf482be182cc4e1f2507c87d2f8ca95ca82476addb70c41b9f74307c4",
+    "src/flow/legacy_tables/metadata_prefix/backend/kind_one/evaluation/compute_tests.rs": "6d3a34da06048d959c243cd56a967a982b9226c9f4d45542201d773ce0126c96",
+    "src/flow/legacy_tables/metadata_prefix/backend/kind_one/evaluation/mod.rs": "52f524453c4036fad2c7fc7a522b497052c6fb0795f15af151db0c5a159ffd6e",
+    "src/flow/legacy_tables/metadata_prefix/backend/kind_one/evaluation/types.rs": "afa8929e647baebb6e70062eb044155466cfd39e722d4072f659e58d9e3e6cd7",
+    "src/flow/legacy_tables/metadata_prefix/backend/kind_one/evaluation/view.rs": "dce81ffdbcfdce9b29e386b46dccd6c286e7d6a00322173a96099a47862e1dc0",
+    "src/flow/legacy_tables/metadata_prefix/backend/kind_one/mod.rs": "98d87c4d643e59eaa417c29c4b963f184731991dd869616d2f3098469fc4b8f2",
+    "tests/flow_medium_objects/evaluation.rs": "78432254ebd293f1625a4f6c35e094b5aade8d7385ed08192640628dcbd823e1",
+    "tests/flow_medium_objects/evaluation/api.rs": "bec74de1eaf8fbf33a8e58a30ecfd4ec49db6733ac36c408b7c200c8c81e755c",
+    "tests/flow_medium_objects/evaluation/api/contracts.rs": "e60ef26733c3b9cab5e905b0f6f6eda72540c25508b95983ffcc75395327bb13",
+    "tests/flow_medium_objects/evaluation/api/mixed.rs": "d44ad8912e180f9321f0d8a7f2b33c1cf1e4a1322782de4e5a9835b275b0b283",
+    "tests/flow_medium_objects/evaluation/api/read.rs": "bdaabd149f4054faf3d17cb6f04f79149b7ea81d6b7c785bd3c796bb4df59ccd"
+  },
+  "log_sha256": {
+    "flow-medium-evaluation-api-tests.log": "9f4f2ce97fea102d0defbbfc987e9b0cf1883fc71df62bc829f99a610e6814d8",
+    "flow-medium-evaluation-api-unit-tests.log": "ae2a36921fe34754d9804d8e8833093b980da14aec09ab2762be05900fc5ae8a",
+    "flow-medium-evaluation-api-clippy.log": "d3357263b82c87b7a218055e69b501bfed134a9d3d8af7558ff6f625d4a2d114"
+  },
+  "unchanged_packet_gzip_sha256": {
+    "tests/fixtures/flow-medium-objects/kind1.bin.gz": "8fbee903057eb2a23b321ffc57751cf4652066d23bb52a3d9b5ae7b390801839",
+    "tests/fixtures/flow-medium-references/bodies.bin.gz": "b1e666a46dc2d1e130ce45000cbeb62ef79210c029aa8bc51d2e4a7c9a3b092f",
+    "tests/fixtures/flow-medium-references/profiles.bin.gz": "fa43ba510d7df86904ba32c1b741253b4931dbf3d44063a414d9be3c428fa019",
+    "tests/fixtures/flow-medium-kind-two/bodies.bin.gz": "2a5410e6e447ef404ae176cf370727d2bb28313dfe407c34362d21ac945c656b",
+    "tests/fixtures/flow-medium-mixed/profiles.bin.gz": "b81a6748ac80e05565325af8cecd8a1d0903e26fb09de5965ccb98110382995b",
+    "tests/fixtures/flow-medium-evaluation/curves.bin.gz": "2162b01d3027461d67ccd8212eb6250ba242856ecdc57d8e1c7c1c09af77e996"
+  },
+  "humanizer": "Unavailable; prose pass left to maintainer review",
+  "scope": "FiniteOrderedV1 numeric API for kind-one ordinals1/2/4: complete selected finite/order guards, documented clamps/search/operation sequence, exact finite/infinity bits and NaN classification for all FEV1 outcomes; immutable provenance/check-mode/error coverage; validation precedence and shape/bounds failures; unchanged source after success/failure/edit/destruction; eight-worker actual-result transcripts; later kind-one evaluation, nested scalar edit and exact complete mixed-carrier reversal.",
+  "exclusions": [
+    "Portable arithmetic NaN sign/payload",
+    "Runtime exact-real interpolation error certificate",
+    "Native floating-point environment, engineering units, other accessors, model evaluation and native application execution",
+    "Current combined full gate frozen at d7bc6b16 excludes this later baseline/API"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "base_commit": "353f84a",
+  "fixtures": {
+    "tests/fixtures/manager-scalars/cases.bin": "ca50e1921d9c4f7db77895127b170f2f46d17b7974f9d7d7f963c23815c98689",
+    "tests/fixtures/manager-scalars/owned-0-0.bin": "64e72972f63c185d135a9a610f30ca6c5033dbf9910d73e59102fdbc39846546",
+    "tests/fixtures/manager-scalars/owned-0-0.tsv": "80f588450f8085d51a3dcdc7da365e9be2780c2123b1ffed7177448b564fbb07",
+    "tests/fixtures/manager-scalars/owned-0-1.bin": "3e3bbb2540d7a4b8ab875c81e6cec968f66fccc8ca45bc2ac40836732db870f8",
+    "tests/fixtures/manager-scalars/owned-0-1.tsv": "86a5fbaf77309cb6aaf4b517d913f9fae26daff4c370500062493d3c7d4c9582",
+    "tests/fixtures/manager-scalars/owned-0-2-edited.bin": "f8f34c1bc1ab91d3241a8891b553a155eda52b3d70c5fafeac09db2e719f52e9",
+    "tests/fixtures/manager-scalars/owned-0-2-edited.tsv": "236a6681aa258d21781d278c887c0df304e54565976e5309404b3883af5b2553",
+    "tests/fixtures/manager-scalars/owned-0-2.bin": "87b0d9ec7cc1e0ac23177ef5145ce7e41fc1d0af0048acb01e7d7214abe89c56",
+    "tests/fixtures/manager-scalars/owned-0-2.tsv": "bcb61d5cfae671939b1c7291137f5eb86b520a8da7f15ac61efd43fa9cd761f6",
+    "tests/fixtures/manager-scalars/owned-0-3.bin": "dc146f1ce59dcd92fa450db472a16b544f81febad96a9b68a9b83e7dd718fbce",
+    "tests/fixtures/manager-scalars/owned-0-3.tsv": "283029cfc10687a0f4746686a9018c1dbea7fcf26723fda221c7b6c26ae7a472",
+    "tests/fixtures/manager-scalars/owned-0-4.bin": "9d27a5f8b00511ca617610d5d228e243a0ecda2b5484bb34b861c92ee4f38e8b",
+    "tests/fixtures/manager-scalars/owned-0-4.tsv": "3fe3dabe54888f6f01a756c96efb4e75dd18a7ca6ca0cffb99eaeafd10a95a0d",
+    "tests/fixtures/manager-scalars/owned-0-5.bin": "a7bcdeca8614563a7b54d701a5c9328140b8dbf782316028e9c066f0ef91bd23",
+    "tests/fixtures/manager-scalars/owned-0-5.tsv": "53b66843bddf186f8bf73d013d5ed895d6fb33af6e36a28f0aa98c4d866c51f9",
+    "tests/fixtures/manager-scalars/owned-1-0.bin": "166aceb6ad665fea92def6882f17eb460b4a35a45ed55019fae0e91f2237ec75",
+    "tests/fixtures/manager-scalars/owned-1-0.tsv": "eb08b77acf66e78f1d6d149aff44023804807d2d82cd09414235508580cced41",
+    "tests/fixtures/manager-scalars/owned-1-1.bin": "292d835eb255f5ecb1408edd63e90b9c946f49e469ae85b1443f5afb25dd8b95",
+    "tests/fixtures/manager-scalars/owned-1-1.tsv": "253e3fca092afcb161e131b829723224c8e1d2b9f81706ac05fa62223562c643",
+    "tests/fixtures/manager-scalars/owned-1-2-edited.bin": "cf3383b482181415cd424661e8fecc52cd8dbffa825f0c13a07346fcd4582b2f",
+    "tests/fixtures/manager-scalars/owned-1-2-edited.tsv": "704b22d2b7f8ead8765ace2b1e8596eb83c2133afe12d3affbe5e6f2b80a02fd",
+    "tests/fixtures/manager-scalars/owned-1-2.bin": "13b14bf445ad0708c901d2c02f1d502ca054c63c00f277b180403dacb61c53d3",
+    "tests/fixtures/manager-scalars/owned-1-2.tsv": "dfa94432c9bf6d30299b2266b57b10872267fa3eb419d1ad6a6eac00aa81ae97",
+    "tests/fixtures/manager-scalars/owned-1-3.bin": "aea901b4f6d94f42db64622fbd74e07de27aa37684c7e56f553615ae9d1888f0",
+    "tests/fixtures/manager-scalars/owned-1-3.tsv": "75f00a3432f20714344ead10f4e9d4876729751d318d892060d8f0297229bb38",
+    "tests/fixtures/manager-scalars/owned-1-4.bin": "d971d50be2551255cd2c57a963f225d7926eaeeb08bd1fa91ee0efa6abd1bcc6",
+    "tests/fixtures/manager-scalars/owned-1-4.tsv": "ee59868bf035fcfdd95aad65311e4e1701563851b12f78d538650effaa8454c4",
+    "tests/fixtures/manager-scalars/owned-1-5.bin": "1ea93d19cc5a83526a3d1b2dcb996725b8e42800e4fa245ef5d2f9fd833fda9e",
+    "tests/fixtures/manager-scalars/owned-1-5.tsv": "2dbadb0f2e10058f9bfdbd180c1732f0f530a8fa1adc124fbdfc90eca85db9d8"
+  },
+  "verification": {
+    "command": "cargo test --test resolved_manager_scalars",
+    "passed": 3,
+    "fixtures_unchanged": true
+  }
+}

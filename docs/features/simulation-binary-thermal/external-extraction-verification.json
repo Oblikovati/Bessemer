@@ -1,0 +1,13 @@
+{
+  "issue": 134,
+  "change": "Extracted existing external-object and shared-file field iteration into reusable helpers; ordinary entry points retain their original context guard, rule order, gates, roles and field paths.",
+  "fixture": "tests/fixtures/model-archives/external-reference-cases.bin",
+  "fixture_sha256": "38130b5b507b155642261bac93dc5f08ee3ed95611de0dfe8de3a5d4caaa3c6f",
+  "complete_cases": 24,
+  "independent_fields": 396,
+  "command": "cargo test --lib external_reference_tests",
+  "before": {"passed": 4, "failed": 0},
+  "after": {"passed": 4, "failed": 0},
+  "coverage": ["Complete independent fields and exact reconstruction", "All prefixes and trailing bytes", "Unsupported field kinds and first-error retention", "Owned strings and parallel reconstruction"],
+  "excluded": ["Historical embedded context behavior", "Complete thermal interoperability"]
+}

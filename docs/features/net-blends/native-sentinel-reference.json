@@ -1,0 +1,114 @@
+{
+  "clause": "11.226 / C-268",
+  "scope": "Source-only reproduction of five original native net-blend root spans; no whole-stream credit for incomplete inputs.",
+  "snapshot_identity": "6e0b110bc4019e0a03011786724f2eadd094d342e465d819d944b4ec71819497",
+  "net_blend_roots": 5,
+  "net_blend_bytes": 40237,
+  "records": [
+    {
+      "index": 346,
+      "path": "samples/learn/Mouse/Main Housing Overmold.SLDPRT",
+      "configuration": "Contents/Config-0",
+      "sha256": [
+        "9a31a924047241410209fd059af6a2cdc16775e43f9ded2b63bc9db2e12bae7c",
+        "e32951b06bc3784dc02e6f8b9e4e6385614ddaf861d95db0846e3b9737086857",
+        "e8b9c4a57196744bbda5b582c0aa9d9a4ff4890a9a77cd4e9992524377dd357e",
+        "930f0a854304cc5a3a4635714dcf51e8f881d3c718349e877bc4a8bba438153a"
+      ],
+      "matched_prior_roots": 42,
+      "net_blend_roots": [
+        {
+          "start": 336664,
+          "end": 357833,
+          "sha256": "a218cfb57dce26923ec9a7e66ec082a831118c997a42c0d879a68f8de865bd3f",
+          "class_name": "moNetBlend_c"
+        }
+      ],
+      "source_checkpoint_status": "explicit_stop"
+    },
+    {
+      "index": 618,
+      "path": "samples/tutorial/appearances/usb_case1.sldprt",
+      "configuration": "Contents/Config-0",
+      "sha256": [
+        "4d9dce59dc4b34ce612032b0094d6ae88d088f7fbd52462d55287c5067ebea01",
+        "df7511de420d85a7154ca39188d168be741ecc1cf56bbbd617547da1743389f8",
+        "e6fe5bd25344d595ca8b516862c58c58c3585bffeb0633ce92d508840b40fe1d",
+        "ce7e620fee524f515c7a64fe7d423135fec90dccdba016a472ec1de0ecd60353"
+      ],
+      "matched_prior_roots": 29,
+      "net_blend_roots": [
+        {
+          "start": 35926,
+          "end": 40625,
+          "sha256": "e9cef1bf9fa279e85ef58c3cc846661f17e538142936e45439efb70dbbc86af6",
+          "class_name": "moNetBlend_c"
+        }
+      ],
+      "source_checkpoint_status": "list_complete"
+    },
+    {
+      "index": 619,
+      "path": "samples/tutorial/appearances/usb_case2.sldprt",
+      "configuration": "Contents/Config-0",
+      "sha256": [
+        "048c378a7bf6734648ada9b1a9c3e15a14319f49ab4414a575dbe964c0b5300e",
+        "e3cf7101f7fef34c85203e0fe23621295cf36c373f5d0c1bad2e13777c7593d1",
+        "3539d6abcedf9825269ae880f1c60b6bac81718ff2c228c249c7e93121ee6080",
+        "209cd784b7910d26eb0f0da1c5d4f8664a46402154aee383638b5a71b21cd83d"
+      ],
+      "matched_prior_roots": 29,
+      "net_blend_roots": [
+        {
+          "start": 35926,
+          "end": 40897,
+          "sha256": "fb01a9fb400015d07d5b780462cb1a44f99b257ce71283a9af25dfe0b4cbdfba",
+          "class_name": "moNetBlend_c"
+        }
+      ],
+      "source_checkpoint_status": "list_complete"
+    },
+    {
+      "index": 624,
+      "path": "samples/tutorial/appearances/usb_cover1.sldprt",
+      "configuration": "Contents/Config-0",
+      "sha256": [
+        "e2696979dbe133173dee30da56bcbc24596cde05a9cca9378c05021f8390a900",
+        "e6680ae98ab3986798a5852b8d45733069e2d8f44d1525da6175ddbdf2781cb7",
+        "c05f69cf5a69c85d10282857457f3cf174a7e9a08da2a59b7b4058ad7cdc0aa2",
+        "03562a2db487f398b10ed27523c55c9a1043495ea9728095d6a3ab7079e276cc"
+      ],
+      "matched_prior_roots": 28,
+      "net_blend_roots": [
+        {
+          "start": 35926,
+          "end": 40625,
+          "sha256": "4f5b99a7c5c8147d25bb9cc92757260297a447a2547765ada09db3256262946f",
+          "class_name": "moNetBlend_c"
+        }
+      ],
+      "source_checkpoint_status": "list_complete"
+    },
+    {
+      "index": 625,
+      "path": "samples/tutorial/appearances/usb_cover2.sldprt",
+      "configuration": "Contents/Config-0",
+      "sha256": [
+        "66eaf1cb468bd58802db23c9b68c055671fd7a84c019b8e01bce116368d573fa",
+        "2127cb7e3c2699dfe24dcfa58c19393bbf4d96fb56d4b0a2a5a9ff644e958c53",
+        "1d966e9c4dd7e7027501e8c1784161f6bb6aba40b2d4d033267be4d4a775ccea",
+        "cfe6fa5f0d9b170bdaf5192112da9f372a956ef2265a56f70fbe7de67d23084f"
+      ],
+      "matched_prior_roots": 28,
+      "net_blend_roots": [
+        {
+          "start": 35926,
+          "end": 40625,
+          "sha256": "39b6abbd292861c37331f94cd3e9d236e0dd3db578bf18cd689c3bd43c71315f",
+          "class_name": "moNetBlend_c"
+        }
+      ],
+      "source_checkpoint_status": "list_complete"
+    }
+  ]
+}

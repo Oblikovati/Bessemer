@@ -1,0 +1,28 @@
+{
+  "issue": 190,
+  "feature_commit": "ec3c0a1b7851a46cab92ee53a1c4cbf70b38bfad",
+  "local_integration_commit": "9f4c7b41d5222292fc517317613e3c1732a30b72",
+  "runtime_tests_cargo_ci_equal_feature_commit": true,
+  "core_readers_unchanged_across_three_source_replays": {
+    "swarchive.py": true,
+    "mfcobjects.py": true,
+    "modelheader.py": true,
+    "modelhistory.py": true
+  },
+  "raw_report_bytes_match_publication_pin": true,
+  "root_preparation_preservation": {
+    "files": 11,
+    "backup": "target/bitmap-resource-root-preparation-backup",
+    "inventory_sha256": "0a35b084287296ae9f7c3caed14d8b020fe5fec655921fab532f853a90d8f8c0",
+    "ordinary_json_differences": "Only line-ending normalization; complete parsed JSON values agree.",
+    "raw_hash_bound_report": "Retained byte for byte with -text and whitespace=cr-at-eol attributes.",
+    "prior_readme": "Retained in backup; implemented contract supersedes preparation-only prose."
+  },
+  "publication": "Local integration only. PR191 remains on its reviewed head; no additional branch or PR was published.",
+  "remaining": [
+    "Feature190 exact-head remote gates after serial publication",
+    "Native application equivalence",
+    "Whole-schema parity"
+  ],
+  "full_local_gate": "docs/features/bitmap-resource-arrays/full-local-gate-verification.json"
+}

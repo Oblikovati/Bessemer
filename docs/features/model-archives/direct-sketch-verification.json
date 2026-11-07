@@ -1,0 +1,64 @@
+{
+  "behavior_version": "private-model-direct-sketch-point-line-text-v1",
+  "decision": "Explicit direct collection grammar, typed identity-based field resolution and operation-local fields; no metadata default, new cache or geometry normalization.",
+  "migration": "Initial unpublished model codec; existing handle/slot wire baselines unchanged and corpus outcomes retained.",
+  "checks": {
+    "new focused tests": "9 passed",
+    "all sketch-prefixed tests": "18 passed",
+    "all model tests": "191 passed; two external-input tests ignored, six core tests filtered",
+    "all-target Clippy": "passed",
+    "Python": "50 passed",
+    "fresh reference processes": "all four new wire fixtures reproduced exactly",
+    "native corpus": "866/906; all 906 outcomes unchanged from preceding checkpoint; complete acceptance failed",
+    "full PR gate": "earlier geometric/kernel checkpoint; rerun before push"
+  },
+  "cases": 308,
+  "independent_scalar_values": 12378,
+  "fixture_repeat": {
+    "identical": true,
+    "sha256": {
+      "sketch-geometry-cases.bin": "43f14eb2e28c302145bee43e7cb2d8d8ca1354f4e5c403b542821ff7a8719d82",
+      "sketch-line-original.bin": "bc3a16931ebe18b8c39f4bd146d38ff19de45214debf0efb0f5f0171d8c94dd1",
+      "sketch-line-edited.bin": "6820824e6ed4da64399ed01aed0354e2ef894e07638a9e07f8e72cba62008f8c",
+      "sketch-text-kernel-unsupported.bin": "f3e365bfbcdc000ee15334d8d0f4da0ef858b9f600355889f3ed434449d4d7e7"
+    }
+  },
+  "exclusions": [
+    "complete sgSketch root and remaining direct collections, dimensions, patterns and tail",
+    "minimal-owner and jet point data",
+    "sketch text kernel bodies",
+    "two tracked role failures",
+    "public model API and result/history contracts",
+    "geometry and native application acceptance",
+    "remote platform matrix"
+  ],
+  "artifact_sha256": {
+    "docs/features/model-archives/direct-sketch-schema-reference.json": "b7f84a5026edd684ad0e27b8437d795d23935c6bc24fddbae73adc2a257f22fd",
+    "docs/features/model-archives/direct-sketch-schema-snapshot.md": "cb2b1e4a405344de7345417e68c0066020cfb62fc7a0a69000ed5a4b7b84f130",
+    "docs/features/model-archives/freeze_sketch_geometry.py": "15f430293039335ebddc76ad4a925c5ee048982efb051fb00c8e28a5646bac1b",
+    "docs/features/model-archives/sketch-geometry-cases.json": "004f19aef09cb2d84940e7fdb61dcc4fc8bfdb5d1789d434a68bdf9affc18ce7",
+    "docs/features/model-archives/sketch_geometry_fixture_bytes.py": "a536df2552b8cd943c5c7fc2bb428e0162197aba860d86afb7bc07c8f2a3499e",
+    "docs/features/model-archives/sketch_reference_fixture_bytes.py": "ad4e9949ad5a77b65357c19979e5ec47c7162c51cfca7517732ad0b1f55d1a3e",
+    "src/model_archives/mod.rs": "4f444a8a64fa172e6a82fc1f984e1fdd3b8326875401a61dd5b727209ba061a4",
+    "src/model_archives/object_values.rs": "b21c29ba4944716b90898da976fe2968b602b1edf7a4410b00284b0b4bf9a292",
+    "src/model_archives/primitives.rs": "45dc4153779384d7a08b7f135264ae9e4b4c44bca6d100b7cee8790a284648b6",
+    "src/model_archives/reader.rs": "5c6b527c30f4609b5027cc403d575124b5a960252dc7a7798200b218f0993fd8",
+    "src/model_archives/sketch_entities.rs": "bc4cbf7cfe5f04ce20748f89c94ddbf6c25be590e1a09916f6668c9f6a2b4cec",
+    "src/model_archives/sketch_geometry.rs": "75425eb879da2a2a11b0f15b15c9409741c0898a2218bfe87eb5a07a2c294ecc",
+    "src/model_archives/sketch_references.rs": "e25581e5bfce41ca2a2cdf32c96001239b2e486552daf18979c68f13ed668550",
+    "tests/fixtures/model-archives/sketch-geometry-cases.bin": "43f14eb2e28c302145bee43e7cb2d8d8ca1354f4e5c403b542821ff7a8719d82",
+    "tests/fixtures/model-archives/sketch-line-edited.bin": "6820824e6ed4da64399ed01aed0354e2ef894e07638a9e07f8e72cba62008f8c",
+    "tests/fixtures/model-archives/sketch-line-original.bin": "bc3a16931ebe18b8c39f4bd146d38ff19de45214debf0efb0f5f0171d8c94dd1",
+    "tests/fixtures/model-archives/sketch-text-kernel-unsupported.bin": "f3e365bfbcdc000ee15334d8d0f4da0ef858b9f600355889f3ed434449d4d7e7",
+    "tests/model_archives/object_values.rs": "a6ce6cf9b059a3d5d15031e364f2c6718895b9fc452e4a7f4421c3c2e42df4ca",
+    "tests/model_archives/sketch_geometry.rs": "5a1d1170c3bee8fda99eef6b39f6d315b8faf579318f3a3c6969ad3e5853a852"
+  },
+  "log_sha256": {
+    "model-sketch-geometry-tests.log": "f35e2de24e23189052103cf69b96b20c9fdabd17c0efa63da1cd8d9e7b75943b",
+    "model-object-value-tests.log": "d46a10e34414056ff4f136b0d3d9911f44e773f5de4ac300105b69399df0b61e",
+    "model-direct-sketch-tests.log": "dcc507c2f8b700d3e02acf56a15a03125204ebc1f31752a65bdcd4ede87b15e4",
+    "model-direct-sketch-clippy.log": "65142d0c0797e2f3be595d7bdaa6477c4318d39ddf63f8460fd8af7efcedc0ff",
+    "model-direct-sketch-all-model.log": "e821d7beb38c845061a75875fd3c3dcd9cceffd3d61170467d1c187a8258ac0b",
+    "model-direct-sketch-python.log": "e0d9fe369a76e3c0ab5fab43e08c18e7f5aaa85152a1d40bb9c52343beac2838"
+  }
+}

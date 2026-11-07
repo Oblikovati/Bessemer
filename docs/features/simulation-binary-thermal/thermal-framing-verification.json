@@ -1,0 +1,19 @@
+{
+  "issue": 134,
+  "status": "Framing checkpoint; current typed-edit evidence is recorded separately in thermal-edit-verification.json and full feature gates remain open",
+  "native_unique_streams": 68,
+  "native_unique_bytes": 267820,
+  "native_candidate_contexts": 75,
+  "accepted_native_contexts": 68,
+  "rejected_native_contexts": 7,
+  "owned_collection_contexts": 295,
+  "owned_records_per_context": 2,
+  "owned_packet_bytes": 1113674,
+  "owned_packet_sha256": "407ea258aaa9c2161374c9ce9d0cc0a25a1d1420fa6e4b49e5372baf17636442",
+  "outer_tests": {"command": "BESSEMER_THERMAL_NATIVE_INPUT=target/simulation-thermal-native-cases.bin cargo test --test simulation_thermal_collections -- --include-ignored", "passed": 7, "failed": 0},
+  "clippy": {"command": "cargo clippy --lib --test simulation_thermal_collections -- -D warnings", "exit": 0},
+  "strict_reference_tests": {"command": "python -B -X utf8 docs/features/simulation-binary-thermal/freeze_thermal.py", "passed": 12, "failed": 0},
+  "combined_embedded_and_thermal_regression_tests": {"passed": 31, "failed": 0, "explicit_native_inputs": true},
+  "checks": ["Complete exact construction of all accepted native and owned images", "Every actual owned reference span boundary", "Separate inner and outer byte/version contexts", "Raw numeric and text patterns", "Completed empty results for each family", "Constructor role/type mismatch rejection", "Input and returned-buffer ownership", "Compile-time Send and Sync for all five public outer types"],
+  "exclusions": ["Typed thermal field edit results and history", "Complete independent field/history exports", "All malformed and explicit budget cases", "Two fresh-process exports", "Full local and platform gates", "Native application acceptance", "Complete installed schema parity"]
+}

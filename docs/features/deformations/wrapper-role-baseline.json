@@ -1,0 +1,22 @@
+{
+  "reason": "C-399 proves moCurvePointRef_w -> moEndPointRef_w -> moPointRef_w -> moRefWrapper_c ancestry and the complete endpoint serializer jump. New fresh/cached containing-caller fixtures extend the exact family gates without changing earlier fixture bytes.",
+  "previous_wrapper_classes": 23,
+  "current_wrapper_classes": 24,
+  "wrapper_family_behavior_version": 2,
+  "previous_point_classes": 3,
+  "current_point_classes": 4,
+  "source_sha256": "9bfc3b6589cb38a26f3f69c063f497ed5958309bd52419bed24222cf6aeaf0ed",
+  "bases": [
+    ".?AVmoCurvePointRef_w@@",
+    ".?AVmoEndPointRef_w@@",
+    ".?AVmoPointRef_w@@",
+    ".?AVmoRefWrapper_c@@",
+    ".?AVsu_CObject@@",
+    ".?AVCObject@@"
+  ],
+  "leaf": {
+    "start": "0x4c27c5e0",
+    "native_bytes": "e90b130000",
+    "jump_target": "0x4c27d8f0"
+  }
+}

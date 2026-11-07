@@ -1,0 +1,35 @@
+{
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "Rust 1.99.0 x86_64-pc-windows-msvc",
+  "command": "cargo xtask pr",
+  "success": true,
+  "library_passed": 1002,
+  "doctests_passed": 277,
+  "ignored": 3,
+  "test_executables": 174,
+  "total_passed": 2458,
+  "source_hashes": {
+    "src/inspection/mod.rs": "513578fd0324b8f0f51e7e1dddcff8c31c17d94615ba986bac18a8031f96ccaf",
+    "src/inspection/cbc.rs": "be3a693a1dcd615b1eea25277b452e441fc2bb33a75176fe24c5cf453d97f1c8",
+    "src/inspection/rijndael.rs": "2718cbd83400bf0183c37d523ee98dc8bb2162e86bf0de28935d6b62483afb41",
+    "src/inspection/tables.rs": "0d049204bd4f9df9f4da6fb42f772a699774cc227937cb455b5fff8d3d09acc2",
+    "src/metadata/inspection.rs": "37187d08ef65ddd8314cf8c81f9b7afd0a0fc5d63474cac1f8848548b8b0a50e"
+  },
+  "fixture_hashes": {
+    "current-0-edited.bin": "821a37a427535abb70b2636522e5a93f8a92bbd0d2c2cc05656aa6a93bfe8807",
+    "current-0-edited.xml": "c1c96078b708353b336636312ec90759b2a8d1f2fc4c8092c91de304b339ec59",
+    "current-0.bin": "84570c788e59d92c80c7009e0ea899cfd19a99e6b2f293740b12100ab870c24b",
+    "current-0.xml": "f69fc43794a527d1bb84fe7e5c8797328dd0d231c4c451651b1402523db90a27",
+    "current-1-edited.bin": "1e8a4ebbdcbec883d8aae120b784db51964f42d78cbd9838fecf023e09eb81fa",
+    "current-1-edited.xml": "1222ca10e6ac8462a0d184e8d01a346102c1ded98e59c65a0dca8d5ee059e42a",
+    "current-1.bin": "9c2d689738e9adf5286750fdfd81e2069ae06ab6204125182835beaf5bdc2928",
+    "current-1.xml": "94bb68b01ed380ced8b1767f5b3f0a15260653edffd50f0adffbff378edce01b",
+    "historical-edited.bin": "493487a5b89a0bbc0e9a4ae4c7295a44dae2fabdcf8e9a13898f76d3ea093bbd",
+    "historical-edited.xml": "5494d3cb89efebc2c2a3b1864ba3aa16bf9c27676436fbafcb8b08764d391087",
+    "historical.bin": "8a7191837421179a2e02f0cb52256674fe5cce69632d157ed28d62f090745a06",
+    "historical.xml": "d5ce41d90637a180975ac925cabed42c2f87628c446c3276a398e3c40e3d29ce",
+    "legacy-vectors.bin": "c1c926d72b7180914602cfa34124a7d7f7ff3cd00d40382ad0df270c87505ee1",
+    "templates.tsv": "241cfae4825d439a6028d8295c708cc35bbe86d4f2c32787625aa4b9561afd1e"
+  },
+  "two_processes_match_native_fixtures": true
+}

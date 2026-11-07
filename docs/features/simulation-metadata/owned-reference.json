@@ -1,0 +1,100 @@
+{
+  "fixture_sha256": "288bbd48e6241bb6ac22365ec21583a3391bbe3a7dab70f6dda0aca16b5cee95",
+  "decoded_bytes": 19694527,
+  "guid_cases": [
+    {
+      "label": "null-empty-ab",
+      "bytes": 26,
+      "sha256": "e07b63ec115dd8f5cc12876f7d9bd6466097310ed74fffe55c3cc4681e65d06b",
+      "oracle_sha256": "dff94760c7f8a61c87ef658a9fb21adc36c4922b9336166572a3bff4cb1eedaf",
+      "complete": true,
+      "field_goldens": [
+        "0570be63994d32f2851b33102df336a0bc204491fd78d2a0908c08daadd71773",
+        "3ab8e6d95e6aa174b23a916d52a6b1d0acb1c50bae1a10ddf11b9e1cb49cb19f",
+        "38b34b3212e972384025e7b653015378d40de6f145968453be588d98726e8e44",
+        "37560aef150c93ad16b65c8c31b57216de1b6ca16c277d4e586bc001660e8a62"
+      ]
+    },
+    {
+      "label": "all-null",
+      "bytes": 16,
+      "sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb",
+      "oracle_sha256": "e68ab529414fc5397550953647721f80f43c28dfef15ffa9f0abbf53953fbce2",
+      "complete": true,
+      "field_goldens": [
+        "f0d3eb6ad3b74a480497e1de703282d04a7c89302113f67e23d575c376bbdc6d",
+        "d6298363c45d7742240cd4e4648edc32cd511efe2f8b9f6aa6642d1954e0449d",
+        "6f50e37f48e679b3ae9230403415641237d2a0e54f4664e3a67ae95544f38f90",
+        "51a84425f6b718d57f5c5d0243447929fd0da13d7d0202e3386e2c0a42e8281b"
+      ]
+    },
+    {
+      "label": "all-empty",
+      "bytes": 24,
+      "sha256": "50ab351a740e27153492172756acd8c9c0b398042c4e4836838113224c7bba50",
+      "oracle_sha256": "3e6159aab0e095aaed06038b73315b705cf5b2e193221806830037b7f7ca1903",
+      "complete": true,
+      "field_goldens": [
+        "84b0729b19d4873b112d0a69a8b7102d34191725020a326ef03f18eff1e61ca5",
+        "65ff41fd8f18a3be7229075db0ea659a4dbe24ecfab4c7d41e11f53e2d753e54",
+        "cc3408632a7ff07df40e1ddfaa13733b24de501d83e7711d2edc478498e7d637",
+        "9951a916f5e07b65f576ec49abb46266309f30c48b49c4b745a848846815cd43"
+      ]
+    },
+    {
+      "label": "unicode-and-surrogates",
+      "bytes": 34,
+      "sha256": "aa4f59976142cb8aaa3b4c1930d0cee4b20620fc9d4d696e3d0c97bd3e7caa40",
+      "oracle_sha256": "052268c04e663bee0f98fd11f9adfc3d9bb750586f254025b43b957b6ef114e1",
+      "complete": true,
+      "field_goldens": [
+        "f464ebd3fe46a485d13fefde514f76d32dd74e0ab91adbdc06b79aff68f7c5e4",
+        "f658772383b93b64e3a4dfd7c7d1264a4926e2b30ded4d45444d17aeb91e5b6c",
+        "cd6efbfe60155b88db870e814d0b3451a543d2b9f4cbe398d2eda50f3aa2898a",
+        "43ea7b63601a83fb6e12f7c249f763a4101d183f673d1b15120d955eb484d309"
+      ]
+    },
+    {
+      "label": "stored-nuls",
+      "bytes": 34,
+      "sha256": "61d831ced31f62ec0381d093889b3861213623e7f9bb801666a82dc8914b8c32",
+      "oracle_sha256": "7cd7645531233bca4a8f3ed6f5a62ba362d9fa6cbfd40d0b4e59db771a24b1b5",
+      "complete": true,
+      "field_goldens": [
+        "b3b9e5841fbff6c5d4d1df8e37031601512da66f93143971ef9c4a5afce8a252",
+        "5ecdc3085bb5acb731db1e1a4b114df1efc3160836a7e8bbd8de85d017a972b8",
+        "bba4010a5a464a45caa286d3805441029ffeb5374b5dfd580fec78b284c99abb",
+        "5cc3fa275e755bb586bc44f6eda1304821c708d90725af8b293c438d6c8180da"
+      ]
+    },
+    {
+      "label": "unknown-tail",
+      "bytes": 29,
+      "sha256": "e48434ffe5b16a1d80274f608a755c53ca56ed0c8892b056c963fcd0bedb1613",
+      "oracle_sha256": "e26afb29df1fa11b2424cb6cd4ade585fe01cd7b53a699fdde4bc085fc81d421",
+      "complete": false,
+      "field_goldens": [
+        "83f53be21ce4280f49cb2c82da9d396a0b0daf36eb4865701b74868f64e87c5c",
+        "7d461740d277c5799d35341c0c467a3f69ac12036830c846e6ab34fb2b30e934",
+        "290730faf6cb44c75c04d69e2407ac097503239548cd82390f8e680650a28efa",
+        "3d408cd1d17c4ce0ae4b4f81f4b368ce58ef7041a302cb963598f56df1a84930"
+      ]
+    },
+    {
+      "label": "inclusive-length-limit",
+      "bytes": 1048600,
+      "sha256": "be9b190527647b4da166dfd855d3fc33ad9c15e4bc84678a25d7f2610ff44eef",
+      "oracle_sha256": "811f7e4daf5536245f82ec268ecc0db20a1932e7a4b09c467eccbe87ff22b143",
+      "complete": true,
+      "field_goldens": [
+        "d8bcac1e3d01bf0caa2d3490d52e1ea08cf2dccf3726be73a15428d2c5bc6c74",
+        "8fb9a9dd2fe99ee6a7bec7dac4fc2c634ca40b95a85ae2f66d386698d27f6e16",
+        "e4e3ca07cd6eb82a1bbd10cc69147dbbc563827668ed22d51d6b3658e2b42fb8",
+        "2220cb3540e921948ad48964c771e71de15f04d5c1bf8ec2c253ebd8b2dde631"
+      ]
+    }
+  ],
+  "writer_cases": 10,
+  "scalar_cases": 14,
+  "helper_cases": 7
+}

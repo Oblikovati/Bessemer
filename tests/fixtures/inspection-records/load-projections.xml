@@ -1,0 +1,18 @@
+<i:SOLIDWORKSINSPECTION xmlns:i="http://www.extensiblecad.com" xmlns:x="urn:extension">
+  <INSPECTION_SHEET><PackageOptions><IXCharacteristics><IXGroupProxy>
+    <IXCharacteristic>
+      <Measurements>
+        <!-- Non-element nodes do not create records. --><?keep ignored?>text
+        <Unexpected Name="N" Value="Pass" PartName="P" Type="custom" CreationTime="arbitrary" Extra="preserved"/>
+        <Measurement name="lowercase" x:Value="qualified"/>
+        <Wrapper Name="W"><Measurement Name="nested"/></Wrapper>
+      </Measurements>
+      <measurements><Measurement Name="wrong-case-container"/></measurements>
+      <x:Measurements><Measurement Name="qualified-container"/></x:Measurements>
+      <Measurements><x:Other Name="last" Value="-0.00"/></Measurements>
+      <CustomProperties><!-- keep --><Other Name="P" Value="1"/><CustomProperty Name="P" Value="2"/></CustomProperties>
+      <CustomProperties><Other name="lowercase" value="lowercase"/><Wrapper Name="W"><CustomProperty Name="nested"/></Wrapper></CustomProperties>
+    </IXCharacteristic>
+    <IXCharacteristic/>
+  </IXGroupProxy></IXCharacteristics></PackageOptions></INSPECTION_SHEET>
+</i:SOLIDWORKSINSPECTION>

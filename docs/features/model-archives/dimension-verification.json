@@ -1,0 +1,48 @@
+{
+  "behavior_version": "private-model-dimension-records-v1",
+  "decision": "Explicit documented stored dimension/handle fields and scoped aliases; no dimensional evaluation or geometry algorithm.",
+  "migration": "Initial unpublished model codec; prior fixture baselines and native corpus outcomes retained.",
+  "checks": {
+    "focused Rust": "6 passed",
+    "all model tests": "170 passed; two external-input tests ignored, six core tests filtered",
+    "all-target Clippy": "passed",
+    "Python": "50 passed",
+    "repeat generators": "661-case packet reproduced exactly across fresh processes",
+    "native corpus": "866/906; repeated 906 outcomes identical; complete acceptance failed",
+    "full PR gate": "earlier geometric/kernel checkpoint; rerun before push"
+  },
+  "cases": 661,
+  "independent_scalar_values": 35708,
+  "loaded_target_scope": "Explicit previously loaded moGFR_c/sgSketch identities in owned handle fixtures, not body-reader substitutes in the native corpus.",
+  "exclusions": [
+    "38 native sgSketch bodies and two tracked role failures",
+    "external-reference and reference-dimension suffix bodies",
+    "public model API and result/history contracts",
+    "geometry and native application acceptance",
+    "remote platform matrix"
+  ],
+  "artifact_sha256": {
+    "docs/features/model-archives/dimension-cases.json": "37ab1fe93f8f9545f937bb8a14dbc548b1deef17f7633561d337b37956d9c7b9",
+    "docs/features/model-archives/dimension-schema-reference.json": "4e298b7c8df26042c8cf542b2e534b8d8ea19ece44131b32d909010528d774f2",
+    "docs/features/model-archives/dimension-schema-snapshot.md": "6e0fbd444fc7e25694553c7930fb34104b4fcf84f7f1c6bb71ab638cc373ed23",
+    "docs/features/model-archives/dimension_fixture_bytes.py": "6c1f3f89b5577bd12accc00a187f00b590fdebc8f33f5d4b15dc7843796669b1",
+    "docs/features/model-archives/freeze_dimensions.py": "28d6b39129090385ab21c2e082ede487cf4248cd4eaec07648bac2ca185a8fe3",
+    "src/model_archives/dimension_handles.rs": "22d74e060df1e7fff54baae076878210c952ec6bb154692b374896a0c6b146c5",
+    "src/model_archives/dimensions.rs": "1833ba33f1e8f287be287a206f40df2d057ea4deec80bbf62df9221a5af94a33",
+    "src/model_archives/mod.rs": "a3f969ee3077c9403585203e0ef73177efb12f1e5c61c3a751d8ad400f00a9f2",
+    "src/model_archives/object_body.rs": "e511bd9539a20fda4cac0ae93daba1496a2317b52a666522a245efd40bd38b8d",
+    "src/model_archives/part_objects.rs": "99f5ec801964ec7f343de037f53ed25836ffb9e50c897433e24e8e9d568bc361",
+    "src/model_archives/primitives.rs": "437c77a5a509b9c7ffa09714aa0ddad79933a9326914d03d253e104efafbd8cf",
+    "tests/fixtures/model-archives/dimension-cases.bin": "bef604f9063f979c2cdf60164997362e001ff933f303c85e1d0cbe2e01bbd0c4",
+    "tests/fixtures/model-archives/dimension-default-cases.bin": "6a20398dde44529024f75c163140e87c35163d963a37e010336b08ca17e5d962",
+    "tests/fixtures/model-archives/dimension-edited.bin": "28b907ee3450e333e30f59005ddc409e01fed5ed947fe0f5d7746b0e09cde81c",
+    "tests/model_archives/dimensions.rs": "7c8fc5176cff508a35d67a23d4595e031bbd16616e6416c954695c01774de30e"
+  },
+  "log_sha256": {
+    "model-dimension-values.log": "66cc43af7d1dbff260c6bf6e68e07ad66a7573a2da10d0492108a41effc2c4e5",
+    "model-dimension-tests.log": "c8d2003abbb2584468c51b8e7e1c11554b062f7a71e4e3709990e297f9b85ed8",
+    "model-dimension-clippy.log": "3953a692ceff7ae43bc48c20b0b390a3774ab2b50fa77ca829e594f3dd956d6d",
+    "model-dimension-all-model.log": "54bd0448052abd77cd8208e92882a9aead33ffe65cd001467c0ac0dac4be5df3",
+    "model-dimension-python.log": "aed23586946e192cab3c7ebcdc5173d6bdffd8d9e27c885628519f102f12d036"
+  }
+}

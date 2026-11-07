@@ -1,0 +1,21 @@
+{
+  "issue": 202,
+  "command": "cargo xtask pr",
+  "passed": true,
+  "process_exit_code": 0,
+  "source_revision": "6d7d238ebefee15acf240d0f5249860602b5658d",
+  "tree_matches_revision": "544716c200b2ee357a1c14236009f0cc90f78b99",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "tests_passed": 4074,
+  "tests_failed": 0,
+  "tests_ignored": 230,
+  "test_summaries": 324,
+  "log_sha256": "68053937f78bf1fcea7c20d4558997d0699227692f57876c2eb69062988c03ee",
+  "scope": "First native edit, Bug203 correction and full primary corpus test code; ignored native corpus execution retains separate acceptance",
+  "exclusions": [
+    "Later alternate matrix, boundary, rejection and multi-parameter additions are outside this checkout",
+    "Full native primary document execution remains active and is not credited from an ignored test",
+    "Remote exact-head platform gates, native application, geometry and whole-schema parity remain open"
+  ]
+}

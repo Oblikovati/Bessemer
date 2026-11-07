@@ -1,0 +1,117 @@
+{
+  "issue": 166,
+  "behavior_version": "C863-style-comparison-masked-daz-off-v1",
+  "platform": "Windows x64",
+  "toolchain": "Rust1.99.0 x86_64-pc-windows-msvc",
+  "owned_pairs": 17125,
+  "native_stored_fact_pairs": 8508,
+  "complete_owned_views": 425,
+  "complete_native_views": 276,
+  "independently_visited_semantic_instructions": 93,
+  "whole_bound_method_instructions": 107,
+  "public_send_sync_types": 11,
+  "initial_source": {
+    "checks": 14,
+    "seconds": 15.767,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/style-comparison-operation-source-initial.log",
+      "bytes": 2518,
+      "sha256": "dede33d1266e384ad7c4f7ad227af45759fdfd9c6da30d022ab7589ac866e2be"
+    }
+  },
+  "strict_source": {
+    "checks": 14,
+    "seconds": 14.328,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/style-comparison-operation-source-strict.log",
+      "bytes": 2518,
+      "sha256": "37831103bbe829006525d170bbdf6129f2c10c0f0552ecef0c6de4499ef8088a"
+    }
+  },
+  "rust": {
+    "passed": 11,
+    "failed": 0,
+    "ignored": 0,
+    "workers": 8,
+    "log": {
+      "path": "target/style-comparison-operation-rust-final.log",
+      "bytes": 1246,
+      "sha256": "d7c9166ac930ba01a0aa8ec76bd6b47a360896f2f1af930194903644358cce9d"
+    }
+  },
+  "existing_legend_regression": {
+    "passed": 10,
+    "failed": 0,
+    "ignored": 0,
+    "fixtures_unchanged": true,
+    "log": {
+      "path": "target/style-comparison-legend-regression.log",
+      "bytes": 1110,
+      "sha256": "ae65a9e031e7634aab869e9a93b381918d2510173529e880fe21921e7609f5d5"
+    }
+  },
+  "clippy": {
+    "all_targets": true,
+    "all_features": true,
+    "deny_warnings": true,
+    "seconds": 37.31,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "log": {
+      "path": "target/style-comparison-operation-clippy.log",
+      "bytes": 136,
+      "sha256": "f1d1e41ca19b9f086ae2d881a3ad3c5036cd03caec91faa23abba3c703b1f4ef"
+    }
+  },
+  "source_snapshot": {
+    "path": "docs/features/simulation-post-dialog/style-comparison-source-snapshot.json",
+    "bytes": 625049,
+    "sha256": "634c818c4446f0e0a7573691b1f89e8c29376edd5d13cd6448a5c183aaa9ffa4"
+  },
+  "process_verification": {
+    "path": "docs/features/simulation-post-dialog/style-comparison-process-verification.json",
+    "bytes": 1322,
+    "sha256": "b5c77f6d4d0f65310929e318b4669ac2e88369df02a6db2f71812c12f9056035"
+  },
+  "kernel_decision": "Compare all reached C863 dependencies in exact native order and compose the existing C871 legend policy. Use one actual storage slot for alpha22C/color220 and alpha2B8/color2AC. Preserve per-channel unknown facts and right-first RGBA reads,including early differences before unread unknown channels. Never infer wire defaults,migrations or actual runtime object state. Publish immutable complete outcomes,typed first difference,ordered paired checks,both original input states and qualified exact-model coverage. Missing/invalid reached inputs return typed errors with no partial success.",
+  "oracle_kinds": [
+    "Complete original C863 GNU/Ghidra bodies,named providers and existing complete C864/C871 callee bindings",
+    "Restricted native instruction interpreter covering all93 semantic addresses,with no SolidWorks execution",
+    "All outer gate combinations,isolated/mixed input mutations,one/both-side unknowns,partial colors,IEEE edge patterns and delegated boundaries",
+    "Complete425 owned and276 native parent views with exact optional inputs and shared aliases",
+    "Eight-worker serial equality and two fresh processes matching658350 completion/error/ordered-check words with full source-history assertions"
+  ],
+  "excluded": [
+    "Observed application SSE environment or native target execution",
+    "Actual native loaded state from stored words alone,automatic migrations or constructor defaults",
+    "Unread-input/whole-object/geometry validation and universal render equivalence",
+    "Archive edit no-op decisions based on this comparison",
+    "Peak-memory measurement or comparison to a nonexistent previous published style-comparator API"
+  ],
+  "pending": [
+    "Remaining feature166 models",
+    "Exact publication-head cargo xtask pr and all five platform gates"
+  ],
+  "prose_review": "Humanizer unavailable; maintainer review pending.",
+  "full_integrated_source": {
+    "checks": 338,
+    "seconds": 471.309,
+    "process_exit_code": 0,
+    "terminal_exit_reaped": true,
+    "accepted_source_cut": "af51fd062902a71f3976a3f314b4b84f65a75761",
+    "log": {
+      "path": "target/style-comparison-operation-source-full.log",
+      "bytes": 72889,
+      "sha256": "df85bd02067765f830d47f5ef78e79202b3a2b44890bc57b26c01cd8aa30478c"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 634468,
+      "sha256": "a3de8ab7eac44994382b5b9799427d7bcb1f365f4b543d2b42364264a3d27b36"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "issue": 241,
+  "source_revision": "9ddcc851",
+  "scope": "Test-only packet reader extraction; all existing owned conditional fixtures and public APIs unchanged",
+  "cases": 6659,
+  "results": {
+    "passed": 14,
+    "failed": 0,
+    "ignored": 1,
+    "clippy": "passed"
+  },
+  "commands": {
+    "tests": {
+      "log": "target/flow-legacy-fields-shared-fixture-tests.log",
+      "sha256": "be04ae43b0454191f5277bebbddf9f1281d58ef8a68ced7a1632d3698cb9285f"
+    },
+    "clippy": {
+      "log": "target/flow-legacy-fields-shared-fixture-clippy.log",
+      "sha256": "250690ea8be6d4ff1c5b705c3b0e0636a0e661a019ae012fcd391fc0ae675068"
+    }
+  }
+}

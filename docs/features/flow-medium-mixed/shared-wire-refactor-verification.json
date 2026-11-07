@@ -1,0 +1,25 @@
+{
+  "feature_issue": 241,
+  "source_commit": "fb25aa55",
+  "rust_passed": 70,
+  "rust_failed": 0,
+  "rust_ignored": 0,
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "moved_function_bodies_identical": true,
+  "scope": "Moved five private framing, key, membership and budget helpers to a shared module. Existing kind-one scanner is the production caller. No public API, storage, accepted grammar, error text or fixture changes.",
+  "source_lf_sha256": {
+    "src/flow/legacy_tables/metadata_prefix/backend/profile_wire.rs": "d2180fc0676167a8d11420184e3f2a6c0b092b27b692ac6e24ea13132e1c046d",
+    "src/flow/legacy_tables/metadata_prefix/backend/kind_one_profile/decode/scan.rs": "a31f865ffb4f56c2bf52eac597ad2e9ce4d84cb20957dbe8d6803480c7d51791",
+    "src/flow/legacy_tables/metadata_prefix/backend/kind_one_profile/mod.rs": "5a79c654737ed547be5a4cb04c05d250146f7fbcba239a89aa43ca6888c29631",
+    "src/flow/legacy_tables/metadata_prefix/backend/mod.rs": "b26a4564dc3f696a2516430065eb57c2c879d24fddd23d828fa6e098dde7b293"
+  },
+  "log_sha256": {
+    "flow-profile-wire-refactor-tests.log": "dcf68f411b0eff00ce9472b01ceed00b703c3d7a9a4f72c220e17a3f37d8a636",
+    "flow-profile-wire-refactor-clippy.log": "dbec12eb2a77f2857f2d764a2332821f1a011584df39b8f6f95c83930c08f6d2"
+  },
+  "exclusions": [
+    "Later mixed-profile API",
+    "Current full gate is frozen at 01aebaea and excludes this refactor"
+  ]
+}

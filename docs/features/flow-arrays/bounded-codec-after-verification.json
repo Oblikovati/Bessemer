@@ -1,0 +1,30 @@
+{
+  "issue": 241,
+  "platform": "Windows x64 Rust 1.99.0",
+  "baseline_commit": "921592f2",
+  "unchanged_contract_sha256": "cebbff7bf6726df56aa18259c20116c6b8c73034efc9f392e121183b521f3c24",
+  "passed": 25,
+  "failed": 0,
+  "ignored": 0,
+  "source_sha256": {
+    "src/lib.rs": "6f08f511c5ed4835f9206ef75df1099086b274142d7ca80df2821430bd1abef6",
+    "src/bounded_zlib.rs": "f40e5cba22dcd45d9badc8a80b653537a6158d0cc649c1904fa34daa4e06a08b",
+    "src/preview/png/zlib.rs": "da36c8a0e9c126c8c30fa7f665b5115e4bfb86d15fa12d9dccc6369f3f64a0c3",
+    "tests/png_zlib_contract.rs": "cebbff7bf6726df56aa18259c20116c6b8c73034efc9f392e121183b521f3c24"
+  },
+  "commands": [
+    {
+      "command": "cargo test --test png --test png_adversarial --test png_document --test png_isolation --test png_zlib_contract --locked",
+      "exit_code": 0
+    },
+    {
+      "command": "cargo clippy --lib --test png --test png_adversarial --test png_document --test png_isolation --test png_zlib_contract --locked -- -D warnings",
+      "exit_code": 0
+    }
+  ],
+  "log_sha256": {
+    "target\\bounded-zlib-after-tests.log": "028079678110a8f419882488c9994b402ef16742a4d6f1c5d01420af44b58c67",
+    "target\\bounded-zlib-clippy.log": "c2bcfc9e478c67e6472db4051be4684c71d687b6fd2cbcfd626ec59e3c9e53b4"
+  },
+  "scope": "Structural bounded-decoder extraction only; exact public PNG error contracts retained; no Flow array API or native application acceptance claim"
+}

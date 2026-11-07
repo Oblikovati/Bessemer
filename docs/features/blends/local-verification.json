@@ -1,0 +1,344 @@
+{
+  "base_revision": "61e244e6a66ab19894150b1996bc55e6acb59140",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "gate": {
+    "command": "cargo xtask pr",
+    "staged": true,
+    "exit_code": 0,
+    "library_passed": 526,
+    "library_ignored": 3,
+    "xtask_tests_passed": 4,
+    "all_integration_suites_passed": true,
+    "doctests_passed": 265,
+    "log_sha256": "3b6ab7000233bac7898a3eacc299ffa8f04e528b6c8d84e57deec24d3d31ebd1"
+  },
+  "focused": {
+    "private_tests": 5,
+    "public_tests": 3,
+    "python_tests": 3,
+    "object_cases": 68,
+    "primitive_observations": 37370,
+    "owned_streams": 4,
+    "numeric_column_entries_per_row": 6
+  },
+  "native_corpus": {
+    "cases": 906,
+    "accepted": 675,
+    "rejected": 231,
+    "previous_complete_preserved": true,
+    "newly_accepted": 25,
+    "fresh_process_outcomes_and_causes_identical": true,
+    "artifact_stable_during_replay": true,
+    "artifact_sha256": "22dc4afaf42485e8101b6875681089743b6628b0fcc2247f6e2532fdc791d656",
+    "changes": [
+      {
+        "index": 29,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moBlend_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 68,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moBlend_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 315,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moBlend_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 316,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moBlend_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 440,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moBlend_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 636,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moBlend_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 652,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moBlend_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 665,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moBlendCut_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 666,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moBlendCut_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 667,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moBlendCut_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 668,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moBlendCut_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 669,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moBlendCut_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 671,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moBlend_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 707,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moBlendCut_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 708,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moBlendCut_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 709,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moBlendCut_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 710,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moBlendCut_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 711,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moBlendCut_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 713,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moBlend_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 729,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moBlendCut_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 730,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moBlendCut_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 731,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moBlendCut_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 732,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moBlendCut_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 733,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moBlendCut_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      },
+      {
+        "index": 735,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moBlend_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "accepted",
+          "cause": ""
+        }
+      }
+    ],
+    "expected_full_parity_exit_code": 101
+  },
+  "independent_audit": {
+    "report": "accepted-reference.json",
+    "report_sha256": "b826e958d841df19036bc42ccb3895e609e2087c2c8fb838a6656b4023f57a82",
+    "accepted": 675,
+    "feature_bytes": 38935930,
+    "four_input_hashes_verified_per_case": true,
+    "snapshot_identity": "9e1c9f2c270389caa1dcc83e29760b4ff9c3bf02e16a2493a703c9e260af22c8",
+    "snapshot_python_files": 1116,
+    "snapshot_removed_after_process_exit": true
+  },
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "source_file_sha256": {
+    "src/model_archives/blend_records.rs": "6132b9365c3ae8699d936a8e1322c78b1c930c91a379e34799fb1cac1ab54bc7",
+    "src/model_archives/blend_columns.rs": "bd6dbf242d5e17ec535c36f614e2e496dede9933693d17a544335f44239b2903",
+    "src/model_archives/model_lists.rs": "76453abfb92e3657fa14168b6c8ced1e214f0bc3af1dc202f7a7512dc8cbbe03",
+    "src/model_archives/body_features.rs": "3209446263057fec733aaab41eecdf15c581dbd861fcb5372ebb413f00edc730",
+    "tests/resolved_features/blends.rs": "5a8de1f70a738842d11b4388505ac9aafceffaf8dc34eb7a0896612b800395dd",
+    "tests/resolved_blends.rs": "e1da5797ab5acb8d2da5e0f86ba0437550efe6bddd69273f6516a3271d1b3b15"
+  },
+  "exclusions": [
+    "Full documented schema parity",
+    "Native application acceptance",
+    "Geometry and topology validation",
+    "DB/deferred and historical archives",
+    "Mismatched-count native writer validity",
+    "Engineering meanings and native conversions",
+    "Fresh unsupported nested classes",
+    "Non-Windows execution awaits a future integration PR matrix"
+  ],
+  "dependencies_changed": false,
+  "version_changed": false
+}

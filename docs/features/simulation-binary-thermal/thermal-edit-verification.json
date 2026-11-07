@@ -1,0 +1,20 @@
+{
+  "issue": 134,
+  "status": "Local unfinished feature; complete typed edit operations verified, full projections, malformed corpus and release gates remain open",
+  "typed_value_kinds": ["Signed", "Unsigned", "DoubleBits", "Text", "Bytes", "Embedded"],
+  "independent_owned_scalar_edit_contexts": 295,
+  "independent_native_scalar_edit_contexts": 68,
+  "owned_oracle_packet_bytes": 1751480,
+  "owned_oracle_packet_sha256": "cf3bdcb6a35368fb4b6e85cb4b779c90cea9c718a2a61a35365b34d75de6743a",
+  "native_oracle_packet_bytes": 537000,
+  "native_oracle_packet_sha256": "c36a571b8db15b6f2980bebc55fdea0c50c7bc19d2f647bd4ef225bdca8dec24",
+  "oracle_method": "Actual C-716 reader locates the first subtype word; a literal four-byte replacement is applied independently and the actual complete reader replays every expected image before Rust comparison",
+  "thermal_tests_including_explicit_native_inputs": {"passed": 21, "failed": 0},
+  "combined_embedded_and_thermal_tests_including_explicit_native_inputs": {"passed": 45, "failed": 0},
+  "reference_tests": {"passed": 13, "failed": 0},
+  "clippy": {"command": "cargo clippy --lib --test simulation_thermal_collections --test simulation_embedded_archives --test simulation_embedded_components -- -D warnings", "exit": 0},
+  "concurrency": {"threads": 8, "edits_per_thread": 32, "scope": "Exact result bytes, every outer history relation and every copied embedded occurrence"},
+  "public_outer_types_with_send_sync_assertions": 16,
+  "checks": ["All six typed replacement kinds", "Immutable validated result getters", "Revision identity and foreign/stale field rejection", "Exact prefix/suffix preservation", "Complete source and replacement retention", "Every outer occurrence has a copy/derivation relation", "Nested history composes original and replacement handles", "Embedded replacement deletion and restoration creation", "No-op outer and nested identity preservation", "Typed errors leave source snapshots unchanged"],
+  "exclusions": ["Complete independent field/history exports for every edit", "Full malformed and boundary-limit corpus", "Two fresh-process exports", "Full local PR and platform matrix gates", "Native application acceptance", "Complete installed schema parity"]
+}

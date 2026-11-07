@@ -1,0 +1,20 @@
+{
+  "issue": 198,
+  "cause": "Default Git text normalization changed committed documentary snapshot bytes",
+  "correction": "Narrow -text attributes retain original hash-bound CRLF snapshots; existing expected hashes unchanged",
+  "snapshots": [
+    {
+      "path": "docs/features/inspection-relationships/schema-snapshot.md",
+      "bytes": 7621,
+      "sha256": "2dcc9d34d45fad7d85696ad2e80492170f3912b6a64f4c88f77c528cd7babde6",
+      "index_matches_expected": true
+    },
+    {
+      "path": "docs/features/spline-equation-transform/qualified-runtime-schema-snapshot.md",
+      "bytes": 23514,
+      "sha256": "f63e0a887f5f6692082e75725a578ccb76c9b50bd01c17c0e06ecf3639019a2c",
+      "index_matches_expected": true
+    }
+  ],
+  "wire_or_parser_changes": false
+}

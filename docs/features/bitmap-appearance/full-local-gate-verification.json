@@ -1,0 +1,24 @@
+{
+  "issue": 189,
+  "passed": true,
+  "process_reaped": true,
+  "exit_code": 0,
+  "command": "cargo xtask pr",
+  "tested_head": "6102fb2f379fe2787685bc1c0852d73053de865a",
+  "tested_tree": "a01b6865758587fa95d07ad2715f8b8f8d104cf7",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "test_summaries": 315,
+  "tests_passed": 3956,
+  "tests_failed": 0,
+  "tests_ignored": 212,
+  "log_sha256": "707153cb31165c77916b448836b6ebfdac9a5e93bb33bdc9fefb2d2d6c30f998",
+  "qualification": "Full integrated production/library gate before wiring the subsequently verified native and whole-document test modules. Existing native tests remain explicit ignored inputs.",
+  "remaining": [
+    "Final test-module wiring gate",
+    "Full native lookup archive/document jobs",
+    "Exact-head remote publication and ThreadSanitizer",
+    "Native application/writer equivalence",
+    "Whole-schema parity"
+  ]
+}

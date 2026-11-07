@@ -1,0 +1,40 @@
+{
+  "issue": 181,
+  "stage": "Behavior-preserving shared visual-field shape validation before display adapter",
+  "unit_tests_passed": 15,
+  "complete_model_tests_passed": 5,
+  "source_fixture_bytes_unchanged": true,
+  "support": [
+    {
+      "path": "src/entity_visual/mod.rs",
+      "bytes": 3054,
+      "sha256": "6b3d2bea31f3cca165604775613dd16854ebf63ebdbde876e72937883a01b80b"
+    },
+    {
+      "path": "src/entity_visual/projection.rs",
+      "bytes": 2758,
+      "sha256": "ca38899713d95c9c662aed8f566f3600c1bc5c2397159e5330063965c8cd40ad"
+    },
+    {
+      "path": "src/model_archives/entity_visual_state.rs",
+      "bytes": 4477,
+      "sha256": "ebf076155e764c5779b2622442139b9919abccdc3294968f46a64efe16a7acaa"
+    }
+  ],
+  "logs": [
+    {
+      "path": "target/entity-visual-shared-projection-unit.log",
+      "bytes": 1671,
+      "sha256": "e08ee65917002244f9dd3a707ea5d472163dbeec8012b5fc20255a97dbb44938"
+    },
+    {
+      "path": "target/entity-visual-shared-projection-model.log",
+      "bytes": 962,
+      "sha256": "2bb953ae20e48063da4b6213d5d4a8c3954e301efa37bfe5a17f7c3efeffd398"
+    }
+  ],
+  "qualifications": [
+    "The same suffix/type/physical-float validation moved into a private generic helper. No raw codec, public API behavior or numerical role changed.",
+    "The complete existing caller and isolation tests passed after the refactor. The new display adapter remains separate work."
+  ]
+}

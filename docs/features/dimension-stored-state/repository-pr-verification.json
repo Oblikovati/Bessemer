@@ -1,0 +1,36 @@
+{
+  "issue": 179,
+  "command": "cargo xtask pr",
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0 x86_64-pc-windows-msvc",
+  "exit_code": 0,
+  "process_reaped": true,
+  "starting_source_cut": "ec6c0dedad872ad5fa5e5e8f7918041f660ea76d",
+  "observed_head_at_completion": "ec6c0dedad872ad5fa5e5e8f7918041f660ea76d",
+  "rust_and_test_trees_unchanged_during_gate": true,
+  "tree_entries": [
+    "040000 tree 0c4075fefb8e5cf974a5fdd2614125de1331ee58\t.cargo",
+    "100644 blob b5b8a15af3025ff50cd10eec25e219d506aabb33\tCargo.lock",
+    "100644 blob 9b01f12f6cf6438926743d87434d243c7f904a5d\tCargo.toml",
+    "100644 blob b432996f101609389fcd631582395680520eb494\trust-toolchain.toml",
+    "040000 tree 3eae919d3c6ae9c1ab0edb18cac937094c362ee4\tsrc",
+    "040000 tree 6ac7e5033f5f694a043ab9ca4361cf09318a8b06\ttests",
+    "040000 tree 424b0b986342a419095e476d6450537d4432a035\txtask"
+  ],
+  "summary": {
+    "harness_summaries": 306,
+    "passed": 3862,
+    "failed": 0,
+    "ignored": 196
+  },
+  "log": {
+    "path": "target/dimension-state-full-pr-gate.log",
+    "bytes": 502384,
+    "sha256": "9eba3f39cfc644fd3cc895b1cfe8ee0192d70e7658a175a0e49e845bce5a529a"
+  },
+  "qualifications": [
+    "The exact committed runtime head remained unchanged throughout the gate. Untracked entity-visual evidence and its later Git attributes do not change Rust/tests/Cargo/xtask.",
+    "Ignored tests are not claimed executed by this gate; operation-verification.json retains the separate native906-case acceptance and all per-stream original bindings.",
+    "A fresh exact-publication-head local gate and all five platform checks remain required in the serial queue."
+  ]
+}

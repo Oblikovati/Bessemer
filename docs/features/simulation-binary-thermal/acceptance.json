@@ -1,0 +1,141 @@
+{
+  "issue": 134,
+  "behavior_profile": "simulation-binary-thermal-v1",
+  "status": "Historical initial acceptance before Bug #137; fixed candidate requires a fresh full local and platform gate",
+  "revision": "55ad3b8c6a10db705ad33206309c9680fbf7b9ef",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "code_and_test_sha256": {
+    "src/archive_codec/mod.rs": "cbc6b9488f12aa8478c47d93ea33d1d9434616a2f2380a4cdde24a7449191e3d",
+    "src/model_archives/mod.rs": "2de1bcb30c14c4cc34aff26aff1ea621bc8e01bac3d0053644d5a0c4e704f684",
+    "src/model_archives/model_references.rs": "33039eef411fb7d4315cadf284dd7ab63be115c9c5815667960441db3cf24a65",
+    "src/model_archives/object_body.rs": "a144240d2f42b404dea52414fbf1947599fabd6e93677b57ee6c9db4a9db3e68",
+    "src/model_archives/reader.rs": "63d81942381605cc81330f82726e37508641cae0d25246c488657f136ff83edc",
+    "src/model_archives/simulation_embedded/archive.rs": "590609e604ee49a275986cfd0aa905864d02e4286c3b6edd4a49df06b2103fec",
+    "src/model_archives/simulation_embedded/boundaries.rs": "dff525dab68767082fb950b8f96ffa90a7070922205ed451c0bc94f35c41b4ae",
+    "src/model_archives/simulation_embedded/bounds.rs": "badf3d6c06b669eea8488fa9c8dcd89555197bfc21ccfc11ca3dc0be4121b14d",
+    "src/model_archives/simulation_embedded/chains.rs": "47e652c86de7361d055a0f4da6237d551b25d7778f54d2e1c6ef2178f7e89b0b",
+    "src/model_archives/simulation_embedded/component_boundaries.rs": "3498408e7ab3546448b887a40c1c5b585615c5fe2e6bf4a63f341c1fbaffd529",
+    "src/model_archives/simulation_embedded/components.rs": "36093e043af329edac67435c11b26610e4007699e4cdbf070ab9ceb5e5ea4c38",
+    "src/model_archives/simulation_embedded/decoder.rs": "dae144d2b8c833098add88f3d2019ba73e9ce8874cd809e76b9ccea4e4b23b7b",
+    "src/model_archives/simulation_embedded/edit.rs": "7d966774529f4861b6fe552922aab7c3d933bfa7be5ca063d9ada2acad42b017",
+    "src/model_archives/simulation_embedded/mod.rs": "01bb9956954a1f9d2b59a8b1e58fc5fb18c99d8bd6f0a49826a5a723dc125619",
+    "src/model_archives/simulation_embedded/reference_wrappers.rs": "1855e1b07173747ddf5361396c23cacf3a0987d6da8389d37a31f9fca8f04dc0",
+    "src/model_archives/simulation_embedded/representations.rs": "de7ea54bb0d27d87292e5d5c3773d281a62e1794d8145513971042f51f03fcdf",
+    "src/model_archives/simulation_embedded/wrappers.rs": "a554f384222618b172d522611264ef3a7af810b7d25fb8079affbfa07de3c56d",
+    "src/model_archives/simulation_scope.rs": "256c9eb75b54b76139d1728713d815bb9290f5ffdbbcdb9a34fe9acdba88d32f",
+    "src/model_archives/test_modules.rs": "5626c689e67ec562bc92f5984015b06a39ea798866de27f7400175d51411ae6f",
+    "src/simulation/persistence/mod.rs": "b4cad6b7c7629a30ce368bb3b8d951287f47e9b38848b0c6d047e3f2bd5ef0e2",
+    "src/simulation/persistence/thermal/archive.rs": "d6bcb5118e19cb03fc69462cbbef736eb4e20310ee503fa5930dec5b9bb5ab96",
+    "src/simulation/persistence/thermal/base.rs": "9e89bfb2d09adc6b8b95b6691eb33c83234f340aa0ae58fdf4f13ff76f8bb90d",
+    "src/simulation/persistence/thermal/contracts.rs": "4bb8297e95f556e56f2af1f1fd1ea7ff1c2759434431be01b1c404aecb2f7037",
+    "src/simulation/persistence/thermal/coverage.rs": "96be4a8703620af78dc6c54cc535ce67ca7f26eab519443c3b1586f19501681f",
+    "src/simulation/persistence/thermal/edit.rs": "b1c325e7f072e6100bc578cf0b7e758c6c59795a9b3817452cf92723e4c75227",
+    "src/simulation/persistence/thermal/history.rs": "3059a30fdd74e55394e047617386820e308e198ce60709429fd2baa73afddb26",
+    "src/simulation/persistence/thermal/mod.rs": "aa4b673ee5f74572323441e0eb0ad17bdc91d5ff1a67474d922b65636b8ae15b",
+    "src/simulation/persistence/thermal/reader.rs": "8ec4c2adea9273af0a491b1e1cb43ae9890836853f1aee8c456885919f434d42",
+    "src/simulation/persistence/thermal/result.rs": "fd391e338bf7ce6db97d9f83cbb15b1ec009dc1506e0c400a8da729bab9a7e47",
+    "src/simulation/persistence/thermal/tails.rs": "8c24865f59df990349df401bfb303350d0dc8b28aba480d05ecdd683741d838a",
+    "src/simulation/persistence/thermal/values.rs": "114826d0b558c5b12d5caad5446019789e035c8b6dd9ab2138edab667ffa88f3",
+    "tests/model_archives/embedded_field_projection.rs": "72523936c16e0ff908cf31c407d4e31079d18691bdf9a5abb329407f2c4acf55",
+    "tests/model_archives/simulation_embedded_context.rs": "a210d3eb4d91d0cb58cf6a99d1bb0fd9939ad17bcbc59fa26e43aab05d44e116",
+    "tests/simulation_embedded_archives.rs": "430e9ce8573fa0d8b063825b7f2b8a8890472054074eb943b60bdda9d1fd3d02",
+    "tests/simulation_embedded_components.rs": "a573b6d6c768fd44103c9d6f6830837aa87ba48e465a71c323d20f58764dfa6d",
+    "tests/simulation_thermal_collections/edit_oracles.rs": "565880e6dd9977ffbb311ddf208bab2f9e653f372e55d11ac70499b975b902fe",
+    "tests/simulation_thermal_collections/edits.rs": "e5b816e972ce20ffcd87d231cf58112cb4db1d986987c21d7ba7bbde7909e8b2",
+    "tests/simulation_thermal_collections/embedded_maps.rs": "cd126623404f67dee94e5d51d40d935d59fde2754bdd147ffae8575a683cf38e",
+    "tests/simulation_thermal_collections/history_projection.rs": "18633f51c9ad2019c8f1b6e134d71c974504ec29d5dff9f058c1156cd2ec9556",
+    "tests/simulation_thermal_collections/malformed.rs": "80f599a5edf9f5b59153c61c19c64599c17ece5f986193ab12b7b401350c9ec3",
+    "tests/simulation_thermal_collections/nested_history.rs": "23560249c4dd3f563d6867c1b74670dec6045e8fd7ba820ca3418516e917d3bf",
+    "tests/simulation_thermal_collections/projection.rs": "602e82127898972e622d29f10b670a10ff3395e8cf6f982346aa9efbf6a500f9",
+    "tests/simulation_thermal_collections.rs": "7ef004775cb54f51c35ce757e98df600ff43da3d1a21549a6757e4ee0976c5cc"
+  },
+  "requirements": {
+    "explicit_embedded_context_and_ordinary_guards": [
+      "wrapper-extraction-verification.json",
+      "component-extraction-verification.json",
+      "external-extraction-verification.json",
+      "boundary-extraction-verification.json"
+    ],
+    "complete_registry_inner_versions_and_native_archives": [
+      "registry-reference.json",
+      "native-embedded-reference.json",
+      "embedded-map-verification.json"
+    ],
+    "complete_outer_grammar_and_retained_candidates": [
+      "thermal-owned-reference.json",
+      "thermal-native-cases-reference.json",
+      "thermal-framing-verification.json"
+    ],
+    "typed_edits_ownership_history_and_concurrency": [
+      "thermal-edit-verification.json",
+      "thermal-history-verification.json",
+      "thermal-nested-history-verification.json"
+    ],
+    "independent_full_field_raw_pattern_and_offset_oracles": [
+      "thermal-projection-verification.json",
+      "embedded-field-verification.json"
+    ],
+    "count_text_mode_version_prefix_and_budget_rejection": [
+      "thermal-adversarial-verification.json"
+    ],
+    "copied_actual_sources_dependencies_and_specification": [
+      "source-snapshot.json",
+      "schema-reference.json",
+      "auxiliary-source-reference.json",
+      "native-source-reference.json"
+    ]
+  },
+  "focused_tests": {
+    "embedded_and_outer_with_explicit_native_inputs": 56,
+    "nested_primitive_fields_with_explicit_native_input": 2,
+    "failed": 0,
+    "ignored": 0
+  },
+  "actual_pinned_reference_tests": {
+    "passed": 19,
+    "failed": 0
+  },
+  "fresh_process_scope": [
+    "Every outer field and exact complete image",
+    "Every scalar-edited outer field and outer history parent",
+    "Every embedded pointer, class schema and map identity",
+    "Every nested field type, exact offset and raw value",
+    "Complete scalar-edit nested-copy provenance"
+  ],
+  "full_local_gate": {
+    "command": "cargo xtask pr",
+    "status": "passed",
+    "log": "target/binary-thermal-pr-gate.log",
+    "initial_format_failure": "Corrected formatting of included test registry and its new child modules before restarting the terminally failed gate",
+    "exit": 0,
+    "passed": 3183,
+    "failed": 0,
+    "ignored": 38,
+    "completed_test_summaries": 243,
+    "log_sha256": "c3024b836e7838d495bae55c1a675ac6313bfe298899c18967c9b91d88560293"
+  },
+  "platform_integration": {
+    "status": "not_started",
+    "required_checks": 5
+  },
+  "maintenance": {
+    "versions_changed": false,
+    "release_tags_created": false,
+    "new_cargo_dependencies": false,
+    "humanizer": "Unavailable in this session; prose pass remains for maintainer review"
+  },
+  "exclusions": [
+    "Native application DLL/COM execution and read/save acceptance",
+    "Inferred runtime version dispatch",
+    "Unknown physical units or runtime globals",
+    "Geometry and topology validation",
+    "Complete installed SolidWorks schema parity"
+  ],
+  "post_gate_regression": {
+    "issue": 137,
+    "problem": "Semantic embedded-field equality omitted retained CString prefix width and could discard a requested framing change",
+    "fixed_candidate_status": "Focused regressions passed; full validation pending",
+    "released_behavior_migration_required": false,
+    "reason": "The unreleased v1 contract already requires exact requested wire patterns; semantic text equality remains unchanged"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "source_sha256": {
+    "bodyfeatures.py": "22390663a3e4f0e1eaca496f06719683a26a2c508fbfeea9a460f9c382847a2b",
+    "scales.py": "0237d480ff308ffefa5a835d22013d4a985c089bcf899122aae6c1caf9f3505d",
+    "configurationmanager.py": "9a7bde722004fa3dc866be4299dae6e4d37bc63f6e18c3d3b6ff3041e39f0090"
+  },
+  "cases": [
+    {
+      "stem": "scale-empty",
+      "bytes": 302,
+      "reads": 89,
+      "sha256": "30172688d89a8c77dc32dcbad4c72f7876e9ed98ea4117fb2376e5060f29b2d0",
+      "oracle_sha256": "252105002418eb92f93c66bb0108d4eca2c779083b50e3b286e1b1cade57a8cb"
+    },
+    {
+      "stem": "scale-coordinate",
+      "bytes": 419,
+      "reads": 117,
+      "sha256": "d3b2bc4e644999d226f3a0f5fe6658c2ed053b27fb5c9e2c03834f6ff2aff930",
+      "oracle_sha256": "3bafbb3b23c6bc8af5c0dc78acb13b856c85acfa9beede1a4f6a4d2f4b9e9f7f"
+    },
+    {
+      "stem": "scale-edited",
+      "bytes": 419,
+      "reads": 117,
+      "sha256": "c4643678727337d9891889174572b60ccf06758e8b294c9667dc1347d11d9cab",
+      "oracle_sha256": "3e13a1252cac611a567e2481b479eae159db7a1fe837066544c8fcea119de466"
+    },
+    {
+      "stem": "schema-unicode",
+      "bytes": 36,
+      "reads": 9,
+      "sha256": "b80fba0805a9e7271af3bb7bf6c3bfb6680732b2927ba1c4a74f76b629f35645",
+      "oracle_sha256": "b485255d87b955959277c11149c6ad6192fd5c6261151e30d0b11e1534509ec3"
+    },
+    {
+      "stem": "schema-empty",
+      "bytes": 29,
+      "reads": 6,
+      "sha256": "0396cc9e962edca765f61b83c244b9fd9f90eea7d301afc7983e69a64d596df9",
+      "oracle_sha256": "73d2a91c7e13ed125f9df95ed2962d308260220460470b1089c71fbde92208a0"
+    }
+  ]
+}

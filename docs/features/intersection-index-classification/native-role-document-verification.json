@@ -1,0 +1,80 @@
+{
+  "issue": 185,
+  "stage": "Complete original native document selector/index edits and reversals",
+  "processes_reaped": 2,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "tests_per_process": 1,
+  "test_seconds": [
+    151.72,
+    150.11
+  ],
+  "complete_stream_contexts_per_process": 8,
+  "selector_forward_edits_per_process": 68,
+  "index_forward_edits_per_process": 17,
+  "total_changed_documents_per_process": 85,
+  "total_typed_reversals_per_process": 85,
+  "artifacts": [
+    {
+      "path": "tests/model_intersection_reference/native_edits.rs",
+      "bytes": 7297,
+      "sha256": "737d87112155b6e96df16dfc62a2d1d11e68bf161840010ddaa5bd2032c30722"
+    },
+    {
+      "path": "tests/model_intersection_reference/native_roles.rs",
+      "bytes": 5366,
+      "sha256": "3456d6c2c0fa78ef1d91766d06a247ceaa82ef31901744b17b733ed54c044f7e"
+    },
+    {
+      "path": "tests/model_intersection_reference/native_documents.rs",
+      "bytes": 3975,
+      "sha256": "c336b4ba00c81ba0d650e2f9e4869280c7fa951b7f83dc843728811039b8ef00"
+    },
+    {
+      "path": "tests/model_intersection_reference/native_role_documents.rs",
+      "bytes": 5383,
+      "sha256": "827cdb1c5ae0d9c493fbc1424fec488e4b26b570da09c1689b69f0e55d39c8b3"
+    },
+    {
+      "path": "target/native-role-document-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/native-role-document-process-1.log",
+      "bytes": 1116,
+      "sha256": "d2d7d04fbca393eb1b06068da6b6ab9405a38e099c1bc89b3cd8dfff703a1507"
+    },
+    {
+      "path": "target/native-role-document-process-2.log",
+      "bytes": 1116,
+      "sha256": "d55230abd6287690b7c71c6a78ae0613c44fdc966b4579e5f2b62b555a8be30a"
+    },
+    {
+      "path": "target/native-role-document-clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/native-role-document-format.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "coverage_credit": 0,
+  "checks": [
+    "Actual installed original files are read through the complete public document/header/configuration/CMgr/feature path, and selected features match the retained original BRF1 bytes and C3308/C3310 scalar words.",
+    "Each forward edit matches a literal complete-feature patch and all expected fields with exact original parents, result field, derived history, completion, unchanged count, coverage/fidelity, diagnostics and stale-handle rejection.",
+    "Every actual changed container serializes and reopens through the public document reader. Complete fields equal the typed expected result; every unrelated stream and stream ordering is unchanged.",
+    "Fresh revision-owned views reverse every request. All reversed fields and feature bytes match the source, and the complete serialized native file returns byte for byte to its original form. Original source archives and documents remain unchanged.",
+    "Both fresh processes cover all68 selectors and17 indices without state/value filtering. Standalone whole-unit Clippy, workspace formatting and function/file-size audit pass."
+  ],
+  "qualifications": [
+    "The native tests require retained proprietary packets, installed sample files and the explicit kernel schema; both invocations explicitly included the ignored test.",
+    "No changed-file export packet or independent cross-process changed-document comparison is claimed. Exact per-operation whole-file restoration is asserted in both fresh processes.",
+    "This is native file-format acceptance, not native application opening, rendering, matcher/provider execution or geometry validation.",
+    "Mixed concurrency, the second classification actual-output Source process, full Cargo and exact-head publication gates remain pending. Humanizer unavailable; prose review pending."
+  ]
+}

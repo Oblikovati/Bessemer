@@ -1,0 +1,22 @@
+{
+  "base_revision": "56f867db6699a03ab78a238995a7ee5e33f78d63",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "Rust 1.99.0 MSVC",
+  "source_sha256": {
+    "src/display_lists/archive_edit.rs": "c0e4a1d1cefcd05c1cd93f8811baeae83cda91ee3cd831448404a6315dab1f3d",
+    "src/display_lists/archive_edit_history.rs": "7656a24ee0314affa3f0bdc263d5bad376fd00f5d610eb019156737739cab464",
+    "src/display_lists/archive_edit_types.rs": "80f18f9d0fb21ca4b3708a7c0fc6f3621f7ee9ce655fa089eb3a4e35b103f4a3",
+    "src/display_lists/archive.rs": "24b739edae260dfd2f28818bd9fe555fc55cf89fde00efd4d27607c03e01767e",
+    "src/display_lists/archive_identity.rs": "ee5430a8fb9498600367ad7c00d9bf89abf64a9f7defcfd4447daadb2d7414fd"
+  },
+  "checks": {
+    "cargo_xtask_pr": "passed",
+    "doctests": 204,
+    "report_integration_tests": 10,
+    "named_branch_integration_tests": 7,
+    "repeated_path_unit_tests": 1,
+    "clippy_all_targets_warnings_denied": "passed"
+  },
+  "scope": "exact stored-archive validation and structural field history; geometric and native application acceptance excluded",
+  "cross_platform_and_thread_sanitizer": "pending CI for this checkpoint"
+}

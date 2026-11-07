@@ -1,0 +1,43 @@
+{
+  "issue": 174,
+  "stage": "Original reference tests only",
+  "successful": true,
+  "tests_run": 4,
+  "process_exit_code": 0,
+  "source_python_files": 5102,
+  "snapshot_identity": "0ec15c472733c060ae0d09dbacde25841ec65af8b6724b39d274c6b1043123b0",
+  "snapshot_sha256": "ae1f7825a8f7137cf853b00d29ef6c1e92cc3f596880b7615fb6b835b29d1d29",
+  "log": {
+    "path": "target/legacy-plot-frozen-source.log",
+    "bytes": 619,
+    "sha256": "2c0919c4bf83aaa968678b40551937e721f999c6b1c33c68d29ec73e49546225"
+  },
+  "upstream_report_inventory": [
+    {
+      "file": "cosworks-legacy-plot-fixed-reads.json",
+      "bytes": 6623,
+      "sha256": "f29d842bad49e163275d128c3d5e795d05cdfc27b8aaab531daffef94d5226d7"
+    },
+    {
+      "file": "cosworks-legacy-plot-record-native-evidence.json",
+      "bytes": 1391445,
+      "sha256": "f3c88fd6ae62667f1e8a1956649400c1802eae6ec6597521722727658733e97f"
+    },
+    {
+      "file": "cosworks-legacy-plot-wide-evidence.json",
+      "bytes": 317051,
+      "sha256": "895d654a307aca85b7961319dc75c7eb116c740d2f4682d28bca924dd039ded7"
+    }
+  ],
+  "exclusions": [
+    "No Rust codec",
+    "No native corpus replay",
+    "No installed binary binding verification",
+    "No publication acceptance"
+  ],
+  "accepted_source_cut": "f7ba45f6dd302e9781cee9b11b75d25a909748e1",
+  "snapshot_reference": {
+    "revision": "f7ba45f6dd302e9781cee9b11b75d25a909748e1",
+    "path": "docs/features/simulation-legacy-plot/source-snapshot.json"
+  }
+}

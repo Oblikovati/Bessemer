@@ -1,0 +1,31 @@
+{
+  "issue": 206,
+  "status": "Implemented and passed focused/native checks; full gate and integration remain separate",
+  "edition": "Edition 0.3073 \u00b7 2026-11-04 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "specification_sha256": "0a7d862562f95e16dbb566c8d7c5e2ab3611ea0c23960b6b53ac0f1d9c6bec18",
+  "clause": "11.454",
+  "snapshot_representation": "LF-normalized excerpt with one final newline, hashed before staging",
+  "snapshot_sha256": "4e7578cf6ad91df77aab17952f897202a762a50453fae491b5be7b6ebde245dc",
+  "source_modelcomponents_sha256": "60f01bb82cc64d35e4ef350797d0bf115a38171a9716176adea69f06759a561f",
+  "pre_implementation_sha256": "68c198b7f10e28d7330bf251bb38d8f67cd4cce37f4f67945343473d922f1762",
+  "constraints": [
+    "Retain unknown_84 raw signed32 path; every nonzero value selects exactly one direct payload",
+    "No moOldRef wrapper tag/class/map slot; only the generic contained pointer participates in the map",
+    "Preserve full raw u32 time_word without native cleanup, widening or calendar conversion",
+    "Ordinary base_fields may support the body; shared Simulation base_head must retain its existing nonzero restriction",
+    "Keep separate reference-info payload unsupported and all existing prefix gates unchanged"
+  ],
+  "source_initial_tests_passed": 2,
+  "source_initial_seconds": 2.615,
+  "source_initial_exit_code": 0,
+  "acceptance_credit": "No new native positive-body population, global accounting, geometry, application or whole-parity credit",
+  "strict_replay": {
+    "tests_passed": 2,
+    "seconds": 2.675,
+    "exit_code": 0,
+    "all_fixture_bytes_unchanged": true,
+    "snapshot_identity": "dd53943c8555d5fa8b01f345eae2ee61acdcadca976dd3fcbf694d107da4aa46"
+  },
+  "pre_implementation_revision": "b39245e57895c13b7235872b65a9649e14594df7",
+  "behavior_transition": "Ordinary legacy-payload profile1 reads formerly unsupported nonzero bodies; old zero-presence baselines and Simulation rejection remain unchanged. No on-disk migration, dependency or package-version change."
+}

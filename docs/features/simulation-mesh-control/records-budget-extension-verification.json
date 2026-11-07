@@ -1,0 +1,19 @@
+{
+  "feature_issue": 161,
+  "behavior_profile": 1,
+  "reason": "Added independent resource/coverage/record-boundary packets; all earlier owned/native input/projection/history packet references remain unchanged.",
+  "unchanged_reference_commit": "91e4784be42499dd1e694749851b43e5044d431c",
+  "reference_checks": 17,
+  "failures": 0,
+  "reference_log_sha256": "c05d9f3b35ab4b3aae35f82aacab79c33e553aa2cd4288b2cfa3bf961057dbba",
+  "budgets": {
+    "records-owned-reference.json": {
+      "bytes": 413264,
+      "sha256": "7a9d62d558b5ba095c2407f4f2dcb62d4d991cb6f6d9def64c0e98dd44439f41"
+    },
+    "records-native-packets.json": {
+      "bytes": 87191,
+      "sha256": "2e651803855bc2f1f882a16c761e154d27551b643a23f43a017b58a0343a1a39"
+    }
+  }
+}

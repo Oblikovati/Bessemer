@@ -1,0 +1,27 @@
+{
+  "status": "transform foundation verified; complete display-list archive implementation incomplete",
+  "issue": 28,
+  "platform": "Windows x64",
+  "rust": "1.99.0 MSVC",
+  "date": "2026-10-24",
+  "reference_head": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "reference_dirty": true,
+  "specification_snapshot_edition": "0.128",
+  "native_display_documents": 1086,
+  "compact_transforms": 20209,
+  "fixed_transforms": 6277,
+  "transform_bytes": 1804378,
+  "unique_transform_encodings": 3467,
+  "display_stream_manifest_sha256": "94047d85dc01ed0f391378374f2c15f5464301bb26990d4214eecdd600723a87",
+  "owned_transform_vectors": 1025,
+  "owned_vectors_sha256": "6eb6cf37e07599e10cae99f2b6a5c4b07539ccbb3122e9a15bc774a5de9970d8",
+  "snapshot_sha256": {
+    "specification-11.6.md": "cf6ec7955e3e59abb43b2958148e425809a66cc19d8489e95f6f4c03727f377c",
+    "specification-13.md": "5ee067a4735dc779f01beef307868b9899008a53935c00da2f8e606254e37727"
+  },
+  "exclusions": [
+    "Complete Bessemer DisplayLists parsing and writing (pending)",
+    "Native application acceptance",
+    "Geometric validity"
+  ]
+}

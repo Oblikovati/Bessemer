@@ -1,0 +1,36 @@
+{
+  "issue": 200,
+  "status": "Simulation regression expectations updated; full PR gate must be rerun",
+  "failed_gate": {
+    "source": "f41909cbaaf822292ef45f421eb3ec74c97afa4a",
+    "exit_code": 1,
+    "completed_test_summaries": 239,
+    "passed": 2895,
+    "failed": 1,
+    "ignored": 67,
+    "log_sha256": "ba924212280f22fda82248dcb1b741897f88c7b572f6faedc95a52f9a4b95544",
+    "cause": "An earlier inertial regression equated ModelField lists whose CString count widths differ. Physical ModelField comparison profile2 intentionally distinguishes these. The equivalent thermal assertion failed independently before its update."
+  },
+  "updated_contract": [
+    "Physical field lists differ",
+    "Every corresponding path and semantic ModelFieldValue remains equal",
+    "Existing exact output bytes, changed completion, nested and outer history, isolation and repeated-noop checks remain required"
+  ],
+  "suite_results": [
+    {
+      "passed": 20,
+      "failed": 0,
+      "ignored": 5
+    },
+    {
+      "passed": 27,
+      "failed": 0,
+      "ignored": 6
+    }
+  ],
+  "logs_sha256": {
+    "model-text-framing-simulation-suites.log": "b2db50c142bb8b15449c9c3dd02a2a40280e527d1efba3c8f27d8070a17930a8",
+    "model-text-framing-thermal-before-test-update.log": "0dbbd2cf35ca9818a161dc5c25471fc1f280dba0b752c223798b50084d09ba5a"
+  },
+  "runtime_changes": false
+}

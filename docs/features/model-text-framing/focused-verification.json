@@ -1,0 +1,43 @@
+{
+  "issue": 200,
+  "comparison_behavior_version": 2,
+  "prior_comparison_behavior_version": 1,
+  "pre_fix_source_revision": "790a79d10e36991b248eb257f04daa7c559e52bd",
+  "affected_scope": "Unreleased physical ModelField equality; public ArchiveString and ModelFieldValue semantic equality are unchanged",
+  "before_fix": {
+    "passed": 0,
+    "failed": 2,
+    "exit_code": 101
+  },
+  "after_fix": {
+    "passed": 2,
+    "failed": 0,
+    "exit_code": 0
+  },
+  "prefix_width_transitions": 18,
+  "expected_exact_noops": 6,
+  "expected_changed_requests": 12,
+  "encodings": [
+    "Latin1",
+    "Utf16"
+  ],
+  "source_tests_passed": 2,
+  "literal_source_frames": 6,
+  "source_snapshot_identity": "174dbe223babcbd4c34bf2552908672f9d540075ce43daae70d457279c59129d",
+  "source_import_and_content_guard": "passed",
+  "source_collector_removed": true,
+  "log_sha256": {
+    "model-text-framing-before-fix.log": "e9c50b4374e725a33a6098d43163a52a76f5d07a6a149b7a809f7d23d0e5dfa3",
+    "model-text-framing-fixed.log": "fc88497e004bd8e3af5e42b0f655bd22225688cf88760b84d7cba5f790a02629",
+    "model-text-framing-original-source.log": "63db1f0eaf27679379b632d46e5449915043299038b0c22bb92799c8f3d7acbb",
+    "model-text-framing-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "model-text-framing-tests-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "remaining": [
+    "Complete repository gate on the isolated PR head",
+    "All required exact-head remote checks before merge"
+  ],
+  "focused_library_clippy_passed": true,
+  "focused_regression_clippy_passed": true,
+  "function_and_file_size_audit_passed": true
+}

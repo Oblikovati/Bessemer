@@ -1,0 +1,55 @@
+{
+  "feature_issue": 160,
+  "structural_parent": "ff67dc601d68f326579d06ead203fcd69221a2f8",
+  "strict_reference_checks": 13,
+  "strict_reference_exit_code": 0,
+  "strict_reference_process_reaped": true,
+  "reference_log_sha256": "64f13ee356335c8e17727bcd1f609f3f056501849fa46e3f51efb30369438ff0",
+  "focused_shell_tests_including_native": 6,
+  "existing_solid_tests_including_native": 5,
+  "focused_exit_code": 0,
+  "focused_process_reaped": true,
+  "focused_log_sha256": "530dfdda2d90cbb7a999222beac8d4e4e80475e33f2d39be961c0c7d63eafdc9",
+  "clippy_warnings": 0,
+  "clippy_log_sha256": "6c298eb6ef80384c63995eb0ce570f57b267d756a32455cc268e250e328aa12e",
+  "owned": {
+    "streams": 9,
+    "logical_bytes": 1550,
+    "arguments": 13,
+    "accepted": 10,
+    "rejected": 3,
+    "incomplete": 1,
+    "packet_bytes": 2210,
+    "packet_sha256": "22bce5e3b7ca6d8a82e6874a75af6b8e234a8b095ed5cc770217debf671eb01c"
+  },
+  "native": {
+    "streams": 936,
+    "packet_bytes": 1844374,
+    "packet_sha256": "a5aeca4bd40e9022e0aa4182b9d7c630f252bcc15c60e3931eab222e785d13a8",
+    "complete_streams": 935,
+    "incomplete_streams": 1,
+    "original_arguments": 1008,
+    "accepted": 962,
+    "rejected": 46,
+    "target_executed": false
+  },
+  "typed_output": {
+    "arguments": 1008,
+    "packet_bytes": 1857428,
+    "packet_sha256": "6f7af608468ab54e7467180c2e0be81ca1692f3b57002f03cbfc6e6ea6ff3797",
+    "fresh_rust_processes": 2,
+    "exact_reference_packet_match": true,
+    "source": "Result bytes returned by typed from_fields, with original ordered identity/version/profile and explicit failure markers"
+  },
+  "source_snapshot_sha256": "b6742efb7f2fcf4f76ea03ffa771e9ecc5495c873d9a12de3c452488bd2b4682",
+  "test_sources_sha256": {
+    "tests/simulation_shell_inventory/families.rs": "97b504ae6daa8ef23361e1a9a377e6100c8bfe4a836348cb1282ff4b009a508b",
+    "tests/simulation_shell_inventory.rs": "c51a9125b6ddc7372e104daba888d090357619b03d83cb568e49406dc8dadeac",
+    "tests/support/inventory_packet.rs": "f6ae48a7deac6ca15a819ff6dd58531ebf98e939d9ed9cd2779af46bacdb9e8a"
+  },
+  "exclusions": [
+    "Ordered native edit history/primitive expectations remain separate family oracles; a combined acceptance invocation remains pending.",
+    "The complete local gate is live; exact-head platform gates remain pending.",
+    "No target execution, native application or geometry acceptance, or whole-format completion is claimed."
+  ]
+}

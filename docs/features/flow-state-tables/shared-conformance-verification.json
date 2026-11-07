@@ -1,0 +1,35 @@
+{
+  "source_parent": "f913f4e770e45f1d4722fab0bb46b4c5c5214396",
+  "scope": "Shared word-array field/offset/value conformance and copied/derived carrier history checks; unchanged production behavior",
+  "validation": {
+    "broad_regressions": {
+      "passed": 61,
+      "failed": 0,
+      "ignored": 5
+    },
+    "final_state_tests": {
+      "passed": 32,
+      "failed": 0,
+      "ignored": 3
+    },
+    "clippy_all_tests_exit": 0,
+    "formatter_exit": 0,
+    "python_tests": 9
+  },
+  "source_sha256": {
+    "tests/flow_state_tables/arrays.rs": "aac9e6e3a58d78e0b171b26295f95ffa2c8ed07185023341c6ae2c776531406e",
+    "tests/flow_state_tables/carrier.rs": "d0e90a58f87653744d609e6dfdeaebb1d19e7a49f4ac6f0ac82083f06372a509",
+    "tests/flow_state_tables/context_api.rs": "01f760d15199a100a924a5b74ad473089a3d92febf6091ba7d7e63730067cde4",
+    "tests/flow_state_tables/context_edit.rs": "e794b12721983f1fbb0a742242a3a6f410d289eb2d90e47c74fe0d3f53c7e4f1",
+    "tests/flow_state_tables/stored_api.rs": "d20292ac2a285c740f6d3f5f835d2a0014ba7f09686301d248773b7b980a6b09"
+  },
+  "indexed_root_sha256": "678aa6bd385ff0dd45390d5671b28ad50da0d2853f3b95806c4de5d2369ed79a",
+  "fixture_compressed_sha256": {
+    "tests/fixtures/flow-state-tables/record129.bin.gz": "be78d2521e603e95b52765795ab7b7d332306c66ba241c61f496bc763a6f6fc8",
+    "tests/fixtures/flow-state-tables/record138.bin.gz": "3584ba8136db1541f8039f21add1269b17b0ae6e58d319a2f4bb5a05233db938",
+    "tests/fixtures/flow-state-tables/record139.bin.gz": "a7f830d7e545269300debdd3e30b4664de17a144ea7610871daae58a9e2e753f",
+    "tests/fixtures/flow-state-tables/record417.bin.gz": "0bff6b1786abd42a94e7ae8a85cc94856df565c9b8cf13c2ba3294cbd9112c6a",
+    "tests/fixtures/flow-state-tables/record432.bin.gz": "418e9631af8f7bc680e6d704ac82d65ff501e5921a6cd2953158b554819576ae"
+  },
+  "qualification": "Validation included the new record417 implementation in the worktree; this structural commit includes only shared checks and the existing record138/432 callers"
+}

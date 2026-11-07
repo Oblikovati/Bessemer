@@ -1,0 +1,370 @@
+{
+  "base_revision": "d67f485",
+  "scope": "Complete archive reconstruction; schema parity remains incomplete.",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "cases": 906,
+  "accepted": 588,
+  "rejected": 318,
+  "previous_accepted_preserved": true,
+  "fresh_process_outcomes_identical": true,
+  "newly_accepted": [
+    324,
+    507,
+    508,
+    509,
+    510,
+    511,
+    512,
+    513,
+    514,
+    515,
+    516,
+    517,
+    518,
+    569
+  ],
+  "packet_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "failure_counts": [
+    {
+      "count": 19,
+      "cause": "model archive model stream: Unsupported: runtime class \"moSheetMetal_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 15,
+      "cause": "model archive model stream: Unsupported: runtime class \"moCompRefAxis_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 15,
+      "cause": "model archive model stream: Unsupported: runtime class \"moBlendCut_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 13,
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefPoint_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 12,
+      "cause": "model archive model stream: Unsupported: runtime class \"moConnectionPoint_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 11,
+      "cause": "model archive model stream: Unsupported: runtime class \"moNewFeatComment_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 10,
+      "cause": "model archive model stream: Unsupported: runtime class \"moWeldmentFeature_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 10,
+      "cause": "model archive model stream: Unsupported: runtime class \"moCompRefPoint_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 10,
+      "cause": "model archive model stream: Unsupported: runtime class \"moCoordSys_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 10,
+      "cause": "configuration context Contents/CMgr: Unsupported: configuration version 18000; expected scoped current version 19000"
+    },
+    {
+      "count": 10,
+      "cause": "model archive model stream: Invalid: object role \"point_reference_88\" has runtime class \"moEndPointRef_w\"; expected one of [\"moPointRef_w\"]"
+    },
+    {
+      "count": 8,
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefDim2E_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 8,
+      "cause": "model archive model stream: Unsupported: runtime class \"moBlend_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 8,
+      "cause": "model archive model stream: Invalid: object role \"user_objects[0]\" has runtime class \"moSplineTangencyControl_c\"; expected one of [\"moSketchToolsUserObject_c\", \"moExtensionLineIndicator_c\"]"
+    },
+    {
+      "count": 7,
+      "cause": "model archive model stream: Unsupported: runtime class \"moRevolvRefSurf_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 7,
+      "cause": "model archive model stream: Unsupported: runtime class \"moHelix_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 7,
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutListFolder_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 6,
+      "cause": "model archive model stream: Unsupported: runtime class \"moProfileRef_w\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 6,
+      "cause": "model archive model stream: Unsupported: runtime class \"moPLineSilhIdRep_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 6,
+      "cause": "model archive model stream: Unsupported: runtime class \"moDisplayNote_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 6,
+      "cause": "model archive model stream: Unsupported: runtime class \"moExtruThin_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 6,
+      "cause": "model archive model stream: Unsupported: runtime class \"moDraft_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 5,
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorStock_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 4,
+      "cause": "model archive model stream: Unsupported: runtime class \"moSelectionSetData_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 4,
+      "cause": "model archive model stream: Unsupported: runtime class \"moBossThin_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 3,
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefDim1E_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 3,
+      "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moBackDraftSurfIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+    },
+    {
+      "count": 3,
+      "cause": "model archive model stream: Invalid: object role \"plane_data\" has runtime class \"moConstraintCoincLineAtAnglePlaneRefplaneData_c\"; expected one of [\"moRefPlnData_c\", \"moFixedRefPlnData_c\", \"moDefaultRefPlnData_c\", \"moFaceRefPlnData_c\", \"moFacePtRefPlnData_c\", \"moLinePtRefPlnData_c\", \"moPerLinePtRefPlnData_c\", \"moRefAtAngleData_c\", \"moRefThreePtsData_c\"]"
+    },
+    {
+      "count": 3,
+      "cause": "model archive model stream: Unsupported: runtime class \"moMirrorSolid_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 3,
+      "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moRadiateEdgeIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+    },
+    {
+      "count": 3,
+      "cause": "model archive model stream: Unsupported: runtime class \"moStock_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 3,
+      "cause": "model archive model stream: Unsupported: runtime class \"moRevolutionThin_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 3,
+      "cause": "model archive model stream: Unsupported: runtime class \"moNetBlend_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 3,
+      "cause": "model archive model stream: Invalid: object role \"plane_data\" has runtime class \"moConstraintMidPlaneRefplaneData_c\"; expected one of [\"moRefPlnData_c\", \"moFixedRefPlnData_c\", \"moDefaultRefPlnData_c\", \"moFaceRefPlnData_c\", \"moFacePtRefPlnData_c\", \"moLinePtRefPlnData_c\", \"moPerLinePtRefPlnData_c\", \"moRefAtAngleData_c\", \"moRefThreePtsData_c\"]"
+    },
+    {
+      "count": 2,
+      "cause": "model archive model stream: Invalid: object role \"backup\" has runtime class \"mo3DCylinderBackedUpData_c\"; expected one of [\"moPointBackedUpData_c\", \"moLineBackedUpData_c\", \"moSegmentBackedUpData_c\", \"moArcBackedUpData_c\", \"moEllipseBackedUpData_c\", \"mo3DPlaneBackedUpData_c\", \"mo3DSphereBackedUpData_c\"]"
+    },
+    {
+      "count": 2,
+      "cause": "model archive model stream: Unsupported: runtime class \"moConstSurfRef_w\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 2,
+      "cause": "model archive sketch text kernel body: Unsupported: sketch text kernel body presence 1; expected zero until its complete payload is implemented"
+    },
+    {
+      "count": 2,
+      "cause": "model archive model stream: Unsupported: runtime class \"moCavity_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 2,
+      "cause": "configuration context owned_6d8.objects_count: Unsupported: owned_6d8.objects_count count or presence 1; expected an empty supported branch"
+    },
+    {
+      "count": 2,
+      "cause": "model archive model stream: Invalid: object role \"reference_10\" has runtime class \"moSingleFaceRef_w\"; expected one of [\"moRefWrapper_c\"]"
+    },
+    {
+      "count": 2,
+      "cause": "model archive model stream: Unsupported: runtime class \"moSurfCut_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 2,
+      "cause": "model archive model stream: Unsupported: runtime class \"moMidSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 2,
+      "cause": "model archive model stream: Unsupported: runtime class \"moThicken_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 2,
+      "cause": "model archive model stream: Unsupported: runtime class \"moCurveInFile_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 2,
+      "cause": "model archive model stream: Unsupported: runtime class \"moSMAndFPFeatIdPair\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 2,
+      "cause": "model archive model stream: Invalid: object role \"point_68\" has runtime class \"moEndPointRef_w\"; expected one of [\"moPointRef_w\"]"
+    },
+    {
+      "count": 2,
+      "cause": "model archive model stream: Invalid: object role \"reference\" has runtime class \"moPlaneRef_w\"; expected one of [\"moRefWrapper_c\"]"
+    },
+    {
+      "count": 2,
+      "cause": "model archive model stream: Unsupported: runtime class \"featRadiusObject_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 2,
+      "cause": "model archive model stream: Unsupported: runtime class \"moLPatternItemId_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 2,
+      "cause": "model archive model stream: Invalid: object role \"plane_data\" has runtime class \"moConstraintCoincLineParallelPlaneRefplaneData_c\"; expected one of [\"moRefPlnData_c\", \"moFixedRefPlnData_c\", \"moDefaultRefPlnData_c\", \"moFaceRefPlnData_c\", \"moFacePtRefPlnData_c\", \"moLinePtRefPlnData_c\", \"moPerLinePtRefPlnData_c\", \"moRefAtAngleData_c\", \"moRefThreePtsData_c\"]"
+    },
+    {
+      "count": 2,
+      "cause": "model archive model stream: Unsupported: runtime class \"moDisplayWeld_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "configuration context Contents/CMgr: Unsupported: configuration version 11000; expected scoped current version 19000"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: archive: Invalid: map index 18548; expected < 225"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moMoveFace_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"suUIntArray\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moFillRefSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Invalid: object role \"valued_g3[2]\" has runtime class \"sgArcLenDist\"; expected one of [\"sgValG3Dim\"]"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moPlaneSection_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moTrimRefSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moRefSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moBlendRefSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "configuration context optional_data_608: Unsupported: optional_data_608 count or presence 1; expected an empty supported branch"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moSweepRefSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Invalid: object role \"references_570[0]\" has runtime class \"moSolidRef_w\"; expected one of [\"moRefWrapper_c\", \"moGeneralSurfRef_w\", \"moGeneralCurveRef_w\", \"moSingleFaceRef_w\", \"moCircleRef_w\", \"moCylinderRef_w\", \"moSphereRef_w\", \"moPlaneRef_w\", \"moPointRef_w\", \"moEndPointRef_w\", \"moLoftSynchRef_c\", \"moLineRef_w\", \"moLoopRef_w\", \"moSketchExtRef_w\", \"moTempAxisRef_w\", \"moCoordSysRef_w\"]"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moPttnBodyEdgeIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moMidRefSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moAlignGroup_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "configuration context visual_count_b50: Unsupported: visual_count_b50 count or presence 4; expected an empty supported branch"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Invalid: object role \"valued_g3[0]\" has runtime class \"sgArcLenDist\"; expected one of [\"sgValG3Dim\"]"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"edgeParamsObject_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moLockFeature_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moOffsetRefSurface_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moSmartComponentFeature_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"mo3dView_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Invalid: object role \"plane_data\" has runtime class \"moConstraintPrllPlnTanOneCylinderRefplaneData_c\"; expected one of [\"moRefPlnData_c\", \"moFixedRefPlnData_c\", \"moDefaultRefPlnData_c\", \"moFaceRefPlnData_c\", \"moFacePtRefPlnData_c\", \"moLinePtRefPlnData_c\", \"moPerLinePtRefPlnData_c\", \"moRefAtAngleData_c\", \"moRefThreePtsData_c\"]"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moBending_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moFaceBlendItemPair_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Invalid: object role \"representation\" has runtime class \"moEndCapChamferSurfIdRep_c\"; expected one of [\"moEntityIdRep_c\"]"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moMoveCopyBody_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moCompMultiEdge_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moLibraryFeature_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moCombineBodies_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Invalid: object role \"valued_g2[0]\" has runtime class \"sg3DPlane3DPlaneDist\"; expected one of [\"sgValG2Dim\", \"sgLLDist\", \"sgPntPntDist\", \"sgPntLineDist\", \"sgPntPntHorDist\", \"sgPntPntVertDist\", \"sgAnglDim\", \"sgPoint3DPlaneDist\"]"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moRoutePoint_c\" schema 1; expected an implemented complete model object body"
+    },
+    {
+      "count": 1,
+      "cause": "model archive model stream: Unsupported: runtime class \"moCutThin_c\" schema 1; expected an implemented complete model object body"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "fixtures": 618,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "two_processes_identical": true,
+  "all_forced_bytes_match_independent_fixtures": true,
+  "input_sha256": "f83faf0304914c28f0157ae2f9873ff4f1923a87d59579042895822739b8d44a",
+  "result_sha256": "1729f42e940c5cd3b02106e1a4a21158bdca94493ed4392b851ce153c1e0f1a6",
+  "trace_sha256": "bea090712a9f11735c55966d1e3244844778be6f6428e56d72fc0f0a95c69170",
+  "source_sha256": {
+    "modern_items": "ec8f56032df4a82344a59079962915fb56a4163c5ff256b5f1879c8889864c4b",
+    "../../examples/support/item_trace": "b67216781e3c36b9cdce939bb9566e8ce03a66e3ca71a0d0e3bc5dcd3fc1dfe4",
+    "../tessellation/groups": "8fe08948cb3112f2603363b03c40e19dd6164a5d7dc4f3f8028b7263fce023a3",
+    "../tessellation/arrays": "745bbb1e1ac3cb52f495f32549af1b37755a9f6e10139970ab3ea8d0a02c66a9",
+    "../tessellation/facets": "bacb985cf557af35de840535f736fa21f531b39bd3420c66bed10d6bd80b4fca",
+    "modern_root": "f7b4b890c197c4876d1edd9971fd3893d1771757967de1169f9b7f5ba524488f",
+    "modern_assembly": "37dff176983fd9f710880800b8ced8dfff4f0ed7c4cd781d11da478c72256324",
+    "modern_body_tess": "f96536ad110a31cb48fa52a648dc849b7cf76b2fe919315ea83a7fd4ce5ae764",
+    "modern_part_tess": "92464d6056a795df9eb8be008211e129be4416104ce3126599a8a3f0fc702326",
+    "modern_item_text": "41025b79df26a0b99280ee30e6949c47cc311553c0aa5ad4775a7a52637c4b68",
+    "modern_material": "1538ffaccceddf0fba4a3bb6a12385476b5a07b683c6fb6cc1e89692ebc2fc9d",
+    "modern_ui": "266ff1d275b870ae85ec017c2016db9865c8942e9f63fdf117f0b86838231173",
+    "modern_component": "1389fb54bbfbb8f82a3ed9c06107db259acba71d2f8116e6dec4829b1f7cee62",
+    "legacy_bucket_poly": "f4d2d360f650d46a84026b112f75d8c88944eaf458686ad0c3fa556747e62301",
+    "modern_bucket": "ba04827423257838b55b1b800dfe5c3229afba6d9717056d55ae9f8c89f8f291",
+    "textured_planes": "294a53dcd19997e475193c4daf216189a7aa9f154693e27f8a80c27f5e9dc80f",
+    "legacy_bucket_visibility": "8bdc0f766ea3f03434a108e82d2510c19a7c1a386fc7e9eb555ffc5f7719450a",
+    "modern_lights": "0f420f4c013c8552a5314e7b38281b26036cb12fc374965ee96e038c40f4a819"
+  },
+  "scope": "byte reconstruction and process determinism; field oracles checked separately by integration tests"
+}

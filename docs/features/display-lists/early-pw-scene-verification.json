@@ -1,0 +1,34 @@
+{
+  "fixtures": 130,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "two_processes_identical": true,
+  "all_forced_bytes_match_independent_fixtures": true,
+  "input_sha256": "21c801dc15014ffdd6b96cd2136434a5a49215695f6ff112442450e6debcc715",
+  "result_sha256": "24d5936459b3ac3cd9b305e00689b92850c9c3205b8d7c9601896b41cc3539a2",
+  "trace_sha256": "bfc05926811f06d45607c5c24b44da59f847e59f41bcd83b7de71d4faac4c41b",
+  "source_sha256": {
+    "modern_pw_scene": "5342805695163c3cda0fbd270d512711466856912eb4970e2aa6324cffdb1c39",
+    "modern_bucket": "1b4806222f5721979ec659cb8049c4fe2be94d91342c798ec6b1fa76e40099fa",
+    "archive_objects": "2e85e91693d1ecfb636979c4145225fb76cd62ee7874a32334488cbaa8ae078b",
+    "modern_root": "1b80b31a3980c04984bed7772f4d46b07cdbda4cc12bbdaac4d93d625f62136c"
+  },
+  "scope": "byte reconstruction and process determinism; field oracles checked separately by integration tests",
+  "unchanged_frozen_activity_oracles": [
+    {
+      "group": "legacy-zero-roots",
+      "roots": 1394,
+      "sha256": "a941a22505e6e3b9edb398c77ec31859adc5747e26ecee1e3b169ba601033762"
+    },
+    {
+      "group": "legacy-component-roots",
+      "roots": 402,
+      "sha256": "e76883f8ca21478aceceb7ba6ccd70bff69ad5fc52a2b470587471aa2df73e0f"
+    },
+    {
+      "group": "named-branch-roots",
+      "roots": 100,
+      "sha256": "1c3c61414a63cce0b30f423e97c6b678f5e553824e6162acb3a3277b9b8e619f"
+    }
+  ],
+  "reference_helper_sha256": "6188bb7ea376a91fbb8a935a5d712485814d6c0e721357fbf7cd91f1b7679a13"
+}

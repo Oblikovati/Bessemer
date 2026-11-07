@@ -1,0 +1,86 @@
+{
+  "issue": 181,
+  "stage": "Typed RGB edits of every Source-observed visual in all retained native ordinary/routing assembly configurations",
+  "processes_reaped": 2,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "passed_per_process": 1,
+  "failed": 0,
+  "ignored": 0,
+  "complete_native_configurations_per_process": 180,
+  "physical_visuals_and_changed_requests_per_process": 2516,
+  "test_seconds": [
+    50.54,
+    44.43
+  ],
+  "per_case_counts_equal_original_Source": true,
+  "fresh_process_outcomes_identical": true,
+  "source_acceptance": {
+    "path": "docs/features/entity-visual-state/native-assembly-source-span-verification.json",
+    "bytes": 766281,
+    "sha256": "f236c52c7fa193c96330aff26b3274910de66f383c9f4e21f6c6d226bbd25984"
+  },
+  "native_packet": {
+    "path": "target/assembly-native-probe.bin",
+    "bytes": 7901047,
+    "sha256": "c2a45d6dd7708cd57e1c34284e1d24526a418a0cd54281c8a870df66147ccb85"
+  },
+  "source_span_packet": {
+    "path": "target/entity-visual-assembly-source-spans.bin",
+    "bytes": 54284,
+    "sha256": "c7271741e12bc78dd87043c56e147ec6b18cd43098383e7c60a9727cd6f12023"
+  },
+  "support": [
+    {
+      "path": "tests/model_archives/assembly_corpus.rs",
+      "bytes": 3236,
+      "sha256": "85c22a06aa5944b5117c641b863b64eff749b2096486a6ff617e5fa110b55efc"
+    },
+    {
+      "path": "tests/model_visual_carriers/native_edits.rs",
+      "bytes": 7671,
+      "sha256": "59271311917d74911523a92115065af25fb1430d96152b3bb88c41fa233d33cd"
+    }
+  ],
+  "logs": [
+    {
+      "path": "target/entity-visual-native-assembly-direct-1.log",
+      "bytes": 6618,
+      "sha256": "44757bc1aec0902fe4bbf114109d56d4b566020e07b7c2f09e4b4d8ac22bddc2"
+    },
+    {
+      "path": "target/entity-visual-native-assembly-direct-2.log",
+      "bytes": 6618,
+      "sha256": "18abb41908ebed2e443e4a1dbf5c0882f1b7d10525bf0289c67b0dcbeec7d62a"
+    }
+  ],
+  "compiler": {
+    "command": "CARGO_MANIFEST_DIR=<workspace> rustc --crate-name bessemer --edition=2024 --test src/lib.rs --extern flate2=target/pinned-1.99.0/debug/deps/libflate2-2d1ec62b5c8ec434.rlib --extern quick_xml=target/pinned-1.99.0/debug/deps/libquick_xml-c9e6b888660420ed.rlib -L dependency=target/pinned-1.99.0/debug/deps -C opt-level=1 -C debug-assertions=yes -C overflow-checks=yes -D warnings -F unsafe_code -o target/entity-visual-native-assembly-tests.exe",
+    "exit_code": 0,
+    "log": {
+      "path": "target/entity-visual-native-assembly-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "test_binary": {
+      "path": "target/entity-visual-native-assembly-tests.exe",
+      "bytes": 234493440,
+      "sha256": "0d330d444a34057cfd8139e6ed5bd9e910d573952228199dd7265e02f06f3531"
+    }
+  },
+  "coverage_credit": 0,
+  "checks": [
+    "Every native header, declared version/root kind and saved shared-map slot count goes through the existing complete assembly corpus constructor and forced from_fields reconstruction before the typed operation.",
+    "All2516 typed visual word projections match the seven literal values at their independently observed original Source offsets, including signed width and raw custom-float bits.",
+    "Every changed RGB operation equals a direct literal patch of the complete original configuration stream. The unresolved high byte and every unselected byte remain exact.",
+    "Each edit completes as Changed with exactly one original color-field parent and rejects the original state against the derived revision. Original source bytes remain unchanged after every complete case.",
+    "Both fresh processes accept all180 configurations with exactly the independent per-case Source counts. Every actual result in each process is compared to the same complete independent expected bytes."
+  ],
+  "qualifications": [
+    "The whole unit-test target was compiled directly from current src/lib.rs into a separate executable with the pinned existing dependencies and explicit test-profile flags. This did not overlap Cargo commands or replace the still-live exhaustive part run. Cargo/Clippy/repository and publication gates remain separate.",
+    "No separate native assembly export packet is claimed; each complete actual result was asserted against its literal Source-bound expected bytes inside both processes. Owned whole-document edit/reopen/reversal acceptance remains recorded separately.",
+    "The exhaustive native part gate, remaining operation gates and publication gates remain open. Native application rendering and geometry validity remain unproven. Humanizer unavailable; prose pass pending maintainer review."
+  ]
+}

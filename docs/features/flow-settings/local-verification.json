@@ -1,0 +1,55 @@
+{
+  "issue": 241,
+  "behavior_version": 1,
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "source_base_commit": "12a15999ac8257830d3c881deed124aecfa118d8",
+  "tests_passed": 11,
+  "tests_failed": 0,
+  "python_tests_passed": 2,
+  "selector_cases": 73984,
+  "precedence_bytes": 256,
+  "guid_values": 17,
+  "native_identity_carriers": 3,
+  "short_header_cases": 52,
+  "workers": 8,
+  "source_sha256": {
+    "src\\flow\\settings\\mod.rs": "0aead3e19b1b401ad43628898d285376595b4e59c80b3605836dd892c462899b",
+    "src\\flow\\settings\\types.rs": "300df04103c5a29d94c3904b97dca7bef0836c99a2e7f2e6cb6a3357ba9432bf",
+    "src\\flow\\settings\\view.rs": "a1a4eed0406a827965b1f702fcf2dec0e549ac70b5f08bcfacb4ece36305b15d",
+    "src\\flow\\mod.rs": "e635c0d4eb77a13c351e67de447ce78a0d318adb89dbc77c0e7efd40754a7852",
+    "tests\\flow_settings.rs": "e84520523b981f4336a77527c88c8802f3fdb786555479a1d295391c1d69e7e9",
+    "tests\\flow_settings\\fixture.rs": "aa85d3fdd17f8ed09ce87528797861b68eda11a373817aa202ca718677fa45b2"
+  },
+  "log_sha256": {
+    "target/flow-settings-focused-tests.log": "e00d987514f17e66c19e4c96aafb35ac0ab6a7bd3f3a31415ec49e7b5690ec91",
+    "target/flow-settings-clippy.log": "adb26453c6f6d168361b5c0071f7a6e4f147ef39bb884b9dae4f998a720cdebd",
+    "target/flow-settings-python-tests.log": "38509842d7791d749056eb89eb94ae9855d567b6c5e25874235f75e58eb47c39",
+    "target/flow-settings-process-build.log": "e4ccfb0f3fe60fbe332cedf0ed78380e4baa36b21fff570f17083e7b531e9848"
+  },
+  "native_byte_evidence": {
+    "path": "docs\\features\\flow-headers\\settings-role-byte-verification.json",
+    "sha256": "9e1c52f00653f0246a4a905cc186ca4b474491cfa64ecbdf951f4bcab578822a",
+    "artifact_sha256": "0058e03164066d87c62829e67f31bfce1f76ff78cc3e8383b2964428e4278b41"
+  },
+  "commands": [
+    {
+      "command": "cargo test --test flow_settings --test flow_headers --locked",
+      "exit_code": 0
+    },
+    {
+      "command": "cargo clippy --lib --test flow_settings --test flow_headers --locked -- -D warnings",
+      "exit_code": 0
+    },
+    {
+      "command": "python docs/features/flow-settings/test_selection.py",
+      "exit_code": 0
+    }
+  ],
+  "native_execution": false,
+  "exclusions": [
+    "Loader invocation, Boolean returns and nonlocal exceptions",
+    "Native cache/model mutation and owner-context provenance",
+    "Static-settings body deserialization and application acceptance",
+    "Full repository gate for this newer source cut"
+  ]
+}

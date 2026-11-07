@@ -1,0 +1,122 @@
+{
+  "issue": 185,
+  "passed": true,
+  "tests": 8,
+  "complete_streams": 8,
+  "edges": 17,
+  "groups": 68,
+  "literal_scalar_checks": 289,
+  "accounting_adapter_installed": false,
+  "original_unknown_totals_preserved": true,
+  "source_python_files": 5832,
+  "streams": [
+    {
+      "path": "samples/Simulation Examples/FloWorks/side.sldprt",
+      "stream": "Contents/Config-0-ResolvedFeatures",
+      "sha256": "f5c68d668868e2d080dea6fd46d9182ba3845b43ca4ebfc2c66f5a3cfaba5b49",
+      "bytes": 268856,
+      "edges": 2,
+      "groups": 8,
+      "unknown_bytes": 25999
+    },
+    {
+      "path": "samples/Simulation Examples/bikeframe.sldprt",
+      "stream": "Contents/Config-9-ResolvedFeatures",
+      "sha256": "dd8f838e24427c4ed7eb04131b9ae793e5f6162533dd3061348422ed41b20f23",
+      "bytes": 650399,
+      "edges": 4,
+      "groups": 16,
+      "unknown_bytes": 82857
+    },
+    {
+      "path": "samples/learn/Baseball Bat.SLDPRT",
+      "stream": "Contents/Config-0-ResolvedFeatures",
+      "sha256": "9a3d7704bccd9ce349aced08c7eaf0fae1ce365a21d41865d6556ff73d5a7ede",
+      "bytes": 710327,
+      "edges": 1,
+      "groups": 4,
+      "unknown_bytes": 82874
+    },
+    {
+      "path": "samples/learn/Garden Trowel/Garden Trowel_Garden_Trowel_Spade.SLDPRT",
+      "stream": "Contents/Config-0-ResolvedFeatures",
+      "sha256": "5288d0007eacad9c6119651ee9bb199c66f186a5e0fefd447ea973930cb81e8c",
+      "bytes": 514962,
+      "edges": 1,
+      "groups": 4,
+      "unknown_bytes": 63005
+    },
+    {
+      "path": "samples/learn/Mouse/Bottom Housing.SLDPRT",
+      "stream": "Contents/Config-0-ResolvedFeatures",
+      "sha256": "5fadaa565d451eef089ff7e55a9f52159847d0bf4247b21a85de5b50fa67ba43",
+      "bytes": 1345977,
+      "edges": 1,
+      "groups": 4,
+      "unknown_bytes": 92067
+    },
+    {
+      "path": "samples/learn/Mouse/Mouse Battery Cover.SLDPRT",
+      "stream": "Contents/Config-0-ResolvedFeatures",
+      "sha256": "62c15b8229c3085781679b3777169db19369d57f2f778719c99d6b0f2609092e",
+      "bytes": 1078929,
+      "edges": 2,
+      "groups": 8,
+      "unknown_bytes": 36946
+    },
+    {
+      "path": "samples/learn/Mouse/Mouse Buttons.SLDPRT",
+      "stream": "Contents/Config-0-ResolvedFeatures",
+      "sha256": "d0b8da630f2208f6cb8de98c08dd1b9d8511956c53b619d65671b086b8e217df",
+      "bytes": 670903,
+      "edges": 4,
+      "groups": 16,
+      "unknown_bytes": 54377
+    },
+    {
+      "path": "samples/tutorial/floxpress/ball valve/Side.sldprt",
+      "stream": "Contents/Config-0-ResolvedFeatures",
+      "sha256": "9e376cc588df2a2486cd8ed7da750459d840b91d4d675a31c8299878501ac733",
+      "bytes": 268576,
+      "edges": 2,
+      "groups": 8,
+      "unknown_bytes": 25911
+    }
+  ],
+  "coverage_credit": 0,
+  "qualifications": [
+    "Original complete Source readers only, copied before imports with immutable origin/hash verification. No semantic/accounting reader adapter installed.",
+    "Complete original graph/map/f64-bit identities, root spans, EOF and original unknown totals match both retained reports. Literal signed168, unsigned state and all signed siblings match direct stream slices.",
+    "This gate covers original native roots; new owned role matrices, typed operations, documents, concurrency and publication for Feature185 remain pending."
+  ],
+  "artifacts": [
+    {
+      "path": "target/replay-intersection-index-classification-original.py",
+      "bytes": 5781,
+      "sha256": "5bc33d8c175b611c23c380d1eaa20e7ea221c23b1fc697e02d9505d9af399ecb"
+    },
+    {
+      "path": "target/intersection-index-classification-original-roots.log",
+      "bytes": 7848,
+      "sha256": "71533daa9672448d85d4d2716830738c5abc292aee5d027dd6677a843b03e249"
+    },
+    {
+      "path": "target/intersection-index-classification-original-roots-corrected.log",
+      "bytes": 466,
+      "sha256": "fb0123cfa48131fe3b08885b0bbec9c303ba5cbe63df423586d006c3e376101e"
+    },
+    {
+      "path": "docs/features/intersection-index-classification/original-roots-source-snapshot.json",
+      "bytes": 738705,
+      "sha256": "d47fe9a27e07f352a81709d358a4ab26f6f10a971df679c1002ae40af3b30bab"
+    }
+  ],
+  "processes_reaped": 2,
+  "exit_codes": [
+    1,
+    0
+  ],
+  "accepted_processes": 1,
+  "initial_attempt": "Bundled Python lacked pefile before parsing and failed all eight constructors; the origin guard then rejected its incomplete reader set. The unchanged collector passed using existing Python3.14 with its installed dependency. No Source code, parser assertions or expected hashes changed.",
+  "collector_removed_after_verification": true
+}

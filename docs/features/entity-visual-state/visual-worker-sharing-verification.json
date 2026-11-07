@@ -1,0 +1,70 @@
+{
+  "issue": 181,
+  "stage": "Behavior-preserving shared worker runner and model corpus descriptor extraction",
+  "component_cases": 7662,
+  "component_requests": 206874,
+  "component_passed": 1,
+  "model_passed": 5,
+  "model_cases": 11493,
+  "failed": 0,
+  "processes_reaped": 2,
+  "test_seconds": [
+    352.03,
+    58.18
+  ],
+  "wire": {
+    "path": "target/entity-visual-component-shared-workers.bin",
+    "bytes": 162319474,
+    "sha256": "07379c37eed970c67945ef413cf9fbf327943f1a9f05ff4d190b76382075a204"
+  },
+  "complete_trace": {
+    "path": "target/entity-visual-component-shared-workers.trace.zlib",
+    "bytes": 332314432,
+    "sha256": "3f58f39d269a87c097229cd5c5f85cf1585ca1db80ade657e25cb89c609abef6"
+  },
+  "wire_and_complete_trace_byte_identical_to_previous_gate": true,
+  "previous_gate": {
+    "path": "docs/features/entity-visual-state/component-concurrency-verification.json",
+    "bytes": 6733,
+    "sha256": "e0fb78a121f1ba9c20317d1e5838a240057e10b564364511cf3efeccfd683f5f"
+  },
+  "support": [
+    {
+      "path": "tests/support/visual_workers.rs",
+      "bytes": 554,
+      "sha256": "de2b3f55ef516e04b83153b39ea739491a798b103c0f616f123501bd67249f20"
+    },
+    {
+      "path": "tests/component_visual_carriers.rs",
+      "bytes": 7565,
+      "sha256": "1e13809b6b205798aeb74901b4e3140bebefda4da707e409752967807e48d6ed"
+    },
+    {
+      "path": "tests/component_visual_carriers/matrix_concurrency.rs",
+      "bytes": 8908,
+      "sha256": "5f90d50bd72f584f927852b85a9b0c890f911575dac2b212e335a87130fcebfc"
+    },
+    {
+      "path": "tests/model_visual_carriers.rs",
+      "bytes": 6676,
+      "sha256": "4b00a12c8263feed9a054c0666665c59571a3629a404a875aab208b12fa42d34"
+    }
+  ],
+  "logs": [
+    {
+      "path": "target/entity-visual-component-shared-workers.log",
+      "bytes": 275093,
+      "sha256": "688414c8535f33472e0569a1d72d666966b90a41035008886e368e3ee319be87"
+    },
+    {
+      "path": "target/entity-visual-model-corpus-factories.log",
+      "bytes": 583,
+      "sha256": "247867e4911ca0179f17235eeab1c291918dd3fd8d228ce35796a4a6bb1d6fd0"
+    }
+  ],
+  "qualifications": [
+    "This moves only the existing eight-worker comparison and three literal corpus descriptors. Existing matrix assertions, request semantics, whole-document gates and operation traces remain unchanged.",
+    "Standalone binaries retain the existing validated library and explicit test-profile flags; full Cargo/Clippy/repository gates remain separate. The new full model concurrency gate follows in a separate change. Humanizer unavailable; prose pass pending maintainer review."
+  ],
+  "artifact_git_revision": "a33034d28a6ee458c1df01693a92a3fc866c086e"
+}

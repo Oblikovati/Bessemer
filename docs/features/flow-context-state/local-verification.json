@@ -1,0 +1,93 @@
+{
+  "source_parent": "ca7215e07789635e8816fff9608e6520364ea7e6",
+  "issue": 241,
+  "platform": "Windows x64 MSVC Rust1.99.0 Python3",
+  "commands": [
+    "cargo test --locked --test flow_state_table_fixtures --test flow_load_state_fixtures --test flow_conditional_item_fixtures",
+    "cargo test --locked --test flow_state_table_fixtures",
+    "cargo clippy --tests --locked -- -D warnings",
+    "cargo fmt --all -- --check",
+    "python -m unittest discover -s docs/features/flow-state-tables -p test_state_tables.py -v"
+  ],
+  "terminal_exit_codes": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "broad_regressions": {
+    "passed": 49,
+    "failed": 0,
+    "ignored": 4
+  },
+  "final_state_table_regressions": {
+    "passed": 20,
+    "failed": 0,
+    "ignored": 2
+  },
+  "ignored_scope": "Standalone process workers, each invoked twice by its regular parent test",
+  "python": {
+    "passed": 9,
+    "failed": 0
+  },
+  "complete_source_cases": 86,
+  "existing_index_edits": 12909,
+  "existing_tail_edits": 43,
+  "edit_oracles": [
+    "No-op exact original carrier and record identity",
+    "Full payload patch at Source-frozen field offsets",
+    "Complete carrier bytes versus independently rebuilt duplicate-occurrence carrier",
+    "Full copied/derived physical history and fresh raw reversal"
+  ],
+  "independent_oracles": [
+    "Version3 with maximum object count, three words 0x80000000/0xffffffff/7 and signed minimum tail",
+    "Version4 maximum object count with applied zero index count and zero word budget",
+    "Inactive/version5 maximum ignored context with zero word budget",
+    "Maximum applied context rejected by available bytes before allocation"
+  ],
+  "thread_safety": {
+    "public_send_sync_types": 7,
+    "workers": 8,
+    "edits_per_worker": 32,
+    "oracle": "Complete carrier bytes versus serial execution",
+    "fresh_processes": 2,
+    "process_scope": "All86 source-checked states and every existing index/tail edit",
+    "thread_sanitizer": "Pending future required CI for this exact implementation"
+  },
+  "native": {
+    "payload_bytes": 13488,
+    "stored_object_count": 1,
+    "assumed_index_count": 3369,
+    "provenance": "Extent-derived explicit assumption; native owner count not verified"
+  },
+  "source_sha256": {
+    "src/flow/legacy_tables/context_state/decode.rs": "4b710b2f6ccd5a88fa95d5f6ac9d4d29d8fd9968840c020446726708027a9b47",
+    "src/flow/legacy_tables/context_state/edit.rs": "9d53279de94b8ffd0e9b4e9082776506b114351ac12da35c74146e4e9e8e2899",
+    "src/flow/legacy_tables/context_state/mod.rs": "23122e61452e0575adc380b117559f271adae4b9229da705d73f49c93949bb4a",
+    "src/flow/legacy_tables/context_state/types.rs": "b0671dcd21e04bc4bbe5356234e7186f24258237ac7a929981fff4851a6cd74e",
+    "src/flow/legacy_tables/context_state/view.rs": "de48b7951b5cdf9938dea9fac2a818fb81614c4976bf5a1451fc9b3fdebeb927",
+    "src/flow/legacy_tables/mod.rs": "098d3fa9f137ce7063a9b54cc17d5db845065f7698251eb9972340c91dbf0a1a",
+    "tests/flow_state_table_fixtures.rs": "bfb4dc102540956ba3c015277ee823dc398abe4adb08cdf94ec643b162d13b96",
+    "tests/flow_state_tables/context_api.rs": "71d7c95fa9e287e6660f7744794753571debab08237ce6a6ddc6e03294cfb5cb",
+    "tests/flow_state_tables/context_contracts.rs": "698b92b0d60b0d6196f6848f76f5ec0aabb1c07d97fe116321d5b05bb0d1848e",
+    "tests/flow_state_tables/context_edit.rs": "3439d0096d149184ae9673e95136287ad9248863f07e71bbf69b16ccbf366e84",
+    "tests/flow_state_tables/context_replay.rs": "89ddd9545c177849413eaac8b92e37dfc4e8a50242ed65d3633389c9186e3fd4"
+  },
+  "log_sha256": {
+    "target/flow-context-state-api-tests.log": "df1828f1ddd4ffdb3e5b30df7e4e26c2aafcb2802b6513077a212be338c03414",
+    "target/flow-context-state-api-clippy.log": "18c6e952b0ed28ef4972a19e841860ef661388ec6d8b3530406caa89927afbb8",
+    "target/flow-context-state-final-tests.log": "aca66237896d8ce4898c397b5f47ad9a27c65347c14590a6938e545a43e21120",
+    "target/flow-context-state-final-clippy.log": "f2a3884b00184498c2a477a8deda38fe5f2093cbd89f8193810f50aea6008aec",
+    "target/flow-context-state-python.log": "3a4e0b50a678fb6c9f8c0bec34815bf473d7e9935bd264dea3db85c978b74ee1"
+  },
+  "reference_sha256": "979bf779f316ca9f861dfe7775fabd52ee465ea822164165f1c6a4668dd33e57",
+  "function_file_caps": "Passed: no function body above20 nonblank/noncomment lines; no file at500 lines",
+  "exclusions": [
+    "Native context provenance and runtime population",
+    "Engineering interpretation and SolidWorks application acceptance",
+    "Full gate for this API: current broader gate is frozen at8d6ecd15 and excludes it",
+    "Remote CI: current PR245 excludes this API"
+  ],
+  "humanizer": "Maintainer prose review pending; humanizer skill unavailable"
+}

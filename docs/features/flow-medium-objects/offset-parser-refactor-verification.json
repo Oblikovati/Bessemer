@@ -1,0 +1,28 @@
+{
+  "feature_issue": 241,
+  "baseline_commit": "96da0332",
+  "scope": "Behavior-preserving internal parser extraction: the existing first-body read and edit paths call the same validated-offset parser; no new public surface or schema acceptance.",
+  "rust_passed": 46,
+  "rust_failed": 0,
+  "rust_ignored": 0,
+  "rust_exit_code": 0,
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "all_owned_fixtures_unchanged": true,
+  "source_lf_sha256": {
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\kind_one\\decode.rs": "2e03746d2ff5a80a993d4d991815abde1360d403af15dc9d7ce2c31509840711",
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\kind_one\\edit.rs": "f7b192783e62844c5bc8b3f1ae555e2eda2e8bf1f7701d18a93e8337e281eb54",
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\kind_one\\mod.rs": "4f812fd71c20bb8a88a1013e2cb83f25c3cc8f91d9fba6ffd02413544ff355eb"
+  },
+  "fixture_sha256": {
+    "tests\\fixtures\\flow-medium-objects\\kind1.bin.gz": "8fbee903057eb2a23b321ffc57751cf4652066d23bb52a3d9b5ae7b390801839",
+    "tests\\fixtures\\flow-medium-references\\bodies.bin.gz": "b1e666a46dc2d1e130ce45000cbeb62ef79210c029aa8bc51d2e4a7c9a3b092f",
+    "tests\\fixtures\\flow-medium-references\\profiles.bin.gz": "fa43ba510d7df86904ba32c1b741253b4931dbf3d44063a414d9be3c428fa019",
+    "tests\\fixtures\\flow-metadata\\prefix.bin.gz": "87ceea27cd49a1a7a2147e71873744409f6f501e919fcc1f944230bdf8c871d3"
+  },
+  "log_sha256": {
+    "target\\flow-kind-one-offset-refactor-tests.log": "80e6e42aa803e4591711bae8167d8acd90376776d5e8bd0ab55587fabf64ca71",
+    "target\\flow-kind-one-offset-refactor-clippy.log": "e68da022a52f62ddb7816db6ebe2b41ffef780eb8160fe2750ebdff9385725a6"
+  }
+}

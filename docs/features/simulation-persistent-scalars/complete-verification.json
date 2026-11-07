@@ -1,0 +1,143 @@
+{
+  "issue": 129,
+  "behavior_profile": "simulation-persistent-scalars-v1",
+  "base_revision": "0e78b2d939b5ed9e71bb0f07fa897621657f6614",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "gate": "cargo xtask pr",
+  "gate_exit": 0,
+  "gate_log_sha256": "5ba9cd231576f97af4c78ef67de3d1eb9099cf7c419ed205ec1b10dcac035ae9",
+  "test_summaries": 237,
+  "passed": 3089,
+  "failed": 0,
+  "ignored": 27,
+  "focused_with_exports": {
+    "persistent_scalars_passed": 13,
+    "lbc_property_compatibility_passed": 10,
+    "private_extent_and_count_overflow_tests_passed": 2,
+    "failed": 0
+  },
+  "corpus": {
+    "owned_cases": 2592,
+    "native_cases": 1509,
+    "owned_bytes": 4529824,
+    "owned_sha256": "e9ac32f098904a6a9142ef54b19c0c0eeecbc648ca08685862c5c24424cdd40a",
+    "native_bytes": 6405016,
+    "native_sha256": "952958bab3dfea81381b588608cde375b9ceaeaad283a316f604e6efc50851ef",
+    "native_inputs_committed": false
+  },
+  "projection": {
+    "bytes": 10934848,
+    "sha256": "9291b550782dac2de1bf7e5642b396cb52f3d93e404c7ed3b00d18c179138757"
+  },
+  "native_evidence": {
+    "integer_arrays": 51,
+    "integer_values": 82,
+    "integer_bytes": 532,
+    "unique_tables": 51,
+    "unique_keys": 443,
+    "unique_bytes": 3952,
+    "accepted_read_contexts": 102,
+    "accepted_edit_and_noop_contexts": 1254,
+    "rejected_edit_contexts": 153
+  },
+  "owned_evidence": {
+    "accepted_reads": 278,
+    "accepted_edits_and_noops": 1786,
+    "rejected_edits": 483,
+    "rejected_reads": 45,
+    "large_explicit_entry_limits": [
+      10000,
+      100000
+    ]
+  },
+  "source_reference_checks_passed": 8,
+  "actual_integer_readers_compared_under_equal_explicit_limits": true,
+  "all_unique_keys_compared_with_retained_adjacent_words": true,
+  "explicit_profiles_never_inferred_from_size": true,
+  "capacity_never_used_for_allocation_or_payload_consumption": true,
+  "zero_used_maximum_capacity_requires_only_eight_bytes": true,
+  "all_accepted_images_reconstructed_exactly": true,
+  "all_header_and_entry_roles_positions_and_full_width_values_verified": true,
+  "all_count_capacity_entry_history_parents_verified": true,
+  "invalid_shapes_and_edits_remain_typed_errors": true,
+  "count_changes_require_construction_of_complete_matching_payload": true,
+  "authentic_noops_retain_revision_and_all_field_ids": true,
+  "source_drop_failure_and_caller_returned_value_isolation_verified": true,
+  "public_types_send_sync_asserted": 15,
+  "eight_threads_repeat_complete_serial_edits_and_all_relations": true,
+  "two_fresh_processes_ran_all_thirteen_tests": true,
+  "complete_fresh_outputs_compared_byte_for_byte": true,
+  "fresh_process_observations": [
+    {
+      "projection_sha256": "9291b550782dac2de1bf7e5642b396cb52f3d93e404c7ed3b00d18c179138757",
+      "all_thirteen_tests_with_native_export": true,
+      "observed_peak_working_set_bytes": 40566784,
+      "exe_sha256": "96cebf8c0abdcb0dc040cc723c206723a3b526a6a7713384afe2a693f21f7aec",
+      "run": 1,
+      "seconds": 1.2383677,
+      "full_local_gate_running_concurrently": true
+    },
+    {
+      "projection_sha256": "9291b550782dac2de1bf7e5642b396cb52f3d93e404c7ed3b00d18c179138757",
+      "all_thirteen_tests_with_native_export": true,
+      "observed_peak_working_set_bytes": 44105728,
+      "exe_sha256": "96cebf8c0abdcb0dc040cc723c206723a3b526a6a7713384afe2a693f21f7aec",
+      "run": 2,
+      "seconds": 0.9308386,
+      "full_local_gate_running_concurrently": true
+    }
+  ],
+  "observation_scope": "All thirteen focused tests per process including the complete owned/native export. Elapsed includes startup while the full local gate ran concurrently. Working-set sampling around 1 ms gives lower bounds and may miss actual peaks. First implementation; no prior published baseline or statistical speed claim.",
+  "exact_indexed_fixture_packets_verified": 25,
+  "runtime_and_test_sha256": {
+    "src/simulation/persistence/mod.rs": "f711fc3f49719e625c191da2da938313d8893a869ef547e02d42e00333615775",
+    "src/simulation/persistence/scalars/codec.rs": "a491f0966162b2a0e9c4b06a2bf044b16a32410a3f62fc72fec629c6eb534666",
+    "src/simulation/persistence/scalars/construction.rs": "6ba75a56b527e56e79e57c19715c85e98e999212a3a0dafdea0475f3be269579",
+    "src/simulation/persistence/scalars/directory.rs": "36ae01b51498ff281dc5d6100724708cff890bab5a1382f762a7b1d1575bbbfb",
+    "src/simulation/persistence/scalars/edit.rs": "ff2514e43cfdbf11fde283f1e768ac0a942f05001c35e4f23c2f2fb304a7536d",
+    "src/simulation/persistence/scalars/mod.rs": "4ca6678d42cb2bd43729dc32f6fefe7ba9e5f6060cd54d25311921c538f4c10b",
+    "src/simulation/persistence/scalars/types.rs": "b91a2a5cbd6a86f8e6381fffe94d53182d2b1e7ee6ba1a9e798b37c6d0ba7ca5",
+    "tests/fixtures/simulation-persistent-scalars/owned.bin": "97a024fb3a3198d511bac7295334ee76455f753601007c189e946419a06fd18b",
+    "tests/simulation_persistent_scalars.rs": "10576f13da9ce84fb0754d003baad6e2a4ade57e1631835d664c27a60097cd23",
+    "tests/simulation_persistent_scalars/corpus.rs": "7203607c905cc968e1472a510aa907ba3bca640be1da98d1c099fedbb641b3b8",
+    "tests/simulation_persistent_scalars/projections.rs": "212cb3974b02a574645e0aaf1114823a7c332870e6e4ec919a28f6796629c311"
+  },
+  "verification_script_sha256": {
+    "docs/features/simulation-persistent-scalars/freeze_scalars.py": "0d1328ff7bd5a3b448ca76592ba8190dd1553337876e3fddefa2eeee47a2c95f",
+    "docs/features/simulation-persistent-scalars/scalar_cases.py": "9a11c69c1c0944753ed08b28e94cf156a5e677b8c754a4b004aa6950e7de2e7e",
+    "docs/features/simulation-persistent-scalars/scalar_projection.py": "28ed745089f9861387de81dbd31bdc521a3c22b39fbe3654f635db46def65ced"
+  },
+  "verification_dependency_sha256": {
+    ".gitattributes": "2bef038182726dabce2863a35b1db9bf63ac05f7d3f39d037e26e4c33f6b8243",
+    "src/archive_codec/revision.rs": "59ad9f96b7f34ae1c5658f39daf533582d572bdb0603a5099013156c7c37dc48",
+    "src/error.rs": "4a10ca63c2ea2cfcb30d65b72f242dc7b8feafdd2f715e06adfbe2335a1b0a47",
+    "src/records.rs": "2728e4b6b3fe90f9ed0ece6ebf3b99664ecdf0ba4691ee93d11b5710b62f01a3",
+    "tests/common/simulation_images.rs": "7089399bf3c684254e38a2d4b646317ea2e113a30cf54231c4c9dbc2536f0eef",
+    "docs/features/model-archives/pinned_reference_tests.py": "6f95547f7dee070b1b8fe50cefaaea9a45721789636add2e67a919e42169b36e",
+    "docs/features/cosworks-persistence/owned_persistence.py": "5664f4393fc7abcbc22a3453eac07356e36b7ba95a6a2e34190e71af7de5c44d",
+    "src/simulation/persistence/mod.rs": "f711fc3f49719e625c191da2da938313d8893a869ef547e02d42e00333615775"
+  },
+  "reference_snapshot_identity": "b69de9c03590fc7d05ffb691f355cd13e234023975431db09d00d4ecbde1ccef",
+  "actual_reader_sha256": {
+    "cosworkspersist.py": "5135ef755b445443c2482eaa5aacb81926b5b26ab378d297ea6603875ac18b0e",
+    "research/cosworks_study_versions.py": "f81ac38d23cc11d9ef81017382a0f0eb79d1bcbe5959fb4ea5fc4e07876c1c1e"
+  },
+  "native_inventory_sha256": {
+    "cosworks-study-versions-native-evidence.json": "98399fed17446009022dec1112e8d4b4783912f9efe413355db370f5dc7e4ccd",
+    "cosworks-unique-ids-native-evidence.json": "8fa39dd08514705addcd7d39bdec5175259f79c326f6710173f1be8b92de78a3",
+    "cosworks-unique-decoder-validation.json": "b861bbab1ebe8a4d1730c2dae474c52c4f4196f7a1cd4466bedc7f8ca62a892a"
+  },
+  "initial_unstable_source_copy_rejected_before_import": true,
+  "source_snapshot_guard_retained_and_fresh_unchanged_baseline_run_passed": true,
+  "native_payloads_committed": false,
+  "acceptance_exclusions": [
+    "Runtime release/version selection, absent-stream fallback and study update policy",
+    "Native allocator, mapper last-key cache, one-based mapping and CAD reference resolution",
+    "Fresh whole-document extraction, CFB integration and native application read/save acceptance",
+    "Geometry/kernel validity beyond bare scalar framing",
+    "ThreadSanitizer execution on this Windows host; required Linux CI remains separate"
+  ],
+  "humanizer": "Unavailable; prose pass left for review",
+  "dependencies_added": false
+}

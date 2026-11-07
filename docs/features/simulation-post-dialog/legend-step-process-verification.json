@@ -1,0 +1,26 @@
+{
+  "issue": 166,
+  "behavior_version": "C851-explicit-runtime-availability-v1",
+  "platform": "Windows x64",
+  "runtime_requests": 110024,
+  "stored_fc_views": 969,
+  "output_words": 332010,
+  "oracle": "Concatenated original frozen Source policy/reached-read expectations and all raw FC presence/word expectations across102272 operation cases and969 complete parents",
+  "executable_sha256": "5e0d67b2101a2fb9daf4215e5d24514f6e07262227342203ab8d98126181a005",
+  "runs": [
+    {
+      "process": 1,
+      "exit_code": 0,
+      "bytes": 1328040,
+      "sha256": "b80f1bcb753b041e5ce584ae945fa3c95da180958299586828409db5e1cc6ed4"
+    },
+    {
+      "process": 2,
+      "exit_code": 0,
+      "bytes": 1328040,
+      "sha256": "b80f1bcb753b041e5ce584ae945fa3c95da180958299586828409db5e1cc6ed4"
+    }
+  ],
+  "comparison": "Both fresh Rust processes matched every independent expected byte and each other; each exact export test executed once",
+  "native_executed": false
+}

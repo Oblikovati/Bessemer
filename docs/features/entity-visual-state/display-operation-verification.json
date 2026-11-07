@@ -1,0 +1,110 @@
+{
+  "issue": 181,
+  "stage": "Typed complete display and drawing-wrapper stored-role routes",
+  "apis": [
+    "DisplayArchive::entity_visual_states",
+    "DisplayArchive::entity_visual_state",
+    "DisplayArchive::edit_entity_visual_state",
+    "DrawingBucketArchive::entity_visual_states",
+    "DrawingBucketArchive::entity_visual_state",
+    "DrawingBucketArchive::edit_entity_visual_state",
+    "DrawingBucketArchive::resolve_field",
+    "DisplayEntityVisualStoredState"
+  ],
+  "component_tests_passed": 5,
+  "drawing_tests_passed": 4,
+  "failed": 0,
+  "ignored": 0,
+  "process_reaped": true,
+  "test_seconds": [
+    145.63,
+    0.13
+  ],
+  "complete_baseline_contexts": 308,
+  "baseline_physical_visuals": 306,
+  "baseline_without_custom_float": 132,
+  "baseline_with_custom_float": 174,
+  "full_matrix_cases": 7662,
+  "typed_rgb_changes": 7968,
+  "typed_rgb_noops": 7968,
+  "typed_baseline_width_changes": 306,
+  "shared_snapshot_workers": 8,
+  "shared_success_requests_serial_plus_workers": 144,
+  "shared_failed_requests_serial_plus_workers": 144,
+  "completed_empty_controls": [
+    "two null property baselines",
+    "complete blank part display"
+  ],
+  "source_fixture_oracles": [
+    "component-initialization-verification.json",
+    "component-context-probe-verification.json",
+    "early-component-source-verification.json",
+    "drawing-owner-source-verification.json"
+  ],
+  "support": [
+    {
+      "path": "src/display_lists/entity_visual_state.rs",
+      "bytes": 5017,
+      "sha256": "cf49192106e701ec3655ade7487b467086545e33ce1400e1a12ac982019ac267"
+    },
+    {
+      "path": "src/display_lists/drawing_buckets.rs",
+      "bytes": 5756,
+      "sha256": "fa081c1190c23d5c2f51bcfe4b4fd71809dd926be46eefd6bcb0413dc73388b6"
+    },
+    {
+      "path": "src/display_lists/mod.rs",
+      "bytes": 3376,
+      "sha256": "812a541d8f21f418ca2738fbf37cdc735630339ef17c51ca721f59aa291cf215"
+    },
+    {
+      "path": "tests/component_visual_carriers/typed_state.rs",
+      "bytes": 8123,
+      "sha256": "f41e2ddc00a0285ff6b63a5cecde7d829f2f20896cd5334796e732dd2a258705"
+    },
+    {
+      "path": "tests/component_visual_carriers/matrix.rs",
+      "bytes": 7529,
+      "sha256": "f8e7208ba8b8ccdae90d91c39bb04e95435e61f29642dde012486ba6f16cd169"
+    },
+    {
+      "path": "tests/component_visual_carriers.rs",
+      "bytes": 7507,
+      "sha256": "6f7c5756045ab7ce19f76040c293cc8dfb0a20374d9ae1c2bfd143ba5c70e778"
+    },
+    {
+      "path": "tests/drawing_visual_carrier.rs",
+      "bytes": 9729,
+      "sha256": "cb9ef9a7c16b4da55096177687e39ad07d005a22353967d2649bd40811fbfea3"
+    }
+  ],
+  "log": {
+    "path": "target/entity-visual-display-drawing-api-tests.log",
+    "bytes": 1577,
+    "sha256": "05cc1b3bb4dea033f413fa03a8c2fbe7db3f248301d102af778d19df9c5a0780"
+  },
+  "clippy": {
+    "path": "target/entity-visual-display-drawing-api-clippy.log",
+    "bytes": 135,
+    "sha256": "3922ffd88f2d12e10b2878850609f3c1fb605cb555b6cdbfdab8b52a1ab50c06"
+  },
+  "checks": [
+    "Enumeration returns physical definitions in wire order and a complete empty result for no definitions",
+    "Typed words match independent complete raw Source oracles, including actual13/17-byte layouts",
+    "RGB edits match direct literal patches, preserve high bytes and all unselected fields, and return exact original revision parents",
+    "No-ops preserve revision identity; stale/foreign state and nonleading field requests fail explicitly",
+    "Width requests retain actual float presence and arbitrary raw bits, with mismatched presence rejected",
+    "Full7662-case typed matrix retains raw codec reconstruction/document reopen/reverse gates",
+    "Mixed successful/failed edits on a shared immutable display snapshot match serial bytes in eight workers",
+    "Drawing wrapper edits retain drawing layout within the shared complete DisplayArchiveEdit outcome; source/result history resolves only in its owning revision",
+    "Published display state is compile-time Send/Sync"
+  ],
+  "qualifications": [
+    "Part and assembly configuration API routes remain pending; this does not complete #181.",
+    "The full primitive replay is still live. New actual-export Source replay of the typed display/drawing routes, full-matrix worker/process gates, retained native binding and publication remain pending.",
+    "Current tests independently establish exact typed bytes against the same literal expected bytes as retained Source-accepted raw exports; this checkpoint does not substitute those older exports for a new typed API export run.",
+    "Native application save/open/rendering and geometry validity remain unproven. No versions, dependencies or raw codec behavior changed.",
+    "Humanizer unavailable; prose pass pending maintainer review."
+  ],
+  "artifact_git_revision": "4e81225f3a68b3750fb274c4c9079696f701edc1"
+}

@@ -1,0 +1,24 @@
+{
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "processes": 2,
+  "terminal_exit_codes": [
+    0,
+    0
+  ],
+  "requests": 5424,
+  "bytes_per_process": 537128,
+  "sha256": "4af5f26f62c7f66ad194edf5d376e8326692bdebf117b77d6504c1ef097b8a59",
+  "all_process_bytes_equal": true,
+  "independent_expected_packet_equal": true,
+  "result_size_bytes": 104,
+  "temporary_probe_sha256": "ecf6ff77baadd1c37d04242d0958e3c345fa6b6ce9e1ddc5a18178bd53d8a6ea",
+  "temporary_oracle_sha256": "0ee5118028f9a5de93c9f7abfd497344096adac404efb547e6846f9da9d478dd",
+  "scope": "Actual accepted/rejected requests, finite/infinity result bits and NaN classification, query bits, source physical ordinal, body/curve provenance, typed accessor, branch/bracket, version/mode, exact validation counters, diagnostics and achieved-error certificate presence. Body input buffers were overwritten and body owners dropped before projecting owned results.",
+  "nan_verification": "Only verification-packet NaN bits are normalized to zero; the API retains the actual arithmetic bits and makes no portable NaN sign/payload promise.",
+  "exclusions": [
+    "Engineering units and unsupported accessors",
+    "Runtime exact-real interpolation error certificates",
+    "Native floating-point environment and application execution"
+  ],
+  "verified_after_final_production_changes": true
+}

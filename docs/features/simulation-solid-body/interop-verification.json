@@ -1,0 +1,70 @@
+{
+  "issue": 150,
+  "behavior_profile": 1,
+  "focused_including_native": {
+    "passed": 21,
+    "failed": 0,
+    "ignored": 0
+  },
+  "strict_source_checks": 15,
+  "native": {
+    "streams": 680,
+    "bytes": 855786,
+    "arguments": 745,
+    "accepted": 691,
+    "failed": 54
+  },
+  "owned": 240,
+  "identifier_boundaries": {
+    "cases": 24,
+    "accepted": 12,
+    "failed": 12,
+    "minimum_inner_version": 4307
+  },
+  "mutations": {
+    "unchanged_accepted_controls": 240,
+    "rejected": 5214
+  },
+  "independent_exact_one_below_budget_cases": 240,
+  "budget_axes": 7,
+  "all_proper_prefixes_and_trailing_bytes": "rejected for all owned bodies",
+  "sufficient_payload_hardcap_controls": "hardcap-reference.json",
+  "send_sync_types": 15,
+  "concurrency": {
+    "workers": 8,
+    "iterations": 32,
+    "mixed_serial_options": 5
+  },
+  "value_kinds": [
+    "Signed",
+    "DoubleBits",
+    "Text",
+    "Bytes",
+    "Embedded"
+  ],
+  "exports": {
+    "fields": {
+      "bytes": 3113446,
+      "sha256": "062411270ace26c4263e95ce1f767fa5b9485297653abd6e93b6b91caba87823",
+      "fresh_processes": 2,
+      "scope": "240 owned + 691 native full fields"
+    },
+    "history": {
+      "bytes": 7163990,
+      "sha256": "a610cf4f22b0b3184ece05508b0f2da20555c29b58517e513cf73fd449a203c5",
+      "fresh_processes": 2,
+      "scope": "240 owned + 691 native complete scalar-edited fields and all ordered outer/nested parents"
+    }
+  },
+  "source_reconciliation": "source-reconciliation.json",
+  "default_observer_preservation": "shared-observer-verification.json",
+  "clippy": "passed -D warnings",
+  "full_local_gate": "full-gate-verification.json",
+  "platform_integration": "pending",
+  "exclusions": [
+    "Sheet bodies and sibling ComponentPersistID operations",
+    "Business meanings and physical semantics",
+    "Native target/writer/application or geometric acceptance"
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending"
+}

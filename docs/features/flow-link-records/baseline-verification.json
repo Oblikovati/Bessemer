@@ -1,0 +1,32 @@
+{
+  "feature_issue": 241,
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "rust_command": "cargo test --test flow_link_record_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 2,
+  "rust_failed": 0,
+  "clippy_command": "cargo clippy --test flow_link_record_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "python_command": "python -m unittest discover -s docs/features/flow-link-records -p test_links.py -v",
+  "python_exit_code": 0,
+  "python_passed": 5,
+  "format_command": "cargo fmt; rustfmt --edition 2021 tests/flow_link_record_fixtures.rs",
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "views": 954,
+  "native_views": 2,
+  "scope": "Independent fixture baseline before the record-402 typed reader/editor: exact complete wire reconstruction, raw-bit retention, signed/sentinel/context gates, all stored and runtime-only fields, all intervals and every code byte",
+  "source_lf_sha256": {
+    "tests\\flow_link_record_fixtures.rs": "c6e2a26d33506d610496e482e8456784579f01cf93d96fadf0345ab4598fee99",
+    "tests\\flow_link_records\\fixture.rs": "55078075c9c3c6910d688518a46689d0d9864bb0ddc747eb9c2ce9b370c933a6"
+  },
+  "log_sha256": {
+    "target\\flow-link-records-baseline-tests.log": "7c63884f93e1b2615eb5f199a0069906be8cd1617fd78004bc53481d4a17d178",
+    "target\\flow-link-records-baseline-clippy.log": "df2f879bf613b1df96959aa99d8a8ddd5c9abeaba62303aeb3200f04094fd9bb",
+    "target\\flow-link-records-baseline-python-tests.log": "f4e46389f9fba0ca00916053064f38c1a1ac122ef75a684b9c329791b623bdea"
+  },
+  "exclusions": [
+    "Native runtime state, reference resolution, engineering roles and application acceptance",
+    "Full gate at b8b5aaac excludes this later record-402 fixture baseline"
+  ]
+}

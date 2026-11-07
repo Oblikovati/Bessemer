@@ -1,0 +1,75 @@
+{
+  "issue": 184,
+  "stage": "First complete owned Source matrix and independent wire projection",
+  "processes_reaped": 1,
+  "exit_code": 0,
+  "tests": 10,
+  "test_seconds": 218.873,
+  "cases": 1344,
+  "roots": 4032,
+  "physical_sketches": 2688,
+  "groups": 10752,
+  "literal_scalars": 43008,
+  "physical_primitives": 606144,
+  "primitive_bytes": 13561662,
+  "packet_bytes": 2045568,
+  "packet_sha256": "ed12bb67ec0b7891bca6d77926390ee9b40150bc9cb7fe63cd9672e979b6363c",
+  "current_reader_test_pins_verified": 6,
+  "artifacts": [
+    {
+      "path": "docs/features/intersection-reference-match/intersection_matrix_oracles.py",
+      "bytes": 4052,
+      "sha256": "7908b327909b4bb3868de516e29576e934e4b600dbd53a61f679caffc188b41a"
+    },
+    {
+      "path": "docs/features/intersection-reference-match/owned_intersection_corpus.py",
+      "bytes": 4582,
+      "sha256": "9da7c49273e821bac2a47a19216c8bfa99bbb2cb6a3742ecbdeb45b451007f7b"
+    },
+    {
+      "path": "docs/features/intersection-reference-match/test_owned_intersection_corpus.py",
+      "bytes": 965,
+      "sha256": "4afd62ec2abca9c1bdb233e4db80aa0fa7c5c4a1c58806274fb67b627e8e6314"
+    },
+    {
+      "path": "docs/features/intersection-reference-match/owned-matrix-reference.json",
+      "bytes": 617,
+      "sha256": "5f663c29f4fc0fbf07576f82e523c9985ab1aa19bf0006748cd977996f43d58f"
+    },
+    {
+      "path": "docs/features/intersection-reference-match/matrix-initial-source-snapshot.json",
+      "bytes": 715317,
+      "sha256": "c4006bcbf45f2691190ce396dd3f61e21131071039e20861ecd04ad4cb830862"
+    },
+    {
+      "path": "target/intersection-match-matrix-initialization.log",
+      "bytes": 50078,
+      "sha256": "1dd526bd1693e88d4891404a06542c411274c5b5549e3fd427b4b3e253978360"
+    },
+    {
+      "path": "target/intersection-match-matrix-independent-projection.log",
+      "bytes": 394,
+      "sha256": "10254594b24a8de734097955ec3e8804f8d443194bcda539ee074e94390198da"
+    },
+    {
+      "path": "target/check-intersection-matrix-projection.py",
+      "bytes": 2987,
+      "sha256": "98e8767b98b465f0fd9b3ab8824a0e37ac0682798e8d2a0ab1f6484b3e917b02"
+    }
+  ],
+  "checks": [
+    "Every declared Cartesian case is consumed once in sorted order, without state/value exclusions.",
+    "Complete original Source readers verify both sketch definitions, all physical group values, null siblings, inherited/final map sizes and alias identity through exact EOF.",
+    "Every constructor output matches a separate literal patch of the unchanged Source-accepted control.",
+    "All606144 primitive reads partition complete input roots; every selected state/raw20/span/backward scalar has its exact literal span.",
+    "A separate stdlib checker imports no Source code and verifies every framed root, all43008 scalar values and every primitive range/raw byte, including gap/overlap and complete zlib consumption checks.",
+    "The frozen-source snapshot remains immutable and matches all six prepared current reader/test pins."
+  ],
+  "coverage_credit": 0,
+  "runtime_implemented": false,
+  "qualifications": [
+    "The strict second fresh Source process is running and is not accepted by this first-process record.",
+    "This is the declared bounded modern19000 caller matrix; wider caller/version boundaries and actual typed operations remain required.",
+    "No matcher, native application, geometry, global coverage or full schema parity is claimed. Humanizer unavailable; prose review remains pending."
+  ]
+}

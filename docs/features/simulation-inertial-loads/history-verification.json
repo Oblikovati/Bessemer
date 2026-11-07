@@ -1,0 +1,35 @@
+{
+  "issue": 136,
+  "status": "Complete scalar-edited fields and all outer/nested-copy parents match independent actual-source projections",
+  "base_revision": "b1c868b709c6468180631d5fde96a00d07b2651a",
+  "owned_contexts": 135,
+  "native_contexts": 18,
+  "strict_reference_checks": 7,
+  "focused_tests": 25,
+  "failed": 0,
+  "ignored": 0,
+  "fresh_process_exports": [
+    {
+      "export": "history",
+      "bytes": 3526350,
+      "sha256": "1ef454349f3fe75242a3bd6b30defc67e6a24f38a6781aed66c1bd2c0c481687"
+    },
+    {
+      "export": "nested-history",
+      "bytes": 3715794,
+      "sha256": "8f68e156adca38cb6830288296bc43ba0f9428c4ad51f7b247ef133d5167f429"
+    }
+  ],
+  "combined_bytes": 7242144,
+  "checks": [
+    "Every edited outer path, type, physical offset and raw value",
+    "Every ordered outer relation and all source/replacement parents",
+    "Every physical nested copy relation and source/result opaque field handle",
+    "Two fresh processes compared byte for byte with each other and full independent source expectations"
+  ],
+  "exclusions": [
+    "Native application acceptance",
+    "Full local and platform feature gates",
+    "Complete schema parity"
+  ]
+}

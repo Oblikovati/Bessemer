@@ -1,0 +1,17 @@
+{
+  "issue": 230,
+  "source_commit": "2851c87dab2832ea9a5cb40fd7fd7ff0727cf829",
+  "command": "cargo xtask pr",
+  "terminal_exit_code": 0,
+  "test_summaries": 345,
+  "passed": 4358,
+  "failed": 0,
+  "ignored": 233,
+  "log": "target\\database-index-combined-full-pr-gate.log",
+  "log_sha256": "9fd191a2a5d192329e831eab450bd93674bc8834b25e30798c9939a071aaeca5",
+  "exclusions": [
+    "Later saved-reader extraction at 248327c9",
+    "Later lossless saved-index API and metadata edits",
+    "Linux ThreadSanitizer and remote integration acceptance"
+  ]
+}

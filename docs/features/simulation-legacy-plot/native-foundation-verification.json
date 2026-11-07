@@ -1,0 +1,101 @@
+{
+  "issue": 174,
+  "stage": "Complete frozen native reference foundation; typed Rust codec remains pending",
+  "tests_run": 11,
+  "initialization_and_strict_replay_passed": true,
+  "source_snapshot": {
+    "file": "source-snapshot.json",
+    "sha256": "4f8eb8db31bfb70ca2ad743f8f1999660641a3b6c828868364a0c875534fc63e",
+    "snapshot_identity": "99c84c47f7ba695f0a477771255dfe89a1401c8ce4ed2ef559af4060af54ada6",
+    "python_files": 5103,
+    "revision": "d93ed4be59046f1d89c4c56bbec58d156402b068"
+  },
+  "tested_scripts": [
+    {
+      "path": "docs/features/simulation-legacy-plot/freeze_legacy_plot.py",
+      "executed_bytes_sha256": "ebac9650bee28c6f5456db6bb05c2935b47569d31671718c80f45c2dbdfeef8a",
+      "committed_lf_sha256": "ebac9650bee28c6f5456db6bb05c2935b47569d31671718c80f45c2dbdfeef8a"
+    },
+    {
+      "path": "docs/features/simulation-legacy-plot/legacy_plot_bindings.py",
+      "executed_bytes_sha256": "538419d9141ff43efcf61dfbdf65a55becaee8d00c801d9e7ef0b2e3fe96639d",
+      "committed_lf_sha256": "538419d9141ff43efcf61dfbdf65a55becaee8d00c801d9e7ef0b2e3fe96639d"
+    },
+    {
+      "path": "docs/features/simulation-legacy-plot/legacy_plot_evidence.py",
+      "executed_bytes_sha256": "c980331792a10b69716bbcd96ada35eba8898d38e0f5aa6d58eab31897dfe0d7",
+      "committed_lf_sha256": "c980331792a10b69716bbcd96ada35eba8898d38e0f5aa6d58eab31897dfe0d7"
+    },
+    {
+      "path": "docs/features/simulation-legacy-plot/legacy_plot_native.py",
+      "executed_bytes_sha256": "0fd1cdf8363c403629418a8aaaadf0b73f04df46e406b93b14e17c21822454ac",
+      "committed_lf_sha256": "0fd1cdf8363c403629418a8aaaadf0b73f04df46e406b93b14e17c21822454ac"
+    },
+    {
+      "path": "docs/features/simulation-post-dialog/legend_body_evidence.py",
+      "executed_bytes_sha256": "4c6a67878eeed56e1c57f57484a37fb38469b359b9d82b5426297e3be79316a5",
+      "committed_lf_sha256": "26a7ccaf0422cf2a497f9209db49977b985d27cea3b86907065fc64841e2509d"
+    }
+  ],
+  "functions_audited": 23,
+  "logs": [
+    {
+      "path": "target/legacy-plot-native-foundation-source.log",
+      "bytes": 2803,
+      "sha256": "ee23b01c13bbe26bfdff52c2ab41e9a7c800d1515ded702dd9867128cd311a11",
+      "exit_code": 1
+    },
+    {
+      "path": "target/legacy-plot-native-foundation-corrected-source.log",
+      "bytes": 1832,
+      "sha256": "70d2387931ca790492c9013dbaa86fc6a28f40f4079f11078fd1f3c99f25d4ef",
+      "exit_code": 0
+    },
+    {
+      "path": "target/legacy-plot-native-foundation-strict-source.log",
+      "bytes": 1832,
+      "sha256": "ec81465ed77eaa223f95978107e56afb5b5d47f5cb243a0412ab46d368ed969f",
+      "exit_code": 0
+    }
+  ],
+  "native_summary": {
+    "streams": 60,
+    "bytes": 81744,
+    "helper_complete_streams": 48,
+    "caller_compatible_complete_streams": 40,
+    "helper_complete_bytes": 65472,
+    "caller_compatible_complete_bytes": 54560,
+    "sizes": {
+      "1364": 48,
+      "1356": 12
+    }
+  },
+  "candidate_attempts": 120,
+  "successful_helper_attempts": 96,
+  "dispatcher_enabled_attempts": 52,
+  "packet": {
+    "bytes": 165888,
+    "sha256": "ca07fee881db88d11880cfe416a58e88c1edcb54567db05ec004e053c5a7894a"
+  },
+  "complete_original_instructions": 1898,
+  "fresh_rea_wide_helper": {
+    "evidence_id": "ev_66a5bf4ecdeb253930983f70dc37e1608a74723e1dbf8cbbdf156aec1fffa078",
+    "instructions": 46,
+    "body_bytes": 171
+  },
+  "qualifications": [
+    "Initial verifier required a named MFC import; corrected to exact observed ordinal 14039 at IAT 0x180010588. Failure log retained.",
+    "REA displays the later ordinal call as TrimRight; actual runtime MFC provider and final native CString value remain unresolved.",
+    "Fresh caller-image REA analysis timed out at 300 seconds. Original complete decompilation hashes and all 1852 caller instructions match installed bytes; no fresh caller REA result is claimed.",
+    "REA session closed after timeout; no target code executed.",
+    "The shared capture adapter accepts the new assembly facet and still verifies both original 107/38-instruction captures.",
+    "Executed local script byte hashes and Git LF-normalized hashes are both recorded; only line-ending normalization differs."
+  ],
+  "exclusions": [
+    "No Rust read/construction/edit codec",
+    "No native writer/runtime equivalence",
+    "No publication acceptance",
+    "No whole-format parity"
+  ],
+  "accepted_source_cut": "d93ed4be59046f1d89c4c56bbec58d156402b068"
+}

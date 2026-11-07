@@ -1,0 +1,17 @@
+{
+  "issue": 229,
+  "format": "HOV1",
+  "cases": 117,
+  "bytes": 4651009,
+  "sha256": "2ee5a371d8d47964eaf540c51eeec6cf99911ce30b908bc16f734affedf638f7",
+  "cursor_wrapped_cases": 6,
+  "extents": [
+    512,
+    1024,
+    4096,
+    65536
+  ],
+  "basis": "Static installed writer14600 and caller17340; owned Python construction, no native execution",
+  "native_producer_acceptance": false,
+  "extent_65536_scope": "Conditional word-truncation arithmetic only; runtime reachability unproved"
+}

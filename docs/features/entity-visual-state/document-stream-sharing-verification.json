@@ -1,0 +1,40 @@
+{
+  "issue": 181,
+  "stage": "Behavior-preserving shared unrelated-document-stream assertion",
+  "passed": 4,
+  "failed": 0,
+  "process_reaped": true,
+  "test_seconds": 25.62,
+  "support": [
+    {
+      "path": "tests/support/unselected_document_streams.rs",
+      "bytes": 713,
+      "sha256": "cef16204fd410c34c6d5f4103b1078b51e0af8cf1844741520d724f367347d78"
+    },
+    {
+      "path": "tests/component_visual_carriers.rs",
+      "bytes": 7874,
+      "sha256": "7a25caef1965229f6d99ef4349a0e716134149b33b3f39577d105155be12e89e"
+    },
+    {
+      "path": "tests/component_visual_carriers/documents.rs",
+      "bytes": 2869,
+      "sha256": "dba0009c3a2945db7da4e6b49c2ee883169fc4e4ccf426c7fde3c9473716da4f"
+    }
+  ],
+  "log": {
+    "path": "target/entity-visual-shared-document-stream.log",
+    "bytes": 492,
+    "sha256": "22ebcd3210ce3b9e742b6035aa88aa83e61b33fbfd09e4cce1f271dc5ce5f3c8"
+  },
+  "compiler_log": {
+    "path": "target/entity-visual-shared-document-stream-compile-retry.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "qualifications": [
+    "The existing document stream-name/order and unrelated byte comparisons moved unchanged behind a selected-stream parameter. Existing component/early-version assertions remain unchanged.",
+    "The initial module insertion attached an existing dead-code allowance to the wrong test support module. The original allowance was restored to archive_support and warnings remain denied; the initial failure log is preserved.",
+    "Matrix/concurrency code is unchanged; this focused run covers the four existing nonmatrix component/early tests. Standalone compilation avoids overlapping Cargo commands. Full repository/publication gates remain required. Humanizer unavailable; prose pass pending maintainer review."
+  ]
+}

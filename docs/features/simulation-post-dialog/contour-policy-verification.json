@@ -1,0 +1,48 @@
+{
+  "issue": 166,
+  "behavior_version": "PostInfo-C843-policy-v1",
+  "kernel_decision": "Preserve raw ContourType codes; use the installed bounded conversion tables and exactly the four documented comparison words.",
+  "rust": {
+    "checks": 23,
+    "failed": 0,
+    "ignored": 0,
+    "log": {
+      "path": "target/postinfo-contour-policy-tests.log",
+      "bytes": 2221,
+      "sha256": "bcbdad8012b3cafa24c421ce7c2eda2e16ccf874550d0c5c34e115276ced7196"
+    }
+  },
+  "clippy": {
+    "path": "target/postinfo-contour-policy-clippy.log",
+    "bytes": 136,
+    "sha256": "ae04058de29b0dd68b9dcd3e2d8d2ebefcb85d79dd783583cd7b7d8bdc8793fd"
+  },
+  "source": {
+    "checks": 10,
+    "seconds": 1.904,
+    "log": {
+      "path": "target/postinfo-contour-policy-source.log",
+      "bytes": 1463,
+      "sha256": "7becc52ff78792266dce59d70b5c3f4b4fb5cf881a4304cde5057a405c98d3da"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/postinfo-view-source-snapshot.json",
+      "bytes": 517613,
+      "sha256": "b9cf8fa3145b582168740195e401a3fe43c3e5e6daae1a655d99e730c8a8c039"
+    }
+  },
+  "comparison_oracle": "Specification 14.463 and frozen C-843 installed-method bindings; every physical field in all 70 owned contexts is changed independently.",
+  "default_cases": {
+    "preferences": 8,
+    "explicit_plot_codes": 14,
+    "missing_plot_context_cases": 8
+  },
+  "exclusions": [
+    "The named comparison does not establish complete renderer dependencies.",
+    "Plot context is supplied explicitly; no runtime pointer or document dispatch is inferred."
+  ],
+  "pending": [
+    "Publication gates and remaining documented consumer roles."
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending."
+}

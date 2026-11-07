@@ -1,0 +1,51 @@
+{
+  "feature_issue": 44,
+  "scope": "structural extraction of existing material serializers; model codec pending",
+  "source_sha256": {
+    "src/archive_codec/material.rs": "3670b5768c28d3c7445755dc037563526237f1de23bfc00163a7e6950633deaf",
+    "src/archive_codec/dspbr.rs": "1016f44da4bf1513895e4727d3534cdf3f0c6a6c23b6f89e2fe68fe99883b7eb",
+    "src/archive_codec/material_properties.rs": "88d1b2dc929b38cbb387f590dc7f308330172d1c66f3119d7d1ea7be151e2e14",
+    "src/archive_codec/material_reader.rs": "0150968f1fff954635f392e87905b34f2b934f7b930e29988383b7d172bcaa5f",
+    "src/display_lists/material_archive.rs": "ad88e70c6e960d31ca06a75f3af3d9dbefb7b3715ecb042e19bf51cb2865c2e5",
+    "src/display_lists/modern_lights.rs": "0a50d65d2b5979529b482eacc634ccd589f9ffe55d80a15f271b6e3d6728a525",
+    "src/display_lists/mod.rs": "1608a2efd5f4dcd1b77c3ef811ec47fd7d0598a0ec032792ed5304ecaa8f8ce0",
+    "src/archive_codec/mod.rs": "4d1cd64fa06cd58b8aac3dd5e9cb24b8b5ae06a11f14394f4ef3ffdba25b5ec8"
+  },
+  "checks": [
+    {
+      "command": "cargo xtask pr --offline",
+      "result": "passed",
+      "doctests": 204,
+      "scope": "shared serializer extraction and existing frozen field/byte fixtures"
+    },
+    {
+      "command": "cargo fmt --all -- --check",
+      "result": "passed",
+      "scope": "final source"
+    },
+    {
+      "command": "cargo clippy --offline --lib --tests -- -D warnings",
+      "result": "passed",
+      "scope": "final source including Send bound"
+    },
+    {
+      "command": "cargo test --offline --lib native_header_import_tests",
+      "result": "passed",
+      "tests": 1,
+      "scope": "final source"
+    }
+  ],
+  "native_shared_body": {
+    "bytes": 845,
+    "primitive_reads": 219,
+    "sha256": "f68056a29791658c34809a8b0a0f208a19a0996d8a0b056c8f6136542a541ac6"
+  },
+  "extraction_token_comparison": "shared-material-structural-check.json",
+  "uncommitted": true,
+  "pr_43_head_unchanged": true,
+  "exclusions": [
+    "complete Bessemer model root operation",
+    "model final PR gate and CI matrix",
+    "model whole-document and native application acceptance"
+  ]
+}

@@ -1,0 +1,4547 @@
+{
+  "evidence": "C-745",
+  "model_sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "id_bindings": [
+    {
+      "class_name": "moSimpleEdgeIdRep_c",
+      "vtable": "0x4cf02940",
+      "serializer": "0x4bbbde70",
+      "suffix": "0x4bbb6d50"
+    },
+    {
+      "class_name": "moCopySurfIdRep_c",
+      "vtable": "0x4cf6f908",
+      "serializer": "0x4bbbbc30",
+      "suffix": "0x4d333900"
+    },
+    {
+      "class_name": "moMacroFeatRefSurfIdRep_c",
+      "vtable": "0x4cf74148",
+      "serializer": "0x4bbbd420",
+      "suffix": "0x4bbbf630"
+    },
+    {
+      "class_name": "moEndCapChamferSurfIdRep_c",
+      "vtable": "0x4cf73e98",
+      "serializer": "0x4bbb79b0",
+      "suffix": "0x4bbbf3f0"
+    }
+  ],
+  "module_sha256": "f4cf8adfc0f6e2e36c3a29765d28bd0d073f952e5078c5dcc7cc0d5a0d409c36",
+  "functions": [
+    {
+      "address": "0x181334da0",
+      "end": "0x18133500e",
+      "raw_sha256": "2053db07cb85dab7af5125f00b459fa933ed82b353927a16f44055d384dc73d4"
+    },
+    {
+      "address": "0x1813342b0",
+      "end": "0x1813342fa",
+      "raw_sha256": "cd391c600da07acfd9a4c3aaa5a6d26df509788b66bb096cc55b0d689bde6374"
+    },
+    {
+      "address": "0x180a32600",
+      "end": "0x180a3292d",
+      "raw_sha256": "6d7a380a41726e095c9acd961dacbe38f569445f66424293fe76c8631c1b0b41"
+    },
+    {
+      "address": "0x180a5ba00",
+      "end": "0x180a5c1c1",
+      "raw_sha256": "218d5ba05196d02572ece69ad600f7b1d7cdeb89b03b5f7c6aa3c175449cf29f"
+    },
+    {
+      "address": "0x181345a50",
+      "end": "0x181346a85",
+      "raw_sha256": "6590472ba02fb85de1c4cc3942695f84755a9a85cfc43e16409d06843a05f37a"
+    },
+    {
+      "address": "0x1813acc90",
+      "end": "0x1813ad821",
+      "raw_sha256": "bdc75f34d20dbfab787a5cbcf4bd6e82757eed101d0fd89be1bde87158cb2a9e"
+    }
+  ],
+  "constructor": "0x1813342b0",
+  "vtable": "0x18205ab78",
+  "reader_slot": "0x18205add8",
+  "reader": "0x181345a50",
+  "version_constants": [
+    {
+      "address": "0x181f61f68",
+      "value": 800066,
+      "raw_hex": "00000000846a2841"
+    },
+    {
+      "address": "0x18201a2f8",
+      "value": 840013,
+      "raw_hex": "000000009aa22941"
+    },
+    {
+      "address": "0x181f553d0",
+      "value": 840014,
+      "raw_hex": "000000009ca22941"
+    },
+    {
+      "address": "0x18205ecd8",
+      "value": 870017,
+      "raw_hex": "00000000028d2a41"
+    }
+  ],
+  "summary": {
+    "streams": 15,
+    "bytes": 15770,
+    "complete": 15,
+    "complete_bytes": 15770
+  },
+  "rows": [
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\mixedmesh.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/ShellManager/MidSurfShells/MidSurfShell 1/Property",
+      "bytes": 1727,
+      "sha256": "ab405acb19fefe22030acc5c2bb808895438b1c68066a70978f570d85d1a397f",
+      "attempts": [
+        {
+          "version": 870022,
+          "success": true,
+          "end": 1727,
+          "base_end": 1619,
+          "subtype": 0,
+          "spans": [
+            {
+              "label": "references.count",
+              "offset": 0,
+              "end": 4,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "reference0.id_header",
+              "offset": 4,
+              "end": 12,
+              "sha256": "da3dc360a2f1362e5dfeb26c3a1f639791f93e02dca3529a83600669f7bada8a"
+            },
+            {
+              "label": "reference0.blob_count",
+              "offset": 12,
+              "end": 16,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "reference0.blob",
+              "offset": 16,
+              "end": 16,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "label": "reference0.archive0",
+              "offset": 16,
+              "end": 1139,
+              "sha256": "0c9b4ceb7962142ac2ac0a134f05b7a5a6a44bdbe98e869928935cab947c2ffc"
+            },
+            {
+              "label": "reference0.archive1",
+              "offset": 1139,
+              "end": 1381,
+              "sha256": "b50f0663566a9046dbd59a6206d0132872acdfb1a061e2ca6acff1c247199cec"
+            },
+            {
+              "label": "reference0.header",
+              "offset": 1381,
+              "end": 1401,
+              "sha256": "7813d556ac524c47f15e6bc6c5ae0a4f4132f7e0bae4d98dface6f65c5a90377"
+            },
+            {
+              "label": "reference0.name",
+              "offset": 1401,
+              "end": 1407,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "reference0.tail",
+              "offset": 1407,
+              "end": 1415,
+              "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+            },
+            {
+              "label": "references.tail",
+              "offset": 1415,
+              "end": 1423,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.word198",
+              "offset": 1423,
+              "end": 1427,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.text78",
+              "offset": 1427,
+              "end": 1433,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat0",
+              "offset": 1433,
+              "end": 1439,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat1",
+              "offset": 1439,
+              "end": 1445,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.text60",
+              "offset": 1445,
+              "end": 1451,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.words68_58",
+              "offset": 1451,
+              "end": 1459,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.doublef8_wordec_doublee0_worde8_words110_a8_1e0",
+              "offset": 1459,
+              "end": 1495,
+              "sha256": "16bdd522cad0cead7b18490e2aa19e5148a541c563da2b774d85d8ddcf4a50b2"
+            },
+            {
+              "label": "base.word100",
+              "offset": 1495,
+              "end": 1499,
+              "sha256": "cb30e91817239109ffd0a5870046e128f04619da80c7624d921162fdfe514f76"
+            },
+            {
+              "label": "base.six_doubles",
+              "offset": 1499,
+              "end": 1547,
+              "sha256": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1"
+            },
+            {
+              "label": "base.arraytext0",
+              "offset": 1547,
+              "end": 1553,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext1",
+              "offset": 1553,
+              "end": 1559,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext2",
+              "offset": 1559,
+              "end": 1565,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext3",
+              "offset": 1565,
+              "end": 1571,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext4",
+              "offset": 1571,
+              "end": 1577,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext5",
+              "offset": 1577,
+              "end": 1583,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.virtual0.word",
+              "offset": 1583,
+              "end": 1587,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual0.presence",
+              "offset": 1587,
+              "end": 1591,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.word",
+              "offset": 1591,
+              "end": 1595,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.presence",
+              "offset": 1595,
+              "end": 1599,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.wordac",
+              "offset": 1599,
+              "end": 1603,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word48",
+              "offset": 1603,
+              "end": 1607,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word230",
+              "offset": 1607,
+              "end": 1611,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.wordc8",
+              "offset": 1611,
+              "end": 1615,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word170",
+              "offset": 1615,
+              "end": 1619,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.double328",
+              "offset": 1619,
+              "end": 1627,
+              "sha256": "a5791d1a27e37877bce5f3ff53da202f8b7643304d18eb2b4ed7f8eb1dbc18b2"
+            },
+            {
+              "label": "shell.word330",
+              "offset": 1627,
+              "end": 1631,
+              "sha256": "26b25d457597a7b0463f9620f666dd10aa2c4373a505967c7c8d70922a2d6ece"
+            },
+            {
+              "label": "shell.subtype334",
+              "offset": 1631,
+              "end": 1635,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.word340",
+              "offset": 1635,
+              "end": 1639,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.text300",
+              "offset": 1639,
+              "end": 1645,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "shell.text348",
+              "offset": 1645,
+              "end": 1691,
+              "sha256": "9da2e2446dd6d514fec33b13110c886048c94b8e90b635142cd2128dbfafb1fb"
+            },
+            {
+              "label": "shell.words338_33c",
+              "offset": 1691,
+              "end": 1699,
+              "sha256": "ef9ba5985a8c7a79836eac257a5ff7b62239e61f0fb7b763a4d7014def5a55b7"
+            },
+            {
+              "label": "shell.words350_354",
+              "offset": 1699,
+              "end": 1707,
+              "sha256": "a4c5a20bc229aa3dd6208b0522847eb896d8e5a8d57a962444be46228ad43f11"
+            },
+            {
+              "label": "shell.word358",
+              "offset": 1707,
+              "end": 1711,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.word368_double360",
+              "offset": 1711,
+              "end": 1723,
+              "sha256": "15ec7bf0b50732b49f8228e07d24365338f9e3ab994b00af08e5a3bffe55fd8b"
+            },
+            {
+              "label": "shell.word480",
+              "offset": 1723,
+              "end": 1727,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            }
+          ],
+          "archive_records": [
+            {
+              "offset": 16,
+              "end": 1139,
+              "version": 6000,
+              "object_class": "moSolidRef_w",
+              "classes": {
+                "moSolidRef_w": 1,
+                "moCompSolidBody_c": 1,
+                "moChainComponent_c": 1,
+                "moReferenceChain_c": 1,
+                "moExtFeatureList_c": 1,
+                "moExtFeature_c": 1,
+                "moCStringHandle_c": 5,
+                "moFaceRef_c": 1,
+                "moFromSktEntSurfIdRep_c": 3,
+                "moFR_c": 5,
+                "moExtObject_c": 1,
+                "moEndFaceSurfIdRep_c": 2
+              },
+              "body_counts": {
+                "unit_bodies": 0,
+                "component_prefixes": 1,
+                "boundary_prefixes": 1,
+                "representation_prefixes": 5,
+                "feature_references": 5,
+                "external_bodies": 1,
+                "representation_bodies": 5,
+                "boundary_bodies": 1,
+                "component_bodies": 2,
+                "wrapper_bodies": 1
+              }
+            },
+            {
+              "offset": 1139,
+              "end": 1381,
+              "version": 6000,
+              "object_class": "moExtObject_c",
+              "classes": {
+                "moExtObject_c": 1,
+                "moCStringHandle_c": 2
+              },
+              "body_counts": {
+                "unit_bodies": 0,
+                "component_prefixes": 0,
+                "boundary_prefixes": 0,
+                "representation_prefixes": 0,
+                "feature_references": 0,
+                "external_bodies": 1,
+                "representation_bodies": 0,
+                "boundary_bodies": 0,
+                "component_bodies": 0,
+                "wrapper_bodies": 0
+              }
+            }
+          ],
+          "reconstruction_sha256": "ab405acb19fefe22030acc5c2bb808895438b1c68066a70978f570d85d1a397f"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\mixedmesh.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/ShellManager/MidSurfShells/MidSurfShell 2/Property",
+      "bytes": 1727,
+      "sha256": "340a9f8faf23a1a5af12249c1af0428d19f534742f885c0c0c1d684e21e51c16",
+      "attempts": [
+        {
+          "version": 870022,
+          "success": true,
+          "end": 1727,
+          "base_end": 1619,
+          "subtype": 0,
+          "spans": [
+            {
+              "label": "references.count",
+              "offset": 0,
+              "end": 4,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "reference0.id_header",
+              "offset": 4,
+              "end": 12,
+              "sha256": "da3dc360a2f1362e5dfeb26c3a1f639791f93e02dca3529a83600669f7bada8a"
+            },
+            {
+              "label": "reference0.blob_count",
+              "offset": 12,
+              "end": 16,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "reference0.blob",
+              "offset": 16,
+              "end": 16,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "label": "reference0.archive0",
+              "offset": 16,
+              "end": 1139,
+              "sha256": "81233c2578109dcb2f0976d2544e8e4d5c13cb16f61603364168ea502ba7c5bb"
+            },
+            {
+              "label": "reference0.archive1",
+              "offset": 1139,
+              "end": 1381,
+              "sha256": "b50f0663566a9046dbd59a6206d0132872acdfb1a061e2ca6acff1c247199cec"
+            },
+            {
+              "label": "reference0.header",
+              "offset": 1381,
+              "end": 1401,
+              "sha256": "7813d556ac524c47f15e6bc6c5ae0a4f4132f7e0bae4d98dface6f65c5a90377"
+            },
+            {
+              "label": "reference0.name",
+              "offset": 1401,
+              "end": 1407,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "reference0.tail",
+              "offset": 1407,
+              "end": 1415,
+              "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+            },
+            {
+              "label": "references.tail",
+              "offset": 1415,
+              "end": 1423,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.word198",
+              "offset": 1423,
+              "end": 1427,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.text78",
+              "offset": 1427,
+              "end": 1433,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat0",
+              "offset": 1433,
+              "end": 1439,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat1",
+              "offset": 1439,
+              "end": 1445,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.text60",
+              "offset": 1445,
+              "end": 1451,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.words68_58",
+              "offset": 1451,
+              "end": 1459,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.doublef8_wordec_doublee0_worde8_words110_a8_1e0",
+              "offset": 1459,
+              "end": 1495,
+              "sha256": "16bdd522cad0cead7b18490e2aa19e5148a541c563da2b774d85d8ddcf4a50b2"
+            },
+            {
+              "label": "base.word100",
+              "offset": 1495,
+              "end": 1499,
+              "sha256": "42f4aeb81c1ef81f771f3de8abca9dcf66901c575530e7672e4b1146474ae650"
+            },
+            {
+              "label": "base.six_doubles",
+              "offset": 1499,
+              "end": 1547,
+              "sha256": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1"
+            },
+            {
+              "label": "base.arraytext0",
+              "offset": 1547,
+              "end": 1553,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext1",
+              "offset": 1553,
+              "end": 1559,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext2",
+              "offset": 1559,
+              "end": 1565,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext3",
+              "offset": 1565,
+              "end": 1571,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext4",
+              "offset": 1571,
+              "end": 1577,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext5",
+              "offset": 1577,
+              "end": 1583,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.virtual0.word",
+              "offset": 1583,
+              "end": 1587,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual0.presence",
+              "offset": 1587,
+              "end": 1591,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.word",
+              "offset": 1591,
+              "end": 1595,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.presence",
+              "offset": 1595,
+              "end": 1599,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.wordac",
+              "offset": 1599,
+              "end": 1603,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word48",
+              "offset": 1603,
+              "end": 1607,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word230",
+              "offset": 1607,
+              "end": 1611,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.wordc8",
+              "offset": 1611,
+              "end": 1615,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word170",
+              "offset": 1615,
+              "end": 1619,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.double328",
+              "offset": 1619,
+              "end": 1627,
+              "sha256": "a5791d1a27e37877bce5f3ff53da202f8b7643304d18eb2b4ed7f8eb1dbc18b2"
+            },
+            {
+              "label": "shell.word330",
+              "offset": 1627,
+              "end": 1631,
+              "sha256": "26b25d457597a7b0463f9620f666dd10aa2c4373a505967c7c8d70922a2d6ece"
+            },
+            {
+              "label": "shell.subtype334",
+              "offset": 1631,
+              "end": 1635,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.word340",
+              "offset": 1635,
+              "end": 1639,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.text300",
+              "offset": 1639,
+              "end": 1645,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "shell.text348",
+              "offset": 1645,
+              "end": 1691,
+              "sha256": "9da2e2446dd6d514fec33b13110c886048c94b8e90b635142cd2128dbfafb1fb"
+            },
+            {
+              "label": "shell.words338_33c",
+              "offset": 1691,
+              "end": 1699,
+              "sha256": "ef9ba5985a8c7a79836eac257a5ff7b62239e61f0fb7b763a4d7014def5a55b7"
+            },
+            {
+              "label": "shell.words350_354",
+              "offset": 1699,
+              "end": 1707,
+              "sha256": "a4c5a20bc229aa3dd6208b0522847eb896d8e5a8d57a962444be46228ad43f11"
+            },
+            {
+              "label": "shell.word358",
+              "offset": 1707,
+              "end": 1711,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.word368_double360",
+              "offset": 1711,
+              "end": 1723,
+              "sha256": "15ec7bf0b50732b49f8228e07d24365338f9e3ab994b00af08e5a3bffe55fd8b"
+            },
+            {
+              "label": "shell.word480",
+              "offset": 1723,
+              "end": 1727,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            }
+          ],
+          "archive_records": [
+            {
+              "offset": 16,
+              "end": 1139,
+              "version": 6000,
+              "object_class": "moSolidRef_w",
+              "classes": {
+                "moSolidRef_w": 1,
+                "moCompSolidBody_c": 1,
+                "moChainComponent_c": 1,
+                "moReferenceChain_c": 1,
+                "moExtFeatureList_c": 1,
+                "moExtFeature_c": 1,
+                "moCStringHandle_c": 5,
+                "moFaceRef_c": 1,
+                "moFromSktEntSurfIdRep_c": 3,
+                "moFR_c": 5,
+                "moExtObject_c": 1,
+                "moEndFaceSurfIdRep_c": 2
+              },
+              "body_counts": {
+                "unit_bodies": 0,
+                "component_prefixes": 1,
+                "boundary_prefixes": 1,
+                "representation_prefixes": 5,
+                "feature_references": 5,
+                "external_bodies": 1,
+                "representation_bodies": 5,
+                "boundary_bodies": 1,
+                "component_bodies": 2,
+                "wrapper_bodies": 1
+              }
+            },
+            {
+              "offset": 1139,
+              "end": 1381,
+              "version": 6000,
+              "object_class": "moExtObject_c",
+              "classes": {
+                "moExtObject_c": 1,
+                "moCStringHandle_c": 2
+              },
+              "body_counts": {
+                "unit_bodies": 0,
+                "component_prefixes": 0,
+                "boundary_prefixes": 0,
+                "representation_prefixes": 0,
+                "feature_references": 0,
+                "external_bodies": 1,
+                "representation_bodies": 0,
+                "boundary_bodies": 0,
+                "component_bodies": 0,
+                "wrapper_bodies": 0
+              }
+            }
+          ],
+          "reconstruction_sha256": "340a9f8faf23a1a5af12249c1af0428d19f534742f885c0c0c1d684e21e51c16"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\mixedmesh.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/ShellManager/MidSurfShells/MidSurfShell 3/Property",
+      "bytes": 1545,
+      "sha256": "3d1a501753783ef5415151f8741f9b953ab2bf11118669b19e14b448747d57fa",
+      "attempts": [
+        {
+          "version": 870022,
+          "success": true,
+          "end": 1545,
+          "base_end": 1437,
+          "subtype": 0,
+          "spans": [
+            {
+              "label": "references.count",
+              "offset": 0,
+              "end": 4,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "reference0.id_header",
+              "offset": 4,
+              "end": 12,
+              "sha256": "da3dc360a2f1362e5dfeb26c3a1f639791f93e02dca3529a83600669f7bada8a"
+            },
+            {
+              "label": "reference0.blob_count",
+              "offset": 12,
+              "end": 16,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "reference0.blob",
+              "offset": 16,
+              "end": 16,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "label": "reference0.archive0",
+              "offset": 16,
+              "end": 957,
+              "sha256": "b99de57f5f96f393c1624abafae33e72fed61d81d86284d1645226a3f2cd20c5"
+            },
+            {
+              "label": "reference0.archive1",
+              "offset": 957,
+              "end": 1199,
+              "sha256": "b50f0663566a9046dbd59a6206d0132872acdfb1a061e2ca6acff1c247199cec"
+            },
+            {
+              "label": "reference0.header",
+              "offset": 1199,
+              "end": 1219,
+              "sha256": "7813d556ac524c47f15e6bc6c5ae0a4f4132f7e0bae4d98dface6f65c5a90377"
+            },
+            {
+              "label": "reference0.name",
+              "offset": 1219,
+              "end": 1225,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "reference0.tail",
+              "offset": 1225,
+              "end": 1233,
+              "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+            },
+            {
+              "label": "references.tail",
+              "offset": 1233,
+              "end": 1241,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.word198",
+              "offset": 1241,
+              "end": 1245,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.text78",
+              "offset": 1245,
+              "end": 1251,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat0",
+              "offset": 1251,
+              "end": 1257,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat1",
+              "offset": 1257,
+              "end": 1263,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.text60",
+              "offset": 1263,
+              "end": 1269,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.words68_58",
+              "offset": 1269,
+              "end": 1277,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.doublef8_wordec_doublee0_worde8_words110_a8_1e0",
+              "offset": 1277,
+              "end": 1313,
+              "sha256": "16bdd522cad0cead7b18490e2aa19e5148a541c563da2b774d85d8ddcf4a50b2"
+            },
+            {
+              "label": "base.word100",
+              "offset": 1313,
+              "end": 1317,
+              "sha256": "43c66c260828c9839f26474151db105481ff92f5e01377f75389d4ce3d2dd574"
+            },
+            {
+              "label": "base.six_doubles",
+              "offset": 1317,
+              "end": 1365,
+              "sha256": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1"
+            },
+            {
+              "label": "base.arraytext0",
+              "offset": 1365,
+              "end": 1371,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext1",
+              "offset": 1371,
+              "end": 1377,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext2",
+              "offset": 1377,
+              "end": 1383,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext3",
+              "offset": 1383,
+              "end": 1389,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext4",
+              "offset": 1389,
+              "end": 1395,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext5",
+              "offset": 1395,
+              "end": 1401,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.virtual0.word",
+              "offset": 1401,
+              "end": 1405,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual0.presence",
+              "offset": 1405,
+              "end": 1409,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.word",
+              "offset": 1409,
+              "end": 1413,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.presence",
+              "offset": 1413,
+              "end": 1417,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.wordac",
+              "offset": 1417,
+              "end": 1421,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word48",
+              "offset": 1421,
+              "end": 1425,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word230",
+              "offset": 1425,
+              "end": 1429,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.wordc8",
+              "offset": 1429,
+              "end": 1433,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word170",
+              "offset": 1433,
+              "end": 1437,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.double328",
+              "offset": 1437,
+              "end": 1445,
+              "sha256": "d144783f1ff33776a9fe135900a60ac1eec34eddb2204ec58faab157e66df454"
+            },
+            {
+              "label": "shell.word330",
+              "offset": 1445,
+              "end": 1449,
+              "sha256": "26b25d457597a7b0463f9620f666dd10aa2c4373a505967c7c8d70922a2d6ece"
+            },
+            {
+              "label": "shell.subtype334",
+              "offset": 1449,
+              "end": 1453,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.word340",
+              "offset": 1453,
+              "end": 1457,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.text300",
+              "offset": 1457,
+              "end": 1463,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "shell.text348",
+              "offset": 1463,
+              "end": 1509,
+              "sha256": "9da2e2446dd6d514fec33b13110c886048c94b8e90b635142cd2128dbfafb1fb"
+            },
+            {
+              "label": "shell.words338_33c",
+              "offset": 1509,
+              "end": 1517,
+              "sha256": "ef9ba5985a8c7a79836eac257a5ff7b62239e61f0fb7b763a4d7014def5a55b7"
+            },
+            {
+              "label": "shell.words350_354",
+              "offset": 1517,
+              "end": 1525,
+              "sha256": "a4c5a20bc229aa3dd6208b0522847eb896d8e5a8d57a962444be46228ad43f11"
+            },
+            {
+              "label": "shell.word358",
+              "offset": 1525,
+              "end": 1529,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.word368_double360",
+              "offset": 1529,
+              "end": 1541,
+              "sha256": "15ec7bf0b50732b49f8228e07d24365338f9e3ab994b00af08e5a3bffe55fd8b"
+            },
+            {
+              "label": "shell.word480",
+              "offset": 1541,
+              "end": 1545,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            }
+          ],
+          "archive_records": [
+            {
+              "offset": 16,
+              "end": 957,
+              "version": 6000,
+              "object_class": "moSolidRef_w",
+              "classes": {
+                "moSolidRef_w": 1,
+                "moCompSolidBody_c": 1,
+                "moChainComponent_c": 1,
+                "moReferenceChain_c": 1,
+                "moExtFeatureList_c": 1,
+                "moExtFeature_c": 1,
+                "moCStringHandle_c": 5,
+                "moFaceRef_c": 1,
+                "moFromSktEntSurfIdRep_c": 3,
+                "moFR_c": 5,
+                "moExtObject_c": 1,
+                "moEndFaceSurfIdRep_c": 2
+              },
+              "body_counts": {
+                "unit_bodies": 0,
+                "component_prefixes": 1,
+                "boundary_prefixes": 1,
+                "representation_prefixes": 5,
+                "feature_references": 5,
+                "external_bodies": 1,
+                "representation_bodies": 5,
+                "boundary_bodies": 1,
+                "component_bodies": 2,
+                "wrapper_bodies": 1
+              }
+            },
+            {
+              "offset": 957,
+              "end": 1199,
+              "version": 6000,
+              "object_class": "moExtObject_c",
+              "classes": {
+                "moExtObject_c": 1,
+                "moCStringHandle_c": 2
+              },
+              "body_counts": {
+                "unit_bodies": 0,
+                "component_prefixes": 0,
+                "boundary_prefixes": 0,
+                "representation_prefixes": 0,
+                "feature_references": 0,
+                "external_bodies": 1,
+                "representation_bodies": 0,
+                "boundary_bodies": 0,
+                "component_bodies": 0,
+                "wrapper_bodies": 0
+              }
+            }
+          ],
+          "reconstruction_sha256": "3d1a501753783ef5415151f8741f9b953ab2bf11118669b19e14b448747d57fa"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\mixedmesh.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/ShellManager/MidSurfShells/MidSurfShell 4/Property",
+      "bytes": 1727,
+      "sha256": "57d38badaea952641f0f4ad802814bc79a0ac9b4fd9e38c2ecbccf1c3ff6bbc4",
+      "attempts": [
+        {
+          "version": 870022,
+          "success": true,
+          "end": 1727,
+          "base_end": 1619,
+          "subtype": 0,
+          "spans": [
+            {
+              "label": "references.count",
+              "offset": 0,
+              "end": 4,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "reference0.id_header",
+              "offset": 4,
+              "end": 12,
+              "sha256": "da3dc360a2f1362e5dfeb26c3a1f639791f93e02dca3529a83600669f7bada8a"
+            },
+            {
+              "label": "reference0.blob_count",
+              "offset": 12,
+              "end": 16,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "reference0.blob",
+              "offset": 16,
+              "end": 16,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "label": "reference0.archive0",
+              "offset": 16,
+              "end": 1139,
+              "sha256": "1f001085d635d49ad355b6685f52801f83fc4979d876dba14632a2be49a54ca3"
+            },
+            {
+              "label": "reference0.archive1",
+              "offset": 1139,
+              "end": 1381,
+              "sha256": "b50f0663566a9046dbd59a6206d0132872acdfb1a061e2ca6acff1c247199cec"
+            },
+            {
+              "label": "reference0.header",
+              "offset": 1381,
+              "end": 1401,
+              "sha256": "7813d556ac524c47f15e6bc6c5ae0a4f4132f7e0bae4d98dface6f65c5a90377"
+            },
+            {
+              "label": "reference0.name",
+              "offset": 1401,
+              "end": 1407,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "reference0.tail",
+              "offset": 1407,
+              "end": 1415,
+              "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+            },
+            {
+              "label": "references.tail",
+              "offset": 1415,
+              "end": 1423,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.word198",
+              "offset": 1423,
+              "end": 1427,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.text78",
+              "offset": 1427,
+              "end": 1433,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat0",
+              "offset": 1433,
+              "end": 1439,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat1",
+              "offset": 1439,
+              "end": 1445,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.text60",
+              "offset": 1445,
+              "end": 1451,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.words68_58",
+              "offset": 1451,
+              "end": 1459,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.doublef8_wordec_doublee0_worde8_words110_a8_1e0",
+              "offset": 1459,
+              "end": 1495,
+              "sha256": "16bdd522cad0cead7b18490e2aa19e5148a541c563da2b774d85d8ddcf4a50b2"
+            },
+            {
+              "label": "base.word100",
+              "offset": 1495,
+              "end": 1499,
+              "sha256": "01b4f6bd5d6a06a7b74a8565ceb4f845afe0ae96a0ac05cf5e86066bf7b538ec"
+            },
+            {
+              "label": "base.six_doubles",
+              "offset": 1499,
+              "end": 1547,
+              "sha256": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1"
+            },
+            {
+              "label": "base.arraytext0",
+              "offset": 1547,
+              "end": 1553,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext1",
+              "offset": 1553,
+              "end": 1559,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext2",
+              "offset": 1559,
+              "end": 1565,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext3",
+              "offset": 1565,
+              "end": 1571,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext4",
+              "offset": 1571,
+              "end": 1577,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext5",
+              "offset": 1577,
+              "end": 1583,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.virtual0.word",
+              "offset": 1583,
+              "end": 1587,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual0.presence",
+              "offset": 1587,
+              "end": 1591,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.word",
+              "offset": 1591,
+              "end": 1595,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.presence",
+              "offset": 1595,
+              "end": 1599,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.wordac",
+              "offset": 1599,
+              "end": 1603,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word48",
+              "offset": 1603,
+              "end": 1607,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word230",
+              "offset": 1607,
+              "end": 1611,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.wordc8",
+              "offset": 1611,
+              "end": 1615,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word170",
+              "offset": 1615,
+              "end": 1619,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.double328",
+              "offset": 1619,
+              "end": 1627,
+              "sha256": "a5791d1a27e37877bce5f3ff53da202f8b7643304d18eb2b4ed7f8eb1dbc18b2"
+            },
+            {
+              "label": "shell.word330",
+              "offset": 1627,
+              "end": 1631,
+              "sha256": "26b25d457597a7b0463f9620f666dd10aa2c4373a505967c7c8d70922a2d6ece"
+            },
+            {
+              "label": "shell.subtype334",
+              "offset": 1631,
+              "end": 1635,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.word340",
+              "offset": 1635,
+              "end": 1639,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.text300",
+              "offset": 1639,
+              "end": 1645,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "shell.text348",
+              "offset": 1645,
+              "end": 1691,
+              "sha256": "9da2e2446dd6d514fec33b13110c886048c94b8e90b635142cd2128dbfafb1fb"
+            },
+            {
+              "label": "shell.words338_33c",
+              "offset": 1691,
+              "end": 1699,
+              "sha256": "ef9ba5985a8c7a79836eac257a5ff7b62239e61f0fb7b763a4d7014def5a55b7"
+            },
+            {
+              "label": "shell.words350_354",
+              "offset": 1699,
+              "end": 1707,
+              "sha256": "a4c5a20bc229aa3dd6208b0522847eb896d8e5a8d57a962444be46228ad43f11"
+            },
+            {
+              "label": "shell.word358",
+              "offset": 1707,
+              "end": 1711,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.word368_double360",
+              "offset": 1711,
+              "end": 1723,
+              "sha256": "15ec7bf0b50732b49f8228e07d24365338f9e3ab994b00af08e5a3bffe55fd8b"
+            },
+            {
+              "label": "shell.word480",
+              "offset": 1723,
+              "end": 1727,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            }
+          ],
+          "archive_records": [
+            {
+              "offset": 16,
+              "end": 1139,
+              "version": 6000,
+              "object_class": "moSolidRef_w",
+              "classes": {
+                "moSolidRef_w": 1,
+                "moCompSolidBody_c": 1,
+                "moChainComponent_c": 1,
+                "moReferenceChain_c": 1,
+                "moExtFeatureList_c": 1,
+                "moExtFeature_c": 1,
+                "moCStringHandle_c": 5,
+                "moFaceRef_c": 1,
+                "moFromSktEntSurfIdRep_c": 3,
+                "moFR_c": 5,
+                "moExtObject_c": 1,
+                "moEndFaceSurfIdRep_c": 2
+              },
+              "body_counts": {
+                "unit_bodies": 0,
+                "component_prefixes": 1,
+                "boundary_prefixes": 1,
+                "representation_prefixes": 5,
+                "feature_references": 5,
+                "external_bodies": 1,
+                "representation_bodies": 5,
+                "boundary_bodies": 1,
+                "component_bodies": 2,
+                "wrapper_bodies": 1
+              }
+            },
+            {
+              "offset": 1139,
+              "end": 1381,
+              "version": 6000,
+              "object_class": "moExtObject_c",
+              "classes": {
+                "moExtObject_c": 1,
+                "moCStringHandle_c": 2
+              },
+              "body_counts": {
+                "unit_bodies": 0,
+                "component_prefixes": 0,
+                "boundary_prefixes": 0,
+                "representation_prefixes": 0,
+                "feature_references": 0,
+                "external_bodies": 1,
+                "representation_bodies": 0,
+                "boundary_bodies": 0,
+                "component_bodies": 0,
+                "wrapper_bodies": 0
+              }
+            }
+          ],
+          "reconstruction_sha256": "57d38badaea952641f0f4ad802814bc79a0ac9b4fd9e38c2ecbccf1c3ff6bbc4"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\mixedmesh.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/ShellManager/MidSurfShells/MidSurfShell 1/Property",
+      "bytes": 1727,
+      "sha256": "033c9991722af8014d38c1cd1ac5286ae55c4eecca5c76b0845e34166cc79f3f",
+      "attempts": [
+        {
+          "version": 870022,
+          "success": true,
+          "end": 1727,
+          "base_end": 1619,
+          "subtype": 0,
+          "spans": [
+            {
+              "label": "references.count",
+              "offset": 0,
+              "end": 4,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "reference0.id_header",
+              "offset": 4,
+              "end": 12,
+              "sha256": "da3dc360a2f1362e5dfeb26c3a1f639791f93e02dca3529a83600669f7bada8a"
+            },
+            {
+              "label": "reference0.blob_count",
+              "offset": 12,
+              "end": 16,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "reference0.blob",
+              "offset": 16,
+              "end": 16,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "label": "reference0.archive0",
+              "offset": 16,
+              "end": 1139,
+              "sha256": "5f6f4025a9f54aa07c33df4d59d56fe62138eb7cf829e0412eff24fce1ab1f4a"
+            },
+            {
+              "label": "reference0.archive1",
+              "offset": 1139,
+              "end": 1381,
+              "sha256": "b50f0663566a9046dbd59a6206d0132872acdfb1a061e2ca6acff1c247199cec"
+            },
+            {
+              "label": "reference0.header",
+              "offset": 1381,
+              "end": 1401,
+              "sha256": "7813d556ac524c47f15e6bc6c5ae0a4f4132f7e0bae4d98dface6f65c5a90377"
+            },
+            {
+              "label": "reference0.name",
+              "offset": 1401,
+              "end": 1407,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "reference0.tail",
+              "offset": 1407,
+              "end": 1415,
+              "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+            },
+            {
+              "label": "references.tail",
+              "offset": 1415,
+              "end": 1423,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.word198",
+              "offset": 1423,
+              "end": 1427,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.text78",
+              "offset": 1427,
+              "end": 1433,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat0",
+              "offset": 1433,
+              "end": 1439,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat1",
+              "offset": 1439,
+              "end": 1445,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.text60",
+              "offset": 1445,
+              "end": 1451,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.words68_58",
+              "offset": 1451,
+              "end": 1459,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.doublef8_wordec_doublee0_worde8_words110_a8_1e0",
+              "offset": 1459,
+              "end": 1495,
+              "sha256": "16bdd522cad0cead7b18490e2aa19e5148a541c563da2b774d85d8ddcf4a50b2"
+            },
+            {
+              "label": "base.word100",
+              "offset": 1495,
+              "end": 1499,
+              "sha256": "cb30e91817239109ffd0a5870046e128f04619da80c7624d921162fdfe514f76"
+            },
+            {
+              "label": "base.six_doubles",
+              "offset": 1499,
+              "end": 1547,
+              "sha256": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1"
+            },
+            {
+              "label": "base.arraytext0",
+              "offset": 1547,
+              "end": 1553,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext1",
+              "offset": 1553,
+              "end": 1559,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext2",
+              "offset": 1559,
+              "end": 1565,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext3",
+              "offset": 1565,
+              "end": 1571,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext4",
+              "offset": 1571,
+              "end": 1577,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext5",
+              "offset": 1577,
+              "end": 1583,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.virtual0.word",
+              "offset": 1583,
+              "end": 1587,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual0.presence",
+              "offset": 1587,
+              "end": 1591,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.word",
+              "offset": 1591,
+              "end": 1595,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.presence",
+              "offset": 1595,
+              "end": 1599,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.wordac",
+              "offset": 1599,
+              "end": 1603,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word48",
+              "offset": 1603,
+              "end": 1607,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word230",
+              "offset": 1607,
+              "end": 1611,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.wordc8",
+              "offset": 1611,
+              "end": 1615,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word170",
+              "offset": 1615,
+              "end": 1619,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.double328",
+              "offset": 1619,
+              "end": 1627,
+              "sha256": "a5791d1a27e37877bce5f3ff53da202f8b7643304d18eb2b4ed7f8eb1dbc18b2"
+            },
+            {
+              "label": "shell.word330",
+              "offset": 1627,
+              "end": 1631,
+              "sha256": "26b25d457597a7b0463f9620f666dd10aa2c4373a505967c7c8d70922a2d6ece"
+            },
+            {
+              "label": "shell.subtype334",
+              "offset": 1631,
+              "end": 1635,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.word340",
+              "offset": 1635,
+              "end": 1639,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.text300",
+              "offset": 1639,
+              "end": 1645,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "shell.text348",
+              "offset": 1645,
+              "end": 1691,
+              "sha256": "9da2e2446dd6d514fec33b13110c886048c94b8e90b635142cd2128dbfafb1fb"
+            },
+            {
+              "label": "shell.words338_33c",
+              "offset": 1691,
+              "end": 1699,
+              "sha256": "ef9ba5985a8c7a79836eac257a5ff7b62239e61f0fb7b763a4d7014def5a55b7"
+            },
+            {
+              "label": "shell.words350_354",
+              "offset": 1699,
+              "end": 1707,
+              "sha256": "a4c5a20bc229aa3dd6208b0522847eb896d8e5a8d57a962444be46228ad43f11"
+            },
+            {
+              "label": "shell.word358",
+              "offset": 1707,
+              "end": 1711,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.word368_double360",
+              "offset": 1711,
+              "end": 1723,
+              "sha256": "15ec7bf0b50732b49f8228e07d24365338f9e3ab994b00af08e5a3bffe55fd8b"
+            },
+            {
+              "label": "shell.word480",
+              "offset": 1723,
+              "end": 1727,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            }
+          ],
+          "archive_records": [
+            {
+              "offset": 16,
+              "end": 1139,
+              "version": 6000,
+              "object_class": "moSolidRef_w",
+              "classes": {
+                "moSolidRef_w": 1,
+                "moCompSolidBody_c": 1,
+                "moChainComponent_c": 1,
+                "moReferenceChain_c": 1,
+                "moExtFeatureList_c": 1,
+                "moExtFeature_c": 1,
+                "moCStringHandle_c": 5,
+                "moFaceRef_c": 1,
+                "moFromSktEntSurfIdRep_c": 3,
+                "moFR_c": 5,
+                "moExtObject_c": 1,
+                "moEndFaceSurfIdRep_c": 2
+              },
+              "body_counts": {
+                "unit_bodies": 0,
+                "component_prefixes": 1,
+                "boundary_prefixes": 1,
+                "representation_prefixes": 5,
+                "feature_references": 5,
+                "external_bodies": 1,
+                "representation_bodies": 5,
+                "boundary_bodies": 1,
+                "component_bodies": 2,
+                "wrapper_bodies": 1
+              }
+            },
+            {
+              "offset": 1139,
+              "end": 1381,
+              "version": 6000,
+              "object_class": "moExtObject_c",
+              "classes": {
+                "moExtObject_c": 1,
+                "moCStringHandle_c": 2
+              },
+              "body_counts": {
+                "unit_bodies": 0,
+                "component_prefixes": 0,
+                "boundary_prefixes": 0,
+                "representation_prefixes": 0,
+                "feature_references": 0,
+                "external_bodies": 1,
+                "representation_bodies": 0,
+                "boundary_bodies": 0,
+                "component_bodies": 0,
+                "wrapper_bodies": 0
+              }
+            }
+          ],
+          "reconstruction_sha256": "033c9991722af8014d38c1cd1ac5286ae55c4eecca5c76b0845e34166cc79f3f"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\mixedmesh.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/ShellManager/MidSurfShells/MidSurfShell 2/Property",
+      "bytes": 1727,
+      "sha256": "9b04b369f7b27d6b09eff8bdab91528389b9e28813ffe412d61cc7aee859752c",
+      "attempts": [
+        {
+          "version": 870022,
+          "success": true,
+          "end": 1727,
+          "base_end": 1619,
+          "subtype": 0,
+          "spans": [
+            {
+              "label": "references.count",
+              "offset": 0,
+              "end": 4,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "reference0.id_header",
+              "offset": 4,
+              "end": 12,
+              "sha256": "da3dc360a2f1362e5dfeb26c3a1f639791f93e02dca3529a83600669f7bada8a"
+            },
+            {
+              "label": "reference0.blob_count",
+              "offset": 12,
+              "end": 16,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "reference0.blob",
+              "offset": 16,
+              "end": 16,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "label": "reference0.archive0",
+              "offset": 16,
+              "end": 1139,
+              "sha256": "4e147d8bf92b8c3c2af1fbde23c4a1fa1d6504937624dec8d3de956db6595921"
+            },
+            {
+              "label": "reference0.archive1",
+              "offset": 1139,
+              "end": 1381,
+              "sha256": "b50f0663566a9046dbd59a6206d0132872acdfb1a061e2ca6acff1c247199cec"
+            },
+            {
+              "label": "reference0.header",
+              "offset": 1381,
+              "end": 1401,
+              "sha256": "7813d556ac524c47f15e6bc6c5ae0a4f4132f7e0bae4d98dface6f65c5a90377"
+            },
+            {
+              "label": "reference0.name",
+              "offset": 1401,
+              "end": 1407,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "reference0.tail",
+              "offset": 1407,
+              "end": 1415,
+              "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+            },
+            {
+              "label": "references.tail",
+              "offset": 1415,
+              "end": 1423,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.word198",
+              "offset": 1423,
+              "end": 1427,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.text78",
+              "offset": 1427,
+              "end": 1433,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat0",
+              "offset": 1433,
+              "end": 1439,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat1",
+              "offset": 1439,
+              "end": 1445,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.text60",
+              "offset": 1445,
+              "end": 1451,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.words68_58",
+              "offset": 1451,
+              "end": 1459,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.doublef8_wordec_doublee0_worde8_words110_a8_1e0",
+              "offset": 1459,
+              "end": 1495,
+              "sha256": "16bdd522cad0cead7b18490e2aa19e5148a541c563da2b774d85d8ddcf4a50b2"
+            },
+            {
+              "label": "base.word100",
+              "offset": 1495,
+              "end": 1499,
+              "sha256": "42f4aeb81c1ef81f771f3de8abca9dcf66901c575530e7672e4b1146474ae650"
+            },
+            {
+              "label": "base.six_doubles",
+              "offset": 1499,
+              "end": 1547,
+              "sha256": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1"
+            },
+            {
+              "label": "base.arraytext0",
+              "offset": 1547,
+              "end": 1553,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext1",
+              "offset": 1553,
+              "end": 1559,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext2",
+              "offset": 1559,
+              "end": 1565,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext3",
+              "offset": 1565,
+              "end": 1571,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext4",
+              "offset": 1571,
+              "end": 1577,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext5",
+              "offset": 1577,
+              "end": 1583,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.virtual0.word",
+              "offset": 1583,
+              "end": 1587,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual0.presence",
+              "offset": 1587,
+              "end": 1591,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.word",
+              "offset": 1591,
+              "end": 1595,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.presence",
+              "offset": 1595,
+              "end": 1599,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.wordac",
+              "offset": 1599,
+              "end": 1603,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word48",
+              "offset": 1603,
+              "end": 1607,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word230",
+              "offset": 1607,
+              "end": 1611,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.wordc8",
+              "offset": 1611,
+              "end": 1615,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word170",
+              "offset": 1615,
+              "end": 1619,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.double328",
+              "offset": 1619,
+              "end": 1627,
+              "sha256": "a5791d1a27e37877bce5f3ff53da202f8b7643304d18eb2b4ed7f8eb1dbc18b2"
+            },
+            {
+              "label": "shell.word330",
+              "offset": 1627,
+              "end": 1631,
+              "sha256": "26b25d457597a7b0463f9620f666dd10aa2c4373a505967c7c8d70922a2d6ece"
+            },
+            {
+              "label": "shell.subtype334",
+              "offset": 1631,
+              "end": 1635,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.word340",
+              "offset": 1635,
+              "end": 1639,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.text300",
+              "offset": 1639,
+              "end": 1645,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "shell.text348",
+              "offset": 1645,
+              "end": 1691,
+              "sha256": "9da2e2446dd6d514fec33b13110c886048c94b8e90b635142cd2128dbfafb1fb"
+            },
+            {
+              "label": "shell.words338_33c",
+              "offset": 1691,
+              "end": 1699,
+              "sha256": "ef9ba5985a8c7a79836eac257a5ff7b62239e61f0fb7b763a4d7014def5a55b7"
+            },
+            {
+              "label": "shell.words350_354",
+              "offset": 1699,
+              "end": 1707,
+              "sha256": "a4c5a20bc229aa3dd6208b0522847eb896d8e5a8d57a962444be46228ad43f11"
+            },
+            {
+              "label": "shell.word358",
+              "offset": 1707,
+              "end": 1711,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.word368_double360",
+              "offset": 1711,
+              "end": 1723,
+              "sha256": "15ec7bf0b50732b49f8228e07d24365338f9e3ab994b00af08e5a3bffe55fd8b"
+            },
+            {
+              "label": "shell.word480",
+              "offset": 1723,
+              "end": 1727,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            }
+          ],
+          "archive_records": [
+            {
+              "offset": 16,
+              "end": 1139,
+              "version": 6000,
+              "object_class": "moSolidRef_w",
+              "classes": {
+                "moSolidRef_w": 1,
+                "moCompSolidBody_c": 1,
+                "moChainComponent_c": 1,
+                "moReferenceChain_c": 1,
+                "moExtFeatureList_c": 1,
+                "moExtFeature_c": 1,
+                "moCStringHandle_c": 5,
+                "moFaceRef_c": 1,
+                "moFromSktEntSurfIdRep_c": 3,
+                "moFR_c": 5,
+                "moExtObject_c": 1,
+                "moEndFaceSurfIdRep_c": 2
+              },
+              "body_counts": {
+                "unit_bodies": 0,
+                "component_prefixes": 1,
+                "boundary_prefixes": 1,
+                "representation_prefixes": 5,
+                "feature_references": 5,
+                "external_bodies": 1,
+                "representation_bodies": 5,
+                "boundary_bodies": 1,
+                "component_bodies": 2,
+                "wrapper_bodies": 1
+              }
+            },
+            {
+              "offset": 1139,
+              "end": 1381,
+              "version": 6000,
+              "object_class": "moExtObject_c",
+              "classes": {
+                "moExtObject_c": 1,
+                "moCStringHandle_c": 2
+              },
+              "body_counts": {
+                "unit_bodies": 0,
+                "component_prefixes": 0,
+                "boundary_prefixes": 0,
+                "representation_prefixes": 0,
+                "feature_references": 0,
+                "external_bodies": 1,
+                "representation_bodies": 0,
+                "boundary_bodies": 0,
+                "component_bodies": 0,
+                "wrapper_bodies": 0
+              }
+            }
+          ],
+          "reconstruction_sha256": "9b04b369f7b27d6b09eff8bdab91528389b9e28813ffe412d61cc7aee859752c"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\mixedmesh.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/ShellManager/MidSurfShells/MidSurfShell 3/Property",
+      "bytes": 1545,
+      "sha256": "7b1efb9d97b1190334659da883330987e21cb9d895aa6a59bc2e8c41d85aef13",
+      "attempts": [
+        {
+          "version": 870022,
+          "success": true,
+          "end": 1545,
+          "base_end": 1437,
+          "subtype": 0,
+          "spans": [
+            {
+              "label": "references.count",
+              "offset": 0,
+              "end": 4,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "reference0.id_header",
+              "offset": 4,
+              "end": 12,
+              "sha256": "da3dc360a2f1362e5dfeb26c3a1f639791f93e02dca3529a83600669f7bada8a"
+            },
+            {
+              "label": "reference0.blob_count",
+              "offset": 12,
+              "end": 16,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "reference0.blob",
+              "offset": 16,
+              "end": 16,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "label": "reference0.archive0",
+              "offset": 16,
+              "end": 957,
+              "sha256": "735a5c480791ebc8d1ef23968fb2e516f9a6ef0d56147e7cdcb98b949c53d71f"
+            },
+            {
+              "label": "reference0.archive1",
+              "offset": 957,
+              "end": 1199,
+              "sha256": "b50f0663566a9046dbd59a6206d0132872acdfb1a061e2ca6acff1c247199cec"
+            },
+            {
+              "label": "reference0.header",
+              "offset": 1199,
+              "end": 1219,
+              "sha256": "7813d556ac524c47f15e6bc6c5ae0a4f4132f7e0bae4d98dface6f65c5a90377"
+            },
+            {
+              "label": "reference0.name",
+              "offset": 1219,
+              "end": 1225,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "reference0.tail",
+              "offset": 1225,
+              "end": 1233,
+              "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+            },
+            {
+              "label": "references.tail",
+              "offset": 1233,
+              "end": 1241,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.word198",
+              "offset": 1241,
+              "end": 1245,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.text78",
+              "offset": 1245,
+              "end": 1251,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat0",
+              "offset": 1251,
+              "end": 1257,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat1",
+              "offset": 1257,
+              "end": 1263,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.text60",
+              "offset": 1263,
+              "end": 1269,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.words68_58",
+              "offset": 1269,
+              "end": 1277,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.doublef8_wordec_doublee0_worde8_words110_a8_1e0",
+              "offset": 1277,
+              "end": 1313,
+              "sha256": "16bdd522cad0cead7b18490e2aa19e5148a541c563da2b774d85d8ddcf4a50b2"
+            },
+            {
+              "label": "base.word100",
+              "offset": 1313,
+              "end": 1317,
+              "sha256": "43c66c260828c9839f26474151db105481ff92f5e01377f75389d4ce3d2dd574"
+            },
+            {
+              "label": "base.six_doubles",
+              "offset": 1317,
+              "end": 1365,
+              "sha256": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1"
+            },
+            {
+              "label": "base.arraytext0",
+              "offset": 1365,
+              "end": 1371,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext1",
+              "offset": 1371,
+              "end": 1377,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext2",
+              "offset": 1377,
+              "end": 1383,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext3",
+              "offset": 1383,
+              "end": 1389,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext4",
+              "offset": 1389,
+              "end": 1395,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext5",
+              "offset": 1395,
+              "end": 1401,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.virtual0.word",
+              "offset": 1401,
+              "end": 1405,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual0.presence",
+              "offset": 1405,
+              "end": 1409,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.word",
+              "offset": 1409,
+              "end": 1413,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.presence",
+              "offset": 1413,
+              "end": 1417,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.wordac",
+              "offset": 1417,
+              "end": 1421,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word48",
+              "offset": 1421,
+              "end": 1425,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word230",
+              "offset": 1425,
+              "end": 1429,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.wordc8",
+              "offset": 1429,
+              "end": 1433,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word170",
+              "offset": 1433,
+              "end": 1437,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.double328",
+              "offset": 1437,
+              "end": 1445,
+              "sha256": "d144783f1ff33776a9fe135900a60ac1eec34eddb2204ec58faab157e66df454"
+            },
+            {
+              "label": "shell.word330",
+              "offset": 1445,
+              "end": 1449,
+              "sha256": "26b25d457597a7b0463f9620f666dd10aa2c4373a505967c7c8d70922a2d6ece"
+            },
+            {
+              "label": "shell.subtype334",
+              "offset": 1449,
+              "end": 1453,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.word340",
+              "offset": 1453,
+              "end": 1457,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.text300",
+              "offset": 1457,
+              "end": 1463,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "shell.text348",
+              "offset": 1463,
+              "end": 1509,
+              "sha256": "9da2e2446dd6d514fec33b13110c886048c94b8e90b635142cd2128dbfafb1fb"
+            },
+            {
+              "label": "shell.words338_33c",
+              "offset": 1509,
+              "end": 1517,
+              "sha256": "ef9ba5985a8c7a79836eac257a5ff7b62239e61f0fb7b763a4d7014def5a55b7"
+            },
+            {
+              "label": "shell.words350_354",
+              "offset": 1517,
+              "end": 1525,
+              "sha256": "a4c5a20bc229aa3dd6208b0522847eb896d8e5a8d57a962444be46228ad43f11"
+            },
+            {
+              "label": "shell.word358",
+              "offset": 1525,
+              "end": 1529,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.word368_double360",
+              "offset": 1529,
+              "end": 1541,
+              "sha256": "15ec7bf0b50732b49f8228e07d24365338f9e3ab994b00af08e5a3bffe55fd8b"
+            },
+            {
+              "label": "shell.word480",
+              "offset": 1541,
+              "end": 1545,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            }
+          ],
+          "archive_records": [
+            {
+              "offset": 16,
+              "end": 957,
+              "version": 6000,
+              "object_class": "moSolidRef_w",
+              "classes": {
+                "moSolidRef_w": 1,
+                "moCompSolidBody_c": 1,
+                "moChainComponent_c": 1,
+                "moReferenceChain_c": 1,
+                "moExtFeatureList_c": 1,
+                "moExtFeature_c": 1,
+                "moCStringHandle_c": 5,
+                "moFaceRef_c": 1,
+                "moFromSktEntSurfIdRep_c": 3,
+                "moFR_c": 5,
+                "moExtObject_c": 1,
+                "moEndFaceSurfIdRep_c": 2
+              },
+              "body_counts": {
+                "unit_bodies": 0,
+                "component_prefixes": 1,
+                "boundary_prefixes": 1,
+                "representation_prefixes": 5,
+                "feature_references": 5,
+                "external_bodies": 1,
+                "representation_bodies": 5,
+                "boundary_bodies": 1,
+                "component_bodies": 2,
+                "wrapper_bodies": 1
+              }
+            },
+            {
+              "offset": 957,
+              "end": 1199,
+              "version": 6000,
+              "object_class": "moExtObject_c",
+              "classes": {
+                "moExtObject_c": 1,
+                "moCStringHandle_c": 2
+              },
+              "body_counts": {
+                "unit_bodies": 0,
+                "component_prefixes": 0,
+                "boundary_prefixes": 0,
+                "representation_prefixes": 0,
+                "feature_references": 0,
+                "external_bodies": 1,
+                "representation_bodies": 0,
+                "boundary_bodies": 0,
+                "component_bodies": 0,
+                "wrapper_bodies": 0
+              }
+            }
+          ],
+          "reconstruction_sha256": "7b1efb9d97b1190334659da883330987e21cb9d895aa6a59bc2e8c41d85aef13"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\mixedmesh.sldasm",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/ShellManager/MidSurfShells/MidSurfShell 4/Property",
+      "bytes": 1727,
+      "sha256": "cf8f93c3def30412ed5d4ae3a31c523a2d38840bc7891a2b351d4c8864b10036",
+      "attempts": [
+        {
+          "version": 870022,
+          "success": true,
+          "end": 1727,
+          "base_end": 1619,
+          "subtype": 0,
+          "spans": [
+            {
+              "label": "references.count",
+              "offset": 0,
+              "end": 4,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "reference0.id_header",
+              "offset": 4,
+              "end": 12,
+              "sha256": "da3dc360a2f1362e5dfeb26c3a1f639791f93e02dca3529a83600669f7bada8a"
+            },
+            {
+              "label": "reference0.blob_count",
+              "offset": 12,
+              "end": 16,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "reference0.blob",
+              "offset": 16,
+              "end": 16,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "label": "reference0.archive0",
+              "offset": 16,
+              "end": 1139,
+              "sha256": "6b2827754ca6f7e5a06e171f741b77e3667d91c299b9c1fa8180b8941d67e2a5"
+            },
+            {
+              "label": "reference0.archive1",
+              "offset": 1139,
+              "end": 1381,
+              "sha256": "b50f0663566a9046dbd59a6206d0132872acdfb1a061e2ca6acff1c247199cec"
+            },
+            {
+              "label": "reference0.header",
+              "offset": 1381,
+              "end": 1401,
+              "sha256": "7813d556ac524c47f15e6bc6c5ae0a4f4132f7e0bae4d98dface6f65c5a90377"
+            },
+            {
+              "label": "reference0.name",
+              "offset": 1401,
+              "end": 1407,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "reference0.tail",
+              "offset": 1407,
+              "end": 1415,
+              "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+            },
+            {
+              "label": "references.tail",
+              "offset": 1415,
+              "end": 1423,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.word198",
+              "offset": 1423,
+              "end": 1427,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.text78",
+              "offset": 1427,
+              "end": 1433,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat0",
+              "offset": 1433,
+              "end": 1439,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat1",
+              "offset": 1439,
+              "end": 1445,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.text60",
+              "offset": 1445,
+              "end": 1451,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.words68_58",
+              "offset": 1451,
+              "end": 1459,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.doublef8_wordec_doublee0_worde8_words110_a8_1e0",
+              "offset": 1459,
+              "end": 1495,
+              "sha256": "16bdd522cad0cead7b18490e2aa19e5148a541c563da2b774d85d8ddcf4a50b2"
+            },
+            {
+              "label": "base.word100",
+              "offset": 1495,
+              "end": 1499,
+              "sha256": "01b4f6bd5d6a06a7b74a8565ceb4f845afe0ae96a0ac05cf5e86066bf7b538ec"
+            },
+            {
+              "label": "base.six_doubles",
+              "offset": 1499,
+              "end": 1547,
+              "sha256": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1"
+            },
+            {
+              "label": "base.arraytext0",
+              "offset": 1547,
+              "end": 1553,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext1",
+              "offset": 1553,
+              "end": 1559,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext2",
+              "offset": 1559,
+              "end": 1565,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext3",
+              "offset": 1565,
+              "end": 1571,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext4",
+              "offset": 1571,
+              "end": 1577,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext5",
+              "offset": 1577,
+              "end": 1583,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.virtual0.word",
+              "offset": 1583,
+              "end": 1587,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual0.presence",
+              "offset": 1587,
+              "end": 1591,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.word",
+              "offset": 1591,
+              "end": 1595,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.presence",
+              "offset": 1595,
+              "end": 1599,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.wordac",
+              "offset": 1599,
+              "end": 1603,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word48",
+              "offset": 1603,
+              "end": 1607,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word230",
+              "offset": 1607,
+              "end": 1611,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.wordc8",
+              "offset": 1611,
+              "end": 1615,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word170",
+              "offset": 1615,
+              "end": 1619,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.double328",
+              "offset": 1619,
+              "end": 1627,
+              "sha256": "a5791d1a27e37877bce5f3ff53da202f8b7643304d18eb2b4ed7f8eb1dbc18b2"
+            },
+            {
+              "label": "shell.word330",
+              "offset": 1627,
+              "end": 1631,
+              "sha256": "26b25d457597a7b0463f9620f666dd10aa2c4373a505967c7c8d70922a2d6ece"
+            },
+            {
+              "label": "shell.subtype334",
+              "offset": 1631,
+              "end": 1635,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.word340",
+              "offset": 1635,
+              "end": 1639,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.text300",
+              "offset": 1639,
+              "end": 1645,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "shell.text348",
+              "offset": 1645,
+              "end": 1691,
+              "sha256": "9da2e2446dd6d514fec33b13110c886048c94b8e90b635142cd2128dbfafb1fb"
+            },
+            {
+              "label": "shell.words338_33c",
+              "offset": 1691,
+              "end": 1699,
+              "sha256": "ef9ba5985a8c7a79836eac257a5ff7b62239e61f0fb7b763a4d7014def5a55b7"
+            },
+            {
+              "label": "shell.words350_354",
+              "offset": 1699,
+              "end": 1707,
+              "sha256": "a4c5a20bc229aa3dd6208b0522847eb896d8e5a8d57a962444be46228ad43f11"
+            },
+            {
+              "label": "shell.word358",
+              "offset": 1707,
+              "end": 1711,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.word368_double360",
+              "offset": 1711,
+              "end": 1723,
+              "sha256": "15ec7bf0b50732b49f8228e07d24365338f9e3ab994b00af08e5a3bffe55fd8b"
+            },
+            {
+              "label": "shell.word480",
+              "offset": 1723,
+              "end": 1727,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            }
+          ],
+          "archive_records": [
+            {
+              "offset": 16,
+              "end": 1139,
+              "version": 6000,
+              "object_class": "moSolidRef_w",
+              "classes": {
+                "moSolidRef_w": 1,
+                "moCompSolidBody_c": 1,
+                "moChainComponent_c": 1,
+                "moReferenceChain_c": 1,
+                "moExtFeatureList_c": 1,
+                "moExtFeature_c": 1,
+                "moCStringHandle_c": 5,
+                "moFaceRef_c": 1,
+                "moFromSktEntSurfIdRep_c": 3,
+                "moFR_c": 5,
+                "moExtObject_c": 1,
+                "moEndFaceSurfIdRep_c": 2
+              },
+              "body_counts": {
+                "unit_bodies": 0,
+                "component_prefixes": 1,
+                "boundary_prefixes": 1,
+                "representation_prefixes": 5,
+                "feature_references": 5,
+                "external_bodies": 1,
+                "representation_bodies": 5,
+                "boundary_bodies": 1,
+                "component_bodies": 2,
+                "wrapper_bodies": 1
+              }
+            },
+            {
+              "offset": 1139,
+              "end": 1381,
+              "version": 6000,
+              "object_class": "moExtObject_c",
+              "classes": {
+                "moExtObject_c": 1,
+                "moCStringHandle_c": 2
+              },
+              "body_counts": {
+                "unit_bodies": 0,
+                "component_prefixes": 0,
+                "boundary_prefixes": 0,
+                "representation_prefixes": 0,
+                "feature_references": 0,
+                "external_bodies": 1,
+                "representation_bodies": 0,
+                "boundary_bodies": 0,
+                "component_bodies": 0,
+                "wrapper_bodies": 0
+              }
+            }
+          ],
+          "reconstruction_sha256": "cf8f93c3def30412ed5d4ae3a31c523a2d38840bc7891a2b351d4c8864b10036"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\frequency_7.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-1/ShellManager/MidSurfShells/MidSurfShell 1/Property",
+      "bytes": 377,
+      "sha256": "8c598bae6bfee86ae68d4f693d0f7419f778b27b6dfdd0aba883de2a770d4c8a",
+      "attempts": [
+        {
+          "version": 830038,
+          "success": true,
+          "end": 377,
+          "base_end": 303,
+          "subtype": 1,
+          "spans": [
+            {
+              "label": "references.count",
+              "offset": 0,
+              "end": 4,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "reference0.legacy_header",
+              "offset": 4,
+              "end": 32,
+              "sha256": "4b51deecef6d572562cee8de8c0557c11ff5ca7173802946b1f87eeed6eb4320"
+            },
+            {
+              "label": "reference0.legacy_name",
+              "offset": 32,
+              "end": 38,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "reference0.blob_count",
+              "offset": 38,
+              "end": 42,
+              "sha256": "e3f69f6c094ffb4e3b3a0ba41d7996137e03ebdf85952d227d04b9e161a06c5b"
+            },
+            {
+              "label": "reference0.blob",
+              "offset": 42,
+              "end": 99,
+              "sha256": "5637609f168b43a59e9fb94e8e25aae431ef380ce4cd8d0eafd83a0be887b76e"
+            },
+            {
+              "label": "reference0.tail",
+              "offset": 99,
+              "end": 107,
+              "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+            },
+            {
+              "label": "references.tail",
+              "offset": 107,
+              "end": 115,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.word198",
+              "offset": 115,
+              "end": 119,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.text78",
+              "offset": 119,
+              "end": 125,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat0",
+              "offset": 125,
+              "end": 131,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat1",
+              "offset": 131,
+              "end": 137,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.text60",
+              "offset": 137,
+              "end": 143,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.words68_58",
+              "offset": 143,
+              "end": 151,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.doublef8_wordec_doublee0_worde8_words110_a8_1e0",
+              "offset": 151,
+              "end": 187,
+              "sha256": "04313766ee8a4c71936c50013b827607f2a331ed2e62068b58453d779c814da4"
+            },
+            {
+              "label": "base.word100",
+              "offset": 187,
+              "end": 191,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "base.six_doubles",
+              "offset": 191,
+              "end": 239,
+              "sha256": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1"
+            },
+            {
+              "label": "base.arraytext0",
+              "offset": 239,
+              "end": 245,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext1",
+              "offset": 245,
+              "end": 251,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext2",
+              "offset": 251,
+              "end": 257,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext3",
+              "offset": 257,
+              "end": 263,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext4",
+              "offset": 263,
+              "end": 269,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext5",
+              "offset": 269,
+              "end": 275,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.virtual0.word",
+              "offset": 275,
+              "end": 279,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual0.presence",
+              "offset": 279,
+              "end": 283,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.word",
+              "offset": 283,
+              "end": 287,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.presence",
+              "offset": 287,
+              "end": 291,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.wordac",
+              "offset": 291,
+              "end": 295,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word48",
+              "offset": 295,
+              "end": 299,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word230",
+              "offset": 299,
+              "end": 303,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.double328",
+              "offset": 303,
+              "end": 311,
+              "sha256": "fb824200ca076a89ee7eec0114e87992c5fd79bfc3fa40349f15dfe758a9ee52"
+            },
+            {
+              "label": "shell.word330",
+              "offset": 311,
+              "end": 315,
+              "sha256": "26b25d457597a7b0463f9620f666dd10aa2c4373a505967c7c8d70922a2d6ece"
+            },
+            {
+              "label": "shell.subtype334",
+              "offset": 315,
+              "end": 319,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "shell.word340",
+              "offset": 319,
+              "end": 323,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.text300",
+              "offset": 323,
+              "end": 329,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "shell.text348",
+              "offset": 329,
+              "end": 357,
+              "sha256": "5b59a8dc85a4e0ce5a025d8170288ba89799a2e859f3ace64a493f8518f10cd0"
+            },
+            {
+              "label": "shell.words338_33c",
+              "offset": 357,
+              "end": 365,
+              "sha256": "ef9ba5985a8c7a79836eac257a5ff7b62239e61f0fb7b763a4d7014def5a55b7"
+            },
+            {
+              "label": "shell.words350_354",
+              "offset": 365,
+              "end": 373,
+              "sha256": "a4c5a20bc229aa3dd6208b0522847eb896d8e5a8d57a962444be46228ad43f11"
+            },
+            {
+              "label": "shell.word358",
+              "offset": 373,
+              "end": 377,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            }
+          ],
+          "archive_records": [],
+          "reconstruction_sha256": "8c598bae6bfee86ae68d4f693d0f7419f778b27b6dfdd0aba883de2a770d4c8a"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nonlinear_static_1.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/ShellManager/MidSurfShells/MidSurfShell 1/Property",
+      "bytes": 300,
+      "sha256": "63764f93aec9df62ef50e09adeab7abe6b478e05a1f3afbc8ac264d9ccb18ba0",
+      "attempts": [
+        {
+          "version": 860006,
+          "success": true,
+          "end": 300,
+          "base_end": 200,
+          "subtype": 0,
+          "spans": [
+            {
+              "label": "references.count",
+              "offset": 0,
+              "end": 4,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "references.tail",
+              "offset": 4,
+              "end": 12,
+              "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+            },
+            {
+              "label": "base.word198",
+              "offset": 12,
+              "end": 16,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.text78",
+              "offset": 16,
+              "end": 22,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat0",
+              "offset": 22,
+              "end": 28,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat1",
+              "offset": 28,
+              "end": 34,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.text60",
+              "offset": 34,
+              "end": 40,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.words68_58",
+              "offset": 40,
+              "end": 48,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.doublef8_wordec_doublee0_worde8_words110_a8_1e0",
+              "offset": 48,
+              "end": 84,
+              "sha256": "16bdd522cad0cead7b18490e2aa19e5148a541c563da2b774d85d8ddcf4a50b2"
+            },
+            {
+              "label": "base.word100",
+              "offset": 84,
+              "end": 88,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "base.six_doubles",
+              "offset": 88,
+              "end": 136,
+              "sha256": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1"
+            },
+            {
+              "label": "base.arraytext0",
+              "offset": 136,
+              "end": 142,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext1",
+              "offset": 142,
+              "end": 148,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext2",
+              "offset": 148,
+              "end": 154,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext3",
+              "offset": 154,
+              "end": 160,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext4",
+              "offset": 160,
+              "end": 166,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext5",
+              "offset": 166,
+              "end": 172,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.virtual0.word",
+              "offset": 172,
+              "end": 176,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual0.presence",
+              "offset": 176,
+              "end": 180,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.word",
+              "offset": 180,
+              "end": 184,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.presence",
+              "offset": 184,
+              "end": 188,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.wordac",
+              "offset": 188,
+              "end": 192,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word48",
+              "offset": 192,
+              "end": 196,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word230",
+              "offset": 196,
+              "end": 200,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.double328",
+              "offset": 200,
+              "end": 208,
+              "sha256": "7762a446e2cee860b090b945cd7c3a502b7fe4a2d29f0f0889175de5ba4ae752"
+            },
+            {
+              "label": "shell.word330",
+              "offset": 208,
+              "end": 212,
+              "sha256": "9d9f290527a6be626a8f5985b26e19b237b44872b03631811df4416fc1713178"
+            },
+            {
+              "label": "shell.subtype334",
+              "offset": 212,
+              "end": 216,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.word340",
+              "offset": 216,
+              "end": 220,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.text300",
+              "offset": 220,
+              "end": 226,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "shell.text348",
+              "offset": 226,
+              "end": 268,
+              "sha256": "97ee2398493ae3a5d88b6b44d447c815874fd919f417417c39be4209b5349388"
+            },
+            {
+              "label": "shell.words338_33c",
+              "offset": 268,
+              "end": 276,
+              "sha256": "ef9ba5985a8c7a79836eac257a5ff7b62239e61f0fb7b763a4d7014def5a55b7"
+            },
+            {
+              "label": "shell.words350_354",
+              "offset": 276,
+              "end": 284,
+              "sha256": "a4c5a20bc229aa3dd6208b0522847eb896d8e5a8d57a962444be46228ad43f11"
+            },
+            {
+              "label": "shell.word358",
+              "offset": 284,
+              "end": 288,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.word368_double360",
+              "offset": 288,
+              "end": 300,
+              "sha256": "15ec7bf0b50732b49f8228e07d24365338f9e3ab994b00af08e5a3bffe55fd8b"
+            }
+          ],
+          "archive_records": [],
+          "reconstruction_sha256": "63764f93aec9df62ef50e09adeab7abe6b478e05a1f3afbc8ac264d9ccb18ba0"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nonlinear_static_2.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/ShellManager/MidSurfShells/MidSurfShell 1/Property",
+      "bytes": 274,
+      "sha256": "d46c6376e070a06c6125812ce09fb99440f8065e51cbd0ce97084fbc4ad61ca3",
+      "attempts": [
+        {
+          "version": 860006,
+          "success": true,
+          "end": 274,
+          "base_end": 200,
+          "subtype": 0,
+          "spans": [
+            {
+              "label": "references.count",
+              "offset": 0,
+              "end": 4,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "references.tail",
+              "offset": 4,
+              "end": 12,
+              "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+            },
+            {
+              "label": "base.word198",
+              "offset": 12,
+              "end": 16,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.text78",
+              "offset": 16,
+              "end": 22,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat0",
+              "offset": 22,
+              "end": 28,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat1",
+              "offset": 28,
+              "end": 34,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.text60",
+              "offset": 34,
+              "end": 40,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.words68_58",
+              "offset": 40,
+              "end": 48,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.doublef8_wordec_doublee0_worde8_words110_a8_1e0",
+              "offset": 48,
+              "end": 84,
+              "sha256": "16bdd522cad0cead7b18490e2aa19e5148a541c563da2b774d85d8ddcf4a50b2"
+            },
+            {
+              "label": "base.word100",
+              "offset": 84,
+              "end": 88,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "base.six_doubles",
+              "offset": 88,
+              "end": 136,
+              "sha256": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1"
+            },
+            {
+              "label": "base.arraytext0",
+              "offset": 136,
+              "end": 142,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext1",
+              "offset": 142,
+              "end": 148,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext2",
+              "offset": 148,
+              "end": 154,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext3",
+              "offset": 154,
+              "end": 160,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext4",
+              "offset": 160,
+              "end": 166,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext5",
+              "offset": 166,
+              "end": 172,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.virtual0.word",
+              "offset": 172,
+              "end": 176,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual0.presence",
+              "offset": 176,
+              "end": 180,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.word",
+              "offset": 180,
+              "end": 184,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.presence",
+              "offset": 184,
+              "end": 188,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.wordac",
+              "offset": 188,
+              "end": 192,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word48",
+              "offset": 192,
+              "end": 196,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word230",
+              "offset": 196,
+              "end": 200,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.double328",
+              "offset": 200,
+              "end": 208,
+              "sha256": "6c3c396ed6b5c36dcae172271f462051b1266b851e92df3deea8ac65478fd712"
+            },
+            {
+              "label": "shell.word330",
+              "offset": 208,
+              "end": 212,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "shell.subtype334",
+              "offset": 212,
+              "end": 216,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.word340",
+              "offset": 216,
+              "end": 220,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.text300",
+              "offset": 220,
+              "end": 226,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "shell.text348",
+              "offset": 226,
+              "end": 242,
+              "sha256": "5527d36e62078b250f8358a41de52f44a04f841ddb54a72f4e4eca2d39eaccb0"
+            },
+            {
+              "label": "shell.words338_33c",
+              "offset": 242,
+              "end": 250,
+              "sha256": "ef9ba5985a8c7a79836eac257a5ff7b62239e61f0fb7b763a4d7014def5a55b7"
+            },
+            {
+              "label": "shell.words350_354",
+              "offset": 250,
+              "end": 258,
+              "sha256": "a4c5a20bc229aa3dd6208b0522847eb896d8e5a8d57a962444be46228ad43f11"
+            },
+            {
+              "label": "shell.word358",
+              "offset": 258,
+              "end": 262,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.word368_double360",
+              "offset": 262,
+              "end": 274,
+              "sha256": "15ec7bf0b50732b49f8228e07d24365338f9e3ab994b00af08e5a3bffe55fd8b"
+            }
+          ],
+          "archive_records": [],
+          "reconstruction_sha256": "d46c6376e070a06c6125812ce09fb99440f8065e51cbd0ce97084fbc4ad61ca3"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\nonlinear_static_3.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/ShellManager/MidSurfShells/MidSurfShell 1/Property",
+      "bytes": 365,
+      "sha256": "8cd42b4717120ad8c0a7a3c645b8294ecf08eb5680ad3ad9665195ba2bac2696",
+      "attempts": [
+        {
+          "version": 830036,
+          "success": true,
+          "end": 365,
+          "base_end": 303,
+          "subtype": 1,
+          "spans": [
+            {
+              "label": "references.count",
+              "offset": 0,
+              "end": 4,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "reference0.legacy_header",
+              "offset": 4,
+              "end": 32,
+              "sha256": "4b51deecef6d572562cee8de8c0557c11ff5ca7173802946b1f87eeed6eb4320"
+            },
+            {
+              "label": "reference0.legacy_name",
+              "offset": 32,
+              "end": 38,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "reference0.blob_count",
+              "offset": 38,
+              "end": 42,
+              "sha256": "e3f69f6c094ffb4e3b3a0ba41d7996137e03ebdf85952d227d04b9e161a06c5b"
+            },
+            {
+              "label": "reference0.blob",
+              "offset": 42,
+              "end": 99,
+              "sha256": "cf6a55f9ecb9eb1465a133852c4c81dd3befc8097cd45f8347144739faf9eab2"
+            },
+            {
+              "label": "reference0.tail",
+              "offset": 99,
+              "end": 107,
+              "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+            },
+            {
+              "label": "references.tail",
+              "offset": 107,
+              "end": 115,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.word198",
+              "offset": 115,
+              "end": 119,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.text78",
+              "offset": 119,
+              "end": 125,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat0",
+              "offset": 125,
+              "end": 131,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat1",
+              "offset": 131,
+              "end": 137,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.text60",
+              "offset": 137,
+              "end": 143,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.words68_58",
+              "offset": 143,
+              "end": 151,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.doublef8_wordec_doublee0_worde8_words110_a8_1e0",
+              "offset": 151,
+              "end": 187,
+              "sha256": "6741e0a69663959cabe2bddfc62b82abf6d11375768df375cf1bff8a2b28389d"
+            },
+            {
+              "label": "base.word100",
+              "offset": 187,
+              "end": 191,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "base.six_doubles",
+              "offset": 191,
+              "end": 239,
+              "sha256": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1"
+            },
+            {
+              "label": "base.arraytext0",
+              "offset": 239,
+              "end": 245,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext1",
+              "offset": 245,
+              "end": 251,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext2",
+              "offset": 251,
+              "end": 257,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext3",
+              "offset": 257,
+              "end": 263,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext4",
+              "offset": 263,
+              "end": 269,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext5",
+              "offset": 269,
+              "end": 275,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.virtual0.word",
+              "offset": 275,
+              "end": 279,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual0.presence",
+              "offset": 279,
+              "end": 283,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.word",
+              "offset": 283,
+              "end": 287,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.presence",
+              "offset": 287,
+              "end": 291,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.wordac",
+              "offset": 291,
+              "end": 295,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word48",
+              "offset": 295,
+              "end": 299,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word230",
+              "offset": 299,
+              "end": 303,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.double328",
+              "offset": 303,
+              "end": 311,
+              "sha256": "c738dd99fada954a0be83cb94069e65973256ed5a199cd293841c789ad3b0910"
+            },
+            {
+              "label": "shell.word330",
+              "offset": 311,
+              "end": 315,
+              "sha256": "26b25d457597a7b0463f9620f666dd10aa2c4373a505967c7c8d70922a2d6ece"
+            },
+            {
+              "label": "shell.subtype334",
+              "offset": 315,
+              "end": 319,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "shell.word340",
+              "offset": 319,
+              "end": 323,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.text300",
+              "offset": 323,
+              "end": 329,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "shell.text348",
+              "offset": 329,
+              "end": 345,
+              "sha256": "b7aed000be229c45f232003fce56abdb346555822829d058b51c2b9aac122475"
+            },
+            {
+              "label": "shell.words338_33c",
+              "offset": 345,
+              "end": 353,
+              "sha256": "ef9ba5985a8c7a79836eac257a5ff7b62239e61f0fb7b763a4d7014def5a55b7"
+            },
+            {
+              "label": "shell.words350_354",
+              "offset": 353,
+              "end": 361,
+              "sha256": "a4c5a20bc229aa3dd6208b0522847eb896d8e5a8d57a962444be46228ad43f11"
+            },
+            {
+              "label": "shell.word358",
+              "offset": 361,
+              "end": 365,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            }
+          ],
+          "archive_records": [],
+          "reconstruction_sha256": "8cd42b4717120ad8c0a7a3c645b8294ecf08eb5680ad3ad9665195ba2bac2696"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\static_15.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/ShellManager/MidSurfShells/MidSurfShell 1/Property",
+      "bytes": 262,
+      "sha256": "d28d94fa9328f2bc57ef708bf91b6d4ecdae48043ddce0dabade49194816822e",
+      "attempts": [
+        {
+          "version": 830036,
+          "success": true,
+          "end": 262,
+          "base_end": 200,
+          "subtype": 1,
+          "spans": [
+            {
+              "label": "references.count",
+              "offset": 0,
+              "end": 4,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "references.tail",
+              "offset": 4,
+              "end": 12,
+              "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+            },
+            {
+              "label": "base.word198",
+              "offset": 12,
+              "end": 16,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.text78",
+              "offset": 16,
+              "end": 22,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat0",
+              "offset": 22,
+              "end": 28,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat1",
+              "offset": 28,
+              "end": 34,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.text60",
+              "offset": 34,
+              "end": 40,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.words68_58",
+              "offset": 40,
+              "end": 48,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.doublef8_wordec_doublee0_worde8_words110_a8_1e0",
+              "offset": 48,
+              "end": 84,
+              "sha256": "16bdd522cad0cead7b18490e2aa19e5148a541c563da2b774d85d8ddcf4a50b2"
+            },
+            {
+              "label": "base.word100",
+              "offset": 84,
+              "end": 88,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "base.six_doubles",
+              "offset": 88,
+              "end": 136,
+              "sha256": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1"
+            },
+            {
+              "label": "base.arraytext0",
+              "offset": 136,
+              "end": 142,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext1",
+              "offset": 142,
+              "end": 148,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext2",
+              "offset": 148,
+              "end": 154,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext3",
+              "offset": 154,
+              "end": 160,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext4",
+              "offset": 160,
+              "end": 166,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext5",
+              "offset": 166,
+              "end": 172,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.virtual0.word",
+              "offset": 172,
+              "end": 176,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual0.presence",
+              "offset": 176,
+              "end": 180,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.word",
+              "offset": 180,
+              "end": 184,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.presence",
+              "offset": 184,
+              "end": 188,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.wordac",
+              "offset": 188,
+              "end": 192,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word48",
+              "offset": 192,
+              "end": 196,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word230",
+              "offset": 196,
+              "end": 200,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.double328",
+              "offset": 200,
+              "end": 208,
+              "sha256": "3f710ac088db33363087de2b9a657541fe5447821debaa9fe5cbd538eb1a5f29"
+            },
+            {
+              "label": "shell.word330",
+              "offset": 208,
+              "end": 212,
+              "sha256": "9d9f290527a6be626a8f5985b26e19b237b44872b03631811df4416fc1713178"
+            },
+            {
+              "label": "shell.subtype334",
+              "offset": 212,
+              "end": 216,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "shell.word340",
+              "offset": 216,
+              "end": 220,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.text300",
+              "offset": 220,
+              "end": 226,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "shell.text348",
+              "offset": 226,
+              "end": 242,
+              "sha256": "c9879be3733db3442c31073b37f2ef18ec10fc756fa2fd2484308ca2c5f483b2"
+            },
+            {
+              "label": "shell.words338_33c",
+              "offset": 242,
+              "end": 250,
+              "sha256": "ef9ba5985a8c7a79836eac257a5ff7b62239e61f0fb7b763a4d7014def5a55b7"
+            },
+            {
+              "label": "shell.words350_354",
+              "offset": 250,
+              "end": 258,
+              "sha256": "a4c5a20bc229aa3dd6208b0522847eb896d8e5a8d57a962444be46228ad43f11"
+            },
+            {
+              "label": "shell.word358",
+              "offset": 258,
+              "end": 262,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            }
+          ],
+          "archive_records": [],
+          "reconstruction_sha256": "d28d94fa9328f2bc57ef708bf91b6d4ecdae48043ddce0dabade49194816822e"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\static_7.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/ShellManager/MidSurfShells/MidSurfShell 1/Property",
+      "bytes": 365,
+      "sha256": "b348611582f865959d41ca709ed10acdc94c19b9fbc586a2cf2911648e106704",
+      "attempts": [
+        {
+          "version": 830036,
+          "success": true,
+          "end": 365,
+          "base_end": 303,
+          "subtype": 1,
+          "spans": [
+            {
+              "label": "references.count",
+              "offset": 0,
+              "end": 4,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "reference0.legacy_header",
+              "offset": 4,
+              "end": 32,
+              "sha256": "4b51deecef6d572562cee8de8c0557c11ff5ca7173802946b1f87eeed6eb4320"
+            },
+            {
+              "label": "reference0.legacy_name",
+              "offset": 32,
+              "end": 38,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "reference0.blob_count",
+              "offset": 38,
+              "end": 42,
+              "sha256": "e3f69f6c094ffb4e3b3a0ba41d7996137e03ebdf85952d227d04b9e161a06c5b"
+            },
+            {
+              "label": "reference0.blob",
+              "offset": 42,
+              "end": 99,
+              "sha256": "cf6a55f9ecb9eb1465a133852c4c81dd3befc8097cd45f8347144739faf9eab2"
+            },
+            {
+              "label": "reference0.tail",
+              "offset": 99,
+              "end": 107,
+              "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+            },
+            {
+              "label": "references.tail",
+              "offset": 107,
+              "end": 115,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.word198",
+              "offset": 115,
+              "end": 119,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.text78",
+              "offset": 119,
+              "end": 125,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat0",
+              "offset": 125,
+              "end": 131,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat1",
+              "offset": 131,
+              "end": 137,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.text60",
+              "offset": 137,
+              "end": 143,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.words68_58",
+              "offset": 143,
+              "end": 151,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.doublef8_wordec_doublee0_worde8_words110_a8_1e0",
+              "offset": 151,
+              "end": 187,
+              "sha256": "16bdd522cad0cead7b18490e2aa19e5148a541c563da2b774d85d8ddcf4a50b2"
+            },
+            {
+              "label": "base.word100",
+              "offset": 187,
+              "end": 191,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "base.six_doubles",
+              "offset": 191,
+              "end": 239,
+              "sha256": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1"
+            },
+            {
+              "label": "base.arraytext0",
+              "offset": 239,
+              "end": 245,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext1",
+              "offset": 245,
+              "end": 251,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext2",
+              "offset": 251,
+              "end": 257,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext3",
+              "offset": 257,
+              "end": 263,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext4",
+              "offset": 263,
+              "end": 269,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext5",
+              "offset": 269,
+              "end": 275,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.virtual0.word",
+              "offset": 275,
+              "end": 279,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual0.presence",
+              "offset": 279,
+              "end": 283,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.word",
+              "offset": 283,
+              "end": 287,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.presence",
+              "offset": 287,
+              "end": 291,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.wordac",
+              "offset": 291,
+              "end": 295,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word48",
+              "offset": 295,
+              "end": 299,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word230",
+              "offset": 299,
+              "end": 303,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.double328",
+              "offset": 303,
+              "end": 311,
+              "sha256": "d279f19862392306289a4dd2ea93d93e1d93248a235aafee01843a7cd5ec3be5"
+            },
+            {
+              "label": "shell.word330",
+              "offset": 311,
+              "end": 315,
+              "sha256": "26b25d457597a7b0463f9620f666dd10aa2c4373a505967c7c8d70922a2d6ece"
+            },
+            {
+              "label": "shell.subtype334",
+              "offset": 315,
+              "end": 319,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "shell.word340",
+              "offset": 319,
+              "end": 323,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.text300",
+              "offset": 323,
+              "end": 329,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "shell.text348",
+              "offset": 329,
+              "end": 345,
+              "sha256": "f52add3fbad5f48618bafbef7f33fde77f6782bfe8a23529411a23490604a051"
+            },
+            {
+              "label": "shell.words338_33c",
+              "offset": 345,
+              "end": 353,
+              "sha256": "ef9ba5985a8c7a79836eac257a5ff7b62239e61f0fb7b763a4d7014def5a55b7"
+            },
+            {
+              "label": "shell.words350_354",
+              "offset": 353,
+              "end": 361,
+              "sha256": "a4c5a20bc229aa3dd6208b0522847eb896d8e5a8d57a962444be46228ad43f11"
+            },
+            {
+              "label": "shell.word358",
+              "offset": 361,
+              "end": 365,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            }
+          ],
+          "archive_records": [],
+          "reconstruction_sha256": "b348611582f865959d41ca709ed10acdc94c19b9fbc586a2cf2911648e106704"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\Verification\\thermal_3.sldprt",
+      "stream": "Cosworks/StudyManager/StudyNumber-0/ShellManager/MidSurfShells/MidSurfShell 1/Property",
+      "bytes": 375,
+      "sha256": "3067165d2143b3e48b9f7dfd583e661f0cd7753ac67e6eb09a478dcff22dce34",
+      "attempts": [
+        {
+          "version": 830036,
+          "success": true,
+          "end": 375,
+          "base_end": 303,
+          "subtype": 1,
+          "spans": [
+            {
+              "label": "references.count",
+              "offset": 0,
+              "end": 4,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "reference0.legacy_header",
+              "offset": 4,
+              "end": 32,
+              "sha256": "4b51deecef6d572562cee8de8c0557c11ff5ca7173802946b1f87eeed6eb4320"
+            },
+            {
+              "label": "reference0.legacy_name",
+              "offset": 32,
+              "end": 38,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "reference0.blob_count",
+              "offset": 38,
+              "end": 42,
+              "sha256": "e3f69f6c094ffb4e3b3a0ba41d7996137e03ebdf85952d227d04b9e161a06c5b"
+            },
+            {
+              "label": "reference0.blob",
+              "offset": 42,
+              "end": 99,
+              "sha256": "9e0516738562aa7b051e56ac21d96afd2a08ae0ca048e6e3e7e481cc8d543730"
+            },
+            {
+              "label": "reference0.tail",
+              "offset": 99,
+              "end": 107,
+              "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+            },
+            {
+              "label": "references.tail",
+              "offset": 107,
+              "end": 115,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.word198",
+              "offset": 115,
+              "end": 119,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.text78",
+              "offset": 119,
+              "end": 125,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat0",
+              "offset": 125,
+              "end": 131,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.compat1",
+              "offset": 131,
+              "end": 137,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.text60",
+              "offset": 137,
+              "end": 143,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.words68_58",
+              "offset": 143,
+              "end": 151,
+              "sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+            },
+            {
+              "label": "base.doublef8_wordec_doublee0_worde8_words110_a8_1e0",
+              "offset": 151,
+              "end": 187,
+              "sha256": "bcbc1742e8c2935b1cf0a7c50d2e0b8a31427d00073b35ce42df915c21d907ec"
+            },
+            {
+              "label": "base.word100",
+              "offset": 187,
+              "end": 191,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "base.six_doubles",
+              "offset": 191,
+              "end": 239,
+              "sha256": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1"
+            },
+            {
+              "label": "base.arraytext0",
+              "offset": 239,
+              "end": 245,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext1",
+              "offset": 245,
+              "end": 251,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext2",
+              "offset": 251,
+              "end": 257,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext3",
+              "offset": 257,
+              "end": 263,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext4",
+              "offset": 263,
+              "end": 269,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.arraytext5",
+              "offset": 269,
+              "end": 275,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "base.virtual0.word",
+              "offset": 275,
+              "end": 279,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual0.presence",
+              "offset": 279,
+              "end": 283,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.word",
+              "offset": 283,
+              "end": 287,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.virtual1.presence",
+              "offset": 287,
+              "end": 291,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.wordac",
+              "offset": 291,
+              "end": 295,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word48",
+              "offset": 295,
+              "end": 299,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "base.word230",
+              "offset": 299,
+              "end": 303,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.double328",
+              "offset": 303,
+              "end": 311,
+              "sha256": "c738dd99fada954a0be83cb94069e65973256ed5a199cd293841c789ad3b0910"
+            },
+            {
+              "label": "shell.word330",
+              "offset": 311,
+              "end": 315,
+              "sha256": "26b25d457597a7b0463f9620f666dd10aa2c4373a505967c7c8d70922a2d6ece"
+            },
+            {
+              "label": "shell.subtype334",
+              "offset": 315,
+              "end": 319,
+              "sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450"
+            },
+            {
+              "label": "shell.word340",
+              "offset": 319,
+              "end": 323,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            },
+            {
+              "label": "shell.text300",
+              "offset": 323,
+              "end": 329,
+              "sha256": "c05d231da83665dd60560fc424059d66b433774afcff4d3b053b407f057d54ba"
+            },
+            {
+              "label": "shell.text348",
+              "offset": 329,
+              "end": 355,
+              "sha256": "dd58ee07d772ba721cb4e58ff2767caa25084bd4ddde515e527c5a75cc1c970e"
+            },
+            {
+              "label": "shell.words338_33c",
+              "offset": 355,
+              "end": 363,
+              "sha256": "ef9ba5985a8c7a79836eac257a5ff7b62239e61f0fb7b763a4d7014def5a55b7"
+            },
+            {
+              "label": "shell.words350_354",
+              "offset": 363,
+              "end": 371,
+              "sha256": "a4c5a20bc229aa3dd6208b0522847eb896d8e5a8d57a962444be46228ad43f11"
+            },
+            {
+              "label": "shell.word358",
+              "offset": 371,
+              "end": 375,
+              "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            }
+          ],
+          "archive_records": [],
+          "reconstruction_sha256": "3067165d2143b3e48b9f7dfd583e661f0cd7753ac67e6eb09a478dcff22dce34"
+        }
+      ]
+    }
+  ],
+  "tests": {
+    "run": 13,
+    "output": ".............\n----------------------------------------------------------------------\nRan 13 tests in 0.038s\n\nOK\n"
+  },
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_embedded_const_surface.py": "4e7dfa04987e10e590188f0fa949d93915f16244374b183e32ed0f2d9b834994",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\test_cosworks_embedded_const_surface.py": "06a9e4d508c1591dace06118c88117d98d594ccc8d9f4003de27341b634e01eb",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\thicken-native-evidence.json": "0aa355b1958c4be374753b4801866ceb25696392f2891dcbe42278c3bd7620bb",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-plane-section-rtti.json": "b4920c2336cf79884c8ff4be35d1e2fbc5debfdcb2b38b5554c7964e165b45a0",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\configuration-body-state-native-evidence.json": "97418e8b10ccff6e0af13f464f85375ff0140cc9b2fe6693bcba367fcf0c00db",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\FUN_4bbbbad0.c": "3b36cdd74749c0d00ed8dfdaa76f337675a42a720ce8ac07287b2f39d1cf7b62",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\FUN_4bbba2d0.c": "ab26de09accb6d8d8cfb614a7da6e48925b7e1576c961c5e2235dfac705ff4be",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_embedded_solid.py": "8a1928b027b17e6707d51d52bcf1e80e7875edee5cbcd0ca49e27ce684627224",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_embedded_body_ids.py": "9b87ab043e87b3534113186467dfd05b986e3532a25e5870c2d4823094bd4d14",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\test_cosworks_embedded_body_ids.py": "21e24375dc6342b8fc31595fe2441cf3a7d62a478c38e6713951993521dc8608",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\appearance-id-virtuals.json": "75912daef33c4619103fceccea9096302502231e1e5de38c4fec9236d5b6784c",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\remaining-appearance-virtuals.json": "502e71835e61df6a06073f06e1c271acf8368ead98684c65e8bb9ea20ebed405",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\modelboundary.py": "e1b4356b42c02e6330e6754c975bab76bb5b79e6a1616495e97d3e44c0d4ed3b",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\configurationremainingids.py": "725f76a8988e7c65cc0b55bbd2d7c44d83c4f19c26dc7aefa6b3da475c015ef2",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_midsurf_property_audit.py": "62085586d287df4689b98c795a91f96a282190798991b1a95ddc09b775a714af",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_shell_property_layout.py": "0b8650a4b40214d0d401b0a7050b73482892a62b5baa3c9bf5b09b2f8e45e31b",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\test_cosworks_shell_property.py": "44e240fc58055b94de94f2cc996a8eb58c58f01cc45ccb1e01813905b621882a",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-shell-child-constructor-probe.json": "58cf202f1ab2aa83781f603290aae50f0960c7852b38157a20a10aa2a8177950",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-midsurf-constructor-probe.json": "8d6a624fb713c84146ed75d4869eaac7dcc30d5e7a167e9d85f78ebb2d22f273",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-material-body-callers-probe.json": "39028b35ee8d67bcb8d0fa451dc21f65b2f7e5f3c43245e7256cca72a70e3291",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\cosworks-material-body-callers\\FUN_1813acc90.c": "76d210b400e04d79510df424481123a6429853f463cebc1cbec335e252e7b0fb",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\cosworks-solid-child\\FUN_1813b5db0.c": "bf49d71c9b2239a43fa0128b8c4d2a93524481c194a610c26a8174dc81c2ace3",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-body-property-static-evidence.json": "4448f0fc855f9b46859a8c6f05a9a3bc4a41c85771e000d4fc7c3d9d4b712acb",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_binary_thermal_transform_audit.py": "e4e9c50808b9d52cc8291df1a9fc6eaa6793a44db8b62fefcae827599b6109fb",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_force_optional_audit.py": "06326328127568c14914a5c5d6dca7e7295b6f4bfae8300c047b69c773e9148a",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_embedded_transform_wrapper.py": "1c723cf03c773cfa0781ab3c149eb062d42196115566ab0aaf93b3d4cb29bc7d",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_embedded_component_holder.py": "cf88c52d0d8ba77bd3b22941e1757c79f71c3577808b45261262f0c047a5fa06",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\appearance-id-rtti.json": "eac3090cd207d649890b053c3554cd2d4d31dd400ba4d8909a6a6da9167c0727",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\remaining-appearance-rtti.json": "b9fda83b572e874399ade007dfed356bf12e0ae48a111664ac09c43e872b8a76",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks_material_layout.py": "d7e60364f3b4ea749c9e8b995ad881e27993341ebcf5303bf7d1cf3d29d873bc",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\test_cosworks_material.py": "f77f36d0845aef1f1e474505b556c9dd7bebc404f6b96840eee8e20efea51b1d",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-shell-property-static-evidence.json": "c50376222e7282e1cc897d8ad0ae1905d335fd8b15fac45c5996cc94399b4eff",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\cosworks-shell-base-probe.json": "2a6cfd8915b2d40f9f51ef33f44c77407475b4fa4a9f7070c30af7c4dc31930c",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\cosworks-shell\\FUN_180b754b0.c": "7bc1e9aec8133e808134db331777150d08211412c0509a60642fcc782dfd6cf5",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\third-party-storage-corpus.json": "3559b35ad01d27ac07d4de4b696e18a85283614f980d5ce125e17e3c20e6a9db"
+  },
+  "target_executed": false,
+  "coverage_credit": 0,
+  "limitations": [
+    "Candidate versions do not prove storage-suffix/runtime-index identity",
+    "MidSurfShells Property only; nonzero virtual/base curves and newest layer curves remain open"
+  ]
+}

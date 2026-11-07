@@ -1,0 +1,49 @@
+{
+  "feature_issue": 241,
+  "baseline_commit": "59bb0f9c",
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "scope": "Behavior-preserving borrowed curve projection now retains immutable raw/span borrows and body origin instead of a kind-one owner pointer. Getter values, ordering, invalid-index behavior and Send/Sync remain pinned by unchanged fixtures; no new public methods.",
+  "rust_passed": 60,
+  "rust_exit_code": 0,
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "all_owned_fixtures_unchanged": true,
+  "view_measurement": {
+    "before": {
+      "view_bytes": 16,
+      "iterations_per_sample": 10000000,
+      "sample_ns": [
+        48603600,
+        49862200,
+        35190400,
+        39309200,
+        47271500
+      ]
+    },
+    "after": {
+      "view_bytes": 40,
+      "iterations_per_sample": 10000000,
+      "sample_ns": [
+        28791600,
+        29281300,
+        29627500,
+        29891600,
+        29613800
+      ]
+    },
+    "before_median_ns": 47271500,
+    "after_median_ns": 29613800,
+    "scope": "Five samples of ten million black-box view copies and scalar-pattern reads, optimized probe; narrow microbenchmark under shared machine load, not a full-operation performance claim.",
+    "allocation_and_locks": "Borrowed view construction and Copy add no heap allocations or locks; owning body/result storage is unchanged.",
+    "temporary_probe_sha256": "953a413b14270f3dbc9360027a8f1b3d02fe06aaa8908a51878cd88494256040"
+  },
+  "source_lf_sha256": {
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\kind_one\\types.rs": "78387d64a8e34ccf10126ad922dba9b8f86153d6dfaec072e3df31ef6465c47f",
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\kind_one\\view.rs": "be50412a0b9ca2dc211e797825795181f299e77c774b925385e888630814bb97",
+    "src\\flow\\legacy_tables\\metadata_prefix\\backend\\kind_one\\mod.rs": "3ba2c78c5891ebb1d18d58463795401bfc3cce8363185d54619105211d4111db"
+  },
+  "log_sha256": {
+    "target\\flow-curve-view-refactor-tests.log": "2dcd88d15dbfdefd39ae3bcf6aa898d0e900c5fe627a222a6645fdcb8c26b67f",
+    "target\\flow-curve-view-refactor-clippy.log": "f94685c20eddf23bf89b292c623f8066909385da38b7a82c8c2b1345f2191e5e"
+  }
+}

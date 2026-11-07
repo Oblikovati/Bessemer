@@ -1,0 +1,91 @@
+{
+  "issue": 184,
+  "stage": "Complete owned document edit/reopen/reversal for every stored reference matrix group",
+  "processes_reaped": 2,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "tests_per_process": 2,
+  "test_seconds": [
+    83.54,
+    87.07
+  ],
+  "matrix_cases_per_process": 1344,
+  "physical_references_per_case": 8,
+  "changed_documents_per_matrix_process": 10752,
+  "typed_reversals_per_matrix_process": 10752,
+  "scalar_replacements_per_matrix_process": 21504,
+  "complete_control_references": 8,
+  "artifacts": [
+    {
+      "path": "tests/model_intersection_reference.rs",
+      "bytes": 4998,
+      "sha256": "091123766afe264ce234442473982e6479152edee07c9a43d25625e994778cdf"
+    },
+    {
+      "path": "tests/model_intersection_reference/contracts.rs",
+      "bytes": 7834,
+      "sha256": "22cc7134022de7b297aa5c948c29afbd738cccb3f00058650fbb85b3ef797cf5"
+    },
+    {
+      "path": "tests/model_intersection_reference/documents.rs",
+      "bytes": 3826,
+      "sha256": "71c9cb3c879ed64703f4fae2dd4898c23467519c1b06abb05f9624d5dfa5cbc6"
+    },
+    {
+      "path": "tests/support/owned_resolved_document.rs",
+      "bytes": 1415,
+      "sha256": "47a533d44bb065f860b80fcdc5a90939534293b03ff45acaae6dab6853b715f8"
+    },
+    {
+      "path": "tests/support/unselected_document_streams.rs",
+      "bytes": 713,
+      "sha256": "cef16204fd410c34c6d5f4103b1078b51e0af8cf1844741520d724f367347d78"
+    },
+    {
+      "path": "target/intersection-reference-document-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/intersection-reference-document-controls.log",
+      "bytes": 210,
+      "sha256": "ebcab59fc8e4fde5ffd765f830d1f98a791ecfc7a0ed699fec90f26d7b649736"
+    },
+    {
+      "path": "target/intersection-reference-document-matrix.log",
+      "bytes": 49086,
+      "sha256": "fca7357b27ca97afcb296f7f749d3dc5726064ea14cbc157cba529233f009582"
+    },
+    {
+      "path": "target/intersection-reference-document-matrix-repeat.log",
+      "bytes": 49086,
+      "sha256": "50b74c33773c7652f51b2ee6a114edbc2fac88684b31fca764020e629e9e7b8c"
+    },
+    {
+      "path": "target/intersection-document-reference-clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/intersection-document-format-check.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "checks": [
+    "Every complete root is installed in the real owned blank-part document, serialized and reopened before becoming the immutable baseline.",
+    "Both roles change atomically for every physical group. Independent literal/full-field expectations, exact original/replacement parents, completion, coverage, diagnostics and stale-state rejection reuse the established operation assertions.",
+    "Every changed document reopens through the public complete document/context reader and matches the expected edited fields.",
+    "Every unrelated stream byte, name and ordering remains unchanged. The baseline source document remains byte-identical.",
+    "A fresh revision-owned state reverses both stored roles; all original feature bytes/fields and complete original container bytes are restored.",
+    "Two fresh processes pass the same ordered1344-case denominator. Standalone Clippy and workspace formatting checks pass."
+  ],
+  "coverage_credit": 0,
+  "qualifications": [
+    "No separately exported full-document packet or cross-process changed-document byte comparison is claimed by this gate; exact original-byte reversal is enforced inside every case.",
+    "This accepts the owned ordinary19000 document cohort. Native operation edits, broader caller/version boundaries, mixed concurrency/history traces and full exact-head Cargo/platform publication gates remain required.",
+    "Native application opening, rendering, geometry and full schema parity remain unproven. Humanizer unavailable; prose review remains pending."
+  ]
+}

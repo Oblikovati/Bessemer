@@ -1,0 +1,47 @@
+{
+  "base_revision": "0afbe104cc1ec132cd179e05ec79b99348c0ea8b",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "focused": {
+    "private_tests": 8,
+    "public_tests": 5,
+    "python_tests": 2,
+    "cases": 243,
+    "primitive_observations": 110808,
+    "owned_streams": 15,
+    "threshold_bit_patterns": 14,
+    "independent_threshold_oracle": "IEEE-754 magnitude-bit integer order, bounded above by infinity"
+  },
+  "native": {
+    "cases": 906,
+    "previous_complete": 725,
+    "complete": 725,
+    "explicit_stops": 181,
+    "new_complete": 0,
+    "cases_advanced_to_later_stops": 7,
+    "fresh_processes": 2,
+    "all_outcomes_and_causes_identical": true,
+    "artifact_stable": true,
+    "artifact_sha256": "0d3e389f57ad56e5a4116b60f722e563c40df86c843462e659bdb2b027fedaf9",
+    "independent_feature_bytes": 44067070,
+    "independent_snapshot_identity": "afdd922b50738564335bccab6a5760f5c35073d68dcec213135c8bafb5238d67",
+    "independent_python_files": 1197,
+    "independent_report_sha256": "76d6bed54a5502d98e588db401def4ad1244b525d735060dfe15f73278216d63"
+  },
+  "corpus_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "exclusions": [
+    "Populated native variable pitch and dimension tables, raw mode meanings, geometric regeneration and application acceptance",
+    "Historical pitch migration, DB and special contexts",
+    "Remaining 181 configurations and all documented file-schema parity"
+  ],
+  "gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 594,
+    "library_ignored": 3,
+    "xtask_passed": 4,
+    "doctests_passed": 265,
+    "log_sha256": "699d87ef6803a40e087393c24ef2d70ee0268a0716b190820df5adfc8e96a53c"
+  }
+}

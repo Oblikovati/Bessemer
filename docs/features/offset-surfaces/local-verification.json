@@ -1,0 +1,48 @@
+{
+  "base_revision": "12ea37aaef33357a49fc73ff38cb1c4f5958f104",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "focused": {
+    "private_tests": 8,
+    "public_tests": 3,
+    "python_tests": 2,
+    "cases": 133,
+    "primitive_observations": 35491,
+    "owned_streams": 19,
+    "source_parsed_target_identities_verified": true,
+    "independent_native_minimum_cases": 7
+  },
+  "native": {
+    "cases": 906,
+    "previous_complete": 749,
+    "complete": 749,
+    "explicit_stops": 157,
+    "new_complete": 0,
+    "cases_advanced_to_later_stops": 2,
+    "fresh_processes": 2,
+    "all_outcomes_and_causes_identical": true,
+    "artifact_stable": true,
+    "artifact_sha256": "6f0c9d707c629940476e1360779ca5a44f987c9d5d17798ad41b356fb78eea42",
+    "independent_feature_bytes": 46924581,
+    "independent_snapshot_identity": "adfbee88920cb6565533ef4572d048954a65b2680e6006fcd6be9ff02696990a",
+    "independent_python_files": 1244,
+    "independent_report_sha256": "3e4efec839ae99736ca6d8f6839f9fd665b49665f45aad45046f3dafaf4c9295"
+  },
+  "corpus_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 655,
+    "library_ignored": 3,
+    "xtask_passed": 4,
+    "doctests_passed": 265,
+    "log_sha256": "d21dca2f1d9d529ab86b45f625dba53a4f2d57d21b0189b5886d141bbac8b3ad"
+  },
+  "exclusions": [
+    "Archive reuse and alternate binary base modes",
+    "Runtime fixups, geometry and SolidWorks application acceptance",
+    "Historical, DB and special contexts",
+    "Remaining 157 configurations and all documented file-schema parity"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "bug": 145,
+  "failed_tests": 2,
+  "cause": "The draft verifier required an actual field start for zero-byte Source array spans at EOF",
+  "correction": "Positive spans retain physical start/end checks; zero-byte spans must match an existing physical boundary and do not create a field",
+  "regression": "Two completed empty neighbor arrays retain exactly three count fields, including a zero-byte final span at EOF",
+  "unchanged_proof": "All complete independent owned/native fields and edit/history expectations still match",
+  "production_format_changed": false
+}

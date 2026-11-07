@@ -1,0 +1,57 @@
+{
+  "base_revision": "585a760e34f2f0e0dad1db65c537fedce0e6112d",
+  "issue": 54,
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "focused": {
+    "private_tests": 6,
+    "public_tests": 3,
+    "python_tests": 2,
+    "cases": 108,
+    "primitive_observations": 23619,
+    "owned_streams": 13,
+    "source_target_and_keeper_identities_verified": true
+  },
+  "native": {
+    "cases": 906,
+    "previous_complete": 761,
+    "complete": 761,
+    "explicit_stops": 145,
+    "new_complete": 0,
+    "cases_advanced_to_later_stops": 2,
+    "fresh_processes": 2,
+    "all_outcomes_and_causes_identical": true,
+    "artifact_stable_across_gate": true,
+    "artifact_sha256": "8c7d7e5ad9cea919f549b4bdd932c42e85e85a3563d1e6c513b4146303d760f0",
+    "independent_prior_report_binding_sha256": "3e503ba522918174251cc7b9e705eacc296f6a6bc2395a68b3249c582541fc8e",
+    "independent_feature_bytes": 48364098,
+    "independent_sentinel_sha256": "f24b6dae3b98cbe8045cca5e3e3dfb47f8d45b11c358ed8660328b328527bbee",
+    "sentinel_snapshot_identity": "36cdd3c80b71f05c65fbbd4ce0e07e762d81e64155eaeebf1964300e2de3be4b",
+    "sentinel_python_files": 1314,
+    "logs_sha256": [
+      "478f5ceebd43446517860a5fcbb404647dabbe9a19584f2c64ca64b692013e41",
+      "d7ea5006a37bee4c50d668690e63de7a36910a60759beec50a9cf5dc7914c932"
+    ]
+  },
+  "corpus_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "schema_snapshot_sha256": "46e6cac548e3722a5181d8bae229022b57567059d8425d12851d53984e03437b",
+  "fixture_reference_sha256": "054be3de1cb2fcc1cfe63c4e114791dc06a651a3a5de79ceadf4cb17f10740b9",
+  "gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 703,
+    "library_ignored": 3,
+    "xtask_passed": 4,
+    "doctests_passed": 265,
+    "all_integration_tests_passed": true,
+    "log_sha256": "be3e2baad9e2fd1381096fbd78b56c9d8b6c518105ecf0eb366edd5cd1dbead5"
+  },
+  "exclusions": [
+    "No new complete native input",
+    "145 explicit native corpus stops",
+    "Legacy layouts outside the declared modern context",
+    "Geometry validity and SolidWorks application acceptance",
+    "Broader all-schema parity remains unproven"
+  ]
+}

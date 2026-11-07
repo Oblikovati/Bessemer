@@ -1,0 +1,45 @@
+{
+  "issue": 192,
+  "passed": true,
+  "process_reaped": true,
+  "exit_code": 0,
+  "rust_tests": 6,
+  "seconds": 0.23,
+  "current_contexts": 36,
+  "physical_ellipses": 72,
+  "primary_edit_requests": 360,
+  "exact_reverse_requests": 360,
+  "public_send_sync_assertion": true,
+  "clippy_warnings_and_missing_docs_denied": true,
+  "function_size_audit_passed": true,
+  "log_sha256": "d94f151f7d207276a9ca837c000e4d597a5a01c3c78c435dca2629ee6a30f033",
+  "initial_schema_control_failure_log_sha256": "e75d038b222491628e555e574b4adf23127cb80cb9290cd2ef82391688e79209",
+  "initial_failure_qualification": "The proposed field metadata changed a class schema without changing its alias metadata. Existing strict consistency rejected it. Corrected test input patches the literal header and reparses all class/alias metadata, without changing production or assertions.",
+  "files": [
+    {
+      "path": "src\\model_archives\\ellipse_backup_rotation\\mod.rs",
+      "sha256": "86d0ecc61ab6602d21bb6643ceef1bf40c5afa121e2d2234c21490fcd2eedef8"
+    },
+    {
+      "path": "src\\model_archives\\ellipse_backup_rotation\\projection.rs",
+      "sha256": "4824010c7c717fb91f3b5748f30ec09d7d45002c5528e1fcc9ad1511480720bd"
+    },
+    {
+      "path": "tests\\model_ellipse_backup_rotation.rs",
+      "sha256": "83c60228aa0f0a7ddcb4dc3e094d8f4f7c874fe6d7bd8d77d5e244377390d25d"
+    },
+    {
+      "path": "tests\\model_ellipse_backup_rotation\\contracts.rs",
+      "sha256": "f8a2e0b61c6e1dce6e32603689b131a18fa8f16171168f3214e4a4d2302d0417"
+    }
+  ],
+  "scope": "Initial current-version named-role implementation and complete isolated edit contract only. Source independently validated all108 literal contexts.",
+  "remaining": [
+    "Historical Rust contexts",
+    "Native cohort/schema and complete document operations",
+    "Concurrency and two-process export comparisons with actual Source acceptance",
+    "Full local and exact-head remote platform/ThreadSanitizer gates",
+    "Native application equivalence",
+    "Whole-schema parity"
+  ]
+}

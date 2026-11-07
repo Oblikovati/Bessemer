@@ -1,0 +1,70 @@
+{
+  "issue": 199,
+  "status": "Owned alias and physical occurrence acceptance passed; full publication remains open",
+  "source_initial_tests_passed": 3,
+  "source_import_and_content_guard": "passed",
+  "source_replay_tests_passed": 3,
+  "source_replay_process_exit_code": 0,
+  "all_existing_and_new_fixtures_regenerated_identically": true,
+  "complete_graphs": 5,
+  "total_wire_bytes": 18430,
+  "primitive_calls_including_empty_reads": 4670,
+  "coverage": "Complete primitive byte coverage and EOF checked for every graph",
+  "roots_per_graph": 5,
+  "physical_sketch_definitions": 2,
+  "physical_equation_splines": 4,
+  "aliases_per_graph": 2,
+  "null_roots_per_graph": 1,
+  "source_map_slots": 101,
+  "typed_tests_passed": 17,
+  "failed": 0,
+  "ignored": 0,
+  "typed_process_exit_code": 0,
+  "concurrency": {
+    "workers": 8,
+    "iterations_per_worker": 4,
+    "physical_states": 4,
+    "total_edits": 128,
+    "oracle": "Independent full graph golden for every selected physical state",
+    "thread_sanitizer": false
+  },
+  "checks": [
+    "Physical wire-order enumeration, not alias expansion",
+    "Four distinct physical parent handles and selected lookup",
+    "Each lock edit changes one field and matches complete independent wire",
+    "Complete document reopen, unrelated-stream preservation and exact reversal",
+    "Unchanged option retains identity; all changed revisions reject stale states",
+    "Input isolation after concurrent edits and failures",
+    "Clippy, formatting and function/file size checks"
+  ],
+  "initial_evidence_wrapper": {
+    "exit_code": 1,
+    "cause": "Snapshot metadata was written inside the generated fixture directory before its exact file-set check. All three Source tests and the import/content guard passed first. Metadata was moved outside, the original fixtures compared unchanged, and the fresh normal replay passed without weakening checks."
+  },
+  "first_replay": {
+    "exit_code": 1,
+    "cause": "Source research file changed between snapshot hashing and copying; copy guard rejected before imports. The next fresh copy passed."
+  },
+  "source_replay_changes": {
+    "added": [
+      "research/parallel_display_hatch_point_index_independent_review.py",
+      "research/publish_root_hatch_point_indices_c3436.py"
+    ],
+    "removed": [],
+    "modified": []
+  },
+  "remaining": [
+    "Broader saved-version contexts and native outcomes",
+    "Combined full local gate and exact-head remote publication gates"
+  ],
+  "logs_sha256": {
+    "spline-equation-alias-tests.log": "38c45549a2514bec58b82a622ca8db224bcaf99159619f441ada66b26141e2c0",
+    "spline-equation-alias-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spline-equation-alias-format.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spline-equation-alias-source-admission.log": "e0a4a0fec2b1dfef225aade1e4d85799f132db21f4e4832b35c3d2a08ca93495",
+    "spline-equation-alias-source-replay.log": "eea03c96d6615f5850d504987ca431c3eac7c451d9b4009d4920bf6726216c00",
+    "spline-equation-alias-source-replay-stable-copy.log": "1d34a7a2ceeb0466f3295313e108a7fc51e1da4fde263e13c1ddf48ad07f4d07"
+  },
+  "source_replay_snapshot_gzip": "alias-replay-source-snapshot.json.gz",
+  "source_replay_snapshot_gzip_sha256": "cec7f8111ccfcf7da914accb57eaf36f7dee69f54f80eb2c78345e4222ecad7e"
+}

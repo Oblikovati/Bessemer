@@ -1,0 +1,53 @@
+{
+  "feature_issue": 164,
+  "implementation_parent": "ffda0744baee1cf1ee195f8c7cfbe280c8db2bac",
+  "reference_checks": 22,
+  "focused_rust_including_native": 16,
+  "all_exit_codes": 0,
+  "all_processes_reaped": true,
+  "clippy_warnings": 0,
+  "owned_contexts": 660,
+  "native_accepted_arguments": 450,
+  "malformed_cases": 3965,
+  "malformed_accepted": 3,
+  "malformed_rejected": 3962,
+  "proper_prefixes": 7961,
+  "appended_bytes": 660,
+  "changed_value_counts": {
+    "signed": 1030,
+    "unsigned": 370,
+    "text": 1635
+  },
+  "changed_edits": 3035,
+  "concurrent_workers": 8,
+  "concurrent_operations": 34840,
+  "compile_time_send_sync_types": 16,
+  "mutable_caller_input_and_vector_isolation": true,
+  "source_replacement_and_all_ordered_parents_checked": true,
+  "current_writer_context_edits_and_noops": true,
+  "source_snapshot_identity": "db8c0e624f9601fe260e73284bd9ebb5face95469baa2dc215d24fe3e629c8ce",
+  "malformed": {
+    "cases": 3965,
+    "accepted": 3,
+    "complete_outcomes_sha256": "be57faa8213c010f9743363462a7505b5ca795740e1e67ad5c5ea64022086823",
+    "packets": {
+      "malformed.bin": {
+        "bytes": 131403,
+        "sha256": "18313b697b53cbd9b79417b6d620ed591e582eabb4b5c8d3486028c9d0241d7f"
+      }
+    }
+  },
+  "logs": {
+    "target/results-headers-adversarial-write.log": "9081affe0d66a341e8adf9ed0a63b9a0bc6b265bb867ece9acb9545f8f3faf52",
+    "target/results-headers-adversarial-strict.log": "1c7e35cbd99e49e92dfc2d4d703e14fe723c1ee592960dff6da4a18d09bf25cd",
+    "target/results-property-final-focused.log": "68e195d169f1acfb2fba7976d043a6fa036a5bea77799681545a194760cddd0e",
+    "target/results-property-final-clippy.log": "1106a9ad310fb7dad1e52e800dd675c5047c745442ba576f2a79c2ffc481d595"
+  },
+  "exclusions": [
+    "Full local gate",
+    "Exact-head platform integration and ThreadSanitizer",
+    "Native application opening",
+    "Historical writer symmetry and plot writer layout",
+    "Business meanings, geometry validation and whole-format parity"
+  ]
+}

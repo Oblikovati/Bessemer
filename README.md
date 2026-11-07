@@ -1,7 +1,593 @@
 ## Bessemer 
 
-Bessemer is a Rust library for reading and writing SolidWorks documents (parts, assemblies, drawings .idw). 
+The first source release is `v0.1.0`. Use the Git tag as a Cargo Git dependency;
+crates.io publication remains disabled. See the [release procedure](docs/features/releases/README.md).
+
+Bessemer is a Rust library being built to read and write SolidWorks documents
+(parts .sldprt, assemblies .sldasm, and drawings .slddrw).
 CAD kernels use it to exchange data with SolidWorks files. Martensite is its first consumer.
+
+The [container timestamp view](docs/features/container-timestamps/README.md)
+models native raw-input packing and edits existing entry metadata on isolated
+copies, retaining filler, payload bytes and complete byte history.
+
+`bessemer::flow` reads ordinary Flow result carriers with observed version words
+7/8 and replaces physical payloads on isolated copies. It retains duplicate,
+reserved and unknown records. See the [Flow carrier evidence](docs/features/flow-carriers/README.md)
+for exact framing checks and the remaining index, payload and application work.
+The [solver selector](docs/features/flow-solver-selectors/README.md) selects the
+latest ordinary solver occurrence and rejects all three reserved control IDs.
+The [GUID header view](docs/features/flow-headers/README.md) reads and edits the
+selected record-123/435 GUID prefixes while preserving control words and extensions.
+The [record-433 arrays](docs/features/flow-arrays/README.md) decode bounded zlib
+payloads and edit existing signed cells with explicit runtime-count coverage.
+The [record-404 grouped-word view](docs/features/flow-groups/README.md) reads versions
+3–6 under explicit compression contexts and edits stored words, wide values,
+flags and auxiliaries while preserving other bytes and complete history.
+The [static-settings identity and selection view](docs/features/flow-settings/README.md)
+preserves optional identity presence and projects the documented binary-key cache
+precedence under explicit normal-return semantics.
+The [fixed settings arrays](docs/features/flow-fixed-settings/README.md) read records
+7/102 and edit existing raw slots while preserving integer and binary64 bits.
+The [diagnostic field projection](docs/features/flow-settings-fields/README.md)
+derives seven documented labels with explicit missing guard and floating-point context.
+The [related-carrier lookup](docs/features/flow-links/README.md) searches explicit
+candidate order by typed GUID roles and preserves the CPT/settings lookup gates.
+The [versioned settings body](docs/features/flow-settings-body/README.md) reads
+record 511 versions 0–11 and edits present members with explicit legacy runtime context.
+The [feature identity list](docs/features/flow-feature-identities/README.md) reads
+record 143 and edits existing fields, raw UTF-16 strings and stored tail values.
+The [mapped-object view](docs/features/flow-mapped-objects/README.md) reads record
+144 with explicit matched-count context and edits existing state, pair and numeric fields.
+The [block-tree view](docs/features/flow-block-trees/README.md) reads record 400's
+legacy wire forests and inactive delegated prefixes, with isolated existing-field edits.
+The [base-grid view](docs/features/flow-base-grid/README.md) reads record 101's
+dimensions and raw boundary words and edits existing words on isolated copies.
+The [legacy block-data view](docs/features/flow-block-data/README.md) reads record
+406 versions 1–17 with explicit leaf context and edits existing fields with complete history.
+The [root-index projection](docs/features/flow-root-indices/README.md) derives native
+root storage offsets and complete local leaf paths under an explicit fresh-grid assumption.
+The [count-prefix and conditional binding view](docs/features/flow-count-binding/README.md)
+retains record 406's opaque body and binds record 433 only under an explicit absent-map initialization assumption.
+The [simple table views](docs/features/flow-simple-tables/README.md) read records
+407/437/411/413 and edit existing raw values while retaining count origins and inactive layouts.
+The [pointer-pool and body view](docs/features/flow-pointer-bodies/README.md) reads
+record 421 versions 0–5 with explicit counts and current runtime codes and edits existing payload values.
+The [reference-group view](docs/features/flow-reference-groups/README.md) reads
+record 416 versions 0–17 and edits existing fields without applying native pointer fixups or mapping shifts.
+The [field-value view](docs/features/flow-field-values/README.md) reads record 108
+with its raw version prefix and explicit object/region layouts, projects supplied runtime widths and edits existing raw patterns.
+The [block-extra view](docs/features/flow-block-extras/README.md) reads record 408
+with explicit runtime context and edits revision-bound, typed existing fields.
+The [primary-table view](docs/features/flow-primary-table/README.md) reads record
+439 versions 0–3 and edits existing typed fields with exact raw framing and
+explicit primary-class selection.
+The [conditional-item views](docs/features/flow-conditional-items/README.md) read
+records 126/315/128 with their distinct codec boundaries and block widths, and
+edit existing fields while preserving complete physical history.
+The [legacy field containers](docs/features/flow-legacy-field-containers/README.md)
+read unversioned records 105/113 and raw version-zero record 155, edit existing
+values, and preserve the documented scalar decisions and preferred-container selection.
+The [load-state view](docs/features/flow-load-state/README.md) reads record 11
+version 18 under an explicit load-mode assumption and edits raw fields and
+UTF-16 units while retaining exact string prefixes and carrier history.
+The [stored-state view](docs/features/flow-stored-state/README.md) reads record
+432's complete raw signed members and edits existing slots while reporting the
+native recomputation version rule separately from stored values.
+The [context-state view](docs/features/flow-context-state/README.md) reads record
+138 with explicit index-count context and edits existing raw words and signed
+tails while keeping stored object count independent of index width.
+The [paired-state view](docs/features/flow-paired-state/README.md) reads record
+417's two independently counted groups and edits existing raw index and wide
+values while preserving absent arrays and integer quotient projections.
+The [fixed-state view](docs/features/flow-fixed-state/README.md) reads record
+139 versions 0–4 and edits existing member and settings slots while retaining
+absent counts, version-dependent fields and complete carrier history.
+The [tagged-state view](docs/features/flow-tagged-state/README.md) reads record
+129's separate tag block and row bodies and edits existing tags, wide values
+and tails while preserving body presence and complete physical history.
+The [message-list view](docs/features/flow-message-lists/README.md) reads record
+301 versions 0–3 and edits existing member words and text elements, preserving
+legacy byte transfers, full UTF-16 units and independent list presence.
+The [counted-byte view](docs/features/flow-counted-bytes/README.md) reads record
+12's count and uninterpreted bytes and edits existing positions with exact
+framing, independent resource bounds and complete carrier history.
+The [byte-state view](docs/features/flow-byte-states/README.md) reads record
+316's whole-zlib body and edits its raw header and existing bytes while retaining
+bounded inflation, exact decoded framing and compressed no-op preservation.
+The [selected-value view](docs/features/flow-selected-values/README.md) derives
+record 112's count from complete typed link/state inputs under an explicit fresh
+map assumption and edits raw wide patterns with context-bound identities.
+The [object-record view](docs/features/flow-object-records/README.md) reads record
+304 versions 0–7 and edits existing signed fields and opaque bytes, keeping
+counted rows separate from the conditional legacy trailer.
+The [auxiliary wide-value view](docs/features/flow-aux-wide-values/README.md) reads
+record 444's whole-zlib versions 0–1 and edits existing raw patterns and the
+version-zero discarded member while retaining their serialized values.
+The [wide-vector view](docs/features/flow-wide-vectors/README.md) reads record
+148's complete length table and raw arrays and edits existing patterns while
+preserving physical vector order and stored-empty vectors.
+The [owner-state views](docs/features/flow-owner-state/README.md) preserve all
+record-122/434 fields and their gated native-member projections. Selection prefers
+the latest record 434 over record 122 and preserves selected parse failures.
+The [text-slot view](docs/features/flow-text-slots/README.md) reads record 311's
+fifty strict UTF-16 slots, edits existing units and projects nonempty native
+prefixes onto immutable prior text state without Unicode normalization.
+The [viewer-query prefix](docs/features/flow-viewer-prefix/README.md) reads and
+edits record 121's explicitly selected known prefix, preserving its opaque suffix
+and reporting full-body validation as incomplete after every operation.
+The [IMS result-definition view](docs/features/flow-result-definitions/README.md)
+reads record 500's complete version-one profile and edits existing identifiers,
+allocation bytes and raw array values, retaining duplicate order and array presence.
+The [paired IMS-value view](docs/features/flow-result-values/README.md) reads record
+501 with retained fresh-definition provenance and edits raw flags, shared values
+and 18-column BL rows while preserving physical presence and definition identity.
+The [strict control profiles](docs/features/flow-control-records/README.md) read and
+edit saved-span and terminal-index writer payloads with explicit footer context,
+checked recompression distances and preserved raw entry order.
+The [logical index reader](docs/features/flow-index-replay/README.md) builds fresh
+active and saved maps through forced physical scanning or recognized modern
+terminal adoption, retaining selected control provenance and explicit exclusions
+for ordinary target validation and complete document decoding.
+The [logical checkpoint components](docs/features/flow-checkpoint-components/README.md)
+read and edit graph objects, auxiliary grids, trailing containers, and opaque
+chunk buffers under an explicit version-six context, with revision-bound fields
+and complete byte history. They do not decode the physical parent record or chunk codec.
+The [legacy link view](docs/features/flow-link-records/README.md) reads record 402
+and edits existing fields while preserving code bytes, sentinel references and versioned tails.
+The [legacy table view](docs/features/flow-legacy-tables/README.md) reads records
+401/405 and edits existing pair, scalar, wide-pattern and raw-word fields with explicit context.
+
+`bessemer::electrical` reads and edits complete Electrical ZIP32 project carriers
+and lexical ASCII Archive.ini records. It preserves duplicate occurrences,
+unknown members and encoded representations of untouched members. See the
+[Electrical evidence](docs/features/electrical-projects/README.md) for limits,
+history and the remaining project-schema work.
+`bessemer::sqlite_image` checks complete in-memory Electrical/CAM SQLite images
+and reads bounded schema metadata and complete named-table rows, retaining NULLs,
+duplicate rows and raw text/blob values. See the
+[SQLite evidence](docs/features/sqlite-images/README.md) for native fixtures,
+resource limits and application acceptance exclusions.
+Electrical project views also retain complete catalog/project records, distinct
+version rows and every literal database/drawing match. The
+[record evidence](docs/features/electrical-records/README.md) covers duplicate
+occurrences, file-type constants and whole-operation bounds.
+The [userdata query and ID-gate views](docs/features/electrical-userdata/README.md)
+retain exact two-part SQLite selection, separate lexical object-ID matches and
+the documented signed-ID transition without guessing provider conversions.
+`ElectricalUserdataState::project_recordset` also applies explicit provider
+destination effects to all twenty UTF-16 slots, retaining flags, identity fields,
+before/after storage and branch-specific history.
+The [storage projection](docs/features/electrical-userdata-state/README.md) also
+composes checked queries: EOF preserves prior state, while present rows require
+explicit provider effects independently of ID-gate acceptance.
+The [direct file-field map](docs/features/electrical-file-fields/README.md) pairs
+all 38 observed typed read requests with unchanged stored values and distinguishes
+runtime fields from reused temporaries.
+Existing userdata TEXT cells can also be committed on isolated copies with
+whole-database logical checks and exact source checkpoints. See the
+[userdata writer](docs/features/electrical-userdata-write/README.md) for unique-key
+requirements, supported schema scope and physical rewrite limits.
+
+`bessemer::compound` reads and reconstructs MS-CFB version-3/4 carriers and
+replaces existing streams on isolated snapshots, including mini-stream cutoff
+changes. See the [compound-file evidence](docs/features/compound-files/README.md)
+for allocation checks, native corpus results and validation limits.
+
+`bessemer::database_header` reads and reconstructs the documented conditional
+512-byte database header buffer with an explicit provider profile. It preserves
+raw name/time fields and uninterpreted trailing bytes. See the
+[header-buffer evidence](docs/features/database-header/README.md) for validation
+scope and database limitations.
+[Packed-time helpers](docs/features/database-time/README.md) preserve the native
+wrapping and arithmetic-shift behavior when converting those stored words.
+`bessemer::database_hash` reads complete selected inline bucket buffers and
+replaces fixed-length values with local coverage and history. See the
+[hash-buffer evidence](docs/features/database-hash/README.md) for chain checks,
+native-page results and the remaining overflow/file-graph work.
+Its explicit `HashWriterBucket` API reads complete mixed inline/overflow cells
+with supplied page identities and edits existing same-length values. It returns
+aggregate coverage and ordered bucket/page history; file indexing and allocation
+remain separate. See the [mixed-bucket evidence](docs/features/database-overflow/README.md).
+`bessemer::database_overflow` reads complete explicitly supplied writer page
+chains and replaces existing same-length values, retaining every other page
+byte. See the [overflow evidence](docs/features/database-overflow/README.md) for
+page-identity requirements, native samples and the remaining file/allocator work.
+`bessemer::database_index` reads complete explicitly selected default-provider
+hash file graphs and edits existing same-length values. It checks unique page
+roles, complete maps, default hashes and routing, and returns full-file coverage
+and history. See the [file-index evidence](docs/features/database-index/README.md)
+for explicit extent requirements and remaining allocation/transaction work.
+Its `HashFileIndexBuffer` API also preserves and edits raw saved index words
+and ordered duplicate pairs under an explicit index-only check mode.
+`bessemer::deferred_values` reads and constructs the documented conditional
+deferred-object MsgPack blobs with explicit byte-order control, ordered duplicate
+pairs and raw float/string/extension bytes. See the
+[deferred-value evidence](docs/features/deferred-values/README.md) for supported
+writer forms, limits and producer qualifications.
+
+`bessemer::simulation` reads, constructs and writes complete observed MAS tables
+and paired family-8 GEN images. It exposes stored mesh fields and isolated cell
+and coordinate-pattern edits, including complete CWR stream replacement. See the
+[Simulation evidence](docs/features/simulation-images/README.md) for supported
+framing, reference results and semantic limits.
+It also preserves complete Simulation OUT report syntax, ordered duplicate
+symbols and exact decimal values, with isolated numeric-token edits and explicit
+comparisons against the actual paired mesh totals. See the
+[OUT report evidence](docs/features/simulation-out/README.md).
+It also reads, constructs and edits complete native ELF initial images and
+projects documented selected-directory traversal, explicit record mapping,
+header-only writes and exact scalar slots. See the
+[ELF evidence and check scopes](docs/features/simulation-elf/README.md).
+Simulation metadata support also preserves optional `TimeStampGUIDs` field
+framing and raw UTF-16, reads and writes bare `TimeStamp`/`RunState` words, and
+edits existing CWR streams with composed helper history. See the
+[metadata evidence](docs/features/simulation-metadata/README.md).
+Element record views preserve stored codes separately from native numeric
+classification and expose explicit legacy rewrite, named solid associations
+and first-record predicate projections. See the
+[element evidence and limits](docs/features/simulation-elements/README.md).
+Selection views also expose native family-mask and scalar/exclusion gates,
+plus complete supplied-context body node-mark queries with unknown prior
+values and ordered write history. See the
+[selection and body-query evidence](docs/features/simulation-selection/README.md).
+Auxiliary row views also preserve both stored body-range profiles, provide
+isolated three-field edits and conditional runtime input proposals, and expose
+the separate exclusive body-type query. See the
+[body-range evidence and descriptor limits](docs/features/simulation-body-ranges/README.md).
+Auxiliary name buffers preserve bounded UTF-16 and all residual bytes, with
+supplied-destination stores, real trial-workspace snapshots and explicit
+memory-only allocation/binding projections. See the
+[auxiliary runtime evidence](docs/features/simulation-auxiliary-runtime/README.md).
+
+The first implemented layer reads SolidWorks version-4 containers, extracts streams
+with size and CRC checks, and replaces existing stream contents. A save without
+edits preserves the whole file byte for byte. An edited save preserves every
+untouched stream's compressed bytes. `bessemer::block_stream` also reads and writes
+the compressed-block carriers used by body partitions and add-ins, with explicit
+framing and expansion limits. `bessemer::history` reads and writes standalone version
+histories, including typed stamp edits and shared date-code objects.
+`bessemer::header` reads, constructs, edits, and writes header archives, including
+revision logs, shared external references, and version-dependent stored fields.
+`bessemer::biography` reads and writes product-build and environment records,
+preserving their raw values and offering explicit repeated-string expansion.
+`bessemer::parasolid` reads and writes binary transmit partitions and rollback
+deltas using explicit base schemas, preserving every typed field and raw flag.
+`bessemer::tessellation` reads and writes complete face tessellation directories,
+blocks, and facet records, including older documented layouts and explicit
+full/lightweight context.
+`bessemer::metadata` reads and writes all documented XML metadata families, with
+namespace-aware property views, exact source framing and isolated text/attribute edits.
+It also supports embedded `ThirdPty/InspectionXpert` projects and complete Job Number edits.
+`bessemer::preview` reads and writes packed DIB previews, decodes RLE8, uncompressed
+1/4/8-bit indexed pixels, raw RGB555 words, BGR24 and BGRX, and supports isolated palette and pixel
+replacement. Packed RGB edits preserve stored row padding and unused index bits. Uncompressed RGB
+previews retain legal zero image-size declarations through edits and reversals.
+It also reads, constructs, edits, and writes static PNG previews, preserving stored
+chunks and exact samples across all defined color/depth pairs and Adam7 interlace.
+`bessemer::display_lists` currently provides lossless compact/fixed transform and
+versioned named, annotation and 3D-view codecs, plus part/assembly archive reading,
+validated edits and writing with inline facets, explicit external face references
+and reference geometry, scenes, display items, view buckets, graphics references,
+markup-ink grids, per-configuration data, decals, null-bitmap textured planes and
+lights for unsigned display versions, including zero, outside the
+uncounted-window interval
+`0x1FAE`–`0x1FCE`, with an explicit
+native file-version context. Tangent bucket lists follow that context independently
+of the display-list version.
+`edit_with_history` returns a validated snapshot with exact archive coverage,
+structural field history and explicit geometry/external-link check exclusions.
+Early PW scene objects in bucket thread keys retain their versioned wall records
+and background suffixes.
+Before `0x117F`, scene walls support null legacy-material pointers; non-null
+material bodies remain explicitly unsupported.
+All 1,086 reference-readable part/assembly display-list streams reconstruct
+exactly. The [display-list acceptance review](docs/features/display-lists/acceptance-review.md)
+records supported layouts, explicit unresolved cases and the integration gate.
+Drawing `Contents/VBLists` supports complete reading, construction, isolated edits
+and writing for unsigned model versions from `0x27CC` onward. All 20 native
+drawing streams
+reconstruct exactly, including 33 shaded models; see the
+[drawing bucket evidence](docs/features/drawing-buckets/README.md). Drawing
+`Contents/DisplayLists` remains unresolved in the reference. High unsigned markers
+follow the [documented version predicates](docs/features/display-lists/unsigned-versions.md).
+
+Older part layouts, assembly mate/feature streams, drawing model archives,
+geometric interpretation and validation, and semantic CAD editing remain to be
+implemented; this is not yet Corliss feature parity.
+
+Component-edge readers preserve signed reference counts, skip nonpositive
+reference loops, and continue the documented optional pointer pair. See the
+[signed-count regression evidence](docs/features/component-edge-counts/README.md).
+Boundary references also preserve direct chooser-time pairs and downstream
+identifier data, including duplicate keys, zero entries and both version gates.
+See the [direct boundary evidence](docs/features/boundary-direct-data/README.md).
+Ordinary component prefixes also retain direct legacy object/time payloads,
+including fresh and shared targets; the Simulation dialect keeps its existing
+restrictions. See the [legacy-reference evidence](docs/features/component-legacy-reference/README.md).
+
+```rust
+let bytes = std::fs::read("part.sldprt")?;
+let mut doc = bessemer::Document::from_bytes(&bytes)?;
+let preview = doc.read_stream_limited("PreviewPNG", 16 * 1024 * 1024)?;
+doc.replace_stream("PreviewPNG", preview)?;
+std::fs::write("copy.sldprt", doc.to_bytes()?)?;
+```
+
+Run `cargo test` for the owned native fixtures and malformed-input tests.
+Test builds use optimization level 1 while retaining debug assertions and integer
+overflow checks; see the [test profile measurements](docs/features/model-archives/test-performance.md).
+`cargo xtask pr` runs formatting, clippy, build, tests, and documentation examples.
+Run `cargo fmt --all -- src/model_archives/test_modules.rs` to format the private
+model suites as well; both validation gates check that included registry explicitly.
+`cargo xtask full` currently runs those same gates across the CI platform matrix.
+The Linux full check also runs `cargo xtask tsan` with the pinned nightly and
+`rust-src`, instrumenting dependencies and the standard library as well as Bessemer.
+See [container evidence and remaining work](docs/features/container/README.md).
+The [compressed-block evidence](docs/features/compressed-blocks/README.md) records
+the implemented carrier contract and its verification limits.
+See [version-history evidence](docs/features/version-history/README.md) for archive
+coverage and the installed-corpus verification.
+See [header archive evidence](docs/features/header-archives/README.md) for field
+coverage, version boundaries, graph preservation, and remaining limits.
+The [forming-tool evidence](docs/features/forming-tools/README.md) records the
+shared-map inline-header and forming-tool readers, embedded edits and the
+906-configuration reconstruction gate.
+The [stored node-state API](docs/features/model-node-state/api.md) projects named
+update bits and class-scoped parameter flags from complete part configurations
+and resolved-feature archives. Selected-bit edits preserve other fields and bits
+and return the existing complete archive validation and structural history.
+Stored flags remain separate from effective native predicates and setter cascades.
+The [stored parameter API](docs/features/stored-parameters/README.md) reads both
+name pointers and exact primary/alternate values from complete part configuration
+and resolved-feature archives. Typed value edits preserve floating-point bits,
+CString framing and unselected fields, with revision checks and complete archive
+history. Stored alternates remain separate from evaluated effective values.
+The [stored entity visual API](docs/features/entity-visual-state/api.md) projects
+layer/style, ByLayer, cache, color and raw width values from complete part/assembly
+configurations, resolved part feature archives and physical component visuals from display and
+drawing-bucket archives. Revision-bound edits preserve unselected words and bits
+and return the existing complete archive validation and history report.
+
+The [stored dimension API](docs/features/dimension-stored-state/api.md) projects
+the bend-angle flag, fillet reference-point change number and signed redundant
+identifier from direct or nested dimension bases. Isolated stored-value edits
+preserve raw mask bits, other fields and the existing complete archive history.
+The [stored intersection-reference API](docs/features/intersection-reference-match/api.md)
+projects signed span-count and backward-offset states from complete ordinary
+part resolved-feature archives. Revision-bound span/offset edits preserve the
+saved selector, raw20, references and all other fields, with complete history.
+The [classification-selector API](docs/features/intersection-index-classification/api.md)
+also reads and edits the saved u16 selector without evaluating native matching.
+Its [edge-index API](docs/features/intersection-index-classification/api.md)
+preserves arbitrary signed handle-array indices without building correspondence maps.
+The [assembly configuration API](docs/features/assembly-configurations/README.md)
+reads, constructs, edits and writes complete ordinary assembly and routing
+configurations. All 180 reference-readable modern configurations reconstruct
+exactly. Its context keeps the actual root kind and header import map; routing
+trailers stay outside the resolved section.
+The [Composer container API](docs/features/composer-containers/README.md) supports
+complete SMG ZIP32 carriers, new-member construction and isolated payload edits.
+It preserves unrelated compressed members, extra fields and comments. Member
+scene, geometry and application schemas remain separate work.
+The [Composer packed-array API](docs/features/composer-arrays/README.md) reads,
+constructs and edits complete vector and index blocks with explicit caller
+context, preserved numeric patterns and exact wire validation. Floating-point
+reconstruction is available through the explicit
+[versioned numeric profile](docs/features/composer-vectors/README.md), with exact
+component patterns and native control-state exclusions. Whole scene semantics
+remain separate work.
+The [Composer geometry-stream API](docs/features/composer-scenes/README.md)
+reads, constructs, edits and writes complete gzip scenes with named typed fields,
+explicit texture-import context and derived bounded sizes. All 38 installed
+streams reconstruct exactly; native application and project semantics remain
+separate acceptance requirements.
+The [Composer XML/geode index](docs/features/composer-links/README.md) retains
+every exact local identifier candidate and supports isolated lexical reference
+edits. It preserves ambiguous and unmatched outcomes; runtime resolution and
+complete project semantics remain separate requirements.
+The [Composer supplied-state reference API](docs/features/composer-references/README.md)
+provides exact UTF-16 splitting, lexical file keys, null-aware geode maps and
+ordered lookup fallbacks. External file resolution and graph effects remain
+explicitly unchecked.
+The [biography evidence](docs/features/biography-archives/README.md) covers stored
+environment observations and repeated-string reading and writing.
+See [Parasolid transmit evidence](docs/features/parasolid-transmit/README.md) for
+schema inputs, field coverage, complete-corpus reconstruction, and acceptance limits.
+The [face tessellation evidence](docs/features/face-tessellations/README.md) records
+version coverage, directory links, independent vectors, and native corpus checks.
+See [DIB preview evidence](docs/features/dib-previews/README.md) for image formats,
+pixel semantics, limits, and independent decoder checks.
+The [Inspection project evidence](docs/features/inspection-projects/README.md) covers
+embedded add-in XML, all observed paths and complete drawing Job Number edits.
+The [XML metadata evidence](docs/features/xml-metadata/README.md) covers all 17
+stream families, namespace-aware property views, lexical edits and corpus checks.
+The [PNG preview evidence](docs/features/png-previews/README.md) covers chunk
+preservation, ancillary copy rules, full pixel formats, and corpus verification.
+The [part configuration API](docs/features/model-archives/public-api.md) provides
+complete ordinary modern-part reading, typed construction, isolated edits and
+writing with exact coverage and field history. The [codec evidence](docs/features/model-archives/plan.md)
+records independent fixtures and reconstruction of 906 native configurations.
+
+The [resolved-feature API](docs/features/resolved-features/public-api.md) reads
+and edits supported complete separate feature streams with their inherited
+model map, CMgr helper state and revision-bound field history. Supported
+[detail folders](docs/features/detail-folders/README.md) include their graphics
+buckets and display-item payloads. Supported
+[reference axes](docs/features/reference-axes/README.md) retain their derived
+data and shared references. Documented
+[line-reference fields](docs/features/line-reference-roles/README.md) accept
+both ordinary lines and temporary-axis derivatives. Unsupported layouts fail
+explicitly; full SolidWorks schema parity remains in progress.
+
+[Mirror patterns](docs/features/mirror-patterns/README.md) reuse the common
+pattern codec and retain tagged/direct plane fields and shared face references
+through complete reads, isolated edits and reconstruction.
+
+[Shell features](docs/features/shell-features/README.md) retain all six tagged
+references, full flag bytes and unequal list lengths through the same API.
+
+[Circular patterns](docs/features/circular-patterns/README.md) preserve shared
+dimensions, ordered integer collections and versioned geometry tails.
+
+[Hole Wizard features](docs/features/hole-wizard/README.md) preserve parameter
+strings, compatibility words, shared dimensions and direct slot-axis bodies.
+
+[Imported and base-body features](docs/features/imported-bodies/README.md) retain
+external body names, explicit typed inline partitions and signed vectors.
+
+[Extruded reference surfaces](docs/features/extruded-surfaces/README.md) retain
+ordered-face groups, required end specifications and concrete keeper identities.
+
+[Ordinary-part sweeps and sweep cuts](docs/features/sweeps/README.md) preserve conditional
+dimensions, versioned controls and complete shared reference dependencies.
+[Schema-1 bidirectional sweep twists](docs/features/sweep-twist/README.md) retain
+the full raw byte and both stored double bit patterns in modern ordinary-part contexts.
+
+[Toolbox specifications](docs/features/configuration-toolbox/README.md) retain
+shared metadata items, raw string framing and exact floating-point bits.
+
+[Dome features](docs/features/domes/README.md) preserve nullable dimensions,
+tagged lists, shared geometric references and raw signed words.
+
+[Reference-axis owners](docs/features/reference-axis-owners/README.md) retain
+verified axis self references in populated atom choosers.
+
+[Component geometry](docs/features/component-geometry/README.md) preserves
+component-axis and component-point identities, geometry and feature ID/time words.
+
+[Reference points](docs/features/reference-points/README.md) retain all seven
+documented data variants, required data tags and shared geometry references.
+
+[Connection and route points](docs/features/connection-points/README.md) retain
+direct configurable parameters, compatibility values and shared line/dimension references.
+
+[Feature comments](docs/features/feature-comments/README.md) preserve direct lists,
+shared text items, raw kinds, ordered extra members and four-byte time values.
+
+[Coordinate systems](docs/features/coordinate-systems/README.md) retain numeric
+axis order, equality-based selectors, direct arrays and exact vector bits.
+Their [shared component geometry roles](docs/features/component-coordinate-systems/geometry-roles.md)
+also accept documented fresh and cached coordinate-system targets.
+[Component coordinate-system references](docs/features/component-coordinate-systems/README.md)
+retain their inherited feature fields, geometry identities and fixed transform words.
+[Base flanges](docs/features/base-flanges/README.md) preserve selected directions,
+shared sketch handles and direct bend-group records.
+[Flat patterns](docs/features/flat-patterns/README.md) preserve direct bounding boxes,
+ordered pairs and typed raw compressed kernel bodies.
+[Fold folders and transforms](docs/features/fold-transforms/README.md) preserve
+typed transforms, shared property records and direct byte arrays.
+[Blends and blend cuts](docs/features/blends/README.md) preserve independent counts,
+numeric columns and conditional direction and dimension references.
+[Reference-plane point roles](docs/features/plane-point-roles/README.md) accept
+the documented point-reference family while retaining unrelated-class rejection.
+[Weldment features](docs/features/weldments/README.md) preserve direct custom-property
+lists, duplicate records and original stored expressions.
+[Structural members](docs/features/structural-members/README.md) preserve full-width
+point metadata, signed contour modes and complete shared contour/index graphs.
+[Reference dimensions](docs/features/reference-dimensions/README.md) preserve entity
+kind words, optional vectors, complete sketch handles and direct dimension planes.
+[Radiated-edge identifiers](docs/features/radiated-edge-identifiers/README.md)
+preserve inherited references and shared entity-representation identities.
+[End-specification point roles](docs/features/end-spec-point-roles/README.md)
+accept the verified point family in extrusion and revolution ends.
+[Spline controls](docs/features/spline-controls/README.md) retain direct handle
+records and complete sketch user-object identities.
+[Shared sketch handles](docs/features/shared-sketch-handles/README.md) support
+documented parabola and parametric-surface handles through the existing codec.
+[Sketch geometry backups](docs/features/sketch-geometry-backups/README.md) preserve
+parabola segment prefixes, raw cylinder records and their shared handle types.
+[Draft features](docs/features/drafts/README.md) preserve signed presence words,
+direct identifier keepers, strided payloads and counted face/point collections.
+[Draft surface identifiers](docs/features/draft-surface-identifiers/README.md)
+retain full signed words and distinct identifiers with shared feature references.
+[Face-blend items](docs/features/face-blend-items/README.md) preserve pair identity,
+typed face/edge references and optional point bits.
+[Revolved surfaces](docs/features/revolved-surfaces/README.md) retain inline
+surface bodies, shared angular dimensions, data words and keeper identity.
+[Helices](docs/features/helices/README.md) preserve typed kernel wires, variable
+pitch arrays, conditional dimension tables and wire-edge identifier identity.
+[Component-reference curves](docs/features/component-reference-curves/README.md)
+retain shared unit-component targets, wrapper aliases and signed ID/unsigned time pairs.
+[Cut-list folders](docs/features/cut-list-folders/README.md) retain inherited
+folder layers, direct properties, raw flags and shared tagged references.
+[Weld corners](docs/features/weld-corners/README.md) retain independent arrays,
+complete trimming data, raw scalars and the versioned late word.
+[Solid references](docs/features/solid-references/README.md) retain wrapper
+identity, signed body presence, typed kernel bodies and direct attributes.
+[Mirrored solids](docs/features/mirror-solids/README.md) retain independent
+planes and arrays, shared matrix helpers and unsigned-array records.
+[Combine and delete bodies](docs/features/combine-bodies/README.md) retain
+complete payloads, shared body targets and raw versioned options.
+[Thickening](docs/features/thickening/README.md) retains shared dimensions,
+versioned directions and complete constant/component surface-reference layers.
+[Surface cuts and trims](docs/features/surface-operations/README.md) retain
+direct chooser ownership, allocated-data wire members and shared references.
+[Trim-edge identifiers](docs/features/trim-edge-identifiers/README.md) retain
+complete source representations and direct entity-ID members for both sides.
+[Trim-wire and pattern-body edge identifiers](docs/features/frontier-edge-identifiers/README.md)
+retain native-bound layouts, shared references and direct entity-ID members.
+[Lock/environment features and pattern/fillet helpers](docs/features/frontier-feature-helpers/README.md)
+retain inherited bodies, raw item bits and unqualified radius-object pointers.
+[Net blends and component groups](docs/features/net-blends/README.md) retain
+direct curve-set bodies, independent point counts, shared contacts and thin dimensions.
+[Sketch external references](docs/features/sketch-wrapper-roles/README.md) accept
+the existing finite wrapper family through fresh and cached pointers.
+[Sew-reference surfaces](docs/features/sew-surfaces/README.md) retain five direct
+arrays, raw flag words, double order and inherited empty keepers.
+[End-specification wrapper roles](docs/features/end-spec-wrapper-roles/README.md) accept
+the reviewed wrapper family at conditional, starting-end and revolution fields.
+[Sketch-intersection wrapper roles](docs/features/intersection-wrapper-roles/README.md)
+accept the same reviewed family at all four fields through fresh and cached references.
+[Valued-dimension fixed transforms](docs/features/fixed-valued-transforms/README.md)
+retain the full presence word and thirty raw archive words before the derived suffix.
+[Additional valued dimensions](docs/features/additional-valued-dimensions/README.md)
+retain native spline-tangent, arc-length and plane-distance identities in shared collections.
+[Sketch isocurve information](docs/features/sketch-isocurve-information/README.md)
+retains twenty-byte numeric records, raw ratio bits and shared external-entity references.
+[Deleted-face features](docs/features/deleted-faces/README.md) retain independent
+nullable arrays, unsigned DWORDs and shared nested data.
+[Composite curves](docs/features/composite-curves/README.md) retain strict kernel
+frames, shared tagged arrays and independent direct object/DWORD arrays.
+[Ruled surfaces](docs/features/ruled-surfaces/README.md) retain direct owned data,
+inline surface frames, shared dimensions and independent WORD/object arrays.
+[Thin extrusion and revolution features](docs/features/thin-extrusions/README.md) retain
+shared specifications, independent dimensions and fixed-width bend triples.
+[Three-point plane references](docs/features/three-point-plane-roles/README.md) accept
+the reviewed point family at all three fields while retaining shared identities.
+[Constraint-plane families](docs/features/constraint-plane-families/README.md) retain
+complete data/interface/geometry bodies, shared targets and raw/native flag views.
+[Projected-line subtypes and surface wrappers](docs/features/projected-line-subtypes/README.md)
+retain required owners, nullable arrays, tagged lists and exact floating-point bits.
+[PLine silhouette edge identifiers](docs/features/silhouette-edge-identifiers/README.md)
+retain direct source identities and both signed suffix words.
+[Split features and items](docs/features/split-features/README.md) retain direct
+owned arrays, positive kernel bodies, fixed transforms and separate raw/native map views.
+[Sweep-reference surfaces](docs/features/sweep-reference-surfaces/README.md) retain
+signed edge sequences, direct sweep data and independent conditional dimensions.
+[Copy, trim/extend and reference edge identifiers](docs/features/copy-trim-edge-identifiers/README.md)
+retain direct source IDs, native map accounting and signed words.
+[Filled surfaces and curve contacts](docs/features/filled-surfaces/README.md) retain
+direct keeper arrays, one-byte fields and ordered contact references.
+[Offset surfaces](docs/features/offset-surfaces/README.md) retain complete inline
+surface payloads, required data, signed array presence and empty keepers.
+[Reference curves](docs/features/reference-curves/README.md) retain complete
+body-feature layouts, cached-array branches and versioned kernel-body lists.
+[Component curves and blend-reference surfaces](docs/features/blend-reference-surfaces/README.md)
+retain exact native spellings, shared direct blend data and raw surface bytes.
+[Sheet metal](docs/features/sheet-metal/README.md) preserves saved helper state,
+direct allowances, raw strided payloads and fixed-face references.
+[Material thickness ranges](docs/features/sheet-material-ranges/README.md) retain
+complete material parameters, table names and direct 37-byte range records, with
+isolated stored-field edits and exact document reconstruction.
+[Stored spline equation state](docs/features/spline-equation-state/README.md)
+exposes the six saved string roles, full signed option and equation-path endpoint
+lock bits. Typed edits preserve unrelated stored fields and use complete archive
+validation; they do not run the native equation setter or evaluate expressions.
+[Resolved root snapshots](docs/features/resolved-root-graph/README.md) expose every
+stored root, including nulls and aliases, with local or inherited target
+identities. They preserve physical provenance without inferring dependency order
+or geometry.
 
 
 This library is named after Sir Henry Bessemer (1813–1898) an English engineer, inventor, and entrepreneur 
@@ -14,3 +600,546 @@ name, contributing innovations in fields ranging from steamship design and sugar
 furnaces and the manufacture of bronze powder. His pioneering process laid the material foundation for the 
 Second Industrial Revolution, enabling the modern expansion of railways, bridges, ocean liners, 
 and skyscrapers worldwide.
+
+Display archives provide `object_handle` and `resolve_object` for revision-scoped
+object lookup. Clones and equivalent edits retain handles; changed edits and
+fresh decodes require new handles. See the [identity contract](docs/features/display-lists/revision-identities.md).
+
+Display-list CObject graphs also retain shared line-style definitions and versioned layer maps; see the [UI object coverage](docs/features/display-lists/ui-objects.md).
+
+Component-property objects and holders retain their embedded fonts, visibility fields, occurrences and shared references; see the [component-property coverage](docs/features/display-lists/component-properties.md).
+
+`DisplayArchiveContext::from_document` resolves exact display-version markers and external component declarations with explicit native file and tessellation versions. See [document context resolution](docs/features/display-lists/document-context.md).
+
+`DisplayArchive::check_external_face_links` checks named cache blocks and resolves requested external facets with explicit coverage. See [external face links](docs/features/display-lists/external-face-links.md).
+
+Cone-reference framing and its surface-axis callers are documented in
+[cone references](docs/features/cone-references/README.md).
+
+[Surface identifier variants](docs/features/surface-identifier-variants/README.md)
+describes exact top-surface and end-cap chamfer representation framing.
+
+[Display welds](docs/features/display-welds/README.md) covers the complete
+display-item base, native weld suffix and preserved payload identities.
+
+[Component-detail references](docs/features/component-detail-references/README.md)
+documents exact detail bodies and verified current-part ownership.
+
+[Weld symbols](docs/features/weld-symbols/README.md) documents constructor-bound
+direct texts, surface-finish gates and cosmetic attachment subtype identities.
+
+[Attachment records](docs/features/attachment-records/README.md) distinguishes
+attachment data from inherited parametric attachment points.
+
+[Cosmetic weld cut lists](docs/features/cosmetic-weld-cut-lists/README.md)
+documents the complete reference-curve parent and native suffix order.
+
+[Cosmetic weld tree](docs/features/cosmetic-weld-tree/README.md) covers direct
+endpoint ownership, bead kernel bodies and signed wire-map lists.
+
+[End caps](docs/features/end-caps/README.md) documents the complete body-feature
+parent, native pointer order and preserved shared dimensions.
+
+[Weldment finishing](docs/features/weldment-finishing/README.md) covers complete
+gusset extrusions, ordinary weld-bead features and shared side data.
+
+[Absolute plane data](docs/features/absolute-plane-data/README.md) documents the
+shared non-default plane layout and its typed containing-plane role.
+
+[Edge flanges](docs/features/edge-flanges/README.md) covers complete edge-flange,
+single-bend and per-edge records, including verified saved sheet-metal state.
+[OneBend raw bodies](docs/features/one-bend-raw-bodies/README.md) supports positive
+body lists and signed optional bodies with an explicit kernel schema and limits.
+[Conic bend data](docs/features/conic-bend/README.md) preserves complete
+schema-1 point/vector/scalar records and signed byte-backed words inside
+OneBend documents, including shared identities and fresh edit reversals.
+
+[Sheet-metal folds](docs/features/sheet-folds/README.md) documents complete 3D bends,
+folds and unfolds, including raw compressed bodies and ordered maps.
+
+[Sheet-metal corners and hems](docs/features/corner-hems/README.md) covers directly
+owned hem data, independent arrays, chain identities and saved helper layouts.
+
+[UI bends](docs/features/ui-bends/README.md) covers both saved layouts, direct ruled
+lines, signed count preservation and versioned sketch-line records.
+
+[Flatten and process bends](docs/features/flatten-bends/README.md) covers containing
+node flags, signed presence and strict raw bodies.
+[Feature states](docs/features/feature-states/README.md) documents the scoped
+two-word state records and independent edits.
+
+[Jogs and break corners](docs/features/jog-corners/README.md) covers stored presence,
+direct owned keepers, tagged arrays and independent version gates.
+
+[Version-18000 configuration managers](docs/features/legacy-owned-managers/README.md)
+documents explicit dialect selection and independently decoded historical streams.
+
+[Display notes](docs/features/display-notes/README.md) covers internal note components,
+generic text, direct paragraphs and shared text-list identities.
+
+[Stock features](docs/features/stock-features/README.md) covers stock and mirrored-stock
+records, body-reference collections and component-body transforms.
+
+[Derived-feature references](docs/features/derived-feature-references/README.md)
+cover versioned point presence, direct shared arrays and surface-body aliases.
+
+[Move/copy bodies](docs/features/move-copy-bodies/README.md) cover nested payloads,
+mesh tolerances and the documented conformal-deformation branches.
+
+[Selection sets](docs/features/selection-sets/README.md) cover node-based sets,
+selection items, direct lists and shared comment and wrapper identities.
+
+[Sketch bitmaps](docs/features/sketch-bitmaps/README.md) cover feature and data
+records, bounded raw byte planes and conditional compact transforms.
+
+[Sketch bends](docs/features/sketch-bends/README.md) cover complete inherited
+One Bend records and tagged stored handles. The explicit
+[canonical kind-7 profile](docs/features/sketch-bend-owned/README.md) adds direct
+ruled-grid data and strict trailing raw frames while preserving default stops.
+
+[Mitered flanges](docs/features/mitered-flanges/README.md) cover direct object and
+DWORD collections and four sketch-associated handle groups.
+
+[Stored curve files](docs/features/curve-files/README.md) cover inherited kernel
+wires, verbatim filenames, signed point counts and bit-preserving coordinates.
+
+[Extended surfaces](docs/features/extend-surfaces/README.md) cover inline surface
+bodies, direct lists, empty keepers and end-condition-dependent pointers.
+
+[Punch records](docs/features/punches/README.md) cover internal revisions, bounded
+dynamic arrays, ordered extension tags and legacy direct keeper data.
+
+[Mold parting-line archives](docs/features/mold-parting-line/README.md) preserve
+shared edge/split-info records, signed flags and counted kernel frames, with
+explicit kernel schemas and isolated stored-field edits.
+[Mold parting-geometry archives](docs/features/mold-parting-geometry/README.md)
+preserve inline surfaces, direct settings and constructor-dependent child
+graphs, including shared connected-component records and exact numeric bits.
+[Mold core/cavity archives](docs/features/mold-core-cavity/README.md) preserve
+complete feature/data graphs, shared body lists and dimension pointers, with
+exact carrier reconstruction and isolated stored-setting edits.
+[Body extensions](docs/features/body-extensions/README.md) cover cavities,
+transformed stock and sketch holes through their complete inherited bodies.
+
+[Feature edits](docs/features/feature-edits/README.md) cover move-face records,
+compact transforms and bending data with direct arrays and packed raw words.
+
+[Mid-surfaces](docs/features/mid-surfaces/README.md) cover inline and external
+sheet framing, directly owned keepers, face arrays and shared face/edge pairs.
+
+[Manager scalars](docs/features/manager-scalars/README.md) cover sheet-metal
+feature-ID pairs and custom material values in their complete CMgr maps.
+
+[Template dependencies](docs/features/template-dependencies/README.md) cover
+the template flat-pattern alias and both gusset corner surface-ID variants.
+
+[Mates and sections](docs/features/mate-planes/README.md) cover concentric mates,
+direct plane-section geometry, strict collections and serialized section bodies.
+
+[Standalone Inspection envelopes](docs/features/standalone-inspection/README.md)
+cover current encrypted templates and historical projects, exact XML preservation
+and immutable complete-XML replacement.
+Its [ordered record views](docs/features/inspection-records/README.md) retain
+literal document, group, characteristic, measurement and custom-property
+occurrences, with isolated edits to existing unqualified attribute text.
+Its [source identity comparison](docs/features/inspection-source-identity/README.md)
+checks caller-supplied bytes against stored size/checksum text and retains
+explicit completion, coverage and document provenance.
+Its [relationship views](docs/features/inspection-relationships/README.md) expose
+ordered load attempts, first-insertion entries and the writer's empty-key filter
+under an explicit DOM retention policy, while preserving the original envelope.
+
+Library-feature configuration, cross-reference and atom-ID interoperability is
+documented in [the feature evidence](docs/features/library-features/README.md).
+
+Sculpt-feature and edge-identifier interoperability is documented in
+[the sculpt evidence](docs/features/sculpt-features/README.md).
+
+Saved external unit-component interoperability is documented in
+[the external-unit evidence](docs/features/external-unit-components/README.md).
+
+Alignment groups, order dimensions and sketch-text kernels are documented in
+[the alignment evidence](docs/features/alignment-groups/README.md).
+
+Table, sketch and dimension patterns retain their complete inherited bodies,
+raw transform arrays, signed regeneration records and shared identities; see
+[the pattern-extension evidence](docs/features/pattern-extensions/README.md).
+
+Text borders, symbols, pattern-count dimensions and handles, and thread-instance
+records preserve their complete bodies; see
+[the annotation-extension evidence](docs/features/annotation-extras/README.md).
+
+Smart-component features retain their complete folders, items, direct sensor maps
+and shared owner identities; see
+[the smart-component evidence](docs/features/smart-components/README.md).
+
+Modern configuration-manager 3D views retain complete base records and direct
+annotation groups; see
+[the 3D-view evidence](docs/features/three-dimensional-views/README.md).
+
+Deform features retain both matching passes, independent stored geometry versions
+and complete curve-point references; see
+[the Deform evidence](docs/features/deformations/README.md).
+
+Configuration visual maps preserve ordered keys and complete direct appearance
+bodies without adding object tags or identities. See
+[the visual-map evidence](docs/features/configuration-visual-maps/README.md).
+
+PhotoWorks material managers preserve complete property records, direct lists,
+shared unit references and original stored paths. See
+[the material evidence](docs/features/photoworks-materials/README.md).
+
+Configuration decals preserve complete parameter records, nested association
+arrays and scoped reference graphs. See
+[the decal evidence](docs/features/configuration-decals/README.md).
+
+Version-11000 configuration managers retain their exact owned-object, scene and
+suffix layouts alongside the reviewed 18000 and 19000 dialects. See
+[the intermediate-manager evidence](docs/features/intermediate-managers/README.md).
+
+Simulation GEN node-group diagnostics retain signed tags, contiguous stored-order runs and source node identities, including inactive nodes and shared cross-tag references. See [node-group evidence](docs/features/simulation-node-groups/README.md).
+
+Plastics USD records retain opaque narrow bytes, raw UTF-16 units, noncanonical count prefixes and bounded u64 counts. Complete writer-grammar projections and isolated exact record edits preserve source identities and history. See [the USD evidence](docs/features/plastics-usd/README.md).
+
+Conditional flat Simulation EGR tables preserve loaded widths, live/deleted/unallocated states and every original byte. Typed field edits, solver-name states, descriptor proposals and integer EGROUP projections retain their explicit scope. See [the EGR evidence](docs/features/simulation-egr/README.md).
+
+Simulation logical storage lookup preserves raw UTF-16 names and the exact whole-input last-dot `.CWR`/stream split, without filesystem or COM calls. See [the locator evidence](docs/features/simulation-storage-locator/README.md).
+
+Cosworks persistence retains null/empty/odd text frames, complete study lists, explicit primary version modes and observed legacy suffixes. Exact reconstruction and isolated study-text edits preserve bytes, identity and history. See [the persistence evidence](docs/features/cosworks-persistence/README.md).
+
+Simulation LBC Property preserves version-selected and fixed writer layouts, exact signed words, runtime member order and isolated field edits. Documented version/layout mismatches remain explicit errors. See [the LBC Property evidence](docs/features/simulation-lbc-property/README.md).
+
+Simulation counted version arrays and UniqueIds tables retain signed values, duplicates, ordering and original headers. Explicit profiles, resource limits and isolated field edits preserve complete byte images and history; allocation capacity stays metadata. See [the scalar-table evidence](docs/features/simulation-persistent-scalars/README.md).
+
+Simulation LBC name-order lists and legacy three-group maps preserve complete text frames, signed record words and counts. Exact constructors and isolated edits retain byte images, identities and ordered history. See [the final LBC stream evidence](docs/features/simulation-lbc-final-streams/README.md).
+
+Direct Simulation BeamManager and MassElementManager Property headers retain explicit version context, signed words and their documented runtime destination order. Complete construction and isolated edits preserve exact bytes and field history. See [the direct manager-header evidence](docs/features/simulation-manager-property/README.md).
+
+Simulation ParameterSets preserve complete version-selected headers, tables, record texts and raw double bits, including explicitly allowed arrays beyond native retention. Complete construction and isolated typed-field edits retain exact byte images and ordered history. See [the ParameterSets evidence](docs/features/simulation-parameter-sets/README.md).
+
+Simulation embedded archives use explicit modern and legacy version profiles, independently of the outer Simulation version. The declared 61 reference classes and all five binary thermal collections preserve historical layouts through exact reads, construction and isolated typed edits. Edit results retain source/replacement history and exact validation coverage. The full local validation gate passed; platform integration remains pending. See [the embedded archive and thermal evidence](docs/features/simulation-binary-thermal/README.md).
+
+Gravity, CentriFugal and BaseExcitation collections have local reads, complete construction and isolated typed edits through their historical gates. Results retain raw fields, explicit limits and source/replacement history. Complete corpus and local-gate checks passed; platform integration remains pending. See [the inertial load evidence](docs/features/simulation-inertial-loads/README.md).
+
+MassElement child `Property` has local complete single-body reads, construction and typed edits, preserving raw scalar/text fields and its exact selector/pair gate. Independent fields, complete edit/history exports, malformed inputs and exact limits match all owned and retained native contexts; the full local gate passed and exact-head platform integration remains pending. See [the mass-element Property evidence](docs/features/simulation-mass-element-property/README.md).
+
+Study-manager Simulation `Material` has local complete reads, construction and explicit bounded-prefix operations. Every accepted retained argument matches independent field projections; raw text and interleaved pairs remain unchanged. Isolated typed edits match complete independent history expectations, malformed-input outcomes and exact resource limits; concurrent edits match serial results. The full local gate passed; platform integration remains pending. See [the Material evidence](docs/features/simulation-material/README.md).
+
+Simulation beam child `Property` bodies preserve complete reference containers,
+signed two-byte fields, unsigned words, raw doubles/text, counted triples and
+historical helpers. Complete construction and isolated edits retain revision-bound
+identities and ordered outer/nested history. Focused/native and independent
+reference checks and the full local gate pass; platform integration is pending. See
+[the beam Property evidence](docs/features/simulation-beam-property/README.md).
+
+Separate Simulation JointGroup, Joint and JointList bodies preserve signed IDs,
+ordered duplicate neighbor pairs, historical reference gates and explicit optional
+child-count agreement. BeamFolder word/text headers have static/synthetic support;
+no native folder fixture is claimed. Complete construction and isolated edits
+retain all outer/nested parents. Focused/native checks and the full local gate pass; platform
+integration remains pending. See [the joint/group evidence](docs/features/simulation-beam-groups/README.md).
+
+The combined BeamManager corpus gate freshly replays all 1,080 retained payload
+identities /620,654 logical bytes through all six typed payload families together,
+preserving 1,114 candidate arguments including 30 rejected alternatives. Exact
+identity manifests and complete validated construction/write checks pass locally;
+the full local gate passed; platform integration remains pending. See
+[the combined BeamManager evidence](docs/features/simulation-beam-inventory/README.md).
+
+Direct SolidManager `Property` headers preserve all five version gates, signed
+words, both bounded raw-text lists and duplicate order. Complete construction
+and isolated edits retain revision-bound IDs and ordered history. Focused/native
+and independent Source checks plus the full local gate pass; platform integration remains pending.
+See [the SolidManager header evidence](docs/features/simulation-solid-manager/README.md).
+
+SolidManager component and folder headers use explicit body kinds and preserve
+raw text frames, signed words and historical gates through construction and
+isolated edits. Coverage distinguishes native-backed component grammar from
+static folder evidence, including the explicit negative-count policy. See
+[the child-header evidence](docs/features/simulation-solid-children/README.md).
+
+SolidManager solid-body `Property` operations preserve inline persist-ID bytes,
+distinct embedded archive versions, raw text and floating bits through complete
+construction and isolated edits. Full independent field and ordered nested
+history checks cover owned and native contexts. See
+[the solid-body evidence](docs/features/simulation-solid-body/README.md).
+
+Inherited SolidManager sheet `Property` operations preserve the complete stored
+header through construction and isolated edits, including exact 4281 surface
+and plane-section continuations. Historical nested SurfaceBody trailers retain
+their separate unsupported scope. See
+[the inherited-sheet evidence](docs/features/simulation-sheet-property/README.md).
+
+Standalone `Component PersistID` operations preserve the separate component
+stream through complete construction and isolated edits, including explicit
+inner archive versions and ordered field history. See
+[the standalone persist-ID evidence](docs/features/simulation-component-persist-id/README.md).
+
+Separate `SurfaceBody` framing preserves declared versioned words, raw text and
+double bits through construction and isolated edits. Six historical partial
+word-pair streams remain typed failures. See
+[the SurfaceBody evidence](docs/features/simulation-surface-body/README.md).
+
+The combined SolidManager gate checks all 3,439 retained identities and all 3,730
+original version arguments across seven typed payload families. Six incomplete
+SurfaceBody occurrences remain errors within the denominator. See
+[the complete inventory evidence](docs/features/simulation-solid-inventory/README.md).
+
+Direct ShellManager headers and group records retain explicit reader/current-writer
+late-field profiles. Groups preserve MFC CString encodings/prefix widths and raw
+double bits under aggregate caller budgets. Complete construction and isolated
+edits retain exact bytes, identities and ordered history. Populated native group
+coverage remains unproven; see [the ShellManager evidence](docs/features/simulation-shell-manager/README.md).
+
+Separate CompositeFlipTurn and CompositeExtra streams support complete reads,
+construction and isolated typed edits. Explicit reader/writer profiles retain
+conditional fields, raw double bits, optional writer tails and delegated ID
+archives. The historical four-byte Extra remains an error; see
+[the composite evidence](docs/features/simulation-shell-composite/README.md).
+
+Shells and MidSurfShells Property bodies support complete reads, construction and
+isolated edits, including scoped inline Material fields and reference archives.
+Newest nonempty layers require explicit lookup-presence context. Their descriptor
+flags retain raw values and ordered bodies; see
+[the shell Property evidence](docs/features/simulation-shell-property/README.md).
+
+The combined ShellManager corpus gate binds all 936 retained stream identities
+and replays all 1,008 original version/profile arguments through typed codecs.
+It preserves 46 rejected arguments and the one incomplete historical payload;
+see [the combined ShellManager evidence](docs/features/simulation-shell-inventory/README.md).
+
+Study MeshControlManager headers and counted MeshControl records support complete
+reads, construction and isolated edits. Headers have explicit historical-reader/
+current-writer profiles; records retain their declared reader-version grammar.
+Their unresolved
+DocumentInfo candidate remains rejected under its original study-reader context;
+see [the MeshControl evidence](docs/features/simulation-mesh-control/README.md).
+
+Study `Mesh/Property` supports complete documented reads, construction and
+isolated edits with explicit versions. It preserves populated nested records,
+unassigned raw fields, and negative or duplicate integer-set keys;
+see [the Mesh Property evidence](docs/features/simulation-mesh-property/README.md).
+
+Results root, category and plot `Property` bodies support complete reads,
+construction and isolated edits with explicit hierarchy and version contexts.
+Current root/category writer layouts remain separate from historical readers;
+see [the Results header evidence](docs/features/simulation-results-headers/README.md).
+
+`cwPostGraphParam` supports complete versioned reads, construction and isolated
+edits. Character-count strings retain raw code units and change length as one
+atomic value; unassigned eight-byte values retain their exact patterns. See
+[the graph parameter evidence](docs/features/simulation-post-graph/README.md).
+
+`SimulationLegacyPlot` reads, constructs and edits the historical named-plot
+helper, including both bulk layouts, all fixed fields and versioned counted
+texts. Its bounded wide-buffer views retain every byte after the first NUL.
+Helper completion remains separate from the caller-version gate and native
+runtime acceptance; see [the historical plot evidence](docs/features/simulation-legacy-plot/README.md).
+
+`SimulationPostInfo` supports the complete fixed-slot `DspPostInfo` helper with
+explicit version context, preserving all twelve slots independently of active
+counts. Version700002 alone carries an atomic character-text suffix with separate
+character, payload and aggregate budgets. See
+[the dialog helper evidence](docs/features/simulation-post-dialog/README.md).
+
+`SimulationPostStyle` supports the complete historical and modern `DspPostStyle`
+helper profiles, including the legacy style/legend partition, versioned color
+fields and atomic character text. It shares raw field/text representations with
+PostInfo and applies its own layout and explicit budgets; see
+[the dialog helper evidence](docs/features/simulation-post-dialog/README.md).
+
+
+`SimulationPostDialog` reads, constructs and edits complete versioned DGXPOST
+bodies. It retains atomic character text, opaque counted bytes, raw scalar bits
+and scoped reference archives, with explicit outer and embedded limits. Reads
+require EOF; isolated edits preserve every unselected field and report outer
+and nested provenance. Stored profiles do not establish application dispatch
+or geometry validity. See [the dialog evidence](docs/features/simulation-post-dialog/README.md).
+
+
+`SimulationPostDialog::range_view` selects the documented stored minimum and
+maximum patterns while retaining the original state and all four endpoints.
+`deformation_scale_view` retains both stored scale patterns and the signed
+selector, selecting literal float32 one for unrecognized selectors. These
+accessors preserve signed zero, subnormal and non-finite patterns without
+changing the document.
+
+
+`SimulationPostInfo::cut_primitive` exposes each of the twelve physical slots,
+with known primitive names and direction tokens, raw normal/center patterns,
+and the shared scalar's D sign-bit alias. Unknown codes remain unnamed and
+active-count words do not remove slots. `header_view` preserves all seven header
+words and exposes the bounded forward ContourType preference conversion.
+
+
+`SimulationPostInfoContourCode` retains raw codes and provides the documented
+forward, reverse and default preference conversions. Defaults accept explicit
+optional plot-type context; they do not inspect runtime objects or rewrite a
+document. `SimulationPostInfo::diff_ogl_render` compares the four stored header
+words selected by that named routine. It leaves cut primitives and active counts
+out of that bounded comparison.
+
+
+`SimulationPostDialog::colors` and `SimulationPostStyle::colors` expose outer
+stored RGBA colors with their structural paths and complete body spans,
+including legacy color regions. `SimulationRgbaColor` preserves all four scalar
+patterns and reconstructs exactly sixteen bytes. Its named-channel accessor
+returns numeric values only for finite patterns, preserving signed zero and
+subnormal values. The [preference-color projections](docs/features/simulation-post-dialog/preference-colors.md) keep initializer, explicit runtime applicability and raw alpha policy separate. Colors are not clamped or normalized; the separate [plot54 local plan](docs/features/simulation-post-dialog/plot54-color.md) records its alpha projection, and [element-segment local RGB reads](docs/features/simulation-post-dialog/segment-color.md) preserves the RGB consumer boundary; [conditional1DC RGB](docs/features/simulation-post-dialog/mode3-rgb.md) provides group-selection plans and isolated fixed-slot copies with explicit runtime facts.
+
+`legend_format_inputs` exposes present raw legend format controls on complete
+dialog and PostStyle snapshots. Its [local format plans](docs/features/simulation-post-dialog/legend-format.md)
+construct printf-style strings and select the bounded alternate branch from
+explicit runtime facts, retaining skipped assignments and missing inputs separately.
+Native numeric rendering and localization remain outside these operations.
+
+`legend_position_factors` exposes horizontal and vertical factors with exact raw
+bits, finite numeric views, source field IDs and absolute wire spans. The
+[position-factor evidence](docs/features/simulation-post-dialog/legend-position.md)
+retains conditional field absence and the native pixel-consumer qualifications.
+
+`legend_palette_inputs` preserves raw mapping, reversal, count and gray-enable
+words. Its [local dispatcher plans](docs/features/simulation-post-dialog/legend-palette.md)
+require only reached runtime facts and retain the fixed nine-slot framing,
+count-validity qualifications and unresolved destination algorithms.
+
+`legend_height_inputs` reads the raw cell-count multiplier. Its
+[height-product projection](docs/features/simulation-post-dialog/legend-height.md)
+combines that word with an explicit cell-height helper result using exact32
+wrapping arithmetic, retaining font, pixel and tick qualifications.
+
+`legend_yield_inputs` preserves all four D8 color words and raw reversal. Its
+[gray-call planner](docs/features/simulation-post-dialog/legend-yield.md) requires
+an explicit runtime split index and reached post-suffix rereads, retaining exact
+signed count forwarding, wrapped offsets and suffix-before-prefix call order.
+
+`legend_end_cell_inputs` preserves optional E8/EC words. The separate
+[`SimulationLegendEndCellRuntime::project_end_cell`](docs/features/simulation-post-dialog/legend-end-cell.md)
+requires actual read-time plot, flag and color facts, preserves short-circuit
+reads and copies RGB bits without consuming alpha or validating geometry.
+
+`legend_width_inputs` preserves optional B4 selectors. The separate
+[`SimulationLegendWidthRuntime::project_width_nearest_even`](docs/features/simulation-post-dialog/legend-width.md)
+requires actual entry font and selector facts, returns each exact binary32 stage
+under explicit nearest-even rounding, and retains native branch identities.
+
+`hidden_parts_migration_inputs` preserves the original version and stored 1F0.
+Its [legacy load projection](docs/features/simulation-post-dialog/hidden-migration.md)
+returns both derived runtime words and exact store coverage for versions
+700006..840007, retaining original values and leaving source bytes unchanged.
+
+[`legend_read_zero_assignments`](docs/features/simulation-post-dialog/legend-resets.md)
+selects only explicit reader zero stores from the existing version. It retains
+native member order and distinguishes unsupported raw-class versions from
+completed later profiles with no assignments, without changing stored words.
+
+[`legend_grouping_inputs`](docs/features/simulation-post-dialog/legend-grouping.md)
+preserves the optional raw C0 locale-grouping control. Nonzero values enable
+conditional grouping; locale characters and exact rendered strings remain
+runtime facts.
+
+[`legend_preference_inputs`](docs/features/simulation-post-dialog/legend-inverse.md)
+preserves optional A8 and projects the lossy preference word0 zero test.
+`SimulationLegendPreferenceRuntime::project_local_a8_assignment` requires explicit
+runtime plot/preference facts and preserves the setter's early-return branches.
+
+[`style_comparison_state`](docs/features/simulation-post-dialog/style-comparison.md)
+preserves optional style/legend facts. Its `compare_masked_exceptions_daz_off`
+operation follows the complete native dependency order, reports the first
+difference and retains both source states without applying load-time defaults.
+
+`legend_step_inputs` preserves the optional FC layout switch. The separate
+[`SimulationLegendStepRuntime::step_availability`](docs/features/simulation-post-dialog/legend-step.md)
+operation requires explicit runtime plot words, retains raw signed BEC returns
+and records the reached word reads without deriving availability from FC.
+
+`project_step_layout` computes the [local layout integers](docs/features/simulation-post-dialog/legend-step-layout.md)
+from explicit enable, point, size, range and post-helper facts. It preserves
+signed32 wrapping, exact division by20 and the separate FC reread without
+claiming complete rendering or valid pixels.
+
+`project_3d_body_requests` retains temporary buffer-size and drawing-call
+decisions from an entry count and explicit later count. The separate
+[`project_background_nearest_even`](docs/features/simulation-post-dialog/legend-3d.md)
+projection keeps packed color, precision-at-read and lighting facts explicit;
+both return local requests without allocating buffers or validating rendering.
+
+
+`SimulationRgbaColor::from_colorref_nearest_even` models the packed constructor:
+the low three bytes supply RGB and alpha becomes one. The high byte is ignored.
+`assigned_colorref_nearest_even` models the separate assignment overload and
+preserves every existing alpha bit. Integer rounding reproduces the specified
+binary32 nearest-even model independently of ambient floating-point state. These
+supplementary values leave the original stored color available to the caller.
+
+
+`SimulationRgbaColor::colorref_nearest_even` provides the documented conditional
+packed export. RGB multiplication, signed truncation and low-byte wrapping use
+integer arithmetic; alpha is ignored. The outcome retains the original color
+and either a packed value or a typed channel/domain exclusion. Nonfinite,
+nonzero subnormal and overflowing/out-of-range RGB inputs produce no packed
+value under this model.
+
+Canonical stored sketch-reference configuration keys are available through `sketch_reference_lookup_states()` and `edit_sketch_reference_lookup_keys()`. These operations preserve full signed object/record keys without runtime lookup or STORE-time sentinel projection. See [the feature contract](docs/features/sketch-reference-configuration-keys/README.md).
+
+Stored bitmap transparency settings expose full signed has-transparency, level and type values through `bitmap_transparency_states()` and isolated `edit_bitmap_transparency()` operations. See [the feature contract](docs/features/bitmap-transparency/README.md) for the qualified scope and validation status.
+ThreadSanitizer CI runs the complete library and integration test targets across
+eight deterministic partitions. Every partition instruments the library,
+dependencies and standard library; native-input exclusions remain unchanged.
+All eight partitions must succeed before the four full platform gates run.
+PR/full gates bound transient test artifacts by omitting test debug information
+and incremental caches. Assertions, overflow checks and the complete workload
+remain enabled. See [the storage policy](docs/features/ci-build-storage/README.md).
+`cargo xtask tsan` retains the complete local run. A matching local partition is
+`cargo xtask tsan --shard 0/8` on Linux x86_64. The planner rejects custom Cargo
+target layouts instead of silently dropping targets.
+
+Stored bitmap matching-color, transparent-color and ink-markup settings are
+available through `bitmap_appearance_states()` and `edit_bitmap_appearance()`.
+Values retain their full signed or unsigned width; historical archives can
+omit the ink-markup word. See [the appearance contract](docs/features/bitmap-appearance/README.md).
+
+`bitmap_resource::BitmapResourceArray` reads complete headerless named bitmap
+arrays and edits opaque payloads with count-width preservation, diagnostics,
+coverage and field history. Stream selection is explicit; no pixel layout or
+runtime resize is inferred. See [the resource contract](docs/features/bitmap-resource-arrays/README.md).
+
+Stored ellipse-backup rotation snapshots expose the complete signed word through
+`ellipse_backup_rotation_states()` and `edit_ellipse_backup_rotation()`. Physical
+class admission and revision guards preserve aliases and unselected fields.
+See [the snapshot contract](docs/features/ellipse-backup-rotation/README.md) for
+validation status and the native restoration/geometry exclusions.
+
+Model-field edits retain CString count-prefix changes as physical changes, including completion and derived field history; decoded string comparison remains semantic. See the [framing regression](docs/features/model-text-framing/README.md).
+
+The [Flow metadata API](docs/features/flow-metadata/README.md) reads and edits
+complete raw record-410 state rows and applies them to explicit immutable maps,
+retaining duplicate assignments and their preceding values. Record 424 supports bounded typed prefix reads and fixed-field edits, with
+lossless UTF-16, explicit incomplete coverage and an opaque backend tail.
+
+Record 424's metadata view also reads the documented medium-backend boundary,
+retaining reached counts, kind tags and conditional keys. Existing-field edits
+preserve framing and all opaque body bytes; complete medium objects remain
+outside this prefix API.
+
+The [medium kind-one body API](docs/features/flow-medium-objects/README.md)
+reads and edits the complete first reached kind-one body, retaining every raw
+wide pattern, curve flag, name unit and following byte. Body framing is checked
+independently of the remaining reference tables and outer-record collections.
+
+The [complete kind-one record profile](docs/features/flow-medium-references/README.md)
+validates both tables, every ordered reference, outer attributes and exact EOF
+under an explicit fresh-backend assumption. Isolated key/reference edits and
+composed metadata/body edits retain full carrier history and revalidate the
+complete supported record. The [fresh mixed-kind profile](docs/features/flow-medium-mixed/README.md) also
+validates both body kinds with separate reference maps and composes their edits.
+
+The [medium kind-two body API](docs/features/flow-medium-kind-two/README.md)
+reads and edits all six documented model layouts, including independent table
+counts and raw 32-bit words. It preserves the following record bytes and reports
+body framing separately from complete-record and installed native acceptance.
+
+The [kind-one curve evaluator](docs/features/flow-medium-evaluation/README.md)
+implements the documented finite/ordered profile for ordinals 1, 2 and 4. Its
+versioned result retains arithmetic classification, source provenance, complete
+selected-input checks and achieved-error information without editing the file.

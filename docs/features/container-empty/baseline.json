@@ -1,0 +1,27 @@
+{
+  "bug": 251,
+  "reference_bug": 252,
+  "packets": {
+    "empty": {
+      "cases": 1000,
+      "bytes": 46008,
+      "sha256": "847209e129c7c4b9644fc65115958b26791d220eea5ab609e1e3711f7ff58b09"
+    },
+    "native": {
+      "cases": 3,
+      "bytes": 131,
+      "sha256": "e30145b9fb6ce7f592eaeabb37c7ad8cee3a4888000eda79fa29f5d6cf378298"
+    }
+  },
+  "reference_builder_failure": "cannot access local variable 'off' where it is not associated with a value",
+  "source_raw_sha256": {
+    "swcontainer.py": "fa3eaf9159ae5deff97559ae7c4feb2a0d2c4425a86a62b4a99944c323ccec19",
+    "cache/keytable.json": "3d4b864346a859652b8662655479d8669556db28434da9ed15ba7bf9c677fac7"
+  },
+  "native_raw_sha256": {
+    "blank-part.SLDPRT": "b52e080ba2cc64d1d07ed28306f27281b07521aef550bc0c7fea8cd54be2b276",
+    "blank-assembly.SLDASM": "a0ef60261152a4721bd2bf7bf04cf43cb9c6c37d8ae09b0eb5ec935ee44abcb0",
+    "blank-drawing.SLDDRW": "7cd605fb2663514ae5f8bec228bde280497bfa310efad8f27839d902c39304f6"
+  },
+  "scope": "Independent Source-positive empty-container baseline; no reader fix or native application execution"
+}

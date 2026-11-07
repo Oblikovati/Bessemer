@@ -1,0 +1,35 @@
+{
+  "feature_issue": 160,
+  "checks": 7,
+  "failures": 0,
+  "exit_code": 0,
+  "process_reaped": true,
+  "log_sha256": "b5612d952fb63e2dd5552a6041777f51a70a460836b3193ef19738e73340889a",
+  "script_sha256": "349084fd93ed3a377b26a6d1b0e98bef0e1b2bffbd0f0339e381aac73cc2a8f4",
+  "accepted_original_arguments": 962,
+  "required_family_arguments": [
+    365,
+    79,
+    236,
+    15,
+    237,
+    22,
+    8
+  ],
+  "multiset_identity": [
+    "family",
+    "version",
+    "profile",
+    "payload_bytes",
+    "payload_sha256"
+  ],
+  "duplicate_occurrences_preserved": true,
+  "material_additional_arguments_outside_inventory": 993,
+  "input_and_projection_and_history_packet_hashes_checked": true,
+  "coverage_reference_sha256": "c240bebc3609b6341a2bf1bbb4836dd6d77e382ebbe85d7b8512a41b519cd1c7",
+  "exclusions": [
+    "This gate binds existing operation-oracle artifacts; the combined native Rust execution remains pending.",
+    "Full local gate is live; exact-head platform acceptance remains pending.",
+    "Native application, geometry and whole-format completion remain unproven."
+  ]
+}

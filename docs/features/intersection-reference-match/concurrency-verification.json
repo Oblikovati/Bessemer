@@ -1,0 +1,139 @@
+{
+  "issue": 184,
+  "stage": "Full owned stored reference matrix across eight mixed workers and two fresh processes",
+  "processes_reaped": 2,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "cases_per_process": 1344,
+  "physical_references_per_case": 8,
+  "workers_per_shared_snapshot": 8,
+  "serial_controls_per_snapshot": 1,
+  "reference_visits_per_process": 96768,
+  "changed_requests_per_process": 387072,
+  "noop_requests_per_process": 290304,
+  "foreign_revision_edit_rejections_per_process": 96768,
+  "stale_revision_edit_rejections_per_process": 774144,
+  "stale_revision_projection_rejections_per_process": 387072,
+  "total_counted_requests_per_process": 1935360,
+  "test_seconds": [
+    696.03,
+    698.69
+  ],
+  "byte_comparisons": [
+    {
+      "left": "target/intersection-reference-concurrent-process-1.bin",
+      "right": "target/intersection-reference-concurrent-process-2.bin",
+      "bytes": 67503748,
+      "sha256": "9f1caef0a67f45721f090275aa6369354afc333e0d4f504bede21fa745ece47f",
+      "all_bytes_equal": true
+    },
+    {
+      "left": "target/intersection-reference-concurrent-process-1.trace.zlib",
+      "right": "target/intersection-reference-concurrent-process-2.trace.zlib",
+      "bytes": 437629233,
+      "sha256": "823101d2b30157b0a797988c9f8a13f692c8376fc2db76f264716176a7f65696",
+      "all_bytes_equal": true
+    },
+    {
+      "left": "target/intersection-reference-edits-process-1.bin",
+      "right": "target/intersection-reference-concurrent-process-2.bin",
+      "bytes": 67503748,
+      "sha256": "9f1caef0a67f45721f090275aa6369354afc333e0d4f504bede21fa745ece47f",
+      "all_bytes_equal": true
+    }
+  ],
+  "complete_trace": {
+    "passed": true,
+    "complete_case_lines": 1344,
+    "uncompressed_bytes": 4325446058,
+    "uncompressed_sha256": "bcf54a8ca487fcaa2b2cbe81f418a9ec85e061ef30b364e640db32d5ab225308"
+  },
+  "other_integration_regression": {
+    "passed": 6,
+    "failed": 0,
+    "ignored": 0,
+    "seconds": 89.07,
+    "export_bytes": 67503748,
+    "export_sha256": "9f1caef0a67f45721f090275aa6369354afc333e0d4f504bede21fa745ece47f"
+  },
+  "artifacts": [
+    {
+      "path": "tests/model_intersection_reference.rs",
+      "bytes": 5207,
+      "sha256": "e3477e3727c84b39ccef02d7027272c0de73cb5447059e34c476a7950286f4df"
+    },
+    {
+      "path": "tests/model_intersection_reference/contracts.rs",
+      "bytes": 7938,
+      "sha256": "5e96778f6f905031df9cc6c43756adef5863fcff4ab26398cf88188cc4c00ebd"
+    },
+    {
+      "path": "tests/model_intersection_reference/concurrency.rs",
+      "bytes": 6770,
+      "sha256": "5776b2ceb521ddf0741715d437feafc1b514b5142c5da646ce35f5b404a1e568"
+    },
+    {
+      "path": "tests/support/model_operation_snapshot.rs",
+      "bytes": 2037,
+      "sha256": "9f687a2cc3ecfb32681229f2db8663d1582822c603f41e48c8287aaaef15d5fa"
+    },
+    {
+      "path": "tests/support/visual_workers.rs",
+      "bytes": 554,
+      "sha256": "de2b3f55ef516e04b83153b39ea739491a798b103c0f616f123501bd67249f20"
+    },
+    {
+      "path": "target/intersection-reference-concurrent-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/intersection-reference-concurrent-final-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/intersection-reference-concurrent-clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/intersection-reference-concurrent-format.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/intersection-reference-concurrent-process-1.log",
+      "bytes": 44949,
+      "sha256": "df9b9629b189557374fedb306ac7cbcb67bf90f6fa1134d34e04fba4f334ce62"
+    },
+    {
+      "path": "target/intersection-reference-concurrent-process-2.log",
+      "bytes": 44949,
+      "sha256": "4430e3bdce2cda8511bb22f2e76f6f5067ee268ad111ca4ae21ba0b2e0c75545"
+    },
+    {
+      "path": "target/intersection-reference-concurrent-full-regression.log",
+      "bytes": 98133,
+      "sha256": "77ca2fa266b4b1b468f7d83a1de24757ffd6c307fffdb5bb4a611a371f253e52"
+    }
+  ],
+  "coverage_credit": 0,
+  "checks": [
+    "All1344 Source-owned cases, both physical owners and all eight reference groups are admitted without state/value filtering. Original words match retained independent Source scalar rows.",
+    "Each changed request matches a literal complete-stream patch, the full expected field vector, exact ordered history/parents/result fields, completion, unchanged-field count, coverage, fidelity and diagnostics. Stale handles and edits fail.",
+    "Each worker performs all four changed variants and all three no-op variants per reference, plus foreign-revision rejection. Full worker bytes/fields/status/coverage/fidelity/diagnostics/resolved history, unchanged counts and captured typed errors equal the serial oracle.",
+    "Both original source archives and their shared parent configuration retain every field and byte after all mixed requests. No-op revisions retain their original typed state and empty history.",
+    "Both complete wire packets and full compressed operation traces match byte for byte. Their wire bytes also match the independently Source-accepted earlier typed-operation packet. Full trace decompression reaches exact EOF with1344 case lines and no tail.",
+    "All six other reference integration tests pass, including original matrix/control requests and complete document edit/reopen/reversal. Their actual fresh matrix export again matches the retained Source-accepted bytes. Standalone Clippy, workspace format check and function/file-size audit pass."
+  ],
+  "qualifications": [
+    "The first run preceded only the behavior-preserving snapshot tuple helper split; the final helper layout was compiled for the second run. Every resulting wire and full-trace byte matches.",
+    "Revision handles are validated inside each operation; cross-process traces carry resolved original parents and result fields rather than process allocation identity.",
+    "These are controlled eight-worker tests, not ThreadSanitizer acceptance. Full Cargo, exact-head platform/publication gates and wider caller/version boundaries remain pending.",
+    "Fresh Source parsing was not repeated for this byte-identical concurrency export; actual earlier typed exports already passed two immutable Source processes.",
+    "No native matcher, application opening, rendering, geometry or complete schema parity is claimed. Humanizer unavailable; prose review remains pending."
+  ]
+}

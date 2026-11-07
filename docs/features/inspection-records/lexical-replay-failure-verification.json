@@ -1,0 +1,13 @@
+{
+  "issue": 194,
+  "runtime_revision": "dabc7c61",
+  "failure_log_sha256": "c782ec5274872f20ae5b023532d1994ea5a0b156c0d03c5b19c7d2b6d50a780c",
+  "expected_bytes": 1517,
+  "actual_bytes": 1512,
+  "first_disagreement": 596,
+  "actual_context": "=\"-.005\" Extension=\"\u03bb\">\n        <Measurements>\n  ",
+  "expected_context": "=\"-.005\" Extension=\"&#x3bb;\">\n        <Measurement",
+  "expected_assertion": "Byte-identical original XML after restoring the decoded attribute value",
+  "source_fixture_sha256": "3c9c36f84f2d24509201c0ec7420a11ab6b019b9ef9a3260a9a282f9c0f97c1c",
+  "failure_log": "target/inspection-record-process-1-before-replay-fix.log"
+}

@@ -1,0 +1,59 @@
+{
+  "cases": 1071,
+  "packets": {
+    "saved-spans.bin.gz": {
+      "cases": 313,
+      "bytes": 5599437,
+      "sha256": "1b1ed49a9a962102b07853974168297376b4f1dda40f08204db33534ff134152"
+    },
+    "terminal-index.bin.gz": {
+      "cases": 758,
+      "bytes": 13460234,
+      "sha256": "b1d0e4a59ca22ac534a4dfdffd0244d1ce954a4ca8acfabaa6e3c36e69880079"
+    }
+  },
+  "reference": {
+    "synthetic_sha256": "3a89518528b1080e767ae380493ca0ebc326f32eb33983e38bc050440864963b",
+    "evidence_sha256": "dfe5f4ee5bd08ba42c0590396c7e5c8430df86ee3897d2c10b7d7a007550629f",
+    "limitations": [
+      "Writer-derived strict profiles and synthetic payloads only; no installed control-record fixture",
+      "Zero markers required by these writer profiles without universal reader-acceptance claim",
+      "No automatic index adoption, target-span validation or saved-span key/value semantic mapping",
+      "Four-byte length/footer branch has synthetic evidence only and does not extend physical carrier reader versions"
+    ],
+    "installed_fixture_audit": [
+      {
+        "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\FloWorks\\1\\1.cfld",
+        "source_sha256": "6348bed3cb8e9e23d574b5b6972c3a9c7fbb585c34d5b5f00d322b3d605ef80a",
+        "control_record_count": 0
+      },
+      {
+        "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\FloWorks\\1\\1.cpt",
+        "source_sha256": "ad03c2a0bc279faba94e123d088afc434252afa0befe71b4665b37c441404fc7",
+        "control_record_count": 0
+      },
+      {
+        "path": "C:\\Users\\Public\\Documents\\SOLIDWORKS\\SOLIDWORKS 2026\\samples\\Simulation Examples\\FloWorks\\1\\1.fld",
+        "source_sha256": "069aefb4da9fa292bd4eea27b619b9073cc33acc46dda1411b749b0a968706a8",
+        "control_record_count": 0
+      }
+    ],
+    "carrier_corpus_sha256": "8be536f638bf4204a3469bab38539badfdf242c86e0934488f45808480c418f5"
+  },
+  "source_lf_sha256": "bb3d4c7326cb67e0e9fe6b22bfe5c938b805b125687c5a440970da801797337d",
+  "carrier_reader_lf_sha256": "5f5917c14771194fd368750e72f8aabd24c6156e0994e3a779a1c5bdb715af93",
+  "helper_lf_sha256": {
+    "definition_requests.py": "592033bf67bf6ccff41e6a71bf54b44abcdf4981df6871f9ad76b129c6cec7b2",
+    "wide_requests.py": "c690edad385912c3a3813b58988af38689fffbd75a3d43ef72c37a1f3448163c",
+    "freeze_objects.py": "555ada236f89763cb704e45af4bd51c3d7b0fbd60482d560e8ed93b97f035e08"
+  },
+  "compression": {
+    "build": "1.3.1.zlib-ng",
+    "runtime": "1.3.1.zlib-ng"
+  },
+  "scope": "Strict zero-marker writer profiles; both footer widths explicit; raw ordered entries without adoption or target reconciliation",
+  "native_payload_fixtures": false,
+  "native_execution": false,
+  "target_spans_validated": false,
+  "application_checked": false
+}

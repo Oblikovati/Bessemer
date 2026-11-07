@@ -1,0 +1,48 @@
+{
+  "issue": 193,
+  "rust_tests_passed": 11,
+  "source_tests_passed": 5,
+  "rust_process_exit_code": 0,
+  "source_process_exit_code": 0,
+  "source_reader_unchanged_from_preparation": true,
+  "source_snapshot_file": "fixture-reference-snapshot.json",
+  "source_snapshot_identity": "ce3b9c03018e7177c2c67ad3aceff91962b93dfa7d49f01f46b9ef7294225bce",
+  "source_python_files": 6345,
+  "source_import_integrity_guard": "passed",
+  "scope": "Ordered measurement and custom-property input admission; no collection insertion or runtime conversion",
+  "checks": [
+    "cargo fmt check",
+    "core Clippy warnings and missing docs denied",
+    "test Clippy warnings denied",
+    "unsafe forbidden",
+    "function bodies at most 20 nonblank lines",
+    "files below 500 lines"
+  ],
+  "files": {
+    "target/inspection-load-focused.log": {
+      "bytes": 1042,
+      "sha256": "69e6b84f25c91b0664e1d9ad671623f1e96f090a70b6d5a7a82cb082b52cfb72"
+    },
+    "target/inspection-load-source.log": {
+      "bytes": 108,
+      "sha256": "064446ed3539c7ecc760dae8d1ef8abb2be29845ec3b83f91d35be927f794192"
+    },
+    "tests/fixtures/inspection-records/load-projections.xml": {
+      "bytes": 1186,
+      "sha256": "0fcc4625b1a634dcc099fefc58bc028a928aafdac39550af9ec330240f3a5528"
+    }
+  },
+  "native_evidence_sha256": {
+    "inspection-measurement-reader-native-evidence.json": "84084b187f947904b31eececa680c3bd458f9a77a75dfdcb3855513719891a66",
+    "inspection-standalone-custom-property-loader-native-evidence.json": "f1ff90658c004b0c7cb71a1180a2be070bb4e559d3976c97b5939ff2151230a5"
+  },
+  "remaining": [
+    "Explicit limit boundaries",
+    "Additional installed templates",
+    "Fresh-process outputs",
+    "Unchanged Source acceptance of actual Rust outputs",
+    "Complete local PR gate for the record API",
+    "Exact-head remote matrix",
+    "Application reload"
+  ]
+}

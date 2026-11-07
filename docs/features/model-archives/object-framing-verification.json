@@ -1,0 +1,46 @@
+{
+  "feature_issue": 44,
+  "scope": "shared MFC framing and pointer roles; private model field codec, complete model root still pending",
+  "base_commit": "8cefb149295cd22ffe219826ede9e97d7b7a8ffa",
+  "source_manifest_sha256": "d3b2ceab149a98199c04b06fb548b73b270252011a2a3cd1f18f0a2a526add50",
+  "source_manifest": "object-framing-source-hashes.json",
+  "fixture_sha256": "b52e080ba2cc64d1d07ed28306f27281b07521aef550bc0c7fea8cd54be2b276",
+  "checks": [
+    {
+      "command": "cargo xtask pr --offline",
+      "result": "passed",
+      "scope": "shared framing/roles and existing codec fixtures",
+      "doctests": 204,
+      "log": "target/model-object-framing-pr.log"
+    },
+    {
+      "command": "cargo test --offline --lib model_archives",
+      "result": "passed",
+      "tests": 18,
+      "scope": "final role-helper cleanup and ownership test"
+    },
+    {
+      "command": "cargo clippy --offline --all-targets -- -D warnings",
+      "result": "passed",
+      "scope": "final source"
+    },
+    {
+      "command": "cargo fmt --all -- --check",
+      "result": "passed",
+      "scope": "final role-helper cleanup"
+    }
+  ],
+  "native_node_object_bytes": 32,
+  "native_node_object_index_after_imports": 5,
+  "parallel_object_encoders": 4,
+  "uncommitted": true,
+  "published_model_api": false,
+  "whole_model_root_verified": false,
+  "whole_model_document_verified": false,
+  "exclusions": [
+    "complete lightweight and resolved model serializers",
+    "header-derived import planning and retained header graph",
+    "scoped maps and automatic section length reconstruction",
+    "model corpus and native application acceptance"
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "issue": 241,
+  "source_revision_before_api": "cd52c1da0e3cbe5be999bdadef05f3a1be0bc267",
+  "scope": "Complete record500 outer-byte-version-one IMS definitions, versions0..3; isolated existing identifier/allocation/raw-word edits",
+  "platform": "Windows x64; Rust1.99.0; CARGO_BUILD_JOBS=1",
+  "results": {
+    "rust_passed": 18,
+    "rust_failed": 0,
+    "ignored_workers": 1,
+    "worker_invocations_by_parent": 2,
+    "python_passed": 8,
+    "clippy": "passed",
+    "format": "passed",
+    "function_file_caps": "passed",
+    "maximum_function_body_lines": 20
+  },
+  "commands": {
+    "tests": {
+      "command": "cargo test --locked --test flow_result_definitions_fixtures",
+      "exit_code": 0,
+      "log": "target/flow-result-definitions-api-tests.log",
+      "sha256": "a723aebc00f2fd135d9fd1ff43b5051e8396b32fe4f233e27982a695f91ac835"
+    },
+    "clippy": {
+      "command": "cargo clippy --locked --test flow_result_definitions_fixtures -- -D warnings",
+      "exit_code": 0,
+      "log": "target/flow-result-definitions-api-clippy.log",
+      "sha256": "3059d453e2265ac5bb77a37bcd2663b59b5b3948c0b04dacff458eae8d2ff11d"
+    },
+    "format": {
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "log": "target/flow-result-definitions-api-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "python": {
+      "command": "python -m unittest discover -s docs/features/flow-result-definitions -p test_definitions.py",
+      "exit_code": 0,
+      "log": "target/flow-result-definitions-api-python.log",
+      "sha256": "76d39766cae5c9a7bf9ac34233e2b9365803498d746d04bac517455ec8b4bd24"
+    }
+  },
+  "coverage": {
+    "cases": 1136,
+    "physical_definitions": 1472,
+    "raw_word_reads": 537354,
+    "shared_arrays": 4000,
+    "present_empty_arrays": 3194,
+    "identifier_matrix_edits": 1472,
+    "allocation_matrix_edits": 1166,
+    "pattern_matrix_edits": 10058,
+    "total_matrix_edits": 12696,
+    "native_matrix_edits": 7934,
+    "edit_policy": "All identifiers/allocation bytes; all values in native arrays and generated arrays <=64 values; first/middle/last values in larger generated arrays",
+    "oracles": [
+      "Complete independent frozen field/interval/array-presence projections",
+      "Separate preceding signed-identifier block with duplicate physical order",
+      "Every original raw word and full decoded byte reconstruction",
+      "Literal identifier/allocation/raw-word patches with unchanged complete layout",
+      "Compressed no-op preservation, full physical history and fresh decoded reversals"
+    ],
+    "contracts": [
+      "Exact and one-below decoded/object/total-value budgets",
+      "Zero-object/zero-value budgets preserve present-empty distinctions",
+      "All unsupported outer bytes, malformed GUIDs, versions, counts and markers",
+      "Native signed-transfer count cap and unsigned count overflow inputs",
+      "Truncated/corrupt/concatenated/extended compressed streams and decoded suffixes",
+      "Invalid indices, absent fields and foreign/wrong/stale occurrences",
+      "Caller buffer mutation/drop and unrelated carrier edits preserve retained snapshots",
+      "Growing recompression rejected under exact carrier capacity without input mutation"
+    ],
+    "new_public_types_send_sync": 6,
+    "reused_public_types_send_sync": 3,
+    "concurrent_workers": 8,
+    "operations_per_worker": 32,
+    "concurrency": "Mixed identifier/allocation/raw-word edits and failure paths matched serial output",
+    "process_replay": "Two fresh source-verifying workers independently checked all reads and selected edits; complete wire/coverage transcripts compared byte for byte"
+  },
+  "source_lf_sha256": {
+    "src/flow/legacy_tables/result_definitions/edit.rs": "cca7f8e7bb0704ed58c4ed4aa1d7a64d8a81f316275c1aa1ef368846140b4150",
+    "src/flow/legacy_tables/result_definitions/mod.rs": "7ce70cb7cef55a346403f08346f3adf39bc1fbdbdbe0757fd6b6954883c7567e",
+    "src/flow/legacy_tables/result_definitions/read/layout/objects.rs": "28f081b5ea56afac12916583ade620c12033ef3f75eedaec9243aaaeeeb0ae51",
+    "src/flow/legacy_tables/result_definitions/read/layout.rs": "ffa913cb6939a89b60accbe7c0a5b206fbe56c0974206f6b5ed2074e155a155d",
+    "src/flow/legacy_tables/result_definitions/read.rs": "1ff2761e3de267dc3accf7cbd9bd05d4659b2dd3bad42e5c99d7b7f34f865947",
+    "src/flow/legacy_tables/result_definitions/types.rs": "6959c3d170dfe37727dc2a1a21b67c3a2a7c32534d5e8f809621d5ec4907cd05",
+    "src/flow/legacy_tables/result_definitions/view.rs": "a926649b25e6f16d3d06ff6b0b108ffe74f34c6c8a7c5a0acf772c07510830f5",
+    "tests/flow_result_definitions/api/contracts.rs": "f9507f291dd9da5efc7f2737d742f4f3722f5d87489a26243c275899f34f7edf",
+    "tests/flow_result_definitions/api/edit.rs": "a8933d25ea13e3d401de594a735ee7e323b35f8e664e31acc304d53d0ff21934",
+    "tests/flow_result_definitions/api/replay.rs": "527b43122c5d1ec6c31b79f33e6bea7606d11aab92c37777d634a55f2b4b0ccf",
+    "tests/flow_result_definitions/api.rs": "f62144e89e2e6d49bf55c6b7ad177e6d29a56bf017626a635208346fee91cbe6",
+    "tests/flow_result_definitions/fixture.rs": "84acc0f18ed4ac5dc2982910091a03b4ec03c77980ad414305b991c658c5a4b3",
+    "tests/flow_result_definitions/rebuild.rs": "4f21112e3e87d4139cb964708efa715559ea10438bf71a945ecfc0205b4ae1f9",
+    "src/flow/legacy_tables/mod.rs": "12d3cb950eb61f24c1798223b60d0793491f53708d88e657fa62e1135ce442f4",
+    "tests/flow_result_definitions_fixtures.rs": "fcf74d52aa6e821a9e196a5e665d04e14a5b88d03de624fd9e2e9130276a7b38"
+  },
+  "exclusions": [
+    "Running full gate419844f2 excludes this API and its baseline",
+    "Full cargo xtask pr acceptance of this source revision pending",
+    "Hosted matrix and sanitizer acceptance pending",
+    "Only IMS version2 has native fixture evidence; versions0/1/3 are generated cases",
+    "Nonempty secondary collections and other GUID profiles remain unsupported per reference",
+    "Record501 paired values not implemented",
+    "Native runtime initialization and engineering meanings not assigned",
+    "Native application acceptance not checked"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose review pending"
+}

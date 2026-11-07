@@ -1,0 +1,17 @@
+{
+  "iterations": 10000,
+  "slots": 97,
+  "snapshot_clone_ns": 27100,
+  "builder_copy_ns": 35843600,
+  "platform": "Windows x64",
+  "toolchain": "Rust 1.99.0",
+  "profile": "test opt-level=1; debug assertions and overflow checks enabled",
+  "processes": 1,
+  "log_sha256": "48b06de6a3710259a271796ad3822af3b40bbebd4ba6051346df1b300fce4b3a",
+  "temporary_test_source_sha256": "7fcb8d38fa66a6647b59cdea75c21f9d535c97a159e9a498c74774931f18a1e4",
+  "limitations": [
+    "Single owned 97-slot map in one process; not a broad workload benchmark.",
+    "No peak-memory or allocator-count measurement.",
+    "Temporary measurement test removed after collecting the result."
+  ]
+}

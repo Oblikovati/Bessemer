@@ -1,0 +1,1878 @@
+{
+  "issue": 185,
+  "provider": "ordinary PE descriptor/thunk parsing with pefile address mapping and Capstone; not REA Evidence",
+  "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+  "module_sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "image_base": "0x4b160000",
+  "pefile_version": "2024.8.26",
+  "capstone_version": "5.0.7",
+  "packets": [
+    "parallel_root_intersection_edge_index_producer.json",
+    "parallel_sketch_intersection_edge_index_map_consumer.json",
+    "parallel_sketch_intersection_reference_classification_review.json",
+    "parallel_sketch_intersection_reference_topology_producer.json",
+    "parallel_sketch_intersection_reference_match_consumer.json",
+    "parallel_sketch_intersection_reference_ordinal_cache_boundary.json"
+  ],
+  "unique_intervals": 22,
+  "interval_bytes": 26949,
+  "intervals": [
+    {
+      "start": "0x4b92a940",
+      "end": "0x4b92a9f9",
+      "bytes": 185,
+      "file_offset": 8166720,
+      "sha256": "1b3b101febc8bb38e91e0c7c100a5db4af191b219c41dfbdf5640c7b26377cba"
+    },
+    {
+      "start": "0x4bbe4a50",
+      "end": "0x4bbe4b09",
+      "bytes": 185,
+      "file_offset": 11026000,
+      "sha256": "7f0bb59cf665e0804209528b4f436e1b157c0131343b976f878f2e4f428d978e"
+    },
+    {
+      "start": "0x4bbeb2d0",
+      "end": "0x4bbeb7f5",
+      "bytes": 1317,
+      "file_offset": 11052752,
+      "sha256": "b83d1da3f52efb17fd1ae5ee8f8357240bf684d90a160beb440d1ccc3d588ee8"
+    },
+    {
+      "start": "0x4bbebea0",
+      "end": "0x4bbeedb7",
+      "bytes": 12055,
+      "file_offset": 11055776,
+      "sha256": "463b07d4ffc35393eaba6695fde6ad9888f8afb5ba0dd4b11cfbbd7d344289c1"
+    },
+    {
+      "start": "0x4bbef2e0",
+      "end": "0x4bbef79a",
+      "bytes": 1210,
+      "file_offset": 11069152,
+      "sha256": "9839b632e745e7b6e2634f015132fe1549f573acc7369264e84301fbf08548ac"
+    },
+    {
+      "start": "0x4bbeff30",
+      "end": "0x4bbeffbb",
+      "bytes": 139,
+      "file_offset": 11072304,
+      "sha256": "1fbe94b1ace0f1a94eb79586955419b9d43d95495dbd3704357f24dd7e78fd49"
+    },
+    {
+      "start": "0x4bbf0160",
+      "end": "0x4bbf01b8",
+      "bytes": 88,
+      "file_offset": 11072864,
+      "sha256": "55a8c2ae32caa187c1297820ac6eafbb0bdc3ffaa459d0bd5862af22c78676ce"
+    },
+    {
+      "start": "0x4bfbb4c0",
+      "end": "0x4bfbb69a",
+      "bytes": 474,
+      "file_offset": 15050944,
+      "sha256": "af4b46927e4fe335bad90d7f10309999c8d494befa02736169d52353266d5d2d"
+    },
+    {
+      "start": "0x4bfbb8b0",
+      "end": "0x4bfbb9e4",
+      "bytes": 308,
+      "file_offset": 15051952,
+      "sha256": "5d6c335ae653b0ee2f691d884be14a834410913c493d6828d8ed6549675819b0"
+    },
+    {
+      "start": "0x4bfbbc40",
+      "end": "0x4bfbbfe3",
+      "bytes": 931,
+      "file_offset": 15052864,
+      "sha256": "a33a3982812b6cc8b6f33044117c911c05e684166f050c6a686432f56e74231b"
+    },
+    {
+      "start": "0x4bfbc110",
+      "end": "0x4bfbc720",
+      "bytes": 1552,
+      "file_offset": 15054096,
+      "sha256": "0ba9ff9c33d13960cde8e62ee01f8189f36ba6abeae7e6f373bca091d56878fa"
+    },
+    {
+      "start": "0x4bfbc720",
+      "end": "0x4bfbd0ca",
+      "bytes": 2474,
+      "file_offset": 15055648,
+      "sha256": "06dc0b3b3989280cd48d245a627f52bcfd3311f779150bb27872800a381a450f"
+    },
+    {
+      "start": "0x4bfbd0d0",
+      "end": "0x4bfbd12a",
+      "bytes": 90,
+      "file_offset": 15058128,
+      "sha256": "42b3e023db8adedcf6ca24497cee9ef7b37335ec5a7bf9a21e5f52560df18356"
+    },
+    {
+      "start": "0x4bfbd130",
+      "end": "0x4bfbd18a",
+      "bytes": 90,
+      "file_offset": 15058224,
+      "sha256": "a3fd32a195c2638ec1df8ffc820f0cdf7de006311a86494552c2c3288d350df5"
+    },
+    {
+      "start": "0x4bfbd190",
+      "end": "0x4bfbd1ea",
+      "bytes": 90,
+      "file_offset": 15058320,
+      "sha256": "62d655d0324ef83e2a2a8030297e5fb3d4fc6cd55cc321914a88a29bf198899c"
+    },
+    {
+      "start": "0x4bfbd1f0",
+      "end": "0x4bfbd33e",
+      "bytes": 334,
+      "file_offset": 15058416,
+      "sha256": "72c32478894887cfc20c1cde3c1d7284552a007da0c757458366c6b77722279c"
+    },
+    {
+      "start": "0x4bfbd4c0",
+      "end": "0x4bfbd4ca",
+      "bytes": 10,
+      "file_offset": 15059136,
+      "sha256": "f589b0b8664413352bfdef866b58e62817d5c619213de3c63852f64b2bf26ea8"
+    },
+    {
+      "start": "0x4bfbd4ca",
+      "end": "0x4bfbe4e3",
+      "bytes": 4121,
+      "file_offset": 15059146,
+      "sha256": "c4d7c16511f201b46e1faf42edf7b3609e95482ab2c8964bc79a5865832c2b62"
+    },
+    {
+      "start": "0x4bfbe4e3",
+      "end": "0x4bfbe508",
+      "bytes": 37,
+      "file_offset": 15063267,
+      "sha256": "1f2dcb18073a3a1bf12bb9135a1e1bea84b6d3d861200de2e2452e643b4dec12"
+    },
+    {
+      "start": "0x4c4be220",
+      "end": "0x4c4be234",
+      "bytes": 20,
+      "file_offset": 20305440,
+      "sha256": "62b3a3bb748bf99c7f350e0356c87ea970a9fa26dad864a61c8e3e9dfb082c53"
+    },
+    {
+      "start": "0x4c58cc20",
+      "end": "0x4c58ce80",
+      "bytes": 608,
+      "file_offset": 21151776,
+      "sha256": "c0422cf09fbc18ebf2ace2ed593f04714c00adb1102c37adb2c993f940f19465"
+    },
+    {
+      "start": "0x4c58ce80",
+      "end": "0x4c58d0f7",
+      "bytes": 631,
+      "file_offset": 21152384,
+      "sha256": "dd75f7458f6ef7868885bf24bfe4750a07823abf745741912df8033923ca6d0e"
+    }
+  ],
+  "capture_checks": 26,
+  "exact_instructions": 8365,
+  "exact_instruction_assertions": 165,
+  "import_descriptors": [
+    {
+      "file_offset": 42914916,
+      "dll": "USP10.dll",
+      "original_first_thunk": "0x28f11f8",
+      "first_thunk": "0x1bd4e20",
+      "symbols": 1
+    },
+    {
+      "file_offset": 42914936,
+      "dll": "sldDBImplu.dll",
+      "original_first_thunk": "0x28f2328",
+      "first_thunk": "0x1bd5f50",
+      "symbols": 38
+    },
+    {
+      "file_offset": 42914956,
+      "dll": "sldhscdu.dll",
+      "original_first_thunk": "0x28f7748",
+      "first_thunk": "0x1bdb370",
+      "symbols": 1
+    },
+    {
+      "file_offset": 42914976,
+      "dll": "sldInteropAttribu.dll",
+      "original_first_thunk": "0x28f2460",
+      "first_thunk": "0x1bd6088",
+      "symbols": 2
+    },
+    {
+      "file_offset": 42914996,
+      "dll": "sldarchiveu.dll",
+      "original_first_thunk": "0x28f2478",
+      "first_thunk": "0x1bd60a0",
+      "symbols": 251
+    },
+    {
+      "file_offset": 42915016,
+      "dll": "sldebu.dll",
+      "original_first_thunk": "0x28f2c58",
+      "first_thunk": "0x1bd6880",
+      "symbols": 8
+    },
+    {
+      "file_offset": 42915036,
+      "dll": "sldfgu.dll",
+      "original_first_thunk": "0x28f2ca0",
+      "first_thunk": "0x1bd68c8",
+      "symbols": 45
+    },
+    {
+      "file_offset": 42915056,
+      "dll": "sldgcu.dll",
+      "original_first_thunk": "0x28f2e10",
+      "first_thunk": "0x1bd6a38",
+      "symbols": 2342
+    },
+    {
+      "file_offset": 42915076,
+      "dll": "sldBodyDiffu.dll",
+      "original_first_thunk": "0x28f2300",
+      "first_thunk": "0x1bd5f28",
+      "symbols": 4
+    },
+    {
+      "file_offset": 42915096,
+      "dll": "SLDMFCU.dll",
+      "original_first_thunk": "0x28eed40",
+      "first_thunk": "0x1bd2968",
+      "symbols": 1146
+    },
+    {
+      "file_offset": 42915116,
+      "dll": "sldmgu.dll",
+      "original_first_thunk": "0x28f7758",
+      "first_thunk": "0x1bdb380",
+      "symbols": 936
+    },
+    {
+      "file_offset": 42915136,
+      "dll": "sldsv3u.dll",
+      "original_first_thunk": "0x28f9818",
+      "first_thunk": "0x1bdd440",
+      "symbols": 381
+    },
+    {
+      "file_offset": 42915156,
+      "dll": "sldutu.dll",
+      "original_first_thunk": "0x28fa6d8",
+      "first_thunk": "0x1bde300",
+      "symbols": 157
+    },
+    {
+      "file_offset": 42915176,
+      "dll": "sldtessellationu.dll",
+      "original_first_thunk": "0x28fa408",
+      "first_thunk": "0x1bde030",
+      "symbols": 89
+    },
+    {
+      "file_offset": 42915196,
+      "dll": "sldregeomodel.dll",
+      "original_first_thunk": "0x28f94a0",
+      "first_thunk": "0x1bdd0c8",
+      "symbols": 34
+    },
+    {
+      "file_offset": 42915216,
+      "dll": "swccu.dll",
+      "original_first_thunk": "0x28fabc8",
+      "first_thunk": "0x1bde7f0",
+      "symbols": 389
+    },
+    {
+      "file_offset": 42915236,
+      "dll": "sldsessionu.dll",
+      "original_first_thunk": "0x28f95b8",
+      "first_thunk": "0x1bdd1e0",
+      "symbols": 75
+    },
+    {
+      "file_offset": 42915256,
+      "dll": "MSVCP140.dll",
+      "original_first_thunk": "0x28ee8f0",
+      "first_thunk": "0x1bd2518",
+      "symbols": 122
+    },
+    {
+      "file_offset": 42915276,
+      "dll": "mfc140u.dll",
+      "original_first_thunk": "0x28f1768",
+      "first_thunk": "0x1bd5390",
+      "symbols": 361
+    },
+    {
+      "file_offset": 42915296,
+      "dll": "KERNEL32.dll",
+      "original_first_thunk": "0x28ee608",
+      "first_thunk": "0x1bd2230",
+      "symbols": 92
+    },
+    {
+      "file_offset": 42915316,
+      "dll": "USER32.dll",
+      "original_first_thunk": "0x28f1118",
+      "first_thunk": "0x1bd4d40",
+      "symbols": 27
+    },
+    {
+      "file_offset": 42915336,
+      "dll": "GDI32.dll",
+      "original_first_thunk": "0x28ee560",
+      "first_thunk": "0x1bd2188",
+      "symbols": 20
+    },
+    {
+      "file_offset": 42915356,
+      "dll": "ADVAPI32.dll",
+      "original_first_thunk": "0x28ee3d8",
+      "first_thunk": "0x1bd2000",
+      "symbols": 4
+    },
+    {
+      "file_offset": 42915376,
+      "dll": "SHELL32.dll",
+      "original_first_thunk": "0x28eed20",
+      "first_thunk": "0x1bd2948",
+      "symbols": 1
+    },
+    {
+      "file_offset": 42915396,
+      "dll": "SHLWAPI.dll",
+      "original_first_thunk": "0x28eed30",
+      "first_thunk": "0x1bd2958",
+      "symbols": 1
+    },
+    {
+      "file_offset": 42915416,
+      "dll": "ole32.dll",
+      "original_first_thunk": "0x28f22b8",
+      "first_thunk": "0x1bd5ee0",
+      "symbols": 8
+    },
+    {
+      "file_offset": 42915436,
+      "dll": "OLEAUT32.dll",
+      "original_first_thunk": "0x28eecc8",
+      "first_thunk": "0x1bd28f0",
+      "symbols": 10
+    },
+    {
+      "file_offset": 42915456,
+      "dll": "CONCRT140.dll",
+      "original_first_thunk": "0x28ee400",
+      "first_thunk": "0x1bd2028",
+      "symbols": 35
+    },
+    {
+      "file_offset": 42915476,
+      "dll": "gdiplus.dll",
+      "original_first_thunk": "0x28f16b0",
+      "first_thunk": "0x1bd52d8",
+      "symbols": 22
+    },
+    {
+      "file_offset": 42915496,
+      "dll": "WINTRUST.dll",
+      "original_first_thunk": "0x28f12b8",
+      "first_thunk": "0x1bd4ee0",
+      "symbols": 1
+    },
+    {
+      "file_offset": 42915516,
+      "dll": "CRYPT32.dll",
+      "original_first_thunk": "0x28ee520",
+      "first_thunk": "0x1bd2148",
+      "symbols": 7
+    },
+    {
+      "file_offset": 42915536,
+      "dll": "VCRUNTIME140.dll",
+      "original_first_thunk": "0x28f1208",
+      "first_thunk": "0x1bd4e30",
+      "symbols": 19
+    },
+    {
+      "file_offset": 42915556,
+      "dll": "VCRUNTIME140_1.dll",
+      "original_first_thunk": "0x28f12a8",
+      "first_thunk": "0x1bd4ed0",
+      "symbols": 1
+    },
+    {
+      "file_offset": 42915576,
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "original_first_thunk": "0x28f1480",
+      "first_thunk": "0x1bd50a8",
+      "symbols": 16
+    },
+    {
+      "file_offset": 42915596,
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "original_first_thunk": "0x28f1380",
+      "first_thunk": "0x1bd4fa8",
+      "symbols": 9
+    },
+    {
+      "file_offset": 42915616,
+      "dll": "api-ms-win-crt-convert-l1-1-0.dll",
+      "original_first_thunk": "0x28f12c8",
+      "first_thunk": "0x1bd4ef0",
+      "symbols": 15
+    },
+    {
+      "file_offset": 42915636,
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "original_first_thunk": "0x28f1508",
+      "first_thunk": "0x1bd5130",
+      "symbols": 30
+    },
+    {
+      "file_offset": 42915656,
+      "dll": "api-ms-win-crt-utility-l1-1-0.dll",
+      "original_first_thunk": "0x28f1698",
+      "first_thunk": "0x1bd52c0",
+      "symbols": 2
+    },
+    {
+      "file_offset": 42915676,
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "original_first_thunk": "0x28f13e8",
+      "first_thunk": "0x1bd5010",
+      "symbols": 18
+    },
+    {
+      "file_offset": 42915696,
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "original_first_thunk": "0x28f1600",
+      "first_thunk": "0x1bd5228",
+      "symbols": 11
+    },
+    {
+      "file_offset": 42915716,
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "original_first_thunk": "0x28f13d0",
+      "first_thunk": "0x1bd4ff8",
+      "symbols": 2
+    },
+    {
+      "file_offset": 42915736,
+      "dll": "api-ms-win-crt-filesystem-l1-1-0.dll",
+      "original_first_thunk": "0x28f1348",
+      "first_thunk": "0x1bd4f70",
+      "symbols": 6
+    },
+    {
+      "file_offset": 42915756,
+      "dll": "api-ms-win-crt-time-l1-1-0.dll",
+      "original_first_thunk": "0x28f1660",
+      "first_thunk": "0x1bd5288",
+      "symbols": 6
+    }
+  ],
+  "import_bindings": [
+    {
+      "packet": "parallel_root_intersection_edge_index_producer.json",
+      "site": "0x4bbe4aec",
+      "slot": "0x4cd3b6c8",
+      "dll": "sldmgu.dll",
+      "name": "amDynamicArrayCount",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_root_intersection_edge_index_producer.json",
+      "site": "0x4bbe4a99",
+      "slot": "0x4cd3b918",
+      "dll": "sldmgu.dll",
+      "name": "amDynamicArrayAdd",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_root_intersection_edge_index_producer.json",
+      "site": "0x4bbe4a89",
+      "slot": "0x4cd3b910",
+      "dll": "sldmgu.dll",
+      "name": "suDynArrayAlloc",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_root_intersection_edge_index_producer.json",
+      "site": "0x4b92a9dc",
+      "slot": "0x4cd3b6c8",
+      "dll": "sldmgu.dll",
+      "name": "amDynamicArrayCount",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_root_intersection_edge_index_producer.json",
+      "site": "0x4b92a989",
+      "slot": "0x4cd3b918",
+      "dll": "sldmgu.dll",
+      "name": "amDynamicArrayAdd",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_root_intersection_edge_index_producer.json",
+      "site": "0x4b92a979",
+      "slot": "0x4cd3b910",
+      "dll": "sldmgu.dll",
+      "name": "suDynArrayAlloc",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_edge_index_map_consumer.json",
+      "site": "0x4bfbcf50",
+      "slot": "0x4cd3e8c8",
+      "dll": "swccu.dll",
+      "name": "??Asu_CMapPtrToPtr@@QEAAAEAPEAXPEAX@Z",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_edge_index_map_consumer.json",
+      "site": "0x4bfbcdf8",
+      "slot": "0x4cd3e8c8",
+      "dll": "swccu.dll",
+      "name": "??Asu_CMapPtrToPtr@@QEAAAEAPEAXPEAX@Z",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_edge_index_map_consumer.json",
+      "site": "0x4bfbc8c8",
+      "slot": "0x4cd3bad0",
+      "dll": "sldmgu.dll",
+      "name": "amDynamicArrayCopy",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_edge_index_map_consumer.json",
+      "site": "0x4bfbc815",
+      "slot": "0x4cd3b918",
+      "dll": "sldmgu.dll",
+      "name": "amDynamicArrayAdd",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_edge_index_map_consumer.json",
+      "site": "0x4bfbc78b",
+      "slot": "0x4cd3b910",
+      "dll": "sldmgu.dll",
+      "name": "suDynArrayAlloc",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_classification_review.json",
+      "site": "0x4c58cd90",
+      "slot": "0x4cd3edd8",
+      "dll": "swccu.dll",
+      "name": "??5su_CArchive@@QEAAAEAV0@AEAG@Z",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_classification_review.json",
+      "site": "0x4c58ccce",
+      "slot": "0x4cd3edd0",
+      "dll": "swccu.dll",
+      "name": "??6su_CArchive@@QEAAAEAV0@G@Z",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc6db",
+      "slot": "0x4cd380f8",
+      "dll": "sldgcu.dll",
+      "name": "?previous@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc69e",
+      "slot": "0x4cd38118",
+      "dll": "sldgcu.dll",
+      "name": "?startVertex@gcCoEdge_w@@QEBAPEAVgcVertex_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc68d",
+      "slot": "0x4cd396d8",
+      "dll": "sldgcu.dll",
+      "name": "?getTrackingId@gcEdge_w@@QEAA_KXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc684",
+      "slot": "0x4cd392f0",
+      "dll": "sldgcu.dll",
+      "name": "?edge@gcCoEdge_w@@QEBAPEAVgcEdge_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc664",
+      "slot": "0x4cd396d8",
+      "dll": "sldgcu.dll",
+      "name": "?getTrackingId@gcEdge_w@@QEAA_KXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc65b",
+      "slot": "0x4cd392f0",
+      "dll": "sldgcu.dll",
+      "name": "?edge@gcCoEdge_w@@QEBAPEAVgcEdge_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc64d",
+      "slot": "0x4cd380f8",
+      "dll": "sldgcu.dll",
+      "name": "?previous@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc644",
+      "slot": "0x4cd39108",
+      "dll": "sldgcu.dll",
+      "name": "?partner@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc636",
+      "slot": "0x4cd396d8",
+      "dll": "sldgcu.dll",
+      "name": "?getTrackingId@gcEdge_w@@QEAA_KXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc62d",
+      "slot": "0x4cd392f0",
+      "dll": "sldgcu.dll",
+      "name": "?edge@gcCoEdge_w@@QEBAPEAVgcEdge_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc621",
+      "slot": "0x4cd380f8",
+      "dll": "sldgcu.dll",
+      "name": "?previous@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc604",
+      "slot": "0x4cd38118",
+      "dll": "sldgcu.dll",
+      "name": "?startVertex@gcCoEdge_w@@QEBAPEAVgcVertex_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc5ef",
+      "slot": "0x4cd38110",
+      "dll": "sldgcu.dll",
+      "name": "?endVertex@gcCoEdge_w@@QEBAPEAVgcVertex_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc5dc",
+      "slot": "0x4cd396d8",
+      "dll": "sldgcu.dll",
+      "name": "?getTrackingId@gcEdge_w@@QEAA_KXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc5d3",
+      "slot": "0x4cd392f0",
+      "dll": "sldgcu.dll",
+      "name": "?edge@gcCoEdge_w@@QEBAPEAVgcEdge_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc5b3",
+      "slot": "0x4cd396d8",
+      "dll": "sldgcu.dll",
+      "name": "?getTrackingId@gcEdge_w@@QEAA_KXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc5aa",
+      "slot": "0x4cd392f0",
+      "dll": "sldgcu.dll",
+      "name": "?edge@gcCoEdge_w@@QEBAPEAVgcEdge_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc59e",
+      "slot": "0x4cd392e8",
+      "dll": "sldgcu.dll",
+      "name": "?next@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc595",
+      "slot": "0x4cd39108",
+      "dll": "sldgcu.dll",
+      "name": "?partner@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc587",
+      "slot": "0x4cd396d8",
+      "dll": "sldgcu.dll",
+      "name": "?getTrackingId@gcEdge_w@@QEAA_KXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc57e",
+      "slot": "0x4cd392f0",
+      "dll": "sldgcu.dll",
+      "name": "?edge@gcCoEdge_w@@QEBAPEAVgcEdge_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc572",
+      "slot": "0x4cd392e8",
+      "dll": "sldgcu.dll",
+      "name": "?next@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc552",
+      "slot": "0x4cd38110",
+      "dll": "sldgcu.dll",
+      "name": "?endVertex@gcCoEdge_w@@QEBAPEAVgcVertex_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc510",
+      "slot": "0x4cd38f68",
+      "dll": "sldgcu.dll",
+      "name": "?getGenericId@gcTopEnt_w@@QEAA_JH@Z",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc501",
+      "slot": "0x4cd39060",
+      "dll": "sldgcu.dll",
+      "name": "?getNodeId@gcEnt_w@@QEAAHXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc4f4",
+      "slot": "0x4cd38f08",
+      "dll": "sldgcu.dll",
+      "name": "?gc_IsKernelParasolid@@YAHXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc4eb",
+      "slot": "0x4cd38110",
+      "dll": "sldgcu.dll",
+      "name": "?endVertex@gcCoEdge_w@@QEBAPEAVgcVertex_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc4ca",
+      "slot": "0x4cd396d8",
+      "dll": "sldgcu.dll",
+      "name": "?getTrackingId@gcEdge_w@@QEAA_KXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc4c1",
+      "slot": "0x4cd392f0",
+      "dll": "sldgcu.dll",
+      "name": "?edge@gcCoEdge_w@@QEBAPEAVgcEdge_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc4b5",
+      "slot": "0x4cd396d8",
+      "dll": "sldgcu.dll",
+      "name": "?getTrackingId@gcEdge_w@@QEAA_KXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc4ac",
+      "slot": "0x4cd392f0",
+      "dll": "sldgcu.dll",
+      "name": "?edge@gcCoEdge_w@@QEBAPEAVgcEdge_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc4a0",
+      "slot": "0x4cd38f68",
+      "dll": "sldgcu.dll",
+      "name": "?getGenericId@gcTopEnt_w@@QEAA_JH@Z",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc491",
+      "slot": "0x4cd39060",
+      "dll": "sldgcu.dll",
+      "name": "?getNodeId@gcEnt_w@@QEAAHXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc484",
+      "slot": "0x4cd38f08",
+      "dll": "sldgcu.dll",
+      "name": "?gc_IsKernelParasolid@@YAHXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc47b",
+      "slot": "0x4cd38118",
+      "dll": "sldgcu.dll",
+      "name": "?startVertex@gcCoEdge_w@@QEBAPEAVgcVertex_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc46f",
+      "slot": "0x4cd38f68",
+      "dll": "sldgcu.dll",
+      "name": "?getGenericId@gcTopEnt_w@@QEAA_JH@Z",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc45f",
+      "slot": "0x4cd39060",
+      "dll": "sldgcu.dll",
+      "name": "?getNodeId@gcEnt_w@@QEAAHXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc452",
+      "slot": "0x4cd38f08",
+      "dll": "sldgcu.dll",
+      "name": "?gc_IsKernelParasolid@@YAHXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc449",
+      "slot": "0x4cd38118",
+      "dll": "sldgcu.dll",
+      "name": "?startVertex@gcCoEdge_w@@QEBAPEAVgcVertex_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc407",
+      "slot": "0x4cd38118",
+      "dll": "sldgcu.dll",
+      "name": "?startVertex@gcCoEdge_w@@QEBAPEAVgcVertex_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc3f5",
+      "slot": "0x4cd396d8",
+      "dll": "sldgcu.dll",
+      "name": "?getTrackingId@gcEdge_w@@QEAA_KXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc3ec",
+      "slot": "0x4cd392f0",
+      "dll": "sldgcu.dll",
+      "name": "?edge@gcCoEdge_w@@QEBAPEAVgcEdge_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc3de",
+      "slot": "0x4cd380f8",
+      "dll": "sldgcu.dll",
+      "name": "?previous@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc3d5",
+      "slot": "0x4cd39108",
+      "dll": "sldgcu.dll",
+      "name": "?partner@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc3c7",
+      "slot": "0x4cd396d8",
+      "dll": "sldgcu.dll",
+      "name": "?getTrackingId@gcEdge_w@@QEAA_KXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc3be",
+      "slot": "0x4cd392f0",
+      "dll": "sldgcu.dll",
+      "name": "?edge@gcCoEdge_w@@QEBAPEAVgcEdge_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc3ac",
+      "slot": "0x4cd380f8",
+      "dll": "sldgcu.dll",
+      "name": "?previous@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc396",
+      "slot": "0x4cd392e8",
+      "dll": "sldgcu.dll",
+      "name": "?next@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc388",
+      "slot": "0x4cd39320",
+      "dll": "sldgcu.dll",
+      "name": "?getFirstCoEdge@gcLoop_w@@QEBAPEAVgcCoEdge_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc36f",
+      "slot": "0x4cd39090",
+      "dll": "sldgcu.dll",
+      "name": "?loop@gcCoEdge_w@@QEBAPEAVgcLoop_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc363",
+      "slot": "0x4cd39108",
+      "dll": "sldgcu.dll",
+      "name": "?partner@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc355",
+      "slot": "0x4cd39108",
+      "dll": "sldgcu.dll",
+      "name": "?partner@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc347",
+      "slot": "0x4cd39088",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcLoop_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc33a",
+      "slot": "0x4cd38f08",
+      "dll": "sldgcu.dll",
+      "name": "?gc_IsKernelParasolid@@YAHXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc32c",
+      "slot": "0x4cd39090",
+      "dll": "sldgcu.dll",
+      "name": "?loop@gcCoEdge_w@@QEBAPEAVgcLoop_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc320",
+      "slot": "0x4cd37e08",
+      "dll": "sldgcu.dll",
+      "name": "?coEdge@gcEdge_w@@QEBAPEAVgcCoEdge_w@@H@Z",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc315",
+      "slot": "0x4cd380f0",
+      "dll": "sldgcu.dll",
+      "name": "?sameDirectionAsEdge@gcCoEdge_w@@QEBAHXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc2f8",
+      "slot": "0x4cd396d8",
+      "dll": "sldgcu.dll",
+      "name": "?getTrackingId@gcEdge_w@@QEAA_KXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc2ef",
+      "slot": "0x4cd392f0",
+      "dll": "sldgcu.dll",
+      "name": "?edge@gcCoEdge_w@@QEBAPEAVgcEdge_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc2d6",
+      "slot": "0x4cd392e8",
+      "dll": "sldgcu.dll",
+      "name": "?next@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc2cd",
+      "slot": "0x4cd39108",
+      "dll": "sldgcu.dll",
+      "name": "?partner@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc2bf",
+      "slot": "0x4cd396d8",
+      "dll": "sldgcu.dll",
+      "name": "?getTrackingId@gcEdge_w@@QEAA_KXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc2b6",
+      "slot": "0x4cd392f0",
+      "dll": "sldgcu.dll",
+      "name": "?edge@gcCoEdge_w@@QEBAPEAVgcEdge_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc29b",
+      "slot": "0x4cd392e8",
+      "dll": "sldgcu.dll",
+      "name": "?next@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc292",
+      "slot": "0x4cd39108",
+      "dll": "sldgcu.dll",
+      "name": "?partner@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc263",
+      "slot": "0x4cd392e8",
+      "dll": "sldgcu.dll",
+      "name": "?next@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc255",
+      "slot": "0x4cd39320",
+      "dll": "sldgcu.dll",
+      "name": "?getFirstCoEdge@gcLoop_w@@QEBAPEAVgcCoEdge_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc23f",
+      "slot": "0x4cd39090",
+      "dll": "sldgcu.dll",
+      "name": "?loop@gcCoEdge_w@@QEBAPEAVgcLoop_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc22e",
+      "slot": "0x4cd37e08",
+      "dll": "sldgcu.dll",
+      "name": "?coEdge@gcEdge_w@@QEBAPEAVgcCoEdge_w@@H@Z",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc217",
+      "slot": "0x4cd396d8",
+      "dll": "sldgcu.dll",
+      "name": "?getTrackingId@gcEdge_w@@QEAA_KXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc200",
+      "slot": "0x4cd396e0",
+      "dll": "sldgcu.dll",
+      "name": "?hasTrackingId@gcEdge_w@@QEAAH_K@Z",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc1e2",
+      "slot": "0x4cd37e08",
+      "dll": "sldgcu.dll",
+      "name": "?coEdge@gcEdge_w@@QEBAPEAVgcCoEdge_w@@H@Z",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc1b9",
+      "slot": "0x4cd395f8",
+      "dll": "sldgcu.dll",
+      "name": "?getBody@gcFace_w@@QEBAPEAVgcBody_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc1ad",
+      "slot": "0x4cd393c0",
+      "dll": "sldgcu.dll",
+      "name": "?getBody@gcEdge_w@@QEBAPEAVgcBody_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc190",
+      "slot": "0x4cd39160",
+      "dll": "sldgcu.dll",
+      "name": "?startVertex@gcEdge_w@@QEBAPEAVgcVertex_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_topology_producer.json",
+      "site": "0x4bfbc183",
+      "slot": "0x4cd37e98",
+      "dll": "sldgcu.dll",
+      "name": "?isClosed@gcEdge_w@@QEBAHXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbe33c",
+      "slot": "0x4cd39108",
+      "dll": "sldgcu.dll",
+      "name": "?partner@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbe32e",
+      "slot": "0x4cd39110",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcCoEdge_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbe325",
+      "slot": "0x4cd39108",
+      "dll": "sldgcu.dll",
+      "name": "?partner@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbe317",
+      "slot": "0x4cd39110",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcCoEdge_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbe2fd",
+      "slot": "0x4cd37e08",
+      "dll": "sldgcu.dll",
+      "name": "?coEdge@gcEdge_w@@QEBAPEAVgcCoEdge_w@@H@Z",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbe2d0",
+      "slot": "0x4cd395f8",
+      "dll": "sldgcu.dll",
+      "name": "?getBody@gcFace_w@@QEBAPEAVgcBody_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbe2a8",
+      "slot": "0x4cd39110",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcCoEdge_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbe28d",
+      "slot": "0x4cd39580",
+      "dll": "sldgcu.dll",
+      "name": "?isValid@gcEnt_w@@QEBAHXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbe259",
+      "slot": "0x4cd39108",
+      "dll": "sldgcu.dll",
+      "name": "?partner@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbe24b",
+      "slot": "0x4cd39110",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcCoEdge_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbe242",
+      "slot": "0x4cd39108",
+      "dll": "sldgcu.dll",
+      "name": "?partner@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbe234",
+      "slot": "0x4cd39110",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcCoEdge_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbe21a",
+      "slot": "0x4cd37e08",
+      "dll": "sldgcu.dll",
+      "name": "?coEdge@gcEdge_w@@QEBAPEAVgcCoEdge_w@@H@Z",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbe1ed",
+      "slot": "0x4cd395f8",
+      "dll": "sldgcu.dll",
+      "name": "?getBody@gcFace_w@@QEBAPEAVgcBody_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbe1c7",
+      "slot": "0x4cd39110",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcCoEdge_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbe1ab",
+      "slot": "0x4cd39580",
+      "dll": "sldgcu.dll",
+      "name": "?isValid@gcEnt_w@@QEBAHXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbe178",
+      "slot": "0x4cd39088",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcLoop_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbe153",
+      "slot": "0x4cd395f8",
+      "dll": "sldgcu.dll",
+      "name": "?getBody@gcFace_w@@QEBAPEAVgcBody_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbe13b",
+      "slot": "0x4cd39088",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcLoop_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbe120",
+      "slot": "0x4cd39580",
+      "dll": "sldgcu.dll",
+      "name": "?isValid@gcEnt_w@@QEBAHXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbdf7d",
+      "slot": "0x4cd39108",
+      "dll": "sldgcu.dll",
+      "name": "?partner@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbdf6f",
+      "slot": "0x4cd39110",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcCoEdge_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbdf66",
+      "slot": "0x4cd39108",
+      "dll": "sldgcu.dll",
+      "name": "?partner@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbdf58",
+      "slot": "0x4cd39110",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcCoEdge_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbdf3e",
+      "slot": "0x4cd37e08",
+      "dll": "sldgcu.dll",
+      "name": "?coEdge@gcEdge_w@@QEBAPEAVgcCoEdge_w@@H@Z",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbdf11",
+      "slot": "0x4cd395f8",
+      "dll": "sldgcu.dll",
+      "name": "?getBody@gcFace_w@@QEBAPEAVgcBody_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbdee9",
+      "slot": "0x4cd39110",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcCoEdge_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbdece",
+      "slot": "0x4cd39580",
+      "dll": "sldgcu.dll",
+      "name": "?isValid@gcEnt_w@@QEBAHXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbde9a",
+      "slot": "0x4cd39108",
+      "dll": "sldgcu.dll",
+      "name": "?partner@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbde8c",
+      "slot": "0x4cd39110",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcCoEdge_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbde83",
+      "slot": "0x4cd39108",
+      "dll": "sldgcu.dll",
+      "name": "?partner@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbde75",
+      "slot": "0x4cd39110",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcCoEdge_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbde5b",
+      "slot": "0x4cd37e08",
+      "dll": "sldgcu.dll",
+      "name": "?coEdge@gcEdge_w@@QEBAPEAVgcCoEdge_w@@H@Z",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbde2e",
+      "slot": "0x4cd395f8",
+      "dll": "sldgcu.dll",
+      "name": "?getBody@gcFace_w@@QEBAPEAVgcBody_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbde08",
+      "slot": "0x4cd39110",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcCoEdge_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbddec",
+      "slot": "0x4cd39580",
+      "dll": "sldgcu.dll",
+      "name": "?isValid@gcEnt_w@@QEBAHXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbddae",
+      "slot": "0x4cd39088",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcLoop_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbdd89",
+      "slot": "0x4cd395f8",
+      "dll": "sldgcu.dll",
+      "name": "?getBody@gcFace_w@@QEBAPEAVgcBody_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbdd6b",
+      "slot": "0x4cd39088",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcLoop_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbdd50",
+      "slot": "0x4cd39580",
+      "dll": "sldgcu.dll",
+      "name": "?isValid@gcEnt_w@@QEBAHXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbdb34",
+      "slot": "0x4cd39108",
+      "dll": "sldgcu.dll",
+      "name": "?partner@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbdb26",
+      "slot": "0x4cd39110",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcCoEdge_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbdb1d",
+      "slot": "0x4cd39108",
+      "dll": "sldgcu.dll",
+      "name": "?partner@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbdb0f",
+      "slot": "0x4cd39110",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcCoEdge_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbdaf5",
+      "slot": "0x4cd37e08",
+      "dll": "sldgcu.dll",
+      "name": "?coEdge@gcEdge_w@@QEBAPEAVgcCoEdge_w@@H@Z",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbdac8",
+      "slot": "0x4cd395f8",
+      "dll": "sldgcu.dll",
+      "name": "?getBody@gcFace_w@@QEBAPEAVgcBody_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbdaa0",
+      "slot": "0x4cd39110",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcCoEdge_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbda85",
+      "slot": "0x4cd39580",
+      "dll": "sldgcu.dll",
+      "name": "?isValid@gcEnt_w@@QEBAHXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbda51",
+      "slot": "0x4cd39108",
+      "dll": "sldgcu.dll",
+      "name": "?partner@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbda43",
+      "slot": "0x4cd39110",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcCoEdge_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbda3a",
+      "slot": "0x4cd39108",
+      "dll": "sldgcu.dll",
+      "name": "?partner@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbda2c",
+      "slot": "0x4cd39110",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcCoEdge_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbda12",
+      "slot": "0x4cd37e08",
+      "dll": "sldgcu.dll",
+      "name": "?coEdge@gcEdge_w@@QEBAPEAVgcCoEdge_w@@H@Z",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd9e5",
+      "slot": "0x4cd395f8",
+      "dll": "sldgcu.dll",
+      "name": "?getBody@gcFace_w@@QEBAPEAVgcBody_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd9bf",
+      "slot": "0x4cd39110",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcCoEdge_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd9a3",
+      "slot": "0x4cd39580",
+      "dll": "sldgcu.dll",
+      "name": "?isValid@gcEnt_w@@QEBAHXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd970",
+      "slot": "0x4cd39088",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcLoop_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd94b",
+      "slot": "0x4cd395f8",
+      "dll": "sldgcu.dll",
+      "name": "?getBody@gcFace_w@@QEBAPEAVgcBody_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd933",
+      "slot": "0x4cd39088",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcLoop_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd918",
+      "slot": "0x4cd39580",
+      "dll": "sldgcu.dll",
+      "name": "?isValid@gcEnt_w@@QEBAHXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd793",
+      "slot": "0x4cd39108",
+      "dll": "sldgcu.dll",
+      "name": "?partner@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd785",
+      "slot": "0x4cd39110",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcCoEdge_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd77c",
+      "slot": "0x4cd39108",
+      "dll": "sldgcu.dll",
+      "name": "?partner@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd76e",
+      "slot": "0x4cd39110",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcCoEdge_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd757",
+      "slot": "0x4cd37e08",
+      "dll": "sldgcu.dll",
+      "name": "?coEdge@gcEdge_w@@QEBAPEAVgcCoEdge_w@@H@Z",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd72a",
+      "slot": "0x4cd395f8",
+      "dll": "sldgcu.dll",
+      "name": "?getBody@gcFace_w@@QEBAPEAVgcBody_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd704",
+      "slot": "0x4cd39110",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcCoEdge_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd6ec",
+      "slot": "0x4cd39580",
+      "dll": "sldgcu.dll",
+      "name": "?isValid@gcEnt_w@@QEBAHXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd6c0",
+      "slot": "0x4cd39108",
+      "dll": "sldgcu.dll",
+      "name": "?partner@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd6b2",
+      "slot": "0x4cd39110",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcCoEdge_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd6a9",
+      "slot": "0x4cd39108",
+      "dll": "sldgcu.dll",
+      "name": "?partner@gcCoEdge_w@@QEBAPEAV1@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd69b",
+      "slot": "0x4cd39110",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcCoEdge_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd684",
+      "slot": "0x4cd37e08",
+      "dll": "sldgcu.dll",
+      "name": "?coEdge@gcEdge_w@@QEBAPEAVgcCoEdge_w@@H@Z",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd657",
+      "slot": "0x4cd395f8",
+      "dll": "sldgcu.dll",
+      "name": "?getBody@gcFace_w@@QEBAPEAVgcBody_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd631",
+      "slot": "0x4cd39110",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcCoEdge_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd618",
+      "slot": "0x4cd39580",
+      "dll": "sldgcu.dll",
+      "name": "?isValid@gcEnt_w@@QEBAHXZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd5e3",
+      "slot": "0x4cd39088",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcLoop_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd5c1",
+      "slot": "0x4cd395f8",
+      "dll": "sldgcu.dll",
+      "name": "?getBody@gcFace_w@@QEBAPEAVgcBody_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd5a3",
+      "slot": "0x4cd39088",
+      "dll": "sldgcu.dll",
+      "name": "?face@gcLoop_w@@QEBAPEAVgcFace_w@@XZ",
+      "ordinal": null
+    },
+    {
+      "packet": "parallel_sketch_intersection_reference_ordinal_cache_boundary.json",
+      "site": "0x4bfbd58b",
+      "slot": "0x4cd39580",
+      "dll": "sldgcu.dll",
+      "name": "?isValid@gcEnt_w@@QEBAHXZ",
+      "ordinal": null
+    }
+  ],
+  "named_exports": {
+    "?processForIntersection@sgIntersection_c@@QEAAXPEAVmoModel_c@@PEAVmoIntersectionEdge_c@@PEAVsgEntHandle@@AEAVbentRefArr@@3@Z": "0x4bbf0160",
+    "?getIntersectionArrI@sgSketch@@QEBAPEAVsgIntersection_c@@H@Z": "0x4c4be220",
+    "?intersectTwoRefsurfs@sgSketch@@QEAAHPEAVmoRefWrapper_c@@000PEAV?$suDynamicArray@VsgEntHandle@@@@PEAIPEAVskIntersectionMoHelper_c@@@Z": "0x4bbef2e0"
+  },
+  "passed": true,
+  "target_executed": false,
+  "coverage_credit": 0,
+  "qualifications": [
+    "Exact retained byte/instruction/import/export comparisons only; overlapping captures remain separate instruction checks. No whitespace or mnemonic normalization.",
+    "No target execution, provider calls, geometry or complete mixed code/table CFG is established. Pure instruction models were not rerun.",
+    "Previous REA timeout on this exact module is retained in ../intersection-reference-match/native-tool-qualification.json. These results are ordinary static file evidence.",
+    "Initial attempts stopped at omitted pefile inventory entries for an import and a named export. Direct original PE descriptors/thunks and export arrays verify every recorded binding without exclusions.",
+    "Source admission, complete owned operations, documents, concurrency and publication for Feature185 remain pending."
+  ],
+  "collector_and_logs": [
+    {
+      "path": "target/check-intersection-index-classification-native.py",
+      "bytes": 8639,
+      "sha256": "986e630676172ee9e21247a1b5cf934c16d38f428182e4729cbf765045059424"
+    },
+    {
+      "path": "target/intersection-index-classification-native-static.log",
+      "bytes": 98,
+      "sha256": "1f59815cd79a8389944c0e2cb83ca3d50336f309190b5c0c625a2a2ddfa63613"
+    },
+    {
+      "path": "target/intersection-index-classification-native-static-corrected.log",
+      "bytes": 389,
+      "sha256": "255e1ab2d3f534d543a49d01e54194b88df2185dbcb43dd1358aff02d2e9976a"
+    },
+    {
+      "path": "target/intersection-index-classification-native-static-final.log",
+      "bytes": 191,
+      "sha256": "c6589b4403b573216e652bd0990f61e33893b066748779962df53a8d0b3276f9"
+    }
+  ],
+  "exit_codes": [
+    1,
+    1,
+    0
+  ],
+  "collector_removed_after_verification": true
+}

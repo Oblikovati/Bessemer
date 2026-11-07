@@ -1,0 +1,53 @@
+{
+  "issue": 46,
+  "issue_type": "Bug",
+  "runtime_base_revision": "dc378bf4c3dc9c61ae10eabdcf0473acc0d56a82",
+  "fixture_preparation_commit": "dc378bf4c3dc9c61ae10eabdcf0473acc0d56a82",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "artifact_sha256": "0b291f3cf473df583351abbf46f439a1a2dfbbc93d51ba0cc7166b2394fb628b",
+  "regression": {
+    "before_passed": 0,
+    "before_failed": 1,
+    "after_passed": 1,
+    "before_log_sha256": "d475c6ff4c20106a86b17b6ee0c4fa19acfa597a8d509ce1e95bb1cd59ec8535",
+    "cause": "reference_10 runtime class moSingleFaceRef_w rejected; expected singleton moRefWrapper_c"
+  },
+  "fixture_graphs": 1824,
+  "primitive_reads": 978482,
+  "owned_streams": 133,
+  "legacy_default_builder_cases": 448,
+  "unrelated_complete_witnesses": 4,
+  "checks": {
+    "private": "8 passed in the final PR gate",
+    "public": "3 passed; all 133 slot expectations independently verified",
+    "python": "3 regeneration/baseline tests passed against the verified source snapshot; original 16-case spline-control baseline test passed separately",
+    "cargo_xtask_pr": "Final tree passed: 817 library tests, 4 xtask tests, all integrations, 274 doctests; 3 explicit external-fixture tests ignored",
+    "native_processes": "Two fresh processes matched all 906 outcomes and causes; exit 101 only for aggregate 812/906 completeness assertion"
+  },
+  "previous_complete": 810,
+  "complete": 812,
+  "newly_complete": [
+    67,
+    693
+  ],
+  "no_prior_success_lost": true,
+  "independent_feature_bytes": 54181872,
+  "source_snapshot": "a0096b3ef105326289c7cf01b58e82f71ce6e20257b655e601b37413ee229ede",
+  "source_python_files": 1608,
+  "native_containing_roots": 5,
+  "native_intersections": 10,
+  "native_intersection_bytes": 22044,
+  "native_reference_classes": {
+    "moSingleFaceRef_w": 10,
+    "moSolidRef_w": 10,
+    "null": 20
+  },
+  "gate_log_sha256": "00b0a2a6eb8ef13cdbe8a78a53a82d4796ac7d3233ada0789909c454bc845f0d",
+  "exclusions": [
+    "94 native inputs remain explicit failures",
+    "Other finite-role rejection sites remain tracked by Bug #46",
+    "Historical/internal contexts, identity-address modes, geometry validity, application acceptance and all-schema parity remain incomplete",
+    "Humanizer unavailable; maintainer prose review remains open"
+  ]
+}

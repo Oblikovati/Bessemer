@@ -1,0 +1,84 @@
+{
+  "scope": "exact archive links; missing caches remain incomplete",
+  "fixtures": [
+    {
+      "fixture": "external-links-complete.SLDASM",
+      "sha256": "1525c82c308be2b5ec90278d13a06b173d0fe1e804c1070a7ba0ba0cfe3bbbd8",
+      "expected_status": 0,
+      "coverage": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        2,
+        2,
+        2,
+        0
+      ],
+      "requested_faces": 2
+    },
+    {
+      "fixture": "external-links-missing.SLDASM",
+      "sha256": "91c85b82b5fc1cfd84e2453ac27fdfd02b7cb588de8ad95c50a4da50437f50d5",
+      "expected_status": 1,
+      "coverage": [],
+      "requested_faces": 2
+    },
+    {
+      "fixture": "external-links-unlocated.SLDASM",
+      "sha256": "ae8b5535ae81a7e3e107781c96acdaf6ec52d8279adb953bda79291e4d0fee69",
+      "expected_status": 1,
+      "coverage": [],
+      "requested_faces": 2
+    },
+    {
+      "fixture": "external-links-short.SLDASM",
+      "sha256": "bc8cdf1f3dece276fc1240a2e67b047f69dada30e89fefb6945a9aa5c753aa58",
+      "expected_status": 2,
+      "coverage": [],
+      "requested_faces": 2
+    },
+    {
+      "fixture": "external-links-duplicates.SLDASM",
+      "sha256": "2548f32c3c9009c3c476da25944a19c0d63672ea6edf201f1a2f932b902eeed1",
+      "expected_status": 0,
+      "coverage": [
+        1,
+        2,
+        0,
+        1,
+        0,
+        2,
+        2,
+        2,
+        0
+      ],
+      "requested_faces": 2
+    },
+    {
+      "fixture": "external-links-ambiguous.SLDASM",
+      "sha256": "7b222dd64ccccb0e68a37dd37a57d7be2782145f9a13fb01a076a1f0a10c5663",
+      "expected_status": 3,
+      "coverage": [],
+      "requested_faces": 2
+    },
+    {
+      "fixture": "external-links-empty.SLDASM",
+      "sha256": "38b9fd5b69e1c370865ce4ceb4f9cb21adbd8f9f7894f7435a6e244255c57b2b",
+      "expected_status": 0,
+      "coverage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "requested_faces": 0
+    }
+  ]
+}

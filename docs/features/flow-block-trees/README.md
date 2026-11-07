@@ -1,0 +1,64 @@
+# Flow legacy block trees — issue #241
+
+Specification 14.40 defines record 400's legacy eight-child wire grammar for
+versions 0–3 and the inactive prefix of later delegated versions. The FBT1 fixture
+pins that grammar independently of the typed bounded reader and editor.
+
+The 81 cases contain one native CPT zlib payload and 80 owned raw/zlib cases.
+The native payload has 340 stored bytes and 8,908 decoded bytes. Its 792 present
+roots contain 4,440 wire nodes, 456 splits and 3,984 leaves. The complete parsed
+projection matches the source corpus; source and payload hashes are verified
+before extraction. Neither other native carrier contains record 400.
+
+Versions zero and one require explicit legacy bounds and have implicit present
+roots. Versions two and three store inclusive bounds and root presence bytes.
+Root order advances the first index fastest, then second, then third. Exactly
+marker 255 means split, and every split has eight children. The discarded child
+prefixes in versions two/three are raw bytes, even when zero; they do not make
+children absent. Version two's extra leaf words remain raw u32 patterns.
+
+Owned cases cover leaves, splits, nested forests, mixed present/absent roots,
+reversed ranges, signed bounds, raw marker/presence/prefix values and depth 255/256.
+The depth-256 case retains wire depth 256 alongside the native level byte zero.
+Inactive delegated cases include a mathematical grid count of 2^96 without
+materializing roots. Missing roots for an inactive body differ from an active
+legacy forest with zero positions. Active delegated layouts remain unsupported.
+
+Python freezes complete root intervals and flat wire-preorder node metadata from
+the sibling `flowblocktrees.py`. Rust independently rebuilds payloads with an
+explicit task stack, validates first-index-fast root positions, exact intervals,
+native-level wrapping and the full eight-child forest identities. All discarded
+bytes and words participate in reconstruction. Regeneration tests use temporary
+directories and retain the frozen golden bytes.
+
+Run `cargo test --test flow_block_tree_fixtures` and
+`python -m unittest discover -s docs/features/flow-block-trees -p test_trees.py`.
+`FlowCarrier::record_400_trees` reads a revision-bound occurrence with explicit
+compression, optional legacy bounds and independent decoded-byte, root, node and
+depth limits. `FlowTreeBounds` retains all signed pairs and computes the exact
+u128 grid product. A flat node table and explicit pending-task stack keep parsing,
+publication and drop independent of recursive tree ownership. Empty leaves share
+an immutable empty child slice. Published views retain every root/node interval,
+child link, raw marker, discarded field, source checkpoint and accepted options.
+
+`replace_field` edits existing leaf markers, child-prefix bytes, version-2 leaf
+words and stored root presence bytes while retaining their null/non-null branch.
+It checks the complete decoded patch by reparsing the full output carrier and
+forest, then returns source/result typed views and complete physical occurrence
+history. No-op edits preserve the original stored bytes and record identity.
+Fresh opposite raw edits restore exact carrier bytes. Fresh zlib reversals restore
+decoded bytes; the earlier checkpoint retains exact original compressed bytes.
+Structural changes to roots, bounds, versions or split cardinality remain
+separate work. Active delegated layouts fail explicitly.
+
+The typed checks run with `cargo test --test flow_block_trees --test flow_block_tree_fixtures --test flow_groups --test flow_arrays`.
+The full native field census is explicit:
+`cargo test --test flow_block_trees every_native_stored_wire_field -- --ignored --nocapture`.
+Caller bounds and compression remain explicit. Native parallel block-vector order, validation against global
+base-grid dimensions, delegated active layouts and application acceptance remain
+separate requirements. Wire node/leaf counts alone do not identify record 406's
+runtime context or record 433's expected count.
+
+Decoded/stored tree measures use different byte bases and supply no additional
+global semantic coverage claim.
+The maintainer humanizer pass remains for review because that skill is unavailable.

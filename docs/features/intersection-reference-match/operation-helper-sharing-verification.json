@@ -1,0 +1,78 @@
+{
+  "issue": 184,
+  "stage": "Behavior-preserving shared complete operation snapshot helper",
+  "baseline": "docs/features/entity-visual-state/model-concurrency-verification.json",
+  "baseline_artifact_git_revision": "bf241fa21f94ac4c6a3f141d8c2bf739c9be4111",
+  "before_concurrency_source_sha256": "258f98667d562c01285acfec36d3c7cea28bb3b8266e8e2004011690344997d0",
+  "baseline_source_hash_verified_before_edit": true,
+  "before_exports_verified": 4,
+  "comparisons": [
+    {
+      "before": "target/entity-visual-model-concurrent-process-1.bin",
+      "after": "target/model-operation-sharing.bin",
+      "bytes": 64222888,
+      "sha256": "a587067ff1c3096e549cc4291da1a1aafc35dcb1c700a8266f14ff8e5b4defbb",
+      "all_bytes_equal": true
+    },
+    {
+      "before": "target/entity-visual-model-concurrent-process-1.trace.zlib",
+      "after": "target/model-operation-sharing.trace.zlib",
+      "bytes": 295100109,
+      "sha256": "1781c0980ceacf34123e0482e5700fdb4c0ac252ddbc7ec1e33cb697c040da16",
+      "all_bytes_equal": true
+    }
+  ],
+  "cases": 11493,
+  "workers_per_shared_snapshot": 8,
+  "total_requests": 620622,
+  "exit_code": 0,
+  "process_reaped": true,
+  "test_seconds": 316.45,
+  "artifacts": [
+    {
+      "path": "tests/model_visual_carriers.rs",
+      "bytes": 7112,
+      "sha256": "55b1815101aefa9fd8fca67807a314c9f4052aab49a97121440df29c0a6327b9"
+    },
+    {
+      "path": "tests/model_visual_carriers/concurrency.rs",
+      "bytes": 8961,
+      "sha256": "996ac676b49f1937ae6903569d9ffafe6143f9880ba9fa0d11b786f6f3907d52"
+    },
+    {
+      "path": "tests/support/model_operation_snapshot.rs",
+      "bytes": 2037,
+      "sha256": "9f687a2cc3ecfb32681229f2db8663d1582822c603f41e48c8287aaaef15d5fa"
+    },
+    {
+      "path": "target/model-operation-sharing-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/model-operation-sharing-clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/model-operation-sharing-format.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/model-operation-sharing.log",
+      "bytes": 391502,
+      "sha256": "41a2df41a8502cb4b43a053ae0e2c12d61fe7750797e768e8f1adefccb35a2e8"
+    }
+  ],
+  "checks": [
+    "Extracted the existing complete field/byte/completion/coverage/fidelity/diagnostic and resolved history snapshots without changing their serialized Debug type/field names.",
+    "All original corpus assertions and worker/serial comparisons remain unchanged. The complete actual wire export and compressed full operation trace equal their independently accepted retained baselines byte for byte.",
+    "Standalone integration Clippy, workspace cargo fmt --check and function/file-size audit passed."
+  ],
+  "qualifications": [
+    "This is a test-helper extraction, separate from the next new intersection-reference mixed-worker test. It does not establish reference concurrency acceptance.",
+    "No fresh Source parse, runtime behavior change, full Cargo or exact-head publication acceptance is claimed. The full trace retains all original stored float bits and resolved history.",
+    "Humanizer unavailable; prose review pending."
+  ]
+}

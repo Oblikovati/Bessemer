@@ -1,0 +1,91 @@
+{
+  "feature_issue": 164,
+  "scope": "Original native/source foundation and independent reader literals/current writer controls; Rust and complete operation packets remain pending",
+  "bessemer_parent": "270c51a907e41c29efa18c667d9451add7592207",
+  "source_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "reference_tests": 17,
+  "original_tests": 9,
+  "foundation_checks": 8,
+  "all_exit_codes": 0,
+  "all_processes_reaped": true,
+  "streams": 450,
+  "logical_bytes": 10956,
+  "arguments": 481,
+  "accepted": 450,
+  "failed": 31,
+  "complete_original_values_spans_and_failure_traces_preserved": true,
+  "named_studies_without_index_inference": true,
+  "repeated_results_names_preserve_levels": true,
+  "source_hash_exceptions": false,
+  "target_executed": false,
+  "source_snapshot_identity": "180bda88ad0caa1e4985693e05cb359607ffe05b1a60eb6cdc6c803e93f95373",
+  "native_packet": {
+    "levels": [
+      {
+        "level": 0,
+        "streams": 53,
+        "logical_bytes": 2192,
+        "arguments": 58,
+        "accepted": 53,
+        "failed": 5,
+        "bytes": 3294,
+        "sha256": "a1bee5838afe08ad3f50dafce0e7300f5c5d0fd7fb627f6482c7045d32ba35a4"
+      },
+      {
+        "level": 1,
+        "streams": 185,
+        "logical_bytes": 1652,
+        "arguments": 196,
+        "accepted": 185,
+        "failed": 11,
+        "bytes": 4876,
+        "sha256": "32876d5e477a6acd4a6ed532100a00ec72b626dd9b8dd8c9565108dabfd619d8"
+      },
+      {
+        "level": 2,
+        "streams": 212,
+        "logical_bytes": 7112,
+        "arguments": 227,
+        "accepted": 212,
+        "failed": 15,
+        "bytes": 11216,
+        "sha256": "333ffd4b9d2f9e1d924ba1070798c71432954c870e92182239666f81aeda6486"
+      }
+    ],
+    "bytes": 19386,
+    "sha256": "dc9c33f83037d21fcfb393fe564cceb3e6a790cde5f174050d7f7f1e1885c32b"
+  },
+  "artifacts": {
+    "target/results-headers-foundation-write.log": {
+      "bytes": 2011,
+      "sha256": "f1c0c4d41f4d9b45b1899786bb3e7152886ec6a3e5a00562092096b1574e1efc"
+    },
+    "target/results-headers-foundation-strict.log": {
+      "bytes": 2011,
+      "sha256": "761b4b797ddba8309f65aa473ab981dda0136af6f85b2fc86704cf2e7d30b8ae"
+    }
+  },
+  "foundation_sources": {
+    "freeze_results_headers.py": "78bdc44ce13080115c6afc5d1e6bcdc838a81372e52b3d26cad95dd5f0a30fb7",
+    "results_bindings.py": "62ea6b6bf2b4c856f36b3ae84ba3e916f1e817b313d842a02cc8b6a83d71f5a1",
+    "results_evidence.py": "944664ea543022c9a5c4323eebdb524539e4d48f3909458047618f55d65dcfef",
+    "results_native.py": "9f5b7e953d9ba41629f97200f3cd790df499567e2f09cf75889d41d9ed1294ee"
+  },
+  "exclusions": [
+    "Independent complete owned operation and writer-control packets",
+    "Typed Rust read/construction/edit and result contracts",
+    "Malformed/cap/resource/isolation/concurrency/two-process checks",
+    "Full local and exact-head platform/ThreadSanitizer integration",
+    "Dialog/graph/auxiliary serializers",
+    "Native application/writer equivalence and geometry acceptance",
+    "Whole-format schema parity"
+  ],
+  "humanizer": "Unavailable; maintainer prose review pending",
+  "owned_contexts": 660,
+  "current_writer_controls": 20,
+  "owned_reference_sha256": "5615910803be9ac4c829c3215a6b41200d597e7e4830ea7b4f0b110ddc869048",
+  "owned_log_hashes": {
+    "target/results-headers-owned-write.log": "2ea21360c393900b57568a1fecc244dd968b031afd68f7ce4520d42862c46349",
+    "target/results-headers-owned-strict.log": "9bb3993826176ebcd33985d4538dfaaa1a208efad0bf84fcf34063a8b6fde740"
+  }
+}

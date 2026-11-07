@@ -1,0 +1,61 @@
+{
+  "issue": 165,
+  "stage": "Fresh current-source replay before serialized publication",
+  "accepted_source_cut": "f51597a464263b9a7d1c4e9722626cbec9ae6398",
+  "checks": 15,
+  "source_elapsed_seconds": 3.639,
+  "exit_code": 0,
+  "terminal_exit_reaped": true,
+  "baseline_update_mode": false,
+  "snapshot": {
+    "path": "docs/features/simulation-post-graph/publication-source-snapshot.json",
+    "bytes": 618774,
+    "sha256": "f40a97633e16570669818d6a2233048343f3e6023215cf4773c0d5ab64e2a335"
+  },
+  "source_identity": "99c84c47f7ba695f0a477771255dfe89a1401c8ce4ed2ef559af4060af54ada6",
+  "historical_snapshot_preserved": true,
+  "owned_contexts": 270,
+  "native_arguments": 224,
+  "native_bytes": 83328,
+  "focused_checks_per_process": 18,
+  "focused_failures": 0,
+  "focused_ignored": 0,
+  "exports": {
+    "fields": {
+      "bytes": 1637647,
+      "sha256": "b4504fa492c7cfa7310de171e8508d84de0ecb5416a8ed67d3b1dfdb2ac5c996",
+      "fresh_processes": 2,
+      "complete_source_match": true
+    },
+    "history": {
+      "bytes": 2513677,
+      "sha256": "b0b836243c52ae1a7dc5e035eb40e84af8364e4800a1a7be2167847624f2cec5",
+      "fresh_processes": 2,
+      "complete_source_match": true
+    }
+  },
+  "binary": {
+    "path": "target/pinned-1.99.0/debug/deps/simulation_post_graph-704ee086d4cfc240.exe",
+    "bytes": 7486464,
+    "sha256": "f33ed4b398f8c85c45e7c40e958231443542be38e882bf33d092f5c4ea126c19"
+  },
+  "logs": [
+    {
+      "path": "target/post-graph-publication-source.log",
+      "bytes": 2352,
+      "sha256": "95aa3e6e2d94fe904b83d5a10baf92e9951ad36854aa1e9c056bdf3dd7aa5581"
+    },
+    {
+      "path": "target/post-graph-refresh-first.log",
+      "bytes": 1806,
+      "sha256": "1263fa513314173bf02e281b43c744b7e360dbdb91c4614318791ba0d514b977"
+    },
+    {
+      "path": "target/post-graph-refresh-second.log",
+      "bytes": 1806,
+      "sha256": "fb3e6d7f286986e1a33ab22c3251a204dc68a02b9a28628e45b0be9ef805b7cc"
+    }
+  ],
+  "qualification": "Current combined-root binary replay only. Exact publication-head Cargo gate and five platform checks remain required. No publication branch or PR created while PR176 remains open.",
+  "native_target_executed": false
+}

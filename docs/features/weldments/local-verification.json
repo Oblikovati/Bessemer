@@ -1,0 +1,175 @@
+{
+  "base_revision": "c80e662d2032878c1ab4852796206f45465e0a04",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "gate": {
+    "command": "cargo xtask pr",
+    "staged": true,
+    "exit_code": 0,
+    "library_passed": 535,
+    "library_ignored": 3,
+    "xtask_tests_passed": 4,
+    "all_integration_suites_passed": true,
+    "doctests_passed": 265,
+    "log_sha256": "be0010744c705fb2fe749a6ac65876641434e4b351de18f0aabae2550c05a16a"
+  },
+  "focused": {
+    "private_tests": 4,
+    "public_tests": 3,
+    "python_tests": 3,
+    "previous_property_python_regression_tests": 2,
+    "object_cases": 42,
+    "primitive_observations": 2367,
+    "owned_streams": 4,
+    "minimum_property_bytes": 24
+  },
+  "native_corpus": {
+    "cases": 906,
+    "accepted": 686,
+    "rejected": 220,
+    "accepted_input_set_unchanged": true,
+    "accepted_input_quartets_verified_against_independent_audit": 686,
+    "fresh_process_outcomes_and_causes_identical": true,
+    "artifact_stable_during_replay": true,
+    "artifact_sha256": "0a10d6ad2e463cc5889a162b9f9cb79695707b2d256ebe08f29d86e1b0988bc8",
+    "changes": [
+      {
+        "index": 14,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldmentFeature_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldMemberFeat_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 108,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldmentFeature_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldMemberFeat_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 118,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldmentFeature_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldMemberFeat_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 134,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldmentFeature_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldMemberFeat_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 139,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldmentFeature_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldMemberFeat_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 141,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldmentFeature_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldMemberFeat_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 145,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldmentFeature_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldMemberFeat_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 236,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldmentFeature_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moRefDim2E_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 238,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldmentFeature_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldMemberFeat_c\" schema 1; expected an implemented complete model object body"
+        }
+      },
+      {
+        "index": 550,
+        "before": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldmentFeature_c\" schema 1; expected an implemented complete model object body"
+        },
+        "after": {
+          "status": "rejected",
+          "cause": "model archive model stream: Unsupported: runtime class \"moWeldMemberFeat_c\" schema 1; expected an implemented complete model object body"
+        }
+      }
+    ],
+    "expected_full_parity_exit_code": 101,
+    "previous_independent_eof_report": "../plane-point-roles/accepted-reference.json",
+    "previous_independent_eof_report_sha256": "614c1ec2a7f745a776131267db1e8c61d0fd976f1e55cb4d21f93267fac06bba"
+  },
+  "reference_audit": {
+    "reader_hashes_stable_during_generation_and_regeneration": true,
+    "previous_property_original_and_edit_bytes_unchanged": true
+  },
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "source_file_sha256": {
+    "src/model_archives/weldment_records.rs": "aa52769e0443b9167d5eaf20def38d3b7e088a0baa67899e148aefcaa0269483",
+    "src/model_archives/custom_properties.rs": "08bd6a191bd2679a272b8271c5f88ac457454d9b9511b999736580f50c9b54ce",
+    "src/model_archives/resolved_feature_objects.rs": "d7a1d153dd8bc27d196596b0959317be553f52e5211725d3af71dba83355a9f8",
+    "docs/features/resolved-features/freeze_custom_properties.py": "2d739c2ad47f9282d463237d09ea7c88b6e77ee0b930386e78ffdd0497596b62",
+    "tests/resolved_features/weldments.rs": "a786c7687207513772b47a19ca5f04b6def2eaf2e5f141dfc9f22edddfcb24b9",
+    "tests/resolved_weldments.rs": "f55b470cfd7807e74238e1a0805d56eba492494fe7b0fb94285d39c41e223103"
+  },
+  "exclusions": [
+    "Full documented schema parity",
+    "Structural-member and reference-dimension dependencies",
+    "Native application acceptance",
+    "Property meanings and native localization/index rewrites",
+    "Geometry and topology validation",
+    "DB/deferred and historical archives",
+    "Non-Windows execution awaits future integration PR matrix"
+  ],
+  "dependencies_changed": false,
+  "version_changed": false
+}

@@ -1,0 +1,94 @@
+{
+  "issue": 166,
+  "behavior_version": "COGLColor-C864-masked-exceptions-daz-off-v1",
+  "kernel_decision": "Use integer bit classification for the explicit all-channel UCOMISS/JNE model; retain independent stored bitwise equality.",
+  "owned_pairs": 2048,
+  "native_pairs": 676,
+  "native_distinct_colors": 26,
+  "native_original_observations": 4836,
+  "additional_stored_byte_credit": 0,
+  "rust": {
+    "checks": 6,
+    "failed": 0,
+    "ignored": 0
+  },
+  "clippy": {
+    "path": "target/rgba-comparison-clippy.log",
+    "bytes": 136,
+    "sha256": "7377308156761f3382daf244a8c460d5f452833a4b3277233b468629dc48f675"
+  },
+  "source_initialization": {
+    "checks": 9,
+    "seconds": 3.203,
+    "log": {
+      "path": "target/rgba-comparison-source-write.log",
+      "bytes": 1593,
+      "sha256": "d5e1a9fdff9369f822d1fa093a598d80d4f0a3add74f3d49d2465ba612aa1289"
+    }
+  },
+  "source_strict": {
+    "checks": 9,
+    "seconds": 3.04,
+    "log": {
+      "path": "target/rgba-comparison-source-strict.log",
+      "bytes": 1593,
+      "sha256": "b7e861e9d6e275c5d043799f8abbe3e530619d657f297022992659bc5ff8bf3c"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/rgba-comparison-source-snapshot.json",
+      "bytes": 526500,
+      "sha256": "8ecde47d24290f4486ad50e74ae064ad83d1d1892276765ee0d1ead410655612"
+    }
+  },
+  "packet_reference": "rgba-comparison-packets-reference.json",
+  "concurrency_workers": 8,
+  "process_proof": "rgba-comparison-process-verification.json",
+  "pending": [
+    "Publication gates, loaded legend state, remaining PostStyle consumer policies."
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "model_environment": "masked_exceptions_daz_off",
+  "target_executed": false,
+  "oracle_kinds": [
+    "Pinned independent Source helper",
+    "Original C-864 report and native raw-color census",
+    "Installed full operator leaves and exports",
+    "Signed-zero, alpha, NaN and nontransitivity invariants",
+    "Eight-worker and fresh-process deterministic replay"
+  ],
+  "excluded": [
+    "Observed native MXCSR state and target execution",
+    "Rendering equivalence",
+    "Substitution for stored bitwise Eq"
+  ],
+  "full_source": {
+    "checks": 83,
+    "seconds": 359.174,
+    "result": "passed",
+    "log": {
+      "path": "target/rgba-comparison-source-full.log",
+      "bytes": 26664,
+      "sha256": "11bd389fcbc5ac218081f25bcc16ff8546cec9b5a035bc016349001b5d2dbf40"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 536447,
+      "sha256": "e8347d8c7386486512e430c1f43bb8e7a73a179822f97305d8b13c4e194de42c"
+    }
+  },
+  "local_pr_gate": {
+    "runtime_revision": "033b1c052dc09372b044cd4864c00e5f662c7711",
+    "passed": 3599,
+    "failed": 0,
+    "ignored": 129,
+    "summaries": 272,
+    "log": {
+      "path": "target/rgba-comparison-pr-gate.log",
+      "bytes": 458253,
+      "sha256": "5f6ddf2cfa5c6b607fdff58b2ee5de66eba86eea34b0ae5ced5d2df24ffbcd4d"
+    },
+    "scope": "Compiled runtime and tests at 033b1c05. Later legend files were unregistered and were not included."
+  }
+}

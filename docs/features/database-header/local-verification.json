@@ -1,0 +1,77 @@
+{
+  "issue": 222,
+  "behavior_version": "C3597-database-header-v1",
+  "source_base": "c415c5065274c34102c3f2d1966c88c0b814143d",
+  "source_identity": "Working tree after source_base; exact source hashes below",
+  "platform": "Windows x64",
+  "toolchain": "Rust1.99.0",
+  "final_clippy": "Unit, library and integration builds exited0 with -D warnings -D missing_docs -F unsafe_code",
+  "format_check": "cargo fmt --all -- --check on src/lib.rs and all new Rust files exited0; final added test independently rustfmt-formatted before final Clippy build",
+  "rust_results": [
+    {
+      "log": "target/database-header-unit-tests.log",
+      "passed": 1,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "log": "target/database-header-integration-v3.log",
+      "passed": 11,
+      "failed": 0,
+      "ignored": 0
+    }
+  ],
+  "rust_passed": 12,
+  "python_fixture_verifier_exit_code": 0,
+  "literal_fixture_buffers": 16,
+  "exhaustive_page_values": 65025,
+  "sector_values_checked": 65541,
+  "name_lengths_checked": 488,
+  "arbitrary_time_words": 4096,
+  "proper_buffer_prefixes_rejected": 512,
+  "native_streams": [
+    "Contents/3DExperienceExchange2",
+    "Contents/3DExperienceExchange_ConfigHeader"
+  ],
+  "native_header_fields": {
+    "packed_time": "0x5d384126",
+    "S": 512,
+    "P": 4096,
+    "engine_name_hex": "68617368",
+    "interpreted_prefix_bytes": 29,
+    "uninterpreted_tail_bytes": 483
+  },
+  "containing_document_replacements_and_fresh_reversals": 2,
+  "unrelated_logical_streams": "Every unrelated stream compared byte for byte after replacement",
+  "concurrent_writers": 8,
+  "fresh_process_verification": "process-determinism-verification.json",
+  "full_pr_gate": "Live corrected gate at c415c506 excludes this newly added module; latest-cut full/remote validation remains required",
+  "preacceptance_correction": "Clippy1.99 requires as_chunks::<512>() for a constant-sized fixture packet",
+  "sha256": {
+    "src/lib.rs": "833314919a8ab4d9d4c6c98c52aa12b9ce8c4e16fc6b6834794b188b0a67f6b3",
+    "src/database_header/mod.rs": "9bfb67aca2d8b09983905d5f3916906671e28df8d86ebda9c2439092393df3c4",
+    "src/database_header/types.rs": "e8a8c1ba6baf4dfa280db61070fb99a09075c4e442dcf9d5f6f05deb5d38b1ae",
+    "src/database_header/codec.rs": "160673bfa4ae17fbe08928026842cf426e8c147b89d7373936e281003e370c19",
+    "tests/database_header.rs": "cd9557077331800d06a75a3f8b4ea6b1d6f0ae02ac69c48154caaac3d06b7e3f",
+    "tests/database_header/codec.rs": "38ab98ab0191b38c69cec9deeb6cf9ae60f8dd02cb0664c9d7f43eb8f8147015",
+    "target/database-header-unit-tests.log": "f8449b746f665ca6663f0af9ff5797d1928a56d8033d14b67ea4ac38d2c8c691",
+    "target/database-header-integration-v3.log": "7c088b3b60b617b85e927bdfea5b7f15c3ce0717a0f96c5a76f81a75cc445b16",
+    "target/database-header-unit-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/database-header-library-clippy.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/database-header-integration-clippy-v3.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/database-header-format-check-v2.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/database-header-fixture-verification.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target/database-header-tests.exe": "26924654a63e216e6e4c595995b64fa666ca0a61a7885e807e6c6cc9a2200b66",
+    "target/libbessemer_database_header.rlib": "b2dbce568314369153071fe855290f107c87683dba07b97c0c47721f7cc0075c",
+    "target/database-header-integration-v3.exe": "a89819c87b7388bd2daae39c2f272189126a100bdf129755f8b0300839f87fea",
+    "tests/fixtures/blank-part.SLDPRT": "b52e080ba2cc64d1d07ed28306f27281b07521aef550bc0c7fea8cd54be2b276",
+    "tests/fixtures/database-header/cases.bin": "48b0d24e7d89715b7f269969d4016f927febc7deedd5b09724f358e1b4bac0bf"
+  },
+  "exclusions": [
+    "No native DLL, VFS or original producer-parser execution",
+    "Provider profile is caller-declared; runtime provider identity is not inferred",
+    "Uninterpreted tail has no validation credit",
+    "No calendar conversion, page-count, database extent, engine, MsgPack, commit/durability or geometry/application acceptance"
+  ],
+  "humanizer": "Unavailable; maintainer prose review remains"
+}

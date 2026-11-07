@@ -1,0 +1,17 @@
+{
+  "command": "cargo xtask pr",
+  "terminal_exit_code": 0,
+  "source_commit": "d7bc6b16fe4d7ad694a1910cf5d4f6284fdb60ad",
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "result_summaries": 385,
+  "passed": 4770,
+  "failed": 0,
+  "ignored": 244,
+  "log": "target/flow-mixed-combined-full-pr-gate.log",
+  "log_sha256": "67d0dd5293ca4e046b480c16d752978f85f315fe8666e43ca733a296c4793739",
+  "scope": "Complete mixed-kind medium profile API and FML1 baseline, shared profile framing and selected-offset parsing, complete kind-two and earlier kind-one body/profile/metadata APIs, plus earlier Flow features",
+  "exclusions": [
+    "Later FEV1 numerical baseline and FiniteOrderedV1 API",
+    "Remote CI and native application acceptance"
+  ]
+}

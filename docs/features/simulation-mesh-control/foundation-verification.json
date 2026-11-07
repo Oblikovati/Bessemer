@@ -1,0 +1,47 @@
+{
+  "feature_issue": 161,
+  "implementation_parent": "2695049830e733e1bbbc125476de123ef1921a1c",
+  "behavior_profile": 1,
+  "strict_reference_checks": 11,
+  "original_source_tests": 4,
+  "failures": 0,
+  "exit_code": 0,
+  "process_reaped": true,
+  "log_sha256": "8a7bbb91ac1d2342725db8096febfe587767eb9a77cac7c2431079d396de6bcb",
+  "identity_manifest_sha256": "e14c20a34b47dfa40fc8f6d7c0d719c6b5fae7e043340064ced893b975741bbc",
+  "source_snapshot_sha256": "4be1c56c92e8653c011fd37baef97389b7ae8acbcdc0e675f13f0947cd8d8558",
+  "scripts_sha256": {
+    "freeze_mesh_control.py": "a2f440648e2c44e7c971a673d7202cea931e3f3351aca6bd750fb75031e2608a",
+    "mesh_control_evidence.py": "1d547bc39d2032b60fa9d6f92ca7dbed63b7df7d55083e911e09df389b77221b"
+  },
+  "native": [
+    {
+      "evidence": "C-748",
+      "streams": 358,
+      "logical_bytes": 3536,
+      "arguments": 392,
+      "accepted": 361,
+      "failed": 31,
+      "packet_bytes": 8624,
+      "packet_sha256": "03480fefd2b7d2245bbce80e844a7221868c92b8022510100c257bf9e2f1f788"
+    },
+    {
+      "evidence": "C-749",
+      "streams": 12,
+      "logical_bytes": 86359,
+      "arguments": 12,
+      "accepted": 12,
+      "failed": 0,
+      "packet_bytes": 86503,
+      "packet_sha256": "1e974cd000c4b60309761077ad9031ee406e8e9e3a68c746400cc730ea39ae49"
+    }
+  ],
+  "complete_native_direct_records": 16,
+  "all_original_full_outcomes_unchanged": true,
+  "installed_images_functions_constants_literals_model_ids_and_subobject_slot_verified": true,
+  "exclusions": [
+    "Typed Rust APIs, owned primitive/span/coverage/history oracles and adversarial acceptance remain pending.",
+    "Full local and five exact-head platform gates for this feature remain pending.",
+    "DocumentInfo dispatch, native writer/application and geometry acceptance, and whole-format completion remain unproven."
+  ]
+}

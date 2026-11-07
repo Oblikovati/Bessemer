@@ -1,0 +1,55 @@
+{
+  "base_revision": "8ab160a6b113075a657976898d1c039d9abf5122",
+  "issue": 54,
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "focused": {
+    "private_tests": 6,
+    "public_tests": 3,
+    "python_tests": 2,
+    "cases": 162,
+    "primitive_observations": 44798,
+    "owned_streams": 19,
+    "source_target_identities_verified": true,
+    "source_role_oracle": false,
+    "corrected_test_field_path": true
+  },
+  "native": {
+    "cases": 906,
+    "previous_complete": 764,
+    "complete": 765,
+    "explicit_stops": 141,
+    "new_complete": 1,
+    "cases_advanced_to_later_stops": 1,
+    "fresh_processes": 2,
+    "all_outcomes_and_causes_identical": true,
+    "all_outcomes_match_before_test_cleanup": true,
+    "artifact_sha256": "6b4a23a5533bc016d406d59e68fd127af69af36ffd1debd07d0487e6e85e5f69",
+    "independent_feature_bytes": 49094182,
+    "independent_snapshot_identity": "794e8d9dea31dfc5348d0411a91af13c0ff7fa197158e05281ff8bd074b42df3",
+    "independent_python_files": 1338,
+    "independent_report_sha256": "f694019b73d7ce3e27ce8e92a17d9761c264229c7051c9913bfcdefb9ba6a29f",
+    "independent_sentinel_sha256": "ee2e903ffa84fbbf99b4d89354c797fde34022c06165b0467878bb8bc71bbf91"
+  },
+  "corpus_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "schema_snapshot_sha256": "aaee6520578efee26afaa2705dc109ba7c9e4813c4d4ec26caacc2b68b8734ac",
+  "fixture_reference_sha256": "4676fdf908abf3ced831333c8416c6285ac03e0b03e92f2a5dc70cbadcb870c1",
+  "gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 722,
+    "library_ignored": 3,
+    "xtask_passed": 4,
+    "doctests_passed": 265,
+    "all_integration_tests_passed": true,
+    "log_sha256": "d8e56e4152711c0475e3bbf0c74dd548f43bdaae39047dfd9643ff1c4f0e4b67"
+  },
+  "exclusions": [
+    "141 explicit native corpus stops",
+    "Historical migrations and alternate backends",
+    "New positive kernel-body fixture coverage; existing strict inline implementation reused",
+    "Geometry validity and SolidWorks application acceptance",
+    "Broader all-schema parity remains unproven"
+  ]
+}

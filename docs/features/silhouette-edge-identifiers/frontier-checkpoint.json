@@ -1,0 +1,92 @@
+{
+  "cases": 906,
+  "previous_complete": 765,
+  "complete": 767,
+  "fresh_processes": 2,
+  "all_outcomes_and_causes_identical": true,
+  "artifact_sha256": "8c2da650363b69242b935d7ef722951f6e996f3ddf031245c94300f05f3a2300",
+  "changed": [
+    {
+      "index": 79,
+      "previous": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moPLineSilhIdRep_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "current": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"data_808\" has runtime class \"moPLineDraft_c\"; expected one of [\"moPLineData_c\", \"moPLineProject_c\"]"
+      ]
+    },
+    {
+      "index": 86,
+      "previous": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moPLineSilhIdRep_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "current": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"data_808\" has runtime class \"moPLineDraft_c\"; expected one of [\"moPLineData_c\", \"moPLineProject_c\"]"
+      ]
+    },
+    {
+      "index": 288,
+      "previous": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moPLineSilhIdRep_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "current": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"data_808\" has runtime class \"moPLineDraft_c\"; expected one of [\"moPLineData_c\", \"moPLineProject_c\"]"
+      ]
+    },
+    {
+      "index": 302,
+      "previous": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moPLineSilhIdRep_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "current": [
+        "accepted"
+      ]
+    },
+    {
+      "index": 303,
+      "previous": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moPLineSilhIdRep_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "current": [
+        "accepted"
+      ]
+    },
+    {
+      "index": 651,
+      "previous": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moPLineSilhIdRep_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "current": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"data_808\" has runtime class \"moPLineDraft_c\"; expected one of [\"moPLineData_c\", \"moPLineProject_c\"]"
+      ]
+    }
+  ],
+  "logs_sha256": [
+    "b12ecad8e28a475e702ed7f79b358c29d03cddb183a379fdfab1ff89072c7834",
+    "8a06133df901cd0a5e4f03e18e3091740447e9b55f0d92cdd0b8f99b202f1e42"
+  ],
+  "explicit_stops": 139,
+  "expected_probe_exit": 101,
+  "expected_probe_failure": "Only the aggregate completeness assertion: 767 != 906.",
+  "new_complete": [
+    302,
+    303
+  ],
+  "advanced_to_projected_line_role_bug": [
+    79,
+    86,
+    288,
+    651
+  ],
+  "bug_issue": 46
+}

@@ -1,0 +1,97 @@
+{
+  "issue": 166,
+  "behavior_version": "C907-explicit-nearest-even-preference-colors-v1",
+  "reference_revision": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "platform": "Windows x64",
+  "target_executed": false,
+  "kernel_decision": "Normalize exactly eight member routes. Require pointer presence before a reached pointed type; null admits and nonnull type73 skips the local block. Preserve the preceding unmodeled legend-call boundary. A skipped block retains original RGBA and requires no preference bytes. An admitted block requires explicit complete packed/optional-alpha source words, reuses exact nearest-even alpha-preserving COLORREF assignment, then replaces alpha raw only on the five bound routes. Retain original/projected values, consumed source words, offsets, source length and runtime facts separately without wire edits.",
+  "operation_cases": 17400,
+  "owned_complete_contexts": 425,
+  "native_complete_contexts": 276,
+  "owned_present_routes": 2457,
+  "native_present_routes": 1698,
+  "absent_routes": 1453,
+  "additional_stored_byte_credit": 0,
+  "rust": {
+    "checks": 8,
+    "failed": 0,
+    "ignored": 0,
+    "seconds": 0.14,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/preference-color-operations-rust-final.log",
+      "bytes": 1101,
+      "sha256": "490407bbe064ff6022d065aaa6fad2bcc7ff4191d08062ec7df568a8b3fd1449"
+    }
+  },
+  "clippy": {
+    "scope": "all-targets all-features -D warnings",
+    "result": "passed",
+    "seconds": 1.39,
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/preference-color-operations-clippy.log",
+      "bytes": 135,
+      "sha256": "06cb9e25d9fb63172368b92947955bf09ba64b093a0f6e62b788414143a03eb0"
+    }
+  },
+  "targeted_source": {
+    "checks": 20,
+    "seconds": 7.12,
+    "result": "passed",
+    "process_exit_code": 0,
+    "log": {
+      "path": "target/preference-color-operation-source-strict.log",
+      "bytes": 3263,
+      "sha256": "e7095f9f1a6b15980ae16872b4a3c74610126b167e12dbe325126142f5d16ad7"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/preference-color-source-snapshot.json",
+      "bytes": 625579,
+      "sha256": "bd795b6588ca936f07cfca0ba339f56e813f0b7710fb3f6ed1ef9920708ebf63"
+    }
+  },
+  "native_bindings": "preference-color-installed-reference.json",
+  "independent_decoder": "preference-color-rea-reference.json",
+  "process_proof": "preference-color-process-verification.json",
+  "concurrency_workers": 8,
+  "public_send_sync_assertions": 8,
+  "ownership": "Plans retain only copied RGBA/u32/scalar option values and expose no mutation path. Borrowed preference bytes are never retained. Every case checks original bytes/runtime unchanged on success/failure; completed skipped/projected plans remain unchanged after original color, runtime and supplied source-buffer mutation.",
+  "oracle_kinds": [
+    "Unchanged pinned Source project/assign_colorref functions with explicit nearest_even context and allthree original tests",
+    "Complete194 caller instructions, provider leaves,80-byte packed-assignment body and raw scale; independent194 Ghidra locations/extents",
+    "Eight route/source mappings, five raw alpha overrides and exact nullable-pointer/type73 guard ordering",
+    "Every packed byte in each RGB position and high byte across allroutes, raw alpha classes, exact/one-byte-short source extents and unknown versus known-empty inputs",
+    "Reached projections whose output equals original bits remain completed projections with consumed packed wordSome(0)",
+    "Complete425 owned and276 native retained bodies, route-specific absence, repeated color getters and unchanged archive bytes",
+    "Eight workers and two fresh processes match all independent expected words"
+  ],
+  "excluded": [
+    "Native target execution, actual preference contents/context/invocation",
+    "Complete legend call, preference setter or native floating environment emulation",
+    "Initializer values as wire defaults, new display-purpose names or byte coverage",
+    "Implicit wire edits or filling unavailable versioned colors"
+  ],
+  "pending": [
+    "Exact publication-cut PR validation and allfive platform checks",
+    "Remaining feature166 documented schemas and integration"
+  ],
+  "prose_review": "Humanizer skill unavailable; maintainer review pending.",
+  "full_source": {
+    "checks": 214,
+    "seconds": 431.728,
+    "result": "passed",
+    "process_exit_code": 0,
+    "verifier_cut": "7b60b922db72323b192d8581186deab09c84b71a",
+    "log": {
+      "path": "target/preference-color-operation-source-full.log",
+      "bytes": 50062,
+      "sha256": "d187c3752aa0a5be4c8b46aca8b407b6c49f733a0471fb6b4383e663f0e841f5"
+    },
+    "snapshot": {
+      "path": "docs/features/simulation-post-dialog/source-snapshot.json",
+      "bytes": 632134,
+      "sha256": "251e2309d6dc385d748d8ec206be0b12585356bf28b716f2cb75e8db95e87121"
+    }
+  }
+}

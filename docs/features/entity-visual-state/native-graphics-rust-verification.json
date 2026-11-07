@@ -1,0 +1,106 @@
+{
+  "issue": 181,
+  "stage": "Public typed native graphics empty results, forced complete streams and exact whole-document round trips",
+  "processes_reaped": 2,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "passed_per_process": 1,
+  "failed": 0,
+  "ignored": 0,
+  "complete_native_documents_per_process": 1106,
+  "part_displays": 910,
+  "assembly_displays": 176,
+  "drawings": 20,
+  "physical_visuals": 0,
+  "forced_reconstruction_bytes_per_process": 194267137,
+  "exports": [
+    {
+      "path": "target/entity-visual-native-graphics-process-1.bin",
+      "bytes": 194311385,
+      "sha256": "36a1c05792fdab76aee16e2ea2bd582465cb8bdceb3ca3ee31e5996454eb9530"
+    },
+    {
+      "path": "target/entity-visual-native-graphics-process-2.bin",
+      "bytes": 194311385,
+      "sha256": "36a1c05792fdab76aee16e2ea2bd582465cb8bdceb3ca3ee31e5996454eb9530"
+    }
+  ],
+  "exports_byte_identical": true,
+  "test_seconds": [
+    12.17,
+    12.37
+  ],
+  "logs": [
+    {
+      "path": "target/entity-visual-native-graphics-process-1.log",
+      "bytes": 39249,
+      "sha256": "967f9aa2159de7f2717b10223a34264bd84c3c247fbf9cb1c4dbc58c98a21e7b"
+    },
+    {
+      "path": "target/entity-visual-native-graphics-process-2.log",
+      "bytes": 39249,
+      "sha256": "39bf49d590a03f275435b50843668146915674c02494430b30bbce2723ab411f"
+    }
+  ],
+  "source_span_acceptance": {
+    "path": "docs/features/entity-visual-state/native-graphics-source-span-verification.json",
+    "bytes": 1057519,
+    "sha256": "be4b618b5eeabd2b0c2d9be908eede2120ed862988b34ab13b2a43ef1acf9a89"
+  },
+  "source_packet": {
+    "path": "target/entity-visual-graphics-source-spans.bin",
+    "bytes": 119827,
+    "sha256": "bf85473413ab3ffd84b874b720a16e95505276df9534cddb6c5d3c4ba5252951"
+  },
+  "test_source": {
+    "path": "tests/native_visual_graphics.rs",
+    "bytes": 7966,
+    "sha256": "dbce7fa937c740a5417550c98d3907e168d772dbccd76855de99377e227cbb0d"
+  },
+  "compiler": {
+    "command": "rustc --edition=2024 --test tests/native_visual_graphics.rs --extern bessemer=target/pinned-1.99.0/debug/deps/libbessemer-f8dd2f2d514eb7f4.rlib -L dependency=target/pinned-1.99.0/debug/deps -C opt-level=1 -C debug-assertions=yes -C overflow-checks=yes -D warnings -F unsafe_code -o target/entity-visual-native-graphics-tests.exe",
+    "exit_code": 0,
+    "log": {
+      "path": "target/entity-visual-native-graphics-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "test_binary": {
+      "path": "target/entity-visual-native-graphics-tests.exe",
+      "bytes": 1907712,
+      "sha256": "f5776bc11335afc4cc2cf607f174ae69053955ba0c65d8610a4526029e06b4e6"
+    },
+    "library": {
+      "path": "target/pinned-1.99.0/debug/deps/libbessemer-f8dd2f2d514eb7f4.rlib",
+      "bytes": 223436868,
+      "sha256": "988aadaf0cc44b4e4cda0e86f85262b70382b629553a5cd55fa2517a0971d5fd"
+    },
+    "library_cargo_fingerprint": {
+      "path": "target/pinned-1.99.0/debug/.fingerprint/bessemer-f8dd2f2d514eb7f4/lib-bessemer.json",
+      "bytes": 471,
+      "sha256": "aa7f486f0e61f42d1057f286f37031ab5d15e7a713188ea5f1408e565a893781"
+    }
+  },
+  "injected_sample_root": "BESSEMER_SOLIDWORKS_SAMPLES",
+  "export_option": "BESSEMER_NATIVE_GRAPHIC_VISUAL_OUTPUT",
+  "context": {
+    "display_current_file_version": 19000,
+    "display_directory_version": 19000,
+    "reason": "Matches unchanged Source dl_ui._file_version default and facettess.directory default. Source packet file_version values are modelheader.version markers, parsed as model_version here; they are not substituted for either independent display caller input.",
+    "drawing_version": "Actual normalized _MO_VERSION_ marker through DrawingBucketArchive::from_document"
+  },
+  "coverage_credit": 0,
+  "checks": [
+    "Every physical-definition enumeration completes successfully with an empty vector, both before and after forced construction.",
+    "All1106 archive inputs rebuild through DisplayArchive::new or DrawingBucketArchive::new; actual encoder bytes match their complete native stream inputs.",
+    "Every complete native document preserves all original bytes after stream replacement and reopens with the reconstructed stream unchanged.",
+    "Both fresh process exports are byte-identical. Every actual reconstructed payload SHA-256 and length matches its independent original Source entry; copied digest headers were checked separately."
+  ],
+  "qualifications": [
+    "The integration test was compiled directly against the already-built validated library to avoid overlapping Cargo commands with the still-live exhaustive part gate. The compiler fingerprint, library hash, actual binary and exact flags are retained. Cargo/Clippy/repository gates remain separate required checks.",
+    "This accepts complete empty native graphics results. Positive visual edits are established by the owned component/drawing matrices; this corpus provides no positive native visual edit request.",
+    "Exhaustive native part and assembly edit gates, wider operation and publication gates remain open. Native application rendering and geometry validity remain unproven. Humanizer unavailable; prose pass pending maintainer review."
+  ]
+}

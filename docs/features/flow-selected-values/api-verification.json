@@ -1,0 +1,103 @@
+{
+  "source_parent": "63fe7dcb236073d024abbf1c0a909337175d48f4",
+  "issue": 241,
+  "platform": "Windows x64 MSVC Rust 1.99.0 Python3",
+  "environment": {
+    "CARGO_BUILD_JOBS": "1",
+    "CARGO_TARGET_DIR": "target/sqlite-build"
+  },
+  "commands": [
+    "cargo test --locked --test flow_selected_value_fixtures",
+    "cargo clippy --locked --test flow_selected_value_fixtures -- -D warnings",
+    "python -m unittest discover -s docs/features/flow-selected-values -p test_selected.py -v",
+    "cargo fmt --all -- --check"
+  ],
+  "terminal_exit_codes": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "rust": {
+    "passed": 18,
+    "failed": 0,
+    "ignored": 1
+  },
+  "ignored_scope": "One Source-verifying process worker invoked twice by its regular parent test",
+  "python": {
+    "passed": 9,
+    "failed": 0
+  },
+  "complete_source_cases": 2729,
+  "all_raw_wide_reads": 15104,
+  "selected_edits": 11231,
+  "native_read_values": 3876,
+  "native_selected_edit_values": 3,
+  "read_policy": "Every source context, dense index, selected ordinal, raw pattern, optional entry projection, input revision checkpoint and coverage field",
+  "edit_policy": "Every generated raw wide value and distinct first/middle/last native values",
+  "oracles": [
+    "Independent original schema context and projection",
+    "Literal expected byte patches",
+    "Exact no-op and full physical history",
+    "Fresh whole-carrier reversals",
+    "All four independent resource axes at exact/one-below counts",
+    "Every compact raw prefix/extension, mismatched state counts and complete zero-byte/zero-budget selections",
+    "Caller/input mutation and drop isolation",
+    "Foreign/stale value and input identities; context-only checks reuse the same value checkpoint",
+    "Bounded identity diagnostics without carrier content"
+  ],
+  "concurrency": {
+    "workers": 8,
+    "operations_per_worker": 32,
+    "concurrent_derivation_and_edit": true,
+    "fresh_source_verifying_processes": 2,
+    "public_send_sync_types": 12,
+    "new_types": 10,
+    "reused_types": 2
+  },
+  "first_attempt": {
+    "terminal_exit_code": 101,
+    "passed": 17,
+    "failed": 1,
+    "reason": "Test setup incorrectly equated independently parsed carrier revisions; revision identity intentionally uses Arc::ptr_eq. The corrected context-only check reuses the original value carrier and retains all rejection assertions.",
+    "log_sha256": "13d8d18ec4309fc06e9efec46d661dad857d34c8aef1a22149c427ebbcbd8d62"
+  },
+  "related_existing_bug": 248,
+  "source_files_lf_sha256": {
+    "src/flow/legacy_tables/selected_values/context.rs": "1a688627cdeed2fe0518658f9223ff242e36232389d9fffe0eac27c1c6657294",
+    "src/flow/legacy_tables/selected_values/context_view.rs": "dbc22bfe72ec60607f15ad4477edeaf16da787ba0d4a31e2370610ba93541a72",
+    "src/flow/legacy_tables/selected_values/edit.rs": "abe1415932212ad21467284b8e5fc69c310dd06bfeef35ef668d235770f804df",
+    "src/flow/legacy_tables/selected_values/mod.rs": "6e951898a06bffc36282f0a8226dc5141e338fef36905dd27cdc6a6df1dbe875",
+    "src/flow/legacy_tables/selected_values/read.rs": "4d63a15218bf499ececc0e1796ace2800655fcc243c5cba86223f8cead898e85",
+    "src/flow/legacy_tables/selected_values/schema.rs": "46ec25f2febf413de3d686d3116e9e6131cca0711bd6e91da9e5d83c8277e7c6",
+    "src/flow/legacy_tables/selected_values/types.rs": "bf111a0a8f4520c84fb51c0d5b1a80ba59d066b33a0f7b6010b4e96bcde8994d",
+    "src/flow/legacy_tables/selected_values/view.rs": "355a8a3d4c185a8750bf7447cc65cbf0f099cecfa1e98c57114396d9e485e99e",
+    "tests/flow_selected_value_fixtures.rs": "b4981bef6050bc15383c5171a131a5b3ab5c20915d357c74199e1ecc384afb05",
+    "tests/flow_selected_values/api.rs": "e5488118c1c8e85ddc0e261730b64f86b13c396ed0b22ad61ecb9c26a6cac874",
+    "tests/flow_selected_values/contracts.rs": "3706da1141b35b9f00bd21ec821d40b4b6c92570609e5115c89ac3a1a8d815c3",
+    "tests/flow_selected_values/edit.rs": "0f27383e49acdae681bdff32bbf43ece4f6056029432a23e6aa00a609fd633a9",
+    "tests/flow_selected_values/replay.rs": "c1f1e880652ea0b8a99754ec35749e4881318bbabf54c983bccee4112c182776"
+  },
+  "logs_sha256": {
+    "target/flow-selected-values-api-tests.log": "33eaf029dcbeef1311c30c2b17f7dc0710f98168354728dd15a482dc86e65760",
+    "target/flow-selected-values-api-clippy.log": "a9fe910826046d7c89902d47225dacfdf431b86082f4c3b24a48bea37ddf417d",
+    "target/flow-selected-values-api-python.log": "32106b08399c90b99cd01cf3cae11c4702a181a91b6b968bc1c84ae66f8ddc11",
+    "target/flow-selected-values-api-format.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "style": {
+    "files_under_500_lines": true,
+    "functions_at_most_20_body_lines": true,
+    "whitespace_check_exit": 0
+  },
+  "baseline": "baseline-verification.json",
+  "exclusions": [
+    "Every native edit index beyond the selected three positions",
+    "Native owner/file pairing",
+    "Reused nonempty native maps",
+    "Native runtime scatter/scheduling",
+    "Engineering meanings",
+    "SolidWorks application acceptance",
+    "Full current-source PR gate, hosted full matrix and ThreadSanitizer"
+  ],
+  "humanizer": "Unavailable in supplied skill catalog; maintainer prose pass remains for review"
+}

@@ -1,0 +1,33 @@
+{
+  "behavior_version": 1,
+  "platform": "Windows x64",
+  "rust": "1.99.0 MSVC",
+  "date": "2026-10-24",
+  "reference_head": "dd0537b3a142d8dda00ef846891efc736a6aac46",
+  "reference_dirty": true,
+  "specification_edition": "0.127",
+  "streams": 13100,
+  "bytes": 28499247,
+  "elements": 370725,
+  "ordinary_attributes": 680359,
+  "completed_empty": 169,
+  "families": 17,
+  "manifest_sha256": "d2b467a640eb06977cd2b3a5760dfdfe765047e29fe56940a73fee92993e15a9",
+  "snapshot_sha256": {
+    "specification-9.4.md": "2c268b7832a71d62692fd65e273644df4faa6ae45b53102baf2f758a1436d104",
+    "xml-metadata.md": "4e23423a1bade609d899d8cb11fad9853039fe6db6a5f38963878683ffeddd10"
+  },
+  "oracles": [
+    "Python ElementTree expanded names, attributes, direct text, parent and child links",
+    "forced Unicode source reconstruction and exact original bytes",
+    "independently authored lexical vectors",
+    "whole-document stream isolation",
+    "two-process and concurrent byte identity"
+  ],
+  "exclusions": [
+    "SolidWorks application acceptance",
+    "property value, blob, FPVals, material and unit semantics",
+    "XML versions other than 1.0",
+    "DTD declarations and external entities"
+  ]
+}

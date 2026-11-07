@@ -1,0 +1,139 @@
+{
+  "evidence_source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\draft-native-evidence.json",
+  "evidence_source_sha256": "c3deb588c803c3c1fd5d14ecdb78f6a766ad809ad7276b880de5f49b14d53e25",
+  "installed_module_hashes_verified": true,
+  "modules": {
+    "sldMoPartu.dll": {
+      "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldMoPartu.dll",
+      "sha256": "2201edfa07b1a7484acedb6db4600fa7a00e55b16090a03b92fe7d9b14cb2128"
+    },
+    "sldmodu.dll": {
+      "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+      "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c"
+    }
+  },
+  "bindings": [
+    {
+      "rtti": {
+        "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldMoPartu.dll",
+        "sha256": "2201edfa07b1a7484acedb6db4600fa7a00e55b16090a03b92fe7d9b14cb2128",
+        "tables": [
+          {
+            "class_name": "moDraft_c",
+            "object_offset": 0,
+            "locator": "0x1804efbd8",
+            "vftable": "0x180483540",
+            "slots": [
+              "0x1802da540",
+              "0x1802da3a0",
+              "0x1803ace24",
+              "0x1800e3360",
+              "0x1800e3360",
+              "0x1802da600",
+              "0x1803ac32c",
+              "0x1803ac326"
+            ]
+          },
+          {
+            "class_name": "moDraft_c",
+            "object_offset": 136,
+            "locator": "0x1804efca8",
+            "vftable": "0x180485b68",
+            "slots": [
+              "0x1802da384",
+              "0x1803ab7d4",
+              "0x1803ab7da",
+              "0x1800e3930",
+              "0x1803abb76",
+              "0x1803abb70",
+              "0x1803abb6a",
+              "0x1804efcd0"
+            ]
+          }
+        ]
+      },
+      "locator_bytes": "010000000000000000000000e87e600000fc4e00d8fb4e00",
+      "bases": [
+        ".?AVmoDraft_c@@",
+        ".?AVmoBodyFeature_c@@",
+        ".?AVmoAtomFeature_c@@",
+        ".?AVmoModelFeature_c@@",
+        ".?AVmoFeature_c@@",
+        ".?AVmoConcept_c@@",
+        ".?AVmoLoggedNode_c@@",
+        ".?AVmoNode_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@",
+        ".?AVutDisplayedEntity_c@@"
+      ],
+      "slot_bytes": "00a62d8001000000"
+    },
+    {
+      "rtti": {
+        "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldMoPartu.dll",
+        "sha256": "2201edfa07b1a7484acedb6db4600fa7a00e55b16090a03b92fe7d9b14cb2128",
+        "tables": [
+          {
+            "class_name": "moDraftSIdKeeper_c",
+            "object_offset": 0,
+            "locator": "0x1804ee1a0",
+            "vftable": "0x180475608",
+            "slots": [
+              "0x1803ac902",
+              "0x1802679d0",
+              "0x1803ace24",
+              "0x1800e3360",
+              "0x1800e3360",
+              "0x1803ac9da",
+              "0x1803ace66",
+              "0x1803ace60"
+            ]
+          }
+        ]
+      },
+      "locator_bytes": "01000000000000000000000040ad6000c8e14e00a0e14e00",
+      "bases": [
+        ".?AVmoDraftSIdKeeper_c@@",
+        ".?AVmoEdgeFaceSIdKeeper_c@@",
+        ".?AVmoSurfIdKeeper_c@@",
+        ".?AVmoSurfaceIdHelper_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ],
+      "slot_bytes": "dac93a8001000000"
+    },
+    {
+      "rtti": {
+        "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+        "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+        "tables": [
+          {
+            "class_name": "moEdgeFaceSIdKeeper_c",
+            "object_offset": 0,
+            "locator": "0x4d36d108",
+            "vftable": "0x4d1fb718",
+            "slots": [
+              "0x4c6e0160",
+              "0x4c6e06d0",
+              "0x4cba273f",
+              "0x4b29dae0",
+              "0x4b29dae0",
+              "0x4c6e0850",
+              "0x4cba274b",
+              "0x4cba2751"
+            ]
+          }
+        ]
+      },
+      "locator_bytes": "01000000000000000000000020c19c02b86b1c0208d12002",
+      "bases": [
+        ".?AVmoEdgeFaceSIdKeeper_c@@",
+        ".?AVmoSurfIdKeeper_c@@",
+        ".?AVmoSurfaceIdHelper_c@@",
+        ".?AVsu_CObject@@",
+        ".?AVCObject@@"
+      ],
+      "slot_bytes": "50086e4c00000000"
+    }
+  ]
+}

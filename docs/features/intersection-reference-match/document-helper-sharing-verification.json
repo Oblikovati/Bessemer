@@ -1,0 +1,68 @@
+{
+  "issue": 184,
+  "stage": "Behavior-preserving owned resolved-document setup extraction",
+  "before_revision": "5eb74096dc6f98373f63f2b2824fe7761edce922",
+  "processes_reaped": 2,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "tests_per_run": 2,
+  "complete_cases_per_run": 11493,
+  "typed_edits_per_run": 22986,
+  "typed_reversals_per_run": 22986,
+  "seconds": [
+    194.45,
+    198.17
+  ],
+  "artifacts": [
+    {
+      "path": "tests/support/owned_resolved_document.rs",
+      "bytes": 1415,
+      "sha256": "47a533d44bb065f860b80fcdc5a90939534293b03ff45acaae6dab6853b715f8"
+    },
+    {
+      "path": "tests/model_visual_carriers.rs",
+      "bytes": 6843,
+      "sha256": "ddf1fcf089f05bae895ca2b9a91188cfa766c4e8d207d8f1711edebf92af6489"
+    },
+    {
+      "path": "tests/model_visual_carriers/documents.rs",
+      "bytes": 5738,
+      "sha256": "d2fed8d6c779a3a7c43c522c6405554b28b5bb0da1fec59208eabf391e08ac6b"
+    },
+    {
+      "path": "target/intersection-document-sharing-before.log",
+      "bytes": 345654,
+      "sha256": "03b4a44bfe9614aa977314652402094f9e055c808f76f53f180a4bd8c658d50c"
+    },
+    {
+      "path": "target/intersection-document-sharing-after.log",
+      "bytes": 345654,
+      "sha256": "f8c649b111d342aaf8821d79b50e2006fd536beb4df10728ee08f87f128cdcd0"
+    },
+    {
+      "path": "target/intersection-document-sharing-before-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/intersection-document-sharing-after-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/intersection-document-visual-clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "checks": [
+    "The same complete model/sketch/nested-display fixture cases pass in exact original order before and after setup extraction.",
+    "Existing field/history expectations, public document reopen, unrelated stream/name/order checks and exact complete-container reversals remain unchanged.",
+    "Only the identical owned blank-part preparation, stream replacement and public resolved-feature reader are shared; model-version19000, selected stream and limits are preserved.",
+    "Existing historical support hashes match their newly recorded Git revision. No fixture, expected value, test scope or tolerance changed."
+  ],
+  "qualification": "No cross-process exported full-document packet is claimed; both runs enforce unchanged per-case complete-byte/field invariants.",
+  "coverage_credit": 0
+}

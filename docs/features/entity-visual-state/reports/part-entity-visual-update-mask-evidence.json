@@ -1,0 +1,105 @@
+{
+  "evidence": "C-1825",
+  "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+  "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "function": {
+    "start": "0x4c160c00",
+    "end": "0x4c160d18",
+    "bytes": "48895c241048896c24184c894c2420565741564883ec30498be9458bf08bfa488bf1c7442420000000000fb74102a8017503895108a8027505664489710ca804752d488bd5488d4c2450ff153040bd00488bd84889442428488d4e10488bd0ff150b40bd0090488bcbff150940bd00837e08ff7508897e0866836602fe66837e0c007d0a664489760c66836602fd488d5610488d4c2450ff15e33fbd00bf01000000897c2420488d4c2450ff152f33bd000fb6d883e7fe897c2420488d4c2450ff15b23fbd0084db7532488bd5488d4c2450ff15a83fbd00488bd84889442428488bd0488d4e10ff15833fbd0090488bcbff15813fbd0066836602fb488bcd488b5c2458488b6c24604883c430415e5f5e48ff25603fbd00",
+    "sha256": "e3ed4286d76e70478c57bf2a806c4a446d6d23c90fa33f0857da0dc2a12ebcae"
+  },
+  "assertions": {
+    "0x4c160c2a": [
+      "movzx",
+      "eax, word ptr [rcx + 2]"
+    ],
+    "0x4c160c2e": [
+      "test",
+      "al, 1"
+    ],
+    "0x4c160c30": [
+      "jne",
+      "0x4c160c35"
+    ],
+    "0x4c160c32": [
+      "mov",
+      "dword ptr [rcx + 8], edx"
+    ],
+    "0x4c160c35": [
+      "test",
+      "al, 2"
+    ],
+    "0x4c160c37": [
+      "jne",
+      "0x4c160c3e"
+    ],
+    "0x4c160c39": [
+      "mov",
+      "word ptr [rcx + 0xc], r14w"
+    ],
+    "0x4c160c3e": [
+      "test",
+      "al, 4"
+    ],
+    "0x4c160c40": [
+      "jne",
+      "0x4c160c6f"
+    ],
+    "0x4c160c58": [
+      "lea",
+      "rcx, [rsi + 0x10]"
+    ],
+    "0x4c160c6f": [
+      "cmp",
+      "dword ptr [rsi + 8], -1"
+    ],
+    "0x4c160c78": [
+      "and",
+      "word ptr [rsi + 2], 0xfffe"
+    ],
+    "0x4c160c7d": [
+      "cmp",
+      "word ptr [rsi + 0xc], 0"
+    ],
+    "0x4c160c82": [
+      "jge",
+      "0x4c160c8e"
+    ],
+    "0x4c160c89": [
+      "and",
+      "word ptr [rsi + 2], 0xfffd"
+    ],
+    "0x4c160cf7": [
+      "and",
+      "word ptr [rsi + 2], 0xfffb"
+    ]
+  },
+  "imports": [
+    {
+      "instruction": "0x4c160c4a",
+      "name": "??0utLineWidth_c@@QEAA@AEBV0@@Z"
+    },
+    {
+      "instruction": "0x4c160c5f",
+      "name": "??4utLineWidth_c@@QEAAAEAV0@AEBV0@@Z"
+    },
+    {
+      "instruction": "0x4c160cab",
+      "name": "?isSet@utLineWidth_c@@QEBA_NXZ"
+    },
+    {
+      "instruction": "0x4c160ce7",
+      "name": "??4utLineWidth_c@@QEAAAEAV0@AEBV0@@Z"
+    }
+  ],
+  "target_executed": false,
+  "coverage_credit": 0,
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-entity-visual-fields-native-evidence.json": "7bae27e2d9e0d6069f72aa378f2b230f57f000afe11c7764f6311dde3357e0fa",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part_entity_visual_update_mask_audit.py": "2aec5a51ea0549ae4372e7284ec3ed1f0a9acd31489c328525445f205da7d6cb",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-entity-visual-update-mask-native.txt": "d6eb157b3d7415b8be40aabd0f527d41948c7705735379cf10ca95db15cccc44"
+  },
+  "limitations": [
+    "Low bits describe this update routine only; full swByLayer enum, high bits, color interpretation and full flag semantics remain unresolved. Set bits do not prevent later invalid-value fallback."
+  ]
+}

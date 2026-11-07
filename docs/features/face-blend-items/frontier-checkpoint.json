@@ -1,0 +1,56 @@
+{
+  "cases": 906,
+  "accepted": 720,
+  "rejected": 186,
+  "newly_accepted": 1,
+  "previous_complete_preserved": true,
+  "fresh_process_outcomes_and_causes_identical": true,
+  "artifact_stable_during_replay": true,
+  "artifact_sha256": "333d65cfd6e387ab82bd7ed2543feef31b820c1bcaaff145d128c081c2b80cdf",
+  "changes": [
+    {
+      "index": 605,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moFaceBlendItemPair_c\" schema 1; expected an implemented complete model object body"
+      },
+      "after": {
+        "status": "accepted",
+        "cause": ""
+      }
+    },
+    {
+      "index": 746,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moFaceBlendItemPair_c\" schema 1; expected an implemented complete model object body"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moDelFace_c\" schema 1; expected an implemented complete model object body"
+      }
+    },
+    {
+      "index": 747,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moFaceBlendItemPair_c\" schema 1; expected an implemented complete model object body"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moFillRefSurface_c\" schema 1; expected an implemented complete model object body"
+      }
+    },
+    {
+      "index": 748,
+      "before": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moFaceBlendItemPair_c\" schema 1; expected an implemented complete model object body"
+      },
+      "after": {
+        "status": "rejected",
+        "cause": "model archive model stream: Unsupported: runtime class \"moDelFace_c\" schema 1; expected an implemented complete model object body"
+      }
+    }
+  ]
+}

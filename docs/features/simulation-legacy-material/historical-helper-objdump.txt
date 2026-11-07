@@ -1,0 +1,106 @@
+
+C:\Program Files\SOLIDWORKS Corp\SOLIDWORKS\Simulation\cosworks.dll:     file format pei-x86-64
+
+
+Disassembly of section .text:
+
+00000001816e1160 <.text+0x16e0160>:
+   1816e1160:	40 56                	rex push %rsi
+   1816e1162:	41 56                	push   %r14
+   1816e1164:	48 83 ec 48          	sub    $0x48,%rsp
+   1816e1168:	48 89 5c 24 68       	mov    %rbx,0x68(%rsp)
+   1816e116d:	48 8b f2             	mov    %rdx,%rsi
+   1816e1170:	48 89 6c 24 70       	mov    %rbp,0x70(%rsp)
+   1816e1175:	48 8d 51 20          	lea    0x20(%rcx),%rdx
+   1816e1179:	48 89 7c 24 40       	mov    %rdi,0x40(%rsp)
+   1816e117e:	4c 8b f1             	mov    %rcx,%r14
+   1816e1181:	4c 89 64 24 38       	mov    %r12,0x38(%rsp)
+   1816e1186:	48 8b ce             	mov    %rsi,%rcx
+   1816e1189:	0f 29 74 24 20       	movaps %xmm6,0x20(%rsp)
+   1816e118e:	0f 28 f2             	movaps %xmm2,%xmm6
+   1816e1191:	ff 15 21 f3 84 00    	call   *0x84f321(%rip)        # 0x181f304b8
+   1816e1197:	48 8b c8             	mov    %rax,%rcx
+   1816e119a:	49 8d 56 28          	lea    0x28(%r14),%rdx
+   1816e119e:	ff 15 14 f3 84 00    	call   *0x84f314(%rip)        # 0x181f304b8
+   1816e11a4:	48 8b c8             	mov    %rax,%rcx
+   1816e11a7:	49 8d 56 30          	lea    0x30(%r14),%rdx
+   1816e11ab:	ff 15 17 f3 84 00    	call   *0x84f317(%rip)        # 0x181f304c8
+   1816e11b1:	48 8b c8             	mov    %rax,%rcx
+   1816e11b4:	49 8d 56 34          	lea    0x34(%r14),%rdx
+   1816e11b8:	ff 15 0a f3 84 00    	call   *0x84f30a(%rip)        # 0x181f304c8
+   1816e11be:	48 8b c8             	mov    %rax,%rcx
+   1816e11c1:	49 8d 56 38          	lea    0x38(%r14),%rdx
+   1816e11c5:	ff 15 fd f2 84 00    	call   *0x84f2fd(%rip)        # 0x181f304c8
+   1816e11cb:	48 8b c8             	mov    %rax,%rcx
+   1816e11ce:	49 8d 56 3c          	lea    0x3c(%r14),%rdx
+   1816e11d2:	ff 15 f0 f2 84 00    	call   *0x84f2f0(%rip)        # 0x181f304c8
+   1816e11d8:	49 8d 56 48          	lea    0x48(%r14),%rdx
+   1816e11dc:	48 8b ce             	mov    %rsi,%rcx
+   1816e11df:	ff 15 d3 f2 84 00    	call   *0x84f2d3(%rip)        # 0x181f304b8
+   1816e11e5:	48 8b c8             	mov    %rax,%rcx
+   1816e11e8:	49 8d 56 50          	lea    0x50(%r14),%rdx
+   1816e11ec:	ff 15 c6 f2 84 00    	call   *0x84f2c6(%rip)        # 0x181f304b8
+   1816e11f2:	48 8b c8             	mov    %rax,%rcx
+   1816e11f5:	49 8d 56 58          	lea    0x58(%r14),%rdx
+   1816e11f9:	ff 15 b9 f2 84 00    	call   *0x84f2b9(%rip)        # 0x181f304b8
+   1816e11ff:	48 8b c8             	mov    %rax,%rcx
+   1816e1202:	48 8d 54 24 60       	lea    0x60(%rsp),%rdx
+   1816e1207:	ff 15 bb f2 84 00    	call   *0x84f2bb(%rip)        # 0x181f304c8
+   1816e120d:	48 8b c8             	mov    %rax,%rcx
+   1816e1210:	49 8d 56 60          	lea    0x60(%r14),%rdx
+   1816e1214:	ff 15 9e f2 84 00    	call   *0x84f29e(%rip)        # 0x181f304b8
+   1816e121a:	33 ed                	xor    %ebp,%ebp
+   1816e121c:	41 39 6e 30          	cmp    %ebp,0x30(%r14)
+   1816e1220:	7e 64                	jle    0x1816e1286
+   1816e1222:	4c 89 7c 24 30       	mov    %r15,0x30(%rsp)
+   1816e1227:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+   1816e122e:	00 00 
+   1816e1230:	48 63 c5             	movslq %ebp,%rax
+   1816e1233:	49 8d 9e 00 01 00 00 	lea    0x100(%r14),%rbx
+   1816e123a:	bf 10 00 00 00       	mov    $0x10,%edi
+   1816e123f:	4c 8d 3c 40          	lea    (%rax,%rax,2),%r15
+   1816e1243:	4a 8d 1c fb          	lea    (%rbx,%r15,8),%rbx
+   1816e1247:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+   1816e124e:	00 00 
+   1816e1250:	48 8b d3             	mov    %rbx,%rdx
+   1816e1253:	48 8b ce             	mov    %rsi,%rcx
+   1816e1256:	ff 15 3c fb 84 00    	call   *0x84fb3c(%rip)        # 0x181f30d98
+   1816e125c:	48 ff c3             	inc    %rbx
+   1816e125f:	48 83 ef 01          	sub    $0x1,%rdi
+   1816e1263:	75 eb                	jne    0x1816e1250
+   1816e1265:	49 8d 96 10 01 00 00 	lea    0x110(%r14),%rdx
+   1816e126c:	48 8b ce             	mov    %rsi,%rcx
+   1816e126f:	4a 8d 14 fa          	lea    (%rdx,%r15,8),%rdx
+   1816e1273:	ff 15 67 f1 84 00    	call   *0x84f167(%rip)        # 0x181f303e0
+   1816e1279:	ff c5                	inc    %ebp
+   1816e127b:	41 3b 6e 30          	cmp    0x30(%r14),%ebp
+   1816e127f:	7c af                	jl     0x1816e1230
+   1816e1281:	4c 8b 7c 24 30       	mov    0x30(%rsp),%r15
+   1816e1286:	4c 8b 64 24 38       	mov    0x38(%rsp),%r12
+   1816e128b:	49 8d 9e 98 0b 00 00 	lea    0xb98(%r14),%rbx
+   1816e1292:	48 8b 6c 24 70       	mov    0x70(%rsp),%rbp
+   1816e1297:	bf 18 00 00 00       	mov    $0x18,%edi
+   1816e129c:	0f 1f 40 00          	nopl   0x0(%rax)
+   1816e12a0:	48 8b d3             	mov    %rbx,%rdx
+   1816e12a3:	48 8b ce             	mov    %rsi,%rcx
+   1816e12a6:	ff 15 0c f2 84 00    	call   *0x84f20c(%rip)        # 0x181f304b8
+   1816e12ac:	48 83 c3 08          	add    $0x8,%rbx
+   1816e12b0:	48 83 ef 01          	sub    $0x1,%rdi
+   1816e12b4:	75 ea                	jne    0x1816e12a0
+   1816e12b6:	66 0f 2f 35 ca 09 9d 	comisd 0x9d09ca(%rip),%xmm6        # 0x1820b1c88
+   1816e12bd:	00 
+   1816e12be:	48 8b 7c 24 40       	mov    0x40(%rsp),%rdi
+   1816e12c3:	48 8b 5c 24 68       	mov    0x68(%rsp),%rbx
+   1816e12c8:	0f 28 74 24 20       	movaps 0x20(%rsp),%xmm6
+   1816e12cd:	72 0d                	jb     0x1816e12dc
+   1816e12cf:	49 8d 56 08          	lea    0x8(%r14),%rdx
+   1816e12d3:	48 8b ce             	mov    %rsi,%rcx
+   1816e12d6:	ff 15 dc f1 84 00    	call   *0x84f1dc(%rip)        # 0x181f304b8
+   1816e12dc:	8b 44 24 60          	mov    0x60(%rsp),%eax
+   1816e12e0:	49 8b ce             	mov    %r14,%rcx
+   1816e12e3:	41 89 46 68          	mov    %eax,0x68(%r14)
+   1816e12e7:	e8 e4 53 ff ff       	call   0x1816d66d0
+   1816e12ec:	48 83 c4 48          	add    $0x48,%rsp
+   1816e12f0:	41 5e                	pop    %r14
+   1816e12f2:	5e                   	pop    %rsi
+   1816e12f3:	c3                   	ret

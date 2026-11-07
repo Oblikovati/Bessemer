@@ -1,0 +1,80 @@
+{
+  "cases": 906,
+  "previous_complete": 757,
+  "complete": 761,
+  "explicit_stops": 145,
+  "new_complete": [
+    618,
+    624,
+    625,
+    632
+  ],
+  "changed": [
+    {
+      "index": 351,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moCompEntGroup_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"reference\" has runtime class \"moSingleFaceRef_w\"; expected one of [\"moRefWrapper_c\", \"moSketchExtRef_w\", \"moTempAxisRef_w\"]"
+      ]
+    },
+    {
+      "index": 353,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moNetBlend_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moDelFace_c\" schema 1; expected an implemented complete model object body"
+      ]
+    },
+    {
+      "index": 618,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moNetBlend_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    },
+    {
+      "index": 624,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moNetBlend_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    },
+    {
+      "index": 625,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moNetBlend_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    },
+    {
+      "index": 632,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moCompMultiEdge_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    }
+  ]
+}

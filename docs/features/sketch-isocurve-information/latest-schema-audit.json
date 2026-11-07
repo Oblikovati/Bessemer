@@ -1,0 +1,81 @@
+{
+  "issue": 54,
+  "scope": "Wire-contract audit of new qualified IsoCurve producer/consumer documentation; no new runtime API, parser admission or global accounting credit.",
+  "specification_sha256": "7b042fa772f3c42393c274a3c0b097bc57a77cb581ac7b16751bc30f68f458a1",
+  "clauses": [
+    {
+      "clause": "11.1679",
+      "section_sha256": "1c86d2e1e1fc0218bb1f6541269c5c5368008c1eb898a62be98396412bf03de2",
+      "wire_observation": "Ratio remains an unnormalized f64 bit pattern; creation-time request shaping is not decoding.",
+      "status": "Existing wire read/write behavior agrees; native runtime execution is not claimed."
+    },
+    {
+      "clause": "11.1680",
+      "section_sha256": "7010feecec3b4c30daf9f502364ffeb9dbd4cc2db634101e45750e7be92666eb",
+      "wire_observation": "External-entity IsoCurve pointer retains its declared object role and archive-map identity; live point resolution is not simulated.",
+      "status": "Existing wire read/write behavior agrees; native runtime execution is not claimed."
+    },
+    {
+      "clause": "11.1681",
+      "section_sha256": "637db095cc3aabdd226a2b74c75de512722ad97649c4101400c6aff8a4c3d990",
+      "wire_observation": "Direction, reference type, index and skip-holes remain u16 wire words; FFFF is 65535, independent of subsequent signed32 consumers.",
+      "status": "Existing wire read/write behavior agrees; native runtime execution is not claimed."
+    },
+    {
+      "clause": "11.1682",
+      "section_sha256": "b58cafa1f05032eb064fc6cc10a5b900ae76bfb22e5608783f39c2b47b0965fa",
+      "wire_observation": "Dimension ID remains full signed i32; no positivity, uniqueness or max-plus-one creation policy is imposed on saved values.",
+      "status": "Existing wire read/write behavior agrees; native runtime execution is not claimed."
+    },
+    {
+      "clause": "11.1683",
+      "section_sha256": "847297bf3bf45e6ed94f2f0d47468228bb511a7b06ac62c7ff80f48c0c695e23",
+      "wire_observation": "Reference type remains raw u16; neither all nonzero values nor FFFF are normalized into mode one. Cached ratio is not recomputed offline.",
+      "status": "Existing wire read/write behavior agrees; native runtime execution is not claimed."
+    }
+  ],
+  "existing_gate": "docs/features/bitmap-appearance/final-local-gate-verification.json",
+  "gate_qualification": "That complete integrated gate includes the seven private IsoCurve tests and three public document/edit tests; no IsoCurve source changed after its tested cut.",
+  "files": [
+    {
+      "path": "src/model_archives/sketch_references.rs",
+      "sha256": "bebd616317bbd3ba7e02d2756f5b4f52326928aa002fa4761ed78c7402dd0b47"
+    },
+    {
+      "path": "tests/resolved_features/sketch_isocurve_information.rs",
+      "sha256": "ec8e6251a1d93316eb50c06fd0cac8ac7fc69fd6c7cc9cd4b380494d017149a8"
+    },
+    {
+      "path": "tests/resolved_sketch_isocurve_information.rs",
+      "sha256": "9387fd4a4c87e28d4a1dcd77c7e95da0294c0bea45281957455aa38975cf05cd"
+    },
+    {
+      "path": "tests/fixtures/sketch-isocurve-information/cases.bin",
+      "sha256": "864e8c06c075d7afd67871720b67fa6154136f2fbf52f88a1789475be8083232"
+    },
+    {
+      "path": "docs/features/sketch-isocurve-information/reference.json",
+      "sha256": "ef013c56bdded8e8fce656d7f1e95f27a967d5548bf8e9f1a811af1d3914cbd6"
+    }
+  ],
+  "remaining": [
+    "Native point/spline workflow execution and geometry equivalence",
+    "Unresolved historical/internal and DB-key admissions",
+    "All-source cohort semantic closure",
+    "Whole-schema parity"
+  ],
+  "fresh_source_replay": {
+    "passed": true,
+    "tests": 2,
+    "seconds": 79.037,
+    "process_reaped": true,
+    "exit_code": 0,
+    "source_python_files": 6231,
+    "consumed_modules": 171,
+    "source_import_hash_guard_passed": true,
+    "snapshot_identity": "def4aa3670b4ee07baa31ef0145f097206fe9f89d76f6336dfd4e8e9c693c79b",
+    "snapshot_sha256": "1e0de21afc6e0b6bfa6edb87b551b0dd6db0d2d62d2d25654fa25e0eb206af1e",
+    "log_sha256": "fc37a238bcc561be87abcf5330bd84619541b1d086216311df3ccc597af33073",
+    "collector_sha256": "b6197afe606b4df50aabf9f3d8c338deec3be112ae11f89f2ac1b9644b1882e6"
+  }
+}

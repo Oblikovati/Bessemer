@@ -1,0 +1,19 @@
+{
+  "issue": 230,
+  "command": "python -m unittest discover -s docs/features/database-index -p 'test_*.py' -v",
+  "passed": 14,
+  "failed": 0,
+  "complete_file_edits": 4,
+  "log_sha256": "e200c651d15f232ecb8129a387feec6e6cf330446d5dad195dc70f792085e78c",
+  "source_sha256": {
+    "file_fixtures.py": "66e60a76287c90d38694f0d4477379013dbd0f307f0a4fe69fde78ed863b40d3",
+    "freeze_file_fixtures.py": "087d1f88bc2b9cdace9923564b1e9991eb02e1df7962eca64ac035fee02b30a5",
+    "hash_reference.py": "5a3b8a9c7cb0c78974e8c2b696d3fff6b76708afa3740d010276c66bcbd6552e",
+    "index_reference.py": "09277045147e0fb8817427097c4cd55092f023c92653327010c1c79795a665b8",
+    "test_file_fixtures.py": "3907a5dfd733b67eb0ddb8275834b72e49689059144ba6cd5b9837a6109fcfa7",
+    "test_hash_reference.py": "34bdeba3bd3bee76ed555016fc7ac71af6fae117596d5d0837e8083fcf1df352",
+    "test_index_reference.py": "72226da8289d0073fe8bb2c27e91e05292bc45f889b941ad77e64b57abbad35c"
+  },
+  "rust_file_graph_codec_validated": false,
+  "native_engine_executed": false
+}

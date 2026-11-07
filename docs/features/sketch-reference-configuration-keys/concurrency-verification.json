@@ -1,0 +1,57 @@
+{
+  "issue": 188,
+  "passed": true,
+  "processes_reaped": true,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "owned_cases": 400,
+  "physical_owners_per_case": 2,
+  "request_kinds": 3,
+  "serial_plus_workers": 9,
+  "visits_per_process": 21600,
+  "edit_requests_per_process": 86400,
+  "operations_per_visit": [
+    "changed",
+    "unchanged",
+    "foreign rejection",
+    "stale rejection"
+  ],
+  "comparison": [
+    "complete stored bytes",
+    "all fields",
+    "completion",
+    "coverage",
+    "fidelity",
+    "diagnostics",
+    "resolved history",
+    "typed rejection errors"
+  ],
+  "input_isolation": [
+    "source archive",
+    "foreign archive",
+    "configuration parent"
+  ],
+  "clippy": "passed with warnings denied",
+  "function_size_audit": [],
+  "executable_sha256": "fd60592cac45e724c515a06ca19554fb7afaceea1772eac0c48264818a6840ca",
+  "logs": [
+    {
+      "path": "target\\lookup-concurrency-process-1.log",
+      "sha256": "492c478ff22169597bcfb05037006afaf93217e6e82b3146e7ad4f85bf908478",
+      "result": "ok. 1 passed; 0 failed; 0 ignored; 0 measured; 6 filtered out; finished in 2.57s"
+    },
+    {
+      "path": "target\\lookup-concurrency-process-2.log",
+      "sha256": "3a845106085009e7759088e4fcfbdd8739f5ea959fc2cd3afc927ddc358f1d05",
+      "result": "ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 19.73s"
+    }
+  ],
+  "excluded": [
+    "native operations",
+    "ThreadSanitizer",
+    "full Cargo gate",
+    "remote exact-head acceptance"
+  ]
+}

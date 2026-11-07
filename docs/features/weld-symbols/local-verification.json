@@ -1,0 +1,53 @@
+{
+  "issue": 54,
+  "issue_type": "Feature",
+  "behavior_version": "C388-weld-symbol-v1",
+  "runtime_base_revision": "444b0601141510ec35dabd1fa7566384edee9930",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "fixture_graphs": 216,
+  "primitive_reads": 57278,
+  "owned_streams": 28,
+  "preserved_detail_baselines": "108 graphs, 6682 reads and all 28 owned streams remained byte/oracle identical",
+  "checks": {
+    "private": "9 passed",
+    "public": "3 passed",
+    "python": "2 weld-symbol regeneration/inventory tests and all 3 earlier component-detail regeneration tests passed",
+    "cargo_xtask_pr": "883 library tests, 4 xtask tests, all integrations, 274 doctests; 3 external-fixture tests explicitly ignored",
+    "native_processes": "Two fresh processes matched all 906 outcomes and causes; exit 101 for aggregate 818/906 completeness assertion"
+  },
+  "previous_complete": 818,
+  "complete": 818,
+  "newly_complete": [],
+  "no_prior_success_lost": true,
+  "partial_advances_without_completion_credit": [
+    547,
+    615,
+    905
+  ],
+  "independent_feature_bytes": 54838261,
+  "source_snapshot": "b324d41cd52e9d6658fb42ffb4759eea969e85c647c105d3d080b93dba7cada6",
+  "source_python_files": 1827,
+  "native_witness_configurations": 3,
+  "native_reviewed_prefix_roots": 91,
+  "native_objects": {
+    "moCosmeticWeldBeadAttachPoint_c": 1,
+    "moSFSymbol_c": 2,
+    "moCosmeticWeldBeadSymbol_c": 1,
+    "moWeldSymbol_c": 8
+  },
+  "native_direct_texts": 29,
+  "kernel_decision": "Constructor-bound direct text ownership and finite native subtype families; no scalar normalization or runtime text repair",
+  "exclusions": [
+    "88 native inputs remain explicit failures",
+    "Case 547 advances to moAttachPointData_c and cases 615/905 to moParametricPoint_c without completion credit",
+    "Other attachment/weld-tree dependencies, historical/internal contexts, scalar meanings, runtime repair, geometry validity, application acceptance and whole-schema parity remain incomplete",
+    "Humanizer unavailable; maintainer prose review remains open"
+  ],
+  "artifact_sha256": "7593c4f88d32b2120e3598781039eb353b8ebf2912bfec576ec05cf5fe5ae721",
+  "gate_log_sha256": "044cb1aee29176df9f999b08ee51aecd871065c032bbce8b07caceaf32fdbccc",
+  "before_log_sha256": "8a642b6912eb8ab28a8441dadb074e5e5d5596835046386dd663f354aee7364f",
+  "native_log_sha256": "cef0ec22b5bbcf578bc374bf4da1a4349aee6f2d793648af11b7b3567aec0758",
+  "native_repeat_log_sha256": "547b9dc5ba0a321d0c8982bb357d91ce4511541aadc6cf7426e6194a743ff361",
+  "fixture_packet_sha256": "4e55ec8c21159c946d6340f5ef91c46042a4e8b9757225149bb9f4b6c4639bce"
+}

@@ -1,0 +1,43 @@
+{
+  "feature_issue": 241,
+  "platform": "Windows x64 MSVC Rust1.99.0",
+  "rust_passed": 80,
+  "rust_failed": 0,
+  "rust_ignored": 0,
+  "python_passed": 8,
+  "clippy_exit_code": 0,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "source_lf_sha256": {
+    "tests/flow_medium_objects/evaluation.rs": "2d2a1972e10bfd489ef3f4e21c0e1951941f7a8bd4a8cdd6c4e22f02f5346410",
+    "tests/flow_medium_objects/evaluation/fixture.rs": "bb5c04e186e238507fa7cc65740f9b065d4e126af25293df2882d6aff4f8d124",
+    "tests/flow_medium_objects/evaluation/types.rs": "9ff315eb21b9ea5db31bb4e58bd39d77e47d21b9a6c5fbcb0616149cf918913a",
+    "tests/flow_medium_object_fixtures.rs": "16c519adc3b88dc69822dca2570012108850651ce5fa82890efab9ffbc0e4596",
+    "tests/flow_medium_objects/api.rs": "e1807ffed8ea079a6ffb1f62f87ad586e8328ac2477db28c89a237c8c165def1",
+    "C:/Users/vmiguel/git/Bessemer/docs/features/flow-medium-evaluation/cases.py": "55592188adb6a22146779b11cbcbd95394ca32748f20af1b05f631aad4b29a5f",
+    "C:/Users/vmiguel/git/Bessemer/docs/features/flow-medium-evaluation/freeze_evaluation.py": "cfc8b86b13aa071717b9c0b700f2e711b11bb3cc75555fc1472ab9a8d64b1c6d",
+    "C:/Users/vmiguel/git/Bessemer/docs/features/flow-medium-evaluation/oracle.py": "a9869c0cc43e352397aa7397221fb2858a564663f0f456e3318e90c77e8ba1ef",
+    "C:/Users/vmiguel/git/Bessemer/docs/features/flow-medium-evaluation/test_evaluation.py": "4255fa071aa7829417ddadd319f2a34896a5dea2e780632a44216dc25a0e9534"
+  },
+  "log_sha256": {
+    "flow-medium-evaluation-rust-tests.log": "2fff9611e884a8e31a2efca1ca363a173400185c6ce2f11931e9f74e41f31332",
+    "flow-medium-evaluation-clippy.log": "dc77b69a774fe2e7652388719628beabba4c1ff166f5279212c987fd92e87617",
+    "flow-medium-evaluation-python-tests.log": "0bb8ad77b6a64f7576b1ea8f26ed7a64647a6fc60bea7009f14960036efc17c7"
+  },
+  "unchanged_packet_gzip_sha256": {
+    "tests/fixtures/flow-medium-objects/kind1.bin.gz": "8fbee903057eb2a23b321ffc57751cf4652066d23bb52a3d9b5ae7b390801839",
+    "tests/fixtures/flow-medium-references/bodies.bin.gz": "b1e666a46dc2d1e130ce45000cbeb62ef79210c029aa8bc51d2e4a7c9a3b092f",
+    "tests/fixtures/flow-medium-references/profiles.bin.gz": "fa43ba510d7df86904ba32c1b741253b4931dbf3d44063a414d9be3c428fa019",
+    "tests/fixtures/flow-medium-kind-two/bodies.bin.gz": "2a5410e6e447ef404ae176cf370727d2bb28313dfe407c34362d21ac945c656b",
+    "tests/fixtures/flow-medium-mixed/profiles.bin.gz": "b81a6748ac80e05565325af8cecd8a1d0903e26fb09de5965ccb98110382995b"
+  },
+  "humanizer": "Unavailable; prose pass left to maintainer review",
+  "scope": "FEV1 owned numerical baseline: 5424 requests, 5184 accepted including15 nonfinite arithmetic outcomes, 240 rejected; 3 new Rust reconstruction/guard/closed-form tests plus77 regressions; independent Python exact-rational barycentric and closed-form checks; no production evaluator yet",
+  "exclusions": [
+    "Production numeric API",
+    "Portable arithmetic NaN sign/payload",
+    "Runtime forward-error certificates",
+    "Native application execution, engineering units, other accessors and model evaluation",
+    "Current full gate frozen at d7bc6b16 excludes this later baseline"
+  ]
+}

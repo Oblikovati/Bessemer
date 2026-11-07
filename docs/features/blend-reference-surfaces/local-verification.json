@@ -1,0 +1,54 @@
+{
+  "base_revision": "0faf031b6a0ff50dae115bc06539f8042de80ac2",
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "focused": {
+    "private_tests": 7,
+    "public_tests": 3,
+    "python_tests": 2,
+    "cases": 270,
+    "primitive_observations": 35388,
+    "owned_streams": 20,
+    "source_parsed_target_identities_verified": true,
+    "prior_regeneration_tests": 5,
+    "prior_fixture_cases": 266,
+    "prior_owned_streams": 12,
+    "prior_blend_rust_tests": 5,
+    "rejected_unstable_source_regeneration_runs": 3
+  },
+  "native": {
+    "cases": 906,
+    "previous_complete": 750,
+    "complete": 751,
+    "explicit_stops": 155,
+    "new_complete": 1,
+    "cases_advanced_to_later_stops": 3,
+    "fresh_processes": 2,
+    "all_outcomes_and_causes_identical": true,
+    "artifact_stable": true,
+    "artifact_sha256": "af276d2c7d68e85809c11b5fc093f48f79a0032a6679fcad75f2c1bcff3dff31",
+    "independent_feature_bytes": 47006007,
+    "independent_snapshot_identity": "e6fb952350a9c9d407527098f9732fad563d8975f3e1ff7ad840e46eac8086a4",
+    "independent_python_files": 1263,
+    "independent_report_sha256": "8de14e654b9a403030e021e74e0d007d18ef90d1ff6de3807613e6e6ed3b6cde",
+    "independent_documented_sentinel_sha256": "0f9e20c9245dc29db88ffa11dcf443837e766c71a335baa322183ab3dfeca5a8"
+  },
+  "corpus_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 669,
+    "library_ignored": 3,
+    "xtask_passed": 4,
+    "doctests_passed": 265,
+    "log_sha256": "19e11991e3b57e384a25bbb5d08dc1514eb6e53c6f2cb32b7b87639ac6635409"
+  },
+  "exclusions": [
+    "Positive inherited native sheets and extra bodies",
+    "Alternate feature-reference conditions and runtime allocation/fixups",
+    "Topology, geometry and SolidWorks application acceptance",
+    "Historical, DB and special contexts",
+    "Remaining 155 configurations and all documented file-schema parity"
+  ]
+}

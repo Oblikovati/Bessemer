@@ -1,0 +1,17 @@
+{
+  "issue": 241,
+  "source_revision": "afa3aae0d02eea62980db4beed1fc9ad5ba736f3",
+  "command": "cargo xtask pr",
+  "status": "interrupted; process handle missing",
+  "session": 98842,
+  "worktree": "C:/bessemer214-ci",
+  "cargo_build_jobs": 1,
+  "log": "target/flow-owner-text-viewer-combined-full-pr-gate.log",
+  "scope": "Combined source through owner-state122/434, text slots311 and explicit viewer-prefix121 APIs, plus all earlier work",
+  "accepted": false,
+  "exclusions": [
+    "No terminal local acceptance result",
+    "Hosted acceptance of this revision pending"
+  ],
+  "observation": "Session98842 missing; no cargo/rustc/xtask processes remain; log stops during compilation without terminal acceptance"
+}

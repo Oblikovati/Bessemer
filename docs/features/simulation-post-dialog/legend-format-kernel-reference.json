@@ -1,0 +1,13 @@
+{
+  "behavior_version": "C846-local-format-v1",
+  "first_admitted_positive_binary32": "0x3a83126f",
+  "last_admitted_positive_binary32": "0x447a0000",
+  "magnitude_patterns": 340,
+  "complete_guard_order_bound": true,
+  "assumptions": [
+    "Masked FP exceptions and DAZ disabled",
+    "Original binary32 input widened to binary64 for the lower comparison"
+  ],
+  "native_execution": false,
+  "actual_fp_environment_known": false
+}

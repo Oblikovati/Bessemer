@@ -1,0 +1,22 @@
+{
+  "previous_complete": 817,
+  "complete": 818,
+  "newly_complete": [
+    234
+  ],
+  "no_prior_success_lost": true,
+  "all_906_statuses_and_causes_identical": true,
+  "explicit_remaining_failures": 88,
+  "changed_stops": [
+    {
+      "index": 234,
+      "before": [
+        "rejected",
+        "model archive model stream: Invalid: object role \"reference_80\" has runtime class \"moConeRef_w\"; expected one of [\"moSurfaceRef_w\", \"moGeneralSurfRef_w\", \"moSingleFaceRef_w\", \"moPlaneRef_w\", \"moCylinderRef_w\", \"moSphereRef_w\"]"
+      ],
+      "after": [
+        "accepted"
+      ]
+    }
+  ]
+}

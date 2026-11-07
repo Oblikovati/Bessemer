@@ -1,0 +1,68 @@
+{
+  "issue": 138,
+  "status": "Complete scoped local acceptance passed; all exact-head platform feature checks remain pending",
+  "behavior_profile": "simulation-mass-element-property-v1",
+  "revision": "d35b87eb7f8dac7dbf3ab525d2ff84bcd68a602f",
+  "tree": "7acb76c82ca842070c2cef3fcd7ef33026503e8e",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "full_local_gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "passed": 3221,
+    "failed": 0,
+    "ignored": 46,
+    "summary_count": 245,
+    "log_sha256": "a9807eba6d009b522abc1300a9efc9b9349c183590c7f99bb79338ed856f538b"
+  },
+  "code_and_test_sha256": {
+    "src/simulation/persistence/load_base.rs": "fc9e0083dfb9bcbba75a446317cbedde3a74e3706b062329ff004b9223d2aaad",
+    "src/simulation/persistence/load_edit.rs": "1b15d263419eca559ae491b41051946f9fb64e5dd043036cb5126c002189ce1e",
+    "src/simulation/persistence/load_identity.rs": "5dcb2b76c33f1a71ea4dc9ed4fc2b2d305a01b131caf33833e4abdf2551b7024",
+    "src/simulation/persistence/load_reader.rs": "3cfb2b297d624fea2cc33f736b6812d5bc02b2df757b60666d6818039e9e8358",
+    "src/simulation/persistence/load_snapshot.rs": "28adb9c8993a02349662b21d7535373bed94a9d870c234a865f164a76bc077b6",
+    "src/simulation/persistence/mass_element/archive.rs": "39fdb14dbec06a76528cf867b3ddfd78378bf6ae398f4b99add1627f5ec799cf",
+    "src/simulation/persistence/mass_element/contracts.rs": "c1564ede5592250bc5eb895989d24f675d14d010c6fa62b6207443aa089c0251",
+    "src/simulation/persistence/mass_element/coverage.rs": "fd4d887ed47f6c144eb7699adc411badd8207a6263300f26db9209fbaa64aeac",
+    "src/simulation/persistence/mass_element/edit.rs": "c35b3e3456274d90b29fa9a75ae9cc07cf0aa88cc7f06b7a3eb407e4edd7fb55",
+    "src/simulation/persistence/mass_element/mod.rs": "f3f42b8838a286992f21ae3c6e79f2ceb4435416bab5b28e8960fb2c2f3c1ab9",
+    "src/simulation/persistence/mass_element/result.rs": "861ab589a85d4baa50c1e3b1e1c93d730599931bd5bd6c6a577a563097636c40",
+    "src/simulation/persistence/mass_element/tails.rs": "eeabd5513a2c4f654cce57992f5be5b854dcfec9c7d1d381e482ab597a04c089",
+    "src/simulation/persistence/mass_element/types.rs": "1f1fecf1c2f1f96b9eee04507df3ca291a3062215459ed7b342b4a325af012f8",
+    "src/simulation/persistence/thermal/history.rs": "9a68b6dc55d8242ed338ec21367ebf221124fb2d98a981c78c5d604d14e2d1c4",
+    "tests/simulation_mass_element_property/concurrency.rs": "36c0cd2e0fd866f699ac4ff1a34c27ec51cfe980f80f7edde749338c2761d59f",
+    "tests/simulation_mass_element_property/edits.rs": "c873ab8b08d9285280b10eeee04082d70dbbe1db5f4f92ea4ff7cc784283f3ed",
+    "tests/simulation_mass_element_property/history.rs": "898ddad47ba71070bb9153c5bd86c5dd7af25d4bee12b24bf33affffecfdc3e1",
+    "tests/simulation_mass_element_property/malformed.rs": "4dc7f1eb5b733adaa3ea483b689db5607a89d6f70f46a6ffabe7c0825b72310b",
+    "tests/simulation_mass_element_property.rs": "5f2a92145dd8866023f2a7f2a2c11b78c8feb88722c9cfcf8e6f1abebc0ba6cd",
+    "tests/support/binary_load_edit_case.rs": "24ab0d35a9136735207e9e4b630974dc6ec0dd76f91cd7ac172bdc0c033cc7ee",
+    "tests/support/binary_load_history.rs": "6f36b4002355d7451298e12e0fffdea65aefc895da3cf797609370f394345079",
+    "tests/support/binary_load_limits.rs": "2b9c0b5608f97c14c4c9169e9e2769bae543487dbbbac79f72b3d82aab1ab969",
+    "tests/support/binary_load_projection.rs": "aef75401bbe5c89bc3e638ec7d956af8bb54325cb938959ccaf38340e4df1578",
+    "tests/support/binary_load_strings.rs": "fa56a0ede5af0f7acc2b32777d7c5c6e8f9385fcca85af6a4c391a21f0052bab"
+  },
+  "focused_tests": {
+    "passed": 20,
+    "failed": 0,
+    "ignored": 0,
+    "explicit_native_inputs": 3
+  },
+  "strict_actual_reference_checks": 6,
+  "owned_contexts": 196,
+  "native_contexts": 2,
+  "native_property_bytes": 2276,
+  "malformed_cases": 14287,
+  "exact_and_one_below_budget_contexts": 196,
+  "fresh_history_bytes": 5888286,
+  "environment": {
+    "CARGO_TARGET_DIR": "target/pinned-1.99.0",
+    "BESSEMER_KERNEL_SCHEMA": "C:/Program Files/SOLIDWORKS Corp/SOLIDWORKS/data/pschema/sch_13006.s_t"
+  },
+  "exclusions": [
+    "All five exact-head platform feature checks",
+    "Sibling Material body decoding",
+    "Physical/geometric interpretation and validation",
+    "Native application acceptance",
+    "Complete installed-schema parity"
+  ]
+}

@@ -1,0 +1,68 @@
+use super::ModelDecoder;
+use crate::Result;
+use crate::archive_codec::ObjectReader;
+
+pub(super) fn read(
+    reader: &mut ModelDecoder<'_>,
+    map: &mut ObjectReader,
+    name: &str,
+) -> Option<Result<()>> {
+    if let Some(result) = super::constraint_planes::read_object(reader, map, name) {
+        return Some(result);
+    }
+    let result = match name {
+        "moConeRef_w" => super::geometric_references::cone(reader, map),
+        "moSurfaceRef_w" => super::geometric_references::surface(reader, map),
+        "moPLineDraft_c" => super::polyline_records::draft(reader, map),
+        "moPLineIntersect_c" => super::polyline_records::intersect(reader, map),
+        "moSweepRefSurface_c" => super::sweep_surfaces::read(reader, map),
+        "moEdgeData_c" => super::sweep_surfaces::edge_data(reader, map),
+        // #54 / C-275 binds the exact zero-byte su_CObject serializer thunk.
+        "moSweepRefSurfIdKeeper_c" => super::extruded_surfaces::keeper(reader),
+        "moCompRefCurve_c" => super::component_references::feature(reader, map),
+        "moBlendRefSurface_c" => super::blend_reference_surfaces::read(reader, map),
+        // #54 / C-382 binds the exact ordinary su_CObject zero-byte thunk.
+        "moBlendRefSurfIdKeeper_c" => super::extruded_surfaces::keeper(reader),
+        "moOffsetRefSurface_c" => super::offset_surfaces::read(reader, map),
+        "moOffsetSurfData_c" => super::offset_surfaces::data(reader, map),
+        // #54 / C-251 binds the ordinary binary su_CObject zero-byte return.
+        "moOffsetRefSurfIdKeeper_c" | "moExtendRefSurfIdKeeper_c" => {
+            super::extruded_surfaces::keeper(reader)
+        }
+        "moExtendRefSurface_c" => super::extend_surfaces::read(reader, map),
+        "moMateConcentric" => super::concentric_mates::read(reader, map),
+        "moPlaneSection_c" => super::plane_sections::read(reader, map),
+        "moPlaneSectionEdge_c" => super::plane_sections::edge(reader, map),
+        "moPlaneSectionIdKeeper_c" => super::extruded_surfaces::keeper(reader),
+        "moExtendRefSurfaceData_c" => super::extend_surfaces::data(reader, map),
+        "moThicken_c" => super::thicken_records::read(reader, map),
+        "moCompRefSurface_c" => super::thicken_records::component_surface(reader, map),
+        // #54 / C-249 binds the identical modern atom-geometry wire helper.
+        "moConstSurfRef_w" => super::geometric_references::solid(reader, map),
+        "moSolidRef_w" => super::geometric_references::solid(reader, map),
+        "moHelix_c" => super::helix_records::read(reader, map),
+        // #54 / C-213 binds the existing complete component-feature helper, with no suffix.
+        "moCompReferenceCurve_c" => super::component_references::feature(reader, map),
+        "moRevolvRefSurf_c" => super::revolved_surfaces::read(reader, map),
+        "moRevolvSurfData_c" => super::revolved_surfaces::data(reader, map),
+        // C-203 binds this exact zero-byte ordinary su_CObject serializer.
+        "moRevolvRefSurfIdKeeper_c" => super::extruded_surfaces::keeper(reader),
+        "moCompCoordSys_c" => super::component_coordinates::read(reader, map),
+        "moCompRefAxis_c" | "moCompRefPoint_c" => {
+            super::component_references::reference_geometry(reader, map)
+        }
+        "moRefPlane_c" => super::reference_planes::plane(reader, map),
+        "moPlaneRef_w" => super::reference_planes::plane_reference(reader, map),
+        "moRefAxis_c" => super::reference_axes::axis(reader, map),
+        "moRefAxisData_c"
+        | "moSurfaceAxisData_c"
+        | "moFacePtAxisData_c"
+        | "moPlanePtAxisData_c"
+        | "moPlaneInterAxisData_c"
+        | "moLineAxisData_c"
+        | "moConFaceAxisData_c"
+        | "moTwoPtsAxisData_c" => super::reference_axes::data(reader, map, name),
+        _ => return None,
+    };
+    Some(result)
+}

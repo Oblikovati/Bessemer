@@ -1,0 +1,218 @@
+{
+  "evidence": "C-1961",
+  "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldmodu.dll",
+  "sha256": "346ad211760be406f587f338293d1793386518dddfc1bd461ac841dd0598487c",
+  "target_executed": false,
+  "coverage_credit": 0,
+  "functions": [
+    {
+      "start": "0x4b2dc710",
+      "end": "0x4b2dc71a",
+      "export": "?getReadOnlyState@moParameter_c@@QEAAHXZ",
+      "bytes": "8b4128c1e81c83e001c3",
+      "sha256": "e1a6bc24f6c9bc21e774db6faf7b0fedc69a2e0d49672444b564419b4aaefe1b",
+      "disassembly": [
+        "4b2dc710 mov eax, dword ptr [rcx + 0x28]",
+        "4b2dc713 shr eax, 0x1c",
+        "4b2dc716 and eax, 1",
+        "4b2dc719 ret "
+      ]
+    },
+    {
+      "start": "0x4c1abde0",
+      "end": "0x4c1abe75",
+      "export": "?setReadOnlyState@moParameter_c@@QEAAXHAEAV?$CStringT@_WV?$StrTraitMFC_DLL@_WV?$ChTraitsCRT@_W@ATL@@@@@ATL@@@Z",
+      "bytes": "48895c2408574883ec20498bf8488bd985d2ba000000107452e8022beaff488b078378f0007463488b4b404885c9740b488b01ba01000000ff5008b910000000ff150a2ab90048894424484885c0740c488b17488bc8e895f1ffff9048894340488b5c24304883c4205fc3e89011eaff488b4b404885c9740b488b01ba01000000ff500833c048894340488b5c24304883c4205fc3",
+      "sha256": "1a4378caa8c43000e041f57922dc646d89e7b4ae22b974cbc6ce7a486e72346a",
+      "disassembly": [
+        "4c1abde0 mov qword ptr [rsp + 8], rbx",
+        "4c1abde5 push rdi",
+        "4c1abde6 sub rsp, 0x20",
+        "4c1abdea mov rdi, r8",
+        "4c1abded mov rbx, rcx",
+        "4c1abdf0 test edx, edx",
+        "4c1abdf2 mov edx, 0x10000000",
+        "4c1abdf7 je 0x4c1abe4b",
+        "4c1abdf9 call 0x4c04e900",
+        "4c1abdfe mov rax, qword ptr [rdi]",
+        "4c1abe01 cmp dword ptr [rax - 0x10], 0",
+        "4c1abe05 je 0x4c1abe6a",
+        "4c1abe07 mov rcx, qword ptr [rbx + 0x40]",
+        "4c1abe0b test rcx, rcx",
+        "4c1abe0e je 0x4c1abe1b",
+        "4c1abe10 mov rax, qword ptr [rcx]",
+        "4c1abe13 mov edx, 1",
+        "4c1abe18 call qword ptr [rax + 8]",
+        "4c1abe1b mov ecx, 0x10",
+        "4c1abe20 call qword ptr [rip + 0xb92a0a]",
+        "4c1abe26 mov qword ptr [rsp + 0x48], rax",
+        "4c1abe2b test rax, rax",
+        "4c1abe2e je 0x4c1abe3c",
+        "4c1abe30 mov rdx, qword ptr [rdi]",
+        "4c1abe33 mov rcx, rax",
+        "4c1abe36 call 0x4c1aafd0",
+        "4c1abe3b nop ",
+        "4c1abe3c mov qword ptr [rbx + 0x40], rax",
+        "4c1abe40 mov rbx, qword ptr [rsp + 0x30]",
+        "4c1abe45 add rsp, 0x20",
+        "4c1abe49 pop rdi",
+        "4c1abe4a ret ",
+        "4c1abe4b call 0x4c04cfe0",
+        "4c1abe50 mov rcx, qword ptr [rbx + 0x40]",
+        "4c1abe54 test rcx, rcx",
+        "4c1abe57 je 0x4c1abe64",
+        "4c1abe59 mov rax, qword ptr [rcx]",
+        "4c1abe5c mov edx, 1",
+        "4c1abe61 call qword ptr [rax + 8]",
+        "4c1abe64 xor eax, eax",
+        "4c1abe66 mov qword ptr [rbx + 0x40], rax",
+        "4c1abe6a mov rbx, qword ptr [rsp + 0x30]",
+        "4c1abe6f add rsp, 0x20",
+        "4c1abe73 pop rdi",
+        "4c1abe74 ret "
+      ]
+    },
+    {
+      "start": "0x4c1abe80",
+      "end": "0x4c1abe92",
+      "export": "?setSharedThickness@moParameter_c@@QEAAXH@Z",
+      "bytes": "85d2ba010000000f85632aeaffe93e11eaff",
+      "sha256": "ad19bede0e58d4ac78ffe0939622098be1eef49ac5eb46712e8915a0acb9151a",
+      "disassembly": [
+        "4c1abe80 test edx, edx",
+        "4c1abe82 mov edx, 1",
+        "4c1abe87 jne 0x4c04e8f0",
+        "4c1abe8d jmp 0x4c04cfd0"
+      ]
+    },
+    {
+      "start": "0x4c04cfe0",
+      "end": "0x4c04cfeb",
+      "export": "?clearFlag@moNode_c@@QEAAHW4dummyBits_e@1@@Z",
+      "bytes": "8b4128f7d223d0895128c3",
+      "sha256": "f74fb2360dc64c4fc224f81fe0c0797220b44c5dcd1db1ebb973cab0a54e7045",
+      "disassembly": [
+        "4c04cfe0 mov eax, dword ptr [rcx + 0x28]",
+        "4c04cfe3 not edx",
+        "4c04cfe5 and edx, eax",
+        "4c04cfe7 mov dword ptr [rcx + 0x28], edx",
+        "4c04cfea ret "
+      ]
+    },
+    {
+      "start": "0x4c04e900",
+      "end": "0x4c04e90e",
+      "export": "?setFlagOn@moNode_c@@QEAAHW4dummyBits_e@1@@Z",
+      "bytes": "8b4128448bc0440bc244894128c3",
+      "sha256": "bbf083eefd0910d279c0eb035c2b0dc21ec682e4d65cf0ca1f025b13e667c5de",
+      "disassembly": [
+        "4c04e900 mov eax, dword ptr [rcx + 0x28]",
+        "4c04e903 mov r8d, eax",
+        "4c04e906 or r8d, edx",
+        "4c04e909 mov dword ptr [rcx + 0x28], r8d",
+        "4c04e90d ret "
+      ]
+    },
+    {
+      "start": "0x4c04cfd0",
+      "end": "0x4c04cfdb",
+      "export": "?clearFlag2@moNode_c@@QEAAHW4dummyBits2_e@1@@Z",
+      "bytes": "8b412cf7d223d089512cc3",
+      "sha256": "3d09c8c69e90c70c1ca4b20e870bf01160bf1b487e365228a111cf1fbb07129c",
+      "disassembly": [
+        "4c04cfd0 mov eax, dword ptr [rcx + 0x2c]",
+        "4c04cfd3 not edx",
+        "4c04cfd5 and edx, eax",
+        "4c04cfd7 mov dword ptr [rcx + 0x2c], edx",
+        "4c04cfda ret "
+      ]
+    },
+    {
+      "start": "0x4c04e8f0",
+      "end": "0x4c04e8fe",
+      "export": "?setFlagOn2@moNode_c@@QEAAHW4dummyBits2_e@1@@Z",
+      "bytes": "8b412c448bc0440bc24489412cc3",
+      "sha256": "f1fb8c9e8d3b09af1d9bdd1ac0f415c46f88f3dcb49c892625cb26aabaf34cb2",
+      "disassembly": [
+        "4c04e8f0 mov eax, dword ptr [rcx + 0x2c]",
+        "4c04e8f3 mov r8d, eax",
+        "4c04e8f6 or r8d, edx",
+        "4c04e8f9 mov dword ptr [rcx + 0x2c], r8d",
+        "4c04e8fd ret "
+      ]
+    }
+  ],
+  "assertions": {
+    "0x4b2dc710": [
+      "mov",
+      "eax, dword ptr [rcx + 0x28]"
+    ],
+    "0x4b2dc713": [
+      "shr",
+      "eax, 0x1c"
+    ],
+    "0x4b2dc716": [
+      "and",
+      "eax, 1"
+    ],
+    "0x4c04cfe0": [
+      "mov",
+      "eax, dword ptr [rcx + 0x28]"
+    ],
+    "0x4c04cfe7": [
+      "mov",
+      "dword ptr [rcx + 0x28], edx"
+    ],
+    "0x4c04e909": [
+      "mov",
+      "dword ptr [rcx + 0x28], r8d"
+    ],
+    "0x4c04cfd7": [
+      "mov",
+      "dword ptr [rcx + 0x2c], edx"
+    ],
+    "0x4c04e8f9": [
+      "mov",
+      "dword ptr [rcx + 0x2c], r8d"
+    ]
+  },
+  "bindings": [
+    {
+      "caller": "0x4c1abde0",
+      "site": "0x4c1abdf9",
+      "target": "0x4c04e900",
+      "mask": "0x10000000"
+    },
+    {
+      "caller": "0x4c1abde0",
+      "site": "0x4c1abe4b",
+      "target": "0x4c04cfe0",
+      "mask": "0x10000000"
+    },
+    {
+      "caller": "0x4c1abe80",
+      "site": "0x4c1abe87",
+      "target": "0x4c04e8f0",
+      "mask": "0x1"
+    },
+    {
+      "caller": "0x4c1abe80",
+      "site": "0x4c1abe8d",
+      "target": "0x4c04cfd0",
+      "mask": "0x1"
+    }
+  ],
+  "sources": {
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part_parameter_node_flags_native_audit.py": "9e30c9bb0e888bcbf91c150a81fd6659f7dea73613354551db28dcaf6aa8b7bc",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\sldmodu-complete-export-index.json": "fb3efcb81f1c79daf1ad32961f1ec1adb681297c1c2f41177250293ebe836ace",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\node-flag-roles-run.txt": "d1480c0cab5c9cbd87a184796e1ff243009b966adafb8890bd33858b9ef7423f",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\node-flag-consumers-run.txt": "250ca2c1597a14d1d9593fc9d114b8830576292d184d0df6873af7dc5cd1d783",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\part-node-state-fields-native-evidence.json": "f525fd67b4642ebe60795afdcbc5d78e09c0fc412ac7c3bafe2f08f10c13365e",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\node-flag-roles\\FUN_4b2dc710.c": "57a90fa53903712c702c2f045de8cd8e8cc1aa5ea8b2788216fab0a6859105db",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\node-flag-roles\\FUN_4c1abde0.c": "d8c36958a5a93749c78c1f5a93388e12f126e26adb98b026f35af0a56d5620d2",
+    "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\decomp\\node-flag-roles\\FUN_4c1abe80.c": "87371c3a809f52ea822535f22fc2cc0bfad1b4d557f76aefe9527966c1b8b76f"
+  },
+  "limitations": [
+    "Read-only bit 28 in +28 and shared-thickness bit 0 in +2C are parameter-class roles, not meanings assigned to every moNode subclass. Setter allocations and auxiliary read-only owner/name state at runtime +40 are not serialized by this helper or simulated. Full stored words and unknown-byte charges remain unchanged. No complete flag-domain claim."
+  ]
+}

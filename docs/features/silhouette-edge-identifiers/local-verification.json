@@ -1,0 +1,54 @@
+{
+  "base_revision": "b7d22afffa9d9b60123faab964bee948e8605e31",
+  "issue": 54,
+  "platform": "Windows x64",
+  "rust": "1.99.0",
+  "focused": {
+    "private_tests": 6,
+    "public_tests": 3,
+    "python_tests": 2,
+    "cases": 30,
+    "primitive_observations": 5686,
+    "owned_streams": 7,
+    "source_target_identities_verified": true,
+    "source_role_oracle": false,
+    "previous_fixture_tests": 2
+  },
+  "native": {
+    "cases": 906,
+    "previous_complete": 765,
+    "complete": 767,
+    "explicit_stops": 139,
+    "new_complete": 2,
+    "cases_advanced_to_later_stops": 4,
+    "fresh_processes": 2,
+    "all_outcomes_and_causes_identical": true,
+    "artifact_sha256": "8c2da650363b69242b935d7ef722951f6e996f3ddf031245c94300f05f3a2300",
+    "independent_feature_bytes": 49339288,
+    "independent_snapshot_identity": "995fafb5215ee67a410bf4b176d494bc0445c86c3ee42b43d701a1d7d98997ca",
+    "independent_python_files": 1365,
+    "independent_report_sha256": "beb2420a7150b76cd8bc731f30b9e4b4939d047ff2e6a8df7f3abdaa72334e5a",
+    "independent_sentinel_sha256": "16d40724e30dc023d496354a9fb0f4b51d3d1822a1286fca7bb6fafea077cd2d"
+  },
+  "corpus_sha256": "4e8885cfedf8d4b1d14806fd2643f42f7d7fb4768e004530087df58b8a16797f",
+  "kernel_schema_sha256": "cc98d0c96c959cc0216cee45e4adb785340ed99af7ecb6129f84633a738846af",
+  "schema_snapshot_sha256": "231cfe9c05c00f4023b29faff089a9871a801a2857182991c003df86e2d95239",
+  "fixture_reference_sha256": "ffe385ce1214ec120651f96c0d0dc5ed0975fe5fb3b9fb687cd8ac1b08f7e1b9",
+  "gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 741,
+    "library_ignored": 3,
+    "xtask_passed": 4,
+    "doctests_passed": 270,
+    "all_integration_tests_passed": true,
+    "log_sha256": "32497e84a5c59f4796c3158f6e60a7d16663a976814df58a3efd0fcc18f97882"
+  },
+  "exclusions": [
+    "139 explicit native corpus stops",
+    "Documented projected-line draft/intersection body and role support tracked under #54 and Bug #46",
+    "Historical migrations and alternate contexts",
+    "Geometry validity and SolidWorks application acceptance",
+    "Broader all-schema parity remains unproven"
+  ]
+}

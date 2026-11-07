@@ -1,0 +1,62 @@
+{
+  "issue": 134,
+  "status": "Unfinished local feature; complete outer primitive projection verified",
+  "revision": "55ad3b8c6a10db705ad33206309c9680fbf7b9ef",
+  "owned": {
+    "cases": 295,
+    "bytes": 4944174,
+    "sha256": "97449c3d5a87378c1820916ca90462650d71e39b8a424655474d0c1bf6c97480"
+  },
+  "native": {
+    "cases": 68,
+    "bytes": 1009050,
+    "sha256": "3af0fb175c9a77d89b04c64a7433e0b6a68b0bbd2b57d73173c7a3f9201c7387"
+  },
+  "fresh_processes": {
+    "owned_contexts": 295,
+    "native_contexts": 68,
+    "scope": "Complete typed outer paths, discriminants, raw values and offsets plus all original bytes; complete embedded images retained atomically",
+    "processes": [
+      {
+        "path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\thermal-field-projection-process-0.bin",
+        "bytes": 5953224,
+        "sha256": "94974b6d2f67bd933b043ebbab5605372dc16331a03d5aaa03ce2fef957a0687",
+        "exit": 0
+      },
+      {
+        "path": "C:\\Users\\vmiguel\\git\\Bessemer\\target\\thermal-field-projection-process-1.bin",
+        "bytes": 5953224,
+        "sha256": "94974b6d2f67bd933b043ebbab5605372dc16331a03d5aaa03ce2fef957a0687",
+        "exit": 0
+      }
+    ],
+    "byte_identical_to_independent_source": true,
+    "byte_identical_between_processes": true,
+    "handles_reaped": true
+  },
+  "new_projection_tests": {
+    "passed": 2,
+    "failed": 0,
+    "ignored": 0
+  },
+  "strict_actual_source_checks": {
+    "passed": 15,
+    "failed": 0
+  },
+  "clippy_exit": 0,
+  "scope": [
+    "Every outer typed path in physical order",
+    "Every Signed/Unsigned/DoubleBits/Text/Bytes/Embedded discriminant",
+    "Every original field offset and exact raw pattern",
+    "Full native and owned images retained in export",
+    "Embedded images compared atomically"
+  ],
+  "exclusions": [
+    "Full independent edit-history export",
+    "Full independent nested occurrence projection",
+    "Final full local PR gate",
+    "Final platform matrix",
+    "SolidWorks native application execution",
+    "Complete schema parity"
+  ]
+}

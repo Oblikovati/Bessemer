@@ -1,0 +1,37 @@
+{
+  "previous_complete": 808,
+  "complete": 810,
+  "newly_complete": [
+    746,
+    748
+  ],
+  "no_prior_success_lost": true,
+  "all_906_statuses_and_causes_identical": true,
+  "explicit_remaining_failures": 96,
+  "changed_stops": [
+    {
+      "index": 746,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moRuledSrfFromEdge_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted"
+      ]
+    },
+    {
+      "index": 748,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moRuledSrfFromEdge_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted"
+      ]
+    }
+  ],
+  "logs": {
+    "ruled-frontier.log": "a7bf7ae525cfcf67312defcd31dab916b5771c29b4e9bc66e48755544fa6cba0",
+    "ruled-frontier-repeat.log": "fa2daae947a0f7dcb5514f4f564128ea2828de900cc61c978d46e1232d1649f6"
+  }
+}

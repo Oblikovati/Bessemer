@@ -1,0 +1,67 @@
+{
+  "behavior_version": "private-model-sketch-hatch-curve-surface-v1",
+  "decision": "Explicit direct collection grammars and source-documented container codecs, without numeric normalization or geometry algorithms.",
+  "migration": "Initial unpublished model codec; prior entity/handle/point/line/text fixtures and corpus results retained. Shared test-decoder extraction preserves existing cases.",
+  "checks": {
+    "new focused tests": "9 passed",
+    "all sketch-prefixed tests": "27 passed",
+    "all model tests": "200 passed; two external-input tests ignored, six core tests filtered",
+    "all-target Clippy": "passed",
+    "Python": "50 passed",
+    "fresh reference processes": "all three new wire fixtures reproduced exactly",
+    "native corpus": "866/906; all 906 outcomes unchanged from preceding checkpoint; complete acceptance failed",
+    "full PR gate": "earlier geometric/kernel source state; rerun before push"
+  },
+  "cases": 1254,
+  "independent_scalar_values": 46844,
+  "exact_hatch_array_budget": {
+    "entries": 15,
+    "one_below_rejected": 14
+  },
+  "oracle_exclusions": [
+    "derived surfaces-completion flag consumes no bytes"
+  ],
+  "fixture_repeat": {
+    "identical": true,
+    "sha256": {
+      "sketch-curve-cases.bin": "da0cac142ab6ce9318dfd4191eb88048daef51091877619f56590600dae2d0c4",
+      "sketch-arc-original.bin": "f11da21656b6becd9a0bbb54d876315c6f4d150925fec991bd417cc55db83cb0",
+      "sketch-arc-edited.bin": "880dd05163b06779d4d0c6fc9f7c3ca5bedcbd96fd3a307c4e369c06166dd45c"
+    }
+  },
+  "exclusions": [
+    "complete sgSketch root, splines, dimension collections, patterns and tail",
+    "unimplemented nonnull hatch-data/chooser dependencies",
+    "two tracked role failures",
+    "public model API and result/history contracts",
+    "geometry and native application acceptance",
+    "remote platform matrix"
+  ],
+  "artifact_sha256": {
+    "docs/features/model-archives/freeze_sketch_curves.py": "d31569c3461b63a5aa49b81a43710458a4489ca502b11888d16a140595bcbded",
+    "docs/features/model-archives/sketch-curve-cases.json": "63429908d4615227a07f3b075e1f0209050b725b5ded21961c0bf4b3459dbafc",
+    "docs/features/model-archives/sketch-curve-schema-reference.json": "3dcda7eb43886e4e5e583ba42f06b5d5e439cb39477d695aebd2645d6e0b2087",
+    "docs/features/model-archives/sketch-curve-schema-snapshot.md": "10d916fce725c4c9b14bdade3333e1e3892e73e4ab0c2eadd2c6884f913a67d4",
+    "docs/features/model-archives/sketch_curve_fixture_bytes.py": "fe87bf9feee21ec82147be32d33b6a7fb5698b5040a9a2bc0ef4ba43e2e4189f",
+    "docs/features/model-archives/sketch_reference_fixture_bytes.py": "4c2c0cea876eaa1ada1d177f81d080fd26130484ed9facff20f895fcc9084118",
+    "src/model_archives/mod.rs": "47edd180c0f9ffa58df46fbb585c1104ab664779413c70f5a0f220f6dd0eb259",
+    "src/model_archives/object_body.rs": "57e36240bee324d623e3be94a077300c45cb3a870002b6bee7357b52470b702d",
+    "src/model_archives/sketch_curves.rs": "8d19cf6908625fa615c6d0e55809924eed8990381102364e29430091938c4a5c",
+    "src/model_archives/sketch_entities.rs": "9578e2d0df65f6ef4adcbe709e0730ad716cda847a6120877e3f32185c2dc457",
+    "src/model_archives/sketch_geometry.rs": "653e08163afb81cd67f48d1a9921ae37f712e32d3bc38d4935e58f42880ec38c",
+    "src/model_archives/sketch_surfaces.rs": "bb6f05b79e51e527317f2def91360b4cdd604c5185e50e5bbc41326580aa12af",
+    "tests/fixtures/model-archives/sketch-arc-edited.bin": "880dd05163b06779d4d0c6fc9f7c3ca5bedcbd96fd3a307c4e369c06166dd45c",
+    "tests/fixtures/model-archives/sketch-arc-original.bin": "f11da21656b6becd9a0bbb54d876315c6f4d150925fec991bd417cc55db83cb0",
+    "tests/fixtures/model-archives/sketch-curve-cases.bin": "da0cac142ab6ce9318dfd4191eb88048daef51091877619f56590600dae2d0c4",
+    "tests/model_archives/direct_collections.rs": "de2f8604c74d5423b21f59f7f03b22dfb6f29b6fdadf360b8dbec06041a433ed",
+    "tests/model_archives/sketch_curves.rs": "f1e2611746e2c91126a9c8368e3ce5fe341909d02e31055eecc04d9431cc97aa",
+    "tests/model_archives/sketch_geometry.rs": "dc0781413bbbf50b1fdd9cf5a1e2bd657d1b9896faaa79ec8ea3cd6edcacbb64"
+  },
+  "log_sha256": {
+    "model-sketch-curve-tests.log": "1456939c0d34377204a2e1a278ba04a00f6677467a83222ee5f317d4d45d0752",
+    "model-all-sketch-curves-tests.log": "0fa402e23934e8340c692f1ad989617adb245200db36b976b52f21f2dd9881eb",
+    "model-sketch-curve-clippy.log": "196da6e2cdecb569de667957ef1eeaa1237d7aba659c1e2c572b9ff916ebe780",
+    "model-sketch-curves-all-model.log": "27bf0b00ec120d29fbdf1e2b556a55522de168dfaeb5fe22ee2e46c2e5356d21",
+    "model-sketch-curves-python.log": "1e9ca299c39d00dc53c2e159dfee14ed8f8d69f7fd7946cf1b0c1aa29ea16f38"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "issue": 144,
+  "status": "Complete focused corpus and full local gate passed; exact-head platform integration pending",
+  "rust_tests": {
+    "passed": 19,
+    "failed": 0,
+    "ignored": 0,
+    "explicit_native_inputs": 3
+  },
+  "reference_checks": 10,
+  "owned_contexts": 560,
+  "native_contexts": 414,
+  "native_folder_contexts": 0,
+  "public_types_send_sync": 16,
+  "full_exports": {
+    "projection": {
+      "bytes": 570022,
+      "sha256": "27a87ec15d2948d3ba19597208ac792af8b6b8523463d6938d9e92b7bc275781",
+      "processes": 2,
+      "complete_independent_match": true
+    },
+    "history": {
+      "bytes": 1002418,
+      "sha256": "94ee8903e988b3c3c0bf15d243896ccfea2a33a7c6d5de196631bf9a233d3d07",
+      "processes": 2,
+      "complete_independent_match": true
+    }
+  },
+  "checks": [
+    "All physical typed fields, paths, offsets and raw bits against actual complete Source",
+    "Complete forced construction for every owned/native body",
+    "Complete independent header/pair edit expectations and all ordered outer/nested-copy parents",
+    "Explicit expected JointList count scope, mismatch/range failures and no adjacency synthesis",
+    "Empty arrays at EOF have no invented physical values (#145)",
+    "Foreign/out-of-range/kind/structural request isolation",
+    "Exact no-op source/result identities",
+    "clippy -D warnings, formatting and function/file audits",
+    "All five supported physical value kinds retain complete source/replacement/result snapshots and exact prefix/suffix isolation",
+    "Wire-distinct embedded CString prefixes cause real isolated edits",
+    "All 3104 targeted mutations match actual source rejection",
+    "Every one of 560 contexts obeys seven exact/one-below outer/embedded limits",
+    "Every proper prefix and trailing byte rejects for all four bodies",
+    "Input buffers, returned bytes, copied fields, stale IDs and invalid construction roles preserve source"
+  ],
+  "remaining": [
+    "Exact-head platform integration",
+    "Native runtime/application, geometry, lookup/repair/order and physical meanings"
+  ],
+  "adversarial": {
+    "inputs": 3104,
+    "accepted": 0,
+    "rejected": 3104,
+    "malformed_bytes": 114898,
+    "malformed_sha256": "1a128ba67161d7cd6b2cf1cabcc0a65534f0910ce4df2a3e63e14c25c069a649",
+    "budget_contexts": 560,
+    "budget_bytes": 67224,
+    "budget_sha256": "7d98164e5efbf81a3130b195ce55293a780b70e676cf8ad788cc8c63a40f9f89"
+  },
+  "concurrency": {
+    "threads": 8,
+    "edits_per_thread": 32,
+    "serial_requests": 8,
+    "body_kinds": 4,
+    "physical_value_kinds": 5,
+    "checks": [
+      "bytes",
+      "fields",
+      "kind/version/count check mode and coverage",
+      "outer/nested source/replacement parents",
+      "result identities",
+      "input preservation"
+    ]
+  }
+}

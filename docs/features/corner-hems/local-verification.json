@@ -1,0 +1,46 @@
+{
+  "base_revision": "3a756bda3ccb729ff813135f4ff370d06bb27d43",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "behavior_version": "C289-corner-hems-v1",
+  "pr_gate": {
+    "command": "cargo xtask pr",
+    "exit_code": 0,
+    "library_passed": 950,
+    "external_fixture_tests_ignored": 3,
+    "doctests_passed": 274,
+    "test_binaries": 167,
+    "log_sha256": "930fd14be577877c15e490e15d6eeb8f407c0548a122280a7107c24b9c3d234c"
+  },
+  "focused_private_tests": 9,
+  "public_document_tests": 4,
+  "independent_fixture_tests": 3,
+  "independent_native_tests": 1,
+  "saved_manager_helper_reuse": {
+    "previous_edge_fixture_tests": 3,
+    "all_existing_goldens_unchanged": true,
+    "structural_commit": "3a756bda3ccb729ff813135f4ff370d06bb27d43"
+  },
+  "native_corpus": {
+    "cases": 906,
+    "complete": 821,
+    "incomplete": 85,
+    "two_fresh_processes_identical": true,
+    "previous_complete_preserved": true
+  },
+  "oracles": [
+    "actual independent serializer primitive observations",
+    "independent owned scalar edit goldens",
+    "actual saved CMgr helper selection",
+    "four native hash-bound containing feature roots",
+    "all-prefix truncation and version rejection",
+    "independent array counts, required owners and finite reference roles"
+  ],
+  "exclusions": [
+    "native alternate-helper fixtures are not claimed",
+    "nonnull native relief fixtures are not claimed",
+    "engineering option meanings and geometric validity",
+    "later unsupported native classes",
+    "complete documented schema parity remains unfinished"
+  ]
+}

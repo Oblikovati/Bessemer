@@ -1,0 +1,140 @@
+{
+  "issue": 185,
+  "stage": "Stored classification-selector getter and isolated u16 archive edits",
+  "processes_reaped": 2,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "tests_per_domain_process": 2,
+  "test_seconds": [
+    82.34,
+    77.91
+  ],
+  "full_u16_requests_per_process": 65536,
+  "changed_per_process": 65535,
+  "noops_per_process": 1,
+  "independent_exports": [
+    {
+      "path": "target/classification-operation-process-1.bin",
+      "bytes": 99745796,
+      "sha256": "9dfcf11ebebc4ba2c0b09a7421bdaf66f1abc09bde61ab0bd57fdeac040b5d83"
+    },
+    {
+      "path": "target/classification-operation-process-2.bin",
+      "bytes": 99745796,
+      "sha256": "9dfcf11ebebc4ba2c0b09a7421bdaf66f1abc09bde61ab0bd57fdeac040b5d83"
+    }
+  ],
+  "all_export_bytes_identical": true,
+  "bounded_role_matrix_cases": 264,
+  "bounded_matrix_reference_edits": 6336,
+  "complete_full_domain_read_groups": 65540,
+  "last_group_large_owner_changed_edits": 1,
+  "complete_root_tests": 2,
+  "complete_root_seconds": 5.42,
+  "existing_reference_regression_tests": 6,
+  "existing_reference_regression_seconds": 86.0,
+  "artifacts": [
+    {
+      "path": "src/model_archives/intersection_reference/mod.rs",
+      "bytes": 3212,
+      "sha256": "e1798188cc7fc7a3a2ad63d43d98bbe0d8c636f640d97a870d8ba7c407393611"
+    },
+    {
+      "path": "src/model_archives/intersection_reference/archive_ops.rs",
+      "bytes": 3490,
+      "sha256": "c6b96232a940f2247338778623d9f8a9d64250bd843bf3a650d02fea3820c52e"
+    },
+    {
+      "path": "tests/model_intersection_reference.rs",
+      "bytes": 5286,
+      "sha256": "131d904bb14a04d50360b4080d48794592fe2e4b9eef1365876be3b94930bc1a"
+    },
+    {
+      "path": "tests/model_intersection_reference/classification.rs",
+      "bytes": 9143,
+      "sha256": "abc05a7a77e4d1c4145cc045bf02390cd6d0b8968a6cb2200a2c70899908b5c2"
+    },
+    {
+      "path": "target/classification-library-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/classification-operation-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/classification-operation-final-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/classification-complete-root-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/classification-library-clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/classification-operation-clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/classification-complete-root-clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/classification-final-format.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/classification-operation-process-1.log",
+      "bytes": 481,
+      "sha256": "7d173e62e113bba1ee38c0cfaca2695b1caf2b143e3bd1ab1df5d03db5dac68c"
+    },
+    {
+      "path": "target/classification-operation-process-2.log",
+      "bytes": 481,
+      "sha256": "0c754927868a324c41404201959ac012184d8215f0dbf41ca3df8a070fdd05af"
+    },
+    {
+      "path": "target/classification-complete-root.log",
+      "bytes": 357,
+      "sha256": "0eef8f1c3c3c0e1f22d1d8f0bc6304ed15cd5b69b4ef2affd3008deb1192a3d2"
+    },
+    {
+      "path": "target/classification-existing-regression.log",
+      "bytes": 98133,
+      "sha256": "9c4105c22692a16765a1cb6513fb167d5aad17c5e33a402c0f30e5bf2a81e509"
+    },
+    {
+      "path": "target/classification-operation-independent.json",
+      "bytes": 523,
+      "sha256": "97cd32b56fff8aabf1dd99b79267051ab6431f283a29eb319fa5c0d356884bcc"
+    }
+  ],
+  "coverage_credit": 0,
+  "checks": [
+    "Every u16 replacement matches a literal complete-stream patch, the complete expected field vector, exact one-field derived history, completion/unchanged counts, stored coverage/fidelity and diagnostics. Signed raw20/24/28 and all references remain exact.",
+    "A fresh revision-owned view reports the replacement selector. No-ops retain identity; changed results reject stale views. Foreign revisions fail before changing either input. Original features and parent configuration remain unchanged.",
+    "Both99,745,796-byte exports match byte for byte. An independent stdlib checker verifies all65536 actual roots per process against the immutable1518-byte Source control with exactly one two-byte patch.",
+    "The264 Source-owned bounded role cases exercise all eight physical groups with three selector replacements each, preserving signed index and sibling controls.",
+    "The complete1,672,584-byte large root reconstructs exactly with two definitions, first-instance alias, map slots97\u2192100 and every u16 selector in its first owner. Its last physical group is edited with complete field/byte/history checks.",
+    "Standalone library/integration Clippy, workspace formatting, function/file-size audit and all six existing non-concurrency reference integration regressions pass."
+  ],
+  "qualifications": [
+    "The exhaustive request tests and the final additional complete-root tests use separate compiled test artifacts; all production API code is the same.",
+    "Fresh immutable original Source parsing of actual classification exports is running and remains pending; this gate proves independent literal bytes and Rust contracts only.",
+    "Native document edits, mixed concurrency, full Cargo/exact-head publication and the separate edge168 index API remain pending for Feature185.",
+    "No native classifier, matching, provider/cache execution, geometry or complete schema parity is claimed. Humanizer unavailable; prose review pending."
+  ]
+}

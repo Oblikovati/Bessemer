@@ -1,0 +1,34 @@
+{
+  "feature_issue": 241,
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "rust_command": "cargo test --test flow_count_binding_fixtures --locked",
+  "rust_exit_code": 0,
+  "rust_passed": 2,
+  "rust_failed": 0,
+  "clippy_command": "cargo clippy --test flow_count_binding_fixtures --locked -- -D warnings",
+  "clippy_exit_code": 0,
+  "python_command": "python -m unittest discover -s docs/features/flow-count-binding -p test_binding.py -v",
+  "python_exit_code": 0,
+  "python_passed": 5,
+  "format_exit_code": 0,
+  "function_and_file_caps": "passed",
+  "cases": 193,
+  "bound_arrays": 193,
+  "scope": "Fixture baseline: exact known count prefixes, retained opaque bodies, conditional initialization arithmetic and array count matching; no new public prefix/binding API yet",
+  "source_lf_sha256": {
+    "tests\\flow_count_binding_fixtures.rs": "1091857167c276a819f7659b6497df051855ac309069b35d802baff0ef6fbb0e",
+    "tests\\flow_count_binding\\fixture.rs": "28e7df7f16b560b438a236cce8bdc02152aba069eaa30037a813936a0c8c4f7f"
+  },
+  "log_sha256": {
+    "target\\flow-count-binding-baseline-tests.log": "e2ed4a7f6c11b6bad86bd95fdbd047c85c0638eeb8f1a69552a600f1921c686b",
+    "target\\flow-count-binding-baseline-clippy.log": "4b0e9592b74d3692bedb22b4d267ffd22a8bc9674274419cd01d8e7763352543",
+    "target\\flow-count-binding-baseline-python-tests.log": "1a7a7c76eb006b9170476a475addc0952a745f71e3df6efaf9704f64b9b5b2fe"
+  },
+  "exclusions": [
+    "Count equality is conditional on explicitly assumed absent-map initialization",
+    "No actual native context execution or pointer population",
+    "No support claimed for existing/reused pointer-map contexts",
+    "No full-body validation from a twelve-byte prefix read",
+    "Current full gate on 5c851c29 excludes this later fixture baseline"
+  ]
+}

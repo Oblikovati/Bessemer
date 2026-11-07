@@ -1,0 +1,22 @@
+{
+  "issue": 151,
+  "scope": "Typed context and field/embedded projectors for shared reference adversarial generation; defaults unchanged",
+  "strict_solid_body_checks": 15,
+  "exports": {
+    "malformed": {
+      "cases": 5454,
+      "bytes": 279157,
+      "sha256": "73be6574d4e303a45abd79fd9f198bc3b77742e44c67cf55071d227ab01f5b2d"
+    },
+    "budgets": {
+      "cases": 240,
+      "bytes": 184171,
+      "sha256": "3e219d1169aa44de7bad01b9336fc53ab6859063c211a864f9a17927fe6bb2fe"
+    }
+  },
+  "outcomes": {
+    "unchanged_accepted_controls": 240,
+    "rejected": 5214
+  },
+  "method": "Strict actual-source regeneration checked every complete pre-existing fixture byte and metadata hash; no baseline changed."
+}

@@ -1,0 +1,19 @@
+{
+  "issue": 156,
+  "before_commit": "a88fce5392b669b2c0f3f828a195f4e9fefa77ea",
+  "scope": "Private construction diagnostic accepts Debug/PartialEq field types; its complete first-mismatch algorithm and existing concrete callers are unchanged.",
+  "focused_including_native": 13,
+  "exports": {
+    "fields": {
+      "bytes": 32260,
+      "sha256": "7f60fbffb975e9f69e064dba38957e9a7948b515199d92ae9afab6821d69e381",
+      "unchanged": true
+    },
+    "history": {
+      "bytes": 62500,
+      "sha256": "aab768104829c9160fb6f86ed261ae2790add7bec4073510ef02353d650e7c74",
+      "unchanged": true
+    }
+  },
+  "existing_constructor_error_tests": "All owned wrong-path/kind/missing/extra cases passed unchanged."
+}

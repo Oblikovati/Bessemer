@@ -1,0 +1,65 @@
+{
+  "issue": 208,
+  "source_parent": "9136b07a7b1dc463e22b3888203baf45597ccc7b",
+  "platform": "Windows x64",
+  "toolchain": "1.99.0-x86_64-pc-windows-msvc",
+  "before": {
+    "regression_exit_code": 101,
+    "passed": 0,
+    "failed": 5,
+    "log_sha256": "6abf36167cdd2dd58ee9d80ae0ece394211c81cd77bcba2195379f609cea61a7"
+  },
+  "after": {
+    "combined_compile_and_test_exit_code": 0,
+    "tests_passed": 19,
+    "tests_failed": 0,
+    "logs": {
+      "target/zero-size-preview_rgb_zero_size-tests.log": {
+        "sha256": "6d293232a976cf78e4a1d1ab77c9dbfffdc69e67d0c968902052a620db94db68",
+        "passed": 5,
+        "ignored": 0
+      },
+      "target/zero-size-preview-tests.log": {
+        "sha256": "6c4077f5dd4344b7deb34512085ab33e06941a7d236fafa68f6b13187cae2bec",
+        "passed": 5,
+        "ignored": 0
+      },
+      "target/zero-size-preview_adversarial-tests.log": {
+        "sha256": "15d9f647f899128d57425ba86d50a867507225c8238dea7c066fa1bf2ac63a74",
+        "passed": 5,
+        "ignored": 0
+      },
+      "target/zero-size-preview_document-tests.log": {
+        "sha256": "57928969491da5f1492e4d4d39be7374200cd417f5950c9a273beba7212acacd",
+        "passed": 2,
+        "ignored": 0
+      },
+      "target/zero-size-preview_isolation-tests.log": {
+        "sha256": "1d902a47125cba2eb9c8ee9df69869b5c95bc67c761d625e738bf8f981547c29",
+        "passed": 2,
+        "ignored": 0
+      }
+    }
+  },
+  "checks": {
+    "library_compile_exit_code": 0,
+    "library_clippy_exit_code": 0,
+    "integration_clippy_exit_code": 0,
+    "fixture_regeneration_byte_identity": true,
+    "windows_oracle_exit_code": 0,
+    "windows_oracle_pixels": 32,
+    "changed_rust_format_exit_code": 0
+  },
+  "production_sha256": {
+    "src\\preview\\codec.rs": "5beebcad7c53e8338c0aa66ec44167fea308116829e3eaa42ed3d3b0ea190579",
+    "src\\preview\\pixels.rs": "20ea65029b77689997bb29bce4b52be746691ef3c9662da3cd76c75bbf3cad6c",
+    "src\\preview\\types.rs": "7f8d2801123b5d846d0c28299ebbe627fc93187df07392961add329e0917166a"
+  },
+  "oracle_sha256": "f63f6b250d2056d5964016ace4f202bb7ff88ddaf80f8eaacec627c987016d33",
+  "exclusions": [
+    "Full cargo xtask pr at this code revision remains pending",
+    "Exact-head remote platform and ThreadSanitizer gates remain pending",
+    "Native SolidWorks zero-size population and SolidWorks application opening are not claimed",
+    "24-bit BI_RGB support remains separate Feature207"
+  ]
+}

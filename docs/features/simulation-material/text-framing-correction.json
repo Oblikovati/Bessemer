@@ -1,0 +1,17 @@
+{
+  "issue": 141,
+  "status": "Wrong pre-implementation documentation/verifier assumption corrected by actual source execution",
+  "reference_behavior": "Odd counted byte frames are accepted and retain no decoded UTF-16 view; unpaired even surrogate units remain intact",
+  "prior_focused_assertion": "Expected actual_material_parser(odd, 891107).success to be false",
+  "observed_prior_result": "Focused verifier failed because the actual parser returned success=True",
+  "regression": "verify_utf16_boundary now asserts exact odd payload retention, None text view and complete parse acceptance",
+  "native_packet_unchanged_sha256": "8495ba1183180d0181216fc42f268045ae73cb84d53e7da7a74d4a8223202ae1",
+  "owned_fixture_update": {
+    "reason": "Added accepted odd-byte auxiliary text frames to every populated owned profile before initial fixture publication",
+    "earlier_draft_sha256": "19f75c4f410564c701ab96d852a82e353497b2817194d5c61ef23b400be695c9",
+    "current_sha256": "535727f0b15708a8b9e75d89f66940e06d98e44734334a927aa11109946adaca",
+    "behavior_profile": "simulation-study-material-reference-v1; original parser behavior unchanged"
+  },
+  "production_material_api_existed": false,
+  "version_or_release_change": false
+}

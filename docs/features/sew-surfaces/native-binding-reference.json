@@ -1,0 +1,31 @@
+{
+  "source": "C:\\Users\\vmiguel\\git\\inventor-interface\\solidworks\\research\\sew-surface-native-evidence.json",
+  "source_sha256": "fa773b218dfb110995abeafef45bc61b65959f4f39003874824509b24b352dfb",
+  "clause": "11.227 / C-269",
+  "module": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\sldMoPartu.dll",
+  "module_sha256": "2201edfa07b1a7484acedb6db4600fa7a00e55b16090a03b92fe7d9b14cb2128",
+  "bindings": [
+    {
+      "class_name": "moSewRefSurface_c",
+      "vftable": "0x180453b40",
+      "serializer": "0x180228c70",
+      "type_name": ".?AVmoSewRefSurface_c@@"
+    },
+    {
+      "class_name": "moSewRefSurfIdKeeper_c",
+      "vftable": "0x1804561a8",
+      "serializer": "0x1803ace78",
+      "type_name": ".?AVmoSewRefSurfIdKeeper_c@@"
+    }
+  ],
+  "keeper_import": {
+    "module": "swccu.dll",
+    "symbol": "?Serialize@su_CObject@@UEAAXAEAVsu_CArchive@@@Z",
+    "iat": "0x1803eb580"
+  },
+  "keeper_provider": {
+    "path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\swccu.dll",
+    "sha256": "9992e50f1dc70b721f060d4f5871147882cd5e86b454e190ae3d64f3272003db"
+  },
+  "scope": "Exact native sew-surface body and empty keeper binding; no sixth array is serialized."
+}

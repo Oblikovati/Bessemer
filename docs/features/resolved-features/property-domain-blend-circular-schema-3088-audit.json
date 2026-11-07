@@ -1,0 +1,59 @@
+{
+  "issue": 2,
+  "edition": "Edition 0.3089 \u00b7 2026-11-05 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "specification_sha256": "f47316e546e7d093fb0968b2c6a9cecc89138ac79c3835a365b8571315c0e360",
+  "clauses": [
+    "11.148",
+    "11.158"
+  ],
+  "evidence_joins": [
+    "C-3526",
+    "C-3528",
+    "C-3532"
+  ],
+  "snapshot_path": "docs/features/resolved-features/property-domain-blend-circular-schema-3088-snapshot.md",
+  "snapshot_representation": "Literal selected sections normalized to LF, stripped boundary whitespace and joined with one blank line",
+  "snapshot_sha256": "5145366b0ee540c46e4901f9458897aba5bb6751ddaf0cd1d2c3fdee7cedbda7",
+  "decisions": [
+    "Blend indexed DraftAngle status/value pairs remain distinct signed32 and binary64 fields. Runtime alias-sensitive output order adds no atomic snapshot, status domain or angle unit. ApplyAll words remain signed32; raw BlendClosed/KeepTangency/ForceNonRational/GuideInfluence octets retain every bit instead of executing OR-only setters.",
+    "Blend EndMatchingType controls remain whole signed32 words. Only each low byte==2 selects its tagged direction; high bits, including inverse EndFaceSet/EndTangentSense components, remain stored. Backend transport to0xC0/0xC4 adds no wire fields or numeric enum labels, and rejected getMatchFlag/adjacent-formal aliases remain unassigned.",
+    "Tangent-factor writable-storage initializers0.1/10 are not immutable file bounds. Native COMISD/MAXSD setter policy is not replayed; offline binary64 fields retain signed values, infinities and NaN payloads exactly. No native exception/provider or geometry guarantee follows.",
+    "Circular FlipDirection/Dir2Check/Symmetric remain raw octets despite fullword accessors and the Symmetric Boolean getter. Spacing associations remain tagged dimensions, without new scalar fields, units or runtime provider replay. Required1138/1198 alternative, integer collection bounds, line/dimension roles and the0x3EFA geometry gate remain unchanged."
+  ],
+  "context_exclusions": [
+    "Circular archive condition0x800 remains outside this reviewed context",
+    "No public COM/API enum translation, native runtime setter execution or backend geometry consumer was proved"
+  ],
+  "implementation_effect": "No production parser, API, version/context admission or geometry changed. A shared test helper was exposed and shortened without changing its assertions or literal values.",
+  "acceptance_credit": "No original Source execution, new native population, semantic accounting or complete schema parity credit.",
+  "verification": {
+    "status": "Clippy and14 focused tests passed",
+    "process_exit_code": 0,
+    "all_property_domain_tests": 11,
+    "new_domain_tests": 2,
+    "positive_golden_tests": 2,
+    "required_dimension_regressions": 1,
+    "original_golden_records": 90,
+    "blend_raw_property_patches": 58072,
+    "circular_raw_byte_patches": 16896,
+    "new_literal_patches": 74968,
+    "log_sha256": {
+      "target/property-domains-blend-circular-focused-0.log": "0822bfd79fef2ba0c448b02892fb3577ec0eea1c9e831cc8d0033a5858c1b298",
+      "target/property-domains-blend-circular-focused-1.log": "738b6c47723fb4fadb7bd4c47fa06326f8dd7c389cad04a379fd6deaaf52d754",
+      "target/property-domains-blend-circular-focused-2.log": "c12b13649ab378412573d654606429a928644f371e368d2cb70056cf9cd532d9",
+      "target/property-domains-blend-circular-focused-3.log": "3ea162d516a57e082b42224f986089e652dbfb7cea8c26ddf61d78d221aba3f2"
+    },
+    "clippy_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test_sha256": {
+      "tests/model_archives/property_domains_3087.rs": "78602a4566aeba98675790849a21996c9a5015e9291ae18a74a0b84717cf1f87",
+      "tests/model_archives/property_domains_blend_circular.rs": "df44dad0e644558f0b04f5017a048318199bf62018f59e81c4aaac6937d42abd"
+    },
+    "shape_policy": "Matching controls retain their original low byte while varying upper bits, preserving direction-pointer presence; nonzero/zero dimension and required dimension-alternative rules remain independently guarded",
+    "full_gate": "Later work excluded from active gate21829 atf506fa65; latest completed production gate remains4139 passes at02b5676e"
+  },
+  "reader_sha256": {
+    "blend_records.rs": "850a2b437e4669863264023b2e512d07c2b4ef12d876849243da85392371192e",
+    "blend_columns.rs": "bd6dbf242d5e17ec535c36f614e2e496dede9933693d17a544335f44239b2903",
+    "circular_patterns.rs": "9bbf06c4b43b7f58d5d2e85f91e6674f6ebaaa102e9bc5997978f9da1e8aa5fb"
+  }
+}

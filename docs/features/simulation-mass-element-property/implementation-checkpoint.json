@@ -1,0 +1,51 @@
+{
+  "issue": 138,
+  "status": "Complete scoped local acceptance passed; exact-head platform checks pending",
+  "base_revision": "f9e903f215116353f80c119aa1934287c5382a0d",
+  "implementation": "Committed mass_element production module and integration tests",
+  "owned_contexts": 196,
+  "native_contexts": 2,
+  "native_property_bytes": 2276,
+  "strict_actual_reference_checks": 6,
+  "fresh_field_export": {
+    "bytes": 1952055,
+    "sha256": "e5740ed04fbdf3305edd944ecf898622ade0efd4bec5eaee3d1e1f9b87ed0eab",
+    "processes": 2,
+    "matches_complete_independent_oracle": true
+  },
+  "focused_tests": {
+    "passed": 20,
+    "failed": 0,
+    "ignored": 0
+  },
+  "public_types_with_send_sync_assertions": 15,
+  "checks": [
+    "Mandatory single body without collection prefix",
+    "All actual field paths, types, physical offsets and raw values",
+    "Complete reconstruction from independently decoded fields",
+    "Exact selector-one pair gate at 890204 and raw duplicate signed pairs",
+    "No persistence field added by the runtime-only 891107 comparison",
+    "All six isolated typed replacement kinds and complete retained source/replacement/result",
+    "Exact prefix/suffix preservation and every outer history parent",
+    "Wire-distinct CString framing remains a changed request",
+    "Every wire-identical field no-op preserves source revision IDs",
+    "Foreign/stale/out-of-range and invalid structural requests preserve source inputs"
+  ],
+  "exclusions": [
+    "All five exact-head platform feature checks",
+    "Sibling Material body support",
+    "Native application/geometric acceptance",
+    "Complete documented schema parity"
+  ],
+  "concurrency": {
+    "threads": 8,
+    "edits_per_thread": 32,
+    "serial_variants": 6,
+    "checks": "Complete result bytes, all ordered outer relations, nested source/replacement parent handles and result handle ownership"
+  },
+  "history_verification": "history-verification.json",
+  "malformed_cases": 14287,
+  "exact_and_one_below_budget_contexts": 196,
+  "validated_revision": "d35b87eb7f8dac7dbf3ab525d2ff84bcd68a602f",
+  "acceptance": "acceptance.json"
+}

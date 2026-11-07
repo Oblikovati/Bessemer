@@ -1,0 +1,12 @@
+{
+  "cases": 1402,
+  "bytes": 1287540,
+  "sha256": "ca9d6ba6764ff190773a2dfacc086dac37b86c835027a464b53ade78f22d40cc",
+  "reference_sha256": "f70e6110125bc3c3c3cf5acbf2166bb2d5d1e8def2b808228486f395c3e8e331",
+  "scope": "Independent Source-tree mutation and complete serialization, exact changed field and unchanged remainder; versions0..3, all four typed layouts, both groups, absent bodies, stored flags and unused tags",
+  "excludes": [
+    "Structural resizing",
+    "Populated native editing",
+    "Bessemer typed API acceptance"
+  ]
+}

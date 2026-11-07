@@ -1,0 +1,17 @@
+{
+  "issue": 197,
+  "tests_passed": 3,
+  "exit_code": 0,
+  "oracle": "Python standard-library minidom with literal expected node kinds and values",
+  "qualification": "Pins the explicit retained DOM input to the Source helper; does not establish native caller parsing policy or Rust acceptance",
+  "python": "3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)]",
+  "log_sha256": "cec054c93929daf3b34f2ace9207817c2fdf63dbd56cc9441262e1d635861ac5",
+  "cases": [
+    "Reference text coalescing and separate CDATA",
+    "Nested text and comment/PI interleaving",
+    "Literal line-ending normalization versus numeric character references"
+  ],
+  "executed_working_copy_sha256": "86e56849a4e3159139cf9245fe0548b8b2ba865b93c3b20ce0f9785777514f6e",
+  "test_git_blob_sha256": "574629e1a9db3542e08a277ad60a20c8f18587bd947cbc9058f7394f4f69bedb",
+  "representation": "Git stores LF; executed working copy differs only in line endings"
+}

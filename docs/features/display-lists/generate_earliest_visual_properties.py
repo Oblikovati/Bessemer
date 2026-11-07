@@ -1,0 +1,43 @@
+"""Owned shared holder graphs across the first admitted holder-state boundary."""
+import json
+from functools import partial
+import generate_component_properties as properties
+from generate_earlier_range import write_group
+from generate_early_appearance_roots import item_bytes as appearance_items
+from generate_earliest_visuals import entry_count,table_layout
+from earliest_cap_patches import convert
+from implicit_visual_maps import single_properties
+from earliest_tessellation_wire import earlier_tails,header_layout
+
+ORIGINAL_CONVERTED = properties.converted
+
+
+def items(version: int) -> bytes:
+    raw = appearance_items(version)
+    if version<=0x1115:raw = raw[:18]+raw[22:]
+    return table_layout(raw,version)
+
+
+def converted(document: object, path: object, raw: bytes, version: int, kind: str, scenario: int, class_name: str, variant: int) -> bytes:
+    raw = ORIGINAL_CONVERTED(document,path,raw,version,kind,scenario,class_name,variant)
+    return earlier_tails(document,path,single_properties(document,path,header_layout(raw,version),version,False),version,kind)
+
+
+def base_entries(version: int, kind: str) -> int:
+    return entry_count(version,kind,0)-3
+
+
+def generate(version: int, kind: str, scenario: int) -> tuple[bytes,dict[str,object]]:
+    if version<=0xf5e:
+        from earliest_bucket_properties import generate as bucket_properties
+        return bucket_properties(version,kind,scenario)
+    saved = properties.convert,properties.converted,properties.item_bytes,properties.base_entries
+    properties.convert = partial(saved[0],base_converter=convert)
+    properties.converted,properties.item_bytes,properties.base_entries = converted,items,base_entries
+    try:return properties.generate(version,kind,scenario)
+    finally:properties.convert,properties.converted,properties.item_bytes,properties.base_entries = saved
+
+
+if __name__ == "__main__":
+    cases = [generate(v,k,s) for v in [3196,0xc90,0xc91,0xc9c,0xc9d,0xc9e,0xc9f,0xca5,3238,0xcc0,0xcc1,0xd01,3330,0xdb1,0xdb2,0xdb3,3508,0xdca,0xdcb,0xdde,0xddf,0xde2,3555,0xe11,0xe12,0xe54,0xe55,3800,0xf1d,0xf1e,0xf31,3890,0xf40,3905,0xf55,0xf56,0xf5b,0xf5c,0xf5e,0xf5f,0xf76,0xf77,4000,0xfca,0xfcb,0xfd7,0xfd8,4100,0x1051,0x1052,4200,4201,4202,0x10ae,0x10af] for k in ["part","assembly"] for s in [0,16]]
+    print(write_group("earliest-visual-properties",cases,("displaylists.py",)))

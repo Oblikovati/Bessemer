@@ -1,0 +1,33 @@
+{
+  "platform": "Windows x64 MSVC Rust 1.99.0",
+  "processes": 2,
+  "terminal_exit_codes": [
+    0,
+    0
+  ],
+  "all_process_bytes_equal": true,
+  "packets": [
+    {
+      "packet": "values",
+      "views": 203,
+      "bytes_per_process": 7595839,
+      "sha256": "b347f3157f185b895fc8d8a60b4d1a8367da2b9d4350afb87ddfd858018599cc",
+      "complete_independent_packet_equal": true,
+      "scope": "Complete typed field read projections: stored bytes, version/body boundary, explicit immutable layout and compatibility context, all table/check presence, every object/region interval and raw pattern, byte accounting and native/semantic exclusions. Names are input framing."
+    },
+    {
+      "packet": "widths",
+      "views": 315,
+      "bytes_per_process": 10938,
+      "sha256": "a6ddced69e5421fe601977b58652bf683b385ed2c2271f309ca7fba8f1e58d14",
+      "complete_independent_packet_equal": true,
+      "scope": "Every actual isolated width result or rejection; requests are frozen input framing, with accepted checkpoint retention and origins checked separately in Rust."
+    }
+  ],
+  "temporary_probe_sha256": "f60eaa4e98db925be8e385bda989af2eac90db7f92ecdfa028af27ca3ed7ef3a",
+  "edit_scope": "Existing-field no-ops, independent full-body patches, physical history and fresh reversals are tested separately; process packets cover reads and width calculations.",
+  "exclusions": [
+    "Native runtime layout/numeric-data binding and floating-point exception state",
+    "Engineering columns and native application acceptance"
+  ]
+}

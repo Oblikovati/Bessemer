@@ -1,0 +1,79 @@
+{
+  "cases": 906,
+  "previous_complete": 744,
+  "complete": 747,
+  "explicit_stops": 159,
+  "new_complete": [
+    97,
+    163,
+    601
+  ],
+  "changed": [
+    {
+      "index": 15,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moTrimRefSurface_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moLeftTrimEdgeIdRep_c\" schema 1; expected an implemented complete model object body"
+      ]
+    },
+    {
+      "index": 97,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moSurfCut_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    },
+    {
+      "index": 163,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moTrimRefSurface_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    },
+    {
+      "index": 353,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moSurfCut_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moOffsetRefSurface_c\" schema 1; expected an implemented complete model object body"
+      ]
+    },
+    {
+      "index": 601,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moSurfCut_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "accepted",
+        ""
+      ]
+    },
+    {
+      "index": 609,
+      "before": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moTrimRefSurface_c\" schema 1; expected an implemented complete model object body"
+      ],
+      "after": [
+        "rejected",
+        "model archive model stream: Unsupported: runtime class \"moLeftTrimEdgeIdRep_c\" schema 1; expected an implemented complete model object body"
+      ]
+    }
+  ]
+}

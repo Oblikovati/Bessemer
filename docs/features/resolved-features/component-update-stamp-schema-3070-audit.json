@@ -1,0 +1,37 @@
+{
+  "issue": 2,
+  "edition": "Edition 0.3070 \u00b7 2026-11-04 \u00b7 generated parts: Annex A (solidworks/swstreams.py), Annex G (solidworks/swcover.py)",
+  "specification_sha256": "11fe9f103a83f2a89449cf0892b56d1859efb5ddf349282f808f4bd6c7896b05",
+  "scope": "Selected clause11.1818 and its existing raw field correspondence; no whole-schema acceptance",
+  "snapshot_path": "docs/features/resolved-features/component-update-stamp-schema-3070-snapshot.md",
+  "snapshot_representation": "Owned excerpt normalized to LF with one final newline before hashing; original specification bytes hashed separately",
+  "snapshot_sha256": "71d7f353960be4911577d1a104226be82ee69644e4caf8332aa4aaa52e5ed5f0",
+  "decisions": [
+    "Retain existing parser key unknown_18c and its complete unsigned32 stored domain; stored_model_update_stamp_limit is a documentation-only role alias.",
+    "Native STORE may validate and clear member18C before emission; offline reconstruction must preserve saved fields without replaying live invalidation.",
+    "Repeated view/model/provider queries and canonical slot contracts do not prove coherent snapshots, arbitrary overrides or provider arithmetic.",
+    "Do not reinterpret flags188, runtime-only1A0, wall-clock time, revisions, monotonicity, units or native geometry.",
+    "Preserve retained STORE-prefix and failed-proof provenance limits; no native capture or frozen proof rerun."
+  ],
+  "implementation_effect": "No production parser, public API, wire format, class/version admission or geometry change. Add boundary-value regression over complete retained component-edge fixtures.",
+  "acceptance_credit": "No new native population, source replay, accounting, geometry or full parity credit.",
+  "remaining": [
+    "Whole-schema Corliss interoperability parity remains open in #2",
+    "Native application and geometry acceptance remain separate"
+  ],
+  "verification": {
+    "component_reference_module_tests_passed": 6,
+    "seconds": 0.3,
+    "exit_code": 0,
+    "retained_edge_fixtures": 48,
+    "raw_u32_values_per_fixture": 6,
+    "literal_splice_reconstructions": 288,
+    "clippy_exit_code": 0,
+    "post_format_maximum_new_function_lines": 17,
+    "log_sha256": "779a8e8e81d27d06012ecf11a352dc305d1d473b0295889806890e3357389557"
+  },
+  "separately_discovered_bug": {
+    "issue": 204,
+    "status": "Negative reference-count and composite-pointer-role mismatch; fix remains separate from this behavior-preserving regression."
+  }
+}

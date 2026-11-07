@@ -1,0 +1,49 @@
+{
+  "issue": 134,
+  "behavior": "simulation-binary-thermal-v1",
+  "status": "Unfinished local feature; adversarial acceptance and explicit budgets verified",
+  "revision": "55ad3b8c6a10db705ad33206309c9680fbf7b9ef",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "corpus": {
+    "cases": 36569,
+    "accepted": 0,
+    "malformed_bytes": 1554872,
+    "malformed_sha256": "fac98d47758a2d0ff140b53787757ce1f5b94c8659522c38b1f9a2e95e5998ae",
+    "budget_cases": 295,
+    "budget_bytes": 881050,
+    "budget_sha256": "41f6951d0ee93bbd9258beb1edda8f98a6b76da3c47ce7cba94a5bdd860970b7"
+  },
+  "tests": {
+    "thermal": 24,
+    "embedded_archives": 12,
+    "embedded_components": 12,
+    "failed": 0,
+    "ignored": 0,
+    "actual_reference": 14
+  },
+  "native_inputs": [
+    "BESSEMER_EMBEDDED_NATIVE_INPUT=target/simulation-embedded-native.bin",
+    "BESSEMER_THERMAL_NATIVE_INPUT=target/simulation-thermal-native-cases.bin",
+    "BESSEMER_THERMAL_NATIVE_EDIT_INPUT=target/simulation-thermal-native-edits.bin"
+  ],
+  "oracle": "Actual complete pinned C-716 callback determines mutation acceptance and field/root/class boundaries; no reference-reader substitutions",
+  "checks": [
+    "All 36,569 targeted mutations reject identically in actual reference and Rust",
+    "Every proper prefix and a trailing byte rejected across 295 complete owned contexts",
+    "Exact aggregate entries, maximum text payload, maximum embedded root bytes and object-definition budgets derived from actual source metadata",
+    "Exact budgets pass and each positive budget reduced by one fails",
+    "Outer byte and field budgets checked at exact extent and one below",
+    "Failed reads retain immutable source bytes",
+    "Complete malformed images reconstructed from exact independently checked byte splices",
+    "cargo clippy --test simulation_thermal_collections -- -D warnings passed",
+    "Function/file size audit and git diff --check passed"
+  ],
+  "exclusions": [
+    "Full independent field/history exports",
+    "Two fresh-process complete exports",
+    "Full final local PR gate",
+    "Full final platform matrix",
+    "Native SolidWorks application acceptance",
+    "Complete schema parity"
+  ]
+}
