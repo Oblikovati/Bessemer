@@ -26,7 +26,7 @@
     {
       "source": "flowcheckpointcomponents.py",
       "source_lf_sha256": "98430fb615a2281af300ff97d8d5564df93e38a248d9164ff8a089d3788516d8",
-      "status": "All five standalone logical readers and typed existing-field editors implemented; 2899 frozen cases, 2851821 field values, 21662 edits, bounds, isolation, eight-lane stress and two-process checks accepted in 14 Rust tests; clippy/format/caps passed; full gate pending; parent record and codecs excluded"
+      "status": "All five standalone logical readers and typed existing-field editors implemented; 2899 frozen cases, 2851821 field values, 21662 edits, bounds, isolation, eight-lane stress and two-process checks accepted in 14 Rust tests; clippy/format/caps passed; combined local full PR gate accepted at f2902881; hosted acceptance pending; parent record and codecs excluded"
     },
     {
       "source": "flowrecord121.py",
@@ -36,7 +36,7 @@
     {
       "source": "flowindex.py",
       "source_lf_sha256": "6c9117accb71203ace520c125280daa9259f5ffd30c96536390d220c2d4ddcdb",
-      "status": "Typed fresh-map reader implemented; all 2140 frozen requested outcomes, bounds, retained control provenance, isolation, 8-lane stress and two-process comparisons accepted in 12 Rust tests; clippy/format/caps passed; full gate pending"
+      "status": "Typed fresh-map reader implemented; all 2140 frozen requested outcomes, bounds, retained control provenance, isolation, 8-lane stress and two-process comparisons accepted in 12 Rust tests; clippy/format/caps passed; combined local full PR gate accepted at f2902881; hosted acceptance pending"
     },
     {
       "source": "flowlegacyfields.py",
@@ -58,7 +58,7 @@
     ],
     "limitation": "Identifier searches identify follow-up work; they do not establish absence of equivalent unnamed implementations"
   },
-  "next": "Finish the running f2902881 gate without changing its source; merge PR249 after all 13 exact-head hosted jobs pass; gate newer legacy APIs before publication; continue requirement-by-requirement audits of other documented Flow and SolidWorks schemas",
+  "next": "Retain the running f0bd5f21 full gate for the newer legacy-field APIs; merge PR249 after all 13 exact-head hosted jobs pass; continue requirement-by-requirement audits of other documented Flow and SolidWorks schemas",
   "exclusions": [
     "Other Flow modules need a requirement-by-requirement audit",
     "Other SolidWorks schema families need a fresh source audit",

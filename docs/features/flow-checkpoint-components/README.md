@@ -91,3 +91,9 @@ Coverage reports exact logical component framing and stored totals. Parent-recor
 decoding, engineering interpretation, chunk decoding, raw-size agreement, native
 runtime reproduction, and application acceptance remain excluded after reads
 and edits. Reader-permitted noncanonical slot tags remain explicitly qualified.
+
+The combined local `cargo xtask pr` gate passed at `f2902881`: 5,122 tests
+passed, none failed, and 267 were ignored. This covers the logical index and
+checkpoint APIs together with the earlier IMS/control source. Later legacy
+field APIs and hosted matrix acceptance are excluded. See the
+[exact-source result](../flow-checkpoint-components/full-pr-gate-verification.json).

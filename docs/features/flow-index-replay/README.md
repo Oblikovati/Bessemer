@@ -70,3 +70,9 @@ map counts. It explicitly excludes ordinary payload decoding, ordinary indexed
 target validation, and complete document coverage. Diagnostics also retain the
 fresh-map assumption and native execution limits. Failed reads return typed
 errors and publish no partial maps.
+
+The combined local `cargo xtask pr` gate passed at `f2902881`: 5,122 tests
+passed, none failed, and 267 were ignored. This covers the logical index and
+checkpoint APIs together with the earlier IMS/control source. Later legacy
+field APIs and hosted matrix acceptance are excluded. See the
+[exact-source result](../flow-checkpoint-components/full-pr-gate-verification.json).
