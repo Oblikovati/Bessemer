@@ -119,6 +119,10 @@ The [logical index reader](docs/features/flow-index-replay/README.md) builds fre
 active and saved maps through forced physical scanning or recognized modern
 terminal adoption, retaining selected control provenance and explicit exclusions
 for ordinary target validation and complete document decoding.
+The [logical checkpoint components](docs/features/flow-checkpoint-components/README.md)
+read and edit graph objects, auxiliary grids, trailing containers, and opaque
+chunk buffers under an explicit version-six context, with revision-bound fields
+and complete byte history. They do not decode the physical parent record or chunk codec.
 The [legacy link view](docs/features/flow-link-records/README.md) reads record 402
 and edits existing fields while preserving code bytes, sentinel references and versioned tails.
 The [legacy table view](docs/features/flow-legacy-tables/README.md) reads records

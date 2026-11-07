@@ -11,6 +11,10 @@ mod scalars;
 mod types;
 use fixture::cases;
 use types::*;
+#[path = "flow_checkpoint_components/api/mod.rs"]
+mod api;
+#[path = "flow_state_tables/process.rs"]
+mod process;
 
 #[test]
 fn all_2899_owned_components_match_complete_source_spans_values_presence_and_qualifications() {

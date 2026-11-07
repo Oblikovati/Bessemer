@@ -1,0 +1,125 @@
+{
+  "issue": 241,
+  "source_revision_before_api": "0e49bf99a7bf4299cc23c19d43dbdd33b43c9d36",
+  "scope": "All five documented standalone logical version-six-context layouts and typed existing-field edits; physical parent and chunk codecs remain excluded",
+  "platform": "Windows x64; Rust 1.99.0; CARGO_BUILD_JOBS=1",
+  "results": {
+    "rust_passed": 14,
+    "rust_failed": 0,
+    "ignored_workers": 1,
+    "worker_invocations_by_parent": 2,
+    "clippy": "passed",
+    "format": "passed",
+    "function_file_caps": "passed",
+    "maximum_function_body_lines": 20
+  },
+  "commands": {
+    "tests": {
+      "command": "cargo test --locked --test flow_checkpoint_component_fixtures -- --nocapture",
+      "exit_code": 0,
+      "log": "target/flow-checkpoint-components-api-tests.log",
+      "sha256": "0c7ee8033b137293288eed1cf9e744d3ffb79dfd9e065c94f2677b40375ebb2d"
+    },
+    "clippy": {
+      "command": "cargo clippy --locked --test flow_checkpoint_component_fixtures -- -D warnings",
+      "exit_code": 0,
+      "log": "target/flow-checkpoint-components-api-clippy.log",
+      "sha256": "a02dca74f50bc6c3646609663552ad8615417a4679561de1ae0eb20f5397cc6c"
+    },
+    "format": {
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "log": "target/flow-checkpoint-components-api-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "baseline": "baseline-verification.json",
+  "python_acceptance": "Unchanged generators and packets; eight Python and seven original reference tests accepted in local-verification.json",
+  "coverage": {
+    "cases": 2899,
+    "wide_array_patterns": 1267591,
+    "index_patterns": 840930,
+    "presence_fields": 422594,
+    "slot_tag_fields": 210681,
+    "encoded_byte_fields": 104556,
+    "signed_member_fields": 5316,
+    "declared_raw_size_fields": 153,
+    "total_editable_values_checked": 2851821,
+    "selected_field_edits": 21662,
+    "changed_fields": 21085,
+    "no_op_only_zero_presence_fields": 577,
+    "selected_protected_byte_classes": 4355,
+    "selection_policy": "Every element when count <=64, otherwise first/middle/last; all scalar members and declared-size words",
+    "reference_examples": 5,
+    "all_reference_examples_synthetic": true,
+    "small_prefix_rejections": 130257,
+    "extension_rejections": 2899
+  },
+  "contracts": {
+    "all_exact_input_and_aggregate_limits_and_each_applicable_one_below": true,
+    "wrong_views_and_maximum_indices_rejected": true,
+    "foreign_stale_and_wrong_value_classes_rejected": true,
+    "protected_zero_and_slot_body_classes_preserved": true,
+    "complete_copied_derived_byte_partition": true,
+    "each_selected_edit_reopens_and_reverses_through_returned_field_correspondence": true,
+    "fresh_reopen_reversal_examples": 9,
+    "fresh_reopen_scope": "Five authenticated reference examples, all four serialized value classes and both byte structural rules",
+    "caller_source_success_and_failure_isolation_examples": 5,
+    "compile_time_new_send_sync_types": 21,
+    "reused_send_sync_types": 1,
+    "shared_source_concurrency": "Eight lanes x32 iterations compared to serial; parse and foreign-identity failures between operations",
+    "two_fresh_processes": "All reads verified against frozen reference projections and all selected edits; complete source and result wires, bounded field metadata, coverage and history compared in deterministic lossless zlib transcripts; parent validates complete compressed framing and a separate 512MB transcript ceiling"
+  },
+  "source_and_test_lf_sha256": {
+    "src/flow/checkpoint_components/budget.rs": "fdb2148105609ca64e45b74c7ef62b9fbd4a314b619f4b427096cc4821cba7ad",
+    "src/flow/checkpoint_components/edit.rs": "36b62d825485321b2add5ad31cf9901c5a1cc1a549489cfe6596467f1ad9b1ab",
+    "src/flow/checkpoint_components/field.rs": "53faf717ad90c4b3f2ff4387e749b2cacc9b8573b20be6d6d86d8822a103ce8c",
+    "src/flow/checkpoint_components/layout.rs": "8e63b96922423212f3b8cd421af3c1d87f8c5cae6c5b6f4b862a945d66a9b137",
+    "src/flow/checkpoint_components/mod.rs": "28dac71fb43c415aa6a492f51834a7b657522546392944d148f6304dbc38e3bd",
+    "src/flow/checkpoint_components/read.rs": "3dcd951fc3ca030ecb0a5a04dc095a915424b3ecd88bfe5711910867cabfca5b",
+    "src/flow/checkpoint_components/types.rs": "e361ce0270e7a64380bfb6e160468b7513d57db48016db270ddaacd43f524954",
+    "src/flow/checkpoint_components/view.rs": "f99c756f8a4c11b8031a54d63f55da4d39c092d93999ef8a34ed2997ee6d5916",
+    "src/flow/checkpoint_components/read/grids.rs": "921e419ad2fc2a4cae0b0d455401b3bff0b92505efdb2e3322c8c0c986905fd2",
+    "src/flow/checkpoint_components/view/chunks.rs": "89321f1d90f6d7bfc1e02c5c2333c8969f445614fd394fffb01ed73939bea4d4",
+    "src/flow/checkpoint_components/view/containers.rs": "99ebc690d9a8ab326ee67ec564af2811faaa1a666f2ebd9de2ded0275cbe4679",
+    "src/flow/checkpoint_components/view/grids.rs": "8e5ab01f2e49dbb389ccf7b3ee55cf7d20ba4985426dd6cca83d5e63bc1e3225",
+    "tests/flow_checkpoint_components/api/arrays.rs": "ebefd5c70f264c8e4dd45be89c244f03ae2fa55939759e61dcf87f0aba546d1c",
+    "tests/flow_checkpoint_components/api/chunks.rs": "ce65cf59a848e9865014445907bdd1442767bf3d9d3c158a3809027b857f2b0b",
+    "tests/flow_checkpoint_components/api/contracts.rs": "65415fd9f911484f3b205e759a92a7670a4f0f89617f8976896f0a35648e29d6",
+    "tests/flow_checkpoint_components/api/edit.rs": "7694377b9f6395d0430dda8e10f3556a796f09c198630619324d49f3c54e5443",
+    "tests/flow_checkpoint_components/api/grids.rs": "8fc97cdd4fe1330ea5348e8b2afb863d7411e999559e8cfc5c62981e8e5434eb",
+    "tests/flow_checkpoint_components/api/isolation.rs": "13d6469f594344115325d58c93062d728e4347b58ebbb3b8d41356dce3d13294",
+    "tests/flow_checkpoint_components/api/limits.rs": "2c2bb336c1d12d0daabb9c2ede65ae6860555825772444ef354dc43471130ca9",
+    "tests/flow_checkpoint_components/api/mod.rs": "130831164836bdae69a8a852c1568fba88fbb4b3be83d2c441ffbf48af5e830c",
+    "tests/flow_checkpoint_components/api/read.rs": "f9aa61110211fab62eaf959f78036118be241abc259929c63f6436bc60afee41",
+    "tests/flow_checkpoint_components/api/runtime.rs": "962d407af6c54d431ded0291d2c213ae63b1072ce82c3b0a70c30864396442db",
+    "src/flow/mod.rs": "e796d937f780526f571137b570f1341582a4286374ce17cf0ae2784ee28f2d0f",
+    "tests/flow_checkpoint_component_fixtures.rs": "569d2825dea59935607819a8240d7212889cd9ad8cbb43c2885feff71ba41d75"
+  },
+  "initial_lint_corrections": [
+    "Removed a needless return from the new byte-rule helper",
+    "Enumerated signed member expectations instead of indexing a range"
+  ],
+  "exclusions": [
+    "No installed native version-six component fixture",
+    "No complete physical parent or record121 version-three body decoder",
+    "No chunk codec or declared raw-size verification",
+    "No engineering meanings, native runtime state or native application acceptance",
+    "Counts, dimensions, versions and encoded lengths are structural and not exposed as field-edit handles",
+    "Full PR gate and hosted ThreadSanitizer/matrix acceptance of this API remain pending"
+  ],
+  "review": {
+    "pros": [
+      "All five layouts use complete EOF and aggregate bounds before entity allocation",
+      "Typed revision-bound fields preserve signed and raw classes and prohibit structural byte-class changes",
+      "Immutable source snapshots and complete byte histories are validated against independent frozen spans and byte patches"
+    ],
+    "limitations": [
+      "Logical context is supplied by the caller",
+      "Noncanonical reader tags do not establish native writer acceptance",
+      "Structural resizing and parent framing are outside this existing-field operation"
+    ],
+    "next": "Run the combined PR gate on the exact committed source; integrate only after hosted checks; continue a fresh documented-schema audit"
+  },
+  "humanizer": "Unavailable; maintainer prose review pending"
+}

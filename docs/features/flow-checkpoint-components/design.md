@@ -4,8 +4,8 @@
 
 The documented version-six parent graph supplies separate logical buffers.
 Component bytes do not carry a common version-six prefix, physical record
-identifier, compression envelope, or complete parent framing. A future typed
-reader must require this context explicitly rather than infer it from a
+identifier, compression envelope, or complete parent framing. The typed
+reader requires this context explicitly rather than inferring it from a
 physical record number or the viewer-query prefix.
 
 Graph-one objects contain exactly seven raw 64-bit patterns. Graph-two and

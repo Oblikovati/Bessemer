@@ -56,6 +56,8 @@
 
 ### Added
 
+- Added bounded logical checkpoint component reads and typed existing-field edits for graph objects, auxiliary grids, trailing containers and opaque chunks, with revision-bound identities and complete byte history. (#241)
+
 - Added bounded fresh-map Flow logical index replay with explicit physical-scan and preferred-terminal policies, retained control provenance and unvalidated ordinary-target diagnostics. (#241)
 
 - Added strict saved-span and terminal-index writer-profile reads and isolated field edits with explicit footer context, bounded decoding, checked distance recomputation and complete carrier history. (#241)

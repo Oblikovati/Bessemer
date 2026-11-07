@@ -26,7 +26,7 @@
     {
       "source": "flowcheckpointcomponents.py",
       "source_lf_sha256": "98430fb615a2281af300ff97d8d5564df93e38a248d9164ff8a089d3788516d8",
-      "status": "No typed logical checkpoint component API found"
+      "status": "All five standalone logical readers and typed existing-field editors implemented; 2899 frozen cases, 2851821 field values, 21662 edits, bounds, isolation, eight-lane stress and two-process checks accepted in 14 Rust tests; clippy/format/caps passed; full gate pending; parent record and codecs excluded"
     },
     {
       "source": "flowrecord121.py",
@@ -53,7 +53,7 @@
     ],
     "limitation": "Identifier searches identify follow-up work; they do not establish absence of equivalent unnamed implementations"
   },
-  "next": "Complete the logical-index full gate and hosted checks, then freeze and implement checkpoint components separately from viewer-prefix121",
+  "next": "Complete the combined logical-index/checkpoint-component gate and hosted acceptance, then audit the remaining Flow and other SolidWorks schema requirements without treating these bounded component operations as whole-document parity",
   "exclusions": [
     "Other Flow modules need a requirement-by-requirement audit",
     "Other SolidWorks schema families need a fresh source audit",
