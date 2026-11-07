@@ -6,6 +6,8 @@
 
 ### Fixed
 
+- Restored the README dedication and library presentation, moving detailed feature coverage to the documentation reference. (#256)
+
 - Accepted valid zero-stream version-4 containers using registered signature sets, preserving exact bytes and typed missing-stream failures. (#251)
 
 - Bounded Flow identity diagnostics to framing metadata, keeping retained carrier buffers out of foreign and stale identity errors. (#248)
