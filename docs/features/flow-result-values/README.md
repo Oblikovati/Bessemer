@@ -46,10 +46,56 @@ python -m unittest discover -s docs/features/flow-result-values -p test_values.p
 cargo test --locked --test flow_result_values_fixtures
 ```
 
-Digests and focused results are recorded in `baseline-verification.json` and
-`local-verification.json`. The typed value reader/editor and provenance-bound
-fresh context remain to be implemented. The observed BL state-byte-after-load
-value zero is not serialized and does not establish native execution. Native
-runtime mutation, engineering columns and application acceptance remain unverified.
+The typed reader requires `FlowImsValueContext`, created from complete typed
+record-500 definitions and `FlowImsFreshObjects::FreshDeclared`. Context creation
+checks IMS version two and allocation byte zero for every physical definition.
+It retains the exact definition revision; separately parsed equivalent bytes
+produce a distinct context. A new view explicitly pairs its carrier with a
+context, while edits retain the original pairing and all its definition parents.
+
+```rust,ignore
+let context = FlowImsValueContext::new(&definitions, FlowImsFreshObjects::FreshDeclared)?;
+let values = carrier.record_501_ims_values(&record, &context, FlowImsValueOptions {
+    maximum_decoded_bytes: 2_000_000,
+    maximum_objects: 100_000,
+    maximum_shared_values: 1_000_000,
+    maximum_bl_rows: 100_000,
+    maximum_bl_values: 2_000_000,
+})?;
+let object = values.object(0)?;
+let main = object.array(FlowImsValueArray::Main);
+let edit = values.replace_flag(0, FlowImsValueFlag::Bl, 255)?;
+```
+
+Views expose object order, inherited signed identifiers and retained definitions,
+complete body/array/flag intervals, raw flags, optional arrays and complete BL
+rows. The main array is always present. Empty contexts admit exactly one decoded
+version byte. Independent zero shared-value and BL row/value bounds still admit
+present-empty bodies. Counts are checked against their native transfer range,
+configured bounds and remaining complete elements before multiplication or
+metadata allocation.
+
+Editors replace existing shared or BL patterns and raw flags within the same
+zero/nonzero class. Presence transitions are rejected because they need complete
+body insertion/removal. Every edit copies the value carrier, reparses under the
+same retained context and bounds, checks exact decoded bytes and unchanged
+layout/totals/context, and returns `FlowSimpleTableEdit` checkpoints and complete
+physical history. No-ops preserve stored compressed bytes. Fresh reversals
+restore decoded bytes without promising the original compression encoding.
+
+Typed checks read every owned raw pattern. The edit matrix covers all shared
+values in arrays up to 257 entries and all BL columns in bodies up to 16 rows;
+larger arrays and BL bodies use distinct first/middle/last positions. All native
+values are read, with 240 native field positions selected for edits. Zero flags
+receive exact no-op checks and rejected presence-transition attempts. An extra
+three-object case with duplicate identifiers verifies aggregate shared/BL bounds.
+Eight workers match serial mixed edits, and two fresh processes compare both
+parent carriers, coverage and selected edit outputs byte for byte.
+
+Digests and focused results are recorded in `baseline-verification.json`,
+`local-verification.json` and `api-verification.json`. The observed BL
+state-byte-after-load value zero is not serialized and does not establish native
+execution. Native runtime mutation, nonfresh loads, engineering columns and
+application acceptance remain unverified.
 
 The humanizer skill is unavailable; maintainer prose review remains pending.

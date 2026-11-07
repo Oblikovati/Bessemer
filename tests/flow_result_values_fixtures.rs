@@ -1,4 +1,6 @@
 //! Paired IMS-value oracles retain explicit fresh definitions and every raw 18-word BL row.
+#[path = "flow_result_values/api.rs"]
+mod api;
 #[path = "flow_result_values/fixture.rs"]
 mod fixture;
 #[path = "flow_field_values/packet.rs"]
@@ -7,6 +9,8 @@ mod packet;
 mod rebuild;
 #[path = "flow_state_tables/carrier.rs"]
 mod state_carrier;
+#[path = "flow_state_tables/process.rs"]
+mod state_process;
 #[path = "flow_state_tables/streams.rs"]
 mod streams;
 use bessemer::flow::*;
@@ -31,7 +35,7 @@ fn check_transports(row: &ValueCase) {
     assert_eq!(values, row.frame.decoded, "{}", row.name);
     assert_eq!(rebuilt, row.frame.decoded, "{}", row.name);
 }
-fn check_context(row: &ValueCase) {
+fn check_context(row: &ValueCase) -> FlowResultDefinitions {
     let source = state_carrier::carrier(500, &row.context.stored);
     let id = source.records().nth(1).unwrap().id;
     let options = FlowResultDefinitionOptions {
@@ -49,6 +53,7 @@ fn check_context(row: &ValueCase) {
         assert_eq!(object.version(), FlowImsDefinitionVersion::V2);
         assert_eq!(object.allocation_byte(), Some(0));
     }
+    context
 }
 #[test]
 fn native_pair_retains_all_74004_raw_patterns_and_3876_eighteen_word_rows() {

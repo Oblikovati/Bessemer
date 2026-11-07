@@ -56,6 +56,8 @@
 
 ### Added
 
+- Added complete paired record-501 IMS-value reads and isolated raw flag, shared-array and BL-row edits with retained definition provenance, explicit fresh-state assumptions and independent resource bounds. (#241)
+
 - Added complete record-500 IMS-definition reads and isolated identifier, allocation-byte and raw-array edits with independent bounds, preserved duplicate order and full carrier history. (#241)
 
 - Added ordinary solver record selection with last-occurrence identities and explicit rejection of all three reserved control identifiers. (#241)

@@ -109,6 +109,9 @@ and reporting full-body validation as incomplete after every operation.
 The [IMS result-definition view](docs/features/flow-result-definitions/README.md)
 reads record 500's complete version-one profile and edits existing identifiers,
 allocation bytes and raw array values, retaining duplicate order and array presence.
+The [paired IMS-value view](docs/features/flow-result-values/README.md) reads record
+501 with retained fresh-definition provenance and edits raw flags, shared values
+and 18-column BL rows while preserving physical presence and definition identity.
 The [legacy link view](docs/features/flow-link-records/README.md) reads record 402
 and edits existing fields while preserving code bytes, sentinel references and versioned tails.
 The [legacy table view](docs/features/flow-legacy-tables/README.md) reads records
