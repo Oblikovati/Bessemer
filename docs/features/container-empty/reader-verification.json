@@ -78,7 +78,7 @@
     "docs/features/container-empty/test_empty.py": "5b50eda3e04f9d2571d14f03eb0ae9abb9b5e490f06a1a5e1d0f019e5bc40c7c"
   },
   "integration": {
-    "required_order": "Main first, then candidate forwarding",
+    "required_order": "Finish PR249, then integrate the initial library and completed patch into main through a green bootstrap PR",
     "main_head": "7e5e8fac2ea989528f160d09b45f3bc2617b6a43",
     "fresh_main_tree": [
       ".gitignore",
@@ -86,8 +86,8 @@
       "README.md"
     ],
     "condition": "Main has no Cargo.toml or src yet, so the patch cannot be integrated independently before the initial library merge",
-    "user_clarification": "Integration order requested asynchronously; local patch preparation continues",
-    "publication": "No additional branch or PR created; retain PR249 head while its four platform gates run"
+    "user_clarification": "User authorized preparing the initial library merge to main after green checks, then explicitly requested a release",
+    "publication": "No additional PR created while PR249 is active; release candidate gate 38604 runs on ef5720e1"
   },
   "self_review": {
     "pros": [
@@ -97,15 +97,15 @@
     ],
     "cons": [
       "Full gate and hosted acceptance of this source pending",
-      "Main-first integration requires the initial library bootstrap decision",
+      "Authorized initial library bootstrap is pending checks and integration",
       "No native CAD application acceptance of an empty model"
     ],
-    "recommended_fix": "Complete whole-source checks and resolve initial main bootstrap order before publication; no focused-check blocker found"
+    "recommended_fix": "Complete whole-source checks and the authorized initial main bootstrap before publication; no focused-check blocker found"
   },
   "exclusions": [
     "Native model/payload semantics or application acceptance",
     "Reference builder Bug 252 remains unchanged",
-    "Current gate 73867 covers older timestamp source b21f26b4 only",
+    "Accepted gate 73867 covers older timestamp source b21f26b4 only; see its full-pr-gate-verification.json",
     "New-file construction and whole-schema parity"
   ],
   "humanizer": "Unavailable; maintainer prose review pending",
