@@ -1,5 +1,6 @@
 use std::process::ExitCode;
 mod build_storage;
+mod release;
 
 #[cfg(test)]
 mod formatting_tests;
@@ -26,7 +27,8 @@ fn requested_gate(gate: &str) -> Result<(), String> {
     match gate {
         "pr" | "full" => run_gate(),
         "tsan" => sanitizer::run(),
-        _ => Err(format!("gate {gate:?}; expected pr, full or tsan")),
+        "release" => release::run(),
+        _ => Err(format!("gate {gate:?}; expected pr, full, tsan or release")),
     }
 }
 
@@ -74,6 +76,6 @@ mod tests {
     fn rejects_unknown_gate_without_running_a_process() {
         let error = super::requested_gate("unknown").unwrap_err();
         assert!(error.contains("unknown"));
-        assert!(error.contains("expected pr, full or tsan"));
+        assert!(error.contains("expected pr, full, tsan or release"));
     }
 }

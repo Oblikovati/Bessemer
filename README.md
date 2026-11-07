@@ -1,5 +1,8 @@
 ## Bessemer 
 
+The first source release is `v0.1.0`. Use the Git tag as a Cargo Git dependency;
+crates.io publication remains disabled. See the [release procedure](docs/features/releases/README.md).
+
 Bessemer is a Rust library being built to read and write SolidWorks documents
 (parts .sldprt, assemblies .sldasm, and drawings .slddrw).
 CAD kernels use it to exchange data with SolidWorks files. Martensite is its first consumer.

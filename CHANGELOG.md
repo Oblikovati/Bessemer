@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-11-07
+
 ### Fixed
 
 - Accepted valid zero-stream version-4 containers using registered signature sets, preserving exact bytes and typed missing-stream failures. (#251)
@@ -57,6 +59,8 @@
 - Fixed reference-plane point roles rejecting documented endpoint and loft-sync subclasses for fresh and cached pointers. (#46)
 
 ### Added
+
+- Added explicit release-version checks and release-mode workflow validation. (#254)
 
 - Added explicit native ZIP timestamp packing and isolated existing-entry edits with revision-bound identities, exact header coverage and complete byte history. (#250)
 
