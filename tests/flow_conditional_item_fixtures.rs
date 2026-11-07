@@ -3,6 +3,8 @@
 mod api;
 #[path = "flow_conditional_items/case_reader.rs"]
 mod case_reader;
+#[path = "flow_conditional_items/roles.rs"]
+mod conditional_roles;
 #[path = "flow_conditional_items/fixture.rs"]
 mod fixture;
 #[path = "flow_field_values/packet.rs"]

@@ -1,0 +1,24 @@
+{
+  "issue": 241,
+  "scope": "Test-only extraction of field-role suffixes and scope path names; no production source in this commit",
+  "behavior": "The earlier conditional suite uses the same path rules and frozen expected ledgers; boolean layout context replaces only its local public-enum comparison",
+  "verification": {
+    "command": "cargo test --locked --test flow_legacy_field_fixtures --test flow_conditional_item_fixtures",
+    "log": "target/flow-legacy-fields-api-final-tests.log",
+    "log_sha256": "8224591a9434b624bdf167d4790df3a5ee9ec4181cc15a613931209d96a695dd",
+    "earlier_conditional_passed": 14,
+    "earlier_conditional_failed": 0,
+    "earlier_conditional_ignored_worker_invoked_twice": 1,
+    "clippy": "passed -D warnings",
+    "format": "passed"
+  },
+  "source_lf_sha256": {
+    "tests/flow_conditional_item_fixtures.rs": "e31d0e6b7c8006845474f14c99c869db1fcb7d449b4aa971b0aed58b8352af1b",
+    "tests/flow_conditional_items/api/paths.rs": "131b8ebdc44777a33cabec8c782769c35c4628974789e9d68f03149aec80df93",
+    "tests/flow_conditional_items/roles.rs": "9128eae08dd54fb000e08903b8c15351179d1fb858457da29cb5e282cd0981db"
+  },
+  "exclusions": [
+    "The uncommitted record155 caller is accepted separately with the runtime APIs",
+    "No full PR gate acceptance of these sources is claimed"
+  ]
+}
