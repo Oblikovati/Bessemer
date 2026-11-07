@@ -19,6 +19,7 @@ pub(crate) struct Entry {
 pub(crate) struct Directory {
     pub entries: Vec<Entry>,
     pub end_signature: Vec<u8>,
+    pub central_start: usize,
 }
 
 struct ArchiveLayout {
@@ -60,6 +61,7 @@ fn candidate(bytes: &[u8], version: u32, end: usize) -> Result<Directory> {
     Ok(Directory {
         entries,
         end_signature: region(bytes, end, 4)?.to_vec(),
+        central_start: layout.start,
     })
 }
 

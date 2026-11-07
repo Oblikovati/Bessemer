@@ -19,6 +19,7 @@ mod bounded_zlib;
 pub mod composer;
 pub mod compound;
 mod compression;
+pub mod container_timestamps;
 pub mod database_hash;
 pub mod database_header;
 pub mod database_index;

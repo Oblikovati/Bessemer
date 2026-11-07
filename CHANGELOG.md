@@ -56,6 +56,8 @@
 
 ### Added
 
+- Added explicit native ZIP timestamp packing and isolated existing-entry edits with revision-bound identities, exact header coverage and complete byte history. (#250)
+
 - Added complete raw record-105/113/155 field reads and isolated existing-value edits, with unversioned word framing, scalar branch projections, preferred-container selection and complete carrier history. (#241)
 
 - Added bounded logical checkpoint component reads and typed existing-field edits for graph objects, auxiliary grids, trailing containers and opaque chunks, with revision-bound identities and complete byte history. (#241)

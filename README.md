@@ -4,6 +4,10 @@ Bessemer is a Rust library being built to read and write SolidWorks documents
 (parts .sldprt, assemblies .sldasm, and drawings .slddrw).
 CAD kernels use it to exchange data with SolidWorks files. Martensite is its first consumer.
 
+The [container timestamp view](docs/features/container-timestamps/README.md)
+models native raw-input packing and edits existing entry metadata on isolated
+copies, retaining filler, payload bytes and complete byte history.
+
 `bessemer::flow` reads ordinary Flow result carriers with observed version words
 7/8 and replaces physical payloads on isolated copies. It retains duplicate,
 reserved and unknown records. See the [Flow carrier evidence](docs/features/flow-carriers/README.md)
