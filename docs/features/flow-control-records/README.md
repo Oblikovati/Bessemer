@@ -46,9 +46,46 @@ python -m unittest discover -s docs/features/flow-control-records -p test_contro
 cargo test --locked --test flow_control_record_fixtures
 ```
 
-Digests and focused results are recorded in `baseline-verification.json` and
-`local-verification.json`. Typed readers/editors remain to be implemented. Index
-adoption, saved-span key/value meaning, physical target validation, logical index
-replay and native application acceptance are separate work.
+The typed readers accept direct physical occurrence IDs. `saved_span_writer`
+reads the strict saved-span profile; `terminal_index_writer` also requires
+`FlowControlLengthWidth::FourBytes` or `EightBytes`. Neither method changes the
+ordinary or solver selector policies for reserved identifiers.
+
+```rust,ignore
+let options = FlowControlOptions {
+    maximum_decoded_bytes: 2_000_000,
+    maximum_entries: 100_000,
+};
+let index = carrier.terminal_index_writer(&record, FlowControlLengthWidth::EightBytes, options)?;
+let entry = index.entry(0)?;
+let edit = index.replace_record_start(0, u64::MAX)?;
+```
+
+Views expose every ordered raw entry and decoded interval, the strict marker,
+complete decoded bytes, compressed interval, original bounds and exact coverage.
+Index views additionally expose the declared length width, footer interval,
+identifier and backward distance. Saved key/value fields remain raw unsigned
+patterns; index target fields remain accepted without reconciliation.
+
+Editors replace existing fields on isolated carrier copies and reparse the
+complete strict profile before returning `FlowSimpleTableEdit` checkpoints and
+full physical history. Index changes recompute the footer from the new compressed
+extent, including checked four-byte distance encoding. Exact no-ops preserve the
+original stored payload. Fresh opposite edits restore decoded bytes while
+allowing a different compression encoding. Other opaque control records are not
+rewritten, and no index is adopted or repaired implicitly.
+
+Typed checks read all 1,059,444 owned entry fields. The edit matrix covers every
+field in tables up to 64 entries and distinct first/middle/last entries in larger
+tables: 1,114 saved-span and 3,738 index field edits. Each selected field has an
+independent patch, stored no-op, complete history and fresh decoded reversal.
+Both footer widths have explicit compressed-size-change checks. Eight workers
+match serial mixed control edits; two fresh processes compare source-checked
+reads, coverage and selected edit wires byte for byte.
+
+Digests and focused results are recorded in `baseline-verification.json`,
+`local-verification.json` and `api-verification.json`. Index adoption, saved-span
+key/value meaning, physical target validation, logical index replay and native
+application acceptance remain separate work.
 
 The humanizer skill is unavailable; maintainer prose review remains pending.

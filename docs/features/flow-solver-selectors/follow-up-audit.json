@@ -11,7 +11,7 @@
     {
       "source": "flowcontrolrecords.py",
       "source_lf_sha256": "bb3d4c7326cb67e0e9fe6b22bfe5c938b805b125687c5a440970da801797337d",
-      "status": "Strict writer-profile baseline frozen and focused Rust/Python checks accepted; native installed payloads absent; typed readers/editors pending"
+      "status": "Complete strict writer-profile readers/editors implemented; focused field/codec/footer/isolation/concurrency/two-process checks and distance-overflow unit accepted; full gate pending; native payload fixtures absent"
     },
     {
       "source": "flowresultdefinitions.py",
@@ -53,7 +53,7 @@
     ],
     "limitation": "Identifier searches identify follow-up work; they do not establish absence of equivalent unnamed implementations"
   },
-  "next": "Implement strict control-payload readers/editors, then freeze logical index recognition/fallback/replay and audit checkpoint components",
+  "next": "Freeze and implement logical index recognition/fallback/replay, then audit checkpoint components separately from viewer-prefix121",
   "exclusions": [
     "Other Flow modules need a requirement-by-requirement audit",
     "Other SolidWorks schema families need a fresh source audit",

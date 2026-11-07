@@ -1,15 +1,16 @@
 # Strict control payload interoperability
 
-Issue: #241. This is planned work; no typed control-payload API is shipped yet.
+Issue: #241. The typed strict readers and existing-field editors implement
+these writer-derived payload profiles.
 
-Readers will accept revision-bound physical occurrence IDs for the exact control
+Readers accept revision-bound physical occurrence IDs for the exact control
 identifier. Ordinary and solver selector policies remain separate. Reading a
 control payload must not make a reserved identifier selectable through the
 ordinary solver API or adopt an index into the physical carrier automatically.
 
-Saved-span readers will validate one complete checksum-valid zlib stream, a zero
+Saved-span readers validate one complete checksum-valid zlib stream, a zero
 marker, the full unsigned count and complete 16-byte entries through EOF.
-Terminal-index readers will require an explicit typed four/eight-byte carrier
+Terminal-index readers require an explicit typed four/eight-byte carrier
 length context, validate the zero prefix, separate the exact compressed member
 from its footer, and check footer extent, identifier and backward distance.
 The decoded index count remains signed/nonnegative, independently of the raw
@@ -17,14 +18,14 @@ unsigned identifiers and target spans. Independent decoded-byte and entry bounds
 must be checked before allocation or multiplication. Empty bodies retain their
 required marker/count headers; they are complete empty results.
 
-Views will preserve entry order, duplicates, raw fields and all transport/footer
-intervals. Existing-field edits will operate on a copy and retain count and
-context. Saved-span edits will re-encode only changed decoded bodies. Index edits
-will also recompute the footer distance from the new compressed extent, reject
+Views preserve entry order, duplicates, raw fields and all transport/footer
+intervals. Existing-field edits operate on a copy and retain count and
+context. Saved-span edits re-encode only changed decoded bodies. Index edits
+also recompute the footer distance from the new compressed extent, reject
 distances that do not fit the declared width, and reparse the complete result.
-No-ops will retain original stored bytes; fresh opposite edits will restore
+No-ops retain original stored bytes; fresh opposite edits restore
 decoded entries without requiring the original compression encoding. Results
-will retain both immutable checkpoints and complete physical carrier history.
+retain both immutable checkpoints and complete physical carrier history.
 
 Strict payload framing is separate from target consistency. A zero record span,
 reserved target identifier, duplicate identifier or out-of-range target offset

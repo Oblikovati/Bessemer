@@ -56,6 +56,8 @@
 
 ### Added
 
+- Added strict saved-span and terminal-index writer-profile reads and isolated field edits with explicit footer context, bounded decoding, checked distance recomputation and complete carrier history. (#241)
+
 - Added complete paired record-501 IMS-value reads and isolated raw flag, shared-array and BL-row edits with retained definition provenance, explicit fresh-state assumptions and independent resource bounds. (#241)
 
 - Added complete record-500 IMS-definition reads and isolated identifier, allocation-byte and raw-array edits with independent bounds, preserved duplicate order and full carrier history. (#241)

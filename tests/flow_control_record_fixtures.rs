@@ -1,10 +1,16 @@
 //! Strict writer-derived control payloads; synthetic examples do not claim installed native fixtures.
+#[path = "flow_control_records/api.rs"]
+mod api;
 #[path = "flow_control_records/fixture.rs"]
 mod fixture;
 #[path = "flow_field_values/packet.rs"]
 mod packet;
 #[path = "flow_control_records/rebuild.rs"]
 mod rebuild;
+#[path = "flow_state_tables/carrier.rs"]
+mod state_carrier;
+#[path = "flow_state_tables/process.rs"]
+mod state_process;
 #[path = "flow_state_tables/streams.rs"]
 mod streams;
 use fixture::*;
